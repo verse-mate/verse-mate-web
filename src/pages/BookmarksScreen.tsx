@@ -1,43 +1,57 @@
 import { useApp } from '@/contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
-import { Trash2, ChevronLeft, Bookmark as BookmarkIcon } from 'lucide-react';
+import { Bookmark, Trash2 } from 'lucide-react';
+import ScreenHeader from '@/components/ScreenHeader';
 
 export default function BookmarksScreen() {
   const { state, dispatch } = useApp();
   const navigate = useNavigate();
 
-  const goToVerse = (book: string, chapter: number) => {
+  const handleOpen = (book: string, chapter: number) => {
     dispatch({ type: 'SET_PASSAGE', book, chapter });
     navigate('/read');
   };
 
+  const handleDelete = (id: string) => {
+    dispatch({ type: 'REMOVE_BOOKMARK', id });
+  };
+
   return (
-    <div className="flex flex-col h-full">
-      <header className="shrink-0 flex items-center gap-2 px-3 bg-header" style={{ height: 56 }}>
-        <button onClick={() => navigate(-1)} className="flex items-center justify-center w-[44px] h-[44px] -ml-2">
-          <ChevronLeft size={22} className="text-gold" />
-        </button>
-        <h1 className="text-[17px] font-semibold text-header-fg">Bookmarks</h1>
-      </header>
-      <div className="flex-1 overflow-y-auto bg-background p-4">
+    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+      <ScreenHeader title="Bookmarks" />
+
+      <div className="flex-1 overflow-y-auto px-4 pt-2 pb-6">
         {state.bookmarks.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-20 text-center">
-            <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-4">
-              <BookmarkIcon size={28} className="text-muted-foreground" />
-            </div>
-            <h2 className="text-[17px] font-semibold text-foreground mb-2">No Bookmarks Yet</h2>
-            <p className="text-[13px] text-muted-foreground max-w-[260px]">Long-press a verse while reading to bookmark it.</p>
+          <div className="flex flex-col items-center justify-center h-full text-center pb-20">
+            <Bookmark size={48} className="text-dark-muted mb-3" strokeWidth={1.5} />
+            <p className="text-dark-muted text-[14px]">No bookmarks yet</p>
+            <p className="text-dark-muted/70 text-[12px] mt-1">
+              Long-press a verse to save it here
+            </p>
           </div>
         ) : (
-          <div className="space-y-1.5">
-            {state.bookmarks.map(bm => (
-              <div key={bm.id} className="flex items-center justify-between p-3.5 rounded-lg bg-card border border-border">
-                <button onClick={() => goToVerse(bm.book, bm.chapter)} className="text-left flex-1">
-                  <p className="font-medium text-foreground text-[14px]">{bm.book} {bm.chapter}:{bm.verse}</p>
-                  <p className="text-[12px] text-muted-foreground">{bm.version}</p>
+          <div className="space-y-3">
+            {state.bookmarks.map(b => (
+              <div
+                key={b.id}
+                className="flex items-center justify-between pl-4 pr-1 h-[56px] rounded-xl bg-dark-raised border border-dark"
+              >
+                <button
+                  onClick={() => handleOpen(b.book, b.chapter)}
+                  className="flex items-center gap-3 flex-1 text-left h-full"
+                >
+                  <Bookmark size={18} className="text-dark-fg" strokeWidth={1.5} fill="currentColor" />
+                  <span className="text-[15px] text-dark-fg font-normal">
+                    {b.book} {b.chapter}
+                    {b.verse ? `:${b.verse}` : ''}
+                  </span>
                 </button>
-                <button onClick={() => dispatch({ type: 'REMOVE_BOOKMARK', id: bm.id })} className="p-2 text-muted-foreground hover:text-destructive">
-                  <Trash2 size={16} />
+                <button
+                  onClick={() => handleDelete(b.id)}
+                  aria-label="Delete bookmark"
+                  className="w-[44px] h-[44px] flex items-center justify-center"
+                >
+                  <Trash2 size={18} className="text-red-400" strokeWidth={1.5} />
                 </button>
               </div>
             ))}

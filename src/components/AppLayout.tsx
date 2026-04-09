@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 export default function AppLayout() {
   return (
     <div
-      className="phone-frame relative flex flex-col w-full max-w-[390px] h-[100dvh] max-h-[844px] mx-auto bg-background overflow-hidden rounded-[2.25rem] shadow-[0_10px_50px_-10px_rgba(0,0,0,0.3)]"
+      className="phone-frame relative flex flex-col w-full max-w-[390px] h-[100dvh] max-h-[844px] mx-auto bg-dark-surface overflow-hidden rounded-[2.25rem] shadow-[0_10px_50px_-10px_rgba(0,0,0,0.3)]"
     >
       <Outlet />
     </div>
