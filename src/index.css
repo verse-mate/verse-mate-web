@@ -56,6 +56,9 @@
     --tab-inactive: 24 5% 50%;
 
     --scripture-leading: 2;
+
+    /* Desktop chrome background */
+    --chrome-bg: 32 20% 90%;
   }
 
   .dark {
@@ -104,6 +107,8 @@
 
     --tab-active: 28 60% 52%;
     --tab-inactive: 36 10% 55%;
+
+    --chrome-bg: 24 10% 6%;
   }
 }
 
@@ -112,8 +117,15 @@
     @apply border-border;
   }
 
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply font-sans antialiased;
+    background-color: hsl(var(--chrome-bg));
   }
 
   /* Tap target minimum */
@@ -131,5 +143,31 @@
 
   .safe-bottom {
     padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* ─── Phone Frame Shell ─── */
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+/* On narrow viewports (real phones), fill the screen */
+@media (max-width: 500px) {
+  #root {
+    align-items: stretch;
+  }
+  .phone-frame {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-height: 100dvh !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
   }
 }
