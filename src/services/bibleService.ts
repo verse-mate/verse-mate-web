@@ -443,12 +443,32 @@ export async function fetchBookmarks(userId: string): Promise<Bookmark[]> {
   }
 }
 
-export async function addBookmark(bookmark: { bookId: number; chapter: number; verse?: number }) {
-  return api.post('/bible/book/bookmark/add', bookmark);
+export async function addBookmark(args: {
+  userId: string;
+  bookId: number;
+  chapter: number;
+  insightType?: string;
+}) {
+  return api.post('/bible/book/bookmark/add', {
+    user_id: args.userId,
+    book_id: args.bookId,
+    chapter_number: args.chapter,
+    ...(args.insightType ? { insight_type: args.insightType } : {}),
+  });
 }
 
-export async function removeBookmark(favoriteId: number | string) {
-  return api.post('/bible/book/bookmark/remove', { favorite_id: favoriteId });
+export async function removeBookmark(args: {
+  userId: string;
+  bookId: number;
+  chapter: number;
+  insightType?: string;
+}) {
+  return api.post('/bible/book/bookmark/remove', {
+    user_id: args.userId,
+    book_id: args.bookId,
+    chapter_number: args.chapter,
+    ...(args.insightType ? { insight_type: args.insightType } : {}),
+  });
 }
 
 // ─── Notes ────────────────────────────────────────────────────────────────

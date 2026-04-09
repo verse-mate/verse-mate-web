@@ -86,10 +86,10 @@ export default function MenuScreen() {
           </div>
           <div className="min-w-0 flex-1">
             <p className="text-[14px] text-dark-fg font-normal truncate">
-              {state.isSignedIn ? 'Alexandr Zarovsky' : 'Guest'}
+              {state.isSignedIn ? state.userName || state.userEmail?.split('@')[0] || 'You' : 'Guest'}
             </p>
             <p className="text-[12px] text-dark-muted truncate">
-              {state.isSignedIn ? 'alexandr.zarovsky@gmail.com' : 'Tap to sign in'}
+              {state.isSignedIn ? state.userEmail || '' : 'Tap to sign in'}
             </p>
           </div>
         </button>

@@ -37,6 +37,9 @@ interface AppState {
   settings: AppSettings;
   isSignedIn: boolean;
   userId: string | null;
+  userName: string | null;
+  userEmail: string | null;
+  userAvatarUrl: string | null;
 }
 
 type Action =
@@ -55,7 +58,14 @@ type Action =
   | { type: 'UPDATE_HIGHLIGHT'; id: string; color: HighlightColor }
   | { type: 'REMOVE_HIGHLIGHT'; id: string }
   | { type: 'UPDATE_SETTINGS'; settings: Partial<AppSettings> }
-  | { type: 'SET_SIGNED_IN'; value: boolean; userId?: string | null };
+  | {
+      type: 'SET_SIGNED_IN';
+      value: boolean;
+      userId?: string | null;
+      userName?: string | null;
+      userEmail?: string | null;
+      userAvatarUrl?: string | null;
+    };
 
 function reducer(state: AppState, action: Action): AppState {
   switch (action.type) {
@@ -106,7 +116,15 @@ function reducer(state: AppState, action: Action): AppState {
     case 'UPDATE_SETTINGS':
       return { ...state, settings: { ...state.settings, ...action.settings } };
     case 'SET_SIGNED_IN':
-      return { ...state, isSignedIn: action.value, userId: action.userId ?? state.userId };
+      return {
+        ...state,
+        isSignedIn: action.value,
+        userId: action.userId !== undefined ? action.userId : state.userId,
+        userName: action.userName !== undefined ? action.userName : state.userName,
+        userEmail: action.userEmail !== undefined ? action.userEmail : state.userEmail,
+        userAvatarUrl:
+          action.userAvatarUrl !== undefined ? action.userAvatarUrl : state.userAvatarUrl,
+      };
     default:
       return state;
   }
@@ -126,6 +144,9 @@ const initialState: AppState = {
   settings: initialSettings,
   isSignedIn: hasToken(),
   userId: null,
+  userName: null,
+  userEmail: null,
+  userAvatarUrl: null,
 };
 
 interface AppContextType {
@@ -190,7 +211,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
     (async () => {
       try {
         const user = await fetchCurrentUser();
-        dispatch({ type: 'SET_SIGNED_IN', value: true, userId: user.id });
+        dispatch({
+          type: 'SET_SIGNED_IN',
+          value: true,
+          userId: user.id,
+          userName: user.name || null,
+          userEmail: user.email || null,
+          userAvatarUrl: user.avatarUrl || null,
+        });
         const [bookmarks, notes, highlights] = await Promise.all([
           apiFetchBookmarks(user.id),
           apiFetchNotes(user.id),
@@ -201,7 +229,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
         dispatch({ type: 'SET_HIGHLIGHTS', highlights });
       } catch {
         // Token probably invalid — treat as signed out
-        dispatch({ type: 'SET_SIGNED_IN', value: false, userId: null });
+        dispatch({
+      type: 'SET_SIGNED_IN',
+      value: false,
+      userId: null,
+      userName: null,
+      userEmail: null,
+      userAvatarUrl: null,
+    });
       }
     })();
   }, [state.isSignedIn]);
@@ -215,12 +250,15 @@ export function AppProvider({ children }: { children: ReactNode }) {
         createdAt: new Date().toISOString(),
       };
       dispatch({ type: 'ADD_BOOKMARK', bookmark: optimistic });
+      if (!state.userId) return;
       try {
-        await apiAddBookmark({ bookId: bookmark.bookId, chapter: bookmark.chapter, verse: bookmark.verse });
-        if (state.userId) {
-          const refreshed = await apiFetchBookmarks(state.userId);
-          dispatch({ type: 'SET_BOOKMARKS', bookmarks: refreshed });
-        }
+        await apiAddBookmark({
+          userId: state.userId,
+          bookId: bookmark.bookId,
+          chapter: bookmark.chapter,
+        });
+        const refreshed = await apiFetchBookmarks(state.userId);
+        dispatch({ type: 'SET_BOOKMARKS', bookmarks: refreshed });
       } catch {
         dispatch({ type: 'REMOVE_BOOKMARK', id: optimistic.id });
       }
@@ -231,14 +269,23 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const removeBookmark = useCallback(
     async (id: string) => {
       const existing = state.bookmarks.find(b => b.id === id);
+      if (!existing) return;
       dispatch({ type: 'REMOVE_BOOKMARK', id });
+      if (!state.userId) return;
       try {
-        await apiRemoveBookmark(existing?.favoriteId ?? id);
+        await apiRemoveBookmark({
+          userId: state.userId,
+          bookId: existing.bookId,
+          chapter: existing.chapter,
+        });
+        // Refetch to reconcile any state the server changed
+        const refreshed = await apiFetchBookmarks(state.userId);
+        dispatch({ type: 'SET_BOOKMARKS', bookmarks: refreshed });
       } catch {
         if (existing) dispatch({ type: 'ADD_BOOKMARK', bookmark: existing });
       }
     },
-    [state.bookmarks]
+    [state.bookmarks, state.userId]
   );
 
   const addNote = useCallback(
@@ -332,7 +379,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const signOut = useCallback(async () => {
     await apiLogout();
-    dispatch({ type: 'SET_SIGNED_IN', value: false, userId: null });
+    dispatch({
+      type: 'SET_SIGNED_IN',
+      value: false,
+      userId: null,
+      userName: null,
+      userEmail: null,
+      userAvatarUrl: null,
+    });
   }, []);
 
   return (
