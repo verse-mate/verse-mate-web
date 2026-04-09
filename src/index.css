@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,72 +6,70 @@
 
 @layer base {
   :root {
-    /* ─── Hybrid theme: dark header + cream body ─── */
+    /* ─── VerseMate Mobile App tokens (from Figma node 5162:5662) ─── */
 
-    /* Header / dark surfaces (sheets, selectors, menu) */
-    --header-bg: 30 20% 9%;         /* #1a1612 */
-    --header-fg: 36 25% 92%;        /* warm white */
+    /* Dark header surface */
+    --header-bg: 0 0% 10%;            /* #1A1A1A */
+    --header-fg: 0 0% 100%;           /* #FFFFFF */
 
     /* Cream body */
-    --background: 37 38% 93%;       /* #F5EFE3 */
-    --foreground: 30 20% 9%;        /* #1a1612 */
+    --background: 45 35% 94%;         /* #F5F2EB */
+    --foreground: 0 0% 10%;           /* #1A1A1A */
 
-    --card: 37 38% 93%;
-    --card-foreground: 30 20% 9%;
+    --card: 45 35% 94%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 30 20% 9%;
-    --popover-foreground: 36 25% 92%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 30 20% 9%;
-    --primary-foreground: 37 38% 93%;
+    --primary: 0 0% 10%;
+    --primary-foreground: 45 35% 94%;
 
-    --secondary: 35 25% 87%;
-    --secondary-foreground: 30 20% 9%;
+    --secondary: 45 15% 87%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 35 18% 85%;
-    --muted-foreground: 28 15% 38%; /* #6b5d4f */
+    --muted: 0 0% 91%;                /* #E7E7E7 */
+    --muted-foreground: 0 0% 20%;     /* #323232 */
 
-    --accent: 40 47% 60%;           /* #C9A961 */
-    --accent-foreground: 30 20% 9%;
+    /* Warm gold accent */
+    --accent: 40 32% 56%;             /* #B09A6D */
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 35 18% 82%;
-    --input: 35 18% 82%;
-    --ring: 40 47% 60%;
+    --border: 0 0% 91%;               /* #E7E7E7 */
+    --input: 0 0% 91%;
+    --ring: 40 32% 56%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --verse-number: 40 47% 55%;
+    /* Verse highlights */
+    --verse-number: 40 32% 50%;
     --verse-highlight-yellow: 48 80% 85%;
     --verse-highlight-green: 120 35% 85%;
     --verse-highlight-blue: 210 50% 87%;
     --verse-highlight-pink: 340 50% 88%;
     --verse-highlight-orange: 28 70% 85%;
 
-    --tab-active: 40 47% 60%;
-    --tab-inactive: 28 15% 45%;
-    --scripture-leading: 1.7;
-
     /* Desktop chrome behind phone */
-    --chrome-bg: 35 15% 80%;
+    --chrome-bg: 0 0% 85%;
 
-    /* Dark surface tokens (for sheets, header, menu, selectors) */
-    --dark-surface: 30 20% 9%;
-    --dark-surface-raised: 30 16% 14%;
-    --dark-surface-fg: 36 25% 92%;
-    --dark-surface-muted: 36 12% 50%;
-    --dark-border: 30 14% 20%;
+    /* Dark surface (sheets, selectors, menu drawer) */
+    --dark-surface: 0 0% 10%;
+    --dark-surface-raised: 0 0% 12%;
+    --dark-surface-fg: 0 0% 100%;
+    --dark-surface-muted: 0 0% 60%;
+    --dark-border: 0 0% 18%;
 
-    --sidebar-background: 30 20% 9%;
-    --sidebar-foreground: 36 25% 92%;
-    --sidebar-primary: 36 25% 92%;
-    --sidebar-primary-foreground: 30 20% 9%;
-    --sidebar-accent: 30 16% 14%;
-    --sidebar-accent-foreground: 36 25% 92%;
-    --sidebar-border: 30 14% 20%;
-    --sidebar-ring: 40 47% 60%;
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 40 32% 56%;
   }
 }
 
@@ -87,22 +85,13 @@
   }
 
   body {
-    @apply font-sans antialiased;
+    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
     background-color: hsl(var(--chrome-bg));
-  }
-
-  button, a, [role="button"] {
-    min-height: 44px;
-    min-width: 44px;
   }
 }
 
 @layer utilities {
-  .font-scripture {
-    font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-    line-height: var(--scripture-leading);
-  }
-
   .safe-bottom {
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
@@ -115,34 +104,15 @@
     color: hsl(var(--verse-number));
   }
 
-  /* Dark surface utilities */
-  .bg-dark-surface {
-    background-color: hsl(var(--dark-surface));
-  }
-  .bg-dark-raised {
-    background-color: hsl(var(--dark-surface-raised));
-  }
-  .text-dark-fg {
-    color: hsl(var(--dark-surface-fg));
-  }
-  .text-dark-muted {
-    color: hsl(var(--dark-surface-muted));
-  }
-  .border-dark {
-    border-color: hsl(var(--dark-border));
-  }
-  .bg-header {
-    background-color: hsl(var(--header-bg));
-  }
-  .text-header-fg {
-    color: hsl(var(--header-fg));
-  }
-  .text-gold {
-    color: hsl(var(--accent));
-  }
-  .bg-gold {
-    background-color: hsl(var(--accent));
-  }
+  .bg-dark-surface { background-color: hsl(var(--dark-surface)); }
+  .bg-dark-raised { background-color: hsl(var(--dark-surface-raised)); }
+  .text-dark-fg { color: hsl(var(--dark-surface-fg)); }
+  .text-dark-muted { color: hsl(var(--dark-surface-muted)); }
+  .border-dark { border-color: hsl(var(--dark-border)); }
+  .bg-header { background-color: hsl(var(--header-bg)); }
+  .text-header-fg { color: hsl(var(--header-fg)); }
+  .text-gold { color: hsl(var(--accent)); }
+  .bg-gold { background-color: hsl(var(--accent)); }
 }
 
 /* ─── Phone Frame Shell ─── */

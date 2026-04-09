@@ -3,15 +3,18 @@ import { useApp } from '@/contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { fetchChapter } from '@/services/bibleService';
 import { Chapter, HighlightColor } from '@/services/types';
-import { ChevronDown, ChevronLeft, ChevronRight, BookOpen, Bookmark, Menu } from 'lucide-react';
+import { ChevronDown, Menu, Bookmark, FileText } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
 import VerseActions from '@/components/VerseActions';
 import { BIBLE_BOOKS } from '@/services/bibleData';
+
+type ReadingMode = 'bible' | 'insight';
 
 export default function ReadingScreen() {
   const { state, dispatch } = useApp();
   const navigate = useNavigate();
   const [chapter, setChapter] = useState<Chapter | null>(null);
+  const [mode, setMode] = useState<ReadingMode>('bible');
   const [showBookSelector, setShowBookSelector] = useState(false);
   const [longPressVerse, setLongPressVerse] = useState<number | null>(null);
   const [pressTimer, setPressTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
@@ -45,7 +48,7 @@ export default function ReadingScreen() {
     orange: 'bg-highlight-orange',
   };
 
-  const handleTouchStart = (verseNum: number) => {
+  const handlePressStart = (verseNum: number) => {
     const timer = setTimeout(() => {
       setLongPressVerse(verseNum);
       dispatch({ type: 'SET_VERSE', verse: verseNum });
@@ -53,7 +56,7 @@ export default function ReadingScreen() {
     setPressTimer(timer);
   };
 
-  const handleTouchEnd = () => {
+  const handlePressEnd = () => {
     if (pressTimer) clearTimeout(pressTimer);
     setPressTimer(null);
   };
@@ -67,90 +70,120 @@ export default function ReadingScreen() {
     setScrollProgress(progress);
   };
 
-  // Section title for the first verse group (mock — real data would come from service)
-  const sectionTitle = state.book === 'John' && state.chapter === 1
-    ? 'The Word Became Flesh'
-    : state.book === 'Psalms' && state.chapter === 23
-    ? 'The Lord Is My Shepherd'
-    : state.book === 'Genesis' && state.chapter === 1
-    ? 'The Creation of the World'
-    : state.book === 'Romans' && state.chapter === 8
-    ? 'Life in the Spirit'
-    : undefined;
+  const sectionTitle =
+    state.book === 'John' && state.chapter === 1 ? 'The Word Became Flesh' :
+    state.book === 'Psalms' && state.chapter === 23 ? 'The Lord Is My Shepherd' :
+    state.book === 'Genesis' && state.chapter === 1 ? 'The Creation of the World' :
+    state.book === 'Romans' && state.chapter === 8 ? 'Life in the Spirit' :
+    undefined;
+
+  const verseCount = chapter?.verses.length || 0;
+  const referenceLabel = verseCount ? `(${state.book} ${state.chapter}:1-${verseCount})` : '';
 
   return (
-    <div className="flex flex-col h-full relative">
-      {/* ─── DARK HEADER ─── */}
-      <header className="shrink-0 flex items-center justify-between px-3 bg-header" style={{ height: 56 }}>
-        <button
-          onClick={() => setShowBookSelector(true)}
-          className="flex items-center gap-1.5 text-header-fg"
-        >
-          <span className="text-[17px] font-semibold font-sans">{state.book} {state.chapter}</span>
-          <ChevronDown size={16} className="text-gold" />
-        </button>
-        <div className="flex items-center gap-0">
+    <div className="flex flex-col h-full relative bg-background">
+      {/* ─── DARK HEADER (118px in Figma: status area + controls) ─── */}
+      <header className="shrink-0 bg-header safe-top" style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}>
+        <div className="flex items-center justify-between px-4" style={{ height: 56 }}>
+          {/* Left: Book + chapter dropdown */}
           <button
-            onClick={() => {/* bookmark/note shortcut */}}
-            className="flex items-center justify-center w-[44px] h-[44px]"
+            onClick={() => setShowBookSelector(true)}
+            className="flex items-center gap-1.5 text-header-fg min-h-[44px] pr-2 -ml-1"
           >
-            <Bookmark size={22} className="text-gold" strokeWidth={1.5} />
+            <span className="text-[18px] font-medium tracking-tight">{state.book} {state.chapter}</span>
+            <ChevronDown size={18} className="text-header-fg/90" strokeWidth={2} />
           </button>
-          <button
-            onClick={() => navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/commentary`)}
-            className="flex items-center justify-center w-[44px] h-[44px]"
-          >
-            <BookOpen size={22} className="text-gold" strokeWidth={1.5} />
-          </button>
-          <button
-            onClick={() => navigate('/menu')}
-            className="flex items-center justify-center w-[44px] h-[44px]"
-          >
-            <Menu size={22} className="text-gold" strokeWidth={1.5} />
-          </button>
+
+          {/* Right: Bible/Insight segmented pill + Menu */}
+          <div className="flex items-center gap-2">
+            <div className="flex items-center rounded-full bg-[#232323] p-0.5">
+              <button
+                onClick={() => setMode('bible')}
+                className={`px-3.5 h-8 rounded-full text-[13px] font-medium transition-colors ${
+                  mode === 'bible'
+                    ? 'bg-gold text-[#1A1A1A]'
+                    : 'text-header-fg/80'
+                }`}
+              >
+                Bible
+              </button>
+              <button
+                onClick={() => {
+                  setMode('insight');
+                  navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/insight`);
+                }}
+                className={`px-3.5 h-8 rounded-full text-[13px] font-medium transition-colors ${
+                  mode === 'insight'
+                    ? 'bg-gold text-[#1A1A1A]'
+                    : 'text-header-fg/80'
+                }`}
+              >
+                Insight
+              </button>
+            </div>
+            <button
+              onClick={() => navigate('/menu')}
+              aria-label="Open menu"
+              className="flex items-center justify-center w-[44px] h-[44px] -mr-2"
+            >
+              <Menu size={22} className="text-header-fg" strokeWidth={2} />
+            </button>
+          </div>
         </div>
       </header>
 
-      {/* ─── CREAM BODY ─── */}
+      {/* ─── CREAM BODY — scripture ─── */}
       <div
         ref={scrollRef}
         onScroll={handleScroll}
-        className="flex-1 overflow-y-auto bg-background px-5 pt-6 pb-24"
-        style={{ fontSize: `${state.settings.fontSize}px` }}
+        className="flex-1 overflow-y-auto bg-background px-5 pt-5 pb-12"
       >
-        {/* Book + chapter title */}
-        <h1 className="font-scripture italic text-[28px] text-foreground mb-1 font-medium">
-          {state.book} {state.chapter}
-        </h1>
+        {/* Chapter header block */}
+        <div className="flex items-start justify-between mb-3">
+          <h1 className="text-[26px] font-bold text-foreground leading-tight">
+            {state.book} {state.chapter}
+          </h1>
+          <div className="flex items-center gap-1 mt-1.5">
+            <button aria-label="Bookmark chapter" className="w-8 h-8 flex items-center justify-center">
+              <Bookmark size={18} className="text-foreground" strokeWidth={1.75} />
+            </button>
+            <button aria-label="Notes" className="w-8 h-8 flex items-center justify-center">
+              <FileText size={18} className="text-foreground" strokeWidth={1.75} />
+            </button>
+          </div>
+        </div>
 
         {sectionTitle && (
           <>
-            <h2 className="font-scripture italic text-[18px] text-foreground font-semibold mt-3 mb-0.5">
+            <h2 className="text-[17px] font-bold text-foreground mb-0.5">
               {sectionTitle}
             </h2>
-            <p className="font-scripture italic text-[14px] text-muted-foreground mb-4">
-              ({state.book} {state.chapter}:1-{chapter?.verses.length || ''})
+            <p className="text-[13px] text-muted-foreground mb-4">
+              {referenceLabel}
             </p>
           </>
         )}
 
-        {/* Verses */}
-        <div className="mt-2">
+        {/* Verses — Roboto body, superscript numbers */}
+        <div
+          className="text-foreground"
+          style={{ fontSize: `${state.settings.fontSize}px`, lineHeight: 1.7 }}
+        >
           {chapter?.verses.map(verse => {
             const hl = getHighlightForVerse(verse.number);
             const isSelected = state.selectedVerse === verse.number;
             return (
               <span
                 key={verse.number}
-                onTouchStart={() => handleTouchStart(verse.number)}
-                onTouchEnd={handleTouchEnd}
-                onMouseDown={() => handleTouchStart(verse.number)}
-                onMouseUp={handleTouchEnd}
-                className={`font-scripture inline text-foreground transition-colors ${
-                  hl ? highlightColorClass[hl.color] : ''
-                } ${isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''}`}
+                onTouchStart={() => handlePressStart(verse.number)}
+                onTouchEnd={handlePressEnd}
+                onMouseDown={() => handlePressStart(verse.number)}
+                onMouseUp={handlePressEnd}
+                className={`inline transition-colors ${hl ? highlightColorClass[hl.color] : ''} ${
+                  isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''
+                }`}
               >
-                <sup className="text-verse-number font-sans text-[0.6em] mr-0.5 select-none font-semibold">
+                <sup className="text-verse-number text-[0.65em] mr-0.5 select-none font-medium align-super">
                   {verse.number}
                 </sup>
                 {verse.text}{' '}
@@ -160,34 +193,16 @@ export default function ReadingScreen() {
         </div>
       </div>
 
-      {/* ─── FLOATING CHAPTER NAV ─── */}
-      {state.chapter > 1 && (
-        <button
-          onClick={() => goToChapter(-1)}
-          className="absolute left-4 bottom-16 w-[44px] h-[44px] rounded-full bg-foreground flex items-center justify-center shadow-lg z-20"
-        >
-          <ChevronLeft size={20} className="text-background" />
-        </button>
-      )}
-      {state.chapter < maxChapter && (
-        <button
-          onClick={() => goToChapter(1)}
-          className="absolute right-4 bottom-16 w-[44px] h-[44px] rounded-full bg-foreground flex items-center justify-center shadow-lg z-20"
-        >
-          <ChevronRight size={20} className="text-background" />
-        </button>
-      )}
-
-      {/* ─── PROGRESS BAR ─── */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 bg-background px-5 py-2.5 border-t border-border">
+      {/* ─── GOLD PROGRESS BAR (bottom 32px) ─── */}
+      <div className="shrink-0 bg-background px-4 pt-3 pb-3 safe-bottom">
         <div className="flex items-center gap-3">
           <div className="flex-1 h-1 bg-muted rounded-full overflow-hidden">
             <div
-              className="h-full bg-foreground rounded-full transition-all duration-200"
-              style={{ width: `${scrollProgress}%` }}
+              className="h-full bg-gold rounded-full transition-all duration-200"
+              style={{ width: `${Math.max(2, scrollProgress)}%` }}
             />
           </div>
-          <span className="text-[11px] font-medium text-muted-foreground tabular-nums w-8 text-right">
+          <span className="text-[11px] font-medium text-muted-foreground tabular-nums w-9 text-right">
             {scrollProgress}%
           </span>
         </div>
