@@ -5,109 +5,73 @@
 @tailwind utilities;
 
 @layer base {
-  /* ─── Light theme (secondary) ─── */
   :root {
-    --background: 36 33% 97%;
-    --foreground: 24 10% 15%;
+    /* ─── Hybrid theme: dark header + cream body ─── */
 
-    --card: 36 33% 99%;
-    --card-foreground: 24 10% 15%;
+    /* Header / dark surfaces (sheets, selectors, menu) */
+    --header-bg: 30 20% 9%;         /* #1a1612 */
+    --header-fg: 36 25% 92%;        /* warm white */
 
-    --popover: 36 33% 99%;
-    --popover-foreground: 24 10% 15%;
+    /* Cream body */
+    --background: 37 38% 93%;       /* #F5EFE3 */
+    --foreground: 30 20% 9%;        /* #1a1612 */
 
-    --primary: 24 8% 28%;
-    --primary-foreground: 36 33% 97%;
+    --card: 37 38% 93%;
+    --card-foreground: 30 20% 9%;
 
-    --secondary: 32 20% 92%;
-    --secondary-foreground: 24 10% 15%;
+    --popover: 30 20% 9%;
+    --popover-foreground: 36 25% 92%;
 
-    --muted: 32 15% 93%;
-    --muted-foreground: 24 5% 50%;
+    --primary: 30 20% 9%;
+    --primary-foreground: 37 38% 93%;
 
-    --accent: 36 72% 52%;
-    --accent-foreground: 24 10% 10%;
+    --secondary: 35 25% 87%;
+    --secondary-foreground: 30 20% 9%;
+
+    --muted: 35 18% 85%;
+    --muted-foreground: 28 15% 38%; /* #6b5d4f */
+
+    --accent: 40 47% 60%;           /* #C9A961 */
+    --accent-foreground: 30 20% 9%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 88%;
-    --input: 30 15% 88%;
-    --ring: 36 72% 52%;
+    --border: 35 18% 82%;
+    --input: 35 18% 82%;
+    --ring: 40 47% 60%;
 
     --radius: 0.75rem;
 
-    --verse-number: 36 50% 45%;
-    --verse-highlight-yellow: 48 96% 89%;
-    --verse-highlight-green: 120 40% 88%;
-    --verse-highlight-blue: 210 60% 90%;
-    --verse-highlight-pink: 340 60% 90%;
-    --verse-highlight-orange: 28 80% 88%;
+    --verse-number: 40 47% 55%;
+    --verse-highlight-yellow: 48 80% 85%;
+    --verse-highlight-green: 120 35% 85%;
+    --verse-highlight-blue: 210 50% 87%;
+    --verse-highlight-pink: 340 50% 88%;
+    --verse-highlight-orange: 28 70% 85%;
 
-    --tab-active: 36 72% 52%;
-    --tab-inactive: 24 5% 50%;
-    --scripture-leading: 2;
-    --chrome-bg: 32 20% 90%;
+    --tab-active: 40 47% 60%;
+    --tab-inactive: 28 15% 45%;
+    --scripture-leading: 1.7;
 
-    --sidebar-background: 36 33% 97%;
-    --sidebar-foreground: 24 10% 15%;
-    --sidebar-primary: 24 8% 28%;
-    --sidebar-primary-foreground: 36 33% 97%;
-    --sidebar-accent: 32 20% 92%;
-    --sidebar-accent-foreground: 24 10% 15%;
-    --sidebar-border: 30 15% 88%;
-    --sidebar-ring: 36 72% 52%;
-  }
+    /* Desktop chrome behind phone */
+    --chrome-bg: 35 15% 80%;
 
-  /* ─── Dark theme (PRIMARY / default) ─── */
-  .dark {
-    --background: 30 18% 8%;
-    --foreground: 36 25% 88%;
+    /* Dark surface tokens (for sheets, header, menu, selectors) */
+    --dark-surface: 30 20% 9%;
+    --dark-surface-raised: 30 16% 14%;
+    --dark-surface-fg: 36 25% 92%;
+    --dark-surface-muted: 36 12% 50%;
+    --dark-border: 30 14% 20%;
 
-    --card: 30 14% 12%;
-    --card-foreground: 36 25% 88%;
-
-    --popover: 30 14% 12%;
-    --popover-foreground: 36 25% 88%;
-
-    --primary: 36 25% 88%;
-    --primary-foreground: 30 18% 8%;
-
-    --secondary: 30 12% 16%;
-    --secondary-foreground: 36 25% 85%;
-
-    --muted: 30 10% 18%;
-    --muted-foreground: 36 12% 50%;
-
-    --accent: 36 72% 52%;
-    --accent-foreground: 30 18% 8%;
-
-    --destructive: 0 62% 40%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 30 10% 18%;
-    --input: 30 10% 20%;
-    --ring: 36 72% 52%;
-
-    --verse-number: 36 50% 50%;
-    --verse-highlight-yellow: 48 50% 20%;
-    --verse-highlight-green: 120 25% 18%;
-    --verse-highlight-blue: 210 35% 20%;
-    --verse-highlight-pink: 340 35% 20%;
-    --verse-highlight-orange: 28 45% 20%;
-
-    --tab-active: 36 72% 52%;
-    --tab-inactive: 36 12% 40%;
-    --chrome-bg: 30 18% 5%;
-
-    --sidebar-background: 30 18% 8%;
-    --sidebar-foreground: 36 25% 88%;
-    --sidebar-primary: 36 25% 88%;
-    --sidebar-primary-foreground: 30 18% 8%;
-    --sidebar-accent: 30 12% 16%;
-    --sidebar-accent-foreground: 36 25% 88%;
-    --sidebar-border: 30 10% 18%;
-    --sidebar-ring: 36 72% 52%;
+    --sidebar-background: 30 20% 9%;
+    --sidebar-foreground: 36 25% 92%;
+    --sidebar-primary: 36 25% 92%;
+    --sidebar-primary-foreground: 30 20% 9%;
+    --sidebar-accent: 30 16% 14%;
+    --sidebar-accent-foreground: 36 25% 92%;
+    --sidebar-border: 30 14% 20%;
+    --sidebar-ring: 40 47% 60%;
   }
 }
 
@@ -127,7 +91,6 @@
     background-color: hsl(var(--chrome-bg));
   }
 
-  /* Tap target minimum */
   button, a, [role="button"] {
     min-height: 44px;
     min-width: 44px;
@@ -136,7 +99,7 @@
 
 @layer utilities {
   .font-scripture {
-    font-family: 'Crimson Pro', 'Lora', Georgia, 'Times New Roman', serif;
+    font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
     line-height: var(--scripture-leading);
   }
 
@@ -151,6 +114,35 @@
   .text-verse-number {
     color: hsl(var(--verse-number));
   }
+
+  /* Dark surface utilities */
+  .bg-dark-surface {
+    background-color: hsl(var(--dark-surface));
+  }
+  .bg-dark-raised {
+    background-color: hsl(var(--dark-surface-raised));
+  }
+  .text-dark-fg {
+    color: hsl(var(--dark-surface-fg));
+  }
+  .text-dark-muted {
+    color: hsl(var(--dark-surface-muted));
+  }
+  .border-dark {
+    border-color: hsl(var(--dark-border));
+  }
+  .bg-header {
+    background-color: hsl(var(--header-bg));
+  }
+  .text-header-fg {
+    color: hsl(var(--header-fg));
+  }
+  .text-gold {
+    color: hsl(var(--accent));
+  }
+  .bg-gold {
+    background-color: hsl(var(--accent));
+  }
 }
 
 /* ─── Phone Frame Shell ─── */
@@ -161,7 +153,6 @@
   min-height: 100dvh;
 }
 
-/* On narrow viewports (real phones), fill the screen */
 @media (max-width: 500px) {
   #root {
     align-items: stretch;

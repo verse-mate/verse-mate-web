@@ -1,13 +1,11 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useApp } from '@/contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { fetchChapter } from '@/services/bibleService';
 import { Chapter, HighlightColor } from '@/services/types';
-import { ChevronDown, ChevronLeft, ChevronRight, MoreVertical } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronRight, BookOpen, Bookmark, Menu } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
-import VersionPicker from '@/components/VersionPicker';
 import VerseActions from '@/components/VerseActions';
-import OptionsSheet from '@/components/OptionsSheet';
 import { BIBLE_BOOKS } from '@/services/bibleData';
 
 export default function ReadingScreen() {
@@ -15,10 +13,10 @@ export default function ReadingScreen() {
   const navigate = useNavigate();
   const [chapter, setChapter] = useState<Chapter | null>(null);
   const [showBookSelector, setShowBookSelector] = useState(false);
-  const [showVersionPicker, setShowVersionPicker] = useState(false);
-  const [showOptions, setShowOptions] = useState(false);
   const [longPressVerse, setLongPressVerse] = useState<number | null>(null);
   const [pressTimer, setPressTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetchChapter(state.book, state.chapter, state.version).then(setChapter);
@@ -31,6 +29,7 @@ export default function ReadingScreen() {
     const next = state.chapter + delta;
     if (next >= 1 && next <= maxChapter) {
       dispatch({ type: 'SET_PASSAGE', book: state.book, chapter: next });
+      scrollRef.current?.scrollTo(0, 0);
     }
   }, [state.chapter, state.book, maxChapter, dispatch]);
 
@@ -59,81 +58,142 @@ export default function ReadingScreen() {
     setPressTimer(null);
   };
 
+  const handleScroll = () => {
+    if (!scrollRef.current) return;
+    const { scrollTop, scrollHeight, clientHeight } = scrollRef.current;
+    const progress = scrollHeight > clientHeight
+      ? Math.round((scrollTop / (scrollHeight - clientHeight)) * 100)
+      : 100;
+    setScrollProgress(progress);
+  };
+
+  // Section title for the first verse group (mock — real data would come from service)
+  const sectionTitle = state.book === 'John' && state.chapter === 1
+    ? 'The Word Became Flesh'
+    : state.book === 'Psalms' && state.chapter === 23
+    ? 'The Lord Is My Shepherd'
+    : state.book === 'Genesis' && state.chapter === 1
+    ? 'The Creation of the World'
+    : state.book === 'Romans' && state.chapter === 8
+    ? 'Life in the Spirit'
+    : undefined;
+
   return (
     <div className="flex flex-col h-full relative">
-      {/* Header */}
-      <header className="sticky top-0 z-10 flex items-center justify-between px-4 py-2.5 border-b border-border bg-card">
+      {/* ─── DARK HEADER ─── */}
+      <header className="shrink-0 flex items-center justify-between px-3 bg-header" style={{ height: 56 }}>
         <button
           onClick={() => setShowBookSelector(true)}
-          className="flex items-center gap-1 font-semibold text-foreground"
+          className="flex items-center gap-1.5 text-header-fg"
         >
-          <span className="text-[17px]">{state.book} {state.chapter}</span>
-          <ChevronDown size={18} className="text-muted-foreground" />
+          <span className="text-[17px] font-semibold font-sans">{state.book} {state.chapter}</span>
+          <ChevronDown size={16} className="text-gold" />
         </button>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-0">
           <button
-            onClick={() => setShowVersionPicker(true)}
-            className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-[13px] font-medium"
+            onClick={() => {/* bookmark/note shortcut */}}
+            className="flex items-center justify-center w-[44px] h-[44px]"
           >
-            {state.version}
-            <ChevronDown size={14} />
+            <Bookmark size={22} className="text-gold" strokeWidth={1.5} />
           </button>
           <button
-            onClick={() => setShowOptions(true)}
-            className="p-2 rounded-full hover:bg-secondary"
+            onClick={() => navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/commentary`)}
+            className="flex items-center justify-center w-[44px] h-[44px]"
           >
-            <MoreVertical size={20} className="text-muted-foreground" />
+            <BookOpen size={22} className="text-gold" strokeWidth={1.5} />
+          </button>
+          <button
+            onClick={() => navigate('/menu')}
+            className="flex items-center justify-center w-[44px] h-[44px]"
+          >
+            <Menu size={22} className="text-gold" strokeWidth={1.5} />
           </button>
         </div>
       </header>
 
-      {/* Verses */}
-      <div className="flex-1 overflow-y-auto px-4 py-5" style={{ fontSize: `${state.settings.fontSize}px` }}>
-        {chapter?.verses.map(verse => {
-          const hl = getHighlightForVerse(verse.number);
-          const isSelected = state.selectedVerse === verse.number;
-          return (
-            <span
-              key={verse.number}
-              onTouchStart={() => handleTouchStart(verse.number)}
-              onTouchEnd={handleTouchEnd}
-              onMouseDown={() => handleTouchStart(verse.number)}
-              onMouseUp={handleTouchEnd}
-              className={`font-scripture inline transition-colors ${
-                hl ? highlightColorClass[hl.color] : ''
-              } ${isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''}`}
-            >
-              <sup className="text-verse-number font-sans text-[0.65em] mr-0.5 select-none font-medium">
-                {verse.number}
-              </sup>
-              {verse.text}{' '}
-            </span>
-          );
-        })}
+      {/* ─── CREAM BODY ─── */}
+      <div
+        ref={scrollRef}
+        onScroll={handleScroll}
+        className="flex-1 overflow-y-auto bg-background px-5 pt-6 pb-24"
+        style={{ fontSize: `${state.settings.fontSize}px` }}
+      >
+        {/* Book + chapter title */}
+        <h1 className="font-scripture italic text-[28px] text-foreground mb-1 font-medium">
+          {state.book} {state.chapter}
+        </h1>
+
+        {sectionTitle && (
+          <>
+            <h2 className="font-scripture italic text-[18px] text-foreground font-semibold mt-3 mb-0.5">
+              {sectionTitle}
+            </h2>
+            <p className="font-scripture italic text-[14px] text-muted-foreground mb-4">
+              ({state.book} {state.chapter}:1-{chapter?.verses.length || ''})
+            </p>
+          </>
+        )}
+
+        {/* Verses */}
+        <div className="mt-2">
+          {chapter?.verses.map(verse => {
+            const hl = getHighlightForVerse(verse.number);
+            const isSelected = state.selectedVerse === verse.number;
+            return (
+              <span
+                key={verse.number}
+                onTouchStart={() => handleTouchStart(verse.number)}
+                onTouchEnd={handleTouchEnd}
+                onMouseDown={() => handleTouchStart(verse.number)}
+                onMouseUp={handleTouchEnd}
+                className={`font-scripture inline text-foreground transition-colors ${
+                  hl ? highlightColorClass[hl.color] : ''
+                } ${isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''}`}
+              >
+                <sup className="text-verse-number font-sans text-[0.6em] mr-0.5 select-none font-semibold">
+                  {verse.number}
+                </sup>
+                {verse.text}{' '}
+              </span>
+            );
+          })}
+        </div>
       </div>
 
-      {/* Chapter nav */}
-      <div className="sticky bottom-0 flex items-center justify-between px-4 py-2 border-t border-border bg-card">
+      {/* ─── FLOATING CHAPTER NAV ─── */}
+      {state.chapter > 1 && (
         <button
           onClick={() => goToChapter(-1)}
-          disabled={state.chapter <= 1}
-          className="flex items-center gap-1 text-[13px] text-muted-foreground disabled:opacity-30"
+          className="absolute left-4 bottom-16 w-[44px] h-[44px] rounded-full bg-foreground flex items-center justify-center shadow-lg z-20"
         >
-          <ChevronLeft size={16} /> Previous
+          <ChevronLeft size={20} className="text-background" />
         </button>
-        <span className="text-[13px] text-muted-foreground font-medium">
-          {state.chapter} of {maxChapter}
-        </span>
+      )}
+      {state.chapter < maxChapter && (
         <button
           onClick={() => goToChapter(1)}
-          disabled={state.chapter >= maxChapter}
-          className="flex items-center gap-1 text-[13px] text-muted-foreground disabled:opacity-30"
+          className="absolute right-4 bottom-16 w-[44px] h-[44px] rounded-full bg-foreground flex items-center justify-center shadow-lg z-20"
         >
-          Next <ChevronRight size={16} />
+          <ChevronRight size={20} className="text-background" />
         </button>
+      )}
+
+      {/* ─── PROGRESS BAR ─── */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 bg-background px-5 py-2.5 border-t border-border">
+        <div className="flex items-center gap-3">
+          <div className="flex-1 h-1 bg-muted rounded-full overflow-hidden">
+            <div
+              className="h-full bg-foreground rounded-full transition-all duration-200"
+              style={{ width: `${scrollProgress}%` }}
+            />
+          </div>
+          <span className="text-[11px] font-medium text-muted-foreground tabular-nums w-8 text-right">
+            {scrollProgress}%
+          </span>
+        </div>
       </div>
 
-      {/* Modals & Sheets — all absolute within phone frame */}
+      {/* ─── Overlays ─── */}
       {showBookSelector && (
         <BookSelector
           onClose={() => setShowBookSelector(false)}
@@ -143,8 +203,6 @@ export default function ReadingScreen() {
           }}
         />
       )}
-      {showVersionPicker && <VersionPicker onClose={() => setShowVersionPicker(false)} />}
-      {showOptions && <OptionsSheet onClose={() => setShowOptions(false)} />}
       {longPressVerse !== null && (
         <VerseActions
           verse={longPressVerse}
