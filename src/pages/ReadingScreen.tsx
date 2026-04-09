@@ -86,19 +86,36 @@ export default function ReadingScreen() {
     orange: 'bg-highlight-orange',
   };
 
+  // Short tap → open the Verse Insight bottom sheet (direct analysis for that verse).
+  const openVerseInsight = (verseNum: number) => {
+    dispatch({ type: 'SET_VERSE', verse: verseNum });
+    navigate(
+      `/read/${encodeURIComponent(state.book)}/${state.chapter}/verse/${verseNum}/insight`
+    );
+  };
+
+  // Long press (400ms) → open the VerseActions menu (Bookmark / Note / Copy /
+  // Commentary / Insight / Highlight).
   const openVerseActions = (verseNum: number) => {
     setLongPressVerse(verseNum);
     dispatch({ type: 'SET_VERSE', verse: verseNum });
   };
 
-  // Kept for touch-device parity; both short tap and long press now open the sheet
   const handlePressStart = (verseNum: number) => {
-    const timer = setTimeout(() => openVerseActions(verseNum), 400);
+    const timer = setTimeout(() => {
+      openVerseActions(verseNum);
+      setPressTimer(null);
+    }, 400);
     setPressTimer(timer);
   };
-  const handlePressEnd = () => {
-    if (pressTimer) clearTimeout(pressTimer);
-    setPressTimer(null);
+  const handlePressEnd = (verseNum: number) => {
+    // If the long-press timer is still pending, this was a short tap — cancel
+    // the long-press and open the insight sheet instead.
+    if (pressTimer) {
+      clearTimeout(pressTimer);
+      setPressTimer(null);
+      openVerseInsight(verseNum);
+    }
   };
 
   const handleScroll = () => {
@@ -229,9 +246,16 @@ export default function ReadingScreen() {
             return (
               <span
                 key={verse.number}
-                onClick={() => openVerseActions(verse.number)}
                 onTouchStart={() => handlePressStart(verse.number)}
-                onTouchEnd={handlePressEnd}
+                onTouchEnd={() => handlePressEnd(verse.number)}
+                onMouseDown={() => handlePressStart(verse.number)}
+                onMouseUp={() => handlePressEnd(verse.number)}
+                onMouseLeave={() => {
+                  if (pressTimer) {
+                    clearTimeout(pressTimer);
+                    setPressTimer(null);
+                  }
+                }}
                 className={`inline cursor-pointer transition-colors ${hl ? highlightColorClass[hl.color] : ''} ${
                   autoClass ? `${autoClass} rounded px-0.5` : ''
                 } ${isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''}`}
