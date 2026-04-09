@@ -60,19 +60,20 @@ export default function ReadingScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full">
-      <header className="flex items-center justify-between px-4 py-3 border-b border-border bg-card">
+    <div className="flex flex-col h-full relative">
+      {/* Header */}
+      <header className="sticky top-0 z-10 flex items-center justify-between px-4 py-2.5 border-b border-border bg-card">
         <button
           onClick={() => setShowBookSelector(true)}
           className="flex items-center gap-1 font-semibold text-foreground"
         >
-          <span className="text-lg">{state.book} {state.chapter}</span>
+          <span className="text-[17px]">{state.book} {state.chapter}</span>
           <ChevronDown size={18} className="text-muted-foreground" />
         </button>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
           <button
             onClick={() => setShowVersionPicker(true)}
-            className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium"
+            className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-[13px] font-medium"
           >
             {state.version}
             <ChevronDown size={14} />
@@ -86,7 +87,8 @@ export default function ReadingScreen() {
         </div>
       </header>
 
-      <div className="flex-1 overflow-y-auto px-5 py-6" style={{ fontSize: `${state.settings.fontSize}px` }}>
+      {/* Verses */}
+      <div className="flex-1 overflow-y-auto px-4 py-5" style={{ fontSize: `${state.settings.fontSize}px` }}>
         {chapter?.verses.map(verse => {
           const hl = getHighlightForVerse(verse.number);
           const isSelected = state.selectedVerse === verse.number;
@@ -101,7 +103,7 @@ export default function ReadingScreen() {
                 hl ? highlightColorClass[hl.color] : ''
               } ${isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''}`}
             >
-              <sup className="text-muted-foreground font-sans text-[0.65em] mr-1 select-none font-medium">
+              <sup className="text-muted-foreground font-sans text-[0.65em] mr-0.5 select-none font-medium">
                 {verse.number}
               </sup>
               {verse.text}{' '}
@@ -110,26 +112,28 @@ export default function ReadingScreen() {
         })}
       </div>
 
-      <div className="flex items-center justify-between px-4 py-2 border-t border-border bg-card">
+      {/* Chapter nav */}
+      <div className="sticky bottom-0 flex items-center justify-between px-4 py-2 border-t border-border bg-card">
         <button
           onClick={() => goToChapter(-1)}
           disabled={state.chapter <= 1}
-          className="flex items-center gap-1 text-sm text-muted-foreground disabled:opacity-30"
+          className="flex items-center gap-1 text-[13px] text-muted-foreground disabled:opacity-30"
         >
-          <ChevronLeft size={18} /> Previous
+          <ChevronLeft size={16} /> Previous
         </button>
-        <span className="text-sm text-muted-foreground font-medium">
-          Chapter {state.chapter} of {maxChapter}
+        <span className="text-[13px] text-muted-foreground font-medium">
+          {state.chapter} of {maxChapter}
         </span>
         <button
           onClick={() => goToChapter(1)}
           disabled={state.chapter >= maxChapter}
-          className="flex items-center gap-1 text-sm text-muted-foreground disabled:opacity-30"
+          className="flex items-center gap-1 text-[13px] text-muted-foreground disabled:opacity-30"
         >
-          Next <ChevronRight size={18} />
+          Next <ChevronRight size={16} />
         </button>
       </div>
 
+      {/* Modals & Sheets — all absolute within phone frame */}
       {showBookSelector && (
         <BookSelector
           onClose={() => setShowBookSelector(false)}
