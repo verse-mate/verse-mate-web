@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { fetchVerseInsights, fetchChapter } from '@/services/bibleService';
 import { VerseInsight, Chapter, BibleVersion } from '@/services/types';
-import { ChevronLeft, ChevronRight, Copy, Share2, Bookmark } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Copy, Share2, Bookmark, Check } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
+import { useApp } from '@/contexts/AppContext';
 
 interface Props {
   book: string;
@@ -26,9 +27,13 @@ export default function VerseInsightSheet({
   version,
   onClose,
 }: Props) {
+  const { state, addHighlight } = useApp();
   const [insights, setInsights] = useState<VerseInsight[]>([]);
   const [chapterData, setChapterData] = useState<Chapter | null>(null);
   const [currentVerse, setCurrentVerse] = useState<number>(verse);
+  const [copiedAt, setCopiedAt] = useState<number>(0);
+  const [savedAt, setSavedAt] = useState<number>(0);
+  const [actionError, setActionError] = useState<string | null>(null);
 
   useEffect(() => {
     fetchVerseInsights(book, chapter).then(setInsights);
@@ -47,6 +52,76 @@ export default function VerseInsightSheet({
   const step = (delta: number) => {
     const next = currentVerse + delta;
     if (next >= 1 && next <= maxVerse) setCurrentVerse(next);
+  };
+
+  const quoteText = verseText
+    ? `"${verseText}" — ${book} ${chapter}:${currentVerse}`
+    : `${book} ${chapter}:${currentVerse}`;
+
+  const handleCopy = async () => {
+    setActionError(null);
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(quoteText);
+      } else {
+        // Fallback for older/iframe-restricted environments
+        const ta = document.createElement('textarea');
+        ta.value = quoteText;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      setCopiedAt(Date.now());
+      setTimeout(() => setCopiedAt(0), 1500);
+    } catch {
+      setActionError('Copy failed — clipboard not available here');
+    }
+  };
+
+  const handleShare = async () => {
+    setActionError(null);
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: `${book} ${chapter}:${currentVerse}`,
+          text: quoteText,
+        });
+      } else {
+        // No Web Share API → fall back to copy
+        await handleCopy();
+      }
+    } catch (err) {
+      // User-cancelled share is an AbortError, don't show as error
+      if ((err as Error)?.name !== 'AbortError') {
+        setActionError('Share failed');
+      }
+    }
+  };
+
+  const handleSaveHighlight = async () => {
+    setActionError(null);
+    if (!state.isSignedIn) {
+      setActionError('Sign in to save highlights');
+      return;
+    }
+    try {
+      await addHighlight({
+        bookId: state.bookId,
+        book,
+        chapter,
+        verse: currentVerse,
+        startVerse: currentVerse,
+        endVerse: currentVerse,
+        color: 'yellow',
+      });
+      setSavedAt(Date.now());
+      setTimeout(() => setSavedAt(0), 1500);
+    } catch {
+      setActionError('Save failed — please try again');
+    }
   };
 
   return (
@@ -140,33 +215,48 @@ export default function VerseInsightSheet({
         <div className="shrink-0 px-5 pb-3 space-y-2">
           <div className="grid grid-cols-2 gap-2">
             <button
-              onClick={() =>
-                navigator.clipboard?.writeText(verseText).catch(() => undefined)
-              }
+              onClick={handleCopy}
               className="h-12 rounded-xl bg-dark-raised border border-dark flex items-center justify-center gap-2"
             >
-              <Copy size={16} className="text-dark-fg" strokeWidth={1.5} />
-              <span className="text-[13px] text-dark-fg">Copy</span>
+              {copiedAt ? (
+                <>
+                  <Check size={16} className="text-gold" strokeWidth={1.75} />
+                  <span className="text-[13px] text-gold">Copied</span>
+                </>
+              ) : (
+                <>
+                  <Copy size={16} className="text-dark-fg" strokeWidth={1.5} />
+                  <span className="text-[13px] text-dark-fg">Copy</span>
+                </>
+              )}
             </button>
             <button
-              onClick={() =>
-                navigator.share
-                  ?.({
-                    title: `${book} ${chapter}:${currentVerse}`,
-                    text: verseText,
-                  })
-                  .catch(() => undefined)
-              }
+              onClick={handleShare}
               className="h-12 rounded-xl bg-dark-raised border border-dark flex items-center justify-center gap-2"
             >
               <Share2 size={16} className="text-dark-fg" strokeWidth={1.5} />
               <span className="text-[13px] text-dark-fg">Share</span>
             </button>
           </div>
-          <button className="w-full h-12 rounded-xl bg-dark-raised border border-dark flex items-center justify-center gap-2">
-            <Bookmark size={16} className="text-dark-fg" strokeWidth={1.5} />
-            <span className="text-[13px] text-dark-fg">Save as highlight</span>
+          <button
+            onClick={handleSaveHighlight}
+            className="w-full h-12 rounded-xl bg-dark-raised border border-dark flex items-center justify-center gap-2"
+          >
+            {savedAt ? (
+              <>
+                <Check size={16} className="text-gold" strokeWidth={1.75} />
+                <span className="text-[13px] text-gold">Saved as highlight</span>
+              </>
+            ) : (
+              <>
+                <Bookmark size={16} className="text-dark-fg" strokeWidth={1.5} />
+                <span className="text-[13px] text-dark-fg">Save as highlight</span>
+              </>
+            )}
           </button>
+          {actionError && (
+            <p className="text-[11px] text-red-400 text-center">{actionError}</p>
+          )}
         </div>
 
         {/* Close button */}

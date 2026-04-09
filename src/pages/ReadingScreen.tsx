@@ -16,7 +16,7 @@ import VerseInsightSheet from '@/components/VerseInsightSheet';
 
 
 export default function ReadingScreen() {
-  const { state, dispatch } = useApp();
+  const { state, dispatch, addBookmark, removeBookmark } = useApp();
   const navigate = useNavigate();
   const [chapter, setChapter] = useState<Chapter | null>(null);
   const [showBookSelector, setShowBookSelector] = useState(false);
@@ -203,10 +203,44 @@ export default function ReadingScreen() {
             {state.book} {state.chapter}
           </h1>
           <div className="flex items-center gap-1 mt-1.5">
-            <button aria-label="Bookmark chapter" className="w-8 h-8 flex items-center justify-center">
-              <Bookmark size={18} className="text-foreground" strokeWidth={1.75} />
-            </button>
-            <button aria-label="Notes" className="w-8 h-8 flex items-center justify-center">
+            {(() => {
+              const chapterBookmark = state.bookmarks.find(
+                b =>
+                  b.bookId === state.bookId &&
+                  b.chapter === state.chapter &&
+                  !b.verse
+              );
+              const isBookmarked = !!chapterBookmark;
+              return (
+                <button
+                  aria-label={isBookmarked ? 'Remove bookmark' : 'Bookmark chapter'}
+                  onClick={() => {
+                    if (isBookmarked) {
+                      removeBookmark(chapterBookmark.id);
+                    } else {
+                      addBookmark({
+                        bookId: state.bookId,
+                        book: state.book,
+                        chapter: state.chapter,
+                        version: state.version,
+                      });
+                    }
+                  }}
+                  className="w-10 h-10 flex items-center justify-center"
+                >
+                  <Bookmark
+                    size={18}
+                    className={isBookmarked ? 'text-foreground fill-foreground' : 'text-foreground'}
+                    strokeWidth={1.75}
+                  />
+                </button>
+              );
+            })()}
+            <button
+              aria-label="Notes for this chapter"
+              onClick={() => navigate('/notes')}
+              className="w-10 h-10 flex items-center justify-center"
+            >
               <FileText size={18} className="text-foreground" strokeWidth={1.75} />
             </button>
           </div>
