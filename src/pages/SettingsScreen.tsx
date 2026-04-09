@@ -1,10 +1,12 @@
-import { useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
-import { ChevronLeft, Sun, Moon, Type, BookOpen, Bell } from 'lucide-react';
 import { BibleVersion } from '@/services/types';
+import ScreenHeader from '@/components/ScreenHeader';
 
+/**
+ * SettingsScreen — full dark settings list.
+ * Reference pattern from Mobile App section Menu + Options frames.
+ */
 export default function SettingsScreen() {
-  const navigate = useNavigate();
   const { state, dispatch } = useApp();
   const { settings } = state;
 
@@ -13,92 +15,85 @@ export default function SettingsScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full">
-      <header className="flex items-center gap-2 px-4 py-3 border-b border-border bg-card">
-        <button onClick={() => navigate('/menu')} className="p-2 -ml-2 rounded-full hover:bg-secondary">
-          <ChevronLeft size={20} />
-        </button>
-        <h1 className="text-lg font-semibold text-foreground">Settings</h1>
-      </header>
-      <div className="flex-1 overflow-y-auto p-4 space-y-6">
+    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+      <ScreenHeader title="Settings" />
+
+      <div className="flex-1 overflow-y-auto px-5 pb-6 space-y-6">
         {/* Font size */}
-        <div>
-          <label className="flex items-center gap-2 text-sm font-medium text-foreground mb-2">
-            <Type size={16} /> Font Size: {settings.fontSize}px
-          </label>
+        <section>
+          <p className="text-[13px] text-dark-muted mb-2">Font size · {settings.fontSize}px</p>
           <input
             type="range"
             min={14}
             max={28}
             value={settings.fontSize}
             onChange={e => updateSetting({ fontSize: Number(e.target.value) })}
-            className="w-full accent-accent"
+            className="w-full accent-[hsl(var(--accent))]"
           />
-          <div className="flex justify-between text-xs text-muted-foreground mt-1">
-            <span>Small</span><span>Large</span>
+          <div className="flex justify-between text-[11px] text-dark-muted mt-1">
+            <span>Small</span>
+            <span>Large</span>
           </div>
-        </div>
+        </section>
 
         {/* Theme */}
-        <div>
-          <label className="flex items-center gap-2 text-sm font-medium text-foreground mb-2">
-            {settings.theme === 'dark' ? <Moon size={16} /> : <Sun size={16} />} Theme
-          </label>
+        <section>
+          <p className="text-[13px] text-dark-muted mb-2">Theme</p>
           <div className="flex gap-2">
             {(['light', 'dark'] as const).map(t => (
               <button
                 key={t}
                 onClick={() => updateSetting({ theme: t })}
-                className={`flex-1 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                className={`flex-1 h-12 rounded-xl text-[14px] font-medium transition-colors ${
                   settings.theme === t
-                    ? 'bg-accent text-accent-foreground'
-                    : 'bg-secondary text-secondary-foreground'
+                    ? 'bg-gold text-[#1A1A1A]'
+                    : 'bg-dark-raised text-dark-fg border border-dark'
                 }`}
               >
                 {t.charAt(0).toUpperCase() + t.slice(1)}
               </button>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Default version */}
-        <div>
-          <label className="flex items-center gap-2 text-sm font-medium text-foreground mb-2">
-            <BookOpen size={16} /> Default Version
-          </label>
+        <section>
+          <p className="text-[13px] text-dark-muted mb-2">Default version</p>
           <div className="grid grid-cols-4 gap-2">
             {(['ESV', 'NIV', 'KJV', 'NLT'] as BibleVersion[]).map(v => (
               <button
                 key={v}
                 onClick={() => updateSetting({ defaultVersion: v })}
-                className={`py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                className={`h-12 rounded-xl text-[13px] font-medium transition-colors ${
                   settings.defaultVersion === v
-                    ? 'bg-accent text-accent-foreground'
-                    : 'bg-secondary text-secondary-foreground'
+                    ? 'bg-gold text-[#1A1A1A]'
+                    : 'bg-dark-raised text-dark-fg border border-dark'
                 }`}
               >
                 {v}
               </button>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* Notifications */}
-        <div className="flex items-center justify-between">
-          <label className="flex items-center gap-2 text-sm font-medium text-foreground">
-            <Bell size={16} /> Notifications
-          </label>
+        {/* Notifications toggle */}
+        <section className="flex items-center justify-between pt-1">
+          <p className="text-[14px] text-dark-fg">Notifications</p>
           <button
             onClick={() => updateSetting({ notifications: !settings.notifications })}
+            role="switch"
+            aria-checked={settings.notifications}
             className={`relative w-12 h-7 rounded-full transition-colors ${
-              settings.notifications ? 'bg-accent' : 'bg-muted'
+              settings.notifications ? 'bg-gold' : 'bg-dark-raised border border-dark'
             }`}
           >
-            <span className={`absolute top-0.5 left-0.5 w-6 h-6 rounded-full bg-card shadow transition-transform ${
-              settings.notifications ? 'translate-x-5' : 'translate-x-0'
-            }`} />
+            <span
+              className={`absolute top-0.5 left-0.5 w-6 h-6 rounded-full bg-dark-fg shadow transition-transform ${
+                settings.notifications ? 'translate-x-5' : 'translate-x-0'
+              }`}
+            />
           </button>
-        </div>
+        </section>
       </div>
     </div>
   );

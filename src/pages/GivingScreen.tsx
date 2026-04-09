@@ -1,27 +1,34 @@
-import { useNavigate } from 'react-router-dom';
-import { ChevronLeft, Heart } from 'lucide-react';
+import ScreenHeader from '@/components/ScreenHeader';
+import { Heart } from 'lucide-react';
 
+/**
+ * GivingScreen — hero + copy + gold CTA.
+ * Figma reference: frame 5588:5080 (Mobile App section)
+ */
 export default function GivingScreen() {
-  const navigate = useNavigate();
   return (
-    <div className="flex flex-col h-full">
-      <header className="flex items-center gap-2 px-4 py-3 border-b border-border bg-card">
-        <button onClick={() => navigate('/menu')} className="p-2 -ml-2 rounded-full hover:bg-secondary">
-          <ChevronLeft size={20} />
-        </button>
-        <h1 className="text-lg font-semibold text-foreground">Giving</h1>
-      </header>
-      <div className="flex-1 flex flex-col items-center justify-center px-6 gap-6 text-center">
-        <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center">
-          <Heart size={28} className="text-accent" />
+    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+      <ScreenHeader title="Giving" />
+
+      <div className="flex-1 overflow-y-auto px-5 pb-8">
+        <div className="rounded-2xl overflow-hidden bg-dark-raised mt-2 aspect-[4/5] flex items-center justify-center">
+          <Heart size={72} className="text-gold" strokeWidth={1} />
         </div>
-        <div>
-          <h2 className="text-xl font-serif font-semibold text-foreground mb-2">Support VerseMate</h2>
-          <p className="text-muted-foreground text-sm leading-relaxed">
-            VerseMate is free to use. Your generous support helps us keep developing features and providing Bible content to readers worldwide.
-          </p>
-        </div>
-        <button className="w-full max-w-xs py-3 rounded-lg bg-accent text-accent-foreground font-medium text-sm hover:opacity-90 transition-opacity">
+
+        <h1 className="text-[22px] font-bold text-dark-fg mt-6 leading-tight">
+          Support the Mission
+        </h1>
+        <p className="text-[14px] text-dark-muted mt-4 leading-relaxed">
+          VerseMate is free to use. Your generous giving helps us keep building features, growing
+          our content library, and reaching more readers around the world with God's Word.
+        </p>
+        <p className="text-[14px] text-dark-muted mt-3 leading-relaxed">
+          Every contribution — large or small — makes a direct difference.
+        </p>
+      </div>
+
+      <div className="shrink-0 px-5 pb-6 safe-bottom">
+        <button className="w-full h-12 rounded-xl bg-gold text-[#1A1A1A] font-medium text-[15px]">
           Give Now
         </button>
       </div>
