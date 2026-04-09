@@ -15,10 +15,10 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   const book = selectedBook ? BIBLE_BOOKS.find(b => b.name === selectedBook) : null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-background animate-fade-in flex flex-col">
+    <div className="absolute inset-0 z-50 bg-background animate-fade-in flex flex-col">
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-border">
-        <h2 className="text-lg font-semibold text-foreground">
+        <h2 className="text-[17px] font-semibold text-foreground">
           {selectedBook ? selectedBook : 'Select Book'}
         </h2>
         <button onClick={onClose} className="p-2 rounded-full hover:bg-secondary">
@@ -46,13 +46,13 @@ export default function BookSelector({ onClose, onSelect }: Props) {
           </div>
 
           {/* Book grid */}
-          <div className="flex-1 overflow-y-auto p-4">
-            <div className="grid grid-cols-3 gap-2">
+          <div className="flex-1 overflow-y-auto p-3">
+            <div className="grid grid-cols-4 gap-1.5">
               {books.map(b => (
                 <button
                   key={b.name}
                   onClick={() => setSelectedBook(b.name)}
-                  className="py-3 px-2 rounded-lg bg-secondary text-secondary-foreground text-sm font-medium text-center hover:bg-accent hover:text-accent-foreground transition-colors"
+                  className="py-2.5 px-1 rounded-lg bg-secondary text-secondary-foreground text-[12px] font-medium text-center hover:bg-accent hover:text-accent-foreground transition-colors"
                 >
                   {b.shortName}
                 </button>
@@ -62,14 +62,14 @@ export default function BookSelector({ onClose, onSelect }: Props) {
         </>
       ) : (
         /* Chapter picker */
-        <div className="flex-1 overflow-y-auto p-4">
-          <p className="text-sm text-muted-foreground mb-3">Select chapter</p>
-          <div className="grid grid-cols-5 gap-2">
+        <div className="flex-1 overflow-y-auto p-3">
+          <p className="text-[13px] text-muted-foreground mb-3">Select chapter</p>
+          <div className="grid grid-cols-6 gap-1.5">
             {Array.from({ length: book!.chapters }, (_, i) => i + 1).map(ch => (
               <button
                 key={ch}
                 onClick={() => onSelect(selectedBook, ch)}
-                className="py-3 rounded-lg bg-secondary text-secondary-foreground text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+                className="py-2.5 rounded-lg bg-secondary text-secondary-foreground text-[13px] font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
               >
                 {ch}
               </button>
@@ -77,7 +77,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
           </div>
           <button
             onClick={() => setSelectedBook(null)}
-            className="mt-4 text-sm text-accent font-medium"
+            className="mt-4 text-[13px] text-accent font-medium"
           >
             ← Back to books
           </button>
