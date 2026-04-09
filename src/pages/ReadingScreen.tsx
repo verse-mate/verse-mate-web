@@ -166,15 +166,15 @@ export default function ReadingScreen() {
 
           {/* Right: Bible/Insight segmented pill + Menu */}
           <div className="flex items-center gap-2">
-            <div className="flex items-center rounded-full bg-[#232323] p-0.5">
-              <button className="px-3.5 h-8 rounded-full text-[13px] font-medium bg-gold text-[#1A1A1A]">
+            <div className="flex items-center rounded-full bg-[#3a3a3a] p-1 border border-[#4a4a4a]">
+              <button className="px-4 h-8 rounded-full text-[13px] font-semibold bg-gold text-[#1A1A1A]">
                 Bible
               </button>
               <button
                 onClick={() =>
                   navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/commentary`)
                 }
-                className="px-3.5 h-8 rounded-full text-[13px] font-medium text-header-fg/80 transition-colors"
+                className="px-4 h-8 rounded-full text-[13px] font-semibold text-white transition-colors"
               >
                 Insight
               </button>
