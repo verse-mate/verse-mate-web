@@ -1,19 +1,89 @@
+import { useEffect, useState } from 'react';
 import { useApp } from '@/contexts/AppContext';
-import { BibleVersion } from '@/services/types';
 import ScreenHeader from '@/components/ScreenHeader';
-import { ReactNode } from 'react';
+import { api } from '@/services/api';
+
+interface HighlightTheme {
+  theme_id: number;
+  name: string;
+  color: string;
+  description: string;
+  is_active: boolean;
+}
 
 /**
- * SettingsScreen — full-featured dark settings page matching the breadth
- * expected by the Mobile App design. Sections: Reading, Display,
- * Notifications, Content, Account.
+ * SettingsScreen — matches the production VerseMate settings surface.
+ * The real API (api.versemate.org) only exposes:
+ *   - PATCH /user/preferences  { preferred_language }
+ *   - GET  /bible/highlight-themes
+ *   - GET  /bible/user/theme-preferences
+ *   - PATCH /bible/user/theme-preferences/{theme_id}
+ * We surface exactly those — language + per-theme auto-highlight toggles —
+ * plus a local font size slider for reading comfort.
  */
 export default function SettingsScreen() {
   const { state, dispatch } = useApp();
   const { settings } = state;
 
+  const [themes, setThemes] = useState<HighlightTheme[]>([]);
+  const [enabledThemes, setEnabledThemes] = useState<Set<number>>(new Set());
+
+  useEffect(() => {
+    api
+      .get<{ data: HighlightTheme[] }>('/bible/highlight-themes', undefined, { auth: false })
+      .then(r => setThemes(r?.data || []))
+      .catch(() => setThemes([]));
+
+    api
+      .get<{ data: Array<{ theme_id: number; is_enabled: boolean }> }>('/bible/user/theme-preferences')
+      .then(r => {
+        const active = new Set<number>();
+        for (const p of r?.data || []) {
+          if (p.is_enabled) active.add(p.theme_id);
+        }
+        setEnabledThemes(active);
+      })
+      .catch(() => undefined);
+  }, []);
+
   const updateSetting = (partial: Partial<typeof settings>) => {
     dispatch({ type: 'UPDATE_SETTINGS', settings: partial });
+  };
+
+  const toggleTheme = async (themeId: number) => {
+    const next = new Set(enabledThemes);
+    const newState = !next.has(themeId);
+    if (newState) next.add(themeId);
+    else next.delete(themeId);
+    setEnabledThemes(next);
+    try {
+      await api.patch(`/bible/user/theme-preferences/${themeId}`, { is_enabled: newState });
+    } catch {
+      /* revert on failure */
+      const reverted = new Set(enabledThemes);
+      setEnabledThemes(reverted);
+    }
+  };
+
+  const setLanguage = async (code: 'en' | 'es' | 'fr' | 'pt') => {
+    updateSetting({ language: code });
+    try {
+      await api.patch('/user/preferences', { preferred_language: code });
+    } catch {
+      /* ignore if signed out */
+    }
+  };
+
+  const colorDot: Record<string, string> = {
+    yellow: 'bg-yellow-400',
+    green: 'bg-green-400',
+    blue: 'bg-blue-400',
+    pink: 'bg-pink-400',
+    purple: 'bg-purple-400',
+    orange: 'bg-orange-400',
+    red: 'bg-red-400',
+    teal: 'bg-teal-400',
+    brown: 'bg-amber-700',
   };
 
   return (
@@ -21,234 +91,109 @@ export default function SettingsScreen() {
       <ScreenHeader title="Settings" />
 
       <div className="flex-1 overflow-y-auto px-5 pb-8">
-        <Section title="Reading">
-          <Row
-            label="Font size"
-            hint={`${settings.fontSize}px`}
-            control={
-              <input
-                type="range"
-                min={13}
-                max={26}
-                value={settings.fontSize}
-                onChange={e => updateSetting({ fontSize: Number(e.target.value) })}
-                className="w-full accent-[hsl(var(--accent))]"
-              />
-            }
+        {/* Font size */}
+        <section className="mt-5">
+          <div className="flex items-center justify-between mb-1.5">
+            <span className="text-[14px] text-dark-fg">Font size</span>
+            <span className="text-[12px] text-dark-muted">{settings.fontSize}px</span>
+          </div>
+          <input
+            type="range"
+            min={13}
+            max={26}
+            value={settings.fontSize}
+            onChange={e => updateSetting({ fontSize: Number(e.target.value) })}
+            className="w-full accent-[hsl(var(--accent))]"
           />
-          <Row
-            label="Line spacing"
-            hint={`${settings.lineSpacing.toFixed(1)}×`}
-            control={
-              <input
-                type="range"
-                min={1.2}
-                max={2.2}
-                step={0.1}
-                value={settings.lineSpacing}
-                onChange={e => updateSetting({ lineSpacing: Number(e.target.value) })}
-                className="w-full accent-[hsl(var(--accent))]"
-              />
-            }
-          />
-          <ToggleRow
-            label="Show verse numbers"
-            hint="Display the verse number before each verse"
-            value={settings.showVerseNumbers}
-            onChange={v => updateSetting({ showVerseNumbers: v })}
-          />
-          <ToggleRow
-            label="Auto-highlights"
-            hint="Highlight famous verses automatically (e.g. John 3:16, Psalm 23)"
-            value={settings.autoHighlights}
-            onChange={v => updateSetting({ autoHighlights: v })}
-          />
-        </Section>
+        </section>
 
-        <Section title="Default Version">
-          <div className="grid grid-cols-4 gap-2">
-            {(['ESV', 'NIV', 'KJV', 'NLT'] as BibleVersion[]).map(v => (
+        {/* Language */}
+        <section className="mt-6">
+          <p className="text-[13px] text-dark-muted mb-2">Language</p>
+          <div className="grid grid-cols-2 gap-2">
+            {(
+              [
+                { id: 'en', label: 'English' },
+                { id: 'es', label: 'Español' },
+                { id: 'fr', label: 'Français' },
+                { id: 'pt', label: 'Português' },
+              ] as const
+            ).map(l => (
               <button
-                key={v}
-                onClick={() => updateSetting({ defaultVersion: v })}
+                key={l.id}
+                onClick={() => setLanguage(l.id)}
                 className={`h-11 rounded-xl text-[13px] font-medium transition-colors ${
-                  settings.defaultVersion === v
+                  settings.language === l.id
                     ? 'bg-gold text-[#1A1A1A]'
                     : 'bg-dark-raised text-dark-fg border border-dark'
                 }`}
               >
-                {v}
+                {l.label}
               </button>
             ))}
           </div>
-        </Section>
+        </section>
 
-        <Section title="Display">
-          <div>
-            <p className="text-[13px] text-dark-muted mb-2">Theme</p>
-            <div className="flex gap-2">
-              {(['light', 'dark', 'system'] as const).map(t => (
-                <button
-                  key={t}
-                  onClick={() => updateSetting({ theme: t })}
-                  className={`flex-1 h-11 rounded-xl text-[13px] font-medium transition-colors ${
-                    settings.theme === t
-                      ? 'bg-gold text-[#1A1A1A]'
-                      : 'bg-dark-raised text-dark-fg border border-dark'
-                  }`}
-                >
-                  {t.charAt(0).toUpperCase() + t.slice(1)}
-                </button>
-              ))}
-            </div>
+        {/* Auto-highlight themes */}
+        <section className="mt-6">
+          <div className="flex items-center justify-between mb-2">
+            <p className="text-[13px] text-dark-muted">Auto-highlight themes</p>
+            <span className="text-[11px] text-dark-muted/70">
+              {enabledThemes.size} of {themes.length}
+            </span>
           </div>
-          <div className="mt-4">
-            <p className="text-[13px] text-dark-muted mb-2">Language</p>
-            <div className="grid grid-cols-4 gap-2">
-              {(
-                [
-                  { id: 'en', label: 'English' },
-                  { id: 'es', label: 'Español' },
-                  { id: 'fr', label: 'Français' },
-                  { id: 'pt', label: 'Português' },
-                ] as const
-              ).map(l => (
-                <button
-                  key={l.id}
-                  onClick={() => updateSetting({ language: l.id })}
-                  className={`h-11 rounded-xl text-[12px] font-medium transition-colors ${
-                    settings.language === l.id
-                      ? 'bg-gold text-[#1A1A1A]'
-                      : 'bg-dark-raised text-dark-fg border border-dark'
-                  }`}
-                >
-                  {l.label}
-                </button>
-              ))}
+          {themes.length === 0 ? (
+            <p className="text-[12px] text-dark-muted/70">Loading themes…</p>
+          ) : (
+            <div className="space-y-1">
+              {themes.map(t => {
+                const isOn = enabledThemes.has(t.theme_id);
+                return (
+                  <button
+                    key={t.theme_id}
+                    onClick={() => toggleTheme(t.theme_id)}
+                    className="flex items-start justify-between gap-3 w-full py-3 text-left"
+                  >
+                    <div className="flex items-start gap-3 flex-1 min-w-0">
+                      <span
+                        className={`mt-1 w-3 h-3 rounded-full shrink-0 ${
+                          colorDot[t.color] || 'bg-gray-400'
+                        }`}
+                      />
+                      <div className="min-w-0">
+                        <p className="text-[14px] text-dark-fg">{t.name}</p>
+                        {t.description && (
+                          <p className="text-[12px] text-dark-muted mt-0.5 line-clamp-2">
+                            {t.description}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <span
+                      role="switch"
+                      aria-checked={isOn}
+                      className={`relative w-11 h-6 rounded-full shrink-0 mt-1 transition-colors ${
+                        isOn ? 'bg-gold' : 'bg-dark-raised border border-dark'
+                      }`}
+                    >
+                      <span
+                        className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full shadow transition-transform ${
+                          isOn ? 'translate-x-5 bg-[#1A1A1A]' : 'translate-x-0 bg-dark-fg'
+                        }`}
+                      />
+                    </span>
+                  </button>
+                );
+              })}
             </div>
-          </div>
-        </Section>
+          )}
+        </section>
 
-        <Section title="Content & Study">
-          <div>
-            <p className="text-[13px] text-dark-muted mb-2">Reading plan</p>
-            <div className="grid grid-cols-2 gap-2">
-              {(
-                [
-                  { id: 'none', label: 'None' },
-                  { id: 'daily', label: 'Daily verse' },
-                  { id: 'chronological', label: 'Chronological' },
-                  { id: 'one-year', label: 'One-year plan' },
-                ] as const
-              ).map(p => (
-                <button
-                  key={p.id}
-                  onClick={() => updateSetting({ readingPlan: p.id })}
-                  className={`h-11 rounded-xl text-[13px] font-medium transition-colors ${
-                    settings.readingPlan === p.id
-                      ? 'bg-gold text-[#1A1A1A]'
-                      : 'bg-dark-raised text-dark-fg border border-dark'
-                  }`}
-                >
-                  {p.label}
-                </button>
-              ))}
-            </div>
-          </div>
-          <ToggleRow
-            label="Download for offline"
-            hint="Cache the current version for reading without a connection"
-            value={settings.offlineMode}
-            onChange={v => updateSetting({ offlineMode: v })}
-          />
-        </Section>
-
-        <Section title="Notifications & Feedback">
-          <ToggleRow
-            label="Push notifications"
-            hint="Daily verse, study reminders, and updates"
-            value={settings.notifications}
-            onChange={v => updateSetting({ notifications: v })}
-          />
-          <ToggleRow
-            label="Haptic feedback"
-            hint="Vibrate on long-press and key actions"
-            value={settings.hapticFeedback}
-            onChange={v => updateSetting({ hapticFeedback: v })}
-          />
-        </Section>
-
-        <Section title="About">
-          <p className="text-[13px] text-dark-muted">VerseMate · Version 1.0.0</p>
-          <p className="text-[12px] text-dark-muted/70 mt-1">
-            © 2026 VerseMate. All Scripture references © their respective publishers.
-          </p>
-        </Section>
+        {/* About */}
+        <section className="mt-8">
+          <p className="text-[12px] text-dark-muted">VerseMate · Version 1.0.0</p>
+        </section>
       </div>
-    </div>
-  );
-}
-
-function Section({ title, children }: { title: string; children: ReactNode }) {
-  return (
-    <section className="mt-5">
-      <h2 className="text-[12px] uppercase tracking-wider text-dark-muted mb-3">{title}</h2>
-      <div className="space-y-4">{children}</div>
-    </section>
-  );
-}
-
-function Row({
-  label,
-  hint,
-  control,
-}: {
-  label: string;
-  hint?: string;
-  control: ReactNode;
-}) {
-  return (
-    <div>
-      <div className="flex items-center justify-between mb-1.5">
-        <span className="text-[14px] text-dark-fg">{label}</span>
-        {hint && <span className="text-[12px] text-dark-muted">{hint}</span>}
-      </div>
-      {control}
-    </div>
-  );
-}
-
-function ToggleRow({
-  label,
-  hint,
-  value,
-  onChange,
-}: {
-  label: string;
-  hint?: string;
-  value: boolean;
-  onChange: (v: boolean) => void;
-}) {
-  return (
-    <div className="flex items-start justify-between gap-3">
-      <div className="flex-1 min-w-0">
-        <p className="text-[14px] text-dark-fg">{label}</p>
-        {hint && <p className="text-[12px] text-dark-muted mt-0.5">{hint}</p>}
-      </div>
-      <button
-        onClick={() => onChange(!value)}
-        role="switch"
-        aria-checked={value}
-        className={`relative w-12 h-7 rounded-full transition-colors shrink-0 ${
-          value ? 'bg-gold' : 'bg-dark-raised border border-dark'
-        }`}
-      >
-        <span
-          className={`absolute top-0.5 left-0.5 w-6 h-6 rounded-full shadow transition-transform ${
-            value ? 'translate-x-5 bg-[#1A1A1A]' : 'translate-x-0 bg-dark-fg'
-          }`}
-        />
-      </button>
     </div>
   );
 }

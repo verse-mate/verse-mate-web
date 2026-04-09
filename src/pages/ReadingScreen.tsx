@@ -5,6 +5,7 @@ import {
   fetchChapter,
   fetchBooks,
   fetchAutoHighlights,
+  trackRecentBook,
   AutoHighlightRange,
 } from '@/services/bibleService';
 import { Chapter, HighlightColor, BibleBook } from '@/services/types';
@@ -20,7 +21,6 @@ export default function ReadingScreen() {
   const [showBookSelector, setShowBookSelector] = useState(false);
   const [longPressVerse, setLongPressVerse] = useState<number | null>(null);
   const [pressTimer, setPressTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [apiAutoHighlights, setApiAutoHighlights] = useState<AutoHighlightRange[]>([]);
   const [books, setBooks] = useState<BibleBook[]>([]);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -31,7 +31,8 @@ export default function ReadingScreen() {
 
   useEffect(() => {
     fetchChapter(state.book, state.chapter, state.version).then(setChapter);
-  }, [state.book, state.chapter, state.version]);
+    if (state.bookId) trackRecentBook(state.bookId);
+  }, [state.book, state.chapter, state.version, state.bookId]);
 
   useEffect(() => {
     if (state.settings.autoHighlights) {
@@ -118,15 +119,6 @@ export default function ReadingScreen() {
     }
   };
 
-  const handleScroll = () => {
-    if (!scrollRef.current) return;
-    const { scrollTop, scrollHeight, clientHeight } = scrollRef.current;
-    const progress = scrollHeight > clientHeight
-      ? Math.round((scrollTop / (scrollHeight - clientHeight)) * 100)
-      : 100;
-    setScrollProgress(progress);
-  };
-
   // Swipe left/right to jump chapters
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
   const handleBodyTouchStart = (e: React.TouchEvent) => {
@@ -200,7 +192,6 @@ export default function ReadingScreen() {
       {/* ─── CREAM BODY — scripture (swipe left/right for chapter nav) ─── */}
       <div
         ref={scrollRef}
-        onScroll={handleScroll}
         onTouchStart={handleBodyTouchStart}
         onTouchEnd={handleBodyTouchEnd}
         className="flex-1 overflow-y-auto bg-background px-5 pt-5 pb-12 relative"
@@ -292,19 +283,25 @@ export default function ReadingScreen() {
         </button>
       )}
 
-      {/* ─── GOLD PROGRESS BAR (bottom 32px) ─── */}
+      {/* ─── GOLD PROGRESS BAR — overall position in the book ─── */}
       <div className="shrink-0 bg-background px-4 pt-3 pb-3 safe-bottom">
-        <div className="flex items-center gap-3">
-          <div className="flex-1 h-1 bg-muted rounded-full overflow-hidden">
-            <div
-              className="h-full bg-gold rounded-full transition-all duration-200"
-              style={{ width: `${Math.max(2, scrollProgress)}%` }}
-            />
-          </div>
-          <span className="text-[11px] font-medium text-muted-foreground tabular-nums w-9 text-right">
-            {scrollProgress}%
-          </span>
-        </div>
+        {(() => {
+          const bookProgress =
+            maxChapter > 0 ? Math.round((state.chapter / maxChapter) * 100) : 0;
+          return (
+            <div className="flex items-center gap-3">
+              <div className="flex-1 h-1 bg-muted rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-gold rounded-full transition-all duration-300"
+                  style={{ width: `${Math.max(2, bookProgress)}%` }}
+                />
+              </div>
+              <span className="text-[11px] font-medium text-muted-foreground tabular-nums text-right whitespace-nowrap">
+                {state.chapter} / {maxChapter}
+              </span>
+            </div>
+          );
+        })()}
       </div>
 
       {/* ─── Overlays ─── */}

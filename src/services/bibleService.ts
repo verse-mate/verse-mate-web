@@ -668,6 +668,42 @@ export function saveHighlights(h: Highlight[]) {
   saveJSON('versemate-highlights', h);
 }
 
+// ─── Recently viewed books (localStorage + API sync) ────────────────────
+const RECENTS_KEY = 'versemate-recent-books';
+const MAX_RECENTS = 8;
+
+interface RecentBook {
+  bookId: number;
+  timestamp: number;
+}
+
+export function getRecentBooks(): RecentBook[] {
+  try {
+    const raw = localStorage.getItem(RECENTS_KEY);
+    return raw ? (JSON.parse(raw) as RecentBook[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+export function trackRecentBook(bookId: number) {
+  try {
+    const existing = getRecentBooks().filter(r => r.bookId !== bookId);
+    const next = [{ bookId, timestamp: Date.now() }, ...existing].slice(0, MAX_RECENTS);
+    localStorage.setItem(RECENTS_KEY, JSON.stringify(next));
+    // Best-effort sync to server when signed in
+    if (getAccessToken()) {
+      api
+        .post('/user/recently-viewed-books/sync', {
+          books: next.map(r => ({ bookId: String(r.bookId), timestamp: r.timestamp })),
+        })
+        .catch(() => undefined);
+    }
+  } catch {
+    /* ignore */
+  }
+}
+
 // Legacy export that some screens may still use
 export const AUTO_HIGHLIGHTS: Record<string, number[]> = {};
 

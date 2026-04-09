@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { fetchTopics, fetchBooks } from '@/services/bibleService';
+import { fetchTopics, fetchBooks, getRecentBooks } from '@/services/bibleService';
 import { Topic, BibleBook } from '@/services/types';
 import { ChevronRight, Search, ArrowLeft } from 'lucide-react';
 
@@ -23,10 +23,21 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   const [query, setQuery] = useState('');
   const [topics, setTopics] = useState<Topic[]>([]);
   const [allBooks, setAllBooks] = useState<BibleBook[]>([]);
+  const [recents, setRecents] = useState<BibleBook[]>([]);
 
   useEffect(() => {
     fetchTopics().then(setTopics);
-    fetchBooks().then(setAllBooks);
+    fetchBooks().then(books => {
+      setAllBooks(books);
+      // Resolve recently viewed book IDs from localStorage against the full list
+      const recentIds = getRecentBooks().map(r => r.bookId);
+      setRecents(
+        recentIds
+          .map(id => books.find(b => b.bookId === id))
+          .filter((b): b is BibleBook => !!b)
+          .slice(0, 5)
+      );
+    });
   }, []);
 
   const books = useMemo(
@@ -165,6 +176,27 @@ export default function BookSelector({ onClose, onSelect }: Props) {
           )
         ) : filteredBooks.length > 0 ? (
           <div>
+            {/* Recents (only when no active query) */}
+            {!query && recents.length > 0 && (
+              <div className="mb-2">
+                <p className="text-[11px] uppercase tracking-wide text-dark-muted/70 mb-1">
+                  Recents
+                </p>
+                {recents.map(b => (
+                  <button
+                    key={`recent-${b.bookId}`}
+                    onClick={() => setSelectedBook(b.name)}
+                    className="flex items-center justify-between w-full h-[52px] border-b border-dark"
+                  >
+                    <span className="text-[15px] text-dark-fg text-left">{b.name}</span>
+                    <ChevronRight size={18} className="text-dark-muted" />
+                  </button>
+                ))}
+                <p className="text-[11px] uppercase tracking-wide text-dark-muted/70 mt-4 mb-1">
+                  All books
+                </p>
+              </div>
+            )}
             {filteredBooks.map(b => (
               <button
                 key={b.name}
