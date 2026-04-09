@@ -13,7 +13,7 @@ import {
   MostQuotedVerse,
   ExplanationType,
 } from './types';
-import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, ApiError } from './api';
+import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, ApiError, API_BASE_URL } from './api';
 
 // ─── Helper: book id <-> name cache ───────────────────────────────────────
 let _booksCache: BibleBook[] | null = null;
@@ -532,4 +532,4 @@ export function saveHighlights(h: Highlight[]) {
 // Legacy export that some screens may still use
 export const AUTO_HIGHLIGHTS: Record<string, number[]> = {};
 
-export { ApiError };
+export { ApiError, API_BASE_URL };
