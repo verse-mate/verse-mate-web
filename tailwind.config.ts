@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Lora', 'Georgia', 'Times New Roman', 'serif'],
+        serif: ['Crimson Pro', 'Lora', 'Georgia', 'Times New Roman', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -72,6 +72,7 @@ export default {
           pink: "hsl(var(--verse-highlight-pink))",
           orange: "hsl(var(--verse-highlight-orange))",
         },
+        "verse-number": "hsl(var(--verse-number))",
       },
       borderRadius: {
         lg: "var(--radius)",
