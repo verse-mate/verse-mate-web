@@ -1,18 +1,22 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useApp } from '@/contexts/AppContext';
+import { useNavigate } from 'react-router-dom';
 import { fetchChapter } from '@/services/bibleService';
 import { Chapter, HighlightColor } from '@/services/types';
-import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronRight, MoreVertical } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
 import VersionPicker from '@/components/VersionPicker';
 import VerseActions from '@/components/VerseActions';
+import OptionsSheet from '@/components/OptionsSheet';
 import { BIBLE_BOOKS } from '@/services/bibleData';
 
 export default function ReadingScreen() {
   const { state, dispatch } = useApp();
+  const navigate = useNavigate();
   const [chapter, setChapter] = useState<Chapter | null>(null);
   const [showBookSelector, setShowBookSelector] = useState(false);
   const [showVersionPicker, setShowVersionPicker] = useState(false);
+  const [showOptions, setShowOptions] = useState(false);
   const [longPressVerse, setLongPressVerse] = useState<number | null>(null);
   const [pressTimer, setPressTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
 
@@ -57,7 +61,6 @@ export default function ReadingScreen() {
 
   return (
     <div className="flex flex-col h-full">
-      {/* Header */}
       <header className="flex items-center justify-between px-4 py-3 border-b border-border bg-card">
         <button
           onClick={() => setShowBookSelector(true)}
@@ -66,16 +69,23 @@ export default function ReadingScreen() {
           <span className="text-lg">{state.book} {state.chapter}</span>
           <ChevronDown size={18} className="text-muted-foreground" />
         </button>
-        <button
-          onClick={() => setShowVersionPicker(true)}
-          className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium"
-        >
-          {state.version}
-          <ChevronDown size={14} />
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setShowVersionPicker(true)}
+            className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium"
+          >
+            {state.version}
+            <ChevronDown size={14} />
+          </button>
+          <button
+            onClick={() => setShowOptions(true)}
+            className="p-2 rounded-full hover:bg-secondary"
+          >
+            <MoreVertical size={20} className="text-muted-foreground" />
+          </button>
+        </div>
       </header>
 
-      {/* Verses */}
       <div className="flex-1 overflow-y-auto px-5 py-6" style={{ fontSize: `${state.settings.fontSize}px` }}>
         {chapter?.verses.map(verse => {
           const hl = getHighlightForVerse(verse.number);
@@ -100,15 +110,13 @@ export default function ReadingScreen() {
         })}
       </div>
 
-      {/* Chapter nav */}
       <div className="flex items-center justify-between px-4 py-2 border-t border-border bg-card">
         <button
           onClick={() => goToChapter(-1)}
           disabled={state.chapter <= 1}
           className="flex items-center gap-1 text-sm text-muted-foreground disabled:opacity-30"
         >
-          <ChevronLeft size={18} />
-          Previous
+          <ChevronLeft size={18} /> Previous
         </button>
         <span className="text-sm text-muted-foreground font-medium">
           Chapter {state.chapter} of {maxChapter}
@@ -118,12 +126,10 @@ export default function ReadingScreen() {
           disabled={state.chapter >= maxChapter}
           className="flex items-center gap-1 text-sm text-muted-foreground disabled:opacity-30"
         >
-          Next
-          <ChevronRight size={18} />
+          Next <ChevronRight size={18} />
         </button>
       </div>
 
-      {/* Modals */}
       {showBookSelector && (
         <BookSelector
           onClose={() => setShowBookSelector(false)}
@@ -133,13 +139,8 @@ export default function ReadingScreen() {
           }}
         />
       )}
-
-      {showVersionPicker && (
-        <VersionPicker
-          onClose={() => setShowVersionPicker(false)}
-        />
-      )}
-
+      {showVersionPicker && <VersionPicker onClose={() => setShowVersionPicker(false)} />}
+      {showOptions && <OptionsSheet onClose={() => setShowOptions(false)} />}
       {longPressVerse !== null && (
         <VerseActions
           verse={longPressVerse}

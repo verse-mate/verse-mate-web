@@ -27,17 +27,24 @@ export default function TopicEventsScreen() {
       </header>
       <div className="flex-1 overflow-y-auto p-4 space-y-3">
         {events.map(ev => (
-          <div key={ev.id} className="p-4 rounded-lg bg-card border border-border">
-            <h3 className="font-semibold text-foreground mb-1">{ev.title}</h3>
-            <p className="text-sm text-muted-foreground mb-2">{ev.description}</p>
-            <div className="flex flex-wrap gap-1">
-              {ev.references.map(ref => (
-                <span key={ref} className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">
-                  {ref}
-                </span>
-              ))}
+          <button
+            key={ev.id}
+            onClick={() => navigate(`/topics/${topicId}/${ev.id}`)}
+            className="flex items-center justify-between w-full p-4 rounded-lg bg-card border border-border hover:bg-secondary transition-colors text-left"
+          >
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-foreground mb-1">{ev.title}</h3>
+              <p className="text-sm text-muted-foreground mb-2">{ev.description}</p>
+              <div className="flex flex-wrap gap-1">
+                {ev.references.map(ref => (
+                  <span key={ref} className="text-xs px-2 py-1 rounded-full bg-secondary text-secondary-foreground">
+                    {ref}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+            <ChevronRight size={16} className="text-muted-foreground shrink-0 ml-2" />
+          </button>
         ))}
         {events.length === 0 && (
           <p className="text-center text-muted-foreground py-8 text-sm">No events for this topic yet.</p>

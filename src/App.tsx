@@ -8,7 +8,13 @@ import AppLayout from "@/components/AppLayout";
 import ReadingScreen from "@/pages/ReadingScreen";
 import TopicsScreen from "@/pages/TopicsScreen";
 import TopicEventsScreen from "@/pages/TopicEventsScreen";
+import TopicEventDetailScreen from "@/pages/TopicEventDetailScreen";
+import MostQuotedScreen from "@/pages/MostQuotedScreen";
 import BookmarksScreen from "@/pages/BookmarksScreen";
+import NotesScreen from "@/pages/NotesScreen";
+import HighlightsScreen from "@/pages/HighlightsScreen";
+import CommentaryScreen from "@/pages/CommentaryScreen";
+import VerseInsightScreen from "@/pages/VerseInsightScreen";
 import MenuScreen from "@/pages/MenuScreen";
 import SettingsScreen from "@/pages/SettingsScreen";
 import AboutScreen from "@/pages/AboutScreen";
@@ -30,9 +36,15 @@ const App = () => (
             <Route path="/" element={<Navigate to="/read" replace />} />
             <Route element={<AppLayout />}>
               <Route path="/read" element={<ReadingScreen />} />
+              <Route path="/read/:book/:chapter/commentary" element={<CommentaryScreen />} />
+              <Route path="/read/:book/:chapter/verse/:verseNumber/insight" element={<VerseInsightScreen />} />
               <Route path="/topics" element={<TopicsScreen />} />
               <Route path="/topics/:topicId" element={<TopicEventsScreen />} />
+              <Route path="/topics/:topicId/:eventId" element={<TopicEventDetailScreen />} />
+              <Route path="/topics/:topicId/:eventId/most-quoted" element={<MostQuotedScreen />} />
               <Route path="/bookmarks" element={<BookmarksScreen />} />
+              <Route path="/notes" element={<NotesScreen />} />
+              <Route path="/highlights" element={<HighlightsScreen />} />
               <Route path="/menu" element={<MenuScreen />} />
               <Route path="/menu/settings" element={<SettingsScreen />} />
               <Route path="/menu/about" element={<AboutScreen />} />
