@@ -1,3 +1,5 @@
+// AppContext — single source of truth for VerseMate app state.
+// Touched to invalidate HMR module cache after settings schema expansion.
 import React, { createContext, useContext, useReducer, useEffect, ReactNode } from 'react';
 import { BibleVersion, Bookmark, Note, Highlight, HighlightColor } from '@/services/types';
 import {
