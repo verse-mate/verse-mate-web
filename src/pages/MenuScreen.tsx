@@ -2,9 +2,11 @@ import { useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import {
   User,
+  BookOpen,
   Bookmark,
   FileText,
   Highlighter,
+  Compass,
   Settings,
   Share2,
   Info,
@@ -14,12 +16,18 @@ import {
   X,
 } from 'lucide-react';
 
-const primaryItems = [
+const primaryItems: {
+  label: string;
+  icon: typeof BookOpen;
+  path: string;
+  onClick?: () => void;
+}[] = [
+  { label: 'Reading', icon: BookOpen, path: '/read' },
+  { label: 'Topics', icon: Compass, path: '/topics' },
   { label: 'Bookmarks', icon: Bookmark, path: '/bookmarks' },
   { label: 'Notes', icon: FileText, path: '/notes' },
   { label: 'Highlights', icon: Highlighter, path: '/highlights' },
   { label: 'Settings', icon: Settings, path: '/menu/settings' },
-  { label: 'Share VerseMate', icon: Share2, path: '/menu/share' },
   { label: 'About', icon: Info, path: '/menu/about' },
   { label: 'Giving', icon: Heart, path: '/menu/giving' },
   { label: 'Help', icon: HelpCircle, path: '/menu/help' },
@@ -42,6 +50,18 @@ export default function MenuScreen() {
     }
   };
 
+  const handleShare = async () => {
+    try {
+      await navigator.share?.({
+        title: 'VerseMate',
+        text: 'Read the Bible with VerseMate',
+        url: window.location.origin,
+      });
+    } catch {
+      navigator.clipboard?.writeText(window.location.origin).catch(() => undefined);
+    }
+  };
+
   return (
     <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
       {/* Header — title + close */}
@@ -51,7 +71,7 @@ export default function MenuScreen() {
       >
         <h1 className="text-[18px] font-medium text-dark-fg">Menu</h1>
         <button
-          onClick={() => navigate(-1)}
+          onClick={() => navigate('/read')}
           aria-label="Close menu"
           className="w-[44px] h-[44px] flex items-center justify-center -mr-2"
         >
@@ -90,8 +110,15 @@ export default function MenuScreen() {
         ))}
       </div>
 
-      {/* Logout — red */}
-      <div className="shrink-0 px-2 pb-6 safe-bottom">
+      {/* Share + Logout */}
+      <div className="shrink-0 px-2 pb-6 safe-bottom space-y-1">
+        <button
+          onClick={handleShare}
+          className="flex items-center gap-4 w-full h-[48px] px-3 rounded-lg hover:bg-dark-raised transition-colors"
+        >
+          <Share2 size={20} className="text-dark-fg" strokeWidth={1.5} />
+          <span className="text-[15px] text-dark-fg font-normal">Share VerseMate</span>
+        </button>
         <button
           onClick={handleLogout}
           className="flex items-center gap-4 w-full h-[48px] px-3 rounded-lg hover:bg-dark-raised transition-colors"

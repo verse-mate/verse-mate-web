@@ -453,39 +453,90 @@ export const VERSE_INSIGHTS: Record<string, VerseInsight[]> = {
 
 // ─── Topics (6 topics, 2-3 events each, most-quoted per event) ───
 
+// Figma "Topics" categories — Mobile App section
 export const TOPICS: Topic[] = [
-  { id: 'faith', name: 'Faith', description: 'Trust and belief in God', icon: 'Shield' },
-  { id: 'love', name: 'Love', description: 'God\'s love and how we love others', icon: 'Heart' },
-  { id: 'prayer', name: 'Prayer', description: 'Communication with God', icon: 'MessageCircle' },
-  { id: 'wisdom', name: 'Wisdom', description: 'Godly wisdom and understanding', icon: 'BookOpen' },
-  { id: 'salvation', name: 'Salvation', description: 'God\'s plan for redeeming humanity', icon: 'Sparkles' },
-  { id: 'grace', name: 'Grace', description: 'Unmerited favor from God', icon: 'Zap' },
+  { id: 'events', name: 'Events', description: 'Key events in biblical history', icon: 'Sparkles' },
+  { id: 'prophecies', name: 'Prophecies', description: 'Prophetic words and their fulfillment', icon: 'Eye' },
+  { id: 'parables', name: 'Parables', description: 'Stories Jesus told to teach truth', icon: 'BookOpen' },
+  { id: 'themes', name: 'Themes', description: 'Faith, love, prayer, wisdom, salvation, grace', icon: 'Heart' },
+  { id: 'top-verses', name: 'Top Verses', description: 'The most quoted and beloved verses', icon: 'Zap' },
+  { id: 'promises', name: 'Promises / Commands / Warnings', description: 'What God promises, commands, and warns', icon: 'Shield' },
+  { id: 'covenants', name: 'Covenants & Covenant Signs', description: 'God\'s covenants with his people', icon: 'MessageCircle' },
+  { id: 'attributes', name: 'Attributes of God', description: 'Who God is and what he is like', icon: 'Sparkles' },
+  { id: 'christology', name: 'Chistology: Title & Offices of Jesus', description: 'The titles and offices of Jesus Christ', icon: 'Heart' },
 ];
 
 export const TOPIC_EVENTS: TopicEvent[] = [
-  // Faith
-  { id: 'faith-1', topicId: 'faith', title: 'Abraham\'s Call', description: 'God called Abraham to leave his homeland, and Abraham obeyed by faith.', references: ['Genesis 12:1-4', 'Hebrews 11:8'] },
-  { id: 'faith-2', topicId: 'faith', title: 'Crossing the Red Sea', description: 'Israel trusted God and crossed the Red Sea on dry ground.', references: ['Exodus 14:21-31', 'Hebrews 11:29'] },
-  { id: 'faith-3', topicId: 'faith', title: 'David and Goliath', description: 'David faced the giant Goliath trusting in the Lord of armies.', references: ['1 Samuel 17:45-47'] },
-  // Love
-  { id: 'love-1', topicId: 'love', title: 'God So Loved the World', description: 'The supreme expression of God\'s love: giving his only Son.', references: ['John 3:16', 'Romans 5:8'] },
-  { id: 'love-2', topicId: 'love', title: 'The Good Samaritan', description: 'Jesus taught that love crosses every boundary.', references: ['Luke 10:25-37'] },
-  { id: 'love-3', topicId: 'love', title: 'Love Chapter', description: 'Paul\'s definitive description of what love is and does.', references: ['1 Corinthians 13:1-13'] },
-  // Prayer
-  { id: 'prayer-1', topicId: 'prayer', title: 'The Lord\'s Prayer', description: 'Jesus taught his disciples how to pray.', references: ['Matthew 6:9-13', 'Luke 11:1-4'] },
-  { id: 'prayer-2', topicId: 'prayer', title: 'Elijah on Mount Carmel', description: 'Elijah prayed and fire fell from heaven.', references: ['1 Kings 18:36-39'] },
-  // Wisdom
-  { id: 'wisdom-1', topicId: 'wisdom', title: 'Solomon\'s Request', description: 'Solomon asked God for wisdom instead of wealth or power.', references: ['1 Kings 3:5-14', '2 Chronicles 1:7-12'] },
-  { id: 'wisdom-2', topicId: 'wisdom', title: 'The Proverbs', description: 'Solomon compiled wisdom for everyday life.', references: ['Proverbs 1:1-7', 'Proverbs 9:10'] },
-  { id: 'wisdom-3', topicId: 'wisdom', title: 'James on Wisdom', description: 'Ask God for wisdom and he will give it generously.', references: ['James 1:5', 'James 3:17'] },
-  // Salvation
-  { id: 'salvation-1', topicId: 'salvation', title: 'The Exodus', description: 'God delivered Israel from slavery in Egypt.', references: ['Exodus 12-14'] },
-  { id: 'salvation-2', topicId: 'salvation', title: 'The Cross', description: 'Jesus died for the sins of the world.', references: ['John 19:17-30', 'Romans 5:8'] },
-  { id: 'salvation-3', topicId: 'salvation', title: 'The Resurrection', description: 'Jesus rose from the dead, conquering sin and death.', references: ['Matthew 28:1-10', '1 Corinthians 15:3-8'] },
-  // Grace
-  { id: 'grace-1', topicId: 'grace', title: 'Grace Upon Grace', description: 'From Christ\'s fullness we have all received grace upon grace.', references: ['John 1:16-17', 'Ephesians 2:8-9'] },
-  { id: 'grace-2', topicId: 'grace', title: 'The Prodigal Son', description: 'A father\'s unmerited grace toward his wayward son.', references: ['Luke 15:11-32'] },
-  { id: 'grace-3', topicId: 'grace', title: 'Paul\'s Conversion', description: 'The greatest persecutor of the church became its greatest apostle by grace.', references: ['Acts 9:1-19', '1 Timothy 1:15-16'] },
+  // Events — salvation-history milestones
+  { id: 'event-creation', topicId: 'events', title: 'The Creation of the World', description: 'God creates the heavens, the earth, and all life in six days, culminating in the creation of humanity.', references: ['Genesis 1:1-2:3'] },
+  { id: 'event-fall', topicId: 'events', title: 'The Fall of Man', description: 'Adam and Eve disobey God by eating from the tree of the knowledge of good and evil, and sin enters the world.', references: ['Genesis 3:1-24'] },
+  { id: 'event-cain', topicId: 'events', title: 'Cain Murders Abel', description: 'Cain kills his brother Abel out of jealousy, becoming the first murderer and receiving God\'s mark.', references: ['Genesis 4:1-16'] },
+  { id: 'event-flood', topicId: 'events', title: 'The Great Flood', description: 'God sends a global flood to judge human wickedness; Noah and his family are saved in the ark.', references: ['Genesis 6:5-9:17'] },
+  { id: 'event-covenant-noah', topicId: 'events', title: 'God\'s Covenant with Noah', description: 'God promises never again to destroy the earth by flood and establishes the rainbow as a sign.', references: ['Genesis 9:8-17'] },
+  { id: 'event-babel', topicId: 'events', title: 'The Tower of Babel', description: 'Humanity\'s attempt to build a tower to the heavens is confused by God scattering languages.', references: ['Genesis 11:1-9'] },
+  { id: 'event-exodus', topicId: 'events', title: 'The Exodus', description: 'God delivers Israel from slavery in Egypt through Moses and the ten plagues.', references: ['Exodus 12-14'] },
+  { id: 'event-cross', topicId: 'events', title: 'The Cross', description: 'Jesus is crucified for the sins of the world on Golgotha.', references: ['John 19:17-30', 'Romans 5:8'] },
+  { id: 'event-resurrection', topicId: 'events', title: 'The Resurrection', description: 'Jesus rises from the dead on the third day, conquering sin and death.', references: ['Matthew 28:1-10', '1 Corinthians 15:3-8'] },
+
+  // Prophecies
+  { id: 'prophecy-messiah', topicId: 'prophecies', title: 'The Coming Messiah', description: 'Old Testament prophecies foretelling the birth, ministry, and mission of the Messiah.', references: ['Isaiah 7:14', 'Micah 5:2', 'Isaiah 53'] },
+  { id: 'prophecy-virgin-birth', topicId: 'prophecies', title: 'The Virgin Birth', description: 'Isaiah\'s sign that the virgin shall conceive and bear a son called Immanuel.', references: ['Isaiah 7:14', 'Matthew 1:22-23'] },
+  { id: 'prophecy-suffering-servant', topicId: 'prophecies', title: 'The Suffering Servant', description: 'Isaiah\'s song of the servant who would be pierced for our transgressions.', references: ['Isaiah 53:1-12'] },
+  { id: 'prophecy-end-times', topicId: 'prophecies', title: 'End Times', description: 'Prophecies about the return of Christ, final judgment, and new creation.', references: ['Matthew 24', 'Revelation 19-22'] },
+
+  // Parables
+  { id: 'parable-sower', topicId: 'parables', title: 'The Sower', description: 'A sower scatters seed on four kinds of soil, illustrating different responses to God\'s word.', references: ['Matthew 13:1-23', 'Mark 4:1-20', 'Luke 8:4-15'] },
+  { id: 'parable-samaritan', topicId: 'parables', title: 'The Good Samaritan', description: 'Jesus teaches that love crosses every boundary through the story of a compassionate Samaritan.', references: ['Luke 10:25-37'] },
+  { id: 'parable-prodigal', topicId: 'parables', title: 'The Prodigal Son', description: 'A father\'s unmerited grace toward his wayward son who returns home.', references: ['Luke 15:11-32'] },
+  { id: 'parable-wedding-feast', topicId: 'parables', title: 'The Wedding Feast', description: 'The kingdom of heaven is like a king who gave a wedding feast for his son.', references: ['Matthew 22:1-14'] },
+  { id: 'parable-mustard-seed', topicId: 'parables', title: 'The Mustard Seed', description: 'The kingdom of heaven is like a mustard seed — small but grows into a tree.', references: ['Matthew 13:31-32', 'Mark 4:30-32'] },
+
+  // Themes
+  { id: 'theme-faith', topicId: 'themes', title: 'Faith', description: 'Trust and belief in God — Abraham\'s call, Hebrews 11, justification by faith.', references: ['Hebrews 11', 'Romans 4', 'Ephesians 2:8-9'] },
+  { id: 'theme-love', topicId: 'themes', title: 'Love', description: 'God\'s love and how we love others — John 3:16, the love chapter, loving your neighbor.', references: ['1 Corinthians 13', 'John 3:16', '1 John 4:7-21'] },
+  { id: 'theme-prayer', topicId: 'themes', title: 'Prayer', description: 'Communication with God — the Lord\'s Prayer, persistent prayer, praying in the Spirit.', references: ['Matthew 6:9-13', 'Luke 11:1-13', 'Ephesians 6:18'] },
+  { id: 'theme-wisdom', topicId: 'themes', title: 'Wisdom', description: 'Godly wisdom and understanding — Solomon, Proverbs, and wisdom from above.', references: ['Proverbs 1-9', 'James 3:13-18'] },
+  { id: 'theme-salvation', topicId: 'themes', title: 'Salvation', description: 'God\'s plan for redeeming humanity through Jesus Christ.', references: ['Romans 3:23-26', 'Ephesians 2:1-10'] },
+  { id: 'theme-grace', topicId: 'themes', title: 'Grace', description: 'Unmerited favor from God — grace upon grace, grace for salvation, grace for service.', references: ['John 1:16-17', 'Romans 5:15-21', '2 Corinthians 12:9'] },
+  { id: 'theme-hope', topicId: 'themes', title: 'Hope', description: 'Confident expectation of God\'s promises — hope in affliction, hope of glory.', references: ['Romans 5:1-5', 'Hebrews 6:19'] },
+
+  // Top Verses
+  { id: 'topverse-john-316', topicId: 'top-verses', title: 'John 3:16', description: 'For God so loved the world, that he gave his only Son.', references: ['John 3:16'] },
+  { id: 'topverse-psalm-23', topicId: 'top-verses', title: 'Psalm 23', description: 'The LORD is my shepherd, I shall not want.', references: ['Psalm 23:1-6'] },
+  { id: 'topverse-philippians-413', topicId: 'top-verses', title: 'Philippians 4:13', description: 'I can do all things through him who strengthens me.', references: ['Philippians 4:13'] },
+  { id: 'topverse-jeremiah-2911', topicId: 'top-verses', title: 'Jeremiah 29:11', description: 'For I know the plans I have for you, declares the LORD.', references: ['Jeremiah 29:11'] },
+  { id: 'topverse-romans-828', topicId: 'top-verses', title: 'Romans 8:28', description: 'All things work together for good for those who love God.', references: ['Romans 8:28'] },
+  { id: 'topverse-proverbs-35', topicId: 'top-verses', title: 'Proverbs 3:5-6', description: 'Trust in the LORD with all your heart and lean not on your own understanding.', references: ['Proverbs 3:5-6'] },
+
+  // Promises / Commands / Warnings
+  { id: 'promise-presence', topicId: 'promises', title: 'I Will Be With You', description: 'God\'s promise to be with his people always — with Moses, Joshua, and the disciples.', references: ['Exodus 3:12', 'Joshua 1:9', 'Matthew 28:20'] },
+  { id: 'promise-provision', topicId: 'promises', title: 'God\'s Provision', description: 'God will supply all your needs according to his riches in glory.', references: ['Philippians 4:19', 'Matthew 6:25-34'] },
+  { id: 'command-great', topicId: 'promises', title: 'The Great Commandment', description: 'Love the Lord your God and love your neighbor as yourself.', references: ['Matthew 22:36-40', 'Mark 12:30-31'] },
+  { id: 'command-commission', topicId: 'promises', title: 'The Great Commission', description: 'Go and make disciples of all nations.', references: ['Matthew 28:18-20'] },
+  { id: 'warning-judgment', topicId: 'promises', title: 'Warnings of Judgment', description: 'Prophetic warnings about coming judgment and the need for repentance.', references: ['Matthew 24', '2 Peter 3:9-10'] },
+
+  // Covenants
+  { id: 'covenant-noah', topicId: 'covenants', title: 'The Noahic Covenant', description: 'God\'s covenant with Noah, sealed with the rainbow, never again to flood the earth.', references: ['Genesis 9:8-17'] },
+  { id: 'covenant-abraham', topicId: 'covenants', title: 'The Abrahamic Covenant', description: 'God\'s covenant with Abraham promising land, descendants, and blessing for all nations.', references: ['Genesis 12:1-3', 'Genesis 15', 'Genesis 17'] },
+  { id: 'covenant-moses', topicId: 'covenants', title: 'The Mosaic Covenant', description: 'God\'s covenant with Israel at Mount Sinai, giving the Law.', references: ['Exodus 19-24'] },
+  { id: 'covenant-david', topicId: 'covenants', title: 'The Davidic Covenant', description: 'God\'s covenant promising David a perpetual dynasty and an eternal king.', references: ['2 Samuel 7:8-16'] },
+  { id: 'covenant-new', topicId: 'covenants', title: 'The New Covenant', description: 'The covenant in Jesus\' blood, writing God\'s law on our hearts.', references: ['Jeremiah 31:31-34', 'Luke 22:20', 'Hebrews 8:8-12'] },
+
+  // Attributes of God
+  { id: 'attribute-holiness', topicId: 'attributes', title: 'Holiness', description: 'God is holy, holy, holy — set apart and morally perfect.', references: ['Isaiah 6:1-7', '1 Peter 1:15-16'] },
+  { id: 'attribute-love', topicId: 'attributes', title: 'Love', description: 'God is love — his steadfast love endures forever.', references: ['1 John 4:8', 'Psalm 136'] },
+  { id: 'attribute-justice', topicId: 'attributes', title: 'Justice', description: 'God is just — he will judge the world with righteousness.', references: ['Deuteronomy 32:4', 'Psalm 9:7-8'] },
+  { id: 'attribute-mercy', topicId: 'attributes', title: 'Mercy', description: 'God\'s mercies are new every morning; great is his faithfulness.', references: ['Lamentations 3:22-23', 'Ephesians 2:4-5'] },
+  { id: 'attribute-faithful', topicId: 'attributes', title: 'Faithfulness', description: 'God is faithful — he cannot deny himself or break his promises.', references: ['2 Timothy 2:13', 'Deuteronomy 7:9'] },
+  { id: 'attribute-sovereign', topicId: 'attributes', title: 'Sovereignty', description: 'God rules over all creation and works all things according to his will.', references: ['Psalm 115:3', 'Ephesians 1:11'] },
+
+  // Christology
+  { id: 'christ-messiah', topicId: 'christology', title: 'Messiah / Christ', description: 'Jesus is the Anointed One, the promised Savior of Israel and the world.', references: ['Matthew 16:16', 'John 1:41'] },
+  { id: 'christ-lord', topicId: 'christology', title: 'Lord', description: 'Jesus is Lord — the Greek kyrios used for Yahweh in the Septuagint.', references: ['Philippians 2:9-11', 'Romans 10:9'] },
+  { id: 'christ-king', topicId: 'christology', title: 'King of Kings', description: 'Jesus is the King of kings and Lord of lords.', references: ['Revelation 19:16', 'Matthew 2:2'] },
+  { id: 'christ-priest', topicId: 'christology', title: 'Great High Priest', description: 'Jesus is our great high priest after the order of Melchizedek.', references: ['Hebrews 4:14-16', 'Hebrews 7'] },
+  { id: 'christ-lamb', topicId: 'christology', title: 'Lamb of God', description: 'Behold, the Lamb of God who takes away the sin of the world.', references: ['John 1:29', 'Revelation 5:6-14'] },
+  { id: 'christ-word', topicId: 'christology', title: 'The Word', description: 'In the beginning was the Word, and the Word was with God, and the Word was God.', references: ['John 1:1-14', 'Revelation 19:13'] },
 ];
 
 export const MOST_QUOTED: Record<string, MostQuotedVerse[]> = {

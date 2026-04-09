@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useApp } from '@/contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
-import { fetchChapter } from '@/services/bibleService';
+import { fetchChapter, AUTO_HIGHLIGHTS } from '@/services/bibleService';
 import { Chapter, HighlightColor } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
@@ -39,6 +39,10 @@ export default function ReadingScreen() {
   const getHighlightForVerse = (verseNum: number) => {
     return state.highlights.find(h => h.book === state.book && h.chapter === state.chapter && h.verse === verseNum);
   };
+
+  const autoHighlightVerses: number[] = state.settings.autoHighlights
+    ? AUTO_HIGHLIGHTS[`${state.book}-${state.chapter}`] || []
+    : [];
 
   const highlightColorClass: Record<HighlightColor, string> = {
     yellow: 'bg-highlight-yellow',
@@ -167,11 +171,15 @@ export default function ReadingScreen() {
         {/* Verses — Roboto body, superscript numbers */}
         <div
           className="text-foreground"
-          style={{ fontSize: `${state.settings.fontSize}px`, lineHeight: 1.7 }}
+          style={{
+            fontSize: `${state.settings.fontSize}px`,
+            lineHeight: state.settings.lineSpacing ?? 1.7,
+          }}
         >
           {chapter?.verses.map(verse => {
             const hl = getHighlightForVerse(verse.number);
             const isSelected = state.selectedVerse === verse.number;
+            const isAutoHighlighted = autoHighlightVerses.includes(verse.number) && !hl;
             return (
               <span
                 key={verse.number}
@@ -180,12 +188,16 @@ export default function ReadingScreen() {
                 onMouseDown={() => handlePressStart(verse.number)}
                 onMouseUp={handlePressEnd}
                 className={`inline transition-colors ${hl ? highlightColorClass[hl.color] : ''} ${
-                  isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''
-                }`}
+                  isAutoHighlighted
+                    ? 'bg-[#B09A6D]/25 text-foreground rounded px-0.5'
+                    : ''
+                } ${isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''}`}
               >
-                <sup className="text-verse-number text-[0.65em] mr-0.5 select-none font-medium align-super">
-                  {verse.number}
-                </sup>
+                {state.settings.showVerseNumbers !== false && (
+                  <sup className="text-verse-number text-[0.65em] mr-0.5 select-none font-medium align-super">
+                    {verse.number}
+                  </sup>
+                )}
                 {verse.text}{' '}
               </span>
             );

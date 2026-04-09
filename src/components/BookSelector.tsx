@@ -1,6 +1,8 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BIBLE_BOOKS } from '@/services/bibleData';
+import { fetchTopics } from '@/services/bibleService';
+import { Topic } from '@/services/types';
 import { ChevronRight, Search, ArrowLeft } from 'lucide-react';
 
 interface Props {
@@ -9,18 +11,6 @@ interface Props {
 }
 
 type Tab = 'OT' | 'NT' | 'Topics';
-
-const TOPIC_CATEGORIES = [
-  { id: 'events', name: 'Events' },
-  { id: 'prophecies', name: 'Prophecies' },
-  { id: 'parables', name: 'Parables' },
-  { id: 'themes', name: 'Themes' },
-  { id: 'top-verses', name: 'Top Verses' },
-  { id: 'promises', name: 'Promises / Commands / Warnings' },
-  { id: 'covenants', name: 'Covenants & Covenant Signs' },
-  { id: 'attributes', name: 'Attributes of God' },
-  { id: 'christology', name: 'Chistology: Title & Offices of Jesus' },
-];
 
 /**
  * BookSelector — unified Search screen with OT / NT / Topics tabs.
@@ -32,6 +22,11 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   const [tab, setTab] = useState<Tab>('OT');
   const [selectedBook, setSelectedBook] = useState<string | null>(null);
   const [query, setQuery] = useState('');
+  const [topics, setTopics] = useState<Topic[]>([]);
+
+  useEffect(() => {
+    fetchTopics().then(setTopics);
+  }, []);
 
   const books = useMemo(
     () => BIBLE_BOOKS.filter(b => b.testament === tab),
@@ -44,8 +39,8 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   );
 
   const filteredTopics = useMemo(
-    () => TOPIC_CATEGORIES.filter(t => t.name.toLowerCase().includes(query.toLowerCase())),
-    [query]
+    () => topics.filter(t => t.name.toLowerCase().includes(query.toLowerCase())),
+    [topics, query]
   );
 
   const selectedBookObj = selectedBook
