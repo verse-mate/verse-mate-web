@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import { Mail, ArrowLeft } from 'lucide-react';
@@ -9,7 +9,7 @@ import {
   signInWithSSO,
   API_BASE_URL,
 } from '@/services/bibleService';
-import { getGoogleIdToken } from '@/services/googleAuth';
+import { renderGoogleButton } from '@/services/googleAuth';
 
 type Screen = 'providers' | 'email';
 type Mode = 'signin' | 'signup';
@@ -29,25 +29,45 @@ export default function SignInScreen() {
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
-  const handleGoogleSSO = async () => {
-    setError(null);
-    setSubmitting(true);
-    try {
-      const idToken = await getGoogleIdToken();
-      const user = await signInWithSSO('google', idToken);
-      dispatch({ type: 'SET_SIGNED_IN', value: true, userId: user.id });
-      navigate('/read');
-    } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : 'Google sign-in failed';
-      setError(msg);
-    } finally {
-      setSubmitting(false);
-    }
-  };
+  // Google Identity Services renders its own button into this container.
+  // The button opens a real popup and hands us an ID token via callback.
+  const googleBtnRef = useRef<HTMLDivElement | null>(null);
+  const [googleReady, setGoogleReady] = useState(false);
+
+  useEffect(() => {
+    if (screen !== 'providers' || !googleBtnRef.current) return;
+    let cancelled = false;
+    renderGoogleButton(
+      googleBtnRef.current,
+      async idToken => {
+        if (cancelled) return;
+        setError(null);
+        setSubmitting(true);
+        try {
+          const user = await signInWithSSO('google', idToken);
+          dispatch({ type: 'SET_SIGNED_IN', value: true, userId: user.id });
+          navigate('/read');
+        } catch (err: unknown) {
+          setError(
+            err instanceof Error ? err.message : 'Google sign-in failed on the server'
+          );
+        } finally {
+          setSubmitting(false);
+        }
+      },
+      err => {
+        if (cancelled) return;
+        setError(err.message);
+      }
+    ).then(() => !cancelled && setGoogleReady(true));
+    return () => {
+      cancelled = true;
+    };
+  }, [screen, dispatch, navigate]);
 
   const handleAppleSSO = () => {
-    // Apple Sign In would need AppleID.auth.signIn() from Apple's JS SDK.
-    // Until that's wired, fall back to the server-side redirect flow.
+    // Apple Sign In requires Apple's AppleID.auth.signIn() JS SDK wired
+    // separately. Until then, fall back to the server-side redirect flow.
     window.location.href = `${API_BASE_URL}/auth/sso/apple/redirect`;
   };
 
@@ -173,16 +193,22 @@ export default function SignInScreen() {
         </div>
 
         <div className="flex-1 flex flex-col justify-center space-y-3">
-          <button
-            onClick={handleGoogleSSO}
-            disabled={submitting}
-            className="flex items-center justify-center gap-3 w-full h-12 rounded-xl bg-white text-[#1A1A1A] font-medium text-[14px] disabled:opacity-60"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.05 20.28c-1.74.97-3.28 1.22-5.05 1.22-4.13 0-8.18-2.79-8.18-8.18S7.87 5 12 5c2.18 0 4.04.78 5.52 2.08l-2.24 2.16c-.6-.57-1.65-1.24-3.28-1.24-2.81 0-5.1 2.33-5.1 5.2s2.29 5.2 5.1 5.2c3.26 0 4.49-2.34 4.68-3.55H12v-2.84h7.82c.08.47.13.94.13 1.56 0 3.85-2.57 6.71-6.9 6.71z" />
-            </svg>
-            Continue with Google
-          </button>
+          {/* Google Identity Services renders its official button here */}
+          <div
+            ref={googleBtnRef}
+            className="w-full flex items-center justify-center min-h-[48px]"
+          />
+          {!googleReady && (
+            <a
+              href={`${API_BASE_URL}/auth/sso/google/redirect`}
+              className="flex items-center justify-center gap-3 w-full h-12 rounded-xl bg-white text-[#1A1A1A] font-medium text-[14px] no-underline"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.05 20.28c-1.74.97-3.28 1.22-5.05 1.22-4.13 0-8.18-2.79-8.18-8.18S7.87 5 12 5c2.18 0 4.04.78 5.52 2.08l-2.24 2.16c-.6-.57-1.65-1.24-3.28-1.24-2.81 0-5.1 2.33-5.1 5.2s2.29 5.2 5.1 5.2c3.26 0 4.49-2.34 4.68-3.55H12v-2.84h7.82c.08.47.13.94.13 1.56 0 3.85-2.57 6.71-6.9 6.71z" />
+              </svg>
+              Continue with Google
+            </a>
+          )}
           <button
             onClick={handleAppleSSO}
             disabled={submitting}
