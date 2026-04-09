@@ -1,0 +1,154 @@
+import { useApp } from '@/contexts/AppContext';
+import { Bookmark, Highlighter, StickyNote, Copy, X } from 'lucide-react';
+import { HighlightColor } from '@/services/types';
+
+interface Props {
+  verse: number;
+  onClose: () => void;
+}
+
+const HIGHLIGHT_COLORS: { color: HighlightColor; label: string; className: string }[] = [
+  { color: 'yellow', label: 'Yellow', className: 'bg-highlight-yellow' },
+  { color: 'green', label: 'Green', className: 'bg-highlight-green' },
+  { color: 'blue', label: 'Blue', className: 'bg-highlight-blue' },
+  { color: 'pink', label: 'Pink', className: 'bg-highlight-pink' },
+  { color: 'orange', label: 'Orange', className: 'bg-highlight-orange' },
+];
+
+export default function VerseActions({ verse, onClose }: Props) {
+  const { state, dispatch } = useApp();
+
+  const isBookmarked = state.bookmarks.some(
+    b => b.book === state.book && b.chapter === state.chapter && b.verse === verse
+  );
+
+  const existingHighlight = state.highlights.find(
+    h => h.book === state.book && h.chapter === state.chapter && h.verse === verse
+  );
+
+  const toggleBookmark = () => {
+    if (isBookmarked) {
+      const bm = state.bookmarks.find(b => b.book === state.book && b.chapter === state.chapter && b.verse === verse);
+      if (bm) dispatch({ type: 'REMOVE_BOOKMARK', id: bm.id });
+    } else {
+      dispatch({
+        type: 'ADD_BOOKMARK',
+        bookmark: {
+          id: crypto.randomUUID(),
+          book: state.book,
+          chapter: state.chapter,
+          verse,
+          version: state.version,
+          createdAt: new Date().toISOString(),
+        },
+      });
+    }
+    onClose();
+  };
+
+  const addHighlight = (color: HighlightColor) => {
+    if (existingHighlight) {
+      dispatch({ type: 'UPDATE_HIGHLIGHT', id: existingHighlight.id, color });
+    } else {
+      dispatch({
+        type: 'ADD_HIGHLIGHT',
+        highlight: {
+          id: crypto.randomUUID(),
+          book: state.book,
+          chapter: state.chapter,
+          verse,
+          color,
+          createdAt: new Date().toISOString(),
+        },
+      });
+    }
+    onClose();
+  };
+
+  const addNote = () => {
+    const text = prompt('Add a note:');
+    if (text) {
+      dispatch({
+        type: 'ADD_NOTE',
+        note: {
+          id: crypto.randomUUID(),
+          book: state.book,
+          chapter: state.chapter,
+          verse,
+          text,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        },
+      });
+    }
+    onClose();
+  };
+
+  const copyVerse = () => {
+    const verseText = `${state.book} ${state.chapter}:${verse} (${state.version})`;
+    navigator.clipboard.writeText(verseText);
+    onClose();
+  };
+
+  return (
+    <>
+      <div className="fixed inset-0 z-40 bg-foreground/20" onClick={onClose} />
+      <div className="fixed inset-x-0 bottom-0 z-50 bg-card rounded-t-2xl shadow-lg border-t border-border animate-slide-up max-w-lg mx-auto">
+        <div className="flex items-center justify-between px-4 py-3 border-b border-border">
+          <h3 className="font-semibold text-foreground">
+            {state.book} {state.chapter}:{verse}
+          </h3>
+          <button onClick={onClose} className="p-2 rounded-full hover:bg-secondary">
+            <X size={18} />
+          </button>
+        </div>
+
+        {/* Actions */}
+        <div className="grid grid-cols-4 gap-1 p-4">
+          <button onClick={toggleBookmark} className="flex flex-col items-center gap-1.5 py-3 rounded-lg hover:bg-secondary transition-colors">
+            <Bookmark size={20} className={isBookmarked ? 'fill-accent text-accent' : 'text-foreground'} />
+            <span className="text-xs text-muted-foreground">{isBookmarked ? 'Unbookmark' : 'Bookmark'}</span>
+          </button>
+          <button onClick={addNote} className="flex flex-col items-center gap-1.5 py-3 rounded-lg hover:bg-secondary transition-colors">
+            <StickyNote size={20} className="text-foreground" />
+            <span className="text-xs text-muted-foreground">Note</span>
+          </button>
+          <button onClick={copyVerse} className="flex flex-col items-center gap-1.5 py-3 rounded-lg hover:bg-secondary transition-colors">
+            <Copy size={20} className="text-foreground" />
+            <span className="text-xs text-muted-foreground">Copy</span>
+          </button>
+          <button className="flex flex-col items-center gap-1.5 py-3 rounded-lg hover:bg-secondary transition-colors">
+            <Highlighter size={20} className="text-foreground" />
+            <span className="text-xs text-muted-foreground">Highlight</span>
+          </button>
+        </div>
+
+        {/* Highlight colors */}
+        <div className="flex items-center gap-3 px-4 pb-4 pt-1">
+          <span className="text-xs text-muted-foreground mr-1">Color:</span>
+          {HIGHLIGHT_COLORS.map(c => (
+            <button
+              key={c.color}
+              onClick={() => addHighlight(c.color)}
+              className={`w-8 h-8 rounded-full ${c.className} border-2 ${
+                existingHighlight?.color === c.color ? 'border-accent' : 'border-transparent'
+              } transition-all hover:scale-110`}
+              title={c.label}
+            />
+          ))}
+          {existingHighlight && (
+            <button
+              onClick={() => {
+                dispatch({ type: 'REMOVE_HIGHLIGHT', id: existingHighlight.id });
+                onClose();
+              }}
+              className="text-xs text-destructive ml-auto"
+            >
+              Remove
+            </button>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
