@@ -361,15 +361,42 @@ function capitalize(s: string) {
 export async function fetchTopicEvents(topicId: string): Promise<TopicEvent[]> {
   try {
     const data = await api.get<any>(`/topics/${topicId}/references`, undefined, { auth: false });
-    const refs: any[] = data?.references || [];
-    // Map references into TopicEvent-shaped items for UI reuse
-    return refs.map((r, i) => ({
-      id: `${topicId}-${i}`,
-      topicId,
-      title: r.title || r.reference || `Reference ${i + 1}`,
-      description: r.description || r.context || '',
-      references: Array.isArray(r.references) ? r.references : [r.reference].filter(Boolean),
-    }));
+    // API shape: { references: { content: "## Section 1\n(Genesis 1)\n1\nverse text...\n\n## Section 2..." } }
+    const content: string = data?.references?.content || '';
+    if (!content) return [];
+    // Split on "## " section headers. Each section becomes a TopicEvent.
+    const sections = content.split(/\n##\s+/).filter(Boolean);
+    return sections.map((section, i) => {
+      // First line after the split is the heading (the first section has "## " stripped too)
+      const lines = section.replace(/^##\s*/, '').split('\n');
+      const title = lines[0]?.trim() || `Section ${i + 1}`;
+      // Pull any "(Book Ch:Verse)" or "{verse:...}" references out as refs
+      const refs: string[] = [];
+      const refPatterns = [
+        /\(([1-3]?\s?[A-Za-z]+\s+\d+(?::\d+(?:[-–]\d+)?)?)\)/g,
+        /\{(?:verse|chapter):([^}]+)\}/g,
+      ];
+      for (const re of refPatterns) {
+        let m: RegExpExecArray | null;
+        while ((m = re.exec(section))) {
+          if (!refs.includes(m[1])) refs.push(m[1]);
+        }
+      }
+      // Strip the reference markers from the body for a clean description
+      const body = lines
+        .slice(1)
+        .join('\n')
+        .replace(/\{(?:verse|chapter):[^}]+\}/g, '')
+        .replace(/^\s*\(?[1-3]?\s?[A-Za-z]+\s+\d+(?::\d+(?:[-–]\d+)?)?\)?\s*$/gm, '')
+        .trim();
+      return {
+        id: `${topicId}-${i}`,
+        topicId,
+        title,
+        description: body.slice(0, 220) + (body.length > 220 ? '…' : ''),
+        references: refs.slice(0, 6),
+      };
+    });
   } catch {
     return [];
   }

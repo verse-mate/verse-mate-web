@@ -74,13 +74,17 @@ export default function MenuScreen() {
         </button>
       </header>
 
-      {/* User row */}
+      {/* User row — tappable when signed out */}
       <div className="px-5 pb-2">
-        <div className="flex items-center gap-3 pb-5 border-b border-dark">
+        <button
+          onClick={() => !state.isSignedIn && navigate('/menu/signin')}
+          disabled={state.isSignedIn}
+          className="flex items-center gap-3 pb-5 border-b border-dark w-full text-left"
+        >
           <div className="w-10 h-10 rounded-full bg-dark-raised flex items-center justify-center">
             <User size={20} className="text-dark-muted" strokeWidth={1.5} />
           </div>
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <p className="text-[14px] text-dark-fg font-normal truncate">
               {state.isSignedIn ? 'Alexandr Zarovsky' : 'Guest'}
             </p>
@@ -88,7 +92,7 @@ export default function MenuScreen() {
               {state.isSignedIn ? 'alexandr.zarovsky@gmail.com' : 'Tap to sign in'}
             </p>
           </div>
-        </div>
+        </button>
       </div>
 
       {/* Menu list */}

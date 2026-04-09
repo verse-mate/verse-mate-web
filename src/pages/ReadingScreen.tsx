@@ -12,13 +12,11 @@ import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from
 import BookSelector from '@/components/BookSelector';
 import VerseActions from '@/components/VerseActions';
 
-type ReadingMode = 'bible' | 'insight';
 
 export default function ReadingScreen() {
   const { state, dispatch } = useApp();
   const navigate = useNavigate();
   const [chapter, setChapter] = useState<Chapter | null>(null);
-  const [mode, setMode] = useState<ReadingMode>('bible');
   const [showBookSelector, setShowBookSelector] = useState(false);
   const [longPressVerse, setLongPressVerse] = useState<number | null>(null);
   const [pressTimer, setPressTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
@@ -88,14 +86,16 @@ export default function ReadingScreen() {
     orange: 'bg-highlight-orange',
   };
 
-  const handlePressStart = (verseNum: number) => {
-    const timer = setTimeout(() => {
-      setLongPressVerse(verseNum);
-      dispatch({ type: 'SET_VERSE', verse: verseNum });
-    }, 500);
-    setPressTimer(timer);
+  const openVerseActions = (verseNum: number) => {
+    setLongPressVerse(verseNum);
+    dispatch({ type: 'SET_VERSE', verse: verseNum });
   };
 
+  // Kept for touch-device parity; both short tap and long press now open the sheet
+  const handlePressStart = (verseNum: number) => {
+    const timer = setTimeout(() => openVerseActions(verseNum), 400);
+    setPressTimer(timer);
+  };
   const handlePressEnd = () => {
     if (pressTimer) clearTimeout(pressTimer);
     setPressTimer(null);
@@ -157,25 +157,14 @@ export default function ReadingScreen() {
           {/* Right: Bible/Insight segmented pill + Menu */}
           <div className="flex items-center gap-2">
             <div className="flex items-center rounded-full bg-[#232323] p-0.5">
-              <button
-                onClick={() => setMode('bible')}
-                className={`px-3.5 h-8 rounded-full text-[13px] font-medium transition-colors ${
-                  mode === 'bible'
-                    ? 'bg-gold text-[#1A1A1A]'
-                    : 'text-header-fg/80'
-                }`}
-              >
+              <button className="px-3.5 h-8 rounded-full text-[13px] font-medium bg-gold text-[#1A1A1A]">
                 Bible
               </button>
               <button
                 onClick={() =>
-                  navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/insight`)
+                  navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/commentary`)
                 }
-                className={`px-3.5 h-8 rounded-full text-[13px] font-medium transition-colors ${
-                  mode === 'insight'
-                    ? 'bg-gold text-[#1A1A1A]'
-                    : 'text-header-fg/80'
-                }`}
+                className="px-3.5 h-8 rounded-full text-[13px] font-medium text-header-fg/80 transition-colors"
               >
                 Insight
               </button>
@@ -240,11 +229,10 @@ export default function ReadingScreen() {
             return (
               <span
                 key={verse.number}
+                onClick={() => openVerseActions(verse.number)}
                 onTouchStart={() => handlePressStart(verse.number)}
                 onTouchEnd={handlePressEnd}
-                onMouseDown={() => handlePressStart(verse.number)}
-                onMouseUp={handlePressEnd}
-                className={`inline transition-colors ${hl ? highlightColorClass[hl.color] : ''} ${
+                className={`inline cursor-pointer transition-colors ${hl ? highlightColorClass[hl.color] : ''} ${
                   autoClass ? `${autoClass} rounded px-0.5` : ''
                 } ${isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''}`}
               >
