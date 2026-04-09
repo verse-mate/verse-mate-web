@@ -1,4 +1,4 @@
-import { BibleBook, BibleVersion, Chapter, Commentary, VerseInsight, Topic, TopicEvent } from './types';
+import { BibleBook, BibleVersion, Chapter, Commentary, VerseInsight, Topic, TopicEvent, MostQuotedVerse } from './types';
 
 export const BIBLE_BOOKS: BibleBook[] = [
   // Old Testament
@@ -328,7 +328,6 @@ export function getChapter(book: string, chapter: number, version: BibleVersion)
   const key = `${book}-${chapter}`;
   const data = SAMPLE_CHAPTERS[key];
   if (data && data[version]) return data[version];
-  // Fallback: generate placeholder verses
   const verses = Array.from({ length: 10 }, (_, i) => ({
     number: i + 1,
     text: `[${version}] ${book} ${chapter}:${i + 1} — Sample verse text. Full content will be available when connected to a Bible API.`,
@@ -336,47 +335,277 @@ export function getChapter(book: string, chapter: number, version: BibleVersion)
   return { book, chapter, verses };
 }
 
+// ─── Commentaries (every verse for our 4 sample chapters) ───
+
 export const COMMENTARIES: Record<string, Commentary[]> = {
   'John-1': [
     { verse: 1, summary: 'The eternal Word', detail: 'John opens his Gospel by echoing Genesis 1:1, establishing that the Word (Logos) existed before creation. The Greek philosophical concept of Logos is repurposed to describe Jesus as the divine reason and creative power of God.' },
+    { verse: 2, summary: 'With God from eternity', detail: 'This verse reinforces the pre-existence of Christ. "He was in the beginning with God" eliminates any notion that the Word was created at some point in time.' },
     { verse: 3, summary: 'Agent of creation', detail: 'The Word is identified as the agent through whom all things were made, echoing Colossians 1:16 and Hebrews 1:2. Nothing in creation exists apart from the Word\'s creative activity.' },
+    { verse: 4, summary: 'Life and light', detail: 'The Word is the source of all life, and that life serves as the light of humanity—revelation, truth, and guidance flowing from the divine source.' },
+    { verse: 5, summary: 'Light overcomes darkness', detail: 'The present tense "shines" indicates an ongoing reality. Darkness—representing evil, ignorance, and death—cannot extinguish or comprehend the light of Christ.' },
+    { verse: 6, summary: 'John the Baptist introduced', detail: 'The narrative shifts to introduce John the Baptist as a divinely commissioned herald. "Sent from God" establishes his prophetic authority.' },
+    { verse: 7, summary: 'A witness to the light', detail: 'John\'s purpose was testimony—not to attract followers to himself, but to point all people toward the true light so that they might believe.' },
+    { verse: 8, summary: 'Not the light himself', detail: 'John carefully clarifies the Baptist\'s subordinate role. He was a lamp, not the sun; a herald, not the king.' },
+    { verse: 9, summary: 'The true light entering', detail: 'The adjective "true" (alēthinos) distinguishes Christ from all partial lights. He is the authentic, ultimate source of spiritual illumination for every person.' },
+    { verse: 10, summary: 'World did not know him', detail: 'A tragic irony: the creator entered his own creation, yet the world—the very thing made through him—failed to recognize him.' },
+    { verse: 11, summary: 'Rejected by his own', detail: 'Israel, God\'s chosen people, did not receive their Messiah. This rejection is a recurring theme in John\'s Gospel.' },
+    { verse: 12, summary: 'Children of God', detail: 'Those who receive Christ and believe in his name receive the extraordinary privilege of becoming God\'s children—a status conferred by grace, not earned by merit.' },
+    { verse: 13, summary: 'Born of God', detail: 'Spiritual rebirth originates entirely from God\'s will, not from human descent, physical desire, or human decision. This anticipates the "born again" teaching in John 3.' },
     { verse: 14, summary: 'The Incarnation', detail: 'The climactic verse of the prologue: the eternal Word "became flesh." The Greek "eskēnōsen" (dwelt/tabernacled) recalls God\'s presence in the tabernacle, signaling a new and permanent dwelling of God among humanity.' },
+    { verse: 15, summary: 'John\'s testimony', detail: 'The Baptist publicly declares Christ\'s superiority, acknowledging that although Jesus came after him chronologically, Jesus existed before him eternally.' },
+    { verse: 16, summary: 'Grace upon grace', detail: 'Believers continuously receive from Christ\'s infinite fullness. "Grace upon grace" suggests wave after wave of divine favor.' },
+    { verse: 17, summary: 'Grace and truth', detail: 'The law given through Moses was good but incomplete. Through Jesus Christ came the fullness of grace and truth—fulfillment of what the law pointed toward.' },
+    { verse: 18, summary: 'God revealed', detail: 'No one has ever seen God directly. The Son, who is himself God and is in closest relationship with the Father, has made God known—fully and finally.' },
+  ],
+  'Psalms-23': [
+    { verse: 1, summary: 'The Lord as shepherd', detail: 'David opens with the foundational metaphor: God is a shepherd who provides everything needed. "I shall not want" expresses complete trust and satisfaction.' },
+    { verse: 2, summary: 'Rest and refreshment', detail: 'Green pastures and still waters represent provision, peace, and restoration. The shepherd leads to places of nourishment and calm.' },
+    { verse: 3, summary: 'Soul restoration', detail: 'God renews the weary soul and guides along righteous paths—not for our merit, but for the honor of his own name.' },
+    { verse: 4, summary: 'Through the darkest valley', detail: 'Even in the shadow of death, the psalmist fears no evil because of God\'s presence. The rod and staff are instruments of both protection and guidance.' },
+    { verse: 5, summary: 'A table prepared', detail: 'God provides abundantly even in the presence of adversaries. Anointing with oil signifies honor and joy; the overflowing cup represents abundant blessing.' },
+    { verse: 6, summary: 'Eternal dwelling', detail: 'Goodness and mercy are not merely hoped for but pursued actively by God himself. The psalm concludes with the assurance of dwelling in God\'s house forever.' },
+  ],
+  'Genesis-1': [
+    { verse: 1, summary: 'The beginning of all things', detail: 'The opening verse of the Bible declares God as the uncaused cause of all existence. "In the beginning" marks the start of time, space, and matter.' },
+    { verse: 2, summary: 'Formless and void', detail: 'The earth was initially without form (tohu) and void (bohu). The Spirit of God hovering over the waters anticipates the creative work to follow.' },
+    { verse: 3, summary: 'Let there be light', detail: 'God creates by speaking—his word carries creative power. Light is the first element called into existence, symbolizing order emerging from chaos.' },
+    { verse: 4, summary: 'Light separated from darkness', detail: 'God evaluates his creation as "good" and establishes the fundamental distinction between light and darkness—a theme that runs throughout Scripture.' },
+    { verse: 5, summary: 'The first day', detail: 'God names the light "Day" and the darkness "Night." The act of naming demonstrates sovereignty over creation. Evening and morning mark the first day.' },
+    { verse: 6, summary: 'The expanse', detail: 'God creates a firmament (raqia) to separate waters above from waters below, establishing the sky as a boundary in the created order.' },
+    { verse: 7, summary: 'Waters divided', detail: 'The separation of waters is an act of ordering chaos. Ancient Near Eastern cosmology understood the sky as holding back heavenly waters.' },
+    { verse: 8, summary: 'Heaven named', detail: 'God names the expanse "Heaven," completing the second day of creation with another act of ordering and naming.' },
+    { verse: 9, summary: 'Dry land appears', detail: 'God gathers the waters to reveal dry ground. This third creative command continues the pattern of separation and distinction.' },
+    { verse: 10, summary: 'Earth and seas named', detail: 'God names the dry land "Earth" and the gathered waters "Seas," then declares them good—affirming the goodness of the material world.' },
+  ],
+  'Romans-8': [
+    { verse: 1, summary: 'No condemnation', detail: 'Paul\'s triumphant declaration: those united to Christ by faith are completely free from condemnation. This is the logical conclusion of the argument begun in Romans 1.' },
+    { verse: 2, summary: 'Freedom from sin\'s law', detail: 'The Spirit of life operating in Christ Jesus has liberated believers from the binding power of sin and its consequence, death.' },
+    { verse: 3, summary: 'What the law could not do', detail: 'The law was powerless to save because human flesh was too weak to obey it. God solved this by sending his own Son in human likeness to deal with sin.' },
+    { verse: 4, summary: 'Righteous requirement fulfilled', detail: 'Through Christ, the law\'s righteous demand is satisfied in believers who walk by the Spirit rather than by the flesh.' },
+    { verse: 5, summary: 'Flesh vs. Spirit mindset', detail: 'Paul draws a sharp contrast between two orientations of life: the flesh-oriented mind focuses on earthly desires; the Spirit-oriented mind focuses on God\'s purposes.' },
+    { verse: 6, summary: 'Death vs. life and peace', detail: 'The outcome of each mindset is stark: the flesh leads to death, while the Spirit leads to life and peace—shalom, total well-being.' },
+    { verse: 7, summary: 'Flesh is hostile to God', detail: 'The carnal mind is not merely indifferent to God but actively opposed to him. It cannot submit to God\'s law—it lacks the capacity.' },
+    { verse: 8, summary: 'Cannot please God', detail: 'Those controlled by the sinful nature are unable to please God. This is not about occasional failure but a fundamental orientation.' },
+    { verse: 9, summary: 'In the Spirit', detail: 'Believers are "in the Spirit" because the Spirit of God dwells in them. Having the Spirit is the defining mark of belonging to Christ.' },
+    { verse: 10, summary: 'Spirit gives life', detail: 'Even though the body is subject to death because of sin, the Spirit provides life because of the righteousness secured by Christ.' },
+    { verse: 28, summary: 'All things for good', detail: 'One of the most beloved promises in Scripture: God sovereignly orchestrates all circumstances for the ultimate good of those who love him and are called according to his purpose.' },
+    { verse: 31, summary: 'God is for us', detail: 'If the sovereign God of the universe is for us, no opposition can ultimately prevail. This rhetorical question invites confidence and assurance.' },
+    { verse: 37, summary: 'More than conquerors', detail: 'Believers do not merely survive hardship—they overwhelmingly triumph through Christ who loved them and gave himself for them.' },
+    { verse: 38, summary: 'Nothing can separate', detail: 'Paul lists cosmic powers, temporal realities, and spiritual forces. None of them—individually or combined—can sever believers from God\'s love.' },
+    { verse: 39, summary: 'Inseparable love', detail: 'The chapter\'s grand conclusion: no dimension of reality can separate us from the love of God that is in Christ Jesus our Lord. This is the believer\'s ultimate security.' },
   ],
 };
+
+// ─── Verse Insights ───
 
 export const VERSE_INSIGHTS: Record<string, VerseInsight[]> = {
   'John-1': [
-    {
-      verse: 1,
-      crossReferences: ['Genesis 1:1', 'Proverbs 8:22-31', '1 John 1:1-2', 'Revelation 19:13'],
-      originalLanguage: 'Ἐν ἀρχῇ ἦν ὁ λόγος (En archē ēn ho logos) — "In [the] beginning was the Word." The imperfect tense "ēn" indicates continuous past existence, not a point of origin.',
-      historicalContext: 'Written around 90 AD in Ephesus, John\'s prologue bridges Jewish monotheism and Greek philosophy. "Logos" was a term familiar to both Hellenistic Jews (via Philo of Alexandria) and Greek Stoic philosophers.',
-    },
-    {
-      verse: 14,
-      crossReferences: ['Philippians 2:6-8', 'Colossians 1:15', '1 Timothy 3:16', 'Hebrews 2:14'],
-      originalLanguage: 'Καὶ ὁ λόγος σὰρξ ἐγένετο (Kai ho logos sarx egeneto) — "And the Word became flesh." "Egeneto" (became) contrasts with "ēn" (was) in verse 1, marking a definitive moment of incarnation.',
-      historicalContext: 'The claim that the divine Logos became "flesh" (sarx) was scandalous to both Greek and Jewish audiences. Greeks saw flesh as inferior; Jews guarded God\'s transcendence. This verse became central to Christological debates in the early church.',
-    },
+    { verse: 1, crossReferences: ['Genesis 1:1', 'Proverbs 8:22-31', '1 John 1:1-2'], originalLanguage: 'Ἐν ἀρχῇ ἦν ὁ λόγος (En archē ēn ho logos) — The imperfect tense "ēn" indicates continuous past existence, not a point of origin.', historicalContext: 'Written around 90 AD in Ephesus, John\'s prologue bridges Jewish monotheism and Greek philosophy. "Logos" was familiar to both Hellenistic Jews (via Philo) and Greek Stoic philosophers.' },
+    { verse: 2, crossReferences: ['Colossians 1:17', 'Hebrews 1:2', 'John 17:5'], originalLanguage: 'οὗτος ἦν ἐν ἀρχῇ πρὸς τὸν θεόν (houtos ēn en archē pros ton theon) — "This one was in the beginning with God."', historicalContext: 'Early church fathers used this verse against Arian heresy, which claimed the Son was a created being. The repeated "ēn" (was) reinforces eternal co-existence.' },
+    { verse: 3, crossReferences: ['Colossians 1:16', 'Hebrews 1:2', 'Psalm 33:6'], originalLanguage: 'πάντα δι\' αὐτοῦ ἐγένετο (panta di autou egeneto) — "All things through him came into being." The preposition "dia" marks the Word as the agent of creation.', historicalContext: 'Jewish wisdom literature (Proverbs 8, Wisdom of Solomon) personified wisdom as present at creation. John identifies this creative wisdom with Jesus.' },
+    { verse: 4, crossReferences: ['John 8:12', 'John 11:25', 'John 14:6'], originalLanguage: 'ἐν αὐτῷ ζωὴ ἦν (en autō zōē ēn) — "In him was life." Zōē refers to eternal, spiritual life rather than mere biological existence (bios).', historicalContext: 'Greek philosophy debated the source of life. John asserts it resides in the Logos, connecting Jewish creation theology with universal questions about existence.' },
+    { verse: 5, crossReferences: ['John 3:19', 'Isaiah 9:2', '2 Corinthians 4:6'], originalLanguage: 'ἡ σκοτία αὐτὸ οὐ κατέλαβεν (hē skotia auto ou katelaben) — "The darkness did not overcome/comprehend it." Katalambanō can mean both "overcome" and "understand."', historicalContext: 'The light-darkness motif was central in Jewish apocalyptic literature and the Dead Sea Scrolls. John employs it to frame the cosmic conflict between good and evil.' },
+    { verse: 6, crossReferences: ['Matthew 3:1', 'Mark 1:4', 'Malachi 3:1'], originalLanguage: 'ἐγένετο ἄνθρωπος (egeneto anthrōpos) — "There came a man." The aorist "egeneto" (came to be) contrasts with the imperfect "ēn" (was) used of the Logos.', historicalContext: 'John the Baptist was a well-known figure. Josephus mentions him in Antiquities 18.5.2. His following persisted after his death, making clarification of his role necessary.' },
+    { verse: 7, crossReferences: ['Acts 19:4', 'John 3:26-30', 'John 5:33-35'], originalLanguage: 'εἰς μαρτυρίαν (eis martyrian) — "For testimony/witness." Martyria is a key Johannine term, appearing 47 times in the Gospel and letters.', historicalContext: 'In the Roman legal system, testimony (martyria) was crucial for establishing truth. John frames the Baptist\'s ministry in legal-testimonial language.' },
+    { verse: 8, crossReferences: ['John 1:20', 'John 3:28', 'Acts 13:25'], originalLanguage: 'οὐκ ἦν ἐκεῖνος τὸ φῶς (ouk ēn ekeinos to phōs) — "He was not that light." The emphatic pronoun ekeinos underscores the distinction.', historicalContext: 'Followers of John the Baptist existed as a distinct group well into the first century (Acts 19:1-7). This verse addresses any lingering confusion about the Baptist\'s identity.' },
+    { verse: 9, crossReferences: ['John 8:12', 'John 9:5', 'Isaiah 49:6'], originalLanguage: 'τὸ φῶς τὸ ἀληθινόν (to phōs to alēthinon) — "The true light." Alēthinos means "genuine, real" as opposed to "apparent" or "partial."', historicalContext: 'In Greek philosophy, "true" (alēthinos) distinguished reality from shadow (cf. Plato\'s cave allegory). John claims Jesus is the ultimate reality behind all lesser lights.' },
+    { verse: 10, crossReferences: ['John 17:25', 'Wisdom 9:9', 'Hebrews 1:2'], originalLanguage: 'ὁ κόσμος αὐτὸν οὐκ ἔγνω (ho kosmos auton ouk egnō) — "The world did not know him." Ginōskō implies relational knowledge, not merely intellectual awareness.', historicalContext: 'First-century Judaism expected the Messiah to be recognized by Israel. The irony that the world\'s creator went unrecognized underscores humanity\'s spiritual blindness.' },
+    { verse: 14, crossReferences: ['Philippians 2:6-8', 'Colossians 1:15', '1 Timothy 3:16'], originalLanguage: 'ὁ λόγος σὰρξ ἐγένετο (ho logos sarx egeneto) — "The Word became flesh." "Egeneto" (became) contrasts with "ēn" (was), marking a definitive moment of incarnation.', historicalContext: 'The claim that the divine Logos became "flesh" (sarx) was scandalous to both Greeks and Jews. Greeks saw flesh as inferior; Jews guarded God\'s transcendence. This verse became central to Christological debates.' },
+    { verse: 16, crossReferences: ['Ephesians 1:3', 'Colossians 2:9-10', '2 Peter 1:3'], originalLanguage: 'χάριν ἀντὶ χάριτος (charin anti charitos) — "Grace upon grace" or "grace in place of grace." The preposition anti suggests successive waves of grace.', historicalContext: 'In the patron-client culture of the Roman Empire, "grace" (charis) connoted the generous favor of a patron. John transforms this social concept to describe God\'s lavish giving.' },
+    { verse: 17, crossReferences: ['Exodus 34:6', 'John 14:6', 'Hebrews 3:3-6'], originalLanguage: 'ἡ χάρις καὶ ἡ ἀλήθεια (hē charis kai hē alētheia) — "Grace and truth" echoes the Hebrew pair hesed we\'emet (steadfast love and faithfulness) from Exodus 34:6.', historicalContext: 'Moses received the law at Sinai, a foundational moment for Israel. John presents Jesus as bringing something greater—the fullness of God\'s covenant love and ultimate truth.' },
+    { verse: 18, crossReferences: ['Exodus 33:20', 'John 6:46', 'Colossians 1:15'], originalLanguage: 'μονογενὴς θεός (monogenēs theos) — "The only-begotten God" (some manuscripts read "the only-begotten Son"). Monogenēs means unique, one-of-a-kind.', historicalContext: 'The tension between God\'s invisibility (Exodus 33:20) and human encounters with God (Genesis 32:30) was debated in Judaism. John resolves it: the Son is the definitive revelation of the Father.' },
+  ],
+  'Psalms-23': [
+    { verse: 1, crossReferences: ['Psalm 100:3', 'Isaiah 40:11', 'Ezekiel 34:11-16'], originalLanguage: 'יְהוָה רֹעִי (YHWH ro\'i) — "The LORD [is] my shepherd." The possessive "my" makes this deeply personal. Ro\'eh (shepherd) was also a royal title in the ancient Near East.', historicalContext: 'David, himself a former shepherd, understood the intimate care a shepherd provides. This metaphor also echoed Mesopotamian royal ideology, where kings called themselves "shepherds of their people."' },
+    { verse: 2, crossReferences: ['Psalm 46:2-3', 'Revelation 7:17', 'Isaiah 49:10'], originalLanguage: 'בִּנְאוֹת דֶּשֶׁא (bin\'ot deshe) — "In pastures of tender grass." Deshe refers to fresh, young vegetation—the best grazing.', historicalContext: 'In the arid climate of ancient Israel, green pastures and still waters were rare luxuries. David\'s imagery conveyed extraordinary divine provision.' },
+    { verse: 3, crossReferences: ['Psalm 19:7', 'Proverbs 3:6', 'Isaiah 43:25'], originalLanguage: 'יְשׁוֹבֵב נַפְשִׁי (yeshobeb nafshi) — "He restores my soul." The verb shub means to return or restore—bringing the soul back to its proper state.', historicalContext: 'Soul (nephesh) in Hebrew encompasses the whole person—vitality, emotions, will. Restoration of the nephesh meant renewal of one\'s entire being.' },
+    { verse: 4, crossReferences: ['Psalm 91:1-4', 'Isaiah 43:2', 'Job 10:21-22'], originalLanguage: 'גֵּיא צַלְמָוֶת (gey tsalmawet) — "Valley of the shadow of death" or "valley of deep darkness." The compound word evokes the deepest, most threatening darkness.', historicalContext: 'Judean geography includes steep, narrow valleys (wadis) where predators lurked. Shepherds navigated these treacherous paths regularly, making this metaphor vivid to David\'s original audience.' },
+    { verse: 5, crossReferences: ['Psalm 78:19', 'Psalm 104:15', 'Luke 7:46'], originalLanguage: 'דִּשַּׁנְתָּ בַשֶּׁמֶן רֹאשִׁי (dishanta bashemen roshi) — "You anoint my head with oil." Anointing with oil signified honor, celebration, and divine favor.', historicalContext: 'Anointing guests with oil was a sign of hospitality in the ancient Near East. The overflowing cup symbolized extravagant abundance beyond what was needed.' },
+    { verse: 6, crossReferences: ['Psalm 27:4', 'Psalm 84:10', 'John 14:2-3'], originalLanguage: 'וְשַׁבְתִּי בְּבֵית יְהוָה (weshavti bebet YHWH) — "And I shall dwell in the house of the LORD." Some read shavti as "return to" rather than "dwell in."', historicalContext: 'The "house of the LORD" refers to the tabernacle/temple—the place of God\'s manifest presence. David expresses the ultimate hope: eternal communion with God.' },
+  ],
+  'Genesis-1': [
+    { verse: 1, crossReferences: ['John 1:1-3', 'Hebrews 11:3', 'Psalm 33:6'], originalLanguage: 'בְּרֵאשִׁית בָּרָא אֱלֹהִים (bereshit bara elohim) — "In the beginning God created." Bara is used exclusively of divine creation—bringing into existence something fundamentally new.', historicalContext: 'Unlike Babylonian creation myths (Enuma Elish) where creation results from conflict between gods, Genesis presents creation as the sovereign, peaceful act of one God.' },
+    { verse: 2, crossReferences: ['Jeremiah 4:23', 'Isaiah 45:18', 'Psalm 104:30'], originalLanguage: 'תֹהוּ וָבֹהוּ (tohu wabohu) — "Formless and void." This rhyming pair describes primordial chaos before God\'s ordering work began.', historicalContext: 'Ancient Near Eastern creation accounts often began with a watery chaos. Genesis shares this starting point but diverges radically in its monotheistic theology.' },
+    { verse: 3, crossReferences: ['2 Corinthians 4:6', 'Psalm 33:9', 'Hebrews 11:3'], originalLanguage: 'יְהִי אוֹר (yehi or) — "Let there be light." The jussive form of the verb expresses divine command. God creates by speaking.', historicalContext: 'In Egyptian theology, light was associated with the sun god Ra. Genesis depersonalizes light—it is not a deity but a creation of the one true God.' },
+    { verse: 4, crossReferences: ['Isaiah 45:7', '1 John 1:5', 'James 1:17'], originalLanguage: 'כִּי טוֹב (ki tov) — "That it was good." Tov means beautiful, fitting, and morally excellent—not merely functional.', historicalContext: 'The repeated declaration "good" (tov) stands against dualistic worldviews that saw matter as inherently evil. The material world is affirmed as God\'s good creation.' },
+    { verse: 5, crossReferences: ['Psalm 74:16', 'Psalm 104:20', 'Genesis 8:22'], originalLanguage: 'יוֹם אֶחָד (yom echad) — "Day one" rather than "the first day." The use of a cardinal number (one) rather than ordinal (first) may emphasize the uniqueness of this day.', historicalContext: 'The Jewish day began at evening, which is why "evening and morning" mark each creation day. This pattern continues in Jewish religious observance to this day.' },
+    { verse: 6, crossReferences: ['Psalm 19:1', 'Proverbs 8:27-28', 'Job 37:18'], originalLanguage: 'רָקִיעַ (raqia) — "Expanse/firmament." The root raqa means to spread out or hammer thin, like beaten metal. It refers to the sky-dome.', historicalContext: 'Ancient peoples conceived the sky as a solid dome holding back celestial waters. While Genesis uses this language, its theological focus is on God\'s sovereignty over the cosmic structure.' },
+    { verse: 7, crossReferences: ['Proverbs 8:28-29', '2 Peter 3:5', 'Job 38:8-11'], originalLanguage: 'וַיַּעַשׂ (wayya\'as) — "And [God] made." The verb \'asah (to make/fashion) complements bara (to create), emphasizing God actively shaping what he spoke into existence.', historicalContext: 'The separation of waters above and below parallels Mesopotamian cosmology (Marduk dividing Tiamat), but Genesis attributes it to one sovereign God acting without conflict or struggle.' },
+    { verse: 8, crossReferences: ['Psalm 148:4', 'Deuteronomy 33:26', 'Job 22:14'], originalLanguage: 'שָׁמָיִם (shamayim) — "Heaven/sky." The dual form suggests the ancient concept of multiple heavens or expanses. God names and thus claims authority over the sky.', historicalContext: 'In Canaanite religion, the sky god Baal ruled the heavens. By naming the sky, God demonstrates absolute sovereignty over what pagans worshipped as divine.' },
+    { verse: 9, crossReferences: ['Psalm 95:5', 'Job 38:8-11', 'Proverbs 8:29'], originalLanguage: 'יִקָּווּ הַמַּיִם (yiqqawu hammayim) — "Let the waters be gathered." Qawah means to collect or bind together, implying God setting boundaries.', historicalContext: 'In Mesopotamian myths, the sea was a threatening chaos deity (Tiamat). In Genesis, the waters simply obey God\'s command, reflecting absolute divine authority over nature.' },
+    { verse: 10, crossReferences: ['Psalm 24:1-2', 'Psalm 95:5', 'Nehemiah 9:6'], originalLanguage: 'אֶרֶץ (erets) and יַמִּים (yammim) — "Earth" and "Seas." God names both, asserting ownership. In the ancient world, naming was an act of authority and dominion.', historicalContext: 'The Canaanite sea god Yam was a feared deity. By casually naming the seas, Genesis demythologizes the ocean, presenting it as merely one part of God\'s ordered creation.' },
+  ],
+  'Romans-8': [
+    { verse: 1, crossReferences: ['Romans 5:1', 'John 3:18', 'John 5:24'], originalLanguage: 'οὐδὲν κατάκριμα (ouden katakrima) — "No condemnation." Katakrima is a legal term meaning the sentence of punishment following a guilty verdict.', historicalContext: 'Roman law was the most developed legal system of the ancient world. Paul uses legal terminology his Roman audience would understand: the verdict against believers has been fully set aside.' },
+    { verse: 2, crossReferences: ['Galatians 5:1', 'John 8:32-36', '2 Corinthians 3:17'], originalLanguage: 'ὁ νόμος τοῦ πνεύματος τῆς ζωῆς (ho nomos tou pneumatos tēs zōēs) — "The law of the Spirit of life." This "law" (governing principle) operates in the opposite direction from sin\'s law.', historicalContext: 'Paul contrasts two operating systems: the old regime of sin and death versus the new regime of the Spirit and life. This reflects the apocalyptic "two ages" framework in Jewish thought.' },
+    { verse: 3, crossReferences: ['Hebrews 7:18-19', '2 Corinthians 5:21', 'Galatians 4:4-5'], originalLanguage: 'ἐν ὁμοιώματι σαρκὸς ἁμαρτίας (en homoiōmati sarkos hamartias) — "In the likeness of sinful flesh." Homoiōma means a real likeness—Jesus was fully human, yet without sin.', historicalContext: 'This careful phrasing avoids both docetism (denying Jesus\'s real humanity) and the idea that Jesus had a sinful nature. It became key in later Christological formulations.' },
+    { verse: 4, crossReferences: ['Galatians 5:16', 'Galatians 5:25', 'Colossians 2:10'], originalLanguage: 'τὸ δικαίωμα τοῦ νόμου (to dikaiōma tou nomou) — "The righteous requirement of the law." Dikaiōma means the just demand or legal requirement.', historicalContext: 'Paul argued that Christ fulfilled the law\'s demands on behalf of believers, enabling them to live by the Spirit rather than futilely trying to keep the law in their own strength.' },
+    { verse: 5, crossReferences: ['Galatians 5:17', 'Galatians 6:8', 'Colossians 3:2'], originalLanguage: 'φρονοῦσιν (phronousin) — "Set their minds on." Phroneō involves the whole orientation of a person\'s thinking, values, and priorities—not just passing thoughts.', historicalContext: 'Greco-Roman philosophy debated the relationship between mind (nous) and desire (epithumia). Paul reframes the issue: the fundamental division is between flesh-oriented and Spirit-oriented living.' },
+    { verse: 6, crossReferences: ['Galatians 6:8', 'John 6:63', 'Romans 6:23'], originalLanguage: 'τὸ φρόνημα τῆς σαρκός (to phronēma tēs sarkos) — "The mindset of the flesh." Phronēma refers to one\'s settled disposition or habitual way of thinking.', historicalContext: 'The Stoics valued apatheia (freedom from passions) as the path to peace. Paul offers a different solution: peace comes not from suppressing passions but from being oriented by the Spirit.' },
+    { verse: 28, crossReferences: ['Genesis 50:20', 'Jeremiah 29:11', 'Ephesians 1:11'], originalLanguage: 'συνεργεῖ εἰς ἀγαθόν (synergei eis agathon) — "Works together for good." Synergeō means to cooperate, collaborate—God weaves all threads into a good design.', historicalContext: 'Stoic philosophy taught that fate controlled all events. Paul affirms divine sovereignty but adds a personal dimension: God works all things for the good of those who love him.' },
+    { verse: 31, crossReferences: ['Psalm 118:6', 'Numbers 14:9', 'Isaiah 8:10'], originalLanguage: 'εἰ ὁ θεὸς ὑπὲρ ἡμῶν (ei ho theos hyper hēmōn) — "If God [is] for us." The conditional ei with indicative assumes a true condition: since God is for us.', historicalContext: 'In Roman courts, having a powerful patron (advocatus) ensured favorable outcomes. Paul declares God as the ultimate patron and advocate.' },
+    { verse: 37, crossReferences: ['2 Corinthians 2:14', '1 John 5:4', 'Revelation 12:11'], originalLanguage: 'ὑπερνικῶμεν (hypernikōmen) — "We are more than conquerors." Hyper-nikaō is a compound verb meaning to be super-victorious, to win an overwhelming victory.', historicalContext: 'Roman culture celebrated military triumph (triumphus). Paul uses victory language but redefines it: Christian triumph comes not through military might but through the love of Christ.' },
+    { verse: 38, crossReferences: ['Ephesians 6:12', 'Colossians 1:16', '1 Peter 3:22'], originalLanguage: 'οὔτε ἄγγελοι οὔτε ἀρχαί (oute angeloi oute archai) — "Neither angels nor rulers." Archai refers to cosmic powers or spiritual authorities in the heavenly realm.', historicalContext: 'First-century people were deeply anxious about cosmic powers (astrological forces, demons, fate). Paul\'s list addresses every category of feared power, declaring Christ\'s love supreme over all.' },
+    { verse: 39, crossReferences: ['Ephesians 3:18-19', 'Psalm 139:7-12', 'Deuteronomy 31:6'], originalLanguage: 'οὔτε ὕψωμα οὔτε βάθος (oute hypsōma oute bathos) — "Neither height nor depth." These may be astrological terms for the highest and lowest points of a star\'s orbit.', historicalContext: 'Paul encompasses all of reality—spatial, temporal, spiritual—to make an exhaustive argument. Nothing in the entire created order can break the bond of God\'s love in Christ Jesus.' },
   ],
 };
 
+// ─── Topics (6 topics, 2-3 events each, most-quoted per event) ───
+
 export const TOPICS: Topic[] = [
-  { id: '1', name: 'Creation', description: 'God\'s creative work and the origin of all things', icon: 'Sparkles' },
-  { id: '2', name: 'Salvation', description: 'God\'s plan for redeeming humanity', icon: 'Heart' },
-  { id: '3', name: 'Prayer', description: 'Communication with God', icon: 'MessageCircle' },
-  { id: '4', name: 'Faith', description: 'Trust and belief in God', icon: 'Shield' },
-  { id: '5', name: 'Love', description: 'God\'s love and how we love others', icon: 'Heart' },
-  { id: '6', name: 'Prophecy', description: 'Messages from God about the future', icon: 'Eye' },
-  { id: '7', name: 'Miracles', description: 'Supernatural acts of God', icon: 'Zap' },
-  { id: '8', name: 'Wisdom', description: 'Godly wisdom and understanding', icon: 'BookOpen' },
+  { id: 'faith', name: 'Faith', description: 'Trust and belief in God', icon: 'Shield' },
+  { id: 'love', name: 'Love', description: 'God\'s love and how we love others', icon: 'Heart' },
+  { id: 'prayer', name: 'Prayer', description: 'Communication with God', icon: 'MessageCircle' },
+  { id: 'wisdom', name: 'Wisdom', description: 'Godly wisdom and understanding', icon: 'BookOpen' },
+  { id: 'salvation', name: 'Salvation', description: 'God\'s plan for redeeming humanity', icon: 'Sparkles' },
+  { id: 'grace', name: 'Grace', description: 'Unmerited favor from God', icon: 'Zap' },
 ];
 
 export const TOPIC_EVENTS: TopicEvent[] = [
-  { id: 'e1', topicId: '1', title: 'Creation of the World', description: 'God created the heavens and the earth in six days and rested on the seventh.', references: ['Genesis 1:1-2:3'] },
-  { id: 'e2', topicId: '1', title: 'Creation of Humanity', description: 'God formed man from the dust and breathed life into him.', references: ['Genesis 2:7', 'Genesis 1:26-27'] },
-  { id: 'e3', topicId: '2', title: 'The Exodus', description: 'God delivered Israel from slavery in Egypt.', references: ['Exodus 12-14'] },
-  { id: 'e4', topicId: '2', title: 'The Cross', description: 'Jesus died for the sins of the world.', references: ['John 19:17-30', 'Romans 5:8'] },
-  { id: 'e5', topicId: '7', title: 'Parting the Red Sea', description: 'God parted the Red Sea so Israel could cross on dry ground.', references: ['Exodus 14:21-22'] },
-  { id: 'e6', topicId: '7', title: 'Water into Wine', description: 'Jesus performed his first miracle at the wedding in Cana.', references: ['John 2:1-11'] },
+  // Faith
+  { id: 'faith-1', topicId: 'faith', title: 'Abraham\'s Call', description: 'God called Abraham to leave his homeland, and Abraham obeyed by faith.', references: ['Genesis 12:1-4', 'Hebrews 11:8'] },
+  { id: 'faith-2', topicId: 'faith', title: 'Crossing the Red Sea', description: 'Israel trusted God and crossed the Red Sea on dry ground.', references: ['Exodus 14:21-31', 'Hebrews 11:29'] },
+  { id: 'faith-3', topicId: 'faith', title: 'David and Goliath', description: 'David faced the giant Goliath trusting in the Lord of armies.', references: ['1 Samuel 17:45-47'] },
+  // Love
+  { id: 'love-1', topicId: 'love', title: 'God So Loved the World', description: 'The supreme expression of God\'s love: giving his only Son.', references: ['John 3:16', 'Romans 5:8'] },
+  { id: 'love-2', topicId: 'love', title: 'The Good Samaritan', description: 'Jesus taught that love crosses every boundary.', references: ['Luke 10:25-37'] },
+  { id: 'love-3', topicId: 'love', title: 'Love Chapter', description: 'Paul\'s definitive description of what love is and does.', references: ['1 Corinthians 13:1-13'] },
+  // Prayer
+  { id: 'prayer-1', topicId: 'prayer', title: 'The Lord\'s Prayer', description: 'Jesus taught his disciples how to pray.', references: ['Matthew 6:9-13', 'Luke 11:1-4'] },
+  { id: 'prayer-2', topicId: 'prayer', title: 'Elijah on Mount Carmel', description: 'Elijah prayed and fire fell from heaven.', references: ['1 Kings 18:36-39'] },
+  // Wisdom
+  { id: 'wisdom-1', topicId: 'wisdom', title: 'Solomon\'s Request', description: 'Solomon asked God for wisdom instead of wealth or power.', references: ['1 Kings 3:5-14', '2 Chronicles 1:7-12'] },
+  { id: 'wisdom-2', topicId: 'wisdom', title: 'The Proverbs', description: 'Solomon compiled wisdom for everyday life.', references: ['Proverbs 1:1-7', 'Proverbs 9:10'] },
+  { id: 'wisdom-3', topicId: 'wisdom', title: 'James on Wisdom', description: 'Ask God for wisdom and he will give it generously.', references: ['James 1:5', 'James 3:17'] },
+  // Salvation
+  { id: 'salvation-1', topicId: 'salvation', title: 'The Exodus', description: 'God delivered Israel from slavery in Egypt.', references: ['Exodus 12-14'] },
+  { id: 'salvation-2', topicId: 'salvation', title: 'The Cross', description: 'Jesus died for the sins of the world.', references: ['John 19:17-30', 'Romans 5:8'] },
+  { id: 'salvation-3', topicId: 'salvation', title: 'The Resurrection', description: 'Jesus rose from the dead, conquering sin and death.', references: ['Matthew 28:1-10', '1 Corinthians 15:3-8'] },
+  // Grace
+  { id: 'grace-1', topicId: 'grace', title: 'Grace Upon Grace', description: 'From Christ\'s fullness we have all received grace upon grace.', references: ['John 1:16-17', 'Ephesians 2:8-9'] },
+  { id: 'grace-2', topicId: 'grace', title: 'The Prodigal Son', description: 'A father\'s unmerited grace toward his wayward son.', references: ['Luke 15:11-32'] },
+  { id: 'grace-3', topicId: 'grace', title: 'Paul\'s Conversion', description: 'The greatest persecutor of the church became its greatest apostle by grace.', references: ['Acts 9:1-19', '1 Timothy 1:15-16'] },
 ];
+
+export const MOST_QUOTED: Record<string, MostQuotedVerse[]> = {
+  'faith-1': [
+    { reference: 'Hebrews 11:1', book: 'Hebrews', chapter: 11, verse: 1, text: 'Now faith is the assurance of things hoped for, the conviction of things not seen.', quoteCount: 2847 },
+    { reference: 'Genesis 15:6', book: 'Genesis', chapter: 15, verse: 6, text: 'And he believed the LORD, and he counted it to him as righteousness.', quoteCount: 1923 },
+    { reference: 'Romans 4:3', book: 'Romans', chapter: 4, verse: 3, text: 'Abraham believed God, and it was counted to him as righteousness.', quoteCount: 1654 },
+    { reference: 'Hebrews 11:8', book: 'Hebrews', chapter: 11, verse: 8, text: 'By faith Abraham obeyed when he was called to go out to a place he was to receive as an inheritance.', quoteCount: 1432 },
+    { reference: 'Genesis 12:1', book: 'Genesis', chapter: 12, verse: 1, text: 'Now the LORD said to Abram, "Go from your country and your kindred and your father\'s house to the land that I will show you."', quoteCount: 1201 },
+  ],
+  'faith-2': [
+    { reference: 'Exodus 14:14', book: 'Exodus', chapter: 14, verse: 14, text: 'The LORD will fight for you, and you have only to be silent.', quoteCount: 3102 },
+    { reference: 'Exodus 14:13', book: 'Exodus', chapter: 14, verse: 13, text: 'Fear not, stand firm, and see the salvation of the LORD.', quoteCount: 2456 },
+    { reference: 'Hebrews 11:29', book: 'Hebrews', chapter: 11, verse: 29, text: 'By faith the people crossed the Red Sea as on dry land.', quoteCount: 1789 },
+    { reference: 'Psalm 77:19', book: 'Psalms', chapter: 77, verse: 19, text: 'Your way was through the sea, your path through the great waters.', quoteCount: 987 },
+    { reference: 'Isaiah 43:2', book: 'Isaiah', chapter: 43, verse: 2, text: 'When you pass through the waters, I will be with you.', quoteCount: 876 },
+  ],
+  'faith-3': [
+    { reference: '1 Samuel 17:47', book: '1 Samuel', chapter: 17, verse: 47, text: 'The battle is the LORD\'s, and he will give you into our hand.', quoteCount: 2134 },
+    { reference: '1 Samuel 17:45', book: '1 Samuel', chapter: 17, verse: 45, text: 'I come to you in the name of the LORD of hosts, the God of the armies of Israel.', quoteCount: 1876 },
+    { reference: 'Psalm 27:1', book: 'Psalms', chapter: 27, verse: 1, text: 'The LORD is my light and my salvation; whom shall I fear?', quoteCount: 1654 },
+    { reference: 'Philippians 4:13', book: 'Philippians', chapter: 4, verse: 13, text: 'I can do all things through him who strengthens me.', quoteCount: 1432 },
+    { reference: '2 Timothy 1:7', book: '2 Timothy', chapter: 1, verse: 7, text: 'For God gave us a spirit not of fear but of power and love and self-control.', quoteCount: 1201 },
+  ],
+  'love-1': [
+    { reference: 'John 3:16', book: 'John', chapter: 3, verse: 16, text: 'For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life.', quoteCount: 5234 },
+    { reference: 'Romans 5:8', book: 'Romans', chapter: 5, verse: 8, text: 'But God shows his love for us in that while we were still sinners, Christ died for us.', quoteCount: 3421 },
+    { reference: '1 John 4:9', book: '1 John', chapter: 4, verse: 9, text: 'In this the love of God was made manifest among us, that God sent his only Son into the world.', quoteCount: 2145 },
+    { reference: 'John 15:13', book: 'John', chapter: 15, verse: 13, text: 'Greater love has no one than this, that someone lay down his life for his friends.', quoteCount: 1987 },
+    { reference: 'Romans 8:39', book: 'Romans', chapter: 8, verse: 39, text: 'Nothing will be able to separate us from the love of God in Christ Jesus our Lord.', quoteCount: 1654 },
+  ],
+  'love-2': [
+    { reference: 'Luke 10:27', book: 'Luke', chapter: 10, verse: 27, text: 'You shall love the Lord your God with all your heart and your neighbor as yourself.', quoteCount: 2876 },
+    { reference: 'Luke 10:37', book: 'Luke', chapter: 10, verse: 37, text: 'Go, and do likewise.', quoteCount: 2134 },
+    { reference: 'Galatians 5:14', book: 'Galatians', chapter: 5, verse: 14, text: 'The whole law is fulfilled in one word: "You shall love your neighbor as yourself."', quoteCount: 1654 },
+    { reference: 'James 2:8', book: 'James', chapter: 2, verse: 8, text: 'If you really fulfill the royal law according to the Scripture, "You shall love your neighbor as yourself," you are doing well.', quoteCount: 1234 },
+    { reference: 'Matthew 22:39', book: 'Matthew', chapter: 22, verse: 39, text: 'You shall love your neighbor as yourself.', quoteCount: 1102 },
+  ],
+  'love-3': [
+    { reference: '1 Corinthians 13:4', book: '1 Corinthians', chapter: 13, verse: 4, text: 'Love is patient and kind; love does not envy or boast; it is not arrogant.', quoteCount: 4321 },
+    { reference: '1 Corinthians 13:13', book: '1 Corinthians', chapter: 13, verse: 13, text: 'So now faith, hope, and love abide, these three; but the greatest of these is love.', quoteCount: 3654 },
+    { reference: '1 Corinthians 13:7', book: '1 Corinthians', chapter: 13, verse: 7, text: 'Love bears all things, believes all things, hopes all things, endures all things.', quoteCount: 2987 },
+    { reference: '1 Corinthians 13:8', book: '1 Corinthians', chapter: 13, verse: 8, text: 'Love never ends.', quoteCount: 2345 },
+    { reference: '1 John 4:8', book: '1 John', chapter: 4, verse: 8, text: 'Anyone who does not love does not know God, because God is love.', quoteCount: 1987 },
+  ],
+  'prayer-1': [
+    { reference: 'Matthew 6:9', book: 'Matthew', chapter: 6, verse: 9, text: 'Our Father in heaven, hallowed be your name.', quoteCount: 4567 },
+    { reference: 'Philippians 4:6', book: 'Philippians', chapter: 4, verse: 6, text: 'Do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God.', quoteCount: 3210 },
+    { reference: 'Matthew 7:7', book: 'Matthew', chapter: 7, verse: 7, text: 'Ask, and it will be given to you; seek, and you will find; knock, and it will be opened to you.', quoteCount: 2876 },
+    { reference: '1 Thessalonians 5:17', book: '1 Thessalonians', chapter: 5, verse: 17, text: 'Pray without ceasing.', quoteCount: 2345 },
+    { reference: 'Jeremiah 29:12', book: 'Jeremiah', chapter: 29, verse: 12, text: 'Then you will call upon me and come and pray to me, and I will hear you.', quoteCount: 1654 },
+  ],
+  'prayer-2': [
+    { reference: '1 Kings 18:37', book: '1 Kings', chapter: 18, verse: 37, text: 'Answer me, O LORD, answer me, that this people may know that you, O LORD, are God.', quoteCount: 1876 },
+    { reference: 'James 5:16', book: 'James', chapter: 5, verse: 16, text: 'The prayer of a righteous person has great power as it is working.', quoteCount: 2654 },
+    { reference: 'Psalm 50:15', book: 'Psalms', chapter: 50, verse: 15, text: 'Call upon me in the day of trouble; I will deliver you, and you shall glorify me.', quoteCount: 1432 },
+    { reference: 'Isaiah 65:24', book: 'Isaiah', chapter: 65, verse: 24, text: 'Before they call I will answer; while they are yet speaking I will hear.', quoteCount: 1234 },
+    { reference: 'Psalm 145:18', book: 'Psalms', chapter: 145, verse: 18, text: 'The LORD is near to all who call on him, to all who call on him in truth.', quoteCount: 1102 },
+  ],
+  'wisdom-1': [
+    { reference: 'Proverbs 9:10', book: 'Proverbs', chapter: 9, verse: 10, text: 'The fear of the LORD is the beginning of wisdom, and the knowledge of the Holy One is insight.', quoteCount: 3456 },
+    { reference: 'James 1:5', book: 'James', chapter: 1, verse: 5, text: 'If any of you lacks wisdom, let him ask God, who gives generously to all without reproach.', quoteCount: 2987 },
+    { reference: '1 Kings 3:9', book: '1 Kings', chapter: 3, verse: 9, text: 'Give your servant therefore an understanding mind to govern your people, that I may discern between good and evil.', quoteCount: 1876 },
+    { reference: 'Proverbs 2:6', book: 'Proverbs', chapter: 2, verse: 6, text: 'For the LORD gives wisdom; from his mouth come knowledge and understanding.', quoteCount: 1654 },
+    { reference: 'Colossians 2:3', book: 'Colossians', chapter: 2, verse: 3, text: 'In whom are hidden all the treasures of wisdom and knowledge.', quoteCount: 1234 },
+  ],
+  'wisdom-2': [
+    { reference: 'Proverbs 1:7', book: 'Proverbs', chapter: 1, verse: 7, text: 'The fear of the LORD is the beginning of knowledge; fools despise wisdom and instruction.', quoteCount: 3102 },
+    { reference: 'Proverbs 3:5-6', book: 'Proverbs', chapter: 3, verse: 5, text: 'Trust in the LORD with all your heart, and do not lean on your own understanding.', quoteCount: 4567 },
+    { reference: 'Proverbs 4:7', book: 'Proverbs', chapter: 4, verse: 7, text: 'The beginning of wisdom is this: Get wisdom, and whatever you get, get insight.', quoteCount: 1876 },
+    { reference: 'Proverbs 16:9', book: 'Proverbs', chapter: 16, verse: 9, text: 'The heart of man plans his way, but the LORD establishes his steps.', quoteCount: 1654 },
+    { reference: 'Ecclesiastes 7:12', book: 'Ecclesiastes', chapter: 7, verse: 12, text: 'Wisdom preserves the life of him who has it.', quoteCount: 987 },
+  ],
+  'wisdom-3': [
+    { reference: 'James 3:17', book: 'James', chapter: 3, verse: 17, text: 'But the wisdom from above is first pure, then peaceable, gentle, open to reason, full of mercy and good fruits.', quoteCount: 2345 },
+    { reference: 'James 1:5', book: 'James', chapter: 1, verse: 5, text: 'If any of you lacks wisdom, let him ask God, who gives generously to all without reproach.', quoteCount: 2987 },
+    { reference: 'Proverbs 2:6', book: 'Proverbs', chapter: 2, verse: 6, text: 'For the LORD gives wisdom; from his mouth come knowledge and understanding.', quoteCount: 1654 },
+    { reference: 'Colossians 3:16', book: 'Colossians', chapter: 3, verse: 16, text: 'Let the word of Christ dwell in you richly, teaching and admonishing one another in all wisdom.', quoteCount: 1432 },
+    { reference: '1 Corinthians 1:30', book: '1 Corinthians', chapter: 1, verse: 30, text: 'He is the source of your life in Christ Jesus, whom God made our wisdom and our righteousness.', quoteCount: 1102 },
+  ],
+  'salvation-1': [
+    { reference: 'Exodus 15:2', book: 'Exodus', chapter: 15, verse: 2, text: 'The LORD is my strength and my song, and he has become my salvation.', quoteCount: 2345 },
+    { reference: 'Psalm 27:1', book: 'Psalms', chapter: 27, verse: 1, text: 'The LORD is my light and my salvation; whom shall I fear?', quoteCount: 2876 },
+    { reference: 'Isaiah 12:2', book: 'Isaiah', chapter: 12, verse: 2, text: 'Behold, God is my salvation; I will trust, and will not be afraid.', quoteCount: 1654 },
+    { reference: 'Acts 4:12', book: 'Acts', chapter: 4, verse: 12, text: 'And there is salvation in no one else, for there is no other name under heaven given among men by which we must be saved.', quoteCount: 1987 },
+    { reference: 'Titus 2:11', book: 'Titus', chapter: 2, verse: 11, text: 'For the grace of God has appeared, bringing salvation for all people.', quoteCount: 1102 },
+  ],
+  'salvation-2': [
+    { reference: 'John 3:16', book: 'John', chapter: 3, verse: 16, text: 'For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life.', quoteCount: 5234 },
+    { reference: 'Romans 6:23', book: 'Romans', chapter: 6, verse: 23, text: 'For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord.', quoteCount: 3876 },
+    { reference: 'Ephesians 2:8-9', book: 'Ephesians', chapter: 2, verse: 8, text: 'For by grace you have been saved through faith. And this is not your own doing; it is the gift of God.', quoteCount: 3456 },
+    { reference: 'Isaiah 53:5', book: 'Isaiah', chapter: 53, verse: 5, text: 'But he was pierced for our transgressions; he was crushed for our iniquities.', quoteCount: 2876 },
+    { reference: '1 Peter 2:24', book: '1 Peter', chapter: 2, verse: 24, text: 'He himself bore our sins in his body on the tree, that we might die to sin and live to righteousness.', quoteCount: 1987 },
+  ],
+  'salvation-3': [
+    { reference: '1 Corinthians 15:4', book: '1 Corinthians', chapter: 15, verse: 4, text: 'He was buried and raised on the third day in accordance with the Scriptures.', quoteCount: 2654 },
+    { reference: 'Romans 6:9', book: 'Romans', chapter: 6, verse: 9, text: 'We know that Christ, being raised from the dead, will never die again; death no longer has dominion over him.', quoteCount: 2134 },
+    { reference: '1 Peter 1:3', book: '1 Peter', chapter: 1, verse: 3, text: 'He has caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead.', quoteCount: 1876 },
+    { reference: 'John 11:25', book: 'John', chapter: 11, verse: 25, text: 'I am the resurrection and the life. Whoever believes in me, though he die, yet shall he live.', quoteCount: 3210 },
+    { reference: 'Philippians 3:10', book: 'Philippians', chapter: 3, verse: 10, text: 'That I may know him and the power of his resurrection.', quoteCount: 1432 },
+  ],
+  'grace-1': [
+    { reference: 'Ephesians 2:8-9', book: 'Ephesians', chapter: 2, verse: 8, text: 'For by grace you have been saved through faith. And this is not your own doing; it is the gift of God.', quoteCount: 3456 },
+    { reference: 'John 1:16', book: 'John', chapter: 1, verse: 16, text: 'For from his fullness we have all received, grace upon grace.', quoteCount: 2654 },
+    { reference: '2 Corinthians 12:9', book: '2 Corinthians', chapter: 12, verse: 9, text: 'My grace is sufficient for you, for my power is made perfect in weakness.', quoteCount: 2876 },
+    { reference: 'Romans 3:24', book: 'Romans', chapter: 3, verse: 24, text: 'Being justified freely by his grace through the redemption that is in Christ Jesus.', quoteCount: 1876 },
+    { reference: 'Titus 2:11', book: 'Titus', chapter: 2, verse: 11, text: 'For the grace of God has appeared, bringing salvation for all people.', quoteCount: 1432 },
+  ],
+  'grace-2': [
+    { reference: 'Luke 15:20', book: 'Luke', chapter: 15, verse: 20, text: 'His father saw him and felt compassion, and ran and embraced him and kissed him.', quoteCount: 2345 },
+    { reference: 'Luke 15:24', book: 'Luke', chapter: 15, verse: 24, text: 'For this my son was dead, and is alive again; he was lost, and is found.', quoteCount: 2876 },
+    { reference: 'Ephesians 1:7', book: 'Ephesians', chapter: 1, verse: 7, text: 'In him we have redemption through his blood, the forgiveness of our trespasses, according to the riches of his grace.', quoteCount: 1987 },
+    { reference: 'Psalm 103:12', book: 'Psalms', chapter: 103, verse: 12, text: 'As far as the east is from the west, so far does he remove our transgressions from us.', quoteCount: 1654 },
+    { reference: 'Micah 7:19', book: 'Micah', chapter: 7, verse: 19, text: 'He will again have compassion on us; he will tread our iniquities underfoot.', quoteCount: 1234 },
+  ],
+  'grace-3': [
+    { reference: '1 Timothy 1:15', book: '1 Timothy', chapter: 1, verse: 15, text: 'Christ Jesus came into the world to save sinners, of whom I am the foremost.', quoteCount: 2654 },
+    { reference: 'Acts 9:15', book: 'Acts', chapter: 9, verse: 15, text: 'He is a chosen instrument of mine to carry my name before the Gentiles and kings.', quoteCount: 1876 },
+    { reference: '1 Corinthians 15:10', book: '1 Corinthians', chapter: 15, verse: 10, text: 'But by the grace of God I am what I am, and his grace toward me was not in vain.', quoteCount: 2345 },
+    { reference: 'Galatians 1:15', book: 'Galatians', chapter: 1, verse: 15, text: 'But when he who had set me apart before I was born, and who called me by his grace.', quoteCount: 1432 },
+    { reference: '2 Corinthians 5:17', book: '2 Corinthians', chapter: 5, verse: 17, text: 'Therefore, if anyone is in Christ, he is a new creation. The old has passed away; behold, the new has come.', quoteCount: 1987 },
+  ],
+};

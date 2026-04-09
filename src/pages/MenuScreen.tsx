@@ -1,12 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
-import { User, Settings, Info, Heart, HelpCircle, LogOut, LogIn, ChevronRight } from 'lucide-react';
+import { User, Settings, Info, Heart, HelpCircle, LogOut, LogIn, ChevronRight, Highlighter } from 'lucide-react';
 
 const menuItems = [
-  { label: 'Settings', icon: Settings, path: '/menu/settings' },
   { label: 'About', icon: Info, path: '/menu/about' },
   { label: 'Giving', icon: Heart, path: '/menu/giving' },
   { label: 'Help & Feedback', icon: HelpCircle, path: '/menu/help' },
+  { label: 'Highlights', icon: Highlighter, path: '/highlights' },
+  { label: 'Settings', icon: Settings, path: '/menu/settings' },
 ];
 
 export default function MenuScreen() {
@@ -44,7 +45,16 @@ export default function MenuScreen() {
           </button>
         ))}
 
-        {/* Sign in/out */}
+        {!state.isSignedIn && (
+          <button
+            onClick={() => navigate('/menu/signin')}
+            className="flex items-center gap-3 w-full p-4 rounded-lg bg-card border border-border hover:bg-secondary transition-colors mt-2"
+          >
+            <LogIn size={18} className="text-accent" />
+            <span className="font-medium text-accent">Sign In</span>
+          </button>
+        )}
+
         <button
           onClick={() => {
             if (state.isSignedIn) {

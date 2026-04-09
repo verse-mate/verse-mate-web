@@ -75,3 +75,12 @@ export interface TopicEvent {
   description: string;
   references: string[];
 }
+
+export interface MostQuotedVerse {
+  reference: string;
+  book: string;
+  chapter: number;
+  verse: number;
+  text: string;
+  quoteCount: number;
+}

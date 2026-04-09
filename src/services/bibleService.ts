@@ -1,10 +1,7 @@
-import { BibleVersion, Chapter, Bookmark, Note, Highlight, Commentary, VerseInsight, Topic, TopicEvent } from './types';
-import { getChapter as getMockChapter, COMMENTARIES, VERSE_INSIGHTS, TOPICS, TOPIC_EVENTS, BIBLE_BOOKS } from './bibleData';
-
-// Service layer — swap mock implementations for real API calls later
+import { BibleVersion, Chapter, Bookmark, Note, Highlight, Commentary, VerseInsight, Topic, TopicEvent, MostQuotedVerse } from './types';
+import { getChapter as getMockChapter, COMMENTARIES, VERSE_INSIGHTS, TOPICS, TOPIC_EVENTS, BIBLE_BOOKS, MOST_QUOTED } from './bibleData';
 
 export async function fetchChapter(book: string, chapter: number, version: BibleVersion): Promise<Chapter> {
-  // Simulate network delay
   await new Promise(r => setTimeout(r, 100));
   return getMockChapter(book, chapter, version);
 }
@@ -29,6 +26,14 @@ export async function fetchTopics(): Promise<Topic[]> {
 
 export async function fetchTopicEvents(topicId: string): Promise<TopicEvent[]> {
   return TOPIC_EVENTS.filter(e => e.topicId === topicId);
+}
+
+export async function fetchTopicEvent(topicId: string, eventId: string): Promise<TopicEvent | undefined> {
+  return TOPIC_EVENTS.find(e => e.topicId === topicId && e.id === eventId);
+}
+
+export async function fetchMostQuoted(eventId: string): Promise<MostQuotedVerse[]> {
+  return MOST_QUOTED[eventId] || [];
 }
 
 // LocalStorage persistence helpers
