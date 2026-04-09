@@ -3,7 +3,7 @@ import { useApp } from '@/contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { fetchChapter, AUTO_HIGHLIGHTS } from '@/services/bibleService';
 import { Chapter, HighlightColor } from '@/services/types';
-import { ChevronDown, Menu, Bookmark, FileText } from 'lucide-react';
+import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
 import VerseActions from '@/components/VerseActions';
 import { BIBLE_BOOKS } from '@/services/bibleData';
@@ -74,6 +74,26 @@ export default function ReadingScreen() {
     setScrollProgress(progress);
   };
 
+  // Swipe left/right to jump chapters
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+  const handleBodyTouchStart = (e: React.TouchEvent) => {
+    const t = e.touches[0];
+    touchStartRef.current = { x: t.clientX, y: t.clientY };
+  };
+  const handleBodyTouchEnd = (e: React.TouchEvent) => {
+    const start = touchStartRef.current;
+    if (!start) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - start.x;
+    const dy = t.clientY - start.y;
+    // Horizontal swipe: |dx| > 60, |dx| > 2 * |dy|, not just a scroll
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 2) {
+      if (dx < 0) goToChapter(1); // swipe left → next
+      else goToChapter(-1); // swipe right → prev
+    }
+    touchStartRef.current = null;
+  };
+
   const sectionTitle =
     state.book === 'John' && state.chapter === 1 ? 'The Word Became Flesh' :
     state.book === 'Psalms' && state.chapter === 23 ? 'The Lord Is My Shepherd' :
@@ -112,10 +132,9 @@ export default function ReadingScreen() {
                 Bible
               </button>
               <button
-                onClick={() => {
-                  setMode('insight');
-                  navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/insight`);
-                }}
+                onClick={() =>
+                  navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/insight`)
+                }
                 className={`px-3.5 h-8 rounded-full text-[13px] font-medium transition-colors ${
                   mode === 'insight'
                     ? 'bg-gold text-[#1A1A1A]'
@@ -136,11 +155,13 @@ export default function ReadingScreen() {
         </div>
       </header>
 
-      {/* ─── CREAM BODY — scripture ─── */}
+      {/* ─── CREAM BODY — scripture (swipe left/right for chapter nav) ─── */}
       <div
         ref={scrollRef}
         onScroll={handleScroll}
-        className="flex-1 overflow-y-auto bg-background px-5 pt-5 pb-12"
+        onTouchStart={handleBodyTouchStart}
+        onTouchEnd={handleBodyTouchEnd}
+        className="flex-1 overflow-y-auto bg-background px-5 pt-5 pb-12 relative"
       >
         {/* Chapter header block */}
         <div className="flex items-start justify-between mb-3">
@@ -204,6 +225,26 @@ export default function ReadingScreen() {
           })}
         </div>
       </div>
+
+      {/* ─── FLOATING CHAPTER NAV (above progress bar) ─── */}
+      {state.chapter > 1 && (
+        <button
+          onClick={() => goToChapter(-1)}
+          aria-label="Previous chapter"
+          className="absolute left-3 bottom-14 w-11 h-11 rounded-full bg-[#1A1A1A] text-white flex items-center justify-center shadow-lg z-20"
+        >
+          <ChevronLeft size={20} strokeWidth={2.5} />
+        </button>
+      )}
+      {state.chapter < maxChapter && (
+        <button
+          onClick={() => goToChapter(1)}
+          aria-label="Next chapter"
+          className="absolute right-3 bottom-14 w-11 h-11 rounded-full bg-[#1A1A1A] text-white flex items-center justify-center shadow-lg z-20"
+        >
+          <ChevronRight size={20} strokeWidth={2.5} />
+        </button>
+      )}
 
       {/* ─── GOLD PROGRESS BAR (bottom 32px) ─── */}
       <div className="shrink-0 bg-background px-4 pt-3 pb-3 safe-bottom">

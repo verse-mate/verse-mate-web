@@ -37,6 +37,7 @@ const App = () => (
             <Route element={<AppLayout />}>
               <Route path="/read" element={<ReadingScreen />} />
               <Route path="/read/:book/:chapter/commentary" element={<CommentaryScreen />} />
+              <Route path="/read/:book/:chapter/insight" element={<VerseInsightScreen />} />
               <Route path="/read/:book/:chapter/verse/:verseNumber/insight" element={<VerseInsightScreen />} />
               <Route path="/topics" element={<TopicsScreen />} />
               <Route path="/topics/:topicId" element={<TopicEventsScreen />} />
