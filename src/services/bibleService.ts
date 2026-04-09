@@ -542,6 +542,25 @@ export interface AuthUser {
   avatarUrl?: string;
 }
 
+/**
+ * Exchange a provider ID token (from Google Identity Services or Apple
+ * Sign In) for a VerseMate accessToken + refreshToken. Uses the backend's
+ * POST /auth/sso endpoint which accepts { provider, token, platform }.
+ */
+export async function signInWithSSO(
+  provider: 'google' | 'apple',
+  token: string
+): Promise<AuthUser> {
+  const data = await api.post<{ accessToken: string; refreshToken?: string; verified: boolean }>(
+    '/auth/sso',
+    { provider, token, platform: 'web' },
+    { auth: false }
+  );
+  setAccessToken(data.accessToken);
+  if (data.refreshToken) setRefreshToken(data.refreshToken);
+  return fetchCurrentUser();
+}
+
 export async function login(email: string, password: string): Promise<AuthUser> {
   const data = await api.post<{ accessToken: string; refreshToken?: string; verified: boolean }>(
     '/auth/login',
