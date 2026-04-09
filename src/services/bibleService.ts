@@ -109,41 +109,68 @@ export async function fetchChapter(
 }
 
 // ─── Commentary / Explanation ─────────────────────────────────────────────
+// The API returns rich Markdown. Summary and Detailed come back as single
+// chapter-level blocks. By Line uses "## Genesis 1:1" style headings per verse.
+
+interface ExplanationCache {
+  summary: string;
+  byline: string;
+  detailed: string;
+  perVerse: Map<number, string>; // verse number -> markdown section
+}
+
+const _explanationCache = new Map<string, Promise<ExplanationCache>>();
+
+async function loadExplanations(bookId: number, chapter: number): Promise<ExplanationCache> {
+  const key = `${bookId}:${chapter}`;
+  const existing = _explanationCache.get(key);
+  if (existing) return existing;
+  const promise = (async (): Promise<ExplanationCache> => {
+    const [summary, byline, detailed] = await Promise.all([
+      fetchExplanation(bookId, chapter, 'summary'),
+      fetchExplanation(bookId, chapter, 'byline'),
+      fetchExplanation(bookId, chapter, 'detailed'),
+    ]);
+    return {
+      summary: summary ?? '',
+      byline: byline ?? '',
+      detailed: detailed ?? '',
+      perVerse: splitBylineByVerse(byline ?? ''),
+    };
+  })();
+  _explanationCache.set(key, promise);
+  return promise;
+}
+
 export async function fetchCommentary(book: string, chapter: number): Promise<Commentary[]> {
   const bookId = await resolveBookId(book);
   if (!bookId) return [];
   try {
-    // Fetch all three explanation types in parallel
-    const [summary, byline, detailed] = await Promise.all([
-      fetchExplanation(bookId, chapter, 'summary').catch(() => null),
-      fetchExplanation(bookId, chapter, 'byline').catch(() => null),
-      fetchExplanation(bookId, chapter, 'detailed').catch(() => null),
-    ]);
-
-    // Assemble into the Commentary[] the UI expects. Chapter-level summary
-    // is stored with verse=0; byline entries get their verse; detailed is
-    // merged into the verse-0 row for now (the UI treats this as the long form).
+    const cache = await loadExplanations(bookId, chapter);
     const result: Commentary[] = [];
-    if (summary?.text) {
+    if (cache.summary) {
       result.push({
         verse: 0,
-        summary: 'Chapter summary',
-        detail: detailed?.text || summary.text,
+        summary: 'Chapter Summary',
+        detail: cache.summary,
         type: 'summary',
       });
     }
-    if (byline?.text) {
-      // byline text usually comes as a single block; we split on verse markers
-      // like "Verse 1:" or "v1:" as a simple heuristic.
-      const pieces = splitByVerse(byline.text);
-      for (const p of pieces) {
-        result.push({
-          verse: p.verse,
-          summary: p.heading || `Verse ${p.verse}`,
-          detail: p.body,
-          type: 'byline',
-        });
-      }
+    for (const [verse, body] of cache.perVerse.entries()) {
+      result.push({
+        verse,
+        summary: `${book} ${chapter}:${verse}`,
+        detail: body,
+        type: 'byline',
+      });
+    }
+    if (cache.detailed) {
+      result.push({
+        verse: -1, // sentinel: chapter-level detailed
+        summary: 'Detailed Commentary',
+        detail: cache.detailed,
+        type: 'detailed',
+      });
     }
     return result;
   } catch {
@@ -155,7 +182,7 @@ async function fetchExplanation(
   bookId: number,
   chapter: number,
   explanationType: ExplanationType
-): Promise<{ text: string } | null> {
+): Promise<string | null> {
   try {
     const data = await api.get<any>(
       `/bible/book/explanation/${bookId}/${chapter}`,
@@ -163,61 +190,118 @@ async function fetchExplanation(
       { auth: false }
     );
     const text = data?.explanation?.explanation;
-    return typeof text === 'string' ? { text } : null;
+    return typeof text === 'string' ? text : null;
   } catch {
     return null;
   }
 }
 
-function splitByVerse(text: string): { verse: number; heading?: string; body: string }[] {
-  const re = /(?:^|\n)\s*(?:Verse|v\.?)\s*(\d+)[:\.\s]/gi;
+/**
+ * Parse byline markdown into a map of verse -> markdown section.
+ *
+ * The API returns text like:
+ *   ## Genesis 1:1
+ *   > In the beginning...
+ *   ### Summary
+ *   This opening says...
+ *   ## Genesis 1:2
+ *   ...
+ */
+function splitBylineByVerse(text: string): Map<number, string> {
+  const map = new Map<number, string>();
+  if (!text) return map;
+  // Match "## Book Name 1:2" headings
+  const re = /^##\s+[\w\s]+?\s+\d+:(\d+)/gm;
   const matches: { idx: number; verse: number }[] = [];
   let m: RegExpExecArray | null;
-  while ((m = re.exec(text))) matches.push({ idx: m.index, verse: parseInt(m[1], 10) });
-  if (matches.length === 0) return [{ verse: 0, body: text }];
-  const result: { verse: number; body: string }[] = [];
+  while ((m = re.exec(text))) {
+    matches.push({ idx: m.index, verse: parseInt(m[1], 10) });
+  }
   for (let i = 0; i < matches.length; i++) {
     const start = matches[i].idx;
     const end = i + 1 < matches.length ? matches[i + 1].idx : text.length;
-    result.push({ verse: matches[i].verse, body: text.slice(start, end).trim() });
+    const body = text.slice(start, end).trim();
+    map.set(matches[i].verse, body);
   }
-  return result;
+  return map;
 }
 
 // ─── Verse insights ──────────────────────────────────────────────────────
-// The API doesn't currently expose per-verse insight — we derive a simple
-// "insight" from the detailed explanation split into verse rows so the
-// VerseInsightScreen still has content.
+// For a per-verse insight we return the matching byline section. Falls back
+// to the chapter summary when the specific verse isn't found.
 export async function fetchVerseInsights(book: string, chapter: number): Promise<VerseInsight[]> {
-  const commentary = await fetchCommentary(book, chapter);
-  return commentary
-    .filter(c => c.verse > 0)
-    .map(c => ({
-      verse: c.verse,
-      crossReferences: [],
-      originalLanguage: '',
-      historicalContext: c.detail,
-    }));
-}
-
-// ─── Auto-highlights ─────────────────────────────────────────────────────
-export async function fetchAutoHighlights(
-  book: string,
-  chapter: number
-): Promise<number[]> {
   const bookId = await resolveBookId(book);
   if (!bookId) return [];
   try {
-    const data = await api.get<any>(
+    const cache = await loadExplanations(bookId, chapter);
+    const insights: VerseInsight[] = [];
+    for (const [verse, body] of cache.perVerse.entries()) {
+      insights.push({
+        verse,
+        crossReferences: extractCrossRefs(body),
+        originalLanguage: '',
+        historicalContext: body,
+      });
+    }
+    // Fallback: if no per-verse splits succeeded, emit a single verse-1 entry
+    // with the summary text so the insight screen still has content.
+    if (insights.length === 0 && cache.summary) {
+      insights.push({
+        verse: 1,
+        crossReferences: [],
+        originalLanguage: '',
+        historicalContext: cache.summary,
+      });
+    }
+    return insights;
+  } catch {
+    return [];
+  }
+}
+
+function extractCrossRefs(markdown: string): string[] {
+  // Crude scan for scripture references like "John 1:1" or "Revelation 4:11"
+  const re = /\b([1-3]?\s?[A-Z][a-zA-Z]+)\s+(\d+):(\d+)(?:[–-]\d+)?\b/g;
+  const refs = new Set<string>();
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(markdown))) {
+    refs.add(`${m[1].trim()} ${m[2]}:${m[3]}`);
+    if (refs.size >= 6) break;
+  }
+  return Array.from(refs);
+}
+
+// ─── Auto-highlights ─────────────────────────────────────────────────────
+export interface AutoHighlightRange {
+  startVerse: number;
+  endVerse: number;
+  theme: string;
+  color: string; // API color names: blue, green, yellow, ...
+}
+
+/**
+ * Fetch auto-highlight ranges for a chapter.
+ * API shape: `{ success: true, data: [{ start_verse, end_verse, theme_name, theme_color, ... }] }`
+ */
+export async function fetchAutoHighlights(
+  book: string,
+  chapter: number
+): Promise<AutoHighlightRange[]> {
+  const bookId = await resolveBookId(book);
+  if (!bookId) return [];
+  try {
+    const resp = await api.get<any>(
       `/bible/auto-highlights/${bookId}/${chapter}`,
       undefined,
       { auth: false }
     );
-    // API returns a list of highlight range objects; we extract start_verse numbers
-    const list: any[] = Array.isArray(data) ? data : data?.highlights || data?.auto_highlights || [];
-    return list
-      .map(h => h?.start_verse ?? h?.startVerse ?? h?.verse)
-      .filter((v): v is number => typeof v === 'number');
+    const list: any[] = Array.isArray(resp) ? resp : resp?.data || [];
+    return list.map(h => ({
+      startVerse: h.start_verse,
+      endVerse: h.end_verse ?? h.start_verse,
+      theme: h.theme_name || '',
+      color: h.theme_color || 'yellow',
+    }));
   } catch {
     return [];
   }

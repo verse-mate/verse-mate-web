@@ -1,7 +1,12 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useApp } from '@/contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
-import { fetchChapter, fetchBooks, fetchAutoHighlights } from '@/services/bibleService';
+import {
+  fetchChapter,
+  fetchBooks,
+  fetchAutoHighlights,
+  AutoHighlightRange,
+} from '@/services/bibleService';
 import { Chapter, HighlightColor, BibleBook } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
@@ -18,7 +23,7 @@ export default function ReadingScreen() {
   const [longPressVerse, setLongPressVerse] = useState<number | null>(null);
   const [pressTimer, setPressTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [apiAutoHighlights, setApiAutoHighlights] = useState<number[]>([]);
+  const [apiAutoHighlights, setApiAutoHighlights] = useState<AutoHighlightRange[]>([]);
   const [books, setBooks] = useState<BibleBook[]>([]);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -53,7 +58,27 @@ export default function ReadingScreen() {
     return state.highlights.find(h => h.book === state.book && h.chapter === state.chapter && h.verse === verseNum);
   };
 
-  const autoHighlightVerses: number[] = state.settings.autoHighlights ? apiAutoHighlights : [];
+  // Map verse number -> Tailwind background class from auto-highlight ranges
+  const autoHighlightByVerse: Record<number, string> = {};
+  if (state.settings.autoHighlights) {
+    const colorMap: Record<string, string> = {
+      yellow: 'bg-yellow-400/25',
+      green: 'bg-green-400/25',
+      blue: 'bg-blue-400/25',
+      pink: 'bg-pink-400/25',
+      purple: 'bg-purple-400/25',
+      orange: 'bg-orange-400/25',
+      red: 'bg-red-400/25',
+      teal: 'bg-teal-400/25',
+      brown: 'bg-amber-700/25',
+    };
+    for (const range of apiAutoHighlights) {
+      const cls = colorMap[range.color] || 'bg-yellow-400/25';
+      for (let v = range.startVerse; v <= range.endVerse; v++) {
+        autoHighlightByVerse[v] = cls;
+      }
+    }
+  }
 
   const highlightColorClass: Record<HighlightColor, string> = {
     yellow: 'bg-highlight-yellow',
@@ -211,7 +236,7 @@ export default function ReadingScreen() {
           {chapter?.verses.map(verse => {
             const hl = getHighlightForVerse(verse.number);
             const isSelected = state.selectedVerse === verse.number;
-            const isAutoHighlighted = autoHighlightVerses.includes(verse.number) && !hl;
+            const autoClass = !hl ? autoHighlightByVerse[verse.number] : undefined;
             return (
               <span
                 key={verse.number}
@@ -220,9 +245,7 @@ export default function ReadingScreen() {
                 onMouseDown={() => handlePressStart(verse.number)}
                 onMouseUp={handlePressEnd}
                 className={`inline transition-colors ${hl ? highlightColorClass[hl.color] : ''} ${
-                  isAutoHighlighted
-                    ? 'bg-[#B09A6D]/25 text-foreground rounded px-0.5'
-                    : ''
+                  autoClass ? `${autoClass} rounded px-0.5` : ''
                 } ${isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''}`}
               >
                 {state.settings.showVerseNumbers !== false && (

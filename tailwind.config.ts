@@ -4,6 +4,18 @@ export default {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
+  safelist: [
+    // Auto-highlight theme colors — classes are composed at runtime from API
+    "bg-yellow-400/25",
+    "bg-green-400/25",
+    "bg-blue-400/25",
+    "bg-pink-400/25",
+    "bg-purple-400/25",
+    "bg-orange-400/25",
+    "bg-red-400/25",
+    "bg-teal-400/25",
+    "bg-amber-700/25",
+  ],
   theme: {
     container: {
       center: true,

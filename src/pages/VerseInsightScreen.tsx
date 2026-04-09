@@ -4,6 +4,7 @@ import { fetchVerseInsights, fetchChapter } from '@/services/bibleService';
 import { VerseInsight, Chapter } from '@/services/types';
 import { ChevronLeft, ChevronRight, Copy, Share2, Bookmark } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
+import MarkdownBlock from '@/components/MarkdownBlock';
 
 /**
  * VerseInsightScreen — dark bottom-sheet-style full screen that shows an
@@ -91,13 +92,28 @@ export default function VerseInsightScreen() {
         <h3 className="text-center text-[15px] font-semibold text-dark-fg mb-3">Analysis</h3>
         <div className="rounded-2xl bg-dark-raised border border-dark p-4">
           {insight ? (
-            <p className="text-[13px] text-dark-muted leading-relaxed">
-              {insight.historicalContext}
-            </p>
+            <MarkdownBlock text={insight.historicalContext} />
           ) : (
             <p className="text-[13px] text-dark-muted text-center">
               No insight available for this verse.
             </p>
+          )}
+          {insight && insight.crossReferences.length > 0 && (
+            <div className="mt-4 pt-4 border-t border-dark">
+              <p className="text-[11px] uppercase tracking-wide text-dark-muted/70 mb-2">
+                Cross references
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {insight.crossReferences.map(ref => (
+                  <span
+                    key={ref}
+                    className="text-[11px] text-dark-fg/90 bg-dark-surface rounded px-2 py-0.5 border border-dark"
+                  >
+                    {ref}
+                  </span>
+                ))}
+              </div>
+            </div>
           )}
         </div>
       </div>
@@ -143,3 +159,4 @@ export default function VerseInsightScreen() {
     </div>
   );
 }
+

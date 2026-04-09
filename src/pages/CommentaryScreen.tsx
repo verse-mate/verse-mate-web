@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { fetchCommentary } from '@/services/bibleService';
 import { Commentary } from '@/services/types';
 import { ChevronDown, ChevronUp, Menu, Share2 } from 'lucide-react';
+import MarkdownBlock from '@/components/MarkdownBlock';
 
 type Tab = 'summary' | 'byline' | 'detailed';
 
@@ -105,16 +106,18 @@ export default function CommentaryScreen() {
                 <Share2 size={18} className="text-dark-fg" strokeWidth={1.5} />
               </button>
             </div>
-            <h3 className="text-[16px] font-bold text-dark-fg mt-2 mb-2">Overview</h3>
-            <div className="space-y-4 text-[14px] text-dark-muted leading-relaxed">
-              {commentaries.slice(0, 3).map(c => (
-                <p key={c.verse}>{c.detail}</p>
-              ))}
-            </div>
+            {(() => {
+              const summary = commentaries.find(c => c.type === 'summary');
+              return summary ? (
+                <MarkdownBlock text={summary.detail} />
+              ) : (
+                <p className="text-[14px] text-dark-muted">No summary available.</p>
+              );
+            })()}
           </div>
         ) : tab === 'byline' ? (
           <div className="space-y-2 pt-2">
-            {commentaries.map(c => {
+            {commentaries.filter(c => c.type === 'byline').map(c => {
               const isExpanded = expanded === c.verse;
               return (
                 <div
@@ -137,7 +140,7 @@ export default function CommentaryScreen() {
                   </button>
                   {isExpanded && (
                     <div className="px-4 pb-4 pt-1 border-t border-dark">
-                      <p className="text-[14px] text-dark-muted leading-relaxed">{c.detail}</p>
+                      <MarkdownBlock text={c.detail} />
                     </div>
                   )}
                 </div>
@@ -145,17 +148,18 @@ export default function CommentaryScreen() {
             })}
           </div>
         ) : (
-          <div className="space-y-6 pt-2">
-            {commentaries.map(c => (
-              <div key={c.verse}>
-                <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-gold text-[13px] font-semibold">Verse {c.verse}</span>
-                  <span className="text-[14px] font-semibold text-dark-fg">{c.summary}</span>
-                </div>
-                <p className="text-[14px] text-dark-muted leading-relaxed">{c.detail}</p>
+          (() => {
+            const detailed = commentaries.find(c => c.type === 'detailed');
+            return detailed ? (
+              <div className="pt-2">
+                <MarkdownBlock text={detailed.detail} />
               </div>
-            ))}
-          </div>
+            ) : (
+              <p className="text-[14px] text-dark-muted py-8 text-center">
+                Detailed commentary not available.
+              </p>
+            );
+          })()
         )}
       </div>
     </div>
