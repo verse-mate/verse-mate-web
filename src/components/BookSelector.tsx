@@ -1,13 +1,12 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BIBLE_BOOKS } from '@/services/bibleData';
-import { fetchTopics } from '@/services/bibleService';
-import { Topic } from '@/services/types';
+import { fetchTopics, fetchBooks } from '@/services/bibleService';
+import { Topic, BibleBook } from '@/services/types';
 import { ChevronRight, Search, ArrowLeft } from 'lucide-react';
 
 interface Props {
   onClose: () => void;
-  onSelect: (book: string, chapter: number) => void;
+  onSelect: (book: string, chapter: number, bookId?: number) => void;
 }
 
 type Tab = 'OT' | 'NT' | 'Topics';
@@ -23,14 +22,16 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   const [selectedBook, setSelectedBook] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   const [topics, setTopics] = useState<Topic[]>([]);
+  const [allBooks, setAllBooks] = useState<BibleBook[]>([]);
 
   useEffect(() => {
     fetchTopics().then(setTopics);
+    fetchBooks().then(setAllBooks);
   }, []);
 
   const books = useMemo(
-    () => BIBLE_BOOKS.filter(b => b.testament === tab),
-    [tab]
+    () => allBooks.filter(b => b.testament === tab),
+    [allBooks, tab]
   );
 
   const filteredBooks = useMemo(
@@ -44,7 +45,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   );
 
   const selectedBookObj = selectedBook
-    ? BIBLE_BOOKS.find(b => b.name === selectedBook)
+    ? allBooks.find(b => b.name === selectedBook)
     : null;
 
   // Chapter picker view
@@ -73,7 +74,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
             {Array.from({ length: selectedBookObj.chapters }, (_, i) => i + 1).map(ch => (
               <button
                 key={ch}
-                onClick={() => onSelect(selectedBook, ch)}
+                onClick={() => onSelect(selectedBook, ch, selectedBookObj.bookId)}
                 className="h-12 rounded-xl bg-dark-raised border border-dark text-dark-fg text-[14px] font-medium"
               >
                 {ch}

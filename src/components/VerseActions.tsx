@@ -19,52 +19,46 @@ const HIGHLIGHT_COLORS: { color: HighlightColor; label: string; className: strin
 ];
 
 export default function VerseActions({ verse, onClose }: Props) {
-  const { state, dispatch } = useApp();
+  const { state, addBookmark, removeBookmark, addHighlight: ctxAddHighlight, updateHighlight, removeHighlight } = useApp();
   const navigate = useNavigate();
   const [showAddNote, setShowAddNote] = useState(false);
 
   const isBookmarked = state.bookmarks.some(
-    b => b.book === state.book && b.chapter === state.chapter && b.verse === verse
+    b => b.bookId === state.bookId && b.chapter === state.chapter && b.verse === verse
   );
 
   const existingHighlight = state.highlights.find(
-    h => h.book === state.book && h.chapter === state.chapter && h.verse === verse
+    h => h.bookId === state.bookId && h.chapter === state.chapter && h.verse === verse
   );
 
-  const toggleBookmark = () => {
+  const toggleBookmark = async () => {
     if (isBookmarked) {
-      const bm = state.bookmarks.find(b => b.book === state.book && b.chapter === state.chapter && b.verse === verse);
-      if (bm) dispatch({ type: 'REMOVE_BOOKMARK', id: bm.id });
+      const bm = state.bookmarks.find(b => b.bookId === state.bookId && b.chapter === state.chapter && b.verse === verse);
+      if (bm) await removeBookmark(bm.id);
     } else {
-      dispatch({
-        type: 'ADD_BOOKMARK',
-        bookmark: {
-          id: crypto.randomUUID(),
-          book: state.book,
-          chapter: state.chapter,
-          verse,
-          version: state.version,
-          createdAt: new Date().toISOString(),
-        },
+      await addBookmark({
+        bookId: state.bookId,
+        book: state.book,
+        chapter: state.chapter,
+        verse,
+        version: state.version,
       });
     }
     onClose();
   };
 
-  const addHighlight = (color: HighlightColor) => {
+  const addHighlightFn = async (color: HighlightColor) => {
     if (existingHighlight) {
-      dispatch({ type: 'UPDATE_HIGHLIGHT', id: existingHighlight.id, color });
+      await updateHighlight(existingHighlight.id, color);
     } else {
-      dispatch({
-        type: 'ADD_HIGHLIGHT',
-        highlight: {
-          id: crypto.randomUUID(),
-          book: state.book,
-          chapter: state.chapter,
-          verse,
-          color,
-          createdAt: new Date().toISOString(),
-        },
+      await ctxAddHighlight({
+        bookId: state.bookId,
+        book: state.book,
+        chapter: state.chapter,
+        verse,
+        startVerse: verse,
+        endVerse: verse,
+        color,
       });
     }
     onClose();
@@ -146,7 +140,7 @@ export default function VerseActions({ verse, onClose }: Props) {
           {HIGHLIGHT_COLORS.map(c => (
             <button
               key={c.color}
-              onClick={() => addHighlight(c.color)}
+              onClick={() => addHighlightFn(c.color)}
               className={`w-8 h-8 rounded-full ${c.className} border-2 ${
                 existingHighlight?.color === c.color ? 'border-accent' : 'border-transparent'
               } transition-all hover:scale-110`}
@@ -155,7 +149,7 @@ export default function VerseActions({ verse, onClose }: Props) {
           ))}
           {existingHighlight && (
             <button
-              onClick={() => { dispatch({ type: 'REMOVE_HIGHLIGHT', id: existingHighlight.id }); onClose(); }}
+              onClick={async () => { await removeHighlight(existingHighlight.id); onClose(); }}
               className="text-[11px] text-destructive ml-auto"
             >
               Remove

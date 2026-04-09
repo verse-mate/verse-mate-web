@@ -1,19 +1,141 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
-import { Mail } from 'lucide-react';
+import { Mail, ArrowLeft } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
+import { login as apiLogin, signup as apiSignup, API_BASE_URL } from '@/services/bibleService';
+
+type Screen = 'providers' | 'email';
+type Mode = 'signin' | 'signup';
 
 /**
- * SignInScreen — full dark. Sign in with Google/Apple/Email.
+ * SignInScreen — connects to the real VerseMate API (/auth/login, /auth/signup).
+ * Google/Apple SSO redirect to the corresponding API endpoints.
  */
 export default function SignInScreen() {
   const navigate = useNavigate();
   const { dispatch } = useApp();
+  const [screen, setScreen] = useState<Screen>('providers');
+  const [mode, setMode] = useState<Mode>('signin');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [error, setError] = useState<string | null>(null);
+  const [submitting, setSubmitting] = useState(false);
 
-  const signIn = () => {
-    dispatch({ type: 'SET_SIGNED_IN', value: true });
-    navigate('/menu');
+  const handleSSO = (provider: 'google' | 'apple') => {
+    // Full-page redirect to the backend SSO endpoint
+    window.location.href = `${API_BASE_URL}/auth/sso/${provider}/redirect`;
   };
+
+  const handleEmailSubmit = async () => {
+    setError(null);
+    if (!email || !password) {
+      setError('Enter your email and password');
+      return;
+    }
+    setSubmitting(true);
+    try {
+      const user = mode === 'signin' ? await apiLogin(email, password) : await apiSignup(email, password, name);
+      dispatch({ type: 'SET_SIGNED_IN', value: true, userId: user.id });
+      navigate('/read');
+    } catch (err: unknown) {
+      const msg =
+        err && typeof err === 'object' && 'status' in err
+          ? `Sign ${mode === 'signin' ? 'in' : 'up'} failed (${(err as { status: number }).status})`
+          : 'Network error — please try again';
+      setError(msg);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  if (screen === 'email') {
+    return (
+      <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+        <header
+          className="shrink-0 safe-top"
+          style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)' }}
+        >
+          <div className="relative flex items-center justify-center px-3" style={{ height: 56 }}>
+            <button
+              onClick={() => setScreen('providers')}
+              aria-label="Back"
+              className="absolute left-2 w-[44px] h-[44px] flex items-center justify-center"
+            >
+              <ArrowLeft size={22} className="text-dark-fg" strokeWidth={2} />
+            </button>
+            <h1 className="text-[18px] font-medium">
+              {mode === 'signin' ? 'Sign In' : 'Create Account'}
+            </h1>
+          </div>
+        </header>
+
+        <div className="flex-1 px-6 pt-4 pb-6">
+          {mode === 'signup' && (
+            <div className="mb-3">
+              <label className="text-[13px] text-dark-muted">Name</label>
+              <input
+                value={name}
+                onChange={e => setName(e.target.value)}
+                className="mt-1.5 w-full h-[52px] px-4 rounded-xl bg-dark-raised border border-dark text-[15px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
+                placeholder="Your name"
+              />
+            </div>
+          )}
+          <div className="mb-3">
+            <label className="text-[13px] text-dark-muted">Email</label>
+            <input
+              type="email"
+              autoComplete="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              className="mt-1.5 w-full h-[52px] px-4 rounded-xl bg-dark-raised border border-dark text-[15px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div className="mb-3">
+            <label className="text-[13px] text-dark-muted">Password</label>
+            <input
+              type="password"
+              autoComplete={mode === 'signin' ? 'current-password' : 'new-password'}
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              className="mt-1.5 w-full h-[52px] px-4 rounded-xl bg-dark-raised border border-dark text-[15px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
+              placeholder="••••••••"
+            />
+          </div>
+          {error && <p className="text-[13px] text-red-400 mt-1">{error}</p>}
+
+          <button
+            onClick={handleEmailSubmit}
+            disabled={submitting}
+            className="mt-5 w-full h-12 rounded-xl bg-gold text-[#1A1A1A] font-medium text-[15px] disabled:opacity-40"
+          >
+            {submitting
+              ? mode === 'signin'
+                ? 'Signing in…'
+                : 'Creating account…'
+              : mode === 'signin'
+              ? 'Sign In'
+              : 'Create Account'}
+          </button>
+
+          <button
+            onClick={() => {
+              setMode(mode === 'signin' ? 'signup' : 'signin');
+              setError(null);
+            }}
+            className="w-full mt-4 text-[13px] text-dark-muted"
+          >
+            {mode === 'signin'
+              ? "Don't have an account? Create one"
+              : 'Already have an account? Sign in'}
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
@@ -29,7 +151,7 @@ export default function SignInScreen() {
 
         <div className="flex-1 flex flex-col justify-center space-y-3">
           <button
-            onClick={signIn}
+            onClick={() => handleSSO('google')}
             className="flex items-center justify-center gap-3 w-full h-12 rounded-xl bg-dark-fg text-[#1A1A1A] font-medium text-[14px]"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -38,7 +160,7 @@ export default function SignInScreen() {
             Continue with Google
           </button>
           <button
-            onClick={signIn}
+            onClick={() => handleSSO('apple')}
             className="flex items-center justify-center gap-3 w-full h-12 rounded-xl bg-dark-fg text-[#1A1A1A] font-medium text-[14px]"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -54,7 +176,7 @@ export default function SignInScreen() {
           </div>
 
           <button
-            onClick={signIn}
+            onClick={() => setScreen('email')}
             className="flex items-center justify-center gap-3 w-full h-12 rounded-xl bg-dark-raised border border-dark text-dark-fg font-medium text-[14px]"
           >
             <Mail size={18} />

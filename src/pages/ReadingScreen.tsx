@@ -1,12 +1,11 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useApp } from '@/contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
-import { fetchChapter, AUTO_HIGHLIGHTS } from '@/services/bibleService';
-import { Chapter, HighlightColor } from '@/services/types';
+import { fetchChapter, fetchBooks, fetchAutoHighlights } from '@/services/bibleService';
+import { Chapter, HighlightColor, BibleBook } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
 import VerseActions from '@/components/VerseActions';
-import { BIBLE_BOOKS } from '@/services/bibleData';
 
 type ReadingMode = 'bible' | 'insight';
 
@@ -19,13 +18,27 @@ export default function ReadingScreen() {
   const [longPressVerse, setLongPressVerse] = useState<number | null>(null);
   const [pressTimer, setPressTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [apiAutoHighlights, setApiAutoHighlights] = useState<number[]>([]);
+  const [books, setBooks] = useState<BibleBook[]>([]);
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    fetchBooks().then(setBooks);
+  }, []);
 
   useEffect(() => {
     fetchChapter(state.book, state.chapter, state.version).then(setChapter);
   }, [state.book, state.chapter, state.version]);
 
-  const currentBook = BIBLE_BOOKS.find(b => b.name === state.book);
+  useEffect(() => {
+    if (state.settings.autoHighlights) {
+      fetchAutoHighlights(state.book, state.chapter).then(setApiAutoHighlights);
+    } else {
+      setApiAutoHighlights([]);
+    }
+  }, [state.book, state.chapter, state.settings.autoHighlights]);
+
+  const currentBook = books.find(b => b.name === state.book);
   const maxChapter = currentBook?.chapters || 1;
 
   const goToChapter = useCallback((delta: number) => {
@@ -40,9 +53,7 @@ export default function ReadingScreen() {
     return state.highlights.find(h => h.book === state.book && h.chapter === state.chapter && h.verse === verseNum);
   };
 
-  const autoHighlightVerses: number[] = state.settings.autoHighlights
-    ? AUTO_HIGHLIGHTS[`${state.book}-${state.chapter}`] || []
-    : [];
+  const autoHighlightVerses: number[] = state.settings.autoHighlights ? apiAutoHighlights : [];
 
   const highlightColorClass: Record<HighlightColor, string> = {
     yellow: 'bg-highlight-yellow',
@@ -265,8 +276,8 @@ export default function ReadingScreen() {
       {showBookSelector && (
         <BookSelector
           onClose={() => setShowBookSelector(false)}
-          onSelect={(book, ch) => {
-            dispatch({ type: 'SET_PASSAGE', book, chapter: ch });
+          onSelect={(book, ch, bookId) => {
+            dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });
             setShowBookSelector(false);
           }}
         />

@@ -21,15 +21,15 @@ const COLOR_SWATCHES: { color: HighlightColor; className: string }[] = [
  * Figma ref: frame 5310:17103 (Highlight Options).
  */
 export default function HighlightOptionsSheet({ highlight, onClose }: Props) {
-  const { dispatch } = useApp();
+  const { updateHighlight, removeHighlight } = useApp();
 
-  const handleColorChange = (color: HighlightColor) => {
-    dispatch({ type: 'UPDATE_HIGHLIGHT', id: highlight.id, color });
+  const handleColorChange = async (color: HighlightColor) => {
+    await updateHighlight(highlight.id, color);
     onClose();
   };
 
-  const handleRemove = () => {
-    dispatch({ type: 'REMOVE_HIGHLIGHT', id: highlight.id });
+  const handleRemove = async () => {
+    await removeHighlight(highlight.id);
     onClose();
   };
 

@@ -14,18 +14,18 @@ interface Props {
  * Figma ref: frame 5310:15970 (Edit Note).
  */
 export default function EditNoteSheet({ note, onClose }: Props) {
-  const { dispatch } = useApp();
+  const { updateNote, removeNote } = useApp();
   const [text, setText] = useState(note.text);
   const maxChars = 500;
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (text.trim().length === 0) return;
-    dispatch({ type: 'UPDATE_NOTE', id: note.id, text });
+    await updateNote(note.id, text);
     onClose();
   };
 
-  const handleDelete = () => {
-    dispatch({ type: 'REMOVE_NOTE', id: note.id });
+  const handleDelete = async () => {
+    await removeNote(note.id);
     onClose();
   };
 

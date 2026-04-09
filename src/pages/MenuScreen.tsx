@@ -39,11 +39,11 @@ const primaryItems: {
  */
 export default function MenuScreen() {
   const navigate = useNavigate();
-  const { state, dispatch } = useApp();
+  const { state, signOut } = useApp();
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     if (state.isSignedIn) {
-      dispatch({ type: 'SET_SIGNED_IN', value: false });
+      await signOut();
       navigate('/read');
     } else {
       navigate('/menu/signin');

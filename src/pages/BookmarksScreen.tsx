@@ -4,16 +4,16 @@ import { Bookmark, Trash2 } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 
 export default function BookmarksScreen() {
-  const { state, dispatch } = useApp();
+  const { state, dispatch, removeBookmark } = useApp();
   const navigate = useNavigate();
 
-  const handleOpen = (book: string, chapter: number) => {
-    dispatch({ type: 'SET_PASSAGE', book, chapter });
+  const handleOpen = (book: string, chapter: number, bookId?: number) => {
+    dispatch({ type: 'SET_PASSAGE', book, chapter, bookId });
     navigate('/read');
   };
 
-  const handleDelete = (id: string) => {
-    dispatch({ type: 'REMOVE_BOOKMARK', id });
+  const handleDelete = async (id: string) => {
+    await removeBookmark(id);
   };
 
   return (
@@ -37,7 +37,7 @@ export default function BookmarksScreen() {
                 className="flex items-center justify-between pl-4 pr-1 h-[56px] rounded-xl bg-dark-raised border border-dark"
               >
                 <button
-                  onClick={() => handleOpen(b.book, b.chapter)}
+                  onClick={() => handleOpen(b.book, b.chapter, b.bookId)}
                   className="flex items-center gap-3 flex-1 text-left h-full"
                 >
                   <Bookmark size={18} className="text-dark-fg" strokeWidth={1.5} fill="currentColor" />

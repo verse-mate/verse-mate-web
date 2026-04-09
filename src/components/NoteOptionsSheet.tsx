@@ -13,10 +13,10 @@ interface Props {
  * and a Cancel button. Figma ref: frame 5310:16518.
  */
 export default function NoteOptionsSheet({ note, onClose, onEdit }: Props) {
-  const { dispatch } = useApp();
+  const { removeNote } = useApp();
 
-  const handleDelete = () => {
-    dispatch({ type: 'REMOVE_NOTE', id: note.id });
+  const handleDelete = async () => {
+    await removeNote(note.id);
     onClose();
   };
 
