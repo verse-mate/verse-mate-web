@@ -144,22 +144,26 @@ export default function BookSelector({ onClose, onSelect }: Props) {
       {/* List */}
       <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6">
         {tab === 'Topics' ? (
-          <div>
-            {filteredTopics.map(t => (
-              <button
-                key={t.id}
-                onClick={() => {
-                  onClose();
-                  navigate(`/topics/${t.id}`);
-                }}
-                className="flex items-center justify-between w-full h-[56px] border-b border-dark"
-              >
-                <span className="text-[16px] text-dark-fg text-left">{t.name}</span>
-                <ChevronRight size={18} className="text-dark-muted" />
-              </button>
-            ))}
-          </div>
-        ) : (
+          filteredTopics.length > 0 ? (
+            <div>
+              {filteredTopics.map(t => (
+                <button
+                  key={t.id}
+                  onClick={() => {
+                    onClose();
+                    navigate(`/topics/${t.id}`);
+                  }}
+                  className="flex items-center justify-between w-full h-[56px] border-b border-dark"
+                >
+                  <span className="text-[16px] text-dark-fg text-left">{t.name}</span>
+                  <ChevronRight size={18} className="text-dark-muted" />
+                </button>
+              ))}
+            </div>
+          ) : (
+            <EmptyState query={query} loading={topics.length === 0 && !query} what="topics" />
+          )
+        ) : filteredBooks.length > 0 ? (
           <div>
             {filteredBooks.map(b => (
               <button
@@ -172,8 +176,24 @@ export default function BookSelector({ onClose, onSelect }: Props) {
               </button>
             ))}
           </div>
+        ) : (
+          <EmptyState query={query} loading={allBooks.length === 0 && !query} what="books" />
         )}
       </div>
     </div>
   );
+}
+
+function EmptyState({ query, loading, what }: { query: string; loading: boolean; what: 'books' | 'topics' }) {
+  if (loading) {
+    return <p className="text-center text-dark-muted text-[14px] py-8">Loading {what}…</p>;
+  }
+  if (query) {
+    return (
+      <p className="text-center text-dark-muted text-[14px] py-8">
+        No {what} match "{query}"
+      </p>
+    );
+  }
+  return <p className="text-center text-dark-muted text-[14px] py-8">No {what} available</p>;
 }

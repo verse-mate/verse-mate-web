@@ -2,11 +2,9 @@ import { useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import {
   User,
-  BookOpen,
   Bookmark,
   FileText,
   Highlighter,
-  Compass,
   Settings,
   Share2,
   Info,
@@ -16,22 +14,19 @@ import {
   X,
 } from 'lucide-react';
 
-const primaryItems: {
-  label: string;
-  icon: typeof BookOpen;
-  path: string;
-  onClick?: () => void;
-}[] = [
-  { label: 'Reading', icon: BookOpen, path: '/read' },
-  { label: 'Topics', icon: Compass, path: '/topics' },
+// Order + items must match the Figma Menu frame (5307:4338) exactly.
+const primaryItems = [
   { label: 'Bookmarks', icon: Bookmark, path: '/bookmarks' },
   { label: 'Notes', icon: FileText, path: '/notes' },
   { label: 'Highlights', icon: Highlighter, path: '/highlights' },
   { label: 'Settings', icon: Settings, path: '/menu/settings' },
+] as const;
+
+const secondaryItems = [
   { label: 'About', icon: Info, path: '/menu/about' },
   { label: 'Giving', icon: Heart, path: '/menu/giving' },
   { label: 'Help', icon: HelpCircle, path: '/menu/help' },
-];
+] as const;
 
 /**
  * MenuScreen — dark drawer-style screen matching Figma Mobile App Menu frame.
@@ -108,10 +103,7 @@ export default function MenuScreen() {
             <span className="text-[15px] text-dark-fg font-normal">{item.label}</span>
           </button>
         ))}
-      </div>
 
-      {/* Share + Logout */}
-      <div className="shrink-0 px-2 pb-6 safe-bottom space-y-1">
         <button
           onClick={handleShare}
           className="flex items-center gap-4 w-full h-[48px] px-3 rounded-lg hover:bg-dark-raised transition-colors"
@@ -119,6 +111,21 @@ export default function MenuScreen() {
           <Share2 size={20} className="text-dark-fg" strokeWidth={1.5} />
           <span className="text-[15px] text-dark-fg font-normal">Share VerseMate</span>
         </button>
+
+        {secondaryItems.map(item => (
+          <button
+            key={item.label}
+            onClick={() => navigate(item.path)}
+            className="flex items-center gap-4 w-full h-[48px] px-3 rounded-lg hover:bg-dark-raised transition-colors"
+          >
+            <item.icon size={20} className="text-dark-fg" strokeWidth={1.5} />
+            <span className="text-[15px] text-dark-fg font-normal">{item.label}</span>
+          </button>
+        ))}
+      </div>
+
+      {/* Logout at bottom */}
+      <div className="shrink-0 px-2 pb-6 safe-bottom">
         <button
           onClick={handleLogout}
           className="flex items-center gap-4 w-full h-[48px] px-3 rounded-lg hover:bg-dark-raised transition-colors"

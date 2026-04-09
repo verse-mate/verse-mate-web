@@ -17,21 +17,45 @@ import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, ApiE
 
 // ─── Helper: book id <-> name cache ───────────────────────────────────────
 let _booksCache: BibleBook[] | null = null;
+let _booksPromise: Promise<BibleBook[]> | null = null;
+
+/**
+ * Fetch the 66-book list, cached. Concurrent callers share one in-flight
+ * request. Books are sorted by canonical bookId (1=Genesis … 66=Revelation).
+ */
 export async function fetchBooks(): Promise<BibleBook[]> {
   if (_booksCache) return _booksCache;
-  try {
-    const data = await api.get<{ books: any[] }>('/bible/books', undefined, { auth: false });
-    _booksCache = (data.books || []).map(b => ({
-      bookId: b.bookId,
-      name: b.name,
-      shortName: b.name.slice(0, 3),
-      testament: b.testament,
-      chapters: Array.isArray(b.chapters) ? b.chapters.length : 0,
-    }));
-    return _booksCache;
-  } catch {
-    return [];
+  if (_booksPromise) return _booksPromise;
+  _booksPromise = (async () => {
+    try {
+      const data = await api.get<{ books: any[] }>('/bible/books', undefined, { auth: false });
+      const mapped: BibleBook[] = (data.books || [])
+        .map(b => ({
+          bookId: b.bookId,
+          name: b.name,
+          shortName: shortenBookName(b.name),
+          testament: b.testament as 'OT' | 'NT',
+          chapters: Array.isArray(b.chapters) ? b.chapters.length : 0,
+        }))
+        .sort((a, b) => a.bookId - b.bookId);
+      _booksCache = mapped;
+      return mapped;
+    } catch {
+      return [];
+    } finally {
+      _booksPromise = null;
+    }
+  })();
+  return _booksPromise;
+}
+
+function shortenBookName(name: string): string {
+  // "1 Samuel" -> "1Sa", "Song of Solomon" -> "Sng", "Genesis" -> "Gen"
+  const parts = name.split(' ');
+  if (/^\d/.test(parts[0])) {
+    return parts[0] + (parts[1] || '').slice(0, 2);
   }
+  return name.replace(/\s+/g, '').slice(0, 3);
 }
 
 export async function resolveBookId(bookName: string): Promise<number | null> {
@@ -47,22 +71,26 @@ export async function resolveBookName(bookId: number): Promise<string | null> {
 }
 
 // ─── Chapter ──────────────────────────────────────────────────────────────
+/**
+ * Fetch a chapter.
+ *
+ * NOTE: the API currently 404s whenever a versionKey is provided (any value),
+ * so we omit it. When multi-version support lands we'll re-add it here.
+ */
 export async function fetchChapter(
   book: string,
   chapter: number,
-  version: BibleVersion
+  _version: BibleVersion
 ): Promise<Chapter> {
   const bookId = await resolveBookId(book);
   if (!bookId) {
     return { book, bookId: 0, chapter, verses: [] };
   }
   try {
-    const data = await api.get<any>(
-      `/bible/book/${bookId}/${chapter}`,
-      { versionKey: version },
-      { auth: false }
-    );
-    const bookObj = data.book;
+    const data = await api.get<any>(`/bible/book/${bookId}/${chapter}`, undefined, {
+      auth: false,
+    });
+    const bookObj = data?.book;
     const ch = bookObj?.chapters?.[0];
     const verses = (ch?.verses || []).map((v: any) => ({
       number: v.verseNumber,
