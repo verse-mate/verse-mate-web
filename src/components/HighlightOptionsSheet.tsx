@@ -1,5 +1,5 @@
 import { useApp } from '@/contexts/AppContext';
-import { Highlight, HighlightColor } from '@/services/types';
+import { Highlight } from '@/services/types';
 import { Copy, Share2, Trash2 } from 'lucide-react';
 
 interface Props {
@@ -7,26 +7,13 @@ interface Props {
   onClose: () => void;
 }
 
-const COLOR_SWATCHES: { color: HighlightColor; className: string }[] = [
-  { color: 'yellow', className: 'bg-yellow-400' },
-  { color: 'green', className: 'bg-green-400' },
-  { color: 'blue', className: 'bg-blue-400' },
-  { color: 'pink', className: 'bg-pink-400' },
-  { color: 'orange', className: 'bg-orange-400' },
-];
-
 /**
- * HighlightOptionsSheet — dark bottom sheet with Copy / Share / Delete action tiles,
- * a row of color swatches to change the highlight color, and a Cancel button.
- * Figma ref: frame 5310:17103 (Highlight Options).
+ * HighlightOptionsSheet — dark bottom sheet with Copy / Share / Delete
+ * action tiles + Cancel. Figma ref: frame 5310:17103 (Highlight Options).
+ * No color swatches per the Figma design.
  */
 export default function HighlightOptionsSheet({ highlight, onClose }: Props) {
-  const { updateHighlight, removeHighlight } = useApp();
-
-  const handleColorChange = async (color: HighlightColor) => {
-    await updateHighlight(highlight.id, color);
-    onClose();
-  };
+  const { removeHighlight } = useApp();
 
   const handleRemove = async () => {
     await removeHighlight(highlight.id);
@@ -80,23 +67,7 @@ export default function HighlightOptionsSheet({ highlight, onClose }: Props) {
           Highlight Options
         </h3>
 
-        {/* Color swatches */}
-        <div className="flex items-center justify-center gap-3 px-5 mb-4">
-          {COLOR_SWATCHES.map(s => (
-            <button
-              key={s.color}
-              onClick={() => handleColorChange(s.color)}
-              aria-label={`Set ${s.color} highlight`}
-              className={`w-11 h-11 rounded-full ${s.className} ${
-                highlight.color === s.color
-                  ? 'ring-2 ring-gold ring-offset-2 ring-offset-[#1A1A1A]'
-                  : ''
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* Action tiles */}
+        {/* Action tiles — Figma has just 3 (Copy / Share / Delete), no color swatches */}
         <div className="grid grid-cols-3 gap-3 px-5">
           {tiles.map(t => (
             <button

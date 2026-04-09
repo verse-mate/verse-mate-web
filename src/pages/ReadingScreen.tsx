@@ -140,15 +140,10 @@ export default function ReadingScreen() {
     touchStartRef.current = null;
   };
 
-  const sectionTitle =
-    state.book === 'John' && state.chapter === 1 ? 'The Word Became Flesh' :
-    state.book === 'Psalms' && state.chapter === 23 ? 'The Lord Is My Shepherd' :
-    state.book === 'Genesis' && state.chapter === 1 ? 'The Creation of the World' :
-    state.book === 'Romans' && state.chapter === 8 ? 'Life in the Spirit' :
-    undefined;
-
+  // Use subtitles directly from the API (e.g. "Parable of the Marriage Feast"
+  // with start_verse/end_verse range) instead of a hardcoded map.
+  const subtitles = chapter?.subtitles || [];
   const verseCount = chapter?.verses.length || 0;
-  const referenceLabel = verseCount ? `(${state.book} ${state.chapter}:1-${verseCount})` : '';
 
   return (
     <div className="flex flex-col h-full relative bg-background">
@@ -246,18 +241,7 @@ export default function ReadingScreen() {
           </div>
         </div>
 
-        {sectionTitle && (
-          <>
-            <h2 className="text-[17px] font-bold text-foreground mb-0.5">
-              {sectionTitle}
-            </h2>
-            <p className="text-[13px] text-muted-foreground mb-4">
-              {referenceLabel}
-            </p>
-          </>
-        )}
-
-        {/* Verses — Roboto body, superscript numbers */}
+        {/* Verses grouped by API subtitles (e.g. "Parable of the Marriage Feast" v1-14) */}
         <div
           className="text-foreground"
           style={{
@@ -265,36 +249,77 @@ export default function ReadingScreen() {
             lineHeight: state.settings.lineSpacing ?? 1.7,
           }}
         >
-          {chapter?.verses.map(verse => {
-            const hl = getHighlightForVerse(verse.number);
-            const isSelected = state.selectedVerse === verse.number;
-            const autoClass = !hl ? autoHighlightByVerse[verse.number] : undefined;
-            return (
-              <span
-                key={verse.number}
-                onTouchStart={() => handlePressStart(verse.number)}
-                onTouchEnd={() => handlePressEnd(verse.number)}
-                onMouseDown={() => handlePressStart(verse.number)}
-                onMouseUp={() => handlePressEnd(verse.number)}
-                onMouseLeave={() => {
-                  if (pressTimer) {
-                    clearTimeout(pressTimer);
-                    setPressTimer(null);
-                  }
-                }}
-                className={`inline cursor-pointer transition-colors ${hl ? highlightColorClass[hl.color] : ''} ${
-                  autoClass ? `${autoClass} rounded px-0.5` : ''
-                } ${isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''}`}
-              >
-                {state.settings.showVerseNumbers !== false && (
-                  <sup className="text-verse-number text-[0.65em] mr-0.5 select-none font-medium align-super">
-                    {verse.number}
-                  </sup>
+          {(() => {
+            const verses = chapter?.verses || [];
+            // Build groups: each group is [subtitle | null, verses[]]
+            const groups: Array<{ title: string | null; range: string; items: typeof verses }> = [];
+            if (subtitles.length === 0) {
+              groups.push({
+                title: null,
+                range: verseCount ? `(${state.book} ${state.chapter}:1-${verseCount})` : '',
+                items: verses,
+              });
+            } else {
+              for (const s of subtitles) {
+                const items = verses.filter(
+                  v => v.number >= s.start_verse && v.number <= s.end_verse
+                );
+                if (items.length === 0) continue;
+                groups.push({
+                  title: s.subtitle,
+                  range: `(${state.book} ${state.chapter}:${s.start_verse}-${s.end_verse})`,
+                  items,
+                });
+              }
+            }
+
+            return groups.map((group, gi) => (
+              <div key={gi} className={gi > 0 ? 'mt-5' : ''}>
+                {group.title && (
+                  <>
+                    <h2 className="text-[17px] font-bold text-foreground mb-0.5">
+                      {group.title}
+                    </h2>
+                    <p className="text-[13px] text-muted-foreground mb-3">{group.range}</p>
+                  </>
                 )}
-                {verse.text}{' '}
-              </span>
-            );
-          })}
+                <div>
+                  {group.items.map(verse => {
+                    const hl = getHighlightForVerse(verse.number);
+                    const isSelected = state.selectedVerse === verse.number;
+                    const autoClass = !hl ? autoHighlightByVerse[verse.number] : undefined;
+                    return (
+                      <span
+                        key={verse.number}
+                        onTouchStart={() => handlePressStart(verse.number)}
+                        onTouchEnd={() => handlePressEnd(verse.number)}
+                        onMouseDown={() => handlePressStart(verse.number)}
+                        onMouseUp={() => handlePressEnd(verse.number)}
+                        onMouseLeave={() => {
+                          if (pressTimer) {
+                            clearTimeout(pressTimer);
+                            setPressTimer(null);
+                          }
+                        }}
+                        className={`inline cursor-pointer transition-colors ${
+                          hl ? highlightColorClass[hl.color] : ''
+                        } ${autoClass ? `${autoClass} rounded px-0.5` : ''} ${
+                          isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''
+                        }`}
+                      >
+                        {state.settings.showVerseNumbers !== false && (
+                          <sup className="text-verse-number text-[0.65em] mr-0.5 select-none font-medium align-super">
+                            {verse.number}
+                          </sup>
+                        )}
+                        {verse.text}{' '}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            ));
+          })()}
         </div>
       </div>
 

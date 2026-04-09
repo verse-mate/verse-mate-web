@@ -1,7 +1,23 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { fetchTopics, fetchBooks, getRecentBooks } from '@/services/bibleService';
-import { Topic, BibleBook } from '@/services/types';
+import { fetchBooks, getRecentBooks } from '@/services/bibleService';
+import { BibleBook } from '@/services/types';
+
+// The Figma Topics tab (Mobile App section) hardcodes 9 categories.
+// The backend API exposes 4 real categories (EVENT/PARABLE/PROPHECY/THEME);
+// the other 5 (Top Verses, Promises, Covenants, Attributes, Chistology) are
+// curated groupings that the frontend treats as virtual categories.
+const FIGMA_TOPIC_CATEGORIES = [
+  { id: 'events', name: 'Events' },
+  { id: 'prophecies', name: 'Prophecies' },
+  { id: 'parables', name: 'Parables' },
+  { id: 'themes', name: 'Themes' },
+  { id: 'top-verses', name: 'Top Verses' },
+  { id: 'promises', name: 'Promises / Commands / Warnings' },
+  { id: 'covenants', name: 'Covenants & Covenant Signs' },
+  { id: 'attributes', name: 'Attributes of God' },
+  { id: 'chistology', name: 'Chistology: Title & Offices of Jesus' },
+];
 import { ChevronRight, Search, ArrowLeft } from 'lucide-react';
 
 interface Props {
@@ -21,12 +37,11 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   const [tab, setTab] = useState<Tab>('OT');
   const [selectedBook, setSelectedBook] = useState<string | null>(null);
   const [query, setQuery] = useState('');
-  const [topics, setTopics] = useState<Topic[]>([]);
+  const topics = FIGMA_TOPIC_CATEGORIES;
   const [allBooks, setAllBooks] = useState<BibleBook[]>([]);
   const [recents, setRecents] = useState<BibleBook[]>([]);
 
   useEffect(() => {
-    fetchTopics().then(setTopics);
     fetchBooks().then(books => {
       setAllBooks(books);
       // Resolve recently viewed book IDs from localStorage against the full list

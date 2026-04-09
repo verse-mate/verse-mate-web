@@ -250,7 +250,7 @@ export default function VerseInsightSheet({
             ) : (
               <>
                 <Bookmark size={16} className="text-dark-fg" strokeWidth={1.5} />
-                <span className="text-[13px] text-dark-fg">Save as highlight</span>
+                <span className="text-[13px] text-dark-fg">Save as My Highlight</span>
               </>
             )}
           </button>

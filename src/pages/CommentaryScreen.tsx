@@ -116,37 +116,62 @@ export default function CommentaryScreen() {
             })()}
           </div>
         ) : tab === 'byline' ? (
-          <div className="space-y-2 pt-2">
-            {commentaries.filter(c => c.type === 'byline').map(c => {
-              const isExpanded = expanded === c.verse;
-              return (
-                <div
-                  key={c.verse}
-                  className="rounded-xl overflow-hidden bg-dark-raised border border-dark"
-                >
-                  <button
-                    onClick={() => setExpanded(isExpanded ? null : c.verse)}
-                    className="flex items-center justify-between w-full px-4 py-3.5 text-left"
-                  >
-                    <span className="text-[14px] text-dark-fg pr-3">
-                      <span className="text-gold mr-2">v{c.verse}</span>
-                      {c.summary}
-                    </span>
-                    {isExpanded ? (
-                      <ChevronUp size={16} className="text-dark-muted shrink-0" />
-                    ) : (
-                      <ChevronDown size={16} className="text-dark-muted shrink-0" />
-                    )}
+          (() => {
+            const byLineItems = commentaries.filter(c => c.type === 'byline');
+            const allExpanded = expanded === -2;
+            return (
+              <div className="pt-2">
+                <div className="flex items-center justify-between mb-3">
+                  <h2 className="text-[18px] font-bold text-dark-fg">
+                    Line-by-Line Analysis of {decodedBook} {chapterNum}
+                  </h2>
+                  <button aria-label="Share" className="w-8 h-8 flex items-center justify-center shrink-0">
+                    <Share2 size={18} className="text-dark-fg" strokeWidth={1.5} />
                   </button>
-                  {isExpanded && (
-                    <div className="px-4 pb-4 pt-1 border-t border-dark">
-                      <MarkdownBlock text={c.detail} />
-                    </div>
+                </div>
+                <div className="flex justify-end mb-2">
+                  <button
+                    onClick={() => setExpanded(allExpanded ? null : -2)}
+                    className="text-[13px] text-gold"
+                  >
+                    {allExpanded ? 'Collapse All' : 'Expand All'}
+                  </button>
+                </div>
+                <div>
+                  {byLineItems.map(c => {
+                    const isOpen = allExpanded || expanded === c.verse;
+                    return (
+                      <div key={c.verse} className="border-b border-dark last:border-b-0">
+                        <button
+                          onClick={() => setExpanded(isOpen ? null : c.verse)}
+                          className="flex items-center justify-between w-full py-4 text-left"
+                        >
+                          <span className="text-[15px] text-dark-fg">
+                            {decodedBook} {chapterNum}:{c.verse}
+                          </span>
+                          {isOpen ? (
+                            <ChevronUp size={18} className="text-dark-muted shrink-0" />
+                          ) : (
+                            <ChevronDown size={18} className="text-dark-muted shrink-0" />
+                          )}
+                        </button>
+                        {isOpen && (
+                          <div className="pb-4">
+                            <MarkdownBlock text={c.detail} />
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                  {byLineItems.length === 0 && (
+                    <p className="text-[14px] text-dark-muted py-8 text-center">
+                      Line-by-line analysis not available.
+                    </p>
                   )}
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })()
         ) : (
           (() => {
             const detailed = commentaries.find(c => c.type === 'detailed');
