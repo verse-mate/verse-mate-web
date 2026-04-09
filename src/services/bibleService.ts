@@ -75,7 +75,7 @@ export interface AppSettings {
 
 const DEFAULT_SETTINGS: AppSettings = {
   fontSize: 18,
-  theme: 'light',
+  theme: 'dark',
   defaultVersion: 'ESV',
   notifications: true,
 };

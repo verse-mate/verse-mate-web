@@ -103,7 +103,7 @@ export default function ReadingScreen() {
                 hl ? highlightColorClass[hl.color] : ''
               } ${isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''}`}
             >
-              <sup className="text-muted-foreground font-sans text-[0.65em] mr-0.5 select-none font-medium">
+              <sup className="text-verse-number font-sans text-[0.65em] mr-0.5 select-none font-medium">
                 {verse.number}
               </sup>
               {verse.text}{' '}
