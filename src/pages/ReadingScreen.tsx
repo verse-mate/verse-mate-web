@@ -12,6 +12,7 @@ import { Chapter, HighlightColor, BibleBook } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 import BookSelector from '@/components/BookSelector';
 import VerseActions from '@/components/VerseActions';
+import VerseInsightSheet from '@/components/VerseInsightSheet';
 
 
 export default function ReadingScreen() {
@@ -87,12 +88,12 @@ export default function ReadingScreen() {
     orange: 'bg-highlight-orange',
   };
 
-  // Short tap → open the Verse Insight bottom sheet (direct analysis for that verse).
+  // Short tap → open the Verse Insight bottom sheet (slides up as an overlay,
+  // NOT a full-screen route).
+  const [insightVerse, setInsightVerse] = useState<number | null>(null);
   const openVerseInsight = (verseNum: number) => {
     dispatch({ type: 'SET_VERSE', verse: verseNum });
-    navigate(
-      `/read/${encodeURIComponent(state.book)}/${state.chapter}/verse/${verseNum}/insight`
-    );
+    setInsightVerse(verseNum);
   };
 
   // Long press (400ms) → open the VerseActions menu (Bookmark / Note / Copy /
@@ -319,6 +320,18 @@ export default function ReadingScreen() {
           verse={longPressVerse}
           onClose={() => {
             setLongPressVerse(null);
+            dispatch({ type: 'SET_VERSE', verse: null });
+          }}
+        />
+      )}
+      {insightVerse !== null && (
+        <VerseInsightSheet
+          book={state.book}
+          chapter={state.chapter}
+          verse={insightVerse}
+          version={state.version}
+          onClose={() => {
+            setInsightVerse(null);
             dispatch({ type: 'SET_VERSE', verse: null });
           }}
         />

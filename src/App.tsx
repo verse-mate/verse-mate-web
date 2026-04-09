@@ -14,7 +14,6 @@ import BookmarksScreen from "@/pages/BookmarksScreen";
 import NotesScreen from "@/pages/NotesScreen";
 import HighlightsScreen from "@/pages/HighlightsScreen";
 import CommentaryScreen from "@/pages/CommentaryScreen";
-import VerseInsightScreen from "@/pages/VerseInsightScreen";
 import MenuScreen from "@/pages/MenuScreen";
 import SettingsScreen from "@/pages/SettingsScreen";
 import AboutScreen from "@/pages/AboutScreen";
@@ -37,8 +36,6 @@ const App = () => (
             <Route element={<AppLayout />}>
               <Route path="/read" element={<ReadingScreen />} />
               <Route path="/read/:book/:chapter/commentary" element={<CommentaryScreen />} />
-              <Route path="/read/:book/:chapter/insight" element={<VerseInsightScreen />} />
-              <Route path="/read/:book/:chapter/verse/:verseNumber/insight" element={<VerseInsightScreen />} />
               <Route path="/topics" element={<TopicsScreen />} />
               <Route path="/topics/:topicId" element={<TopicEventsScreen />} />
               <Route path="/topics/:topicId/:eventId" element={<TopicEventDetailScreen />} />
