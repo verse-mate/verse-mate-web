@@ -1,20 +1,25 @@
 import { useState } from 'react';
 import { useApp } from '@/contexts/AppContext';
 import { Note } from '@/services/types';
-import { X, Trash2 } from 'lucide-react';
+import { Copy, Share2, Trash2 } from 'lucide-react';
 
 interface Props {
   note: Note;
   onClose: () => void;
 }
 
+/**
+ * EditNoteSheet — dark bottom sheet with chapter title, Copy/Share/Delete tiles,
+ * a large textarea, gold Save Note button, and a Cancel button.
+ * Figma ref: frame 5310:15970 (Edit Note).
+ */
 export default function EditNoteSheet({ note, onClose }: Props) {
   const { dispatch } = useApp();
   const [text, setText] = useState(note.text);
   const maxChars = 500;
 
   const handleSave = () => {
-    if (text.length < 10) return;
+    if (text.trim().length === 0) return;
     dispatch({ type: 'UPDATE_NOTE', id: note.id, text });
     onClose();
   };
@@ -24,42 +29,95 @@ export default function EditNoteSheet({ note, onClose }: Props) {
     onClose();
   };
 
+  const handleCopy = () => {
+    navigator.clipboard?.writeText(text).catch(() => undefined);
+    onClose();
+  };
+
+  const handleShare = async () => {
+    try {
+      await navigator.share?.({
+        title: `${note.book} ${note.chapter}`,
+        text,
+      });
+    } catch {
+      handleCopy();
+      return;
+    }
+    onClose();
+  };
+
   return (
     <>
-      <div className="absolute inset-0 z-40 bg-foreground/20" onClick={onClose} />
-      <div className="absolute inset-x-0 bottom-0 z-50 bg-card rounded-t-2xl shadow-lg border-t border-border animate-slide-up">
-        <div className="flex justify-center pt-2 pb-1">
-          <div className="w-8 h-1 rounded-full bg-muted-foreground/30" />
+      <div className="absolute inset-0 z-40 bg-black/60" onClick={onClose} />
+      <div
+        className="absolute inset-x-0 bottom-0 z-50 bg-dark-surface rounded-t-[24px] border-t border-dark safe-bottom animate-slide-up"
+        role="dialog"
+      >
+        {/* Drag handle */}
+        <div className="flex justify-center pt-3">
+          <div className="w-10 h-1 rounded-full bg-dark-muted/40" />
         </div>
-        <div className="flex items-center justify-between px-4 py-2 border-b border-border">
-          <h3 className="font-semibold text-foreground text-[15px]">Edit Note</h3>
-          <button onClick={onClose} className="p-2 rounded-full hover:bg-secondary">
-            <X size={18} />
+
+        {/* Title */}
+        <h3 className="text-center text-[16px] font-semibold text-dark-fg mt-4 mb-4">
+          {note.book} {note.chapter}
+        </h3>
+
+        {/* Action tiles */}
+        <div className="grid grid-cols-3 gap-3 px-5">
+          <button
+            onClick={handleCopy}
+            className="h-[88px] rounded-2xl bg-dark-raised border border-dark flex flex-col items-center justify-center gap-1.5 text-dark-fg"
+          >
+            <Copy size={20} strokeWidth={1.5} />
+            <span className="text-[13px] font-normal">Copy</span>
+          </button>
+          <button
+            onClick={handleShare}
+            className="h-[88px] rounded-2xl bg-dark-raised border border-dark flex flex-col items-center justify-center gap-1.5 text-dark-fg"
+          >
+            <Share2 size={20} strokeWidth={1.5} />
+            <span className="text-[13px] font-normal">Share</span>
+          </button>
+          <button
+            onClick={handleDelete}
+            className="h-[88px] rounded-2xl bg-[#2a1617] border border-[#4d1f22] flex flex-col items-center justify-center gap-1.5 text-red-400"
+          >
+            <Trash2 size={20} strokeWidth={1.5} />
+            <span className="text-[13px] font-normal">Delete</span>
           </button>
         </div>
-        <div className="p-4 space-y-3">
-          <p className="text-[13px] text-muted-foreground">{note.book} {note.chapter}:{note.verse}</p>
+
+        {/* Textarea */}
+        <div className="px-5 pt-4">
           <textarea
             value={text}
             onChange={e => setText(e.target.value.slice(0, maxChars))}
-            rows={4}
-            className="w-full rounded-lg border border-input bg-background text-foreground px-3 py-2.5 text-[14px] placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+            rows={5}
+            className="w-full rounded-2xl bg-dark-raised border border-dark px-4 py-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
+            placeholder="Write your note..."
           />
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] text-muted-foreground">{text.length}/{maxChars}</span>
-            <div className="flex gap-2">
-              <button onClick={handleDelete} className="px-4 py-2.5 rounded-lg bg-destructive/10 text-destructive text-[13px] font-medium flex items-center gap-1.5">
-                <Trash2 size={14} /> Delete
-              </button>
-              <button
-                onClick={handleSave}
-                disabled={text.length < 10}
-                className="px-4 py-2.5 rounded-lg bg-accent text-accent-foreground text-[13px] font-medium disabled:opacity-40 transition-opacity"
-              >
-                Save
-              </button>
-            </div>
+          <div className="text-right text-[11px] text-dark-muted mt-1">
+            {text.length}/{maxChars}
           </div>
+        </div>
+
+        {/* Save Note (gold) + Cancel */}
+        <div className="px-5 pt-2 pb-6 space-y-3">
+          <button
+            onClick={handleSave}
+            disabled={text.trim().length === 0}
+            className="w-full h-12 rounded-xl bg-gold text-[#1A1A1A] font-medium text-[15px] disabled:opacity-40"
+          >
+            Save Note
+          </button>
+          <button
+            onClick={onClose}
+            className="w-full h-12 rounded-xl bg-dark-raised border border-dark text-dark-fg text-[14px] font-medium"
+          >
+            Cancel
+          </button>
         </div>
       </div>
     </>

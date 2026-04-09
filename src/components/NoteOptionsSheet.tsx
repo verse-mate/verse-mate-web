@@ -1,6 +1,6 @@
 import { useApp } from '@/contexts/AppContext';
 import { Note } from '@/services/types';
-import { X, Pencil, Trash2, Share2, Copy } from 'lucide-react';
+import { Copy, Share2, Pencil, Trash2 } from 'lucide-react';
 
 interface Props {
   note: Note;
@@ -8,6 +8,10 @@ interface Props {
   onEdit: () => void;
 }
 
+/**
+ * NoteOptionsSheet — dark bottom sheet with 4 action tiles (Copy / Share / Edit / Delete)
+ * and a Cancel button. Figma ref: frame 5310:16518.
+ */
 export default function NoteOptionsSheet({ note, onClose, onEdit }: Props) {
   const { dispatch } = useApp();
 
@@ -17,52 +21,86 @@ export default function NoteOptionsSheet({ note, onClose, onEdit }: Props) {
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(`${note.book} ${note.chapter}:${note.verse}\n${note.text}`);
+    navigator.clipboard
+      ?.writeText(`${note.book} ${note.chapter}:${note.verse}\n${note.text}`)
+      .catch(() => undefined);
     onClose();
   };
 
   const handleShare = async () => {
     try {
-      await navigator.share({ text: `${note.book} ${note.chapter}:${note.verse}\n${note.text}` });
+      await navigator.share?.({
+        text: `${note.book} ${note.chapter}:${note.verse}\n${note.text}`,
+      });
     } catch {
       handleCopy();
+      return;
     }
     onClose();
   };
 
-  const actions = [
-    { label: 'Edit', icon: Pencil, action: () => { onClose(); onEdit(); } },
-    { label: 'Delete', icon: Trash2, action: handleDelete, destructive: true },
-    { label: 'Share', icon: Share2, action: handleShare },
-    { label: 'Copy', icon: Copy, action: handleCopy },
+  const tiles = [
+    { label: 'Copy', icon: Copy, onClick: handleCopy },
+    { label: 'Share', icon: Share2, onClick: handleShare },
+    {
+      label: 'Edit',
+      icon: Pencil,
+      onClick: () => {
+        onClose();
+        onEdit();
+      },
+    },
+    {
+      label: 'Delete',
+      icon: Trash2,
+      onClick: handleDelete,
+      destructive: true,
+    },
   ];
 
   return (
     <>
-      <div className="absolute inset-0 z-40 bg-foreground/20" onClick={onClose} />
-      <div className="absolute inset-x-0 bottom-0 z-50 bg-card rounded-t-2xl shadow-lg border-t border-border animate-slide-up">
-        <div className="flex justify-center pt-2 pb-1">
-          <div className="w-8 h-1 rounded-full bg-muted-foreground/30" />
+      <div className="absolute inset-0 z-40 bg-black/60" onClick={onClose} />
+      <div
+        className="absolute inset-x-0 bottom-0 z-50 bg-dark-surface rounded-t-[24px] border-t border-dark safe-bottom animate-slide-up"
+        role="dialog"
+      >
+        {/* Drag handle */}
+        <div className="flex justify-center pt-3">
+          <div className="w-10 h-1 rounded-full bg-dark-muted/40" />
         </div>
-        <div className="flex items-center justify-between px-4 py-2 border-b border-border">
-          <h3 className="font-semibold text-foreground text-[15px]">{note.book} {note.chapter}:{note.verse}</h3>
-          <button onClick={onClose} className="p-2 rounded-full hover:bg-secondary">
-            <X size={18} />
-          </button>
-        </div>
-        <div className="py-1">
-          {actions.map(a => (
+
+        {/* Title */}
+        <h3 className="text-center text-[16px] font-semibold text-dark-fg mt-4 mb-4">
+          Notes Options
+        </h3>
+
+        {/* Action tiles */}
+        <div className="grid grid-cols-4 gap-3 px-5">
+          {tiles.map(t => (
             <button
-              key={a.label}
-              onClick={a.action}
-              className={`flex items-center gap-3 w-full px-4 py-3.5 hover:bg-secondary transition-colors ${
-                a.destructive ? 'text-destructive' : 'text-foreground'
+              key={t.label}
+              onClick={t.onClick}
+              className={`h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 ${
+                t.destructive
+                  ? 'bg-[#2a1617] border-[#4d1f22] text-red-400'
+                  : 'bg-dark-raised border-dark text-dark-fg'
               }`}
             >
-              <a.icon size={18} />
-              <span className="font-medium text-[14px]">{a.label}</span>
+              <t.icon size={20} strokeWidth={1.5} />
+              <span className="text-[13px] font-normal">{t.label}</span>
             </button>
           ))}
+        </div>
+
+        {/* Cancel */}
+        <div className="px-5 pt-5 pb-6">
+          <button
+            onClick={onClose}
+            className="w-full h-12 rounded-xl bg-dark-raised border border-dark text-dark-fg text-[14px] font-medium"
+          >
+            Cancel
+          </button>
         </div>
       </div>
     </>

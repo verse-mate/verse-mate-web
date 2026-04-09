@@ -1,21 +1,30 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchMostQuoted, fetchTopicEvent } from '@/services/bibleService';
-import { MostQuotedVerse, TopicEvent } from '@/services/types';
-import { ChevronLeft } from 'lucide-react';
+import { fetchMostQuoted } from '@/services/bibleService';
+import { MostQuotedVerse } from '@/services/types';
+import { Search } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
+import ScreenHeader from '@/components/ScreenHeader';
 
+/**
+ * MostQuotedScreen — dark list of verses with reference (bold) + quote (muted),
+ * rows separated by thin dividers. Figma ref: frame 5895:5782 (Mobile App section).
+ */
 export default function MostQuotedScreen() {
   const { topicId, eventId } = useParams<{ topicId: string; eventId: string }>();
   const navigate = useNavigate();
   const { dispatch } = useApp();
   const [verses, setVerses] = useState<MostQuotedVerse[]>([]);
-  const [event, setEvent] = useState<TopicEvent | null>(null);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     if (eventId) fetchMostQuoted(eventId).then(setVerses);
-    if (topicId && eventId) fetchTopicEvent(topicId, eventId).then(e => setEvent(e || null));
   }, [eventId, topicId]);
+
+  const filtered = useMemo(
+    () => verses.filter(v => v.reference.toLowerCase().includes(query.toLowerCase())),
+    [verses, query]
+  );
 
   const goToVerse = (v: MostQuotedVerse) => {
     dispatch({ type: 'SET_PASSAGE', book: v.book, chapter: v.chapter });
@@ -23,39 +32,38 @@ export default function MostQuotedScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full">
-      <header className="flex items-center gap-2 px-4 py-3 border-b border-border bg-card">
-        <button onClick={() => navigate(`/topics/${topicId}/${eventId}`)} className="p-2 -ml-2 rounded-full hover:bg-secondary">
-          <ChevronLeft size={20} />
-        </button>
-        <h1 className="text-lg font-semibold text-foreground truncate">Most Quoted</h1>
-      </header>
+    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+      <ScreenHeader title="Most quoted / memorized" />
 
-      {event && (
-        <div className="px-4 py-3 border-b border-border bg-card">
-          <p className="text-sm text-muted-foreground">{event.title}</p>
+      {/* Search */}
+      <div className="px-4 pt-1">
+        <div className="flex items-center gap-2 h-12 px-4 rounded-full bg-dark-raised border border-dark">
+          <Search size={18} className="text-dark-muted" strokeWidth={2} />
+          <input
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            placeholder="Search..."
+            className="flex-1 bg-transparent text-[15px] text-dark-fg placeholder:text-dark-muted focus:outline-none"
+          />
         </div>
-      )}
+      </div>
 
-      <div className="flex-1 overflow-y-auto p-4 space-y-2">
-        {verses.map((v, i) => (
+      <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6">
+        {filtered.map(v => (
           <button
             key={v.reference}
             onClick={() => goToVerse(v)}
-            className="flex items-start gap-3 w-full p-4 rounded-lg bg-card border border-border hover:bg-secondary transition-colors text-left"
+            className="block w-full py-4 border-b border-dark text-left"
           >
-            <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
-              <span className="text-sm font-bold text-accent">#{i + 1}</span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center justify-between mb-1">
-                <p className="font-semibold text-foreground text-sm">{v.reference}</p>
-                <span className="text-xs text-muted-foreground">{v.quoteCount.toLocaleString()} quotes</span>
-              </div>
-              <p className="text-sm text-muted-foreground line-clamp-2 font-scripture">{v.text}</p>
-            </div>
+            <p className="text-[15px] font-semibold text-dark-fg mb-1">{v.reference}</p>
+            <p className="text-[13px] text-dark-muted line-clamp-2 leading-snug">
+              "{v.text}"
+            </p>
           </button>
         ))}
+        {filtered.length === 0 && (
+          <p className="text-center text-dark-muted py-8 text-[14px]">No verses found.</p>
+        )}
       </div>
     </div>
   );
