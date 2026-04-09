@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BIBLE_BOOKS } from '@/services/bibleData';
-import { X } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 
 interface Props {
   onClose: () => void;
@@ -15,29 +15,32 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   const book = selectedBook ? BIBLE_BOOKS.find(b => b.name === selectedBook) : null;
 
   return (
-    <div className="absolute inset-0 z-50 bg-background animate-fade-in flex flex-col">
-      {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-border">
-        <h2 className="text-[17px] font-semibold text-foreground">
-          {selectedBook ? selectedBook : 'Select Book'}
-        </h2>
-        <button onClick={onClose} className="p-2 rounded-full hover:bg-secondary">
-          <X size={20} />
+    <div className="absolute inset-0 z-50 bg-dark-surface flex flex-col animate-fade-in">
+      {/* Dark header */}
+      <div className="shrink-0 flex items-center gap-2 px-3" style={{ height: 56 }}>
+        <button
+          onClick={selectedBook ? () => setSelectedBook(null) : onClose}
+          className="flex items-center justify-center w-[44px] h-[44px] -ml-2"
+        >
+          <ChevronLeft size={22} className="text-gold" />
         </button>
+        <h2 className="text-[17px] font-semibold text-dark-fg">
+          {selectedBook || (tab === 'OT' ? 'Old Testament' : 'New Testament')}
+        </h2>
       </div>
 
       {!selectedBook ? (
         <>
-          {/* Tabs */}
-          <div className="flex border-b border-border">
+          {/* OT / NT tabs */}
+          <div className="flex shrink-0 border-b border-dark">
             {(['OT', 'NT'] as const).map(t => (
               <button
                 key={t}
                 onClick={() => setTab(t)}
-                className={`flex-1 py-3 text-sm font-medium transition-colors ${
+                className={`flex-1 py-3 text-[14px] font-medium transition-colors ${
                   tab === t
-                    ? 'text-accent border-b-2 border-accent'
-                    : 'text-muted-foreground'
+                    ? 'text-gold border-b-2 border-gold'
+                    : 'text-dark-muted'
                 }`}
               >
                 {t === 'OT' ? 'Old Testament' : 'New Testament'}
@@ -45,14 +48,14 @@ export default function BookSelector({ onClose, onSelect }: Props) {
             ))}
           </div>
 
-          {/* Book grid */}
-          <div className="flex-1 overflow-y-auto p-3">
-            <div className="grid grid-cols-4 gap-1.5">
+          {/* Book grid — 3 columns */}
+          <div className="flex-1 overflow-y-auto p-4">
+            <div className="grid grid-cols-3 gap-2">
               {books.map(b => (
                 <button
                   key={b.name}
                   onClick={() => setSelectedBook(b.name)}
-                  className="py-2.5 px-1 rounded-lg bg-secondary text-secondary-foreground text-[12px] font-medium text-center hover:bg-accent hover:text-accent-foreground transition-colors"
+                  className="py-3 px-2 rounded-lg bg-dark-raised text-dark-fg text-[13px] font-medium text-center hover:bg-gold hover:text-foreground transition-colors"
                 >
                   {b.shortName}
                 </button>
@@ -61,26 +64,20 @@ export default function BookSelector({ onClose, onSelect }: Props) {
           </div>
         </>
       ) : (
-        /* Chapter picker */
-        <div className="flex-1 overflow-y-auto p-3">
-          <p className="text-[13px] text-muted-foreground mb-3">Select chapter</p>
-          <div className="grid grid-cols-6 gap-1.5">
+        /* Chapter picker grid */
+        <div className="flex-1 overflow-y-auto p-4">
+          <p className="text-[13px] text-dark-muted mb-3">Select chapter</p>
+          <div className="grid grid-cols-6 gap-2">
             {Array.from({ length: book!.chapters }, (_, i) => i + 1).map(ch => (
               <button
                 key={ch}
                 onClick={() => onSelect(selectedBook, ch)}
-                className="py-2.5 rounded-lg bg-secondary text-secondary-foreground text-[13px] font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+                className="py-2.5 rounded-lg bg-dark-raised text-dark-fg text-[14px] font-medium hover:bg-gold hover:text-foreground transition-colors"
               >
                 {ch}
               </button>
             ))}
           </div>
-          <button
-            onClick={() => setSelectedBook(null)}
-            className="mt-4 text-[13px] text-accent font-medium"
-          >
-            ← Back to books
-          </button>
         </div>
       )}
     </div>
