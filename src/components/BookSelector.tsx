@@ -18,7 +18,8 @@ const FIGMA_TOPIC_CATEGORIES = [
   { id: 'attributes', name: 'Attributes of God' },
   { id: 'chistology', name: 'Chistology: Title & Offices of Jesus' },
 ];
-import { ChevronRight, Search, ArrowLeft } from 'lucide-react';
+import { ChevronRight, Search, ArrowLeft, Clock } from 'lucide-react';
+import { useApp } from '@/contexts/AppContext';
 
 interface Props {
   onClose: () => void;
@@ -34,7 +35,11 @@ type Tab = 'OT' | 'NT' | 'Topics';
  */
 export default function BookSelector({ onClose, onSelect }: Props) {
   const navigate = useNavigate();
-  const [tab, setTab] = useState<Tab>('OT');
+  const { state } = useApp();
+  const [tab, setTab] = useState<Tab>(() =>
+    // Default to whichever testament the current book belongs to
+    ['Matthew','Mark','Luke','John','Acts','Romans','1 Corinthians','2 Corinthians','Galatians','Ephesians','Philippians','Colossians','1 Thessalonians','2 Thessalonians','1 Timothy','2 Timothy','Titus','Philemon','Hebrews','James','1 Peter','2 Peter','1 John','2 John','3 John','Jude','Revelation'].includes(state.book) ? 'NT' : 'OT'
+  );
   const [selectedBook, setSelectedBook] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   const topics = FIGMA_TOPIC_CATEGORIES;
@@ -193,35 +198,53 @@ export default function BookSelector({ onClose, onSelect }: Props) {
           <div>
             {/* Recents (only when no active query) */}
             {!query && recents.length > 0 && (
-              <div className="mb-2">
-                <p className="text-[11px] uppercase tracking-wide text-dark-muted/70 mb-1">
+              <>
+                <p className="text-[11px] uppercase tracking-wider text-dark-muted/70 text-center py-3 border-t border-dark">
                   Recents
                 </p>
-                {recents.map(b => (
-                  <button
-                    key={`recent-${b.bookId}`}
-                    onClick={() => setSelectedBook(b.name)}
-                    className="flex items-center justify-between w-full h-[52px] border-b border-dark"
-                  >
-                    <span className="text-[15px] text-dark-fg text-left">{b.name}</span>
-                    <ChevronRight size={18} className="text-dark-muted" />
-                  </button>
-                ))}
-                <p className="text-[11px] uppercase tracking-wide text-dark-muted/70 mt-4 mb-1">
-                  All books
+                {recents.map(b => {
+                  const isCurrent = b.name === state.book;
+                  return (
+                    <button
+                      key={`recent-${b.bookId}`}
+                      onClick={() => setSelectedBook(b.name)}
+                      className="flex items-center justify-between w-full h-[52px] border-b border-dark"
+                    >
+                      <span
+                        className={`text-[16px] text-left ${
+                          isCurrent ? 'text-gold font-medium' : 'text-dark-fg'
+                        }`}
+                      >
+                        {b.name}
+                      </span>
+                      <Clock size={16} className="text-dark-muted" strokeWidth={1.75} />
+                    </button>
+                  );
+                })}
+                <p className="text-[11px] uppercase tracking-wider text-dark-muted/70 text-center py-3 border-t border-dark">
+                  All Books
                 </p>
-              </div>
+              </>
             )}
-            {filteredBooks.map(b => (
-              <button
-                key={b.name}
-                onClick={() => setSelectedBook(b.name)}
-                className="flex items-center justify-between w-full h-[56px] border-b border-dark"
-              >
-                <span className="text-[16px] text-dark-fg text-left">{b.name}</span>
-                <ChevronRight size={18} className="text-dark-muted" />
-              </button>
-            ))}
+            {filteredBooks.map(b => {
+              const isCurrent = b.name === state.book;
+              return (
+                <button
+                  key={b.name}
+                  onClick={() => setSelectedBook(b.name)}
+                  className="flex items-center justify-between w-full h-[56px] border-b border-dark"
+                >
+                  <span
+                    className={`text-[16px] text-left ${
+                      isCurrent ? 'text-gold font-medium' : 'text-dark-fg'
+                    }`}
+                  >
+                    {b.name}
+                  </span>
+                  <ChevronRight size={18} className="text-dark-muted" />
+                </button>
+              );
+            })}
           </div>
         ) : (
           <EmptyState query={query} loading={allBooks.length === 0 && !query} what="books" />

@@ -91,11 +91,11 @@ export default function HelpScreen() {
         )}
 
         {formState === 'success' && (
-          <div className="flex-1 flex flex-col items-center justify-center gap-3 pt-20 text-center">
-            <CheckCircle size={56} className="text-gold" strokeWidth={1.5} />
-            <h2 className="text-[22px] font-bold text-dark-fg mt-2">Thank you!</h2>
-            <p className="text-[14px] text-dark-muted max-w-[280px]">
-              Your feedback has been received. We'll get back to you soon.
+          <div className="flex-1 flex flex-col items-center justify-center pt-20 text-center">
+            <CheckCircle size={72} className="text-gold" strokeWidth={1.5} />
+            <p className="text-[15px] text-dark-fg mt-5">Message sent.</p>
+            <p className="text-[15px] text-dark-fg">
+              Thanks for helping us improve VerseMate!
             </p>
           </div>
         )}
@@ -117,7 +117,7 @@ export default function HelpScreen() {
               onClick={() => navigate('/menu')}
               className="w-full h-12 rounded-xl bg-gold text-[#1A1A1A] font-medium text-[15px]"
             >
-              Back to Menu
+              Done
             </button>
           )}
         </div>

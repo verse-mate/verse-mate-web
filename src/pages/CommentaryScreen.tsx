@@ -177,6 +177,14 @@ export default function CommentaryScreen() {
             const detailed = commentaries.find(c => c.type === 'detailed');
             return detailed ? (
               <div className="pt-2">
+                <div className="flex items-start justify-between mb-4">
+                  <h2 className="text-[20px] font-bold text-dark-fg">
+                    In-Depth Analysis of {decodedBook} {chapterNum}
+                  </h2>
+                  <button aria-label="Share" className="w-8 h-8 flex items-center justify-center shrink-0">
+                    <Share2 size={18} className="text-dark-fg" strokeWidth={1.5} />
+                  </button>
+                </div>
                 <MarkdownBlock text={detailed.detail} />
               </div>
             ) : (

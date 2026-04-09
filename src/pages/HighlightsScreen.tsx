@@ -143,56 +143,64 @@ export default function HighlightsScreen() {
         )}
 
         {/* Auto Highlights section */}
-        <div className="mt-8 border-t border-dark pt-5">
-          <h2 className="text-center text-[15px] font-semibold text-dark-fg mb-2">
+        <div className="mt-8">
+          <h2 className="text-center text-[15px] font-semibold text-dark-fg mb-3">
             Auto Highlights
           </h2>
-          <p className="text-center text-[12px] text-dark-muted leading-relaxed mb-5 px-2">
-            Auto-generated highlights help identify key verses, promises, commands, and more
-            throughout the Bible. Toggle themes on or off to customize which highlights you see.
+          <p className="text-center text-[12px] text-dark-muted/80 leading-relaxed mb-4 px-2">
+            Auto-generated highlights help identify key verses, promises,
+            commands, and more throughout the Bible.
+            <br />
+            Toggle themes on or off to customize which highlights you see
           </p>
 
-          {/* Master toggle */}
-          <div className="flex items-start justify-between gap-3 py-3 border-t border-dark">
-            <div className="flex-1 min-w-0">
-              <p className="text-[14px] text-dark-fg">Enable All Auto-Highlights</p>
-              <p className="text-[12px] text-dark-muted mt-0.5">
-                Turn all Auto-Highlights on or off
-              </p>
+          {/* Master toggle card */}
+          <div className="rounded-xl bg-dark-raised border border-dark px-4 py-3 mb-3">
+            <div className="flex items-start justify-between gap-3">
+              <div className="flex-1 min-w-0">
+                <p className="text-[14px] text-gold font-medium">
+                  Enable All Auto-Highlights
+                </p>
+                <p className="text-[12px] text-dark-muted mt-0.5">
+                  Turn all Auto-generated highlights on or off
+                </p>
+              </div>
+              <ThemeToggle value={allOn} onChange={toggleAllThemes} />
             </div>
-            <ThemeToggle value={allOn} onChange={toggleAllThemes} />
           </div>
 
-          {/* Per-theme toggles */}
+          {/* Per-theme toggle cards */}
           {themes.length === 0 ? (
             <p className="text-[12px] text-dark-muted/70 py-4 text-center">
               Loading themes…
             </p>
           ) : (
-            <div>
+            <div className="space-y-3">
               {themes.map(t => {
                 const isOn = enabledThemes.has(t.theme_id);
                 return (
                   <div
                     key={t.theme_id}
-                    className="flex items-start justify-between gap-3 py-3 border-t border-dark"
+                    className="rounded-xl bg-dark-raised border border-dark px-4 py-3"
                   >
-                    <div className="flex items-start gap-3 flex-1 min-w-0">
-                      <span
-                        className={`mt-1.5 w-3 h-3 rounded-full shrink-0 ${
-                          colorDot[t.color] || 'bg-gray-400'
-                        }`}
-                      />
-                      <div className="min-w-0">
-                        <p className="text-[14px] text-dark-fg">{t.name}</p>
-                        {t.description && (
-                          <p className="text-[12px] text-dark-muted mt-0.5 line-clamp-2">
-                            {t.description}
-                          </p>
-                        )}
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex items-start gap-3 flex-1 min-w-0">
+                        <span
+                          className={`mt-1.5 w-3 h-3 rounded-full shrink-0 ${
+                            colorDot[t.color] || 'bg-gray-400'
+                          }`}
+                        />
+                        <div className="min-w-0">
+                          <p className="text-[14px] text-dark-fg font-medium">{t.name}</p>
+                          {t.description && (
+                            <p className="text-[12px] text-dark-muted mt-0.5 leading-snug">
+                              {t.description}
+                            </p>
+                          )}
+                        </div>
                       </div>
+                      <ThemeToggle value={isOn} onChange={() => toggleTheme(t.theme_id)} />
                     </div>
-                    <ThemeToggle value={isOn} onChange={() => toggleTheme(t.theme_id)} />
                   </div>
                 );
               })}

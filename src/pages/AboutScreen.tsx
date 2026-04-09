@@ -35,7 +35,6 @@ export default function AboutScreen() {
           calling: to help more people connect with God through His Word.
         </p>
 
-        <p className="text-[12px] text-dark-muted/60 mt-8">Version 1.0.0</p>
       </div>
     </div>
   );

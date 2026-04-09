@@ -9,19 +9,26 @@ interface Props {
 }
 
 /**
- * EditNoteSheet — dark bottom sheet with chapter title, Copy/Share/Delete tiles,
- * a large textarea, gold Save Note button, and a Cancel button.
- * Figma ref: frame 5310:15970 (Edit Note).
+ * EditNoteSheet — dark bottom sheet. Figma: 5310:15970.
+ * Title = "{Book} {Chapter}", 3 action tiles (Copy / Share / Delete red),
+ * editable textarea preloaded with the note text, gold "Save Note" button,
+ * bordered "Cancel" button below.
  */
 export default function EditNoteSheet({ note, onClose }: Props) {
   const { updateNote, removeNote } = useApp();
   const [text, setText] = useState(note.text);
+  const [saving, setSaving] = useState(false);
   const maxChars = 500;
 
   const handleSave = async () => {
     if (text.trim().length === 0) return;
-    await updateNote(note.id, text);
-    onClose();
+    setSaving(true);
+    try {
+      await updateNote(note.id, text);
+    } finally {
+      setSaving(false);
+      onClose();
+    }
   };
 
   const handleDelete = async () => {
@@ -31,7 +38,6 @@ export default function EditNoteSheet({ note, onClose }: Props) {
 
   const handleCopy = () => {
     navigator.clipboard?.writeText(text).catch(() => undefined);
-    onClose();
   };
 
   const handleShare = async () => {
@@ -42,9 +48,7 @@ export default function EditNoteSheet({ note, onClose }: Props) {
       });
     } catch {
       handleCopy();
-      return;
     }
-    onClose();
   };
 
   return (
@@ -60,33 +64,20 @@ export default function EditNoteSheet({ note, onClose }: Props) {
         </div>
 
         {/* Title */}
-        <h3 className="text-center text-[16px] font-semibold text-dark-fg mt-4 mb-4">
+        <h3 className="text-center text-[18px] text-dark-fg mt-4 mb-5">
           {note.book} {note.chapter}
         </h3>
 
-        {/* Action tiles */}
+        {/* 3 action tiles */}
         <div className="grid grid-cols-3 gap-3 px-5">
-          <button
-            onClick={handleCopy}
-            className="h-[88px] rounded-2xl bg-dark-raised border border-dark flex flex-col items-center justify-center gap-1.5 text-dark-fg"
-          >
-            <Copy size={20} strokeWidth={1.5} />
-            <span className="text-[13px] font-normal">Copy</span>
-          </button>
-          <button
-            onClick={handleShare}
-            className="h-[88px] rounded-2xl bg-dark-raised border border-dark flex flex-col items-center justify-center gap-1.5 text-dark-fg"
-          >
-            <Share2 size={20} strokeWidth={1.5} />
-            <span className="text-[13px] font-normal">Share</span>
-          </button>
-          <button
+          <SheetTile icon={<Copy size={20} strokeWidth={1.5} />} label="Copy" onClick={handleCopy} />
+          <SheetTile icon={<Share2 size={20} strokeWidth={1.5} />} label="Share" onClick={handleShare} />
+          <SheetTile
+            icon={<Trash2 size={20} strokeWidth={1.5} />}
+            label="Delete"
             onClick={handleDelete}
-            className="h-[88px] rounded-2xl bg-[#2a1617] border border-[#4d1f22] flex flex-col items-center justify-center gap-1.5 text-red-400"
-          >
-            <Trash2 size={20} strokeWidth={1.5} />
-            <span className="text-[13px] font-normal">Delete</span>
-          </button>
+            destructive
+          />
         </div>
 
         {/* Textarea */}
@@ -98,28 +89,55 @@ export default function EditNoteSheet({ note, onClose }: Props) {
             className="w-full rounded-2xl bg-dark-raised border border-dark px-4 py-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
             placeholder="Write your note..."
           />
-          <div className="text-right text-[11px] text-dark-muted mt-1">
-            {text.length}/{maxChars}
-          </div>
         </div>
 
-        {/* Save Note (gold) + Cancel */}
-        <div className="px-5 pt-2 pb-6 space-y-3">
+        {/* Gold Save Note */}
+        <div className="px-5 pt-4 pb-3">
           <button
             onClick={handleSave}
-            disabled={text.trim().length === 0}
+            disabled={text.trim().length === 0 || saving}
             className="w-full h-12 rounded-xl bg-gold text-[#1A1A1A] font-medium text-[15px] disabled:opacity-40"
           >
-            Save Note
+            {saving ? 'Saving…' : 'Save Note'}
           </button>
+        </div>
+
+        {/* Bordered Cancel */}
+        <div className="px-5 pb-6">
           <button
             onClick={onClose}
-            className="w-full h-12 rounded-xl bg-dark-raised border border-dark text-dark-fg text-[14px] font-medium"
+            className="w-full h-12 rounded-xl bg-dark-surface border border-dark text-dark-fg text-[14px] font-medium"
           >
             Cancel
           </button>
         </div>
       </div>
     </>
+  );
+}
+
+function SheetTile({
+  icon,
+  label,
+  onClick,
+  destructive,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  onClick: () => void;
+  destructive?: boolean;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 ${
+        destructive
+          ? 'bg-[#2a1617] border-[#4d1f22] text-red-400'
+          : 'bg-dark-raised border-dark text-dark-fg'
+      }`}
+    >
+      {icon}
+      <span className="text-[13px] font-normal">{label}</span>
+    </button>
   );
 }

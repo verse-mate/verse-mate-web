@@ -42,6 +42,7 @@ const App = () => (
               <Route path="/topics/:topicId/:eventId/most-quoted" element={<MostQuotedScreen />} />
               <Route path="/bookmarks" element={<BookmarksScreen />} />
               <Route path="/notes" element={<NotesScreen />} />
+              <Route path="/notes/:book/:chapter" element={<NotesScreen />} />
               <Route path="/highlights" element={<HighlightsScreen />} />
               <Route path="/menu" element={<MenuScreen />} />
               <Route path="/menu/settings" element={<SettingsScreen />} />

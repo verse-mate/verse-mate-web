@@ -1,9 +1,9 @@
 import ScreenHeader from '@/components/ScreenHeader';
-import { Heart } from 'lucide-react';
 
 /**
- * GivingScreen — hero + copy + gold CTA.
- * Figma reference: frame 5588:5080 (Mobile App section)
+ * GivingScreen — full dark. Figma: 5588:5080.
+ * "SUPPORT VERSEMATE" small caps caption, bold serif headline, body paragraphs.
+ * No CTA button in the Figma.
  */
 export default function GivingScreen() {
   return (
@@ -11,26 +11,32 @@ export default function GivingScreen() {
       <ScreenHeader title="Giving" />
 
       <div className="flex-1 overflow-y-auto px-5 pb-8">
-        <div className="rounded-2xl overflow-hidden bg-dark-raised mt-2 aspect-[4/5] flex items-center justify-center">
-          <Heart size={72} className="text-gold" strokeWidth={1} />
+        <div className="pt-4">
+          <p className="text-[12px] font-semibold tracking-[0.14em] text-dark-fg uppercase">
+            SUPPORT VERSEMATE
+          </p>
+          <div className="h-[2px] bg-gold/80 w-32 mt-2" />
         </div>
 
-        <h1 className="text-[22px] font-bold text-dark-fg mt-6 leading-tight">
-          Support the Mission
+        <h1 className="text-[26px] font-bold text-dark-fg mt-6 leading-[1.15]">
+          Help People<br />
+          Everywhere Engage<br />
+          with God's Word
         </h1>
-        <p className="text-[14px] text-dark-muted mt-4 leading-relaxed">
-          VerseMate is free to use. Your generous giving helps us keep building features, growing
-          our content library, and reaching more readers around the world with God's Word.
-        </p>
-        <p className="text-[14px] text-dark-muted mt-3 leading-relaxed">
-          Every contribution — large or small — makes a direct difference.
-        </p>
-      </div>
 
-      <div className="shrink-0 px-5 pb-6 safe-bottom">
-        <button className="w-full h-12 rounded-xl bg-gold text-[#1A1A1A] font-medium text-[15px]">
-          Give Now
-        </button>
+        <p className="text-[14px] text-dark-muted mt-5 leading-relaxed">
+          Your generosity helps us create resources and tools that make Scripture clear and
+          accessible to people worldwide. Every gift you give makes a direct impact — whether
+          it's supporting the translation of content, improving our technology, or helping us
+          reach new communities with the truth of God's Word.
+        </p>
+        <p className="text-[14px] text-dark-muted mt-4 leading-relaxed">
+          Through your partnership, VerseMate can continue developing simple, powerful tools
+          that guide people not only to read the Bible, but to truly understand and apply it in
+          their daily lives. We believe that when people engage Scripture with clarity,
+          transformation follows — families are encouraged, faith grows stronger, and entire
+          communities can be renewed.
+        </p>
       </div>
     </div>
   );

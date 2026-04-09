@@ -9,8 +9,9 @@ interface Props {
 }
 
 /**
- * NoteOptionsSheet — dark bottom sheet with 4 action tiles (Copy / Share / Edit / Delete)
- * and a Cancel button. Figma ref: frame 5310:16518.
+ * NoteOptionsSheet — dark bottom sheet. Figma: 5310:16518.
+ * Title "Notes Options", 4 square tiles (Copy / Share / Edit / Delete red),
+ * bordered Cancel row below. Title centered, no icons except the tiles.
  */
 export default function NoteOptionsSheet({ note, onClose, onEdit }: Props) {
   const { removeNote } = useApp();
@@ -39,25 +40,6 @@ export default function NoteOptionsSheet({ note, onClose, onEdit }: Props) {
     onClose();
   };
 
-  const tiles = [
-    { label: 'Copy', icon: Copy, onClick: handleCopy },
-    { label: 'Share', icon: Share2, onClick: handleShare },
-    {
-      label: 'Edit',
-      icon: Pencil,
-      onClick: () => {
-        onClose();
-        onEdit();
-      },
-    },
-    {
-      label: 'Delete',
-      icon: Trash2,
-      onClick: handleDelete,
-      destructive: true,
-    },
-  ];
-
   return (
     <>
       <div className="absolute inset-0 z-40 bg-black/60" onClick={onClose} />
@@ -71,38 +53,66 @@ export default function NoteOptionsSheet({ note, onClose, onEdit }: Props) {
         </div>
 
         {/* Title */}
-        <h3 className="text-center text-[16px] font-semibold text-dark-fg mt-4 mb-4">
+        <h3 className="text-center text-[18px] text-dark-fg mt-4 mb-5">
           Notes Options
         </h3>
 
-        {/* Action tiles */}
-        <div className="grid grid-cols-4 gap-3 px-5">
-          {tiles.map(t => (
-            <button
-              key={t.label}
-              onClick={t.onClick}
-              className={`h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 ${
-                t.destructive
-                  ? 'bg-[#2a1617] border-[#4d1f22] text-red-400'
-                  : 'bg-dark-raised border-dark text-dark-fg'
-              }`}
-            >
-              <t.icon size={20} strokeWidth={1.5} />
-              <span className="text-[13px] font-normal">{t.label}</span>
-            </button>
-          ))}
+        {/* 4 action tiles */}
+        <div className="grid grid-cols-4 gap-2 px-5">
+          <SheetTile icon={<Copy size={20} strokeWidth={1.5} />} label="Copy" onClick={handleCopy} />
+          <SheetTile icon={<Share2 size={20} strokeWidth={1.5} />} label="Share" onClick={handleShare} />
+          <SheetTile
+            icon={<Pencil size={20} strokeWidth={1.5} />}
+            label="Edit"
+            onClick={() => {
+              onClose();
+              onEdit();
+            }}
+          />
+          <SheetTile
+            icon={<Trash2 size={20} strokeWidth={1.5} />}
+            label="Delete"
+            onClick={handleDelete}
+            destructive
+          />
         </div>
 
-        {/* Cancel */}
+        {/* Bordered Cancel */}
         <div className="px-5 pt-5 pb-6">
           <button
             onClick={onClose}
-            className="w-full h-12 rounded-xl bg-dark-raised border border-dark text-dark-fg text-[14px] font-medium"
+            className="w-full h-12 rounded-xl bg-dark-surface border border-dark text-dark-fg text-[14px] font-medium"
           >
             Cancel
           </button>
         </div>
       </div>
     </>
+  );
+}
+
+function SheetTile({
+  icon,
+  label,
+  onClick,
+  destructive,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  onClick: () => void;
+  destructive?: boolean;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 ${
+        destructive
+          ? 'bg-[#2a1617] border-[#4d1f22] text-red-400'
+          : 'bg-dark-raised border-dark text-dark-fg'
+      }`}
+    >
+      {icon}
+      <span className="text-[13px] font-normal">{label}</span>
+    </button>
   );
 }
