@@ -1,6 +1,6 @@
 # VerseMate Mobile App — Claude Code Development Guide
 
-How to develop the VerseMate Lovable prototype using Claude Code. This guide covers setup, the development loop, automation, and contributing PRs back to the production repo.
+How to develop the VerseMate Lovable prototype using Claude Code. This guide covers setup, the development loop, automation, and contributing PRs back to the production mobile repo.
 
 ## Architecture
 
@@ -15,21 +15,35 @@ How to develop the VerseMate Lovable prototype using Claude Code. This guide cov
        ▼                                                                     ▼
   Local filesystem                                                 Browser iframe
        │
-       │  reads production source
+       │  reads mobile source (design tokens, components, patterns)
        ▼
 ┌───────────────────┐
-│ verse-mate/       │  ← production monorepo (READ-ONLY reference)
-│ verse-mate        │     packages/frontend-base = component library
-│ (cloned locally)  │     apps/frontend-next = Next.js web app
-└───────────────────┘     apps/backend = API server
+│ verse-mate/       │  ← PRODUCTION MOBILE APP (primary reference)
+│ verse-mate-mobile │     React Native / Expo
+│ (cloned locally)  │     constants/bible-design-tokens.ts = design system
+│                   │     components/bible/ = reading components
+│                   │     components/settings/ = settings components
+│                   │     hooks/bible/ = state hooks (AsyncStorage)
+│                   │     app/ = Expo Router screens
+└───────────────────┘
+
+┌───────────────────┐
+│ verse-mate/       │  ← PRODUCTION WEB APP (secondary reference, DO NOT port from)
+│ verse-mate        │     packages/frontend-base = web component library
+│                   │     apps/frontend-next = Next.js web app
+│                   │     apps/backend = API server
+└───────────────────┘
 ```
+
+**Important:** The mobile repo (`verse-mate/verse-mate-mobile`) is the PRIMARY reference for design tokens, component patterns, and feature PRs. The web repo (`verse-mate/verse-mate`) is secondary — only reference it for backend API endpoints. DO NOT port web frontend styles into the Lovable build.
 
 ## Repos
 
-| Repo | Purpose | Your access |
+| Repo | Purpose | Role |
 |---|---|---|
-| `verse-mate/versemate` | Lovable prototype (this repo) | Read + Write |
-| `verse-mate/verse-mate` | Production monorepo (backend + web frontend) | Read + Write |
+| `verse-mate/versemate` | Lovable prototype (this repo) | Read + Write — where you develop |
+| `verse-mate/verse-mate-mobile` | **Production mobile app** (React Native / Expo) | Read + Write — primary reference + PR target |
+| `verse-mate/verse-mate` | Production web app + backend | Read only — for API endpoints |
 
 ## Quick Start
 
@@ -45,9 +59,9 @@ bun install
 bun run dev
 # Opens at http://localhost:5173
 
-# 4. Clone the production repo (for reference only)
+# 4. Clone the production MOBILE repo (primary reference)
 cd ..
-git clone --depth 1 https://github.com/verse-mate/verse-mate.git prod
+git clone --depth 1 https://github.com/verse-mate/verse-mate-mobile.git mobile
 
 # 5. Start Claude Code
 cd versemate
@@ -56,66 +70,64 @@ claude
 
 ## Design Reference
 
+### Primary: Figma Mobile App section
+
 The canonical design is the **Figma Mobile App section** (node `5162:5662`):
 
 ```
 https://www.figma.com/design/GOiiI0yRby5mWqCji8e4pp/VerseMate?node-id=5162-5662
 ```
 
+### Secondary: Production mobile design tokens
+
+The mobile repo has a comprehensive design system at `constants/bible-design-tokens.ts`:
+
+```typescript
+// Light + dark mode colors, typography, spacing, animation specs
+import { colors, fontSizes, fontWeights, lineHeights, spacing } from '@/constants/bible-design-tokens';
+
+// Key colors (dark mode — matches Figma Mobile App section)
+colors.dark.background       // '#121212'
+colors.dark.backgroundSecondary // '#1A1A1A'  
+colors.dark.backgroundElevated  // '#222222'
+colors.dark.textPrimary      // '#E8E8E8'
+colors.dark.textSecondary    // '#B8B8B8'
+colors.dark.gold             // '#b09a6d'
+colors.dark.border           // '#3A3A3A'
+
+// Key colors (light mode)
+colors.light.bookBackground  // '#f6f3ec' (cream reading bg)
+colors.light.background      // '#ffffff'
+colors.light.textPrimary     // '#1a1a1a'
+colors.light.gold            // '#b09a6d'
+
+// Typography
+fontSizes.displayMedium      // 32 (chapter titles)
+fontSizes.heading2           // 20 (section headings)
+fontSizes.bodyLarge          // 18 (verse text — user adjustable)
+fontSizes.caption            // 12 (verse numbers)
+
+// Spacing (4px grid)
+spacing.lg                   // 16
+spacing.xl                   // 20
+spacing.xxl                  // 24
+spacing.xxxl                 // 32
+```
+
 ### Figma API access
 
 ```bash
-# Set your Figma personal access token
 export FIGMA_TOKEN="figd_..."
+FILE_KEY="GOiiI0yRby5mWqCji8e4pp"
 
-# Fetch the Mobile App section with full depth
+# Fetch Mobile App section
 curl -s -H "X-Figma-Token: $FIGMA_TOKEN" \
-  "https://api.figma.com/v1/files/GOiiI0yRby5mWqCji8e4pp/nodes?ids=5162:5662&depth=8"
+  "https://api.figma.com/v1/files/$FILE_KEY/nodes?ids=5162:5662&depth=8"
 
-# Export a specific frame as PNG
+# Export a frame as PNG
 curl -s -H "X-Figma-Token: $FIGMA_TOKEN" \
-  "https://api.figma.com/v1/images/GOiiI0yRby5mWqCji8e4pp?ids=5147:5080&format=png&scale=2"
+  "https://api.figma.com/v1/images/$FILE_KEY?ids=5147:5080&format=png&scale=2"
 ```
-
-### Design tokens (from Figma JSON extraction)
-
-```css
-/* Frame backgrounds */
---frame-bg: #1B1B1B;
-
-/* Headers */
---header-bg: #1A1A1A;
-
-/* Content body */
---content-bg: #000000;
-
-/* Cards, pill containers */
---card-bg: #323232;
-
-/* Text */
---text-primary: #E7E7E7;
---text-muted: rgba(255, 255, 255, 0.6);
-
-/* Accent */
---gold: #B09A6D;
-
-/* Reading body (only screen with non-black content) */
---reading-bg: #F5F2EB;
-```
-
-### Typography
-
-| Element | Font | Weight | Size | Color |
-|---|---|---|---|---|
-| Header book name | Roboto | 400 | 14px | #FFFFFF |
-| Body title | Roboto | 500 | 24px | #E7E7E7 |
-| Scripture verse text | Roboto Serif | 300 | 18px | #000 (on cream) |
-| Verse numbers | Roboto | 400 | 12px | #3E464D |
-| Tab pills | Roboto | 400 | 14px | #FFF / #000 |
-| Progress label | Roboto | 400 | 8px | #B09A6D |
-| Screen titles | Roboto | 500 | 18px | #FFFFFF |
-| Commentary title | Inter | 700 | 20px | #FFFFFF |
-| Commentary body | Inter | 400 | 16px | #FFFFFF |
 
 ## Backend API
 
@@ -126,38 +138,19 @@ OpenAPI spec: `https://api.versemate.org/openapi/json`
 ### Key endpoints
 
 ```bash
-# Bible content
 GET /bible/books                              # All 66 books
-GET /bible/book/{bookId}/{chapterNumber}      # Chapter text + subtitles
+GET /bible/book/{bookId}/{chapterNumber}      # Chapter text + subtitles (no versionKey!)
 GET /bible/book/explanation/{bookId}/{ch}?explanationType=summary|byline|detailed
-
-# Auto-highlights
 GET /bible/auto-highlights/{bookId}/{ch}
-
-# User data (requires auth)
 GET /bible/book/bookmarks/{userId}
 GET /bible/book/notes/{userId}
 GET /bible/highlights/{userId}
-
-# Topics
 GET /topics/categories
 GET /topics/search?category=EVENT&limit=50
 GET /topics/{id}/references
-
-# Auth
 POST /auth/login { email, password }
 POST /auth/sso { provider: "google", token, platform: "web" }
 ```
-
-### Auth flow
-
-The app uses Bearer JWT tokens stored in localStorage:
-
-```
-localStorage: versemate-access-token, versemate-refresh-token
-```
-
-On 401, the API client (`src/services/api.ts`) automatically tries `POST /auth/refresh` before failing.
 
 ## Development Workflow
 
@@ -170,7 +163,7 @@ On 401, the API client (`src/services/api.ts`) automatically tries `POST /auth/r
 4. Claude Code commits + pushes to GitHub
 5. Lovable auto-syncs (60s) and deploys preview
 6. You QA in the preview, report bugs
-7. Repeat from step 1
+7. Repeat
 ```
 
 ### Critical rule: always build before pushing
@@ -179,81 +172,107 @@ On 401, the API client (`src/services/api.ts`) automatically tries `POST /auth/r
 bunx vite build
 ```
 
-A broken build = blank Lovable preview = wasted iteration. Claude Code should ALWAYS verify the build passes before pushing.
+A broken build = blank Lovable preview = wasted iteration.
 
-### One commit per logical change
+## Contributing PRs to the Mobile Repo
 
-Don't bundle 10 fixes into one commit. Each fix gets its own commit so regressions are easy to identify.
-
-## File Structure
-
-```
-src/
-├── components/           # Shared UI components
-│   ├── AppLayout.tsx      # Phone frame shell (390x844)
-│   ├── ScreenHeader.tsx   # Dark header bar with back arrow
-│   ├── MarkdownBlock.tsx  # Lightweight markdown renderer
-│   ├── ShareIcon.tsx      # Production iOS share icon SVG
-│   ├── VerseInsightSheet.tsx  # Bottom sheet overlay
-│   ├── EditNoteSheet.tsx      # Note editing sheet
-│   ├── NoteOptionsSheet.tsx   # Note actions (Copy/Share/Edit/Delete)
-│   ├── HighlightOptionsSheet.tsx
-│   ├── AddNoteSheet.tsx
-│   ├── VerseActions.tsx       # Verse long-press popup
-│   └── BookSelector.tsx       # Search modal (OT/NT/Topics)
-├── contexts/
-│   └── AppContext.tsx     # Global state (useReducer + API sync)
-├── pages/                # Route-level screens
-│   ├── ReadingScreen.tsx
-│   ├── CommentaryScreen.tsx
-│   ├── MenuScreen.tsx
-│   ├── BookmarksScreen.tsx
-│   ├── NotesScreen.tsx
-│   ├── HighlightsScreen.tsx
-│   ├── SettingsScreen.tsx
-│   ├── TopicsScreen.tsx
-│   ├── TopicEventsScreen.tsx
-│   ├── TopicEventDetailScreen.tsx
-│   ├── MostQuotedScreen.tsx
-│   ├── AboutScreen.tsx
-│   ├── GivingScreen.tsx
-│   ├── HelpScreen.tsx
-│   └── SignInScreen.tsx
-├── services/
-│   ├── api.ts            # Typed fetch client with auth
-│   ├── bibleService.ts   # All API calls
-│   ├── googleAuth.ts     # Google Identity Services
-│   └── types.ts          # Domain types
-└── index.css             # Design tokens + utility classes
-```
-
-## Contributing PRs to Production
-
-When a feature is proven in the Lovable prototype, port it to the production repo:
+When a feature is proven in the Lovable prototype, port it to the production mobile app.
 
 ### Setup
 
 ```bash
-cd prod  # verse-mate/verse-mate clone
+cd mobile  # verse-mate/verse-mate-mobile clone
 git checkout main && git pull origin main
 git checkout -b feat/your-feature
 ```
 
-### Key production paths
+### Key mobile repo paths
 
 ```
-packages/frontend-base/src/
-├── store/                    # nanostores atoms
-├── ui/Settings/Settings.tsx  # Settings screen
-├── ui/MainText/              # Bible text rendering
-├── ui/Explanation/           # Commentary/insight
-├── ui/Menu/                  # Menu sidebar
-└── styles/vars.css           # Design tokens
+verse-mate-mobile/
+├── app/                          # Expo Router screens
+│   ├── settings.tsx               # Settings screen
+│   ├── bookmarks.tsx              # Bookmarks
+│   ├── highlights/                # Highlights (index + detail)
+│   ├── notes/                     # Notes (index + detail)
+│   ├── bible/[bookId]/[chapterNumber].tsx  # Reading screen
+│   └── auth/                      # Login/signup
+├── components/
+│   ├── bible/ChapterReader.tsx    # Main verse rendering
+│   ├── bible/BookmarkToggle.tsx   # Bookmark button
+│   ├── bible/NotesButton.tsx      # Notes button
+│   ├── bible/ShareButton.tsx      # Share button
+│   ├── settings/ThemeSelector.tsx # Theme picker
+│   └── settings/FontSizeSelector.tsx # Font size (if merged)
+├── constants/
+│   └── bible-design-tokens.ts     # THE design system — colors, fonts, spacing
+├── contexts/
+│   ├── ThemeContext.tsx            # Light/dark mode
+│   ├── AuthContext.tsx             # Auth state
+│   └── BibleInteractionContext.tsx # Highlights, selections
+├── hooks/bible/
+│   ├── use-font-size.ts           # Font size preference (if merged)
+│   ├── use-active-tab.ts          # Commentary tab state
+│   ├── use-bookmarks.ts           # Bookmark CRUD
+│   ├── use-highlights.ts          # Highlight CRUD
+│   └── use-chapter-navigation.ts  # Chapter nav
+└── types/
+    └── bible.ts                   # Domain types
+```
+
+### Hook pattern (follow exactly)
+
+Every persistent preference uses this pattern (from `use-active-tab.ts`):
+
+```typescript
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useEffect, useState } from 'react';
+
+let inMemoryCache: MyType | null = null;  // prevents flicker on remount
+
+export function __TEST_ONLY_RESET_CACHE() { inMemoryCache = null; }
+
+export function useMyHook() {
+  const [value, setValue] = useState(inMemoryCache || DEFAULT);
+  const [isLoading, setIsLoading] = useState(!inMemoryCache);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    // Load from AsyncStorage on mount
+  }, []);
+
+  const update = async (newValue) => {
+    setValue(newValue);
+    inMemoryCache = newValue;
+    await AsyncStorage.setItem(KEY, String(newValue));
+  };
+
+  return { value, update, isLoading, error };
+}
+```
+
+### Component pattern (follow ThemeSelector)
+
+Settings sections use `Pressable` + `StyleSheet.create` + design tokens:
+
+```typescript
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { type getColors, spacing } from '@/constants/bible-design-tokens';
+import { useTheme } from '@/contexts/ThemeContext';
+
+export function MySelector() {
+  const { colors } = useTheme();
+  const styles = createStyles(colors);
+  // ...
+}
+
+const createStyles = (colors: ReturnType<typeof getColors>) =>
+  StyleSheet.create({ /* ... */ });
 ```
 
 ### Lint before committing
 
-The production repo uses Biome for linting. Always run with the project's own binary:
+The mobile repo uses Biome + ESLint. The pre-commit hook runs both automatically:
 
 ```bash
 # Install deps (one time)
@@ -266,26 +285,19 @@ bun install
 ./node_modules/.bin/biome check path/to/your/file.tsx
 ```
 
-The pre-commit hook (husky + lint-staged) will run `biome check` and `tsc` automatically. If it fails, fix the issues before committing.
+The pre-commit hook runs `biome check` AND `eslint --fix`. If it fails, fix the issues before committing.
 
 ### Key gotchas
 
-1. **No `@nanostores/react`** — use `useSyncExternalStore` from React instead:
-   ```typescript
-   import { useSyncExternalStore } from "react";
-   import { myStore } from "../../store/my-store";
+1. **No `@nanostores/react`** in the mobile repo — use `useSyncExternalStore` or the AsyncStorage hook pattern instead.
 
-   const value = useSyncExternalStore(
-     myStore.subscribe,
-     () => myStore.get(),
-   );
-   ```
+2. **No external slider dependency** — use `Pressable` buttons instead of `@react-native-community/slider`.
 
-2. **Import order matters** — Biome enforces alphabetical import sorting. External packages first, then relative imports.
+3. **Import order matters** — Biome enforces alphabetical import sorting.
 
-3. **Indentation** — 2 spaces (not tabs), configured in `biome.json`.
+4. **`@/` path alias** — maps to the repo root (not `src/`).
 
-4. **JSX formatting** — Multi-attribute JSX elements must have attributes on separate lines.
+5. **Design tokens, not hardcoded values** — always use `colors.textPrimary` not `'#1a1a1a'`, `spacing.lg` not `16`.
 
 ### Creating the PR
 
@@ -293,6 +305,7 @@ The pre-commit hook (husky + lint-staged) will run `biome check` and `tsc` autom
 git push origin feat/your-feature
 
 gh pr create \
+  --repo verse-mate/verse-mate-mobile \
   --title "feat: Your feature title" \
   --base main \
   --body "## Summary
@@ -312,63 +325,18 @@ gh pr create \
 
 ```bash
 # Check PR status
-gh pr checks <PR_NUMBER>
+gh pr checks <PR_NUMBER> --repo verse-mate/verse-mate-mobile
 
-# If Build Frontend fails, get the error:
-gh run view <RUN_ID> --log-failed | tail -30
+# CI checks: Chromatic Visual Regression, EAS Preview Build,
+# Jest Tests, Quality Checks, Test Lint-staged
 ```
 
 ## Environment Variables
 
 ```bash
-# .env.local (create this file, not committed)
+# .env.local (not committed)
 VITE_API_URL=https://api.versemate.org
 VITE_GOOGLE_CLIENT_ID=94126503648-2fb9dakdfi8pmi8ep78bk5nsrv94db6o.apps.googleusercontent.com
-```
-
-## Automated Scripts
-
-### Export Figma frames
-
-```bash
-# Export all 28 Mobile App frames as PNGs
-export FIGMA_TOKEN="figd_..."
-FILE_KEY="GOiiI0yRby5mWqCji8e4pp"
-SECTION="5162:5662"
-
-# Get frame IDs
-curl -s -H "X-Figma-Token: $FIGMA_TOKEN" \
-  "https://api.figma.com/v1/files/$FILE_KEY/nodes?ids=$SECTION&depth=2" \
-  | python3 -c "
-import json, sys
-d = json.load(sys.stdin)
-section = d['nodes']['$SECTION']['document']
-frames = [c for c in section['children'] if c['type']=='FRAME']
-print(','.join(f['id'] for f in frames))
-"
-```
-
-### Extract design tokens from Figma
-
-```bash
-# Extract exact colors, fonts, and sizes from a specific frame
-curl -s -H "X-Figma-Token: $FIGMA_TOKEN" \
-  "https://api.figma.com/v1/files/$FILE_KEY/nodes?ids=FRAME_ID&depth=6" \
-  | python3 extract_tokens.py
-```
-
-### Smoke test the API
-
-```bash
-# Verify Bible content loads
-curl -s 'https://api.versemate.org/bible/book/1/1' | python3 -c "
-import json, sys
-d = json.load(sys.stdin)
-print(d['book']['name'], '- verses:', len(d['book']['chapters'][0]['verses']))
-"
-
-# Verify topics load
-curl -s 'https://api.versemate.org/topics/categories'
 ```
 
 ## Troubleshooting
@@ -377,7 +345,7 @@ curl -s 'https://api.versemate.org/topics/categories'
 
 1. Run `bunx vite build` locally — if it fails, fix the error
 2. Run `bunx tsc --noEmit` — catches type errors vite misses
-3. Push a trivial commit to force Lovable to rebuild:
+3. Push a trivial commit to force rebuild:
    ```bash
    echo "/* $(date +%s) */" >> src/index.css
    git add . && git commit -m "chore: force rebuild" && git push
@@ -385,29 +353,20 @@ curl -s 'https://api.versemate.org/topics/categories'
 
 ### API returns 404 for chapter text
 
-The API currently doesn't support `versionKey` — omit it:
+The API doesn't support `versionKey` — omit it:
 ```
-✗ GET /bible/book/1/1?versionKey=ESV  → 404
-✓ GET /bible/book/1/1                  → 200
+BAD:  GET /bible/book/1/1?versionKey=ESV  → 404
+GOOD: GET /bible/book/1/1                  → 200
 ```
 
 ### Google SSO doesn't work in Lovable preview
 
-The Lovable preview origin needs to be added as an **Authorized JavaScript origin** in Google Cloud Console for the OAuth client. Add:
-- `https://*.lovableproject.com`
-- `http://localhost:5173` (for local dev)
+Add the Lovable preview origin as an **Authorized JavaScript origin** in Google Cloud Console.
 
 ### Books appear in random order
 
-The API returns books unsorted. Sort by `bookId`:
-```typescript
-books.sort((a, b) => a.bookId - b.bookId);
-```
+Sort by `bookId`: `books.sort((a, b) => a.bookId - b.bookId)`
 
-### Commentary body shows raw markdown
+### Figma API rate limited
 
-The API returns rich markdown. Use `MarkdownBlock` component or `CommentaryBody` to render headings, bold, blockquotes.
-
-### Auto-highlights not showing
-
-The API returns `{ success: true, data: [...] }` — the highlights are in `data`, not at the top level.
+You get ~30 requests/minute. All 28 Mobile App PNGs are already downloaded in `figma_mobile_app/`. Use those instead of re-fetching.
