@@ -10,6 +10,31 @@ import {
 } from '@/services/bibleService';
 import { Chapter, HighlightColor, BibleBook } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
+
+// Production SVG icons for the header tab triggers
+function BibleIcon({ active }: { active: boolean }) {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M5.39525 21.6047C5.99208 22.2016 6.71292 22.5 7.55775 22.5H19.5V21C19.0705 21 18.75 20.6795 18.75 20.25C18.75 19.8205 19.0705 19.5 19.5 19.5V3H7.55775C6.71292 3 5.99208 3.29842 5.39525 3.89525C4.79842 4.49208 4.5 5.21292 4.5 6.05775V18.9423C4.5 19.7871 4.79842 20.5079 5.39525 21.6047ZM9 7.5H10.5V9H12V10.5H10.5V12H9V10.5H7.5V9H9V7.5ZM13.5 9.75H16.5V11.25H13.5V9.75ZM13.5 12.75H16.5V14.25H13.5V12.75ZM7.5 12.75H11.25V14.25H7.5V12.75ZM7.5 15.75H16.5V17.25H7.5V15.75Z"
+        fill={active ? '#b09a6d' : '#fff'}
+      />
+    </svg>
+  );
+}
+
+function AutoStoriesIcon({ active }: { active: boolean }) {
+  return (
+    <svg width="24" height="24" viewBox="0 -960 960 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M480-160q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740v484q51-32 107-48t113-16q36 0 70.5 6t69.5 18v-480q15 5 29.5 10.5T898-752q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59Zm80-200v-380l200-200v400L560-360Zm-160 65v-396q-41-24-87-36t-93-12q-36 0-71.5 7T80-712v396q35-12 69.5-18t70.5-6q47 0 91.5 10.5T400-295Zm0 0v-396 396Z"
+        fill={active ? '#b09a6d' : '#fff'}
+      />
+    </svg>
+  );
+}
 import BookSelector from '@/components/BookSelector';
 import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
@@ -152,21 +177,23 @@ export default function ReadingScreen() {
             <ChevronDown size={18} className="text-header-fg/90" strokeWidth={2} />
           </button>
 
-          {/* Right: Bible/Insight segmented pill + Menu */}
-          <div className="flex items-center gap-2">
-            <div className="flex items-center rounded-full bg-[#3a3a3a] p-1 border border-[#4a4a4a]">
-              <button className="px-4 h-8 rounded-full text-[13px] font-semibold bg-gold text-[#1A1A1A]">
-                Bible
-              </button>
-              <button
-                onClick={() =>
-                  navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/commentary`)
-                }
-                className="px-4 h-8 rounded-full text-[13px] font-semibold text-white transition-colors"
-              >
-                Insight
-              </button>
-            </div>
+          {/* Right: Bible/AutoStories icon tabs + Menu */}
+          <div className="flex items-center gap-1">
+            <button
+              aria-label="Bible"
+              style={{ background: 'transparent', border: 'none', padding: '10px 6px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            >
+              <BibleIcon active={true} />
+            </button>
+            <button
+              aria-label="Insight"
+              onClick={() =>
+                navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/commentary`)
+              }
+              style={{ background: 'transparent', border: 'none', padding: '10px 6px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            >
+              <AutoStoriesIcon active={false} />
+            </button>
             <button
               onClick={() => navigate('/menu')}
               aria-label="Open menu"
@@ -322,18 +349,18 @@ export default function ReadingScreen() {
         <button
           onClick={() => goToChapter(-1)}
           aria-label="Previous chapter"
-          className="absolute left-3 bottom-14 w-11 h-11 rounded-full bg-[#1A1A1A] text-white flex items-center justify-center shadow-lg z-20"
+          style={{ position: 'absolute', left: 12, bottom: 45, top: 'unset', transform: 'translateY(0)', width: 40, height: 40, borderRadius: '50%', background: 'var(--vm-snow)', border: '1px solid rgba(220,224,227,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.12)', zIndex: 20, cursor: 'pointer' }}
         >
-          <ChevronLeft size={20} strokeWidth={2.5} />
+          <ChevronLeft size={20} color="#1B1B1B" strokeWidth={2.5} />
         </button>
       )}
       {state.chapter < maxChapter && (
         <button
           onClick={() => goToChapter(1)}
           aria-label="Next chapter"
-          className="absolute right-3 bottom-14 w-11 h-11 rounded-full bg-[#1A1A1A] text-white flex items-center justify-center shadow-lg z-20"
+          style={{ position: 'absolute', right: 12, bottom: 45, top: 'unset', transform: 'translateY(0)', width: 40, height: 40, borderRadius: '50%', background: 'var(--vm-snow)', border: '1px solid rgba(220,224,227,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.12)', zIndex: 20, cursor: 'pointer' }}
         >
-          <ChevronRight size={20} strokeWidth={2.5} />
+          <ChevronRight size={20} color="#1B1B1B" strokeWidth={2.5} />
         </button>
       )}
 

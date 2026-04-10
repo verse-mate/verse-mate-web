@@ -2,15 +2,39 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchCommentary } from '@/services/bibleService';
 import { Commentary } from '@/services/types';
-import { ChevronDown, ChevronUp, Menu, Share2 } from 'lucide-react';
+import { ChevronDown, ChevronUp, Menu } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
 
 type Tab = 'summary' | 'byline' | 'detailed';
 
+// Production SVG icons for the header tab triggers
+function BibleIcon({ active }: { active: boolean }) {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M5.39525 21.6047C5.99208 22.2016 6.71292 22.5 7.55775 22.5H19.5V21C19.0705 21 18.75 20.6795 18.75 20.25C18.75 19.8205 19.0705 19.5 19.5 19.5V3H7.55775C6.71292 3 5.99208 3.29842 5.39525 3.89525C4.79842 4.49208 4.5 5.21292 4.5 6.05775V18.9423C4.5 19.7871 4.79842 20.5079 5.39525 21.6047ZM9 7.5H10.5V9H12V10.5H10.5V12H9V10.5H7.5V9H9V7.5ZM13.5 9.75H16.5V11.25H13.5V9.75ZM13.5 12.75H16.5V14.25H13.5V12.75ZM7.5 12.75H11.25V14.25H7.5V12.75ZM7.5 15.75H16.5V17.25H7.5V15.75Z"
+        fill={active ? '#b09a6d' : '#fff'}
+      />
+    </svg>
+  );
+}
+
+function AutoStoriesIcon({ active }: { active: boolean }) {
+  return (
+    <svg width="24" height="24" viewBox="0 -960 960 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M480-160q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740v484q51-32 107-48t113-16q36 0 70.5 6t69.5 18v-480q15 5 29.5 10.5T898-752q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59Zm80-200v-380l200-200v400L560-360Zm-160 65v-396q-41-24-87-36t-93-12q-36 0-71.5 7T80-712v396q35-12 69.5-18t70.5-6q47 0 91.5 10.5T400-295Zm0 0v-396 396Z"
+        fill={active ? '#b09a6d' : '#fff'}
+      />
+    </svg>
+  );
+}
+
 /**
- * CommentaryScreen — full dark with Bible/Insight pill in header + Summary/By Line/Detailed tabs.
- * Figma references: Commentary - Summary (5147:5119 / 5147:5164), Commentary - By Line (5147:5194),
- * By Line Expandable (5983:5379). Mobile App section.
+ * CommentaryScreen — dark header with icon tabs (AutoStories active), tab pills right-aligned,
+ * white body area. Production-exact layout.
  */
 export default function CommentaryScreen() {
   const { book, chapter } = useParams<{ book: string; chapter: string }>();
@@ -34,12 +58,13 @@ export default function CommentaryScreen() {
 
   return (
     <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
-      {/* Header — matches Reading header pattern but Insight is selected */}
+      {/* Header — dark, AutoStories icon active (gold), Bible icon inactive (white) */}
       <header
-        className="shrink-0 bg-dark-surface safe-top border-b border-dark"
+        className="shrink-0 bg-dark-surface safe-top"
         style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}
       >
         <div className="flex items-center justify-between px-4" style={{ height: 56 }}>
+          {/* Left: Book + chapter dropdown — tapping navigates back to /read */}
           <button
             onClick={() => navigate(`/read`)}
             className="flex items-center gap-1.5 text-dark-fg min-h-[44px] pr-2 -ml-1"
@@ -50,18 +75,21 @@ export default function CommentaryScreen() {
             <ChevronDown size={18} className="text-dark-fg/90" strokeWidth={2} />
           </button>
 
-          <div className="flex items-center gap-2">
-            <div className="flex items-center rounded-full bg-dark-raised p-0.5">
-              <button
-                onClick={() => navigate('/read')}
-                className="px-3.5 h-8 rounded-full text-[13px] font-medium text-dark-fg/80"
-              >
-                Bible
-              </button>
-              <button className="px-3.5 h-8 rounded-full text-[13px] font-medium bg-gold text-[#1A1A1A]">
-                Insight
-              </button>
-            </div>
+          {/* Right: Bible/AutoStories icon tabs + Menu */}
+          <div className="flex items-center gap-1">
+            <button
+              aria-label="Bible"
+              onClick={() => navigate('/read')}
+              style={{ background: 'transparent', border: 'none', padding: '10px 6px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            >
+              <BibleIcon active={false} />
+            </button>
+            <button
+              aria-label="Insight"
+              style={{ background: 'transparent', border: 'none', padding: '10px 6px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            >
+              <AutoStoriesIcon active={true} />
+            </button>
             <button
               onClick={() => navigate('/menu')}
               aria-label="Open menu"
@@ -73,46 +101,51 @@ export default function CommentaryScreen() {
         </div>
       </header>
 
-      {/* Production tab pills — right-aligned, #fff3 bg, 100px radius, Inter 14px/500 */}
-      <div className="shrink-0 border-t border-white/20 mx-4" />
-      <div className="shrink-0 flex items-center justify-end gap-4 px-4 py-4 bg-dark-surface">
+      {/* Tab pills — dark bar, RIGHT-ALIGNED, gap 16px, padding 16px */}
+      <div
+        className="shrink-0 bg-dark-surface"
+        style={{ display: 'flex', justifyContent: 'end', alignItems: 'center', gap: 16, padding: 16 }}
+      >
         {tabs.map(t => (
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
-            className={`px-2 py-0.5 rounded-[100px] text-[14px] font-medium leading-6 transition-colors ${
-              tab === t.id
-                ? 'bg-gold text-[#000]'
-                : 'bg-white/20 text-white'
-            }`}
+            style={{
+              borderRadius: 100,
+              padding: '2px 8px',
+              fontFamily: 'Inter, sans-serif',
+              fontSize: 14,
+              fontWeight: 500,
+              lineHeight: '24px',
+              background: tab === t.id ? '#b09a6d' : 'rgba(255,255,255,0.2)',
+              color: tab === t.id ? '#000' : '#fff',
+              border: 'none',
+              cursor: 'pointer',
+            }}
           >
             {t.label}
           </button>
         ))}
       </div>
 
-      {/* Production body — WHITE bg (var(--snow)), not dark */}
-      <div className="flex-1 overflow-y-auto px-4 pb-8 bg-white text-[#212531]">
+      {/* Body — WHITE background */}
+      <div className="flex-1 overflow-y-auto px-4 pb-8" style={{ background: '#fff', color: '#1B1B1B' }}>
         {commentaries.length === 0 ? (
-          <p className="text-[14px] text-muted-foreground text-center py-8">
+          <p className="text-[14px] text-center py-8" style={{ color: '#818990' }}>
             No commentary available for this chapter.
           </p>
         ) : tab === 'summary' ? (
-          <div className="pt-2">
-            <div className="flex items-start justify-between mb-4">
-              <h2 className="text-[20px] font-bold text-foreground">
-                Summary of {decodedBook} {chapterNum}
-              </h2>
-              <button aria-label="Share" className="w-8 h-8 flex items-center justify-center">
-                <Share2 size={18} className="text-foreground" strokeWidth={1.5} />
-              </button>
-            </div>
+          <div className="pt-4">
+            {/* Title: Inter 700 20px/28px, color #1B1B1B */}
+            <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#1B1B1B', marginBottom: 16 }}>
+              Summary of {decodedBook} {chapterNum}
+            </h2>
             {(() => {
               const summary = commentaries.find(c => c.type === 'summary');
               return summary ? (
-                <MarkdownBlock text={summary.detail} />
+                <CommentaryBody text={summary.detail} />
               ) : (
-                <p className="text-[14px] text-muted-foreground">No summary available.</p>
+                <p className="text-[14px]" style={{ color: '#818990' }}>No summary available.</p>
               );
             })()}
           </div>
@@ -121,19 +154,15 @@ export default function CommentaryScreen() {
             const byLineItems = commentaries.filter(c => c.type === 'byline');
             const allExpanded = expanded === -2;
             return (
-              <div className="pt-2">
-                <div className="flex items-center justify-between mb-3">
-                  <h2 className="text-[18px] font-bold text-foreground">
-                    Line-by-Line Analysis of {decodedBook} {chapterNum}
-                  </h2>
-                  <button aria-label="Share" className="w-8 h-8 flex items-center justify-center shrink-0">
-                    <Share2 size={18} className="text-foreground" strokeWidth={1.5} />
-                  </button>
-                </div>
-                <div className="flex justify-end mb-2">
+              <div className="pt-4">
+                {/* Title: Inter 500 18px/24px */}
+                <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#1B1B1B', marginBottom: 12 }}>
+                  Line-by-Line Analysis of {decodedBook} {chapterNum}
+                </h2>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
                   <button
                     onClick={() => setExpanded(allExpanded ? null : -2)}
-                    className="text-[13px] text-[#b09a6d]"
+                    style={{ fontFamily: 'Inter, sans-serif', fontSize: 13, color: '#b09a6d', background: 'none', border: 'none', cursor: 'pointer' }}
                   >
                     {allExpanded ? 'Collapse All' : 'Expand All'}
                   </button>
@@ -142,30 +171,30 @@ export default function CommentaryScreen() {
                   {byLineItems.map(c => {
                     const isOpen = allExpanded || expanded === c.verse;
                     return (
-                      <div key={c.verse} className="border-b border-dark last:border-b-0">
+                      <div key={c.verse} style={{ borderBottom: '1px solid #dce0e3' }}>
                         <button
                           onClick={() => setExpanded(isOpen ? null : c.verse)}
-                          className="flex items-center justify-between w-full py-4 text-left"
+                          style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '16px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer' }}
                         >
-                          <span className="text-[15px] text-foreground">
+                          <span style={{ fontFamily: 'Inter, sans-serif', fontSize: 15, color: '#1B1B1B' }}>
                             {decodedBook} {chapterNum}:{c.verse}
                           </span>
                           {isOpen ? (
-                            <ChevronUp size={18} className="text-muted-foreground shrink-0" />
+                            <ChevronUp size={18} color="#818990" style={{ flexShrink: 0 }} />
                           ) : (
-                            <ChevronDown size={18} className="text-muted-foreground shrink-0" />
+                            <ChevronDown size={18} color="#818990" style={{ flexShrink: 0 }} />
                           )}
                         </button>
                         {isOpen && (
-                          <div className="pb-4">
-                            <MarkdownBlock text={c.detail} />
+                          <div style={{ paddingBottom: 16 }}>
+                            <CommentaryBody text={c.detail} />
                           </div>
                         )}
                       </div>
                     );
                   })}
                   {byLineItems.length === 0 && (
-                    <p className="text-[14px] text-muted-foreground py-8 text-center">
+                    <p className="text-[14px] py-8 text-center" style={{ color: '#818990' }}>
                       Line-by-line analysis not available.
                     </p>
                   )}
@@ -177,19 +206,15 @@ export default function CommentaryScreen() {
           (() => {
             const detailed = commentaries.find(c => c.type === 'detailed');
             return detailed ? (
-              <div className="pt-2">
-                <div className="flex items-start justify-between mb-4">
-                  <h2 className="text-[20px] font-bold text-foreground">
-                    In-Depth Analysis of {decodedBook} {chapterNum}
-                  </h2>
-                  <button aria-label="Share" className="w-8 h-8 flex items-center justify-center shrink-0">
-                    <Share2 size={18} className="text-foreground" strokeWidth={1.5} />
-                  </button>
-                </div>
-                <MarkdownBlock text={detailed.detail} />
+              <div className="pt-4">
+                {/* Title: Inter 700 20px/28px */}
+                <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#1B1B1B', marginBottom: 16 }}>
+                  In-Depth Analysis of {decodedBook} {chapterNum}
+                </h2>
+                <CommentaryBody text={detailed.detail} />
               </div>
             ) : (
-              <p className="text-[14px] text-muted-foreground py-8 text-center">
+              <p className="text-[14px] py-8 text-center" style={{ color: '#818990' }}>
                 Detailed commentary not available.
               </p>
             );
@@ -198,4 +223,80 @@ export default function CommentaryScreen() {
       </div>
     </div>
   );
+}
+
+/**
+ * Production-exact Commentary body renderer.
+ * h2 elements → Inter 500 18px/24px
+ * span/p text → Inter 400 16px/24px, color #1B1B1B
+ */
+function CommentaryBody({ text }: { text: string }) {
+  const lines = text.split('\n');
+  const elements: React.ReactNode[] = [];
+  let para: string[] = [];
+  let key = 0;
+
+  const flushPara = () => {
+    if (para.length) {
+      elements.push(
+        <p key={key++} style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, fontSize: 16, lineHeight: '24px', color: '#1B1B1B', marginBottom: 12 }}>
+          {inlineFormat(para.join(' '))}
+        </p>
+      );
+      para = [];
+    }
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (!line) {
+      flushPara();
+      continue;
+    }
+    if (line.startsWith('###') || line.startsWith('##') || line.startsWith('#')) {
+      flushPara();
+      const text = line.replace(/^#+\s*/, '');
+      elements.push(
+        <h2 key={key++} style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#1B1B1B', marginTop: 16, marginBottom: 8 }}>
+          {inlineFormat(text)}
+        </h2>
+      );
+      continue;
+    }
+    if (line.startsWith('>')) {
+      flushPara();
+      elements.push(
+        <blockquote key={key++} style={{ borderLeft: '2px solid #b09a6d', paddingLeft: 12, fontStyle: 'italic', marginBottom: 12, fontFamily: 'Inter, sans-serif', fontSize: 16, lineHeight: '24px', color: '#1B1B1B' }}>
+          {inlineFormat(line.replace(/^>\s?/, ''))}
+        </blockquote>
+      );
+      continue;
+    }
+    para.push(line);
+  }
+  flushPara();
+
+  return <div>{elements}</div>;
+}
+
+import React from 'react';
+
+function inlineFormat(text: string): React.ReactNode {
+  const parts: React.ReactNode[] = [];
+  const re = /(\*\*[^*]+\*\*|\*[^*]+\*)/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  let key = 0;
+  while ((m = re.exec(text))) {
+    if (m.index > last) parts.push(text.slice(last, m.index));
+    const match = m[0];
+    if (match.startsWith('**')) {
+      parts.push(<strong key={key++} style={{ fontWeight: 600 }}>{match.slice(2, -2)}</strong>);
+    } else {
+      parts.push(<em key={key++}>{match.slice(1, -1)}</em>);
+    }
+    last = m.index + match.length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts;
 }
