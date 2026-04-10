@@ -63,19 +63,19 @@ export default function MenuScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+    <div className="flex flex-col h-full bg-white text-[#1B1B1B]">
       {/* Header — title + close */}
       <header
         className="shrink-0 flex items-center justify-between px-5 safe-top"
         style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)', height: 92 }}
       >
-        <h1 className="text-[18px] font-medium text-dark-fg">Menu</h1>
+        <h1 className="text-[18px] font-medium text-[#1B1B1B]">Menu</h1>
         <button
           onClick={() => navigate('/read')}
           aria-label="Close menu"
           className="w-[44px] h-[44px] flex items-center justify-center -mr-2"
         >
-          <X size={22} className="text-dark-fg" strokeWidth={2} />
+          <X size={22} className="text-[#1B1B1B]" strokeWidth={2} />
         </button>
       </header>
 
@@ -84,10 +84,10 @@ export default function MenuScreen() {
         <button
           onClick={() => !state.isSignedIn && navigate('/menu/signin')}
           disabled={state.isSignedIn}
-          className="flex items-center gap-3 w-full h-[64px] px-4 rounded-xl bg-dark-raised border border-dark text-left mb-3"
+          className="flex items-center gap-3 w-full h-[64px] px-4 rounded-xl bg-[#f8f9fa] border border-[#dce0e380] text-left mb-3"
         >
-          <div className="w-10 h-10 rounded-full bg-dark-surface flex items-center justify-center shrink-0">
-            <User size={20} className="text-dark-muted" strokeWidth={1.5} />
+          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0">
+            <User size={20} className="text-[#818990]" strokeWidth={1.5} />
           </div>
           <div className="min-w-0 flex-1">
             <p className="text-[14px] text-gold font-medium truncate">
@@ -95,7 +95,7 @@ export default function MenuScreen() {
                 ? state.userName || state.userEmail?.split('@')[0] || 'You'
                 : 'Guest'}
             </p>
-            <p className="text-[12px] text-dark-muted truncate">
+            <p className="text-[12px] text-[#818990] truncate">
               {state.isSignedIn ? state.userEmail || '' : 'Tap to sign in'}
             </p>
           </div>
@@ -106,20 +106,20 @@ export default function MenuScreen() {
           {items.slice(0, 4).map(item => (
             <MenuRow
               key={item.label}
-              icon={<item.icon size={18} className="text-dark-fg" strokeWidth={1.5} />}
+              icon={<item.icon size={18} className="text-[#1B1B1B]" strokeWidth={1.5} />}
               label={item.label}
               onClick={() => navigate(item.path)}
             />
           ))}
           <MenuRow
-            icon={<Share2 size={18} className="text-dark-fg" strokeWidth={1.5} />}
+            icon={<Share2 size={18} className="text-[#1B1B1B]" strokeWidth={1.5} />}
             label="Share VerseMate"
             onClick={handleShare}
           />
           {items.slice(4).map(item => (
             <MenuRow
               key={item.label}
-              icon={<item.icon size={18} className="text-dark-fg" strokeWidth={1.5} />}
+              icon={<item.icon size={18} className="text-[#1B1B1B]" strokeWidth={1.5} />}
               label={item.label}
               onClick={() => navigate(item.path)}
             />
@@ -130,7 +130,7 @@ export default function MenuScreen() {
         <div className="mt-2">
           <button
             onClick={handleLogout}
-            className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl bg-dark-raised border border-dark"
+            className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl bg-[#f8f9fa] border border-[#dce0e380]"
           >
             <LogOut size={18} className="text-red-400" strokeWidth={1.5} />
             <span className="text-[15px] text-red-400 font-medium">
@@ -155,10 +155,10 @@ function MenuRow({
   return (
     <button
       onClick={onClick}
-      className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl bg-dark-raised border border-dark text-left"
+      className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl bg-[#f8f9fa] border border-[#dce0e380] text-left"
     >
       {icon}
-      <span className="text-[15px] text-dark-fg font-medium">{label}</span>
+      <span className="text-[15px] text-[#1B1B1B] font-medium">{label}</span>
     </button>
   );
 }

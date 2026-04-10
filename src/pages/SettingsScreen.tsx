@@ -26,15 +26,15 @@ export default function SettingsScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+    <div className="flex flex-col h-full bg-white text-[#1B1B1B]">
       <ScreenHeader title="Settings" />
 
       <div className="flex-1 overflow-y-auto px-5 pb-8">
         {/* Font size */}
         <section className="mt-5">
           <div className="flex items-center justify-between mb-1.5">
-            <span className="text-[14px] text-dark-fg">Font size</span>
-            <span className="text-[12px] text-dark-muted">{settings.fontSize}px</span>
+            <span className="text-[14px] text-[#1B1B1B]">Font size</span>
+            <span className="text-[12px] text-[#818990]">{settings.fontSize}px</span>
           </div>
           <input
             type="range"
@@ -48,7 +48,7 @@ export default function SettingsScreen() {
 
         {/* Default Bible version */}
         <section className="mt-6">
-          <p className="text-[13px] text-dark-muted mb-2">Default version</p>
+          <p className="text-[13px] text-[#818990] mb-2">Default version</p>
           <div className="grid grid-cols-4 gap-2">
             {(['ESV', 'NIV', 'KJV', 'NLT'] as BibleVersion[]).map(v => (
               <button
@@ -57,7 +57,7 @@ export default function SettingsScreen() {
                 className={`h-11 rounded-xl text-[13px] font-medium transition-colors ${
                   settings.defaultVersion === v
                     ? 'bg-gold text-[#1A1A1A]'
-                    : 'bg-dark-raised text-dark-fg border border-dark'
+                    : 'bg-[#f8f9fa] text-[#1B1B1B] border border-[#dce0e380]'
                 }`}
               >
                 {v}
@@ -68,7 +68,7 @@ export default function SettingsScreen() {
 
         {/* Language */}
         <section className="mt-6">
-          <p className="text-[13px] text-dark-muted mb-2">Language</p>
+          <p className="text-[13px] text-[#818990] mb-2">Language</p>
           <div className="grid grid-cols-2 gap-2">
             {(
               [
@@ -84,7 +84,7 @@ export default function SettingsScreen() {
                 className={`h-11 rounded-xl text-[13px] font-medium transition-colors ${
                   settings.language === l.id
                     ? 'bg-gold text-[#1A1A1A]'
-                    : 'bg-dark-raised text-dark-fg border border-dark'
+                    : 'bg-[#f8f9fa] text-[#1B1B1B] border border-[#dce0e380]'
                 }`}
               >
                 {l.label}
@@ -94,7 +94,7 @@ export default function SettingsScreen() {
         </section>
 
         <section className="mt-8">
-          <p className="text-[12px] text-dark-muted">VerseMate · Version 1.0.0</p>
+          <p className="text-[12px] text-[#818990]">VerseMate · Version 1.0.0</p>
         </section>
       </div>
     </div>

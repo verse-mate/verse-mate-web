@@ -107,15 +107,15 @@ export default function HighlightsScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+    <div className="flex flex-col h-full bg-white text-[#1B1B1B]">
       <ScreenHeader title="Highlights" />
 
       <div className="flex-1 overflow-y-auto px-4 pt-2 pb-8">
         {/* Highlighted chapters list */}
         {groupedHighlights.length === 0 ? (
           <div className="flex flex-col items-center text-center py-8">
-            <Highlighter size={36} className="text-dark-muted mb-2" strokeWidth={1.5} />
-            <p className="text-dark-muted text-[13px]">No highlights yet</p>
+            <Highlighter size={36} className="text-[#818990] mb-2" strokeWidth={1.5} />
+            <p className="text-[#818990] text-[13px]">No highlights yet</p>
           </div>
         ) : (
           <div className="space-y-3">
@@ -123,19 +123,19 @@ export default function HighlightsScreen() {
               <button
                 key={`${g.bookId}:${g.chapter}`}
                 onClick={() => openChapter(g.book, g.chapter, g.bookId)}
-                className="flex items-center justify-between w-full h-[56px] px-4 rounded-xl bg-dark-raised border border-dark"
+                className="flex items-center justify-between w-full h-[56px] px-4 rounded-xl bg-[#f8f9fa] border border-[#dce0e380]"
               >
                 <div className="flex items-center gap-3">
-                  <Highlighter size={18} className="text-dark-fg" strokeWidth={1.75} />
-                  <span className="text-[15px] text-dark-fg">
+                  <Highlighter size={18} className="text-[#1B1B1B]" strokeWidth={1.75} />
+                  <span className="text-[15px] text-[#1B1B1B]">
                     {g.book} {g.chapter}
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-[12px] text-dark-muted bg-dark-surface rounded px-2 py-0.5">
+                  <span className="text-[12px] text-[#818990] bg-white rounded px-2 py-0.5">
                     {g.count}
                   </span>
-                  <ChevronRight size={18} className="text-dark-muted" />
+                  <ChevronRight size={18} className="text-[#818990]" />
                 </div>
               </button>
             ))}
@@ -144,10 +144,10 @@ export default function HighlightsScreen() {
 
         {/* Auto Highlights section */}
         <div className="mt-8">
-          <h2 className="text-center text-[15px] font-semibold text-dark-fg mb-3">
+          <h2 className="text-center text-[15px] font-semibold text-[#1B1B1B] mb-3">
             Auto Highlights
           </h2>
-          <p className="text-center text-[12px] text-dark-muted/80 leading-relaxed mb-4 px-2">
+          <p className="text-center text-[12px] text-[#818990]/80 leading-relaxed mb-4 px-2">
             Auto-generated highlights help identify key verses, promises,
             commands, and more throughout the Bible.
             <br />
@@ -155,13 +155,13 @@ export default function HighlightsScreen() {
           </p>
 
           {/* Master toggle card */}
-          <div className="rounded-xl bg-dark-raised border border-dark px-4 py-3 mb-3">
+          <div className="rounded-xl bg-[#f8f9fa] border border-[#dce0e380] px-4 py-3 mb-3">
             <div className="flex items-start justify-between gap-3">
               <div className="flex-1 min-w-0">
                 <p className="text-[14px] text-gold font-medium">
                   Enable All Auto-Highlights
                 </p>
-                <p className="text-[12px] text-dark-muted mt-0.5">
+                <p className="text-[12px] text-[#818990] mt-0.5">
                   Turn all Auto-generated highlights on or off
                 </p>
               </div>
@@ -171,7 +171,7 @@ export default function HighlightsScreen() {
 
           {/* Per-theme toggle cards */}
           {themes.length === 0 ? (
-            <p className="text-[12px] text-dark-muted/70 py-4 text-center">
+            <p className="text-[12px] text-[#818990]/70 py-4 text-center">
               Loading themes…
             </p>
           ) : (
@@ -181,7 +181,7 @@ export default function HighlightsScreen() {
                 return (
                   <div
                     key={t.theme_id}
-                    className="rounded-xl bg-dark-raised border border-dark px-4 py-3"
+                    className="rounded-xl bg-[#f8f9fa] border border-[#dce0e380] px-4 py-3"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-start gap-3 flex-1 min-w-0">
@@ -191,9 +191,9 @@ export default function HighlightsScreen() {
                           }`}
                         />
                         <div className="min-w-0">
-                          <p className="text-[14px] text-dark-fg font-medium">{t.name}</p>
+                          <p className="text-[14px] text-[#1B1B1B] font-medium">{t.name}</p>
                           {t.description && (
-                            <p className="text-[12px] text-dark-muted mt-0.5 leading-snug">
+                            <p className="text-[12px] text-[#818990] mt-0.5 leading-snug">
                               {t.description}
                             </p>
                           )}
@@ -225,12 +225,12 @@ function ThemeToggle({
       role="switch"
       aria-checked={value}
       className={`relative w-11 h-6 rounded-full shrink-0 mt-1 transition-colors ${
-        value ? 'bg-gold' : 'bg-dark-raised border border-dark'
+        value ? 'bg-gold' : 'bg-[#f8f9fa] border border-[#dce0e380]'
       }`}
     >
       <span
         className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full shadow transition-transform ${
-          value ? 'translate-x-5 bg-[#1A1A1A]' : 'translate-x-0 bg-dark-fg'
+          value ? 'translate-x-5 bg-[#1A1A1A]' : 'translate-x-0 bg-[#1B1B1B]'
         }`}
       />
     </button>

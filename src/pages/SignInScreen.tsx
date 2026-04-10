@@ -95,7 +95,7 @@ export default function SignInScreen() {
 
   if (screen === 'email') {
     return (
-      <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+      <div className="flex flex-col h-full bg-white text-[#1B1B1B]">
         <header
           className="shrink-0 safe-top"
           style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)' }}
@@ -106,7 +106,7 @@ export default function SignInScreen() {
               aria-label="Back"
               className="absolute left-2 w-[44px] h-[44px] flex items-center justify-center"
             >
-              <ArrowLeft size={22} className="text-dark-fg" strokeWidth={2} />
+              <ArrowLeft size={22} className="text-[#1B1B1B]" strokeWidth={2} />
             </button>
             <h1 className="text-[18px] font-medium">
               {mode === 'signin' ? 'Sign In' : 'Create Account'}
@@ -117,34 +117,34 @@ export default function SignInScreen() {
         <div className="flex-1 px-6 pt-4 pb-6">
           {mode === 'signup' && (
             <div className="mb-3">
-              <label className="text-[13px] text-dark-muted">Name</label>
+              <label className="text-[13px] text-[#818990]">Name</label>
               <input
                 value={name}
                 onChange={e => setName(e.target.value)}
-                className="mt-1.5 w-full h-[52px] px-4 rounded-xl bg-dark-raised border border-dark text-[15px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
+                className="mt-1.5 w-full h-[52px] px-4 rounded-xl bg-[#f8f9fa] border border-[#dce0e380] text-[15px] text-[#1B1B1B] placeholder:text-[#818990] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
                 placeholder="Your name"
               />
             </div>
           )}
           <div className="mb-3">
-            <label className="text-[13px] text-dark-muted">Email</label>
+            <label className="text-[13px] text-[#818990]">Email</label>
             <input
               type="email"
               autoComplete="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
-              className="mt-1.5 w-full h-[52px] px-4 rounded-xl bg-dark-raised border border-dark text-[15px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
+              className="mt-1.5 w-full h-[52px] px-4 rounded-xl bg-[#f8f9fa] border border-[#dce0e380] text-[15px] text-[#1B1B1B] placeholder:text-[#818990] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
               placeholder="you@example.com"
             />
           </div>
           <div className="mb-3">
-            <label className="text-[13px] text-dark-muted">Password</label>
+            <label className="text-[13px] text-[#818990]">Password</label>
             <input
               type="password"
               autoComplete={mode === 'signin' ? 'current-password' : 'new-password'}
               value={password}
               onChange={e => setPassword(e.target.value)}
-              className="mt-1.5 w-full h-[52px] px-4 rounded-xl bg-dark-raised border border-dark text-[15px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
+              className="mt-1.5 w-full h-[52px] px-4 rounded-xl bg-[#f8f9fa] border border-[#dce0e380] text-[15px] text-[#1B1B1B] placeholder:text-[#818990] focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
               placeholder="••••••••"
             />
           </div>
@@ -169,7 +169,7 @@ export default function SignInScreen() {
               setMode(mode === 'signin' ? 'signup' : 'signin');
               setError(null);
             }}
-            className="w-full mt-4 text-[13px] text-dark-muted"
+            className="w-full mt-4 text-[13px] text-[#818990]"
           >
             {mode === 'signin'
               ? "Don't have an account? Create one"
@@ -181,13 +181,13 @@ export default function SignInScreen() {
   }
 
   return (
-    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+    <div className="flex flex-col h-full bg-white text-[#1B1B1B]">
       <ScreenHeader title="Sign In" />
 
       <div className="flex-1 flex flex-col px-6 pb-6">
         <div className="mt-4 mb-8 text-center">
-          <h2 className="text-[22px] font-bold text-dark-fg">Welcome to VerseMate</h2>
-          <p className="text-[14px] text-dark-muted mt-2 leading-relaxed">
+          <h2 className="text-[22px] font-bold text-[#1B1B1B]">Welcome to VerseMate</h2>
+          <p className="text-[14px] text-[#818990] mt-2 leading-relaxed">
             Sign in to sync your bookmarks, notes, and highlights across devices.
           </p>
         </div>
@@ -221,14 +221,14 @@ export default function SignInScreen() {
           </button>
 
           <div className="flex items-center gap-3 py-2">
-            <div className="flex-1 h-px bg-dark" />
-            <span className="text-[11px] text-dark-muted">or</span>
-            <div className="flex-1 h-px bg-dark" />
+            <div className="flex-1 h-px bg-[#dce0e380]" />
+            <span className="text-[11px] text-[#818990]">or</span>
+            <div className="flex-1 h-px bg-[#dce0e380]" />
           </div>
 
           <button
             onClick={() => setScreen('email')}
-            className="flex items-center justify-center gap-3 w-full h-12 rounded-xl bg-dark-raised border border-dark text-dark-fg font-medium text-[14px]"
+            className="flex items-center justify-center gap-3 w-full h-12 rounded-xl bg-[#f8f9fa] border border-[#dce0e380] text-[#1B1B1B] font-medium text-[14px]"
           >
             <Mail size={18} />
             Continue with Email
