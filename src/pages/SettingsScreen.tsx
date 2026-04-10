@@ -5,11 +5,6 @@ import { BibleVersion } from '@/services/types';
 import ScreenHeader from '@/components/ScreenHeader';
 import { api } from '@/services/api';
 
-/**
- * SettingsScreen — matches production surface: local font size + language
- * preference. Auto-highlight theme toggles live on the Highlights screen
- * (per the Figma mobile app section). Bible version is here for continuity.
- */
 export default function SettingsScreen() {
   const navigate = useNavigate();
   const { state, dispatch } = useApp();
@@ -28,24 +23,18 @@ export default function SettingsScreen() {
     }
   };
 
-  // Production settings styles
-  // settingsRoot: padding 20px, font-family Inter
-  // sectionLabel: font-weight 600, font-size 20px, color oil (#1B1B1B)
-  // profileContainer / bibleVersionContainer / languageContainer: bg #f8f9fa, border geyser-opacity, border-radius 8px, padding 20px
-  // dropdownLabel: font-weight 500, color oil, font-size 14px
-
   const sectionLabelStyle: React.CSSProperties = {
     display: 'block',
     marginBottom: 16,
     fontWeight: 600,
     fontSize: 20,
-    color: '#fff',
-    fontFamily: 'Roboto, sans-serif',
+    color: '#1B1B1B',
+    fontFamily: 'Inter, sans-serif',
   };
 
   const containerBoxStyle: React.CSSProperties = {
-    backgroundColor: '#323232',
-    border: '1px solid #323232',
+    backgroundColor: '#f8f9fa',
+    border: '1px solid #dce0e380',
     borderRadius: 8,
     padding: 20,
     maxWidth: 500,
@@ -56,25 +45,22 @@ export default function SettingsScreen() {
     display: 'block',
     marginBottom: 8,
     fontWeight: 500,
-    color: '#fff',
+    color: '#1B1B1B',
     fontSize: 14,
     lineHeight: '1.4',
   };
 
   return (
-    <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: '#ffffff' }}>
       <ScreenHeader title="Settings" onBack={() => navigate('/menu')} />
 
-      {/* settingsRoot: padding 20px, font Roboto */}
-      <div style={{ flex: 1, overflowY: 'auto', padding: 20, fontFamily: 'Roboto, sans-serif', backgroundColor: '#000000' }}>
+      <div style={{ flex: 1, overflowY: 'auto', padding: 20, fontFamily: 'Inter, sans-serif', backgroundColor: '#ffffff' }}>
 
         {/* Bible Version section */}
         <section style={{ marginBottom: 40 }}>
           <span style={sectionLabelStyle}>Bible Version</span>
-          {/* bibleVersionContainer */}
           <div style={containerBoxStyle}>
             <span style={dropdownLabelStyle}>Default version</span>
-            {/* Dropdown-style grid of version buttons */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }}>
               {(['ESV', 'NIV', 'KJV', 'NLT'] as BibleVersion[]).map(v => (
                 <button
@@ -85,12 +71,12 @@ export default function SettingsScreen() {
                     borderRadius: 8,
                     fontSize: 13,
                     fontWeight: 500,
-                    fontFamily: 'Roboto, sans-serif',
+                    fontFamily: 'Inter, sans-serif',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
-                    border: settings.defaultVersion === v ? 'none' : '1px solid #323232',
-                    backgroundColor: settings.defaultVersion === v ? '#b09a6d' : '#000000',
-                    color: settings.defaultVersion === v ? '#1A1A1A' : '#fff',
+                    border: settings.defaultVersion === v ? 'none' : '1px solid #dce0e380',
+                    backgroundColor: settings.defaultVersion === v ? '#b09a6d' : '#ffffff',
+                    color: settings.defaultVersion === v ? '#ffffff' : '#1B1B1B',
                   }}
                 >
                   {v}
@@ -103,7 +89,6 @@ export default function SettingsScreen() {
         {/* Language section */}
         <section style={{ marginBottom: 40 }}>
           <span style={sectionLabelStyle}>Language</span>
-          {/* languageContainer */}
           <div style={containerBoxStyle}>
             <span style={dropdownLabelStyle}>Display language</span>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }}>
@@ -123,12 +108,12 @@ export default function SettingsScreen() {
                     borderRadius: 8,
                     fontSize: 13,
                     fontWeight: 500,
-                    fontFamily: 'Roboto, sans-serif',
+                    fontFamily: 'Inter, sans-serif',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
-                    border: settings.language === l.id ? 'none' : '1px solid #323232',
-                    backgroundColor: settings.language === l.id ? '#b09a6d' : '#000000',
-                    color: settings.language === l.id ? '#1A1A1A' : '#fff',
+                    border: settings.language === l.id ? 'none' : '1px solid #dce0e380',
+                    backgroundColor: settings.language === l.id ? '#b09a6d' : '#ffffff',
+                    color: settings.language === l.id ? '#ffffff' : '#1B1B1B',
                   }}
                 >
                   {l.label}
@@ -144,8 +129,8 @@ export default function SettingsScreen() {
           <div style={containerBoxStyle}>
             <span style={dropdownLabelStyle}>Font size</span>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
-              <span style={{ fontSize: 14, color: '#fff' }}>Size</span>
-              <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)' }}>{settings.fontSize}px</span>
+              <span style={{ fontSize: 14, color: '#1B1B1B' }}>Size</span>
+              <span style={{ fontSize: 12, color: '#818990' }}>{settings.fontSize}px</span>
             </div>
             <input
               type="range"
@@ -159,7 +144,7 @@ export default function SettingsScreen() {
         </section>
 
         <section style={{ marginTop: 8 }}>
-          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)' }}>VerseMate · Version 1.0.0</p>
+          <p style={{ fontSize: 12, color: '#818990' }}>VerseMate · Version 1.0.0</p>
         </section>
       </div>
     </div>

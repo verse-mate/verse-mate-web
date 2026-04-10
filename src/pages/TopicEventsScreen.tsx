@@ -6,13 +6,6 @@ import { Search, BookOpen } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import ScreenHeader from '@/components/ScreenHeader';
 
-/**
- * TopicEventsScreen — dark list of sections for a topic. Every section is
- * rendered fully expanded inline (no accordion / pull-down) so the user can
- * scroll through all the content at once. Tapping a reference jumps to the
- * Reading screen at that passage.
- * Figma ref: frames 5895:5369, 5895:5632 (Mobile App section).
- */
 export default function TopicEventsScreen() {
   const { topicId } = useParams<{ topicId: string }>();
   const navigate = useNavigate();
@@ -39,7 +32,6 @@ export default function TopicEventsScreen() {
   );
 
   const openReference = (ref: string) => {
-    // "Genesis 1:26-28" or "Genesis 1" → dispatch SET_PASSAGE to jump
     const m = ref.match(/^(\d?\s?[A-Za-z]+)\s+(\d+)/);
     if (m) {
       dispatch({ type: 'SET_PASSAGE', book: m[1].trim(), chapter: parseInt(m[2], 10) });
@@ -48,40 +40,41 @@ export default function TopicEventsScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full text-white" style={{ backgroundColor: "#1B1B1B" }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: '#ffffff' }}>
       <ScreenHeader title={topic?.name || 'Events'} onBack={() => navigate('/topics')} />
 
       {/* Search */}
-      <div className="px-4 pt-1" style={{ backgroundColor: '#000000' }}>
-        <div className="flex items-center gap-2 h-12 px-4 rounded-full" style={{ backgroundColor: '#323232', border: '1px solid #323232' }}>
-          <Search size={18} className="text-white/60" strokeWidth={2} />
+      <div className="px-4 pt-1" style={{ backgroundColor: '#ffffff' }}>
+        <div className="flex items-center gap-2 h-12 px-4 rounded-full" style={{ backgroundColor: '#f8f9fa', border: '1px solid #dce0e380' }}>
+          <Search size={18} style={{ color: '#818990' }} strokeWidth={2} />
           <input
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search..."
-            className="flex-1 bg-transparent text-[15px] text-white placeholder:text-white/60 focus:outline-none"
+            className="flex-1 bg-transparent text-[15px] focus:outline-none"
+            style={{ color: '#1B1B1B' }}
           />
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 pt-4 pb-6" style={{ backgroundColor: '#000000' }}>
+      <div className="flex-1 overflow-y-auto px-4 pt-4 pb-6" style={{ backgroundColor: '#ffffff' }}>
         {filtered.length === 0 ? (
-          <p className="text-center text-white/60 py-8 text-[14px]">
-            {events.length === 0 ? 'Loading…' : `No sections match "${query}"`}
+          <p className="text-center py-8 text-[14px]" style={{ color: '#818990' }}>
+            {events.length === 0 ? 'Loading...' : `No sections match "${query}"`}
           </p>
         ) : (
           <div className="space-y-6">
             {filtered.map(ev => (
-              <section key={ev.id} className="pb-5 last:border-b-0" style={{ borderBottom: '1px solid #323232' }}>
-                <h3 className="text-[16px] font-semibold text-white mb-2">{ev.title}</h3>
+              <section key={ev.id} className="pb-5 last:border-b-0" style={{ borderBottom: '1px solid #dce0e380' }}>
+                <h3 className="text-[16px] font-semibold mb-2" style={{ color: '#1B1B1B' }}>{ev.title}</h3>
                 {ev.description && (
-                  <p className="text-[13px] text-white/60 leading-relaxed">
+                  <p className="text-[13px] leading-relaxed" style={{ color: '#818990' }}>
                     {ev.description}
                   </p>
                 )}
                 {ev.references.length > 0 && (
                   <div className="mt-3">
-                    <p className="text-[11px] uppercase tracking-wide text-white/60 mb-2">
+                    <p className="text-[11px] uppercase tracking-wide mb-2" style={{ color: '#818990' }}>
                       References
                     </p>
                     <div className="flex flex-wrap gap-1.5">
@@ -89,8 +82,8 @@ export default function TopicEventsScreen() {
                         <button
                           key={ref}
                           onClick={() => openReference(ref)}
-                          className="flex items-center gap-1.5 text-[12px] text-white rounded-full px-3 py-1.5 transition-colors"
-                          style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
+                          className="flex items-center gap-1.5 text-[12px] rounded-full px-3 py-1.5 transition-colors"
+                          style={{ backgroundColor: '#f8f9fa', border: '1px solid #dce0e380', color: '#1B1B1B' }}
                         >
                           <BookOpen size={12} strokeWidth={1.75} />
                           {ref}

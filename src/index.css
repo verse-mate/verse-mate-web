@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Roboto+Serif:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Serif:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +9,7 @@
     /* ─── VerseMate production tokens (from packages/frontend-base/styles/vars.css) ─── */
 
     /* Production colors */
-    --vm-night: #1B1B1B;
+    --vm-night: #000;
     --vm-snow: #fff;
     --vm-dust: #b09a6d;
     --vm-rodeo-dust: #c2b291;
@@ -20,11 +20,12 @@
     --vm-venus: #888;
     --vm-porcelain: #f0f0f0;
     --vm-geyser: #dce0e3;
+    --vm-geyser-opacity: #dce0e380;
     --vm-oil: #1B1B1B;
     --vm-salmon: #f87171;
 
-    /* Header */
-    --header-bg: 0 0% 11%;             /* #1B1B1B */
+    /* Header — black in production */
+    --header-bg: 0 0% 0%;
     --header-fg: 0 0% 100%;
 
     /* Reading body (production uses --fantasy #f6f3ec) */
@@ -34,10 +35,10 @@
     --card: 39 43% 95%;
     --card-foreground: 210 16% 16%;
 
-    --popover: 0 0% 11%;
+    --popover: 0 0% 0%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 0 0% 11%;
+    --primary: 0 0% 0%;
     --primary-foreground: 39 43% 95%;
 
     --secondary: 39 15% 90%;
@@ -48,7 +49,7 @@
 
     /* Gold accent = production --dust */
     --accent: 38 29% 56%;              /* #b09a6d */
-    --accent-foreground: 0 0% 11%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
@@ -96,20 +97,20 @@
     /* Desktop chrome */
     --chrome-bg: 0 0% 85%;
 
-    /* Dark surface (sheets, selectors, menu drawer) */
-    --dark-surface: 0 0% 11%;          /* #1B1B1B — frame bg */
+    /* Dark surface (sheets, selectors, menu drawer — overlays stay dark) */
+    --dark-surface: 0 0% 0%;           /* #000 — overlays */
     --dark-surface-raised: 0 0% 19.6%; /* #323232 — pill containers, card bg */
     --dark-surface-fg: 0 0% 100%;
     --dark-surface-muted: 0 0% 60%;
     --dark-border: 0 0% 19.6%;         /* #323232 */
 
-    --sidebar-background: 0 0% 11%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 0 0% 100%;
-    --sidebar-primary-foreground: 0 0% 11%;
-    --sidebar-accent: 0 0% 14%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 20%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 11%;
+    --sidebar-primary: 0 0% 11%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 11%;
+    --sidebar-border: 210 7% 88%;
     --sidebar-ring: 38 29% 56%;
   }
 }
@@ -126,7 +127,7 @@
   }
 
   body {
-    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     background-color: hsl(var(--chrome-bg));
   }
@@ -157,9 +158,9 @@
     line-height: 32px;
   }
   .font-title {
-    font-family: 'Roboto', system-ui, sans-serif;
-    font-style: normal;
-    font-weight: 500;
+    font-family: 'Merriweather', Georgia, serif;
+    font-style: italic;
+    font-weight: 700;
   }
 
   /* Production highlight classes */
@@ -172,9 +173,6 @@
   .hl-red { background-color: var(--hl-red); }
   .hl-teal { background-color: var(--hl-teal); }
   .hl-brown { background-color: var(--hl-brown); }
-
-  /* Pure black content body background */
-  .bg-black-pure { background-color: #000000; }
 
   /* Auto-highlight = lighter bg + colored underline */
   .ahl-yellow { background-color: var(--ahl-yellow-bg); border-bottom: 2px solid var(--ahl-yellow-border); cursor: pointer; }
@@ -208,4 +206,3 @@
     box-shadow: none !important;
   }
 }
-/* dark theme - 1775836076 */

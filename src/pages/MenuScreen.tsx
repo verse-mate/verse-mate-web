@@ -14,12 +14,6 @@ import {
 } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 
-/**
- * MenuScreen — dark drawer. Figma frame 5307:4338.
- * Every row is a rounded dark-raised card with a thin border, stacked vertically
- * with 12px gaps. User profile is the first card (tappable when signed out).
- */
-
 type Item = {
   label: string;
   icon: typeof Bookmark;
@@ -31,7 +25,6 @@ const items: Item[] = [
   { label: 'Notes', icon: FileText, path: '/notes' },
   { label: 'Highlights', icon: Highlighter, path: '/highlights' },
   { label: 'Settings', icon: Settings, path: '/menu/settings' },
-  // Share is rendered inline below with a custom onClick
   { label: 'About', icon: Info, path: '/menu/about' },
   { label: 'Giving', icon: Heart, path: '/menu/giving' },
   { label: 'Help', icon: HelpCircle, path: '/menu/help' },
@@ -63,13 +56,13 @@ export default function MenuScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
-      {/* Header — title + close */}
+    <div className="flex flex-col h-full" style={{ backgroundColor: '#ffffff' }}>
+      {/* Header — black bg, white text */}
       <header
         className="shrink-0 flex items-center justify-between px-5 safe-top"
-        style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)', height: 92, backgroundColor: '#1A1A1A' }}
+        style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)', height: 92, backgroundColor: '#000000' }}
       >
-        <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF' }}>Menu</h1>
+        <h1 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF' }}>Menu</h1>
         <button
           onClick={() => navigate('/read')}
           aria-label="Close menu"
@@ -79,24 +72,24 @@ export default function MenuScreen() {
         </button>
       </header>
 
-      <div className="flex-1 overflow-y-auto px-4 pb-2" style={{ backgroundColor: '#000000' }}>
+      <div className="flex-1 overflow-y-auto px-4 pb-2" style={{ backgroundColor: '#ffffff' }}>
         {/* User profile card */}
         <button
           onClick={() => !state.isSignedIn && navigate('/menu/signin')}
           disabled={state.isSignedIn}
           className="flex items-center gap-3 w-full h-[64px] px-4 rounded-xl text-left mb-3"
-          style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
+          style={{ backgroundColor: '#f8f9fa', border: '1px solid #dce0e380' }}
         >
-          <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style={{ backgroundColor: '#1B1B1B' }}>
-            <User size={20} style={{ color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
+          <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style={{ backgroundColor: '#dce0e3' }}>
+            <User size={20} style={{ color: '#818990' }} strokeWidth={1.5} />
           </div>
           <div className="min-w-0 flex-1">
-            <p className="truncate" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 14, lineHeight: '20px', color: '#B09A6D' }}>
+            <p className="truncate" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: 14, lineHeight: '20px', color: '#b09a6d' }}>
               {state.isSignedIn
                 ? state.userName || state.userEmail?.split('@')[0] || ''
                 : 'Guest'}
             </p>
-            <p className="truncate" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 12, lineHeight: '18px', color: 'rgba(255,255,255,0.6)' }}>
+            <p className="truncate" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, fontSize: 12, lineHeight: '18px', color: '#818990' }}>
               {state.isSignedIn ? state.userEmail || 'Loading...' : 'Tap to sign in'}
             </p>
           </div>
@@ -107,35 +100,35 @@ export default function MenuScreen() {
           {items.slice(0, 4).map(item => (
             <MenuRow
               key={item.label}
-              icon={<item.icon size={18} style={{ color: '#FFFFFF' }} strokeWidth={1.5} />}
+              icon={<item.icon size={18} style={{ color: '#1B1B1B' }} strokeWidth={1.5} />}
               label={item.label}
               onClick={() => navigate(item.path)}
             />
           ))}
           <MenuRow
-            icon={<ShareIcon size={18} color="#FFFFFF" />}
+            icon={<ShareIcon size={18} color="#1B1B1B" />}
             label="Share VerseMate"
             onClick={handleShare}
           />
           {items.slice(4).map(item => (
             <MenuRow
               key={item.label}
-              icon={<item.icon size={18} style={{ color: '#FFFFFF' }} strokeWidth={1.5} />}
+              icon={<item.icon size={18} style={{ color: '#1B1B1B' }} strokeWidth={1.5} />}
               label={item.label}
               onClick={() => navigate(item.path)}
             />
           ))}
         </div>
 
-        {/* Logout / Sign in — bordered card in red */}
+        {/* Logout / Sign in */}
         <div className="mt-2">
           <button
             onClick={handleLogout}
             className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl"
-            style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
+            style={{ backgroundColor: '#f8f9fa', border: '1px solid #dce0e380' }}
           >
             <LogOut size={18} className="text-red-400" strokeWidth={1.5} />
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px' }} className="text-red-400">
+            <span style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px' }} className="text-red-400">
               {state.isSignedIn ? 'Logout' : 'Sign In'}
             </span>
           </button>
@@ -158,10 +151,10 @@ function MenuRow({
     <button
       onClick={onClick}
       className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl text-left"
-      style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
+      style={{ backgroundColor: '#f8f9fa', border: '1px solid #dce0e380' }}
     >
       {icon}
-      <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: '#FFFFFF' }}>{label}</span>
+      <span style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: '#1B1B1B' }}>{label}</span>
     </button>
   );
 }

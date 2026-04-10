@@ -7,13 +7,6 @@ import EditNoteSheet from '@/components/EditNoteSheet';
 import NoteOptionsSheet from '@/components/NoteOptionsSheet';
 import ScreenHeader from '@/components/ScreenHeader';
 
-/**
- * NotesScreen — two modes:
- *  1) Index view (no :chapter param): list of chapters grouped by book+chapter
- *     with a count badge and chevron → tap to drill in (Figma: Notes 1).
- *  2) Chapter view (/notes/:book/:chapter): flat list of notes for that chapter
- *     with overflow menu (Figma: Notes 2).
- */
 export default function NotesScreen() {
   const { state, dispatch } = useApp();
   const navigate = useNavigate();
@@ -28,7 +21,6 @@ export default function NotesScreen() {
   const activeBook = bookParam ? decodeURIComponent(bookParam) : '';
   const activeChapter = chapterParam ? parseInt(chapterParam, 10) : 0;
 
-  // Group notes by book+chapter for the index view
   const groups = useMemo(() => {
     const map = new Map<
       string,
@@ -62,7 +54,6 @@ export default function NotesScreen() {
     navigate(`/notes/${encodeURIComponent(book)}/${chapter}`);
   };
 
-  // Shared container style for the scrollable notes area
   const listContainerStyle: React.CSSProperties = {
     flex: 1,
     overflowY: 'auto',
@@ -70,16 +61,13 @@ export default function NotesScreen() {
     flexDirection: 'column',
     gap: 8,
     padding: '12px 8px',
-    borderTop: '1px solid #323232',
-    backgroundColor: '#000000',
-    scrollbarWidth: 'thin',
-    scrollbarColor: '#323232 #000000',
+    borderTop: '1px solid #dce0e380',
+    backgroundColor: '#f6f3ec',
   };
 
-  // noteItem: bg #323232, border #323232, border-radius 8px, padding 6px
   const noteItemStyle: React.CSSProperties = {
-    background: '#323232',
-    border: '1px solid #323232',
+    background: '#ffffff',
+    border: '1px solid #dce0e380',
     borderRadius: 8,
     padding: 6,
     display: 'flex',
@@ -88,20 +76,20 @@ export default function NotesScreen() {
     width: '100%',
     textAlign: 'left',
     cursor: 'pointer',
+    boxShadow: '0 1px 2px rgba(0,0,0,0.03)',
   };
 
-  // ─── Index view ─────────────────────────────────────────────────────────
   if (!isChapterView) {
     return (
-      <div className="flex flex-col h-full text-white relative" style={{ backgroundColor: '#1B1B1B' }}>
+      <div className="flex flex-col h-full relative" style={{ backgroundColor: '#f6f3ec' }}>
         <ScreenHeader title="Notes" onBack={() => navigate('/menu')} />
 
         <div style={listContainerStyle}>
           {groups.length === 0 ? (
-            <div style={{ padding: 32, textAlign: 'center', color: 'hsl(var(--dark-surface-muted))', fontStyle: 'italic' }}>
-              <FileText size={48} style={{ margin: '0 auto 12px', color: 'hsl(var(--dark-surface-muted))' }} strokeWidth={1.5} />
+            <div style={{ padding: 32, textAlign: 'center', color: '#818990', fontStyle: 'italic' }}>
+              <FileText size={48} style={{ margin: '0 auto 12px', color: '#818990' }} strokeWidth={1.5} />
               <p style={{ fontSize: 14 }}>No notes yet</p>
-              <p style={{ fontSize: 12, marginTop: 4, color: 'hsl(var(--dark-surface-muted))', maxWidth: 240, margin: '4px auto 0' }}>
+              <p style={{ fontSize: 12, marginTop: 4, color: '#818990', maxWidth: 240, margin: '4px auto 0' }}>
                 Long-press a verse while reading to capture your reflections
               </p>
             </div>
@@ -113,14 +101,14 @@ export default function NotesScreen() {
                   onClick={() => openChapter(g.book, g.chapter, g.bookId)}
                   style={noteItemStyle}
                 >
-                  <FileText size={18} style={{ color: '#fff', flexShrink: 0 }} strokeWidth={1.75} />
-                  <span style={{ fontSize: 15, fontWeight: 500, color: '#fff', flex: 1 }}>
+                  <FileText size={18} style={{ color: '#1B1B1B', flexShrink: 0 }} strokeWidth={1.75} />
+                  <span style={{ fontSize: 15, fontWeight: 500, color: '#1B1B1B', flex: 1 }}>
                     {g.book} {g.chapter}
                   </span>
-                  <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', background: '#000000', borderRadius: 4, padding: '2px 8px', minWidth: 28, textAlign: 'center' }}>
+                  <span style={{ fontSize: 12, color: '#818990', background: '#f6f3ec', borderRadius: 4, padding: '2px 8px', minWidth: 28, textAlign: 'center' }}>
                     {g.count}
                   </span>
-                  <ChevronRight size={18} style={{ color: 'hsl(var(--dark-surface-muted))', flexShrink: 0 }} />
+                  <ChevronRight size={18} style={{ color: '#818990', flexShrink: 0 }} />
                 </button>
               ))}
             </>
@@ -130,9 +118,8 @@ export default function NotesScreen() {
     );
   }
 
-  // ─── Chapter view ───────────────────────────────────────────────────────
   return (
-    <div className="flex flex-col h-full text-white relative" style={{ backgroundColor: '#1B1B1B' }}>
+    <div className="flex flex-col h-full relative" style={{ backgroundColor: '#f6f3ec' }}>
       <ScreenHeader
         title={`${activeBook} ${activeChapter}`}
         onBack={() => navigate('/notes')}
@@ -140,7 +127,7 @@ export default function NotesScreen() {
 
       <div style={listContainerStyle}>
         {notesForChapter.length === 0 ? (
-          <p style={{ textAlign: 'center', color: 'hsl(var(--dark-surface-muted))', padding: '32px 16px', fontSize: 14, fontStyle: 'italic' }}>No notes here yet.</p>
+          <p style={{ textAlign: 'center', color: '#818990', padding: '32px 16px', fontSize: 14, fontStyle: 'italic' }}>No notes here yet.</p>
         ) : (
           <>
             {notesForChapter.map(note => (
@@ -149,19 +136,17 @@ export default function NotesScreen() {
                   onClick={() => setEditingNote(note)}
                   style={{ background: 'none', border: 'none', cursor: 'pointer', flex: 1, textAlign: 'left', padding: '8px 12px', borderRadius: 6, minWidth: 0 }}
                 >
-                  {/* noteContent: white text on dark */}
-                  <span style={{ fontSize: 14, color: '#fff', lineHeight: 1.5, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                  <span style={{ fontSize: 14, color: '#1B1B1B', lineHeight: 1.5, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                     {note.text || `${note.book} ${note.chapter}:${note.verse}`}
                   </span>
                 </button>
-                {/* actionButton: bg none, border none, padding 4px, border-radius 4px */}
                 <button
                   onClick={e => {
                     e.stopPropagation();
                     setOptionsNote(note);
                   }}
                   aria-label="Note options"
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4, borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'hsl(var(--dark-surface-muted))' }}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4, borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: '#818990' }}
                 >
                   <MoreHorizontal size={18} strokeWidth={1.5} />
                 </button>

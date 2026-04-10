@@ -17,10 +17,9 @@ export default function BookmarksScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: '#f6f3ec' }}>
       <ScreenHeader title="Bookmarks" onBack={() => navigate('/menu')} />
 
-      {/* bookmarkList */}
       <div
         style={{
           flex: 1,
@@ -29,26 +28,23 @@ export default function BookmarksScreen() {
           flexDirection: 'column',
           gap: 8,
           padding: '12px 8px',
-          borderTop: '1px solid #323232',
-          backgroundColor: '#000000',
-          scrollbarWidth: 'thin' as const,
-          scrollbarColor: '#323232 #000000',
+          borderTop: '1px solid #dce0e380',
+          backgroundColor: '#f6f3ec',
         }}
       >
         {state.bookmarks.length === 0 ? (
           <div
-            style={{ padding: 16, textAlign: 'center', color: 'hsl(var(--dark-surface-muted))', fontStyle: 'italic' }}
+            style={{ padding: 16, textAlign: 'center', color: '#818990', fontStyle: 'italic' }}
           >
-            <Bookmark size={48} style={{ margin: '0 auto 12px', color: 'hsl(var(--dark-surface-muted))' }} strokeWidth={1.5} />
+            <Bookmark size={48} style={{ margin: '0 auto 12px', color: '#818990' }} strokeWidth={1.5} />
             <p style={{ fontSize: 14 }}>No bookmarks yet</p>
-            <p style={{ fontSize: 12, marginTop: 4, color: 'hsl(var(--dark-surface-muted))' }}>
+            <p style={{ fontSize: 12, marginTop: 4, color: '#818990' }}>
               Long-press a verse to save it here
             </p>
           </div>
         ) : (
           <>
             {state.bookmarks.map(b => (
-              /* bookmarkItem: bg dark-raised, border dark, border-radius 8px, padding 12px */
               <div
                 key={b.id}
                 style={{
@@ -56,10 +52,11 @@ export default function BookmarksScreen() {
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   padding: 12,
-                  backgroundColor: '#323232',
-                  border: '1px solid #323232',
+                  backgroundColor: '#ffffff',
+                  border: '1px solid #dce0e380',
                   borderRadius: 8,
                   cursor: 'pointer',
+                  boxShadow: '0 1px 2px rgba(0,0,0,0.03)',
                 }}
               >
                 <button
@@ -76,14 +73,12 @@ export default function BookmarksScreen() {
                     padding: 0,
                   }}
                 >
-                  <Bookmark size={18} style={{ color: '#fff' }} strokeWidth={1.5} fill="currentColor" />
-                  {/* bookmarkTitle: font-weight 500, color white */}
-                  <span style={{ fontSize: 15, fontWeight: 500, color: '#fff' }}>
+                  <Bookmark size={18} style={{ color: '#1B1B1B' }} strokeWidth={1.5} fill="currentColor" />
+                  <span style={{ fontSize: 15, fontWeight: 500, color: '#1B1B1B' }}>
                     {b.book} {b.chapter}
                     {b.verse ? `:${b.verse}` : ''}
                   </span>
                 </button>
-                {/* removeButton: 36x36, circular, X icon */}
                 <button
                   onClick={() => handleDelete(b.id)}
                   aria-label="Remove Bookmark"
@@ -98,7 +93,7 @@ export default function BookmarksScreen() {
                     borderRadius: '50%',
                     width: 36,
                     height: 36,
-                    color: 'hsl(var(--dark-surface-muted))',
+                    color: '#818990',
                     transition: 'all 0.2s ease',
                     flexShrink: 0,
                   }}

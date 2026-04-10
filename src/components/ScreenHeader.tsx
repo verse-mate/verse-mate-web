@@ -10,9 +10,8 @@ interface ScreenHeaderProps {
 }
 
 /**
- * ScreenHeader — sub-page header with dark bg and white text (Figma Mobile App section).
- * Background: #1B1B1B (dark-surface), back button with white icon.
- * Figma reference: Mobile App section — back arrow on the left, centered title.
+ * ScreenHeader — sub-page header with BLACK bg (#000) and white text.
+ * Production: background-color var(--night) = #000.
  */
 export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeaderProps) {
   const navigate = useNavigate();
@@ -20,11 +19,11 @@ export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeade
 
   return (
     <header
-      className="shrink-0 text-dark-fg safe-top"
+      className="shrink-0 safe-top"
       style={{
-        backgroundColor: '#1A1A1A',
+        backgroundColor: '#000000',
         paddingTop: 'max(env(safe-area-inset-top), 48px)',
-        borderBottom: '1px solid #323232',
+        borderBottom: '1px solid #dce0e380',
       }}
     >
       <div className="relative flex items-center justify-center px-3" style={{ height: 56 }}>
@@ -49,7 +48,7 @@ export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeade
         >
           <ArrowLeft size={24} color="#fff" strokeWidth={2} />
         </button>
-        <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF', letterSpacing: '-0.01em' }}>{title}</h1>
+        <h1 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF', letterSpacing: '-0.01em' }}>{title}</h1>
         {rightAction && (
           <div className="absolute right-2 flex items-center">{rightAction}</div>
         )}

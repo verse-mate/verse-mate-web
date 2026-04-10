@@ -6,10 +6,6 @@ import { Search } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import ScreenHeader from '@/components/ScreenHeader';
 
-/**
- * MostQuotedScreen — dark list of verses with reference (bold) + quote (muted),
- * rows separated by thin dividers. Figma ref: frame 5895:5782 (Mobile App section).
- */
 export default function MostQuotedScreen() {
   const { topicId, eventId } = useParams<{ topicId: string; eventId: string }>();
   const navigate = useNavigate();
@@ -32,37 +28,39 @@ export default function MostQuotedScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+    <div className="flex flex-col h-full" style={{ backgroundColor: '#ffffff' }}>
       <ScreenHeader title="Most quoted / memorized" onBack={() => navigate(`/topics/${topicId}`)} />
 
       {/* Search */}
-      <div className="px-4 pt-1">
-        <div className="flex items-center gap-2 h-12 px-4 rounded-full bg-dark-raised border border-dark">
-          <Search size={18} className="text-dark-muted" strokeWidth={2} />
+      <div className="px-4 pt-1" style={{ backgroundColor: '#ffffff' }}>
+        <div className="flex items-center gap-2 h-12 px-4 rounded-full" style={{ backgroundColor: '#f8f9fa', border: '1px solid #dce0e380' }}>
+          <Search size={18} style={{ color: '#818990' }} strokeWidth={2} />
           <input
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search..."
-            className="flex-1 bg-transparent text-[15px] text-dark-fg placeholder:text-dark-muted focus:outline-none"
+            className="flex-1 bg-transparent text-[15px] focus:outline-none"
+            style={{ color: '#1B1B1B' }}
           />
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6">
+      <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6" style={{ backgroundColor: '#ffffff' }}>
         {filtered.map(v => (
           <button
             key={v.reference}
             onClick={() => goToVerse(v)}
-            className="block w-full py-4 border-b border-dark text-left"
+            className="block w-full py-4 text-left"
+            style={{ borderBottom: '1px solid #dce0e380' }}
           >
-            <p className="text-[15px] font-semibold text-dark-fg mb-1">{v.reference}</p>
-            <p className="text-[13px] text-dark-muted line-clamp-2 leading-snug">
+            <p className="text-[15px] font-semibold mb-1" style={{ color: '#1B1B1B' }}>{v.reference}</p>
+            <p className="text-[13px] line-clamp-2 leading-snug" style={{ color: '#818990' }}>
               "{v.text}"
             </p>
           </button>
         ))}
         {filtered.length === 0 && (
-          <p className="text-center text-dark-muted py-8 text-[14px]">No verses found.</p>
+          <p className="text-center py-8 text-[14px]" style={{ color: '#818990' }}>No verses found.</p>
         )}
       </div>
     </div>
