@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@1,300;1,400;1,700&family=Roboto+Serif:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,70 +6,111 @@
 
 @layer base {
   :root {
-    /* ─── VerseMate Mobile App tokens (from Figma node 5162:5662) ─── */
+    /* ─── VerseMate production tokens (from packages/frontend-base/styles/vars.css) ─── */
 
-    /* Dark header surface */
-    --header-bg: 0 0% 10%;            /* #1A1A1A */
-    --header-fg: 0 0% 100%;           /* #FFFFFF */
+    /* Production colors */
+    --vm-night: #1B1B1B;
+    --vm-snow: #fff;
+    --vm-dust: #b09a6d;
+    --vm-rodeo-dust: #c2b291;
+    --vm-fantasy: #f6f3ec;
+    --vm-snow-rock: #eae6de;
+    --vm-charcoal-grey: #3e464d;
+    --vm-oslo-gray: #818990;
+    --vm-venus: #888;
+    --vm-porcelain: #f0f0f0;
+    --vm-geyser: #dce0e3;
+    --vm-oil: #1B1B1B;
+    --vm-salmon: #f87171;
 
-    /* Cream body */
-    --background: 45 35% 94%;         /* #F5F2EB */
-    --foreground: 0 0% 10%;           /* #1A1A1A */
+    /* Header */
+    --header-bg: 0 0% 11%;             /* #1B1B1B */
+    --header-fg: 0 0% 100%;
 
-    --card: 45 35% 94%;
-    --card-foreground: 0 0% 10%;
+    /* Reading body (production uses --fantasy #f6f3ec) */
+    --background: 39 43% 95%;          /* #f6f3ec */
+    --foreground: 210 16% 16%;         /* #212531 */
 
-    --popover: 0 0% 10%;
+    --card: 39 43% 95%;
+    --card-foreground: 210 16% 16%;
+
+    --popover: 0 0% 11%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 0 0% 10%;
-    --primary-foreground: 45 35% 94%;
+    --primary: 0 0% 11%;
+    --primary-foreground: 39 43% 95%;
 
-    --secondary: 45 15% 87%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 39 15% 90%;
+    --secondary-foreground: 210 16% 16%;
 
-    --muted: 0 0% 91%;                /* #E7E7E7 */
-    --muted-foreground: 0 0% 20%;     /* #323232 */
+    --muted: 210 7% 88%;               /* #dce0e3 geyser */
+    --muted-foreground: 206 7% 53%;    /* #818990 oslo-gray */
 
-    /* Warm gold accent */
-    --accent: 40 32% 56%;             /* #B09A6D */
-    --accent-foreground: 0 0% 10%;
+    /* Gold accent = production --dust */
+    --accent: 38 29% 56%;              /* #b09a6d */
+    --accent-foreground: 0 0% 11%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 91%;               /* #E7E7E7 */
-    --input: 0 0% 91%;
-    --ring: 40 32% 56%;
+    --border: 210 7% 88%;              /* geyser */
+    --input: 210 7% 88%;
+    --ring: 38 29% 56%;
 
     --radius: 0.5rem;
 
-    /* Verse highlights */
-    --verse-number: 40 32% 50%;
-    --verse-highlight-yellow: 48 80% 85%;
-    --verse-highlight-green: 120 35% 85%;
-    --verse-highlight-blue: 210 50% 87%;
-    --verse-highlight-pink: 340 50% 88%;
-    --verse-highlight-orange: 28 70% 85%;
+    /* Verse number color = charcoal-grey in production, NOT gold */
+    --verse-number-color: var(--vm-charcoal-grey);
 
-    /* Desktop chrome behind phone */
+    /* Highlight colors — exact production RGB values at 30% opacity */
+    --hl-yellow: rgb(255 235 59 / 30%);
+    --hl-green: rgb(76 175 80 / 30%);
+    --hl-blue: rgb(33 150 243 / 30%);
+    --hl-pink: rgb(233 30 99 / 30%);
+    --hl-purple: rgb(156 39 176 / 30%);
+    --hl-orange: rgb(255 152 0 / 30%);
+    --hl-red: rgb(244 67 54 / 30%);
+    --hl-teal: rgb(0 150 136 / 30%);
+    --hl-brown: rgb(121 85 72 / 30%);
+
+    /* Auto-highlight colors — 20% bg + underline */
+    --ahl-yellow-bg: rgb(255 255 0 / 20%);
+    --ahl-yellow-border: rgb(255 255 0 / 50%);
+    --ahl-blue-bg: rgb(173 216 230 / 20%);
+    --ahl-blue-border: rgb(173 216 230 / 50%);
+    --ahl-green-bg: rgb(144 238 144 / 20%);
+    --ahl-green-border: rgb(144 238 144 / 50%);
+    --ahl-orange-bg: rgb(255 165 0 / 20%);
+    --ahl-orange-border: rgb(255 165 0 / 50%);
+    --ahl-pink-bg: rgb(255 192 203 / 20%);
+    --ahl-pink-border: rgb(255 192 203 / 50%);
+    --ahl-purple-bg: rgb(221 160 221 / 20%);
+    --ahl-purple-border: rgb(221 160 221 / 50%);
+    --ahl-red-bg: rgb(244 67 54 / 20%);
+    --ahl-red-border: rgb(244 67 54 / 50%);
+    --ahl-teal-bg: rgb(0 150 136 / 20%);
+    --ahl-teal-border: rgb(0 150 136 / 50%);
+    --ahl-brown-bg: rgb(121 85 72 / 20%);
+    --ahl-brown-border: rgb(121 85 72 / 50%);
+
+    /* Desktop chrome */
     --chrome-bg: 0 0% 85%;
 
     /* Dark surface (sheets, selectors, menu drawer) */
-    --dark-surface: 0 0% 10%;
-    --dark-surface-raised: 0 0% 12%;
+    --dark-surface: 0 0% 11%;          /* #1B1B1B */
+    --dark-surface-raised: 0 0% 14%;
     --dark-surface-fg: 0 0% 100%;
     --dark-surface-muted: 0 0% 60%;
-    --dark-border: 0 0% 18%;
+    --dark-border: 0 0% 20%;
 
-    --sidebar-background: 0 0% 10%;
+    --sidebar-background: 0 0% 11%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 0 0% 100%;
-    --sidebar-primary-foreground: 0 0% 10%;
-    --sidebar-accent: 0 0% 12%;
+    --sidebar-primary-foreground: 0 0% 11%;
+    --sidebar-accent: 0 0% 14%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 40 32% 56%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 38 29% 56%;
   }
 }
 
@@ -85,24 +126,18 @@
   }
 
   body {
-    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     background-color: hsl(var(--chrome-bg));
   }
 }
 
 @layer utilities {
-  .safe-bottom {
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-  }
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .safe-top { padding-top: env(safe-area-inset-top, 0px); }
 
-  .safe-top {
-    padding-top: env(safe-area-inset-top, 0px);
-  }
-
-  .text-verse-number {
-    color: hsl(var(--verse-number));
-  }
+  /* Production verse number = charcoal-grey, NOT gold */
+  .text-verse-number { color: var(--vm-charcoal-grey); }
 
   .bg-dark-surface { background-color: hsl(var(--dark-surface)); }
   .bg-dark-raised { background-color: hsl(var(--dark-surface-raised)); }
@@ -111,8 +146,43 @@
   .border-dark { border-color: hsl(var(--dark-border)); }
   .bg-header { background-color: hsl(var(--header-bg)); }
   .text-header-fg { color: hsl(var(--header-fg)); }
-  .text-gold { color: hsl(var(--accent)); }
-  .bg-gold { background-color: hsl(var(--accent)); }
+  .text-gold { color: var(--vm-dust); }
+  .bg-gold { background-color: var(--vm-dust); }
+
+  /* Production scripture fonts */
+  .font-scripture {
+    font-family: 'Roboto Serif', Georgia, serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .font-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  /* Production highlight classes */
+  .hl-yellow { background-color: var(--hl-yellow); }
+  .hl-green { background-color: var(--hl-green); }
+  .hl-blue { background-color: var(--hl-blue); }
+  .hl-pink { background-color: var(--hl-pink); }
+  .hl-purple { background-color: var(--hl-purple); }
+  .hl-orange { background-color: var(--hl-orange); }
+  .hl-red { background-color: var(--hl-red); }
+  .hl-teal { background-color: var(--hl-teal); }
+  .hl-brown { background-color: var(--hl-brown); }
+
+  /* Auto-highlight = lighter bg + colored underline */
+  .ahl-yellow { background-color: var(--ahl-yellow-bg); border-bottom: 2px solid var(--ahl-yellow-border); cursor: pointer; }
+  .ahl-blue { background-color: var(--ahl-blue-bg); border-bottom: 2px solid var(--ahl-blue-border); cursor: pointer; }
+  .ahl-green { background-color: var(--ahl-green-bg); border-bottom: 2px solid var(--ahl-green-border); cursor: pointer; }
+  .ahl-orange { background-color: var(--ahl-orange-bg); border-bottom: 2px solid var(--ahl-orange-border); cursor: pointer; }
+  .ahl-pink { background-color: var(--ahl-pink-bg); border-bottom: 2px solid var(--ahl-pink-border); cursor: pointer; }
+  .ahl-purple { background-color: var(--ahl-purple-bg); border-bottom: 2px solid var(--ahl-purple-border); cursor: pointer; }
+  .ahl-red { background-color: var(--ahl-red-bg); border-bottom: 2px solid var(--ahl-red-border); cursor: pointer; }
+  .ahl-teal { background-color: var(--ahl-teal-bg); border-bottom: 2px solid var(--ahl-teal-border); cursor: pointer; }
+  .ahl-brown { background-color: var(--ahl-brown-bg); border-bottom: 2px solid var(--ahl-brown-border); cursor: pointer; }
 }
 
 /* ─── Phone Frame Shell ─── */

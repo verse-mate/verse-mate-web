@@ -33,7 +33,7 @@ export default function MarkdownBlock({ text }: Props) {
       elements.push(
         <blockquote
           key={key++}
-          className="border-l-2 border-gold pl-3 italic text-dark-fg/90"
+          className="border-l-2 border-[#b09a6d] pl-3 italic text-current/90"
         >
           {inline(quote.join(' '))}
         </blockquote>
@@ -53,7 +53,7 @@ export default function MarkdownBlock({ text }: Props) {
       flushPara();
       flushQuote();
       elements.push(
-        <h6 key={key++} className="text-[13px] font-semibold text-dark-fg mt-1">
+        <h6 key={key++} className="text-[13px] font-semibold font-semibold mt-1">
           {inline(line.replace(/^###\s*/, ''))}
         </h6>
       );
@@ -63,7 +63,7 @@ export default function MarkdownBlock({ text }: Props) {
       flushPara();
       flushQuote();
       elements.push(
-        <h5 key={key++} className="text-[14px] font-semibold text-dark-fg mt-1">
+        <h5 key={key++} className="text-[14px] font-semibold font-semibold mt-1">
           {inline(line.replace(/^##\s*/, ''))}
         </h5>
       );
@@ -73,7 +73,7 @@ export default function MarkdownBlock({ text }: Props) {
       flushPara();
       flushQuote();
       elements.push(
-        <h4 key={key++} className="text-[15px] font-bold text-dark-fg mt-1">
+        <h4 key={key++} className="text-[15px] font-bold font-semibold mt-1">
           {inline(line.replace(/^#\s*/, ''))}
         </h4>
       );
@@ -91,7 +91,7 @@ export default function MarkdownBlock({ text }: Props) {
   flushQuote();
 
   return (
-    <div className="space-y-2 text-[13px] text-dark-muted leading-relaxed">
+    <div className="space-y-2 text-[13px] opacity-80 leading-relaxed">
       {elements}
     </div>
   );
@@ -108,7 +108,7 @@ function inline(text: string): React.ReactNode {
     const match = m[0];
     if (match.startsWith('**')) {
       parts.push(
-        <strong key={key++} className="text-dark-fg">
+        <strong key={key++} className="font-semibold">
           {match.slice(2, -2)}
         </strong>
       );

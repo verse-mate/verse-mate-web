@@ -73,16 +73,17 @@ export default function CommentaryScreen() {
         </div>
       </header>
 
-      {/* Tab pills */}
-      <div className="shrink-0 flex items-center gap-2 px-4 py-3">
+      {/* Production tab pills — right-aligned, #fff3 bg, 100px radius, Inter 14px/500 */}
+      <div className="shrink-0 border-t border-white/20 mx-4" />
+      <div className="shrink-0 flex items-center justify-end gap-4 px-4 py-4 bg-dark-surface">
         {tabs.map(t => (
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
-            className={`px-4 h-9 rounded-full text-[13px] font-medium transition-colors ${
+            className={`px-2 py-0.5 rounded-[100px] text-[14px] font-medium leading-6 transition-colors ${
               tab === t.id
-                ? 'bg-gold text-[#1A1A1A]'
-                : 'bg-dark-raised text-dark-fg/80 border border-dark'
+                ? 'bg-gold text-[#000]'
+                : 'bg-white/20 text-white'
             }`}
           >
             {t.label}
@@ -90,20 +91,20 @@ export default function CommentaryScreen() {
         ))}
       </div>
 
-      {/* Dark body */}
-      <div className="flex-1 overflow-y-auto px-5 pb-6">
+      {/* Production body — WHITE bg (var(--snow)), not dark */}
+      <div className="flex-1 overflow-y-auto px-4 pb-8 bg-white text-[#212531]">
         {commentaries.length === 0 ? (
-          <p className="text-[14px] text-dark-muted text-center py-8">
+          <p className="text-[14px] text-muted-foreground text-center py-8">
             No commentary available for this chapter.
           </p>
         ) : tab === 'summary' ? (
           <div className="pt-2">
             <div className="flex items-start justify-between mb-4">
-              <h2 className="text-[20px] font-bold text-dark-fg">
+              <h2 className="text-[20px] font-bold text-foreground">
                 Summary of {decodedBook} {chapterNum}
               </h2>
               <button aria-label="Share" className="w-8 h-8 flex items-center justify-center">
-                <Share2 size={18} className="text-dark-fg" strokeWidth={1.5} />
+                <Share2 size={18} className="text-foreground" strokeWidth={1.5} />
               </button>
             </div>
             {(() => {
@@ -111,7 +112,7 @@ export default function CommentaryScreen() {
               return summary ? (
                 <MarkdownBlock text={summary.detail} />
               ) : (
-                <p className="text-[14px] text-dark-muted">No summary available.</p>
+                <p className="text-[14px] text-muted-foreground">No summary available.</p>
               );
             })()}
           </div>
@@ -122,17 +123,17 @@ export default function CommentaryScreen() {
             return (
               <div className="pt-2">
                 <div className="flex items-center justify-between mb-3">
-                  <h2 className="text-[18px] font-bold text-dark-fg">
+                  <h2 className="text-[18px] font-bold text-foreground">
                     Line-by-Line Analysis of {decodedBook} {chapterNum}
                   </h2>
                   <button aria-label="Share" className="w-8 h-8 flex items-center justify-center shrink-0">
-                    <Share2 size={18} className="text-dark-fg" strokeWidth={1.5} />
+                    <Share2 size={18} className="text-foreground" strokeWidth={1.5} />
                   </button>
                 </div>
                 <div className="flex justify-end mb-2">
                   <button
                     onClick={() => setExpanded(allExpanded ? null : -2)}
-                    className="text-[13px] text-gold"
+                    className="text-[13px] text-[#b09a6d]"
                   >
                     {allExpanded ? 'Collapse All' : 'Expand All'}
                   </button>
@@ -146,13 +147,13 @@ export default function CommentaryScreen() {
                           onClick={() => setExpanded(isOpen ? null : c.verse)}
                           className="flex items-center justify-between w-full py-4 text-left"
                         >
-                          <span className="text-[15px] text-dark-fg">
+                          <span className="text-[15px] text-foreground">
                             {decodedBook} {chapterNum}:{c.verse}
                           </span>
                           {isOpen ? (
-                            <ChevronUp size={18} className="text-dark-muted shrink-0" />
+                            <ChevronUp size={18} className="text-muted-foreground shrink-0" />
                           ) : (
-                            <ChevronDown size={18} className="text-dark-muted shrink-0" />
+                            <ChevronDown size={18} className="text-muted-foreground shrink-0" />
                           )}
                         </button>
                         {isOpen && (
@@ -164,7 +165,7 @@ export default function CommentaryScreen() {
                     );
                   })}
                   {byLineItems.length === 0 && (
-                    <p className="text-[14px] text-dark-muted py-8 text-center">
+                    <p className="text-[14px] text-muted-foreground py-8 text-center">
                       Line-by-line analysis not available.
                     </p>
                   )}
@@ -178,17 +179,17 @@ export default function CommentaryScreen() {
             return detailed ? (
               <div className="pt-2">
                 <div className="flex items-start justify-between mb-4">
-                  <h2 className="text-[20px] font-bold text-dark-fg">
+                  <h2 className="text-[20px] font-bold text-foreground">
                     In-Depth Analysis of {decodedBook} {chapterNum}
                   </h2>
                   <button aria-label="Share" className="w-8 h-8 flex items-center justify-center shrink-0">
-                    <Share2 size={18} className="text-dark-fg" strokeWidth={1.5} />
+                    <Share2 size={18} className="text-foreground" strokeWidth={1.5} />
                   </button>
                 </div>
                 <MarkdownBlock text={detailed.detail} />
               </div>
             ) : (
-              <p className="text-[14px] text-dark-muted py-8 text-center">
+              <p className="text-[14px] text-muted-foreground py-8 text-center">
                 Detailed commentary not available.
               </p>
             );

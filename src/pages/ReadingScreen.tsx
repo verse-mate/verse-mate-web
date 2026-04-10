@@ -59,33 +59,26 @@ export default function ReadingScreen() {
   };
 
   // Map verse number -> Tailwind background class from auto-highlight ranges
+  // Production highlight classes (exact CSS from frontend-base/src/ui/MainText)
   const autoHighlightByVerse: Record<number, string> = {};
   if (state.settings.autoHighlights) {
-    const colorMap: Record<string, string> = {
-      yellow: 'bg-yellow-400/25',
-      green: 'bg-green-400/25',
-      blue: 'bg-blue-400/25',
-      pink: 'bg-pink-400/25',
-      purple: 'bg-purple-400/25',
-      orange: 'bg-orange-400/25',
-      red: 'bg-red-400/25',
-      teal: 'bg-teal-400/25',
-      brown: 'bg-amber-700/25',
+    const autoColorMap: Record<string, string> = {
+      yellow: 'ahl-yellow', green: 'ahl-green', blue: 'ahl-blue',
+      orange: 'ahl-orange', pink: 'ahl-pink', purple: 'ahl-purple',
+      red: 'ahl-red', teal: 'ahl-teal', brown: 'ahl-brown',
     };
     for (const range of apiAutoHighlights) {
-      const cls = colorMap[range.color] || 'bg-yellow-400/25';
+      const cls = autoColorMap[range.color] || 'ahl-yellow';
       for (let v = range.startVerse; v <= range.endVerse; v++) {
         autoHighlightByVerse[v] = cls;
       }
     }
   }
 
-  const highlightColorClass: Record<HighlightColor, string> = {
-    yellow: 'bg-highlight-yellow',
-    green: 'bg-highlight-green',
-    blue: 'bg-highlight-blue',
-    pink: 'bg-highlight-pink',
-    orange: 'bg-highlight-orange',
+  const highlightColorClass: Record<string, string> = {
+    yellow: 'hl-yellow', green: 'hl-green', blue: 'hl-blue',
+    pink: 'hl-pink', purple: 'hl-purple', orange: 'hl-orange',
+    red: 'hl-red', teal: 'hl-teal', brown: 'hl-brown',
   };
 
   // Short tap → open the Verse Insight bottom sheet (slides up as an overlay,
@@ -194,7 +187,7 @@ export default function ReadingScreen() {
       >
         {/* Chapter header block */}
         <div className="flex items-start justify-between mb-3">
-          <h1 className="text-[26px] font-bold text-foreground leading-tight">
+          <h1 className="font-title text-[32px] leading-[44px] text-foreground">
             {state.book} {state.chapter}
           </h1>
           <div className="flex items-center gap-1 mt-1.5">
@@ -243,10 +236,9 @@ export default function ReadingScreen() {
 
         {/* Verses grouped by API subtitles (e.g. "Parable of the Marriage Feast" v1-14) */}
         <div
-          className="text-foreground"
+          className="font-scripture text-foreground"
           style={{
             fontSize: `${state.settings.fontSize}px`,
-            lineHeight: state.settings.lineSpacing ?? 1.7,
           }}
         >
           {(() => {
@@ -277,10 +269,12 @@ export default function ReadingScreen() {
               <div key={gi} className={gi > 0 ? 'mt-5' : ''}>
                 {group.title && (
                   <>
-                    <h2 className="text-[17px] font-bold text-foreground mb-0.5">
+                    <h2 className="font-title text-[22px] leading-[28px] text-foreground mb-1">
                       {group.title}
                     </h2>
-                    <p className="text-[13px] text-muted-foreground mb-3">{group.range}</p>
+                    <p className="font-title text-[18px] leading-[22px] font-normal text-[#3e464d] mb-3">
+                      {group.range}
+                    </p>
                   </>
                 )}
                 <div>
@@ -308,7 +302,7 @@ export default function ReadingScreen() {
                         }`}
                       >
                         {state.settings.showVerseNumbers !== false && (
-                          <sup className="text-verse-number text-[0.65em] mr-0.5 select-none font-medium align-super">
+                          <sup className="text-verse-number text-[12px] mr-[2px] select-none align-super">
                             {verse.number}
                           </sup>
                         )}
