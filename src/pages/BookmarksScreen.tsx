@@ -20,42 +20,95 @@ export default function BookmarksScreen() {
     <div className="flex flex-col h-full bg-white text-[#1B1B1B]">
       <ScreenHeader title="Bookmarks" />
 
-      <div className="flex-1 overflow-y-auto px-4 pt-2 pb-6">
+      {/* bookmarkList: bg fantasy, border-top geyser-opacity, padding 12px 8px, max-height 300px, overflow-y auto */}
+      <div
+        style={{
+          flex: 1,
+          overflowY: 'auto',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 8,
+          padding: '12px 8px',
+          borderTop: '1px solid rgba(220,224,227,0.5)',
+          backgroundColor: '#f6f3ec',
+          scrollbarWidth: 'thin' as const,
+          scrollbarColor: '#dce0e3 #f6f3ec',
+        }}
+      >
         {state.bookmarks.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full text-center pb-20">
-            <Bookmark size={48} className="text-[#818990] mb-3" strokeWidth={1.5} />
-            <p className="text-[#818990] text-[14px]">No bookmarks yet</p>
-            <p className="text-[#818990]/70 text-[12px] mt-1">
+          <div
+            style={{ padding: 16, textAlign: 'center', color: '#818990', fontStyle: 'italic' }}
+          >
+            <Bookmark size={48} style={{ margin: '0 auto 12px', color: '#818990' }} strokeWidth={1.5} />
+            <p style={{ fontSize: 14 }}>No bookmarks yet</p>
+            <p style={{ fontSize: 12, marginTop: 4, color: 'rgba(129,137,144,0.7)' }}>
               Long-press a verse to save it here
             </p>
           </div>
         ) : (
-          <div className="space-y-3">
+          <>
             {state.bookmarks.map(b => (
+              /* bookmarkItem: bg white, border geyser-opacity, border-radius 8px, padding 12px, box-shadow */
               <div
                 key={b.id}
-                className="flex items-center justify-between pl-4 pr-1 h-[56px] rounded-xl bg-[#f8f9fa] border border-[#dce0e380]"
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  padding: 12,
+                  backgroundColor: '#fff',
+                  border: '1px solid rgba(220,224,227,0.5)',
+                  borderRadius: 8,
+                  cursor: 'pointer',
+                  boxShadow: '0 1px 2px rgba(0,0,0,0.03)',
+                }}
               >
                 <button
                   onClick={() => handleOpen(b.book, b.chapter, b.bookId)}
-                  className="flex items-center gap-3 flex-1 text-left h-full"
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 12,
+                    flex: 1,
+                    textAlign: 'left',
+                    padding: 0,
+                  }}
                 >
-                  <Bookmark size={18} className="text-[#1B1B1B]" strokeWidth={1.5} fill="currentColor" />
-                  <span className="text-[15px] text-[#1B1B1B] font-normal">
+                  <Bookmark size={18} style={{ color: '#1B1B1B' }} strokeWidth={1.5} fill="currentColor" />
+                  {/* bookmarkTitle: font-weight 500, color #1B1B1B */}
+                  <span style={{ fontSize: 15, fontWeight: 500, color: '#1B1B1B' }}>
                     {b.book} {b.chapter}
                     {b.verse ? `:${b.verse}` : ''}
                   </span>
                 </button>
+                {/* removeButton: 36x36, circular, X icon */}
                 <button
                   onClick={() => handleDelete(b.id)}
-                  aria-label="Delete bookmark"
-                  className="w-[44px] h-[44px] flex items-center justify-center"
+                  aria-label="Remove Bookmark"
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    padding: 6,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    borderRadius: '50%',
+                    width: 36,
+                    height: 36,
+                    color: '#818990',
+                    transition: 'all 0.2s ease',
+                    flexShrink: 0,
+                  }}
                 >
-                  <Trash2 size={18} className="text-red-400" strokeWidth={1.5} />
+                  <Trash2 size={16} strokeWidth={1.5} />
                 </button>
               </div>
             ))}
-          </div>
+          </>
         )}
       </div>
     </div>

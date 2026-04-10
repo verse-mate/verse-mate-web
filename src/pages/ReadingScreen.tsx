@@ -210,7 +210,7 @@ export default function ReadingScreen() {
         ref={scrollRef}
         onTouchStart={handleBodyTouchStart}
         onTouchEnd={handleBodyTouchEnd}
-        className="flex-1 overflow-y-auto bg-background px-5 pt-5 pb-12 relative"
+        className="flex-1 overflow-y-auto bg-background px-5 pt-5 pb-[48px] relative"
       >
         {/* Chapter header block */}
         <div className="flex items-start justify-between mb-3">
@@ -364,23 +364,67 @@ export default function ReadingScreen() {
         </button>
       )}
 
-      {/* ─── GOLD PROGRESS BAR — overall position in the book ─── */}
-      <div className="shrink-0 bg-background px-4 pt-3 pb-3 safe-bottom">
+      {/* ─── GOLD PROGRESS BAR — overall position in the book (matches production ProgressBar) ─── */}
+      {/* Root: height 32px, gap 16px, bg fantasy (#f6f3ec), border-top geyser-opacity, padding 0 24px */}
+      {/* Mobile (≤833px): bottom 8px */}
+      <div
+        style={{
+          height: 32,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 16,
+          backgroundColor: '#f6f3ec',
+          borderTop: '1px solid rgba(220,224,227,0.5)',
+          padding: '0 24px',
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          flexShrink: 0,
+        }}
+      >
         {(() => {
           const bookProgress =
             maxChapter > 0 ? Math.round((state.chapter / maxChapter) * 100) : 0;
           return (
-            <div className="flex items-center gap-3">
-              <div className="flex-1 h-1 bg-muted rounded-full overflow-hidden">
+            <>
+              {/* IndicatorBackground: height 6px, bg snow-rock (#eae6de), border-radius 10px */}
+              <div
+                style={{
+                  flex: 1,
+                  height: 6,
+                  backgroundColor: '#eae6de',
+                  borderRadius: 10,
+                  position: 'relative',
+                  overflow: 'hidden',
+                }}
+              >
+                {/* Indicator: bg dust (#b09a6d), border-radius 10px */}
                 <div
-                  className="h-full bg-gold rounded-full transition-all duration-300"
-                  style={{ width: `${Math.max(2, bookProgress)}%` }}
+                  style={{
+                    height: '100%',
+                    backgroundColor: '#b09a6d',
+                    borderRadius: 10,
+                    width: `${Math.max(2, bookProgress)}%`,
+                    transition: 'width 0.3s ease',
+                  }}
                 />
               </div>
-              <span className="text-[11px] font-medium text-muted-foreground tabular-nums text-right whitespace-nowrap">
-                {state.chapter} / {maxChapter}
+              {/* Label: Inter 500 14px/24px, color dust (#b09a6d) */}
+              <span
+                style={{
+                  fontFamily: 'Inter, sans-serif',
+                  fontWeight: 500,
+                  fontSize: 14,
+                  lineHeight: '24px',
+                  color: '#b09a6d',
+                  whiteSpace: 'nowrap',
+                  tabularNums: true,
+                } as React.CSSProperties}
+              >
+                {bookProgress}%
               </span>
-            </div>
+            </>
           );
         })()}
       </div>

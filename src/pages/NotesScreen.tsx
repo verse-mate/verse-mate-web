@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import { FileText, ChevronRight, MoreHorizontal } from 'lucide-react';
@@ -62,44 +62,70 @@ export default function NotesScreen() {
     navigate(`/notes/${encodeURIComponent(book)}/${chapter}`);
   };
 
+  // Shared container style for the scrollable notes area
+  // notesMainContainer: bg fantasy, border-top geyser-opacity, padding 12px 8px
+  const listContainerStyle: React.CSSProperties = {
+    flex: 1,
+    overflowY: 'auto',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 8,
+    padding: '12px 8px',
+    borderTop: '1px solid rgba(220,224,227,0.5)',
+    backgroundColor: '#f6f3ec',
+    scrollbarWidth: 'thin',
+    scrollbarColor: '#dce0e3 #f6f3ec',
+  };
+
+  // noteItem: bg white, border geyser-opacity, border-radius 8px, padding 6px, box-shadow
+  const noteItemStyle: React.CSSProperties = {
+    background: '#fff',
+    border: '1px solid rgba(220,224,227,0.5)',
+    borderRadius: 8,
+    padding: 6,
+    boxShadow: '0 1px 2px rgba(0,0,0,0.03)',
+    display: 'flex',
+    alignItems: 'center',
+    gap: 12,
+    width: '100%',
+    textAlign: 'left',
+    cursor: 'pointer',
+  };
+
   // ─── Index view ─────────────────────────────────────────────────────────
   if (!isChapterView) {
     return (
       <div className="flex flex-col h-full bg-white text-[#1B1B1B] relative">
         <ScreenHeader title="Notes" />
 
-        <div className="flex-1 overflow-y-auto px-4 pt-2 pb-6">
+        <div style={listContainerStyle}>
           {groups.length === 0 ? (
-            <div className="flex flex-col items-center justify-center h-full text-center pb-20">
-              <FileText size={48} className="text-[#818990] mb-3" strokeWidth={1.5} />
-              <p className="text-[#818990] text-[14px]">No notes yet</p>
-              <p className="text-[#818990]/70 text-[12px] mt-1 max-w-[240px]">
+            <div style={{ padding: 32, textAlign: 'center', color: '#818990', fontStyle: 'italic' }}>
+              <FileText size={48} style={{ margin: '0 auto 12px', color: '#818990' }} strokeWidth={1.5} />
+              <p style={{ fontSize: 14 }}>No notes yet</p>
+              <p style={{ fontSize: 12, marginTop: 4, color: 'rgba(129,137,144,0.7)', maxWidth: 240, margin: '4px auto 0' }}>
                 Long-press a verse while reading to capture your reflections
               </p>
             </div>
           ) : (
-            <div className="space-y-3">
+            <>
               {groups.map(g => (
                 <button
                   key={`${g.bookId}:${g.chapter}`}
                   onClick={() => openChapter(g.book, g.chapter, g.bookId)}
-                  className="flex items-center justify-between w-full h-[56px] px-4 rounded-xl bg-[#f8f9fa] border border-[#dce0e380]"
+                  style={noteItemStyle}
                 >
-                  <div className="flex items-center gap-3">
-                    <FileText size={18} className="text-[#1B1B1B]" strokeWidth={1.75} />
-                    <span className="text-[15px] text-[#1B1B1B]">
-                      {g.book} {g.chapter}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="text-[12px] text-[#818990] bg-white rounded px-2 py-0.5 min-w-[28px] text-center">
-                      {g.count}
-                    </span>
-                    <ChevronRight size={18} className="text-[#818990]" />
-                  </div>
+                  <FileText size={18} style={{ color: '#1B1B1B', flexShrink: 0 }} strokeWidth={1.75} />
+                  <span style={{ fontSize: 15, fontWeight: 500, color: '#1B1B1B', flex: 1 }}>
+                    {g.book} {g.chapter}
+                  </span>
+                  <span style={{ fontSize: 12, color: '#818990', background: '#f6f3ec', borderRadius: 4, padding: '2px 8px', minWidth: 28, textAlign: 'center' }}>
+                    {g.count}
+                  </span>
+                  <ChevronRight size={18} style={{ color: '#818990', flexShrink: 0 }} />
                 </button>
               ))}
-            </div>
+            </>
           )}
         </div>
       </div>
@@ -114,33 +140,36 @@ export default function NotesScreen() {
         onBack={() => navigate('/notes')}
       />
 
-      <div className="flex-1 overflow-y-auto px-4 pt-2 pb-6">
+      <div style={listContainerStyle}>
         {notesForChapter.length === 0 ? (
-          <p className="text-center text-[#818990] py-8 text-[14px]">No notes here yet.</p>
+          <p style={{ textAlign: 'center', color: '#818990', padding: '32px 16px', fontSize: 14, fontStyle: 'italic' }}>No notes here yet.</p>
         ) : (
-          <div className="space-y-3">
+          <>
             {notesForChapter.map(note => (
-              <button
-                key={note.id}
-                onClick={() => setEditingNote(note)}
-                className="flex items-center justify-between w-full min-h-[56px] px-4 rounded-xl bg-[#f8f9fa] border border-[#dce0e380] text-left"
-              >
-                <span className="text-[14px] text-[#1B1B1B] pr-3 line-clamp-2">
-                  {note.text || `${note.book} ${note.chapter}:${note.verse}`}
-                </span>
+              <div key={note.id} style={noteItemStyle}>
+                <button
+                  onClick={() => setEditingNote(note)}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', flex: 1, textAlign: 'left', padding: '8px 12px', borderRadius: 6, minWidth: 0 }}
+                >
+                  {/* noteContent: color foreground, font-size body2, line-height 1.5 */}
+                  <span style={{ fontSize: 14, color: '#1B1B1B', lineHeight: 1.5, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                    {note.text || `${note.book} ${note.chapter}:${note.verse}`}
+                  </span>
+                </button>
+                {/* actionButton: bg none, border none, padding 4px, border-radius 4px */}
                 <button
                   onClick={e => {
                     e.stopPropagation();
                     setOptionsNote(note);
                   }}
                   aria-label="Note options"
-                  className="w-[44px] h-[44px] flex items-center justify-center shrink-0 -mr-2"
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4, borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: '#818990' }}
                 >
-                  <MoreHorizontal size={18} className="text-[#818990]" strokeWidth={1.5} />
+                  <MoreHorizontal size={18} strokeWidth={1.5} />
                 </button>
-              </button>
+              </div>
             ))}
-          </div>
+          </>
         )}
       </div>
 

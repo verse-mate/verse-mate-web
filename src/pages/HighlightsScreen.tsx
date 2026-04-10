@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useApp } from '@/contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { Highlighter, ChevronRight } from 'lucide-react';
@@ -106,48 +106,95 @@ export default function HighlightsScreen() {
     brown: 'bg-amber-700',
   };
 
+  // highlightList container: bg fantasy, border-top geyser-opacity, padding 12px 8px
+  const listStyle: React.CSSProperties = {
+    flex: 1,
+    overflowY: 'auto',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 12,
+    padding: '12px 8px',
+    borderTop: '1px solid rgba(220,224,227,0.5)',
+    backgroundColor: '#f6f3ec',
+    scrollbarWidth: 'none',
+  };
+
+  // chapterGroup: bg white, border geyser-opacity, border-radius 10px, box-shadow
+  const chapterGroupStyle: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundColor: '#fff',
+    border: '1px solid rgba(220,224,227,0.5)',
+    borderRadius: 10,
+    overflow: 'hidden',
+    boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+    cursor: 'pointer',
+    flexShrink: 0,
+  };
+
+  // Auto-highlight theme card: same white card treatment
+  const themeCardStyle: React.CSSProperties = {
+    backgroundColor: '#fff',
+    border: '1px solid rgba(220,224,227,0.5)',
+    borderRadius: 10,
+    padding: '12px 16px',
+    boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+  };
+
   return (
     <div className="flex flex-col h-full bg-white text-[#1B1B1B]">
       <ScreenHeader title="Highlights" />
 
-      <div className="flex-1 overflow-y-auto px-4 pt-2 pb-8">
+      <div style={listStyle}>
         {/* Highlighted chapters list */}
         {groupedHighlights.length === 0 ? (
-          <div className="flex flex-col items-center text-center py-8">
-            <Highlighter size={36} className="text-[#818990] mb-2" strokeWidth={1.5} />
-            <p className="text-[#818990] text-[13px]">No highlights yet</p>
+          <div style={{ padding: '32px 16px', textAlign: 'center', color: '#818990', fontStyle: 'italic', fontSize: 14 }}>
+            <Highlighter size={36} style={{ margin: '0 auto 8px', color: '#818990' }} strokeWidth={1.5} />
+            <p style={{ fontSize: 13 }}>No highlights yet</p>
           </div>
         ) : (
-          <div className="space-y-3">
+          <>
             {groupedHighlights.map(g => (
               <button
                 key={`${g.bookId}:${g.chapter}`}
                 onClick={() => openChapter(g.book, g.chapter, g.bookId)}
-                className="flex items-center justify-between w-full h-[56px] px-4 rounded-xl bg-[#f8f9fa] border border-[#dce0e380]"
+                style={{
+                  ...chapterGroupStyle,
+                  padding: '12px 16px',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  gap: 8,
+                  border: 'none',
+                  background: '#fff',
+                  borderRadius: 10,
+                  boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+                  outline: '1px solid rgba(220,224,227,0.5)',
+                  width: '100%',
+                  textAlign: 'left',
+                } as React.CSSProperties}
               >
-                <div className="flex items-center gap-3">
-                  <Highlighter size={18} className="text-[#1B1B1B]" strokeWidth={1.75} />
-                  <span className="text-[15px] text-[#1B1B1B]">
-                    {g.book} {g.chapter}
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-[12px] text-[#818990] bg-white rounded px-2 py-0.5">
+                {/* chapterTitle: font-weight 600, color night, font-size 15px */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 600, color: '#1B1B1B', fontSize: 15 }}>
+                  <Highlighter size={18} style={{ color: '#1B1B1B' }} strokeWidth={1.75} />
+                  {g.book} {g.chapter}
+                  {/* countBadge: bg geyser-opacity, color night-light, font-size 12px, padding 2px 8px, border-radius 12px */}
+                  <span style={{ backgroundColor: 'rgba(220,224,227,0.5)', color: '#818990', fontSize: 12, padding: '2px 8px', borderRadius: 12 }}>
                     {g.count}
                   </span>
-                  <ChevronRight size={18} className="text-[#818990]" />
                 </div>
+                <ChevronRight size={20} style={{ color: '#818990', flexShrink: 0 }} />
               </button>
             ))}
-          </div>
+          </>
         )}
 
         {/* Auto Highlights section */}
-        <div className="mt-8">
-          <h2 className="text-center text-[15px] font-semibold text-[#1B1B1B] mb-3">
+        <div style={{ marginTop: 8 }}>
+          <h2 style={{ textAlign: 'center', fontSize: 15, fontWeight: 600, color: '#1B1B1B', marginBottom: 12 }}>
             Auto Highlights
           </h2>
-          <p className="text-center text-[12px] text-[#818990]/80 leading-relaxed mb-4 px-2">
+          <p style={{ textAlign: 'center', fontSize: 12, color: 'rgba(129,137,144,0.8)', lineHeight: 1.6, marginBottom: 16, padding: '0 8px' }}>
             Auto-generated highlights help identify key verses, promises,
             commands, and more throughout the Bible.
             <br />
@@ -155,13 +202,13 @@ export default function HighlightsScreen() {
           </p>
 
           {/* Master toggle card */}
-          <div className="rounded-xl bg-[#f8f9fa] border border-[#dce0e380] px-4 py-3 mb-3">
-            <div className="flex items-start justify-between gap-3">
-              <div className="flex-1 min-w-0">
-                <p className="text-[14px] text-gold font-medium">
+          <div style={{ ...themeCardStyle, marginBottom: 12 }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <p style={{ fontSize: 14, color: '#b09a6d', fontWeight: 500 }}>
                   Enable All Auto-Highlights
                 </p>
-                <p className="text-[12px] text-[#818990] mt-0.5">
+                <p style={{ fontSize: 12, color: '#818990', marginTop: 2 }}>
                   Turn all Auto-generated highlights on or off
                 </p>
               </div>
@@ -171,29 +218,26 @@ export default function HighlightsScreen() {
 
           {/* Per-theme toggle cards */}
           {themes.length === 0 ? (
-            <p className="text-[12px] text-[#818990]/70 py-4 text-center">
+            <p style={{ fontSize: 12, color: 'rgba(129,137,144,0.7)', padding: '16px 0', textAlign: 'center' }}>
               Loading themes…
             </p>
           ) : (
-            <div className="space-y-3">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {themes.map(t => {
                 const isOn = enabledThemes.has(t.theme_id);
                 return (
-                  <div
-                    key={t.theme_id}
-                    className="rounded-xl bg-[#f8f9fa] border border-[#dce0e380] px-4 py-3"
-                  >
-                    <div className="flex items-start justify-between gap-3">
-                      <div className="flex items-start gap-3 flex-1 min-w-0">
+                  <div key={t.theme_id} style={themeCardStyle}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
+                      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, flex: 1, minWidth: 0 }}>
+                        {/* colorIndicator: 10px circle */}
                         <span
-                          className={`mt-1.5 w-3 h-3 rounded-full shrink-0 ${
-                            colorDot[t.color] || 'bg-gray-400'
-                          }`}
+                          className={colorDot[t.color] || 'bg-gray-400'}
+                          style={{ width: 10, height: 10, borderRadius: '50%', flexShrink: 0, marginTop: 5, border: '1px solid rgba(0,0,0,0.05)' }}
                         />
-                        <div className="min-w-0">
-                          <p className="text-[14px] text-[#1B1B1B] font-medium">{t.name}</p>
+                        <div style={{ minWidth: 0 }}>
+                          <p style={{ fontSize: 14, color: '#1B1B1B', fontWeight: 500 }}>{t.name}</p>
                           {t.description && (
-                            <p className="text-[12px] text-[#818990] mt-0.5 leading-snug">
+                            <p style={{ fontSize: 12, color: '#818990', marginTop: 2, lineHeight: 1.4 }}>
                               {t.description}
                             </p>
                           )}
