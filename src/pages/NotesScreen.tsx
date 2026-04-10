@@ -61,13 +61,13 @@ export default function NotesScreen() {
     flexDirection: 'column',
     gap: 8,
     padding: '12px 8px',
-    borderTop: '1px solid #dce0e380',
-    backgroundColor: '#f6f3ec',
+    borderTop: '1px solid #323232',
+    backgroundColor: '#000000',
   };
 
   const noteItemStyle: React.CSSProperties = {
-    background: '#ffffff',
-    border: '1px solid #dce0e380',
+    background: '#323232',
+    border: '1px solid #323232',
     borderRadius: 8,
     padding: 6,
     display: 'flex',
@@ -76,20 +76,19 @@ export default function NotesScreen() {
     width: '100%',
     textAlign: 'left',
     cursor: 'pointer',
-    boxShadow: '0 1px 2px rgba(0,0,0,0.03)',
   };
 
   if (!isChapterView) {
     return (
-      <div className="flex flex-col h-full relative" style={{ backgroundColor: '#f6f3ec' }}>
+      <div className="flex flex-col h-full relative" style={{ backgroundColor: '#1B1B1B' }}>
         <ScreenHeader title="Notes" onBack={() => navigate('/menu')} />
 
         <div style={listContainerStyle}>
           {groups.length === 0 ? (
-            <div style={{ padding: 32, textAlign: 'center', color: '#818990', fontStyle: 'italic' }}>
-              <FileText size={48} style={{ margin: '0 auto 12px', color: '#818990' }} strokeWidth={1.5} />
+            <div style={{ padding: 32, textAlign: 'center', color: 'rgba(255,255,255,0.6)', fontStyle: 'italic' }}>
+              <FileText size={48} style={{ margin: '0 auto 12px', color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
               <p style={{ fontSize: 14 }}>No notes yet</p>
-              <p style={{ fontSize: 12, marginTop: 4, color: '#818990', maxWidth: 240, margin: '4px auto 0' }}>
+              <p style={{ fontSize: 12, marginTop: 4, color: 'rgba(255,255,255,0.6)', maxWidth: 240, margin: '4px auto 0' }}>
                 Long-press a verse while reading to capture your reflections
               </p>
             </div>
@@ -101,14 +100,14 @@ export default function NotesScreen() {
                   onClick={() => openChapter(g.book, g.chapter, g.bookId)}
                   style={noteItemStyle}
                 >
-                  <FileText size={18} style={{ color: '#1B1B1B', flexShrink: 0 }} strokeWidth={1.75} />
-                  <span style={{ fontSize: 15, fontWeight: 500, color: '#1B1B1B', flex: 1 }}>
+                  <FileText size={18} style={{ color: '#E7E7E7', flexShrink: 0 }} strokeWidth={1.75} />
+                  <span style={{ fontSize: 15, fontWeight: 500, color: '#E7E7E7', flex: 1 }}>
                     {g.book} {g.chapter}
                   </span>
-                  <span style={{ fontSize: 12, color: '#818990', background: '#f6f3ec', borderRadius: 4, padding: '2px 8px', minWidth: 28, textAlign: 'center' }}>
+                  <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', background: '#1B1B1B', borderRadius: 4, padding: '2px 8px', minWidth: 28, textAlign: 'center' }}>
                     {g.count}
                   </span>
-                  <ChevronRight size={18} style={{ color: '#818990', flexShrink: 0 }} />
+                  <ChevronRight size={18} style={{ color: 'rgba(255,255,255,0.6)', flexShrink: 0 }} />
                 </button>
               ))}
             </>
@@ -119,7 +118,7 @@ export default function NotesScreen() {
   }
 
   return (
-    <div className="flex flex-col h-full relative" style={{ backgroundColor: '#f6f3ec' }}>
+    <div className="flex flex-col h-full relative" style={{ backgroundColor: '#1B1B1B' }}>
       <ScreenHeader
         title={`${activeBook} ${activeChapter}`}
         onBack={() => navigate('/notes')}
@@ -127,7 +126,7 @@ export default function NotesScreen() {
 
       <div style={listContainerStyle}>
         {notesForChapter.length === 0 ? (
-          <p style={{ textAlign: 'center', color: '#818990', padding: '32px 16px', fontSize: 14, fontStyle: 'italic' }}>No notes here yet.</p>
+          <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.6)', padding: '32px 16px', fontSize: 14, fontStyle: 'italic' }}>No notes here yet.</p>
         ) : (
           <>
             {notesForChapter.map(note => (
@@ -136,7 +135,7 @@ export default function NotesScreen() {
                   onClick={() => setEditingNote(note)}
                   style={{ background: 'none', border: 'none', cursor: 'pointer', flex: 1, textAlign: 'left', padding: '8px 12px', borderRadius: 6, minWidth: 0 }}
                 >
-                  <span style={{ fontSize: 14, color: '#1B1B1B', lineHeight: 1.5, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                  <span style={{ fontSize: 14, color: '#E7E7E7', lineHeight: 1.5, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                     {note.text || `${note.book} ${note.chapter}:${note.verse}`}
                   </span>
                 </button>
@@ -146,7 +145,7 @@ export default function NotesScreen() {
                     setOptionsNote(note);
                   }}
                   aria-label="Note options"
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4, borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: '#818990' }}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4, borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'rgba(255,255,255,0.6)' }}
                 >
                   <MoreHorizontal size={18} strokeWidth={1.5} />
                 </button>

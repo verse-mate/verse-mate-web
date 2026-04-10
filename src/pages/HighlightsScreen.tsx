@@ -105,39 +105,37 @@ export default function HighlightsScreen() {
     flexDirection: 'column',
     gap: 12,
     padding: '12px 8px',
-    borderTop: '1px solid #dce0e380',
-    backgroundColor: '#f6f3ec',
+    borderTop: '1px solid #323232',
+    backgroundColor: '#000000',
     scrollbarWidth: 'none',
   };
 
   const chapterGroupStyle: React.CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#ffffff',
-    border: '1px solid #dce0e380',
+    backgroundColor: '#323232',
+    border: '1px solid #323232',
     borderRadius: 10,
     overflow: 'hidden',
     cursor: 'pointer',
     flexShrink: 0,
-    boxShadow: '0 1px 2px rgba(0,0,0,0.03)',
   };
 
   const themeCardStyle: React.CSSProperties = {
-    backgroundColor: '#ffffff',
-    border: '1px solid #dce0e380',
+    backgroundColor: '#323232',
+    border: '1px solid #323232',
     borderRadius: 10,
     padding: '12px 16px',
-    boxShadow: '0 1px 2px rgba(0,0,0,0.03)',
   };
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: '#f6f3ec' }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
       <ScreenHeader title="Highlights" onBack={() => navigate('/menu')} />
 
       <div style={listStyle}>
         {groupedHighlights.length === 0 ? (
-          <div style={{ padding: '32px 16px', textAlign: 'center', color: '#818990', fontStyle: 'italic', fontSize: 14 }}>
-            <Highlighter size={36} style={{ margin: '0 auto 8px', color: '#818990' }} strokeWidth={1.5} />
+          <div style={{ padding: '32px 16px', textAlign: 'center', color: 'rgba(255,255,255,0.6)', fontStyle: 'italic', fontSize: 14 }}>
+            <Highlighter size={36} style={{ margin: '0 auto 8px', color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
             <p style={{ fontSize: 13 }}>No highlights yet</p>
           </div>
         ) : (
@@ -157,14 +155,14 @@ export default function HighlightsScreen() {
                   textAlign: 'left',
                 } as React.CSSProperties}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 600, color: '#1B1B1B', fontSize: 15 }}>
-                  <Highlighter size={18} style={{ color: '#1B1B1B' }} strokeWidth={1.75} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 600, color: '#E7E7E7', fontSize: 15 }}>
+                  <Highlighter size={18} style={{ color: '#E7E7E7' }} strokeWidth={1.75} />
                   {g.book} {g.chapter}
-                  <span style={{ backgroundColor: '#f6f3ec', color: '#818990', fontSize: 12, padding: '2px 8px', borderRadius: 12 }}>
+                  <span style={{ backgroundColor: '#1B1B1B', color: 'rgba(255,255,255,0.6)', fontSize: 12, padding: '2px 8px', borderRadius: 12 }}>
                     {g.count}
                   </span>
                 </div>
-                <ChevronRight size={20} style={{ color: '#818990', flexShrink: 0 }} />
+                <ChevronRight size={20} style={{ color: 'rgba(255,255,255,0.6)', flexShrink: 0 }} />
               </button>
             ))}
           </>
@@ -172,10 +170,10 @@ export default function HighlightsScreen() {
 
         {/* Auto Highlights section */}
         <div style={{ marginTop: 8 }}>
-          <h2 style={{ textAlign: 'center', fontSize: 15, fontWeight: 600, color: '#1B1B1B', marginBottom: 12 }}>
+          <h2 style={{ textAlign: 'center', fontSize: 15, fontWeight: 600, color: '#E7E7E7', marginBottom: 12 }}>
             Auto Highlights
           </h2>
-          <p style={{ textAlign: 'center', fontSize: 12, color: '#818990', lineHeight: 1.6, marginBottom: 16, padding: '0 8px' }}>
+          <p style={{ textAlign: 'center', fontSize: 12, color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginBottom: 16, padding: '0 8px' }}>
             Auto-generated highlights help identify key verses, promises,
             commands, and more throughout the Bible.
             <br />
@@ -185,10 +183,10 @@ export default function HighlightsScreen() {
           <div style={{ ...themeCardStyle, marginBottom: 12 }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
               <div style={{ flex: 1, minWidth: 0 }}>
-                <p style={{ fontSize: 14, color: '#b09a6d', fontWeight: 500 }}>
+                <p style={{ fontSize: 14, color: '#B09A6D', fontWeight: 500 }}>
                   Enable All Auto-Highlights
                 </p>
-                <p style={{ fontSize: 12, color: '#818990', marginTop: 2 }}>
+                <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', marginTop: 2 }}>
                   Turn all Auto-generated highlights on or off
                 </p>
               </div>
@@ -197,7 +195,7 @@ export default function HighlightsScreen() {
           </div>
 
           {themes.length === 0 ? (
-            <p style={{ fontSize: 12, color: '#818990', padding: '16px 0', textAlign: 'center' }}>
+            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', padding: '16px 0', textAlign: 'center' }}>
               Loading themes...
             </p>
           ) : (
@@ -210,12 +208,12 @@ export default function HighlightsScreen() {
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, flex: 1, minWidth: 0 }}>
                         <span
                           className={colorDot[t.color] || 'bg-gray-400'}
-                          style={{ width: 10, height: 10, borderRadius: '50%', flexShrink: 0, marginTop: 5, border: '1px solid rgba(0,0,0,0.05)' }}
+                          style={{ width: 10, height: 10, borderRadius: '50%', flexShrink: 0, marginTop: 5, border: '1px solid rgba(255,255,255,0.1)' }}
                         />
                         <div style={{ minWidth: 0 }}>
-                          <p style={{ fontSize: 14, color: '#1B1B1B', fontWeight: 500 }}>{t.name}</p>
+                          <p style={{ fontSize: 14, color: '#E7E7E7', fontWeight: 500 }}>{t.name}</p>
                           {t.description && (
-                            <p style={{ fontSize: 12, color: '#818990', marginTop: 2, lineHeight: 1.4 }}>
+                            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', marginTop: 2, lineHeight: 1.4 }}>
                               {t.description}
                             </p>
                           )}
@@ -247,7 +245,7 @@ function ThemeToggle({
       role="switch"
       aria-checked={value}
       className="relative w-11 h-6 rounded-full shrink-0 mt-1 transition-colors"
-      style={{ backgroundColor: value ? '#b09a6d' : '#dce0e3' }}
+      style={{ backgroundColor: value ? '#B09A6D' : '#323232' }}
     >
       <span
         className="absolute top-0.5 left-0.5 w-5 h-5 rounded-full shadow transition-transform"

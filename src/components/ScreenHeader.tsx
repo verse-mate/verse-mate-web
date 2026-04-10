@@ -21,9 +21,9 @@ export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeade
     <header
       className="shrink-0 safe-top"
       style={{
-        backgroundColor: '#000000',
+        backgroundColor: '#1A1A1A',
         paddingTop: 'max(env(safe-area-inset-top), 48px)',
-        borderBottom: '1px solid #dce0e380',
+        borderBottom: '1px solid #323232',
       }}
     >
       <div className="relative flex items-center justify-center px-3" style={{ height: 56 }}>
@@ -48,7 +48,7 @@ export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeade
         >
           <ArrowLeft size={24} color="#fff" strokeWidth={2} />
         </button>
-        <h1 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF', letterSpacing: '-0.01em' }}>{title}</h1>
+        <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF', letterSpacing: '-0.01em' }}>{title}</h1>
         {rightAction && (
           <div className="absolute right-2 flex items-center">{rightAction}</div>
         )}

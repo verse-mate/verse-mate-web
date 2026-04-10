@@ -4,11 +4,11 @@ import ScreenHeader from '@/components/ScreenHeader';
 export default function AboutScreen() {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: '#ffffff' }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
       <ScreenHeader title="About" onBack={() => navigate('/menu')} />
 
-      <div className="flex-1 overflow-y-auto min-h-0 px-5 pb-8" style={{ backgroundColor: '#ffffff' }}>
-        <div className="rounded-2xl overflow-hidden mt-2 aspect-[4/5]" style={{ backgroundColor: '#f6f3ec' }}>
+      <div className="flex-1 overflow-y-auto min-h-0 px-5 pb-8" style={{ backgroundColor: '#000000' }}>
+        <div className="rounded-2xl overflow-hidden mt-2 aspect-[4/5]" style={{ backgroundColor: '#323232' }}>
           <img
             src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&auto=format&fit=crop"
             alt="Bible on desk"
@@ -19,16 +19,16 @@ export default function AboutScreen() {
           />
         </div>
 
-        <h1 className="text-[22px] font-bold mt-6 leading-tight" style={{ color: '#1B1B1B' }}>
+        <h1 className="text-[22px] font-bold mt-6 leading-tight" style={{ color: '#E7E7E7' }}>
           Built by Believers.<br />
           Guided by the Word.
         </h1>
 
-        <p className="text-[14px] mt-4 leading-relaxed" style={{ color: '#3e464d' }}>
+        <p className="text-[14px] mt-4 leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>
           VerseMate is a nonprofit organization on a mission to make the Bible easier to
           understand, study, and love — for everyone, everywhere.
         </p>
-        <p className="text-[14px] mt-3 leading-relaxed" style={{ color: '#3e464d' }}>
+        <p className="text-[14px] mt-3 leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>
           We are developers, translators, and believers from around the world, united by one
           calling: to help more people connect with God through His Word.
         </p>

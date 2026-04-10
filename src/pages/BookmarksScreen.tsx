@@ -17,7 +17,7 @@ export default function BookmarksScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: '#f6f3ec' }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
       <ScreenHeader title="Bookmarks" onBack={() => navigate('/menu')} />
 
       <div
@@ -28,17 +28,17 @@ export default function BookmarksScreen() {
           flexDirection: 'column',
           gap: 8,
           padding: '12px 8px',
-          borderTop: '1px solid #dce0e380',
-          backgroundColor: '#f6f3ec',
+          borderTop: '1px solid #323232',
+          backgroundColor: '#000000',
         }}
       >
         {state.bookmarks.length === 0 ? (
           <div
-            style={{ padding: 16, textAlign: 'center', color: '#818990', fontStyle: 'italic' }}
+            style={{ padding: 16, textAlign: 'center', color: 'rgba(255,255,255,0.6)', fontStyle: 'italic' }}
           >
-            <Bookmark size={48} style={{ margin: '0 auto 12px', color: '#818990' }} strokeWidth={1.5} />
+            <Bookmark size={48} style={{ margin: '0 auto 12px', color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
             <p style={{ fontSize: 14 }}>No bookmarks yet</p>
-            <p style={{ fontSize: 12, marginTop: 4, color: '#818990' }}>
+            <p style={{ fontSize: 12, marginTop: 4, color: 'rgba(255,255,255,0.6)' }}>
               Long-press a verse to save it here
             </p>
           </div>
@@ -52,11 +52,10 @@ export default function BookmarksScreen() {
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   padding: 12,
-                  backgroundColor: '#ffffff',
-                  border: '1px solid #dce0e380',
+                  backgroundColor: '#323232',
+                  border: '1px solid #323232',
                   borderRadius: 8,
                   cursor: 'pointer',
-                  boxShadow: '0 1px 2px rgba(0,0,0,0.03)',
                 }}
               >
                 <button
@@ -73,8 +72,8 @@ export default function BookmarksScreen() {
                     padding: 0,
                   }}
                 >
-                  <Bookmark size={18} style={{ color: '#1B1B1B' }} strokeWidth={1.5} fill="currentColor" />
-                  <span style={{ fontSize: 15, fontWeight: 500, color: '#1B1B1B' }}>
+                  <Bookmark size={18} style={{ color: '#E7E7E7' }} strokeWidth={1.5} fill="currentColor" />
+                  <span style={{ fontSize: 15, fontWeight: 500, color: '#E7E7E7' }}>
                     {b.book} {b.chapter}
                     {b.verse ? `:${b.verse}` : ''}
                   </span>
@@ -93,7 +92,7 @@ export default function BookmarksScreen() {
                     borderRadius: '50%',
                     width: 36,
                     height: 36,
-                    color: '#818990',
+                    color: 'rgba(255,255,255,0.6)',
                     transition: 'all 0.2s ease',
                     flexShrink: 0,
                   }}
