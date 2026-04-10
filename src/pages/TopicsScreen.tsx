@@ -24,18 +24,18 @@ export default function TopicsScreen() {
   );
 
   return (
-    <div className="flex flex-col h-full bg-white text-[#1B1B1B]">
+    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
       <ScreenHeader title="Topics" />
 
       {/* Search */}
       <div className="px-4 pt-1">
-        <div className="flex items-center gap-2 h-12 px-4 rounded-full bg-[#f8f9fa] border border-[#dce0e380]">
-          <Search size={18} className="text-[#818990]" strokeWidth={2} />
+        <div className="flex items-center gap-2 h-12 px-4 rounded-full bg-dark-raised border border-dark">
+          <Search size={18} className="text-dark-muted" strokeWidth={2} />
           <input
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search..."
-            className="flex-1 bg-transparent text-[15px] text-[#1B1B1B] placeholder:text-[#818990] focus:outline-none"
+            className="flex-1 bg-transparent text-[15px] text-dark-fg placeholder:text-dark-muted focus:outline-none"
           />
         </div>
       </div>
@@ -45,14 +45,14 @@ export default function TopicsScreen() {
           <button
             key={topic.id}
             onClick={() => navigate(`/topics/${topic.id}`)}
-            className="flex items-center justify-between w-full h-[56px] border-b border-[#dce0e380] text-left"
+            className="flex items-center justify-between w-full h-[56px] border-b border-dark text-left"
           >
-            <span className="text-[16px] text-[#1B1B1B]">{topic.name}</span>
-            <ChevronRight size={18} className="text-[#818990]" />
+            <span className="text-[16px] text-dark-fg">{topic.name}</span>
+            <ChevronRight size={18} className="text-dark-muted" />
           </button>
         ))}
         {filtered.length === 0 && (
-          <p className="text-[14px] text-[#818990] text-center py-8">No topics found</p>
+          <p className="text-[14px] text-dark-muted text-center py-8">No topics found</p>
         )}
       </div>
     </div>

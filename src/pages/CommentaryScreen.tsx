@@ -128,16 +128,16 @@ export default function CommentaryScreen() {
         ))}
       </div>
 
-      {/* Body — WHITE background */}
-      <div className="flex-1 overflow-y-auto px-4 pb-8" style={{ background: '#fff', color: '#1B1B1B' }}>
+      {/* Body — dark background, light text */}
+      <div className="flex-1 overflow-y-auto px-4 pb-8" style={{ background: 'hsl(var(--dark-surface))', color: '#fff' }}>
         {commentaries.length === 0 ? (
-          <p className="text-[14px] text-center py-8" style={{ color: '#818990' }}>
+          <p className="text-[14px] text-center py-8" style={{ color: 'hsl(var(--dark-surface-muted))' }}>
             No commentary available for this chapter.
           </p>
         ) : tab === 'summary' ? (
           <div className="pt-4">
-            {/* Title: Inter 700 20px/28px, color #1B1B1B */}
-            <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#1B1B1B', marginBottom: 16 }}>
+            {/* Title: Inter 700 20px/28px, white */}
+            <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#fff', marginBottom: 16 }}>
               Summary of {decodedBook} {chapterNum}
             </h2>
             {(() => {
@@ -155,8 +155,8 @@ export default function CommentaryScreen() {
             const allExpanded = expanded === -2;
             return (
               <div className="pt-4">
-                {/* Title: Inter 500 18px/24px */}
-                <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#1B1B1B', marginBottom: 12 }}>
+                {/* Title: Inter 500 18px/24px, white */}
+                <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#fff', marginBottom: 12 }}>
                   Line-by-Line Analysis of {decodedBook} {chapterNum}
                 </h2>
                 <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
@@ -171,18 +171,18 @@ export default function CommentaryScreen() {
                   {byLineItems.map(c => {
                     const isOpen = allExpanded || expanded === c.verse;
                     return (
-                      <div key={c.verse} style={{ borderBottom: '1px solid #dce0e3' }}>
+                      <div key={c.verse} style={{ borderBottom: '1px solid hsl(var(--dark-border))' }}>
                         <button
                           onClick={() => setExpanded(isOpen ? null : c.verse)}
                           style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '16px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer' }}
                         >
-                          <span style={{ fontFamily: 'Inter, sans-serif', fontSize: 15, color: '#1B1B1B' }}>
+                          <span style={{ fontFamily: 'Inter, sans-serif', fontSize: 15, color: '#fff' }}>
                             {decodedBook} {chapterNum}:{c.verse}
                           </span>
                           {isOpen ? (
-                            <ChevronUp size={18} color="#818990" style={{ flexShrink: 0 }} />
+                            <ChevronUp size={18} color="hsl(var(--dark-surface-muted))" style={{ flexShrink: 0 }} />
                           ) : (
-                            <ChevronDown size={18} color="#818990" style={{ flexShrink: 0 }} />
+                            <ChevronDown size={18} color="hsl(var(--dark-surface-muted))" style={{ flexShrink: 0 }} />
                           )}
                         </button>
                         {isOpen && (
@@ -194,7 +194,7 @@ export default function CommentaryScreen() {
                     );
                   })}
                   {byLineItems.length === 0 && (
-                    <p className="text-[14px] py-8 text-center" style={{ color: '#818990' }}>
+                    <p className="text-[14px] py-8 text-center" style={{ color: 'hsl(var(--dark-surface-muted))' }}>
                       Line-by-line analysis not available.
                     </p>
                   )}
@@ -207,14 +207,14 @@ export default function CommentaryScreen() {
             const detailed = commentaries.find(c => c.type === 'detailed');
             return detailed ? (
               <div className="pt-4">
-                {/* Title: Inter 700 20px/28px */}
-                <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#1B1B1B', marginBottom: 16 }}>
+                {/* Title: Inter 700 20px/28px, white */}
+                <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#fff', marginBottom: 16 }}>
                   In-Depth Analysis of {decodedBook} {chapterNum}
                 </h2>
                 <CommentaryBody text={detailed.detail} />
               </div>
             ) : (
-              <p className="text-[14px] py-8 text-center" style={{ color: '#818990' }}>
+              <p className="text-[14px] py-8 text-center" style={{ color: 'hsl(var(--dark-surface-muted))' }}>
                 Detailed commentary not available.
               </p>
             );
@@ -226,9 +226,9 @@ export default function CommentaryScreen() {
 }
 
 /**
- * Production-exact Commentary body renderer.
- * h2 elements → Inter 500 18px/24px
- * span/p text → Inter 400 16px/24px, color #1B1B1B
+ * Commentary body renderer — dark theme: white text on dark surface.
+ * h2 elements → Inter 500 18px/24px, white
+ * p text → Inter 400 16px/24px, white
  */
 function CommentaryBody({ text }: { text: string }) {
   const lines = text.split('\n');
@@ -239,7 +239,7 @@ function CommentaryBody({ text }: { text: string }) {
   const flushPara = () => {
     if (para.length) {
       elements.push(
-        <p key={key++} style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, fontSize: 16, lineHeight: '24px', color: '#1B1B1B', marginBottom: 12 }}>
+        <p key={key++} style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, fontSize: 16, lineHeight: '24px', color: '#fff', marginBottom: 12 }}>
           {inlineFormat(para.join(' '))}
         </p>
       );
@@ -257,7 +257,7 @@ function CommentaryBody({ text }: { text: string }) {
       flushPara();
       const text = line.replace(/^#+\s*/, '');
       elements.push(
-        <h2 key={key++} style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#1B1B1B', marginTop: 16, marginBottom: 8 }}>
+        <h2 key={key++} style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#fff', marginTop: 16, marginBottom: 8 }}>
           {inlineFormat(text)}
         </h2>
       );
@@ -266,7 +266,7 @@ function CommentaryBody({ text }: { text: string }) {
     if (line.startsWith('>')) {
       flushPara();
       elements.push(
-        <blockquote key={key++} style={{ borderLeft: '2px solid #b09a6d', paddingLeft: 12, fontStyle: 'italic', marginBottom: 12, fontFamily: 'Inter, sans-serif', fontSize: 16, lineHeight: '24px', color: '#1B1B1B' }}>
+        <blockquote key={key++} style={{ borderLeft: '2px solid #b09a6d', paddingLeft: 12, fontStyle: 'italic', marginBottom: 12, fontFamily: 'Inter, sans-serif', fontSize: 16, lineHeight: '24px', color: 'rgba(255,255,255,0.8)' }}>
           {inlineFormat(line.replace(/^>\s?/, ''))}
         </blockquote>
       );

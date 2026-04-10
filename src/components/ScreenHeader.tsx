@@ -10,8 +10,8 @@ interface ScreenHeaderProps {
 }
 
 /**
- * ScreenHeader — sub-page header with white bg and dark text (matches production).
- * Production: background: white, back button with dark oil (#1B1B1B) icon.
+ * ScreenHeader — sub-page header with dark bg and white text (Figma Mobile App section).
+ * Background: #1B1B1B (dark-surface), back button with white icon.
  * Figma reference: Mobile App section — back arrow on the left, centered title.
  */
 export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeaderProps) {
@@ -20,10 +20,10 @@ export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeade
 
   return (
     <header
-      className="shrink-0 bg-white text-[#1B1B1B] safe-top"
+      className="shrink-0 bg-dark-surface text-dark-fg safe-top"
       style={{
-        paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)',
-        borderBottom: '1px solid rgba(220,224,227,0.5)',
+        paddingTop: 'max(env(safe-area-inset-top), 48px)',
+        borderBottom: '1px solid hsl(var(--dark-border))',
       }}
     >
       <div className="relative flex items-center justify-center px-3" style={{ height: 56 }}>
@@ -46,9 +46,9 @@ export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeade
             height: '44px',
           }}
         >
-          <ArrowLeft size={24} color="#1B1B1B" strokeWidth={2} />
+          <ArrowLeft size={24} color="#fff" strokeWidth={2} />
         </button>
-        <h1 className="text-[18px] font-medium text-[#1B1B1B] tracking-tight">{title}</h1>
+        <h1 className="text-[18px] font-medium text-dark-fg tracking-tight">{title}</h1>
         {rightAction && (
           <div className="absolute right-2 flex items-center">{rightAction}</div>
         )}

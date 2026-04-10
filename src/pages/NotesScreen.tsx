@@ -63,7 +63,7 @@ export default function NotesScreen() {
   };
 
   // Shared container style for the scrollable notes area
-  // notesMainContainer: bg fantasy, border-top geyser-opacity, padding 12px 8px
+  // notesMainContainer: dark surface, border-top dark, padding 12px 8px
   const listContainerStyle: React.CSSProperties = {
     flex: 1,
     overflowY: 'auto',
@@ -71,19 +71,18 @@ export default function NotesScreen() {
     flexDirection: 'column',
     gap: 8,
     padding: '12px 8px',
-    borderTop: '1px solid rgba(220,224,227,0.5)',
-    backgroundColor: '#f6f3ec',
+    borderTop: '1px solid hsl(var(--dark-border))',
+    backgroundColor: 'hsl(var(--dark-surface))',
     scrollbarWidth: 'thin',
-    scrollbarColor: '#dce0e3 #f6f3ec',
+    scrollbarColor: 'hsl(var(--dark-border)) hsl(var(--dark-surface))',
   };
 
-  // noteItem: bg white, border geyser-opacity, border-radius 8px, padding 6px, box-shadow
+  // noteItem: bg dark-raised, border dark, border-radius 8px, padding 6px
   const noteItemStyle: React.CSSProperties = {
-    background: '#fff',
-    border: '1px solid rgba(220,224,227,0.5)',
+    background: 'hsl(var(--dark-surface-raised))',
+    border: '1px solid hsl(var(--dark-border))',
     borderRadius: 8,
     padding: 6,
-    boxShadow: '0 1px 2px rgba(0,0,0,0.03)',
     display: 'flex',
     alignItems: 'center',
     gap: 12,
@@ -95,15 +94,15 @@ export default function NotesScreen() {
   // ─── Index view ─────────────────────────────────────────────────────────
   if (!isChapterView) {
     return (
-      <div className="flex flex-col h-full bg-white text-[#1B1B1B] relative">
+      <div className="flex flex-col h-full bg-dark-surface text-dark-fg relative">
         <ScreenHeader title="Notes" />
 
         <div style={listContainerStyle}>
           {groups.length === 0 ? (
-            <div style={{ padding: 32, textAlign: 'center', color: '#818990', fontStyle: 'italic' }}>
-              <FileText size={48} style={{ margin: '0 auto 12px', color: '#818990' }} strokeWidth={1.5} />
+            <div style={{ padding: 32, textAlign: 'center', color: 'hsl(var(--dark-surface-muted))', fontStyle: 'italic' }}>
+              <FileText size={48} style={{ margin: '0 auto 12px', color: 'hsl(var(--dark-surface-muted))' }} strokeWidth={1.5} />
               <p style={{ fontSize: 14 }}>No notes yet</p>
-              <p style={{ fontSize: 12, marginTop: 4, color: 'rgba(129,137,144,0.7)', maxWidth: 240, margin: '4px auto 0' }}>
+              <p style={{ fontSize: 12, marginTop: 4, color: 'hsl(var(--dark-surface-muted))', maxWidth: 240, margin: '4px auto 0' }}>
                 Long-press a verse while reading to capture your reflections
               </p>
             </div>
@@ -115,14 +114,14 @@ export default function NotesScreen() {
                   onClick={() => openChapter(g.book, g.chapter, g.bookId)}
                   style={noteItemStyle}
                 >
-                  <FileText size={18} style={{ color: '#1B1B1B', flexShrink: 0 }} strokeWidth={1.75} />
-                  <span style={{ fontSize: 15, fontWeight: 500, color: '#1B1B1B', flex: 1 }}>
+                  <FileText size={18} style={{ color: '#fff', flexShrink: 0 }} strokeWidth={1.75} />
+                  <span style={{ fontSize: 15, fontWeight: 500, color: '#fff', flex: 1 }}>
                     {g.book} {g.chapter}
                   </span>
-                  <span style={{ fontSize: 12, color: '#818990', background: '#f6f3ec', borderRadius: 4, padding: '2px 8px', minWidth: 28, textAlign: 'center' }}>
+                  <span style={{ fontSize: 12, color: 'hsl(var(--dark-surface-muted))', background: 'hsl(var(--dark-surface))', borderRadius: 4, padding: '2px 8px', minWidth: 28, textAlign: 'center' }}>
                     {g.count}
                   </span>
-                  <ChevronRight size={18} style={{ color: '#818990', flexShrink: 0 }} />
+                  <ChevronRight size={18} style={{ color: 'hsl(var(--dark-surface-muted))', flexShrink: 0 }} />
                 </button>
               ))}
             </>
@@ -142,7 +141,7 @@ export default function NotesScreen() {
 
       <div style={listContainerStyle}>
         {notesForChapter.length === 0 ? (
-          <p style={{ textAlign: 'center', color: '#818990', padding: '32px 16px', fontSize: 14, fontStyle: 'italic' }}>No notes here yet.</p>
+          <p style={{ textAlign: 'center', color: 'hsl(var(--dark-surface-muted))', padding: '32px 16px', fontSize: 14, fontStyle: 'italic' }}>No notes here yet.</p>
         ) : (
           <>
             {notesForChapter.map(note => (
@@ -151,8 +150,8 @@ export default function NotesScreen() {
                   onClick={() => setEditingNote(note)}
                   style={{ background: 'none', border: 'none', cursor: 'pointer', flex: 1, textAlign: 'left', padding: '8px 12px', borderRadius: 6, minWidth: 0 }}
                 >
-                  {/* noteContent: color foreground, font-size body2, line-height 1.5 */}
-                  <span style={{ fontSize: 14, color: '#1B1B1B', lineHeight: 1.5, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                  {/* noteContent: white text on dark */}
+                  <span style={{ fontSize: 14, color: '#fff', lineHeight: 1.5, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                     {note.text || `${note.book} ${note.chapter}:${note.verse}`}
                   </span>
                 </button>
@@ -163,7 +162,7 @@ export default function NotesScreen() {
                     setOptionsNote(note);
                   }}
                   aria-label="Note options"
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4, borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: '#818990' }}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4, borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'hsl(var(--dark-surface-muted))' }}
                 >
                   <MoreHorizontal size={18} strokeWidth={1.5} />
                 </button>

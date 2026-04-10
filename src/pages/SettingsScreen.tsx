@@ -37,13 +37,13 @@ export default function SettingsScreen() {
     marginBottom: 16,
     fontWeight: 600,
     fontSize: 20,
-    color: '#1B1B1B',
+    color: '#fff',
     fontFamily: 'Inter, sans-serif',
   };
 
   const containerBoxStyle: React.CSSProperties = {
-    backgroundColor: '#f8f9fa',
-    border: '1px solid rgba(220,224,227,0.5)',
+    backgroundColor: 'hsl(var(--dark-surface-raised))',
+    border: '1px solid hsl(var(--dark-border))',
     borderRadius: 8,
     padding: 20,
     maxWidth: 500,
@@ -54,13 +54,13 @@ export default function SettingsScreen() {
     display: 'block',
     marginBottom: 8,
     fontWeight: 500,
-    color: '#1B1B1B',
+    color: '#fff',
     fontSize: 14,
     lineHeight: '1.4',
   };
 
   return (
-    <div className="flex flex-col h-full bg-white text-[#1B1B1B]">
+    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
       <ScreenHeader title="Settings" />
 
       {/* settingsRoot: padding 20px, font Inter */}
@@ -86,9 +86,9 @@ export default function SettingsScreen() {
                     fontFamily: 'Inter, sans-serif',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
-                    border: settings.defaultVersion === v ? 'none' : '1px solid rgba(220,224,227,0.5)',
-                    backgroundColor: settings.defaultVersion === v ? '#b09a6d' : '#fff',
-                    color: settings.defaultVersion === v ? '#1A1A1A' : '#1B1B1B',
+                    border: settings.defaultVersion === v ? 'none' : '1px solid hsl(var(--dark-border))',
+                    backgroundColor: settings.defaultVersion === v ? '#b09a6d' : 'hsl(var(--dark-surface))',
+                    color: settings.defaultVersion === v ? '#1A1A1A' : '#fff',
                   }}
                 >
                   {v}
@@ -124,9 +124,9 @@ export default function SettingsScreen() {
                     fontFamily: 'Inter, sans-serif',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
-                    border: settings.language === l.id ? 'none' : '1px solid rgba(220,224,227,0.5)',
-                    backgroundColor: settings.language === l.id ? '#b09a6d' : '#fff',
-                    color: settings.language === l.id ? '#1A1A1A' : '#1B1B1B',
+                    border: settings.language === l.id ? 'none' : '1px solid hsl(var(--dark-border))',
+                    backgroundColor: settings.language === l.id ? '#b09a6d' : 'hsl(var(--dark-surface))',
+                    color: settings.language === l.id ? '#1A1A1A' : '#fff',
                   }}
                 >
                   {l.label}
@@ -142,8 +142,8 @@ export default function SettingsScreen() {
           <div style={containerBoxStyle}>
             <span style={dropdownLabelStyle}>Font size</span>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
-              <span style={{ fontSize: 14, color: '#1B1B1B' }}>Size</span>
-              <span style={{ fontSize: 12, color: '#818990' }}>{settings.fontSize}px</span>
+              <span style={{ fontSize: 14, color: '#fff' }}>Size</span>
+              <span style={{ fontSize: 12, color: 'hsl(var(--dark-surface-muted))' }}>{settings.fontSize}px</span>
             </div>
             <input
               type="range"
@@ -157,7 +157,7 @@ export default function SettingsScreen() {
         </section>
 
         <section style={{ marginTop: 8 }}>
-          <p style={{ fontSize: 12, color: '#818990' }}>VerseMate · Version 1.0.0</p>
+          <p style={{ fontSize: 12, color: 'hsl(var(--dark-surface-muted))' }}>VerseMate · Version 1.0.0</p>
         </section>
       </div>
     </div>

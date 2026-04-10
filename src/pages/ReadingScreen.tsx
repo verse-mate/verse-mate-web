@@ -349,18 +349,18 @@ export default function ReadingScreen() {
         <button
           onClick={() => goToChapter(-1)}
           aria-label="Previous chapter"
-          style={{ position: 'absolute', left: 12, bottom: 45, top: 'unset', transform: 'translateY(0)', width: 40, height: 40, borderRadius: '50%', background: 'var(--vm-snow)', border: '1px solid rgba(220,224,227,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.12)', zIndex: 20, cursor: 'pointer' }}
+          style={{ position: 'absolute', left: 12, bottom: 45, top: 'unset', transform: 'translateY(0)', width: 40, height: 40, borderRadius: '50%', background: 'hsl(var(--dark-surface))', border: '1px solid hsl(var(--dark-border))', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
-          <ChevronLeft size={20} color="#1B1B1B" strokeWidth={2.5} />
+          <ChevronLeft size={20} color="#fff" strokeWidth={2.5} />
         </button>
       )}
       {state.chapter < maxChapter && (
         <button
           onClick={() => goToChapter(1)}
           aria-label="Next chapter"
-          style={{ position: 'absolute', right: 12, bottom: 45, top: 'unset', transform: 'translateY(0)', width: 40, height: 40, borderRadius: '50%', background: 'var(--vm-snow)', border: '1px solid rgba(220,224,227,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.12)', zIndex: 20, cursor: 'pointer' }}
+          style={{ position: 'absolute', right: 12, bottom: 45, top: 'unset', transform: 'translateY(0)', width: 40, height: 40, borderRadius: '50%', background: 'hsl(var(--dark-surface))', border: '1px solid hsl(var(--dark-border))', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
-          <ChevronRight size={20} color="#1B1B1B" strokeWidth={2.5} />
+          <ChevronRight size={20} color="#fff" strokeWidth={2.5} />
         </button>
       )}
 
