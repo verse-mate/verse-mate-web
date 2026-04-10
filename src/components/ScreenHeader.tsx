@@ -16,7 +16,7 @@ interface ScreenHeaderProps {
  */
 export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeaderProps) {
   const navigate = useNavigate();
-  const handleBack = onBack || (() => navigate(-1));
+  const handleBack = onBack || (() => navigate('/read'));
 
   return (
     <header

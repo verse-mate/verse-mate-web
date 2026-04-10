@@ -94,7 +94,7 @@ export default function NotesScreen() {
   if (!isChapterView) {
     return (
       <div className="flex flex-col h-full text-white relative" style={{ backgroundColor: '#1B1B1B' }}>
-        <ScreenHeader title="Notes" />
+        <ScreenHeader title="Notes" onBack={() => navigate('/menu')} />
 
         <div style={listContainerStyle}>
           {groups.length === 0 ? (

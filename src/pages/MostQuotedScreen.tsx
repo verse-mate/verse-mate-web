@@ -33,7 +33,7 @@ export default function MostQuotedScreen() {
 
   return (
     <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
-      <ScreenHeader title="Most quoted / memorized" />
+      <ScreenHeader title="Most quoted / memorized" onBack={() => navigate(`/topics/${topicId}`)} />
 
       {/* Search */}
       <div className="px-4 pt-1">

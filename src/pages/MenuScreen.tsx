@@ -93,11 +93,11 @@ export default function MenuScreen() {
           <div className="min-w-0 flex-1">
             <p className="text-[14px] font-medium truncate" style={{ color: '#B09A6D' }}>
               {state.isSignedIn
-                ? state.userName || state.userEmail?.split('@')[0] || 'Guest'
+                ? state.userName || state.userEmail?.split('@')[0] || ''
                 : 'Guest'}
             </p>
             <p className="text-[12px] truncate" style={{ color: 'rgba(255,255,255,0.6)' }}>
-              {state.isSignedIn ? state.userEmail || '' : 'Tap to sign in'}
+              {state.isSignedIn ? state.userEmail || 'Loading...' : 'Tap to sign in'}
             </p>
           </div>
         </button>

@@ -25,7 +25,7 @@ export default function TopicsScreen() {
 
   return (
     <div className="flex flex-col h-full text-white" style={{ backgroundColor: "#1B1B1B" }}>
-      <ScreenHeader title="Topics" />
+      <ScreenHeader title="Topics" onBack={() => navigate('/read')} />
 
       {/* Search */}
       <div className="px-4 pt-1" style={{ backgroundColor: '#000000' }}>

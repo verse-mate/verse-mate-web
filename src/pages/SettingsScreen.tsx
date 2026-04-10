@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import { BibleVersion } from '@/services/types';
 import ScreenHeader from '@/components/ScreenHeader';
@@ -10,6 +11,7 @@ import { api } from '@/services/api';
  * (per the Figma mobile app section). Bible version is here for continuity.
  */
 export default function SettingsScreen() {
+  const navigate = useNavigate();
   const { state, dispatch } = useApp();
   const { settings } = state;
 
@@ -61,7 +63,7 @@ export default function SettingsScreen() {
 
   return (
     <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
-      <ScreenHeader title="Settings" />
+      <ScreenHeader title="Settings" onBack={() => navigate('/menu')} />
 
       {/* settingsRoot: padding 20px, font Roboto */}
       <div style={{ flex: 1, overflowY: 'auto', padding: 20, fontFamily: 'Roboto, sans-serif', backgroundColor: '#000000' }}>

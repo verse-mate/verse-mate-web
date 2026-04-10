@@ -182,7 +182,7 @@ export default function SignInScreen() {
 
   return (
     <div className="flex flex-col h-full text-white" style={{ backgroundColor: "#1B1B1B" }}>
-      <ScreenHeader title="Sign In" />
+      <ScreenHeader title="Sign In" onBack={() => navigate('/menu')} />
 
       <div className="flex-1 flex flex-col px-6 pb-6" style={{ backgroundColor: "#000000" }}>
         <div className="mt-4 mb-8 text-center">

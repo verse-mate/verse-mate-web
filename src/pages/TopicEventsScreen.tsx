@@ -49,7 +49,7 @@ export default function TopicEventsScreen() {
 
   return (
     <div className="flex flex-col h-full text-white" style={{ backgroundColor: "#1B1B1B" }}>
-      <ScreenHeader title={topic?.name || 'Events'} />
+      <ScreenHeader title={topic?.name || 'Events'} onBack={() => navigate('/topics')} />
 
       {/* Search */}
       <div className="px-4 pt-1" style={{ backgroundColor: '#000000' }}>

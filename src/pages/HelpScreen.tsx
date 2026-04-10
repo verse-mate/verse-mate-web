@@ -28,7 +28,7 @@ export default function HelpScreen() {
 
   return (
     <div className="flex flex-col h-full text-white" style={{ backgroundColor: "#1B1B1B" }}>
-      <ScreenHeader title="Help & Feedback" />
+      <ScreenHeader title="Help & Feedback" onBack={() => navigate('/menu')} />
 
       <div className="flex-1 overflow-y-auto px-5 pb-8" style={{ backgroundColor: "#000000" }}>
         {formState === 'form' && (

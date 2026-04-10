@@ -141,7 +141,7 @@ export default function HighlightsScreen() {
 
   return (
     <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
-      <ScreenHeader title="Highlights" />
+      <ScreenHeader title="Highlights" onBack={() => navigate('/menu')} />
 
       <div style={listStyle}>
         {/* Highlighted chapters list */}

@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import ScreenHeader from '@/components/ScreenHeader';
 
 /**
@@ -5,9 +6,10 @@ import ScreenHeader from '@/components/ScreenHeader';
  * Figma reference: frame 5588:4921 (Mobile App section)
  */
 export default function AboutScreen() {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
-      <ScreenHeader title="About" />
+      <ScreenHeader title="About" onBack={() => navigate('/menu')} />
 
       <div className="flex-1 overflow-y-auto px-5 pb-8" style={{ backgroundColor: '#000000' }}>
         <div className="rounded-2xl overflow-hidden mt-2 aspect-[4/5]" style={{ backgroundColor: '#323232' }}>

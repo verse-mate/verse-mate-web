@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import ScreenHeader from '@/components/ScreenHeader';
 
 /**
@@ -6,9 +7,10 @@ import ScreenHeader from '@/components/ScreenHeader';
  * No CTA button in the Figma.
  */
 export default function GivingScreen() {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
-      <ScreenHeader title="Giving" />
+      <ScreenHeader title="Giving" onBack={() => navigate('/menu')} />
 
       <div className="flex-1 overflow-y-auto px-5 pb-8" style={{ backgroundColor: '#000000' }}>
         <div className="pt-4">

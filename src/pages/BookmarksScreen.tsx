@@ -18,7 +18,7 @@ export default function BookmarksScreen() {
 
   return (
     <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
-      <ScreenHeader title="Bookmarks" />
+      <ScreenHeader title="Bookmarks" onBack={() => navigate('/menu')} />
 
       {/* bookmarkList */}
       <div
