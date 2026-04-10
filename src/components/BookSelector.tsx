@@ -80,7 +80,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
             >
               <ArrowLeft size={22} className="text-dark-fg" strokeWidth={2} />
             </button>
-            <h2 className="text-[18px] font-medium tracking-tight">{selectedBook}</h2>
+            <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', letterSpacing: '-0.01em' }}>{selectedBook}</h2>
           </div>
         </header>
 
@@ -117,7 +117,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
           >
             <ArrowLeft size={22} className="text-dark-fg" strokeWidth={2} />
           </button>
-          <h2 className="text-[18px] font-medium tracking-tight">Search</h2>
+          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', letterSpacing: '-0.01em' }}>Search</h2>
         </div>
       </header>
 
@@ -133,9 +133,10 @@ export default function BookSelector({ onClose, onSelect }: Props) {
                   setTab(t);
                   setQuery('');
                 }}
-                className={`flex-1 h-10 rounded-full text-[13px] font-medium transition-colors ${
+                className={`flex-1 h-10 rounded-full transition-colors ${
                   tab === t ? 'bg-gold text-[#1A1A1A]' : 'text-dark-fg/80'
                 }`}
+                style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px' }}
               >
                 {label}
               </button>
@@ -152,7 +153,8 @@ export default function BookSelector({ onClose, onSelect }: Props) {
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search..."
-            className="flex-1 bg-transparent text-[15px] text-dark-fg placeholder:text-dark-muted focus:outline-none"
+            className="flex-1 bg-transparent text-dark-fg placeholder:text-dark-muted focus:outline-none"
+            style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '24px' }}
           />
         </div>
       </div>

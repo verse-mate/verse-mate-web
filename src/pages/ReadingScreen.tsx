@@ -301,10 +301,10 @@ export default function ReadingScreen() {
               <div key={gi} className={gi > 0 ? 'mt-5' : ''}>
                 {group.title && (
                   <>
-                    <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 22, lineHeight: '28px', color: '#E7E7E7', marginBottom: 4 }}>
+                    <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#E7E7E7', marginBottom: 4 }}>
                       {group.title}
                     </h2>
-                    <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 18, lineHeight: '22px', color: 'rgba(255,255,255,0.5)', marginBottom: 12 }}>
+                    <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '20px', color: 'rgba(255,255,255,0.5)', marginBottom: 12 }}>
                       {group.range}
                     </p>
                   </>

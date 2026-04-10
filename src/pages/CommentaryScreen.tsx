@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchCommentary } from '@/services/bibleService';
 import { Commentary } from '@/services/types';
-import { ChevronDown, ChevronUp, Menu } from 'lucide-react';
+import { ChevronDown, ChevronUp, Menu, Share2 } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
 
 type Tab = 'summary' | 'byline' | 'detailed';
@@ -141,10 +141,19 @@ export default function CommentaryScreen() {
           </p>
         ) : tab === 'summary' ? (
           <div className="pt-4">
-            {/* Title: Inter 700 20px/28px, white */}
-            <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#fff', marginBottom: 16 }}>
-              Summary of {decodedBook} {chapterNum}
-            </h2>
+            {/* Title: Roboto 700 20px/28px, white + share button */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
+              <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#fff', margin: 0 }}>
+                Summary of {decodedBook} {chapterNum}
+              </h2>
+              <button
+                onClick={() => navigator.share?.({ title: `Summary of ${decodedBook} ${chapterNum}`, text: `Summary of ${decodedBook} ${chapterNum}` }).catch(() => {})}
+                style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
+                aria-label="Share summary"
+              >
+                <Share2 size={20} color="#fff" strokeWidth={1.5} />
+              </button>
+            </div>
             {(() => {
               const summary = commentaries.find(c => c.type === 'summary');
               return summary ? (
@@ -160,10 +169,19 @@ export default function CommentaryScreen() {
             const allExpanded = expanded === -2;
             return (
               <div className="pt-4">
-                {/* Title: Inter 500 18px/24px, white */}
-                <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#fff', marginBottom: 12 }}>
-                  Line-by-Line Analysis of {decodedBook} {chapterNum}
-                </h2>
+                {/* Title: Roboto 700 20px/28px, white + share button */}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
+                  <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#fff', margin: 0 }}>
+                    Line-by-Line Analysis of {decodedBook} {chapterNum}
+                  </h2>
+                  <button
+                    onClick={() => navigator.share?.({ title: `Line-by-Line Analysis of ${decodedBook} ${chapterNum}`, text: `Line-by-Line Analysis of ${decodedBook} ${chapterNum}` }).catch(() => {})}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
+                    aria-label="Share line-by-line analysis"
+                  >
+                    <Share2 size={20} color="#fff" strokeWidth={1.5} />
+                  </button>
+                </div>
                 <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
                   <button
                     onClick={() => setExpanded(allExpanded ? null : -2)}
@@ -212,10 +230,19 @@ export default function CommentaryScreen() {
             const detailed = commentaries.find(c => c.type === 'detailed');
             return detailed ? (
               <div className="pt-4">
-                {/* Title: Inter 700 20px/28px, white */}
-                <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#fff', marginBottom: 16 }}>
-                  In-Depth Analysis of {decodedBook} {chapterNum}
-                </h2>
+                {/* Title: Roboto 700 20px/28px, white + share button */}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
+                  <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#fff', margin: 0 }}>
+                    In-Depth Analysis of {decodedBook} {chapterNum}
+                  </h2>
+                  <button
+                    onClick={() => navigator.share?.({ title: `In-Depth Analysis of ${decodedBook} ${chapterNum}`, text: `In-Depth Analysis of ${decodedBook} ${chapterNum}` }).catch(() => {})}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
+                    aria-label="Share in-depth analysis"
+                  >
+                    <Share2 size={20} color="#fff" strokeWidth={1.5} />
+                  </button>
+                </div>
                 <CommentaryBody text={detailed.detail} />
               </div>
             ) : (

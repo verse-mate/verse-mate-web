@@ -69,7 +69,7 @@ export default function MenuScreen() {
         className="shrink-0 flex items-center justify-between px-5 safe-top"
         style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)', height: 92, backgroundColor: '#1A1A1A' }}
       >
-        <h1 className="text-[18px] font-medium" style={{ color: '#FFFFFF' }}>Menu</h1>
+        <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF' }}>Menu</h1>
         <button
           onClick={() => navigate('/read')}
           aria-label="Close menu"
@@ -91,12 +91,12 @@ export default function MenuScreen() {
             <User size={20} style={{ color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
           </div>
           <div className="min-w-0 flex-1">
-            <p className="text-[14px] font-medium truncate" style={{ color: '#B09A6D' }}>
+            <p className="truncate" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 14, lineHeight: '20px', color: '#B09A6D' }}>
               {state.isSignedIn
                 ? state.userName || state.userEmail?.split('@')[0] || ''
                 : 'Guest'}
             </p>
-            <p className="text-[12px] truncate" style={{ color: 'rgba(255,255,255,0.6)' }}>
+            <p className="truncate" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 12, lineHeight: '18px', color: 'rgba(255,255,255,0.6)' }}>
               {state.isSignedIn ? state.userEmail || 'Loading...' : 'Tap to sign in'}
             </p>
           </div>
@@ -135,7 +135,7 @@ export default function MenuScreen() {
             style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
           >
             <LogOut size={18} className="text-red-400" strokeWidth={1.5} />
-            <span className="text-[15px] text-red-400 font-medium">
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px' }} className="text-red-400">
               {state.isSignedIn ? 'Logout' : 'Sign In'}
             </span>
           </button>
@@ -161,7 +161,7 @@ function MenuRow({
       style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
     >
       {icon}
-      <span className="text-[15px] font-medium" style={{ color: '#FFFFFF' }}>{label}</span>
+      <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: '#FFFFFF' }}>{label}</span>
     </button>
   );
 }

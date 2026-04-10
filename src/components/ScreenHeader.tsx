@@ -49,7 +49,7 @@ export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeade
         >
           <ArrowLeft size={24} color="#fff" strokeWidth={2} />
         </button>
-        <h1 className="text-[18px] font-medium text-dark-fg tracking-tight">{title}</h1>
+        <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF', letterSpacing: '-0.01em' }}>{title}</h1>
         {rightAction && (
           <div className="absolute right-2 flex items-center">{rightAction}</div>
         )}
