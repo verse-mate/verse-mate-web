@@ -17,10 +17,10 @@ export default function BookmarksScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+    <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
       <ScreenHeader title="Bookmarks" />
 
-      {/* bookmarkList: dark surface, border-top dark, padding 12px 8px */}
+      {/* bookmarkList */}
       <div
         style={{
           flex: 1,
@@ -29,10 +29,10 @@ export default function BookmarksScreen() {
           flexDirection: 'column',
           gap: 8,
           padding: '12px 8px',
-          borderTop: '1px solid hsl(var(--dark-border))',
-          backgroundColor: 'hsl(var(--dark-surface))',
+          borderTop: '1px solid #323232',
+          backgroundColor: '#000000',
           scrollbarWidth: 'thin' as const,
-          scrollbarColor: 'hsl(var(--dark-border)) hsl(var(--dark-surface))',
+          scrollbarColor: '#323232 #000000',
         }}
       >
         {state.bookmarks.length === 0 ? (
@@ -56,8 +56,8 @@ export default function BookmarksScreen() {
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   padding: 12,
-                  backgroundColor: 'hsl(var(--dark-surface-raised))',
-                  border: '1px solid hsl(var(--dark-border))',
+                  backgroundColor: '#323232',
+                  border: '1px solid #323232',
                   borderRadius: 8,
                   cursor: 'pointer',
                 }}

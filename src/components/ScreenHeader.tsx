@@ -20,10 +20,11 @@ export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeade
 
   return (
     <header
-      className="shrink-0 bg-dark-surface text-dark-fg safe-top"
+      className="shrink-0 text-dark-fg safe-top"
       style={{
+        backgroundColor: '#1A1A1A',
         paddingTop: 'max(env(safe-area-inset-top), 48px)',
-        borderBottom: '1px solid hsl(var(--dark-border))',
+        borderBottom: '1px solid #323232',
       }}
     >
       <div className="relative flex items-center justify-center px-3" style={{ height: 56 }}>

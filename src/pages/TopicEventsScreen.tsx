@@ -48,40 +48,40 @@ export default function TopicEventsScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+    <div className="flex flex-col h-full text-white" style={{ backgroundColor: "#1B1B1B" }}>
       <ScreenHeader title={topic?.name || 'Events'} />
 
       {/* Search */}
-      <div className="px-4 pt-1">
-        <div className="flex items-center gap-2 h-12 px-4 rounded-full bg-dark-raised border border-dark">
-          <Search size={18} className="text-dark-muted" strokeWidth={2} />
+      <div className="px-4 pt-1" style={{ backgroundColor: '#000000' }}>
+        <div className="flex items-center gap-2 h-12 px-4 rounded-full" style={{ backgroundColor: '#323232', border: '1px solid #323232' }}>
+          <Search size={18} className="text-white/60" strokeWidth={2} />
           <input
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search..."
-            className="flex-1 bg-transparent text-[15px] text-dark-fg placeholder:text-dark-muted focus:outline-none"
+            className="flex-1 bg-transparent text-[15px] text-white placeholder:text-white/60 focus:outline-none"
           />
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 pt-4 pb-6">
+      <div className="flex-1 overflow-y-auto px-4 pt-4 pb-6" style={{ backgroundColor: '#000000' }}>
         {filtered.length === 0 ? (
-          <p className="text-center text-dark-muted py-8 text-[14px]">
+          <p className="text-center text-white/60 py-8 text-[14px]">
             {events.length === 0 ? 'Loading…' : `No sections match "${query}"`}
           </p>
         ) : (
           <div className="space-y-6">
             {filtered.map(ev => (
-              <section key={ev.id} className="pb-5 border-b border-dark last:border-b-0">
-                <h3 className="text-[16px] font-semibold text-dark-fg mb-2">{ev.title}</h3>
+              <section key={ev.id} className="pb-5 last:border-b-0" style={{ borderBottom: '1px solid #323232' }}>
+                <h3 className="text-[16px] font-semibold text-white mb-2">{ev.title}</h3>
                 {ev.description && (
-                  <p className="text-[13px] text-dark-muted leading-relaxed">
+                  <p className="text-[13px] text-white/60 leading-relaxed">
                     {ev.description}
                   </p>
                 )}
                 {ev.references.length > 0 && (
                   <div className="mt-3">
-                    <p className="text-[11px] uppercase tracking-wide text-dark-muted/70 mb-2">
+                    <p className="text-[11px] uppercase tracking-wide text-white/60 mb-2">
                       References
                     </p>
                     <div className="flex flex-wrap gap-1.5">
@@ -89,7 +89,8 @@ export default function TopicEventsScreen() {
                         <button
                           key={ref}
                           onClick={() => openReference(ref)}
-                          className="flex items-center gap-1.5 text-[12px] text-dark-fg bg-dark-raised border border-dark rounded-full px-3 py-1.5 hover:border-gold transition-colors"
+                          className="flex items-center gap-1.5 text-[12px] text-white rounded-full px-3 py-1.5 transition-colors"
+                          style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
                         >
                           <BookOpen size={12} strokeWidth={1.75} />
                           {ref}

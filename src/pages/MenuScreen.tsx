@@ -63,39 +63,40 @@ export default function MenuScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+    <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
       {/* Header — title + close */}
       <header
         className="shrink-0 flex items-center justify-between px-5 safe-top"
-        style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)', height: 92 }}
+        style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)', height: 92, backgroundColor: '#1A1A1A' }}
       >
-        <h1 className="text-[18px] font-medium text-dark-fg">Menu</h1>
+        <h1 className="text-[18px] font-medium" style={{ color: '#FFFFFF' }}>Menu</h1>
         <button
           onClick={() => navigate('/read')}
           aria-label="Close menu"
           className="w-[44px] h-[44px] flex items-center justify-center -mr-2"
         >
-          <X size={22} className="text-dark-fg" strokeWidth={2} />
+          <X size={22} style={{ color: '#FFFFFF' }} strokeWidth={2} />
         </button>
       </header>
 
-      <div className="flex-1 overflow-y-auto px-4 pb-2">
+      <div className="flex-1 overflow-y-auto px-4 pb-2" style={{ backgroundColor: '#000000' }}>
         {/* User profile card */}
         <button
           onClick={() => !state.isSignedIn && navigate('/menu/signin')}
           disabled={state.isSignedIn}
-          className="flex items-center gap-3 w-full h-[64px] px-4 rounded-xl bg-dark-raised border border-dark text-left mb-3"
+          className="flex items-center gap-3 w-full h-[64px] px-4 rounded-xl text-left mb-3"
+          style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
         >
-          <div className="w-10 h-10 rounded-full bg-dark-surface flex items-center justify-center shrink-0">
-            <User size={20} className="text-dark-muted" strokeWidth={1.5} />
+          <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style={{ backgroundColor: '#1B1B1B' }}>
+            <User size={20} style={{ color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
           </div>
           <div className="min-w-0 flex-1">
-            <p className="text-[14px] text-gold font-medium truncate">
+            <p className="text-[14px] font-medium truncate" style={{ color: '#B09A6D' }}>
               {state.isSignedIn
                 ? state.userName || state.userEmail?.split('@')[0] || 'You'
                 : 'Guest'}
             </p>
-            <p className="text-[12px] text-dark-muted truncate">
+            <p className="text-[12px] truncate" style={{ color: 'rgba(255,255,255,0.6)' }}>
               {state.isSignedIn ? state.userEmail || '' : 'Tap to sign in'}
             </p>
           </div>
@@ -106,20 +107,20 @@ export default function MenuScreen() {
           {items.slice(0, 4).map(item => (
             <MenuRow
               key={item.label}
-              icon={<item.icon size={18} className="text-dark-fg" strokeWidth={1.5} />}
+              icon={<item.icon size={18} style={{ color: '#FFFFFF' }} strokeWidth={1.5} />}
               label={item.label}
               onClick={() => navigate(item.path)}
             />
           ))}
           <MenuRow
-            icon={<Share2 size={18} className="text-dark-fg" strokeWidth={1.5} />}
+            icon={<Share2 size={18} style={{ color: '#FFFFFF' }} strokeWidth={1.5} />}
             label="Share VerseMate"
             onClick={handleShare}
           />
           {items.slice(4).map(item => (
             <MenuRow
               key={item.label}
-              icon={<item.icon size={18} className="text-dark-fg" strokeWidth={1.5} />}
+              icon={<item.icon size={18} style={{ color: '#FFFFFF' }} strokeWidth={1.5} />}
               label={item.label}
               onClick={() => navigate(item.path)}
             />
@@ -130,7 +131,8 @@ export default function MenuScreen() {
         <div className="mt-2">
           <button
             onClick={handleLogout}
-            className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl bg-dark-raised border border-dark"
+            className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl"
+            style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
           >
             <LogOut size={18} className="text-red-400" strokeWidth={1.5} />
             <span className="text-[15px] text-red-400 font-medium">
@@ -155,10 +157,11 @@ function MenuRow({
   return (
     <button
       onClick={onClick}
-      className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl bg-dark-raised border border-dark text-left"
+      className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl text-left"
+      style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
     >
       {icon}
-      <span className="text-[15px] text-dark-fg font-medium">{label}</span>
+      <span className="text-[15px] font-medium" style={{ color: '#FFFFFF' }}>{label}</span>
     </button>
   );
 }

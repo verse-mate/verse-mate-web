@@ -63,7 +63,6 @@ export default function NotesScreen() {
   };
 
   // Shared container style for the scrollable notes area
-  // notesMainContainer: dark surface, border-top dark, padding 12px 8px
   const listContainerStyle: React.CSSProperties = {
     flex: 1,
     overflowY: 'auto',
@@ -71,16 +70,16 @@ export default function NotesScreen() {
     flexDirection: 'column',
     gap: 8,
     padding: '12px 8px',
-    borderTop: '1px solid hsl(var(--dark-border))',
-    backgroundColor: 'hsl(var(--dark-surface))',
+    borderTop: '1px solid #323232',
+    backgroundColor: '#000000',
     scrollbarWidth: 'thin',
-    scrollbarColor: 'hsl(var(--dark-border)) hsl(var(--dark-surface))',
+    scrollbarColor: '#323232 #000000',
   };
 
-  // noteItem: bg dark-raised, border dark, border-radius 8px, padding 6px
+  // noteItem: bg #323232, border #323232, border-radius 8px, padding 6px
   const noteItemStyle: React.CSSProperties = {
-    background: 'hsl(var(--dark-surface-raised))',
-    border: '1px solid hsl(var(--dark-border))',
+    background: '#323232',
+    border: '1px solid #323232',
     borderRadius: 8,
     padding: 6,
     display: 'flex',
@@ -94,7 +93,7 @@ export default function NotesScreen() {
   // ─── Index view ─────────────────────────────────────────────────────────
   if (!isChapterView) {
     return (
-      <div className="flex flex-col h-full bg-dark-surface text-dark-fg relative">
+      <div className="flex flex-col h-full text-white relative" style={{ backgroundColor: '#1B1B1B' }}>
         <ScreenHeader title="Notes" />
 
         <div style={listContainerStyle}>
@@ -118,7 +117,7 @@ export default function NotesScreen() {
                   <span style={{ fontSize: 15, fontWeight: 500, color: '#fff', flex: 1 }}>
                     {g.book} {g.chapter}
                   </span>
-                  <span style={{ fontSize: 12, color: 'hsl(var(--dark-surface-muted))', background: 'hsl(var(--dark-surface))', borderRadius: 4, padding: '2px 8px', minWidth: 28, textAlign: 'center' }}>
+                  <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', background: '#000000', borderRadius: 4, padding: '2px 8px', minWidth: 28, textAlign: 'center' }}>
                     {g.count}
                   </span>
                   <ChevronRight size={18} style={{ color: 'hsl(var(--dark-surface-muted))', flexShrink: 0 }} />
@@ -133,7 +132,7 @@ export default function NotesScreen() {
 
   // ─── Chapter view ───────────────────────────────────────────────────────
   return (
-    <div className="flex flex-col h-full bg-white text-[#1B1B1B] relative">
+    <div className="flex flex-col h-full text-white relative" style={{ backgroundColor: '#1B1B1B' }}>
       <ScreenHeader
         title={`${activeBook} ${activeChapter}`}
         onBack={() => navigate('/notes')}

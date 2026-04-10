@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@1,300;1,400;1,700&family=Roboto+Serif:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Roboto+Serif:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -97,11 +97,11 @@
     --chrome-bg: 0 0% 85%;
 
     /* Dark surface (sheets, selectors, menu drawer) */
-    --dark-surface: 0 0% 11%;          /* #1B1B1B */
-    --dark-surface-raised: 0 0% 14%;
+    --dark-surface: 0 0% 11%;          /* #1B1B1B — frame bg */
+    --dark-surface-raised: 0 0% 19.6%; /* #323232 — pill containers, card bg */
     --dark-surface-fg: 0 0% 100%;
     --dark-surface-muted: 0 0% 60%;
-    --dark-border: 0 0% 20%;
+    --dark-border: 0 0% 19.6%;         /* #323232 */
 
     --sidebar-background: 0 0% 11%;
     --sidebar-foreground: 0 0% 100%;
@@ -126,7 +126,7 @@
   }
 
   body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     background-color: hsl(var(--chrome-bg));
   }
@@ -157,9 +157,9 @@
     line-height: 32px;
   }
   .font-title {
-    font-family: 'Merriweather', Georgia, serif;
-    font-style: italic;
-    font-weight: 700;
+    font-family: 'Roboto', system-ui, sans-serif;
+    font-style: normal;
+    font-weight: 500;
   }
 
   /* Production highlight classes */
@@ -172,6 +172,9 @@
   .hl-red { background-color: var(--hl-red); }
   .hl-teal { background-color: var(--hl-teal); }
   .hl-brown { background-color: var(--hl-brown); }
+
+  /* Pure black content body background */
+  .bg-black-pure { background-color: #000000; }
 
   /* Auto-highlight = lighter bg + colored underline */
   .ahl-yellow { background-color: var(--ahl-yellow-bg); border-bottom: 2px solid var(--ahl-yellow-border); cursor: pointer; }

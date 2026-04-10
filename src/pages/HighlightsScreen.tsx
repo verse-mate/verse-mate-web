@@ -106,7 +106,7 @@ export default function HighlightsScreen() {
     brown: 'bg-amber-700',
   };
 
-  // highlightList container: dark surface, border-top dark, padding 12px 8px
+  // highlightList container
   const listStyle: React.CSSProperties = {
     flex: 1,
     overflowY: 'auto',
@@ -114,40 +114,40 @@ export default function HighlightsScreen() {
     flexDirection: 'column',
     gap: 12,
     padding: '12px 8px',
-    borderTop: '1px solid hsl(var(--dark-border))',
-    backgroundColor: 'hsl(var(--dark-surface))',
+    borderTop: '1px solid #323232',
+    backgroundColor: '#000000',
     scrollbarWidth: 'none',
   };
 
-  // chapterGroup: bg dark-raised, border dark, border-radius 10px
+  // chapterGroup: bg #323232, border #323232, border-radius 10px
   const chapterGroupStyle: React.CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'hsl(var(--dark-surface-raised))',
-    border: '1px solid hsl(var(--dark-border))',
+    backgroundColor: '#323232',
+    border: '1px solid #323232',
     borderRadius: 10,
     overflow: 'hidden',
     cursor: 'pointer',
     flexShrink: 0,
   };
 
-  // Auto-highlight theme card: dark raised
+  // Auto-highlight theme card: #323232
   const themeCardStyle: React.CSSProperties = {
-    backgroundColor: 'hsl(var(--dark-surface-raised))',
-    border: '1px solid hsl(var(--dark-border))',
+    backgroundColor: '#323232',
+    border: '1px solid #323232',
     borderRadius: 10,
     padding: '12px 16px',
   };
 
   return (
-    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+    <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
       <ScreenHeader title="Highlights" />
 
       <div style={listStyle}>
         {/* Highlighted chapters list */}
         {groupedHighlights.length === 0 ? (
-          <div style={{ padding: '32px 16px', textAlign: 'center', color: 'hsl(var(--dark-surface-muted))', fontStyle: 'italic', fontSize: 14 }}>
-            <Highlighter size={36} style={{ margin: '0 auto 8px', color: 'hsl(var(--dark-surface-muted))' }} strokeWidth={1.5} />
+          <div style={{ padding: '32px 16px', textAlign: 'center', color: 'rgba(255,255,255,0.6)', fontStyle: 'italic', fontSize: 14 }}>
+            <Highlighter size={36} style={{ margin: '0 auto 8px', color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
             <p style={{ fontSize: 13 }}>No highlights yet</p>
           </div>
         ) : (
@@ -163,8 +163,8 @@ export default function HighlightsScreen() {
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   gap: 8,
-                  border: '1px solid hsl(var(--dark-border))',
-                  background: 'hsl(var(--dark-surface-raised))',
+                  border: '1px solid #323232',
+                  background: '#323232',
                   borderRadius: 10,
                   width: '100%',
                   textAlign: 'left',
@@ -175,11 +175,11 @@ export default function HighlightsScreen() {
                   <Highlighter size={18} style={{ color: '#fff' }} strokeWidth={1.75} />
                   {g.book} {g.chapter}
                   {/* countBadge: dark surface bg, muted text */}
-                  <span style={{ backgroundColor: 'hsl(var(--dark-surface))', color: 'hsl(var(--dark-surface-muted))', fontSize: 12, padding: '2px 8px', borderRadius: 12 }}>
+                  <span style={{ backgroundColor: '#000000', color: 'rgba(255,255,255,0.6)', fontSize: 12, padding: '2px 8px', borderRadius: 12 }}>
                     {g.count}
                   </span>
                 </div>
-                <ChevronRight size={20} style={{ color: 'hsl(var(--dark-surface-muted))', flexShrink: 0 }} />
+                <ChevronRight size={20} style={{ color: 'rgba(255,255,255,0.6)', flexShrink: 0 }} />
               </button>
             ))}
           </>
@@ -190,7 +190,7 @@ export default function HighlightsScreen() {
           <h2 style={{ textAlign: 'center', fontSize: 15, fontWeight: 600, color: '#fff', marginBottom: 12 }}>
             Auto Highlights
           </h2>
-          <p style={{ textAlign: 'center', fontSize: 12, color: 'hsl(var(--dark-surface-muted))', lineHeight: 1.6, marginBottom: 16, padding: '0 8px' }}>
+          <p style={{ textAlign: 'center', fontSize: 12, color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginBottom: 16, padding: '0 8px' }}>
             Auto-generated highlights help identify key verses, promises,
             commands, and more throughout the Bible.
             <br />
@@ -214,7 +214,7 @@ export default function HighlightsScreen() {
 
           {/* Per-theme toggle cards */}
           {themes.length === 0 ? (
-            <p style={{ fontSize: 12, color: 'hsl(var(--dark-surface-muted))', padding: '16px 0', textAlign: 'center' }}>
+            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', padding: '16px 0', textAlign: 'center' }}>
               Loading themes…
             </p>
           ) : (
@@ -233,7 +233,7 @@ export default function HighlightsScreen() {
                         <div style={{ minWidth: 0 }}>
                           <p style={{ fontSize: 14, color: '#fff', fontWeight: 500 }}>{t.name}</p>
                           {t.description && (
-                            <p style={{ fontSize: 12, color: 'hsl(var(--dark-surface-muted))', marginTop: 2, lineHeight: 1.4 }}>
+                            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', marginTop: 2, lineHeight: 1.4 }}>
                               {t.description}
                             </p>
                           )}

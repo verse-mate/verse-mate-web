@@ -10,31 +10,6 @@ import {
 } from '@/services/bibleService';
 import { Chapter, HighlightColor, BibleBook } from '@/services/types';
 import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
-
-// Production SVG icons for the header tab triggers
-function BibleIcon({ active }: { active: boolean }) {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M5.39525 21.6047C5.99208 22.2016 6.71292 22.5 7.55775 22.5H19.5V21C19.0705 21 18.75 20.6795 18.75 20.25C18.75 19.8205 19.0705 19.5 19.5 19.5V3H7.55775C6.71292 3 5.99208 3.29842 5.39525 3.89525C4.79842 4.49208 4.5 5.21292 4.5 6.05775V18.9423C4.5 19.7871 4.79842 20.5079 5.39525 21.6047ZM9 7.5H10.5V9H12V10.5H10.5V12H9V10.5H7.5V9H9V7.5ZM13.5 9.75H16.5V11.25H13.5V9.75ZM13.5 12.75H16.5V14.25H13.5V12.75ZM7.5 12.75H11.25V14.25H7.5V12.75ZM7.5 15.75H16.5V17.25H7.5V15.75Z"
-        fill={active ? '#b09a6d' : '#fff'}
-      />
-    </svg>
-  );
-}
-
-function AutoStoriesIcon({ active }: { active: boolean }) {
-  return (
-    <svg width="24" height="24" viewBox="0 -960 960 960" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M480-160q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740v484q51-32 107-48t113-16q36 0 70.5 6t69.5 18v-480q15 5 29.5 10.5T898-752q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59Zm80-200v-380l200-200v400L560-360Zm-160 65v-396q-41-24-87-36t-93-12q-36 0-71.5 7T80-712v396q35-12 69.5-18t70.5-6q47 0 91.5 10.5T400-295Zm0 0v-396 396Z"
-        fill={active ? '#b09a6d' : '#fff'}
-      />
-    </svg>
-  );
-}
 import BookSelector from '@/components/BookSelector';
 import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
@@ -164,57 +139,86 @@ export default function ReadingScreen() {
   const verseCount = chapter?.verses.length || 0;
 
   return (
-    <div className="flex flex-col h-full relative bg-background">
+    <div className="flex flex-col h-full relative" style={{ backgroundColor: '#1B1B1B' }}>
       {/* ─── DARK HEADER (118px in Figma: status area + controls) ─── */}
-      <header className="shrink-0 bg-header safe-top" style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}>
+      <header className="shrink-0 safe-top" style={{ backgroundColor: '#1A1A1A', paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}>
         <div className="flex items-center justify-between px-4" style={{ height: 56 }}>
           {/* Left: Book + chapter dropdown */}
           <button
             onClick={() => setShowBookSelector(true)}
-            className="flex items-center gap-1.5 text-header-fg min-h-[44px] pr-2 -ml-1"
+            className="flex items-center gap-1.5 min-h-[44px] pr-2 -ml-1"
+            style={{ color: '#FFFFFF' }}
           >
-            <span className="text-[18px] font-medium tracking-tight">{state.book} {state.chapter}</span>
-            <ChevronDown size={18} className="text-header-fg/90" strokeWidth={2} />
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: '#FFFFFF' }}>{state.book} {state.chapter}</span>
+            <ChevronDown size={18} style={{ color: '#FFFFFF' }} strokeWidth={2} />
           </button>
 
-          {/* Right: Bible/AutoStories icon tabs + Menu */}
-          <div className="flex items-center gap-1">
-            <button
-              aria-label="Bible"
-              style={{ background: 'transparent', border: 'none', padding: '10px 6px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-            >
-              <BibleIcon active={true} />
-            </button>
-            <button
-              aria-label="Insight"
-              onClick={() =>
-                navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/commentary`)
-              }
-              style={{ background: 'transparent', border: 'none', padding: '10px 6px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-            >
-              <AutoStoriesIcon active={false} />
-            </button>
+          {/* Right: Bible/Insight text pill tabs + Menu */}
+          <div className="flex items-center gap-2">
+            {/* Bible/Insight pill container */}
+            <div style={{ display: 'flex', alignItems: 'center', backgroundColor: '#323232', borderRadius: 100, padding: '0.5px' }}>
+              {/* Bible pill — active (gold) */}
+              <button
+                aria-label="Bible"
+                style={{
+                  backgroundColor: '#B09A6D',
+                  color: '#000000',
+                  borderRadius: 100,
+                  padding: '2px 8px',
+                  fontFamily: 'Roboto, sans-serif',
+                  fontWeight: 400,
+                  fontSize: 14,
+                  lineHeight: '24px',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+              >
+                Bible
+              </button>
+              {/* Insight pill — inactive */}
+              <button
+                aria-label="Insight"
+                onClick={() =>
+                  navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/commentary`)
+                }
+                style={{
+                  backgroundColor: 'transparent',
+                  color: '#FFFFFF',
+                  borderRadius: 100,
+                  padding: '2px 8px',
+                  fontFamily: 'Roboto, sans-serif',
+                  fontWeight: 400,
+                  fontSize: 14,
+                  lineHeight: '24px',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+              >
+                Insight
+              </button>
+            </div>
             <button
               onClick={() => navigate('/menu')}
               aria-label="Open menu"
               className="flex items-center justify-center w-[44px] h-[44px] -mr-2"
             >
-              <Menu size={22} className="text-header-fg" strokeWidth={2} />
+              <Menu size={22} style={{ color: '#FFFFFF' }} strokeWidth={2} />
             </button>
           </div>
         </div>
       </header>
 
-      {/* ─── CREAM BODY — scripture (swipe left/right for chapter nav) ─── */}
+      {/* ─── BLACK BODY — scripture (swipe left/right for chapter nav) ─── */}
       <div
         ref={scrollRef}
         onTouchStart={handleBodyTouchStart}
         onTouchEnd={handleBodyTouchEnd}
-        className="flex-1 overflow-y-auto bg-background px-5 pt-5 pb-[48px] relative"
+        className="flex-1 overflow-y-auto px-5 pt-5 pb-[48px] relative"
+        style={{ backgroundColor: '#000000' }}
       >
         {/* Chapter header block */}
         <div className="flex items-start justify-between mb-3">
-          <h1 className="font-title text-[32px] leading-[44px] text-foreground">
+          <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 24, lineHeight: '32px', color: '#E7E7E7' }}>
             {state.book} {state.chapter}
           </h1>
           <div className="flex items-center gap-1 mt-1.5">
@@ -245,7 +249,7 @@ export default function ReadingScreen() {
                 >
                   <Bookmark
                     size={18}
-                    className={isBookmarked ? 'text-foreground fill-foreground' : 'text-foreground'}
+                    style={isBookmarked ? { color: '#FFFFFF', fill: '#FFFFFF' } : { color: '#FFFFFF' }}
                     strokeWidth={1.75}
                   />
                 </button>
@@ -256,16 +260,17 @@ export default function ReadingScreen() {
               onClick={() => navigate('/notes')}
               className="w-10 h-10 flex items-center justify-center"
             >
-              <FileText size={18} className="text-foreground" strokeWidth={1.75} />
+              <FileText size={18} style={{ color: '#FFFFFF' }} strokeWidth={1.75} />
             </button>
           </div>
         </div>
 
         {/* Verses grouped by API subtitles (e.g. "Parable of the Marriage Feast" v1-14) */}
         <div
-          className="font-scripture text-foreground"
+          className="font-scripture"
           style={{
             fontSize: `${state.settings.fontSize}px`,
+            color: '#FFFFFF',
           }}
         >
           {(() => {
@@ -296,10 +301,10 @@ export default function ReadingScreen() {
               <div key={gi} className={gi > 0 ? 'mt-5' : ''}>
                 {group.title && (
                   <>
-                    <h2 className="font-title text-[22px] leading-[28px] text-foreground mb-1">
+                    <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 22, lineHeight: '28px', color: '#E7E7E7', marginBottom: 4 }}>
                       {group.title}
                     </h2>
-                    <p className="font-title text-[18px] leading-[22px] font-normal text-[#3e464d] mb-3">
+                    <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 18, lineHeight: '22px', color: 'rgba(255,255,255,0.5)', marginBottom: 12 }}>
                       {group.range}
                     </p>
                   </>
@@ -349,7 +354,7 @@ export default function ReadingScreen() {
         <button
           onClick={() => goToChapter(-1)}
           aria-label="Previous chapter"
-          style={{ position: 'absolute', left: 12, bottom: 45, top: 'unset', transform: 'translateY(0)', width: 40, height: 40, borderRadius: '50%', background: 'hsl(var(--dark-surface))', border: '1px solid hsl(var(--dark-border))', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
+          style={{ position: 'absolute', left: 12, bottom: 45, top: 'unset', transform: 'translateY(0)', width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
           <ChevronLeft size={20} color="#fff" strokeWidth={2.5} />
         </button>
@@ -358,23 +363,21 @@ export default function ReadingScreen() {
         <button
           onClick={() => goToChapter(1)}
           aria-label="Next chapter"
-          style={{ position: 'absolute', right: 12, bottom: 45, top: 'unset', transform: 'translateY(0)', width: 40, height: 40, borderRadius: '50%', background: 'hsl(var(--dark-surface))', border: '1px solid hsl(var(--dark-border))', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
+          style={{ position: 'absolute', right: 12, bottom: 45, top: 'unset', transform: 'translateY(0)', width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
           <ChevronRight size={20} color="#fff" strokeWidth={2.5} />
         </button>
       )}
 
-      {/* ─── GOLD PROGRESS BAR — overall position in the book (matches production ProgressBar) ─── */}
-      {/* Root: height 32px, gap 16px, bg fantasy (#f6f3ec), border-top geyser-opacity, padding 0 24px */}
-      {/* Mobile (≤833px): bottom 8px */}
+      {/* ─── GOLD PROGRESS BAR ─── */}
       <div
         style={{
           height: 32,
           display: 'flex',
           alignItems: 'center',
           gap: 16,
-          backgroundColor: '#f6f3ec',
-          borderTop: '1px solid rgba(220,224,227,0.5)',
+          backgroundColor: '#000000',
+          borderTop: '1px solid #1E1E1E',
           padding: '0 24px',
           position: 'absolute',
           bottom: 0,
@@ -388,38 +391,37 @@ export default function ReadingScreen() {
             maxChapter > 0 ? Math.round((state.chapter / maxChapter) * 100) : 0;
           return (
             <>
-              {/* IndicatorBackground: height 6px, bg snow-rock (#eae6de), border-radius 10px */}
+              {/* Track: bg #1E1E1E */}
               <div
                 style={{
                   flex: 1,
                   height: 6,
-                  backgroundColor: '#eae6de',
+                  backgroundColor: '#1E1E1E',
                   borderRadius: 10,
                   position: 'relative',
                   overflow: 'hidden',
                 }}
               >
-                {/* Indicator: bg dust (#b09a6d), border-radius 10px */}
+                {/* Fill: bg #B09A6D */}
                 <div
                   style={{
                     height: '100%',
-                    backgroundColor: '#b09a6d',
+                    backgroundColor: '#B09A6D',
                     borderRadius: 10,
                     width: `${Math.max(2, bookProgress)}%`,
                     transition: 'width 0.3s ease',
                   }}
                 />
               </div>
-              {/* Label: Inter 500 14px/24px, color dust (#b09a6d) */}
+              {/* Label: Roboto 400 8px/16px, color #B09A6D */}
               <span
                 style={{
-                  fontFamily: 'Inter, sans-serif',
-                  fontWeight: 500,
-                  fontSize: 14,
-                  lineHeight: '24px',
-                  color: '#b09a6d',
+                  fontFamily: 'Roboto, sans-serif',
+                  fontWeight: 400,
+                  fontSize: 8,
+                  lineHeight: '16px',
+                  color: '#B09A6D',
                   whiteSpace: 'nowrap',
-                  tabularNums: true,
                 } as React.CSSProperties}
               >
                 {bookProgress}%

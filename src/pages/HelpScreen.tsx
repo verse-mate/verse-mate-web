@@ -27,33 +27,34 @@ export default function HelpScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+    <div className="flex flex-col h-full text-white" style={{ backgroundColor: "#1B1B1B" }}>
       <ScreenHeader title="Help & Feedback" />
 
-      <div className="flex-1 overflow-y-auto px-5 pb-8">
+      <div className="flex-1 overflow-y-auto px-5 pb-8" style={{ backgroundColor: "#000000" }}>
         {formState === 'form' && (
           <>
-            <h2 className="text-[22px] font-bold text-dark-fg mt-2">How can we help?</h2>
-            <p className="text-[14px] text-dark-muted mt-2 leading-relaxed">
+            <h2 className="text-[22px] font-bold text-white mt-2">How can we help?</h2>
+            <p className="text-[14px] text-white/60 mt-2 leading-relaxed">
               Select a topic and tell us what happened. We read every message.
             </p>
 
             {/* Topic */}
             <div className="mt-6">
-              <label className="text-[13px] text-dark-muted">
+              <label className="text-[13px] text-white/60">
                 Topic<span className="text-red-400 ml-0.5">*</span>
               </label>
               <button
                 onClick={() => setShowTopicPicker(v => !v)}
-                className="mt-1.5 w-full h-[56px] px-4 rounded-xl bg-dark-raised border border-dark flex items-center justify-between"
+                className="mt-1.5 w-full h-[56px] px-4 rounded-xl flex items-center justify-between"
+                style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
               >
-                <span className={topic ? 'text-dark-fg text-[15px]' : 'text-dark-muted text-[15px]'}>
+                <span className={topic ? 'text-white text-[15px]' : 'text-white/60 text-[15px]'}>
                   {topic || 'Select a topic'}
                 </span>
-                <ChevronDown size={18} className="text-dark-muted" />
+                <ChevronDown size={18} className="text-white/60" />
               </button>
               {showTopicPicker && (
-                <div className="mt-2 rounded-xl bg-dark-raised border border-dark overflow-hidden">
+                <div className="mt-2 rounded-xl overflow-hidden" style={{ backgroundColor: '#323232', border: '1px solid #323232' }}>
                   {TOPICS.map(t => (
                     <button
                       key={t}
@@ -61,7 +62,7 @@ export default function HelpScreen() {
                         setTopic(t);
                         setShowTopicPicker(false);
                       }}
-                      className="w-full text-left px-4 py-3 text-[14px] text-dark-fg hover:bg-dark-surface"
+                      className="w-full text-left px-4 py-3 text-[14px] text-white"
                     >
                       {t}
                     </button>
@@ -72,12 +73,13 @@ export default function HelpScreen() {
 
             {/* Message */}
             <div className="mt-5">
-              <label className="text-[13px] text-dark-muted">Your message</label>
+              <label className="text-[13px] text-white/60">Your message</label>
               <textarea
                 value={message}
                 onChange={e => setMessage(e.target.value)}
                 rows={5}
-                className="mt-1.5 w-full rounded-xl bg-dark-raised border border-dark px-4 py-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
+                className="mt-1.5 w-full rounded-xl px-4 py-3 text-[14px] text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-[#B09A6D] resize-none"
+                style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
               />
             </div>
           </>
@@ -86,15 +88,15 @@ export default function HelpScreen() {
         {formState === 'submitting' && (
           <div className="flex-1 flex flex-col items-center justify-center gap-3 pt-24">
             <div className="w-10 h-10 border-2 border-gold border-t-transparent rounded-full animate-spin" />
-            <p className="text-[14px] text-dark-muted mt-3">Sending your feedback…</p>
+            <p className="text-[14px] text-white/60 mt-3">Sending your feedback…</p>
           </div>
         )}
 
         {formState === 'success' && (
           <div className="flex-1 flex flex-col items-center justify-center pt-20 text-center">
             <CheckCircle size={72} className="text-gold" strokeWidth={1.5} />
-            <p className="text-[15px] text-dark-fg mt-5">Message sent.</p>
-            <p className="text-[15px] text-dark-fg">
+            <p className="text-[15px] text-white mt-5">Message sent.</p>
+            <p className="text-[15px] text-white">
               Thanks for helping us improve VerseMate!
             </p>
           </div>

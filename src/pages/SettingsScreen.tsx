@@ -38,12 +38,12 @@ export default function SettingsScreen() {
     fontWeight: 600,
     fontSize: 20,
     color: '#fff',
-    fontFamily: 'Inter, sans-serif',
+    fontFamily: 'Roboto, sans-serif',
   };
 
   const containerBoxStyle: React.CSSProperties = {
-    backgroundColor: 'hsl(var(--dark-surface-raised))',
-    border: '1px solid hsl(var(--dark-border))',
+    backgroundColor: '#323232',
+    border: '1px solid #323232',
     borderRadius: 8,
     padding: 20,
     maxWidth: 500,
@@ -60,11 +60,11 @@ export default function SettingsScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-dark-surface text-dark-fg">
+    <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
       <ScreenHeader title="Settings" />
 
-      {/* settingsRoot: padding 20px, font Inter */}
-      <div style={{ flex: 1, overflowY: 'auto', padding: 20, fontFamily: 'Inter, sans-serif' }}>
+      {/* settingsRoot: padding 20px, font Roboto */}
+      <div style={{ flex: 1, overflowY: 'auto', padding: 20, fontFamily: 'Roboto, sans-serif', backgroundColor: '#000000' }}>
 
         {/* Bible Version section */}
         <section style={{ marginBottom: 40 }}>
@@ -83,11 +83,11 @@ export default function SettingsScreen() {
                     borderRadius: 8,
                     fontSize: 13,
                     fontWeight: 500,
-                    fontFamily: 'Inter, sans-serif',
+                    fontFamily: 'Roboto, sans-serif',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
-                    border: settings.defaultVersion === v ? 'none' : '1px solid hsl(var(--dark-border))',
-                    backgroundColor: settings.defaultVersion === v ? '#b09a6d' : 'hsl(var(--dark-surface))',
+                    border: settings.defaultVersion === v ? 'none' : '1px solid #323232',
+                    backgroundColor: settings.defaultVersion === v ? '#b09a6d' : '#000000',
                     color: settings.defaultVersion === v ? '#1A1A1A' : '#fff',
                   }}
                 >
@@ -121,11 +121,11 @@ export default function SettingsScreen() {
                     borderRadius: 8,
                     fontSize: 13,
                     fontWeight: 500,
-                    fontFamily: 'Inter, sans-serif',
+                    fontFamily: 'Roboto, sans-serif',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
-                    border: settings.language === l.id ? 'none' : '1px solid hsl(var(--dark-border))',
-                    backgroundColor: settings.language === l.id ? '#b09a6d' : 'hsl(var(--dark-surface))',
+                    border: settings.language === l.id ? 'none' : '1px solid #323232',
+                    backgroundColor: settings.language === l.id ? '#b09a6d' : '#000000',
                     color: settings.language === l.id ? '#1A1A1A' : '#fff',
                   }}
                 >
@@ -143,7 +143,7 @@ export default function SettingsScreen() {
             <span style={dropdownLabelStyle}>Font size</span>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
               <span style={{ fontSize: 14, color: '#fff' }}>Size</span>
-              <span style={{ fontSize: 12, color: 'hsl(var(--dark-surface-muted))' }}>{settings.fontSize}px</span>
+              <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)' }}>{settings.fontSize}px</span>
             </div>
             <input
               type="range"
@@ -157,7 +157,7 @@ export default function SettingsScreen() {
         </section>
 
         <section style={{ marginTop: 8 }}>
-          <p style={{ fontSize: 12, color: 'hsl(var(--dark-surface-muted))' }}>VerseMate · Version 1.0.0</p>
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)' }}>VerseMate · Version 1.0.0</p>
         </section>
       </div>
     </div>
