@@ -107,7 +107,7 @@ export default function CommentaryScreen() {
       {/* Tab pills container — #1A1A1A wrapper, #323232 pill container, RIGHT-ALIGNED */}
       <div
         className="shrink-0"
-        style={{ backgroundColor: '#1A1A1A', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', padding: '8px 16px' }}
+        style={{ backgroundColor: '#1A1A1A', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '8px 16px' }}
       >
         <div style={{ display: 'flex', alignItems: 'center', backgroundColor: '#323232', borderRadius: 100, padding: '0.5px', gap: 0 }}>
           {tabs.map(t => (
@@ -236,7 +236,13 @@ export default function CommentaryScreen() {
  * p text → Inter 400 16px/24px, white
  */
 function CommentaryBody({ text }: { text: string }) {
-  const lines = text.split('\n');
+  // Strip first line if it's a top-level heading (to avoid duplication with the hardcoded title)
+  let processedText = text;
+  const firstNewline = processedText.indexOf('\n');
+  if (processedText.startsWith('# ') && firstNewline > 0) {
+    processedText = processedText.slice(firstNewline + 1).trimStart();
+  }
+  const lines = processedText.split('\n');
   const elements: React.ReactNode[] = [];
   let para: string[] = [];
   let key = 0;
