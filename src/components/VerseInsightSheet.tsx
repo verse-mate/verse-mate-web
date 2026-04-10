@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { fetchVerseInsights, fetchChapter } from '@/services/bibleService';
 import { VerseInsight, Chapter, BibleVersion } from '@/services/types';
-import { ChevronLeft, ChevronRight, Copy, Share2, Bookmark, Check } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Copy, Bookmark, Check } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import { useApp } from '@/contexts/AppContext';
+import ShareIcon from '@/components/ShareIcon';
 
 interface Props {
   book: string;
@@ -234,7 +235,7 @@ export default function VerseInsightSheet({
               onClick={handleShare}
               className="h-12 rounded-xl bg-dark-raised border border-dark flex items-center justify-center gap-2"
             >
-              <Share2 size={16} className="text-dark-fg" strokeWidth={1.5} />
+              <ShareIcon size={16} color="currentColor" />
               <span className="text-[13px] text-dark-fg">Share</span>
             </button>
           </div>

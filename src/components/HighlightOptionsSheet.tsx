@@ -1,6 +1,7 @@
 import { useApp } from '@/contexts/AppContext';
 import { Highlight } from '@/services/types';
-import { Copy, Share2, Trash2 } from 'lucide-react';
+import { Copy, Trash2 } from 'lucide-react';
+import ShareIcon from '@/components/ShareIcon';
 
 interface Props {
   highlight: Highlight;
@@ -39,17 +40,6 @@ export default function HighlightOptionsSheet({ highlight, onClose }: Props) {
     onClose();
   };
 
-  const tiles = [
-    { label: 'Copy', icon: Copy, onClick: handleCopy },
-    { label: 'Share', icon: Share2, onClick: handleShare },
-    {
-      label: 'Delete',
-      icon: Trash2,
-      onClick: handleRemove,
-      destructive: true,
-    },
-  ];
-
   return (
     <>
       <div className="absolute inset-0 z-40 bg-black/60" onClick={onClose} />
@@ -69,20 +59,27 @@ export default function HighlightOptionsSheet({ highlight, onClose }: Props) {
 
         {/* Action tiles — Figma has just 3 (Copy / Share / Delete), no color swatches */}
         <div className="grid grid-cols-3 gap-3 px-5">
-          {tiles.map(t => (
-            <button
-              key={t.label}
-              onClick={t.onClick}
-              className={`h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 ${
-                t.destructive
-                  ? 'bg-[#2a1617] border-[#4d1f22] text-red-400'
-                  : 'bg-dark-raised border-dark text-dark-fg'
-              }`}
-            >
-              <t.icon size={20} strokeWidth={1.5} />
-              <span className="text-[13px] font-normal">{t.label}</span>
-            </button>
-          ))}
+          <button
+            onClick={handleCopy}
+            className="h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 bg-dark-raised border-dark text-dark-fg"
+          >
+            <Copy size={20} strokeWidth={1.5} />
+            <span className="text-[13px] font-normal">Copy</span>
+          </button>
+          <button
+            onClick={handleShare}
+            className="h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 bg-dark-raised border-dark text-dark-fg"
+          >
+            <ShareIcon size={20} color="currentColor" />
+            <span className="text-[13px] font-normal">Share</span>
+          </button>
+          <button
+            onClick={handleRemove}
+            className="h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 bg-[#2a1617] border-[#4d1f22] text-red-400"
+          >
+            <Trash2 size={20} strokeWidth={1.5} />
+            <span className="text-[13px] font-normal">Delete</span>
+          </button>
         </div>
 
         {/* Cancel */}

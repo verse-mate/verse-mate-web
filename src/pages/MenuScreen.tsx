@@ -6,13 +6,13 @@ import {
   FileText,
   Highlighter,
   Settings,
-  Share2,
   Info,
   Heart,
   HelpCircle,
   LogOut,
   X,
 } from 'lucide-react';
+import ShareIcon from '@/components/ShareIcon';
 
 /**
  * MenuScreen — dark drawer. Figma frame 5307:4338.
@@ -113,7 +113,7 @@ export default function MenuScreen() {
             />
           ))}
           <MenuRow
-            icon={<Share2 size={18} style={{ color: '#FFFFFF' }} strokeWidth={1.5} />}
+            icon={<ShareIcon size={18} color="#FFFFFF" />}
             label="Share VerseMate"
             onClick={handleShare}
           />

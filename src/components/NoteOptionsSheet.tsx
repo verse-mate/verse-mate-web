@@ -1,6 +1,7 @@
 import { useApp } from '@/contexts/AppContext';
 import { Note } from '@/services/types';
-import { Copy, Share2, Pencil, Trash2 } from 'lucide-react';
+import { Copy, Pencil, Trash2 } from 'lucide-react';
+import ShareIcon from '@/components/ShareIcon';
 
 interface Props {
   note: Note;
@@ -60,7 +61,7 @@ export default function NoteOptionsSheet({ note, onClose, onEdit }: Props) {
         {/* 4 action tiles */}
         <div className="grid grid-cols-4 gap-2 px-5">
           <SheetTile icon={<Copy size={20} strokeWidth={1.5} />} label="Copy" onClick={handleCopy} />
-          <SheetTile icon={<Share2 size={20} strokeWidth={1.5} />} label="Share" onClick={handleShare} />
+          <SheetTile icon={<ShareIcon size={20} color="currentColor" />} label="Share" onClick={handleShare} />
           <SheetTile
             icon={<Pencil size={20} strokeWidth={1.5} />}
             label="Edit"

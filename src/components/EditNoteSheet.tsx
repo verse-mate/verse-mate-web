@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useApp } from '@/contexts/AppContext';
 import { Note } from '@/services/types';
-import { Copy, Share2, Trash2 } from 'lucide-react';
+import { Copy, Trash2 } from 'lucide-react';
+import ShareIcon from '@/components/ShareIcon';
 
 interface Props {
   note: Note;
@@ -37,15 +38,30 @@ export default function EditNoteSheet({ note, onClose }: Props) {
   };
 
   const handleCopy = () => {
-    navigator.clipboard?.writeText(text).catch(() => undefined);
+    const t = note.text || '';
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(t).catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = t;
+        ta.style.cssText = 'position:fixed;opacity:0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      });
+    }
   };
 
   const handleShare = async () => {
     try {
-      await navigator.share?.({
-        title: `${note.book} ${note.chapter}`,
-        text,
-      });
+      if (navigator.share) {
+        await navigator.share({
+          title: `${note.book} ${note.chapter}`,
+          text: note.text || '',
+        });
+      } else {
+        handleCopy();
+      }
     } catch {
       handleCopy();
     }
@@ -71,7 +87,7 @@ export default function EditNoteSheet({ note, onClose }: Props) {
         {/* 3 action tiles */}
         <div className="grid grid-cols-3 gap-3 px-5">
           <SheetTile icon={<Copy size={20} strokeWidth={1.5} />} label="Copy" onClick={handleCopy} />
-          <SheetTile icon={<Share2 size={20} strokeWidth={1.5} />} label="Share" onClick={handleShare} />
+          <SheetTile icon={<ShareIcon size={20} color="currentColor" />} label="Share" onClick={handleShare} />
           <SheetTile
             icon={<Trash2 size={20} strokeWidth={1.5} />}
             label="Delete"

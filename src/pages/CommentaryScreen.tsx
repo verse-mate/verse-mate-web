@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchCommentary } from '@/services/bibleService';
 import { Commentary } from '@/services/types';
-import { ChevronDown, ChevronUp, Menu, Share2 } from 'lucide-react';
+import { ChevronDown, ChevronUp, Menu } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
+import ShareIcon from '@/components/ShareIcon';
 
 type Tab = 'summary' | 'byline' | 'detailed';
 
@@ -104,19 +105,20 @@ export default function CommentaryScreen() {
         </div>
       </header>
 
-      {/* Tab pills container — #1A1A1A wrapper, #323232 pill container, RIGHT-ALIGNED */}
+      {/* Tab pills container — #1A1A1A wrapper, #323232 pill container, equal-width segments */}
       <div
         className="shrink-0"
-        style={{ backgroundColor: '#1A1A1A', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '8px 16px' }}
+        style={{ backgroundColor: '#1A1A1A', display: 'flex', justifyContent: 'center', padding: '12px 16px' }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', backgroundColor: '#323232', borderRadius: 100, padding: '0.5px', gap: 0 }}>
+        <div style={{ display: 'flex', width: 358, maxWidth: '100%', backgroundColor: '#323232', borderRadius: 100 }}>
           {tabs.map(t => (
             <button
               key={t.id}
               onClick={() => setTab(t.id)}
               style={{
+                flex: 1,
+                height: 28,
                 borderRadius: 100,
-                padding: '2px 8px',
                 fontFamily: 'Roboto, sans-serif',
                 fontSize: 14,
                 fontWeight: 400,
@@ -151,7 +153,7 @@ export default function CommentaryScreen() {
                 style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
                 aria-label="Share summary"
               >
-                <Share2 size={20} color="#fff" strokeWidth={1.5} />
+                <ShareIcon size={20} color="#fff" />
               </button>
             </div>
             {(() => {
@@ -179,7 +181,7 @@ export default function CommentaryScreen() {
                     style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
                     aria-label="Share line-by-line analysis"
                   >
-                    <Share2 size={20} color="#fff" strokeWidth={1.5} />
+                    <ShareIcon size={20} color="#fff" />
                   </button>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
@@ -240,7 +242,7 @@ export default function CommentaryScreen() {
                     style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
                     aria-label="Share in-depth analysis"
                   >
-                    <Share2 size={20} color="#fff" strokeWidth={1.5} />
+                    <ShareIcon size={20} color="#fff" />
                   </button>
                 </div>
                 <CommentaryBody text={detailed.detail} />
