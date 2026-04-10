@@ -12,7 +12,7 @@ export default function GivingScreen() {
     <div className="flex flex-col h-full text-white" style={{ backgroundColor: '#1B1B1B' }}>
       <ScreenHeader title="Giving" onBack={() => navigate('/menu')} />
 
-      <div className="flex-1 overflow-y-auto px-5 pb-8" style={{ backgroundColor: '#000000' }}>
+      <div className="flex-1 overflow-y-auto min-h-0 px-5 pb-8" style={{ backgroundColor: '#000000' }}>
         <div className="pt-4">
           <p className="text-[12px] font-semibold tracking-[0.14em] text-white uppercase">
             SUPPORT VERSEMATE

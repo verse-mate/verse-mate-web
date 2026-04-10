@@ -10,12 +10,12 @@ interface Props {
   onClose: () => void;
 }
 
-const HIGHLIGHT_COLORS: { color: HighlightColor; label: string; className: string }[] = [
-  { color: 'yellow', label: 'Yellow', className: 'bg-highlight-yellow' },
-  { color: 'green', label: 'Green', className: 'bg-highlight-green' },
-  { color: 'blue', label: 'Blue', className: 'bg-highlight-blue' },
-  { color: 'pink', label: 'Pink', className: 'bg-highlight-pink' },
-  { color: 'orange', label: 'Orange', className: 'bg-highlight-orange' },
+const HIGHLIGHT_COLORS: { color: HighlightColor; label: string; bgColor: string }[] = [
+  { color: 'yellow', label: 'Yellow', bgColor: '#FFD600' },
+  { color: 'green', label: 'Green', bgColor: '#4CAF50' },
+  { color: 'blue', label: 'Blue', bgColor: '#2196F3' },
+  { color: 'pink', label: 'Pink', bgColor: '#E91E63' },
+  { color: 'orange', label: 'Orange', bgColor: '#FF9800' },
 ];
 
 export default function VerseActions({ verse, onClose }: Props) {
@@ -141,9 +141,10 @@ export default function VerseActions({ verse, onClose }: Props) {
             <button
               key={c.color}
               onClick={() => addHighlightFn(c.color)}
-              className={`w-8 h-8 rounded-full ${c.className} border-2 ${
+              className={`w-8 h-8 rounded-full border-2 ${
                 existingHighlight?.color === c.color ? 'border-accent' : 'border-transparent'
               } transition-all hover:scale-110`}
+              style={{ backgroundColor: c.bgColor }}
               title={c.label}
             />
           ))}
