@@ -1,6 +1,7 @@
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { ReactNode } from 'react';
+import { useRightPanel } from '@/contexts/RightPanelContext';
 
 interface ScreenHeaderProps {
   title: string;
@@ -15,7 +16,9 @@ interface ScreenHeaderProps {
  */
 export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeaderProps) {
   const navigate = useNavigate();
-  const handleBack = onBack || (() => navigate('/read'));
+  const rightPanel = useRightPanel();
+  // When inside the desktop right panel, always use the panel's goBack
+  const handleBack = rightPanel?.isRightPanel ? rightPanel.goBack : (onBack || (() => navigate('/read')));
 
   return (
     <header

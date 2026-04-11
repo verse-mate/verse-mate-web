@@ -13,6 +13,8 @@ import { ChevronDown, Menu, Bookmark, FileText, ChevronLeft, ChevronRight } from
 import BookSelector from '@/components/BookSelector';
 import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
+import SelectionToolbar from '@/components/SelectionToolbar';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 export default function ReadingScreen() {
   const { state, dispatch, addBookmark, removeBookmark } = useApp();
@@ -78,6 +80,7 @@ export default function ReadingScreen() {
     red: 'hl-red', teal: 'hl-teal', brown: 'hl-brown',
   };
 
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
   const [insightVerse, setInsightVerse] = useState<number | null>(null);
   const openVerseInsight = (verseNum: number) => {
     dispatch({ type: 'SET_VERSE', verse: verseNum });
@@ -305,17 +308,15 @@ export default function ReadingScreen() {
                     return (
                       <span
                         key={verse.number}
+                        data-verse={verse.number}
                         onTouchStart={() => handlePressStart(verse.number)}
                         onTouchEnd={() => handlePressEnd(verse.number)}
-                        onMouseDown={() => handlePressStart(verse.number)}
-                        onMouseUp={() => handlePressEnd(verse.number)}
-                        onMouseLeave={() => {
-                          if (pressTimer) {
-                            clearTimeout(pressTimer);
-                            setPressTimer(null);
-                          }
-                        }}
-                        className={`inline cursor-pointer transition-colors ${
+                        {...(!isDesktop ? {
+                          onMouseDown: () => handlePressStart(verse.number),
+                          onMouseUp: () => handlePressEnd(verse.number),
+                          onMouseLeave: () => { if (pressTimer) { clearTimeout(pressTimer); setPressTimer(null); } },
+                        } : {})}
+                        className={`inline transition-colors ${isDesktop ? 'select-text cursor-text' : 'cursor-pointer'} ${
                           hl ? highlightColorClass[hl.color] : ''
                         } ${autoClass ? `${autoClass} rounded px-0.5` : ''} ${
                           isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''
@@ -336,13 +337,19 @@ export default function ReadingScreen() {
           })()}
         </div>
         </div>{/* end inner max-width wrapper */}
+
+        {/* Desktop: floating toolbar on text selection */}
+        {isDesktop && (
+          <SelectionToolbar book={state.book} chapter={state.chapter} bookId={state.bookId} />
+        )}
       </div>
 
-      {/* ─── FLOATING CHAPTER NAV — dark circles, white chevrons, bottom: 45px ─── */}
+      {/* ─── FLOATING CHAPTER NAV — vertically centered on desktop, bottom: 45px on mobile ─── */}
       {state.chapter > 1 && (
         <button
           onClick={() => goToChapter(-1)}
           aria-label="Previous chapter"
+          className="chapter-nav-btn chapter-nav-prev"
           style={{ position: 'absolute', left: 12, bottom: 45, width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
           <ChevronLeft size={20} color="#fff" strokeWidth={2.5} />
@@ -352,6 +359,7 @@ export default function ReadingScreen() {
         <button
           onClick={() => goToChapter(1)}
           aria-label="Next chapter"
+          className="chapter-nav-btn chapter-nav-next"
           style={{ position: 'absolute', right: 12, bottom: 45, width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
           <ChevronRight size={20} color="#fff" strokeWidth={2.5} />

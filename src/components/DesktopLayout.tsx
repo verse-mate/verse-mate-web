@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
-import { fetchCommentary } from '@/services/bibleService';
+import { fetchCommentary, fetchBooks } from '@/services/bibleService';
+import { BibleBook } from '@/services/types';
 import { Commentary } from '@/services/types';
 import {
+  ArrowLeft,
   ChevronDown,
   ChevronUp,
   Menu,
@@ -17,18 +19,50 @@ import {
   HelpCircle,
   LogOut,
   X,
+  BookOpen,
+  PanelLeftClose,
+  PanelLeftOpen,
 } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import BookSelector from '@/components/BookSelector';
+import { RightPanelProvider } from '@/contexts/RightPanelContext';
+import BookmarksScreen from '@/pages/BookmarksScreen';
+import NotesScreen from '@/pages/NotesScreen';
+import HighlightsScreen from '@/pages/HighlightsScreen';
+import SettingsScreen from '@/pages/SettingsScreen';
+import AboutScreen from '@/pages/AboutScreen';
+import GivingScreen from '@/pages/GivingScreen';
+import HelpScreen from '@/pages/HelpScreen';
+import SignInScreen from '@/pages/SignInScreen';
+
+type RightPanelView = 'commentary' | 'bookmarks' | 'notes' | 'highlights' | 'settings' | 'about' | 'giving' | 'help' | 'signin';
+
+const RIGHT_PANEL_COMPONENTS: Record<Exclude<RightPanelView, 'commentary'>, { component: React.FC; label: string }> = {
+  bookmarks: { component: BookmarksScreen, label: 'Bookmarks' },
+  notes: { component: NotesScreen, label: 'Notes' },
+  highlights: { component: HighlightsScreen, label: 'Highlights' },
+  settings: { component: SettingsScreen, label: 'Settings' },
+  about: { component: AboutScreen, label: 'About' },
+  giving: { component: GivingScreen, label: 'Giving' },
+  help: { component: HelpScreen, label: 'Help' },
+  signin: { component: SignInScreen, label: 'Sign In' },
+};
 
 type Tab = 'summary' | 'byline' | 'detailed';
+
+const MIN_LEFT_PCT = 35;
+const MAX_LEFT_PCT = 80;
+const SIDEBAR_COLLAPSED = 56;
+const SIDEBAR_EXPANDED = 220;
 
 /**
  * DesktopLayout — split-view for ≥1024px viewports.
  *
- * Left panel (65%): current Bible reading content via <Outlet />
- * Right panel (35%): commentary for the current book/chapter
- * Shared header: spans full width
+ * Far-left: persistent mini-sidebar with book list
+ * Left panel (resizable): current Bible reading content via <Outlet />
+ * Drag handle: resize between panels
+ * Right panel (remainder): commentary for the current book/chapter
+ * Shared header: spans full width (minus sidebar)
  */
 export default function DesktopLayout() {
   const { state, dispatch } = useApp();
@@ -36,6 +70,24 @@ export default function DesktopLayout() {
   const location = useLocation();
   const [showBookSelector, setShowBookSelector] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [expandedBook, setExpandedBook] = useState<string | null>(null);
+
+  // Right panel navigation stack (back goes up the stack, empty = commentary)
+  const [rightPanelStack, setRightPanelStack] = useState<RightPanelView[]>(['commentary']);
+  const rightPanelView = rightPanelStack[rightPanelStack.length - 1];
+
+  const pushRightPanel = (view: RightPanelView) => {
+    setRightPanelStack(prev => [...prev, view]);
+  };
+  const popRightPanel = () => {
+    setRightPanelStack(prev => prev.length > 1 ? prev.slice(0, -1) : prev);
+  };
+
+  // Resizable split state (percentage of content area, not including sidebar)
+  const [leftPct, setLeftPct] = useState(65);
+  const isDragging = useRef(false);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   // Right panel commentary state
   const [tab, setTab] = useState<Tab>('summary');
@@ -54,195 +106,438 @@ export default function DesktopLayout() {
     }
   }, [location.pathname, navigate]);
 
+  // Keyboard navigation: left/right arrow keys for chapter switching
+  const [books, setBooks] = useState<BibleBook[]>([]);
+  useEffect(() => { fetchBooks().then(setBooks); }, []);
+  const currentBook = books.find(b => b.name === state.book);
+  const maxChapter = currentBook?.chapters || 1;
+
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+    if (e.key === 'ArrowLeft' && state.chapter > 1) {
+      dispatch({ type: 'SET_PASSAGE', book: state.book, chapter: state.chapter - 1 });
+    } else if (e.key === 'ArrowRight' && state.chapter < maxChapter) {
+      dispatch({ type: 'SET_PASSAGE', book: state.book, chapter: state.chapter + 1 });
+    }
+  }, [state.book, state.chapter, maxChapter, dispatch]);
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
+
+  // ─── Drag-to-resize handlers ───
+  const handleDragStart = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    isDragging.current = true;
+    document.body.style.cursor = 'col-resize';
+    document.body.style.userSelect = 'none';
+  }, []);
+
+  useEffect(() => {
+    const handleMove = (e: MouseEvent) => {
+      if (!isDragging.current || !contentRef.current) return;
+      const rect = contentRef.current.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const pct = Math.round((x / rect.width) * 100);
+      setLeftPct(Math.max(MIN_LEFT_PCT, Math.min(MAX_LEFT_PCT, pct)));
+    };
+    const handleUp = () => {
+      if (isDragging.current) {
+        isDragging.current = false;
+        document.body.style.cursor = '';
+        document.body.style.userSelect = '';
+      }
+    };
+    window.addEventListener('mousemove', handleMove);
+    window.addEventListener('mouseup', handleUp);
+    return () => {
+      window.removeEventListener('mousemove', handleMove);
+      window.removeEventListener('mouseup', handleUp);
+    };
+  }, []);
+
   const tabs: { id: Tab; label: string }[] = [
     { id: 'summary', label: 'Summary' },
     { id: 'byline', label: 'By Line' },
     { id: 'detailed', label: 'Detailed' },
   ];
 
+  const otBooks = books.filter(b => b.testament === 'OT');
+  const ntBooks = books.filter(b => b.testament === 'NT');
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', width: '100vw', height: '100dvh', overflow: 'hidden', backgroundColor: '#1B1B1B' }}>
-      {/* ─── SHARED FULL-WIDTH HEADER ─── */}
-      <header
-        style={{
-          flexShrink: 0,
-          height: 56,
-          backgroundColor: '#1A1A1A',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '0 16px',
-          borderBottom: '1px solid #2a2a2a',
-        }}
-      >
-        {/* Left: Book + chapter dropdown */}
-        <button
-          onClick={() => setShowBookSelector(true)}
-          style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#FFFFFF', background: 'none', border: 'none', cursor: 'pointer', padding: '0 8px 0 0', minHeight: 44 }}
-        >
-          <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: '#FFFFFF' }}>
-            {state.book} {state.chapter}
-          </span>
-          <ChevronDown size={18} color="#FFFFFF" strokeWidth={2} />
-        </button>
-
-        {/* Center: dual pill labels — both active since split view shows both */}
-        <div style={{ display: 'flex', backgroundColor: '#323232', borderRadius: 100, padding: '3px' }}>
-          <div
-            style={{
-              fontFamily: 'Roboto, sans-serif',
-              fontWeight: 400,
-              fontSize: 14,
-              lineHeight: '24px',
-              padding: '2px 12px',
-              borderRadius: 100,
-              backgroundColor: '#B09A6D',
-              color: '#000000',
-            }}
-          >
-            Bible
-          </div>
-          <div
-            style={{
-              fontFamily: 'Roboto, sans-serif',
-              fontWeight: 400,
-              fontSize: 14,
-              lineHeight: '24px',
-              padding: '2px 12px',
-              borderRadius: 100,
-              backgroundColor: '#B09A6D',
-              color: '#000000',
-            }}
-          >
-            Insight
-          </div>
-        </div>
-
-        {/* Right: hamburger menu */}
-        <button
-          onClick={() => setShowMenu(!showMenu)}
-          aria-label="Open menu"
-          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, background: 'none', border: 'none', cursor: 'pointer', marginRight: -8 }}
-        >
-          <Menu size={22} color="#FFFFFF" strokeWidth={2} />
-        </button>
-      </header>
-
-      {/* ─── SPLIT BODY ─── */}
-      <div style={{ flex: 1, display: 'flex', overflow: 'hidden', position: 'relative' }}>
-        {/* LEFT PANEL — 65% — Bible reading */}
+    <div style={{ display: 'flex', width: '100vw', height: '100dvh', overflow: 'hidden', backgroundColor: '#1B1B1B' }}>
+      {/* ─── PERSISTENT SIDEBAR — expands on book click to show chapters ─── */}
+      {sidebarOpen && (
         <div
           style={{
-            width: '65%',
+            width: expandedBook ? SIDEBAR_EXPANDED : SIDEBAR_COLLAPSED,
+            flexShrink: 0,
             height: '100%',
+            backgroundColor: '#111111',
+            borderRight: '1px solid #2a2a2a',
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
-            borderRight: '1px solid #dce0e3',
+            transition: 'width 0.2s ease',
           }}
         >
-          <Outlet />
+          {/* Sidebar header */}
+          <div style={{ height: 56, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, borderBottom: '1px solid #2a2a2a' }}>
+            <BookOpen size={20} color="#B09A6D" strokeWidth={1.5} />
+          </div>
+          {/* Book list */}
+          <div style={{ flex: 1, overflowY: 'auto', padding: '4px 0' }} className="mini-sidebar-scroll">
+            <SidebarSection
+              label="OT"
+              books={otBooks}
+              activeBook={state.book}
+              activeChapter={state.chapter}
+              expandedBook={expandedBook}
+              onBookClick={(b) => setExpandedBook(expandedBook === b.name ? null : b.name)}
+              onChapterClick={(b, ch) => {
+                dispatch({ type: 'SET_PASSAGE', book: b.name, chapter: ch, bookId: b.bookId });
+                navigate('/read');
+              }}
+              isExpanded={!!expandedBook}
+            />
+            <SidebarSection
+              label="NT"
+              books={ntBooks}
+              activeBook={state.book}
+              activeChapter={state.chapter}
+              expandedBook={expandedBook}
+              onBookClick={(b) => setExpandedBook(expandedBook === b.name ? null : b.name)}
+              onChapterClick={(b, ch) => {
+                dispatch({ type: 'SET_PASSAGE', book: b.name, chapter: ch, bookId: b.bookId });
+                navigate('/read');
+              }}
+              isExpanded={!!expandedBook}
+            />
+          </div>
         </div>
+      )}
 
-        {/* RIGHT PANEL — 35% — Commentary */}
-        <div
+      {/* ─── MAIN CONTENT AREA (header + split panels) ─── */}
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+        {/* ─── SHARED FULL-WIDTH HEADER ─── */}
+        <header
           style={{
-            width: '35%',
-            height: '100%',
+            flexShrink: 0,
+            height: 56,
+            backgroundColor: '#1A1A1A',
             display: 'flex',
-            flexDirection: 'column',
-            overflow: 'hidden',
-            backgroundColor: '#1B1B1B',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '0 16px',
+            borderBottom: '1px solid #2a2a2a',
           }}
         >
-          {/* Right panel sub-header with Summary/By Line/Detailed tabs */}
+          {/* Left: sidebar toggle + Book/chapter dropdown */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+            <button
+              onClick={() => setSidebarOpen(v => !v)}
+              aria-label={sidebarOpen ? 'Hide book sidebar' : 'Show book sidebar'}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 36, height: 36, background: 'none', border: 'none', cursor: 'pointer', borderRadius: 8 }}
+            >
+              {sidebarOpen ? <PanelLeftClose size={18} color="#888" strokeWidth={1.5} /> : <PanelLeftOpen size={18} color="#888" strokeWidth={1.5} />}
+            </button>
+            <button
+              onClick={() => setShowBookSelector(true)}
+              style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#FFFFFF', background: 'none', border: 'none', cursor: 'pointer', padding: '0 8px 0 4px', minHeight: 44 }}
+            >
+              <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: '#FFFFFF' }}>
+                {state.book} {state.chapter}
+              </span>
+              <ChevronDown size={18} color="#FFFFFF" strokeWidth={2} />
+            </button>
+          </div>
+
+          {/* Center: VerseMate logo */}
+          <img src="/versemate-logo-white.png" alt="VerseMate" style={{ height: 22, objectFit: 'contain' }} />
+
+          {/* Right: hamburger menu */}
+          <button
+            onClick={() => setShowMenu(!showMenu)}
+            aria-label="Open menu"
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, background: 'none', border: 'none', cursor: 'pointer', marginRight: -8 }}
+          >
+            <Menu size={22} color="#FFFFFF" strokeWidth={2} />
+          </button>
+        </header>
+
+        {/* ─── SPLIT BODY ─── */}
+        <div ref={contentRef} style={{ flex: 1, display: 'flex', overflow: 'hidden', position: 'relative' }}>
+          {/* LEFT PANEL — Bible reading */}
           <div
             style={{
-              flexShrink: 0,
-              backgroundColor: '#1A1A1A',
+              width: `${leftPct}%`,
+              height: '100%',
               display: 'flex',
-              justifyContent: 'center',
-              padding: '12px 16px',
-              borderBottom: '1px solid #2a2a2a',
+              flexDirection: 'column',
+              overflow: 'hidden',
             }}
           >
-            <div style={{ display: 'flex', backgroundColor: '#323232', borderRadius: 100, padding: '3px' }}>
-              {tabs.map(t => (
-                <button
-                  key={t.id}
-                  onClick={() => setTab(t.id)}
-                  style={{
-                    borderRadius: 100,
-                    padding: '4px 16px',
-                    fontFamily: 'Roboto, sans-serif',
-                    fontSize: 14,
-                    fontWeight: 400,
-                    lineHeight: '24px',
-                    backgroundColor: tab === t.id ? '#B09A6D' : 'transparent',
-                    color: tab === t.id ? '#000000' : '#FFFFFF',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                >
-                  {t.label}
-                </button>
+            <Outlet />
+          </div>
+
+          {/* DRAG HANDLE */}
+          <div
+            onMouseDown={handleDragStart}
+            style={{
+              width: 6,
+              flexShrink: 0,
+              cursor: 'col-resize',
+              backgroundColor: '#2a2a2a',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              position: 'relative',
+              zIndex: 10,
+            }}
+          >
+            {/* Visual grip dots */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+              {[0, 1, 2].map(i => (
+                <div key={i} style={{ width: 3, height: 3, borderRadius: '50%', backgroundColor: '#555' }} />
               ))}
             </div>
           </div>
 
-          {/* Right panel body */}
-          <div style={{ flex: 1, overflowY: 'auto', backgroundColor: '#000000', color: '#FFFFFF', padding: '16px 16px 32px' }}>
-            <CommentaryPanel
-              tab={tab}
-              commentaries={commentaries}
-              expanded={expanded}
-              setExpanded={setExpanded}
-              book={state.book}
-              chapter={state.chapter}
-            />
+          {/* RIGHT PANEL — Commentary or menu page content */}
+          <div
+            style={{
+              flex: 1,
+              minWidth: 0,
+              height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              overflow: 'hidden',
+              backgroundColor: '#1B1B1B',
+            }}
+          >
+            {rightPanelView === 'commentary' ? (
+              <>
+                {/* Commentary sub-header with Summary/By Line/Detailed tabs */}
+                <div
+                  style={{
+                    flexShrink: 0,
+                    backgroundColor: '#1A1A1A',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    padding: '12px 16px',
+                    borderBottom: '1px solid #2a2a2a',
+                  }}
+                >
+                  <div style={{ display: 'flex', backgroundColor: '#323232', borderRadius: 100, padding: '3px' }}>
+                    {tabs.map(t => (
+                      <button
+                        key={t.id}
+                        onClick={() => setTab(t.id)}
+                        style={{
+                          borderRadius: 100,
+                          padding: '4px 16px',
+                          fontFamily: 'Roboto, sans-serif',
+                          fontSize: 14,
+                          fontWeight: 400,
+                          lineHeight: '24px',
+                          backgroundColor: tab === t.id ? '#B09A6D' : 'transparent',
+                          color: tab === t.id ? '#000000' : '#FFFFFF',
+                          border: 'none',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        {t.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                {/* Commentary body */}
+                <div style={{ flex: 1, overflowY: 'auto', backgroundColor: '#000000', color: '#FFFFFF', padding: '16px 16px 32px', fontFamily: "'Roboto Serif', Georgia, serif", fontWeight: 300, fontSize: `${state.settings.fontSize}px`, lineHeight: '32px' }}>
+                  <CommentaryPanel
+                    tab={tab}
+                    commentaries={commentaries}
+                    expanded={expanded}
+                    setExpanded={setExpanded}
+                    book={state.book}
+                    chapter={state.chapter}
+                  />
+                </div>
+              </>
+            ) : (
+              /* Menu page content — wrapped with RightPanelProvider so ScreenHeader back buttons work */
+              <RightPanelProvider value={{ goBack: popRightPanel, isRightPanel: true }}>
+                <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                  {(() => {
+                    const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
+                    if (!entry) return null;
+                    const PageComponent = entry.component;
+                    return <PageComponent />;
+                  })()}
+                </div>
+              </RightPanelProvider>
+            )}
           </div>
         </div>
-
-        {/* Menu sidebar overlay */}
-        {showMenu && (
-          <>
-            <div
-              onClick={() => setShowMenu(false)}
-              style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 40 }}
-            />
-            <div
-              style={{
-                position: 'absolute',
-                right: 0,
-                top: 0,
-                width: 340,
-                height: '100%',
-                backgroundColor: '#1B1B1B',
-                zIndex: 50,
-                boxShadow: '-4px 0 20px rgba(0,0,0,0.3)',
-                display: 'flex',
-                flexDirection: 'column',
-                overflow: 'hidden',
-              }}
-            >
-              <MenuSidebar onClose={() => setShowMenu(false)} />
-            </div>
-          </>
-        )}
       </div>
 
-      {/* Book selector overlay */}
+      {/* Menu sidebar overlay — fixed to viewport so it always appears correctly */}
+      {showMenu && (
+        <>
+          <div
+            onClick={() => setShowMenu(false)}
+            style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 40 }}
+          />
+          <div
+            style={{
+              position: 'fixed',
+              right: 0,
+              top: 0,
+              width: 280,
+              height: '100%',
+              backgroundColor: '#1B1B1B',
+              zIndex: 50,
+              boxShadow: '-4px 0 20px rgba(0,0,0,0.3)',
+              display: 'flex',
+              flexDirection: 'column',
+              overflow: 'hidden',
+            }}
+          >
+            <MenuSidebar
+              onClose={() => setShowMenu(false)}
+              onOpenPage={(view: RightPanelView) => { pushRightPanel(view); setShowMenu(false); }}
+            />
+          </div>
+        </>
+      )}
+
+      {/* Book selector overlay — constrained to a centered modal on desktop */}
       {showBookSelector && (
-        <BookSelector
-          onClose={() => setShowBookSelector(false)}
-          onSelect={(book, ch, bookId) => {
-            dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });
-            setShowBookSelector(false);
-            navigate('/read');
-          }}
-        />
+        <>
+          <div
+            onClick={() => setShowBookSelector(false)}
+            style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 55 }}
+          />
+          <div style={{
+            position: 'fixed',
+            top: '10vh',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: 420,
+            height: '80vh',
+            zIndex: 56,
+            borderRadius: 16,
+            overflow: 'hidden',
+            boxShadow: '0 8px 40px rgba(0,0,0,0.5)',
+          }}>
+            <BookSelector
+              onClose={() => setShowBookSelector(false)}
+              onSelect={(book, ch, bookId) => {
+                dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });
+                setShowBookSelector(false);
+                navigate('/read');
+              }}
+            />
+          </div>
+        </>
       )}
     </div>
+  );
+}
+
+// ─── Sidebar Section (OT / NT) with expandable chapter grid ─────────────────
+
+function SidebarSection({
+  label,
+  books: sectionBooks,
+  activeBook,
+  activeChapter,
+  expandedBook,
+  onBookClick,
+  onChapterClick,
+  isExpanded,
+}: {
+  label: string;
+  books: BibleBook[];
+  activeBook: string;
+  activeChapter: number;
+  expandedBook: string | null;
+  onBookClick: (b: BibleBook) => void;
+  onChapterClick: (b: BibleBook, ch: number) => void;
+  isExpanded: boolean;
+}) {
+  return (
+    <>
+      <div style={{ fontFamily: 'Roboto, sans-serif', fontSize: 9, fontWeight: 600, color: '#B09A6D', textAlign: isExpanded ? 'left' : 'center', padding: isExpanded ? '8px 12px 4px' : '6px 0 2px', letterSpacing: '1px', textTransform: 'uppercase' }}>{label}</div>
+      {sectionBooks.map(b => {
+        const isActive = activeBook === b.name;
+        const isBookExpanded = expandedBook === b.name;
+        return (
+          <div key={b.bookId}>
+            <button
+              onClick={() => onBookClick(b)}
+              title={b.name}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                width: '100%',
+                padding: isExpanded ? '6px 12px' : '5px 4px',
+                fontFamily: 'Roboto, sans-serif',
+                fontSize: isExpanded ? 13 : 10,
+                fontWeight: isActive ? 600 : 400,
+                color: isActive ? '#B09A6D' : 'rgba(255,255,255,0.6)',
+                backgroundColor: isBookExpanded ? 'rgba(176,154,109,0.08)' : isActive ? 'rgba(176,154,109,0.12)' : 'transparent',
+                border: 'none',
+                cursor: 'pointer',
+                textAlign: isExpanded ? 'left' : 'center',
+                lineHeight: '18px',
+                borderLeft: isActive ? '2px solid #B09A6D' : '2px solid transparent',
+                justifyContent: isExpanded ? 'space-between' : 'center',
+                gap: 4,
+              }}
+            >
+              <span>{isExpanded ? b.name : b.shortName}</span>
+              {isExpanded && (
+                <ChevronDown
+                  size={12}
+                  color="rgba(255,255,255,0.3)"
+                  style={{ flexShrink: 0, transform: isBookExpanded ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }}
+                />
+              )}
+            </button>
+            {/* Chapter grid — only shown when expanded */}
+            {isBookExpanded && (
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 2, padding: '4px 10px 8px' }}>
+                {Array.from({ length: b.chapters }, (_, i) => i + 1).map(ch => (
+                  <button
+                    key={ch}
+                    onClick={() => onChapterClick(b, ch)}
+                    style={{
+                      width: '100%',
+                      aspectRatio: '1',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontFamily: 'Roboto, sans-serif',
+                      fontSize: 11,
+                      fontWeight: isActive && activeChapter === ch ? 600 : 400,
+                      color: isActive && activeChapter === ch ? '#000' : 'rgba(255,255,255,0.7)',
+                      backgroundColor: isActive && activeChapter === ch ? '#B09A6D' : '#1e1e1e',
+                      border: 'none',
+                      borderRadius: 4,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {ch}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </>
   );
 }
 
@@ -398,7 +693,7 @@ function CommentaryBody({ text }: { text: string }) {
   const flushPara = () => {
     if (para.length) {
       elements.push(
-        <p key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '23px', color: 'rgba(255,255,255,0.87)', marginBottom: 10 }}>
+        <p key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 'inherit', lineHeight: 1.6, color: 'rgba(255,255,255,0.87)', marginBottom: 10 }}>
           {inlineFormat(para.join(' '))}
         </p>
       );
@@ -422,7 +717,7 @@ function CommentaryBody({ text }: { text: string }) {
     if (line.startsWith('>')) {
       flushPara();
       elements.push(
-        <blockquote key={key++} style={{ borderLeft: '2px solid #B09A6D', paddingLeft: 10, fontStyle: 'italic', marginBottom: 10, fontFamily: 'Roboto, sans-serif', fontSize: 15, lineHeight: '23px', color: 'rgba(255,255,255,0.6)' }}>
+        <blockquote key={key++} style={{ borderLeft: '2px solid #B09A6D', paddingLeft: 10, fontStyle: 'italic', marginBottom: 10, fontFamily: 'Roboto, sans-serif', fontSize: 'inherit', lineHeight: 1.6, color: 'rgba(255,255,255,0.6)' }}>
           {inlineFormat(line.replace(/^>\s?/, ''))}
         </blockquote>
       );
@@ -457,24 +752,28 @@ function inlineFormat(text: string): React.ReactNode {
 
 // ─── Menu Sidebar (desktop overlay) ──────────────────────────────────────────
 
-function MenuSidebar({ onClose }: { onClose: () => void }) {
+function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?: (view: RightPanelView) => void }) {
   const navigate = useNavigate();
   const { state, signOut } = useApp();
 
-  const menuItems = [
-    { label: 'Bookmarks', icon: Bookmark, path: '/bookmarks' },
-    { label: 'Notes', icon: FileText, path: '/notes' },
-    { label: 'Highlights', icon: Highlighter, path: '/highlights' },
-    { label: 'Settings', icon: Settings, path: '/menu/settings' },
-    { label: 'About', icon: Info, path: '/menu/about' },
-    { label: 'Giving', icon: Heart, path: '/menu/giving' },
-    { label: 'Help', icon: HelpCircle, path: '/menu/help' },
+  // Map menu labels → right panel view keys
+  const menuItems: { label: string; icon: typeof Bookmark; view: RightPanelView }[] = [
+    { label: 'Bookmarks', icon: Bookmark, view: 'bookmarks' },
+    { label: 'Notes', icon: FileText, view: 'notes' },
+    { label: 'Highlights', icon: Highlighter, view: 'highlights' },
+    { label: 'Settings', icon: Settings, view: 'settings' },
+    { label: 'About', icon: Info, view: 'about' },
+    { label: 'Giving', icon: Heart, view: 'giving' },
+    { label: 'Help', icon: HelpCircle, view: 'help' },
   ];
 
   const handleLogout = async () => {
     if (state.isSignedIn) {
       await signOut();
       navigate('/read');
+    } else if (onOpenPage) {
+      onOpenPage('signin');
+      return;
     } else {
       navigate('/menu/signin');
     }
@@ -501,7 +800,7 @@ function MenuSidebar({ onClose }: { onClose: () => void }) {
       <div style={{ flex: 1, overflowY: 'auto', backgroundColor: '#000000', padding: '16px' }}>
         {/* User card */}
         <button
-          onClick={() => { if (!state.isSignedIn) { navigate('/menu/signin'); onClose(); } }}
+          onClick={() => { if (!state.isSignedIn) { if (onOpenPage) { onOpenPage('signin'); } else { navigate('/menu/signin'); onClose(); } } }}
           disabled={state.isSignedIn}
           style={{ display: 'flex', alignItems: 'center', gap: 12, width: '100%', height: 64, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', marginBottom: 12, cursor: state.isSignedIn ? 'default' : 'pointer', textAlign: 'left' }}
         >
@@ -523,7 +822,7 @@ function MenuSidebar({ onClose }: { onClose: () => void }) {
           {menuItems.map(item => (
             <button
               key={item.label}
-              onClick={() => { navigate(item.path); onClose(); }}
+              onClick={() => { if (onOpenPage) { onOpenPage(item.view); } else { navigate(`/${item.view}`); onClose(); } }}
               style={{ display: 'flex', alignItems: 'center', gap: 16, width: '100%', height: 56, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', cursor: 'pointer', textAlign: 'left' }}
             >
               <item.icon size={18} color="#E7E7E7" strokeWidth={1.5} />

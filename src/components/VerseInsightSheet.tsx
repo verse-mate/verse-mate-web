@@ -132,9 +132,9 @@ export default function VerseInsightSheet({
         className="absolute inset-0 z-40 bg-black/60 animate-fade-in"
         onClick={onClose}
       />
-      {/* Sheet — slides up from bottom, takes ~75% of frame */}
+      {/* Sheet — slides up from bottom, takes ~75% of frame; narrower on desktop */}
       <div
-        className="absolute inset-x-0 bottom-0 z-50 bg-dark-surface text-dark-fg rounded-t-[24px] border-t border-dark shadow-[0_-10px_30px_rgba(0,0,0,0.5)] animate-slide-up flex flex-col"
+        className="verse-insight-sheet absolute inset-x-0 bottom-0 z-50 bg-dark-surface text-dark-fg rounded-t-[24px] border-t border-dark shadow-[0_-10px_30px_rgba(0,0,0,0.5)] animate-slide-up flex flex-col"
         style={{ maxHeight: '80%' }}
         role="dialog"
         aria-label="Verse Insight"
