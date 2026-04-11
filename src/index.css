@@ -137,8 +137,8 @@
   .safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
   .safe-top { padding-top: env(safe-area-inset-top, 0px); }
 
-  /* Production verse number = charcoal-grey, NOT gold */
-  .text-verse-number { color: var(--vm-charcoal-grey); }
+  /* Verse number — lighter than charcoal-grey for readability on dark bg */
+  .text-verse-number { color: #8a9199; }
 
   .bg-dark-surface { background-color: hsl(var(--dark-surface)); }
   .bg-dark-raised { background-color: hsl(var(--dark-surface-raised)); }

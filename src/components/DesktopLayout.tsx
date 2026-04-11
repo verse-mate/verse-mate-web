@@ -71,7 +71,8 @@ export default function DesktopLayout() {
   const [showBookSelector, setShowBookSelector] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [expandedBook, setExpandedBook] = useState<string | null>(null);
+  // Sidebar starts expanded showing full book names
+  const [expandedBook, setExpandedBook] = useState<string | null>(state.book);
 
   // Right panel: only one menu page at a time, back always returns to commentary
   const [rightPanelView, setRightPanelView] = useState<RightPanelView>('commentary');
@@ -91,11 +92,11 @@ export default function DesktopLayout() {
   // Right panel commentary state
   const [tab, setTab] = useState<Tab>('summary');
   const [commentaries, setCommentaries] = useState<Commentary[]>([]);
-  const [expanded, setExpanded] = useState<number | null>(null);
+  const [expanded, setExpanded] = useState<number | null>(-2); // -2 = all expanded by default
 
   useEffect(() => {
     fetchCommentary(state.book, state.chapter).then(setCommentaries);
-    setExpanded(null);
+    setExpanded(-2); // Reset to all-expanded on chapter change
   }, [state.book, state.chapter]);
 
   // On desktop, redirect commentary route back to /read since we show it inline
@@ -253,17 +254,51 @@ export default function DesktopLayout() {
             </button>
           </div>
 
-          {/* Center: VerseMate logo */}
-          <img src="/versemate-logo-white.png" alt="VerseMate" style={{ height: 22, objectFit: 'contain' }} />
-
-          {/* Right: hamburger menu */}
-          <button
-            onClick={() => setShowMenu(!showMenu)}
-            aria-label="Open menu"
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, background: 'none', border: 'none', cursor: 'pointer', marginRight: -8 }}
-          >
-            <Menu size={22} color="#FFFFFF" strokeWidth={2} />
-          </button>
+          {/* Center/Right: commentary tabs in header when showing insight, otherwise logo */}
+          {rightPanelView === 'commentary' ? (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <div style={{ display: 'flex', backgroundColor: '#323232', borderRadius: 100, padding: '3px' }}>
+                {tabs.map(t => (
+                  <button
+                    key={t.id}
+                    onClick={() => setTab(t.id)}
+                    style={{
+                      borderRadius: 100,
+                      padding: '3px 14px',
+                      fontFamily: 'Roboto, sans-serif',
+                      fontSize: 13,
+                      fontWeight: 400,
+                      lineHeight: '22px',
+                      backgroundColor: tab === t.id ? '#B09A6D' : 'transparent',
+                      color: tab === t.id ? '#000000' : '#FFFFFF',
+                      border: 'none',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
+              <button
+                onClick={() => setShowMenu(!showMenu)}
+                aria-label="Open menu"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, background: 'none', border: 'none', cursor: 'pointer' }}
+              >
+                <Menu size={22} color="#FFFFFF" strokeWidth={2} />
+              </button>
+            </div>
+          ) : (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <img src="/versemate-logo-white.png" alt="VerseMate" style={{ height: 20, objectFit: 'contain' }} />
+              <button
+                onClick={() => setShowMenu(!showMenu)}
+                aria-label="Open menu"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, background: 'none', border: 'none', cursor: 'pointer' }}
+              >
+                <Menu size={22} color="#FFFFFF" strokeWidth={2} />
+              </button>
+            </div>
+          )}
         </header>
 
         {/* ─── SPLIT BODY ─── */}
@@ -318,41 +353,7 @@ export default function DesktopLayout() {
           >
             {rightPanelView === 'commentary' ? (
               <>
-                {/* Commentary sub-header with Summary/By Line/Detailed tabs */}
-                <div
-                  style={{
-                    flexShrink: 0,
-                    backgroundColor: '#1A1A1A',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    padding: '12px 16px',
-                    borderBottom: '1px solid #2a2a2a',
-                  }}
-                >
-                  <div style={{ display: 'flex', backgroundColor: '#323232', borderRadius: 100, padding: '3px' }}>
-                    {tabs.map(t => (
-                      <button
-                        key={t.id}
-                        onClick={() => setTab(t.id)}
-                        style={{
-                          borderRadius: 100,
-                          padding: '4px 16px',
-                          fontFamily: 'Roboto, sans-serif',
-                          fontSize: 14,
-                          fontWeight: 400,
-                          lineHeight: '24px',
-                          backgroundColor: tab === t.id ? '#B09A6D' : 'transparent',
-                          color: tab === t.id ? '#000000' : '#FFFFFF',
-                          border: 'none',
-                          cursor: 'pointer',
-                        }}
-                      >
-                        {t.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                {/* Commentary body */}
+                {/* Commentary body — tabs now in top header */}
                 <div style={{ flex: 1, overflowY: 'auto', backgroundColor: '#000000', color: '#FFFFFF', padding: '16px 16px 32px', fontFamily: "'Roboto Serif', Georgia, serif", fontWeight: 300, fontSize: `${state.settings.fontSize}px`, lineHeight: '32px' }}>
                   <CommentaryPanel
                     tab={tab}
@@ -692,7 +693,7 @@ function CommentaryBody({ text }: { text: string }) {
   const flushPara = () => {
     if (para.length) {
       elements.push(
-        <p key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 'inherit', lineHeight: 1.6, color: 'rgba(255,255,255,0.87)', marginBottom: 10 }}>
+        <p key={key++} style={{ fontFamily: 'inherit', fontWeight: 300, fontSize: 'inherit', lineHeight: 'inherit', color: 'rgba(255,255,255,0.87)', marginBottom: 10 }}>
           {inlineFormat(para.join(' '))}
         </p>
       );
@@ -716,7 +717,7 @@ function CommentaryBody({ text }: { text: string }) {
     if (line.startsWith('>')) {
       flushPara();
       elements.push(
-        <blockquote key={key++} style={{ borderLeft: '2px solid #B09A6D', paddingLeft: 10, fontStyle: 'italic', marginBottom: 10, fontFamily: 'Roboto, sans-serif', fontSize: 'inherit', lineHeight: 1.6, color: 'rgba(255,255,255,0.6)' }}>
+        <blockquote key={key++} style={{ borderLeft: '2px solid #B09A6D', paddingLeft: 10, fontStyle: 'italic', marginBottom: 10, fontFamily: 'inherit', fontSize: 'inherit', lineHeight: 'inherit', color: 'rgba(255,255,255,0.6)' }}>
           {inlineFormat(line.replace(/^>\s?/, ''))}
         </blockquote>
       );
