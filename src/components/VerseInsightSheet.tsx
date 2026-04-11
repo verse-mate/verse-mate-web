@@ -182,9 +182,9 @@ export default function VerseInsightSheet({
           </p>
         )}
 
-        {/* Analysis panel — scrollable, grey box takes most of the space */}
-        <div className="flex-1 overflow-y-auto px-4 mt-3 pb-2" style={{ minHeight: 0 }}>
-          <div className="rounded-xl bg-dark-raised border border-dark p-4" style={{ minHeight: '100%' }}>
+        {/* Analysis panel — scrollable, grey box stretches to fill all space above buttons */}
+        <div className="flex-1 overflow-y-auto px-4 mt-3 pb-2 flex flex-col" style={{ minHeight: 0 }}>
+          <div className="rounded-xl bg-dark-raised border border-dark p-4 flex-1">
             {insight ? (
               <MarkdownBlock text={stripDuplicateVerse(insight.historicalContext)} />
             ) : (
