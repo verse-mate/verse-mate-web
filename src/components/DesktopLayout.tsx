@@ -19,7 +19,6 @@ import {
   HelpCircle,
   LogOut,
   X,
-  BookOpen,
 } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import BookSelector from '@/components/BookSelector';
@@ -69,7 +68,7 @@ export default function DesktopLayout() {
   const [showBookSelector, setShowBookSelector] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  // Sidebar starts expanded showing full book names
+  // Sidebar always stays at expanded width; expandedBook controls chapter grid visibility
   const [expandedBook, setExpandedBook] = useState<string | null>(state.book);
 
   // Right panel: only one menu page at a time, back always returns to commentary
@@ -103,14 +102,18 @@ export default function DesktopLayout() {
     setVisibleVerse(1);
   }, [state.book, state.chapter]);
 
-  // Listen for visible verse events from Bible panel
+  // Listen for visible verse events from Bible panel — debounced for smooth scrolling
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>();
   useEffect(() => {
     const handler = (e: Event) => {
       const v = (e as CustomEvent).detail;
-      if (typeof v === 'number' && v > 0) setVisibleVerse(v);
+      if (typeof v === 'number' && v > 0) {
+        clearTimeout(debounceRef.current);
+        debounceRef.current = setTimeout(() => setVisibleVerse(v), 150);
+      }
     };
     window.addEventListener('versemate:visible-verse', handler);
-    return () => window.removeEventListener('versemate:visible-verse', handler);
+    return () => { window.removeEventListener('versemate:visible-verse', handler); clearTimeout(debounceRef.current); };
   }, []);
 
   // Sync-scroll: when visible verse changes and tab is byline, scroll the commentary panel
@@ -118,7 +121,7 @@ export default function DesktopLayout() {
     if (tab !== 'byline' || !commentaryScrollRef.current) return;
     const target = commentaryScrollRef.current.querySelector(`[data-byline-verse="${visibleVerse}"]`);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [visibleVerse, tab]);
 
@@ -195,7 +198,7 @@ export default function DesktopLayout() {
       {sidebarOpen && (
         <div
           style={{
-            width: expandedBook ? SIDEBAR_EXPANDED : SIDEBAR_COLLAPSED,
+            width: SIDEBAR_EXPANDED,
             flexShrink: 0,
             height: '100%',
             backgroundColor: '#111111',
@@ -203,12 +206,11 @@ export default function DesktopLayout() {
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
-            transition: 'width 0.2s ease',
           }}
         >
-          {/* Sidebar header */}
-          <div style={{ height: 56, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, borderBottom: '1px solid #2a2a2a' }}>
-            <BookOpen size={20} color="#B09A6D" strokeWidth={1.5} />
+          {/* Sidebar header — "Bible" label */}
+          <div style={{ height: 56, display: 'flex', alignItems: 'center', padding: '0 16px', flexShrink: 0, borderBottom: '1px solid #2a2a2a' }}>
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, fontWeight: 600, color: '#B09A6D', letterSpacing: '0.5px' }}>Bible</span>
           </div>
           {/* Book list */}
           <div style={{ flex: 1, overflowY: 'auto', padding: '4px 0' }} className="mini-sidebar-scroll">
@@ -223,7 +225,7 @@ export default function DesktopLayout() {
                 dispatch({ type: 'SET_PASSAGE', book: b.name, chapter: ch, bookId: b.bookId });
                 navigate('/read');
               }}
-              isExpanded={!!expandedBook}
+              isExpanded={true}
             />
             <SidebarSection
               label="NT"
@@ -236,7 +238,7 @@ export default function DesktopLayout() {
                 dispatch({ type: 'SET_PASSAGE', book: b.name, chapter: ch, bookId: b.bookId });
                 navigate('/read');
               }}
-              isExpanded={!!expandedBook}
+              isExpanded={true}
             />
           </div>
         </div>
@@ -255,20 +257,14 @@ export default function DesktopLayout() {
             justifyContent: 'space-between',
             padding: '0 16px',
             borderBottom: '1px solid #2a2a2a',
+            position: 'relative',
           }}
         >
-          {/* Left: "Bible" / book icon toggle + Book/chapter dropdown */}
+          {/* Left: Book/chapter dropdown */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
             <button
-              onClick={() => setSidebarOpen(v => !v)}
-              aria-label={sidebarOpen ? 'Hide book sidebar' : 'Show book sidebar'}
-              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4px 10px', background: 'none', border: 'none', cursor: 'pointer', borderRadius: 8, fontFamily: 'Roboto, sans-serif', fontSize: 14, fontWeight: 500, color: '#B09A6D', gap: 4 }}
-            >
-              {sidebarOpen ? 'Bible' : <BookOpen size={18} color="#B09A6D" strokeWidth={1.5} />}
-            </button>
-            <button
               onClick={() => setShowBookSelector(true)}
-              style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#FFFFFF', background: 'none', border: 'none', cursor: 'pointer', padding: '0 8px 0 4px', minHeight: 44 }}
+              style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#FFFFFF', background: 'none', border: 'none', cursor: 'pointer', padding: '0 8px', minHeight: 44 }}
             >
               <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: '#FFFFFF' }}>
                 {state.book} {state.chapter}
@@ -277,9 +273,12 @@ export default function DesktopLayout() {
             </button>
           </div>
 
-          {/* Center/Right: commentary tabs in header when showing insight, otherwise logo */}
-          {rightPanelView === 'commentary' ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          {/* Center: VerseMate logo */}
+          <img src="/versemate-logo-white.png" alt="VerseMate" style={{ height: 20, objectFit: 'contain', position: 'absolute', left: '50%', transform: 'translateX(-50%)' }} />
+
+          {/* Right: commentary tabs (when in commentary view) + menu */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            {rightPanelView === 'commentary' && (
               <div style={{ display: 'flex', backgroundColor: '#323232', borderRadius: 100, padding: '3px' }}>
                 {tabs.map(t => (
                   <button
@@ -302,26 +301,15 @@ export default function DesktopLayout() {
                   </button>
                 ))}
               </div>
-              <button
-                onClick={() => setShowMenu(!showMenu)}
-                aria-label="Open menu"
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, background: 'none', border: 'none', cursor: 'pointer' }}
-              >
-                <Menu size={22} color="#FFFFFF" strokeWidth={2} />
-              </button>
-            </div>
-          ) : (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <img src="/versemate-logo-white.png" alt="VerseMate" style={{ height: 20, objectFit: 'contain' }} />
-              <button
-                onClick={() => setShowMenu(!showMenu)}
-                aria-label="Open menu"
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, background: 'none', border: 'none', cursor: 'pointer' }}
-              >
-                <Menu size={22} color="#FFFFFF" strokeWidth={2} />
-              </button>
-            </div>
-          )}
+            )}
+            <button
+              onClick={() => setShowMenu(!showMenu)}
+              aria-label="Open menu"
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, background: 'none', border: 'none', cursor: 'pointer' }}
+            >
+              <Menu size={22} color="#FFFFFF" strokeWidth={2} />
+            </button>
+          </div>
         </header>
 
         {/* ─── SPLIT BODY ─── */}

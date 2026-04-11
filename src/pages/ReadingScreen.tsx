@@ -34,6 +34,7 @@ export default function ReadingScreen() {
   useEffect(() => {
     fetchChapter(state.book, state.chapter, state.version).then(setChapter);
     if (state.bookId) trackRecentBook(state.bookId);
+    scrollRef.current?.scrollTo(0, 0); // Always scroll to top on book/chapter change
   }, [state.book, state.chapter, state.version, state.bookId]);
 
   useEffect(() => {
