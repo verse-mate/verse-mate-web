@@ -15,12 +15,18 @@ interface Props {
 }
 
 /**
- * VerseInsightSheet — bottom-sheet overlay that slides up from the bottom of
- * the Reading screen and shows per-verse insight. Not full-screen — the user
- * should still see the top of the Reading chrome peek through above.
- *
- * Figma refs: Verse Insight 1 (6040:16024), Verse Insight 2 (6040:16069).
+ * Strip the first heading + first blockquote from the API markdown
+ * since we already show the verse reference and text at the top.
  */
+function stripDuplicateVerse(text: string): string {
+  let result = text;
+  // Remove first heading line (e.g. "Genesis 1:6" or "# Genesis 1:6")
+  result = result.replace(/^#*\s*\S+\s+\d+:\d+\s*\n?/, '');
+  // Remove first blockquote block (the verse text)
+  result = result.replace(/^>\s*.*(?:\n>\s*.*)*\n?/, '').trimStart();
+  return result;
+}
+
 export default function VerseInsightSheet({
   book,
   chapter,
@@ -65,7 +71,6 @@ export default function VerseInsightSheet({
       if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(quoteText);
       } else {
-        // Fallback for older/iframe-restricted environments
         const ta = document.createElement('textarea');
         ta.value = quoteText;
         ta.style.position = 'fixed';
@@ -91,11 +96,9 @@ export default function VerseInsightSheet({
           text: quoteText,
         });
       } else {
-        // No Web Share API → fall back to copy
         await handleCopy();
       }
     } catch (err) {
-      // User-cancelled share is an AbortError, don't show as error
       if ((err as Error)?.name !== 'AbortError') {
         setActionError('Share failed');
       }
@@ -132,7 +135,7 @@ export default function VerseInsightSheet({
         className="absolute inset-0 z-40 bg-black/60 animate-fade-in"
         onClick={onClose}
       />
-      {/* Sheet — slides up from bottom, takes ~75% of frame; narrower on desktop */}
+      {/* Sheet — slides up from bottom; narrower on desktop */}
       <div
         className="verse-insight-sheet absolute inset-x-0 bottom-0 z-50 bg-dark-surface text-dark-fg rounded-t-[24px] border-t border-dark shadow-[0_-10px_30px_rgba(0,0,0,0.5)] animate-slide-up flex flex-col"
         style={{ maxHeight: '90%' }}
@@ -140,68 +143,65 @@ export default function VerseInsightSheet({
         aria-label="Verse Insight"
       >
         {/* Drag handle */}
-        <div className="shrink-0 pt-3 flex justify-center">
+        <div className="shrink-0 pt-2 flex justify-center">
           <div className="w-10 h-1 rounded-full bg-dark-muted/40" />
         </div>
 
         {/* Title */}
-        <h2 className="text-center text-[15px] text-gold font-medium mt-3">
+        <h2 className="text-center text-[14px] text-gold font-medium mt-2">
           Verse Insight
         </h2>
 
-        {/* Verse stepper */}
-        <div className="flex items-center justify-between px-6 mt-3">
+        {/* Verse stepper — compact */}
+        <div className="flex items-center justify-between px-5 mt-2">
           <button
             onClick={() => step(-1)}
             disabled={currentVerse <= 1}
             aria-label="Previous verse"
-            className="w-10 h-10 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30"
+            className="w-8 h-8 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30"
           >
-            <ChevronLeft size={18} className="text-dark-fg" />
+            <ChevronLeft size={16} className="text-dark-fg" />
           </button>
-          <div className="text-[16px] font-medium text-dark-fg">
+          <div className="text-[15px] font-medium text-dark-fg">
             {book} {chapter}:{currentVerse}
           </div>
           <button
             onClick={() => step(1)}
             disabled={currentVerse >= maxVerse}
             aria-label="Next verse"
-            className="w-10 h-10 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30"
+            className="w-8 h-8 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30"
           >
-            <ChevronRight size={18} className="text-dark-fg" />
+            <ChevronRight size={16} className="text-dark-fg" />
           </button>
         </div>
 
-        {/* Quoted verse */}
+        {/* Quoted verse — single source of truth, no duplicate below */}
         {verseText && (
-          <p className="px-6 mt-3 text-center text-[13px] italic text-dark-muted leading-snug">
+          <p className="px-5 mt-2 text-center text-[12px] italic text-dark-muted leading-snug">
             "{verseText}"
           </p>
         )}
 
-        {/* Analysis panel — scrollable */}
-        <div className="flex-1 overflow-y-auto px-5 mt-4 pb-3 min-h-0">
-          <h3 className="text-[13px] uppercase tracking-wide text-dark-muted/70 mb-2">
-            Analysis
-          </h3>
-          <div className="rounded-2xl bg-dark-raised border border-dark p-4">
+        {/* Analysis panel — scrollable, takes most of the space */}
+        <div className="flex-1 overflow-y-auto px-4 mt-3 pb-2 min-h-0">
+          <div className="rounded-xl bg-dark-raised border border-dark p-3">
             {insight ? (
-              <MarkdownBlock text={insight.historicalContext} />
+              <MarkdownBlock text={stripDuplicateVerse(insight.historicalContext)} />
             ) : (
               <p className="text-[13px] text-dark-muted text-center py-4">
                 No insight available for this verse.
               </p>
             )}
             {insight && insight.crossReferences.length > 0 && (
-              <div className="mt-4 pt-4 border-t border-dark">
-                <p className="text-[11px] uppercase tracking-wide text-dark-muted/70 mb-2">
+              <div className="mt-3 pt-3 border-t border-dark">
+                <p className="text-[10px] uppercase tracking-wide text-dark-muted/70 mb-1.5">
                   Cross references
                 </p>
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1">
                   {insight.crossReferences.map(ref => (
                     <span
                       key={ref}
-                      className="text-[11px] text-dark-fg/90 bg-dark-surface rounded px-2 py-0.5 border border-dark"
+                      className="text-[10px] text-dark-fg/90 bg-dark-surface rounded px-1.5 py-0.5 border border-dark"
                     >
                       {ref}
                     </span>
@@ -212,43 +212,37 @@ export default function VerseInsightSheet({
           </div>
         </div>
 
-        {/* Compact action row — all buttons in one line */}
-        <div className="shrink-0 px-5 pb-2">
-          <div className="grid grid-cols-3 gap-1.5">
-            <button
-              onClick={handleCopy}
-              className="h-9 rounded-lg bg-dark-raised border border-dark flex items-center justify-center gap-1.5"
-            >
-              {copiedAt ? <Check size={14} className="text-gold" strokeWidth={2} /> : <Copy size={14} className="text-dark-fg" strokeWidth={1.5} />}
-              <span className="text-[12px]" style={{ color: copiedAt ? '#B09A6D' : '#ccc' }}>{copiedAt ? 'Copied' : 'Copy'}</span>
-            </button>
-            <button
-              onClick={handleShare}
-              className="h-9 rounded-lg bg-dark-raised border border-dark flex items-center justify-center gap-1.5"
-            >
-              <ShareIcon size={14} color="#ccc" />
-              <span className="text-[12px] text-dark-fg">Share</span>
-            </button>
-            <button
-              onClick={handleSaveHighlight}
-              className="h-9 rounded-lg bg-dark-raised border border-dark flex items-center justify-center gap-1.5"
-            >
-              {savedAt ? <Check size={14} className="text-gold" strokeWidth={2} /> : <Bookmark size={14} className="text-dark-fg" strokeWidth={1.5} />}
-              <span className="text-[12px]" style={{ color: savedAt ? '#B09A6D' : '#ccc' }}>{savedAt ? 'Saved' : 'Save'}</span>
-            </button>
-          </div>
-          {actionError && <p className="text-[11px] text-red-400 text-center mt-1">{actionError}</p>}
-        </div>
-
-        {/* Close button — compact */}
-        <div className="shrink-0 px-5 pb-4 safe-bottom">
+        {/* Compact action row + close — all in one tight footer */}
+        <div className="shrink-0 px-4 pb-3 safe-bottom flex items-center gap-1.5">
+          <button
+            onClick={handleCopy}
+            className="h-8 flex-1 rounded-lg bg-dark-raised border border-dark flex items-center justify-center gap-1"
+          >
+            {copiedAt ? <Check size={12} className="text-gold" strokeWidth={2} /> : <Copy size={12} className="text-dark-fg" strokeWidth={1.5} />}
+            <span className="text-[11px]" style={{ color: copiedAt ? '#B09A6D' : '#aaa' }}>{copiedAt ? 'Copied' : 'Copy'}</span>
+          </button>
+          <button
+            onClick={handleShare}
+            className="h-8 flex-1 rounded-lg bg-dark-raised border border-dark flex items-center justify-center gap-1"
+          >
+            <ShareIcon size={12} color="#aaa" />
+            <span className="text-[11px] text-[#aaa]">Share</span>
+          </button>
+          <button
+            onClick={handleSaveHighlight}
+            className="h-8 flex-1 rounded-lg bg-dark-raised border border-dark flex items-center justify-center gap-1"
+          >
+            {savedAt ? <Check size={12} className="text-gold" strokeWidth={2} /> : <Bookmark size={12} className="text-dark-fg" strokeWidth={1.5} />}
+            <span className="text-[11px]" style={{ color: savedAt ? '#B09A6D' : '#aaa' }}>{savedAt ? 'Saved' : 'Save'}</span>
+          </button>
           <button
             onClick={onClose}
-            className="w-full h-9 rounded-lg bg-gold text-[#1A1A1A] font-medium text-[13px]"
+            className="h-8 px-4 rounded-lg bg-gold text-[#1A1A1A] font-medium text-[11px]"
           >
             Close
           </button>
         </div>
+        {actionError && <p className="text-[10px] text-red-400 text-center pb-1">{actionError}</p>}
       </div>
     </>
   );
