@@ -92,38 +92,13 @@ export default function DesktopLayout() {
   const [expanded, setExpanded] = useState<number | null>(-2); // -2 = all expanded by default
   const commentaryScrollRef = useRef<HTMLDivElement>(null);
 
-  // Track visible verse from Bible panel for sync-scrolling
-  const [visibleVerse, setVisibleVerse] = useState<number>(1);
-
   useEffect(() => {
     fetchCommentary(state.book, state.chapter).then(setCommentaries);
     setExpanded(-2); // Reset to all-expanded on chapter change
     commentaryScrollRef.current?.scrollTo(0, 0); // Scroll commentary to top
-    setVisibleVerse(1);
   }, [state.book, state.chapter]);
 
-  // Listen for visible verse events from Bible panel — debounced for smooth scrolling
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>();
-  useEffect(() => {
-    const handler = (e: Event) => {
-      const v = (e as CustomEvent).detail;
-      if (typeof v === 'number' && v > 0) {
-        clearTimeout(debounceRef.current);
-        debounceRef.current = setTimeout(() => setVisibleVerse(v), 150);
-      }
-    };
-    window.addEventListener('versemate:visible-verse', handler);
-    return () => { window.removeEventListener('versemate:visible-verse', handler); clearTimeout(debounceRef.current); };
-  }, []);
-
-  // Sync-scroll: when visible verse changes and tab is byline, scroll the commentary panel
-  useEffect(() => {
-    if (tab !== 'byline' || !commentaryScrollRef.current) return;
-    const target = commentaryScrollRef.current.querySelector(`[data-byline-verse="${visibleVerse}"]`);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }, [visibleVerse, tab]);
+  // Auto-scroll removed — users scroll the Insights panel independently
 
   // On desktop, redirect commentary route back to /read since we show it inline
   useEffect(() => {
@@ -433,8 +408,8 @@ export default function DesktopLayout() {
           <div style={{
             position: 'fixed',
             top: '10vh',
-            /* Center over Bible (left) panel: offset by sidebar width + half of left panel */
-            left: `${(sidebarOpen ? (expandedBook ? SIDEBAR_EXPANDED : SIDEBAR_COLLAPSED) : 0) + (contentRef.current ? contentRef.current.getBoundingClientRect().width * leftPct / 100 / 2 : 200)}px`,
+            /* Center over Bible (left) panel */
+            left: `${(sidebarOpen ? SIDEBAR_EXPANDED : 0) + (contentRef.current ? contentRef.current.getBoundingClientRect().width * leftPct / 100 / 2 : 300)}px`,
             transform: 'translateX(-50%)',
             width: 420,
             height: '80vh',
