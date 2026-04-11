@@ -63,11 +63,12 @@ export default function NotesScreen() {
   );
 
   const openChapter = (book: string, chapter: number, bookId: number) => {
-    dispatch({ type: 'SET_PASSAGE', book, chapter, bookId });
     if (inRightPanel) {
+      // Don't change Bible location — Notes are independent
       setLocalBook(book);
       setLocalChapter(chapter);
     } else {
+      dispatch({ type: 'SET_PASSAGE', book, chapter, bookId });
       navigate(`/notes/${encodeURIComponent(book)}/${chapter}`);
     }
   };
