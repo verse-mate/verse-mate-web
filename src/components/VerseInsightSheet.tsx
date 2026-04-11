@@ -138,53 +138,51 @@ export default function VerseInsightSheet({
       {/* Sheet — slides up from bottom; narrower on desktop */}
       <div
         className="verse-insight-sheet absolute inset-x-0 bottom-0 z-50 bg-dark-surface text-dark-fg rounded-t-[24px] border-t border-dark shadow-[0_-10px_30px_rgba(0,0,0,0.5)] animate-slide-up flex flex-col"
-        style={{ maxHeight: '90%' }}
+        style={{ maxHeight: '95%' }}
         role="dialog"
         aria-label="Verse Insight"
       >
-        {/* Drag handle */}
-        <div className="shrink-0 pt-2 flex justify-center">
-          <div className="w-10 h-1 rounded-full bg-dark-muted/40" />
+        {/* Header row: drag handle + title + stepper all compact */}
+        <div className="shrink-0 pt-1.5 flex justify-center">
+          <div className="w-8 h-0.5 rounded-full bg-dark-muted/40" />
         </div>
 
-        {/* Title */}
-        <h2 className="text-center text-[14px] text-gold font-medium mt-2">
-          Verse Insight
-        </h2>
-
-        {/* Verse stepper — compact */}
-        <div className="flex items-center justify-between px-5 mt-2">
+        {/* Verse stepper with title inline */}
+        <div className="flex items-center justify-between px-4 mt-1">
           <button
             onClick={() => step(-1)}
             disabled={currentVerse <= 1}
             aria-label="Previous verse"
-            className="w-8 h-8 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30"
+            className="w-7 h-7 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30"
           >
-            <ChevronLeft size={16} className="text-dark-fg" />
+            <ChevronLeft size={14} className="text-dark-fg" />
           </button>
-          <div className="text-[15px] font-medium text-dark-fg">
-            {book} {chapter}:{currentVerse}
+          <div className="text-center">
+            <span className="text-[11px] text-gold font-medium">Verse Insight</span>
+            <div className="text-[14px] font-medium text-dark-fg leading-tight">
+              {book} {chapter}:{currentVerse}
+            </div>
           </div>
           <button
             onClick={() => step(1)}
             disabled={currentVerse >= maxVerse}
             aria-label="Next verse"
-            className="w-8 h-8 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30"
+            className="w-7 h-7 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30"
           >
-            <ChevronRight size={16} className="text-dark-fg" />
+            <ChevronRight size={14} className="text-dark-fg" />
           </button>
         </div>
 
-        {/* Quoted verse — single source of truth, no duplicate below */}
+        {/* Quoted verse — compact */}
         {verseText && (
-          <p className="px-5 mt-2 text-center text-[12px] italic text-dark-muted leading-snug">
+          <p className="px-4 mt-1 text-center text-[11px] italic text-dark-muted leading-snug">
             "{verseText}"
           </p>
         )}
 
-        {/* Analysis panel — scrollable, takes most of the space */}
-        <div className="flex-1 overflow-y-auto px-4 mt-3 pb-2 min-h-0">
-          <div className="rounded-xl bg-dark-raised border border-dark p-3">
+        {/* Analysis panel — scrollable, maximized space */}
+        <div className="flex-1 overflow-y-auto px-3 mt-1.5 pb-1 min-h-0">
+          <div className="rounded-lg bg-dark-raised border border-dark p-3">
             {insight ? (
               <MarkdownBlock text={stripDuplicateVerse(insight.historicalContext)} />
             ) : (
@@ -212,8 +210,8 @@ export default function VerseInsightSheet({
           </div>
         </div>
 
-        {/* Compact action row + close — all in one tight footer */}
-        <div className="shrink-0 px-4 pb-3 safe-bottom flex items-center gap-1.5">
+        {/* Compact action row + close */}
+        <div className="shrink-0 px-3 pb-2 safe-bottom flex items-center gap-1">
           <button
             onClick={handleCopy}
             className="h-8 flex-1 rounded-lg bg-dark-raised border border-dark flex items-center justify-center gap-1"
