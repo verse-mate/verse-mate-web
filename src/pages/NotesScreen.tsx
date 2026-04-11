@@ -6,10 +6,12 @@ import { Note } from '@/services/types';
 import EditNoteSheet from '@/components/EditNoteSheet';
 import NoteOptionsSheet from '@/components/NoteOptionsSheet';
 import ScreenHeader from '@/components/ScreenHeader';
+import { useRightPanel } from '@/contexts/RightPanelContext';
 
 export default function NotesScreen() {
   const { state, dispatch } = useApp();
   const navigate = useNavigate();
+  const rightPanel = useRightPanel();
   const { book: bookParam, chapter: chapterParam } = useParams<{
     book?: string;
     chapter?: string;
@@ -17,9 +19,20 @@ export default function NotesScreen() {
   const [editingNote, setEditingNote] = useState<Note | null>(null);
   const [optionsNote, setOptionsNote] = useState<Note | null>(null);
 
-  const isChapterView = !!(bookParam && chapterParam);
-  const activeBook = bookParam ? decodeURIComponent(bookParam) : '';
-  const activeChapter = chapterParam ? parseInt(chapterParam, 10) : 0;
+  // When in right panel, manage sub-navigation with local state instead of URL
+  const [localBook, setLocalBook] = useState<string | null>(null);
+  const [localChapter, setLocalChapter] = useState<number | null>(null);
+  const inRightPanel = !!rightPanel?.isRightPanel;
+
+  const isChapterView = inRightPanel
+    ? !!(localBook && localChapter)
+    : !!(bookParam && chapterParam);
+  const activeBook = inRightPanel
+    ? (localBook || '')
+    : (bookParam ? decodeURIComponent(bookParam) : '');
+  const activeChapter = inRightPanel
+    ? (localChapter || 0)
+    : (chapterParam ? parseInt(chapterParam, 10) : 0);
 
   const groups = useMemo(() => {
     const map = new Map<
@@ -51,7 +64,29 @@ export default function NotesScreen() {
 
   const openChapter = (book: string, chapter: number, bookId: number) => {
     dispatch({ type: 'SET_PASSAGE', book, chapter, bookId });
-    navigate(`/notes/${encodeURIComponent(book)}/${chapter}`);
+    if (inRightPanel) {
+      setLocalBook(book);
+      setLocalChapter(chapter);
+    } else {
+      navigate(`/notes/${encodeURIComponent(book)}/${chapter}`);
+    }
+  };
+
+  const handleListBack = () => {
+    if (inRightPanel) {
+      rightPanel.goBack();
+    } else {
+      navigate('/menu');
+    }
+  };
+
+  const handleChapterBack = () => {
+    if (inRightPanel) {
+      setLocalBook(null);
+      setLocalChapter(null);
+    } else {
+      navigate('/notes');
+    }
   };
 
   const listContainerStyle: React.CSSProperties = {
@@ -81,7 +116,7 @@ export default function NotesScreen() {
   if (!isChapterView) {
     return (
       <div className="flex flex-col h-full relative" style={{ backgroundColor: '#1B1B1B' }}>
-        <ScreenHeader title="Notes" onBack={() => navigate('/menu')} />
+        <ScreenHeader title="Notes" onBack={handleListBack} />
 
         <div style={listContainerStyle}>
           {groups.length === 0 ? (
@@ -121,7 +156,7 @@ export default function NotesScreen() {
     <div className="flex flex-col h-full relative" style={{ backgroundColor: '#1B1B1B' }}>
       <ScreenHeader
         title={`${activeBook} ${activeChapter}`}
-        onBack={() => navigate('/notes')}
+        onBack={handleChapterBack}
       />
 
       <div style={listContainerStyle}>

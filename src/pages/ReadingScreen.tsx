@@ -315,7 +315,15 @@ export default function ReadingScreen() {
                           onMouseDown: () => handlePressStart(verse.number),
                           onMouseUp: () => handlePressEnd(verse.number),
                           onMouseLeave: () => { if (pressTimer) { clearTimeout(pressTimer); setPressTimer(null); } },
-                        } : {})}
+                        } : {
+                          onClick: () => {
+                            // On desktop, open verse insight only if no text is selected
+                            const sel = window.getSelection();
+                            if (!sel || sel.isCollapsed || !sel.toString().trim()) {
+                              openVerseInsight(verse.number);
+                            }
+                          },
+                        })}
                         className={`inline transition-colors ${isDesktop ? 'select-text cursor-text' : 'cursor-pointer'} ${
                           hl ? highlightColorClass[hl.color] : ''
                         } ${autoClass ? `${autoClass} rounded px-0.5` : ''} ${
