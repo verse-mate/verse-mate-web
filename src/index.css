@@ -75,23 +75,23 @@
     --hl-brown: rgb(121 85 72 / 30%);
 
     /* Auto-highlight colors — 20% bg + underline */
-    --ahl-yellow-bg: rgb(255 255 0 / 20%);
+    --ahl-yellow-bg: rgb(255 255 0 / 30%);
     --ahl-yellow-border: rgb(255 255 0 / 50%);
-    --ahl-blue-bg: rgb(173 216 230 / 20%);
+    --ahl-blue-bg: rgb(173 216 230 / 30%);
     --ahl-blue-border: rgb(173 216 230 / 50%);
-    --ahl-green-bg: rgb(144 238 144 / 20%);
+    --ahl-green-bg: rgb(144 238 144 / 30%);
     --ahl-green-border: rgb(144 238 144 / 50%);
-    --ahl-orange-bg: rgb(255 165 0 / 20%);
+    --ahl-orange-bg: rgb(255 165 0 / 30%);
     --ahl-orange-border: rgb(255 165 0 / 50%);
-    --ahl-pink-bg: rgb(255 192 203 / 20%);
+    --ahl-pink-bg: rgb(255 192 203 / 30%);
     --ahl-pink-border: rgb(255 192 203 / 50%);
-    --ahl-purple-bg: rgb(221 160 221 / 20%);
+    --ahl-purple-bg: rgb(221 160 221 / 30%);
     --ahl-purple-border: rgb(221 160 221 / 50%);
-    --ahl-red-bg: rgb(244 67 54 / 20%);
+    --ahl-red-bg: rgb(244 67 54 / 30%);
     --ahl-red-border: rgb(244 67 54 / 50%);
-    --ahl-teal-bg: rgb(0 150 136 / 20%);
+    --ahl-teal-bg: rgb(0 150 136 / 30%);
     --ahl-teal-border: rgb(0 150 136 / 50%);
-    --ahl-brown-bg: rgb(121 85 72 / 20%);
+    --ahl-brown-bg: rgb(121 85 72 / 30%);
     --ahl-brown-border: rgb(121 85 72 / 50%);
 
     /* Desktop chrome */

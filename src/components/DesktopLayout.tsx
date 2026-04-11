@@ -20,8 +20,6 @@ import {
   LogOut,
   X,
   BookOpen,
-  PanelLeftClose,
-  PanelLeftOpen,
 } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import BookSelector from '@/components/BookSelector';
@@ -90,14 +88,39 @@ export default function DesktopLayout() {
   const contentRef = useRef<HTMLDivElement>(null);
 
   // Right panel commentary state
-  const [tab, setTab] = useState<Tab>('summary');
+  const [tab, setTab] = useState<Tab>('byline');
   const [commentaries, setCommentaries] = useState<Commentary[]>([]);
   const [expanded, setExpanded] = useState<number | null>(-2); // -2 = all expanded by default
+  const commentaryScrollRef = useRef<HTMLDivElement>(null);
+
+  // Track visible verse from Bible panel for sync-scrolling
+  const [visibleVerse, setVisibleVerse] = useState<number>(1);
 
   useEffect(() => {
     fetchCommentary(state.book, state.chapter).then(setCommentaries);
     setExpanded(-2); // Reset to all-expanded on chapter change
+    commentaryScrollRef.current?.scrollTo(0, 0); // Scroll commentary to top
+    setVisibleVerse(1);
   }, [state.book, state.chapter]);
+
+  // Listen for visible verse events from Bible panel
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const v = (e as CustomEvent).detail;
+      if (typeof v === 'number' && v > 0) setVisibleVerse(v);
+    };
+    window.addEventListener('versemate:visible-verse', handler);
+    return () => window.removeEventListener('versemate:visible-verse', handler);
+  }, []);
+
+  // Sync-scroll: when visible verse changes and tab is byline, scroll the commentary panel
+  useEffect(() => {
+    if (tab !== 'byline' || !commentaryScrollRef.current) return;
+    const target = commentaryScrollRef.current.querySelector(`[data-byline-verse="${visibleVerse}"]`);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }, [visibleVerse, tab]);
 
   // On desktop, redirect commentary route back to /read since we show it inline
   useEffect(() => {
@@ -234,14 +257,14 @@ export default function DesktopLayout() {
             borderBottom: '1px solid #2a2a2a',
           }}
         >
-          {/* Left: sidebar toggle + Book/chapter dropdown */}
+          {/* Left: "Bible" / book icon toggle + Book/chapter dropdown */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
             <button
               onClick={() => setSidebarOpen(v => !v)}
               aria-label={sidebarOpen ? 'Hide book sidebar' : 'Show book sidebar'}
-              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 36, height: 36, background: 'none', border: 'none', cursor: 'pointer', borderRadius: 8 }}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4px 10px', background: 'none', border: 'none', cursor: 'pointer', borderRadius: 8, fontFamily: 'Roboto, sans-serif', fontSize: 14, fontWeight: 500, color: '#B09A6D', gap: 4 }}
             >
-              {sidebarOpen ? <PanelLeftClose size={18} color="#888" strokeWidth={1.5} /> : <PanelLeftOpen size={18} color="#888" strokeWidth={1.5} />}
+              {sidebarOpen ? 'Bible' : <BookOpen size={18} color="#B09A6D" strokeWidth={1.5} />}
             </button>
             <button
               onClick={() => setShowBookSelector(true)}
@@ -354,7 +377,7 @@ export default function DesktopLayout() {
             {rightPanelView === 'commentary' ? (
               <>
                 {/* Commentary body — tabs now in top header */}
-                <div style={{ flex: 1, overflowY: 'auto', backgroundColor: '#000000', color: '#FFFFFF', padding: '16px 16px 32px', fontFamily: "'Roboto Serif', Georgia, serif", fontWeight: 300, fontSize: `${state.settings.fontSize}px`, lineHeight: '32px' }}>
+                <div ref={commentaryScrollRef} style={{ flex: 1, overflowY: 'auto', backgroundColor: '#000000', color: '#FFFFFF', padding: '16px 16px 32px', fontFamily: "'Roboto Serif', Georgia, serif", fontWeight: 300, fontSize: `${state.settings.fontSize}px`, lineHeight: '32px' }}>
                   <CommentaryPanel
                     tab={tab}
                     commentaries={commentaries}
@@ -422,7 +445,8 @@ export default function DesktopLayout() {
           <div style={{
             position: 'fixed',
             top: '10vh',
-            left: '50%',
+            /* Center over Bible (left) panel: offset by sidebar width + half of left panel */
+            left: `${(sidebarOpen ? (expandedBook ? SIDEBAR_EXPANDED : SIDEBAR_COLLAPSED) : 0) + (contentRef.current ? contentRef.current.getBoundingClientRect().width * leftPct / 100 / 2 : 200)}px`,
             transform: 'translateX(-50%)',
             width: 420,
             height: '80vh',
@@ -620,7 +644,7 @@ function CommentaryPanel({
           {byLineItems.map(c => {
             const isOpen = allExpanded || expanded === c.verse;
             return (
-              <div key={c.verse} style={{ borderBottom: '1px solid #323232' }}>
+              <div key={c.verse} data-byline-verse={c.verse} style={{ borderBottom: '1px solid #323232' }}>
                 <button
                   onClick={() => setExpanded(isOpen ? null : c.verse)}
                   style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '14px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer' }}

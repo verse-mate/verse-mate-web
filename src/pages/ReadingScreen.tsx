@@ -125,6 +125,25 @@ export default function ReadingScreen() {
     touchStartRef.current = null;
   };
 
+  // Sync-scroll: observe which verse is in view and dispatch event for DesktopLayout
+  useEffect(() => {
+    if (!isDesktop || !scrollRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const v = parseInt((entry.target as HTMLElement).dataset.verse || '0', 10);
+            if (v > 0) window.dispatchEvent(new CustomEvent('versemate:visible-verse', { detail: v }));
+          }
+        }
+      },
+      { root: scrollRef.current, threshold: 0.5 }
+    );
+    const spans = scrollRef.current.querySelectorAll('span[data-verse]');
+    spans.forEach(s => observer.observe(s));
+    return () => observer.disconnect();
+  }, [isDesktop, chapter]);
+
   const subtitles = chapter?.subtitles || [];
   const verseCount = chapter?.verses.length || 0;
 

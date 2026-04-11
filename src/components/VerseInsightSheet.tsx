@@ -135,7 +135,7 @@ export default function VerseInsightSheet({
       {/* Sheet — slides up from bottom, takes ~75% of frame; narrower on desktop */}
       <div
         className="verse-insight-sheet absolute inset-x-0 bottom-0 z-50 bg-dark-surface text-dark-fg rounded-t-[24px] border-t border-dark shadow-[0_-10px_30px_rgba(0,0,0,0.5)] animate-slide-up flex flex-col"
-        style={{ maxHeight: '80%' }}
+        style={{ maxHeight: '90%' }}
         role="dialog"
         aria-label="Verse Insight"
       >
