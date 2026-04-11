@@ -186,24 +186,45 @@
   .ahl-brown { background-color: var(--ahl-brown-bg); border-bottom: 2px solid var(--ahl-brown-border); cursor: pointer; }
 }
 
-/* ─── Phone Frame Shell ─── */
+/* ─── Desktop: hide per-screen headers inside the split panels ─── */
+@media (min-width: 1024px) {
+  /* Reading screen header is replaced by DesktopLayout's shared header */
+  .reading-screen-header {
+    display: none !important;
+  }
+  /* Commentary screen header is also replaced */
+  .commentary-screen-header {
+    display: none !important;
+  }
+}
+
+/* ─── Desktop Menu Sidebar ─── */
+@media (min-width: 1024px) {
+  .menu-container {
+    /* When routed directly on desktop, constrain to a sidebar-like width */
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* ─── Responsive Shell ─── */
 #root {
   display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 100dvh;
 }
 
-@media (max-width: 500px) {
+/* Mobile/Tablet: full viewport, column layout */
+@media (max-width: 1023px) {
   #root {
-    align-items: stretch;
+    flex-direction: column;
   }
-  .phone-frame {
-    max-width: 100% !important;
-    width: 100% !important;
-    min-height: 100dvh !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
+}
+
+/* Desktop: centered content with max-width */
+@media (min-width: 1024px) {
+  #root {
+    justify-content: center;
+    background-color: #1B1B1B;
   }
 }
 /* prod-mobile-1775850347 */

@@ -1,14 +1,24 @@
 import { Outlet } from 'react-router-dom';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+import DesktopLayout from '@/components/DesktopLayout';
 
 /**
- * AppLayout — 390x844 phone frame shell, centered on desktop, fullscreen on mobile.
- * Production shell bg: #f6f3ec (fantasy/cream).
+ * AppLayout — responsive shell.
+ * Desktop (≥1024px): split-view via DesktopLayout.
+ * Mobile/Tablet (<1024px): full-viewport, no phone frame.
  */
 export default function AppLayout() {
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
+
+  if (isDesktop) {
+    return <DesktopLayout />;
+  }
+
+  // Mobile/tablet: full-screen, no frame constraint
   return (
     <div
-      className="phone-frame relative flex flex-col w-full max-w-[390px] h-[100dvh] max-h-[844px] mx-auto overflow-hidden rounded-[2.25rem] shadow-[0_10px_50px_-10px_rgba(0,0,0,0.3)]"
-      style={{ backgroundColor: '#1B1B1B' }}
+      className="relative flex flex-col w-full overflow-hidden"
+      style={{ backgroundColor: '#1B1B1B', height: '100dvh' }}
     >
       <Outlet />
     </div>

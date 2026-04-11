@@ -127,8 +127,8 @@ export default function ReadingScreen() {
 
   return (
     <div className="flex flex-col h-full relative" style={{ backgroundColor: '#1B1B1B' }}>
-      {/* ─── DARK HEADER (#1A1A1A) with TEXT pill tabs ─── */}
-      <header className="shrink-0 safe-top" style={{ backgroundColor: '#1A1A1A', paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}>
+      {/* ─── DARK HEADER (#1A1A1A) with TEXT pill tabs — hidden on desktop (DesktopLayout renders shared header) ─── */}
+      <header className="reading-screen-header shrink-0 safe-top" style={{ backgroundColor: '#1A1A1A', paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}>
         <div className="flex items-center justify-between px-4" style={{ height: 56 }}>
           {/* Left: Book + chapter dropdown */}
           <button
@@ -198,9 +198,13 @@ export default function ReadingScreen() {
         ref={scrollRef}
         onTouchStart={handleBodyTouchStart}
         onTouchEnd={handleBodyTouchEnd}
-        className="flex-1 overflow-y-auto px-4 pt-5 pb-[48px] relative"
+        className="flex-1 overflow-y-auto relative"
         style={{ backgroundColor: '#000000' }}
       >
+        <div
+          className="px-4 md:px-12 lg:px-16 pt-5 pb-[48px]"
+          style={{ maxWidth: 'min(100%, 800px)', margin: '0 auto' }}
+        >
         {/* Chapter header block */}
         <div className="flex items-start justify-between mb-3">
           <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 24, lineHeight: '32px', color: '#E7E7E7' }}>
@@ -331,6 +335,7 @@ export default function ReadingScreen() {
             ));
           })()}
         </div>
+        </div>{/* end inner max-width wrapper */}
       </div>
 
       {/* ─── FLOATING CHAPTER NAV — dark circles, white chevrons, bottom: 45px ─── */}

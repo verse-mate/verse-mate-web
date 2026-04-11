@@ -56,7 +56,7 @@ export default function MenuScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
+    <div className="menu-container flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
       {/* Header — dark bg, white text */}
       <header
         className="shrink-0 flex items-center justify-between px-5 safe-top"
