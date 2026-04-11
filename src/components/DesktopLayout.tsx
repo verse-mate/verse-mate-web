@@ -73,15 +73,14 @@ export default function DesktopLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [expandedBook, setExpandedBook] = useState<string | null>(null);
 
-  // Right panel navigation stack (back goes up the stack, empty = commentary)
-  const [rightPanelStack, setRightPanelStack] = useState<RightPanelView[]>(['commentary']);
-  const rightPanelView = rightPanelStack[rightPanelStack.length - 1];
+  // Right panel: only one menu page at a time, back always returns to commentary
+  const [rightPanelView, setRightPanelView] = useState<RightPanelView>('commentary');
 
-  const pushRightPanel = (view: RightPanelView) => {
-    setRightPanelStack(prev => [...prev, view]);
+  const openRightPanel = (view: RightPanelView) => {
+    setRightPanelView(view);
   };
-  const popRightPanel = () => {
-    setRightPanelStack(prev => prev.length > 1 ? prev.slice(0, -1) : prev);
+  const closeRightPanel = () => {
+    setRightPanelView('commentary');
   };
 
   // Resizable split state (percentage of content area, not including sidebar)
@@ -367,7 +366,7 @@ export default function DesktopLayout() {
               </>
             ) : (
               /* Menu page content — wrapped with RightPanelProvider so ScreenHeader back buttons work */
-              <RightPanelProvider value={{ goBack: popRightPanel, isRightPanel: true }}>
+              <RightPanelProvider value={{ goBack: closeRightPanel, isRightPanel: true }}>
                 <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                   {(() => {
                     const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
@@ -406,7 +405,7 @@ export default function DesktopLayout() {
           >
             <MenuSidebar
               onClose={() => setShowMenu(false)}
-              onOpenPage={(view: RightPanelView) => { pushRightPanel(view); setShowMenu(false); }}
+              onOpenPage={(view: RightPanelView) => { openRightPanel(view); setShowMenu(false); }}
             />
           </div>
         </>
