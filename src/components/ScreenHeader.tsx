@@ -20,16 +20,18 @@ export default function ScreenHeader({ title, onBack, rightAction }: ScreenHeade
   // When inside the desktop right panel, always use the panel's goBack
   const handleBack = rightPanel?.isRightPanel ? rightPanel.goBack : (onBack || (() => navigate('/read')));
 
+  const isInRightPanel = !!rightPanel?.isRightPanel;
+
   return (
     <header
       className="shrink-0 safe-top"
       style={{
         backgroundColor: '#1A1A1A',
-        paddingTop: 'max(env(safe-area-inset-top), 48px)',
+        paddingTop: isInRightPanel ? 0 : 'max(env(safe-area-inset-top), 48px)',
         borderBottom: '1px solid #323232',
       }}
     >
-      <div className="relative flex items-center justify-center px-3" style={{ height: 56 }}>
+      <div className="relative flex items-center justify-center px-3" style={{ height: isInRightPanel ? 48 : 56 }}>
         <button
           onClick={handleBack}
           aria-label="Back"
