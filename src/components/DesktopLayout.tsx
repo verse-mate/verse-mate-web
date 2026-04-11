@@ -190,7 +190,7 @@ export default function DesktopLayout() {
           {/* Book list */}
           <div style={{ flex: 1, overflowY: 'auto', padding: '4px 0' }} className="mini-sidebar-scroll">
             <SidebarSection
-              label="OT"
+              label="Old Testament"
               books={otBooks}
               activeBook={state.book}
               activeChapter={state.chapter}
@@ -203,7 +203,7 @@ export default function DesktopLayout() {
               isExpanded={true}
             />
             <SidebarSection
-              label="NT"
+              label="New Testament"
               books={ntBooks}
               activeBook={state.book}
               activeChapter={state.chapter}
@@ -456,7 +456,7 @@ function SidebarSection({
 }) {
   return (
     <>
-      <div style={{ fontFamily: 'Roboto, sans-serif', fontSize: 9, fontWeight: 600, color: '#B09A6D', textAlign: isExpanded ? 'left' : 'center', padding: isExpanded ? '8px 12px 4px' : '6px 0 2px', letterSpacing: '1px', textTransform: 'uppercase' }}>{label}</div>
+      <div style={{ fontFamily: 'Roboto, sans-serif', fontSize: 12, fontWeight: 700, color: '#B09A6D', textAlign: 'left', padding: '14px 12px 6px', letterSpacing: '0.5px' }}>{label}</div>
       {sectionBooks.map(b => {
         const isActive = activeBook === b.name;
         const isBookExpanded = expandedBook === b.name;
