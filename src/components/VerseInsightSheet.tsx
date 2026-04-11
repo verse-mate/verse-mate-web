@@ -138,7 +138,7 @@ export default function VerseInsightSheet({
       {/* Sheet — slides up from bottom; narrower on desktop */}
       <div
         className="verse-insight-sheet absolute inset-x-0 bottom-0 z-50 bg-dark-surface text-dark-fg rounded-t-[24px] border-t border-dark shadow-[0_-10px_30px_rgba(0,0,0,0.5)] animate-slide-up flex flex-col"
-        style={{ maxHeight: '95%', minHeight: '70%' }}
+        style={{ maxHeight: '98%', minHeight: '80%' }}
         role="dialog"
         aria-label="Verse Insight"
       >
@@ -212,37 +212,63 @@ export default function VerseInsightSheet({
           </div>
         </div>
 
-        {/* Compact action row + close — all in one tight footer */}
-        <div className="shrink-0 px-4 pb-3 safe-bottom flex items-center gap-1.5">
-          <button
-            onClick={handleCopy}
-            className="h-8 flex-1 rounded-lg bg-dark-raised border border-dark flex items-center justify-center gap-1"
-          >
-            {copiedAt ? <Check size={12} className="text-gold" strokeWidth={2} /> : <Copy size={12} className="text-dark-fg" strokeWidth={1.5} />}
-            <span className="text-[11px]" style={{ color: copiedAt ? '#B09A6D' : '#aaa' }}>{copiedAt ? 'Copied' : 'Copy'}</span>
-          </button>
-          <button
-            onClick={handleShare}
-            className="h-8 flex-1 rounded-lg bg-dark-raised border border-dark flex items-center justify-center gap-1"
-          >
-            <ShareIcon size={12} color="#aaa" />
-            <span className="text-[11px] text-[#aaa]">Share</span>
-          </button>
+        {/* Actions */}
+        <div className="shrink-0 px-5 pb-3 space-y-2">
+          <div className="grid grid-cols-2 gap-2">
+            <button
+              onClick={handleCopy}
+              className="h-12 rounded-xl bg-dark-raised border border-dark flex items-center justify-center gap-2"
+            >
+              {copiedAt ? (
+                <>
+                  <Check size={16} className="text-gold" strokeWidth={1.75} />
+                  <span className="text-[13px] text-gold">Copied</span>
+                </>
+              ) : (
+                <>
+                  <Copy size={16} className="text-dark-fg" strokeWidth={1.5} />
+                  <span className="text-[13px] text-dark-fg">Copy</span>
+                </>
+              )}
+            </button>
+            <button
+              onClick={handleShare}
+              className="h-12 rounded-xl bg-dark-raised border border-dark flex items-center justify-center gap-2"
+            >
+              <ShareIcon size={16} color="currentColor" />
+              <span className="text-[13px] text-dark-fg">Share</span>
+            </button>
+          </div>
           <button
             onClick={handleSaveHighlight}
-            className="h-8 flex-1 rounded-lg bg-dark-raised border border-dark flex items-center justify-center gap-1"
+            className="w-full h-12 rounded-xl bg-dark-raised border border-dark flex items-center justify-center gap-2"
           >
-            {savedAt ? <Check size={12} className="text-gold" strokeWidth={2} /> : <Bookmark size={12} className="text-dark-fg" strokeWidth={1.5} />}
-            <span className="text-[11px]" style={{ color: savedAt ? '#B09A6D' : '#aaa' }}>{savedAt ? 'Saved' : 'Save'}</span>
+            {savedAt ? (
+              <>
+                <Check size={16} className="text-gold" strokeWidth={1.75} />
+                <span className="text-[13px] text-gold">Saved as highlight</span>
+              </>
+            ) : (
+              <>
+                <Bookmark size={16} className="text-dark-fg" strokeWidth={1.5} />
+                <span className="text-[13px] text-dark-fg">Save as My Highlight</span>
+              </>
+            )}
           </button>
+          {actionError && (
+            <p className="text-[11px] text-red-400 text-center">{actionError}</p>
+          )}
+        </div>
+
+        {/* Close button */}
+        <div className="shrink-0 px-5 pb-5 safe-bottom">
           <button
             onClick={onClose}
-            className="h-8 px-4 rounded-lg bg-gold text-[#1A1A1A] font-medium text-[11px]"
+            className="w-full h-12 rounded-xl bg-gold text-[#1A1A1A] font-medium text-[15px]"
           >
             Close
           </button>
         </div>
-        {actionError && <p className="text-[10px] text-red-400 text-center pb-1">{actionError}</p>}
       </div>
     </>
   );
