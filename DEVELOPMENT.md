@@ -5,22 +5,31 @@ How to develop the VerseMate Lovable prototype using Claude Code. This guide cov
 ## Architecture
 
 ```
-┌──────────────┐    git push     ┌───────────────────┐    2-way sync    ┌──────────┐
-│  Claude Code  │ ─────────────▶ │ verse-mate/       │ ◀──────────────▶ │ Lovable  │
-│  (local CLI)  │                │ versemate (GitHub) │                  │ (preview)│
-└──────┬────────┘                └───────────────────┘                  └──────────┘
-       │                                                                     │
-       │  reads/writes source                                     live preview
-       │  runs vite build                                         auto-deploys
-       ▼                                                                     ▼
-  Local filesystem                                                 Browser iframe
-       │
-       │  reads mobile source (design tokens, components, patterns)
-       ▼
+                              ┌───────────────────┐    2-way sync    ┌──────────┐
+                 git push     │ verse-mate/       │ ◀──────────────▶ │ Lovable  │
+              ┌──────────────▶│ versemate         │                  │ (preview)│
+              │               │ (Lovable repo)    │                  └──────────┘
+              │               └───────────────────┘
+              │
+┌─────────────┴──┐
+│   Claude Code   │
+│   (local CLI)   │
+└──┬──────────┬──┘
+   │          │
+   │          │  git push (PRs for production features)
+   │          │
+   │          ▼
+   │   ┌───────────────────┐
+   │   │ verse-mate/       │  ← PR TARGET for production features
+   │   │ verse-mate-mobile │     e.g. PR #256 (font size setting)
+   │   └───────────────────┘
+   │
+   │  reads design tokens, components, patterns (READ-ONLY)
+   ▼
 ┌───────────────────┐
-│ verse-mate/       │  ← PRODUCTION MOBILE APP (primary reference)
+│ verse-mate/       │  ← PRIMARY REFERENCE (cloned locally as ./mobile)
 │ verse-mate-mobile │     React Native / Expo
-│ (cloned locally)  │     constants/bible-design-tokens.ts = design system
+│                   │     constants/bible-design-tokens.ts = design system
 │                   │     components/bible/ = reading components
 │                   │     components/settings/ = settings components
 │                   │     hooks/bible/ = state hooks (AsyncStorage)
@@ -28,12 +37,17 @@ How to develop the VerseMate Lovable prototype using Claude Code. This guide cov
 └───────────────────┘
 
 ┌───────────────────┐
-│ verse-mate/       │  ← PRODUCTION WEB APP (secondary reference, DO NOT port from)
-│ verse-mate        │     packages/frontend-base = web component library
-│                   │     apps/frontend-next = Next.js web app
-│                   │     apps/backend = API server
+│ verse-mate/       │  ← SECONDARY (API endpoints only, DO NOT port frontend)
+│ verse-mate        │     apps/backend = API server
 └───────────────────┘
 ```
+
+### Flow summary
+
+1. **Prototype development**: Claude Code edits web code → pushes to `verse-mate/versemate` → Lovable auto-syncs and deploys preview
+2. **Design reference**: Claude Code reads `verse-mate/verse-mate-mobile` (cloned locally) for design tokens, component patterns, and mobile-specific logic
+3. **Production PRs**: When a feature is proven in the Lovable prototype, Claude Code creates a PR against `verse-mate/verse-mate-mobile` with the feature ported to React Native
+4. **API reference**: Backend API endpoints are documented in `verse-mate/verse-mate` (the web monorepo), but frontend code should NOT be ported from there
 
 **Important:** The mobile repo (`verse-mate/verse-mate-mobile`) is the PRIMARY reference for design tokens, component patterns, and feature PRs. The web repo (`verse-mate/verse-mate`) is secondary — only reference it for backend API endpoints. DO NOT port web frontend styles into the Lovable build.
 
