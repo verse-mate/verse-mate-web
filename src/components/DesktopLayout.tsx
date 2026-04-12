@@ -61,13 +61,13 @@ const SIDEBAR_EXPANDED = 220;
  * Right panel (remainder): commentary for the current book/chapter
  * Shared header: spans full width (minus sidebar)
  */
-export default function DesktopLayout() {
+export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: boolean }) {
   const { state, dispatch } = useApp();
   const navigate = useNavigate();
   const location = useLocation();
   const [showBookSelector, setShowBookSelector] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(!hideSidebar);
   // Sidebar always stays at expanded width; expandedBook controls chapter grid visibility
   const [expandedBook, setExpandedBook] = useState<string | null>(state.book);
 
