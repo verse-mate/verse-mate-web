@@ -1,0 +1,43 @@
+{
+  // Wrangler configuration for the VerseMate web app (Vite SPA) on Cloudflare Workers.
+  //
+  // Phase 1 of FE migration: workers.dev only — no custom domains bound yet.
+  // The monorepo's apps/lovable still owns staging.versemate.org. Once
+  // we're confident in this deploy pipeline (Phases 2–6), Phase 7 will:
+  //   - bind staging.versemate.org → this Worker's `staging` env
+  //   - bind app.versemate.org    → this Worker's `production` env
+  // and disable the monorepo's lovable-cloudflare-deploy* CI jobs.
+  "$schema": "https://raw.githubusercontent.com/cloudflare/wrangler/main/config-schema.json",
+  "name": "verse-mate-web",
+  "main": "worker.js",
+  "compatibility_date": "2025-08-06",
+  "account_id": "e8f0b566ba1c8227a25e3784def4300e",
+
+  "workers_dev": true,
+
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": false
+  },
+
+  "dev": {
+    "ip": "localhost",
+    "port": 8789,
+    "local_protocol": "http"
+  },
+
+  "env": {
+    "preview": {
+      "name": "verse-mate-web-preview"
+    },
+    "staging": {
+      "name": "verse-mate-web-staging"
+      // Domain binding (staging.versemate.org) added in Phase 7.
+    },
+    "production": {
+      "name": "verse-mate-web-production"
+      // Domain binding (app.versemate.org) added in Phase 7.
+    }
+  }
+}
