@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Inter;
+  src: url("/assets/fonts/Inter-Regular.woff2");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("/assets/fonts/Roboto-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Roboto Serif";
+  src: url("/assets/fonts/RobotoSerif-Regular.woff2");
+}
+

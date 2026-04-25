@@ -1,0 +1,145 @@
+.markdown {
+    width: 100%;
+    min-width: 100%;
+    font-family: Inter, sans-serif;
+}
+
+
+
+/* Bible text variant - overrides default grayish colors to white */
+.bibleText p {
+    color: var(--night) !important;
+}
+
+.bibleText ul,
+.bibleText ol {
+    color: var(--night) !important;
+}
+
+.bibleText h2,
+.bibleText h3,
+.bibleText h4 {
+    color: var(--charcoal-grey) !important;
+}
+
+.bibleText p.referenceText {
+    color: var(--charcoal-grey) !important;
+    margin-bottom: 16px;
+}
+
+.markdown h1 {
+    font-family: Roboto, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+    text-align: start;
+    max-width: 440px;
+    color: var(--night);
+    margin-bottom: 5px;
+}
+
+.markdown h2 {
+    font-family: Roboto, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: start;
+    max-width: 440px;
+    color: var(--night);
+}
+
+.markdown h3 {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: start;
+    max-width: 440px;
+    color: var(--night);
+}
+
+.markdown h4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: start;
+    max-width: 440px;
+    color: var(--night);
+}
+
+.markdown p {
+    min-width: 100%;
+    font-family: "Roboto Serif", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: start;
+    color: var(--charcoal-grey);
+}
+
+.markdown p.reference {
+    font-family: MerriweatherItalic, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--charcoal-grey);
+    margin-bottom: 16px;
+}
+
+.markdown h2, .markdown h4, .markdown h3, .markdown ul {
+    min-width: 100%;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+/* Add extra spacing before headings that follow paragraphs (like after summary text) */
+.markdown p + h2,
+.markdown p + h3,
+.markdown p + h4 {
+    margin-top: 80px;
+}
+
+/* Add spacing between title and first verse heading */
+.markdown h1 + h2,
+.markdown h1 + h3,
+.markdown h1 + h4 {
+    margin-top: 50px;
+}
+
+.markdown h1 {
+    margin-top: 8px;
+}
+
+.markdown strong,
+.markdown b {
+    font-weight: 700;
+    color: var(--night);
+}
+
+.markdown ul, .markdown ol {
+    padding-inline-start: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: "Roboto Serif", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: start;
+    list-style: disc;
+    color: var(--charcoal-grey);
+}
+
+.markdown ul li,
+.markdown ol li {
+    min-width: 100%;
+    padding: 0;
+}
+
+.markdown hr {
+    min-width: 100%;
+    border: 1px solid var(--light-grey);
+    margin-top: 32px;
+    margin-bottom: 32px;
+}

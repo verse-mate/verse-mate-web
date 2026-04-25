@@ -1,0 +1,8 @@
+{
+  "name": "database",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Vendored stub — only the public enum files used by frontend-base. Real schema lives in the verse-mate monorepo.",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts"
+}

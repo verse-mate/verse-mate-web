@@ -1,0 +1,139 @@
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgb(255 255 255 / 10%);
+  border-radius: 50%;
+  border-top: 4px solid #fff;
+  animation: spin 1s linear infinite;
+}
+
+.rating {
+    position: relative;
+    padding: 16px;
+}
+
+.content {
+    height: calc(100dvh);
+}
+
+.content, .list{
+    cursor: default;
+}
+
+.rightPanelContent{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: calc(100%);
+    padding-bottom:40px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.markdown {
+    padding: 0 16px
+}
+
+.chatContainer {
+    height: calc(100dvh - 56px);
+}
+
+.chatContent {
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+.typingField {
+    width: 100%;
+    padding: 16px;
+    position: absolute;
+    bottom: 0;
+}
+
+.historyContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: calc(100dvh - 112px);
+    background-color: var(--snow);
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.groupContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.moreOptionsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    width: 100%;
+    height: calc(100dvh - 56px);
+    background-color: var(--snow);
+    padding: 16px;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.moreOptionsContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.moreOptionsContainer > :last-child {
+    margin-top: auto;
+}
+
+.noPadding {
+    padding: 0;
+}
+
+.menuHeader {
+    display: flex;
+}
+
+.menuHeader h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--night);
+    margin: 0;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--night);
+}
+
+.closeButton:hover {
+    background-color: var(--dust-light);
+    border-radius: 50%;
+}
+
+.menuOptions {
+    margin-top: 24px;
+    width: 100%;
+}

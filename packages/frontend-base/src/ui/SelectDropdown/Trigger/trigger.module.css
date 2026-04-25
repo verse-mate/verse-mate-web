@@ -1,0 +1,94 @@
+.trigger {
+    all: unset;
+    display: flex;
+    align-items: center;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 10px;
+    gap: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--snow);
+    fill: var(--snow);
+
+    &:hover{
+        color: var(--dust);
+        fill: var(--dust);
+    }
+
+    &:focus{
+        color: var(--dust);
+    }
+
+}
+
+.trigger .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+.trigger[data-expand-text="true"] .truncate {
+    max-width: 300px;
+}
+
+.trigger[data-state="open"], .trigger[data-state="open"] svg {
+    color: var(--dust);
+    fill: var(--dust); 
+}
+
+.trigger[data-state="closed"], .trigger[data-state="closed"] svg {
+    color: var(--snow);
+    fill: var(--snow); 
+}
+
+.trigger:hover, .trigger:hover svg {
+    color: var(--dust);
+    fill: var(--dust);
+}
+
+/* Light theme styles */
+.trigger[data-theme="light"] {
+    color: var(--oil);
+    fill: var(--oil);
+}
+
+.trigger[data-theme="light"]:hover, .trigger[data-theme="light"]:hover svg {
+    color: var(--dust);
+    fill: var(--dust);
+}
+
+.trigger[data-theme="light"][data-state="open"], .trigger[data-theme="light"][data-state="open"] svg {
+    color: var(--dust);
+    fill: var(--dust); 
+}
+
+.trigger[data-theme="light"][data-state="closed"], .trigger[data-theme="light"][data-state="closed"] svg {
+    color: var(--oil);
+    fill: var(--oil); 
+}
+
+
+@media screen and (max-width: 834px) {
+    .trigger {
+        display: none;
+    }
+
+    .trigger[data-context="bible-selection"],
+    .trigger[data-context="settings"] {
+      display: flex !important;
+    }
+}
+
+.trigger[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: center;
+}

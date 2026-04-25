@@ -1,24 +1,47 @@
 {
   "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "noImplicitAny": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
     "skipLibCheck": true,
-    "strictNullChecks": false
-  },
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
+    "strict": true,
+    // TODO: re-enable once we replace the `App = any` stub in
+    // packages/backend-api with a real OpenAPI-generated client.
+    // Without a real App type, Eden Treaty's response types degrade to
+    // `any`, which makes inferred callback params (`.map((b) => …)`)
+    // trip noImplicitAny in dozens of call sites that were strict-clean
+    // in the monorepo. Restoring strict mode is a Phase 6 follow-up.
+    "noImplicitAny": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@verse-mate/frontend-base/*": ["./packages/frontend-base/*"]
     },
-    {
-      "path": "./tsconfig.node.json"
-    }
+    "target": "ES2017"
+  },
+  // Scope root tsc to the Next.js app code only. Workspace packages
+  // (packages/*) are type-checked by Next during build (with
+  // `typescript.ignoreBuildErrors: true`); per-package tsconfigs can be
+  // added later if we want stricter checking inside a specific package.
+  "include": ["src/**/*.ts", "src/**/*.tsx", "next-env.d.ts", ".next/types/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/__tests__/**",
+    "**/*.stories.tsx",
+    "**/*.stories.ts"
   ]
 }

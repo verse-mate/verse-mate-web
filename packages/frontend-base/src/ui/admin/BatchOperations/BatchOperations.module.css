@@ -1,0 +1,251 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-primary, #333);
+  }
+  
+  .error {
+    padding: 1rem;
+    background-color: #fee;
+    border: 1px solid #fcc;
+    border-radius: 4px;
+    color: #c33;
+  }
+  
+  .tableContainer {
+    overflow-x: auto;
+  }
+  
+  .status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .status.completed {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status.failed {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .status.inProgress {
+    background-color: #cce5ff;
+    color: #004085;
+  }
+
+  .status.partialFailure {
+    background-color: #fff3cd;
+    border: 1px solid #ffc107;
+    color: #856404;
+  }
+
+  .status.cancelled {
+    background-color: #e0e0e0;
+    color: #424242;
+  }
+
+  /* Column width classes */
+  .idColumn {
+    width: 60px;
+    min-width: 60px;
+    text-align: center;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .bookColumn {
+    width: 200px;
+    min-width: 150px;
+    text-align: left;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .typeColumn {
+    width: 100px;
+    min-width: 80px;
+    text-align: left;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .statusColumn {
+    width: 100px;
+    min-width: 100px;
+    text-align: center;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .statusWithSpacing {
+    margin-left: 50px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .costColumn {
+    width: 100px;
+    min-width: 80px;
+    text-align: right;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .createdColumn {
+    width: 120px;
+    min-width: 100px;
+    text-align: left;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .actionsColumn {
+    width: 120px;
+    min-width: 100px;
+    text-align: left;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .nowrapColumn {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+
+  .versionBadge {
+    font-size: 12px;
+    color: #666;
+    margin-left: 4px;
+  }
+  
+  .tableContainer table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .tableContainer th,
+  .tableContainer td {
+    vertical-align: middle;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .actions {
+          justify-content: center;
+        }
+      }
+      
+      .chapterSelector {
+        position: relative;
+        width: 100%;
+      }
+      
+      .chapterInput {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 8px 12px;
+        min-height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      
+      .chapterDropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        min-width: 300px;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 4px;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+        padding: 10px;
+      }
+      
+      .chapterActions {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #eee;
+      }
+      
+      .chapterActions span {
+        font-size: 12px;
+        color: #007bff;
+        cursor: pointer;
+      }
+      
+      .chapterActions span:hover {
+        text-decoration: underline;
+      }
+      
+      .chapterGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+        gap: 4px;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+      
+      .chapterItem {
+        border: 1px solid #eee;
+        border-radius: 4px;
+        text-align: center;
+        padding: 6px 0;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      
+      .chapterItem:hover {
+        background-color: #f5f5f5;
+      }
+      
+      .chapterItem.selected {
+        background-color: #007bff;
+        color: white;
+        border-color: #0056b3;
+      }

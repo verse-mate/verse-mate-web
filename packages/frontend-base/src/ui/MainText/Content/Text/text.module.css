@@ -1,0 +1,301 @@
+@import url("../../../../../public/assets/fonts/fonts.css");
+
+.contentBox {
+    display: flex;
+    flex-direction: column;
+    gap:64px;
+    padding-bottom: 48px;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.title {
+    font-family: MerriweatherItalic, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    color: var(--night);
+}
+
+.actionButtons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bookmarkButton {
+    flex-shrink: 0;
+}
+
+.textBox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.subtitleBox {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 100%;
+}
+
+.subtitle {
+    font-family: MerriweatherItalic, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    text-wrap: pretty;
+    max-width: 100%;
+    width: 100%;
+}
+
+.description {
+    font-family: MerriweatherItalic, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--charcoal-grey)
+}
+
+
+.paragraphNumber{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    max-width: 20px;
+    max-height: 20px;
+    color: var(--charcoal-grey);
+}
+
+.versesContainer {
+    line-height: 1.6;
+    text-align: left;
+}
+  
+.verse {
+    display: inline;
+    margin-right: 0.5em;
+}
+  
+.verseNumber {
+    margin-right: 2px;
+    vertical-align: super;
+    font-size: 12px;
+    max-width: 20px;
+    max-height: 20px;
+    color: var(--charcoal-grey);
+}
+  
+.verseText {
+    display: inline;
+    font-family: "Roboto Serif", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--night);
+}
+
+.verseReference {
+    display: inline;
+    font-family: "Roboto Serif", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--charcoal-grey);
+    white-space: nowrap;
+}
+
+.subtitleReference {
+    font-family: MerriweatherItalic, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: var(--charcoal-grey);
+}
+
+.copyLinkButton {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .copyLinkButton {
+        display: none;
+    }
+}
+
+@media (max-width: 390px) {
+    .text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+.highlightedVerse {
+    position: relative;
+    padding: 2px 0;
+    border-radius: 2px;
+}
+
+.highlightedText {
+    padding: 1px 2px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-box-decoration-break: clone; /* Required for Safari support */
+}
+
+.highlightedText.clickable {
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.highlightedText.clickable:hover {
+    filter: brightness(0.9);
+}
+
+.highlightedText.clickable:active {
+    filter: brightness(0.85);
+}
+
+.highlightYellow {
+    background-color: rgb(255 235 59 / 30%);
+}
+
+.highlightGreen {
+    background-color: rgb(76 175 80 / 30%);
+}
+
+.highlightBlue {
+    background-color: rgb(33 150 243 / 30%);
+}
+
+.highlightPink {
+    background-color: rgb(233 30 99 / 30%);
+}
+
+.highlightPurple {
+    background-color: rgb(156 39 176 / 30%);
+}
+
+.highlightOrange {
+    background-color: rgb(255 152 0 / 30%);
+}
+
+.highlightRed {
+    background-color: rgb(244 67 54 / 30%);
+}
+
+.highlightTeal {
+    background-color: rgb(0 150 136 / 30%);
+}
+
+.highlightBrown {
+    background-color: rgb(121 85 72 / 30%);
+}
+
+/* Auto-highlight styles - lighter background + underline for visual distinction */
+.autoHighlightYellow {
+    background-color: rgb(255 255 0 / 20%);
+    border-bottom: 2px solid rgb(255 255 0 / 50%);
+    cursor: pointer;
+}
+
+.autoHighlightBlue {
+    background-color: rgb(173 216 230 / 20%);
+    border-bottom: 2px solid rgb(173 216 230 / 50%);
+    cursor: pointer;
+}
+
+.autoHighlightGreen {
+    background-color: rgb(144 238 144 / 20%);
+    border-bottom: 2px solid rgb(144 238 144 / 50%);
+    cursor: pointer;
+}
+
+.autoHighlightOrange {
+    background-color: rgb(255 165 0 / 20%);
+    border-bottom: 2px solid rgb(255 165 0 / 50%);
+    cursor: pointer;
+}
+
+.autoHighlightPink {
+    background-color: rgb(255 192 203 / 20%);
+    border-bottom: 2px solid rgb(255 192 203 / 50%);
+    cursor: pointer;
+}
+
+.autoHighlightPurple {
+    background-color: rgb(221 160 221 / 20%);
+    border-bottom: 2px solid rgb(221 160 221 / 50%);
+    cursor: pointer;
+}
+
+.autoHighlightRed {
+    background-color: rgb(244 67 54 / 20%);
+    border-bottom: 2px solid rgb(244 67 54 / 50%);
+    cursor: pointer;
+}
+
+.autoHighlightTeal {
+    background-color: rgb(0 150 136 / 20%);
+    border-bottom: 2px solid rgb(0 150 136 / 50%);
+    cursor: pointer;
+}
+
+.autoHighlightBrown {
+    background-color: rgb(121 85 72 / 20%);
+    border-bottom: 2px solid rgb(121 85 72 / 50%);
+    cursor: pointer;
+}
+
+/* Text selection styles */
+.versesContainer::selection,
+.verseText::selection {
+    background-color: rgb(100 149 237 / 30%);
+}
+
+/* stylelint-disable-next-line selector-no-vendor-prefix */
+.versesContainer::-moz-selection,
+/* stylelint-disable-next-line selector-no-vendor-prefix */
+.verseText::-moz-selection {
+    background-color: rgb(100 149 237 / 30%);
+}
+
+/* Selection toolbar */
+.selectionToolbar {
+    position: absolute;
+    z-index: 1000;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+    padding: 8px;
+    display: flex;
+    gap: 4px;
+}
+
+.selectionButton {
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.selectionButton:hover {
+    background-color: rgb(0 0 0 / 5%);
+}

@@ -1,0 +1,125 @@
+{
+  // Wrangler configuration for verse-mate-web (Next.js via OpenNext on Cloudflare Workers).
+  //
+  // BOOTSTRAP NOTE: this repo's Workers run under different names than the
+  // monorepo's apps/frontend-next deployment, and have NO custom domain
+  // bindings, so deploys from here cannot conflict with the existing
+  // app.versemate.org / staging.app.verse-mate.xyz / verse-mate.xyz Workers.
+  //
+  // Phase 7 of the FE migration will:
+  //   1. Add the `app.versemate.org` route to env.production below
+  //   2. Remove that route from the monorepo's apps/frontend-next/wrangler.jsonc
+  //      (or repoint the monorepo's Worker to admin.versemate.org)
+  // until then, this repo deploys to *.workers.dev only.
+  "$schema": "https://raw.githubusercontent.com/cloudflare/wrangler/main/config-schema.json",
+  "name": "verse-mate-web",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-08-06",
+  "account_id": "e8f0b566ba1c8227a25e3784def4300e",
+
+  "workers_dev": true,
+
+  // Top-level vars are used when running `wrangler deploy` without `--env`.
+  "vars": {
+    "API_URL": "https://api.versemate.org",
+    "APP_URL": "https://verse-mate-web.workers.dev",
+    "NEXT_PUBLIC_ASK_VERSE_MATE": "false",
+    "NEXT_PUBLIC_SSO_GOOGLE_ENABLED": "true",
+    "NEXT_PUBLIC_SSO_APPLE_ENABLED": "true",
+    "POSTHOG_KEY": "phc_UhHXkLHgiD6916hYZgaKy9pjOOlZi9sTRic3RhWWLRC",
+    "POSTHOG_HOST": "https://us.i.posthog.com",
+    "POSTHOG_SESSION_REPLAY": "false"
+  },
+
+  "compatibility_flags": ["nodejs_compat"],
+
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+    "run_worker_first": false
+  },
+
+  // KV namespace for caching. Reusing the IDs from the monorepo's
+  // frontend-next config is fine — KV is global, the binding just needs
+  // to exist. If we want fully isolated cache, create new namespaces.
+  "kv_namespaces": [
+    {
+      "binding": "CACHE",
+      "id": "148bacc8fbc14a318da7c590a324efb5",
+      "preview_id": "189059813b874bf6b5d27f9b4d3f2f11"
+    }
+  ],
+
+  "dev": {
+    "ip": "localhost",
+    "port": 8787,
+    "local_protocol": "http",
+    "upstream_protocol": "https"
+  },
+
+  "env": {
+    "preview": {
+      "name": "verse-mate-web-preview",
+      "vars": {
+        "API_URL": "https://api.versemate.org",
+        "APP_URL": "https://verse-mate-web-preview.workers.dev",
+        "NEXT_PUBLIC_ASK_VERSE_MATE": "false",
+        "NEXT_PUBLIC_SSO_GOOGLE_ENABLED": "true",
+        "NEXT_PUBLIC_SSO_APPLE_ENABLED": "true",
+        "POSTHOG_KEY": "phc_UhHXkLHgiD6916hYZgaKy9pjOOlZi9sTRic3RhWWLRC",
+        "POSTHOG_HOST": "https://us.i.posthog.com",
+        "POSTHOG_SESSION_REPLAY": "false"
+      },
+      "kv_namespaces": [
+        {
+          "binding": "CACHE",
+          "id": "148bacc8fbc14a318da7c590a324efb5",
+          "preview_id": "189059813b874bf6b5d27f9b4d3f2f11"
+        }
+      ]
+    },
+    "staging": {
+      "name": "verse-mate-web-staging",
+      "vars": {
+        "API_URL": "https://api.versemate.org",
+        "APP_URL": "https://verse-mate-web-staging.workers.dev",
+        "NEXT_PUBLIC_ASK_VERSE_MATE": "false",
+        "NEXT_PUBLIC_SSO_GOOGLE_ENABLED": "true",
+        "NEXT_PUBLIC_SSO_APPLE_ENABLED": "true",
+        "POSTHOG_KEY": "phc_UhHXkLHgiD6916hYZgaKy9pjOOlZi9sTRic3RhWWLRC",
+        "POSTHOG_HOST": "https://us.i.posthog.com",
+        "POSTHOG_SESSION_REPLAY": "false"
+      },
+      "kv_namespaces": [
+        {
+          "binding": "CACHE",
+          "id": "148bacc8fbc14a318da7c590a324efb5",
+          "preview_id": "189059813b874bf6b5d27f9b4d3f2f11"
+        }
+      ]
+      // Domain (e.g. staging.app.versemate.org) added in Phase 7.
+    },
+    "production": {
+      "name": "verse-mate-web-production",
+      "vars": {
+        "API_URL": "https://api.versemate.org",
+        "APP_URL": "https://verse-mate-web-production.workers.dev",
+        "NEXT_PUBLIC_ASK_VERSE_MATE": "false",
+        "NEXT_PUBLIC_SSO_GOOGLE_ENABLED": "true",
+        "NEXT_PUBLIC_SSO_APPLE_ENABLED": "true",
+        "POSTHOG_KEY": "phc_UhHXkLHgiD6916hYZgaKy9pjOOlZi9sTRic3RhWWLRC",
+        "POSTHOG_HOST": "https://us.i.posthog.com",
+        "POSTHOG_SESSION_REPLAY": "true"
+      },
+      "kv_namespaces": [
+        {
+          "binding": "CACHE",
+          "id": "148bacc8fbc14a318da7c590a324efb5",
+          "preview_id": "189059813b874bf6b5d27f9b4d3f2f11"
+        }
+      ]
+      // app.versemate.org route added in Phase 7 alongside removing it
+      // from the monorepo's apps/frontend-next deploy.
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "backend-api",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "@elysiajs/eden": "1.4.1"
+  },
+  "devDependencies": {
+    "frontend-envs": "workspace:*"
+  }
+}

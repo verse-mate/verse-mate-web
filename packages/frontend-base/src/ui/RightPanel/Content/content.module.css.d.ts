@@ -1,0 +1,21 @@
+declare const styles: {
+  readonly chatContainer: string;
+  readonly chatContent: string;
+  readonly closeButton: string;
+  readonly content: string;
+  readonly groupContainer: string;
+  readonly historyContainer: string;
+  readonly list: string;
+  readonly loadingContainer: string;
+  readonly loadingSpinner: string;
+  readonly markdown: string;
+  readonly menuHeader: string;
+  readonly menuOptions: string;
+  readonly moreOptionsContainer: string;
+  readonly noPadding: string;
+  readonly rating: string;
+  readonly rightPanelContent: string;
+  readonly spin: string;
+  readonly typingField: string;
+};
+export = styles;

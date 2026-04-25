@@ -1,0 +1,44 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "ignoreFiles": [
+    "**/dist/**/*.css",
+    "VerseMate/**/*.css",
+    "apps/lovable/**/*.css",
+    "apps/website/src/styles/coach.css"
+  ],
+  "rules": {
+    "media-feature-range-notation": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen"
+        ]
+      }
+    ],
+    "selector-class-pattern": [
+      "^[a-z][a-zA-Z0-9]+(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+      {
+        "message": "Expected class name to be lowerCamelCase or kebab-case with optional BEM notation"
+      }
+    ],
+    "selector-id-pattern": [
+      "^[a-z][a-z0-9]*(-[a-z0-9]+)*$|^__next$",
+      {
+        "message": "Expected id selector to be kebab-case (exception for Next.js #__next)"
+      }
+    ],
+    "no-duplicate-selectors": null,
+    "no-descending-specificity": null,
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreProperties": ["/^--font/", "font-family", "font"]
+      }
+    ]
+  }
+}
