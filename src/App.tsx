@@ -6,6 +6,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AppProvider } from "@/contexts/AppContext";
 import { PostHogProvider } from "@/providers/PostHogProvider";
 import AppLayout from "@/components/AppLayout";
+import BibleRoute from "@/components/routes/BibleRoute";
+import TopicSlugRoute from "@/components/routes/TopicSlugRoute";
+import AuthCallback from "@/components/routes/AuthCallback";
+import Logout from "@/components/routes/Logout";
 import ReadingScreen from "@/pages/ReadingScreen";
 import TopicsScreen from "@/pages/TopicsScreen";
 import TopicEventsScreen from "@/pages/TopicEventsScreen";
@@ -36,6 +40,17 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Navigate to="/read" replace />} />
             <Route element={<AppLayout />}>
+              {/* Production URLs from frontend-next — preserve exact shape for SEO */}
+              <Route path="/bible/:bookSlug/:chapterNumber" element={<BibleRoute />} />
+              <Route path="/topic/:categorySlug/:topicSlug" element={<TopicSlugRoute />} />
+
+              {/* Auth — frontend-next URL shape */}
+              <Route path="/login" element={<SignInScreen initialMode="signin" />} />
+              <Route path="/create-account" element={<SignInScreen initialMode="signup" />} />
+              <Route path="/auth/callback/:provider" element={<AuthCallback />} />
+              <Route path="/logout" element={<Logout />} />
+
+              {/* Lovable-only routes — never indexed, kept as internal UX paths */}
               <Route path="/read" element={<ReadingScreen />} />
               <Route path="/read/:book/:chapter/commentary" element={<CommentaryScreen />} />
               <Route path="/topics" element={<TopicsScreen />} />
@@ -51,7 +66,8 @@ const App = () => (
               <Route path="/menu/about" element={<AboutScreen />} />
               <Route path="/menu/giving" element={<GivingScreen />} />
               <Route path="/menu/help" element={<HelpScreen />} />
-              <Route path="/menu/signin" element={<SignInScreen />} />
+              {/* /menu/signin kept as alias to /login during transition */}
+              <Route path="/menu/signin" element={<Navigate to="/login" replace />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
