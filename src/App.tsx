@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AppProvider } from "@/contexts/AppContext";
+import { PostHogProvider } from "@/providers/PostHogProvider";
 import AppLayout from "@/components/AppLayout";
 import ReadingScreen from "@/pages/ReadingScreen";
 import TopicsScreen from "@/pages/TopicsScreen";
@@ -31,6 +32,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <PostHogProvider>
           <Routes>
             <Route path="/" element={<Navigate to="/read" replace />} />
             <Route element={<AppLayout />}>
@@ -53,6 +55,7 @@ const App = () => (
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </PostHogProvider>
         </BrowserRouter>
       </AppProvider>
     </TooltipProvider>
