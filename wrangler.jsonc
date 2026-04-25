@@ -1,12 +1,16 @@
 {
   // Wrangler configuration for the VerseMate web app (Vite SPA) on Cloudflare Workers.
   //
-  // Phase 1 of FE migration: workers.dev only — no custom domains bound yet.
-  // The monorepo's apps/lovable still owns staging.versemate.org. Once
-  // we're confident in this deploy pipeline (Phases 2–6), Phase 7 will:
-  //   - bind staging.versemate.org → this Worker's `staging` env
-  //   - bind app.versemate.org    → this Worker's `production` env
-  // and disable the monorepo's lovable-cloudflare-deploy* CI jobs.
+  // CUTOVER NOTE (Phase 7): production now binds app.versemate.org. Before
+  // merging this PR + deploying production, the monorepo's
+  // apps/frontend-next/wrangler.jsonc must:
+  //   - REMOVE the route { pattern: "app.versemate.org", custom_domain: true }
+  //     from env.production
+  //   - either delete frontend-next entirely OR rebind to admin.versemate.org
+  //
+  // CF only allows one Worker per custom domain. Deploying this prod env
+  // without first releasing the domain on the other side will fail with
+  // "domain already bound to another Worker".
   "$schema": "https://raw.githubusercontent.com/cloudflare/wrangler/main/config-schema.json",
   "name": "verse-mate-web",
   "main": "worker.js",
@@ -33,11 +37,18 @@
     },
     "staging": {
       "name": "verse-mate-web-staging"
-      // Domain binding (staging.versemate.org) added in Phase 7.
+      // No domain — *.workers.dev only. The monorepo's apps/lovable still
+      // owns staging.versemate.org and we keep it that way for now since
+      // it's the existing review surface for the Lovable design.
     },
     "production": {
-      "name": "verse-mate-web-production"
-      // Domain binding (app.versemate.org) added in Phase 7.
+      "name": "verse-mate-web-production",
+      "routes": [
+        {
+          "pattern": "app.versemate.org",
+          "custom_domain": true
+        }
+      ]
     }
   }
 }
