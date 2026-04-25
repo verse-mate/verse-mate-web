@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "versemate",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "cd /Users/andytryba/Documents/Claude/Scheduled/email-task-fetch/.claude/worktrees/ecstatic-austin/VerseMate/repo && /Users/andytryba/.bun/bin/bun run dev -- --port 5176"
+      ],
+      "port": 5176
+    }
+  ]
+}
