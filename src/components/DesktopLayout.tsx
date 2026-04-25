@@ -762,7 +762,7 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
       onOpenPage('signin');
       return;
     } else {
-      navigate('/menu/signin');
+      navigate('/login');
     }
     onClose();
   };
@@ -787,7 +787,7 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
       <div style={{ flex: 1, overflowY: 'auto', backgroundColor: '#000000', padding: '16px' }}>
         {/* User card */}
         <button
-          onClick={() => { if (!state.isSignedIn) { if (onOpenPage) { onOpenPage('signin'); } else { navigate('/menu/signin'); onClose(); } } }}
+          onClick={() => { if (!state.isSignedIn) { if (onOpenPage) { onOpenPage('signin'); } else { navigate('/login'); onClose(); } } }}
           disabled={state.isSignedIn}
           style={{ display: 'flex', alignItems: 'center', gap: 12, width: '100%', height: 64, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', marginBottom: 12, cursor: state.isSignedIn ? 'default' : 'pointer', textAlign: 'left' }}
         >
