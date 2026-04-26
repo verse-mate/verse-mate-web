@@ -7,7 +7,6 @@ import { AppProvider } from "@/contexts/AppContext";
 import { PostHogProvider } from "@/providers/PostHogProvider";
 import AppLayout from "@/components/AppLayout";
 import BibleRoute from "@/components/routes/BibleRoute";
-import TopicSlugRoute from "@/components/routes/TopicSlugRoute";
 import AuthCallback from "@/components/routes/AuthCallback";
 import Logout from "@/components/routes/Logout";
 import ReadingScreen from "@/pages/ReadingScreen";
@@ -42,7 +41,9 @@ const App = () => (
             <Route element={<AppLayout />}>
               {/* Production URLs from frontend-next — preserve exact shape for SEO */}
               <Route path="/bible/:bookSlug/:chapterNumber" element={<BibleRoute />} />
-              <Route path="/topic/:categorySlug/:topicSlug" element={<TopicSlugRoute />} />
+              {/* TopicEventsScreen renders for both /topic/<cat>/<slug> (canonical)
+                  and /topics/:topicId (legacy/ID) — same screen, both URL shapes */}
+              <Route path="/topic/:categorySlug/:topicSlug" element={<TopicEventsScreen />} />
 
               {/* Auth — frontend-next URL shape */}
               <Route path="/login" element={<SignInScreen initialMode="signin" />} />

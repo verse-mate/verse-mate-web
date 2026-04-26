@@ -4,6 +4,7 @@ import { fetchBooks, getRecentBooks, fetchTopics } from '@/services/bibleService
 import { BibleBook, Topic } from '@/services/types';
 import { ChevronRight, Search, ArrowLeft, Clock } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
+import { buildTopicUrl } from '@/lib/topicSlugs';
 
 interface Props {
   onClose: () => void;
@@ -169,7 +170,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
                   key={t.id}
                   onClick={() => {
                     onClose();
-                    navigate(`/topics/${t.id}`);
+                    navigate(buildTopicUrl(t));
                   }}
                   className="flex items-center justify-between w-full h-[56px] border-b border-dark"
                 >

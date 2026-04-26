@@ -5,9 +5,18 @@ import { TopicEvent, Topic } from '@/services/types';
 import { Search, BookOpen } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import ScreenHeader from '@/components/ScreenHeader';
+import { generateTopicSlug, getCategoryFromSlug } from '@/lib/topicSlugs';
 
 export default function TopicEventsScreen() {
-  const { topicId } = useParams<{ topicId: string }>();
+  // Two route shapes hit this screen:
+  //   /topics/:topicId                            (legacy, ID-based)
+  //   /topic/:categorySlug/:topicSlug             (canonical, SEO-friendly)
+  // Both end up here so we can keep one component for both URL shapes.
+  const { topicId, categorySlug, topicSlug } = useParams<{
+    topicId?: string;
+    categorySlug?: string;
+    topicSlug?: string;
+  }>();
   const navigate = useNavigate();
   const { dispatch } = useApp();
   const [events, setEvents] = useState<TopicEvent[]>([]);
@@ -15,11 +24,36 @@ export default function TopicEventsScreen() {
   const [query, setQuery] = useState('');
 
   useEffect(() => {
-    if (topicId) {
-      fetchTopicEvents(topicId).then(setEvents);
-      fetchTopics().then(ts => setTopic(ts.find(t => t.id === topicId) || null));
-    }
-  }, [topicId]);
+    let cancelled = false;
+    (async () => {
+      const topics = await fetchTopics();
+      if (cancelled) return;
+
+      let resolved: Topic | null = null;
+      if (topicId) {
+        resolved = topics.find((t) => t.id === topicId) || null;
+      } else if (categorySlug && topicSlug) {
+        const backendCategory = getCategoryFromSlug(categorySlug);
+        if (backendCategory) {
+          resolved =
+            topics.find(
+              (t) =>
+                t.category === backendCategory &&
+                (t.slug === topicSlug || generateTopicSlug(t.name) === topicSlug),
+            ) || null;
+        }
+      }
+
+      if (resolved) {
+        setTopic(resolved);
+        const evts = await fetchTopicEvents(resolved.id);
+        if (!cancelled) setEvents(evts);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [topicId, categorySlug, topicSlug]);
 
   const filtered = useMemo(
     () =>

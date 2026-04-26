@@ -4,6 +4,7 @@ import { fetchTopics } from '@/services/bibleService';
 import { Topic } from '@/services/types';
 import { ChevronRight, Search } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
+import { buildTopicUrl } from '@/lib/topicSlugs';
 
 export default function TopicsScreen() {
   const [topics, setTopics] = useState<Topic[]>([]);
@@ -41,7 +42,7 @@ export default function TopicsScreen() {
         {filtered.map(topic => (
           <button
             key={topic.id}
-            onClick={() => navigate(`/topics/${topic.id}`)}
+            onClick={() => navigate(buildTopicUrl(topic))}
             className="flex items-center justify-between w-full h-[56px] text-left"
             style={{ borderBottom: '1px solid #323232' }}
           >
