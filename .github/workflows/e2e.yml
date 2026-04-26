@@ -1,0 +1,96 @@
+name: E2E
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      project:
+        description: Playwright project to run
+        type: choice
+        required: false
+        default: all
+        options:
+          - all
+          - chromium-mobile
+          - chromium-desktop
+      grep:
+        description: 'Filter spec titles (Playwright --grep)'
+        type: string
+        required: false
+
+# Cancel in-flight runs for the same branch — last push wins
+concurrency:
+  group: e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  e2e:
+    name: Playwright (web)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.23
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: pw-${{ runner.os }}-${{ hashFiles('**/bun.lockb', '**/package.json') }}
+          restore-keys: pw-${{ runner.os }}-
+
+      - name: Install Playwright browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: bunx playwright install --with-deps chromium
+
+      - name: Install Playwright system deps (cached browser path)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: bunx playwright install-deps chromium
+
+      - name: Run E2E suite
+        env:
+          # Forward auth credentials from repo secrets when configured;
+          # specs that need them use HAS_AUTH_CREDENTIALS to skip
+          # cleanly when unset.
+          E2E_TEST_EMAIL: ${{ secrets.E2E_TEST_EMAIL }}
+          E2E_TEST_PASSWORD: ${{ secrets.E2E_TEST_PASSWORD }}
+          # Hit the prod API by default; staging override would go here
+          VITE_API_URL: ${{ secrets.E2E_API_URL || 'https://api.versemate.org' }}
+          CI: 'true'
+        run: |
+          ARGS=""
+          if [ "${{ inputs.project }}" != "all" ] && [ -n "${{ inputs.project }}" ]; then
+            ARGS="$ARGS --project=${{ inputs.project }}"
+          fi
+          if [ -n "${{ inputs.grep }}" ]; then
+            ARGS="$ARGS --grep ${{ inputs.grep }}"
+          fi
+          bun run test:e2e -- $ARGS
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: tests/e2e/playwright-report/
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Upload test traces
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces
+          path: tests/e2e/test-results/
+          retention-days: 14
+          if-no-files-found: ignore
