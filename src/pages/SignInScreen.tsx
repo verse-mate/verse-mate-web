@@ -106,6 +106,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
             <button
               onClick={() => setScreen('providers')}
               aria-label="Back"
+              data-testid="login-screen-back"
               className="absolute left-2 w-[44px] h-[44px] flex items-center justify-center"
             >
               <ArrowLeft size={22} color="#fff" strokeWidth={2} />
@@ -123,6 +124,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
               <input
                 value={name}
                 onChange={e => setName(e.target.value)}
+                data-testid="signup-name"
                 className="mt-1.5 w-full h-[52px] px-4 rounded-xl text-[15px] focus:outline-none focus:ring-2 focus:ring-[#B09A6D]"
                 style={{ backgroundColor: '#323232', border: '1px solid #323232', color: '#E7E7E7' }}
                 placeholder="Your name"
@@ -136,6 +138,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
               autoComplete="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
+              data-testid="login-email"
               className="mt-1.5 w-full h-[52px] px-4 rounded-xl text-[15px] focus:outline-none focus:ring-2 focus:ring-[#B09A6D]"
               style={{ backgroundColor: '#323232', border: '1px solid #323232', color: '#E7E7E7' }}
               placeholder="you@example.com"
@@ -148,16 +151,18 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
               autoComplete={mode === 'signin' ? 'current-password' : 'new-password'}
               value={password}
               onChange={e => setPassword(e.target.value)}
+              data-testid="login-password"
               className="mt-1.5 w-full h-[52px] px-4 rounded-xl text-[15px] focus:outline-none focus:ring-2 focus:ring-[#B09A6D]"
               style={{ backgroundColor: '#323232', border: '1px solid #323232', color: '#E7E7E7' }}
               placeholder="••••••••"
             />
           </div>
-          {error && <p className="text-[13px] text-red-400 mt-1">{error}</p>}
+          {error && <p data-testid="login-error" className="text-[13px] text-red-400 mt-1">{error}</p>}
 
           <button
             onClick={handleEmailSubmit}
             disabled={submitting}
+            data-testid={mode === 'signin' ? 'login-submit' : 'signup-submit'}
             className="mt-5 w-full h-12 rounded-xl font-medium text-[15px] disabled:opacity-40"
             style={{ backgroundColor: '#B09A6D', color: '#000000' }}
           >
@@ -175,6 +180,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
               setMode(mode === 'signin' ? 'signup' : 'signin');
               setError(null);
             }}
+            data-testid="login-mode-toggle"
             className="w-full mt-4 text-[13px]"
             style={{ color: 'rgba(255,255,255,0.6)' }}
           >
@@ -189,7 +195,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
-      <ScreenHeader title="Sign In" onBack={() => navigate('/menu')} />
+      <ScreenHeader title="Sign In" onBack={() => navigate('/menu')} backTestId="login-back-button" />
 
       <div className="flex-1 flex flex-col px-6 pb-6" style={{ backgroundColor: '#000000' }}>
         <div className="mt-4 mb-8 text-center">
@@ -203,6 +209,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
           <button
             onClick={handleGoogleSSO}
             disabled={submitting}
+            data-testid="login-google-button"
             className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] disabled:opacity-60"
             style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', color: '#1B1B1B' }}
           >
@@ -214,6 +221,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
           <button
             onClick={handleAppleSSO}
             disabled={submitting}
+            data-testid="login-apple-button"
             className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] disabled:opacity-60"
             style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', color: '#1B1B1B' }}
           >
@@ -231,6 +239,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
 
           <button
             onClick={() => setScreen('email')}
+            data-testid="login-email-button"
             className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px]"
             style={{ backgroundColor: '#323232', border: '1px solid #323232', color: '#E7E7E7' }}
           >
@@ -239,7 +248,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
           </button>
 
           {error && (
-            <p className="text-[12px] text-red-400 mt-2 text-center">{error}</p>
+            <p data-testid="login-error" className="text-[12px] text-red-400 mt-2 text-center">{error}</p>
           )}
         </div>
       </div>

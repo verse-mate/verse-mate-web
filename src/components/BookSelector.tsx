@@ -68,7 +68,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   // Chapter picker view
   if (selectedBookObj) {
     return (
-      <div className="absolute inset-0 z-50 bg-dark-surface flex flex-col animate-fade-in text-dark-fg">
+      <div data-testid="bible-navigation-modal-chapters" className="absolute inset-0 z-50 bg-dark-surface flex flex-col animate-fade-in text-dark-fg">
         <header
           className="shrink-0 safe-top"
           style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)' }}
@@ -77,6 +77,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
             <button
               onClick={() => setSelectedBook(null)}
               aria-label="Back"
+              data-testid="chapter-picker-back-button"
               className="absolute left-2 w-[44px] h-[44px] flex items-center justify-center"
             >
               <ArrowLeft size={22} className="text-dark-fg" strokeWidth={2} />
@@ -92,6 +93,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
               <button
                 key={ch}
                 onClick={() => onSelect(selectedBook, ch, selectedBookObj.bookId)}
+                data-testid={`chapter-${ch}`}
                 className="h-12 rounded-xl bg-dark-raised border border-dark text-dark-fg text-[14px] font-medium"
               >
                 {ch}
@@ -104,7 +106,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   }
 
   return (
-    <div className="absolute inset-0 z-50 bg-dark-surface flex flex-col animate-fade-in text-dark-fg">
+    <div data-testid="bible-navigation-modal" className="absolute inset-0 z-50 bg-dark-surface flex flex-col animate-fade-in text-dark-fg">
       {/* Header: Search title */}
       <header
         className="shrink-0 safe-top"
@@ -114,6 +116,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
           <button
             onClick={onClose}
             aria-label="Close"
+            data-testid="bible-navigation-modal-close"
             className="absolute left-2 w-[44px] h-[44px] flex items-center justify-center"
           >
             <ArrowLeft size={22} className="text-dark-fg" strokeWidth={2} />
@@ -127,6 +130,8 @@ export default function BookSelector({ onClose, onSelect }: Props) {
         <div className="flex items-center rounded-full bg-dark-raised p-1">
           {(['OT', 'NT', 'Topics'] as Tab[]).map(t => {
             const label = t === 'OT' ? 'Old Testament' : t === 'NT' ? 'New Testament' : 'Topics';
+            const testId =
+              t === 'OT' ? 'tab-old-testament' : t === 'NT' ? 'tab-new-testament' : 'tab-topics';
             return (
               <button
                 key={t}
@@ -134,6 +139,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
                   setTab(t);
                   setQuery('');
                 }}
+                data-testid={testId}
                 className={`flex-1 h-10 rounded-full transition-colors ${
                   tab === t ? 'bg-gold text-[#1A1A1A]' : 'text-dark-fg/80'
                 }`}
@@ -153,6 +159,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
           <input
             value={query}
             onChange={e => setQuery(e.target.value)}
+            data-testid={tab === 'Topics' ? 'topics-search-input' : 'books-search-input'}
             placeholder="Search..."
             className="flex-1 bg-transparent text-dark-fg placeholder:text-dark-muted focus:outline-none"
             style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '24px' }}
@@ -172,6 +179,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
                     onClose();
                     navigate(buildTopicUrl(t));
                   }}
+                  data-testid={`topic-item-${t.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
                   className="flex items-center justify-between w-full h-[56px] border-b border-dark"
                 >
                   <span className="text-[16px] text-dark-fg text-left">{t.name}</span>
@@ -196,6 +204,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
                     <button
                       key={`recent-${b.bookId}`}
                       onClick={() => setSelectedBook(b.name)}
+                      data-testid={`recent-book-item-${b.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
                       className="flex items-center justify-between w-full h-[52px] border-b border-dark"
                     >
                       <span
@@ -220,6 +229,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
                 <button
                   key={b.name}
                   onClick={() => setSelectedBook(b.name)}
+                  data-testid={`book-item-${b.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
                   className="flex items-center justify-between w-full h-[56px] border-b border-dark"
                 >
                   <span
