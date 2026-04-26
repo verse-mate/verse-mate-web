@@ -36,3 +36,21 @@ export function generateTopicSlug(title: string): string {
     .replace(/-+/g, '-') // Collapse multiple hyphens
     .replace(/^-|-$/g, ''); // Trim leading/trailing hyphens
 }
+
+/**
+ * Build the canonical topic URL (`/topic/<categorySlug>/<topicSlug>`).
+ * Falls back to the legacy ID-based URL only if the topic has no
+ * resolvable category — frontend-next's URL shape is preferred for
+ * everything else so deep links are shareable and SEO-friendly.
+ */
+export function buildTopicUrl(topic: {
+  id: string;
+  name: string;
+  slug?: string;
+  category?: string;
+}): string {
+  const categorySlug = topic.category ? getCategorySlug(topic.category) : null;
+  if (!categorySlug) return `/topics/${topic.id}`;
+  const topicSlug = topic.slug || generateTopicSlug(topic.name);
+  return `/topic/${categorySlug}/${topicSlug}`;
+}
