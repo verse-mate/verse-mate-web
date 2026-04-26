@@ -154,6 +154,7 @@ export default function ReadingScreen() {
           {/* Left: Book + chapter dropdown */}
           <button
             onClick={() => setShowBookSelector(true)}
+            data-testid="chapter-selector-button"
             className="flex items-center gap-1.5 min-h-[44px] pr-2 -ml-1"
             style={{ color: '#FFFFFF' }}
           >
@@ -168,6 +169,7 @@ export default function ReadingScreen() {
               {/* Bible pill — active (gold) */}
               <button
                 aria-label="Bible"
+                data-testid="bible-view-icon"
                 style={{
                   fontFamily: 'Roboto, sans-serif',
                   fontWeight: 400,
@@ -186,6 +188,7 @@ export default function ReadingScreen() {
               {/* Insight pill — inactive */}
               <button
                 aria-label="Insight"
+                data-testid="commentary-view-icon"
                 onClick={() => navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/commentary`)}
                 style={{
                   fontFamily: 'Roboto, sans-serif',
@@ -206,6 +209,7 @@ export default function ReadingScreen() {
             <button
               onClick={() => navigate('/menu')}
               aria-label="Open menu"
+              data-testid="hamburger-menu-button"
               className="flex items-center justify-center w-[44px] h-[44px] -mr-2"
             >
               <Menu size={22} style={{ color: '#FFFFFF' }} strokeWidth={2} />
@@ -219,6 +223,7 @@ export default function ReadingScreen() {
         ref={scrollRef}
         onTouchStart={handleBodyTouchStart}
         onTouchEnd={handleBodyTouchEnd}
+        data-testid="chapter-pager-view"
         className="flex-1 overflow-y-auto relative"
         style={{ backgroundColor: '#000000' }}
       >
@@ -228,7 +233,10 @@ export default function ReadingScreen() {
         >
         {/* Chapter header block */}
         <div className="flex items-start justify-between mb-3">
-          <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 24, lineHeight: '32px', color: '#E7E7E7' }}>
+          <h1
+            data-testid="chapter-header"
+            style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 24, lineHeight: '32px', color: '#E7E7E7' }}
+          >
             {state.book} {state.chapter}
           </h1>
           <div className="flex items-center gap-1 mt-1.5">
@@ -243,6 +251,7 @@ export default function ReadingScreen() {
               return (
                 <button
                   aria-label={isBookmarked ? 'Remove bookmark' : 'Bookmark chapter'}
+                  data-testid={`bookmark-toggle-${state.bookId}-${state.chapter}`}
                   onClick={() => {
                     if (isBookmarked) {
                       removeBookmark(chapterBookmark.id);
@@ -267,6 +276,7 @@ export default function ReadingScreen() {
             })()}
             <button
               aria-label="Notes for this chapter"
+              data-testid={`chapter-notes-button-${state.bookId}-${state.chapter}`}
               onClick={() => navigate('/notes')}
               className="w-10 h-10 flex items-center justify-center"
             >
@@ -327,6 +337,7 @@ export default function ReadingScreen() {
                       <span
                         key={verse.number}
                         data-verse={verse.number}
+                        data-testid={`verse-group-${verse.number}`}
                         onTouchStart={() => handlePressStart(verse.number)}
                         onTouchEnd={() => handlePressEnd(verse.number)}
                         {...(!isDesktop ? {
@@ -375,6 +386,7 @@ export default function ReadingScreen() {
         <button
           onClick={() => goToChapter(-1)}
           aria-label="Previous chapter"
+          data-testid="previous-chapter-button"
           className="chapter-nav-btn chapter-nav-prev"
           style={{ position: 'absolute', left: 12, bottom: 45, width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
@@ -385,6 +397,7 @@ export default function ReadingScreen() {
         <button
           onClick={() => goToChapter(1)}
           aria-label="Next chapter"
+          data-testid="next-chapter-button"
           className="chapter-nav-btn chapter-nav-next"
           style={{ position: 'absolute', right: 12, bottom: 45, width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
@@ -394,6 +407,7 @@ export default function ReadingScreen() {
 
       {/* ─── GOLD PROGRESS BAR — dark bg (#000), dark track (#1E1E1E), gold fill ─── */}
       <div
+        data-testid="progress-bar"
         style={{
           height: 32,
           display: 'flex',
@@ -425,6 +439,7 @@ export default function ReadingScreen() {
                 }}
               >
                 <div
+                  data-testid="progress-bar-fill"
                   style={{
                     height: '100%',
                     backgroundColor: '#B09A6D',
@@ -435,6 +450,7 @@ export default function ReadingScreen() {
                 />
               </div>
               <span
+                data-testid="progress-bar-percentage"
                 style={{
                   fontFamily: 'Roboto, sans-serif',
                   fontWeight: 500,

@@ -52,7 +52,7 @@ export default function SettingsScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
-      <ScreenHeader title="Settings" onBack={() => navigate('/menu')} />
+      <ScreenHeader title="Settings" onBack={() => navigate('/menu')} backTestId="settings-back-button" />
 
       <div style={{ flex: 1, overflowY: 'auto', padding: 20, fontFamily: 'Roboto, sans-serif', backgroundColor: '#000000' }}>
 
@@ -66,6 +66,7 @@ export default function SettingsScreen() {
                 <button
                   key={v}
                   onClick={() => updateSetting({ defaultVersion: v })}
+                  data-testid={`version-option-${v.toLowerCase()}`}
                   style={{
                     height: 44,
                     borderRadius: 8,
@@ -103,6 +104,7 @@ export default function SettingsScreen() {
                 <button
                   key={l.id}
                   onClick={() => setLanguage(l.id)}
+                  data-testid={`language-option-${l.id}`}
                   style={{
                     height: 44,
                     borderRadius: 8,
@@ -138,6 +140,7 @@ export default function SettingsScreen() {
               max={26}
               value={settings.fontSize}
               onChange={e => updateSetting({ fontSize: Number(e.target.value) })}
+              data-testid="font-size-slider"
               style={{ width: '100%', accentColor: '#b09a6d' }}
             />
           </div>

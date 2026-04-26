@@ -38,6 +38,7 @@ export default function CommentaryScreen() {
         <div className="flex items-center justify-between px-4" style={{ height: 56 }}>
           <button
             onClick={() => navigate(`/read`)}
+            data-testid="chapter-selector-button"
             className="flex items-center gap-1.5 min-h-[44px] pr-2 -ml-1"
             style={{ color: '#FFFFFF' }}
           >
@@ -53,6 +54,7 @@ export default function CommentaryScreen() {
               {/* Bible pill — inactive */}
               <button
                 aria-label="Bible"
+                data-testid="bible-view-icon"
                 onClick={() => navigate('/read')}
                 style={{
                   fontFamily: 'Roboto, sans-serif',
@@ -72,6 +74,7 @@ export default function CommentaryScreen() {
               {/* Insight pill — active (gold) */}
               <button
                 aria-label="Insight"
+                data-testid="commentary-view-icon"
                 style={{
                   fontFamily: 'Roboto, sans-serif',
                   fontWeight: 400,
@@ -91,6 +94,7 @@ export default function CommentaryScreen() {
             <button
               onClick={() => navigate('/menu')}
               aria-label="Open menu"
+              data-testid="hamburger-menu-button"
               className="flex items-center justify-center w-[44px] h-[44px] -mr-2"
             >
               <Menu size={22} style={{ color: '#FFFFFF' }} strokeWidth={2} />
@@ -109,6 +113,7 @@ export default function CommentaryScreen() {
             <button
               key={t.id}
               onClick={() => setTab(t.id)}
+              data-testid={`tab-${t.id}`}
               style={{
                 borderRadius: 100,
                 padding: '4px 16px',
@@ -144,6 +149,7 @@ export default function CommentaryScreen() {
                 onClick={() => navigator.share?.({ title: `Summary of ${decodedBook} ${chapterNum}`, text: `Summary of ${decodedBook} ${chapterNum}` }).catch(() => {})}
                 style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
                 aria-label="Share summary"
+                data-testid="share-summary-button"
               >
                 <ShareIcon size={20} color="#E7E7E7" />
               </button>
@@ -171,6 +177,7 @@ export default function CommentaryScreen() {
                     onClick={() => navigator.share?.({ title: `Line-by-Line Analysis of ${decodedBook} ${chapterNum}`, text: `Line-by-Line Analysis of ${decodedBook} ${chapterNum}` }).catch(() => {})}
                     style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
                     aria-label="Share line-by-line analysis"
+                    data-testid="share-byline-button"
                   >
                     <ShareIcon size={20} color="#E7E7E7" />
                   </button>
@@ -178,6 +185,7 @@ export default function CommentaryScreen() {
                 <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
                   <button
                     onClick={() => setExpanded(allExpanded ? null : -2)}
+                    data-testid="byline-expand-all-button"
                     style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, color: '#B09A6D', background: 'none', border: 'none', cursor: 'pointer' }}
                   >
                     {allExpanded ? 'Collapse All' : 'Expand All'}
@@ -187,9 +195,10 @@ export default function CommentaryScreen() {
                   {byLineItems.map(c => {
                     const isOpen = allExpanded || expanded === c.verse;
                     return (
-                      <div key={c.verse} style={{ borderBottom: '1px solid #323232' }}>
+                      <div key={c.verse} data-testid={`byline-verse-${c.verse}`} style={{ borderBottom: '1px solid #323232' }}>
                         <button
                           onClick={() => setExpanded(isOpen ? null : c.verse)}
+                          data-testid={`byline-verse-toggle-${c.verse}`}
                           style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '16px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer' }}
                         >
                           <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, color: '#FFFFFF' }}>
@@ -231,6 +240,7 @@ export default function CommentaryScreen() {
                     onClick={() => navigator.share?.({ title: `In-Depth Analysis of ${decodedBook} ${chapterNum}`, text: `In-Depth Analysis of ${decodedBook} ${chapterNum}` }).catch(() => {})}
                     style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
                     aria-label="Share in-depth analysis"
+                    data-testid="share-detailed-button"
                   >
                     <ShareIcon size={20} color="#E7E7E7" />
                   </button>
