@@ -18,9 +18,10 @@ export default function BookmarksScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
-      <ScreenHeader title="Bookmarks" onBack={() => navigate('/menu')} />
+      <ScreenHeader title="Bookmarks" onBack={() => navigate('/menu')} backTestId="bookmarks-back-button" />
 
       <div
+        data-testid="bookmarks-list"
         style={{
           flex: 1,
           overflowY: 'auto',
@@ -34,6 +35,7 @@ export default function BookmarksScreen() {
       >
         {state.bookmarks.length === 0 ? (
           <div
+            data-testid="bookmarks-empty-state"
             style={{ padding: 16, textAlign: 'center', color: 'rgba(255,255,255,0.6)', fontStyle: 'italic' }}
           >
             <Bookmark size={48} style={{ margin: '0 auto 12px', color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
@@ -47,6 +49,7 @@ export default function BookmarksScreen() {
             {state.bookmarks.map(b => (
               <div
                 key={b.id}
+                data-testid={`bookmark-item-${b.id}`}
                 style={{
                   display: 'flex',
                   justifyContent: 'space-between',
@@ -81,6 +84,7 @@ export default function BookmarksScreen() {
                 <button
                   onClick={() => handleDelete(b.id)}
                   aria-label="Remove Bookmark"
+                  data-testid={`bookmark-delete-${b.id}`}
                   style={{
                     background: 'none',
                     border: 'none',

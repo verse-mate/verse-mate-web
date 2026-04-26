@@ -18,16 +18,17 @@ type Item = {
   label: string;
   icon: typeof Bookmark;
   path: string;
+  testId: string;
 };
 
 const items: Item[] = [
-  { label: 'Bookmarks', icon: Bookmark, path: '/bookmarks' },
-  { label: 'Notes', icon: FileText, path: '/notes' },
-  { label: 'Highlights', icon: Highlighter, path: '/highlights' },
-  { label: 'Settings', icon: Settings, path: '/menu/settings' },
-  { label: 'About', icon: Info, path: '/menu/about' },
-  { label: 'Giving', icon: Heart, path: '/menu/giving' },
-  { label: 'Help', icon: HelpCircle, path: '/menu/help' },
+  { label: 'Bookmarks', icon: Bookmark, path: '/bookmarks', testId: 'menu-item-bookmarks' },
+  { label: 'Notes', icon: FileText, path: '/notes', testId: 'menu-item-notes' },
+  { label: 'Highlights', icon: Highlighter, path: '/highlights', testId: 'menu-item-highlights' },
+  { label: 'Settings', icon: Settings, path: '/menu/settings', testId: 'menu-item-settings' },
+  { label: 'About', icon: Info, path: '/menu/about', testId: 'menu-item-about' },
+  { label: 'Giving', icon: Heart, path: '/menu/giving', testId: 'menu-item-giving' },
+  { label: 'Help', icon: HelpCircle, path: '/menu/help', testId: 'menu-item-help' },
 ];
 
 export default function MenuScreen() {
@@ -56,7 +57,7 @@ export default function MenuScreen() {
   };
 
   return (
-    <div className="menu-container flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
+    <div data-testid="hamburger-menu" className="menu-container flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
       {/* Header — dark bg, white text */}
       <header
         className="shrink-0 flex items-center justify-between px-5 safe-top"
@@ -66,6 +67,7 @@ export default function MenuScreen() {
         <button
           onClick={() => navigate('/read')}
           aria-label="Close menu"
+          data-testid="menu-close-button"
           className="w-[44px] h-[44px] flex items-center justify-center -mr-2"
         >
           <X size={22} style={{ color: '#FFFFFF' }} strokeWidth={2} />
@@ -77,6 +79,7 @@ export default function MenuScreen() {
         <button
           onClick={() => !state.isSignedIn && navigate('/login')}
           disabled={state.isSignedIn}
+          data-testid="menu-profile-card"
           className="flex items-center gap-3 w-full h-[64px] px-4 rounded-xl text-left mb-3"
           style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
         >
@@ -102,12 +105,14 @@ export default function MenuScreen() {
               key={item.label}
               icon={<item.icon size={18} style={{ color: '#E7E7E7' }} strokeWidth={1.5} />}
               label={item.label}
+              testId={item.testId}
               onClick={() => navigate(item.path)}
             />
           ))}
           <MenuRow
             icon={<ShareIcon size={18} color="#E7E7E7" />}
             label="Share VerseMate"
+            testId="menu-item-share"
             onClick={handleShare}
           />
           {items.slice(4).map(item => (
@@ -115,6 +120,7 @@ export default function MenuScreen() {
               key={item.label}
               icon={<item.icon size={18} style={{ color: '#E7E7E7' }} strokeWidth={1.5} />}
               label={item.label}
+              testId={item.testId}
               onClick={() => navigate(item.path)}
             />
           ))}
@@ -124,6 +130,7 @@ export default function MenuScreen() {
         <div className="mt-2">
           <button
             onClick={handleLogout}
+            data-testid={state.isSignedIn ? 'menu-item-logout' : 'menu-item-login'}
             className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl"
             style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
           >
@@ -142,14 +149,17 @@ function MenuRow({
   icon,
   label,
   onClick,
+  testId,
 }: {
   icon: React.ReactNode;
   label: string;
   onClick: () => void;
+  testId?: string;
 }) {
   return (
     <button
       onClick={onClick}
+      data-testid={testId}
       className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl text-left"
       style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
     >
