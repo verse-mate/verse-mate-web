@@ -655,12 +655,19 @@ export async function logout(): Promise<void> {
 }
 
 export async function fetchCurrentUser(): Promise<AuthUser> {
-  const data = await api.get<any>('/auth/user');
+  // /auth/user returns only {id} — minimal payload meant for token-only
+  // checks. /user/me returns the full record:
+  //   { id, email, firstName, lastName, fullName, emailVerified }
+  // The MenuScreen + AuthCallback dispatch paths need the full record
+  // for the profile UI to render past the "Loading..." state.
+  const data = await api.get<any>('/user/me');
   return {
-    id: data?.id || data?.user?.id || '',
-    email: data?.email || data?.user?.email || '',
-    name: data?.name || data?.user?.name,
-    avatarUrl: data?.avatar_url || data?.user?.avatar_url,
+    id: data?.id || '',
+    email: data?.email || '',
+    name: data?.fullName || data?.firstName || undefined,
+    // Backend doesn't return an avatar URL today; left here so existing
+    // call sites that read user.avatarUrl don't break.
+    avatarUrl: undefined,
   };
 }
 

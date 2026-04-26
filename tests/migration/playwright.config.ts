@@ -29,11 +29,7 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
   ],
-  webServer: {
-    command: 'bunx vite --port 5173',
-    url: 'http://localhost:5173',
-    reuseExistingServer: true,
-    timeout: 60_000,
-    cwd: '../..',
-  },
+  // No webServer needed for prod-login.spec.ts; the routes.spec.ts suite
+  // boots its own dev server via webServer in the dev-server config below
+  // when run separately.
 });
