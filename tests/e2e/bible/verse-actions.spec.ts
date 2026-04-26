@@ -13,13 +13,12 @@ import { ReaderPage } from '../pages/reader.page';
  * file is therefore project-filtered to chromium-mobile.
  */
 
-// FIXME (entire describe block): simulating a 600ms mouse-down/up on a
-// verse via Playwright on chromium-mobile (hasTouch+isMobile) is not
-// triggering ReadingScreen's press-timer (handlePressStart). Verified
-// via test-failed screenshot: verses get selected (state.selectedVerse
-// fires) but the action sheet doesn't open. Likely needs touchscreen.tap
-// with explicit hold timing or a synthetic CDP touch sequence — tracked
-// as PR-C work.
+// FIXME (entire describe block): same production state-revert bug as the
+// FAB navigation tests in load-and-navigate.spec.ts — the long-press fires
+// (verse selection state.selectedVerse updates), but the action sheet
+// state (longPressVerse) is reverted by the same stale-closure useEffect
+// before the sheet renders. Re-enable once BibleRoute's URL→state effect
+// guards against stale dispatches.
 test.describe.fixme('Bible — verse actions (mobile)', () => {
   test.skip(({ viewport }) => {
     return !viewport || viewport.width >= 1024;
@@ -28,7 +27,7 @@ test.describe.fixme('Bible — verse actions (mobile)', () => {
   test('long-press opens the action sheet with all six buttons', async ({ page }) => {
     const reader = new ReaderPage(page);
     await reader.goto('genesis', 1);
-    await reader.longPressVerse(1);
+    await reader.longPressVerseViaCDP(1);
 
     await expect(page.getByTestId('verse-actions-sheet')).toBeVisible();
     await expect(page.getByTestId('verse-action-bookmark')).toBeVisible();
@@ -42,7 +41,7 @@ test.describe.fixme('Bible — verse actions (mobile)', () => {
   test('action sheet exposes 5 highlight color buttons', async ({ page }) => {
     const reader = new ReaderPage(page);
     await reader.goto('genesis', 1);
-    await reader.longPressVerse(1);
+    await reader.longPressVerseViaCDP(1);
 
     for (const color of ['yellow', 'green', 'blue', 'pink', 'orange'] as const) {
       await expect(page.getByTestId(`color-button-${color}`)).toBeVisible();
@@ -52,7 +51,7 @@ test.describe.fixme('Bible — verse actions (mobile)', () => {
   test('Commentary action navigates to the commentary route', async ({ page }) => {
     const reader = new ReaderPage(page);
     await reader.goto('genesis', 1);
-    await reader.longPressVerse(1);
+    await reader.longPressVerseViaCDP(1);
 
     await page.getByTestId('verse-action-commentary').click();
     await expect(page).toHaveURL(/\/read\/Genesis\/1\/commentary/i);
@@ -61,7 +60,7 @@ test.describe.fixme('Bible — verse actions (mobile)', () => {
   test('Backdrop tap closes the sheet', async ({ page }) => {
     const reader = new ReaderPage(page);
     await reader.goto('genesis', 1);
-    await reader.longPressVerse(1);
+    await reader.longPressVerseViaCDP(1);
 
     const sheet = page.getByTestId('verse-actions-sheet');
     await expect(sheet).toBeVisible();

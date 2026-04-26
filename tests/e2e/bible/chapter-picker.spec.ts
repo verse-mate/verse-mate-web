@@ -82,9 +82,10 @@ test.describe('Bible — chapter picker', () => {
     await expect(picker.chapter(21)).toBeVisible();
   });
 
-  // FIXME: same Playwright-on-mobile click-routing issue as the FAB
-  // tests in load-and-navigate.spec.ts — chapter selection in the modal
-  // doesn't update state. Tracked as PR-C work.
+  // FIXME: same production state-revert bug as the FAB navigation tests
+  // in load-and-navigate.spec.ts — see that file's FIXME comment.
+  // Picker chapter selection dispatches the right SET_PASSAGE, but the
+  // BibleRoute stale-closure effect reverts state right after.
   test.fixme('end-to-end: Genesis 1 → John 3 via picker', async ({ page }) => {
     const reader = new ReaderPage(page);
     const picker = new BookSelectorPage(page);
@@ -94,10 +95,9 @@ test.describe('Bible — chapter picker', () => {
     await picker.tabNewTestament.click();
     await picker.booksSearchInput.fill('John');
     await picker.bookItem('John').click();
-    await picker.chapter(3).click();
-
+    await reader.tap(picker.chapter(3));
+    await page.waitForURL(/\/bible\/john\/3/, { timeout: 10_000 });
     await reader.expectChapterLoaded('John', 3);
-    await expect(page).toHaveURL(/\/bible\/john\/3/);
   });
 
   test('Topics tab shows the topics search and at least one topic', async ({ page }) => {

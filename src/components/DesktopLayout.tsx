@@ -168,10 +168,11 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const ntBooks = books.filter(b => b.testament === 'NT');
 
   return (
-    <div style={{ display: 'flex', width: '100vw', height: '100dvh', overflow: 'hidden', backgroundColor: '#1B1B1B' }}>
+    <div data-testid="desktop-layout" style={{ display: 'flex', width: '100vw', height: '100dvh', overflow: 'hidden', backgroundColor: '#1B1B1B' }}>
       {/* ─── PERSISTENT SIDEBAR — expands on book click to show chapters ─── */}
       {sidebarOpen && (
         <div
+          data-testid="desktop-sidebar"
           style={{
             width: SIDEBAR_EXPANDED,
             flexShrink: 0,
@@ -239,6 +240,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
             <button
               onClick={() => setShowBookSelector(true)}
+              data-testid="desktop-chapter-selector-button"
               style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#FFFFFF', background: 'none', border: 'none', cursor: 'pointer', padding: '0 8px', minHeight: 44 }}
             >
               <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: '#FFFFFF' }}>
@@ -259,6 +261,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                   <button
                     key={t.id}
                     onClick={() => setTab(t.id)}
+                    data-testid={`desktop-tab-${t.id}`}
                     style={{
                       borderRadius: 100,
                       padding: '3px 14px',
@@ -280,6 +283,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             <button
               onClick={() => setShowMenu(!showMenu)}
               aria-label="Open menu"
+              data-testid="desktop-hamburger-menu-button"
               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, background: 'none', border: 'none', cursor: 'pointer' }}
             >
               <Menu size={22} color="#FFFFFF" strokeWidth={2} />
@@ -288,9 +292,10 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
         </header>
 
         {/* ─── SPLIT BODY ─── */}
-        <div ref={contentRef} style={{ flex: 1, display: 'flex', overflow: 'hidden', position: 'relative' }}>
+        <div ref={contentRef} data-testid="desktop-split-body" style={{ flex: 1, display: 'flex', overflow: 'hidden', position: 'relative' }}>
           {/* LEFT PANEL — Bible reading */}
           <div
+            data-testid="desktop-left-panel"
             style={{
               width: `${leftPct}%`,
               height: '100%',
@@ -305,6 +310,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           {/* DRAG HANDLE */}
           <div
             onMouseDown={handleDragStart}
+            data-testid="desktop-split-divider"
             style={{
               width: 6,
               flexShrink: 0,
@@ -327,6 +333,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
           {/* RIGHT PANEL — Commentary or menu page content */}
           <div
+            data-testid="desktop-right-panel"
             style={{
               flex: 1,
               minWidth: 0,
