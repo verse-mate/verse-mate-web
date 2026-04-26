@@ -1,0 +1,59 @@
+{
+  // Wrangler configuration for the VerseMate web app (Vite SPA) on Cloudflare Workers.
+  //
+  // CUTOVER NOTE (Phase 7): production now binds app.versemate.org. Before
+  // merging this PR + deploying production, the monorepo's
+  // apps/frontend-next/wrangler.jsonc must:
+  //   - REMOVE the route { pattern: "app.versemate.org", custom_domain: true }
+  //     from env.production
+  //   - either delete frontend-next entirely OR rebind to admin.versemate.org
+  //
+  // CF only allows one Worker per custom domain. Deploying this prod env
+  // without first releasing the domain on the other side will fail with
+  // "domain already bound to another Worker".
+  "$schema": "https://raw.githubusercontent.com/cloudflare/wrangler/main/config-schema.json",
+  "name": "verse-mate-web",
+  "main": "worker.js",
+  "compatibility_date": "2025-08-06",
+  "account_id": "e8f0b566ba1c8227a25e3784def4300e",
+
+  "workers_dev": true,
+
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    // MUST be true: our Worker fetch handler implements legacy URL → slug
+    // 301 redirects (worker.js: checkLegacyRedirects). With run_worker_first
+    // off, Cloudflare serves the static index.html for `/` before our
+    // Worker can inspect query params, so /?bookId=1&verseId=1 would
+    // serve the SPA instead of redirecting to /bible/genesis/1.
+    "run_worker_first": true
+  },
+
+  "dev": {
+    "ip": "localhost",
+    "port": 8789,
+    "local_protocol": "http"
+  },
+
+  "env": {
+    "preview": {
+      "name": "verse-mate-web-preview"
+    },
+    "staging": {
+      "name": "verse-mate-web-staging"
+      // No domain — *.workers.dev only. The monorepo's apps/lovable still
+      // owns staging.versemate.org and we keep it that way for now since
+      // it's the existing review surface for the Lovable design.
+    },
+    "production": {
+      "name": "verse-mate-web-production",
+      "routes": [
+        {
+          "pattern": "app.versemate.org",
+          "custom_domain": true
+        }
+      ]
+    }
+  }
+}

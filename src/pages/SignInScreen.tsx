@@ -14,11 +14,19 @@ import { renderGoogleButton } from '@/services/googleAuth';
 type Screen = 'providers' | 'email';
 type Mode = 'signin' | 'signup';
 
-export default function SignInScreen() {
+interface SignInScreenProps {
+  /**
+   * Initial form mode. /login → 'signin', /create-account → 'signup'.
+   * Users can still toggle between modes inside the email screen.
+   */
+  initialMode?: Mode;
+}
+
+export default function SignInScreen({ initialMode = 'signin' }: SignInScreenProps = {}) {
   const navigate = useNavigate();
   const { dispatch } = useApp();
   const [screen, setScreen] = useState<Screen>('providers');
-  const [mode, setMode] = useState<Mode>('signin');
+  const [mode, setMode] = useState<Mode>(initialMode);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');

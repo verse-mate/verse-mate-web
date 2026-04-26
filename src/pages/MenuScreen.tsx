@@ -39,7 +39,7 @@ export default function MenuScreen() {
       await signOut();
       navigate('/read');
     } else {
-      navigate('/menu/signin');
+      navigate('/login');
     }
   };
 
@@ -75,7 +75,7 @@ export default function MenuScreen() {
       <div className="flex-1 overflow-y-auto px-4 pb-2" style={{ backgroundColor: '#000000' }}>
         {/* User profile card */}
         <button
-          onClick={() => !state.isSignedIn && navigate('/menu/signin')}
+          onClick={() => !state.isSignedIn && navigate('/login')}
           disabled={state.isSignedIn}
           className="flex items-center gap-3 w-full h-[64px] px-4 rounded-xl text-left mb-3"
           style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
