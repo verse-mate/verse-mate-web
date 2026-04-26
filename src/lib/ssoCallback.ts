@@ -15,6 +15,7 @@ export type SSOErrorCode =
   | 'invalid_state'
   | 'missing_code'
   | 'auth_failed'
+  | 'oauth_error'
   | 'user_cancelled_authorize'
   | 'unknown_error'
   | string;
@@ -35,6 +36,8 @@ const SSO_ERROR_MESSAGES: Record<string, string> = {
   missing_code: 'The sign-in process was interrupted. Please try again.',
   auth_failed:
     'Authentication failed. Please try again or contact support if the problem persists.',
+  oauth_error:
+    'We couldn’t complete sign-in with that provider. Please try again or use a different sign-in method.',
   user_cancelled_authorize: 'You cancelled the sign-in process. Please try again when ready.',
   default: 'Something went wrong during sign-in. Please try again.',
 };

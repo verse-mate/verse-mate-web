@@ -41,3 +41,7 @@ public/workbox-*.js
 *.njsproj
 *.sln
 *.sw?
+
+# Playwright test artifacts
+test-results/
+playwright-report/
