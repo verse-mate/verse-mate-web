@@ -42,25 +42,39 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
 
+      # All `${{ github.* }}` and `${{ inputs.* }}` values flow through
+      # `env:` rather than inline `${{ }}` interpolation. GitHub Actions
+      # substitutes inline expressions verbatim into the script body, so
+      # commit messages containing backticks / parens / quotes (e.g.
+      # markdown identifiers like `tap(locator)`) cause bash syntax
+      # errors. Passing through env keeps the value a literal string.
       - name: Calculate and push tag
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          REF: ${{ github.ref }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+          BUMP_INPUT: ${{ inputs.bump_type }}
+          MANUAL_VERSION_INPUT: ${{ inputs.manual_version }}
         run: |
-          REF="${{ github.ref }}"
-          EVENT="${{ github.event_name }}"
-          echo "Triggered by $EVENT on $REF"
+          echo "Triggered by $EVENT_NAME on $REF"
 
           BUMP_TYPE="none"
 
-          if [ "$EVENT" = "workflow_dispatch" ]; then
-            BUMP_TYPE="${{ inputs.bump_type }}"
-          elif [ "$EVENT" = "push" ]; then
-            COMMIT_MSG="${{ github.event.head_commit.message }}"
-            echo "Commit message: $COMMIT_MSG"
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            BUMP_TYPE="$BUMP_INPUT"
+          elif [ "$EVENT_NAME" = "push" ]; then
+            # Only inspect the first line of the commit message — bump
+            # markers always live in the title, and the body can contain
+            # arbitrary text (including the literal strings "[patch]"
+            # etc. inside code blocks) that we don't want to react to.
+            COMMIT_TITLE=$(printf '%s\n' "$COMMIT_MSG" | head -n 1)
+            echo "Commit title: $COMMIT_TITLE"
 
-            if [[ "$COMMIT_MSG" == *"[major]"* ]]; then
+            if [[ "$COMMIT_TITLE" == *"[major]"* ]]; then
               BUMP_TYPE="major"
-            elif [[ "$COMMIT_MSG" == *"[minor]"* ]]; then
+            elif [[ "$COMMIT_TITLE" == *"[minor]"* ]]; then
               BUMP_TYPE="minor"
-            elif [[ "$COMMIT_MSG" == *"[patch]"* ]]; then
+            elif [[ "$COMMIT_TITLE" == *"[patch]"* ]]; then
               BUMP_TYPE="patch"
             fi
           fi
@@ -68,7 +82,7 @@ jobs:
           echo "Bump Type: $BUMP_TYPE"
 
           if [ "$BUMP_TYPE" = "none" ]; then
-            echo "No version bump tag in commit message — skipping."
+            echo "No version bump tag in commit title — skipping."
             exit 0
           fi
 
@@ -79,7 +93,7 @@ jobs:
           echo "Latest tag: $LATEST_TAG"
 
           if [ "$BUMP_TYPE" = "manual" ]; then
-            VERSION="${{ inputs.manual_version }}"
+            VERSION="$MANUAL_VERSION_INPUT"
             if [ -z "$VERSION" ]; then
               echo "::error::manual_version input is required when bump_type=manual"
               exit 1
