@@ -13,7 +13,7 @@ import {
   MostQuotedVerse,
   ExplanationType,
 } from './types';
-import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, ApiError, API_BASE_URL } from './api';
+import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, getRefreshToken, ApiError, API_BASE_URL } from './api';
 
 // ─── Helper: book id <-> name cache ───────────────────────────────────────
 let _booksCache: BibleBook[] | null = null;
@@ -567,6 +567,36 @@ export interface AuthUser {
  * Sign In) for a VerseMate accessToken + refreshToken. Uses the backend's
  * POST /auth/sso endpoint which accepts { provider, token, platform }.
  */
+function decodeJwtSub(token: string): string | null {
+  try {
+    const parts = token.split('.');
+    if (parts.length !== 3) return null;
+    const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
+    return typeof payload?.sub === 'string' ? payload.sub : null;
+  } catch {
+    return null;
+  }
+}
+
+async function identifyAfterAuth(
+  accessToken: string,
+  email: string,
+  method: 'google' | 'apple' | 'email',
+) {
+  const userId = decodeJwtSub(accessToken);
+  if (!userId) return;
+  try {
+    // Lazy import so the analytics module doesn't bloat the auth bundle
+    // for users who never sign in.
+    const { analytics } = await import('@/lib/analytics');
+    analytics.identify(userId, { email });
+    analytics.setUserProperties({ email, account_type: method, is_registered: true });
+    analytics.track('login_completed', { method });
+  } catch {
+    /* analytics is best-effort; never block auth on it */
+  }
+}
+
 export async function signInWithSSO(
   provider: 'google' | 'apple',
   token: string
@@ -578,7 +608,9 @@ export async function signInWithSSO(
   );
   setAccessToken(data.accessToken);
   if (data.refreshToken) setRefreshToken(data.refreshToken);
-  return fetchCurrentUser();
+  const user = await fetchCurrentUser();
+  identifyAfterAuth(data.accessToken, user.email, provider);
+  return user;
 }
 
 export async function login(email: string, password: string): Promise<AuthUser> {
@@ -589,7 +621,9 @@ export async function login(email: string, password: string): Promise<AuthUser> 
   );
   setAccessToken(data.accessToken);
   if (data.refreshToken) setRefreshToken(data.refreshToken);
-  return fetchCurrentUser();
+  const user = await fetchCurrentUser();
+  identifyAfterAuth(data.accessToken, user.email, 'email');
+  return user;
 }
 
 export async function signup(email: string, password: string, name?: string): Promise<AuthUser> {
@@ -600,14 +634,22 @@ export async function signup(email: string, password: string, name?: string): Pr
   );
   setAccessToken(data.accessToken);
   if (data.refreshToken) setRefreshToken(data.refreshToken);
-  return fetchCurrentUser();
+  const user = await fetchCurrentUser();
+  identifyAfterAuth(data.accessToken, user.email, 'email');
+  return user;
 }
 
 export async function logout(): Promise<void> {
+  // Backend /auth/logout requires the access token via Authorization
+  // header (api.post adds it automatically). Body is optional — we send
+  // refreshToken when we have it so the server can revoke it as well.
+  // (Verified live: omitting the auth header returns 401 even with body;
+  // including the auth header returns 200 with or without body.)
+  const refreshToken = getRefreshToken();
   try {
-    await api.post('/auth/logout');
+    await api.post('/auth/logout', refreshToken ? { refreshToken } : undefined);
   } catch {
-    /* ignore */
+    /* server-side logout is best-effort */
   }
   clearTokens();
 }
