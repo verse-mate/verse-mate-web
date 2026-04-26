@@ -27,7 +27,13 @@
     // off, Cloudflare serves the static index.html for `/` before our
     // Worker can inspect query params, so /?bookId=1&verseId=1 would
     // serve the SPA instead of redirecting to /bible/genesis/1.
-    "run_worker_first": true
+    "run_worker_first": true,
+    // Tell CF Assets this is an SPA: any path with no matching asset
+    // serves /index.html (200), not a 404 / redirect to /. Without this,
+    // /bible/genesis/1 → 307 Location: / which loops because / itself
+    // also has no asset rules so it 307s back, and React Router never
+    // gets a chance to handle the route.
+    "not_found_handling": "single-page-application"
   },
 
   "dev": {
