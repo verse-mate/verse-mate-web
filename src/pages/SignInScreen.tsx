@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import { Mail, ArrowLeft } from 'lucide-react';
@@ -6,10 +6,8 @@ import ScreenHeader from '@/components/ScreenHeader';
 import {
   login as apiLogin,
   signup as apiSignup,
-  signInWithSSO,
   API_BASE_URL,
 } from '@/services/bibleService';
-import { renderGoogleButton } from '@/services/googleAuth';
 
 type Screen = 'providers' | 'email';
 type Mode = 'signin' | 'signup';
@@ -33,39 +31,20 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
-  const googleBtnRef = useRef<HTMLDivElement | null>(null);
-  const [googleReady, setGoogleReady] = useState(false);
-
-  useEffect(() => {
-    if (screen !== 'providers' || !googleBtnRef.current) return;
-    let cancelled = false;
-    renderGoogleButton(
-      googleBtnRef.current,
-      async idToken => {
-        if (cancelled) return;
-        setError(null);
-        setSubmitting(true);
-        try {
-          const user = await signInWithSSO('google', idToken);
-          dispatch({ type: 'SET_SIGNED_IN', value: true, userId: user.id });
-          navigate('/read');
-        } catch (err: unknown) {
-          setError(
-            err instanceof Error ? err.message : 'Google sign-in failed on the server'
-          );
-        } finally {
-          setSubmitting(false);
-        }
-      },
-      err => {
-        if (cancelled) return;
-        setError(err.message);
-      }
-    ).then(() => !cancelled && setGoogleReady(true));
-    return () => {
-      cancelled = true;
-    };
-  }, [screen, dispatch, navigate]);
+  // Both Google and Apple use the redirect flow:
+  //   user clicks → browser navigates to backend's /auth/sso/<provider>/redirect
+  //   → backend handles OAuth handshake with provider
+  //   → backend redirects to /auth/callback/<provider>?accessToken=…&refreshToken=…
+  //   → AuthCallback (src/components/routes/AuthCallback.tsx) stores cookies
+  //     + dispatches SET_SIGNED_IN + navigates to "/"
+  //
+  // The earlier Google Identity Services popup approach can't work because
+  // the backend's /auth/sso endpoint expects an authorization code (not an
+  // ID token) when platform=web — the GIS popup returns an ID token, so
+  // backend's exchange with Google fails with 401.
+  const handleGoogleSSO = () => {
+    window.location.href = `${API_BASE_URL}/auth/sso/google/redirect`;
+  };
 
   const handleAppleSSO = () => {
     window.location.href = `${API_BASE_URL}/auth/sso/apple/redirect`;
@@ -198,22 +177,17 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
         </div>
 
         <div className="flex-1 flex flex-col justify-center space-y-3">
-          <div
-            ref={googleBtnRef}
-            className="w-full flex items-center justify-center min-h-[48px]"
-          />
-          {!googleReady && (
-            <a
-              href={`${API_BASE_URL}/auth/sso/google/redirect`}
-              className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] no-underline"
-              style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', color: '#1B1B1B' }}
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.05 20.28c-1.74.97-3.28 1.22-5.05 1.22-4.13 0-8.18-2.79-8.18-8.18S7.87 5 12 5c2.18 0 4.04.78 5.52 2.08l-2.24 2.16c-.6-.57-1.65-1.24-3.28-1.24-2.81 0-5.1 2.33-5.1 5.2s2.29 5.2 5.1 5.2c3.26 0 4.49-2.34 4.68-3.55H12v-2.84h7.82c.08.47.13.94.13 1.56 0 3.85-2.57 6.71-6.9 6.71z" />
-              </svg>
-              Continue with Google
-            </a>
-          )}
+          <button
+            onClick={handleGoogleSSO}
+            disabled={submitting}
+            className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] disabled:opacity-60"
+            style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', color: '#1B1B1B' }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.05 20.28c-1.74.97-3.28 1.22-5.05 1.22-4.13 0-8.18-2.79-8.18-8.18S7.87 5 12 5c2.18 0 4.04.78 5.52 2.08l-2.24 2.16c-.6-.57-1.65-1.24-3.28-1.24-2.81 0-5.1 2.33-5.1 5.2s2.29 5.2 5.1 5.2c3.26 0 4.49-2.34 4.68-3.55H12v-2.84h7.82c.08.47.13.94.13 1.56 0 3.85-2.57 6.71-6.9 6.71z" />
+            </svg>
+            Continue with Google
+          </button>
           <button
             onClick={handleAppleSSO}
             disabled={submitting}
