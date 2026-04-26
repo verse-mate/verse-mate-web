@@ -130,11 +130,11 @@ export default function HighlightsScreen() {
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
-      <ScreenHeader title="Highlights" onBack={() => navigate('/menu')} />
+      <ScreenHeader title="Highlights" onBack={() => navigate('/menu')} backTestId="highlights-back-button" />
 
-      <div style={listStyle}>
+      <div data-testid="highlights-list" style={listStyle}>
         {groupedHighlights.length === 0 ? (
-          <div style={{ padding: '32px 16px', textAlign: 'center', color: 'rgba(255,255,255,0.6)', fontStyle: 'italic', fontSize: 14 }}>
+          <div data-testid="highlights-empty-state" style={{ padding: '32px 16px', textAlign: 'center', color: 'rgba(255,255,255,0.6)', fontStyle: 'italic', fontSize: 14 }}>
             <Highlighter size={36} style={{ margin: '0 auto 8px', color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
             <p style={{ fontSize: 13 }}>No highlights yet</p>
           </div>
@@ -144,6 +144,7 @@ export default function HighlightsScreen() {
               <button
                 key={`${g.bookId}:${g.chapter}`}
                 onClick={() => openChapter(g.book, g.chapter, g.bookId)}
+                data-testid={`chapter-group-${g.bookId}-${g.chapter}`}
                 style={{
                   ...chapterGroupStyle,
                   padding: '12px 16px',

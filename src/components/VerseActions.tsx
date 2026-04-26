@@ -93,8 +93,8 @@ export default function VerseActions({ verse, onClose }: Props) {
 
   return (
     <>
-      <div className="absolute inset-0 z-40 bg-foreground/20" onClick={onClose} />
-      <div className="absolute inset-x-0 bottom-0 z-50 bg-card rounded-t-2xl shadow-lg border-t border-border animate-slide-up">
+      <div data-testid="verse-actions-backdrop" className="absolute inset-0 z-40 bg-foreground/20" onClick={onClose} />
+      <div data-testid="verse-actions-sheet" className="absolute inset-x-0 bottom-0 z-50 bg-card rounded-t-2xl shadow-lg border-t border-border animate-slide-up">
         {/* Drag handle */}
         <div className="flex justify-center pt-2 pb-1">
           <div className="w-8 h-1 rounded-full bg-muted-foreground/30" />
@@ -103,33 +103,33 @@ export default function VerseActions({ verse, onClose }: Props) {
           <h3 className="font-semibold text-foreground text-[15px]">
             {state.book} {state.chapter}:{verse}
           </h3>
-          <button onClick={onClose} className="p-2 rounded-full hover:bg-secondary">
+          <button onClick={onClose} data-testid="verse-actions-close" className="p-2 rounded-full hover:bg-secondary">
             <X size={18} />
           </button>
         </div>
 
         <div className="grid grid-cols-3 gap-1 p-3">
-          <button onClick={toggleBookmark} className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
+          <button onClick={toggleBookmark} data-testid="verse-action-bookmark" className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
             <Bookmark size={20} className={isBookmarked ? 'fill-accent text-accent' : 'text-foreground'} />
             <span className="text-[11px] text-muted-foreground">{isBookmarked ? 'Unbookmark' : 'Bookmark'}</span>
           </button>
-          <button onClick={() => setShowAddNote(true)} className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
+          <button onClick={() => setShowAddNote(true)} data-testid="verse-action-note" className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
             <StickyNote size={20} className="text-foreground" />
             <span className="text-[11px] text-muted-foreground">Note</span>
           </button>
-          <button onClick={copyVerse} className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
+          <button onClick={copyVerse} data-testid="verse-action-copy" className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
             <Copy size={20} className="text-foreground" />
             <span className="text-[11px] text-muted-foreground">Copy</span>
           </button>
-          <button onClick={viewCommentary} className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
+          <button onClick={viewCommentary} data-testid="verse-action-commentary" className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
             <BookOpen size={20} className="text-foreground" />
             <span className="text-[11px] text-muted-foreground">Commentary</span>
           </button>
-          <button onClick={viewInsight} className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
+          <button onClick={viewInsight} data-testid="verse-action-insight" className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
             <Lightbulb size={20} className="text-foreground" />
             <span className="text-[11px] text-muted-foreground">Insight</span>
           </button>
-          <button className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
+          <button data-testid="verse-action-highlight" className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
             <Highlighter size={20} className="text-foreground" />
             <span className="text-[11px] text-muted-foreground">Highlight</span>
           </button>
@@ -141,16 +141,19 @@ export default function VerseActions({ verse, onClose }: Props) {
             <button
               key={c.color}
               onClick={() => addHighlightFn(c.color)}
+              data-testid={`color-button-${c.color}`}
               className={`w-8 h-8 rounded-full border-2 ${
                 existingHighlight?.color === c.color ? 'border-accent' : 'border-transparent'
               } transition-all hover:scale-110`}
               style={{ backgroundColor: c.bgColor }}
               title={c.label}
+              aria-label={c.label}
             />
           ))}
           {existingHighlight && (
             <button
               onClick={async () => { await removeHighlight(existingHighlight.id); onClose(); }}
+              data-testid="verse-action-remove-highlight"
               className="text-[11px] text-destructive ml-auto"
             >
               Remove

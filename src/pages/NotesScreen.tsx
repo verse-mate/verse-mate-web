@@ -117,11 +117,11 @@ export default function NotesScreen() {
   if (!isChapterView) {
     return (
       <div className="flex flex-col h-full relative" style={{ backgroundColor: '#1B1B1B' }}>
-        <ScreenHeader title="Notes" onBack={handleListBack} />
+        <ScreenHeader title="Notes" onBack={handleListBack} backTestId="notes-back-button" />
 
-        <div style={listContainerStyle}>
+        <div data-testid="notes-list" style={listContainerStyle}>
           {groups.length === 0 ? (
-            <div style={{ padding: 32, textAlign: 'center', color: 'rgba(255,255,255,0.6)', fontStyle: 'italic' }}>
+            <div data-testid="notes-empty-state" style={{ padding: 32, textAlign: 'center', color: 'rgba(255,255,255,0.6)', fontStyle: 'italic' }}>
               <FileText size={48} style={{ margin: '0 auto 12px', color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
               <p style={{ fontSize: 14 }}>No notes yet</p>
               <p style={{ fontSize: 12, marginTop: 4, color: 'rgba(255,255,255,0.6)', maxWidth: 240, margin: '4px auto 0' }}>
@@ -134,6 +134,7 @@ export default function NotesScreen() {
                 <button
                   key={`${g.bookId}:${g.chapter}`}
                   onClick={() => openChapter(g.book, g.chapter, g.bookId)}
+                  data-testid={`chapter-group-${g.bookId}-${g.chapter}`}
                   style={noteItemStyle}
                 >
                   <FileText size={18} style={{ color: '#E7E7E7', flexShrink: 0 }} strokeWidth={1.75} />
@@ -158,17 +159,19 @@ export default function NotesScreen() {
       <ScreenHeader
         title={`${activeBook} ${activeChapter}`}
         onBack={handleChapterBack}
+        backTestId="notes-chapter-back-button"
       />
 
-      <div style={listContainerStyle}>
+      <div data-testid="notes-chapter-list" style={listContainerStyle}>
         {notesForChapter.length === 0 ? (
           <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.6)', padding: '32px 16px', fontSize: 14, fontStyle: 'italic' }}>No notes here yet.</p>
         ) : (
           <>
             {notesForChapter.map(note => (
-              <div key={note.id} style={noteItemStyle}>
+              <div key={note.id} data-testid={`note-item-${note.id}`} style={noteItemStyle}>
                 <button
                   onClick={() => setEditingNote(note)}
+                  data-testid={`note-edit-${note.id}`}
                   style={{ background: 'none', border: 'none', cursor: 'pointer', flex: 1, textAlign: 'left', padding: '8px 12px', borderRadius: 6, minWidth: 0 }}
                 >
                   <span style={{ fontSize: 14, color: '#E7E7E7', lineHeight: 1.5, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
@@ -181,6 +184,7 @@ export default function NotesScreen() {
                     setOptionsNote(note);
                   }}
                   aria-label="Note options"
+                  data-testid={`note-options-${note.id}`}
                   style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4, borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'rgba(255,255,255,0.6)' }}
                 >
                   <MoreHorizontal size={18} strokeWidth={1.5} />
