@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import { useApp } from '@/contexts/AppContext';
+import { useRightPanel } from '@/contexts/RightPanelContext';
 import { Mail, ArrowLeft } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import {
@@ -24,6 +25,11 @@ interface SignInScreenProps {
 export default function SignInScreen({ initialMode = 'signin' }: SignInScreenProps = {}) {
   const navigate = useNavigate();
   const { dispatch } = useApp();
+  // When SignInScreen is rendered inside the desktop right panel, the
+  // panel manages its own view state — calling navigate('/menu') just
+  // affects the URL without closing the panel. Use rightPanel.goBack()
+  // in that case so the right panel returns to its default (commentary).
+  const rightPanel = useRightPanel();
   const [screen, setScreen] = useState<Screen>('providers');
   const [mode, setMode] = useState<Mode>(initialMode);
   const [email, setEmail] = useState('');
@@ -68,11 +74,16 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
         userEmail: user.email,
         userAvatarUrl: user.avatarUrl,
       });
-      // Land on /menu where the profile pic + name are visible — gives the
-      // user clear "I'm signed in" feedback. Toast confirms the action
-      // since some menu transitions are subtle.
+      // Toast confirms the action; on desktop the right panel goes back
+      // to its default (commentary), revealing the now-signed-in menu in
+      // the center. On mobile, navigate to /menu where the profile pic
+      // + name are visible.
       toast.success(mode === 'signin' ? 'Signed in' : 'Account created');
-      navigate('/menu');
+      if (rightPanel?.isRightPanel) {
+        rightPanel.goBack();
+      } else {
+        navigate('/menu');
+      }
     } catch (err: unknown) {
       const msg =
         err && typeof err === 'object' && 'status' in err
