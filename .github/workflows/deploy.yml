@@ -96,6 +96,8 @@ jobs:
         id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
+          # Pin to v4 — v3 doesn't parse wrangler.jsonc (only .toml)
+          wranglerVersion: "4.85.0"
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy --env ${{ env.CLOUDFLARE_ENV }}
