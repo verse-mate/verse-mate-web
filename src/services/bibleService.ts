@@ -13,7 +13,7 @@ import {
   MostQuotedVerse,
   ExplanationType,
 } from './types';
-import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, ApiError, API_BASE_URL } from './api';
+import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, getRefreshToken, ApiError, API_BASE_URL } from './api';
 
 // ─── Helper: book id <-> name cache ───────────────────────────────────────
 let _booksCache: BibleBook[] | null = null;
@@ -640,10 +640,16 @@ export async function signup(email: string, password: string, name?: string): Pr
 }
 
 export async function logout(): Promise<void> {
+  // Backend /auth/logout requires the access token via Authorization
+  // header (api.post adds it automatically). Body is optional — we send
+  // refreshToken when we have it so the server can revoke it as well.
+  // (Verified live: omitting the auth header returns 401 even with body;
+  // including the auth header returns 200 with or without body.)
+  const refreshToken = getRefreshToken();
   try {
-    await api.post('/auth/logout');
+    await api.post('/auth/logout', refreshToken ? { refreshToken } : undefined);
   } catch {
-    /* ignore */
+    /* server-side logout is best-effort */
   }
   clearTokens();
 }

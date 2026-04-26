@@ -22,7 +22,12 @@
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
-    "run_worker_first": false
+    // MUST be true: our Worker fetch handler implements legacy URL → slug
+    // 301 redirects (worker.js: checkLegacyRedirects). With run_worker_first
+    // off, Cloudflare serves the static index.html for `/` before our
+    // Worker can inspect query params, so /?bookId=1&verseId=1 would
+    // serve the SPA instead of redirecting to /bible/genesis/1.
+    "run_worker_first": true
   },
 
   "dev": {
