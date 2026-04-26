@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
 import { useApp } from '@/contexts/AppContext';
 import { Mail, ArrowLeft } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
@@ -59,8 +60,19 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
     setSubmitting(true);
     try {
       const user = mode === 'signin' ? await apiLogin(email, password) : await apiSignup(email, password, name);
-      dispatch({ type: 'SET_SIGNED_IN', value: true, userId: user.id });
-      navigate('/read');
+      dispatch({
+        type: 'SET_SIGNED_IN',
+        value: true,
+        userId: user.id,
+        userName: user.name,
+        userEmail: user.email,
+        userAvatarUrl: user.avatarUrl,
+      });
+      // Land on /menu where the profile pic + name are visible — gives the
+      // user clear "I'm signed in" feedback. Toast confirms the action
+      // since some menu transitions are subtle.
+      toast.success(mode === 'signin' ? 'Signed in' : 'Account created');
+      navigate('/menu');
     } catch (err: unknown) {
       const msg =
         err && typeof err === 'object' && 'status' in err

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useApp } from '@/contexts/AppContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {
   fetchChapter,
   fetchBooks,
@@ -15,10 +15,27 @@ import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
 import SelectionToolbar from '@/components/SelectionToolbar';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { getBookSlug } from '@/lib/bookSlugs';
 
 export default function ReadingScreen() {
   const { state, dispatch, addBookmark, removeBookmark } = useApp();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Sync state.bookId / state.chapter → URL (canonical /bible/<slug>/<chapter>).
+  // BibleRoute (src/components/routes/BibleRoute.tsx) does the inverse on
+  // direct hits — together they keep state and URL aligned in both
+  // directions, so book selector / chapter arrows / verse links all
+  // update the address bar to a shareable, indexable URL.
+  useEffect(() => {
+    if (!state.bookId || !state.chapter) return;
+    const slug = getBookSlug(state.bookId);
+    if (!slug) return;
+    const target = `/bible/${slug}/${state.chapter}`;
+    if (location.pathname !== target) {
+      navigate(target, { replace: true });
+    }
+  }, [state.bookId, state.chapter, location.pathname, navigate]);
   const [chapter, setChapter] = useState<Chapter | null>(null);
   const [showBookSelector, setShowBookSelector] = useState(false);
   const [longPressVerse, setLongPressVerse] = useState<number | null>(null);
