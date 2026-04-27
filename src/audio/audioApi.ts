@@ -7,10 +7,13 @@
  *
  * Per br-audio-017 the audio endpoints intentionally use raw fetch
  * (long-poll + AbortController) rather than the generated SDK — easier
- * timeout + cancellation control. We piggyback on api.ts for the
- * auth header (Bearer from access-token cookie) and base URL.
+ * timeout + cancellation control. We route through `fetchWithAuth` so
+ * the access token is attached AND auto-refreshed on 401, matching the
+ * rest of the app. Without that retry, an expired access token would
+ * silently 401 → flip the chip to GuestScopeExceededError, and the user
+ * would see "Sign in to listen" even though they ARE signed in.
  */
-import { API_BASE_URL, getAccessToken } from '@/services/api';
+import { API_BASE_URL, fetchWithAuth } from '@/services/api';
 
 const POLL_INTERVAL_MS = 2000;
 const POLL_TIMEOUT_MS = 30_000;
@@ -48,19 +51,17 @@ interface JobStatusResponse {
  * Thrown when a guest (br-audio-013) requests audio for a chapter
  * outside their allowed scope. Lets the UI render a sign-in CTA
  * instead of a generic error message.
+ *
+ * Surfaced only when fetchWithAuth could NOT refresh into a valid
+ * session (no refresh token, refresh returned non-OK, or refresh
+ * succeeded but the retry still came back 401). All three mean the
+ * user is effectively a guest from the backend's perspective.
  */
 export class GuestScopeExceededError extends Error {
   constructor() {
     super('Sign in to listen to this chapter');
     this.name = 'GuestScopeExceededError';
   }
-}
-
-function authHeaders(): HeadersInit {
-  const token = getAccessToken();
-  const headers: Record<string, string> = {};
-  if (token) headers.Authorization = `Bearer ${token}`;
-  return headers;
 }
 
 function audioUrl(
@@ -85,10 +86,10 @@ export async function requestAudio(args: {
   language?: string;
   signal?: AbortSignal;
 }): Promise<{ status: number; body: AudioResponse }> {
-  const res = await fetch(audioUrl(args.explanationId, args.voice, args.language), {
-    headers: authHeaders(),
-    signal: args.signal,
-  });
+  const res = await fetchWithAuth(
+    audioUrl(args.explanationId, args.voice, args.language),
+    { signal: args.signal },
+  );
   const body =
     res.status === 204 ? {} : ((await res.json()) as AudioResponse);
   return { status: res.status, body };
@@ -98,9 +99,9 @@ async function pollJob(args: {
   jobId: string;
   signal?: AbortSignal;
 }): Promise<JobStatusResponse['job']> {
-  const res = await fetch(
+  const res = await fetchWithAuth(
     `${API_BASE_URL}/bible/explanation/audio/jobs/${encodeURIComponent(args.jobId)}`,
-    { headers: authHeaders(), signal: args.signal },
+    { signal: args.signal },
   );
   if (!res.ok) throw new Error(`Job status failed: HTTP ${res.status}`);
   const body = (await res.json()) as JobStatusResponse;
@@ -119,7 +120,9 @@ export async function fetchAudioWithPolling(args: {
 }): Promise<ReaderAudio> {
   const initial = await requestAudio(args);
   if (initial.status === 200 && initial.body.audio) return initial.body.audio;
-  // br-audio-013: guests can only request Genesis 1.
+  // br-audio-013: guests can only request Genesis 1. fetchWithAuth
+  // already attempted a refresh, so a 401 here means the user is
+  // genuinely outside the allowed scope.
   if (initial.status === 401) throw new GuestScopeExceededError();
   if (initial.status !== 202 || !initial.body.job) {
     throw new Error(`Unexpected audio response: ${initial.status}`);
@@ -141,9 +144,7 @@ export async function fetchAudioWithPolling(args: {
 export async function fetchProgress(
   explanationId: number,
 ): Promise<ResumeProgress | null> {
-  const res = await fetch(progressUrl(explanationId), {
-    headers: authHeaders(),
-  });
+  const res = await fetchWithAuth(progressUrl(explanationId));
   if (res.status === 404 || !res.ok) return null;
   return (await res.json()) as ResumeProgress;
 }
@@ -154,9 +155,9 @@ export async function saveProgress(args: {
   durationSeconds: number;
   reason: SaveReason;
 }): Promise<void> {
-  await fetch(progressUrl(args.explanationId), {
+  await fetchWithAuth(progressUrl(args.explanationId), {
     method: 'POST',
-    headers: { ...authHeaders(), 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       position_seconds: args.positionSeconds,
       duration_seconds: args.durationSeconds,
