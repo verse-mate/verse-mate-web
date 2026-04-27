@@ -112,10 +112,16 @@ export async function fetchChapter(
 // The API returns rich Markdown. Summary and Detailed come back as single
 // chapter-level blocks. By Line uses "## Genesis 1:1" style headings per verse.
 
+interface ExplanationEntry {
+  text: string;
+  /** Source explanation row id — null when the API didn't surface one. */
+  id: number | null;
+}
+
 interface ExplanationCache {
-  summary: string;
-  byline: string;
-  detailed: string;
+  summary: ExplanationEntry;
+  byline: ExplanationEntry;
+  detailed: ExplanationEntry;
   perVerse: Map<number, string>; // verse number -> markdown section
 }
 
@@ -132,10 +138,10 @@ async function loadExplanations(bookId: number, chapter: number): Promise<Explan
       fetchExplanation(bookId, chapter, 'detailed'),
     ]);
     return {
-      summary: summary ?? '',
-      byline: byline ?? '',
-      detailed: detailed ?? '',
-      perVerse: splitBylineByVerse(byline ?? ''),
+      summary,
+      byline,
+      detailed,
+      perVerse: splitBylineByVerse(byline.text),
     };
   })();
   _explanationCache.set(key, promise);
@@ -148,12 +154,13 @@ export async function fetchCommentary(book: string, chapter: number): Promise<Co
   try {
     const cache = await loadExplanations(bookId, chapter);
     const result: Commentary[] = [];
-    if (cache.summary) {
+    if (cache.summary.text) {
       result.push({
         verse: 0,
         summary: 'Chapter Summary',
-        detail: cache.summary,
+        detail: cache.summary.text,
         type: 'summary',
+        explanationId: cache.summary.id,
       });
     }
     for (const [verse, body] of cache.perVerse.entries()) {
@@ -162,14 +169,17 @@ export async function fetchCommentary(book: string, chapter: number): Promise<Co
         summary: `${book} ${chapter}:${verse}`,
         detail: body,
         type: 'byline',
+        // Per-verse byline shares the parent byline explanation_id.
+        explanationId: cache.byline.id,
       });
     }
-    if (cache.detailed) {
+    if (cache.detailed.text) {
       result.push({
         verse: -1, // sentinel: chapter-level detailed
         summary: 'Detailed Commentary',
-        detail: cache.detailed,
+        detail: cache.detailed.text,
         type: 'detailed',
+        explanationId: cache.detailed.id,
       });
     }
     return result;
@@ -182,7 +192,7 @@ async function fetchExplanation(
   bookId: number,
   chapter: number,
   explanationType: ExplanationType
-): Promise<string | null> {
+): Promise<ExplanationEntry> {
   try {
     const data = await api.get<any>(
       `/bible/book/explanation/${bookId}/${chapter}`,
@@ -190,9 +200,15 @@ async function fetchExplanation(
       { auth: false }
     );
     const text = data?.explanation?.explanation;
-    return typeof text === 'string' ? text : null;
+    const rawId = data?.explanation?.explanation_id;
+    return {
+      text: typeof text === 'string' ? text : '',
+      // Treat 0 / falsy as "unknown id" — local-fallback paths use that
+      // sentinel and AudioInlineEntry must not request audio for it.
+      id: typeof rawId === 'number' && rawId > 0 ? rawId : null,
+    };
   } catch {
-    return null;
+    return { text: '', id: null };
   }
 }
 

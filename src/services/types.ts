@@ -85,6 +85,11 @@ export interface Commentary {
   summary: string;
   detail: string;
   type?: ExplanationType;
+  /**
+   * Source explanation row id — surfaced for AudioInlineEntry. Null
+   * when the source (legacy fallback path) doesn't carry one.
+   */
+  explanationId?: number | null;
 }
 
 export interface VerseInsight {
