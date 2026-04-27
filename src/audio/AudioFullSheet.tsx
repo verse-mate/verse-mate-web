@@ -5,11 +5,16 @@
  * Space toggles play/pause when focus is inside the sheet.
  *
  * z-index 1002 — above the dock (1001) + the desktop split-view content.
+ *
+ * Theming: explicit dark colors (see ./theme) so the sheet matches the
+ * #1B1B1B reader shell. Tailwind ShadCN tokens render light here
+ * because the app doesn't activate `.dark` mode.
  */
 import { ChevronDown, ExternalLink, Pause, Play } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 import { useAudioPlayer } from './AudioPlayerContext';
 import { AudioResumeChip } from './AudioResumeChip';
+import { COLORS, FONT } from './theme';
 import { useAudioProgress } from './useAudioProgress';
 
 const SPEEDS = [0.75, 1, 1.25, 1.5, 2];
@@ -28,6 +33,121 @@ function getFocusableElements(root: HTMLElement): HTMLElement[] {
   );
 }
 
+const sheetStyle: React.CSSProperties = {
+  position: 'fixed',
+  inset: 0,
+  zIndex: 1002,
+  display: 'flex',
+  flexDirection: 'column',
+  background: COLORS.surface,
+  color: COLORS.text,
+  padding: '24px 16px',
+  paddingTop: 'max(24px, env(safe-area-inset-top))',
+  paddingBottom: 'max(24px, env(safe-area-inset-bottom))',
+  fontFamily: FONT,
+};
+
+const headerStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+};
+
+const iconBtnBase: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: 44,
+  height: 44,
+  minWidth: 44,
+  borderRadius: 8,
+  border: 'none',
+  background: 'transparent',
+  color: COLORS.text,
+  cursor: 'pointer',
+  transition: 'background 120ms ease',
+};
+
+const linkStyle: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 6,
+  minHeight: 44,
+  padding: '0 8px',
+  color: COLORS.accent,
+  textDecoration: 'none',
+  fontFamily: FONT,
+};
+
+const mainStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: 20,
+  flex: 1,
+};
+
+const titleStyle: React.CSSProperties = {
+  fontSize: 20,
+  fontWeight: 600,
+  textTransform: 'capitalize',
+  textAlign: 'center',
+  color: COLORS.text,
+};
+
+const subtitleStyle: React.CSSProperties = {
+  fontSize: 14,
+  color: COLORS.textMuted,
+  textAlign: 'center',
+};
+
+const scrubberStyle: React.CSSProperties = {
+  width: '100%',
+  maxWidth: 480,
+  accentColor: COLORS.accent,
+};
+
+const skipBtnStyle: React.CSSProperties = {
+  ...iconBtnBase,
+  fontSize: 14,
+  fontWeight: 600,
+  padding: '0 12px',
+  width: 'auto',
+};
+
+const playBtnStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: 64,
+  height: 64,
+  borderRadius: 999,
+  border: 'none',
+  background: COLORS.accent,
+  color: COLORS.accentText,
+  cursor: 'pointer',
+  boxShadow: '0 4px 14px rgba(176,154,109,0.35)',
+  transition: 'background 120ms ease, transform 120ms ease',
+};
+
+const speedRowStyle: React.CSSProperties = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  gap: 8,
+};
+
+const elapsedStyle: React.CSSProperties = {
+  fontSize: 14,
+  color: COLORS.textMuted,
+  fontVariantNumeric: 'tabular-nums',
+};
+
+function hover(e: React.MouseEvent<HTMLButtonElement>, on: boolean) {
+  e.currentTarget.style.background = on ? COLORS.bgHover : 'transparent';
+}
+
 export function AudioFullSheet() {
   const player = useAudioPlayer();
   const open = player.fullSheetOpen;
@@ -37,7 +157,6 @@ export function AudioFullSheet() {
 
   const { resumeProgress, consumeResume, dismissResume } = useAudioProgress();
 
-  // Focus trap + Esc + Space.
   useEffect(() => {
     if (!open || !sheetRef.current) return;
     previouslyFocusedRef.current = document.activeElement as HTMLElement | null;
@@ -82,37 +201,41 @@ export function AudioFullSheet() {
 
   if (!open || !track) return null;
 
+  const playing = player.playbackState === 'playing';
+
   return (
     <div
       ref={sheetRef}
       role="dialog"
       aria-modal="true"
       aria-label="Full audio player"
-      className="fixed inset-0 z-[1002] flex flex-col bg-background px-4 py-6"
+      style={sheetStyle}
     >
-      <header className="flex items-center justify-between">
+      <header style={headerStyle}>
         <button
           type="button"
           aria-label="Close full player"
-          className="flex h-11 w-11 items-center justify-center rounded-md text-foreground hover:bg-accent"
+          style={iconBtnBase}
           onClick={() => player.closeFullSheet()}
+          onMouseEnter={(e) => hover(e, true)}
+          onMouseLeave={(e) => hover(e, false)}
         >
           <ChevronDown size={24} />
         </button>
         <a
           href={track.source_href}
           aria-label="Go to source explanation"
-          className="inline-flex min-h-[44px] items-center gap-1 text-primary hover:underline"
+          style={linkStyle}
           onClick={() => player.closeFullSheet()}
         >
           Go to source <ExternalLink size={16} />
         </a>
       </header>
 
-      <main className="flex flex-1 flex-col items-center justify-center gap-5">
-        <div className="text-center">
-          <div className="text-xl font-semibold capitalize">{track.explanation_type}</div>
-          <div className="text-sm text-muted-foreground">Chapter {track.chapter_number}</div>
+      <main style={mainStyle}>
+        <div style={{ textAlign: 'center' }}>
+          <div style={titleStyle}>{track.explanation_type}</div>
+          <div style={subtitleStyle}>Chapter {track.chapter_number}</div>
         </div>
 
         <input
@@ -123,37 +246,47 @@ export function AudioFullSheet() {
           value={player.elapsedSeconds}
           onChange={(e) => player.seek(Number(e.target.value))}
           aria-label="Playback position"
-          className="w-full max-w-[480px]"
+          style={scrubberStyle}
         />
 
-        <div className="flex items-center gap-5">
+        <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
           <button
             type="button"
             aria-label="Rewind 15 seconds"
-            className="flex h-11 min-w-[44px] items-center justify-center rounded-md text-sm font-semibold text-foreground hover:bg-accent"
+            style={skipBtnStyle}
             onClick={() => player.seekRelative(-15)}
+            onMouseEnter={(e) => hover(e, true)}
+            onMouseLeave={(e) => hover(e, false)}
           >
             -15s
           </button>
           <button
             type="button"
-            aria-label={player.playbackState === 'playing' ? 'Pause' : 'Play'}
-            className="flex h-16 w-16 items-center justify-center rounded-full bg-card text-foreground shadow-md hover:bg-accent"
-            onClick={() => (player.playbackState === 'playing' ? player.pause() : player.play())}
+            aria-label={playing ? 'Pause' : 'Play'}
+            style={playBtnStyle}
+            onClick={() => (playing ? player.pause() : player.play())}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = COLORS.accentHover;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = COLORS.accent;
+            }}
           >
-            {player.playbackState === 'playing' ? <Pause size={32} /> : <Play size={32} />}
+            {playing ? <Pause size={32} /> : <Play size={32} />}
           </button>
           <button
             type="button"
             aria-label="Forward 15 seconds"
-            className="flex h-11 min-w-[44px] items-center justify-center rounded-md text-sm font-semibold text-foreground hover:bg-accent"
+            style={skipBtnStyle}
             onClick={() => player.seekRelative(15)}
+            onMouseEnter={(e) => hover(e, true)}
+            onMouseLeave={(e) => hover(e, false)}
           >
             +15s
           </button>
         </div>
 
-        {resumeProgress && player.playbackState !== 'playing' ? (
+        {resumeProgress && !playing ? (
           <AudioResumeChip
             progress={resumeProgress}
             onResume={() => consumeResume()}
@@ -161,7 +294,7 @@ export function AudioFullSheet() {
           />
         ) : null}
 
-        <div className="flex flex-wrap justify-center gap-2">
+        <div style={speedRowStyle}>
           {SPEEDS.map((s) => {
             const active = player.speed === s;
             return (
@@ -170,12 +303,27 @@ export function AudioFullSheet() {
                 type="button"
                 aria-pressed={active}
                 aria-label={`Set playback speed to ${s} times`}
-                className={`min-h-[44px] min-w-[44px] rounded-md border text-sm ${
-                  active
-                    ? 'border-primary bg-primary font-bold text-primary-foreground'
-                    : 'border-border bg-background text-foreground hover:bg-accent'
-                }`}
+                style={{
+                  minHeight: 44,
+                  minWidth: 44,
+                  padding: '0 12px',
+                  borderRadius: 8,
+                  border: `1px solid ${active ? COLORS.accent : COLORS.border}`,
+                  background: active ? COLORS.accent : 'transparent',
+                  color: active ? COLORS.accentText : COLORS.text,
+                  fontWeight: active ? 700 : 500,
+                  fontSize: 14,
+                  fontFamily: FONT,
+                  cursor: 'pointer',
+                  transition: 'background 120ms ease, color 120ms ease',
+                }}
                 onClick={() => player.setSpeed(s)}
+                onMouseEnter={(e) => {
+                  if (!active) e.currentTarget.style.background = COLORS.bgHover;
+                }}
+                onMouseLeave={(e) => {
+                  if (!active) e.currentTarget.style.background = 'transparent';
+                }}
               >
                 {s}×
               </button>
@@ -183,7 +331,7 @@ export function AudioFullSheet() {
           })}
         </div>
 
-        <div className="text-sm text-muted-foreground">
+        <div style={elapsedStyle}>
           {formatTime(player.elapsedSeconds)} / {formatTime(player.durationSeconds)}
         </div>
       </main>
