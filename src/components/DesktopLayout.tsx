@@ -23,6 +23,7 @@ import {
 import ShareIcon from '@/components/ShareIcon';
 import BookSelector from '@/components/BookSelector';
 import { RightPanelProvider } from '@/contexts/RightPanelContext';
+import { AudioInlineEntry } from '@/audio';
 import BookmarksScreen from '@/pages/BookmarksScreen';
 import NotesScreen from '@/pages/NotesScreen';
 import HighlightsScreen from '@/pages/HighlightsScreen';
@@ -354,6 +355,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                     expanded={expanded}
                     setExpanded={setExpanded}
                     book={state.book}
+                    bookId={currentBook?.bookId ?? null}
                     chapter={state.chapter}
                   />
                 </div>
@@ -543,6 +545,7 @@ function CommentaryPanel({
   expanded,
   setExpanded,
   book,
+  bookId,
   chapter,
 }: {
   tab: Tab;
@@ -550,6 +553,7 @@ function CommentaryPanel({
   expanded: number | null;
   setExpanded: (v: number | null) => void;
   book: string;
+  bookId: number | null;
   chapter: number;
 }) {
   if (commentaries.length === 0) {
@@ -577,7 +581,20 @@ function CommentaryPanel({
           </button>
         </div>
         {summary ? (
-          <CommentaryBody text={summary.detail} />
+          <>
+            {bookId && summary.explanationId ? (
+              <div style={{ marginBottom: 12 }}>
+                <AudioInlineEntry
+                  explanationId={summary.explanationId}
+                  explanationType="summary"
+                  bookId={bookId}
+                  chapterNumber={chapter}
+                  sourceHref={`/read/${book}/${chapter}/commentary`}
+                />
+              </div>
+            ) : null}
+            <CommentaryBody text={summary.detail} />
+          </>
         ) : (
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}>No summary available.</p>
         )}
@@ -610,6 +627,20 @@ function CommentaryPanel({
             {allExpanded ? 'Collapse All' : 'Expand All'}
           </button>
         </div>
+        {(() => {
+          const bylineId = byLineItems[0]?.explanationId ?? null;
+          return bookId && bylineId ? (
+            <div style={{ marginBottom: 12 }}>
+              <AudioInlineEntry
+                explanationId={bylineId}
+                explanationType="byline"
+                bookId={bookId}
+                chapterNumber={chapter}
+                sourceHref={`/read/${book}/${chapter}/commentary`}
+              />
+            </div>
+          ) : null;
+        })()}
         <div>
           {byLineItems.map(c => {
             const isOpen = allExpanded || expanded === c.verse;
@@ -662,6 +693,17 @@ function CommentaryPanel({
           <ShareIcon size={18} color="#E7E7E7" />
         </button>
       </div>
+      {bookId && detailed.explanationId ? (
+        <div style={{ marginBottom: 12 }}>
+          <AudioInlineEntry
+            explanationId={detailed.explanationId}
+            explanationType="detailed"
+            bookId={bookId}
+            chapterNumber={chapter}
+            sourceHref={`/read/${book}/${chapter}/commentary`}
+          />
+        </div>
+      ) : null}
       <CommentaryBody text={detailed.detail} />
     </div>
   ) : (

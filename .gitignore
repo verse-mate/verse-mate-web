@@ -45,3 +45,4 @@ public/workbox-*.js
 # Playwright test artifacts
 test-results/
 playwright-report/
+.gstack/

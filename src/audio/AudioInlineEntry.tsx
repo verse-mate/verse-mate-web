@@ -1,10 +1,15 @@
 /**
  * Inline "Listen · 3:47" chip rendered above the explanation body.
+ * Themed to match the verse-mate-web dark shell (#1B1B1B bg / #B09A6D
+ * gold accent / off-white text) — uses explicit colors rather than
+ * Tailwind ShadCN tokens because the app doesn't activate a `.dark`
+ * Tailwind theme.
+ *
  * 5 states (br-audio-014 surface alignment):
  *   - GENERATING — spinner + "Generating… ~Xs"
- *   - ERROR      — danger color, tap to retry (invalidates query)
+ *   - ERROR      — red border, tap to retry (invalidates query)
  *   - POPULATED  — Play icon + "Listen · mm:ss"
- *   - PLAYING    — primary color + "Playing…"
+ *   - PLAYING    — gold accent + "Playing…"
  *   - GUEST_SCOPE_EXCEEDED — "Sign in to listen to other chapters"
  *
  * br-audio-005: tap loads the track + explicitly plays. Never auto.
@@ -13,6 +18,7 @@ import { useQueryClient } from '@tanstack/react-query';
 import { Loader2, Lock, Music, Play } from 'lucide-react';
 import { type AudioTrack, useAudioPlayer } from './AudioPlayerContext';
 import { GuestScopeExceededError } from './audioApi';
+import { COLORS, FONT } from './theme';
 import { useExplanationAudio } from './useExplanationAudio';
 
 export interface AudioInlineEntryProps {
@@ -32,8 +38,22 @@ function formatDuration(seconds: number): string {
   return `${mm}:${ss.toString().padStart(2, '0')}`;
 }
 
-const baseChip =
-  'inline-flex items-center gap-2 self-start min-h-[44px] px-3 py-2 rounded-md border text-sm transition-colors';
+const baseStyle: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 8,
+  alignSelf: 'flex-start',
+  minHeight: 44,
+  padding: '8px 14px',
+  borderRadius: 8,
+  border: `1px solid ${COLORS.border}`,
+  background: COLORS.bg,
+  color: COLORS.text,
+  fontSize: 14,
+  fontFamily: FONT,
+  cursor: 'pointer',
+  transition: 'background 120ms ease, border-color 120ms ease',
+};
 
 export function AudioInlineEntry(props: AudioInlineEntryProps) {
   const queryClient = useQueryClient();
@@ -53,7 +73,7 @@ export function AudioInlineEntry(props: AudioInlineEntryProps) {
         type="button"
         data-testid="audio-inline-entry"
         data-state="guest-blocked"
-        className={`${baseChip} border-border bg-background text-foreground hover:bg-accent`}
+        style={baseStyle}
         onClick={() =>
           queryClient.invalidateQueries({
             queryKey: [
@@ -65,7 +85,7 @@ export function AudioInlineEntry(props: AudioInlineEntryProps) {
           })
         }
       >
-        <Lock size={16} aria-hidden />
+        <Lock size={16} aria-hidden color={COLORS.textMuted} />
         Sign in to listen to other chapters
       </button>
     );
@@ -78,7 +98,11 @@ export function AudioInlineEntry(props: AudioInlineEntryProps) {
         data-testid="audio-inline-entry"
         data-state="error"
         aria-label={`Audio unavailable — retry (${error.message})`}
-        className={`${baseChip} border-destructive text-destructive hover:bg-destructive/10`}
+        style={{
+          ...baseStyle,
+          borderColor: COLORS.danger,
+          color: COLORS.danger,
+        }}
         onClick={() =>
           queryClient.invalidateQueries({
             queryKey: [
@@ -101,9 +125,13 @@ export function AudioInlineEntry(props: AudioInlineEntryProps) {
         data-testid="audio-inline-entry"
         data-state="loading"
         aria-live="polite"
-        className={`${baseChip} border-border bg-background text-muted-foreground opacity-80`}
+        style={{
+          ...baseStyle,
+          color: COLORS.textMuted,
+          cursor: 'progress',
+        }}
       >
-        <Loader2 size={16} className="animate-spin" aria-hidden />
+        <Loader2 size={16} className="animate-spin" aria-hidden color={COLORS.accent} />
         Generating… ~{estimatedReadySeconds ?? 8}s
       </div>
     );
@@ -133,6 +161,13 @@ export function AudioInlineEntry(props: AudioInlineEntryProps) {
     await player.play();
   };
 
+  const playingStyle = playingThis
+    ? {
+        borderColor: COLORS.accent,
+        color: COLORS.accent,
+      }
+    : {};
+
   return (
     <button
       type="button"
@@ -140,16 +175,18 @@ export function AudioInlineEntry(props: AudioInlineEntryProps) {
       data-state={playingThis ? 'playing' : 'populated'}
       aria-label={playingThis ? 'Playing audio explanation' : 'Play audio explanation'}
       onClick={startTrack}
-      className={`${baseChip} ${
-        playingThis
-          ? 'border-primary text-primary'
-          : 'border-border bg-background text-foreground hover:bg-accent'
-      }`}
+      style={{ ...baseStyle, ...playingStyle }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.background = COLORS.bgHover;
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.background = COLORS.bg;
+      }}
     >
       {playingThis ? (
-        <Music size={16} className="text-primary" aria-hidden />
+        <Music size={16} aria-hidden color={COLORS.accent} />
       ) : (
-        <Play size={16} aria-hidden />
+        <Play size={16} aria-hidden color={COLORS.accent} />
       )}
       {playingThis ? 'Playing…' : `Listen · ${formatDuration(audio.duration_seconds)}`}
     </button>
