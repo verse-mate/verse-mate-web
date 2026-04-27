@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AppProvider } from "@/contexts/AppContext";
 import { PostHogProvider } from "@/providers/PostHogProvider";
+import { AudioPlayerProvider } from "@/audio";
 import AppLayout from "@/components/AppLayout";
 import BibleRoute from "@/components/routes/BibleRoute";
 import AuthCallback from "@/components/routes/AuthCallback";
@@ -36,6 +37,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <PostHogProvider>
+          <AudioPlayerProvider>
           <Routes>
             <Route path="/" element={<Navigate to="/read" replace />} />
             <Route element={<AppLayout />}>
@@ -72,6 +74,7 @@ const App = () => (
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </AudioPlayerProvider>
           </PostHogProvider>
         </BrowserRouter>
       </AppProvider>
