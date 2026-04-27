@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import { parseBookParam, getBookSlug } from '@/lib/bookSlugs';
@@ -23,6 +23,14 @@ export default function BibleRoute() {
   const { state, dispatch } = useApp();
   const [resolved, setResolved] = useState(false);
   const [notFound, setNotFound] = useState(false);
+
+  // Read latest state via ref to break the stale-closure cycle. The
+  // URL→state sync effect below is keyed on URL params only — it must
+  // NOT re-fire when state changes (e.g. via FAB tap) because that
+  // closure's URL params would still be stale, leading to a state
+  // revert. See issue #43.
+  const stateRef = useRef(state);
+  stateRef.current = state;
 
   const bookId = bookSlug ? parseBookParam(bookSlug) : null;
   const chapterNumber = chapterStr ? Number.parseInt(chapterStr, 10) : NaN;
@@ -53,9 +61,12 @@ export default function BibleRoute() {
         setNotFound(true);
         return;
       }
-      // Only dispatch if state is actually different — avoids needless
-      // re-renders if the user navigates within the same chapter.
-      if (state.book !== book.name || state.chapter !== chapterNumber || state.bookId !== bookId) {
+      // Compare against the LATEST state via ref — using `state` from the
+      // effect's closure can read stale values when the effect re-fires
+      // due to state changes that haven't yet propagated to the URL,
+      // which previously caused a state revert (issue #43).
+      const latest = stateRef.current;
+      if (latest.book !== book.name || latest.chapter !== chapterNumber || latest.bookId !== bookId) {
         dispatch({ type: 'SET_PASSAGE', book: book.name, chapter: chapterNumber, bookId });
       }
       setResolved(true);
@@ -64,7 +75,12 @@ export default function BibleRoute() {
     return () => {
       cancelled = true;
     };
-  }, [bookId, chapterNumber, dispatch, state.book, state.chapter, state.bookId]);
+    // Deps deliberately scoped to URL params only. This effect's role is
+    // URL → state sync; including state.* in deps causes a stale-closure
+    // re-fire whenever state changes via in-app navigation, reverting
+    // the dispatch before the URL has caught up. See issue #43.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [bookId, chapterNumber, dispatch]);
 
   if (notFound) return <Navigate to="/read" replace />;
   if (!resolved) return null;
