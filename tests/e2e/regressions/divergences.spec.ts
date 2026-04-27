@@ -3,50 +3,76 @@ import { test, expect } from '@playwright/test';
 /**
  * Regression specs for divergences flagged in FEATURES.md §4.
  *
- * These tests assert the CURRENT (often-buggy) behavior so the suite
- * stays green on `main`. When a divergence is fixed in a subsequent PR,
- * the corresponding test should be updated to assert the new (correct)
- * behavior, not removed.
- *
- * Each test references the divergence number from FEATURES.md §4.
+ * Each test references the divergence number from FEATURES.md §4 and the
+ * GitHub issue tracking the bug. When a divergence is fixed, the
+ * corresponding test should assert the NEW behavior.
  */
 
 test.describe('Divergences — current behavior snapshots', () => {
   /**
-   * Divergence #1 — `/highlights` redirects guests to `/login` while
-   * `/bookmarks` and `/notes` show empty states.
+   * Divergence #1 — issue #44 FIXED: `/highlights` now shows an empty
+   * state for guests, matching `/bookmarks` and `/notes`. Previously
+   * guests were redirected to `/login` because HighlightsScreen called
+   * the auth-required `/bible/user/theme-preferences` endpoint on mount.
    */
-  test('#1 /highlights redirects guests to /login (vs. /bookmarks empty state)', async ({ page }) => {
+  test('#1 /highlights shows empty state for guests (matches /bookmarks/notes)', async ({ page }) => {
     await page.goto('/highlights');
-    await page.waitForTimeout(2000);
-
-    const url = page.url();
-    // Accept either: redirected to /login OR shows the highlights screen.
-    // Both behaviors have been observed; this test pins whichever is current.
-    expect(url).toMatch(/\/highlights|\/login/);
+    await expect(page.getByTestId('highlights-list')).toBeVisible({ timeout: 10_000 });
+    await expect(page.getByTestId('highlights-empty-state')).toBeVisible();
+    // Should NOT have been redirected to /login.
+    expect(page.url()).toContain('/highlights');
+    expect(page.url()).not.toContain('/login');
   });
 
   /**
-   * Divergence #2 — `/create-account` is byte-identical to `/login`.
-   * The signup form and "Continue with Email" both lead to the same email
-   * form; signup is initiated via the mode-toggle inside that form.
+   * Divergence #2 — issue #45 FIXED: `/create-account` now shows
+   * differentiated heading + subcopy and an "Already have an account?"
+   * cross-link to /login. The provider buttons are still shared (Google
+   * and Apple handle signup transparently regardless of entry point).
    */
-  test('#2 /create-account renders the same providers screen as /login', async ({ page }) => {
+  test('#2 /create-account shows signup-specific copy and a /login cross-link', async ({ page }) => {
     await page.goto('/create-account');
+    // Signup-specific heading
+    await expect(page.getByText(/Create your VerseMate account/i)).toBeVisible({ timeout: 10_000 });
+    // Signup-specific subcopy
+    await expect(page.getByText(/Sign up to save your bookmarks/i)).toBeVisible();
+    // Email button reflects signup mode
+    await expect(page.getByTestId('login-email-button')).toContainText(/Sign up with Email/i);
+    // Cross-link back to sign-in
+    await expect(page.getByTestId('login-providers-mode-toggle')).toBeVisible();
+    await expect(page.getByTestId('login-providers-mode-toggle')).toContainText(/Already have an account/i);
+    // Provider buttons still present
     await expect(page.getByTestId('login-google-button')).toBeVisible();
     await expect(page.getByTestId('login-apple-button')).toBeVisible();
-    await expect(page.getByTestId('login-email-button')).toBeVisible();
+  });
+
+  test('#2 /login still shows signin-specific copy', async ({ page }) => {
+    await page.goto('/login');
+    await expect(page.getByText(/Welcome to VerseMate/i)).toBeVisible({ timeout: 10_000 });
+    await expect(page.getByText(/Sign in to sync/i)).toBeVisible();
+    await expect(page.getByTestId('login-email-button')).toContainText(/Continue with Email/i);
+    await expect(page.getByTestId('login-providers-mode-toggle')).toContainText(/Don't have an account/i);
   });
 
   /**
-   * Divergence #3 — commentary route uses CAPITALIZED book name in the URL
-   * while `/bible/<book>` uses lowercase.
+   * Divergence #3 — issue #46 FIXED: commentary route now accepts both
+   * the lowercase slug (canonical, matches `/bible/<slug>`) and the
+   * legacy capitalized book name (existing URLs in the wild).
    *
    * Mobile-scoped: at >=1024px, DesktopLayout intercepts `/commentary`
    * URLs and redirects to `/read` because the right panel renders the
-   * commentary inline. The mobile route is the canonical one.
+   * commentary inline.
    */
-  test('#3 /read/<Book>/<chapter>/commentary accepts capitalized book name', async ({ page, viewport }) => {
+  test('#3 /read/<slug>/<chapter>/commentary works with lowercase slug', async ({ page, viewport }) => {
+    test.skip(
+      !!viewport && viewport.width >= 1024,
+      'DesktopLayout redirects /commentary URLs to /read at desktop widths',
+    );
+    await page.goto('/read/genesis/1/commentary');
+    await expect(page.getByTestId('tab-summary')).toBeVisible({ timeout: 15_000 });
+  });
+
+  test('#3 /read/<Book>/<chapter>/commentary still accepts capitalized name (backwards compat)', async ({ page, viewport }) => {
     test.skip(
       !!viewport && viewport.width >= 1024,
       'DesktopLayout redirects /commentary URLs to /read at desktop widths',
@@ -83,16 +109,27 @@ test.describe('Divergences — current behavior snapshots', () => {
   });
 
   /**
-   * Divergence #6 — `/menu/about` has no Privacy / Terms / Contact links.
+   * Divergence #6 — issue #49 FIXED: `/menu/about` now exposes Privacy
+   * Policy, Terms of Service, and Contact links. URLs point to canonical
+   * pages on versemate.org (Privacy, Terms) and a mailto for Contact.
    */
-  test('#6 /menu/about exposes no Privacy / Terms / Contact links', async ({ page }) => {
+  test('#6 /menu/about exposes Privacy / Terms / Contact links', async ({ page }) => {
     await page.goto('/menu/about');
-    await page.waitForTimeout(1500);
-    const body = page.locator('body');
-    // None of these texts should resolve to clickable links on /menu/about.
-    // Asserting absence of anchors with these labels.
-    for (const text of ['Privacy Policy', 'Terms of Service', 'Contact']) {
-      await expect(body.getByRole('link', { name: text })).toHaveCount(0);
-    }
+    await expect(page.getByTestId('about-privacy-link')).toBeVisible({ timeout: 10_000 });
+    await expect(page.getByTestId('about-terms-link')).toBeVisible();
+    await expect(page.getByTestId('about-contact-link')).toBeVisible();
+    // Verify hrefs are sensible
+    await expect(page.getByTestId('about-privacy-link')).toHaveAttribute(
+      'href',
+      /https?:\/\/.+\/privacy/,
+    );
+    await expect(page.getByTestId('about-terms-link')).toHaveAttribute(
+      'href',
+      /https?:\/\/.+\/terms/,
+    );
+    await expect(page.getByTestId('about-contact-link')).toHaveAttribute(
+      'href',
+      /^mailto:.+@versemate\.org/,
+    );
   });
 });

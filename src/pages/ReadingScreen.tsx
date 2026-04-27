@@ -189,7 +189,13 @@ export default function ReadingScreen() {
               <button
                 aria-label="Insight"
                 data-testid="commentary-view-icon"
-                onClick={() => navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/commentary`)}
+                onClick={() => {
+                  // Issue #46 — use lowercase slug for parity with /bible/<slug>.
+                  // Falls back to the (capitalized) book name if no slug exists,
+                  // preserving the legacy URL shape for any pre-fix in-flight nav.
+                  const slug = getBookSlug(state.bookId) || encodeURIComponent(state.book);
+                  navigate(`/read/${slug}/${state.chapter}/commentary`);
+                }}
                 style={{
                   fontFamily: 'Roboto, sans-serif',
                   fontWeight: 400,

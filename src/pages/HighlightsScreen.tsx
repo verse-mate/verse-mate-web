@@ -25,19 +25,26 @@ export default function HighlightsScreen() {
       .then(r => setThemes(r?.data || []))
       .catch(() => setThemes([]));
 
-    api
-      .get<{ data: Array<{ theme_id: number; is_enabled: boolean }> }>(
-        '/bible/user/theme-preferences'
-      )
-      .then(r => {
-        const active = new Set<number>();
-        for (const p of r?.data || []) {
-          if (p.is_enabled) active.add(p.theme_id);
-        }
-        setEnabledThemes(active);
-      })
-      .catch(() => undefined);
-  }, []);
+    // Only fetch user theme preferences when signed in. The endpoint is
+    // auth-required, and a 401 here triggers the api wrapper's
+    // /logout → /login redirect — which used to break the guest /highlights
+    // experience by yanking visitors to login (issue #44). Guests just see
+    // the default empty + theme-list state, matching /bookmarks and /notes.
+    if (state.isSignedIn) {
+      api
+        .get<{ data: Array<{ theme_id: number; is_enabled: boolean }> }>(
+          '/bible/user/theme-preferences'
+        )
+        .then(r => {
+          const active = new Set<number>();
+          for (const p of r?.data || []) {
+            if (p.is_enabled) active.add(p.theme_id);
+          }
+          setEnabledThemes(active);
+        })
+        .catch(() => undefined);
+    }
+  }, [state.isSignedIn]);
 
   const groupedHighlights = useMemo(() => {
     const groups = new Map<string, { book: string; bookId: number; chapter: number; count: number }>();

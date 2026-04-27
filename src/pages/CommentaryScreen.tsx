@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchCommentary } from '@/services/bibleService';
+import { fetchCommentary, fetchBooks } from '@/services/bibleService';
 import { Commentary } from '@/services/types';
+import { parseBookParam } from '@/lib/bookSlugs';
 import { ChevronDown, ChevronUp, Menu } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import ShareIcon from '@/components/ShareIcon';
@@ -9,16 +10,47 @@ import ShareIcon from '@/components/ShareIcon';
 type Tab = 'summary' | 'byline' | 'detailed';
 
 export default function CommentaryScreen() {
-  const { book, chapter } = useParams<{ book: string; chapter: string }>();
+  const { book: bookParam, chapter } = useParams<{ book: string; chapter: string }>();
   const navigate = useNavigate();
   const [tab, setTab] = useState<Tab>('summary');
   const [commentaries, setCommentaries] = useState<Commentary[]>([]);
   const [expanded, setExpanded] = useState<number | null>(null);
+  const [bookName, setBookName] = useState<string>('');
 
-  const decodedBook = decodeURIComponent(book || '');
+  // Issue #46 — accept BOTH the lowercase slug (matches /bible/<slug>)
+  // AND the legacy capitalized book name (URLs already in circulation).
+  // parseBookParam returns a bookId for slug forms; if it succeeds we
+  // resolve the canonical book name via fetchBooks. Otherwise we fall
+  // back to the decoded raw param (capitalized name).
+  const rawDecoded = decodeURIComponent(bookParam || '');
   const chapterNum = parseInt(chapter || '1', 10);
 
   useEffect(() => {
+    if (!bookParam) {
+      setBookName('');
+      return;
+    }
+    // Slug path: resolve via bookSlugs lib.
+    const bookId = parseBookParam(bookParam);
+    if (bookId !== null) {
+      let cancelled = false;
+      fetchBooks().then((books) => {
+        if (cancelled) return;
+        const book = books.find((b) => b.bookId === bookId);
+        setBookName(book?.name || rawDecoded);
+      }).catch(() => setBookName(rawDecoded));
+      return () => {
+        cancelled = true;
+      };
+    }
+    // Legacy path: param was a capitalized book name (e.g. "Genesis").
+    setBookName(rawDecoded);
+  }, [bookParam, rawDecoded]);
+
+  const decodedBook = bookName || rawDecoded;
+
+  useEffect(() => {
+    if (!decodedBook) return;
     fetchCommentary(decodedBook, chapterNum).then(setCommentaries);
   }, [decodedBook, chapterNum]);
 

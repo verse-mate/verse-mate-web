@@ -47,18 +47,35 @@ test.describe('Settings', () => {
     // active one (visually). We verify via getAttribute on the inline
     // background-color.
     await page.reload();
-    const bg = await settings.versionOption('niv').evaluate((el) => {
-      const cs = window.getComputedStyle(el as HTMLElement);
-      return cs.backgroundColor;
-    });
-    // #B09A6D = rgb(176, 154, 109)
-    expect(bg).toContain('176');
+    // Wait for the page to fully hydrate post-reload BEFORE reading the
+    // computed style — without this, AppContext may not have rehydrated
+    // settings.defaultVersion from localStorage yet, and the button
+    // briefly shows the default (ESV) styling. Issue #51.
+    await expect(settings.backButton).toBeVisible({ timeout: 10_000 });
+    await expect(settings.versionOption('niv')).toBeVisible();
+    // expect.poll auto-retries the computed-style read until it matches
+    // (or times out), so any remaining hydration race is handled.
+    await expect
+      .poll(
+        async () =>
+          settings.versionOption('niv').evaluate((el) => {
+            const cs = window.getComputedStyle(el as HTMLElement);
+            return cs.backgroundColor;
+          }),
+        { timeout: 5_000 },
+      )
+      // #B09A6D = rgb(176, 154, 109)
+      .toContain('176');
   });
 
   test('font size slider has the documented 13–26 range', async ({ page }) => {
     const settings = new SettingsPage(page);
     await settings.goto();
 
+    // Wait for the slider to be visible AND attached before asserting
+    // attrs — under parallel load the SettingsScreen can render with a
+    // brief flash where attrs aren't yet on the DOM. Issue #51.
+    await expect(settings.fontSizeSlider).toBeVisible({ timeout: 10_000 });
     await expect(settings.fontSizeSlider).toHaveAttribute('min', '13');
     await expect(settings.fontSizeSlider).toHaveAttribute('max', '26');
   });
