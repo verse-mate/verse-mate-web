@@ -13,12 +13,20 @@ import { ReaderPage } from '../pages/reader.page';
  * file is therefore project-filtered to chromium-mobile.
  */
 
-// FIXME (entire describe block): same production state-revert bug as the
-// FAB navigation tests in load-and-navigate.spec.ts — the long-press fires
-// (verse selection state.selectedVerse updates), but the action sheet
-// state (longPressVerse) is reverted by the same stale-closure useEffect
-// before the sheet renders. Re-enable once BibleRoute's URL→state effect
-// guards against stale dispatches.
+// Issue #43 (BibleRoute stale-closure) is FIXED — that unblocked the
+// FAB navigation and chapter-picker fixme tests. These verse-actions
+// tests, however, remain blocked on a separate Playwright issue:
+// CDP `Input.dispatchTouchEvent` does not reliably fire React's synthetic
+// `onTouchStart` / `onTouchEnd` handlers attached to the verse spans, so
+// the 400ms press-timer never starts and the action sheet never opens.
+// Verified: verse selection (state.selectedVerse) updates correctly, but
+// state.longPressVerse stays null. Real users on a real touch device
+// don't hit this — the bug is in Playwright's emulation layer.
+//
+// Tracked separately. Possible workarounds to explore:
+//   1. `verse.dispatchEvent('touchstart', ...)` with a Touch ctor payload
+//   2. Patch the press timer threshold during tests via a query param
+//   3. Add a non-touch trigger (data-testid on a hidden button) for tests
 test.describe.fixme('Bible — verse actions (mobile)', () => {
   test.skip(({ viewport }) => {
     return !viewport || viewport.width >= 1024;

@@ -82,11 +82,7 @@ test.describe('Bible — chapter picker', () => {
     await expect(picker.chapter(21)).toBeVisible();
   });
 
-  // FIXME: same production state-revert bug as the FAB navigation tests
-  // in load-and-navigate.spec.ts — see that file's FIXME comment.
-  // Picker chapter selection dispatches the right SET_PASSAGE, but the
-  // BibleRoute stale-closure effect reverts state right after.
-  test.fixme('end-to-end: Genesis 1 → John 3 via picker', async ({ page }) => {
+  test('end-to-end: Genesis 1 → John 3 via picker', async ({ page }) => {
     const reader = new ReaderPage(page);
     const picker = new BookSelectorPage(page);
 
