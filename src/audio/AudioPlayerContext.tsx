@@ -165,8 +165,18 @@ export interface AudioPlayerProviderProps {
 export function AudioPlayerProvider({ children }: AudioPlayerProviderProps) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const audioRef = useRef<HTMLAudioElement>(null);
+  /**
+   * Mirrors `state.currentTrack` synchronously so that `play()` /
+   * `playFromResume()` see the latest track even when called inside
+   * the same async function as `load()` (`await load(); await play()`
+   * — without the ref, play's useCallback closure would still hold
+   * the pre-LOAD `currentTrack: null`, return early, and silently
+   * leave the audio paused).
+   */
+  const currentTrackRef = useRef<AudioTrack | null>(null);
 
   const load = useCallback(async (track: AudioTrack) => {
+    currentTrackRef.current = track;
     dispatch({ type: 'LOAD', track });
     if (audioRef.current) {
       audioRef.current.src = track.url;
@@ -175,7 +185,7 @@ export function AudioPlayerProvider({ children }: AudioPlayerProviderProps) {
   }, []);
 
   const play = useCallback(async () => {
-    if (!audioRef.current || !state.currentTrack) return;
+    if (!audioRef.current || !currentTrackRef.current) return;
     try {
       await audioRef.current.play();
       dispatch({ type: 'PLAY', ctx: { isResume: false } });
@@ -185,11 +195,11 @@ export function AudioPlayerProvider({ children }: AudioPlayerProviderProps) {
         message: err instanceof Error ? err.message : String(err),
       });
     }
-  }, [state.currentTrack]);
+  }, []);
 
   const playFromResume = useCallback(
     async (positionSeconds: number) => {
-      if (!audioRef.current || !state.currentTrack) return;
+      if (!audioRef.current || !currentTrackRef.current) return;
       audioRef.current.currentTime = positionSeconds;
       dispatch({ type: 'SEEK', seconds: positionSeconds });
       try {
@@ -205,7 +215,7 @@ export function AudioPlayerProvider({ children }: AudioPlayerProviderProps) {
         });
       }
     },
-    [state.currentTrack],
+    [],
   );
 
   const pause = useCallback(() => {
@@ -243,6 +253,7 @@ export function AudioPlayerProvider({ children }: AudioPlayerProviderProps) {
       audioRef.current.removeAttribute('src');
       audioRef.current.load();
     }
+    currentTrackRef.current = null;
     dispatch({ type: 'CLOSE' });
   }, []);
 
