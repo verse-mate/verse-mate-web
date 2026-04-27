@@ -38,6 +38,14 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
+  // Differentiated copy + behavior for signup mode (issue #45). When the
+  // user lands on `/create-account`, we show signup-specific heading and
+  // subcopy on the providers screen, and the toggle row reflects the
+  // opposite mode. The actual provider buttons (Google / Apple) are the
+  // same — those flows handle account creation transparently on the
+  // backend regardless of which screen the user came from.
+  const isSignup = mode === 'signup';
+
   // Both Google and Apple use the redirect flow:
   //   user clicks → browser navigates to backend's /auth/sso/<provider>/redirect
   //   → backend handles OAuth handshake with provider
@@ -195,13 +203,21 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
-      <ScreenHeader title="Sign In" onBack={() => navigate('/menu')} backTestId="login-back-button" />
+      <ScreenHeader
+        title={isSignup ? 'Create Account' : 'Sign In'}
+        onBack={() => navigate('/menu')}
+        backTestId="login-back-button"
+      />
 
       <div className="flex-1 flex flex-col px-6 pb-6" style={{ backgroundColor: '#000000' }}>
         <div className="mt-4 mb-8 text-center">
-          <h2 className="text-[22px] font-bold" style={{ color: '#E7E7E7' }}>Welcome to VerseMate</h2>
+          <h2 className="text-[22px] font-bold" style={{ color: '#E7E7E7' }}>
+            {isSignup ? 'Create your VerseMate account' : 'Welcome to VerseMate'}
+          </h2>
           <p className="text-[14px] mt-2 leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>
-            Sign in to sync your bookmarks, notes, and highlights across devices.
+            {isSignup
+              ? 'Sign up to save your bookmarks, notes, and highlights across devices.'
+              : 'Sign in to sync your bookmarks, notes, and highlights across devices.'}
           </p>
         </div>
 
@@ -244,12 +260,28 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
             style={{ backgroundColor: '#323232', border: '1px solid #323232', color: '#E7E7E7' }}
           >
             <Mail size={18} />
-            Continue with Email
+            {isSignup ? 'Sign up with Email' : 'Continue with Email'}
           </button>
 
           {error && (
             <p data-testid="login-error" className="text-[12px] text-red-400 mt-2 text-center">{error}</p>
           )}
+
+          {/* Cross-link to the opposite mode so users on the wrong screen
+              can switch without losing their context (issue #45). */}
+          <button
+            onClick={() => {
+              setMode(isSignup ? 'signin' : 'signup');
+              navigate(isSignup ? '/login' : '/create-account', { replace: true });
+            }}
+            data-testid="login-providers-mode-toggle"
+            className="w-full mt-3 text-[13px]"
+            style={{ color: 'rgba(255,255,255,0.6)' }}
+          >
+            {isSignup
+              ? 'Already have an account? Sign in'
+              : "Don't have an account? Create one"}
+          </button>
         </div>
       </div>
     </div>

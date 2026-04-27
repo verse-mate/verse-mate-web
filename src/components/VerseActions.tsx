@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import { Bookmark, Highlighter, StickyNote, Copy, X, BookOpen, Lightbulb } from 'lucide-react';
 import { HighlightColor } from '@/services/types';
+import { getBookSlug } from '@/lib/bookSlugs';
 import AddNoteSheet from '@/components/AddNoteSheet';
 
 interface Props {
@@ -70,13 +71,17 @@ export default function VerseActions({ verse, onClose }: Props) {
     onClose();
   };
 
+  // Issue #46 — use the lowercase slug to match /bible/<slug>. Falls
+  // back to the (capitalized) book name if no slug exists.
+  const bookSlugForUrl = () => getBookSlug(state.bookId) || encodeURIComponent(state.book);
+
   const viewCommentary = () => {
-    navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/commentary`);
+    navigate(`/read/${bookSlugForUrl()}/${state.chapter}/commentary`);
     onClose();
   };
 
   const viewInsight = () => {
-    navigate(`/read/${encodeURIComponent(state.book)}/${state.chapter}/verse/${verse}/insight`);
+    navigate(`/read/${bookSlugForUrl()}/${state.chapter}/verse/${verse}/insight`);
     onClose();
   };
 

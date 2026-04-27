@@ -48,8 +48,41 @@ export default function AboutScreen() {
           helps illuminate God's Word for real understanding and lasting transformation.
         </p>
 
-        {/* Team + Version */}
+        {/* Legal + Contact links — issue #49.
+            Privacy Policy and Terms of Service are required by App Store /
+            Google Play / GDPR / CCPA. URLs point to the canonical pages on
+            versemate.org (the marketing/info site); update if those move. */}
         <div style={{ marginTop: 24, paddingTop: 16, borderTop: '1px solid #2a2a2a' }}>
+          <nav
+            aria-label="Legal and contact"
+            style={{ display: 'flex', flexWrap: 'wrap', gap: 16, marginBottom: 16 }}
+          >
+            <a
+              href="https://versemate.org/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="about-privacy-link"
+              style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, color: '#B09A6D', textDecoration: 'none' }}
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="https://versemate.org/terms"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="about-terms-link"
+              style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, color: '#B09A6D', textDecoration: 'none' }}
+            >
+              Terms of Service
+            </a>
+            <a
+              href="mailto:info@versemate.org"
+              data-testid="about-contact-link"
+              style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, color: '#B09A6D', textDecoration: 'none' }}
+            >
+              Contact
+            </a>
+          </nav>
           <p style={{ fontFamily: 'Roboto, sans-serif', fontSize: 11, color: 'rgba(255,255,255,0.25)', letterSpacing: '0.15em' }}>
             SB · AC · AM · AZ · SZ · VB · VK · VK · AT
           </p>
