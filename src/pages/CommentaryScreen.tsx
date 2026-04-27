@@ -6,6 +6,7 @@ import { parseBookParam } from '@/lib/bookSlugs';
 import { ChevronDown, ChevronUp, Menu } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import ShareIcon from '@/components/ShareIcon';
+import { AudioInlineEntry } from '@/audio';
 
 type Tab = 'summary' | 'byline' | 'detailed';
 
@@ -16,6 +17,7 @@ export default function CommentaryScreen() {
   const [commentaries, setCommentaries] = useState<Commentary[]>([]);
   const [expanded, setExpanded] = useState<number | null>(null);
   const [bookName, setBookName] = useState<string>('');
+  const [bookId, setBookId] = useState<number | null>(null);
 
   // Issue #46 — accept BOTH the lowercase slug (matches /bible/<slug>)
   // AND the legacy capitalized book name (URLs already in circulation).
@@ -31,20 +33,31 @@ export default function CommentaryScreen() {
       return;
     }
     // Slug path: resolve via bookSlugs lib.
-    const bookId = parseBookParam(bookParam);
-    if (bookId !== null) {
+    const parsedBookId = parseBookParam(bookParam);
+    if (parsedBookId !== null) {
+      setBookId(parsedBookId);
       let cancelled = false;
       fetchBooks().then((books) => {
         if (cancelled) return;
-        const book = books.find((b) => b.bookId === bookId);
+        const book = books.find((b) => b.bookId === parsedBookId);
         setBookName(book?.name || rawDecoded);
       }).catch(() => setBookName(rawDecoded));
       return () => {
         cancelled = true;
       };
     }
-    // Legacy path: param was a capitalized book name (e.g. "Genesis").
+    // Legacy path: param was a capitalized book name. Resolve bookId via
+    // a books lookup so AudioInlineEntry has the numeric id it needs.
     setBookName(rawDecoded);
+    let cancelled = false;
+    fetchBooks().then((books) => {
+      if (cancelled) return;
+      const book = books.find((b) => b.name.toLowerCase() === rawDecoded.toLowerCase());
+      setBookId(book?.bookId ?? null);
+    });
+    return () => {
+      cancelled = true;
+    };
   }, [bookParam, rawDecoded]);
 
   const decodedBook = bookName || rawDecoded;
@@ -188,10 +201,24 @@ export default function CommentaryScreen() {
             </div>
             {(() => {
               const summary = commentaries.find(c => c.type === 'summary');
-              return summary ? (
-                <CommentaryBody text={summary.detail} />
-              ) : (
-                <p className="text-[14px]" style={{ color: 'rgba(255,255,255,0.6)' }}>No summary available.</p>
+              if (!summary) {
+                return <p className="text-[14px]" style={{ color: 'rgba(255,255,255,0.6)' }}>No summary available.</p>;
+              }
+              return (
+                <>
+                  {bookId && summary.explanationId ? (
+                    <div className="mb-3">
+                      <AudioInlineEntry
+                        explanationId={summary.explanationId}
+                        explanationType="summary"
+                        bookId={bookId}
+                        chapterNumber={chapterNum}
+                        sourceHref={`/read/${decodedBook}/${chapterNum}/commentary`}
+                      />
+                    </div>
+                  ) : null}
+                  <CommentaryBody text={summary.detail} />
+                </>
               );
             })()}
           </div>
@@ -223,6 +250,20 @@ export default function CommentaryScreen() {
                     {allExpanded ? 'Collapse All' : 'Expand All'}
                   </button>
                 </div>
+                {(() => {
+                  const bylineId = byLineItems[0]?.explanationId ?? null;
+                  return bookId && bylineId ? (
+                    <div className="mb-3">
+                      <AudioInlineEntry
+                        explanationId={bylineId}
+                        explanationType="byline"
+                        bookId={bookId}
+                        chapterNumber={chapterNum}
+                        sourceHref={`/read/${decodedBook}/${chapterNum}/commentary`}
+                      />
+                    </div>
+                  ) : null;
+                })()}
                 <div>
                   {byLineItems.map(c => {
                     const isOpen = allExpanded || expanded === c.verse;
@@ -277,6 +318,17 @@ export default function CommentaryScreen() {
                     <ShareIcon size={20} color="#E7E7E7" />
                   </button>
                 </div>
+                {bookId && detailed.explanationId ? (
+                  <div className="mb-3">
+                    <AudioInlineEntry
+                      explanationId={detailed.explanationId}
+                      explanationType="detailed"
+                      bookId={bookId}
+                      chapterNumber={chapterNum}
+                      sourceHref={`/read/${decodedBook}/${chapterNum}/commentary`}
+                    />
+                  </div>
+                ) : null}
                 <CommentaryBody text={detailed.detail} />
               </div>
             ) : (
