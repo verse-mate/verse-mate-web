@@ -200,7 +200,7 @@ describe('fetchAudioWithPolling — dynamic poll timeout', () => {
     expect(calls.length).toBeGreaterThan(20);
   });
 
-  it('keeps the 30s floor when estimated_ready_seconds is missing/short', async () => {
+  it('keeps the 90s floor when estimated_ready_seconds is missing/short', async () => {
     setCookies({ accessToken: 'valid' });
     const { calls } = makeFetchMock([
       // 202 with no estimate at all
@@ -209,7 +209,7 @@ describe('fetchAudioWithPolling — dynamic poll timeout', () => {
           JSON.stringify({ job: { job_id: 'audio-gen:42:alloy:en-US' } }),
           { status: 202 },
         ),
-      // All polls return active — should time out at 30s.
+      // All polls return active — should time out at 90s.
       () =>
         new Response(
           JSON.stringify({ job: { job_id: 'audio-gen:42:alloy:en-US', status: 'active' } }),
@@ -220,13 +220,71 @@ describe('fetchAudioWithPolling — dynamic poll timeout', () => {
     const promise = fetchAudioWithPolling({ explanationId: 42 }).catch(
       (e) => e,
     );
-    // Advance 32s — past the 30s floor.
-    for (let i = 0; i < 16; i++) {
+    // Advance 92s — past the 90s floor.
+    for (let i = 0; i < 46; i++) {
       await vi.advanceTimersByTimeAsync(2000);
     }
     const result = await promise;
     expect(result).toBeInstanceOf(Error);
-    expect((result as Error).message).toMatch(/timed out after 30s/);
+    expect((result as Error).message).toMatch(/timed out after 90s/);
     expect(calls.length).toBeGreaterThan(0);
+  });
+
+  it('lets a long job complete near the floor when backend estimate is optimistic', async () => {
+    // Real-world case observed on 2026-04-28: backend reports
+    // `estimated_ready_seconds: 8` but actual completion is ~75s.
+    // The 90s floor keeps the chip in `loading` long enough for the
+    // worker to finish.
+    setCookies({ accessToken: 'valid' });
+    let pollHits = 0;
+    const { calls } = makeFetchMock([
+      () =>
+        new Response(
+          JSON.stringify({
+            job: {
+              job_id: 'audio-gen:11492:alloy:en-US',
+              estimated_ready_seconds: 8,
+            },
+          }),
+          { status: 202 },
+        ),
+      () => {
+        pollHits++;
+        // Complete on the 38th poll (~76s), like Numbers 7 on prod.
+        if (pollHits < 38) {
+          return new Response(
+            JSON.stringify({
+              job: { job_id: 'audio-gen:11492:alloy:en-US', status: 'active' },
+            }),
+            { status: 200 },
+          );
+        }
+        return new Response(
+          JSON.stringify({
+            job: {
+              job_id: 'audio-gen:11492:alloy:en-US',
+              status: 'completed',
+              audio: {
+                url: 'https://cdn.test/numbers7.mp3',
+                duration_seconds: 270,
+                voice: 'alloy',
+                language_code: 'en-US',
+              },
+            },
+          }),
+          { status: 200 },
+        );
+      },
+    ]);
+
+    const promise = fetchAudioWithPolling({ explanationId: 11492 });
+    // Advance 80s in 2s ticks — would have timed out on the 30s floor
+    // but completes inside the new 90s budget.
+    for (let i = 0; i < 40; i++) {
+      await vi.advanceTimersByTimeAsync(2000);
+    }
+    const audio = await promise;
+    expect(audio.url).toBe('https://cdn.test/numbers7.mp3');
+    expect(calls.length).toBeGreaterThan(30);
   });
 });
