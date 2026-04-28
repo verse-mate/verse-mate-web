@@ -23,17 +23,22 @@ const POLL_INTERVAL_MS = 2000;
  * explanation length (OpenAI TTS currently runs ~20s per minute of
  * audio). We multiply that estimate by `POLL_TIMEOUT_FUDGE` to absorb
  * cold-worker overhead (TLS handshake, OpenAI rate-limit retries) and
- * clamp into [MIN, MAX] so a missing/zero estimate still gets a sane
- * window and a runaway estimate doesn't make users wait forever.
+ * clamp into [MIN, MAX].
  *
- * Why this matters: the previous fixed 30s timeout fired before
- * 4-minute chapters finished generating (~90s end-to-end), so users
- * saw "Audio unavailable" even though the worker eventually completed
- * the job. Reload would then play the cached MP3, which made the bug
- * feel intermittent instead of pointing at the timeout.
+ * Why the high floor: the backend's estimate is currently optimistic
+ * (returns ~8s for chapters whose end-to-end generation is closer to
+ * 75–90s — observed in DO logs on 2026-04-28: Numbers 6 took 90s,
+ * Numbers 7 took 75s, both reported as `~8s`). Fudge × 8s = 20s,
+ * which clamps to the floor; so the floor is what actually drives
+ * the timeout for typical uncached chapters today. 90s covers the
+ * observed long tail with headroom.
+ *
+ * If the backend estimate later becomes accurate, the dynamic path
+ * (estimate × fudge) will start dominating again for long content
+ * without code changes — which is the whole point of keeping it.
  */
 const POLL_TIMEOUT_FUDGE = 2.5;
-const POLL_TIMEOUT_MIN_MS = 30_000;
+const POLL_TIMEOUT_MIN_MS = 90_000;
 const POLL_TIMEOUT_MAX_MS = 180_000;
 
 function pollTimeoutMs(estimatedReadySeconds: number | undefined): number {
