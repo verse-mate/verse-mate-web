@@ -99,6 +99,42 @@ export function clearTokens() {
   deleteCookie(REFRESH_COOKIE);
 }
 
+/**
+ * Auth-aware fetch wrapper. Attaches the Bearer access token, and on 401
+ * tries to refresh ONCE then retries the original request. Returns the
+ * raw `Response` so callers that need status / body shape control (audio
+ * APIs, file uploads, etc.) keep that flexibility.
+ *
+ * Differs from `request()`: never parses the body, never auto-redirects
+ * to /logout on refresh failure. Callers decide how to surface auth
+ * errors (e.g., the audio chip shows a "Sign in" CTA in-place rather
+ * than navigating away).
+ */
+export async function fetchWithAuth(
+  url: string,
+  init: RequestInit = {},
+  opts: { _retrying?: boolean } = {},
+): Promise<Response> {
+  const headers = new Headers(init.headers);
+  const token = getAccessToken();
+  if (token) headers.set('Authorization', `Bearer ${token}`);
+
+  const res = await fetch(url, { ...init, headers });
+
+  if (
+    res.status === 401 &&
+    !opts._retrying &&
+    !isAuthEndpoint(url)
+  ) {
+    const newToken = await refreshAccessToken();
+    if (newToken) {
+      return fetchWithAuth(url, init, { _retrying: true });
+    }
+  }
+
+  return res;
+}
+
 // ─── Core fetch wrapper ───────────────────────────────────────────────────
 interface RequestOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
