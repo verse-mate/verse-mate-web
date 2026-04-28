@@ -16,7 +16,33 @@
 import { API_BASE_URL, fetchWithAuth } from '@/services/api';
 
 const POLL_INTERVAL_MS = 2000;
-const POLL_TIMEOUT_MS = 30_000;
+
+/**
+ * Floor / ceiling for the per-job poll timeout. The backend returns
+ * `estimated_ready_seconds` on 202, which is roughly proportional to
+ * explanation length (OpenAI TTS currently runs ~20s per minute of
+ * audio). We multiply that estimate by `POLL_TIMEOUT_FUDGE` to absorb
+ * cold-worker overhead (TLS handshake, OpenAI rate-limit retries) and
+ * clamp into [MIN, MAX] so a missing/zero estimate still gets a sane
+ * window and a runaway estimate doesn't make users wait forever.
+ *
+ * Why this matters: the previous fixed 30s timeout fired before
+ * 4-minute chapters finished generating (~90s end-to-end), so users
+ * saw "Audio unavailable" even though the worker eventually completed
+ * the job. Reload would then play the cached MP3, which made the bug
+ * feel intermittent instead of pointing at the timeout.
+ */
+const POLL_TIMEOUT_FUDGE = 2.5;
+const POLL_TIMEOUT_MIN_MS = 30_000;
+const POLL_TIMEOUT_MAX_MS = 180_000;
+
+function pollTimeoutMs(estimatedReadySeconds: number | undefined): number {
+  if (!estimatedReadySeconds || estimatedReadySeconds <= 0) {
+    return POLL_TIMEOUT_MIN_MS;
+  }
+  const computed = Math.round(estimatedReadySeconds * 1000 * POLL_TIMEOUT_FUDGE);
+  return Math.max(POLL_TIMEOUT_MIN_MS, Math.min(POLL_TIMEOUT_MAX_MS, computed));
+}
 
 export interface ReaderAudio {
   url: string;
@@ -110,7 +136,7 @@ async function pollJob(args: {
 
 /**
  * Resolves to the ReaderAudio once available. Throws on failure or
- * after POLL_TIMEOUT_MS without resolution.
+ * after the per-job timeout (derived from `estimated_ready_seconds`).
  */
 export async function fetchAudioWithPolling(args: {
   explanationId: number;
@@ -127,9 +153,10 @@ export async function fetchAudioWithPolling(args: {
   if (initial.status !== 202 || !initial.body.job) {
     throw new Error(`Unexpected audio response: ${initial.status}`);
   }
-  const { job_id } = initial.body.job;
+  const { job_id, estimated_ready_seconds } = initial.body.job;
+  const timeoutMs = pollTimeoutMs(estimated_ready_seconds);
   const startedAt = Date.now();
-  while (Date.now() - startedAt < POLL_TIMEOUT_MS) {
+  while (Date.now() - startedAt < timeoutMs) {
     if (args.signal?.aborted) throw new Error('aborted');
     await new Promise((r) => setTimeout(r, POLL_INTERVAL_MS));
     const job = await pollJob({ jobId: job_id, signal: args.signal });
@@ -138,7 +165,7 @@ export async function fetchAudioWithPolling(args: {
       throw new Error(`Generation failed: ${job.error_code ?? 'UNKNOWN'}`);
     }
   }
-  throw new Error('Audio generation timed out after 30s');
+  throw new Error(`Audio generation timed out after ${Math.round(timeoutMs / 1000)}s`);
 }
 
 export async function fetchProgress(
