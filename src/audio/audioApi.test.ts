@@ -287,4 +287,100 @@ describe('fetchAudioWithPolling — dynamic poll timeout', () => {
     expect(audio.url).toBe('https://cdn.test/numbers7.mp3');
     expect(calls.length).toBeGreaterThan(30);
   });
+
+  it('treats a transient 404 on the job poll as still-queued (verse-mate#194 race)', async () => {
+    // After verse-mate#194 (drop failed jobs before re-enqueue), there
+    // is a brief window where `getJob(jobId)` returns nothing on the
+    // backend. The chip used to flip to `error` immediately; now it
+    // should keep polling and succeed when the job materializes.
+    setCookies({ accessToken: 'valid' });
+    let pollHits = 0;
+    const { calls } = makeFetchMock([
+      // 1) audio request → 202 queued
+      () =>
+        new Response(
+          JSON.stringify({
+            job: {
+              job_id: 'audio-gen:10236:alloy:en-US',
+              estimated_ready_seconds: 8,
+            },
+          }),
+          { status: 202 },
+        ),
+      // 2+) job-status polls: 404 for the first 3 polls, then completed
+      () => {
+        pollHits++;
+        if (pollHits <= 3) {
+          return new Response(
+            JSON.stringify({ message: 'Job not found' }),
+            { status: 404 },
+          );
+        }
+        return new Response(
+          JSON.stringify({
+            job: {
+              job_id: 'audio-gen:10236:alloy:en-US',
+              status: 'completed',
+              audio: {
+                url: 'https://cdn.test/race.mp3',
+                duration_seconds: 200,
+                voice: 'alloy',
+                language_code: 'en-US',
+              },
+            },
+          }),
+          { status: 200 },
+        );
+      },
+    ]);
+
+    const promise = fetchAudioWithPolling({ explanationId: 10236 });
+    // 4 polls × 2s + a little buffer
+    for (let i = 0; i < 5; i++) {
+      await vi.advanceTimersByTimeAsync(2000);
+    }
+    const audio = await promise;
+    expect(audio.url).toBe('https://cdn.test/race.mp3');
+    expect(calls.length).toBeGreaterThanOrEqual(5);
+  });
+
+  it('extends the timeout up to 600s for long backend estimates (chunked TTS)', async () => {
+    // Long Detailed explanations that get chunked server-side
+    // (verse-mate#195) can run minutes end-to-end. The poll ceiling
+    // bumped from 180s to 600s so the chip waits long enough.
+    setCookies({ accessToken: 'valid' });
+    const { calls } = makeFetchMock([
+      // estimated 300s → fudge × 2.5 = 750s → clamped to MAX 600s
+      () =>
+        new Response(
+          JSON.stringify({
+            job: {
+              job_id: 'audio-gen:99999:alloy:en-US',
+              estimated_ready_seconds: 300,
+            },
+          }),
+          { status: 202 },
+        ),
+      // Job stays active forever — we want to confirm the timeout is at 600s, not 180s.
+      () =>
+        new Response(
+          JSON.stringify({
+            job: { job_id: 'audio-gen:99999:alloy:en-US', status: 'active' },
+          }),
+          { status: 200 },
+        ),
+    ]);
+
+    const promise = fetchAudioWithPolling({ explanationId: 99999 }).catch(
+      (e) => e,
+    );
+    // Advance 602s — past the new 600s ceiling.
+    for (let i = 0; i < 301; i++) {
+      await vi.advanceTimersByTimeAsync(2000);
+    }
+    const result = await promise;
+    expect(result).toBeInstanceOf(Error);
+    expect((result as Error).message).toMatch(/timed out after 600s/);
+    expect(calls.length).toBeGreaterThan(50);
+  });
 });
