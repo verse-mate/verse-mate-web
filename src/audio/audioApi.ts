@@ -33,13 +33,18 @@ const POLL_INTERVAL_MS = 2000;
  * the timeout for typical uncached chapters today. 90s covers the
  * observed long tail with headroom.
  *
+ * Why the high ceiling: long Detailed explanations (Genesis 20 ran to
+ * 13:57 of audio) get split into N OpenAI TTS calls server-side
+ * (verse-mate#195) and each chunk takes ~30–60s. A 14-min track
+ * needed ~7 minutes end-to-end. 600s = 10 min covers that with room.
+ *
  * If the backend estimate later becomes accurate, the dynamic path
  * (estimate × fudge) will start dominating again for long content
  * without code changes — which is the whole point of keeping it.
  */
 const POLL_TIMEOUT_FUDGE = 2.5;
 const POLL_TIMEOUT_MIN_MS = 90_000;
-const POLL_TIMEOUT_MAX_MS = 180_000;
+const POLL_TIMEOUT_MAX_MS = 600_000;
 
 function pollTimeoutMs(estimatedReadySeconds: number | undefined): number {
   if (!estimatedReadySeconds || estimatedReadySeconds <= 0) {
@@ -134,6 +139,19 @@ async function pollJob(args: {
     `${API_BASE_URL}/bible/explanation/audio/jobs/${encodeURIComponent(args.jobId)}`,
     { signal: args.signal },
   );
+  // 404 right after enqueue is a known race in the backend's
+  // dedup-clear path (verse-mate#194): when a previously-failed job
+  // is removed and a new one added under the same id, BullMQ has a
+  // brief window where `getJob` returns nothing. Surfacing that 404
+  // as a hard error caused the chip to flip to "Audio unavailable"
+  // even though the worker was processing the job — exactly the
+  // intermittent error users hit on Genesis 20 immediately after
+  // verse-mate#195 deployed. Treat 404 as still-queued and let the
+  // outer poll loop's bounded timeout decide if the job is genuinely
+  // gone.
+  if (res.status === 404) {
+    return { job_id: args.jobId, status: 'queued' };
+  }
   if (!res.ok) throw new Error(`Job status failed: HTTP ${res.status}`);
   const body = (await res.json()) as JobStatusResponse;
   return body.job;
