@@ -22,7 +22,7 @@ export interface StepProse extends StudyStepBase {
 /** Q&A grid — each item is its own expandable sub-card. Used for step 2 (5 W's). */
 export interface StepQA extends StudyStepBase {
   kind: 'qa';
-  items: { q: string; a: string }[];
+  items: { tag?: string; q: string; a: string }[];
 }
 
 /** Marking legend + key-word inventory for step 3. */
@@ -48,9 +48,11 @@ export interface StepContrasts extends StudyStepBase {
   items: { verses: string; type: 'Contrast' | 'Simile' | 'Metaphor'; pairing: string }[];
 }
 
-/** Tagged bullet list — verse range + text. Used for steps 6, 7, 8. */
+/** Tagged bullet list — verse range + text. Used for steps 1, 6, 7, 8. */
 export interface StepBullets extends StudyStepBase {
   kind: 'bullets';
+  /** Optional lead paragraph rendered above the items. */
+  intro?: string;
   items: { tag?: string; text: string }[];
   /** Optional trailing prose (e.g. step 6's commentary on temptation gestation). */
   note?: string;
