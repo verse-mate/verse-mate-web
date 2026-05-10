@@ -313,3 +313,63 @@
   }
 }
 /* prod-mobile-1775850347 */
+
+/* Font Size slider in Settings — gold fill on the left of the thumb,
+   dark unfilled portion on the right. The fill width is driven by a
+   --vm-progress CSS custom property set inline on the input. */
+.vm-font-size-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    #b09a6d 0%,
+    #b09a6d var(--vm-progress, 50%),
+    #1b1b1b var(--vm-progress, 50%),
+    #1b1b1b 100%
+  );
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.vm-font-size-slider:focus-visible {
+  box-shadow: 0 0 0 3px rgba(176, 154, 109, 0.35);
+}
+
+.vm-font-size-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #b09a6d;
+  border: 2px solid #1b1b1b;
+  cursor: grab;
+  margin-top: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.vm-font-size-slider:active::-webkit-slider-thumb {
+  cursor: grabbing;
+}
+
+.vm-font-size-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #b09a6d;
+  border: 2px solid #1b1b1b;
+  cursor: grab;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.vm-font-size-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background: transparent;
+}
+
