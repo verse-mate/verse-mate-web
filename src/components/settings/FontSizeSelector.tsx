@@ -2,8 +2,9 @@
  * Font Size Selector — web port of verse-mate-mobile/components/settings/FontSizeSelector.tsx.
  *
  * Section header + dark elevated card with a label / px-value row, a
- * minus/plus pair flanking a fill-track, and a Small/Large range row.
- * Reads/writes settings.fontSize via AppContext (range 13–26).
+ * minus/plus pair flanking a draggable/clickable range slider, and a
+ * Small/Large range row. Reads/writes settings.fontSize via AppContext
+ * (range 13–26).
  */
 
 import { Minus, Plus } from 'lucide-react';
@@ -77,14 +78,6 @@ const trackContainerStyle: React.CSSProperties = {
   alignItems: 'center',
 };
 
-const trackStyle: React.CSSProperties = {
-  width: '100%',
-  height: 6,
-  background: '#1B1B1B',
-  borderRadius: 3,
-  overflow: 'hidden',
-};
-
 const rangeLabelsStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'space-between',
@@ -132,17 +125,20 @@ export function FontSizeSelector() {
           </button>
 
           <div style={trackContainerStyle}>
-            <div style={trackStyle}>
-              <div
-                style={{
-                  height: '100%',
-                  width: `${progress}%`,
-                  background: '#B09A6D',
-                  borderRadius: 3,
-                  transition: 'width 0.15s ease',
-                }}
-              />
-            </div>
+            <input
+              type="range"
+              min={MIN_FONT_SIZE}
+              max={MAX_FONT_SIZE}
+              step={1}
+              value={fontSize}
+              onChange={(e) => setFontSize(Number(e.target.value))}
+              aria-label="Font size"
+              data-testid="font-size-slider"
+              className="vm-font-size-slider"
+              style={{
+                ['--vm-progress' as string]: `${progress}%`,
+              }}
+            />
           </div>
 
           <button
