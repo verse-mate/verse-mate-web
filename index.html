@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>VerseMate — Bible Reading Companion</title>
     <link rel="icon" type="image/png" href="/versemate-icon.png" />
+    <!-- iOS Safari ignores the generic <link rel="icon"> for the tab/bookmark
+         strip and home-screen icon; it strictly wants apple-touch-icon. Without
+         it iOS shows a placeholder triangle in the tab list. -->
+    <link rel="apple-touch-icon" href="/versemate-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="VerseMate" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Android Chrome / Edge tab + status-bar tint to match the dark UI. -->
+    <meta name="theme-color" content="#1B1B1B" />
     <meta name="description" content="A clean, reverent mobile Bible reading app with bookmarks, notes, highlights, and cross-references.">
 
     <meta property="og:type" content="website" />
