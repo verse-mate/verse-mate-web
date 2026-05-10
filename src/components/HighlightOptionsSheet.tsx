@@ -58,7 +58,7 @@ export default function HighlightOptionsSheet({ highlight, onClose }: Props) {
         </h3>
 
         {/* Action tiles — Figma has just 3 (Copy / Share / Delete), no color swatches */}
-        <div className="grid grid-cols-3 gap-3 px-5">
+        <div className="grid grid-cols-3 gap-2 px-4 sm:gap-3 sm:px-5">
           <button
             onClick={handleCopy}
             className="h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 bg-dark-raised border-dark text-dark-fg"
