@@ -19,6 +19,8 @@ import {
   HelpCircle,
   LogOut,
   X,
+  Copy,
+  Check,
 } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import BookSelector from '@/components/BookSelector';
@@ -719,6 +721,28 @@ function CommentaryPanel({
   bookId: number | null;
   chapter: number;
 }) {
+  // Per-tab "Copied!" feedback — keyed by tab id so switching tabs while
+  // the toast is up doesn't leave a stale checkmark on the wrong button.
+  const [copiedTab, setCopiedTab] = useState<Tab | null>(null);
+  const copyToClipboard = async (text: string, fromTab: Tab) => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      setCopiedTab(fromTab);
+      setTimeout(() => setCopiedTab(prev => (prev === fromTab ? null : prev)), 1500);
+    } catch { /* ignore */ }
+  };
+
   // Study tab has its own data source (src/data/studies/*) and is independent
   // of the API commentaries array, so route it before the no-commentaries
   // early return.
@@ -742,19 +766,36 @@ function CommentaryPanel({
           <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#E7E7E7', margin: 0 }}>
             Summary of {book} {chapter}
           </h2>
-          <button
-            onClick={() => navigator.share?.({
-              title: `Summary of ${book} ${chapter}`,
-              text: summary?.detail
-                ? `Summary of ${book} ${chapter}\n\n${stripMarkdown(summary.detail)}`
-                : `Summary of ${book} ${chapter}`,
-              url: window.location.href,
-            }).catch(() => {})}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
-            aria-label="Share summary"
-          >
-            <ShareIcon size={18} color="#E7E7E7" />
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
+            <button
+              onClick={() => {
+                const body = summary?.detail
+                  ? `Summary of ${book} ${chapter}\n\n${stripMarkdown(summary.detail)}`
+                  : `Summary of ${book} ${chapter}`;
+                copyToClipboard(body, 'summary');
+              }}
+              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
+              aria-label="Copy summary"
+              title="Copy summary"
+            >
+              {copiedTab === 'summary'
+                ? <Check size={18} color="#B09A6D" strokeWidth={2} />
+                : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
+            </button>
+            <button
+              onClick={() => navigator.share?.({
+                title: `Summary of ${book} ${chapter}`,
+                text: summary?.detail
+                  ? `Summary of ${book} ${chapter}\n\n${stripMarkdown(summary.detail)}`
+                  : `Summary of ${book} ${chapter}`,
+                url: window.location.href,
+              }).catch(() => {})}
+              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
+              aria-label="Share summary"
+            >
+              <ShareIcon size={18} color="#E7E7E7" />
+            </button>
+          </div>
         </div>
         {summary ? (
           <>
@@ -787,24 +828,44 @@ function CommentaryPanel({
           <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#E7E7E7', margin: 0 }}>
             Line-by-Line Analysis of {book} {chapter}
           </h2>
-          <button
-            onClick={() => {
-              const body = byLineItems
-                .map(c => `${book} ${chapter}:${c.verse}\n${stripMarkdown(c.detail)}`)
-                .join('\n\n');
-              navigator.share?.({
-                title: `Line-by-Line Analysis of ${book} ${chapter}`,
-                text: body
+          <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
+            <button
+              onClick={() => {
+                const body = byLineItems
+                  .map(c => `${book} ${chapter}:${c.verse}\n${stripMarkdown(c.detail)}`)
+                  .join('\n\n');
+                const text = body
                   ? `Line-by-Line Analysis of ${book} ${chapter}\n\n${body}`
-                  : `Line-by-Line Analysis of ${book} ${chapter}`,
-                url: window.location.href,
-              }).catch(() => {});
-            }}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
-            aria-label="Share line-by-line analysis"
-          >
-            <ShareIcon size={18} color="#E7E7E7" />
-          </button>
+                  : `Line-by-Line Analysis of ${book} ${chapter}`;
+                copyToClipboard(text, 'byline');
+              }}
+              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
+              aria-label="Copy line-by-line analysis"
+              title="Copy line-by-line analysis"
+            >
+              {copiedTab === 'byline'
+                ? <Check size={18} color="#B09A6D" strokeWidth={2} />
+                : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
+            </button>
+            <button
+              onClick={() => {
+                const body = byLineItems
+                  .map(c => `${book} ${chapter}:${c.verse}\n${stripMarkdown(c.detail)}`)
+                  .join('\n\n');
+                navigator.share?.({
+                  title: `Line-by-Line Analysis of ${book} ${chapter}`,
+                  text: body
+                    ? `Line-by-Line Analysis of ${book} ${chapter}\n\n${body}`
+                    : `Line-by-Line Analysis of ${book} ${chapter}`,
+                  url: window.location.href,
+                }).catch(() => {});
+              }}
+              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
+              aria-label="Share line-by-line analysis"
+            >
+              <ShareIcon size={18} color="#E7E7E7" />
+            </button>
+          </div>
         </div>
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
           <button
@@ -872,19 +933,36 @@ function CommentaryPanel({
         <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 18, lineHeight: '26px', color: '#E7E7E7', margin: 0 }}>
           In-Depth Analysis of {book} {chapter}
         </h2>
-        <button
-          onClick={() => navigator.share?.({
-            title: `In-Depth Analysis of ${book} ${chapter}`,
-            text: detailed.detail
-              ? `In-Depth Analysis of ${book} ${chapter}\n\n${stripMarkdown(detailed.detail)}`
-              : `In-Depth Analysis of ${book} ${chapter}`,
-            url: window.location.href,
-          }).catch(() => {})}
-          style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
-          aria-label="Share in-depth analysis"
-        >
-          <ShareIcon size={18} color="#E7E7E7" />
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
+          <button
+            onClick={() => {
+              const body = detailed.detail
+                ? `In-Depth Analysis of ${book} ${chapter}\n\n${stripMarkdown(detailed.detail)}`
+                : `In-Depth Analysis of ${book} ${chapter}`;
+              copyToClipboard(body, 'detailed');
+            }}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
+            aria-label="Copy in-depth analysis"
+            title="Copy in-depth analysis"
+          >
+            {copiedTab === 'detailed'
+              ? <Check size={18} color="#B09A6D" strokeWidth={2} />
+              : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
+          </button>
+          <button
+            onClick={() => navigator.share?.({
+              title: `In-Depth Analysis of ${book} ${chapter}`,
+              text: detailed.detail
+                ? `In-Depth Analysis of ${book} ${chapter}\n\n${stripMarkdown(detailed.detail)}`
+                : `In-Depth Analysis of ${book} ${chapter}`,
+              url: window.location.href,
+            }).catch(() => {})}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
+            aria-label="Share in-depth analysis"
+          >
+            <ShareIcon size={18} color="#E7E7E7" />
+          </button>
+        </div>
       </div>
       {bookId && detailed.explanationId ? (
         <div style={{ marginBottom: 12 }}>
