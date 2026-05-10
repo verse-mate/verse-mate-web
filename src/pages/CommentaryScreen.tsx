@@ -6,9 +6,10 @@ import { parseBookParam } from '@/lib/bookSlugs';
 import { ChevronDown, ChevronUp, Menu } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import ShareIcon from '@/components/ShareIcon';
+import StudyPanel from '@/components/StudyPanel';
 import { AudioInlineEntry } from '@/audio';
 
-type Tab = 'summary' | 'byline' | 'detailed';
+type Tab = 'summary' | 'byline' | 'detailed' | 'study';
 
 export default function CommentaryScreen() {
   const { book: bookParam, chapter } = useParams<{ book: string; chapter: string }>();
@@ -71,6 +72,7 @@ export default function CommentaryScreen() {
     { id: 'summary', label: 'Summary' },
     { id: 'byline', label: 'By Line' },
     { id: 'detailed', label: 'Detailed' },
+    { id: 'study', label: 'Study' },
   ];
 
   return (
@@ -180,7 +182,13 @@ export default function CommentaryScreen() {
 
       {/* Body — BLACK background, white text */}
       <div className="flex-1 overflow-y-auto px-4 pb-8" style={{ backgroundColor: '#000000', color: '#FFFFFF' }}>
-        {commentaries.length === 0 ? (
+        {/* Study tab uses its own static data; route it before the empty
+            commentaries early-return. */}
+        {tab === 'study' ? (
+          <div className="pt-4">
+            <StudyPanel book={decodedBook} bookId={bookId} chapter={chapterNum} />
+          </div>
+        ) : commentaries.length === 0 ? (
           <p className="text-[14px] text-center py-8" style={{ color: 'rgba(255,255,255,0.6)' }}>
             No commentary available for this chapter.
           </p>
