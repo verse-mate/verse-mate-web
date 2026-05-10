@@ -108,6 +108,28 @@ export default function ReadingScreen() {
   };
 
   const isDesktop = useMediaQuery('(min-width: 1024px)');
+
+  // Belt-and-suspenders against iOS Safari's native long-press text
+  // selection on the scripture body. Even with `user-select: none` on the
+  // verse spans, iOS still fires `selectstart` when the user long-presses
+  // a verse for the second time (especially over an already-highlighted
+  // span — the rendered <mark>-like background seems to override the
+  // -webkit-user-select rule). Block the event at the document level
+  // whenever the long-press target sits inside the scripture body. On
+  // desktop the SelectionToolbar relies on real text selection, so this
+  // hook is a no-op there.
+  useEffect(() => {
+    if (isDesktop) return;
+    const onSelectStart = (e: Event) => {
+      const t = e.target as HTMLElement | null;
+      if (t && t.closest?.('.font-scripture')) {
+        e.preventDefault();
+      }
+    };
+    document.addEventListener('selectstart', onSelectStart);
+    return () => document.removeEventListener('selectstart', onSelectStart);
+  }, [isDesktop]);
+
   const [insightVerse, setInsightVerse] = useState<number | null>(null);
   const openVerseInsight = (verseNum: number) => {
     dispatch({ type: 'SET_VERSE', verse: verseNum });

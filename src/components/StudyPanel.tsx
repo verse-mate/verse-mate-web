@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp, BookOpen, Copy, Check } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import MarkdownBlock from '@/components/MarkdownBlock';
@@ -41,8 +41,42 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
   // when the user toggles individually after a bulk action. Default is
   // collapsed so the user lands on a scannable outline of all 9 steps +
   // interpretation + application — and opens what they want to read.
-  const [bulkState, setBulkState] = useState<'expanded' | 'collapsed' | null>('collapsed');
-  const [overrides, setOverrides] = useState<Record<string, boolean>>({});
+  //
+  // Both bulk + overrides are persisted to sessionStorage scoped by
+  // `bookId:chapter` so rotation (portrait↔landscape crosses the AppLayout
+  // breakpoint and unmounts StudyPanel) doesn't reset everything to
+  // collapsed. Switching chapters resets to the default since the keys are
+  // chapter-scoped.
+  const storageKey = `versemate-study-state:${bookId ?? 'none'}:${chapter}`;
+  const [bulkState, setBulkState] = useState<'expanded' | 'collapsed' | null>(() => {
+    try {
+      const raw = sessionStorage.getItem(storageKey);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed?.bulkState === 'expanded' || parsed?.bulkState === 'collapsed' || parsed?.bulkState === null) {
+          return parsed.bulkState;
+        }
+      }
+    } catch { /* ignore */ }
+    return 'collapsed';
+  });
+  const [overrides, setOverrides] = useState<Record<string, boolean>>(() => {
+    try {
+      const raw = sessionStorage.getItem(storageKey);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed?.overrides && typeof parsed.overrides === 'object') {
+          return parsed.overrides as Record<string, boolean>;
+        }
+      }
+    } catch { /* ignore */ }
+    return {};
+  });
+  useEffect(() => {
+    try {
+      sessionStorage.setItem(storageKey, JSON.stringify({ bulkState, overrides }));
+    } catch { /* ignore */ }
+  }, [storageKey, bulkState, overrides]);
   const [copied, setCopied] = useState(false);
 
   const isOpen = (id: string): boolean => {

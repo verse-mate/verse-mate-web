@@ -160,6 +160,22 @@
     font-size: 20px;
     line-height: 34px;
   }
+  /* Below the desktop breakpoint, suppress every form of iOS native text
+     selection across the scripture body. PR #94 set these on each verse
+     span, but iOS still triggered selection on the second long-press of an
+     already-highlighted verse (the rendered highlight markup pushed the
+     touch target into a state where -webkit-user-select on the span alone
+     wasn't honoured). Anchoring the rule on the parent container with
+     !important closes that hole. Desktop ≥1024px still gets text selection
+     via SelectionToolbar. */
+  @media (max-width: 1023px) {
+    .font-scripture,
+    .font-scripture * {
+      -webkit-user-select: none !important;
+      user-select: none !important;
+      -webkit-touch-callout: none !important;
+    }
+  }
   .font-title {
     font-family: 'Roboto', system-ui, sans-serif;
     font-style: normal;
