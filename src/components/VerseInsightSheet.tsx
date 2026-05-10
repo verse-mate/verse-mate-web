@@ -120,6 +120,7 @@ export default function VerseInsightSheet({
         await navigator.share({
           title: `${book} ${chapter}:${currentVerse}`,
           text: quoteText,
+          url: window.location.href,
         });
       } else {
         await handleCopy();

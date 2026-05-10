@@ -130,7 +130,20 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   }, [sidebarWidth]);
 
   // Right panel commentary state
-  const [tab, setTab] = useState<Tab>('byline');
+  // Persist the active tab across remounts (e.g. portrait↔landscape rotation
+  // crosses the 768/1024 breakpoints, swapping AppLayout branch and unmounting
+  // this component). sessionStorage keeps the value within the browser tab so
+  // the user lands back on the tab they were reading.
+  const [tab, setTab] = useState<Tab>(() => {
+    try {
+      const v = sessionStorage.getItem('versemate-commentary-tab');
+      if (v === 'summary' || v === 'byline' || v === 'detailed' || v === 'study') return v;
+    } catch { /* ignore */ }
+    return 'byline';
+  });
+  useEffect(() => {
+    try { sessionStorage.setItem('versemate-commentary-tab', tab); } catch { /* ignore */ }
+  }, [tab]);
   const [commentaries, setCommentaries] = useState<Commentary[]>([]);
   const [expanded, setExpanded] = useState<number | null>(-2); // -2 = all expanded by default
   const commentaryScrollRef = useRef<HTMLDivElement>(null);
@@ -730,7 +743,13 @@ function CommentaryPanel({
             Summary of {book} {chapter}
           </h2>
           <button
-            onClick={() => navigator.share?.({ title: `Summary of ${book} ${chapter}`, text: `Summary of ${book} ${chapter}` }).catch(() => {})}
+            onClick={() => navigator.share?.({
+              title: `Summary of ${book} ${chapter}`,
+              text: summary?.detail
+                ? `Summary of ${book} ${chapter}\n\n${stripMarkdown(summary.detail)}`
+                : `Summary of ${book} ${chapter}`,
+              url: window.location.href,
+            }).catch(() => {})}
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
             aria-label="Share summary"
           >
@@ -769,7 +788,18 @@ function CommentaryPanel({
             Line-by-Line Analysis of {book} {chapter}
           </h2>
           <button
-            onClick={() => navigator.share?.({ title: `Line-by-Line Analysis of ${book} ${chapter}`, text: `Line-by-Line Analysis of ${book} ${chapter}` }).catch(() => {})}
+            onClick={() => {
+              const body = byLineItems
+                .map(c => `${book} ${chapter}:${c.verse}\n${stripMarkdown(c.detail)}`)
+                .join('\n\n');
+              navigator.share?.({
+                title: `Line-by-Line Analysis of ${book} ${chapter}`,
+                text: body
+                  ? `Line-by-Line Analysis of ${book} ${chapter}\n\n${body}`
+                  : `Line-by-Line Analysis of ${book} ${chapter}`,
+                url: window.location.href,
+              }).catch(() => {});
+            }}
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
             aria-label="Share line-by-line analysis"
           >
@@ -843,7 +873,13 @@ function CommentaryPanel({
           In-Depth Analysis of {book} {chapter}
         </h2>
         <button
-          onClick={() => navigator.share?.({ title: `In-Depth Analysis of ${book} ${chapter}`, text: `In-Depth Analysis of ${book} ${chapter}` }).catch(() => {})}
+          onClick={() => navigator.share?.({
+            title: `In-Depth Analysis of ${book} ${chapter}`,
+            text: detailed.detail
+              ? `In-Depth Analysis of ${book} ${chapter}\n\n${stripMarkdown(detailed.detail)}`
+              : `In-Depth Analysis of ${book} ${chapter}`,
+            url: window.location.href,
+          }).catch(() => {})}
           style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
           aria-label="Share in-depth analysis"
         >
@@ -921,6 +957,19 @@ function CommentaryBody({ text }: { text: string }) {
   flushPara();
 
   return <div>{elements}</div>;
+}
+
+// Strip the bare-bones markdown we render in CommentaryBody so the share
+// payload reads as plain prose on the recipient side. We only see #, ##,
+// ### headings, > blockquotes, and **bold** / *italic* inline emphasis in
+// the API responses — handle those, leave everything else as-is.
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/^#+\s*/gm, '')           // heading markers
+    .replace(/^>\s?/gm, '')            // blockquote markers
+    .replace(/\*\*([^*]+)\*\*/g, '$1') // bold
+    .replace(/\*([^*]+)\*/g, '$1')     // italic
+    .trim();
 }
 
 function inlineFormat(text: string): React.ReactNode {
