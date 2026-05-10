@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import BookSelector from '@/components/BookSelector';
+import StudyPanel from '@/components/StudyPanel';
 import { RightPanelProvider } from '@/contexts/RightPanelContext';
 import { AudioInlineEntry } from '@/audio';
 import BookmarksScreen from '@/pages/BookmarksScreen';
@@ -46,7 +47,7 @@ const RIGHT_PANEL_COMPONENTS: Record<Exclude<RightPanelView, 'commentary'>, { co
   signin: { component: SignInScreen, label: 'Sign In' },
 };
 
-type Tab = 'summary' | 'byline' | 'detailed';
+type Tab = 'summary' | 'byline' | 'detailed' | 'study';
 
 const MIN_LEFT_PCT = 35;
 const MAX_LEFT_PCT = 80;
@@ -185,6 +186,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     { id: 'summary', label: 'Summary' },
     { id: 'byline', label: 'By Line' },
     { id: 'detailed', label: 'Detailed' },
+    { id: 'study', label: 'Study' },
   ];
 
   const otBooks = books.filter(b => b.testament === 'OT');
@@ -615,6 +617,13 @@ function CommentaryPanel({
   bookId: number | null;
   chapter: number;
 }) {
+  // Study tab has its own data source (src/data/studies/*) and is independent
+  // of the API commentaries array, so route it before the no-commentaries
+  // early return.
+  if (tab === 'study') {
+    return <StudyPanel book={book} bookId={bookId} chapter={chapter} />;
+  }
+
   if (commentaries.length === 0) {
     return (
       <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
