@@ -15,16 +15,16 @@ export const JAMES_1_STUDY: InductiveStudy = {
   steps: [
     {
       number: 1,
-      kind: 'prose',
+      kind: 'bullets',
       title: 'Begin with prayer',
       summary: "Apart from the Holy Spirit's illumination this is just a method.",
-      body: `Before reading James 1, pause and ask the Holy Spirit to open your understanding. Inductive method tools are valuable, but they are means — not the end. Pray for:
-
-- A teachable heart that wants to **see** the text before interpreting it.
-- Eyes to notice what James repeats — repetition is the author's highlighter.
-- Willingness to obey what you find before you have it all figured out.
-
-The point of the exercise is the closing imperative of the chapter: be a **doer of the word**, not merely a hearer (1:22).`,
+      intro: 'Before reading James 1, pause and ask the Holy Spirit to open your understanding. Inductive tools are valuable, but they are means — not the end. Pray with three focuses:',
+      items: [
+        { tag: 'POSTURE', text: 'A teachable heart that wants to **see** the text before interpreting it.' },
+        { tag: 'EYES', text: 'Awareness of what James repeats — repetition is the author\'s highlighter.' },
+        { tag: 'WILL', text: 'Willingness to obey what you find before you have it all figured out.' },
+      ],
+      note: 'The point of the exercise is the closing imperative of the chapter: be a doer of the word, not merely a hearer (1:22).',
     },
     {
       number: 2,
@@ -33,27 +33,33 @@ The point of the exercise is the closing imperative of the chapter: be a **doer 
       summary: 'Setting the table — author, audience, occasion.',
       items: [
         {
+          tag: 'WHO',
           q: 'Who wrote it?',
           a: 'James, the half-brother of Jesus (Matthew 13:55; Galatians 1:19), leader of the Jerusalem church (Acts 15:13; 21:18). He calls himself "a bond-servant of God and of the Lord Jesus Christ" (1:1).',
         },
         {
-          q: 'To whom?',
+          tag: 'TO WHOM',
+          q: 'To whom is it written?',
           a: '"The twelve tribes who are dispersed abroad" (1:1) — Jewish believers scattered after the persecution in Acts 8:1 / 11:19.',
         },
         {
-          q: 'When?',
+          tag: 'WHEN',
+          q: 'When was it written?',
           a: 'Likely AD 44–49, one of the earliest New Testament books, written before the Jerusalem Council of Acts 15.',
         },
         {
-          q: 'Where (audience)?',
+          tag: 'WHERE',
+          q: 'Where was the audience?',
           a: 'Across the Roman world — διασπορά (*diaspora*, 1:1).',
         },
         {
-          q: 'Why?',
+          tag: 'WHY',
+          q: 'Why was it written?',
           a: 'Pastoral exhortation in the wisdom-literature tradition. Steep dependence on Proverbs and the Sermon on the Mount. James writes to scattered believers under social and economic pressure to live out genuine faith under trial.',
         },
         {
-          q: 'How (genre)?',
+          tag: 'HOW',
+          q: 'How does it teach (genre)?',
           a: 'Epistle with strong wisdom and proverbial flavor — interpret accordingly. Genuine faith proves itself by works under trial.',
         },
       ],

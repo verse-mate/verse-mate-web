@@ -58,12 +58,12 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
   }
 
   // Build the full id list for bulk Expand-All / Collapse-All. We include
-  // sub-ids so a single bulk click also opens / closes nested cards.
+  // sub-ids only for kinds that actually have nested toggles (qa items).
+  // Segments render as static cards now, so they don't need ids.
   const allIds: string[] = [];
   for (const s of study.steps) {
     allIds.push(`step-${s.number}`);
     if (s.kind === 'qa') s.items.forEach((_, i) => allIds.push(`step-${s.number}-qa-${i}`));
-    if (s.kind === 'segments') s.segments.forEach((_, i) => allIds.push(`step-${s.number}-seg-${i}`));
   }
   allIds.push('interpretation-intro');
   for (const m of study.interpretation.movements) allIds.push(`mv-${m.number}`);
@@ -215,7 +215,7 @@ function renderStepBody(
     case 'bullets':
       return <BulletsBody step={step} />;
     case 'segments':
-      return <SegmentsBody step={step} isOpen={isOpen} toggle={toggle} />;
+      return <SegmentsBody step={step} />;
   }
 }
 
@@ -234,7 +234,14 @@ function QABody({ step, isOpen, toggle }: { step: StepQA; isOpen: (id: string) =
             key={i}
             open={open}
             onToggle={() => toggle(id)}
-            heading={item.q}
+            heading={
+              <span style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                {item.tag && <Tag label={item.tag} />}
+                <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, fontWeight: 500, color: '#E7E7E7' }}>
+                  {item.q}
+                </span>
+              </span>
+            }
           >
             <MarkdownBlock text={item.a} />
           </NestedCard>
@@ -347,28 +354,36 @@ function ContrastsBody({ step }: { step: StepContrasts }) {
 }
 
 function BulletsBody({ step }: { step: StepBullets }) {
+  // Tag column width adapts to whether tags are verse refs (compact) or short
+  // text labels (slightly wider). Pure-text steps (no tags) skip the column.
+  const hasTextTags = step.items.some(i => i.tag && !/^\d/.test(i.tag));
   return (
     <div>
+      {step.intro && (
+        <p style={{ marginBottom: 14, fontSize: 15, color: '#E7E7E7', lineHeight: '24px' }}>
+          {step.intro}
+        </p>
+      )}
       {step.items.map((item, i) => (
         <div
           key={i}
           style={{
             display: 'flex',
             gap: 12,
-            paddingTop: 10,
-            paddingBottom: 10,
+            paddingTop: 12,
+            paddingBottom: 12,
             borderTop: i === 0 ? '1px solid #1f1f1f' : 'none',
             borderBottom: '1px solid #1f1f1f',
           }}
         >
-          {item.tag && <RangePill range={item.tag} />}
+          {item.tag && (hasTextTags ? <Tag label={item.tag} /> : <RangePill range={item.tag} />)}
           <span style={{ flex: 1, fontSize: 15, color: '#E7E7E7', lineHeight: '24px' }}>
             <MarkdownBlock text={item.text} />
           </span>
         </div>
       ))}
       {step.note && (
-        <p style={{ marginTop: 14, fontSize: 14, color: 'rgba(255,255,255,0.65)', lineHeight: '22px', fontStyle: 'italic' }}>
+        <p style={{ marginTop: 14, fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: '22px', fontStyle: 'italic' }}>
           {step.note}
         </p>
       )}
@@ -376,26 +391,50 @@ function BulletsBody({ step }: { step: StepBullets }) {
   );
 }
 
-function SegmentsBody({ step, isOpen, toggle }: { step: StepSegments; isOpen: (id: string) => boolean; toggle: (id: string) => void }) {
+function SegmentsBody({ step }: { step: StepSegments }) {
+  // Segments render as static styled cards (no extra collapse) — the user
+  // already opened the parent step, and segments are short enough to read
+  // inline. Each card stays visually distinct so they read as their own
+  // "table row" / segment per the design feedback.
   return (
     <div>
-      <div style={{ marginBottom: 14, padding: '12px 14px', borderRadius: 8, backgroundColor: '#1A1A1A', border: '1px solid #2a2a2a' }}>
-        <p style={{ fontSize: 12, fontWeight: 700, color: '#B09A6D', textTransform: 'uppercase', letterSpacing: '0.5px', margin: 0, marginBottom: 4 }}>
+      <div
+        style={{
+          marginBottom: 16,
+          padding: '14px 16px',
+          borderRadius: 10,
+          backgroundColor: '#1A1A1A',
+          border: '1px solid #2a2a2a',
+          borderLeft: '3px solid #B09A6D',
+        }}
+      >
+        <p style={{ fontSize: 12, fontWeight: 700, color: '#B09A6D', textTransform: 'uppercase', letterSpacing: '0.6px', margin: 0, marginBottom: 6 }}>
           Chapter theme
         </p>
-        <p style={{ fontSize: 16, color: '#E7E7E7', fontStyle: 'italic', margin: 0, lineHeight: '24px' }}>
+        <p style={{ fontSize: 17, color: '#E7E7E7', fontStyle: 'italic', margin: 0, lineHeight: '26px', fontWeight: 500 }}>
           {step.themeHeadline}
         </p>
       </div>
-      {step.segments.map((seg, i) => {
-        const id = `step-${step.number}-seg-${i}`;
-        const open = isOpen(id);
-        return (
-          <NestedCard key={i} open={open} onToggle={() => toggle(id)} heading={seg.title}>
-            <MarkdownBlock text={seg.body} />
-          </NestedCard>
-        );
-      })}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+        {step.segments.map((seg, i) => (
+          <div
+            key={i}
+            style={{
+              padding: '14px 16px',
+              borderRadius: 8,
+              backgroundColor: '#161616',
+              border: '1px solid #2a2a2a',
+            }}
+          >
+            <p style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, fontWeight: 600, color: '#FFFFFF', margin: 0, marginBottom: 8 }}>
+              {seg.title}
+            </p>
+            <div style={{ fontSize: 15, color: 'rgba(255,255,255,0.85)', lineHeight: '24px' }}>
+              <MarkdownBlock text={seg.body} />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -458,7 +497,7 @@ function NestedCard({
 }: {
   open: boolean;
   onToggle: () => void;
-  heading: string;
+  heading: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
@@ -467,9 +506,7 @@ function NestedCard({
         onClick={onToggle}
         style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '12px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer', gap: 12 }}
       >
-        <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, fontWeight: 500, color: '#E7E7E7', flex: 1 }}>
-          {heading}
-        </span>
+        <span style={{ flex: 1, minWidth: 0 }}>{heading}</span>
         {open ? (
           <ChevronUp size={16} color="rgba(255,255,255,0.55)" style={{ flexShrink: 0 }} />
         ) : (
@@ -477,11 +514,36 @@ function NestedCard({
         )}
       </button>
       {open && (
-        <div style={{ paddingBottom: 12 }}>
+        <div style={{ paddingBottom: 12, paddingLeft: 0 }}>
           {children}
         </div>
       )}
     </div>
+  );
+}
+
+function Tag({ label }: { label: string }) {
+  return (
+    <span
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minWidth: 72,
+        height: 22,
+        borderRadius: 11,
+        backgroundColor: '#1A1A1A',
+        border: '1px solid #B09A6D',
+        color: '#B09A6D',
+        fontSize: 11,
+        fontWeight: 600,
+        letterSpacing: '0.5px',
+        padding: '0 10px',
+        flexShrink: 0,
+      }}
+    >
+      {label}
+    </span>
   );
 }
 
