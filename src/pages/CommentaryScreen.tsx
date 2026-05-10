@@ -15,7 +15,18 @@ type Tab = 'summary' | 'byline' | 'detailed' | 'study';
 export default function CommentaryScreen() {
   const { book: bookParam, chapter } = useParams<{ book: string; chapter: string }>();
   const navigate = useNavigate();
-  const [tab, setTab] = useState<Tab>('summary');
+  // Persist the active tab across remounts so portrait↔landscape rotation
+  // doesn't reset the user's place. Same key + values as DesktopLayout.
+  const [tab, setTab] = useState<Tab>(() => {
+    try {
+      const v = sessionStorage.getItem('versemate-commentary-tab');
+      if (v === 'summary' || v === 'byline' || v === 'detailed' || v === 'study') return v;
+    } catch { /* ignore */ }
+    return 'summary';
+  });
+  useEffect(() => {
+    try { sessionStorage.setItem('versemate-commentary-tab', tab); } catch { /* ignore */ }
+  }, [tab]);
   const [commentaries, setCommentaries] = useState<Commentary[]>([]);
   const [expanded, setExpanded] = useState<number | null>(null);
   const [bookName, setBookName] = useState<string>('');
@@ -201,7 +212,16 @@ export default function CommentaryScreen() {
                 Summary of {decodedBook} {chapterNum}
               </h2>
               <button
-                onClick={() => navigator.share?.({ title: `Summary of ${decodedBook} ${chapterNum}`, text: `Summary of ${decodedBook} ${chapterNum}` }).catch(() => {})}
+                onClick={() => {
+                  const summary = commentaries.find(c => c.type === 'summary');
+                  navigator.share?.({
+                    title: `Summary of ${decodedBook} ${chapterNum}`,
+                    text: summary?.detail
+                      ? `Summary of ${decodedBook} ${chapterNum}\n\n${stripMarkdown(summary.detail)}`
+                      : `Summary of ${decodedBook} ${chapterNum}`,
+                    url: window.location.href,
+                  }).catch(() => {});
+                }}
                 style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
                 aria-label="Share summary"
                 data-testid="share-summary-button"
@@ -243,7 +263,18 @@ export default function CommentaryScreen() {
                     Line-by-Line Analysis of {decodedBook} {chapterNum}
                   </h2>
                   <button
-                    onClick={() => navigator.share?.({ title: `Line-by-Line Analysis of ${decodedBook} ${chapterNum}`, text: `Line-by-Line Analysis of ${decodedBook} ${chapterNum}` }).catch(() => {})}
+                    onClick={() => {
+                      const body = byLineItems
+                        .map(c => `${decodedBook} ${chapterNum}:${c.verse}\n${stripMarkdown(c.detail)}`)
+                        .join('\n\n');
+                      navigator.share?.({
+                        title: `Line-by-Line Analysis of ${decodedBook} ${chapterNum}`,
+                        text: body
+                          ? `Line-by-Line Analysis of ${decodedBook} ${chapterNum}\n\n${body}`
+                          : `Line-by-Line Analysis of ${decodedBook} ${chapterNum}`,
+                        url: window.location.href,
+                      }).catch(() => {});
+                    }}
                     style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
                     aria-label="Share line-by-line analysis"
                     data-testid="share-byline-button"
@@ -320,7 +351,13 @@ export default function CommentaryScreen() {
                     In-Depth Analysis of {decodedBook} {chapterNum}
                   </h2>
                   <button
-                    onClick={() => navigator.share?.({ title: `In-Depth Analysis of ${decodedBook} ${chapterNum}`, text: `In-Depth Analysis of ${decodedBook} ${chapterNum}` }).catch(() => {})}
+                    onClick={() => navigator.share?.({
+                      title: `In-Depth Analysis of ${decodedBook} ${chapterNum}`,
+                      text: detailed.detail
+                        ? `In-Depth Analysis of ${decodedBook} ${chapterNum}\n\n${stripMarkdown(detailed.detail)}`
+                        : `In-Depth Analysis of ${decodedBook} ${chapterNum}`,
+                      url: window.location.href,
+                    }).catch(() => {})}
                     style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
                     aria-label="Share in-depth analysis"
                     data-testid="share-detailed-button"
@@ -421,6 +458,15 @@ function CommentaryBody({ text }: { text: string }) {
 }
 
 import React from 'react';
+
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/^#+\s*/gm, '')
+    .replace(/^>\s?/gm, '')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .trim();
+}
 
 function inlineFormat(text: string): React.ReactNode {
   const parts: React.ReactNode[] = [];

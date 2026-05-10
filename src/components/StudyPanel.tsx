@@ -97,7 +97,18 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
         <h2 style={titleStyle}>Inductive Study of {study.title}</h2>
         <button
-          onClick={() => navigator.share?.({ title: `Inductive Study of ${study.title}`, text: `Inductive Study of ${study.title}` }).catch(() => {})}
+          onClick={() => {
+            const text = [
+              `Inductive Study of ${study.title}`,
+              study.subtitle ? study.subtitle : '',
+              study.themeOneLine ? `Theme: ${study.themeOneLine}` : '',
+            ].filter(Boolean).join('\n\n');
+            navigator.share?.({
+              title: `Inductive Study of ${study.title}`,
+              text,
+              url: window.location.href,
+            }).catch(() => {});
+          }}
           style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
           aria-label="Share study"
         >
@@ -174,7 +185,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
         heading={<span style={cardHeadingTitleStyle}>Apply, one question per movement</span>}
       >
         {study.application.intro && (
-          <p style={sectionIntroStyle}>
+          <p style={{ ...sectionIntroStyle, marginBottom: 16 }}>
             {study.application.intro}
           </p>
         )}
