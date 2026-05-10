@@ -1,9 +1,9 @@
 import { InductiveStudy } from './types';
 
 // Precept-method inductive study for James 1.
-// 9 observation steps → 5 interpretation movements → 8 application questions.
-// Scripture references stay as verse numbers; the user reads NASB95 from the
-// Bible side of the split-view, not from this panel.
+// Step kinds: prose | qa | keywords | lists | contrasts | bullets | segments.
+// Scripture references stay as verse numbers; the user reads the actual text
+// from the Bible side of the split-view.
 
 export const JAMES_1_STUDY: InductiveStudy = {
   bookId: 59,
@@ -15,6 +15,7 @@ export const JAMES_1_STUDY: InductiveStudy = {
   steps: [
     {
       number: 1,
+      kind: 'prose',
       title: 'Begin with prayer',
       summary: "Apart from the Holy Spirit's illumination this is just a method.",
       body: `Before reading James 1, pause and ask the Holy Spirit to open your understanding. Inductive method tools are valuable, but they are means — not the end. Pray for:
@@ -27,132 +28,178 @@ The point of the exercise is the closing imperative of the chapter: be a **doer 
     },
     {
       number: 2,
-      title: "Ask the 5 W's and an H — setting the table",
-      summary: 'Who? What? When? Where? Why? How? — building blocks of precise observation.',
-      body: `**Who wrote it?** James, the half-brother of Jesus (Matthew 13:55; Galatians 1:19), leader of the Jerusalem church (Acts 15:13; 21:18). He calls himself "a bond-servant of God and of the Lord Jesus Christ" (1:1).
-
-**To whom?** "The twelve tribes who are dispersed abroad" (1:1) — Jewish believers scattered after the persecution of Acts 8:1 / 11:19.
-
-**When?** Likely AD 44–49, one of the earliest New Testament books, written before the Jerusalem Council of Acts 15.
-
-**Where?** Across the Roman world — διασπορά (*diaspora*, 1:1).
-
-**Why?** Pastoral exhortation in the wisdom-literature tradition. Steep dependence on Proverbs and the Sermon on the Mount. James writes to scattered believers under social and economic pressure to live out genuine faith under trial.
-
-**Genre:** Epistle with strong wisdom and proverbial flavor — interpret accordingly.
-
-**Book theme (one line):** Genuine faith proves itself by works under trial.`,
+      kind: 'qa',
+      title: "Ask the 5 W's and an H",
+      summary: 'Setting the table — author, audience, occasion.',
+      items: [
+        {
+          q: 'Who wrote it?',
+          a: 'James, the half-brother of Jesus (Matthew 13:55; Galatians 1:19), leader of the Jerusalem church (Acts 15:13; 21:18). He calls himself "a bond-servant of God and of the Lord Jesus Christ" (1:1).',
+        },
+        {
+          q: 'To whom?',
+          a: '"The twelve tribes who are dispersed abroad" (1:1) — Jewish believers scattered after the persecution in Acts 8:1 / 11:19.',
+        },
+        {
+          q: 'When?',
+          a: 'Likely AD 44–49, one of the earliest New Testament books, written before the Jerusalem Council of Acts 15.',
+        },
+        {
+          q: 'Where (audience)?',
+          a: 'Across the Roman world — διασπορά (*diaspora*, 1:1).',
+        },
+        {
+          q: 'Why?',
+          a: 'Pastoral exhortation in the wisdom-literature tradition. Steep dependence on Proverbs and the Sermon on the Mount. James writes to scattered believers under social and economic pressure to live out genuine faith under trial.',
+        },
+        {
+          q: 'How (genre)?',
+          a: 'Epistle with strong wisdom and proverbial flavor — interpret accordingly. Genuine faith proves itself by works under trial.',
+        },
+      ],
     },
     {
       number: 3,
+      kind: 'keywords',
       title: 'Mark key words and phrases',
-      summary: "Repeated words carry the author's purpose. Counting them shows what James is laboring to fix in your mind.",
-      body: `### Key word inventory
-
-| Key word | Greek | Count | Verses |
-|---|---|---|---|
-| brethren / beloved brethren | ἀδελφοί | 3 | 1:2, 16, 19 |
-| trial / testing / tempt | πειρασμός / δοκίμιον / πειράζω | 6 | 1:2, 3, 12, 13×3, 14 |
-| faith | πίστις | 2 | 1:3, 6 |
-| endurance / perseverance | ὑπομονή | 3 | 1:3, 4, 12 |
-| ask | αἰτέω | 2 | 1:5, 6 |
-| wisdom | σοφία | 1 | 1:5 |
-| word | λόγος | 4 | 1:18, 21, 22, 23 |
-| doer / do | ποιητής / ποιέω | 4 | 1:22, 23, 25 (×2) |
-| religion / religious | θρησκεία / θρῆσκος | 3 | 1:26 (×2), 27 |
-
-### Marking legend (Precept color system)
-
-- **Gold** — every reference to God / Father / Lord (the Father)
-- **Red** — every reference to Jesus / Christ / Lord (the Son)
-- **Orange underline** — the author (James)
-- **Green** — recipients (brethren, beloved brethren, brother)
-- **Crimson** — trial / testing / tempt / lust / sin / death cluster
-- **Blue** — wisdom / ask / faith / doubt / double-minded
-- **Purple** — word / word of truth / word implanted
-- **Teal** — doer / hearer
-- **Plain underline** — terms of conclusion ("Therefore," "Let no one say")
-- **Italics** — comparisons, similes, metaphors
-
-> **Epistles-specific rule from Precept:** mark every reference to the author in one color and every reference to the recipients in another. James and brethren do that work in this chapter.`,
+      summary: "Repeated words carry the author's purpose. Counting them shows what James is fixing in your mind.",
+      legend: [
+        { mark: 'Gold bold', appliesTo: 'God / Father / Lord (the Father)', example: 'God (1:5, 13, 17, 20, 27); Father of lights (1:17)' },
+        { mark: 'Red bold', appliesTo: 'Jesus / Christ / Lord (the Son)', example: 'Lord Jesus Christ (1:1); Lord (1:7, 12)' },
+        { mark: 'Orange underline', appliesTo: 'Author — James', example: 'James (1:1)' },
+        { mark: 'Green bold', appliesTo: 'Recipients — brethren / brother', example: 'brethren (1:2, 16, 19); brother (1:9)' },
+        { mark: 'Crimson bold', appliesTo: 'trial / testing / tempt / lust / sin / death', example: 'trials, testing, endurance (1:2-4, 12); lust, sin, death (1:13-15)' },
+        { mark: 'Blue bold', appliesTo: 'wisdom / ask / faith / doubt / double-minded', example: 'wisdom, ask, faith, doubting, double-minded (1:5-8)' },
+        { mark: 'Purple bold', appliesTo: 'word / word of truth / word implanted', example: 'word of truth (1:18); word implanted (1:21); word (1:22, 23)' },
+        { mark: 'Teal bold', appliesTo: 'doer / hearer', example: 'doers, hearers (1:22-25)' },
+        { mark: 'Green underline', appliesTo: 'Geographic locations', example: 'dispersed abroad (1:1)' },
+        { mark: 'Plain underline', appliesTo: 'Terms of conclusion / hinge', example: 'Let no one say (1:13); Therefore (1:21)' },
+        { mark: 'Italics', appliesTo: 'Comparisons, similes, metaphors', example: 'like the surf of the sea (1:6); like flowering grass (1:10)' },
+      ],
+      inventory: [
+        { word: 'brethren / beloved brethren', greek: 'ἀδελφοί', count: 3, verses: '1:2, 16, 19' },
+        { word: 'trial / testing / tempt', greek: 'πειρασμός / δοκίμιον / πειράζω', count: 6, verses: '1:2, 3, 12, 13×3, 14' },
+        { word: 'faith', greek: 'πίστις', count: 2, verses: '1:3, 6' },
+        { word: 'endurance / perseverance', greek: 'ὑπομονή', count: 3, verses: '1:3, 4, 12' },
+        { word: 'ask', greek: 'αἰτέω', count: 2, verses: '1:5, 6' },
+        { word: 'wisdom', greek: 'σοφία', count: 1, verses: '1:5' },
+        { word: 'word', greek: 'λόγος', count: 4, verses: '1:18, 21, 22, 23' },
+        { word: 'doer / do', greek: 'ποιητής / ποιέω', count: 4, verses: '1:22, 23, 25 (×2)' },
+        { word: 'religion / religious', greek: 'θρησκεία / θρῆσκος', count: 3, verses: '1:26 (×2), 27' },
+      ],
     },
     {
       number: 4,
-      title: 'Make lists — what James 1 teaches about God',
+      kind: 'lists',
+      title: 'Make lists',
       summary: '"What I learn about ___" — extract truths from each marked word.',
-      body: `| Verse | Truth |
-|---|---|
-| 1:5 | Gives wisdom to all generously and without reproach |
-| 1:12 | Has promised the crown of life to those who love Him |
-| 1:13 | Cannot be tempted by evil; tempts no one |
-| 1:17 | Every good and perfect gift comes from Him; He is the Father of lights |
-| 1:17 | There is no variation or shifting shadow with Him — immutable |
-| 1:18 | Brought us forth by the word of truth, by His own will |
-| 1:20 | The anger of man does not achieve His righteousness |
-| 1:27 | Defines pure and undefiled religion |
-
-This is a fast on-ramp to the doctrine of God you can pull straight out of one chapter.`,
+      lists: [
+        {
+          title: 'What James 1 teaches about God',
+          columns: ['Verse', 'Truth'],
+          rows: [
+            { ref: '1:5', truth: 'Gives wisdom to all generously and without reproach.' },
+            { ref: '1:12', truth: 'Has promised the crown of life to those who love Him.' },
+            { ref: '1:13', truth: 'Cannot be tempted by evil; tempts no one.' },
+            { ref: '1:17', truth: 'Every good and perfect gift comes from Him; He is the Father of lights.' },
+            { ref: '1:17', truth: 'No variation or shifting shadow with Him — immutable.' },
+            { ref: '1:18', truth: 'Brought us forth by the word of truth, by His own will.' },
+            { ref: '1:20', truth: 'The anger of man does not achieve His righteousness.' },
+            { ref: '1:27', truth: 'Defines pure and undefiled religion.' },
+          ],
+        },
+        {
+          title: 'What James 1 teaches about the believer under trial',
+          columns: ['Verse', 'Truth'],
+          rows: [
+            { ref: '1:2', truth: 'Encounters various trials — they are an event, not a surprise.' },
+            { ref: '1:3-4', truth: 'Testing produces endurance; endurance produces maturity.' },
+            { ref: '1:5', truth: 'May lack wisdom — the prescribed response is to ask God.' },
+            { ref: '1:6-8', truth: 'Must ask in faith; the doubter is unstable, double-minded.' },
+            { ref: '1:12', truth: 'Will be approved and crowned if they persevere under trial.' },
+            { ref: '1:14-15', truth: 'Is tempted from within (own lust), not from God.' },
+            { ref: '1:21-22', truth: 'Receives the implanted word and proves it by doing.' },
+            { ref: '1:26-27', truth: 'Lives religion through bridled tongue, mercy, and purity.' },
+          ],
+        },
+      ],
     },
     {
       number: 5,
+      kind: 'contrasts',
       title: 'Watch for contrasts and comparisons',
       summary: 'Highly descriptive language James uses to make a point memorable.',
-      body: `| Verses | Type | Pairing |
-|---|---|---|
-| 1:2 | Contrast | Trials encountered → "consider it all joy" — paradox vs. natural reaction |
-| 1:6-8 | Simile | The doubter is like the surf of the sea, driven and tossed by the wind |
-| 1:9-11 | Contrast | Humble brother glories in high position; rich man glories in humiliation |
-| 1:10-11 | Simile | Rich man like flowering grass — withered by the scorching sun |
-| 1:13-14 | Contrast | God tempts no one ↔ each one tempted by his own lust |
-| 1:19-20 | Contrast | Quick to hear ↔ slow to speak / slow to anger |
-| 1:22-24 | Simile | Hearer-only is like a man who looks in a mirror and forgets |
-| 1:22-25 | Contrast | Forgetful hearer ↔ effectual doer |
-| 1:26-27 | Contrast | Worthless religion ↔ pure and undefiled religion |`,
+      items: [
+        { verses: '1:2', type: 'Contrast', pairing: 'Trials encountered → "consider it all joy" — paradox vs. natural reaction.' },
+        { verses: '1:6-8', type: 'Simile', pairing: 'The doubter is like the surf of the sea, driven and tossed by the wind.' },
+        { verses: '1:9-11', type: 'Contrast', pairing: 'Humble brother glories in high position; rich man glories in humiliation.' },
+        { verses: '1:10-11', type: 'Simile', pairing: 'Rich man is like flowering grass — withered by the scorching sun.' },
+        { verses: '1:13-14', type: 'Contrast', pairing: 'God tempts no one ↔ each one tempted by his own lust.' },
+        { verses: '1:19-20', type: 'Contrast', pairing: 'Quick to hear ↔ slow to speak / slow to anger.' },
+        { verses: '1:22-24', type: 'Simile', pairing: 'Hearer-only is like a man who looks in a mirror and forgets.' },
+        { verses: '1:22-25', type: 'Contrast', pairing: 'Forgetful hearer ↔ effectual doer.' },
+        { verses: '1:26-27', type: 'Contrast', pairing: 'Worthless religion ↔ pure and undefiled religion.' },
+      ],
     },
     {
       number: 6,
+      kind: 'bullets',
       title: 'Note expressions of time',
       summary: 'The relationship of events in time often sheds light on meaning.',
-      body: `- "*when* you encounter various trials" (1:2)
-- "*once* he has been approved" (1:12)
-- "*then when* lust has conceived" (1:15)
-- "*in the exercise of His will* He brought us forth" (1:18)
-
-The temporal flow in 1:14-15 is especially careful — James pictures sin as a gestation: lust → conceives → sin → accomplished → death. The sequence is what makes the warning concrete.`,
+      items: [
+        { tag: '1:2', text: '"*when* you encounter various trials" — trials are situational events, not moods.' },
+        { tag: '1:12', text: '"*once* he has been approved" — endurance precedes the crown of life.' },
+        { tag: '1:15', text: '"*then when* lust has conceived" — sin is a timed gestation, not an instant.' },
+        { tag: '1:18', text: '"*in the exercise of His will* He brought us forth" — new birth is God-timed.' },
+      ],
+      note: 'The temporal flow in 1:14-15 is especially careful — James pictures sin as a gestation: lust → conceives → sin → accomplished → death. The sequence is what makes the warning concrete.',
     },
     {
       number: 7,
+      kind: 'bullets',
       title: 'Mark geographic locations',
       summary: 'Where events take place anchors the historical setting.',
-      body: `**dispersed abroad** / διασπορά (1:1) — the only geographical anchor in the chapter, and it sets the entire pastoral situation. James writes to scattered, displaced Jewish believers across the Roman world. The trials they "encounter" in verse 2 are the trials of displacement, social marginalization, and economic pressure that come with diaspora life.`,
+      items: [
+        { tag: '1:1', text: '**dispersed abroad** / διασπορά — the only geographical anchor in the chapter, and it sets the entire pastoral situation.' },
+      ],
+      note: 'James writes to scattered, displaced Jewish believers across the Roman world. The trials they "encounter" in verse 2 are the trials of displacement, social marginalization, and economic pressure that come with diaspora life.',
     },
     {
       number: 8,
+      kind: 'bullets',
       title: 'Mark terms of conclusion',
       summary: '"Therefore," "thus," "for this reason" flag a summary or inference.',
-      body: `- **"Let no one say…"** (1:13) — closes the wisdom subsection and pivots to the temptation discussion.
-- **"Therefore, putting aside all filthiness…"** (1:21) — pivots to the doer-command the chapter has been building toward.
-- **"But prove yourselves doers of the word"** (1:22) — the imperative the whole chapter has been moving toward.
-
-These hinges show the chapter's rhetorical shape: trials (2-12) → temptation's true source (13-18) → receive the word, do the word (19-27).`,
+      items: [
+        { tag: '1:13', text: '**"Let no one say…"** — closes the wisdom subsection and pivots to the temptation discussion.' },
+        { tag: '1:21', text: '**"Therefore, putting aside all filthiness…"** — pivots to the doer-command the chapter has been building toward.' },
+        { tag: '1:22', text: '**"But prove yourselves doers of the word"** — the imperative the whole chapter has been moving toward.' },
+      ],
+      note: 'These hinges show the chapter\'s rhetorical shape: trials (2-12) → temptation\'s true source (13-18) → receive the word, do the word (19-27).',
     },
     {
       number: 9,
+      kind: 'segments',
       title: 'Identify the chapter theme',
       summary: "Center on the main person/event/teaching; express briefly using the text's own words.",
-      body: `**Chapter theme (text's own words):** *Consider it joy in trials; be doers of the word.*
-
-### Visual summary — two parallel pathways
-
-The same circumstance — pressure, suffering, displacement — opens two paths depending on how the heart receives it:
-
-**Path A (external) — Trial → testing of faith → endurance → crown of life** (1:2-4, 12)
-
-**Path B (internal) — Temptation → own lust entices → lust → sin → death** (1:13-15)
-
-The bridge between them is **wisdom asked of God** (1:5), the **word implanted** (1:21), and **obedience that proves the difference** (1:22-25).
-
-That's what produces the chapter's closing portrait: pure and undefiled religion (1:27) — a bridled tongue, care for orphans and widows, kept unstained by the world.`,
+      themeHeadline: "Consider it joy in trials; be doers of the word.",
+      segments: [
+        {
+          title: 'Path A — Trial → Endurance → Crown of life',
+          body: 'External pressure (1:2) tests faith (1:3) and produces endurance (1:4); the believer who perseveres is approved and receives the crown of life (1:12). Same word *peirasmos*, redemptive trajectory.',
+        },
+        {
+          title: 'Path B — Temptation → Lust → Sin → Death',
+          body: 'Internal desire (1:14) entices, conceives (1:15), brings forth sin, and ends in death. The chain is gestational — name the stage, break the chain.',
+        },
+        {
+          title: 'The bridge between the two paths',
+          body: 'Wisdom asked of God (1:5) + the word implanted (1:21) + obedience that proves the difference (1:22-25). This is what shifts a circumstance from trajectory B to trajectory A.',
+        },
+        {
+          title: 'The closing portrait',
+          body: 'Pure and undefiled religion (1:27) — a bridled tongue, care for orphans and widows in distress, kept unstained by the world. The chapter\'s exhortation lands here.',
+        },
+      ],
     },
   ],
   interpretation: {
