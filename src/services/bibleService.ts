@@ -554,13 +554,19 @@ export async function fetchHighlights(userId: string): Promise<Highlight[]> {
 }
 
 export async function addHighlight(h: {
+  userId: string;
   bookId: number;
   chapter: number;
   startVerse: number;
   endVerse?: number;
   color: HighlightColor;
 }) {
+  // Backend requires user_id in the body — POST /bible/highlight/add
+  // throws ValidationError("Missing required fields") otherwise. Without
+  // it, the optimistic highlight added in AppContext gets rolled back on
+  // the catch path, so the highlight visually flashes and disappears.
   return api.post('/bible/highlight/add', {
+    user_id: h.userId,
     book_id: h.bookId,
     chapter_number: h.chapter,
     start_verse: h.startVerse,

@@ -404,6 +404,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
         createdAt: new Date().toISOString(),
       };
       dispatch({ type: 'ADD_HIGHLIGHT', highlight: optimistic });
+
+      // Signed-out: keep the optimistic highlight in memory only — never
+      // hit the API. SelectionToolbar handles its own ephemeral path; this
+      // branch covers VerseActions and any other call site that goes
+      // through addHighlight without checking auth first.
+      if (!state.userId) return;
+
       try {
         // Best-effort: pull the real highlight_id off the POST response so
         // subsequent recolor / remove on the just-added highlight hits the
@@ -415,6 +422,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         // the user's correctly-rendered range. The full list is re-fetched
         // on sign-in / passage load instead.
         const res = await apiAddHighlight({
+          userId: state.userId,
           bookId: h.bookId,
           chapter: h.chapter,
           startVerse: h.startVerse ?? h.verse,
@@ -437,7 +445,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         dispatch({ type: 'REMOVE_HIGHLIGHT', id: tmpId });
       }
     },
-    []
+    [state.userId]
   );
 
   const updateHighlight = useCallback(async (id: string, color: HighlightColor) => {
