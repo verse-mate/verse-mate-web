@@ -382,6 +382,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                     fontSize: 14,
                     fontWeight: 400,
                     lineHeight: '20px',
+                    whiteSpace: 'nowrap',
                     backgroundColor: tab === t.id ? '#B09A6D' : 'transparent',
                     color: tab === t.id ? '#000000' : '#FFFFFF',
                     border: 'none',
