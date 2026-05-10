@@ -71,6 +71,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
   // sub-ids only for kinds that actually have nested toggles (qa items).
   // Segments render as static cards now, so they don't need ids.
   const allIds: string[] = [];
+  allIds.push('observation-intro');
   for (const s of study.steps) {
     allIds.push(`step-${s.number}`);
     if (s.kind === 'qa') s.items.forEach((_, i) => allIds.push(`step-${s.number}-qa-${i}`));
@@ -115,6 +116,15 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
       </div>
 
       <SectionHeading label="Observation — 9 Inductive Steps" />
+      <Card
+        open={isOpen('observation-intro')}
+        onToggle={() => toggle('observation-intro')}
+        heading={<span style={cardHeadingTitleStyle}>About the nine observation steps</span>}
+      >
+        <p style={sectionIntroStyle}>
+          Observation asks what the text <em>says</em> — slowing down to mark the keywords, contrasts, repetitions, and structural cues the author left for you. Each of the nine steps below builds the evidence the interpretation that follows is built on. Don't skip ahead; the meaning comes from what you observed.
+        </p>
+      </Card>
       {study.steps.map(step => (
         <StepCard
           key={step.number}
@@ -129,9 +139,11 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
         <Card
           open={isOpen('interpretation-intro')}
           onToggle={() => toggle('interpretation-intro')}
-          heading={<span style={cardHeadingTitleStyle}>About the six interpretation guardrails</span>}
+          heading={<span style={cardHeadingTitleStyle}>About the interpretation movements</span>}
         >
-          <MarkdownBlock text={study.interpretation.intro} />
+          <p style={sectionIntroStyle}>
+            {renderInlineItalic(study.interpretation.intro)}
+          </p>
         </Card>
       )}
       {study.interpretation.movements.map(mv => (
@@ -162,7 +174,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
         heading={<span style={cardHeadingTitleStyle}>Apply, one question per movement</span>}
       >
         {study.application.intro && (
-          <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.65)', marginBottom: 14, lineHeight: '22px' }}>
+          <p style={sectionIntroStyle}>
             {study.application.intro}
           </p>
         )}
@@ -685,6 +697,27 @@ function Td({ children, style }: { children: React.ReactNode; style?: React.CSSP
   );
 }
 
+// ─── Helpers ────────────────────────────────────────────────────────────
+
+// Minimal *italic* renderer used by the section intro `<p>` blocks. The
+// intros are short, plain prose with the occasional emphasised word —
+// pulling in the full MarkdownBlock would re-introduce the body color /
+// size from `text-dark-fg` and undo `sectionIntroStyle`.
+function renderInlineItalic(text: string): React.ReactNode[] {
+  const parts: React.ReactNode[] = [];
+  const re = /\*([^*]+)\*/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  let key = 0;
+  while ((m = re.exec(text))) {
+    if (m.index > last) parts.push(text.slice(last, m.index));
+    parts.push(<em key={key++}>{m[1]}</em>);
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts;
+}
+
 // ─── Style constants ────────────────────────────────────────────────────
 
 const titleStyle: React.CSSProperties = {
@@ -702,6 +735,18 @@ const cardHeadingTitleStyle: React.CSSProperties = {
   fontSize: 17,
   lineHeight: '24px',
   color: '#FFFFFF',
+};
+
+// Shared style for the Observation / Interpretation / Application section
+// intros — small, muted, italics-friendly. The body font setting on the
+// panel root would otherwise scale these up to the user's reading size; the
+// intros are meta-text describing the section, not the section's content,
+// so they stay clamped to a smaller fixed size.
+const sectionIntroStyle: React.CSSProperties = {
+  fontSize: 14,
+  lineHeight: '22px',
+  color: 'rgba(255,255,255,0.65)',
+  margin: 0,
 };
 
 const stepNumberStyle: React.CSSProperties = {
