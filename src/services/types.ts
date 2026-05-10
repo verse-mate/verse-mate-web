@@ -1,7 +1,7 @@
 // VerseMate domain types — aligned to the real API (api.versemate.org)
 // plus backward-compat fields so existing UI code keeps working unchanged.
 
-export type BibleVersion = 'ESV' | 'NIV' | 'KJV' | 'NLT';
+export type BibleVersion = 'ESV' | 'NIV' | 'KJV' | 'NLT' | 'NASB1995';
 
 export interface Verse {
   number: number; // mirrors API verseNumber
