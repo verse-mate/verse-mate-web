@@ -26,7 +26,7 @@ interface Props {
  * Shows highlight color dots, copy, share, and bookmark actions.
  */
 export default function SelectionToolbar({ book, chapter, bookId }: Props) {
-  const { state, addHighlight, addBookmark } = useApp();
+  const { state, addHighlight, updateHighlight, addBookmark } = useApp();
   const [position, setPosition] = useState<{ x: number; y: number } | null>(null);
   const [selectedText, setSelectedText] = useState('');
   const [selectedVerses, setSelectedVerses] = useState<number[]>([]);
@@ -142,16 +142,31 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
     if (!state.isSignedIn || selectedVerses.length === 0) return;
     const startVerse = Math.min(...selectedVerses);
     const endVerse = Math.max(...selectedVerses);
+    // Recolor an existing highlight if the current selection overlaps one in
+    // this chapter — picking a color on already-highlighted text should
+    // change the color, not stack a duplicate.
+    const existing = state.highlights.find(h => {
+      if (h.bookId !== bookId || h.chapter !== chapter) return false;
+      const hStart = h.startVerse ?? h.verse;
+      const hEnd = h.endVerse ?? h.verse;
+      return hStart <= endVerse && hEnd >= startVerse;
+    });
     try {
-      await addHighlight({
-        bookId,
-        book,
-        chapter,
-        verse: startVerse,
-        startVerse,
-        endVerse,
-        color,
-      });
+      if (existing) {
+        if (existing.color !== color) {
+          await updateHighlight(existing.id, color);
+        }
+      } else {
+        await addHighlight({
+          bookId,
+          book,
+          chapter,
+          verse: startVerse,
+          startVerse,
+          endVerse,
+          color,
+        });
+      }
       setPosition(null);
       window.getSelection()?.removeAllRanges();
     } catch { /* ignore */ }
