@@ -25,10 +25,9 @@ export interface StepQA extends StudyStepBase {
   items: { tag?: string; q: string; a: string }[];
 }
 
-/** Marking legend + key-word inventory for step 3. */
+/** Key-word inventory for step 3. */
 export interface StepKeywords extends StudyStepBase {
   kind: 'keywords';
-  legend: { mark: string; appliesTo: string; example: string }[];
   inventory: { word: string; greek?: string; count: number; verses: string }[];
 }
 

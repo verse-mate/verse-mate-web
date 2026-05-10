@@ -77,7 +77,10 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
   };
 
   return (
-    <div>
+    // Wrap the entire panel in a fixed font-size context so every section's
+    // inherited body text is consistent. Pills, headings, and section labels
+    // override locally; everything else (markdown bodies, prose) inherits 15/24.
+    <div style={{ fontSize: 15, lineHeight: '24px' }}>
       {/* Title row — matches Line-by-Line: just the H2 + share. No subtitle / theme banner. */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
         <h2 style={titleStyle}>Inductive Study of {study.title}</h2>
@@ -153,9 +156,19 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
           </p>
         )}
         {study.application.questions.map(q => (
-          <div key={q.range} style={{ display: 'flex', gap: 12, marginBottom: 12, paddingBottom: 12, borderBottom: '1px solid #1f1f1f' }}>
+          <div
+            key={q.range}
+            style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: 12,
+              marginBottom: 12,
+              paddingBottom: 12,
+              borderBottom: '1px solid #1f1f1f',
+            }}
+          >
             <RangePill range={q.range} />
-            <p style={{ fontSize: 15, color: '#E7E7E7', lineHeight: '24px', margin: 0, flex: 1 }}>
+            <p style={{ color: '#E7E7E7', margin: 0, flex: 1 }}>
               {q.question}
             </p>
           </div>
@@ -253,49 +266,26 @@ function QABody({ step, isOpen, toggle }: { step: StepQA; isOpen: (id: string) =
 
 function KeywordsBody({ step }: { step: StepKeywords }) {
   return (
-    <div>
-      <h4 style={subTitleStyle}>Marking legend</h4>
-      <Table>
-        <thead>
-          <tr>
-            <Th style={{ width: '28%' }}>Mark</Th>
-            <Th style={{ width: '32%' }}>Applies to</Th>
-            <Th>Example in James 1</Th>
+    <Table>
+      <thead>
+        <tr>
+          <Th>Key word</Th>
+          <Th>Greek</Th>
+          <Th style={{ width: 64, textAlign: 'right' }}>Count</Th>
+          <Th>Verses</Th>
+        </tr>
+      </thead>
+      <tbody>
+        {step.inventory.map((row, i) => (
+          <tr key={i}>
+            <Td style={{ fontWeight: 600, color: '#E7E7E7' }}>{row.word}</Td>
+            <Td style={{ color: 'rgba(255,255,255,0.7)', fontStyle: 'italic' }}>{row.greek ?? '—'}</Td>
+            <Td style={{ textAlign: 'right', color: '#B09A6D', fontWeight: 600 }}>{row.count}</Td>
+            <Td style={{ color: 'rgba(255,255,255,0.7)' }}>{row.verses}</Td>
           </tr>
-        </thead>
-        <tbody>
-          {step.legend.map((row, i) => (
-            <tr key={i}>
-              <Td style={{ fontWeight: 600, color: '#E7E7E7' }}>{row.mark}</Td>
-              <Td>{row.appliesTo}</Td>
-              <Td style={{ color: 'rgba(255,255,255,0.7)' }}>{row.example}</Td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-
-      <h4 style={subTitleStyle}>Key word inventory</h4>
-      <Table>
-        <thead>
-          <tr>
-            <Th>Key word</Th>
-            <Th>Greek</Th>
-            <Th style={{ width: 64, textAlign: 'right' }}>Count</Th>
-            <Th>Verses</Th>
-          </tr>
-        </thead>
-        <tbody>
-          {step.inventory.map((row, i) => (
-            <tr key={i}>
-              <Td style={{ fontWeight: 600, color: '#E7E7E7' }}>{row.word}</Td>
-              <Td style={{ color: 'rgba(255,255,255,0.7)', fontStyle: 'italic' }}>{row.greek ?? '—'}</Td>
-              <Td style={{ textAlign: 'right', color: '#B09A6D', fontWeight: 600 }}>{row.count}</Td>
-              <Td style={{ color: 'rgba(255,255,255,0.7)' }}>{row.verses}</Td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-    </div>
+        ))}
+      </tbody>
+    </Table>
   );
 }
 
@@ -335,18 +325,37 @@ function ContrastsBody({ step }: { step: StepContrasts }) {
           key={i}
           style={{
             display: 'flex',
+            alignItems: 'flex-start',
             gap: 12,
-            paddingTop: 10,
-            paddingBottom: 10,
+            paddingTop: 12,
+            paddingBottom: 12,
             borderTop: i === 0 ? '1px solid #1f1f1f' : 'none',
             borderBottom: '1px solid #1f1f1f',
           }}
         >
           <RangePill range={item.verses} />
-          <span style={{ display: 'inline-flex', alignItems: 'center', height: 22, padding: '0 8px', borderRadius: 11, backgroundColor: '#1A1A1A', color: 'rgba(255,255,255,0.7)', fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', flexShrink: 0 }}>
+          <span
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: 80,
+              height: 22,
+              padding: '0 6px',
+              borderRadius: 11,
+              backgroundColor: '#262626',
+              color: 'rgba(255,255,255,0.75)',
+              fontSize: 11,
+              fontWeight: 600,
+              textTransform: 'uppercase',
+              letterSpacing: '0.5px',
+              flexShrink: 0,
+              alignSelf: 'flex-start',
+            }}
+          >
             {item.type}
           </span>
-          <span style={{ flex: 1, fontSize: 15, color: '#E7E7E7', lineHeight: '24px' }}>{item.pairing}</span>
+          <span style={{ flex: 1, color: '#E7E7E7' }}>{item.pairing}</span>
         </div>
       ))}
     </div>
@@ -369,6 +378,7 @@ function BulletsBody({ step }: { step: StepBullets }) {
           key={i}
           style={{
             display: 'flex',
+            alignItems: 'flex-start',
             gap: 12,
             paddingTop: 12,
             paddingBottom: 12,
@@ -377,7 +387,7 @@ function BulletsBody({ step }: { step: StepBullets }) {
           }}
         >
           {item.tag && (hasTextTags ? <Tag label={item.tag} /> : <RangePill range={item.tag} />)}
-          <span style={{ flex: 1, fontSize: 15, color: '#E7E7E7', lineHeight: '24px' }}>
+          <span style={{ flex: 1, color: '#E7E7E7' }}>
             <MarkdownBlock text={item.text} />
           </span>
         </div>
@@ -523,13 +533,14 @@ function NestedCard({
 }
 
 function Tag({ label }: { label: string }) {
+  // Fixed width so every text-tag pill in a column lines up cleanly.
   return (
     <span
       style={{
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        minWidth: 72,
+        width: 88,
         height: 22,
         borderRadius: 11,
         backgroundColor: '#1A1A1A',
@@ -538,8 +549,9 @@ function Tag({ label }: { label: string }) {
         fontSize: 11,
         fontWeight: 600,
         letterSpacing: '0.5px',
-        padding: '0 10px',
+        padding: '0 6px',
         flexShrink: 0,
+        alignSelf: 'flex-start',
       }}
     >
       {label}
@@ -548,13 +560,16 @@ function Tag({ label }: { label: string }) {
 }
 
 function RangePill({ range }: { range: string }) {
+  // Fixed width so every pill in a column aligns its right edge — fixes the
+  // "1:6-8 vs 1:13-14" jagged column problem. The pill content stays
+  // centered inside the 64px box.
   return (
     <span
       style={{
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        minWidth: 56,
+        width: 64,
         height: 22,
         borderRadius: 11,
         backgroundColor: '#1A1A1A',
@@ -562,10 +577,9 @@ function RangePill({ range }: { range: string }) {
         color: '#B09A6D',
         fontSize: 11,
         fontWeight: 600,
-        padding: '0 8px',
+        padding: '0 6px',
         flexShrink: 0,
         alignSelf: 'flex-start',
-        marginTop: 2,
       }}
     >
       {range}
