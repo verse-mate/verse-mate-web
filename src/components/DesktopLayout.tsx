@@ -253,6 +253,11 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
         {/* ─── SHARED FULL-WIDTH HEADER ─── */}
         <header
+          // paddingLeft mirrors ReadingScreen's body padding (px-4 md:px-12
+          // lg:px-16) so the book-name button in the header aligns with the
+          // left edge of the bible text below it. Right padding stays 16px
+          // so the hamburger sits close to the screen edge.
+          className="pl-4 md:pl-12 lg:pl-16 pr-4"
           style={{
             flexShrink: 0,
             height: 56,
@@ -260,7 +265,6 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: '0 16px',
             borderBottom: '1px solid #2a2a2a',
             position: 'relative',
           }}
@@ -512,7 +516,7 @@ function SidebarSection({
           border: 'none',
           cursor: 'pointer',
           fontFamily: 'Roboto, sans-serif',
-          fontSize: 12,
+          fontSize: 14,
           fontWeight: 700,
           color: '#B09A6D',
           textAlign: 'left',
@@ -541,7 +545,7 @@ function SidebarSection({
                 width: '100%',
                 padding: isExpanded ? '6px 12px' : '5px 4px',
                 fontFamily: 'Roboto, sans-serif',
-                fontSize: isExpanded ? 13 : 10,
+                fontSize: isExpanded ? 15 : 10,
                 fontWeight: isActive ? 600 : 400,
                 color: isActive ? '#B09A6D' : 'rgba(255,255,255,0.6)',
                 backgroundColor: isBookExpanded ? 'rgba(176,154,109,0.08)' : isActive ? 'rgba(176,154,109,0.12)' : 'transparent',
