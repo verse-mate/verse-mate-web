@@ -75,10 +75,10 @@ export default function MenuScreen() {
       </header>
 
       <div className="flex-1 overflow-y-auto px-4 pb-2" style={{ backgroundColor: '#000000' }}>
-        {/* User profile card */}
+        {/* User profile card — signed-in users go to Settings (matches
+            verse-mate-mobile); signed-out users go to the sign-in page. */}
         <button
-          onClick={() => !state.isSignedIn && navigate('/login')}
-          disabled={state.isSignedIn}
+          onClick={() => navigate(state.isSignedIn ? '/menu/settings' : '/login')}
           data-testid="menu-profile-card"
           className="flex items-center gap-3 w-full h-[64px] px-4 rounded-xl text-left mb-3"
           style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
