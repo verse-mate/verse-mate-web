@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import { useApp } from '@/contexts/AppContext';
 import { useRightPanel } from '@/contexts/RightPanelContext';
+import { consumeRedirectTo } from '@/hooks/useTrackPreAuthLocation';
 import { Mail, ArrowLeft } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import {
@@ -87,10 +88,11 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
       // the center. On mobile, navigate to /menu where the profile pic
       // + name are visible.
       toast.success(mode === 'signin' ? 'Signed in' : 'Account created');
+      const returnTo = consumeRedirectTo();
       if (rightPanel?.isRightPanel) {
         rightPanel.goBack();
       } else {
-        navigate('/menu');
+        navigate(returnTo || '/menu');
       }
     } catch (err: unknown) {
       const msg =
