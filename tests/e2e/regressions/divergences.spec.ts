@@ -82,15 +82,20 @@ test.describe('Divergences — current behavior snapshots', () => {
   });
 
   /**
-   * Divergence #4 — no theme toggle in /menu/settings (mobile has 3 modes).
-   * Asserts the absence; flip when the toggle ships.
+   * Divergence #4 — theme toggle in /menu/settings.
+   * Originally absent on web (mobile has 3 modes: Auto/Light/Dark);
+   * shipped to web as part of the Settings page mobile-port. This test
+   * now asserts presence so the divergence stays closed.
    */
-  test('#4 /menu/settings exposes no theme picker', async ({ page }) => {
+  test('#4 /menu/settings exposes the theme picker', async ({ page }) => {
     await page.goto('/menu/settings');
     await expect(page.getByTestId('settings-back-button')).toBeVisible();
-    await expect(page.getByTestId('theme-selector-button')).toHaveCount(0);
-    await expect(page.getByTestId('theme-option-light')).toHaveCount(0);
-    await expect(page.getByTestId('theme-option-dark')).toHaveCount(0);
+    await expect(page.getByTestId('theme-selector-button')).toBeVisible();
+    // Open the picker so the radio options mount.
+    await page.getByTestId('theme-selector-button').click();
+    await expect(page.getByTestId('theme-option-system')).toBeVisible();
+    await expect(page.getByTestId('theme-option-light')).toBeVisible();
+    await expect(page.getByTestId('theme-option-dark')).toBeVisible();
   });
 
   /**
