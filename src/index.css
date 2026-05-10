@@ -186,13 +186,16 @@
   .ahl-brown { background-color: var(--ahl-brown-bg); border-bottom: 2px solid var(--ahl-brown-border); cursor: pointer; }
 }
 
-/* ─── Desktop: hide per-screen headers inside the split panels ─── */
-@media (min-width: 1024px) {
-  /* Reading screen header is replaced by DesktopLayout's shared header */
+/* ─── Tablet+ : hide per-screen headers since DesktopLayout renders a shared one ─── */
+/* AppLayout mounts DesktopLayout at ≥768px (tablet split-view, no sidebar)
+   and ≥1024px (desktop split-view with sidebar). The reading / commentary
+   screens render their own headers for phone (<768px) only — at 768px+
+   DesktopLayout's header replaces them, so hide the per-screen headers
+   here to avoid duplicate book selectors at tablet / phone-landscape. */
+@media (min-width: 768px) {
   .reading-screen-header {
     display: none !important;
   }
-  /* Commentary screen header is also replaced */
   .commentary-screen-header {
     display: none !important;
   }
