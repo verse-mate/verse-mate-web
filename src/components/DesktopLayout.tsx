@@ -148,8 +148,8 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
 
-  // ─── Drag-to-resize handlers ───
-  const handleDragStart = useCallback((e: React.MouseEvent) => {
+  // ─── Drag-to-resize handlers (PointerEvent so touch + mouse both fire) ───
+  const handleDragStart = useCallback((e: React.PointerEvent) => {
     e.preventDefault();
     isDragging.current = true;
     document.body.style.cursor = 'col-resize';
@@ -157,7 +157,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   }, []);
 
   useEffect(() => {
-    const handleMove = (e: MouseEvent) => {
+    const handleMove = (e: PointerEvent) => {
       if (!isDragging.current || !contentRef.current) return;
       const rect = contentRef.current.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -171,11 +171,13 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
         document.body.style.userSelect = '';
       }
     };
-    window.addEventListener('mousemove', handleMove);
-    window.addEventListener('mouseup', handleUp);
+    window.addEventListener('pointermove', handleMove);
+    window.addEventListener('pointerup', handleUp);
+    window.addEventListener('pointercancel', handleUp);
     return () => {
-      window.removeEventListener('mousemove', handleMove);
-      window.removeEventListener('mouseup', handleUp);
+      window.removeEventListener('pointermove', handleMove);
+      window.removeEventListener('pointerup', handleUp);
+      window.removeEventListener('pointercancel', handleUp);
     };
   }, []);
 
@@ -334,7 +336,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
           {/* DRAG HANDLE */}
           <div
-            onMouseDown={handleDragStart}
+            onPointerDown={handleDragStart}
             data-testid="desktop-split-divider"
             style={{
               width: 6,
@@ -346,6 +348,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               justifyContent: 'center',
               position: 'relative',
               zIndex: 10,
+              touchAction: 'none',
             }}
           >
             {/* Visual grip dots */}
