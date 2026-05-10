@@ -231,7 +231,10 @@ export default function VerseInsightSheet({
             and overscroll-behavior contain make iOS Safari give us native
             momentum scroll without rubber-banding the parent. */}
         <div
-          className="flex-1 overflow-y-auto px-4 mt-6 pb-2"
+          // pb-8 (32px) gives the last line of commentary visible breathing
+          // room above the action-button row so the two don't read as a
+          // single visual block when scrolled to the bottom.
+          className="flex-1 overflow-y-auto px-4 mt-6 pb-8"
           style={{
             minHeight: 0,
             WebkitOverflowScrolling: 'touch',
@@ -274,8 +277,11 @@ export default function VerseInsightSheet({
           </div>
         </div>
 
-        {/* Actions — single row: Copy | Share | Save */}
-        <div className="shrink-0 px-4 pb-2">
+        {/* Actions — single row: Copy | Share | Save. Top border + small
+            top padding gives a clear visual separation from the scrolling
+            content above so the last line of commentary never reads as
+            "behind" the buttons. */}
+        <div className="shrink-0 px-4 pb-2 pt-3 border-t border-[#1f1f1f]">
           <div className="grid grid-cols-3 gap-2">
             <button
               onClick={handleCopy}
