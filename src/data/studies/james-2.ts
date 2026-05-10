@@ -100,9 +100,9 @@ export const JAMES_2_STUDY: InductiveStudy = {
         { verses: '2:13', type: 'Contrast', pairing: 'Merciless judgment for the merciless ↔ mercy triumphs over judgment.' },
         { verses: '2:15-16', type: 'Contrast', pairing: '"Be warmed and filled" without provision = empty faith.' },
         { verses: '2:17-18', type: 'Contrast', pairing: 'Faith without works ↔ faith demonstrated by works.' },
-        { verses: '2:19', type: 'Simile', pairing: 'Demons believe and shudder — bare assent is not saving faith.' },
+        { verses: '2:19', type: 'Comparison', pairing: 'Demons believe and shudder — bare assent is not saving faith.' },
         { verses: '2:21-25', type: 'Contrast', pairing: 'Abraham (Genesis 15 + 22) ↔ Rahab (Joshua 2) — faith demonstrated by deed.' },
-        { verses: '2:26', type: 'Simile', pairing: 'Body without the spirit is dead, so faith without works is dead.' },
+        { verses: '2:26', type: 'Comparison', pairing: 'Body without the spirit is dead, so faith without works is dead.' },
       ],
     },
     {

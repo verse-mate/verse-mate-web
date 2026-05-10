@@ -89,7 +89,7 @@ export const JAMES_3_STUDY: InductiveStudy = {
       summary: 'Highly descriptive language James uses to make a point memorable.',
       items: [
         { verses: '3:2', type: 'Contrast', pairing: '"We all stumble in many ways" — no one is exempt, including the teacher.' },
-        { verses: '3:3-5', type: 'Simile', pairing: 'Bit/horse, rudder/ship, spark/forest — small thing controls or destroys a great thing.' },
+        { verses: '3:3-5', type: 'Comparison', pairing: 'Bit/horse, rudder/ship, spark/forest — small thing controls or destroys a great thing.' },
         { verses: '3:6', type: 'Metaphor', pairing: 'The tongue is a fire, the world of iniquity, set on fire by hell.' },
         { verses: '3:7-8', type: 'Contrast', pairing: 'Every animal can be tamed by men ↔ no one can tame the tongue.' },
         { verses: '3:9-12', type: 'Contrast', pairing: 'Same mouth: blessing + cursing. Fountain, fig tree, vine — nothing in nature behaves this way.' },
