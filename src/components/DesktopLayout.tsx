@@ -249,7 +249,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
         >
           {/* Sidebar header — "Bible" label */}
           <div style={{ height: 56, display: 'flex', alignItems: 'center', justifyContent: isSidebarCompact ? 'center' : 'flex-start', padding: isSidebarCompact ? 0 : '0 16px', flexShrink: 0, borderBottom: '1px solid #2a2a2a' }}>
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '20px', fontWeight: 600, color: '#B09A6D', letterSpacing: '0.5px' }}>Bible</span>
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '20px', fontWeight: 600, color: '#B09A6D', letterSpacing: '0.5px' }}>Books</span>
           </div>
           {/* Book list */}
           <div style={{ flex: 1, overflowY: 'auto', padding: '4px 0' }} className="mini-sidebar-scroll">
