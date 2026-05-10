@@ -390,11 +390,20 @@ export default function ReadingScreen() {
                             }
                           },
                         })}
-                        className={`inline transition-colors ${isDesktop ? 'select-text cursor-text' : 'cursor-pointer'} ${
+                        className={`inline transition-colors ${isDesktop ? 'select-text cursor-text' : 'cursor-pointer select-none'} ${
                           hl ? highlightColorClass[hl.color] : ''
                         } ${autoClass ? `${autoClass} rounded px-0.5` : ''} ${
                           isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''
                         }`}
+                        style={!isDesktop ? {
+                          // Suppress iOS long-press text selection + the iOS
+                          // copy/look-up callout that competes with the
+                          // app's long-press → VerseActions handler. On
+                          // desktop the SelectionToolbar still relies on
+                          // text selection, so leave it enabled there.
+                          WebkitUserSelect: 'none',
+                          WebkitTouchCallout: 'none',
+                        } : undefined}
                       >
                         {state.settings.showVerseNumbers !== false && (
                           <sup className="text-verse-number text-[12px] mr-[2px] select-none align-super">
