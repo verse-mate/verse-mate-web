@@ -75,6 +75,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
   for (const s of study.steps) {
     allIds.push(`step-${s.number}`);
     if (s.kind === 'qa') s.items.forEach((_, i) => allIds.push(`step-${s.number}-qa-${i}`));
+    if (s.kind === 'lists') s.lists.forEach((_, i) => allIds.push(`step-${s.number}-list-${i}`));
   }
   allIds.push('interpretation-intro');
   for (const m of study.interpretation.movements) allIds.push(`mv-${m.number}`);
@@ -260,7 +261,7 @@ function renderStepBody(
     case 'keywords':
       return <KeywordsBody step={step} />;
     case 'lists':
-      return <ListsBody step={step} />;
+      return <ListsBody step={step} isOpen={isOpen} toggle={toggle} />;
     case 'contrasts':
       return <ContrastsBody step={step} />;
     case 'bullets':
@@ -365,30 +366,45 @@ function KeywordsBody({ step }: { step: StepKeywords }) {
   );
 }
 
-function ListsBody({ step }: { step: StepLists }) {
+function ListsBody({ step, isOpen, toggle }: { step: StepLists; isOpen: (id: string) => boolean; toggle: (id: string) => void }) {
+  // Each list becomes a collapsible row — the title ("What James 1 teaches
+  // about God") is the heading, the verse/truth table reveals on expand.
+  // Mirrors the QABody pattern for the 5 W's section.
   return (
     <div>
-      {step.lists.map((list, i) => (
-        <div key={i} style={{ marginBottom: i < step.lists.length - 1 ? 22 : 0 }}>
-          <h4 style={subTitleStyle}>{list.title}</h4>
-          <Table>
-            <thead>
-              <tr>
-                <Th style={{ width: 80 }}>{list.columns[0]}</Th>
-                <Th>{list.columns[1]}</Th>
-              </tr>
-            </thead>
-            <tbody>
-              {list.rows.map((r, j) => (
-                <tr key={j}>
-                  <Td><RangePill range={r.ref} /></Td>
-                  <Td>{r.truth}</Td>
+      {step.lists.map((list, i) => {
+        const id = `step-${step.number}-list-${i}`;
+        const open = isOpen(id);
+        return (
+          <NestedCard
+            key={i}
+            open={open}
+            onToggle={() => toggle(id)}
+            heading={
+              <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, fontWeight: 600, color: '#E7E7E7' }}>
+                {list.title}
+              </span>
+            }
+          >
+            <Table>
+              <thead>
+                <tr>
+                  <Th style={{ width: 80 }}>{list.columns[0]}</Th>
+                  <Th>{list.columns[1]}</Th>
                 </tr>
-              ))}
-            </tbody>
-          </Table>
-        </div>
-      ))}
+              </thead>
+              <tbody>
+                {list.rows.map((r, j) => (
+                  <tr key={j}>
+                    <Td><RangePill range={r.ref} /></Td>
+                    <Td>{r.truth}</Td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </NestedCard>
+        );
+      })}
     </div>
   );
 }
