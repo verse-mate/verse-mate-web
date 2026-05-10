@@ -132,7 +132,7 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
       ? `"${selectedText}" — ${book} ${chapter}:${selectedVerses.join('-')}`
       : `"${selectedText}" — ${book} ${chapter}`;
     try {
-      await navigator.share?.({ title: `${book} ${chapter}`, text: quoteText });
+      await navigator.share?.({ title: `${book} ${chapter}`, text: quoteText, url: window.location.href });
     } catch {
       handleCopy();
     }

@@ -32,6 +32,7 @@ export default function HighlightOptionsSheet({ highlight, onClose }: Props) {
     try {
       await navigator.share?.({
         text: `${highlight.book} ${highlight.chapter}:${highlight.verse}`,
+        url: window.location.href,
       });
     } catch {
       handleCopy();
