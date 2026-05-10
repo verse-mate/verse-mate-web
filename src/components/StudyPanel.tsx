@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
+import { ChevronDown, ChevronUp, BookOpen, Copy, Check } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import { useApp } from '@/contexts/AppContext';
@@ -43,6 +43,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
   // interpretation + application — and opens what they want to read.
   const [bulkState, setBulkState] = useState<'expanded' | 'collapsed' | null>('collapsed');
   const [overrides, setOverrides] = useState<Record<string, boolean>>({});
+  const [copied, setCopied] = useState(false);
 
   const isOpen = (id: string): boolean => {
     if (id in overrides) return overrides[id];
@@ -97,24 +98,50 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
       {/* Title row — matches Line-by-Line: just the H2 + share. No subtitle / theme banner. */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
         <h2 style={titleStyle}>Inductive Study of {study.title}</h2>
-        <button
-          onClick={() => {
-            const text = [
-              `Inductive Study of ${study.title}`,
-              study.subtitle ? study.subtitle : '',
-              study.themeOneLine ? `Theme: ${study.themeOneLine}` : '',
-            ].filter(Boolean).join('\n\n');
-            navigator.share?.({
-              title: `Inductive Study of ${study.title}`,
-              text,
-              url: window.location.href,
-            }).catch(() => {});
-          }}
-          style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, flexShrink: 0 }}
-          aria-label="Share study"
-        >
-          <ShareIcon size={18} color="#E7E7E7" />
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
+          <button
+            onClick={async () => {
+              const text = buildStudyCopyText(study);
+              try {
+                if (navigator.clipboard?.writeText) {
+                  await navigator.clipboard.writeText(text);
+                } else {
+                  const ta = document.createElement('textarea');
+                  ta.value = text;
+                  ta.style.position = 'fixed';
+                  ta.style.opacity = '0';
+                  document.body.appendChild(ta);
+                  ta.select();
+                  document.execCommand('copy');
+                  document.body.removeChild(ta);
+                }
+                setCopied(true);
+                setTimeout(() => setCopied(false), 1500);
+              } catch { /* ignore */ }
+            }}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
+            aria-label="Copy study"
+            title="Copy study"
+          >
+            {copied
+              ? <Check size={18} color="#B09A6D" strokeWidth={2} />
+              : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
+          </button>
+          <button
+            onClick={() => {
+              const text = buildStudyCopyText(study);
+              navigator.share?.({
+                title: `Inductive Study of ${study.title}`,
+                text,
+                url: window.location.href,
+              }).catch(() => {});
+            }}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
+            aria-label="Share study"
+          >
+            <ShareIcon size={18} color="#E7E7E7" />
+          </button>
+        </div>
       </div>
 
       {/* Expand All / Collapse All */}
@@ -752,6 +779,133 @@ function renderInlineItalic(text: string): React.ReactNode[] {
   }
   if (last < text.length) parts.push(text.slice(last));
   return parts;
+}
+
+// Strip the bare markdown we render in the study content (`#`, `>`,
+// `**bold**`, `*italic*`) so the clipboard / share payload reads as plain
+// prose on the recipient side.
+function stripStudyMarkdown(text: string): string {
+  return text
+    .replace(/^#+\s*/gm, '')
+    .replace(/^>\s?/gm, '')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .trim();
+}
+
+/**
+ * Serialise an InductiveStudy to a plain-text payload for the Copy / Share
+ * buttons. Walks every step (varying by `kind`), then the interpretation
+ * movements, then the application questions. Output looks like:
+ *
+ *   Inductive Study of James 1
+ *   Testing Your Faith
+ *
+ *   Theme: ...
+ *
+ *   OBSERVATION — 9 INDUCTIVE STEPS
+ *
+ *   1. Begin with prayer
+ *      [body]
+ *
+ *   ...
+ */
+function buildStudyCopyText(study: InductiveStudy): string {
+  const lines: string[] = [];
+  lines.push(`Inductive Study of ${study.title}`);
+  if (study.subtitle) lines.push(study.subtitle);
+  if (study.themeOneLine) {
+    lines.push('');
+    lines.push(`Theme: ${study.themeOneLine}`);
+  }
+  lines.push('');
+  lines.push('OBSERVATION — 9 INDUCTIVE STEPS');
+  for (const step of study.steps) {
+    lines.push('');
+    lines.push(`${step.number}. ${step.title}`);
+    if (step.summary) lines.push(`   ${step.summary}`);
+    switch (step.kind) {
+      case 'prose':
+        lines.push('');
+        lines.push(stripStudyMarkdown(step.body));
+        break;
+      case 'qa':
+        for (const item of step.items) {
+          lines.push('');
+          if (item.tag) lines.push(`   [${item.tag}] ${item.q}`);
+          else lines.push(`   ${item.q}`);
+          lines.push(`   ${stripStudyMarkdown(item.a)}`);
+        }
+        break;
+      case 'keywords':
+        for (const row of step.inventory) {
+          lines.push('');
+          const greek = row.greek ? ` (${row.greek})` : '';
+          lines.push(`   ${row.word}${greek} — ×${row.count} — ${row.verses}`);
+          if (row.definition) lines.push(`   ${stripStudyMarkdown(row.definition)}`);
+        }
+        break;
+      case 'lists':
+        for (const list of step.lists) {
+          lines.push('');
+          lines.push(`   ${list.title}`);
+          for (const r of list.rows) {
+            lines.push(`   • ${r.ref} — ${stripStudyMarkdown(r.truth)}`);
+          }
+        }
+        break;
+      case 'contrasts':
+        for (const item of step.items) {
+          lines.push(`   • ${item.verses} (${item.type}) — ${stripStudyMarkdown(item.pairing)}`);
+        }
+        break;
+      case 'bullets':
+        if (step.intro) {
+          lines.push('');
+          lines.push(`   ${stripStudyMarkdown(step.intro)}`);
+        }
+        for (const item of step.items) {
+          const tag = item.tag ? `[${item.tag}] ` : '';
+          lines.push(`   • ${tag}${stripStudyMarkdown(item.text)}`);
+        }
+        if (step.note) {
+          lines.push('');
+          lines.push(`   ${stripStudyMarkdown(step.note)}`);
+        }
+        break;
+      case 'segments':
+        if (step.themeHeadline) {
+          lines.push('');
+          lines.push(`   Chapter theme: ${step.themeHeadline}`);
+        }
+        for (const seg of step.segments) {
+          lines.push('');
+          lines.push(`   ${seg.title}`);
+          lines.push(`   ${stripStudyMarkdown(seg.body)}`);
+        }
+        break;
+    }
+  }
+  lines.push('');
+  lines.push('INTERPRETATION');
+  for (const mv of study.interpretation.movements) {
+    lines.push('');
+    lines.push(`Movement ${mv.number} — ${mv.title} (${mv.range})`);
+    if (mv.excerpt) lines.push(`   "${mv.excerpt}"`);
+    lines.push('');
+    lines.push(stripStudyMarkdown(mv.body));
+  }
+  lines.push('');
+  lines.push('APPLICATION');
+  if (study.application.intro) {
+    lines.push('');
+    lines.push(stripStudyMarkdown(study.application.intro));
+  }
+  for (const q of study.application.questions) {
+    lines.push('');
+    lines.push(`${q.range} — ${q.question}`);
+  }
+  return lines.join('\n');
 }
 
 // ─── Style constants ────────────────────────────────────────────────────
