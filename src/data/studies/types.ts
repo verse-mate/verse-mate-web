@@ -52,7 +52,7 @@ export interface StepLists extends StudyStepBase {
 /** Contrasts / similes — each row a separate item. Step 5. */
 export interface StepContrasts extends StudyStepBase {
   kind: 'contrasts';
-  items: { verses: string; type: 'Contrast' | 'Simile' | 'Metaphor'; pairing: string }[];
+  items: { verses: string; type: 'Contrast' | 'Comparison' | 'Metaphor'; pairing: string }[];
 }
 
 /** Tagged bullet list — verse range + text. Used for steps 1, 6, 7, 8. */
