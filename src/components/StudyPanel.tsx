@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import MarkdownBlock from '@/components/MarkdownBlock';
+import { useApp } from '@/contexts/AppContext';
 import { getStudyFor, InductiveStudy } from '@/data/studies';
 import {
   StudyStep,
@@ -27,11 +28,20 @@ interface Props {
  * step kinds (qa, segments) nest collapsibles for each sub-item.
  */
 export default function StudyPanel({ book, bookId, chapter }: Props) {
+  const { state } = useApp();
   const study: InductiveStudy | null = bookId ? getStudyFor(bookId, chapter) : null;
+  // Body text matches the user's reading font size so Study reads at the same
+  // weight as the Bible side and the Summary / By Line / Detailed tabs.
+  // Sub-elements (pills, tags, captions, definitions) keep their own fixed
+  // sizes — the user explicitly OK'd that as long as the main body matches.
+  const bodyFontSize = state.settings.fontSize;
+  const bodyLineHeight = Math.round(bodyFontSize * 1.55);
 
   // Bulk state drives the default for every section. Per-card overrides win
-  // when the user toggles individually after a bulk action.
-  const [bulkState, setBulkState] = useState<'expanded' | 'collapsed' | null>('expanded');
+  // when the user toggles individually after a bulk action. Default is
+  // collapsed so the user lands on a scannable outline of all 9 steps +
+  // interpretation + application — and opens what they want to read.
+  const [bulkState, setBulkState] = useState<'expanded' | 'collapsed' | null>('collapsed');
   const [overrides, setOverrides] = useState<Record<string, boolean>>({});
 
   const isOpen = (id: string): boolean => {
@@ -77,10 +87,11 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
   };
 
   return (
-    // Wrap the entire panel in a fixed font-size context so every section's
-    // inherited body text is consistent. Pills, headings, and section labels
-    // override locally; everything else (markdown bodies, prose) inherits 15/24.
-    <div style={{ fontSize: 15, lineHeight: '24px' }}>
+    // Wrap the entire panel in the user's body font size so every section's
+    // inherited body text matches the Bible side and the other commentary
+    // tabs. Pills, tags, and small captions override locally with fixed sizes;
+    // everything else (markdown bodies, prose paragraphs, list items) inherits.
+    <div style={{ fontSize: bodyFontSize, lineHeight: `${bodyLineHeight}px` }}>
       {/* Title row — matches Line-by-Line: just the H2 + share. No subtitle / theme banner. */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
         <h2 style={titleStyle}>Inductive Study of {study.title}</h2>
@@ -113,7 +124,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
         />
       ))}
 
-      <SectionHeading label="Interpretation — Five Movements" />
+      <SectionHeading label="Interpretation" />
       {study.interpretation.intro && (
         <Card
           open={isOpen('interpretation-intro')}
@@ -144,7 +155,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
         </Card>
       ))}
 
-      <SectionHeading label="Application — Questions for the Group" />
+      <SectionHeading label="Application" />
       <Card
         open={isOpen('application')}
         onToggle={() => toggle('application')}
@@ -201,9 +212,11 @@ function StepCard({
           <span style={cardHeadingTitleStyle}>{step.title}</span>
         </span>
       }
-      subheading={!open ? step.summary : undefined}
+      // Always show the italic summary as a subheading (same size + position
+      // whether the card is open or closed). Renders inside the heading area
+      // so it doesn't shift into the body when expanding.
+      subheading={step.summary}
     >
-      <p style={stepSummaryStyle}>{step.summary}</p>
       {renderStepBody(step, isOpen, toggle)}
     </Card>
   );
@@ -265,27 +278,65 @@ function QABody({ step, isOpen, toggle }: { step: StepQA; isOpen: (id: string) =
 }
 
 function KeywordsBody({ step }: { step: StepKeywords }) {
+  // Card-style row per keyword so the definition has room to breathe under
+  // the metadata line. A 5-column table (Word/Greek/Count/Verses/Definition)
+  // would crush the right-panel width; a stacked card scales cleanly.
   return (
-    <Table>
-      <thead>
-        <tr>
-          <Th>Key word</Th>
-          <Th>Greek</Th>
-          <Th style={{ width: 64, textAlign: 'right' }}>Count</Th>
-          <Th>Verses</Th>
-        </tr>
-      </thead>
-      <tbody>
-        {step.inventory.map((row, i) => (
-          <tr key={i}>
-            <Td style={{ fontWeight: 600, color: '#E7E7E7' }}>{row.word}</Td>
-            <Td style={{ color: 'rgba(255,255,255,0.7)', fontStyle: 'italic' }}>{row.greek ?? '—'}</Td>
-            <Td style={{ textAlign: 'right', color: '#B09A6D', fontWeight: 600 }}>{row.count}</Td>
-            <Td style={{ color: 'rgba(255,255,255,0.7)' }}>{row.verses}</Td>
-          </tr>
-        ))}
-      </tbody>
-    </Table>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+      {step.inventory.map((row, i) => (
+        <div
+          key={i}
+          style={{
+            padding: '12px 14px',
+            borderRadius: 8,
+            backgroundColor: '#161616',
+            border: '1px solid #2a2a2a',
+          }}
+        >
+          {/* Top line: word — greek — count pill on the right */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', marginBottom: 6 }}>
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 15, color: '#E7E7E7' }}>
+              {row.word}
+            </span>
+            {row.greek && (
+              <span style={{ fontStyle: 'italic', fontSize: 13, color: 'rgba(255,255,255,0.65)' }}>
+                {row.greek}
+              </span>
+            )}
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minWidth: 32,
+                height: 22,
+                padding: '0 8px',
+                borderRadius: 11,
+                backgroundColor: '#1A1A1A',
+                border: '1px solid #B09A6D',
+                color: '#B09A6D',
+                fontSize: 11,
+                fontWeight: 700,
+                marginLeft: 'auto',
+              }}
+            >
+              ×{row.count}
+            </span>
+          </div>
+          {/* Verses line */}
+          <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginBottom: row.definition ? 8 : 0 }}>
+            <span style={{ fontWeight: 600, letterSpacing: '0.4px', textTransform: 'uppercase', marginRight: 6 }}>Verses</span>
+            {row.verses}
+          </div>
+          {/* Definition */}
+          {row.definition && (
+            <p style={{ color: '#E7E7E7', margin: 0 }}>
+              {row.definition}
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -369,7 +420,7 @@ function BulletsBody({ step }: { step: StepBullets }) {
   return (
     <div>
       {step.intro && (
-        <p style={{ marginBottom: 14, fontSize: 15, color: '#E7E7E7', lineHeight: '24px' }}>
+        <p style={{ marginBottom: 14, color: '#E7E7E7' }}>
           {step.intro}
         </p>
       )}
@@ -436,10 +487,10 @@ function SegmentsBody({ step }: { step: StepSegments }) {
               border: '1px solid #2a2a2a',
             }}
           >
-            <p style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, fontWeight: 600, color: '#FFFFFF', margin: 0, marginBottom: 8 }}>
+            <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, color: '#FFFFFF', margin: 0, marginBottom: 8 }}>
               {seg.title}
             </p>
-            <div style={{ fontSize: 15, color: 'rgba(255,255,255,0.85)', lineHeight: '24px' }}>
+            <div style={{ color: 'rgba(255,255,255,0.85)' }}>
               <MarkdownBlock text={seg.body} />
             </div>
           </div>
@@ -478,10 +529,14 @@ function Card({
         onClick={onToggle}
         style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', width: '100%', padding: '14px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer', gap: 12 }}
       >
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 4, color: '#FFFFFF', flex: 1, minWidth: 0 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 6, color: '#FFFFFF', flex: 1, minWidth: 0 }}>
           <span style={{ width: '100%' }}>{heading}</span>
           {subheading && (
-            <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', fontWeight: 400, lineHeight: '18px', paddingLeft: 36 }}>{subheading}</span>
+            // Subheading rendered identically whether the card is open or
+            // closed so its size + position never shift on toggle.
+            // paddingLeft 40 aligns under the step title (28px circle + 12px
+            // gap). On non-step cards the alignment is naturally flush.
+            <span style={{ fontSize: 14, fontStyle: 'italic', color: 'rgba(255,255,255,0.65)', fontWeight: 400, lineHeight: '22px', paddingLeft: 40 }}>{subheading}</span>
           )}
         </div>
         {open ? (
