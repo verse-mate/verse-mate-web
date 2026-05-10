@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { fetchBooks, getRecentBooks, fetchTopics } from '@/services/bibleService';
-import { BibleBook, Topic } from '@/services/types';
+import { BibleBook, Topic, TopicCategory } from '@/services/types';
 import { ChevronRight, Search, ArrowLeft, Clock } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import { buildTopicUrl } from '@/lib/topicSlugs';
@@ -12,6 +12,16 @@ interface Props {
 }
 
 type Tab = 'OT' | 'NT' | 'Topics';
+
+// Category pills inside the Topics tab. Order matches verse-mate-mobile's
+// BibleNavigationModal so users see the same default landing tab (Events)
+// across platforms.
+const TOPIC_CATEGORIES: { key: TopicCategory; label: string }[] = [
+  { key: 'EVENT', label: 'Events' },
+  { key: 'PROPHECY', label: 'Prophecies' },
+  { key: 'PARABLE', label: 'Parables' },
+  { key: 'THEME', label: 'Themes' },
+];
 
 /**
  * BookSelector — unified Search screen with OT / NT / Topics tabs.
@@ -28,6 +38,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   const [selectedBook, setSelectedBook] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   const [topics, setTopics] = useState<Topic[]>([]);
+  const [topicCategory, setTopicCategory] = useState<TopicCategory>('EVENT');
   const [allBooks, setAllBooks] = useState<BibleBook[]>([]);
   const [recents, setRecents] = useState<BibleBook[]>([]);
 
@@ -56,10 +67,17 @@ export default function BookSelector({ onClose, onSelect }: Props) {
     [books, query]
   );
 
-  const filteredTopics = useMemo(
-    () => topics.filter(t => t.name.toLowerCase().includes(query.toLowerCase())),
-    [topics, query]
-  );
+  const filteredTopics = useMemo(() => {
+    // When searching, match across all categories — same behavior as
+    // verse-mate-mobile's BibleNavigationModal so the search affordance
+    // works the same way users expect from the mobile app.
+    if (query) {
+      return topics.filter(t => t.name.toLowerCase().includes(query.toLowerCase()));
+    }
+    return topics.filter(
+      t => String(t.category || '').toUpperCase() === topicCategory
+    );
+  }, [topics, query, topicCategory]);
 
   const selectedBookObj = selectedBook
     ? allBooks.find(b => b.name === selectedBook)
@@ -151,6 +169,39 @@ export default function BookSelector({ onClose, onSelect }: Props) {
           })}
         </div>
       </div>
+
+      {/* Topic category pills (only on Topics tab) — Events / Prophecies / Parables / Themes */}
+      {tab === 'Topics' && (
+        <div className="px-4 pt-2">
+          <div className="flex items-center gap-1 rounded-full bg-dark-raised p-1">
+            {TOPIC_CATEGORIES.map(c => {
+              const active = topicCategory === c.key;
+              return (
+                <button
+                  key={c.key}
+                  onClick={() => {
+                    setTopicCategory(c.key);
+                    setQuery('');
+                  }}
+                  data-testid={`topic-category-${c.key.toLowerCase()}`}
+                  aria-pressed={active}
+                  className={`flex-1 h-8 rounded-full transition-colors ${
+                    active ? 'bg-gold text-[#1A1A1A]' : 'text-dark-fg/80'
+                  }`}
+                  style={{
+                    fontFamily: 'Roboto, sans-serif',
+                    fontWeight: active ? 500 : 400,
+                    fontSize: 13,
+                    lineHeight: '20px',
+                  }}
+                >
+                  {c.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* Search input */}
       <div className="px-4 pt-3">
