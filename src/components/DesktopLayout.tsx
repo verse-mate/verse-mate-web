@@ -991,11 +991,20 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
       </header>
 
       <div style={{ flex: 1, overflowY: 'auto', backgroundColor: '#000000', padding: '16px' }}>
-        {/* User card */}
+        {/* User card — signed-in users go to Settings (matches mobile);
+            signed-out users go to the sign-in page. */}
         <button
-          onClick={() => { if (!state.isSignedIn) { if (onOpenPage) { onOpenPage('signin'); } else { navigate('/login'); onClose(); } } }}
-          disabled={state.isSignedIn}
-          style={{ display: 'flex', alignItems: 'center', gap: 12, width: '100%', height: 64, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', marginBottom: 12, cursor: state.isSignedIn ? 'default' : 'pointer', textAlign: 'left' }}
+          onClick={() => {
+            const target = state.isSignedIn ? 'settings' : 'signin';
+            if (onOpenPage) {
+              onOpenPage(target);
+            } else {
+              navigate(state.isSignedIn ? '/menu/settings' : '/login');
+              onClose();
+            }
+          }}
+          data-testid="menu-profile-card"
+          style={{ display: 'flex', alignItems: 'center', gap: 12, width: '100%', height: 64, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', marginBottom: 12, cursor: 'pointer', textAlign: 'left' }}
         >
           <div style={{ width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#1B1B1B', flexShrink: 0, overflow: 'hidden' }}>
             {state.isSignedIn && state.userAvatarUrl ? (
