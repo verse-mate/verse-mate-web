@@ -286,33 +286,51 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           {/* Center: VerseMate logo */}
           <img src="/versemate-logo-white.png" alt="VerseMate" style={{ height: 20, objectFit: 'contain', position: 'absolute', left: '50%', transform: 'translateX(-50%)' }} />
 
-          {/* Right: commentary tabs (when in commentary view) + menu */}
+          {/* Commentary tabs — absolutely positioned at the horizontal center
+              of the right panel so they sit directly above the panel they
+              control. As the user resizes the split, leftPct changes and the
+              pill shifts with it. The right panel spans leftPct% → 100% of the
+              header width; its center is therefore (100 + leftPct) / 2 %. */}
+          {rightPanelView === 'commentary' && (
+            <div
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: `${(100 + leftPct) / 2}%`,
+                transform: 'translate(-50%, -50%)',
+                display: 'flex',
+                backgroundColor: '#323232',
+                borderRadius: 100,
+                padding: '3px',
+                zIndex: 2,
+              }}
+            >
+              {tabs.map(t => (
+                <button
+                  key={t.id}
+                  onClick={() => setTab(t.id)}
+                  data-testid={`desktop-tab-${t.id}`}
+                  style={{
+                    borderRadius: 100,
+                    padding: '3px 14px',
+                    fontFamily: 'Roboto, sans-serif',
+                    fontSize: 13,
+                    fontWeight: 400,
+                    lineHeight: '22px',
+                    backgroundColor: tab === t.id ? '#B09A6D' : 'transparent',
+                    color: tab === t.id ? '#000000' : '#FFFFFF',
+                    border: 'none',
+                    cursor: 'pointer',
+                  }}
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Right: hamburger menu only */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            {rightPanelView === 'commentary' && (
-              <div style={{ display: 'flex', backgroundColor: '#323232', borderRadius: 100, padding: '3px' }}>
-                {tabs.map(t => (
-                  <button
-                    key={t.id}
-                    onClick={() => setTab(t.id)}
-                    data-testid={`desktop-tab-${t.id}`}
-                    style={{
-                      borderRadius: 100,
-                      padding: '3px 14px',
-                      fontFamily: 'Roboto, sans-serif',
-                      fontSize: 13,
-                      fontWeight: 400,
-                      lineHeight: '22px',
-                      backgroundColor: tab === t.id ? '#B09A6D' : 'transparent',
-                      color: tab === t.id ? '#000000' : '#FFFFFF',
-                      border: 'none',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {t.label}
-                  </button>
-                ))}
-              </div>
-            )}
             <button
               onClick={() => setShowMenu(!showMenu)}
               aria-label="Open menu"
