@@ -26,7 +26,7 @@ interface Props {
  * Shows highlight color dots, copy, share, and bookmark actions.
  */
 export default function SelectionToolbar({ book, chapter, bookId }: Props) {
-  const { state, addHighlight, updateHighlight, addBookmark } = useApp();
+  const { state, dispatch, addHighlight, updateHighlight, addBookmark } = useApp();
   const [position, setPosition] = useState<{ x: number; y: number } | null>(null);
   const [selectedText, setSelectedText] = useState('');
   const [selectedVerses, setSelectedVerses] = useState<number[]>([]);
@@ -139,7 +139,7 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
   };
 
   const handleHighlight = async (color: HighlightColor) => {
-    if (!state.isSignedIn || selectedVerses.length === 0) return;
+    if (selectedVerses.length === 0) return;
     const startVerse = Math.min(...selectedVerses);
     const endVerse = Math.max(...selectedVerses);
     // Recolor an existing highlight if the current selection overlaps one in
@@ -152,20 +152,46 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
       return hStart <= endVerse && hEnd >= startVerse;
     });
     try {
-      if (existing) {
-        if (existing.color !== color) {
-          await updateHighlight(existing.id, color);
+      if (state.isSignedIn) {
+        if (existing) {
+          if (existing.color !== color) {
+            await updateHighlight(existing.id, color);
+          }
+        } else {
+          await addHighlight({
+            bookId,
+            book,
+            chapter,
+            verse: startVerse,
+            startVerse,
+            endVerse,
+            color,
+          });
         }
       } else {
-        await addHighlight({
-          bookId,
-          book,
-          chapter,
-          verse: startVerse,
-          startVerse,
-          endVerse,
-          color,
-        });
+        // Signed-out: ephemeral, in-memory only. Dropped on passage change
+        // (see SET_PASSAGE in AppContext). Never persisted to API or
+        // localStorage.
+        if (existing) {
+          if (existing.color !== color) {
+            dispatch({ type: 'UPDATE_HIGHLIGHT', id: existing.id, color });
+          }
+        } else {
+          dispatch({
+            type: 'ADD_HIGHLIGHT',
+            highlight: {
+              id: `local-${Date.now()}`,
+              bookId,
+              book,
+              chapter,
+              verse: startVerse,
+              startVerse,
+              endVerse,
+              color,
+              createdAt: new Date().toISOString(),
+            },
+          });
+        }
       }
       setPosition(null);
       window.getSelection()?.removeAllRanges();
@@ -216,16 +242,15 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
           <button
             key={color}
             onClick={() => handleHighlight(color)}
-            disabled={!state.isSignedIn}
-            title={state.isSignedIn ? `Highlight ${color}` : 'Sign in to highlight'}
+            title={state.isSignedIn ? `Highlight ${color}` : `Highlight ${color} (sign in to save)`}
             style={{
               width: 20,
               height: 20,
               borderRadius: '50%',
               backgroundColor: hex,
               border: '2px solid rgba(255,255,255,0.15)',
-              cursor: state.isSignedIn ? 'pointer' : 'not-allowed',
-              opacity: state.isSignedIn ? 1 : 0.4,
+              cursor: 'pointer',
+              opacity: 1,
               padding: 0,
             }}
           />
