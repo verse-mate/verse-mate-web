@@ -83,8 +83,18 @@ export default function MenuScreen() {
           className="flex items-center gap-3 w-full h-[64px] px-4 rounded-xl text-left mb-3"
           style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
         >
-          <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style={{ backgroundColor: '#1B1B1B' }}>
-            <User size={20} style={{ color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
+          <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 overflow-hidden" style={{ backgroundColor: '#1B1B1B' }}>
+            {state.isSignedIn && state.userAvatarUrl ? (
+              <img
+                src={state.userAvatarUrl}
+                alt=""
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover"
+                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+              />
+            ) : (
+              <User size={20} style={{ color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
+            )}
           </div>
           <div className="min-w-0 flex-1">
             <p className="truncate" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 14, lineHeight: '20px', color: '#B09A6D' }}>
