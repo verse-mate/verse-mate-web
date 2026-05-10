@@ -53,6 +53,11 @@ const MIN_LEFT_PCT = 35;
 const MAX_LEFT_PCT = 80;
 const SIDEBAR_COLLAPSED = 56;
 const SIDEBAR_EXPANDED = 220;
+const SIDEBAR_MIN = 56;
+const SIDEBAR_MAX = 320;
+// Below this width the sidebar switches to compact mode (short book codes,
+// abbreviated OT/NT section labels, narrower chapter grid).
+const SIDEBAR_COMPACT_THRESHOLD = 120;
 
 /**
  * DesktopLayout — split-view for ≥1024px viewports.
@@ -108,6 +113,22 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const isDragging = useRef(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
+  // Resizable sidebar state — width in px, persisted across reloads.
+  const [sidebarWidth, setSidebarWidth] = useState<number>(() => {
+    try {
+      const raw = localStorage.getItem('versemate-sidebar-width');
+      if (raw) {
+        const n = parseInt(raw, 10);
+        if (!isNaN(n)) return Math.max(SIDEBAR_MIN, Math.min(SIDEBAR_MAX, n));
+      }
+    } catch { /* ignore */ }
+    return SIDEBAR_EXPANDED;
+  });
+  const isDraggingSidebar = useRef(false);
+  useEffect(() => {
+    try { localStorage.setItem('versemate-sidebar-width', String(sidebarWidth)); } catch { /* ignore */ }
+  }, [sidebarWidth]);
+
   // Right panel commentary state
   const [tab, setTab] = useState<Tab>('byline');
   const [commentaries, setCommentaries] = useState<Commentary[]>([]);
@@ -157,8 +178,21 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     document.body.style.userSelect = 'none';
   }, []);
 
+  const handleSidebarDragStart = useCallback((e: React.PointerEvent) => {
+    e.preventDefault();
+    isDraggingSidebar.current = true;
+    document.body.style.cursor = 'col-resize';
+    document.body.style.userSelect = 'none';
+  }, []);
+
   useEffect(() => {
     const handleMove = (e: PointerEvent) => {
+      if (isDraggingSidebar.current) {
+        // Sidebar starts at viewport x = 0
+        const w = Math.round(e.clientX);
+        setSidebarWidth(Math.max(SIDEBAR_MIN, Math.min(SIDEBAR_MAX, w)));
+        return;
+      }
       if (!isDragging.current || !contentRef.current) return;
       const rect = contentRef.current.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -166,8 +200,9 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
       setLeftPct(Math.max(MIN_LEFT_PCT, Math.min(MAX_LEFT_PCT, pct)));
     };
     const handleUp = () => {
-      if (isDragging.current) {
+      if (isDragging.current || isDraggingSidebar.current) {
         isDragging.current = false;
+        isDraggingSidebar.current = false;
         document.body.style.cursor = '';
         document.body.style.userSelect = '';
       }
@@ -192,6 +227,8 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const otBooks = books.filter(b => b.testament === 'OT');
   const ntBooks = books.filter(b => b.testament === 'NT');
 
+  const isSidebarCompact = sidebarWidth < SIDEBAR_COMPACT_THRESHOLD;
+
   return (
     <div data-testid="desktop-layout" style={{ display: 'flex', width: '100vw', height: '100dvh', overflow: 'hidden', backgroundColor: '#1B1B1B' }}>
       {/* ─── PERSISTENT SIDEBAR — expands on book click to show chapters ─── */}
@@ -199,7 +236,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
         <div
           data-testid="desktop-sidebar"
           style={{
-            width: SIDEBAR_EXPANDED,
+            width: sidebarWidth,
             flexShrink: 0,
             height: '100%',
             backgroundColor: '#111111',
@@ -207,11 +244,12 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
+            position: 'relative',
           }}
         >
           {/* Sidebar header — "Bible" label */}
-          <div style={{ height: 56, display: 'flex', alignItems: 'center', padding: '0 16px', flexShrink: 0, borderBottom: '1px solid #2a2a2a' }}>
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, fontWeight: 600, color: '#B09A6D', letterSpacing: '0.5px' }}>Bible</span>
+          <div style={{ height: 56, display: 'flex', alignItems: 'center', justifyContent: isSidebarCompact ? 'center' : 'flex-start', padding: isSidebarCompact ? 0 : '0 16px', flexShrink: 0, borderBottom: '1px solid #2a2a2a' }}>
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '20px', fontWeight: 600, color: '#B09A6D', letterSpacing: '0.5px' }}>Bible</span>
           </div>
           {/* Book list */}
           <div style={{ flex: 1, overflowY: 'auto', padding: '4px 0' }} className="mini-sidebar-scroll">
@@ -226,7 +264,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 dispatch({ type: 'SET_PASSAGE', book: b.name, chapter: ch, bookId: b.bookId });
                 navigate('/read');
               }}
-              isExpanded={true}
+              isExpanded={!isSidebarCompact}
               sectionOpen={sectionOpen.OT}
               onSectionToggle={() => toggleSection('OT')}
             />
@@ -241,10 +279,37 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 dispatch({ type: 'SET_PASSAGE', book: b.name, chapter: ch, bookId: b.bookId });
                 navigate('/read');
               }}
-              isExpanded={true}
+              isExpanded={!isSidebarCompact}
               sectionOpen={sectionOpen.NT}
               onSectionToggle={() => toggleSection('NT')}
             />
+          </div>
+
+          {/* Sidebar drag handle — full-height vertical bar at the right edge */}
+          <div
+            onPointerDown={handleSidebarDragStart}
+            data-testid="desktop-sidebar-divider"
+            aria-label="Resize sidebar"
+            role="separator"
+            style={{
+              position: 'absolute',
+              top: 0,
+              right: 0,
+              width: 6,
+              height: '100%',
+              cursor: 'col-resize',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              touchAction: 'none',
+              zIndex: 5,
+            }}
+          >
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+              {[0, 1, 2].map(i => (
+                <div key={i} style={{ width: 3, height: 3, borderRadius: '50%', backgroundColor: '#555' }} />
+              ))}
+            </div>
           </div>
         </div>
       )}
@@ -276,7 +341,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               data-testid="desktop-chapter-selector-button"
               style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#FFFFFF', background: 'none', border: 'none', cursor: 'pointer', padding: '0 8px', minHeight: 44 }}
             >
-              <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: '#FFFFFF' }}>
+              <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '20px', color: '#FFFFFF' }}>
                 {state.book} {state.chapter}
               </span>
               <ChevronDown size={18} color="#FFFFFF" strokeWidth={2} />
@@ -284,7 +349,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           </div>
 
           {/* Center: VerseMate logo */}
-          <img src="/versemate-logo-white.png" alt="VerseMate" style={{ height: 20, objectFit: 'contain', position: 'absolute', left: '50%', transform: 'translateX(-50%)' }} />
+          <img src="/versemate-logo-white.png" alt="VerseMate" style={{ height: 20, objectFit: 'contain', position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }} />
 
           {/* Commentary tabs — absolutely positioned at the horizontal center
               of the right panel so they sit directly above the panel they
@@ -312,11 +377,11 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                   data-testid={`desktop-tab-${t.id}`}
                   style={{
                     borderRadius: 100,
-                    padding: '3px 14px',
+                    padding: '4px 14px',
                     fontFamily: 'Roboto, sans-serif',
-                    fontSize: 13,
+                    fontSize: 14,
                     fontWeight: 400,
-                    lineHeight: '22px',
+                    lineHeight: '20px',
                     backgroundColor: tab === t.id ? '#B09A6D' : 'transparent',
                     color: tab === t.id ? '#000000' : '#FFFFFF',
                     border: 'none',
@@ -469,7 +534,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             position: 'fixed',
             top: '10vh',
             /* Center over Bible (left) panel */
-            left: `${(sidebarOpen ? SIDEBAR_EXPANDED : 0) + (contentRef.current ? contentRef.current.getBoundingClientRect().width * leftPct / 100 / 2 : 300)}px`,
+            left: `${(sidebarOpen ? sidebarWidth : 0) + (contentRef.current ? contentRef.current.getBoundingClientRect().width * leftPct / 100 / 2 : 300)}px`,
             transform: 'translateX(-50%)',
             width: 420,
             height: '80vh',
@@ -528,23 +593,24 @@ function SidebarSection({
         style={{
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between',
+          justifyContent: isExpanded ? 'space-between' : 'center',
           width: '100%',
           background: 'none',
           border: 'none',
           cursor: 'pointer',
           fontFamily: 'Roboto, sans-serif',
-          fontSize: 14,
+          fontSize: isExpanded ? 14 : 11,
           fontWeight: 700,
           color: '#B09A6D',
-          textAlign: 'left',
-          padding: '14px 12px 6px',
+          textAlign: isExpanded ? 'left' : 'center',
+          padding: isExpanded ? '14px 12px 6px' : '12px 4px 6px',
           letterSpacing: '0.5px',
+          gap: 6,
         }}
       >
-        <span>{label}</span>
+        <span>{isExpanded ? label : (label === 'Old Testament' ? 'OT' : 'NT')}</span>
         <ChevronDown
-          size={14}
+          size={isExpanded ? 14 : 10}
           color="#B09A6D"
           style={{ flexShrink: 0, transform: sectionOpen ? 'rotate(0deg)' : 'rotate(-90deg)', transition: 'transform 0.15s' }}
         />
@@ -587,7 +653,7 @@ function SidebarSection({
             </button>
             {/* Chapter grid — only shown when expanded */}
             {isBookExpanded && (
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 2, padding: '4px 10px 8px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: `repeat(${isExpanded ? 5 : 3}, 1fr)`, gap: 2, padding: isExpanded ? '4px 10px 8px' : '4px 6px 8px' }}>
                 {Array.from({ length: b.chapters }, (_, i) => i + 1).map(ch => (
                   <button
                     key={ch}
