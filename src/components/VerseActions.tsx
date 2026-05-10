@@ -141,7 +141,11 @@ export default function VerseActions({ verse, onClose }: Props) {
             <Lightbulb size={20} className="text-foreground" />
             <span className="text-[11px] text-muted-foreground">Insight</span>
           </button>
-          <button data-testid="verse-action-highlight" className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors">
+          <button
+            onClick={() => addHighlightFn(existingHighlight?.color ?? 'yellow')}
+            data-testid="verse-action-highlight"
+            className="flex flex-col items-center gap-1 py-2.5 rounded-lg hover:bg-secondary transition-colors"
+          >
             <Highlighter size={20} className="text-foreground" />
             <span className="text-[11px] text-muted-foreground">Highlight</span>
           </button>
