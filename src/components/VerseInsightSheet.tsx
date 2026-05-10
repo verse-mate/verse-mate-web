@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { fetchVerseInsights, fetchChapter } from '@/services/bibleService';
 import { VerseInsight, Chapter, BibleVersion } from '@/services/types';
 import { ChevronLeft, ChevronRight, Copy, Bookmark, Check } from 'lucide-react';
@@ -41,6 +41,32 @@ export default function VerseInsightSheet({
   const [copiedAt, setCopiedAt] = useState<number>(0);
   const [savedAt, setSavedAt] = useState<number>(0);
   const [actionError, setActionError] = useState<string | null>(null);
+  // Swipe-down-to-dismiss state. The drag is captured on the top "header"
+  // region only (drag handle, title, stepper, quoted verse). The scrollable
+  // content area below uses native scroll without competing for touches.
+  const [dragOffset, setDragOffset] = useState(0);
+  const dragStartYRef = useRef<number | null>(null);
+  const SWIPE_DISMISS_THRESHOLD_PX = 100;
+
+  const handleDragStart = (e: React.PointerEvent) => {
+    dragStartYRef.current = e.clientY;
+    setDragOffset(0);
+  };
+  const handleDragMove = (e: React.PointerEvent) => {
+    if (dragStartYRef.current === null) return;
+    const dy = e.clientY - dragStartYRef.current;
+    setDragOffset(Math.max(0, dy));
+  };
+  const handleDragEnd = () => {
+    if (dragStartYRef.current === null) return;
+    const offset = dragOffset;
+    dragStartYRef.current = null;
+    if (offset > SWIPE_DISMISS_THRESHOLD_PX) {
+      onClose();
+    } else {
+      setDragOffset(0);
+    }
+  };
 
   useEffect(() => {
     fetchVerseInsights(book, chapter).then(setInsights);
@@ -138,55 +164,81 @@ export default function VerseInsightSheet({
       {/* Sheet — slides up from bottom; narrower on desktop */}
       <div
         className="verse-insight-sheet absolute inset-x-0 bottom-0 z-50 bg-dark-surface text-dark-fg rounded-t-[24px] border-t border-dark shadow-[0_-10px_30px_rgba(0,0,0,0.5)] animate-slide-up flex flex-col"
-        style={{ maxHeight: '98%', minHeight: '80%' }}
+        style={{
+          maxHeight: '98%',
+          minHeight: '80%',
+          transform: dragOffset > 0 ? `translateY(${dragOffset}px)` : undefined,
+          transition: dragStartYRef.current === null ? 'transform 0.2s ease' : 'none',
+        }}
         role="dialog"
         aria-label="Verse Insight"
       >
-        {/* Drag handle */}
-        <div className="shrink-0 pt-2 flex justify-center">
-          <div className="w-10 h-1 rounded-full bg-dark-muted/40" />
-        </div>
-
-        {/* Title */}
-        <h2 className="text-center text-[16px] text-gold font-medium mt-2">
-          Verse Insight
-        </h2>
-
-        {/* Verse stepper — arrows at the edges (justify-between) */}
-        <div className="flex items-center justify-between px-5 mt-2">
-          <button
-            onClick={() => step(-1)}
-            disabled={currentVerse <= 1}
-            aria-label="Previous verse"
-            className="w-9 h-9 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30 shrink-0"
-          >
-            <ChevronLeft size={18} className="text-dark-fg" />
-          </button>
-          <div className="text-[17px] font-medium text-dark-fg">
-            {book} {chapter}:{currentVerse}
+        {/* Header region — captures pointer events for swipe-down-to-dismiss.
+            touchAction: none stops the browser from intercepting the gesture
+            as a page scroll while the user drags the sheet down. */}
+        <div
+          onPointerDown={handleDragStart}
+          onPointerMove={handleDragMove}
+          onPointerUp={handleDragEnd}
+          onPointerCancel={handleDragEnd}
+          style={{ touchAction: 'none' }}
+        >
+          {/* Drag handle */}
+          <div className="shrink-0 pt-2 flex justify-center">
+            <div className="w-10 h-1 rounded-full bg-dark-muted/40" />
           </div>
-          <button
-            onClick={() => step(1)}
-            disabled={currentVerse >= maxVerse}
-            aria-label="Next verse"
-            className="w-9 h-9 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30 shrink-0"
-          >
-            <ChevronRight size={18} className="text-dark-fg" />
-          </button>
-        </div>
 
-        {/* Quoted verse — pushed down for breathing room under the stepper */}
-        {verseText && (
-          <p className="px-6 mt-4 text-center text-[14px] italic text-dark-muted leading-snug">
-            "{verseText}"
-          </p>
-        )}
+          {/* Title */}
+          <h2 className="text-center text-[16px] text-gold font-medium mt-2">
+            Verse Insight
+          </h2>
+
+          {/* Verse stepper — arrows at the edges (justify-between) */}
+          <div className="flex items-center justify-between px-5 mt-2">
+            <button
+              onClick={() => step(-1)}
+              disabled={currentVerse <= 1}
+              aria-label="Previous verse"
+              className="w-9 h-9 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30 shrink-0"
+            >
+              <ChevronLeft size={18} className="text-dark-fg" />
+            </button>
+            <div className="text-[17px] font-medium text-dark-fg">
+              {book} {chapter}:{currentVerse}
+            </div>
+            <button
+              onClick={() => step(1)}
+              disabled={currentVerse >= maxVerse}
+              aria-label="Next verse"
+              className="w-9 h-9 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30 shrink-0"
+            >
+              <ChevronRight size={18} className="text-dark-fg" />
+            </button>
+          </div>
+
+          {/* Quoted verse — pushed down for breathing room under the stepper */}
+          {verseText && (
+            <p className="px-6 mt-4 text-center text-[14px] italic text-dark-muted leading-snug">
+              "{verseText}"
+            </p>
+          )}
+        </div>
 
         {/* Analysis panel — outer px-4 aligns with action-button row below.
             Inner grey box is content-sized (no flex-1) so short commentary
             doesn't stretch an empty grey card down to the buttons. Outer
-            keeps flex-1 + scroll for long commentary. */}
-        <div className="flex-1 overflow-y-auto px-4 mt-6 pb-2" style={{ minHeight: 0 }}>
+            keeps flex-1 + scroll for long commentary. touch-action pan-y
+            and overscroll-behavior contain make iOS Safari give us native
+            momentum scroll without rubber-banding the parent. */}
+        <div
+          className="flex-1 overflow-y-auto px-4 mt-6 pb-2"
+          style={{
+            minHeight: 0,
+            WebkitOverflowScrolling: 'touch',
+            overscrollBehavior: 'contain',
+            touchAction: 'pan-y',
+          }}
+        >
           <div className="rounded-xl bg-dark-raised border border-dark p-5" style={{ fontSize: 15 }}>
             {insight ? (
               <MarkdownBlock text={stripDuplicateVerse(insight.historicalContext)} />
