@@ -174,16 +174,17 @@
   .hl-teal { background-color: var(--hl-teal); }
   .hl-brown { background-color: var(--hl-brown); }
 
-  /* Auto-highlight = lighter bg + colored underline */
-  .ahl-yellow { background-color: var(--ahl-yellow-bg); border-bottom: 2px solid var(--ahl-yellow-border); cursor: pointer; }
-  .ahl-blue { background-color: var(--ahl-blue-bg); border-bottom: 2px solid var(--ahl-blue-border); cursor: pointer; }
-  .ahl-green { background-color: var(--ahl-green-bg); border-bottom: 2px solid var(--ahl-green-border); cursor: pointer; }
-  .ahl-orange { background-color: var(--ahl-orange-bg); border-bottom: 2px solid var(--ahl-orange-border); cursor: pointer; }
-  .ahl-pink { background-color: var(--ahl-pink-bg); border-bottom: 2px solid var(--ahl-pink-border); cursor: pointer; }
-  .ahl-purple { background-color: var(--ahl-purple-bg); border-bottom: 2px solid var(--ahl-purple-border); cursor: pointer; }
-  .ahl-red { background-color: var(--ahl-red-bg); border-bottom: 2px solid var(--ahl-red-border); cursor: pointer; }
-  .ahl-teal { background-color: var(--ahl-teal-bg); border-bottom: 2px solid var(--ahl-teal-border); cursor: pointer; }
-  .ahl-brown { background-color: var(--ahl-brown-bg); border-bottom: 2px solid var(--ahl-brown-border); cursor: pointer; }
+  /* Auto-highlight = lighter bg + colored underline. No cursor: pointer
+     — these are passive emphasis marks, no click handler is wired. */
+  .ahl-yellow { background-color: var(--ahl-yellow-bg); border-bottom: 2px solid var(--ahl-yellow-border); }
+  .ahl-blue { background-color: var(--ahl-blue-bg); border-bottom: 2px solid var(--ahl-blue-border); }
+  .ahl-green { background-color: var(--ahl-green-bg); border-bottom: 2px solid var(--ahl-green-border); }
+  .ahl-orange { background-color: var(--ahl-orange-bg); border-bottom: 2px solid var(--ahl-orange-border); }
+  .ahl-pink { background-color: var(--ahl-pink-bg); border-bottom: 2px solid var(--ahl-pink-border); }
+  .ahl-purple { background-color: var(--ahl-purple-bg); border-bottom: 2px solid var(--ahl-purple-border); }
+  .ahl-red { background-color: var(--ahl-red-bg); border-bottom: 2px solid var(--ahl-red-border); }
+  .ahl-teal { background-color: var(--ahl-teal-bg); border-bottom: 2px solid var(--ahl-teal-border); }
+  .ahl-brown { background-color: var(--ahl-brown-bg); border-bottom: 2px solid var(--ahl-brown-border); }
 }
 
 /* ─── Tablet+ : hide per-screen headers since DesktopLayout renders a shared one ─── */
@@ -230,18 +231,27 @@
     background-color: #1B1B1B;
   }
 }
-/* ─── Desktop: chapter nav buttons vertically centered ─── */
+/* ─── Chapter nav buttons: bottom-anchored on phone, vertically centered on desktop ─── */
+.chapter-nav-btn {
+  bottom: 45px;
+}
+.chapter-nav-prev {
+  left: 12px;
+}
+.chapter-nav-next {
+  right: 12px;
+}
 @media (min-width: 1024px) {
   .chapter-nav-btn {
-    top: 50% !important;
-    bottom: auto !important;
+    top: 50%;
+    bottom: auto;
     transform: translateY(-50%);
   }
   .chapter-nav-prev {
-    left: 16px !important;
+    left: 16px;
   }
   .chapter-nav-next {
-    right: 16px !important;
+    right: 16px;
   }
 }
 
