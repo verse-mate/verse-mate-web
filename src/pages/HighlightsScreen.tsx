@@ -154,7 +154,8 @@ export default function HighlightsScreen() {
                 data-testid={`chapter-group-${g.bookId}-${g.chapter}`}
                 style={{
                   ...chapterGroupStyle,
-                  padding: '12px 16px',
+                  minHeight: 56,
+                  padding: '14px 16px',
                   flexDirection: 'row',
                   alignItems: 'center',
                   justifyContent: 'space-between',
