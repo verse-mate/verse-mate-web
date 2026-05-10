@@ -231,10 +231,11 @@ export default function VerseInsightSheet({
             and overscroll-behavior contain make iOS Safari give us native
             momentum scroll without rubber-banding the parent. */}
         <div
-          // pb-8 (32px) gives the last line of commentary visible breathing
-          // room above the action-button row so the two don't read as a
-          // single visual block when scrolled to the bottom.
-          className="flex-1 overflow-y-auto px-4 mt-6 pb-8"
+          // Stronger bottom buffer: the inner grey card carries its own
+          // margin-bottom (mb-6 = 24px) AND the scroll container adds pb-12
+          // (48px), so the visible gap between the card's bottom edge and
+          // the action-button row is unmistakable at any scroll position.
+          className="flex-1 overflow-y-auto px-4 mt-6 pb-12"
           style={{
             minHeight: 0,
             WebkitOverflowScrolling: 'touch',
@@ -243,7 +244,7 @@ export default function VerseInsightSheet({
           }}
         >
           <div
-            className="rounded-xl bg-dark-raised border border-dark p-5"
+            className="rounded-xl bg-dark-raised border border-dark p-5 mb-6"
             // Inherit the user's reading font size so commentary matches the
             // scripture body (set in ReadingScreen via state.settings.fontSize).
             // Without this the panel hardcoded 15px while the bible side
