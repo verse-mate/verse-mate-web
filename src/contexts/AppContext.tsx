@@ -56,6 +56,7 @@ type Action =
   | { type: 'SET_HIGHLIGHTS'; highlights: Highlight[] }
   | { type: 'ADD_HIGHLIGHT'; highlight: Highlight }
   | { type: 'UPDATE_HIGHLIGHT'; id: string; color: HighlightColor }
+  | { type: 'REPLACE_HIGHLIGHT_ID'; oldId: string; newId: string; highlightId?: number }
   | { type: 'REMOVE_HIGHLIGHT'; id: string }
   | { type: 'UPDATE_SETTINGS'; settings: Partial<AppSettings> }
   | {
@@ -112,6 +113,15 @@ function reducer(state: AppState, action: Action): AppState {
         ...state,
         highlights: state.highlights.map(h =>
           h.id === action.id ? { ...h, color: action.color } : h
+        ),
+      };
+    case 'REPLACE_HIGHLIGHT_ID':
+      return {
+        ...state,
+        highlights: state.highlights.map(h =>
+          h.id === action.oldId
+            ? { ...h, id: action.newId, highlightId: action.highlightId ?? h.highlightId }
+            : h
         ),
       };
     case 'REMOVE_HIGHLIGHT':
@@ -333,29 +343,47 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const addHighlight = useCallback(
     async (h: Omit<Highlight, 'id' | 'createdAt'>) => {
+      const tmpId = `tmp-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
       const optimistic: Highlight = {
         ...h,
-        id: `tmp-${Date.now()}`,
+        id: tmpId,
         createdAt: new Date().toISOString(),
       };
       dispatch({ type: 'ADD_HIGHLIGHT', highlight: optimistic });
       try {
-        await apiAddHighlight({
+        // Best-effort: pull the real highlight_id off the POST response so
+        // subsequent recolor / remove on the just-added highlight hits the
+        // right backend record. We deliberately do NOT refetch the full
+        // list here: that previously caused two bugs — (1) racing refetches
+        // across rapid adds could overwrite earlier optimistic state, and
+        // (2) if the backend's GET response for /bible/highlights collapses
+        // a multi-verse range to a single verse, the refetch would clobber
+        // the user's correctly-rendered range. The full list is re-fetched
+        // on sign-in / passage load instead.
+        const res = await apiAddHighlight({
           bookId: h.bookId,
           chapter: h.chapter,
           startVerse: h.startVerse ?? h.verse,
           endVerse: h.endVerse ?? h.verse,
           color: h.color,
         });
-        if (state.userId) {
-          const refreshed = await apiFetchHighlights(state.userId);
-          dispatch({ type: 'SET_HIGHLIGHTS', highlights: refreshed });
+        const realId =
+          (res as { highlight?: { highlight_id?: number }; highlight_id?: number } | undefined)
+            ?.highlight?.highlight_id ??
+          (res as { highlight_id?: number } | undefined)?.highlight_id;
+        if (typeof realId === 'number' && realId > 0) {
+          dispatch({
+            type: 'REPLACE_HIGHLIGHT_ID',
+            oldId: tmpId,
+            newId: String(realId),
+            highlightId: realId,
+          });
         }
       } catch {
-        dispatch({ type: 'REMOVE_HIGHLIGHT', id: optimistic.id });
+        dispatch({ type: 'REMOVE_HIGHLIGHT', id: tmpId });
       }
     },
-    [state.userId]
+    []
   );
 
   const updateHighlight = useCallback(async (id: string, color: HighlightColor) => {
