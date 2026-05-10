@@ -88,7 +88,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
 
         <div className="flex-1 overflow-y-auto px-4 pt-2 pb-6">
           <p className="text-[13px] text-dark-muted mb-3">Select a chapter</p>
-          <div className="grid grid-cols-6 gap-2">
+          <div className="grid grid-cols-5 sm:grid-cols-6 gap-2">
             {Array.from({ length: selectedBookObj.chapters }, (_, i) => i + 1).map(ch => (
               <button
                 key={ch}
