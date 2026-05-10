@@ -726,7 +726,7 @@ function CommentaryPanel({
     return (
       <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
-          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 18, lineHeight: '26px', color: '#E7E7E7', margin: 0 }}>
+          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#E7E7E7', margin: 0 }}>
             Summary of {book} {chapter}
           </h2>
           <button
@@ -765,7 +765,7 @@ function CommentaryPanel({
     return (
       <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
-          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 18, lineHeight: '26px', color: '#E7E7E7', margin: 0 }}>
+          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#E7E7E7', margin: 0 }}>
             Line-by-Line Analysis of {book} {chapter}
           </h2>
           <button
@@ -901,7 +901,7 @@ function CommentaryBody({ text }: { text: string }) {
       flushPara();
       const heading = line.replace(/^#+\s*/, '');
       elements.push(
-        <h2 key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 16, lineHeight: '22px', color: '#E7E7E7', marginTop: 14, marginBottom: 6 }}>
+        <h2 key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: '#FFFFFF', marginTop: 22, marginBottom: 8 }}>
           {inlineFormat(heading)}
         </h2>
       );

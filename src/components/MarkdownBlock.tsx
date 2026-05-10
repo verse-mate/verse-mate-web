@@ -53,10 +53,14 @@ export default function MarkdownBlock({ text }: Props) {
       flushPara();
       flushQuote();
       elements.push(
-        // No text-[*]px — inherit the parent's fontSize so the user's reading
-        // size (state.settings.fontSize) actually scales headings inside
-        // markdown. Previously hardcoded 13/14/15px overrode the inherit.
-        <h6 key={key++} className="font-semibold mt-1">
+        // Match Study panel's cardHeadingTitleStyle so Summary / Detailed
+        // (which also use MarkdownBlock) share the same visual hierarchy
+        // — white bold subheadings, slightly smaller than h4/h5.
+        <h6
+          key={key++}
+          className="font-semibold mt-4 mb-1"
+          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 15, lineHeight: '22px', color: '#FFFFFF' }}
+        >
           {inline(line.replace(/^###\s*/, ''))}
         </h6>
       );
@@ -66,7 +70,11 @@ export default function MarkdownBlock({ text }: Props) {
       flushPara();
       flushQuote();
       elements.push(
-        <h5 key={key++} className="font-semibold mt-1">
+        <h5
+          key={key++}
+          className="font-semibold mt-5 mb-2"
+          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: '#FFFFFF' }}
+        >
           {inline(line.replace(/^##\s*/, ''))}
         </h5>
       );
@@ -76,7 +84,11 @@ export default function MarkdownBlock({ text }: Props) {
       flushPara();
       flushQuote();
       elements.push(
-        <h4 key={key++} className="font-bold mt-1">
+        <h4
+          key={key++}
+          className="font-semibold mt-5 mb-2"
+          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: '#FFFFFF' }}
+        >
           {inline(line.replace(/^#\s*/, ''))}
         </h4>
       );
