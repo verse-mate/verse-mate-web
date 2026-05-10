@@ -19,10 +19,19 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="VerseMate — Bible Reading Companion">
     <meta property="og:description" content="A clean, reverent mobile Bible reading app with bookmarks, notes, highlights, and cross-references.">
+    <!-- og:image is what iOS Safari, Messages, WhatsApp, etc. render in the
+         share-sheet preview thumbnail. Without it the share UI falls back to
+         the page's favicon — or, in the iOS share sheet, the generic Safari
+         compass icon. Point it at the same book mark we use for the favicon
+         + apple-touch-icon. -->
+    <meta property="og:image" content="/versemate-icon.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="VerseMate book icon">
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="VerseMate — Bible Reading Companion">
     <meta name="twitter:description" content="A clean, reverent mobile Bible reading app with bookmarks, notes, highlights, and cross-references.">
+    <meta name="twitter:image" content="/versemate-icon.png">
   </head>
 
   <body>
