@@ -98,11 +98,11 @@ export const JAMES_5_STUDY: InductiveStudy = {
       items: [
         { verses: '5:1-3', type: 'Contrast', pairing: 'Rich storing treasure ↔ in the last days, treasure becomes the testimony against them.' },
         { verses: '5:4', type: 'Contrast', pairing: 'Withheld wages cry out ↔ the Lord of Sabaoth hears.' },
-        { verses: '5:7-8', type: 'Simile', pairing: 'The farmer waits for early and late rains — patience modeled.' },
+        { verses: '5:7-8', type: 'Comparison', pairing: 'The farmer waits for early and late rains — patience modeled.' },
         { verses: '5:10-11', type: 'Contrast', pairing: 'Prophets / Job — patience and endurance under suffering.' },
         { verses: '5:12', type: 'Contrast', pairing: 'Elaborate oaths ↔ plain yes and no (echo of Matthew 5:34-37).' },
         { verses: '5:13', type: 'Contrast', pairing: 'Suffering → pray · cheerful → sing · sick → call elders. Three conditions, three responses.' },
-        { verses: '5:17', type: 'Simile', pairing: 'Elijah was "a man with a nature like ours" — prayer is not for spiritual elite.' },
+        { verses: '5:17', type: 'Comparison', pairing: 'Elijah was "a man with a nature like ours" — prayer is not for spiritual elite.' },
         { verses: '5:19-20', type: 'Contrast', pairing: 'Wandering brother ↔ the one who turns him back — covering sins, saving souls.' },
       ],
     },

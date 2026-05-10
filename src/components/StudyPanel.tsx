@@ -190,7 +190,9 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
               borderBottom: '1px solid #1f1f1f',
             }}
           >
-            <RangePill range={q.range} />
+            <span style={firstLineAlignStyle}>
+              <RangePill range={q.range} />
+            </span>
             <p style={{ color: '#E7E7E7', margin: 0, flex: 1 }}>
               {q.question}
             </p>
@@ -396,27 +398,30 @@ function ContrastsBody({ step }: { step: StepContrasts }) {
             borderBottom: '1px solid #1f1f1f',
           }}
         >
-          <RangePill range={item.verses} />
-          <span
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: 80,
-              height: 22,
-              padding: '0 6px',
-              borderRadius: 11,
-              backgroundColor: '#262626',
-              color: 'rgba(255,255,255,0.75)',
-              fontSize: 11,
-              fontWeight: 600,
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px',
-              flexShrink: 0,
-              alignSelf: 'flex-start',
-            }}
-          >
-            {item.type}
+          <span style={firstLineAlignStyle}>
+            <RangePill range={item.verses} />
+          </span>
+          <span style={{ ...firstLineAlignStyle, gap: 0 }}>
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: 80,
+                height: 22,
+                padding: '0 6px',
+                borderRadius: 11,
+                backgroundColor: '#262626',
+                color: 'rgba(255,255,255,0.75)',
+                fontSize: 11,
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px',
+                flexShrink: 0,
+              }}
+            >
+              {item.type}
+            </span>
           </span>
           <span style={{ flex: 1, color: '#E7E7E7' }}>{item.pairing}</span>
         </div>
@@ -449,7 +454,11 @@ function BulletsBody({ step }: { step: StepBullets }) {
             borderBottom: '1px solid #1f1f1f',
           }}
         >
-          {item.tag && (hasTextTags ? <Tag label={item.tag} /> : <RangePill range={item.tag} />)}
+          {item.tag && (
+            <span style={firstLineAlignStyle}>
+              {hasTextTags ? <Tag label={item.tag} /> : <RangePill range={item.tag} />}
+            </span>
+          )}
           <span style={{ flex: 1, color: '#E7E7E7' }}>
             <MarkdownBlock text={item.text} />
           </span>
@@ -747,6 +756,19 @@ const sectionIntroStyle: React.CSSProperties = {
   lineHeight: '22px',
   color: 'rgba(255,255,255,0.65)',
   margin: 0,
+};
+
+// Wrapper that vertically centers a tag/pill on the FIRST LINE of the
+// adjacent text. `1lh` is the inherited line-height of the body — equal to
+// the height of one text line — so a 22px pill centered in it lines up
+// with the cap-center of the first line of multi-line content next to it.
+// Parents using `alignItems: flex-start` align this wrapper to the top of
+// the row; the inner flex centers the pill within that line.
+const firstLineAlignStyle: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  height: '1lh',
+  flexShrink: 0,
 };
 
 const stepNumberStyle: React.CSSProperties = {
