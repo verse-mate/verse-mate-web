@@ -33,6 +33,7 @@ export default function NoteOptionsSheet({ note, onClose, onEdit }: Props) {
     try {
       await navigator.share?.({
         text: `${note.book} ${note.chapter}:${note.verse}\n${note.text}`,
+        url: window.location.href,
       });
     } catch {
       handleCopy();

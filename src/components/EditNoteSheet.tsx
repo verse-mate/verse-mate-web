@@ -58,6 +58,7 @@ export default function EditNoteSheet({ note, onClose }: Props) {
         await navigator.share({
           title: `${note.book} ${note.chapter}`,
           text: note.text || '',
+          url: window.location.href,
         });
       } else {
         handleCopy();
