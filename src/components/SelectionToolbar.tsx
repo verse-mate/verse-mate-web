@@ -56,16 +56,33 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
       return;
     }
 
-    // Find verse numbers from sup elements in selection range
+    // Collect every verse the selection touches. We intersect against the
+    // verse-level wrapper (`span[data-verse]` — set in ReadingScreen) rather
+    // than the small `<sup>` numerals at the start of each verse, because a
+    // selection that begins mid-text in verse N never contains N's <sup>
+    // even when the rest of N is selected. Walking [data-verse] catches the
+    // first verse in the range too.
     const verses: number[] = [];
-    const allSups = scriptureContainer.querySelectorAll('sup');
-    for (const sup of allSups) {
-      if (sel.containsNode(sup, true)) {
-        const num = parseInt(sup.textContent || '', 10);
+    const verseSpans = scriptureContainer.querySelectorAll<HTMLElement>('span[data-verse]');
+    for (const v of verseSpans) {
+      if (range.intersectsNode(v)) {
+        const num = parseInt(v.getAttribute('data-verse') || '', 10);
         if (!isNaN(num)) verses.push(num);
       }
     }
-    // If no sups found in selection, try to find the nearest verse span
+    // Fallback for older render paths: walk the <sup> numerals as before.
+    if (verses.length === 0) {
+      const allSups = scriptureContainer.querySelectorAll('sup');
+      for (const sup of allSups) {
+        if (sel.containsNode(sup, true)) {
+          const num = parseInt(sup.textContent || '', 10);
+          if (!isNaN(num)) verses.push(num);
+        }
+      }
+    }
+    // Last-resort: single-verse selections that don't cross any markup
+    // boundary — derive the verse from the start container's nearest
+    // [data-verse] ancestor.
     if (verses.length === 0) {
       const verseSpan = parent.closest('span[data-verse]');
       if (verseSpan) {
