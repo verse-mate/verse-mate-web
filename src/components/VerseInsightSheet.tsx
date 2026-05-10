@@ -27,6 +27,19 @@ function stripDuplicateVerse(text: string): string {
   return result;
 }
 
+/**
+ * Drop the bare-bones markdown the API returns (#, **bold**, *italic*, >)
+ * so the clipboard payload reads as plain prose on the recipient side.
+ */
+function stripInsightMarkdown(text: string): string {
+  return text
+    .replace(/^#+\s*/gm, '')
+    .replace(/^>\s?/gm, '')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .trim();
+}
+
 export default function VerseInsightSheet({
   book,
   chapter,
@@ -91,14 +104,26 @@ export default function VerseInsightSheet({
     ? `"${verseText}" — ${book} ${chapter}:${currentVerse}`
     : `${book} ${chapter}:${currentVerse}`;
 
+  // Plain-text payload for Copy / Share: include the verse AND the insight
+  // body (markdown stripped) AND the cross-references. The verse alone
+  // wasn't useful when sharing the insight panel.
+  const insightCopyText = (() => {
+    if (!insight) return quoteText;
+    const body = stripInsightMarkdown(stripDuplicateVerse(insight.historicalContext));
+    const refs = insight.crossReferences.length
+      ? `\n\nCross references: ${insight.crossReferences.join(', ')}`
+      : '';
+    return `${quoteText}\n\n${body}${refs}`;
+  })();
+
   const handleCopy = async () => {
     setActionError(null);
     try {
       if (navigator.clipboard?.writeText) {
-        await navigator.clipboard.writeText(quoteText);
+        await navigator.clipboard.writeText(insightCopyText);
       } else {
         const ta = document.createElement('textarea');
-        ta.value = quoteText;
+        ta.value = insightCopyText;
         ta.style.position = 'fixed';
         ta.style.opacity = '0';
         document.body.appendChild(ta);
@@ -119,7 +144,7 @@ export default function VerseInsightSheet({
       if (navigator.share) {
         await navigator.share({
           title: `${book} ${chapter}:${currentVerse}`,
-          text: quoteText,
+          text: insightCopyText,
           url: window.location.href,
         });
       } else {
