@@ -554,13 +554,19 @@ export async function fetchHighlights(userId: string): Promise<Highlight[]> {
 }
 
 export async function addHighlight(h: {
+  userId: string;
   bookId: number;
   chapter: number;
   startVerse: number;
   endVerse?: number;
   color: HighlightColor;
 }) {
+  // Backend requires user_id in the body — POST /bible/highlight/add
+  // throws ValidationError("Missing required fields") otherwise. Without
+  // it, the optimistic highlight added in AppContext gets rolled back on
+  // the catch path, so the highlight visually flashes and disappears.
   return api.post('/bible/highlight/add', {
+    user_id: h.userId,
     book_id: h.bookId,
     chapter_number: h.chapter,
     start_verse: h.startVerse,
@@ -583,6 +589,12 @@ export interface AuthUser {
   email: string;
   name?: string;
   avatarUrl?: string;
+  firstName?: string;
+  lastName?: string;
+  /** Whether the account has a password set (false for SSO-only accounts). */
+  hasPassword?: boolean;
+  /** Stored language preference from /user/me (locale string like "en-US"). */
+  preferredLanguage?: string;
 }
 
 /**
@@ -680,7 +692,8 @@ export async function logout(): Promise<void> {
 export async function fetchCurrentUser(): Promise<AuthUser> {
   // /auth/user returns only {id} — minimal payload meant for token-only
   // checks. /user/me returns the full record:
-  //   { id, email, firstName, lastName, fullName, emailVerified }
+  //   { id, email, firstName, lastName, fullName, emailVerified,
+  //     hasPassword, preferred_language }
   // The MenuScreen + AuthCallback dispatch paths need the full record
   // for the profile UI to render past the "Loading..." state.
   const data = await api.get<any>('/user/me');
@@ -690,8 +703,119 @@ export async function fetchCurrentUser(): Promise<AuthUser> {
     name: data?.fullName || data?.firstName || undefined,
     // Backend doesn't return an avatar URL today; left here so existing
     // call sites that read user.avatarUrl don't break.
-    avatarUrl: undefined,
+    avatarUrl: data?.imageSrc || undefined,
+    firstName: data?.firstName || '',
+    lastName: data?.lastName || '',
+    hasPassword: typeof data?.hasPassword === 'boolean' ? data.hasPassword : true,
+    preferredLanguage: data?.preferred_language || data?.preferredLanguage || undefined,
   };
+}
+
+// ─── Profile / preferences / languages / delete account ───────────────────
+
+export interface BibleLanguage {
+  code: string;
+  name: string;
+  nativeName: string;
+}
+
+interface BibleLanguageRaw {
+  language_code: string;
+  name: string;
+  native_name: string;
+}
+
+/** GET /bible/languages — list of language codes the backend has content for. */
+export async function fetchBibleLanguages(): Promise<BibleLanguage[]> {
+  const data = await api.get<BibleLanguageRaw[]>('/bible/languages');
+  return (Array.isArray(data) ? data : [])
+    .map((l) => ({
+      code: l.language_code,
+      name: l.name,
+      nativeName: l.native_name,
+    }))
+    .sort((a, b) => a.nativeName.localeCompare(b.nativeName));
+}
+
+/** PUT /auth/profile — update first/last/email. Returns when server has saved. */
+export async function updateAuthProfile(body: {
+  firstName: string;
+  lastName: string;
+  email: string;
+}): Promise<void> {
+  await api.put('/auth/profile', body);
+}
+
+/** PATCH /user/preferences — update preferred_language. */
+export async function updateUserPreferredLanguage(languageCode: string): Promise<void> {
+  await api.patch('/user/preferences', { preferred_language: languageCode });
+}
+
+/**
+ * Refresh tokens using the current refreshToken cookie. Returns the new
+ * accessToken (also written to the cookie), or null if the refresh failed.
+ * Mirrors mobile's refreshTokens() — used after preference changes so the
+ * next API call gets a token whose claims reflect the change.
+ */
+export async function refreshTokens(): Promise<string | null> {
+  const refreshToken = getRefreshToken();
+  if (!refreshToken) return null;
+  try {
+    const data = await api.post<{ accessToken: string; refreshToken?: string }>(
+      '/auth/refresh',
+      { refreshToken },
+      { auth: false }
+    );
+    if (data.accessToken) {
+      setAccessToken(data.accessToken);
+      if (data.refreshToken) setRefreshToken(data.refreshToken);
+      return data.accessToken;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+interface DeleteAccountResult {
+  ok: boolean;
+  status: number;
+  errorCode?: string;
+}
+
+/**
+ * DELETE /auth/account — permanently delete the current user's account.
+ * Returns a structured result so callers can surface the right error string.
+ * Caller is responsible for clearing local session on success.
+ */
+export async function deleteAuthAccount(password?: string): Promise<DeleteAccountResult> {
+  const accessToken = getAccessToken();
+  if (!accessToken) return { ok: false, status: 401, errorCode: 'NOT_AUTHENTICATED' };
+
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE_URL}/auth/account`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: password ? JSON.stringify({ password }) : undefined,
+    });
+  } catch {
+    return { ok: false, status: 0, errorCode: 'NETWORK_ERROR' };
+  }
+
+  if (res.ok) return { ok: true, status: res.status };
+
+  let errorCode: string | undefined;
+  try {
+    const data = await res.json();
+    errorCode = data?.error;
+  } catch {
+    /* no body */
+  }
+  return { ok: false, status: res.status, errorCode };
 }
 
 export function isSignedIn(): boolean {

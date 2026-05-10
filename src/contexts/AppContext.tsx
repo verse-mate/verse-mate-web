@@ -40,6 +40,10 @@ interface AppState {
   userName: string | null;
   userEmail: string | null;
   userAvatarUrl: string | null;
+  userFirstName: string | null;
+  userLastName: string | null;
+  userHasPassword: boolean | null;
+  userPreferredLanguage: string | null;
 }
 
 type Action =
@@ -66,6 +70,10 @@ type Action =
       userName?: string | null;
       userEmail?: string | null;
       userAvatarUrl?: string | null;
+      userFirstName?: string | null;
+      userLastName?: string | null;
+      userHasPassword?: boolean | null;
+      userPreferredLanguage?: string | null;
     };
 
 function reducer(state: AppState, action: Action): AppState {
@@ -137,6 +145,16 @@ function reducer(state: AppState, action: Action): AppState {
         userEmail: action.userEmail !== undefined ? action.userEmail : state.userEmail,
         userAvatarUrl:
           action.userAvatarUrl !== undefined ? action.userAvatarUrl : state.userAvatarUrl,
+        userFirstName:
+          action.userFirstName !== undefined ? action.userFirstName : state.userFirstName,
+        userLastName:
+          action.userLastName !== undefined ? action.userLastName : state.userLastName,
+        userHasPassword:
+          action.userHasPassword !== undefined ? action.userHasPassword : state.userHasPassword,
+        userPreferredLanguage:
+          action.userPreferredLanguage !== undefined
+            ? action.userPreferredLanguage
+            : state.userPreferredLanguage,
       };
     default:
       return state;
@@ -160,6 +178,10 @@ const initialState: AppState = {
   userName: null,
   userEmail: null,
   userAvatarUrl: null,
+  userFirstName: null,
+  userLastName: null,
+  userHasPassword: null,
+  userPreferredLanguage: null,
 };
 
 interface AppContextType {
@@ -175,6 +197,12 @@ interface AppContextType {
   updateHighlight: (id: string, color: HighlightColor) => Promise<void>;
   removeHighlight: (id: string) => Promise<void>;
   signOut: () => Promise<void>;
+  /**
+   * Refetch the current user from /user/me and update the auth fields in
+   * state. Used after PUT /auth/profile so the form picks up server-side
+   * canonicalization (e.g. trimmed whitespace, normalized email casing).
+   */
+  restoreSession: () => Promise<void>;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -206,11 +234,29 @@ export function AppProvider({ children }: { children: ReactNode }) {
     saveSettings(state.settings);
   }, [state.settings]);
 
-  // Apply theme
+  // Apply theme. 'system' follows prefers-color-scheme and live-updates if
+  // the OS theme changes mid-session.
   useEffect(() => {
     const root = document.documentElement;
-    if (state.settings.theme === 'dark') root.classList.add('dark');
-    else root.classList.remove('dark');
+    const apply = (isDark: boolean) => {
+      if (isDark) root.classList.add('dark');
+      else root.classList.remove('dark');
+    };
+
+    if (state.settings.theme === 'dark') {
+      apply(true);
+      return;
+    }
+    if (state.settings.theme === 'light') {
+      apply(false);
+      return;
+    }
+    // 'system'
+    const mql = window.matchMedia('(prefers-color-scheme: dark)');
+    apply(mql.matches);
+    const handler = (e: MediaQueryListEvent) => apply(e.matches);
+    mql.addEventListener('change', handler);
+    return () => mql.removeEventListener('change', handler);
   }, [state.settings.theme]);
 
   // When signed in, fetch the current user + user data
@@ -231,6 +277,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
           userName: user.name || null,
           userEmail: user.email || null,
           userAvatarUrl: user.avatarUrl || null,
+          userFirstName: user.firstName || null,
+          userLastName: user.lastName || null,
+          userHasPassword: typeof user.hasPassword === 'boolean' ? user.hasPassword : null,
+          userPreferredLanguage: user.preferredLanguage || null,
         });
         const [bookmarks, notes, highlights] = await Promise.all([
           apiFetchBookmarks(user.id),
@@ -243,13 +293,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
       } catch {
         // Token probably invalid — treat as signed out
         dispatch({
-      type: 'SET_SIGNED_IN',
-      value: false,
-      userId: null,
-      userName: null,
-      userEmail: null,
-      userAvatarUrl: null,
-    });
+          type: 'SET_SIGNED_IN',
+          value: false,
+          userId: null,
+          userName: null,
+          userEmail: null,
+          userAvatarUrl: null,
+          userFirstName: null,
+          userLastName: null,
+          userHasPassword: null,
+          userPreferredLanguage: null,
+        });
       }
     })();
   }, [state.isSignedIn]);
@@ -350,6 +404,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
         createdAt: new Date().toISOString(),
       };
       dispatch({ type: 'ADD_HIGHLIGHT', highlight: optimistic });
+
+      // Signed-out: keep the optimistic highlight in memory only — never
+      // hit the API. SelectionToolbar handles its own ephemeral path; this
+      // branch covers VerseActions and any other call site that goes
+      // through addHighlight without checking auth first.
+      if (!state.userId) return;
+
       try {
         // Best-effort: pull the real highlight_id off the POST response so
         // subsequent recolor / remove on the just-added highlight hits the
@@ -361,6 +422,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         // the user's correctly-rendered range. The full list is re-fetched
         // on sign-in / passage load instead.
         const res = await apiAddHighlight({
+          userId: state.userId,
           bookId: h.bookId,
           chapter: h.chapter,
           startVerse: h.startVerse ?? h.verse,
@@ -383,7 +445,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         dispatch({ type: 'REMOVE_HIGHLIGHT', id: tmpId });
       }
     },
-    []
+    [state.userId]
   );
 
   const updateHighlight = useCallback(async (id: string, color: HighlightColor) => {
@@ -417,7 +479,31 @@ export function AppProvider({ children }: { children: ReactNode }) {
       userName: null,
       userEmail: null,
       userAvatarUrl: null,
+      userFirstName: null,
+      userLastName: null,
+      userHasPassword: null,
+      userPreferredLanguage: null,
     });
+  }, []);
+
+  const restoreSession = useCallback(async () => {
+    try {
+      const user = await fetchCurrentUser();
+      dispatch({
+        type: 'SET_SIGNED_IN',
+        value: true,
+        userId: user.id,
+        userName: user.name || null,
+        userEmail: user.email || null,
+        userAvatarUrl: user.avatarUrl || null,
+        userFirstName: user.firstName || null,
+        userLastName: user.lastName || null,
+        userHasPassword: typeof user.hasPassword === 'boolean' ? user.hasPassword : null,
+        userPreferredLanguage: user.preferredLanguage || null,
+      });
+    } catch {
+      /* leave session as-is on transient failure */
+    }
   }, []);
 
   return (
@@ -434,6 +520,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         updateHighlight,
         removeHighlight,
         signOut,
+        restoreSession,
       }}
     >
       {children}

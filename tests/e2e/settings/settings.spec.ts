@@ -2,82 +2,73 @@ import { test, expect } from '@playwright/test';
 import { SettingsPage } from '../pages/settings.page';
 
 /**
- * Settings — render + version + language + font size.
+ * Settings — render + version + language + font size + theme.
  *
  * Maps to FEATURES.md §3.8.
  *
- * Theme switching is documented in mobile but absent on web (divergence
- * #4); not covered here.
+ * The settings page was rewritten to match verse-mate-mobile/app/settings.tsx —
+ * the Bible Version / Language pickers are now toggle dropdowns, the
+ * version list is scoped to NASB1995 only (matching mobile's
+ * bible-versions constant), language codes come from /bible/languages
+ * dynamically, and a Theme selector now exists (closes divergence #4).
  *
- * Profile editing is also absent on web settings — covered in the
- * authenticated suite when the feature lands.
+ * Profile editing + delete-account flows are exercised in the
+ * authenticated suite when the storageState fixture is in scope.
  */
 
 test.describe('Settings', () => {
-  test('renders all four version options + four language options + font slider', async ({
-    page,
-  }) => {
+  test('shows Bible version, language, font slider, and theme selector', async ({ page }) => {
     const settings = new SettingsPage(page);
     await settings.goto();
 
-    for (const v of ['esv', 'niv', 'kjv', 'nlt'] as const) {
-      await expect(settings.versionOption(v)).toBeVisible();
-    }
-    for (const l of ['en', 'es', 'fr', 'pt'] as const) {
-      await expect(settings.languageOption(l)).toBeVisible();
-    }
+    // Bible version picker — only NASB1995 is enabled in the mobile constant.
+    await settings.openVersionPicker();
+    await expect(settings.versionOption('nasb1995')).toBeVisible();
+
+    // Language picker — at least one language code from /bible/languages.
+    await settings.openLanguagePicker();
+    await expect(
+      page.locator('[data-testid^="language-option-"]').first(),
+    ).toBeVisible({ timeout: 10_000 });
+
+    // Font slider + theme selector trigger always render.
     await expect(settings.fontSizeSlider).toBeVisible();
+    await expect(settings.themeSelectorTrigger).toBeVisible();
   });
 
-  test('selecting NIV updates the active state visually', async ({ page }) => {
+  test('selecting NASB1995 persists across reload', async ({ page }) => {
     const settings = new SettingsPage(page);
     await settings.goto();
 
-    // SettingsScreen flips backgroundColor to gold (#B09A6D) on the active
-    // version. Asserting on style is brittle — instead, click and verify
-    // the click handler ran by re-rendering the page and checking the
-    // version persists in localStorage / context.
-    await settings.versionOption('niv').click();
+    await settings.openVersionPicker();
+    await settings.versionOption('nasb1995').click();
 
-    // The button should remain visible after click
-    await expect(settings.versionOption('niv')).toBeVisible();
+    // After click the picker collapses; the trigger button label is the
+    // selected version's full display value.
+    await expect(settings.versionPickerTrigger).toContainText('NASB1995');
 
-    // Reload — the choice should persist (AppContext writes settings to
-    // localStorage). After reload the NIV button should still be the
-    // active one (visually). We verify via getAttribute on the inline
-    // background-color.
     await page.reload();
-    // Wait for the page to fully hydrate post-reload BEFORE reading the
-    // computed style — without this, AppContext may not have rehydrated
-    // settings.defaultVersion from localStorage yet, and the button
-    // briefly shows the default (ESV) styling. Issue #51.
     await expect(settings.backButton).toBeVisible({ timeout: 10_000 });
-    await expect(settings.versionOption('niv')).toBeVisible();
-    // expect.poll auto-retries the computed-style read until it matches
-    // (or times out), so any remaining hydration race is handled.
-    await expect
-      .poll(
-        async () =>
-          settings.versionOption('niv').evaluate((el) => {
-            const cs = window.getComputedStyle(el as HTMLElement);
-            return cs.backgroundColor;
-          }),
-        { timeout: 5_000 },
-      )
-      // #B09A6D = rgb(176, 154, 109)
-      .toContain('176');
+    await expect(settings.versionPickerTrigger).toContainText('NASB1995');
   });
 
   test('font size slider has the documented 13–26 range', async ({ page }) => {
     const settings = new SettingsPage(page);
     await settings.goto();
 
-    // Wait for the slider to be visible AND attached before asserting
-    // attrs — under parallel load the SettingsScreen can render with a
-    // brief flash where attrs aren't yet on the DOM. Issue #51.
     await expect(settings.fontSizeSlider).toBeVisible({ timeout: 10_000 });
     await expect(settings.fontSizeSlider).toHaveAttribute('min', '13');
     await expect(settings.fontSizeSlider).toHaveAttribute('max', '26');
+  });
+
+  test('theme picker exposes Auto / Light / Dark options', async ({ page }) => {
+    const settings = new SettingsPage(page);
+    await settings.goto();
+
+    await settings.openThemePicker();
+    await expect(settings.themeOption('system')).toBeVisible();
+    await expect(settings.themeOption('light')).toBeVisible();
+    await expect(settings.themeOption('dark')).toBeVisible();
   });
 
   test('back button returns to /menu', async ({ page }) => {

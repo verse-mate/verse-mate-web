@@ -8,6 +8,7 @@ import MarkdownBlock from '@/components/MarkdownBlock';
 import ShareIcon from '@/components/ShareIcon';
 import StudyPanel from '@/components/StudyPanel';
 import { AudioInlineEntry } from '@/audio';
+import { useApp } from '@/contexts/AppContext';
 
 type Tab = 'summary' | 'byline' | 'detailed' | 'study';
 
@@ -353,8 +354,18 @@ export default function CommentaryScreen() {
 
 /**
  * Commentary body renderer — dark theme: white text on black surface.
+ *
+ * Body text honors `state.settings.fontSize` so the user's reading-size
+ * preference scales paragraphs and blockquotes the same way it does on
+ * the Bible side and in StudyPanel/MarkdownBlock. Heading tags inside
+ * the commentary keep their fixed size (chrome, not body).
  */
 function CommentaryBody({ text }: { text: string }) {
+  const { state } = useApp();
+  const bodyFontSize = state.settings.fontSize;
+  // Mobile body uses ~24px line-height at 16px font. Scale proportionally.
+  const bodyLineHeight = Math.round(bodyFontSize * 1.5);
+
   let processedText = text;
   const firstNewline = processedText.indexOf('\n');
   if (processedText.startsWith('# ') && firstNewline > 0) {
@@ -368,7 +379,7 @@ function CommentaryBody({ text }: { text: string }) {
   const flushPara = () => {
     if (para.length) {
       elements.push(
-        <p key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 16, lineHeight: '24px', color: 'rgba(255,255,255,0.87)', marginBottom: 12 }}>
+        <p key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: bodyFontSize, lineHeight: `${bodyLineHeight}px`, color: 'rgba(255,255,255,0.87)', marginBottom: 12 }}>
           {inlineFormat(para.join(' '))}
         </p>
       );
@@ -395,7 +406,7 @@ function CommentaryBody({ text }: { text: string }) {
     if (line.startsWith('>')) {
       flushPara();
       elements.push(
-        <blockquote key={key++} style={{ borderLeft: '2px solid #B09A6D', paddingLeft: 12, fontStyle: 'italic', marginBottom: 12, fontFamily: 'Roboto, sans-serif', fontSize: 16, lineHeight: '24px', color: 'rgba(255,255,255,0.6)' }}>
+        <blockquote key={key++} style={{ borderLeft: '2px solid #B09A6D', paddingLeft: 12, fontStyle: 'italic', marginBottom: 12, fontFamily: 'Roboto, sans-serif', fontSize: bodyFontSize, lineHeight: `${bodyLineHeight}px`, color: 'rgba(255,255,255,0.6)' }}>
           {inlineFormat(line.replace(/^>\s?/, ''))}
         </blockquote>
       );
