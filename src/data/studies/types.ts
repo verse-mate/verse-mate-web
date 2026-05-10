@@ -28,7 +28,15 @@ export interface StepQA extends StudyStepBase {
 /** Key-word inventory for step 3. */
 export interface StepKeywords extends StudyStepBase {
   kind: 'keywords';
-  inventory: { word: string; greek?: string; count: number; verses: string }[];
+  inventory: {
+    word: string;
+    /** Greek root in English transliteration (e.g. "adelphoi"). */
+    greek?: string;
+    count: number;
+    verses: string;
+    /** Short, accurate gloss of the word's meaning in context. */
+    definition?: string;
+  }[];
 }
 
 /** Multiple lists, each its own table. Used for step 4. */
