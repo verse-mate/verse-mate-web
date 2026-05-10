@@ -997,8 +997,18 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
           disabled={state.isSignedIn}
           style={{ display: 'flex', alignItems: 'center', gap: 12, width: '100%', height: 64, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', marginBottom: 12, cursor: state.isSignedIn ? 'default' : 'pointer', textAlign: 'left' }}
         >
-          <div style={{ width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#1B1B1B', flexShrink: 0 }}>
-            <User size={20} color="rgba(255,255,255,0.6)" strokeWidth={1.5} />
+          <div style={{ width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#1B1B1B', flexShrink: 0, overflow: 'hidden' }}>
+            {state.isSignedIn && state.userAvatarUrl ? (
+              <img
+                src={state.userAvatarUrl}
+                alt=""
+                referrerPolicy="no-referrer"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+              />
+            ) : (
+              <User size={20} color="rgba(255,255,255,0.6)" strokeWidth={1.5} />
+            )}
           </div>
           <div style={{ minWidth: 0, flex: 1 }}>
             <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 14, lineHeight: '20px', color: '#B09A6D', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>

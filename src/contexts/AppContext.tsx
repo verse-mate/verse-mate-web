@@ -3,6 +3,8 @@
 // when the user is signed in; settings stay local-only.
 import React, { createContext, useContext, useReducer, useEffect, ReactNode, useCallback } from 'react';
 import { BibleVersion, Bookmark, Note, Highlight, HighlightColor } from '@/services/types';
+import { BIBLE_BOOKS } from '@/services/bibleData';
+import { getBookIdFromSlug } from '@/lib/bookSlugs';
 import {
   loadSettings,
   saveSettings,
@@ -163,10 +165,30 @@ function reducer(state: AppState, action: Action): AppState {
 
 const initialSettings = loadSettings();
 
+// Read the URL on first render so the header shows the correct book/chapter
+// immediately instead of flashing the Genesis 1 default until BibleRoute
+// resolves and dispatches SET_PASSAGE. Matches the production URL shape
+// `/bible/<slug>/<chapter>`. Falls back to Genesis 1 for any other path
+// (including legacy `/read`).
+function parseInitialPassage(): { book: string; bookId: number; chapter: number } {
+  const fallback = { book: 'Genesis', bookId: 1, chapter: 1 };
+  if (typeof window === 'undefined') return fallback;
+  const m = window.location.pathname.match(/^\/bible\/([^/]+)\/(\d+)/);
+  if (!m) return fallback;
+  const bookId = getBookIdFromSlug(m[1]);
+  if (!bookId) return fallback;
+  const book = BIBLE_BOOKS[bookId - 1]?.name;
+  if (!book) return fallback;
+  const chapter = Math.max(1, Number.parseInt(m[2], 10) || 1);
+  return { book, bookId, chapter };
+}
+
+const initialPassage = parseInitialPassage();
+
 const initialState: AppState = {
-  book: 'Genesis',
-  bookId: 1,
-  chapter: 1,
+  book: initialPassage.book,
+  bookId: initialPassage.bookId,
+  chapter: initialPassage.chapter,
   selectedVerse: null,
   version: initialSettings.defaultVersion,
   bookmarks: [],
