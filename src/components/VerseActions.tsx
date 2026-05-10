@@ -140,20 +140,25 @@ export default function VerseActions({ verse, onClose }: Props) {
           </button>
         </div>
 
-        <div className="flex items-center gap-3 px-4 pb-4 pt-1">
+        <div className="flex items-center flex-wrap gap-2 px-4 pb-4 pt-1">
           <span className="text-[11px] text-muted-foreground mr-1">Color:</span>
           {HIGHLIGHT_COLORS.map(c => (
+            // 44×44 hit area satisfies Apple HIG; visual swatch stays 32px.
             <button
               key={c.color}
               onClick={() => addHighlightFn(c.color)}
               data-testid={`color-button-${c.color}`}
-              className={`w-8 h-8 rounded-full border-2 ${
-                existingHighlight?.color === c.color ? 'border-accent' : 'border-transparent'
-              } transition-all hover:scale-110`}
-              style={{ backgroundColor: c.bgColor }}
+              className="w-11 h-11 flex items-center justify-center rounded-full transition-all hover:scale-110"
               title={c.label}
               aria-label={c.label}
-            />
+            >
+              <span
+                className={`block w-8 h-8 rounded-full border-2 ${
+                  existingHighlight?.color === c.color ? 'border-accent' : 'border-transparent'
+                }`}
+                style={{ backgroundColor: c.bgColor }}
+              />
+            </button>
           ))}
           {existingHighlight && (
             <button
