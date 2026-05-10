@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Copy, Bookmark, Check } from 'lucide-react';
+import { Copy, Bookmark, Check, Trash2 } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import { useApp } from '@/contexts/AppContext';
 import { HighlightColor } from '@/services/types';
@@ -26,7 +26,7 @@ interface Props {
  * Shows highlight color dots, copy, share, and bookmark actions.
  */
 export default function SelectionToolbar({ book, chapter, bookId }: Props) {
-  const { state, dispatch, addHighlight, updateHighlight, addBookmark } = useApp();
+  const { state, dispatch, addHighlight, updateHighlight, removeHighlight, addBookmark } = useApp();
   const [position, setPosition] = useState<{ x: number; y: number } | null>(null);
   const [selectedText, setSelectedText] = useState('');
   const [selectedVerses, setSelectedVerses] = useState<number[]>([]);
@@ -138,19 +138,25 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
     }
   };
 
-  const handleHighlight = async (color: HighlightColor) => {
-    if (selectedVerses.length === 0) return;
+  // Compute existing highlight overlap at component level so the UI can
+  // conditionally render the Remove button (not just handleHighlight).
+  const existingHighlight = (() => {
+    if (selectedVerses.length === 0) return undefined;
     const startVerse = Math.min(...selectedVerses);
     const endVerse = Math.max(...selectedVerses);
-    // Recolor an existing highlight if the current selection overlaps one in
-    // this chapter — picking a color on already-highlighted text should
-    // change the color, not stack a duplicate.
-    const existing = state.highlights.find(h => {
+    return state.highlights.find(h => {
       if (h.bookId !== bookId || h.chapter !== chapter) return false;
       const hStart = h.startVerse ?? h.verse;
       const hEnd = h.endVerse ?? h.verse;
       return hStart <= endVerse && hEnd >= startVerse;
     });
+  })();
+
+  const handleHighlight = async (color: HighlightColor) => {
+    if (selectedVerses.length === 0) return;
+    const startVerse = Math.min(...selectedVerses);
+    const endVerse = Math.max(...selectedVerses);
+    const existing = existingHighlight;
     try {
       if (state.isSignedIn) {
         if (existing) {
@@ -236,7 +242,7 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
       }}
       onMouseDown={(e) => e.stopPropagation()}
     >
-      {/* Highlight colors row */}
+      {/* Highlight colors row + remove (when an existing highlight overlaps the selection) */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, justifyContent: 'center' }}>
         {HIGHLIGHT_COLORS.map(({ color, hex }) => (
           <button
@@ -255,6 +261,42 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
             }}
           />
         ))}
+        {/* Remove (un-highlight) — only shows when the current selection
+            overlaps an existing highlight, so users have a clear way to
+            undo without going through the long-press / right-panel flow. */}
+        {existingHighlight && (
+          <button
+            onClick={async () => {
+              try {
+                if (state.isSignedIn) {
+                  await removeHighlight(existingHighlight.id);
+                } else {
+                  dispatch({ type: 'REMOVE_HIGHLIGHT', id: existingHighlight.id });
+                }
+                setPosition(null);
+                window.getSelection()?.removeAllRanges();
+              } catch { /* ignore */ }
+            }}
+            title="Remove highlight"
+            aria-label="Remove highlight"
+            style={{
+              width: 20,
+              height: 20,
+              borderRadius: '50%',
+              backgroundColor: 'transparent',
+              border: '1px solid rgba(255,255,255,0.3)',
+              cursor: 'pointer',
+              padding: 0,
+              marginLeft: 4,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'rgba(255,255,255,0.75)',
+            }}
+          >
+            <Trash2 size={11} strokeWidth={2} />
+          </button>
+        )}
       </div>
 
       {/* Action buttons row */}

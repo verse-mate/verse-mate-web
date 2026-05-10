@@ -63,16 +63,19 @@
     /* Verse number color = charcoal-grey in production, NOT gold */
     --verse-number-color: var(--vm-charcoal-grey);
 
-    /* Highlight colors — exact production RGB values at 30% opacity */
-    --hl-yellow: rgb(255 235 59 / 30%);
-    --hl-green: rgb(76 175 80 / 30%);
-    --hl-blue: rgb(33 150 243 / 30%);
-    --hl-pink: rgb(233 30 99 / 30%);
-    --hl-purple: rgb(156 39 176 / 30%);
-    --hl-orange: rgb(255 152 0 / 30%);
-    --hl-red: rgb(244 67 54 / 30%);
-    --hl-teal: rgb(0 150 136 / 30%);
-    --hl-brown: rgb(121 85 72 / 30%);
+    /* Highlight colors — lightened base + bumped alpha so each color is
+       clearly visible against the black scripture background. Lighter
+       Material 300/200 base shades + 45-60% alpha keeps text readable
+       while the highlight reads as a real marker stroke (not a tint). */
+    --hl-yellow: rgb(255 241 118 / 45%);
+    --hl-green: rgb(129 199 132 / 50%);
+    --hl-blue: rgb(100 181 246 / 50%);
+    --hl-pink: rgb(244 143 177 / 50%);
+    --hl-purple: rgb(186 104 200 / 55%);
+    --hl-orange: rgb(255 183 77 / 50%);
+    --hl-red: rgb(229 115 115 / 50%);
+    --hl-teal: rgb(77 182 172 / 55%);
+    --hl-brown: rgb(161 136 127 / 60%);
 
     /* Auto-highlight colors — 20% bg + underline */
     --ahl-yellow-bg: rgb(255 255 0 / 30%);
