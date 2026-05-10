@@ -72,6 +72,26 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // Sidebar always stays at expanded width; expandedBook controls chapter grid visibility
   const [expandedBook, setExpandedBook] = useState<string | null>(state.book);
 
+  // Per-testament collapse state for the sidebar's OT / NT section headers,
+  // persisted across reloads. Default both expanded.
+  const [sectionOpen, setSectionOpen] = useState<{ OT: boolean; NT: boolean }>(() => {
+    try {
+      const raw = localStorage.getItem('versemate-sidebar-sections');
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        return { OT: parsed.OT !== false, NT: parsed.NT !== false };
+      }
+    } catch { /* ignore */ }
+    return { OT: true, NT: true };
+  });
+  const toggleSection = useCallback((key: 'OT' | 'NT') => {
+    setSectionOpen(prev => {
+      const next = { ...prev, [key]: !prev[key] };
+      try { localStorage.setItem('versemate-sidebar-sections', JSON.stringify(next)); } catch { /* ignore */ }
+      return next;
+    });
+  }, []);
+
   // Right panel: only one menu page at a time, back always returns to commentary
   const [rightPanelView, setRightPanelView] = useState<RightPanelView>('commentary');
 
@@ -203,6 +223,8 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 navigate('/read');
               }}
               isExpanded={true}
+              sectionOpen={sectionOpen.OT}
+              onSectionToggle={() => toggleSection('OT')}
             />
             <SidebarSection
               label="New Testament"
@@ -216,6 +238,8 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 navigate('/read');
               }}
               isExpanded={true}
+              sectionOpen={sectionOpen.NT}
+              onSectionToggle={() => toggleSection('NT')}
             />
           </div>
         </div>
@@ -453,6 +477,8 @@ function SidebarSection({
   onBookClick,
   onChapterClick,
   isExpanded,
+  sectionOpen,
+  onSectionToggle,
 }: {
   label: string;
   books: BibleBook[];
@@ -462,11 +488,41 @@ function SidebarSection({
   onBookClick: (b: BibleBook) => void;
   onChapterClick: (b: BibleBook, ch: number) => void;
   isExpanded: boolean;
+  sectionOpen: boolean;
+  onSectionToggle: () => void;
 }) {
   return (
     <>
-      <div style={{ fontFamily: 'Roboto, sans-serif', fontSize: 12, fontWeight: 700, color: '#B09A6D', textAlign: 'left', padding: '14px 12px 6px', letterSpacing: '0.5px' }}>{label}</div>
-      {sectionBooks.map(b => {
+      <button
+        type="button"
+        onClick={onSectionToggle}
+        aria-expanded={sectionOpen}
+        data-testid={`sidebar-section-${label.toLowerCase().replace(/\s+/g, '-')}`}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          width: '100%',
+          background: 'none',
+          border: 'none',
+          cursor: 'pointer',
+          fontFamily: 'Roboto, sans-serif',
+          fontSize: 12,
+          fontWeight: 700,
+          color: '#B09A6D',
+          textAlign: 'left',
+          padding: '14px 12px 6px',
+          letterSpacing: '0.5px',
+        }}
+      >
+        <span>{label}</span>
+        <ChevronDown
+          size={14}
+          color="#B09A6D"
+          style={{ flexShrink: 0, transform: sectionOpen ? 'rotate(0deg)' : 'rotate(-90deg)', transition: 'transform 0.15s' }}
+        />
+      </button>
+      {sectionOpen && sectionBooks.map(b => {
         const isActive = activeBook === b.name;
         const isBookExpanded = expandedBook === b.name;
         return (
