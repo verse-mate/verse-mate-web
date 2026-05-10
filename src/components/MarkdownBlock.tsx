@@ -53,7 +53,10 @@ export default function MarkdownBlock({ text }: Props) {
       flushPara();
       flushQuote();
       elements.push(
-        <h6 key={key++} className="text-[13px] font-semibold font-semibold mt-1">
+        // No text-[*]px — inherit the parent's fontSize so the user's reading
+        // size (state.settings.fontSize) actually scales headings inside
+        // markdown. Previously hardcoded 13/14/15px overrode the inherit.
+        <h6 key={key++} className="font-semibold mt-1">
           {inline(line.replace(/^###\s*/, ''))}
         </h6>
       );
@@ -63,7 +66,7 @@ export default function MarkdownBlock({ text }: Props) {
       flushPara();
       flushQuote();
       elements.push(
-        <h5 key={key++} className="text-[14px] font-semibold font-semibold mt-1">
+        <h5 key={key++} className="font-semibold mt-1">
           {inline(line.replace(/^##\s*/, ''))}
         </h5>
       );
@@ -73,7 +76,7 @@ export default function MarkdownBlock({ text }: Props) {
       flushPara();
       flushQuote();
       elements.push(
-        <h4 key={key++} className="text-[15px] font-bold font-semibold mt-1">
+        <h4 key={key++} className="font-bold mt-1">
           {inline(line.replace(/^#\s*/, ''))}
         </h4>
       );
