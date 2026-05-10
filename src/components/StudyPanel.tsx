@@ -606,7 +606,6 @@ function Tag({ label }: { label: string }) {
         letterSpacing: '0.5px',
         padding: '0 6px',
         flexShrink: 0,
-        alignSelf: 'flex-start',
       }}
     >
       {label}
@@ -634,7 +633,6 @@ function RangePill({ range }: { range: string }) {
         fontWeight: 600,
         padding: '0 6px',
         flexShrink: 0,
-        alignSelf: 'flex-start',
       }}
     >
       {range}
