@@ -694,6 +694,7 @@ export function isSignedIn(): boolean {
 // ─── LocalStorage settings (still local only) ────────────────────────────
 const STORAGE_KEYS = {
   settings: 'versemate-settings',
+  migrations: 'versemate-settings-migrations',
 };
 
 function loadJSON<T>(key: string, fallback: T): T {
@@ -734,7 +735,7 @@ const DEFAULT_SETTINGS: AppSettings = {
   defaultVersion: 'ESV',
   notifications: true,
   showVerseNumbers: true,
-  autoHighlights: true,
+  autoHighlights: false,
   readingPlan: 'none',
   language: 'en',
   offlineMode: false,
@@ -743,7 +744,34 @@ const DEFAULT_SETTINGS: AppSettings = {
 
 export function loadSettings(): AppSettings {
   const loaded = loadJSON<Partial<AppSettings>>(STORAGE_KEYS.settings, {});
-  return { ...DEFAULT_SETTINGS, ...loaded };
+  const migrated = applySettingsMigrations(loaded);
+  return { ...DEFAULT_SETTINGS, ...migrated };
+}
+
+// One-time migrations for existing devices. Each migration runs at most once
+// per device (tracked via STORAGE_KEYS.migrations) and may mutate the loaded
+// partial settings before defaults are applied.
+function applySettingsMigrations(
+  loaded: Partial<AppSettings>,
+): Partial<AppSettings> {
+  const ran = loadJSON<Record<string, boolean>>(STORAGE_KEYS.migrations, {});
+  let next = loaded;
+  let changed = false;
+
+  // 2026-05: autoHighlights default flipped from true → false. Existing
+  // devices with a stored settings blob predating the autoHighlights key
+  // would otherwise inherit the new default. Pin those devices to false.
+  if (!ran['autoHighlights-default-off-v1']) {
+    if (next.autoHighlights === undefined) {
+      next = { ...next, autoHighlights: false };
+      saveJSON(STORAGE_KEYS.settings, { ...DEFAULT_SETTINGS, ...next });
+    }
+    ran['autoHighlights-default-off-v1'] = true;
+    changed = true;
+  }
+
+  if (changed) saveJSON(STORAGE_KEYS.migrations, ran);
+  return next;
 }
 
 export function saveSettings(s: AppSettings) {
