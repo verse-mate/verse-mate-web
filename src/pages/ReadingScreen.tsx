@@ -403,7 +403,7 @@ export default function ReadingScreen() {
           aria-label="Previous chapter"
           data-testid="previous-chapter-button"
           className="chapter-nav-btn chapter-nav-prev"
-          style={{ position: 'absolute', left: 12, bottom: 45, width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
+          style={{ position: 'absolute', width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
           <ChevronLeft size={20} color="#fff" strokeWidth={2.5} />
         </button>
@@ -414,7 +414,7 @@ export default function ReadingScreen() {
           aria-label="Next chapter"
           data-testid="next-chapter-button"
           className="chapter-nav-btn chapter-nav-next"
-          style={{ position: 'absolute', right: 12, bottom: 45, width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
+          style={{ position: 'absolute', width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
           <ChevronRight size={20} color="#fff" strokeWidth={2.5} />
         </button>
