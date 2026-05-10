@@ -74,7 +74,16 @@ export default function ReadingScreen() {
   }, [state.chapter, state.book, maxChapter, dispatch]);
 
   const getHighlightForVerse = (verseNum: number) => {
-    return state.highlights.find(h => h.book === state.book && h.chapter === state.chapter && h.verse === verseNum);
+    return state.highlights.find(h => {
+      // Match by bookId (always populated). The book name from
+      // fetchHighlights is intentionally empty since the API only returns
+      // book_id, so name-based matching silently dropped every highlight.
+      if (h.bookId !== state.bookId) return false;
+      if (h.chapter !== state.chapter) return false;
+      const start = h.startVerse ?? h.verse;
+      const end = h.endVerse ?? h.verse;
+      return verseNum >= start && verseNum <= end;
+    });
   };
 
   const autoHighlightByVerse: Record<number, string> = {};

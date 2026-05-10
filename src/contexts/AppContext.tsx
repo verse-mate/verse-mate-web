@@ -76,6 +76,9 @@ function reducer(state: AppState, action: Action): AppState {
         chapter: action.chapter,
         bookId: action.bookId ?? state.bookId,
         selectedVerse: null,
+        // Ephemeral (signed-out) highlights are id-prefixed `local-`. Clear
+        // them on passage change so they don't bleed across chapters.
+        highlights: state.highlights.filter(h => !h.id.startsWith('local-')),
       };
     case 'SET_VERSE':
       return { ...state, selectedVerse: action.verse };
