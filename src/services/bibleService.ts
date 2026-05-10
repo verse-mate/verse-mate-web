@@ -526,12 +526,19 @@ export async function removeNote(id: string) {
 // ─── Highlights ───────────────────────────────────────────────────────────
 export async function fetchHighlights(userId: string): Promise<Highlight[]> {
   try {
-    const data = await api.get<{ highlights: any[] }>(`/bible/highlights/${userId}`);
+    // Resolve book_id → book name in parallel with the fetch so downstream
+    // consumers (HighlightsScreen, etc.) can display "James 2" instead of
+    // " 2". The /bible/highlights API only returns book_id.
+    const [data, books] = await Promise.all([
+      api.get<{ highlights: any[] }>(`/bible/highlights/${userId}`),
+      fetchBooks(),
+    ]);
+    const bookNameById = new Map(books.map(b => [b.bookId, b.name]));
     return (data.highlights || []).map(h => ({
       id: String(h.highlight_id),
       highlightId: h.highlight_id,
       bookId: h.book_id,
-      book: '',
+      book: bookNameById.get(h.book_id) || '',
       chapter: h.chapter_number,
       verse: h.start_verse,
       startVerse: h.start_verse,
