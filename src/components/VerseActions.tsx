@@ -28,9 +28,16 @@ export default function VerseActions({ verse, onClose }: Props) {
     b => b.bookId === state.bookId && b.chapter === state.chapter && b.verse === verse
   );
 
-  const existingHighlight = state.highlights.find(
-    h => h.bookId === state.bookId && h.chapter === state.chapter && h.verse === verse
-  );
+  // Match by range overlap, not exact verse equality. Multi-verse highlights
+  // (created from desktop SelectionToolbar) have startVerse..endVerse spanning
+  // multiple verses; tapping any verse inside that range should let the user
+  // recolor / remove the existing highlight rather than stacking a duplicate.
+  const existingHighlight = state.highlights.find(h => {
+    if (h.bookId !== state.bookId || h.chapter !== state.chapter) return false;
+    const hStart = h.startVerse ?? h.verse;
+    const hEnd = h.endVerse ?? h.verse;
+    return hStart <= verse && hEnd >= verse;
+  });
 
   const toggleBookmark = async () => {
     if (isBookmarked) {
