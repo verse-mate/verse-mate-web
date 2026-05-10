@@ -119,12 +119,32 @@ export default function ReadingScreen() {
     dispatch({ type: 'SET_VERSE', verse: verseNum });
   };
 
-  const handlePressStart = (verseNum: number) => {
+  // Track touch start position so we can cancel the long-press timer if the
+  // finger moves vertically (= the user is scrolling, not pressing).
+  const pressStartPosRef = useRef<{ x: number; y: number } | null>(null);
+  const PRESS_SCROLL_THRESHOLD_PX = 12;
+
+  const handlePressStart = (verseNum: number, e?: React.TouchEvent | React.MouseEvent) => {
+    if (e && 'touches' in e && e.touches[0]) {
+      pressStartPosRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    } else {
+      pressStartPosRef.current = null;
+    }
     const timer = setTimeout(() => {
       openVerseActions(verseNum);
       setPressTimer(null);
     }, 400);
     setPressTimer(timer);
+  };
+  const handlePressMove = (e: React.TouchEvent) => {
+    const start = pressStartPosRef.current;
+    if (!start || !pressTimer || !e.touches[0]) return;
+    const dy = Math.abs(e.touches[0].clientY - start.y);
+    if (dy > PRESS_SCROLL_THRESHOLD_PX) {
+      clearTimeout(pressTimer);
+      setPressTimer(null);
+      pressStartPosRef.current = null;
+    }
   };
   const handlePressEnd = (verseNum: number) => {
     if (pressTimer) {
@@ -132,6 +152,7 @@ export default function ReadingScreen() {
       setPressTimer(null);
       openVerseInsight(verseNum);
     }
+    pressStartPosRef.current = null;
   };
 
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
@@ -353,7 +374,8 @@ export default function ReadingScreen() {
                         key={verse.number}
                         data-verse={verse.number}
                         data-testid={`verse-group-${verse.number}`}
-                        onTouchStart={() => handlePressStart(verse.number)}
+                        onTouchStart={(e) => handlePressStart(verse.number, e)}
+                        onTouchMove={handlePressMove}
                         onTouchEnd={() => handlePressEnd(verse.number)}
                         {...(!isDesktop ? {
                           onMouseDown: () => handlePressStart(verse.number),
