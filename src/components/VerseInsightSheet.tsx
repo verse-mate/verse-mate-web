@@ -239,11 +239,18 @@ export default function VerseInsightSheet({
             touchAction: 'pan-y',
           }}
         >
-          <div className="rounded-xl bg-dark-raised border border-dark p-5" style={{ fontSize: 15 }}>
+          <div
+            className="rounded-xl bg-dark-raised border border-dark p-5"
+            // Inherit the user's reading font size so commentary matches the
+            // scripture body (set in ReadingScreen via state.settings.fontSize).
+            // Without this the panel hardcoded 15px while the bible side
+            // defaulted to 20px, making the insight feel cramped.
+            style={{ fontSize: `${state.settings.fontSize}px` }}
+          >
             {insight ? (
               <MarkdownBlock text={stripDuplicateVerse(insight.historicalContext)} />
             ) : (
-              <p className="text-[15px] text-dark-muted text-center py-4">
+              <p className="text-dark-muted text-center py-4" style={{ fontSize: `${state.settings.fontSize}px` }}>
                 No insight available for this verse.
               </p>
             )}
