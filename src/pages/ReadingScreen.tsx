@@ -294,28 +294,22 @@ export default function ReadingScreen() {
         </div>
       </header>
 
-      {/* ─── SCRIPTURE BODY — page background ─── */}
+      {/* Prototype .reading-body + .reading-inner wrap the scripture column.
+          .chapter-meta holds the h1 + icon buttons. .font-scripture is the
+          verse body. All layout / colors come from prototype.css. */}
       <div
         ref={scrollRef}
         onTouchStart={handleBodyTouchStart}
         onTouchEnd={handleBodyTouchEnd}
         data-testid="chapter-pager-view"
-        className="flex-1 overflow-y-auto relative"
-        style={{ backgroundColor: vmTokens.pageBg }}
+        className="reading-body"
       >
-        <div
-          className="px-4 md:px-12 lg:px-16 pt-5 pb-[48px]"
-          style={{ maxWidth: 'min(100%, 800px)', margin: '0 auto' }}
-        >
-        {/* Chapter header block */}
-        <div className="flex items-start justify-between mb-3">
-          <h1
-            data-testid="chapter-header"
-            style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 24, lineHeight: '32px', color: vmTokens.textPrimary }}
-          >
+        <div className="reading-inner">
+        <div className="chapter-meta">
+          <h1 className="chapter-title" data-testid="chapter-header">
             {state.book} {state.chapter}
           </h1>
-          <div className="flex items-center gap-2 mt-1.5 -mr-2">
+          <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginTop: 6 }}>
             {(() => {
               const chapterBookmark = state.bookmarks.find(
                 b =>
@@ -326,6 +320,7 @@ export default function ReadingScreen() {
               const isBookmarked = !!chapterBookmark;
               return (
                 <button
+                  className="icon-btn"
                   aria-label={isBookmarked ? 'Remove bookmark' : 'Bookmark chapter'}
                   data-testid={`bookmark-toggle-${state.bookId}-${state.chapter}`}
                   onClick={() => {
@@ -340,37 +335,28 @@ export default function ReadingScreen() {
                       });
                     }
                   }}
-                  className="w-11 h-11 flex items-center justify-center rounded-full"
-                  style={{ WebkitTapHighlightColor: 'rgba(176,154,109,0.3)' }}
                 >
                   <Bookmark
-                    size={22}
-                    style={isBookmarked ? { color: vmTokens.gold, fill: vmTokens.gold } : { color: vmTokens.textPrimary }}
+                    size={18}
+                    style={isBookmarked ? { color: vmTokens.textPrimary, fill: vmTokens.textPrimary } : { color: vmTokens.textPrimary }}
                     strokeWidth={1.75}
                   />
                 </button>
               );
             })()}
             <button
+              className="icon-btn"
               aria-label="Notes for this chapter"
               data-testid={`chapter-notes-button-${state.bookId}-${state.chapter}`}
               onClick={() => setShowNotesSheet(true)}
-              className="w-11 h-11 flex items-center justify-center rounded-full"
-              style={{ WebkitTapHighlightColor: 'rgba(176,154,109,0.3)' }}
             >
-              <FileText size={22} style={{ color: vmTokens.textPrimary }} strokeWidth={1.75} />
+              <FileText size={18} style={{ color: vmTokens.textPrimary }} strokeWidth={1.75} />
             </button>
           </div>
         </div>
 
-        {/* Verses grouped by API subtitles */}
-        <div
-          className="font-scripture"
-          style={{
-            fontSize: `${state.settings.fontSize}px`,
-            color: vmTokens.textPrimary,
-          }}
-        >
+        {/* Verses grouped by API subtitles — prototype .font-scripture */}
+        <div className="font-scripture" style={{ fontSize: `${state.settings.fontSize}px` }}>
           {(() => {
             const verses = chapter?.verses || [];
             const groups: Array<{ title: string | null; range: string; items: typeof verses }> = [];
@@ -395,15 +381,11 @@ export default function ReadingScreen() {
             }
 
             return groups.map((group, gi) => (
-              <div key={gi} className={gi > 0 ? 'mt-5' : ''}>
+              <div key={gi} style={{ marginTop: gi > 0 ? 8 : 0 }}>
                 {group.title && (
                   <>
-                    <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 20, lineHeight: '28px', color: vmTokens.textPrimary, marginBottom: 4 }}>
-                      {group.title}
-                    </h2>
-                    <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '20px', color: vmTokens.textTertiary, marginBottom: 12 }}>
-                      {group.range}
-                    </p>
+                    <h2 className="section-subtitle">{group.title}</h2>
+                    <p className="section-range">{group.range}</p>
                   </>
                 )}
                 <div>
@@ -425,30 +407,21 @@ export default function ReadingScreen() {
                           onMouseLeave: () => { if (pressTimer) { clearTimeout(pressTimer); setPressTimer(null); } },
                         } : {
                           onClick: () => {
-                            // On desktop, open verse insight only if no text is selected
                             const sel = window.getSelection();
                             if (!sel || sel.isCollapsed || !sel.toString().trim()) {
                               openVerseInsight(verse.number);
                             }
                           },
                         })}
-                        className={`inline transition-colors ${isDesktop ? 'select-text cursor-text' : 'cursor-pointer select-none'} ${
-                          hl ? highlightColorClass[hl.color] : ''
-                        } ${autoClass ? `${autoClass} rounded px-0.5` : ''} ${
-                          isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''
-                        }`}
+                        className={`verse-span ${hl ? highlightColorClass[hl.color] : ''} ${autoClass || ''} ${isSelected ? 'selected' : ''}`}
                         style={!isDesktop ? {
-                          // Suppress iOS long-press text selection + the iOS
-                          // copy/look-up callout that competes with the
-                          // app's long-press → VerseActions handler. On
-                          // desktop the SelectionToolbar still relies on
-                          // text selection, so leave it enabled there.
+                          // Suppress iOS long-press text selection callout
                           WebkitUserSelect: 'none',
                           WebkitTouchCallout: 'none',
                         } : undefined}
                       >
                         {state.settings.showVerseNumbers !== false && (
-                          <sup className="text-verse-number text-[12px] mr-[2px] select-none align-super">
+                          <sup className="text-verse-number" style={{ fontSize: '12px', marginRight: 2, userSelect: 'none', verticalAlign: 'super' }}>
                             {verse.number}
                           </sup>
                         )}
@@ -461,7 +434,7 @@ export default function ReadingScreen() {
             ));
           })()}
         </div>
-        </div>{/* end inner max-width wrapper */}
+        </div>{/* end .reading-inner */}
 
         {/* Desktop: floating toolbar on text selection */}
         {isDesktop && (
