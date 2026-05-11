@@ -423,25 +423,8 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
       {/* Menu sidebar overlay — fixed to viewport so it always appears correctly */}
       {showMenu && (
         <>
-          <div
-            onClick={() => setShowMenu(false)}
-            style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 40 }}
-          />
-          <div
-            style={{
-              position: 'fixed',
-              right: 0,
-              top: 0,
-              width: 280,
-              height: '100%',
-              backgroundColor: vmTokens.chromeBg,
-              zIndex: 50,
-              boxShadow: '-4px 0 20px rgba(0,0,0,0.3)',
-              display: 'flex',
-              flexDirection: 'column',
-              overflow: 'hidden',
-            }}
-          >
+          <div className="scrim" onClick={() => setShowMenu(false)} />
+          <div className="menu-panel">
             <MenuSidebar
               onClose={() => setShowMenu(false)}
               onOpenPage={(view: RightPanelView) => { openRightPanel(view); setShowMenu(false); }}
@@ -976,17 +959,16 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', backgroundColor: vmTokens.chromeBg }}>
-      <header style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px', height: 72, backgroundColor: vmTokens.headerBg, borderBottom: `1px solid ${vmTokens.sidebarBorder}` }}>
-        <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: vmTokens.headerFg, margin: 0 }}>Menu</h1>
-        <button onClick={onClose} aria-label="Close menu" style={{ width: 44, height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'none', border: 'none', cursor: 'pointer', marginRight: -8 }}>
+    <>
+      <header className="menu-header">
+        <h1 className="menu-title">Menu</h1>
+        <button onClick={onClose} aria-label="Close menu" className="icon-btn">
           <X size={22} color={vmTokens.headerFg} strokeWidth={2} />
         </button>
       </header>
 
-      <div style={{ flex: 1, overflowY: 'auto', backgroundColor: '#000000', padding: '16px' }}>
-        {/* User card — signed-in users go to Settings (matches mobile);
-            signed-out users go to the sign-in page. */}
+      <div className="menu-scroll">
+        {/* Profile card — prototype .menu-profile */}
         <button
           onClick={() => {
             const target = state.isSignedIn ? 'settings' : 'signin';
@@ -998,9 +980,9 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
             }
           }}
           data-testid="menu-profile-card"
-          style={{ display: 'flex', alignItems: 'center', gap: 12, width: '100%', height: 64, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', marginBottom: 12, cursor: 'pointer', textAlign: 'left' }}
+          className="menu-profile"
         >
-          <div style={{ width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: vmTokens.chromeBg, flexShrink: 0, overflow: 'hidden' }}>
+          <div className="menu-avatar">
             {state.isSignedIn && state.userAvatarUrl ? (
               <img
                 src={state.userAvatarUrl}
@@ -1010,49 +992,39 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
                 onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
               />
             ) : (
-              <User size={20} color="rgba(255,255,255,0.6)" strokeWidth={1.5} />
+              <User size={20} color={vmTokens.textSecondary} strokeWidth={1.5} />
             )}
           </div>
           <div style={{ minWidth: 0, flex: 1 }}>
-            <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 14, lineHeight: '20px', color: vmTokens.gold, margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            <p className="menu-profile-name">
               {state.isSignedIn ? state.userName || state.userEmail?.split('@')[0] || '' : 'Guest'}
             </p>
-            <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 12, lineHeight: '18px', color: vmTokens.textSecondary, margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            <p className="menu-profile-sub">
               {state.isSignedIn ? state.userEmail || 'Loading...' : 'Click to sign in'}
             </p>
           </div>
         </button>
 
-        {/* Nav items */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          {menuItems.map(item => (
-            <button
-              key={item.label}
-              onClick={() => { if (onOpenPage) { onOpenPage(item.view); } else { navigate(`/${item.view}`); onClose(); } }}
-              style={{ display: 'flex', alignItems: 'center', gap: 16, width: '100%', height: 56, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', cursor: 'pointer', textAlign: 'left' }}
-            >
-              <item.icon size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />
-              <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: vmTokens.textPrimary }}>{item.label}</span>
-            </button>
-          ))}
+        {/* Nav items — prototype .menu-item */}
+        {menuItems.map(item => (
           <button
-            onClick={handleShare}
-            style={{ display: 'flex', alignItems: 'center', gap: 16, width: '100%', height: 56, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', cursor: 'pointer', textAlign: 'left' }}
+            key={item.label}
+            onClick={() => { if (onOpenPage) { onOpenPage(item.view); } else { navigate(`/${item.view}`); onClose(); } }}
+            className="menu-item"
           >
-            <ShareIcon size={18} color={vmTokens.textPrimary} />
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: vmTokens.textPrimary }}>Share VerseMate</span>
+            <item.icon size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />
+            <span>{item.label}</span>
           </button>
-          <button
-            onClick={handleLogout}
-            style={{ display: 'flex', alignItems: 'center', gap: 16, width: '100%', height: 56, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', cursor: 'pointer', textAlign: 'left', marginTop: 4 }}
-          >
-            <LogOut size={18} color="#f87171" strokeWidth={1.5} />
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: '#f87171' }}>
-              {state.isSignedIn ? 'Logout' : 'Sign In'}
-            </span>
-          </button>
-        </div>
+        ))}
+        <button onClick={handleShare} className="menu-item">
+          <ShareIcon size={18} color={vmTokens.textPrimary} />
+          <span>Share VerseMate</span>
+        </button>
+        <button onClick={handleLogout} className="menu-item logout">
+          <LogOut size={18} color={vmTokens.statusError} strokeWidth={1.5} />
+          <span>{state.isSignedIn ? 'Logout' : 'Sign In'}</span>
+        </button>
       </div>
-    </div>
+    </>
   );
 }
