@@ -297,7 +297,7 @@ export default function ReadingScreen() {
           >
             {state.book} {state.chapter}
           </h1>
-          <div className="flex items-center gap-1 mt-1.5">
+          <div className="flex items-center gap-2 mt-1.5 -mr-2">
             {(() => {
               const chapterBookmark = state.bookmarks.find(
                 b =>
@@ -322,11 +322,12 @@ export default function ReadingScreen() {
                       });
                     }
                   }}
-                  className="w-10 h-10 flex items-center justify-center"
+                  className="w-11 h-11 flex items-center justify-center rounded-full"
+                  style={{ WebkitTapHighlightColor: 'rgba(176,154,109,0.3)' }}
                 >
                   <Bookmark
-                    size={18}
-                    style={isBookmarked ? { color: '#E7E7E7', fill: '#E7E7E7' } : { color: '#E7E7E7' }}
+                    size={22}
+                    style={isBookmarked ? { color: '#B09A6D', fill: '#B09A6D' } : { color: '#E7E7E7' }}
                     strokeWidth={1.75}
                   />
                 </button>
@@ -336,9 +337,10 @@ export default function ReadingScreen() {
               aria-label="Notes for this chapter"
               data-testid={`chapter-notes-button-${state.bookId}-${state.chapter}`}
               onClick={() => navigate('/notes')}
-              className="w-10 h-10 flex items-center justify-center"
+              className="w-11 h-11 flex items-center justify-center rounded-full"
+              style={{ WebkitTapHighlightColor: 'rgba(176,154,109,0.3)' }}
             >
-              <FileText size={18} style={{ color: '#E7E7E7' }} strokeWidth={1.75} />
+              <FileText size={22} style={{ color: '#E7E7E7' }} strokeWidth={1.75} />
             </button>
           </div>
         </div>
