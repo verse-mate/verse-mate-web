@@ -93,9 +93,9 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
       <div>
         <h2 style={titleStyle}>Inductive Study of {book} {chapter}</h2>
         <div style={{ marginTop: 24, padding: 24, borderRadius: 12, backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.surfaceRaisedBorder}`, textAlign: 'center' }}>
-          <BookOpen size={28} color="#B09A6D" style={{ margin: '0 auto 12px' }} strokeWidth={1.5} />
+          <BookOpen size={28} color={vmTokens.gold} style={{ margin: '0 auto 12px' }} strokeWidth={1.5} />
           <p style={{ color: vmTokens.textPrimary, fontSize: 16, fontWeight: 500, marginBottom: 6 }}>Inductive Study coming soon</p>
-          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, lineHeight: '22px' }}>
+          <p style={{ color: vmTokens.textSecondary, fontSize: 14, lineHeight: '22px' }}>
             We're rolling out the 9-step Precept inductive method chapter by chapter. James 1 is the first chapter live — try it from any verse in James 1.
           </p>
         </div>
@@ -159,8 +159,8 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
             title="Copy study"
           >
             {copied
-              ? <Check size={18} color="#B09A6D" strokeWidth={2} />
-              : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
+              ? <Check size={18} color={vmTokens.gold} strokeWidth={2} />
+              : <Copy size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />}
           </button>
           <button
             onClick={() => {
@@ -174,7 +174,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
             aria-label="Share study"
           >
-            <ShareIcon size={18} color="#E7E7E7" />
+            <ShareIcon size={18} color={vmTokens.textPrimary} />
           </button>
         </div>
       </div>
@@ -233,7 +233,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
           }
         >
           {mv.excerpt && (
-            <blockquote style={{ borderLeft: '2px solid #B09A6D', paddingLeft: 12, color: 'rgba(255,255,255,0.7)', fontStyle: 'italic', marginBottom: 12, fontSize: 14, lineHeight: '22px' }}>
+            <blockquote style={{ borderLeft: `2px solid ${vmTokens.gold}`, paddingLeft: 12, color: vmTokens.textSecondary, fontStyle: 'italic', marginBottom: 12, fontSize: 14, lineHeight: '22px' }}>
               "{mv.excerpt}" — {study.bookName} {mv.range}
             </blockquote>
           )}
@@ -261,7 +261,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
               gap: 12,
               marginBottom: 12,
               paddingBottom: 12,
-              borderBottom: '1px solid #1f1f1f',
+              borderBottom: `1px solid ${vmTokens.divider}`,
             }}
           >
             <span style={firstLineAlignStyle}>
@@ -387,7 +387,7 @@ function KeywordsBody({ step }: { step: StepKeywords }) {
               {row.word}
             </span>
             {row.greek && (
-              <span style={{ fontStyle: 'italic', fontSize: 13, color: 'rgba(255,255,255,0.65)' }}>
+              <span style={{ fontStyle: 'italic', fontSize: 13, color: vmTokens.textSecondary }}>
                 {row.greek}
               </span>
             )}
@@ -412,7 +412,7 @@ function KeywordsBody({ step }: { step: StepKeywords }) {
             </span>
           </div>
           {/* Verses line */}
-          <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginBottom: row.definition ? 8 : 0 }}>
+          <div style={{ fontSize: 12, color: vmTokens.textMuted, marginBottom: row.definition ? 8 : 0 }}>
             <span style={{ fontWeight: 600, letterSpacing: '0.4px', textTransform: 'uppercase', marginRight: 6 }}>Verses</span>
             {row.verses}
           </div>
@@ -484,7 +484,7 @@ function ContrastsBody({ step }: { step: StepContrasts }) {
             paddingTop: 12,
             paddingBottom: 12,
             borderTop: i === 0 ? '1px solid #1f1f1f' : 'none',
-            borderBottom: '1px solid #1f1f1f',
+            borderBottom: `1px solid ${vmTokens.divider}`,
           }}
         >
           <span style={firstLineAlignStyle}>
@@ -501,7 +501,7 @@ function ContrastsBody({ step }: { step: StepContrasts }) {
                 padding: '0 6px',
                 borderRadius: 11,
                 backgroundColor: vmTokens.divider,
-                color: 'rgba(255,255,255,0.75)',
+                color: vmTokens.textSecondary,
                 fontSize: 11,
                 fontWeight: 600,
                 textTransform: 'uppercase',
@@ -540,7 +540,7 @@ function BulletsBody({ step }: { step: StepBullets }) {
             paddingTop: 12,
             paddingBottom: 12,
             borderTop: i === 0 ? '1px solid #1f1f1f' : 'none',
-            borderBottom: '1px solid #1f1f1f',
+            borderBottom: `1px solid ${vmTokens.divider}`,
           }}
         >
           {item.tag && (
@@ -554,7 +554,7 @@ function BulletsBody({ step }: { step: StepBullets }) {
         </div>
       ))}
       {step.note && (
-        <p style={{ marginTop: 14, fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: '22px', fontStyle: 'italic' }}>
+        <p style={{ marginTop: 14, fontSize: 14, color: vmTokens.textSecondary, lineHeight: '22px', fontStyle: 'italic' }}>
           {step.note}
         </p>
       )}
@@ -600,7 +600,7 @@ function SegmentsBody({ step }: { step: StepSegments }) {
             <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, color: vmTokens.textPrimary, margin: 0, marginBottom: 8 }}>
               {seg.title}
             </p>
-            <div style={{ color: 'rgba(255,255,255,0.85)' }}>
+            <div style={{ color: vmTokens.textPrimary }}>
               <MarkdownBlock text={seg.body} />
             </div>
           </div>
@@ -634,7 +634,7 @@ function Card({
   children: React.ReactNode;
 }) {
   return (
-    <div style={{ borderBottom: '1px solid #323232' }}>
+    <div style={{ borderBottom: `1px solid ${vmTokens.divider}` }}>
       <button
         onClick={onToggle}
         style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', width: '100%', padding: '14px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer', gap: 12 }}
@@ -646,13 +646,13 @@ function Card({
             // closed so its size + position never shift on toggle.
             // paddingLeft 40 aligns under the step title (28px circle + 12px
             // gap). On non-step cards the alignment is naturally flush.
-            <span style={{ fontSize: 14, fontStyle: 'italic', color: 'rgba(255,255,255,0.65)', fontWeight: 400, lineHeight: '22px', paddingLeft: 40 }}>{subheading}</span>
+            <span style={{ fontSize: 14, fontStyle: 'italic', color: vmTokens.textSecondary, fontWeight: 400, lineHeight: '22px', paddingLeft: 40 }}>{subheading}</span>
           )}
         </div>
         {open ? (
-          <ChevronUp size={18} color="rgba(255,255,255,0.6)" style={{ flexShrink: 0, marginTop: 2 }} />
+          <ChevronUp size={18} color={vmTokens.textSecondary} style={{ flexShrink: 0, marginTop: 2 }} />
         ) : (
-          <ChevronDown size={18} color="rgba(255,255,255,0.6)" style={{ flexShrink: 0, marginTop: 2 }} />
+          <ChevronDown size={18} color={vmTokens.textSecondary} style={{ flexShrink: 0, marginTop: 2 }} />
         )}
       </button>
       {open && (
@@ -676,16 +676,16 @@ function NestedCard({
   children: React.ReactNode;
 }) {
   return (
-    <div style={{ borderTop: '1px solid #1f1f1f' }}>
+    <div style={{ borderTop: `1px solid ${vmTokens.divider}` }}>
       <button
         onClick={onToggle}
         style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '12px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer', gap: 12 }}
       >
         <span style={{ flex: 1, minWidth: 0 }}>{heading}</span>
         {open ? (
-          <ChevronUp size={16} color="rgba(255,255,255,0.55)" style={{ flexShrink: 0 }} />
+          <ChevronUp size={16} color={vmTokens.textSecondary} style={{ flexShrink: 0 }} />
         ) : (
-          <ChevronDown size={16} color="rgba(255,255,255,0.55)" style={{ flexShrink: 0 }} />
+          <ChevronDown size={16} color={vmTokens.textSecondary} style={{ flexShrink: 0 }} />
         )}
       </button>
       {open && (
@@ -698,24 +698,28 @@ function NestedCard({
 }
 
 function Tag({ label }: { label: string }) {
-  // Fixed width so every text-tag pill in a column lines up cleanly.
+  // Prototype's .obs-pill — solid gold pill with white text + uppercase
+  // tracking. Used for POSTURE / EYES / WILL row labels inside the
+  // Observation steps.
   return (
     <span
       style={{
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        width: 88,
+        minWidth: 72,
         height: 22,
-        borderRadius: 11,
-        backgroundColor: vmTokens.surfaceRaisedBg,
-        border: '1px solid #B09A6D',
-        color: vmTokens.gold,
+        borderRadius: 999,
+        backgroundColor: vmTokens.gold,
+        border: `1px solid ${vmTokens.gold}`,
+        color: '#FFFFFF',
+        fontFamily: 'Roboto, sans-serif',
         fontSize: 11,
-        fontWeight: 600,
-        letterSpacing: '0.5px',
-        padding: '0 6px',
+        fontWeight: 700,
+        letterSpacing: '0.04em',
+        padding: '0 10px',
         flexShrink: 0,
+        textAlign: 'center',
       }}
     >
       {label}
@@ -724,25 +728,27 @@ function Tag({ label }: { label: string }) {
 }
 
 function RangePill({ range }: { range: string }) {
-  // Fixed width so every pill in a column aligns its right edge — fixes the
-  // "1:6-8 vs 1:13-14" jagged column problem. The pill content stays
-  // centered inside the 64px box.
+  // Prototype's .study-pill — solid gold pill with white text. Used for
+  // verse-range labels like "4:1-3" on the left of each Interpretation
+  // movement row.
   return (
     <span
       style={{
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        width: 64,
+        minWidth: 56,
         height: 22,
-        borderRadius: 11,
-        backgroundColor: vmTokens.surfaceRaisedBg,
-        border: '1px solid #B09A6D',
-        color: vmTokens.gold,
+        borderRadius: 999,
+        backgroundColor: vmTokens.gold,
+        border: `1px solid ${vmTokens.gold}`,
+        color: '#FFFFFF',
+        fontFamily: 'Roboto, sans-serif',
         fontSize: 11,
         fontWeight: 600,
-        padding: '0 6px',
+        padding: '0 10px',
         flexShrink: 0,
+        textAlign: 'center',
       }}
     >
       {range}
@@ -768,7 +774,7 @@ function Th({ children, style }: { children: React.ReactNode; style?: React.CSSP
         textTransform: 'uppercase',
         letterSpacing: '0.5px',
         color: vmTokens.gold,
-        borderBottom: '1px solid #323232',
+        borderBottom: `1px solid ${vmTokens.divider}`,
         padding: '8px 10px',
         ...style,
       }}
@@ -784,8 +790,8 @@ function Td({ children, style }: { children: React.ReactNode; style?: React.CSSP
       style={{
         padding: '10px',
         verticalAlign: 'top',
-        borderBottom: '1px solid #1f1f1f',
-        color: 'rgba(255,255,255,0.85)',
+        borderBottom: `1px solid ${vmTokens.divider}`,
+        color: vmTokens.textPrimary,
         lineHeight: '22px',
         ...style,
       }}
@@ -970,7 +976,7 @@ const cardHeadingTitleStyle: React.CSSProperties = {
 const sectionIntroStyle: React.CSSProperties = {
   fontSize: 14,
   lineHeight: '22px',
-  color: 'rgba(255,255,255,0.65)',
+  color: vmTokens.textSecondary,
   margin: 0,
 };
 
@@ -1003,7 +1009,7 @@ const stepNumberStyle: React.CSSProperties = {
 
 const stepSummaryStyle: React.CSSProperties = {
   fontSize: 14,
-  color: 'rgba(255,255,255,0.65)',
+  color: vmTokens.textSecondary,
   fontStyle: 'italic',
   marginBottom: 14,
   lineHeight: '22px',
