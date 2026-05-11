@@ -13,6 +13,7 @@ import {
   User,
 } from 'lucide-react';
 import { useEffect } from 'react';
+import { vmTokens } from '@/styles/themeStyles';
 
 interface DeleteAccountWarningModalProps {
   visible: boolean;
@@ -32,7 +33,7 @@ const overlayStyle: React.CSSProperties = {
 };
 
 const modalStyle: React.CSSProperties = {
-  background: '#ffffff',
+  background: vmTokens.surfaceRaisedBg,
   borderRadius: 12,
   padding: 20,
   width: '100%',
@@ -57,7 +58,7 @@ const titleStyle: React.CSSProperties = {
 
 const warningTextStyle: React.CSSProperties = {
   fontSize: 16,
-  color: '#dc2626',
+  color: vmTokens.statusError,
   textAlign: 'center',
   marginBottom: 20,
   fontWeight: 600,
@@ -108,8 +109,8 @@ const cancelButtonStyle: React.CSSProperties = {
 
 const continueButtonStyle: React.CSSProperties = {
   flex: 1,
-  background: '#dc2626',
-  color: '#ffffff',
+  background: vmTokens.statusError,
+  color: vmTokens.surfaceRaisedBg,
   padding: '12px 20px',
   border: 'none',
   borderRadius: 8,
@@ -144,7 +145,7 @@ export function DeleteAccountWarningModal({
     >
       <div style={modalStyle} onClick={(e) => e.stopPropagation()}>
         <div style={headerStyle}>
-          <AlertTriangle size={48} color="#dc2626" />
+          <AlertTriangle size={48} color={vmTokens.statusError} />
           <h2 id="delete-warning-title" style={titleStyle}>
             Delete Your Account?
           </h2>

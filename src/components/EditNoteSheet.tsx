@@ -72,16 +72,16 @@ export default function EditNoteSheet({ note, onClose }: Props) {
     <>
       <div className="absolute inset-0 z-40 bg-black/60" onClick={onClose} />
       <div
-        className="absolute inset-x-0 bottom-0 z-50 bg-dark-surface rounded-t-[24px] border-t border-dark safe-bottom animate-slide-up"
+        className="absolute inset-x-0 bottom-0 z-50 bg-background rounded-t-[24px] border-t border-border safe-bottom animate-slide-up"
         role="dialog"
       >
         {/* Drag handle */}
         <div className="flex justify-center pt-3">
-          <div className="w-10 h-1 rounded-full bg-dark-muted/40" />
+          <div className="w-10 h-1 rounded-full bg-muted-foreground/40" />
         </div>
 
         {/* Title */}
-        <h3 className="text-center text-[18px] text-dark-fg mt-4 mb-5">
+        <h3 className="text-center text-[18px] text-foreground mt-4 mb-5">
           {note.book} {note.chapter}
         </h3>
 
@@ -103,7 +103,7 @@ export default function EditNoteSheet({ note, onClose }: Props) {
             value={text}
             onChange={e => setText(e.target.value.slice(0, maxChars))}
             rows={5}
-            className="w-full rounded-2xl bg-dark-raised border border-dark px-4 py-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
+            className="w-full rounded-2xl bg-secondary border border-border px-4 py-3 text-[14px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
             placeholder="Write your note..."
           />
         </div>
@@ -123,7 +123,7 @@ export default function EditNoteSheet({ note, onClose }: Props) {
         <div className="px-5 pb-6">
           <button
             onClick={onClose}
-            className="w-full h-12 rounded-xl bg-dark-surface border border-dark text-dark-fg text-[14px] font-medium"
+            className="w-full h-12 rounded-xl bg-background border border-border text-foreground text-[14px] font-medium"
           >
             Cancel
           </button>
@@ -150,7 +150,7 @@ function SheetTile({
       className={`h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 ${
         destructive
           ? 'bg-[#2a1617] border-[#4d1f22] text-red-400'
-          : 'bg-dark-raised border-dark text-dark-fg'
+          : 'bg-secondary border-border text-foreground'
       }`}
     >
       {icon}

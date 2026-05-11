@@ -86,7 +86,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   // Chapter picker view
   if (selectedBookObj) {
     return (
-      <div data-testid="bible-navigation-modal-chapters" className="absolute inset-0 z-50 bg-dark-surface flex flex-col animate-fade-in text-dark-fg">
+      <div data-testid="bible-navigation-modal-chapters" className="absolute inset-0 z-50 bg-background flex flex-col animate-fade-in text-foreground">
         <header
           className="shrink-0 safe-top"
           style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)' }}
@@ -98,21 +98,21 @@ export default function BookSelector({ onClose, onSelect }: Props) {
               data-testid="chapter-picker-back-button"
               className="absolute left-2 w-[44px] h-[44px] flex items-center justify-center"
             >
-              <ArrowLeft size={22} className="text-dark-fg" strokeWidth={2} />
+              <ArrowLeft size={22} className="text-foreground" strokeWidth={2} />
             </button>
             <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', letterSpacing: '-0.01em' }}>{selectedBook}</h2>
           </div>
         </header>
 
-        <div className="flex-1 overflow-y-auto px-4 pt-2 pb-6">
-          <p className="text-[13px] text-dark-muted mb-3">Select a chapter</p>
+        <div className="sub-screen-body flex-1 px-4 pt-2 pb-6">
+          <p className="text-[13px] text-muted-foreground mb-3">Select a chapter</p>
           <div className="grid grid-cols-5 sm:grid-cols-6 gap-2">
             {Array.from({ length: selectedBookObj.chapters }, (_, i) => i + 1).map(ch => (
               <button
                 key={ch}
                 onClick={() => onSelect(selectedBook, ch, selectedBookObj.bookId)}
                 data-testid={`chapter-${ch}`}
-                className="h-12 rounded-xl bg-dark-raised border border-dark text-dark-fg text-[14px] font-medium"
+                className="h-12 rounded-xl bg-secondary border border-border text-foreground text-[14px] font-medium"
               >
                 {ch}
               </button>
@@ -124,7 +124,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
   }
 
   return (
-    <div data-testid="bible-navigation-modal" className="absolute inset-0 z-50 bg-dark-surface flex flex-col animate-fade-in text-dark-fg">
+    <div data-testid="bible-navigation-modal" className="absolute inset-0 z-50 bg-background flex flex-col animate-fade-in text-foreground">
       {/* Header: Search title */}
       <header
         className="shrink-0 safe-top"
@@ -137,7 +137,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
             data-testid="bible-navigation-modal-close"
             className="absolute left-2 w-[44px] h-[44px] flex items-center justify-center"
           >
-            <ArrowLeft size={22} className="text-dark-fg" strokeWidth={2} />
+            <ArrowLeft size={22} className="text-foreground" strokeWidth={2} />
           </button>
           <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', letterSpacing: '-0.01em' }}>Search</h2>
         </div>
@@ -145,7 +145,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
 
       {/* Segmented tabs */}
       <div className="px-4 pt-2">
-        <div className="flex items-center rounded-full bg-dark-raised p-1">
+        <div className="flex items-center rounded-full bg-secondary p-1">
           {(['OT', 'NT', 'Topics'] as Tab[]).map(t => {
             const label = t === 'OT' ? 'Old Testament' : t === 'NT' ? 'New Testament' : 'Topics';
             const testId =
@@ -159,7 +159,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
                 }}
                 data-testid={testId}
                 className={`flex-1 h-10 rounded-full transition-colors ${
-                  tab === t ? 'bg-gold text-[#1A1A1A]' : 'text-dark-fg/80'
+                  tab === t ? 'bg-gold text-[#1A1A1A]' : 'text-foreground/80'
                 }`}
                 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px' }}
               >
@@ -173,7 +173,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
       {/* Topic category pills (only on Topics tab) — Events / Prophecies / Parables / Themes */}
       {tab === 'Topics' && (
         <div className="px-4 pt-2">
-          <div className="flex items-center gap-1 rounded-full bg-dark-raised p-1">
+          <div className="flex items-center gap-1 rounded-full bg-secondary p-1">
             {TOPIC_CATEGORIES.map(c => {
               const active = topicCategory === c.key;
               return (
@@ -186,7 +186,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
                   data-testid={`topic-category-${c.key.toLowerCase()}`}
                   aria-pressed={active}
                   className={`flex-1 h-8 rounded-full transition-colors ${
-                    active ? 'bg-gold text-[#1A1A1A]' : 'text-dark-fg/80'
+                    active ? 'bg-gold text-[#1A1A1A]' : 'text-foreground/80'
                   }`}
                   style={{
                     fontFamily: 'Roboto, sans-serif',
@@ -205,14 +205,14 @@ export default function BookSelector({ onClose, onSelect }: Props) {
 
       {/* Search input */}
       <div className="px-4 pt-3">
-        <div className="flex items-center gap-2 h-12 px-4 rounded-full bg-dark-raised border border-dark">
-          <Search size={18} className="text-dark-muted" strokeWidth={2} />
+        <div className="flex items-center gap-2 h-12 px-4 rounded-full bg-secondary border border-border">
+          <Search size={18} className="text-muted-foreground" strokeWidth={2} />
           <input
             value={query}
             onChange={e => setQuery(e.target.value)}
             data-testid={tab === 'Topics' ? 'topics-search-input' : 'books-search-input'}
             placeholder="Search..."
-            className="flex-1 bg-transparent text-dark-fg placeholder:text-dark-muted focus:outline-none"
+            className="flex-1 bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none"
             style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '24px' }}
           />
         </div>
@@ -231,10 +231,10 @@ export default function BookSelector({ onClose, onSelect }: Props) {
                     navigate(buildTopicUrl(t));
                   }}
                   data-testid={`topic-item-${t.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-                  className="flex items-center justify-between w-full h-[56px] border-b border-dark"
+                  className="flex items-center justify-between w-full h-[56px] border-b border-border"
                 >
-                  <span className="text-[16px] text-dark-fg text-left">{t.name}</span>
-                  <ChevronRight size={18} className="text-dark-muted" />
+                  <span className="text-[16px] text-foreground text-left">{t.name}</span>
+                  <ChevronRight size={18} className="text-muted-foreground" />
                 </button>
               ))}
             </div>
@@ -246,7 +246,7 @@ export default function BookSelector({ onClose, onSelect }: Props) {
             {/* Recents (only when no active query) */}
             {!query && recents.length > 0 && (
               <>
-                <p className="text-[11px] uppercase tracking-wider text-dark-muted/70 text-center py-3 border-t border-dark">
+                <p className="text-[11px] uppercase tracking-wider text-muted-foreground/70 text-center py-3 border-t border-border">
                   Recents
                 </p>
                 {recents.map(b => {
@@ -256,20 +256,20 @@ export default function BookSelector({ onClose, onSelect }: Props) {
                       key={`recent-${b.bookId}`}
                       onClick={() => setSelectedBook(b.name)}
                       data-testid={`recent-book-item-${b.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-                      className="flex items-center justify-between w-full h-[52px] border-b border-dark"
+                      className="flex items-center justify-between w-full h-[52px] border-b border-border"
                     >
                       <span
                         className={`text-[16px] text-left ${
-                          isCurrent ? 'text-gold font-medium' : 'text-dark-fg'
+                          isCurrent ? 'text-gold font-medium' : 'text-foreground'
                         }`}
                       >
                         {b.name}
                       </span>
-                      <Clock size={16} className="text-dark-muted" strokeWidth={1.75} />
+                      <Clock size={16} className="text-muted-foreground" strokeWidth={1.75} />
                     </button>
                   );
                 })}
-                <p className="text-[11px] uppercase tracking-wider text-dark-muted/70 text-center py-3 border-t border-dark">
+                <p className="text-[11px] uppercase tracking-wider text-muted-foreground/70 text-center py-3 border-t border-border">
                   All Books
                 </p>
               </>
@@ -281,16 +281,16 @@ export default function BookSelector({ onClose, onSelect }: Props) {
                   key={b.name}
                   onClick={() => setSelectedBook(b.name)}
                   data-testid={`book-item-${b.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-                  className="flex items-center justify-between w-full h-[56px] border-b border-dark"
+                  className="flex items-center justify-between w-full h-[56px] border-b border-border"
                 >
                   <span
                     className={`text-[16px] text-left ${
-                      isCurrent ? 'text-gold font-medium' : 'text-dark-fg'
+                      isCurrent ? 'text-gold font-medium' : 'text-foreground'
                     }`}
                   >
                     {b.name}
                   </span>
-                  <ChevronRight size={18} className="text-dark-muted" />
+                  <ChevronRight size={18} className="text-muted-foreground" />
                 </button>
               );
             })}
@@ -305,14 +305,14 @@ export default function BookSelector({ onClose, onSelect }: Props) {
 
 function EmptyState({ query, loading, what }: { query: string; loading: boolean; what: 'books' | 'topics' }) {
   if (loading) {
-    return <p className="text-center text-dark-muted text-[14px] py-8">Loading {what}…</p>;
+    return <p className="text-center text-muted-foreground text-[14px] py-8">Loading {what}…</p>;
   }
   if (query) {
     return (
-      <p className="text-center text-dark-muted text-[14px] py-8">
+      <p className="text-center text-muted-foreground text-[14px] py-8">
         No {what} match "{query}"
       </p>
     );
   }
-  return <p className="text-center text-dark-muted text-[14px] py-8">No {what} available</p>;
+  return <p className="text-center text-muted-foreground text-[14px] py-8">No {what} available</p>;
 }

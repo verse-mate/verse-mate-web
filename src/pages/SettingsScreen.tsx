@@ -47,6 +47,30 @@ import {
   updateUserPreferredLanguage,
 } from '@/services/bibleService';
 import type { BibleVersion } from '@/services/types';
+import {
+  destructiveOutlineButtonStyle,
+  fieldGroupStyle,
+  goldFillButtonStyle,
+  goldOutlineButtonStyle,
+  inputLabelStyle,
+  pageContainerStyle,
+  pickerContainerStyle,
+  pickerItemBaseStyle,
+  pickerItemTextStyle,
+  pickerScrollStyle,
+  profileErrorTextStyle,
+  profileHeaderStyle,
+  profileInfoStyle,
+  profileNameStyle,
+  profileSubtextStyle,
+  scrollContainerStyle,
+  sectionLabelStyle,
+  sectionStyle,
+  selectButtonStyle,
+  selectButtonTextStyle,
+  textInputStyle,
+  vmTokens,
+} from '@/styles/themeStyles';
 
 interface Language {
   code: string;
@@ -60,150 +84,11 @@ const PREFERRED_LANGUAGE_KEY = '@versemate:preferred_language';
 const formatLanguageDisplay = (lang: Language) =>
   lang.name === lang.nativeName ? lang.name : `${lang.nativeName} (${lang.name})`;
 
-// ─── Shared inline styles (mirror mobile token shapes) ──────────────────
-const pageContainerStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  height: '100%',
-  background: '#000000',
-  fontFamily: 'Roboto, sans-serif',
-  color: '#E7E7E7',
-};
-
-const scrollContainerStyle: React.CSSProperties = {
-  flex: 1,
-  overflowY: 'auto',
-  paddingTop: 16,
-  paddingBottom: 32,
-};
-
-const sectionStyle: React.CSSProperties = {
-  marginBottom: 24,
-  paddingLeft: 16,
-  paddingRight: 16,
-};
-
-const sectionLabelStyle: React.CSSProperties = {
-  display: 'block',
-  fontSize: 14,
-  fontWeight: 400,
-  color: 'rgba(231,231,231,0.7)',
-  marginBottom: 12,
-  marginLeft: 4,
-};
-
-const selectButtonStyle: React.CSSProperties = {
-  display: 'flex',
-  width: '100%',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  paddingTop: 12,
-  paddingBottom: 12,
-  paddingLeft: 16,
-  paddingRight: 16,
-  background: '#323232',
-  border: '1px solid #3a3a3a',
-  borderRadius: 12,
-  height: 48,
-  cursor: 'pointer',
-  color: '#E7E7E7',
-  fontFamily: 'Roboto, sans-serif',
-};
-
-const selectButtonTextStyle: React.CSSProperties = {
-  flex: 1,
-  textAlign: 'left',
-  fontSize: 16,
-  fontWeight: 400,
-  color: '#E7E7E7',
-};
-
-const pickerContainerStyle: React.CSSProperties = {
-  marginTop: 8,
-  background: '#323232',
-  border: '1px solid #3a3a3a',
-  borderRadius: 12,
-  maxHeight: 300,
-  overflow: 'hidden',
-};
-
-const pickerScrollStyle: React.CSSProperties = {
-  maxHeight: 300,
-  overflowY: 'auto',
-};
-
-const pickerItemBaseStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  padding: '12px 16px',
-  borderBottom: '1px solid #3a3a3a',
-  background: 'transparent',
-  border: 'none',
-  width: '100%',
-  textAlign: 'left',
-  cursor: 'pointer',
-  fontFamily: 'Roboto, sans-serif',
-};
-
-const profileHeaderStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  background: '#323232',
-  borderRadius: 12,
-  border: '1px solid #3a3a3a',
-  padding: 16,
-  marginBottom: 16,
-};
-
-const profileInfoStyle: React.CSSProperties = {
-  flex: 1,
-  marginLeft: 16,
-};
-
-const profileNameStyle: React.CSSProperties = {
-  fontSize: 16,
-  fontWeight: 500,
-  color: '#E7E7E7',
-  marginBottom: 2,
-};
-
-const profileSubtextStyle: React.CSSProperties = {
-  fontSize: 12,
-  color: 'rgba(231,231,231,0.7)',
-};
-
-const profileErrorTextStyle: React.CSSProperties = {
-  fontSize: 12,
-  color: '#dc2626',
-};
-
-const inputLabelStyle: React.CSSProperties = {
-  display: 'block',
-  fontSize: 12,
-  color: 'rgba(231,231,231,0.7)',
-  marginBottom: 6,
-  fontWeight: 500,
-};
-
-const textInputStyle: React.CSSProperties = {
-  width: '100%',
-  background: '#323232',
-  border: '1px solid #3a3a3a',
-  borderRadius: 8,
-  padding: '12px 14px',
-  color: '#E7E7E7',
-  fontSize: 16,
-  fontFamily: 'Roboto, sans-serif',
-  outline: 'none',
-  boxSizing: 'border-box',
-};
-
-const fieldGroupStyle: React.CSSProperties = {
-  marginBottom: 12,
-};
-
 // ─── Component ──────────────────────────────────────────────────────────
+// Style primitives (pageContainerStyle, sectionStyle, selectButtonStyle,
+// etc.) come from `@/styles/themeStyles` so colors flip with the active
+// theme. Hex values that are intentionally constant across themes
+// (gold accent, status icon colors) reference `vmTokens.*` instead.
 export default function SettingsScreen() {
   const navigate = useNavigate();
   const { state, dispatch, signOut, restoreSession } = useApp();
@@ -508,7 +393,7 @@ export default function SettingsScreen() {
     <div style={pageContainerStyle}>
       <ScreenHeader title="Settings" onBack={handleBackPress} backTestId="settings-back-button" />
 
-      <div style={scrollContainerStyle}>
+      <div className="sub-screen-body" style={scrollContainerStyle}>
         {/* Profile Information — authenticated only */}
         {isAuthenticated && (
           <section style={sectionStyle}>
@@ -516,7 +401,9 @@ export default function SettingsScreen() {
             <div style={profileHeaderStyle}>
               <Avatar className="h-12 w-12">
                 {userAvatarUrl ? <AvatarImage src={userAvatarUrl} alt="Profile picture" /> : null}
-                <AvatarFallback className="bg-[#1B1B1B] text-[#E7E7E7]">
+                {/* Avatar fallback bg is the brand dark — same in both themes
+                    so initials always sit on a #1B1B1B chip. */}
+                <AvatarFallback className="bg-[#1B1B1B] text-white">
                   {initials}
                 </AvatarFallback>
               </Avatar>
@@ -526,16 +413,16 @@ export default function SettingsScreen() {
                   {saveStatus === 'saving' && (
                     <Loader2
                       size={16}
-                      color="rgba(231,231,231,0.7)"
+                      color={vmTokens.textSecondary}
                       style={{ marginLeft: 8 }}
                       className="animate-spin"
                     />
                   )}
                   {saveStatus === 'saved' && (
-                    <Check size={18} color="#22c55e" style={{ marginLeft: 8 }} />
+                    <Check size={18} color={vmTokens.statusSuccess} style={{ marginLeft: 8 }} />
                   )}
                   {saveStatus === 'error' && (
-                    <AlertCircle size={18} color="#dc2626" style={{ marginLeft: 8 }} />
+                    <AlertCircle size={18} color={vmTokens.statusError} style={{ marginLeft: 8 }} />
                   )}
                 </div>
                 {saveStatus === 'error' && globalError ? (
@@ -608,9 +495,9 @@ export default function SettingsScreen() {
               {selectedVersionData?.value || 'Select Version'}
             </span>
             {showVersionPicker ? (
-              <ChevronUp size={20} color="rgba(231,231,231,0.7)" />
+              <ChevronUp size={20} color={vmTokens.textSecondary} />
             ) : (
-              <ChevronDown size={20} color="rgba(231,231,231,0.7)" />
+              <ChevronDown size={20} color={vmTokens.textSecondary} />
             )}
           </button>
 
@@ -627,21 +514,21 @@ export default function SettingsScreen() {
                     data-testid={`version-option-${version.key.toLowerCase()}`}
                     style={{
                       ...pickerItemBaseStyle,
-                      borderBottom: isLast ? 'none' : '1px solid #3a3a3a',
-                      background: isSelected ? 'rgba(255,255,255,0.05)' : 'transparent',
+                      borderBottom: isLast ? 'none' : `1px solid ${vmTokens.surfaceRaisedBorder}`,
+                      background: isSelected ? vmTokens.rowSelectedBg : 'transparent',
                     }}
                   >
                     <span
                       style={{
                         flex: 1,
                         fontSize: 16,
-                        color: isSelected ? '#B09A6D' : 'rgba(231,231,231,0.85)',
+                        color: isSelected ? vmTokens.gold : vmTokens.textPrimary,
                         fontWeight: isSelected ? 500 : 400,
                       }}
                     >
                       {version.value}
                     </span>
-                    {isSelected && <Check size={20} color="#B09A6D" />}
+                    {isSelected && <Check size={20} color={vmTokens.gold} />}
                   </button>
                 );
               })}
@@ -666,9 +553,9 @@ export default function SettingsScreen() {
               })()}
             </span>
             {showLanguagePicker ? (
-              <ChevronUp size={20} color="rgba(231,231,231,0.7)" />
+              <ChevronUp size={20} color={vmTokens.textSecondary} />
             ) : (
-              <ChevronDown size={20} color="rgba(231,231,231,0.7)" />
+              <ChevronDown size={20} color={vmTokens.textSecondary} />
             )}
           </button>
 
@@ -686,21 +573,14 @@ export default function SettingsScreen() {
                       data-testid={`language-option-${language.code}`}
                       style={{
                         ...pickerItemBaseStyle,
-                        borderBottom: isLast ? 'none' : '1px solid #3a3a3a',
-                        background: isSelected ? 'rgba(255,255,255,0.05)' : 'transparent',
+                        borderBottom: isLast ? 'none' : `1px solid ${vmTokens.surfaceRaisedBorder}`,
+                        background: isSelected ? vmTokens.rowSelectedBg : 'transparent',
                       }}
                     >
-                      <span
-                        style={{
-                          flex: 1,
-                          fontSize: 16,
-                          color: isSelected ? '#B09A6D' : 'rgba(231,231,231,0.85)',
-                          fontWeight: isSelected ? 500 : 400,
-                        }}
-                      >
+                      <span style={pickerItemTextStyle(isSelected)}>
                         {formatLanguageDisplay(language)}
                       </span>
-                      {isSelected && <Check size={20} color="#B09A6D" />}
+                      {isSelected && <Check size={20} color={vmTokens.gold} />}
                     </button>
                   );
                 })}
@@ -719,18 +599,7 @@ export default function SettingsScreen() {
               type="button"
               onClick={() => setShowLogoutConfirm(true)}
               data-testid="settings-logout-button"
-              style={{
-                width: '100%',
-                background: 'transparent',
-                color: '#B09A6D',
-                border: '1px solid #B09A6D',
-                borderRadius: 8,
-                padding: '14px 20px',
-                fontSize: 16,
-                fontWeight: 600,
-                cursor: 'pointer',
-                fontFamily: 'Roboto, sans-serif',
-              }}
+              style={goldOutlineButtonStyle}
             >
               Logout
             </button>
@@ -743,7 +612,7 @@ export default function SettingsScreen() {
             style={{
               ...sectionStyle,
               marginTop: 24,
-              borderTop: '1px solid #323232',
+              borderTop: `1px solid ${vmTokens.divider}`,
               paddingTop: 24,
             }}
           >
@@ -752,24 +621,9 @@ export default function SettingsScreen() {
               onClick={() => setShowWarningModal(true)}
               aria-label="Delete account permanently"
               data-testid="settings-delete-account-button"
-              style={{
-                width: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: 8,
-                background: 'transparent',
-                color: '#dc2626',
-                border: '1px solid #dc2626',
-                borderRadius: 8,
-                padding: '12px 16px',
-                fontSize: 16,
-                fontWeight: 600,
-                cursor: 'pointer',
-                fontFamily: 'Roboto, sans-serif',
-              }}
+              style={destructiveOutlineButtonStyle}
             >
-              <Trash2 size={20} color="#dc2626" />
+              <Trash2 size={20} color={vmTokens.statusError} />
               Delete Account
             </button>
           </section>
@@ -785,16 +639,16 @@ export default function SettingsScreen() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 padding: '48px 24px',
-                background: '#323232',
-                border: '1px solid #3a3a3a',
+                background: vmTokens.surfaceRaisedBg,
+                border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
                 borderRadius: 12,
               }}
             >
-              <User size={64} color="rgba(231,231,231,0.5)" />
+              <User size={64} color={vmTokens.textMuted} />
               <p
                 style={{
                   fontSize: 16,
-                  color: 'rgba(231,231,231,0.7)',
+                  color: vmTokens.textSecondary,
                   textAlign: 'center',
                   marginTop: 16,
                   marginBottom: 24,
@@ -807,17 +661,7 @@ export default function SettingsScreen() {
                 type="button"
                 onClick={() => navigate('/login')}
                 data-testid="settings-sign-in-button"
-                style={{
-                  background: '#B09A6D',
-                  color: '#000000',
-                  border: 'none',
-                  borderRadius: 8,
-                  padding: '12px 32px',
-                  fontSize: 16,
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  fontFamily: 'Inter, sans-serif',
-                }}
+                style={goldFillButtonStyle}
               >
                 Sign In
               </button>
