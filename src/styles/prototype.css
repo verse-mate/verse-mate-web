@@ -616,7 +616,7 @@ button { font-family: inherit; }
   border-radius: 50%;
   background: var(--vm-dust);
   border: 1px solid var(--vm-dust);
-  color: #FFFFFF;
+  color: var(--fg-on-gold);
   font-size: 13px;
   font-weight: 600;
   display: flex;
@@ -636,7 +636,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--fg-on-gold);
   font-feature-settings: 'tnum';
   flex-shrink: 0;
   min-width: 56px;
@@ -1488,7 +1488,7 @@ button { font-family: inherit; }
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.04em;
-  color: #fff;
+  color: var(--fg-on-gold);
   flex-shrink: 0;
   min-width: 72px;
   text-align: center;
@@ -1560,7 +1560,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg-on-gold);
   background: var(--vm-dust);
   border-radius: 999px;
   padding: 2px 9px;
@@ -1607,7 +1607,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg-on-gold);
   min-width: 52px;
   flex-shrink: 0;
   font-feature-settings: 'tnum';
@@ -1655,7 +1655,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg-on-gold);
   min-width: 52px;
   flex-shrink: 0;
   font-feature-settings: 'tnum';
@@ -1682,7 +1682,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg-on-gold);
   min-width: 52px;
   flex-shrink: 0;
   font-feature-settings: 'tnum';
@@ -1716,7 +1716,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg-on-gold);
   min-width: 52px;
   flex-shrink: 0;
   font-feature-settings: 'tnum';
@@ -1859,7 +1859,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg-on-gold);
   font-feature-settings: 'tnum';
   min-width: 52px;
 }
