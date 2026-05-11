@@ -627,11 +627,11 @@ function CommentaryPanel({
     const summary = commentaries.find(c => c.type === 'summary');
     return (
       <div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
+        <div className="commentary-toolbar">
           <h2 className="commentary-h2">
             Summary of {book} {chapter}
           </h2>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
+          <div className="commentary-actions">
             <button
               onClick={() => {
                 const body = summary?.detail
@@ -689,11 +689,11 @@ function CommentaryPanel({
     const allExpanded = expanded === -2;
     return (
       <div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
+        <div className="commentary-toolbar">
           <h2 className="commentary-h2">
             Line-by-Line Analysis of {book} {chapter}
           </h2>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
+          <div className="commentary-actions">
             <button
               onClick={() => {
                 const body = byLineItems
@@ -704,7 +704,7 @@ function CommentaryPanel({
                   : `Line-by-Line Analysis of ${book} ${chapter}`;
                 copyToClipboard(text, 'byline');
               }}
-              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
+              className="icon-btn"
               aria-label="Copy line-by-line analysis"
               title="Copy line-by-line analysis"
             >
@@ -725,7 +725,7 @@ function CommentaryPanel({
                   url: window.location.href,
                 }).catch(() => {});
               }}
-              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
+              className="icon-btn"
               aria-label="Share line-by-line analysis"
             >
               <ShareIcon size={18} color={vmTokens.textPrimary} />
@@ -734,8 +734,8 @@ function CommentaryPanel({
         </div>
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
           <button
+            className="expand-all-btn"
             onClick={() => setExpanded(allExpanded ? null : -2)}
-            style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, color: vmTokens.gold, background: 'none', border: 'none', cursor: 'pointer' }}
           >
             {allExpanded ? 'Collapse All' : 'Expand All'}
           </button>
@@ -754,27 +754,29 @@ function CommentaryPanel({
             </div>
           ) : null;
         })()}
-        <div>
+        <div className="byline-list">
           {byLineItems.map(c => {
             const isOpen = allExpanded || expanded === c.verse;
             return (
-              <div key={c.verse} data-byline-verse={c.verse} style={{ borderBottom: `1px solid ${vmTokens.divider}` }}>
+              <div key={c.verse} data-byline-verse={c.verse} className={`byline-row ${isOpen ? 'open' : ''}`}>
                 <button
+                  className="byline-toggle"
                   onClick={() => setExpanded(isOpen ? null : c.verse)}
-                  style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '14px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer' }}
                 >
-                  <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, color: vmTokens.headerFg }}>
-                    {book} {chapter}:{c.verse}
-                  </span>
+                  <span className="byline-ref-sm">{book} {chapter}:{c.verse}</span>
                   {isOpen ? (
-                    <ChevronUp size={16} color="rgba(255,255,255,0.6)" style={{ flexShrink: 0 }} />
+                    <ChevronUp size={16} color={vmTokens.textSecondary} style={{ flexShrink: 0 }} />
                   ) : (
-                    <ChevronDown size={16} color="rgba(255,255,255,0.6)" style={{ flexShrink: 0 }} />
+                    <ChevronDown size={16} color={vmTokens.textSecondary} style={{ flexShrink: 0 }} />
                   )}
                 </button>
                 {isOpen && (
-                  <div style={{ paddingBottom: 14 }}>
-                    <CommentaryBody text={c.detail} />
+                  <div className="byline-body">
+                    <div className="byline-ref-strong">{book} {chapter}:{c.verse}</div>
+                    <div className="byline-summary-label">Summary</div>
+                    <div className="byline-summary-text">
+                      <CommentaryBody text={c.detail} />
+                    </div>
                   </div>
                 )}
               </div>
@@ -794,11 +796,11 @@ function CommentaryPanel({
   const detailed = commentaries.find(c => c.type === 'detailed');
   return detailed ? (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
-        <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 18, lineHeight: '26px', color: vmTokens.textPrimary, margin: 0 }}>
+      <div className="commentary-toolbar">
+        <h2 className="commentary-h2">
           In-Depth Analysis of {book} {chapter}
         </h2>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
+        <div className="commentary-actions">
           <button
             onClick={() => {
               const body = detailed.detail
