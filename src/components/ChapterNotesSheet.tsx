@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
-import { X, FileText } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { X, FileText, User } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 
 interface Props {
@@ -17,16 +18,19 @@ interface Props {
  * "Add New Note" form. Closing the sheet (X or backdrop tap) keeps the
  * user on the Bible page they were reading.
  *
+ * Guest gating: capturing a note requires a signed-in account (same as
+ * highlights / bookmarks / etc.). Guests see the "Sign in to save" CTA
+ * pattern used in SettingsScreen.
+ *
  * Chapter-level notes use `verse: 0` to match the convention `BookmarksScreen`
  * uses for chapter-level bookmarks (filtered via `!b.verse`).
  */
 export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Props) {
   const { state, addNote } = useApp();
+  const navigate = useNavigate();
   const [text, setText] = useState('');
   const [saving, setSaving] = useState(false);
 
-  // Show every note attached to this chapter (verse-level + chapter-level)
-  // so the user has full visibility into what they've already captured here.
   const chapterNotes = useMemo(
     () =>
       state.notes
@@ -40,17 +44,17 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
     if (!trimmed) return;
     setSaving(true);
     try {
-      await addNote({
-        bookId,
-        book,
-        chapter,
-        verse: 0,
-        text: trimmed,
-      });
+      await addNote({ bookId, book, chapter, verse: 0, text: trimmed });
       setText('');
+      onClose();
     } finally {
       setSaving(false);
     }
+  };
+
+  const handleSignIn = () => {
+    onClose();
+    navigate('/login');
   };
 
   return (
@@ -85,49 +89,71 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
             </button>
           </header>
 
-          <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
-            {chapterNotes.length > 0 && (
-              <ul className="space-y-2" data-testid="chapter-notes-existing-list">
-                {chapterNotes.map(n => (
-                  <li
-                    key={n.id}
-                    data-testid={`chapter-note-item-${n.id}`}
-                    className="rounded-2xl bg-dark-raised border border-dark px-4 py-3"
-                  >
-                    {n.verse > 0 && (
-                      <p className="text-[11px] uppercase tracking-wide text-dark-muted mb-1">
-                        Verse {n.verse}
-                      </p>
-                    )}
-                    <p className="text-[14px] text-dark-fg whitespace-pre-wrap">{n.text}</p>
-                  </li>
-                ))}
-              </ul>
-            )}
+          {!state.isSignedIn ? (
+            // Guest gate — mirrors the SettingsScreen "Sign in to access ..."
+            // pattern (User icon + copy + gold Sign In button). Auto-highlights
+            // / bookmarks / highlights all require auth; keep notes consistent.
+            <div
+              data-testid="chapter-notes-signin-cta"
+              className="flex flex-col items-center justify-center px-6 py-12 text-center"
+            >
+              <User size={56} className="text-dark-muted mb-4" strokeWidth={1.25} />
+              <p className="text-[14px] text-dark-fg/80 mb-6 leading-snug">
+                Sign in to save your notes for {book} {chapter}.
+              </p>
+              <button
+                data-testid="chapter-notes-signin-button"
+                onClick={handleSignIn}
+                className="px-8 h-11 rounded-xl bg-gold text-[#1A1A1A] text-[14px] font-semibold"
+              >
+                Sign In
+              </button>
+            </div>
+          ) : (
+            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
+              {chapterNotes.length > 0 && (
+                <ul className="space-y-2" data-testid="chapter-notes-existing-list">
+                  {chapterNotes.map(n => (
+                    <li
+                      key={n.id}
+                      data-testid={`chapter-note-item-${n.id}`}
+                      className="rounded-2xl bg-dark-raised border border-dark px-4 py-3"
+                    >
+                      {n.verse > 0 && (
+                        <p className="text-[11px] uppercase tracking-wide text-dark-muted mb-1">
+                          Verse {n.verse}
+                        </p>
+                      )}
+                      <p className="text-[14px] text-dark-fg whitespace-pre-wrap">{n.text}</p>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-            <section>
-              <h4 className="text-[14px] font-semibold text-dark-fg mb-2">Add New Note</h4>
-              <textarea
-                data-testid="chapter-notes-textarea"
-                value={text}
-                onChange={e => setText(e.target.value)}
-                placeholder="Write your note here..."
-                rows={4}
-                className="w-full rounded-2xl bg-dark-raised border border-dark px-4 py-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
-              />
-              <div className="flex justify-end mt-3">
-                <button
-                  data-testid="chapter-notes-add-button"
-                  onClick={handleAdd}
-                  disabled={text.trim().length === 0 || saving}
-                  className="px-4 h-10 rounded-xl bg-gold text-[#1A1A1A] text-[13px] font-medium disabled:opacity-40 inline-flex items-center gap-2"
-                >
-                  <FileText size={14} />
-                  {saving ? 'Saving…' : 'Add Note'}
-                </button>
-              </div>
-            </section>
-          </div>
+              <section>
+                <h4 className="text-[14px] font-semibold text-dark-fg mb-2">Add New Note</h4>
+                <textarea
+                  data-testid="chapter-notes-textarea"
+                  value={text}
+                  onChange={e => setText(e.target.value)}
+                  placeholder="Write your note here..."
+                  rows={4}
+                  className="w-full rounded-2xl bg-dark-raised border border-dark px-4 py-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
+                />
+                <div className="flex justify-end mt-3">
+                  <button
+                    data-testid="chapter-notes-add-button"
+                    onClick={handleAdd}
+                    disabled={text.trim().length === 0 || saving}
+                    className="px-4 h-10 rounded-xl bg-gold text-[#1A1A1A] text-[13px] font-medium disabled:opacity-40 inline-flex items-center gap-2"
+                  >
+                    <FileText size={14} />
+                    {saving ? 'Saving…' : 'Add Note'}
+                  </button>
+                </div>
+              </section>
+            </div>
+          )}
         </div>
       </div>
     </>
