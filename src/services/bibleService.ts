@@ -510,24 +510,31 @@ export async function addNote(args: {
   userId: string;
   bookId: number;
   chapter: number;
+  /** 0 means chapter-level note — `verse_id` is omitted in that case. */
   verse: number;
   text: string;
 }) {
-  // Backend requires user_id + snake_case fields — POST /bible/book/note/add
-  // throws ValidationError("Missing required fields") otherwise, which trips
-  // AppContext's catch path and rolls back the optimistic note. Same shape as
-  // addBookmark / addHighlight.
+  // Backend schema (verified against verse-mate-mobile/src/api/generated):
+  //   POST /bible/book/note/add
+  //   body: { user_id, book_id, chapter_number, verse_id?, content }
+  // `verse_id` is OPTIONAL — omit it for chapter-level notes (where the
+  // frontend uses verse=0 as a marker matching BookmarksScreen's `!b.verse`).
+  // Earlier revisions sent `verse_number` + `text`, both wrong field names —
+  // every POST 400'd and AppContext rolled back the optimistic note, so the
+  // user never saw their note persist after sign-in. Issue #133 follow-up.
   return api.post('/bible/book/note/add', {
     user_id: args.userId,
     book_id: args.bookId,
     chapter_number: args.chapter,
-    verse_number: args.verse,
-    text: args.text,
+    ...(args.verse > 0 ? { verse_id: args.verse } : {}),
+    content: args.text,
   });
 }
 
 export async function updateNote(id: string, text: string) {
-  return api.put('/bible/book/note/update', { note_id: id, text });
+  // Backend expects `content` (not `text`) per the generated schema:
+  //   PUT /bible/book/note/update body: { note_id, content }
+  return api.put('/bible/book/note/update', { note_id: id, content: text });
 }
 
 export async function removeNote(id: string) {
