@@ -189,7 +189,7 @@ export default function VerseInsightSheet({
       />
       {/* Sheet — slides up from bottom; narrower on desktop */}
       <div
-        className="verse-insight-sheet absolute inset-x-0 bottom-0 z-50 bg-dark-surface text-dark-fg rounded-t-[24px] border-t border-dark shadow-[0_-10px_30px_rgba(0,0,0,0.5)] animate-slide-up flex flex-col"
+        className="verse-insight-sheet absolute inset-x-0 bottom-0 z-50 bg-background text-foreground rounded-t-[24px] border-t border-border shadow-[0_-10px_30px_rgba(0,0,0,0.5)] animate-slide-up flex flex-col"
         style={{
           maxHeight: '98%',
           minHeight: '80%',
@@ -211,7 +211,7 @@ export default function VerseInsightSheet({
         >
           {/* Drag handle */}
           <div className="shrink-0 pt-2 flex justify-center">
-            <div className="w-10 h-1 rounded-full bg-dark-muted/40" />
+            <div className="w-10 h-1 rounded-full bg-muted-foreground/40" />
           </div>
 
           {/* Title */}
@@ -225,26 +225,26 @@ export default function VerseInsightSheet({
               onClick={() => step(-1)}
               disabled={currentVerse <= 1}
               aria-label="Previous verse"
-              className="w-9 h-9 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30 shrink-0"
+              className="w-9 h-9 rounded-full bg-secondary border border-border flex items-center justify-center disabled:opacity-30 shrink-0"
             >
-              <ChevronLeft size={18} className="text-dark-fg" />
+              <ChevronLeft size={18} className="text-foreground" />
             </button>
-            <div className="text-[17px] font-medium text-dark-fg">
+            <div className="text-[17px] font-medium text-foreground">
               {book} {chapter}:{currentVerse}
             </div>
             <button
               onClick={() => step(1)}
               disabled={currentVerse >= maxVerse}
               aria-label="Next verse"
-              className="w-9 h-9 rounded-full bg-dark-raised border border-dark flex items-center justify-center disabled:opacity-30 shrink-0"
+              className="w-9 h-9 rounded-full bg-secondary border border-border flex items-center justify-center disabled:opacity-30 shrink-0"
             >
-              <ChevronRight size={18} className="text-dark-fg" />
+              <ChevronRight size={18} className="text-foreground" />
             </button>
           </div>
 
           {/* Quoted verse — pushed down for breathing room under the stepper */}
           {verseText && (
-            <p className="px-6 mt-4 text-center text-[14px] italic text-dark-muted leading-snug">
+            <p className="px-6 mt-4 text-center text-[14px] italic text-muted-foreground leading-snug">
               "{verseText}"
             </p>
           )}
@@ -270,7 +270,7 @@ export default function VerseInsightSheet({
           }}
         >
           <div
-            className="rounded-xl bg-dark-raised border border-dark p-5 mb-6"
+            className="rounded-xl bg-secondary border border-border p-5 mb-6"
             // Inherit the user's reading font size so commentary matches the
             // scripture body (set in ReadingScreen via state.settings.fontSize).
             // Without this the panel hardcoded 15px while the bible side
@@ -280,20 +280,20 @@ export default function VerseInsightSheet({
             {insight ? (
               <MarkdownBlock text={stripDuplicateVerse(insight.historicalContext)} />
             ) : (
-              <p className="text-dark-muted text-center py-4" style={{ fontSize: `${state.settings.fontSize}px` }}>
+              <p className="text-muted-foreground text-center py-4" style={{ fontSize: `${state.settings.fontSize}px` }}>
                 No insight available for this verse.
               </p>
             )}
             {insight && insight.crossReferences.length > 0 && (
-              <div className="mt-3 pt-3 border-t border-dark">
-                <p className="text-[11px] uppercase tracking-wide text-dark-muted/70 mb-1.5">
+              <div className="mt-3 pt-3 border-t border-border">
+                <p className="text-[11px] uppercase tracking-wide text-muted-foreground/70 mb-1.5">
                   Cross references
                 </p>
                 <div className="flex flex-wrap gap-1">
                   {insight.crossReferences.map(ref => (
                     <span
                       key={ref}
-                      className="text-[11px] text-dark-fg/90 bg-dark-surface rounded px-1.5 py-0.5 border border-dark"
+                      className="text-[11px] text-foreground/90 bg-background rounded px-1.5 py-0.5 border border-border"
                     >
                       {ref}
                     </span>
@@ -312,23 +312,23 @@ export default function VerseInsightSheet({
           <div className="grid grid-cols-3 gap-2">
             <button
               onClick={handleCopy}
-              className="h-10 rounded-xl bg-dark-raised border border-dark flex items-center justify-center gap-1.5"
+              className="h-10 rounded-xl bg-secondary border border-border flex items-center justify-center gap-1.5"
             >
-              {copiedAt ? <Check size={14} className="text-gold" strokeWidth={2} /> : <Copy size={14} className="text-dark-fg" strokeWidth={1.5} />}
+              {copiedAt ? <Check size={14} className="text-gold" strokeWidth={2} /> : <Copy size={14} className="text-foreground" strokeWidth={1.5} />}
               <span className="text-[12px]" style={{ color: copiedAt ? '#B09A6D' : '#ccc' }}>{copiedAt ? 'Copied' : 'Copy'}</span>
             </button>
             <button
               onClick={handleShare}
-              className="h-10 rounded-xl bg-dark-raised border border-dark flex items-center justify-center gap-1.5"
+              className="h-10 rounded-xl bg-secondary border border-border flex items-center justify-center gap-1.5"
             >
               <ShareIcon size={14} color="#ccc" />
               <span className="text-[12px] text-[#ccc]">Share</span>
             </button>
             <button
               onClick={handleSaveHighlight}
-              className="h-10 rounded-xl bg-dark-raised border border-dark flex items-center justify-center gap-1.5"
+              className="h-10 rounded-xl bg-secondary border border-border flex items-center justify-center gap-1.5"
             >
-              {savedAt ? <Check size={14} className="text-gold" strokeWidth={2} /> : <Bookmark size={14} className="text-dark-fg" strokeWidth={1.5} />}
+              {savedAt ? <Check size={14} className="text-gold" strokeWidth={2} /> : <Bookmark size={14} className="text-foreground" strokeWidth={1.5} />}
               <span className="text-[12px]" style={{ color: savedAt ? '#B09A6D' : '#ccc' }}>{savedAt ? 'Saved' : 'Save'}</span>
             </button>
           </div>

@@ -865,7 +865,7 @@ function CommentaryBody({ text }: { text: string }) {
   const flushPara = () => {
     if (para.length) {
       elements.push(
-        <p key={key++} style={{ fontFamily: 'inherit', fontWeight: 300, fontSize: 'inherit', lineHeight: 'inherit', color: 'rgba(255,255,255,0.87)', marginBottom: 10 }}>
+        <p key={key++} style={{ fontFamily: 'inherit', fontWeight: 300, fontSize: 'inherit', lineHeight: 'inherit', color: vmTokens.textPrimary, marginBottom: 10 }}>
           {inlineFormat(para.join(' '))}
         </p>
       );
@@ -880,7 +880,7 @@ function CommentaryBody({ text }: { text: string }) {
       flushPara();
       const heading = line.replace(/^#+\s*/, '');
       elements.push(
-        <h2 key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: vmTokens.headerFg, marginTop: 22, marginBottom: 8 }}>
+        <h2 key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: vmTokens.textPrimary, marginTop: 22, marginBottom: 8 }}>
           {inlineFormat(heading)}
         </h2>
       );

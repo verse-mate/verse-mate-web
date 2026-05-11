@@ -512,7 +512,7 @@ function CommentaryBody({ text }: { text: string }) {
       flushPara();
       const text = line.replace(/^#+\s*/, '');
       elements.push(
-        <h2 key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: vmTokens.headerFg, marginTop: 22, marginBottom: 8 }}>
+        <h2 key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: vmTokens.textPrimary, marginTop: 22, marginBottom: 8 }}>
           {inlineFormat(text)}
         </h2>
       );
