@@ -356,15 +356,17 @@ button { font-family: inherit; }
 .reading-body::-webkit-scrollbar-track { background: transparent; }
 
 .reading-inner {
-  max-width: 780px;
+  /* Narrower than the prototype's 780 to leave a meaningful gutter on
+     each side of .reading-body — required so the 40px chapter-nav
+     buttons can sit just outside the text column without overlapping
+     the verses. With max-width 660 in a ~793 panel, there's ~66px of
+     gutter on each side for the buttons (with a few px of breathing
+     room past the button right edge). */
+  max-width: 660px;
   margin: 0 auto;
-  /* Tighter horizontal padding than the prototype's 88px so the text
-     column uses more of the available pane width. The Bible reading
-     pane in the production app is narrower than the prototype's mock,
-     so 88px ate too much horizontal real estate. */
-  padding: 32px 24px 96px;
+  padding: 32px 16px 96px;
 }
-@media (max-width: 1024px) { .reading-inner { padding: 24px 20px 80px; } }
+@media (max-width: 1024px) { .reading-inner { padding: 24px 16px 80px; } }
 
 .chapter-title {
   font-family: 'Roboto', sans-serif;
@@ -443,10 +445,12 @@ button { font-family: inherit; }
   color: var(--fg-primary);
 }
 .chapter-nav-btn:hover { background: var(--hover-bg); }
-/* 390 = max-width(780)/2 ; 12 = visual gap between column edge and button;
-   max() ensures a hard 8px floor when the panel is narrow. */
-.chapter-nav-prev { left: max(8px, calc(50% - 390px - 12px - 40px)); }
-.chapter-nav-next { right: max(8px, calc(50% - 390px - 12px - 40px)); }
+/* Position arrows in the gutter just outside the .reading-inner column
+   (max-width 660). 330 = column half-width, 8 = gap, 40 = button width.
+   `max(4px, ...)` floors them to a 4px panel-edge offset on very
+   narrow panels where the calc would go negative. */
+.chapter-nav-prev { left: max(4px, calc(50% - 330px - 8px - 40px)); }
+.chapter-nav-next { right: max(4px, calc(50% - 330px - 8px - 40px)); }
 
 /* Progress bar */
 .progress-bar {
