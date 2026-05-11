@@ -393,7 +393,7 @@ export default function SettingsScreen() {
     <div style={pageContainerStyle}>
       <ScreenHeader title="Settings" onBack={handleBackPress} backTestId="settings-back-button" />
 
-      <div style={scrollContainerStyle}>
+      <div className="sub-screen-body" style={scrollContainerStyle}>
         {/* Profile Information — authenticated only */}
         {isAuthenticated && (
           <section style={sectionStyle}>

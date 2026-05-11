@@ -8,7 +8,7 @@ export default function AboutScreen() {
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
       <ScreenHeader title="About" onBack={() => navigate('/menu')} />
 
-      <div className="flex-1 overflow-y-auto min-h-0 px-5 pb-8" style={{ backgroundColor: vmTokens.pageBg }}>
+      <div className="sub-screen-body flex-1 min-h-0 px-5 pb-8" style={{ backgroundColor: vmTokens.pageBg }}>
         {/* Compact image — constrained height, centered */}
         <div className="rounded-xl overflow-hidden mt-4 mx-auto" style={{ backgroundColor: vmTokens.surfaceRaisedBg, maxHeight: 180, maxWidth: 320 }}>
           <img

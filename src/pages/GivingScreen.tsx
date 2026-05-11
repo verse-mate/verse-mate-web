@@ -26,7 +26,7 @@ export default function GivingScreen() {
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.pageBg }}>
       <ScreenHeader title="Giving" onBack={() => navigate('/menu')} />
 
-      <div className="flex-1 overflow-y-auto min-h-0" style={{ backgroundColor: vmTokens.pageBg }}>
+      <div className="sub-screen-body flex-1 min-h-0" style={{ backgroundColor: vmTokens.pageBg }}>
         {/* Hero — cinematic candlelit Bible */}
         <div style={{ position: 'relative', height: 240, overflow: 'hidden', backgroundColor: '#1a1005' }}>
           <img
