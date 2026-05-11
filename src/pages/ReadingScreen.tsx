@@ -441,35 +441,37 @@ export default function ReadingScreen() {
         </div>
         </div>{/* end .reading-inner */}
 
+        {/* Chapter nav buttons — INSIDE .reading-body so their absolute
+            positioning resolves to .reading-body (the prototype's relative
+            ancestor), not .split-body. Without this they bubble all the
+            way up to .split-body and end up positioned across BOTH panes
+            instead of within the reading column. */}
+        {state.chapter > 1 && (
+          <button
+            onClick={() => goToChapter(-1)}
+            aria-label="Previous chapter"
+            data-testid="previous-chapter-button"
+            className="chapter-nav-btn chapter-nav-prev"
+          >
+            <ChevronLeft size={20} color={vmTokens.textPrimary} strokeWidth={2.25} />
+          </button>
+        )}
+        {state.chapter < maxChapter && (
+          <button
+            onClick={() => goToChapter(1)}
+            aria-label="Next chapter"
+            data-testid="next-chapter-button"
+            className="chapter-nav-btn chapter-nav-next"
+          >
+            <ChevronRight size={20} color={vmTokens.textPrimary} strokeWidth={2.25} />
+          </button>
+        )}
+
         {/* Desktop: floating toolbar on text selection */}
         {isDesktop && (
           <SelectionToolbar book={state.book} chapter={state.chapter} bookId={state.bookId} />
         )}
       </div>
-
-      {/* Chapter nav — prototype .chapter-nav-btn renders white pill with
-          gold chevron, vertically centered on desktop, bottom-anchored on
-          mobile. All styling in prototype.css. */}
-      {state.chapter > 1 && (
-        <button
-          onClick={() => goToChapter(-1)}
-          aria-label="Previous chapter"
-          data-testid="previous-chapter-button"
-          className="chapter-nav-btn chapter-nav-prev"
-        >
-          <ChevronLeft size={20} color={vmTokens.textPrimary} strokeWidth={2.25} />
-        </button>
-      )}
-      {state.chapter < maxChapter && (
-        <button
-          onClick={() => goToChapter(1)}
-          aria-label="Next chapter"
-          data-testid="next-chapter-button"
-          className="chapter-nav-btn chapter-nav-next"
-        >
-          <ChevronRight size={20} color={vmTokens.textPrimary} strokeWidth={2.25} />
-        </button>
-      )}
 
       {/* Progress bar — prototype .progress-bar / .progress-track /
           .progress-fill / .progress-pct. Bottom-anchored. */}
