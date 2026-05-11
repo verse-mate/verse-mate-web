@@ -358,10 +358,13 @@ button { font-family: inherit; }
 .reading-inner {
   max-width: 780px;
   margin: 0 auto;
-  padding: 32px 88px 96px;
+  /* Tighter horizontal padding than the prototype's 88px so the text
+     column uses more of the available pane width. The Bible reading
+     pane in the production app is narrower than the prototype's mock,
+     so 88px ate too much horizontal real estate. */
+  padding: 32px 24px 96px;
 }
-@media (max-width: 1280px) { .reading-inner { padding: 28px 56px 88px; } }
-@media (max-width: 1024px) { .reading-inner { padding: 24px 32px 80px; } }
+@media (max-width: 1024px) { .reading-inner { padding: 24px 20px 80px; } }
 
 .chapter-title {
   font-family: 'Roboto', sans-serif;
@@ -419,7 +422,12 @@ button { font-family: inherit; }
 .hl-purple { background-color: var(--hl-purple); }
 .hl-teal   { background-color: var(--hl-teal); }
 
-/* Chapter nav buttons */
+/* Chapter nav buttons. Anchored to flank the centered .reading-inner
+   column rather than the .reading-body panel edges — sit just outside
+   the text column with a small gap, so they always read as "page turn"
+   chrome attached to the text not floating on the panel margin.
+   `max()` falls back to a tight panel-edge position on narrow panels
+   (when the calc() goes negative). */
 .chapter-nav-btn {
   position: absolute;
   top: 50%;
@@ -435,8 +443,10 @@ button { font-family: inherit; }
   color: var(--fg-primary);
 }
 .chapter-nav-btn:hover { background: var(--hover-bg); }
-.chapter-nav-prev { left: 16px; }
-.chapter-nav-next { right: 16px; }
+/* 390 = max-width(780)/2 ; 12 = visual gap between column edge and button;
+   max() ensures a hard 8px floor when the panel is narrow. */
+.chapter-nav-prev { left: max(8px, calc(50% - 390px - 12px - 40px)); }
+.chapter-nav-next { right: max(8px, calc(50% - 390px - 12px - 40px)); }
 
 /* Progress bar */
 .progress-bar {
