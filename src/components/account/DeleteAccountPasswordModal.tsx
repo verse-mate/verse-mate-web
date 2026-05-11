@@ -5,6 +5,7 @@
 
 import { AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { vmTokens } from '@/styles/themeStyles';
 
 interface DeleteAccountPasswordModalProps {
   visible: boolean;
@@ -26,7 +27,7 @@ const overlayStyle: React.CSSProperties = {
 };
 
 const modalStyle: React.CSSProperties = {
-  background: '#ffffff',
+  background: vmTokens.surfaceRaisedBg,
   borderRadius: 12,
   padding: 20,
   width: '100%',
@@ -61,7 +62,7 @@ const baseInputStyle: React.CSSProperties = {
   padding: '12px 48px 12px 16px',
   fontSize: 16,
   color: '#111827',
-  background: '#ffffff',
+  background: vmTokens.surfaceRaisedBg,
   boxSizing: 'border-box',
   outline: 'none',
 };
@@ -91,7 +92,7 @@ const errorContainerStyle: React.CSSProperties = {
 
 const errorTextStyle: React.CSSProperties = {
   fontSize: 14,
-  color: '#dc2626',
+  color: vmTokens.statusError,
   marginLeft: 6,
   flex: 1,
 };
@@ -116,8 +117,8 @@ const cancelButtonStyle: React.CSSProperties = {
 
 const deleteButtonStyle: React.CSSProperties = {
   flex: 1,
-  background: '#dc2626',
-  color: '#ffffff',
+  background: vmTokens.statusError,
+  color: vmTokens.surfaceRaisedBg,
   padding: '12px 20px',
   border: 'none',
   borderRadius: 8,
@@ -200,7 +201,7 @@ export function DeleteAccountPasswordModal({
               data-testid="delete-account-password-input"
               style={{
                 ...baseInputStyle,
-                borderColor: error ? '#dc2626' : '#d1d5db',
+                borderColor: error ? vmTokens.statusError : '#d1d5db',
               }}
             />
             <button
@@ -220,7 +221,7 @@ export function DeleteAccountPasswordModal({
 
           {error && (
             <div style={errorContainerStyle}>
-              <AlertCircle size={16} color="#dc2626" />
+              <AlertCircle size={16} color={vmTokens.statusError} />
               <span style={errorTextStyle}>{error}</span>
             </div>
           )}

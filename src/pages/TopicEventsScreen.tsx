@@ -6,6 +6,7 @@ import { Search, BookOpen } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import ScreenHeader from '@/components/ScreenHeader';
 import { generateTopicSlug, getCategoryFromSlug } from '@/lib/topicSlugs';
+import { vmTokens } from '@/styles/themeStyles';
 
 export default function TopicEventsScreen() {
   // Two route shapes hit this screen:
@@ -74,41 +75,41 @@ export default function TopicEventsScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
       <ScreenHeader title={topic?.name || 'Events'} onBack={() => navigate('/topics')} />
 
       {/* Search */}
-      <div className="px-4 pt-1" style={{ backgroundColor: '#000000' }}>
-        <div className="flex items-center gap-2 h-12 px-4 rounded-full" style={{ backgroundColor: '#323232', border: '1px solid #323232' }}>
-          <Search size={18} style={{ color: 'rgba(255,255,255,0.6)' }} strokeWidth={2} />
+      <div className="px-4 pt-1" style={{ backgroundColor: vmTokens.pageBg }}>
+        <div className="flex items-center gap-2 h-12 px-4 rounded-full" style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}` }}>
+          <Search size={18} style={{ color: vmTokens.textTertiary }} strokeWidth={2} />
           <input
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search..."
             className="flex-1 bg-transparent text-[15px] focus:outline-none"
-            style={{ color: '#E7E7E7' }}
+            style={{ color: vmTokens.textPrimary }}
           />
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 pt-4 pb-6" style={{ backgroundColor: '#000000' }}>
+      <div className="flex-1 overflow-y-auto px-4 pt-4 pb-6" style={{ backgroundColor: vmTokens.pageBg }}>
         {filtered.length === 0 ? (
-          <p className="text-center py-8 text-[14px]" style={{ color: 'rgba(255,255,255,0.6)' }}>
+          <p className="text-center py-8 text-[14px]" style={{ color: vmTokens.textTertiary }}>
             {events.length === 0 ? 'Loading...' : `No sections match "${query}"`}
           </p>
         ) : (
           <div className="space-y-6">
             {filtered.map(ev => (
-              <section key={ev.id} className="pb-5 last:border-b-0" style={{ borderBottom: '1px solid #323232' }}>
-                <h3 className="text-[16px] font-semibold mb-2" style={{ color: '#E7E7E7' }}>{ev.title}</h3>
+              <section key={ev.id} className="pb-5 last:border-b-0" style={{ borderBottom: `1px solid ${vmTokens.divider}` }}>
+                <h3 className="text-[16px] font-semibold mb-2" style={{ color: vmTokens.textPrimary }}>{ev.title}</h3>
                 {ev.description && (
-                  <p className="text-[13px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                  <p className="text-[13px] leading-relaxed" style={{ color: vmTokens.textTertiary }}>
                     {ev.description}
                   </p>
                 )}
                 {ev.references.length > 0 && (
                   <div className="mt-3">
-                    <p className="text-[11px] uppercase tracking-wide mb-2" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    <p className="text-[11px] uppercase tracking-wide mb-2" style={{ color: vmTokens.textMuted }}>
                       References
                     </p>
                     <div className="flex flex-wrap gap-1.5">
@@ -117,7 +118,7 @@ export default function TopicEventsScreen() {
                           key={ref}
                           onClick={() => openReference(ref)}
                           className="flex items-center gap-1.5 text-[12px] rounded-full px-3 py-1.5 transition-colors"
-                          style={{ backgroundColor: '#323232', border: '1px solid #323232', color: '#E7E7E7' }}
+                          style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, color: vmTokens.textPrimary }}
                         >
                           <BookOpen size={12} strokeWidth={1.75} />
                           {ref}

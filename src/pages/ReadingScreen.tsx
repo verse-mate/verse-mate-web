@@ -17,6 +17,11 @@ import SelectionToolbar from '@/components/SelectionToolbar';
 import ChapterNotesSheet, { hasPendingChapterNoteDraft } from '@/components/ChapterNotesSheet';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
+import { vmTokens } from '@/styles/themeStyles';
+
+// Style primitives come from @/styles/themeStyles so colors flip with the
+// active theme. Hex values that are intentionally constant across themes
+// (gold accent, header chrome) reference vmTokens.* instead.
 
 export default function ReadingScreen() {
   const { state, dispatch, addBookmark, removeBookmark } = useApp();
@@ -212,25 +217,25 @@ export default function ReadingScreen() {
   const verseCount = chapter?.verses.length || 0;
 
   return (
-    <div className="flex flex-col h-full relative" style={{ backgroundColor: '#1B1B1B' }}>
-      {/* ─── DARK HEADER (#1A1A1A) with TEXT pill tabs — hidden on desktop (DesktopLayout renders shared header) ─── */}
-      <header className="reading-screen-header shrink-0 safe-top" style={{ backgroundColor: '#1A1A1A', paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}>
+    <div className="flex flex-col h-full relative" style={{ backgroundColor: vmTokens.headerBg }}>
+      {/* ─── DARK HEADER with TEXT pill tabs — hidden on desktop (DesktopLayout renders shared header) ─── */}
+      <header className="reading-screen-header shrink-0 safe-top" style={{ backgroundColor: vmTokens.headerBg, paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}>
         <div className="flex items-center justify-between px-4" style={{ height: 56 }}>
           {/* Left: Book + chapter dropdown */}
           <button
             onClick={() => setShowBookSelector(true)}
             data-testid="chapter-selector-button"
             className="flex items-center gap-1.5 min-h-[44px] pr-2 -ml-1"
-            style={{ color: '#FFFFFF' }}
+            style={{ color: vmTokens.headerFg }}
           >
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: '#FFFFFF' }}>{state.book} {state.chapter}</span>
-            <ChevronDown size={18} style={{ color: '#FFFFFF' }} strokeWidth={2} />
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: vmTokens.headerFg }}>{state.book} {state.chapter}</span>
+            <ChevronDown size={18} style={{ color: vmTokens.headerFg }} strokeWidth={2} />
           </button>
 
           {/* Right: TEXT pill tabs (Bible/Insight) + Menu */}
           <div className="flex items-center gap-2">
             {/* Pill container */}
-            <div style={{ display: 'flex', backgroundColor: '#323232', borderRadius: 100, padding: '3px' }}>
+            <div style={{ display: 'flex', backgroundColor: vmTokens.surfaceRaisedBg, borderRadius: 100, padding: '3px' }}>
               {/* Bible pill — active (gold) */}
               <button
                 aria-label="Bible"
@@ -242,8 +247,8 @@ export default function ReadingScreen() {
                   lineHeight: '24px',
                   padding: '2px 12px',
                   borderRadius: 100,
-                  backgroundColor: '#B09A6D',
-                  color: '#000000',
+                  backgroundColor: vmTokens.gold,
+                  color: vmTokens.goldOnLight,
                   border: 'none',
                   cursor: 'pointer',
                 }}
@@ -269,7 +274,7 @@ export default function ReadingScreen() {
                   padding: '2px 12px',
                   borderRadius: 100,
                   backgroundColor: 'transparent',
-                  color: '#FFFFFF',
+                  color: vmTokens.headerFg,
                   border: 'none',
                   cursor: 'pointer',
                 }}
@@ -283,20 +288,20 @@ export default function ReadingScreen() {
               data-testid="hamburger-menu-button"
               className="flex items-center justify-center w-[44px] h-[44px] -mr-2"
             >
-              <Menu size={22} style={{ color: '#FFFFFF' }} strokeWidth={2} />
+              <Menu size={22} style={{ color: vmTokens.headerFg }} strokeWidth={2} />
             </button>
           </div>
         </div>
       </header>
 
-      {/* ─── BLACK BODY (#000000) — scripture ─── */}
+      {/* ─── SCRIPTURE BODY — page background ─── */}
       <div
         ref={scrollRef}
         onTouchStart={handleBodyTouchStart}
         onTouchEnd={handleBodyTouchEnd}
         data-testid="chapter-pager-view"
         className="flex-1 overflow-y-auto relative"
-        style={{ backgroundColor: '#000000' }}
+        style={{ backgroundColor: vmTokens.pageBg }}
       >
         <div
           className="px-4 md:px-12 lg:px-16 pt-5 pb-[48px]"
@@ -306,7 +311,7 @@ export default function ReadingScreen() {
         <div className="flex items-start justify-between mb-3">
           <h1
             data-testid="chapter-header"
-            style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 24, lineHeight: '32px', color: '#E7E7E7' }}
+            style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 24, lineHeight: '32px', color: vmTokens.textPrimary }}
           >
             {state.book} {state.chapter}
           </h1>
@@ -340,7 +345,7 @@ export default function ReadingScreen() {
                 >
                   <Bookmark
                     size={22}
-                    style={isBookmarked ? { color: '#B09A6D', fill: '#B09A6D' } : { color: '#E7E7E7' }}
+                    style={isBookmarked ? { color: vmTokens.gold, fill: vmTokens.gold } : { color: vmTokens.textPrimary }}
                     strokeWidth={1.75}
                   />
                 </button>
@@ -353,7 +358,7 @@ export default function ReadingScreen() {
               className="w-11 h-11 flex items-center justify-center rounded-full"
               style={{ WebkitTapHighlightColor: 'rgba(176,154,109,0.3)' }}
             >
-              <FileText size={22} style={{ color: '#E7E7E7' }} strokeWidth={1.75} />
+              <FileText size={22} style={{ color: vmTokens.textPrimary }} strokeWidth={1.75} />
             </button>
           </div>
         </div>
@@ -393,10 +398,10 @@ export default function ReadingScreen() {
               <div key={gi} className={gi > 0 ? 'mt-5' : ''}>
                 {group.title && (
                   <>
-                    <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 20, lineHeight: '28px', color: '#E7E7E7', marginBottom: 4 }}>
+                    <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 20, lineHeight: '28px', color: vmTokens.textPrimary, marginBottom: 4 }}>
                       {group.title}
                     </h2>
-                    <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '20px', color: 'rgba(255,255,255,0.6)', marginBottom: 12 }}>
+                    <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '20px', color: vmTokens.textTertiary, marginBottom: 12 }}>
                       {group.range}
                     </p>
                   </>
@@ -471,7 +476,7 @@ export default function ReadingScreen() {
           aria-label="Previous chapter"
           data-testid="previous-chapter-button"
           className="chapter-nav-btn chapter-nav-prev"
-          style={{ position: 'absolute', width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
+          style={{ position: 'absolute', width: 40, height: 40, borderRadius: '50%', background: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
           <ChevronLeft size={20} color="#fff" strokeWidth={2.5} />
         </button>
@@ -482,7 +487,7 @@ export default function ReadingScreen() {
           aria-label="Next chapter"
           data-testid="next-chapter-button"
           className="chapter-nav-btn chapter-nav-next"
-          style={{ position: 'absolute', width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
+          style={{ position: 'absolute', width: 40, height: 40, borderRadius: '50%', background: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
           <ChevronRight size={20} color="#fff" strokeWidth={2.5} />
         </button>
@@ -496,8 +501,8 @@ export default function ReadingScreen() {
           display: 'flex',
           alignItems: 'center',
           gap: 16,
-          backgroundColor: '#000000',
-          borderTop: '1px solid #323232',
+          backgroundColor: vmTokens.pageBg,
+          borderTop: `1px solid ${vmTokens.divider}`,
           padding: '0 24px',
           position: 'absolute',
           bottom: 0,
@@ -525,7 +530,7 @@ export default function ReadingScreen() {
                   data-testid="progress-bar-fill"
                   style={{
                     height: '100%',
-                    backgroundColor: '#B09A6D',
+                    backgroundColor: vmTokens.gold,
                     borderRadius: 10,
                     width: `${Math.max(2, bookProgress)}%`,
                     transition: 'width 0.3s ease',
@@ -539,7 +544,7 @@ export default function ReadingScreen() {
                   fontWeight: 500,
                   fontSize: 14,
                   lineHeight: '16px',
-                  color: '#B09A6D',
+                  color: vmTokens.gold,
                   whiteSpace: 'nowrap',
                 } as React.CSSProperties}
               >
