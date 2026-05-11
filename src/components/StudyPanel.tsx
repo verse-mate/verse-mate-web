@@ -778,14 +778,15 @@ function Tag({ label }: { label: string }) {
 function RangePill({ range }: { range: string }) {
   // Prototype's .study-pill — solid gold pill with white text. Used for
   // verse-range labels like "4:1-3" on the left of each Interpretation
-  // movement row.
+  // movement row. min-width / no-wrap so longer ranges (e.g. "1:12-18",
+  // "1:19-27") don't wrap mid-pill.
   return (
     <span
       style={{
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        minWidth: 56,
+        minWidth: 64,
         height: 22,
         borderRadius: 999,
         backgroundColor: vmTokens.gold,
@@ -797,6 +798,7 @@ function RangePill({ range }: { range: string }) {
         padding: '0 10px',
         flexShrink: 0,
         textAlign: 'center',
+        whiteSpace: 'nowrap',
       }}
     >
       {range}
