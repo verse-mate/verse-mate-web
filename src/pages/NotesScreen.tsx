@@ -99,7 +99,7 @@ export default function NotesScreen() {
     gap: 8,
     padding: '12px 8px',
     borderTop: `1px solid ${vmTokens.divider}`,
-    backgroundColor: vmTokens.pageBg,
+    backgroundColor: vmTokens.commentaryBg,
   };
 
   const noteItemStyle: React.CSSProperties = {
@@ -117,7 +117,7 @@ export default function NotesScreen() {
 
   if (!isChapterView) {
     return (
-      <div className="flex flex-col h-full relative" style={{ backgroundColor: vmTokens.chromeBg }}>
+      <div className="flex flex-col h-full relative" style={{ backgroundColor: vmTokens.commentaryBg }}>
         <ScreenHeader title="Notes" onBack={handleListBack} backTestId="notes-back-button" />
 
         <div data-testid="notes-list" style={listContainerStyle}>
@@ -142,7 +142,7 @@ export default function NotesScreen() {
                   <span style={{ fontSize: 15, fontWeight: 500, color: vmTokens.textPrimary, flex: 1 }}>
                     {g.book} {g.chapter}
                   </span>
-                  <span style={{ fontSize: 12, color: vmTokens.textTertiary, background: vmTokens.chromeBg, borderRadius: 4, padding: '2px 8px', minWidth: 28, textAlign: 'center' }}>
+                  <span style={{ fontSize: 12, color: vmTokens.textTertiary, background: vmTokens.divider, borderRadius: 4, padding: '2px 8px', minWidth: 28, textAlign: 'center' }}>
                     {g.count}
                   </span>
                   <ChevronRight size={18} style={{ color: vmTokens.textTertiary, flexShrink: 0 }} />
@@ -156,7 +156,7 @@ export default function NotesScreen() {
   }
 
   return (
-    <div className="flex flex-col h-full relative" style={{ backgroundColor: vmTokens.chromeBg }}>
+    <div className="flex flex-col h-full relative" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader
         title={`${activeBook} ${activeChapter}`}
         onBack={handleChapterBack}

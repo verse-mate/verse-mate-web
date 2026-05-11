@@ -23,10 +23,10 @@ export default function GivingScreen() {
   )}`;
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.pageBg }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader title="Giving" onBack={() => navigate('/menu')} />
 
-      <div className="sub-screen-body flex-1 min-h-0" style={{ backgroundColor: vmTokens.pageBg }}>
+      <div className="sub-screen-body flex-1 min-h-0" style={{ backgroundColor: vmTokens.commentaryBg }}>
         {/* Hero — cinematic candlelit Bible */}
         <div style={{ position: 'relative', height: 240, overflow: 'hidden', backgroundColor: '#1a1005' }}>
           <img
@@ -45,7 +45,7 @@ export default function GivingScreen() {
               left: 0,
               right: 0,
               height: 120,
-              background: `linear-gradient(180deg, transparent 0%, ${vmTokens.pageBg} 90%)`,
+              background: `linear-gradient(180deg, transparent 0%, ${vmTokens.commentaryBg} 90%)`,
             }}
           />
         </div>
@@ -159,7 +159,7 @@ export default function GivingScreen() {
                     fontWeight: 600,
                     border: `1px solid ${selected ? vmTokens.gold : 'rgba(176,154,109,0.4)'}`,
                     backgroundColor: selected ? vmTokens.gold : 'rgba(176,154,109,0.08)',
-                    color: selected ? vmTokens.pageBg : vmTokens.gold,
+                    color: selected ? vmTokens.goldOnLight : vmTokens.gold,
                     boxShadow: selected ? '0 0 24px rgba(176,154,109,0.3)' : 'none',
                     cursor: 'pointer',
                     transition: 'all 0.15s ease',
@@ -209,7 +209,7 @@ export default function GivingScreen() {
               height: 56,
               borderRadius: 12,
               backgroundColor: vmTokens.gold,
-              color: vmTokens.pageBg,
+              color: vmTokens.goldOnLight,
               fontFamily: 'Roboto, sans-serif',
               fontSize: 16,
               fontWeight: 700,

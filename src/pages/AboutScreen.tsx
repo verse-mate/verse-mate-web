@@ -5,10 +5,10 @@ import { vmTokens } from '@/styles/themeStyles';
 export default function AboutScreen() {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader title="About" onBack={() => navigate('/menu')} />
 
-      <div className="sub-screen-body flex-1 min-h-0 px-5 pb-8" style={{ backgroundColor: vmTokens.pageBg }}>
+      <div className="sub-screen-body flex-1 min-h-0 px-5 pb-8" style={{ backgroundColor: vmTokens.commentaryBg }}>
         {/* Compact image — constrained height, centered */}
         <div className="rounded-xl overflow-hidden mt-4 mx-auto" style={{ backgroundColor: vmTokens.surfaceRaisedBg, maxHeight: 180, maxWidth: 320 }}>
           <img
