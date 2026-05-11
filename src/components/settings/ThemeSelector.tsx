@@ -9,6 +9,7 @@ import { Check, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
 import { useApp } from '@/contexts/AppContext';
 import type { AppSettings } from '@/services/bibleService';
+import { vmTokens } from '@/styles/themeStyles';
 
 type ThemePreference = AppSettings['theme'];
 
@@ -46,7 +47,7 @@ const sectionLabelStyle: React.CSSProperties = {
   display: 'block',
   fontSize: 14,
   fontWeight: 400,
-  color: 'rgba(231,231,231,0.7)',
+  color: vmTokens.textSecondary,
   marginBottom: 12,
   marginLeft: 4,
 };
@@ -60,25 +61,25 @@ const selectButtonStyle: React.CSSProperties = {
   paddingBottom: 12,
   paddingLeft: 16,
   paddingRight: 16,
-  background: '#323232',
-  border: '1px solid #3a3a3a',
+  background: vmTokens.surfaceRaisedBg,
+  border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
   borderRadius: 12,
   height: 48,
   cursor: 'pointer',
-  color: '#E7E7E7',
+  color: vmTokens.textPrimary,
   fontFamily: 'Roboto, sans-serif',
 };
 
 const selectButtonTextStyle: React.CSSProperties = {
   fontSize: 16,
   fontWeight: 400,
-  color: '#E7E7E7',
+  color: vmTokens.textPrimary,
 };
 
 const pickerContainerStyle: React.CSSProperties = {
   marginTop: 8,
-  background: '#323232',
-  border: '1px solid #3a3a3a',
+  background: vmTokens.surfaceRaisedBg,
+  border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
   borderRadius: 12,
   overflow: 'hidden',
 };
@@ -88,7 +89,7 @@ const pickerItemBaseStyle: React.CSSProperties = {
   alignItems: 'center',
   justifyContent: 'space-between',
   padding: '12px 16px',
-  borderBottom: '1px solid #3a3a3a',
+  borderBottom: `1px solid ${vmTokens.surfaceRaisedBorder}`,
   cursor: 'pointer',
   background: 'transparent',
   border: 'none',
@@ -122,9 +123,9 @@ export function ThemeSelector() {
       >
         <span style={selectButtonTextStyle}>{selectedOption.label}</span>
         {showPicker ? (
-          <ChevronUp size={20} color="rgba(231,231,231,0.7)" />
+          <ChevronUp size={20} color={vmTokens.textSecondary} />
         ) : (
-          <ChevronDown size={20} color="rgba(231,231,231,0.7)" />
+          <ChevronDown size={20} color={vmTokens.textSecondary} />
         )}
       </button>
 
@@ -144,8 +145,8 @@ export function ThemeSelector() {
                 data-testid={`theme-option-${option.value}`}
                 style={{
                   ...pickerItemBaseStyle,
-                  borderBottom: isLast ? 'none' : '1px solid #3a3a3a',
-                  background: isSelected ? 'rgba(255,255,255,0.05)' : 'transparent',
+                  borderBottom: isLast ? 'none' : `1px solid ${vmTokens.surfaceRaisedBorder}`,
+                  background: isSelected ? vmTokens.rowSelectedBg : 'transparent',
                 }}
               >
                 <div style={{ flex: 1, marginRight: 16 }}>
@@ -153,17 +154,17 @@ export function ThemeSelector() {
                     style={{
                       fontSize: 16,
                       fontWeight: isSelected ? 500 : 400,
-                      color: isSelected ? '#B09A6D' : '#E7E7E7',
+                      color: isSelected ? vmTokens.gold : vmTokens.textPrimary,
                       marginBottom: 2,
                     }}
                   >
                     {option.label}
                   </div>
-                  <div style={{ fontSize: 12, color: 'rgba(231,231,231,0.6)' }}>
+                  <div style={{ fontSize: 12, color: vmTokens.textTertiary }}>
                     {option.description}
                   </div>
                 </div>
-                {isSelected && <Check size={20} color="#B09A6D" />}
+                {isSelected && <Check size={20} color={vmTokens.gold} />}
               </button>
             );
           })}

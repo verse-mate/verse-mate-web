@@ -247,11 +247,11 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
         top: position.y,
         transform: 'translate(-50%, -100%)',
         zIndex: 60,
-        backgroundColor: '#1e1e1e',
-        border: '1px solid #3a3a3a',
+        backgroundColor: 'var(--card-bg)',
+        border: '1px solid var(--card-border)',
         borderRadius: 12,
         padding: '8px 10px',
-        boxShadow: '0 4px 20px rgba(0,0,0,0.5)',
+        boxShadow: '0 8px 24px rgba(27,27,27,0.16)',
         display: 'flex',
         flexDirection: 'column',
         gap: 6,
@@ -271,7 +271,7 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
               height: 20,
               borderRadius: '50%',
               backgroundColor: hex,
-              border: '2px solid rgba(255,255,255,0.15)',
+              border: '2px solid var(--card-border)',
               cursor: 'pointer',
               opacity: 1,
               padding: 0,
@@ -301,14 +301,14 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
               height: 20,
               borderRadius: '50%',
               backgroundColor: 'transparent',
-              border: '1px solid rgba(255,255,255,0.3)',
+              border: '1px solid var(--card-border)',
               cursor: 'pointer',
               padding: 0,
               marginLeft: 4,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: 'rgba(255,255,255,0.75)',
+              color: 'var(--fg-secondary)',
             }}
           >
             <Trash2 size={11} strokeWidth={2} />
@@ -328,10 +328,10 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
             gap: 4,
             padding: '6px 8px',
             borderRadius: 8,
-            backgroundColor: '#2a2a2a',
+            backgroundColor: 'var(--hover-bg)',
             border: 'none',
             cursor: 'pointer',
-            color: copied ? '#B09A6D' : '#ccc',
+            color: copied ? 'var(--vm-dust)' : 'var(--fg-primary)',
             fontFamily: 'Roboto, sans-serif',
             fontSize: 12,
           }}
@@ -349,15 +349,15 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
             gap: 4,
             padding: '6px 8px',
             borderRadius: 8,
-            backgroundColor: '#2a2a2a',
+            backgroundColor: 'var(--hover-bg)',
             border: 'none',
             cursor: 'pointer',
-            color: '#ccc',
+            color: 'var(--fg-primary)',
             fontFamily: 'Roboto, sans-serif',
             fontSize: 12,
           }}
         >
-          <ShareIcon size={13} color="#ccc" />
+          <ShareIcon size={13} color="var(--fg-primary)" />
           Share
         </button>
         <button
@@ -371,10 +371,10 @@ export default function SelectionToolbar({ book, chapter, bookId }: Props) {
             gap: 4,
             padding: '6px 8px',
             borderRadius: 8,
-            backgroundColor: '#2a2a2a',
+            backgroundColor: 'var(--hover-bg)',
             border: 'none',
             cursor: state.isSignedIn ? 'pointer' : 'not-allowed',
-            color: saved ? '#B09A6D' : '#ccc',
+            color: saved ? 'var(--vm-dust)' : 'var(--fg-primary)',
             fontFamily: 'Roboto, sans-serif',
             fontSize: 12,
             opacity: state.isSignedIn ? 1 : 0.5,

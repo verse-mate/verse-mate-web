@@ -35,18 +35,18 @@ export default function AddNoteSheet({ book, chapter, verse, onClose }: Props) {
   return (
     <>
       <div className="absolute inset-0 z-40 bg-black/60" onClick={onClose} />
-      <div className="absolute inset-x-0 bottom-0 z-50 bg-dark-surface rounded-t-[24px] border-t border-dark safe-bottom animate-slide-up">
+      <div className="absolute inset-x-0 bottom-0 z-50 bg-background rounded-t-[24px] border-t border-border safe-bottom animate-slide-up">
         <div className="flex justify-center pt-3">
-          <div className="w-10 h-1 rounded-full bg-dark-muted/40" />
+          <div className="w-10 h-1 rounded-full bg-muted-foreground/40" />
         </div>
         <div className="flex items-center justify-between px-4 pt-4 pb-2">
-          <h3 className="text-[16px] font-semibold text-dark-fg">Add Note</h3>
+          <h3 className="text-[16px] font-semibold text-foreground">Add Note</h3>
           <button onClick={onClose} aria-label="Close" className="w-9 h-9 flex items-center justify-center">
-            <X size={18} className="text-dark-fg" />
+            <X size={18} className="text-foreground" />
           </button>
         </div>
         <div className="px-4 pb-5 space-y-3">
-          <p className="text-[13px] text-dark-muted">
+          <p className="text-[13px] text-muted-foreground">
             {book} {chapter}:{verse}
           </p>
           <textarea
@@ -54,16 +54,16 @@ export default function AddNoteSheet({ book, chapter, verse, onClose }: Props) {
             onChange={e => setText(e.target.value.slice(0, maxChars))}
             placeholder="Write your note here (minimum 10 characters)..."
             rows={5}
-            className="w-full rounded-2xl bg-dark-raised border border-dark px-4 py-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
+            className="w-full rounded-2xl bg-secondary border border-border px-4 py-3 text-[14px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
           />
           <div className="flex items-center justify-between">
-            <span className="text-[11px] text-dark-muted">
+            <span className="text-[11px] text-muted-foreground">
               {text.length}/{maxChars}
             </span>
             <div className="flex gap-2">
               <button
                 onClick={onClose}
-                className="px-4 h-10 rounded-xl bg-dark-raised border border-dark text-dark-fg text-[13px] font-medium"
+                className="px-4 h-10 rounded-xl bg-secondary border border-border text-foreground text-[13px] font-medium"
               >
                 Cancel
               </button>

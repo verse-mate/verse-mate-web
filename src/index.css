@@ -8,7 +8,7 @@
   :root {
     /* ─── VerseMate production tokens (from packages/frontend-base/styles/vars.css) ─── */
 
-    /* Production colors */
+    /* Production colors — gold accent #b09a6d is preserved across both themes */
     --vm-night: #000;
     --vm-snow: #fff;
     --vm-dust: #b09a6d;
@@ -24,38 +24,85 @@
     --vm-oil: #1B1B1B;
     --vm-salmon: #f87171;
 
-    /* Header — black in production */
-    --header-bg: 0 0% 0%;
+    /* ─── Theme-aware semantic tokens (LIGHT) ─────────────────────────────
+       These flip in `.dark { ... }` below and are consumed by inline
+       styles across every screen via the helpers in
+       src/styles/themeStyles.ts. Hex values come straight from the
+       design handoff (design_handoff_versemate_light/styles/light.css). */
+
+    /* Page / outer chrome */
+    --vm-page-bg: #FAF6EA;             /* cream paper — main page background */
+    --vm-chrome-bg: #FAF6EA;           /* desktop centering chrome */
+
+    /* Raised surfaces (cards, pickers, modals, inputs) */
+    --vm-surface-raised-bg: #FFFFFF;
+    --vm-surface-raised-border: #EDE7D8;
+    --vm-divider: #EDE7D8;
+
+    /* Text */
+    --vm-text-primary: #1B1B1B;
+    --vm-text-secondary: rgba(27, 27, 27, 0.62);
+    --vm-text-tertiary: rgba(27, 27, 27, 0.5);
+    --vm-text-muted: rgba(27, 27, 27, 0.42);
+
+    /* Inputs */
+    --vm-input-bg: #FFFFFF;
+    --vm-input-border: #E8E1CE;
+
+    /* Rows / hover / selected */
+    --vm-row-selected-bg: rgba(27, 27, 27, 0.05);
+    --vm-hover-bg: #F4EFE0;
+
+    /* Status (slightly different per-theme to maintain WCAG on bg) */
+    --vm-status-error: #B91C1C;
+    --vm-status-success: #15803D;
+
+    /* Very faint divider — used inside cards for sub-dividers */
+    --vm-faint-divider: rgba(27, 27, 27, 0.08);
+
+    /* Desktop books sidebar — cream in light per design's --bg-sidebar */
+    --vm-sidebar-bg: #FAF6EA;
+    --vm-sidebar-border: #EDE6D2;
+
+    /* Right-pane commentary surface — white in light per --bg-commentary */
+    --vm-commentary-bg: #FFFFFF;
+
+    /* Sidebar chapter cells — design spec .chapter-cell */
+    --vm-chapter-cell-bg: #F4ECD4;
+    --vm-chapter-cell-border: #E8DCB6;
+
+    /* Header — always dark for brand consistency, per design spec */
+    --header-bg: 0 0% 11%;             /* #1B1B1B */
     --header-fg: 0 0% 100%;
 
-    /* Reading body (production uses --fantasy #f6f3ec) */
-    --background: 39 43% 95%;          /* #f6f3ec */
-    --foreground: 210 16% 16%;         /* #212531 */
+    /* Reading body — cream in light, near-black in dark */
+    --background: 41 50% 95%;          /* #FAF6EA — cream */
+    --foreground: 0 0% 11%;            /* #1B1B1B */
 
-    --card: 39 43% 95%;
-    --card-foreground: 210 16% 16%;
+    --card: 0 0% 100%;                 /* #FFFFFF */
+    --card-foreground: 0 0% 11%;
 
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
 
-    --primary: 0 0% 0%;
-    --primary-foreground: 39 43% 95%;
+    --primary: 0 0% 11%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 39 15% 90%;
-    --secondary-foreground: 210 16% 16%;
+    --secondary: 41 35% 90%;
+    --secondary-foreground: 0 0% 11%;
 
-    --muted: 210 7% 88%;               /* #dce0e3 geyser */
-    --muted-foreground: 206 7% 53%;    /* #818990 oslo-gray */
+    --muted: 41 25% 88%;
+    --muted-foreground: 0 0% 35%;
 
-    /* Gold accent = production --dust */
+    /* Gold accent = production --dust (same on both themes) */
     --accent: 38 29% 56%;              /* #b09a6d */
-    --accent-foreground: 0 0% 0%;
+    --accent-foreground: 0 0% 11%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 0 72% 42%;          /* slightly darker for cream bg */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 7% 88%;              /* geyser */
-    --input: 210 7% 88%;
+    --border: 41 35% 86%;              /* warm cream border */
+    --input: 41 35% 86%;
     --ring: 38 29% 56%;
 
     --radius: 0.5rem;
@@ -97,23 +144,116 @@
     --ahl-brown-bg: rgb(121 85 72 / 30%);
     --ahl-brown-border: rgb(121 85 72 / 50%);
 
-    /* Desktop chrome */
-    --chrome-bg: 0 0% 85%;
+    /* Desktop chrome — cream in light, near-black in dark */
+    --chrome-bg: 41 50% 95%;           /* #FAF6EA */
 
-    /* Dark surface (sheets, selectors, menu drawer — overlays stay dark) */
+    /* Dark surface (sheets, selectors, menu drawer — overlays stay dark on
+       BOTH themes per design spec). These are referenced by .bg-dark-surface
+       / .bg-dark-raised utility classes used in app shell overlays. */
     --dark-surface: 0 0% 0%;           /* #000 — overlays */
     --dark-surface-raised: 0 0% 19.6%; /* #323232 — pill containers, card bg */
     --dark-surface-fg: 0 0% 100%;
     --dark-surface-muted: 0 0% 60%;
     --dark-border: 0 0% 19.6%;         /* #323232 */
 
-    --sidebar-background: 0 0% 100%;
+    --sidebar-background: 41 50% 95%;
     --sidebar-foreground: 0 0% 11%;
     --sidebar-primary: 0 0% 11%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent: 41 35% 90%;
     --sidebar-accent-foreground: 0 0% 11%;
-    --sidebar-border: 210 7% 88%;
+    --sidebar-border: 41 35% 86%;
+    --sidebar-ring: 38 29% 56%;
+  }
+
+  /* ─── Theme-aware semantic tokens (DARK) ───────────────────────────────
+     Applied when <html class="dark"> is present. The AppContext effect at
+     src/contexts/AppContext.tsx:261 toggles this class based on
+     state.settings.theme ('dark' | 'light' | 'system'). */
+  .dark {
+    /* Page / outer chrome */
+    --vm-page-bg: #000000;
+    --vm-chrome-bg: #1B1B1B;
+
+    /* Raised surfaces */
+    --vm-surface-raised-bg: #323232;
+    --vm-surface-raised-border: #3a3a3a;
+    --vm-divider: #323232;
+
+    /* Text */
+    --vm-text-primary: #E7E7E7;
+    --vm-text-secondary: rgba(231, 231, 231, 0.7);
+    --vm-text-tertiary: rgba(231, 231, 231, 0.6);
+    --vm-text-muted: rgba(231, 231, 231, 0.5);
+
+    /* Inputs */
+    --vm-input-bg: #323232;
+    --vm-input-border: #3a3a3a;
+
+    /* Rows / hover / selected */
+    --vm-row-selected-bg: rgba(255, 255, 255, 0.05);
+    --vm-hover-bg: rgba(255, 255, 255, 0.05);
+
+    /* Status */
+    --vm-status-error: #dc2626;
+    --vm-status-success: #22c55e;
+
+    /* Very faint divider — white-with-opacity in dark */
+    --vm-faint-divider: rgba(255, 255, 255, 0.1);
+
+    /* Desktop books sidebar — near-black in dark */
+    --vm-sidebar-bg: #111111;
+    --vm-sidebar-border: #2a2a2a;
+
+    /* Right-pane commentary surface — black in dark */
+    --vm-commentary-bg: #000000;
+
+    /* Sidebar chapter cells — near-black with subtle border in dark */
+    --vm-chapter-cell-bg: #1e1e1e;
+    --vm-chapter-cell-border: #2a2a2a;
+
+    /* shadcn HSL tokens — dark equivalents */
+    --header-bg: 0 0% 0%;
+    --header-fg: 0 0% 100%;
+
+    --background: 0 0% 0%;             /* #000 — page bg in dark */
+    --foreground: 0 0% 91%;            /* #E7E7E7 */
+
+    --card: 0 0% 19.6%;                /* #323232 */
+    --card-foreground: 0 0% 91%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 91%;
+    --primary-foreground: 0 0% 11%;
+
+    --secondary: 0 0% 19.6%;
+    --secondary-foreground: 0 0% 91%;
+
+    --muted: 0 0% 23%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 38 29% 56%;              /* gold stays gold */
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 22.7%;              /* #3a3a3a */
+    --input: 0 0% 22.7%;
+    --ring: 38 29% 56%;
+
+    /* Desktop chrome — near-black backdrop behind the centered app shell */
+    --chrome-bg: 0 0% 11%;             /* #1B1B1B */
+
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 91%;
+    --sidebar-primary: 0 0% 91%;
+    --sidebar-primary-foreground: 0 0% 11%;
+    --sidebar-accent: 0 0% 19.6%;
+    --sidebar-accent-foreground: 0 0% 91%;
+    --sidebar-border: 0 0% 22.7%;
     --sidebar-ring: 38 29% 56%;
   }
 }
@@ -243,11 +383,14 @@
   }
 }
 
-/* Desktop: centered content with max-width */
+/* Desktop: centered content with max-width.
+   The backdrop behind the centered app shell uses the theme-aware chrome
+   token so it flips to cream (#FAF6EA) in light mode and near-black
+   (#1B1B1B) in dark mode. */
 @media (min-width: 1024px) {
   #root {
     justify-content: center;
-    background-color: #1B1B1B;
+    background-color: hsl(var(--chrome-bg));
   }
 }
 /* ─── Chapter nav buttons: bottom-anchored on phone, vertically centered on desktop ─── */
@@ -288,12 +431,13 @@
 /* ─── Desktop: interactive element hover states ─── */
 @media (min-width: 1024px) {
   .chapter-nav-btn:hover {
-    background-color: #444 !important;
+    background-color: var(--vm-hover-bg) !important;
     transition: background-color 0.15s ease;
   }
 }
 
-/* ─── Mini-sidebar thin scrollbar ─── */
+/* ─── Mini-sidebar thin scrollbar — uses theme-aware divider tokens
+       so the thumb reads as a subtle accent in both themes. */
 .mini-sidebar-scroll::-webkit-scrollbar {
   width: 3px;
 }
@@ -301,11 +445,11 @@
   background: transparent;
 }
 .mini-sidebar-scroll::-webkit-scrollbar-thumb {
-  background: #333;
+  background: var(--vm-divider);
   border-radius: 2px;
 }
 .mini-sidebar-scroll::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--vm-surface-raised-border);
 }
 
 /* ─── Desktop: visible thin scrollbar on all scrollable panels ─── */
@@ -317,11 +461,11 @@
     background: transparent;
   }
   *::-webkit-scrollbar-thumb {
-    background: #3a3a3a;
+    background: var(--vm-surface-raised-border);
     border-radius: 3px;
   }
   *::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: var(--vm-text-muted);
   }
   /* Keep mini-sidebar narrower */
   .mini-sidebar-scroll::-webkit-scrollbar {
@@ -338,12 +482,14 @@
   appearance: none;
   width: 100%;
   height: 6px;
+  /* Gold fill left of thumb; theme-aware track to the right (cream-edge in
+     light, near-black in dark — both readable against page bg). */
   background: linear-gradient(
     to right,
     #b09a6d 0%,
     #b09a6d var(--vm-progress, 50%),
-    #1b1b1b var(--vm-progress, 50%),
-    #1b1b1b 100%
+    var(--vm-surface-raised-border) var(--vm-progress, 50%),
+    var(--vm-surface-raised-border) 100%
   );
   border-radius: 3px;
   outline: none;

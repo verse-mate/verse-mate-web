@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
-import { fetchCommentary, fetchBooks } from '@/services/bibleService';
+import { fetchCommentary, fetchBooks, fetchChapter } from '@/services/bibleService';
 import { BibleBook } from '@/services/types';
 import { Commentary } from '@/services/types';
 import {
@@ -35,6 +35,7 @@ import AboutScreen from '@/pages/AboutScreen';
 import GivingScreen from '@/pages/GivingScreen';
 import HelpScreen from '@/pages/HelpScreen';
 import SignInScreen from '@/pages/SignInScreen';
+import { vmTokens } from '@/styles/themeStyles';
 
 type RightPanelView = 'commentary' | 'bookmarks' | 'notes' | 'highlights' | 'settings' | 'about' | 'giving' | 'help' | 'signin';
 
@@ -147,14 +148,23 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     try { sessionStorage.setItem('versemate-commentary-tab', tab); } catch { /* ignore */ }
   }, [tab]);
   const [commentaries, setCommentaries] = useState<Commentary[]>([]);
+  const [verseTexts, setVerseTexts] = useState<Record<number, string>>({});
   const [expanded, setExpanded] = useState<number | null>(-2); // -2 = all expanded by default
   const commentaryScrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetchCommentary(state.book, state.chapter).then(setCommentaries);
+    // Also fetch the chapter so we can render verse text inside .byline-body
+    // .byline-verse-quote (prototype shows the quoted verse above the
+    // "Summary" block — the byline API only returns commentary, not verses).
+    fetchChapter(state.book, state.chapter, state.version).then(ch => {
+      const map: Record<number, string> = {};
+      for (const v of ch?.verses || []) map[v.number] = v.text;
+      setVerseTexts(map);
+    });
     setExpanded(-2); // Reset to all-expanded on chapter change
     commentaryScrollRef.current?.scrollTo(0, 0); // Scroll commentary to top
-  }, [state.book, state.chapter]);
+  }, [state.book, state.chapter, state.version]);
 
   // Auto-scroll removed — users scroll the Insights panel independently
 
@@ -245,29 +255,19 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const isSidebarCompact = sidebarWidth < SIDEBAR_COMPACT_THRESHOLD;
 
   return (
-    <div data-testid="desktop-layout" style={{ display: 'flex', width: '100vw', height: '100dvh', overflow: 'hidden', backgroundColor: '#1B1B1B' }}>
-      {/* ─── PERSISTENT SIDEBAR — expands on book click to show chapters ─── */}
+    // Prototype layout: .app-shell wraps the sidebar + main column.
+    // .sidebar / .sidebar-header / .sidebar-scroll come straight from
+    // src/styles/prototype.css. Inline overrides are kept to a minimum.
+    <div data-testid="desktop-layout" className="app-shell">
+      {/* ─── PERSISTENT SIDEBAR ─── */}
       {sidebarOpen && (
-        <div
+        <aside
           data-testid="desktop-sidebar"
-          style={{
-            width: sidebarWidth,
-            flexShrink: 0,
-            height: '100%',
-            backgroundColor: '#111111',
-            borderRight: '1px solid #2a2a2a',
-            display: 'flex',
-            flexDirection: 'column',
-            overflow: 'hidden',
-            position: 'relative',
-          }}
+          className="sidebar"
+          style={{ width: sidebarWidth }}
         >
-          {/* Sidebar header — "Bible" label */}
-          <div style={{ height: 56, display: 'flex', alignItems: 'center', justifyContent: isSidebarCompact ? 'center' : 'flex-start', padding: isSidebarCompact ? 0 : '0 16px', flexShrink: 0, borderBottom: '1px solid #2a2a2a' }}>
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '20px', fontWeight: 600, color: '#B09A6D', letterSpacing: '0.5px' }}>Books</span>
-          </div>
-          {/* Book list */}
-          <div style={{ flex: 1, overflowY: 'auto', padding: '4px 0' }} className="mini-sidebar-scroll">
+          <div className="sidebar-header">Books</div>
+          <div className="sidebar-scroll mini-sidebar-scroll">
             <SidebarSection
               label="Old Testament"
               books={otBooks}
@@ -306,71 +306,37 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             data-testid="desktop-sidebar-divider"
             aria-label="Resize sidebar"
             role="separator"
-            style={{
-              position: 'absolute',
-              top: 0,
-              right: 0,
-              width: 6,
-              height: '100%',
-              cursor: 'col-resize',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              touchAction: 'none',
-              zIndex: 5,
-            }}
+            style={{ position: 'absolute', top: 0, right: 0, width: 6, height: '100%', cursor: 'col-resize', display: 'flex', alignItems: 'center', justifyContent: 'center', touchAction: 'none', zIndex: 5 }}
           >
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-              {[0, 1, 2].map(i => (
-                <div key={i} style={{ width: 3, height: 3, borderRadius: '50%', backgroundColor: '#555' }} />
-              ))}
+            <div className="divider-dots">
+              {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
             </div>
           </div>
-        </div>
+        </aside>
       )}
 
       {/* ─── MAIN CONTENT AREA (header + split panels) ─── */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-        {/* ─── SHARED FULL-WIDTH HEADER ─── */}
-        <header
-          // paddingLeft mirrors ReadingScreen's body padding (px-4 md:px-12
-          // lg:px-16) so the book-name button in the header aligns with the
-          // left edge of the bible text below it. Right padding stays 16px
-          // so the hamburger sits close to the screen edge.
-          className="pl-4 md:pl-12 lg:pl-16 pr-4"
-          style={{
-            flexShrink: 0,
-            height: 56,
-            backgroundColor: '#1A1A1A',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            borderBottom: '1px solid #2a2a2a',
-            position: 'relative',
-          }}
-        >
-          {/* Left: Book/chapter dropdown */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-            <button
-              onClick={() => setShowBookSelector(true)}
-              data-testid="desktop-chapter-selector-button"
-              style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#FFFFFF', background: 'none', border: 'none', cursor: 'pointer', padding: '0 8px', minHeight: 44 }}
-            >
-              <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '20px', color: '#FFFFFF' }}>
-                {state.book} {state.chapter}
-              </span>
-              <ChevronDown size={18} color="#FFFFFF" strokeWidth={2} />
-            </button>
+        {/* Prototype .app-header — chapter-selector-btn LEFT, logo CENTER,
+            commentary pill-group absolutely positioned over right panel,
+            hamburger icon-btn RIGHT. Padding comes from prototype.css
+            (0 16px 0 64px). */}
+        <header className="app-header">
+          <button
+            className="chapter-selector-btn"
+            onClick={() => setShowBookSelector(true)}
+            data-testid="desktop-chapter-selector-button"
+          >
+            <span>{state.book} {state.chapter}</span>
+            <ChevronDown size={18} color={vmTokens.headerFg} strokeWidth={2} />
+          </button>
+
+          <div className="logo-mark">
+            <img src="/versemate-logo-white.png" alt="VerseMate" className="logo-img" />
           </div>
 
-          {/* Center: VerseMate logo */}
-          <img src="/versemate-logo-white.png" alt="VerseMate" style={{ height: 20, objectFit: 'contain', position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }} />
-
-          {/* Commentary tabs — absolutely positioned at the horizontal center
-              of the right panel so they sit directly above the panel they
-              control. As the user resizes the split, leftPct changes and the
-              pill shifts with it. The right panel spans leftPct% → 100% of the
-              header width; its center is therefore (100 + leftPct) / 2 %. */}
+          {/* Commentary pill-group — absolute-positioned at the horizontal
+              center of the right panel (split-aware). */}
           {rightPanelView === 'commentary' && (
             <div
               style={{
@@ -378,122 +344,130 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 top: '50%',
                 left: `${(100 + leftPct) / 2}%`,
                 transform: 'translate(-50%, -50%)',
-                display: 'flex',
-                backgroundColor: '#323232',
-                borderRadius: 100,
-                padding: '3px',
                 zIndex: 2,
               }}
             >
-              {tabs.map(t => (
-                <button
-                  key={t.id}
-                  onClick={() => setTab(t.id)}
-                  data-testid={`desktop-tab-${t.id}`}
-                  style={{
-                    borderRadius: 100,
-                    padding: '4px 14px',
-                    fontFamily: 'Roboto, sans-serif',
-                    fontSize: 14,
-                    fontWeight: 400,
-                    lineHeight: '20px',
-                    whiteSpace: 'nowrap',
-                    backgroundColor: tab === t.id ? '#B09A6D' : 'transparent',
-                    color: tab === t.id ? '#000000' : '#FFFFFF',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                >
-                  {t.label}
-                </button>
-              ))}
+              <div className="pill-group">
+                {tabs.map(t => (
+                  <button
+                    key={t.id}
+                    className={`pill ${tab === t.id ? 'active' : ''}`}
+                    onClick={() => setTab(t.id)}
+                    data-testid={`desktop-tab-${t.id}`}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
             </div>
           )}
 
-          {/* Right: hamburger menu only */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          {/* Sub-screen back chevron — anchored to the LEFT edge of the
+              right pane so it sits flush with the right-pane box. */}
+          {rightPanelView !== 'commentary' && (() => {
+            const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
+            if (!entry) return null;
+            return (
+              <button
+                className="icon-btn"
+                onClick={closeRightPanel}
+                aria-label={`Close ${entry.label}`}
+                data-testid="desktop-right-panel-close"
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: `${leftPct}%`,
+                  transform: 'translateY(-50%)',
+                  marginLeft: 12,
+                  zIndex: 2,
+                  color: vmTokens.headerFg,
+                }}
+              >
+                <ArrowLeft size={20} color={vmTokens.headerFg} strokeWidth={2} />
+              </button>
+            );
+          })()}
+
+          {/* Sub-screen title — centered horizontally over the right pane,
+              independent of the back-chevron position. */}
+          {rightPanelView !== 'commentary' && (() => {
+            const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
+            if (!entry) return null;
+            return (
+              <span
+                data-testid="desktop-right-panel-title"
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: `${(100 + leftPct) / 2}%`,
+                  transform: 'translate(-50%, -50%)',
+                  zIndex: 2,
+                  fontFamily: 'Roboto, sans-serif',
+                  fontWeight: 600,
+                  fontSize: 17,
+                  color: vmTokens.headerFg,
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {entry.label}
+              </span>
+            );
+          })()}
+
+          {/* Right: hamburger menu only — prototype .icon-btn */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, position: 'relative', zIndex: 3 }}>
             <button
+              className="icon-btn"
               onClick={() => setShowMenu(!showMenu)}
               aria-label="Open menu"
               data-testid="desktop-hamburger-menu-button"
-              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, background: 'none', border: 'none', cursor: 'pointer' }}
             >
-              <Menu size={22} color="#FFFFFF" strokeWidth={2} />
+              <Menu size={22} color={vmTokens.headerFg} strokeWidth={2} />
             </button>
           </div>
         </header>
 
-        {/* ─── SPLIT BODY ─── */}
-        <div ref={contentRef} data-testid="desktop-split-body" style={{ flex: 1, display: 'flex', overflow: 'hidden', position: 'relative' }}>
-          {/* LEFT PANEL — Bible reading */}
+        {/* Prototype .split-body — left/right panels separated by .divider */}
+        <div ref={contentRef} data-testid="desktop-split-body" className="split-body">
           <div
             data-testid="desktop-left-panel"
-            style={{
-              width: `${leftPct}%`,
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              overflow: 'hidden',
-            }}
+            className="left-panel"
+            style={{ width: `${leftPct}%` }}
           >
             <Outlet />
           </div>
 
-          {/* DRAG HANDLE */}
+          {/* Drag handle — prototype .divider with .divider-dots */}
           <div
+            className="divider"
             onPointerDown={handleDragStart}
             data-testid="desktop-split-divider"
-            style={{
-              width: 6,
-              flexShrink: 0,
-              cursor: 'col-resize',
-              backgroundColor: '#2a2a2a',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              position: 'relative',
-              zIndex: 10,
-              touchAction: 'none',
-            }}
           >
-            {/* Visual grip dots */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-              {[0, 1, 2].map(i => (
-                <div key={i} style={{ width: 3, height: 3, borderRadius: '50%', backgroundColor: '#555' }} />
-              ))}
+            <div className="divider-dots">
+              {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
             </div>
           </div>
 
-          {/* RIGHT PANEL — Commentary or menu page content */}
-          <div
-            data-testid="desktop-right-panel"
-            style={{
-              flex: 1,
-              minWidth: 0,
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              overflow: 'hidden',
-              backgroundColor: '#1B1B1B',
-            }}
-          >
+          {/* Right panel — commentary OR sub-page */}
+          <div data-testid="desktop-right-panel" className="right-panel">
             {rightPanelView === 'commentary' ? (
-              <>
-                {/* Commentary body — tabs now in top header */}
-                <div ref={commentaryScrollRef} style={{ flex: 1, overflowY: 'auto', backgroundColor: '#000000', color: '#FFFFFF', padding: '16px 16px 32px', fontFamily: "'Roboto Serif', Georgia, serif", fontWeight: 300, fontSize: `${state.settings.fontSize}px`, lineHeight: '34px' }}>
-                  <CommentaryPanel
-                    tab={tab}
-                    commentaries={commentaries}
-                    expanded={expanded}
-                    setExpanded={setExpanded}
-                    book={state.book}
-                    bookId={currentBook?.bookId ?? null}
-                    chapter={state.chapter}
-                  />
-                </div>
-              </>
+              <div
+                ref={commentaryScrollRef}
+                className="commentary-body"
+                style={{ fontSize: `${state.settings.fontSize}px` }}
+              >
+                <CommentaryPanel
+                  tab={tab}
+                  commentaries={commentaries}
+                  verseTexts={verseTexts}
+                  expanded={expanded}
+                  setExpanded={setExpanded}
+                  book={state.book}
+                  bookId={currentBook?.bookId ?? null}
+                  chapter={state.chapter}
+                />
+              </div>
             ) : (
-              /* Menu page content — wrapped with RightPanelProvider so ScreenHeader back buttons work */
               <RightPanelProvider value={{ goBack: closeRightPanel, isRightPanel: true }}>
                 <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                   {(() => {
@@ -512,25 +486,8 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
       {/* Menu sidebar overlay — fixed to viewport so it always appears correctly */}
       {showMenu && (
         <>
-          <div
-            onClick={() => setShowMenu(false)}
-            style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 40 }}
-          />
-          <div
-            style={{
-              position: 'fixed',
-              right: 0,
-              top: 0,
-              width: 280,
-              height: '100%',
-              backgroundColor: '#1B1B1B',
-              zIndex: 50,
-              boxShadow: '-4px 0 20px rgba(0,0,0,0.3)',
-              display: 'flex',
-              flexDirection: 'column',
-              overflow: 'hidden',
-            }}
-          >
+          <div className="scrim" onClick={() => setShowMenu(false)} />
+          <div className="menu-panel">
             <MenuSidebar
               onClose={() => setShowMenu(false)}
               onOpenPage={(view: RightPanelView) => { openRightPanel(view); setShowMenu(false); }}
@@ -603,31 +560,15 @@ function SidebarSection({
     <>
       <button
         type="button"
+        className="section-header"
         onClick={onSectionToggle}
         aria-expanded={sectionOpen}
         data-testid={`sidebar-section-${label.toLowerCase().replace(/\s+/g, '-')}`}
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: isExpanded ? 'space-between' : 'center',
-          width: '100%',
-          background: 'none',
-          border: 'none',
-          cursor: 'pointer',
-          fontFamily: 'Roboto, sans-serif',
-          fontSize: isExpanded ? 14 : 11,
-          fontWeight: 700,
-          color: '#B09A6D',
-          textAlign: isExpanded ? 'left' : 'center',
-          padding: isExpanded ? '14px 12px 6px' : '12px 4px 6px',
-          letterSpacing: '0.5px',
-          gap: 6,
-        }}
       >
         <span>{isExpanded ? label : (label === 'Old Testament' ? 'OT' : 'NT')}</span>
         <ChevronDown
-          size={isExpanded ? 14 : 10}
-          color="#B09A6D"
+          size={14}
+          color={vmTokens.gold}
           style={{ flexShrink: 0, transform: sectionOpen ? 'rotate(0deg)' : 'rotate(-90deg)', transition: 'transform 0.15s' }}
         />
       </button>
@@ -637,58 +578,28 @@ function SidebarSection({
         return (
           <div key={b.bookId}>
             <button
+              className={`book-row ${isActive ? 'active' : ''} ${isBookExpanded ? 'expanded' : ''}`}
               onClick={() => onBookClick(b)}
               title={b.name}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                width: '100%',
-                padding: isExpanded ? '6px 12px' : '5px 4px',
-                fontFamily: 'Roboto, sans-serif',
-                fontSize: isExpanded ? 15 : 10,
-                fontWeight: isActive ? 600 : 400,
-                color: isActive ? '#B09A6D' : 'rgba(255,255,255,0.6)',
-                backgroundColor: isBookExpanded ? 'rgba(176,154,109,0.08)' : isActive ? 'rgba(176,154,109,0.12)' : 'transparent',
-                border: 'none',
-                cursor: 'pointer',
-                textAlign: isExpanded ? 'left' : 'center',
-                lineHeight: '18px',
-                borderLeft: isActive ? '2px solid #B09A6D' : '2px solid transparent',
-                justifyContent: isExpanded ? 'space-between' : 'center',
-                gap: 4,
-              }}
             >
               <span>{isExpanded ? b.name : b.shortName}</span>
               {isExpanded && (
                 <ChevronDown
                   size={12}
-                  color="rgba(255,255,255,0.3)"
+                  color={vmTokens.textMuted}
                   style={{ flexShrink: 0, transform: isBookExpanded ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }}
                 />
               )}
             </button>
-            {/* Chapter grid — only shown when expanded */}
+            {/* Prototype .chapter-grid / .chapter-cell — cream-gold cells in
+                light, near-black in dark. Styling fully in prototype.css. */}
             {isBookExpanded && (
-              <div style={{ display: 'grid', gridTemplateColumns: `repeat(${isExpanded ? 5 : 3}, 1fr)`, gap: 2, padding: isExpanded ? '4px 10px 8px' : '4px 6px 8px' }}>
+              <div className="chapter-grid">
                 {Array.from({ length: b.chapters }, (_, i) => i + 1).map(ch => (
                   <button
                     key={ch}
+                    className={`chapter-cell ${isActive && activeChapter === ch ? 'active' : ''}`}
                     onClick={() => onChapterClick(b, ch)}
-                    style={{
-                      width: '100%',
-                      aspectRatio: '1',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontFamily: 'Roboto, sans-serif',
-                      fontSize: 11,
-                      fontWeight: isActive && activeChapter === ch ? 600 : 400,
-                      color: isActive && activeChapter === ch ? '#000' : 'rgba(255,255,255,0.7)',
-                      backgroundColor: isActive && activeChapter === ch ? '#B09A6D' : '#1e1e1e',
-                      border: 'none',
-                      borderRadius: 4,
-                      cursor: 'pointer',
-                    }}
                   >
                     {ch}
                   </button>
@@ -707,6 +618,7 @@ function SidebarSection({
 function CommentaryPanel({
   tab,
   commentaries,
+  verseTexts,
   expanded,
   setExpanded,
   book,
@@ -715,6 +627,7 @@ function CommentaryPanel({
 }: {
   tab: Tab;
   commentaries: Commentary[];
+  verseTexts: Record<number, string>;
   expanded: number | null;
   setExpanded: (v: number | null) => void;
   book: string;
@@ -752,7 +665,7 @@ function CommentaryPanel({
 
   if (commentaries.length === 0) {
     return (
-      <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
+      <p style={{ color: vmTokens.textSecondary, fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
         No commentary available for this chapter.
       </p>
     );
@@ -762,11 +675,11 @@ function CommentaryPanel({
     const summary = commentaries.find(c => c.type === 'summary');
     return (
       <div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
-          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#E7E7E7', margin: 0 }}>
+        <div className="commentary-toolbar">
+          <h2 className="commentary-h2">
             Summary of {book} {chapter}
           </h2>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
+          <div className="commentary-actions">
             <button
               onClick={() => {
                 const body = summary?.detail
@@ -779,8 +692,8 @@ function CommentaryPanel({
               title="Copy summary"
             >
               {copiedTab === 'summary'
-                ? <Check size={18} color="#B09A6D" strokeWidth={2} />
-                : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
+                ? <Check size={18} color={vmTokens.gold} strokeWidth={2} />
+                : <Copy size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />}
             </button>
             <button
               onClick={() => navigator.share?.({
@@ -793,7 +706,7 @@ function CommentaryPanel({
               style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
               aria-label="Share summary"
             >
-              <ShareIcon size={18} color="#E7E7E7" />
+              <ShareIcon size={18} color={vmTokens.textPrimary} />
             </button>
           </div>
         </div>
@@ -813,7 +726,7 @@ function CommentaryPanel({
             <CommentaryBody text={summary.detail} />
           </>
         ) : (
-          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}>No summary available.</p>
+          <p style={{ color: vmTokens.textSecondary, fontSize: 14 }}>No summary available.</p>
         )}
       </div>
     );
@@ -824,11 +737,11 @@ function CommentaryPanel({
     const allExpanded = expanded === -2;
     return (
       <div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
-          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#E7E7E7', margin: 0 }}>
+        <div className="commentary-toolbar">
+          <h2 className="commentary-h2">
             Line-by-Line Analysis of {book} {chapter}
           </h2>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
+          <div className="commentary-actions">
             <button
               onClick={() => {
                 const body = byLineItems
@@ -839,13 +752,13 @@ function CommentaryPanel({
                   : `Line-by-Line Analysis of ${book} ${chapter}`;
                 copyToClipboard(text, 'byline');
               }}
-              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
+              className="icon-btn"
               aria-label="Copy line-by-line analysis"
               title="Copy line-by-line analysis"
             >
               {copiedTab === 'byline'
-                ? <Check size={18} color="#B09A6D" strokeWidth={2} />
-                : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
+                ? <Check size={18} color={vmTokens.gold} strokeWidth={2} />
+                : <Copy size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />}
             </button>
             <button
               onClick={() => {
@@ -860,17 +773,17 @@ function CommentaryPanel({
                   url: window.location.href,
                 }).catch(() => {});
               }}
-              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
+              className="icon-btn"
               aria-label="Share line-by-line analysis"
             >
-              <ShareIcon size={18} color="#E7E7E7" />
+              <ShareIcon size={18} color={vmTokens.textPrimary} />
             </button>
           </div>
         </div>
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
           <button
+            className="expand-all-btn"
             onClick={() => setExpanded(allExpanded ? null : -2)}
-            style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, color: '#B09A6D', background: 'none', border: 'none', cursor: 'pointer' }}
           >
             {allExpanded ? 'Collapse All' : 'Expand All'}
           </button>
@@ -889,34 +802,39 @@ function CommentaryPanel({
             </div>
           ) : null;
         })()}
-        <div>
+        <div className="byline-list">
           {byLineItems.map(c => {
             const isOpen = allExpanded || expanded === c.verse;
             return (
-              <div key={c.verse} data-byline-verse={c.verse} style={{ borderBottom: '1px solid #323232' }}>
+              <div key={c.verse} data-byline-verse={c.verse} className={`byline-row ${isOpen ? 'open' : ''}`}>
                 <button
+                  className="byline-toggle"
                   onClick={() => setExpanded(isOpen ? null : c.verse)}
-                  style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '14px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer' }}
                 >
-                  <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, color: '#FFFFFF' }}>
-                    {book} {chapter}:{c.verse}
-                  </span>
+                  <span className="byline-ref-sm">{book} {chapter}:{c.verse}</span>
                   {isOpen ? (
-                    <ChevronUp size={16} color="rgba(255,255,255,0.6)" style={{ flexShrink: 0 }} />
+                    <ChevronUp size={16} color={vmTokens.textSecondary} style={{ flexShrink: 0 }} />
                   ) : (
-                    <ChevronDown size={16} color="rgba(255,255,255,0.6)" style={{ flexShrink: 0 }} />
+                    <ChevronDown size={16} color={vmTokens.textSecondary} style={{ flexShrink: 0 }} />
                   )}
                 </button>
                 {isOpen && (
-                  <div style={{ paddingBottom: 14 }}>
-                    <CommentaryBody text={c.detail} />
+                  <div className="byline-body">
+                    <div className="byline-ref-strong">{book} {chapter}:{c.verse}</div>
+                    {verseTexts[c.verse] && (
+                      <blockquote className="byline-verse-quote">{verseTexts[c.verse]}</blockquote>
+                    )}
+                    <div className="byline-summary-label">Summary</div>
+                    <div className="byline-summary-text">
+                      <CommentaryBody text={stripBylineHeader(c.detail)} />
+                    </div>
                   </div>
                 )}
               </div>
             );
           })}
           {byLineItems.length === 0 && (
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
+            <p style={{ color: vmTokens.textSecondary, fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
               Line-by-line analysis not available.
             </p>
           )}
@@ -929,11 +847,11 @@ function CommentaryPanel({
   const detailed = commentaries.find(c => c.type === 'detailed');
   return detailed ? (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
-        <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 18, lineHeight: '26px', color: '#E7E7E7', margin: 0 }}>
+      <div className="commentary-toolbar">
+        <h2 className="commentary-h2">
           In-Depth Analysis of {book} {chapter}
         </h2>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
+        <div className="commentary-actions">
           <button
             onClick={() => {
               const body = detailed.detail
@@ -946,8 +864,8 @@ function CommentaryPanel({
             title="Copy in-depth analysis"
           >
             {copiedTab === 'detailed'
-              ? <Check size={18} color="#B09A6D" strokeWidth={2} />
-              : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
+              ? <Check size={18} color={vmTokens.gold} strokeWidth={2} />
+              : <Copy size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />}
           </button>
           <button
             onClick={() => navigator.share?.({
@@ -960,7 +878,7 @@ function CommentaryPanel({
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
             aria-label="Share in-depth analysis"
           >
-            <ShareIcon size={18} color="#E7E7E7" />
+            <ShareIcon size={18} color={vmTokens.textPrimary} />
           </button>
         </div>
       </div>
@@ -978,7 +896,7 @@ function CommentaryPanel({
       <CommentaryBody text={detailed.detail} />
     </div>
   ) : (
-    <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
+    <p style={{ color: vmTokens.textSecondary, fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
       Detailed commentary not available.
     </p>
   );
@@ -1000,7 +918,7 @@ function CommentaryBody({ text }: { text: string }) {
   const flushPara = () => {
     if (para.length) {
       elements.push(
-        <p key={key++} style={{ fontFamily: 'inherit', fontWeight: 300, fontSize: 'inherit', lineHeight: 'inherit', color: 'rgba(255,255,255,0.87)', marginBottom: 10 }}>
+        <p key={key++} style={{ fontFamily: 'inherit', fontWeight: 300, fontSize: 'inherit', lineHeight: 'inherit', color: vmTokens.textPrimary, marginBottom: 10 }}>
           {inlineFormat(para.join(' '))}
         </p>
       );
@@ -1015,7 +933,7 @@ function CommentaryBody({ text }: { text: string }) {
       flushPara();
       const heading = line.replace(/^#+\s*/, '');
       elements.push(
-        <h2 key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: '#FFFFFF', marginTop: 22, marginBottom: 8 }}>
+        <h2 key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: vmTokens.textPrimary, marginTop: 22, marginBottom: 8 }}>
           {inlineFormat(heading)}
         </h2>
       );
@@ -1024,7 +942,7 @@ function CommentaryBody({ text }: { text: string }) {
     if (line.startsWith('>')) {
       flushPara();
       elements.push(
-        <blockquote key={key++} style={{ borderLeft: '2px solid #B09A6D', paddingLeft: 10, fontStyle: 'italic', marginBottom: 10, fontFamily: 'inherit', fontSize: 'inherit', lineHeight: 'inherit', color: 'rgba(255,255,255,0.6)' }}>
+        <blockquote key={key++} style={{ borderLeft: `2px solid ${vmTokens.gold}`, paddingLeft: 10, fontStyle: 'italic', marginBottom: 10, fontFamily: 'inherit', fontSize: 'inherit', lineHeight: 'inherit', color: vmTokens.textSecondary }}>
           {inlineFormat(line.replace(/^>\s?/, ''))}
         </blockquote>
       );
@@ -1035,6 +953,30 @@ function CommentaryBody({ text }: { text: string }) {
   flushPara();
 
   return <div>{elements}</div>;
+}
+
+// The byline API's `detail` markdown opens with a verse-ref heading +
+// blockquote of the verse text + a "Summary" heading before the actual
+// commentary. We render those three parts ourselves above CommentaryBody
+// (.byline-ref-strong + .byline-verse-quote + .byline-summary-label), so
+// strip them here to prevent the verse from rendering twice.
+function stripBylineHeader(text: string): string {
+  const lines = text.split('\n');
+  let i = 0;
+  // Skip leading blanks.
+  while (i < lines.length && !lines[i].trim()) i++;
+  // Skip a leading heading line (any # depth) — typically "# James 1:1".
+  if (i < lines.length && /^#+\s/.test(lines[i].trim())) i++;
+  while (i < lines.length && !lines[i].trim()) i++;
+  // Skip a leading blockquote — typically the verse text.
+  while (i < lines.length && /^>/.test(lines[i].trim())) i++;
+  while (i < lines.length && !lines[i].trim()) i++;
+  // Skip a single "Summary" heading if it's the next non-blank line.
+  if (i < lines.length && /^#+\s*summary\s*$/i.test(lines[i].trim())) {
+    i++;
+    while (i < lines.length && !lines[i].trim()) i++;
+  }
+  return lines.slice(i).join('\n').trim();
 }
 
 // Strip the bare-bones markdown we render in CommentaryBody so the share
@@ -1109,17 +1051,16 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', backgroundColor: '#1B1B1B' }}>
-      <header style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px', height: 72, backgroundColor: '#1A1A1A', borderBottom: '1px solid #2a2a2a' }}>
-        <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF', margin: 0 }}>Menu</h1>
-        <button onClick={onClose} aria-label="Close menu" style={{ width: 44, height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'none', border: 'none', cursor: 'pointer', marginRight: -8 }}>
-          <X size={22} color="#FFFFFF" strokeWidth={2} />
+    <>
+      <header className="menu-header">
+        <h1 className="menu-title">Menu</h1>
+        <button onClick={onClose} aria-label="Close menu" className="icon-btn">
+          <X size={22} color={vmTokens.headerFg} strokeWidth={2} />
         </button>
       </header>
 
-      <div style={{ flex: 1, overflowY: 'auto', backgroundColor: '#000000', padding: '16px' }}>
-        {/* User card — signed-in users go to Settings (matches mobile);
-            signed-out users go to the sign-in page. */}
+      <div className="menu-scroll">
+        {/* Profile card — prototype .menu-profile */}
         <button
           onClick={() => {
             const target = state.isSignedIn ? 'settings' : 'signin';
@@ -1131,9 +1072,9 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
             }
           }}
           data-testid="menu-profile-card"
-          style={{ display: 'flex', alignItems: 'center', gap: 12, width: '100%', height: 64, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', marginBottom: 12, cursor: 'pointer', textAlign: 'left' }}
+          className="menu-profile"
         >
-          <div style={{ width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#1B1B1B', flexShrink: 0, overflow: 'hidden' }}>
+          <div className="menu-avatar">
             {state.isSignedIn && state.userAvatarUrl ? (
               <img
                 src={state.userAvatarUrl}
@@ -1143,49 +1084,39 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
                 onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
               />
             ) : (
-              <User size={20} color="rgba(255,255,255,0.6)" strokeWidth={1.5} />
+              <User size={20} color={vmTokens.textSecondary} strokeWidth={1.5} />
             )}
           </div>
           <div style={{ minWidth: 0, flex: 1 }}>
-            <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 14, lineHeight: '20px', color: '#B09A6D', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            <p className="menu-profile-name">
               {state.isSignedIn ? state.userName || state.userEmail?.split('@')[0] || '' : 'Guest'}
             </p>
-            <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 12, lineHeight: '18px', color: 'rgba(255,255,255,0.6)', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            <p className="menu-profile-sub">
               {state.isSignedIn ? state.userEmail || 'Loading...' : 'Click to sign in'}
             </p>
           </div>
         </button>
 
-        {/* Nav items */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          {menuItems.map(item => (
-            <button
-              key={item.label}
-              onClick={() => { if (onOpenPage) { onOpenPage(item.view); } else { navigate(`/${item.view}`); onClose(); } }}
-              style={{ display: 'flex', alignItems: 'center', gap: 16, width: '100%', height: 56, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', cursor: 'pointer', textAlign: 'left' }}
-            >
-              <item.icon size={18} color="#E7E7E7" strokeWidth={1.5} />
-              <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: '#E7E7E7' }}>{item.label}</span>
-            </button>
-          ))}
+        {/* Nav items — prototype .menu-item */}
+        {menuItems.map(item => (
           <button
-            onClick={handleShare}
-            style={{ display: 'flex', alignItems: 'center', gap: 16, width: '100%', height: 56, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', cursor: 'pointer', textAlign: 'left' }}
+            key={item.label}
+            onClick={() => { if (onOpenPage) { onOpenPage(item.view); } else { navigate(`/${item.view}`); onClose(); } }}
+            className="menu-item"
           >
-            <ShareIcon size={18} color="#E7E7E7" />
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: '#E7E7E7' }}>Share VerseMate</span>
+            <item.icon size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />
+            <span>{item.label}</span>
           </button>
-          <button
-            onClick={handleLogout}
-            style={{ display: 'flex', alignItems: 'center', gap: 16, width: '100%', height: 56, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', cursor: 'pointer', textAlign: 'left', marginTop: 4 }}
-          >
-            <LogOut size={18} color="#f87171" strokeWidth={1.5} />
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: '#f87171' }}>
-              {state.isSignedIn ? 'Logout' : 'Sign In'}
-            </span>
-          </button>
-        </div>
+        ))}
+        <button onClick={handleShare} className="menu-item">
+          <ShareIcon size={18} color={vmTokens.textPrimary} />
+          <span>Share VerseMate</span>
+        </button>
+        <button onClick={handleLogout} className="menu-item logout">
+          <LogOut size={18} color={vmTokens.statusError} strokeWidth={1.5} />
+          <span>{state.isSignedIn ? 'Logout' : 'Sign In'}</span>
+        </button>
       </div>
-    </div>
+    </>
   );
 }
