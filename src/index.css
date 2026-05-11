@@ -67,6 +67,10 @@
     /* Right-pane commentary surface — white in light per --bg-commentary */
     --vm-commentary-bg: #FFFFFF;
 
+    /* Sidebar chapter cells — design spec .chapter-cell */
+    --vm-chapter-cell-bg: #F4ECD4;
+    --vm-chapter-cell-border: #E8DCB6;
+
     /* Header — always dark for brand consistency, per design spec */
     --header-bg: 0 0% 11%;             /* #1B1B1B */
     --header-fg: 0 0% 100%;
@@ -203,6 +207,10 @@
 
     /* Right-pane commentary surface — black in dark */
     --vm-commentary-bg: #000000;
+
+    /* Sidebar chapter cells — near-black with subtle border in dark */
+    --vm-chapter-cell-bg: #1e1e1e;
+    --vm-chapter-cell-border: #2a2a2a;
 
     /* shadcn HSL tokens — dark equivalents */
     --header-bg: 0 0% 0%;
