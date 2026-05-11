@@ -820,7 +820,9 @@ function CommentaryPanel({
                 </button>
                 {isOpen && (
                   <div className="byline-body">
-                    <div className="byline-ref-strong">{book} {chapter}:{c.verse}</div>
+                    {/* Verse ref is already shown by .byline-ref-sm in the
+                        toggle header above — don't duplicate it here.
+                        Body starts directly with the verse blockquote. */}
                     {verseTexts[c.verse] && (
                       <blockquote className="byline-verse-quote">{verseTexts[c.verse]}</blockquote>
                     )}
