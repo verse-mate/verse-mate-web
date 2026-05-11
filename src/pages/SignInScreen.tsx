@@ -6,6 +6,7 @@ import { useRightPanel } from '@/contexts/RightPanelContext';
 import { consumeRedirectTo } from '@/hooks/useTrackPreAuthLocation';
 import { Mail, ArrowLeft } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
+import { vmTokens } from '@/styles/themeStyles';
 import {
   login as apiLogin,
   signup as apiSignup,
@@ -107,7 +108,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
 
   if (screen === 'email') {
     return (
-      <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
+      <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
         <header
           className="shrink-0 safe-top"
           style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)', backgroundColor: '#1A1A1A' }}
@@ -121,28 +122,28 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
             >
               <ArrowLeft size={22} color="#fff" strokeWidth={2} />
             </button>
-            <h1 className="text-[18px] font-medium" style={{ color: '#ffffff' }}>
+            <h1 className="text-[18px] font-medium" style={{ color: vmTokens.surfaceRaisedBg }}>
               {mode === 'signin' ? 'Sign In' : 'Create Account'}
             </h1>
           </div>
         </header>
 
-        <div className="flex-1 px-6 pt-4 pb-6" style={{ backgroundColor: '#000000' }}>
+        <div className="flex-1 px-6 pt-4 pb-6" style={{ backgroundColor: vmTokens.pageBg }}>
           {mode === 'signup' && (
             <div className="mb-3">
-              <label className="text-[13px]" style={{ color: 'rgba(255,255,255,0.6)' }}>Name</label>
+              <label className="text-[13px]" style={{ color: vmTokens.textTertiary }}>Name</label>
               <input
                 value={name}
                 onChange={e => setName(e.target.value)}
                 data-testid="signup-name"
                 className="mt-1.5 w-full h-[52px] px-4 rounded-xl text-[15px] focus:outline-none focus:ring-2 focus:ring-[#B09A6D]"
-                style={{ backgroundColor: '#323232', border: '1px solid #323232', color: '#E7E7E7' }}
+                style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, color: vmTokens.textPrimary }}
                 placeholder="Your name"
               />
             </div>
           )}
           <div className="mb-3">
-            <label className="text-[13px]" style={{ color: 'rgba(255,255,255,0.6)' }}>Email</label>
+            <label className="text-[13px]" style={{ color: vmTokens.textTertiary }}>Email</label>
             <input
               type="email"
               autoComplete="email"
@@ -150,12 +151,12 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
               onChange={e => setEmail(e.target.value)}
               data-testid="login-email"
               className="mt-1.5 w-full h-[52px] px-4 rounded-xl text-[15px] focus:outline-none focus:ring-2 focus:ring-[#B09A6D]"
-              style={{ backgroundColor: '#323232', border: '1px solid #323232', color: '#E7E7E7' }}
+              style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, color: vmTokens.textPrimary }}
               placeholder="you@example.com"
             />
           </div>
           <div className="mb-3">
-            <label className="text-[13px]" style={{ color: 'rgba(255,255,255,0.6)' }}>Password</label>
+            <label className="text-[13px]" style={{ color: vmTokens.textTertiary }}>Password</label>
             <input
               type="password"
               autoComplete={mode === 'signin' ? 'current-password' : 'new-password'}
@@ -163,7 +164,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
               onChange={e => setPassword(e.target.value)}
               data-testid="login-password"
               className="mt-1.5 w-full h-[52px] px-4 rounded-xl text-[15px] focus:outline-none focus:ring-2 focus:ring-[#B09A6D]"
-              style={{ backgroundColor: '#323232', border: '1px solid #323232', color: '#E7E7E7' }}
+              style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, color: vmTokens.textPrimary }}
               placeholder="••••••••"
             />
           </div>
@@ -174,7 +175,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
             disabled={submitting}
             data-testid={mode === 'signin' ? 'login-submit' : 'signup-submit'}
             className="mt-5 w-full h-12 rounded-xl font-medium text-[15px] disabled:opacity-40"
-            style={{ backgroundColor: '#B09A6D', color: '#000000' }}
+            style={{ backgroundColor: vmTokens.gold, color: vmTokens.pageBg }}
           >
             {submitting
               ? mode === 'signin'
@@ -192,7 +193,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
             }}
             data-testid="login-mode-toggle"
             className="w-full mt-4 text-[13px]"
-            style={{ color: 'rgba(255,255,255,0.6)' }}
+            style={{ color: vmTokens.textTertiary }}
           >
             {mode === 'signin'
               ? "Don't have an account? Create one"
@@ -204,19 +205,19 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
   }
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
       <ScreenHeader
         title={isSignup ? 'Create Account' : 'Sign In'}
         onBack={() => navigate('/menu')}
         backTestId="login-back-button"
       />
 
-      <div className="flex-1 flex flex-col px-6 pb-6" style={{ backgroundColor: '#000000' }}>
+      <div className="flex-1 flex flex-col px-6 pb-6" style={{ backgroundColor: vmTokens.pageBg }}>
         <div className="mt-4 mb-8 text-center">
-          <h2 className="text-[22px] font-bold" style={{ color: '#E7E7E7' }}>
+          <h2 className="text-[22px] font-bold" style={{ color: vmTokens.textPrimary }}>
             {isSignup ? 'Create your VerseMate account' : 'Welcome to VerseMate'}
           </h2>
-          <p className="text-[14px] mt-2 leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>
+          <p className="text-[14px] mt-2 leading-relaxed" style={{ color: vmTokens.textTertiary }}>
             {isSignup
               ? 'Sign up to save your bookmarks, notes, and highlights across devices.'
               : 'Sign in to sync your bookmarks, notes, and highlights across devices.'}
@@ -229,7 +230,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
             disabled={submitting}
             data-testid="login-google-button"
             className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] disabled:opacity-60"
-            style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', color: '#1B1B1B' }}
+            style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: '1px solid #e0e0e0', color: vmTokens.chromeBg }}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.05 20.28c-1.74.97-3.28 1.22-5.05 1.22-4.13 0-8.18-2.79-8.18-8.18S7.87 5 12 5c2.18 0 4.04.78 5.52 2.08l-2.24 2.16c-.6-.57-1.65-1.24-3.28-1.24-2.81 0-5.1 2.33-5.1 5.2s2.29 5.2 5.1 5.2c3.26 0 4.49-2.34 4.68-3.55H12v-2.84h7.82c.08.47.13.94.13 1.56 0 3.85-2.57 6.71-6.9 6.71z" />
@@ -241,7 +242,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
             disabled={submitting}
             data-testid="login-apple-button"
             className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] disabled:opacity-60"
-            style={{ backgroundColor: '#ffffff', border: '1px solid #e0e0e0', color: '#1B1B1B' }}
+            style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: '1px solid #e0e0e0', color: vmTokens.chromeBg }}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
@@ -250,16 +251,16 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
           </button>
 
           <div className="flex items-center gap-3 py-2">
-            <div className="flex-1 h-px" style={{ backgroundColor: '#323232' }} />
-            <span className="text-[11px]" style={{ color: 'rgba(255,255,255,0.4)' }}>or</span>
-            <div className="flex-1 h-px" style={{ backgroundColor: '#323232' }} />
+            <div className="flex-1 h-px" style={{ backgroundColor: vmTokens.surfaceRaisedBg }} />
+            <span className="text-[11px]" style={{ color: vmTokens.textMuted }}>or</span>
+            <div className="flex-1 h-px" style={{ backgroundColor: vmTokens.surfaceRaisedBg }} />
           </div>
 
           <button
             onClick={() => setScreen('email')}
             data-testid="login-email-button"
             className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px]"
-            style={{ backgroundColor: '#323232', border: '1px solid #323232', color: '#E7E7E7' }}
+            style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, color: vmTokens.textPrimary }}
           >
             <Mail size={18} />
             {isSignup ? 'Sign up with Email' : 'Continue with Email'}
@@ -278,7 +279,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
             }}
             data-testid="login-providers-mode-toggle"
             className="w-full mt-3 text-[13px]"
-            style={{ color: 'rgba(255,255,255,0.6)' }}
+            style={{ color: vmTokens.textTertiary }}
           >
             {isSignup
               ? 'Already have an account? Sign in'

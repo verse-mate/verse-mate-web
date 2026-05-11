@@ -5,6 +5,7 @@ import { Topic } from '@/services/types';
 import { ChevronRight, Search } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import { buildTopicUrl } from '@/lib/topicSlugs';
+import { vmTokens } from '@/styles/themeStyles';
 
 export default function TopicsScreen() {
   const [topics, setTopics] = useState<Topic[]>([]);
@@ -21,37 +22,37 @@ export default function TopicsScreen() {
   );
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
       <ScreenHeader title="Topics" onBack={() => navigate('/read')} />
 
       {/* Search */}
-      <div className="px-4 pt-1" style={{ backgroundColor: '#000000' }}>
-        <div className="flex items-center gap-2 h-12 px-4 rounded-full" style={{ backgroundColor: '#323232', border: '1px solid #323232' }}>
-          <Search size={18} style={{ color: 'rgba(255,255,255,0.6)' }} strokeWidth={2} />
+      <div className="px-4 pt-1" style={{ backgroundColor: vmTokens.pageBg }}>
+        <div className="flex items-center gap-2 h-12 px-4 rounded-full" style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}` }}>
+          <Search size={18} style={{ color: vmTokens.textTertiary }} strokeWidth={2} />
           <input
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search..."
             className="flex-1 bg-transparent text-[15px] focus:outline-none"
-            style={{ color: '#E7E7E7' }}
+            style={{ color: vmTokens.textPrimary }}
           />
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6" style={{ backgroundColor: '#000000' }}>
+      <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6" style={{ backgroundColor: vmTokens.pageBg }}>
         {filtered.map(topic => (
           <button
             key={topic.id}
             onClick={() => navigate(buildTopicUrl(topic))}
             className="flex items-center justify-between w-full h-[56px] text-left"
-            style={{ borderBottom: '1px solid #323232' }}
+            style={{ borderBottom: `1px solid ${vmTokens.divider}` }}
           >
-            <span className="text-[16px]" style={{ color: '#E7E7E7' }}>{topic.name}</span>
-            <ChevronRight size={18} style={{ color: 'rgba(255,255,255,0.6)' }} />
+            <span className="text-[16px]" style={{ color: vmTokens.textPrimary }}>{topic.name}</span>
+            <ChevronRight size={18} style={{ color: vmTokens.textTertiary }} />
           </button>
         ))}
         {filtered.length === 0 && (
-          <p className="text-[14px] text-center py-8" style={{ color: 'rgba(255,255,255,0.6)' }}>No topics found</p>
+          <p className="text-[14px] text-center py-8" style={{ color: vmTokens.textTertiary }}>No topics found</p>
         )}
       </div>
     </div>

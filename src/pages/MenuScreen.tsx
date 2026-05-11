@@ -13,6 +13,7 @@ import {
   X,
 } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
+import { vmTokens } from '@/styles/themeStyles';
 
 type Item = {
   label: string;
@@ -57,7 +58,7 @@ export default function MenuScreen() {
   };
 
   return (
-    <div data-testid="hamburger-menu" className="menu-container flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
+    <div data-testid="hamburger-menu" className="menu-container flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
       {/* Header — dark bg, white text */}
       <header
         className="shrink-0 flex items-center justify-between px-5 safe-top"
@@ -74,16 +75,16 @@ export default function MenuScreen() {
         </button>
       </header>
 
-      <div className="flex-1 overflow-y-auto px-4 pb-2" style={{ backgroundColor: '#000000' }}>
+      <div className="flex-1 overflow-y-auto px-4 pb-2" style={{ backgroundColor: vmTokens.pageBg }}>
         {/* User profile card — signed-in users go to Settings (matches
             verse-mate-mobile); signed-out users go to the sign-in page. */}
         <button
           onClick={() => navigate(state.isSignedIn ? '/menu/settings' : '/login')}
           data-testid="menu-profile-card"
           className="flex items-center gap-3 w-full h-[64px] px-4 rounded-xl text-left mb-3"
-          style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
+          style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}` }}
         >
-          <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 overflow-hidden" style={{ backgroundColor: '#1B1B1B' }}>
+          <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 overflow-hidden" style={{ backgroundColor: vmTokens.chromeBg }}>
             {state.isSignedIn && state.userAvatarUrl ? (
               <img
                 src={state.userAvatarUrl}
@@ -93,16 +94,16 @@ export default function MenuScreen() {
                 onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
               />
             ) : (
-              <User size={20} style={{ color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
+              <User size={20} style={{ color: vmTokens.textTertiary }} strokeWidth={1.5} />
             )}
           </div>
           <div className="min-w-0 flex-1">
-            <p className="truncate" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 14, lineHeight: '20px', color: '#B09A6D' }}>
+            <p className="truncate" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 14, lineHeight: '20px', color: vmTokens.gold }}>
               {state.isSignedIn
                 ? state.userName || state.userEmail?.split('@')[0] || ''
                 : 'Guest'}
             </p>
-            <p className="truncate" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 12, lineHeight: '18px', color: 'rgba(255,255,255,0.6)' }}>
+            <p className="truncate" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 12, lineHeight: '18px', color: vmTokens.textTertiary }}>
               {state.isSignedIn ? state.userEmail || 'Loading...' : 'Tap to sign in'}
             </p>
           </div>
@@ -113,14 +114,14 @@ export default function MenuScreen() {
           {items.slice(0, 4).map(item => (
             <MenuRow
               key={item.label}
-              icon={<item.icon size={18} style={{ color: '#E7E7E7' }} strokeWidth={1.5} />}
+              icon={<item.icon size={18} style={{ color: vmTokens.textPrimary }} strokeWidth={1.5} />}
               label={item.label}
               testId={item.testId}
               onClick={() => navigate(item.path)}
             />
           ))}
           <MenuRow
-            icon={<ShareIcon size={18} color="#E7E7E7" />}
+            icon={<ShareIcon size={18} color={vmTokens.textPrimary} />}
             label="Share VerseMate"
             testId="menu-item-share"
             onClick={handleShare}
@@ -128,7 +129,7 @@ export default function MenuScreen() {
           {items.slice(4).map(item => (
             <MenuRow
               key={item.label}
-              icon={<item.icon size={18} style={{ color: '#E7E7E7' }} strokeWidth={1.5} />}
+              icon={<item.icon size={18} style={{ color: vmTokens.textPrimary }} strokeWidth={1.5} />}
               label={item.label}
               testId={item.testId}
               onClick={() => navigate(item.path)}
@@ -142,7 +143,7 @@ export default function MenuScreen() {
             onClick={handleLogout}
             data-testid={state.isSignedIn ? 'menu-item-logout' : 'menu-item-login'}
             className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl"
-            style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
+            style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}` }}
           >
             <LogOut size={18} className="text-red-400" strokeWidth={1.5} />
             <span style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px' }} className="text-red-400">
@@ -171,10 +172,10 @@ function MenuRow({
       onClick={onClick}
       data-testid={testId}
       className="flex items-center gap-4 w-full h-[56px] px-4 rounded-xl text-left"
-      style={{ backgroundColor: '#323232', border: '1px solid #323232' }}
+      style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}` }}
     >
       {icon}
-      <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: '#E7E7E7' }}>{label}</span>
+      <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: vmTokens.textPrimary }}>{label}</span>
     </button>
   );
 }

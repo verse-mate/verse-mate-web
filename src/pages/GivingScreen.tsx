@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Heart, Lock, ShieldCheck } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
+import { vmTokens } from '@/styles/themeStyles';
 
 type Cadence = 'monthly' | 'once';
 
@@ -22,10 +23,10 @@ export default function GivingScreen() {
   )}`;
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: '#000' }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.pageBg }}>
       <ScreenHeader title="Giving" onBack={() => navigate('/menu')} />
 
-      <div className="flex-1 overflow-y-auto min-h-0" style={{ backgroundColor: '#000' }}>
+      <div className="flex-1 overflow-y-auto min-h-0" style={{ backgroundColor: vmTokens.pageBg }}>
         {/* Hero — cinematic candlelit Bible */}
         <div style={{ position: 'relative', height: 240, overflow: 'hidden', backgroundColor: '#1a1005' }}>
           <img
@@ -44,7 +45,7 @@ export default function GivingScreen() {
               left: 0,
               right: 0,
               height: 120,
-              background: 'linear-gradient(180deg, transparent 0%, #000 90%)',
+              background: `linear-gradient(180deg, transparent 0%, ${vmTokens.pageBg} 90%)`,
             }}
           />
         </div>
@@ -57,7 +58,7 @@ export default function GivingScreen() {
               fontSize: 11,
               fontWeight: 600,
               letterSpacing: '2px',
-              color: '#B09A6D',
+              color: vmTokens.gold,
               textTransform: 'uppercase',
               textAlign: 'center',
               margin: 0,
@@ -69,7 +70,7 @@ export default function GivingScreen() {
             style={{
               height: 1,
               width: 40,
-              backgroundColor: '#B09A6D',
+              backgroundColor: vmTokens.gold,
               opacity: 0.5,
               margin: '12px auto 20px',
             }}
@@ -82,7 +83,7 @@ export default function GivingScreen() {
               fontSize: 28,
               fontWeight: 400,
               lineHeight: '1.25',
-              color: '#E7E7E7',
+              color: vmTokens.textPrimary,
               textAlign: 'center',
               margin: 0,
               marginBottom: 14,
@@ -97,7 +98,7 @@ export default function GivingScreen() {
               fontFamily: 'Roboto, sans-serif',
               fontSize: 14,
               lineHeight: '22px',
-              color: 'rgba(255,255,255,0.7)',
+              color: vmTokens.textSecondary,
               textAlign: 'center',
               margin: 0,
               marginBottom: 28,
@@ -122,9 +123,9 @@ export default function GivingScreen() {
                     fontFamily: 'Roboto, sans-serif',
                     fontSize: 13,
                     fontWeight: 600,
-                    border: `1px solid ${active ? 'rgba(176,154,109,0.5)' : 'rgba(255,255,255,0.1)'}`,
+                    border: `1px solid ${active ? vmTokens.goldHover : vmTokens.faintDivider}`,
                     backgroundColor: active ? '#1a1a1a' : 'transparent',
-                    color: active ? '#B09A6D' : 'rgba(255,255,255,0.6)',
+                    color: active ? vmTokens.gold : vmTokens.textTertiary,
                     cursor: 'pointer',
                   }}
                 >
@@ -156,9 +157,9 @@ export default function GivingScreen() {
                     fontFamily: 'Roboto, sans-serif',
                     fontSize: 18,
                     fontWeight: 600,
-                    border: `1px solid ${selected ? '#B09A6D' : 'rgba(176,154,109,0.4)'}`,
-                    backgroundColor: selected ? '#B09A6D' : 'rgba(176,154,109,0.08)',
-                    color: selected ? '#000' : '#B09A6D',
+                    border: `1px solid ${selected ? vmTokens.gold : 'rgba(176,154,109,0.4)'}`,
+                    backgroundColor: selected ? vmTokens.gold : 'rgba(176,154,109,0.08)',
+                    color: selected ? vmTokens.pageBg : vmTokens.gold,
                     boxShadow: selected ? '0 0 24px rgba(176,154,109,0.3)' : 'none',
                     cursor: 'pointer',
                     transition: 'all 0.15s ease',
@@ -185,8 +186,8 @@ export default function GivingScreen() {
               height: 44,
               borderRadius: 12,
               background: 'transparent',
-              border: '1px dashed rgba(255,255,255,0.2)',
-              color: 'rgba(255,255,255,0.6)',
+              border: `1px dashed ${vmTokens.faintDivider}`,
+              color: vmTokens.textTertiary,
               fontFamily: 'Roboto, sans-serif',
               fontSize: 13,
               cursor: 'pointer',
@@ -207,8 +208,8 @@ export default function GivingScreen() {
               width: '100%',
               height: 56,
               borderRadius: 12,
-              backgroundColor: '#B09A6D',
-              color: '#000',
+              backgroundColor: vmTokens.gold,
+              color: vmTokens.pageBg,
               fontFamily: 'Roboto, sans-serif',
               fontSize: 16,
               fontWeight: 700,
@@ -235,7 +236,7 @@ export default function GivingScreen() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: 6,
-                color: 'rgba(255,255,255,0.4)',
+                color: vmTokens.textMuted,
                 fontSize: 11,
                 fontFamily: 'Roboto, sans-serif',
               }}
@@ -248,7 +249,7 @@ export default function GivingScreen() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: 6,
-                color: 'rgba(255,255,255,0.4)',
+                color: vmTokens.textMuted,
                 fontSize: 11,
                 fontFamily: 'Roboto, sans-serif',
               }}

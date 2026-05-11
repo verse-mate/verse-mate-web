@@ -2,6 +2,7 @@ import { useApp } from '@/contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { Bookmark, Trash2 } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
+import { vmTokens } from '@/styles/themeStyles';
 
 export default function BookmarksScreen() {
   const { state, dispatch, removeBookmark } = useApp();
@@ -17,7 +18,7 @@ export default function BookmarksScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
       <ScreenHeader title="Bookmarks" onBack={() => navigate('/menu')} backTestId="bookmarks-back-button" />
 
       <div
@@ -29,18 +30,18 @@ export default function BookmarksScreen() {
           flexDirection: 'column',
           gap: 8,
           padding: '12px 8px',
-          borderTop: '1px solid #323232',
-          backgroundColor: '#000000',
+          borderTop: `1px solid ${vmTokens.divider}`,
+          backgroundColor: vmTokens.pageBg,
         }}
       >
         {state.bookmarks.length === 0 ? (
           <div
             data-testid="bookmarks-empty-state"
-            style={{ padding: 16, textAlign: 'center', color: 'rgba(255,255,255,0.6)', fontStyle: 'italic' }}
+            style={{ padding: 16, textAlign: 'center', color: vmTokens.textTertiary, fontStyle: 'italic' }}
           >
-            <Bookmark size={48} style={{ margin: '0 auto 12px', color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
+            <Bookmark size={48} style={{ margin: '0 auto 12px', color: vmTokens.textTertiary }} strokeWidth={1.5} />
             <p style={{ fontSize: 14 }}>No bookmarks yet</p>
-            <p style={{ fontSize: 12, marginTop: 4, color: 'rgba(255,255,255,0.6)' }}>
+            <p style={{ fontSize: 12, marginTop: 4, color: vmTokens.textTertiary }}>
               Long-press a verse to save it here
             </p>
           </div>
@@ -55,8 +56,8 @@ export default function BookmarksScreen() {
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   padding: 12,
-                  backgroundColor: '#323232',
-                  border: '1px solid #323232',
+                  backgroundColor: vmTokens.surfaceRaisedBg,
+                  border: `1px solid ${vmTokens.divider}`,
                   borderRadius: 8,
                   cursor: 'pointer',
                 }}
@@ -75,8 +76,8 @@ export default function BookmarksScreen() {
                     padding: 0,
                   }}
                 >
-                  <Bookmark size={18} style={{ color: '#E7E7E7' }} strokeWidth={1.5} fill="currentColor" />
-                  <span style={{ fontSize: 15, fontWeight: 500, color: '#E7E7E7' }}>
+                  <Bookmark size={18} style={{ color: vmTokens.textPrimary }} strokeWidth={1.5} fill="currentColor" />
+                  <span style={{ fontSize: 15, fontWeight: 500, color: vmTokens.textPrimary }}>
                     {b.book} {b.chapter}
                     {b.verse ? `:${b.verse}` : ''}
                   </span>
@@ -96,7 +97,7 @@ export default function BookmarksScreen() {
                     borderRadius: '50%',
                     width: 36,
                     height: 36,
-                    color: 'rgba(255,255,255,0.6)',
+                    color: vmTokens.textTertiary,
                     transition: 'all 0.2s ease',
                     flexShrink: 0,
                   }}

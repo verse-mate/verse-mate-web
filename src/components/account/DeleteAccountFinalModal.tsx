@@ -5,6 +5,7 @@
 
 import { AlertCircle, Loader2 } from 'lucide-react';
 import { useEffect } from 'react';
+import { vmTokens } from '@/styles/themeStyles';
 
 interface DeleteAccountFinalModalProps {
   visible: boolean;
@@ -25,7 +26,7 @@ const overlayStyle: React.CSSProperties = {
 };
 
 const modalStyle: React.CSSProperties = {
-  background: '#ffffff',
+  background: vmTokens.surfaceRaisedBg,
   borderRadius: 12,
   padding: 24,
   width: '100%',
@@ -50,7 +51,7 @@ const titleStyle: React.CSSProperties = {
 
 const warningBoxStyle: React.CSSProperties = {
   background: '#fef2f2',
-  borderLeft: '4px solid #dc2626',
+  borderLeft: `4px solid ${vmTokens.statusError}`,
   padding: 16,
   borderRadius: 8,
   marginBottom: 24,
@@ -87,8 +88,8 @@ const cancelButtonStyle: React.CSSProperties = {
 };
 
 const confirmButtonStyle: React.CSSProperties = {
-  background: '#dc2626',
-  color: '#ffffff',
+  background: vmTokens.statusError,
+  color: vmTokens.surfaceRaisedBg,
   padding: '14px 20px',
   border: 'none',
   borderRadius: 8,
@@ -130,7 +131,7 @@ export function DeleteAccountFinalModal({
     >
       <div style={modalStyle} onClick={(e) => e.stopPropagation()}>
         <div style={headerStyle}>
-          <AlertCircle size={64} color="#dc2626" />
+          <AlertCircle size={64} color={vmTokens.statusError} />
           <h2 id="delete-final-title" style={titleStyle}>
             Are You Absolutely Sure?
           </h2>
