@@ -506,13 +506,24 @@ export async function fetchNotes(userId: string): Promise<Note[]> {
   }
 }
 
-export async function addNote(note: {
+export async function addNote(args: {
+  userId: string;
   bookId: number;
   chapter: number;
   verse: number;
   text: string;
 }) {
-  return api.post('/bible/book/note/add', note);
+  // Backend requires user_id + snake_case fields — POST /bible/book/note/add
+  // throws ValidationError("Missing required fields") otherwise, which trips
+  // AppContext's catch path and rolls back the optimistic note. Same shape as
+  // addBookmark / addHighlight.
+  return api.post('/bible/book/note/add', {
+    user_id: args.userId,
+    book_id: args.bookId,
+    chapter_number: args.chapter,
+    verse_number: args.verse,
+    text: args.text,
+  });
 }
 
 export async function updateNote(id: string, text: string) {
