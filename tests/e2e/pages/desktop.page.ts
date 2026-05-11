@@ -23,6 +23,7 @@ export class DesktopReaderPage {
   readonly tabSummary: Locator;
   readonly tabByline: Locator;
   readonly tabDetailed: Locator;
+  readonly tabStudy: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -37,6 +38,16 @@ export class DesktopReaderPage {
     this.tabSummary = page.getByTestId('desktop-tab-summary');
     this.tabByline = page.getByTestId('desktop-tab-byline');
     this.tabDetailed = page.getByTestId('desktop-tab-detailed');
+    this.tabStudy = page.getByTestId('desktop-tab-study');
+  }
+
+  /**
+   * Sidebar section header (collapsible). DesktopLayout slugifies the label
+   * via `label.toLowerCase().replace(/\s+/g, '-')` so "Old Testament" →
+   * `sidebar-section-old-testament`.
+   */
+  sidebarSection(label: 'old-testament' | 'new-testament'): Locator {
+    return this.page.getByTestId(`sidebar-section-${label}`);
   }
 
   async goto(book = 'genesis', chapter: number = 1) {

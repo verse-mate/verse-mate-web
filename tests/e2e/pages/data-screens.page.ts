@@ -38,12 +38,18 @@ export class NotesPage {
   readonly list: Locator;
   readonly emptyState: Locator;
   readonly backButton: Locator;
+  /** `notes-chapter-list` — visible only on /notes/:book/:chapter (chapter scope). */
+  readonly chapterList: Locator;
+  /** Back button on the chapter-scoped view (returns to /notes). */
+  readonly chapterBackButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.list = page.getByTestId('notes-list');
     this.emptyState = page.getByTestId('notes-empty-state');
     this.backButton = page.getByTestId('notes-back-button');
+    this.chapterList = page.getByTestId('notes-chapter-list');
+    this.chapterBackButton = page.getByTestId('notes-chapter-back-button');
   }
 
   async goto() {
@@ -51,9 +57,28 @@ export class NotesPage {
     await this.list.waitFor({ state: 'visible' });
   }
 
+  /** Navigate directly to the chapter-scoped notes view. */
+  async gotoChapter(book: string, chapter: number) {
+    await this.page.goto(`/notes/${book}/${chapter}`);
+    await this.chapterList.waitFor({ state: 'visible' });
+  }
+
   /** Group row keyed by bookId+chapter (NotesScreen renders per-chapter groups on the index). */
   group(bookId: number, chapter: number): Locator {
     return this.page.getByTestId(`chapter-group-${bookId}-${chapter}`);
+  }
+
+  /** Individual note item on the chapter-scoped view. */
+  noteItem(noteId: string): Locator {
+    return this.page.getByTestId(`note-item-${noteId}`);
+  }
+
+  noteEdit(noteId: string): Locator {
+    return this.page.getByTestId(`note-edit-${noteId}`);
+  }
+
+  noteOptions(noteId: string): Locator {
+    return this.page.getByTestId(`note-options-${noteId}`);
   }
 }
 

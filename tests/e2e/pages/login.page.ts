@@ -19,6 +19,9 @@ export class LoginPage {
   readonly passwordInput: Locator;
   readonly nameInput: Locator;
   readonly modeToggle: Locator;
+  readonly providersModeToggle: Locator;
+  readonly emailScreenBack: Locator;
+  readonly providersBack: Locator;
   readonly errorMessage: Locator;
 
   constructor(page: Page) {
@@ -30,6 +33,11 @@ export class LoginPage {
     this.passwordInput = page.getByTestId('login-password');
     this.nameInput = page.getByTestId('signup-name');
     this.modeToggle = page.getByTestId('login-mode-toggle');
+    this.providersModeToggle = page.getByTestId('login-providers-mode-toggle');
+    // Back button shown on the email-screen sub-view (returns to providers view).
+    this.emailScreenBack = page.getByTestId('login-screen-back');
+    // Back button shown on the providers sub-view (returns to /menu).
+    this.providersBack = page.getByTestId('login-back-button');
     this.errorMessage = page.getByTestId('login-error');
   }
 
