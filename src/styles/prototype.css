@@ -23,6 +23,12 @@
   --bg-reading: #FAF6EA;         /* scripture surface — cream */
   --bg-commentary: #FFFFFF;      /* commentary panel — white */
   --bg-menu: #FFFFFF;
+  /* Sidebar chapter cells (1, 2, 3, … grid under each book). Cream-gold
+     in light, near-black in dark — flipped via .dark below. */
+  --chapter-cell-bg: #F4ECD4;
+  --chapter-cell-bg-hover: #EDE2C0;
+  --chapter-cell-border: #E8DCB6;
+  --chapter-cell-border-hover: #DCCB9A;
 
   /* Text */
   --fg-primary: #1B1B1B;
@@ -188,16 +194,18 @@ button { font-family: inherit; }
   font-size: 12px;
   font-weight: 500;
   color: var(--fg-primary);
-  background-color: #F4ECD4;
-  border: 1px solid #E8DCB6;
+  background-color: var(--chapter-cell-bg);
+  border: 1px solid var(--chapter-cell-border);
   border-radius: 4px;
   cursor: pointer;
   font-family: inherit;
 }
-.chapter-cell:hover { background-color: #EDE2C0; border-color: #DCCB9A; }
+.chapter-cell:hover { background-color: var(--chapter-cell-bg-hover); border-color: var(--chapter-cell-border-hover); }
 .chapter-cell.active {
   background-color: var(--vm-dust);
-  color: var(--fg-primary);
+  /* Always dark text on the gold pill — matches every other gold-bg
+     element (.study-pill, .obs-pill, .study-num) */
+  color: var(--fg-on-gold);
   font-weight: 600;
 }
 
@@ -2690,6 +2698,11 @@ button { font-family: inherit; }
   --bg-reading: #000000;
   --bg-commentary: #000000;
   --bg-menu: #1B1B1B;
+  /* Chapter cells in the sidebar — cream-gold → near-black */
+  --chapter-cell-bg: #1e1e1e;
+  --chapter-cell-bg-hover: #262626;
+  --chapter-cell-border: #2a2a2a;
+  --chapter-cell-border-hover: #3a3a3a;
 
   /* Text flips — black/dark → near-white/with-opacity */
   --fg-primary: #E7E7E7;
