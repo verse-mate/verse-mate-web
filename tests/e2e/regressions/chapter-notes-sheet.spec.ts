@@ -7,20 +7,18 @@ import { HAS_AUTH_CREDENTIALS, skipReasonNoAuth } from '../fixtures/env';
  *
  * The chapter-notes button (📄 icon next to the chapter bookmark) opens
  * an in-place 480px modal ("Notes for {Book} {Chapter}") instead of
- * navigating to `/notes`. Closing the modal (X or backdrop tap) leaves
- * the user on the Bible page.
+ * navigating to `/notes`. The textarea is ALWAYS visible — guests can
+ * compose their note first, and the Add Note button morphs into "Sign in
+ * to save" when the user is not signed in. Tapping it swaps the modal
+ * to an inline sign-in view (Google / Apple / Email) without losing the
+ * draft. After signing in (email submits in place; Google/Apple
+ * round-trip via sessionStorage), the user is brought back to the
+ * compose view with their draft intact and the button now reads "Add
+ * Note".
  *
- * Guest gating: capturing a note requires a signed-in account. The
- * sign-in flow renders INLINE inside the same 480px modal — Google /
- * Apple SSO buttons + an inline email/password form. No navigation
- * away from the bible page until the user actually picks an SSO
- * provider (which redirects to the backend) or successfully signs in
- * via email (which leaves the modal open and swaps to the Add New
- * Note form because `state.isSignedIn` flips true).
- *
- * Genesis 1 (bookId = 1) is the stable fixture used elsewhere in the
- * suite. Mobile-only — DesktopLayout duplicates the chapter-notes
- * testid via its own chrome.
+ * Genesis 1 (bookId = 1) is the stable fixture used elsewhere. Mobile-
+ * only — DesktopLayout duplicates the chapter-notes testid via its own
+ * chrome.
  */
 
 test.skip(
@@ -41,35 +39,60 @@ test.describe('Bible — chapter-notes sheet (#130) — guest', () => {
     await expect(page.getByRole('heading', { name: /Notes for Genesis 1/i })).toBeVisible();
   });
 
-  test('guest sees inline sign-in providers inside the same 480px modal', async ({ page }) => {
+  test('textarea is visible for guests and the Add button reads "Sign in to save"', async ({ page }) => {
     const reader = new ReaderPage(page);
     await reader.goto('genesis', 1);
     await reader.tap(page.getByTestId('chapter-notes-button-1-1'));
 
-    // Sign-in renders INSIDE the chapter-notes modal — same container,
-    // 3 provider buttons, prompt copy.
+    const textarea = page.getByTestId('chapter-notes-textarea');
+    const button = page.getByTestId('chapter-notes-add-button');
+
+    await expect(textarea).toBeVisible();
+    await expect(button).toBeVisible();
+    await expect(button).toBeDisabled(); // disabled until something is typed
+    await expect(button).toContainText(/sign in to save/i);
+
+    await textarea.fill('My guest draft.');
+    await expect(button).toBeEnabled();
+    await expect(button).toContainText(/sign in to save/i);
+  });
+
+  test('tapping "Sign in to save" with a draft switches to inline sign-in providers', async ({ page }) => {
+    const reader = new ReaderPage(page);
+    await reader.goto('genesis', 1);
+    await reader.tap(page.getByTestId('chapter-notes-button-1-1'));
+
+    const startUrl = page.url();
+    await page.getByTestId('chapter-notes-textarea').fill('My guest draft.');
+    await page.getByTestId('chapter-notes-add-button').click();
+
+    // URL unchanged, modal still mounted, sign-in view rendered.
+    expect(page.url()).toBe(startUrl);
     await expect(page.getByTestId('chapter-notes-signin-cta')).toBeVisible();
-    await expect(page.getByText(/sign in to save your notes/i)).toBeVisible();
     await expect(page.getByTestId('login-google-button')).toBeVisible();
     await expect(page.getByTestId('login-apple-button')).toBeVisible();
     await expect(page.getByTestId('login-email-button')).toBeVisible();
 
-    // The author form must NOT render for guests.
+    // The textarea must NOT be in the DOM during sign-in (compose view is
+    // hidden until they finish), but the in-flight draft is held in
+    // component state and restored when we return.
     await expect(page.getByTestId('chapter-notes-textarea')).toHaveCount(0);
-    await expect(page.getByTestId('chapter-notes-add-button')).toHaveCount(0);
+
+    // "Back to note" returns to the compose view with the draft intact.
+    await page.getByTestId('chapter-notes-signin-cancel').click();
+    await expect(page.getByTestId('chapter-notes-textarea')).toHaveValue('My guest draft.');
   });
 
   test('Continue with Email reveals the inline email form (no navigation)', async ({ page }) => {
     const reader = new ReaderPage(page);
     await reader.goto('genesis', 1);
     await reader.tap(page.getByTestId('chapter-notes-button-1-1'));
+    await page.getByTestId('chapter-notes-textarea').fill('hello');
+    await page.getByTestId('chapter-notes-add-button').click();
 
     const startUrl = page.url();
     await page.getByTestId('login-email-button').click();
 
-    // Modal stays mounted; URL unchanged; email/password inputs + submit
-    // button appear in place of the providers.
-    await expect(page.getByTestId('chapter-notes-sheet')).toBeVisible();
     expect(page.url()).toBe(startUrl);
     await expect(page.getByTestId('login-email')).toBeVisible();
     await expect(page.getByTestId('login-password')).toBeVisible();
@@ -86,6 +109,8 @@ test.describe('Bible — chapter-notes sheet (#130) — guest', () => {
     const reader = new ReaderPage(page);
     await reader.goto('genesis', 1);
     await reader.tap(page.getByTestId('chapter-notes-button-1-1'));
+    await page.getByTestId('chapter-notes-textarea').fill('hello');
+    await page.getByTestId('chapter-notes-add-button').click();
     await page.getByTestId('login-email-button').click();
 
     const startUrl = page.url();
@@ -95,6 +120,27 @@ test.describe('Bible — chapter-notes sheet (#130) — guest', () => {
     await expect(page.getByTestId('login-error')).toContainText(/email|password/i);
     expect(page.url()).toBe(startUrl);
     await expect(page.getByTestId('chapter-notes-sheet')).toBeVisible();
+  });
+
+  test('returning to /bible with a pending draft auto-reopens the modal with text restored', async ({ page }) => {
+    // Simulate the post-SSO return: seed sessionStorage with a draft, then
+    // navigate to the bible page. ReadingScreen's useEffect should see the
+    // pending draft via `hasPendingChapterNoteDraft` and open the modal,
+    // and the modal consumes it on mount to populate the textarea.
+    await page.goto('/bible/genesis/1');
+    await page.evaluate(() => {
+      sessionStorage.setItem('versemate.pending-chapter-note.1.1', 'Restored after SSO');
+    });
+    // Reload so ReadingScreen mounts with the seeded draft present.
+    await page.reload();
+    await expect(page.getByTestId('chapter-notes-sheet')).toBeVisible({ timeout: 10_000 });
+    await expect(page.getByTestId('chapter-notes-textarea')).toHaveValue('Restored after SSO');
+
+    // Draft consumed — second reload should NOT reopen the modal.
+    const remaining = await page.evaluate(() =>
+      sessionStorage.getItem('versemate.pending-chapter-note.1.1'),
+    );
+    expect(remaining).toBeNull();
   });
 
   test('close button dismisses the sheet and keeps the reader visible', async ({ page }) => {
@@ -128,22 +174,23 @@ test.describe('Bible — chapter-notes sheet (#130) — signed in', () => {
   test.use({ storageState: 'tests/e2e/.auth/user.json' });
   test.skip(!HAS_AUTH_CREDENTIALS, skipReasonNoAuth);
 
-  test('signed-in user sees the Add New Note form (textarea + button)', async ({ page }) => {
+  test('signed-in user sees the Add New Note form with "Add Note" label', async ({ page }) => {
     const reader = new ReaderPage(page);
     await reader.goto('genesis', 1);
     await reader.tap(page.getByTestId('chapter-notes-button-1-1'));
 
     const textarea = page.getByTestId('chapter-notes-textarea');
-    const addButton = page.getByTestId('chapter-notes-add-button');
+    const button = page.getByTestId('chapter-notes-add-button');
 
     await expect(textarea).toBeVisible();
-    await expect(addButton).toBeVisible();
-    await expect(addButton).toBeDisabled();
+    await expect(button).toBeVisible();
+    await expect(button).toContainText(/^add note/i);
+    await expect(button).toBeDisabled();
 
     await textarea.fill('A reflection on Genesis 1.');
-    await expect(addButton).toBeEnabled();
+    await expect(button).toBeEnabled();
 
-    // Sign-in CTA should NOT be present for authed users.
+    // Sign-in CTA must NOT render for authed users.
     await expect(page.getByTestId('chapter-notes-signin-cta')).toHaveCount(0);
   });
 
@@ -156,12 +203,8 @@ test.describe('Bible — chapter-notes sheet (#130) — signed in', () => {
     await page.getByTestId('chapter-notes-textarea').fill(unique);
     await page.getByTestId('chapter-notes-add-button').click();
 
-    // Modal auto-closes after a successful save.
     await expect(page.getByTestId('chapter-notes-sheet')).not.toBeVisible({ timeout: 10_000 });
 
-    // Optimistic update writes the note into AppContext.state.notes, which
-    // /notes renders as `chapter-group-{bookId}-{chapter}`. Drill into the
-    // index list and confirm the Genesis 1 group is present after the save.
     await page.goto('/notes');
     await expect(page.getByTestId('notes-list')).toBeVisible({ timeout: 10_000 });
     await expect(page.getByTestId('chapter-group-1-1')).toBeVisible({ timeout: 10_000 });
