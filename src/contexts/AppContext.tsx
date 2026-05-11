@@ -382,12 +382,20 @@ export function AppProvider({ children }: { children: ReactNode }) {
       const now = new Date().toISOString();
       const optimistic: Note = { ...note, id: `tmp-${Date.now()}`, createdAt: now, updatedAt: now };
       dispatch({ type: 'ADD_NOTE', note: optimistic });
+      // Mirror addBookmark/addHighlight: skip the API roundtrip for guests
+      // so the optimistic note doesn't flash-and-vanish on the inevitable
+      // 401. Caller is responsible for gating the UX on isSignedIn.
+      if (!state.userId) return;
       try {
-        await apiAddNote({ bookId: note.bookId, chapter: note.chapter, verse: note.verse, text: note.text });
-        if (state.userId) {
-          const refreshed = await apiFetchNotes(state.userId);
-          dispatch({ type: 'SET_NOTES', notes: refreshed });
-        }
+        await apiAddNote({
+          userId: state.userId,
+          bookId: note.bookId,
+          chapter: note.chapter,
+          verse: note.verse,
+          text: note.text,
+        });
+        const refreshed = await apiFetchNotes(state.userId);
+        dispatch({ type: 'SET_NOTES', notes: refreshed });
       } catch {
         dispatch({ type: 'REMOVE_NOTE', id: optimistic.id });
       }
