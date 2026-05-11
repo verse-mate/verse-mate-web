@@ -479,49 +479,71 @@ function ListsBody({ step, isOpen, toggle }: { step: StepLists; isOpen: (id: str
 }
 
 function ContrastsBody({ step }: { step: StepContrasts }) {
+  // Prototype's .obs-contrast-row: each pairing is a cream-card row with
+  // a solid-gold verse-ref pill + gold-outlined CONTRAST/COMPARISON tag
+  // (COMPARISON uses a dashed border) + serif body text.
   return (
-    <div>
-      {step.items.map((item, i) => (
-        <div
-          key={i}
-          style={{
-            display: 'flex',
-            alignItems: 'flex-start',
-            gap: 12,
-            paddingTop: 12,
-            paddingBottom: 12,
-            borderTop: i === 0 ? '1px solid #1f1f1f' : 'none',
-            borderBottom: `1px solid ${vmTokens.divider}`,
-          }}
-        >
-          <span style={firstLineAlignStyle}>
-            <RangePill range={item.verses} />
-          </span>
-          <span style={{ ...firstLineAlignStyle, gap: 0 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+      {step.items.map((item, i) => {
+        const isComparison = String(item.type).toUpperCase() === 'COMPARISON';
+        return (
+          <div
+            key={i}
+            style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: 10,
+              padding: '10px 12px',
+              background: vmTokens.surfaceRaisedBg,
+              border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
+              borderRadius: 10,
+              fontFamily: "'Roboto Serif', Georgia, serif",
+              fontSize: 14.5,
+              lineHeight: 1.5,
+            }}
+          >
             <span
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                width: 80,
-                height: 22,
-                padding: '0 6px',
-                borderRadius: 11,
-                backgroundColor: vmTokens.divider,
-                color: vmTokens.textSecondary,
+                padding: '3px 10px',
+                background: vmTokens.gold,
+                borderRadius: 999,
+                fontFamily: 'Roboto, sans-serif',
                 fontSize: 11,
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '0.5px',
+                fontWeight: 700,
+                color: '#FFFFFF',
+                minWidth: 52,
                 flexShrink: 0,
+              }}
+            >
+              {item.verses}
+            </span>
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '2px 9px',
+                background: 'transparent',
+                border: `1px ${isComparison ? 'dashed' : 'solid'} ${vmTokens.gold}`,
+                borderRadius: 999,
+                fontFamily: 'Roboto, sans-serif',
+                fontSize: 10,
+                fontWeight: 700,
+                letterSpacing: '0.05em',
+                color: vmTokens.gold,
+                flexShrink: 0,
+                textTransform: 'uppercase',
               }}
             >
               {item.type}
             </span>
-          </span>
-          <span style={{ flex: 1, color: vmTokens.textPrimary }}>{item.pairing}</span>
-        </div>
-      ))}
+            <span style={{ flex: 1, color: vmTokens.textPrimary }}>{item.pairing}</span>
+          </div>
+        );
+      })}
     </div>
   );
 }
