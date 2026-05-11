@@ -15,10 +15,12 @@ export class CommentaryPage {
   readonly tabSummary: Locator;
   readonly tabByline: Locator;
   readonly tabDetailed: Locator;
+  readonly tabStudy: Locator;
   readonly shareSummary: Locator;
   readonly shareByline: Locator;
   readonly shareDetailed: Locator;
   readonly bylineExpandAll: Locator;
+  readonly audioInlineEntry: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -29,10 +31,12 @@ export class CommentaryPage {
     this.tabSummary = page.getByTestId('tab-summary');
     this.tabByline = page.getByTestId('tab-byline');
     this.tabDetailed = page.getByTestId('tab-detailed');
+    this.tabStudy = page.getByTestId('tab-study');
     this.shareSummary = page.getByTestId('share-summary-button');
     this.shareByline = page.getByTestId('share-byline-button');
     this.shareDetailed = page.getByTestId('share-detailed-button');
     this.bylineExpandAll = page.getByTestId('byline-expand-all-button');
+    this.audioInlineEntry = page.getByTestId('audio-inline-entry');
   }
 
   async goto(book = 'Genesis', chapter: number = 1) {
