@@ -14,7 +14,7 @@ import BookSelector from '@/components/BookSelector';
 import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
 import SelectionToolbar from '@/components/SelectionToolbar';
-import ChapterNotesSheet from '@/components/ChapterNotesSheet';
+import ChapterNotesSheet, { hasPendingChapterNoteDraft } from '@/components/ChapterNotesSheet';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
 
@@ -39,7 +39,18 @@ export default function ReadingScreen() {
   }, [state.bookId, state.chapter, location.pathname, navigate]);
   const [chapter, setChapter] = useState<Chapter | null>(null);
   const [showBookSelector, setShowBookSelector] = useState(false);
+  // If the user kicked off a chapter-notes save via SSO (Google/Apple), the
+  // OAuth round-trip stashed their draft and `useTrackPreAuthLocation`
+  // brings them back to this page. Auto-reopen the modal so they don't
+  // have to remember to click the notes button again. ChapterNotesSheet
+  // consumes the draft from sessionStorage on mount.
   const [showNotesSheet, setShowNotesSheet] = useState(false);
+  useEffect(() => {
+    if (!state.bookId || !state.chapter) return;
+    if (hasPendingChapterNoteDraft(state.bookId, state.chapter)) {
+      setShowNotesSheet(true);
+    }
+  }, [state.bookId, state.chapter]);
   const [longPressVerse, setLongPressVerse] = useState<number | null>(null);
   const [pressTimer, setPressTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
   const [apiAutoHighlights, setApiAutoHighlights] = useState<AutoHighlightRange[]>([]);
