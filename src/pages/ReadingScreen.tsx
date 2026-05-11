@@ -14,6 +14,7 @@ import BookSelector from '@/components/BookSelector';
 import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
 import SelectionToolbar from '@/components/SelectionToolbar';
+import ChapterNotesSheet from '@/components/ChapterNotesSheet';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
 
@@ -38,6 +39,7 @@ export default function ReadingScreen() {
   }, [state.bookId, state.chapter, location.pathname, navigate]);
   const [chapter, setChapter] = useState<Chapter | null>(null);
   const [showBookSelector, setShowBookSelector] = useState(false);
+  const [showNotesSheet, setShowNotesSheet] = useState(false);
   const [longPressVerse, setLongPressVerse] = useState<number | null>(null);
   const [pressTimer, setPressTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
   const [apiAutoHighlights, setApiAutoHighlights] = useState<AutoHighlightRange[]>([]);
@@ -336,7 +338,7 @@ export default function ReadingScreen() {
             <button
               aria-label="Notes for this chapter"
               data-testid={`chapter-notes-button-${state.bookId}-${state.chapter}`}
-              onClick={() => navigate('/notes')}
+              onClick={() => setShowNotesSheet(true)}
               className="w-11 h-11 flex items-center justify-center rounded-full"
               style={{ WebkitTapHighlightColor: 'rgba(176,154,109,0.3)' }}
             >
@@ -566,6 +568,14 @@ export default function ReadingScreen() {
             setInsightVerse(null);
             dispatch({ type: 'SET_VERSE', verse: null });
           }}
+        />
+      )}
+      {showNotesSheet && (
+        <ChapterNotesSheet
+          book={state.book}
+          bookId={state.bookId}
+          chapter={state.chapter}
+          onClose={() => setShowNotesSheet(false)}
         />
       )}
     </div>
