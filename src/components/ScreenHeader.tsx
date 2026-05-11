@@ -21,8 +21,16 @@ interface ScreenHeaderProps {
 }
 
 /**
- * ScreenHeader — sub-page header with BLACK bg (#000) and white text.
- * Production: background-color var(--night) = #000.
+ * ScreenHeader — sub-page header.
+ *
+ * Mobile (full-screen): dark 56px bar with back chevron + centered title
+ * (the prototype's `.sub-screen-header`).
+ * Desktop (right-panel context): hide the dark bar entirely — the main
+ * .app-header above the split-body already carries the navigation chrome,
+ * so a second dark bar inside the right panel would stack two dark
+ * headers vertically. Instead render a quiet white title row with the
+ * back chevron + centered title so the panel is self-navigable but
+ * doesn't introduce a second slab of black.
  */
 export default function ScreenHeader({ title, onBack, rightAction, backTestId, titleTestId }: ScreenHeaderProps) {
   const navigate = useNavigate();
@@ -32,12 +40,66 @@ export default function ScreenHeader({ title, onBack, rightAction, backTestId, t
 
   const isInRightPanel = !!rightPanel?.isRightPanel;
 
+  if (isInRightPanel) {
+    // Light title bar — sits ON the white commentary surface, no second
+    // dark slab. Back chevron dark, title dark, subtle bottom divider.
+    return (
+      <header
+        className="shrink-0"
+        style={{
+          height: 56,
+          display: 'flex',
+          alignItems: 'center',
+          padding: '0 12px',
+          background: 'var(--bg-commentary)',
+          borderBottom: '1px solid var(--card-border)',
+          gap: 8,
+        }}
+      >
+        <button
+          onClick={handleBack}
+          aria-label="Back"
+          data-testid={backTestId || 'screen-header-back-button'}
+          style={{
+            width: 36,
+            height: 36,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            color: vmTokens.textPrimary,
+            borderRadius: 8,
+          }}
+        >
+          <ArrowLeft size={22} color={vmTokens.textPrimary} strokeWidth={2} />
+        </button>
+        <h1
+          data-testid={titleTestId || 'screen-header-title'}
+          style={{
+            flex: 1,
+            textAlign: 'center',
+            fontFamily: 'Roboto, sans-serif',
+            fontSize: 17,
+            fontWeight: 600,
+            color: vmTokens.textPrimary,
+            margin: 0,
+          }}
+        >
+          {title}
+        </h1>
+        <div style={{ display: 'flex', alignItems: 'center', minWidth: 36 }}>
+          {rightAction}
+        </div>
+      </header>
+    );
+  }
+
   return (
     <header
       className="sub-screen-header safe-top"
-      style={{
-        paddingTop: isInRightPanel ? 0 : 'max(env(safe-area-inset-top), 0px)',
-      }}
+      style={{ paddingTop: 'max(env(safe-area-inset-top), 0px)' }}
     >
       <button
         className="icon-btn"

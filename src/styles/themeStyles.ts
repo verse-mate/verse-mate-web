@@ -87,7 +87,12 @@ export const pageContainerStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   height: '100%',
-  background: vmTokens.pageBg,
+  // Sub-screens (Bookmarks/Notes/Highlights/Settings/About/Giving/Help/SignIn)
+  // sit inside the desktop right-panel which is the commentary surface
+  // (white in light per prototype's --bg-commentary). On mobile (full-screen
+  // sub-screen) the user wants the same white body, not the cream reading
+  // surface. Anchored to commentaryBg so it's white in light + black in dark.
+  background: vmTokens.commentaryBg,
   fontFamily: 'Roboto, sans-serif',
   color: vmTokens.textPrimary,
 };
