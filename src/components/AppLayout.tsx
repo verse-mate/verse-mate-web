@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import DesktopLayout from '@/components/DesktopLayout';
 import { AudioPlayerRoot } from '@/audio';
+import { vmTokens } from '@/styles/themeStyles';
 
 /**
  * AppLayout — responsive shell.
@@ -50,7 +51,7 @@ export default function AppLayout() {
     <AudioPlayerRoot>
       <div
         className="relative flex flex-col w-full overflow-hidden"
-        style={{ backgroundColor: '#1B1B1B', height: '100dvh' }}
+        style={{ backgroundColor: vmTokens.chromeBg, height: '100dvh' }}
       >
         <Outlet />
       </div>

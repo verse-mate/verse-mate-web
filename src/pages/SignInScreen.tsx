@@ -111,7 +111,7 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
       <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
         <header
           className="shrink-0 safe-top"
-          style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)', backgroundColor: '#1A1A1A' }}
+          style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)', backgroundColor: vmTokens.headerBg }}
         >
           <div className="relative flex items-center justify-center px-3" style={{ height: 56 }}>
             <button
@@ -120,9 +120,9 @@ export default function SignInScreen({ initialMode = 'signin' }: SignInScreenPro
               data-testid="login-screen-back"
               className="absolute left-2 w-[44px] h-[44px] flex items-center justify-center"
             >
-              <ArrowLeft size={22} color="#fff" strokeWidth={2} />
+              <ArrowLeft size={22} color={vmTokens.headerFg} strokeWidth={2} />
             </button>
-            <h1 className="text-[18px] font-medium" style={{ color: vmTokens.surfaceRaisedBg }}>
+            <h1 className="text-[18px] font-medium" style={{ color: vmTokens.headerFg }}>
               {mode === 'signin' ? 'Sign In' : 'Create Account'}
             </h1>
           </div>

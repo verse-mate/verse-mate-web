@@ -35,6 +35,7 @@ import AboutScreen from '@/pages/AboutScreen';
 import GivingScreen from '@/pages/GivingScreen';
 import HelpScreen from '@/pages/HelpScreen';
 import SignInScreen from '@/pages/SignInScreen';
+import { vmTokens } from '@/styles/themeStyles';
 
 type RightPanelView = 'commentary' | 'bookmarks' | 'notes' | 'highlights' | 'settings' | 'about' | 'giving' | 'help' | 'signin';
 
@@ -245,7 +246,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const isSidebarCompact = sidebarWidth < SIDEBAR_COMPACT_THRESHOLD;
 
   return (
-    <div data-testid="desktop-layout" style={{ display: 'flex', width: '100vw', height: '100dvh', overflow: 'hidden', backgroundColor: '#1B1B1B' }}>
+    <div data-testid="desktop-layout" style={{ display: 'flex', width: '100vw', height: '100dvh', overflow: 'hidden', backgroundColor: vmTokens.chromeBg }}>
       {/* ─── PERSISTENT SIDEBAR — expands on book click to show chapters ─── */}
       {sidebarOpen && (
         <div
@@ -254,8 +255,8 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             width: sidebarWidth,
             flexShrink: 0,
             height: '100%',
-            backgroundColor: '#111111',
-            borderRight: '1px solid #2a2a2a',
+            backgroundColor: vmTokens.sidebarBg,
+            borderRight: `1px solid ${vmTokens.sidebarBorder}`,
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
@@ -263,8 +264,8 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           }}
         >
           {/* Sidebar header — "Bible" label */}
-          <div style={{ height: 56, display: 'flex', alignItems: 'center', justifyContent: isSidebarCompact ? 'center' : 'flex-start', padding: isSidebarCompact ? 0 : '0 16px', flexShrink: 0, borderBottom: '1px solid #2a2a2a' }}>
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '20px', fontWeight: 600, color: '#B09A6D', letterSpacing: '0.5px' }}>Books</span>
+          <div style={{ height: 56, display: 'flex', alignItems: 'center', justifyContent: isSidebarCompact ? 'center' : 'flex-start', padding: isSidebarCompact ? 0 : '0 16px', flexShrink: 0, borderBottom: `1px solid ${vmTokens.sidebarBorder}` }}>
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '20px', fontWeight: 600, color: vmTokens.gold, letterSpacing: '0.5px' }}>Books</span>
           </div>
           {/* Book list */}
           <div style={{ flex: 1, overflowY: 'auto', padding: '4px 0' }} className="mini-sidebar-scroll">
@@ -322,7 +323,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           >
             <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
               {[0, 1, 2].map(i => (
-                <div key={i} style={{ width: 3, height: 3, borderRadius: '50%', backgroundColor: '#555' }} />
+                <div key={i} style={{ width: 3, height: 3, borderRadius: '50%', backgroundColor: vmTokens.textMuted }} />
               ))}
             </div>
           </div>
@@ -341,11 +342,11 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           style={{
             flexShrink: 0,
             height: 56,
-            backgroundColor: '#1A1A1A',
+            backgroundColor: vmTokens.headerBg,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            borderBottom: '1px solid #2a2a2a',
+            borderBottom: `1px solid ${vmTokens.sidebarBorder}`,
             position: 'relative',
           }}
         >
@@ -354,12 +355,12 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             <button
               onClick={() => setShowBookSelector(true)}
               data-testid="desktop-chapter-selector-button"
-              style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#FFFFFF', background: 'none', border: 'none', cursor: 'pointer', padding: '0 8px', minHeight: 44 }}
+              style={{ display: 'flex', alignItems: 'center', gap: 6, color: vmTokens.headerFg, background: 'none', border: 'none', cursor: 'pointer', padding: '0 8px', minHeight: 44 }}
             >
-              <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '20px', color: '#FFFFFF' }}>
+              <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '20px', color: vmTokens.headerFg }}>
                 {state.book} {state.chapter}
               </span>
-              <ChevronDown size={18} color="#FFFFFF" strokeWidth={2} />
+              <ChevronDown size={18} color={vmTokens.headerFg} strokeWidth={2} />
             </button>
           </div>
 
@@ -398,8 +399,8 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                     fontWeight: 400,
                     lineHeight: '20px',
                     whiteSpace: 'nowrap',
-                    backgroundColor: tab === t.id ? '#B09A6D' : 'transparent',
-                    color: tab === t.id ? '#000000' : '#FFFFFF',
+                    backgroundColor: tab === t.id ? vmTokens.gold : 'transparent',
+                    color: tab === t.id ? vmTokens.headerBg : vmTokens.headerFg,
                     border: 'none',
                     cursor: 'pointer',
                   }}
@@ -418,7 +419,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               data-testid="desktop-hamburger-menu-button"
               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, background: 'none', border: 'none', cursor: 'pointer' }}
             >
-              <Menu size={22} color="#FFFFFF" strokeWidth={2} />
+              <Menu size={22} color={vmTokens.headerFg} strokeWidth={2} />
             </button>
           </div>
         </header>
@@ -447,7 +448,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               width: 6,
               flexShrink: 0,
               cursor: 'col-resize',
-              backgroundColor: '#2a2a2a',
+              backgroundColor: vmTokens.divider,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -459,7 +460,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             {/* Visual grip dots */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
               {[0, 1, 2].map(i => (
-                <div key={i} style={{ width: 3, height: 3, borderRadius: '50%', backgroundColor: '#555' }} />
+                <div key={i} style={{ width: 3, height: 3, borderRadius: '50%', backgroundColor: vmTokens.textMuted }} />
               ))}
             </div>
           </div>
@@ -474,13 +475,13 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               display: 'flex',
               flexDirection: 'column',
               overflow: 'hidden',
-              backgroundColor: '#1B1B1B',
+              backgroundColor: vmTokens.chromeBg,
             }}
           >
             {rightPanelView === 'commentary' ? (
               <>
                 {/* Commentary body — tabs now in top header */}
-                <div ref={commentaryScrollRef} style={{ flex: 1, overflowY: 'auto', backgroundColor: '#000000', color: '#FFFFFF', padding: '16px 16px 32px', fontFamily: "'Roboto Serif', Georgia, serif", fontWeight: 300, fontSize: `${state.settings.fontSize}px`, lineHeight: '34px' }}>
+                <div ref={commentaryScrollRef} style={{ flex: 1, overflowY: 'auto', backgroundColor: vmTokens.commentaryBg, color: vmTokens.textPrimary, padding: '16px 16px 32px', fontFamily: "'Roboto Serif', Georgia, serif", fontWeight: 300, fontSize: `${state.settings.fontSize}px`, lineHeight: '34px' }}>
                   <CommentaryPanel
                     tab={tab}
                     commentaries={commentaries}
@@ -523,7 +524,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               top: 0,
               width: 280,
               height: '100%',
-              backgroundColor: '#1B1B1B',
+              backgroundColor: vmTokens.chromeBg,
               zIndex: 50,
               boxShadow: '-4px 0 20px rgba(0,0,0,0.3)',
               display: 'flex',
@@ -617,7 +618,7 @@ function SidebarSection({
           fontFamily: 'Roboto, sans-serif',
           fontSize: isExpanded ? 14 : 11,
           fontWeight: 700,
-          color: '#B09A6D',
+          color: vmTokens.gold,
           textAlign: isExpanded ? 'left' : 'center',
           padding: isExpanded ? '14px 12px 6px' : '12px 4px 6px',
           letterSpacing: '0.5px',
@@ -627,7 +628,7 @@ function SidebarSection({
         <span>{isExpanded ? label : (label === 'Old Testament' ? 'OT' : 'NT')}</span>
         <ChevronDown
           size={isExpanded ? 14 : 10}
-          color="#B09A6D"
+          color={vmTokens.gold}
           style={{ flexShrink: 0, transform: sectionOpen ? 'rotate(0deg)' : 'rotate(-90deg)', transition: 'transform 0.15s' }}
         />
       </button>
@@ -647,13 +648,13 @@ function SidebarSection({
                 fontFamily: 'Roboto, sans-serif',
                 fontSize: isExpanded ? 15 : 10,
                 fontWeight: isActive ? 600 : 400,
-                color: isActive ? '#B09A6D' : 'rgba(255,255,255,0.6)',
+                color: isActive ? vmTokens.gold : vmTokens.textSecondary,
                 backgroundColor: isBookExpanded ? 'rgba(176,154,109,0.08)' : isActive ? 'rgba(176,154,109,0.12)' : 'transparent',
                 border: 'none',
                 cursor: 'pointer',
                 textAlign: isExpanded ? 'left' : 'center',
                 lineHeight: '18px',
-                borderLeft: isActive ? '2px solid #B09A6D' : '2px solid transparent',
+                borderLeft: isActive ? `2px solid ${vmTokens.gold}` : '2px solid transparent',
                 justifyContent: isExpanded ? 'space-between' : 'center',
                 gap: 4,
               }}
@@ -662,7 +663,7 @@ function SidebarSection({
               {isExpanded && (
                 <ChevronDown
                   size={12}
-                  color="rgba(255,255,255,0.3)"
+                  color={vmTokens.textMuted}
                   style={{ flexShrink: 0, transform: isBookExpanded ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }}
                 />
               )}
@@ -683,8 +684,8 @@ function SidebarSection({
                       fontFamily: 'Roboto, sans-serif',
                       fontSize: 11,
                       fontWeight: isActive && activeChapter === ch ? 600 : 400,
-                      color: isActive && activeChapter === ch ? '#000' : 'rgba(255,255,255,0.7)',
-                      backgroundColor: isActive && activeChapter === ch ? '#B09A6D' : '#1e1e1e',
+                      color: isActive && activeChapter === ch ? vmTokens.goldOnLight : vmTokens.textSecondary,
+                      backgroundColor: isActive && activeChapter === ch ? vmTokens.gold : vmTokens.surfaceRaisedBg,
                       border: 'none',
                       borderRadius: 4,
                       cursor: 'pointer',
@@ -752,7 +753,7 @@ function CommentaryPanel({
 
   if (commentaries.length === 0) {
     return (
-      <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
+      <p style={{ color: vmTokens.textSecondary, fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
         No commentary available for this chapter.
       </p>
     );
@@ -779,7 +780,7 @@ function CommentaryPanel({
               title="Copy summary"
             >
               {copiedTab === 'summary'
-                ? <Check size={18} color="#B09A6D" strokeWidth={2} />
+                ? <Check size={18} color={vmTokens.gold} strokeWidth={2} />
                 : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
             </button>
             <button
@@ -813,7 +814,7 @@ function CommentaryPanel({
             <CommentaryBody text={summary.detail} />
           </>
         ) : (
-          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}>No summary available.</p>
+          <p style={{ color: vmTokens.textSecondary, fontSize: 14 }}>No summary available.</p>
         )}
       </div>
     );
@@ -844,7 +845,7 @@ function CommentaryPanel({
               title="Copy line-by-line analysis"
             >
               {copiedTab === 'byline'
-                ? <Check size={18} color="#B09A6D" strokeWidth={2} />
+                ? <Check size={18} color={vmTokens.gold} strokeWidth={2} />
                 : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
             </button>
             <button
@@ -870,7 +871,7 @@ function CommentaryPanel({
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
           <button
             onClick={() => setExpanded(allExpanded ? null : -2)}
-            style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, color: '#B09A6D', background: 'none', border: 'none', cursor: 'pointer' }}
+            style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, color: vmTokens.gold, background: 'none', border: 'none', cursor: 'pointer' }}
           >
             {allExpanded ? 'Collapse All' : 'Expand All'}
           </button>
@@ -893,12 +894,12 @@ function CommentaryPanel({
           {byLineItems.map(c => {
             const isOpen = allExpanded || expanded === c.verse;
             return (
-              <div key={c.verse} data-byline-verse={c.verse} style={{ borderBottom: '1px solid #323232' }}>
+              <div key={c.verse} data-byline-verse={c.verse} style={{ borderBottom: `1px solid ${vmTokens.divider}` }}>
                 <button
                   onClick={() => setExpanded(isOpen ? null : c.verse)}
                   style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '14px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer' }}
                 >
-                  <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, color: '#FFFFFF' }}>
+                  <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, color: vmTokens.headerFg }}>
                     {book} {chapter}:{c.verse}
                   </span>
                   {isOpen ? (
@@ -916,7 +917,7 @@ function CommentaryPanel({
             );
           })}
           {byLineItems.length === 0 && (
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
+            <p style={{ color: vmTokens.textSecondary, fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
               Line-by-line analysis not available.
             </p>
           )}
@@ -946,7 +947,7 @@ function CommentaryPanel({
             title="Copy in-depth analysis"
           >
             {copiedTab === 'detailed'
-              ? <Check size={18} color="#B09A6D" strokeWidth={2} />
+              ? <Check size={18} color={vmTokens.gold} strokeWidth={2} />
               : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
           </button>
           <button
@@ -978,7 +979,7 @@ function CommentaryPanel({
       <CommentaryBody text={detailed.detail} />
     </div>
   ) : (
-    <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
+    <p style={{ color: vmTokens.textSecondary, fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
       Detailed commentary not available.
     </p>
   );
@@ -1015,7 +1016,7 @@ function CommentaryBody({ text }: { text: string }) {
       flushPara();
       const heading = line.replace(/^#+\s*/, '');
       elements.push(
-        <h2 key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: '#FFFFFF', marginTop: 22, marginBottom: 8 }}>
+        <h2 key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: vmTokens.headerFg, marginTop: 22, marginBottom: 8 }}>
           {inlineFormat(heading)}
         </h2>
       );
@@ -1024,7 +1025,7 @@ function CommentaryBody({ text }: { text: string }) {
     if (line.startsWith('>')) {
       flushPara();
       elements.push(
-        <blockquote key={key++} style={{ borderLeft: '2px solid #B09A6D', paddingLeft: 10, fontStyle: 'italic', marginBottom: 10, fontFamily: 'inherit', fontSize: 'inherit', lineHeight: 'inherit', color: 'rgba(255,255,255,0.6)' }}>
+        <blockquote key={key++} style={{ borderLeft: `2px solid ${vmTokens.gold}`, paddingLeft: 10, fontStyle: 'italic', marginBottom: 10, fontFamily: 'inherit', fontSize: 'inherit', lineHeight: 'inherit', color: vmTokens.textSecondary }}>
           {inlineFormat(line.replace(/^>\s?/, ''))}
         </blockquote>
       );
@@ -1109,11 +1110,11 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', backgroundColor: '#1B1B1B' }}>
-      <header style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px', height: 72, backgroundColor: '#1A1A1A', borderBottom: '1px solid #2a2a2a' }}>
-        <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF', margin: 0 }}>Menu</h1>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', backgroundColor: vmTokens.chromeBg }}>
+      <header style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px', height: 72, backgroundColor: vmTokens.headerBg, borderBottom: `1px solid ${vmTokens.sidebarBorder}` }}>
+        <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: vmTokens.headerFg, margin: 0 }}>Menu</h1>
         <button onClick={onClose} aria-label="Close menu" style={{ width: 44, height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'none', border: 'none', cursor: 'pointer', marginRight: -8 }}>
-          <X size={22} color="#FFFFFF" strokeWidth={2} />
+          <X size={22} color={vmTokens.headerFg} strokeWidth={2} />
         </button>
       </header>
 
@@ -1133,7 +1134,7 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
           data-testid="menu-profile-card"
           style={{ display: 'flex', alignItems: 'center', gap: 12, width: '100%', height: 64, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', marginBottom: 12, cursor: 'pointer', textAlign: 'left' }}
         >
-          <div style={{ width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#1B1B1B', flexShrink: 0, overflow: 'hidden' }}>
+          <div style={{ width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: vmTokens.chromeBg, flexShrink: 0, overflow: 'hidden' }}>
             {state.isSignedIn && state.userAvatarUrl ? (
               <img
                 src={state.userAvatarUrl}
@@ -1147,10 +1148,10 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
             )}
           </div>
           <div style={{ minWidth: 0, flex: 1 }}>
-            <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 14, lineHeight: '20px', color: '#B09A6D', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 14, lineHeight: '20px', color: vmTokens.gold, margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
               {state.isSignedIn ? state.userName || state.userEmail?.split('@')[0] || '' : 'Guest'}
             </p>
-            <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 12, lineHeight: '18px', color: 'rgba(255,255,255,0.6)', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 12, lineHeight: '18px', color: vmTokens.textSecondary, margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
               {state.isSignedIn ? state.userEmail || 'Loading...' : 'Click to sign in'}
             </p>
           </div>

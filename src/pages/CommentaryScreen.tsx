@@ -114,24 +114,24 @@ export default function CommentaryScreen() {
       {/* Header — #1A1A1A dark, Insight pill gold (active), Bible pill white (inactive) */}
       <header
         className="shrink-0 safe-top"
-        style={{ backgroundColor: '#1A1A1A', paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}
+        style={{ backgroundColor: vmTokens.headerBg, paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}
       >
         <div className="flex items-center justify-between px-4" style={{ height: 56 }}>
           <button
             onClick={() => navigate(`/read`)}
             data-testid="chapter-selector-button"
             className="flex items-center gap-1.5 min-h-[44px] pr-2 -ml-1"
-            style={{ color: '#FFFFFF' }}
+            style={{ color: vmTokens.headerFg }}
           >
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: '#FFFFFF' }}>
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: vmTokens.headerFg }}>
               {decodedBook} {chapterNum}
             </span>
-            <ChevronDown size={18} style={{ color: '#FFFFFF' }} strokeWidth={2} />
+            <ChevronDown size={18} style={{ color: vmTokens.headerFg }} strokeWidth={2} />
           </button>
 
           <div className="flex items-center gap-2">
             {/* Pill container */}
-            <div style={{ display: 'flex', backgroundColor: vmTokens.surfaceRaisedBg, borderRadius: 100, padding: '3px' }}>
+            <div style={{ display: 'flex', backgroundColor: vmTokens.pillBg, borderRadius: 100, padding: '3px' }}>
               {/* Bible pill — inactive */}
               <button
                 aria-label="Bible"
@@ -145,7 +145,7 @@ export default function CommentaryScreen() {
                   padding: '2px 12px',
                   borderRadius: 100,
                   backgroundColor: 'transparent',
-                  color: '#FFFFFF',
+                  color: vmTokens.headerFg,
                   border: 'none',
                   cursor: 'pointer',
                 }}
@@ -178,7 +178,7 @@ export default function CommentaryScreen() {
               data-testid="hamburger-menu-button"
               className="flex items-center justify-center w-[44px] h-[44px] -mr-2"
             >
-              <Menu size={22} style={{ color: '#FFFFFF' }} strokeWidth={2} />
+              <Menu size={22} style={{ color: vmTokens.headerFg }} strokeWidth={2} />
             </button>
           </div>
         </div>
@@ -187,9 +187,9 @@ export default function CommentaryScreen() {
       {/* Tab pills — dark subheader (#1A1A1A), pills in #323232 container */}
       <div
         className="shrink-0"
-        style={{ backgroundColor: '#1A1A1A', display: 'flex', justifyContent: 'center', padding: '12px 16px' }}
+        style={{ backgroundColor: vmTokens.headerBg, display: 'flex', justifyContent: 'center', padding: '12px 16px' }}
       >
-        <div style={{ display: 'flex', backgroundColor: vmTokens.surfaceRaisedBg, borderRadius: 100, padding: '3px', gap: 0 }}>
+        <div style={{ display: 'flex', backgroundColor: vmTokens.pillBg, borderRadius: 100, padding: '3px', gap: 0 }}>
           {tabs.map(t => (
             <button
               key={t.id}
@@ -204,7 +204,7 @@ export default function CommentaryScreen() {
                 lineHeight: '24px',
                 whiteSpace: 'nowrap',
                 backgroundColor: tab === t.id ? vmTokens.gold : 'transparent',
-                color: tab === t.id ? vmTokens.pageBg : '#FFFFFF',
+                color: tab === t.id ? vmTokens.headerBg : vmTokens.headerFg,
                 border: 'none',
                 cursor: 'pointer',
               }}
@@ -216,7 +216,7 @@ export default function CommentaryScreen() {
       </div>
 
       {/* Body — BLACK background, white text */}
-      <div className="flex-1 overflow-y-auto px-4 pb-8" style={{ backgroundColor: vmTokens.pageBg, color: '#FFFFFF' }}>
+      <div className="flex-1 overflow-y-auto px-4 pb-8" style={{ backgroundColor: vmTokens.pageBg, color: vmTokens.headerFg }}>
         {/* Study tab uses its own static data; route it before the empty
             commentaries early-return. */}
         {tab === 'study' ? (
@@ -375,7 +375,7 @@ export default function CommentaryScreen() {
                           data-testid={`byline-verse-toggle-${c.verse}`}
                           style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '16px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer' }}
                         >
-                          <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, color: '#FFFFFF' }}>
+                          <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, color: vmTokens.headerFg }}>
                             {decodedBook} {chapterNum}:{c.verse}
                           </span>
                           {isOpen ? (
@@ -512,7 +512,7 @@ function CommentaryBody({ text }: { text: string }) {
       flushPara();
       const text = line.replace(/^#+\s*/, '');
       elements.push(
-        <h2 key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: '#FFFFFF', marginTop: 22, marginBottom: 8 }}>
+        <h2 key={key++} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: vmTokens.headerFg, marginTop: 22, marginBottom: 8 }}>
           {inlineFormat(text)}
         </h2>
       );

@@ -235,7 +235,7 @@ export default function ReadingScreen() {
           {/* Right: TEXT pill tabs (Bible/Insight) + Menu */}
           <div className="flex items-center gap-2">
             {/* Pill container */}
-            <div style={{ display: 'flex', backgroundColor: vmTokens.surfaceRaisedBg, borderRadius: 100, padding: '3px' }}>
+            <div style={{ display: 'flex', backgroundColor: vmTokens.pillBg, borderRadius: 100, padding: '3px' }}>
               {/* Bible pill — active (gold) */}
               <button
                 aria-label="Bible"
@@ -368,7 +368,7 @@ export default function ReadingScreen() {
           className="font-scripture"
           style={{
             fontSize: `${state.settings.fontSize}px`,
-            color: '#FFFFFF',
+            color: vmTokens.textPrimary,
           }}
         >
           {(() => {

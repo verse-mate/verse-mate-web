@@ -2,6 +2,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { ReactNode } from 'react';
 import { useRightPanel } from '@/contexts/RightPanelContext';
+import { vmTokens } from '@/styles/themeStyles';
 
 interface ScreenHeaderProps {
   title: string;
@@ -35,9 +36,9 @@ export default function ScreenHeader({ title, onBack, rightAction, backTestId, t
     <header
       className="shrink-0 safe-top"
       style={{
-        backgroundColor: '#1A1A1A',
+        backgroundColor: vmTokens.headerBg,
         paddingTop: isInRightPanel ? 0 : 'max(env(safe-area-inset-top), 48px)',
-        borderBottom: '1px solid #323232',
+        borderBottom: `1px solid ${vmTokens.pillBg}`,
       }}
     >
       <div className="relative flex items-center justify-center px-3" style={{ height: isInRightPanel ? 48 : 56 }}>
@@ -61,11 +62,11 @@ export default function ScreenHeader({ title, onBack, rightAction, backTestId, t
             height: '44px',
           }}
         >
-          <ArrowLeft size={24} color="#fff" strokeWidth={2} />
+          <ArrowLeft size={24} color={vmTokens.headerFg} strokeWidth={2} />
         </button>
         <h1
           data-testid={titleTestId || 'screen-header-title'}
-          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF', letterSpacing: '-0.01em' }}
+          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: vmTokens.headerFg, letterSpacing: '-0.01em' }}
         >
           {title}
         </h1>

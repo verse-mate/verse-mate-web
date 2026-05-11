@@ -58,6 +58,11 @@ export const vmTokens = {
   // Very faint horizontal/decorative divider used inside cards. Light:
   // rgba(27,27,27,0.08); Dark: rgba(255,255,255,0.1).
   faintDivider: 'var(--vm-faint-divider)',
+  // Desktop books sidebar surface — cream in light, near-black in dark
+  sidebarBg: 'var(--vm-sidebar-bg)',
+  sidebarBorder: 'var(--vm-sidebar-border)',
+  // Right-pane commentary surface — white in light, black in dark
+  commentaryBg: 'var(--vm-commentary-bg)',
 
   // Brand constants — identical in both themes per design spec
   gold: '#B09A6D',
@@ -65,6 +70,10 @@ export const vmTokens = {
   goldOnLight: '#1B1B1B', // text on gold buttons
   headerBg: '#1B1B1B',
   headerFg: '#FFFFFF',
+  // Pill container — design spec says "--pill-bg: #2A2A2A (dark pill
+  // track to match dark header)". Stays dark on both themes since pills
+  // live INSIDE the dark top app bar / subheader.
+  pillBg: '#2A2A2A',
 } as const;
 
 // ─── Shared section / page layout primitives ─────────────────────────────
