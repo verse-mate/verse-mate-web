@@ -362,6 +362,55 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             </div>
           )}
 
+          {/* Sub-screen title in the top dark banner — hoisted from
+              ScreenHeader so we don't stack two dark slabs vertically.
+              When a sub-screen is open (Bookmarks / Notes / Highlights /
+              Settings / About / Giving / Help / SignIn), this replaces
+              the commentary pill-group at the same center-of-right-panel
+              location, with a back chevron on its left that returns to
+              the commentary view. */}
+          {rightPanelView !== 'commentary' && (() => {
+            const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
+            if (!entry) return null;
+            return (
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: `${(100 + leftPct) / 2}%`,
+                  transform: 'translate(-50%, -50%)',
+                  zIndex: 2,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  color: vmTokens.headerFg,
+                }}
+                data-testid="desktop-right-panel-title"
+              >
+                <button
+                  className="icon-btn"
+                  onClick={closeRightPanel}
+                  aria-label={`Close ${entry.label}`}
+                  data-testid="desktop-right-panel-close"
+                  style={{ color: vmTokens.headerFg }}
+                >
+                  <ArrowLeft size={20} color={vmTokens.headerFg} strokeWidth={2} />
+                </button>
+                <span
+                  style={{
+                    fontFamily: 'Roboto, sans-serif',
+                    fontWeight: 600,
+                    fontSize: 17,
+                    color: vmTokens.headerFg,
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {entry.label}
+                </span>
+              </div>
+            );
+          })()}
+
           {/* Right: hamburger menu only — prototype .icon-btn */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, position: 'relative', zIndex: 3 }}>
             <button
