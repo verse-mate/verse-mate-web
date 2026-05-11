@@ -252,26 +252,33 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
             {study.application.intro}
           </p>
         )}
-        {study.application.questions.map(q => (
-          <div
-            key={q.range}
-            style={{
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: 12,
-              marginBottom: 12,
-              paddingBottom: 12,
-              borderBottom: `1px solid ${vmTokens.divider}`,
-            }}
-          >
-            <span style={firstLineAlignStyle}>
-              <RangePill range={q.range} />
-            </span>
-            <p style={{ color: vmTokens.textPrimary, margin: 0, flex: 1 }}>
-              {q.question}
-            </p>
-          </div>
-        ))}
+        {/* Prototype's .study-app-list: borderless, gap-only list. Pills on
+            left aligned to first line of question; question text in serif
+            for parity with the byline / intro prose style. */}
+        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
+          {study.application.questions.map(q => (
+            <li
+              key={q.range}
+              style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}
+            >
+              <span style={firstLineAlignStyle}>
+                <RangePill range={q.range} />
+              </span>
+              <p
+                style={{
+                  fontFamily: "'Roboto Serif', Georgia, serif",
+                  fontSize: '0.92em',
+                  lineHeight: 1.6,
+                  color: vmTokens.textPrimary,
+                  margin: 0,
+                  flex: 1,
+                }}
+              >
+                {q.question}
+              </p>
+            </li>
+          ))}
+        </ul>
       </Card>
     </div>
   );
