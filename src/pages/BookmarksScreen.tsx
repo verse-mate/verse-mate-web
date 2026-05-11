@@ -18,7 +18,7 @@ export default function BookmarksScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader title="Bookmarks" onBack={() => navigate('/menu')} backTestId="bookmarks-back-button" />
 
       <div
@@ -31,7 +31,7 @@ export default function BookmarksScreen() {
           gap: 8,
           padding: '12px 8px',
           borderTop: `1px solid ${vmTokens.divider}`,
-          backgroundColor: vmTokens.pageBg,
+          backgroundColor: vmTokens.commentaryBg,
         }}
       >
         {state.bookmarks.length === 0 ? (

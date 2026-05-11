@@ -114,7 +114,7 @@ export default function HighlightsScreen() {
     gap: 12,
     padding: '12px 8px',
     borderTop: `1px solid ${vmTokens.divider}`,
-    backgroundColor: vmTokens.pageBg,
+    backgroundColor: vmTokens.commentaryBg,
     scrollbarWidth: 'none',
   };
 
@@ -137,7 +137,7 @@ export default function HighlightsScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader title="Highlights" onBack={() => navigate('/menu')} backTestId="highlights-back-button" />
 
       <div data-testid="highlights-list" style={listStyle}>
@@ -168,7 +168,7 @@ export default function HighlightsScreen() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 600, color: vmTokens.textPrimary, fontSize: 15 }}>
                   <Highlighter size={18} style={{ color: vmTokens.textPrimary }} strokeWidth={1.75} />
                   {g.book} {g.chapter}
-                  <span style={{ backgroundColor: vmTokens.chromeBg, color: vmTokens.textTertiary, fontSize: 12, padding: '2px 8px', borderRadius: 12 }}>
+                  <span style={{ backgroundColor: vmTokens.commentaryBg, color: vmTokens.textTertiary, fontSize: 12, padding: '2px 8px', borderRadius: 12 }}>
                     {g.count}
                   </span>
                 </div>

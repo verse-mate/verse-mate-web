@@ -24,10 +24,10 @@ export default function HelpScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader title="Help & Feedback" onBack={() => navigate('/menu')} />
 
-      <div className="sub-screen-body flex-1 px-5 pb-8" style={{ backgroundColor: vmTokens.pageBg }}>
+      <div className="sub-screen-body flex-1 px-5 pb-8" style={{ backgroundColor: vmTokens.commentaryBg }}>
         {formState === 'form' && (
           <>
             <h2 className="text-[22px] font-bold mt-2" style={{ color: vmTokens.textPrimary }}>How can we help?</h2>
@@ -103,13 +103,13 @@ export default function HelpScreen() {
       </div>
 
       {formState !== 'submitting' && (
-        <div className="shrink-0 px-5 pb-6 safe-bottom" style={{ backgroundColor: vmTokens.pageBg }}>
+        <div className="shrink-0 px-5 pb-6 safe-bottom" style={{ backgroundColor: vmTokens.commentaryBg }}>
           {formState === 'form' ? (
             <button
               onClick={handleSubmit}
               disabled={!canSubmit}
               className="w-full h-12 rounded-xl font-medium text-[15px] disabled:opacity-40"
-              style={{ backgroundColor: vmTokens.gold, color: vmTokens.pageBg }}
+              style={{ backgroundColor: vmTokens.gold, color: vmTokens.goldOnLight }}
             >
               Submit
             </button>
@@ -117,7 +117,7 @@ export default function HelpScreen() {
             <button
               onClick={() => navigate('/menu')}
               className="w-full h-12 rounded-xl font-medium text-[15px]"
-              style={{ backgroundColor: vmTokens.gold, color: vmTokens.pageBg }}
+              style={{ backgroundColor: vmTokens.gold, color: vmTokens.goldOnLight }}
             >
               Done
             </button>
