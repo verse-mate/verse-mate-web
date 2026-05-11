@@ -263,9 +263,10 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             position: 'relative',
           }}
         >
-          {/* Sidebar header — "Bible" label */}
-          <div style={{ height: 56, display: 'flex', alignItems: 'center', justifyContent: isSidebarCompact ? 'center' : 'flex-start', padding: isSidebarCompact ? 0 : '0 16px', flexShrink: 0, borderBottom: `1px solid ${vmTokens.sidebarBorder}` }}>
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '20px', fontWeight: 600, color: vmTokens.gold, letterSpacing: '0.5px' }}>Books</span>
+          {/* Sidebar header — dark "Books" bar matching the design's
+              `.sidebar-header` (dark bg + white label, height 56). */}
+          <div style={{ height: 56, display: 'flex', alignItems: 'center', justifyContent: isSidebarCompact ? 'center' : 'flex-start', padding: isSidebarCompact ? 0 : '0 16px', flexShrink: 0, backgroundColor: vmTokens.headerBg, borderBottom: `1px solid ${vmTokens.headerBg}` }}>
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '20px', fontWeight: 600, color: vmTokens.headerFg, letterSpacing: '0.5px' }}>Books</span>
           </div>
           {/* Book list */}
           <div style={{ flex: 1, overflowY: 'auto', padding: '4px 0' }} className="mini-sidebar-scroll">
@@ -608,6 +609,9 @@ function SidebarSection({
         aria-expanded={sectionOpen}
         data-testid={`sidebar-section-${label.toLowerCase().replace(/\s+/g, '-')}`}
         style={{
+          // .section-header — 13px, weight 700, UPPERCASE, muted dark
+          // text. Per design's light.css line "color: rgba(27,27,27,0.72)"
+          // which corresponds to ~vmTokens.textSecondary on light.
           display: 'flex',
           alignItems: 'center',
           justifyContent: isExpanded ? 'space-between' : 'center',
@@ -616,9 +620,10 @@ function SidebarSection({
           border: 'none',
           cursor: 'pointer',
           fontFamily: 'Roboto, sans-serif',
-          fontSize: isExpanded ? 14 : 11,
+          fontSize: 13,
           fontWeight: 700,
-          color: vmTokens.gold,
+          textTransform: 'uppercase',
+          color: vmTokens.textSecondary,
           textAlign: isExpanded ? 'left' : 'center',
           padding: isExpanded ? '14px 12px 6px' : '12px 4px 6px',
           letterSpacing: '0.5px',
@@ -641,6 +646,8 @@ function SidebarSection({
               onClick={() => onBookClick(b)}
               title={b.name}
               style={{
+                // .book-row + .book-row.active per design's light.css.
+                // Active: gold-tint bg + gold border-left + dark bold text.
                 display: 'flex',
                 alignItems: 'center',
                 width: '100%',
@@ -648,8 +655,8 @@ function SidebarSection({
                 fontFamily: 'Roboto, sans-serif',
                 fontSize: isExpanded ? 15 : 10,
                 fontWeight: isActive ? 600 : 400,
-                color: isActive ? vmTokens.gold : vmTokens.textSecondary,
-                backgroundColor: isBookExpanded ? 'rgba(176,154,109,0.08)' : isActive ? 'rgba(176,154,109,0.12)' : 'transparent',
+                color: isActive ? vmTokens.textPrimary : vmTokens.textSecondary,
+                backgroundColor: isActive ? 'rgba(176,154,109,0.10)' : isBookExpanded ? 'rgba(176,154,109,0.06)' : 'transparent',
                 border: 'none',
                 cursor: 'pointer',
                 textAlign: isExpanded ? 'left' : 'center',
@@ -668,9 +675,11 @@ function SidebarSection({
                 />
               )}
             </button>
-            {/* Chapter grid — only shown when expanded */}
+            {/* Chapter grid — only shown when expanded. Cream-gold cells per
+                design's .chapter-cell (bg #F4ECD4, border #E8DCB6 in light;
+                near-black in dark). */}
             {isBookExpanded && (
-              <div style={{ display: 'grid', gridTemplateColumns: `repeat(${isExpanded ? 5 : 3}, 1fr)`, gap: 2, padding: isExpanded ? '4px 10px 8px' : '4px 6px 8px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: `repeat(${isExpanded ? 5 : 3}, 1fr)`, gap: 4, padding: isExpanded ? '4px 10px 8px' : '4px 6px 8px' }}>
                 {Array.from({ length: b.chapters }, (_, i) => i + 1).map(ch => (
                   <button
                     key={ch}
@@ -682,11 +691,11 @@ function SidebarSection({
                       alignItems: 'center',
                       justifyContent: 'center',
                       fontFamily: 'Roboto, sans-serif',
-                      fontSize: 11,
-                      fontWeight: isActive && activeChapter === ch ? 600 : 400,
-                      color: isActive && activeChapter === ch ? vmTokens.goldOnLight : vmTokens.textSecondary,
-                      backgroundColor: isActive && activeChapter === ch ? vmTokens.gold : vmTokens.surfaceRaisedBg,
-                      border: 'none',
+                      fontSize: 12,
+                      fontWeight: isActive && activeChapter === ch ? 600 : 500,
+                      color: isActive && activeChapter === ch ? vmTokens.goldOnLight : vmTokens.textPrimary,
+                      backgroundColor: isActive && activeChapter === ch ? vmTokens.gold : 'var(--vm-chapter-cell-bg)',
+                      border: isActive && activeChapter === ch ? 'none' : '1px solid var(--vm-chapter-cell-border)',
                       borderRadius: 4,
                       cursor: 'pointer',
                     }}
@@ -764,7 +773,7 @@ function CommentaryPanel({
     return (
       <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
-          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#E7E7E7', margin: 0 }}>
+          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: vmTokens.textPrimary, margin: 0 }}>
             Summary of {book} {chapter}
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
@@ -781,7 +790,7 @@ function CommentaryPanel({
             >
               {copiedTab === 'summary'
                 ? <Check size={18} color={vmTokens.gold} strokeWidth={2} />
-                : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
+                : <Copy size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />}
             </button>
             <button
               onClick={() => navigator.share?.({
@@ -794,7 +803,7 @@ function CommentaryPanel({
               style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
               aria-label="Share summary"
             >
-              <ShareIcon size={18} color="#E7E7E7" />
+              <ShareIcon size={18} color={vmTokens.textPrimary} />
             </button>
           </div>
         </div>
@@ -826,7 +835,7 @@ function CommentaryPanel({
     return (
       <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
-          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: '#E7E7E7', margin: 0 }}>
+          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: vmTokens.textPrimary, margin: 0 }}>
             Line-by-Line Analysis of {book} {chapter}
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
@@ -846,7 +855,7 @@ function CommentaryPanel({
             >
               {copiedTab === 'byline'
                 ? <Check size={18} color={vmTokens.gold} strokeWidth={2} />
-                : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
+                : <Copy size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />}
             </button>
             <button
               onClick={() => {
@@ -864,7 +873,7 @@ function CommentaryPanel({
               style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
               aria-label="Share line-by-line analysis"
             >
-              <ShareIcon size={18} color="#E7E7E7" />
+              <ShareIcon size={18} color={vmTokens.textPrimary} />
             </button>
           </div>
         </div>
@@ -931,7 +940,7 @@ function CommentaryPanel({
   return detailed ? (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
-        <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 18, lineHeight: '26px', color: '#E7E7E7', margin: 0 }}>
+        <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 18, lineHeight: '26px', color: vmTokens.textPrimary, margin: 0 }}>
           In-Depth Analysis of {book} {chapter}
         </h2>
         <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
@@ -948,7 +957,7 @@ function CommentaryPanel({
           >
             {copiedTab === 'detailed'
               ? <Check size={18} color={vmTokens.gold} strokeWidth={2} />
-              : <Copy size={18} color="#E7E7E7" strokeWidth={1.5} />}
+              : <Copy size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />}
           </button>
           <button
             onClick={() => navigator.share?.({
@@ -961,7 +970,7 @@ function CommentaryPanel({
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
             aria-label="Share in-depth analysis"
           >
-            <ShareIcon size={18} color="#E7E7E7" />
+            <ShareIcon size={18} color={vmTokens.textPrimary} />
           </button>
         </div>
       </div>
@@ -1165,16 +1174,16 @@ function MenuSidebar({ onClose, onOpenPage }: { onClose: () => void; onOpenPage?
               onClick={() => { if (onOpenPage) { onOpenPage(item.view); } else { navigate(`/${item.view}`); onClose(); } }}
               style={{ display: 'flex', alignItems: 'center', gap: 16, width: '100%', height: 56, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', cursor: 'pointer', textAlign: 'left' }}
             >
-              <item.icon size={18} color="#E7E7E7" strokeWidth={1.5} />
-              <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: '#E7E7E7' }}>{item.label}</span>
+              <item.icon size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />
+              <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: vmTokens.textPrimary }}>{item.label}</span>
             </button>
           ))}
           <button
             onClick={handleShare}
             style={{ display: 'flex', alignItems: 'center', gap: 16, width: '100%', height: 56, padding: '0 16px', borderRadius: 12, backgroundColor: '#323232', border: '1px solid #323232', cursor: 'pointer', textAlign: 'left' }}
           >
-            <ShareIcon size={18} color="#E7E7E7" />
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: '#E7E7E7' }}>Share VerseMate</span>
+            <ShareIcon size={18} color={vmTokens.textPrimary} />
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 15, lineHeight: '24px', color: vmTokens.textPrimary }}>Share VerseMate</span>
           </button>
           <button
             onClick={handleLogout}
