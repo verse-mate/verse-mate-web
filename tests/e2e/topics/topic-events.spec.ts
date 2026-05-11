@@ -30,7 +30,15 @@ test.describe('Topics — TopicEventsScreen', () => {
     await expect(events.searchInput).toBeVisible();
   });
 
-  test('Topic discovery from BookSelector — click first topic, land on events screen', async ({ page }) => {
+  test('Topic discovery from BookSelector — click first topic, land on events screen', async ({ page, viewport }) => {
+    // ReaderPage relies on the mobile `chapter-selector-button` testid,
+    // which DesktopLayout duplicates with its own `desktop-`-prefixed
+    // copy — strict-mode visibility waits flake on desktop. Same Phase-2
+    // deferral pattern used by `bible/*.spec.ts`.
+    test.skip(
+      !!viewport && viewport.width >= 1024,
+      'DesktopLayout duplicates reader testids — Phase-2 follow-up',
+    );
     const reader = new ReaderPage(page);
     const picker = new BookSelectorPage(page);
 
