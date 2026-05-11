@@ -246,30 +246,19 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const isSidebarCompact = sidebarWidth < SIDEBAR_COMPACT_THRESHOLD;
 
   return (
-    <div data-testid="desktop-layout" style={{ display: 'flex', width: '100vw', height: '100dvh', overflow: 'hidden', backgroundColor: vmTokens.chromeBg }}>
-      {/* ─── PERSISTENT SIDEBAR — expands on book click to show chapters ─── */}
+    // Prototype layout: .app-shell wraps the sidebar + main column.
+    // .sidebar / .sidebar-header / .sidebar-scroll come straight from
+    // src/styles/prototype.css. Inline overrides are kept to a minimum.
+    <div data-testid="desktop-layout" className="app-shell">
+      {/* ─── PERSISTENT SIDEBAR ─── */}
       {sidebarOpen && (
-        <div
+        <aside
           data-testid="desktop-sidebar"
-          style={{
-            width: sidebarWidth,
-            flexShrink: 0,
-            height: '100%',
-            backgroundColor: vmTokens.sidebarBg,
-            borderRight: `1px solid ${vmTokens.sidebarBorder}`,
-            display: 'flex',
-            flexDirection: 'column',
-            overflow: 'hidden',
-            position: 'relative',
-          }}
+          className="sidebar"
+          style={{ width: sidebarWidth }}
         >
-          {/* Sidebar header — dark "Books" bar matching the design's
-              `.sidebar-header` (dark bg + white label, height 56). */}
-          <div style={{ height: 56, display: 'flex', alignItems: 'center', justifyContent: isSidebarCompact ? 'center' : 'flex-start', padding: isSidebarCompact ? 0 : '0 16px', flexShrink: 0, backgroundColor: vmTokens.headerBg, borderBottom: `1px solid ${vmTokens.headerBg}` }}>
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, lineHeight: '20px', fontWeight: 600, color: vmTokens.headerFg, letterSpacing: '0.5px' }}>Books</span>
-          </div>
-          {/* Book list */}
-          <div style={{ flex: 1, overflowY: 'auto', padding: '4px 0' }} className="mini-sidebar-scroll">
+          <div className="sidebar-header">Books</div>
+          <div className="sidebar-scroll mini-sidebar-scroll">
             <SidebarSection
               label="Old Testament"
               books={otBooks}
@@ -308,71 +297,36 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             data-testid="desktop-sidebar-divider"
             aria-label="Resize sidebar"
             role="separator"
-            style={{
-              position: 'absolute',
-              top: 0,
-              right: 0,
-              width: 6,
-              height: '100%',
-              cursor: 'col-resize',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              touchAction: 'none',
-              zIndex: 5,
-            }}
+            style={{ position: 'absolute', top: 0, right: 0, width: 6, height: '100%', cursor: 'col-resize', display: 'flex', alignItems: 'center', justifyContent: 'center', touchAction: 'none', zIndex: 5 }}
           >
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-              {[0, 1, 2].map(i => (
-                <div key={i} style={{ width: 3, height: 3, borderRadius: '50%', backgroundColor: vmTokens.textMuted }} />
-              ))}
+            <div className="divider-dots">
+              {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
             </div>
           </div>
-        </div>
+        </aside>
       )}
 
       {/* ─── MAIN CONTENT AREA (header + split panels) ─── */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-        {/* ─── SHARED FULL-WIDTH HEADER ─── */}
-        <header
-          // paddingLeft mirrors ReadingScreen's body padding (px-4 md:px-12
-          // lg:px-16) so the book-name button in the header aligns with the
-          // left edge of the bible text below it. Right padding stays 16px
-          // so the hamburger sits close to the screen edge.
-          className="pl-4 md:pl-12 lg:pl-16 pr-4"
-          style={{
-            flexShrink: 0,
-            height: 56,
-            backgroundColor: vmTokens.headerBg,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            borderBottom: `1px solid ${vmTokens.sidebarBorder}`,
-            position: 'relative',
-          }}
-        >
-          {/* Left: Book/chapter dropdown */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-            <button
-              onClick={() => setShowBookSelector(true)}
-              data-testid="desktop-chapter-selector-button"
-              style={{ display: 'flex', alignItems: 'center', gap: 6, color: vmTokens.headerFg, background: 'none', border: 'none', cursor: 'pointer', padding: '0 8px', minHeight: 44 }}
-            >
-              <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '20px', color: vmTokens.headerFg }}>
-                {state.book} {state.chapter}
-              </span>
-              <ChevronDown size={18} color={vmTokens.headerFg} strokeWidth={2} />
-            </button>
+        {/* Prototype .app-header — chapter-selector-btn LEFT, logo CENTER,
+            commentary pill-group absolutely positioned over right panel,
+            hamburger icon-btn RIGHT. */}
+        <header className="app-header" style={{ paddingLeft: 24 }}>
+          <button
+            className="chapter-selector-btn"
+            onClick={() => setShowBookSelector(true)}
+            data-testid="desktop-chapter-selector-button"
+          >
+            <span>{state.book} {state.chapter}</span>
+            <ChevronDown size={18} color={vmTokens.headerFg} strokeWidth={2} />
+          </button>
+
+          <div className="logo-mark">
+            <img src="/versemate-logo-white.png" alt="VerseMate" className="logo-img" />
           </div>
 
-          {/* Center: VerseMate logo */}
-          <img src="/versemate-logo-white.png" alt="VerseMate" style={{ height: 20, objectFit: 'contain', position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }} />
-
-          {/* Commentary tabs — absolutely positioned at the horizontal center
-              of the right panel so they sit directly above the panel they
-              control. As the user resizes the split, leftPct changes and the
-              pill shifts with it. The right panel spans leftPct% → 100% of the
-              header width; its center is therefore (100 + leftPct) / 2 %. */}
+          {/* Commentary pill-group — absolute-positioned at the horizontal
+              center of the right panel (split-aware). */}
           {rightPanelView === 'commentary' && (
             <div
               style={{
@@ -380,122 +334,77 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 top: '50%',
                 left: `${(100 + leftPct) / 2}%`,
                 transform: 'translate(-50%, -50%)',
-                display: 'flex',
-                backgroundColor: '#323232',
-                borderRadius: 100,
-                padding: '3px',
                 zIndex: 2,
               }}
             >
-              {tabs.map(t => (
-                <button
-                  key={t.id}
-                  onClick={() => setTab(t.id)}
-                  data-testid={`desktop-tab-${t.id}`}
-                  style={{
-                    borderRadius: 100,
-                    padding: '4px 14px',
-                    fontFamily: 'Roboto, sans-serif',
-                    fontSize: 14,
-                    fontWeight: 400,
-                    lineHeight: '20px',
-                    whiteSpace: 'nowrap',
-                    backgroundColor: tab === t.id ? vmTokens.gold : 'transparent',
-                    color: tab === t.id ? vmTokens.headerBg : vmTokens.headerFg,
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                >
-                  {t.label}
-                </button>
-              ))}
+              <div className="pill-group">
+                {tabs.map(t => (
+                  <button
+                    key={t.id}
+                    className={`pill ${tab === t.id ? 'active' : ''}`}
+                    onClick={() => setTab(t.id)}
+                    data-testid={`desktop-tab-${t.id}`}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
             </div>
           )}
 
-          {/* Right: hamburger menu only */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          {/* Right: hamburger menu only — prototype .icon-btn */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, position: 'relative', zIndex: 3 }}>
             <button
+              className="icon-btn"
               onClick={() => setShowMenu(!showMenu)}
               aria-label="Open menu"
               data-testid="desktop-hamburger-menu-button"
-              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44, background: 'none', border: 'none', cursor: 'pointer' }}
             >
               <Menu size={22} color={vmTokens.headerFg} strokeWidth={2} />
             </button>
           </div>
         </header>
 
-        {/* ─── SPLIT BODY ─── */}
-        <div ref={contentRef} data-testid="desktop-split-body" style={{ flex: 1, display: 'flex', overflow: 'hidden', position: 'relative' }}>
-          {/* LEFT PANEL — Bible reading */}
+        {/* Prototype .split-body — left/right panels separated by .divider */}
+        <div ref={contentRef} data-testid="desktop-split-body" className="split-body">
           <div
             data-testid="desktop-left-panel"
-            style={{
-              width: `${leftPct}%`,
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              overflow: 'hidden',
-            }}
+            className="left-panel"
+            style={{ width: `${leftPct}%` }}
           >
             <Outlet />
           </div>
 
-          {/* DRAG HANDLE */}
+          {/* Drag handle — prototype .divider with .divider-dots */}
           <div
+            className="divider"
             onPointerDown={handleDragStart}
             data-testid="desktop-split-divider"
-            style={{
-              width: 6,
-              flexShrink: 0,
-              cursor: 'col-resize',
-              backgroundColor: vmTokens.divider,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              position: 'relative',
-              zIndex: 10,
-              touchAction: 'none',
-            }}
           >
-            {/* Visual grip dots */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-              {[0, 1, 2].map(i => (
-                <div key={i} style={{ width: 3, height: 3, borderRadius: '50%', backgroundColor: vmTokens.textMuted }} />
-              ))}
+            <div className="divider-dots">
+              {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
             </div>
           </div>
 
-          {/* RIGHT PANEL — Commentary or menu page content */}
-          <div
-            data-testid="desktop-right-panel"
-            style={{
-              flex: 1,
-              minWidth: 0,
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              overflow: 'hidden',
-              backgroundColor: vmTokens.chromeBg,
-            }}
-          >
+          {/* Right panel — commentary OR sub-page */}
+          <div data-testid="desktop-right-panel" className="right-panel">
             {rightPanelView === 'commentary' ? (
-              <>
-                {/* Commentary body — tabs now in top header */}
-                <div ref={commentaryScrollRef} style={{ flex: 1, overflowY: 'auto', backgroundColor: vmTokens.commentaryBg, color: vmTokens.textPrimary, padding: '16px 16px 32px', fontFamily: "'Roboto Serif', Georgia, serif", fontWeight: 300, fontSize: `${state.settings.fontSize}px`, lineHeight: '34px' }}>
-                  <CommentaryPanel
-                    tab={tab}
-                    commentaries={commentaries}
-                    expanded={expanded}
-                    setExpanded={setExpanded}
-                    book={state.book}
-                    bookId={currentBook?.bookId ?? null}
-                    chapter={state.chapter}
-                  />
-                </div>
-              </>
+              <div
+                ref={commentaryScrollRef}
+                className="commentary-body"
+                style={{ fontSize: `${state.settings.fontSize}px` }}
+              >
+                <CommentaryPanel
+                  tab={tab}
+                  commentaries={commentaries}
+                  expanded={expanded}
+                  setExpanded={setExpanded}
+                  book={state.book}
+                  bookId={currentBook?.bookId ?? null}
+                  chapter={state.chapter}
+                />
+              </div>
             ) : (
-              /* Menu page content — wrapped with RightPanelProvider so ScreenHeader back buttons work */
               <RightPanelProvider value={{ goBack: closeRightPanel, isRightPanel: true }}>
                 <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                   {(() => {
@@ -605,34 +514,14 @@ function SidebarSection({
     <>
       <button
         type="button"
+        className="section-header"
         onClick={onSectionToggle}
         aria-expanded={sectionOpen}
         data-testid={`sidebar-section-${label.toLowerCase().replace(/\s+/g, '-')}`}
-        style={{
-          // .section-header — 13px, weight 700, UPPERCASE, muted dark
-          // text. Per design's light.css line "color: rgba(27,27,27,0.72)"
-          // which corresponds to ~vmTokens.textSecondary on light.
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: isExpanded ? 'space-between' : 'center',
-          width: '100%',
-          background: 'none',
-          border: 'none',
-          cursor: 'pointer',
-          fontFamily: 'Roboto, sans-serif',
-          fontSize: 13,
-          fontWeight: 700,
-          textTransform: 'uppercase',
-          color: vmTokens.textSecondary,
-          textAlign: isExpanded ? 'left' : 'center',
-          padding: isExpanded ? '14px 12px 6px' : '12px 4px 6px',
-          letterSpacing: '0.5px',
-          gap: 6,
-        }}
       >
         <span>{isExpanded ? label : (label === 'Old Testament' ? 'OT' : 'NT')}</span>
         <ChevronDown
-          size={isExpanded ? 14 : 10}
+          size={14}
           color={vmTokens.gold}
           style={{ flexShrink: 0, transform: sectionOpen ? 'rotate(0deg)' : 'rotate(-90deg)', transition: 'transform 0.15s' }}
         />
@@ -643,28 +532,9 @@ function SidebarSection({
         return (
           <div key={b.bookId}>
             <button
+              className={`book-row ${isActive ? 'active' : ''} ${isBookExpanded ? 'expanded' : ''}`}
               onClick={() => onBookClick(b)}
               title={b.name}
-              style={{
-                // .book-row + .book-row.active per design's light.css.
-                // Active: gold-tint bg + gold border-left + dark bold text.
-                display: 'flex',
-                alignItems: 'center',
-                width: '100%',
-                padding: isExpanded ? '6px 12px' : '5px 4px',
-                fontFamily: 'Roboto, sans-serif',
-                fontSize: isExpanded ? 15 : 10,
-                fontWeight: isActive ? 600 : 400,
-                color: isActive ? vmTokens.textPrimary : vmTokens.textSecondary,
-                backgroundColor: isActive ? 'rgba(176,154,109,0.10)' : isBookExpanded ? 'rgba(176,154,109,0.06)' : 'transparent',
-                border: 'none',
-                cursor: 'pointer',
-                textAlign: isExpanded ? 'left' : 'center',
-                lineHeight: '18px',
-                borderLeft: isActive ? `2px solid ${vmTokens.gold}` : '2px solid transparent',
-                justifyContent: isExpanded ? 'space-between' : 'center',
-                gap: 4,
-              }}
             >
               <span>{isExpanded ? b.name : b.shortName}</span>
               {isExpanded && (
@@ -675,30 +545,15 @@ function SidebarSection({
                 />
               )}
             </button>
-            {/* Chapter grid — only shown when expanded. Cream-gold cells per
-                design's .chapter-cell (bg #F4ECD4, border #E8DCB6 in light;
-                near-black in dark). */}
+            {/* Prototype .chapter-grid / .chapter-cell — cream-gold cells in
+                light, near-black in dark. Styling fully in prototype.css. */}
             {isBookExpanded && (
-              <div style={{ display: 'grid', gridTemplateColumns: `repeat(${isExpanded ? 5 : 3}, 1fr)`, gap: 4, padding: isExpanded ? '4px 10px 8px' : '4px 6px 8px' }}>
+              <div className="chapter-grid">
                 {Array.from({ length: b.chapters }, (_, i) => i + 1).map(ch => (
                   <button
                     key={ch}
+                    className={`chapter-cell ${isActive && activeChapter === ch ? 'active' : ''}`}
                     onClick={() => onChapterClick(b, ch)}
-                    style={{
-                      width: '100%',
-                      aspectRatio: '1',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontFamily: 'Roboto, sans-serif',
-                      fontSize: 12,
-                      fontWeight: isActive && activeChapter === ch ? 600 : 500,
-                      color: isActive && activeChapter === ch ? vmTokens.goldOnLight : vmTokens.textPrimary,
-                      backgroundColor: isActive && activeChapter === ch ? vmTokens.gold : 'var(--vm-chapter-cell-bg)',
-                      border: isActive && activeChapter === ch ? 'none' : '1px solid var(--vm-chapter-cell-border)',
-                      borderRadius: 4,
-                      cursor: 'pointer',
-                    }}
                   >
                     {ch}
                   </button>
@@ -773,7 +628,7 @@ function CommentaryPanel({
     return (
       <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
-          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: vmTokens.textPrimary, margin: 0 }}>
+          <h2 className="commentary-h2">
             Summary of {book} {chapter}
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
@@ -835,7 +690,7 @@ function CommentaryPanel({
     return (
       <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
-          <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: vmTokens.textPrimary, margin: 0 }}>
+          <h2 className="commentary-h2">
             Line-by-Line Analysis of {book} {chapter}
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>

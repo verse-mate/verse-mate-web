@@ -38,42 +38,47 @@
 
 import type { CSSProperties } from 'react';
 
-/** Raw CSS-var string accessors. Use inside `style={{...}}` props. */
+/** Raw CSS-var string accessors. Use inside `style={{...}}` props.
+ *  All names below now resolve to the prototype's canonical tokens from
+ *  src/styles/prototype.css (handoff source of truth), with a `.dark`
+ *  override block in the same file flipping every variable for dark mode. */
 export const vmTokens = {
-  pageBg: 'var(--vm-page-bg)',
-  chromeBg: 'var(--vm-chrome-bg)',
-  surfaceRaisedBg: 'var(--vm-surface-raised-bg)',
-  surfaceRaisedBorder: 'var(--vm-surface-raised-border)',
-  divider: 'var(--vm-divider)',
-  textPrimary: 'var(--vm-text-primary)',
-  textSecondary: 'var(--vm-text-secondary)',
-  textTertiary: 'var(--vm-text-tertiary)',
-  textMuted: 'var(--vm-text-muted)',
-  inputBg: 'var(--vm-input-bg)',
-  inputBorder: 'var(--vm-input-border)',
-  rowSelectedBg: 'var(--vm-row-selected-bg)',
-  hoverBg: 'var(--vm-hover-bg)',
-  statusError: 'var(--vm-status-error)',
-  statusSuccess: 'var(--vm-status-success)',
-  // Very faint horizontal/decorative divider used inside cards. Light:
-  // rgba(27,27,27,0.08); Dark: rgba(255,255,255,0.1).
-  faintDivider: 'var(--vm-faint-divider)',
-  // Desktop books sidebar surface — cream in light, near-black in dark
-  sidebarBg: 'var(--vm-sidebar-bg)',
-  sidebarBorder: 'var(--vm-sidebar-border)',
-  // Right-pane commentary surface — white in light, black in dark
-  commentaryBg: 'var(--vm-commentary-bg)',
+  // Page / surfaces — mapped to prototype tokens
+  pageBg: 'var(--bg-reading)',
+  chromeBg: 'var(--bg-app)',
+  surfaceRaisedBg: 'var(--card-bg)',
+  surfaceRaisedBorder: 'var(--card-border)',
+  divider: 'var(--divider)',
+  // Sidebar / commentary panel — prototype's named surfaces
+  sidebarBg: 'var(--bg-sidebar)',
+  sidebarBorder: 'var(--bg-sidebar-border)',
+  commentaryBg: 'var(--bg-commentary)',
+
+  // Text — prototype's --fg-* family
+  textPrimary: 'var(--fg-primary)',
+  textSecondary: 'var(--fg-secondary)',
+  textTertiary: 'var(--fg-secondary)', // prototype only has 2 text levels; alias
+  textMuted: 'var(--fg-muted)',
+
+  // Inputs reuse card surfaces
+  inputBg: 'var(--btn-icon-bg)',
+  inputBorder: 'var(--btn-icon-border)',
+  rowSelectedBg: 'rgba(176,154,109,0.10)', // gold-tint per .book-row.active
+  hoverBg: 'var(--hover-bg)',
+  faintDivider: 'var(--divider)',
+
+  // Status
+  statusError: 'var(--fg-destructive)',
+  statusSuccess: '#15803D',
 
   // Brand constants — identical in both themes per design spec
-  gold: '#B09A6D',
-  goldHover: 'rgba(176,154,109,0.5)', // gold-translucent hover ring/border
-  goldOnLight: '#1B1B1B', // text on gold buttons
-  headerBg: '#1B1B1B',
-  headerFg: '#FFFFFF',
-  // Pill container — design spec says "--pill-bg: #2A2A2A (dark pill
-  // track to match dark header)". Stays dark on both themes since pills
-  // live INSIDE the dark top app bar / subheader.
-  pillBg: '#2A2A2A',
+  gold: 'var(--vm-dust)',
+  goldHover: 'rgba(176,154,109,0.5)',
+  goldOnLight: 'var(--fg-on-gold)',
+  headerBg: 'var(--bg-header)',
+  headerFg: 'var(--fg-on-dark)',
+  // Pill container — prototype's --pill-bg stays dark on both themes
+  pillBg: 'var(--pill-bg)',
 } as const;
 
 // ─── Shared section / page layout primitives ─────────────────────────────
