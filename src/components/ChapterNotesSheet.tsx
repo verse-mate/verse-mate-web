@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { X, FileText, Mail, ArrowLeft } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import { login as apiLogin, API_BASE_URL } from '@/services/bibleService';
@@ -11,38 +11,77 @@ interface Props {
   onClose: () => void;
 }
 
-type GuestView = 'providers' | 'email';
+type View = 'compose' | 'signin-providers' | 'signin-email';
+
+/** Storage key for the in-flight note draft, scoped per chapter. */
+function draftKey(bookId: number, chapter: number) {
+  return `versemate.pending-chapter-note.${bookId}.${chapter}`;
+}
+
+/** Read + clear a pending draft for the given chapter. */
+export function consumeChapterNoteDraft(bookId: number, chapter: number): string | null {
+  try {
+    const v = sessionStorage.getItem(draftKey(bookId, chapter));
+    if (v) sessionStorage.removeItem(draftKey(bookId, chapter));
+    return v;
+  } catch {
+    return null;
+  }
+}
+
+/** Peek at whether a pending draft exists without consuming it. */
+export function hasPendingChapterNoteDraft(bookId: number, chapter: number): boolean {
+  try {
+    return !!sessionStorage.getItem(draftKey(bookId, chapter));
+  } catch {
+    return false;
+  }
+}
 
 /**
  * Chapter-level notes sheet (issue #130).
  *
- * Opened from the notes (📄) icon in the Bible reading header. Lists the
- * user's existing notes for this `bookId + chapter` and exposes an
- * "Add New Note" form. Closing the modal (X or backdrop tap) keeps the
- * user on the Bible page they were reading.
+ * The textarea is always visible regardless of auth state — users can
+ * compose their note first, and authentication only kicks in at save
+ * time. This means a guest can:
+ *   1. Type a note.
+ *   2. Tap "Sign in to save" → inline sign-in view.
+ *   3. Successfully sign in (Email submits in place; Google/Apple SSO
+ *      redirects briefly but the draft is preserved via sessionStorage
+ *      and restored on return).
+ *   4. Return to the compose view with the draft intact and the button
+ *      label flipped to "Add Note" — one more tap saves it.
  *
- * Guest gating: capturing a note requires a signed-in account. To avoid
- * yanking the user out of context, the sign-in flow is rendered INLINE
- * inside the same 480px modal. Google + Apple use the redirect SSO
- * path (matches `SignInScreen`'s providers); Email opens an inline
- * email + password form within the modal. On successful email sign-in
- * the modal swaps to the Add New Note form automatically (driven off
- * `state.isSignedIn`).
+ * SSO round-trip: before redirecting to /auth/sso/<p>/redirect we stash
+ * the in-flight draft under a chapter-scoped sessionStorage key.
+ * `useTrackPreAuthLocation` already preserves the `/bible/<book>/<n>`
+ * URL, so when the user lands back on the Bible page, `ReadingScreen`
+ * peeks at `hasPendingChapterNoteDraft()` and re-opens this modal,
+ * which then `consumeChapterNoteDraft()`s the saved text on mount.
  *
- * Chapter-level notes use `verse: 0` to match the convention `BookmarksScreen`
- * uses for chapter-level bookmarks (filtered via `!b.verse`).
+ * Chapter-level notes use `verse: 0` to match the convention
+ * `BookmarksScreen` uses for chapter-level bookmarks (`!b.verse`).
  */
 export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Props) {
   const { state, dispatch, addNote } = useApp();
-  const [text, setText] = useState('');
+  // Restore any draft persisted across an SSO redirect (Google/Apple).
+  // Email sign-in doesn't redirect, so its draft lives in this same
+  // useState across the in-place view switches.
+  const [text, setText] = useState<string>(() => consumeChapterNoteDraft(bookId, chapter) ?? '');
   const [saving, setSaving] = useState(false);
+  const [view, setView] = useState<View>('compose');
 
-  // Guest sub-view state — only relevant when not signed in.
-  const [guestView, setGuestView] = useState<GuestView>('providers');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [authError, setAuthError] = useState<string | null>(null);
   const [authSubmitting, setAuthSubmitting] = useState(false);
+
+  // When the user transitions guest → signed-in mid-modal (via inline
+  // email submit), flip back to compose so they see the textarea + Add
+  // Note button with their draft preserved.
+  useEffect(() => {
+    if (state.isSignedIn && view !== 'compose') setView('compose');
+  }, [state.isSignedIn, view]);
 
   const chapterNotes = useMemo(
     () =>
@@ -52,9 +91,24 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
     [state.notes, bookId, chapter],
   );
 
-  const handleAdd = async () => {
+  const stashDraftForSSO = () => {
+    try {
+      sessionStorage.setItem(draftKey(bookId, chapter), text);
+    } catch {
+      /* sessionStorage unavailable — accept the lossy round-trip */
+    }
+  };
+
+  const handleAddOrSignIn = async () => {
     const trimmed = text.trim();
     if (!trimmed) return;
+    if (!state.isSignedIn) {
+      // Guest path — switch to sign-in view in place. The draft stays in
+      // component state so when they return from email sign-in (or SSO
+      // round-trip via sessionStorage) it's still there.
+      setView('signin-providers');
+      return;
+    }
     setSaving(true);
     try {
       await addNote({ bookId, book, chapter, verse: 0, text: trimmed });
@@ -65,14 +119,13 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
     }
   };
 
-  // SSO handlers mirror SignInScreen.tsx — backend's /auth/sso/<p>/redirect
-  // does the OAuth handshake and returns via /auth/callback, which the
-  // `useTrackPreAuthLocation` hook already wired up so the user comes back
-  // to the bible page they were on.
+  // SSO handlers — stash the draft so the OAuth round-trip doesn't lose it.
   const handleGoogleSSO = () => {
+    stashDraftForSSO();
     window.location.href = `${API_BASE_URL}/auth/sso/google/redirect`;
   };
   const handleAppleSSO = () => {
+    stashDraftForSSO();
     window.location.href = `${API_BASE_URL}/auth/sso/apple/redirect`;
   };
 
@@ -94,8 +147,8 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
         userAvatarUrl: user.avatarUrl,
       });
       toast.success('Signed in');
-      // Modal stays open. `state.isSignedIn` is now true, so the Add New
-      // Note form re-renders in place of the sign-in providers.
+      // The useEffect above flips view back to 'compose' once isSignedIn
+      // becomes true. `text` is preserved across this transition.
     } catch (err: unknown) {
       const msg =
         err && typeof err === 'object' && 'status' in err
@@ -106,6 +159,12 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
       setAuthSubmitting(false);
     }
   };
+
+  const buttonLabel = saving
+    ? 'Saving…'
+    : state.isSignedIn
+      ? 'Add Note'
+      : 'Sign in to save';
 
   return (
     <>
@@ -139,16 +198,59 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
             </button>
           </header>
 
-          {!state.isSignedIn ? (
-            // Inline sign-in flow — Google/Apple SSO redirect, or an inline
-            // email form. All within the same 480px modal so the user
-            // never leaves the chapter notes context.
+          {view === 'compose' && (
+            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
+              {chapterNotes.length > 0 && (
+                <ul className="space-y-2" data-testid="chapter-notes-existing-list">
+                  {chapterNotes.map(n => (
+                    <li
+                      key={n.id}
+                      data-testid={`chapter-note-item-${n.id}`}
+                      className="rounded-2xl bg-dark-raised border border-dark px-4 py-3"
+                    >
+                      {n.verse > 0 && (
+                        <p className="text-[11px] uppercase tracking-wide text-dark-muted mb-1">
+                          Verse {n.verse}
+                        </p>
+                      )}
+                      <p className="text-[14px] text-dark-fg whitespace-pre-wrap">{n.text}</p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              <section>
+                <h4 className="text-[14px] font-semibold text-dark-fg mb-2">Add New Note</h4>
+                <textarea
+                  data-testid="chapter-notes-textarea"
+                  value={text}
+                  onChange={e => setText(e.target.value)}
+                  placeholder="Write your note here..."
+                  rows={4}
+                  className="w-full rounded-2xl bg-dark-raised border border-dark px-4 py-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
+                />
+                <div className="flex justify-end mt-3">
+                  <button
+                    data-testid="chapter-notes-add-button"
+                    onClick={handleAddOrSignIn}
+                    disabled={text.trim().length === 0 || saving}
+                    className="px-4 h-10 rounded-xl bg-gold text-[#1A1A1A] text-[13px] font-medium disabled:opacity-40 inline-flex items-center gap-2"
+                  >
+                    <FileText size={14} />
+                    {buttonLabel}
+                  </button>
+                </div>
+              </section>
+            </div>
+          )}
+
+          {(view === 'signin-providers' || view === 'signin-email') && (
             <div data-testid="chapter-notes-signin-cta" className="px-5 py-6 flex flex-col">
               <p className="text-[14px] text-dark-fg/80 mb-5 text-center leading-snug">
-                Sign in to save your notes for {book} {chapter}.
+                Sign in to save your note — we'll bring you right back.
               </p>
 
-              {guestView === 'providers' ? (
+              {view === 'signin-providers' ? (
                 <div className="flex flex-col gap-3">
                   <button
                     data-testid="login-google-button"
@@ -183,19 +285,26 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
 
                   <button
                     data-testid="login-email-button"
-                    onClick={() => setGuestView('email')}
+                    onClick={() => setView('signin-email')}
                     className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] bg-dark-raised border border-dark text-dark-fg"
                   >
                     <Mail size={18} />
                     Continue with Email
                   </button>
+
+                  <button
+                    onClick={() => setView('compose')}
+                    data-testid="chapter-notes-signin-cancel"
+                    className="w-full mt-2 text-[12px] text-dark-muted"
+                  >
+                    Back to note
+                  </button>
                 </div>
               ) : (
-                // Inline email/password form — same APIs as /login.
                 <div className="flex flex-col gap-3">
                   <button
                     onClick={() => {
-                      setGuestView('providers');
+                      setView('signin-providers');
                       setAuthError(null);
                     }}
                     aria-label="Back to providers"
@@ -237,50 +346,6 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                   </button>
                 </div>
               )}
-            </div>
-          ) : (
-            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
-              {chapterNotes.length > 0 && (
-                <ul className="space-y-2" data-testid="chapter-notes-existing-list">
-                  {chapterNotes.map(n => (
-                    <li
-                      key={n.id}
-                      data-testid={`chapter-note-item-${n.id}`}
-                      className="rounded-2xl bg-dark-raised border border-dark px-4 py-3"
-                    >
-                      {n.verse > 0 && (
-                        <p className="text-[11px] uppercase tracking-wide text-dark-muted mb-1">
-                          Verse {n.verse}
-                        </p>
-                      )}
-                      <p className="text-[14px] text-dark-fg whitespace-pre-wrap">{n.text}</p>
-                    </li>
-                  ))}
-                </ul>
-              )}
-
-              <section>
-                <h4 className="text-[14px] font-semibold text-dark-fg mb-2">Add New Note</h4>
-                <textarea
-                  data-testid="chapter-notes-textarea"
-                  value={text}
-                  onChange={e => setText(e.target.value)}
-                  placeholder="Write your note here..."
-                  rows={4}
-                  className="w-full rounded-2xl bg-dark-raised border border-dark px-4 py-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
-                />
-                <div className="flex justify-end mt-3">
-                  <button
-                    data-testid="chapter-notes-add-button"
-                    onClick={handleAdd}
-                    disabled={text.trim().length === 0 || saving}
-                    className="px-4 h-10 rounded-xl bg-gold text-[#1A1A1A] text-[13px] font-medium disabled:opacity-40 inline-flex items-center gap-2"
-                  >
-                    <FileText size={14} />
-                    {saving ? 'Saving…' : 'Add Note'}
-                  </button>
-                </div>
-              </section>
             </div>
           )}
         </div>
