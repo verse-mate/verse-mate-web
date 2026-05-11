@@ -34,7 +34,7 @@ export default function TopicEventDetailScreen() {
         onBack={() => navigate(`/topics/${topicId}`)}
       />
 
-      <div className="flex-1 overflow-y-auto px-5 pb-8" style={{ backgroundColor: vmTokens.pageBg }}>
+      <div className="sub-screen-body flex-1 px-5 pb-8" style={{ backgroundColor: vmTokens.pageBg }}>
         {event ? (
           <>
             <p className="text-[14px] leading-relaxed mt-2" style={{ color: vmTokens.textTertiary }}>

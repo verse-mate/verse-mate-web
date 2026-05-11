@@ -27,7 +27,7 @@ export default function HelpScreen() {
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
       <ScreenHeader title="Help & Feedback" onBack={() => navigate('/menu')} />
 
-      <div className="flex-1 overflow-y-auto px-5 pb-8" style={{ backgroundColor: vmTokens.pageBg }}>
+      <div className="sub-screen-body flex-1 px-5 pb-8" style={{ backgroundColor: vmTokens.pageBg }}>
         {formState === 'form' && (
           <>
             <h2 className="text-[22px] font-bold mt-2" style={{ color: vmTokens.textPrimary }}>How can we help?</h2>

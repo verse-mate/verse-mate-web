@@ -34,45 +34,28 @@ export default function ScreenHeader({ title, onBack, rightAction, backTestId, t
 
   return (
     <header
-      className="shrink-0 safe-top"
+      className="sub-screen-header safe-top"
       style={{
-        backgroundColor: vmTokens.headerBg,
-        paddingTop: isInRightPanel ? 0 : 'max(env(safe-area-inset-top), 48px)',
-        borderBottom: `1px solid ${vmTokens.pillBg}`,
+        paddingTop: isInRightPanel ? 0 : 'max(env(safe-area-inset-top), 0px)',
       }}
     >
-      <div className="relative flex items-center justify-center px-3" style={{ height: isInRightPanel ? 48 : 56 }}>
-        <button
-          onClick={handleBack}
-          aria-label="Back"
-          data-testid={backTestId || 'screen-header-back-button'}
-          style={{
-            background: 'none',
-            border: 'none',
-            padding: '8px',
-            marginRight: '12px',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            position: 'absolute',
-            left: '8px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '44px',
-            height: '44px',
-          }}
-        >
-          <ArrowLeft size={24} color={vmTokens.headerFg} strokeWidth={2} />
-        </button>
-        <h1
-          data-testid={titleTestId || 'screen-header-title'}
-          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: vmTokens.headerFg, letterSpacing: '-0.01em' }}
-        >
-          {title}
-        </h1>
-        {rightAction && (
-          <div className="absolute right-2 flex items-center">{rightAction}</div>
-        )}
+      <button
+        className="icon-btn"
+        onClick={handleBack}
+        aria-label="Back"
+        data-testid={backTestId || 'screen-header-back-button'}
+      >
+        <ArrowLeft size={22} color={vmTokens.headerFg} strokeWidth={2} />
+      </button>
+      <h1
+        className="sub-screen-title"
+        data-testid={titleTestId || 'screen-header-title'}
+        style={{ flex: 1, textAlign: 'center' }}
+      >
+        {title}
+      </h1>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {rightAction}
       </div>
     </header>
   );
