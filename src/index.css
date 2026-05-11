@@ -60,6 +60,13 @@
     /* Very faint divider — used inside cards for sub-dividers */
     --vm-faint-divider: rgba(27, 27, 27, 0.08);
 
+    /* Desktop books sidebar — cream in light per design's --bg-sidebar */
+    --vm-sidebar-bg: #FAF6EA;
+    --vm-sidebar-border: #EDE6D2;
+
+    /* Right-pane commentary surface — white in light per --bg-commentary */
+    --vm-commentary-bg: #FFFFFF;
+
     /* Header — always dark for brand consistency, per design spec */
     --header-bg: 0 0% 11%;             /* #1B1B1B */
     --header-fg: 0 0% 100%;
@@ -189,6 +196,13 @@
 
     /* Very faint divider — white-with-opacity in dark */
     --vm-faint-divider: rgba(255, 255, 255, 0.1);
+
+    /* Desktop books sidebar — near-black in dark */
+    --vm-sidebar-bg: #111111;
+    --vm-sidebar-border: #2a2a2a;
+
+    /* Right-pane commentary surface — black in dark */
+    --vm-commentary-bg: #000000;
 
     /* shadcn HSL tokens — dark equivalents */
     --header-bg: 0 0% 0%;

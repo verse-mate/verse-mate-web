@@ -1,4 +1,5 @@
 import React from 'react';
+import { vmTokens } from '@/styles/themeStyles';
 
 interface Props {
   text: string;
@@ -59,7 +60,7 @@ export default function MarkdownBlock({ text }: Props) {
         <h6
           key={key++}
           className="font-semibold mt-4 mb-1"
-          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 15, lineHeight: '22px', color: '#FFFFFF' }}
+          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 15, lineHeight: '22px', color: vmTokens.textPrimary }}
         >
           {inline(line.replace(/^###\s*/, ''))}
         </h6>
@@ -73,7 +74,7 @@ export default function MarkdownBlock({ text }: Props) {
         <h5
           key={key++}
           className="font-semibold mt-5 mb-2"
-          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: '#FFFFFF' }}
+          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: vmTokens.textPrimary }}
         >
           {inline(line.replace(/^##\s*/, ''))}
         </h5>
@@ -87,7 +88,7 @@ export default function MarkdownBlock({ text }: Props) {
         <h4
           key={key++}
           className="font-semibold mt-5 mb-2"
-          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: '#FFFFFF' }}
+          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 17, lineHeight: '24px', color: vmTokens.textPrimary }}
         >
           {inline(line.replace(/^#\s*/, ''))}
         </h4>

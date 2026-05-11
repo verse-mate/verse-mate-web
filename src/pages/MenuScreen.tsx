@@ -62,16 +62,16 @@ export default function MenuScreen() {
       {/* Header — dark bg, white text */}
       <header
         className="shrink-0 flex items-center justify-between px-5 safe-top"
-        style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)', height: 92, backgroundColor: '#1A1A1A' }}
+        style={{ paddingTop: 'max(env(safe-area-inset-top, 0px), 48px)', height: 92, backgroundColor: vmTokens.headerBg }}
       >
-        <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF' }}>Menu</h1>
+        <h1 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: vmTokens.headerFg }}>Menu</h1>
         <button
           onClick={() => navigate('/read')}
           aria-label="Close menu"
           data-testid="menu-close-button"
           className="w-[44px] h-[44px] flex items-center justify-center -mr-2"
         >
-          <X size={22} style={{ color: '#FFFFFF' }} strokeWidth={2} />
+          <X size={22} style={{ color: vmTokens.headerFg }} strokeWidth={2} />
         </button>
       </header>
 

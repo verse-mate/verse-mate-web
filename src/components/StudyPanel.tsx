@@ -4,6 +4,7 @@ import ShareIcon from '@/components/ShareIcon';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import { useApp } from '@/contexts/AppContext';
 import { getStudyFor, InductiveStudy } from '@/data/studies';
+import { vmTokens } from '@/styles/themeStyles';
 import {
   StudyStep,
   StepProse,
@@ -91,9 +92,9 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
     return (
       <div>
         <h2 style={titleStyle}>Inductive Study of {book} {chapter}</h2>
-        <div style={{ marginTop: 24, padding: 24, borderRadius: 12, backgroundColor: '#1A1A1A', border: '1px solid #2a2a2a', textAlign: 'center' }}>
+        <div style={{ marginTop: 24, padding: 24, borderRadius: 12, backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.surfaceRaisedBorder}`, textAlign: 'center' }}>
           <BookOpen size={28} color="#B09A6D" style={{ margin: '0 auto 12px' }} strokeWidth={1.5} />
-          <p style={{ color: '#E7E7E7', fontSize: 16, fontWeight: 500, marginBottom: 6 }}>Inductive Study coming soon</p>
+          <p style={{ color: vmTokens.textPrimary, fontSize: 16, fontWeight: 500, marginBottom: 6 }}>Inductive Study coming soon</p>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, lineHeight: '22px' }}>
             We're rolling out the 9-step Precept inductive method chapter by chapter. James 1 is the first chapter live — try it from any verse in James 1.
           </p>
@@ -182,7 +183,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
       <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
         <button
           onClick={() => setAll(!allOpen)}
-          style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, color: '#B09A6D', background: 'none', border: 'none', cursor: 'pointer' }}
+          style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, color: vmTokens.gold, background: 'none', border: 'none', cursor: 'pointer' }}
         >
           {allOpen ? 'Collapse All' : 'Expand All'}
         </button>
@@ -266,7 +267,7 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
             <span style={firstLineAlignStyle}>
               <RangePill range={q.range} />
             </span>
-            <p style={{ color: '#E7E7E7', margin: 0, flex: 1 }}>
+            <p style={{ color: vmTokens.textPrimary, margin: 0, flex: 1 }}>
               {q.question}
             </p>
           </div>
@@ -350,7 +351,7 @@ function QABody({ step, isOpen, toggle }: { step: StepQA; isOpen: (id: string) =
             heading={
               <span style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 {item.tag && <Tag label={item.tag} />}
-                <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, fontWeight: 500, color: '#E7E7E7' }}>
+                <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, fontWeight: 500, color: vmTokens.textPrimary }}>
                   {item.q}
                 </span>
               </span>
@@ -376,13 +377,13 @@ function KeywordsBody({ step }: { step: StepKeywords }) {
           style={{
             padding: '12px 14px',
             borderRadius: 8,
-            backgroundColor: '#161616',
-            border: '1px solid #2a2a2a',
+            backgroundColor: vmTokens.surfaceRaisedBg,
+            border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
           }}
         >
           {/* Top line: word — greek — count pill on the right */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', marginBottom: 6 }}>
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 15, color: '#E7E7E7' }}>
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 15, color: vmTokens.textPrimary }}>
               {row.word}
             </span>
             {row.greek && (
@@ -399,9 +400,9 @@ function KeywordsBody({ step }: { step: StepKeywords }) {
                 height: 22,
                 padding: '0 8px',
                 borderRadius: 11,
-                backgroundColor: '#1A1A1A',
+                backgroundColor: vmTokens.surfaceRaisedBg,
                 border: '1px solid #B09A6D',
-                color: '#B09A6D',
+                color: vmTokens.gold,
                 fontSize: 11,
                 fontWeight: 700,
                 marginLeft: 'auto',
@@ -417,7 +418,7 @@ function KeywordsBody({ step }: { step: StepKeywords }) {
           </div>
           {/* Definition */}
           {row.definition && (
-            <p style={{ color: '#E7E7E7', margin: 0 }}>
+            <p style={{ color: vmTokens.textPrimary, margin: 0 }}>
               {row.definition}
             </p>
           )}
@@ -442,7 +443,7 @@ function ListsBody({ step, isOpen, toggle }: { step: StepLists; isOpen: (id: str
             open={open}
             onToggle={() => toggle(id)}
             heading={
-              <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, fontWeight: 600, color: '#E7E7E7' }}>
+              <span style={{ fontFamily: 'Roboto, sans-serif', fontSize: 15, fontWeight: 600, color: vmTokens.textPrimary }}>
                 {list.title}
               </span>
             }
@@ -499,7 +500,7 @@ function ContrastsBody({ step }: { step: StepContrasts }) {
                 height: 22,
                 padding: '0 6px',
                 borderRadius: 11,
-                backgroundColor: '#262626',
+                backgroundColor: vmTokens.divider,
                 color: 'rgba(255,255,255,0.75)',
                 fontSize: 11,
                 fontWeight: 600,
@@ -511,7 +512,7 @@ function ContrastsBody({ step }: { step: StepContrasts }) {
               {item.type}
             </span>
           </span>
-          <span style={{ flex: 1, color: '#E7E7E7' }}>{item.pairing}</span>
+          <span style={{ flex: 1, color: vmTokens.textPrimary }}>{item.pairing}</span>
         </div>
       ))}
     </div>
@@ -525,7 +526,7 @@ function BulletsBody({ step }: { step: StepBullets }) {
   return (
     <div>
       {step.intro && (
-        <p style={{ marginBottom: 14, color: '#E7E7E7' }}>
+        <p style={{ marginBottom: 14, color: vmTokens.textPrimary }}>
           {step.intro}
         </p>
       )}
@@ -547,7 +548,7 @@ function BulletsBody({ step }: { step: StepBullets }) {
               {hasTextTags ? <Tag label={item.tag} /> : <RangePill range={item.tag} />}
             </span>
           )}
-          <span style={{ flex: 1, color: '#E7E7E7' }}>
+          <span style={{ flex: 1, color: vmTokens.textPrimary }}>
             <MarkdownBlock text={item.text} />
           </span>
         </div>
@@ -573,15 +574,15 @@ function SegmentsBody({ step }: { step: StepSegments }) {
           marginBottom: 16,
           padding: '14px 16px',
           borderRadius: 10,
-          backgroundColor: '#1A1A1A',
-          border: '1px solid #2a2a2a',
+          backgroundColor: vmTokens.surfaceRaisedBg,
+          border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
           borderLeft: '3px solid #B09A6D',
         }}
       >
-        <p style={{ fontSize: 12, fontWeight: 700, color: '#B09A6D', textTransform: 'uppercase', letterSpacing: '0.6px', margin: 0, marginBottom: 6 }}>
+        <p style={{ fontSize: 12, fontWeight: 700, color: vmTokens.gold, textTransform: 'uppercase', letterSpacing: '0.6px', margin: 0, marginBottom: 6 }}>
           Chapter theme
         </p>
-        <p style={{ fontSize: 17, color: '#E7E7E7', fontStyle: 'italic', margin: 0, lineHeight: '26px', fontWeight: 500 }}>
+        <p style={{ fontSize: 17, color: vmTokens.textPrimary, fontStyle: 'italic', margin: 0, lineHeight: '26px', fontWeight: 500 }}>
           {step.themeHeadline}
         </p>
       </div>
@@ -592,11 +593,11 @@ function SegmentsBody({ step }: { step: StepSegments }) {
             style={{
               padding: '14px 16px',
               borderRadius: 8,
-              backgroundColor: '#161616',
-              border: '1px solid #2a2a2a',
+              backgroundColor: vmTokens.surfaceRaisedBg,
+              border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
             }}
           >
-            <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, color: '#FFFFFF', margin: 0, marginBottom: 8 }}>
+            <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, color: vmTokens.textPrimary, margin: 0, marginBottom: 8 }}>
               {seg.title}
             </p>
             <div style={{ color: 'rgba(255,255,255,0.85)' }}>
@@ -613,7 +614,7 @@ function SegmentsBody({ step }: { step: StepSegments }) {
 
 function SectionHeading({ label }: { label: string }) {
   return (
-    <h3 style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, fontWeight: 700, color: '#B09A6D', textTransform: 'uppercase', letterSpacing: '0.6px', margin: 0, marginTop: 22, marginBottom: 10 }}>
+    <h3 style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, fontWeight: 700, color: vmTokens.gold, textTransform: 'uppercase', letterSpacing: '0.6px', margin: 0, marginTop: 22, marginBottom: 10 }}>
       {label}
     </h3>
   );
@@ -638,7 +639,7 @@ function Card({
         onClick={onToggle}
         style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', width: '100%', padding: '14px 0', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer', gap: 12 }}
       >
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 6, color: '#FFFFFF', flex: 1, minWidth: 0 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 6, color: vmTokens.textPrimary, flex: 1, minWidth: 0 }}>
           <span style={{ width: '100%' }}>{heading}</span>
           {subheading && (
             // Subheading rendered identically whether the card is open or
@@ -707,9 +708,9 @@ function Tag({ label }: { label: string }) {
         width: 88,
         height: 22,
         borderRadius: 11,
-        backgroundColor: '#1A1A1A',
+        backgroundColor: vmTokens.surfaceRaisedBg,
         border: '1px solid #B09A6D',
-        color: '#B09A6D',
+        color: vmTokens.gold,
         fontSize: 11,
         fontWeight: 600,
         letterSpacing: '0.5px',
@@ -735,9 +736,9 @@ function RangePill({ range }: { range: string }) {
         width: 64,
         height: 22,
         borderRadius: 11,
-        backgroundColor: '#1A1A1A',
+        backgroundColor: vmTokens.surfaceRaisedBg,
         border: '1px solid #B09A6D',
-        color: '#B09A6D',
+        color: vmTokens.gold,
         fontSize: 11,
         fontWeight: 600,
         padding: '0 6px',
@@ -766,7 +767,7 @@ function Th({ children, style }: { children: React.ReactNode; style?: React.CSSP
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.5px',
-        color: '#B09A6D',
+        color: vmTokens.gold,
         borderBottom: '1px solid #323232',
         padding: '8px 10px',
         ...style,
@@ -949,7 +950,7 @@ const titleStyle: React.CSSProperties = {
   fontWeight: 700,
   fontSize: 20,
   lineHeight: '28px',
-  color: '#E7E7E7',
+  color: vmTokens.textPrimary,
   margin: 0,
 };
 
@@ -958,7 +959,7 @@ const cardHeadingTitleStyle: React.CSSProperties = {
   fontWeight: 600,
   fontSize: 17,
   lineHeight: '24px',
-  color: '#FFFFFF',
+  color: vmTokens.textPrimary,
 };
 
 // Shared style for the Observation / Interpretation / Application section
@@ -993,8 +994,8 @@ const stepNumberStyle: React.CSSProperties = {
   width: 28,
   height: 28,
   borderRadius: 14,
-  backgroundColor: '#B09A6D',
-  color: '#000',
+  backgroundColor: vmTokens.gold,
+  color: vmTokens.goldOnLight,
   fontSize: 14,
   fontWeight: 700,
   flexShrink: 0,
@@ -1012,7 +1013,7 @@ const subTitleStyle: React.CSSProperties = {
   fontFamily: 'Roboto, sans-serif',
   fontSize: 14,
   fontWeight: 700,
-  color: '#E7E7E7',
+  color: vmTokens.textPrimary,
   marginTop: 8,
   marginBottom: 8,
 };
