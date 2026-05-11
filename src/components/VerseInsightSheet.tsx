@@ -308,38 +308,38 @@ export default function VerseInsightSheet({
             top padding gives a clear visual separation from the scrolling
             content above so the last line of commentary never reads as
             "behind" the buttons. */}
-        <div className="shrink-0 px-4 pb-2 pt-3 border-t border-[#1f1f1f]">
+        <div className="shrink-0 px-4 pb-2 pt-3 border-t border-border">
           <div className="grid grid-cols-3 gap-2">
             <button
               onClick={handleCopy}
               className="h-10 rounded-xl bg-secondary border border-border flex items-center justify-center gap-1.5"
             >
               {copiedAt ? <Check size={14} className="text-gold" strokeWidth={2} /> : <Copy size={14} className="text-foreground" strokeWidth={1.5} />}
-              <span className="text-[12px]" style={{ color: copiedAt ? '#B09A6D' : '#ccc' }}>{copiedAt ? 'Copied' : 'Copy'}</span>
+              <span className="text-[12px]" style={{ color: copiedAt ? 'var(--vm-dust)' : 'var(--fg-primary)' }}>{copiedAt ? 'Copied' : 'Copy'}</span>
             </button>
             <button
               onClick={handleShare}
               className="h-10 rounded-xl bg-secondary border border-border flex items-center justify-center gap-1.5"
             >
               <ShareIcon size={14} color="#ccc" />
-              <span className="text-[12px] text-[#ccc]">Share</span>
+              <span className="text-[12px] text-foreground">Share</span>
             </button>
             <button
               onClick={handleSaveHighlight}
               className="h-10 rounded-xl bg-secondary border border-border flex items-center justify-center gap-1.5"
             >
               {savedAt ? <Check size={14} className="text-gold" strokeWidth={2} /> : <Bookmark size={14} className="text-foreground" strokeWidth={1.5} />}
-              <span className="text-[12px]" style={{ color: savedAt ? '#B09A6D' : '#ccc' }}>{savedAt ? 'Saved' : 'Save'}</span>
+              <span className="text-[12px]" style={{ color: savedAt ? 'var(--vm-dust)' : 'var(--fg-primary)' }}>{savedAt ? 'Saved' : 'Save'}</span>
             </button>
           </div>
-          {actionError && <p className="text-[11px] text-red-400 text-center mt-1">{actionError}</p>}
+          {actionError && <p className="text-[11px] text-destructive text-center mt-1">{actionError}</p>}
         </div>
 
         {/* Close button */}
         <div className="shrink-0 px-4 pb-4 safe-bottom">
           <button
             onClick={onClose}
-            className="w-full h-12 rounded-xl bg-gold text-[#1A1A1A] font-medium text-[15px]"
+            className="w-full h-12 rounded-xl bg-gold text-foreground font-medium text-[15px]"
           >
             Close
           </button>
