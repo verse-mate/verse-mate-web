@@ -41,59 +41,12 @@ export default function ScreenHeader({ title, onBack, rightAction, backTestId, t
   const isInRightPanel = !!rightPanel?.isRightPanel;
 
   if (isInRightPanel) {
-    // Light title bar — sits ON the white commentary surface, no second
-    // dark slab. Back chevron dark, title dark, subtle bottom divider.
-    return (
-      <header
-        className="shrink-0"
-        style={{
-          height: 56,
-          display: 'flex',
-          alignItems: 'center',
-          padding: '0 12px',
-          background: 'var(--bg-commentary)',
-          borderBottom: '1px solid var(--card-border)',
-          gap: 8,
-        }}
-      >
-        <button
-          onClick={handleBack}
-          aria-label="Back"
-          data-testid={backTestId || 'screen-header-back-button'}
-          style={{
-            width: 36,
-            height: 36,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            color: vmTokens.textPrimary,
-            borderRadius: 8,
-          }}
-        >
-          <ArrowLeft size={22} color={vmTokens.textPrimary} strokeWidth={2} />
-        </button>
-        <h1
-          data-testid={titleTestId || 'screen-header-title'}
-          style={{
-            flex: 1,
-            textAlign: 'center',
-            fontFamily: 'Roboto, sans-serif',
-            fontSize: 17,
-            fontWeight: 600,
-            color: vmTokens.textPrimary,
-            margin: 0,
-          }}
-        >
-          {title}
-        </h1>
-        <div style={{ display: 'flex', alignItems: 'center', minWidth: 36 }}>
-          {rightAction}
-        </div>
-      </header>
-    );
+    // Inside the desktop right-panel the title is hoisted into the main
+    // .app-header (dark top banner) — see DesktopLayout. ScreenHeader
+    // therefore renders nothing here so the sub-screen body starts
+    // flush at the top of the right pane. The back action still fires
+    // via the RightPanelContext.goBack handler.
+    return null;
   }
 
   return (
