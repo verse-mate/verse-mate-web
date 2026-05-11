@@ -164,6 +164,13 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     });
     setExpanded(-2); // Reset to all-expanded on chapter change
     commentaryScrollRef.current?.scrollTo(0, 0); // Scroll commentary to top
+    // Reset right panel + commentary tab whenever the user navigates to a
+    // new chapter. Without this, opening Settings then jumping to a new
+    // book leaves Settings pinned in the right pane, and a chapter change
+    // mid-Detailed-tab leaves Detailed active even though By-Line is the
+    // canonical default for a fresh chapter.
+    setRightPanelView('commentary');
+    setTab('byline');
   }, [state.book, state.chapter, state.version]);
 
   // Auto-scroll removed — users scroll the Insights panel independently
