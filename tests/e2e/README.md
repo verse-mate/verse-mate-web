@@ -66,13 +66,75 @@ tests/e2e/
 │   ├── menu.page.ts
 │   ├── book-selector.page.ts
 │   ├── data-screens.page.ts      Bookmarks / Notes / Highlights
-│   └── settings.page.ts
+│   ├── settings.page.ts
+│   ├── desktop.page.ts           DesktopLayout (≥1024px)
+│   ├── about.page.ts             /menu/about static screen
+│   ├── help.page.ts              /menu/help feedback form
+│   ├── giving.page.ts            /menu/giving donation page
+│   ├── topic-events.page.ts      /topic/<cat>/<slug> + /topics/<id>
+│   └── most-quoted.page.ts       /topics/<id>/<event>/most-quoted
 └── <feature>/
     └── *.spec.ts                 one or more specs per feature folder
 ```
 
 Each feature folder mirrors the mobile Maestro `.maestro/<folder>/` layout
 so coverage gaps are obvious by comparison.
+
+## Coverage map (specs)
+
+| Folder | Spec | What it covers |
+| --- | --- | --- |
+| auth/ | login.spec.ts | Providers + email screens, mode toggle, empty/bad creds, happy-path signin |
+| auth/ | logout.spec.ts | Signed-in user logout |
+| auth/ | sso-callback.spec.ts | OAuth callback handler |
+| auth/ | email-screen-back.spec.ts | `login-screen-back`, providers back, providers mode toggle |
+| bible/ | load-and-navigate.spec.ts | Chapter load, FAB nav, left-boundary, progress bar |
+| bible/ | chapter-picker.spec.ts | BookSelector modal — OT/NT/Topics tabs, search, end-to-end nav |
+| bible/ | verse-actions.spec.ts | Long-press → action sheet, 6 actions, 5 highlight colors (fixme'd) |
+| bible/ | view-toggle.spec.ts | Bible ↔ Insight pill navigation |
+| bible/ | commentary-tabs.spec.ts | Summary / By-Line / Detailed tab swap + share buttons |
+| bible/ | study-tab.spec.ts | Fourth commentary tab (Study / Inductive Study panel) |
+| bible/ | byline-interactions.spec.ts | Byline expand-all, per-verse toggle |
+| bible/ | audio-inline.spec.ts | `audio-inline-entry` data-state on Commentary (guest) |
+| bible/ | audio-listen-smoke.spec.ts | Full chip → dock → sheet → Esc audio path (authed) |
+| bible/ | james-anchor.spec.ts | Production `/bible/james/1` URL — full flow + last-chapter (James 5) |
+| bible/ | last-chapter-boundary.spec.ts | Revelation 22 and James 5 both hide Next FAB (intra-book right boundary) |
+| bookmarks/ | list-and-empty.spec.ts | Guest empty state |
+| bookmarks/ | crud-authenticated.spec.ts | Create + delete chapter bookmark (authed) |
+| bookmarks/ | back-nav.spec.ts | Back button → /menu |
+| desktop/ | split-view.spec.ts | DesktopLayout shell, panels, divider drag, header tabs |
+| desktop/ | sidebar.spec.ts | OT/NT collapsible sections, sidebar chapter click |
+| highlights/ | list-and-empty.spec.ts | Guest empty state |
+| highlights/ | auto-themes.spec.ts | Auto-Highlights section heading + back nav |
+| menu/ | items.spec.ts | All 9 menu items + close + profile card |
+| menu/ | navigate.spec.ts | Each menu item routes to its destination |
+| menu/ | about.spec.ts | About screen content, Privacy/Terms/Contact links, version label |
+| menu/ | help.spec.ts | Help form structure + textarea input + back nav |
+| menu/ | giving.spec.ts | Monthly/One-time toggle, 4 preset amounts, mailto CTA |
+| notes/ | list-and-empty.spec.ts | Guest empty state |
+| notes/ | scoped-chapter.spec.ts | /notes/<book>/<chapter> scoped view + chapter-back-button |
+| regressions/ | divergences.spec.ts | Current behavior snapshots (highlights guest, theme, mailto giving, etc.) |
+| regressions/ | desktop-panel-bugs.spec.ts | Desktop split-view: right panel resets across topic nav; topic routes render full-screen |
+| regressions/ | chapter-notes-sheet.spec.ts | Chapter-notes modal: open without nav, inline sign-in flow, draft preservation, edit/delete |
+| settings/ | settings.spec.ts | Version (4) + Language (4) options, font-slider range, back nav |
+| settings/ | sections.spec.ts | Section headings, dynamic px display, version footer |
+| smoke/ | routing.spec.ts | /, /menu/signin, /bible/1/1, NotFound |
+| smoke/ | extra-routes.spec.ts | /bible/james/1 anchor, /logout, unknown book, unknown topic |
+| topics/ | browse.spec.ts | /topics list, expected categories visible, back nav |
+| topics/ | topic-events.spec.ts | /topic/<cat>/<slug> canonical URL + BookSelector discovery |
+| topics/ | most-quoted.spec.ts | Most Quoted Verses screen (discovery path) |
+
+## What is *not* covered (Phase-2 follow-ups)
+
+These have intentional gaps tracked here so future contributors can pick them up:
+
+1. **Long-press verse → action sheet** (`bible/verse-actions.spec.ts` — `test.describe.fixme`). CDP `Input.dispatchTouchEvent` doesn't reliably fire React `onTouchStart` / `onTouchEnd`; real users on real devices work fine. Possible workarounds documented in the spec.
+2. **Verse selection toolbar** (`SelectionToolbar.tsx`) — no `data-testid` on color / copy / share / bookmark buttons; relies on `window.getSelection()` ranges which Playwright doesn't model well.
+3. **VerseInsightSheet, AddNoteSheet, EditNoteSheet, NoteOptionsSheet, HighlightOptionsSheet, VersionPicker, OptionsSheet** — no `data-testid` attributes. Add testids in the component source before writing positive specs.
+4. **StudyPanel internal expand/collapse** — the panel mounts (`bible/study-tab.spec.ts`), but the per-step accordion buttons have no testids.
+5. **Desktop reader full-flow** — `chromium-desktop` skips every `bible/*.spec.ts` because DesktopLayout duplicates reader testids. Phase-2: scoped page objects that target the inner panel.
+6. **Audio dock + full sheet on desktop** — `bible/audio-listen-smoke.spec.ts` is mobile-only.
+7. **HelpScreen form submit** — submit handler is not exercised; only structural render is tested.
 
 ## Adding a new spec
 

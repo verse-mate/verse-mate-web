@@ -114,6 +114,11 @@ export class ReaderPage {
     return this.page.getByTestId(`bookmark-toggle-${bookId}-${chapter}`);
   }
 
+  /** Chapter-level "go to notes" button — testid embeds bookId + chapter. */
+  chapterNotesButton(bookId: number, chapter: number): Locator {
+    return this.page.getByTestId(`chapter-notes-button-${bookId}-${chapter}`);
+  }
+
   /**
    * Trigger a long-press on a verse to open the verse-actions sheet.
    * Only meaningful on mobile viewport (< 1024px). Desktop just opens
