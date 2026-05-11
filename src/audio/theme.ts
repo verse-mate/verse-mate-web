@@ -1,24 +1,23 @@
 /**
- * Shared dark-shell tokens for the audio surface. The verse-mate-web app
- * does NOT activate Tailwind's `.dark` theme, so ShadCN tokens render
- * against a light surface and clash with the #1B1B1B reader shell. Use
- * these inline-style values instead so the dock / chip / sheet stay
- * coherent with the gold-on-charcoal brand.
+ * Audio surface tokens. Now theme-aware via the prototype's CSS variables
+ * defined in src/styles/prototype.css (`:root` for light + `.dark { ... }`
+ * override for dark). The chip / dock / sheet flip automatically when
+ * Settings → Theme changes the `<html class="dark">` toggle.
  */
 export const COLORS = {
-  bg: 'rgba(255,255,255,0.05)',
-  bgHover: 'rgba(255,255,255,0.10)',
-  bgActive: 'rgba(255,255,255,0.14)',
-  surface: '#1B1B1B',
-  surfaceElevated: '#242424',
-  border: 'rgba(255,255,255,0.18)',
-  borderStrong: 'rgba(255,255,255,0.28)',
-  text: '#E7E7E7',
-  textMuted: 'rgba(255,255,255,0.6)',
-  accent: '#B09A6D',
-  accentHover: '#C7AE7C',
-  accentText: '#1B1B1B',
-  danger: '#E5484D',
+  bg: 'var(--card-bg)',
+  bgHover: 'var(--hover-bg)',
+  bgActive: 'var(--hover-bg)',
+  surface: 'var(--bg-menu)',
+  surfaceElevated: 'var(--card-bg)',
+  border: 'var(--card-border)',
+  borderStrong: 'var(--divider-strong)',
+  text: 'var(--fg-primary)',
+  textMuted: 'var(--fg-secondary)',
+  accent: 'var(--vm-dust)',
+  accentHover: 'var(--vm-dust)',
+  accentText: 'var(--fg-on-gold)',
+  danger: 'var(--fg-destructive)',
 } as const;
 
 export const FONT = "'Roboto', sans-serif";

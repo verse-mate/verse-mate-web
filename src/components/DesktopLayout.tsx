@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
-import { fetchCommentary, fetchBooks } from '@/services/bibleService';
+import { fetchCommentary, fetchBooks, fetchChapter } from '@/services/bibleService';
 import { BibleBook } from '@/services/types';
 import { Commentary } from '@/services/types';
 import {
@@ -148,14 +148,23 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     try { sessionStorage.setItem('versemate-commentary-tab', tab); } catch { /* ignore */ }
   }, [tab]);
   const [commentaries, setCommentaries] = useState<Commentary[]>([]);
+  const [verseTexts, setVerseTexts] = useState<Record<number, string>>({});
   const [expanded, setExpanded] = useState<number | null>(-2); // -2 = all expanded by default
   const commentaryScrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetchCommentary(state.book, state.chapter).then(setCommentaries);
+    // Also fetch the chapter so we can render verse text inside .byline-body
+    // .byline-verse-quote (prototype shows the quoted verse above the
+    // "Summary" block — the byline API only returns commentary, not verses).
+    fetchChapter(state.book, state.chapter, state.version).then(ch => {
+      const map: Record<number, string> = {};
+      for (const v of ch?.verses || []) map[v.number] = v.text;
+      setVerseTexts(map);
+    });
     setExpanded(-2); // Reset to all-expanded on chapter change
     commentaryScrollRef.current?.scrollTo(0, 0); // Scroll commentary to top
-  }, [state.book, state.chapter]);
+  }, [state.book, state.chapter, state.version]);
 
   // Auto-scroll removed — users scroll the Insights panel independently
 
@@ -310,8 +319,9 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
         {/* Prototype .app-header — chapter-selector-btn LEFT, logo CENTER,
             commentary pill-group absolutely positioned over right panel,
-            hamburger icon-btn RIGHT. */}
-        <header className="app-header" style={{ paddingLeft: 24 }}>
+            hamburger icon-btn RIGHT. Padding comes from prototype.css
+            (0 16px 0 64px). */}
+        <header className="app-header">
           <button
             className="chapter-selector-btn"
             onClick={() => setShowBookSelector(true)}
@@ -397,6 +407,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 <CommentaryPanel
                   tab={tab}
                   commentaries={commentaries}
+                  verseTexts={verseTexts}
                   expanded={expanded}
                   setExpanded={setExpanded}
                   book={state.book}
@@ -555,6 +566,7 @@ function SidebarSection({
 function CommentaryPanel({
   tab,
   commentaries,
+  verseTexts,
   expanded,
   setExpanded,
   book,
@@ -563,6 +575,7 @@ function CommentaryPanel({
 }: {
   tab: Tab;
   commentaries: Commentary[];
+  verseTexts: Record<number, string>;
   expanded: number | null;
   setExpanded: (v: number | null) => void;
   book: string;
@@ -756,6 +769,9 @@ function CommentaryPanel({
                 {isOpen && (
                   <div className="byline-body">
                     <div className="byline-ref-strong">{book} {chapter}:{c.verse}</div>
+                    {verseTexts[c.verse] && (
+                      <blockquote className="byline-verse-quote">{verseTexts[c.verse]}</blockquote>
+                    )}
                     <div className="byline-summary-label">Summary</div>
                     <div className="byline-summary-text">
                       <CommentaryBody text={c.detail} />

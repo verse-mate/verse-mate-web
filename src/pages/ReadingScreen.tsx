@@ -217,7 +217,12 @@ export default function ReadingScreen() {
   const verseCount = chapter?.verses.length || 0;
 
   return (
-    <div className="flex flex-col h-full relative" style={{ backgroundColor: vmTokens.headerBg }}>
+    // No `position: relative` on the outer div — prototype's .progress-bar
+    // is `position: absolute; left:0; right:0` and must bubble up to
+    // .split-body so it spans BOTH the reading + commentary panels (not just
+    // the reading panel). Mobile header is hidden at ≥768px so no overlap
+    // issue from that.
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.headerBg }}>
       {/* ─── DARK HEADER with TEXT pill tabs — hidden on desktop (DesktopLayout renders shared header) ─── */}
       <header className="reading-screen-header shrink-0 safe-top" style={{ backgroundColor: vmTokens.headerBg, paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}>
         <div className="flex items-center justify-between px-4" style={{ height: 56 }}>
