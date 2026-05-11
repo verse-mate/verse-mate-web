@@ -442,16 +442,17 @@ export default function ReadingScreen() {
         )}
       </div>
 
-      {/* ─── FLOATING CHAPTER NAV — vertically centered on desktop, bottom: 45px on mobile ─── */}
+      {/* Chapter nav — prototype .chapter-nav-btn renders white pill with
+          gold chevron, vertically centered on desktop, bottom-anchored on
+          mobile. All styling in prototype.css. */}
       {state.chapter > 1 && (
         <button
           onClick={() => goToChapter(-1)}
           aria-label="Previous chapter"
           data-testid="previous-chapter-button"
           className="chapter-nav-btn chapter-nav-prev"
-          style={{ position: 'absolute', width: 40, height: 40, borderRadius: '50%', background: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
-          <ChevronLeft size={20} color="#fff" strokeWidth={2.5} />
+          <ChevronLeft size={20} color={vmTokens.textPrimary} strokeWidth={2.25} />
         </button>
       )}
       {state.chapter < maxChapter && (
@@ -460,67 +461,27 @@ export default function ReadingScreen() {
           aria-label="Next chapter"
           data-testid="next-chapter-button"
           className="chapter-nav-btn chapter-nav-next"
-          style={{ position: 'absolute', width: 40, height: 40, borderRadius: '50%', background: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}`, display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
         >
-          <ChevronRight size={20} color="#fff" strokeWidth={2.5} />
+          <ChevronRight size={20} color={vmTokens.textPrimary} strokeWidth={2.25} />
         </button>
       )}
 
-      {/* ─── GOLD PROGRESS BAR — dark bg (#000), dark track (#1E1E1E), gold fill ─── */}
-      <div
-        data-testid="progress-bar"
-        style={{
-          height: 32,
-          display: 'flex',
-          alignItems: 'center',
-          gap: 16,
-          backgroundColor: vmTokens.pageBg,
-          borderTop: `1px solid ${vmTokens.divider}`,
-          padding: '0 24px',
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          flexShrink: 0,
-        }}
-      >
+      {/* Progress bar — prototype .progress-bar / .progress-track /
+          .progress-fill / .progress-pct. Bottom-anchored. */}
+      <div className="progress-bar" data-testid="progress-bar">
         {(() => {
           const bookProgress =
             maxChapter > 0 ? Math.round((state.chapter / maxChapter) * 100) : 0;
           return (
             <>
-              <div
-                style={{
-                  flex: 1,
-                  height: 6,
-                  backgroundColor: '#1E1E1E',
-                  borderRadius: 10,
-                  position: 'relative',
-                  overflow: 'hidden',
-                }}
-              >
+              <div className="progress-track">
                 <div
                   data-testid="progress-bar-fill"
-                  style={{
-                    height: '100%',
-                    backgroundColor: vmTokens.gold,
-                    borderRadius: 10,
-                    width: `${Math.max(2, bookProgress)}%`,
-                    transition: 'width 0.3s ease',
-                  }}
+                  className="progress-fill"
+                  style={{ width: `${Math.max(2, bookProgress)}%` }}
                 />
               </div>
-              <span
-                data-testid="progress-bar-percentage"
-                style={{
-                  fontFamily: 'Roboto, sans-serif',
-                  fontWeight: 500,
-                  fontSize: 14,
-                  lineHeight: '16px',
-                  color: vmTokens.gold,
-                  whiteSpace: 'nowrap',
-                } as React.CSSProperties}
-              >
+              <span data-testid="progress-bar-percentage" className="progress-pct">
                 {bookProgress}%
               </span>
             </>

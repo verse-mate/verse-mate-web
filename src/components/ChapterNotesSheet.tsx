@@ -189,11 +189,11 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
           data-testid="chapter-notes-sheet"
           role="dialog"
           aria-label={`Notes for ${book} ${chapter}`}
-          className="pointer-events-auto w-full max-w-[480px] bg-dark-surface rounded-2xl border border-dark shadow-[0_10px_30px_rgba(0,0,0,0.5)] animate-fade-in flex flex-col"
+          className="pointer-events-auto w-full max-w-[480px] bg-background rounded-2xl border border-border shadow-[0_10px_30px_rgba(0,0,0,0.5)] animate-fade-in flex flex-col"
           style={{ maxHeight: '85vh' }}
         >
-          <header className="flex items-center justify-between px-4 pt-4 pb-3 border-b border-dark">
-            <h3 className="text-[16px] font-semibold text-dark-fg">
+          <header className="flex items-center justify-between px-4 pt-4 pb-3 border-b border-border">
+            <h3 className="text-[16px] font-semibold text-foreground">
               Notes for {book} {chapter}
             </h3>
             <button
@@ -202,21 +202,21 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
               data-testid="chapter-notes-sheet-close"
               className="w-9 h-9 flex items-center justify-center"
             >
-              <X size={18} className="text-dark-fg" />
+              <X size={18} className="text-foreground" />
             </button>
           </header>
 
           {view === 'compose' && (
             <div className="flex-1 overflow-y-auto px-4 py-4 space-y-6">
               <section>
-                <h4 className="text-[14px] font-semibold text-dark-fg mb-2">Add New Note</h4>
+                <h4 className="text-[14px] font-semibold text-foreground mb-2">Add New Note</h4>
                 <textarea
                   data-testid="chapter-notes-textarea"
                   value={text}
                   onChange={e => setText(e.target.value)}
                   placeholder="Write your note here..."
                   rows={4}
-                  className="w-full rounded-2xl bg-dark-raised border border-dark px-4 py-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
+                  className="w-full rounded-2xl bg-secondary border border-border px-4 py-3 text-[14px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
                 />
                 <div className="flex justify-end mt-3">
                   <button
@@ -233,7 +233,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
 
               {chapterNotes.length > 0 && (
                 <section>
-                  <h4 className="text-[14px] font-semibold text-dark-fg mb-2">
+                  <h4 className="text-[14px] font-semibold text-foreground mb-2">
                     Recently Added Notes
                   </h4>
                   <ul className="space-y-2" data-testid="chapter-notes-existing-list">
@@ -244,10 +244,10 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                         <li
                           key={n.id}
                           data-testid={`chapter-note-item-${n.id}`}
-                          className="rounded-2xl bg-dark-raised border border-dark px-4 py-3"
+                          className="rounded-2xl bg-secondary border border-border px-4 py-3"
                         >
                           {n.verse > 0 && (
-                            <p className="text-[11px] uppercase tracking-wide text-dark-muted mb-1">
+                            <p className="text-[11px] uppercase tracking-wide text-muted-foreground mb-1">
                               Verse {n.verse}
                             </p>
                           )}
@@ -259,7 +259,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                                 value={editText}
                                 onChange={e => setEditText(e.target.value)}
                                 rows={3}
-                                className="w-full rounded-xl bg-dark-surface border border-dark px-3 py-2 text-[14px] text-dark-fg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
+                                className="w-full rounded-xl bg-background border border-border px-3 py-2 text-[14px] text-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
                               />
                               <div className="flex justify-end gap-2">
                                 <button
@@ -268,7 +268,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                                     setEditingNoteId(null);
                                     setEditText('');
                                   }}
-                                  className="px-3 h-9 rounded-lg bg-dark-surface border border-dark text-dark-fg text-[12px]"
+                                  className="px-3 h-9 rounded-lg bg-background border border-border text-foreground text-[12px]"
                                 >
                                   Cancel
                                 </button>
@@ -294,7 +294,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                             </div>
                           ) : (
                             <div className="flex items-start gap-2">
-                              <p className="text-[14px] text-dark-fg whitespace-pre-wrap flex-1 min-w-0">
+                              <p className="text-[14px] text-foreground whitespace-pre-wrap flex-1 min-w-0">
                                 {n.text}
                               </p>
                               <button
@@ -303,7 +303,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                                 onClick={() =>
                                   setExpandedNoteId(prev => (prev === n.id ? null : n.id))
                                 }
-                                className="shrink-0 w-8 h-8 -mr-1 -mt-1 flex items-center justify-center text-dark-muted hover:text-dark-fg"
+                                className="shrink-0 w-8 h-8 -mr-1 -mt-1 flex items-center justify-center text-muted-foreground hover:text-foreground"
                               >
                                 <MoreHorizontal size={18} strokeWidth={1.75} />
                               </button>
@@ -313,7 +313,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                           {isExpanded && !isEditing && (
                             <div
                               data-testid={`chapter-note-actions-${n.id}`}
-                              className="mt-3 pt-3 border-t border-dark flex justify-end gap-2"
+                              className="mt-3 pt-3 border-t border-border flex justify-end gap-2"
                             >
                               <button
                                 data-testid={`chapter-note-edit-${n.id}`}
@@ -322,7 +322,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                                   setEditText(n.text);
                                   setExpandedNoteId(null);
                                 }}
-                                className="px-3 h-9 rounded-lg bg-dark-surface border border-dark text-dark-fg text-[12px] inline-flex items-center gap-1"
+                                className="px-3 h-9 rounded-lg bg-background border border-border text-foreground text-[12px] inline-flex items-center gap-1"
                               >
                                 <Pencil size={14} /> Edit
                               </button>
@@ -349,7 +349,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
 
           {(view === 'signin-providers' || view === 'signin-email') && (
             <div data-testid="chapter-notes-signin-cta" className="px-5 py-6 flex flex-col">
-              <p className="text-[14px] text-dark-fg/80 mb-5 text-center leading-snug">
+              <p className="text-[14px] text-foreground/80 mb-5 text-center leading-snug">
                 Sign in to save your note — we'll bring you right back.
               </p>
 
@@ -382,14 +382,14 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
 
                   <div className="flex items-center gap-3 py-1">
                     <div className="flex-1 h-px bg-dark" />
-                    <span className="text-[11px] text-dark-muted/70">or</span>
+                    <span className="text-[11px] text-muted-foreground/70">or</span>
                     <div className="flex-1 h-px bg-dark" />
                   </div>
 
                   <button
                     data-testid="login-email-button"
                     onClick={() => setView('signin-email')}
-                    className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] bg-dark-raised border border-dark text-dark-fg"
+                    className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] bg-secondary border border-border text-foreground"
                   >
                     <Mail size={18} />
                     Continue with Email
@@ -398,7 +398,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                   <button
                     onClick={() => setView('compose')}
                     data-testid="chapter-notes-signin-cancel"
-                    className="w-full mt-2 text-[12px] text-dark-muted"
+                    className="w-full mt-2 text-[12px] text-muted-foreground"
                   >
                     Back to note
                   </button>
@@ -412,7 +412,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                     }}
                     aria-label="Back to providers"
                     data-testid="chapter-notes-signin-email-back"
-                    className="self-start flex items-center gap-1 text-[12px] text-dark-muted"
+                    className="self-start flex items-center gap-1 text-[12px] text-muted-foreground"
                   >
                     <ArrowLeft size={14} /> Back
                   </button>
@@ -423,7 +423,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                     placeholder="Email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
-                    className="w-full h-11 rounded-xl bg-dark-raised border border-dark px-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
+                    className="w-full h-11 rounded-xl bg-secondary border border-border px-3 text-[14px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
                   />
                   <input
                     data-testid="login-password"
@@ -432,7 +432,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                     placeholder="Password"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
-                    className="w-full h-11 rounded-xl bg-dark-raised border border-dark px-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
+                    className="w-full h-11 rounded-xl bg-secondary border border-border px-3 text-[14px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
                   />
                   {authError && (
                     <p data-testid="login-error" className="text-[12px] text-red-400 text-center">

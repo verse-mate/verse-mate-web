@@ -800,7 +800,7 @@ function Td({ children, style }: { children: React.ReactNode; style?: React.CSSP
 // Minimal *italic* renderer used by the section intro `<p>` blocks. The
 // intros are short, plain prose with the occasional emphasised word —
 // pulling in the full MarkdownBlock would re-introduce the body color /
-// size from `text-dark-fg` and undo `sectionIntroStyle`.
+// size from `text-foreground` and undo `sectionIntroStyle`.
 function renderInlineItalic(text: string): React.ReactNode[] {
   const parts: React.ReactNode[] = [];
   const re = /\*([^*]+)\*/g;
