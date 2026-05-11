@@ -366,9 +366,9 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               ScreenHeader so we don't stack two dark slabs vertically.
               When a sub-screen is open (Bookmarks / Notes / Highlights /
               Settings / About / Giving / Help / SignIn), this replaces
-              the commentary pill-group at the same center-of-right-panel
-              location, with a back chevron on its left that returns to
-              the commentary view. */}
+              the commentary pill-group. Anchored to the LEFT edge of
+              the right pane (left: leftPct%) so it aligns flush with
+              the right-pane's box, not centered over it. */}
           {rightPanelView !== 'commentary' && (() => {
             const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
             if (!entry) return null;
@@ -377,8 +377,9 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 style={{
                   position: 'absolute',
                   top: '50%',
-                  left: `${(100 + leftPct) / 2}%`,
-                  transform: 'translate(-50%, -50%)',
+                  left: `${leftPct}%`,
+                  transform: 'translateY(-50%)',
+                  marginLeft: 12,
                   zIndex: 2,
                   display: 'flex',
                   alignItems: 'center',
