@@ -249,19 +249,28 @@ function ThemeToggle({
   value: boolean;
   onChange: (v: boolean) => void;
 }) {
+  // iOS-style switch: OFF track uses the warm cream divider so the white
+  // knob is visible against it; ON track is the gold brand accent. Knob is
+  // a white circle with a soft shadow + a thin border so it never reads
+  // as invisible-white-on-white in light mode.
   return (
     <button
       onClick={() => onChange(!value)}
       role="switch"
       aria-checked={value}
       className="relative w-11 h-6 rounded-full shrink-0 mt-1 transition-colors"
-      style={{ backgroundColor: value ? vmTokens.gold : vmTokens.surfaceRaisedBg }}
+      style={{
+        backgroundColor: value ? vmTokens.gold : vmTokens.divider,
+        border: `1px solid ${value ? vmTokens.gold : vmTokens.surfaceRaisedBorder}`,
+      }}
     >
       <span
-        className="absolute top-0.5 left-0.5 w-5 h-5 rounded-full shadow transition-transform"
+        className="absolute top-0.5 left-0.5 w-5 h-5 rounded-full transition-transform"
         style={{
           transform: value ? 'translateX(20px)' : 'translateX(0)',
-          backgroundColor: vmTokens.surfaceRaisedBg,
+          backgroundColor: '#FFFFFF',
+          border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
+          boxShadow: '0 1px 3px rgba(27,27,27,0.15)',
         }}
       />
     </button>
