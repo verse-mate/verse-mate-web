@@ -774,7 +774,7 @@ function CommentaryPanel({
                     )}
                     <div className="byline-summary-label">Summary</div>
                     <div className="byline-summary-text">
-                      <CommentaryBody text={c.detail} />
+                      <CommentaryBody text={stripBylineHeader(c.detail)} />
                     </div>
                   </div>
                 )}
@@ -901,6 +901,30 @@ function CommentaryBody({ text }: { text: string }) {
   flushPara();
 
   return <div>{elements}</div>;
+}
+
+// The byline API's `detail` markdown opens with a verse-ref heading +
+// blockquote of the verse text + a "Summary" heading before the actual
+// commentary. We render those three parts ourselves above CommentaryBody
+// (.byline-ref-strong + .byline-verse-quote + .byline-summary-label), so
+// strip them here to prevent the verse from rendering twice.
+function stripBylineHeader(text: string): string {
+  const lines = text.split('\n');
+  let i = 0;
+  // Skip leading blanks.
+  while (i < lines.length && !lines[i].trim()) i++;
+  // Skip a leading heading line (any # depth) — typically "# James 1:1".
+  if (i < lines.length && /^#+\s/.test(lines[i].trim())) i++;
+  while (i < lines.length && !lines[i].trim()) i++;
+  // Skip a leading blockquote — typically the verse text.
+  while (i < lines.length && /^>/.test(lines[i].trim())) i++;
+  while (i < lines.length && !lines[i].trim()) i++;
+  // Skip a single "Summary" heading if it's the next non-blank line.
+  if (i < lines.length && /^#+\s*summary\s*$/i.test(lines[i].trim())) {
+    i++;
+    while (i < lines.length && !lines[i].trim()) i++;
+  }
+  return lines.slice(i).join('\n').trim();
 }
 
 // Strip the bare-bones markdown we render in CommentaryBody so the share

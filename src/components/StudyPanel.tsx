@@ -226,14 +226,33 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
           open={isOpen(`mv-${mv.number}`)}
           onToggle={() => toggle(`mv-${mv.number}`)}
           heading={
-            <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <RangePill range={mv.range} />
+            // align-items: flex-start so when the title wraps to two lines
+            // the pill stays anchored to the first line, not vertically
+            // centered with the multi-line block (which makes the second
+            // line look mis-indented under the pill).
+            <span style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+              <span style={{ marginTop: 2 }}><RangePill range={mv.range} /></span>
               <span style={cardHeadingTitleStyle}>Movement {mv.number} — {mv.title}</span>
             </span>
           }
         >
           {mv.excerpt && (
-            <blockquote style={{ borderLeft: `2px solid ${vmTokens.gold}`, paddingLeft: 12, color: vmTokens.textSecondary, fontStyle: 'italic', marginBottom: 12, fontSize: 14, lineHeight: '22px' }}>
+            // Prototype .int-quote — serif italic, 0.8em of parent (parent
+            // is the user-controlled body font, default 20 → quote = 16),
+            // line-height 1.6, gold left border. Color matches the
+            // prototype's rgba(27,27,27,0.88) ≈ near-black.
+            <blockquote
+              style={{
+                fontFamily: "'Roboto Serif', Georgia, serif",
+                fontSize: '0.8em',
+                lineHeight: 1.6,
+                fontStyle: 'italic',
+                color: vmTokens.textPrimary,
+                padding: '4px 0 4px 14px',
+                borderLeft: `3px solid ${vmTokens.gold}`,
+                margin: '0 0 14px',
+              }}
+            >
               "{mv.excerpt}" — {study.bookName} {mv.range}
             </blockquote>
           )}
