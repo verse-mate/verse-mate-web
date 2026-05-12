@@ -111,6 +111,17 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     setRightPanelView('commentary');
   };
 
+  // Topic routes (`/topic/<cat>/<slug>`, `/topics/:topicId`,
+  // `/topics/:topicId/:eventId`, `/topics/:topicId/:eventId/most-quoted`)
+  // render their own full-width content in the LEFT panel via <Outlet />.
+  // The chrome that's tied to a Bible passage — chapter selector, the
+  // Summary/By-Line/Detailed/Study commentary tabs, and the entire right
+  // pane — has nothing to display in a topic context, so we hide all of
+  // it and let the topic content take the full split-body width.
+  const isTopicRoute =
+    location.pathname.startsWith('/topic/') ||
+    location.pathname.startsWith('/topics');
+
   // Resizable split state (percentage of content area, not including sidebar)
   const [leftPct, setLeftPct] = useState(65);
   const isDragging = useRef(false);
@@ -329,22 +340,29 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             hamburger icon-btn RIGHT. Padding comes from prototype.css
             (0 16px 0 64px). */}
         <header className="app-header">
-          <button
-            className="chapter-selector-btn"
-            onClick={() => setShowBookSelector(true)}
-            data-testid="desktop-chapter-selector-button"
-          >
-            <span>{state.book} {state.chapter}</span>
-            <ChevronDown size={18} color={vmTokens.headerFg} strokeWidth={2} />
-          </button>
+          {/* Hide the chapter selector on topic routes — there's no
+              "current chapter" in topic context, and showing the
+              previous Bible chapter ("James 3") next to a Topics screen
+              is misleading. */}
+          {!isTopicRoute && (
+            <button
+              className="chapter-selector-btn"
+              onClick={() => setShowBookSelector(true)}
+              data-testid="desktop-chapter-selector-button"
+            >
+              <span>{state.book} {state.chapter}</span>
+              <ChevronDown size={18} color={vmTokens.headerFg} strokeWidth={2} />
+            </button>
+          )}
 
           <div className="logo-mark">
             <img src="/versemate-logo-white.png" alt="VerseMate" className="logo-img" />
           </div>
 
           {/* Commentary pill-group — absolute-positioned at the horizontal
-              center of the right panel (split-aware). */}
-          {rightPanelView === 'commentary' && (
+              center of the right panel (split-aware). Hidden on topic
+              routes since the right pane is hidden too. */}
+          {!isTopicRoute && rightPanelView === 'commentary' && (
             <div
               style={{
                 position: 'absolute',
@@ -371,7 +389,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
           {/* Sub-screen back chevron — anchored to the LEFT edge of the
               right pane so it sits flush with the right-pane box. */}
-          {rightPanelView !== 'commentary' && (() => {
+          {!isTopicRoute && rightPanelView !== 'commentary' && (() => {
             const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
             if (!entry) return null;
             return (
@@ -397,7 +415,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
           {/* Sub-screen title — centered horizontally over the right pane,
               independent of the back-chevron position. */}
-          {rightPanelView !== 'commentary' && (() => {
+          {!isTopicRoute && rightPanelView !== 'commentary' && (() => {
             const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
             if (!entry) return null;
             return (
@@ -434,59 +452,66 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           </div>
         </header>
 
-        {/* Prototype .split-body — left/right panels separated by .divider */}
+        {/* Prototype .split-body — left/right panels separated by .divider.
+            On topic routes the right pane has nothing relevant to display
+            (no Bible passage), so we let the left panel fill the full width
+            and skip rendering the divider + right pane entirely. */}
         <div ref={contentRef} data-testid="desktop-split-body" className="split-body">
           <div
             data-testid="desktop-left-panel"
             className="left-panel"
-            style={{ width: `${leftPct}%` }}
+            style={{ width: isTopicRoute ? '100%' : `${leftPct}%` }}
           >
             <Outlet />
           </div>
 
-          {/* Drag handle — prototype .divider with .divider-dots */}
-          <div
-            className="divider"
-            onPointerDown={handleDragStart}
-            data-testid="desktop-split-divider"
-          >
-            <div className="divider-dots">
-              {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
-            </div>
-          </div>
-
-          {/* Right panel — commentary OR sub-page */}
-          <div data-testid="desktop-right-panel" className="right-panel">
-            {rightPanelView === 'commentary' ? (
+          {!isTopicRoute && (
+            <>
+              {/* Drag handle — prototype .divider with .divider-dots */}
               <div
-                ref={commentaryScrollRef}
-                className="commentary-body"
-                style={{ fontSize: `${state.settings.fontSize}px` }}
+                className="divider"
+                onPointerDown={handleDragStart}
+                data-testid="desktop-split-divider"
               >
-                <CommentaryPanel
-                  tab={tab}
-                  commentaries={commentaries}
-                  verseTexts={verseTexts}
-                  expanded={expanded}
-                  setExpanded={setExpanded}
-                  book={state.book}
-                  bookId={currentBook?.bookId ?? null}
-                  chapter={state.chapter}
-                />
-              </div>
-            ) : (
-              <RightPanelProvider value={{ goBack: closeRightPanel, isRightPanel: true }}>
-                <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-                  {(() => {
-                    const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
-                    if (!entry) return null;
-                    const PageComponent = entry.component;
-                    return <PageComponent />;
-                  })()}
+                <div className="divider-dots">
+                  {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
                 </div>
-              </RightPanelProvider>
-            )}
-          </div>
+              </div>
+
+              {/* Right panel — commentary OR sub-page */}
+              <div data-testid="desktop-right-panel" className="right-panel">
+                {rightPanelView === 'commentary' ? (
+                  <div
+                    ref={commentaryScrollRef}
+                    className="commentary-body"
+                    style={{ fontSize: `${state.settings.fontSize}px` }}
+                  >
+                    <CommentaryPanel
+                      tab={tab}
+                      commentaries={commentaries}
+                      verseTexts={verseTexts}
+                      expanded={expanded}
+                      setExpanded={setExpanded}
+                      book={state.book}
+                      bookId={currentBook?.bookId ?? null}
+                      chapter={state.chapter}
+                    />
+                  </div>
+                ) : (
+                  <RightPanelProvider value={{ goBack: closeRightPanel, isRightPanel: true }}>
+                    <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                      {(() => {
+                        const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
+                        if (!entry) return null;
+                        const PageComponent = entry.component;
+                        return <PageComponent />;
+                      })()}
+                    </div>
+                  </RightPanelProvider>
+                )}
+              </div>
+            </>
+          )}
         </div>
       </div>
 
