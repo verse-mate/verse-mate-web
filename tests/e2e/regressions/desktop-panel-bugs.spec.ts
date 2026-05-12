@@ -5,35 +5,33 @@ import { BookSelectorPage } from '../pages/book-selector.page';
 /**
  * Regression — desktop split-view panel state.
  *
- * Originally a guard for two bugs filed under issue #128:
+ * Behavior history for topic routes on the desktop split-view:
  *
- * - **Bug A** — right-panel state (e.g. Bookmarks) was sticky across URL
- *   changes; navigating to a topic left a stale menu page pinned in the
- *   right panel.
- * - **Bug B** — non-Bible routes still rendered inside the Bible
- *   split-view chrome; topic URLs landed inside the left "Bible reading"
- *   panel with the surrounding sidebar/right-panel/tabs intact.
+ * - Pre-#128: topic URLs landed inside the left "Bible reading" panel
+ *   with the entire split-view (sidebar, chapter selector, commentary
+ *   tabs, right pane) still mounted around them — visually broken.
+ * - #128 fix: `AppLayout` was made route-aware; topic routes fell
+ *   through to a single-panel mobile shell, fully unmounting
+ *   `DesktopLayout`.
+ * - Light-theme port: split-view was reinstated for topic routes
+ *   ("bug — when clicking on a Topic we lose formatting and it goes
+ *   to full screen") so the sidebar stays available. The right-pane
+ *   commentary chrome remained mounted at first.
+ * - **Current** (post-topic-fix): `DesktopLayout` stays mounted on
+ *   topic routes so the sidebar + app-header are still there, but the
+ *   chapter selector, commentary tab pills, divider and right pane
+ *   all hide because they're tied to a Bible passage that the topic
+ *   route doesn't have. The topic content takes the full width of
+ *   `.split-body` via the left-panel `<Outlet />`.
  *
- * The original guards asserted that `DesktopLayout` *unmounted* on topic
- * routes — the fix for #128 made `AppLayout` route-aware so it fell
- * through to a single-panel mobile shell for non-Bible URLs.
- *
- * That behavior was **reverted** during the light-theme port at the
- * user's explicit request ("bug — when clicking on a Topic we lose
- * formatting and it goes to full screen"). Topic routes now render
- * INSIDE the split-view so the books sidebar, chapter chrome, and
- * commentary tabs stay visible while exploring a topic — the topic
- * content sits in the LEFT panel via `<Outlet />`.
- *
- * The right-panel title (when a sub-screen is open) was also hoisted
+ * The right-panel title (when a sub-screen is open) is also hoisted
  * out of the panel body into the main `.app-header` dark banner per
  * user feedback ("The word 'notes' should be raised up to the top
- * level banner"). The label now lives in
+ * level banner"). The label lives in
  * `[data-testid="desktop-right-panel-title"]` in the header, not as
  * a child of `[data-testid="desktop-right-panel"]`.
  *
- * These specs are the updated guards for the **current** intended
- * behavior, not the #128-era behavior.
+ * These specs guard the **current** behavior.
  *
  * Desktop-only — split-view chrome only exists at ≥1024px.
  */
@@ -44,12 +42,14 @@ test.skip(
 );
 
 test.describe('Regression — desktop split-view panel state (post-light-theme)', () => {
-  test('topic navigation keeps the desktop split-view chrome mounted', async ({ page }) => {
+  test('topic navigation keeps the sidebar + layout mounted but drops Bible-only chrome', async ({ page }) => {
     const desktop = new DesktopReaderPage(page);
     const picker = new BookSelectorPage(page);
 
     await desktop.goto('james', 1);
     await expect(desktop.layoutRoot).toBeVisible();
+    // Sanity: chapter selector is visible BEFORE we navigate to a topic.
+    await expect(desktop.chapterSelector).toBeVisible();
 
     // Open the chapter selector and pick a topic.
     await desktop.chapterSelector.click();
@@ -61,17 +61,23 @@ test.describe('Regression — desktop split-view panel state (post-light-theme)'
     // URL should now be a topic URL.
     await expect(page).toHaveURL(/\/topics?\//, { timeout: 10_000 });
 
-    // After the light-theme behavior change, navigating to a topic
-    // KEEPS the desktop split-view chrome (sidebar + left/right panels)
-    // mounted — the topic content renders in the left panel via Outlet
-    // while the books sidebar + chapter selector remain available.
+    // Layout shell + sidebar stay mounted so the user can still
+    // navigate via the books sidebar / hamburger menu.
     await expect(desktop.layoutRoot).toBeVisible();
     await expect(desktop.sidebar).toBeVisible();
     await expect(desktop.leftPanel).toBeVisible();
-    await expect(desktop.rightPanel).toBeVisible();
+    await expect(desktop.hamburgerMenu).toBeVisible();
+
+    // Bible-only chrome is hidden on topic routes — chapter selector,
+    // commentary tabs, divider and right pane all unmount because
+    // there's no Bible passage to attach them to.
+    await expect(desktop.chapterSelector).toHaveCount(0);
+    await expect(desktop.tabSummary).toHaveCount(0);
+    await expect(desktop.splitDivider).toHaveCount(0);
+    await expect(desktop.rightPanel).toHaveCount(0);
   });
 
-  test('topic routes render inside the desktop split-view chrome', async ({ page }) => {
+  test('topic content fills the split-body when right pane is unmounted', async ({ page }) => {
     const desktop = new DesktopReaderPage(page);
     const picker = new BookSelectorPage(page);
 
@@ -81,12 +87,14 @@ test.describe('Regression — desktop split-view panel state (post-light-theme)'
     await page.locator('[data-testid^="topic-item-"]').first().click();
     await expect(page).toHaveURL(/\/topics?\//, { timeout: 10_000 });
 
-    // Split-view chrome stays mounted on topic routes — confirm every
-    // structural landmark is still present.
-    await expect(desktop.layoutRoot).toBeVisible();
-    await expect(desktop.sidebar).toBeVisible();
+    // With the right pane + divider gone, the left panel should expand
+    // to take ~the full split-body width (within a few px) so the
+    // topic content isn't crammed into the previous ~50% slot.
     await expect(desktop.leftPanel).toBeVisible();
-    await expect(desktop.rightPanel).toBeVisible();
+    const leftBox = await desktop.leftPanel.boundingBox();
+    const splitBox = await desktop.splitBody.boundingBox();
+    if (!leftBox || !splitBox) throw new Error('layout boxes missing');
+    expect(leftBox.width).toBeGreaterThan(splitBox.width - 4);
   });
 
   test('right-panel sub-screen title is hoisted into the top dark banner', async ({ page }) => {
