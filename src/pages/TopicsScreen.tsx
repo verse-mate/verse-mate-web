@@ -22,11 +22,11 @@ export default function TopicsScreen() {
   );
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader title="Topics" onBack={() => navigate('/read')} />
 
       {/* Search */}
-      <div className="px-4 pt-1" style={{ backgroundColor: vmTokens.pageBg }}>
+      <div className="px-4 pt-1" style={{ backgroundColor: vmTokens.commentaryBg }}>
         <div className="flex items-center gap-2 h-12 px-4 rounded-full" style={{ backgroundColor: vmTokens.surfaceRaisedBg, border: `1px solid ${vmTokens.divider}` }}>
           <Search size={18} style={{ color: vmTokens.textTertiary }} strokeWidth={2} />
           <input
@@ -39,7 +39,7 @@ export default function TopicsScreen() {
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6" style={{ backgroundColor: vmTokens.pageBg }}>
+      <div className="flex-1 overflow-y-auto px-4 pt-3 pb-6" style={{ backgroundColor: vmTokens.commentaryBg }}>
         {filtered.map(topic => (
           <button
             key={topic.id}

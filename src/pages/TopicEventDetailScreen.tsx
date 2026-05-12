@@ -28,13 +28,13 @@ export default function TopicEventDetailScreen() {
   };
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader
         title={event?.title || 'Event'}
         onBack={() => navigate(`/topics/${topicId}`)}
       />
 
-      <div className="sub-screen-body flex-1 px-5 pb-8" style={{ backgroundColor: vmTokens.pageBg }}>
+      <div className="sub-screen-body flex-1 px-5 pb-8" style={{ backgroundColor: vmTokens.commentaryBg }}>
         {event ? (
           <>
             <p className="text-[14px] leading-relaxed mt-2" style={{ color: vmTokens.textTertiary }}>
