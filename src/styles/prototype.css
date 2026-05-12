@@ -23,6 +23,12 @@
   --bg-reading: #FAF6EA;         /* scripture surface — cream */
   --bg-commentary: #FFFFFF;      /* commentary panel — white */
   --bg-menu: #FFFFFF;
+  /* Sidebar chapter cells (1, 2, 3, … grid under each book). Cream-gold
+     in light, near-black in dark — flipped via .dark below. */
+  --chapter-cell-bg: #F4ECD4;
+  --chapter-cell-bg-hover: #EDE2C0;
+  --chapter-cell-border: #E8DCB6;
+  --chapter-cell-border-hover: #DCCB9A;
 
   /* Text */
   --fg-primary: #1B1B1B;
@@ -132,7 +138,7 @@ button { font-family: inherit; }
   padding: 4px 0;
 }
 .sidebar-scroll::-webkit-scrollbar { width: 4px; }
-.sidebar-scroll::-webkit-scrollbar-thumb { background: #D8D2C0; border-radius: 2px; }
+.sidebar-scroll::-webkit-scrollbar-thumb { background: var(--bg-sidebar-border); border-radius: 2px; }
 .sidebar-scroll::-webkit-scrollbar-track { background: transparent; }
 
 .section-header {
@@ -188,16 +194,18 @@ button { font-family: inherit; }
   font-size: 12px;
   font-weight: 500;
   color: var(--fg-primary);
-  background-color: #F4ECD4;
-  border: 1px solid #E8DCB6;
+  background-color: var(--chapter-cell-bg);
+  border: 1px solid var(--chapter-cell-border);
   border-radius: 4px;
   cursor: pointer;
   font-family: inherit;
 }
-.chapter-cell:hover { background-color: #EDE2C0; border-color: #DCCB9A; }
+.chapter-cell:hover { background-color: var(--chapter-cell-bg-hover); border-color: var(--chapter-cell-border-hover); }
 .chapter-cell.active {
   background-color: var(--vm-dust);
-  color: var(--fg-primary);
+  /* Always dark text on the gold pill — matches every other gold-bg
+     element (.study-pill, .obs-pill, .study-num) */
+  color: var(--fg-on-gold);
   font-weight: 600;
 }
 
@@ -332,7 +340,7 @@ button { font-family: inherit; }
   touch-action: none;
 }
 .divider-dots { display: flex; flex-direction: column; gap: 3px; }
-.divider-dot { width: 3px; height: 3px; border-radius: 50%; background-color: #C9C0AC; }
+.divider-dot { width: 3px; height: 3px; border-radius: 50%; background-color: var(--divider); }
 
 .right-panel {
   flex: 1;
@@ -352,7 +360,7 @@ button { font-family: inherit; }
   background-color: var(--bg-reading);
 }
 .reading-body::-webkit-scrollbar { width: 8px; }
-.reading-body::-webkit-scrollbar-thumb { background: #D8D2C0; border-radius: 4px; }
+.reading-body::-webkit-scrollbar-thumb { background: var(--bg-sidebar-border); border-radius: 4px; }
 .reading-body::-webkit-scrollbar-track { background: transparent; }
 
 .reading-inner {
@@ -436,7 +444,8 @@ button { font-family: inherit; }
   transform: translateY(-50%);
   width: 40px; height: 40px;
   border-radius: 50%;
-  background: #FFFFFF;
+  /* Theme-aware so the chrome doesn't blast white in dark mode */
+  background: var(--card-bg);
   border: 1px solid var(--card-border);
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 2px 10px rgba(60, 50, 30, 0.10);
@@ -615,7 +624,7 @@ button { font-family: inherit; }
   border-radius: 50%;
   background: var(--vm-dust);
   border: 1px solid var(--vm-dust);
-  color: #FFFFFF;
+  color: var(--fg-on-gold);
   font-size: 13px;
   font-weight: 600;
   display: flex;
@@ -635,7 +644,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--fg-on-gold);
   font-feature-settings: 'tnum';
   flex-shrink: 0;
   min-width: 56px;
@@ -1487,7 +1496,7 @@ button { font-family: inherit; }
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.04em;
-  color: #fff;
+  color: var(--fg-on-gold);
   flex-shrink: 0;
   min-width: 72px;
   text-align: center;
@@ -1559,7 +1568,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg-on-gold);
   background: var(--vm-dust);
   border-radius: 999px;
   padding: 2px 9px;
@@ -1606,7 +1615,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg-on-gold);
   min-width: 52px;
   flex-shrink: 0;
   font-feature-settings: 'tnum';
@@ -1654,7 +1663,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg-on-gold);
   min-width: 52px;
   flex-shrink: 0;
   font-feature-settings: 'tnum';
@@ -1681,7 +1690,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg-on-gold);
   min-width: 52px;
   flex-shrink: 0;
   font-feature-settings: 'tnum';
@@ -1715,7 +1724,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg-on-gold);
   min-width: 52px;
   flex-shrink: 0;
   font-feature-settings: 'tnum';
@@ -1858,7 +1867,7 @@ button { font-family: inherit; }
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg-on-gold);
   font-feature-settings: 'tnum';
   min-width: 52px;
 }
@@ -2689,6 +2698,11 @@ button { font-family: inherit; }
   --bg-reading: #000000;
   --bg-commentary: #000000;
   --bg-menu: #1B1B1B;
+  /* Chapter cells in the sidebar — cream-gold → near-black */
+  --chapter-cell-bg: #1e1e1e;
+  --chapter-cell-bg-hover: #262626;
+  --chapter-cell-border: #2a2a2a;
+  --chapter-cell-border-hover: #3a3a3a;
 
   /* Text flips — black/dark → near-white/with-opacity */
   --fg-primary: #E7E7E7;
