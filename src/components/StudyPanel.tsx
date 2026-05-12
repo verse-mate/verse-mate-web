@@ -532,7 +532,7 @@ function ContrastsBody({ step }: { step: StepContrasts }) {
                 fontFamily: 'Roboto, sans-serif',
                 fontSize: 11,
                 fontWeight: 700,
-                color: '#FFFFFF',
+                color: vmTokens.goldOnLight,
                 minWidth: 52,
                 flexShrink: 0,
               }}
@@ -760,7 +760,7 @@ function Tag({ label }: { label: string }) {
         borderRadius: 999,
         backgroundColor: vmTokens.gold,
         border: `1px solid ${vmTokens.gold}`,
-        color: '#FFFFFF',
+        color: vmTokens.goldOnLight,
         fontFamily: 'Roboto, sans-serif',
         fontSize: 11,
         fontWeight: 700,
@@ -778,25 +778,27 @@ function Tag({ label }: { label: string }) {
 function RangePill({ range }: { range: string }) {
   // Prototype's .study-pill — solid gold pill with white text. Used for
   // verse-range labels like "4:1-3" on the left of each Interpretation
-  // movement row.
+  // movement row. min-width / no-wrap so longer ranges (e.g. "1:12-18",
+  // "1:19-27") don't wrap mid-pill.
   return (
     <span
       style={{
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        minWidth: 56,
+        minWidth: 64,
         height: 22,
         borderRadius: 999,
         backgroundColor: vmTokens.gold,
         border: `1px solid ${vmTokens.gold}`,
-        color: '#FFFFFF',
+        color: vmTokens.goldOnLight,
         fontFamily: 'Roboto, sans-serif',
         fontSize: 11,
         fontWeight: 600,
         padding: '0 10px',
         flexShrink: 0,
         textAlign: 'center',
+        whiteSpace: 'nowrap',
       }}
     >
       {range}

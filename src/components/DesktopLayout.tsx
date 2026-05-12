@@ -164,6 +164,13 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     });
     setExpanded(-2); // Reset to all-expanded on chapter change
     commentaryScrollRef.current?.scrollTo(0, 0); // Scroll commentary to top
+    // Reset right panel + commentary tab whenever the user navigates to a
+    // new chapter. Without this, opening Settings then jumping to a new
+    // book leaves Settings pinned in the right pane, and a chapter change
+    // mid-Detailed-tab leaves Detailed active even though By-Line is the
+    // canonical default for a fresh chapter.
+    setRightPanelView('commentary');
+    setTab('byline');
   }, [state.book, state.chapter, state.version]);
 
   // Auto-scroll removed — users scroll the Insights panel independently
@@ -820,7 +827,9 @@ function CommentaryPanel({
                 </button>
                 {isOpen && (
                   <div className="byline-body">
-                    <div className="byline-ref-strong">{book} {chapter}:{c.verse}</div>
+                    {/* Verse ref is already shown by .byline-ref-sm in the
+                        toggle header above — don't duplicate it here.
+                        Body starts directly with the verse blockquote. */}
                     {verseTexts[c.verse] && (
                       <blockquote className="byline-verse-quote">{verseTexts[c.verse]}</blockquote>
                     )}
