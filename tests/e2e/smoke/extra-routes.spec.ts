@@ -46,10 +46,11 @@ test.describe('Smoke — extra routes', () => {
 
   test('/topics/<unknown-id> renders without crashing', async ({ page }) => {
     await page.goto('/topics/99999999');
-    // TopicEventsScreen handles unknown topicIds by showing "Loading…"
-    // until the API returns, then renders an empty / not-found UI. Either
-    // surface is acceptable for smoke coverage.
-    await expect(page.getByTestId('screen-header-back-button').or(page.getByText(/not found/i))).toBeVisible({
+    // TopicEventsScreen handles unknown topicIds by rendering the empty
+    // Content state. ScreenHeader is gone (topics behave like Bible
+    // chapters); the topic-content search input is the stable marker
+    // that the page mounted without crashing.
+    await expect(page.getByTestId('topic-content-search').or(page.getByText(/not found/i))).toBeVisible({
       timeout: 15_000,
     });
   });
