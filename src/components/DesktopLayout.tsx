@@ -26,7 +26,13 @@ import ShareIcon from '@/components/ShareIcon';
 import BookSelector from '@/components/BookSelector';
 import StudyPanel from '@/components/StudyPanel';
 import { RightPanelProvider } from '@/contexts/RightPanelContext';
+import { useTopicView } from '@/contexts/TopicViewContext';
 import { AudioInlineEntry } from '@/audio';
+import {
+  ExplanationTab as TopicExplanationTab,
+  INSIGHT_TABS as TOPIC_INSIGHT_TABS,
+  type InsightTab as TopicInsightTab,
+} from '@/components/topic/TopicViewParts';
 import BookmarksScreen from '@/pages/BookmarksScreen';
 import NotesScreen from '@/pages/NotesScreen';
 import HighlightsScreen from '@/pages/HighlightsScreen';
@@ -75,6 +81,16 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const { state, dispatch } = useApp();
   const navigate = useNavigate();
   const location = useLocation();
+  // Topic context — populated by TopicEventsScreen when on a topic route
+  // and read here so the chrome (chapter-selector label, pill-group,
+  // right-pane body) mirrors the Bible side. On non-topic routes the
+  // fields are null and these reads are inert.
+  const {
+    topic: currentTopic,
+    details: topicDetails,
+    insightTab: topicInsightTab,
+    setInsightTab: setTopicInsightTab,
+  } = useTopicView();
   const [showBookSelector, setShowBookSelector] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(!hideSidebar);
@@ -340,28 +356,31 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             hamburger icon-btn RIGHT. Padding comes from prototype.css
             (0 16px 0 64px). */}
         <header className="app-header">
-          {/* Hide the chapter selector on topic routes — there's no
-              "current chapter" in topic context, and showing the
-              previous Bible chapter ("James 3") next to a Topics screen
-              is misleading. */}
-          {!isTopicRoute && (
-            <button
-              className="chapter-selector-btn"
-              onClick={() => setShowBookSelector(true)}
-              data-testid="desktop-chapter-selector-button"
-            >
-              <span>{state.book} {state.chapter}</span>
-              <ChevronDown size={18} color={vmTokens.headerFg} strokeWidth={2} />
-            </button>
-          )}
+          {/* Topic routes show the topic name in the same dropdown
+              slot the Bible side uses for "Genesis 1" — treats a topic
+              like a Bible reference for navigation purposes. */}
+          <button
+            className="chapter-selector-btn"
+            onClick={() => setShowBookSelector(true)}
+            data-testid="desktop-chapter-selector-button"
+          >
+            <span>
+              {isTopicRoute
+                ? currentTopic?.name || 'Topic'
+                : `${state.book} ${state.chapter}`}
+            </span>
+            <ChevronDown size={18} color={vmTokens.headerFg} strokeWidth={2} />
+          </button>
 
           <div className="logo-mark">
             <img src="/versemate-logo-white.png" alt="VerseMate" className="logo-img" />
           </div>
 
           {/* Commentary pill-group — absolute-positioned at the horizontal
-              center of the right panel (split-aware). Hidden on topic
-              routes since the right pane is hidden too. */}
+              center of the right panel (split-aware). On Bible routes
+              this is the Summary/By-Line/Detailed/Study chooser; on
+              topic routes the same slot holds the Summary/By-Line/
+              Detailed chooser fed from TopicViewContext. */}
           {!isTopicRoute && rightPanelView === 'commentary' && (
             <div
               style={{
@@ -379,6 +398,30 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                     className={`pill ${tab === t.id ? 'active' : ''}`}
                     onClick={() => setTab(t.id)}
                     data-testid={`desktop-tab-${t.id}`}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+          {isTopicRoute && (
+            <div
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: `${(100 + leftPct) / 2}%`,
+                transform: 'translate(-50%, -50%)',
+                zIndex: 2,
+              }}
+            >
+              <div className="pill-group">
+                {TOPIC_INSIGHT_TABS.map(t => (
+                  <button
+                    key={t.id}
+                    className={`pill ${topicInsightTab === t.id ? 'active' : ''}`}
+                    onClick={() => setTopicInsightTab(t.id as TopicInsightTab)}
+                    data-testid={`desktop-topic-tab-${t.id}`}
                   >
                     {t.label}
                   </button>
@@ -453,65 +496,81 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
         </header>
 
         {/* Prototype .split-body — left/right panels separated by .divider.
-            On topic routes the right pane has nothing relevant to display
-            (no Bible passage), so we let the left panel fill the full width
-            and skip rendering the divider + right pane entirely. */}
+            Bible routes split between passage (left) and commentary (right);
+            topic routes split between topic content (left) and the active
+            Summary/By-Line/Detailed insight (right). Sub-page panels (menu
+            sub-pages like Settings) still take over the right pane on
+            Bible routes only. */}
         <div ref={contentRef} data-testid="desktop-split-body" className="split-body">
           <div
             data-testid="desktop-left-panel"
             className="left-panel"
-            style={{ width: isTopicRoute ? '100%' : `${leftPct}%` }}
+            style={{ width: `${leftPct}%` }}
           >
             <Outlet />
           </div>
 
-          {!isTopicRoute && (
-            <>
-              {/* Drag handle — prototype .divider with .divider-dots */}
-              <div
-                className="divider"
-                onPointerDown={handleDragStart}
-                data-testid="desktop-split-divider"
-              >
-                <div className="divider-dots">
-                  {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
-                </div>
-              </div>
+          {/* Drag handle — prototype .divider with .divider-dots */}
+          <div
+            className="divider"
+            onPointerDown={handleDragStart}
+            data-testid="desktop-split-divider"
+          >
+            <div className="divider-dots">
+              {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
+            </div>
+          </div>
 
-              {/* Right panel — commentary OR sub-page */}
-              <div data-testid="desktop-right-panel" className="right-panel">
-                {rightPanelView === 'commentary' ? (
-                  <div
-                    ref={commentaryScrollRef}
-                    className="commentary-body"
-                    style={{ fontSize: `${state.settings.fontSize}px` }}
-                  >
-                    <CommentaryPanel
-                      tab={tab}
-                      commentaries={commentaries}
-                      verseTexts={verseTexts}
-                      expanded={expanded}
-                      setExpanded={setExpanded}
-                      book={state.book}
-                      bookId={currentBook?.bookId ?? null}
-                      chapter={state.chapter}
-                    />
-                  </div>
-                ) : (
-                  <RightPanelProvider value={{ goBack: closeRightPanel, isRightPanel: true }}>
-                    <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-                      {(() => {
-                        const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
-                        if (!entry) return null;
-                        const PageComponent = entry.component;
-                        return <PageComponent />;
-                      })()}
-                    </div>
-                  </RightPanelProvider>
-                )}
+          {/* Right panel */}
+          <div data-testid="desktop-right-panel" className="right-panel">
+            {isTopicRoute ? (
+              <div
+                className="commentary-body"
+                style={{ fontSize: `${state.settings.fontSize}px` }}
+                data-testid="desktop-topic-insight-pane"
+              >
+                <TopicExplanationTab
+                  text={
+                    topicInsightTab === 'summary'
+                      ? topicDetails?.explanation.summary || ''
+                      : topicInsightTab === 'byline'
+                        ? topicDetails?.explanation.byline || ''
+                        : topicDetails?.explanation.detailed || ''
+                  }
+                  kind={topicInsightTab}
+                  loading={topicDetails === null}
+                />
               </div>
-            </>
-          )}
+            ) : rightPanelView === 'commentary' ? (
+              <div
+                ref={commentaryScrollRef}
+                className="commentary-body"
+                style={{ fontSize: `${state.settings.fontSize}px` }}
+              >
+                <CommentaryPanel
+                  tab={tab}
+                  commentaries={commentaries}
+                  verseTexts={verseTexts}
+                  expanded={expanded}
+                  setExpanded={setExpanded}
+                  book={state.book}
+                  bookId={currentBook?.bookId ?? null}
+                  chapter={state.chapter}
+                />
+              </div>
+            ) : (
+              <RightPanelProvider value={{ goBack: closeRightPanel, isRightPanel: true }}>
+                <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                  {(() => {
+                    const entry = RIGHT_PANEL_COMPONENTS[rightPanelView];
+                    if (!entry) return null;
+                    const PageComponent = entry.component;
+                    return <PageComponent />;
+                  })()}
+                </div>
+              </RightPanelProvider>
+            )}
+          </div>
         </div>
       </div>
 
@@ -549,6 +608,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             boxShadow: '0 8px 40px rgba(0,0,0,0.5)',
           }}>
             <BookSelector
+              initialTab={isTopicRoute ? 'Topics' : undefined}
               onClose={() => setShowBookSelector(false)}
               onSelect={(book, ch, bookId) => {
                 dispatch({ type: 'SET_PASSAGE', book, chapter: ch, bookId });

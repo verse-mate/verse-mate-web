@@ -42,7 +42,7 @@ test.skip(
 );
 
 test.describe('Regression — desktop split-view panel state (post-light-theme)', () => {
-  test('topic navigation keeps the sidebar + layout mounted but drops Bible-only chrome', async ({ page }) => {
+  test('topic navigation keeps the sidebar + layout mounted and reuses Bible chrome slots', async ({ page }) => {
     const desktop = new DesktopReaderPage(page);
     const picker = new BookSelectorPage(page);
 
@@ -68,16 +68,19 @@ test.describe('Regression — desktop split-view panel state (post-light-theme)'
     await expect(desktop.leftPanel).toBeVisible();
     await expect(desktop.hamburgerMenu).toBeVisible();
 
-    // Bible-only chrome is hidden on topic routes — chapter selector,
-    // commentary tabs, divider and right pane all unmount because
-    // there's no Bible passage to attach them to.
-    await expect(desktop.chapterSelector).toHaveCount(0);
+    // Topics are now treated like Bible chapters — same chrome slots,
+    // different content. Chapter-selector shows the topic name, the
+    // split divider + right pane render, and the pill-group now holds
+    // the topic insight tabs (Summary / By-Line / Detailed) so the
+    // Bible commentary tabs (`desktop-tab-summary`) no longer appear.
+    await expect(desktop.chapterSelector).toBeVisible();
+    await expect(desktop.splitDivider).toBeVisible();
+    await expect(desktop.rightPanel).toBeVisible();
     await expect(desktop.tabSummary).toHaveCount(0);
-    await expect(desktop.splitDivider).toHaveCount(0);
-    await expect(desktop.rightPanel).toHaveCount(0);
+    await expect(page.getByTestId('desktop-topic-tab-summary')).toBeVisible();
   });
 
-  test('topic content fills the split-body when right pane is unmounted', async ({ page }) => {
+  test('topic split keeps the left + right panes with the same ratio as Bible', async ({ page }) => {
     const desktop = new DesktopReaderPage(page);
     const picker = new BookSelectorPage(page);
 
@@ -87,14 +90,18 @@ test.describe('Regression — desktop split-view panel state (post-light-theme)'
     await page.locator('[data-testid^="topic-item-"]').first().click();
     await expect(page).toHaveURL(/\/topics?\//, { timeout: 10_000 });
 
-    // With the right pane + divider gone, the left panel should expand
-    // to take ~the full split-body width (within a few px) so the
-    // topic content isn't crammed into the previous ~50% slot.
+    // Topics now use the same split as Bible chapters — both panes
+    // render, the divider sits between them, and the left pane takes
+    // roughly the Bible default leftPct (65%). Loose bounds because
+    // the user can drag-resize and the exact pixels depend on viewport.
     await expect(desktop.leftPanel).toBeVisible();
+    await expect(desktop.rightPanel).toBeVisible();
+    await expect(desktop.splitDivider).toBeVisible();
     const leftBox = await desktop.leftPanel.boundingBox();
     const splitBox = await desktop.splitBody.boundingBox();
     if (!leftBox || !splitBox) throw new Error('layout boxes missing');
-    expect(leftBox.width).toBeGreaterThan(splitBox.width - 4);
+    expect(leftBox.width).toBeGreaterThan(splitBox.width * 0.4);
+    expect(leftBox.width).toBeLessThan(splitBox.width * 0.85);
   });
 
   test('right-panel sub-screen title is hoisted into the top dark banner', async ({ page }) => {
