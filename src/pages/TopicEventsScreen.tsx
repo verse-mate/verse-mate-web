@@ -4,12 +4,14 @@ import { fetchTopicDetails, fetchTopics } from '@/services/bibleService';
 import { TopicDetails, Topic, TopicSection, TopicVerse } from '@/services/types';
 import { Search, BookOpen } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import ScreenHeader from '@/components/ScreenHeader';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import { generateTopicSlug, getCategoryFromSlug } from '@/lib/topicSlugs';
 import { vmTokens } from '@/styles/themeStyles';
 
 type Tab = 'content' | 'summary' | 'byline' | 'detailed';
+type InsightTab = Exclude<Tab, 'content'>;
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'content', label: 'Content' },
@@ -17,6 +19,16 @@ const TABS: { id: Tab; label: string }[] = [
   { id: 'byline', label: 'By Line' },
   { id: 'detailed', label: 'Detailed' },
 ];
+
+const INSIGHT_TABS: { id: InsightTab; label: string }[] = [
+  { id: 'summary', label: 'Summary' },
+  { id: 'byline', label: 'By Line' },
+  { id: 'detailed', label: 'Detailed' },
+];
+
+// Same split ratio DesktopLayout uses for the Bible side so topics and
+// the reader feel like the same product.
+const DESKTOP_LEFT_PCT = 65;
 
 /**
  * TopicEventsScreen — per-topic view. Mirrors the Bible CommentaryScreen
@@ -105,56 +117,95 @@ export default function TopicEventsScreen() {
   };
 
   const isInitialLoading = details === null;
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
 
+  // On desktop the LEFT pane always shows Content, so the `tab` state
+  // is only used to pick which explanation the RIGHT pane is showing —
+  // it should never be 'content' there. Default to summary the first
+  // time the user crosses the breakpoint so the right pane has
+  // something to display.
+  useEffect(() => {
+    if (isDesktop && tab === 'content') setTab('summary');
+  }, [isDesktop, tab]);
+
+  const insightTab: InsightTab = tab === 'content' ? 'summary' : tab;
+  const explanationText =
+    insightTab === 'summary'
+      ? details?.explanation.summary || ''
+      : insightTab === 'byline'
+        ? details?.explanation.byline || ''
+        : details?.explanation.detailed || '';
+
+  // ─── Desktop split view — mirrors DesktopLayout's left/right split
+  //     so topics and the Bible reader feel like the same product.
+  if (isDesktop) {
+    return (
+      <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
+        <ScreenHeader title={topic?.name || 'Topic'} onBack={() => navigate('/topics')} />
+        <div className="flex-1 flex overflow-hidden">
+          {/* LEFT — Content sections */}
+          <div
+            className="overflow-y-auto px-4 pb-8"
+            style={{
+              width: `${DESKTOP_LEFT_PCT}%`,
+              backgroundColor: vmTokens.commentaryBg,
+              color: vmTokens.textPrimary,
+            }}
+            data-testid="topic-content-pane"
+          >
+            <ContentTab
+              sections={filteredSections}
+              allCount={sections.length}
+              query={query}
+              setQuery={setQuery}
+              onOpenReference={openReference}
+              loading={isInitialLoading}
+            />
+          </div>
+
+          {/* Divider — matches DesktopLayout's vertical seam */}
+          <div
+            style={{
+              width: 1,
+              backgroundColor: vmTokens.divider,
+              flexShrink: 0,
+            }}
+            aria-hidden="true"
+          />
+
+          {/* RIGHT — Insight tabs (Summary / By-Line / Detailed) */}
+          <div
+            className="flex-1 flex flex-col overflow-hidden"
+            data-testid="topic-insight-pane"
+          >
+            <TabPills
+              tabs={INSIGHT_TABS}
+              active={insightTab}
+              onChange={setTab as (id: InsightTab) => void}
+            />
+            <div
+              className="flex-1 overflow-y-auto px-4 pb-8"
+              style={{ backgroundColor: vmTokens.commentaryBg, color: vmTokens.textPrimary }}
+            >
+              <ExplanationTab
+                text={explanationText}
+                kind={insightTab}
+                loading={isInitialLoading}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ─── Mobile — single column with all four tabs (Content + insights)
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader title={topic?.name || 'Topic'} onBack={() => navigate('/topics')} />
 
-      {/* Tab pills — match CommentaryScreen's pattern */}
-      <div
-        className="shrink-0"
-        style={{
-          backgroundColor: vmTokens.headerBg,
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '12px 16px',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            backgroundColor: vmTokens.pillBg,
-            borderRadius: 100,
-            padding: '3px',
-            gap: 0,
-          }}
-        >
-          {TABS.map((t) => (
-            <button
-              key={t.id}
-              onClick={() => setTab(t.id)}
-              data-testid={`topic-tab-${t.id}`}
-              style={{
-                borderRadius: 100,
-                padding: '4px 16px',
-                fontFamily: 'Roboto, sans-serif',
-                fontSize: 14,
-                fontWeight: 400,
-                lineHeight: '24px',
-                whiteSpace: 'nowrap',
-                backgroundColor: tab === t.id ? vmTokens.gold : 'transparent',
-                color: tab === t.id ? vmTokens.headerBg : vmTokens.headerFg,
-                border: 'none',
-                cursor: 'pointer',
-              }}
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
-      </div>
+      <TabPills tabs={TABS} active={tab} onChange={setTab} />
 
-      {/* Body */}
       <div
         className="flex-1 overflow-y-auto px-4 pb-8"
         style={{ backgroundColor: vmTokens.commentaryBg, color: vmTokens.textPrimary }}
@@ -170,17 +221,66 @@ export default function TopicEventsScreen() {
           />
         ) : (
           <ExplanationTab
-            text={
-              tab === 'summary'
-                ? details?.explanation.summary || ''
-                : tab === 'byline'
-                  ? details?.explanation.byline || ''
-                  : details?.explanation.detailed || ''
-            }
-            kind={tab}
+            text={explanationText}
+            kind={insightTab}
             loading={isInitialLoading}
           />
         )}
+      </div>
+    </div>
+  );
+}
+
+function TabPills<T extends string>({
+  tabs,
+  active,
+  onChange,
+}: {
+  tabs: { id: T; label: string }[];
+  active: T;
+  onChange: (id: T) => void;
+}) {
+  return (
+    <div
+      className="shrink-0"
+      style={{
+        backgroundColor: vmTokens.headerBg,
+        display: 'flex',
+        justifyContent: 'center',
+        padding: '12px 16px',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          backgroundColor: vmTokens.pillBg,
+          borderRadius: 100,
+          padding: '3px',
+          gap: 0,
+        }}
+      >
+        {tabs.map((t) => (
+          <button
+            key={t.id}
+            onClick={() => onChange(t.id)}
+            data-testid={`topic-tab-${t.id}`}
+            style={{
+              borderRadius: 100,
+              padding: '4px 16px',
+              fontFamily: 'Roboto, sans-serif',
+              fontSize: 14,
+              fontWeight: 400,
+              lineHeight: '24px',
+              whiteSpace: 'nowrap',
+              backgroundColor: active === t.id ? vmTokens.gold : 'transparent',
+              color: active === t.id ? vmTokens.headerBg : vmTokens.headerFg,
+              border: 'none',
+              cursor: 'pointer',
+            }}
+          >
+            {t.label}
+          </button>
+        ))}
       </div>
     </div>
   );
