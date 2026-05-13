@@ -500,20 +500,39 @@ export async function fetchTopicSections(topicId: string): Promise<TopicSection[
 
 /**
  * Full topic record — section content + AI explanations (summary,
- * byline, detailed). Hits the same `GET /topics/:id` endpoint the old
- * FE uses for its split-view; web just never asked for the explanation
- * bundle before.
+ * byline, detailed).
+ *
+ * Two API calls in parallel:
+ *   - GET /topics/:id?bible_version=…  → metadata + explanations
+ *   - GET /topics/:id/references       → expanded verse content
+ *
+ * Why two endpoints: the `/topics/:id` route returns the references
+ * markdown with unexpanded placeholder tokens like `{chapter:Genesis 1}`
+ * and `{verse:Genesis 1:26-28}` (no verse text). Only the
+ * `/topics/:id/references` endpoint runs the verse-injection pass that
+ * produces the fully rendered "## Subtitle / (refs) / 1\n<verse text>"
+ * markdown the parser expects. The old FE makes both calls separately
+ * for the same reason.
  */
 export async function fetchTopicDetails(
   topicId: string,
   bibleVersion?: string
 ): Promise<TopicDetails> {
   try {
-    const data = await api.get<any>(
-      `/topics/${topicId}`,
-      bibleVersion ? { bible_version: bibleVersion } : undefined,
-      { auth: false }
-    );
+    const [detailsRes, refsRes] = await Promise.all([
+      api
+        .get<any>(
+          `/topics/${topicId}`,
+          bibleVersion ? { bible_version: bibleVersion } : undefined,
+          { auth: false }
+        )
+        .catch(() => null),
+      api
+        .get<any>(`/topics/${topicId}/references`, undefined, { auth: false })
+        .catch(() => null),
+    ]);
+
+    const data = detailsRes;
     const topic: Topic | null = data?.topic
       ? {
           id: data.topic.topic_id || data.topic.id || topicId,
@@ -524,7 +543,7 @@ export async function fetchTopicDetails(
         }
       : null;
     const sections = parseTopicReferencesMarkdown(
-      data?.references?.content || '',
+      refsRes?.references?.content || '',
       topicId
     );
     const explanation = {
