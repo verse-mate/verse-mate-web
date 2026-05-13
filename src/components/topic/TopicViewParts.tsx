@@ -8,7 +8,7 @@
  * Summary / By-Line / Detailed insights.
  */
 
-import { BookOpen, Search } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import type { TopicSection, TopicVerse } from '@/services/types';
 import { vmTokens } from '@/styles/themeStyles';
@@ -24,8 +24,6 @@ export const INSIGHT_TABS: { id: InsightTab; label: string }[] = [
 interface ContentTabProps {
   sections: TopicSection[];
   allCount: number;
-  query: string;
-  setQuery: (q: string) => void;
   onOpenReference: (ref: string) => void;
   loading: boolean;
 }
@@ -33,33 +31,11 @@ interface ContentTabProps {
 export function ContentTab({
   sections,
   allCount,
-  query,
-  setQuery,
   onOpenReference,
   loading,
 }: ContentTabProps) {
   return (
-    <>
-      <div className="pt-3 pb-1">
-        <div
-          className="flex items-center gap-2 h-12 px-4 rounded-full"
-          style={{
-            backgroundColor: vmTokens.surfaceRaisedBg,
-            border: `1px solid ${vmTokens.divider}`,
-          }}
-        >
-          <Search size={18} style={{ color: vmTokens.textTertiary }} strokeWidth={2} />
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search sections, verses, references..."
-            data-testid="topic-content-search"
-            className="flex-1 bg-transparent text-[15px] focus:outline-none"
-            style={{ color: vmTokens.textPrimary }}
-          />
-        </div>
-      </div>
-
+    <div data-testid="topic-content-body">
       <div className="pt-4">
         {loading ? (
           <p className="text-center py-8 text-[14px]" style={{ color: vmTokens.textTertiary }}>
@@ -67,9 +43,7 @@ export function ContentTab({
           </p>
         ) : sections.length === 0 ? (
           <p className="text-center py-8 text-[14px]" style={{ color: vmTokens.textTertiary }}>
-            {allCount === 0
-              ? 'No content available for this topic yet.'
-              : `No sections match "${query}"`}
+            No content available for this topic yet.
           </p>
         ) : (
           <div className="space-y-6">
@@ -119,7 +93,7 @@ export function ContentTab({
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
 

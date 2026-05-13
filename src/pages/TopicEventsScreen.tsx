@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ChevronDown, Menu } from 'lucide-react';
 import { fetchTopicDetails, fetchTopics } from '@/services/bibleService';
@@ -59,7 +59,6 @@ export default function TopicEventsScreen() {
   const { setTopic, setDetails, insightTab, setInsightTab, topic, details } = useTopicView();
 
   const [phoneTab, setPhoneTab] = useState<Tab>('content');
-  const [query, setQuery] = useState('');
   const [showBookSelector, setShowBookSelector] = useState(false);
 
   // Resolve topic from whichever route shape and push to context so
@@ -111,17 +110,6 @@ export default function TopicEventsScreen() {
 
   const sections: TopicSection[] = details?.sections ?? [];
 
-  const filteredSections = useMemo(() => {
-    if (!query) return sections;
-    const q = query.toLowerCase();
-    return sections.filter(
-      (s) =>
-        s.subtitle.toLowerCase().includes(q) ||
-        s.verses.some((v) => v.text.toLowerCase().includes(q)) ||
-        s.references.some((r) => r.toLowerCase().includes(q)),
-    );
-  }, [sections, query]);
-
   // "Book Ch:Verse" or "Book Ch" → SET_PASSAGE + navigate to /read.
   const openReference = (ref: string) => {
     const m = ref.match(/^(\d?\s?[A-Za-z]+)\s+(\d+)/);
@@ -143,10 +131,8 @@ export default function TopicEventsScreen() {
         data-testid="topic-content-pane"
       >
         <ContentTab
-          sections={filteredSections}
+          sections={sections}
           allCount={sections.length}
-          query={query}
-          setQuery={setQuery}
           onOpenReference={openReference}
           loading={isInitialLoading}
         />
@@ -328,10 +314,8 @@ export default function TopicEventsScreen() {
       >
         {phoneTab === 'content' ? (
           <ContentTab
-            sections={filteredSections}
+            sections={sections}
             allCount={sections.length}
-            query={query}
-            setQuery={setQuery}
             onOpenReference={openReference}
             loading={isInitialLoading}
           />

@@ -28,7 +28,7 @@ function topicSelectorLocator(page: import('@playwright/test').Page, viewport: {
 }
 
 test.describe('Topics — TopicEventsScreen', () => {
-  test('canonical /topic/<cat>/<slug> URL renders the topic selector + search', async ({
+  test('canonical /topic/<cat>/<slug> URL renders the topic selector + content body', async ({
     page,
     viewport,
   }) => {
@@ -39,7 +39,7 @@ test.describe('Topics — TopicEventsScreen', () => {
     // most stable production fixture (the top-level Creation topic).
     await events.gotoCanonical('creation', 'creation');
     await expect(topicSelectorLocator(page, viewport)).toBeVisible({ timeout: 15_000 });
-    await expect(events.searchInput).toBeVisible();
+    await expect(events.contentBody).toBeVisible();
   });
 
   test('Topic discovery from BookSelector — click first topic, land on events screen', async ({

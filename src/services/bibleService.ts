@@ -1047,7 +1047,12 @@ const DEFAULT_SETTINGS: AppSettings = {
   fontSize: 20,
   lineSpacing: 1.7,
   theme: 'dark',
-  defaultVersion: 'ESV',
+  // NASB1995 is the only Bible version the backend has verse text for —
+  // ESV/NIV/KJV/NLT are still in the type union for legacy storage but
+  // hitting any of them returns no verses, which surfaces as unsubstituted
+  // `{verse:Genesis 1:1}` placeholders in topic byline insights and empty
+  // chapter bodies. Defaulting to NASB1995 keeps fresh visits sane.
+  defaultVersion: 'NASB1995',
   notifications: true,
   showVerseNumbers: true,
   autoHighlights: false,
@@ -1082,6 +1087,22 @@ function applySettingsMigrations(
       saveJSON(STORAGE_KEYS.settings, { ...DEFAULT_SETTINGS, ...next });
     }
     ran['autoHighlights-default-off-v1'] = true;
+    changed = true;
+  }
+
+  // 2026-05: backend only has verse text for NASB1995 — any other
+  // version returns empty content and surfaces as unsubstituted
+  // `{verse:...}` placeholders in topic byline insights and empty
+  // chapter bodies. Migrate stored ESV/NIV/KJV/NLT (the old default
+  // + Lovable-era picker choices) to NASB1995 so existing devices
+  // get the same fix as fresh ones.
+  if (!ran['default-version-nasb1995-v1']) {
+    const v = next.defaultVersion;
+    if (v && v !== 'NASB1995') {
+      next = { ...next, defaultVersion: 'NASB1995' };
+      saveJSON(STORAGE_KEYS.settings, { ...DEFAULT_SETTINGS, ...next });
+    }
+    ran['default-version-nasb1995-v1'] = true;
     changed = true;
   }
 

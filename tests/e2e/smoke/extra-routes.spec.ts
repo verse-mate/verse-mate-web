@@ -50,7 +50,7 @@ test.describe('Smoke — extra routes', () => {
     // Content state. ScreenHeader is gone (topics behave like Bible
     // chapters); the topic-content search input is the stable marker
     // that the page mounted without crashing.
-    await expect(page.getByTestId('topic-content-search').or(page.getByText(/not found/i))).toBeVisible({
+    await expect(page.getByTestId('topic-content-body').or(page.getByText(/not found/i))).toBeVisible({
       timeout: 15_000,
     });
   });
