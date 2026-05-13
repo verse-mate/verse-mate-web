@@ -9,6 +9,13 @@ import { buildTopicUrl } from '@/lib/topicSlugs';
 interface Props {
   onClose: () => void;
   onSelect: (book: string, chapter: number, bookId?: number) => void;
+  /**
+   * Forces the modal to open on a specific tab. Used when the modal is
+   * launched from a topic page so the user lands on the Topics list
+   * instead of OT/NT, which would otherwise depend on the previously
+   * viewed Bible book.
+   */
+  initialTab?: 'OT' | 'NT' | 'Topics';
 }
 
 type Tab = 'OT' | 'NT' | 'Topics';
@@ -28,13 +35,14 @@ const TOPIC_CATEGORIES: { key: TopicCategory; label: string }[] = [
  * Figma reference: frames 5172:3418 (OT), 5172:7984 (NT), and the Topics layout in frame 5895:4982.
  * Overlayed on top of Reading via a modal-full-screen pattern.
  */
-export default function BookSelector({ onClose, onSelect }: Props) {
+export default function BookSelector({ onClose, onSelect, initialTab }: Props) {
   const navigate = useNavigate();
   const { state } = useApp();
-  const [tab, setTab] = useState<Tab>(() =>
+  const [tab, setTab] = useState<Tab>(() => {
+    if (initialTab) return initialTab;
     // Default to whichever testament the current book belongs to
-    ['Matthew','Mark','Luke','John','Acts','Romans','1 Corinthians','2 Corinthians','Galatians','Ephesians','Philippians','Colossians','1 Thessalonians','2 Thessalonians','1 Timothy','2 Timothy','Titus','Philemon','Hebrews','James','1 Peter','2 Peter','1 John','2 John','3 John','Jude','Revelation'].includes(state.book) ? 'NT' : 'OT'
-  );
+    return ['Matthew','Mark','Luke','John','Acts','Romans','1 Corinthians','2 Corinthians','Galatians','Ephesians','Philippians','Colossians','1 Thessalonians','2 Thessalonians','1 Timothy','2 Timothy','Titus','Philemon','Hebrews','James','1 Peter','2 Peter','1 John','2 John','3 John','Jude','Revelation'].includes(state.book) ? 'NT' : 'OT';
+  });
   const [selectedBook, setSelectedBook] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   const [topics, setTopics] = useState<Topic[]>([]);

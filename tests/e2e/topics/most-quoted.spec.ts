@@ -30,9 +30,10 @@ test.describe('Topics — Most Quoted', () => {
     }
     await creation.click();
 
-    // Now on TopicEventsScreen. Click the first event reference. Events
-    // render as buttons containing the event title.
-    await expect(page.getByTestId('screen-header-title')).toBeVisible({ timeout: 15_000 });
+    // Now on TopicEventsScreen. The page no longer renders a top-level
+    // ScreenHeader (topics behave like Bible chapters per the chrome
+    // alignment) — wait for the topic search input instead.
+    await expect(page.getByTestId('topic-content-body')).toBeVisible({ timeout: 15_000 });
 
     const firstEventButton = page.locator('button').filter({ hasNotText: /^(search|back)$/i }).first();
     if (!(await firstEventButton.isVisible().catch(() => false))) {

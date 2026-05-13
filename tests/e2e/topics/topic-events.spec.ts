@@ -18,19 +18,34 @@ import { ReaderPage } from '../pages/reader.page';
  * screen ARE accessible via text (verse references like "Genesis 1:1").
  */
 
+function topicSelectorLocator(page: import('@playwright/test').Page, viewport: { width: number } | null) {
+  // Topic-name dropdown trigger:
+  //   - Desktop / tablet  → DesktopLayout's `desktop-chapter-selector-button`
+  //   - Phone             → TopicEventsScreen's `topic-selector-button`
+  return viewport && viewport.width >= 768
+    ? page.getByTestId('desktop-chapter-selector-button')
+    : page.getByTestId('topic-selector-button');
+}
+
 test.describe('Topics — TopicEventsScreen', () => {
-  test('canonical /topic/<cat>/<slug> URL renders the screen header + search', async ({ page }) => {
+  test('canonical /topic/<cat>/<slug> URL renders the topic selector + content body', async ({
+    page,
+    viewport,
+  }) => {
     const events = new TopicEventsPage(page);
     // "creation" is the canonical category slug for the Creation topic
     // group — confirmed by `topics/browse.spec.ts`. The URL shape is
     // /topic/<category>/<topic>. Using "creation/creation" matches the
     // most stable production fixture (the top-level Creation topic).
     await events.gotoCanonical('creation', 'creation');
-    await expect(events.title).toBeVisible({ timeout: 15_000 });
-    await expect(events.searchInput).toBeVisible();
+    await expect(topicSelectorLocator(page, viewport)).toBeVisible({ timeout: 15_000 });
+    await expect(events.contentBody).toBeVisible();
   });
 
-  test('Topic discovery from BookSelector — click first topic, land on events screen', async ({ page, viewport }) => {
+  test('Topic discovery from BookSelector — click first topic, land on events screen', async ({
+    page,
+    viewport,
+  }) => {
     // ReaderPage relies on the mobile `chapter-selector-button` testid,
     // which DesktopLayout duplicates with its own `desktop-`-prefixed
     // copy — strict-mode visibility waits flake on desktop. Same Phase-2
@@ -51,19 +66,23 @@ test.describe('Topics — TopicEventsScreen', () => {
     await firstTopic.click();
 
     // After click we should have landed on either /topic/<cat>/<slug>
-    // (canonical) or /topics/<id> (legacy). Both surface the screen-header
-    // title.
+    // (canonical) or /topics/<id> (legacy). The topic-name dropdown
+    // trigger confirms we're on the topic page in either viewport.
     await expect(page).toHaveURL(/\/topics?\//, { timeout: 10_000 });
-    await expect(page.getByTestId('screen-header-title')).toBeVisible({ timeout: 15_000 });
+    await expect(topicSelectorLocator(page, viewport)).toBeVisible({ timeout: 15_000 });
   });
 
-  test('back button returns to a previous topics screen or reader', async ({ page }) => {
+  test('topic page has no back arrow — topic name acts as the chapter selector', async ({
+    page,
+    viewport,
+  }) => {
     const events = new TopicEventsPage(page);
     await events.gotoCanonical('creation', 'creation');
-    // Direct URL entry — ScreenHeader's fallback goBack goes to the
-    // browser history's prior entry. For direct-URL entry that resolves
-    // to a sane default (TopicsScreen → /topics, or /read).
-    await events.backButton.click();
-    await expect(page).toHaveURL(/\/topics|\/read|\/bible\//, { timeout: 10_000 });
+
+    // Topics are treated like a Bible chapter — no in-page ScreenHeader
+    // back arrow. The topic name lives in the same dropdown slot the
+    // reader uses for "Genesis 1".
+    await expect(page.getByTestId('screen-header-back-button')).toHaveCount(0);
+    await expect(topicSelectorLocator(page, viewport)).toBeVisible({ timeout: 10_000 });
   });
 });
