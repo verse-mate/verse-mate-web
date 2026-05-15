@@ -174,7 +174,106 @@ export function ExplanationTab({
       data-testid={`topic-explanation-${kind}`}
       style={{ color: vmTokens.textPrimary }}
     >
-      <MarkdownBlock text={text} />
+      {kind === 'byline' ? <ByLineBody markdown={text} /> : <MarkdownBlock text={text} />}
     </div>
   );
+}
+
+/**
+ * Renders the By-Line markdown using the same `byline-*` prototype classes
+ * the main Bible reader uses (see DesktopLayout's commentary By-Line block).
+ *
+ * The byline API returns markdown shaped like:
+ *
+ *   ## {Book} {Chapter}:{Verse}
+ *   > {Verse text}
+ *
+ *   ### Summary
+ *   {Summary body…}
+ *
+ * If we let MarkdownBlock render that directly, "### Summary" renders as an
+ * h6 (bold 15px, no uppercase) instead of the small dimmed `SUMMARY` tracking
+ * label the reader has — that's the regression QA caught.
+ */
+function ByLineBody({ markdown }: { markdown: string }) {
+  const entries = parseByLineMarkdown(markdown);
+  if (entries.length === 0) {
+    return <MarkdownBlock text={markdown} />;
+  }
+  return (
+    <div className="byline-list">
+      {entries.map((entry, i) => (
+        <div key={`${entry.ref}-${i}`} className="byline-row open">
+          <div className="byline-body">
+            {entry.ref && <div className="byline-ref-strong">{entry.ref}</div>}
+            {entry.verseText && (
+              <blockquote className="byline-verse-quote">{entry.verseText}</blockquote>
+            )}
+            {entry.summary && (
+              <>
+                <div className="byline-summary-label">Summary</div>
+                <div className="byline-summary-text">
+                  <MarkdownBlock text={entry.summary} />
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+interface ByLineEntry {
+  ref: string;
+  verseText: string;
+  summary: string;
+}
+
+function parseByLineMarkdown(markdown: string): ByLineEntry[] {
+  const lines = markdown.replace(/\r\n/g, '\n').split('\n');
+  const entries: ByLineEntry[] = [];
+  let current: ByLineEntry | null = null;
+  let mode: 'pre' | 'summary' = 'pre';
+  const verseBuf: string[] = [];
+  const summaryBuf: string[] = [];
+
+  const flush = () => {
+    if (!current) return;
+    current.verseText = verseBuf.join(' ').trim();
+    current.summary = summaryBuf.join('\n').trim();
+    if (current.ref || current.verseText || current.summary) {
+      entries.push(current);
+    }
+    verseBuf.length = 0;
+    summaryBuf.length = 0;
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    // New verse section
+    if (/^##\s+/.test(line) && !/^###/.test(line)) {
+      flush();
+      current = { ref: line.replace(/^##\s+/, ''), verseText: '', summary: '' };
+      mode = 'pre';
+      continue;
+    }
+    // Summary heading inside a section
+    if (current && /^###\s*summary\s*$/i.test(line)) {
+      mode = 'summary';
+      continue;
+    }
+    if (!current) continue;
+    if (mode === 'pre') {
+      if (line.startsWith('>')) {
+        verseBuf.push(line.replace(/^>\s?/, ''));
+      }
+      // Drop other pre-summary lines (we already have the ref from the heading)
+      continue;
+    }
+    // mode === 'summary': preserve raw lines so MarkdownBlock keeps paragraph breaks
+    summaryBuf.push(rawLine);
+  }
+  flush();
+  return entries;
 }
