@@ -206,7 +206,7 @@ Verse 5's syntax is famously difficult. The clause *He jealously desires the Spi
 
 But verse 6 turns abruptly to mercy: *He gives a greater grace*. Greater than what? *Greater than* the pull of the world, greater than the appetites that have already produced quarrels and infidelity. The proof-text James cites is Proverbs 3:34 LXX: *God is opposed to the proud, but gives grace to the humble* — the same OT well 1 Peter 5:5 draws from in nearly identical wording. The principle is foundational, not passing. The doorway from spiritual adultery back to the Bridegroom is **humility**. The proud cannot receive what they refuse to need. The humble find God already moving toward them with grace that is *greater* than the pull they came from.
 
-**Cross-references.** Hosea 1-3, Ezekiel 16, Jeremiah 3 (the OT marriage metaphor); 1 John 2:15-17 (the same world / God binary); 1 Peter 5:5 (same Proverbs 3:34 citation). Augustine\'s *Confessions* opens with the principle: *our hearts are restless, until they rest in Thee* — the operating logic of James 4:4-6.
+**Cross-references.** Hosea 1-3, Ezekiel 16, Jeremiah 3 (the OT marriage metaphor); 1 John 2:15-17 (the same world / God binary); 1 Peter 5:5 (same Proverbs 3:34 citation). Augustine's *Confessions* opens with the principle: *our hearts are restless, until they rest in Thee* — the operating logic of James 4:4-6.
 
 > **Greek note.** *Moichalides* (adulteresses, v.4) — feminine plural; covenantal infidelity. *Kosmos* (world, v.4) — the *world-system organized against God*, not the created order. *Phthonon epipothei* (jealously desires, v.5) — God's covenantal jealousy for the indwelling Spirit's exclusive devotion.`,
       },
