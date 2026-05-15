@@ -39,14 +39,15 @@ export default function BibleRoute() {
   // the user to /bible/<slug>/<chapter>. Worker.js does this server-side
   // for direct hits, but client-side navigations land here too.
   const isNumericUrl = bookSlug ? /^\d+$/.test(bookSlug) : false;
-  if (isNumericUrl && bookId) {
-    const canonicalSlug = getBookSlug(bookId);
-    if (canonicalSlug) {
-      return <Navigate to={`/bible/${canonicalSlug}/${chapterNumber}`} replace />;
-    }
-  }
+  const numericRedirectSlug =
+    isNumericUrl && bookId ? getBookSlug(bookId) : null;
 
   useEffect(() => {
+    // Skip the URL→state sync work when we know we are about to redirect
+    // (numeric slug → canonical slug). The effect must still be declared
+    // unconditionally to satisfy rules-of-hooks.
+    if (numericRedirectSlug) return;
+
     if (!bookId || Number.isNaN(chapterNumber) || chapterNumber < 1) {
       setNotFound(true);
       return;
@@ -75,13 +76,11 @@ export default function BibleRoute() {
     return () => {
       cancelled = true;
     };
-    // Deps deliberately scoped to URL params only. This effect's role is
-    // URL → state sync; including state.* in deps causes a stale-closure
-    // re-fire whenever state changes via in-app navigation, reverting
-    // the dispatch before the URL has caught up. See issue #43.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [bookId, chapterNumber, dispatch]);
+  }, [bookId, chapterNumber, dispatch, numericRedirectSlug]);
 
+  if (numericRedirectSlug) {
+    return <Navigate to={`/bible/${numericRedirectSlug}/${chapterNumber}`} replace />;
+  }
   if (notFound) return <Navigate to="/read" replace />;
   if (!resolved) return null;
   return <ReadingScreen />;
