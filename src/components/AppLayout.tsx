@@ -2,6 +2,8 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import DesktopLayout from '@/components/DesktopLayout';
 import { AudioPlayerRoot } from '@/audio';
+import { TopicViewProvider } from '@/contexts/TopicViewContext';
+import { vmTokens } from '@/styles/themeStyles';
 
 /**
  * AppLayout — responsive shell.
@@ -22,18 +24,26 @@ export default function AppLayout() {
   const isTablet = useMediaQuery('(min-width: 768px)');
   const location = useLocation();
 
-  // Bible-reading paths: `/bible/<slug>/<n>`, `/read`, and the commentary
-  // sub-routes under `/read/...`. Everything else (topics, menu sub-pages,
-  // data screens, auth) should render full-screen on every viewport.
+  // Desktop split-view paths: `/bible/<slug>/<n>`, `/read`, the commentary
+  // sub-routes under `/read/...`, AND topics (`/topic/*`, `/topics/*`)
+  // including most-quoted. Keeping topics inside the split-view (rendered
+  // in the LEFT panel via Outlet, with commentary/right-panel preserved)
+  // means the user doesn't lose the books sidebar or the side panel
+  // navigation when drilling into a topic. Auth / menu sub-pages still
+  // fall through to full-screen since they replace the whole flow.
   const isReadingPath =
     location.pathname.startsWith('/bible/') ||
     location.pathname === '/read' ||
-    location.pathname.startsWith('/read/');
+    location.pathname.startsWith('/read/') ||
+    location.pathname.startsWith('/topic/') ||
+    location.pathname.startsWith('/topics');
 
   if (isDesktop && isReadingPath) {
     return (
       <AudioPlayerRoot>
-        <DesktopLayout />
+        <TopicViewProvider>
+          <DesktopLayout />
+        </TopicViewProvider>
       </AudioPlayerRoot>
     );
   }
@@ -41,19 +51,23 @@ export default function AppLayout() {
   if (isTablet && isReadingPath) {
     return (
       <AudioPlayerRoot>
-        <DesktopLayout hideSidebar />
+        <TopicViewProvider>
+          <DesktopLayout hideSidebar />
+        </TopicViewProvider>
       </AudioPlayerRoot>
     );
   }
 
   return (
     <AudioPlayerRoot>
-      <div
-        className="relative flex flex-col w-full overflow-hidden"
-        style={{ backgroundColor: '#1B1B1B', height: '100dvh' }}
-      >
-        <Outlet />
-      </div>
+      <TopicViewProvider>
+        <div
+          className="relative flex flex-col w-full overflow-hidden"
+          style={{ backgroundColor: vmTokens.chromeBg, height: '100dvh' }}
+        >
+          <Outlet />
+        </div>
+      </TopicViewProvider>
     </AudioPlayerRoot>
   );
 }

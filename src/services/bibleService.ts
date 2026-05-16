@@ -1,6 +1,7 @@
 import {
   BibleVersion,
   Chapter,
+  ChapterSubtitle,
   BibleBook,
   Bookmark,
   Note,
@@ -10,10 +11,128 @@ import {
   VerseInsight,
   Topic,
   TopicEvent,
+  TopicSection,
+  TopicVerse,
+  TopicDetails,
   MostQuotedVerse,
   ExplanationType,
 } from './types';
 import { api, clearTokens, setAccessToken, setRefreshToken, getAccessToken, getRefreshToken, ApiError, API_BASE_URL } from './api';
+
+// ─── Raw API response shapes ─────────────────────────────────────────────
+// Narrow definitions of just the fields we read from each backend payload.
+// Kept local to this file because they are not part of the domain model.
+
+interface BibleBookRaw {
+  bookId: number;
+  name: string;
+  testament: string;
+  chapters?: unknown[];
+}
+
+interface VerseRaw {
+  verseNumber: number;
+  text: string;
+}
+
+interface ChapterRaw {
+  name?: string;
+  chapters?: Array<{
+    verses?: VerseRaw[];
+    subtitles?: ChapterSubtitle[];
+  }>;
+}
+
+interface ExplanationResponse {
+  explanation?: {
+    explanation?: unknown;
+    explanation_id?: unknown;
+  };
+}
+
+interface AutoHighlightRaw {
+  start_verse: number;
+  end_verse?: number;
+  theme_name?: string;
+  theme_color?: string;
+}
+
+type AutoHighlightsResponse = AutoHighlightRaw[] | { data?: AutoHighlightRaw[] };
+
+interface TopicSearchRaw {
+  topic_id?: string;
+  id?: string;
+  name: string;
+  description?: string;
+  category?: string;
+  slug?: string;
+}
+
+interface TopicReferencesResponse {
+  references?: { content?: string };
+}
+
+interface TopicDetailsResponse {
+  topic?: {
+    topic_id?: string;
+    id?: string;
+    name?: string;
+    description?: string;
+    category?: string;
+    slug?: string;
+  };
+  explanation?: {
+    summary?: unknown;
+    byline?: unknown;
+    detailed?: unknown;
+  };
+}
+
+interface BookmarkRaw {
+  favorite_id: number;
+  book_id: number;
+  book_name: string;
+  chapter_number: number;
+  created_at?: string;
+}
+
+interface NoteRaw {
+  note_id?: number | string;
+  id?: number | string;
+  book_id: number;
+  book_name?: string;
+  chapter_number: number;
+  verse_number?: number;
+  start_verse?: number;
+  text?: string;
+  content?: string;
+  created_at?: string;
+  updated_at?: string;
+}
+
+interface HighlightRaw {
+  highlight_id: number;
+  book_id: number;
+  chapter_number: number;
+  start_verse: number;
+  end_verse?: number;
+  start_char?: number | null;
+  end_char?: number | null;
+  color: string;
+  created_at?: string;
+}
+
+interface CurrentUserResponse {
+  id?: string;
+  email?: string;
+  fullName?: string;
+  firstName?: string;
+  lastName?: string;
+  imageSrc?: string;
+  hasPassword?: boolean;
+  preferred_language?: string;
+  preferredLanguage?: string;
+}
 
 // ─── Helper: book id <-> name cache ───────────────────────────────────────
 let _booksCache: BibleBook[] | null = null;
@@ -28,7 +147,7 @@ export async function fetchBooks(): Promise<BibleBook[]> {
   if (_booksPromise) return _booksPromise;
   _booksPromise = (async () => {
     try {
-      const data = await api.get<{ books: any[] }>('/bible/books', undefined, { auth: false });
+      const data = await api.get<{ books: BibleBookRaw[] }>('/bible/books', undefined, { auth: false });
       const mapped: BibleBook[] = (data.books || [])
         .map(b => ({
           bookId: b.bookId,
@@ -87,12 +206,12 @@ export async function fetchChapter(
     return { book, bookId: 0, chapter, verses: [] };
   }
   try {
-    const data = await api.get<any>(`/bible/book/${bookId}/${chapter}`, undefined, {
+    const data = await api.get<{ book?: ChapterRaw }>(`/bible/book/${bookId}/${chapter}`, undefined, {
       auth: false,
     });
     const bookObj = data?.book;
     const ch = bookObj?.chapters?.[0];
-    const verses = (ch?.verses || []).map((v: any) => ({
+    const verses = (ch?.verses || []).map((v: VerseRaw) => ({
       number: v.verseNumber,
       text: v.text,
     }));
@@ -194,7 +313,7 @@ async function fetchExplanation(
   explanationType: ExplanationType
 ): Promise<ExplanationEntry> {
   try {
-    const data = await api.get<any>(
+    const data = await api.get<ExplanationResponse>(
       `/bible/book/explanation/${bookId}/${chapter}`,
       { explanationType },
       { auth: false }
@@ -304,12 +423,12 @@ export async function fetchAutoHighlights(
   const bookId = await resolveBookId(book);
   if (!bookId) return [];
   try {
-    const resp = await api.get<any>(
+    const resp = await api.get<AutoHighlightsResponse>(
       `/bible/auto-highlights/${bookId}/${chapter}`,
       undefined,
       { auth: false }
     );
-    const list: any[] = Array.isArray(resp) ? resp : resp?.data || [];
+    const list: AutoHighlightRaw[] = Array.isArray(resp) ? resp : resp?.data || [];
     return list.map(h => ({
       startVerse: h.start_verse,
       endVerse: h.end_verse ?? h.start_verse,
@@ -331,15 +450,15 @@ export async function fetchTopics(): Promise<Topic[]> {
     });
     const categories = catResp?.categories || [];
     // /topics/search with empty query gives us topics grouped under categories
-    let topics: Topic[] = [];
+    const topics: Topic[] = [];
     for (const cat of categories) {
       try {
-        const result = await api.get<{ topics?: any[] }>(
+        const result = await api.get<{ topics?: TopicSearchRaw[] }>(
           '/topics/search',
           { category: cat, limit: 50 },
           { auth: false }
         );
-        const list: any[] = result?.topics || [];
+        const list: TopicSearchRaw[] = result?.topics || [];
         for (const t of list) {
           topics.push({
             id: t.topic_id || t.id,
@@ -372,43 +491,206 @@ function capitalize(s: string) {
   return s ? s.charAt(0) + s.slice(1).toLowerCase() : s;
 }
 
+/**
+ * Extract "Book Ch:Verse" / "Book Ch" references from raw text.
+ * Used both for the per-section reference pills and the trailing-cite
+ * fallback for verses parsed without an explicit `(reference)`.
+ */
+function extractTopicReferences(text: string): string[] {
+  const refs: string[] = [];
+  const refPatterns = [
+    /\(([1-3]?\s?[A-Za-z]+\s+\d+(?::\d+(?:[-–]\d+)?)?)\)/g,
+    /\{(?:verse|chapter):([^}]+)\}/g,
+  ];
+  for (const re of refPatterns) {
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(text))) {
+      const ref = m[1].trim();
+      if (ref && !refs.includes(ref)) refs.push(ref);
+    }
+  }
+  return refs;
+}
+
+/**
+ * Parse the topic references markdown into structured sections.
+ * Mirrors verse-mate/packages/frontend-base/src/utils/parseTopicMarkdown.ts —
+ * each `## Subtitle` block becomes a section with its reference list and
+ * a verse-by-verse breakdown so the UI can render verse numbers as
+ * superscripts (matching the old FE's TopicText component).
+ *
+ * The new FE used to slice each section's body to 220 chars for a
+ * preview-card layout; that caused the mid-sentence truncation users
+ * reported. We now keep the full structured content.
+ */
+function parseTopicReferencesMarkdown(
+  content: string,
+  topicId: string
+): TopicSection[] {
+  if (!content) return [];
+  const rawSections = content.split(/^##\s+/m).filter((s) => s.trim());
+  return rawSections.map((section, i) => {
+    const lines = section.split('\n');
+    const subtitle = (lines[0] || '').trim();
+    // The line right under the subtitle is usually a parenthesised
+    // reference list like "(Genesis 11:1-9, Acts 2:1-13)".
+    const secondLine = (lines[1] || '').trim();
+    const isRefListLine =
+      /^\(.+\)$/.test(secondLine) || /^[1-3]?\s?[A-Za-z]+\s+\d+/.test(secondLine);
+    const referenceList = isRefListLine ? secondLine : '';
+    const verseText = lines.slice(isRefListLine ? 2 : 1).join('\n');
+
+    const references = referenceList
+      ? referenceList
+          .replace(/^\(|\)$/g, '')
+          .split(',')
+          .map((r) => r.trim())
+          .filter(Boolean)
+      : extractTopicReferences(section);
+
+    return {
+      id: `${topicId}-${i}`,
+      topicId,
+      subtitle: subtitle || `Section ${i + 1}`,
+      referenceList,
+      references,
+      verses: parseTopicVerses(verseText),
+    };
+  });
+}
+
+/**
+ * Parse verses from a topic section body. Each verse is two lines:
+ *   <verse-number>
+ *   <verse-text> [optional "(Book Ch:Verse)" at the end]
+ *
+ * Matches the old FE's parser line-for-line; kept as a separate helper
+ * for readability and direct comparison with that file when debugging.
+ */
+function parseTopicVerses(text: string): TopicVerse[] {
+  const verses: TopicVerse[] = [];
+  // Split on a newline immediately followed by a line that contains only
+  // digits — that next line is the next verse number.
+  const parts = text.split(/\n(?=\d+\s*\n)/);
+  for (const raw of parts) {
+    const part = raw.trim();
+    if (!part) continue;
+    const withRef = part.match(/^(\d+)\s*\n([\s\S]*?)\(([^)]+)\)\s*$/);
+    if (withRef) {
+      verses.push({
+        verseNumber: withRef[1].trim(),
+        text: withRef[2].trim(),
+        reference: withRef[3].trim(),
+      });
+      continue;
+    }
+    const withoutRef = part.match(/^(\d+)\s*\n([\s\S]+)$/);
+    if (withoutRef) {
+      verses.push({
+        verseNumber: withoutRef[1].trim(),
+        text: withoutRef[2].trim(),
+        reference: '',
+      });
+    }
+  }
+  return verses;
+}
+
+/**
+ * Rich topic sections used by TopicEventsScreen. Returns the structured
+ * verse-by-verse content (subtitle, reference list, verses).
+ */
+export async function fetchTopicSections(topicId: string): Promise<TopicSection[]> {
+  try {
+    const data = await api.get<TopicReferencesResponse>(`/topics/${topicId}/references`, undefined, {
+      auth: false,
+    });
+    const content: string = data?.references?.content || '';
+    return parseTopicReferencesMarkdown(content, topicId);
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Full topic record — section content + AI explanations (summary,
+ * byline, detailed).
+ *
+ * Two API calls in parallel:
+ *   - GET /topics/:id?bible_version=…  → metadata + explanations
+ *   - GET /topics/:id/references       → expanded verse content
+ *
+ * Why two endpoints: the `/topics/:id` route returns the references
+ * markdown with unexpanded placeholder tokens like `{chapter:Genesis 1}`
+ * and `{verse:Genesis 1:26-28}` (no verse text). Only the
+ * `/topics/:id/references` endpoint runs the verse-injection pass that
+ * produces the fully rendered "## Subtitle / (refs) / 1\n<verse text>"
+ * markdown the parser expects. The old FE makes both calls separately
+ * for the same reason.
+ */
+export async function fetchTopicDetails(
+  topicId: string,
+  bibleVersion?: string
+): Promise<TopicDetails> {
+  try {
+    const [detailsRes, refsRes] = await Promise.all([
+      api
+        .get<TopicDetailsResponse>(
+          `/topics/${topicId}`,
+          bibleVersion ? { bible_version: bibleVersion } : undefined,
+          { auth: false }
+        )
+        .catch(() => null),
+      api
+        .get<TopicReferencesResponse>(`/topics/${topicId}/references`, undefined, { auth: false })
+        .catch(() => null),
+    ]);
+
+    const data = detailsRes;
+    const topic: Topic | null = data?.topic
+      ? {
+          id: data.topic.topic_id || data.topic.id || topicId,
+          name: data.topic.name || '',
+          description: data.topic.description || '',
+          category: data.topic.category,
+          slug: data.topic.slug,
+        }
+      : null;
+    const sections = parseTopicReferencesMarkdown(
+      refsRes?.references?.content || '',
+      topicId
+    );
+    const explanation = {
+      summary: typeof data?.explanation?.summary === 'string' ? data.explanation.summary : '',
+      byline: typeof data?.explanation?.byline === 'string' ? data.explanation.byline : '',
+      detailed: typeof data?.explanation?.detailed === 'string' ? data.explanation.detailed : '',
+    };
+    return { topic, sections, explanation };
+  } catch {
+    return { topic: null, sections: [], explanation: { summary: '', byline: '', detailed: '' } };
+  }
+}
+
+/**
+ * Legacy: kept for TopicEventDetailScreen which still treats each
+ * section as a standalone "event" with a single description blob.
+ * The 220-char truncation that produced the mid-sentence cuts users
+ * reported has been removed — the description is now the full
+ * section body.
+ */
 export async function fetchTopicEvents(topicId: string): Promise<TopicEvent[]> {
   try {
-    const data = await api.get<any>(`/topics/${topicId}/references`, undefined, { auth: false });
-    // API shape: { references: { content: "## Section 1\n(Genesis 1)\n1\nverse text...\n\n## Section 2..." } }
-    const content: string = data?.references?.content || '';
-    if (!content) return [];
-    // Split on "## " section headers. Each section becomes a TopicEvent.
-    const sections = content.split(/\n##\s+/).filter(Boolean);
-    return sections.map((section, i) => {
-      // First line after the split is the heading (the first section has "## " stripped too)
-      const lines = section.replace(/^##\s*/, '').split('\n');
-      const title = lines[0]?.trim() || `Section ${i + 1}`;
-      // Pull any "(Book Ch:Verse)" or "{verse:...}" references out as refs
-      const refs: string[] = [];
-      const refPatterns = [
-        /\(([1-3]?\s?[A-Za-z]+\s+\d+(?::\d+(?:[-–]\d+)?)?)\)/g,
-        /\{(?:verse|chapter):([^}]+)\}/g,
-      ];
-      for (const re of refPatterns) {
-        let m: RegExpExecArray | null;
-        while ((m = re.exec(section))) {
-          if (!refs.includes(m[1])) refs.push(m[1]);
-        }
-      }
-      // Strip the reference markers from the body for a clean description
-      const body = lines
-        .slice(1)
-        .join('\n')
-        .replace(/\{(?:verse|chapter):[^}]+\}/g, '')
-        .replace(/^\s*\(?[1-3]?\s?[A-Za-z]+\s+\d+(?::\d+(?:[-–]\d+)?)?\)?\s*$/gm, '')
-        .trim();
+    const sections = await fetchTopicSections(topicId);
+    return sections.map((s) => {
+      const body = s.verses
+        .map((v) => (v.reference ? `${v.text} (${v.reference})` : v.text))
+        .join('\n\n');
       return {
-        id: `${topicId}-${i}`,
-        topicId,
-        title,
-        description: body.slice(0, 220) + (body.length > 220 ? '…' : ''),
-        references: refs.slice(0, 6),
+        id: s.id,
+        topicId: s.topicId,
+        title: s.subtitle,
+        description: body,
+        references: s.references.slice(0, 6),
       };
     });
   } catch {
@@ -442,7 +724,7 @@ const TOP_VERSES_FALLBACK: MostQuotedVerse[] = [
 // ─── Bookmarks ────────────────────────────────────────────────────────────
 export async function fetchBookmarks(userId: string): Promise<Bookmark[]> {
   try {
-    const data = await api.get<{ favorites: any[] }>(`/bible/book/bookmarks/${userId}`);
+    const data = await api.get<{ favorites: BookmarkRaw[] }>(`/bible/book/bookmarks/${userId}`);
     return (data.favorites || []).map(f => ({
       id: String(f.favorite_id),
       favoriteId: f.favorite_id,
@@ -488,7 +770,7 @@ export async function removeBookmark(args: {
 // ─── Notes ────────────────────────────────────────────────────────────────
 export async function fetchNotes(userId: string): Promise<Note[]> {
   try {
-    const data = await api.get<{ notes: any[] }>(`/bible/book/notes/${userId}`);
+    const data = await api.get<{ notes: NoteRaw[] }>(`/bible/book/notes/${userId}`);
     return (data.notes || []).map(n => ({
       id: String(n.note_id ?? n.id),
       bookId: n.book_id,
@@ -546,7 +828,7 @@ export async function fetchHighlights(userId: string): Promise<Highlight[]> {
     // consumers (HighlightsScreen, etc.) can display "James 2" instead of
     // " 2". The /bible/highlights API only returns book_id.
     const [data, books] = await Promise.all([
-      api.get<{ highlights: any[] }>(`/bible/highlights/${userId}`),
+      api.get<{ highlights: HighlightRaw[] }>(`/bible/highlights/${userId}`),
       fetchBooks(),
     ]);
     const bookNameById = new Map(books.map(b => [b.bookId, b.name]));
@@ -712,7 +994,7 @@ export async function fetchCurrentUser(): Promise<AuthUser> {
   //     hasPassword, preferred_language }
   // The MenuScreen + AuthCallback dispatch paths need the full record
   // for the profile UI to render past the "Loading..." state.
-  const data = await api.get<any>('/user/me');
+  const data = await api.get<CurrentUserResponse>('/user/me');
   return {
     id: data?.id || '',
     email: data?.email || '',
@@ -879,7 +1161,12 @@ const DEFAULT_SETTINGS: AppSettings = {
   fontSize: 20,
   lineSpacing: 1.7,
   theme: 'dark',
-  defaultVersion: 'ESV',
+  // NASB1995 is the only Bible version the backend has verse text for —
+  // ESV/NIV/KJV/NLT are still in the type union for legacy storage but
+  // hitting any of them returns no verses, which surfaces as unsubstituted
+  // `{verse:Genesis 1:1}` placeholders in topic byline insights and empty
+  // chapter bodies. Defaulting to NASB1995 keeps fresh visits sane.
+  defaultVersion: 'NASB1995',
   notifications: true,
   showVerseNumbers: true,
   autoHighlights: false,
@@ -914,6 +1201,22 @@ function applySettingsMigrations(
       saveJSON(STORAGE_KEYS.settings, { ...DEFAULT_SETTINGS, ...next });
     }
     ran['autoHighlights-default-off-v1'] = true;
+    changed = true;
+  }
+
+  // 2026-05: backend only has verse text for NASB1995 — any other
+  // version returns empty content and surfaces as unsubstituted
+  // `{verse:...}` placeholders in topic byline insights and empty
+  // chapter bodies. Migrate stored ESV/NIV/KJV/NLT (the old default
+  // + Lovable-era picker choices) to NASB1995 so existing devices
+  // get the same fix as fresh ones.
+  if (!ran['default-version-nasb1995-v1']) {
+    const v = next.defaultVersion;
+    if (v && v !== 'NASB1995') {
+      next = { ...next, defaultVersion: 'NASB1995' };
+      saveJSON(STORAGE_KEYS.settings, { ...DEFAULT_SETTINGS, ...next });
+    }
+    ran['default-version-nasb1995-v1'] = true;
     changed = true;
   }
 
