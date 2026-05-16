@@ -1,6 +1,15 @@
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import type { LexEntry, AlignedToken } from '@/data/lexicon/types';
 
+// Hebrew + Aramaic block (U+0590-U+05FF) — if a lemma contains any character
+// in this range, render it RTL. Greek lemmas have no Hebrew chars so the
+// detection is unambiguous, and a lemma like רוּחַ + macroned-Latin translit
+// in the same line still flows correctly via unicode-bidi: isolate.
+const HEBREW_RE = /[֐-׿]/;
+function isHebrew(text: string): boolean {
+  return HEBREW_RE.test(text);
+}
+
 interface LexiconPopoverProps {
   surface: string;
   entry: LexEntry;
@@ -126,12 +135,16 @@ export default function LexiconPopover({
         >
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
             <span
+              dir={isHebrew(entry.lemma) ? 'rtl' : 'ltr'}
               style={{
                 fontFamily: 'Georgia, "Times New Roman", serif',
                 fontSize: 22,
                 fontWeight: 500,
                 color: '#FFFFFF',
                 letterSpacing: '0.01em',
+                // Isolate the Hebrew sub-run so adjacent LTR translit + metadata
+                // line below it don't get reordered by the bidi algorithm.
+                unicodeBidi: 'isolate',
               }}
             >
               {entry.lemma}
@@ -196,10 +209,12 @@ export default function LexiconPopover({
                 <div key={i} style={{ fontSize: 13, lineHeight: '18px' }}>
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
                     <span
+                      dir={isHebrew(r.lemma) ? 'rtl' : 'ltr'}
                       style={{
                         fontFamily: 'Georgia, "Times New Roman", serif',
                         fontSize: 15,
                         color: '#FFFFFF',
+                        unicodeBidi: 'isolate',
                       }}
                     >
                       {r.lemma}
