@@ -1,0 +1,805 @@
+{
+  "bookId": 23,
+  "book": "Isaiah",
+  "chapter": 8,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "a large",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "scroll",
+        "lemma": "gillavon"
+      },
+      {
+        "surface": "and write",
+        "lemma": "katav"
+      },
+      {
+        "surface": "it with an ordinary",
+        "lemma": "enosh"
+      },
+      {
+        "surface": "stylus",
+        "lemma": "cheret"
+      },
+      {
+        "surface": "Maher-shalal-hash-baz",
+        "lemma": "mahershalalchashbaz"
+      }
+    ],
+    "2": [
+      {
+        "surface": "And I will appoint",
+        "lemma": "ud"
+      },
+      {
+        "surface": "trustworthy",
+        "lemma": "aman"
+      },
+      {
+        "surface": "witnesses",
+        "lemma": "ed"
+      },
+      {
+        "surface": "Uriah",
+        "lemma": "uriyyah"
+      },
+      {
+        "surface": "the priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "and Zechariah",
+        "lemma": "zekharyah"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Jeberekiah",
+        "lemma": "yeverekhyahu"
+      }
+    ],
+    "3": [
+      {
+        "surface": "And I had relations",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "the prophetess",
+        "lemma": "neviah"
+      },
+      {
+        "surface": "and she conceived",
+        "lemma": "harah"
+      },
+      {
+        "surface": "and gave birth to",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "a son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "him",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Maher-shalal-hash-baz",
+        "lemma": "mahershalalchashbaz"
+      }
+    ],
+    "4": [
+      {
+        "surface": "before",
+        "lemma": "terem"
+      },
+      {
+        "surface": "the boy",
+        "lemma": "naar"
+      },
+      {
+        "surface": "knows",
+        "lemma": "yada"
+      },
+      {
+        "surface": "or ‘Mother",
+        "lemma": "em"
+      },
+      {
+        "surface": "the wealth",
+        "lemma": "chayil"
+      },
+      {
+        "surface": "of Damascus",
+        "lemma": "dammeseq"
+      },
+      {
+        "surface": "the plunder",
+        "lemma": "shalal"
+      },
+      {
+        "surface": "of Samaria",
+        "lemma": "shomeron"
+      },
+      {
+        "surface": "will be carried off",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "by",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Assyria",
+        "lemma": "ashshur"
+      }
+    ],
+    "5": [
+      {
+        "surface": "And the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "davar"
+      },
+      {
+        "surface": "me",
+        "lemma": "yasaph"
+      },
+      {
+        "surface": "further",
+        "lemma": "od"
+      }
+    ],
+    "6": [
+      {
+        "surface": "people",
+        "lemma": "am"
+      },
+      {
+        "surface": "has rejected",
+        "lemma": "maas"
+      },
+      {
+        "surface": "the gently",
+        "lemma": "itti"
+      },
+      {
+        "surface": "flowing",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "waters",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "of Shiloah",
+        "lemma": "shelach"
+      },
+      {
+        "surface": "and rejoiced",
+        "lemma": "masvos"
+      },
+      {
+        "surface": "in Rezin",
+        "lemma": "retsin"
+      },
+      {
+        "surface": "and the son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Remaliah",
+        "lemma": "remalyahu"
+      }
+    ],
+    "7": [
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "will surely",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "bring",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the mighty",
+        "lemma": "atsum"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "rav"
+      },
+      {
+        "surface": "floodwaters",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "of the Euphrates",
+        "lemma": "nahar"
+      },
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Assyria",
+        "lemma": "ashshur"
+      },
+      {
+        "surface": "his pomp",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "It will overflow",
+        "lemma": "alah"
+      },
+      {
+        "surface": "its channels",
+        "lemma": "aphiq"
+      },
+      {
+        "surface": "and overrun",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "its banks",
+        "lemma": "gadah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "It will pour",
+        "lemma": "chalaph"
+      },
+      {
+        "surface": "into Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "swirling",
+        "lemma": "shataph"
+      },
+      {
+        "surface": "and sweeping over it",
+        "lemma": "avar"
+      },
+      {
+        "surface": "reaching",
+        "lemma": "naga"
+      },
+      {
+        "surface": "the neck",
+        "lemma": "tsavvar"
+      },
+      {
+        "surface": "its spreading streams",
+        "lemma": "muttah"
+      },
+      {
+        "surface": "will cover",
+        "lemma": "melo"
+      },
+      {
+        "surface": "your entire",
+        "lemma": "rochav"
+      },
+      {
+        "surface": "land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "immanuel"
+      },
+      {
+        "surface": "O Immanuel",
+        "lemma": "immanuel"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Huddle together",
+        "lemma": "raa"
+      },
+      {
+        "surface": "O peoples",
+        "lemma": "am"
+      },
+      {
+        "surface": "and be shattered",
+        "lemma": "chatat"
+      },
+      {
+        "surface": "pay attention",
+        "lemma": "azan"
+      },
+      {
+        "surface": "you distant",
+        "lemma": "merchaq"
+      },
+      {
+        "surface": "lands",
+        "lemma": "erets"
+      },
+      {
+        "surface": "prepare for battle",
+        "lemma": "azar"
+      },
+      {
+        "surface": "and be shattered",
+        "lemma": "chatat"
+      },
+      {
+        "surface": "prepare for battle",
+        "lemma": "azar"
+      },
+      {
+        "surface": "and be shattered",
+        "lemma": "chatat"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Devise",
+        "lemma": "uts"
+      },
+      {
+        "surface": "a plan",
+        "lemma": "etsah"
+      },
+      {
+        "surface": "but it will be thwarted",
+        "lemma": "parar"
+      },
+      {
+        "surface": "state",
+        "lemma": "davar"
+      },
+      {
+        "surface": "a proposal",
+        "lemma": "davar"
+      },
+      {
+        "surface": "happen",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "God",
+        "lemma": "el"
+      }
+    ],
+    "11": [
+      {
+        "surface": "this is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "with a strong",
+        "lemma": "chezqah"
+      },
+      {
+        "surface": "hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "instructing me",
+        "lemma": "yasar"
+      },
+      {
+        "surface": "not to walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "in the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "people",
+        "lemma": "am"
+      }
+    ],
+    "12": [
+      {
+        "surface": "conspiracy",
+        "lemma": "qesher"
+      },
+      {
+        "surface": "people",
+        "lemma": "am"
+      },
+      {
+        "surface": "as conspiracy",
+        "lemma": "qesher"
+      },
+      {
+        "surface": "fear",
+        "lemma": "yare"
+      },
+      {
+        "surface": "what they fear",
+        "lemma": "mora"
+      },
+      {
+        "surface": "live in dread",
+        "lemma": "arats"
+      }
+    ],
+    "13": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "you shall regard as holy",
+        "lemma": "qadash"
+      },
+      {
+        "surface": "should be feared",
+        "lemma": "mora"
+      },
+      {
+        "surface": "should be dreaded",
+        "lemma": "arats"
+      }
+    ],
+    "14": [
+      {
+        "surface": "a sanctuary",
+        "lemma": "miqdash"
+      },
+      {
+        "surface": "but to both",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "houses",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "a stone",
+        "lemma": "even"
+      },
+      {
+        "surface": "of stumbling",
+        "lemma": "negeph"
+      },
+      {
+        "surface": "and a rock",
+        "lemma": "tsur"
+      },
+      {
+        "surface": "of offense",
+        "lemma": "mikhshol"
+      },
+      {
+        "surface": "of Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "a trap",
+        "lemma": "pach"
+      },
+      {
+        "surface": "and a snare",
+        "lemma": "moqesh"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Many",
+        "lemma": "rav"
+      },
+      {
+        "surface": "will stumble",
+        "lemma": "kashal"
+      },
+      {
+        "surface": "they will fall",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "and be broken",
+        "lemma": "shavar"
+      },
+      {
+        "surface": "they will be ensnared",
+        "lemma": "yaqosh"
+      },
+      {
+        "surface": "and captured",
+        "lemma": "lakhad"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Bind up",
+        "lemma": "tsarar"
+      },
+      {
+        "surface": "the testimony",
+        "lemma": "teudah"
+      },
+      {
+        "surface": "and seal",
+        "lemma": "chatam"
+      },
+      {
+        "surface": "the law",
+        "lemma": "torah"
+      },
+      {
+        "surface": "among my disciples",
+        "lemma": "limmud"
+      }
+    ],
+    "17": [
+      {
+        "surface": "I will wait",
+        "lemma": "chakhah"
+      },
+      {
+        "surface": "for the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "who is hiding",
+        "lemma": "satar"
+      },
+      {
+        "surface": "His face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "from the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "I will put my trust",
+        "lemma": "qavah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Here",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "and the children",
+        "lemma": "yeled"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "as signs",
+        "lemma": "ot"
+      },
+      {
+        "surface": "and symbols",
+        "lemma": "mophet"
+      },
+      {
+        "surface": "in Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "who dwells",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "on Mount",
+        "lemma": "har"
+      },
+      {
+        "surface": "Zion",
+        "lemma": "tsiyyon"
+      }
+    ],
+    "19": [
+      {
+        "surface": "to consult",
+        "lemma": "darash"
+      },
+      {
+        "surface": "mediums",
+        "lemma": "ov"
+      },
+      {
+        "surface": "and spiritists",
+        "lemma": "yiddoni"
+      },
+      {
+        "surface": "who whisper",
+        "lemma": "tsaphaph"
+      },
+      {
+        "surface": "and mutter",
+        "lemma": "hagah"
+      },
+      {
+        "surface": "a people",
+        "lemma": "am"
+      },
+      {
+        "surface": "consult",
+        "lemma": "darash"
+      },
+      {
+        "surface": "their God instead",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "Why consult the dead",
+        "lemma": "mut"
+      },
+      {
+        "surface": "on behalf of",
+        "lemma": "bead"
+      },
+      {
+        "surface": "the living",
+        "lemma": "chay"
+      }
+    ],
+    "20": [
+      {
+        "surface": "To the law",
+        "lemma": "torah"
+      },
+      {
+        "surface": "and to the testimony",
+        "lemma": "teudah"
+      },
+      {
+        "surface": "word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "they have no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "light of dawn",
+        "lemma": "shachar"
+      }
+    ],
+    "21": [
+      {
+        "surface": "They will roam the land",
+        "lemma": "avar"
+      },
+      {
+        "surface": "dejected",
+        "lemma": "qashah"
+      },
+      {
+        "surface": "and hungry",
+        "lemma": "raev"
+      },
+      {
+        "surface": "they are famished",
+        "lemma": "raev"
+      },
+      {
+        "surface": "they will become enraged",
+        "lemma": "qatsaph"
+      },
+      {
+        "surface": "and looking",
+        "lemma": "panah"
+      },
+      {
+        "surface": "upward",
+        "lemma": "maal"
+      },
+      {
+        "surface": "they will curse",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "their king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "and their God",
+        "lemma": "elohim"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Then they will look",
+        "lemma": "navat"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and see",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "only distress",
+        "lemma": "batstsarah"
+      },
+      {
+        "surface": "and darkness",
+        "lemma": "chashekhah"
+      },
+      {
+        "surface": "and the gloom",
+        "lemma": "mauph"
+      },
+      {
+        "surface": "of anguish",
+        "lemma": "tsoq"
+      },
+      {
+        "surface": "And they will be driven",
+        "lemma": "nadach"
+      },
+      {
+        "surface": "into utter darkness",
+        "lemma": "aphelah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "hinneh",
+    "halakh",
+    "chatat"
+  ]
+}

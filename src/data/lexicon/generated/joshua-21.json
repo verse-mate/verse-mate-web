@@ -1,0 +1,1407 @@
+{
+  "bookId": 6,
+  "book": "Joshua",
+  "chapter": 21,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "heads",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "of the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "approached",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "Eleazar",
+        "lemma": "elazar"
+      },
+      {
+        "surface": "the priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "Joshua",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Nun",
+        "lemma": "nun"
+      },
+      {
+        "surface": "the heads",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "of the other tribes",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "2": [
+      {
+        "surface": "at Shiloh",
+        "lemma": "shiloh"
+      },
+      {
+        "surface": "in the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Canaan",
+        "lemma": "kenaan"
+      },
+      {
+        "surface": "and said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "through",
+        "lemma": "yad"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "together with pasturelands",
+        "lemma": "migrash"
+      },
+      {
+        "surface": "for our livestock",
+        "lemma": "behemah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "the command",
+        "lemma": "peh"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      },
+      {
+        "surface": "out of their own inheritance",
+        "lemma": "nachalah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "The first lot",
+        "lemma": "goral"
+      },
+      {
+        "surface": "for the Kohathite",
+        "lemma": "qohati"
+      },
+      {
+        "surface": "clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "The Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "who were descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "the priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "thirteen",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "by lot",
+        "lemma": "goral"
+      },
+      {
+        "surface": "from the tribes",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "Simeon",
+        "lemma": "shimoni"
+      },
+      {
+        "surface": "and Benjamin",
+        "lemma": "binyamin"
+      }
+    ],
+    "5": [
+      {
+        "surface": "The remaining",
+        "lemma": "yatar"
+      },
+      {
+        "surface": "descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Kohath",
+        "lemma": "qehat"
+      },
+      {
+        "surface": "received ten",
+        "lemma": "eser"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "by lot",
+        "lemma": "goral"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "from the tribes",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Ephraim",
+        "lemma": "ephrayim"
+      },
+      {
+        "surface": "Dan",
+        "lemma": "dan"
+      },
+      {
+        "surface": "and",
+        "lemma": "chetsi"
+      },
+      {
+        "surface": "the half-tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Manasseh",
+        "lemma": "menashsheh"
+      }
+    ],
+    "6": [
+      {
+        "surface": "The descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Gershon",
+        "lemma": "gereshon"
+      },
+      {
+        "surface": "received thirteen",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "by lot",
+        "lemma": "goral"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "from the tribes",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Issachar",
+        "lemma": "yissaskhar"
+      },
+      {
+        "surface": "Naphtali",
+        "lemma": "naphtali"
+      },
+      {
+        "surface": "and the half-tribe",
+        "lemma": "chetsi"
+      },
+      {
+        "surface": "of Manasseh",
+        "lemma": "menashsheh"
+      },
+      {
+        "surface": "in Bashan",
+        "lemma": "bashan"
+      }
+    ],
+    "7": [
+      {
+        "surface": "And the descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Merari",
+        "lemma": "merari"
+      },
+      {
+        "surface": "received twelve",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "from the tribes",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Reuben",
+        "lemma": "reuven"
+      },
+      {
+        "surface": "Gad",
+        "lemma": "gad"
+      },
+      {
+        "surface": "and Zebulun",
+        "lemma": "zevulun"
+      }
+    ],
+    "8": [
+      {
+        "surface": "So the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "to the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "together with their pasturelands",
+        "lemma": "migrash"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "had commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "through",
+        "lemma": "yad"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "9": [
+      {
+        "surface": "From the tribes",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "and Simeon",
+        "lemma": "shimon"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "by name",
+        "lemma": "shem"
+      }
+    ],
+    "10": [
+      {
+        "surface": "to the descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "from the Kohathite",
+        "lemma": "qohati"
+      },
+      {
+        "surface": "clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "of the Levites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the first",
+        "lemma": "rishon"
+      },
+      {
+        "surface": "lot",
+        "lemma": "goral"
+      }
+    ],
+    "11": [
+      {
+        "surface": "vvv",
+        "lemma": "qiryatarba"
+      },
+      {
+        "surface": "Kiriath-arba",
+        "lemma": "qiryatarba"
+      },
+      {
+        "surface": "Hebron",
+        "lemma": "chevron"
+      },
+      {
+        "surface": "with its surrounding",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "pasturelands",
+        "lemma": "migrash"
+      },
+      {
+        "surface": "in the hill country",
+        "lemma": "har"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "of Anak",
+        "lemma": "anaq"
+      }
+    ],
+    "12": [
+      {
+        "surface": "the fields",
+        "lemma": "saday"
+      },
+      {
+        "surface": "and villages",
+        "lemma": "chatser"
+      },
+      {
+        "surface": "around the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "to Caleb",
+        "lemma": "kalev"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Jephunneh",
+        "lemma": "yephunneh"
+      },
+      {
+        "surface": "as his possession",
+        "lemma": "achuzzah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "So to the descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "the priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      },
+      {
+        "surface": "Hebron",
+        "lemma": "chevron"
+      },
+      {
+        "surface": "a city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "of refuge",
+        "lemma": "miqlat"
+      },
+      {
+        "surface": "for the manslayer",
+        "lemma": "ratsach"
+      },
+      {
+        "surface": "Libnah",
+        "lemma": "livnah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Jattir",
+        "lemma": "yattir"
+      },
+      {
+        "surface": "Eshtemoa",
+        "lemma": "eshtemoa"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Holon",
+        "lemma": "cholon"
+      },
+      {
+        "surface": "Debir",
+        "lemma": "devir"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Ain",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "Juttah",
+        "lemma": "yuttah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "betshemesh"
+      },
+      {
+        "surface": "and Beth-shemesh",
+        "lemma": "betshemesh"
+      },
+      {
+        "surface": "nine",
+        "lemma": "tesah"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "tribes",
+        "lemma": "shevet"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      }
+    ],
+    "17": [
+      {
+        "surface": "And from the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Benjamin they gave",
+        "lemma": "binyamin"
+      },
+      {
+        "surface": "Gibeon",
+        "lemma": "givon"
+      },
+      {
+        "surface": "Geba",
+        "lemma": "geva"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Anathoth",
+        "lemma": "anatot"
+      },
+      {
+        "surface": "and Almon",
+        "lemma": "almon"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      }
+    ],
+    "19": [
+      {
+        "surface": "thirteen",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "together with their pasturelands",
+        "lemma": "migrash"
+      },
+      {
+        "surface": "were given to the priests",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "the descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Aaron",
+        "lemma": "aharon"
+      }
+    ],
+    "20": [
+      {
+        "surface": "The remaining",
+        "lemma": "yatar"
+      },
+      {
+        "surface": "Kohathite",
+        "lemma": "qehat"
+      },
+      {
+        "surface": "clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "of the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "were allotted",
+        "lemma": "goral"
+      },
+      {
+        "surface": "these cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "From the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Ephraim",
+        "lemma": "ephrayim"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Shechem",
+        "lemma": "shekhem"
+      },
+      {
+        "surface": "in the hill country",
+        "lemma": "har"
+      },
+      {
+        "surface": "of Ephraim",
+        "lemma": "ephrayim"
+      },
+      {
+        "surface": "a city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "of refuge",
+        "lemma": "miqlat"
+      },
+      {
+        "surface": "for the manslayer",
+        "lemma": "ratsach"
+      },
+      {
+        "surface": "Gezer",
+        "lemma": "gezer"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Kibzaim",
+        "lemma": "qivtsayim"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "betchoron"
+      },
+      {
+        "surface": "and Beth-horon",
+        "lemma": "betchoron"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      }
+    ],
+    "23": [
+      {
+        "surface": "From the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Dan they were given",
+        "lemma": "dan"
+      },
+      {
+        "surface": "Elteke",
+        "lemma": "elteqe"
+      },
+      {
+        "surface": "Gibbethon",
+        "lemma": "gibbton"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Aijalon",
+        "lemma": "ayyalon"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "gatrimmon"
+      },
+      {
+        "surface": "and Gath-rimmon",
+        "lemma": "gatrimmon"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      }
+    ],
+    "25": [
+      {
+        "surface": "And from the half-tribe",
+        "lemma": "machatsit"
+      },
+      {
+        "surface": "of Manasseh they were given",
+        "lemma": "menashsheh"
+      },
+      {
+        "surface": "Taanach",
+        "lemma": "taanakh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "gatrimmon"
+      },
+      {
+        "surface": "Gath-rimmon",
+        "lemma": "gatrimmon"
+      },
+      {
+        "surface": "two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      }
+    ],
+    "26": [
+      {
+        "surface": "ten",
+        "lemma": "eser"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "together with their pasturelands",
+        "lemma": "migrash"
+      },
+      {
+        "surface": "were given to the rest",
+        "lemma": "yatar"
+      },
+      {
+        "surface": "of the Kohathite",
+        "lemma": "qehat"
+      },
+      {
+        "surface": "clans",
+        "lemma": "mishpachah"
+      }
+    ],
+    "27": [
+      {
+        "surface": "This is what the Levite",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of the Gershonites were given",
+        "lemma": "gereshon"
+      },
+      {
+        "surface": "From the half-tribe",
+        "lemma": "chetsi"
+      },
+      {
+        "surface": "of Manasseh",
+        "lemma": "menashsheh"
+      },
+      {
+        "surface": "Golan",
+        "lemma": "golan"
+      },
+      {
+        "surface": "in Bashan",
+        "lemma": "bashan"
+      },
+      {
+        "surface": "a city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "of refuge",
+        "lemma": "miqlat"
+      },
+      {
+        "surface": "for the manslayer",
+        "lemma": "ratsach"
+      },
+      {
+        "surface": "and Beeshterah",
+        "lemma": "beeshterah"
+      },
+      {
+        "surface": "two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      }
+    ],
+    "28": [
+      {
+        "surface": "From the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Issachar they were given",
+        "lemma": "yissaskhar"
+      },
+      {
+        "surface": "Kishion",
+        "lemma": "qishyon"
+      },
+      {
+        "surface": "Daberath",
+        "lemma": "daverat"
+      }
+    ],
+    "29": [
+      {
+        "surface": "Jarmuth",
+        "lemma": "yarmut"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "engannim"
+      },
+      {
+        "surface": "and En-gannim",
+        "lemma": "engannim"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      }
+    ],
+    "30": [
+      {
+        "surface": "From the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "Mishal",
+        "lemma": "mishal"
+      },
+      {
+        "surface": "Abdon",
+        "lemma": "avdon"
+      }
+    ],
+    "31": [
+      {
+        "surface": "Helkath",
+        "lemma": "chelqat"
+      },
+      {
+        "surface": "and Rehob",
+        "lemma": "rechov"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      }
+    ],
+    "32": [
+      {
+        "surface": "And from the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Naphtali they were given",
+        "lemma": "naphtali"
+      },
+      {
+        "surface": "Kedesh",
+        "lemma": "qedesh"
+      },
+      {
+        "surface": "in Galilee",
+        "lemma": "galil"
+      },
+      {
+        "surface": "a city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "of refuge",
+        "lemma": "miqlat"
+      },
+      {
+        "surface": "for the manslayer",
+        "lemma": "ratsach"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "chammotdor"
+      },
+      {
+        "surface": "Hammoth-dor",
+        "lemma": "chammotdor"
+      },
+      {
+        "surface": "and Kartan",
+        "lemma": "qiryatayim"
+      },
+      {
+        "surface": "three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      }
+    ],
+    "33": [
+      {
+        "surface": "thirteen",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "together with",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      },
+      {
+        "surface": "were given to the Gershonite",
+        "lemma": "gereshunni"
+      },
+      {
+        "surface": "clans",
+        "lemma": "mishpachah"
+      }
+    ],
+    "34": [
+      {
+        "surface": "This is what the Merarite",
+        "lemma": "merari"
+      },
+      {
+        "surface": "clan",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "the rest of",
+        "lemma": "yatar"
+      },
+      {
+        "surface": "the Levites) were given",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "From the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Zebulun they were given",
+        "lemma": "zevulun"
+      },
+      {
+        "surface": "Jokneam",
+        "lemma": "yoqneam"
+      },
+      {
+        "surface": "Kartah",
+        "lemma": "qartah"
+      }
+    ],
+    "35": [
+      {
+        "surface": "Dimnah",
+        "lemma": "dimnah"
+      },
+      {
+        "surface": "and Nahalal",
+        "lemma": "nahalal"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      }
+    ],
+    "36": [
+      {
+        "surface": "From the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Reuben they were given",
+        "lemma": "reuven"
+      },
+      {
+        "surface": "Bezer",
+        "lemma": "betser"
+      },
+      {
+        "surface": "Jahaz",
+        "lemma": "yahats"
+      }
+    ],
+    "37": [
+      {
+        "surface": "Kedemoth",
+        "lemma": "qedemot"
+      },
+      {
+        "surface": "and Mephaath",
+        "lemma": "mophaat"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      }
+    ],
+    "38": [
+      {
+        "surface": "And from the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Gad they were given",
+        "lemma": "gad"
+      },
+      {
+        "surface": "Ramoth",
+        "lemma": "ramotgilad"
+      },
+      {
+        "surface": "in Gilead",
+        "lemma": "gilad"
+      },
+      {
+        "surface": "a city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "of refuge",
+        "lemma": "miqlat"
+      },
+      {
+        "surface": "for the manslayer",
+        "lemma": "ratsach"
+      },
+      {
+        "surface": "Mahanaim",
+        "lemma": "machanayim"
+      }
+    ],
+    "39": [
+      {
+        "surface": "Heshbon",
+        "lemma": "cheshbon"
+      },
+      {
+        "surface": "and Jazer",
+        "lemma": "yaazer"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "their pasturelands",
+        "lemma": "migrash"
+      }
+    ],
+    "40": [
+      {
+        "surface": "twelve",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "allotted",
+        "lemma": "goral"
+      },
+      {
+        "surface": "to the clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "of Merari",
+        "lemma": "merari"
+      },
+      {
+        "surface": "the remaining",
+        "lemma": "yatar"
+      },
+      {
+        "surface": "Levite",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "clans",
+        "lemma": "mishpachah"
+      }
+    ],
+    "41": [
+      {
+        "surface": "For the Levites, then",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "there were forty-eight",
+        "lemma": "arbaim"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "together with their pasturelands",
+        "lemma": "migrash"
+      },
+      {
+        "surface": "within",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "the territory",
+        "lemma": "achuzzah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of the Israelites",
+        "lemma": "yisrael"
+      }
+    ],
+    "42": [
+      {
+        "surface": "Each",
+        "lemma": "ir"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "its own surrounding",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "pasturelands",
+        "lemma": "migrash"
+      },
+      {
+        "surface": "this was true",
+        "lemma": "ken"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      }
+    ],
+    "43": [
+      {
+        "surface": "Thus the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "He had sworn",
+        "lemma": "shava"
+      },
+      {
+        "surface": "and they took possession of it",
+        "lemma": "yarash"
+      }
+    ],
+    "44": [
+      {
+        "surface": "And the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "gave them rest",
+        "lemma": "nuach"
+      },
+      {
+        "surface": "on every side",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "He had sworn",
+        "lemma": "shava"
+      },
+      {
+        "surface": "of their enemies",
+        "lemma": "oyev"
+      },
+      {
+        "surface": "could stand",
+        "lemma": "amad"
+      },
+      {
+        "surface": "against them",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "for the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "their enemies",
+        "lemma": "oyev"
+      },
+      {
+        "surface": "into their hand",
+        "lemma": "yad"
+      }
+    ],
+    "45": [
+      {
+        "surface": "the LORD’s",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "promises",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "had failed",
+        "lemma": "naphal"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "migrash",
+    "matteh",
+    "mishpachah"
+  ]
+}

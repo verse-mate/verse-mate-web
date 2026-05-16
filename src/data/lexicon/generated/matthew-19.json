@@ -1,0 +1,869 @@
+{
+  "bookId": 40,
+  "book": "Matthew",
+  "chapter": 19,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "had finished",
+        "lemma": "teleo"
+      },
+      {
+        "surface": "He left",
+        "lemma": "metairo"
+      },
+      {
+        "surface": "Galilee",
+        "lemma": "galilaia"
+      },
+      {
+        "surface": "region",
+        "lemma": "horion"
+      },
+      {
+        "surface": "of Judea",
+        "lemma": "ioudaia"
+      },
+      {
+        "surface": "Jordan",
+        "lemma": "iordanes"
+      }
+    ],
+    "2": [
+      {
+        "surface": "crowds",
+        "lemma": "ochlos"
+      },
+      {
+        "surface": "followed",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "He healed",
+        "lemma": "therapeuo"
+      },
+      {
+        "surface": "there",
+        "lemma": "ekei"
+      }
+    ],
+    "3": [
+      {
+        "surface": "some Pharisees",
+        "lemma": "pharisaios"
+      },
+      {
+        "surface": "came",
+        "lemma": "proserchomai"
+      },
+      {
+        "surface": "and tested",
+        "lemma": "peirazo"
+      },
+      {
+        "surface": "Is it lawful",
+        "lemma": "exesti"
+      },
+      {
+        "surface": "for a man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "to divorce",
+        "lemma": "apoluo"
+      },
+      {
+        "surface": "wife",
+        "lemma": "gune"
+      },
+      {
+        "surface": "reason",
+        "lemma": "aitia"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Have you not read",
+        "lemma": "anaginosko"
+      },
+      {
+        "surface": "the beginning",
+        "lemma": "arche"
+      },
+      {
+        "surface": "Creator",
+        "lemma": "ktizo"
+      },
+      {
+        "surface": "male",
+        "lemma": "arren"
+      },
+      {
+        "surface": "female",
+        "lemma": "thelus"
+      }
+    ],
+    "5": [
+      {
+        "surface": "a man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "will leave",
+        "lemma": "kataleipo"
+      },
+      {
+        "surface": "father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "mother",
+        "lemma": "meter"
+      },
+      {
+        "surface": "be united to",
+        "lemma": "kollao"
+      },
+      {
+        "surface": "wife",
+        "lemma": "gune"
+      },
+      {
+        "surface": "two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "flesh",
+        "lemma": "sarx"
+      }
+    ],
+    "6": [
+      {
+        "surface": "two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "flesh",
+        "lemma": "sarx"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "has joined together",
+        "lemma": "suzeugnumi"
+      },
+      {
+        "surface": "let man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "separate",
+        "lemma": "chorizo"
+      }
+    ],
+    "7": [
+      {
+        "surface": "did} Moses",
+        "lemma": "mouses"
+      },
+      {
+        "surface": "order a man",
+        "lemma": "entello"
+      },
+      {
+        "surface": "a certificate",
+        "lemma": "biblion"
+      },
+      {
+        "surface": "of divorce",
+        "lemma": "apostasion"
+      },
+      {
+        "surface": "send her away",
+        "lemma": "apoluo"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Moses",
+        "lemma": "mouses"
+      },
+      {
+        "surface": "permitted",
+        "lemma": "epitrepo"
+      },
+      {
+        "surface": "to divorce",
+        "lemma": "apoluo"
+      },
+      {
+        "surface": "wives",
+        "lemma": "gune"
+      },
+      {
+        "surface": "hardness of heart",
+        "lemma": "sklerokardia"
+      },
+      {
+        "surface": "this way",
+        "lemma": "houto"
+      },
+      {
+        "surface": "the beginning",
+        "lemma": "arche"
+      }
+    ],
+    "9": [
+      {
+        "surface": "divorces",
+        "lemma": "apoluo"
+      },
+      {
+        "surface": "wife",
+        "lemma": "gune"
+      },
+      {
+        "surface": "sexual immorality",
+        "lemma": "porneia"
+      },
+      {
+        "surface": "marries",
+        "lemma": "gameo"
+      },
+      {
+        "surface": "another woman",
+        "lemma": "allos"
+      },
+      {
+        "surface": "commits adultery",
+        "lemma": "moichao"
+      }
+    ],
+    "10": [
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "this",
+        "lemma": "houto"
+      },
+      {
+        "surface": "case",
+        "lemma": "aitia"
+      },
+      {
+        "surface": "a man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "wife",
+        "lemma": "gune"
+      },
+      {
+        "surface": "it is better",
+        "lemma": "sumphero"
+      },
+      {
+        "surface": "to marry",
+        "lemma": "gameo"
+      }
+    ],
+    "11": [
+      {
+        "surface": "can accept",
+        "lemma": "choreo"
+      },
+      {
+        "surface": "word",
+        "lemma": "logos"
+      }
+    ],
+    "12": [
+      {
+        "surface": "eunuchs",
+        "lemma": "eunouchos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "meter"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "koilia"
+      },
+      {
+        "surface": "were born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "that way",
+        "lemma": "houto"
+      },
+      {
+        "surface": "others",
+        "lemma": "eunouchos"
+      },
+      {
+        "surface": "were made that way",
+        "lemma": "eunouchizo"
+      },
+      {
+        "surface": "men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "still others",
+        "lemma": "eunouchos"
+      },
+      {
+        "surface": "live like eunuchs",
+        "lemma": "eunouchizo"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "accept this",
+        "lemma": "choreo"
+      },
+      {
+        "surface": "should accept it",
+        "lemma": "choreo"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Then",
+        "lemma": "tote"
+      },
+      {
+        "surface": "little children",
+        "lemma": "paidion"
+      },
+      {
+        "surface": "were brought",
+        "lemma": "prosphero"
+      },
+      {
+        "surface": "Him to place",
+        "lemma": "epitithemi"
+      },
+      {
+        "surface": "His hands",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "pray for them",
+        "lemma": "proseuchomai"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "rebuked",
+        "lemma": "epitimao"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Let",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "little children",
+        "lemma": "paidion"
+      },
+      {
+        "surface": "do not hinder",
+        "lemma": "koluo"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      }
+    ],
+    "15": [
+      {
+        "surface": "after He had placed",
+        "lemma": "epitithemi"
+      },
+      {
+        "surface": "hands",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "He went on",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "from there",
+        "lemma": "ekeithen"
+      }
+    ],
+    "16": [
+      {
+        "surface": "came up",
+        "lemma": "proserchomai"
+      },
+      {
+        "surface": "Teacher",
+        "lemma": "didaskalos"
+      },
+      {
+        "surface": "good thing",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      }
+    ],
+    "17": [
+      {
+        "surface": "do you ask",
+        "lemma": "erotao"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "keep",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "commandments",
+        "lemma": "entole"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Which ones",
+        "lemma": "poios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Do not murder",
+        "lemma": "phoneuo"
+      },
+      {
+        "surface": "do not commit adultery",
+        "lemma": "moicheuo"
+      },
+      {
+        "surface": "do not steal",
+        "lemma": "klepto"
+      },
+      {
+        "surface": "do not bear false witness",
+        "lemma": "pseudomartureo"
+      }
+    ],
+    "19": [
+      {
+        "surface": "honor",
+        "lemma": "timao"
+      },
+      {
+        "surface": "father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "mother",
+        "lemma": "meter"
+      },
+      {
+        "surface": "love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "neighbor",
+        "lemma": "plesion"
+      }
+    ],
+    "20": [
+      {
+        "surface": "I have kept",
+        "lemma": "phulasso"
+      },
+      {
+        "surface": "young man",
+        "lemma": "neaniskos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "eti"
+      },
+      {
+        "surface": "do I still lack",
+        "lemma": "hustereo"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "told",
+        "lemma": "phemi"
+      },
+      {
+        "surface": "perfect",
+        "lemma": "teleios"
+      },
+      {
+        "surface": "go",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "sell",
+        "lemma": "poleo"
+      },
+      {
+        "surface": "possessions",
+        "lemma": "huparcho"
+      },
+      {
+        "surface": "poor",
+        "lemma": "ptochos"
+      },
+      {
+        "surface": "treasure",
+        "lemma": "thesauros"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "follow",
+        "lemma": "akoloutheo"
+      }
+    ],
+    "22": [
+      {
+        "surface": "young man",
+        "lemma": "neaniskos"
+      },
+      {
+        "surface": "he went away",
+        "lemma": "aperchomai"
+      },
+      {
+        "surface": "in sorrow",
+        "lemma": "lupeo"
+      },
+      {
+        "surface": "wealth",
+        "lemma": "ktema"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "Truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "it is hard for",
+        "lemma": "duskolos"
+      },
+      {
+        "surface": "a rich man",
+        "lemma": "plousios"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Again",
+        "lemma": "palin"
+      },
+      {
+        "surface": "easier for",
+        "lemma": "eukopoteros"
+      },
+      {
+        "surface": "a camel",
+        "lemma": "kamelos"
+      },
+      {
+        "surface": "the eye",
+        "lemma": "trupema"
+      },
+      {
+        "surface": "of a needle",
+        "lemma": "rhaphis"
+      },
+      {
+        "surface": "a rich man",
+        "lemma": "plousios"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ],
+    "25": [
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "they were} greatly",
+        "lemma": "sphodra"
+      },
+      {
+        "surface": "astonished",
+        "lemma": "ekplesso"
+      },
+      {
+        "surface": "be saved",
+        "lemma": "sozo"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "looked at them",
+        "lemma": "emblepo"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "impossible",
+        "lemma": "adunatos"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "possible",
+        "lemma": "dunatos"
+      }
+    ],
+    "27": [
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "have left",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "to follow",
+        "lemma": "akoloutheo"
+      }
+    ],
+    "28": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "renewal of all things",
+        "lemma": "palingenesia"
+      },
+      {
+        "surface": "Son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "of Man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "sits",
+        "lemma": "kathizo"
+      },
+      {
+        "surface": "glorious",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "throne",
+        "lemma": "thronos"
+      },
+      {
+        "surface": "have followed",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "will also sit",
+        "lemma": "kathemai"
+      },
+      {
+        "surface": "twelve",
+        "lemma": "dodeka"
+      },
+      {
+        "surface": "thrones",
+        "lemma": "thronos"
+      },
+      {
+        "surface": "judging",
+        "lemma": "krino"
+      },
+      {
+        "surface": "twelve",
+        "lemma": "dodeka"
+      },
+      {
+        "surface": "tribes",
+        "lemma": "phule"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "israel"
+      }
+    ],
+    "29": [
+      {
+        "surface": "has left",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "houses",
+        "lemma": "oikia"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "sisters",
+        "lemma": "adelphe"
+      },
+      {
+        "surface": "father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "mother",
+        "lemma": "meter"
+      },
+      {
+        "surface": "wife",
+        "lemma": "gune"
+      },
+      {
+        "surface": "children",
+        "lemma": "teknon"
+      },
+      {
+        "surface": "fields",
+        "lemma": "agros"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "a hundredfold",
+        "lemma": "hekatontaplasion"
+      },
+      {
+        "surface": "will inherit",
+        "lemma": "kleronomeo"
+      },
+      {
+        "surface": "eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      }
+    ],
+    "30": [
+      {
+        "surface": "who are first",
+        "lemma": "protos"
+      },
+      {
+        "surface": "last",
+        "lemma": "eschatos"
+      },
+      {
+        "surface": "the last",
+        "lemma": "eschatos"
+      },
+      {
+        "surface": "will be first",
+        "lemma": "protos"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "eunouchizo",
+    "eunouchos",
+    "choreo"
+  ]
+}

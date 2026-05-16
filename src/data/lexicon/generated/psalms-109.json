@@ -1,0 +1,747 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 109,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "For the choirmaster",
+        "lemma": "natsach"
+      },
+      {
+        "surface": "A Psalm",
+        "lemma": "mizmor"
+      },
+      {
+        "surface": "of David",
+        "lemma": "david"
+      },
+      {
+        "surface": "O God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of my praise",
+        "lemma": "tehillah"
+      },
+      {
+        "surface": "silent",
+        "lemma": "charash"
+      }
+    ],
+    "2": [
+      {
+        "surface": "wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "and deceitful",
+        "lemma": "mirmah"
+      },
+      {
+        "surface": "mouths",
+        "lemma": "peh"
+      },
+      {
+        "surface": "open",
+        "lemma": "patach"
+      },
+      {
+        "surface": "they speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "with lying",
+        "lemma": "sheqer"
+      },
+      {
+        "surface": "tongues",
+        "lemma": "lashon"
+      }
+    ],
+    "3": [
+      {
+        "surface": "They surround me",
+        "lemma": "savav"
+      },
+      {
+        "surface": "with hateful",
+        "lemma": "sinah"
+      },
+      {
+        "surface": "words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "and attack me",
+        "lemma": "lacham"
+      },
+      {
+        "surface": "without cause",
+        "lemma": "chinnam"
+      }
+    ],
+    "4": [
+      {
+        "surface": "In return for",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "my love",
+        "lemma": "ahavah"
+      },
+      {
+        "surface": "they accuse me",
+        "lemma": "satan"
+      },
+      {
+        "surface": "of prayer",
+        "lemma": "tephillah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "They repay me",
+        "lemma": "sum"
+      },
+      {
+        "surface": "evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "for",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "and hatred",
+        "lemma": "sinah"
+      },
+      {
+        "surface": "for",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "my love",
+        "lemma": "ahavah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Set",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "a wicked man",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "let an accuser",
+        "lemma": "satan"
+      },
+      {
+        "surface": "stand",
+        "lemma": "amad"
+      },
+      {
+        "surface": "his right hand",
+        "lemma": "yamin"
+      }
+    ],
+    "7": [
+      {
+        "surface": "When he is tried",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "let him be found guilty",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "and may his prayer",
+        "lemma": "tephillah"
+      },
+      {
+        "surface": "as sin",
+        "lemma": "chataah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "May his days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "few",
+        "lemma": "meat"
+      },
+      {
+        "surface": "may another",
+        "lemma": "acher"
+      },
+      {
+        "surface": "take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "his position",
+        "lemma": "pequddah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "May his children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "fatherless",
+        "lemma": "yatom"
+      },
+      {
+        "surface": "and his wife",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "a widow",
+        "lemma": "almanah"
+      }
+    ],
+    "10": [
+      {
+        "surface": "May his children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "wander",
+        "lemma": "nua"
+      },
+      {
+        "surface": "as beggars",
+        "lemma": "shaal"
+      },
+      {
+        "surface": "seeking sustenance",
+        "lemma": "darash"
+      },
+      {
+        "surface": "far from their ruined homes",
+        "lemma": "chorbah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "May the creditor",
+        "lemma": "nashah"
+      },
+      {
+        "surface": "seize",
+        "lemma": "naqash"
+      },
+      {
+        "surface": "and strangers",
+        "lemma": "zur"
+      },
+      {
+        "surface": "plunder",
+        "lemma": "bazaz"
+      },
+      {
+        "surface": "the fruits of his labor",
+        "lemma": "yegia"
+      }
+    ],
+    "12": [
+      {
+        "surface": "to extend",
+        "lemma": "mashakh"
+      },
+      {
+        "surface": "kindness",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "to favor",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "his fatherless children",
+        "lemma": "yatom"
+      }
+    ],
+    "13": [
+      {
+        "surface": "May his descendants",
+        "lemma": "acharit"
+      },
+      {
+        "surface": "cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "may their name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "be blotted out",
+        "lemma": "machah"
+      },
+      {
+        "surface": "from the next",
+        "lemma": "acher"
+      },
+      {
+        "surface": "generation",
+        "lemma": "dor"
+      }
+    ],
+    "14": [
+      {
+        "surface": "May the iniquity",
+        "lemma": "avan"
+      },
+      {
+        "surface": "be remembered",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "and the sin",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "of his mother",
+        "lemma": "em"
+      },
+      {
+        "surface": "be blotted out",
+        "lemma": "machah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "May their sins always",
+        "lemma": "tamid"
+      },
+      {
+        "surface": "before",
+        "lemma": "neged"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "that He may cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "their memory",
+        "lemma": "zekher"
+      },
+      {
+        "surface": "from the earth",
+        "lemma": "erets"
+      }
+    ],
+    "16": [
+      {
+        "surface": "thought",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "kindness",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "but pursued",
+        "lemma": "radaph"
+      },
+      {
+        "surface": "the poor",
+        "lemma": "ani"
+      },
+      {
+        "surface": "and needy",
+        "lemma": "evyon"
+      },
+      {
+        "surface": "and",
+        "lemma": "kaah"
+      },
+      {
+        "surface": "brokenhearted",
+        "lemma": "levav"
+      },
+      {
+        "surface": "even to their death",
+        "lemma": "mut"
+      }
+    ],
+    "17": [
+      {
+        "surface": "The cursing that",
+        "lemma": "qelalah"
+      },
+      {
+        "surface": "he loved",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "the blessing",
+        "lemma": "berakhah"
+      },
+      {
+        "surface": "to delight",
+        "lemma": "chaphets"
+      },
+      {
+        "surface": "may it be far",
+        "lemma": "rachaq"
+      }
+    ],
+    "18": [
+      {
+        "surface": "The cursing that",
+        "lemma": "qelalah"
+      },
+      {
+        "surface": "he wore",
+        "lemma": "lavash"
+      },
+      {
+        "surface": "like a coat",
+        "lemma": "mad"
+      },
+      {
+        "surface": "his body",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "like water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "and into his bones",
+        "lemma": "etsem"
+      },
+      {
+        "surface": "like oil",
+        "lemma": "shemen"
+      }
+    ],
+    "19": [
+      {
+        "surface": "like a robe",
+        "lemma": "beged"
+      },
+      {
+        "surface": "wrapped about him",
+        "lemma": "atah"
+      },
+      {
+        "surface": "like a belt",
+        "lemma": "mezach"
+      },
+      {
+        "surface": "tied",
+        "lemma": "chagar"
+      },
+      {
+        "surface": "forever around him",
+        "lemma": "tamid"
+      }
+    ],
+    "20": [
+      {
+        "surface": "be the LORD’s",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "reward",
+        "lemma": "peullah"
+      },
+      {
+        "surface": "to my accusers",
+        "lemma": "satan"
+      },
+      {
+        "surface": "to those who speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "me",
+        "lemma": "nephesh"
+      }
+    ],
+    "21": [
+      {
+        "surface": "O GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "Your name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "deliver me",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "the goodness",
+        "lemma": "tov"
+      },
+      {
+        "surface": "of Your loving devotion",
+        "lemma": "chesed"
+      }
+    ],
+    "22": [
+      {
+        "surface": "am poor",
+        "lemma": "ani"
+      },
+      {
+        "surface": "and needy",
+        "lemma": "evyon"
+      },
+      {
+        "surface": "my heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "is wounded",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "within me",
+        "lemma": "qerev"
+      }
+    ],
+    "23": [
+      {
+        "surface": "I am fading away",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "like a lengthening",
+        "lemma": "natah"
+      },
+      {
+        "surface": "shadow",
+        "lemma": "tsel"
+      },
+      {
+        "surface": "I am shaken off",
+        "lemma": "naar"
+      },
+      {
+        "surface": "like a locust",
+        "lemma": "arbeh"
+      }
+    ],
+    "24": [
+      {
+        "surface": "My knees",
+        "lemma": "berekh"
+      },
+      {
+        "surface": "are weak",
+        "lemma": "kashal"
+      },
+      {
+        "surface": "from fasting",
+        "lemma": "tsom"
+      },
+      {
+        "surface": "and my body",
+        "lemma": "basar"
+      },
+      {
+        "surface": "grows lean",
+        "lemma": "kachash"
+      },
+      {
+        "surface": "and gaunt",
+        "lemma": "shemen"
+      }
+    ],
+    "25": [
+      {
+        "surface": "an object of scorn",
+        "lemma": "cherpah"
+      },
+      {
+        "surface": "they shake",
+        "lemma": "nua"
+      },
+      {
+        "surface": "their heads",
+        "lemma": "rosh"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Help me",
+        "lemma": "azar"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "my God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "save me",
+        "lemma": "yasah"
+      },
+      {
+        "surface": "according to Your loving devotion",
+        "lemma": "chesed"
+      }
+    ],
+    "27": [
+      {
+        "surface": "Let them know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "is Your hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "28": [
+      {
+        "surface": "curse",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "will bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "When they rise up",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "they will be put to shame",
+        "lemma": "bush"
+      },
+      {
+        "surface": "but Your servant",
+        "lemma": "eved"
+      },
+      {
+        "surface": "will rejoice",
+        "lemma": "samach"
+      }
+    ],
+    "29": [
+      {
+        "surface": "May my accusers",
+        "lemma": "satan"
+      },
+      {
+        "surface": "be clothed",
+        "lemma": "lavash"
+      },
+      {
+        "surface": "with disgrace",
+        "lemma": "kelimmah"
+      },
+      {
+        "surface": "may they wear",
+        "lemma": "atah"
+      },
+      {
+        "surface": "their shame",
+        "lemma": "boshet"
+      },
+      {
+        "surface": "like a robe",
+        "lemma": "meil"
+      }
+    ],
+    "30": [
+      {
+        "surface": "With my mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "I will thank",
+        "lemma": "yadah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "profusely",
+        "lemma": "meod"
+      },
+      {
+        "surface": "I will praise Him",
+        "lemma": "halal"
+      },
+      {
+        "surface": "in the presence",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "of many",
+        "lemma": "rav"
+      }
+    ],
+    "31": [
+      {
+        "surface": "He stands",
+        "lemma": "amad"
+      },
+      {
+        "surface": "at the right hand",
+        "lemma": "yamin"
+      },
+      {
+        "surface": "of the needy one",
+        "lemma": "evyon"
+      },
+      {
+        "surface": "to save him",
+        "lemma": "yasah"
+      },
+      {
+        "surface": "from the condemners",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "of his soul",
+        "lemma": "nephesh"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "satan",
+    "chesed",
+    "tachat"
+  ]
+}

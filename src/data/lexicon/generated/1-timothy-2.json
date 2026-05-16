@@ -1,0 +1,423 @@
+{
+  "bookId": 54,
+  "book": "1 Timothy",
+  "chapter": 2,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "First",
+        "lemma": "proton"
+      },
+      {
+        "surface": "I urge that",
+        "lemma": "parakaleo"
+      },
+      {
+        "surface": "petitions",
+        "lemma": "deesis"
+      },
+      {
+        "surface": "prayers",
+        "lemma": "proseuche"
+      },
+      {
+        "surface": "intercessions",
+        "lemma": "enteuxis"
+      },
+      {
+        "surface": "and thanksgiving",
+        "lemma": "eucharistia"
+      }
+    ],
+    "2": [
+      {
+        "surface": "kings",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "authority",
+        "lemma": "huperoche"
+      },
+      {
+        "surface": "we may lead",
+        "lemma": "diago"
+      },
+      {
+        "surface": "tranquil",
+        "lemma": "eremos"
+      },
+      {
+        "surface": "quiet",
+        "lemma": "hesuchios"
+      },
+      {
+        "surface": "lives",
+        "lemma": "bios"
+      },
+      {
+        "surface": "godliness",
+        "lemma": "eusebeia"
+      },
+      {
+        "surface": "dignity",
+        "lemma": "semnotes"
+      }
+    ],
+    "3": [
+      {
+        "surface": "is good",
+        "lemma": "kalos"
+      },
+      {
+        "surface": "pleasing",
+        "lemma": "apodektos"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Savior",
+        "lemma": "soter"
+      }
+    ],
+    "4": [
+      {
+        "surface": "to be saved",
+        "lemma": "sozo"
+      },
+      {
+        "surface": "the knowledge",
+        "lemma": "epignosis"
+      },
+      {
+        "surface": "of the truth",
+        "lemma": "aletheia"
+      }
+    ],
+    "5": [
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "mediator",
+        "lemma": "mesites"
+      },
+      {
+        "surface": "between God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "the man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      }
+    ],
+    "6": [
+      {
+        "surface": "as a ransom",
+        "lemma": "antilutron"
+      },
+      {
+        "surface": "testimony that was given",
+        "lemma": "marturion"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "idios"
+      },
+      {
+        "surface": "at just the right time",
+        "lemma": "kairos"
+      }
+    ],
+    "7": [
+      {
+        "surface": "was appointed as",
+        "lemma": "tithemi"
+      },
+      {
+        "surface": "a preacher",
+        "lemma": "kerux"
+      },
+      {
+        "surface": "an apostle",
+        "lemma": "apostolos"
+      },
+      {
+        "surface": "a faithful",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "true",
+        "lemma": "aletheia"
+      },
+      {
+        "surface": "teacher",
+        "lemma": "didaskalos"
+      },
+      {
+        "surface": "of the Gentiles",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "the truth",
+        "lemma": "aletheia"
+      },
+      {
+        "surface": "lying  about anything",
+        "lemma": "pseudomai"
+      }
+    ],
+    "8": [
+      {
+        "surface": "I want",
+        "lemma": "boulomai"
+      },
+      {
+        "surface": "men",
+        "lemma": "aner"
+      },
+      {
+        "surface": "everywhere",
+        "lemma": "topos"
+      },
+      {
+        "surface": "to pray",
+        "lemma": "proseuchomai"
+      },
+      {
+        "surface": "lifting up",
+        "lemma": "epairo"
+      },
+      {
+        "surface": "holy",
+        "lemma": "hosios"
+      },
+      {
+        "surface": "hands",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "anger",
+        "lemma": "orge"
+      },
+      {
+        "surface": "dissension",
+        "lemma": "dialogismos"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Likewise",
+        "lemma": "hosautos"
+      },
+      {
+        "surface": "the women",
+        "lemma": "gune"
+      },
+      {
+        "surface": "to adorn",
+        "lemma": "kosmeo"
+      },
+      {
+        "surface": "respectable",
+        "lemma": "kosmios"
+      },
+      {
+        "surface": "apparel",
+        "lemma": "katastole"
+      },
+      {
+        "surface": "modesty",
+        "lemma": "aidos"
+      },
+      {
+        "surface": "with self-control",
+        "lemma": "sophrosune"
+      },
+      {
+        "surface": "braided hair",
+        "lemma": "plegma"
+      },
+      {
+        "surface": "gold",
+        "lemma": "chrusion"
+      },
+      {
+        "surface": "pearls",
+        "lemma": "margarites"
+      },
+      {
+        "surface": "expensive",
+        "lemma": "poluteles"
+      },
+      {
+        "surface": "clothes",
+        "lemma": "himatismos"
+      }
+    ],
+    "10": [
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "deeds",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "is proper",
+        "lemma": "prepo"
+      },
+      {
+        "surface": "for women who",
+        "lemma": "gune"
+      },
+      {
+        "surface": "profess",
+        "lemma": "epangello"
+      },
+      {
+        "surface": "to worship God",
+        "lemma": "theosebeia"
+      }
+    ],
+    "11": [
+      {
+        "surface": "A woman",
+        "lemma": "gune"
+      },
+      {
+        "surface": "must learn",
+        "lemma": "manthano"
+      },
+      {
+        "surface": "quietness",
+        "lemma": "hesuchia"
+      },
+      {
+        "surface": "submissiveness",
+        "lemma": "hupotage"
+      }
+    ],
+    "12": [
+      {
+        "surface": "I do not permit",
+        "lemma": "epitrepo"
+      },
+      {
+        "surface": "a woman",
+        "lemma": "gune"
+      },
+      {
+        "surface": "to teach",
+        "lemma": "didasko"
+      },
+      {
+        "surface": "to exercise authority over",
+        "lemma": "authenteo"
+      },
+      {
+        "surface": "a man",
+        "lemma": "aner"
+      },
+      {
+        "surface": "quiet",
+        "lemma": "hesuchia"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Adam",
+        "lemma": "adam"
+      },
+      {
+        "surface": "was formed",
+        "lemma": "plasso"
+      },
+      {
+        "surface": "first",
+        "lemma": "protos"
+      },
+      {
+        "surface": "and then",
+        "lemma": "eita"
+      },
+      {
+        "surface": "Eve",
+        "lemma": "eua"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Adam",
+        "lemma": "adam"
+      },
+      {
+        "surface": "who was deceived",
+        "lemma": "apatao"
+      },
+      {
+        "surface": "woman",
+        "lemma": "gune"
+      },
+      {
+        "surface": "who was deceived",
+        "lemma": "exapatao"
+      },
+      {
+        "surface": "transgression",
+        "lemma": "parabasis"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Women, however, will be saved",
+        "lemma": "sozo"
+      },
+      {
+        "surface": "childbearing",
+        "lemma": "teknogonia"
+      },
+      {
+        "surface": "they continue",
+        "lemma": "meno"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "love",
+        "lemma": "agape"
+      },
+      {
+        "surface": "holiness",
+        "lemma": "hagiasmos"
+      },
+      {
+        "surface": "self-control",
+        "lemma": "sophrosune"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "sophrosune",
+    "hesuchia",
+    "adam"
+  ]
+}

@@ -1,0 +1,479 @@
+{
+  "bookId": 56,
+  "book": "Titus",
+  "chapter": 3,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Remind",
+        "lemma": "hupomimnesko"
+      },
+      {
+        "surface": "to submit",
+        "lemma": "hupotasso"
+      },
+      {
+        "surface": "to rulers",
+        "lemma": "arche"
+      },
+      {
+        "surface": "and authorities",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "to be obedient",
+        "lemma": "peitharcheo"
+      },
+      {
+        "surface": "ready",
+        "lemma": "hetoimos"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "work",
+        "lemma": "ergon"
+      }
+    ],
+    "2": [
+      {
+        "surface": "to malign",
+        "lemma": "blasphemeo"
+      },
+      {
+        "surface": "no one",
+        "lemma": "medeis"
+      },
+      {
+        "surface": "peaceable",
+        "lemma": "amachos"
+      },
+      {
+        "surface": "and gentle",
+        "lemma": "epieikes"
+      },
+      {
+        "surface": "showing",
+        "lemma": "endeiknumi"
+      },
+      {
+        "surface": "consideration",
+        "lemma": "prautes"
+      }
+    ],
+    "3": [
+      {
+        "surface": "foolish",
+        "lemma": "anoetos"
+      },
+      {
+        "surface": "disobedient",
+        "lemma": "apeithes"
+      },
+      {
+        "surface": "misled",
+        "lemma": "planao"
+      },
+      {
+        "surface": "and enslaved",
+        "lemma": "douleuo"
+      },
+      {
+        "surface": "to all sorts",
+        "lemma": "poikilos"
+      },
+      {
+        "surface": "of desires",
+        "lemma": "epithumia"
+      },
+      {
+        "surface": "pleasures",
+        "lemma": "hedone"
+      },
+      {
+        "surface": "living",
+        "lemma": "diago"
+      },
+      {
+        "surface": "malice",
+        "lemma": "kakia"
+      },
+      {
+        "surface": "envy",
+        "lemma": "phthonos"
+      },
+      {
+        "surface": "being hated",
+        "lemma": "stugetos"
+      },
+      {
+        "surface": "and hating",
+        "lemma": "miseo"
+      },
+      {
+        "surface": "one another",
+        "lemma": "allelon"
+      }
+    ],
+    "4": [
+      {
+        "surface": "kindness",
+        "lemma": "chrestotes"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Savior",
+        "lemma": "soter"
+      },
+      {
+        "surface": "love for mankind",
+        "lemma": "philanthropia"
+      },
+      {
+        "surface": "appeared",
+        "lemma": "epiphaino"
+      }
+    ],
+    "5": [
+      {
+        "surface": "He saved",
+        "lemma": "sozo"
+      },
+      {
+        "surface": "the righteous",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "deeds",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "mercy",
+        "lemma": "eleos"
+      },
+      {
+        "surface": "the washing",
+        "lemma": "loutron"
+      },
+      {
+        "surface": "of new birth",
+        "lemma": "palingenesia"
+      },
+      {
+        "surface": "renewal",
+        "lemma": "anakainosis"
+      },
+      {
+        "surface": "by the Holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      }
+    ],
+    "6": [
+      {
+        "surface": "He poured out",
+        "lemma": "ekcheo"
+      },
+      {
+        "surface": "abundantly",
+        "lemma": "plousios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Savior",
+        "lemma": "soter"
+      }
+    ],
+    "7": [
+      {
+        "surface": "having been justified",
+        "lemma": "dikaioo"
+      },
+      {
+        "surface": "grace",
+        "lemma": "charis"
+      },
+      {
+        "surface": "heirs",
+        "lemma": "kleronomos"
+      },
+      {
+        "surface": "the hope",
+        "lemma": "elpis"
+      },
+      {
+        "surface": "of eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      }
+    ],
+    "8": [
+      {
+        "surface": "saying",
+        "lemma": "logos"
+      },
+      {
+        "surface": "is trustworthy",
+        "lemma": "pistos"
+      },
+      {
+        "surface": "I want",
+        "lemma": "boulomai"
+      },
+      {
+        "surface": "to emphasize",
+        "lemma": "diabebaioo"
+      },
+      {
+        "surface": "have believed",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "will take care",
+        "lemma": "phrontizo"
+      },
+      {
+        "surface": "to devote themselves to",
+        "lemma": "proistemi"
+      },
+      {
+        "surface": "good",
+        "lemma": "kalos"
+      },
+      {
+        "surface": "deeds",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "excellent",
+        "lemma": "kalos"
+      },
+      {
+        "surface": "profitable",
+        "lemma": "ophelimos"
+      },
+      {
+        "surface": "people",
+        "lemma": "anthropos"
+      }
+    ],
+    "9": [
+      {
+        "surface": "avoid",
+        "lemma": "periistemi"
+      },
+      {
+        "surface": "foolish",
+        "lemma": "moros"
+      },
+      {
+        "surface": "controversies",
+        "lemma": "zetesis"
+      },
+      {
+        "surface": "genealogies",
+        "lemma": "genealogia"
+      },
+      {
+        "surface": "arguments",
+        "lemma": "eris"
+      },
+      {
+        "surface": "quarrels",
+        "lemma": "mache"
+      },
+      {
+        "surface": "about the law",
+        "lemma": "nomikos"
+      },
+      {
+        "surface": "pointless",
+        "lemma": "anopheles"
+      },
+      {
+        "surface": "worthless",
+        "lemma": "mataios"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Reject",
+        "lemma": "paraiteomai"
+      },
+      {
+        "surface": "a divisive",
+        "lemma": "hairetikos"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "second",
+        "lemma": "deuteros"
+      },
+      {
+        "surface": "admonition",
+        "lemma": "nouthesia"
+      }
+    ],
+    "11": [
+      {
+        "surface": "is corrupt",
+        "lemma": "ekstrepho"
+      },
+      {
+        "surface": "sinful",
+        "lemma": "hamartano"
+      },
+      {
+        "surface": "self-condemned",
+        "lemma": "autokatakritos"
+      }
+    ],
+    "12": [
+      {
+        "surface": "I send",
+        "lemma": "pempo"
+      },
+      {
+        "surface": "Artemas",
+        "lemma": "artemas"
+      },
+      {
+        "surface": "Tychicus",
+        "lemma": "tuchikos"
+      },
+      {
+        "surface": "make every effort",
+        "lemma": "spoudazo"
+      },
+      {
+        "surface": "Nicopolis",
+        "lemma": "nikopolis"
+      },
+      {
+        "surface": "I have decided",
+        "lemma": "krino"
+      },
+      {
+        "surface": "to winter",
+        "lemma": "paracheimazo"
+      },
+      {
+        "surface": "there",
+        "lemma": "ekei"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Do your best",
+        "lemma": "spoudaios"
+      },
+      {
+        "surface": "to equip",
+        "lemma": "propempo"
+      },
+      {
+        "surface": "Zenas",
+        "lemma": "zenas"
+      },
+      {
+        "surface": "lawyer",
+        "lemma": "nomikos"
+      },
+      {
+        "surface": "Apollos",
+        "lemma": "apollos"
+      },
+      {
+        "surface": "will have everything they need",
+        "lemma": "leipo"
+      }
+    ],
+    "14": [
+      {
+        "surface": "our people",
+        "lemma": "hemeteros"
+      },
+      {
+        "surface": "learn",
+        "lemma": "manthano"
+      },
+      {
+        "surface": "to devote themselves to",
+        "lemma": "proistemi"
+      },
+      {
+        "surface": "good",
+        "lemma": "kalos"
+      },
+      {
+        "surface": "works",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "the pressing",
+        "lemma": "anagkaios"
+      },
+      {
+        "surface": "needs of others",
+        "lemma": "chreia"
+      },
+      {
+        "surface": "unfruitful",
+        "lemma": "akarpos"
+      }
+    ],
+    "15": [
+      {
+        "surface": "send you greetings",
+        "lemma": "aspazomai"
+      },
+      {
+        "surface": "Greet",
+        "lemma": "aspazomai"
+      },
+      {
+        "surface": "love",
+        "lemma": "phileo"
+      },
+      {
+        "surface": "the faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "Grace be",
+        "lemma": "charis"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "proistemi",
+    "nomikos",
+    "soter"
+  ]
+}

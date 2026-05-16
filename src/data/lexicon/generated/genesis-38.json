@@ -1,0 +1,981 @@
+{
+  "bookId": 1,
+  "book": "Genesis",
+  "chapter": 38,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "left",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "his brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "and settled",
+        "lemma": "natah"
+      },
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "named",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Hirah",
+        "lemma": "chirah"
+      },
+      {
+        "surface": "an Adullamite",
+        "lemma": "adullami"
+      }
+    ],
+    "2": [
+      {
+        "surface": "There",
+        "lemma": "sham"
+      },
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "the daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of a Canaanite",
+        "lemma": "kenaani"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "named",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Shua",
+        "lemma": "shua"
+      },
+      {
+        "surface": "and he took her as a wife",
+        "lemma": "laqach"
+      }
+    ],
+    "3": [
+      {
+        "surface": "So she conceived",
+        "lemma": "harah"
+      },
+      {
+        "surface": "and gave birth to",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "a son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "him",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Er",
+        "lemma": "er"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Again",
+        "lemma": "od"
+      },
+      {
+        "surface": "she conceived",
+        "lemma": "harah"
+      },
+      {
+        "surface": "and gave birth to",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "a son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "him",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Onan",
+        "lemma": "onan"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Then she gave birth to",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "another",
+        "lemma": "yasaph"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "him",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Shelah",
+        "lemma": "shelah"
+      },
+      {
+        "surface": "at Chezib",
+        "lemma": "keziv"
+      },
+      {
+        "surface": "that she gave birth to him",
+        "lemma": "yalad"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Now Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "acquired",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "a wife",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "for Er",
+        "lemma": "er"
+      },
+      {
+        "surface": "his firstborn",
+        "lemma": "bekhor"
+      },
+      {
+        "surface": "and her name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "was Tamar",
+        "lemma": "tamar"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Er",
+        "lemma": "er"
+      },
+      {
+        "surface": "Judah’s",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "firstborn",
+        "lemma": "bekhor"
+      },
+      {
+        "surface": "was wicked",
+        "lemma": "ra"
+      },
+      {
+        "surface": "in the sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "so the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "put him to death",
+        "lemma": "mut"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Then Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "to Onan",
+        "lemma": "onan"
+      },
+      {
+        "surface": "your brother’s",
+        "lemma": "ach"
+      },
+      {
+        "surface": "wife",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "Perform your duty as her brother-in-law",
+        "lemma": "yavam"
+      },
+      {
+        "surface": "and raise up",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "offspring",
+        "lemma": "zera"
+      },
+      {
+        "surface": "for your brother",
+        "lemma": "ach"
+      }
+    ],
+    "9": [
+      {
+        "surface": "But Onan",
+        "lemma": "onan"
+      },
+      {
+        "surface": "knew",
+        "lemma": "yada"
+      },
+      {
+        "surface": "the offspring",
+        "lemma": "zera"
+      },
+      {
+        "surface": "his brother’s",
+        "lemma": "ach"
+      },
+      {
+        "surface": "wife",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "he would spill his seed",
+        "lemma": "shachat"
+      },
+      {
+        "surface": "on the ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "so that he would not",
+        "lemma": "bilti"
+      },
+      {
+        "surface": "offspring",
+        "lemma": "zera"
+      },
+      {
+        "surface": "for his brother",
+        "lemma": "ach"
+      }
+    ],
+    "10": [
+      {
+        "surface": "was wicked",
+        "lemma": "raa"
+      },
+      {
+        "surface": "in the sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "so He put Onan to death",
+        "lemma": "mut"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Then Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "to his daughter-in-law",
+        "lemma": "kallah"
+      },
+      {
+        "surface": "Tamar",
+        "lemma": "tamar"
+      },
+      {
+        "surface": "as a widow",
+        "lemma": "almanah"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "my son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Shelah",
+        "lemma": "shelah"
+      },
+      {
+        "surface": "grows up",
+        "lemma": "gadal"
+      },
+      {
+        "surface": "die",
+        "lemma": "mut"
+      },
+      {
+        "surface": "like his brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "So Tamar",
+        "lemma": "tamar"
+      },
+      {
+        "surface": "went",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      }
+    ],
+    "12": [
+      {
+        "surface": "After a long",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "time",
+        "lemma": "yom"
+      },
+      {
+        "surface": "Judah’s",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "wife",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "the daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of Shua",
+        "lemma": "shua"
+      },
+      {
+        "surface": "died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "When Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "had finished mourning",
+        "lemma": "nacham"
+      },
+      {
+        "surface": "and his friend",
+        "lemma": "rea"
+      },
+      {
+        "surface": "Hirah",
+        "lemma": "chirah"
+      },
+      {
+        "surface": "the Adullamite",
+        "lemma": "adullami"
+      },
+      {
+        "surface": "went up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "his sheepshearers",
+        "lemma": "gazaz"
+      },
+      {
+        "surface": "at Timnah",
+        "lemma": "timnah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "When Tamar",
+        "lemma": "tamar"
+      },
+      {
+        "surface": "was told",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "Your father-in-law",
+        "lemma": "cham"
+      },
+      {
+        "surface": "is going up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "to Timnah",
+        "lemma": "timnah"
+      },
+      {
+        "surface": "to shear",
+        "lemma": "gazaz"
+      },
+      {
+        "surface": "his sheep",
+        "lemma": "tson"
+      }
+    ],
+    "14": [
+      {
+        "surface": "she removed",
+        "lemma": "sur"
+      },
+      {
+        "surface": "widow’s",
+        "lemma": "almanut"
+      },
+      {
+        "surface": "garments",
+        "lemma": "beged"
+      },
+      {
+        "surface": "covered her face",
+        "lemma": "alaph"
+      },
+      {
+        "surface": "with a veil",
+        "lemma": "tsaiph"
+      },
+      {
+        "surface": "to disguise herself",
+        "lemma": "kasah"
+      },
+      {
+        "surface": "at the entrance",
+        "lemma": "petach"
+      },
+      {
+        "surface": "to Enaim",
+        "lemma": "enayim"
+      },
+      {
+        "surface": "the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "to Timnah",
+        "lemma": "timnah"
+      },
+      {
+        "surface": "although Shelah",
+        "lemma": "shelah"
+      },
+      {
+        "surface": "had grown up",
+        "lemma": "gadal"
+      },
+      {
+        "surface": "as a wife",
+        "lemma": "ishshah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "When Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "he thought",
+        "lemma": "chashav"
+      },
+      {
+        "surface": "she was a prostitute",
+        "lemma": "zanah"
+      },
+      {
+        "surface": "she had covered",
+        "lemma": "kasah"
+      },
+      {
+        "surface": "her face",
+        "lemma": "paneh"
+      }
+    ],
+    "16": [
+      {
+        "surface": "realizing",
+        "lemma": "yada"
+      },
+      {
+        "surface": "was his daughter-in-law",
+        "lemma": "kallah"
+      },
+      {
+        "surface": "he went over",
+        "lemma": "natah"
+      },
+      {
+        "surface": "Come",
+        "lemma": "yahav"
+      },
+      {
+        "surface": "now",
+        "lemma": "na"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      }
+    ],
+    "17": [
+      {
+        "surface": "will send you",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "a young goat",
+        "lemma": "gedi"
+      },
+      {
+        "surface": "my flock",
+        "lemma": "tson"
+      },
+      {
+        "surface": "something as a pledge",
+        "lemma": "aravon"
+      },
+      {
+        "surface": "you send it",
+        "lemma": "shalach"
+      }
+    ],
+    "18": [
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "pledge",
+        "lemma": "aravon"
+      },
+      {
+        "surface": "Your seal",
+        "lemma": "chotam"
+      },
+      {
+        "surface": "and your cord",
+        "lemma": "patil"
+      },
+      {
+        "surface": "and the staff",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "in your hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "and she became pregnant",
+        "lemma": "harah"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Then Tamar got up",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "and departed",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "And she removed",
+        "lemma": "sur"
+      },
+      {
+        "surface": "her veil",
+        "lemma": "tsaiph"
+      },
+      {
+        "surface": "and put on her widow’s",
+        "lemma": "almanut"
+      },
+      {
+        "surface": "garments",
+        "lemma": "beged"
+      },
+      {
+        "surface": "again",
+        "lemma": "lavash"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Now when Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "sent",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "his friend Hirah",
+        "lemma": "rea"
+      },
+      {
+        "surface": "the Adullamite",
+        "lemma": "adullami"
+      },
+      {
+        "surface": "with",
+        "lemma": "yad"
+      },
+      {
+        "surface": "the young goat",
+        "lemma": "gedi"
+      },
+      {
+        "surface": "to collect",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "the items he had left with",
+        "lemma": "aravon"
+      },
+      {
+        "surface": "the woman",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "find her",
+        "lemma": "matsa"
+      }
+    ],
+    "21": [
+      {
+        "surface": "He asked",
+        "lemma": "shaal"
+      },
+      {
+        "surface": "the men",
+        "lemma": "enosh"
+      },
+      {
+        "surface": "of that place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "Where",
+        "lemma": "ayyeh"
+      },
+      {
+        "surface": "is the shrine prostitute",
+        "lemma": "qedeshah"
+      },
+      {
+        "surface": "the road",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "at Enaim",
+        "lemma": "enayim"
+      },
+      {
+        "surface": "shrine prostitute",
+        "lemma": "qedeshah"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "find her",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "the men",
+        "lemma": "enosh"
+      },
+      {
+        "surface": "of that place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "shrine prostitute",
+        "lemma": "qedeshah"
+      }
+    ],
+    "23": [
+      {
+        "surface": "keep the items",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "a laughingstock",
+        "lemma": "buz"
+      },
+      {
+        "surface": "After all",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "I did send her",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "young goat",
+        "lemma": "gedi"
+      },
+      {
+        "surface": "find her",
+        "lemma": "matsa"
+      }
+    ],
+    "24": [
+      {
+        "surface": "three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "months later",
+        "lemma": "chodesh"
+      },
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "was told",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "Your daughter-in-law",
+        "lemma": "kallah"
+      },
+      {
+        "surface": "Tamar",
+        "lemma": "tamar"
+      },
+      {
+        "surface": "has prostituted herself",
+        "lemma": "zanah"
+      },
+      {
+        "surface": "now",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "she is pregnant",
+        "lemma": "harah"
+      },
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "Let her be burned to death",
+        "lemma": "saraph"
+      }
+    ],
+    "25": [
+      {
+        "surface": "sent",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "father-in-law",
+        "lemma": "cham"
+      },
+      {
+        "surface": "pregnant",
+        "lemma": "harah"
+      },
+      {
+        "surface": "Please",
+        "lemma": "na"
+      },
+      {
+        "surface": "examine them",
+        "lemma": "nakhar"
+      },
+      {
+        "surface": "Whose",
+        "lemma": "mi"
+      },
+      {
+        "surface": "seal",
+        "lemma": "chotemet"
+      },
+      {
+        "surface": "and cord",
+        "lemma": "patil"
+      },
+      {
+        "surface": "and staff",
+        "lemma": "matteh"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "recognized the items",
+        "lemma": "nakhar"
+      },
+      {
+        "surface": "She is more righteous",
+        "lemma": "tsadaq"
+      },
+      {
+        "surface": "to my son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Shelah",
+        "lemma": "shelah"
+      },
+      {
+        "surface": "have relations with her",
+        "lemma": "yada"
+      },
+      {
+        "surface": "again",
+        "lemma": "yasaph"
+      }
+    ],
+    "27": [
+      {
+        "surface": "for Tamar to give birth",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "there",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "were twins",
+        "lemma": "taom"
+      },
+      {
+        "surface": "in her womb",
+        "lemma": "beten"
+      }
+    ],
+    "28": [
+      {
+        "surface": "as she was giving birth",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "his hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "so the midwife",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "took",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "a scarlet thread",
+        "lemma": "shani"
+      },
+      {
+        "surface": "and tied it",
+        "lemma": "qashar"
+      },
+      {
+        "surface": "his wrist",
+        "lemma": "yad"
+      },
+      {
+        "surface": "first",
+        "lemma": "rishon"
+      }
+    ],
+    "29": [
+      {
+        "surface": "But when he pulled his hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "and his brother",
+        "lemma": "ach"
+      },
+      {
+        "surface": "You have broken out first",
+        "lemma": "parats"
+      },
+      {
+        "surface": "Perez",
+        "lemma": "perets"
+      }
+    ],
+    "30": [
+      {
+        "surface": "Then",
+        "lemma": "achar"
+      },
+      {
+        "surface": "his brother",
+        "lemma": "ach"
+      },
+      {
+        "surface": "the scarlet thread",
+        "lemma": "shani"
+      },
+      {
+        "surface": "his wrist",
+        "lemma": "yad"
+      },
+      {
+        "surface": "Zerah",
+        "lemma": "zerach"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "yehudah",
+    "er",
+    "ach"
+  ]
+}

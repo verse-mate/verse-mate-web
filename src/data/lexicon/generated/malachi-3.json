@@ -1,0 +1,741 @@
+{
+  "bookId": 39,
+  "book": "Malachi",
+  "chapter": 3,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Behold",
+        "lemma": "hen"
+      },
+      {
+        "surface": "I will send",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "My messenger",
+        "lemma": "maleakh"
+      },
+      {
+        "surface": "who will prepare",
+        "lemma": "panah"
+      },
+      {
+        "surface": "the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "before Me",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "Then the Lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "seek",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "will suddenly",
+        "lemma": "pitom"
+      },
+      {
+        "surface": "His temple",
+        "lemma": "hekhal"
+      },
+      {
+        "surface": "the Messenger",
+        "lemma": "maleakh"
+      },
+      {
+        "surface": "of the covenant",
+        "lemma": "berit"
+      },
+      {
+        "surface": "delight",
+        "lemma": "chaphets"
+      },
+      {
+        "surface": "see",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      }
+    ],
+    "2": [
+      {
+        "surface": "But who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "can endure",
+        "lemma": "kul"
+      },
+      {
+        "surface": "the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "And who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "can stand",
+        "lemma": "amad"
+      },
+      {
+        "surface": "will be like a refiner’s",
+        "lemma": "tsaraph"
+      },
+      {
+        "surface": "fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "like a launderer’s",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "soap",
+        "lemma": "borit"
+      }
+    ],
+    "3": [
+      {
+        "surface": "as a refiner",
+        "lemma": "tsaraph"
+      },
+      {
+        "surface": "and purifier",
+        "lemma": "taher"
+      },
+      {
+        "surface": "of silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "He will purify",
+        "lemma": "taher"
+      },
+      {
+        "surface": "the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Levi",
+        "lemma": "levi"
+      },
+      {
+        "surface": "and refine",
+        "lemma": "zaqaq"
+      },
+      {
+        "surface": "like gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "and silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "Then they will present",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "offerings",
+        "lemma": "minchah"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "in righteousness",
+        "lemma": "tsedaqah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Then the offerings",
+        "lemma": "minchah"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "and Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "will please",
+        "lemma": "arev"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "as in days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of old",
+        "lemma": "olam"
+      },
+      {
+        "surface": "and years",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "gone by",
+        "lemma": "qadmoni"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Then I will draw near",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "for judgment",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "a swift",
+        "lemma": "mahar"
+      },
+      {
+        "surface": "witness",
+        "lemma": "ed"
+      },
+      {
+        "surface": "against sorcerers",
+        "lemma": "kashaph"
+      },
+      {
+        "surface": "and adulterers",
+        "lemma": "naaph"
+      },
+      {
+        "surface": "and",
+        "lemma": "shava"
+      },
+      {
+        "surface": "perjurers",
+        "lemma": "sheqer"
+      },
+      {
+        "surface": "against oppressors",
+        "lemma": "ashaq"
+      },
+      {
+        "surface": "of the widowed",
+        "lemma": "almanah"
+      },
+      {
+        "surface": "and fatherless",
+        "lemma": "yatom"
+      },
+      {
+        "surface": "and against those who defraud laborers",
+        "lemma": "sakhar"
+      },
+      {
+        "surface": "of their wages",
+        "lemma": "sakhir"
+      },
+      {
+        "surface": "and deny justice",
+        "lemma": "natah"
+      },
+      {
+        "surface": "to the foreigner",
+        "lemma": "ger"
+      },
+      {
+        "surface": "fear Me",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      }
+    ],
+    "6": [
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "change",
+        "lemma": "shanah"
+      },
+      {
+        "surface": "descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "been destroyed",
+        "lemma": "kalah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Yet from the days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "you have turned away",
+        "lemma": "sur"
+      },
+      {
+        "surface": "from My statutes",
+        "lemma": "choq"
+      },
+      {
+        "surface": "kept them",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "How",
+        "lemma": "mah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Will a man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "rob",
+        "lemma": "qava"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "are robbing",
+        "lemma": "qava"
+      },
+      {
+        "surface": "How",
+        "lemma": "mah"
+      },
+      {
+        "surface": "do we rob You",
+        "lemma": "qava"
+      },
+      {
+        "surface": "In tithes",
+        "lemma": "maaser"
+      },
+      {
+        "surface": "and offerings",
+        "lemma": "terumah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "are cursed",
+        "lemma": "arar"
+      },
+      {
+        "surface": "with a curse",
+        "lemma": "meerah"
+      },
+      {
+        "surface": "nation",
+        "lemma": "goy"
+      },
+      {
+        "surface": "are still robbing Me",
+        "lemma": "qava"
+      }
+    ],
+    "10": [
+      {
+        "surface": "tithe",
+        "lemma": "maaser"
+      },
+      {
+        "surface": "the storehouse",
+        "lemma": "bet"
+      },
+      {
+        "surface": "food",
+        "lemma": "tereph"
+      },
+      {
+        "surface": "in My house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "Test Me",
+        "lemma": "bachan"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "open",
+        "lemma": "patach"
+      },
+      {
+        "surface": "the windows",
+        "lemma": "arubbah"
+      },
+      {
+        "surface": "of heaven",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "and pour out",
+        "lemma": "ruq"
+      },
+      {
+        "surface": "blessing",
+        "lemma": "berakhah"
+      },
+      {
+        "surface": "without",
+        "lemma": "beli"
+      },
+      {
+        "surface": "measure",
+        "lemma": "day"
+      }
+    ],
+    "11": [
+      {
+        "surface": "I will rebuke",
+        "lemma": "gaar"
+      },
+      {
+        "surface": "the devourer",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "destroy",
+        "lemma": "shachat"
+      },
+      {
+        "surface": "the fruits",
+        "lemma": "peri"
+      },
+      {
+        "surface": "of your land",
+        "lemma": "adamah"
+      },
+      {
+        "surface": "and the vine",
+        "lemma": "gephen"
+      },
+      {
+        "surface": "in your field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "fail to produce fruit",
+        "lemma": "shakhol"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      }
+    ],
+    "12": [
+      {
+        "surface": "the nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "will call you blessed",
+        "lemma": "ashar"
+      },
+      {
+        "surface": "a land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of delight",
+        "lemma": "chephets"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Your words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "have been harsh",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "have we spoken",
+        "lemma": "davar"
+      }
+    ],
+    "14": [
+      {
+        "surface": "It is futile",
+        "lemma": "shav"
+      },
+      {
+        "surface": "to serve",
+        "lemma": "avad"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "have we gained",
+        "lemma": "betsa"
+      },
+      {
+        "surface": "by keeping",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "His requirements",
+        "lemma": "mishmeret"
+      },
+      {
+        "surface": "and walking",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "mournfully",
+        "lemma": "qedorannit"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      }
+    ],
+    "15": [
+      {
+        "surface": "So now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "call the arrogant",
+        "lemma": "zed"
+      },
+      {
+        "surface": "blessed",
+        "lemma": "ashar"
+      },
+      {
+        "surface": "prosper",
+        "lemma": "banah"
+      },
+      {
+        "surface": "test",
+        "lemma": "bachan"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "and escape",
+        "lemma": "malat"
+      }
+    ],
+    "16": [
+      {
+        "surface": "those who feared",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "davar"
+      },
+      {
+        "surface": "with one",
+        "lemma": "ish"
+      },
+      {
+        "surface": "another",
+        "lemma": "rea"
+      },
+      {
+        "surface": "and the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "listened",
+        "lemma": "qashav"
+      },
+      {
+        "surface": "So a scroll",
+        "lemma": "sepher"
+      },
+      {
+        "surface": "of remembrance",
+        "lemma": "zikhron"
+      },
+      {
+        "surface": "was written",
+        "lemma": "katav"
+      },
+      {
+        "surface": "before Him",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "regarding those who feared",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "and honored",
+        "lemma": "chashav"
+      },
+      {
+        "surface": "His name",
+        "lemma": "shem"
+      }
+    ],
+    "17": [
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "on the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "My treasured possession",
+        "lemma": "segullah"
+      },
+      {
+        "surface": "And I will spare",
+        "lemma": "chamal"
+      },
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "spares",
+        "lemma": "chamal"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "who serves",
+        "lemma": "avad"
+      }
+    ],
+    "18": [
+      {
+        "surface": "between",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "and the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "between",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "those who serve",
+        "lemma": "avad"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "tsava",
+    "qava",
+    "mah"
+  ]
+}

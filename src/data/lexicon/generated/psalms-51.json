@@ -1,0 +1,539 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 51,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "For the choirmaster",
+        "lemma": "natsach"
+      },
+      {
+        "surface": "A Psalm",
+        "lemma": "mizmor"
+      },
+      {
+        "surface": "of David",
+        "lemma": "david"
+      },
+      {
+        "surface": "the prophet",
+        "lemma": "navi"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "batsheva"
+      },
+      {
+        "surface": "Bathsheba",
+        "lemma": "batsheva"
+      },
+      {
+        "surface": "Have mercy on me",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "O God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "according to Your loving devotion",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "according to Your great",
+        "lemma": "rov"
+      },
+      {
+        "surface": "compassion",
+        "lemma": "racham"
+      },
+      {
+        "surface": "blot out",
+        "lemma": "machah"
+      },
+      {
+        "surface": "my transgressions",
+        "lemma": "pesah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Wash me clean",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "of my iniquity",
+        "lemma": "avan"
+      },
+      {
+        "surface": "and cleanse me",
+        "lemma": "taher"
+      },
+      {
+        "surface": "from my sin",
+        "lemma": "chattaah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "my transgressions",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "and my sin",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "is always",
+        "lemma": "tamid"
+      },
+      {
+        "surface": "before me",
+        "lemma": "neged"
+      }
+    ],
+    "4": [
+      {
+        "surface": "You only",
+        "lemma": "bad"
+      },
+      {
+        "surface": "have I sinned",
+        "lemma": "chata"
+      },
+      {
+        "surface": "what is evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "in Your sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "You may be proved right",
+        "lemma": "tsadaq"
+      },
+      {
+        "surface": "when You speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "and blameless",
+        "lemma": "zakhah"
+      },
+      {
+        "surface": "when You judge",
+        "lemma": "shaphat"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Surely",
+        "lemma": "hen"
+      },
+      {
+        "surface": "I was brought forth",
+        "lemma": "chul"
+      },
+      {
+        "surface": "in iniquity",
+        "lemma": "avan"
+      },
+      {
+        "surface": "I was sinful",
+        "lemma": "chet"
+      },
+      {
+        "surface": "when my mother",
+        "lemma": "em"
+      },
+      {
+        "surface": "conceived me",
+        "lemma": "yacham"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Surely",
+        "lemma": "hen"
+      },
+      {
+        "surface": "You desire",
+        "lemma": "chaphets"
+      },
+      {
+        "surface": "truth",
+        "lemma": "emet"
+      },
+      {
+        "surface": "in the inmost being",
+        "lemma": "tuchah"
+      },
+      {
+        "surface": "You teach me",
+        "lemma": "yada"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "in the inmost place",
+        "lemma": "satam"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Purify me",
+        "lemma": "chata"
+      },
+      {
+        "surface": "with hyssop",
+        "lemma": "ezov"
+      },
+      {
+        "surface": "and I will be clean",
+        "lemma": "taher"
+      },
+      {
+        "surface": "wash me",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "and I will be whiter",
+        "lemma": "laven"
+      },
+      {
+        "surface": "than snow",
+        "lemma": "sheleg"
+      }
+    ],
+    "8": [
+      {
+        "surface": "joy",
+        "lemma": "sasvon"
+      },
+      {
+        "surface": "and gladness",
+        "lemma": "simchah"
+      },
+      {
+        "surface": "let the bones",
+        "lemma": "etsem"
+      },
+      {
+        "surface": "You have crushed",
+        "lemma": "dakhah"
+      },
+      {
+        "surface": "rejoice",
+        "lemma": "gil"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Hide",
+        "lemma": "satar"
+      },
+      {
+        "surface": "Your face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "from my sins",
+        "lemma": "chet"
+      },
+      {
+        "surface": "and blot out",
+        "lemma": "machah"
+      },
+      {
+        "surface": "my iniquities",
+        "lemma": "avan"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Create",
+        "lemma": "bara"
+      },
+      {
+        "surface": "a clean",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "O God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "and renew",
+        "lemma": "chadash"
+      },
+      {
+        "surface": "a right",
+        "lemma": "kun"
+      },
+      {
+        "surface": "spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "within me",
+        "lemma": "qerev"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Cast me not away",
+        "lemma": "shalakh"
+      },
+      {
+        "surface": "from Your presence",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "Your Holy",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "ruach"
+      }
+    ],
+    "12": [
+      {
+        "surface": "the joy",
+        "lemma": "sasvon"
+      },
+      {
+        "surface": "of Your salvation",
+        "lemma": "yesah"
+      },
+      {
+        "surface": "and sustain me",
+        "lemma": "samakh"
+      },
+      {
+        "surface": "with a willing",
+        "lemma": "nadiv"
+      },
+      {
+        "surface": "spirit",
+        "lemma": "ruach"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Then I will teach",
+        "lemma": "lamad"
+      },
+      {
+        "surface": "transgressors",
+        "lemma": "pasah"
+      },
+      {
+        "surface": "Your ways",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "and sinners",
+        "lemma": "chatta"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Deliver me",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "from bloodguilt",
+        "lemma": "dam"
+      },
+      {
+        "surface": "O God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of my salvation",
+        "lemma": "teshuah"
+      },
+      {
+        "surface": "and my tongue",
+        "lemma": "lashon"
+      },
+      {
+        "surface": "will sing",
+        "lemma": "run"
+      },
+      {
+        "surface": "of Your righteousness",
+        "lemma": "tsedaqah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "O Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "open",
+        "lemma": "patach"
+      },
+      {
+        "surface": "my lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "and my mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "will declare",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "Your praise",
+        "lemma": "tehillah"
+      }
+    ],
+    "16": [
+      {
+        "surface": "delight",
+        "lemma": "chaphets"
+      },
+      {
+        "surface": "in sacrifice",
+        "lemma": "zevach"
+      },
+      {
+        "surface": "You take no pleasure",
+        "lemma": "ratsah"
+      },
+      {
+        "surface": "in burnt offerings",
+        "lemma": "olah"
+      }
+    ],
+    "17": [
+      {
+        "surface": "The sacrifices",
+        "lemma": "zevach"
+      },
+      {
+        "surface": "of God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "are a broken",
+        "lemma": "shavar"
+      },
+      {
+        "surface": "spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "a broken",
+        "lemma": "shavar"
+      },
+      {
+        "surface": "and a contrite",
+        "lemma": "dakhah"
+      },
+      {
+        "surface": "heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "O God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "despise",
+        "lemma": "bazah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "In Your good pleasure",
+        "lemma": "ratson"
+      },
+      {
+        "surface": "cause Zion",
+        "lemma": "tsiyyon"
+      },
+      {
+        "surface": "to prosper",
+        "lemma": "yatav"
+      },
+      {
+        "surface": "build up",
+        "lemma": "banah"
+      },
+      {
+        "surface": "the walls",
+        "lemma": "chomah"
+      },
+      {
+        "surface": "of Jerusalem",
+        "lemma": "yerushalaim"
+      }
+    ],
+    "19": [
+      {
+        "surface": "You will delight",
+        "lemma": "chaphets"
+      },
+      {
+        "surface": "in righteous",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "sacrifices",
+        "lemma": "zevach"
+      },
+      {
+        "surface": "in whole",
+        "lemma": "kalil"
+      },
+      {
+        "surface": "burnt offerings",
+        "lemma": "olah"
+      },
+      {
+        "surface": "bulls",
+        "lemma": "par"
+      },
+      {
+        "surface": "will be offered",
+        "lemma": "alah"
+      },
+      {
+        "surface": "Your altar",
+        "lemma": "mizbeach"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "ruach",
+    "zevach",
+    "chaphets"
+  ]
+}

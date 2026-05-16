@@ -1,0 +1,106 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 131,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "A song",
+        "lemma": "shir"
+      },
+      {
+        "surface": "of ascents",
+        "lemma": "maalah"
+      },
+      {
+        "surface": "Of David",
+        "lemma": "david"
+      },
+      {
+        "surface": "My heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "proud",
+        "lemma": "gavah"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "my eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "haughty",
+        "lemma": "rum"
+      },
+      {
+        "surface": "aspire",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "to great things",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "or matters too lofty",
+        "lemma": "pala"
+      }
+    ],
+    "2": [
+      {
+        "surface": "I have stilled",
+        "lemma": "shavah"
+      },
+      {
+        "surface": "and quieted",
+        "lemma": "damam"
+      },
+      {
+        "surface": "my soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "like a weaned child",
+        "lemma": "gamal"
+      },
+      {
+        "surface": "with his mother",
+        "lemma": "em"
+      },
+      {
+        "surface": "like a weaned child",
+        "lemma": "gamal"
+      },
+      {
+        "surface": "is my soul",
+        "lemma": "nephesh"
+      }
+    ],
+    "3": [
+      {
+        "surface": "O Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "put your hope",
+        "lemma": "yachal"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "both now",
+        "lemma": "attah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "nephesh",
+    "gamal"
+  ]
+}

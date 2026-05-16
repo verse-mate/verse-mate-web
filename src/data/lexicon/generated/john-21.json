@@ -1,0 +1,835 @@
+{
+  "bookId": 43,
+  "book": "John",
+  "chapter": 21,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "of Tiberias",
+        "lemma": "tiberias"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "again",
+        "lemma": "palin"
+      },
+      {
+        "surface": "revealed",
+        "lemma": "phaneroo"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "He made Himself known",
+        "lemma": "phaneroo"
+      },
+      {
+        "surface": "in this way",
+        "lemma": "houto"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Simon",
+        "lemma": "simon"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "Thomas",
+        "lemma": "thomas"
+      },
+      {
+        "surface": "Didymus",
+        "lemma": "didumos"
+      },
+      {
+        "surface": "Nathanael",
+        "lemma": "nathanael"
+      },
+      {
+        "surface": "Cana",
+        "lemma": "kana"
+      },
+      {
+        "surface": "in Galilee",
+        "lemma": "galilaia"
+      },
+      {
+        "surface": "of Zebedee",
+        "lemma": "zebedaios"
+      },
+      {
+        "surface": "two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "other",
+        "lemma": "allos"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "together",
+        "lemma": "homou"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Simon",
+        "lemma": "simon"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "I am going",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "fishing",
+        "lemma": "halieuo"
+      },
+      {
+        "surface": "got",
+        "lemma": "embaino"
+      },
+      {
+        "surface": "boat",
+        "lemma": "ploion"
+      },
+      {
+        "surface": "caught",
+        "lemma": "piazo"
+      },
+      {
+        "surface": "night",
+        "lemma": "nux"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Early in the morning",
+        "lemma": "proia"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "shore",
+        "lemma": "aigialos"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      }
+    ],
+    "5": [
+      {
+        "surface": "He",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Children",
+        "lemma": "paidion"
+      },
+      {
+        "surface": "fish",
+        "lemma": "prosphagion"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Cast",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "net",
+        "lemma": "diktuon"
+      },
+      {
+        "surface": "right",
+        "lemma": "dexios"
+      },
+      {
+        "surface": "side",
+        "lemma": "meros"
+      },
+      {
+        "surface": "boat",
+        "lemma": "ploion"
+      },
+      {
+        "surface": "they cast it there",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "they were unable",
+        "lemma": "ischuo"
+      },
+      {
+        "surface": "to haul it in",
+        "lemma": "helkuo"
+      },
+      {
+        "surface": "great number",
+        "lemma": "plethos"
+      },
+      {
+        "surface": "fish",
+        "lemma": "ichthus"
+      }
+    ],
+    "7": [
+      {
+        "surface": "disciple",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "loved",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "to Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Simon",
+        "lemma": "simon"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "he put on",
+        "lemma": "diazonnumi"
+      },
+      {
+        "surface": "outer garment",
+        "lemma": "ependutes"
+      },
+      {
+        "surface": "jumped",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "sea",
+        "lemma": "thalassa"
+      }
+    ],
+    "8": [
+      {
+        "surface": "other",
+        "lemma": "allos"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "boat",
+        "lemma": "ploiarion"
+      },
+      {
+        "surface": "They dragged in",
+        "lemma": "suro"
+      },
+      {
+        "surface": "net",
+        "lemma": "diktuon"
+      },
+      {
+        "surface": "fish",
+        "lemma": "ichthus"
+      },
+      {
+        "surface": "far",
+        "lemma": "makran"
+      },
+      {
+        "surface": "land",
+        "lemma": "ge"
+      },
+      {
+        "surface": "a hundred yards",
+        "lemma": "diakosioi"
+      }
+    ],
+    "9": [
+      {
+        "surface": "they landed",
+        "lemma": "apobaino"
+      },
+      {
+        "surface": "they saw",
+        "lemma": "blepo"
+      },
+      {
+        "surface": "a charcoal fire",
+        "lemma": "anthrakia"
+      },
+      {
+        "surface": "there",
+        "lemma": "keimai"
+      },
+      {
+        "surface": "fish",
+        "lemma": "opsarion"
+      },
+      {
+        "surface": "on it",
+        "lemma": "epikeimai"
+      },
+      {
+        "surface": "some bread",
+        "lemma": "artos"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Bring",
+        "lemma": "phero"
+      },
+      {
+        "surface": "fish",
+        "lemma": "opsarion"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "nun"
+      },
+      {
+        "surface": "you have just caught",
+        "lemma": "piazo"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Simon",
+        "lemma": "simon"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "went aboard",
+        "lemma": "anabaino"
+      },
+      {
+        "surface": "dragged",
+        "lemma": "helkuo"
+      },
+      {
+        "surface": "net",
+        "lemma": "diktuon"
+      },
+      {
+        "surface": "ashore",
+        "lemma": "ge"
+      },
+      {
+        "surface": "It was full",
+        "lemma": "mestos"
+      },
+      {
+        "surface": "fish",
+        "lemma": "ichthus"
+      },
+      {
+        "surface": "153",
+        "lemma": "hekaton"
+      },
+      {
+        "surface": "so many",
+        "lemma": "tosoutos"
+      },
+      {
+        "surface": "net",
+        "lemma": "diktuon"
+      },
+      {
+        "surface": "was not torn",
+        "lemma": "schizo"
+      }
+    ],
+    "12": [
+      {
+        "surface": "have breakfast",
+        "lemma": "aristao"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "dared",
+        "lemma": "tolmao"
+      },
+      {
+        "surface": "to ask",
+        "lemma": "exetazo"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "bread",
+        "lemma": "artos"
+      },
+      {
+        "surface": "He did the same with",
+        "lemma": "homoios"
+      },
+      {
+        "surface": "fish",
+        "lemma": "opsarion"
+      }
+    ],
+    "14": [
+      {
+        "surface": "now",
+        "lemma": "ede"
+      },
+      {
+        "surface": "the third time that",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "appeared",
+        "lemma": "phaneroo"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "after He was raised",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "the dead",
+        "lemma": "nekros"
+      }
+    ],
+    "15": [
+      {
+        "surface": "they had finished eating",
+        "lemma": "aristao"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Simon",
+        "lemma": "simon"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "Simon",
+        "lemma": "simon"
+      },
+      {
+        "surface": "son of John",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "do you love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "more",
+        "lemma": "pleion"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "I love",
+        "lemma": "phileo"
+      },
+      {
+        "surface": "Feed",
+        "lemma": "bosko"
+      },
+      {
+        "surface": "lambs",
+        "lemma": "arnion"
+      }
+    ],
+    "16": [
+      {
+        "surface": "vvv",
+        "lemma": "palin"
+      },
+      {
+        "surface": "a second time",
+        "lemma": "deuteros"
+      },
+      {
+        "surface": "Simon",
+        "lemma": "simon"
+      },
+      {
+        "surface": "son of John",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "do you love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "I love",
+        "lemma": "phileo"
+      },
+      {
+        "surface": "Shepherd",
+        "lemma": "poimaino"
+      },
+      {
+        "surface": "sheep",
+        "lemma": "probaton"
+      }
+    ],
+    "17": [
+      {
+        "surface": "third time",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "Simon",
+        "lemma": "simon"
+      },
+      {
+        "surface": "son of John",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "do you love",
+        "lemma": "phileo"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "was deeply hurt",
+        "lemma": "lupeo"
+      },
+      {
+        "surface": "a third time",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "Do you love",
+        "lemma": "phileo"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "I love",
+        "lemma": "phileo"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Feed",
+        "lemma": "bosko"
+      },
+      {
+        "surface": "sheep",
+        "lemma": "probaton"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "young",
+        "lemma": "neos"
+      },
+      {
+        "surface": "you dressed",
+        "lemma": "zonnumi"
+      },
+      {
+        "surface": "walked",
+        "lemma": "peripateo"
+      },
+      {
+        "surface": "you are old",
+        "lemma": "gerasko"
+      },
+      {
+        "surface": "you will stretch out",
+        "lemma": "ekteino"
+      },
+      {
+        "surface": "hands",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "someone else",
+        "lemma": "allos"
+      },
+      {
+        "surface": "will dress",
+        "lemma": "zonnumi"
+      },
+      {
+        "surface": "lead you",
+        "lemma": "phero"
+      }
+    ],
+    "19": [
+      {
+        "surface": "to indicate",
+        "lemma": "semaino"
+      },
+      {
+        "surface": "the kind of death",
+        "lemma": "thanatos"
+      },
+      {
+        "surface": "by which",
+        "lemma": "poios"
+      },
+      {
+        "surface": "Peter would glorify",
+        "lemma": "doxazo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Follow",
+        "lemma": "akoloutheo"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "turned",
+        "lemma": "epistrepho"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "blepo"
+      },
+      {
+        "surface": "disciple",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "loved",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "following them",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "had leaned back",
+        "lemma": "anapipto"
+      },
+      {
+        "surface": "against Jesus",
+        "lemma": "stethos"
+      },
+      {
+        "surface": "supper",
+        "lemma": "deipnon"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "betray",
+        "lemma": "paradidomi"
+      }
+    ],
+    "21": [
+      {
+        "surface": "he",
+        "lemma": "petros"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "to remain",
+        "lemma": "meno"
+      },
+      {
+        "surface": "follow",
+        "lemma": "akoloutheo"
+      }
+    ],
+    "23": [
+      {
+        "surface": "rumor",
+        "lemma": "logos"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "disciple",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "die",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "he would not die",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "to remain",
+        "lemma": "meno"
+      }
+    ],
+    "24": [
+      {
+        "surface": "disciple",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "testifies",
+        "lemma": "martureo"
+      },
+      {
+        "surface": "testimony",
+        "lemma": "marturia"
+      },
+      {
+        "surface": "true",
+        "lemma": "alethes"
+      }
+    ],
+    "25": [
+      {
+        "surface": "more things",
+        "lemma": "allos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "I suppose that",
+        "lemma": "oiomai"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "would have space",
+        "lemma": "choreo"
+      },
+      {
+        "surface": "books",
+        "lemma": "biblion"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "opsarion",
+    "zonnumi",
+    "aristao"
+  ]
+}

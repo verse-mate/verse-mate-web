@@ -1,0 +1,189 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 124,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "A song",
+        "lemma": "shir"
+      },
+      {
+        "surface": "of ascents",
+        "lemma": "maalah"
+      },
+      {
+        "surface": "Of David",
+        "lemma": "david"
+      },
+      {
+        "surface": "If the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "had not",
+        "lemma": "lule"
+      },
+      {
+        "surface": "let Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "now",
+        "lemma": "na"
+      }
+    ],
+    "2": [
+      {
+        "surface": "if the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "had not",
+        "lemma": "lule"
+      },
+      {
+        "surface": "when men",
+        "lemma": "adam"
+      },
+      {
+        "surface": "attacked",
+        "lemma": "qamay"
+      }
+    ],
+    "3": [
+      {
+        "surface": "when their anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "flared",
+        "lemma": "charah"
+      },
+      {
+        "surface": "they would have swallowed us",
+        "lemma": "bala"
+      },
+      {
+        "surface": "alive",
+        "lemma": "chay"
+      }
+    ],
+    "4": [
+      {
+        "surface": "the floods",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "would have engulfed us",
+        "lemma": "shataph"
+      },
+      {
+        "surface": "then the torrent",
+        "lemma": "nachal"
+      },
+      {
+        "surface": "would have overwhelmed",
+        "lemma": "avar"
+      },
+      {
+        "surface": "us",
+        "lemma": "nephesh"
+      }
+    ],
+    "5": [
+      {
+        "surface": "the raging",
+        "lemma": "zedon"
+      },
+      {
+        "surface": "waters",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "would have swept us away",
+        "lemma": "avar"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Blessed",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "be the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "as prey",
+        "lemma": "tereph"
+      },
+      {
+        "surface": "to their teeth",
+        "lemma": "shen"
+      }
+    ],
+    "7": [
+      {
+        "surface": "We",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "have escaped",
+        "lemma": "malat"
+      },
+      {
+        "surface": "like a bird",
+        "lemma": "tsippor"
+      },
+      {
+        "surface": "from the snare",
+        "lemma": "pach"
+      },
+      {
+        "surface": "of the fowler",
+        "lemma": "yaqosh"
+      },
+      {
+        "surface": "the net",
+        "lemma": "pach"
+      },
+      {
+        "surface": "is torn",
+        "lemma": "shavar"
+      },
+      {
+        "surface": "have slipped away",
+        "lemma": "malat"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Our help",
+        "lemma": "ezer"
+      },
+      {
+        "surface": "is in the name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of heaven",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "and earth",
+        "lemma": "erets"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "pach",
+    "nephesh",
+    "mayim"
+  ]
+}

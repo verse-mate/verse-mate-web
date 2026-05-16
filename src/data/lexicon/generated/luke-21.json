@@ -1,0 +1,933 @@
+{
+  "bookId": 42,
+  "book": "Luke",
+  "chapter": 21,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Jesus looked up",
+        "lemma": "anablepo"
+      },
+      {
+        "surface": "rich",
+        "lemma": "plousios"
+      },
+      {
+        "surface": "putting",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "gifts",
+        "lemma": "doron"
+      },
+      {
+        "surface": "treasury",
+        "lemma": "gazophulakion"
+      }
+    ],
+    "2": [
+      {
+        "surface": "poor",
+        "lemma": "penichros"
+      },
+      {
+        "surface": "widow",
+        "lemma": "chera"
+      },
+      {
+        "surface": "put",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "in",
+        "lemma": "ekei"
+      },
+      {
+        "surface": "two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "small copper coins",
+        "lemma": "leptos"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Truly",
+        "lemma": "alethos"
+      },
+      {
+        "surface": "poor",
+        "lemma": "ptochos"
+      },
+      {
+        "surface": "widow",
+        "lemma": "chera"
+      },
+      {
+        "surface": "has put in",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "more",
+        "lemma": "pleion"
+      }
+    ],
+    "4": [
+      {
+        "surface": "contributed",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "surplus",
+        "lemma": "perisseuo"
+      },
+      {
+        "surface": "poverty",
+        "lemma": "husterema"
+      },
+      {
+        "surface": "has put in",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "to live on",
+        "lemma": "bios"
+      }
+    ],
+    "5": [
+      {
+        "surface": "temple",
+        "lemma": "hieros"
+      },
+      {
+        "surface": "was adorned",
+        "lemma": "kosmeo"
+      },
+      {
+        "surface": "with beautiful",
+        "lemma": "kalos"
+      },
+      {
+        "surface": "stones",
+        "lemma": "lithos"
+      },
+      {
+        "surface": "consecrated gifts",
+        "lemma": "anathema"
+      }
+    ],
+    "6": [
+      {
+        "surface": "you see here",
+        "lemma": "theoreo"
+      },
+      {
+        "surface": "the time",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "stone",
+        "lemma": "lithos"
+      },
+      {
+        "surface": "will be left",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "another",
+        "lemma": "lithos"
+      },
+      {
+        "surface": "will be thrown down",
+        "lemma": "kataluo"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Teacher",
+        "lemma": "didaskalos"
+      },
+      {
+        "surface": "they asked",
+        "lemma": "eperotao"
+      },
+      {
+        "surface": "sign",
+        "lemma": "semeion"
+      },
+      {
+        "surface": "are about",
+        "lemma": "mello"
+      }
+    ],
+    "8": [
+      {
+        "surface": "See to it",
+        "lemma": "blepo"
+      },
+      {
+        "surface": "that you are not deceived",
+        "lemma": "planao"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "time",
+        "lemma": "kairos"
+      },
+      {
+        "surface": "is near",
+        "lemma": "engizo"
+      },
+      {
+        "surface": "follow",
+        "lemma": "poreuo"
+      }
+    ],
+    "9": [
+      {
+        "surface": "wars",
+        "lemma": "polemos"
+      },
+      {
+        "surface": "rebellions",
+        "lemma": "akatastasia"
+      },
+      {
+        "surface": "be alarmed",
+        "lemma": "ptoeo"
+      },
+      {
+        "surface": "must",
+        "lemma": "dei"
+      },
+      {
+        "surface": "first",
+        "lemma": "proton"
+      },
+      {
+        "surface": "end",
+        "lemma": "telos"
+      },
+      {
+        "surface": "imminent",
+        "lemma": "eutheos"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Then",
+        "lemma": "tote"
+      },
+      {
+        "surface": "Nation",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "will rise",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "nation",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      }
+    ],
+    "11": [
+      {
+        "surface": "earthquakes",
+        "lemma": "seismos"
+      },
+      {
+        "surface": "famines",
+        "lemma": "limos"
+      },
+      {
+        "surface": "pestilences",
+        "lemma": "loimos"
+      },
+      {
+        "surface": "places",
+        "lemma": "topos"
+      },
+      {
+        "surface": "fearful sights",
+        "lemma": "phobetron"
+      },
+      {
+        "surface": "signs",
+        "lemma": "semeion"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      }
+    ],
+    "12": [
+      {
+        "surface": "they will seize",
+        "lemma": "epiballo"
+      },
+      {
+        "surface": "persecute you",
+        "lemma": "dioko"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "they will deliver you",
+        "lemma": "paradidomi"
+      },
+      {
+        "surface": "synagogues",
+        "lemma": "sunagoge"
+      },
+      {
+        "surface": "prisons",
+        "lemma": "phulake"
+      },
+      {
+        "surface": "and they will bring you",
+        "lemma": "apago"
+      },
+      {
+        "surface": "kings",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "governors",
+        "lemma": "hegemon"
+      }
+    ],
+    "13": [
+      {
+        "surface": "This will be your opportunity",
+        "lemma": "apobaino"
+      },
+      {
+        "surface": "serve as witnesses",
+        "lemma": "marturion"
+      }
+    ],
+    "14": [
+      {
+        "surface": "make up",
+        "lemma": "tithemi"
+      },
+      {
+        "surface": "mind",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "to worry beforehand",
+        "lemma": "promeletao"
+      },
+      {
+        "surface": "how to defend yourselves",
+        "lemma": "apologeomai"
+      }
+    ],
+    "15": [
+      {
+        "surface": "speech",
+        "lemma": "stoma"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "sophia"
+      },
+      {
+        "surface": "your adversaries",
+        "lemma": "antikeimai"
+      },
+      {
+        "surface": "resist",
+        "lemma": "anthistemi"
+      },
+      {
+        "surface": "contradict",
+        "lemma": "antilego"
+      }
+    ],
+    "16": [
+      {
+        "surface": "You will be betrayed",
+        "lemma": "paradidomi"
+      },
+      {
+        "surface": "parents",
+        "lemma": "goneus"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "relatives",
+        "lemma": "sungenes"
+      },
+      {
+        "surface": "friends",
+        "lemma": "philos"
+      },
+      {
+        "surface": "will be put to death",
+        "lemma": "thanatoo"
+      }
+    ],
+    "17": [
+      {
+        "surface": "hated",
+        "lemma": "miseo"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      }
+    ],
+    "18": [
+      {
+        "surface": "a hair",
+        "lemma": "thrix"
+      },
+      {
+        "surface": "head",
+        "lemma": "kephale"
+      },
+      {
+        "surface": "will perish",
+        "lemma": "apolluo"
+      }
+    ],
+    "19": [
+      {
+        "surface": "patient endurance",
+        "lemma": "hupomone"
+      },
+      {
+        "surface": "you will gain",
+        "lemma": "ktaomai"
+      },
+      {
+        "surface": "souls",
+        "lemma": "psuche"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierousalem"
+      },
+      {
+        "surface": "surrounded",
+        "lemma": "kukloo"
+      },
+      {
+        "surface": "armies",
+        "lemma": "stratopedon"
+      },
+      {
+        "surface": "desolation",
+        "lemma": "eremosis"
+      },
+      {
+        "surface": "is near",
+        "lemma": "engizo"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Then",
+        "lemma": "tote"
+      },
+      {
+        "surface": "Judea",
+        "lemma": "ioudaia"
+      },
+      {
+        "surface": "flee",
+        "lemma": "pheugo"
+      },
+      {
+        "surface": "mountains",
+        "lemma": "oros"
+      },
+      {
+        "surface": "the city",
+        "lemma": "mesos"
+      },
+      {
+        "surface": "get out",
+        "lemma": "ekchoreo"
+      },
+      {
+        "surface": "country",
+        "lemma": "chora"
+      }
+    ],
+    "22": [
+      {
+        "surface": "the days",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "of vengeance",
+        "lemma": "ekdikesis"
+      },
+      {
+        "surface": "to fulfill",
+        "lemma": "pletho"
+      }
+    ],
+    "23": [
+      {
+        "surface": "days will be",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "nursing mothers",
+        "lemma": "thelazo"
+      },
+      {
+        "surface": "distress",
+        "lemma": "anagke"
+      },
+      {
+        "surface": "land",
+        "lemma": "ge"
+      },
+      {
+        "surface": "wrath",
+        "lemma": "orge"
+      },
+      {
+        "surface": "people",
+        "lemma": "laos"
+      }
+    ],
+    "24": [
+      {
+        "surface": "They will fall",
+        "lemma": "pipto"
+      },
+      {
+        "surface": "by the edge",
+        "lemma": "stoma"
+      },
+      {
+        "surface": "of the sword",
+        "lemma": "machaira"
+      },
+      {
+        "surface": "be led captive",
+        "lemma": "aichmalotizo"
+      },
+      {
+        "surface": "nations",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierousalem"
+      },
+      {
+        "surface": "trodden down",
+        "lemma": "pateo"
+      },
+      {
+        "surface": "the Gentiles",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "the times",
+        "lemma": "kairos"
+      },
+      {
+        "surface": "of the Gentiles",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "are fulfilled",
+        "lemma": "pleroo"
+      }
+    ],
+    "25": [
+      {
+        "surface": "signs",
+        "lemma": "semeion"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "helios"
+      },
+      {
+        "surface": "moon",
+        "lemma": "selene"
+      },
+      {
+        "surface": "stars",
+        "lemma": "astron"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "dismay",
+        "lemma": "sunoche"
+      },
+      {
+        "surface": "among the nations",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "bewildered",
+        "lemma": "aporia"
+      },
+      {
+        "surface": "the roaring",
+        "lemma": "echos"
+      },
+      {
+        "surface": "of the sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "the surging of the waves",
+        "lemma": "salos"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "will faint",
+        "lemma": "apopsucho"
+      },
+      {
+        "surface": "fear",
+        "lemma": "phobos"
+      },
+      {
+        "surface": "anxiety",
+        "lemma": "prosdokia"
+      },
+      {
+        "surface": "is coming",
+        "lemma": "eperchomai"
+      },
+      {
+        "surface": "earth",
+        "lemma": "oikoumene"
+      },
+      {
+        "surface": "powers",
+        "lemma": "dunamis"
+      },
+      {
+        "surface": "heavens",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "will be shaken",
+        "lemma": "saleuo"
+      }
+    ],
+    "27": [
+      {
+        "surface": "At that time",
+        "lemma": "tote"
+      },
+      {
+        "surface": "Son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "of Man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "a cloud",
+        "lemma": "nephele"
+      },
+      {
+        "surface": "power",
+        "lemma": "dunamis"
+      },
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      }
+    ],
+    "28": [
+      {
+        "surface": "begin",
+        "lemma": "archomai"
+      },
+      {
+        "surface": "stand up",
+        "lemma": "anakupto"
+      },
+      {
+        "surface": "lift up",
+        "lemma": "epairo"
+      },
+      {
+        "surface": "heads",
+        "lemma": "kephale"
+      },
+      {
+        "surface": "redemption",
+        "lemma": "apolutrosis"
+      },
+      {
+        "surface": "is drawing near",
+        "lemma": "engizo"
+      }
+    ],
+    "29": [
+      {
+        "surface": "a parable",
+        "lemma": "parabole"
+      },
+      {
+        "surface": "fig tree",
+        "lemma": "suke"
+      },
+      {
+        "surface": "trees",
+        "lemma": "dendron"
+      }
+    ],
+    "30": [
+      {
+        "surface": "they sprout leaves",
+        "lemma": "proballo"
+      },
+      {
+        "surface": "you can see",
+        "lemma": "blepo"
+      },
+      {
+        "surface": "summer",
+        "lemma": "theros"
+      }
+    ],
+    "31": [
+      {
+        "surface": "So",
+        "lemma": "houto"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      }
+    ],
+    "32": [
+      {
+        "surface": "Truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "generation",
+        "lemma": "genea"
+      },
+      {
+        "surface": "will not pass away",
+        "lemma": "parerchomai"
+      }
+    ],
+    "33": [
+      {
+        "surface": "Heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "will pass away",
+        "lemma": "parerchomai"
+      },
+      {
+        "surface": "words",
+        "lemma": "logos"
+      },
+      {
+        "surface": "will never pass away",
+        "lemma": "parerchomai"
+      }
+    ],
+    "34": [
+      {
+        "surface": "watch",
+        "lemma": "prosecho"
+      },
+      {
+        "surface": "hearts",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "will be weighed down",
+        "lemma": "bareo"
+      },
+      {
+        "surface": "dissipation",
+        "lemma": "kraipale"
+      },
+      {
+        "surface": "drunkenness",
+        "lemma": "methe"
+      },
+      {
+        "surface": "the worries",
+        "lemma": "merimna"
+      },
+      {
+        "surface": "of life",
+        "lemma": "biotikos"
+      },
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "will spring",
+        "lemma": "ephistemi"
+      },
+      {
+        "surface": "suddenly",
+        "lemma": "aiphnidios"
+      },
+      {
+        "surface": "a snare",
+        "lemma": "pagis"
+      }
+    ],
+    "35": [
+      {
+        "surface": "it will come",
+        "lemma": "eperchomai"
+      },
+      {
+        "surface": "dwell",
+        "lemma": "kathemai"
+      },
+      {
+        "surface": "the face",
+        "lemma": "prosopon"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      }
+    ],
+    "36": [
+      {
+        "surface": "keep watch",
+        "lemma": "agrupneo"
+      },
+      {
+        "surface": "times",
+        "lemma": "kairos"
+      },
+      {
+        "surface": "and pray",
+        "lemma": "deomai"
+      },
+      {
+        "surface": "you may have the strength",
+        "lemma": "katischuo"
+      },
+      {
+        "surface": "to escape",
+        "lemma": "ekpheugo"
+      },
+      {
+        "surface": "is about",
+        "lemma": "mello"
+      },
+      {
+        "surface": "Son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "of Man",
+        "lemma": "anthropos"
+      }
+    ],
+    "37": [
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "taught",
+        "lemma": "didasko"
+      },
+      {
+        "surface": "temple",
+        "lemma": "hieros"
+      },
+      {
+        "surface": "evening",
+        "lemma": "nux"
+      },
+      {
+        "surface": "to spend the night",
+        "lemma": "aulizomai"
+      },
+      {
+        "surface": "Mount",
+        "lemma": "oros"
+      },
+      {
+        "surface": "of",
+        "lemma": "kaleo"
+      },
+      {
+        "surface": "Olives",
+        "lemma": "elaia"
+      }
+    ],
+    "38": [
+      {
+        "surface": "early in the morning",
+        "lemma": "orthrizo"
+      },
+      {
+        "surface": "people {would come",
+        "lemma": "laos"
+      },
+      {
+        "surface": "temple",
+        "lemma": "hieros"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "eperchomai",
+    "parerchomai",
+    "engizo"
+  ]
+}

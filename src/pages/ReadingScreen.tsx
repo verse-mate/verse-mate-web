@@ -15,8 +15,10 @@ import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
 import SelectionToolbar from '@/components/SelectionToolbar';
 import ChapterNotesSheet, { hasPendingChapterNoteDraft } from '@/components/ChapterNotesSheet';
+import TokenizedVerse from '@/components/TokenizedVerse';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
+import { loadAlignmentFor, type ChapterAlignment } from '@/data/lexicon';
 import { vmTokens } from '@/styles/themeStyles';
 
 // Style primitives come from @/styles/themeStyles so colors flip with the
@@ -215,6 +217,21 @@ export default function ReadingScreen() {
 
   const subtitles = chapter?.subtitles || [];
   const verseCount = chapter?.verses.length || 0;
+  // Layer-1 lexical lookup. Hand-curated chapters resolve synchronously
+  // from cache on the next tick; generated chapters lazy-load their per-
+  // chapter JSON + (first time) the shared lemmas file. The render-with-
+  // null then re-render pattern is fine here — the verse text still shows
+  // immediately, lexical decoration appears the moment data is ready.
+  const [lexAlignment, setLexAlignment] = useState<ChapterAlignment | null>(null);
+  useEffect(() => {
+    setLexAlignment(null);
+    if (!state.bookId || !state.chapter) return;
+    let cancelled = false;
+    loadAlignmentFor(state.bookId, state.chapter).then((a) => {
+      if (!cancelled) setLexAlignment(a);
+    });
+    return () => { cancelled = true; };
+  }, [state.bookId, state.chapter]);
 
   return (
     // No `position: relative` on the outer div — prototype's .progress-bar
@@ -430,7 +447,15 @@ export default function ReadingScreen() {
                             {verse.number}
                           </sup>
                         )}
-                        {verse.text}{' '}
+                        {lexAlignment ? (
+                          <TokenizedVerse
+                            text={verse.text}
+                            verseNumber={verse.number}
+                            alignment={lexAlignment}
+                          />
+                        ) : (
+                          verse.text
+                        )}{' '}
                       </span>
                     );
                   })}

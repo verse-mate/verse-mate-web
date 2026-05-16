@@ -1,0 +1,923 @@
+{
+  "bookId": 5,
+  "book": "Deuteronomy",
+  "chapter": 14,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "are sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "cut",
+        "lemma": "gadad"
+      },
+      {
+        "surface": "or shave",
+        "lemma": "sum"
+      },
+      {
+        "surface": "your foreheads",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "on behalf of the dead",
+        "lemma": "mut"
+      }
+    ],
+    "2": [
+      {
+        "surface": "are a people",
+        "lemma": "am"
+      },
+      {
+        "surface": "holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has chosen",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "a people",
+        "lemma": "am"
+      },
+      {
+        "surface": "prized possession",
+        "lemma": "segullah"
+      },
+      {
+        "surface": "the peoples",
+        "lemma": "am"
+      },
+      {
+        "surface": "the face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "adamah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "detestable thing",
+        "lemma": "toevah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "are the animals",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "you may eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "The ox",
+        "lemma": "shor"
+      },
+      {
+        "surface": "the sheep",
+        "lemma": "kesev"
+      },
+      {
+        "surface": "the goat",
+        "lemma": "ez"
+      }
+    ],
+    "5": [
+      {
+        "surface": "the deer",
+        "lemma": "ayyal"
+      },
+      {
+        "surface": "the gazelle",
+        "lemma": "tsevi"
+      },
+      {
+        "surface": "the roe deer",
+        "lemma": "yachmur"
+      },
+      {
+        "surface": "the wild goat",
+        "lemma": "aqqo"
+      },
+      {
+        "surface": "the ibex",
+        "lemma": "dishon"
+      },
+      {
+        "surface": "the antelope",
+        "lemma": "teo"
+      },
+      {
+        "surface": "and the mountain sheep",
+        "lemma": "zemer"
+      }
+    ],
+    "6": [
+      {
+        "surface": "You may eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "animal",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "that has a split",
+        "lemma": "shesa"
+      },
+      {
+        "surface": "hoof",
+        "lemma": "parsah"
+      },
+      {
+        "surface": "divided",
+        "lemma": "shasa"
+      },
+      {
+        "surface": "in two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "and that chews",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the cud",
+        "lemma": "gerah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "But",
+        "lemma": "akh"
+      },
+      {
+        "surface": "of those that chew",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the cud",
+        "lemma": "gerah"
+      },
+      {
+        "surface": "or have a completely divided",
+        "lemma": "paras"
+      },
+      {
+        "surface": "hoof",
+        "lemma": "parsah"
+      },
+      {
+        "surface": "to eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the camel",
+        "lemma": "gamal"
+      },
+      {
+        "surface": "the rabbit",
+        "lemma": "arnevet"
+      },
+      {
+        "surface": "the rock badger",
+        "lemma": "shaphan"
+      },
+      {
+        "surface": "chew",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the cud",
+        "lemma": "gerah"
+      },
+      {
+        "surface": "have a divided",
+        "lemma": "paras"
+      },
+      {
+        "surface": "hoof",
+        "lemma": "parsah"
+      },
+      {
+        "surface": "are unclean",
+        "lemma": "tame"
+      }
+    ],
+    "8": [
+      {
+        "surface": "the pig",
+        "lemma": "chazir"
+      },
+      {
+        "surface": "has a divided",
+        "lemma": "paras"
+      },
+      {
+        "surface": "hoof",
+        "lemma": "parsah"
+      },
+      {
+        "surface": "chew the cud",
+        "lemma": "gerah"
+      },
+      {
+        "surface": "is unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "its meat",
+        "lemma": "basar"
+      },
+      {
+        "surface": "or touch",
+        "lemma": "naga"
+      },
+      {
+        "surface": "its carcass",
+        "lemma": "nevelah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "in the water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "you may eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "with fins",
+        "lemma": "senappir"
+      },
+      {
+        "surface": "and scales",
+        "lemma": "qasqeset"
+      }
+    ],
+    "10": [
+      {
+        "surface": "eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "does not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "have fins",
+        "lemma": "senappir"
+      },
+      {
+        "surface": "and scales",
+        "lemma": "qasqeset"
+      },
+      {
+        "surface": "is unclean",
+        "lemma": "tame"
+      }
+    ],
+    "11": [
+      {
+        "surface": "You may eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "clean",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "bird",
+        "lemma": "tsippor"
+      }
+    ],
+    "12": [
+      {
+        "surface": "eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the eagle",
+        "lemma": "nesher"
+      },
+      {
+        "surface": "the bearded vulture",
+        "lemma": "peres"
+      },
+      {
+        "surface": "the black vulture",
+        "lemma": "ozniyyah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "the falcon",
+        "lemma": "ayyah"
+      },
+      {
+        "surface": "any kind",
+        "lemma": "min"
+      },
+      {
+        "surface": "of kite",
+        "lemma": "dayyah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "kind",
+        "lemma": "min"
+      },
+      {
+        "surface": "of raven",
+        "lemma": "orev"
+      }
+    ],
+    "15": [
+      {
+        "surface": "vvv",
+        "lemma": "bat"
+      },
+      {
+        "surface": "the ostrich",
+        "lemma": "yaanah"
+      },
+      {
+        "surface": "the screech owl",
+        "lemma": "tachmas"
+      },
+      {
+        "surface": "the gull",
+        "lemma": "shachaph"
+      },
+      {
+        "surface": "any kind",
+        "lemma": "min"
+      },
+      {
+        "surface": "of hawk",
+        "lemma": "nets"
+      }
+    ],
+    "16": [
+      {
+        "surface": "the little owl",
+        "lemma": "kos"
+      },
+      {
+        "surface": "the great owl",
+        "lemma": "yanshuph"
+      },
+      {
+        "surface": "the white owl",
+        "lemma": "tanshemet"
+      }
+    ],
+    "17": [
+      {
+        "surface": "the desert owl",
+        "lemma": "qaat"
+      },
+      {
+        "surface": "the osprey",
+        "lemma": "racham"
+      },
+      {
+        "surface": "the cormorant",
+        "lemma": "shalakh"
+      }
+    ],
+    "18": [
+      {
+        "surface": "the stork",
+        "lemma": "chasidah"
+      },
+      {
+        "surface": "any kind",
+        "lemma": "min"
+      },
+      {
+        "surface": "of heron",
+        "lemma": "anaphah"
+      },
+      {
+        "surface": "the hoopoe",
+        "lemma": "dukhiphat"
+      },
+      {
+        "surface": "or the bat",
+        "lemma": "atalleph"
+      }
+    ],
+    "19": [
+      {
+        "surface": "flying",
+        "lemma": "oph"
+      },
+      {
+        "surface": "insects",
+        "lemma": "sherets"
+      },
+      {
+        "surface": "are unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "be eaten",
+        "lemma": "akhal"
+      }
+    ],
+    "20": [
+      {
+        "surface": "But you may eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "clean",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "bird",
+        "lemma": "oph"
+      }
+    ],
+    "21": [
+      {
+        "surface": "to eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "carcass",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "to the foreigner residing",
+        "lemma": "ger"
+      },
+      {
+        "surface": "within your gates",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "and he may eat it",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "you may sell",
+        "lemma": "makhar"
+      },
+      {
+        "surface": "it to a foreigner",
+        "lemma": "nokhri"
+      },
+      {
+        "surface": "are a holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "people",
+        "lemma": "am"
+      },
+      {
+        "surface": "belonging to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "cook",
+        "lemma": "bashal"
+      },
+      {
+        "surface": "a young goat",
+        "lemma": "gedi"
+      },
+      {
+        "surface": "in its mother’s",
+        "lemma": "em"
+      },
+      {
+        "surface": "milk",
+        "lemma": "chalav"
+      }
+    ],
+    "22": [
+      {
+        "surface": "You must be sure to set aside a tenth",
+        "lemma": "asar"
+      },
+      {
+        "surface": "the produce",
+        "lemma": "tevuah"
+      },
+      {
+        "surface": "each year",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "from your fields",
+        "lemma": "saday"
+      }
+    ],
+    "23": [
+      {
+        "surface": "And you are to eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "a tenth",
+        "lemma": "maaser"
+      },
+      {
+        "surface": "of your grain",
+        "lemma": "dagan"
+      },
+      {
+        "surface": "new wine",
+        "lemma": "tirosh"
+      },
+      {
+        "surface": "and oil",
+        "lemma": "yitshar"
+      },
+      {
+        "surface": "and the firstborn",
+        "lemma": "bekhor"
+      },
+      {
+        "surface": "of your herds",
+        "lemma": "baqar"
+      },
+      {
+        "surface": "and flocks",
+        "lemma": "tson"
+      },
+      {
+        "surface": "in the presence",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "at the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "He will choose",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "as a dwelling",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "for His Name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "you may learn",
+        "lemma": "lamad"
+      },
+      {
+        "surface": "to fear",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      }
+    ],
+    "24": [
+      {
+        "surface": "the distance",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "is too great",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "you to carry",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "has blessed you",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "will choose",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "to put",
+        "lemma": "sum"
+      },
+      {
+        "surface": "His Name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "is too far away",
+        "lemma": "rachaq"
+      }
+    ],
+    "25": [
+      {
+        "surface": "it for money",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "take",
+        "lemma": "tsur"
+      },
+      {
+        "surface": "the money",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "in your hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "and go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "will choose",
+        "lemma": "bachar"
+      }
+    ],
+    "26": [
+      {
+        "surface": "the money",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "you",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "desire",
+        "lemma": "avah"
+      },
+      {
+        "surface": "cattle",
+        "lemma": "baqar"
+      },
+      {
+        "surface": "sheep",
+        "lemma": "tson"
+      },
+      {
+        "surface": "wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "strong drink",
+        "lemma": "shekhar"
+      },
+      {
+        "surface": "you",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "wish",
+        "lemma": "shaal"
+      },
+      {
+        "surface": "You are to feast",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "in the presence",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "and rejoice",
+        "lemma": "samach"
+      },
+      {
+        "surface": "with your household",
+        "lemma": "bet"
+      }
+    ],
+    "27": [
+      {
+        "surface": "neglect",
+        "lemma": "azav"
+      },
+      {
+        "surface": "the Levite",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "within your gates",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "he has no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "portion",
+        "lemma": "cheleq"
+      },
+      {
+        "surface": "or inheritance",
+        "lemma": "nachalah"
+      }
+    ],
+    "28": [
+      {
+        "surface": "At the end",
+        "lemma": "qatseh"
+      },
+      {
+        "surface": "of every three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "years",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "a tenth",
+        "lemma": "maaser"
+      },
+      {
+        "surface": "your produce",
+        "lemma": "tevuah"
+      },
+      {
+        "surface": "year",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "and lay it up",
+        "lemma": "nuach"
+      },
+      {
+        "surface": "within your gates",
+        "lemma": "shaar"
+      }
+    ],
+    "29": [
+      {
+        "surface": "Then the Levite",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "he has no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "portion",
+        "lemma": "cheleq"
+      },
+      {
+        "surface": "or inheritance",
+        "lemma": "nachalah"
+      },
+      {
+        "surface": "the foreigner",
+        "lemma": "ger"
+      },
+      {
+        "surface": "the fatherless",
+        "lemma": "yatom"
+      },
+      {
+        "surface": "and the widow",
+        "lemma": "almanah"
+      },
+      {
+        "surface": "within your gates",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "and eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "and be satisfied",
+        "lemma": "sava"
+      },
+      {
+        "surface": "And the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "will bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the work",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "of your hands",
+        "lemma": "yad"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "akhal",
+    "tame",
+    "shaar"
+  ]
+}

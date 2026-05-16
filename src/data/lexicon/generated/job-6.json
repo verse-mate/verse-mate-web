@@ -1,0 +1,693 @@
+{
+  "bookId": 18,
+  "book": "Job",
+  "chapter": 6,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then Job",
+        "lemma": "iyyov"
+      },
+      {
+        "surface": "replied",
+        "lemma": "un"
+      }
+    ],
+    "2": [
+      {
+        "surface": "If only",
+        "lemma": "lu"
+      },
+      {
+        "surface": "my grief",
+        "lemma": "kaas"
+      },
+      {
+        "surface": "could be weighed",
+        "lemma": "shaqal"
+      },
+      {
+        "surface": "and placed",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "with",
+        "lemma": "yachad"
+      },
+      {
+        "surface": "my calamity",
+        "lemma": "hayyah"
+      },
+      {
+        "surface": "on the scales",
+        "lemma": "mozen"
+      }
+    ],
+    "3": [
+      {
+        "surface": "then",
+        "lemma": "attah"
+      },
+      {
+        "surface": "it would outweigh",
+        "lemma": "kavad"
+      },
+      {
+        "surface": "the sand",
+        "lemma": "chol"
+      },
+      {
+        "surface": "of the seas",
+        "lemma": "yam"
+      },
+      {
+        "surface": "my words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "have been rash",
+        "lemma": "lua"
+      }
+    ],
+    "4": [
+      {
+        "surface": "the arrows",
+        "lemma": "chets"
+      },
+      {
+        "surface": "of the Almighty",
+        "lemma": "shadday"
+      },
+      {
+        "surface": "my spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "drinks in",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "their poison",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "the terrors",
+        "lemma": "biutim"
+      },
+      {
+        "surface": "of God",
+        "lemma": "eloah"
+      },
+      {
+        "surface": "are arrayed against me",
+        "lemma": "arakh"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Does a wild donkey",
+        "lemma": "pere"
+      },
+      {
+        "surface": "bray",
+        "lemma": "nahaq"
+      },
+      {
+        "surface": "fresh grass",
+        "lemma": "deshe"
+      },
+      {
+        "surface": "an ox",
+        "lemma": "shor"
+      },
+      {
+        "surface": "low",
+        "lemma": "gaah"
+      },
+      {
+        "surface": "its fodder",
+        "lemma": "belil"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Is tasteless food",
+        "lemma": "taphel"
+      },
+      {
+        "surface": "eaten",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "without",
+        "lemma": "beli"
+      },
+      {
+        "surface": "salt",
+        "lemma": "melach"
+      },
+      {
+        "surface": "is there",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "flavor",
+        "lemma": "taam"
+      },
+      {
+        "surface": "in the white",
+        "lemma": "rir"
+      },
+      {
+        "surface": "of an egg",
+        "lemma": "challamut"
+      }
+    ],
+    "7": [
+      {
+        "surface": "My soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "refuses",
+        "lemma": "maen"
+      },
+      {
+        "surface": "to touch them",
+        "lemma": "naga"
+      },
+      {
+        "surface": "loathsome",
+        "lemma": "devay"
+      },
+      {
+        "surface": "food to me",
+        "lemma": "lechem"
+      }
+    ],
+    "8": [
+      {
+        "surface": "If only",
+        "lemma": "mi"
+      },
+      {
+        "surface": "my request",
+        "lemma": "sheelah"
+      },
+      {
+        "surface": "and God",
+        "lemma": "eloah"
+      },
+      {
+        "surface": "my hope",
+        "lemma": "tiqvah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "that God",
+        "lemma": "eloah"
+      },
+      {
+        "surface": "would be willing",
+        "lemma": "yaal"
+      },
+      {
+        "surface": "to crush me",
+        "lemma": "dakah"
+      },
+      {
+        "surface": "to unleash",
+        "lemma": "natar"
+      },
+      {
+        "surface": "His hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "and cut me off",
+        "lemma": "batsa"
+      }
+    ],
+    "10": [
+      {
+        "surface": "It still",
+        "lemma": "od"
+      },
+      {
+        "surface": "comfort",
+        "lemma": "nechamah"
+      },
+      {
+        "surface": "and joy",
+        "lemma": "salad"
+      },
+      {
+        "surface": "pain",
+        "lemma": "chil"
+      },
+      {
+        "surface": "denied",
+        "lemma": "kachad"
+      },
+      {
+        "surface": "the words",
+        "lemma": "emer"
+      },
+      {
+        "surface": "of the Holy One",
+        "lemma": "qadosh"
+      }
+    ],
+    "11": [
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "strength do I have",
+        "lemma": "koach"
+      },
+      {
+        "surface": "I should still hope",
+        "lemma": "yachal"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "is my future",
+        "lemma": "qets"
+      },
+      {
+        "surface": "I",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "should be patient",
+        "lemma": "arakh"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Is my strength",
+        "lemma": "koach"
+      },
+      {
+        "surface": "like that",
+        "lemma": "koach"
+      },
+      {
+        "surface": "of stone",
+        "lemma": "even"
+      },
+      {
+        "surface": "my flesh",
+        "lemma": "basar"
+      },
+      {
+        "surface": "made of bronze",
+        "lemma": "nachush"
+      }
+    ],
+    "13": [
+      {
+        "surface": "help",
+        "lemma": "ezrah"
+      },
+      {
+        "surface": "now that success",
+        "lemma": "tushiyyah"
+      },
+      {
+        "surface": "is driven",
+        "lemma": "nadach"
+      }
+    ],
+    "14": [
+      {
+        "surface": "A despairing man",
+        "lemma": "mas"
+      },
+      {
+        "surface": "should have the kindness",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "of his friend",
+        "lemma": "rea"
+      },
+      {
+        "surface": "even if he forsakes",
+        "lemma": "azav"
+      },
+      {
+        "surface": "the fear",
+        "lemma": "yirah"
+      },
+      {
+        "surface": "of the Almighty",
+        "lemma": "shadday"
+      }
+    ],
+    "15": [
+      {
+        "surface": "But my brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "are as faithless",
+        "lemma": "bagad"
+      },
+      {
+        "surface": "wadis",
+        "lemma": "nachal"
+      },
+      {
+        "surface": "as seasonal streams",
+        "lemma": "aphiq"
+      },
+      {
+        "surface": "that overflow",
+        "lemma": "avar"
+      }
+    ],
+    "16": [
+      {
+        "surface": "darkened",
+        "lemma": "qadar"
+      },
+      {
+        "surface": "of the ice",
+        "lemma": "qerach"
+      },
+      {
+        "surface": "of melting",
+        "lemma": "alam"
+      },
+      {
+        "surface": "snow",
+        "lemma": "sheleg"
+      }
+    ],
+    "17": [
+      {
+        "surface": "but ceasing",
+        "lemma": "tsamat"
+      },
+      {
+        "surface": "and vanishing",
+        "lemma": "daakh"
+      },
+      {
+        "surface": "from their channels",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "in the heat",
+        "lemma": "chamam"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Caravans",
+        "lemma": "orach"
+      },
+      {
+        "surface": "turn aside",
+        "lemma": "laphat"
+      },
+      {
+        "surface": "from their routes",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "they go",
+        "lemma": "alah"
+      },
+      {
+        "surface": "into the wasteland",
+        "lemma": "tohu"
+      },
+      {
+        "surface": "and perish",
+        "lemma": "avad"
+      }
+    ],
+    "19": [
+      {
+        "surface": "The caravans",
+        "lemma": "orach"
+      },
+      {
+        "surface": "of Tema",
+        "lemma": "tema"
+      },
+      {
+        "surface": "look for water",
+        "lemma": "navat"
+      },
+      {
+        "surface": "the travelers",
+        "lemma": "halikhah"
+      },
+      {
+        "surface": "of Sheba",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "hope",
+        "lemma": "qavah"
+      }
+    ],
+    "20": [
+      {
+        "surface": "They are confounded",
+        "lemma": "bush"
+      },
+      {
+        "surface": "they had hoped",
+        "lemma": "batach"
+      },
+      {
+        "surface": "brings disappointment",
+        "lemma": "chapher"
+      }
+    ],
+    "21": [
+      {
+        "surface": "now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "terror",
+        "lemma": "chatat"
+      },
+      {
+        "surface": "and you are afraid",
+        "lemma": "yare"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Give me something",
+        "lemma": "yahav"
+      },
+      {
+        "surface": "offer me a bribe",
+        "lemma": "shachad"
+      },
+      {
+        "surface": "from your wealth",
+        "lemma": "koach"
+      }
+    ],
+    "23": [
+      {
+        "surface": "deliver me",
+        "lemma": "malat"
+      },
+      {
+        "surface": "from the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of the enemy",
+        "lemma": "tsar"
+      },
+      {
+        "surface": "redeem me",
+        "lemma": "padah"
+      },
+      {
+        "surface": "from the grasp",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of the ruthless",
+        "lemma": "arits"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Teach me",
+        "lemma": "yara"
+      },
+      {
+        "surface": "will be silent",
+        "lemma": "charash"
+      },
+      {
+        "surface": "Help me understand",
+        "lemma": "bin"
+      },
+      {
+        "surface": "how",
+        "lemma": "mah"
+      },
+      {
+        "surface": "I have erred",
+        "lemma": "shagah"
+      }
+    ],
+    "25": [
+      {
+        "surface": "How",
+        "lemma": "mah"
+      },
+      {
+        "surface": "painful",
+        "lemma": "marats"
+      },
+      {
+        "surface": "are honest",
+        "lemma": "yosher"
+      },
+      {
+        "surface": "words",
+        "lemma": "emer"
+      },
+      {
+        "surface": "But what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "does your argument",
+        "lemma": "yakhach"
+      },
+      {
+        "surface": "prove",
+        "lemma": "yakhach"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Do you intend",
+        "lemma": "chashav"
+      },
+      {
+        "surface": "to correct",
+        "lemma": "yakhach"
+      },
+      {
+        "surface": "my words",
+        "lemma": "millah"
+      },
+      {
+        "surface": "and treat as wind",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "my cry",
+        "lemma": "emer"
+      },
+      {
+        "surface": "of despair",
+        "lemma": "yaash"
+      }
+    ],
+    "27": [
+      {
+        "surface": "You would even cast lots",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "for an orphan",
+        "lemma": "yatom"
+      },
+      {
+        "surface": "and barter",
+        "lemma": "karah"
+      },
+      {
+        "surface": "your friend",
+        "lemma": "rea"
+      }
+    ],
+    "28": [
+      {
+        "surface": "But now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "please",
+        "lemma": "yaal"
+      },
+      {
+        "surface": "look",
+        "lemma": "panah"
+      },
+      {
+        "surface": "Would I lie",
+        "lemma": "kazav"
+      },
+      {
+        "surface": "your face",
+        "lemma": "paneh"
+      }
+    ],
+    "29": [
+      {
+        "surface": "unjust",
+        "lemma": "evel"
+      },
+      {
+        "surface": "for my righteousness",
+        "lemma": "tsedeq"
+      }
+    ],
+    "30": [
+      {
+        "surface": "Is there",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "iniquity",
+        "lemma": "evel"
+      },
+      {
+        "surface": "on my tongue",
+        "lemma": "lashon"
+      },
+      {
+        "surface": "my mouth",
+        "lemma": "chekh"
+      },
+      {
+        "surface": "discern",
+        "lemma": "bin"
+      },
+      {
+        "surface": "malice",
+        "lemma": "havvah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "mah",
+    "koach",
+    "yakhach"
+  ]
+}

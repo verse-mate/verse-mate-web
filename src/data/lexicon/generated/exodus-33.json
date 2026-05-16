@@ -1,0 +1,879 @@
+{
+  "bookId": 2,
+  "book": "Exodus",
+  "chapter": 33,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "Leave",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "and the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "you brought up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "out of the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "I promised",
+        "lemma": "shava"
+      },
+      {
+        "surface": "to Abraham",
+        "lemma": "avraham"
+      },
+      {
+        "surface": "Isaac",
+        "lemma": "yitschaq"
+      },
+      {
+        "surface": "and Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "to your descendants",
+        "lemma": "zera"
+      }
+    ],
+    "2": [
+      {
+        "surface": "And I will send",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "an angel",
+        "lemma": "maleakh"
+      },
+      {
+        "surface": "before you",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "and I will drive out",
+        "lemma": "garash"
+      },
+      {
+        "surface": "the Canaanites",
+        "lemma": "kenaani"
+      },
+      {
+        "surface": "Amorites",
+        "lemma": "emori"
+      },
+      {
+        "surface": "Hittites",
+        "lemma": "chitti"
+      },
+      {
+        "surface": "Perizzites",
+        "lemma": "perizzi"
+      },
+      {
+        "surface": "Hivites",
+        "lemma": "chivvi"
+      },
+      {
+        "surface": "and Jebusites",
+        "lemma": "yevusi"
+      }
+    ],
+    "3": [
+      {
+        "surface": "a land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "flowing",
+        "lemma": "zuv"
+      },
+      {
+        "surface": "with milk",
+        "lemma": "chalav"
+      },
+      {
+        "surface": "and honey",
+        "lemma": "devash"
+      },
+      {
+        "surface": "go",
+        "lemma": "alah"
+      },
+      {
+        "surface": "with you",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "are a stiff-necked",
+        "lemma": "qasheh"
+      },
+      {
+        "surface": "people",
+        "lemma": "am"
+      },
+      {
+        "surface": "I might destroy",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "you on the way",
+        "lemma": "derekh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "When the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "bad",
+        "lemma": "ra"
+      },
+      {
+        "surface": "news",
+        "lemma": "davar"
+      },
+      {
+        "surface": "they went into mourning",
+        "lemma": "aval"
+      },
+      {
+        "surface": "one",
+        "lemma": "ish"
+      },
+      {
+        "surface": "put on",
+        "lemma": "shit"
+      },
+      {
+        "surface": "any of his jewelry",
+        "lemma": "adi"
+      }
+    ],
+    "5": [
+      {
+        "surface": "For the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "are a stiff-necked",
+        "lemma": "qasheh"
+      },
+      {
+        "surface": "people",
+        "lemma": "am"
+      },
+      {
+        "surface": "If I should go",
+        "lemma": "alah"
+      },
+      {
+        "surface": "with you",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "for a single",
+        "lemma": "echad"
+      },
+      {
+        "surface": "moment",
+        "lemma": "rega"
+      },
+      {
+        "surface": "I would destroy you",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "Now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "take off",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "your jewelry",
+        "lemma": "adi"
+      },
+      {
+        "surface": "and I will decide",
+        "lemma": "yada"
+      },
+      {
+        "surface": "what",
+        "lemma": "mah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "So the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "stripped themselves",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "of their jewelry",
+        "lemma": "adi"
+      },
+      {
+        "surface": "from Mount",
+        "lemma": "har"
+      },
+      {
+        "surface": "Horeb onward",
+        "lemma": "chorev"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Now Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "used to take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "the tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "and pitch",
+        "lemma": "natah"
+      },
+      {
+        "surface": "at a distance",
+        "lemma": "rachaq"
+      },
+      {
+        "surface": "the camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "the Tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      },
+      {
+        "surface": "inquiring of",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the Tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      },
+      {
+        "surface": "outside",
+        "lemma": "chuts"
+      },
+      {
+        "surface": "the camp",
+        "lemma": "machaneh"
+      }
+    ],
+    "8": [
+      {
+        "surface": "whenever Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "the tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "would stand",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "at the entrances",
+        "lemma": "petach"
+      },
+      {
+        "surface": "to their own tents",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "and watch",
+        "lemma": "navat"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "the tent",
+        "lemma": "ohel"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "the tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "the pillar",
+        "lemma": "ammud"
+      },
+      {
+        "surface": "of cloud",
+        "lemma": "anan"
+      },
+      {
+        "surface": "would come down",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "and remain",
+        "lemma": "amad"
+      },
+      {
+        "surface": "at the entrance",
+        "lemma": "petach"
+      },
+      {
+        "surface": "and the LORD would speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "10": [
+      {
+        "surface": "the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "the pillar",
+        "lemma": "ammud"
+      },
+      {
+        "surface": "of cloud",
+        "lemma": "anan"
+      },
+      {
+        "surface": "standing",
+        "lemma": "amad"
+      },
+      {
+        "surface": "at the entrance",
+        "lemma": "petach"
+      },
+      {
+        "surface": "to the tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "would stand up",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "and worship",
+        "lemma": "shachah"
+      },
+      {
+        "surface": "each one",
+        "lemma": "ish"
+      },
+      {
+        "surface": "at the entrance",
+        "lemma": "petach"
+      },
+      {
+        "surface": "to his own tent",
+        "lemma": "ohel"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Thus the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "would speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "speaks",
+        "lemma": "davar"
+      },
+      {
+        "surface": "his friend",
+        "lemma": "rea"
+      },
+      {
+        "surface": "the camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "but his young",
+        "lemma": "naar"
+      },
+      {
+        "surface": "assistant",
+        "lemma": "sharat"
+      },
+      {
+        "surface": "Joshua",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Nun",
+        "lemma": "nun"
+      },
+      {
+        "surface": "leave",
+        "lemma": "mush"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "the tent",
+        "lemma": "ohel"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Then Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Lead",
+        "lemma": "alah"
+      },
+      {
+        "surface": "people up",
+        "lemma": "am"
+      },
+      {
+        "surface": "let me know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "You will send",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "I know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "you by name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "in My sight",
+        "lemma": "ayin"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "indeed",
+        "lemma": "na"
+      },
+      {
+        "surface": "I have found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "in Your sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "please",
+        "lemma": "na"
+      },
+      {
+        "surface": "let me know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "Your ways",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "that I may know You",
+        "lemma": "yada"
+      },
+      {
+        "surface": "and find",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "in Your sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "nation",
+        "lemma": "goy"
+      },
+      {
+        "surface": "is Your people",
+        "lemma": "am"
+      }
+    ],
+    "14": [
+      {
+        "surface": "My Presence",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "will go with you",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "and I will give you rest",
+        "lemma": "nuach"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Your Presence",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "does not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "go with us",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "lead us up",
+        "lemma": "alah"
+      }
+    ],
+    "16": [
+      {
+        "surface": "For how then",
+        "lemma": "mah"
+      },
+      {
+        "surface": "can it be known",
+        "lemma": "yada"
+      },
+      {
+        "surface": "Your people",
+        "lemma": "am"
+      },
+      {
+        "surface": "have found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "in Your sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "You go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "be distinguished",
+        "lemma": "palah"
+      },
+      {
+        "surface": "the other people",
+        "lemma": "am"
+      },
+      {
+        "surface": "the face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "adamah"
+      }
+    ],
+    "17": [
+      {
+        "surface": "So the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "thing",
+        "lemma": "davar"
+      },
+      {
+        "surface": "you have asked",
+        "lemma": "davar"
+      },
+      {
+        "surface": "you have found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "in My sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "and I know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "you by name",
+        "lemma": "shem"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Please",
+        "lemma": "na"
+      },
+      {
+        "surface": "Your glory",
+        "lemma": "kavod"
+      }
+    ],
+    "19": [
+      {
+        "surface": "My goodness",
+        "lemma": "tuv"
+      },
+      {
+        "surface": "to pass",
+        "lemma": "avar"
+      },
+      {
+        "surface": "you",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "My name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "in your presence",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "I will have mercy",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "I have mercy",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "and I will have compassion",
+        "lemma": "racham"
+      },
+      {
+        "surface": "I have compassion",
+        "lemma": "racham"
+      }
+    ],
+    "20": [
+      {
+        "surface": "My face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "one",
+        "lemma": "adam"
+      },
+      {
+        "surface": "and live",
+        "lemma": "chayah"
+      }
+    ],
+    "21": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "There",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "is a place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "where you are to stand",
+        "lemma": "natsav"
+      },
+      {
+        "surface": "a rock",
+        "lemma": "tsur"
+      }
+    ],
+    "22": [
+      {
+        "surface": "My glory",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "passes by",
+        "lemma": "avar"
+      },
+      {
+        "surface": "I will put you",
+        "lemma": "sum"
+      },
+      {
+        "surface": "in a cleft",
+        "lemma": "neqarah"
+      },
+      {
+        "surface": "of the rock",
+        "lemma": "tsur"
+      },
+      {
+        "surface": "and cover you",
+        "lemma": "sukh"
+      },
+      {
+        "surface": "with My hand",
+        "lemma": "kaph"
+      },
+      {
+        "surface": "I have passed by",
+        "lemma": "avar"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Then I will take My hand",
+        "lemma": "kaph"
+      },
+      {
+        "surface": "away",
+        "lemma": "sur"
+      },
+      {
+        "surface": "My back",
+        "lemma": "achor"
+      },
+      {
+        "surface": "but My face",
+        "lemma": "paneh"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "paneh",
+    "ohel",
+    "mosheh"
+  ]
+}

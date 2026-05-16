@@ -1,0 +1,651 @@
+{
+  "bookId": 20,
+  "book": "Proverbs",
+  "chapter": 7,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "My son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "keep",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "my words",
+        "lemma": "emer"
+      },
+      {
+        "surface": "and treasure",
+        "lemma": "tsaphan"
+      },
+      {
+        "surface": "my commandments",
+        "lemma": "mitsvah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Keep",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "my commandments",
+        "lemma": "mitsvah"
+      },
+      {
+        "surface": "and live",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "guard my teachings",
+        "lemma": "torah"
+      },
+      {
+        "surface": "as the apple",
+        "lemma": "ishon"
+      },
+      {
+        "surface": "of your eye",
+        "lemma": "ayin"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Tie them",
+        "lemma": "qashar"
+      },
+      {
+        "surface": "your fingers",
+        "lemma": "etsba"
+      },
+      {
+        "surface": "write them",
+        "lemma": "katav"
+      },
+      {
+        "surface": "the tablet",
+        "lemma": "luach"
+      },
+      {
+        "surface": "of your heart",
+        "lemma": "lev"
+      }
+    ],
+    "4": [
+      {
+        "surface": "to wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "are my sister",
+        "lemma": "achot"
+      },
+      {
+        "surface": "understanding",
+        "lemma": "binah"
+      },
+      {
+        "surface": "your kinsman",
+        "lemma": "moda"
+      }
+    ],
+    "5": [
+      {
+        "surface": "that they may keep you",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "from the adulteress",
+        "lemma": "zur"
+      },
+      {
+        "surface": "from the stranger",
+        "lemma": "nokhri"
+      },
+      {
+        "surface": "with seductive",
+        "lemma": "chalaq"
+      },
+      {
+        "surface": "words",
+        "lemma": "emer"
+      }
+    ],
+    "6": [
+      {
+        "surface": "at the window",
+        "lemma": "challon"
+      },
+      {
+        "surface": "of my house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "I looked",
+        "lemma": "shaqaph"
+      },
+      {
+        "surface": "through",
+        "lemma": "bead"
+      },
+      {
+        "surface": "the lattice",
+        "lemma": "eshnav"
+      }
+    ],
+    "7": [
+      {
+        "surface": "among the simple",
+        "lemma": "peti"
+      },
+      {
+        "surface": "I noticed",
+        "lemma": "bin"
+      },
+      {
+        "surface": "among the youths",
+        "lemma": "ben"
+      },
+      {
+        "surface": "a young man",
+        "lemma": "naar"
+      },
+      {
+        "surface": "lacking",
+        "lemma": "chaser"
+      },
+      {
+        "surface": "judgment",
+        "lemma": "lev"
+      }
+    ],
+    "8": [
+      {
+        "surface": "crossing",
+        "lemma": "avar"
+      },
+      {
+        "surface": "the street",
+        "lemma": "shuq"
+      },
+      {
+        "surface": "near",
+        "lemma": "etsel"
+      },
+      {
+        "surface": "her corner",
+        "lemma": "pinnah"
+      },
+      {
+        "surface": "strolling",
+        "lemma": "tsaad"
+      },
+      {
+        "surface": "down the road",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "to her house",
+        "lemma": "bet"
+      }
+    ],
+    "9": [
+      {
+        "surface": "at twilight",
+        "lemma": "nesheph"
+      },
+      {
+        "surface": "as the day was fading",
+        "lemma": "erev"
+      },
+      {
+        "surface": "into the dark",
+        "lemma": "aphelah"
+      },
+      {
+        "surface": "of the night",
+        "lemma": "ishon"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Then",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "a woman",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "with the attire",
+        "lemma": "shit"
+      },
+      {
+        "surface": "of a harlot",
+        "lemma": "zanah"
+      },
+      {
+        "surface": "and cunning",
+        "lemma": "natsar"
+      },
+      {
+        "surface": "of heart",
+        "lemma": "lev"
+      }
+    ],
+    "11": [
+      {
+        "surface": "is loud",
+        "lemma": "hamah"
+      },
+      {
+        "surface": "and defiant",
+        "lemma": "sarar"
+      },
+      {
+        "surface": "her feet",
+        "lemma": "regel"
+      },
+      {
+        "surface": "remain",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "at home",
+        "lemma": "bet"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Now",
+        "lemma": "paam"
+      },
+      {
+        "surface": "in the street",
+        "lemma": "chuts"
+      },
+      {
+        "surface": "now",
+        "lemma": "paam"
+      },
+      {
+        "surface": "in the squares",
+        "lemma": "rechov"
+      },
+      {
+        "surface": "she lurks",
+        "lemma": "arav"
+      },
+      {
+        "surface": "at",
+        "lemma": "etsel"
+      },
+      {
+        "surface": "corner",
+        "lemma": "pinnah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "She seizes",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "and kisses",
+        "lemma": "nashaq"
+      },
+      {
+        "surface": "she brazenly",
+        "lemma": "azaz"
+      }
+    ],
+    "14": [
+      {
+        "surface": "I have made my peace",
+        "lemma": "shelem"
+      },
+      {
+        "surface": "offerings",
+        "lemma": "zevach"
+      },
+      {
+        "surface": "today",
+        "lemma": "yom"
+      },
+      {
+        "surface": "I have paid",
+        "lemma": "salem"
+      },
+      {
+        "surface": "my vows",
+        "lemma": "neder"
+      }
+    ],
+    "15": [
+      {
+        "surface": "I sought you",
+        "lemma": "shachar"
+      },
+      {
+        "surface": "and I have found you",
+        "lemma": "matsa"
+      }
+    ],
+    "16": [
+      {
+        "surface": "I have decked",
+        "lemma": "ravad"
+      },
+      {
+        "surface": "my bed",
+        "lemma": "eres"
+      },
+      {
+        "surface": "with coverings",
+        "lemma": "marvad"
+      },
+      {
+        "surface": "with colored",
+        "lemma": "chatuvah"
+      },
+      {
+        "surface": "linen",
+        "lemma": "etun"
+      },
+      {
+        "surface": "from Egypt",
+        "lemma": "mitsrayim"
+      }
+    ],
+    "17": [
+      {
+        "surface": "I have perfumed",
+        "lemma": "nuph"
+      },
+      {
+        "surface": "my bed",
+        "lemma": "mishkav"
+      },
+      {
+        "surface": "with myrrh",
+        "lemma": "mor"
+      },
+      {
+        "surface": "with aloes",
+        "lemma": "ahalim"
+      },
+      {
+        "surface": "and with cinnamon",
+        "lemma": "qinnamon"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Come",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "let us take our fill",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "of love",
+        "lemma": "dod"
+      },
+      {
+        "surface": "morning",
+        "lemma": "boqer"
+      },
+      {
+        "surface": "Let us delight",
+        "lemma": "alas"
+      },
+      {
+        "surface": "in loving caresses",
+        "lemma": "ohav"
+      }
+    ],
+    "19": [
+      {
+        "surface": "my husband",
+        "lemma": "ish"
+      },
+      {
+        "surface": "is not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "at home",
+        "lemma": "bet"
+      },
+      {
+        "surface": "he has gone",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "on a long",
+        "lemma": "rachoq"
+      },
+      {
+        "surface": "journey",
+        "lemma": "derekh"
+      }
+    ],
+    "20": [
+      {
+        "surface": "He took",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "with him",
+        "lemma": "yad"
+      },
+      {
+        "surface": "a bag",
+        "lemma": "tseror"
+      },
+      {
+        "surface": "of money",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "till",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the moon is full",
+        "lemma": "kese"
+      }
+    ],
+    "21": [
+      {
+        "surface": "With her great",
+        "lemma": "rov"
+      },
+      {
+        "surface": "persuasion",
+        "lemma": "leqach"
+      },
+      {
+        "surface": "she entices him",
+        "lemma": "natah"
+      },
+      {
+        "surface": "with her flattering",
+        "lemma": "cheleq"
+      },
+      {
+        "surface": "lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "she lures him",
+        "lemma": "nadach"
+      }
+    ],
+    "22": [
+      {
+        "surface": "He follows her",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "on impulse",
+        "lemma": "pitom"
+      },
+      {
+        "surface": "like an ox",
+        "lemma": "shor"
+      },
+      {
+        "surface": "the slaughter",
+        "lemma": "tevach"
+      },
+      {
+        "surface": "like a deer",
+        "lemma": "evil"
+      },
+      {
+        "surface": "bounding",
+        "lemma": "ekhes"
+      },
+      {
+        "surface": "a trap",
+        "lemma": "musar"
+      }
+    ],
+    "23": [
+      {
+        "surface": "an arrow",
+        "lemma": "chets"
+      },
+      {
+        "surface": "pierces",
+        "lemma": "palach"
+      },
+      {
+        "surface": "his liver",
+        "lemma": "kaved"
+      },
+      {
+        "surface": "like a bird",
+        "lemma": "tsippor"
+      },
+      {
+        "surface": "darting",
+        "lemma": "mahar"
+      },
+      {
+        "surface": "a snare",
+        "lemma": "pach"
+      },
+      {
+        "surface": "knowing",
+        "lemma": "yada"
+      },
+      {
+        "surface": "will cost him his life",
+        "lemma": "nephesh"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "my sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and attend",
+        "lemma": "qashav"
+      },
+      {
+        "surface": "to the words",
+        "lemma": "emer"
+      },
+      {
+        "surface": "of my mouth",
+        "lemma": "peh"
+      }
+    ],
+    "25": [
+      {
+        "surface": "let your heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "turn aside",
+        "lemma": "satah"
+      },
+      {
+        "surface": "her ways",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "stray",
+        "lemma": "taah"
+      },
+      {
+        "surface": "into her paths",
+        "lemma": "nativ"
+      }
+    ],
+    "26": [
+      {
+        "surface": "she has brought many",
+        "lemma": "rav"
+      },
+      {
+        "surface": "down",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "to death",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "her slain",
+        "lemma": "harag"
+      },
+      {
+        "surface": "are many",
+        "lemma": "atsum"
+      }
+    ],
+    "27": [
+      {
+        "surface": "Her house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "is the road",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "to Sheol",
+        "lemma": "sheol"
+      },
+      {
+        "surface": "descending",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "the chambers",
+        "lemma": "cheder"
+      },
+      {
+        "surface": "of death",
+        "lemma": "mavet"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "bet",
+    "shamar",
+    "halakh"
+  ]
+}

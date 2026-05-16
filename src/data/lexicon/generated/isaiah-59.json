@@ -1,0 +1,919 @@
+{
+  "bookId": 23,
+  "book": "Isaiah",
+  "chapter": 59,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Surely",
+        "lemma": "hen"
+      },
+      {
+        "surface": "the arm",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "too short",
+        "lemma": "qatser"
+      },
+      {
+        "surface": "to save",
+        "lemma": "yasah"
+      },
+      {
+        "surface": "nor His ear",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "too dull",
+        "lemma": "kavad"
+      }
+    ],
+    "2": [
+      {
+        "surface": "your iniquities",
+        "lemma": "avan"
+      },
+      {
+        "surface": "have built barriers",
+        "lemma": "badal"
+      },
+      {
+        "surface": "between you",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "and your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "and your sins",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "have hidden",
+        "lemma": "satar"
+      },
+      {
+        "surface": "His face",
+        "lemma": "paneh"
+      }
+    ],
+    "3": [
+      {
+        "surface": "your hands",
+        "lemma": "kaph"
+      },
+      {
+        "surface": "are stained",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "with blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "and your fingers",
+        "lemma": "etsba"
+      },
+      {
+        "surface": "with iniquity",
+        "lemma": "avan"
+      },
+      {
+        "surface": "your lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "have spoken",
+        "lemma": "davar"
+      },
+      {
+        "surface": "lies",
+        "lemma": "sheqer"
+      },
+      {
+        "surface": "and your tongue",
+        "lemma": "lashon"
+      },
+      {
+        "surface": "mutters",
+        "lemma": "hagah"
+      },
+      {
+        "surface": "injustice",
+        "lemma": "evel"
+      }
+    ],
+    "4": [
+      {
+        "surface": "No one",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "for justice",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "no one",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "pleads his case",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "honestly",
+        "lemma": "emunah"
+      },
+      {
+        "surface": "They rely",
+        "lemma": "batach"
+      },
+      {
+        "surface": "empty pleas",
+        "lemma": "tohu"
+      },
+      {
+        "surface": "they tell",
+        "lemma": "davar"
+      },
+      {
+        "surface": "lies",
+        "lemma": "shav"
+      },
+      {
+        "surface": "they conceive",
+        "lemma": "harah"
+      },
+      {
+        "surface": "mischief",
+        "lemma": "amal"
+      },
+      {
+        "surface": "and give birth to",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "iniquity",
+        "lemma": "aven"
+      }
+    ],
+    "5": [
+      {
+        "surface": "They hatch",
+        "lemma": "baqa"
+      },
+      {
+        "surface": "the eggs",
+        "lemma": "betsah"
+      },
+      {
+        "surface": "of vipers",
+        "lemma": "tsepah"
+      },
+      {
+        "surface": "and weave",
+        "lemma": "arag"
+      },
+      {
+        "surface": "a spider’s",
+        "lemma": "akkavish"
+      },
+      {
+        "surface": "web",
+        "lemma": "qur"
+      },
+      {
+        "surface": "Whoever eats",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "their eggs",
+        "lemma": "betsah"
+      },
+      {
+        "surface": "will die",
+        "lemma": "mut"
+      },
+      {
+        "surface": "crack one open",
+        "lemma": "zureh"
+      },
+      {
+        "surface": "and a viper",
+        "lemma": "epheh"
+      },
+      {
+        "surface": "is hatched",
+        "lemma": "baqa"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Their cobwebs",
+        "lemma": "qur"
+      },
+      {
+        "surface": "clothing",
+        "lemma": "beged"
+      },
+      {
+        "surface": "cover themselves",
+        "lemma": "kasah"
+      },
+      {
+        "surface": "with their works",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "Their deeds",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "are sinful",
+        "lemma": "aven"
+      },
+      {
+        "surface": "deeds",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "and acts",
+        "lemma": "poal"
+      },
+      {
+        "surface": "of violence",
+        "lemma": "chamas"
+      },
+      {
+        "surface": "are in their hands",
+        "lemma": "kaph"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Their feet",
+        "lemma": "regel"
+      },
+      {
+        "surface": "run",
+        "lemma": "ruts"
+      },
+      {
+        "surface": "to evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "they are swift",
+        "lemma": "mahar"
+      },
+      {
+        "surface": "to shed",
+        "lemma": "shaphakh"
+      },
+      {
+        "surface": "innocent",
+        "lemma": "naqi"
+      },
+      {
+        "surface": "blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "Their thoughts",
+        "lemma": "machashavah"
+      },
+      {
+        "surface": "are sinful",
+        "lemma": "aven"
+      },
+      {
+        "surface": "thoughts",
+        "lemma": "machashavah"
+      },
+      {
+        "surface": "ruin",
+        "lemma": "shod"
+      },
+      {
+        "surface": "and destruction",
+        "lemma": "shever"
+      },
+      {
+        "surface": "lie in their wake",
+        "lemma": "mesillah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "known",
+        "lemma": "yada"
+      },
+      {
+        "surface": "and there is no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "justice",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "in their tracks",
+        "lemma": "magal"
+      },
+      {
+        "surface": "crooked",
+        "lemma": "aqash"
+      },
+      {
+        "surface": "paths",
+        "lemma": "nativ"
+      },
+      {
+        "surface": "who treads",
+        "lemma": "darakh"
+      },
+      {
+        "surface": "will know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "peace",
+        "lemma": "shalom"
+      }
+    ],
+    "9": [
+      {
+        "surface": "justice",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "is far",
+        "lemma": "rachaq"
+      },
+      {
+        "surface": "and righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "reach us",
+        "lemma": "nasag"
+      },
+      {
+        "surface": "We hope",
+        "lemma": "qavah"
+      },
+      {
+        "surface": "for light",
+        "lemma": "or"
+      },
+      {
+        "surface": "but there",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "is darkness",
+        "lemma": "choshekh"
+      },
+      {
+        "surface": "for brightness",
+        "lemma": "negohah"
+      },
+      {
+        "surface": "but we walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "in gloom",
+        "lemma": "aphelah"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Like the blind",
+        "lemma": "ivver"
+      },
+      {
+        "surface": "we feel our way along",
+        "lemma": "gashash"
+      },
+      {
+        "surface": "the wall",
+        "lemma": "qir"
+      },
+      {
+        "surface": "groping",
+        "lemma": "gashash"
+      },
+      {
+        "surface": "like those without",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "We stumble",
+        "lemma": "kashal"
+      },
+      {
+        "surface": "at midday",
+        "lemma": "tsohar"
+      },
+      {
+        "surface": "as in the twilight",
+        "lemma": "nesheph"
+      },
+      {
+        "surface": "among the vigorous",
+        "lemma": "ashman"
+      },
+      {
+        "surface": "we are like the dead",
+        "lemma": "mut"
+      }
+    ],
+    "11": [
+      {
+        "surface": "growl",
+        "lemma": "hamah"
+      },
+      {
+        "surface": "like bears",
+        "lemma": "dov"
+      },
+      {
+        "surface": "and moan",
+        "lemma": "hagah"
+      },
+      {
+        "surface": "like doves",
+        "lemma": "yonah"
+      },
+      {
+        "surface": "We hope",
+        "lemma": "qavah"
+      },
+      {
+        "surface": "for justice",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "but find none",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "for salvation",
+        "lemma": "yeshuah"
+      },
+      {
+        "surface": "but it is far",
+        "lemma": "rachaq"
+      }
+    ],
+    "12": [
+      {
+        "surface": "our transgressions",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "are multiplied",
+        "lemma": "ravav"
+      },
+      {
+        "surface": "before You",
+        "lemma": "neged"
+      },
+      {
+        "surface": "and our sins",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "testify",
+        "lemma": "un"
+      },
+      {
+        "surface": "Our transgressions",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "and we know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "our iniquities",
+        "lemma": "avan"
+      }
+    ],
+    "13": [
+      {
+        "surface": "rebelling",
+        "lemma": "pasah"
+      },
+      {
+        "surface": "and denying",
+        "lemma": "kachash"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "turning away",
+        "lemma": "nasag"
+      },
+      {
+        "surface": "from",
+        "lemma": "achar"
+      },
+      {
+        "surface": "our God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "speaking",
+        "lemma": "davar"
+      },
+      {
+        "surface": "oppression",
+        "lemma": "osheq"
+      },
+      {
+        "surface": "and revolt",
+        "lemma": "sarah"
+      },
+      {
+        "surface": "conceiving",
+        "lemma": "harah"
+      },
+      {
+        "surface": "and uttering",
+        "lemma": "hagah"
+      },
+      {
+        "surface": "lies",
+        "lemma": "sheqer"
+      },
+      {
+        "surface": "from the heart",
+        "lemma": "lev"
+      }
+    ],
+    "14": [
+      {
+        "surface": "So justice",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "is turned away",
+        "lemma": "nasag"
+      },
+      {
+        "surface": "and righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "stands",
+        "lemma": "amad"
+      },
+      {
+        "surface": "at a distance",
+        "lemma": "rachoq"
+      },
+      {
+        "surface": "truth",
+        "lemma": "emet"
+      },
+      {
+        "surface": "has stumbled",
+        "lemma": "kashal"
+      },
+      {
+        "surface": "in the public square",
+        "lemma": "rechov"
+      },
+      {
+        "surface": "and honesty",
+        "lemma": "nekhochah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Truth",
+        "lemma": "emet"
+      },
+      {
+        "surface": "missing",
+        "lemma": "adar"
+      },
+      {
+        "surface": "and whoever turns",
+        "lemma": "sur"
+      },
+      {
+        "surface": "from evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "becomes prey",
+        "lemma": "shalal"
+      },
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "and was displeased",
+        "lemma": "raa"
+      },
+      {
+        "surface": "there was no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "justice",
+        "lemma": "mishpat"
+      }
+    ],
+    "16": [
+      {
+        "surface": "there was no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "He was amazed",
+        "lemma": "shamem"
+      },
+      {
+        "surface": "there was no one",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "to intercede",
+        "lemma": "paga"
+      },
+      {
+        "surface": "So His own arm",
+        "lemma": "zeroa"
+      },
+      {
+        "surface": "brought salvation",
+        "lemma": "yasah"
+      },
+      {
+        "surface": "and His own righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "sustained Him",
+        "lemma": "samakh"
+      }
+    ],
+    "17": [
+      {
+        "surface": "He put on",
+        "lemma": "lavash"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "like a breastplate",
+        "lemma": "siryah"
+      },
+      {
+        "surface": "and the helmet",
+        "lemma": "kova"
+      },
+      {
+        "surface": "of salvation",
+        "lemma": "yeshuah"
+      },
+      {
+        "surface": "on His head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "He put on",
+        "lemma": "lavash"
+      },
+      {
+        "surface": "garments",
+        "lemma": "beged"
+      },
+      {
+        "surface": "of vengeance",
+        "lemma": "naqam"
+      },
+      {
+        "surface": "and wrapped Himself",
+        "lemma": "atah"
+      },
+      {
+        "surface": "in a cloak",
+        "lemma": "meil"
+      },
+      {
+        "surface": "of zeal",
+        "lemma": "qinah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "So He will repay",
+        "lemma": "salem"
+      },
+      {
+        "surface": "their deeds",
+        "lemma": "gemulah"
+      },
+      {
+        "surface": "fury",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "to His enemies",
+        "lemma": "tsar"
+      },
+      {
+        "surface": "retribution",
+        "lemma": "gemul"
+      },
+      {
+        "surface": "to His foes",
+        "lemma": "oyev"
+      },
+      {
+        "surface": "and recompense",
+        "lemma": "gemul"
+      },
+      {
+        "surface": "to the islands",
+        "lemma": "i"
+      }
+    ],
+    "19": [
+      {
+        "surface": "So shall they fear",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "where the sun sets",
+        "lemma": "maarav"
+      },
+      {
+        "surface": "and His glory",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "where it rises",
+        "lemma": "mizrach"
+      },
+      {
+        "surface": "like a raging",
+        "lemma": "tsar"
+      },
+      {
+        "surface": "flood",
+        "lemma": "nahar"
+      },
+      {
+        "surface": "driven",
+        "lemma": "nus"
+      },
+      {
+        "surface": "by the breath",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "20": [
+      {
+        "surface": "The Redeemer",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "to Zion",
+        "lemma": "tsiyyon"
+      },
+      {
+        "surface": "to those in Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "from transgression",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "21": [
+      {
+        "surface": "is My covenant",
+        "lemma": "berit"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "My Spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "and My words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "I have put",
+        "lemma": "sum"
+      },
+      {
+        "surface": "in your mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "depart",
+        "lemma": "mush"
+      },
+      {
+        "surface": "from your mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "or from the mouths",
+        "lemma": "peh"
+      },
+      {
+        "surface": "of your children",
+        "lemma": "zera"
+      },
+      {
+        "surface": "and",
+        "lemma": "peh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "zera"
+      },
+      {
+        "surface": "grandchildren",
+        "lemma": "zera"
+      },
+      {
+        "surface": "from now on",
+        "lemma": "attah"
+      },
+      {
+        "surface": "forevermore",
+        "lemma": "olam"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "tsedaqah",
+    "peh",
+    "zera"
+  ]
+}

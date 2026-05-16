@@ -1,0 +1,991 @@
+{
+  "bookId": 10,
+  "book": "2 Samuel",
+  "chapter": 1,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "After",
+        "lemma": "achar"
+      },
+      {
+        "surface": "the death",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "of Saul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "David",
+        "lemma": "david"
+      },
+      {
+        "surface": "from the slaughter",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "the Amalekites",
+        "lemma": "amaleq"
+      },
+      {
+        "surface": "in Ziklag",
+        "lemma": "tsiqlag"
+      },
+      {
+        "surface": "two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      }
+    ],
+    "2": [
+      {
+        "surface": "On the third",
+        "lemma": "shelishi"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and dust",
+        "lemma": "adamah"
+      },
+      {
+        "surface": "his head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "Saul’s",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "David",
+        "lemma": "david"
+      },
+      {
+        "surface": "he fell",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "to the ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "to pay him homage",
+        "lemma": "shachah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Where",
+        "lemma": "ay"
+      },
+      {
+        "surface": "David",
+        "lemma": "david"
+      },
+      {
+        "surface": "I have escaped",
+        "lemma": "malat"
+      },
+      {
+        "surface": "from the Israelite",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "camp",
+        "lemma": "machaneh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "David",
+        "lemma": "david"
+      },
+      {
+        "surface": "Please",
+        "lemma": "na"
+      },
+      {
+        "surface": "tell",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "The troops",
+        "lemma": "am"
+      },
+      {
+        "surface": "fled",
+        "lemma": "nus"
+      },
+      {
+        "surface": "the battle",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "Many",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "them",
+        "lemma": "am"
+      },
+      {
+        "surface": "fell",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "and died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "Saul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "and his son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Jonathan",
+        "lemma": "yehonatan"
+      },
+      {
+        "surface": "are also dead",
+        "lemma": "mut"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Then David",
+        "lemma": "david"
+      },
+      {
+        "surface": "the young man",
+        "lemma": "naar"
+      },
+      {
+        "surface": "who had brought him the report",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "How",
+        "lemma": "ekh"
+      },
+      {
+        "surface": "do you know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "Saul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "and his son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Jonathan",
+        "lemma": "yehonatan"
+      },
+      {
+        "surface": "are dead",
+        "lemma": "mut"
+      }
+    ],
+    "6": [
+      {
+        "surface": "to be on Mount",
+        "lemma": "har"
+      },
+      {
+        "surface": "Gilboa",
+        "lemma": "gilboa"
+      },
+      {
+        "surface": "he",
+        "lemma": "naar"
+      },
+      {
+        "surface": "and there",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "was Saul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "leaning",
+        "lemma": "shaan"
+      },
+      {
+        "surface": "his spear",
+        "lemma": "chanit"
+      },
+      {
+        "surface": "with",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "the chariots",
+        "lemma": "rekhev"
+      },
+      {
+        "surface": "and the cavalry",
+        "lemma": "parash"
+      },
+      {
+        "surface": "closing in on him",
+        "lemma": "davaq"
+      }
+    ],
+    "7": [
+      {
+        "surface": "When he turned around",
+        "lemma": "panah"
+      },
+      {
+        "surface": "Here I am",
+        "lemma": "hen"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "an Amalekite",
+        "lemma": "amaleqi"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Stand",
+        "lemma": "amad"
+      },
+      {
+        "surface": "and kill me",
+        "lemma": "mut"
+      },
+      {
+        "surface": "agony",
+        "lemma": "shavats"
+      },
+      {
+        "surface": "has seized me",
+        "lemma": "achaz"
+      },
+      {
+        "surface": "my life",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "lingers",
+        "lemma": "od"
+      }
+    ],
+    "10": [
+      {
+        "surface": "So I stood",
+        "lemma": "amad"
+      },
+      {
+        "surface": "and killed him",
+        "lemma": "mut"
+      },
+      {
+        "surface": "I knew",
+        "lemma": "yada"
+      },
+      {
+        "surface": "after",
+        "lemma": "achar"
+      },
+      {
+        "surface": "he had fallen",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "survive",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "And I took",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "the crown",
+        "lemma": "nezer"
+      },
+      {
+        "surface": "his head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "and the band",
+        "lemma": "etsadah"
+      },
+      {
+        "surface": "his arm",
+        "lemma": "zeroa"
+      },
+      {
+        "surface": "here",
+        "lemma": "hennah"
+      },
+      {
+        "surface": "my lord",
+        "lemma": "adon"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Then David",
+        "lemma": "david"
+      },
+      {
+        "surface": "took hold",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "of his own clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "the men",
+        "lemma": "enosh"
+      }
+    ],
+    "12": [
+      {
+        "surface": "They mourned",
+        "lemma": "saphad"
+      },
+      {
+        "surface": "and wept",
+        "lemma": "bakhah"
+      },
+      {
+        "surface": "and fasted",
+        "lemma": "tsum"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      },
+      {
+        "surface": "Saul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "his son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Jonathan",
+        "lemma": "yehonatan"
+      },
+      {
+        "surface": "and for the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "and the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "they had fallen",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "by the sword",
+        "lemma": "cherev"
+      }
+    ],
+    "13": [
+      {
+        "surface": "And David",
+        "lemma": "david"
+      },
+      {
+        "surface": "the young man",
+        "lemma": "naar"
+      },
+      {
+        "surface": "who had brought him the report",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "Where",
+        "lemma": "ay"
+      },
+      {
+        "surface": "I am the son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of a foreigner",
+        "lemma": "ger"
+      },
+      {
+        "surface": "an Amalekite",
+        "lemma": "amaleqi"
+      }
+    ],
+    "14": [
+      {
+        "surface": "So David",
+        "lemma": "david"
+      },
+      {
+        "surface": "Why",
+        "lemma": "ekh"
+      },
+      {
+        "surface": "afraid",
+        "lemma": "yare"
+      },
+      {
+        "surface": "to lift",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "your hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "to destroy",
+        "lemma": "shachat"
+      },
+      {
+        "surface": "the LORD’s",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "anointed",
+        "lemma": "mashiach"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Then David",
+        "lemma": "david"
+      },
+      {
+        "surface": "one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "of the young men",
+        "lemma": "naar"
+      },
+      {
+        "surface": "Go",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "execute",
+        "lemma": "paga"
+      },
+      {
+        "surface": "So the young man struck him down",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "and he died",
+        "lemma": "mut"
+      }
+    ],
+    "16": [
+      {
+        "surface": "For David",
+        "lemma": "david"
+      },
+      {
+        "surface": "Your blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "your own head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "your own mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "has testified",
+        "lemma": "un"
+      },
+      {
+        "surface": "killed",
+        "lemma": "mut"
+      },
+      {
+        "surface": "the LORD’s",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "anointed",
+        "lemma": "mashiach"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Then David",
+        "lemma": "david"
+      },
+      {
+        "surface": "took up",
+        "lemma": "qun"
+      },
+      {
+        "surface": "lament",
+        "lemma": "qinah"
+      },
+      {
+        "surface": "Saul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "and his son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Jonathan",
+        "lemma": "yehonatan"
+      }
+    ],
+    "18": [
+      {
+        "surface": "that the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "be taught",
+        "lemma": "lamad"
+      },
+      {
+        "surface": "the Song of the Bow",
+        "lemma": "qeshet"
+      },
+      {
+        "surface": "It is written",
+        "lemma": "katav"
+      },
+      {
+        "surface": "the Book",
+        "lemma": "sepher"
+      },
+      {
+        "surface": "of Jashar",
+        "lemma": "yashar"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Your glory",
+        "lemma": "tsevi"
+      },
+      {
+        "surface": "O Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "lies slain",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "your heights",
+        "lemma": "bamah"
+      },
+      {
+        "surface": "How",
+        "lemma": "ekh"
+      },
+      {
+        "surface": "the mighty",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "have fallen",
+        "lemma": "naphal"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Tell it",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "in Gath",
+        "lemma": "gat"
+      },
+      {
+        "surface": "proclaim it",
+        "lemma": "basar"
+      },
+      {
+        "surface": "in the streets",
+        "lemma": "chuts"
+      },
+      {
+        "surface": "of Ashkelon",
+        "lemma": "ashqelon"
+      },
+      {
+        "surface": "the daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of the Philistines",
+        "lemma": "pelishti"
+      },
+      {
+        "surface": "rejoice",
+        "lemma": "samach"
+      },
+      {
+        "surface": "and the daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of the uncircumcised",
+        "lemma": "arel"
+      },
+      {
+        "surface": "exult",
+        "lemma": "alaz"
+      }
+    ],
+    "21": [
+      {
+        "surface": "O mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "of Gilboa",
+        "lemma": "gilboa"
+      },
+      {
+        "surface": "dew",
+        "lemma": "tal"
+      },
+      {
+        "surface": "or rain",
+        "lemma": "matar"
+      },
+      {
+        "surface": "no fields",
+        "lemma": "saday"
+      },
+      {
+        "surface": "yielding offerings of grain",
+        "lemma": "terumah"
+      },
+      {
+        "surface": "there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "the shield",
+        "lemma": "magen"
+      },
+      {
+        "surface": "of the mighty",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "was defiled",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "the shield",
+        "lemma": "magen"
+      },
+      {
+        "surface": "of Saul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "no longer",
+        "lemma": "beli"
+      },
+      {
+        "surface": "anointed",
+        "lemma": "mashiach"
+      },
+      {
+        "surface": "with oil",
+        "lemma": "shemen"
+      }
+    ],
+    "22": [
+      {
+        "surface": "From the blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "of the slain",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "from the fat",
+        "lemma": "chelev"
+      },
+      {
+        "surface": "of the mighty",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "the bow",
+        "lemma": "qeshet"
+      },
+      {
+        "surface": "of Jonathan",
+        "lemma": "yehonatan"
+      },
+      {
+        "surface": "retreat",
+        "lemma": "sug"
+      },
+      {
+        "surface": "and the sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "of Saul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "empty",
+        "lemma": "reqam"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Saul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "and Jonathan",
+        "lemma": "yehonatan"
+      },
+      {
+        "surface": "beloved",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "and delightful",
+        "lemma": "naim"
+      },
+      {
+        "surface": "in life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "divided",
+        "lemma": "parad"
+      },
+      {
+        "surface": "in death",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "They were swifter",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "than eagles",
+        "lemma": "nesher"
+      },
+      {
+        "surface": "they were stronger",
+        "lemma": "gavar"
+      },
+      {
+        "surface": "than lions",
+        "lemma": "ari"
+      }
+    ],
+    "24": [
+      {
+        "surface": "O daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "weep",
+        "lemma": "bakhah"
+      },
+      {
+        "surface": "Saul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "who clothed you",
+        "lemma": "lavash"
+      },
+      {
+        "surface": "in scarlet",
+        "lemma": "shani"
+      },
+      {
+        "surface": "luxury",
+        "lemma": "eden"
+      },
+      {
+        "surface": "who decked",
+        "lemma": "alah"
+      },
+      {
+        "surface": "your garments",
+        "lemma": "levush"
+      },
+      {
+        "surface": "ornaments",
+        "lemma": "adi"
+      },
+      {
+        "surface": "of gold",
+        "lemma": "zahav"
+      }
+    ],
+    "25": [
+      {
+        "surface": "How",
+        "lemma": "ekh"
+      },
+      {
+        "surface": "the mighty",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "have fallen",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "in the thick",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "of battle",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "Jonathan",
+        "lemma": "yehonatan"
+      },
+      {
+        "surface": "lies slain",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "your heights",
+        "lemma": "bamah"
+      }
+    ],
+    "26": [
+      {
+        "surface": "I grieve",
+        "lemma": "tsarar"
+      },
+      {
+        "surface": "Jonathan",
+        "lemma": "yehonatan"
+      },
+      {
+        "surface": "my brother",
+        "lemma": "ach"
+      },
+      {
+        "surface": "You were delightful",
+        "lemma": "naem"
+      },
+      {
+        "surface": "your love",
+        "lemma": "ahavah"
+      },
+      {
+        "surface": "was extraordinary",
+        "lemma": "pala"
+      },
+      {
+        "surface": "surpassing the love",
+        "lemma": "ahavah"
+      },
+      {
+        "surface": "of women",
+        "lemma": "ishshah"
+      }
+    ],
+    "27": [
+      {
+        "surface": "How",
+        "lemma": "ekh"
+      },
+      {
+        "surface": "the mighty",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "have fallen",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "and the weapons",
+        "lemma": "keli"
+      },
+      {
+        "surface": "of war",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "have perished",
+        "lemma": "avad"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "shaul",
+    "david",
+    "yehonatan"
+  ]
+}

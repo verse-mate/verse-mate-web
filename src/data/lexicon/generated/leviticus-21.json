@@ -1,0 +1,737 @@
+{
+  "bookId": 3,
+  "book": "Leviticus",
+  "chapter": 21,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "Aaron’s",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the priests",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "to defile himself",
+        "lemma": "tame"
+      },
+      {
+        "surface": "for a dead person",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "among his people",
+        "lemma": "am"
+      }
+    ],
+    "2": [
+      {
+        "surface": "for his immediate",
+        "lemma": "qarov"
+      },
+      {
+        "surface": "family",
+        "lemma": "sheer"
+      },
+      {
+        "surface": "his mother",
+        "lemma": "em"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "or brother",
+        "lemma": "ach"
+      }
+    ],
+    "3": [
+      {
+        "surface": "or his unmarried",
+        "lemma": "betulah"
+      },
+      {
+        "surface": "sister",
+        "lemma": "achot"
+      },
+      {
+        "surface": "who is near",
+        "lemma": "qarov"
+      },
+      {
+        "surface": "husband",
+        "lemma": "ish"
+      }
+    ],
+    "4": [
+      {
+        "surface": "to defile himself",
+        "lemma": "tame"
+      },
+      {
+        "surface": "for those related to him by marriage",
+        "lemma": "baal"
+      },
+      {
+        "surface": "and so profane himself",
+        "lemma": "chalal"
+      }
+    ],
+    "5": [
+      {
+        "surface": "make bald",
+        "lemma": "qarach"
+      },
+      {
+        "surface": "spots on their heads",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "shave off the edges",
+        "lemma": "peah"
+      },
+      {
+        "surface": "of their beards",
+        "lemma": "zaqan"
+      },
+      {
+        "surface": "or make",
+        "lemma": "sarat"
+      },
+      {
+        "surface": "cuts",
+        "lemma": "seret"
+      },
+      {
+        "surface": "in their bodies",
+        "lemma": "basar"
+      }
+    ],
+    "6": [
+      {
+        "surface": "holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "to their God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "profane",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "the name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of their God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "present",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the food offerings",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "the food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "of their God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "holy",
+        "lemma": "qodesh"
+      }
+    ],
+    "7": [
+      {
+        "surface": "marry",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "a woman",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "defiled",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "by prostitution",
+        "lemma": "zanah"
+      },
+      {
+        "surface": "divorced",
+        "lemma": "garash"
+      },
+      {
+        "surface": "by her husband",
+        "lemma": "ish"
+      },
+      {
+        "surface": "is holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "to his God",
+        "lemma": "elohim"
+      }
+    ],
+    "8": [
+      {
+        "surface": "You are to regard him as holy",
+        "lemma": "qadash"
+      },
+      {
+        "surface": "presents",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "the food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "of your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "am holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "I who set you apart",
+        "lemma": "qadash"
+      }
+    ],
+    "9": [
+      {
+        "surface": "a priest’s",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "defiles herself",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "by prostituting herself",
+        "lemma": "zanah"
+      },
+      {
+        "surface": "profanes",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "she must be burned",
+        "lemma": "saraph"
+      },
+      {
+        "surface": "in the fire",
+        "lemma": "esh"
+      }
+    ],
+    "10": [
+      {
+        "surface": "The priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "who is highest",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "among his brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "has had the anointing",
+        "lemma": "mishchah"
+      },
+      {
+        "surface": "oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "poured",
+        "lemma": "yatsaq"
+      },
+      {
+        "surface": "his head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "and has been ordained",
+        "lemma": "male"
+      },
+      {
+        "surface": "to wear",
+        "lemma": "lavash"
+      },
+      {
+        "surface": "the priestly garments",
+        "lemma": "beged"
+      },
+      {
+        "surface": "his hair",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "hang loose",
+        "lemma": "para"
+      },
+      {
+        "surface": "or tear",
+        "lemma": "param"
+      },
+      {
+        "surface": "his garments",
+        "lemma": "beged"
+      }
+    ],
+    "11": [
+      {
+        "surface": "dead",
+        "lemma": "mut"
+      },
+      {
+        "surface": "body",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "defile himself",
+        "lemma": "tame"
+      },
+      {
+        "surface": "or mother",
+        "lemma": "em"
+      }
+    ],
+    "12": [
+      {
+        "surface": "or desecrate",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "the sanctuary",
+        "lemma": "miqdash"
+      },
+      {
+        "surface": "of his God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the consecration",
+        "lemma": "nezer"
+      },
+      {
+        "surface": "of the anointing",
+        "lemma": "mishchah"
+      },
+      {
+        "surface": "oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "of his God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "The woman",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "marries",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "must be a virgin",
+        "lemma": "betulim"
+      }
+    ],
+    "14": [
+      {
+        "surface": "to marry",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "a widow",
+        "lemma": "almanah"
+      },
+      {
+        "surface": "a divorced woman",
+        "lemma": "garash"
+      },
+      {
+        "surface": "or one defiled",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "by prostitution",
+        "lemma": "zanah"
+      },
+      {
+        "surface": "He is to marry",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "a virgin",
+        "lemma": "betulah"
+      },
+      {
+        "surface": "from his own people",
+        "lemma": "am"
+      }
+    ],
+    "15": [
+      {
+        "surface": "defile",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "his offspring",
+        "lemma": "zera"
+      },
+      {
+        "surface": "among his people",
+        "lemma": "am"
+      },
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "who sanctifies him",
+        "lemma": "qadash"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Say",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "For the generations to come",
+        "lemma": "dor"
+      },
+      {
+        "surface": "of your descendants",
+        "lemma": "zera"
+      },
+      {
+        "surface": "a physical defect",
+        "lemma": "mum"
+      },
+      {
+        "surface": "may approach",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "to offer",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "the food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "of his God",
+        "lemma": "elohim"
+      }
+    ],
+    "18": [
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "has any defect",
+        "lemma": "mum"
+      },
+      {
+        "surface": "may approach",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "no man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "who is blind",
+        "lemma": "ivver"
+      },
+      {
+        "surface": "lame",
+        "lemma": "pisseach"
+      },
+      {
+        "surface": "disfigured",
+        "lemma": "charam"
+      },
+      {
+        "surface": "deformed",
+        "lemma": "sara"
+      }
+    ],
+    "19": [
+      {
+        "surface": "no man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "a broken",
+        "lemma": "shever"
+      },
+      {
+        "surface": "foot",
+        "lemma": "regel"
+      },
+      {
+        "surface": "hand",
+        "lemma": "yad"
+      }
+    ],
+    "20": [
+      {
+        "surface": "who is a hunchback",
+        "lemma": "gibben"
+      },
+      {
+        "surface": "dwarf",
+        "lemma": "daq"
+      },
+      {
+        "surface": "who has an eye",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "defect",
+        "lemma": "teballul"
+      },
+      {
+        "surface": "a festering rash",
+        "lemma": "garav"
+      },
+      {
+        "surface": "scabs",
+        "lemma": "yallephet"
+      },
+      {
+        "surface": "a crushed",
+        "lemma": "meroach"
+      },
+      {
+        "surface": "testicle",
+        "lemma": "eshekh"
+      }
+    ],
+    "21": [
+      {
+        "surface": "descendant",
+        "lemma": "zera"
+      },
+      {
+        "surface": "of Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "the priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "has a defect",
+        "lemma": "mum"
+      },
+      {
+        "surface": "shall approach",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "to present",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "the food offerings",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Since he has a defect",
+        "lemma": "mum"
+      },
+      {
+        "surface": "to come near",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "to offer",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "the food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "of his God",
+        "lemma": "elohim"
+      }
+    ],
+    "22": [
+      {
+        "surface": "He may eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the most",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "holy",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "of his God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the holy food",
+        "lemma": "qodesh"
+      }
+    ],
+    "23": [
+      {
+        "surface": "but",
+        "lemma": "akh"
+      },
+      {
+        "surface": "he has a defect",
+        "lemma": "mum"
+      },
+      {
+        "surface": "the veil",
+        "lemma": "porekhet"
+      },
+      {
+        "surface": "or approach",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "the altar",
+        "lemma": "mizbeach"
+      },
+      {
+        "surface": "so as not to desecrate",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "My sanctuaries",
+        "lemma": "miqdash"
+      },
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "who sanctifies them",
+        "lemma": "qadash"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "told",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "and his sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "chalal",
+    "qarav",
+    "mum"
+  ]
+}

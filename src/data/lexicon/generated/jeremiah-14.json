@@ -1,0 +1,973 @@
+{
+  "bookId": 24,
+  "book": "Jeremiah",
+  "chapter": 14,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "This is the word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Jeremiah",
+        "lemma": "yirmeyah"
+      },
+      {
+        "surface": "the drought",
+        "lemma": "batstsoret"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "mourns",
+        "lemma": "aval"
+      },
+      {
+        "surface": "and her gates",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "languish",
+        "lemma": "amal"
+      },
+      {
+        "surface": "Her people wail",
+        "lemma": "qadar"
+      },
+      {
+        "surface": "for the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and a cry",
+        "lemma": "tsevachah"
+      },
+      {
+        "surface": "goes up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "from Jerusalem",
+        "lemma": "yerushalaim"
+      }
+    ],
+    "3": [
+      {
+        "surface": "The nobles",
+        "lemma": "addir"
+      },
+      {
+        "surface": "send",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "their servants",
+        "lemma": "tsair"
+      },
+      {
+        "surface": "for water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "the cisterns",
+        "lemma": "gev"
+      },
+      {
+        "surface": "but find",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "their jars",
+        "lemma": "keli"
+      },
+      {
+        "surface": "empty",
+        "lemma": "reqam"
+      },
+      {
+        "surface": "They are ashamed",
+        "lemma": "bush"
+      },
+      {
+        "surface": "and humiliated",
+        "lemma": "kalam"
+      },
+      {
+        "surface": "they cover",
+        "lemma": "chaphah"
+      },
+      {
+        "surface": "their heads",
+        "lemma": "rosh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "The ground",
+        "lemma": "adamah"
+      },
+      {
+        "surface": "is cracked",
+        "lemma": "chatat"
+      },
+      {
+        "surface": "rain",
+        "lemma": "geshem"
+      },
+      {
+        "surface": "has fallen on the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "The farmers",
+        "lemma": "ikkar"
+      },
+      {
+        "surface": "are ashamed",
+        "lemma": "bush"
+      },
+      {
+        "surface": "they cover",
+        "lemma": "chaphah"
+      },
+      {
+        "surface": "their heads",
+        "lemma": "rosh"
+      }
+    ],
+    "5": [
+      {
+        "surface": "the doe",
+        "lemma": "ayyalah"
+      },
+      {
+        "surface": "in the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "deserts",
+        "lemma": "azav"
+      },
+      {
+        "surface": "her newborn fawn",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "grass",
+        "lemma": "deshe"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Wild donkeys",
+        "lemma": "pere"
+      },
+      {
+        "surface": "stand",
+        "lemma": "amad"
+      },
+      {
+        "surface": "barren heights",
+        "lemma": "shephi"
+      },
+      {
+        "surface": "they pant",
+        "lemma": "shaaph"
+      },
+      {
+        "surface": "for air",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "like jackals",
+        "lemma": "tan"
+      },
+      {
+        "surface": "their eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "fail",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "lack",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of pasture",
+        "lemma": "esev"
+      }
+    ],
+    "7": [
+      {
+        "surface": "our iniquities",
+        "lemma": "avan"
+      },
+      {
+        "surface": "testify",
+        "lemma": "un"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Your name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "our rebellions",
+        "lemma": "meshuvah"
+      },
+      {
+        "surface": "are many",
+        "lemma": "ravav"
+      },
+      {
+        "surface": "we have sinned against You",
+        "lemma": "chata"
+      }
+    ],
+    "8": [
+      {
+        "surface": "O Hope",
+        "lemma": "qoveh"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "its Savior",
+        "lemma": "yasah"
+      },
+      {
+        "surface": "of distress",
+        "lemma": "batstsarah"
+      },
+      {
+        "surface": "why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "like a stranger",
+        "lemma": "ger"
+      },
+      {
+        "surface": "in the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "like a traveler",
+        "lemma": "arach"
+      },
+      {
+        "surface": "who stays but a night",
+        "lemma": "natah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "like a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "taken by surprise",
+        "lemma": "daham"
+      },
+      {
+        "surface": "like a warrior",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "powerless",
+        "lemma": "yakhol"
+      },
+      {
+        "surface": "to save",
+        "lemma": "yasah"
+      },
+      {
+        "surface": "are among us",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "by Your name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "forsake us",
+        "lemma": "nuach"
+      }
+    ],
+    "10": [
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "people",
+        "lemma": "am"
+      },
+      {
+        "surface": "Truly",
+        "lemma": "ken"
+      },
+      {
+        "surface": "they love",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "to wander",
+        "lemma": "nua"
+      },
+      {
+        "surface": "restrained",
+        "lemma": "chasakh"
+      },
+      {
+        "surface": "their feet",
+        "lemma": "regel"
+      },
+      {
+        "surface": "So the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "accept them",
+        "lemma": "ratsah"
+      },
+      {
+        "surface": "He will now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "remember",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "their iniquity",
+        "lemma": "avan"
+      },
+      {
+        "surface": "and punish them",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "for their sins",
+        "lemma": "chattaah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "pray",
+        "lemma": "palal"
+      },
+      {
+        "surface": "for",
+        "lemma": "bead"
+      },
+      {
+        "surface": "the well-being",
+        "lemma": "tov"
+      },
+      {
+        "surface": "people",
+        "lemma": "am"
+      }
+    ],
+    "12": [
+      {
+        "surface": "they may fast",
+        "lemma": "tsum"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "their cry",
+        "lemma": "rinnah"
+      },
+      {
+        "surface": "they may offer",
+        "lemma": "alah"
+      },
+      {
+        "surface": "burnt offerings",
+        "lemma": "olah"
+      },
+      {
+        "surface": "and grain offerings",
+        "lemma": "minchah"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "accept them",
+        "lemma": "ratsah"
+      },
+      {
+        "surface": "will finish them off",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "by sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "and famine",
+        "lemma": "raav"
+      },
+      {
+        "surface": "and plague",
+        "lemma": "dever"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Ah",
+        "lemma": "ahah"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "Look",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "the prophets",
+        "lemma": "navi"
+      },
+      {
+        "surface": "the sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "famine",
+        "lemma": "raav"
+      },
+      {
+        "surface": "lasting",
+        "lemma": "emet"
+      },
+      {
+        "surface": "peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "place",
+        "lemma": "maqom"
+      }
+    ],
+    "14": [
+      {
+        "surface": "The prophets",
+        "lemma": "navi"
+      },
+      {
+        "surface": "are prophesying",
+        "lemma": "nava"
+      },
+      {
+        "surface": "lies",
+        "lemma": "sheqer"
+      },
+      {
+        "surface": "in My name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "send them",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "appoint them",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "are prophesying",
+        "lemma": "nava"
+      },
+      {
+        "surface": "a false",
+        "lemma": "sheqer"
+      },
+      {
+        "surface": "vision",
+        "lemma": "chazon"
+      },
+      {
+        "surface": "a worthless divination",
+        "lemma": "qesem"
+      },
+      {
+        "surface": "the futility",
+        "lemma": "elul"
+      },
+      {
+        "surface": "and delusion",
+        "lemma": "tormah"
+      },
+      {
+        "surface": "of their own minds",
+        "lemma": "lev"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Therefore",
+        "lemma": "ken"
+      },
+      {
+        "surface": "this is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the prophets",
+        "lemma": "navi"
+      },
+      {
+        "surface": "who prophesy",
+        "lemma": "nava"
+      },
+      {
+        "surface": "in My name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "send them",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "or famine",
+        "lemma": "raav"
+      },
+      {
+        "surface": "land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "By sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "and famine",
+        "lemma": "raav"
+      },
+      {
+        "surface": "prophets",
+        "lemma": "navi"
+      },
+      {
+        "surface": "will meet their end",
+        "lemma": "tamam"
+      }
+    ],
+    "16": [
+      {
+        "surface": "And the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "prophesy",
+        "lemma": "nava"
+      },
+      {
+        "surface": "thrown",
+        "lemma": "shalakh"
+      },
+      {
+        "surface": "into the streets",
+        "lemma": "chuts"
+      },
+      {
+        "surface": "of Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "because of",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "famine",
+        "lemma": "raav"
+      },
+      {
+        "surface": "and sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "There will be no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "one to bury",
+        "lemma": "qavar"
+      },
+      {
+        "surface": "wives",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "their sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or their daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "I will pour out",
+        "lemma": "shaphakh"
+      },
+      {
+        "surface": "their own evil",
+        "lemma": "ra"
+      }
+    ],
+    "17": [
+      {
+        "surface": "word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "My eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "overflow",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "with tears",
+        "lemma": "dimah"
+      },
+      {
+        "surface": "day",
+        "lemma": "yomam"
+      },
+      {
+        "surface": "and night",
+        "lemma": "laylah"
+      },
+      {
+        "surface": "cease",
+        "lemma": "damah"
+      },
+      {
+        "surface": "the virgin",
+        "lemma": "betulah"
+      },
+      {
+        "surface": "daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of my people",
+        "lemma": "am"
+      },
+      {
+        "surface": "has been shattered",
+        "lemma": "shever"
+      },
+      {
+        "surface": "by a crushing",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "blow",
+        "lemma": "shavar"
+      },
+      {
+        "surface": "a severely",
+        "lemma": "meod"
+      },
+      {
+        "surface": "grievous",
+        "lemma": "chalah"
+      },
+      {
+        "surface": "wound",
+        "lemma": "makkah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "to the country",
+        "lemma": "saday"
+      },
+      {
+        "surface": "I see",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "those slain",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "by the sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "I see",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "those ravaged",
+        "lemma": "tachalu"
+      },
+      {
+        "surface": "by famine",
+        "lemma": "raav"
+      },
+      {
+        "surface": "prophet",
+        "lemma": "navi"
+      },
+      {
+        "surface": "priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "travel",
+        "lemma": "sachar"
+      },
+      {
+        "surface": "a land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "know",
+        "lemma": "yada"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Have You rejected",
+        "lemma": "maas"
+      },
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "completely",
+        "lemma": "maas"
+      },
+      {
+        "surface": "Do You",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "despise",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "Zion",
+        "lemma": "tsiyyon"
+      },
+      {
+        "surface": "Why",
+        "lemma": "maddua"
+      },
+      {
+        "surface": "have You stricken us",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "so that we are beyond",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "healing",
+        "lemma": "marpe"
+      },
+      {
+        "surface": "We hoped",
+        "lemma": "qavah"
+      },
+      {
+        "surface": "for peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "but no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "good has come",
+        "lemma": "tov"
+      },
+      {
+        "surface": "of healing",
+        "lemma": "marpe"
+      },
+      {
+        "surface": "but there",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "was only terror",
+        "lemma": "beatah"
+      }
+    ],
+    "20": [
+      {
+        "surface": "We acknowledge",
+        "lemma": "yada"
+      },
+      {
+        "surface": "our wickedness",
+        "lemma": "resah"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the guilt",
+        "lemma": "avan"
+      },
+      {
+        "surface": "we have sinned",
+        "lemma": "chata"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Your name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "despise us",
+        "lemma": "naats"
+      },
+      {
+        "surface": "disgrace",
+        "lemma": "naval"
+      },
+      {
+        "surface": "Your glorious",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "throne",
+        "lemma": "kisse"
+      },
+      {
+        "surface": "Remember",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "Your covenant",
+        "lemma": "berit"
+      },
+      {
+        "surface": "break it",
+        "lemma": "parar"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Can",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "the worthless idols",
+        "lemma": "hevel"
+      },
+      {
+        "surface": "of the nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "bring rain",
+        "lemma": "gasham"
+      },
+      {
+        "surface": "Do the skies alone",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "showers",
+        "lemma": "raviv"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "our God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "So we put our hope",
+        "lemma": "qavah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "raav",
+    "cherev",
+    "shem"
+  ]
+}

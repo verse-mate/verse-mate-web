@@ -1,0 +1,707 @@
+{
+  "bookId": 45,
+  "book": "Romans",
+  "chapter": 4,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "shall we say",
+        "lemma": "ero"
+      },
+      {
+        "surface": "that Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "forefather",
+        "lemma": "pater"
+      },
+      {
+        "surface": "the flesh",
+        "lemma": "sarx"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "was indeed justified",
+        "lemma": "dikaioo"
+      },
+      {
+        "surface": "works",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "something to boast about",
+        "lemma": "kauchema"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Scripture",
+        "lemma": "graphe"
+      },
+      {
+        "surface": "Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "believed",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "it was credited",
+        "lemma": "logizomai"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "dikaiosune"
+      }
+    ],
+    "4": [
+      {
+        "surface": "wages",
+        "lemma": "misthos"
+      },
+      {
+        "surface": "the worker",
+        "lemma": "ergazomai"
+      },
+      {
+        "surface": "are not credited",
+        "lemma": "logizomai"
+      },
+      {
+        "surface": "a gift",
+        "lemma": "charis"
+      },
+      {
+        "surface": "an obligation",
+        "lemma": "opheilema"
+      }
+    ],
+    "5": [
+      {
+        "surface": "does not work",
+        "lemma": "ergazomai"
+      },
+      {
+        "surface": "believes",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "justifies",
+        "lemma": "dikaioo"
+      },
+      {
+        "surface": "ungodly",
+        "lemma": "asebes"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "is credited",
+        "lemma": "logizomai"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "dikaiosune"
+      }
+    ],
+    "6": [
+      {
+        "surface": "David",
+        "lemma": "daueid"
+      },
+      {
+        "surface": "blessedness",
+        "lemma": "makarismos"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "credits",
+        "lemma": "logizomai"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "works",
+        "lemma": "ergon"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Blessed",
+        "lemma": "makarios"
+      },
+      {
+        "surface": "lawless acts",
+        "lemma": "anomia"
+      },
+      {
+        "surface": "are forgiven",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "sins",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "are covered",
+        "lemma": "epikalupto"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Blessed is",
+        "lemma": "makarios"
+      },
+      {
+        "surface": "the man",
+        "lemma": "aner"
+      },
+      {
+        "surface": "whose sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "will never count",
+        "lemma": "logizomai"
+      }
+    ],
+    "9": [
+      {
+        "surface": "blessing",
+        "lemma": "makarismos"
+      },
+      {
+        "surface": "circumcised",
+        "lemma": "peritome"
+      },
+      {
+        "surface": "uncircumcised",
+        "lemma": "akrobustia"
+      },
+      {
+        "surface": "Abraham’s",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "was credited to him",
+        "lemma": "logizomai"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "dikaiosune"
+      }
+    ],
+    "10": [
+      {
+        "surface": "was it credited",
+        "lemma": "logizomai"
+      },
+      {
+        "surface": "his circumcision",
+        "lemma": "peritome"
+      },
+      {
+        "surface": "before",
+        "lemma": "akrobustia"
+      },
+      {
+        "surface": "after",
+        "lemma": "peritome"
+      },
+      {
+        "surface": "before",
+        "lemma": "akrobustia"
+      }
+    ],
+    "11": [
+      {
+        "surface": "the sign",
+        "lemma": "semeion"
+      },
+      {
+        "surface": "of circumcision",
+        "lemma": "peritome"
+      },
+      {
+        "surface": "as a seal",
+        "lemma": "sphragis"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "he was still uncircumcised",
+        "lemma": "akrobustia"
+      },
+      {
+        "surface": "the father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "are not circumcised",
+        "lemma": "akrobustia"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "might be credited",
+        "lemma": "logizomai"
+      }
+    ],
+    "12": [
+      {
+        "surface": "he is also the father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "of the circumcised",
+        "lemma": "peritome"
+      },
+      {
+        "surface": "only",
+        "lemma": "monon"
+      },
+      {
+        "surface": "are circumcised",
+        "lemma": "peritome"
+      },
+      {
+        "surface": "walk",
+        "lemma": "stoicheo"
+      },
+      {
+        "surface": "footsteps",
+        "lemma": "ichnos"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "had before he was circumcised",
+        "lemma": "akrobustia"
+      }
+    ],
+    "13": [
+      {
+        "surface": "promise",
+        "lemma": "epangelia"
+      },
+      {
+        "surface": "to Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "offspring",
+        "lemma": "sperma"
+      },
+      {
+        "surface": "heir",
+        "lemma": "kleronomos"
+      },
+      {
+        "surface": "of the world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "the righteousness",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "that comes by faith",
+        "lemma": "pistis"
+      }
+    ],
+    "14": [
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "are heirs",
+        "lemma": "kleronomos"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "is useless",
+        "lemma": "kenoo"
+      },
+      {
+        "surface": "promise",
+        "lemma": "epangelia"
+      },
+      {
+        "surface": "is worthless",
+        "lemma": "katargeo"
+      }
+    ],
+    "15": [
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "brings",
+        "lemma": "katergazomai"
+      },
+      {
+        "surface": "wrath",
+        "lemma": "orge"
+      },
+      {
+        "surface": "where",
+        "lemma": "hou"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "transgression",
+        "lemma": "parabasis"
+      }
+    ],
+    "16": [
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "it",
+        "lemma": "epangelia"
+      },
+      {
+        "surface": "grace",
+        "lemma": "charis"
+      },
+      {
+        "surface": "guaranteed",
+        "lemma": "bebaios"
+      },
+      {
+        "surface": "offspring",
+        "lemma": "sperma"
+      },
+      {
+        "surface": "only",
+        "lemma": "monon"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "the faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "of Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "the father",
+        "lemma": "pater"
+      }
+    ],
+    "17": [
+      {
+        "surface": "I have made",
+        "lemma": "tithemi"
+      },
+      {
+        "surface": "a father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "nations",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "he believed",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "gives life",
+        "lemma": "zoopoieo"
+      },
+      {
+        "surface": "dead",
+        "lemma": "nekros"
+      },
+      {
+        "surface": "calls",
+        "lemma": "kaleo"
+      }
+    ],
+    "18": [
+      {
+        "surface": "all hope",
+        "lemma": "elpis"
+      },
+      {
+        "surface": "hope",
+        "lemma": "elpis"
+      },
+      {
+        "surface": "believed",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "the father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "nations",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "he had been told",
+        "lemma": "ero"
+      },
+      {
+        "surface": "So",
+        "lemma": "houto"
+      },
+      {
+        "surface": "offspring",
+        "lemma": "sperma"
+      }
+    ],
+    "19": [
+      {
+        "surface": "weakening",
+        "lemma": "astheneo"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "he acknowledged",
+        "lemma": "katanoeo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ede"
+      },
+      {
+        "surface": "decrepitness",
+        "lemma": "nekroo"
+      },
+      {
+        "surface": "body",
+        "lemma": "soma"
+      },
+      {
+        "surface": "since he was",
+        "lemma": "huparcho"
+      },
+      {
+        "surface": "about",
+        "lemma": "pou"
+      },
+      {
+        "surface": "a hundred years old",
+        "lemma": "hekatontaetes"
+      },
+      {
+        "surface": "lifelessness",
+        "lemma": "nekrosis"
+      },
+      {
+        "surface": "of Sarah’s",
+        "lemma": "sarra"
+      },
+      {
+        "surface": "womb",
+        "lemma": "metra"
+      }
+    ],
+    "20": [
+      {
+        "surface": "he did not waver",
+        "lemma": "diakrino"
+      },
+      {
+        "surface": "through disbelief",
+        "lemma": "apistia"
+      },
+      {
+        "surface": "promise",
+        "lemma": "epangelia"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "was strengthened",
+        "lemma": "endunamoo"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "to God",
+        "lemma": "theos"
+      }
+    ],
+    "21": [
+      {
+        "surface": "being fully persuaded that",
+        "lemma": "plerophoreo"
+      },
+      {
+        "surface": "able",
+        "lemma": "dunatos"
+      },
+      {
+        "surface": "He had promised",
+        "lemma": "epangello"
+      }
+    ],
+    "22": [
+      {
+        "surface": "it was credited",
+        "lemma": "logizomai"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "dikaiosune"
+      }
+    ],
+    "23": [
+      {
+        "surface": "it was credited",
+        "lemma": "logizomai"
+      },
+      {
+        "surface": "only",
+        "lemma": "monon"
+      }
+    ],
+    "24": [
+      {
+        "surface": "vvv",
+        "lemma": "mello"
+      },
+      {
+        "surface": "righteousness will be credited",
+        "lemma": "logizomai"
+      },
+      {
+        "surface": "believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "raised",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "the dead",
+        "lemma": "nekros"
+      }
+    ],
+    "25": [
+      {
+        "surface": "was delivered over to death",
+        "lemma": "paradidomi"
+      },
+      {
+        "surface": "trespasses",
+        "lemma": "paraptoma"
+      },
+      {
+        "surface": "was raised to life",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "justification",
+        "lemma": "dikaiosis"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "makarismos",
+    "akrobustia",
+    "logizomai"
+  ]
+}

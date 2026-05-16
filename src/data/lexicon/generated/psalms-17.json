@@ -1,0 +1,483 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 17,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "A prayer",
+        "lemma": "tephillah"
+      },
+      {
+        "surface": "of David",
+        "lemma": "david"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "my righteous plea",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "listen",
+        "lemma": "qashav"
+      },
+      {
+        "surface": "to my cry",
+        "lemma": "rinnah"
+      },
+      {
+        "surface": "Give ear",
+        "lemma": "azan"
+      },
+      {
+        "surface": "to my prayer",
+        "lemma": "tephillah"
+      },
+      {
+        "surface": "it comes from lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "deceit",
+        "lemma": "mirmah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "May my vindication",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "from Your presence",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "may Your eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "see",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "what is right",
+        "lemma": "meshar"
+      }
+    ],
+    "3": [
+      {
+        "surface": "You have tried",
+        "lemma": "bachan"
+      },
+      {
+        "surface": "my heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "You have visited",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "me in the night",
+        "lemma": "laylah"
+      },
+      {
+        "surface": "You have tested me",
+        "lemma": "tsaraph"
+      },
+      {
+        "surface": "and found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "no evil",
+        "lemma": "bal"
+      },
+      {
+        "surface": "I have resolved",
+        "lemma": "zamam"
+      },
+      {
+        "surface": "not",
+        "lemma": "bal"
+      },
+      {
+        "surface": "to sin",
+        "lemma": "avar"
+      },
+      {
+        "surface": "with my mouth",
+        "lemma": "peh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "As for the deeds",
+        "lemma": "peullah"
+      },
+      {
+        "surface": "of men",
+        "lemma": "adam"
+      },
+      {
+        "surface": "by the word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of Your lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "have avoided",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "the ways",
+        "lemma": "orach"
+      },
+      {
+        "surface": "of the violent",
+        "lemma": "perits"
+      }
+    ],
+    "5": [
+      {
+        "surface": "My steps",
+        "lemma": "ashur"
+      },
+      {
+        "surface": "have held",
+        "lemma": "tamakh"
+      },
+      {
+        "surface": "to Your paths",
+        "lemma": "magal"
+      },
+      {
+        "surface": "my feet",
+        "lemma": "paam"
+      },
+      {
+        "surface": "have not",
+        "lemma": "bal"
+      },
+      {
+        "surface": "slipped",
+        "lemma": "mot"
+      }
+    ],
+    "6": [
+      {
+        "surface": "O God",
+        "lemma": "el"
+      },
+      {
+        "surface": "You will answer me",
+        "lemma": "un"
+      },
+      {
+        "surface": "Incline",
+        "lemma": "natah"
+      },
+      {
+        "surface": "Your ear",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "my words",
+        "lemma": "imrah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Show the wonders",
+        "lemma": "palah"
+      },
+      {
+        "surface": "of Your loving devotion",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "You who save",
+        "lemma": "yasah"
+      },
+      {
+        "surface": "by Your right hand",
+        "lemma": "yamin"
+      },
+      {
+        "surface": "those who seek refuge",
+        "lemma": "chasah"
+      },
+      {
+        "surface": "from their foes",
+        "lemma": "qamay"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Keep me",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "as the apple",
+        "lemma": "ishon"
+      },
+      {
+        "surface": "of",
+        "lemma": "bat"
+      },
+      {
+        "surface": "Your eye",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "hide me",
+        "lemma": "satar"
+      },
+      {
+        "surface": "in the shadow",
+        "lemma": "tsel"
+      },
+      {
+        "surface": "of Your wings",
+        "lemma": "kanaph"
+      }
+    ],
+    "9": [
+      {
+        "surface": "from",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "assail me",
+        "lemma": "shadad"
+      },
+      {
+        "surface": "from my mortal",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "enemies",
+        "lemma": "oyev"
+      },
+      {
+        "surface": "who surround me",
+        "lemma": "naqaph"
+      }
+    ],
+    "10": [
+      {
+        "surface": "They have closed",
+        "lemma": "sagar"
+      },
+      {
+        "surface": "their callous hearts",
+        "lemma": "chelev"
+      },
+      {
+        "surface": "their mouths",
+        "lemma": "peh"
+      },
+      {
+        "surface": "speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "with arrogance",
+        "lemma": "geut"
+      }
+    ],
+    "11": [
+      {
+        "surface": "They have tracked us down",
+        "lemma": "ashur"
+      },
+      {
+        "surface": "and now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "surround us",
+        "lemma": "savav"
+      },
+      {
+        "surface": "their eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "are set",
+        "lemma": "shit"
+      },
+      {
+        "surface": "to cast us",
+        "lemma": "natah"
+      },
+      {
+        "surface": "to the ground",
+        "lemma": "erets"
+      }
+    ],
+    "12": [
+      {
+        "surface": "like a lion",
+        "lemma": "ari"
+      },
+      {
+        "surface": "greedy",
+        "lemma": "kasaph"
+      },
+      {
+        "surface": "for prey",
+        "lemma": "taraph"
+      },
+      {
+        "surface": "like a young lion",
+        "lemma": "kephir"
+      },
+      {
+        "surface": "in ambush",
+        "lemma": "mistar"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Arise",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "confront",
+        "lemma": "qadam"
+      },
+      {
+        "surface": "them",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "Bring them to their knees",
+        "lemma": "kara"
+      },
+      {
+        "surface": "deliver",
+        "lemma": "palat"
+      },
+      {
+        "surface": "me",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "from the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "by Your sword",
+        "lemma": "cherev"
+      }
+    ],
+    "14": [
+      {
+        "surface": "from such men",
+        "lemma": "mat"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "by Your hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "from men",
+        "lemma": "mat"
+      },
+      {
+        "surface": "of the world",
+        "lemma": "cheled"
+      },
+      {
+        "surface": "whose portion",
+        "lemma": "cheleq"
+      },
+      {
+        "surface": "is in this life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "May You fill",
+        "lemma": "male"
+      },
+      {
+        "surface": "the bellies",
+        "lemma": "beten"
+      },
+      {
+        "surface": "of Your treasured ones",
+        "lemma": "tsaphin"
+      },
+      {
+        "surface": "and satisfy",
+        "lemma": "sava"
+      },
+      {
+        "surface": "their sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "so they leave",
+        "lemma": "nuach"
+      },
+      {
+        "surface": "their abundance",
+        "lemma": "yeter"
+      },
+      {
+        "surface": "to their children",
+        "lemma": "olel"
+      }
+    ],
+    "15": [
+      {
+        "surface": "I will behold",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "Your face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "in righteousness",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "when I awake",
+        "lemma": "quts"
+      },
+      {
+        "surface": "I will be satisfied",
+        "lemma": "sava"
+      },
+      {
+        "surface": "in Your presence",
+        "lemma": "temunah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "paneh",
+    "bal",
+    "tsedeq"
+  ]
+}

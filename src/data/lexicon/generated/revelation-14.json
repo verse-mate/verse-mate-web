@@ -1,0 +1,929 @@
+{
+  "bookId": 66,
+  "book": "Revelation",
+  "chapter": 14,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Lamb",
+        "lemma": "arnion"
+      },
+      {
+        "surface": "Mount",
+        "lemma": "oros"
+      },
+      {
+        "surface": "Zion",
+        "lemma": "sion"
+      },
+      {
+        "surface": "144,000",
+        "lemma": "hekaton"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "Father’s",
+        "lemma": "pater"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "foreheads",
+        "lemma": "metopon"
+      }
+    ],
+    "2": [
+      {
+        "surface": "a sound",
+        "lemma": "phone"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "the roar",
+        "lemma": "phone"
+      },
+      {
+        "surface": "waters",
+        "lemma": "hudor"
+      },
+      {
+        "surface": "rumbling",
+        "lemma": "phone"
+      },
+      {
+        "surface": "of thunder",
+        "lemma": "bronte"
+      },
+      {
+        "surface": "sound",
+        "lemma": "phone"
+      },
+      {
+        "surface": "harpists",
+        "lemma": "kitharodos"
+      },
+      {
+        "surface": "strumming",
+        "lemma": "kitharizo"
+      },
+      {
+        "surface": "harps",
+        "lemma": "kithara"
+      }
+    ],
+    "3": [
+      {
+        "surface": "they sang",
+        "lemma": "ado"
+      },
+      {
+        "surface": "a new",
+        "lemma": "kainos"
+      },
+      {
+        "surface": "song",
+        "lemma": "ode"
+      },
+      {
+        "surface": "throne",
+        "lemma": "thronos"
+      },
+      {
+        "surface": "four",
+        "lemma": "tessares"
+      },
+      {
+        "surface": "living creatures",
+        "lemma": "zoon"
+      },
+      {
+        "surface": "elders",
+        "lemma": "presbuteros"
+      },
+      {
+        "surface": "learn",
+        "lemma": "manthano"
+      },
+      {
+        "surface": "song",
+        "lemma": "ode"
+      },
+      {
+        "surface": "144,000",
+        "lemma": "hekaton"
+      },
+      {
+        "surface": "had been redeemed",
+        "lemma": "agorazo"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      }
+    ],
+    "4": [
+      {
+        "surface": "have not been defiled",
+        "lemma": "moluno"
+      },
+      {
+        "surface": "women",
+        "lemma": "gune"
+      },
+      {
+        "surface": "virgins",
+        "lemma": "parthenos"
+      },
+      {
+        "surface": "follow",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "Lamb",
+        "lemma": "arnion"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "an"
+      },
+      {
+        "surface": "He goes",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "have been redeemed",
+        "lemma": "agorazo"
+      },
+      {
+        "surface": "men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "as firstfruits",
+        "lemma": "aparche"
+      },
+      {
+        "surface": "to God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Lamb",
+        "lemma": "arnion"
+      }
+    ],
+    "5": [
+      {
+        "surface": "lie",
+        "lemma": "pseudos"
+      },
+      {
+        "surface": "mouths",
+        "lemma": "stoma"
+      },
+      {
+        "surface": "blameless",
+        "lemma": "amomos"
+      }
+    ],
+    "6": [
+      {
+        "surface": "another",
+        "lemma": "allos"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "flying",
+        "lemma": "petomai"
+      },
+      {
+        "surface": "overhead",
+        "lemma": "mesouranema"
+      },
+      {
+        "surface": "the eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      },
+      {
+        "surface": "to proclaim",
+        "lemma": "euangelizomai"
+      },
+      {
+        "surface": "dwell",
+        "lemma": "kathemai"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "nation",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "tribe",
+        "lemma": "phule"
+      },
+      {
+        "surface": "tongue",
+        "lemma": "glossa"
+      },
+      {
+        "surface": "people",
+        "lemma": "laos"
+      }
+    ],
+    "7": [
+      {
+        "surface": "voice",
+        "lemma": "phone"
+      },
+      {
+        "surface": "Fear",
+        "lemma": "phobeo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "hour",
+        "lemma": "hora"
+      },
+      {
+        "surface": "judgment",
+        "lemma": "krisis"
+      },
+      {
+        "surface": "Worship",
+        "lemma": "proskuneo"
+      },
+      {
+        "surface": "heavens",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "the sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "the springs",
+        "lemma": "pege"
+      },
+      {
+        "surface": "of waters",
+        "lemma": "hudor"
+      }
+    ],
+    "8": [
+      {
+        "surface": "a",
+        "lemma": "allos"
+      },
+      {
+        "surface": "second",
+        "lemma": "deuteros"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "followed",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "Fallen",
+        "lemma": "pipto"
+      },
+      {
+        "surface": "fallen is",
+        "lemma": "pipto"
+      },
+      {
+        "surface": "Babylon",
+        "lemma": "babulon"
+      },
+      {
+        "surface": "nations",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "drink",
+        "lemma": "potizo"
+      },
+      {
+        "surface": "wine",
+        "lemma": "oinos"
+      },
+      {
+        "surface": "passion",
+        "lemma": "thumos"
+      },
+      {
+        "surface": "immorality",
+        "lemma": "porneia"
+      }
+    ],
+    "9": [
+      {
+        "surface": "vvv",
+        "lemma": "allos"
+      },
+      {
+        "surface": "a third",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "followed",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "voice",
+        "lemma": "phone"
+      },
+      {
+        "surface": "worships",
+        "lemma": "proskuneo"
+      },
+      {
+        "surface": "beast",
+        "lemma": "therion"
+      },
+      {
+        "surface": "image",
+        "lemma": "eikon"
+      },
+      {
+        "surface": "its mark",
+        "lemma": "charagma"
+      },
+      {
+        "surface": "forehead",
+        "lemma": "metopon"
+      },
+      {
+        "surface": "hand",
+        "lemma": "cheir"
+      }
+    ],
+    "10": [
+      {
+        "surface": "will drink",
+        "lemma": "pino"
+      },
+      {
+        "surface": "wine",
+        "lemma": "oinos"
+      },
+      {
+        "surface": "of God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "anger",
+        "lemma": "thumos"
+      },
+      {
+        "surface": "poured",
+        "lemma": "kerannumi"
+      },
+      {
+        "surface": "undiluted",
+        "lemma": "akratos"
+      },
+      {
+        "surface": "cup",
+        "lemma": "poterion"
+      },
+      {
+        "surface": "wrath",
+        "lemma": "orge"
+      },
+      {
+        "surface": "he will be tormented",
+        "lemma": "basanizo"
+      },
+      {
+        "surface": "fire",
+        "lemma": "pur"
+      },
+      {
+        "surface": "sulfur",
+        "lemma": "theion"
+      },
+      {
+        "surface": "the holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "angels",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "Lamb",
+        "lemma": "arnion"
+      }
+    ],
+    "11": [
+      {
+        "surface": "smoke",
+        "lemma": "kapnos"
+      },
+      {
+        "surface": "torment",
+        "lemma": "basanismos"
+      },
+      {
+        "surface": "rises",
+        "lemma": "anabaino"
+      },
+      {
+        "surface": "forever",
+        "lemma": "aion"
+      },
+      {
+        "surface": "and ever",
+        "lemma": "aion"
+      },
+      {
+        "surface": "Day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "night",
+        "lemma": "nux"
+      },
+      {
+        "surface": "rest",
+        "lemma": "anapausis"
+      },
+      {
+        "surface": "worship",
+        "lemma": "proskuneo"
+      },
+      {
+        "surface": "beast",
+        "lemma": "therion"
+      },
+      {
+        "surface": "image",
+        "lemma": "eikon"
+      },
+      {
+        "surface": "mark",
+        "lemma": "charagma"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Here",
+        "lemma": "hode"
+      },
+      {
+        "surface": "perseverance",
+        "lemma": "hupomone"
+      },
+      {
+        "surface": "saints",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "keep",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "commandments",
+        "lemma": "entole"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "of Jesus",
+        "lemma": "iesous"
+      }
+    ],
+    "13": [
+      {
+        "surface": "a voice",
+        "lemma": "phone"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "Blessed are",
+        "lemma": "makarios"
+      },
+      {
+        "surface": "dead",
+        "lemma": "nekros"
+      },
+      {
+        "surface": "die",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "this moment on",
+        "lemma": "arti"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "they will rest",
+        "lemma": "anapauo"
+      },
+      {
+        "surface": "labors",
+        "lemma": "kopos"
+      },
+      {
+        "surface": "deeds",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "will follow",
+        "lemma": "akoloutheo"
+      }
+    ],
+    "14": [
+      {
+        "surface": "a white",
+        "lemma": "leukos"
+      },
+      {
+        "surface": "cloud",
+        "lemma": "nephele"
+      },
+      {
+        "surface": "seated",
+        "lemma": "kathemai"
+      },
+      {
+        "surface": "cloud",
+        "lemma": "nephele"
+      },
+      {
+        "surface": "was One like",
+        "lemma": "homoios"
+      },
+      {
+        "surface": "the Son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "of Man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "a golden",
+        "lemma": "chruseos"
+      },
+      {
+        "surface": "crown",
+        "lemma": "stephanos"
+      },
+      {
+        "surface": "head",
+        "lemma": "kephale"
+      },
+      {
+        "surface": "a sharp",
+        "lemma": "oxus"
+      },
+      {
+        "surface": "sickle",
+        "lemma": "drepanon"
+      },
+      {
+        "surface": "hand",
+        "lemma": "cheir"
+      }
+    ],
+    "15": [
+      {
+        "surface": "another",
+        "lemma": "allos"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "temple",
+        "lemma": "naos"
+      },
+      {
+        "surface": "crying out",
+        "lemma": "krazo"
+      },
+      {
+        "surface": "voice",
+        "lemma": "phone"
+      },
+      {
+        "surface": "seated",
+        "lemma": "kathemai"
+      },
+      {
+        "surface": "cloud",
+        "lemma": "nephele"
+      },
+      {
+        "surface": "Swing",
+        "lemma": "pempo"
+      },
+      {
+        "surface": "sickle",
+        "lemma": "drepanon"
+      },
+      {
+        "surface": "reap",
+        "lemma": "therizo"
+      },
+      {
+        "surface": "time",
+        "lemma": "hora"
+      },
+      {
+        "surface": "to harvest",
+        "lemma": "therizo"
+      },
+      {
+        "surface": "crop",
+        "lemma": "therismos"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "is ripe",
+        "lemma": "xeraino"
+      }
+    ],
+    "16": [
+      {
+        "surface": "seated",
+        "lemma": "kathemai"
+      },
+      {
+        "surface": "cloud",
+        "lemma": "nephele"
+      },
+      {
+        "surface": "swung",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "sickle",
+        "lemma": "drepanon"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "was harvested",
+        "lemma": "therizo"
+      }
+    ],
+    "17": [
+      {
+        "surface": "another",
+        "lemma": "allos"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "temple",
+        "lemma": "naos"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "a sharp",
+        "lemma": "oxus"
+      },
+      {
+        "surface": "sickle",
+        "lemma": "drepanon"
+      }
+    ],
+    "18": [
+      {
+        "surface": "another",
+        "lemma": "allos"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "authority",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "fire",
+        "lemma": "pur"
+      },
+      {
+        "surface": "altar",
+        "lemma": "thusiasterion"
+      },
+      {
+        "surface": "called out",
+        "lemma": "phoneo"
+      },
+      {
+        "surface": "voice",
+        "lemma": "phone"
+      },
+      {
+        "surface": "sharp",
+        "lemma": "oxus"
+      },
+      {
+        "surface": "sickle",
+        "lemma": "drepanon"
+      },
+      {
+        "surface": "Swing",
+        "lemma": "pempo"
+      },
+      {
+        "surface": "sharp",
+        "lemma": "oxus"
+      },
+      {
+        "surface": "sickle",
+        "lemma": "drepanon"
+      },
+      {
+        "surface": "gather",
+        "lemma": "trugao"
+      },
+      {
+        "surface": "clusters of grapes",
+        "lemma": "botrus"
+      },
+      {
+        "surface": "vine",
+        "lemma": "ampelos"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "grapes",
+        "lemma": "staphule"
+      },
+      {
+        "surface": "are ripe",
+        "lemma": "akmazo"
+      }
+    ],
+    "19": [
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "swung",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "sickle",
+        "lemma": "drepanon"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "gathered",
+        "lemma": "trugao"
+      },
+      {
+        "surface": "grapes",
+        "lemma": "ampelos"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "he threw them",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "winepress",
+        "lemma": "lenos"
+      },
+      {
+        "surface": "of God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "wrath",
+        "lemma": "thumos"
+      }
+    ],
+    "20": [
+      {
+        "surface": "winepress",
+        "lemma": "lenos"
+      },
+      {
+        "surface": "was trodden",
+        "lemma": "pateo"
+      },
+      {
+        "surface": "city",
+        "lemma": "polis"
+      },
+      {
+        "surface": "the blood",
+        "lemma": "haima"
+      },
+      {
+        "surface": "it",
+        "lemma": "lenos"
+      },
+      {
+        "surface": "bridles",
+        "lemma": "chalinos"
+      },
+      {
+        "surface": "horses",
+        "lemma": "hippos"
+      },
+      {
+        "surface": "1,600",
+        "lemma": "chilioi"
+      },
+      {
+        "surface": "stadia",
+        "lemma": "stadios"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "drepanon",
+    "trugao",
+    "lenos"
+  ]
+}

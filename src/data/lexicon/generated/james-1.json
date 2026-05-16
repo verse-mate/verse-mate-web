@@ -1,0 +1,847 @@
+{
+  "bookId": 59,
+  "book": "James",
+  "chapter": 1,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "James",
+        "lemma": "iakobos"
+      },
+      {
+        "surface": "a servant",
+        "lemma": "doulos"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "twelve",
+        "lemma": "dodeka"
+      },
+      {
+        "surface": "tribes",
+        "lemma": "phule"
+      },
+      {
+        "surface": "Dispersion",
+        "lemma": "diaspora"
+      },
+      {
+        "surface": "Greetings",
+        "lemma": "chairo"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Consider it",
+        "lemma": "hegeomai"
+      },
+      {
+        "surface": "joy",
+        "lemma": "chara"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "you encounter",
+        "lemma": "peripipto"
+      },
+      {
+        "surface": "trials",
+        "lemma": "peirasmos"
+      },
+      {
+        "surface": "of many kinds",
+        "lemma": "poikilos"
+      }
+    ],
+    "3": [
+      {
+        "surface": "testing",
+        "lemma": "dokimion"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "develops",
+        "lemma": "katergazomai"
+      },
+      {
+        "surface": "perseverance",
+        "lemma": "hupomone"
+      }
+    ],
+    "4": [
+      {
+        "surface": "perseverance",
+        "lemma": "hupomone"
+      },
+      {
+        "surface": "to finish",
+        "lemma": "teleios"
+      },
+      {
+        "surface": "its work",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "mature",
+        "lemma": "teleios"
+      },
+      {
+        "surface": "complete",
+        "lemma": "holokleros"
+      },
+      {
+        "surface": "not lacking",
+        "lemma": "leipo"
+      },
+      {
+        "surface": "anything",
+        "lemma": "medeis"
+      }
+    ],
+    "5": [
+      {
+        "surface": "lacks",
+        "lemma": "leipo"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "sophia"
+      },
+      {
+        "surface": "he should ask",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "generously",
+        "lemma": "haplos"
+      },
+      {
+        "surface": "finding fault",
+        "lemma": "oneidizo"
+      }
+    ],
+    "6": [
+      {
+        "surface": "he must ask",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "without",
+        "lemma": "medeis"
+      },
+      {
+        "surface": "doubting",
+        "lemma": "diakrino"
+      },
+      {
+        "surface": "doubts",
+        "lemma": "diakrino"
+      },
+      {
+        "surface": "is like",
+        "lemma": "eiko"
+      },
+      {
+        "surface": "a wave",
+        "lemma": "kludon"
+      },
+      {
+        "surface": "of the sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "blown",
+        "lemma": "anemizomai"
+      },
+      {
+        "surface": "tossed by the wind",
+        "lemma": "rhipizo"
+      }
+    ],
+    "7": [
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "expect",
+        "lemma": "oiomai"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      }
+    ],
+    "8": [
+      {
+        "surface": "He is a double-minded",
+        "lemma": "dipsuchos"
+      },
+      {
+        "surface": "man",
+        "lemma": "aner"
+      },
+      {
+        "surface": "unstable",
+        "lemma": "akatastatos"
+      },
+      {
+        "surface": "ways",
+        "lemma": "hodos"
+      }
+    ],
+    "9": [
+      {
+        "surface": "brother",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "in humble circumstances",
+        "lemma": "tapeinos"
+      },
+      {
+        "surface": "should exult",
+        "lemma": "kauchaomai"
+      },
+      {
+        "surface": "high position",
+        "lemma": "hupsos"
+      }
+    ],
+    "10": [
+      {
+        "surface": "rich",
+        "lemma": "plousios"
+      },
+      {
+        "surface": "low position",
+        "lemma": "tapeinosis"
+      },
+      {
+        "surface": "he will pass away",
+        "lemma": "parerchomai"
+      },
+      {
+        "surface": "a flower",
+        "lemma": "anthos"
+      },
+      {
+        "surface": "of the field",
+        "lemma": "chortos"
+      }
+    ],
+    "11": [
+      {
+        "surface": "sun",
+        "lemma": "helios"
+      },
+      {
+        "surface": "rises",
+        "lemma": "anatello"
+      },
+      {
+        "surface": "scorching heat",
+        "lemma": "kauson"
+      },
+      {
+        "surface": "withers",
+        "lemma": "xeraino"
+      },
+      {
+        "surface": "plant",
+        "lemma": "chortos"
+      },
+      {
+        "surface": "flower",
+        "lemma": "anthos"
+      },
+      {
+        "surface": "falls",
+        "lemma": "ekpipto"
+      },
+      {
+        "surface": "beauty",
+        "lemma": "euprepeia"
+      },
+      {
+        "surface": "is lost",
+        "lemma": "apolluo"
+      },
+      {
+        "surface": "So",
+        "lemma": "houto"
+      },
+      {
+        "surface": "rich man",
+        "lemma": "plousios"
+      },
+      {
+        "surface": "will fade away",
+        "lemma": "maraino"
+      },
+      {
+        "surface": "pursuits",
+        "lemma": "poreia"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Blessed is the",
+        "lemma": "makarios"
+      },
+      {
+        "surface": "man",
+        "lemma": "aner"
+      },
+      {
+        "surface": "perseveres",
+        "lemma": "hupomeno"
+      },
+      {
+        "surface": "under trial",
+        "lemma": "peirasmos"
+      },
+      {
+        "surface": "stood the test",
+        "lemma": "dokimos"
+      },
+      {
+        "surface": "crown",
+        "lemma": "stephanos"
+      },
+      {
+        "surface": "of life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "God has promised",
+        "lemma": "epangello"
+      },
+      {
+        "surface": "love",
+        "lemma": "agapao"
+      }
+    ],
+    "13": [
+      {
+        "surface": "When tempted",
+        "lemma": "peirazo"
+      },
+      {
+        "surface": "no one",
+        "lemma": "medeis"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "is tempting me",
+        "lemma": "peirazo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "cannot be tempted",
+        "lemma": "apeirastos"
+      },
+      {
+        "surface": "by evil",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "does He tempt",
+        "lemma": "peirazo"
+      }
+    ],
+    "14": [
+      {
+        "surface": "each one",
+        "lemma": "hekastos"
+      },
+      {
+        "surface": "is tempted",
+        "lemma": "peirazo"
+      },
+      {
+        "surface": "own",
+        "lemma": "idios"
+      },
+      {
+        "surface": "evil desires",
+        "lemma": "epithumia"
+      },
+      {
+        "surface": "he is lured away",
+        "lemma": "exelko"
+      },
+      {
+        "surface": "enticed",
+        "lemma": "deleazo"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Then",
+        "lemma": "eita"
+      },
+      {
+        "surface": "after desire",
+        "lemma": "epithumia"
+      },
+      {
+        "surface": "has conceived",
+        "lemma": "sullambano"
+      },
+      {
+        "surface": "it gives birth to",
+        "lemma": "tikto"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "when it is full-grown",
+        "lemma": "apoteleo"
+      },
+      {
+        "surface": "gives birth to",
+        "lemma": "apokueo"
+      },
+      {
+        "surface": "death",
+        "lemma": "thanatos"
+      }
+    ],
+    "16": [
+      {
+        "surface": "be deceived",
+        "lemma": "planao"
+      },
+      {
+        "surface": "beloved",
+        "lemma": "agapetos"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      }
+    ],
+    "17": [
+      {
+        "surface": "vvv",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "good",
+        "lemma": "dosis"
+      },
+      {
+        "surface": "perfect",
+        "lemma": "teleios"
+      },
+      {
+        "surface": "gift",
+        "lemma": "dorema"
+      },
+      {
+        "surface": "from above",
+        "lemma": "anothen"
+      },
+      {
+        "surface": "coming down",
+        "lemma": "katabaino"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "of the heavenly lights",
+        "lemma": "phos"
+      },
+      {
+        "surface": "there is",
+        "lemma": "eni"
+      },
+      {
+        "surface": "change",
+        "lemma": "parallage"
+      },
+      {
+        "surface": "shifting",
+        "lemma": "trope"
+      },
+      {
+        "surface": "shadow",
+        "lemma": "aposkiasma"
+      }
+    ],
+    "18": [
+      {
+        "surface": "He chose",
+        "lemma": "boulomai"
+      },
+      {
+        "surface": "to give us birth",
+        "lemma": "apokueo"
+      },
+      {
+        "surface": "through the word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "of truth",
+        "lemma": "aletheia"
+      },
+      {
+        "surface": "firstfruits",
+        "lemma": "aparche"
+      },
+      {
+        "surface": "creation",
+        "lemma": "ktisma"
+      }
+    ],
+    "19": [
+      {
+        "surface": "beloved",
+        "lemma": "agapetos"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "quick",
+        "lemma": "tachus"
+      },
+      {
+        "surface": "slow",
+        "lemma": "bradus"
+      },
+      {
+        "surface": "and slow",
+        "lemma": "bradus"
+      },
+      {
+        "surface": "anger",
+        "lemma": "orge"
+      }
+    ],
+    "20": [
+      {
+        "surface": "man’s",
+        "lemma": "aner"
+      },
+      {
+        "surface": "anger",
+        "lemma": "orge"
+      },
+      {
+        "surface": "bring about",
+        "lemma": "ergazomai"
+      },
+      {
+        "surface": "the righteousness",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "that God desires",
+        "lemma": "theos"
+      }
+    ],
+    "21": [
+      {
+        "surface": "get rid",
+        "lemma": "apotithemi"
+      },
+      {
+        "surface": "moral filth",
+        "lemma": "rhuparia"
+      },
+      {
+        "surface": "every expression",
+        "lemma": "perisseia"
+      },
+      {
+        "surface": "of evil",
+        "lemma": "kakia"
+      },
+      {
+        "surface": "and humbly",
+        "lemma": "prautes"
+      },
+      {
+        "surface": "accept",
+        "lemma": "dechomai"
+      },
+      {
+        "surface": "word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "planted in you",
+        "lemma": "emphutos"
+      },
+      {
+        "surface": "save",
+        "lemma": "sozo"
+      },
+      {
+        "surface": "souls",
+        "lemma": "psuche"
+      }
+    ],
+    "22": [
+      {
+        "surface": "doers",
+        "lemma": "poietes"
+      },
+      {
+        "surface": "of the word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "hearers",
+        "lemma": "akroates"
+      },
+      {
+        "surface": "only",
+        "lemma": "monon"
+      },
+      {
+        "surface": "Otherwise, you are deceiving",
+        "lemma": "paralogizomai"
+      }
+    ],
+    "23": [
+      {
+        "surface": "who hears",
+        "lemma": "akroates"
+      },
+      {
+        "surface": "the word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "does not carry it out",
+        "lemma": "poietes"
+      },
+      {
+        "surface": "is like",
+        "lemma": "eiko"
+      },
+      {
+        "surface": "a man who",
+        "lemma": "aner"
+      },
+      {
+        "surface": "looks",
+        "lemma": "katanoeo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "genesis"
+      },
+      {
+        "surface": "face",
+        "lemma": "prosopon"
+      },
+      {
+        "surface": "a mirror",
+        "lemma": "esoptron"
+      }
+    ],
+    "24": [
+      {
+        "surface": "after observing",
+        "lemma": "katanoeo"
+      },
+      {
+        "surface": "goes away",
+        "lemma": "aperchomai"
+      },
+      {
+        "surface": "immediately",
+        "lemma": "eutheos"
+      },
+      {
+        "surface": "forgets",
+        "lemma": "epilanthano"
+      }
+    ],
+    "25": [
+      {
+        "surface": "looks intently",
+        "lemma": "parakupto"
+      },
+      {
+        "surface": "the perfect",
+        "lemma": "teleios"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "of freedom",
+        "lemma": "eleutheria"
+      },
+      {
+        "surface": "continues to do so",
+        "lemma": "parameno"
+      },
+      {
+        "surface": "a forgetful",
+        "lemma": "epilesmone"
+      },
+      {
+        "surface": "hearer",
+        "lemma": "akroates"
+      },
+      {
+        "surface": "an effective",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "doer",
+        "lemma": "poietes"
+      },
+      {
+        "surface": "blessed",
+        "lemma": "makarios"
+      },
+      {
+        "surface": "does",
+        "lemma": "poiesis"
+      }
+    ],
+    "26": [
+      {
+        "surface": "considers himself",
+        "lemma": "dokeo"
+      },
+      {
+        "surface": "religious",
+        "lemma": "threskos"
+      },
+      {
+        "surface": "and yet does not bridle",
+        "lemma": "chalinagogeo"
+      },
+      {
+        "surface": "tongue",
+        "lemma": "glossa"
+      },
+      {
+        "surface": "he deceives",
+        "lemma": "apatao"
+      },
+      {
+        "surface": "heart",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "religion",
+        "lemma": "threskeia"
+      },
+      {
+        "surface": "is worthless",
+        "lemma": "mataios"
+      }
+    ],
+    "27": [
+      {
+        "surface": "Pure",
+        "lemma": "katharos"
+      },
+      {
+        "surface": "undefiled",
+        "lemma": "amiantos"
+      },
+      {
+        "surface": "religion",
+        "lemma": "threskeia"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "to care for",
+        "lemma": "episkeptomai"
+      },
+      {
+        "surface": "orphans",
+        "lemma": "orphanos"
+      },
+      {
+        "surface": "widows",
+        "lemma": "chera"
+      },
+      {
+        "surface": "distress",
+        "lemma": "thlipsis"
+      },
+      {
+        "surface": "and to keep",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "from being polluted",
+        "lemma": "aspilos"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "akroates",
+    "apokueo",
+    "poietes"
+  ]
+}

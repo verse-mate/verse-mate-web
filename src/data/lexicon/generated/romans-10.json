@@ -1,0 +1,539 @@
+{
+  "bookId": 45,
+  "book": "Romans",
+  "chapter": 10,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "my",
+        "lemma": "emos"
+      },
+      {
+        "surface": "heart’s",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "desire",
+        "lemma": "eudokia"
+      },
+      {
+        "surface": "prayer",
+        "lemma": "deesis"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "their salvation",
+        "lemma": "soteria"
+      }
+    ],
+    "2": [
+      {
+        "surface": "I testify",
+        "lemma": "martureo"
+      },
+      {
+        "surface": "zealous",
+        "lemma": "zelos"
+      },
+      {
+        "surface": "for God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "epignosis"
+      }
+    ],
+    "3": [
+      {
+        "surface": "they were ignorant",
+        "lemma": "agnoeo"
+      },
+      {
+        "surface": "of God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "sought",
+        "lemma": "zeteo"
+      },
+      {
+        "surface": "own",
+        "lemma": "idios"
+      },
+      {
+        "surface": "they did not submit",
+        "lemma": "hupotasso"
+      },
+      {
+        "surface": "God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "dikaiosune"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Christ is",
+        "lemma": "christos"
+      },
+      {
+        "surface": "the end",
+        "lemma": "telos"
+      },
+      {
+        "surface": "of the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "believes",
+        "lemma": "pisteuo"
+      }
+    ],
+    "5": [
+      {
+        "surface": "righteousness",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mouses"
+      },
+      {
+        "surface": "man who",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "will live",
+        "lemma": "zao"
+      }
+    ],
+    "6": [
+      {
+        "surface": "righteousness",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "heart",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "will ascend",
+        "lemma": "anabaino"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "to bring Christ down",
+        "lemma": "katago"
+      }
+    ],
+    "7": [
+      {
+        "surface": "will descend",
+        "lemma": "katabaino"
+      },
+      {
+        "surface": "Abyss",
+        "lemma": "abussos"
+      },
+      {
+        "surface": "to bring",
+        "lemma": "anago"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "the dead",
+        "lemma": "nekros"
+      }
+    ],
+    "8": [
+      {
+        "surface": "word",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "mouth",
+        "lemma": "stoma"
+      },
+      {
+        "surface": "heart",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "word",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "of faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "we are proclaiming",
+        "lemma": "kerusso"
+      }
+    ],
+    "9": [
+      {
+        "surface": "you confess",
+        "lemma": "homologeo"
+      },
+      {
+        "surface": "mouth",
+        "lemma": "stoma"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "is Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "heart",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "raised",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "the dead",
+        "lemma": "nekros"
+      },
+      {
+        "surface": "you will be saved",
+        "lemma": "sozo"
+      }
+    ],
+    "10": [
+      {
+        "surface": "with your heart",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "you believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "justified",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "with your mouth",
+        "lemma": "stoma"
+      },
+      {
+        "surface": "you confess",
+        "lemma": "homologeo"
+      },
+      {
+        "surface": "saved",
+        "lemma": "soteria"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Scripture",
+        "lemma": "graphe"
+      },
+      {
+        "surface": "believes",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "be put to shame",
+        "lemma": "kataischuno"
+      }
+    ],
+    "12": [
+      {
+        "surface": "difference",
+        "lemma": "diastole"
+      },
+      {
+        "surface": "Jew",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "Greek",
+        "lemma": "hellen"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "and gives richly",
+        "lemma": "plouteo"
+      },
+      {
+        "surface": "call",
+        "lemma": "epikaleo"
+      }
+    ],
+    "13": [
+      {
+        "surface": "calls on",
+        "lemma": "epikaleo"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "will be saved",
+        "lemma": "sozo"
+      }
+    ],
+    "14": [
+      {
+        "surface": "can they call",
+        "lemma": "epikaleo"
+      },
+      {
+        "surface": "in whom they have not believed",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "can they believe in the One",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "someone to preach",
+        "lemma": "kerusso"
+      }
+    ],
+    "15": [
+      {
+        "surface": "can they preach",
+        "lemma": "kerusso"
+      },
+      {
+        "surface": "they are sent",
+        "lemma": "apostello"
+      },
+      {
+        "surface": "beautiful are",
+        "lemma": "horaios"
+      },
+      {
+        "surface": "feet",
+        "lemma": "pous"
+      },
+      {
+        "surface": "bring good news",
+        "lemma": "euangelizomai"
+      }
+    ],
+    "16": [
+      {
+        "surface": "welcomed",
+        "lemma": "hupakouo"
+      },
+      {
+        "surface": "good news",
+        "lemma": "euangelion"
+      },
+      {
+        "surface": "Isaiah",
+        "lemma": "hesaias"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "has believed",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "message",
+        "lemma": "akoe"
+      }
+    ],
+    "17": [
+      {
+        "surface": "faith comes",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "hearing",
+        "lemma": "akoe"
+      },
+      {
+        "surface": "hearing",
+        "lemma": "akoe"
+      },
+      {
+        "surface": "the word",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "voice",
+        "lemma": "phthongos"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "words",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "ends",
+        "lemma": "peras"
+      },
+      {
+        "surface": "world",
+        "lemma": "oikoumene"
+      }
+    ],
+    "19": [
+      {
+        "surface": "did} Israel",
+        "lemma": "israel"
+      },
+      {
+        "surface": "First",
+        "lemma": "protos"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mouses"
+      },
+      {
+        "surface": "will make you jealous",
+        "lemma": "parazeloo"
+      },
+      {
+        "surface": "a nation",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "I will make you angry",
+        "lemma": "parorgizo"
+      },
+      {
+        "surface": "a nation",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "without understanding",
+        "lemma": "asunetos"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Isaiah",
+        "lemma": "hesaias"
+      },
+      {
+        "surface": "boldly",
+        "lemma": "apotolmao"
+      },
+      {
+        "surface": "did not seek",
+        "lemma": "zeteo"
+      },
+      {
+        "surface": "I revealed Myself",
+        "lemma": "emphanes"
+      },
+      {
+        "surface": "did not ask for",
+        "lemma": "eperotao"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Israel",
+        "lemma": "israel"
+      },
+      {
+        "surface": "All",
+        "lemma": "holos"
+      },
+      {
+        "surface": "day long",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "I have held out",
+        "lemma": "ekpetazo"
+      },
+      {
+        "surface": "hands",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "a disobedient",
+        "lemma": "apeitheo"
+      },
+      {
+        "surface": "obstinate",
+        "lemma": "antilego"
+      },
+      {
+        "surface": "people",
+        "lemma": "laos"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "akoe",
+    "epikaleo",
+    "hesaias"
+  ]
+}

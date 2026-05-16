@@ -1,0 +1,145 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 123,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "A song",
+        "lemma": "shir"
+      },
+      {
+        "surface": "of ascents",
+        "lemma": "maalah"
+      },
+      {
+        "surface": "I lift up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "my eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "in heaven",
+        "lemma": "shamayim"
+      }
+    ],
+    "2": [
+      {
+        "surface": "As the eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of their master",
+        "lemma": "adon"
+      },
+      {
+        "surface": "as the eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of a maidservant",
+        "lemma": "shiphchah"
+      },
+      {
+        "surface": "the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of her mistress",
+        "lemma": "geveret"
+      },
+      {
+        "surface": "so",
+        "lemma": "ken"
+      },
+      {
+        "surface": "our eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "our God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "He shows us mercy",
+        "lemma": "chanan"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Have mercy on us",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "have mercy",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "we have endured",
+        "lemma": "sava"
+      },
+      {
+        "surface": "much",
+        "lemma": "rav"
+      },
+      {
+        "surface": "contempt",
+        "lemma": "buz"
+      }
+    ],
+    "4": [
+      {
+        "surface": "We",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "have endured",
+        "lemma": "sava"
+      },
+      {
+        "surface": "much",
+        "lemma": "rav"
+      },
+      {
+        "surface": "scorn",
+        "lemma": "laag"
+      },
+      {
+        "surface": "from the arrogant",
+        "lemma": "shaanan"
+      },
+      {
+        "surface": "much contempt",
+        "lemma": "buz"
+      },
+      {
+        "surface": "from the proud",
+        "lemma": "gaayon"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "chanan",
+    "sava",
+    "rav"
+  ]
+}

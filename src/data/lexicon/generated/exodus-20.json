@@ -1,0 +1,745 @@
+{
+  "bookId": 2,
+  "book": "Exodus",
+  "chapter": 20,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "And God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "davar"
+      },
+      {
+        "surface": "words",
+        "lemma": "davar"
+      }
+    ],
+    "2": [
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "out of the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of slavery",
+        "lemma": "eved"
+      }
+    ],
+    "3": [
+      {
+        "surface": "other",
+        "lemma": "acher"
+      },
+      {
+        "surface": "gods",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "Me",
+        "lemma": "paneh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "an idol",
+        "lemma": "pesel"
+      },
+      {
+        "surface": "of anything",
+        "lemma": "temunah"
+      },
+      {
+        "surface": "in the heavens",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "above",
+        "lemma": "maal"
+      },
+      {
+        "surface": "on the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "below",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "or in the waters",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "beneath",
+        "lemma": "tachat"
+      }
+    ],
+    "5": [
+      {
+        "surface": "bow down",
+        "lemma": "shachah"
+      },
+      {
+        "surface": "worship them",
+        "lemma": "avad"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "am a jealous",
+        "lemma": "qanna"
+      },
+      {
+        "surface": "God",
+        "lemma": "el"
+      },
+      {
+        "surface": "visiting",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "the iniquity",
+        "lemma": "avan"
+      },
+      {
+        "surface": "their children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the third",
+        "lemma": "shillesh"
+      },
+      {
+        "surface": "and fourth generations",
+        "lemma": "ribbea"
+      },
+      {
+        "surface": "of those who hate Me",
+        "lemma": "sane"
+      }
+    ],
+    "6": [
+      {
+        "surface": "loving devotion",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "to a thousand generations",
+        "lemma": "eleph"
+      },
+      {
+        "surface": "of those who love Me",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "and keep",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "My commandments",
+        "lemma": "mitsvah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "take",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "in vain",
+        "lemma": "shav"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "leave anyone unpunished",
+        "lemma": "naqah"
+      },
+      {
+        "surface": "takes",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "His name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "in vain",
+        "lemma": "shav"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Remember",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "the Sabbath",
+        "lemma": "shabbat"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "by keeping it holy",
+        "lemma": "qadash"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Six",
+        "lemma": "shesh"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "you shall labor",
+        "lemma": "avad"
+      },
+      {
+        "surface": "your work",
+        "lemma": "melakhah"
+      }
+    ],
+    "10": [
+      {
+        "surface": "but the seventh",
+        "lemma": "shevii"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "is a Sabbath",
+        "lemma": "shabbat"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "work",
+        "lemma": "melakhah"
+      },
+      {
+        "surface": "nor your son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "nor your manservant",
+        "lemma": "eved"
+      },
+      {
+        "surface": "or maidservant",
+        "lemma": "amah"
+      },
+      {
+        "surface": "or livestock",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "nor the foreigner",
+        "lemma": "ger"
+      },
+      {
+        "surface": "your gates",
+        "lemma": "shaar"
+      }
+    ],
+    "11": [
+      {
+        "surface": "in six",
+        "lemma": "shesh"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the heavens",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "and the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and the sea",
+        "lemma": "yam"
+      },
+      {
+        "surface": "but on the seventh",
+        "lemma": "shevii"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "He rested",
+        "lemma": "nuach"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "blessed",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the Sabbath",
+        "lemma": "shabbat"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "and set it apart as holy",
+        "lemma": "qadash"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Honor",
+        "lemma": "kavad"
+      },
+      {
+        "surface": "and mother",
+        "lemma": "em"
+      },
+      {
+        "surface": "your days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "may be long",
+        "lemma": "arakh"
+      },
+      {
+        "surface": "the land",
+        "lemma": "adamah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      }
+    ],
+    "13": [
+      {
+        "surface": "murder",
+        "lemma": "ratsach"
+      }
+    ],
+    "14": [
+      {
+        "surface": "commit adultery",
+        "lemma": "naaph"
+      }
+    ],
+    "15": [
+      {
+        "surface": "steal",
+        "lemma": "ganav"
+      }
+    ],
+    "16": [
+      {
+        "surface": "bear",
+        "lemma": "un"
+      },
+      {
+        "surface": "false",
+        "lemma": "sheqer"
+      },
+      {
+        "surface": "witness",
+        "lemma": "ed"
+      },
+      {
+        "surface": "against your neighbor",
+        "lemma": "rea"
+      }
+    ],
+    "17": [
+      {
+        "surface": "covet",
+        "lemma": "chamad"
+      },
+      {
+        "surface": "your neighbor’s",
+        "lemma": "rea"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "covet",
+        "lemma": "chamad"
+      },
+      {
+        "surface": "your neighbor’s",
+        "lemma": "rea"
+      },
+      {
+        "surface": "wife",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "or his manservant",
+        "lemma": "eved"
+      },
+      {
+        "surface": "or maidservant",
+        "lemma": "amah"
+      },
+      {
+        "surface": "or his ox",
+        "lemma": "shor"
+      },
+      {
+        "surface": "or donkey",
+        "lemma": "chamor"
+      },
+      {
+        "surface": "belongs to your neighbor",
+        "lemma": "rea"
+      }
+    ],
+    "18": [
+      {
+        "surface": "the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "the thunder",
+        "lemma": "qol"
+      },
+      {
+        "surface": "and lightning",
+        "lemma": "lappid"
+      },
+      {
+        "surface": "the sounding",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of the ram’s horn",
+        "lemma": "shophar"
+      },
+      {
+        "surface": "and the mountain",
+        "lemma": "har"
+      },
+      {
+        "surface": "enveloped in smoke",
+        "lemma": "ashen"
+      },
+      {
+        "surface": "they trembled",
+        "lemma": "nua"
+      },
+      {
+        "surface": "and stood",
+        "lemma": "amad"
+      },
+      {
+        "surface": "at a distance",
+        "lemma": "rachoq"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "let God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "we will die",
+        "lemma": "mut"
+      }
+    ],
+    "20": [
+      {
+        "surface": "be afraid",
+        "lemma": "yare"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "test you",
+        "lemma": "nasah"
+      },
+      {
+        "surface": "the fear of Him",
+        "lemma": "yirah"
+      },
+      {
+        "surface": "you",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "to keep",
+        "lemma": "bilti"
+      },
+      {
+        "surface": "you from sinning",
+        "lemma": "chata"
+      }
+    ],
+    "21": [
+      {
+        "surface": "And the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "stood",
+        "lemma": "amad"
+      },
+      {
+        "surface": "at a distance",
+        "lemma": "rachoq"
+      },
+      {
+        "surface": "as Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "approached",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "the thick darkness",
+        "lemma": "araphel"
+      },
+      {
+        "surface": "God was",
+        "lemma": "elohim"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "I have spoken",
+        "lemma": "davar"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "shamayim"
+      }
+    ],
+    "23": [
+      {
+        "surface": "any gods",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "gods",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "or gold",
+        "lemma": "zahav"
+      }
+    ],
+    "24": [
+      {
+        "surface": "an altar",
+        "lemma": "mizbeach"
+      },
+      {
+        "surface": "of earth",
+        "lemma": "adamah"
+      },
+      {
+        "surface": "and sacrifice",
+        "lemma": "zavach"
+      },
+      {
+        "surface": "your burnt offerings",
+        "lemma": "olah"
+      },
+      {
+        "surface": "and peace offerings",
+        "lemma": "shelem"
+      },
+      {
+        "surface": "your sheep and goats",
+        "lemma": "tson"
+      },
+      {
+        "surface": "and cattle",
+        "lemma": "baqar"
+      },
+      {
+        "surface": "place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "I cause My name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "to be remembered",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "and bless you",
+        "lemma": "barakh"
+      }
+    ],
+    "25": [
+      {
+        "surface": "an altar",
+        "lemma": "mizbeach"
+      },
+      {
+        "surface": "of stones",
+        "lemma": "even"
+      },
+      {
+        "surface": "build",
+        "lemma": "banah"
+      },
+      {
+        "surface": "with stones shaped by tools",
+        "lemma": "gazit"
+      },
+      {
+        "surface": "you use",
+        "lemma": "nuph"
+      },
+      {
+        "surface": "a chisel",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "you will defile it",
+        "lemma": "chalal"
+      }
+    ],
+    "26": [
+      {
+        "surface": "go up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "My altar",
+        "lemma": "mizbeach"
+      },
+      {
+        "surface": "on steps",
+        "lemma": "maalah"
+      },
+      {
+        "surface": "your nakedness",
+        "lemma": "ervah"
+      },
+      {
+        "surface": "be exposed",
+        "lemma": "galah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "rea",
+    "mosheh",
+    "shem"
+  ]
+}

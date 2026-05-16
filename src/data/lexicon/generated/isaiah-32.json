@@ -1,0 +1,677 @@
+{
+  "bookId": 23,
+  "book": "Isaiah",
+  "chapter": 32,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Behold",
+        "lemma": "hen"
+      },
+      {
+        "surface": "a king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "will reign",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "in righteousness",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "and princes",
+        "lemma": "sar"
+      },
+      {
+        "surface": "will rule",
+        "lemma": "sarar"
+      },
+      {
+        "surface": "with justice",
+        "lemma": "mishpat"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Each",
+        "lemma": "ish"
+      },
+      {
+        "surface": "like a shelter",
+        "lemma": "machave"
+      },
+      {
+        "surface": "from the wind",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "a refuge",
+        "lemma": "seter"
+      },
+      {
+        "surface": "from the storm",
+        "lemma": "zerem"
+      },
+      {
+        "surface": "like streams",
+        "lemma": "peleg"
+      },
+      {
+        "surface": "of water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "in a dry land",
+        "lemma": "tsivon"
+      },
+      {
+        "surface": "like the shadow",
+        "lemma": "tsel"
+      },
+      {
+        "surface": "of a great",
+        "lemma": "kaved"
+      },
+      {
+        "surface": "rock",
+        "lemma": "sela"
+      },
+      {
+        "surface": "in an arid",
+        "lemma": "ayeph"
+      },
+      {
+        "surface": "land",
+        "lemma": "erets"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Then the eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "be closed",
+        "lemma": "shaah"
+      },
+      {
+        "surface": "and the ears",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "will listen",
+        "lemma": "qashav"
+      }
+    ],
+    "4": [
+      {
+        "surface": "The mind",
+        "lemma": "levav"
+      },
+      {
+        "surface": "of the rash",
+        "lemma": "mahar"
+      },
+      {
+        "surface": "will know",
+        "lemma": "bin"
+      },
+      {
+        "surface": "and understand",
+        "lemma": "yada"
+      },
+      {
+        "surface": "and the stammering",
+        "lemma": "illeg"
+      },
+      {
+        "surface": "tongue",
+        "lemma": "lashon"
+      },
+      {
+        "surface": "will speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "clearly",
+        "lemma": "tsach"
+      },
+      {
+        "surface": "and fluently",
+        "lemma": "mahar"
+      }
+    ],
+    "5": [
+      {
+        "surface": "longer {will",
+        "lemma": "od"
+      },
+      {
+        "surface": "a fool",
+        "lemma": "naval"
+      },
+      {
+        "surface": "noble",
+        "lemma": "nadiv"
+      },
+      {
+        "surface": "a scoundrel",
+        "lemma": "kilay"
+      },
+      {
+        "surface": "be respected",
+        "lemma": "shoa"
+      }
+    ],
+    "6": [
+      {
+        "surface": "a fool",
+        "lemma": "naval"
+      },
+      {
+        "surface": "speaks",
+        "lemma": "davar"
+      },
+      {
+        "surface": "foolishness",
+        "lemma": "nevalah"
+      },
+      {
+        "surface": "his mind",
+        "lemma": "lev"
+      },
+      {
+        "surface": "iniquity",
+        "lemma": "aven"
+      },
+      {
+        "surface": "ungodliness",
+        "lemma": "choneph"
+      },
+      {
+        "surface": "and speaks",
+        "lemma": "davar"
+      },
+      {
+        "surface": "falsely",
+        "lemma": "toah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "he leaves the hungry",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "empty",
+        "lemma": "ruq"
+      },
+      {
+        "surface": "and deprives the thirsty",
+        "lemma": "tsame"
+      },
+      {
+        "surface": "of",
+        "lemma": "chaser"
+      },
+      {
+        "surface": "drink",
+        "lemma": "mashqeh"
+      }
+    ],
+    "7": [
+      {
+        "surface": "The weapons",
+        "lemma": "keli"
+      },
+      {
+        "surface": "of the scoundrel",
+        "lemma": "kilay"
+      },
+      {
+        "surface": "are destructive",
+        "lemma": "ra"
+      },
+      {
+        "surface": "hatches",
+        "lemma": "yaats"
+      },
+      {
+        "surface": "plots",
+        "lemma": "zimmah"
+      },
+      {
+        "surface": "to destroy",
+        "lemma": "chaval"
+      },
+      {
+        "surface": "the poor",
+        "lemma": "anav"
+      },
+      {
+        "surface": "with lies",
+        "lemma": "emer"
+      },
+      {
+        "surface": "even when the plea",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the needy",
+        "lemma": "evyon"
+      },
+      {
+        "surface": "is just",
+        "lemma": "mishpat"
+      }
+    ],
+    "8": [
+      {
+        "surface": "But a noble man",
+        "lemma": "nadiv"
+      },
+      {
+        "surface": "makes",
+        "lemma": "yaats"
+      },
+      {
+        "surface": "honorable plans",
+        "lemma": "nadiv"
+      },
+      {
+        "surface": "stands up",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "worthy causes",
+        "lemma": "nadiv"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Stand up",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "you complacent",
+        "lemma": "shaanan"
+      },
+      {
+        "surface": "women",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "Give ear",
+        "lemma": "azan"
+      },
+      {
+        "surface": "to my word",
+        "lemma": "imrah"
+      },
+      {
+        "surface": "you overconfident",
+        "lemma": "batach"
+      },
+      {
+        "surface": "daughters",
+        "lemma": "bat"
+      }
+    ],
+    "10": [
+      {
+        "surface": "In a little more than",
+        "lemma": "yom"
+      },
+      {
+        "surface": "a year",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "you will tremble",
+        "lemma": "ragaz"
+      },
+      {
+        "surface": "O secure ones",
+        "lemma": "batach"
+      },
+      {
+        "surface": "the grape harvest",
+        "lemma": "batsir"
+      },
+      {
+        "surface": "will fail",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "and the fruit harvest",
+        "lemma": "oseph"
+      },
+      {
+        "surface": "will not",
+        "lemma": "beli"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Shudder",
+        "lemma": "charad"
+      },
+      {
+        "surface": "you ladies of leisure",
+        "lemma": "shaanan"
+      },
+      {
+        "surface": "tremble",
+        "lemma": "ragaz"
+      },
+      {
+        "surface": "you daughters of complacency",
+        "lemma": "batach"
+      },
+      {
+        "surface": "Strip",
+        "lemma": "pashat"
+      },
+      {
+        "surface": "yourselves bare",
+        "lemma": "arar"
+      },
+      {
+        "surface": "and put",
+        "lemma": "chagar"
+      },
+      {
+        "surface": "your waists",
+        "lemma": "chalats"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Beat",
+        "lemma": "saphad"
+      },
+      {
+        "surface": "your breasts",
+        "lemma": "shad"
+      },
+      {
+        "surface": "the pleasant",
+        "lemma": "chemed"
+      },
+      {
+        "surface": "fields",
+        "lemma": "saday"
+      },
+      {
+        "surface": "for the fruitful",
+        "lemma": "parah"
+      },
+      {
+        "surface": "vines",
+        "lemma": "gephen"
+      }
+    ],
+    "13": [
+      {
+        "surface": "the land",
+        "lemma": "adamah"
+      },
+      {
+        "surface": "of my people",
+        "lemma": "am"
+      },
+      {
+        "surface": "overgrown",
+        "lemma": "alah"
+      },
+      {
+        "surface": "with thorns",
+        "lemma": "qots"
+      },
+      {
+        "surface": "and briers",
+        "lemma": "shamir"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of merriment",
+        "lemma": "masvos"
+      },
+      {
+        "surface": "in this city",
+        "lemma": "qiryah"
+      },
+      {
+        "surface": "of revelry",
+        "lemma": "alliz"
+      }
+    ],
+    "14": [
+      {
+        "surface": "the palace",
+        "lemma": "armon"
+      },
+      {
+        "surface": "will be forsaken",
+        "lemma": "natash"
+      },
+      {
+        "surface": "the busy",
+        "lemma": "hamon"
+      },
+      {
+        "surface": "city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "abandoned",
+        "lemma": "azav"
+      },
+      {
+        "surface": "The hill",
+        "lemma": "ophel"
+      },
+      {
+        "surface": "and the watchtower",
+        "lemma": "bachan"
+      },
+      {
+        "surface": "caves",
+        "lemma": "mearah"
+      },
+      {
+        "surface": "the delight",
+        "lemma": "masvos"
+      },
+      {
+        "surface": "of wild donkeys",
+        "lemma": "pere"
+      },
+      {
+        "surface": "and a pasture",
+        "lemma": "mireh"
+      },
+      {
+        "surface": "for flocks",
+        "lemma": "eder"
+      }
+    ],
+    "15": [
+      {
+        "surface": "the Spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "is poured out",
+        "lemma": "arah"
+      },
+      {
+        "surface": "from on high",
+        "lemma": "marom"
+      },
+      {
+        "surface": "Then the desert",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "an orchard",
+        "lemma": "karmel"
+      },
+      {
+        "surface": "and the orchard",
+        "lemma": "karmel"
+      },
+      {
+        "surface": "will seem",
+        "lemma": "chashav"
+      },
+      {
+        "surface": "like a forest",
+        "lemma": "yaar"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Then justice",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "will inhabit",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "the wilderness",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "and righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "in the fertile field",
+        "lemma": "karmel"
+      }
+    ],
+    "17": [
+      {
+        "surface": "The work",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "of righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "the service",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "of righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "will be quiet",
+        "lemma": "shaqat"
+      },
+      {
+        "surface": "confidence",
+        "lemma": "betach"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Then my people",
+        "lemma": "am"
+      },
+      {
+        "surface": "in a peaceful",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "place",
+        "lemma": "naveh"
+      },
+      {
+        "surface": "in safe",
+        "lemma": "mivtach"
+      },
+      {
+        "surface": "and secure",
+        "lemma": "shaanan"
+      },
+      {
+        "surface": "places of rest",
+        "lemma": "menuchah"
+      }
+    ],
+    "19": [
+      {
+        "surface": "But hail",
+        "lemma": "barad"
+      },
+      {
+        "surface": "will level",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "the forest",
+        "lemma": "yaar"
+      },
+      {
+        "surface": "and the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "will sink",
+        "lemma": "shaphel"
+      },
+      {
+        "surface": "to the depths",
+        "lemma": "shiphlah"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Blessed",
+        "lemma": "esher"
+      },
+      {
+        "surface": "are those who sow",
+        "lemma": "zara"
+      },
+      {
+        "surface": "waters",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "who let the ox",
+        "lemma": "shor"
+      },
+      {
+        "surface": "and donkey",
+        "lemma": "chamor"
+      },
+      {
+        "surface": "range freely",
+        "lemma": "shalach"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "nadiv",
+    "tsedaqah",
+    "shaanan"
+  ]
+}

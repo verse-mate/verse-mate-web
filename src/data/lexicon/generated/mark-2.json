@@ -1,0 +1,833 @@
+{
+  "bookId": 41,
+  "book": "Mark",
+  "chapter": 2,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "A few days",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "Capernaum",
+        "lemma": "kapernaoum"
+      },
+      {
+        "surface": "home",
+        "lemma": "oikos"
+      }
+    ],
+    "2": [
+      {
+        "surface": "they gathered",
+        "lemma": "sunago"
+      },
+      {
+        "surface": "no more",
+        "lemma": "meketi"
+      },
+      {
+        "surface": "room",
+        "lemma": "choreo"
+      },
+      {
+        "surface": "door",
+        "lemma": "thura"
+      },
+      {
+        "surface": "word",
+        "lemma": "logos"
+      }
+    ],
+    "3": [
+      {
+        "surface": "a paralytic",
+        "lemma": "paralutikos"
+      },
+      {
+        "surface": "was brought",
+        "lemma": "phero"
+      },
+      {
+        "surface": "carried",
+        "lemma": "airo"
+      },
+      {
+        "surface": "four men",
+        "lemma": "tessares"
+      }
+    ],
+    "4": [
+      {
+        "surface": "to get to",
+        "lemma": "prosphero"
+      },
+      {
+        "surface": "crowd",
+        "lemma": "ochlos"
+      },
+      {
+        "surface": "they uncovered",
+        "lemma": "apostegazo"
+      },
+      {
+        "surface": "roof",
+        "lemma": "stege"
+      },
+      {
+        "surface": "made an opening",
+        "lemma": "exorusso"
+      },
+      {
+        "surface": "and lowered",
+        "lemma": "chalao"
+      },
+      {
+        "surface": "paralytic",
+        "lemma": "paralutikos"
+      },
+      {
+        "surface": "mat",
+        "lemma": "krabbatos"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "paralytic",
+        "lemma": "paralutikos"
+      },
+      {
+        "surface": "Son",
+        "lemma": "teknon"
+      },
+      {
+        "surface": "sins",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "are forgiven",
+        "lemma": "aphiemi"
+      }
+    ],
+    "6": [
+      {
+        "surface": "scribes",
+        "lemma": "grammateus"
+      },
+      {
+        "surface": "sitting",
+        "lemma": "kathemai"
+      },
+      {
+        "surface": "there",
+        "lemma": "ekei"
+      },
+      {
+        "surface": "thinking",
+        "lemma": "dialogizomai"
+      },
+      {
+        "surface": "hearts",
+        "lemma": "kardia"
+      }
+    ],
+    "7": [
+      {
+        "surface": "like this",
+        "lemma": "houto"
+      },
+      {
+        "surface": "He is blaspheming",
+        "lemma": "blasphemeo"
+      },
+      {
+        "surface": "forgive",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "sins",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ],
+    "8": [
+      {
+        "surface": "At once",
+        "lemma": "eutheos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "knew",
+        "lemma": "epiginosko"
+      },
+      {
+        "surface": "spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "they were thinking",
+        "lemma": "dialogizomai"
+      },
+      {
+        "surface": "this way",
+        "lemma": "houto"
+      },
+      {
+        "surface": "are you thinking",
+        "lemma": "dialogizomai"
+      },
+      {
+        "surface": "hearts",
+        "lemma": "kardia"
+      }
+    ],
+    "9": [
+      {
+        "surface": "easier",
+        "lemma": "eukopoteros"
+      },
+      {
+        "surface": "to a paralytic",
+        "lemma": "paralutikos"
+      },
+      {
+        "surface": "sins",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "are forgiven",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "Get up",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "pick up",
+        "lemma": "airo"
+      },
+      {
+        "surface": "mat",
+        "lemma": "krabbatos"
+      },
+      {
+        "surface": "walk",
+        "lemma": "peripateo"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "of Man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "authority",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "to forgive",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "sins",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "paralytic",
+        "lemma": "paralutikos"
+      }
+    ],
+    "11": [
+      {
+        "surface": "get up",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "pick up",
+        "lemma": "airo"
+      },
+      {
+        "surface": "mat",
+        "lemma": "krabbatos"
+      },
+      {
+        "surface": "go",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "home",
+        "lemma": "oikos"
+      }
+    ],
+    "12": [
+      {
+        "surface": "immediately",
+        "lemma": "eutheos"
+      },
+      {
+        "surface": "the man got up",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "picked up",
+        "lemma": "airo"
+      },
+      {
+        "surface": "mat",
+        "lemma": "krabbatos"
+      },
+      {
+        "surface": "astounded",
+        "lemma": "existemi"
+      },
+      {
+        "surface": "glorified",
+        "lemma": "doxazo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "oudepote"
+      },
+      {
+        "surface": "anything like this",
+        "lemma": "houto"
+      }
+    ],
+    "13": [
+      {
+        "surface": "again",
+        "lemma": "palin"
+      },
+      {
+        "surface": "sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "people",
+        "lemma": "ochlos"
+      },
+      {
+        "surface": "He taught",
+        "lemma": "didasko"
+      }
+    ],
+    "14": [
+      {
+        "surface": "As He was walking along",
+        "lemma": "parago"
+      },
+      {
+        "surface": "Levi",
+        "lemma": "leuis"
+      },
+      {
+        "surface": "of Alphaeus",
+        "lemma": "alphaios"
+      },
+      {
+        "surface": "sitting",
+        "lemma": "kathemai"
+      },
+      {
+        "surface": "tax booth",
+        "lemma": "telonion"
+      },
+      {
+        "surface": "Follow",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "Levi got up",
+        "lemma": "anistemi"
+      },
+      {
+        "surface": "and followed",
+        "lemma": "akoloutheo"
+      }
+    ],
+    "15": [
+      {
+        "surface": "was dining",
+        "lemma": "katakeimai"
+      },
+      {
+        "surface": "house",
+        "lemma": "oikia"
+      },
+      {
+        "surface": "tax collectors",
+        "lemma": "telones"
+      },
+      {
+        "surface": "sinners",
+        "lemma": "hamartolos"
+      },
+      {
+        "surface": "were eating with",
+        "lemma": "sunanakeimai"
+      },
+      {
+        "surface": "Him",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "who followed",
+        "lemma": "akoloutheo"
+      }
+    ],
+    "16": [
+      {
+        "surface": "scribes",
+        "lemma": "grammateus"
+      },
+      {
+        "surface": "Pharisees",
+        "lemma": "pharisaios"
+      },
+      {
+        "surface": "eating",
+        "lemma": "esthio"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "hamartolos"
+      },
+      {
+        "surface": "these people",
+        "lemma": "telones"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "He eat",
+        "lemma": "esthio"
+      },
+      {
+        "surface": "tax collectors",
+        "lemma": "telones"
+      },
+      {
+        "surface": "sinners",
+        "lemma": "hamartolos"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "healthy",
+        "lemma": "ischuo"
+      },
+      {
+        "surface": "need",
+        "lemma": "chreia"
+      },
+      {
+        "surface": "a doctor",
+        "lemma": "iatros"
+      },
+      {
+        "surface": "sick",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "to call",
+        "lemma": "kaleo"
+      },
+      {
+        "surface": "the righteous",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "sinners",
+        "lemma": "hamartolos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "John’s",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "Pharisees",
+        "lemma": "pharisaios"
+      },
+      {
+        "surface": "fasting",
+        "lemma": "nesteuo"
+      },
+      {
+        "surface": "Your",
+        "lemma": "sos"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "fast like",
+        "lemma": "nesteuo"
+      },
+      {
+        "surface": "John’s",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "those",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "Pharisees",
+        "lemma": "pharisaios"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "guests",
+        "lemma": "huios"
+      },
+      {
+        "surface": "bridegroom",
+        "lemma": "numphon"
+      },
+      {
+        "surface": "fast",
+        "lemma": "nesteuo"
+      },
+      {
+        "surface": "He",
+        "lemma": "numphios"
+      },
+      {
+        "surface": "As long as",
+        "lemma": "hosos"
+      },
+      {
+        "surface": "He is",
+        "lemma": "numphios"
+      },
+      {
+        "surface": "fast",
+        "lemma": "nesteuo"
+      }
+    ],
+    "20": [
+      {
+        "surface": "the time",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "bridegroom",
+        "lemma": "numphios"
+      },
+      {
+        "surface": "will be taken",
+        "lemma": "apairo"
+      },
+      {
+        "surface": "then",
+        "lemma": "tote"
+      },
+      {
+        "surface": "they will fast",
+        "lemma": "nesteuo"
+      }
+    ],
+    "21": [
+      {
+        "surface": "sews",
+        "lemma": "epirrapto"
+      },
+      {
+        "surface": "a patch",
+        "lemma": "epiblema"
+      },
+      {
+        "surface": "of unshrunk",
+        "lemma": "agnaphos"
+      },
+      {
+        "surface": "cloth",
+        "lemma": "rhakos"
+      },
+      {
+        "surface": "an old",
+        "lemma": "palaios"
+      },
+      {
+        "surface": "garment",
+        "lemma": "himation"
+      },
+      {
+        "surface": "new piece",
+        "lemma": "pleroma"
+      },
+      {
+        "surface": "will pull away",
+        "lemma": "airo"
+      },
+      {
+        "surface": "the old",
+        "lemma": "palaios"
+      },
+      {
+        "surface": "a worse",
+        "lemma": "cheiron"
+      },
+      {
+        "surface": "tear",
+        "lemma": "schisma"
+      }
+    ],
+    "22": [
+      {
+        "surface": "pours",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "new",
+        "lemma": "neos"
+      },
+      {
+        "surface": "wine",
+        "lemma": "oinos"
+      },
+      {
+        "surface": "old",
+        "lemma": "palaios"
+      },
+      {
+        "surface": "wineskins",
+        "lemma": "askos"
+      },
+      {
+        "surface": "wine",
+        "lemma": "oinos"
+      },
+      {
+        "surface": "will burst",
+        "lemma": "rhegnumi"
+      },
+      {
+        "surface": "skins",
+        "lemma": "askos"
+      },
+      {
+        "surface": "wine",
+        "lemma": "oinos"
+      },
+      {
+        "surface": "wineskins",
+        "lemma": "askos"
+      },
+      {
+        "surface": "will be ruined",
+        "lemma": "apolluo"
+      },
+      {
+        "surface": "new",
+        "lemma": "neos"
+      },
+      {
+        "surface": "wine is poured",
+        "lemma": "oinos"
+      },
+      {
+        "surface": "new",
+        "lemma": "kainos"
+      },
+      {
+        "surface": "wineskins",
+        "lemma": "askos"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Sabbath",
+        "lemma": "sabbaton"
+      },
+      {
+        "surface": "was passing",
+        "lemma": "paraporeuomai"
+      },
+      {
+        "surface": "grainfields",
+        "lemma": "sporimos"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "began",
+        "lemma": "archomai"
+      },
+      {
+        "surface": "to pick",
+        "lemma": "tillo"
+      },
+      {
+        "surface": "heads of grain",
+        "lemma": "stachus"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Pharisees",
+        "lemma": "pharisaios"
+      },
+      {
+        "surface": "is unlawful",
+        "lemma": "exesti"
+      },
+      {
+        "surface": "Sabbath",
+        "lemma": "sabbaton"
+      }
+    ],
+    "25": [
+      {
+        "surface": "vvv",
+        "lemma": "oudepote"
+      },
+      {
+        "surface": "Have you never read",
+        "lemma": "anaginosko"
+      },
+      {
+        "surface": "David",
+        "lemma": "daueid"
+      },
+      {
+        "surface": "were hungry",
+        "lemma": "peinao"
+      },
+      {
+        "surface": "in need",
+        "lemma": "chreia"
+      }
+    ],
+    "26": [
+      {
+        "surface": "the high priesthood",
+        "lemma": "archiereus"
+      },
+      {
+        "surface": "of Abiathar",
+        "lemma": "abiathar"
+      },
+      {
+        "surface": "house",
+        "lemma": "oikos"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "ate",
+        "lemma": "phagein"
+      },
+      {
+        "surface": "consecrated bread",
+        "lemma": "artos"
+      },
+      {
+        "surface": "was lawful",
+        "lemma": "exesti"
+      },
+      {
+        "surface": "priests",
+        "lemma": "hiereus"
+      }
+    ],
+    "27": [
+      {
+        "surface": "Sabbath",
+        "lemma": "sabbaton"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "Sabbath",
+        "lemma": "sabbaton"
+      }
+    ],
+    "28": [
+      {
+        "surface": "Son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "of Man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Sabbath",
+        "lemma": "sabbaton"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "paralutikos",
+    "krabbatos",
+    "askos"
+  ]
+}

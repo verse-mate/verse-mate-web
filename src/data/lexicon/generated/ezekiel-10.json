@@ -1,0 +1,933 @@
+{
+  "bookId": 26,
+  "book": "Ezekiel",
+  "chapter": 10,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "and saw",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "the expanse",
+        "lemma": "raqia"
+      },
+      {
+        "surface": "the heads",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "of the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "the likeness",
+        "lemma": "demut"
+      },
+      {
+        "surface": "of a throne",
+        "lemma": "kisse"
+      },
+      {
+        "surface": "of sapphire",
+        "lemma": "sappir"
+      }
+    ],
+    "2": [
+      {
+        "surface": "the man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "clothed",
+        "lemma": "lavash"
+      },
+      {
+        "surface": "in linen",
+        "lemma": "bad"
+      },
+      {
+        "surface": "the wheelwork",
+        "lemma": "galgal"
+      },
+      {
+        "surface": "beneath",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "Fill",
+        "lemma": "male"
+      },
+      {
+        "surface": "your hands",
+        "lemma": "chophen"
+      },
+      {
+        "surface": "with burning coals",
+        "lemma": "gechel"
+      },
+      {
+        "surface": "from among",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "and scatter them",
+        "lemma": "zaraq"
+      },
+      {
+        "surface": "the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "And as I watched",
+        "lemma": "ayin"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Now when the man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "were standing",
+        "lemma": "amad"
+      },
+      {
+        "surface": "on the south side",
+        "lemma": "yamin"
+      },
+      {
+        "surface": "of the temple",
+        "lemma": "bet"
+      },
+      {
+        "surface": "and a cloud",
+        "lemma": "anan"
+      },
+      {
+        "surface": "filled",
+        "lemma": "male"
+      },
+      {
+        "surface": "the inner",
+        "lemma": "penimi"
+      },
+      {
+        "surface": "court",
+        "lemma": "chatser"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Then the glory",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "rose",
+        "lemma": "rum"
+      },
+      {
+        "surface": "the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "the threshold",
+        "lemma": "miphtan"
+      },
+      {
+        "surface": "of the temple",
+        "lemma": "bet"
+      },
+      {
+        "surface": "The temple",
+        "lemma": "bet"
+      },
+      {
+        "surface": "was filled",
+        "lemma": "male"
+      },
+      {
+        "surface": "with the cloud",
+        "lemma": "anan"
+      },
+      {
+        "surface": "and the court",
+        "lemma": "chatser"
+      },
+      {
+        "surface": "was filled",
+        "lemma": "male"
+      },
+      {
+        "surface": "with the brightness",
+        "lemma": "nogah"
+      },
+      {
+        "surface": "of the glory",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "The sound",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of the wings",
+        "lemma": "kanaph"
+      },
+      {
+        "surface": "of the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "far as the outer",
+        "lemma": "chitson"
+      },
+      {
+        "surface": "court",
+        "lemma": "chatser"
+      },
+      {
+        "surface": "like the voice",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of God",
+        "lemma": "el"
+      },
+      {
+        "surface": "Almighty",
+        "lemma": "shadday"
+      },
+      {
+        "surface": "when He speaks",
+        "lemma": "davar"
+      }
+    ],
+    "6": [
+      {
+        "surface": "the LORD commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "the man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "clothed",
+        "lemma": "lavash"
+      },
+      {
+        "surface": "in linen",
+        "lemma": "bad"
+      },
+      {
+        "surface": "Take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "from within",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the wheelwork",
+        "lemma": "galgal"
+      },
+      {
+        "surface": "from among",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "and stood",
+        "lemma": "amad"
+      },
+      {
+        "surface": "beside",
+        "lemma": "etsel"
+      },
+      {
+        "surface": "a wheel",
+        "lemma": "ophan"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Then one of the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "reached out",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "his hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "and took some of",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "was among",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "them",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "the hands",
+        "lemma": "chophen"
+      },
+      {
+        "surface": "of the man clothed",
+        "lemma": "lavash"
+      },
+      {
+        "surface": "in linen",
+        "lemma": "bad"
+      },
+      {
+        "surface": "who received it",
+        "lemma": "laqach"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "to have the form",
+        "lemma": "tavnit"
+      },
+      {
+        "surface": "of human",
+        "lemma": "adam"
+      },
+      {
+        "surface": "hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "their wings",
+        "lemma": "kanaph"
+      }
+    ],
+    "9": [
+      {
+        "surface": "and saw",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "wheels",
+        "lemma": "ophan"
+      },
+      {
+        "surface": "beside",
+        "lemma": "etsel"
+      },
+      {
+        "surface": "the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "wheel",
+        "lemma": "ophan"
+      },
+      {
+        "surface": "beside",
+        "lemma": "etsel"
+      },
+      {
+        "surface": "each",
+        "lemma": "echad"
+      },
+      {
+        "surface": "cherub",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "And the wheels",
+        "lemma": "ophan"
+      },
+      {
+        "surface": "gleamed",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "like a beryl",
+        "lemma": "tarshish"
+      },
+      {
+        "surface": "stone",
+        "lemma": "even"
+      }
+    ],
+    "10": [
+      {
+        "surface": "As for their appearance",
+        "lemma": "mareh"
+      },
+      {
+        "surface": "all four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "had the same",
+        "lemma": "echad"
+      },
+      {
+        "surface": "form",
+        "lemma": "demut"
+      },
+      {
+        "surface": "a wheel",
+        "lemma": "ophan"
+      },
+      {
+        "surface": "within",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "a wheel",
+        "lemma": "ophan"
+      }
+    ],
+    "11": [
+      {
+        "surface": "When they moved",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "they would go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "any of the four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "directions",
+        "lemma": "reva"
+      },
+      {
+        "surface": "turning",
+        "lemma": "savav"
+      },
+      {
+        "surface": "as they moved",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "wherever",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "the head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "faced",
+        "lemma": "panah"
+      },
+      {
+        "surface": "the cherubim would go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "in that direction",
+        "lemma": "achar"
+      },
+      {
+        "surface": "turning",
+        "lemma": "savav"
+      },
+      {
+        "surface": "as they moved",
+        "lemma": "halakh"
+      }
+    ],
+    "12": [
+      {
+        "surface": "bodies",
+        "lemma": "basar"
+      },
+      {
+        "surface": "including their backs",
+        "lemma": "gav"
+      },
+      {
+        "surface": "hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "and wings",
+        "lemma": "kanaph"
+      },
+      {
+        "surface": "were full of",
+        "lemma": "male"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "all around",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "as were their four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "wheels",
+        "lemma": "ophan"
+      }
+    ],
+    "13": [
+      {
+        "surface": "I heard",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "the wheels",
+        "lemma": "ophan"
+      },
+      {
+        "surface": "the whirling wheels",
+        "lemma": "galgal"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Each of the cherubim",
+        "lemma": "echad"
+      },
+      {
+        "surface": "had four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "faces",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the first",
+        "lemma": "echad"
+      },
+      {
+        "surface": "face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "was that",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of a cherub",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "the second",
+        "lemma": "sheni"
+      },
+      {
+        "surface": "that",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of a man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "the third",
+        "lemma": "shelishi"
+      },
+      {
+        "surface": "that",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of a lion",
+        "lemma": "ari"
+      },
+      {
+        "surface": "and the fourth",
+        "lemma": "revii"
+      },
+      {
+        "surface": "that",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of an eagle",
+        "lemma": "nesher"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Then the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "rose upward",
+        "lemma": "ramam"
+      },
+      {
+        "surface": "were the living creatures",
+        "lemma": "chay"
+      },
+      {
+        "surface": "by the River",
+        "lemma": "nahar"
+      },
+      {
+        "surface": "Kebar",
+        "lemma": "kevar"
+      }
+    ],
+    "16": [
+      {
+        "surface": "When the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "moved",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "the wheels",
+        "lemma": "ophan"
+      },
+      {
+        "surface": "moved",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "beside them",
+        "lemma": "etsel"
+      },
+      {
+        "surface": "and even when they",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "spread",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "their wings",
+        "lemma": "kanaph"
+      },
+      {
+        "surface": "to rise",
+        "lemma": "rum"
+      },
+      {
+        "surface": "the ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "the wheels",
+        "lemma": "ophan"
+      },
+      {
+        "surface": "veer away",
+        "lemma": "savav"
+      },
+      {
+        "surface": "from their side",
+        "lemma": "etsel"
+      }
+    ],
+    "17": [
+      {
+        "surface": "When the cherubim stood still",
+        "lemma": "amad"
+      },
+      {
+        "surface": "the wheels also stood still",
+        "lemma": "amad"
+      },
+      {
+        "surface": "and when they ascended",
+        "lemma": "rum"
+      },
+      {
+        "surface": "the wheels ascended",
+        "lemma": "ramam"
+      },
+      {
+        "surface": "the spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "of the living creatures",
+        "lemma": "chay"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Then the glory",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the threshold",
+        "lemma": "miphtan"
+      },
+      {
+        "surface": "of the temple",
+        "lemma": "bet"
+      },
+      {
+        "surface": "and stood",
+        "lemma": "amad"
+      },
+      {
+        "surface": "the cherubim",
+        "lemma": "keruv"
+      }
+    ],
+    "19": [
+      {
+        "surface": "As I watched",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "lifted",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "their wings",
+        "lemma": "kanaph"
+      },
+      {
+        "surface": "and rose up",
+        "lemma": "ramam"
+      },
+      {
+        "surface": "the ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "with the wheels",
+        "lemma": "ophan"
+      },
+      {
+        "surface": "beside them",
+        "lemma": "ummah"
+      },
+      {
+        "surface": "And they stopped",
+        "lemma": "amad"
+      },
+      {
+        "surface": "at the entrance",
+        "lemma": "petach"
+      },
+      {
+        "surface": "of the east",
+        "lemma": "qadmoni"
+      },
+      {
+        "surface": "gate",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "of the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "with the glory",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "of the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "them",
+        "lemma": "maal"
+      }
+    ],
+    "20": [
+      {
+        "surface": "were the living creatures",
+        "lemma": "chay"
+      },
+      {
+        "surface": "beneath",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "by the River",
+        "lemma": "nahar"
+      },
+      {
+        "surface": "Kebar",
+        "lemma": "kevar"
+      },
+      {
+        "surface": "and I knew",
+        "lemma": "yada"
+      },
+      {
+        "surface": "were cherubim",
+        "lemma": "keruv"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Each",
+        "lemma": "echad"
+      },
+      {
+        "surface": "had four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "faces",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "and",
+        "lemma": "echad"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "wings",
+        "lemma": "kanaph"
+      },
+      {
+        "surface": "with what looked like",
+        "lemma": "demut"
+      },
+      {
+        "surface": "human",
+        "lemma": "adam"
+      },
+      {
+        "surface": "hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "their wings",
+        "lemma": "kanaph"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Their faces",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "looked like",
+        "lemma": "demut"
+      },
+      {
+        "surface": "the faces",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the River",
+        "lemma": "nahar"
+      },
+      {
+        "surface": "Kebar",
+        "lemma": "kevar"
+      },
+      {
+        "surface": "Each creature",
+        "lemma": "ish"
+      },
+      {
+        "surface": "went",
+        "lemma": "halakh"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "keruv",
+    "ophan",
+    "paneh"
+  ]
+}

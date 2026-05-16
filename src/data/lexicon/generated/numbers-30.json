@@ -1,0 +1,561 @@
+{
+  "bookId": 4,
+  "book": "Numbers",
+  "chapter": 30,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "to the heads",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "of the tribes",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has commanded",
+        "lemma": "tsavah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "makes",
+        "lemma": "nadar"
+      },
+      {
+        "surface": "a vow",
+        "lemma": "neder"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "swears",
+        "lemma": "shava"
+      },
+      {
+        "surface": "an oath",
+        "lemma": "shevuah"
+      },
+      {
+        "surface": "to obligate",
+        "lemma": "asar"
+      },
+      {
+        "surface": "himself",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "by a pledge",
+        "lemma": "esar"
+      },
+      {
+        "surface": "break",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "his word",
+        "lemma": "davar"
+      }
+    ],
+    "3": [
+      {
+        "surface": "a woman",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "during her youth",
+        "lemma": "naur"
+      },
+      {
+        "surface": "makes",
+        "lemma": "nadar"
+      },
+      {
+        "surface": "a vow",
+        "lemma": "neder"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "or obligates herself",
+        "lemma": "asar"
+      },
+      {
+        "surface": "by a pledge",
+        "lemma": "esar"
+      }
+    ],
+    "4": [
+      {
+        "surface": "her vow",
+        "lemma": "neder"
+      },
+      {
+        "surface": "or pledge",
+        "lemma": "esar"
+      },
+      {
+        "surface": "says nothing",
+        "lemma": "charash"
+      },
+      {
+        "surface": "the vows",
+        "lemma": "neder"
+      },
+      {
+        "surface": "pledges",
+        "lemma": "esar"
+      },
+      {
+        "surface": "she has bound",
+        "lemma": "asar"
+      },
+      {
+        "surface": "herself",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "shall stand",
+        "lemma": "qamay"
+      }
+    ],
+    "5": [
+      {
+        "surface": "prohibits her",
+        "lemma": "nu"
+      },
+      {
+        "surface": "on the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of the vows",
+        "lemma": "neder"
+      },
+      {
+        "surface": "or pledges",
+        "lemma": "esar"
+      },
+      {
+        "surface": "she has bound",
+        "lemma": "asar"
+      },
+      {
+        "surface": "herself",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "shall stand",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will absolve",
+        "lemma": "salach"
+      },
+      {
+        "surface": "has prohibited her",
+        "lemma": "nu"
+      }
+    ],
+    "6": [
+      {
+        "surface": "while under a vow",
+        "lemma": "neder"
+      },
+      {
+        "surface": "rash promise",
+        "lemma": "mivta"
+      },
+      {
+        "surface": "she",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "has bound",
+        "lemma": "asar"
+      }
+    ],
+    "7": [
+      {
+        "surface": "and her husband",
+        "lemma": "ish"
+      },
+      {
+        "surface": "but says nothing",
+        "lemma": "charash"
+      },
+      {
+        "surface": "on that day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "then the vows",
+        "lemma": "neder"
+      },
+      {
+        "surface": "or pledges",
+        "lemma": "esar"
+      },
+      {
+        "surface": "she",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "has bound",
+        "lemma": "asar"
+      },
+      {
+        "surface": "shall stand",
+        "lemma": "qamay"
+      }
+    ],
+    "8": [
+      {
+        "surface": "her husband",
+        "lemma": "ish"
+      },
+      {
+        "surface": "prohibits",
+        "lemma": "nu"
+      },
+      {
+        "surface": "when",
+        "lemma": "yom"
+      },
+      {
+        "surface": "he nullifies",
+        "lemma": "parar"
+      },
+      {
+        "surface": "the vow",
+        "lemma": "neder"
+      },
+      {
+        "surface": "or the rash promise",
+        "lemma": "mivta"
+      },
+      {
+        "surface": "she",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "has made",
+        "lemma": "asar"
+      },
+      {
+        "surface": "and the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will absolve",
+        "lemma": "salach"
+      }
+    ],
+    "9": [
+      {
+        "surface": "vow",
+        "lemma": "neder"
+      },
+      {
+        "surface": "a widow",
+        "lemma": "almanah"
+      },
+      {
+        "surface": "or divorced woman",
+        "lemma": "garash"
+      },
+      {
+        "surface": "pledges to fulfill",
+        "lemma": "asar"
+      },
+      {
+        "surface": "is binding",
+        "lemma": "qamay"
+      }
+    ],
+    "10": [
+      {
+        "surface": "a woman in her husband’s",
+        "lemma": "ish"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "has made a vow",
+        "lemma": "nadar"
+      },
+      {
+        "surface": "put herself",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "an obligation",
+        "lemma": "asar"
+      },
+      {
+        "surface": "with an oath",
+        "lemma": "shevuah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "and her husband",
+        "lemma": "ish"
+      },
+      {
+        "surface": "but says nothing",
+        "lemma": "charash"
+      },
+      {
+        "surface": "prohibit her",
+        "lemma": "nu"
+      },
+      {
+        "surface": "the vows",
+        "lemma": "neder"
+      },
+      {
+        "surface": "pledges",
+        "lemma": "esar"
+      },
+      {
+        "surface": "she has bound",
+        "lemma": "asar"
+      },
+      {
+        "surface": "herself",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "shall stand",
+        "lemma": "qamay"
+      }
+    ],
+    "12": [
+      {
+        "surface": "her husband",
+        "lemma": "ish"
+      },
+      {
+        "surface": "nullifies them",
+        "lemma": "parar"
+      },
+      {
+        "surface": "on the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "that came from",
+        "lemma": "motsa"
+      },
+      {
+        "surface": "her lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "whether her vows",
+        "lemma": "neder"
+      },
+      {
+        "surface": "or pledges",
+        "lemma": "esar"
+      },
+      {
+        "surface": "shall stand",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "Her husband",
+        "lemma": "ish"
+      },
+      {
+        "surface": "has nullified them",
+        "lemma": "parar"
+      },
+      {
+        "surface": "and the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will absolve",
+        "lemma": "salach"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Her husband",
+        "lemma": "ish"
+      },
+      {
+        "surface": "may confirm",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "or nullify",
+        "lemma": "parar"
+      },
+      {
+        "surface": "vow",
+        "lemma": "neder"
+      },
+      {
+        "surface": "sworn",
+        "lemma": "shevuah"
+      },
+      {
+        "surface": "pledge",
+        "lemma": "esar"
+      },
+      {
+        "surface": "to deny",
+        "lemma": "anah"
+      },
+      {
+        "surface": "herself",
+        "lemma": "nephesh"
+      }
+    ],
+    "14": [
+      {
+        "surface": "her husband",
+        "lemma": "ish"
+      },
+      {
+        "surface": "says nothing",
+        "lemma": "charash"
+      },
+      {
+        "surface": "from day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "then he confirms",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "the vows",
+        "lemma": "neder"
+      },
+      {
+        "surface": "pledges",
+        "lemma": "esar"
+      },
+      {
+        "surface": "He has confirmed",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "he said nothing",
+        "lemma": "charash"
+      },
+      {
+        "surface": "on the day",
+        "lemma": "yom"
+      }
+    ],
+    "15": [
+      {
+        "surface": "he nullifies",
+        "lemma": "parar"
+      },
+      {
+        "surface": "after",
+        "lemma": "achar"
+      },
+      {
+        "surface": "then he will bear",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "iniquity",
+        "lemma": "avan"
+      }
+    ],
+    "16": [
+      {
+        "surface": "are the statutes",
+        "lemma": "choq"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "concerning the relationship between",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "and his wife",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "and between",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "and a young daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "home",
+        "lemma": "bet"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "neder",
+    "esar",
+    "asar"
+  ]
+}

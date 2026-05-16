@@ -1,0 +1,981 @@
+{
+  "bookId": 4,
+  "book": "Numbers",
+  "chapter": 8,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "When you set up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "lamps",
+        "lemma": "ner"
+      },
+      {
+        "surface": "they are to light the area",
+        "lemma": "or"
+      },
+      {
+        "surface": "in front",
+        "lemma": "mul"
+      },
+      {
+        "surface": "of the lampstand",
+        "lemma": "menorah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "And Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "so",
+        "lemma": "ken"
+      },
+      {
+        "surface": "he set up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the lamps",
+        "lemma": "ner"
+      },
+      {
+        "surface": "facing",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the front",
+        "lemma": "mul"
+      },
+      {
+        "surface": "of the lampstand",
+        "lemma": "menorah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "had commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "the lampstand",
+        "lemma": "menorah"
+      },
+      {
+        "surface": "was constructed",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "it was made of hammered",
+        "lemma": "miqshah"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "its base",
+        "lemma": "yarekh"
+      },
+      {
+        "surface": "its blossoms",
+        "lemma": "perach"
+      },
+      {
+        "surface": "according to the pattern",
+        "lemma": "mareh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Again the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "from among",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and make them ceremonially clean",
+        "lemma": "taher"
+      }
+    ],
+    "7": [
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "to cleanse them",
+        "lemma": "taher"
+      },
+      {
+        "surface": "Sprinkle",
+        "lemma": "nazah"
+      },
+      {
+        "surface": "with the water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "of purification",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "Have them shave",
+        "lemma": "avar"
+      },
+      {
+        "surface": "bodies",
+        "lemma": "basar"
+      },
+      {
+        "surface": "and wash",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "their clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and so purify themselves",
+        "lemma": "taher"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Then have them take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "a young bull",
+        "lemma": "par"
+      },
+      {
+        "surface": "with its grain offering",
+        "lemma": "minchah"
+      },
+      {
+        "surface": "of fine flour",
+        "lemma": "solet"
+      },
+      {
+        "surface": "mixed",
+        "lemma": "balal"
+      },
+      {
+        "surface": "with oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "and you are to take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "a second",
+        "lemma": "sheni"
+      },
+      {
+        "surface": "young bull",
+        "lemma": "par"
+      },
+      {
+        "surface": "for a sin offering",
+        "lemma": "chattaah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Bring",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the Tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      },
+      {
+        "surface": "and assemble",
+        "lemma": "qahal"
+      },
+      {
+        "surface": "congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "10": [
+      {
+        "surface": "You are to present",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "and have the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "lay",
+        "lemma": "samakh"
+      },
+      {
+        "surface": "their hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "them",
+        "lemma": "leviyyi"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "is to present",
+        "lemma": "nuph"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "as a wave offering",
+        "lemma": "tenuphah"
+      },
+      {
+        "surface": "from the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "so that they may perform",
+        "lemma": "avad"
+      },
+      {
+        "surface": "the service",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "12": [
+      {
+        "surface": "And the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "are to lay",
+        "lemma": "samakh"
+      },
+      {
+        "surface": "their hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "the heads",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "of the bulls",
+        "lemma": "par"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "as a sin offering",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "and the other",
+        "lemma": "echad"
+      },
+      {
+        "surface": "as a burnt offering",
+        "lemma": "olah"
+      },
+      {
+        "surface": "to make atonement",
+        "lemma": "kipher"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      }
+    ],
+    "13": [
+      {
+        "surface": "You are to have the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "stand",
+        "lemma": "amad"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "and his sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and then present",
+        "lemma": "nuph"
+      },
+      {
+        "surface": "before the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "as a wave offering",
+        "lemma": "tenuphah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "In this way you shall separate",
+        "lemma": "badal"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "from",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the rest of the Israelites",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "and the Levites",
+        "lemma": "leviyyi"
+      }
+    ],
+    "15": [
+      {
+        "surface": "After",
+        "lemma": "achar"
+      },
+      {
+        "surface": "you have cleansed",
+        "lemma": "taher"
+      },
+      {
+        "surface": "and presented",
+        "lemma": "nuph"
+      },
+      {
+        "surface": "as a wave offering",
+        "lemma": "tenuphah"
+      },
+      {
+        "surface": "they",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "to serve",
+        "lemma": "avad"
+      },
+      {
+        "surface": "at the Tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      }
+    ],
+    "16": [
+      {
+        "surface": "from among",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "I have taken",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "in place of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "who come first",
+        "lemma": "peter"
+      },
+      {
+        "surface": "from the womb",
+        "lemma": "rechem"
+      },
+      {
+        "surface": "the firstborn",
+        "lemma": "bekhor"
+      },
+      {
+        "surface": "the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "17": [
+      {
+        "surface": "firstborn",
+        "lemma": "bekhor"
+      },
+      {
+        "surface": "male",
+        "lemma": "ben"
+      },
+      {
+        "surface": "in Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "both man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "and beast",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "I set them apart",
+        "lemma": "qadash"
+      },
+      {
+        "surface": "on the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "I struck down",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "the firstborn",
+        "lemma": "bekhor"
+      },
+      {
+        "surface": "in the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      }
+    ],
+    "18": [
+      {
+        "surface": "But I have taken",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "in place of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the firstborn",
+        "lemma": "bekhor"
+      },
+      {
+        "surface": "among the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "19": [
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "to Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "and his sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "from among",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "to perform",
+        "lemma": "avad"
+      },
+      {
+        "surface": "the service",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "for the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "at the Tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      },
+      {
+        "surface": "and to make atonement",
+        "lemma": "kipher"
+      },
+      {
+        "surface": "on their",
+        "lemma": "ben"
+      },
+      {
+        "surface": "plague",
+        "lemma": "negeph"
+      },
+      {
+        "surface": "against the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "when they",
+        "lemma": "ben"
+      },
+      {
+        "surface": "approach",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "the sanctuary",
+        "lemma": "qodesh"
+      }
+    ],
+    "20": [
+      {
+        "surface": "So Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "with the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "had commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "they",
+        "lemma": "ben"
+      }
+    ],
+    "21": [
+      {
+        "surface": "The Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "purified",
+        "lemma": "chata"
+      },
+      {
+        "surface": "themselves and washed",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "their clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "presented",
+        "lemma": "nuph"
+      },
+      {
+        "surface": "as a wave offering",
+        "lemma": "tenuphah"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "also made atonement",
+        "lemma": "kipher"
+      },
+      {
+        "surface": "to cleanse them",
+        "lemma": "taher"
+      }
+    ],
+    "22": [
+      {
+        "surface": "After",
+        "lemma": "achar"
+      },
+      {
+        "surface": "that",
+        "lemma": "ken"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "to perform",
+        "lemma": "avad"
+      },
+      {
+        "surface": "their service",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "at the Tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      },
+      {
+        "surface": "in the presence",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "and his sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Thus",
+        "lemma": "ken"
+      },
+      {
+        "surface": "with the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "had commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "23": [
+      {
+        "surface": "And the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "24": [
+      {
+        "surface": "to the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "Men twenty-five",
+        "lemma": "chamesh"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "to perform",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "the service",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "in the work",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "at the Tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      }
+    ],
+    "25": [
+      {
+        "surface": "But at the age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of fifty",
+        "lemma": "chamishshim"
+      },
+      {
+        "surface": "from performing",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "the work",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "longer",
+        "lemma": "od"
+      },
+      {
+        "surface": "serve",
+        "lemma": "avad"
+      }
+    ],
+    "26": [
+      {
+        "surface": "After that, they may assist",
+        "lemma": "sharat"
+      },
+      {
+        "surface": "their brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "in fulfilling",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "their duties",
+        "lemma": "mishmeret"
+      },
+      {
+        "surface": "at the Tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      },
+      {
+        "surface": "to do",
+        "lemma": "avad"
+      },
+      {
+        "surface": "the work",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "This is how",
+        "lemma": "kakhah"
+      },
+      {
+        "surface": "responsibilities",
+        "lemma": "mishmeret"
+      },
+      {
+        "surface": "to the Levites",
+        "lemma": "leviyyi"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "leviyyi",
+    "yisrael",
+    "aharon"
+  ]
+}

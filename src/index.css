@@ -322,6 +322,50 @@
     font-weight: 500;
   }
 
+  /* Tappable lexicon words in scripture. Two tiers:
+     - .lex-word (default): hairline dotted underline, low-key. Most
+       lemmas. Reads as "if you want more, it's here," without competing
+       with the verse text.
+     - .lex-word-theme: thicker, brighter dotted underline. The 2-3 lemmas
+       per chapter that carry the central argument; the spine of the
+       chapter reads at a glance.
+     Underline uses text-decoration so it wraps cleanly across line breaks.
+     Hover/focus + open-popover states add a soft gold tint regardless of
+     tier — touch/click feedback should never be ambiguous. */
+  .lex-word {
+    text-decoration: underline dotted #B09A6D;
+    text-decoration-thickness: 1.25px;
+    text-underline-offset: 3px;
+    border-radius: 3px;
+    padding: 0 1px;
+    transition: background-color 120ms ease, text-decoration-color 120ms ease;
+  }
+  .lex-word:hover,
+  .lex-word:focus-visible {
+    background-color: rgba(199, 176, 116, 0.12);
+    text-decoration-color: #D8C089;
+    outline: none;
+  }
+  .lex-word[data-state='open'] {
+    background-color: rgba(199, 176, 116, 0.18);
+    text-decoration-color: #E2CB94;
+  }
+
+  .lex-word-theme {
+    text-decoration: underline dotted #C7B074;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 4px;
+  }
+  .lex-word-theme:hover,
+  .lex-word-theme:focus-visible {
+    background-color: rgba(199, 176, 116, 0.16);
+    text-decoration-color: #E2CB94;
+  }
+  .lex-word-theme[data-state='open'] {
+    background-color: rgba(199, 176, 116, 0.22);
+    text-decoration-color: #E8D4A0;
+  }
+
   /* Production highlight classes */
   .hl-yellow { background-color: var(--hl-yellow); }
   .hl-green { background-color: var(--hl-green); }

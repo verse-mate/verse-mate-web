@@ -1,0 +1,741 @@
+{
+  "bookId": 20,
+  "book": "Proverbs",
+  "chapter": 26,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Like snow",
+        "lemma": "sheleg"
+      },
+      {
+        "surface": "in summer",
+        "lemma": "qayits"
+      },
+      {
+        "surface": "and rain",
+        "lemma": "matar"
+      },
+      {
+        "surface": "at harvest",
+        "lemma": "qatsir"
+      },
+      {
+        "surface": "honor",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "befit",
+        "lemma": "naeh"
+      },
+      {
+        "surface": "a fool",
+        "lemma": "kesil"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Like a fluttering",
+        "lemma": "nud"
+      },
+      {
+        "surface": "sparrow",
+        "lemma": "tsippor"
+      },
+      {
+        "surface": "or darting",
+        "lemma": "uph"
+      },
+      {
+        "surface": "swallow",
+        "lemma": "deror"
+      },
+      {
+        "surface": "an undeserved",
+        "lemma": "chinnam"
+      },
+      {
+        "surface": "curse",
+        "lemma": "qelalah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "A whip",
+        "lemma": "shot"
+      },
+      {
+        "surface": "for the horse",
+        "lemma": "sus"
+      },
+      {
+        "surface": "a bridle",
+        "lemma": "meteg"
+      },
+      {
+        "surface": "for the donkey",
+        "lemma": "chamor"
+      },
+      {
+        "surface": "and a rod",
+        "lemma": "shevet"
+      },
+      {
+        "surface": "for the backs",
+        "lemma": "gev"
+      },
+      {
+        "surface": "of fools",
+        "lemma": "kesil"
+      }
+    ],
+    "4": [
+      {
+        "surface": "answer",
+        "lemma": "un"
+      },
+      {
+        "surface": "a fool",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "according to his folly",
+        "lemma": "ivvelet"
+      },
+      {
+        "surface": "will be like him",
+        "lemma": "shavah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Answer",
+        "lemma": "un"
+      },
+      {
+        "surface": "a fool",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "according to his folly",
+        "lemma": "ivvelet"
+      },
+      {
+        "surface": "wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "in his own eyes",
+        "lemma": "ayin"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Like cutting off",
+        "lemma": "qatsah"
+      },
+      {
+        "surface": "one’s own feet",
+        "lemma": "regel"
+      },
+      {
+        "surface": "or drinking",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "violence",
+        "lemma": "chamas"
+      },
+      {
+        "surface": "is the sending",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "of a message",
+        "lemma": "davar"
+      },
+      {
+        "surface": "by the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of a fool",
+        "lemma": "kesil"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Like lame",
+        "lemma": "pisseach"
+      },
+      {
+        "surface": "legs",
+        "lemma": "shoq"
+      },
+      {
+        "surface": "hanging limp",
+        "lemma": "dalal"
+      },
+      {
+        "surface": "is a proverb",
+        "lemma": "mashal"
+      },
+      {
+        "surface": "in the mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "of a fool",
+        "lemma": "kesil"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Like binding",
+        "lemma": "tsarar"
+      },
+      {
+        "surface": "a stone",
+        "lemma": "even"
+      },
+      {
+        "surface": "into a sling",
+        "lemma": "margemah"
+      },
+      {
+        "surface": "is",
+        "lemma": "ken"
+      },
+      {
+        "surface": "of honor",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "to a fool",
+        "lemma": "kesil"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Like a thorn",
+        "lemma": "choach"
+      },
+      {
+        "surface": "that goes",
+        "lemma": "alah"
+      },
+      {
+        "surface": "into the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of a drunkard",
+        "lemma": "shikkor"
+      },
+      {
+        "surface": "is a proverb",
+        "lemma": "mashal"
+      },
+      {
+        "surface": "in the mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "of a fool",
+        "lemma": "kesil"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Like an archer",
+        "lemma": "rav"
+      },
+      {
+        "surface": "who wounds",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "is he who hires",
+        "lemma": "sakhar"
+      },
+      {
+        "surface": "a fool",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "or",
+        "lemma": "sakhar"
+      },
+      {
+        "surface": "passerby",
+        "lemma": "avar"
+      }
+    ],
+    "11": [
+      {
+        "surface": "As a dog",
+        "lemma": "kelev"
+      },
+      {
+        "surface": "its vomit",
+        "lemma": "qe"
+      },
+      {
+        "surface": "so a fool",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "repeats",
+        "lemma": "shanah"
+      },
+      {
+        "surface": "his folly",
+        "lemma": "ivvelet"
+      }
+    ],
+    "12": [
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "who is wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "in his own eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "There is more hope",
+        "lemma": "tiqvah"
+      },
+      {
+        "surface": "for a fool",
+        "lemma": "kesil"
+      }
+    ],
+    "13": [
+      {
+        "surface": "The slacker",
+        "lemma": "atsel"
+      },
+      {
+        "surface": "A lion",
+        "lemma": "shachal"
+      },
+      {
+        "surface": "is in the road",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "A fierce lion",
+        "lemma": "ari"
+      },
+      {
+        "surface": "roams",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the public square",
+        "lemma": "rechov"
+      }
+    ],
+    "14": [
+      {
+        "surface": "As a door",
+        "lemma": "dal"
+      },
+      {
+        "surface": "turns",
+        "lemma": "savav"
+      },
+      {
+        "surface": "its hinges",
+        "lemma": "tsir"
+      },
+      {
+        "surface": "so the slacker",
+        "lemma": "atsel"
+      },
+      {
+        "surface": "his bed",
+        "lemma": "mittah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "The slacker",
+        "lemma": "atsel"
+      },
+      {
+        "surface": "buries",
+        "lemma": "taman"
+      },
+      {
+        "surface": "his hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "in the dish",
+        "lemma": "tsallachat"
+      },
+      {
+        "surface": "it wearies him",
+        "lemma": "laah"
+      },
+      {
+        "surface": "his mouth",
+        "lemma": "peh"
+      }
+    ],
+    "16": [
+      {
+        "surface": "The slacker",
+        "lemma": "atsel"
+      },
+      {
+        "surface": "is wiser",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "in his own eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "than seven men",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "discreetly",
+        "lemma": "taam"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Like one who grabs",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "a dog",
+        "lemma": "kelev"
+      },
+      {
+        "surface": "by the ears",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "is a passerby",
+        "lemma": "avar"
+      },
+      {
+        "surface": "who meddles",
+        "lemma": "avar"
+      },
+      {
+        "surface": "a quarrel",
+        "lemma": "riv"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Like a madman",
+        "lemma": "lahah"
+      },
+      {
+        "surface": "shooting",
+        "lemma": "yara"
+      },
+      {
+        "surface": "firebrands",
+        "lemma": "ziqah"
+      },
+      {
+        "surface": "and deadly",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "arrows",
+        "lemma": "chets"
+      }
+    ],
+    "19": [
+      {
+        "surface": "so",
+        "lemma": "ken"
+      },
+      {
+        "surface": "is the man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "who deceives",
+        "lemma": "ramah"
+      },
+      {
+        "surface": "his neighbor",
+        "lemma": "rea"
+      },
+      {
+        "surface": "joking",
+        "lemma": "sachaq"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Without",
+        "lemma": "ephes"
+      },
+      {
+        "surface": "wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "a fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "goes out",
+        "lemma": "kavah"
+      },
+      {
+        "surface": "without",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "gossip",
+        "lemma": "ragan"
+      },
+      {
+        "surface": "a conflict",
+        "lemma": "madon"
+      },
+      {
+        "surface": "ceases",
+        "lemma": "shataq"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Like charcoal",
+        "lemma": "pecham"
+      },
+      {
+        "surface": "for embers",
+        "lemma": "gechel"
+      },
+      {
+        "surface": "and wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "for fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "so is a quarrelsome",
+        "lemma": "madon"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "for kindling",
+        "lemma": "charar"
+      },
+      {
+        "surface": "strife",
+        "lemma": "riv"
+      }
+    ],
+    "22": [
+      {
+        "surface": "The words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of a gossip",
+        "lemma": "ragan"
+      },
+      {
+        "surface": "are like choice morsels",
+        "lemma": "laham"
+      },
+      {
+        "surface": "go down",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "into the inmost being",
+        "lemma": "cheder"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Like glaze",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "covering",
+        "lemma": "tsaphah"
+      },
+      {
+        "surface": "an earthen vessel",
+        "lemma": "cheres"
+      },
+      {
+        "surface": "are burning",
+        "lemma": "dalaq"
+      },
+      {
+        "surface": "lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "and a wicked",
+        "lemma": "ra"
+      },
+      {
+        "surface": "heart",
+        "lemma": "lev"
+      }
+    ],
+    "24": [
+      {
+        "surface": "A hateful man",
+        "lemma": "sane"
+      },
+      {
+        "surface": "disguises himself",
+        "lemma": "nakhar"
+      },
+      {
+        "surface": "with his speech",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "but he lays up",
+        "lemma": "shit"
+      },
+      {
+        "surface": "deceit",
+        "lemma": "mirmah"
+      },
+      {
+        "surface": "in his heart",
+        "lemma": "qerev"
+      }
+    ],
+    "25": [
+      {
+        "surface": "he speaks",
+        "lemma": "qol"
+      },
+      {
+        "surface": "graciously",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "believe",
+        "lemma": "aman"
+      },
+      {
+        "surface": "seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "abominations",
+        "lemma": "toevah"
+      },
+      {
+        "surface": "fill his heart",
+        "lemma": "lev"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Though his hatred",
+        "lemma": "sinah"
+      },
+      {
+        "surface": "is concealed",
+        "lemma": "kasah"
+      },
+      {
+        "surface": "by deception",
+        "lemma": "mashshaon"
+      },
+      {
+        "surface": "his wickedness",
+        "lemma": "ra"
+      },
+      {
+        "surface": "will be exposed",
+        "lemma": "galah"
+      },
+      {
+        "surface": "in the assembly",
+        "lemma": "qahal"
+      }
+    ],
+    "27": [
+      {
+        "surface": "He who digs",
+        "lemma": "khur"
+      },
+      {
+        "surface": "a pit",
+        "lemma": "shachat"
+      },
+      {
+        "surface": "will fall",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "and he who rolls",
+        "lemma": "galal"
+      },
+      {
+        "surface": "a stone",
+        "lemma": "even"
+      }
+    ],
+    "28": [
+      {
+        "surface": "A lying",
+        "lemma": "sheqer"
+      },
+      {
+        "surface": "tongue",
+        "lemma": "lashon"
+      },
+      {
+        "surface": "hates",
+        "lemma": "sane"
+      },
+      {
+        "surface": "those it crushes",
+        "lemma": "dakh"
+      },
+      {
+        "surface": "and a flattering",
+        "lemma": "chalaq"
+      },
+      {
+        "surface": "mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "ruin",
+        "lemma": "midcheh"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "kesil",
+    "peh",
+    "atsel"
+  ]
+}

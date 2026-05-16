@@ -1,0 +1,869 @@
+{
+  "bookId": 50,
+  "book": "Philippians",
+  "chapter": 1,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "Timothy",
+        "lemma": "timotheos"
+      },
+      {
+        "surface": "servants",
+        "lemma": "doulos"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "saints",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Philippi",
+        "lemma": "philippoi"
+      },
+      {
+        "surface": "the overseers",
+        "lemma": "episkopos"
+      },
+      {
+        "surface": "deacons",
+        "lemma": "diakonos"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Grace",
+        "lemma": "charis"
+      },
+      {
+        "surface": "peace",
+        "lemma": "eirene"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      }
+    ],
+    "3": [
+      {
+        "surface": "I thank",
+        "lemma": "eucharisteo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "I remember",
+        "lemma": "mneia"
+      }
+    ],
+    "4": [
+      {
+        "surface": "prayer",
+        "lemma": "deesis"
+      },
+      {
+        "surface": "always",
+        "lemma": "pantote"
+      },
+      {
+        "surface": "pray",
+        "lemma": "deesis"
+      },
+      {
+        "surface": "joy",
+        "lemma": "chara"
+      }
+    ],
+    "5": [
+      {
+        "surface": "partnership",
+        "lemma": "koinonia"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      },
+      {
+        "surface": "first",
+        "lemma": "protos"
+      },
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "now",
+        "lemma": "nun"
+      }
+    ],
+    "6": [
+      {
+        "surface": "being confident",
+        "lemma": "peitho"
+      },
+      {
+        "surface": "who began",
+        "lemma": "enarchomai"
+      },
+      {
+        "surface": "a good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "work",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "will carry it on to completion",
+        "lemma": "epiteleo"
+      },
+      {
+        "surface": "the day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      }
+    ],
+    "7": [
+      {
+        "surface": "right",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "to feel",
+        "lemma": "phroneo"
+      },
+      {
+        "surface": "heart",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "chains",
+        "lemma": "desmos"
+      },
+      {
+        "surface": "defense",
+        "lemma": "apologia"
+      },
+      {
+        "surface": "confirmation",
+        "lemma": "bebaiosis"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      },
+      {
+        "surface": "partners",
+        "lemma": "sugkoinonos"
+      },
+      {
+        "surface": "grace",
+        "lemma": "charis"
+      }
+    ],
+    "8": [
+      {
+        "surface": "God is",
+        "lemma": "theos"
+      },
+      {
+        "surface": "witness",
+        "lemma": "martus"
+      },
+      {
+        "surface": "I long for",
+        "lemma": "epipotheo"
+      },
+      {
+        "surface": "the affection",
+        "lemma": "splagchnon"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      }
+    ],
+    "9": [
+      {
+        "surface": "my prayer",
+        "lemma": "proseuchomai"
+      },
+      {
+        "surface": "love",
+        "lemma": "agape"
+      },
+      {
+        "surface": "may abound",
+        "lemma": "perisseuo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "eti"
+      },
+      {
+        "surface": "more",
+        "lemma": "mallon"
+      },
+      {
+        "surface": "more",
+        "lemma": "mallon"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "epignosis"
+      },
+      {
+        "surface": "of insight",
+        "lemma": "aisthesis"
+      }
+    ],
+    "10": [
+      {
+        "surface": "may be able to test and prove",
+        "lemma": "dokimazo"
+      },
+      {
+        "surface": "is best",
+        "lemma": "diaphero"
+      },
+      {
+        "surface": "pure",
+        "lemma": "eilikrines"
+      },
+      {
+        "surface": "blameless",
+        "lemma": "aproskopos"
+      },
+      {
+        "surface": "the day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      }
+    ],
+    "11": [
+      {
+        "surface": "filled",
+        "lemma": "pleroo"
+      },
+      {
+        "surface": "with the fruit",
+        "lemma": "karpos"
+      },
+      {
+        "surface": "of righteousness",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "the glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "praise",
+        "lemma": "epainos"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      }
+    ],
+    "12": [
+      {
+        "surface": "I want",
+        "lemma": "boulomai"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "have} actually",
+        "lemma": "mallon"
+      },
+      {
+        "surface": "advance",
+        "lemma": "prokope"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      }
+    ],
+    "13": [
+      {
+        "surface": "clear",
+        "lemma": "phaneros"
+      },
+      {
+        "surface": "whole",
+        "lemma": "holos"
+      },
+      {
+        "surface": "palace guard",
+        "lemma": "praitorion"
+      },
+      {
+        "surface": "else that",
+        "lemma": "loipos"
+      },
+      {
+        "surface": "in chains",
+        "lemma": "desmos"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      }
+    ],
+    "14": [
+      {
+        "surface": "most",
+        "lemma": "pleion"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "confident",
+        "lemma": "peitho"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "chains",
+        "lemma": "desmos"
+      },
+      {
+        "surface": "now dare",
+        "lemma": "tolmao"
+      },
+      {
+        "surface": "more greatly",
+        "lemma": "perissos"
+      },
+      {
+        "surface": "word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "without fear",
+        "lemma": "aphobos"
+      }
+    ],
+    "15": [
+      {
+        "surface": "preach",
+        "lemma": "kerusso"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "envy",
+        "lemma": "phthonos"
+      },
+      {
+        "surface": "rivalry",
+        "lemma": "eris"
+      },
+      {
+        "surface": "goodwill",
+        "lemma": "eudokia"
+      }
+    ],
+    "16": [
+      {
+        "surface": "love",
+        "lemma": "agape"
+      },
+      {
+        "surface": "I am appointed",
+        "lemma": "keimai"
+      },
+      {
+        "surface": "the defense",
+        "lemma": "apologia"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      }
+    ],
+    "17": [
+      {
+        "surface": "preach",
+        "lemma": "katangello"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "selfish ambition",
+        "lemma": "eritheia"
+      },
+      {
+        "surface": "sincerely",
+        "lemma": "hagnos"
+      },
+      {
+        "surface": "supposing that",
+        "lemma": "oiomai"
+      },
+      {
+        "surface": "they can add to",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "the distress",
+        "lemma": "thlipsis"
+      },
+      {
+        "surface": "chains",
+        "lemma": "desmos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "way",
+        "lemma": "tropos"
+      },
+      {
+        "surface": "whether",
+        "lemma": "eite"
+      },
+      {
+        "surface": "by false motives",
+        "lemma": "prophasis"
+      },
+      {
+        "surface": "or",
+        "lemma": "eite"
+      },
+      {
+        "surface": "true",
+        "lemma": "aletheia"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "is preached",
+        "lemma": "katangello"
+      },
+      {
+        "surface": "I rejoice",
+        "lemma": "chairo"
+      },
+      {
+        "surface": "I will continue to rejoice",
+        "lemma": "chairo"
+      }
+    ],
+    "19": [
+      {
+        "surface": "prayers",
+        "lemma": "deesis"
+      },
+      {
+        "surface": "the provision",
+        "lemma": "epichoregia"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "of Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "will turn out",
+        "lemma": "apobaino"
+      },
+      {
+        "surface": "deliverance",
+        "lemma": "soteria"
+      }
+    ],
+    "20": [
+      {
+        "surface": "eagerly expect",
+        "lemma": "apokaradokia"
+      },
+      {
+        "surface": "hope",
+        "lemma": "elpis"
+      },
+      {
+        "surface": "I will in no way be ashamed",
+        "lemma": "aischuno"
+      },
+      {
+        "surface": "will have complete boldness",
+        "lemma": "parresia"
+      },
+      {
+        "surface": "now",
+        "lemma": "nun"
+      },
+      {
+        "surface": "always",
+        "lemma": "pantote"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "will be exalted",
+        "lemma": "megaluno"
+      },
+      {
+        "surface": "body",
+        "lemma": "soma"
+      },
+      {
+        "surface": "whether",
+        "lemma": "eite"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "or",
+        "lemma": "eite"
+      },
+      {
+        "surface": "death",
+        "lemma": "thanatos"
+      }
+    ],
+    "21": [
+      {
+        "surface": "to live",
+        "lemma": "zao"
+      },
+      {
+        "surface": "is Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "to die",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "is gain",
+        "lemma": "kerdos"
+      }
+    ],
+    "22": [
+      {
+        "surface": "I go on living",
+        "lemma": "zao"
+      },
+      {
+        "surface": "the body",
+        "lemma": "sarx"
+      },
+      {
+        "surface": "will mean fruitful",
+        "lemma": "karpos"
+      },
+      {
+        "surface": "labor",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "shall I choose",
+        "lemma": "haireo"
+      },
+      {
+        "surface": "I do not know",
+        "lemma": "gnorizo"
+      }
+    ],
+    "23": [
+      {
+        "surface": "I am torn",
+        "lemma": "sunecho"
+      },
+      {
+        "surface": "two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "I desire",
+        "lemma": "epithumia"
+      },
+      {
+        "surface": "to depart",
+        "lemma": "analuo"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "better",
+        "lemma": "kreisson"
+      }
+    ],
+    "24": [
+      {
+        "surface": "it is more necessary",
+        "lemma": "anagkaios"
+      },
+      {
+        "surface": "that I remain",
+        "lemma": "epimeno"
+      },
+      {
+        "surface": "body",
+        "lemma": "sarx"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Convinced of",
+        "lemma": "peitho"
+      },
+      {
+        "surface": "I will remain",
+        "lemma": "meno"
+      },
+      {
+        "surface": "will continue with",
+        "lemma": "parameno"
+      },
+      {
+        "surface": "progress",
+        "lemma": "prokope"
+      },
+      {
+        "surface": "joy",
+        "lemma": "chara"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      }
+    ],
+    "26": [
+      {
+        "surface": "my",
+        "lemma": "emos"
+      },
+      {
+        "surface": "coming",
+        "lemma": "parousia"
+      },
+      {
+        "surface": "again",
+        "lemma": "palin"
+      },
+      {
+        "surface": "exultation",
+        "lemma": "kauchema"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "will resound",
+        "lemma": "perisseuo"
+      }
+    ],
+    "27": [
+      {
+        "surface": "Nevertheless",
+        "lemma": "monon"
+      },
+      {
+        "surface": "conduct yourselves",
+        "lemma": "politeuo"
+      },
+      {
+        "surface": "in a manner worthy",
+        "lemma": "axios"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "whether",
+        "lemma": "eite"
+      },
+      {
+        "surface": "or only",
+        "lemma": "eite"
+      },
+      {
+        "surface": "in my absence",
+        "lemma": "apeimi"
+      },
+      {
+        "surface": "you stand firm",
+        "lemma": "steko"
+      },
+      {
+        "surface": "spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "contending together",
+        "lemma": "sunathleo"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      }
+    ],
+    "28": [
+      {
+        "surface": "without being frightened",
+        "lemma": "pturomai"
+      },
+      {
+        "surface": "any way",
+        "lemma": "medeis"
+      },
+      {
+        "surface": "oppose you",
+        "lemma": "antikeimai"
+      },
+      {
+        "surface": "a clear sign",
+        "lemma": "endeixis"
+      },
+      {
+        "surface": "destruction",
+        "lemma": "apoleia"
+      },
+      {
+        "surface": "salvation",
+        "lemma": "soteria"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ],
+    "29": [
+      {
+        "surface": "it has been granted",
+        "lemma": "charizo"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "only",
+        "lemma": "monon"
+      },
+      {
+        "surface": "to believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "to suffer",
+        "lemma": "pascho"
+      }
+    ],
+    "30": [
+      {
+        "surface": "struggle",
+        "lemma": "agon"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "prokope",
+    "desmos",
+    "apologia"
+  ]
+}

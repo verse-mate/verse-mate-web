@@ -1,0 +1,779 @@
+{
+  "bookId": 66,
+  "book": "Revelation",
+  "chapter": 16,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "voice",
+        "lemma": "phone"
+      },
+      {
+        "surface": "temple",
+        "lemma": "naos"
+      },
+      {
+        "surface": "seven",
+        "lemma": "hepta"
+      },
+      {
+        "surface": "angels",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "Go",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "pour out",
+        "lemma": "ekcheo"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "seven",
+        "lemma": "hepta"
+      },
+      {
+        "surface": "bowls",
+        "lemma": "phiale"
+      },
+      {
+        "surface": "of God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "wrath",
+        "lemma": "thumos"
+      }
+    ],
+    "2": [
+      {
+        "surface": "first angel",
+        "lemma": "protos"
+      },
+      {
+        "surface": "went",
+        "lemma": "aperchomai"
+      },
+      {
+        "surface": "poured out",
+        "lemma": "ekcheo"
+      },
+      {
+        "surface": "bowl",
+        "lemma": "phiale"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "loathsome",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "malignant",
+        "lemma": "poneros"
+      },
+      {
+        "surface": "sores",
+        "lemma": "helkos"
+      },
+      {
+        "surface": "mark",
+        "lemma": "charagma"
+      },
+      {
+        "surface": "beast",
+        "lemma": "therion"
+      },
+      {
+        "surface": "worshiped",
+        "lemma": "proskuneo"
+      },
+      {
+        "surface": "image",
+        "lemma": "eikon"
+      }
+    ],
+    "3": [
+      {
+        "surface": "second angel",
+        "lemma": "deuteros"
+      },
+      {
+        "surface": "poured out",
+        "lemma": "ekcheo"
+      },
+      {
+        "surface": "bowl",
+        "lemma": "phiale"
+      },
+      {
+        "surface": "sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "blood",
+        "lemma": "haima"
+      },
+      {
+        "surface": "of the dead",
+        "lemma": "nekros"
+      },
+      {
+        "surface": "living",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "thing",
+        "lemma": "psuche"
+      },
+      {
+        "surface": "sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "died",
+        "lemma": "apothnesko"
+      }
+    ],
+    "4": [
+      {
+        "surface": "third angel",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "poured out",
+        "lemma": "ekcheo"
+      },
+      {
+        "surface": "bowl",
+        "lemma": "phiale"
+      },
+      {
+        "surface": "rivers",
+        "lemma": "potamos"
+      },
+      {
+        "surface": "springs",
+        "lemma": "pege"
+      },
+      {
+        "surface": "water",
+        "lemma": "hudor"
+      },
+      {
+        "surface": "blood",
+        "lemma": "haima"
+      }
+    ],
+    "5": [
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "waters",
+        "lemma": "hudor"
+      },
+      {
+        "surface": "Righteous",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "Holy One",
+        "lemma": "hosios"
+      },
+      {
+        "surface": "You have brought these judgments",
+        "lemma": "krino"
+      }
+    ],
+    "6": [
+      {
+        "surface": "they have spilled",
+        "lemma": "ekcheo"
+      },
+      {
+        "surface": "the blood",
+        "lemma": "haima"
+      },
+      {
+        "surface": "of saints",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "prophets",
+        "lemma": "prophetes"
+      },
+      {
+        "surface": "blood",
+        "lemma": "haima"
+      },
+      {
+        "surface": "to drink",
+        "lemma": "pino"
+      },
+      {
+        "surface": "deserve",
+        "lemma": "axios"
+      }
+    ],
+    "7": [
+      {
+        "surface": "altar",
+        "lemma": "thusiasterion"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Almighty",
+        "lemma": "pantokrator"
+      },
+      {
+        "surface": "true",
+        "lemma": "alethinos"
+      },
+      {
+        "surface": "just are",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "judgments",
+        "lemma": "krisis"
+      }
+    ],
+    "8": [
+      {
+        "surface": "fourth angel",
+        "lemma": "tetartos"
+      },
+      {
+        "surface": "poured out",
+        "lemma": "ekcheo"
+      },
+      {
+        "surface": "bowl",
+        "lemma": "phiale"
+      },
+      {
+        "surface": "sun",
+        "lemma": "helios"
+      },
+      {
+        "surface": "to scorch",
+        "lemma": "kaumatizo"
+      },
+      {
+        "surface": "people",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "fire",
+        "lemma": "pur"
+      }
+    ],
+    "9": [
+      {
+        "surface": "people",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "were scorched",
+        "lemma": "kaumatizo"
+      },
+      {
+        "surface": "heat",
+        "lemma": "kauma"
+      },
+      {
+        "surface": "they cursed",
+        "lemma": "blasphemeo"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "authority",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "plagues",
+        "lemma": "plege"
+      },
+      {
+        "surface": "they did not repent",
+        "lemma": "metanoeo"
+      },
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      }
+    ],
+    "10": [
+      {
+        "surface": "fifth angel",
+        "lemma": "pemptos"
+      },
+      {
+        "surface": "poured out",
+        "lemma": "ekcheo"
+      },
+      {
+        "surface": "bowl",
+        "lemma": "phiale"
+      },
+      {
+        "surface": "throne",
+        "lemma": "thronos"
+      },
+      {
+        "surface": "beast",
+        "lemma": "therion"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "plunged into darkness",
+        "lemma": "skotoo"
+      },
+      {
+        "surface": "men began to gnaw",
+        "lemma": "massaomai"
+      },
+      {
+        "surface": "tongues",
+        "lemma": "glossa"
+      },
+      {
+        "surface": "anguish",
+        "lemma": "ponos"
+      }
+    ],
+    "11": [
+      {
+        "surface": "curse",
+        "lemma": "blasphemeo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "pains",
+        "lemma": "ponos"
+      },
+      {
+        "surface": "sores",
+        "lemma": "helkos"
+      },
+      {
+        "surface": "they did not repent",
+        "lemma": "metanoeo"
+      },
+      {
+        "surface": "deeds",
+        "lemma": "ergon"
+      }
+    ],
+    "12": [
+      {
+        "surface": "sixth angel",
+        "lemma": "hektos"
+      },
+      {
+        "surface": "poured out",
+        "lemma": "ekcheo"
+      },
+      {
+        "surface": "bowl",
+        "lemma": "phiale"
+      },
+      {
+        "surface": "river",
+        "lemma": "potamos"
+      },
+      {
+        "surface": "Euphrates",
+        "lemma": "euphrates"
+      },
+      {
+        "surface": "water",
+        "lemma": "hudor"
+      },
+      {
+        "surface": "was dried up",
+        "lemma": "xeraino"
+      },
+      {
+        "surface": "prepare",
+        "lemma": "hetoimazo"
+      },
+      {
+        "surface": "way",
+        "lemma": "hodos"
+      },
+      {
+        "surface": "kings",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "East",
+        "lemma": "anatole"
+      }
+    ],
+    "13": [
+      {
+        "surface": "three",
+        "lemma": "treis"
+      },
+      {
+        "surface": "unclean",
+        "lemma": "akathartos"
+      },
+      {
+        "surface": "spirits",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "frogs",
+        "lemma": "batrachos"
+      },
+      {
+        "surface": "mouths",
+        "lemma": "stoma"
+      },
+      {
+        "surface": "dragon",
+        "lemma": "drakon"
+      },
+      {
+        "surface": "beast",
+        "lemma": "therion"
+      },
+      {
+        "surface": "false prophet",
+        "lemma": "pseudoprophetes"
+      }
+    ],
+    "14": [
+      {
+        "surface": "demonic",
+        "lemma": "daimonion"
+      },
+      {
+        "surface": "spirits",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "signs",
+        "lemma": "semeion"
+      },
+      {
+        "surface": "and go out",
+        "lemma": "ekporeuo"
+      },
+      {
+        "surface": "all",
+        "lemma": "holos"
+      },
+      {
+        "surface": "kings",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "earth",
+        "lemma": "oikoumene"
+      },
+      {
+        "surface": "to assemble them",
+        "lemma": "sunago"
+      },
+      {
+        "surface": "battle",
+        "lemma": "polemos"
+      },
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Almighty",
+        "lemma": "pantokrator"
+      }
+    ],
+    "15": [
+      {
+        "surface": "a thief",
+        "lemma": "kleptes"
+      },
+      {
+        "surface": "Blessed is",
+        "lemma": "makarios"
+      },
+      {
+        "surface": "remains awake",
+        "lemma": "gregoreo"
+      },
+      {
+        "surface": "clothed",
+        "lemma": "himation"
+      },
+      {
+        "surface": "he will not go",
+        "lemma": "peripateo"
+      },
+      {
+        "surface": "naked",
+        "lemma": "gumnos"
+      },
+      {
+        "surface": "shame",
+        "lemma": "aschemosune"
+      },
+      {
+        "surface": "be exposed",
+        "lemma": "blepo"
+      }
+    ],
+    "16": [
+      {
+        "surface": "they assembled the kings",
+        "lemma": "sunago"
+      },
+      {
+        "surface": "place",
+        "lemma": "topos"
+      },
+      {
+        "surface": "in Hebrew",
+        "lemma": "hebraisti"
+      },
+      {
+        "surface": "is called",
+        "lemma": "kaleo"
+      },
+      {
+        "surface": "Armageddon",
+        "lemma": "armageddon"
+      }
+    ],
+    "17": [
+      {
+        "surface": "seventh angel",
+        "lemma": "hebdomos"
+      },
+      {
+        "surface": "poured out",
+        "lemma": "ekcheo"
+      },
+      {
+        "surface": "bowl",
+        "lemma": "phiale"
+      },
+      {
+        "surface": "air",
+        "lemma": "aer"
+      },
+      {
+        "surface": "voice",
+        "lemma": "phone"
+      },
+      {
+        "surface": "throne",
+        "lemma": "thronos"
+      },
+      {
+        "surface": "temple",
+        "lemma": "naos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "flashes of lightning",
+        "lemma": "astrape"
+      },
+      {
+        "surface": "rumblings",
+        "lemma": "phone"
+      },
+      {
+        "surface": "peals of thunder",
+        "lemma": "bronte"
+      },
+      {
+        "surface": "earthquake",
+        "lemma": "seismos"
+      },
+      {
+        "surface": "the likes of which",
+        "lemma": "hoios"
+      },
+      {
+        "surface": "men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "so",
+        "lemma": "houto"
+      },
+      {
+        "surface": "quake",
+        "lemma": "seismos"
+      }
+    ],
+    "19": [
+      {
+        "surface": "city",
+        "lemma": "polis"
+      },
+      {
+        "surface": "three",
+        "lemma": "treis"
+      },
+      {
+        "surface": "parts",
+        "lemma": "meros"
+      },
+      {
+        "surface": "cities",
+        "lemma": "polis"
+      },
+      {
+        "surface": "nations",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "collapsed",
+        "lemma": "pipto"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "remembered",
+        "lemma": "mimnesko"
+      },
+      {
+        "surface": "Babylon",
+        "lemma": "babulon"
+      },
+      {
+        "surface": "cup",
+        "lemma": "poterion"
+      },
+      {
+        "surface": "wine",
+        "lemma": "oinos"
+      },
+      {
+        "surface": "fury",
+        "lemma": "thumos"
+      },
+      {
+        "surface": "wrath",
+        "lemma": "orge"
+      }
+    ],
+    "20": [
+      {
+        "surface": "island",
+        "lemma": "nesos"
+      },
+      {
+        "surface": "fled",
+        "lemma": "pheugo"
+      },
+      {
+        "surface": "mountain",
+        "lemma": "oros"
+      }
+    ],
+    "21": [
+      {
+        "surface": "hailstones",
+        "lemma": "chalaza"
+      },
+      {
+        "surface": "a hundred pounds each",
+        "lemma": "talantiaios"
+      },
+      {
+        "surface": "rained down",
+        "lemma": "katabaino"
+      },
+      {
+        "surface": "them",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "above",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "cursed",
+        "lemma": "blasphemeo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "plague",
+        "lemma": "plege"
+      },
+      {
+        "surface": "hail",
+        "lemma": "chalaza"
+      },
+      {
+        "surface": "it",
+        "lemma": "plege"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "sphodra"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "phiale",
+    "helkos",
+    "ekcheo"
+  ]
+}
