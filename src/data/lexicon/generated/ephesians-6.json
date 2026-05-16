@@ -1,0 +1,725 @@
+{
+  "bookId": 49,
+  "book": "Ephesians",
+  "chapter": 6,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Children",
+        "lemma": "teknon"
+      },
+      {
+        "surface": "obey",
+        "lemma": "hupakouo"
+      },
+      {
+        "surface": "parents",
+        "lemma": "goneus"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "right",
+        "lemma": "dikaios"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Honor",
+        "lemma": "timao"
+      },
+      {
+        "surface": "father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "mother",
+        "lemma": "meter"
+      },
+      {
+        "surface": "the first",
+        "lemma": "protos"
+      },
+      {
+        "surface": "commandment",
+        "lemma": "entole"
+      },
+      {
+        "surface": "a promise",
+        "lemma": "epangelia"
+      }
+    ],
+    "3": [
+      {
+        "surface": "well",
+        "lemma": "eu"
+      },
+      {
+        "surface": "a long life",
+        "lemma": "makrochronios"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Fathers",
+        "lemma": "pater"
+      },
+      {
+        "surface": "provoke",
+        "lemma": "parorgizo"
+      },
+      {
+        "surface": "children {to wrath",
+        "lemma": "teknon"
+      },
+      {
+        "surface": "bring them up",
+        "lemma": "ektrepho"
+      },
+      {
+        "surface": "the discipline",
+        "lemma": "paideia"
+      },
+      {
+        "surface": "instruction",
+        "lemma": "nouthesia"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Slaves",
+        "lemma": "doulos"
+      },
+      {
+        "surface": "obey",
+        "lemma": "hupakouo"
+      },
+      {
+        "surface": "masters",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "respect",
+        "lemma": "phobos"
+      },
+      {
+        "surface": "fear",
+        "lemma": "tromos"
+      },
+      {
+        "surface": "sincerity",
+        "lemma": "haplotes"
+      },
+      {
+        "surface": "heart",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      }
+    ],
+    "6": [
+      {
+        "surface": "to please them",
+        "lemma": "anthropareskos"
+      },
+      {
+        "surface": "while they are watching",
+        "lemma": "ophthalmodouleia"
+      },
+      {
+        "surface": "servants of",
+        "lemma": "doulos"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "will",
+        "lemma": "thelema"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "your heart",
+        "lemma": "psuche"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Serve",
+        "lemma": "douleuo"
+      },
+      {
+        "surface": "good will",
+        "lemma": "eunoia"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "to men",
+        "lemma": "anthropos"
+      }
+    ],
+    "8": [
+      {
+        "surface": "because you know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "will reward",
+        "lemma": "komizo"
+      },
+      {
+        "surface": "each one",
+        "lemma": "hekastos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ean"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "whether",
+        "lemma": "eite"
+      },
+      {
+        "surface": "he is slave",
+        "lemma": "doulos"
+      },
+      {
+        "surface": "or",
+        "lemma": "eite"
+      },
+      {
+        "surface": "free",
+        "lemma": "eleutheros"
+      }
+    ],
+    "9": [
+      {
+        "surface": "masters",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Give up",
+        "lemma": "aniemi"
+      },
+      {
+        "surface": "use of threats",
+        "lemma": "apeile"
+      },
+      {
+        "surface": "because you know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "Master",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "favoritism",
+        "lemma": "prosopolepsia"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Finally",
+        "lemma": "loipou"
+      },
+      {
+        "surface": "be strong",
+        "lemma": "endunamoo"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "mighty",
+        "lemma": "kratos"
+      },
+      {
+        "surface": "power",
+        "lemma": "ischus"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Put on",
+        "lemma": "enduo"
+      },
+      {
+        "surface": "full armor",
+        "lemma": "panoplia"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "make your stand",
+        "lemma": "histemi"
+      },
+      {
+        "surface": "devil’s",
+        "lemma": "diabolos"
+      },
+      {
+        "surface": "schemes",
+        "lemma": "methodeia"
+      }
+    ],
+    "12": [
+      {
+        "surface": "struggle",
+        "lemma": "pale"
+      },
+      {
+        "surface": "flesh",
+        "lemma": "sarx"
+      },
+      {
+        "surface": "blood",
+        "lemma": "ahima"
+      },
+      {
+        "surface": "rulers",
+        "lemma": "arche"
+      },
+      {
+        "surface": "authorities",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "powers",
+        "lemma": "kosmokrator"
+      },
+      {
+        "surface": "darkness",
+        "lemma": "skotos"
+      },
+      {
+        "surface": "spiritual forces",
+        "lemma": "pneumatikos"
+      },
+      {
+        "surface": "of evil",
+        "lemma": "poneria"
+      },
+      {
+        "surface": "heavenly realms",
+        "lemma": "epouranios"
+      }
+    ],
+    "13": [
+      {
+        "surface": "take up",
+        "lemma": "analambano"
+      },
+      {
+        "surface": "full armor",
+        "lemma": "panoplia"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "of evil {comes",
+        "lemma": "poneros"
+      },
+      {
+        "surface": "you will be able",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "to stand your ground",
+        "lemma": "anthistemi"
+      },
+      {
+        "surface": "having done",
+        "lemma": "katergazomai"
+      },
+      {
+        "surface": "everything",
+        "lemma": "hapas"
+      },
+      {
+        "surface": "to stand",
+        "lemma": "histemi"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Stand firm",
+        "lemma": "histemi"
+      },
+      {
+        "surface": "the belt of} truth",
+        "lemma": "aletheia"
+      },
+      {
+        "surface": "buckled around",
+        "lemma": "perizonnumi"
+      },
+      {
+        "surface": "waist",
+        "lemma": "osphus"
+      },
+      {
+        "surface": "breastplate",
+        "lemma": "thorax"
+      },
+      {
+        "surface": "of righteousness",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "arrayed",
+        "lemma": "enduo"
+      }
+    ],
+    "15": [
+      {
+        "surface": "feet",
+        "lemma": "pous"
+      },
+      {
+        "surface": "fitted",
+        "lemma": "hupodeo"
+      },
+      {
+        "surface": "the readiness",
+        "lemma": "hetoimasia"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      },
+      {
+        "surface": "of peace",
+        "lemma": "eirene"
+      }
+    ],
+    "16": [
+      {
+        "surface": "take up",
+        "lemma": "analambano"
+      },
+      {
+        "surface": "shield",
+        "lemma": "thureos"
+      },
+      {
+        "surface": "of faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "you can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "extinguish",
+        "lemma": "sbennumi"
+      },
+      {
+        "surface": "flaming",
+        "lemma": "puroo"
+      },
+      {
+        "surface": "arrows",
+        "lemma": "belos"
+      },
+      {
+        "surface": "evil one",
+        "lemma": "poneros"
+      }
+    ],
+    "17": [
+      {
+        "surface": "take",
+        "lemma": "dechomai"
+      },
+      {
+        "surface": "helmet",
+        "lemma": "perikephalaia"
+      },
+      {
+        "surface": "of salvation",
+        "lemma": "soterion"
+      },
+      {
+        "surface": "sword",
+        "lemma": "machaira"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "the word",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Pray",
+        "lemma": "proseuchomai"
+      },
+      {
+        "surface": "the Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "times",
+        "lemma": "kairos"
+      },
+      {
+        "surface": "prayer",
+        "lemma": "proseuche"
+      },
+      {
+        "surface": "petition",
+        "lemma": "deesis"
+      },
+      {
+        "surface": "stay alert",
+        "lemma": "agrupneo"
+      },
+      {
+        "surface": "perseverance",
+        "lemma": "proskarteresis"
+      },
+      {
+        "surface": "in your prayers",
+        "lemma": "deesis"
+      },
+      {
+        "surface": "saints",
+        "lemma": "hagios"
+      }
+    ],
+    "19": [
+      {
+        "surface": "I open",
+        "lemma": "anoixis"
+      },
+      {
+        "surface": "mouth",
+        "lemma": "stoma"
+      },
+      {
+        "surface": "words",
+        "lemma": "logos"
+      },
+      {
+        "surface": "may be given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "so that I will boldly",
+        "lemma": "parresia"
+      },
+      {
+        "surface": "make known",
+        "lemma": "gnorizo"
+      },
+      {
+        "surface": "mystery",
+        "lemma": "musterion"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      }
+    ],
+    "20": [
+      {
+        "surface": "I am an ambassador",
+        "lemma": "presbeuo"
+      },
+      {
+        "surface": "chains",
+        "lemma": "halusis"
+      },
+      {
+        "surface": "I may proclaim it fearlessly",
+        "lemma": "parresiazomai"
+      },
+      {
+        "surface": "should",
+        "lemma": "dei"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Tychicus",
+        "lemma": "tuchikos"
+      },
+      {
+        "surface": "beloved",
+        "lemma": "agapetos"
+      },
+      {
+        "surface": "brother",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "faithful",
+        "lemma": "pistos"
+      },
+      {
+        "surface": "servant",
+        "lemma": "diakonos"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "will tell",
+        "lemma": "gnorizo"
+      },
+      {
+        "surface": "may know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "and what",
+        "lemma": "tis"
+      },
+      {
+        "surface": "I am doing",
+        "lemma": "prasso"
+      }
+    ],
+    "22": [
+      {
+        "surface": "I have sent",
+        "lemma": "pempo"
+      },
+      {
+        "surface": "you may know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "he may encourage",
+        "lemma": "parakaleo"
+      },
+      {
+        "surface": "hearts",
+        "lemma": "kardia"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Peace",
+        "lemma": "eirene"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "love",
+        "lemma": "agape"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "the Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Grace",
+        "lemma": "charis"
+      },
+      {
+        "surface": "love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "an undying love",
+        "lemma": "aphtharsia"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "panoplia",
+    "analambano",
+    "deesis"
+  ]
+}

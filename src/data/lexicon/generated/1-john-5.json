@@ -1,0 +1,707 @@
+{
+  "bookId": 62,
+  "book": "1 John",
+  "chapter": 5,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "believes",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "has been born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "loves",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "Father",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "loves",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "born",
+        "lemma": "gennao"
+      }
+    ],
+    "2": [
+      {
+        "surface": "we know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "we love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "children",
+        "lemma": "teknon"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "we love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "commandments",
+        "lemma": "entole"
+      }
+    ],
+    "3": [
+      {
+        "surface": "love",
+        "lemma": "agape"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "we keep",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "commandments",
+        "lemma": "entole"
+      },
+      {
+        "surface": "commandments",
+        "lemma": "entole"
+      },
+      {
+        "surface": "burdensome",
+        "lemma": "barus"
+      }
+    ],
+    "4": [
+      {
+        "surface": "born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "overcomes",
+        "lemma": "nikao"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "victory",
+        "lemma": "nike"
+      },
+      {
+        "surface": "has overcome",
+        "lemma": "nikao"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "overcomes",
+        "lemma": "nikao"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "Only",
+        "lemma": "ei"
+      },
+      {
+        "surface": "believes",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      }
+    ],
+    "6": [
+      {
+        "surface": "water",
+        "lemma": "hudorhudatos"
+      },
+      {
+        "surface": "blood",
+        "lemma": "ahima"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "water",
+        "lemma": "hudorhudatos"
+      },
+      {
+        "surface": "alone",
+        "lemma": "monon"
+      },
+      {
+        "surface": "water",
+        "lemma": "hudorhudatos"
+      },
+      {
+        "surface": "blood",
+        "lemma": "ahima"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "testifies to this",
+        "lemma": "martureo"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "truth",
+        "lemma": "aletheia"
+      }
+    ],
+    "7": [
+      {
+        "surface": "three",
+        "lemma": "treis"
+      },
+      {
+        "surface": "that testify",
+        "lemma": "martureo"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "water",
+        "lemma": "hudorhudatos"
+      },
+      {
+        "surface": "blood",
+        "lemma": "ahima"
+      },
+      {
+        "surface": "three",
+        "lemma": "treis"
+      },
+      {
+        "surface": "agreement",
+        "lemma": "ehis"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Even if",
+        "lemma": "ei"
+      },
+      {
+        "surface": "we accept",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "human",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "testimony",
+        "lemma": "marturia"
+      },
+      {
+        "surface": "testimony",
+        "lemma": "marturia"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "greater",
+        "lemma": "megas"
+      },
+      {
+        "surface": "testimony",
+        "lemma": "marturia"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "has given",
+        "lemma": "martureo"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      }
+    ],
+    "10": [
+      {
+        "surface": "believes",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "testimony",
+        "lemma": "marturia"
+      },
+      {
+        "surface": "does not believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "a liar",
+        "lemma": "pseustes"
+      },
+      {
+        "surface": "he has not believed",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "testimony",
+        "lemma": "marturia"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "has given",
+        "lemma": "martureo"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      }
+    ],
+    "11": [
+      {
+        "surface": "testimony",
+        "lemma": "marturia"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "has given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      }
+    ],
+    "13": [
+      {
+        "surface": "I have written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "you may know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      }
+    ],
+    "14": [
+      {
+        "surface": "confidence",
+        "lemma": "parresia"
+      },
+      {
+        "surface": "If",
+        "lemma": "ean"
+      },
+      {
+        "surface": "we ask",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "will",
+        "lemma": "thelema"
+      },
+      {
+        "surface": "He hears",
+        "lemma": "akouo"
+      }
+    ],
+    "15": [
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "we know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "He hears",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "we ask",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "we know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "aitema"
+      },
+      {
+        "surface": "we have asked",
+        "lemma": "aiteo"
+      }
+    ],
+    "16": [
+      {
+        "surface": "If",
+        "lemma": "ean"
+      },
+      {
+        "surface": "sees",
+        "lemma": "horao"
+      },
+      {
+        "surface": "brother",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "committing",
+        "lemma": "hamartano"
+      },
+      {
+        "surface": "a sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "death",
+        "lemma": "thanatos"
+      },
+      {
+        "surface": "he should ask God",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "who will give",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "commit this kind of sin",
+        "lemma": "hamartano"
+      },
+      {
+        "surface": "a sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "death",
+        "lemma": "thanatos"
+      },
+      {
+        "surface": "he should ask",
+        "lemma": "erotao"
+      }
+    ],
+    "17": [
+      {
+        "surface": "unrighteousness",
+        "lemma": "adikia"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "death",
+        "lemma": "thanatos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "We know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "does not keep on sinning",
+        "lemma": "hamartano"
+      },
+      {
+        "surface": "was born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "protects",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "evil one",
+        "lemma": "poneros"
+      },
+      {
+        "surface": "cannot touch",
+        "lemma": "hapto"
+      }
+    ],
+    "19": [
+      {
+        "surface": "We know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "whole",
+        "lemma": "holos"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "is under the power",
+        "lemma": "keimai"
+      },
+      {
+        "surface": "evil one",
+        "lemma": "poneros"
+      }
+    ],
+    "20": [
+      {
+        "surface": "we know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "has come",
+        "lemma": "heko"
+      },
+      {
+        "surface": "has given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "understanding",
+        "lemma": "dianoia"
+      },
+      {
+        "surface": "we may know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "true",
+        "lemma": "alethinos"
+      },
+      {
+        "surface": "true",
+        "lemma": "alethinos"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "true",
+        "lemma": "alethinos"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Little children",
+        "lemma": "teknion"
+      },
+      {
+        "surface": "keep",
+        "lemma": "phulasso"
+      },
+      {
+        "surface": "idols",
+        "lemma": "eidolon"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "marturia",
+    "nikao",
+    "alethinos"
+  ]
+}

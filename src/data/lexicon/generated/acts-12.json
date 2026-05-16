@@ -1,0 +1,1015 @@
+{
+  "bookId": 44,
+  "book": "Acts",
+  "chapter": 12,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "time",
+        "lemma": "kairos"
+      },
+      {
+        "surface": "King",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "Herod",
+        "lemma": "herodes"
+      },
+      {
+        "surface": "reached out",
+        "lemma": "epiballo"
+      },
+      {
+        "surface": "to harm",
+        "lemma": "kakoo"
+      },
+      {
+        "surface": "church",
+        "lemma": "ekklesia"
+      }
+    ],
+    "2": [
+      {
+        "surface": "He had} James",
+        "lemma": "iakobos"
+      },
+      {
+        "surface": "brother",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "of John",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "put to death",
+        "lemma": "anaireo"
+      },
+      {
+        "surface": "with the sword",
+        "lemma": "machaira"
+      }
+    ],
+    "3": [
+      {
+        "surface": "seeing",
+        "lemma": "horao"
+      },
+      {
+        "surface": "pleased",
+        "lemma": "arestos"
+      },
+      {
+        "surface": "Jews",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "Herod proceeded",
+        "lemma": "prostithemi"
+      },
+      {
+        "surface": "to seize",
+        "lemma": "sullambano"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "Feast of Unleavened Bread",
+        "lemma": "azumos"
+      }
+    ],
+    "4": [
+      {
+        "surface": "He arrested",
+        "lemma": "piazo"
+      },
+      {
+        "surface": "put him",
+        "lemma": "tithemi"
+      },
+      {
+        "surface": "prison",
+        "lemma": "phulake"
+      },
+      {
+        "surface": "handing him over",
+        "lemma": "paradidomi"
+      },
+      {
+        "surface": "to be guarded",
+        "lemma": "phulasso"
+      },
+      {
+        "surface": "by four",
+        "lemma": "tessares"
+      },
+      {
+        "surface": "squads of four",
+        "lemma": "tetradion"
+      },
+      {
+        "surface": "soldiers each",
+        "lemma": "stratiotes"
+      },
+      {
+        "surface": "Herod intended",
+        "lemma": "boulomai"
+      },
+      {
+        "surface": "to bring him out",
+        "lemma": "anago"
+      },
+      {
+        "surface": "people",
+        "lemma": "laos"
+      },
+      {
+        "surface": "Passover",
+        "lemma": "pascha"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "was kept",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "prison",
+        "lemma": "phulake"
+      },
+      {
+        "surface": "church",
+        "lemma": "ekklesia"
+      },
+      {
+        "surface": "fervently",
+        "lemma": "ektenos"
+      },
+      {
+        "surface": "praying",
+        "lemma": "proseuche"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ],
+    "6": [
+      {
+        "surface": "night",
+        "lemma": "nux"
+      },
+      {
+        "surface": "Herod",
+        "lemma": "herodes"
+      },
+      {
+        "surface": "was",
+        "lemma": "mello"
+      },
+      {
+        "surface": "to bring him to trial",
+        "lemma": "proago"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "sleeping",
+        "lemma": "koimao"
+      },
+      {
+        "surface": "two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "soldiers",
+        "lemma": "stratiotes"
+      },
+      {
+        "surface": "bound",
+        "lemma": "deo"
+      },
+      {
+        "surface": "with two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "chains",
+        "lemma": "halusis"
+      },
+      {
+        "surface": "sentries",
+        "lemma": "phulakterios"
+      },
+      {
+        "surface": "standing guard",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "entrance",
+        "lemma": "thura"
+      },
+      {
+        "surface": "prison",
+        "lemma": "phulake"
+      }
+    ],
+    "7": [
+      {
+        "surface": "an angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "appeared",
+        "lemma": "ephistemi"
+      },
+      {
+        "surface": "a light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "shone",
+        "lemma": "lampo"
+      },
+      {
+        "surface": "cell",
+        "lemma": "oikema"
+      },
+      {
+        "surface": "He tapped",
+        "lemma": "patasso"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "side",
+        "lemma": "pleura"
+      },
+      {
+        "surface": "and woke him up",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "Get up",
+        "lemma": "anistemi"
+      },
+      {
+        "surface": "quickly",
+        "lemma": "tachos"
+      },
+      {
+        "surface": "chains",
+        "lemma": "halusis"
+      },
+      {
+        "surface": "fell",
+        "lemma": "ekpipto"
+      },
+      {
+        "surface": "wrists",
+        "lemma": "cheir"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Get dressed",
+        "lemma": "zonnumi"
+      },
+      {
+        "surface": "put on",
+        "lemma": "hupodeo"
+      },
+      {
+        "surface": "sandals",
+        "lemma": "sandalion"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "so",
+        "lemma": "ohutoohutos"
+      },
+      {
+        "surface": "Wrap",
+        "lemma": "periballo"
+      },
+      {
+        "surface": "cloak {around you",
+        "lemma": "himation"
+      },
+      {
+        "surface": "follow",
+        "lemma": "akoloutheo"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Peter followed him",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "out",
+        "lemma": "exerchomai"
+      },
+      {
+        "surface": "he was unaware",
+        "lemma": "eido"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "real",
+        "lemma": "alethes"
+      },
+      {
+        "surface": "He thought",
+        "lemma": "dokeo"
+      },
+      {
+        "surface": "he was only seeing",
+        "lemma": "blepo"
+      },
+      {
+        "surface": "a vision",
+        "lemma": "horama"
+      }
+    ],
+    "10": [
+      {
+        "surface": "They passed",
+        "lemma": "dierchomai"
+      },
+      {
+        "surface": "the first",
+        "lemma": "protos"
+      },
+      {
+        "surface": "second",
+        "lemma": "deuteros"
+      },
+      {
+        "surface": "guards",
+        "lemma": "phulake"
+      },
+      {
+        "surface": "iron",
+        "lemma": "sidereos"
+      },
+      {
+        "surface": "gate",
+        "lemma": "pule"
+      },
+      {
+        "surface": "leading",
+        "lemma": "phero"
+      },
+      {
+        "surface": "city",
+        "lemma": "polis"
+      },
+      {
+        "surface": "opened",
+        "lemma": "anoigo"
+      },
+      {
+        "surface": "by itself",
+        "lemma": "automatos"
+      },
+      {
+        "surface": "they had gone outside",
+        "lemma": "exerchomai"
+      },
+      {
+        "surface": "and walked the length of",
+        "lemma": "proerchomai"
+      },
+      {
+        "surface": "one",
+        "lemma": "ehis"
+      },
+      {
+        "surface": "block",
+        "lemma": "rhume"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "suddenly",
+        "lemma": "eutheos"
+      },
+      {
+        "surface": "left",
+        "lemma": "aphistemi"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "and said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Now",
+        "lemma": "nun"
+      },
+      {
+        "surface": "I know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "for sure",
+        "lemma": "alethos"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "has sent",
+        "lemma": "exapostello"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "rescued",
+        "lemma": "exaireo"
+      },
+      {
+        "surface": "Herod’s",
+        "lemma": "herodes"
+      },
+      {
+        "surface": "grasp",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "Jewish",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "people",
+        "lemma": "laos"
+      },
+      {
+        "surface": "were anticipating",
+        "lemma": "prosdokia"
+      }
+    ],
+    "12": [
+      {
+        "surface": "he had realized this",
+        "lemma": "suneido"
+      },
+      {
+        "surface": "house",
+        "lemma": "oikia"
+      },
+      {
+        "surface": "Mary",
+        "lemma": "maria"
+      },
+      {
+        "surface": "mother",
+        "lemma": "meter"
+      },
+      {
+        "surface": "of John",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "called",
+        "lemma": "epikaleo"
+      },
+      {
+        "surface": "Mark",
+        "lemma": "markos"
+      },
+      {
+        "surface": "where",
+        "lemma": "ohu"
+      },
+      {
+        "surface": "many people",
+        "lemma": "hikanos"
+      },
+      {
+        "surface": "had gathered together",
+        "lemma": "sunathroizo"
+      },
+      {
+        "surface": "were praying",
+        "lemma": "proseuchomai"
+      }
+    ],
+    "13": [
+      {
+        "surface": "knocked",
+        "lemma": "krouo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "thura"
+      },
+      {
+        "surface": "outer gate",
+        "lemma": "pulon"
+      },
+      {
+        "surface": "and a servant girl",
+        "lemma": "paidiske"
+      },
+      {
+        "surface": "named",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "Rhoda",
+        "lemma": "rhode"
+      },
+      {
+        "surface": "came",
+        "lemma": "proserchomai"
+      },
+      {
+        "surface": "to answer it",
+        "lemma": "hupakouo"
+      }
+    ],
+    "14": [
+      {
+        "surface": "When she recognized",
+        "lemma": "epiginosko"
+      },
+      {
+        "surface": "Peter’s",
+        "lemma": "petros"
+      },
+      {
+        "surface": "voice",
+        "lemma": "phone"
+      },
+      {
+        "surface": "she was so overjoyed that",
+        "lemma": "chara"
+      },
+      {
+        "surface": "she forgot to open",
+        "lemma": "anoigo"
+      },
+      {
+        "surface": "gate",
+        "lemma": "pulon"
+      },
+      {
+        "surface": "ran inside",
+        "lemma": "eistrecho"
+      },
+      {
+        "surface": "and announced",
+        "lemma": "apangello"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "is standing",
+        "lemma": "histemi"
+      },
+      {
+        "surface": "gate",
+        "lemma": "pulon"
+      }
+    ],
+    "15": [
+      {
+        "surface": "You are out of your mind",
+        "lemma": "mainomai"
+      },
+      {
+        "surface": "they told",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "she kept insisting",
+        "lemma": "diischurizomai"
+      },
+      {
+        "surface": "so",
+        "lemma": "ohutoohutos"
+      },
+      {
+        "surface": "they said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "kept on",
+        "lemma": "epimeno"
+      },
+      {
+        "surface": "knocking",
+        "lemma": "krouo"
+      },
+      {
+        "surface": "when they opened the door",
+        "lemma": "anoigo"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "they were astounded",
+        "lemma": "existemi"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Peter motioned",
+        "lemma": "kataseio"
+      },
+      {
+        "surface": "hand",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "silence",
+        "lemma": "sigao"
+      },
+      {
+        "surface": "and he described",
+        "lemma": "diegeomai"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "had brought",
+        "lemma": "exago"
+      },
+      {
+        "surface": "prison",
+        "lemma": "phulake"
+      },
+      {
+        "surface": "Send word",
+        "lemma": "apangello"
+      },
+      {
+        "surface": "to James",
+        "lemma": "iakobos"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "he said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "he left for",
+        "lemma": "exerchomai"
+      },
+      {
+        "surface": "another",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "place",
+        "lemma": "topos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "daybreak",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "small",
+        "lemma": "oligos"
+      },
+      {
+        "surface": "commotion",
+        "lemma": "tarachos"
+      },
+      {
+        "surface": "soldiers",
+        "lemma": "stratiotes"
+      },
+      {
+        "surface": "as to what",
+        "lemma": "tis"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Herod",
+        "lemma": "herodes"
+      },
+      {
+        "surface": "had searched",
+        "lemma": "epizeteo"
+      },
+      {
+        "surface": "unsuccessfully",
+        "lemma": "ehurisko"
+      },
+      {
+        "surface": "he examined",
+        "lemma": "anakrino"
+      },
+      {
+        "surface": "guards",
+        "lemma": "phulakterios"
+      },
+      {
+        "surface": "and ordered that",
+        "lemma": "keleuo"
+      },
+      {
+        "surface": "they be executed",
+        "lemma": "apago"
+      },
+      {
+        "surface": "he went down",
+        "lemma": "katerchomai"
+      },
+      {
+        "surface": "Judea",
+        "lemma": "ioudaia"
+      },
+      {
+        "surface": "Caesarea",
+        "lemma": "kaisareia"
+      },
+      {
+        "surface": "and spent some time there",
+        "lemma": "diatribo"
+      }
+    ],
+    "20": [
+      {
+        "surface": "in a furious dispute",
+        "lemma": "thumomacheo"
+      },
+      {
+        "surface": "with the people of Tyre",
+        "lemma": "turios"
+      },
+      {
+        "surface": "Sidon",
+        "lemma": "sidonios"
+      },
+      {
+        "surface": "they convened",
+        "lemma": "homothumadon"
+      },
+      {
+        "surface": "Having secured the support",
+        "lemma": "peitho"
+      },
+      {
+        "surface": "of Blastus",
+        "lemma": "blastos"
+      },
+      {
+        "surface": "king’s",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "chamberlain",
+        "lemma": "koiton"
+      },
+      {
+        "surface": "they asked for",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "peace",
+        "lemma": "eirene"
+      },
+      {
+        "surface": "region",
+        "lemma": "chora"
+      },
+      {
+        "surface": "king’s country",
+        "lemma": "basilikos"
+      },
+      {
+        "surface": "for food",
+        "lemma": "trepho"
+      }
+    ],
+    "21": [
+      {
+        "surface": "On the appointed",
+        "lemma": "taktos"
+      },
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "Herod",
+        "lemma": "herodes"
+      },
+      {
+        "surface": "donned",
+        "lemma": "enduo"
+      },
+      {
+        "surface": "his royal",
+        "lemma": "basilikos"
+      },
+      {
+        "surface": "robes",
+        "lemma": "esthes"
+      },
+      {
+        "surface": "sat",
+        "lemma": "kathizo"
+      },
+      {
+        "surface": "throne",
+        "lemma": "bema"
+      },
+      {
+        "surface": "and addressed",
+        "lemma": "demegoreo"
+      }
+    ],
+    "22": [
+      {
+        "surface": "they",
+        "lemma": "demos"
+      },
+      {
+        "surface": "began to shout",
+        "lemma": "epiphoneo"
+      },
+      {
+        "surface": "This is the voice",
+        "lemma": "phone"
+      },
+      {
+        "surface": "of a god",
+        "lemma": "theos"
+      },
+      {
+        "surface": "a man",
+        "lemma": "anthropos"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Immediately",
+        "lemma": "parachrema"
+      },
+      {
+        "surface": "Herod did not give",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "to God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "an angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "struck",
+        "lemma": "patasso"
+      },
+      {
+        "surface": "eaten by worms",
+        "lemma": "skolekobrotos"
+      },
+      {
+        "surface": "and died",
+        "lemma": "ekpsucho"
+      }
+    ],
+    "24": [
+      {
+        "surface": "word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "continued to spread",
+        "lemma": "auxano"
+      },
+      {
+        "surface": "multiply",
+        "lemma": "plethuno"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Barnabas",
+        "lemma": "barnabas"
+      },
+      {
+        "surface": "Saul",
+        "lemma": "saulos"
+      },
+      {
+        "surface": "had fulfilled",
+        "lemma": "pleroo"
+      },
+      {
+        "surface": "mission",
+        "lemma": "diakonia"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierousalem"
+      },
+      {
+        "surface": "they returned",
+        "lemma": "hupostrepho"
+      },
+      {
+        "surface": "bringing with them",
+        "lemma": "sumparalambano"
+      },
+      {
+        "surface": "John",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "called",
+        "lemma": "epikaleo"
+      },
+      {
+        "surface": "Mark",
+        "lemma": "markos"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "phulakterios",
+    "basilikos",
+    "markos"
+  ]
+}

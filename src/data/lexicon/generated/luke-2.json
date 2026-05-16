@@ -1,0 +1,1557 @@
+{
+  "bookId": 42,
+  "book": "Luke",
+  "chapter": 2,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "days",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "a decree",
+        "lemma": "dogma"
+      },
+      {
+        "surface": "went out",
+        "lemma": "exerchomai"
+      },
+      {
+        "surface": "Caesar",
+        "lemma": "kaisar"
+      },
+      {
+        "surface": "Augustus",
+        "lemma": "augoustos"
+      },
+      {
+        "surface": "that a census should be taken",
+        "lemma": "apographo"
+      },
+      {
+        "surface": "empire",
+        "lemma": "oikoumene"
+      }
+    ],
+    "2": [
+      {
+        "surface": "first",
+        "lemma": "protos"
+      },
+      {
+        "surface": "census",
+        "lemma": "apographe"
+      },
+      {
+        "surface": "Quirinius",
+        "lemma": "kurenios"
+      },
+      {
+        "surface": "was governor",
+        "lemma": "hegemoneuo"
+      },
+      {
+        "surface": "Syria",
+        "lemma": "suria"
+      }
+    ],
+    "3": [
+      {
+        "surface": "went",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "town",
+        "lemma": "polis"
+      },
+      {
+        "surface": "to register",
+        "lemma": "apographo"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Joseph",
+        "lemma": "ioseph"
+      },
+      {
+        "surface": "went up",
+        "lemma": "anabaino"
+      },
+      {
+        "surface": "Nazareth",
+        "lemma": "nazarethnazara"
+      },
+      {
+        "surface": "in Galilee",
+        "lemma": "galilaia"
+      },
+      {
+        "surface": "Judea",
+        "lemma": "ioudaia"
+      },
+      {
+        "surface": "the city",
+        "lemma": "polis"
+      },
+      {
+        "surface": "of David",
+        "lemma": "daueiddauiddabid"
+      },
+      {
+        "surface": "called",
+        "lemma": "kaleo"
+      },
+      {
+        "surface": "Bethlehem",
+        "lemma": "bethleem"
+      },
+      {
+        "surface": "the house",
+        "lemma": "oikos"
+      },
+      {
+        "surface": "line",
+        "lemma": "patria"
+      },
+      {
+        "surface": "of David",
+        "lemma": "daueiddauiddabid"
+      }
+    ],
+    "5": [
+      {
+        "surface": "He went there to register",
+        "lemma": "apographo"
+      },
+      {
+        "surface": "Mary",
+        "lemma": "maria"
+      },
+      {
+        "surface": "pledged to him in marriage",
+        "lemma": "mnesteuo"
+      },
+      {
+        "surface": "a child",
+        "lemma": "egkuos"
+      }
+    ],
+    "6": [
+      {
+        "surface": "there",
+        "lemma": "ekei"
+      },
+      {
+        "surface": "time",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "came",
+        "lemma": "plethopimplemi"
+      },
+      {
+        "surface": "Child to be born",
+        "lemma": "tikto"
+      }
+    ],
+    "7": [
+      {
+        "surface": "she gave birth to",
+        "lemma": "tikto"
+      },
+      {
+        "surface": "firstborn",
+        "lemma": "prototokos"
+      },
+      {
+        "surface": "a Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "She wrapped Him in swaddling cloths",
+        "lemma": "sparganoo"
+      },
+      {
+        "surface": "laid",
+        "lemma": "anaklino"
+      },
+      {
+        "surface": "a manger",
+        "lemma": "phatne"
+      },
+      {
+        "surface": "room",
+        "lemma": "topos"
+      },
+      {
+        "surface": "inn",
+        "lemma": "kataluma"
+      }
+    ],
+    "8": [
+      {
+        "surface": "shepherds",
+        "lemma": "poimen"
+      },
+      {
+        "surface": "residing in the fields",
+        "lemma": "agrauleo"
+      },
+      {
+        "surface": "nearby",
+        "lemma": "chora"
+      },
+      {
+        "surface": "keeping",
+        "lemma": "phulasso"
+      },
+      {
+        "surface": "watch",
+        "lemma": "phulake"
+      },
+      {
+        "surface": "flocks",
+        "lemma": "poimne"
+      },
+      {
+        "surface": "by night",
+        "lemma": "nux"
+      }
+    ],
+    "9": [
+      {
+        "surface": "an angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "stood before",
+        "lemma": "ephistemi"
+      },
+      {
+        "surface": "the glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "shone around",
+        "lemma": "perilampo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "megas"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "phobos"
+      },
+      {
+        "surface": "they were terrified",
+        "lemma": "phobeo"
+      }
+    ],
+    "10": [
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "be afraid",
+        "lemma": "phobeo"
+      },
+      {
+        "surface": "I bring you good news",
+        "lemma": "euangelizomai"
+      },
+      {
+        "surface": "of great",
+        "lemma": "megas"
+      },
+      {
+        "surface": "joy",
+        "lemma": "chara"
+      },
+      {
+        "surface": "people",
+        "lemma": "laos"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Today",
+        "lemma": "semeron"
+      },
+      {
+        "surface": "the city",
+        "lemma": "polis"
+      },
+      {
+        "surface": "of David",
+        "lemma": "daueiddauiddabid"
+      },
+      {
+        "surface": "a Savior",
+        "lemma": "soter"
+      },
+      {
+        "surface": "has been born",
+        "lemma": "tikto"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      }
+    ],
+    "12": [
+      {
+        "surface": "sign",
+        "lemma": "semeion"
+      },
+      {
+        "surface": "You will find",
+        "lemma": "ehurisko"
+      },
+      {
+        "surface": "a baby",
+        "lemma": "brephos"
+      },
+      {
+        "surface": "wrapped in swaddling cloths",
+        "lemma": "sparganoo"
+      },
+      {
+        "surface": "lying",
+        "lemma": "keimai"
+      },
+      {
+        "surface": "a manger",
+        "lemma": "phatne"
+      }
+    ],
+    "13": [
+      {
+        "surface": "suddenly",
+        "lemma": "exaiphnes"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "a great multitude",
+        "lemma": "plethos"
+      },
+      {
+        "surface": "of the heavenly",
+        "lemma": "ouranios"
+      },
+      {
+        "surface": "host",
+        "lemma": "stratia"
+      },
+      {
+        "surface": "praising",
+        "lemma": "aineo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "to God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "the highest",
+        "lemma": "hupsistos"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "peace",
+        "lemma": "eirene"
+      },
+      {
+        "surface": "men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "on whom His favor rests",
+        "lemma": "eudokia"
+      }
+    ],
+    "15": [
+      {
+        "surface": "angels",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "had left",
+        "lemma": "aperchomai"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "shepherds",
+        "lemma": "poimen"
+      },
+      {
+        "surface": "said",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "one another",
+        "lemma": "allelon"
+      },
+      {
+        "surface": "Let us go",
+        "lemma": "dierchomai"
+      },
+      {
+        "surface": "Bethlehem",
+        "lemma": "bethleem"
+      },
+      {
+        "surface": "see",
+        "lemma": "horao"
+      },
+      {
+        "surface": "thing",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "has made known",
+        "lemma": "gnorizo"
+      }
+    ],
+    "16": [
+      {
+        "surface": "they hurried off",
+        "lemma": "speudo"
+      },
+      {
+        "surface": "found",
+        "lemma": "aneurisko"
+      },
+      {
+        "surface": "Mary",
+        "lemma": "maria"
+      },
+      {
+        "surface": "Joseph",
+        "lemma": "ioseph"
+      },
+      {
+        "surface": "Baby",
+        "lemma": "brephos"
+      },
+      {
+        "surface": "who was lying",
+        "lemma": "keimai"
+      },
+      {
+        "surface": "manger",
+        "lemma": "phatne"
+      }
+    ],
+    "17": [
+      {
+        "surface": "they had seen the Child",
+        "lemma": "horao"
+      },
+      {
+        "surface": "they spread",
+        "lemma": "gnorizo"
+      },
+      {
+        "surface": "message",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "they had received",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "Him",
+        "lemma": "paidion"
+      }
+    ],
+    "18": [
+      {
+        "surface": "heard it",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "were amazed",
+        "lemma": "thaumazo"
+      },
+      {
+        "surface": "shepherds",
+        "lemma": "poimen"
+      },
+      {
+        "surface": "said",
+        "lemma": "laleo"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Mary",
+        "lemma": "maria"
+      },
+      {
+        "surface": "treasured up",
+        "lemma": "suntereo"
+      },
+      {
+        "surface": "things",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "and pondered them",
+        "lemma": "sumballo"
+      },
+      {
+        "surface": "heart",
+        "lemma": "kardia"
+      }
+    ],
+    "20": [
+      {
+        "surface": "shepherds",
+        "lemma": "poimen"
+      },
+      {
+        "surface": "returned",
+        "lemma": "hupostrepho"
+      },
+      {
+        "surface": "glorifying",
+        "lemma": "doxazo"
+      },
+      {
+        "surface": "praising",
+        "lemma": "aineo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "they had heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "the angel had told",
+        "lemma": "laleo"
+      }
+    ],
+    "21": [
+      {
+        "surface": "the eight",
+        "lemma": "okto"
+      },
+      {
+        "surface": "days",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "circumcision",
+        "lemma": "peritemno"
+      },
+      {
+        "surface": "had passed",
+        "lemma": "plethopimplemi"
+      },
+      {
+        "surface": "He was named",
+        "lemma": "kaleo"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "had given Him",
+        "lemma": "kaleo"
+      },
+      {
+        "surface": "was conceived",
+        "lemma": "sullambano"
+      }
+    ],
+    "22": [
+      {
+        "surface": "time",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "purification",
+        "lemma": "katharismos"
+      },
+      {
+        "surface": "Law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "of Moses",
+        "lemma": "mousesmoses"
+      },
+      {
+        "surface": "was complete",
+        "lemma": "plethopimplemi"
+      },
+      {
+        "surface": "His parents brought",
+        "lemma": "anago"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierosoluma"
+      },
+      {
+        "surface": "to present Him",
+        "lemma": "paristemi"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      }
+    ],
+    "23": [
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "the Law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "firstborn",
+        "lemma": "dianoigo"
+      },
+      {
+        "surface": "male",
+        "lemma": "arrenarsen"
+      },
+      {
+        "surface": "shall be consecrated",
+        "lemma": "kaleo"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      }
+    ],
+    "24": [
+      {
+        "surface": "to offer",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "the sacrifice",
+        "lemma": "thusia"
+      },
+      {
+        "surface": "specified",
+        "lemma": "ero"
+      },
+      {
+        "surface": "Law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "A pair",
+        "lemma": "zeugos"
+      },
+      {
+        "surface": "of turtledoves",
+        "lemma": "trugon"
+      },
+      {
+        "surface": "two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "young",
+        "lemma": "neossos"
+      },
+      {
+        "surface": "pigeons",
+        "lemma": "peristera"
+      }
+    ],
+    "25": [
+      {
+        "surface": "a man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierousalem"
+      },
+      {
+        "surface": "named",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "Simeon",
+        "lemma": "sumeon"
+      },
+      {
+        "surface": "who",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "was righteous",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "devout",
+        "lemma": "eulabes"
+      },
+      {
+        "surface": "He was waiting for",
+        "lemma": "prosdechomai"
+      },
+      {
+        "surface": "the consolation",
+        "lemma": "paraklesis"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "israel"
+      },
+      {
+        "surface": "the Holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "revealed",
+        "lemma": "chrematizo"
+      },
+      {
+        "surface": "see",
+        "lemma": "horao"
+      },
+      {
+        "surface": "death",
+        "lemma": "thanatos"
+      },
+      {
+        "surface": "he had seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "Lord’s",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      }
+    ],
+    "27": [
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "temple courts",
+        "lemma": "hieros"
+      },
+      {
+        "surface": "parents",
+        "lemma": "goneus"
+      },
+      {
+        "surface": "brought in",
+        "lemma": "eisago"
+      },
+      {
+        "surface": "child",
+        "lemma": "paidion"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "what was customary",
+        "lemma": "ethizo"
+      },
+      {
+        "surface": "Law",
+        "lemma": "nomos"
+      }
+    ],
+    "28": [
+      {
+        "surface": "took",
+        "lemma": "dechomai"
+      },
+      {
+        "surface": "arms",
+        "lemma": "agkale"
+      },
+      {
+        "surface": "blessed",
+        "lemma": "eulogeo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "saying",
+        "lemma": "eipon"
+      }
+    ],
+    "29": [
+      {
+        "surface": "Sovereign Lord",
+        "lemma": "despotes"
+      },
+      {
+        "surface": "have promised",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "You now dismiss",
+        "lemma": "apoluo"
+      },
+      {
+        "surface": "servant",
+        "lemma": "doulos"
+      },
+      {
+        "surface": "peace",
+        "lemma": "eirene"
+      }
+    ],
+    "30": [
+      {
+        "surface": "eyes",
+        "lemma": "ophthalmos"
+      },
+      {
+        "surface": "have seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "salvation",
+        "lemma": "soterion"
+      }
+    ],
+    "31": [
+      {
+        "surface": "You have prepared",
+        "lemma": "hetoimazo"
+      },
+      {
+        "surface": "the sight",
+        "lemma": "prosopon"
+      },
+      {
+        "surface": "people",
+        "lemma": "laos"
+      }
+    ],
+    "32": [
+      {
+        "surface": "a light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "revelation",
+        "lemma": "apokalupsis"
+      },
+      {
+        "surface": "to the Gentiles",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "for glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "people",
+        "lemma": "laos"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "israel"
+      }
+    ],
+    "33": [
+      {
+        "surface": "father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "mother",
+        "lemma": "meter"
+      },
+      {
+        "surface": "amazed",
+        "lemma": "thaumazo"
+      },
+      {
+        "surface": "was spoken",
+        "lemma": "laleo"
+      }
+    ],
+    "34": [
+      {
+        "surface": "Simeon",
+        "lemma": "sumeon"
+      },
+      {
+        "surface": "blessed",
+        "lemma": "eulogeo"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "mother",
+        "lemma": "meter"
+      },
+      {
+        "surface": "Mary",
+        "lemma": "maria"
+      },
+      {
+        "surface": "is appointed",
+        "lemma": "keimai"
+      },
+      {
+        "surface": "the rise",
+        "lemma": "anastasis"
+      },
+      {
+        "surface": "fall",
+        "lemma": "ptosis"
+      },
+      {
+        "surface": "of many",
+        "lemma": "polus"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "israel"
+      },
+      {
+        "surface": "a sign",
+        "lemma": "semeion"
+      },
+      {
+        "surface": "that will be spoken against",
+        "lemma": "antilego"
+      }
+    ],
+    "35": [
+      {
+        "surface": "the thoughts",
+        "lemma": "dialogismos"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
+        "surface": "hearts",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "will be revealed",
+        "lemma": "apokalupto"
+      },
+      {
+        "surface": "a sword",
+        "lemma": "rhomphaia"
+      },
+      {
+        "surface": "will pierce",
+        "lemma": "dierchomai"
+      },
+      {
+        "surface": "soul",
+        "lemma": "psuche"
+      }
+    ],
+    "36": [
+      {
+        "surface": "a prophetess",
+        "lemma": "prophetis"
+      },
+      {
+        "surface": "named Anna",
+        "lemma": "anna"
+      },
+      {
+        "surface": "the daughter",
+        "lemma": "thugater"
+      },
+      {
+        "surface": "of Phanuel",
+        "lemma": "phanouel"
+      },
+      {
+        "surface": "the tribe",
+        "lemma": "phule"
+      },
+      {
+        "surface": "of Asher",
+        "lemma": "aser"
+      },
+      {
+        "surface": "was well along",
+        "lemma": "probaino"
+      },
+      {
+        "surface": "years",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "She had been married",
+        "lemma": "zao"
+      },
+      {
+        "surface": "for seven",
+        "lemma": "hepta"
+      },
+      {
+        "surface": "years",
+        "lemma": "etos"
+      }
+    ],
+    "37": [
+      {
+        "surface": "was a widow",
+        "lemma": "chera"
+      },
+      {
+        "surface": "eighty-four",
+        "lemma": "ogdoekonta"
+      },
+      {
+        "surface": "never left",
+        "lemma": "aphistemi"
+      },
+      {
+        "surface": "temple",
+        "lemma": "hieros"
+      },
+      {
+        "surface": "but worshiped",
+        "lemma": "latreuo"
+      },
+      {
+        "surface": "night",
+        "lemma": "nux"
+      },
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "fasting",
+        "lemma": "nesteia"
+      },
+      {
+        "surface": "praying",
+        "lemma": "deesis"
+      }
+    ],
+    "38": [
+      {
+        "surface": "Coming forward",
+        "lemma": "ephistemi"
+      },
+      {
+        "surface": "moment",
+        "lemma": "hora"
+      },
+      {
+        "surface": "gave thanks",
+        "lemma": "anthomologeomai"
+      },
+      {
+        "surface": "to God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "were waiting for",
+        "lemma": "prosdechomai"
+      },
+      {
+        "surface": "the redemption",
+        "lemma": "lutrosis"
+      },
+      {
+        "surface": "of Jerusalem",
+        "lemma": "hierousalem"
+      }
+    ],
+    "39": [
+      {
+        "surface": "Jesus’ parents had done",
+        "lemma": "teleo"
+      },
+      {
+        "surface": "Law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "they returned",
+        "lemma": "epistrepho"
+      },
+      {
+        "surface": "Galilee",
+        "lemma": "galilaia"
+      },
+      {
+        "surface": "town",
+        "lemma": "polis"
+      },
+      {
+        "surface": "of Nazareth",
+        "lemma": "nazarethnazara"
+      }
+    ],
+    "40": [
+      {
+        "surface": "Child",
+        "lemma": "paidion"
+      },
+      {
+        "surface": "grew",
+        "lemma": "auxano"
+      },
+      {
+        "surface": "became strong",
+        "lemma": "krataioo"
+      },
+      {
+        "surface": "He was filled",
+        "lemma": "pleroo"
+      },
+      {
+        "surface": "with wisdom",
+        "lemma": "sophia"
+      },
+      {
+        "surface": "the grace",
+        "lemma": "charis"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      }
+    ],
+    "41": [
+      {
+        "surface": "year",
+        "lemma": "etos"
+      },
+      {
+        "surface": "parents",
+        "lemma": "goneus"
+      },
+      {
+        "surface": "went",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierousalem"
+      },
+      {
+        "surface": "Feast",
+        "lemma": "heorte"
+      },
+      {
+        "surface": "Passover",
+        "lemma": "pascha"
+      }
+    ],
+    "42": [
+      {
+        "surface": "twelve",
+        "lemma": "dodeka"
+      },
+      {
+        "surface": "years old",
+        "lemma": "etos"
+      },
+      {
+        "surface": "went up",
+        "lemma": "anabaino"
+      },
+      {
+        "surface": "custom",
+        "lemma": "ethos"
+      },
+      {
+        "surface": "Feast",
+        "lemma": "heorte"
+      }
+    ],
+    "43": [
+      {
+        "surface": "days",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "were over",
+        "lemma": "teleioo"
+      },
+      {
+        "surface": "were returning home",
+        "lemma": "hupostrepho"
+      },
+      {
+        "surface": "boy",
+        "lemma": "pais"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "remained behind",
+        "lemma": "hupomeno"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierousalem"
+      },
+      {
+        "surface": "parents",
+        "lemma": "goneus"
+      },
+      {
+        "surface": "were unaware He had stayed",
+        "lemma": "ginosko"
+      }
+    ],
+    "44": [
+      {
+        "surface": "Assuming",
+        "lemma": "nomizo"
+      },
+      {
+        "surface": "company",
+        "lemma": "sunodia"
+      },
+      {
+        "surface": "they traveled on",
+        "lemma": "hodos"
+      },
+      {
+        "surface": "for a day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "they began to look",
+        "lemma": "anazeteo"
+      },
+      {
+        "surface": "relatives",
+        "lemma": "sungenes"
+      },
+      {
+        "surface": "friends",
+        "lemma": "gnostosgnorimos"
+      }
+    ],
+    "45": [
+      {
+        "surface": "they could not find Him",
+        "lemma": "ehurisko"
+      },
+      {
+        "surface": "they returned",
+        "lemma": "hupostrepho"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierousalem"
+      },
+      {
+        "surface": "to search for",
+        "lemma": "anazeteo"
+      }
+    ],
+    "46": [
+      {
+        "surface": "three",
+        "lemma": "treis"
+      },
+      {
+        "surface": "days",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "they found",
+        "lemma": "ehurisko"
+      },
+      {
+        "surface": "temple courts",
+        "lemma": "hieros"
+      },
+      {
+        "surface": "sitting",
+        "lemma": "kathezomai"
+      },
+      {
+        "surface": "teachers",
+        "lemma": "didaskalos"
+      },
+      {
+        "surface": "listening to",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "asking them questions",
+        "lemma": "eperotao"
+      }
+    ],
+    "47": [
+      {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "were astounded",
+        "lemma": "existemi"
+      },
+      {
+        "surface": "understanding",
+        "lemma": "sunesis"
+      },
+      {
+        "surface": "answers",
+        "lemma": "apokrisis"
+      }
+    ],
+    "48": [
+      {
+        "surface": "His parents saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "they were astonished",
+        "lemma": "ekplesso"
+      },
+      {
+        "surface": "Child",
+        "lemma": "teknon"
+      },
+      {
+        "surface": "why",
+        "lemma": "tis"
+      },
+      {
+        "surface": "this",
+        "lemma": "ohutoohutos"
+      },
+      {
+        "surface": "mother",
+        "lemma": "meter"
+      },
+      {
+        "surface": "asked",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "have been anxiously searching",
+        "lemma": "zeteo"
+      }
+    ],
+    "49": [
+      {
+        "surface": "Why",
+        "lemma": "tis"
+      },
+      {
+        "surface": "were you looking for",
+        "lemma": "zeteo"
+      },
+      {
+        "surface": "He asked",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Did you not know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "had",
+        "lemma": "dei"
+      },
+      {
+        "surface": "Father’s",
+        "lemma": "pater"
+      }
+    ],
+    "50": [
+      {
+        "surface": "did not understand",
+        "lemma": "suniemi"
+      },
+      {
+        "surface": "statement",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "He was making",
+        "lemma": "laleo"
+      }
+    ],
+    "51": [
+      {
+        "surface": "He went down",
+        "lemma": "katabaino"
+      },
+      {
+        "surface": "Nazareth",
+        "lemma": "nazarethnazara"
+      },
+      {
+        "surface": "obedient",
+        "lemma": "hupotasso"
+      },
+      {
+        "surface": "mother",
+        "lemma": "meter"
+      },
+      {
+        "surface": "treasured up",
+        "lemma": "diatereo"
+      },
+      {
+        "surface": "things",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "heart",
+        "lemma": "kardia"
+      }
+    ],
+    "52": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "grew",
+        "lemma": "prokopto"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "sophia"
+      },
+      {
+        "surface": "stature",
+        "lemma": "helikia"
+      },
+      {
+        "surface": "in favor",
+        "lemma": "charis"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "phatne",
+    "apographo",
+    "sparganoo"
+  ]
+}

@@ -1,0 +1,481 @@
+{
+  "bookId": 54,
+  "book": "1 Timothy",
+  "chapter": 4,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "expressly",
+        "lemma": "rhetos"
+      },
+      {
+        "surface": "later",
+        "lemma": "husteros"
+      },
+      {
+        "surface": "times",
+        "lemma": "kairos"
+      },
+      {
+        "surface": "will abandon",
+        "lemma": "aphistemi"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "to follow",
+        "lemma": "prosecho"
+      },
+      {
+        "surface": "deceitful",
+        "lemma": "planos"
+      },
+      {
+        "surface": "spirits",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "the teachings",
+        "lemma": "didaskalia"
+      },
+      {
+        "surface": "of demons",
+        "lemma": "daimonion"
+      }
+    ],
+    "2": [
+      {
+        "surface": "the hypocrisy",
+        "lemma": "hupokrisis"
+      },
+      {
+        "surface": "of liars",
+        "lemma": "pseudologos"
+      },
+      {
+        "surface": "whose",
+        "lemma": "idios"
+      },
+      {
+        "surface": "consciences",
+        "lemma": "suneidesis"
+      },
+      {
+        "surface": "are seared with a hot iron",
+        "lemma": "kauteriazo"
+      }
+    ],
+    "3": [
+      {
+        "surface": "They will prohibit",
+        "lemma": "koluo"
+      },
+      {
+        "surface": "marriage",
+        "lemma": "gameo"
+      },
+      {
+        "surface": "and require abstinence",
+        "lemma": "apecho"
+      },
+      {
+        "surface": "from certain foods",
+        "lemma": "broma"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "has created",
+        "lemma": "ktizo"
+      },
+      {
+        "surface": "be received",
+        "lemma": "metalepsis"
+      },
+      {
+        "surface": "thanksgiving",
+        "lemma": "eucharistia"
+      },
+      {
+        "surface": "believe",
+        "lemma": "pistos"
+      },
+      {
+        "surface": "know",
+        "lemma": "epiginosko"
+      },
+      {
+        "surface": "truth",
+        "lemma": "aletheia"
+      }
+    ],
+    "4": [
+      {
+        "surface": "creation",
+        "lemma": "ktisma"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "is good",
+        "lemma": "kalos"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "that is received",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "thanksgiving",
+        "lemma": "eucharistia"
+      },
+      {
+        "surface": "should be rejected",
+        "lemma": "apobletos"
+      }
+    ],
+    "5": [
+      {
+        "surface": "it is sanctified",
+        "lemma": "hagiazo"
+      },
+      {
+        "surface": "the word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "prayer",
+        "lemma": "enteuxis"
+      }
+    ],
+    "6": [
+      {
+        "surface": "By pointing out",
+        "lemma": "hupotithemi"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "a good",
+        "lemma": "kalos"
+      },
+      {
+        "surface": "servant",
+        "lemma": "diakonos"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "nourished",
+        "lemma": "entrepho"
+      },
+      {
+        "surface": "words",
+        "lemma": "logos"
+      },
+      {
+        "surface": "of faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "sound",
+        "lemma": "kalos"
+      },
+      {
+        "surface": "instruction",
+        "lemma": "didaskalia"
+      },
+      {
+        "surface": "you have followed",
+        "lemma": "parakoloutheo"
+      }
+    ],
+    "7": [
+      {
+        "surface": "reject",
+        "lemma": "paraiteomai"
+      },
+      {
+        "surface": "irreverent",
+        "lemma": "bebelos"
+      },
+      {
+        "surface": "silly",
+        "lemma": "graodes"
+      },
+      {
+        "surface": "myths",
+        "lemma": "muthos"
+      },
+      {
+        "surface": "train",
+        "lemma": "gumnazo"
+      },
+      {
+        "surface": "godliness",
+        "lemma": "eusebeia"
+      }
+    ],
+    "8": [
+      {
+        "surface": "physical",
+        "lemma": "somatikos"
+      },
+      {
+        "surface": "exercise",
+        "lemma": "gumnasia"
+      },
+      {
+        "surface": "limited",
+        "lemma": "oligos"
+      },
+      {
+        "surface": "value",
+        "lemma": "ophelimos"
+      },
+      {
+        "surface": "godliness",
+        "lemma": "eusebeia"
+      },
+      {
+        "surface": "valuable",
+        "lemma": "ophelimos"
+      },
+      {
+        "surface": "promise",
+        "lemma": "epangelia"
+      },
+      {
+        "surface": "present",
+        "lemma": "nun"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "to come",
+        "lemma": "mello"
+      }
+    ],
+    "9": [
+      {
+        "surface": "This is a trustworthy",
+        "lemma": "pistos"
+      },
+      {
+        "surface": "saying",
+        "lemma": "logos"
+      },
+      {
+        "surface": "worthy",
+        "lemma": "axios"
+      },
+      {
+        "surface": "acceptance",
+        "lemma": "apodoche"
+      }
+    ],
+    "10": [
+      {
+        "surface": "we labor",
+        "lemma": "kopiao"
+      },
+      {
+        "surface": "strive",
+        "lemma": "agonizomai"
+      },
+      {
+        "surface": "we have set our hope",
+        "lemma": "elpizo"
+      },
+      {
+        "surface": "the living",
+        "lemma": "zao"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "the Savior",
+        "lemma": "soter"
+      },
+      {
+        "surface": "and especially",
+        "lemma": "malista"
+      },
+      {
+        "surface": "of those who believe",
+        "lemma": "pistos"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Command",
+        "lemma": "parangello"
+      },
+      {
+        "surface": "teach",
+        "lemma": "didasko"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Let} no one",
+        "lemma": "medeis"
+      },
+      {
+        "surface": "despise",
+        "lemma": "kataphroneo"
+      },
+      {
+        "surface": "youth",
+        "lemma": "neotes"
+      },
+      {
+        "surface": "an example",
+        "lemma": "tupos"
+      },
+      {
+        "surface": "believers",
+        "lemma": "pistos"
+      },
+      {
+        "surface": "speech",
+        "lemma": "logos"
+      },
+      {
+        "surface": "conduct",
+        "lemma": "anastrophe"
+      },
+      {
+        "surface": "love",
+        "lemma": "agape"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "purity",
+        "lemma": "hagneia"
+      }
+    ],
+    "13": [
+      {
+        "surface": "devote yourself",
+        "lemma": "prosecho"
+      },
+      {
+        "surface": "public reading of Scripture",
+        "lemma": "anagnosis"
+      },
+      {
+        "surface": "exhortation",
+        "lemma": "paraklesis"
+      },
+      {
+        "surface": "teaching",
+        "lemma": "didaskalia"
+      }
+    ],
+    "14": [
+      {
+        "surface": "neglect",
+        "lemma": "ameleo"
+      },
+      {
+        "surface": "gift",
+        "lemma": "charisma"
+      },
+      {
+        "surface": "was given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "the prophecy spoken",
+        "lemma": "propheteia"
+      },
+      {
+        "surface": "the laying on",
+        "lemma": "epithesis"
+      },
+      {
+        "surface": "hands",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "elders",
+        "lemma": "presbuterion"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Be diligent",
+        "lemma": "meletao"
+      },
+      {
+        "surface": "progress",
+        "lemma": "prokope"
+      },
+      {
+        "surface": "evident",
+        "lemma": "phaneros"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Pay close attention",
+        "lemma": "epecho"
+      },
+      {
+        "surface": "teaching",
+        "lemma": "didaskalia"
+      },
+      {
+        "surface": "Persevere",
+        "lemma": "epimeno"
+      },
+      {
+        "surface": "you will save",
+        "lemma": "sozo"
+      },
+      {
+        "surface": "hear",
+        "lemma": "akouo"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "ophelimos",
+    "didaskalia",
+    "eucharistia"
+  ]
+}

@@ -1,0 +1,653 @@
+{
+  "bookId": 52,
+  "book": "1 Thessalonians",
+  "chapter": 5,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "times",
+        "lemma": "chronos"
+      },
+      {
+        "surface": "seasons",
+        "lemma": "kairos"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "need",
+        "lemma": "chreia"
+      },
+      {
+        "surface": "to write",
+        "lemma": "grapho"
+      }
+    ],
+    "2": [
+      {
+        "surface": "are} fully",
+        "lemma": "akribos"
+      },
+      {
+        "surface": "aware",
+        "lemma": "eido"
+      },
+      {
+        "surface": "the Day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ohutoohutos"
+      },
+      {
+        "surface": "a thief",
+        "lemma": "kleptes"
+      },
+      {
+        "surface": "the night",
+        "lemma": "nux"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Peace",
+        "lemma": "eirene"
+      },
+      {
+        "surface": "security",
+        "lemma": "asphaleia"
+      },
+      {
+        "surface": "destruction",
+        "lemma": "olethros"
+      },
+      {
+        "surface": "will come",
+        "lemma": "ephistemi"
+      },
+      {
+        "surface": "suddenly",
+        "lemma": "aiphnidios"
+      },
+      {
+        "surface": "labor pains",
+        "lemma": "odin"
+      },
+      {
+        "surface": "they will not escape",
+        "lemma": "ekpheugo"
+      }
+    ],
+    "4": [
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "the darkness",
+        "lemma": "skotos"
+      },
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "should overtake",
+        "lemma": "katalambano"
+      },
+      {
+        "surface": "a thief",
+        "lemma": "kleptes"
+      }
+    ],
+    "5": [
+      {
+        "surface": "sons",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "of the light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "sons",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "of the day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "to the night",
+        "lemma": "nux"
+      },
+      {
+        "surface": "to the darkness",
+        "lemma": "skotos"
+      }
+    ],
+    "6": [
+      {
+        "surface": "let us not sleep",
+        "lemma": "katheudo"
+      },
+      {
+        "surface": "others do",
+        "lemma": "loipos"
+      },
+      {
+        "surface": "let us remain awake",
+        "lemma": "gregoreo"
+      },
+      {
+        "surface": "sober",
+        "lemma": "nepho"
+      }
+    ],
+    "7": [
+      {
+        "surface": "sleep",
+        "lemma": "katheudo"
+      },
+      {
+        "surface": "sleep",
+        "lemma": "katheudo"
+      },
+      {
+        "surface": "at night",
+        "lemma": "nux"
+      },
+      {
+        "surface": "get drunk",
+        "lemma": "methusko"
+      },
+      {
+        "surface": "get drunk",
+        "lemma": "methuo"
+      },
+      {
+        "surface": "at night",
+        "lemma": "nux"
+      }
+    ],
+    "8": [
+      {
+        "surface": "the day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "let us be sober",
+        "lemma": "nepho"
+      },
+      {
+        "surface": "putting on",
+        "lemma": "enduo"
+      },
+      {
+        "surface": "the breastplate",
+        "lemma": "thorax"
+      },
+      {
+        "surface": "of faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "love",
+        "lemma": "agape"
+      },
+      {
+        "surface": "the helmet",
+        "lemma": "perikephalaia"
+      },
+      {
+        "surface": "of our hope",
+        "lemma": "elpis"
+      },
+      {
+        "surface": "of salvation",
+        "lemma": "soteria"
+      }
+    ],
+    "9": [
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "has not appointed",
+        "lemma": "tithemi"
+      },
+      {
+        "surface": "suffer wrath",
+        "lemma": "orge"
+      },
+      {
+        "surface": "obtain",
+        "lemma": "peripoiesis"
+      },
+      {
+        "surface": "salvation",
+        "lemma": "soteria"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      }
+    ],
+    "10": [
+      {
+        "surface": "died",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "whether",
+        "lemma": "eite"
+      },
+      {
+        "surface": "we are awake",
+        "lemma": "gregoreo"
+      },
+      {
+        "surface": "or",
+        "lemma": "eite"
+      },
+      {
+        "surface": "asleep",
+        "lemma": "katheudo"
+      },
+      {
+        "surface": "we may live",
+        "lemma": "zao"
+      },
+      {
+        "surface": "together",
+        "lemma": "hama"
+      }
+    ],
+    "11": [
+      {
+        "surface": "encourage",
+        "lemma": "parakaleo"
+      },
+      {
+        "surface": "build",
+        "lemma": "oikodomeo"
+      },
+      {
+        "surface": "one",
+        "lemma": "ehis"
+      },
+      {
+        "surface": "another {up",
+        "lemma": "ehis"
+      }
+    ],
+    "12": [
+      {
+        "surface": "we ask",
+        "lemma": "erotao"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "to acknowledge",
+        "lemma": "eido"
+      },
+      {
+        "surface": "work diligently",
+        "lemma": "kopiao"
+      },
+      {
+        "surface": "who care",
+        "lemma": "proistemi"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "who admonish",
+        "lemma": "noutheteo"
+      }
+    ],
+    "13": [
+      {
+        "surface": "love",
+        "lemma": "agape"
+      },
+      {
+        "surface": "hold",
+        "lemma": "hegeomai"
+      },
+      {
+        "surface": "work",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "Live in peace",
+        "lemma": "eireneuo"
+      }
+    ],
+    "14": [
+      {
+        "surface": "we urge",
+        "lemma": "parakaleo"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "to admonish",
+        "lemma": "noutheteo"
+      },
+      {
+        "surface": "unruly",
+        "lemma": "ataktos"
+      },
+      {
+        "surface": "encourage",
+        "lemma": "paramutheomai"
+      },
+      {
+        "surface": "fainthearted",
+        "lemma": "oligopsuchos"
+      },
+      {
+        "surface": "help",
+        "lemma": "antecho"
+      },
+      {
+        "surface": "weak",
+        "lemma": "asthenes"
+      },
+      {
+        "surface": "and be patient",
+        "lemma": "makrothumeo"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Make sure that",
+        "lemma": "horao"
+      },
+      {
+        "surface": "repays",
+        "lemma": "apodidomi"
+      },
+      {
+        "surface": "evil",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "evil",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "Always",
+        "lemma": "pantote"
+      },
+      {
+        "surface": "pursue",
+        "lemma": "dioko"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "one another",
+        "lemma": "allelon"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Rejoice",
+        "lemma": "chairo"
+      },
+      {
+        "surface": "at all times",
+        "lemma": "pantote"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Pray",
+        "lemma": "proseuchomai"
+      },
+      {
+        "surface": "without ceasing",
+        "lemma": "adialeiptos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Give thanks",
+        "lemma": "eucharisteo"
+      },
+      {
+        "surface": "God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "will",
+        "lemma": "thelema"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Do not extinguish",
+        "lemma": "sbennumi"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Do not treat",
+        "lemma": "exoutheneo"
+      },
+      {
+        "surface": "prophecies {with contempt",
+        "lemma": "propheteia"
+      }
+    ],
+    "21": [
+      {
+        "surface": "test",
+        "lemma": "dokimazo"
+      },
+      {
+        "surface": "Hold fast",
+        "lemma": "katecho"
+      },
+      {
+        "surface": "good",
+        "lemma": "kalos"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Abstain",
+        "lemma": "apecho"
+      },
+      {
+        "surface": "form",
+        "lemma": "eidos"
+      },
+      {
+        "surface": "of evil",
+        "lemma": "poneros"
+      }
+    ],
+    "23": [
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "of peace",
+        "lemma": "eirene"
+      },
+      {
+        "surface": "sanctify",
+        "lemma": "hagiazo"
+      },
+      {
+        "surface": "completely",
+        "lemma": "holoteles"
+      },
+      {
+        "surface": "entire",
+        "lemma": "holokleros"
+      },
+      {
+        "surface": "spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "soul",
+        "lemma": "psuche"
+      },
+      {
+        "surface": "body",
+        "lemma": "soma"
+      },
+      {
+        "surface": "be kept",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "blameless",
+        "lemma": "amemptos"
+      },
+      {
+        "surface": "coming",
+        "lemma": "parousia"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      }
+    ],
+    "24": [
+      {
+        "surface": "calls",
+        "lemma": "kaleo"
+      },
+      {
+        "surface": "is faithful",
+        "lemma": "pistos"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "pray",
+        "lemma": "proseuchomai"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Greet",
+        "lemma": "aspazomai"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "a holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "kiss",
+        "lemma": "philema"
+      }
+    ],
+    "27": [
+      {
+        "surface": "I charge",
+        "lemma": "horkizo"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "letter",
+        "lemma": "epistole"
+      },
+      {
+        "surface": "read",
+        "lemma": "anaginosko"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      }
+    ],
+    "28": [
+      {
+        "surface": "grace",
+        "lemma": "charis"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "nepho",
+    "noutheteo",
+    "katheudo"
+  ]
+}

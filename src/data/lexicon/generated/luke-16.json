@@ -1,0 +1,1151 @@
+{
+  "bookId": 42,
+  "book": "Luke",
+  "chapter": 16,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Jesus also said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "rich",
+        "lemma": "plousios"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "manager",
+        "lemma": "oikonomos"
+      },
+      {
+        "surface": "was accused of",
+        "lemma": "diaballo"
+      },
+      {
+        "surface": "wasting",
+        "lemma": "diaskorpizo"
+      },
+      {
+        "surface": "possessions",
+        "lemma": "huparcho"
+      }
+    ],
+    "2": [
+      {
+        "surface": "he called",
+        "lemma": "phoneo"
+      },
+      {
+        "surface": "to ask",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "What is",
+        "lemma": "tis"
+      },
+      {
+        "surface": "I hear",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "Turn in",
+        "lemma": "apodidomi"
+      },
+      {
+        "surface": "account",
+        "lemma": "logos"
+      },
+      {
+        "surface": "management",
+        "lemma": "oikonomia"
+      },
+      {
+        "surface": "you cannot",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "be manager",
+        "lemma": "oikonomeo"
+      },
+      {
+        "surface": "any longer",
+        "lemma": "eti"
+      }
+    ],
+    "3": [
+      {
+        "surface": "manager",
+        "lemma": "oikonomos"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "master",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "is taking",
+        "lemma": "aphaireo"
+      },
+      {
+        "surface": "position",
+        "lemma": "oikonomia"
+      },
+      {
+        "surface": "I am too weak",
+        "lemma": "ischuo"
+      },
+      {
+        "surface": "to dig",
+        "lemma": "skapto"
+      },
+      {
+        "surface": "and too ashamed",
+        "lemma": "aischuno"
+      },
+      {
+        "surface": "to beg",
+        "lemma": "epaiteo"
+      }
+    ],
+    "4": [
+      {
+        "surface": "I know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
+        "surface": "my removal",
+        "lemma": "methistemi"
+      },
+      {
+        "surface": "management",
+        "lemma": "oikonomia"
+      },
+      {
+        "surface": "people will welcome",
+        "lemma": "dechomai"
+      },
+      {
+        "surface": "homes",
+        "lemma": "oikos"
+      }
+    ],
+    "5": [
+      {
+        "surface": "he called in",
+        "lemma": "proskaleo"
+      },
+      {
+        "surface": "each",
+        "lemma": "hekastos"
+      },
+      {
+        "surface": "one",
+        "lemma": "ehis"
+      },
+      {
+        "surface": "master’s",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "debtors",
+        "lemma": "chreopheiletes"
+      },
+      {
+        "surface": "do you owe",
+        "lemma": "opheilo"
+      },
+      {
+        "surface": "master",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "he asked",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "first",
+        "lemma": "protos"
+      }
+    ],
+    "6": [
+      {
+        "surface": "A hundred",
+        "lemma": "hekaton"
+      },
+      {
+        "surface": "measures",
+        "lemma": "batos"
+      },
+      {
+        "surface": "of olive oil",
+        "lemma": "elaion"
+      },
+      {
+        "surface": "he answered",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Take",
+        "lemma": "dechomai"
+      },
+      {
+        "surface": "bill",
+        "lemma": "gramma"
+      },
+      {
+        "surface": "said the manager",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "sit down",
+        "lemma": "kathizo"
+      },
+      {
+        "surface": "quickly",
+        "lemma": "tacheos"
+      },
+      {
+        "surface": "and write",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "fifty",
+        "lemma": "pentekonta"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Then",
+        "lemma": "epeita"
+      },
+      {
+        "surface": "he asked",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "another",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "owe",
+        "lemma": "opheilo"
+      },
+      {
+        "surface": "A hundred",
+        "lemma": "hekaton"
+      },
+      {
+        "surface": "measures",
+        "lemma": "koros"
+      },
+      {
+        "surface": "of wheat",
+        "lemma": "sitos"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Take",
+        "lemma": "dechomai"
+      },
+      {
+        "surface": "bill",
+        "lemma": "gramma"
+      },
+      {
+        "surface": "write",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "eighty",
+        "lemma": "ogdoekonta"
+      }
+    ],
+    "8": [
+      {
+        "surface": "master",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "commended",
+        "lemma": "epaineo"
+      },
+      {
+        "surface": "dishonest",
+        "lemma": "adikia"
+      },
+      {
+        "surface": "manager",
+        "lemma": "oikonomos"
+      },
+      {
+        "surface": "shrewdly",
+        "lemma": "phronimos"
+      },
+      {
+        "surface": "sons",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "age",
+        "lemma": "aion"
+      },
+      {
+        "surface": "more shrewd",
+        "lemma": "phronimos"
+      },
+      {
+        "surface": "kind",
+        "lemma": "genea"
+      },
+      {
+        "surface": "sons",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "of light",
+        "lemma": "phos"
+      }
+    ],
+    "9": [
+      {
+        "surface": "worldly",
+        "lemma": "adikia"
+      },
+      {
+        "surface": "wealth",
+        "lemma": "mammonas"
+      },
+      {
+        "surface": "friends",
+        "lemma": "philos"
+      },
+      {
+        "surface": "it is gone",
+        "lemma": "ekleipo"
+      },
+      {
+        "surface": "they will welcome",
+        "lemma": "dechomai"
+      },
+      {
+        "surface": "eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "dwellings",
+        "lemma": "skene"
+      }
+    ],
+    "10": [
+      {
+        "surface": "is faithful",
+        "lemma": "pistos"
+      },
+      {
+        "surface": "very little",
+        "lemma": "elachistos"
+      },
+      {
+        "surface": "be} faithful",
+        "lemma": "pistos"
+      },
+      {
+        "surface": "much",
+        "lemma": "polus"
+      },
+      {
+        "surface": "is dishonest",
+        "lemma": "adikos"
+      },
+      {
+        "surface": "very little",
+        "lemma": "elachistos"
+      },
+      {
+        "surface": "be} dishonest",
+        "lemma": "adikos"
+      },
+      {
+        "surface": "much",
+        "lemma": "polus"
+      }
+    ],
+    "11": [
+      {
+        "surface": "if",
+        "lemma": "ei"
+      },
+      {
+        "surface": "faithful",
+        "lemma": "pistos"
+      },
+      {
+        "surface": "worldly",
+        "lemma": "adikos"
+      },
+      {
+        "surface": "wealth",
+        "lemma": "mammonas"
+      },
+      {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "will entrust",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "true riches",
+        "lemma": "alethinos"
+      }
+    ],
+    "12": [
+      {
+        "surface": "if",
+        "lemma": "ei"
+      },
+      {
+        "surface": "faithful",
+        "lemma": "pistos"
+      },
+      {
+        "surface": "of another",
+        "lemma": "allotrios"
+      },
+      {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "will give",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "of your own",
+        "lemma": "humeteros"
+      }
+    ],
+    "13": [
+      {
+        "surface": "No",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "servant",
+        "lemma": "oiketes"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "serve",
+        "lemma": "douleuo"
+      },
+      {
+        "surface": "two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "masters",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "he will hate",
+        "lemma": "miseo"
+      },
+      {
+        "surface": "one",
+        "lemma": "ehis"
+      },
+      {
+        "surface": "love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "other",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "he will be devoted to",
+        "lemma": "antecho"
+      },
+      {
+        "surface": "the one",
+        "lemma": "ehis"
+      },
+      {
+        "surface": "despise",
+        "lemma": "kataphroneo"
+      },
+      {
+        "surface": "other",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "You cannot",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "serve",
+        "lemma": "douleuo"
+      },
+      {
+        "surface": "both God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "money",
+        "lemma": "mammonas"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Pharisees",
+        "lemma": "pharisaios"
+      },
+      {
+        "surface": "who were",
+        "lemma": "huparcho"
+      },
+      {
+        "surface": "lovers of money",
+        "lemma": "philarguros"
+      },
+      {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "were scoffing at",
+        "lemma": "ekmukterizo"
+      }
+    ],
+    "15": [
+      {
+        "surface": "He said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "justify",
+        "lemma": "dikaioo"
+      },
+      {
+        "surface": "men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "knows",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "hearts",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "is prized",
+        "lemma": "hupselos"
+      },
+      {
+        "surface": "men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "is detestable",
+        "lemma": "bdelugma"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "Prophets were proclaimed",
+        "lemma": "prophetes"
+      },
+      {
+        "surface": "John",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "that time",
+        "lemma": "tote"
+      },
+      {
+        "surface": "of the kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "is being preached",
+        "lemma": "euangelizomai"
+      },
+      {
+        "surface": "is forcing his way",
+        "lemma": "biazo"
+      }
+    ],
+    "17": [
+      {
+        "surface": "easier for",
+        "lemma": "eukopoteros"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "to pass away",
+        "lemma": "parerchomai"
+      },
+      {
+        "surface": "a single",
+        "lemma": "ehis"
+      },
+      {
+        "surface": "stroke of a pen",
+        "lemma": "keraia"
+      },
+      {
+        "surface": "to drop out",
+        "lemma": "pipto"
+      },
+      {
+        "surface": "Law",
+        "lemma": "nomos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "divorces",
+        "lemma": "apoluo"
+      },
+      {
+        "surface": "wife",
+        "lemma": "gune"
+      },
+      {
+        "surface": "marries",
+        "lemma": "gameo"
+      },
+      {
+        "surface": "another woman",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "commits adultery",
+        "lemma": "moicheuo"
+      },
+      {
+        "surface": "marries",
+        "lemma": "gameo"
+      },
+      {
+        "surface": "a divorced woman",
+        "lemma": "apoluo"
+      },
+      {
+        "surface": "commits adultery",
+        "lemma": "moicheuo"
+      }
+    ],
+    "19": [
+      {
+        "surface": "rich",
+        "lemma": "plousios"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "dressed in",
+        "lemma": "endidusko"
+      },
+      {
+        "surface": "purple",
+        "lemma": "porphura"
+      },
+      {
+        "surface": "fine linen",
+        "lemma": "bussos"
+      },
+      {
+        "surface": "who lived each day in joyous",
+        "lemma": "euphraino"
+      },
+      {
+        "surface": "splendor",
+        "lemma": "lampros"
+      }
+    ],
+    "20": [
+      {
+        "surface": "beggar",
+        "lemma": "ptochos"
+      },
+      {
+        "surface": "named",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "Lazarus",
+        "lemma": "lazaros"
+      },
+      {
+        "surface": "lay",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "gate",
+        "lemma": "pulon"
+      },
+      {
+        "surface": "covered with sores",
+        "lemma": "helkoo"
+      }
+    ],
+    "21": [
+      {
+        "surface": "longing",
+        "lemma": "epithumeo"
+      },
+      {
+        "surface": "to be fed",
+        "lemma": "chortazo"
+      },
+      {
+        "surface": "crumbs that fell",
+        "lemma": "pipto"
+      },
+      {
+        "surface": "rich man’s",
+        "lemma": "plousios"
+      },
+      {
+        "surface": "table",
+        "lemma": "trapeza"
+      },
+      {
+        "surface": "dogs",
+        "lemma": "kuon"
+      },
+      {
+        "surface": "and licked",
+        "lemma": "apoleicho"
+      },
+      {
+        "surface": "sores",
+        "lemma": "helkos"
+      }
+    ],
+    "22": [
+      {
+        "surface": "beggar",
+        "lemma": "ptochos"
+      },
+      {
+        "surface": "died",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "was carried",
+        "lemma": "apophero"
+      },
+      {
+        "surface": "angels",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "Abraham’s",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "side",
+        "lemma": "kolpos"
+      },
+      {
+        "surface": "rich man",
+        "lemma": "plousios"
+      },
+      {
+        "surface": "died",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "was buried",
+        "lemma": "thapto"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Hades",
+        "lemma": "hades"
+      },
+      {
+        "surface": "where he was",
+        "lemma": "huparcho"
+      },
+      {
+        "surface": "torment",
+        "lemma": "basanos"
+      },
+      {
+        "surface": "he looked up",
+        "lemma": "epairo"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "afar",
+        "lemma": "makrothen"
+      },
+      {
+        "surface": "Lazarus",
+        "lemma": "lazaros"
+      },
+      {
+        "surface": "side",
+        "lemma": "kolpos"
+      }
+    ],
+    "24": [
+      {
+        "surface": "cried out",
+        "lemma": "phoneo"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "have mercy on",
+        "lemma": "eleeo"
+      },
+      {
+        "surface": "send",
+        "lemma": "pempo"
+      },
+      {
+        "surface": "Lazarus",
+        "lemma": "lazaros"
+      },
+      {
+        "surface": "dip",
+        "lemma": "bapto"
+      },
+      {
+        "surface": "tip",
+        "lemma": "akron"
+      },
+      {
+        "surface": "finger",
+        "lemma": "daktulos"
+      },
+      {
+        "surface": "in water",
+        "lemma": "hudorhudatos"
+      },
+      {
+        "surface": "cool",
+        "lemma": "katapsucho"
+      },
+      {
+        "surface": "tongue",
+        "lemma": "glossa"
+      },
+      {
+        "surface": "I am in agony",
+        "lemma": "odunao"
+      },
+      {
+        "surface": "fire",
+        "lemma": "phlox"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "answered",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Child",
+        "lemma": "teknon"
+      },
+      {
+        "surface": "remember",
+        "lemma": "mimnesko"
+      },
+      {
+        "surface": "lifetime",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "you received",
+        "lemma": "apolambano"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "Lazarus",
+        "lemma": "lazaros"
+      },
+      {
+        "surface": "received",
+        "lemma": "homoios"
+      },
+      {
+        "surface": "bad things",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "now",
+        "lemma": "nun"
+      },
+      {
+        "surface": "he is comforted",
+        "lemma": "parakaleo"
+      },
+      {
+        "surface": "here",
+        "lemma": "hode"
+      },
+      {
+        "surface": "are in agony",
+        "lemma": "odunao"
+      }
+    ],
+    "26": [
+      {
+        "surface": "a great",
+        "lemma": "megas"
+      },
+      {
+        "surface": "chasm",
+        "lemma": "chasma"
+      },
+      {
+        "surface": "has been fixed",
+        "lemma": "sterizo"
+      },
+      {
+        "surface": "wish",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "cross",
+        "lemma": "diabaino"
+      },
+      {
+        "surface": "from here",
+        "lemma": "enthade"
+      },
+      {
+        "surface": "can anyone cross",
+        "lemma": "diaperao"
+      },
+      {
+        "surface": "from there",
+        "lemma": "ekeithen"
+      }
+    ],
+    "27": [
+      {
+        "surface": "I beg",
+        "lemma": "erotao"
+      },
+      {
+        "surface": "father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "he said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "send",
+        "lemma": "pempo"
+      },
+      {
+        "surface": "father’s",
+        "lemma": "pater"
+      },
+      {
+        "surface": "house",
+        "lemma": "oikos"
+      }
+    ],
+    "28": [
+      {
+        "surface": "five",
+        "lemma": "pente"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "Let him warn",
+        "lemma": "diamarturomai"
+      },
+      {
+        "surface": "place",
+        "lemma": "topos"
+      },
+      {
+        "surface": "of torment",
+        "lemma": "basanos"
+      }
+    ],
+    "29": [
+      {
+        "surface": "Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mousesmoses"
+      },
+      {
+        "surface": "Prophets",
+        "lemma": "prophetes"
+      },
+      {
+        "surface": "let your brothers listen to",
+        "lemma": "akouo"
+      }
+    ],
+    "30": [
+      {
+        "surface": "father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "he said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "is sent",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "the dead",
+        "lemma": "nekros"
+      },
+      {
+        "surface": "they will repent",
+        "lemma": "metanoeo"
+      }
+    ],
+    "31": [
+      {
+        "surface": "Abraham said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "If",
+        "lemma": "ei"
+      },
+      {
+        "surface": "they do not listen to",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mousesmoses"
+      },
+      {
+        "surface": "Prophets",
+        "lemma": "prophetes"
+      },
+      {
+        "surface": "they will not be persuaded even",
+        "lemma": "peitho"
+      },
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "rises",
+        "lemma": "anistemi"
+      },
+      {
+        "surface": "the dead",
+        "lemma": "nekros"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "mammonas",
+    "odunao",
+    "basanos"
+  ]
+}

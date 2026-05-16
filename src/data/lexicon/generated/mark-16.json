@@ -1,0 +1,661 @@
+{
+  "bookId": 41,
+  "book": "Mark",
+  "chapter": 16,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Sabbath",
+        "lemma": "sabbaton"
+      },
+      {
+        "surface": "was over",
+        "lemma": "diaginomai"
+      },
+      {
+        "surface": "Mary",
+        "lemma": "maria"
+      },
+      {
+        "surface": "Magdalene",
+        "lemma": "magdalene"
+      },
+      {
+        "surface": "Mary",
+        "lemma": "maria"
+      },
+      {
+        "surface": "of James",
+        "lemma": "iakobos"
+      },
+      {
+        "surface": "Salome",
+        "lemma": "salome"
+      },
+      {
+        "surface": "bought",
+        "lemma": "agorazo"
+      },
+      {
+        "surface": "spices",
+        "lemma": "aroma"
+      },
+      {
+        "surface": "and anoint",
+        "lemma": "aleipho"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Very",
+        "lemma": "lian"
+      },
+      {
+        "surface": "early",
+        "lemma": "proi"
+      },
+      {
+        "surface": "first day",
+        "lemma": "ehis"
+      },
+      {
+        "surface": "week",
+        "lemma": "sabbaton"
+      },
+      {
+        "surface": "just after sunrise",
+        "lemma": "helios"
+      },
+      {
+        "surface": "tomb",
+        "lemma": "mnemeion"
+      }
+    ],
+    "3": [
+      {
+        "surface": "They were asking",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "will roll away",
+        "lemma": "apokulio"
+      },
+      {
+        "surface": "stone",
+        "lemma": "lithos"
+      },
+      {
+        "surface": "entrance",
+        "lemma": "thura"
+      },
+      {
+        "surface": "tomb",
+        "lemma": "mnemeion"
+      }
+    ],
+    "4": [
+      {
+        "surface": "when they looked up",
+        "lemma": "anablepo"
+      },
+      {
+        "surface": "they saw",
+        "lemma": "theoreo"
+      },
+      {
+        "surface": "stone",
+        "lemma": "lithos"
+      },
+      {
+        "surface": "had been rolled away",
+        "lemma": "apokulio"
+      },
+      {
+        "surface": "extremely",
+        "lemma": "sphodra"
+      },
+      {
+        "surface": "large",
+        "lemma": "megas"
+      }
+    ],
+    "5": [
+      {
+        "surface": "they entered",
+        "lemma": "eiserchomai"
+      },
+      {
+        "surface": "tomb",
+        "lemma": "mnemeion"
+      },
+      {
+        "surface": "they saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "a young man",
+        "lemma": "neaniskos"
+      },
+      {
+        "surface": "dressed in",
+        "lemma": "periballo"
+      },
+      {
+        "surface": "a white",
+        "lemma": "leukos"
+      },
+      {
+        "surface": "robe",
+        "lemma": "stole"
+      },
+      {
+        "surface": "sitting",
+        "lemma": "kathemai"
+      },
+      {
+        "surface": "right side",
+        "lemma": "dexios"
+      },
+      {
+        "surface": "they were alarmed",
+        "lemma": "ekthambeo"
+      }
+    ],
+    "6": [
+      {
+        "surface": "be alarmed",
+        "lemma": "ekthambeo"
+      },
+      {
+        "surface": "You are looking for",
+        "lemma": "zeteo"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Nazarene",
+        "lemma": "nazarenos"
+      },
+      {
+        "surface": "was crucified",
+        "lemma": "stauroo"
+      },
+      {
+        "surface": "He has risen",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "here",
+        "lemma": "hode"
+      },
+      {
+        "surface": "place",
+        "lemma": "topos"
+      },
+      {
+        "surface": "they put",
+        "lemma": "tithemi"
+      }
+    ],
+    "7": [
+      {
+        "surface": "go",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "tell",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "He is going ahead of",
+        "lemma": "proago"
+      },
+      {
+        "surface": "Galilee",
+        "lemma": "galilaia"
+      },
+      {
+        "surface": "There",
+        "lemma": "ekei"
+      },
+      {
+        "surface": "you will see",
+        "lemma": "horao"
+      },
+      {
+        "surface": "He told",
+        "lemma": "eipon"
+      }
+    ],
+    "8": [
+      {
+        "surface": "the women left",
+        "lemma": "exerchomai"
+      },
+      {
+        "surface": "tomb",
+        "lemma": "mnemeion"
+      },
+      {
+        "surface": "and ran away",
+        "lemma": "pheugo"
+      },
+      {
+        "surface": "trembling",
+        "lemma": "tromos"
+      },
+      {
+        "surface": "bewildered",
+        "lemma": "ekstasis"
+      },
+      {
+        "surface": "in their fear",
+        "lemma": "phobeo"
+      },
+      {
+        "surface": "they did not say",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "a word to anyone",
+        "lemma": "oudeis"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Early",
+        "lemma": "proi"
+      },
+      {
+        "surface": "on the first day",
+        "lemma": "protos"
+      },
+      {
+        "surface": "of the week",
+        "lemma": "sabbaton"
+      },
+      {
+        "surface": "after Jesus had risen",
+        "lemma": "anistemi"
+      },
+      {
+        "surface": "He appeared",
+        "lemma": "phaino"
+      },
+      {
+        "surface": "first",
+        "lemma": "proton"
+      },
+      {
+        "surface": "to Mary",
+        "lemma": "maria"
+      },
+      {
+        "surface": "Magdalene",
+        "lemma": "magdalene"
+      },
+      {
+        "surface": "He had driven out",
+        "lemma": "ekballo"
+      },
+      {
+        "surface": "seven",
+        "lemma": "hepta"
+      },
+      {
+        "surface": "demons",
+        "lemma": "daimonion"
+      }
+    ],
+    "10": [
+      {
+        "surface": "went",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "and told",
+        "lemma": "apangello"
+      },
+      {
+        "surface": "who were mourning",
+        "lemma": "pentheo"
+      },
+      {
+        "surface": "weeping",
+        "lemma": "klaio"
+      }
+    ],
+    "11": [
+      {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "Jesus was alive",
+        "lemma": "zao"
+      },
+      {
+        "surface": "she had seen Him",
+        "lemma": "theaomai"
+      },
+      {
+        "surface": "they did not believe it",
+        "lemma": "apisteo"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Jesus appeared",
+        "lemma": "phaneroo"
+      },
+      {
+        "surface": "a different",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "form",
+        "lemma": "morphe"
+      },
+      {
+        "surface": "to two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "as they walked",
+        "lemma": "peripateo"
+      },
+      {
+        "surface": "along",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "the country",
+        "lemma": "agros"
+      }
+    ],
+    "13": [
+      {
+        "surface": "went back",
+        "lemma": "aperchomai"
+      },
+      {
+        "surface": "and reported it",
+        "lemma": "apangello"
+      },
+      {
+        "surface": "rest",
+        "lemma": "loipos"
+      },
+      {
+        "surface": "but they did not believe",
+        "lemma": "pisteuo"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Later",
+        "lemma": "husteron"
+      },
+      {
+        "surface": "were eating",
+        "lemma": "anakeimai"
+      },
+      {
+        "surface": "Jesus appeared",
+        "lemma": "phaneroo"
+      },
+      {
+        "surface": "Eleven",
+        "lemma": "hendeka"
+      },
+      {
+        "surface": "rebuked them",
+        "lemma": "oneidizo"
+      },
+      {
+        "surface": "unbelief",
+        "lemma": "apistia"
+      },
+      {
+        "surface": "hardness of heart",
+        "lemma": "sklerokardia"
+      },
+      {
+        "surface": "they did not believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "who had seen",
+        "lemma": "theaomai"
+      },
+      {
+        "surface": "after He had risen",
+        "lemma": "egeiro"
+      }
+    ],
+    "15": [
+      {
+        "surface": "He said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Go",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "all",
+        "lemma": "hapas"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "and preach",
+        "lemma": "kerusso"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      },
+      {
+        "surface": "creature",
+        "lemma": "ktisis"
+      }
+    ],
+    "16": [
+      {
+        "surface": "believes",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "is baptized",
+        "lemma": "baptizo"
+      },
+      {
+        "surface": "will be saved",
+        "lemma": "sozo"
+      },
+      {
+        "surface": "does not believe",
+        "lemma": "apisteo"
+      },
+      {
+        "surface": "will be condemned",
+        "lemma": "katakrino"
+      }
+    ],
+    "17": [
+      {
+        "surface": "signs",
+        "lemma": "semeion"
+      },
+      {
+        "surface": "who believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "they will drive out",
+        "lemma": "ekballo"
+      },
+      {
+        "surface": "demons",
+        "lemma": "daimonion"
+      },
+      {
+        "surface": "they will speak",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "in new",
+        "lemma": "kainos"
+      },
+      {
+        "surface": "tongues",
+        "lemma": "glossa"
+      }
+    ],
+    "18": [
+      {
+        "surface": "they will pick up",
+        "lemma": "airo"
+      },
+      {
+        "surface": "snakes",
+        "lemma": "ophis"
+      },
+      {
+        "surface": "hands",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "and if",
+        "lemma": "kan"
+      },
+      {
+        "surface": "they drink",
+        "lemma": "pino"
+      },
+      {
+        "surface": "deadly poison",
+        "lemma": "thanasimos"
+      },
+      {
+        "surface": "it will not harm",
+        "lemma": "blapto"
+      },
+      {
+        "surface": "they will lay",
+        "lemma": "epitithemi"
+      },
+      {
+        "surface": "their hands",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "the sick",
+        "lemma": "arrostos"
+      },
+      {
+        "surface": "well",
+        "lemma": "kalos"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "had spoken",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "He was taken up",
+        "lemma": "analambano"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "sat down",
+        "lemma": "kathizo"
+      },
+      {
+        "surface": "the right hand",
+        "lemma": "dexios"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      }
+    ],
+    "20": [
+      {
+        "surface": "went out",
+        "lemma": "exerchomai"
+      },
+      {
+        "surface": "and preached",
+        "lemma": "kerusso"
+      },
+      {
+        "surface": "everywhere",
+        "lemma": "pantachou"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "worked through them",
+        "lemma": "sunergeo"
+      },
+      {
+        "surface": "confirming",
+        "lemma": "bebaioo"
+      },
+      {
+        "surface": "word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "signs",
+        "lemma": "semeion"
+      },
+      {
+        "surface": "that accompanied it",
+        "lemma": "epakoloutheo"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "ekthambeo",
+    "apokulio",
+    "apisteo"
+  ]
+}
