@@ -10,10 +10,6 @@
         "lemma": "eidolothutos"
       },
       {
-        "surface": "We know",
-        "lemma": "eido"
-      },
-      {
         "surface": "knowledge",
         "lemma": "gnosis"
       },
@@ -40,24 +36,12 @@
         "lemma": "dokeo"
       },
       {
-        "surface": "he knows",
-        "lemma": "ginosko"
-      },
-      {
         "surface": "vvv",
         "lemma": "oupo"
       },
       {
-        "surface": "does not yet know",
-        "lemma": "ginosko"
-      },
-      {
         "surface": "he ought",
         "lemma": "dei"
-      },
-      {
-        "surface": "to know",
-        "lemma": "ginosko"
       }
     ],
     "3": [
@@ -68,10 +52,6 @@
       {
         "surface": "God",
         "lemma": "theos"
-      },
-      {
-        "surface": "is known",
-        "lemma": "ginosko"
       }
     ],
     "4": [
@@ -84,36 +64,16 @@
         "lemma": "eidolothutos"
       },
       {
-        "surface": "We know",
-        "lemma": "eido"
-      },
-      {
         "surface": "an idol",
         "lemma": "eidolon"
-      },
-      {
-        "surface": "is nothing at all",
-        "lemma": "oudeis"
       },
       {
         "surface": "the world",
         "lemma": "kosmos"
       },
       {
-        "surface": "there is no",
-        "lemma": "oudeis"
-      },
-      {
         "surface": "God",
         "lemma": "theos"
-      },
-      {
-        "surface": "but",
-        "lemma": "ei"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
       }
     ],
     "5": [
@@ -142,10 +102,6 @@
         "lemma": "ge"
       },
       {
-        "surface": "many  so-called",
-        "lemma": "polus"
-      },
-      {
         "surface": "gods",
         "lemma": "theos"
       },
@@ -156,20 +112,12 @@
     ],
     "6": [
       {
-        "surface": "there is but  one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "God",
         "lemma": "theos"
       },
       {
         "surface": "Father",
         "lemma": "pater"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
       },
       {
         "surface": "Lord",
@@ -236,20 +184,12 @@
         "lemma": "hustereo"
       },
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "we do not eat",
         "lemma": "phagein"
       },
       {
         "surface": "better",
         "lemma": "perisseuo"
-      },
-      {
-        "surface": "if",
-        "lemma": "ean"
       },
       {
         "surface": "we do",
@@ -276,20 +216,12 @@
     ],
     "10": [
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "a weak",
         "lemma": "asthenes"
       },
       {
         "surface": "conscience",
         "lemma": "suneidesis"
-      },
-      {
-        "surface": "sees",
-        "lemma": "horao"
       },
       {
         "surface": "are well informed",
@@ -357,7 +289,7 @@
       },
       {
         "surface": "in this way",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "wounding",
@@ -381,10 +313,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "what I eat",
         "lemma": "broma"

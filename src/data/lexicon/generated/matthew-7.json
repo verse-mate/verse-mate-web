@@ -42,10 +42,6 @@
     ],
     "3": [
       {
-        "surface": "Why",
-        "lemma": "tis"
-      },
-      {
         "surface": "do you look at",
         "lemma": "blepo"
       },
@@ -160,10 +156,6 @@
     ],
     "6": [
       {
-        "surface": "give",
-        "lemma": "didomi"
-      },
-      {
         "surface": "dogs",
         "lemma": "kuon"
       },
@@ -206,16 +198,8 @@
         "lemma": "aiteo"
       },
       {
-        "surface": "it will be given",
-        "lemma": "didomi"
-      },
-      {
         "surface": "seek",
         "lemma": "zeteo"
-      },
-      {
-        "surface": "you will find",
-        "lemma": "ehurisko"
       },
       {
         "surface": "knock",
@@ -232,16 +216,8 @@
         "lemma": "aiteo"
       },
       {
-        "surface": "receives",
-        "lemma": "lambano"
-      },
-      {
         "surface": "seeks",
         "lemma": "zeteo"
-      },
-      {
-        "surface": "finds",
-        "lemma": "ehurisko"
       },
       {
         "surface": "knocks",
@@ -254,12 +230,8 @@
     ],
     "9": [
       {
-        "surface": "Which",
-        "lemma": "tis"
-      },
-      {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "asks for",
@@ -298,20 +270,8 @@
     ],
     "11": [
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "evil",
         "lemma": "poneros"
-      },
-      {
-        "surface": "know how",
-        "lemma": "eido"
-      },
-      {
-        "surface": "to give",
-        "lemma": "didomi"
       },
       {
         "surface": "good",
@@ -338,10 +298,6 @@
         "lemma": "ouranos"
       },
       {
-        "surface": "give",
-        "lemma": "didomi"
-      },
-      {
         "surface": "good things",
         "lemma": "agathos"
       },
@@ -353,11 +309,7 @@
     "12": [
       {
         "surface": "as",
-        "lemma": "ohutoohutos"
-      },
-      {
-        "surface": "you would have",
-        "lemma": "thelo"
+        "lemma": "houto"
       },
       {
         "surface": "Law",
@@ -369,10 +321,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "Enter",
-        "lemma": "eiserchomai"
-      },
       {
         "surface": "narrow",
         "lemma": "stenos"
@@ -404,14 +352,6 @@
       {
         "surface": "destruction",
         "lemma": "apoleia"
-      },
-      {
-        "surface": "many",
-        "lemma": "polus"
-      },
-      {
-        "surface": "enter",
-        "lemma": "eiserchomai"
       }
     ],
     "14": [
@@ -442,10 +382,6 @@
       {
         "surface": "only a few",
         "lemma": "oligos"
-      },
-      {
-        "surface": "find",
-        "lemma": "ehurisko"
       }
     ],
     "15": [
@@ -507,7 +443,7 @@
     "17": [
       {
         "surface": "Likewise",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "good",
@@ -550,10 +486,6 @@
       {
         "surface": "tree",
         "lemma": "dendron"
-      },
-      {
-        "surface": "cannot",
-        "lemma": "dunamai"
       },
       {
         "surface": "bad",
@@ -626,10 +558,6 @@
         "lemma": "kurios"
       },
       {
-        "surface": "will enter",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "kingdom",
         "lemma": "basileia"
       },
@@ -651,10 +579,6 @@
       }
     ],
     "22": [
-      {
-        "surface": "Many",
-        "lemma": "polus"
-      },
       {
         "surface": "will say",
         "lemma": "ero"
@@ -700,10 +624,6 @@
         "lemma": "daimonion"
       },
       {
-        "surface": "many",
-        "lemma": "polus"
-      },
-      {
         "surface": "miracles",
         "lemma": "dunamis"
       }
@@ -716,10 +636,6 @@
       {
         "surface": "I will tell them plainly",
         "lemma": "homologeo"
-      },
-      {
-        "surface": "I never knew",
-        "lemma": "ginosko"
       },
       {
         "surface": "depart",
@@ -735,10 +651,6 @@
       }
     ],
     "24": [
-      {
-        "surface": "hears",
-        "lemma": "akouo"
-      },
       {
         "surface": "words",
         "lemma": "logos"
@@ -812,10 +724,6 @@
     ],
     "26": [
       {
-        "surface": "hears",
-        "lemma": "akouo"
-      },
-      {
         "surface": "words",
         "lemma": "logos"
       },
@@ -876,10 +784,6 @@
       {
         "surface": "it fell",
         "lemma": "pipto"
-      },
-      {
-        "surface": "great",
-        "lemma": "megas"
       },
       {
         "surface": "collapse",

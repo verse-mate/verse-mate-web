@@ -32,10 +32,6 @@
     ],
     "2": [
       {
-        "surface": "I know",
-        "lemma": "eido"
-      },
-      {
         "surface": "a man",
         "lemma": "anthropos"
       },
@@ -80,23 +76,11 @@
         "lemma": "soma"
       },
       {
-        "surface": "I do not know",
-        "lemma": "eido"
-      },
-      {
         "surface": "but God",
         "lemma": "theos"
-      },
-      {
-        "surface": "knows",
-        "lemma": "eido"
       }
     ],
     "3": [
-      {
-        "surface": "I know that",
-        "lemma": "eido"
-      },
       {
         "surface": "man",
         "lemma": "anthropos"
@@ -118,16 +102,8 @@
         "lemma": "soma"
       },
       {
-        "surface": "I do not know",
-        "lemma": "eido"
-      },
-      {
         "surface": "but God",
         "lemma": "theos"
-      },
-      {
-        "surface": "knows",
-        "lemma": "eido"
       }
     ],
     "4": [
@@ -140,10 +116,6 @@
         "lemma": "paradeisos"
       },
       {
-        "surface": "The things he heard",
-        "lemma": "akouo"
-      },
-      {
         "surface": "were inexpressible",
         "lemma": "arretos"
       },
@@ -153,11 +125,7 @@
       },
       {
         "surface": "is not permitted",
-        "lemma": "exestiexon"
-      },
-      {
-        "surface": "to tell",
-        "lemma": "laleo"
+        "lemma": "exesti"
       }
     ],
     "5": [
@@ -170,23 +138,11 @@
         "lemma": "kauchaomai"
       },
       {
-        "surface": "except",
-        "lemma": "ei"
-      },
-      {
         "surface": "weaknesses",
         "lemma": "astheneia"
       }
     ],
     "6": [
-      {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
-        "surface": "I wanted",
-        "lemma": "thelo"
-      },
       {
         "surface": "to boast",
         "lemma": "kauchaomai"
@@ -214,10 +170,6 @@
       {
         "surface": "he sees",
         "lemma": "blepo"
-      },
-      {
-        "surface": "hears",
-        "lemma": "akouo"
       }
     ],
     "7": [
@@ -232,10 +184,6 @@
       {
         "surface": "keep me from becoming conceited",
         "lemma": "huperairo"
-      },
-      {
-        "surface": "was given",
-        "lemma": "didomi"
       },
       {
         "surface": "a thorn",
@@ -387,23 +335,11 @@
       },
       {
         "surface": "have commended",
-        "lemma": "sunistemisunistao"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "oudeis"
+        "lemma": "sunistemi"
       },
       {
         "surface": "I am in no way inferior",
         "lemma": "hustereo"
-      },
-      {
-        "surface": "though",
-        "lemma": "ei"
-      },
-      {
-        "surface": "nothing",
-        "lemma": "oudeis"
       }
     ],
     "12": [
@@ -438,10 +374,6 @@
     ],
     "13": [
       {
-        "surface": "In what way",
-        "lemma": "tis"
-      },
-      {
         "surface": "were you inferior",
         "lemma": "hessaomai"
       },
@@ -452,10 +384,6 @@
       {
         "surface": "churches",
         "lemma": "ekklesia"
-      },
-      {
-        "surface": "except",
-        "lemma": "ei"
       },
       {
         "surface": "was not a burden",
@@ -530,10 +458,6 @@
         "lemma": "ekdapanao"
       },
       {
-        "surface": "If",
-        "lemma": "ei"
-      },
-      {
         "surface": "I love",
         "lemma": "agapao"
       },
@@ -547,7 +471,7 @@
       },
       {
         "surface": "less",
-        "lemma": "hettonhesson"
+        "lemma": "hetton"
       }
     ],
     "16": [
@@ -562,10 +486,6 @@
       {
         "surface": "as I am",
         "lemma": "huparcho"
-      },
-      {
-        "surface": "I caught",
-        "lemma": "lambano"
       },
       {
         "surface": "by trickery",
@@ -634,10 +554,6 @@
         "lemma": "apologeomai"
       },
       {
-        "surface": "We speak",
-        "lemma": "laleo"
-      },
-      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -660,28 +576,12 @@
         "lemma": "phobeo"
       },
       {
-        "surface": "I may not find",
-        "lemma": "ehurisko"
+        "surface": "as",
+        "lemma": "hoios"
       },
       {
         "surface": "as",
-        "lemma": "ohios"
-      },
-      {
-        "surface": "I wish",
-        "lemma": "thelo"
-      },
-      {
-        "surface": "may not find {me",
-        "lemma": "ehurisko"
-      },
-      {
-        "surface": "as",
-        "lemma": "ohios"
-      },
-      {
-        "surface": "you wish",
-        "lemma": "thelo"
+        "lemma": "hoios"
       },
       {
         "surface": "quarreling",
@@ -732,10 +632,6 @@
       {
         "surface": "I will be grieved over",
         "lemma": "pentheo"
-      },
-      {
-        "surface": "many",
-        "lemma": "polus"
       },
       {
         "surface": "have sinned earlier",

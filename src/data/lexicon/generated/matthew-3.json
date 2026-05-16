@@ -190,14 +190,6 @@
     ],
     "7": [
       {
-        "surface": "John saw",
-        "lemma": "horao"
-      },
-      {
-        "surface": "many",
-        "lemma": "polus"
-      },
-      {
         "surface": "Pharisees",
         "lemma": "pharisaios"
       },
@@ -210,20 +202,12 @@
         "lemma": "baptisma"
       },
       {
-        "surface": "he said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "You brood",
         "lemma": "gennema"
       },
       {
         "surface": "of vipers",
         "lemma": "echidna"
-      },
-      {
-        "surface": "who",
-        "lemma": "tis"
       },
       {
         "surface": "warned",
@@ -276,10 +260,6 @@
       {
         "surface": "God",
         "lemma": "theos"
-      },
-      {
-        "surface": "can",
-        "lemma": "dunamai"
       },
       {
         "surface": "raise up",
@@ -347,7 +327,7 @@
       },
       {
         "surface": "water",
-        "lemma": "hudorhudatos"
+        "lemma": "hudor"
       },
       {
         "surface": "repentance",
@@ -494,10 +474,6 @@
         "lemma": "iesous"
       },
       {
-        "surface": "replied",
-        "lemma": "apokrino"
-      },
-      {
         "surface": "fitting",
         "lemma": "prepo"
       },
@@ -511,7 +487,7 @@
       },
       {
         "surface": "in this way",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "Then",
@@ -537,7 +513,7 @@
       },
       {
         "surface": "water",
-        "lemma": "hudorhudatos"
+        "lemma": "hudor"
       },
       {
         "surface": "heavens",
@@ -546,10 +522,6 @@
       {
         "surface": "were opened",
         "lemma": "anoigo"
-      },
-      {
-        "surface": "He saw",
-        "lemma": "horao"
       },
       {
         "surface": "Spirit",
@@ -583,7 +555,7 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "I am well pleased",

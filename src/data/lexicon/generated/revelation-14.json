@@ -6,16 +6,8 @@
   "verses": {
     "1": [
       {
-        "surface": "I looked",
-        "lemma": "horao"
-      },
-      {
         "surface": "Lamb",
         "lemma": "arnion"
-      },
-      {
-        "surface": "standing",
-        "lemma": "histemi"
       },
       {
         "surface": "Mount",
@@ -42,19 +34,11 @@
         "lemma": "onoma"
       },
       {
-        "surface": "written",
-        "lemma": "grapho"
-      },
-      {
         "surface": "foreheads",
         "lemma": "metopon"
       }
     ],
     "2": [
-      {
-        "surface": "I heard",
-        "lemma": "akouo"
-      },
       {
         "surface": "a sound",
         "lemma": "phone"
@@ -68,16 +52,8 @@
         "lemma": "phone"
       },
       {
-        "surface": "of many",
-        "lemma": "polus"
-      },
-      {
         "surface": "waters",
-        "lemma": "hudorhudatos"
-      },
-      {
-        "surface": "the loud",
-        "lemma": "megas"
+        "lemma": "hudor"
       },
       {
         "surface": "rumbling",
@@ -90,10 +66,6 @@
       {
         "surface": "sound",
         "lemma": "phone"
-      },
-      {
-        "surface": "I heard",
-        "lemma": "akouo"
       },
       {
         "surface": "harpists",
@@ -138,24 +110,12 @@
         "lemma": "presbuteros"
       },
       {
-        "surface": "no one",
-        "lemma": "oudeis"
-      },
-      {
-        "surface": "could",
-        "lemma": "dunamai"
-      },
-      {
         "surface": "learn",
         "lemma": "manthano"
       },
       {
         "surface": "song",
         "lemma": "ode"
-      },
-      {
-        "surface": "except",
-        "lemma": "ei"
       },
       {
         "surface": "144,000",
@@ -226,10 +186,6 @@
         "lemma": "pseudos"
       },
       {
-        "surface": "was found",
-        "lemma": "ehurisko"
-      },
-      {
         "surface": "mouths",
         "lemma": "stoma"
       },
@@ -239,10 +195,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "I saw",
-        "lemma": "horao"
-      },
       {
         "surface": "another",
         "lemma": "allos"
@@ -298,10 +250,6 @@
     ],
     "7": [
       {
-        "surface": "a loud",
-        "lemma": "megas"
-      },
-      {
         "surface": "voice",
         "lemma": "phone"
       },
@@ -312,10 +260,6 @@
       {
         "surface": "God",
         "lemma": "theos"
-      },
-      {
-        "surface": "give",
-        "lemma": "didomi"
       },
       {
         "surface": "glory",
@@ -351,7 +295,7 @@
       },
       {
         "surface": "of waters",
-        "lemma": "hudorhudatos"
+        "lemma": "hudor"
       }
     ],
     "8": [
@@ -382,10 +326,6 @@
       {
         "surface": "Babylon",
         "lemma": "babulon"
-      },
-      {
-        "surface": "great",
-        "lemma": "megas"
       },
       {
         "surface": "nations",
@@ -426,16 +366,8 @@
         "lemma": "akoloutheo"
       },
       {
-        "surface": "a loud",
-        "lemma": "megas"
-      },
-      {
         "surface": "voice",
         "lemma": "phone"
-      },
-      {
-        "surface": "If",
-        "lemma": "ei"
       },
       {
         "surface": "worships",
@@ -448,10 +380,6 @@
       {
         "surface": "image",
         "lemma": "eikon"
-      },
-      {
-        "surface": "receives",
-        "lemma": "lambano"
       },
       {
         "surface": "its mark",
@@ -570,14 +498,6 @@
         "lemma": "eikon"
       },
       {
-        "surface": "for",
-        "lemma": "ei"
-      },
-      {
-        "surface": "receives",
-        "lemma": "lambano"
-      },
-      {
         "surface": "mark",
         "lemma": "charagma"
       },
@@ -622,20 +542,12 @@
     ],
     "13": [
       {
-        "surface": "I heard",
-        "lemma": "akouo"
-      },
-      {
         "surface": "a voice",
         "lemma": "phone"
       },
       {
         "surface": "heaven",
         "lemma": "ouranos"
-      },
-      {
-        "surface": "to write",
-        "lemma": "grapho"
       },
       {
         "surface": "Blessed are",
@@ -680,10 +592,6 @@
     ],
     "14": [
       {
-        "surface": "I looked",
-        "lemma": "horao"
-      },
-      {
         "surface": "a white",
         "lemma": "leukos"
       },
@@ -705,7 +613,7 @@
       },
       {
         "surface": "the Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of Man",
@@ -746,20 +654,12 @@
         "lemma": "angelos"
       },
       {
-        "surface": "came out",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "temple",
         "lemma": "naos"
       },
       {
         "surface": "crying out",
         "lemma": "krazo"
-      },
-      {
-        "surface": "a loud",
-        "lemma": "megas"
       },
       {
         "surface": "voice",
@@ -846,10 +746,6 @@
         "lemma": "angelos"
       },
       {
-        "surface": "came",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "temple",
         "lemma": "naos"
       },
@@ -884,20 +780,12 @@
         "lemma": "pur"
       },
       {
-        "surface": "came",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "altar",
         "lemma": "thusiasterion"
       },
       {
         "surface": "called out",
         "lemma": "phoneo"
-      },
-      {
-        "surface": "in a loud",
-        "lemma": "megas"
       },
       {
         "surface": "voice",
@@ -982,10 +870,6 @@
         "lemma": "ballo"
       },
       {
-        "surface": "great",
-        "lemma": "megas"
-      },
-      {
         "surface": "winepress",
         "lemma": "lenos"
       },
@@ -1013,11 +897,7 @@
       },
       {
         "surface": "the blood",
-        "lemma": "ahima"
-      },
-      {
-        "surface": "that flowed",
-        "lemma": "exerchomai"
+        "lemma": "haima"
       },
       {
         "surface": "it",

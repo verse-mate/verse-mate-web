@@ -6,20 +6,12 @@
   "verses": {
     "1": [
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
         "surface": "advantage",
         "lemma": "perissos"
       },
       {
         "surface": "being a Jew",
         "lemma": "ioudaios"
-      },
-      {
-        "surface": "what is",
-        "lemma": "tis"
       },
       {
         "surface": "value",
@@ -31,10 +23,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "Much",
-        "lemma": "polus"
-      },
       {
         "surface": "way",
         "lemma": "tropos"
@@ -57,14 +45,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "did not have faith",
         "lemma": "apisteo"
@@ -104,10 +84,6 @@
         "lemma": "pseustes"
       },
       {
-        "surface": "it is written",
-        "lemma": "grapho"
-      },
-      {
         "surface": "So that",
         "lemma": "an"
       },
@@ -130,16 +106,12 @@
     ],
     "5": [
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "unrighteousness",
         "lemma": "adikia"
       },
       {
         "surface": "highlights",
-        "lemma": "sunistemisunistao"
+        "lemma": "sunistemi"
       },
       {
         "surface": "the righteousness",
@@ -148,10 +120,6 @@
       {
         "surface": "of God",
         "lemma": "theos"
-      },
-      {
-        "surface": "what",
-        "lemma": "tis"
       },
       {
         "surface": "shall we say",
@@ -194,10 +162,6 @@
     ],
     "7": [
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "my",
         "lemma": "emos"
       },
@@ -220,10 +184,6 @@
       {
         "surface": "glory",
         "lemma": "doxa"
-      },
-      {
-        "surface": "why",
-        "lemma": "tis"
       },
       {
         "surface": "still",
@@ -266,10 +226,6 @@
     ],
     "9": [
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
         "surface": "Are we any better",
         "lemma": "proecho"
       },
@@ -296,16 +252,8 @@
     ],
     "10": [
       {
-        "surface": "it is written",
-        "lemma": "grapho"
-      },
-      {
         "surface": "righteous",
         "lemma": "dikaios"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
       }
     ],
     "11": [
@@ -338,10 +286,6 @@
       {
         "surface": "good",
         "lemma": "chrestotes"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
       }
     ],
     "13": [
@@ -411,7 +355,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       }
     ],
     "16": [
@@ -436,10 +380,6 @@
       {
         "surface": "of peace",
         "lemma": "eirene"
-      },
-      {
-        "surface": "they have not known",
-        "lemma": "ginosko"
       }
     ],
     "18": [
@@ -458,20 +398,12 @@
     ],
     "19": [
       {
-        "surface": "we know",
-        "lemma": "eido"
-      },
-      {
         "surface": "whatever",
         "lemma": "hosos"
       },
       {
         "surface": "law",
         "lemma": "nomos"
-      },
-      {
-        "surface": "it says",
-        "lemma": "laleo"
       },
       {
         "surface": "law",
@@ -647,7 +579,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "faith",
@@ -804,10 +736,6 @@
         "lemma": "eiper"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -844,10 +772,6 @@
       {
         "surface": "faith",
         "lemma": "pistis"
-      },
-      {
-        "surface": "we uphold",
-        "lemma": "histemi"
       },
       {
         "surface": "the law",

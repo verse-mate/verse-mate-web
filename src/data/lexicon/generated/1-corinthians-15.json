@@ -24,10 +24,6 @@
       {
         "surface": "you received",
         "lemma": "paralambano"
-      },
-      {
-        "surface": "you stand firm",
-        "lemma": "histemi"
       }
     ],
     "2": [
@@ -36,16 +32,8 @@
         "lemma": "sozo"
       },
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "you hold firmly",
         "lemma": "katecho"
-      },
-      {
-        "surface": "to the",
-        "lemma": "tis"
       },
       {
         "surface": "word",
@@ -118,10 +106,6 @@
     ],
     "5": [
       {
-        "surface": "He appeared",
-        "lemma": "horao"
-      },
-      {
         "surface": "to Cephas",
         "lemma": "kephas"
       },
@@ -140,10 +124,6 @@
         "lemma": "epeita"
       },
       {
-        "surface": "He appeared",
-        "lemma": "horao"
-      },
-      {
         "surface": "five hundred",
         "lemma": "pentakosioi"
       },
@@ -157,7 +137,7 @@
       },
       {
         "surface": "most",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "are still living",
@@ -172,10 +152,6 @@
       {
         "surface": "Then",
         "lemma": "epeita"
-      },
-      {
-        "surface": "He appeared",
-        "lemma": "horao"
       },
       {
         "surface": "to James",
@@ -194,10 +170,6 @@
       {
         "surface": "last",
         "lemma": "eschatos"
-      },
-      {
-        "surface": "He appeared",
-        "lemma": "horao"
       },
       {
         "surface": "of untimely birth",
@@ -283,7 +255,7 @@
       },
       {
         "surface": "this is what",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "we preach",
@@ -291,7 +263,7 @@
       },
       {
         "surface": "this is what",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "you believed",
@@ -299,10 +271,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "it is preached",
         "lemma": "kerusso"
@@ -330,10 +298,6 @@
     ],
     "13": [
       {
-        "surface": "If",
-        "lemma": "ei"
-      },
-      {
         "surface": "resurrection",
         "lemma": "anastasis"
       },
@@ -351,10 +315,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "Christ",
         "lemma": "christos"
@@ -381,10 +341,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "we are also exposed as",
-        "lemma": "ehurisko"
-      },
       {
         "surface": "false witnesses",
         "lemma": "pseudomartur"
@@ -428,10 +384,6 @@
     ],
     "16": [
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "the dead",
         "lemma": "nekros"
       },
@@ -449,10 +401,6 @@
       }
     ],
     "17": [
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "Christ",
         "lemma": "christos"
@@ -493,10 +441,6 @@
       }
     ],
     "19": [
-      {
-        "surface": "If",
-        "lemma": "ei"
-      },
       {
         "surface": "hope",
         "lemma": "elpizo"
@@ -581,7 +525,7 @@
       },
       {
         "surface": "so",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "Christ",
@@ -718,10 +662,6 @@
         "lemma": "pous"
       },
       {
-        "surface": "it says",
-        "lemma": "eipon"
-      },
-      {
         "surface": "has been put under Him",
         "lemma": "hupotasso"
       },
@@ -745,7 +685,7 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "will be made subject",
@@ -762,20 +702,12 @@
     ],
     "29": [
       {
-        "surface": "what",
-        "lemma": "tis"
-      },
-      {
         "surface": "are baptized",
         "lemma": "baptizo"
       },
       {
         "surface": "dead",
         "lemma": "nekros"
-      },
-      {
-        "surface": "If",
-        "lemma": "ei"
       },
       {
         "surface": "the dead",
@@ -790,19 +722,11 @@
         "lemma": "holos"
       },
       {
-        "surface": "why",
-        "lemma": "tis"
-      },
-      {
         "surface": "are people baptized",
         "lemma": "baptizo"
       }
     ],
     "30": [
-      {
-        "surface": "why",
-        "lemma": "tis"
-      },
       {
         "surface": "endanger ourselves",
         "lemma": "kinduneuo"
@@ -848,10 +772,6 @@
     ],
     "32": [
       {
-        "surface": "If",
-        "lemma": "ei"
-      },
-      {
         "surface": "I fought wild beasts",
         "lemma": "theriomacheo"
       },
@@ -864,16 +784,8 @@
         "lemma": "anthropos"
       },
       {
-        "surface": "what",
-        "lemma": "tis"
-      },
-      {
         "surface": "did I gain",
         "lemma": "ophelos"
-      },
-      {
-        "surface": "If",
-        "lemma": "ei"
       },
       {
         "surface": "the dead",
@@ -948,10 +860,6 @@
         "lemma": "theos"
       },
       {
-        "surface": "I say this",
-        "lemma": "laleo"
-      },
-      {
         "surface": "shame",
         "lemma": "entrope"
       }
@@ -992,10 +900,6 @@
         "lemma": "zoopoieo"
       },
       {
-        "surface": "unless",
-        "lemma": "ean"
-      },
-      {
         "surface": "it dies",
         "lemma": "apothnesko"
       }
@@ -1022,10 +926,6 @@
         "lemma": "kokkos"
       },
       {
-        "surface": "perhaps",
-        "lemma": "ei"
-      },
-      {
         "surface": "of wheat",
         "lemma": "sitos"
       },
@@ -1040,16 +940,8 @@
         "lemma": "theos"
       },
       {
-        "surface": "gives",
-        "lemma": "didomi"
-      },
-      {
         "surface": "a body",
         "lemma": "soma"
-      },
-      {
-        "surface": "He has designed",
-        "lemma": "thelo"
       },
       {
         "surface": "to each kind",
@@ -1197,7 +1089,7 @@
     "42": [
       {
         "surface": "So",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "resurrection",
@@ -1284,10 +1176,6 @@
         "lemma": "soma"
       },
       {
-        "surface": "If",
-        "lemma": "ei"
-      },
-      {
         "surface": "a natural",
         "lemma": "psuchikos"
       },
@@ -1303,11 +1191,7 @@
     "45": [
       {
         "surface": "So",
-        "lemma": "ohutoohutos"
-      },
-      {
-        "surface": "it is written",
-        "lemma": "grapho"
+        "lemma": "houto"
       },
       {
         "surface": "first",
@@ -1401,7 +1285,7 @@
     "48": [
       {
         "surface": "As",
-        "lemma": "ohios"
+        "lemma": "hoios"
       },
       {
         "surface": "earthly man",
@@ -1413,7 +1297,7 @@
       },
       {
         "surface": "as",
-        "lemma": "ohios"
+        "lemma": "hoios"
       },
       {
         "surface": "heavenly man",
@@ -1465,11 +1349,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
-      },
-      {
-        "surface": "cannot",
-        "lemma": "dunamai"
+        "lemma": "haima"
       },
       {
         "surface": "inherit",
@@ -1616,10 +1496,6 @@
         "lemma": "logos"
       },
       {
-        "surface": "is written",
-        "lemma": "grapho"
-      },
-      {
         "surface": "Death",
         "lemma": "thanatos"
       },
@@ -1694,10 +1570,6 @@
         "lemma": "theos"
       },
       {
-        "surface": "gives",
-        "lemma": "didomi"
-      },
-      {
         "surface": "victory",
         "lemma": "nikos"
       },
@@ -1746,10 +1618,6 @@
       {
         "surface": "Lord",
         "lemma": "kurios"
-      },
-      {
-        "surface": "because you know",
-        "lemma": "eido"
       },
       {
         "surface": "labor",

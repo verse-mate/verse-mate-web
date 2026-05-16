@@ -25,11 +25,11 @@ const VERSES: ChapterAlignment['verses'] = {
   5: [
     { surface: 'tongue', lemma: 'glossa', contextual:
       'γλῶσσα — physical tongue, but in James a metonymy for speech as a whole. Small, unruly, disproportionate in power.' },
-    { surface: 'fire', lemma: 'pyr' },
+    { surface: 'fire', lemma: 'pur' },
   ],
   6: [
     { surface: 'tongue', lemma: 'glossa' },
-    { surface: 'fire', lemma: 'pyr', contextual:
+    { surface: 'fire', lemma: 'pur', contextual:
       'James 3:6 piles up fire-words: a small flame, a forest ablaze, a tongue ignited by hell. The image is not poetic excess — it is the social mathematics of gossip in a small assembly.' },
     { surface: 'body', lemma: 'soma' },
   ],
@@ -39,7 +39,7 @@ const VERSES: ChapterAlignment['verses'] = {
   ],
   9: [
     { surface: 'bless', lemma: 'eulogeo' },
-    { surface: 'Lord', lemma: 'kyrios' },
+    { surface: 'Lord', lemma: 'kurios' },
     { surface: 'curse', lemma: 'katara' },
   ],
   10: [
@@ -71,7 +71,7 @@ const VERSES: ChapterAlignment['verses'] = {
       'ἄνωθεν — "from above." James 1:17, 3:15, 3:17 form a thread: ἄνωθεν is James\'s adverb for what comes from God\'s side of reality.' },
     { surface: 'earthly', lemma: 'epigeios', contextual:
       'ἐπίγειος locates this wisdom by altitude — it does not see beyond ground level. The first of three damning adjectives.' },
-    { surface: 'unspiritual', lemma: 'psychikos', contextual:
+    { surface: 'unspiritual', lemma: 'psuchikos', contextual:
       'ψυχικός is hard to translate: "soulish" is accurate but unfamiliar. Wisdom run on natural life-breath, not on Spirit. Second of the three.' },
     { surface: 'demonic', lemma: 'daimoniodes', contextual:
       'δαιμονιώδης — hapax in NT. The third descriptor of false wisdom: in the same family as demons.' },
@@ -93,7 +93,7 @@ const VERSES: ChapterAlignment['verses'] = {
   18: [
     { surface: 'fruit', lemma: 'karpos', contextual:
       'James names peace as the soil where righteousness is sown and harvested. The agricultural metaphor is precise: peace is not the fruit but the field.' },
-    { surface: 'righteousness', lemma: 'dikaiosyne' },
+    { surface: 'righteousness', lemma: 'dikaiosune' },
   ],
 };
 

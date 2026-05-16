@@ -72,10 +72,6 @@
         "lemma": "tugchano"
       },
       {
-        "surface": "a lasting",
-        "lemma": "polus"
-      },
-      {
         "surface": "peace",
         "lemma": "eirene"
       },
@@ -129,7 +125,7 @@
       },
       {
         "surface": "any further",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "I beg",
@@ -144,19 +140,11 @@
         "lemma": "epieikeia"
       },
       {
-        "surface": "to hear",
-        "lemma": "akouo"
-      },
-      {
         "surface": "briefly",
         "lemma": "suntomos"
       }
     ],
     "5": [
-      {
-        "surface": "We have found",
-        "lemma": "ehurisko"
-      },
       {
         "surface": "man to be",
         "lemma": "aner"
@@ -187,7 +175,7 @@
       },
       {
         "surface": "sect",
-        "lemma": "ahiresis"
+        "lemma": "hairesis"
       },
       {
         "surface": "Nazarenes",
@@ -218,10 +206,6 @@
         "lemma": "anakrino"
       },
       {
-        "surface": "you will be able",
-        "lemma": "dunamai"
-      },
-      {
         "surface": "to learn the truth",
         "lemma": "epiginosko"
       },
@@ -245,7 +229,7 @@
       },
       {
         "surface": "true",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       }
     ],
     "10": [
@@ -262,10 +246,6 @@
         "lemma": "paulos"
       },
       {
-        "surface": "began his response",
-        "lemma": "apokrino"
-      },
-      {
         "surface": "Knowing that",
         "lemma": "epistamai"
       },
@@ -278,10 +258,6 @@
         "lemma": "ethnos"
       },
       {
-        "surface": "many",
-        "lemma": "polus"
-      },
-      {
         "surface": "years",
         "lemma": "etos"
       },
@@ -292,16 +268,12 @@
     ],
     "11": [
       {
-        "surface": "can",
-        "lemma": "dunamai"
-      },
-      {
         "surface": "verify {for yourself",
         "lemma": "epiginosko"
       },
       {
         "surface": "more than",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "twelve",
@@ -326,10 +298,6 @@
     ],
     "12": [
       {
-        "surface": "my accusers did not find",
-        "lemma": "ehurisko"
-      },
-      {
         "surface": "debating",
         "lemma": "dialego"
       },
@@ -351,10 +319,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "can they",
-        "lemma": "dunamai"
-      },
       {
         "surface": "prove",
         "lemma": "paristemi"
@@ -391,7 +355,7 @@
       },
       {
         "surface": "a sect",
-        "lemma": "ahiresis"
+        "lemma": "hairesis"
       },
       {
         "surface": "I believe",
@@ -400,10 +364,6 @@
       {
         "surface": "Law",
         "lemma": "nomos"
-      },
-      {
-        "surface": "written",
-        "lemma": "grapho"
       },
       {
         "surface": "Prophets",
@@ -465,7 +425,7 @@
     "17": [
       {
         "surface": "several",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "years",
@@ -490,10 +450,6 @@
     ],
     "18": [
       {
-        "surface": "they found",
-        "lemma": "ehurisko"
-      },
-      {
         "surface": "temple",
         "lemma": "hieros"
       },
@@ -508,10 +464,6 @@
       {
         "surface": "an uproar",
         "lemma": "thorubos"
-      },
-      {
-        "surface": "some",
-        "lemma": "tis"
       },
       {
         "surface": "Jews",
@@ -534,32 +486,12 @@
       {
         "surface": "bring charges",
         "lemma": "kategoreo"
-      },
-      {
-        "surface": "if",
-        "lemma": "ei"
       }
     ],
     "20": [
       {
-        "surface": "let these men state",
-        "lemma": "eipon"
-      },
-      {
-        "surface": "any",
-        "lemma": "tis"
-      },
-      {
         "surface": "crime",
         "lemma": "adikema"
-      },
-      {
-        "surface": "they found",
-        "lemma": "ehurisko"
-      },
-      {
-        "surface": "when I stood",
-        "lemma": "histemi"
       },
       {
         "surface": "Sanhedrin",
@@ -568,16 +500,8 @@
     ],
     "21": [
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "I called out",
         "lemma": "krazo"
-      },
-      {
-        "surface": "as I stood",
-        "lemma": "histemi"
       },
       {
         "surface": "the resurrection",
@@ -606,20 +530,12 @@
         "lemma": "akribos"
       },
       {
-        "surface": "who was well informed",
-        "lemma": "eido"
-      },
-      {
         "surface": "Way",
         "lemma": "hodos"
       },
       {
         "surface": "adjourned the hearing",
         "lemma": "anaballo"
-      },
-      {
-        "surface": "and said",
-        "lemma": "eipon"
       },
       {
         "surface": "Lysias",
@@ -710,10 +626,6 @@
         "lemma": "paulos"
       },
       {
-        "surface": "listened to",
-        "lemma": "akouo"
-      },
-      {
         "surface": "faith",
         "lemma": "pistis"
       },
@@ -756,10 +668,6 @@
         "lemma": "emphobos"
       },
       {
-        "surface": "and said",
-        "lemma": "apokrino"
-      },
-      {
         "surface": "You may go",
         "lemma": "poreuo"
       },
@@ -794,10 +702,6 @@
         "lemma": "paulos"
       },
       {
-        "surface": "would offer",
-        "lemma": "didomi"
-      },
-      {
         "surface": "a bribe",
         "lemma": "chrema"
       },
@@ -828,10 +732,6 @@
         "lemma": "phelix"
       },
       {
-        "surface": "vvv",
-        "lemma": "lambano"
-      },
-      {
         "surface": "was succeeded by",
         "lemma": "diadochos"
       },
@@ -842,10 +742,6 @@
       {
         "surface": "Festus",
         "lemma": "phestos"
-      },
-      {
-        "surface": "wishing",
-        "lemma": "thelo"
       },
       {
         "surface": "to do the Jews a favor",

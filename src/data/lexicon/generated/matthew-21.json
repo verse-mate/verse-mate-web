@@ -56,10 +56,6 @@
         "lemma": "eutheos"
       },
       {
-        "surface": "you will find",
-        "lemma": "ehurisko"
-      },
-      {
         "surface": "a donkey",
         "lemma": "onos"
       },
@@ -81,14 +77,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "If",
-        "lemma": "ean"
-      },
-      {
-        "surface": "questions",
-        "lemma": "eipon"
-      },
       {
         "surface": "tell him",
         "lemma": "ero"
@@ -126,10 +114,6 @@
     ],
     "5": [
       {
-        "surface": "Say",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Daughter",
         "lemma": "thugater"
       },
@@ -159,7 +143,7 @@
       },
       {
         "surface": "the foal",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of a donkey",
@@ -279,11 +263,11 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of David",
-        "lemma": "daueiddauiddabid"
+        "lemma": "daueid"
       },
       {
         "surface": "Blessed is",
@@ -308,10 +292,6 @@
     ],
     "10": [
       {
-        "surface": "had entered",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "Jerusalem",
         "lemma": "hierosoluma"
       },
@@ -322,20 +302,12 @@
       {
         "surface": "was stirred",
         "lemma": "seio"
-      },
-      {
-        "surface": "Who",
-        "lemma": "tis"
       }
     ],
     "11": [
       {
         "surface": "crowds",
         "lemma": "ochlos"
-      },
-      {
-        "surface": "replied",
-        "lemma": "eipon"
       },
       {
         "surface": "Jesus",
@@ -347,7 +319,7 @@
       },
       {
         "surface": "Nazareth",
-        "lemma": "nazarethnazara"
+        "lemma": "nazareth"
       },
       {
         "surface": "in Galilee",
@@ -358,10 +330,6 @@
       {
         "surface": "Jesus",
         "lemma": "iesous"
-      },
-      {
-        "surface": "entered",
-        "lemma": "eiserchomai"
       },
       {
         "surface": "temple courts",
@@ -405,10 +373,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "It is written",
-        "lemma": "grapho"
-      },
       {
         "surface": "house",
         "lemma": "oikos"
@@ -470,10 +434,6 @@
         "lemma": "aganakteo"
       },
       {
-        "surface": "when they saw",
-        "lemma": "horao"
-      },
-      {
         "surface": "wonders",
         "lemma": "thaumasios"
       },
@@ -495,26 +455,14 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of David",
-        "lemma": "daueiddauiddabid"
+        "lemma": "daueid"
       }
     ],
     "16": [
-      {
-        "surface": "Do You hear",
-        "lemma": "akouo"
-      },
-      {
-        "surface": "what",
-        "lemma": "tis"
-      },
-      {
-        "surface": "they asked",
-        "lemma": "eipon"
-      },
       {
         "surface": "Jesus",
         "lemma": "iesous"
@@ -554,10 +502,6 @@
         "lemma": "kataleipo"
       },
       {
-        "surface": "and went",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "city",
         "lemma": "polis"
       },
@@ -590,32 +534,12 @@
     ],
     "19": [
       {
-        "surface": "Seeing",
-        "lemma": "horao"
-      },
-      {
-        "surface": "a",
-        "lemma": "ehis"
-      },
-      {
         "surface": "fig tree",
         "lemma": "suke"
       },
       {
         "surface": "road",
         "lemma": "hodos"
-      },
-      {
-        "surface": "found",
-        "lemma": "ehurisko"
-      },
-      {
-        "surface": "nothing",
-        "lemma": "oudeis"
-      },
-      {
-        "surface": "except",
-        "lemma": "ei"
       },
       {
         "surface": "leaves",
@@ -648,10 +572,6 @@
         "lemma": "mathetes"
       },
       {
-        "surface": "saw this",
-        "lemma": "horao"
-      },
-      {
         "surface": "they marveled",
         "lemma": "thaumazo"
       },
@@ -678,14 +598,6 @@
         "lemma": "iesous"
       },
       {
-        "surface": "replied",
-        "lemma": "apokrino"
-      },
-      {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "faith",
         "lemma": "pistis"
       },
@@ -704,10 +616,6 @@
       {
         "surface": "even if",
         "lemma": "kan"
-      },
-      {
-        "surface": "you say",
-        "lemma": "eipon"
       },
       {
         "surface": "mountain",
@@ -730,10 +638,6 @@
       {
         "surface": "If you believe",
         "lemma": "pisteuo"
-      },
-      {
-        "surface": "you will receive",
-        "lemma": "lambano"
       },
       {
         "surface": "you ask for",
@@ -778,14 +682,6 @@
         "lemma": "exousia"
       },
       {
-        "surface": "who",
-        "lemma": "tis"
-      },
-      {
-        "surface": "gave",
-        "lemma": "didomi"
-      },
-      {
         "surface": "authority",
         "lemma": "exousia"
       }
@@ -796,28 +692,12 @@
         "lemma": "erotao"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "question",
         "lemma": "logos"
       },
       {
         "surface": "Jesus",
         "lemma": "iesous"
-      },
-      {
-        "surface": "replied",
-        "lemma": "apokrino"
-      },
-      {
-        "surface": "and} if",
-        "lemma": "ean"
-      },
-      {
-        "surface": "you answer",
-        "lemma": "eipon"
       },
       {
         "surface": "will tell",
@@ -858,14 +738,6 @@
         "lemma": "dialogizomai"
       },
       {
-        "surface": "If",
-        "lemma": "ean"
-      },
-      {
-        "surface": "we say",
-        "lemma": "eipon"
-      },
-      {
         "surface": "heaven",
         "lemma": "ouranos"
       },
@@ -879,14 +751,6 @@
       }
     ],
     "26": [
-      {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
-        "surface": "we say",
-        "lemma": "eipon"
-      },
       {
         "surface": "men",
         "lemma": "anthropos"
@@ -910,14 +774,6 @@
     ],
     "27": [
       {
-        "surface": "they answered",
-        "lemma": "apokrino"
-      },
-      {
-        "surface": "We do not know",
-        "lemma": "eido"
-      },
-      {
         "surface": "replied",
         "lemma": "phemi"
       },
@@ -931,10 +787,6 @@
       }
     ],
     "28": [
-      {
-        "surface": "what",
-        "lemma": "tis"
-      },
       {
         "surface": "think",
         "lemma": "dokeo"
@@ -960,10 +812,6 @@
         "lemma": "protos"
       },
       {
-        "surface": "and said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Son",
         "lemma": "teknon"
       },
@@ -985,14 +833,6 @@
       }
     ],
     "29": [
-      {
-        "surface": "I will not",
-        "lemma": "thelo"
-      },
-      {
-        "surface": "he replied",
-        "lemma": "apokrino"
-      },
       {
         "surface": "later",
         "lemma": "husteron"
@@ -1016,10 +856,6 @@
         "lemma": "deuteros"
       },
       {
-        "surface": "and told him",
-        "lemma": "eipon"
-      },
-      {
         "surface": "the same thing",
         "lemma": "hosautos"
       },
@@ -1028,19 +864,11 @@
         "lemma": "kurios"
       },
       {
-        "surface": "he said",
-        "lemma": "apokrino"
-      },
-      {
         "surface": "he did not go",
         "lemma": "aperchomai"
       }
     ],
     "31": [
-      {
-        "surface": "Which",
-        "lemma": "tis"
-      },
       {
         "surface": "two",
         "lemma": "duo"
@@ -1120,10 +948,6 @@
         "lemma": "husteron"
       },
       {
-        "surface": "you saw this",
-        "lemma": "horao"
-      },
-      {
         "surface": "did not repent",
         "lemma": "metamellomai"
       },
@@ -1133,10 +957,6 @@
       }
     ],
     "33": [
-      {
-        "surface": "Listen to",
-        "lemma": "akouo"
-      },
       {
         "surface": "another",
         "lemma": "allos"
@@ -1216,10 +1036,6 @@
         "lemma": "georgos"
       },
       {
-        "surface": "to collect",
-        "lemma": "lambano"
-      },
-      {
         "surface": "share of the fruit",
         "lemma": "karpos"
       }
@@ -1228,10 +1044,6 @@
       {
         "surface": "tenants",
         "lemma": "georgos"
-      },
-      {
-        "surface": "seized",
-        "lemma": "lambano"
       },
       {
         "surface": "servants",
@@ -1269,7 +1081,7 @@
       },
       {
         "surface": "more",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "first group",
@@ -1291,7 +1103,7 @@
       },
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "They will respect",
@@ -1299,7 +1111,7 @@
       },
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       }
     ],
     "38": [
@@ -1308,16 +1120,8 @@
         "lemma": "georgos"
       },
       {
-        "surface": "saw",
-        "lemma": "horao"
-      },
-      {
         "surface": "son",
-        "lemma": "uhios"
-      },
-      {
-        "surface": "they said",
-        "lemma": "eipon"
+        "lemma": "huios"
       },
       {
         "surface": "heir",
@@ -1333,10 +1137,6 @@
       }
     ],
     "39": [
-      {
-        "surface": "they seized",
-        "lemma": "lambano"
-      },
       {
         "surface": "and threw him",
         "lemma": "ekballo"
@@ -1358,10 +1158,6 @@
       {
         "surface": "vineyard",
         "lemma": "ampelon"
-      },
-      {
-        "surface": "what",
-        "lemma": "tis"
       },
       {
         "surface": "tenants",
@@ -1474,10 +1270,6 @@
         "lemma": "airo"
       },
       {
-        "surface": "given",
-        "lemma": "didomi"
-      },
-      {
         "surface": "to a people",
         "lemma": "ethnos"
       },
@@ -1518,16 +1310,8 @@
         "lemma": "pharisaios"
       },
       {
-        "surface": "heard",
-        "lemma": "akouo"
-      },
-      {
         "surface": "parables",
         "lemma": "parabole"
-      },
-      {
-        "surface": "they knew",
-        "lemma": "ginosko"
       }
     ],
     "46": [

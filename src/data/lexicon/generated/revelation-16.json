@@ -6,14 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "I heard",
-        "lemma": "akouo"
-      },
-      {
-        "surface": "a loud",
-        "lemma": "megas"
-      },
-      {
         "surface": "voice",
         "lemma": "phone"
       },
@@ -127,7 +119,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "of the dead",
@@ -173,25 +165,21 @@
       },
       {
         "surface": "water",
-        "lemma": "hudorhudatos"
+        "lemma": "hudor"
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       }
     ],
     "5": [
-      {
-        "surface": "I heard",
-        "lemma": "akouo"
-      },
       {
         "surface": "angel",
         "lemma": "angelos"
       },
       {
         "surface": "waters",
-        "lemma": "hudorhudatos"
+        "lemma": "hudor"
       },
       {
         "surface": "Righteous",
@@ -213,7 +201,7 @@
       },
       {
         "surface": "the blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "of saints",
@@ -224,12 +212,8 @@
         "lemma": "prophetes"
       },
       {
-        "surface": "You have given",
-        "lemma": "didomi"
-      },
-      {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "to drink",
@@ -241,10 +225,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "I heard",
-        "lemma": "akouo"
-      },
       {
         "surface": "altar",
         "lemma": "thusiasterion"
@@ -292,10 +272,6 @@
         "lemma": "helios"
       },
       {
-        "surface": "it was given power",
-        "lemma": "didomi"
-      },
-      {
         "surface": "to scorch",
         "lemma": "kaumatizo"
       },
@@ -316,10 +292,6 @@
       {
         "surface": "were scorched",
         "lemma": "kaumatizo"
-      },
-      {
-        "surface": "by intense",
-        "lemma": "megas"
       },
       {
         "surface": "heat",
@@ -348,10 +320,6 @@
       {
         "surface": "they did not repent",
         "lemma": "metanoeo"
-      },
-      {
-        "surface": "and give",
-        "lemma": "didomi"
       },
       {
         "surface": "glory",
@@ -444,10 +412,6 @@
         "lemma": "phiale"
       },
       {
-        "surface": "great",
-        "lemma": "megas"
-      },
-      {
         "surface": "river",
         "lemma": "potamos"
       },
@@ -457,7 +421,7 @@
       },
       {
         "surface": "water",
-        "lemma": "hudorhudatos"
+        "lemma": "hudor"
       },
       {
         "surface": "was dried up",
@@ -481,10 +445,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "I saw",
-        "lemma": "horao"
-      },
       {
         "surface": "three",
         "lemma": "treis"
@@ -554,10 +514,6 @@
       {
         "surface": "battle",
         "lemma": "polemos"
-      },
-      {
-        "surface": "great",
-        "lemma": "megas"
       },
       {
         "surface": "day",
@@ -646,16 +602,8 @@
         "lemma": "aer"
       },
       {
-        "surface": "a loud",
-        "lemma": "megas"
-      },
-      {
         "surface": "voice",
         "lemma": "phone"
-      },
-      {
-        "surface": "came",
-        "lemma": "exerchomai"
       },
       {
         "surface": "throne",
@@ -680,16 +628,12 @@
         "lemma": "bronte"
       },
       {
-        "surface": "a great",
-        "lemma": "megas"
-      },
-      {
         "surface": "earthquake",
         "lemma": "seismos"
       },
       {
         "surface": "the likes of which",
-        "lemma": "ohios"
+        "lemma": "hoios"
       },
       {
         "surface": "men",
@@ -701,11 +645,7 @@
       },
       {
         "surface": "so",
-        "lemma": "ohutoohutos"
-      },
-      {
-        "surface": "was the great",
-        "lemma": "megas"
+        "lemma": "houto"
       },
       {
         "surface": "quake",
@@ -713,10 +653,6 @@
       }
     ],
     "19": [
-      {
-        "surface": "great",
-        "lemma": "megas"
-      },
       {
         "surface": "city",
         "lemma": "polis"
@@ -754,14 +690,6 @@
         "lemma": "babulon"
       },
       {
-        "surface": "great",
-        "lemma": "megas"
-      },
-      {
-        "surface": "and gave",
-        "lemma": "didomi"
-      },
-      {
         "surface": "cup",
         "lemma": "poterion"
       },
@@ -790,17 +718,9 @@
       {
         "surface": "mountain",
         "lemma": "oros"
-      },
-      {
-        "surface": "could be found",
-        "lemma": "ehurisko"
       }
     ],
     "21": [
-      {
-        "surface": "great",
-        "lemma": "megas"
-      },
       {
         "surface": "hailstones",
         "lemma": "chalaza"
@@ -848,10 +768,6 @@
       {
         "surface": "vvv",
         "lemma": "sphodra"
-      },
-      {
-        "surface": "so horrendous",
-        "lemma": "megas"
       }
     ]
   },

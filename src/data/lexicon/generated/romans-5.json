@@ -48,10 +48,6 @@
         "lemma": "charis"
       },
       {
-        "surface": "we stand",
-        "lemma": "histemi"
-      },
-      {
         "surface": "we rejoice",
         "lemma": "kauchaomai"
       },
@@ -80,10 +76,6 @@
       {
         "surface": "sufferings",
         "lemma": "thlipsis"
-      },
-      {
-        "surface": "because we know",
-        "lemma": "eido"
       },
       {
         "surface": "suffering",
@@ -148,10 +140,6 @@
       {
         "surface": "Spirit",
         "lemma": "pneuma"
-      },
-      {
-        "surface": "He has given",
-        "lemma": "didomi"
       }
     ],
     "6": [
@@ -221,7 +209,7 @@
       },
       {
         "surface": "proves",
-        "lemma": "sunistemisunistao"
+        "lemma": "sunistemi"
       },
       {
         "surface": "love",
@@ -251,11 +239,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
-      },
-      {
-        "surface": "how much",
-        "lemma": "polus"
+        "lemma": "haima"
       },
       {
         "surface": "more",
@@ -271,10 +255,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "enemies of God",
         "lemma": "echthros"
@@ -293,11 +273,7 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
-      },
-      {
-        "surface": "how much",
-        "lemma": "polus"
+        "lemma": "huios"
       },
       {
         "surface": "more",
@@ -346,10 +322,6 @@
         "lemma": "nun"
       },
       {
-        "surface": "we have now received",
-        "lemma": "lambano"
-      },
-      {
         "surface": "reconciliation",
         "lemma": "katallage"
       }
@@ -360,16 +332,8 @@
         "lemma": "hamartia"
       },
       {
-        "surface": "entered",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "world",
         "lemma": "kosmos"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
       },
       {
         "surface": "man",
@@ -385,7 +349,7 @@
       },
       {
         "surface": "so",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "death",
@@ -445,7 +409,7 @@
       },
       {
         "surface": "Moses",
-        "lemma": "mousesmoses"
+        "lemma": "mouses"
       },
       {
         "surface": "did not sin",
@@ -482,28 +446,12 @@
         "lemma": "paraptoma"
       },
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
-        "surface": "many",
-        "lemma": "polus"
-      },
-      {
         "surface": "died",
         "lemma": "apothnesko"
       },
       {
         "surface": "trespass",
         "lemma": "paraptoma"
-      },
-      {
-        "surface": "one man",
-        "lemma": "ehis"
-      },
-      {
-        "surface": "how much",
-        "lemma": "polus"
       },
       {
         "surface": "more",
@@ -526,10 +474,6 @@
         "lemma": "charis"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "man",
         "lemma": "anthropos"
       },
@@ -544,20 +488,12 @@
       {
         "surface": "abound",
         "lemma": "perisseuo"
-      },
-      {
-        "surface": "many",
-        "lemma": "polus"
       }
     ],
     "16": [
       {
         "surface": "gift",
         "lemma": "dorema"
-      },
-      {
-        "surface": "the one man’s",
-        "lemma": "ehis"
       },
       {
         "surface": "sin",
@@ -568,20 +504,12 @@
         "lemma": "krima"
       },
       {
-        "surface": "one sin",
-        "lemma": "ehis"
-      },
-      {
         "surface": "condemnation",
         "lemma": "katakrima"
       },
       {
         "surface": "gift",
         "lemma": "charisma"
-      },
-      {
-        "surface": "many",
-        "lemma": "polus"
       },
       {
         "surface": "trespasses",
@@ -594,16 +522,8 @@
     ],
     "17": [
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "trespass",
         "lemma": "paraptoma"
-      },
-      {
-        "surface": "one man",
-        "lemma": "ehis"
       },
       {
         "surface": "death",
@@ -614,20 +534,8 @@
         "lemma": "basileuo"
       },
       {
-        "surface": "one man",
-        "lemma": "ehis"
-      },
-      {
-        "surface": "how much",
-        "lemma": "polus"
-      },
-      {
         "surface": "more",
         "lemma": "mallon"
-      },
-      {
-        "surface": "receive",
-        "lemma": "lambano"
       },
       {
         "surface": "abundance",
@@ -654,10 +562,6 @@
         "lemma": "zoe"
       },
       {
-        "surface": "one man",
-        "lemma": "ehis"
-      },
-      {
         "surface": "Jesus",
         "lemma": "iesous"
       },
@@ -667,10 +571,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "one",
-        "lemma": "ehis"
-      },
       {
         "surface": "trespass",
         "lemma": "paraptoma"
@@ -685,11 +585,7 @@
       },
       {
         "surface": "so",
-        "lemma": "ohutoohutos"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
+        "lemma": "houto"
       },
       {
         "surface": "act of righteousness",
@@ -714,16 +610,8 @@
         "lemma": "parakoe"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "man",
         "lemma": "anthropos"
-      },
-      {
-        "surface": "many",
-        "lemma": "polus"
       },
       {
         "surface": "were made",
@@ -735,19 +623,11 @@
       },
       {
         "surface": "so",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "obedience",
         "lemma": "hupakoe"
-      },
-      {
-        "surface": "one man",
-        "lemma": "ehis"
-      },
-      {
-        "surface": "many",
-        "lemma": "polus"
       },
       {
         "surface": "will be made",
@@ -777,7 +657,7 @@
       },
       {
         "surface": "where",
-        "lemma": "ohu"
+        "lemma": "hou"
       },
       {
         "surface": "sin",
@@ -811,7 +691,7 @@
       },
       {
         "surface": "so",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "grace",

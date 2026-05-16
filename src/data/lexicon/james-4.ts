@@ -56,9 +56,9 @@ const VERSES: ChapterAlignment['verses'] = {
     { surface: 'humble', lemma: 'tapeinos' },
   ],
   7: [
-    { surface: 'Submit', lemma: 'hypotasso', contextual:
+    { surface: 'Submit', lemma: 'hupotasso', contextual:
       'ὑποτάγητε — military vocabulary: place yourself in formation under your commander. The verse pairs this with ἀντίστητε to the devil: the two postures are faces of one allegiance.' },
-    { surface: 'submit', lemma: 'hypotasso' },
+    { surface: 'submit', lemma: 'hupotasso' },
     { surface: 'devil', lemma: 'diabolos', contextual:
       'διάβολος is Greek for "slanderer" — one who throws accusations between parties. James commands ἀντίστητε ("stand against"); the slanderer flees from the one who stands.' },
   ],
@@ -67,12 +67,12 @@ const VERSES: ChapterAlignment['verses'] = {
       'ἐγγίζω — covenantal approach. The pattern is OT cultic: the priest who drew near to the altar was the priest God drew near to.' },
     { surface: 'draw near', lemma: 'engizo' },
     { surface: 'sinners', lemma: 'hamartia' },
-    { surface: 'double-minded', lemma: 'dipsychos', contextual:
+    { surface: 'double-minded', lemma: 'dipsuchos', contextual:
       'δίψυχος returns from 1:8. James\'s coinage frames the entire problem: two-souled allegiance is the disease that the whole letter prescribes against.' },
   ],
   10: [
     { surface: 'Humble', lemma: 'tapeinos' },
-    { surface: 'Lord', lemma: 'kyrios' },
+    { surface: 'Lord', lemma: 'kurios' },
   ],
   11: [
     { surface: 'speak evil', lemma: 'katalaleo', contextual:
@@ -89,7 +89,7 @@ const VERSES: ChapterAlignment['verses'] = {
     { surface: 'judge', lemma: 'krisis' },
   ],
   15: [
-    { surface: 'Lord', lemma: 'kyrios', contextual:
+    { surface: 'Lord', lemma: 'kurios', contextual:
       'The boasting of 4:13 assumes a tomorrow only the κύριος grants. James\'s "if the Lord wills" is not pious garnish — it is the actual ontology of every plan.' },
   ],
   17: [
@@ -100,7 +100,7 @@ const VERSES: ChapterAlignment['verses'] = {
 // James 4's spine: friendship with the κόσμος as covenant infidelity, the
 // gospel center of "he gives more χάρις" to the humble, and the διψυχος
 // disease returning from chapter 1 — diagnosis carried across the letter.
-const THEME_LEMMAS = ['kosmos', 'charis', 'dipsychos'];
+const THEME_LEMMAS = ['kosmos', 'charis', 'dipsuchos'];
 
 export const JAMES_4_ALIGNMENT: ChapterAlignment = {
   bookId: 59,

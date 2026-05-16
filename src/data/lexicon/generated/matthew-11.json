@@ -52,10 +52,6 @@
         "lemma": "ioannes"
       },
       {
-        "surface": "heard",
-        "lemma": "akouo"
-      },
-      {
         "surface": "prison",
         "lemma": "desmoterion"
       },
@@ -78,10 +74,6 @@
     ],
     "3": [
       {
-        "surface": "to ask",
-        "lemma": "eipon"
-      },
-      {
         "surface": "should we look for",
         "lemma": "prosdokao"
       },
@@ -96,10 +88,6 @@
         "lemma": "iesous"
       },
       {
-        "surface": "replied",
-        "lemma": "apokrino"
-      },
-      {
         "surface": "Go back",
         "lemma": "poreuo"
       },
@@ -110,10 +98,6 @@
       {
         "surface": "to John",
         "lemma": "ioannes"
-      },
-      {
-        "surface": "you hear",
-        "lemma": "akouo"
       },
       {
         "surface": "see",
@@ -148,10 +132,6 @@
       {
         "surface": "the deaf",
         "lemma": "kophos"
-      },
-      {
-        "surface": "hear",
-        "lemma": "akouo"
       },
       {
         "surface": "the dead",
@@ -202,14 +182,6 @@
         "lemma": "ioannes"
       },
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
-        "surface": "did you go out",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "wilderness",
         "lemma": "eremos"
       },
@@ -231,18 +203,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "what",
-        "lemma": "tis"
-      },
-      {
-        "surface": "did you go out",
-        "lemma": "exerchomai"
-      },
-      {
-        "surface": "to see",
-        "lemma": "horao"
-      },
       {
         "surface": "A man",
         "lemma": "anthropos"
@@ -274,18 +234,6 @@
     ],
     "9": [
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
-        "surface": "did you go out",
-        "lemma": "exerchomai"
-      },
-      {
-        "surface": "to see",
-        "lemma": "horao"
-      },
-      {
         "surface": "A prophet",
         "lemma": "prophetes"
       },
@@ -299,10 +247,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "it is written",
-        "lemma": "grapho"
-      },
       {
         "surface": "will send",
         "lemma": "apostello"
@@ -338,10 +282,6 @@
         "lemma": "egeiro"
       },
       {
-        "surface": "one greater",
-        "lemma": "megas"
-      },
-      {
         "surface": "than John",
         "lemma": "ioannes"
       },
@@ -360,10 +300,6 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
-      },
-      {
-        "surface": "greater",
-        "lemma": "megas"
       }
     ],
     "12": [
@@ -424,14 +360,6 @@
     ],
     "14": [
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
-        "surface": "you are willing",
-        "lemma": "thelo"
-      },
-      {
         "surface": "to accept it",
         "lemma": "dechomai"
       },
@@ -448,17 +376,9 @@
       {
         "surface": "ears",
         "lemma": "ous"
-      },
-      {
-        "surface": "let him hear",
-        "lemma": "akouo"
       }
     ],
     "16": [
-      {
-        "surface": "To what",
-        "lemma": "tis"
-      },
       {
         "surface": "can I compare",
         "lemma": "homoioo"
@@ -531,7 +451,7 @@
     "19": [
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of Man",
@@ -622,10 +542,6 @@
         "lemma": "bethsaida"
       },
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "miracles",
         "lemma": "dunamis"
       },
@@ -698,10 +614,6 @@
         "lemma": "hades"
       },
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "miracles",
         "lemma": "dunamis"
       },
@@ -748,14 +660,6 @@
       {
         "surface": "Jesus",
         "lemma": "iesous"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "apokrino"
-      },
-      {
-        "surface": "declared",
-        "lemma": "eipon"
       },
       {
         "surface": "I praise",
@@ -805,7 +709,7 @@
       },
       {
         "surface": "this",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "well-pleasing",
@@ -822,20 +726,12 @@
         "lemma": "pater"
       },
       {
-        "surface": "No one",
-        "lemma": "oudeis"
-      },
-      {
         "surface": "knows",
         "lemma": "epiginosko"
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
-      },
-      {
-        "surface": "except",
-        "lemma": "ei"
+        "lemma": "huios"
       },
       {
         "surface": "Father",
@@ -850,16 +746,12 @@
         "lemma": "pater"
       },
       {
-        "surface": "except",
-        "lemma": "ei"
+        "surface": "Son",
+        "lemma": "huios"
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
-      },
-      {
-        "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "chooses",
@@ -908,10 +800,6 @@
       {
         "surface": "heart",
         "lemma": "kardia"
-      },
-      {
-        "surface": "you will find",
-        "lemma": "ehurisko"
       },
       {
         "surface": "rest",

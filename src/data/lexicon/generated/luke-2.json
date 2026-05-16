@@ -14,10 +14,6 @@
         "lemma": "dogma"
       },
       {
-        "surface": "went out",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "Caesar",
         "lemma": "kaisar"
       },
@@ -81,7 +77,7 @@
       },
       {
         "surface": "Nazareth",
-        "lemma": "nazarethnazara"
+        "lemma": "nazareth"
       },
       {
         "surface": "in Galilee",
@@ -97,7 +93,7 @@
       },
       {
         "surface": "of David",
-        "lemma": "daueiddauiddabid"
+        "lemma": "daueid"
       },
       {
         "surface": "called",
@@ -117,7 +113,7 @@
       },
       {
         "surface": "of David",
-        "lemma": "daueiddauiddabid"
+        "lemma": "daueid"
       }
     ],
     "5": [
@@ -149,7 +145,7 @@
       },
       {
         "surface": "came",
-        "lemma": "plethopimplemi"
+        "lemma": "pletho"
       },
       {
         "surface": "Child to be born",
@@ -167,7 +163,7 @@
       },
       {
         "surface": "a Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "She wrapped Him in swaddling cloths",
@@ -247,10 +243,6 @@
       },
       {
         "surface": "vvv",
-        "lemma": "megas"
-      },
-      {
-        "surface": "vvv",
         "lemma": "phobos"
       },
       {
@@ -264,20 +256,12 @@
         "lemma": "angelos"
       },
       {
-        "surface": "said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "be afraid",
         "lemma": "phobeo"
       },
       {
         "surface": "I bring you good news",
         "lemma": "euangelizomai"
-      },
-      {
-        "surface": "of great",
-        "lemma": "megas"
       },
       {
         "surface": "joy",
@@ -299,7 +283,7 @@
       },
       {
         "surface": "of David",
-        "lemma": "daueiddauiddabid"
+        "lemma": "daueid"
       },
       {
         "surface": "a Savior",
@@ -322,10 +306,6 @@
       {
         "surface": "sign",
         "lemma": "semeion"
-      },
-      {
-        "surface": "You will find",
-        "lemma": "ehurisko"
       },
       {
         "surface": "a baby",
@@ -422,10 +402,6 @@
         "lemma": "poimen"
       },
       {
-        "surface": "said",
-        "lemma": "laleo"
-      },
-      {
         "surface": "one another",
         "lemma": "allelon"
       },
@@ -436,10 +412,6 @@
       {
         "surface": "Bethlehem",
         "lemma": "bethleem"
-      },
-      {
-        "surface": "see",
-        "lemma": "horao"
       },
       {
         "surface": "thing",
@@ -486,10 +458,6 @@
     ],
     "17": [
       {
-        "surface": "they had seen the Child",
-        "lemma": "horao"
-      },
-      {
         "surface": "they spread",
         "lemma": "gnorizo"
       },
@@ -498,19 +466,11 @@
         "lemma": "rhema"
       },
       {
-        "surface": "they had received",
-        "lemma": "laleo"
-      },
-      {
         "surface": "Him",
         "lemma": "paidion"
       }
     ],
     "18": [
-      {
-        "surface": "heard it",
-        "lemma": "akouo"
-      },
       {
         "surface": "were amazed",
         "lemma": "thaumazo"
@@ -518,10 +478,6 @@
       {
         "surface": "shepherds",
         "lemma": "poimen"
-      },
-      {
-        "surface": "said",
-        "lemma": "laleo"
       }
     ],
     "19": [
@@ -566,18 +522,6 @@
       {
         "surface": "God",
         "lemma": "theos"
-      },
-      {
-        "surface": "they had heard",
-        "lemma": "akouo"
-      },
-      {
-        "surface": "seen",
-        "lemma": "horao"
-      },
-      {
-        "surface": "the angel had told",
-        "lemma": "laleo"
       }
     ],
     "21": [
@@ -595,7 +539,7 @@
       },
       {
         "surface": "had passed",
-        "lemma": "plethopimplemi"
+        "lemma": "pletho"
       },
       {
         "surface": "He was named",
@@ -637,11 +581,11 @@
       },
       {
         "surface": "of Moses",
-        "lemma": "mousesmoses"
+        "lemma": "mouses"
       },
       {
         "surface": "was complete",
-        "lemma": "plethopimplemi"
+        "lemma": "pletho"
       },
       {
         "surface": "His parents brought",
@@ -662,10 +606,6 @@
     ],
     "23": [
       {
-        "surface": "it is written",
-        "lemma": "grapho"
-      },
-      {
         "surface": "the Law",
         "lemma": "nomos"
       },
@@ -679,7 +619,7 @@
       },
       {
         "surface": "male",
-        "lemma": "arrenarsen"
+        "lemma": "arren"
       },
       {
         "surface": "shall be consecrated",
@@ -691,10 +631,6 @@
       }
     ],
     "24": [
-      {
-        "surface": "to offer",
-        "lemma": "didomi"
-      },
       {
         "surface": "the sacrifice",
         "lemma": "thusia"
@@ -796,16 +732,8 @@
         "lemma": "chrematizo"
       },
       {
-        "surface": "see",
-        "lemma": "horao"
-      },
-      {
         "surface": "death",
         "lemma": "thanatos"
-      },
-      {
-        "surface": "he had seen",
-        "lemma": "horao"
       },
       {
         "surface": "Lord’s",
@@ -866,10 +794,6 @@
       {
         "surface": "God",
         "lemma": "theos"
-      },
-      {
-        "surface": "saying",
-        "lemma": "eipon"
       }
     ],
     "29": [
@@ -898,10 +822,6 @@
       {
         "surface": "eyes",
         "lemma": "ophthalmos"
-      },
-      {
-        "surface": "have seen",
-        "lemma": "horao"
       },
       {
         "surface": "salvation",
@@ -960,10 +880,6 @@
       {
         "surface": "amazed",
         "lemma": "thaumazo"
-      },
-      {
-        "surface": "was spoken",
-        "lemma": "laleo"
       }
     ],
     "34": [
@@ -974,10 +890,6 @@
       {
         "surface": "blessed",
         "lemma": "eulogeo"
-      },
-      {
-        "surface": "said",
-        "lemma": "eipon"
       },
       {
         "surface": "mother",
@@ -1000,10 +912,6 @@
         "lemma": "ptosis"
       },
       {
-        "surface": "of many",
-        "lemma": "polus"
-      },
-      {
         "surface": "Israel",
         "lemma": "israel"
       },
@@ -1020,10 +928,6 @@
       {
         "surface": "the thoughts",
         "lemma": "dialogismos"
-      },
-      {
-        "surface": "many",
-        "lemma": "polus"
       },
       {
         "surface": "hearts",
@@ -1148,10 +1052,6 @@
         "lemma": "theos"
       },
       {
-        "surface": "spoke",
-        "lemma": "laleo"
-      },
-      {
         "surface": "were waiting for",
         "lemma": "prosdechomai"
       },
@@ -1191,7 +1091,7 @@
       },
       {
         "surface": "of Nazareth",
-        "lemma": "nazarethnazara"
+        "lemma": "nazareth"
       }
     ],
     "40": [
@@ -1304,10 +1204,6 @@
       {
         "surface": "parents",
         "lemma": "goneus"
-      },
-      {
-        "surface": "were unaware He had stayed",
-        "lemma": "ginosko"
       }
     ],
     "44": [
@@ -1337,14 +1233,10 @@
       },
       {
         "surface": "friends",
-        "lemma": "gnostosgnorimos"
+        "lemma": "gnostos"
       }
     ],
     "45": [
-      {
-        "surface": "they could not find Him",
-        "lemma": "ehurisko"
-      },
       {
         "surface": "they returned",
         "lemma": "hupostrepho"
@@ -1368,10 +1260,6 @@
         "lemma": "hemera"
       },
       {
-        "surface": "they found",
-        "lemma": "ehurisko"
-      },
-      {
         "surface": "temple courts",
         "lemma": "hieros"
       },
@@ -1384,19 +1272,11 @@
         "lemma": "didaskalos"
       },
       {
-        "surface": "listening to",
-        "lemma": "akouo"
-      },
-      {
         "surface": "asking them questions",
         "lemma": "eperotao"
       }
     ],
     "47": [
-      {
-        "surface": "heard",
-        "lemma": "akouo"
-      },
       {
         "surface": "were astounded",
         "lemma": "existemi"
@@ -1412,10 +1292,6 @@
     ],
     "48": [
       {
-        "surface": "His parents saw",
-        "lemma": "horao"
-      },
-      {
         "surface": "they were astonished",
         "lemma": "ekplesso"
       },
@@ -1424,20 +1300,12 @@
         "lemma": "teknon"
       },
       {
-        "surface": "why",
-        "lemma": "tis"
-      },
-      {
         "surface": "this",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "mother",
         "lemma": "meter"
-      },
-      {
-        "surface": "asked",
-        "lemma": "eipon"
       },
       {
         "surface": "father",
@@ -1450,20 +1318,8 @@
     ],
     "49": [
       {
-        "surface": "Why",
-        "lemma": "tis"
-      },
-      {
         "surface": "were you looking for",
         "lemma": "zeteo"
-      },
-      {
-        "surface": "He asked",
-        "lemma": "eipon"
-      },
-      {
-        "surface": "Did you not know",
-        "lemma": "eido"
       },
       {
         "surface": "had",
@@ -1482,10 +1338,6 @@
       {
         "surface": "statement",
         "lemma": "rhema"
-      },
-      {
-        "surface": "He was making",
-        "lemma": "laleo"
       }
     ],
     "51": [
@@ -1495,7 +1347,7 @@
       },
       {
         "surface": "Nazareth",
-        "lemma": "nazarethnazara"
+        "lemma": "nazareth"
       },
       {
         "surface": "obedient",

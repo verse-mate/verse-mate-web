@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "I saw",
-        "lemma": "horao"
-      },
-      {
         "surface": "a new",
         "lemma": "kainos"
       },
@@ -51,10 +47,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "I saw",
-        "lemma": "horao"
-      },
       {
         "surface": "holy",
         "lemma": "hagios"
@@ -102,14 +94,6 @@
     ],
     "3": [
       {
-        "surface": "I heard",
-        "lemma": "akouo"
-      },
-      {
-        "surface": "a loud",
-        "lemma": "megas"
-      },
-      {
         "surface": "voice",
         "lemma": "phone"
       },
@@ -153,7 +137,7 @@
       },
       {
         "surface": "tear",
-        "lemma": "dakrudakruon"
+        "lemma": "dakru"
       },
       {
         "surface": "eyes",
@@ -198,16 +182,8 @@
         "lemma": "thronos"
       },
       {
-        "surface": "said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "new",
         "lemma": "kainos"
-      },
-      {
-        "surface": "Write this down",
-        "lemma": "grapho"
       },
       {
         "surface": "words",
@@ -223,10 +199,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "He told",
-        "lemma": "eipon"
-      },
       {
         "surface": "Alpha",
         "lemma": "alpha"
@@ -248,10 +220,6 @@
         "lemma": "dipsao"
       },
       {
-        "surface": "will give",
-        "lemma": "didomi"
-      },
-      {
         "surface": "freely",
         "lemma": "dorean"
       },
@@ -261,7 +229,7 @@
       },
       {
         "surface": "water",
-        "lemma": "hudorhudatos"
+        "lemma": "hudor"
       },
       {
         "surface": "of life",
@@ -283,7 +251,7 @@
       },
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       }
     ],
     "8": [
@@ -350,10 +318,6 @@
     ],
     "9": [
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "seven",
         "lemma": "hepta"
       },
@@ -386,10 +350,6 @@
         "lemma": "plege"
       },
       {
-        "surface": "said",
-        "lemma": "laleo"
-      },
-      {
         "surface": "I will show",
         "lemma": "deiknuo"
       },
@@ -418,10 +378,6 @@
       {
         "surface": "a mountain",
         "lemma": "oros"
-      },
-      {
-        "surface": "great",
-        "lemma": "megas"
       },
       {
         "surface": "high",
@@ -491,10 +447,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "a great",
-        "lemma": "megas"
-      },
       {
         "surface": "high",
         "lemma": "hupselos"
@@ -621,10 +573,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "spoke",
-        "lemma": "laleo"
-      },
       {
         "surface": "a golden",
         "lemma": "chruseos"
@@ -938,10 +886,6 @@
         "lemma": "pulon"
       },
       {
-        "surface": "a single",
-        "lemma": "ehis"
-      },
-      {
         "surface": "pearl",
         "lemma": "margarites"
       },
@@ -971,10 +915,6 @@
       }
     ],
     "22": [
-      {
-        "surface": "I saw",
-        "lemma": "horao"
-      },
       {
         "surface": "temple",
         "lemma": "naos"
@@ -1118,24 +1058,12 @@
         "lemma": "koinos"
       },
       {
-        "surface": "will ever enter",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "an abomination",
         "lemma": "bdelugma"
       },
       {
         "surface": "a lie",
         "lemma": "pseudos"
-      },
-      {
-        "surface": "but only",
-        "lemma": "ei"
-      },
-      {
-        "surface": "names are written",
-        "lemma": "grapho"
       },
       {
         "surface": "Lamb’s",

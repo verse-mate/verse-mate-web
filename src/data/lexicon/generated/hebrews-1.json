@@ -22,10 +22,6 @@
         "lemma": "theos"
       },
       {
-        "surface": "spoke",
-        "lemma": "laleo"
-      },
-      {
         "surface": "fathers",
         "lemma": "pater"
       },
@@ -44,12 +40,8 @@
         "lemma": "hemera"
       },
       {
-        "surface": "He has spoken",
-        "lemma": "laleo"
-      },
-      {
         "surface": "His Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "He appointed",
@@ -150,20 +142,12 @@
     ],
     "5": [
       {
-        "surface": "to which",
-        "lemma": "tis"
-      },
-      {
         "surface": "angels",
         "lemma": "angelos"
       },
       {
-        "surface": "did God ever say",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "today",
@@ -183,7 +167,7 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       }
     ],
     "6": [
@@ -245,7 +229,7 @@
     "8": [
       {
         "surface": "Son He says",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "throne",
@@ -389,10 +373,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "which",
-        "lemma": "tis"
-      },
       {
         "surface": "angels",
         "lemma": "angelos"

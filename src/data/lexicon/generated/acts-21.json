@@ -40,10 +40,6 @@
     ],
     "2": [
       {
-        "surface": "Finding",
-        "lemma": "ehurisko"
-      },
-      {
         "surface": "a ship",
         "lemma": "ploion"
       },
@@ -140,10 +136,6 @@
         "lemma": "pneuma"
       },
       {
-        "surface": "kept telling",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Paul",
         "lemma": "paulos"
       },
@@ -164,10 +156,6 @@
       {
         "surface": "had ended",
         "lemma": "exartizo"
-      },
-      {
-        "surface": "we set out",
-        "lemma": "exerchomai"
       },
       {
         "surface": "on our journey",
@@ -258,19 +246,11 @@
         "lemma": "meno"
       },
       {
-        "surface": "for a",
-        "lemma": "ehis"
-      },
-      {
         "surface": "day",
         "lemma": "hemera"
       }
     ],
     "8": [
-      {
-        "surface": "Leaving",
-        "lemma": "exerchomai"
-      },
       {
         "surface": "next day",
         "lemma": "epaurion"
@@ -278,10 +258,6 @@
       {
         "surface": "Caesarea",
         "lemma": "kaisareia"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "eiserchomai"
       },
       {
         "surface": "stayed",
@@ -329,7 +305,7 @@
       },
       {
         "surface": "several",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "days",
@@ -382,10 +358,6 @@
         "lemma": "cheir"
       },
       {
-        "surface": "and said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Holy",
         "lemma": "hagios"
       },
@@ -395,7 +367,7 @@
       },
       {
         "surface": "In this way",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "Jews",
@@ -428,10 +400,6 @@
     ],
     "12": [
       {
-        "surface": "we heard",
-        "lemma": "akouo"
-      },
-      {
         "surface": "there",
         "lemma": "entopios"
       },
@@ -456,14 +424,6 @@
       {
         "surface": "Paul",
         "lemma": "paulos"
-      },
-      {
-        "surface": "answered",
-        "lemma": "apokrino"
-      },
-      {
-        "surface": "Why",
-        "lemma": "tis"
       },
       {
         "surface": "weeping",
@@ -518,10 +478,6 @@
       {
         "surface": "we quieted down",
         "lemma": "hesuchazo"
-      },
-      {
-        "surface": "and said",
-        "lemma": "eipon"
       },
       {
         "surface": "Lord’s",
@@ -643,10 +599,6 @@
       },
       {
         "surface": "one",
-        "lemma": "ehis"
-      },
-      {
-        "surface": "one",
         "lemma": "hekastos"
       },
       {
@@ -664,20 +616,12 @@
     ],
     "20": [
       {
-        "surface": "When they heard this",
-        "lemma": "akouo"
-      },
-      {
         "surface": "they glorified",
         "lemma": "doxazo"
       },
       {
         "surface": "God",
         "lemma": "theos"
-      },
-      {
-        "surface": "they said",
-        "lemma": "eipon"
       },
       {
         "surface": "You see",
@@ -735,7 +679,7 @@
       },
       {
         "surface": "Moses",
-        "lemma": "mousesmoses"
+        "lemma": "mouses"
       },
       {
         "surface": "to circumcise",
@@ -756,16 +700,8 @@
     ],
     "22": [
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
         "surface": "vvv",
         "lemma": "pantos"
-      },
-      {
-        "surface": "They will certainly hear",
-        "lemma": "akouo"
       }
     ],
     "23": [
@@ -802,14 +738,6 @@
       {
         "surface": "shaved",
         "lemma": "xurao"
-      },
-      {
-        "surface": "will know",
-        "lemma": "ginosko"
-      },
-      {
-        "surface": "is no truth",
-        "lemma": "oudeis"
       },
       {
         "surface": "rumors",
@@ -855,7 +783,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "the meat of strangled animals",
@@ -1105,7 +1033,7 @@
       },
       {
         "surface": "and dragged",
-        "lemma": "helkuohelko"
+        "lemma": "helkuo"
       },
       {
         "surface": "temple",
@@ -1184,10 +1112,6 @@
         "lemma": "katatrecho"
       },
       {
-        "surface": "When the people saw",
-        "lemma": "horao"
-      },
-      {
         "surface": "commander",
         "lemma": "chiliarchos"
       },
@@ -1240,14 +1164,6 @@
       {
         "surface": "he asked",
         "lemma": "punthanomai"
-      },
-      {
-        "surface": "who",
-        "lemma": "tis"
-      },
-      {
-        "surface": "what",
-        "lemma": "tis"
       }
     ],
     "34": [
@@ -1266,14 +1182,6 @@
       {
         "surface": "another",
         "lemma": "allos"
-      },
-      {
-        "surface": "could not",
-        "lemma": "dunamai"
-      },
-      {
-        "surface": "get at",
-        "lemma": "ginosko"
       },
       {
         "surface": "truth",
@@ -1358,20 +1266,8 @@
         "lemma": "chiliarchos"
       },
       {
-        "surface": "vvv",
-        "lemma": "ei"
-      },
-      {
         "surface": "May",
-        "lemma": "exestiexon"
-      },
-      {
-        "surface": "say",
-        "lemma": "eipon"
-      },
-      {
-        "surface": "Do you speak",
-        "lemma": "ginosko"
+        "lemma": "exesti"
       },
       {
         "surface": "Greek",
@@ -1418,10 +1314,6 @@
         "lemma": "paulos"
       },
       {
-        "surface": "answered",
-        "lemma": "eipon"
-      },
-      {
         "surface": "a Jew",
         "lemma": "ioudaios"
       },
@@ -1431,7 +1323,7 @@
       },
       {
         "surface": "in Cilicia",
-        "lemma": "kilikiakilikia"
+        "lemma": "kilikia"
       },
       {
         "surface": "a citizen of",
@@ -1454,10 +1346,6 @@
         "lemma": "epitrepo"
       },
       {
-        "surface": "to speak",
-        "lemma": "laleo"
-      },
-      {
         "surface": "people",
         "lemma": "laos"
       }
@@ -1472,10 +1360,6 @@
         "lemma": "paulos"
       },
       {
-        "surface": "stood",
-        "lemma": "histemi"
-      },
-      {
         "surface": "steps",
         "lemma": "anabathmos"
       },
@@ -1486,10 +1370,6 @@
       {
         "surface": "crowd",
         "lemma": "laos"
-      },
-      {
-        "surface": "A great",
-        "lemma": "polus"
       },
       {
         "surface": "hush",

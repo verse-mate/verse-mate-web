@@ -18,10 +18,6 @@
         "lemma": "pater"
       },
       {
-        "surface": "listen",
-        "lemma": "akouo"
-      },
-      {
         "surface": "now",
         "lemma": "nuni"
       },
@@ -31,10 +27,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "they heard",
-        "lemma": "akouo"
-      },
       {
         "surface": "him speak to",
         "lemma": "prosphoneo"
@@ -75,7 +67,7 @@
       },
       {
         "surface": "of Cilicia",
-        "lemma": "kilikiakilikia"
+        "lemma": "kilikia"
       },
       {
         "surface": "raised",
@@ -258,10 +250,6 @@
         "lemma": "edaphos"
       },
       {
-        "surface": "heard",
-        "lemma": "akouo"
-      },
-      {
         "surface": "a voice",
         "lemma": "phone"
       },
@@ -274,26 +262,14 @@
         "lemma": "saoul"
       },
       {
-        "surface": "why",
-        "lemma": "tis"
-      },
-      {
         "surface": "do you persecute",
         "lemma": "dioko"
       }
     ],
     "8": [
       {
-        "surface": "Who",
-        "lemma": "tis"
-      },
-      {
         "surface": "Lord",
         "lemma": "kurios"
-      },
-      {
-        "surface": "asked",
-        "lemma": "apokrino"
       },
       {
         "surface": "Jesus",
@@ -306,10 +282,6 @@
       {
         "surface": "are persecuting",
         "lemma": "dioko"
-      },
-      {
-        "surface": "He replied",
-        "lemma": "eipon"
       }
     ],
     "9": [
@@ -322,27 +294,11 @@
         "lemma": "phos"
       },
       {
-        "surface": "they could not understand",
-        "lemma": "akouo"
-      },
-      {
         "surface": "voice",
         "lemma": "phone"
-      },
-      {
-        "surface": "speaking",
-        "lemma": "laleo"
       }
     ],
     "10": [
-      {
-        "surface": "I asked",
-        "lemma": "eipon"
-      },
-      {
-        "surface": "What",
-        "lemma": "tis"
-      },
       {
         "surface": "Lord",
         "lemma": "kurios"
@@ -364,16 +320,8 @@
         "lemma": "kurios"
       },
       {
-        "surface": "told",
-        "lemma": "eipon"
-      },
-      {
         "surface": "There",
         "lemma": "kakei"
-      },
-      {
-        "surface": "will be told",
-        "lemma": "laleo"
       },
       {
         "surface": "have been appointed",
@@ -446,10 +394,6 @@
         "lemma": "saoul"
       },
       {
-        "surface": "he said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "receive your sight",
         "lemma": "anablepo"
       },
@@ -464,10 +408,6 @@
     ],
     "14": [
       {
-        "surface": "he said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -480,24 +420,12 @@
         "lemma": "procheirizo"
       },
       {
-        "surface": "to know",
-        "lemma": "ginosko"
-      },
-      {
         "surface": "will",
         "lemma": "thelema"
       },
       {
-        "surface": "to see",
-        "lemma": "horao"
-      },
-      {
         "surface": "Righteous One",
         "lemma": "dikaios"
-      },
-      {
-        "surface": "to hear",
-        "lemma": "akouo"
       },
       {
         "surface": "His voice",
@@ -508,24 +436,12 @@
       {
         "surface": "witness",
         "lemma": "martus"
-      },
-      {
-        "surface": "you have seen",
-        "lemma": "horao"
-      },
-      {
-        "surface": "heard",
-        "lemma": "akouo"
       }
     ],
     "16": [
       {
         "surface": "now",
         "lemma": "nun"
-      },
-      {
-        "surface": "what",
-        "lemma": "tis"
       },
       {
         "surface": "are you waiting for",
@@ -580,16 +496,8 @@
     ],
     "18": [
       {
-        "surface": "saw",
-        "lemma": "horao"
-      },
-      {
         "surface": "Hurry",
         "lemma": "speudo"
-      },
-      {
-        "surface": "Leave",
-        "lemma": "exerchomai"
       },
       {
         "surface": "Jerusalem",
@@ -612,10 +520,6 @@
       {
         "surface": "Lord",
         "lemma": "kurios"
-      },
-      {
-        "surface": "answered",
-        "lemma": "eipon"
       },
       {
         "surface": "they know very well",
@@ -641,7 +545,7 @@
     "20": [
       {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "witness",
@@ -678,10 +582,6 @@
     ],
     "21": [
       {
-        "surface": "He said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Go",
         "lemma": "poreuo"
       },
@@ -699,10 +599,6 @@
       }
     ],
     "22": [
-      {
-        "surface": "The crowd listened",
-        "lemma": "akouo"
-      },
       {
         "surface": "he made this statement",
         "lemma": "logos"
@@ -776,10 +672,6 @@
         "lemma": "parembole"
       },
       {
-        "surface": "He directed that",
-        "lemma": "eipon"
-      },
-      {
         "surface": "be flogged",
         "lemma": "mastix"
       },
@@ -797,7 +689,7 @@
       },
       {
         "surface": "this",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "outcry",
@@ -818,24 +710,12 @@
         "lemma": "paulos"
       },
       {
-        "surface": "said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "centurion",
         "lemma": "hekatontarchos"
       },
       {
-        "surface": "standing there",
-        "lemma": "histemi"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "ei"
-      },
-      {
         "surface": "Is it lawful",
-        "lemma": "exestiexon"
+        "lemma": "exesti"
       },
       {
         "surface": "to flog",
@@ -856,10 +736,6 @@
     ],
     "26": [
       {
-        "surface": "hearing this",
-        "lemma": "akouo"
-      },
-      {
         "surface": "centurion",
         "lemma": "hekatontarchos"
       },
@@ -874,10 +750,6 @@
       {
         "surface": "commander",
         "lemma": "chiliarchos"
-      },
-      {
-        "surface": "What",
-        "lemma": "tis"
       },
       {
         "surface": "are you going",
@@ -902,10 +774,6 @@
         "lemma": "proserchomai"
       },
       {
-        "surface": "and asked",
-        "lemma": "eipon"
-      },
-      {
         "surface": "a Roman citizen",
         "lemma": "rhomaios"
       },
@@ -920,20 +788,12 @@
         "lemma": "ktaomai"
       },
       {
-        "surface": "a high",
-        "lemma": "polus"
-      },
-      {
         "surface": "price",
         "lemma": "kephalaios"
       },
       {
         "surface": "citizenship",
         "lemma": "politeia"
-      },
-      {
-        "surface": "said",
-        "lemma": "apokrino"
       },
       {
         "surface": "commander",
@@ -996,10 +856,6 @@
         "lemma": "boulomai"
       },
       {
-        "surface": "to learn",
-        "lemma": "ginosko"
-      },
-      {
         "surface": "the real reason",
         "lemma": "asphales"
       },
@@ -1038,10 +894,6 @@
       {
         "surface": "Paul {down",
         "lemma": "paulos"
-      },
-      {
-        "surface": "and had him stand",
-        "lemma": "histemi"
       }
     ]
   },

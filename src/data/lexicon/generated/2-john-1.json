@@ -34,10 +34,6 @@
         "lemma": "monos"
       },
       {
-        "surface": "know",
-        "lemma": "ginosko"
-      },
-      {
         "surface": "truth",
         "lemma": "aletheia"
       }
@@ -87,7 +83,7 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "Father",
@@ -108,10 +104,6 @@
         "lemma": "chairo"
       },
       {
-        "surface": "find",
-        "lemma": "ehurisko"
-      },
-      {
         "surface": "children",
         "lemma": "teknon"
       },
@@ -130,10 +122,6 @@
       {
         "surface": "has commanded",
         "lemma": "entole"
-      },
-      {
-        "surface": "us",
-        "lemma": "lambano"
       }
     ],
     "5": [
@@ -188,10 +176,6 @@
         "lemma": "entole"
       },
       {
-        "surface": "you have heard",
-        "lemma": "akouo"
-      },
-      {
         "surface": "the beginning",
         "lemma": "arche"
       },
@@ -202,16 +186,8 @@
     ],
     "7": [
       {
-        "surface": "many",
-        "lemma": "polus"
-      },
-      {
         "surface": "deceivers",
         "lemma": "planos"
-      },
-      {
-        "surface": "have gone out",
-        "lemma": "exerchomai"
       },
       {
         "surface": "world",
@@ -295,14 +271,10 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       }
     ],
     "10": [
-      {
-        "surface": "If",
-        "lemma": "ei"
-      },
       {
         "surface": "does not bring",
         "lemma": "phero"
@@ -310,10 +282,6 @@
       {
         "surface": "teaching",
         "lemma": "didache"
-      },
-      {
-        "surface": "receive",
-        "lemma": "lambano"
       },
       {
         "surface": "your home",
@@ -336,14 +304,6 @@
     ],
     "12": [
       {
-        "surface": "many things",
-        "lemma": "polus"
-      },
-      {
-        "surface": "to write",
-        "lemma": "grapho"
-      },
-      {
         "surface": "but I would prefer",
         "lemma": "boulomai"
       },
@@ -358,10 +318,6 @@
       {
         "surface": "I hope",
         "lemma": "elpizo"
-      },
-      {
-        "surface": "speak",
-        "lemma": "laleo"
       },
       {
         "surface": "face",

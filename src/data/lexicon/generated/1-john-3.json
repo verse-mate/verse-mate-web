@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Behold",
-        "lemma": "horao"
-      },
-      {
         "surface": "what manner of",
         "lemma": "potapos"
       },
@@ -20,10 +16,6 @@
       {
         "surface": "Father",
         "lemma": "pater"
-      },
-      {
-        "surface": "has given",
-        "lemma": "didomi"
       },
       {
         "surface": "we should be called",
@@ -40,14 +32,6 @@
       {
         "surface": "world",
         "lemma": "kosmos"
-      },
-      {
-        "surface": "does not know",
-        "lemma": "ginosko"
-      },
-      {
-        "surface": "it did not know",
-        "lemma": "ginosko"
       }
     ],
     "2": [
@@ -68,10 +52,6 @@
         "lemma": "theos"
       },
       {
-        "surface": "what",
-        "lemma": "tis"
-      },
-      {
         "surface": "has} not yet",
         "lemma": "oupo"
       },
@@ -80,24 +60,12 @@
         "lemma": "phaneroo"
       },
       {
-        "surface": "We know",
-        "lemma": "eido"
-      },
-      {
-        "surface": "when",
-        "lemma": "ean"
-      },
-      {
         "surface": "Christ appears",
         "lemma": "phaneroo"
       },
       {
         "surface": "like",
         "lemma": "homoios"
-      },
-      {
-        "surface": "we will see",
-        "lemma": "horao"
       }
     ],
     "3": [
@@ -134,10 +102,6 @@
     ],
     "5": [
       {
-        "surface": "you know",
-        "lemma": "eido"
-      },
-      {
         "surface": "appeared",
         "lemma": "phaneroo"
       },
@@ -166,14 +130,6 @@
       {
         "surface": "continues to sin",
         "lemma": "hamartano"
-      },
-      {
-        "surface": "has seen",
-        "lemma": "horao"
-      },
-      {
-        "surface": "known",
-        "lemma": "ginosko"
       }
     ],
     "7": [
@@ -225,7 +181,7 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of God",
@@ -268,10 +224,6 @@
       {
         "surface": "abides",
         "lemma": "meno"
-      },
-      {
-        "surface": "he cannot",
-        "lemma": "dunamai"
       },
       {
         "surface": "go on sinning",
@@ -328,10 +280,6 @@
       {
         "surface": "message",
         "lemma": "angelia"
-      },
-      {
-        "surface": "you have heard",
-        "lemma": "akouo"
       },
       {
         "surface": "the beginning",
@@ -394,10 +342,6 @@
         "lemma": "adelphos"
       },
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "world",
         "lemma": "kosmos"
       },
@@ -407,10 +351,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "know",
-        "lemma": "eido"
-      },
       {
         "surface": "we have passed",
         "lemma": "metabaino"
@@ -458,10 +398,6 @@
         "lemma": "anthropoktonos"
       },
       {
-        "surface": "you know",
-        "lemma": "eido"
-      },
-      {
         "surface": "eternal",
         "lemma": "aionios"
       },
@@ -479,10 +415,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "we know",
-        "lemma": "ginosko"
-      },
       {
         "surface": "love is",
         "lemma": "agape"
@@ -586,10 +518,6 @@
     ],
     "19": [
       {
-        "surface": "we will know",
-        "lemma": "ginosko"
-      },
-      {
         "surface": "truth",
         "lemma": "aletheia"
       },
@@ -604,10 +532,6 @@
     ],
     "20": [
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "hearts",
         "lemma": "kardia"
       },
@@ -620,26 +544,14 @@
         "lemma": "theos"
       },
       {
-        "surface": "greater than",
-        "lemma": "megas"
-      },
-      {
         "surface": "hearts",
         "lemma": "kardia"
-      },
-      {
-        "surface": "He knows",
-        "lemma": "ginosko"
       }
     ],
     "21": [
       {
         "surface": "Beloved",
         "lemma": "agapetos"
-      },
-      {
-        "surface": "if",
-        "lemma": "ean"
       },
       {
         "surface": "hearts",
@@ -659,10 +571,6 @@
       }
     ],
     "22": [
-      {
-        "surface": "we will receive",
-        "lemma": "lambano"
-      },
       {
         "surface": "we ask",
         "lemma": "aiteo"
@@ -695,7 +603,7 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "Jesus",
@@ -712,10 +620,6 @@
       {
         "surface": "one another",
         "lemma": "allelon"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "didomi"
       },
       {
         "surface": "He commanded",
@@ -736,20 +640,12 @@
         "lemma": "meno"
       },
       {
-        "surface": "we know",
-        "lemma": "ginosko"
-      },
-      {
         "surface": "He remains",
         "lemma": "meno"
       },
       {
         "surface": "Spirit",
         "lemma": "pneuma"
-      },
-      {
-        "surface": "He has given",
-        "lemma": "didomi"
       }
     ]
   },

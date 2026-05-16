@@ -3,7 +3,7 @@ import { LexEntry, LemmaKey } from './types';
 // ─────────────────────────────────────────────────────────────────────────
 // Shared lexicon for the James prototype. Every chapter alignment imports
 // this single source of truth so words that recur (logos, sophia, doulos,
-// dipsychos, plousios, hypomonē) get one definition, not five.
+// dipsuchos, plousios, hypomonē) get one definition, not five.
 //
 // Every entry populates the same fields so cards render with identical
 // rhythm: lemma, translit, pronunciation, strongs, pos, basicGloss,
@@ -321,9 +321,9 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'James 4:6 quotes Prov 3:34: God "gives greater χάρις" to the humble. χάρις is not abstract attitude — it is concrete divine giving in answer to a posture of need.',
   },
-  chrysodaktylios: {
+  chrusodaktulios: {
     lemma: 'χρυσοδακτύλιος',
-    translit: 'chrysodaktylios',
+    translit: 'chrusodaktulios',
     pronunciation: 'khroo-soh-dak-TOO-lee-oss',
     strongs: 'G5554',
     pos: 'Adjective',
@@ -449,7 +449,7 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'Paul (Rom 4) uses δικαιόω forensically of God\'s declaring sinners righteous by faith alone. James (Jas 2:21, 24, 25) uses the same verb of the visible vindication of that faith by works. Calvin: faith alone justifies, but the faith that justifies is not alone.',
   },
-  dikaiosyne: {
+  dikaiosune: {
     lemma: 'δικαιοσύνη',
     translit: 'dikaiosynē',
     pronunciation: 'dih-kai-oh-SOO-nay',
@@ -472,9 +472,9 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'Don\'t collapse to moralism or imputed righteousness alone. James 1:20 stays in the relational/ethical register — the kind of right-with-God-and-neighbor life that human ὀργή cannot produce.',
   },
-  dipsychos: {
+  dipsuchos: {
     lemma: 'δίψυχος',
-    translit: 'dipsychos',
+    translit: 'dipsuchos',
     pronunciation: 'DIP-soo-khoss',
     strongs: 'G1374',
     pos: 'Adjective',
@@ -648,9 +648,9 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'In the first century, ἔλαιον was both medicine (Lk 10:34, Good Samaritan) and sacrament (priestly anointing). James 5:14\'s anointing-with-oil holds both — pastoral care that is also a sign of the Lord\'s naming.',
   },
-  emphytos: {
+  emphutos: {
     lemma: 'ἔμφυτος',
-    translit: 'emphytos',
+    translit: 'emphutos',
     pronunciation: 'EM-foo-toss',
     strongs: 'G1721',
     pos: 'Adjective',
@@ -733,9 +733,9 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'James 3:15 stacks three adjectives — earthly, ψυχικός, demonic — for wisdom that does not come ἄνωθεν (from above). ἐπίγειος locates such wisdom by altitude: it does not see beyond ground level.',
   },
-  epithymia: {
+  epithumia: {
     lemma: 'ἐπιθυμία',
-    translit: 'epithymia',
+    translit: 'epithumia',
     pronunciation: 'epp-ee-thoo-MEE-ah',
     strongs: 'G1939',
     pos: 'Noun (fem.)',
@@ -966,7 +966,7 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     related: [
       { lemma: 'ἁπλοῦς', translit: 'haplous', note: 'adjective — single, undivided' },
       { lemma: 'ἁπλότης', translit: 'haplotēs', note: 'noun — singleness, simplicity, generosity (Rom 12:8; 2 Cor 8:2)' },
-      { lemma: 'δίψυχος', translit: 'dipsychos', note: 'antonym in James — two-souled, divided' },
+      { lemma: 'δίψυχος', translit: 'dipsuchos', note: 'antonym in James — two-souled, divided' },
     ],
     notes:
       'Translators split: "generously" (ESV/NIV) vs "without reproach"/"singly" (older). The root ἁπλοῦς means "single, undivided," opposite of the διψυχος ("two-souled") man in v8 — God\'s giving is the antithesis of doubting.',
@@ -986,7 +986,7 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     ntFrequency: 5,
     loaded: false,
     related: [
-      { lemma: 'ἐπιθυμία', translit: 'epithymia', note: 'desire — the inner drive behind ἡδονή' },
+      { lemma: 'ἐπιθυμία', translit: 'epithumia', note: 'desire — the inner drive behind ἡδονή' },
       { lemma: 'πάθος', translit: 'pathos', note: 'passion — neighbor in the NT vice lists' },
     ],
     notes:
@@ -1056,9 +1056,9 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'Literally "showing oneself over" — the strut of self-exhibition. James 4:6 (quoting Prov 3:34 LXX) places ὑπερήφανος as God\'s structural opposite: grace flows downhill, away from the elevated self.',
   },
-  hyetos: {
+  huetos: {
     lemma: 'ὑετός',
-    translit: 'hyetos',
+    translit: 'huetos',
     pronunciation: 'hoo-eh-TOSS',
     strongs: 'G5205',
     pos: 'Noun (masc.)',
@@ -1076,7 +1076,7 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'Palestinian agriculture depended on πρόϊμος + ὄψιμος rains. Both are named in Jas 5:7. James\'s readers heard the prophets (Deut 11:14; Joel 2:23): rain is covenant blessing, withheld for covenant breach. The farmer\'s patience is faith that the covenant still holds.',
   },
-  hypomone: {
+  hupomone: {
     lemma: 'ὑπομονή',
     translit: 'hypomonē',
     pronunciation: 'hoo-pom-on-AY',
@@ -1093,13 +1093,13 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     loaded: false,
     related: [
       { lemma: 'ὑπομένω', translit: 'hypomenō', note: 'verb form — to bear up, to remain under' },
-      { lemma: 'μακροθυμία', translit: 'makrothymia', note: 'long-suffering toward people; ὑπομονή is toward circumstances' },
+      { lemma: 'μακροθυμία', translit: 'makrothumia', note: 'long-suffering toward people; ὑπομονή is toward circumstances' },
       { lemma: 'καρτερία', translit: 'karteria', note: 'classical Greek — perseverance, toughness' },
     ],
     notes:
       'ὑπό ("under") + μονή ("remaining"). Not Stoic detachment — active, hope-fueled remaining under weight. Forms an inclusio in James: from 1:3–4 to 5:11, the whole letter is bracketed by ὑπομονή.',
   },
-  hypotasso: {
+  hupotasso: {
     lemma: 'ὑποτάσσω',
     translit: 'hypotassō',
     pronunciation: 'hoo-poh-TAS-so',
@@ -1249,9 +1249,9 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'James 2:13 sets ἔλεος (mercy) and κρίσις (judgment) in a contest mercy wins — "mercy triumphs over judgment." Not because justice fails but because in Christ judgment is satisfied and mercy released.',
   },
-  kyrios: {
+  kurios: {
     lemma: 'κύριος',
-    translit: 'kyrios',
+    translit: 'kurios',
     pronunciation: 'KOO-ree-oss',
     strongs: 'G2962',
     pos: 'Noun (masc.)',
@@ -1296,9 +1296,9 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'Across James 1 the λόγος is the gospel of new birth (v18), the implanted saving word (v21), and the standard for obedience (v22–25). It is never abstract reason — it is the announced message of Christ.',
   },
-  makrothymia: {
+  makrothumia: {
     lemma: 'μακροθυμία',
-    translit: 'makrothymia',
+    translit: 'makrothumia',
     pronunciation: 'mak-roh-thoo-MEE-ah',
     strongs: 'G3115',
     pos: 'Noun (fem.)',
@@ -1758,7 +1758,7 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'James 5:13–18 contains the densest prayer-vocabulary in the NT epistles — seven prayer-words in six verses. Prayer is named as the believer\'s response to every condition: suffering, joy, illness, sin.',
   },
-  prosopolempsia: {
+  prosopolepsia: {
     lemma: 'προσωπολημψία',
     translit: 'prosōpolēmpsia',
     pronunciation: 'pros-oh-poh-LAMP-see-ah',
@@ -1779,9 +1779,9 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'A Christian Greek coinage from a Hebrew idiom (לֹא תִּשָּׂא פָנִים — "to lift the face"). James 2:1 charges that προσωπολημψία is incompatible with allegiance to "our glorious Lord" — God is no face-receiver.',
   },
-  psychikos: {
+  psuchikos: {
     lemma: 'ψυχικός',
-    translit: 'psychikos',
+    translit: 'psuchikos',
     pronunciation: 'psoo-khee-KOSS',
     strongs: 'G5591',
     pos: 'Adjective',
@@ -1823,9 +1823,9 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'James 2:5 — "did not God choose the πτωχοί of the world to be rich in faith?" The same word the LXX uses of the anawim, YHWH\'s poor ones. The contrast with the gold-ringed visitor of 2:2 is sharp by design.',
   },
-  pyr: {
+  pur: {
     lemma: 'πῦρ',
-    translit: 'pyr',
+    translit: 'pur',
     pronunciation: 'poor',
     strongs: 'G4442',
     pos: 'Noun (neut.)',
@@ -1913,7 +1913,7 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     notes:
       'Not the διάδημα (royal diadem) but the athletic στέφανος — the woven wreath placed on the victor at the Isthmian or Olympic games. The image is athletic perseverance, not coronation.',
   },
-  synagoge: {
+  sunagoge: {
     lemma: 'συναγωγή',
     translit: 'synagōgē',
     pronunciation: 'soo-nah-go-GAY',
@@ -2045,5 +2045,818 @@ export const LEXICON: Record<LemmaKey, LexEntry> = {
     ],
     notes:
       'Greek ζῆλος is morally ambiguous — context decides whether it is the prophet\'s fire or the rival\'s acid. In Jas 3:14 ("bitter ζῆλος") the qualifier closes the ambiguity: this is the curdled kind.',
+  },
+
+  // ─────────────────────────────────────────────────────────────────────
+  // High-frequency NT content lemmas — promoted from auto-generated to
+  // hand-curated so that every chapter (not just James) renders cards
+  // with the same depth: semanticRange, related, pronunciation, notes.
+  // Ordered alphabetically by slug. Each entry overrides the TBESG
+  // auto-generated stub in src/data/lexicon/generated/_lemmas.json via
+  // the merge in src/data/lexicon/index.ts.
+  // ─────────────────────────────────────────────────────────────────────
+
+  aletheia: {
+    lemma: 'ἀλήθεια',
+    translit: 'alētheia',
+    pronunciation: 'ah-LAY-thay-ah',
+    strongs: 'G225',
+    pos: 'Noun (fem.)',
+    basicGloss: 'truth, reality, the way things are',
+    semanticRange: [
+      'truthfulness (the quality of speech that matches reality)',
+      'reality / fact (what is actually the case)',
+      'the truth of God / the gospel (Johannine and Pauline shorthand)',
+      'integrity, sincerity (1 Cor 5:8)',
+    ],
+    ntFrequency: 109,
+    loaded: true,
+    related: [
+      { lemma: 'ἀληθής', translit: 'alēthēs', note: 'adjective — true, truthful' },
+      { lemma: 'ἀληθινός', translit: 'alēthinos', note: 'adjective — genuine, real (Johannine emphasis)' },
+      { lemma: 'ψεῦδος', translit: 'pseudos', note: 'antonym — falsehood, lie' },
+    ],
+    notes:
+      'In Johannine literature ἀλήθεια often means more than "accurate statement" — it is reality as God knows it, embodied in Christ ("I am the way, the truth, and the life," Jn 14:6). The truth is not just spoken but encountered.',
+  },
+  anthropos: {
+    lemma: 'ἄνθρωπος',
+    translit: 'anthrōpos',
+    pronunciation: 'AN-thro-poss',
+    strongs: 'G444',
+    pos: 'Noun (masc.)',
+    basicGloss: 'a human being, a person',
+    semanticRange: [
+      'a human being (generic, either sex)',
+      'an adult male (sometimes contrasted with γυνή)',
+      'humanity as a class ("the human")',
+      'the Son of Man title (ὁ υἱὸς τοῦ ἀνθρώπου) when articulated',
+    ],
+    ntFrequency: 550,
+    loaded: false,
+    related: [
+      { lemma: 'ἀνήρ', translit: 'anēr', note: 'adult male specifically — narrower than ἄνθρωπος' },
+      { lemma: 'γυνή', translit: 'gynē', note: 'woman, wife' },
+    ],
+    notes:
+      'ἄνθρωπος is the generic word for "human" — covers both sexes. Distinct from ἀνήρ (adult male) when the NT means to mark gender. Jesus\' "Son of Man" title (a Danielic echo) uses ἄνθρωπος as the second element.',
+  },
+  apologia: {
+    lemma: 'ἀπολογία',
+    translit: 'apologia',
+    pronunciation: 'ah-poh-loh-GEE-ah',
+    strongs: 'G627',
+    pos: 'Noun (fem.)',
+    basicGloss: 'a defense, a reasoned reply',
+    semanticRange: [
+      'a defense in legal proceedings',
+      'a reasoned reply to a charge or accusation',
+      'a verbal account of the hope within (1 Pet 3:15)',
+    ],
+    ntFrequency: 8,
+    loaded: false,
+    related: [
+      { lemma: 'ἀπολογέομαι', translit: 'apologeomai', note: 'verb — to make a defense' },
+      { lemma: 'λόγος', translit: 'logos', note: 'the "word" that backs the defense' },
+    ],
+    notes:
+      'Source of English "apology" — but the Greek means reasoned defense, not regret. Paul in Phil 1:7,16 frames his imprisonment as ἀπολογία (defense) and βεβαίωσις (confirmation) of the gospel — his chains argue for Christ.',
+  },
+  basileia: {
+    lemma: 'βασιλεία',
+    translit: 'basileia',
+    pronunciation: 'bah-sih-LAY-ah',
+    strongs: 'G932',
+    pos: 'Noun (fem.)',
+    basicGloss: 'kingdom, reign, royal rule',
+    semanticRange: [
+      'royal power / kingship (the act of reigning, dynamic)',
+      'royal domain / territory ruled (the realm, spatial)',
+      'in Jesus\' preaching — God\'s saving reign breaking into history',
+      'the eschatological kingdom that comes in fullness at the παρουσία',
+    ],
+    ntFrequency: 162,
+    loaded: true,
+    related: [
+      { lemma: 'βασιλεύς', translit: 'basileus', note: 'king — the one who exercises βασιλεία' },
+      { lemma: 'βασιλεύω', translit: 'basileuō', note: 'verb — to reign' },
+      { lemma: 'θρόνος', translit: 'thronos', note: 'throne — locus of βασιλεία' },
+    ],
+    notes:
+      'Often "kingdom of God" / "kingdom of heaven" — Matthew prefers the latter as a Jewish circumlocution. Already/not-yet: arrived in Christ\'s ministry, awaiting consummation at his return. Not chiefly a place; chiefly a reign.',
+  },
+  chairo: {
+    lemma: 'χαίρω',
+    translit: 'chairō',
+    pronunciation: 'KHAI-roh',
+    strongs: 'G5463',
+    pos: 'Verb',
+    basicGloss: 'to rejoice, be glad',
+    semanticRange: [
+      'to feel joy, be glad',
+      'to be in a good state (the imperative as greeting — "Hail!" / "Rejoice!")',
+      'to rejoice in a settled disposition that does not depend on circumstance (Pauline usage)',
+    ],
+    ntFrequency: 74,
+    loaded: false,
+    related: [
+      { lemma: 'χαρά', translit: 'chara', note: 'noun — joy' },
+      { lemma: 'συγχαίρω', translit: 'sygchairō', note: 'to rejoice with someone — communal form' },
+      { lemma: 'χάρις', translit: 'charis', note: 'grace — same χαρ- root (gift / joy / favor)' },
+    ],
+    notes:
+      'Philippians is the χαίρω letter — Paul uses it 9× from a Roman prison cell, including the famous "rejoice in the Lord always; again I say, rejoice" (4:4). The verb is imperative twice in that verse; joy is commanded, not summoned by mood.',
+  },
+  chara: {
+    lemma: 'χαρά',
+    translit: 'chara',
+    pronunciation: 'kha-RAH',
+    strongs: 'G5479',
+    pos: 'Noun (fem.)',
+    basicGloss: 'joy, gladness',
+    semanticRange: [
+      'a settled state of joy',
+      'the source of joy (the joyful person or thing — Phil 4:1)',
+      'eschatological joy ("enter into the joy of your master," Mt 25:21)',
+    ],
+    ntFrequency: 59,
+    loaded: false,
+    related: [
+      { lemma: 'χαίρω', translit: 'chairō', note: 'verb — to rejoice' },
+      { lemma: 'χάρις', translit: 'charis', note: 'grace — same χαρ- root' },
+      { lemma: 'εὐφραίνω', translit: 'euphrainō', note: 'to make merry / cheer' },
+    ],
+    notes:
+      'χαρά and χάρις share a root; the joy is the receiver\'s response to grace given. Fruit of the Spirit (Gal 5:22) — not produced by effort but by indwelling.',
+  },
+  christos: {
+    lemma: 'Χριστός',
+    translit: 'Christos',
+    pronunciation: 'kris-TOSS',
+    strongs: 'G5547',
+    pos: 'Noun (masc.) — title',
+    basicGloss: 'the Anointed One, Messiah',
+    semanticRange: [
+      'literally "anointed" (adj., used of priests, kings, prophets in LXX)',
+      'as title — the Anointed One, Israel\'s expected deliverer',
+      'as name — fused with Ἰησοῦς in NT usage ("Jesus Christ")',
+    ],
+    ntFrequency: 529,
+    loaded: true,
+    related: [
+      { lemma: 'χρίω', translit: 'chriō', note: 'verb — to anoint (root of Χριστός)' },
+      { lemma: 'χρῖσμα', translit: 'chrisma', note: 'noun — anointing (1 Jn 2:20, 27)' },
+      { lemma: 'μεσσίας', translit: 'messias', note: 'Hebrew loanword (מָשִׁיחַ) — semantic equivalent' },
+    ],
+    notes:
+      'Χριστός is the LXX translation of Hebrew מָשִׁיחַ ("anointed one") — the messianic title carried through Israel\'s priest-king-prophet anointings. Already in Paul, Χριστός functions sometimes as title ("the Christ") and sometimes as proper name ("Christ Jesus" / "Jesus Christ") with full Lordship freight.',
+  },
+  desmos: {
+    lemma: 'δεσμός',
+    translit: 'desmos',
+    pronunciation: 'des-MOSS',
+    strongs: 'G1199',
+    pos: 'Noun (masc.)',
+    basicGloss: 'a bond, fetter, imprisonment',
+    semanticRange: [
+      'a literal binding (rope, chain)',
+      'imprisonment / state of being in chains',
+      'an impediment to speech or movement (Lk 13:16; Mk 7:35)',
+    ],
+    ntFrequency: 18,
+    loaded: false,
+    related: [
+      { lemma: 'δέω', translit: 'deō', note: 'verb — to bind' },
+      { lemma: 'δέσμιος', translit: 'desmios', note: 'noun — a prisoner' },
+      { lemma: 'φυλακή', translit: 'phylakē', note: 'guard / prison — the place of δεσμοί' },
+    ],
+    notes:
+      'Paul names his δεσμοί 6× in Philippians 1 (vv. 7, 13, 14, 17). The literal chains become the rhetorical anchor: this letter is from prison, and prison is the address from which the gospel\'s progress is being narrated.',
+  },
+  doxa: {
+    lemma: 'δόξα',
+    translit: 'doxa',
+    pronunciation: 'DOK-sah',
+    strongs: 'G1391',
+    pos: 'Noun (fem.)',
+    basicGloss: 'glory, splendor, weight of honor',
+    semanticRange: [
+      'opinion / reputation (classical Greek)',
+      'honor, public esteem (NT moral usage)',
+      'visible radiance / splendor (used of God\'s manifest presence)',
+      'LXX rendering of Hebrew כָּבוֹד (the "weight" of God\'s presence)',
+    ],
+    ntFrequency: 166,
+    loaded: true,
+    related: [
+      { lemma: 'δοξάζω', translit: 'doxazō', note: 'verb — to glorify, honor' },
+      { lemma: 'δοκέω', translit: 'dokeō', note: 'verb — to think, seem; same root, opinion sense' },
+      { lemma: 'τιμή', translit: 'timē', note: 'honor / value — adjacent category' },
+    ],
+    notes:
+      'Classical δόξα meant opinion or reputation. The LXX gave it new freight by translating כָּבוֹד ("weight/glory") with it. In Pauline writing δόξα is the visible weight of God\'s presence — Sinai, the temple, the transfiguration, the parousia all carry it.',
+  },
+  dunamis: {
+    lemma: 'δύναμις',
+    translit: 'dunamis',
+    pronunciation: 'DOO-na-miss',
+    strongs: 'G1411',
+    pos: 'Noun (fem.)',
+    basicGloss: 'power, ability, mighty work',
+    semanticRange: [
+      'inherent power or capability',
+      'a mighty work / miracle (the synoptic gospels\' word for "miracle")',
+      'spiritual power (Pauline ministry vocabulary)',
+      'a power or authority (sometimes angelic, Eph 1:21)',
+    ],
+    ntFrequency: 119,
+    loaded: true,
+    related: [
+      { lemma: 'δύναμαι', translit: 'dynamai', note: 'verb — to be able' },
+      { lemma: 'ἐξουσία', translit: 'exousia', note: 'authority / right — power in the legal sense' },
+      { lemma: 'κράτος', translit: 'kratos', note: 'might / dominion — power in the ruling sense' },
+    ],
+    notes:
+      'The "dynamite" preaching trope is a famous root fallacy — dynamite was invented in 1867 and named FROM δύναμις. NT readers heard δύναμις as inherent capability or a manifest mighty work, not as explosive force. Rom 1:16: the gospel is δύναμις τοῦ θεοῦ — God\'s saving power.',
+  },
+  ekklesia: {
+    lemma: 'ἐκκλησία',
+    translit: 'ekklēsia',
+    pronunciation: 'ek-klay-SEE-ah',
+    strongs: 'G1577',
+    pos: 'Noun (fem.)',
+    basicGloss: 'assembly, congregation, church',
+    semanticRange: [
+      'a civic assembly called out for deliberation (classical Greek)',
+      'the LXX rendering of qāhāl — the assembly of Israel',
+      'a local congregation of believers (Paul\'s "the ἐκκλησία at Corinth")',
+      'the universal church / body of Christ (Eph 1:22-23)',
+    ],
+    ntFrequency: 114,
+    loaded: true,
+    related: [
+      { lemma: 'καλέω', translit: 'kaleō', note: 'verb — to call (root of ἐκκλησία)' },
+      { lemma: 'ἐκ', translit: 'ek', note: 'preposition — "out of"; the first element' },
+      { lemma: 'συναγωγή', translit: 'synagōgē', note: 'Jewish gathering — overlapping vocabulary' },
+    ],
+    notes:
+      'The "called-out ones" etymology is real but underdetermines NT usage. The word covers civic, Israelite, local Christian, and universal Christian assemblies. NT writers use it for both a single house-church and the cosmic body of Christ — context decides which.',
+  },
+  ethnos: {
+    lemma: 'ἔθνος',
+    translit: 'ethnos',
+    pronunciation: 'ETH-noss',
+    strongs: 'G1484',
+    pos: 'Noun (neut.)',
+    basicGloss: 'a nation, a people; (plural) the Gentiles',
+    semanticRange: [
+      'a nation or people group',
+      'plural — the Gentile nations as a class (the goyim of LXX)',
+      'a single non-Jewish person',
+    ],
+    ntFrequency: 162,
+    loaded: true,
+    related: [
+      { lemma: 'λαός', translit: 'laos', note: 'a people — usually Israel as God\'s people' },
+      { lemma: 'Ἰουδαῖος', translit: 'Ioudaios', note: 'Jew — the contrast term' },
+    ],
+    notes:
+      'Singular ἔθνος is "a nation" (Mt 24:7); plural τὰ ἔθνη is "the Gentiles" — the non-Jewish nations. Paul\'s self-identified apostleship to τὰ ἔθνη (Rom 11:13) frames his whole mission.',
+  },
+  euangelion: {
+    lemma: 'εὐαγγέλιον',
+    translit: 'euangelion',
+    pronunciation: 'yoo-an-GEL-ee-on',
+    strongs: 'G2098',
+    pos: 'Noun (neut.)',
+    basicGloss: 'good news, gospel',
+    semanticRange: [
+      'good news as a generic announcement (classical Greek — military victory, royal accession)',
+      'the announcement of Christ\'s kingdom (Synoptic gospel preaching)',
+      'the apostolic message of Christ crucified and risen (Pauline shorthand)',
+    ],
+    ntFrequency: 76,
+    loaded: true,
+    related: [
+      { lemma: 'εὐαγγελίζω', translit: 'euangelizō', note: 'verb — to announce good news' },
+      { lemma: 'εὐαγγελιστής', translit: 'euangelistēs', note: 'one who announces — "evangelist"' },
+      { lemma: 'κηρύσσω', translit: 'kēryssō', note: 'verb — to proclaim, herald' },
+    ],
+    notes:
+      'εὖ (well) + ἀγγέλλω (announce) — "good news." Roman inscriptions used εὐαγγέλιον for an emperor\'s accession or victory; the NT redeploys the imperial vocabulary against itself. The good news is not the emperor\'s but Christ\'s.',
+  },
+  hagios: {
+    lemma: 'ἅγιος',
+    translit: 'hagios',
+    pronunciation: 'HAH-gee-oss',
+    strongs: 'G40',
+    pos: 'Adjective',
+    basicGloss: 'holy, set apart, sacred',
+    semanticRange: [
+      'consecrated / set apart for God (cultic primary sense)',
+      'morally pure (derived ethical sense)',
+      'as substantive — "the saints," the consecrated people of God',
+      'in πνεῦμα ἅγιον — the Holy Spirit',
+    ],
+    ntFrequency: 234,
+    loaded: true,
+    related: [
+      { lemma: 'ἁγιάζω', translit: 'hagiazō', note: 'verb — to consecrate, sanctify' },
+      { lemma: 'ἁγιωσύνη', translit: 'hagiōsynē', note: 'noun — holiness (the state)' },
+      { lemma: 'καθαρός', translit: 'katharos', note: 'pure / clean — adjacent cultic field' },
+    ],
+    notes:
+      'Primary sense is cultic: set apart for God, not "morally clean." NT extends the cultic word to Christ\'s people (οἱ ἅγιοι, "the saints") — not because they are sinless but because they are claimed. Holiness is first a status, then a calling.',
+  },
+  hemera: {
+    lemma: 'ἡμέρα',
+    translit: 'hēmera',
+    pronunciation: 'hay-MEH-rah',
+    strongs: 'G2250',
+    pos: 'Noun (fem.)',
+    basicGloss: 'a day; (eschatologically) the Day',
+    semanticRange: [
+      'a literal 24-hour day',
+      'the period of daylight (vs. νύξ, night)',
+      'an era or season ("the days of Noah")',
+      'the eschatological Day — Day of the Lord, Day of Christ, Day of Judgment',
+    ],
+    ntFrequency: 389,
+    loaded: true,
+    related: [
+      { lemma: 'νύξ', translit: 'nyx', note: 'antonym — night' },
+      { lemma: 'καιρός', translit: 'kairos', note: 'appointed time / season — adjacent temporal field' },
+      { lemma: 'παρουσία', translit: 'parousia', note: 'the Day arrives at the παρουσία' },
+    ],
+    notes:
+      'Mostly ordinary, but the absolute "the Day" (ἡ ἡμέρα ἐκείνη / ἡ ἡμέρα Κυρίου) carries the OT prophets\' eschatological weight — the day God acts decisively. Paul calls it the Day of Christ in Phil 1:6, 10.',
+  },
+  hupakoe: {
+    lemma: 'ὑπακοή',
+    translit: 'hypakoē',
+    pronunciation: 'hoo-pah-koh-AY',
+    strongs: 'G5218',
+    pos: 'Noun (fem.)',
+    basicGloss: 'obedience, attentive submission',
+    semanticRange: [
+      'literal — "listening under" (ὑπό + ἀκούω)',
+      'attentive submission to authority',
+      'obedience to God / to the gospel (Rom 1:5; 16:26 — "obedience of faith")',
+    ],
+    ntFrequency: 15,
+    loaded: false,
+    related: [
+      { lemma: 'ὑπακούω', translit: 'hypakouō', note: 'verb — to obey, listen-under' },
+      { lemma: 'ἀκοή', translit: 'akoē', note: 'hearing — second element of the compound' },
+      { lemma: 'πίστις', translit: 'pistis', note: 'paired in Pauline "obedience of faith"' },
+    ],
+    notes:
+      'Etymology rewards attention here: ὑπακοή literally means "listening under" — the obedience that comes from genuinely hearing. Phil 2:8 names Christ\'s ὑπακοή to the point of death as the model the believer is shaped toward.',
+  },
+  huios: {
+    lemma: 'υἱός',
+    translit: 'huios',
+    pronunciation: 'WHEE-oss',
+    strongs: 'G5207',
+    pos: 'Noun (masc.)',
+    basicGloss: 'son',
+    semanticRange: [
+      'a biological son',
+      'a descendant (any generation back — "son of David")',
+      'in idiomatic Hebrew-Greek — one belonging to a category ("sons of the kingdom," "son of perdition")',
+      'as title — Son of God / Son of Man (Christological)',
+    ],
+    ntFrequency: 377,
+    loaded: true,
+    related: [
+      { lemma: 'πατήρ', translit: 'patēr', note: 'father — relational counterpart' },
+      { lemma: 'τέκνον', translit: 'teknon', note: 'child (less filial-specific than υἱός)' },
+      { lemma: 'υἱοθεσία', translit: 'huiothesia', note: 'adoption-as-sons (Pauline)' },
+    ],
+    notes:
+      'Two title-uses dominate NT theology: ὁ υἱὸς τοῦ θεοῦ (Son of God — divine sonship) and ὁ υἱὸς τοῦ ἀνθρώπου (Son of Man — Danielic figure, Jesus\' self-designation). Idiom matters too: "sons of light" / "sons of disobedience" mean those characterized by light / disobedience.',
+  },
+  kardia: {
+    lemma: 'καρδία',
+    translit: 'kardia',
+    pronunciation: 'kar-DEE-ah',
+    strongs: 'G2588',
+    pos: 'Noun (fem.)',
+    basicGloss: 'heart (the inner person)',
+    semanticRange: [
+      'the physical heart (rare in NT)',
+      'the inner person — mind, will, and feelings together',
+      'the seat of thought / decision (closer to Hebrew lev than to modern "heart")',
+      'the center of moral / spiritual life',
+    ],
+    ntFrequency: 156,
+    loaded: true,
+    related: [
+      { lemma: 'νοῦς', translit: 'nous', note: 'mind — overlaps with the rational facet of καρδία' },
+      { lemma: 'ψυχή', translit: 'psychē', note: 'soul — overlaps with the life facet' },
+      { lemma: 'σπλάγχνα', translit: 'splanchna', note: 'inward parts / "bowels" — affective seat' },
+    ],
+    notes:
+      'NT καρδία is the WHOLE inner person — thinking, willing, feeling. Modern English "heart" has narrowed to emotion; the biblical word covers what we now split into "head and heart." When God examines the καρδία (Heb 4:12), he examines the whole interior.',
+  },
+  kerusso: {
+    lemma: 'κηρύσσω',
+    translit: 'kēryssō',
+    pronunciation: 'kay-ROOS-soh',
+    strongs: 'G2784',
+    pos: 'Verb',
+    basicGloss: 'to herald, to proclaim publicly',
+    semanticRange: [
+      'to act as a κῆρυξ (royal herald) — proclaim with authority',
+      'to preach / publicly announce the gospel',
+      'to proclaim a message on behalf of another',
+    ],
+    ntFrequency: 61,
+    loaded: false,
+    related: [
+      { lemma: 'κῆρυξ', translit: 'kēryx', note: 'noun — herald, preacher (2 Tim 1:11)' },
+      { lemma: 'κήρυγμα', translit: 'kērygma', note: 'the proclamation itself / the message' },
+      { lemma: 'εὐαγγελίζω', translit: 'euangelizō', note: 'to announce good news — overlapping' },
+    ],
+    notes:
+      'A κῆρυξ in the ancient world spoke FOR the king with the king\'s authority — the message wasn\'t his and the herald\'s personality was beside the point. Pauline preaching takes that posture: the messenger is the slave of the message.',
+  },
+  mathetes: {
+    lemma: 'μαθητής',
+    translit: 'mathētēs',
+    pronunciation: 'mah-thay-TACE',
+    strongs: 'G3101',
+    pos: 'Noun (masc.)',
+    basicGloss: 'a learner, pupil, disciple',
+    semanticRange: [
+      'a pupil in any school of teaching',
+      'a follower of a particular teacher (rabbinic and Greco-Roman both)',
+      'specifically — a disciple of Jesus',
+    ],
+    ntFrequency: 261,
+    loaded: false,
+    related: [
+      { lemma: 'μανθάνω', translit: 'manthanō', note: 'verb — to learn' },
+      { lemma: 'μαθήτρια', translit: 'mathētria', note: 'feminine form — female disciple (Acts 9:36)' },
+      { lemma: 'διδάσκαλος', translit: 'didaskalos', note: 'teacher — relational counterpart' },
+    ],
+    notes:
+      'A μαθητής was apprenticed to a master — life-on-life, not just classroom-on-textbook. Jesus\' use deepens the cultural norm: his disciples don\'t graduate to become equals; the formation is lifelong.',
+  },
+  metanoia: {
+    lemma: 'μετάνοια',
+    translit: 'metanoia',
+    pronunciation: 'meh-TAH-noi-ah',
+    strongs: 'G3341',
+    pos: 'Noun (fem.)',
+    basicGloss: 'repentance, a turning of mind',
+    semanticRange: [
+      'a change of mind / inward turning (μετά + νοῦς)',
+      'repentance — the turn from sin toward God',
+      'remorse leading to amendment',
+    ],
+    ntFrequency: 22,
+    loaded: true,
+    related: [
+      { lemma: 'μετανοέω', translit: 'metanoeō', note: 'verb — to repent, change one\'s mind' },
+      { lemma: 'ἐπιστρέφω', translit: 'epistrephō', note: 'to turn around / convert' },
+      { lemma: 'μεταμέλομαι', translit: 'metamelomai', note: 'to regret (different — feels remorse without turning)' },
+    ],
+    notes:
+      'μετά ("after / change") + νοῦς ("mind") — literally a change of mind, but in NT usage a wholesale reorientation of life toward God. Not just feeling sorry (μεταμέλομαι); turning around (ἐπιστρέφω).',
+  },
+  morphe: {
+    lemma: 'μορφή',
+    translit: 'morphē',
+    pronunciation: 'mor-FAY',
+    strongs: 'G3444',
+    pos: 'Noun (fem.)',
+    basicGloss: 'form, the expression of essential being',
+    semanticRange: [
+      'outward form / appearance',
+      'in classical philosophy — the form that expresses inner essence (vs. mere shape σχῆμα)',
+      'in Phil 2:6-7 — the divine and servant forms Christ holds',
+    ],
+    ntFrequency: 3,
+    loaded: true,
+    related: [
+      { lemma: 'σχῆμα', translit: 'schēma', note: 'outward shape (the contrast term in Phil 2:7-8)' },
+      { lemma: 'εἰκών', translit: 'eikōn', note: 'image / likeness — adjacent christological vocabulary' },
+      { lemma: 'μορφόω', translit: 'morphoō', note: 'verb — to form / shape (Gal 4:19)' },
+    ],
+    notes:
+      'Philosophically loaded: μορφή expresses what something essentially is, not just what it looks like. Phil 2:6 ("being in the μορφή of God") means more than a passing appearance — Christ\'s pre-incarnate state expressed his divine essence; his servant μορφή (v. 7) expressed his real self-giving.',
+  },
+  nous: {
+    lemma: 'νοῦς',
+    translit: 'nous',
+    pronunciation: 'noose',
+    strongs: 'G3563',
+    pos: 'Noun (masc.)',
+    basicGloss: 'mind, understanding, the reasoning faculty',
+    semanticRange: [
+      'the faculty of understanding / reasoning',
+      'a particular mindset or disposition (Pauline "the mind of Christ")',
+      'practical wisdom or intent',
+    ],
+    ntFrequency: 24,
+    loaded: false,
+    related: [
+      { lemma: 'νοέω', translit: 'noeō', note: 'verb — to perceive / understand' },
+      { lemma: 'φρόνημα', translit: 'phronēma', note: 'mindset, way of thinking (Rom 8:6-7)' },
+      { lemma: 'καρδία', translit: 'kardia', note: 'heart — overlaps with the moral facet of νοῦς' },
+    ],
+    notes:
+      'In Pauline anthropology νοῦς is the reasoning self that can be either renewed (Rom 12:2) or hostile to God (Col 2:18). Not just the intellect — the orientation of the inner person.',
+  },
+  onoma: {
+    lemma: 'ὄνομα',
+    translit: 'onoma',
+    pronunciation: 'OH-no-mah',
+    strongs: 'G3686',
+    pos: 'Noun (neut.)',
+    basicGloss: 'name; the person or authority named',
+    semanticRange: [
+      'a personal name',
+      'reputation / public standing ("a good name")',
+      'authority denoted by the name ("in the name of Jesus")',
+      'in Hebrew idiom — the person\'s very being / presence',
+    ],
+    ntFrequency: 230,
+    loaded: true,
+    related: [
+      { lemma: 'ὀνομάζω', translit: 'onomazō', note: 'verb — to name' },
+      { lemma: 'καλέω', translit: 'kaleō', note: 'to call (the name) — adjacent verb' },
+    ],
+    notes:
+      'Hebrew אֵם / שֵׁם carries weight: to act "in the name of" someone is to act with their authority and on their behalf. Phil 2:9-10 — God exalted Jesus and gave him "the name above every name" — every knee will bow at that ὄνομα. Not magic; vested authority.',
+  },
+  ouranos: {
+    lemma: 'οὐρανός',
+    translit: 'ouranos',
+    pronunciation: 'oo-ra-NOSS',
+    strongs: 'G3772',
+    pos: 'Noun (masc.)',
+    basicGloss: 'heaven, sky',
+    semanticRange: [
+      'the physical sky (often plural οἱ οὐρανοί, Heb. pl.)',
+      'the dwelling place of God',
+      'the heavenly realm contrasted with earth (γῆ)',
+      'a circumlocution for God ("kingdom of heaven" = "kingdom of God" in Mt)',
+    ],
+    ntFrequency: 273,
+    loaded: false,
+    related: [
+      { lemma: 'γῆ', translit: 'gē', note: 'earth — the contrasted realm' },
+      { lemma: 'ἐπουράνιος', translit: 'epouranios', note: 'adjective — heavenly' },
+    ],
+    notes:
+      'Matthew\'s preference for "kingdom of heaven" (vs. Mark\'s "kingdom of God") follows the Jewish convention of avoiding the divine name — οὐρανός as substitute. The two phrases mean the same thing in his usage.',
+  },
+  pater: {
+    lemma: 'πατήρ',
+    translit: 'patēr',
+    pronunciation: 'pa-TAYR',
+    strongs: 'G3962',
+    pos: 'Noun (masc.)',
+    basicGloss: 'father',
+    semanticRange: [
+      'a biological father',
+      'an ancestor / forefather',
+      'a spiritual father / mentor figure',
+      'God as Father (covenant relationship; Jesus\' "Abba" address)',
+    ],
+    ntFrequency: 414,
+    loaded: true,
+    related: [
+      { lemma: 'υἱός', translit: 'huios', note: 'son — relational counterpart' },
+      { lemma: 'τέκνον', translit: 'teknon', note: 'child' },
+      { lemma: 'ἀββᾶ', translit: 'abba', note: 'Aramaic loanword — intimate father-address (Mk 14:36; Rom 8:15)' },
+    ],
+    notes:
+      'God-as-πατήρ is an OT theme (Deut 32:6; Ps 103:13) that Jesus pushes to its limit — addressing God as ἀββᾶ ("Abba") with unprecedented intimacy, and authorizing his disciples to do the same. Πάτερ ἡμῶν ("Our Father") in the Lord\'s Prayer carries that whole arc.',
+  },
+  pisteuo: {
+    lemma: 'πιστεύω',
+    translit: 'pisteuō',
+    pronunciation: 'pis-TYOO-oh',
+    strongs: 'G4100',
+    pos: 'Verb',
+    basicGloss: 'to believe, trust, entrust',
+    semanticRange: [
+      'to give credence to (someone or something)',
+      'to entrust oneself to (the relational/saving sense in John, Paul)',
+      'to commit something to another for safekeeping (passive use)',
+    ],
+    ntFrequency: 241,
+    loaded: true,
+    related: [
+      { lemma: 'πίστις', translit: 'pistis', note: 'noun — faith, trust' },
+      { lemma: 'πιστός', translit: 'pistos', note: 'adjective — faithful, trustworthy' },
+      { lemma: 'ἀπιστέω', translit: 'apisteō', note: 'antonym — to disbelieve' },
+    ],
+    notes:
+      'NT πιστεύω is rarely intellectual assent only — the demons in Jas 2:19 "believe" without trusting. Johannine πιστεύω εἰς ("believe into") + accusative is a coined construction in Greek; it presses entrustment, not just cognition.',
+  },
+  proseuche: {
+    lemma: 'προσευχή',
+    translit: 'proseuchē',
+    pronunciation: 'pros-yoo-KHAY',
+    strongs: 'G4335',
+    pos: 'Noun (fem.)',
+    basicGloss: 'prayer, the act of praying',
+    semanticRange: [
+      'a prayer (a particular address to God)',
+      'prayer as a practice / discipline',
+      'a place of prayer (Acts 16:13, 16 — an outdoor gathering by the river)',
+    ],
+    ntFrequency: 36,
+    loaded: false,
+    related: [
+      { lemma: 'προσεύχομαι', translit: 'proseuchomai', note: 'verb — to pray' },
+      { lemma: 'δέησις', translit: 'deēsis', note: 'specific request / petition (Phil 1:4 pairs the two)' },
+      { lemma: 'εὐχή', translit: 'euchē', note: 'prayer or vow — narrower' },
+    ],
+    notes:
+      'Generic word for prayer. Often paired with δέησις (specific petition) in Pauline lists — Phil 1:4, Eph 6:18 — distinguishing prayer-as-discipline from prayer-as-particular-request.',
+  },
+  phroneo: {
+    lemma: 'φρονέω',
+    translit: 'phroneō',
+    pronunciation: 'fro-NEH-oh',
+    strongs: 'G5426',
+    pos: 'Verb',
+    basicGloss: 'to think, to be minded, to set one\'s mind on',
+    semanticRange: [
+      'to think (intellectually)',
+      'to be of a certain disposition / mindset',
+      'to set one\'s mind on a goal or object',
+      'to be in agreement (τὸ αὐτὸ φρονεῖν — "be of the same mind")',
+    ],
+    ntFrequency: 26,
+    loaded: true,
+    related: [
+      { lemma: 'φρόνημα', translit: 'phronēma', note: 'noun — mindset, disposition' },
+      { lemma: 'φρόνησις', translit: 'phronēsis', note: 'noun — practical prudence' },
+      { lemma: 'νοῦς', translit: 'nous', note: 'mind — adjacent faculty' },
+    ],
+    notes:
+      'Philippians runs on φρονέω — Paul uses it 10× across 4 chapters, more than any other letter. The whole letter is a campaign to shape the believers\' φρονεῖν — the disposition of mind that follows Christ\'s self-emptying (2:5: τοῦτο φρονεῖτε ἐν ὑμῖν ὃ καὶ ἐν Χριστῷ Ἰησοῦ).',
+  },
+  prokope: {
+    lemma: 'προκοπή',
+    translit: 'prokopē',
+    pronunciation: 'pro-koh-PAY',
+    strongs: 'G4297',
+    pos: 'Noun (fem.)',
+    basicGloss: 'advancement, progress',
+    semanticRange: [
+      'forward movement / progress (military or athletic image — "cutting forward")',
+      'advancement in maturity, knowledge, or office',
+    ],
+    ntFrequency: 3,
+    loaded: false,
+    related: [
+      { lemma: 'προκόπτω', translit: 'prokoptō', note: 'verb — to advance, make progress' },
+      { lemma: 'πρό', translit: 'pro', note: 'preposition — "forward"; first element' },
+      { lemma: 'κόπτω', translit: 'koptō', note: 'verb — "cut"; second element (image of pioneers cutting through brush)' },
+    ],
+    notes:
+      'Literally "forward-cutting" — the pioneers\' work of cutting a path through dense forest, or troops cutting forward in battle. Phil 1:12, 25 use προκοπή of the GOSPEL\'S forward movement through Paul\'s chains. The chains aren\'t obstacles — they\'re the pioneers\' axes.',
+  },
+  psuche: {
+    lemma: 'ψυχή',
+    translit: 'psychē',
+    pronunciation: 'psoo-KHAY',
+    strongs: 'G5590',
+    pos: 'Noun (fem.)',
+    basicGloss: 'soul, life, the inner person',
+    semanticRange: [
+      'breath of life / natural life (Hebrew nephesh)',
+      'the inner person / self (overlapping with καρδία)',
+      'individual life that can be lost or saved ("save his ψυχή")',
+      'in the philosophical / soul-body dualism — distinct from body',
+    ],
+    ntFrequency: 103,
+    loaded: true,
+    related: [
+      { lemma: 'πνεῦμα', translit: 'pneuma', note: 'spirit — adjacent but distinct anthropological term' },
+      { lemma: 'σῶμα', translit: 'sōma', note: 'body — third element of the human triad' },
+      { lemma: 'καρδία', translit: 'kardia', note: 'heart — overlapping inner-person vocabulary' },
+    ],
+    notes:
+      'NT ψυχή carries Hebrew nephesh weight more than Greek philosophical-soul weight. Often it means "the whole living self" — what Jesus warns can be lost while gaining the κόσμος (Mk 8:36). Anthropological subtlety: ψυχή is not always distinct from σῶμα.',
+  },
+  sarx: {
+    lemma: 'σάρξ',
+    translit: 'sarx',
+    pronunciation: 'sarks',
+    strongs: 'G4561',
+    pos: 'Noun (fem.)',
+    basicGloss: 'flesh; (Pauline) fallen human nature',
+    semanticRange: [
+      'physical flesh / meat (1 Cor 15:39)',
+      'the body or physical existence (neutral)',
+      'humanity as creaturely / limited ("flesh and blood")',
+      'in Pauline usage — fallen human nature in rebellion against God',
+    ],
+    ntFrequency: 147,
+    loaded: true,
+    related: [
+      { lemma: 'σῶμα', translit: 'sōma', note: 'body — overlapping but Pauline-charged differently' },
+      { lemma: 'σαρκικός', translit: 'sarkikos', note: 'adjective — fleshly' },
+      { lemma: 'πνεῦμα', translit: 'pneuma', note: 'Pauline antonym in the σάρξ/πνεῦμα antithesis' },
+    ],
+    notes:
+      'Don\'t collapse σάρξ to body. Pauline σάρξ (Rom 7-8; Gal 5) names humanity-as-fallen — the self under sin\'s sway, not the physical body. The σάρξ wars against πνεῦμα; both can be located in the same body. Anti-body readings of Paul miss the anthropology.',
+  },
+  soteria: {
+    lemma: 'σωτηρία',
+    translit: 'sōtēria',
+    pronunciation: 'so-tay-REE-ah',
+    strongs: 'G4991',
+    pos: 'Noun (fem.)',
+    basicGloss: 'salvation, deliverance, rescue',
+    semanticRange: [
+      'physical rescue / preservation (LXX, classical)',
+      'deliverance from peril (Acts 27:34)',
+      'the comprehensive saving act of God in Christ — past justification, present sanctification, future glorification',
+      'the eschatological salvation revealed at Christ\'s return',
+    ],
+    ntFrequency: 45,
+    loaded: true,
+    related: [
+      { lemma: 'σῴζω', translit: 'sōzō', note: 'verb — to save, deliver' },
+      { lemma: 'σωτήρ', translit: 'sōtēr', note: 'noun — savior' },
+      { lemma: 'σωτήριος', translit: 'sōtērios', note: 'adjective — bringing salvation' },
+    ],
+    notes:
+      'Imperial title vocabulary: emperors were saluted as σωτήρ ("savior"); the NT redirects the term to Christ. NT σωτηρία covers the whole arc — past, present, future — and is consummated at the παρουσία (Rom 13:11).',
+  },
+  tapeinophrosune: {
+    lemma: 'ταπεινοφροσύνη',
+    translit: 'tapeinophrosynē',
+    pronunciation: 'tap-eye-no-fros-OO-nay',
+    strongs: 'G5012',
+    pos: 'Noun (fem.)',
+    basicGloss: 'humility of mind, lowly-mindedness',
+    semanticRange: [
+      'a lowly assessment of oneself',
+      'the disposition that counts others more significant (Phil 2:3)',
+      'humility as a Christian virtue (Pauline coinage)',
+    ],
+    ntFrequency: 7,
+    loaded: false,
+    related: [
+      { lemma: 'ταπεινός', translit: 'tapeinos', note: 'adjective — humble, lowly' },
+      { lemma: 'ταπεινόω', translit: 'tapeinoō', note: 'verb — to humble, to abase' },
+      { lemma: 'φρονέω', translit: 'phroneō', note: 'verb — to think, be minded (second element of the compound)' },
+    ],
+    notes:
+      'In Greek moral philosophy, lowliness-of-mind was a vice, not a virtue — slavish, ignoble. Pauline ταπεινοφροσύνη inverts the cultural verdict: Phil 2:3 commands it as the precondition for genuine community. Compound of ταπεινός (low) + φρόνησις (mindedness).',
+  },
+  theos: {
+    lemma: 'θεός',
+    translit: 'theos',
+    pronunciation: 'theh-OSS',
+    strongs: 'G2316',
+    pos: 'Noun (masc.)',
+    basicGloss: 'God; a god',
+    semanticRange: [
+      'God (the one God of Israel, NT default with the article)',
+      'a god (pagan deity)',
+      'as predicate — divine, of divine quality (Jn 1:1c θεὸς ἦν ὁ λόγος)',
+      'metonymy — God\'s authority, judgment, or salvation',
+    ],
+    ntFrequency: 1314,
+    loaded: true,
+    related: [
+      { lemma: 'θεῖος', translit: 'theios', note: 'adjective — divine' },
+      { lemma: 'θεότης', translit: 'theotēs', note: 'noun — deity (the abstract; Col 2:9)' },
+      { lemma: 'κύριος', translit: 'kurios', note: 'Lord — frequently parallel as a divine title' },
+    ],
+    notes:
+      'Most common NT name for God. The article matters: ὁ θεός is normally "the God" (one God of Israel); anarthrous θεός can be more qualitative ("of divine quality"). Jn 1:1c is debated precisely on this point: "the Word was θεός" — divine in nature, not "a god."',
+  },
+  iesous: {
+    lemma: 'Ἰησοῦς',
+    translit: 'Iēsous',
+    pronunciation: 'ee-ay-SOOS',
+    strongs: 'G2424',
+    pos: 'Proper noun (masc.)',
+    basicGloss: 'Jesus; Joshua',
+    semanticRange: [
+      'Jesus of Nazareth — the dominant NT referent',
+      'Joshua son of Nun (Heb 4:8; Acts 7:45)',
+      'other persons named Ἰησοῦς (rare — Col 4:11 mentions Jesus called Justus)',
+    ],
+    ntFrequency: 917,
+    loaded: true,
+    related: [
+      { lemma: 'Χριστός', translit: 'Christos', note: 'title — frequently fused as "Jesus Christ"' },
+      { lemma: 'Ἰωσούα', translit: 'Iōsoua', note: 'Hebrew form — Yehoshua' },
+    ],
+    notes:
+      'Ἰησοῦς is the Greek of Hebrew יְהוֹשׁוּעַ (Yehoshua) → "Yhwh saves." Matthew makes the etymology theological (Mt 1:21 — "you will call him Jesus, for he will save his people from their sins"). The name itself preaches the mission.',
   },
 };

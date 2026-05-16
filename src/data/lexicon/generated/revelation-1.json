@@ -22,10 +22,6 @@
         "lemma": "theos"
       },
       {
-        "surface": "gave",
-        "lemma": "didomi"
-      },
-      {
         "surface": "to show",
         "lemma": "deiknuo"
       },
@@ -72,10 +68,6 @@
         "lemma": "hosos"
       },
       {
-        "surface": "he saw",
-        "lemma": "horao"
-      },
-      {
         "surface": "word",
         "lemma": "logos"
       },
@@ -114,16 +106,8 @@
         "lemma": "propheteia"
       },
       {
-        "surface": "hear",
-        "lemma": "akouo"
-      },
-      {
         "surface": "obey",
         "lemma": "tereo"
-      },
-      {
-        "surface": "is written",
-        "lemma": "grapho"
       },
       {
         "surface": "time is",
@@ -219,7 +203,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       }
     ],
     "6": [
@@ -268,10 +252,6 @@
       {
         "surface": "eye",
         "lemma": "ophthalmos"
-      },
-      {
-        "surface": "will see",
-        "lemma": "horao"
       },
       {
         "surface": "pierced",
@@ -388,16 +368,8 @@
         "lemma": "pneuma"
       },
       {
-        "surface": "I heard",
-        "lemma": "akouo"
-      },
-      {
         "surface": "behind",
         "lemma": "opiso"
-      },
-      {
-        "surface": "a loud",
-        "lemma": "megas"
       },
       {
         "surface": "voice",
@@ -409,10 +381,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "Write",
-        "lemma": "grapho"
-      },
       {
         "surface": "a scroll",
         "lemma": "biblion"
@@ -476,16 +444,8 @@
         "lemma": "phone"
       },
       {
-        "surface": "was speaking",
-        "lemma": "laleo"
-      },
-      {
         "surface": "having turned",
         "lemma": "epistrepho"
-      },
-      {
-        "surface": "I saw",
-        "lemma": "horao"
       },
       {
         "surface": "seven",
@@ -515,7 +475,7 @@
       },
       {
         "surface": "the Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of Man",
@@ -539,7 +499,7 @@
       },
       {
         "surface": "chest",
-        "lemma": "mastosmazos"
+        "lemma": "mastos"
       }
     ],
     "14": [
@@ -610,12 +570,8 @@
         "lemma": "phone"
       },
       {
-        "surface": "of many",
-        "lemma": "polus"
-      },
-      {
         "surface": "waters",
-        "lemma": "hudorhudatos"
+        "lemma": "hudor"
       }
     ],
     "16": [
@@ -673,10 +629,6 @@
       }
     ],
     "17": [
-      {
-        "surface": "I saw",
-        "lemma": "horao"
-      },
       {
         "surface": "I fell",
         "lemma": "pipto"
@@ -746,14 +698,6 @@
     ],
     "19": [
       {
-        "surface": "write down",
-        "lemma": "grapho"
-      },
-      {
-        "surface": "you have seen",
-        "lemma": "horao"
-      },
-      {
         "surface": "will",
         "lemma": "mello"
       }
@@ -770,10 +714,6 @@
       {
         "surface": "stars",
         "lemma": "aster"
-      },
-      {
-        "surface": "you saw",
-        "lemma": "horao"
       },
       {
         "surface": "right hand",
