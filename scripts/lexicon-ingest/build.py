@@ -226,7 +226,7 @@ def is_content_pos(pos_code: str) -> bool:
 # Helpers
 # ─────────────────────────────────────────────────────────────────────────
 
-def slugify_translit(translit: str) -> str:
+def slugify_translit(translit: str, *, is_greek: bool = True) -> str:
     """Stable lemma key — strip macrons, lowercase, alnum only.
     `Παῦλος` (Paulos) → `paulos`; `δίψυχος` (dipsychos) → `dipsychos`.
 
@@ -236,17 +236,25 @@ def slugify_translit(translit: str) -> str:
         (`uhios` for υἱός, `ehis` for εἷς, `ohutōs` for οὕτως). Standard
         scholarly transliteration puts h FIRST (`huios`, `heis`, `houtos`).
         Reorder so generated slugs match what hand-authored lemmas.ts uses.
+
+    `is_greek=False` skips the breathing-mark reorder. Hebrew transliterations
+    that start with vowel-then-h (e.g. אָהַב → `a.hav`) are genuinely
+    vowel-then-consonant — the `h` represents the letter ה (heh), not a
+    rough-breathing diacritic. Reordering would produce wrong slugs like
+    `haav`, which is what an earlier pass was doing.
     """
-    # Take first form when TBESG lists alternates.
+    # Take first form when TBESE lists alternates.
     translit = translit.split(',')[0]
     # Decompose to strip combining marks (macrons, breves, etc.)
     normalized = unicodedata.normalize('NFD', translit)
     stripped = ''.join(ch for ch in normalized if unicodedata.category(ch) != 'Mn')
     stripped = stripped.lower()
     slug = re.sub(r'[^a-z0-9]+', '', stripped)
-    # Reorder TBESG's post-vowel breathing-mark "h" to the standard position.
-    # Only applies at the start of the slug, where the rough breathing sits.
-    slug = re.sub(r'^([aeiouy])h(?!h)', r'h\1', slug)
+    # Greek-only: reorder TBESG's post-vowel breathing-mark "h" to the
+    # standard position. NEVER applied to Hebrew — there `h` is part of
+    # the word, not a diacritic.
+    if is_greek:
+        slug = re.sub(r'^([aeiouy])h(?!h)', r'h\1', slug)
     return slug
 
 
@@ -439,6 +447,7 @@ def build_book(book_name: str, bsb_df: pd.DataFrame, lexicon: dict[str, dict],
     lemmas_used: set[str] = set()
     ref_re = re.compile(rf'^{re.escape(book_name)}\s+(\d+):(\d+)$')
 
+    is_greek = strongs_prefix == 'G'
     for _, row in book_df.iterrows():
         m = ref_re.match(str(row['ref']))
         if not m:
@@ -464,7 +473,7 @@ def build_book(book_name: str, bsb_df: pd.DataFrame, lexicon: dict[str, dict],
         # tappable. Same filter applies to Greek and Hebrew/Aramaic.
         if not is_content_pos(entry.get('pos_code', '')):
             continue
-        lemma_key = slugify_translit(entry['translit'])
+        lemma_key = slugify_translit(entry['translit'], is_greek=is_greek)
         if not lemma_key or lemma_key in SKIP_LEMMA_SLUGS:
             continue
         lemmas_used.add(lemma_key)
@@ -507,10 +516,13 @@ def write_lexicon(lexicons: list[dict[str, dict]], lemmas_used: set[str],
     # Build reverse index across all supplied lexicons: slug → (strongs, entry).
     # First match wins, with the constraint that Greek and Hebrew slugs rarely
     # collide (different transliteration conventions, different alphabets).
+    # The slugify pass needs to know whether to apply the Greek breathing-mark
+    # reorder; we detect from the Strong's prefix.
     slug_to_entry: dict[str, tuple[str, dict]] = {}
     for lex in lexicons:
         for strongs, entry in lex.items():
-            slug = slugify_translit(entry['translit'])
+            is_greek = strongs.startswith('G')
+            slug = slugify_translit(entry['translit'], is_greek=is_greek)
             if not slug or slug in slug_to_entry:
                 continue
             slug_to_entry[slug] = (strongs, entry)
