@@ -48692,7 +48692,30 @@
     "basicGloss": "to fall into",
     "ntFrequency": 7,
     "loaded": false,
-    "notes": "ἐμ-πίπτω [in LXX chiefly for נָפַל ;] to fall into: before εἰς, Mat.12:11, Luk.6:39 10:36; metaphorically, εἰς κρίμα, 1Ti.3:6; ὀνειδισμόν 1Ti.3:7; πειρασμόν, 1Ti.6:9; εἰς χεῖρας θεοῦ (cf. 2Ki.24:14, 1Ch.21:13,…"
+    "notes": "ἐμπίπτω carries the sense of entering or being caught in a circumstance beyond one's intended path. In the Gospels it is mostly literal (the proverbial pit into which a blind guide and follower fall, Mat. 12:11, Luk. 6:39); in the Pastorals it is entirely metaphorical, denoting a fall into disgrace, condemnation, or moral temptation. The preposition ἐν- intensifies the sense of being drawn into or trapped within.",
+    "pronunciation": "em-PIP-tō",
+    "semanticRange": [
+      "to fall into a pit, hole, or physical space",
+      "to fall into a condition or state (judgment, disgrace, temptation)",
+      "to come under or fall into the power/hands of someone"
+    ],
+    "related": [
+      {
+        "lemma": "πίπτω",
+        "translit": "piptō",
+        "note": "simplex verb; to fall; ἐμπίπτω adds the sense of falling INTO a particular circumstance"
+      },
+      {
+        "lemma": "κρίμα",
+        "translit": "krima",
+        "note": "judgment; frequently appears as the object into which one falls in Paul's usage (1 Tim 3:6)"
+      },
+      {
+        "lemma": "πειρασμός",
+        "translit": "peirasmos",
+        "note": "temptation, trial; common destination of falling in ethical/spiritual contexts (1 Tim 6:9)"
+      }
+    ]
   },
   "empleko": {
     "lemma": "ἐμπλέκω",
@@ -93675,7 +93698,31 @@
     "basicGloss": "winepress",
     "ntFrequency": 5,
     "loaded": false,
-    "notes": "ληνός, -οῦ, ἡ (in some MSS., LXX and NT, ὁ), [in LXX chiefly for יֶקֶב Num.18:27, al.; also for רַהַט (Gen.30:38, 41), גַּת (Neh.13:15, al.), etc. ;] a trough or vat; esp. for the treading of grapes: Mat.21:33,…"
+    "notes": "The word denotes a physical installation for wine production, though in apocalyptic contexts (notably Rev. 14:19–20; 19:15) it acquires eschatological weight as a symbol of God's judgment. Matthew 21:33 uses it in the parable of the vineyard tenants as a normal agricultural feature, but its rare appearances and symbolic richness in Revelation give it secondary theological resonance without persistent lexical ambiguity.",
+    "pronunciation": "LAY-nos",
+    "semanticRange": [
+      "A vat or trough for treading grapes during harvest",
+      "The facility or pit where grapes are pressed into wine",
+      "Figuratively, a place of divine judgment or wrath",
+      "The winemaking process or its product (metonymically)"
+    ],
+    "related": [
+      {
+        "lemma": "οἶνος",
+        "translit": "oinos",
+        "note": "Wine; the product extracted from the winepress."
+      },
+      {
+        "lemma": "πατέω",
+        "translit": "pateō",
+        "note": "To tread or trample; the action performed in the winepress."
+      },
+      {
+        "lemma": "יֶקֶב",
+        "translit": "yeqev",
+        "note": "Hebrew for winepress; primary OT equivalent rendered in LXX by ληνός."
+      }
+    ]
   },
   "lention": {
     "lemma": "λέντιον",
@@ -100777,7 +100824,30 @@
     "basicGloss": "to summon",
     "ntFrequency": 9,
     "loaded": false,
-    "notes": "μετα-πέμπω [in LXX (mid.) : Gen.27:45 (לָקַח), Num.23:7 (נָחָה: hi.), 2Ma.15:31, 3Ma.5:18 R, 4Ma.12:3 4Mac 12:6 * ;] to send after or for: pass., Act.10:29 a. Chiefly in mid., to send for, summon Act.10:5, 22 10:29 b…"
+    "notes": "The verb appears almost exclusively in Acts in the NT, particularly in scenes of summoning by official or authoritative figures. In Acts 10:5, 22, 29, Peter is summoned by Cornelius via intermediaries—the preposition μετα- conveys the sense of 'after' or 'in pursuit of,' hence 'to send after.' In the middle voice (most common), it emphasizes the agent's initiative in requesting someone's presence. No theological weight accrues to the term itself; it functions as a straightforward narrative marker of summons.",
+    "pronunciation": "met-ah-PEM-poh",
+    "semanticRange": [
+      "to send for someone; summon or fetch by sending a messenger",
+      "to request or command someone's presence through an intermediary",
+      "to dispatch someone to bring another person"
+    ],
+    "related": [
+      {
+        "lemma": "πέμπω",
+        "translit": "pempō",
+        "note": "base verb meaning to send; μεταπέμπω adds the sense of sending for a purpose"
+      },
+      {
+        "lemma": "καλέω",
+        "translit": "kaleō",
+        "note": "to call or summon; overlaps contextually but emphasizes voice rather than messenger dispatch"
+      },
+      {
+        "lemma": "ἀποστέλλω",
+        "translit": "apostellō",
+        "note": "to send away or commission; carries mission sense absent from μεταπέμπω"
+      }
+    ]
   },
   "metaschematizo": {
     "lemma": "μετασχηματίζω",
@@ -113956,7 +114026,30 @@
     "basicGloss": "to ignore",
     "ntFrequency": 3,
     "loaded": false,
-    "notes": "παρ-ακούω [in LXX: Est.3:3, 8 (עָבַר, עָשָׂה, with neg.) Est.4:14 7:4 (חָרַשׁ hi.), Isa.65:12 (שָׁמַע, with neg.), I Est.4:11, Tob.3:4 * ;] __1. to overhear. __2. to hear amiss or imperfectly. __3. Later (as in LXX,…"
+    "notes": "The word denotes an active or willful refusal to heed rather than mere failure to hear. In Matt. 18:17 (the only clear NT instance), it describes refusing to listen to church discipline. The prefix παρά signals a deviation from proper hearing—either mishearing or deliberate disregard. LXX usage (esp. Esth. 3:3, 8) confirms the sense of ignoring a command or warning.",
+    "pronunciation": "par-ah-KOO-oh",
+    "semanticRange": [
+      "to disregard or refuse to listen to someone's words or request",
+      "to hear but deliberately ignore or neglect",
+      "to mishear or hear imperfectly (etymology: παρά + ἀκούω)"
+    ],
+    "related": [
+      {
+        "lemma": "ἀκούω",
+        "translit": "akouō",
+        "note": "to hear; παρακούω adds the sense of refusal or negligence"
+      },
+      {
+        "lemma": "παρακοή",
+        "translit": "parakoē",
+        "note": "disobedience or refusal to listen; the noun form of παρακούω"
+      },
+      {
+        "lemma": "ἀπειθέω",
+        "translit": "apeitheō",
+        "note": "to disobey or disbelieve; overlapping semantic territory with willful non-compliance"
+      }
+    ]
   },
   "parakupto": {
     "lemma": "παρακύπτω",
@@ -114132,7 +114225,30 @@
     "basicGloss": "to deceive",
     "ntFrequency": 2,
     "loaded": false,
-    "notes": "παρα-λογίζομαι [in LXX chiefly for רָמָה pi. ;] __1. to miscalculate. __2. to reason falsely, hence, to mislead: Col.2:4, Jas.1:22.† (AS)"
+    "notes": "This word denotes the act of misleading someone through plausible but false reasoning—hence both a logical and moral failure. Paul uses it in Colossians 2:4 to warn against those who 'beguile with persuasive speech,' and James in 1:22 frames it as self-deception through faulty reasoning. The prefix παρα- (amiss/beside) combined with λογίζομαι (to reckon) stresses reasoning gone wrong rather than outright falsehood.",
+    "pronunciation": "par-ah-loh-GID-zoh-my",
+    "semanticRange": [
+      "to reason falsely or beguile through specious argument",
+      "to lead astray by deceptive logic or sophistry",
+      "to miscalculate or misjudge (rare sense)"
+    ],
+    "related": [
+      {
+        "lemma": "λογίζομαι",
+        "translit": "logizomai",
+        "note": "to reckon or reason; παραλογίζομαι adds παρα- (aside/amiss) prefix"
+      },
+      {
+        "lemma": "ἀπάτη",
+        "translit": "apate",
+        "note": "deceit or deception; semantic overlap but ἀπάτη emphasizes the deceptive content itself"
+      },
+      {
+        "lemma": "πλάνη",
+        "translit": "plane",
+        "note": "wandering or error; παραλογίζομαι denotes the deceptive process that produces πλάνη"
+      }
+    ]
   },
   "paraluo": {
     "lemma": "παραλύω",
@@ -115036,7 +115152,30 @@
     "basicGloss": "seaside",
     "ntFrequency": 1,
     "loaded": false,
-    "notes": "παρα-θαλάσσιος, -α, -ον (παρά, θάλασσα) [in LXX: Jer.47:7 (יָם חוֹף), etc. ;] by the sea: Mat.4:13.† (AS)"
+    "notes": "This rare adjective appears only once in Matthew 4:13, describing Jesus' relocation to Capernaum in a region characterized by its proximity to the Sea of Galilee. The compound formation is transparent: παρά (beside) + θάλασσα (sea). In Hellenistic geographic nomenclature, the term functioned as a straightforward locational descriptor for coastal settlements and territories.",
+    "pronunciation": "par-uh-thuh-LAH-see-os",
+    "semanticRange": [
+      "Located beside or near the sea",
+      "Coastal, adjacent to maritime areas",
+      "Describing a seaside region or settlement"
+    ],
+    "related": [
+      {
+        "lemma": "θάλασσα",
+        "translit": "thalassa",
+        "note": "The noun 'sea' from which parathalassios derives its second component."
+      },
+      {
+        "lemma": "παρά",
+        "translit": "para",
+        "note": "Preposition meaning 'beside' or 'alongside,' forming the first component of the compound."
+      },
+      {
+        "lemma": "ἀκτή",
+        "translit": "akte",
+        "note": "Related term for 'shore' or 'coast,' offering synonymous sense in Hellenistic geography."
+      }
+    ]
   },
   "paratheke": {
     "lemma": "παραθήκη",
@@ -139660,7 +139799,30 @@
     "basicGloss": "Samson",
     "ntFrequency": 1,
     "loaded": false,
-    "notes": "Σαμψών, ὁ indecl. (Heb. שִׁמְשׁוֹן), Samson (Jdg.13:1-25 ff.): Heb.11:32.† (AS)"
+    "notes": "Samson appears only once in the NT (Hebrews 11:32) in the climactic roll-call of faith-heroes, where the writer honors his exploits while skirting his moral lapses. The name in Hebrew denotes connection to the sun (שֶׁמֶשׁ), fitting his role as a Nazirite whose strength was divinely given. His inclusion in Hebrews' witness-cloud proves instructive: not moral perfection but trust in God's power through human weakness.",
+    "pronunciation": "sahm-SONE",
+    "semanticRange": [
+      "Hebrew judge and military leader (Judges 13–16)",
+      "figure exemplifying faith despite moral weakness",
+      "paradigm of God's strength working through human frailty"
+    ],
+    "related": [
+      {
+        "lemma": "שִׁמְשׁוֹן",
+        "translit": "Shimshōn",
+        "note": "Hebrew name; root possibly related to שֶׁמֶשׁ (sun); OT original"
+      },
+      {
+        "lemma": "δύναμις",
+        "translit": "dynamis",
+        "note": "Power/strength; central to Samson's calling and Hebrews 11 appeal"
+      },
+      {
+        "lemma": "πίστις",
+        "translit": "pistis",
+        "note": "Faith; Samson cited in Hebrews 11:32 as exemplar despite moral failure"
+      }
+    ]
   },
   "sandalion": {
     "lemma": "σανδάλιον",
@@ -146529,7 +146691,30 @@
     "basicGloss": "mark",
     "ntFrequency": 1,
     "loaded": false,
-    "notes": "στίγμα -τος, τό (στίζω, to prick), [in LXX: Sng.1:11 (נְקֻדָּה) * ;] a tattoed mark or brand: τὰ σ. τοῦ Ἰησοῦ, Gal.6:17 (see Lft., in l; Deiss., BS, 349; LAE, 303; MM, xxiii).† (AS)"
+    "notes": "Paul's sole use of this term in Gal 6:17 denotes the physical marks (scars from beatings and persecution) he bears as evidence of his devotion to Christ. The word carries the sense of a branded or tattooed mark, evoking both Roman slave-branding and the body-marking practices of religious devotees. In this context, Paul's σ. τοῦ Ἰησοῦ transforms a symbol of shame or servitude into a badge of apostolic suffering.",
+    "pronunciation": "STIG-mah",
+    "semanticRange": [
+      "a mark made by pricking or branding into skin",
+      "a tattoo or permanent bodily mark of ownership or identity",
+      "a sign of allegiance or belonging to a person or cause"
+    ],
+    "related": [
+      {
+        "lemma": "στίζω",
+        "translit": "stizō",
+        "note": "to prick or brand; etymological root of stigma"
+      },
+      {
+        "lemma": "σφραγίς",
+        "translit": "sphragis",
+        "note": "seal or mark of authenticity; similar metaphorical usage for divine marking"
+      },
+      {
+        "lemma": "χάραγμα",
+        "translit": "charagma",
+        "note": "impressed mark or engraving; used in Revelation for the mark of the beast"
+      }
+    ]
   },
   "stigme": {
     "lemma": "στιγμή",
@@ -163561,8 +163746,32 @@
     "pos": "Noun (fem.)",
     "basicGloss": "leaven",
     "ntFrequency": 11,
-    "loaded": false,
-    "notes": "ζύμη, -ης, ἡ [in LXX for חָמֵץ, Exo.12:16 13:3 23:18 34:25, Deu.16:3; שְׂאֹר, Exo.12:16, 19 13:7, Lev.2:11, Deu.16:4 * ;] leaven: Mat.13:33, Luk.13:21; τ. ἄρτου, Mat.16:12. Metaphorical, of a moral influence or…"
+    "loaded": true,
+    "notes": "Zumē carries both literal and potent figurative weight in NT theology. Jesus uses leaven as a parable of kingdom growth (Mat. 13:33; Luk. 13:21), but Paul deploys it as a warning against moral corruption: a little leaven leavens the whole lump (1 Cor. 5:6; Gal. 5:9). In Passover tradition, leaven symbolizes sin and the old order; its removal prefigures ethical renewal. Context determines whether zumē signals organic expansion or insidious contamination.",
+    "pronunciation": "ZOO-may",
+    "semanticRange": [
+      "Leavening agent mixed into dough to make bread rise",
+      "Metaphorical: corrupting moral or doctrinal influence spreading through a community",
+      "Symbol of sin, hypocrisy, or malice requiring ritual purification",
+      "In Passover context: forbidden fermented product representing Egyptian bondage"
+    ],
+    "related": [
+      {
+        "lemma": "ζυμόω",
+        "translit": "zumooō",
+        "note": "Verb: to ferment or leaven; to permeate with corrupting influence"
+      },
+      {
+        "lemma": "ἄζυμος",
+        "translit": "azumos",
+        "note": "Adjective: unleavened; free from leaven, used of Passover bread and metaphorically of sincerity"
+      },
+      {
+        "lemma": "שְׂאֹר",
+        "translit": "śeʾōr",
+        "note": "Hebrew equivalent in LXX; denotes leaven in both literal and figurative moral sense"
+      }
+    ]
   },
   "zumoo": {
     "lemma": "ζυμόω",
@@ -174181,8 +174390,32 @@
     "pos": "Proper noun",
     "basicGloss": "Damascus",
     "loaded": false,
-    "notes": "§ Damascus = \"silent is the sackcloth weaver\" an ancient trading city, capital of Syria, located in the plain east of Hermon, 130 (205 km) miles northeast of Jerusalem",
-    "otFrequency": 43
+    "notes": "Damascus appears 43 times in the Hebrew Bible, primarily in historical and prophetic contexts. The city dominates Isaiah 7 and 17 as the focal point of the Syro-Ephraimite War and its threatened devastation. In Acts, Damascus becomes crucial to Paul's trajectory: the site of his vision of the risen Jesus and his initial persecution of Christians (Acts 9:1–27), later marking his theological turning point. The name's etymology ('silent is the sackcloth weaver') is uncertain and carries little theological weight in biblical usage.",
+    "otFrequency": 43,
+    "pronunciation": "dah-MES-kus",
+    "semanticRange": [
+      "Capital city of Syria, major ancient trade hub east of Mount Hermon",
+      "Center of Aramean political and military power in OT period",
+      "Symbolic locus of divine judgment and restoration in prophetic literature",
+      "Site of Paul's conversion and early Christian persecution (NT)"
+    ],
+    "related": [
+      {
+        "lemma": "Ἀρὰμ",
+        "translit": "Aram",
+        "note": "Broader region; Damascus served as principal city of Aramean kingdoms"
+      },
+      {
+        "lemma": "Συρία",
+        "translit": "Syria",
+        "note": "Roman administrative province; Damascus remained major center under Nabataean then Roman control"
+      },
+      {
+        "lemma": "יְהוּדָה",
+        "translit": "Yehudah",
+        "note": "Frequent geopolitical rival and occasional ally; Damascus-Judah relations shape Isaiah's prophecies"
+      }
+    ]
   },
   "dan": {
     "lemma": "דָּן",
@@ -176284,9 +176517,33 @@
     "strongs": "H6215",
     "pos": "Proper noun (person)",
     "basicGloss": "Esau",
-    "loaded": false,
-    "notes": "A man living at the time of the Patriarchs, first mentioned at Gen.25.25; son of: Isaac (H3327) and Rebekah (H7259); brother of: Israel (H3478); married to Oholibamah (H0173), Judith (H3067), Adah (H5711H) and Mahalath (H4258); father…",
-    "otFrequency": 96
+    "loaded": true,
+    "notes": "Esau appears 96 times, primarily in Gen 25–36 and scattered references in Malachi and Hebrews. His sale of the birthright (Gen 25:29–34) and loss of Isaac's blessing (Gen 27) make him a paradigm of rejecting covenant privilege for immediate appetite. Hebrews 12:16–17 frames him as a cautionary figure of godlessness. Later Jewish and Christian tradition reads Esau/Edom typologically as opposing Jacob/Israel, though the historical Edomites were a distinct Levantine nation.",
+    "otFrequency": 96,
+    "pronunciation": "ay-SAW",
+    "semanticRange": [
+      "Esau son of Isaac, twin brother of Jacob/Israel",
+      "The patriarch whose line became Edom",
+      "Type of carnal, worldly orientation in contrast to Jacob's spiritual election",
+      "Symbol of birthright despised and covenant blessing forfeited"
+    ],
+    "related": [
+      {
+        "lemma": "יַעֲקֹב",
+        "translit": "ya.akov",
+        "note": "His twin brother; Jacob supplants Esau's birthright and blessing."
+      },
+      {
+        "lemma": "אֱדוֹם",
+        "translit": "edom",
+        "note": "Esau's alternate name; his descendants settle in Edom/Seir."
+      },
+      {
+        "lemma": "בְכֹרָה",
+        "translit": "bekorah",
+        "note": "The birthright Esau sells for food; core theme of his narrative arc."
+      }
+    ]
   },
   "eseq": {
     "lemma": "עֵ֫שֶׂק",
@@ -178329,8 +178586,32 @@
     "pos": "Proper noun",
     "basicGloss": "Gilead",
     "loaded": false,
-    "notes": "Gilead = \"rocky region\" a mountainous region bounded on the west by the Jordan, on the north by Bashan, on the east by the Arabian plateau, and on the south by Moab and Ammon; sometimes called 'Mount Gilead' or the 'land of Gilead' or…",
-    "otFrequency": 99
+    "notes": "Gilead denotes a specific geo-political region whose identity shifts between tribal territory, refuge zone, and symbolic landscape across OT narrative. Jacob's covenant at Mizpah and the altar of witness (Genesis 31), Jephthah's judgeship (Judges 10–12), and Elijah's prophetic activity there give it theological resonance, but the term itself remains primarily a locative proper noun anchoring tribal inheritance and conflict narratives.",
+    "otFrequency": 99,
+    "pronunciation": "GIL-ay-ahd",
+    "semanticRange": [
+      "Transjordanian highland region east of the Jordan River",
+      "Mountainous terrain known for pasture, forests, and the balm of Gilead",
+      "Territory inhabited by Gad, Reuben, and half of Manasseh",
+      "Symbolic site of refuge, conflict, and covenant witness"
+    ],
+    "related": [
+      {
+        "lemma": "הַר גִּלְעָד",
+        "translit": "har gilad",
+        "note": "Mount Gilead; the highland range itself as geographical feature"
+      },
+      {
+        "lemma": "צֶרִי",
+        "translit": "tseri",
+        "note": "Balm of Gilead; medicinal resin famous in Gilead trade and prophecy"
+      },
+      {
+        "lemma": "יַרְדֵּן",
+        "translit": "yarden",
+        "note": "The Jordan River; western boundary of Gilead proper"
+      }
+    ]
   },
   "girgashi": {
     "lemma": "גִּרְגָּשִׁי",
@@ -191056,9 +191337,33 @@
     "strongs": "H6293",
     "pos": "Verb",
     "basicGloss": "to fall on",
-    "loaded": false,
-    "notes": "to encounter, meet, reach, entreat, make intercession1a) (Qal)1a1) to meet, light upon, join1a2) to meet (of kindness)1a3) to encounter, fall upon (of hostility)1a4) to encounter, entreat (of request)1a5) to strike, touch (of…",
-    "otFrequency": 45
+    "loaded": true,
+    "notes": "Pagá carries significant theological weight in the idiom of intercession (particularly 1 Sam 25:24; Isa 53:12 of the Servant interceding for transgressors). The word's range spans neutral encounter, hostile assault, and redemptive pleading—context is crucial. In prophetic texts, it often signals divine or human intervention at a crisis point.",
+    "otFrequency": 45,
+    "pronunciation": "pah-GAH",
+    "semanticRange": [
+      "to meet or encounter (neutral or circumstantial)",
+      "to fall upon with hostility; assault or strike",
+      "to make intercession; plead or entreat on behalf of another",
+      "to reach, touch, or come into contact with"
+    ],
+    "related": [
+      {
+        "lemma": "פְּגִיעָה",
+        "translit": "pegî'â",
+        "note": "noun form; intercession or encounter; used of Moses' intercession"
+      },
+      {
+        "lemma": "עָמַד",
+        "translit": "'amad",
+        "note": "to stand; often co-occurs with pagá in sense of intervention or intercession"
+      },
+      {
+        "lemma": "פָּגַע בְּ",
+        "translit": "pagá + preposition",
+        "note": "with preposition: directional sense intensifies meeting or striking"
+      }
+    ]
   },
   "pagash": {
     "lemma": "פָּגַשׁ",
@@ -195331,8 +195636,32 @@
     "pos": "Verb",
     "basicGloss": "to crush",
     "loaded": false,
-    "notes": "to crush, oppress1a) (Qal)1a1) to crush, get crushed, be crushed1a2) to crush, oppress (fig)1a3) crushed (participle passive)1b) (Niphal) to be crushed, be broken1c) (Piel)1c1) to crush in pieces1c2) to grievously oppress (fig)1d)…",
-    "otFrequency": 19
+    "notes": "Ratsats carries both literal and metaphorical force: physically it denotes pulverization (as in Exodus 32:20, the golden calf crushed to powder), while figuratively it expresses social or spiritual oppression. The Piel stem intensifies the sense of grievous, repeated crushing. Context determines whether the image is visceral destruction or relational harm.",
+    "otFrequency": 19,
+    "pronunciation": "rah-TSAHTS",
+    "semanticRange": [
+      "to crush or break into pieces; physically pulverize",
+      "to oppress or afflict someone; figurative crushing of the spirit",
+      "to be crushed or shattered; passive submission to force",
+      "to grind down; persistent harassment or subjugation"
+    ],
+    "related": [
+      {
+        "lemma": "דָּכַא",
+        "translit": "dakah",
+        "note": "to crush or break; similar figurative sense of oppression"
+      },
+      {
+        "lemma": "שָׁבַר",
+        "translit": "shabar",
+        "note": "to break or shatter; overlaps in physical destruction but broader semantic range"
+      },
+      {
+        "lemma": "עָשַׁק",
+        "translit": "ashoq",
+        "note": "to oppress or defraud; emphasizes the oppression sense over physical crushing"
+      }
+    ]
   },
   "ratson": {
     "lemma": "רָצוֹן",
@@ -205438,8 +205767,31 @@
     "pos": "Proper noun (person)",
     "basicGloss": "Tubal",
     "loaded": false,
-    "notes": "A man living at the time of the Patriarchs, first mentioned at Gen.10.2; son of: Japheth (H3315); brother of: Gomer (H1586), Magog (H4031), Madai (H4074), Javan (H3120), Meshech (H4902) and Tiras (H8494) § Tubal = \"thou shall be…",
-    "otFrequency": 8
+    "notes": "Tubal appears in the Table of Nations (Gen 10:2) as a son of Japheth and is later invoked in Ezekiel's oracles (27:13, 32:26, 38:2-3) as a people skilled in bronze and iron work, suggesting ancient association with the Pontic or Caucasus region. The name itself is an ethnic/tribal designation rather than a theological concept; its primary function is genealogical and geopolitical framing within biblical ethnography.",
+    "otFrequency": 8,
+    "pronunciation": "TOO-vahl",
+    "semanticRange": [
+      "Son of Japheth; ancestor of a post-Flood nation",
+      "Eponymous figure associated with a geographical region or people group",
+      "In prophetic texts (Ezekiel), a trading nation with metalworking reputation"
+    ],
+    "related": [
+      {
+        "lemma": "יָפֶת",
+        "translit": "ya.fet",
+        "note": "Father of Tubal; one of Noah's three sons (Genesis 10)"
+      },
+      {
+        "lemma": "מֶשֶׁךְ",
+        "translit": "me.shekh",
+        "note": "Brother of Tubal; frequently paired with Tubal in prophecies (Ezek 27, 32, 38)"
+      },
+      {
+        "lemma": "גֹּמֶר",
+        "translit": "go.mer",
+        "note": "Another brother; all three (Gomer, Magog, Tubal) represent post-Flood nations"
+      }
+    ]
   },
   "tuvalqayin": {
     "lemma": "תּוּבַל־קַ֫יִן",
@@ -309336,9 +309688,33 @@
     "strongs": "H4872",
     "pos": "Proper noun (person)",
     "basicGloss": "Moses",
-    "loaded": false,
-    "notes": "A man of the tribe of Levi living at the time of Egypt and Wilderness, first mentioned at Exo.2.10; son of: Amram (H6019) and Jochebed (H3115); brother of: Aaron (H0175) and Miriam (H4813); married to Zipporah (H6855); father of:…",
-    "otFrequency": 761
+    "loaded": true,
+    "notes": "Moses carries enormous theological weight in both testaments as covenant mediator, lawgiver, and type of the future prophet-king. The NT (especially Hebrews, John, Acts) repeatedly interprets his role christologically. In Exodus 2–40 and Numbers, Moses emerges not merely as a historical figure but as the unique human intermediary through whom God speaks and acts. His transfiguration appearance with Elijah in Matthew 17 underscores his enduring eschatological significance.",
+    "otFrequency": 761,
+    "pronunciation": "mo-SHEH",
+    "semanticRange": [
+      "The prophet and lawgiver who led Israel from Egypt and received Torah at Sinai",
+      "The mediator of the old covenant between God and Israel",
+      "A figure whose name and deeds typologically foreshadow Christ in NT interpretation",
+      "In Jewish tradition, the supreme human intercessor and speaker of God's word"
+    ],
+    "related": [
+      {
+        "lemma": "תּוֹרָה",
+        "translit": "torah",
+        "note": "Torah is the Law given through Moses at Sinai; inseparable from his identity"
+      },
+      {
+        "lemma": "νόμος (LXX)",
+        "translit": "nomos",
+        "note": "Greek rendering of torah; 'Law of Moses' becomes standard NT theological category"
+      },
+      {
+        "lemma": "אַהֲרֹן",
+        "translit": "aharon",
+        "note": "Brother and co-leader; represents the priestly line descended from Levi through Aaron"
+      }
+    ]
   },
   "moshekhah": {
     "lemma": "מֹשֶׁכֶת",
@@ -381101,9 +381477,33 @@
     "strongs": "H3379",
     "pos": "Proper noun (person)",
     "basicGloss": "Jeroboam",
-    "loaded": false,
-    "notes": "A king of the Kingdom of Israel, living at the time of United Monarchyand Divided Monarchy, first mentioned at 1Ki.11.26; son of: Nebat (H5028) and Zeruah (H6871); father of: Abijah (H0029H), Nadab (H5070H) § Jeroboam = \"the people will…",
-    "otFrequency": 103
+    "loaded": true,
+    "notes": "Jeroboam I ruled the Northern Kingdom ca. 922–901 BCE and catalyzed Israel's permanent division from Judah. In deuteronomistic historiography (1 Kings 11–14), he becomes the paradigm of unfaithful kingship—establishing rival shrines with golden calves at Bethel and Dan to prevent pilgrimages to Jerusalem. Later generations of northern kings are repeatedly judged by whether they 'walked in the way of Jeroboam.' His name appears 103 times across 1–2 Kings and 2 Chronicles, making him one of the Old Testament's most theologically weighted political figures.",
+    "otFrequency": 103,
+    "pronunciation": "yar-o-BO-ahm",
+    "semanticRange": [
+      "First king of the Northern Kingdom of Israel after the split",
+      "Son of Nebat; ruled during the Divided Monarchy period",
+      "Historical figure whose reign marks the beginning of Israel's fragmentation",
+      "Archetypal example of idolatrous kingship in deuteronomistic theology"
+    ],
+    "related": [
+      {
+        "lemma": "רְחַבְעָם",
+        "translit": "rekhav.am",
+        "note": "Rehoboam; Jeroboam's contemporary, king of Judah; his harsh policies triggered the split"
+      },
+      {
+        "lemma": "נְבַט",
+        "translit": "nev.at",
+        "note": "Nebat; father of Jeroboam; eponymous patronym emphasizing his lineage"
+      },
+      {
+        "lemma": "עַגְלֵי־זָהָב",
+        "translit": "aglei-zahav",
+        "note": "Golden calves; Jeroboam's idolatrous religious innovation at Bethel and Dan"
+      }
+    ]
   },
   "yasad": {
     "lemma": "יָסַד",

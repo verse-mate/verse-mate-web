@@ -193,8 +193,8 @@
      Hover/focus + open-popover states add a soft gold tint regardless of
      tier — touch/click feedback should never be ambiguous. */
   .lex-word {
-    text-decoration: underline dotted rgba(176, 154, 109, 0.75);
-    text-decoration-thickness: 1px;
+    text-decoration: underline dotted #B09A6D;
+    text-decoration-thickness: 1.25px;
     text-underline-offset: 3px;
     border-radius: 3px;
     padding: 0 1px;
@@ -202,28 +202,28 @@
   }
   .lex-word:hover,
   .lex-word:focus-visible {
-    background-color: rgba(199, 176, 116, 0.10);
-    text-decoration-color: rgba(216, 192, 137, 0.95);
+    background-color: rgba(199, 176, 116, 0.12);
+    text-decoration-color: #D8C089;
     outline: none;
   }
   .lex-word[data-state='open'] {
-    background-color: rgba(199, 176, 116, 0.16);
-    text-decoration-color: #D8C089;
+    background-color: rgba(199, 176, 116, 0.18);
+    text-decoration-color: #E2CB94;
   }
 
   .lex-word-theme {
-    text-decoration: underline dotted rgba(199, 176, 116, 0.82);
+    text-decoration: underline dotted #C7B074;
     text-decoration-thickness: 1.5px;
     text-underline-offset: 4px;
   }
   .lex-word-theme:hover,
   .lex-word-theme:focus-visible {
-    background-color: rgba(199, 176, 116, 0.12);
-    text-decoration-color: rgba(216, 192, 137, 0.92);
+    background-color: rgba(199, 176, 116, 0.16);
+    text-decoration-color: #E2CB94;
   }
   .lex-word-theme[data-state='open'] {
-    background-color: rgba(199, 176, 116, 0.18);
-    text-decoration-color: #D8C089;
+    background-color: rgba(199, 176, 116, 0.22);
+    text-decoration-color: #E8D4A0;
   }
 
   /* Production highlight classes */
