@@ -18,7 +18,7 @@ import ChapterNotesSheet, { hasPendingChapterNoteDraft } from '@/components/Chap
 import TokenizedVerse from '@/components/TokenizedVerse';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
-import { getAlignmentFor } from '@/data/lexicon';
+import { loadAlignmentFor, type ChapterAlignment } from '@/data/lexicon';
 
 export default function ReadingScreen() {
   const { state, dispatch, addBookmark, removeBookmark } = useApp();
@@ -212,12 +212,21 @@ export default function ReadingScreen() {
 
   const subtitles = chapter?.subtitles || [];
   const verseCount = chapter?.verses.length || 0;
-  // Layer-1 lexical prototype: if the current chapter has a hand-curated
-  // lexicon + alignment (currently James 1 only), enable tap-to-define
-  // for the tokens that match. Other chapters render unchanged.
-  const lexAlignment = state.bookId && state.chapter
-    ? getAlignmentFor(state.bookId, state.chapter)
-    : null;
+  // Layer-1 lexical lookup. Hand-curated chapters resolve synchronously
+  // from cache on the next tick; generated chapters lazy-load their per-
+  // chapter JSON + (first time) the shared lemmas file. The render-with-
+  // null then re-render pattern is fine here — the verse text still shows
+  // immediately, lexical decoration appears the moment data is ready.
+  const [lexAlignment, setLexAlignment] = useState<ChapterAlignment | null>(null);
+  useEffect(() => {
+    setLexAlignment(null);
+    if (!state.bookId || !state.chapter) return;
+    let cancelled = false;
+    loadAlignmentFor(state.bookId, state.chapter).then((a) => {
+      if (!cancelled) setLexAlignment(a);
+    });
+    return () => { cancelled = true; };
+  }, [state.bookId, state.chapter]);
 
   return (
     <div className="flex flex-col h-full relative" style={{ backgroundColor: '#1B1B1B' }}>
