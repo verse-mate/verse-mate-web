@@ -1,0 +1,1191 @@
+{
+  "bookId": 43,
+  "book": "John",
+  "chapter": 9,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Jesus was passing by",
+        "lemma": "parago"
+      },
+      {
+        "surface": "He saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "a man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "blind",
+        "lemma": "tuphlos"
+      },
+      {
+        "surface": "birth",
+        "lemma": "genete"
+      }
+    ],
+    "2": [
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "asked",
+        "lemma": "erotao"
+      },
+      {
+        "surface": "Rabbi",
+        "lemma": "rhabbi"
+      },
+      {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "sinned",
+        "lemma": "hamartano"
+      },
+      {
+        "surface": "parents",
+        "lemma": "goneus"
+      },
+      {
+        "surface": "he was born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "blind",
+        "lemma": "tuphlos"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "answered",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "parents",
+        "lemma": "goneus"
+      },
+      {
+        "surface": "sinned",
+        "lemma": "hamartano"
+      },
+      {
+        "surface": "works",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "would be displayed",
+        "lemma": "phaneroo"
+      }
+    ],
+    "4": [
+      {
+        "surface": "daytime",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "must",
+        "lemma": "dei"
+      },
+      {
+        "surface": "do",
+        "lemma": "ergazomai"
+      },
+      {
+        "surface": "works",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "sent",
+        "lemma": "pempo"
+      },
+      {
+        "surface": "Night",
+        "lemma": "nux"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "work",
+        "lemma": "ergazomai"
+      }
+    ],
+    "5": [
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "the light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      }
+    ],
+    "6": [
+      {
+        "surface": "When Jesus had said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "He spit",
+        "lemma": "ptuo"
+      },
+      {
+        "surface": "on the ground",
+        "lemma": "chamai"
+      },
+      {
+        "surface": "some mud",
+        "lemma": "pelos"
+      },
+      {
+        "surface": "applied",
+        "lemma": "epichrio"
+      },
+      {
+        "surface": "it",
+        "lemma": "pelos"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ophthalmos"
+      }
+    ],
+    "7": [
+      {
+        "surface": "He told",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Go",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "wash",
+        "lemma": "nipto"
+      },
+      {
+        "surface": "Pool",
+        "lemma": "kolumbethra"
+      },
+      {
+        "surface": "of Siloam",
+        "lemma": "siloam"
+      },
+      {
+        "surface": "means",
+        "lemma": "hermeneuo"
+      },
+      {
+        "surface": "“Sent”",
+        "lemma": "apostello"
+      },
+      {
+        "surface": "the man went",
+        "lemma": "aperchomai"
+      },
+      {
+        "surface": "washed",
+        "lemma": "nipto"
+      },
+      {
+        "surface": "seeing",
+        "lemma": "blepo"
+      }
+    ],
+    "8": [
+      {
+        "surface": "neighbors",
+        "lemma": "geiton"
+      },
+      {
+        "surface": "had formerly seen",
+        "lemma": "theoreo"
+      },
+      {
+        "surface": "begging",
+        "lemma": "prosaiteo"
+      },
+      {
+        "surface": "began to ask",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "used to sit",
+        "lemma": "kathemai"
+      },
+      {
+        "surface": "beg",
+        "lemma": "prosaiteo"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Some",
+        "lemma": "allos"
+      },
+      {
+        "surface": "claimed",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "but others",
+        "lemma": "allos"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "like",
+        "lemma": "homoios"
+      },
+      {
+        "surface": "kept saying",
+        "lemma": "eipon"
+      }
+    ],
+    "10": [
+      {
+        "surface": "eyes",
+        "lemma": "ophthalmos"
+      },
+      {
+        "surface": "opened",
+        "lemma": "anoigo"
+      },
+      {
+        "surface": "they asked",
+        "lemma": "eipon"
+      }
+    ],
+    "11": [
+      {
+        "surface": "answered",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "some mud",
+        "lemma": "pelos"
+      },
+      {
+        "surface": "anointed",
+        "lemma": "epichrio"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ophthalmos"
+      },
+      {
+        "surface": "He told",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "go",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "Siloam",
+        "lemma": "siloam"
+      },
+      {
+        "surface": "wash",
+        "lemma": "nipto"
+      },
+      {
+        "surface": "I went",
+        "lemma": "aperchomai"
+      },
+      {
+        "surface": "washed",
+        "lemma": "nipto"
+      },
+      {
+        "surface": "and received my sight",
+        "lemma": "anablepo"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Where",
+        "lemma": "pou"
+      },
+      {
+        "surface": "they asked",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "I do not know",
+        "lemma": "eido"
+      }
+    ],
+    "13": [
+      {
+        "surface": "They brought",
+        "lemma": "ago"
+      },
+      {
+        "surface": "Pharisees",
+        "lemma": "pharisaios"
+      },
+      {
+        "surface": "blind",
+        "lemma": "tuphlos"
+      }
+    ],
+    "14": [
+      {
+        "surface": "the day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "mud",
+        "lemma": "pelos"
+      },
+      {
+        "surface": "opened",
+        "lemma": "anoigo"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ophthalmos"
+      },
+      {
+        "surface": "a Sabbath",
+        "lemma": "sabbaton"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Pharisees",
+        "lemma": "pharisaios"
+      },
+      {
+        "surface": "asked",
+        "lemma": "erotao"
+      },
+      {
+        "surface": "he had received his sight",
+        "lemma": "anablepo"
+      },
+      {
+        "surface": "The man answered",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "He put",
+        "lemma": "epitithemi"
+      },
+      {
+        "surface": "mud",
+        "lemma": "pelos"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ophthalmos"
+      },
+      {
+        "surface": "I washed",
+        "lemma": "nipto"
+      },
+      {
+        "surface": "I can see",
+        "lemma": "blepo"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Pharisees",
+        "lemma": "pharisaios"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "He does not keep",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "Sabbath",
+        "lemma": "sabbaton"
+      },
+      {
+        "surface": "others",
+        "lemma": "allos"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "a sinful",
+        "lemma": "hamartolos"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "signs",
+        "lemma": "semeion"
+      },
+      {
+        "surface": "division",
+        "lemma": "schisma"
+      }
+    ],
+    "17": [
+      {
+        "surface": "once again",
+        "lemma": "palin"
+      },
+      {
+        "surface": "man who had been blind",
+        "lemma": "tuphlos"
+      },
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ophthalmos"
+      },
+      {
+        "surface": "He opened",
+        "lemma": "anoigo"
+      },
+      {
+        "surface": "a prophet",
+        "lemma": "prophetes"
+      },
+      {
+        "surface": "the man replied",
+        "lemma": "eipon"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Jews",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "blind",
+        "lemma": "tuphlos"
+      },
+      {
+        "surface": "had received his sight",
+        "lemma": "anablepo"
+      },
+      {
+        "surface": "they summoned",
+        "lemma": "phoneo"
+      },
+      {
+        "surface": "his",
+        "lemma": "anablepo"
+      },
+      {
+        "surface": "parents",
+        "lemma": "goneus"
+      }
+    ],
+    "19": [
+      {
+        "surface": "asked",
+        "lemma": "erotao"
+      },
+      {
+        "surface": "son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "was born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "blind",
+        "lemma": "tuphlos"
+      },
+      {
+        "surface": "he can now see",
+        "lemma": "blepo"
+      }
+    ],
+    "20": [
+      {
+        "surface": "parents",
+        "lemma": "goneus"
+      },
+      {
+        "surface": "answered",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "We know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "he was born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "blind",
+        "lemma": "tuphlos"
+      }
+    ],
+    "21": [
+      {
+        "surface": "he can now see",
+        "lemma": "blepo"
+      },
+      {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "opened",
+        "lemma": "anoigo"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ophthalmos"
+      },
+      {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "Ask",
+        "lemma": "erotao"
+      },
+      {
+        "surface": "old enough",
+        "lemma": "helikia"
+      },
+      {
+        "surface": "to speak",
+        "lemma": "laleo"
+      }
+    ],
+    "22": [
+      {
+        "surface": "parents",
+        "lemma": "goneus"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "they were afraid",
+        "lemma": "phobeo"
+      },
+      {
+        "surface": "Jews",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "Jews",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ede"
+      },
+      {
+        "surface": "had already determined",
+        "lemma": "suntithemi"
+      },
+      {
+        "surface": "confessed",
+        "lemma": "homologeo"
+      },
+      {
+        "surface": "as the Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "put out of the synagogue",
+        "lemma": "aposunagogos"
+      }
+    ],
+    "23": [
+      {
+        "surface": "parents",
+        "lemma": "goneus"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "old enough",
+        "lemma": "helikia"
+      },
+      {
+        "surface": "Ask",
+        "lemma": "eperotao"
+      }
+    ],
+    "24": [
+      {
+        "surface": "a second time",
+        "lemma": "deuteros"
+      },
+      {
+        "surface": "they called",
+        "lemma": "phoneo"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "blind",
+        "lemma": "tuphlos"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Give",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "to God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "a sinner",
+        "lemma": "hamartolos"
+      }
+    ],
+    "25": [
+      {
+        "surface": "answered",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "Whether",
+        "lemma": "ei"
+      },
+      {
+        "surface": "a sinner",
+        "lemma": "hamartolos"
+      },
+      {
+        "surface": "I do not know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "There is one thing",
+        "lemma": "ehis"
+      },
+      {
+        "surface": "I do know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "blind",
+        "lemma": "tuphlos"
+      },
+      {
+        "surface": "but now",
+        "lemma": "arti"
+      },
+      {
+        "surface": "I see",
+        "lemma": "blepo"
+      }
+    ],
+    "26": [
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "they asked",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "did He open",
+        "lemma": "anoigo"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ophthalmos"
+      }
+    ],
+    "27": [
+      {
+        "surface": "He replied",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "I already told",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "you did not listen",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "Why",
+        "lemma": "tis"
+      },
+      {
+        "surface": "do you want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to hear it",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "again",
+        "lemma": "palin"
+      },
+      {
+        "surface": "want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      }
+    ],
+    "28": [
+      {
+        "surface": "they heaped insults on",
+        "lemma": "loidoreo"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "disciple",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "of Moses",
+        "lemma": "mousesmoses"
+      }
+    ],
+    "29": [
+      {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "to Moses",
+        "lemma": "mousesmoses"
+      },
+      {
+        "surface": "we do not know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "where",
+        "lemma": "pothen"
+      }
+    ],
+    "30": [
+      {
+        "surface": "remarkable",
+        "lemma": "thaumastos"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "said",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "where",
+        "lemma": "pothen"
+      },
+      {
+        "surface": "He opened",
+        "lemma": "anoigo"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ophthalmos"
+      }
+    ],
+    "31": [
+      {
+        "surface": "We know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "does not listen to",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "sinners",
+        "lemma": "hamartolos"
+      },
+      {
+        "surface": "He does listen to",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "worships Him",
+        "lemma": "theosebes"
+      },
+      {
+        "surface": "will",
+        "lemma": "thelema"
+      }
+    ],
+    "32": [
+      {
+        "surface": "before",
+        "lemma": "aion"
+      },
+      {
+        "surface": "heard of",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "opening",
+        "lemma": "anoigo"
+      },
+      {
+        "surface": "the eyes",
+        "lemma": "ophthalmos"
+      },
+      {
+        "surface": "of a man born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "blind",
+        "lemma": "tuphlos"
+      }
+    ],
+    "33": [
+      {
+        "surface": "If",
+        "lemma": "ei"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "He could",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "no such thing",
+        "lemma": "oudeis"
+      }
+    ],
+    "34": [
+      {
+        "surface": "They replied",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "were born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "utter",
+        "lemma": "holos"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "are instructing",
+        "lemma": "didasko"
+      },
+      {
+        "surface": "they threw",
+        "lemma": "ekballo"
+      }
+    ],
+    "35": [
+      {
+        "surface": "When Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "they had thrown",
+        "lemma": "ekballo"
+      },
+      {
+        "surface": "He found",
+        "lemma": "ehurisko"
+      },
+      {
+        "surface": "and said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "Man",
+        "lemma": "anthropos"
+      }
+    ],
+    "36": [
+      {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "Sir",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "replied",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "I may believe",
+        "lemma": "pisteuo"
+      }
+    ],
+    "37": [
+      {
+        "surface": "You have already seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "answered",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "speaking",
+        "lemma": "laleo"
+      }
+    ],
+    "38": [
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "I believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "he said",
+        "lemma": "phemi"
+      },
+      {
+        "surface": "he worshiped",
+        "lemma": "proskuneo"
+      }
+    ],
+    "39": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "declared",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "judgment",
+        "lemma": "krima"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "the blind",
+        "lemma": "blepo"
+      },
+      {
+        "surface": "may see",
+        "lemma": "blepo"
+      },
+      {
+        "surface": "see",
+        "lemma": "blepo"
+      },
+      {
+        "surface": "blind",
+        "lemma": "tuphlos"
+      }
+    ],
+    "40": [
+      {
+        "surface": "Pharisees",
+        "lemma": "pharisaios"
+      },
+      {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "they asked",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "blind",
+        "lemma": "tuphlos"
+      }
+    ],
+    "41": [
+      {
+        "surface": "If",
+        "lemma": "ei"
+      },
+      {
+        "surface": "blind",
+        "lemma": "tuphlos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "replied",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "an"
+      },
+      {
+        "surface": "guilty of sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "since",
+        "lemma": "nun"
+      },
+      {
+        "surface": "you can see",
+        "lemma": "blepo"
+      },
+      {
+        "surface": "guilt",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "remains",
+        "lemma": "meno"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "pelos",
+    "epichrio",
+    "siloam"
+  ]
+}

@@ -1,0 +1,887 @@
+{
+  "bookId": 43,
+  "book": "John",
+  "chapter": 14,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "hearts",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "be troubled",
+        "lemma": "tarasso"
+      },
+      {
+        "surface": "You believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "believe",
+        "lemma": "pisteuo"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Father’s",
+        "lemma": "pater"
+      },
+      {
+        "surface": "house",
+        "lemma": "oikia"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
+        "surface": "rooms",
+        "lemma": "mone"
+      },
+      {
+        "surface": "If",
+        "lemma": "ei"
+      },
+      {
+        "surface": "so",
+        "lemma": "an"
+      },
+      {
+        "surface": "would I have told",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "I am going there",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "to prepare",
+        "lemma": "hetoimazo"
+      },
+      {
+        "surface": "a place",
+        "lemma": "topos"
+      }
+    ],
+    "3": [
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "I go",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "prepare",
+        "lemma": "hetoimazo"
+      },
+      {
+        "surface": "a place",
+        "lemma": "topos"
+      },
+      {
+        "surface": "back",
+        "lemma": "palin"
+      },
+      {
+        "surface": "welcome",
+        "lemma": "paralambano"
+      }
+    ],
+    "4": [
+      {
+        "surface": "You know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "way",
+        "lemma": "hodos"
+      },
+      {
+        "surface": "am going",
+        "lemma": "hupago"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Thomas",
+        "lemma": "thomas"
+      },
+      {
+        "surface": "we do not know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "where",
+        "lemma": "pou"
+      },
+      {
+        "surface": "You are going",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "can we",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "way",
+        "lemma": "hodos"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "way",
+        "lemma": "hodos"
+      },
+      {
+        "surface": "truth",
+        "lemma": "aletheia"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "No one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "except",
+        "lemma": "ei"
+      }
+    ],
+    "7": [
+      {
+        "surface": "If",
+        "lemma": "ei"
+      },
+      {
+        "surface": "you had known",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "you would know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "as well",
+        "lemma": "an"
+      },
+      {
+        "surface": "now on",
+        "lemma": "arti"
+      },
+      {
+        "surface": "you do know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "have seen",
+        "lemma": "horao"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Philip",
+        "lemma": "philippos"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "show",
+        "lemma": "deiknuo"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "that will be enough",
+        "lemma": "arkeo"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Philip",
+        "lemma": "philippos"
+      },
+      {
+        "surface": "all this",
+        "lemma": "tosoutos"
+      },
+      {
+        "surface": "time",
+        "lemma": "chronos"
+      },
+      {
+        "surface": "still you do not know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "has seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "has seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "Show",
+        "lemma": "deiknuo"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Do you not believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "words",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "I do not speak",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "dwelling",
+        "lemma": "meno"
+      },
+      {
+        "surface": "works",
+        "lemma": "ergon"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "works",
+        "lemma": "ergon"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "believes",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "works",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "greater things",
+        "lemma": "megas"
+      },
+      {
+        "surface": "am going",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      }
+    ],
+    "13": [
+      {
+        "surface": "you ask",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "may be glorified",
+        "lemma": "doxazo"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      }
+    ],
+    "14": [
+      {
+        "surface": "If",
+        "lemma": "ean"
+      },
+      {
+        "surface": "you ask",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      }
+    ],
+    "15": [
+      {
+        "surface": "If",
+        "lemma": "ean"
+      },
+      {
+        "surface": "you love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "you will keep",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "My",
+        "lemma": "emos"
+      },
+      {
+        "surface": "commandments",
+        "lemma": "entole"
+      }
+    ],
+    "16": [
+      {
+        "surface": "will ask",
+        "lemma": "erotao"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "He will give",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "another",
+        "lemma": "allos"
+      },
+      {
+        "surface": "Advocate",
+        "lemma": "parakletos"
+      },
+      {
+        "surface": "forever",
+        "lemma": "aion"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "of truth",
+        "lemma": "aletheia"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "receive",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "it neither sees",
+        "lemma": "theoreo"
+      },
+      {
+        "surface": "knows Him",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "do know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "He abides",
+        "lemma": "meno"
+      }
+    ],
+    "18": [
+      {
+        "surface": "I will not leave",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "as orphans",
+        "lemma": "orphanos"
+      }
+    ],
+    "19": [
+      {
+        "surface": "In",
+        "lemma": "eti"
+      },
+      {
+        "surface": "a little while",
+        "lemma": "mikros"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "will see",
+        "lemma": "theoreo"
+      },
+      {
+        "surface": "will see",
+        "lemma": "theoreo"
+      },
+      {
+        "surface": "live",
+        "lemma": "zao"
+      },
+      {
+        "surface": "will live",
+        "lemma": "zao"
+      }
+    ],
+    "20": [
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "will know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      }
+    ],
+    "21": [
+      {
+        "surface": "commandments",
+        "lemma": "entole"
+      },
+      {
+        "surface": "keeps",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "loves",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "loves",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "will be loved",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "will love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "reveal",
+        "lemma": "emphanizo"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Judas",
+        "lemma": "ioudas"
+      },
+      {
+        "surface": "Iscariot",
+        "lemma": "iskariotesiskarioth"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "why",
+        "lemma": "tis"
+      },
+      {
+        "surface": "are You going",
+        "lemma": "mello"
+      },
+      {
+        "surface": "to reveal",
+        "lemma": "emphanizo"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "replied",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "If",
+        "lemma": "ean"
+      },
+      {
+        "surface": "loves",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "he will keep",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "will love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "Our home",
+        "lemma": "mone"
+      }
+    ],
+    "24": [
+      {
+        "surface": "does not love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "does not keep",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "words",
+        "lemma": "logos"
+      },
+      {
+        "surface": "word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "you hear",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "My own",
+        "lemma": "emos"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "who sent",
+        "lemma": "pempo"
+      }
+    ],
+    "25": [
+      {
+        "surface": "I have spoken",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "while I am still",
+        "lemma": "meno"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Advocate",
+        "lemma": "parakletos"
+      },
+      {
+        "surface": "Holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "will send",
+        "lemma": "pempo"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "will teach",
+        "lemma": "didasko"
+      },
+      {
+        "surface": "will remind you of",
+        "lemma": "hupomimnesko"
+      },
+      {
+        "surface": "have told",
+        "lemma": "eipon"
+      }
+    ],
+    "27": [
+      {
+        "surface": "Peace",
+        "lemma": "eirene"
+      },
+      {
+        "surface": "I leave",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "My",
+        "lemma": "emos"
+      },
+      {
+        "surface": "peace",
+        "lemma": "eirene"
+      },
+      {
+        "surface": "I give",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "give",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "gives",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "hearts",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "be troubled",
+        "lemma": "tarasso"
+      },
+      {
+        "surface": "be afraid",
+        "lemma": "deiliao"
+      }
+    ],
+    "28": [
+      {
+        "surface": "You heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "say",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "I am going away",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "If",
+        "lemma": "ei"
+      },
+      {
+        "surface": "you loved",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "an"
+      },
+      {
+        "surface": "you would rejoice",
+        "lemma": "chairo"
+      },
+      {
+        "surface": "I am going",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "greater than",
+        "lemma": "megas"
+      }
+    ],
+    "29": [
+      {
+        "surface": "now",
+        "lemma": "nun"
+      },
+      {
+        "surface": "I have told",
+        "lemma": "ero"
+      },
+      {
+        "surface": "you will believe",
+        "lemma": "pisteuo"
+      }
+    ],
+    "30": [
+      {
+        "surface": "I will {not} speak",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "much",
+        "lemma": "polus"
+      },
+      {
+        "surface": "prince",
+        "lemma": "archon"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      }
+    ],
+    "31": [
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "has commanded",
+        "lemma": "entello"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "may know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "I love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "Get up",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "Let us go on",
+        "lemma": "ago"
+      },
+      {
+        "surface": "from here",
+        "lemma": "enteuthenenthen"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "mone",
+    "parakletos",
+    "emphanizo"
+  ]
+}

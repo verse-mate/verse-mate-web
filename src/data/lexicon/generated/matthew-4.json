@@ -1,0 +1,899 @@
+{
+  "bookId": 40,
+  "book": "Matthew",
+  "chapter": 4,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then",
+        "lemma": "tote"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "was led",
+        "lemma": "anago"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "wilderness",
+        "lemma": "eremos"
+      },
+      {
+        "surface": "to be tempted",
+        "lemma": "peirazo"
+      },
+      {
+        "surface": "devil",
+        "lemma": "diabolos"
+      }
+    ],
+    "2": [
+      {
+        "surface": "After fasting",
+        "lemma": "nesteuo"
+      },
+      {
+        "surface": "forty",
+        "lemma": "tessarakonta"
+      },
+      {
+        "surface": "days",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "forty",
+        "lemma": "tessarakonta"
+      },
+      {
+        "surface": "nights",
+        "lemma": "nux"
+      },
+      {
+        "surface": "He was hungry",
+        "lemma": "peinao"
+      }
+    ],
+    "3": [
+      {
+        "surface": "tempter",
+        "lemma": "peirazo"
+      },
+      {
+        "surface": "came",
+        "lemma": "proserchomai"
+      },
+      {
+        "surface": "and said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "If",
+        "lemma": "ei"
+      },
+      {
+        "surface": "the Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "tell",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "stones",
+        "lemma": "lithos"
+      },
+      {
+        "surface": "bread",
+        "lemma": "artos"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Jesus answered",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "It is written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "Man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "shall not live",
+        "lemma": "zao"
+      },
+      {
+        "surface": "bread",
+        "lemma": "artos"
+      },
+      {
+        "surface": "alone",
+        "lemma": "monos"
+      },
+      {
+        "surface": "word",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "that comes",
+        "lemma": "ekporeuo"
+      },
+      {
+        "surface": "the mouth",
+        "lemma": "stoma"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Then",
+        "lemma": "tote"
+      },
+      {
+        "surface": "devil",
+        "lemma": "diabolos"
+      },
+      {
+        "surface": "took",
+        "lemma": "paralambano"
+      },
+      {
+        "surface": "holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "city",
+        "lemma": "polis"
+      },
+      {
+        "surface": "set",
+        "lemma": "histemi"
+      },
+      {
+        "surface": "pinnacle",
+        "lemma": "pterugion"
+      },
+      {
+        "surface": "temple",
+        "lemma": "hieros"
+      }
+    ],
+    "6": [
+      {
+        "surface": "If",
+        "lemma": "ei"
+      },
+      {
+        "surface": "the Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "throw",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "He will command",
+        "lemma": "entello"
+      },
+      {
+        "surface": "angels",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "they will lift You up",
+        "lemma": "airo"
+      },
+      {
+        "surface": "their hands",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "so that You will not strike",
+        "lemma": "proskopto"
+      },
+      {
+        "surface": "foot",
+        "lemma": "pous"
+      },
+      {
+        "surface": "a stone",
+        "lemma": "lithos"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "replied",
+        "lemma": "phemi"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "palin"
+      },
+      {
+        "surface": "It is also written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "Do not put",
+        "lemma": "ekpeirazo"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "God {to the test",
+        "lemma": "theos"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Again",
+        "lemma": "palin"
+      },
+      {
+        "surface": "devil",
+        "lemma": "diabolos"
+      },
+      {
+        "surface": "took",
+        "lemma": "paralambano"
+      },
+      {
+        "surface": "a very",
+        "lemma": "lian"
+      },
+      {
+        "surface": "high",
+        "lemma": "hupselos"
+      },
+      {
+        "surface": "mountain",
+        "lemma": "oros"
+      },
+      {
+        "surface": "showed",
+        "lemma": "deiknuo"
+      },
+      {
+        "surface": "kingdoms",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      }
+    ],
+    "9": [
+      {
+        "surface": "I will give",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "he said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "You will fall down",
+        "lemma": "pipto"
+      },
+      {
+        "surface": "and worship",
+        "lemma": "proskuneo"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Away from Me",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "Satan",
+        "lemma": "satanas"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "Worship",
+        "lemma": "proskuneo"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "serve",
+        "lemma": "latreuo"
+      },
+      {
+        "surface": "only",
+        "lemma": "monos"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Then",
+        "lemma": "tote"
+      },
+      {
+        "surface": "devil",
+        "lemma": "diabolos"
+      },
+      {
+        "surface": "left",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "angels",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "came",
+        "lemma": "proserchomai"
+      },
+      {
+        "surface": "ministered",
+        "lemma": "diakoneo"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Jesus heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "John",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "had been imprisoned",
+        "lemma": "paradidomi"
+      },
+      {
+        "surface": "He withdrew",
+        "lemma": "anachoreo"
+      },
+      {
+        "surface": "Galilee",
+        "lemma": "galilaia"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Leaving",
+        "lemma": "kataleipo"
+      },
+      {
+        "surface": "Nazareth",
+        "lemma": "nazarethnazara"
+      },
+      {
+        "surface": "and lived",
+        "lemma": "katoikeo"
+      },
+      {
+        "surface": "Capernaum",
+        "lemma": "kapernaoum"
+      },
+      {
+        "surface": "by the sea",
+        "lemma": "parathalassios"
+      },
+      {
+        "surface": "the region",
+        "lemma": "horion"
+      },
+      {
+        "surface": "of Zebulun",
+        "lemma": "zaboulon"
+      },
+      {
+        "surface": "Naphtali",
+        "lemma": "nephthaleim"
+      }
+    ],
+    "14": [
+      {
+        "surface": "fulfill",
+        "lemma": "pleroo"
+      },
+      {
+        "surface": "was spoken",
+        "lemma": "ero"
+      },
+      {
+        "surface": "prophet",
+        "lemma": "prophetes"
+      },
+      {
+        "surface": "Isaiah",
+        "lemma": "hesaias"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Land",
+        "lemma": "ge"
+      },
+      {
+        "surface": "of Zebulun",
+        "lemma": "zaboulon"
+      },
+      {
+        "surface": "land",
+        "lemma": "ge"
+      },
+      {
+        "surface": "of Naphtali",
+        "lemma": "nephthaleim"
+      },
+      {
+        "surface": "the Way",
+        "lemma": "hodos"
+      },
+      {
+        "surface": "of the Sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "Jordan",
+        "lemma": "iordanes"
+      },
+      {
+        "surface": "Galilee",
+        "lemma": "galilaia"
+      },
+      {
+        "surface": "Gentiles",
+        "lemma": "ethnos"
+      }
+    ],
+    "16": [
+      {
+        "surface": "people",
+        "lemma": "laos"
+      },
+      {
+        "surface": "living",
+        "lemma": "kathemai"
+      },
+      {
+        "surface": "darkness",
+        "lemma": "skotia"
+      },
+      {
+        "surface": "have seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "a great",
+        "lemma": "megas"
+      },
+      {
+        "surface": "light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "living",
+        "lemma": "kathemai"
+      },
+      {
+        "surface": "land",
+        "lemma": "chora"
+      },
+      {
+        "surface": "of the shadow",
+        "lemma": "skia"
+      },
+      {
+        "surface": "of death",
+        "lemma": "thanatos"
+      },
+      {
+        "surface": "a light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "has dawned",
+        "lemma": "anatello"
+      }
+    ],
+    "17": [
+      {
+        "surface": "that time on",
+        "lemma": "tote"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "began",
+        "lemma": "archomai"
+      },
+      {
+        "surface": "to preach",
+        "lemma": "kerusso"
+      },
+      {
+        "surface": "Repent",
+        "lemma": "metanoeo"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "is near",
+        "lemma": "engizo"
+      }
+    ],
+    "18": [
+      {
+        "surface": "As Jesus was walking",
+        "lemma": "peripateo"
+      },
+      {
+        "surface": "Sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "of Galilee",
+        "lemma": "galilaia"
+      },
+      {
+        "surface": "He saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "Simon",
+        "lemma": "simon"
+      },
+      {
+        "surface": "Peter",
+        "lemma": "petros"
+      },
+      {
+        "surface": "brother",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "Andrew",
+        "lemma": "andreas"
+      },
+      {
+        "surface": "They were casting",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "a net",
+        "lemma": "amphiblestron"
+      },
+      {
+        "surface": "sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "fishermen",
+        "lemma": "halieus"
+      }
+    ],
+    "19": [
+      {
+        "surface": "fishers",
+        "lemma": "halieus"
+      },
+      {
+        "surface": "of men",
+        "lemma": "anthropos"
+      }
+    ],
+    "20": [
+      {
+        "surface": "at once",
+        "lemma": "eutheos"
+      },
+      {
+        "surface": "they left",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "nets",
+        "lemma": "diktuon"
+      },
+      {
+        "surface": "and followed",
+        "lemma": "akoloutheo"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Going on",
+        "lemma": "probaino"
+      },
+      {
+        "surface": "from there",
+        "lemma": "ekeithen"
+      },
+      {
+        "surface": "He saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "other",
+        "lemma": "allos"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "James",
+        "lemma": "iakobos"
+      },
+      {
+        "surface": "of Zebedee",
+        "lemma": "zebedaios"
+      },
+      {
+        "surface": "brother",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "John",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "a boat",
+        "lemma": "ploion"
+      },
+      {
+        "surface": "father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "Zebedee",
+        "lemma": "zebedaios"
+      },
+      {
+        "surface": "mending",
+        "lemma": "katartizo"
+      },
+      {
+        "surface": "nets",
+        "lemma": "diktuon"
+      },
+      {
+        "surface": "Jesus called",
+        "lemma": "kaleo"
+      }
+    ],
+    "22": [
+      {
+        "surface": "immediately",
+        "lemma": "eutheos"
+      },
+      {
+        "surface": "they left",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "boat",
+        "lemma": "ploion"
+      },
+      {
+        "surface": "father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "and followed",
+        "lemma": "akoloutheo"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Jesus went",
+        "lemma": "periago"
+      },
+      {
+        "surface": "Galilee",
+        "lemma": "galilaia"
+      },
+      {
+        "surface": "teaching",
+        "lemma": "didasko"
+      },
+      {
+        "surface": "synagogues",
+        "lemma": "sunagoge"
+      },
+      {
+        "surface": "preaching",
+        "lemma": "kerusso"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "healing",
+        "lemma": "therapeuo"
+      },
+      {
+        "surface": "disease",
+        "lemma": "nosos"
+      },
+      {
+        "surface": "sickness",
+        "lemma": "malakia"
+      },
+      {
+        "surface": "people",
+        "lemma": "laos"
+      }
+    ],
+    "24": [
+      {
+        "surface": "News",
+        "lemma": "akoe"
+      },
+      {
+        "surface": "spread",
+        "lemma": "aperchomai"
+      },
+      {
+        "surface": "all",
+        "lemma": "holos"
+      },
+      {
+        "surface": "Syria",
+        "lemma": "suria"
+      },
+      {
+        "surface": "people brought",
+        "lemma": "prosphero"
+      },
+      {
+        "surface": "were ill",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "various",
+        "lemma": "poikilos"
+      },
+      {
+        "surface": "diseases",
+        "lemma": "nosos"
+      },
+      {
+        "surface": "those suffering",
+        "lemma": "sunecho"
+      },
+      {
+        "surface": "acute pain",
+        "lemma": "basanos"
+      },
+      {
+        "surface": "the demon-possessed",
+        "lemma": "daimonizomai"
+      },
+      {
+        "surface": "those having seizures",
+        "lemma": "seleniazomai"
+      },
+      {
+        "surface": "the paralyzed",
+        "lemma": "paralutikos"
+      },
+      {
+        "surface": "He healed",
+        "lemma": "therapeuo"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Large",
+        "lemma": "polus"
+      },
+      {
+        "surface": "crowds",
+        "lemma": "ochlos"
+      },
+      {
+        "surface": "followed",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "Galilee",
+        "lemma": "galilaia"
+      },
+      {
+        "surface": "the Decapolis",
+        "lemma": "dekapolis"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierosoluma"
+      },
+      {
+        "surface": "Judea",
+        "lemma": "ioudaia"
+      },
+      {
+        "surface": "Jordan",
+        "lemma": "iordanes"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "zaboulon",
+    "nephthaleim",
+    "halieus"
+  ]
+}

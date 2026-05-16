@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "description": "Per-occurrence contextual glosses for theologically loaded NT lemmas. Keyed by `<book-slug>:<chapter>:<verse>:<lemma>`. Pilot set authored by hand, in the style of the hand-curated James glosses. Phase 3 will expand this via Claude API batch generation against the loaded-lemma list.",
+    "format": "string with markdown not allowed; one to three sentences; phrasing 'In X, the word foregrounds Y' — never 'X means Y'."
+  },
+
+  "john:1:1:logos": "ὁ λόγος here is the divine self-expression — the Word who was 'with God' and 'was God,' the Son who utters the Father. Not abstract reason or message; a Person.",
+  "john:1:14:logos": "ὁ λόγος σὰρξ ἐγένετο — 'the Word became flesh.' The same divine self-expression of v.1 now takes σάρξ, full human creatureliness. The verse is the hinge of Johannine Christology.",
+  "hebrews:4:12:logos": "ζῶν γὰρ ὁ λόγος τοῦ θεοῦ — 'the word of God is living.' Here ὁ λόγος is the spoken word of God in scripture, personified as an active agent: it cuts, divides, exposes. Closer to a sword in God's hand than to abstract truth.",
+
+  "john:3:16:kosmos": "ὁ κόσμος here is humanity — the world of persons God loves. The same word in 1 Jn 2:15 ('do not love the κόσμος') means the world-system in rebellion against God. Same lexeme, opposite valence; context governs which.",
+  "1-john:2:15:kosmos": "Not the κόσμος God loved in Jn 3:16 (humanity) but the world-system arrayed against God — its values, its allegiances, its grip on the soul. The same word, deliberately split between Johannine writings.",
+
+  "romans:5:8:agape": "ἀγάπη here is God's settled covenant commitment, demonstrated in action — Christ's death FOR sinners, not for the righteous. The English 'love' under-translates the verbal force: love that does, not love that feels.",
+  "1-corinthians:13:4:agape": "Paul's famous ἀγάπη clauses are not feelings but actions: μακροθυμεῖ (waits long with people), χρηστεύεται (gives kindness), οὐ ζηλοῖ (does not envy). ἀγάπη here is described entirely by what it does and does not do — a defining test, not a feeling.",
+  "john:13:34:agape": "καθὼς ἠγάπησα ὑμᾶς — 'as I have loved you.' The standard for ἀγάπη here is Christ's own act of self-giving; the disciples' love for one another is measured against the cross.",
+
+  "ephesians:2:8:charis": "τῇ γὰρ χάριτί ἐστε σεσῳσμένοι — 'by χάρις you have been saved.' Here χάρις is God's unmerited initiative concretized in Christ's death and resurrection. Not abstract favor — the saving act itself, received through πίστις.",
+  "2-corinthians:12:9:charis": "ἀρκεῖ σοι ἡ χάρις μου — 'my χάρις is sufficient for you.' In Paul's weakness, χάρις is God's enabling power flowing in answer to limitation, not a substance Paul possesses.",
+  "romans:5:15:charis": "ἡ χάρις τοῦ θεοῦ καὶ ἡ δωρεὰ ἐν χάριτι — Paul stacks χάρις with δωρεά ('gift') to emphasize gratuity. Adam's trespass spread to all; God's χάρις in Christ spreads further.",
+
+  "romans:1:17:dikaiosyne": "δικαιοσύνη θεοῦ here is the saving righteousness God gives to faith — the right standing that becomes the believer's. Pauline forensic register. The verse opens Romans' main argument: God's righteousness is revealed in the gospel, received ἐκ πίστεως εἰς πίστιν.",
+  "romans:3:21:dikaiosyne": "νυνὶ δὲ χωρὶς νόμου δικαιοσύνη θεοῦ πεφανέρωται — 'now apart from law, God's δικαιοσύνη has been disclosed.' The same word in Mt 5:6 ('hunger and thirst for righteousness') keeps the ethical register; here Paul means God's saving verdict.",
+  "philippians:3:9:dikaiosyne": "μὴ ἔχων ἐμὴν δικαιοσύνην — 'not having a δικαιοσύνη of my own.' Paul contrasts his own righteousness (ἐκ νόμου) with the righteousness from God (ἐκ θεοῦ ἐπὶ τῇ πίστει). Personal language, but the forensic logic of Rom 3 stands behind it.",
+
+  "romans:7:18:sarx": "οὐκ οἰκεῖ ἐν ἐμοί, τοῦτ' ἔστιν ἐν τῇ σαρκί μου, ἀγαθόν — 'nothing good dwells in me, that is, in my σάρξ.' σάρξ here is not the body simpliciter but humanity-as-fallen, the self under sin's sway. Don't read this as anti-body.",
+  "romans:8:5:sarx": "οἱ κατὰ σάρκα ὄντες — 'those who are according to σάρξ.' Paul means a settled orientation — to live by fallen human nature's logic — contrasted with κατὰ πνεῦμα. σάρξ here is mode of existence, not flesh-and-bone.",
+  "galatians:5:16:sarx": "ἐπιθυμίαν σαρκὸς οὐ μὴ τελέσητε — the σάρξ wars against the πνεῦμα in the believer. Same Pauline anthropology as Rom 7-8: σάρξ as fallen human nature still operative until glorification, not as physicality.",
+
+  "hebrews:11:1:pistis": "ἔστιν δὲ πίστις ἐλπιζομένων ὑπόστασις — πίστις is the substance (ὑπόστασις) of things hoped for. The author defines πίστις not by what it feels like but by what it grasps: future realities made present through trust in God's promise.",
+  "romans:4:3:pistis": "ἐπίστευσεν Ἀβραάμ — Abraham trusted, and it was reckoned to him as δικαιοσύνη. πίστις here is the relational act of taking God at his word, the model Paul will extend to all who 'trust the one who justifies the ungodly.'",
+  "galatians:3:11:pistis": "ὁ δίκαιος ἐκ πίστεως ζήσεται — quoting Habakkuk. πίστις here is the believer's stance toward God, not a doctrinal content. The line drives the whole 'works of law vs. faith' argument in Galatians.",
+
+  "matthew:6:33:basileia": "ζητεῖτε δὲ πρῶτον τὴν βασιλείαν τοῦ θεοῦ — 'seek first the βασιλεία of God.' Not a place but God's active reign — his saving rule breaking into history. Jesus is preaching its arrival; the call is to align life with its priorities.",
+  "mark:1:15:basileia": "ἤγγικεν ἡ βασιλεία τοῦ θεοῦ — 'the βασιλεία of God has drawn near.' The verb perfect — it has approached and remains near. Jesus' opening proclamation defines the rest of Mark.",
+
+  "john:3:8:pneuma": "τὸ πνεῦμα ὅπου θέλει πνεῖ — Jesus puns: πνεῦμα means wind AND Spirit. The Spirit blows freely, like wind; you hear the sound but cannot see the source. Birth ἐκ πνεύματος (v.5) has the same untraceable freedom.",
+  "romans:8:9:pneuma": "εἰ δέ τις πνεῦμα Χριστοῦ οὐκ ἔχει — Paul interchanges 'Spirit of God,' 'Spirit of Christ,' and 'Christ in you' across three verses. πνεῦμα here is the indwelling life of the risen Christ, the structural mark of belonging to him.",
+
+  "romans:1:16:soteria": "δύναμις γὰρ θεοῦ ἐστιν εἰς σωτηρίαν — 'the power of God for σωτηρία.' Not narrowly future heaven but the comprehensive saving act of God in Christ — past (cross), present (justification, sanctification), future (glory). The gospel announces it.",
+
+  "galatians:3:24:nomos": "ὁ νόμος παιδαγωγὸς ἡμῶν γέγονεν — 'the νόμος has become our παιδαγωγός (guardian) until Christ.' Paul restages Torah as the household disciplinarian who escorts the heir to maturity. Not abolished — fulfilled and out of role.",
+  "romans:7:7:nomos": "ὁ νόμος ἁμαρτία; μὴ γένοιτο. ἀλλὰ τὴν ἁμαρτίαν οὐκ ἔγνων εἰ μὴ διὰ νόμου — the νόμος exposes ἁμαρτία; it does not produce it. Paul defends Torah's holiness even as he diagnoses its inability to save."
+}

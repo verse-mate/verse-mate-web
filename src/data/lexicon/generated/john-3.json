@@ -1,0 +1,1157 @@
+{
+  "bookId": 43,
+  "book": "John",
+  "chapter": 3,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "a man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "Pharisees",
+        "lemma": "pharisaios"
+      },
+      {
+        "surface": "named",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "Nicodemus",
+        "lemma": "nikodemos"
+      },
+      {
+        "surface": "a leader",
+        "lemma": "archon"
+      },
+      {
+        "surface": "Jews",
+        "lemma": "ioudaios"
+      }
+    ],
+    "2": [
+      {
+        "surface": "at night",
+        "lemma": "nux"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Rabbi",
+        "lemma": "rhabbi"
+      },
+      {
+        "surface": "we know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "You are a teacher",
+        "lemma": "didaskalos"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "could",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "signs",
+        "lemma": "semeion"
+      },
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "replied",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "Truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "see",
+        "lemma": "horao"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "unless",
+        "lemma": "ean"
+      },
+      {
+        "surface": "he is born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "again",
+        "lemma": "anothen"
+      }
+    ],
+    "4": [
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "a man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "be born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "old",
+        "lemma": "geron"
+      },
+      {
+        "surface": "Nicodemus",
+        "lemma": "nikodemos"
+      },
+      {
+        "surface": "Can he",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "enter",
+        "lemma": "eiserchomai"
+      },
+      {
+        "surface": "mother’s",
+        "lemma": "meter"
+      },
+      {
+        "surface": "womb",
+        "lemma": "koilia"
+      },
+      {
+        "surface": "a second time",
+        "lemma": "deuteros"
+      },
+      {
+        "surface": "to be born",
+        "lemma": "gennao"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "answered",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "Truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "enter",
+        "lemma": "eiserchomai"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "unless",
+        "lemma": "ean"
+      },
+      {
+        "surface": "he is born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "water",
+        "lemma": "hudorhudatos"
+      },
+      {
+        "surface": "the Spirit",
+        "lemma": "pneuma"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Flesh",
+        "lemma": "sarx"
+      },
+      {
+        "surface": "born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "flesh",
+        "lemma": "sarx"
+      },
+      {
+        "surface": "spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Do not be amazed",
+        "lemma": "thaumazo"
+      },
+      {
+        "surface": "I said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "must",
+        "lemma": "dei"
+      },
+      {
+        "surface": "be born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "again",
+        "lemma": "anothen"
+      }
+    ],
+    "8": [
+      {
+        "surface": "wind",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "blows",
+        "lemma": "pneo"
+      },
+      {
+        "surface": "it wishes",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "You hear",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "sound",
+        "lemma": "phone"
+      },
+      {
+        "surface": "you do not know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "where",
+        "lemma": "pothen"
+      },
+      {
+        "surface": "where",
+        "lemma": "pou"
+      },
+      {
+        "surface": "it is going",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "So",
+        "lemma": "ohutoohutos"
+      },
+      {
+        "surface": "born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      }
+    ],
+    "9": [
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "Nicodemus",
+        "lemma": "nikodemos"
+      },
+      {
+        "surface": "asked",
+        "lemma": "apokrino"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Israel’s",
+        "lemma": "israel"
+      },
+      {
+        "surface": "teacher",
+        "lemma": "didaskalos"
+      },
+      {
+        "surface": "said",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "you do not understand",
+        "lemma": "ginosko"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "we speak",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "we know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "we testify",
+        "lemma": "martureo"
+      },
+      {
+        "surface": "we have seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "you people do not accept",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "testimony",
+        "lemma": "marturia"
+      }
+    ],
+    "12": [
+      {
+        "surface": "If",
+        "lemma": "ei"
+      },
+      {
+        "surface": "I have told",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "earthly",
+        "lemma": "epigeios"
+      },
+      {
+        "surface": "you do not believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "will you believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "I tell",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "heavenly",
+        "lemma": "epouranios"
+      }
+    ],
+    "13": [
+      {
+        "surface": "No one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "has ascended",
+        "lemma": "anabaino"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "except",
+        "lemma": "ei"
+      },
+      {
+        "surface": "descended",
+        "lemma": "katabaino"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "of Man",
+        "lemma": "anthropos"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Moses",
+        "lemma": "mousesmoses"
+      },
+      {
+        "surface": "lifted up",
+        "lemma": "hupsoo"
+      },
+      {
+        "surface": "snake",
+        "lemma": "ophis"
+      },
+      {
+        "surface": "wilderness",
+        "lemma": "eremos"
+      },
+      {
+        "surface": "so",
+        "lemma": "ohutoohutos"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "of Man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "must",
+        "lemma": "dei"
+      },
+      {
+        "surface": "be lifted up",
+        "lemma": "hupsoo"
+      }
+    ],
+    "15": [
+      {
+        "surface": "believes",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      }
+    ],
+    "16": [
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "so",
+        "lemma": "ohutoohutos"
+      },
+      {
+        "surface": "loved",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "He gave",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "one and only",
+        "lemma": "monogenes"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "believes",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "shall not perish",
+        "lemma": "apolluo"
+      },
+      {
+        "surface": "eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      }
+    ],
+    "17": [
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "send",
+        "lemma": "apostello"
+      },
+      {
+        "surface": "His Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "condemn",
+        "lemma": "krino"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "save",
+        "lemma": "sozo"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "believes",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "is not condemned",
+        "lemma": "krino"
+      },
+      {
+        "surface": "does not believe",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ede"
+      },
+      {
+        "surface": "has already been condemned",
+        "lemma": "krino"
+      },
+      {
+        "surface": "he has not believed",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "of God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "one and only",
+        "lemma": "monogenes"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      }
+    ],
+    "19": [
+      {
+        "surface": "verdict",
+        "lemma": "krisis"
+      },
+      {
+        "surface": "Light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "loved",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "darkness",
+        "lemma": "skotos"
+      },
+      {
+        "surface": "rather",
+        "lemma": "mallon"
+      },
+      {
+        "surface": "Light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "deeds",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "evil",
+        "lemma": "poneros"
+      }
+    ],
+    "20": [
+      {
+        "surface": "does",
+        "lemma": "prasso"
+      },
+      {
+        "surface": "evil",
+        "lemma": "phaulos"
+      },
+      {
+        "surface": "hates",
+        "lemma": "miseo"
+      },
+      {
+        "surface": "Light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "Light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "deeds",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "will be exposed",
+        "lemma": "elegcho"
+      }
+    ],
+    "21": [
+      {
+        "surface": "truth",
+        "lemma": "aletheia"
+      },
+      {
+        "surface": "Light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "it may be seen clearly",
+        "lemma": "phaneroo"
+      },
+      {
+        "surface": "has done",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "accomplished",
+        "lemma": "ergazomai"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "Judean",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "countryside",
+        "lemma": "ge"
+      },
+      {
+        "surface": "where",
+        "lemma": "ekei"
+      },
+      {
+        "surface": "He spent some time",
+        "lemma": "diatribo"
+      },
+      {
+        "surface": "baptized",
+        "lemma": "baptizo"
+      }
+    ],
+    "23": [
+      {
+        "surface": "John",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "baptizing",
+        "lemma": "baptizo"
+      },
+      {
+        "surface": "Aenon",
+        "lemma": "ainon"
+      },
+      {
+        "surface": "Salim",
+        "lemma": "saleim"
+      },
+      {
+        "surface": "the water",
+        "lemma": "hudorhudatos"
+      },
+      {
+        "surface": "plentiful",
+        "lemma": "polus"
+      },
+      {
+        "surface": "there",
+        "lemma": "ekei"
+      },
+      {
+        "surface": "people kept coming",
+        "lemma": "paraginomai"
+      },
+      {
+        "surface": "to be baptized",
+        "lemma": "baptizo"
+      }
+    ],
+    "24": [
+      {
+        "surface": "John",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "had} not yet",
+        "lemma": "oupo"
+      },
+      {
+        "surface": "thrown",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "prison",
+        "lemma": "phulake"
+      }
+    ],
+    "25": [
+      {
+        "surface": "a dispute",
+        "lemma": "zetesis"
+      },
+      {
+        "surface": "John’s",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "a certain Jew",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "ceremonial washing",
+        "lemma": "katharismos"
+      }
+    ],
+    "26": [
+      {
+        "surface": "him",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Rabbi",
+        "lemma": "rhabbi"
+      },
+      {
+        "surface": "Jordan",
+        "lemma": "iordanes"
+      },
+      {
+        "surface": "testified about",
+        "lemma": "martureo"
+      },
+      {
+        "surface": "is baptizing",
+        "lemma": "baptizo"
+      }
+    ],
+    "27": [
+      {
+        "surface": "John",
+        "lemma": "ioannes"
+      },
+      {
+        "surface": "replied",
+        "lemma": "apokrino"
+      },
+      {
+        "surface": "A man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "receive",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      }
+    ],
+    "28": [
+      {
+        "surface": "can testify",
+        "lemma": "martureo"
+      },
+      {
+        "surface": "I said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "sent",
+        "lemma": "apostello"
+      }
+    ],
+    "29": [
+      {
+        "surface": "bride",
+        "lemma": "numphe"
+      },
+      {
+        "surface": "the bridegroom",
+        "lemma": "numphios"
+      },
+      {
+        "surface": "friend",
+        "lemma": "philos"
+      },
+      {
+        "surface": "bridegroom",
+        "lemma": "numphios"
+      },
+      {
+        "surface": "stands",
+        "lemma": "histemi"
+      },
+      {
+        "surface": "listens for",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "and is overjoyed",
+        "lemma": "chairo"
+      },
+      {
+        "surface": "bridegroom’s",
+        "lemma": "numphios"
+      },
+      {
+        "surface": "voice",
+        "lemma": "phone"
+      },
+      {
+        "surface": "joy",
+        "lemma": "chara"
+      },
+      {
+        "surface": "is mine",
+        "lemma": "emos"
+      },
+      {
+        "surface": "and it is now complete",
+        "lemma": "pleroo"
+      }
+    ],
+    "30": [
+      {
+        "surface": "must",
+        "lemma": "dei"
+      },
+      {
+        "surface": "increase",
+        "lemma": "auxano"
+      },
+      {
+        "surface": "must decrease",
+        "lemma": "elattoo"
+      }
+    ],
+    "31": [
+      {
+        "surface": "from above",
+        "lemma": "anothen"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "speaks as one",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      }
+    ],
+    "32": [
+      {
+        "surface": "He testifies",
+        "lemma": "martureo"
+      },
+      {
+        "surface": "He has seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "accepts",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "testimony",
+        "lemma": "marturia"
+      }
+    ],
+    "33": [
+      {
+        "surface": "accepts",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "testimony",
+        "lemma": "marturia"
+      },
+      {
+        "surface": "has certified",
+        "lemma": "sphragizo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "truthful",
+        "lemma": "alethes"
+      }
+    ],
+    "34": [
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "has sent",
+        "lemma": "apostello"
+      },
+      {
+        "surface": "speaks",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "words",
+        "lemma": "rhema"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "God gives",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "limit",
+        "lemma": "metron"
+      }
+    ],
+    "35": [
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "loves",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "has placed",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "hands",
+        "lemma": "cheir"
+      }
+    ],
+    "36": [
+      {
+        "surface": "believes",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "rejects",
+        "lemma": "apeitheo"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "will not see",
+        "lemma": "horao"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "wrath",
+        "lemma": "orge"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "remains",
+        "lemma": "meno"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "nikodemos",
+    "anothen",
+    "monogenes"
+  ]
+}

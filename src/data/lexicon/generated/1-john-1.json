@@ -1,0 +1,333 @@
+{
+  "bookId": 62,
+  "book": "1 John",
+  "chapter": 1,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "the beginning",
+        "lemma": "arche"
+      },
+      {
+        "surface": "we have heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "we have seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ophthalmos"
+      },
+      {
+        "surface": "we have gazed upon",
+        "lemma": "theaomai"
+      },
+      {
+        "surface": "touched with",
+        "lemma": "pselaphao"
+      },
+      {
+        "surface": "hands",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "Word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "of life",
+        "lemma": "zoe"
+      }
+    ],
+    "2": [
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "that was revealed",
+        "lemma": "phaneroo"
+      },
+      {
+        "surface": "we have seen it",
+        "lemma": "horao"
+      },
+      {
+        "surface": "testified to it",
+        "lemma": "martureo"
+      },
+      {
+        "surface": "we proclaim",
+        "lemma": "apangello"
+      },
+      {
+        "surface": "eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "was revealed",
+        "lemma": "phaneroo"
+      }
+    ],
+    "3": [
+      {
+        "surface": "We proclaim",
+        "lemma": "apangello"
+      },
+      {
+        "surface": "we have seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "fellowship",
+        "lemma": "koinonia"
+      },
+      {
+        "surface": "fellowship",
+        "lemma": "koinonia"
+      },
+      {
+        "surface": "of ours",
+        "lemma": "hemeteros"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      }
+    ],
+    "4": [
+      {
+        "surface": "write",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "joy",
+        "lemma": "chara"
+      },
+      {
+        "surface": "complete",
+        "lemma": "pleroo"
+      }
+    ],
+    "5": [
+      {
+        "surface": "message",
+        "lemma": "angelia"
+      },
+      {
+        "surface": "we have heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "announce",
+        "lemma": "anangello"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "darkness",
+        "lemma": "skotia"
+      },
+      {
+        "surface": "at all",
+        "lemma": "oudeis"
+      }
+    ],
+    "6": [
+      {
+        "surface": "If",
+        "lemma": "ean"
+      },
+      {
+        "surface": "we say",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "fellowship",
+        "lemma": "koinonia"
+      },
+      {
+        "surface": "walk",
+        "lemma": "peripateo"
+      },
+      {
+        "surface": "darkness",
+        "lemma": "skotos"
+      },
+      {
+        "surface": "we lie",
+        "lemma": "pseudomai"
+      },
+      {
+        "surface": "truth",
+        "lemma": "aletheia"
+      }
+    ],
+    "7": [
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "we walk",
+        "lemma": "peripateo"
+      },
+      {
+        "surface": "light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "fellowship",
+        "lemma": "koinonia"
+      },
+      {
+        "surface": "one another",
+        "lemma": "allelon"
+      },
+      {
+        "surface": "blood",
+        "lemma": "ahima"
+      },
+      {
+        "surface": "of Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "cleanses",
+        "lemma": "katharizo"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      }
+    ],
+    "8": [
+      {
+        "surface": "If",
+        "lemma": "ean"
+      },
+      {
+        "surface": "we say",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "we deceive",
+        "lemma": "planao"
+      },
+      {
+        "surface": "truth",
+        "lemma": "aletheia"
+      }
+    ],
+    "9": [
+      {
+        "surface": "If",
+        "lemma": "ean"
+      },
+      {
+        "surface": "we confess",
+        "lemma": "homologeo"
+      },
+      {
+        "surface": "sins",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "faithful",
+        "lemma": "pistos"
+      },
+      {
+        "surface": "just",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "forgive",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "sins",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "to cleanse",
+        "lemma": "katharizo"
+      },
+      {
+        "surface": "unrighteousness",
+        "lemma": "adikia"
+      }
+    ],
+    "10": [
+      {
+        "surface": "If",
+        "lemma": "ean"
+      },
+      {
+        "surface": "we say",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "we have not sinned",
+        "lemma": "hamartano"
+      },
+      {
+        "surface": "a liar",
+        "lemma": "pseustes"
+      },
+      {
+        "surface": "word",
+        "lemma": "logos"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "koinonia",
+    "katharizo",
+    "apangello"
+  ]
+}

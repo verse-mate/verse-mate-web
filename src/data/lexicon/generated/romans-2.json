@@ -1,0 +1,899 @@
+{
+  "bookId": 45,
+  "book": "Romans",
+  "chapter": 2,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "have no excuse",
+        "lemma": "anapologetos"
+      },
+      {
+        "surface": "you",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "pass judgment on another",
+        "lemma": "krino"
+      },
+      {
+        "surface": "you judge",
+        "lemma": "krino"
+      },
+      {
+        "surface": "other",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "you are condemning",
+        "lemma": "katakrino"
+      },
+      {
+        "surface": "pass judgment",
+        "lemma": "krino"
+      },
+      {
+        "surface": "do",
+        "lemma": "prasso"
+      }
+    ],
+    "2": [
+      {
+        "surface": "we know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "judgment",
+        "lemma": "krima"
+      },
+      {
+        "surface": "do",
+        "lemma": "prasso"
+      },
+      {
+        "surface": "truth",
+        "lemma": "aletheia"
+      }
+    ],
+    "3": [
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "pass judgment on",
+        "lemma": "krino"
+      },
+      {
+        "surface": "do you think",
+        "lemma": "logizomai"
+      },
+      {
+        "surface": "will escape",
+        "lemma": "ekpheugo"
+      },
+      {
+        "surface": "God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "judgment",
+        "lemma": "krima"
+      }
+    ],
+    "4": [
+      {
+        "surface": "do you disregard",
+        "lemma": "kataphroneo"
+      },
+      {
+        "surface": "riches",
+        "lemma": "ploutos"
+      },
+      {
+        "surface": "kindness",
+        "lemma": "chrestotes"
+      },
+      {
+        "surface": "tolerance",
+        "lemma": "anoche"
+      },
+      {
+        "surface": "patience",
+        "lemma": "makrothumia"
+      },
+      {
+        "surface": "not realizing",
+        "lemma": "agnoeo"
+      },
+      {
+        "surface": "God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "kindness",
+        "lemma": "chrestos"
+      },
+      {
+        "surface": "leads",
+        "lemma": "ago"
+      },
+      {
+        "surface": "repentance",
+        "lemma": "metanoia"
+      }
+    ],
+    "5": [
+      {
+        "surface": "hard",
+        "lemma": "sklerotes"
+      },
+      {
+        "surface": "unrepentant",
+        "lemma": "ametanoetos"
+      },
+      {
+        "surface": "heart",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "you are storing up",
+        "lemma": "thesaurizo"
+      },
+      {
+        "surface": "wrath",
+        "lemma": "orge"
+      },
+      {
+        "surface": "the day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "of wrath",
+        "lemma": "orge"
+      },
+      {
+        "surface": "God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "righteous judgment",
+        "lemma": "dikaiokrisia"
+      },
+      {
+        "surface": "will be revealed",
+        "lemma": "apokalupsis"
+      }
+    ],
+    "6": [
+      {
+        "surface": "will repay",
+        "lemma": "apodidomi"
+      },
+      {
+        "surface": "each one",
+        "lemma": "hekastos"
+      },
+      {
+        "surface": "deeds",
+        "lemma": "ergon"
+      }
+    ],
+    "7": [
+      {
+        "surface": "perseverance",
+        "lemma": "hupomone"
+      },
+      {
+        "surface": "in doing",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "seek",
+        "lemma": "zeteo"
+      },
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "honor",
+        "lemma": "time"
+      },
+      {
+        "surface": "immortality",
+        "lemma": "aphtharsia"
+      },
+      {
+        "surface": "He will give eternal",
+        "lemma": "aionios"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      }
+    ],
+    "8": [
+      {
+        "surface": "are self-seeking",
+        "lemma": "eritheia"
+      },
+      {
+        "surface": "who reject",
+        "lemma": "apeitheo"
+      },
+      {
+        "surface": "truth",
+        "lemma": "aletheia"
+      },
+      {
+        "surface": "follow",
+        "lemma": "peitho"
+      },
+      {
+        "surface": "wickedness",
+        "lemma": "adikia"
+      },
+      {
+        "surface": "there will be wrath",
+        "lemma": "orge"
+      },
+      {
+        "surface": "anger",
+        "lemma": "thumos"
+      }
+    ],
+    "9": [
+      {
+        "surface": "There will be trouble",
+        "lemma": "thlipsis"
+      },
+      {
+        "surface": "distress",
+        "lemma": "stenochoria"
+      },
+      {
+        "surface": "human",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "being",
+        "lemma": "psuche"
+      },
+      {
+        "surface": "does",
+        "lemma": "katergazomai"
+      },
+      {
+        "surface": "evil",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "first",
+        "lemma": "proton"
+      },
+      {
+        "surface": "for the Jew",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "for the Greek",
+        "lemma": "hellen"
+      }
+    ],
+    "10": [
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "honor",
+        "lemma": "time"
+      },
+      {
+        "surface": "peace",
+        "lemma": "eirene"
+      },
+      {
+        "surface": "does",
+        "lemma": "ergazomai"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "first",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "for the Jew",
+        "lemma": "proton"
+      },
+      {
+        "surface": "for the Greek",
+        "lemma": "hellen"
+      }
+    ],
+    "11": [
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "favoritism",
+        "lemma": "prosopolepsia"
+      }
+    ],
+    "12": [
+      {
+        "surface": "All who",
+        "lemma": "hosos"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartano"
+      },
+      {
+        "surface": "apart from the law",
+        "lemma": "anomos"
+      },
+      {
+        "surface": "will also perish",
+        "lemma": "apolluo"
+      },
+      {
+        "surface": "apart from the law",
+        "lemma": "anomos"
+      },
+      {
+        "surface": "all who",
+        "lemma": "hosos"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartano"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "will be judged",
+        "lemma": "krino"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      }
+    ],
+    "13": [
+      {
+        "surface": "hearers",
+        "lemma": "akroates"
+      },
+      {
+        "surface": "of the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "who are righteous",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "doers",
+        "lemma": "poietes"
+      },
+      {
+        "surface": "of the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "who will be declared righteous",
+        "lemma": "dikaioo"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Gentiles",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "by nature",
+        "lemma": "phusis"
+      },
+      {
+        "surface": "law requires",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "a law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      }
+    ],
+    "15": [
+      {
+        "surface": "show that",
+        "lemma": "endeiknumi"
+      },
+      {
+        "surface": "work",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "is written",
+        "lemma": "graptos"
+      },
+      {
+        "surface": "hearts",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "consciences",
+        "lemma": "suneidesis"
+      },
+      {
+        "surface": "bearing witness",
+        "lemma": "summartureo"
+      },
+      {
+        "surface": "and their",
+        "lemma": "allelon"
+      },
+      {
+        "surface": "thoughts",
+        "lemma": "logismos"
+      },
+      {
+        "surface": "accusing",
+        "lemma": "kategoreo"
+      },
+      {
+        "surface": "defending them",
+        "lemma": "apologeomai"
+      }
+    ],
+    "16": [
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "will judge",
+        "lemma": "krino"
+      },
+      {
+        "surface": "men’s",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "secrets",
+        "lemma": "kruptos"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      }
+    ],
+    "17": [
+      {
+        "surface": "if",
+        "lemma": "ei"
+      },
+      {
+        "surface": "you call yourself",
+        "lemma": "eponomazo"
+      },
+      {
+        "surface": "a Jew",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "rely on",
+        "lemma": "epanapauo"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "boast",
+        "lemma": "kauchaomai"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "will",
+        "lemma": "thelema"
+      },
+      {
+        "surface": "approve",
+        "lemma": "dokimazo"
+      },
+      {
+        "surface": "is superior",
+        "lemma": "diaphero"
+      },
+      {
+        "surface": "because you are instructed",
+        "lemma": "katecheo"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      }
+    ],
+    "19": [
+      {
+        "surface": "are convinced that",
+        "lemma": "peitho"
+      },
+      {
+        "surface": "a guide",
+        "lemma": "hodegos"
+      },
+      {
+        "surface": "for the blind",
+        "lemma": "tuphlos"
+      },
+      {
+        "surface": "a light",
+        "lemma": "phos"
+      },
+      {
+        "surface": "darkness",
+        "lemma": "skotos"
+      }
+    ],
+    "20": [
+      {
+        "surface": "an instructor",
+        "lemma": "paideutes"
+      },
+      {
+        "surface": "of the foolish",
+        "lemma": "aphron"
+      },
+      {
+        "surface": "a teacher",
+        "lemma": "didaskalos"
+      },
+      {
+        "surface": "of infants",
+        "lemma": "nepios"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "embodiment",
+        "lemma": "morphosis"
+      },
+      {
+        "surface": "of knowledge",
+        "lemma": "gnosis"
+      },
+      {
+        "surface": "truth",
+        "lemma": "aletheia"
+      }
+    ],
+    "21": [
+      {
+        "surface": "teach",
+        "lemma": "didasko"
+      },
+      {
+        "surface": "others",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "do you not teach",
+        "lemma": "didasko"
+      },
+      {
+        "surface": "preach",
+        "lemma": "kerusso"
+      },
+      {
+        "surface": "stealing",
+        "lemma": "klepto"
+      },
+      {
+        "surface": "do you steal",
+        "lemma": "klepto"
+      }
+    ],
+    "22": [
+      {
+        "surface": "adultery",
+        "lemma": "moicheuo"
+      },
+      {
+        "surface": "do you commit adultery",
+        "lemma": "moicheuo"
+      },
+      {
+        "surface": "abhor",
+        "lemma": "bdelussomai"
+      },
+      {
+        "surface": "idols",
+        "lemma": "eidolon"
+      },
+      {
+        "surface": "do you rob temples",
+        "lemma": "hierosuleo"
+      }
+    ],
+    "23": [
+      {
+        "surface": "boast",
+        "lemma": "kauchaomai"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "do you dishonor",
+        "lemma": "atimazo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "breaking",
+        "lemma": "parabasis"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      }
+    ],
+    "24": [
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "is blasphemed",
+        "lemma": "blasphemeo"
+      },
+      {
+        "surface": "Gentiles",
+        "lemma": "ethnos"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Circumcision",
+        "lemma": "peritome"
+      },
+      {
+        "surface": "has value",
+        "lemma": "opheleo"
+      },
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "you observe",
+        "lemma": "prasso"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "break",
+        "lemma": "parabates"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "circumcision",
+        "lemma": "peritome"
+      },
+      {
+        "surface": "uncircumcision",
+        "lemma": "akrobustia"
+      }
+    ],
+    "26": [
+      {
+        "surface": "If",
+        "lemma": "ean"
+      },
+      {
+        "surface": "a man who is not circumcised",
+        "lemma": "akrobustia"
+      },
+      {
+        "surface": "keeps",
+        "lemma": "phulasso"
+      },
+      {
+        "surface": "requirements",
+        "lemma": "dikaioma"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "uncircumcision",
+        "lemma": "akrobustia"
+      },
+      {
+        "surface": "be regarded",
+        "lemma": "logizomai"
+      },
+      {
+        "surface": "circumcision",
+        "lemma": "peritome"
+      }
+    ],
+    "27": [
+      {
+        "surface": "physically",
+        "lemma": "phusis"
+      },
+      {
+        "surface": "uncircumcised",
+        "lemma": "akrobustia"
+      },
+      {
+        "surface": "yet keeps",
+        "lemma": "teleo"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "will condemn",
+        "lemma": "krino"
+      },
+      {
+        "surface": "the written code",
+        "lemma": "gramma"
+      },
+      {
+        "surface": "circumcision",
+        "lemma": "peritome"
+      },
+      {
+        "surface": "are a lawbreaker",
+        "lemma": "parabates"
+      }
+    ],
+    "28": [
+      {
+        "surface": "a Jew",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "outwardly",
+        "lemma": "phaneros"
+      },
+      {
+        "surface": "is circumcision",
+        "lemma": "peritome"
+      },
+      {
+        "surface": "only  outward",
+        "lemma": "phaneros"
+      },
+      {
+        "surface": "physical",
+        "lemma": "sarx"
+      }
+    ],
+    "29": [
+      {
+        "surface": "a Jew",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "inwardly",
+        "lemma": "kruptos"
+      },
+      {
+        "surface": "circumcision is a matter",
+        "lemma": "peritome"
+      },
+      {
+        "surface": "of the heart",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "the Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "by the written code",
+        "lemma": "gramma"
+      },
+      {
+        "surface": "praise",
+        "lemma": "epainos"
+      },
+      {
+        "surface": "men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "parabates",
+    "akrobustia",
+    "peritome"
+  ]
+}

@@ -1,0 +1,595 @@
+{
+  "bookId": 49,
+  "book": "Ephesians",
+  "chapter": 3,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "prisoner",
+        "lemma": "desmios"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Gentiles",
+        "lemma": "ethnos"
+      }
+    ],
+    "2": [
+      {
+        "surface": "vvv",
+        "lemma": "ei"
+      },
+      {
+        "surface": "you have heard about",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "stewardship",
+        "lemma": "oikonomia"
+      },
+      {
+        "surface": "of God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "grace",
+        "lemma": "charis"
+      },
+      {
+        "surface": "that was given",
+        "lemma": "didomi"
+      }
+    ],
+    "3": [
+      {
+        "surface": "mystery",
+        "lemma": "musterion"
+      },
+      {
+        "surface": "made known",
+        "lemma": "gnorizo"
+      },
+      {
+        "surface": "revelation",
+        "lemma": "apokalupsis"
+      },
+      {
+        "surface": "I have already written",
+        "lemma": "prographo"
+      },
+      {
+        "surface": "briefly",
+        "lemma": "oligos"
+      }
+    ],
+    "4": [
+      {
+        "surface": "reading",
+        "lemma": "anaginosko"
+      },
+      {
+        "surface": "you will be able to",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "understand",
+        "lemma": "noeo"
+      },
+      {
+        "surface": "insight",
+        "lemma": "sunesis"
+      },
+      {
+        "surface": "mystery",
+        "lemma": "musterion"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      }
+    ],
+    "5": [
+      {
+        "surface": "was not made known",
+        "lemma": "gnorizo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "uhios"
+      },
+      {
+        "surface": "to men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "in other",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "generations",
+        "lemma": "genea"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "nun"
+      },
+      {
+        "surface": "it has now been revealed",
+        "lemma": "apokalupto"
+      },
+      {
+        "surface": "the Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "apostles",
+        "lemma": "apostolos"
+      },
+      {
+        "surface": "prophets",
+        "lemma": "prophetes"
+      }
+    ],
+    "6": [
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      },
+      {
+        "surface": "Gentiles",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "fellow heirs",
+        "lemma": "sugkleronomos"
+      },
+      {
+        "surface": "fellow members of the body",
+        "lemma": "sussomos"
+      },
+      {
+        "surface": "fellow partakers",
+        "lemma": "summetochos"
+      },
+      {
+        "surface": "promise",
+        "lemma": "epangelia"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      }
+    ],
+    "7": [
+      {
+        "surface": "a servant",
+        "lemma": "diakonos"
+      },
+      {
+        "surface": "gift",
+        "lemma": "dorea"
+      },
+      {
+        "surface": "of God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "grace",
+        "lemma": "charis"
+      },
+      {
+        "surface": "given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "working",
+        "lemma": "energeia"
+      },
+      {
+        "surface": "power",
+        "lemma": "dunamis"
+      }
+    ],
+    "8": [
+      {
+        "surface": "less than the least",
+        "lemma": "elachistoteros"
+      },
+      {
+        "surface": "the saints",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "grace",
+        "lemma": "charis"
+      },
+      {
+        "surface": "was given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "to preach",
+        "lemma": "euangelizomai"
+      },
+      {
+        "surface": "Gentiles",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "unsearchable",
+        "lemma": "anexichniastos"
+      },
+      {
+        "surface": "riches",
+        "lemma": "ploutos"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      }
+    ],
+    "9": [
+      {
+        "surface": "to illuminate",
+        "lemma": "photizo"
+      },
+      {
+        "surface": "stewardship",
+        "lemma": "oikonomia"
+      },
+      {
+        "surface": "mystery",
+        "lemma": "musterion"
+      },
+      {
+        "surface": "ages past",
+        "lemma": "aion"
+      },
+      {
+        "surface": "was kept hidden",
+        "lemma": "apokrupto"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "created",
+        "lemma": "ktizo"
+      }
+    ],
+    "10": [
+      {
+        "surface": "now",
+        "lemma": "nun"
+      },
+      {
+        "surface": "church",
+        "lemma": "ekklesia"
+      },
+      {
+        "surface": "manifold",
+        "lemma": "polupoikilos"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "sophia"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "should be made known",
+        "lemma": "gnorizo"
+      },
+      {
+        "surface": "rulers",
+        "lemma": "arche"
+      },
+      {
+        "surface": "authorities",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "heavenly realms",
+        "lemma": "epouranios"
+      }
+    ],
+    "11": [
+      {
+        "surface": "the eternal",
+        "lemma": "aion"
+      },
+      {
+        "surface": "purpose",
+        "lemma": "prothesis"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      }
+    ],
+    "12": [
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "enter  God’s  presence",
+        "lemma": "prosagoge"
+      },
+      {
+        "surface": "with boldness",
+        "lemma": "parresia"
+      },
+      {
+        "surface": "confidence",
+        "lemma": "pepoithesis"
+      }
+    ],
+    "13": [
+      {
+        "surface": "I ask you",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "to be discouraged",
+        "lemma": "ekkakeo"
+      },
+      {
+        "surface": "sufferings",
+        "lemma": "thlipsis"
+      },
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      }
+    ],
+    "14": [
+      {
+        "surface": "I bow",
+        "lemma": "kampto"
+      },
+      {
+        "surface": "knees",
+        "lemma": "gonu"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      }
+    ],
+    "15": [
+      {
+        "surface": "family",
+        "lemma": "patria"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "derives its name",
+        "lemma": "onomazo"
+      }
+    ],
+    "16": [
+      {
+        "surface": "riches",
+        "lemma": "ploutos"
+      },
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "He may",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "strengthen",
+        "lemma": "krataioo"
+      },
+      {
+        "surface": "with power",
+        "lemma": "dunamis"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "inner",
+        "lemma": "eso"
+      },
+      {
+        "surface": "being",
+        "lemma": "anthropos"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "may dwell",
+        "lemma": "katoikeo"
+      },
+      {
+        "surface": "hearts",
+        "lemma": "kardia"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "Then you, being rooted",
+        "lemma": "rhizoo"
+      },
+      {
+        "surface": "grounded",
+        "lemma": "themelioo"
+      },
+      {
+        "surface": "love",
+        "lemma": "agape"
+      }
+    ],
+    "18": [
+      {
+        "surface": "will have power",
+        "lemma": "exischuo"
+      },
+      {
+        "surface": "saints",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "to comprehend",
+        "lemma": "katalambano"
+      },
+      {
+        "surface": "length",
+        "lemma": "mekos"
+      },
+      {
+        "surface": "width",
+        "lemma": "platos"
+      },
+      {
+        "surface": "height",
+        "lemma": "hupsos"
+      },
+      {
+        "surface": "depth",
+        "lemma": "bathos"
+      }
+    ],
+    "19": [
+      {
+        "surface": "of the love",
+        "lemma": "agape"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "to know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "surpasses",
+        "lemma": "huperballo"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "gnosis"
+      },
+      {
+        "surface": "you may be filled",
+        "lemma": "pleroo"
+      },
+      {
+        "surface": "fullness",
+        "lemma": "pleroma"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      }
+    ],
+    "20": [
+      {
+        "surface": "is able",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "we ask",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "imagine",
+        "lemma": "noeo"
+      },
+      {
+        "surface": "power",
+        "lemma": "dunamis"
+      },
+      {
+        "surface": "is at work",
+        "lemma": "energeo"
+      }
+    ],
+    "21": [
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "church",
+        "lemma": "ekklesia"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "generations",
+        "lemma": "genea"
+      },
+      {
+        "surface": "ever",
+        "lemma": "aion"
+      },
+      {
+        "surface": "Amen",
+        "lemma": "amen"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "oikonomia",
+    "noeo",
+    "gnorizo"
+  ]
+}

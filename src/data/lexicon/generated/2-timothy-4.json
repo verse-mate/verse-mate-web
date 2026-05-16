@@ -1,0 +1,693 @@
+{
+  "bookId": 55,
+  "book": "2 Timothy",
+  "chapter": 4,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "I charge you",
+        "lemma": "diamarturomai"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "will",
+        "lemma": "mello"
+      },
+      {
+        "surface": "judge",
+        "lemma": "krino"
+      },
+      {
+        "surface": "the living",
+        "lemma": "zao"
+      },
+      {
+        "surface": "the dead",
+        "lemma": "nekros"
+      },
+      {
+        "surface": "appearing",
+        "lemma": "epiphaneia"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Preach",
+        "lemma": "kerusso"
+      },
+      {
+        "surface": "word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "be prepared",
+        "lemma": "ephistemi"
+      },
+      {
+        "surface": "in season",
+        "lemma": "eukairos"
+      },
+      {
+        "surface": "and out of season",
+        "lemma": "akairos"
+      },
+      {
+        "surface": "reprove",
+        "lemma": "elegcho"
+      },
+      {
+        "surface": "rebuke",
+        "lemma": "epitimao"
+      },
+      {
+        "surface": "and encourage",
+        "lemma": "parakaleo"
+      },
+      {
+        "surface": "patient",
+        "lemma": "makrothumia"
+      },
+      {
+        "surface": "instruction",
+        "lemma": "didache"
+      }
+    ],
+    "3": [
+      {
+        "surface": "the time",
+        "lemma": "kairos"
+      },
+      {
+        "surface": "men will not tolerate",
+        "lemma": "anecho"
+      },
+      {
+        "surface": "sound",
+        "lemma": "hugiaino"
+      },
+      {
+        "surface": "doctrine",
+        "lemma": "didaskalia"
+      },
+      {
+        "surface": "with itching",
+        "lemma": "knetho"
+      },
+      {
+        "surface": "ears",
+        "lemma": "akoe"
+      },
+      {
+        "surface": "they will gather around",
+        "lemma": "episoreuo"
+      },
+      {
+        "surface": "teachers",
+        "lemma": "didaskalos"
+      },
+      {
+        "surface": "own",
+        "lemma": "idios"
+      },
+      {
+        "surface": "desires",
+        "lemma": "epithumia"
+      }
+    ],
+    "4": [
+      {
+        "surface": "they will turn",
+        "lemma": "apostrepho"
+      },
+      {
+        "surface": "ears {away",
+        "lemma": "akoe"
+      },
+      {
+        "surface": "truth",
+        "lemma": "aletheia"
+      },
+      {
+        "surface": "turn aside",
+        "lemma": "ektrepo"
+      },
+      {
+        "surface": "myths",
+        "lemma": "muthos"
+      }
+    ],
+    "5": [
+      {
+        "surface": "be sober",
+        "lemma": "nepho"
+      },
+      {
+        "surface": "endure hardship",
+        "lemma": "kakopatheo"
+      },
+      {
+        "surface": "the work",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "of an evangelist",
+        "lemma": "euangelistes"
+      },
+      {
+        "surface": "fulfill",
+        "lemma": "plerophoreo"
+      },
+      {
+        "surface": "ministry",
+        "lemma": "diakonia"
+      }
+    ],
+    "6": [
+      {
+        "surface": "already",
+        "lemma": "ede"
+      },
+      {
+        "surface": "being poured out like a drink offering",
+        "lemma": "spendo"
+      },
+      {
+        "surface": "time",
+        "lemma": "kairos"
+      },
+      {
+        "surface": "departure",
+        "lemma": "analusis"
+      },
+      {
+        "surface": "is at hand",
+        "lemma": "ephistemi"
+      }
+    ],
+    "7": [
+      {
+        "surface": "I have fought",
+        "lemma": "agonizomai"
+      },
+      {
+        "surface": "good",
+        "lemma": "kalos"
+      },
+      {
+        "surface": "fight",
+        "lemma": "agon"
+      },
+      {
+        "surface": "I have finished",
+        "lemma": "teleo"
+      },
+      {
+        "surface": "race",
+        "lemma": "dromos"
+      },
+      {
+        "surface": "I have kept",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      }
+    ],
+    "8": [
+      {
+        "surface": "From now on",
+        "lemma": "loipon"
+      },
+      {
+        "surface": "there is laid up",
+        "lemma": "apokeimai"
+      },
+      {
+        "surface": "crown",
+        "lemma": "stephanos"
+      },
+      {
+        "surface": "of righteousness",
+        "lemma": "dikaiosune"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "righteous",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "Judge",
+        "lemma": "krites"
+      },
+      {
+        "surface": "will award",
+        "lemma": "apodidomi"
+      },
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "only",
+        "lemma": "monon"
+      },
+      {
+        "surface": "crave",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "appearing",
+        "lemma": "epiphaneia"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Make every effort",
+        "lemma": "spoudazo"
+      },
+      {
+        "surface": "quickly",
+        "lemma": "tacheos"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Demas",
+        "lemma": "demas"
+      },
+      {
+        "surface": "in his love of",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "this",
+        "lemma": "nun"
+      },
+      {
+        "surface": "world",
+        "lemma": "aion"
+      },
+      {
+        "surface": "has deserted",
+        "lemma": "egkataleipo"
+      },
+      {
+        "surface": "gone",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "Thessalonica",
+        "lemma": "thessalonike"
+      },
+      {
+        "surface": "Crescens has gone",
+        "lemma": "kreskes"
+      },
+      {
+        "surface": "Galatia",
+        "lemma": "galatia"
+      },
+      {
+        "surface": "and Titus",
+        "lemma": "titos"
+      },
+      {
+        "surface": "Dalmatia",
+        "lemma": "dalmatia"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Only",
+        "lemma": "monos"
+      },
+      {
+        "surface": "Luke",
+        "lemma": "loukas"
+      },
+      {
+        "surface": "Get",
+        "lemma": "analambano"
+      },
+      {
+        "surface": "Mark",
+        "lemma": "markos"
+      },
+      {
+        "surface": "and bring him",
+        "lemma": "ago"
+      },
+      {
+        "surface": "useful",
+        "lemma": "euchrestos"
+      },
+      {
+        "surface": "the ministry",
+        "lemma": "diakonia"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Tychicus",
+        "lemma": "tuchikos"
+      },
+      {
+        "surface": "I have sent",
+        "lemma": "apostello"
+      },
+      {
+        "surface": "Ephesus",
+        "lemma": "ephesos"
+      }
+    ],
+    "13": [
+      {
+        "surface": "bring",
+        "lemma": "phero"
+      },
+      {
+        "surface": "cloak",
+        "lemma": "phelonesphailones"
+      },
+      {
+        "surface": "I left",
+        "lemma": "apoleipo"
+      },
+      {
+        "surface": "Carpus",
+        "lemma": "karpos"
+      },
+      {
+        "surface": "Troas",
+        "lemma": "troas"
+      },
+      {
+        "surface": "scrolls",
+        "lemma": "biblion"
+      },
+      {
+        "surface": "especially",
+        "lemma": "malista"
+      },
+      {
+        "surface": "parchments",
+        "lemma": "membrana"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Alexander",
+        "lemma": "alexandros"
+      },
+      {
+        "surface": "coppersmith",
+        "lemma": "chalkeus"
+      },
+      {
+        "surface": "did",
+        "lemma": "endeiknumi"
+      },
+      {
+        "surface": "great",
+        "lemma": "polus"
+      },
+      {
+        "surface": "harm",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "will repay",
+        "lemma": "apodidomi"
+      },
+      {
+        "surface": "deeds",
+        "lemma": "ergon"
+      }
+    ],
+    "15": [
+      {
+        "surface": "should beware of",
+        "lemma": "phulasso"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lian"
+      },
+      {
+        "surface": "he has vigorously opposed",
+        "lemma": "anthistemi"
+      },
+      {
+        "surface": "our",
+        "lemma": "hemeteros"
+      },
+      {
+        "surface": "message",
+        "lemma": "logos"
+      }
+    ],
+    "16": [
+      {
+        "surface": "first",
+        "lemma": "protos"
+      },
+      {
+        "surface": "defense",
+        "lemma": "apologia"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "stood with",
+        "lemma": "paraginomai"
+      },
+      {
+        "surface": "deserted",
+        "lemma": "egkataleipo"
+      },
+      {
+        "surface": "May it not be charged",
+        "lemma": "logizomai"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "stood by",
+        "lemma": "paristemi"
+      },
+      {
+        "surface": "strengthened",
+        "lemma": "endunamoo"
+      },
+      {
+        "surface": "message",
+        "lemma": "kerugma"
+      },
+      {
+        "surface": "would be fully proclaimed",
+        "lemma": "plerophoreo"
+      },
+      {
+        "surface": "Gentiles",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "would hear it",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "I was delivered",
+        "lemma": "rhuomai"
+      },
+      {
+        "surface": "the mouth",
+        "lemma": "stoma"
+      },
+      {
+        "surface": "of the lion",
+        "lemma": "leon"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "will rescue",
+        "lemma": "rhuomai"
+      },
+      {
+        "surface": "evil",
+        "lemma": "poneros"
+      },
+      {
+        "surface": "action",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "bring me safely",
+        "lemma": "sozo"
+      },
+      {
+        "surface": "heavenly",
+        "lemma": "epouranios"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "forever",
+        "lemma": "aion"
+      },
+      {
+        "surface": "ever",
+        "lemma": "aion"
+      },
+      {
+        "surface": "Amen",
+        "lemma": "amen"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Greet",
+        "lemma": "aspazomai"
+      },
+      {
+        "surface": "Prisca",
+        "lemma": "priska"
+      },
+      {
+        "surface": "Aquila",
+        "lemma": "akulas"
+      },
+      {
+        "surface": "household",
+        "lemma": "oikos"
+      },
+      {
+        "surface": "of Onesiphorus",
+        "lemma": "onesiphoros"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Erastus",
+        "lemma": "erastos"
+      },
+      {
+        "surface": "has remained",
+        "lemma": "meno"
+      },
+      {
+        "surface": "Corinth",
+        "lemma": "korinthos"
+      },
+      {
+        "surface": "Trophimus",
+        "lemma": "trophimos"
+      },
+      {
+        "surface": "I left",
+        "lemma": "apoleipo"
+      },
+      {
+        "surface": "sick",
+        "lemma": "astheneo"
+      },
+      {
+        "surface": "Miletus",
+        "lemma": "miletos"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Make every effort",
+        "lemma": "spoudazo"
+      },
+      {
+        "surface": "winter",
+        "lemma": "cheimon"
+      },
+      {
+        "surface": "Eubulus",
+        "lemma": "euboulos"
+      },
+      {
+        "surface": "sends you greetings",
+        "lemma": "aspazomai"
+      },
+      {
+        "surface": "Pudens",
+        "lemma": "poudes"
+      },
+      {
+        "surface": "Linus",
+        "lemma": "linos"
+      },
+      {
+        "surface": "Claudia",
+        "lemma": "klaudia"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "Grace be",
+        "lemma": "charis"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "plerophoreo",
+    "epiphaneia",
+    "apoleipo"
+  ]
+}

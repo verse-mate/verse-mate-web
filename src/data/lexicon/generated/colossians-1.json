@@ -1,0 +1,923 @@
+{
+  "bookId": 51,
+  "book": "Colossians",
+  "chapter": 1,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "an apostle",
+        "lemma": "apostolos"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "the will",
+        "lemma": "thelema"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Timothy",
+        "lemma": "timotheos"
+      },
+      {
+        "surface": "brother",
+        "lemma": "adelphos"
+      }
+    ],
+    "2": [
+      {
+        "surface": "saints",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "faithful",
+        "lemma": "pistos"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Colossae",
+        "lemma": "kolossai"
+      },
+      {
+        "surface": "Grace",
+        "lemma": "charis"
+      },
+      {
+        "surface": "peace",
+        "lemma": "eirene"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      }
+    ],
+    "3": [
+      {
+        "surface": "We always thank",
+        "lemma": "eucharisteo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "the Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "when we pray",
+        "lemma": "proseuchomai"
+      }
+    ],
+    "4": [
+      {
+        "surface": "because we have heard about",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "love",
+        "lemma": "agape"
+      },
+      {
+        "surface": "saints",
+        "lemma": "hagios"
+      }
+    ],
+    "5": [
+      {
+        "surface": "hope",
+        "lemma": "elpis"
+      },
+      {
+        "surface": "stored up",
+        "lemma": "apokeimai"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "you have already heard",
+        "lemma": "proakouo"
+      },
+      {
+        "surface": "word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "of truth",
+        "lemma": "aletheia"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      }
+    ],
+    "6": [
+      {
+        "surface": "has come",
+        "lemma": "pareimi"
+      },
+      {
+        "surface": "world",
+        "lemma": "kosmos"
+      },
+      {
+        "surface": "bearing fruit",
+        "lemma": "karpophoreo"
+      },
+      {
+        "surface": "growing",
+        "lemma": "auxano"
+      },
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "you heard it",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "truly",
+        "lemma": "aletheia"
+      },
+      {
+        "surface": "understood",
+        "lemma": "epiginosko"
+      },
+      {
+        "surface": "grace",
+        "lemma": "charis"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      }
+    ],
+    "7": [
+      {
+        "surface": "You learned it",
+        "lemma": "manthano"
+      },
+      {
+        "surface": "Epaphras",
+        "lemma": "epaphras"
+      },
+      {
+        "surface": "beloved",
+        "lemma": "agapetos"
+      },
+      {
+        "surface": "fellow servant",
+        "lemma": "sundoulos"
+      },
+      {
+        "surface": "a faithful",
+        "lemma": "pistos"
+      },
+      {
+        "surface": "minister",
+        "lemma": "diakonos"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      }
+    ],
+    "8": [
+      {
+        "surface": "informed",
+        "lemma": "deloo"
+      },
+      {
+        "surface": "love",
+        "lemma": "agape"
+      },
+      {
+        "surface": "the Spirit",
+        "lemma": "pneuma"
+      }
+    ],
+    "9": [
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "we heard about you",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "stopped",
+        "lemma": "pauo"
+      },
+      {
+        "surface": "praying",
+        "lemma": "proseuchomai"
+      },
+      {
+        "surface": "asking",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "fill you with",
+        "lemma": "pleroo"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "epignosis"
+      },
+      {
+        "surface": "will",
+        "lemma": "thelema"
+      },
+      {
+        "surface": "spiritual",
+        "lemma": "pneumatikos"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "sophia"
+      },
+      {
+        "surface": "understanding",
+        "lemma": "sunesis"
+      }
+    ],
+    "10": [
+      {
+        "surface": "so that you may walk",
+        "lemma": "peripateo"
+      },
+      {
+        "surface": "in a manner worthy",
+        "lemma": "axios"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "and may please Him",
+        "lemma": "areskeia"
+      },
+      {
+        "surface": "bearing fruit",
+        "lemma": "karpophoreo"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "work",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "growing",
+        "lemma": "auxano"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "epignosis"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      }
+    ],
+    "11": [
+      {
+        "surface": "being strengthened",
+        "lemma": "dunamoo"
+      },
+      {
+        "surface": "power",
+        "lemma": "dunamis"
+      },
+      {
+        "surface": "glorious",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "might",
+        "lemma": "kratos"
+      },
+      {
+        "surface": "endurance",
+        "lemma": "hupomone"
+      },
+      {
+        "surface": "patience",
+        "lemma": "makrothumia"
+      }
+    ],
+    "12": [
+      {
+        "surface": "giving thanks",
+        "lemma": "eucharisteo"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "has qualified",
+        "lemma": "hikanoo"
+      },
+      {
+        "surface": "to share",
+        "lemma": "meris"
+      },
+      {
+        "surface": "inheritance",
+        "lemma": "kleros"
+      },
+      {
+        "surface": "saints",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "light",
+        "lemma": "phos"
+      }
+    ],
+    "13": [
+      {
+        "surface": "has rescued",
+        "lemma": "rhuomai"
+      },
+      {
+        "surface": "dominion",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "of darkness",
+        "lemma": "skotos"
+      },
+      {
+        "surface": "brought us",
+        "lemma": "methistemi"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "beloved",
+        "lemma": "agape"
+      },
+      {
+        "surface": "Son",
+        "lemma": "uhios"
+      }
+    ],
+    "14": [
+      {
+        "surface": "redemption",
+        "lemma": "apolutrosis"
+      },
+      {
+        "surface": "forgiveness",
+        "lemma": "aphesis"
+      },
+      {
+        "surface": "of sins",
+        "lemma": "hamartia"
+      }
+    ],
+    "15": [
+      {
+        "surface": "the image",
+        "lemma": "eikon"
+      },
+      {
+        "surface": "invisible",
+        "lemma": "aoratos"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "the firstborn",
+        "lemma": "prototokos"
+      },
+      {
+        "surface": "creation",
+        "lemma": "ktisis"
+      }
+    ],
+    "16": [
+      {
+        "surface": "were created",
+        "lemma": "ktizo"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "visible",
+        "lemma": "horatos"
+      },
+      {
+        "surface": "invisible",
+        "lemma": "aoratos"
+      },
+      {
+        "surface": "whether",
+        "lemma": "eite"
+      },
+      {
+        "surface": "thrones",
+        "lemma": "thronos"
+      },
+      {
+        "surface": "or",
+        "lemma": "eite"
+      },
+      {
+        "surface": "dominions",
+        "lemma": "kuriotes"
+      },
+      {
+        "surface": "or",
+        "lemma": "eite"
+      },
+      {
+        "surface": "rulers",
+        "lemma": "arche"
+      },
+      {
+        "surface": "or",
+        "lemma": "eite"
+      },
+      {
+        "surface": "authorities",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "were created",
+        "lemma": "ktizo"
+      }
+    ],
+    "17": [
+      {
+        "surface": "hold together",
+        "lemma": "sunistemisunistao"
+      }
+    ],
+    "18": [
+      {
+        "surface": "head",
+        "lemma": "kephale"
+      },
+      {
+        "surface": "body",
+        "lemma": "soma"
+      },
+      {
+        "surface": "church",
+        "lemma": "ekklesia"
+      },
+      {
+        "surface": "beginning",
+        "lemma": "arche"
+      },
+      {
+        "surface": "and firstborn",
+        "lemma": "prototokos"
+      },
+      {
+        "surface": "dead",
+        "lemma": "nekros"
+      },
+      {
+        "surface": "have preeminence",
+        "lemma": "proteuo"
+      }
+    ],
+    "19": [
+      {
+        "surface": "God was pleased to have",
+        "lemma": "eudokeo"
+      },
+      {
+        "surface": "fullness",
+        "lemma": "pleroma"
+      },
+      {
+        "surface": "dwell",
+        "lemma": "katoikeo"
+      }
+    ],
+    "20": [
+      {
+        "surface": "to reconcile",
+        "lemma": "apokatallasso"
+      },
+      {
+        "surface": "whether",
+        "lemma": "eite"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "or",
+        "lemma": "eite"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "by making peace",
+        "lemma": "eirenopoieo"
+      },
+      {
+        "surface": "blood",
+        "lemma": "ahima"
+      },
+      {
+        "surface": "cross",
+        "lemma": "stauros"
+      }
+    ],
+    "21": [
+      {
+        "surface": "alienated  from God",
+        "lemma": "apallotrioo"
+      },
+      {
+        "surface": "were hostile",
+        "lemma": "echthros"
+      },
+      {
+        "surface": "your minds",
+        "lemma": "dianoia"
+      },
+      {
+        "surface": "evil",
+        "lemma": "poneros"
+      },
+      {
+        "surface": "deeds",
+        "lemma": "ergon"
+      }
+    ],
+    "22": [
+      {
+        "surface": "now",
+        "lemma": "nuni"
+      },
+      {
+        "surface": "He has reconciled you",
+        "lemma": "apokatallasso"
+      },
+      {
+        "surface": "physical",
+        "lemma": "sarx"
+      },
+      {
+        "surface": "body",
+        "lemma": "soma"
+      },
+      {
+        "surface": "death",
+        "lemma": "thanatos"
+      },
+      {
+        "surface": "to present",
+        "lemma": "paristemi"
+      },
+      {
+        "surface": "holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "unblemished",
+        "lemma": "amomos"
+      },
+      {
+        "surface": "blameless",
+        "lemma": "anegkletos"
+      }
+    ],
+    "23": [
+      {
+        "surface": "if",
+        "lemma": "ei"
+      },
+      {
+        "surface": "you continue",
+        "lemma": "epimeno"
+      },
+      {
+        "surface": "in your faith",
+        "lemma": "pistis"
+      },
+      {
+        "surface": "established",
+        "lemma": "themelioo"
+      },
+      {
+        "surface": "firm",
+        "lemma": "hedraios"
+      },
+      {
+        "surface": "moved",
+        "lemma": "metakineo"
+      },
+      {
+        "surface": "hope",
+        "lemma": "elpis"
+      },
+      {
+        "surface": "gospel",
+        "lemma": "euangelion"
+      },
+      {
+        "surface": "you heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "has been proclaimed",
+        "lemma": "kerusso"
+      },
+      {
+        "surface": "creature",
+        "lemma": "ktisis"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "a servant",
+        "lemma": "diakonos"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Now",
+        "lemma": "nun"
+      },
+      {
+        "surface": "I rejoice",
+        "lemma": "chairo"
+      },
+      {
+        "surface": "sufferings",
+        "lemma": "pathema"
+      },
+      {
+        "surface": "I fill up",
+        "lemma": "antanapleroo"
+      },
+      {
+        "surface": "flesh",
+        "lemma": "sarx"
+      },
+      {
+        "surface": "is lacking",
+        "lemma": "husterema"
+      },
+      {
+        "surface": "Christ’s",
+        "lemma": "christos"
+      },
+      {
+        "surface": "afflictions",
+        "lemma": "thlipsis"
+      },
+      {
+        "surface": "body",
+        "lemma": "soma"
+      },
+      {
+        "surface": "church",
+        "lemma": "ekklesia"
+      }
+    ],
+    "25": [
+      {
+        "surface": "servant",
+        "lemma": "diakonos"
+      },
+      {
+        "surface": "commission",
+        "lemma": "oikonomia"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "gave",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "to fully proclaim",
+        "lemma": "pleroo"
+      },
+      {
+        "surface": "word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      }
+    ],
+    "26": [
+      {
+        "surface": "mystery",
+        "lemma": "musterion"
+      },
+      {
+        "surface": "was hidden",
+        "lemma": "apokrupto"
+      },
+      {
+        "surface": "ages",
+        "lemma": "aion"
+      },
+      {
+        "surface": "generations",
+        "lemma": "genea"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "nun"
+      },
+      {
+        "surface": "is now revealed",
+        "lemma": "phaneroo"
+      },
+      {
+        "surface": "saints",
+        "lemma": "hagios"
+      }
+    ],
+    "27": [
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "has chosen",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to make known",
+        "lemma": "gnorizo"
+      },
+      {
+        "surface": "Gentiles",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "glorious",
+        "lemma": "doxa"
+      },
+      {
+        "surface": "riches",
+        "lemma": "ploutos"
+      },
+      {
+        "surface": "mystery",
+        "lemma": "musterion"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "hope",
+        "lemma": "elpis"
+      },
+      {
+        "surface": "glory",
+        "lemma": "doxa"
+      }
+    ],
+    "28": [
+      {
+        "surface": "proclaim",
+        "lemma": "katangello"
+      },
+      {
+        "surface": "admonishing",
+        "lemma": "noutheteo"
+      },
+      {
+        "surface": "teaching",
+        "lemma": "didasko"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "sophia"
+      },
+      {
+        "surface": "we may present",
+        "lemma": "paristemi"
+      },
+      {
+        "surface": "perfect",
+        "lemma": "teleios"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      }
+    ],
+    "29": [
+      {
+        "surface": "labor",
+        "lemma": "kopiao"
+      },
+      {
+        "surface": "striving",
+        "lemma": "agonizomai"
+      },
+      {
+        "surface": "energy",
+        "lemma": "energeia"
+      },
+      {
+        "surface": "working",
+        "lemma": "energeo"
+      },
+      {
+        "surface": "powerfully",
+        "lemma": "dunamis"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "apokatallasso",
+    "aoratos",
+    "prototokos"
+  ]
+}

@@ -1,0 +1,863 @@
+{
+  "bookId": 45,
+  "book": "Romans",
+  "chapter": 7,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Do you not know",
+        "lemma": "agnoeo"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "I am speaking",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "to those who know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "has authority over",
+        "lemma": "kurieuo"
+      },
+      {
+        "surface": "a man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "as long as",
+        "lemma": "hosos"
+      },
+      {
+        "surface": "he lives",
+        "lemma": "zao"
+      }
+    ],
+    "2": [
+      {
+        "surface": "a married",
+        "lemma": "hupandros"
+      },
+      {
+        "surface": "woman",
+        "lemma": "gune"
+      },
+      {
+        "surface": "is bound",
+        "lemma": "deo"
+      },
+      {
+        "surface": "by law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "husband",
+        "lemma": "aner"
+      },
+      {
+        "surface": "as long as he lives",
+        "lemma": "zao"
+      },
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "husband",
+        "lemma": "aner"
+      },
+      {
+        "surface": "dies",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "she is released",
+        "lemma": "katargeo"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "marriage",
+        "lemma": "aner"
+      }
+    ],
+    "3": [
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "to another",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "man",
+        "lemma": "aner"
+      },
+      {
+        "surface": "while her husband",
+        "lemma": "aner"
+      },
+      {
+        "surface": "is still alive",
+        "lemma": "zao"
+      },
+      {
+        "surface": "she is called",
+        "lemma": "chrematizo"
+      },
+      {
+        "surface": "an adulteress",
+        "lemma": "moichalis"
+      },
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "husband",
+        "lemma": "aner"
+      },
+      {
+        "surface": "dies",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "free",
+        "lemma": "eleutheros"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "an adulteress",
+        "lemma": "moichalis"
+      },
+      {
+        "surface": "another",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "man",
+        "lemma": "aner"
+      }
+    ],
+    "4": [
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "died",
+        "lemma": "thanatoo"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "body",
+        "lemma": "soma"
+      },
+      {
+        "surface": "of Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "to another",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "was raised",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "the dead",
+        "lemma": "nekros"
+      },
+      {
+        "surface": "we might bear fruit",
+        "lemma": "karpophoreo"
+      },
+      {
+        "surface": "to God",
+        "lemma": "theos"
+      }
+    ],
+    "5": [
+      {
+        "surface": "flesh",
+        "lemma": "sarx"
+      },
+      {
+        "surface": "sinful",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "passions",
+        "lemma": "pathema"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "were at work",
+        "lemma": "energeo"
+      },
+      {
+        "surface": "bodies",
+        "lemma": "melos"
+      },
+      {
+        "surface": "bearing fruit",
+        "lemma": "karpophoreo"
+      },
+      {
+        "surface": "for death",
+        "lemma": "thanatos"
+      }
+    ],
+    "6": [
+      {
+        "surface": "now",
+        "lemma": "nuni"
+      },
+      {
+        "surface": "having died",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "bound us",
+        "lemma": "katecho"
+      },
+      {
+        "surface": "we have been released",
+        "lemma": "katargeo"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "serve",
+        "lemma": "douleuo"
+      },
+      {
+        "surface": "the new way",
+        "lemma": "kainotes"
+      },
+      {
+        "surface": "of the Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "in the old way",
+        "lemma": "palaiotes"
+      },
+      {
+        "surface": "of the written code",
+        "lemma": "gramma"
+      }
+    ],
+    "7": [
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "shall we say",
+        "lemma": "ero"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "I would not have been mindful of",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "if",
+        "lemma": "ei"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "I would not have been aware of",
+        "lemma": "eido"
+      },
+      {
+        "surface": "coveting",
+        "lemma": "epithumia"
+      },
+      {
+        "surface": "if",
+        "lemma": "ei"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "Do not covet",
+        "lemma": "epithumeo"
+      }
+    ],
+    "8": [
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "seizing",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "its opportunity",
+        "lemma": "aphorme"
+      },
+      {
+        "surface": "commandment",
+        "lemma": "entole"
+      },
+      {
+        "surface": "produced",
+        "lemma": "katergazomai"
+      },
+      {
+        "surface": "of covetous desire",
+        "lemma": "epithumia"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "is dead",
+        "lemma": "nekros"
+      }
+    ],
+    "9": [
+      {
+        "surface": "was alive",
+        "lemma": "zao"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "commandment",
+        "lemma": "entole"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "sprang to life",
+        "lemma": "anazao"
+      },
+      {
+        "surface": "died",
+        "lemma": "apothnesko"
+      }
+    ],
+    "10": [
+      {
+        "surface": "discovered that",
+        "lemma": "ehurisko"
+      },
+      {
+        "surface": "commandment",
+        "lemma": "entole"
+      },
+      {
+        "surface": "life",
+        "lemma": "zoe"
+      },
+      {
+        "surface": "death",
+        "lemma": "thanatos"
+      }
+    ],
+    "11": [
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "seizing",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "its opportunity",
+        "lemma": "aphorme"
+      },
+      {
+        "surface": "commandment",
+        "lemma": "entole"
+      },
+      {
+        "surface": "deceived",
+        "lemma": "exapatao"
+      },
+      {
+        "surface": "put me to death",
+        "lemma": "apokteino"
+      }
+    ],
+    "12": [
+      {
+        "surface": "law is",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "commandment is",
+        "lemma": "entole"
+      },
+      {
+        "surface": "holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "righteous",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      }
+    ],
+    "13": [
+      {
+        "surface": "is good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "death",
+        "lemma": "thanatos"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "might be exposed as",
+        "lemma": "phaino"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "it produced",
+        "lemma": "katergazomai"
+      },
+      {
+        "surface": "death",
+        "lemma": "thanatos"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "commandment",
+        "lemma": "entole"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "utterly",
+        "lemma": "huperbole"
+      },
+      {
+        "surface": "sinful",
+        "lemma": "hamartolos"
+      }
+    ],
+    "14": [
+      {
+        "surface": "We know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "spiritual",
+        "lemma": "pneumatikos"
+      },
+      {
+        "surface": "unspiritual",
+        "lemma": "sarkinos"
+      },
+      {
+        "surface": "sold as a slave",
+        "lemma": "piprasko"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      }
+    ],
+    "15": [
+      {
+        "surface": "I do not understand",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "I do",
+        "lemma": "katergazomai"
+      },
+      {
+        "surface": "I want to do",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "I do not do",
+        "lemma": "prasso"
+      },
+      {
+        "surface": "I hate",
+        "lemma": "miseo"
+      }
+    ],
+    "16": [
+      {
+        "surface": "if",
+        "lemma": "ei"
+      },
+      {
+        "surface": "I do not want to do",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "I admit",
+        "lemma": "sumphemi"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "is good",
+        "lemma": "kalos"
+      }
+    ],
+    "17": [
+      {
+        "surface": "In that case",
+        "lemma": "nuni"
+      },
+      {
+        "surface": "who do",
+        "lemma": "katergazomai"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "living",
+        "lemma": "oikeo"
+      }
+    ],
+    "18": [
+      {
+        "surface": "I know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "lives",
+        "lemma": "oikeo"
+      },
+      {
+        "surface": "flesh",
+        "lemma": "sarx"
+      },
+      {
+        "surface": "have",
+        "lemma": "parakeimai"
+      },
+      {
+        "surface": "desire",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to do",
+        "lemma": "katergazomai"
+      },
+      {
+        "surface": "good",
+        "lemma": "kalos"
+      }
+    ],
+    "19": [
+      {
+        "surface": "the good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "I want to do",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "I keep on doing",
+        "lemma": "prasso"
+      },
+      {
+        "surface": "the evil",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "I do not want to do",
+        "lemma": "thelo"
+      }
+    ],
+    "20": [
+      {
+        "surface": "if",
+        "lemma": "ei"
+      },
+      {
+        "surface": "I do not want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "who do",
+        "lemma": "katergazomai"
+      },
+      {
+        "surface": "sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "living",
+        "lemma": "oikeo"
+      }
+    ],
+    "21": [
+      {
+        "surface": "principle",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "I have discovered",
+        "lemma": "ehurisko"
+      },
+      {
+        "surface": "want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "good",
+        "lemma": "kalos"
+      },
+      {
+        "surface": "evil",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "is right there with",
+        "lemma": "parakeimai"
+      }
+    ],
+    "22": [
+      {
+        "surface": "inner",
+        "lemma": "eso"
+      },
+      {
+        "surface": "being",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "I delight",
+        "lemma": "sunedomai"
+      },
+      {
+        "surface": "God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      }
+    ],
+    "23": [
+      {
+        "surface": "I see",
+        "lemma": "blepo"
+      },
+      {
+        "surface": "another",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "law  at work",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "body",
+        "lemma": "melos"
+      },
+      {
+        "surface": "warring against",
+        "lemma": "antistrateuomai"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "mind",
+        "lemma": "nous"
+      },
+      {
+        "surface": "holding me captive",
+        "lemma": "aichmalotizo"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "of sin",
+        "lemma": "hamartia"
+      },
+      {
+        "surface": "me",
+        "lemma": "melos"
+      }
+    ],
+    "24": [
+      {
+        "surface": "What a wretched",
+        "lemma": "talaiporos"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "will rescue",
+        "lemma": "rhuomai"
+      },
+      {
+        "surface": "body",
+        "lemma": "soma"
+      },
+      {
+        "surface": "of death",
+        "lemma": "thanatos"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Thanks be",
+        "lemma": "charis"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "mind",
+        "lemma": "nous"
+      },
+      {
+        "surface": "serve",
+        "lemma": "douleuo"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "flesh",
+        "lemma": "sarx"
+      },
+      {
+        "surface": "I serve the law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "of sin",
+        "lemma": "hamartia"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "parakeimai",
+    "oikeo",
+    "katergazomai"
+  ]
+}

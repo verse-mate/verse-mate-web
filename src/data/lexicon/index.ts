@@ -35,6 +35,14 @@ interface GeneratedAlignment {
 
 type GeneratedLexicon = Record<LemmaKey, LexEntry>;
 
+/**
+ * Per-occurrence contextual glosses for loaded NT lemmas — Phase 3 data.
+ * Keyed by `<book-slug>:<chapter>:<verse>:<lemma>`. When a token in a
+ * generated alignment has an entry here, the popover's "In this verse"
+ * section appears; otherwise the card shows Layer 1 only.
+ */
+type ContextualGlosses = Record<string, string>;
+
 // Cache: the global generated lemmas table is downloaded once, the
 // first time any generated chapter is opened. ~190KB compressed.
 let generatedLexiconPromise: Promise<GeneratedLexicon> | null = null;
@@ -45,6 +53,21 @@ function loadGeneratedLexicon(): Promise<GeneratedLexicon> {
     );
   }
   return generatedLexiconPromise;
+}
+
+let contextualPromise: Promise<ContextualGlosses> | null = null;
+function loadContextual(): Promise<ContextualGlosses> {
+  if (!contextualPromise) {
+    contextualPromise = import('./generated/_contextual.json').then((m) => {
+      // The _meta key in the JSON is informational only — strip it before
+      // the data is consumed by the renderer so it never accidentally
+      // matches a lemma lookup.
+      const { _meta, ...rest } = m.default as ContextualGlosses & { _meta?: unknown };
+      void _meta;
+      return rest as ContextualGlosses;
+    });
+  }
+  return contextualPromise;
 }
 
 // Cache: alignments by `${bookId}:${chapter}` — synchronous lookup after
@@ -74,9 +97,10 @@ export async function loadAlignmentFor(
   const loader = generatedChapterLoaders[loaderKey];
   if (!loader) return null;
 
-  const [chapterMod, generatedLexicon] = await Promise.all([
+  const [chapterMod, generatedLexicon, contextual] = await Promise.all([
     loader(),
     loadGeneratedLexicon(),
+    loadContextual(),
   ]);
   const raw = chapterMod.default;
   // Hand-curated entries win on collision — preserves the rich James-1
@@ -85,12 +109,26 @@ export async function loadAlignmentFor(
     ...generatedLexicon,
     ...HAND_LEXICON,
   };
+
+  // Inject per-occurrence contextual glosses for loaded lemmas. Keyed by
+  // `<book-slug>:<chapter>:<verse>:<lemma>`. Tokens without a match keep
+  // their generated-only Layer 1 card (no "In this verse" section).
+  const mergedVerses: ChapterAlignment['verses'] = {};
+  for (const [verseStr, tokens] of Object.entries(raw.verses)) {
+    mergedVerses[Number(verseStr)] = (tokens as { surface: string; lemma: string }[]).map(
+      (t) => {
+        const k = `${slug}:${raw.chapter}:${verseStr}:${t.lemma}`;
+        return contextual[k] ? { ...t, contextual: contextual[k] } : t;
+      },
+    );
+  }
+
   const alignment: ChapterAlignment = {
     bookId: raw.bookId,
     book: raw.book,
     chapter: raw.chapter,
     version: raw.version,
-    verses: raw.verses as ChapterAlignment['verses'],
+    verses: mergedVerses,
     lexicon: mergedLexicon,
     themeLemmas: raw.themeLemmas,
   };
