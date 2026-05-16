@@ -1,0 +1,381 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 115,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "to Your name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "the glory",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "Your loving devotion",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "of Your faithfulness",
+        "lemma": "emet"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "should the nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "Where",
+        "lemma": "ayyeh"
+      },
+      {
+        "surface": "is their God",
+        "lemma": "elohim"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Our God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "is in heaven",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "He pleases",
+        "lemma": "chaphets"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Their idols",
+        "lemma": "atsav"
+      },
+      {
+        "surface": "are silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "and gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "made",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "by the hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of men",
+        "lemma": "adam"
+      }
+    ],
+    "5": [
+      {
+        "surface": "They have mouths",
+        "lemma": "peh"
+      },
+      {
+        "surface": "speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "they have eyes",
+        "lemma": "ayin"
+      }
+    ],
+    "6": [
+      {
+        "surface": "they have ears",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "they have noses",
+        "lemma": "aph"
+      },
+      {
+        "surface": "smell",
+        "lemma": "ruach"
+      }
+    ],
+    "7": [
+      {
+        "surface": "they have hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "feel",
+        "lemma": "mush"
+      },
+      {
+        "surface": "they have feet",
+        "lemma": "regel"
+      },
+      {
+        "surface": "walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "even clear",
+        "lemma": "hagah"
+      },
+      {
+        "surface": "their throats",
+        "lemma": "garon"
+      }
+    ],
+    "8": [
+      {
+        "surface": "trust",
+        "lemma": "batach"
+      }
+    ],
+    "9": [
+      {
+        "surface": "O Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "trust",
+        "lemma": "batach"
+      },
+      {
+        "surface": "in the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is their help",
+        "lemma": "ezer"
+      },
+      {
+        "surface": "and shield",
+        "lemma": "magen"
+      }
+    ],
+    "10": [
+      {
+        "surface": "O house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Aaron",
+        "lemma": "haaron"
+      },
+      {
+        "surface": "trust",
+        "lemma": "batach"
+      },
+      {
+        "surface": "in the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is their help",
+        "lemma": "ezer"
+      },
+      {
+        "surface": "and shield",
+        "lemma": "magen"
+      }
+    ],
+    "11": [
+      {
+        "surface": "You who fear",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "trust",
+        "lemma": "batach"
+      },
+      {
+        "surface": "in the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is their help",
+        "lemma": "ezer"
+      },
+      {
+        "surface": "and shield",
+        "lemma": "magen"
+      }
+    ],
+    "12": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is mindful of us",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "He will bless us",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "He will bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "He will bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Aaron",
+        "lemma": "haaron"
+      }
+    ],
+    "13": [
+      {
+        "surface": "He will bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "those who fear",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "small",
+        "lemma": "qatan"
+      },
+      {
+        "surface": "great alike",
+        "lemma": "gadol"
+      }
+    ],
+    "14": [
+      {
+        "surface": "May the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "give you increase",
+        "lemma": "yasaph"
+      },
+      {
+        "surface": "your children",
+        "lemma": "ben"
+      }
+    ],
+    "15": [
+      {
+        "surface": "be blessed",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "by the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of heaven",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "and earth",
+        "lemma": "erets"
+      }
+    ],
+    "16": [
+      {
+        "surface": "The highest heavens",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "belong to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "but the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "to mankind",
+        "lemma": "adam"
+      }
+    ],
+    "17": [
+      {
+        "surface": "the dead",
+        "lemma": "mut"
+      },
+      {
+        "surface": "who praise",
+        "lemma": "halal"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yah"
+      },
+      {
+        "surface": "who descend",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "into silence",
+        "lemma": "dumah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "who will bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yah"
+      },
+      {
+        "surface": "both now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "Hallelujah",
+        "lemma": "halal"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "barakh",
+    "batach",
+    "magen"
+  ]
+}

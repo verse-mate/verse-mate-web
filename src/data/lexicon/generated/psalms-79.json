@@ -1,0 +1,427 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 79,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "A Psalm",
+        "lemma": "mizmor"
+      },
+      {
+        "surface": "of Asaph",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "The nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "O God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "Your inheritance",
+        "lemma": "nachalah"
+      },
+      {
+        "surface": "they have defiled",
+        "lemma": "tame"
+      },
+      {
+        "surface": "Your holy",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "temple",
+        "lemma": "hekhal"
+      },
+      {
+        "surface": "and reduced",
+        "lemma": "sum"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "to rubble",
+        "lemma": "i"
+      }
+    ],
+    "2": [
+      {
+        "surface": "the corpses",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "of Your servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "as food",
+        "lemma": "maakhal"
+      },
+      {
+        "surface": "to the birds",
+        "lemma": "oph"
+      },
+      {
+        "surface": "of the air",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "the flesh",
+        "lemma": "basar"
+      },
+      {
+        "surface": "of Your saints",
+        "lemma": "chasid"
+      },
+      {
+        "surface": "to the beasts",
+        "lemma": "chay"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "erets"
+      }
+    ],
+    "3": [
+      {
+        "surface": "They have poured out",
+        "lemma": "shaphakh"
+      },
+      {
+        "surface": "their blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "like water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "all around",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "and there is no one",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "to bury the dead",
+        "lemma": "qavar"
+      }
+    ],
+    "4": [
+      {
+        "surface": "a reproach",
+        "lemma": "cherpah"
+      },
+      {
+        "surface": "to our neighbors",
+        "lemma": "shakhen"
+      },
+      {
+        "surface": "a scorn",
+        "lemma": "laag"
+      },
+      {
+        "surface": "and derision",
+        "lemma": "qeles"
+      },
+      {
+        "surface": "to those around us",
+        "lemma": "saviv"
+      }
+    ],
+    "5": [
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Will You be angry",
+        "lemma": "anaph"
+      },
+      {
+        "surface": "forever",
+        "lemma": "netsach"
+      },
+      {
+        "surface": "Will Your jealousy",
+        "lemma": "qinah"
+      },
+      {
+        "surface": "burn",
+        "lemma": "baar"
+      },
+      {
+        "surface": "fire",
+        "lemma": "esh"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Pour out",
+        "lemma": "shaphakh"
+      },
+      {
+        "surface": "Your wrath",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "the nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "acknowledge You",
+        "lemma": "yada"
+      },
+      {
+        "surface": "the kingdoms",
+        "lemma": "mamlakhah"
+      },
+      {
+        "surface": "on Your name",
+        "lemma": "shem"
+      }
+    ],
+    "7": [
+      {
+        "surface": "they have devoured",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "and devastated",
+        "lemma": "shamem"
+      },
+      {
+        "surface": "his homeland",
+        "lemma": "naveh"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Do not hold",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "past",
+        "lemma": "rishon"
+      },
+      {
+        "surface": "sins",
+        "lemma": "avan"
+      },
+      {
+        "surface": "let Your compassion",
+        "lemma": "racham"
+      },
+      {
+        "surface": "come",
+        "lemma": "qadam"
+      },
+      {
+        "surface": "quickly",
+        "lemma": "maher"
+      },
+      {
+        "surface": "we are brought",
+        "lemma": "dalal"
+      },
+      {
+        "surface": "low",
+        "lemma": "meod"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Help us",
+        "lemma": "azar"
+      },
+      {
+        "surface": "O God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of our salvation",
+        "lemma": "yesah"
+      },
+      {
+        "surface": "the glory",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "of Your name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "deliver us",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "and atone",
+        "lemma": "kipher"
+      },
+      {
+        "surface": "our sins",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "of Your name",
+        "lemma": "shem"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "should the nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "Where",
+        "lemma": "ayyeh"
+      },
+      {
+        "surface": "is their God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "Before our eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "make known",
+        "lemma": "yada"
+      },
+      {
+        "surface": "among the nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "Your vengeance",
+        "lemma": "neqamah"
+      },
+      {
+        "surface": "for the bloodshed",
+        "lemma": "dam"
+      },
+      {
+        "surface": "of Your servants",
+        "lemma": "eved"
+      }
+    ],
+    "11": [
+      {
+        "surface": "May the groans",
+        "lemma": "anaqah"
+      },
+      {
+        "surface": "of the captives",
+        "lemma": "assir"
+      },
+      {
+        "surface": "by the strength",
+        "lemma": "godel"
+      },
+      {
+        "surface": "of Your arm",
+        "lemma": "zeroa"
+      },
+      {
+        "surface": "preserve",
+        "lemma": "yatar"
+      },
+      {
+        "surface": "those condemned",
+        "lemma": "ben"
+      },
+      {
+        "surface": "to death",
+        "lemma": "temutah"
+      }
+    ],
+    "12": [
+      {
+        "surface": "the laps",
+        "lemma": "cheq"
+      },
+      {
+        "surface": "of our neighbors",
+        "lemma": "shakhen"
+      },
+      {
+        "surface": "sevenfold",
+        "lemma": "shivatayim"
+      },
+      {
+        "surface": "the reproach",
+        "lemma": "cherpah"
+      },
+      {
+        "surface": "they hurled at You",
+        "lemma": "charaph"
+      },
+      {
+        "surface": "O Lord",
+        "lemma": "adonai"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Your people",
+        "lemma": "am"
+      },
+      {
+        "surface": "the sheep",
+        "lemma": "tson"
+      },
+      {
+        "surface": "of Your pasture",
+        "lemma": "mirit"
+      },
+      {
+        "surface": "will thank",
+        "lemma": "yadah"
+      },
+      {
+        "surface": "forever",
+        "lemma": "olam"
+      },
+      {
+        "surface": "from generation",
+        "lemma": "dor"
+      },
+      {
+        "surface": "to generation",
+        "lemma": "dor"
+      },
+      {
+        "surface": "we will declare",
+        "lemma": "saphar"
+      },
+      {
+        "surface": "Your praise",
+        "lemma": "tehillah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "shem",
+    "yerushalaim",
+    "yada"
+  ]
+}

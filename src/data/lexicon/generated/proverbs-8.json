@@ -1,0 +1,901 @@
+{
+  "bookId": 20,
+  "book": "Proverbs",
+  "chapter": 8,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "and understanding",
+        "lemma": "tavunah"
+      },
+      {
+        "surface": "her voice",
+        "lemma": "qol"
+      }
+    ],
+    "2": [
+      {
+        "surface": "On the heights",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "the road",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "at the crossroads",
+        "lemma": "bet"
+      },
+      {
+        "surface": "she takes her stand",
+        "lemma": "natsav"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Beside",
+        "lemma": "yad"
+      },
+      {
+        "surface": "the gates",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "to",
+        "lemma": "peh"
+      },
+      {
+        "surface": "the city",
+        "lemma": "qeret"
+      },
+      {
+        "surface": "at the entrances",
+        "lemma": "mavo"
+      },
+      {
+        "surface": "she cries out",
+        "lemma": "run"
+      }
+    ],
+    "4": [
+      {
+        "surface": "O men",
+        "lemma": "ish"
+      },
+      {
+        "surface": "and my cry",
+        "lemma": "qol"
+      },
+      {
+        "surface": "the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of men",
+        "lemma": "adam"
+      }
+    ],
+    "5": [
+      {
+        "surface": "O simple ones",
+        "lemma": "peti"
+      },
+      {
+        "surface": "learn",
+        "lemma": "bin"
+      },
+      {
+        "surface": "to be shrewd",
+        "lemma": "ormah"
+      },
+      {
+        "surface": "O fools",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "gain understanding",
+        "lemma": "bin"
+      }
+    ],
+    "6": [
+      {
+        "surface": "I speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of noble things",
+        "lemma": "nagid"
+      },
+      {
+        "surface": "and the opening",
+        "lemma": "miphtach"
+      },
+      {
+        "surface": "of my lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "will reveal right",
+        "lemma": "meshar"
+      }
+    ],
+    "7": [
+      {
+        "surface": "my mouth",
+        "lemma": "chekh"
+      },
+      {
+        "surface": "will speak",
+        "lemma": "hagah"
+      },
+      {
+        "surface": "the truth",
+        "lemma": "emet"
+      },
+      {
+        "surface": "and wickedness",
+        "lemma": "resah"
+      },
+      {
+        "surface": "is detestable",
+        "lemma": "toevah"
+      },
+      {
+        "surface": "to my lips",
+        "lemma": "saphah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "the words",
+        "lemma": "emer"
+      },
+      {
+        "surface": "of my mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "are righteous",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "none",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "are crooked",
+        "lemma": "patal"
+      },
+      {
+        "surface": "or perverse",
+        "lemma": "iqqesh"
+      }
+    ],
+    "9": [
+      {
+        "surface": "all plain",
+        "lemma": "nakhoach"
+      },
+      {
+        "surface": "to the discerning",
+        "lemma": "bin"
+      },
+      {
+        "surface": "and upright",
+        "lemma": "yashar"
+      },
+      {
+        "surface": "to those who find",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "daat"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Receive",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "my instruction",
+        "lemma": "musar"
+      },
+      {
+        "surface": "silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "and knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "rather than pure",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "gold",
+        "lemma": "charuts"
+      }
+    ],
+    "11": [
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "is more precious",
+        "lemma": "tov"
+      },
+      {
+        "surface": "than rubies",
+        "lemma": "panin"
+      },
+      {
+        "surface": "you desire",
+        "lemma": "chephets"
+      },
+      {
+        "surface": "compares",
+        "lemma": "shavah"
+      }
+    ],
+    "12": [
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "dwell together",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "with prudence",
+        "lemma": "ormah"
+      },
+      {
+        "surface": "and I find",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "and discretion",
+        "lemma": "mezimmah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "To fear",
+        "lemma": "yirah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is to hate",
+        "lemma": "sane"
+      },
+      {
+        "surface": "evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "I hate",
+        "lemma": "sane"
+      },
+      {
+        "surface": "arrogant",
+        "lemma": "gaon"
+      },
+      {
+        "surface": "pride",
+        "lemma": "geah"
+      },
+      {
+        "surface": "evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "conduct",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "and perverse",
+        "lemma": "tahpukhah"
+      },
+      {
+        "surface": "speech",
+        "lemma": "peh"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Counsel",
+        "lemma": "etsah"
+      },
+      {
+        "surface": "and sound judgment",
+        "lemma": "tushiyyah"
+      },
+      {
+        "surface": "have insight",
+        "lemma": "binah"
+      },
+      {
+        "surface": "and strength",
+        "lemma": "gevurah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "kings",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "reign",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "and rulers",
+        "lemma": "razan"
+      },
+      {
+        "surface": "enact just",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "laws",
+        "lemma": "chaqaq"
+      }
+    ],
+    "16": [
+      {
+        "surface": "princes",
+        "lemma": "sar"
+      },
+      {
+        "surface": "rule",
+        "lemma": "sarar"
+      },
+      {
+        "surface": "nobles",
+        "lemma": "nadiv"
+      },
+      {
+        "surface": "who govern",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "justly",
+        "lemma": "tsedeq"
+      }
+    ],
+    "17": [
+      {
+        "surface": "love",
+        "lemma": "haav"
+      },
+      {
+        "surface": "those who love me",
+        "lemma": "haav"
+      },
+      {
+        "surface": "and those who seek me early",
+        "lemma": "shachar"
+      },
+      {
+        "surface": "shall find me",
+        "lemma": "matsa"
+      }
+    ],
+    "18": [
+      {
+        "surface": "are riches",
+        "lemma": "osher"
+      },
+      {
+        "surface": "and honor",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "enduring",
+        "lemma": "ateq"
+      },
+      {
+        "surface": "wealth",
+        "lemma": "hon"
+      },
+      {
+        "surface": "and righteousness",
+        "lemma": "tsedaqah"
+      }
+    ],
+    "19": [
+      {
+        "surface": "My fruit",
+        "lemma": "peri"
+      },
+      {
+        "surface": "is better",
+        "lemma": "tov"
+      },
+      {
+        "surface": "than gold",
+        "lemma": "charuts"
+      },
+      {
+        "surface": "pure gold",
+        "lemma": "paz"
+      },
+      {
+        "surface": "and my harvest",
+        "lemma": "tevuah"
+      },
+      {
+        "surface": "surpasses choice",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "silver",
+        "lemma": "keseph"
+      }
+    ],
+    "20": [
+      {
+        "surface": "I walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "in the way",
+        "lemma": "orach"
+      },
+      {
+        "surface": "of righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "along",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "the paths",
+        "lemma": "nativ"
+      },
+      {
+        "surface": "of justice",
+        "lemma": "mishpat"
+      }
+    ],
+    "21": [
+      {
+        "surface": "bestowing",
+        "lemma": "nachal"
+      },
+      {
+        "surface": "wealth",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "on those who love me",
+        "lemma": "haav"
+      },
+      {
+        "surface": "and making",
+        "lemma": "male"
+      },
+      {
+        "surface": "their treasuries {full",
+        "lemma": "otsar"
+      }
+    ],
+    "22": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "created me",
+        "lemma": "qanah"
+      },
+      {
+        "surface": "as His first",
+        "lemma": "reshit"
+      },
+      {
+        "surface": "course",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "before",
+        "lemma": "qedem"
+      },
+      {
+        "surface": "His works",
+        "lemma": "miphal"
+      }
+    ],
+    "23": [
+      {
+        "surface": "From everlasting",
+        "lemma": "olam"
+      },
+      {
+        "surface": "I was established",
+        "lemma": "nasakh"
+      },
+      {
+        "surface": "from the beginning",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "before the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "began",
+        "lemma": "qedem"
+      }
+    ],
+    "24": [
+      {
+        "surface": "When there were no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "watery depths",
+        "lemma": "tehom"
+      },
+      {
+        "surface": "I was brought forth",
+        "lemma": "chul"
+      },
+      {
+        "surface": "when no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "springs",
+        "lemma": "mayan"
+      },
+      {
+        "surface": "were overflowing",
+        "lemma": "kavad"
+      },
+      {
+        "surface": "with water",
+        "lemma": "mayim"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Before",
+        "lemma": "terem"
+      },
+      {
+        "surface": "the mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "were settled",
+        "lemma": "tava"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the hills",
+        "lemma": "givah"
+      },
+      {
+        "surface": "I was brought forth",
+        "lemma": "chul"
+      }
+    ],
+    "26": [
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "or fields",
+        "lemma": "chuts"
+      },
+      {
+        "surface": "or any",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "of the dust",
+        "lemma": "aphar"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "tevel"
+      }
+    ],
+    "27": [
+      {
+        "surface": "was there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "when He established",
+        "lemma": "kun"
+      },
+      {
+        "surface": "the heavens",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "when He inscribed",
+        "lemma": "chaqaq"
+      },
+      {
+        "surface": "a circle",
+        "lemma": "chug"
+      },
+      {
+        "surface": "the face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of the deep",
+        "lemma": "tehom"
+      }
+    ],
+    "28": [
+      {
+        "surface": "when He established",
+        "lemma": "amats"
+      },
+      {
+        "surface": "the clouds",
+        "lemma": "shachaq"
+      },
+      {
+        "surface": "above",
+        "lemma": "maal"
+      },
+      {
+        "surface": "when the fountains",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of the deep",
+        "lemma": "tehom"
+      },
+      {
+        "surface": "gushed forth",
+        "lemma": "azaz"
+      }
+    ],
+    "29": [
+      {
+        "surface": "when He set",
+        "lemma": "sum"
+      },
+      {
+        "surface": "a boundary",
+        "lemma": "choq"
+      },
+      {
+        "surface": "for the sea",
+        "lemma": "yam"
+      },
+      {
+        "surface": "so that the waters",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "surpass",
+        "lemma": "avar"
+      },
+      {
+        "surface": "His command",
+        "lemma": "peh"
+      },
+      {
+        "surface": "when He marked out",
+        "lemma": "chaqaq"
+      },
+      {
+        "surface": "the foundations",
+        "lemma": "mosad"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "erets"
+      }
+    ],
+    "30": [
+      {
+        "surface": "a skilled craftsman",
+        "lemma": "amon"
+      },
+      {
+        "surface": "at His side",
+        "lemma": "etsel"
+      },
+      {
+        "surface": "His delight",
+        "lemma": "shashua"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "by day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "rejoicing",
+        "lemma": "sachaq"
+      },
+      {
+        "surface": "in His presence",
+        "lemma": "paneh"
+      }
+    ],
+    "31": [
+      {
+        "surface": "I was rejoicing",
+        "lemma": "sachaq"
+      },
+      {
+        "surface": "in His whole world",
+        "lemma": "tevel"
+      },
+      {
+        "surface": "delighting",
+        "lemma": "shashua"
+      },
+      {
+        "surface": "in the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of men",
+        "lemma": "adam"
+      }
+    ],
+    "32": [
+      {
+        "surface": "Now therefore",
+        "lemma": "attah"
+      },
+      {
+        "surface": "my sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "for blessed",
+        "lemma": "esher"
+      },
+      {
+        "surface": "are those who keep",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "my ways",
+        "lemma": "derekh"
+      }
+    ],
+    "33": [
+      {
+        "surface": "to instruction",
+        "lemma": "musar"
+      },
+      {
+        "surface": "and be wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "ignore it",
+        "lemma": "para"
+      }
+    ],
+    "34": [
+      {
+        "surface": "Blessed",
+        "lemma": "esher"
+      },
+      {
+        "surface": "is the man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "watching",
+        "lemma": "shaqad"
+      },
+      {
+        "surface": "daily",
+        "lemma": "yom"
+      },
+      {
+        "surface": "my doors",
+        "lemma": "dal"
+      },
+      {
+        "surface": "waiting",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "at the posts",
+        "lemma": "mezuzah"
+      },
+      {
+        "surface": "of my doorway",
+        "lemma": "petach"
+      }
+    ],
+    "35": [
+      {
+        "surface": "whoever finds me",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "finds",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "and obtains",
+        "lemma": "puq"
+      },
+      {
+        "surface": "the favor",
+        "lemma": "ratson"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "36": [
+      {
+        "surface": "But he who fails to find me",
+        "lemma": "chata"
+      },
+      {
+        "surface": "harms",
+        "lemma": "chamas"
+      },
+      {
+        "surface": "himself",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "who hate me",
+        "lemma": "sane"
+      },
+      {
+        "surface": "love",
+        "lemma": "haav"
+      },
+      {
+        "surface": "death",
+        "lemma": "mavet"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "matsa",
+    "peh",
+    "haav"
+  ]
+}

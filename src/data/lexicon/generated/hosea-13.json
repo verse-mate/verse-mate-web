@@ -1,0 +1,569 @@
+{
+  "bookId": 28,
+  "book": "Hosea",
+  "chapter": 13,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "When Ephraim",
+        "lemma": "ephrayim"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "davar"
+      },
+      {
+        "surface": "there was trembling",
+        "lemma": "retet"
+      },
+      {
+        "surface": "was exalted",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "in Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "But he incurred guilt",
+        "lemma": "asham"
+      },
+      {
+        "surface": "through Baal",
+        "lemma": "baal"
+      },
+      {
+        "surface": "and he died",
+        "lemma": "mut"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "they sin",
+        "lemma": "chata"
+      },
+      {
+        "surface": "more and more",
+        "lemma": "yasaph"
+      },
+      {
+        "surface": "cast images",
+        "lemma": "massekhah"
+      },
+      {
+        "surface": "idols",
+        "lemma": "atsav"
+      },
+      {
+        "surface": "skillfully made",
+        "lemma": "tavunah"
+      },
+      {
+        "surface": "from their silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "the work",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "of craftsmen",
+        "lemma": "charash"
+      },
+      {
+        "surface": "They offer human sacrifice",
+        "lemma": "zavach"
+      },
+      {
+        "surface": "and kiss",
+        "lemma": "nashaq"
+      },
+      {
+        "surface": "the calves",
+        "lemma": "egel"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Therefore",
+        "lemma": "ken"
+      },
+      {
+        "surface": "like the morning",
+        "lemma": "boqer"
+      },
+      {
+        "surface": "mist",
+        "lemma": "anan"
+      },
+      {
+        "surface": "like the early",
+        "lemma": "shakham"
+      },
+      {
+        "surface": "dew",
+        "lemma": "tal"
+      },
+      {
+        "surface": "that vanishes",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "like chaff",
+        "lemma": "mots"
+      },
+      {
+        "surface": "blown",
+        "lemma": "saar"
+      },
+      {
+        "surface": "from a threshing floor",
+        "lemma": "goren"
+      },
+      {
+        "surface": "like smoke",
+        "lemma": "ashan"
+      },
+      {
+        "surface": "through an open window",
+        "lemma": "arubbah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "ever since the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "you know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "but Me",
+        "lemma": "zulah"
+      },
+      {
+        "surface": "for there is no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "Savior",
+        "lemma": "yasah"
+      },
+      {
+        "surface": "besides Me",
+        "lemma": "bilti"
+      }
+    ],
+    "5": [
+      {
+        "surface": "knew you",
+        "lemma": "yada"
+      },
+      {
+        "surface": "in the wilderness",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "in the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of drought",
+        "lemma": "taluvah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "When they had pasture",
+        "lemma": "mirit"
+      },
+      {
+        "surface": "they became satisfied",
+        "lemma": "sava"
+      },
+      {
+        "surface": "when they were satisfied",
+        "lemma": "sava"
+      },
+      {
+        "surface": "their hearts",
+        "lemma": "lev"
+      },
+      {
+        "surface": "became proud",
+        "lemma": "rum"
+      },
+      {
+        "surface": "they forgot Me",
+        "lemma": "shakhach"
+      }
+    ],
+    "7": [
+      {
+        "surface": "a lion",
+        "lemma": "shachal"
+      },
+      {
+        "surface": "like a leopard",
+        "lemma": "namer"
+      },
+      {
+        "surface": "I will lurk",
+        "lemma": "shur"
+      },
+      {
+        "surface": "the path",
+        "lemma": "derekh"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Like a bear",
+        "lemma": "dov"
+      },
+      {
+        "surface": "robbed of her cubs",
+        "lemma": "shakkul"
+      },
+      {
+        "surface": "I will attack them",
+        "lemma": "pagash"
+      },
+      {
+        "surface": "open their chests",
+        "lemma": "segor"
+      },
+      {
+        "surface": "There",
+        "lemma": "sham"
+      },
+      {
+        "surface": "I will devour them",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "like a lion",
+        "lemma": "levi"
+      },
+      {
+        "surface": "like a wild",
+        "lemma": "saday"
+      },
+      {
+        "surface": "beast",
+        "lemma": "chay"
+      },
+      {
+        "surface": "tearing them apart",
+        "lemma": "baqa"
+      }
+    ],
+    "9": [
+      {
+        "surface": "You are destroyed",
+        "lemma": "shachat"
+      },
+      {
+        "surface": "O Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "against your helper",
+        "lemma": "ezer"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Where is",
+        "lemma": "hei"
+      },
+      {
+        "surface": "your king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "to save you",
+        "lemma": "yasah"
+      },
+      {
+        "surface": "your cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "and the rulers",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "a king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "and princes",
+        "lemma": "sar"
+      }
+    ],
+    "11": [
+      {
+        "surface": "So in My anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "a king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "and in My wrath",
+        "lemma": "evrah"
+      },
+      {
+        "surface": "I took him away",
+        "lemma": "laqach"
+      }
+    ],
+    "12": [
+      {
+        "surface": "The iniquity",
+        "lemma": "avan"
+      },
+      {
+        "surface": "of Ephraim",
+        "lemma": "ephrayim"
+      },
+      {
+        "surface": "is bound up",
+        "lemma": "tsarar"
+      },
+      {
+        "surface": "his sin",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "is stored up",
+        "lemma": "tsaphan"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Labor",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "pains",
+        "lemma": "chevel"
+      },
+      {
+        "surface": "an unwise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "he",
+        "lemma": "ben"
+      },
+      {
+        "surface": "to present himself",
+        "lemma": "amad"
+      },
+      {
+        "surface": "at the opening of the womb",
+        "lemma": "mishber"
+      }
+    ],
+    "14": [
+      {
+        "surface": "I will ransom them",
+        "lemma": "padah"
+      },
+      {
+        "surface": "from the power",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of Sheol",
+        "lemma": "sheol"
+      },
+      {
+        "surface": "I will redeem them",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "from Death",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "Where",
+        "lemma": "hei"
+      },
+      {
+        "surface": "O Death",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "are your plagues",
+        "lemma": "dever"
+      },
+      {
+        "surface": "Where",
+        "lemma": "hei"
+      },
+      {
+        "surface": "O Sheol",
+        "lemma": "sheol"
+      },
+      {
+        "surface": "is your sting",
+        "lemma": "qotev"
+      },
+      {
+        "surface": "Compassion",
+        "lemma": "nocham"
+      },
+      {
+        "surface": "is hidden",
+        "lemma": "satar"
+      },
+      {
+        "surface": "from My eyes",
+        "lemma": "ayin"
+      }
+    ],
+    "15": [
+      {
+        "surface": "flourishes",
+        "lemma": "para"
+      },
+      {
+        "surface": "among",
+        "lemma": "ben"
+      },
+      {
+        "surface": "his brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "an east wind",
+        "lemma": "qadim"
+      },
+      {
+        "surface": "a wind",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "from the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "rising up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "from the desert",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "His fountain",
+        "lemma": "maqor"
+      },
+      {
+        "surface": "will fail",
+        "lemma": "yavesh"
+      },
+      {
+        "surface": "and his spring",
+        "lemma": "mayan"
+      },
+      {
+        "surface": "will run dry",
+        "lemma": "charev"
+      },
+      {
+        "surface": "will plunder",
+        "lemma": "shasah"
+      },
+      {
+        "surface": "his treasury",
+        "lemma": "otsar"
+      },
+      {
+        "surface": "precious",
+        "lemma": "chemdah"
+      },
+      {
+        "surface": "article",
+        "lemma": "keli"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Samaria",
+        "lemma": "shomeron"
+      },
+      {
+        "surface": "will bear her guilt",
+        "lemma": "asham"
+      },
+      {
+        "surface": "she has rebelled",
+        "lemma": "marah"
+      },
+      {
+        "surface": "against her God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "They will fall",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "by the sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "their little ones",
+        "lemma": "olel"
+      },
+      {
+        "surface": "will be dashed to pieces",
+        "lemma": "ratash"
+      },
+      {
+        "surface": "and their pregnant",
+        "lemma": "harah"
+      },
+      {
+        "surface": "women ripped open",
+        "lemma": "baqa"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "hei",
+    "yisrael",
+    "yasah"
+  ]
+}

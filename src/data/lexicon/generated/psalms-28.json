@@ -1,0 +1,283 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 28,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Of David",
+        "lemma": "david"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "deaf",
+        "lemma": "charash"
+      },
+      {
+        "surface": "O my Rock",
+        "lemma": "tsur"
+      },
+      {
+        "surface": "You remain silent",
+        "lemma": "chashah"
+      },
+      {
+        "surface": "I will be",
+        "lemma": "mashal"
+      },
+      {
+        "surface": "those descending",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "to the Pit",
+        "lemma": "bor"
+      }
+    ],
+    "2": [
+      {
+        "surface": "my cry",
+        "lemma": "qol"
+      },
+      {
+        "surface": "for mercy",
+        "lemma": "tachanun"
+      },
+      {
+        "surface": "when I call",
+        "lemma": "shava"
+      },
+      {
+        "surface": "when I lift up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "my hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "Your holy",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "sanctuary",
+        "lemma": "devir"
+      }
+    ],
+    "3": [
+      {
+        "surface": "drag me away",
+        "lemma": "mashakh"
+      },
+      {
+        "surface": "the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "the workers",
+        "lemma": "paal"
+      },
+      {
+        "surface": "of iniquity",
+        "lemma": "aven"
+      },
+      {
+        "surface": "who speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "their neighbors",
+        "lemma": "rea"
+      },
+      {
+        "surface": "while malice",
+        "lemma": "ra"
+      },
+      {
+        "surface": "is in their hearts",
+        "lemma": "levav"
+      }
+    ],
+    "4": [
+      {
+        "surface": "according to their deeds",
+        "lemma": "poal"
+      },
+      {
+        "surface": "and for their works",
+        "lemma": "maalal"
+      },
+      {
+        "surface": "of evil",
+        "lemma": "roa"
+      },
+      {
+        "surface": "for what their hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "have done",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "what they deserve",
+        "lemma": "gemul"
+      }
+    ],
+    "5": [
+      {
+        "surface": "regard",
+        "lemma": "bin"
+      },
+      {
+        "surface": "for the works",
+        "lemma": "peullah"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "what His hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "have done",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "He will tear them down",
+        "lemma": "haras"
+      },
+      {
+        "surface": "rebuild them",
+        "lemma": "banah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Blessed be",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "my cry",
+        "lemma": "qol"
+      },
+      {
+        "surface": "for mercy",
+        "lemma": "tachanun"
+      }
+    ],
+    "7": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is my strength",
+        "lemma": "oz"
+      },
+      {
+        "surface": "and my shield",
+        "lemma": "magen"
+      },
+      {
+        "surface": "my heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "trusts",
+        "lemma": "batach"
+      },
+      {
+        "surface": "and I am helped",
+        "lemma": "azar"
+      },
+      {
+        "surface": "Therefore my heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "rejoices",
+        "lemma": "alaz"
+      },
+      {
+        "surface": "and I give thanks to Him",
+        "lemma": "yadah"
+      },
+      {
+        "surface": "with my song",
+        "lemma": "shir"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is the strength of His people",
+        "lemma": "oz"
+      },
+      {
+        "surface": "a stronghold",
+        "lemma": "maoz"
+      },
+      {
+        "surface": "of salvation",
+        "lemma": "yeshuah"
+      },
+      {
+        "surface": "for His anointed",
+        "lemma": "mashiach"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Save",
+        "lemma": "yasah"
+      },
+      {
+        "surface": "Your people",
+        "lemma": "am"
+      },
+      {
+        "surface": "and bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "Your inheritance",
+        "lemma": "nachalah"
+      },
+      {
+        "surface": "shepherd them",
+        "lemma": "beteqedharoim"
+      },
+      {
+        "surface": "and carry",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "forever",
+        "lemma": "olam"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "tachanun",
+    "qol",
+    "oz"
+  ]
+}

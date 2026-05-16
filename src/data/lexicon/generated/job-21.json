@@ -1,0 +1,809 @@
+{
+  "bookId": 18,
+  "book": "Job",
+  "chapter": 21,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then Job",
+        "lemma": "iyyov"
+      },
+      {
+        "surface": "answered",
+        "lemma": "un"
+      }
+    ],
+    "2": [
+      {
+        "surface": "to my words",
+        "lemma": "millah"
+      },
+      {
+        "surface": "your consolation to me",
+        "lemma": "tanchum"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Bear with me",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "then, after",
+        "lemma": "achar"
+      },
+      {
+        "surface": "I have spoken",
+        "lemma": "davar"
+      },
+      {
+        "surface": "you may go on mocking",
+        "lemma": "laag"
+      }
+    ],
+    "4": [
+      {
+        "surface": "complaint",
+        "lemma": "siach"
+      },
+      {
+        "surface": "against a man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "Then why",
+        "lemma": "maddua"
+      },
+      {
+        "surface": "be impatient",
+        "lemma": "qatser"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Look",
+        "lemma": "panah"
+      },
+      {
+        "surface": "and be appalled",
+        "lemma": "shamem"
+      },
+      {
+        "surface": "put",
+        "lemma": "sum"
+      },
+      {
+        "surface": "your hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "your mouth",
+        "lemma": "peh"
+      }
+    ],
+    "6": [
+      {
+        "surface": "I remember",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "terror",
+        "lemma": "bahal"
+      },
+      {
+        "surface": "takes hold",
+        "lemma": "achaz"
+      },
+      {
+        "surface": "and my body",
+        "lemma": "basar"
+      },
+      {
+        "surface": "trembles in horror",
+        "lemma": "pallatsut"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Why",
+        "lemma": "maddua"
+      },
+      {
+        "surface": "do the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "live on",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "growing old",
+        "lemma": "ataq"
+      },
+      {
+        "surface": "increasing",
+        "lemma": "gavar"
+      },
+      {
+        "surface": "in power",
+        "lemma": "chayil"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Their descendants",
+        "lemma": "zera"
+      },
+      {
+        "surface": "are established",
+        "lemma": "kun"
+      },
+      {
+        "surface": "and their offspring",
+        "lemma": "tseetsa"
+      },
+      {
+        "surface": "before their eyes",
+        "lemma": "ayin"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Their homes",
+        "lemma": "bet"
+      },
+      {
+        "surface": "are safe",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "from fear",
+        "lemma": "pachad"
+      },
+      {
+        "surface": "rod of punishment",
+        "lemma": "shevet"
+      },
+      {
+        "surface": "from God",
+        "lemma": "eloah"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Their bulls",
+        "lemma": "shor"
+      },
+      {
+        "surface": "breed",
+        "lemma": "avar"
+      },
+      {
+        "surface": "fail",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "their cows",
+        "lemma": "parah"
+      },
+      {
+        "surface": "bear calves",
+        "lemma": "palat"
+      },
+      {
+        "surface": "miscarry",
+        "lemma": "shakhol"
+      }
+    ],
+    "11": [
+      {
+        "surface": "They send forth",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "their little ones",
+        "lemma": "avil"
+      },
+      {
+        "surface": "like a flock",
+        "lemma": "tson"
+      },
+      {
+        "surface": "their children",
+        "lemma": "yeled"
+      },
+      {
+        "surface": "skip about",
+        "lemma": "raqad"
+      }
+    ],
+    "12": [
+      {
+        "surface": "singing",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "to the tambourine",
+        "lemma": "toph"
+      },
+      {
+        "surface": "and lyre",
+        "lemma": "kinnor"
+      },
+      {
+        "surface": "and making merry",
+        "lemma": "samach"
+      },
+      {
+        "surface": "at the sound",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of the flute",
+        "lemma": "ugav"
+      }
+    ],
+    "13": [
+      {
+        "surface": "They spend",
+        "lemma": "balah"
+      },
+      {
+        "surface": "their days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "in prosperity",
+        "lemma": "tov"
+      },
+      {
+        "surface": "and go down",
+        "lemma": "nachat"
+      },
+      {
+        "surface": "to Sheol",
+        "lemma": "sheol"
+      },
+      {
+        "surface": "in peace",
+        "lemma": "rega"
+      }
+    ],
+    "14": [
+      {
+        "surface": "to God",
+        "lemma": "el"
+      },
+      {
+        "surface": "Leave us alone",
+        "lemma": "sur"
+      },
+      {
+        "surface": "desire",
+        "lemma": "chaphets"
+      },
+      {
+        "surface": "to know",
+        "lemma": "daat"
+      },
+      {
+        "surface": "Your ways",
+        "lemma": "derekh"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Who",
+        "lemma": "mah"
+      },
+      {
+        "surface": "is the Almighty",
+        "lemma": "shadday"
+      },
+      {
+        "surface": "we should serve Him",
+        "lemma": "avad"
+      },
+      {
+        "surface": "and what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "would we gain",
+        "lemma": "yaal"
+      },
+      {
+        "surface": "we pray",
+        "lemma": "paga"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Still",
+        "lemma": "hen"
+      },
+      {
+        "surface": "their prosperity is",
+        "lemma": "tuv"
+      },
+      {
+        "surface": "in their own hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "so I stay far",
+        "lemma": "rachaq"
+      },
+      {
+        "surface": "from the counsel",
+        "lemma": "etsah"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      }
+    ],
+    "17": [
+      {
+        "surface": "How often",
+        "lemma": "mah"
+      },
+      {
+        "surface": "is the lamp",
+        "lemma": "ner"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "put out",
+        "lemma": "daakh"
+      },
+      {
+        "surface": "Does disaster",
+        "lemma": "ed"
+      },
+      {
+        "surface": "Does God, in His anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "apportion",
+        "lemma": "chalaq"
+      },
+      {
+        "surface": "destruction",
+        "lemma": "chevel"
+      }
+    ],
+    "18": [
+      {
+        "surface": "they like straw",
+        "lemma": "teven"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the wind",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "like chaff",
+        "lemma": "mots"
+      },
+      {
+        "surface": "swept away",
+        "lemma": "ganav"
+      },
+      {
+        "surface": "by a storm",
+        "lemma": "suphah"
+      }
+    ],
+    "19": [
+      {
+        "surface": "It is said that God",
+        "lemma": "eloah"
+      },
+      {
+        "surface": "lays up",
+        "lemma": "tsaphan"
+      },
+      {
+        "surface": "one’s punishment",
+        "lemma": "aven"
+      },
+      {
+        "surface": "for his children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Let God repay the man",
+        "lemma": "salem"
+      },
+      {
+        "surface": "so he will know it",
+        "lemma": "yada"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Let his eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "his own destruction",
+        "lemma": "kid"
+      },
+      {
+        "surface": "let him drink for himself",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "the wrath",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "of the Almighty",
+        "lemma": "shadday"
+      }
+    ],
+    "21": [
+      {
+        "surface": "what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "does he care",
+        "lemma": "chephets"
+      },
+      {
+        "surface": "about his household",
+        "lemma": "bet"
+      },
+      {
+        "surface": "after him",
+        "lemma": "achar"
+      },
+      {
+        "surface": "when the number",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "of his months",
+        "lemma": "chodesh"
+      },
+      {
+        "surface": "has run out",
+        "lemma": "chatsats"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Can anyone teach",
+        "lemma": "lamad"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "to God",
+        "lemma": "el"
+      },
+      {
+        "surface": "judges",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "those on high",
+        "lemma": "rum"
+      }
+    ],
+    "23": [
+      {
+        "surface": "dies",
+        "lemma": "mut"
+      },
+      {
+        "surface": "full of vigor",
+        "lemma": "etsem"
+      },
+      {
+        "surface": "secure",
+        "lemma": "shalanan"
+      },
+      {
+        "surface": "and at ease",
+        "lemma": "shalev"
+      }
+    ],
+    "24": [
+      {
+        "surface": "His body",
+        "lemma": "atin"
+      },
+      {
+        "surface": "is well nourished",
+        "lemma": "male"
+      },
+      {
+        "surface": "and his bones",
+        "lemma": "etsem"
+      },
+      {
+        "surface": "are rich",
+        "lemma": "shaqah"
+      },
+      {
+        "surface": "with marrow",
+        "lemma": "moach"
+      }
+    ],
+    "25": [
+      {
+        "surface": "dies",
+        "lemma": "mut"
+      },
+      {
+        "surface": "in the bitterness",
+        "lemma": "mar"
+      },
+      {
+        "surface": "of his soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "tasted",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "prosperity",
+        "lemma": "tov"
+      }
+    ],
+    "26": [
+      {
+        "surface": "But together",
+        "lemma": "yachad"
+      },
+      {
+        "surface": "they lie down",
+        "lemma": "shakhav"
+      },
+      {
+        "surface": "the dust",
+        "lemma": "aphar"
+      },
+      {
+        "surface": "and worms",
+        "lemma": "rimmah"
+      },
+      {
+        "surface": "cover them",
+        "lemma": "kasah"
+      }
+    ],
+    "27": [
+      {
+        "surface": "Behold",
+        "lemma": "hen"
+      },
+      {
+        "surface": "I know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "your thoughts full well",
+        "lemma": "machashavah"
+      },
+      {
+        "surface": "the schemes by which",
+        "lemma": "mezimmah"
+      },
+      {
+        "surface": "you would wrong",
+        "lemma": "chamas"
+      }
+    ],
+    "28": [
+      {
+        "surface": "Where",
+        "lemma": "ayyeh"
+      },
+      {
+        "surface": "now is the nobleman’s",
+        "lemma": "nadiv"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "and where",
+        "lemma": "ayyeh"
+      },
+      {
+        "surface": "are the tents",
+        "lemma": "hoel"
+      },
+      {
+        "surface": "in which the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "dwell",
+        "lemma": "mishkan"
+      }
+    ],
+    "29": [
+      {
+        "surface": "asked",
+        "lemma": "shaal"
+      },
+      {
+        "surface": "those who travel",
+        "lemma": "avar"
+      },
+      {
+        "surface": "the roads",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "accept",
+        "lemma": "nakhar"
+      },
+      {
+        "surface": "their reports",
+        "lemma": "ot"
+      }
+    ],
+    "30": [
+      {
+        "surface": "the evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "man is spared",
+        "lemma": "chasakh"
+      },
+      {
+        "surface": "from the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of calamity",
+        "lemma": "ed"
+      },
+      {
+        "surface": "delivered",
+        "lemma": "yaval"
+      },
+      {
+        "surface": "from the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of wrath",
+        "lemma": "evrah"
+      }
+    ],
+    "31": [
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "denounces",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "his behavior",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "his face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "repays",
+        "lemma": "salem"
+      }
+    ],
+    "32": [
+      {
+        "surface": "is carried",
+        "lemma": "yaval"
+      },
+      {
+        "surface": "to the grave",
+        "lemma": "qever"
+      },
+      {
+        "surface": "and watch is kept",
+        "lemma": "shaqad"
+      },
+      {
+        "surface": "his tomb",
+        "lemma": "gadish"
+      }
+    ],
+    "33": [
+      {
+        "surface": "The clods",
+        "lemma": "regev"
+      },
+      {
+        "surface": "of the valley",
+        "lemma": "nachal"
+      },
+      {
+        "surface": "are sweet",
+        "lemma": "mataq"
+      },
+      {
+        "surface": "follows",
+        "lemma": "mashakh"
+      },
+      {
+        "surface": "behind him",
+        "lemma": "achar"
+      },
+      {
+        "surface": "and those before him",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "are without",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "number",
+        "lemma": "mispar"
+      }
+    ],
+    "34": [
+      {
+        "surface": "So how",
+        "lemma": "ekh"
+      },
+      {
+        "surface": "can you comfort me",
+        "lemma": "nacham"
+      },
+      {
+        "surface": "with empty words",
+        "lemma": "hevel"
+      },
+      {
+        "surface": "For your answers",
+        "lemma": "teshuvah"
+      },
+      {
+        "surface": "remain",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "full of falsehood",
+        "lemma": "maal"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "rasah",
+    "mah",
+    "paneh"
+  ]
+}

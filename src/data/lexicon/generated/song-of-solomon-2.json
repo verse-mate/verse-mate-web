@@ -1,0 +1,563 @@
+{
+  "bookId": 22,
+  "book": "Song of Solomon",
+  "chapter": 2,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "am a rose",
+        "lemma": "chavatstselet"
+      },
+      {
+        "surface": "of Sharon",
+        "lemma": "sharon"
+      },
+      {
+        "surface": "a lily",
+        "lemma": "shushan"
+      },
+      {
+        "surface": "of the valley",
+        "lemma": "emeq"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Like a lily",
+        "lemma": "shushan"
+      },
+      {
+        "surface": "among",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the thorns",
+        "lemma": "choach"
+      },
+      {
+        "surface": "is my darling",
+        "lemma": "rayah"
+      },
+      {
+        "surface": "among",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the maidens",
+        "lemma": "bat"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Like an apple tree",
+        "lemma": "tappuach"
+      },
+      {
+        "surface": "among the trees",
+        "lemma": "ets"
+      },
+      {
+        "surface": "of the forest",
+        "lemma": "yaar"
+      },
+      {
+        "surface": "is my beloved",
+        "lemma": "dod"
+      },
+      {
+        "surface": "among",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the young men",
+        "lemma": "ben"
+      },
+      {
+        "surface": "I delight",
+        "lemma": "chamad"
+      },
+      {
+        "surface": "in his shade",
+        "lemma": "tsel"
+      },
+      {
+        "surface": "and his fruit",
+        "lemma": "peri"
+      },
+      {
+        "surface": "is sweet",
+        "lemma": "matoq"
+      },
+      {
+        "surface": "to my taste",
+        "lemma": "chekh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "and his banner",
+        "lemma": "degel"
+      },
+      {
+        "surface": "love",
+        "lemma": "haavah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Sustain me",
+        "lemma": "samakh"
+      },
+      {
+        "surface": "with raisins",
+        "lemma": "ashishah"
+      },
+      {
+        "surface": "refresh me",
+        "lemma": "raphad"
+      },
+      {
+        "surface": "with apples",
+        "lemma": "tappuach"
+      },
+      {
+        "surface": "am faint",
+        "lemma": "chalah"
+      },
+      {
+        "surface": "with love",
+        "lemma": "haavah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "His left hand",
+        "lemma": "semol"
+      },
+      {
+        "surface": "is under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "my head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "and his right arm",
+        "lemma": "yamin"
+      },
+      {
+        "surface": "embraces me",
+        "lemma": "chavaq"
+      }
+    ],
+    "7": [
+      {
+        "surface": "O daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "I adjure",
+        "lemma": "shava"
+      },
+      {
+        "surface": "by the gazelles",
+        "lemma": "tsevi"
+      },
+      {
+        "surface": "does",
+        "lemma": "ayyalah"
+      },
+      {
+        "surface": "of the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "arouse",
+        "lemma": "ur"
+      },
+      {
+        "surface": "awaken",
+        "lemma": "ur"
+      },
+      {
+        "surface": "love",
+        "lemma": "haavah"
+      },
+      {
+        "surface": "the time is right",
+        "lemma": "chaphets"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Listen",
+        "lemma": "qol"
+      },
+      {
+        "surface": "My beloved approaches",
+        "lemma": "dod"
+      },
+      {
+        "surface": "Look",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "leaping",
+        "lemma": "dalag"
+      },
+      {
+        "surface": "the mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "bounding",
+        "lemma": "qaphats"
+      },
+      {
+        "surface": "the hills",
+        "lemma": "givah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "My beloved",
+        "lemma": "dod"
+      },
+      {
+        "surface": "is like",
+        "lemma": "damah"
+      },
+      {
+        "surface": "a gazelle",
+        "lemma": "tsevi"
+      },
+      {
+        "surface": "a young",
+        "lemma": "opher"
+      },
+      {
+        "surface": "stag",
+        "lemma": "ayyal"
+      },
+      {
+        "surface": "Look",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "stands",
+        "lemma": "amad"
+      },
+      {
+        "surface": "behind",
+        "lemma": "achar"
+      },
+      {
+        "surface": "our wall",
+        "lemma": "kotel"
+      },
+      {
+        "surface": "gazing",
+        "lemma": "shagach"
+      },
+      {
+        "surface": "the windows",
+        "lemma": "challon"
+      },
+      {
+        "surface": "peering",
+        "lemma": "tsuts"
+      },
+      {
+        "surface": "the lattice",
+        "lemma": "cherekh"
+      }
+    ],
+    "10": [
+      {
+        "surface": "My beloved",
+        "lemma": "dod"
+      },
+      {
+        "surface": "calls",
+        "lemma": "un"
+      },
+      {
+        "surface": "Arise",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "my darling",
+        "lemma": "rayah"
+      },
+      {
+        "surface": "Come away",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "my beautiful one",
+        "lemma": "yapheh"
+      }
+    ],
+    "11": [
+      {
+        "surface": "now",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "the winter",
+        "lemma": "setav"
+      },
+      {
+        "surface": "is past",
+        "lemma": "avar"
+      },
+      {
+        "surface": "the rain",
+        "lemma": "geshem"
+      },
+      {
+        "surface": "is over",
+        "lemma": "chalaph"
+      },
+      {
+        "surface": "and gone",
+        "lemma": "halakh"
+      }
+    ],
+    "12": [
+      {
+        "surface": "The flowers",
+        "lemma": "nitstsan"
+      },
+      {
+        "surface": "in the countryside",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of singing",
+        "lemma": "zamir"
+      },
+      {
+        "surface": "has come",
+        "lemma": "naga"
+      },
+      {
+        "surface": "and the cooing",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of turtledoves",
+        "lemma": "tor"
+      },
+      {
+        "surface": "in our land",
+        "lemma": "erets"
+      }
+    ],
+    "13": [
+      {
+        "surface": "The fig tree",
+        "lemma": "teenah"
+      },
+      {
+        "surface": "ripens",
+        "lemma": "chanat"
+      },
+      {
+        "surface": "its figs",
+        "lemma": "pagah"
+      },
+      {
+        "surface": "the blossoming",
+        "lemma": "semadar"
+      },
+      {
+        "surface": "vines",
+        "lemma": "gephen"
+      },
+      {
+        "surface": "their fragrance",
+        "lemma": "reach"
+      },
+      {
+        "surface": "Arise",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "come away",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "my darling",
+        "lemma": "rayah"
+      },
+      {
+        "surface": "come away",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "my beautiful one",
+        "lemma": "yapheh"
+      }
+    ],
+    "14": [
+      {
+        "surface": "O my dove",
+        "lemma": "yonah"
+      },
+      {
+        "surface": "in the clefts",
+        "lemma": "chagav"
+      },
+      {
+        "surface": "of the rock",
+        "lemma": "sela"
+      },
+      {
+        "surface": "in the crevices",
+        "lemma": "seter"
+      },
+      {
+        "surface": "of the cliff",
+        "lemma": "madregah"
+      },
+      {
+        "surface": "your face",
+        "lemma": "mareh"
+      },
+      {
+        "surface": "your voice",
+        "lemma": "qol"
+      },
+      {
+        "surface": "your voice",
+        "lemma": "qol"
+      },
+      {
+        "surface": "is sweet",
+        "lemma": "arev"
+      },
+      {
+        "surface": "and your countenance",
+        "lemma": "mareh"
+      },
+      {
+        "surface": "is lovely",
+        "lemma": "naeh"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Catch",
+        "lemma": "achaz"
+      },
+      {
+        "surface": "the foxes",
+        "lemma": "shual"
+      },
+      {
+        "surface": "the little",
+        "lemma": "qatan"
+      },
+      {
+        "surface": "foxes",
+        "lemma": "shual"
+      },
+      {
+        "surface": "that ruin",
+        "lemma": "chaval"
+      },
+      {
+        "surface": "the vineyards",
+        "lemma": "kerem"
+      },
+      {
+        "surface": "for our vineyards",
+        "lemma": "kerem"
+      },
+      {
+        "surface": "are in bloom",
+        "lemma": "semadar"
+      }
+    ],
+    "16": [
+      {
+        "surface": "My beloved",
+        "lemma": "dod"
+      },
+      {
+        "surface": "he pastures his flock",
+        "lemma": "beteqedharoim"
+      },
+      {
+        "surface": "among the lilies",
+        "lemma": "shushan"
+      }
+    ],
+    "17": [
+      {
+        "surface": "the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "breaks",
+        "lemma": "puach"
+      },
+      {
+        "surface": "and shadows",
+        "lemma": "tselel"
+      },
+      {
+        "surface": "flee",
+        "lemma": "nus"
+      },
+      {
+        "surface": "turn",
+        "lemma": "savav"
+      },
+      {
+        "surface": "my beloved",
+        "lemma": "dod"
+      },
+      {
+        "surface": "and be like",
+        "lemma": "damah"
+      },
+      {
+        "surface": "a gazelle",
+        "lemma": "tsevi"
+      },
+      {
+        "surface": "a young stag",
+        "lemma": "opher"
+      },
+      {
+        "surface": "the mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "of Bether",
+        "lemma": "beter"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "dod",
+    "qol",
+    "halakh"
+  ]
+}

@@ -1,0 +1,979 @@
+{
+  "bookId": 6,
+  "book": "Joshua",
+  "chapter": 9,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "the kings",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "west",
+        "lemma": "ever"
+      },
+      {
+        "surface": "of the Jordan",
+        "lemma": "yarden"
+      },
+      {
+        "surface": "in the hill country",
+        "lemma": "har"
+      },
+      {
+        "surface": "the foothills",
+        "lemma": "shephelah"
+      },
+      {
+        "surface": "along the coast",
+        "lemma": "choph"
+      },
+      {
+        "surface": "of the Great",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "Sea",
+        "lemma": "yam"
+      },
+      {
+        "surface": "Lebanon",
+        "lemma": "levanon"
+      },
+      {
+        "surface": "the Hittites",
+        "lemma": "chitti"
+      },
+      {
+        "surface": "Amorites",
+        "lemma": "emori"
+      },
+      {
+        "surface": "Canaanites",
+        "lemma": "kenaani"
+      },
+      {
+        "surface": "Perizzites",
+        "lemma": "perizzi"
+      },
+      {
+        "surface": "Hivites",
+        "lemma": "chivvi"
+      },
+      {
+        "surface": "and Jebusites",
+        "lemma": "yevusi"
+      }
+    ],
+    "2": [
+      {
+        "surface": "they came",
+        "lemma": "qavats"
+      },
+      {
+        "surface": "together",
+        "lemma": "yachad"
+      },
+      {
+        "surface": "to wage war",
+        "lemma": "lacham"
+      },
+      {
+        "surface": "Joshua",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "and Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "3": [
+      {
+        "surface": "of Gibeon",
+        "lemma": "givon"
+      },
+      {
+        "surface": "Joshua",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "to Jericho",
+        "lemma": "yericho"
+      },
+      {
+        "surface": "and Ai",
+        "lemma": "ay"
+      }
+    ],
+    "4": [
+      {
+        "surface": "and set out",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "as envoys",
+        "lemma": "tsayar"
+      },
+      {
+        "surface": "carrying",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "on their donkeys",
+        "lemma": "chamor"
+      },
+      {
+        "surface": "worn-out",
+        "lemma": "baleh"
+      },
+      {
+        "surface": "sacks",
+        "lemma": "saq"
+      },
+      {
+        "surface": "and old",
+        "lemma": "baleh"
+      },
+      {
+        "surface": "wineskins",
+        "lemma": "nod"
+      },
+      {
+        "surface": "cracked",
+        "lemma": "baqa"
+      },
+      {
+        "surface": "and mended",
+        "lemma": "tsarar"
+      }
+    ],
+    "5": [
+      {
+        "surface": "They put worn",
+        "lemma": "baleh"
+      },
+      {
+        "surface": "patched",
+        "lemma": "tala"
+      },
+      {
+        "surface": "sandals",
+        "lemma": "naal"
+      },
+      {
+        "surface": "on their feet",
+        "lemma": "regel"
+      },
+      {
+        "surface": "and threadbare",
+        "lemma": "baleh"
+      },
+      {
+        "surface": "clothing",
+        "lemma": "salmah"
+      },
+      {
+        "surface": "supply",
+        "lemma": "tsayid"
+      },
+      {
+        "surface": "of bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "was dry",
+        "lemma": "yavesh"
+      },
+      {
+        "surface": "and moldy",
+        "lemma": "niqqud"
+      }
+    ],
+    "6": [
+      {
+        "surface": "They went",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "Joshua",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "the camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "at Gilgal",
+        "lemma": "gilgal"
+      },
+      {
+        "surface": "the men",
+        "lemma": "ish"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "from a distant",
+        "lemma": "rachoq"
+      },
+      {
+        "surface": "land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "please make",
+        "lemma": "karat"
+      },
+      {
+        "surface": "a treaty",
+        "lemma": "berit"
+      }
+    ],
+    "7": [
+      {
+        "surface": "But the men",
+        "lemma": "ish"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "the Hivites",
+        "lemma": "chivvi"
+      },
+      {
+        "surface": "Perhaps",
+        "lemma": "ulay"
+      },
+      {
+        "surface": "near us",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "How",
+        "lemma": "ekh"
+      },
+      {
+        "surface": "can we make",
+        "lemma": "karat"
+      },
+      {
+        "surface": "a treaty with you",
+        "lemma": "berit"
+      }
+    ],
+    "8": [
+      {
+        "surface": "are your servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "Joshua",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "Then Joshua",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "and where",
+        "lemma": "ayin"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Your servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "from a very",
+        "lemma": "meod"
+      },
+      {
+        "surface": "distant",
+        "lemma": "rachoq"
+      },
+      {
+        "surface": "land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "because of the fame",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the reports about Him",
+        "lemma": "shoma"
+      },
+      {
+        "surface": "in Egypt",
+        "lemma": "mitsrayim"
+      }
+    ],
+    "10": [
+      {
+        "surface": "to the two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "kings",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of the Amorites",
+        "lemma": "emori"
+      },
+      {
+        "surface": "beyond",
+        "lemma": "ever"
+      },
+      {
+        "surface": "the Jordan",
+        "lemma": "yarden"
+      },
+      {
+        "surface": "Sihon",
+        "lemma": "sichon"
+      },
+      {
+        "surface": "king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Heshbon",
+        "lemma": "cheshbon"
+      },
+      {
+        "surface": "and Og",
+        "lemma": "og"
+      },
+      {
+        "surface": "king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Bashan",
+        "lemma": "bashan"
+      },
+      {
+        "surface": "reigned in Ashtaroth",
+        "lemma": "ashtarot"
+      }
+    ],
+    "11": [
+      {
+        "surface": "So the elders",
+        "lemma": "zaqen"
+      },
+      {
+        "surface": "of our land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "Take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "provisions",
+        "lemma": "tsedah"
+      },
+      {
+        "surface": "for your journey",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "are your servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "Please make",
+        "lemma": "karat"
+      },
+      {
+        "surface": "a treaty",
+        "lemma": "berit"
+      }
+    ],
+    "12": [
+      {
+        "surface": "bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "of ours was warm",
+        "lemma": "cham"
+      },
+      {
+        "surface": "when we packed",
+        "lemma": "tsud"
+      },
+      {
+        "surface": "at home",
+        "lemma": "bet"
+      },
+      {
+        "surface": "on the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "to come",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "But look",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "it is now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "dry",
+        "lemma": "yavesh"
+      },
+      {
+        "surface": "moldy",
+        "lemma": "niqqud"
+      }
+    ],
+    "13": [
+      {
+        "surface": "wineskins",
+        "lemma": "nod"
+      },
+      {
+        "surface": "were new",
+        "lemma": "chadash"
+      },
+      {
+        "surface": "when we filled",
+        "lemma": "male"
+      },
+      {
+        "surface": "but look",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "they are cracked",
+        "lemma": "baqa"
+      },
+      {
+        "surface": "clothes",
+        "lemma": "salmah"
+      },
+      {
+        "surface": "and sandals",
+        "lemma": "naal"
+      },
+      {
+        "surface": "are worn out",
+        "lemma": "balah"
+      },
+      {
+        "surface": "from our very",
+        "lemma": "meod"
+      },
+      {
+        "surface": "long",
+        "lemma": "rov"
+      },
+      {
+        "surface": "journey",
+        "lemma": "derekh"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Then the men of Israel",
+        "lemma": "enosh"
+      },
+      {
+        "surface": "sampled",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "their provisions",
+        "lemma": "tsayid"
+      },
+      {
+        "surface": "seek",
+        "lemma": "shaal"
+      },
+      {
+        "surface": "the counsel",
+        "lemma": "peh"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "And Joshua",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "a treaty",
+        "lemma": "berit"
+      },
+      {
+        "surface": "of peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "to let them live",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "and the leaders",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "swore an oath",
+        "lemma": "shava"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "after",
+        "lemma": "achar"
+      },
+      {
+        "surface": "they had made",
+        "lemma": "karat"
+      },
+      {
+        "surface": "the treaty",
+        "lemma": "berit"
+      },
+      {
+        "surface": "neighbors",
+        "lemma": "qarov"
+      },
+      {
+        "surface": "among them",
+        "lemma": "qerev"
+      }
+    ],
+    "17": [
+      {
+        "surface": "So the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "set out",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "and on the third",
+        "lemma": "shelishi"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "at their cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "Gibeon",
+        "lemma": "givon"
+      },
+      {
+        "surface": "Chephirah",
+        "lemma": "kephirah"
+      },
+      {
+        "surface": "Beeroth",
+        "lemma": "beerot"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "qiryatyearim"
+      },
+      {
+        "surface": "and Kiriath-jearim",
+        "lemma": "qiryatyearim"
+      }
+    ],
+    "18": [
+      {
+        "surface": "But the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "attack them",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "the leaders",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "had sworn an oath",
+        "lemma": "shava"
+      },
+      {
+        "surface": "by the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "grumbled",
+        "lemma": "lun"
+      },
+      {
+        "surface": "the leaders",
+        "lemma": "nasi"
+      }
+    ],
+    "19": [
+      {
+        "surface": "the leaders",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "have sworn an oath",
+        "lemma": "shava"
+      },
+      {
+        "surface": "by the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "and now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "touch",
+        "lemma": "naga"
+      }
+    ],
+    "20": [
+      {
+        "surface": "We will let them live",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "wrath",
+        "lemma": "qetseph"
+      },
+      {
+        "surface": "the oath",
+        "lemma": "shevuah"
+      },
+      {
+        "surface": "we swore",
+        "lemma": "shava"
+      }
+    ],
+    "21": [
+      {
+        "surface": "They",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "Let them live",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "woodcutters",
+        "lemma": "chatav"
+      },
+      {
+        "surface": "and water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "carriers",
+        "lemma": "shaav"
+      },
+      {
+        "surface": "congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "the leaders",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "kept their promise",
+        "lemma": "davar"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Then Joshua",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "and said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "did you deceive",
+        "lemma": "ramah"
+      },
+      {
+        "surface": "you live far away",
+        "lemma": "rachoq"
+      },
+      {
+        "surface": "among us",
+        "lemma": "qerev"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Now therefore",
+        "lemma": "attah"
+      },
+      {
+        "surface": "are under a curse",
+        "lemma": "arar"
+      },
+      {
+        "surface": "serve",
+        "lemma": "eved"
+      },
+      {
+        "surface": "as woodcutters",
+        "lemma": "chatav"
+      },
+      {
+        "surface": "and water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "carriers",
+        "lemma": "shaav"
+      },
+      {
+        "surface": "for the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of my God",
+        "lemma": "elohim"
+      }
+    ],
+    "24": [
+      {
+        "surface": "The Gibeonites answered",
+        "lemma": "un"
+      },
+      {
+        "surface": "Your servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "were told clearly",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "had commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "His servant",
+        "lemma": "eved"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and wipe out",
+        "lemma": "shamad"
+      },
+      {
+        "surface": "before you",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "So we greatly",
+        "lemma": "meod"
+      },
+      {
+        "surface": "feared",
+        "lemma": "yare"
+      },
+      {
+        "surface": "for our lives",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "because of you",
+        "lemma": "paneh"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "we are in your hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "whatever seems",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "and right",
+        "lemma": "yashar"
+      }
+    ],
+    "26": [
+      {
+        "surface": "So",
+        "lemma": "ken"
+      },
+      {
+        "surface": "and delivered",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "from the hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of the Israelites",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "kill the Gibeonites",
+        "lemma": "harag"
+      }
+    ],
+    "27": [
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "he",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "woodcutters",
+        "lemma": "chatav"
+      },
+      {
+        "surface": "and water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "carriers",
+        "lemma": "shaav"
+      },
+      {
+        "surface": "for the congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "and for the altar",
+        "lemma": "mizbeach"
+      },
+      {
+        "surface": "the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "He would choose",
+        "lemma": "bachar"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "yehoshua",
+    "yisrael",
+    "nasi"
+  ]
+}

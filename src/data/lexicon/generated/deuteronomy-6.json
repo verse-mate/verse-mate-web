@@ -1,0 +1,831 @@
+{
+  "bookId": 5,
+  "book": "Deuteronomy",
+  "chapter": 6,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "the commandments",
+        "lemma": "mitsvah"
+      },
+      {
+        "surface": "and statutes",
+        "lemma": "choq"
+      },
+      {
+        "surface": "and ordinances",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "has instructed me",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "to teach you",
+        "lemma": "lamad"
+      },
+      {
+        "surface": "in the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "are about to enter",
+        "lemma": "avar"
+      },
+      {
+        "surface": "and possess",
+        "lemma": "yarash"
+      }
+    ],
+    "2": [
+      {
+        "surface": "and your children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and grandchildren",
+        "lemma": "ben"
+      },
+      {
+        "surface": "may fear",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of your lives",
+        "lemma": "chay"
+      },
+      {
+        "surface": "by keeping",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "His statutes",
+        "lemma": "chuqqah"
+      },
+      {
+        "surface": "and commandments",
+        "lemma": "mitsvah"
+      },
+      {
+        "surface": "give",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "your days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "may be prolonged",
+        "lemma": "arakh"
+      }
+    ],
+    "3": [
+      {
+        "surface": "O Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "and be careful",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "you may prosper",
+        "lemma": "yatav"
+      },
+      {
+        "surface": "and multiply",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "greatly",
+        "lemma": "meod"
+      },
+      {
+        "surface": "in a land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "flowing",
+        "lemma": "zuv"
+      },
+      {
+        "surface": "with milk",
+        "lemma": "chalav"
+      },
+      {
+        "surface": "and honey",
+        "lemma": "devash"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "has promised",
+        "lemma": "davar"
+      }
+    ],
+    "4": [
+      {
+        "surface": "O Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "our God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is One",
+        "lemma": "echad"
+      }
+    ],
+    "5": [
+      {
+        "surface": "And you shall love",
+        "lemma": "haav"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "your heart",
+        "lemma": "levav"
+      },
+      {
+        "surface": "your soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "your strength",
+        "lemma": "meod"
+      }
+    ],
+    "6": [
+      {
+        "surface": "words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "am commanding you",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "today",
+        "lemma": "yom"
+      },
+      {
+        "surface": "your hearts",
+        "lemma": "levav"
+      }
+    ],
+    "7": [
+      {
+        "surface": "And you shall teach them diligently",
+        "lemma": "shanan"
+      },
+      {
+        "surface": "to your children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "at home",
+        "lemma": "bet"
+      },
+      {
+        "surface": "and when you walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "along the road",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "when you lie down",
+        "lemma": "shakhav"
+      },
+      {
+        "surface": "and when you get up",
+        "lemma": "qamay"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Tie them",
+        "lemma": "qashar"
+      },
+      {
+        "surface": "as reminders",
+        "lemma": "ot"
+      },
+      {
+        "surface": "your hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "on your foreheads",
+        "lemma": "bayin"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Write them",
+        "lemma": "katav"
+      },
+      {
+        "surface": "the doorposts",
+        "lemma": "mezuzah"
+      },
+      {
+        "surface": "of your houses",
+        "lemma": "bet"
+      },
+      {
+        "surface": "and on your gates",
+        "lemma": "shaar"
+      }
+    ],
+    "10": [
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "He swore",
+        "lemma": "shava"
+      },
+      {
+        "surface": "to Abraham",
+        "lemma": "avraham"
+      },
+      {
+        "surface": "Isaac",
+        "lemma": "yitschaq"
+      },
+      {
+        "surface": "and Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "a land with great",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "and splendid",
+        "lemma": "tov"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "build",
+        "lemma": "banah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "with houses",
+        "lemma": "bet"
+      },
+      {
+        "surface": "full of",
+        "lemma": "male"
+      },
+      {
+        "surface": "good",
+        "lemma": "tuv"
+      },
+      {
+        "surface": "fill them",
+        "lemma": "male"
+      },
+      {
+        "surface": "with wells",
+        "lemma": "bor"
+      },
+      {
+        "surface": "dig",
+        "lemma": "chatsav"
+      },
+      {
+        "surface": "and with vineyards",
+        "lemma": "kerem"
+      },
+      {
+        "surface": "and olive groves",
+        "lemma": "zayit"
+      },
+      {
+        "surface": "plant",
+        "lemma": "nata"
+      },
+      {
+        "surface": "and when you eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "and are satisfied",
+        "lemma": "sava"
+      }
+    ],
+    "12": [
+      {
+        "surface": "be careful",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "to forget",
+        "lemma": "shakhach"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "out of the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of slavery",
+        "lemma": "eved"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Fear",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "serve Him only",
+        "lemma": "avad"
+      },
+      {
+        "surface": "and take your oaths",
+        "lemma": "shava"
+      },
+      {
+        "surface": "in His name",
+        "lemma": "shem"
+      }
+    ],
+    "14": [
+      {
+        "surface": "follow",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "other",
+        "lemma": "acher"
+      },
+      {
+        "surface": "gods",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the gods",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of the peoples",
+        "lemma": "am"
+      },
+      {
+        "surface": "around you",
+        "lemma": "saviv"
+      }
+    ],
+    "15": [
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "who is among you",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "is a jealous",
+        "lemma": "qanna"
+      },
+      {
+        "surface": "God",
+        "lemma": "el"
+      },
+      {
+        "surface": "the anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "will be kindled",
+        "lemma": "charah"
+      },
+      {
+        "surface": "and He will wipe you",
+        "lemma": "shamad"
+      },
+      {
+        "surface": "the face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "adamah"
+      }
+    ],
+    "16": [
+      {
+        "surface": "test",
+        "lemma": "nasah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "you tested Him",
+        "lemma": "nasah"
+      },
+      {
+        "surface": "at Massah",
+        "lemma": "massah"
+      }
+    ],
+    "17": [
+      {
+        "surface": "You are to diligently keep",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "the commandments",
+        "lemma": "mitsvah"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "and the testimonies",
+        "lemma": "edah"
+      },
+      {
+        "surface": "and statutes",
+        "lemma": "choq"
+      },
+      {
+        "surface": "He has given you",
+        "lemma": "tsavah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "what is right",
+        "lemma": "yashar"
+      },
+      {
+        "surface": "and good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "in the sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "it may be well",
+        "lemma": "yatav"
+      },
+      {
+        "surface": "and possess",
+        "lemma": "yarash"
+      },
+      {
+        "surface": "the good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God swore",
+        "lemma": "shava"
+      }
+    ],
+    "19": [
+      {
+        "surface": "driving out",
+        "lemma": "hadaph"
+      },
+      {
+        "surface": "your enemies",
+        "lemma": "oyev"
+      },
+      {
+        "surface": "before you",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has said",
+        "lemma": "davar"
+      }
+    ],
+    "20": [
+      {
+        "surface": "In the future",
+        "lemma": "machar"
+      },
+      {
+        "surface": "your son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "asks",
+        "lemma": "shaal"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "is the meaning of the decrees",
+        "lemma": "edah"
+      },
+      {
+        "surface": "and statutes",
+        "lemma": "choq"
+      },
+      {
+        "surface": "and ordinances",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "our God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "has commanded you",
+        "lemma": "tsavah"
+      }
+    ],
+    "21": [
+      {
+        "surface": "him",
+        "lemma": "ben"
+      },
+      {
+        "surface": "slaves",
+        "lemma": "eved"
+      },
+      {
+        "surface": "of Pharaoh",
+        "lemma": "paroh"
+      },
+      {
+        "surface": "in Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "but the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "with a mighty",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "hand",
+        "lemma": "yad"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Before our eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "great",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "and devastating",
+        "lemma": "ra"
+      },
+      {
+        "surface": "signs",
+        "lemma": "ot"
+      },
+      {
+        "surface": "and wonders",
+        "lemma": "mophet"
+      },
+      {
+        "surface": "on Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "on Pharaoh",
+        "lemma": "paroh"
+      },
+      {
+        "surface": "his household",
+        "lemma": "bet"
+      }
+    ],
+    "23": [
+      {
+        "surface": "from there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "He had sworn",
+        "lemma": "shava"
+      }
+    ],
+    "24": [
+      {
+        "surface": "And the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "commanded us",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "statutes",
+        "lemma": "choq"
+      },
+      {
+        "surface": "and to fear",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "our God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "that we may always be prosperous",
+        "lemma": "tov"
+      },
+      {
+        "surface": "and preserved",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "as we are to this day",
+        "lemma": "yom"
+      }
+    ],
+    "25": [
+      {
+        "surface": "And if we are careful",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "commandments",
+        "lemma": "mitsvah"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "our God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "He has commanded us",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "tsedaqah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "tsavah",
+    "shamar",
+    "bet"
+  ]
+}

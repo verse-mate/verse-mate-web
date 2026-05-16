@@ -1,0 +1,511 @@
+{
+  "bookId": 22,
+  "book": "Song of Solomon",
+  "chapter": 1,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Solomon’s",
+        "lemma": "shelomoh"
+      },
+      {
+        "surface": "Song",
+        "lemma": "shir"
+      },
+      {
+        "surface": "of Songs",
+        "lemma": "shir"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Let him kiss me",
+        "lemma": "nashaq"
+      },
+      {
+        "surface": "with the kisses",
+        "lemma": "neshiqah"
+      },
+      {
+        "surface": "of his mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "your love",
+        "lemma": "dod"
+      },
+      {
+        "surface": "is more delightful",
+        "lemma": "tov"
+      },
+      {
+        "surface": "than wine",
+        "lemma": "yayin"
+      }
+    ],
+    "3": [
+      {
+        "surface": "The fragrance",
+        "lemma": "reach"
+      },
+      {
+        "surface": "of your perfume",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "is pleasing",
+        "lemma": "tov"
+      },
+      {
+        "surface": "your name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "is like perfume",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "poured out",
+        "lemma": "ruq"
+      },
+      {
+        "surface": "the maidens",
+        "lemma": "almah"
+      },
+      {
+        "surface": "adore you",
+        "lemma": "haav"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Take me",
+        "lemma": "mashakh"
+      },
+      {
+        "surface": "away with you",
+        "lemma": "achar"
+      },
+      {
+        "surface": "let us hurry",
+        "lemma": "ruts"
+      },
+      {
+        "surface": "May the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "to his chambers",
+        "lemma": "cheder"
+      },
+      {
+        "surface": "We will rejoice",
+        "lemma": "gil"
+      },
+      {
+        "surface": "and delight",
+        "lemma": "samach"
+      },
+      {
+        "surface": "we will praise",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "your love",
+        "lemma": "dod"
+      },
+      {
+        "surface": "more than wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "It is only right",
+        "lemma": "meshar"
+      },
+      {
+        "surface": "that they adore you",
+        "lemma": "haav"
+      }
+    ],
+    "5": [
+      {
+        "surface": "am dark",
+        "lemma": "shachor"
+      },
+      {
+        "surface": "yet lovely",
+        "lemma": "naeh"
+      },
+      {
+        "surface": "O daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "like the tents",
+        "lemma": "hoel"
+      },
+      {
+        "surface": "of Kedar",
+        "lemma": "qedar"
+      },
+      {
+        "surface": "like the curtains",
+        "lemma": "yeriah"
+      },
+      {
+        "surface": "of Solomon",
+        "lemma": "shelomoh"
+      }
+    ],
+    "6": [
+      {
+        "surface": "am dark",
+        "lemma": "shecharchoret"
+      },
+      {
+        "surface": "for the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "has gazed upon me",
+        "lemma": "shazaph"
+      },
+      {
+        "surface": "My mother’s",
+        "lemma": "em"
+      },
+      {
+        "surface": "sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "were angry",
+        "lemma": "charah"
+      },
+      {
+        "surface": "they made me",
+        "lemma": "sum"
+      },
+      {
+        "surface": "a keeper",
+        "lemma": "natar"
+      },
+      {
+        "surface": "of the vineyards",
+        "lemma": "kerem"
+      },
+      {
+        "surface": "but my own vineyard",
+        "lemma": "kerem"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Tell me",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "I",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "love",
+        "lemma": "haav"
+      },
+      {
+        "surface": "where",
+        "lemma": "ekh"
+      },
+      {
+        "surface": "do you pasture your sheep",
+        "lemma": "beteqedharoim"
+      },
+      {
+        "surface": "Where",
+        "lemma": "ekh"
+      },
+      {
+        "surface": "do you rest them",
+        "lemma": "ravats"
+      },
+      {
+        "surface": "at midday",
+        "lemma": "tsohar"
+      },
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "like a veiled woman",
+        "lemma": "atah"
+      },
+      {
+        "surface": "the flocks",
+        "lemma": "eder"
+      },
+      {
+        "surface": "of your companions",
+        "lemma": "chaver"
+      }
+    ],
+    "8": [
+      {
+        "surface": "know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "O fairest",
+        "lemma": "yapheh"
+      },
+      {
+        "surface": "of women",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "the tracks",
+        "lemma": "aqev"
+      },
+      {
+        "surface": "of the flock",
+        "lemma": "tson"
+      },
+      {
+        "surface": "and graze",
+        "lemma": "beteqedharoim"
+      },
+      {
+        "surface": "your young goats",
+        "lemma": "gediyyah"
+      },
+      {
+        "surface": "the tents",
+        "lemma": "mishkan"
+      },
+      {
+        "surface": "of the shepherds",
+        "lemma": "beteqedharoim"
+      }
+    ],
+    "9": [
+      {
+        "surface": "I compare you",
+        "lemma": "damah"
+      },
+      {
+        "surface": "my darling",
+        "lemma": "rayah"
+      },
+      {
+        "surface": "to a mare",
+        "lemma": "susah"
+      },
+      {
+        "surface": "among Pharaoh’s",
+        "lemma": "paroh"
+      },
+      {
+        "surface": "chariots",
+        "lemma": "rekhev"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Your cheeks",
+        "lemma": "lechi"
+      },
+      {
+        "surface": "are beautiful",
+        "lemma": "naah"
+      },
+      {
+        "surface": "with ornaments",
+        "lemma": "tor"
+      },
+      {
+        "surface": "your neck",
+        "lemma": "tsavvar"
+      },
+      {
+        "surface": "with strings of jewels",
+        "lemma": "charuz"
+      }
+    ],
+    "11": [
+      {
+        "surface": "ornaments",
+        "lemma": "tor"
+      },
+      {
+        "surface": "of gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "beads",
+        "lemma": "nequddah"
+      },
+      {
+        "surface": "of silver",
+        "lemma": "keseph"
+      }
+    ],
+    "12": [
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "was at his table",
+        "lemma": "mesav"
+      },
+      {
+        "surface": "my perfume",
+        "lemma": "nered"
+      },
+      {
+        "surface": "its fragrance",
+        "lemma": "reach"
+      }
+    ],
+    "13": [
+      {
+        "surface": "My beloved",
+        "lemma": "dod"
+      },
+      {
+        "surface": "a sachet",
+        "lemma": "tseror"
+      },
+      {
+        "surface": "of myrrh",
+        "lemma": "mor"
+      },
+      {
+        "surface": "resting",
+        "lemma": "lun"
+      },
+      {
+        "surface": "between",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "my breasts",
+        "lemma": "shad"
+      }
+    ],
+    "14": [
+      {
+        "surface": "My beloved",
+        "lemma": "dod"
+      },
+      {
+        "surface": "a cluster",
+        "lemma": "eshkol"
+      },
+      {
+        "surface": "of henna blossoms",
+        "lemma": "kopher"
+      },
+      {
+        "surface": "in the vineyards",
+        "lemma": "kerem"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "engedi"
+      },
+      {
+        "surface": "of En-gedi",
+        "lemma": "engedi"
+      }
+    ],
+    "15": [
+      {
+        "surface": "How",
+        "lemma": "hen"
+      },
+      {
+        "surface": "beautiful you are",
+        "lemma": "yapheh"
+      },
+      {
+        "surface": "my darling",
+        "lemma": "rayah"
+      },
+      {
+        "surface": "Oh, how very",
+        "lemma": "hen"
+      },
+      {
+        "surface": "beautiful",
+        "lemma": "yapheh"
+      },
+      {
+        "surface": "Your eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "are like doves",
+        "lemma": "yonah"
+      }
+    ],
+    "16": [
+      {
+        "surface": "How",
+        "lemma": "hen"
+      },
+      {
+        "surface": "handsome you are",
+        "lemma": "yapheh"
+      },
+      {
+        "surface": "my beloved",
+        "lemma": "dod"
+      },
+      {
+        "surface": "delightful",
+        "lemma": "naim"
+      },
+      {
+        "surface": "The soft grass",
+        "lemma": "raan"
+      },
+      {
+        "surface": "is our bed",
+        "lemma": "eres"
+      }
+    ],
+    "17": [
+      {
+        "surface": "The beams",
+        "lemma": "qorah"
+      },
+      {
+        "surface": "of our house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "are cedars",
+        "lemma": "erez"
+      },
+      {
+        "surface": "our rafters",
+        "lemma": "rechit"
+      },
+      {
+        "surface": "are fragrant firs",
+        "lemma": "berot"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "dod",
+    "yapheh",
+    "kerem"
+  ]
+}

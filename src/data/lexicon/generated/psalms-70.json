@@ -1,0 +1,163 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 70,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "For the choirmaster",
+        "lemma": "natsach"
+      },
+      {
+        "surface": "Of David",
+        "lemma": "david"
+      },
+      {
+        "surface": "To bring remembrance",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "Make haste, O God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "to deliver me",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "Hurry",
+        "lemma": "chush"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "to help me",
+        "lemma": "ezrah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "May those who seek",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "my life",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "be ashamed",
+        "lemma": "bush"
+      },
+      {
+        "surface": "and confounded",
+        "lemma": "chapher"
+      },
+      {
+        "surface": "may those who wish me",
+        "lemma": "chaphets"
+      },
+      {
+        "surface": "harm",
+        "lemma": "ra"
+      },
+      {
+        "surface": "be repelled",
+        "lemma": "sug"
+      },
+      {
+        "surface": "and humiliated",
+        "lemma": "kalam"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Aha",
+        "lemma": "heach"
+      },
+      {
+        "surface": "aha",
+        "lemma": "heach"
+      },
+      {
+        "surface": "their shame",
+        "lemma": "boshet"
+      }
+    ],
+    "4": [
+      {
+        "surface": "who seek You",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "rejoice",
+        "lemma": "sus"
+      },
+      {
+        "surface": "and be glad",
+        "lemma": "samach"
+      },
+      {
+        "surface": "may those who love",
+        "lemma": "haav"
+      },
+      {
+        "surface": "Your salvation",
+        "lemma": "yeshuah"
+      },
+      {
+        "surface": "always",
+        "lemma": "tamid"
+      },
+      {
+        "surface": "Let God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "be magnified",
+        "lemma": "gadal"
+      }
+    ],
+    "5": [
+      {
+        "surface": "poor",
+        "lemma": "ani"
+      },
+      {
+        "surface": "and needy",
+        "lemma": "evyon"
+      },
+      {
+        "surface": "hurry",
+        "lemma": "chush"
+      },
+      {
+        "surface": "O God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "are my help",
+        "lemma": "ezer"
+      },
+      {
+        "surface": "and my deliverer",
+        "lemma": "palat"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "delay",
+        "lemma": "achar"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "heach",
+    "chush",
+    "baqash"
+  ]
+}

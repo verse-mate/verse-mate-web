@@ -1,0 +1,619 @@
+{
+  "bookId": 30,
+  "book": "Amos",
+  "chapter": 3,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has spoken",
+        "lemma": "davar"
+      },
+      {
+        "surface": "O children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "family",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "I brought up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "out of the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      }
+    ],
+    "2": [
+      {
+        "surface": "have I known",
+        "lemma": "yada"
+      },
+      {
+        "surface": "the families",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "adamah"
+      },
+      {
+        "surface": "I will punish",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "your iniquities",
+        "lemma": "avan"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Can two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "together",
+        "lemma": "yachad"
+      },
+      {
+        "surface": "without",
+        "lemma": "bilti"
+      },
+      {
+        "surface": "agreeing where to go",
+        "lemma": "yaad"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Does a lion",
+        "lemma": "ari"
+      },
+      {
+        "surface": "roar",
+        "lemma": "shaag"
+      },
+      {
+        "surface": "in the forest",
+        "lemma": "yaar"
+      },
+      {
+        "surface": "when he has no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "prey",
+        "lemma": "tereph"
+      },
+      {
+        "surface": "Does a young lion",
+        "lemma": "kephir"
+      },
+      {
+        "surface": "in his den",
+        "lemma": "meonah"
+      },
+      {
+        "surface": "he has caught",
+        "lemma": "lakhad"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "bilti"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Does a bird",
+        "lemma": "tsippor"
+      },
+      {
+        "surface": "land",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "a snare",
+        "lemma": "pach"
+      },
+      {
+        "surface": "where no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "bait",
+        "lemma": "moqesh"
+      },
+      {
+        "surface": "Does a trap",
+        "lemma": "pach"
+      },
+      {
+        "surface": "spring",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the ground",
+        "lemma": "adamah"
+      },
+      {
+        "surface": "when it has",
+        "lemma": "lakhad"
+      },
+      {
+        "surface": "to catch",
+        "lemma": "lakhad"
+      }
+    ],
+    "6": [
+      {
+        "surface": "a ram’s horn",
+        "lemma": "shophar"
+      },
+      {
+        "surface": "sounds",
+        "lemma": "taqa"
+      },
+      {
+        "surface": "in a city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "do the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "tremble",
+        "lemma": "charad"
+      },
+      {
+        "surface": "calamity",
+        "lemma": "ra"
+      },
+      {
+        "surface": "to a city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "revealing",
+        "lemma": "galah"
+      },
+      {
+        "surface": "His plan",
+        "lemma": "sod"
+      },
+      {
+        "surface": "His servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "the prophets",
+        "lemma": "navi"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The lion",
+        "lemma": "ari"
+      },
+      {
+        "surface": "has roared",
+        "lemma": "shaag"
+      },
+      {
+        "surface": "who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "fear",
+        "lemma": "yare"
+      },
+      {
+        "surface": "The Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "has spoken",
+        "lemma": "davar"
+      },
+      {
+        "surface": "who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "prophesy",
+        "lemma": "nava"
+      }
+    ],
+    "9": [
+      {
+        "surface": "the citadels",
+        "lemma": "armon"
+      },
+      {
+        "surface": "of Ashdod",
+        "lemma": "ashdod"
+      },
+      {
+        "surface": "the citadels",
+        "lemma": "armon"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "Assemble",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "the mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "of Samaria",
+        "lemma": "shomeron"
+      },
+      {
+        "surface": "the great",
+        "lemma": "rav"
+      },
+      {
+        "surface": "unrest",
+        "lemma": "mehumah"
+      },
+      {
+        "surface": "in the city",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "and the acts of oppression",
+        "lemma": "ashuq"
+      },
+      {
+        "surface": "in her midst",
+        "lemma": "qerev"
+      }
+    ],
+    "10": [
+      {
+        "surface": "For they know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "right",
+        "lemma": "nekhochah"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "They store up",
+        "lemma": "atsar"
+      },
+      {
+        "surface": "violence",
+        "lemma": "chamas"
+      },
+      {
+        "surface": "and destruction",
+        "lemma": "shod"
+      },
+      {
+        "surface": "in their citadels",
+        "lemma": "armon"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Therefore",
+        "lemma": "ken"
+      },
+      {
+        "surface": "this is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "An enemy",
+        "lemma": "tsar"
+      },
+      {
+        "surface": "will surround",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "he will pull down",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "your strongholds",
+        "lemma": "oz"
+      },
+      {
+        "surface": "and plunder",
+        "lemma": "bazaz"
+      },
+      {
+        "surface": "your citadels",
+        "lemma": "armon"
+      }
+    ],
+    "12": [
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the shepherd",
+        "lemma": "beteqedharoim"
+      },
+      {
+        "surface": "snatches",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "from the mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "of the lion",
+        "lemma": "ari"
+      },
+      {
+        "surface": "two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "legs",
+        "lemma": "kara"
+      },
+      {
+        "surface": "a piece",
+        "lemma": "badal"
+      },
+      {
+        "surface": "of an ear",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "so",
+        "lemma": "ken"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "in Samaria",
+        "lemma": "shomeron"
+      },
+      {
+        "surface": "will be rescued",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "having just the corner",
+        "lemma": "peah"
+      },
+      {
+        "surface": "of a bed",
+        "lemma": "mittah"
+      },
+      {
+        "surface": "or the cushion",
+        "lemma": "demesheq"
+      },
+      {
+        "surface": "of a couch",
+        "lemma": "eres"
+      }
+    ],
+    "13": [
+      {
+        "surface": "and testify",
+        "lemma": "ud"
+      },
+      {
+        "surface": "against the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      }
+    ],
+    "14": [
+      {
+        "surface": "On the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "I punish",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "for their transgressions",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "I will visit destruction",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "the altars",
+        "lemma": "mizbeach"
+      },
+      {
+        "surface": "of",
+        "lemma": "betel"
+      },
+      {
+        "surface": "Bethel",
+        "lemma": "betel"
+      },
+      {
+        "surface": "the horns",
+        "lemma": "qeren"
+      },
+      {
+        "surface": "of the altar",
+        "lemma": "mizbeach"
+      },
+      {
+        "surface": "will be cut off",
+        "lemma": "gada"
+      },
+      {
+        "surface": "and they will fall",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "to the ground",
+        "lemma": "erets"
+      }
+    ],
+    "15": [
+      {
+        "surface": "I will tear down",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "the winter",
+        "lemma": "choreph"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "the summer",
+        "lemma": "qayits"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "the houses",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of ivory",
+        "lemma": "shen"
+      },
+      {
+        "surface": "will also perish",
+        "lemma": "avad"
+      },
+      {
+        "surface": "and the great",
+        "lemma": "rav"
+      },
+      {
+        "surface": "houses",
+        "lemma": "bet"
+      },
+      {
+        "surface": "will come to an end",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "bet",
+    "yehovih",
+    "armon"
+  ]
+}

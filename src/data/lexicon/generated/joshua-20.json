@@ -1,0 +1,451 @@
+{
+  "bookId": 6,
+  "book": "Joshua",
+  "chapter": 20,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Joshua",
+        "lemma": "yehoshua"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Tell",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "of refuge",
+        "lemma": "miqlat"
+      },
+      {
+        "surface": "I instructed",
+        "lemma": "davar"
+      },
+      {
+        "surface": "you through",
+        "lemma": "yad"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "3": [
+      {
+        "surface": "so that anyone",
+        "lemma": "ratsach"
+      },
+      {
+        "surface": "who kills",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "another",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "unintentionally",
+        "lemma": "shegagah"
+      },
+      {
+        "surface": "or accidentally",
+        "lemma": "beli"
+      },
+      {
+        "surface": "may flee",
+        "lemma": "nus"
+      },
+      {
+        "surface": "there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "refuge",
+        "lemma": "miqlat"
+      },
+      {
+        "surface": "from the avenger",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "of blood",
+        "lemma": "dam"
+      }
+    ],
+    "4": [
+      {
+        "surface": "When someone flees",
+        "lemma": "nus"
+      },
+      {
+        "surface": "one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "stands",
+        "lemma": "amad"
+      },
+      {
+        "surface": "at the entrance",
+        "lemma": "petach"
+      },
+      {
+        "surface": "of the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "gate",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "and states",
+        "lemma": "davar"
+      },
+      {
+        "surface": "his case",
+        "lemma": "davar"
+      },
+      {
+        "surface": "before its elders",
+        "lemma": "zaqen"
+      },
+      {
+        "surface": "they are to bring",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "into the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "a place",
+        "lemma": "maqom"
+      }
+    ],
+    "5": [
+      {
+        "surface": "the avenger",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "of blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "pursues him",
+        "lemma": "radaph"
+      },
+      {
+        "surface": "surrender",
+        "lemma": "sagar"
+      },
+      {
+        "surface": "the manslayer",
+        "lemma": "ratsach"
+      },
+      {
+        "surface": "into his hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "that man killed",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "his neighbor",
+        "lemma": "rea"
+      },
+      {
+        "surface": "accidentally",
+        "lemma": "beli"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "temol"
+      },
+      {
+        "surface": "prior",
+        "lemma": "shilshom"
+      },
+      {
+        "surface": "malice",
+        "lemma": "sane"
+      }
+    ],
+    "6": [
+      {
+        "surface": "city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "he stands",
+        "lemma": "amad"
+      },
+      {
+        "surface": "trial",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the assembly",
+        "lemma": "edah"
+      },
+      {
+        "surface": "the death",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "of the high",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "time",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the manslayer",
+        "lemma": "ratsach"
+      },
+      {
+        "surface": "to his own home",
+        "lemma": "bet"
+      },
+      {
+        "surface": "the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "he fled",
+        "lemma": "nus"
+      }
+    ],
+    "7": [
+      {
+        "surface": "So they set apart",
+        "lemma": "qadash"
+      },
+      {
+        "surface": "Kedesh",
+        "lemma": "qedesh"
+      },
+      {
+        "surface": "in Galilee",
+        "lemma": "galil"
+      },
+      {
+        "surface": "in the hill country",
+        "lemma": "har"
+      },
+      {
+        "surface": "of Naphtali",
+        "lemma": "naphtali"
+      },
+      {
+        "surface": "Shechem",
+        "lemma": "shekhem"
+      },
+      {
+        "surface": "in the hill country",
+        "lemma": "har"
+      },
+      {
+        "surface": "of Ephraim",
+        "lemma": "ephrayim"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "qiryatarba"
+      },
+      {
+        "surface": "and Kiriath-arba",
+        "lemma": "qiryatarba"
+      },
+      {
+        "surface": "Hebron",
+        "lemma": "chevron"
+      },
+      {
+        "surface": "in the hill country",
+        "lemma": "har"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "And beyond",
+        "lemma": "ever"
+      },
+      {
+        "surface": "the Jordan",
+        "lemma": "yarden"
+      },
+      {
+        "surface": "east",
+        "lemma": "mizrach"
+      },
+      {
+        "surface": "of Jericho",
+        "lemma": "yericho"
+      },
+      {
+        "surface": "Bezer",
+        "lemma": "betser"
+      },
+      {
+        "surface": "on the wilderness",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "plateau",
+        "lemma": "mishor"
+      },
+      {
+        "surface": "from the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Reuben",
+        "lemma": "reuven"
+      },
+      {
+        "surface": "Ramoth",
+        "lemma": "ramot"
+      },
+      {
+        "surface": "in Gilead",
+        "lemma": "gilad"
+      },
+      {
+        "surface": "from the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Gad",
+        "lemma": "gad"
+      },
+      {
+        "surface": "Golan",
+        "lemma": "golan"
+      },
+      {
+        "surface": "in Bashan",
+        "lemma": "bashan"
+      },
+      {
+        "surface": "from the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Manasseh",
+        "lemma": "menashsheh"
+      }
+    ],
+    "9": [
+      {
+        "surface": "the cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "appointed",
+        "lemma": "muadah"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and foreigners",
+        "lemma": "ger"
+      },
+      {
+        "surface": "among them",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "who kills",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "a person",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "unintentionally",
+        "lemma": "shegagah"
+      },
+      {
+        "surface": "may flee",
+        "lemma": "nus"
+      },
+      {
+        "surface": "there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "die",
+        "lemma": "mut"
+      },
+      {
+        "surface": "by the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of the avenger",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "of blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "to standing trial",
+        "lemma": "amad"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the assembly",
+        "lemma": "edah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "nus",
+    "ratsach",
+    "nakhah"
+  ]
+}

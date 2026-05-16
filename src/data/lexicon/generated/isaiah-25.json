@@ -1,0 +1,513 @@
+{
+  "bookId": 23,
+  "book": "Isaiah",
+  "chapter": 25,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "are my God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "I will exalt You",
+        "lemma": "rum"
+      },
+      {
+        "surface": "I will praise",
+        "lemma": "yadah"
+      },
+      {
+        "surface": "Your name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "wonders",
+        "lemma": "pele"
+      },
+      {
+        "surface": "plans",
+        "lemma": "etsah"
+      },
+      {
+        "surface": "formed long ago",
+        "lemma": "rachoq"
+      },
+      {
+        "surface": "in perfect faithfulness",
+        "lemma": "emunah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "You have made",
+        "lemma": "sum"
+      },
+      {
+        "surface": "the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "a heap of rubble",
+        "lemma": "gal"
+      },
+      {
+        "surface": "the fortified",
+        "lemma": "batsar"
+      },
+      {
+        "surface": "town",
+        "lemma": "qiryah"
+      },
+      {
+        "surface": "a ruin",
+        "lemma": "mappalah"
+      },
+      {
+        "surface": "The fortress",
+        "lemma": "armon"
+      },
+      {
+        "surface": "of strangers",
+        "lemma": "zur"
+      },
+      {
+        "surface": "is a city no more",
+        "lemma": "ir"
+      },
+      {
+        "surface": "it will never",
+        "lemma": "olam"
+      },
+      {
+        "surface": "be rebuilt",
+        "lemma": "banah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "a strong",
+        "lemma": "az"
+      },
+      {
+        "surface": "people",
+        "lemma": "am"
+      },
+      {
+        "surface": "will honor You",
+        "lemma": "kavad"
+      },
+      {
+        "surface": "The cities",
+        "lemma": "qiryah"
+      },
+      {
+        "surface": "of ruthless",
+        "lemma": "arits"
+      },
+      {
+        "surface": "nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "will revere You",
+        "lemma": "yare"
+      }
+    ],
+    "4": [
+      {
+        "surface": "a refuge",
+        "lemma": "maoz"
+      },
+      {
+        "surface": "for the poor",
+        "lemma": "dal"
+      },
+      {
+        "surface": "a stronghold",
+        "lemma": "maoz"
+      },
+      {
+        "surface": "for the needy",
+        "lemma": "evyon"
+      },
+      {
+        "surface": "in distress",
+        "lemma": "tsar"
+      },
+      {
+        "surface": "a refuge",
+        "lemma": "machaseh"
+      },
+      {
+        "surface": "from the storm",
+        "lemma": "zerem"
+      },
+      {
+        "surface": "a shade",
+        "lemma": "tsel"
+      },
+      {
+        "surface": "from the heat",
+        "lemma": "chorev"
+      },
+      {
+        "surface": "the breath",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "of the ruthless",
+        "lemma": "arits"
+      },
+      {
+        "surface": "is like rain",
+        "lemma": "zerem"
+      },
+      {
+        "surface": "against a wall",
+        "lemma": "qir"
+      }
+    ],
+    "5": [
+      {
+        "surface": "like heat",
+        "lemma": "chorev"
+      },
+      {
+        "surface": "in a dry land",
+        "lemma": "tsivon"
+      },
+      {
+        "surface": "You subdue",
+        "lemma": "kana"
+      },
+      {
+        "surface": "the uproar",
+        "lemma": "shaon"
+      },
+      {
+        "surface": "of foreigners",
+        "lemma": "zur"
+      },
+      {
+        "surface": "As the shade",
+        "lemma": "tsel"
+      },
+      {
+        "surface": "cools the heat",
+        "lemma": "chorev"
+      },
+      {
+        "surface": "so the song",
+        "lemma": "zamir"
+      },
+      {
+        "surface": "of the ruthless",
+        "lemma": "arits"
+      },
+      {
+        "surface": "is silenced",
+        "lemma": "anah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "mountain",
+        "lemma": "har"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "a lavish",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "banquet",
+        "lemma": "mishteh"
+      },
+      {
+        "surface": "the peoples",
+        "lemma": "am"
+      },
+      {
+        "surface": "a feast",
+        "lemma": "mishteh"
+      },
+      {
+        "surface": "of aged wine",
+        "lemma": "shemer"
+      },
+      {
+        "surface": "of choice meat",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "of finely",
+        "lemma": "zaqaq"
+      },
+      {
+        "surface": "aged wine",
+        "lemma": "shemer"
+      }
+    ],
+    "7": [
+      {
+        "surface": "mountain",
+        "lemma": "har"
+      },
+      {
+        "surface": "He will swallow up",
+        "lemma": "bala"
+      },
+      {
+        "surface": "the shroud",
+        "lemma": "lut"
+      },
+      {
+        "surface": "that enfolds",
+        "lemma": "lot"
+      },
+      {
+        "surface": "peoples",
+        "lemma": "am"
+      },
+      {
+        "surface": "the sheet",
+        "lemma": "massekhah"
+      },
+      {
+        "surface": "that covers",
+        "lemma": "nasakh"
+      },
+      {
+        "surface": "nations",
+        "lemma": "goy"
+      }
+    ],
+    "8": [
+      {
+        "surface": "He will swallow up",
+        "lemma": "bala"
+      },
+      {
+        "surface": "death",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "forever",
+        "lemma": "netsach"
+      },
+      {
+        "surface": "The Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "will wipe away",
+        "lemma": "machah"
+      },
+      {
+        "surface": "the tears",
+        "lemma": "dimah"
+      },
+      {
+        "surface": "face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "and remove",
+        "lemma": "sur"
+      },
+      {
+        "surface": "the disgrace",
+        "lemma": "cherpah"
+      },
+      {
+        "surface": "of His people",
+        "lemma": "am"
+      },
+      {
+        "surface": "earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has spoken",
+        "lemma": "davar"
+      }
+    ],
+    "9": [
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "Surely",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "is our God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "we have waited",
+        "lemma": "qavah"
+      },
+      {
+        "surface": "and He has saved us",
+        "lemma": "yasah"
+      },
+      {
+        "surface": "is the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "for whom we have waited",
+        "lemma": "qavah"
+      },
+      {
+        "surface": "Let us rejoice",
+        "lemma": "gil"
+      },
+      {
+        "surface": "and be glad",
+        "lemma": "samach"
+      },
+      {
+        "surface": "in His salvation",
+        "lemma": "yeshuah"
+      }
+    ],
+    "10": [
+      {
+        "surface": "the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will rest",
+        "lemma": "nuach"
+      },
+      {
+        "surface": "mountain",
+        "lemma": "har"
+      },
+      {
+        "surface": "But Moab",
+        "lemma": "moav"
+      },
+      {
+        "surface": "will be trampled",
+        "lemma": "dush"
+      },
+      {
+        "surface": "in his place",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "as straw",
+        "lemma": "matben"
+      },
+      {
+        "surface": "is trodden",
+        "lemma": "dush"
+      },
+      {
+        "surface": "into the dung pile",
+        "lemma": "madmenah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "He will spread out",
+        "lemma": "paras"
+      },
+      {
+        "surface": "his hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "within it",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "a swimmer",
+        "lemma": "sachah"
+      },
+      {
+        "surface": "spreads his arms",
+        "lemma": "paras"
+      },
+      {
+        "surface": "to swim",
+        "lemma": "sachah"
+      },
+      {
+        "surface": "His pride",
+        "lemma": "gaavah"
+      },
+      {
+        "surface": "will be brought low",
+        "lemma": "shaphel"
+      },
+      {
+        "surface": "the skill",
+        "lemma": "orovah"
+      },
+      {
+        "surface": "of his hands",
+        "lemma": "yad"
+      }
+    ],
+    "12": [
+      {
+        "surface": "The high-walled",
+        "lemma": "misgav"
+      },
+      {
+        "surface": "fortress",
+        "lemma": "mivtsar"
+      },
+      {
+        "surface": "will be brought down",
+        "lemma": "shachach"
+      },
+      {
+        "surface": "cast",
+        "lemma": "naga"
+      },
+      {
+        "surface": "to the ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "the dust",
+        "lemma": "aphar"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "har",
+    "chorev",
+    "arits"
+  ]
+}

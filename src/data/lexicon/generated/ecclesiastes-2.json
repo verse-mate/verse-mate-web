@@ -1,0 +1,997 @@
+{
+  "bookId": 21,
+  "book": "Ecclesiastes",
+  "chapter": 2,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "to myself",
+        "lemma": "lev"
+      },
+      {
+        "surface": "Come",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "now",
+        "lemma": "na"
+      },
+      {
+        "surface": "I will test",
+        "lemma": "nasah"
+      },
+      {
+        "surface": "you with pleasure",
+        "lemma": "simchah"
+      },
+      {
+        "surface": "what is good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "proved",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "to be futile",
+        "lemma": "hevel"
+      }
+    ],
+    "2": [
+      {
+        "surface": "of laughter",
+        "lemma": "sechoq"
+      },
+      {
+        "surface": "It is folly",
+        "lemma": "halal"
+      },
+      {
+        "surface": "and of pleasure",
+        "lemma": "simchah"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "I sought",
+        "lemma": "tur"
+      },
+      {
+        "surface": "to cheer my body",
+        "lemma": "basar"
+      },
+      {
+        "surface": "with wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "and to embrace",
+        "lemma": "achaz"
+      },
+      {
+        "surface": "folly",
+        "lemma": "sikhlut"
+      },
+      {
+        "surface": "my mind",
+        "lemma": "lev"
+      },
+      {
+        "surface": "still guiding me",
+        "lemma": "nahag"
+      },
+      {
+        "surface": "with wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "what",
+        "lemma": "ay"
+      },
+      {
+        "surface": "worthwhile",
+        "lemma": "tov"
+      },
+      {
+        "surface": "for men",
+        "lemma": "ben"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "during the few",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of their lives",
+        "lemma": "chay"
+      }
+    ],
+    "4": [
+      {
+        "surface": "I expanded",
+        "lemma": "gadal"
+      },
+      {
+        "surface": "my pursuits",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "I built",
+        "lemma": "banah"
+      },
+      {
+        "surface": "houses",
+        "lemma": "bet"
+      },
+      {
+        "surface": "and planted",
+        "lemma": "nata"
+      },
+      {
+        "surface": "vineyards",
+        "lemma": "kerem"
+      }
+    ],
+    "5": [
+      {
+        "surface": "gardens",
+        "lemma": "gannah"
+      },
+      {
+        "surface": "and parks",
+        "lemma": "pardes"
+      },
+      {
+        "surface": "I planted",
+        "lemma": "nata"
+      },
+      {
+        "surface": "of fruit",
+        "lemma": "peri"
+      },
+      {
+        "surface": "trees",
+        "lemma": "ets"
+      }
+    ],
+    "6": [
+      {
+        "surface": "reservoirs",
+        "lemma": "berekhah"
+      },
+      {
+        "surface": "to water",
+        "lemma": "shaqah"
+      },
+      {
+        "surface": "my groves",
+        "lemma": "yaar"
+      },
+      {
+        "surface": "of flourishing",
+        "lemma": "tsamach"
+      },
+      {
+        "surface": "trees",
+        "lemma": "ets"
+      }
+    ],
+    "7": [
+      {
+        "surface": "I acquired",
+        "lemma": "qanah"
+      },
+      {
+        "surface": "menservants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "and maidservants",
+        "lemma": "shiphchah"
+      },
+      {
+        "surface": "and servants were born",
+        "lemma": "ben"
+      },
+      {
+        "surface": "in my house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "more",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "herds",
+        "lemma": "baqar"
+      },
+      {
+        "surface": "and flocks",
+        "lemma": "tson"
+      },
+      {
+        "surface": "in Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "before me",
+        "lemma": "paneh"
+      }
+    ],
+    "8": [
+      {
+        "surface": "accumulated",
+        "lemma": "kanas"
+      },
+      {
+        "surface": "silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "and gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "and the treasure",
+        "lemma": "segullah"
+      },
+      {
+        "surface": "of kings",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "and provinces",
+        "lemma": "medinah"
+      },
+      {
+        "surface": "male and",
+        "lemma": "shir"
+      },
+      {
+        "surface": "female singers",
+        "lemma": "shir"
+      },
+      {
+        "surface": "and the delights",
+        "lemma": "taanug"
+      },
+      {
+        "surface": "of the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of men",
+        "lemma": "adam"
+      },
+      {
+        "surface": "many",
+        "lemma": "shiddah"
+      },
+      {
+        "surface": "concubines",
+        "lemma": "shiddah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "So I became great",
+        "lemma": "gadal"
+      },
+      {
+        "surface": "and surpassed",
+        "lemma": "yasaph"
+      },
+      {
+        "surface": "in Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "my wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "remained",
+        "lemma": "amad"
+      }
+    ],
+    "10": [
+      {
+        "surface": "my eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "desired",
+        "lemma": "shaal"
+      },
+      {
+        "surface": "deny myself",
+        "lemma": "atsal"
+      },
+      {
+        "surface": "I refused",
+        "lemma": "mana"
+      },
+      {
+        "surface": "my heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "pleasure",
+        "lemma": "simchah"
+      },
+      {
+        "surface": "my heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "took delight",
+        "lemma": "sameach"
+      },
+      {
+        "surface": "my work",
+        "lemma": "amal"
+      },
+      {
+        "surface": "the reward",
+        "lemma": "cheleq"
+      },
+      {
+        "surface": "my labor",
+        "lemma": "amal"
+      }
+    ],
+    "11": [
+      {
+        "surface": "considered",
+        "lemma": "panah"
+      },
+      {
+        "surface": "the works",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "that my hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "and what",
+        "lemma": "amal"
+      },
+      {
+        "surface": "I had toiled",
+        "lemma": "amal"
+      },
+      {
+        "surface": "I found",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "to be futile",
+        "lemma": "hevel"
+      },
+      {
+        "surface": "a pursuit",
+        "lemma": "reut"
+      },
+      {
+        "surface": "of the wind",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "there was nothing",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "to be gained",
+        "lemma": "yitron"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      }
+    ],
+    "12": [
+      {
+        "surface": "turned",
+        "lemma": "panah"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "and madness",
+        "lemma": "holelah"
+      },
+      {
+        "surface": "and folly",
+        "lemma": "sikhlut"
+      },
+      {
+        "surface": "what more",
+        "lemma": "mah"
+      },
+      {
+        "surface": "can the king’s",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "adam"
+      },
+      {
+        "surface": "than what has already",
+        "lemma": "kevar"
+      }
+    ],
+    "13": [
+      {
+        "surface": "that",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "exceeds",
+        "lemma": "yitron"
+      },
+      {
+        "surface": "folly",
+        "lemma": "sikhlut"
+      },
+      {
+        "surface": "just as light",
+        "lemma": "or"
+      },
+      {
+        "surface": "exceeds",
+        "lemma": "yitron"
+      },
+      {
+        "surface": "darkness",
+        "lemma": "choshekh"
+      }
+    ],
+    "14": [
+      {
+        "surface": "The wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "man has eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "in his head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "but the fool",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "walks",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "in darkness",
+        "lemma": "choshekh"
+      },
+      {
+        "surface": "came to realize",
+        "lemma": "yada"
+      },
+      {
+        "surface": "that one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "fate",
+        "lemma": "miqreh"
+      },
+      {
+        "surface": "overcomes",
+        "lemma": "qarah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "to myself",
+        "lemma": "lev"
+      },
+      {
+        "surface": "The fate",
+        "lemma": "miqreh"
+      },
+      {
+        "surface": "of the fool",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "befall",
+        "lemma": "qarah"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "gained",
+        "lemma": "yoter"
+      },
+      {
+        "surface": "by being wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "And I said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "to myself",
+        "lemma": "lev"
+      },
+      {
+        "surface": "is futile",
+        "lemma": "hevel"
+      }
+    ],
+    "16": [
+      {
+        "surface": "there is no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "lasting",
+        "lemma": "olam"
+      },
+      {
+        "surface": "remembrance",
+        "lemma": "zikhron"
+      },
+      {
+        "surface": "of the wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "the fool",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "seeing that",
+        "lemma": "kevar"
+      },
+      {
+        "surface": "will be forgotten",
+        "lemma": "shakhach"
+      },
+      {
+        "surface": "in the days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "Alas",
+        "lemma": "ekh"
+      },
+      {
+        "surface": "the wise man",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "will die",
+        "lemma": "mut"
+      },
+      {
+        "surface": "the fool",
+        "lemma": "kesil"
+      }
+    ],
+    "17": [
+      {
+        "surface": "So I hated",
+        "lemma": "sane"
+      },
+      {
+        "surface": "life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "the work",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "was grievous",
+        "lemma": "ra"
+      },
+      {
+        "surface": "is futile",
+        "lemma": "hevel"
+      },
+      {
+        "surface": "and a pursuit",
+        "lemma": "reut"
+      },
+      {
+        "surface": "of the wind",
+        "lemma": "ruach"
+      }
+    ],
+    "18": [
+      {
+        "surface": "hated",
+        "lemma": "sane"
+      },
+      {
+        "surface": "I had toiled",
+        "lemma": "amal"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "because I must leave it",
+        "lemma": "nuach"
+      },
+      {
+        "surface": "to the man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "after me",
+        "lemma": "achar"
+      }
+    ],
+    "19": [
+      {
+        "surface": "And who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "knows",
+        "lemma": "yada"
+      },
+      {
+        "surface": "wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "foolish",
+        "lemma": "sakhal"
+      },
+      {
+        "surface": "Yet he will take",
+        "lemma": "shalat"
+      },
+      {
+        "surface": "the labor",
+        "lemma": "amal"
+      },
+      {
+        "surface": "at which I have worked",
+        "lemma": "amal"
+      },
+      {
+        "surface": "skillfully",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "is futile",
+        "lemma": "hevel"
+      }
+    ],
+    "20": [
+      {
+        "surface": "my heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "began",
+        "lemma": "savav"
+      },
+      {
+        "surface": "to despair",
+        "lemma": "yaash"
+      },
+      {
+        "surface": "the labor",
+        "lemma": "amal"
+      },
+      {
+        "surface": "that I had done",
+        "lemma": "amal"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      }
+    ],
+    "21": [
+      {
+        "surface": "there is",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "a man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "who has labored",
+        "lemma": "amal"
+      },
+      {
+        "surface": "with wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "and skill",
+        "lemma": "kishron"
+      },
+      {
+        "surface": "his portion",
+        "lemma": "cheleq"
+      },
+      {
+        "surface": "to a man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "worked",
+        "lemma": "amal"
+      },
+      {
+        "surface": "is futile",
+        "lemma": "hevel"
+      },
+      {
+        "surface": "and a great",
+        "lemma": "rav"
+      },
+      {
+        "surface": "evil",
+        "lemma": "ra"
+      }
+    ],
+    "22": [
+      {
+        "surface": "what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "does a man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "get",
+        "lemma": "hava"
+      },
+      {
+        "surface": "the toil",
+        "lemma": "amal"
+      },
+      {
+        "surface": "and striving",
+        "lemma": "rayon"
+      },
+      {
+        "surface": "he labors",
+        "lemma": "amel"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      }
+    ],
+    "23": [
+      {
+        "surface": "his days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "are filled with grief",
+        "lemma": "makhov"
+      },
+      {
+        "surface": "and his task",
+        "lemma": "inyan"
+      },
+      {
+        "surface": "is sorrowful",
+        "lemma": "kaas"
+      },
+      {
+        "surface": "at night",
+        "lemma": "laylah"
+      },
+      {
+        "surface": "his mind",
+        "lemma": "lev"
+      },
+      {
+        "surface": "rest",
+        "lemma": "shakhav"
+      },
+      {
+        "surface": "is futile",
+        "lemma": "hevel"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Nothing",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "is better",
+        "lemma": "tov"
+      },
+      {
+        "surface": "for a man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "than to eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "and drink",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "his work",
+        "lemma": "amal"
+      },
+      {
+        "surface": "from the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of God",
+        "lemma": "elohim"
+      }
+    ],
+    "25": [
+      {
+        "surface": "apart from",
+        "lemma": "chuts"
+      },
+      {
+        "surface": "who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "can eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "and who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "can find enjoyment",
+        "lemma": "chush"
+      }
+    ],
+    "26": [
+      {
+        "surface": "the man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "who is pleasing",
+        "lemma": "tov"
+      },
+      {
+        "surface": "in His sight",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "and knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "and joy",
+        "lemma": "simchah"
+      },
+      {
+        "surface": "but to the sinner",
+        "lemma": "chata"
+      },
+      {
+        "surface": "the task",
+        "lemma": "inyan"
+      },
+      {
+        "surface": "of gathering",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "and accumulating that which",
+        "lemma": "kanas"
+      },
+      {
+        "surface": "to one who pleases",
+        "lemma": "tov"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "is futile",
+        "lemma": "hevel"
+      },
+      {
+        "surface": "and a pursuit",
+        "lemma": "reut"
+      },
+      {
+        "surface": "of the wind",
+        "lemma": "ruach"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "amal",
+    "hevel",
+    "tachat"
+  ]
+}

@@ -1,0 +1,605 @@
+{
+  "bookId": 23,
+  "book": "Isaiah",
+  "chapter": 16,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Send",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "the tribute lambs",
+        "lemma": "kar"
+      },
+      {
+        "surface": "to the ruler",
+        "lemma": "mashal"
+      },
+      {
+        "surface": "of the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "from Sela",
+        "lemma": "sela"
+      },
+      {
+        "surface": "in the desert",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "the mount",
+        "lemma": "har"
+      },
+      {
+        "surface": "of Daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "Zion",
+        "lemma": "tsiyyon"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Like fluttering birds",
+        "lemma": "oph"
+      },
+      {
+        "surface": "pushed",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "out of the nest",
+        "lemma": "qen"
+      },
+      {
+        "surface": "the daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of Moab",
+        "lemma": "moav"
+      },
+      {
+        "surface": "at the fords",
+        "lemma": "maavar"
+      },
+      {
+        "surface": "of the Arnon",
+        "lemma": "arnon"
+      }
+    ],
+    "3": [
+      {
+        "surface": "counsel",
+        "lemma": "etsah"
+      },
+      {
+        "surface": "a decision",
+        "lemma": "pelilah"
+      },
+      {
+        "surface": "Shelter us at noonday",
+        "lemma": "tsohar"
+      },
+      {
+        "surface": "with shade",
+        "lemma": "tsel"
+      },
+      {
+        "surface": "as dark as night",
+        "lemma": "laylah"
+      },
+      {
+        "surface": "Hide",
+        "lemma": "satar"
+      },
+      {
+        "surface": "the refugees",
+        "lemma": "nadach"
+      },
+      {
+        "surface": "betray",
+        "lemma": "galah"
+      },
+      {
+        "surface": "the one who flees",
+        "lemma": "nadad"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Let my fugitives",
+        "lemma": "nadach"
+      },
+      {
+        "surface": "stay",
+        "lemma": "gur"
+      },
+      {
+        "surface": "be",
+        "lemma": "hava"
+      },
+      {
+        "surface": "a refuge",
+        "lemma": "seter"
+      },
+      {
+        "surface": "for Moab",
+        "lemma": "moav"
+      },
+      {
+        "surface": "from",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the destroyer",
+        "lemma": "shadad"
+      },
+      {
+        "surface": "the oppressor",
+        "lemma": "muts"
+      },
+      {
+        "surface": "has gone",
+        "lemma": "aphes"
+      },
+      {
+        "surface": "destruction",
+        "lemma": "shod"
+      },
+      {
+        "surface": "has ceased",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "and the oppressors",
+        "lemma": "ramas"
+      },
+      {
+        "surface": "have vanished",
+        "lemma": "tamam"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      }
+    ],
+    "5": [
+      {
+        "surface": "in loving devotion",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "a throne",
+        "lemma": "kisse"
+      },
+      {
+        "surface": "will be established",
+        "lemma": "kun"
+      },
+      {
+        "surface": "in the tent",
+        "lemma": "hoel"
+      },
+      {
+        "surface": "of David",
+        "lemma": "david"
+      },
+      {
+        "surface": "A judge",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "seeking",
+        "lemma": "darash"
+      },
+      {
+        "surface": "justice",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "and hastening",
+        "lemma": "mahir"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "in faithfulness",
+        "lemma": "emet"
+      }
+    ],
+    "6": [
+      {
+        "surface": "of Moab’s",
+        "lemma": "moav"
+      },
+      {
+        "surface": "pomposity",
+        "lemma": "gaon"
+      },
+      {
+        "surface": "his exceeding",
+        "lemma": "meod"
+      },
+      {
+        "surface": "pride",
+        "lemma": "ge"
+      },
+      {
+        "surface": "and conceit",
+        "lemma": "gaavah"
+      },
+      {
+        "surface": "his overflowing",
+        "lemma": "evrah"
+      },
+      {
+        "surface": "arrogance",
+        "lemma": "gaon"
+      },
+      {
+        "surface": "But his boasting",
+        "lemma": "bad"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Therefore",
+        "lemma": "ken"
+      },
+      {
+        "surface": "let Moab",
+        "lemma": "moav"
+      },
+      {
+        "surface": "wail",
+        "lemma": "yalal"
+      },
+      {
+        "surface": "let them wail",
+        "lemma": "yalal"
+      },
+      {
+        "surface": "for Moab",
+        "lemma": "moav"
+      },
+      {
+        "surface": "Moan",
+        "lemma": "hagah"
+      },
+      {
+        "surface": "for the raisin cakes",
+        "lemma": "ashishah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "qircheres"
+      },
+      {
+        "surface": "of Kir-hareseth",
+        "lemma": "qircheres"
+      },
+      {
+        "surface": "you who are utterly",
+        "lemma": "akh"
+      },
+      {
+        "surface": "stricken",
+        "lemma": "naka"
+      }
+    ],
+    "8": [
+      {
+        "surface": "the fields",
+        "lemma": "shedemah"
+      },
+      {
+        "surface": "of Heshbon",
+        "lemma": "cheshbon"
+      },
+      {
+        "surface": "have withered",
+        "lemma": "amal"
+      },
+      {
+        "surface": "along with the grapevines",
+        "lemma": "gephen"
+      },
+      {
+        "surface": "of Sibmah",
+        "lemma": "sevam"
+      },
+      {
+        "surface": "The rulers",
+        "lemma": "baal"
+      },
+      {
+        "surface": "of the nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "have trampled",
+        "lemma": "halam"
+      },
+      {
+        "surface": "its choicest vines",
+        "lemma": "saruq"
+      },
+      {
+        "surface": "which had reached",
+        "lemma": "naga"
+      },
+      {
+        "surface": "far as Jazer",
+        "lemma": "yaazer"
+      },
+      {
+        "surface": "and spread",
+        "lemma": "taah"
+      },
+      {
+        "surface": "toward the desert",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "Their shoots",
+        "lemma": "shilluchah"
+      },
+      {
+        "surface": "had spread out",
+        "lemma": "natash"
+      },
+      {
+        "surface": "and passed over",
+        "lemma": "avar"
+      },
+      {
+        "surface": "the sea",
+        "lemma": "yam"
+      }
+    ],
+    "9": [
+      {
+        "surface": "I weep",
+        "lemma": "bakhah"
+      },
+      {
+        "surface": "with Jazer",
+        "lemma": "yaazer"
+      },
+      {
+        "surface": "for the vines",
+        "lemma": "gephen"
+      },
+      {
+        "surface": "of Sibmah",
+        "lemma": "sevam"
+      },
+      {
+        "surface": "I drench",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "Heshbon",
+        "lemma": "cheshbon"
+      },
+      {
+        "surface": "and Elealeh",
+        "lemma": "elale"
+      },
+      {
+        "surface": "with my tears",
+        "lemma": "dimah"
+      },
+      {
+        "surface": "Triumphant shouts",
+        "lemma": "hedad"
+      },
+      {
+        "surface": "have fallen silent",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "your summer fruit",
+        "lemma": "qayits"
+      },
+      {
+        "surface": "and your harvest",
+        "lemma": "qatsir"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Joy",
+        "lemma": "simchah"
+      },
+      {
+        "surface": "and gladness",
+        "lemma": "gil"
+      },
+      {
+        "surface": "are removed",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "the orchard",
+        "lemma": "karmel"
+      },
+      {
+        "surface": "sings",
+        "lemma": "run"
+      },
+      {
+        "surface": "or shouts",
+        "lemma": "rua"
+      },
+      {
+        "surface": "in the vineyards",
+        "lemma": "kerem"
+      },
+      {
+        "surface": "one tramples",
+        "lemma": "darakh"
+      },
+      {
+        "surface": "the grapes",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "in the winepresses",
+        "lemma": "yeqev"
+      },
+      {
+        "surface": "I have put an end",
+        "lemma": "shavat"
+      },
+      {
+        "surface": "to the cheering",
+        "lemma": "hedad"
+      }
+    ],
+    "11": [
+      {
+        "surface": "my heart",
+        "lemma": "meeh"
+      },
+      {
+        "surface": "laments",
+        "lemma": "hamah"
+      },
+      {
+        "surface": "for Moab",
+        "lemma": "moav"
+      },
+      {
+        "surface": "like a harp",
+        "lemma": "kinnor"
+      },
+      {
+        "surface": "my inmost being",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "qircheres"
+      },
+      {
+        "surface": "for Kir-heres",
+        "lemma": "qircheres"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Moab",
+        "lemma": "moav"
+      },
+      {
+        "surface": "the high place",
+        "lemma": "bamah"
+      },
+      {
+        "surface": "he wearies himself",
+        "lemma": "laah"
+      },
+      {
+        "surface": "his sanctuary",
+        "lemma": "miqdash"
+      },
+      {
+        "surface": "to pray",
+        "lemma": "palal"
+      },
+      {
+        "surface": "good",
+        "lemma": "yakhol"
+      }
+    ],
+    "13": [
+      {
+        "surface": "is the message",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moab",
+        "lemma": "moav"
+      }
+    ],
+    "14": [
+      {
+        "surface": "And now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "davar"
+      },
+      {
+        "surface": "In three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "years",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "as a hired worker",
+        "lemma": "sakhir"
+      },
+      {
+        "surface": "counts the years",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "Moab’s",
+        "lemma": "moav"
+      },
+      {
+        "surface": "splendor",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "will become an object of contempt",
+        "lemma": "qalah"
+      },
+      {
+        "surface": "her many",
+        "lemma": "rav"
+      },
+      {
+        "surface": "people",
+        "lemma": "hamon"
+      },
+      {
+        "surface": "And those who are left",
+        "lemma": "shear"
+      },
+      {
+        "surface": "will be few",
+        "lemma": "meat"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "moav",
+    "qircheres",
+    "yalal"
+  ]
+}

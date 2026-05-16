@@ -1,0 +1,701 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 102,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "A prayer",
+        "lemma": "tephillah"
+      },
+      {
+        "surface": "of one who is afflicted",
+        "lemma": "ani"
+      },
+      {
+        "surface": "he grows faint",
+        "lemma": "ataph"
+      },
+      {
+        "surface": "and pours out",
+        "lemma": "shaphakh"
+      },
+      {
+        "surface": "his lament",
+        "lemma": "siach"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "my prayer",
+        "lemma": "tephillah"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "let my cry for help",
+        "lemma": "shavah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "hide",
+        "lemma": "satar"
+      },
+      {
+        "surface": "Your face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "in my day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of distress",
+        "lemma": "tsarar"
+      },
+      {
+        "surface": "Incline",
+        "lemma": "natah"
+      },
+      {
+        "surface": "Your ear",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "answer me",
+        "lemma": "un"
+      },
+      {
+        "surface": "quickly",
+        "lemma": "maher"
+      },
+      {
+        "surface": "when",
+        "lemma": "yom"
+      }
+    ],
+    "3": [
+      {
+        "surface": "my days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "vanish",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "like smoke",
+        "lemma": "ashan"
+      },
+      {
+        "surface": "and my bones",
+        "lemma": "etsem"
+      },
+      {
+        "surface": "burn",
+        "lemma": "charar"
+      }
+    ],
+    "4": [
+      {
+        "surface": "My heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "is afflicted",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "and withered",
+        "lemma": "yavesh"
+      },
+      {
+        "surface": "like grass",
+        "lemma": "esev"
+      },
+      {
+        "surface": "forget",
+        "lemma": "shakhach"
+      },
+      {
+        "surface": "to eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "my bread",
+        "lemma": "lechem"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Through my loud",
+        "lemma": "qol"
+      },
+      {
+        "surface": "groaning",
+        "lemma": "anachah"
+      },
+      {
+        "surface": "my skin",
+        "lemma": "basar"
+      },
+      {
+        "surface": "hangs on",
+        "lemma": "davaq"
+      },
+      {
+        "surface": "my bones",
+        "lemma": "etsem"
+      }
+    ],
+    "6": [
+      {
+        "surface": "like",
+        "lemma": "damah"
+      },
+      {
+        "surface": "a desert",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "owl",
+        "lemma": "qaat"
+      },
+      {
+        "surface": "like an owl",
+        "lemma": "kos"
+      },
+      {
+        "surface": "among the ruins",
+        "lemma": "chorbah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "I lie awake",
+        "lemma": "shaqad"
+      },
+      {
+        "surface": "like a lone",
+        "lemma": "badad"
+      },
+      {
+        "surface": "bird",
+        "lemma": "tsippor"
+      },
+      {
+        "surface": "a housetop",
+        "lemma": "gag"
+      }
+    ],
+    "8": [
+      {
+        "surface": "day long",
+        "lemma": "yom"
+      },
+      {
+        "surface": "my enemies",
+        "lemma": "oyev"
+      },
+      {
+        "surface": "taunt me",
+        "lemma": "charaph"
+      },
+      {
+        "surface": "they ridicule",
+        "lemma": "halal"
+      },
+      {
+        "surface": "and curse me",
+        "lemma": "shava"
+      }
+    ],
+    "9": [
+      {
+        "surface": "I have eaten",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "ashes",
+        "lemma": "epher"
+      },
+      {
+        "surface": "like bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "and mixed",
+        "lemma": "masakh"
+      },
+      {
+        "surface": "my drink",
+        "lemma": "shiqquv"
+      },
+      {
+        "surface": "with tears",
+        "lemma": "bekhi"
+      }
+    ],
+    "10": [
+      {
+        "surface": "because of",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "Your indignation",
+        "lemma": "zaam"
+      },
+      {
+        "surface": "and wrath",
+        "lemma": "qetseph"
+      },
+      {
+        "surface": "You have picked me up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "and cast me aside",
+        "lemma": "shalakh"
+      }
+    ],
+    "11": [
+      {
+        "surface": "My days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "are like lengthening",
+        "lemma": "natah"
+      },
+      {
+        "surface": "shadows",
+        "lemma": "tsel"
+      },
+      {
+        "surface": "wither away",
+        "lemma": "yavesh"
+      },
+      {
+        "surface": "like grass",
+        "lemma": "esev"
+      }
+    ],
+    "12": [
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "forever",
+        "lemma": "olam"
+      },
+      {
+        "surface": "Your renown endures",
+        "lemma": "zekher"
+      },
+      {
+        "surface": "to all generations",
+        "lemma": "dor"
+      }
+    ],
+    "13": [
+      {
+        "surface": "will rise up",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "and have compassion",
+        "lemma": "racham"
+      },
+      {
+        "surface": "on Zion",
+        "lemma": "tsiyyon"
+      },
+      {
+        "surface": "to show her favor",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "the appointed time",
+        "lemma": "moed"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Your servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "delight",
+        "lemma": "ratsah"
+      },
+      {
+        "surface": "stones",
+        "lemma": "even"
+      },
+      {
+        "surface": "take pity",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "on her dust",
+        "lemma": "aphar"
+      }
+    ],
+    "15": [
+      {
+        "surface": "So the nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "will fear",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the kings",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "will fear Your glory",
+        "lemma": "kavod"
+      }
+    ],
+    "16": [
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will rebuild",
+        "lemma": "banah"
+      },
+      {
+        "surface": "Zion",
+        "lemma": "tsiyyon"
+      },
+      {
+        "surface": "in His glory",
+        "lemma": "kavod"
+      }
+    ],
+    "17": [
+      {
+        "surface": "He will turn",
+        "lemma": "panah"
+      },
+      {
+        "surface": "the prayer",
+        "lemma": "tephillah"
+      },
+      {
+        "surface": "of the destitute",
+        "lemma": "arar"
+      },
+      {
+        "surface": "despise",
+        "lemma": "bazah"
+      },
+      {
+        "surface": "their prayer",
+        "lemma": "tephillah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "be written",
+        "lemma": "katav"
+      },
+      {
+        "surface": "for the generation",
+        "lemma": "dor"
+      },
+      {
+        "surface": "to come",
+        "lemma": "acharon"
+      },
+      {
+        "surface": "so that a people",
+        "lemma": "am"
+      },
+      {
+        "surface": "not yet created",
+        "lemma": "bara"
+      },
+      {
+        "surface": "may praise",
+        "lemma": "halal"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yah"
+      }
+    ],
+    "19": [
+      {
+        "surface": "He looked down",
+        "lemma": "shaqaph"
+      },
+      {
+        "surface": "from the heights",
+        "lemma": "marom"
+      },
+      {
+        "surface": "of His sanctuary",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "gazed out",
+        "lemma": "navat"
+      },
+      {
+        "surface": "from heaven",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "earth",
+        "lemma": "erets"
+      }
+    ],
+    "20": [
+      {
+        "surface": "a prisoner’s",
+        "lemma": "asir"
+      },
+      {
+        "surface": "groaning",
+        "lemma": "anaqah"
+      },
+      {
+        "surface": "to release",
+        "lemma": "patach"
+      },
+      {
+        "surface": "those condemned",
+        "lemma": "ben"
+      },
+      {
+        "surface": "to death",
+        "lemma": "temutah"
+      }
+    ],
+    "21": [
+      {
+        "surface": "that they may proclaim",
+        "lemma": "saphar"
+      },
+      {
+        "surface": "the name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "in Zion",
+        "lemma": "tsiyyon"
+      },
+      {
+        "surface": "and praise Him",
+        "lemma": "tehillah"
+      },
+      {
+        "surface": "in Jerusalem",
+        "lemma": "yerushalaim"
+      }
+    ],
+    "22": [
+      {
+        "surface": "when peoples",
+        "lemma": "am"
+      },
+      {
+        "surface": "and kingdoms",
+        "lemma": "mamlakhah"
+      },
+      {
+        "surface": "assemble",
+        "lemma": "qavats"
+      },
+      {
+        "surface": "to serve",
+        "lemma": "avad"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "23": [
+      {
+        "surface": "He has broken",
+        "lemma": "anah"
+      },
+      {
+        "surface": "my strength",
+        "lemma": "koach"
+      },
+      {
+        "surface": "on the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "He has cut short",
+        "lemma": "qatser"
+      },
+      {
+        "surface": "my days",
+        "lemma": "yom"
+      }
+    ],
+    "24": [
+      {
+        "surface": "O my God",
+        "lemma": "el"
+      },
+      {
+        "surface": "take me",
+        "lemma": "alah"
+      },
+      {
+        "surface": "in the midst",
+        "lemma": "chetsi"
+      },
+      {
+        "surface": "of my days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "Your years",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "go on through all generations",
+        "lemma": "dor"
+      }
+    ],
+    "25": [
+      {
+        "surface": "In the beginning",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "You laid the foundations",
+        "lemma": "yasad"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and the heavens",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "are the work",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "of Your hands",
+        "lemma": "yad"
+      }
+    ],
+    "26": [
+      {
+        "surface": "will perish",
+        "lemma": "avad"
+      },
+      {
+        "surface": "remain",
+        "lemma": "amad"
+      },
+      {
+        "surface": "wear out",
+        "lemma": "balah"
+      },
+      {
+        "surface": "like a garment",
+        "lemma": "beged"
+      },
+      {
+        "surface": "Like clothing",
+        "lemma": "levush"
+      },
+      {
+        "surface": "You will change them",
+        "lemma": "chalaph"
+      },
+      {
+        "surface": "and they will be passed on",
+        "lemma": "chalaph"
+      }
+    ],
+    "27": [
+      {
+        "surface": "and Your years",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "end",
+        "lemma": "tamam"
+      }
+    ],
+    "28": [
+      {
+        "surface": "The children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Your servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "will dwell securely",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "and their descendants",
+        "lemma": "zera"
+      },
+      {
+        "surface": "will be established",
+        "lemma": "kun"
+      },
+      {
+        "surface": "before You",
+        "lemma": "paneh"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "paneh",
+    "tephillah",
+    "tsiyyon"
+  ]
+}

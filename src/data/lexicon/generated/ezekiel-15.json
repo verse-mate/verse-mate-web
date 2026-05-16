@@ -1,0 +1,281 @@
+{
+  "bookId": 26,
+  "book": "Ezekiel",
+  "chapter": 15,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then the word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "how",
+        "lemma": "mah"
+      },
+      {
+        "surface": "the wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "of the vine",
+        "lemma": "gephen"
+      },
+      {
+        "surface": "any other",
+        "lemma": "ets"
+      },
+      {
+        "surface": "branch",
+        "lemma": "zemorah"
+      },
+      {
+        "surface": "among the trees",
+        "lemma": "ets"
+      },
+      {
+        "surface": "in the forest",
+        "lemma": "yaar"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Can wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "be taken",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "something useful",
+        "lemma": "melakhah"
+      },
+      {
+        "surface": "can one make",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "a peg",
+        "lemma": "yated"
+      },
+      {
+        "surface": "to hang",
+        "lemma": "talah"
+      },
+      {
+        "surface": "utensils",
+        "lemma": "keli"
+      }
+    ],
+    "4": [
+      {
+        "surface": "No",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "into the fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "for fuel",
+        "lemma": "okhlah"
+      },
+      {
+        "surface": "The fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "devours",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "both",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "ends",
+        "lemma": "qatsah"
+      },
+      {
+        "surface": "and the middle",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "is charred",
+        "lemma": "charar"
+      },
+      {
+        "surface": "Can it be useful",
+        "lemma": "tsalach"
+      },
+      {
+        "surface": "for anything",
+        "lemma": "melakhah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Even",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "whole",
+        "lemma": "tamim"
+      },
+      {
+        "surface": "useful",
+        "lemma": "melakhah"
+      },
+      {
+        "surface": "can it ever",
+        "lemma": "od"
+      },
+      {
+        "surface": "useful",
+        "lemma": "melakhah"
+      },
+      {
+        "surface": "the fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "has consumed it",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "and charred it",
+        "lemma": "charar"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Therefore",
+        "lemma": "ken"
+      },
+      {
+        "surface": "this is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "the wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "of the vine",
+        "lemma": "gephen"
+      },
+      {
+        "surface": "among the trees",
+        "lemma": "ets"
+      },
+      {
+        "surface": "of the forest",
+        "lemma": "yaar"
+      },
+      {
+        "surface": "to the fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "for fuel",
+        "lemma": "okhlah"
+      },
+      {
+        "surface": "so",
+        "lemma": "ken"
+      },
+      {
+        "surface": "of Jerusalem",
+        "lemma": "yerushalaim"
+      }
+    ],
+    "7": [
+      {
+        "surface": "My face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "yet another fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "will consume them",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "And when I set",
+        "lemma": "sum"
+      },
+      {
+        "surface": "My face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "you will know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "desolate",
+        "lemma": "shemamah"
+      },
+      {
+        "surface": "they have acted unfaithfully",
+        "lemma": "maal"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "ets",
+    "esh",
+    "melakhah"
+  ]
+}

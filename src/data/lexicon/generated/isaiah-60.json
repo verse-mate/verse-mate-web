@@ -1,0 +1,937 @@
+{
+  "bookId": 23,
+  "book": "Isaiah",
+  "chapter": 60,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Arise",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "shine",
+        "lemma": "or"
+      },
+      {
+        "surface": "your light",
+        "lemma": "or"
+      },
+      {
+        "surface": "and the glory",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "rises",
+        "lemma": "zarach"
+      }
+    ],
+    "2": [
+      {
+        "surface": "behold",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "darkness",
+        "lemma": "choshekh"
+      },
+      {
+        "surface": "covers",
+        "lemma": "kasah"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and thick darkness",
+        "lemma": "araphel"
+      },
+      {
+        "surface": "is over the peoples",
+        "lemma": "leom"
+      },
+      {
+        "surface": "but the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will rise",
+        "lemma": "zarach"
+      },
+      {
+        "surface": "and His glory",
+        "lemma": "kavod"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "will come",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "to your light",
+        "lemma": "or"
+      },
+      {
+        "surface": "and kings",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "to the brightness",
+        "lemma": "nogah"
+      },
+      {
+        "surface": "of your dawn",
+        "lemma": "zerach"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Lift up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "your eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "around",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "gather",
+        "lemma": "qavats"
+      },
+      {
+        "surface": "your sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "from afar",
+        "lemma": "rachoq"
+      },
+      {
+        "surface": "and your daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "will be carried",
+        "lemma": "aman"
+      },
+      {
+        "surface": "the arm",
+        "lemma": "tsad"
+      }
+    ],
+    "5": [
+      {
+        "surface": "and be radiant",
+        "lemma": "nahar"
+      },
+      {
+        "surface": "and your heart",
+        "lemma": "levav"
+      },
+      {
+        "surface": "will tremble",
+        "lemma": "pachad"
+      },
+      {
+        "surface": "and swell with joy",
+        "lemma": "rachav"
+      },
+      {
+        "surface": "the riches",
+        "lemma": "hamon"
+      },
+      {
+        "surface": "of the sea",
+        "lemma": "yam"
+      },
+      {
+        "surface": "will be brought",
+        "lemma": "haphakh"
+      },
+      {
+        "surface": "and the wealth",
+        "lemma": "chayil"
+      },
+      {
+        "surface": "of the nations",
+        "lemma": "goy"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Caravans",
+        "lemma": "shiphah"
+      },
+      {
+        "surface": "of camels",
+        "lemma": "gamal"
+      },
+      {
+        "surface": "will cover your land",
+        "lemma": "kasah"
+      },
+      {
+        "surface": "young camels",
+        "lemma": "bekher"
+      },
+      {
+        "surface": "of Midian",
+        "lemma": "midyan"
+      },
+      {
+        "surface": "and Ephah",
+        "lemma": "ephah"
+      },
+      {
+        "surface": "from Sheba",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "bearing",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "and frankincense",
+        "lemma": "levonah"
+      },
+      {
+        "surface": "and proclaiming",
+        "lemma": "basar"
+      },
+      {
+        "surface": "the praises",
+        "lemma": "tehillah"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "the flocks",
+        "lemma": "tson"
+      },
+      {
+        "surface": "of Kedar",
+        "lemma": "qedar"
+      },
+      {
+        "surface": "will be gathered",
+        "lemma": "qavats"
+      },
+      {
+        "surface": "the rams",
+        "lemma": "ayil"
+      },
+      {
+        "surface": "of Nebaioth",
+        "lemma": "nevavot"
+      },
+      {
+        "surface": "will serve you",
+        "lemma": "sharat"
+      },
+      {
+        "surface": "and go up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "My altar",
+        "lemma": "mizbeach"
+      },
+      {
+        "surface": "with acceptance",
+        "lemma": "ratson"
+      },
+      {
+        "surface": "I will adorn",
+        "lemma": "paar"
+      },
+      {
+        "surface": "My glorious",
+        "lemma": "tipharah"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "who fly",
+        "lemma": "uph"
+      },
+      {
+        "surface": "like doves",
+        "lemma": "yonah"
+      },
+      {
+        "surface": "their shelters",
+        "lemma": "arubbah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "the islands",
+        "lemma": "i"
+      },
+      {
+        "surface": "will wait",
+        "lemma": "qavah"
+      },
+      {
+        "surface": "with the ships",
+        "lemma": "oniyyah"
+      },
+      {
+        "surface": "of Tarshish",
+        "lemma": "tarshish"
+      },
+      {
+        "surface": "in the lead",
+        "lemma": "rishon"
+      },
+      {
+        "surface": "your children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "from afar",
+        "lemma": "rachoq"
+      },
+      {
+        "surface": "their silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "and gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "to the honor",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the Holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "One of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "He has glorified you",
+        "lemma": "paar"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Foreigners",
+        "lemma": "ben"
+      },
+      {
+        "surface": "will rebuild",
+        "lemma": "banah"
+      },
+      {
+        "surface": "your walls",
+        "lemma": "chomah"
+      },
+      {
+        "surface": "and their kings",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "will serve you",
+        "lemma": "sharat"
+      },
+      {
+        "surface": "I struck you",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "in anger",
+        "lemma": "qetseph"
+      },
+      {
+        "surface": "yet in favor",
+        "lemma": "ratson"
+      },
+      {
+        "surface": "I will show you mercy",
+        "lemma": "racham"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Your gates",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "will always",
+        "lemma": "tamid"
+      },
+      {
+        "surface": "stand open",
+        "lemma": "patach"
+      },
+      {
+        "surface": "be shut",
+        "lemma": "sagar"
+      },
+      {
+        "surface": "day",
+        "lemma": "yomam"
+      },
+      {
+        "surface": "or night",
+        "lemma": "laylah"
+      },
+      {
+        "surface": "so that the wealth",
+        "lemma": "chayil"
+      },
+      {
+        "surface": "of the nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "with their kings",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "being led in procession",
+        "lemma": "nahag"
+      }
+    ],
+    "12": [
+      {
+        "surface": "the nation",
+        "lemma": "goy"
+      },
+      {
+        "surface": "or kingdom",
+        "lemma": "mamlakhah"
+      },
+      {
+        "surface": "serve you",
+        "lemma": "avad"
+      },
+      {
+        "surface": "will perish",
+        "lemma": "avad"
+      },
+      {
+        "surface": "it",
+        "lemma": "goy"
+      },
+      {
+        "surface": "will be utterly destroyed",
+        "lemma": "charev"
+      }
+    ],
+    "13": [
+      {
+        "surface": "The glory",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "of Lebanon",
+        "lemma": "levanon"
+      },
+      {
+        "surface": "its cypress",
+        "lemma": "berosh"
+      },
+      {
+        "surface": "elm",
+        "lemma": "tidhar"
+      },
+      {
+        "surface": "and boxwood",
+        "lemma": "teashshur"
+      },
+      {
+        "surface": "together",
+        "lemma": "yachad"
+      },
+      {
+        "surface": "to adorn",
+        "lemma": "paar"
+      },
+      {
+        "surface": "the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "of My sanctuary",
+        "lemma": "miqdash"
+      },
+      {
+        "surface": "and I will glorify",
+        "lemma": "kavad"
+      },
+      {
+        "surface": "the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "of My feet",
+        "lemma": "regel"
+      }
+    ],
+    "14": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of your oppressors",
+        "lemma": "anah"
+      },
+      {
+        "surface": "will come",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "and bow down",
+        "lemma": "shachach"
+      },
+      {
+        "surface": "who reviled you",
+        "lemma": "naats"
+      },
+      {
+        "surface": "will fall facedown",
+        "lemma": "shachah"
+      },
+      {
+        "surface": "your feet",
+        "lemma": "kaph"
+      },
+      {
+        "surface": "the City",
+        "lemma": "ir"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Zion",
+        "lemma": "tsiyyon"
+      },
+      {
+        "surface": "of the Holy One",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Whereas",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "forsaken",
+        "lemma": "azav"
+      },
+      {
+        "surface": "and despised",
+        "lemma": "sane"
+      },
+      {
+        "surface": "with no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "one passing through",
+        "lemma": "avar"
+      },
+      {
+        "surface": "I will make you",
+        "lemma": "sum"
+      },
+      {
+        "surface": "an everlasting",
+        "lemma": "olam"
+      },
+      {
+        "surface": "pride",
+        "lemma": "gaon"
+      },
+      {
+        "surface": "a joy",
+        "lemma": "masvos"
+      },
+      {
+        "surface": "from age",
+        "lemma": "dor"
+      },
+      {
+        "surface": "to age",
+        "lemma": "dor"
+      }
+    ],
+    "16": [
+      {
+        "surface": "You will drink",
+        "lemma": "yanaq"
+      },
+      {
+        "surface": "the milk",
+        "lemma": "chalav"
+      },
+      {
+        "surface": "of nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "and nurse",
+        "lemma": "yanaq"
+      },
+      {
+        "surface": "at the breasts",
+        "lemma": "shad"
+      },
+      {
+        "surface": "of royalty",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "you will know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "am your Savior",
+        "lemma": "yasah"
+      },
+      {
+        "surface": "and your Redeemer",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "the Mighty",
+        "lemma": "avir"
+      },
+      {
+        "surface": "One of Jacob",
+        "lemma": "yaaqov"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Instead of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "bronze",
+        "lemma": "nechoshet"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "in place of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "iron",
+        "lemma": "barzel"
+      },
+      {
+        "surface": "bronze",
+        "lemma": "nechoshet"
+      },
+      {
+        "surface": "instead of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "and iron",
+        "lemma": "barzel"
+      },
+      {
+        "surface": "instead of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "stones",
+        "lemma": "even"
+      },
+      {
+        "surface": "I will appoint",
+        "lemma": "sum"
+      },
+      {
+        "surface": "peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "as your governor",
+        "lemma": "pequddah"
+      },
+      {
+        "surface": "and righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "as your ruler",
+        "lemma": "nagas"
+      }
+    ],
+    "18": [
+      {
+        "surface": "longer",
+        "lemma": "od"
+      },
+      {
+        "surface": "will} violence",
+        "lemma": "chamas"
+      },
+      {
+        "surface": "in your land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "nor ruin",
+        "lemma": "shod"
+      },
+      {
+        "surface": "or destruction",
+        "lemma": "shever"
+      },
+      {
+        "surface": "within your borders",
+        "lemma": "gevul"
+      },
+      {
+        "surface": "your walls",
+        "lemma": "chomah"
+      },
+      {
+        "surface": "Salvation",
+        "lemma": "yeshuah"
+      },
+      {
+        "surface": "and your gates",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "Praise",
+        "lemma": "tehillah"
+      }
+    ],
+    "19": [
+      {
+        "surface": "longer",
+        "lemma": "od"
+      },
+      {
+        "surface": "will the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "your light",
+        "lemma": "or"
+      },
+      {
+        "surface": "by day",
+        "lemma": "yomam"
+      },
+      {
+        "surface": "the brightness",
+        "lemma": "nogah"
+      },
+      {
+        "surface": "of the moon",
+        "lemma": "yareach"
+      },
+      {
+        "surface": "shine",
+        "lemma": "or"
+      },
+      {
+        "surface": "for the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "everlasting",
+        "lemma": "olam"
+      },
+      {
+        "surface": "light",
+        "lemma": "or"
+      },
+      {
+        "surface": "and your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "will be your splendor",
+        "lemma": "tipharah"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Your sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "longer",
+        "lemma": "od"
+      },
+      {
+        "surface": "and your moon",
+        "lemma": "yareach"
+      },
+      {
+        "surface": "wane",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "everlasting",
+        "lemma": "olam"
+      },
+      {
+        "surface": "light",
+        "lemma": "or"
+      },
+      {
+        "surface": "and the days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of your sorrow",
+        "lemma": "evel"
+      },
+      {
+        "surface": "will cease",
+        "lemma": "salem"
+      }
+    ],
+    "21": [
+      {
+        "surface": "your people",
+        "lemma": "am"
+      },
+      {
+        "surface": "will be righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "they will possess",
+        "lemma": "yarash"
+      },
+      {
+        "surface": "the land forever",
+        "lemma": "erets"
+      },
+      {
+        "surface": "they are the branch",
+        "lemma": "netser"
+      },
+      {
+        "surface": "of My planting",
+        "lemma": "matta"
+      },
+      {
+        "surface": "the work",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "of My hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "so that I may be glorified",
+        "lemma": "paar"
+      }
+    ],
+    "22": [
+      {
+        "surface": "The least of you",
+        "lemma": "qatan"
+      },
+      {
+        "surface": "a thousand",
+        "lemma": "eleph"
+      },
+      {
+        "surface": "and the smallest",
+        "lemma": "tsair"
+      },
+      {
+        "surface": "a mighty",
+        "lemma": "atsum"
+      },
+      {
+        "surface": "nation",
+        "lemma": "goy"
+      },
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "I will accomplish it quickly",
+        "lemma": "chush"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "or",
+    "tachat",
+    "paar"
+  ]
+}

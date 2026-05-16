@@ -1,0 +1,967 @@
+{
+  "bookId": 2,
+  "book": "Exodus",
+  "chapter": 22,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "steals",
+        "lemma": "ganav"
+      },
+      {
+        "surface": "an ox",
+        "lemma": "shor"
+      },
+      {
+        "surface": "a sheep",
+        "lemma": "seh"
+      },
+      {
+        "surface": "and slaughters",
+        "lemma": "tavach"
+      },
+      {
+        "surface": "sells it",
+        "lemma": "makhar"
+      },
+      {
+        "surface": "he must repay",
+        "lemma": "salem"
+      },
+      {
+        "surface": "five",
+        "lemma": "chamesh"
+      },
+      {
+        "surface": "oxen",
+        "lemma": "baqar"
+      },
+      {
+        "surface": "for",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "an ox",
+        "lemma": "shor"
+      },
+      {
+        "surface": "and four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "sheep",
+        "lemma": "seh"
+      },
+      {
+        "surface": "for a sheep",
+        "lemma": "tson"
+      }
+    ],
+    "2": [
+      {
+        "surface": "a thief",
+        "lemma": "gannav"
+      },
+      {
+        "surface": "is caught",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "breaking in",
+        "lemma": "machteret"
+      },
+      {
+        "surface": "and is beaten",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "to death",
+        "lemma": "mut"
+      },
+      {
+        "surface": "no one",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "shall be guilty of bloodshed",
+        "lemma": "dam"
+      }
+    ],
+    "3": [
+      {
+        "surface": "it happens after sunrise",
+        "lemma": "zarach"
+      },
+      {
+        "surface": "there is guilt for his bloodshed",
+        "lemma": "dam"
+      },
+      {
+        "surface": "A thief must make full restitution",
+        "lemma": "salem"
+      },
+      {
+        "surface": "he has nothing",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "he himself shall be sold",
+        "lemma": "makhar"
+      },
+      {
+        "surface": "for his theft",
+        "lemma": "genevah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "is actually found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "alive",
+        "lemma": "chay"
+      },
+      {
+        "surface": "in his possession",
+        "lemma": "yad"
+      },
+      {
+        "surface": "whether ox",
+        "lemma": "shor"
+      },
+      {
+        "surface": "donkey",
+        "lemma": "chamor"
+      },
+      {
+        "surface": "sheep",
+        "lemma": "seh"
+      },
+      {
+        "surface": "he must pay back",
+        "lemma": "salem"
+      },
+      {
+        "surface": "double",
+        "lemma": "shenayim"
+      }
+    ],
+    "5": [
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "grazes his livestock",
+        "lemma": "baar"
+      },
+      {
+        "surface": "in a field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "vineyard",
+        "lemma": "kerem"
+      },
+      {
+        "surface": "and allows them",
+        "lemma": "beir"
+      },
+      {
+        "surface": "to stray",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "so that they graze",
+        "lemma": "baar"
+      },
+      {
+        "surface": "in someone else’s",
+        "lemma": "acher"
+      },
+      {
+        "surface": "field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "he must make restitution",
+        "lemma": "salem"
+      },
+      {
+        "surface": "from the best",
+        "lemma": "metav"
+      },
+      {
+        "surface": "of his own field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "or vineyard",
+        "lemma": "kerem"
+      }
+    ],
+    "6": [
+      {
+        "surface": "a fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "and spreads",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "to thornbushes",
+        "lemma": "qots"
+      },
+      {
+        "surface": "so that it consumes",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "stacked",
+        "lemma": "gadish"
+      },
+      {
+        "surface": "standing grain",
+        "lemma": "qamah"
+      },
+      {
+        "surface": "the whole field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "the one who started",
+        "lemma": "baar"
+      },
+      {
+        "surface": "the fire",
+        "lemma": "beerah"
+      },
+      {
+        "surface": "must make full restitution",
+        "lemma": "salem"
+      }
+    ],
+    "7": [
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "his neighbor",
+        "lemma": "rea"
+      },
+      {
+        "surface": "money",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "goods",
+        "lemma": "keli"
+      },
+      {
+        "surface": "for safekeeping",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "and they are stolen",
+        "lemma": "ganav"
+      },
+      {
+        "surface": "from the neighbor’s",
+        "lemma": "ish"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "the thief",
+        "lemma": "gannav"
+      },
+      {
+        "surface": "caught",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "must pay back",
+        "lemma": "salem"
+      },
+      {
+        "surface": "double",
+        "lemma": "shenayim"
+      }
+    ],
+    "8": [
+      {
+        "surface": "the thief",
+        "lemma": "gannav"
+      },
+      {
+        "surface": "found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "the owner",
+        "lemma": "baal"
+      },
+      {
+        "surface": "of the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "must appear",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "the judges",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "he has taken",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "his neighbor’s",
+        "lemma": "rea"
+      },
+      {
+        "surface": "property",
+        "lemma": "melakhah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "cases",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of illegal possession",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "an ox",
+        "lemma": "shor"
+      },
+      {
+        "surface": "a donkey",
+        "lemma": "chamor"
+      },
+      {
+        "surface": "a sheep",
+        "lemma": "seh"
+      },
+      {
+        "surface": "a garment",
+        "lemma": "salmah"
+      },
+      {
+        "surface": "lost item",
+        "lemma": "avedah"
+      },
+      {
+        "surface": "both parties",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "their cases",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the judges",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "The one whom the judges",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "find guilty",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "must pay back",
+        "lemma": "salem"
+      },
+      {
+        "surface": "double",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "to his neighbor",
+        "lemma": "rea"
+      }
+    ],
+    "10": [
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "a donkey",
+        "lemma": "chamor"
+      },
+      {
+        "surface": "an ox",
+        "lemma": "shor"
+      },
+      {
+        "surface": "a sheep",
+        "lemma": "seh"
+      },
+      {
+        "surface": "other animal",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "to be cared for",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "by his neighbor",
+        "lemma": "rea"
+      },
+      {
+        "surface": "but it dies",
+        "lemma": "mut"
+      },
+      {
+        "surface": "is injured",
+        "lemma": "shavar"
+      },
+      {
+        "surface": "stolen",
+        "lemma": "shavah"
+      },
+      {
+        "surface": "while no",
+        "lemma": "ayin"
+      }
+    ],
+    "11": [
+      {
+        "surface": "an oath",
+        "lemma": "shevuah"
+      },
+      {
+        "surface": "before the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "between",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the parties",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "the man has taken",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "his neighbor’s",
+        "lemma": "rea"
+      },
+      {
+        "surface": "property",
+        "lemma": "melakhah"
+      },
+      {
+        "surface": "The owner",
+        "lemma": "baal"
+      },
+      {
+        "surface": "must accept the oath",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "restitution",
+        "lemma": "salem"
+      }
+    ],
+    "12": [
+      {
+        "surface": "the animal was actually",
+        "lemma": "ganav"
+      },
+      {
+        "surface": "stolen",
+        "lemma": "ganav"
+      },
+      {
+        "surface": "he must make restitution",
+        "lemma": "salem"
+      },
+      {
+        "surface": "to the owner",
+        "lemma": "baal"
+      }
+    ],
+    "13": [
+      {
+        "surface": "the animal was torn to pieces",
+        "lemma": "taraph"
+      },
+      {
+        "surface": "it as evidence",
+        "lemma": "ed"
+      },
+      {
+        "surface": "make restitution",
+        "lemma": "salem"
+      },
+      {
+        "surface": "for the torn carcass",
+        "lemma": "terephah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "borrows",
+        "lemma": "shaal"
+      },
+      {
+        "surface": "from his neighbor",
+        "lemma": "rea"
+      },
+      {
+        "surface": "and it is injured",
+        "lemma": "shavar"
+      },
+      {
+        "surface": "dies",
+        "lemma": "mut"
+      },
+      {
+        "surface": "while its owner",
+        "lemma": "baal"
+      },
+      {
+        "surface": "is not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "he must make full restitution",
+        "lemma": "salem"
+      }
+    ],
+    "15": [
+      {
+        "surface": "the owner",
+        "lemma": "baal"
+      },
+      {
+        "surface": "restitution is required",
+        "lemma": "salem"
+      },
+      {
+        "surface": "was rented",
+        "lemma": "sakhir"
+      },
+      {
+        "surface": "the fee covers the loss",
+        "lemma": "sakhar"
+      }
+    ],
+    "16": [
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "seduces",
+        "lemma": "patah"
+      },
+      {
+        "surface": "a virgin",
+        "lemma": "betulah"
+      },
+      {
+        "surface": "pledged in marriage",
+        "lemma": "aras"
+      },
+      {
+        "surface": "and sleeps",
+        "lemma": "shakhav"
+      },
+      {
+        "surface": "he must pay the full dowry",
+        "lemma": "mahar"
+      },
+      {
+        "surface": "to be his wife",
+        "lemma": "ishshah"
+      }
+    ],
+    "17": [
+      {
+        "surface": "absolutely refuses",
+        "lemma": "maen"
+      },
+      {
+        "surface": "the man still must pay",
+        "lemma": "shaqal"
+      },
+      {
+        "surface": "an amount comparable",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "to the bridal price",
+        "lemma": "mohar"
+      },
+      {
+        "surface": "of a virgin",
+        "lemma": "betulah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "allow a sorceress",
+        "lemma": "kashaph"
+      },
+      {
+        "surface": "to live",
+        "lemma": "chayah"
+      }
+    ],
+    "19": [
+      {
+        "surface": "lies",
+        "lemma": "shakhav"
+      },
+      {
+        "surface": "an animal",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "must surely be put to death",
+        "lemma": "mut"
+      }
+    ],
+    "20": [
+      {
+        "surface": "If anyone sacrifices",
+        "lemma": "zavach"
+      },
+      {
+        "surface": "to any god",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "other than",
+        "lemma": "bilti"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "alone",
+        "lemma": "bad"
+      },
+      {
+        "surface": "he must be set apart for destruction",
+        "lemma": "charam"
+      }
+    ],
+    "21": [
+      {
+        "surface": "exploit",
+        "lemma": "yanah"
+      },
+      {
+        "surface": "oppress",
+        "lemma": "lachats"
+      },
+      {
+        "surface": "a foreign resident",
+        "lemma": "ger"
+      },
+      {
+        "surface": "foreigners",
+        "lemma": "ger"
+      },
+      {
+        "surface": "in the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      }
+    ],
+    "22": [
+      {
+        "surface": "mistreat",
+        "lemma": "anah"
+      },
+      {
+        "surface": "widow",
+        "lemma": "almanah"
+      },
+      {
+        "surface": "or orphan",
+        "lemma": "yatom"
+      }
+    ],
+    "23": [
+      {
+        "surface": "you do mistreat them",
+        "lemma": "anah"
+      },
+      {
+        "surface": "and they cry out",
+        "lemma": "tsaaq"
+      },
+      {
+        "surface": "in distress",
+        "lemma": "tsaaq"
+      },
+      {
+        "surface": "their cry",
+        "lemma": "tsaaqah"
+      }
+    ],
+    "24": [
+      {
+        "surface": "My anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "will be kindled",
+        "lemma": "charah"
+      },
+      {
+        "surface": "and I will kill",
+        "lemma": "harag"
+      },
+      {
+        "surface": "with the sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "then your wives",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "widows",
+        "lemma": "almanah"
+      },
+      {
+        "surface": "and your children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "will be fatherless",
+        "lemma": "yatom"
+      }
+    ],
+    "25": [
+      {
+        "surface": "you lend",
+        "lemma": "lavah"
+      },
+      {
+        "surface": "money",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "to one of My people",
+        "lemma": "am"
+      },
+      {
+        "surface": "who is poor",
+        "lemma": "ani"
+      },
+      {
+        "surface": "as a creditor",
+        "lemma": "nashah"
+      },
+      {
+        "surface": "you are not to charge",
+        "lemma": "sum"
+      },
+      {
+        "surface": "interest",
+        "lemma": "neshekh"
+      }
+    ],
+    "26": [
+      {
+        "surface": "you take your neighbor’s",
+        "lemma": "rea"
+      },
+      {
+        "surface": "cloak",
+        "lemma": "salmah"
+      },
+      {
+        "surface": "as collateral",
+        "lemma": "chaval"
+      }
+    ],
+    "27": [
+      {
+        "surface": "is the only",
+        "lemma": "bad"
+      },
+      {
+        "surface": "covering",
+        "lemma": "kesut"
+      },
+      {
+        "surface": "for",
+        "lemma": "simlah"
+      },
+      {
+        "surface": "his body",
+        "lemma": "or"
+      },
+      {
+        "surface": "What else",
+        "lemma": "mah"
+      },
+      {
+        "surface": "will he sleep in",
+        "lemma": "shakhav"
+      },
+      {
+        "surface": "he cries out",
+        "lemma": "tsaaq"
+      },
+      {
+        "surface": "am compassionate",
+        "lemma": "channun"
+      }
+    ],
+    "28": [
+      {
+        "surface": "blaspheme",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "or curse",
+        "lemma": "arar"
+      },
+      {
+        "surface": "the ruler",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of your people",
+        "lemma": "am"
+      }
+    ],
+    "29": [
+      {
+        "surface": "hold back",
+        "lemma": "achar"
+      },
+      {
+        "surface": "offerings from your granaries",
+        "lemma": "meleah"
+      },
+      {
+        "surface": "or vats",
+        "lemma": "dema"
+      },
+      {
+        "surface": "the firstborn",
+        "lemma": "bekhor"
+      },
+      {
+        "surface": "of your sons",
+        "lemma": "ben"
+      }
+    ],
+    "30": [
+      {
+        "surface": "likewise",
+        "lemma": "ken"
+      },
+      {
+        "surface": "with your cattle",
+        "lemma": "shor"
+      },
+      {
+        "surface": "and your sheep",
+        "lemma": "tson"
+      },
+      {
+        "surface": "their mothers",
+        "lemma": "em"
+      },
+      {
+        "surface": "for seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "but on the eighth",
+        "lemma": "shemini"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      }
+    ],
+    "31": [
+      {
+        "surface": "holy",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "people",
+        "lemma": "ish"
+      },
+      {
+        "surface": "eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the meat",
+        "lemma": "basar"
+      },
+      {
+        "surface": "of a mauled animal",
+        "lemma": "terephah"
+      },
+      {
+        "surface": "found in the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "you are to throw",
+        "lemma": "shalakh"
+      },
+      {
+        "surface": "to the dogs",
+        "lemma": "kelev"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "salem",
+    "rea",
+    "shor"
+  ]
+}

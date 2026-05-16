@@ -1,0 +1,101 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 134,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "A song",
+        "lemma": "shir"
+      },
+      {
+        "surface": "of ascents",
+        "lemma": "maalah"
+      },
+      {
+        "surface": "Come",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "you servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "who serve",
+        "lemma": "amad"
+      },
+      {
+        "surface": "by night",
+        "lemma": "laylah"
+      },
+      {
+        "surface": "in the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Lift up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "your hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "to the sanctuary",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "and bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "May the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of heaven",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "and earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "bless you",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "from Zion",
+        "lemma": "tsiyyon"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "barakh"
+  ]
+}

@@ -1,0 +1,1541 @@
+{
+  "bookId": 13,
+  "book": "1 Chronicles",
+  "chapter": 1,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Adam",
+        "lemma": "adam"
+      },
+      {
+        "surface": "Seth",
+        "lemma": "shet"
+      },
+      {
+        "surface": "Enosh",
+        "lemma": "enosh"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Kenan",
+        "lemma": "qenan"
+      },
+      {
+        "surface": "Mahalalel",
+        "lemma": "mahalalel"
+      },
+      {
+        "surface": "Jared",
+        "lemma": "yered"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Enoch",
+        "lemma": "chanokh"
+      },
+      {
+        "surface": "Methuselah",
+        "lemma": "metushelach"
+      },
+      {
+        "surface": "Lamech, Noah",
+        "lemma": "lemekh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "The sons of Noah",
+        "lemma": "noach"
+      },
+      {
+        "surface": "Shem",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Ham",
+        "lemma": "cham"
+      },
+      {
+        "surface": "and Japheth",
+        "lemma": "yephet"
+      }
+    ],
+    "5": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Japheth",
+        "lemma": "yephet"
+      },
+      {
+        "surface": "Gomer",
+        "lemma": "gomer"
+      },
+      {
+        "surface": "Magog",
+        "lemma": "magog"
+      },
+      {
+        "surface": "Madai",
+        "lemma": "maday"
+      },
+      {
+        "surface": "Javan",
+        "lemma": "yavan"
+      },
+      {
+        "surface": "Tubal",
+        "lemma": "tuval"
+      },
+      {
+        "surface": "Meshech",
+        "lemma": "meshekh"
+      },
+      {
+        "surface": "and Tiras",
+        "lemma": "tiras"
+      }
+    ],
+    "6": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Gomer",
+        "lemma": "gomer"
+      },
+      {
+        "surface": "Ashkenaz",
+        "lemma": "ashkenaz"
+      },
+      {
+        "surface": "Riphath",
+        "lemma": "diphat"
+      },
+      {
+        "surface": "and Togarmah",
+        "lemma": "togarmah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "And the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Javan",
+        "lemma": "yavan"
+      },
+      {
+        "surface": "Elishah",
+        "lemma": "elishah"
+      },
+      {
+        "surface": "Tarshish",
+        "lemma": "tarshish"
+      },
+      {
+        "surface": "the Kittites",
+        "lemma": "kitti"
+      },
+      {
+        "surface": "and the Rodanites",
+        "lemma": "dodanim"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ham",
+        "lemma": "cham"
+      },
+      {
+        "surface": "Cush",
+        "lemma": "kush"
+      },
+      {
+        "surface": "Mizraim",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "Put",
+        "lemma": "put"
+      },
+      {
+        "surface": "and Canaan",
+        "lemma": "kenaan"
+      }
+    ],
+    "9": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Cush",
+        "lemma": "kush"
+      },
+      {
+        "surface": "Seba",
+        "lemma": "seva"
+      },
+      {
+        "surface": "Havilah",
+        "lemma": "chavilah"
+      },
+      {
+        "surface": "Sabta",
+        "lemma": "savtah"
+      },
+      {
+        "surface": "Raamah",
+        "lemma": "ramah"
+      },
+      {
+        "surface": "and Sabteca",
+        "lemma": "savtekah"
+      },
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Raamah",
+        "lemma": "ramah"
+      },
+      {
+        "surface": "Sheba",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "and Dedan",
+        "lemma": "dedan"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Cush",
+        "lemma": "kush"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "Nimrod",
+        "lemma": "nimrod"
+      },
+      {
+        "surface": "began",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "a mighty one",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "on the earth",
+        "lemma": "erets"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Mizraim",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "the Ludites",
+        "lemma": "ludi"
+      },
+      {
+        "surface": "the Anamites",
+        "lemma": "anamim"
+      },
+      {
+        "surface": "the Lehabites",
+        "lemma": "lehavim"
+      },
+      {
+        "surface": "the Naphtuhites",
+        "lemma": "naphtuchim"
+      }
+    ],
+    "12": [
+      {
+        "surface": "the Pathrusites",
+        "lemma": "patrusi"
+      },
+      {
+        "surface": "the Casluhites",
+        "lemma": "kasluchim"
+      },
+      {
+        "surface": "the Philistines",
+        "lemma": "pelishti"
+      },
+      {
+        "surface": "and the Caphtorites",
+        "lemma": "kaphtori"
+      }
+    ],
+    "13": [
+      {
+        "surface": "And Canaan",
+        "lemma": "kenaan"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "Sidon",
+        "lemma": "tsidon"
+      },
+      {
+        "surface": "his firstborn",
+        "lemma": "bekhor"
+      },
+      {
+        "surface": "of the Hittites",
+        "lemma": "chet"
+      }
+    ],
+    "14": [
+      {
+        "surface": "the Jebusites",
+        "lemma": "yevusi"
+      },
+      {
+        "surface": "the Amorites",
+        "lemma": "emori"
+      },
+      {
+        "surface": "the Girgashites",
+        "lemma": "girgashi"
+      }
+    ],
+    "15": [
+      {
+        "surface": "the Hivites",
+        "lemma": "chivvi"
+      },
+      {
+        "surface": "the Arkites",
+        "lemma": "arqi"
+      },
+      {
+        "surface": "the Sinites",
+        "lemma": "sini"
+      }
+    ],
+    "16": [
+      {
+        "surface": "the Arvadites",
+        "lemma": "arvadi"
+      },
+      {
+        "surface": "the Zemarites",
+        "lemma": "tsemari"
+      },
+      {
+        "surface": "and the Hamathites",
+        "lemma": "chamati"
+      }
+    ],
+    "17": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Shem",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Elam",
+        "lemma": "elam"
+      },
+      {
+        "surface": "Asshur",
+        "lemma": "ashshur"
+      },
+      {
+        "surface": "Arphaxad",
+        "lemma": "arpakhshad"
+      },
+      {
+        "surface": "Lud",
+        "lemma": "lud"
+      },
+      {
+        "surface": "and Aram. <p class=|list2|>The sons of Aram",
+        "lemma": "aram"
+      },
+      {
+        "surface": "Uz",
+        "lemma": "uts"
+      },
+      {
+        "surface": "Hul",
+        "lemma": "chul"
+      },
+      {
+        "surface": "Gether",
+        "lemma": "geter"
+      },
+      {
+        "surface": "and Meshech",
+        "lemma": "meshekh"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Arphaxad",
+        "lemma": "arpakhshad"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "Shelah",
+        "lemma": "shelach"
+      },
+      {
+        "surface": "and Shelah",
+        "lemma": "shelach"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "Eber",
+        "lemma": "ever"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "were born",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "to Eber",
+        "lemma": "ever"
+      },
+      {
+        "surface": "One",
+        "lemma": "echad"
+      },
+      {
+        "surface": "was named",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Peleg",
+        "lemma": "peleg"
+      },
+      {
+        "surface": "in his days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "was divided",
+        "lemma": "palag"
+      },
+      {
+        "surface": "and his brother",
+        "lemma": "ach"
+      },
+      {
+        "surface": "was named",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Joktan",
+        "lemma": "yoqtan"
+      }
+    ],
+    "20": [
+      {
+        "surface": "And Joktan",
+        "lemma": "yoqtan"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "Almodad",
+        "lemma": "almodad"
+      },
+      {
+        "surface": "Sheleph",
+        "lemma": "sheleph"
+      },
+      {
+        "surface": "Hazarmaveth",
+        "lemma": "chatsarmavet"
+      },
+      {
+        "surface": "Jerah",
+        "lemma": "yerach"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Hadoram",
+        "lemma": "hadoram"
+      },
+      {
+        "surface": "Uzal",
+        "lemma": "uzal"
+      },
+      {
+        "surface": "Diklah",
+        "lemma": "diqlah"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Obal",
+        "lemma": "eval"
+      },
+      {
+        "surface": "Abimael",
+        "lemma": "avimael"
+      },
+      {
+        "surface": "Sheba",
+        "lemma": "sheva"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Ophir",
+        "lemma": "ophir"
+      },
+      {
+        "surface": "Havilah",
+        "lemma": "chavilah"
+      },
+      {
+        "surface": "and Jobab",
+        "lemma": "yovav"
+      },
+      {
+        "surface": "were sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Joktan",
+        "lemma": "yoqtan"
+      }
+    ],
+    "24": [
+      {
+        "surface": "So from Shem came",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Arphaxad",
+        "lemma": "arpakhshad"
+      },
+      {
+        "surface": "Shelah",
+        "lemma": "shelach"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Eber",
+        "lemma": "ever"
+      },
+      {
+        "surface": "Peleg",
+        "lemma": "peleg"
+      },
+      {
+        "surface": "Reu",
+        "lemma": "reu"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Serug",
+        "lemma": "serug"
+      },
+      {
+        "surface": "Nahor",
+        "lemma": "nachor"
+      },
+      {
+        "surface": "Terah",
+        "lemma": "terach"
+      }
+    ],
+    "27": [
+      {
+        "surface": "and Abram",
+        "lemma": "avram"
+      },
+      {
+        "surface": "Abraham",
+        "lemma": "avraham"
+      }
+    ],
+    "28": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Abraham",
+        "lemma": "avraham"
+      },
+      {
+        "surface": "were Isaac",
+        "lemma": "yitschaq"
+      },
+      {
+        "surface": "and Ishmael",
+        "lemma": "yishmael"
+      }
+    ],
+    "29": [
+      {
+        "surface": "their genealogies",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "Nebaioth",
+        "lemma": "nevavot"
+      },
+      {
+        "surface": "the firstborn",
+        "lemma": "bekhor"
+      },
+      {
+        "surface": "of Ishmael",
+        "lemma": "yishmael"
+      },
+      {
+        "surface": "then Kedar",
+        "lemma": "qedar"
+      },
+      {
+        "surface": "Adbeel",
+        "lemma": "adbeel"
+      },
+      {
+        "surface": "Mibsam",
+        "lemma": "mivsam"
+      }
+    ],
+    "30": [
+      {
+        "surface": "Mishma",
+        "lemma": "mishma"
+      },
+      {
+        "surface": "Dumah",
+        "lemma": "dumah"
+      },
+      {
+        "surface": "Massa",
+        "lemma": "massa"
+      },
+      {
+        "surface": "Hadad",
+        "lemma": "chadad"
+      },
+      {
+        "surface": "Tema",
+        "lemma": "tema"
+      }
+    ],
+    "31": [
+      {
+        "surface": "Jetur",
+        "lemma": "yetur"
+      },
+      {
+        "surface": "Naphish",
+        "lemma": "naphish"
+      },
+      {
+        "surface": "and Kedemah",
+        "lemma": "qedemah"
+      },
+      {
+        "surface": "the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ishmael",
+        "lemma": "yishmael"
+      }
+    ],
+    "32": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "born",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "to Keturah",
+        "lemma": "qeturah"
+      },
+      {
+        "surface": "Abraham’s",
+        "lemma": "avraham"
+      },
+      {
+        "surface": "concubine",
+        "lemma": "pilegesh"
+      },
+      {
+        "surface": "Zimran",
+        "lemma": "zimran"
+      },
+      {
+        "surface": "Jokshan",
+        "lemma": "yoqshan"
+      },
+      {
+        "surface": "Medan",
+        "lemma": "medan"
+      },
+      {
+        "surface": "Midian",
+        "lemma": "midyan"
+      },
+      {
+        "surface": "Ishbak",
+        "lemma": "yishbaq"
+      },
+      {
+        "surface": "and Shuah",
+        "lemma": "shuach"
+      },
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Jokshan",
+        "lemma": "yoqshan"
+      },
+      {
+        "surface": "Sheba",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "and Dedan",
+        "lemma": "dedan"
+      }
+    ],
+    "33": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Midian",
+        "lemma": "midyan"
+      },
+      {
+        "surface": "Ephah",
+        "lemma": "ephah"
+      },
+      {
+        "surface": "Epher",
+        "lemma": "epher"
+      },
+      {
+        "surface": "Hanoch",
+        "lemma": "chanokh"
+      },
+      {
+        "surface": "Abida",
+        "lemma": "avida"
+      },
+      {
+        "surface": "and Eldaah",
+        "lemma": "eldaah"
+      },
+      {
+        "surface": "were Keturah’s",
+        "lemma": "qeturah"
+      },
+      {
+        "surface": "sons",
+        "lemma": "ben"
+      }
+    ],
+    "34": [
+      {
+        "surface": "Abraham",
+        "lemma": "avraham"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "Isaac",
+        "lemma": "yitschaq"
+      },
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Isaac",
+        "lemma": "yitschaq"
+      },
+      {
+        "surface": "Esau",
+        "lemma": "esav"
+      },
+      {
+        "surface": "and Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "35": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Esau",
+        "lemma": "esav"
+      },
+      {
+        "surface": "Eliphaz",
+        "lemma": "eliphaz"
+      },
+      {
+        "surface": "Reuel",
+        "lemma": "reuel"
+      },
+      {
+        "surface": "Jeush",
+        "lemma": "yeush"
+      },
+      {
+        "surface": "Jalam",
+        "lemma": "yalam"
+      },
+      {
+        "surface": "and Korah",
+        "lemma": "qorach"
+      }
+    ],
+    "36": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Eliphaz",
+        "lemma": "eliphaz"
+      },
+      {
+        "surface": "Teman",
+        "lemma": "teman"
+      },
+      {
+        "surface": "Omar",
+        "lemma": "omar"
+      },
+      {
+        "surface": "Zepho",
+        "lemma": "tsepho"
+      },
+      {
+        "surface": "Gatam",
+        "lemma": "gatam"
+      },
+      {
+        "surface": "and Kenaz",
+        "lemma": "qenaz"
+      },
+      {
+        "surface": "and by Timna",
+        "lemma": "timna"
+      },
+      {
+        "surface": "Amalek",
+        "lemma": "amaleq"
+      }
+    ],
+    "37": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Reuel",
+        "lemma": "reuel"
+      },
+      {
+        "surface": "Nahath",
+        "lemma": "nachat"
+      },
+      {
+        "surface": "Zerah",
+        "lemma": "zerach"
+      },
+      {
+        "surface": "Shammah",
+        "lemma": "shammah"
+      },
+      {
+        "surface": "and Mizzah",
+        "lemma": "mizzah"
+      }
+    ],
+    "38": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Seir",
+        "lemma": "seir"
+      },
+      {
+        "surface": "Lotan",
+        "lemma": "lotan"
+      },
+      {
+        "surface": "Shobal",
+        "lemma": "shoval"
+      },
+      {
+        "surface": "Zibeon",
+        "lemma": "tsivon"
+      },
+      {
+        "surface": "Anah",
+        "lemma": "anah"
+      },
+      {
+        "surface": "Dishon",
+        "lemma": "dishon"
+      },
+      {
+        "surface": "Ezer",
+        "lemma": "etser"
+      },
+      {
+        "surface": "and Dishan",
+        "lemma": "dishan"
+      }
+    ],
+    "39": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Lotan",
+        "lemma": "lotan"
+      },
+      {
+        "surface": "Hori",
+        "lemma": "chori"
+      },
+      {
+        "surface": "and Homam",
+        "lemma": "homam"
+      },
+      {
+        "surface": "Timna",
+        "lemma": "timna"
+      },
+      {
+        "surface": "was Lotan’s",
+        "lemma": "lotan"
+      },
+      {
+        "surface": "sister",
+        "lemma": "achot"
+      }
+    ],
+    "40": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Shobal",
+        "lemma": "shoval"
+      },
+      {
+        "surface": "Alvan",
+        "lemma": "alvan"
+      },
+      {
+        "surface": "Manahath",
+        "lemma": "manachat"
+      },
+      {
+        "surface": "Ebal",
+        "lemma": "eval"
+      },
+      {
+        "surface": "Shepho",
+        "lemma": "shepho"
+      },
+      {
+        "surface": "and Onam",
+        "lemma": "onam"
+      },
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Zibeon",
+        "lemma": "tsivon"
+      },
+      {
+        "surface": "Aiah",
+        "lemma": "ayyah"
+      },
+      {
+        "surface": "and Anah",
+        "lemma": "anah"
+      }
+    ],
+    "41": [
+      {
+        "surface": "The son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Anah",
+        "lemma": "anah"
+      },
+      {
+        "surface": "Dishon",
+        "lemma": "dishon"
+      },
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Dishon",
+        "lemma": "dishon"
+      },
+      {
+        "surface": "Hemdan",
+        "lemma": "chamran"
+      },
+      {
+        "surface": "Eshban",
+        "lemma": "eshban"
+      },
+      {
+        "surface": "Ithran",
+        "lemma": "yitran"
+      },
+      {
+        "surface": "and Cheran",
+        "lemma": "keran"
+      }
+    ],
+    "42": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ezer",
+        "lemma": "etser"
+      },
+      {
+        "surface": "Bilhan",
+        "lemma": "bilhan"
+      },
+      {
+        "surface": "Zaavan",
+        "lemma": "zaavan"
+      },
+      {
+        "surface": "and Akan",
+        "lemma": "yaaqan"
+      },
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Dishan",
+        "lemma": "dishon"
+      },
+      {
+        "surface": "Uz",
+        "lemma": "uts"
+      },
+      {
+        "surface": "and Aran",
+        "lemma": "aran"
+      }
+    ],
+    "43": [
+      {
+        "surface": "the kings",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "reigned",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "in the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Edom",
+        "lemma": "edom"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "any king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "reigned",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "over the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Bela",
+        "lemma": "bela"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Beor",
+        "lemma": "beor"
+      },
+      {
+        "surface": "His city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "was named",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Dinhabah",
+        "lemma": "dinhavah"
+      }
+    ],
+    "44": [
+      {
+        "surface": "When Bela",
+        "lemma": "bela"
+      },
+      {
+        "surface": "died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "Jobab",
+        "lemma": "yovav"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Zerah",
+        "lemma": "zerach"
+      },
+      {
+        "surface": "from Bozrah",
+        "lemma": "botsrah"
+      },
+      {
+        "surface": "reigned",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "in his place",
+        "lemma": "tachat"
+      }
+    ],
+    "45": [
+      {
+        "surface": "When Jobab",
+        "lemma": "yovav"
+      },
+      {
+        "surface": "died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "Husham",
+        "lemma": "chusham"
+      },
+      {
+        "surface": "from the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of the Temanites",
+        "lemma": "temani"
+      },
+      {
+        "surface": "reigned",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "in his place",
+        "lemma": "tachat"
+      }
+    ],
+    "46": [
+      {
+        "surface": "When Husham",
+        "lemma": "chusham"
+      },
+      {
+        "surface": "died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "Hadad",
+        "lemma": "hadad"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Bedad",
+        "lemma": "bedad"
+      },
+      {
+        "surface": "who defeated",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "Midian",
+        "lemma": "midyan"
+      },
+      {
+        "surface": "in the country",
+        "lemma": "saday"
+      },
+      {
+        "surface": "of Moab",
+        "lemma": "moav"
+      },
+      {
+        "surface": "reigned",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "in his place",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "And the name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of his city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "was Avith",
+        "lemma": "avit"
+      }
+    ],
+    "47": [
+      {
+        "surface": "When Hadad",
+        "lemma": "hadad"
+      },
+      {
+        "surface": "died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "Samlah",
+        "lemma": "samlah"
+      },
+      {
+        "surface": "from Masrekah",
+        "lemma": "masreqah"
+      },
+      {
+        "surface": "reigned",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "in his place",
+        "lemma": "tachat"
+      }
+    ],
+    "48": [
+      {
+        "surface": "When Samlah",
+        "lemma": "samlah"
+      },
+      {
+        "surface": "died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "Shaul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "from Rehoboth",
+        "lemma": "rechovot"
+      },
+      {
+        "surface": "on the Euphrates",
+        "lemma": "nahar"
+      },
+      {
+        "surface": "reigned",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "in his place",
+        "lemma": "tachat"
+      }
+    ],
+    "49": [
+      {
+        "surface": "When Shaul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "baalchanan"
+      },
+      {
+        "surface": "Baal-hanan",
+        "lemma": "baalchanan"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Achbor",
+        "lemma": "akhbor"
+      },
+      {
+        "surface": "reigned",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "in his place",
+        "lemma": "tachat"
+      }
+    ],
+    "50": [
+      {
+        "surface": "vvv",
+        "lemma": "baalchanan"
+      },
+      {
+        "surface": "When Baal-hanan",
+        "lemma": "baalchanan"
+      },
+      {
+        "surface": "died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "Hadad",
+        "lemma": "hadad"
+      },
+      {
+        "surface": "reigned",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "in his place",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "His city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "was named",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Pau",
+        "lemma": "pau"
+      },
+      {
+        "surface": "and his wife’s",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "was Mehetabel",
+        "lemma": "mehetavel"
+      },
+      {
+        "surface": "daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of Matred",
+        "lemma": "matred"
+      },
+      {
+        "surface": "the daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "mezahav"
+      },
+      {
+        "surface": "of Me-zahab",
+        "lemma": "mezahav"
+      }
+    ],
+    "51": [
+      {
+        "surface": "Then Hadad",
+        "lemma": "hadad"
+      },
+      {
+        "surface": "died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "Now the chiefs",
+        "lemma": "alluph"
+      },
+      {
+        "surface": "of Edom were",
+        "lemma": "edom"
+      },
+      {
+        "surface": "Timna",
+        "lemma": "timna"
+      },
+      {
+        "surface": "Alvah",
+        "lemma": "alvah"
+      },
+      {
+        "surface": "Jetheth",
+        "lemma": "yetet"
+      }
+    ],
+    "52": [
+      {
+        "surface": "Oholibamah",
+        "lemma": "hoolivamah"
+      },
+      {
+        "surface": "Elah",
+        "lemma": "elah"
+      },
+      {
+        "surface": "Pinon",
+        "lemma": "pinon"
+      }
+    ],
+    "53": [
+      {
+        "surface": "Kenaz",
+        "lemma": "qenaz"
+      },
+      {
+        "surface": "Teman",
+        "lemma": "teman"
+      },
+      {
+        "surface": "Mibzar",
+        "lemma": "mivtsar"
+      }
+    ],
+    "54": [
+      {
+        "surface": "Magdiel",
+        "lemma": "magdiel"
+      },
+      {
+        "surface": "and Iram",
+        "lemma": "iram"
+      },
+      {
+        "surface": "were the chiefs",
+        "lemma": "alluph"
+      },
+      {
+        "surface": "of Edom",
+        "lemma": "edom"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "yalad",
+    "shem",
+    "malakh"
+  ]
+}

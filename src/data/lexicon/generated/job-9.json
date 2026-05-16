@@ -1,0 +1,747 @@
+{
+  "bookId": 18,
+  "book": "Job",
+  "chapter": 9,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then Job",
+        "lemma": "iyyov"
+      },
+      {
+        "surface": "answered",
+        "lemma": "un"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Yes",
+        "lemma": "omnam"
+      },
+      {
+        "surface": "I know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "it is so",
+        "lemma": "ken"
+      },
+      {
+        "surface": "but how",
+        "lemma": "mah"
+      },
+      {
+        "surface": "can a mortal",
+        "lemma": "enosh"
+      },
+      {
+        "surface": "be righteous",
+        "lemma": "tsadaq"
+      },
+      {
+        "surface": "God",
+        "lemma": "el"
+      }
+    ],
+    "3": [
+      {
+        "surface": "one wished",
+        "lemma": "chaphets"
+      },
+      {
+        "surface": "to contend",
+        "lemma": "riv"
+      },
+      {
+        "surface": "answer Him",
+        "lemma": "un"
+      },
+      {
+        "surface": "one time",
+        "lemma": "echad"
+      },
+      {
+        "surface": "a thousand",
+        "lemma": "eleph"
+      }
+    ],
+    "4": [
+      {
+        "surface": "God is wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "in heart",
+        "lemma": "levav"
+      },
+      {
+        "surface": "and mighty",
+        "lemma": "ammits"
+      },
+      {
+        "surface": "in strength",
+        "lemma": "koach"
+      },
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "has resisted",
+        "lemma": "qashah"
+      },
+      {
+        "surface": "and prospered",
+        "lemma": "salem"
+      }
+    ],
+    "5": [
+      {
+        "surface": "He moves",
+        "lemma": "ataq"
+      },
+      {
+        "surface": "mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "their knowledge",
+        "lemma": "yada"
+      },
+      {
+        "surface": "overturns them",
+        "lemma": "haphakh"
+      },
+      {
+        "surface": "in His anger",
+        "lemma": "aph"
+      }
+    ],
+    "6": [
+      {
+        "surface": "He shakes",
+        "lemma": "ragaz"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "from its place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "so that its foundations",
+        "lemma": "ammud"
+      },
+      {
+        "surface": "tremble",
+        "lemma": "palats"
+      }
+    ],
+    "7": [
+      {
+        "surface": "the sun",
+        "lemma": "cheres"
+      },
+      {
+        "surface": "to shine",
+        "lemma": "zarach"
+      },
+      {
+        "surface": "He seals off",
+        "lemma": "bead"
+      },
+      {
+        "surface": "the stars",
+        "lemma": "kokhav"
+      }
+    ],
+    "8": [
+      {
+        "surface": "He alone",
+        "lemma": "bad"
+      },
+      {
+        "surface": "stretches out",
+        "lemma": "natah"
+      },
+      {
+        "surface": "the heavens",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "and treads",
+        "lemma": "darakh"
+      },
+      {
+        "surface": "the waves",
+        "lemma": "bamah"
+      },
+      {
+        "surface": "of the sea",
+        "lemma": "yam"
+      }
+    ],
+    "9": [
+      {
+        "surface": "of the Bear",
+        "lemma": "ayish"
+      },
+      {
+        "surface": "and Orion",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "of the Pleiades",
+        "lemma": "kimah"
+      },
+      {
+        "surface": "and the constellations",
+        "lemma": "cheder"
+      },
+      {
+        "surface": "of the south",
+        "lemma": "teman"
+      }
+    ],
+    "10": [
+      {
+        "surface": "great things",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "searching out",
+        "lemma": "cheqer"
+      },
+      {
+        "surface": "and wonders",
+        "lemma": "pala"
+      },
+      {
+        "surface": "without",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "number",
+        "lemma": "mispar"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Were He",
+        "lemma": "hen"
+      },
+      {
+        "surface": "to pass",
+        "lemma": "avar"
+      },
+      {
+        "surface": "were He to move",
+        "lemma": "chalaph"
+      },
+      {
+        "surface": "recognize",
+        "lemma": "bin"
+      }
+    ],
+    "12": [
+      {
+        "surface": "If",
+        "lemma": "hen"
+      },
+      {
+        "surface": "He takes away",
+        "lemma": "chataph"
+      },
+      {
+        "surface": "who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "God",
+        "lemma": "eloah"
+      },
+      {
+        "surface": "His anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "the helpers",
+        "lemma": "azar"
+      },
+      {
+        "surface": "of Rahab",
+        "lemma": "rahav"
+      },
+      {
+        "surface": "cower",
+        "lemma": "shachach"
+      },
+      {
+        "surface": "beneath Him",
+        "lemma": "tachat"
+      }
+    ],
+    "14": [
+      {
+        "surface": "answer Him",
+        "lemma": "un"
+      },
+      {
+        "surface": "or choose",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "my arguments",
+        "lemma": "davar"
+      }
+    ],
+    "15": [
+      {
+        "surface": "I were right",
+        "lemma": "tsadaq"
+      },
+      {
+        "surface": "answer",
+        "lemma": "un"
+      },
+      {
+        "surface": "I could only beg my Judge",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "for mercy",
+        "lemma": "chanan"
+      }
+    ],
+    "16": [
+      {
+        "surface": "and He answered me",
+        "lemma": "un"
+      },
+      {
+        "surface": "believe",
+        "lemma": "aman"
+      },
+      {
+        "surface": "He would listen",
+        "lemma": "azan"
+      },
+      {
+        "surface": "to my voice",
+        "lemma": "qol"
+      }
+    ],
+    "17": [
+      {
+        "surface": "He would crush me",
+        "lemma": "shuph"
+      },
+      {
+        "surface": "with a tempest",
+        "lemma": "searah"
+      },
+      {
+        "surface": "and multiply",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "my wounds",
+        "lemma": "petsa"
+      },
+      {
+        "surface": "without cause",
+        "lemma": "chinnam"
+      }
+    ],
+    "18": [
+      {
+        "surface": "my breath",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "overwhelms me",
+        "lemma": "sava"
+      },
+      {
+        "surface": "with bitterness",
+        "lemma": "mamror"
+      }
+    ],
+    "19": [
+      {
+        "surface": "it is a matter of strength",
+        "lemma": "koach"
+      },
+      {
+        "surface": "He is indeed",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "mighty",
+        "lemma": "ammits"
+      },
+      {
+        "surface": "it is a matter of justice",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "can summon Him",
+        "lemma": "yaad"
+      }
+    ],
+    "20": [
+      {
+        "surface": "I were righteous",
+        "lemma": "tsadaq"
+      },
+      {
+        "surface": "my mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "would condemn me",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "were blameless",
+        "lemma": "tam"
+      },
+      {
+        "surface": "it would declare me guilty",
+        "lemma": "aqash"
+      }
+    ],
+    "21": [
+      {
+        "surface": "am blameless",
+        "lemma": "tam"
+      },
+      {
+        "surface": "concern",
+        "lemma": "yada"
+      },
+      {
+        "surface": "for myself",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "I despise",
+        "lemma": "maas"
+      },
+      {
+        "surface": "my own life",
+        "lemma": "chay"
+      }
+    ],
+    "22": [
+      {
+        "surface": "is all the same",
+        "lemma": "echad"
+      },
+      {
+        "surface": "destroys",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "both the blameless",
+        "lemma": "tam"
+      },
+      {
+        "surface": "and the wicked",
+        "lemma": "rasah"
+      }
+    ],
+    "23": [
+      {
+        "surface": "the scourge",
+        "lemma": "shot"
+      },
+      {
+        "surface": "brings sudden",
+        "lemma": "pitom"
+      },
+      {
+        "surface": "death",
+        "lemma": "mut"
+      },
+      {
+        "surface": "He mocks",
+        "lemma": "laag"
+      },
+      {
+        "surface": "the despair",
+        "lemma": "massah"
+      },
+      {
+        "surface": "of the innocent",
+        "lemma": "naqi"
+      }
+    ],
+    "24": [
+      {
+        "surface": "The earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "into the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "He blindfolds",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "its judges",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "who",
+        "lemma": "mi"
+      }
+    ],
+    "25": [
+      {
+        "surface": "My days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "are swifter",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "a runner",
+        "lemma": "ruts"
+      },
+      {
+        "surface": "they flee",
+        "lemma": "barach"
+      },
+      {
+        "surface": "good",
+        "lemma": "tov"
+      }
+    ],
+    "26": [
+      {
+        "surface": "They sweep by",
+        "lemma": "chalaph"
+      },
+      {
+        "surface": "boats",
+        "lemma": "oniyyah"
+      },
+      {
+        "surface": "of papyrus",
+        "lemma": "eveh"
+      },
+      {
+        "surface": "like an eagle",
+        "lemma": "nesher"
+      },
+      {
+        "surface": "swooping down",
+        "lemma": "tus"
+      },
+      {
+        "surface": "its prey",
+        "lemma": "okhel"
+      }
+    ],
+    "27": [
+      {
+        "surface": "I will forget",
+        "lemma": "shakhach"
+      },
+      {
+        "surface": "my complaint",
+        "lemma": "siach"
+      },
+      {
+        "surface": "and change",
+        "lemma": "azav"
+      },
+      {
+        "surface": "my expression",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "and smile",
+        "lemma": "balag"
+      }
+    ],
+    "28": [
+      {
+        "surface": "I would still dread",
+        "lemma": "yagor"
+      },
+      {
+        "surface": "my sufferings",
+        "lemma": "atstsevet"
+      },
+      {
+        "surface": "I know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "acquit me",
+        "lemma": "naqah"
+      }
+    ],
+    "29": [
+      {
+        "surface": "already found guilty",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "should I labor",
+        "lemma": "yaga"
+      },
+      {
+        "surface": "in vain",
+        "lemma": "hevel"
+      }
+    ],
+    "30": [
+      {
+        "surface": "I should wash",
+        "lemma": "rachats"
+      },
+      {
+        "surface": "with snow",
+        "lemma": "sheleg"
+      },
+      {
+        "surface": "and cleanse",
+        "lemma": "zakhakh"
+      },
+      {
+        "surface": "my hands",
+        "lemma": "kaph"
+      },
+      {
+        "surface": "with lye",
+        "lemma": "bor"
+      }
+    ],
+    "31": [
+      {
+        "surface": "You would plunge me",
+        "lemma": "taval"
+      },
+      {
+        "surface": "into the pit",
+        "lemma": "shachat"
+      },
+      {
+        "surface": "and even my own clothes",
+        "lemma": "salmah"
+      },
+      {
+        "surface": "would despise me",
+        "lemma": "taav"
+      }
+    ],
+    "32": [
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "that I can answer Him",
+        "lemma": "un"
+      },
+      {
+        "surface": "that we can take",
+        "lemma": "yachad"
+      },
+      {
+        "surface": "to court",
+        "lemma": "mishpat"
+      }
+    ],
+    "33": [
+      {
+        "surface": "is there",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "a mediator",
+        "lemma": "yakhach"
+      },
+      {
+        "surface": "between us",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "to lay",
+        "lemma": "shit"
+      },
+      {
+        "surface": "his hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "both",
+        "lemma": "shenayim"
+      }
+    ],
+    "34": [
+      {
+        "surface": "Let Him remove",
+        "lemma": "sur"
+      },
+      {
+        "surface": "His rod",
+        "lemma": "shevet"
+      },
+      {
+        "surface": "so that His terror",
+        "lemma": "emah"
+      },
+      {
+        "surface": "longer frighten me",
+        "lemma": "baat"
+      }
+    ],
+    "35": [
+      {
+        "surface": "Then I would speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "fear of Him",
+        "lemma": "yare"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "un",
+    "mi",
+    "yada"
+  ]
+}

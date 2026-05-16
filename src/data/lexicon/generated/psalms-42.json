@@ -1,0 +1,439 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 42,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "For the choirmaster",
+        "lemma": "natsach"
+      },
+      {
+        "surface": "A Maskil",
+        "lemma": "maskil"
+      },
+      {
+        "surface": "of the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Korah",
+        "lemma": "qorach"
+      },
+      {
+        "surface": "As the deer",
+        "lemma": "ayyal"
+      },
+      {
+        "surface": "pants",
+        "lemma": "arag"
+      },
+      {
+        "surface": "streams",
+        "lemma": "aphiq"
+      },
+      {
+        "surface": "of water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "so",
+        "lemma": "ken"
+      },
+      {
+        "surface": "my soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "longs",
+        "lemma": "arag"
+      },
+      {
+        "surface": "O God",
+        "lemma": "elohim"
+      }
+    ],
+    "2": [
+      {
+        "surface": "My soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "thirsts",
+        "lemma": "tsame"
+      },
+      {
+        "surface": "for God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the living",
+        "lemma": "chay"
+      },
+      {
+        "surface": "God",
+        "lemma": "el"
+      },
+      {
+        "surface": "When",
+        "lemma": "matay"
+      },
+      {
+        "surface": "in",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "God’s presence",
+        "lemma": "elohim"
+      }
+    ],
+    "3": [
+      {
+        "surface": "My tears",
+        "lemma": "dimah"
+      },
+      {
+        "surface": "food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "both day",
+        "lemma": "yomam"
+      },
+      {
+        "surface": "and night",
+        "lemma": "laylah"
+      },
+      {
+        "surface": "Where",
+        "lemma": "ayyeh"
+      },
+      {
+        "surface": "is your God",
+        "lemma": "elohim"
+      }
+    ],
+    "4": [
+      {
+        "surface": "come to mind",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "as I pour out",
+        "lemma": "shaphakh"
+      },
+      {
+        "surface": "my soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "I walked",
+        "lemma": "avar"
+      },
+      {
+        "surface": "with the multitude",
+        "lemma": "sakh"
+      },
+      {
+        "surface": "leading",
+        "lemma": "dadah"
+      },
+      {
+        "surface": "the festive",
+        "lemma": "hamon"
+      },
+      {
+        "surface": "procession",
+        "lemma": "chagag"
+      },
+      {
+        "surface": "the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "with shouts",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of joy",
+        "lemma": "rinnah"
+      },
+      {
+        "surface": "and praise",
+        "lemma": "todah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "are you downcast",
+        "lemma": "shachach"
+      },
+      {
+        "surface": "O my soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "Why the unease",
+        "lemma": "hamah"
+      },
+      {
+        "surface": "Put your hope",
+        "lemma": "yachal"
+      },
+      {
+        "surface": "in God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "I will yet",
+        "lemma": "od"
+      },
+      {
+        "surface": "praise Him",
+        "lemma": "yadah"
+      },
+      {
+        "surface": "for the salvation",
+        "lemma": "yeshuah"
+      },
+      {
+        "surface": "of His presence",
+        "lemma": "paneh"
+      }
+    ],
+    "6": [
+      {
+        "surface": "O my God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "my soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "despairs",
+        "lemma": "shachach"
+      },
+      {
+        "surface": "I remember You",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "from the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Jordan",
+        "lemma": "yarden"
+      },
+      {
+        "surface": "and the peaks of Hermon",
+        "lemma": "chermonim"
+      },
+      {
+        "surface": "even from Mount",
+        "lemma": "har"
+      },
+      {
+        "surface": "Mizar",
+        "lemma": "mitsar"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Deep",
+        "lemma": "tehom"
+      },
+      {
+        "surface": "deep",
+        "lemma": "tehom"
+      },
+      {
+        "surface": "in the roar",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of Your waterfalls",
+        "lemma": "tsinnur"
+      },
+      {
+        "surface": "Your breakers",
+        "lemma": "mishbar"
+      },
+      {
+        "surface": "and waves",
+        "lemma": "gal"
+      },
+      {
+        "surface": "have rolled",
+        "lemma": "avar"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "decrees",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "His loving devotion",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "by day",
+        "lemma": "yomam"
+      },
+      {
+        "surface": "and at night",
+        "lemma": "laylah"
+      },
+      {
+        "surface": "His song",
+        "lemma": "shir"
+      },
+      {
+        "surface": "as a prayer",
+        "lemma": "tephillah"
+      },
+      {
+        "surface": "to the God",
+        "lemma": "el"
+      },
+      {
+        "surface": "of my life",
+        "lemma": "chay"
+      }
+    ],
+    "9": [
+      {
+        "surface": "to God",
+        "lemma": "el"
+      },
+      {
+        "surface": "my Rock",
+        "lemma": "sela"
+      },
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "have You forgotten me",
+        "lemma": "shakhach"
+      },
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "must I walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "in sorrow",
+        "lemma": "qadar"
+      },
+      {
+        "surface": "because of the enemy’s",
+        "lemma": "oyev"
+      },
+      {
+        "surface": "oppression",
+        "lemma": "lachats"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Like the crushing",
+        "lemma": "retsach"
+      },
+      {
+        "surface": "of my bones",
+        "lemma": "etsem"
+      },
+      {
+        "surface": "my enemies",
+        "lemma": "tsarar"
+      },
+      {
+        "surface": "taunt me",
+        "lemma": "charaph"
+      },
+      {
+        "surface": "day long",
+        "lemma": "yom"
+      },
+      {
+        "surface": "Where",
+        "lemma": "ayyeh"
+      },
+      {
+        "surface": "is your God",
+        "lemma": "elohim"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "are you downcast",
+        "lemma": "shachach"
+      },
+      {
+        "surface": "O my soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "the unease",
+        "lemma": "hamah"
+      },
+      {
+        "surface": "Put your hope",
+        "lemma": "yachal"
+      },
+      {
+        "surface": "in God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "I will yet",
+        "lemma": "od"
+      },
+      {
+        "surface": "praise Him",
+        "lemma": "yadah"
+      },
+      {
+        "surface": "my Savior",
+        "lemma": "yeshuah"
+      },
+      {
+        "surface": "and my God",
+        "lemma": "elohim"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "nephesh",
+    "mah",
+    "shachach"
+  ]
+}

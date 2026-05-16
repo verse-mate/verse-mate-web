@@ -1,0 +1,1395 @@
+{
+  "bookId": 3,
+  "book": "Leviticus",
+  "chapter": 11,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "spoke again",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "and Aaron",
+        "lemma": "haaron"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Say",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the beasts",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "these ones",
+        "lemma": "chay"
+      },
+      {
+        "surface": "you may eat",
+        "lemma": "akhal"
+      }
+    ],
+    "3": [
+      {
+        "surface": "You may eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "animal",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "that has a split",
+        "lemma": "shesa"
+      },
+      {
+        "surface": "hoof",
+        "lemma": "parsah"
+      },
+      {
+        "surface": "completely divided",
+        "lemma": "shasa"
+      },
+      {
+        "surface": "and that chews",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the cud",
+        "lemma": "gerah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "But",
+        "lemma": "akh"
+      },
+      {
+        "surface": "that only chew",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the cud",
+        "lemma": "gerah"
+      },
+      {
+        "surface": "or only have a divided",
+        "lemma": "paras"
+      },
+      {
+        "surface": "hoof",
+        "lemma": "parsah"
+      },
+      {
+        "surface": "to eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "The camel",
+        "lemma": "gamal"
+      },
+      {
+        "surface": "chews",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the cud",
+        "lemma": "gerah"
+      },
+      {
+        "surface": "does not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "have a divided",
+        "lemma": "paras"
+      },
+      {
+        "surface": "hoof",
+        "lemma": "parsah"
+      },
+      {
+        "surface": "is unclean",
+        "lemma": "tame"
+      }
+    ],
+    "5": [
+      {
+        "surface": "The rock badger",
+        "lemma": "shaphan"
+      },
+      {
+        "surface": "chews",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the cud",
+        "lemma": "gerah"
+      },
+      {
+        "surface": "have a divided",
+        "lemma": "paras"
+      },
+      {
+        "surface": "hoof",
+        "lemma": "parsah"
+      },
+      {
+        "surface": "is unclean",
+        "lemma": "tame"
+      }
+    ],
+    "6": [
+      {
+        "surface": "The rabbit",
+        "lemma": "arnevet"
+      },
+      {
+        "surface": "chews",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the cud",
+        "lemma": "gerah"
+      },
+      {
+        "surface": "have a divided",
+        "lemma": "paras"
+      },
+      {
+        "surface": "hoof",
+        "lemma": "parsah"
+      },
+      {
+        "surface": "is unclean",
+        "lemma": "tame"
+      }
+    ],
+    "7": [
+      {
+        "surface": "the pig",
+        "lemma": "chazir"
+      },
+      {
+        "surface": "a split",
+        "lemma": "shesa"
+      },
+      {
+        "surface": "hoof",
+        "lemma": "parsah"
+      },
+      {
+        "surface": "completely divided",
+        "lemma": "paras"
+      },
+      {
+        "surface": "chew",
+        "lemma": "garar"
+      },
+      {
+        "surface": "the cud",
+        "lemma": "gerah"
+      },
+      {
+        "surface": "unclean",
+        "lemma": "tame"
+      }
+    ],
+    "8": [
+      {
+        "surface": "You must not eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "their meat",
+        "lemma": "basar"
+      },
+      {
+        "surface": "or touch",
+        "lemma": "naga"
+      },
+      {
+        "surface": "their carcasses",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "are unclean",
+        "lemma": "tame"
+      }
+    ],
+    "9": [
+      {
+        "surface": "in the water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "whether in the seas",
+        "lemma": "yam"
+      },
+      {
+        "surface": "or in the streams",
+        "lemma": "nachal"
+      },
+      {
+        "surface": "you may eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "with fins",
+        "lemma": "senappir"
+      },
+      {
+        "surface": "and scales",
+        "lemma": "qasqeset"
+      }
+    ],
+    "10": [
+      {
+        "surface": "the teeming",
+        "lemma": "sherets"
+      },
+      {
+        "surface": "life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "and creatures",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "in the water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "are detestable",
+        "lemma": "sheqets"
+      },
+      {
+        "surface": "in the seas",
+        "lemma": "yam"
+      },
+      {
+        "surface": "or streams",
+        "lemma": "nachal"
+      },
+      {
+        "surface": "does not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "have fins",
+        "lemma": "senappir"
+      },
+      {
+        "surface": "and scales",
+        "lemma": "qasqeset"
+      }
+    ],
+    "11": [
+      {
+        "surface": "an abomination",
+        "lemma": "sheqets"
+      },
+      {
+        "surface": "eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "their meat",
+        "lemma": "basar"
+      },
+      {
+        "surface": "and you must detest",
+        "lemma": "shaqats"
+      },
+      {
+        "surface": "their carcasses",
+        "lemma": "nevelah"
+      }
+    ],
+    "12": [
+      {
+        "surface": "in the water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "does not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "fins",
+        "lemma": "senappir"
+      },
+      {
+        "surface": "and scales",
+        "lemma": "qasqeset"
+      },
+      {
+        "surface": "shall be detestable",
+        "lemma": "sheqets"
+      }
+    ],
+    "13": [
+      {
+        "surface": "you are to detest",
+        "lemma": "shaqats"
+      },
+      {
+        "surface": "birds",
+        "lemma": "oph"
+      },
+      {
+        "surface": "be eaten",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "are detestable",
+        "lemma": "sheqets"
+      },
+      {
+        "surface": "the eagle",
+        "lemma": "nesher"
+      },
+      {
+        "surface": "the bearded vulture",
+        "lemma": "peres"
+      },
+      {
+        "surface": "the black vulture",
+        "lemma": "ozniyyah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "the kite",
+        "lemma": "daah"
+      },
+      {
+        "surface": "any kind",
+        "lemma": "min"
+      },
+      {
+        "surface": "of falcon",
+        "lemma": "ayyah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "kind",
+        "lemma": "min"
+      },
+      {
+        "surface": "of raven",
+        "lemma": "orev"
+      }
+    ],
+    "16": [
+      {
+        "surface": "vvv",
+        "lemma": "bat"
+      },
+      {
+        "surface": "the ostrich",
+        "lemma": "yaanah"
+      },
+      {
+        "surface": "the screech owl",
+        "lemma": "tachmas"
+      },
+      {
+        "surface": "the gull",
+        "lemma": "shachaph"
+      },
+      {
+        "surface": "any kind",
+        "lemma": "min"
+      },
+      {
+        "surface": "of hawk",
+        "lemma": "nets"
+      }
+    ],
+    "17": [
+      {
+        "surface": "the little owl",
+        "lemma": "kos"
+      },
+      {
+        "surface": "the cormorant",
+        "lemma": "shalakh"
+      },
+      {
+        "surface": "the great owl",
+        "lemma": "yanshuph"
+      }
+    ],
+    "18": [
+      {
+        "surface": "the white owl",
+        "lemma": "tanshemet"
+      },
+      {
+        "surface": "the desert owl",
+        "lemma": "qaat"
+      },
+      {
+        "surface": "the osprey",
+        "lemma": "racham"
+      }
+    ],
+    "19": [
+      {
+        "surface": "the stork",
+        "lemma": "chasidah"
+      },
+      {
+        "surface": "any kind",
+        "lemma": "min"
+      },
+      {
+        "surface": "of heron",
+        "lemma": "anaphah"
+      },
+      {
+        "surface": "the hoopoe",
+        "lemma": "dukhiphat"
+      },
+      {
+        "surface": "the bat",
+        "lemma": "atalleph"
+      }
+    ],
+    "20": [
+      {
+        "surface": "flying",
+        "lemma": "oph"
+      },
+      {
+        "surface": "insects",
+        "lemma": "sherets"
+      },
+      {
+        "surface": "that walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "all fours",
+        "lemma": "arba"
+      },
+      {
+        "surface": "are detestable",
+        "lemma": "sheqets"
+      }
+    ],
+    "21": [
+      {
+        "surface": "However",
+        "lemma": "akh"
+      },
+      {
+        "surface": "you may eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "flying",
+        "lemma": "oph"
+      },
+      {
+        "surface": "insects",
+        "lemma": "sherets"
+      },
+      {
+        "surface": "that walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "all fours",
+        "lemma": "arba"
+      },
+      {
+        "surface": "having jointed legs",
+        "lemma": "kara"
+      },
+      {
+        "surface": "above",
+        "lemma": "maal"
+      },
+      {
+        "surface": "their feet",
+        "lemma": "regel"
+      },
+      {
+        "surface": "for hopping",
+        "lemma": "natar"
+      },
+      {
+        "surface": "the ground",
+        "lemma": "erets"
+      }
+    ],
+    "22": [
+      {
+        "surface": "you may eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "any kind",
+        "lemma": "min"
+      },
+      {
+        "surface": "of locust",
+        "lemma": "arbeh"
+      },
+      {
+        "surface": "katydid",
+        "lemma": "solam"
+      },
+      {
+        "surface": "cricket",
+        "lemma": "charegol"
+      },
+      {
+        "surface": "or grasshopper",
+        "lemma": "chagav"
+      }
+    ],
+    "23": [
+      {
+        "surface": "flying",
+        "lemma": "oph"
+      },
+      {
+        "surface": "insects",
+        "lemma": "sherets"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "legs",
+        "lemma": "regel"
+      },
+      {
+        "surface": "are detestable",
+        "lemma": "sheqets"
+      }
+    ],
+    "24": [
+      {
+        "surface": "will make you unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "touches",
+        "lemma": "naga"
+      },
+      {
+        "surface": "their carcasses",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      }
+    ],
+    "25": [
+      {
+        "surface": "picks up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "one of their carcasses",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "must wash",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "his clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and he will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      }
+    ],
+    "26": [
+      {
+        "surface": "animal",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "shesa"
+      },
+      {
+        "surface": "hooves",
+        "lemma": "parsah"
+      },
+      {
+        "surface": "not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "completely divided",
+        "lemma": "paras"
+      },
+      {
+        "surface": "or that does not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "chew",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the cud",
+        "lemma": "gerah"
+      },
+      {
+        "surface": "is unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "touches",
+        "lemma": "naga"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      }
+    ],
+    "27": [
+      {
+        "surface": "the four-footed",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "animals",
+        "lemma": "chay"
+      },
+      {
+        "surface": "that walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "their paws",
+        "lemma": "kaph"
+      },
+      {
+        "surface": "are unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "touches",
+        "lemma": "naga"
+      },
+      {
+        "surface": "their carcasses",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      }
+    ],
+    "28": [
+      {
+        "surface": "and anyone who picks up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "a carcass",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "must wash",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "his clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and he will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      },
+      {
+        "surface": "are unclean",
+        "lemma": "tame"
+      }
+    ],
+    "29": [
+      {
+        "surface": "creatures",
+        "lemma": "sherets"
+      },
+      {
+        "surface": "that move",
+        "lemma": "sharats"
+      },
+      {
+        "surface": "the ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "are unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "the mole",
+        "lemma": "choled"
+      },
+      {
+        "surface": "the mouse",
+        "lemma": "akhbar"
+      },
+      {
+        "surface": "any kind",
+        "lemma": "min"
+      },
+      {
+        "surface": "of great lizard",
+        "lemma": "tsav"
+      }
+    ],
+    "30": [
+      {
+        "surface": "the gecko",
+        "lemma": "anaqah"
+      },
+      {
+        "surface": "the monitor lizard",
+        "lemma": "koach"
+      },
+      {
+        "surface": "the common lizard",
+        "lemma": "letaah"
+      },
+      {
+        "surface": "the skink",
+        "lemma": "chomet"
+      },
+      {
+        "surface": "and the chameleon",
+        "lemma": "tanshemet"
+      }
+    ],
+    "31": [
+      {
+        "surface": "are unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "the crawling creatures",
+        "lemma": "sherets"
+      },
+      {
+        "surface": "touches",
+        "lemma": "naga"
+      },
+      {
+        "surface": "when they are dead",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "shall be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      }
+    ],
+    "32": [
+      {
+        "surface": "dies",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "and falls",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "that article becomes unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "article",
+        "lemma": "keli"
+      },
+      {
+        "surface": "of wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "clothing",
+        "lemma": "beged"
+      },
+      {
+        "surface": "leather",
+        "lemma": "or"
+      },
+      {
+        "surface": "sackcloth",
+        "lemma": "saq"
+      },
+      {
+        "surface": "implement",
+        "lemma": "keli"
+      },
+      {
+        "surface": "for work",
+        "lemma": "melakhah"
+      },
+      {
+        "surface": "must be rinsed with water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "and will remain unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      },
+      {
+        "surface": "then it will be clean",
+        "lemma": "taher"
+      }
+    ],
+    "33": [
+      {
+        "surface": "falls",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "clay",
+        "lemma": "cheres"
+      },
+      {
+        "surface": "pot",
+        "lemma": "keli"
+      },
+      {
+        "surface": "in",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "it will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "you must break the pot",
+        "lemma": "shavar"
+      }
+    ],
+    "34": [
+      {
+        "surface": "vvv",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "food",
+        "lemma": "okhel"
+      },
+      {
+        "surface": "with water from that pot",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "drink",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "container",
+        "lemma": "keli"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      }
+    ],
+    "35": [
+      {
+        "surface": "one of their carcasses",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "falls",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "If it is an oven",
+        "lemma": "tannur"
+      },
+      {
+        "surface": "or cooking pot",
+        "lemma": "kir"
+      },
+      {
+        "surface": "it must be smashed",
+        "lemma": "natats"
+      },
+      {
+        "surface": "is unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "unclean",
+        "lemma": "tame"
+      }
+    ],
+    "36": [
+      {
+        "surface": "Nevertheless",
+        "lemma": "akh"
+      },
+      {
+        "surface": "a spring",
+        "lemma": "mayan"
+      },
+      {
+        "surface": "or cistern",
+        "lemma": "bor"
+      },
+      {
+        "surface": "containing",
+        "lemma": "qoveh"
+      },
+      {
+        "surface": "water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "clean",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "but one who touches",
+        "lemma": "naga"
+      },
+      {
+        "surface": "a carcass in it",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      }
+    ],
+    "37": [
+      {
+        "surface": "a carcass",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "falls",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "seed",
+        "lemma": "zera"
+      },
+      {
+        "surface": "for sowing",
+        "lemma": "zerua"
+      },
+      {
+        "surface": "is clean",
+        "lemma": "tahor"
+      }
+    ],
+    "38": [
+      {
+        "surface": "water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "the seed",
+        "lemma": "zera"
+      },
+      {
+        "surface": "and a carcass",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "falls",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "is unclean",
+        "lemma": "tame"
+      }
+    ],
+    "39": [
+      {
+        "surface": "animal",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "may eat",
+        "lemma": "okhlah"
+      },
+      {
+        "surface": "dies",
+        "lemma": "mut"
+      },
+      {
+        "surface": "anyone who touches",
+        "lemma": "naga"
+      },
+      {
+        "surface": "the carcass",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      }
+    ],
+    "40": [
+      {
+        "surface": "Whoever eats",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "from the carcass",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "must wash",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "his clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      },
+      {
+        "surface": "and anyone who picks up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the carcass",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "must wash",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "his clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      }
+    ],
+    "41": [
+      {
+        "surface": "creature",
+        "lemma": "sherets"
+      },
+      {
+        "surface": "that moves",
+        "lemma": "sharats"
+      },
+      {
+        "surface": "the ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "is detestable",
+        "lemma": "sheqets"
+      },
+      {
+        "surface": "be eaten",
+        "lemma": "akhal"
+      }
+    ],
+    "42": [
+      {
+        "surface": "eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "any creature",
+        "lemma": "sherets"
+      },
+      {
+        "surface": "that moves",
+        "lemma": "sharats"
+      },
+      {
+        "surface": "the ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "it crawls",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "its belly",
+        "lemma": "gachon"
+      },
+      {
+        "surface": "walks",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "more",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "feet",
+        "lemma": "regel"
+      },
+      {
+        "surface": "are detestable",
+        "lemma": "sheqets"
+      }
+    ],
+    "43": [
+      {
+        "surface": "defile",
+        "lemma": "shaqats"
+      },
+      {
+        "surface": "yourselves",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "crawling creature",
+        "lemma": "sherets"
+      },
+      {
+        "surface": "become unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "or defiled",
+        "lemma": "tame"
+      }
+    ],
+    "44": [
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "consecrate yourselves, therefore",
+        "lemma": "qadash"
+      },
+      {
+        "surface": "holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "am holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "defile",
+        "lemma": "tame"
+      },
+      {
+        "surface": "yourselves",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "creature",
+        "lemma": "sherets"
+      },
+      {
+        "surface": "that crawls",
+        "lemma": "ramas"
+      },
+      {
+        "surface": "the ground",
+        "lemma": "erets"
+      }
+    ],
+    "45": [
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "who brought you up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "out of the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "am holy",
+        "lemma": "qadosh"
+      }
+    ],
+    "46": [
+      {
+        "surface": "is the law",
+        "lemma": "torah"
+      },
+      {
+        "surface": "regarding animals",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "birds",
+        "lemma": "oph"
+      },
+      {
+        "surface": "living",
+        "lemma": "chay"
+      },
+      {
+        "surface": "creatures",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "that move",
+        "lemma": "ramas"
+      },
+      {
+        "surface": "in the water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "creatures",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "that crawl",
+        "lemma": "sharats"
+      },
+      {
+        "surface": "the ground",
+        "lemma": "erets"
+      }
+    ],
+    "47": [
+      {
+        "surface": "You must distinguish",
+        "lemma": "badal"
+      },
+      {
+        "surface": "between",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "and the clean",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "between",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "animals",
+        "lemma": "chay"
+      },
+      {
+        "surface": "that may be eaten",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "and those",
+        "lemma": "chay"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "tame",
+    "akhal",
+    "nevelah"
+  ]
+}

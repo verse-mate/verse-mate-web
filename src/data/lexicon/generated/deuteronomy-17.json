@@ -1,0 +1,837 @@
+{
+  "bookId": 5,
+  "book": "Deuteronomy",
+  "chapter": 17,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "sacrifice",
+        "lemma": "zavach"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "an ox",
+        "lemma": "shor"
+      },
+      {
+        "surface": "or a sheep",
+        "lemma": "seh"
+      },
+      {
+        "surface": "with any defect",
+        "lemma": "mum"
+      },
+      {
+        "surface": "serious",
+        "lemma": "ra"
+      },
+      {
+        "surface": "flaw",
+        "lemma": "davar"
+      },
+      {
+        "surface": "is detestable",
+        "lemma": "toevah"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      }
+    ],
+    "2": [
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "woman",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "among you",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "in one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "of the towns",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "is found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "in the sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "by transgressing",
+        "lemma": "avar"
+      },
+      {
+        "surface": "His covenant",
+        "lemma": "berit"
+      }
+    ],
+    "3": [
+      {
+        "surface": "and going",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "to worship",
+        "lemma": "avad"
+      },
+      {
+        "surface": "other",
+        "lemma": "acher"
+      },
+      {
+        "surface": "gods",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "bowing down",
+        "lemma": "shachah"
+      },
+      {
+        "surface": "or to the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "moon",
+        "lemma": "yareach"
+      },
+      {
+        "surface": "of the host",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "of heaven",
+        "lemma": "shamayim"
+      }
+    ],
+    "4": [
+      {
+        "surface": "and if it is reported",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "you must investigate it",
+        "lemma": "darash"
+      },
+      {
+        "surface": "thoroughly",
+        "lemma": "yatav"
+      },
+      {
+        "surface": "If",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "the report",
+        "lemma": "davar"
+      },
+      {
+        "surface": "true",
+        "lemma": "emet"
+      },
+      {
+        "surface": "an abomination",
+        "lemma": "toevah"
+      },
+      {
+        "surface": "has happened in Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "5": [
+      {
+        "surface": "your gates",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "the man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "woman",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "thing",
+        "lemma": "davar"
+      },
+      {
+        "surface": "and you must stone that person",
+        "lemma": "saqal"
+      },
+      {
+        "surface": "to death",
+        "lemma": "mut"
+      }
+    ],
+    "6": [
+      {
+        "surface": "the testimony",
+        "lemma": "peh"
+      },
+      {
+        "surface": "of two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "witnesses",
+        "lemma": "ed"
+      },
+      {
+        "surface": "a man shall be put to death",
+        "lemma": "mut"
+      },
+      {
+        "surface": "be executed",
+        "lemma": "mut"
+      },
+      {
+        "surface": "the testimony",
+        "lemma": "peh"
+      },
+      {
+        "surface": "of a lone",
+        "lemma": "echad"
+      },
+      {
+        "surface": "witness",
+        "lemma": "ed"
+      }
+    ],
+    "7": [
+      {
+        "surface": "The hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of the witnesses",
+        "lemma": "ed"
+      },
+      {
+        "surface": "the first",
+        "lemma": "rishon"
+      },
+      {
+        "surface": "in putting him to death",
+        "lemma": "mut"
+      },
+      {
+        "surface": "and after that",
+        "lemma": "acharon"
+      },
+      {
+        "surface": "the hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "So you must purge",
+        "lemma": "baar"
+      },
+      {
+        "surface": "the evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "from among you",
+        "lemma": "qerev"
+      }
+    ],
+    "8": [
+      {
+        "surface": "a case",
+        "lemma": "davar"
+      },
+      {
+        "surface": "is too difficult",
+        "lemma": "pala"
+      },
+      {
+        "surface": "to judge",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "whether",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the controversy",
+        "lemma": "riv"
+      },
+      {
+        "surface": "within your gates",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "is regarding",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "bloodshed",
+        "lemma": "dam"
+      },
+      {
+        "surface": "lawsuits",
+        "lemma": "din"
+      },
+      {
+        "surface": "or assaults",
+        "lemma": "nega"
+      },
+      {
+        "surface": "you must go up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "will choose",
+        "lemma": "bachar"
+      }
+    ],
+    "9": [
+      {
+        "surface": "the Levitical",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "priests",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "the judge",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "time",
+        "lemma": "yom"
+      },
+      {
+        "surface": "Inquire of them",
+        "lemma": "darash"
+      },
+      {
+        "surface": "and they will give",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "a verdict",
+        "lemma": "davar"
+      },
+      {
+        "surface": "in the case",
+        "lemma": "maaseh"
+      }
+    ],
+    "10": [
+      {
+        "surface": "the verdict",
+        "lemma": "davar"
+      },
+      {
+        "surface": "they give",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will choose",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "Be careful",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "they instruct you",
+        "lemma": "yara"
+      }
+    ],
+    "11": [
+      {
+        "surface": "to the terms",
+        "lemma": "peh"
+      },
+      {
+        "surface": "of law",
+        "lemma": "torah"
+      },
+      {
+        "surface": "they give",
+        "lemma": "yara"
+      },
+      {
+        "surface": "and the verdict",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "turn aside",
+        "lemma": "sur"
+      },
+      {
+        "surface": "to the right",
+        "lemma": "yamin"
+      },
+      {
+        "surface": "or to the left",
+        "lemma": "semol"
+      },
+      {
+        "surface": "the decision",
+        "lemma": "davar"
+      },
+      {
+        "surface": "they declare",
+        "lemma": "nagad"
+      }
+    ],
+    "12": [
+      {
+        "surface": "But the man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "presumptuously",
+        "lemma": "zadon"
+      },
+      {
+        "surface": "refusing",
+        "lemma": "bilti"
+      },
+      {
+        "surface": "the priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "who stands",
+        "lemma": "amad"
+      },
+      {
+        "surface": "there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "to serve",
+        "lemma": "sharat"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the judge",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "must be put to death",
+        "lemma": "mut"
+      },
+      {
+        "surface": "You must purge",
+        "lemma": "baar"
+      },
+      {
+        "surface": "the evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "from Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "13": [
+      {
+        "surface": "the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "and be afraid",
+        "lemma": "yare"
+      },
+      {
+        "surface": "longer",
+        "lemma": "od"
+      },
+      {
+        "surface": "behave arrogantly",
+        "lemma": "zud"
+      }
+    ],
+    "14": [
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "and have taken possession of it",
+        "lemma": "yarash"
+      },
+      {
+        "surface": "Let us set",
+        "lemma": "sum"
+      },
+      {
+        "surface": "a king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "the nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "around us",
+        "lemma": "saviv"
+      }
+    ],
+    "15": [
+      {
+        "surface": "you are to appoint",
+        "lemma": "sum"
+      },
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "shall choose",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "Appoint",
+        "lemma": "sum"
+      },
+      {
+        "surface": "a king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "from among",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "your brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "a foreigner",
+        "lemma": "ish"
+      },
+      {
+        "surface": "one of your brothers",
+        "lemma": "ach"
+      }
+    ],
+    "16": [
+      {
+        "surface": "acquire many",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "horses",
+        "lemma": "sus"
+      },
+      {
+        "surface": "send the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "to Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "acquire more",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "horses",
+        "lemma": "sus"
+      },
+      {
+        "surface": "for the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "You are",
+        "lemma": "yasaph"
+      },
+      {
+        "surface": "way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "again",
+        "lemma": "od"
+      }
+    ],
+    "17": [
+      {
+        "surface": "take many",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "wives",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "his heart",
+        "lemma": "levav"
+      },
+      {
+        "surface": "go astray",
+        "lemma": "sur"
+      },
+      {
+        "surface": "accumulate",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "large amounts",
+        "lemma": "meod"
+      },
+      {
+        "surface": "of silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "and gold",
+        "lemma": "zahav"
+      }
+    ],
+    "18": [
+      {
+        "surface": "his royal",
+        "lemma": "mamlakhah"
+      },
+      {
+        "surface": "throne",
+        "lemma": "kisse"
+      },
+      {
+        "surface": "he must write",
+        "lemma": "katav"
+      },
+      {
+        "surface": "a copy",
+        "lemma": "mishneh"
+      },
+      {
+        "surface": "instruction",
+        "lemma": "torah"
+      },
+      {
+        "surface": "a scroll",
+        "lemma": "sepher"
+      },
+      {
+        "surface": "in the presence",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of the Levitical",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "priests",
+        "lemma": "kohen"
+      }
+    ],
+    "19": [
+      {
+        "surface": "the days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of his life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "he may learn",
+        "lemma": "lamad"
+      },
+      {
+        "surface": "to fear",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "his God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "by carefully observing",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "the words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "instruction",
+        "lemma": "torah"
+      },
+      {
+        "surface": "statutes",
+        "lemma": "choq"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Then his heart",
+        "lemma": "levav"
+      },
+      {
+        "surface": "will not",
+        "lemma": "bilti"
+      },
+      {
+        "surface": "be exalted",
+        "lemma": "rum"
+      },
+      {
+        "surface": "his countrymen",
+        "lemma": "ach"
+      },
+      {
+        "surface": "and he will not",
+        "lemma": "bilti"
+      },
+      {
+        "surface": "turn aside",
+        "lemma": "sur"
+      },
+      {
+        "surface": "from the commandment",
+        "lemma": "mitsvah"
+      },
+      {
+        "surface": "to the right",
+        "lemma": "yamin"
+      },
+      {
+        "surface": "or to the left",
+        "lemma": "semol"
+      },
+      {
+        "surface": "and his sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "may reign",
+        "lemma": "arakh"
+      },
+      {
+        "surface": "many years",
+        "lemma": "yom"
+      },
+      {
+        "surface": "his kingdom",
+        "lemma": "mamlakhah"
+      },
+      {
+        "surface": "in",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "ra",
+    "mut",
+    "ravah"
+  ]
+}
