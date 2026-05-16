@@ -40,10 +40,6 @@
     ],
     "2": [
       {
-        "surface": "He replied",
-        "lemma": "apokrino"
-      },
-      {
         "surface": "When evening",
         "lemma": "opsia"
       },
@@ -84,10 +80,6 @@
       {
         "surface": "and overcast",
         "lemma": "stugnazo"
-      },
-      {
-        "surface": "You know how",
-        "lemma": "ginosko"
       },
       {
         "surface": "to interpret",
@@ -136,14 +128,6 @@
         "lemma": "semeion"
       },
       {
-        "surface": "will be given",
-        "lemma": "didomi"
-      },
-      {
-        "surface": "except",
-        "lemma": "ei"
-      },
-      {
         "surface": "sign",
         "lemma": "semeion"
       },
@@ -170,26 +154,14 @@
         "lemma": "epilanthano"
       },
       {
-        "surface": "to take",
-        "lemma": "lambano"
-      },
-      {
         "surface": "bread",
         "lemma": "artos"
       }
     ],
     "6": [
       {
-        "surface": "Watch out",
-        "lemma": "horao"
-      },
-      {
         "surface": "Jesus",
         "lemma": "iesous"
-      },
-      {
-        "surface": "told",
-        "lemma": "eipon"
       },
       {
         "surface": "Beware",
@@ -214,34 +186,18 @@
         "lemma": "dialogizomai"
       },
       {
-        "surface": "we did not bring",
-        "lemma": "lambano"
-      },
-      {
         "surface": "any bread",
         "lemma": "artos"
       }
     ],
     "8": [
       {
-        "surface": "Aware of their conversation",
-        "lemma": "ginosko"
-      },
-      {
         "surface": "Jesus",
         "lemma": "iesous"
       },
       {
-        "surface": "said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "You of little faith",
         "lemma": "oligopistos"
-      },
-      {
-        "surface": "why",
-        "lemma": "tis"
       },
       {
         "surface": "are you debating",
@@ -280,10 +236,6 @@
       {
         "surface": "basketfuls",
         "lemma": "kophinos"
-      },
-      {
-        "surface": "you gathered",
-        "lemma": "lambano"
       }
     ],
     "10": [
@@ -302,20 +254,12 @@
       {
         "surface": "basketfuls",
         "lemma": "spuris"
-      },
-      {
-        "surface": "you gathered",
-        "lemma": "lambano"
       }
     ],
     "11": [
       {
         "surface": "do you not understand",
         "lemma": "noeo"
-      },
-      {
-        "surface": "I was not telling you",
-        "lemma": "eipon"
       },
       {
         "surface": "bread",
@@ -346,10 +290,6 @@
       {
         "surface": "they understood",
         "lemma": "suniemi"
-      },
-      {
-        "surface": "He was not telling them",
-        "lemma": "eipon"
       },
       {
         "surface": "to beware",
@@ -402,16 +342,12 @@
         "lemma": "mathetes"
       },
       {
-        "surface": "Who",
-        "lemma": "tis"
-      },
-      {
         "surface": "do} people",
         "lemma": "anthropos"
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "Man",
@@ -419,10 +355,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "They replied",
-        "lemma": "eipon"
-      },
       {
         "surface": "John",
         "lemma": "ioannes"
@@ -448,18 +380,8 @@
         "lemma": "hieremias"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "prophets",
         "lemma": "prophetes"
-      }
-    ],
-    "15": [
-      {
-        "surface": "Who",
-        "lemma": "tis"
       }
     ],
     "16": [
@@ -472,16 +394,12 @@
         "lemma": "petros"
       },
       {
-        "surface": "answered",
-        "lemma": "apokrino"
-      },
-      {
         "surface": "Christ",
         "lemma": "christos"
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "living",
@@ -496,10 +414,6 @@
       {
         "surface": "Jesus",
         "lemma": "iesous"
-      },
-      {
-        "surface": "replied",
-        "lemma": "apokrino"
       },
       {
         "surface": "Blessed",
@@ -523,7 +437,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "Father",
@@ -566,10 +480,6 @@
     ],
     "19": [
       {
-        "surface": "I will give",
-        "lemma": "didomi"
-      },
-      {
         "surface": "keys",
         "lemma": "kleis"
       },
@@ -580,10 +490,6 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "ean"
       },
       {
         "surface": "you bind",
@@ -632,10 +538,6 @@
         "lemma": "mathetes"
       },
       {
-        "surface": "not to tell anyone",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Christ",
         "lemma": "christos"
       }
@@ -676,10 +578,6 @@
       {
         "surface": "suffer",
         "lemma": "pascho"
-      },
-      {
-        "surface": "many things",
-        "lemma": "polus"
       },
       {
         "surface": "elders",
@@ -742,10 +640,6 @@
         "lemma": "strepho"
       },
       {
-        "surface": "and said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "to Peter",
         "lemma": "petros"
       },
@@ -788,20 +682,8 @@
         "lemma": "iesous"
       },
       {
-        "surface": "told",
-        "lemma": "eipon"
-      },
-      {
         "surface": "disciples",
         "lemma": "mathetes"
-      },
-      {
-        "surface": "If",
-        "lemma": "ei"
-      },
-      {
-        "surface": "wants",
-        "lemma": "thelo"
       },
       {
         "surface": "after",
@@ -826,14 +708,6 @@
     ],
     "25": [
       {
-        "surface": "vvv",
-        "lemma": "ean"
-      },
-      {
-        "surface": "wants",
-        "lemma": "thelo"
-      },
-      {
         "surface": "to save",
         "lemma": "sozo"
       },
@@ -852,17 +726,9 @@
       {
         "surface": "life",
         "lemma": "psuche"
-      },
-      {
-        "surface": "will find",
-        "lemma": "ehurisko"
       }
     ],
     "26": [
-      {
-        "surface": "What",
-        "lemma": "tis"
-      },
       {
         "surface": "will it profit",
         "lemma": "opheleo"
@@ -870,10 +736,6 @@
       {
         "surface": "a man",
         "lemma": "anthropos"
-      },
-      {
-        "surface": "if",
-        "lemma": "ean"
       },
       {
         "surface": "he gains",
@@ -896,16 +758,8 @@
         "lemma": "psuche"
       },
       {
-        "surface": "what",
-        "lemma": "tis"
-      },
-      {
         "surface": "can} a man",
         "lemma": "anthropos"
-      },
-      {
-        "surface": "give",
-        "lemma": "didomi"
       },
       {
         "surface": "in exchange for",
@@ -919,7 +773,7 @@
     "27": [
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "Man",
@@ -964,10 +818,6 @@
         "lemma": "amen"
       },
       {
-        "surface": "standing",
-        "lemma": "histemi"
-      },
-      {
         "surface": "here",
         "lemma": "hode"
       },
@@ -980,12 +830,8 @@
         "lemma": "thanatos"
       },
       {
-        "surface": "they see",
-        "lemma": "horao"
-      },
-      {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of Man",

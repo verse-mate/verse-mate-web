@@ -18,10 +18,6 @@
         "lemma": "sunedrion"
       },
       {
-        "surface": "and said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "vvv",
         "lemma": "aner"
       },
@@ -86,10 +82,6 @@
         "lemma": "paulos"
       },
       {
-        "surface": "said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -140,10 +132,6 @@
         "lemma": "paristemi"
       },
       {
-        "surface": "said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "How dare you insult",
         "lemma": "loidoreo"
       },
@@ -170,16 +158,8 @@
         "lemma": "phemi"
       },
       {
-        "surface": "I was not aware",
-        "lemma": "eido"
-      },
-      {
         "surface": "the high priest",
         "lemma": "archiereus"
-      },
-      {
-        "surface": "it is written",
-        "lemma": "grapho"
       },
       {
         "surface": "Do not speak",
@@ -202,14 +182,6 @@
       {
         "surface": "Paul",
         "lemma": "paulos"
-      },
-      {
-        "surface": "knowing",
-        "lemma": "ginosko"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "ehis"
       },
       {
         "surface": "some of them",
@@ -249,7 +221,7 @@
       },
       {
         "surface": "the son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of a Pharisee",
@@ -273,10 +245,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "had said this",
-        "lemma": "laleo"
-      },
       {
         "surface": "a dispute",
         "lemma": "stasis"
@@ -330,10 +298,6 @@
     ],
     "9": [
       {
-        "surface": "A great",
-        "lemma": "megas"
-      },
-      {
         "surface": "clamor",
         "lemma": "krauge"
       },
@@ -358,14 +322,6 @@
         "lemma": "diamachomai"
       },
       {
-        "surface": "We find",
-        "lemma": "ehurisko"
-      },
-      {
-        "surface": "nothing",
-        "lemma": "oudeis"
-      },
-      {
         "surface": "wrong",
         "lemma": "kakos"
       },
@@ -374,30 +330,18 @@
         "lemma": "anthropos"
       },
       {
-        "surface": "What if",
-        "lemma": "ei"
-      },
-      {
         "surface": "a spirit",
         "lemma": "pneuma"
       },
       {
         "surface": "an angel",
         "lemma": "angelos"
-      },
-      {
-        "surface": "has spoken",
-        "lemma": "laleo"
       }
     ],
     "10": [
       {
         "surface": "The dispute",
         "lemma": "stasis"
-      },
-      {
-        "surface": "so violent",
-        "lemma": "polus"
       },
       {
         "surface": "commander",
@@ -454,10 +398,6 @@
         "lemma": "ephistemi"
       },
       {
-        "surface": "and said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Take courage",
         "lemma": "tharseo"
       },
@@ -471,7 +411,7 @@
       },
       {
         "surface": "so",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "must",
@@ -519,7 +459,7 @@
     "13": [
       {
         "surface": "More than",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "forty of them",
@@ -542,10 +482,6 @@
       {
         "surface": "elders",
         "lemma": "presbuteros"
-      },
-      {
-        "surface": "and said",
-        "lemma": "eipon"
       },
       {
         "surface": "We have bound",
@@ -613,7 +549,7 @@
     "16": [
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of Paul’s",
@@ -622,10 +558,6 @@
       {
         "surface": "sister",
         "lemma": "adelphe"
-      },
-      {
-        "surface": "heard about",
-        "lemma": "akouo"
       },
       {
         "surface": "plot",
@@ -656,10 +588,6 @@
       {
         "surface": "called",
         "lemma": "proskaleo"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
       },
       {
         "surface": "centurions",
@@ -722,10 +650,6 @@
       {
         "surface": "young man",
         "lemma": "neaniskos"
-      },
-      {
-        "surface": "to tell",
-        "lemma": "laleo"
       }
     ],
     "19": [
@@ -754,19 +678,11 @@
         "lemma": "punthanomai"
       },
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
         "surface": "to tell",
         "lemma": "apangello"
       }
     ],
     "20": [
-      {
-        "surface": "He answered",
-        "lemma": "eipon"
-      },
       {
         "surface": "Jews",
         "lemma": "ioudaios"
@@ -811,7 +727,7 @@
       },
       {
         "surface": "more than",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "forty",
@@ -902,10 +818,6 @@
         "lemma": "hekatontarchos"
       },
       {
-        "surface": "and said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Prepare",
         "lemma": "hetoimazo"
       },
@@ -985,10 +897,6 @@
       }
     ],
     "25": [
-      {
-        "surface": "And he wrote",
-        "lemma": "grapho"
-      },
       {
         "surface": "letter",
         "lemma": "epistole"
@@ -1089,10 +997,6 @@
       }
     ],
     "29": [
-      {
-        "surface": "I found that",
-        "lemma": "ehurisko"
-      },
       {
         "surface": "the accusation",
         "lemma": "egkaleo"
@@ -1210,10 +1114,6 @@
     ],
     "33": [
       {
-        "surface": "arrived",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "Caesarea",
         "lemma": "kaisareia"
       },
@@ -1261,7 +1161,7 @@
       },
       {
         "surface": "Cilicia",
-        "lemma": "kilikiakilikia"
+        "lemma": "kilikia"
       }
     ],
     "35": [

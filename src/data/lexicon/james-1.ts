@@ -16,7 +16,7 @@ const VERSES: ChapterAlignment['verses'] = {
   1: [
     { surface: 'servant', lemma: 'doulos', contextual:
       'James calls himself a δοῦλος — total-ownership "bondservant," not a hired hand. The brother of Jesus opens by ceding any familial claim.' },
-    { surface: 'Lord', lemma: 'kyrios' },
+    { surface: 'Lord', lemma: 'kurios' },
   ],
   2: [
     { surface: 'brethren', lemma: 'adelphos' },
@@ -27,14 +27,14 @@ const VERSES: ChapterAlignment['verses'] = {
   3: [
     { surface: 'testing', lemma: 'dokimion', contextual:
       'The δοκίμιον is the assay — the refining process that proves whether a faith is genuine metal. The verse promises that this assay produces something.' },
-    { surface: 'steadfastness', lemma: 'hypomone', contextual:
+    { surface: 'steadfastness', lemma: 'hupomone', contextual:
       'Not Stoic resignation. ὑπομονή is active staying-power under weight — the muscle that bears up and keeps going.' },
-    { surface: 'endurance', lemma: 'hypomone', contextual:
+    { surface: 'endurance', lemma: 'hupomone', contextual:
       'Not Stoic resignation. ὑπομονή is active staying-power under weight — the muscle that bears up and keeps going.' },
   ],
   4: [
-    { surface: 'steadfastness', lemma: 'hypomone' },
-    { surface: 'endurance', lemma: 'hypomone' },
+    { surface: 'steadfastness', lemma: 'hupomone' },
+    { surface: 'endurance', lemma: 'hupomone' },
     { surface: 'perfect', lemma: 'teleios', contextual:
       'τέλειοι here means "having reached the goal you were made for" — mature, not flawless. James is describing arrival, not moral perfection.' },
     { surface: 'complete', lemma: 'holokleros', contextual:
@@ -52,10 +52,10 @@ const VERSES: ChapterAlignment['verses'] = {
     { surface: 'doubts', lemma: 'diakrino' },
   ],
   7: [
-    { surface: 'Lord', lemma: 'kyrios' },
+    { surface: 'Lord', lemma: 'kurios' },
   ],
   8: [
-    { surface: 'double-minded', lemma: 'dipsychos', contextual:
+    { surface: 'double-minded', lemma: 'dipsuchos', contextual:
       'δίψυχος — "two-souled." James appears to have coined this word; both NT uses are his. It names sustained divided loyalty, not a moment of indecision.' },
   ],
   9: [
@@ -81,11 +81,11 @@ const VERSES: ChapterAlignment['verses'] = {
   ],
   14: [
     { surface: 'tempted', lemma: 'peirazo' },
-    { surface: 'desire', lemma: 'epithymia', contextual:
+    { surface: 'desire', lemma: 'epithumia', contextual:
       'ἐπιθυμία in James is desire fixed on the wrong object — the inner force that "lures and entices." Not desire-as-such, but desire turned away from God.' },
   ],
   15: [
-    { surface: 'desire', lemma: 'epithymia' },
+    { surface: 'desire', lemma: 'epithumia' },
     { surface: 'sin', lemma: 'hamartia', contextual:
       'ἁμαρτία here completes the gestation metaphor — desire conceives, ἁμαρτία is born, θάνατος is the final birth. The chain is biological, not legal.' },
     { surface: 'death', lemma: 'thanatos' },
@@ -113,13 +113,13 @@ const VERSES: ChapterAlignment['verses'] = {
   20: [
     { surface: 'anger', lemma: 'orge', contextual:
       'ἀνδρὸς ὀργή — settled human wrath. James doesn\'t condemn all anger (cf. Eph 4:26); he denies that human ὀργή is the engine of God\'s δικαιοσύνη.' },
-    { surface: 'righteousness', lemma: 'dikaiosyne', contextual:
+    { surface: 'righteousness', lemma: 'dikaiosune', contextual:
       'δικαιοσύνη θεοῦ here keeps the relational/ethical register — the kind of right-with-God-and-neighbor life that human wrath cannot produce.' },
   ],
   21: [
     { surface: 'meekness', lemma: 'prautes', contextual:
       'πραΰτητι — strength under control, not weakness. Classical Greek used πραΰτης of horses broken to the bit: power held in restraint.' },
-    { surface: 'implanted', lemma: 'emphytos', contextual:
+    { surface: 'implanted', lemma: 'emphutos', contextual:
       'ἔμφυτος — "ingrafted, planted within." Hapax in the NT. Echoes Jeremiah\'s new covenant promise (Jer 31:33): the word written on the heart.' },
     { surface: 'word', lemma: 'logos' },
   ],
@@ -162,7 +162,7 @@ const VERSES: ChapterAlignment['verses'] = {
 // forms the 1:3–4 ↔ 5:11 inclusio), the coined diagnosis of divided loyalty
 // (δίψυχος), and the gospel that effects new birth + reshapes obedience
 // (λόγος). Other tappable words remain subtle.
-const THEME_LEMMAS = ['hypomone', 'dipsychos', 'logos'];
+const THEME_LEMMAS = ['hupomone', 'dipsuchos', 'logos'];
 
 export const JAMES_1_ALIGNMENT: ChapterAlignment = {
   bookId: 59,

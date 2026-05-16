@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "One",
-        "lemma": "ehis"
-      },
-      {
         "surface": "day",
         "lemma": "hemera"
       },
@@ -48,24 +44,12 @@
     ],
     "2": [
       {
-        "surface": "Tell",
-        "lemma": "eipon"
-      },
-      {
         "surface": "what",
         "lemma": "poios"
       },
       {
         "surface": "authority",
         "lemma": "exousia"
-      },
-      {
-        "surface": "who",
-        "lemma": "tis"
-      },
-      {
-        "surface": "gave",
-        "lemma": "didomi"
       },
       {
         "surface": "authority",
@@ -80,14 +64,6 @@
       {
         "surface": "a question",
         "lemma": "logos"
-      },
-      {
-        "surface": "Jesus replied",
-        "lemma": "eipon"
-      },
-      {
-        "surface": "Tell",
-        "lemma": "eipon"
       }
     ],
     "4": [
@@ -114,14 +90,6 @@
         "lemma": "sullogizomai"
       },
       {
-        "surface": "If",
-        "lemma": "ean"
-      },
-      {
-        "surface": "we say",
-        "lemma": "eipon"
-      },
-      {
         "surface": "heaven",
         "lemma": "ouranos"
       },
@@ -135,14 +103,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
-        "surface": "we say",
-        "lemma": "eipon"
-      },
       {
         "surface": "men",
         "lemma": "anthropos"
@@ -174,14 +134,6 @@
     ],
     "7": [
       {
-        "surface": "they answered that",
-        "lemma": "apokrino"
-      },
-      {
-        "surface": "they did not know",
-        "lemma": "eido"
-      },
-      {
         "surface": "where it was from",
         "lemma": "pothen"
       }
@@ -190,10 +142,6 @@
       {
         "surface": "Jesus",
         "lemma": "iesous"
-      },
-      {
-        "surface": "replied",
-        "lemma": "eipon"
       },
       {
         "surface": "what",
@@ -266,10 +214,6 @@
       {
         "surface": "tenants",
         "lemma": "georgos"
-      },
-      {
-        "surface": "collect",
-        "lemma": "didomi"
       },
       {
         "surface": "fruit",
@@ -354,14 +298,6 @@
     ],
     "13": [
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
-        "surface": "asked",
-        "lemma": "eipon"
-      },
-      {
         "surface": "owner",
         "lemma": "kurios"
       },
@@ -379,7 +315,7 @@
       },
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "Perhaps",
@@ -394,10 +330,6 @@
       {
         "surface": "tenants",
         "lemma": "georgos"
-      },
-      {
-        "surface": "saw",
-        "lemma": "horao"
       },
       {
         "surface": "they discussed it",
@@ -434,10 +366,6 @@
         "lemma": "apokteino"
       },
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
         "surface": "owner",
         "lemma": "kurios"
       },
@@ -456,42 +384,18 @@
         "lemma": "georgos"
       },
       {
-        "surface": "give",
-        "lemma": "didomi"
-      },
-      {
         "surface": "vineyard",
         "lemma": "ampelon"
       },
       {
         "surface": "to others",
         "lemma": "allos"
-      },
-      {
-        "surface": "when the people heard this",
-        "lemma": "akouo"
-      },
-      {
-        "surface": "they said",
-        "lemma": "eipon"
       }
     ],
     "17": [
       {
         "surface": "Jesus looked directly at",
         "lemma": "emblepo"
-      },
-      {
-        "surface": "and said",
-        "lemma": "eipon"
-      },
-      {
-        "surface": "what",
-        "lemma": "tis"
-      },
-      {
-        "surface": "is written",
-        "lemma": "grapho"
       },
       {
         "surface": "The stone",
@@ -540,14 +444,6 @@
       {
         "surface": "chief priests",
         "lemma": "archiereus"
-      },
-      {
-        "surface": "realized",
-        "lemma": "ginosko"
-      },
-      {
-        "surface": "Jesus had spoken",
-        "lemma": "eipon"
       },
       {
         "surface": "parable",
@@ -630,10 +526,6 @@
         "lemma": "eperotao"
       },
       {
-        "surface": "we know",
-        "lemma": "eido"
-      },
-      {
         "surface": "teach",
         "lemma": "didasko"
       },
@@ -661,11 +553,7 @@
     "22": [
       {
         "surface": "Is it lawful",
-        "lemma": "exestiexon"
-      },
-      {
-        "surface": "to pay",
-        "lemma": "didomi"
+        "lemma": "exesti"
       },
       {
         "surface": "taxes",
@@ -684,10 +572,6 @@
       {
         "surface": "duplicity",
         "lemma": "panourgia"
-      },
-      {
-        "surface": "and said",
-        "lemma": "eipon"
       }
     ],
     "24": [
@@ -700,10 +584,6 @@
         "lemma": "denarion"
       },
       {
-        "surface": "Whose",
-        "lemma": "tis"
-      },
-      {
         "surface": "image",
         "lemma": "eikon"
       },
@@ -714,17 +594,9 @@
       {
         "surface": "Caesar’s",
         "lemma": "kaisar"
-      },
-      {
-        "surface": "they answered",
-        "lemma": "eipon"
       }
     ],
     "25": [
-      {
-        "surface": "Jesus told",
-        "lemma": "eipon"
-      },
       {
         "surface": "Give",
         "lemma": "apodidomi"
@@ -805,15 +677,7 @@
       },
       {
         "surface": "Moses",
-        "lemma": "mousesmoses"
-      },
-      {
-        "surface": "wrote",
-        "lemma": "grapho"
-      },
-      {
-        "surface": "that if",
-        "lemma": "ean"
+        "lemma": "mouses"
       },
       {
         "surface": "brother",
@@ -834,10 +698,6 @@
       {
         "surface": "the man",
         "lemma": "adelphos"
-      },
-      {
-        "surface": "is to marry",
-        "lemma": "lambano"
       },
       {
         "surface": "widow",
@@ -870,10 +730,6 @@
         "lemma": "protos"
       },
       {
-        "surface": "married",
-        "lemma": "lambano"
-      },
-      {
         "surface": "a wife",
         "lemma": "gune"
       },
@@ -896,10 +752,6 @@
       {
         "surface": "third",
         "lemma": "tritos"
-      },
-      {
-        "surface": "married",
-        "lemma": "lambano"
       },
       {
         "surface": "in the same way",
@@ -942,10 +794,6 @@
         "lemma": "anastasis"
       },
       {
-        "surface": "whose",
-        "lemma": "tis"
-      },
-      {
         "surface": "wife",
         "lemma": "gune"
       },
@@ -964,12 +812,8 @@
         "lemma": "iesous"
       },
       {
-        "surface": "answered",
-        "lemma": "eipon"
-      },
-      {
         "surface": "sons",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "age",
@@ -981,7 +825,7 @@
       },
       {
         "surface": "are given in marriage",
-        "lemma": "gamiskogamizo"
+        "lemma": "gamisko"
       }
     ],
     "35": [
@@ -1011,14 +855,10 @@
       },
       {
         "surface": "be given in marriage",
-        "lemma": "gamiskogamizo"
+        "lemma": "gamisko"
       }
     ],
     "36": [
-      {
-        "surface": "they can",
-        "lemma": "dunamai"
-      },
       {
         "surface": "longer",
         "lemma": "eti"
@@ -1033,7 +873,7 @@
       },
       {
         "surface": "sons",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "resurrection",
@@ -1041,7 +881,7 @@
       },
       {
         "surface": "sons",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of God",
@@ -1051,7 +891,7 @@
     "37": [
       {
         "surface": "Moses",
-        "lemma": "mousesmoses"
+        "lemma": "mouses"
       },
       {
         "surface": "demonstrates",
@@ -1122,16 +962,8 @@
         "lemma": "grammateus"
       },
       {
-        "surface": "answered",
-        "lemma": "apokrino"
-      },
-      {
         "surface": "Teacher",
         "lemma": "didaskalos"
-      },
-      {
-        "surface": "You have spoken",
-        "lemma": "eipon"
       },
       {
         "surface": "well",
@@ -1146,34 +978,26 @@
       {
         "surface": "to question",
         "lemma": "eperotao"
-      },
-      {
-        "surface": "any further",
-        "lemma": "oudeis"
       }
     ],
     "41": [
-      {
-        "surface": "Jesus declared",
-        "lemma": "eipon"
-      },
       {
         "surface": "Christ",
         "lemma": "christos"
       },
       {
         "surface": "the Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of David",
-        "lemma": "daueiddauiddabid"
+        "lemma": "daueid"
       }
     ],
     "42": [
       {
         "surface": "David",
-        "lemma": "daueiddauiddabid"
+        "lemma": "daueid"
       },
       {
         "surface": "the book",
@@ -1186,10 +1010,6 @@
       {
         "surface": "The Lord",
         "lemma": "kurios"
-      },
-      {
-        "surface": "said",
-        "lemma": "eipon"
       },
       {
         "surface": "Lord",
@@ -1225,7 +1045,7 @@
     "44": [
       {
         "surface": "David",
-        "lemma": "daueiddauiddabid"
+        "lemma": "daueid"
       },
       {
         "surface": "calls",
@@ -1237,21 +1057,13 @@
       },
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       }
     ],
     "45": [
       {
-        "surface": "In the hearing",
-        "lemma": "akouo"
-      },
-      {
         "surface": "people",
         "lemma": "laos"
-      },
-      {
-        "surface": "Jesus said",
-        "lemma": "eipon"
       },
       {
         "surface": "disciples",
@@ -1266,10 +1078,6 @@
       {
         "surface": "scribes",
         "lemma": "grammateus"
-      },
-      {
-        "surface": "They like",
-        "lemma": "thelo"
       },
       {
         "surface": "to walk around",
@@ -1332,10 +1140,6 @@
       {
         "surface": "make lengthy prayers",
         "lemma": "makros"
-      },
-      {
-        "surface": "will receive",
-        "lemma": "lambano"
       },
       {
         "surface": "greater",

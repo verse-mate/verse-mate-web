@@ -16,10 +16,6 @@
       {
         "surface": "gathering around",
         "lemma": "engizo"
-      },
-      {
-        "surface": "to listen to",
-        "lemma": "akouo"
       }
     ],
     "2": [
@@ -50,19 +46,11 @@
     ],
     "3": [
       {
-        "surface": "Jesus told",
-        "lemma": "eipon"
-      },
-      {
         "surface": "parable",
         "lemma": "parabole"
       }
     ],
     "4": [
-      {
-        "surface": "What",
-        "lemma": "tis"
-      },
       {
         "surface": "man",
         "lemma": "anthropos"
@@ -78,10 +66,6 @@
       {
         "surface": "loses",
         "lemma": "apolluo"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
       },
       {
         "surface": "leave",
@@ -102,17 +86,9 @@
       {
         "surface": "that is lost",
         "lemma": "apolluo"
-      },
-      {
-        "surface": "he finds",
-        "lemma": "ehurisko"
       }
     ],
     "5": [
-      {
-        "surface": "when he finds it",
-        "lemma": "ehurisko"
-      },
       {
         "surface": "he joyfully puts it",
         "lemma": "epitithemi"
@@ -144,10 +120,6 @@
         "lemma": "sugchairo"
       },
       {
-        "surface": "I have found",
-        "lemma": "ehurisko"
-      },
-      {
         "surface": "lost",
         "lemma": "apolluo"
       },
@@ -159,7 +131,7 @@
     "7": [
       {
         "surface": "in the same way",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "joy",
@@ -168,10 +140,6 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
       },
       {
         "surface": "sinner",
@@ -200,10 +168,6 @@
     ],
     "8": [
       {
-        "surface": "what",
-        "lemma": "tis"
-      },
-      {
         "surface": "woman",
         "lemma": "gune"
       },
@@ -216,16 +180,8 @@
         "lemma": "drachme"
       },
       {
-        "surface": "and",
-        "lemma": "ean"
-      },
-      {
         "surface": "loses",
         "lemma": "apolluo"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
       },
       {
         "surface": "of them",
@@ -254,17 +210,9 @@
       {
         "surface": "carefully",
         "lemma": "epimelos"
-      },
-      {
-        "surface": "she finds",
-        "lemma": "ehurisko"
       }
     ],
     "9": [
-      {
-        "surface": "when she finds it",
-        "lemma": "ehurisko"
-      },
       {
         "surface": "she calls together",
         "lemma": "sugkaleo"
@@ -282,10 +230,6 @@
         "lemma": "sugchairo"
       },
       {
-        "surface": "I have found",
-        "lemma": "ehurisko"
-      },
-      {
         "surface": "lost",
         "lemma": "apolluo"
       },
@@ -297,7 +241,7 @@
     "10": [
       {
         "surface": "In the same way",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "joy",
@@ -312,10 +256,6 @@
         "lemma": "angelos"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "sinner",
         "lemma": "hamartolos"
       },
@@ -326,10 +266,6 @@
     ],
     "11": [
       {
-        "surface": "Jesus said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "man",
         "lemma": "anthropos"
       },
@@ -339,7 +275,7 @@
       },
       {
         "surface": "sons",
-        "lemma": "uhios"
+        "lemma": "huios"
       }
     ],
     "12": [
@@ -348,20 +284,12 @@
         "lemma": "neos"
       },
       {
-        "surface": "said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "him",
         "lemma": "pater"
       },
       {
         "surface": "Father",
         "lemma": "pater"
-      },
-      {
-        "surface": "give",
-        "lemma": "didomi"
       },
       {
         "surface": "my",
@@ -386,10 +314,6 @@
     ],
     "13": [
       {
-        "surface": "a few",
-        "lemma": "polus"
-      },
-      {
         "surface": "days",
         "lemma": "hemera"
       },
@@ -399,7 +323,7 @@
       },
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "got everything together",
@@ -474,10 +398,6 @@
         "lemma": "kollao"
       },
       {
-        "surface": "to a",
-        "lemma": "ehis"
-      },
-      {
         "surface": "citizen",
         "lemma": "polites"
       },
@@ -526,14 +446,6 @@
       {
         "surface": "were eating",
         "lemma": "esthio"
-      },
-      {
-        "surface": "no one",
-        "lemma": "oudeis"
-      },
-      {
-        "surface": "would give",
-        "lemma": "didomi"
       }
     ],
     "17": [
@@ -611,11 +523,7 @@
       },
       {
         "surface": "son",
-        "lemma": "uhios"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
+        "lemma": "huios"
       },
       {
         "surface": "hired servants",
@@ -648,10 +556,6 @@
         "lemma": "pater"
       },
       {
-        "surface": "saw",
-        "lemma": "horao"
-      },
-      {
         "surface": "was filled with compassion",
         "lemma": "splagchnizo"
       },
@@ -671,11 +575,7 @@
     "21": [
       {
         "surface": "son",
-        "lemma": "uhios"
-      },
-      {
-        "surface": "declared",
-        "lemma": "eipon"
+        "lemma": "huios"
       },
       {
         "surface": "Father",
@@ -699,17 +599,13 @@
       },
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       }
     ],
     "22": [
       {
         "surface": "father",
         "lemma": "pater"
-      },
-      {
-        "surface": "said",
-        "lemma": "eipon"
       },
       {
         "surface": "servants",
@@ -734,10 +630,6 @@
       {
         "surface": "put it on",
         "lemma": "enduo"
-      },
-      {
-        "surface": "Put",
-        "lemma": "didomi"
       },
       {
         "surface": "a ring",
@@ -785,7 +677,7 @@
     "24": [
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "dead",
@@ -798,10 +690,6 @@
       {
         "surface": "lost",
         "lemma": "apolluo"
-      },
-      {
-        "surface": "is found",
-        "lemma": "ehurisko"
       },
       {
         "surface": "they began",
@@ -819,7 +707,7 @@
       },
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "the field",
@@ -828,10 +716,6 @@
       {
         "surface": "house",
         "lemma": "oikia"
-      },
-      {
-        "surface": "he heard",
-        "lemma": "akouo"
       },
       {
         "surface": "music",
@@ -848,20 +732,12 @@
         "lemma": "proskaleo"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "servants",
         "lemma": "pais"
       },
       {
         "surface": "and asked",
         "lemma": "punthanomai"
-      },
-      {
-        "surface": "what",
-        "lemma": "tis"
       }
     ],
     "27": [
@@ -872,10 +748,6 @@
       {
         "surface": "has returned",
         "lemma": "heko"
-      },
-      {
-        "surface": "he said",
-        "lemma": "eipon"
       },
       {
         "surface": "father",
@@ -908,20 +780,8 @@
         "lemma": "orgizo"
       },
       {
-        "surface": "refused",
-        "lemma": "thelo"
-      },
-      {
-        "surface": "to go in",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "father",
         "lemma": "pater"
-      },
-      {
-        "surface": "came out",
-        "lemma": "exerchomai"
       },
       {
         "surface": "and pleaded with",
@@ -929,10 +789,6 @@
       }
     ],
     "29": [
-      {
-        "surface": "he answered",
-        "lemma": "apokrino"
-      },
       {
         "surface": "father",
         "lemma": "pater"
@@ -966,10 +822,6 @@
         "lemma": "oudepote"
       },
       {
-        "surface": "you never gave",
-        "lemma": "didomi"
-      },
-      {
         "surface": "even a young goat",
         "lemma": "eriphos"
       },
@@ -985,7 +837,7 @@
     "30": [
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "squandering",
@@ -1020,10 +872,6 @@
       {
         "surface": "always",
         "lemma": "pantote"
-      },
-      {
-        "surface": "the father said",
-        "lemma": "eipon"
       },
       {
         "surface": "is mine",
@@ -1062,10 +910,6 @@
       {
         "surface": "he was lost",
         "lemma": "apolluo"
-      },
-      {
-        "surface": "is found",
-        "lemma": "ehurisko"
       }
     ]
   },

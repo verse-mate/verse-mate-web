@@ -36,16 +36,8 @@
     ],
     "2": [
       {
-        "surface": "Suppose",
-        "lemma": "ean"
-      },
-      {
         "surface": "a man",
         "lemma": "aner"
-      },
-      {
-        "surface": "comes",
-        "lemma": "eiserchomai"
       },
       {
         "surface": "meeting",
@@ -74,10 +66,6 @@
       {
         "surface": "clothes",
         "lemma": "esthes"
-      },
-      {
-        "surface": "comes in",
-        "lemma": "eiserchomai"
       }
     ],
     "3": [
@@ -98,10 +86,6 @@
         "lemma": "esthes"
       },
       {
-        "surface": "say",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Here is",
         "lemma": "hode"
       },
@@ -114,16 +98,8 @@
         "lemma": "kalos"
       },
       {
-        "surface": "say",
-        "lemma": "eipon"
-      },
-      {
         "surface": "poor man",
         "lemma": "ptochos"
-      },
-      {
-        "surface": "must stand",
-        "lemma": "histemi"
       },
       {
         "surface": "Sit",
@@ -157,10 +133,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "Listen",
-        "lemma": "akouo"
-      },
       {
         "surface": "beloved",
         "lemma": "agapetos"
@@ -229,7 +201,7 @@
       },
       {
         "surface": "drag",
-        "lemma": "helkuohelko"
+        "lemma": "helkuo"
       },
       {
         "surface": "court",
@@ -255,10 +227,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "If",
-        "lemma": "ei"
-      },
       {
         "surface": "you really fulfill",
         "lemma": "teleo"
@@ -289,10 +257,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "you show favoritism",
         "lemma": "prosopolepteo"
@@ -336,34 +300,18 @@
         "lemma": "ptaio"
       },
       {
-        "surface": "just one point",
-        "lemma": "ehis"
-      },
-      {
         "surface": "guilty",
         "lemma": "enochos"
       }
     ],
     "11": [
       {
-        "surface": "said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Do not commit adultery",
         "lemma": "moicheuo"
       },
       {
-        "surface": "said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Do not murder",
         "lemma": "phoneuo"
-      },
-      {
-        "surface": "If",
-        "lemma": "ei"
       },
       {
         "surface": "you do not commit adultery",
@@ -383,10 +331,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "Speak",
-        "lemma": "laleo"
-      },
       {
         "surface": "those who are going",
         "lemma": "mello"
@@ -428,10 +372,6 @@
     ],
     "14": [
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
         "surface": "good is it",
         "lemma": "ophelos"
       },
@@ -440,20 +380,12 @@
         "lemma": "adelphos"
       },
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "faith",
         "lemma": "pistis"
       },
       {
         "surface": "deeds",
         "lemma": "ergon"
-      },
-      {
-        "surface": "Can",
-        "lemma": "dunamai"
       },
       {
         "surface": "faith",
@@ -465,10 +397,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "Suppose",
-        "lemma": "ean"
-      },
       {
         "surface": "a brother",
         "lemma": "adelphos"
@@ -496,10 +424,6 @@
     ],
     "16": [
       {
-        "surface": "tells",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Go",
         "lemma": "hupago"
       },
@@ -516,20 +440,12 @@
         "lemma": "chortazo"
       },
       {
-        "surface": "provide for",
-        "lemma": "didomi"
-      },
-      {
         "surface": "physical",
         "lemma": "soma"
       },
       {
         "surface": "needs",
         "lemma": "epitedeios"
-      },
-      {
-        "surface": "what",
-        "lemma": "tis"
       },
       {
         "surface": "good  is that",
@@ -539,15 +455,11 @@
     "17": [
       {
         "surface": "So",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "faith",
         "lemma": "pistis"
-      },
-      {
-        "surface": "if",
-        "lemma": "ean"
       },
       {
         "surface": "in action",
@@ -606,10 +518,6 @@
         "lemma": "theos"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "Good",
         "lemma": "kalos"
       },
@@ -634,14 +542,6 @@
       {
         "surface": "man",
         "lemma": "anthropos"
-      },
-      {
-        "surface": "do you want",
-        "lemma": "thelo"
-      },
-      {
-        "surface": "evidence",
-        "lemma": "ginosko"
       },
       {
         "surface": "faith",
@@ -679,7 +579,7 @@
       },
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "Isaac",
@@ -764,10 +664,6 @@
     ],
     "24": [
       {
-        "surface": "As you can see",
-        "lemma": "horao"
-      },
-      {
         "surface": "a man",
         "lemma": "anthropos"
       },
@@ -845,7 +741,7 @@
       },
       {
         "surface": "so",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "faith",

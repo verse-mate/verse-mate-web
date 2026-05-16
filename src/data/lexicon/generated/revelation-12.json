@@ -6,16 +6,8 @@
   "verses": {
     "1": [
       {
-        "surface": "a great",
-        "lemma": "megas"
-      },
-      {
         "surface": "sign",
         "lemma": "semeion"
-      },
-      {
-        "surface": "appeared",
-        "lemma": "horao"
       },
       {
         "surface": "heaven",
@@ -90,16 +82,8 @@
         "lemma": "semeion"
       },
       {
-        "surface": "appeared",
-        "lemma": "horao"
-      },
-      {
         "surface": "heaven",
         "lemma": "ouranos"
-      },
-      {
-        "surface": "a huge",
-        "lemma": "megas"
       },
       {
         "surface": "red",
@@ -172,10 +156,6 @@
         "lemma": "drakon"
       },
       {
-        "surface": "stood",
-        "lemma": "histemi"
-      },
-      {
         "surface": "woman",
         "lemma": "gune"
       },
@@ -207,11 +187,11 @@
       },
       {
         "surface": "to a son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "a male child",
-        "lemma": "arrenarsen"
+        "lemma": "arren"
       },
       {
         "surface": "will",
@@ -336,19 +316,11 @@
         "lemma": "topos"
       },
       {
-        "surface": "found",
-        "lemma": "ehurisko"
-      },
-      {
         "surface": "heaven",
         "lemma": "ouranos"
       }
     ],
     "9": [
-      {
-        "surface": "great",
-        "lemma": "megas"
-      },
       {
         "surface": "dragon",
         "lemma": "drakon"
@@ -403,14 +375,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "I heard",
-        "lemma": "akouo"
-      },
-      {
-        "surface": "a loud",
-        "lemma": "megas"
-      },
       {
         "surface": "voice",
         "lemma": "phone"
@@ -483,7 +447,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "Lamb",
@@ -532,10 +496,6 @@
         "lemma": "thalassa"
       },
       {
-        "surface": "great",
-        "lemma": "megas"
-      },
-      {
         "surface": "fury",
         "lemma": "thumos"
       },
@@ -546,10 +506,6 @@
       {
         "surface": "has come down",
         "lemma": "katabaino"
-      },
-      {
-        "surface": "knowing",
-        "lemma": "eido"
       },
       {
         "surface": "only a short",
@@ -564,10 +520,6 @@
       {
         "surface": "dragon",
         "lemma": "drakon"
-      },
-      {
-        "surface": "saw",
-        "lemma": "horao"
       },
       {
         "surface": "he had been thrown",
@@ -591,7 +543,7 @@
       },
       {
         "surface": "male child",
-        "lemma": "arrenarsen"
+        "lemma": "arren"
       }
     ],
     "14": [
@@ -600,20 +552,12 @@
         "lemma": "gune"
       },
       {
-        "surface": "was given",
-        "lemma": "didomi"
-      },
-      {
         "surface": "two",
         "lemma": "duo"
       },
       {
         "surface": "wings",
         "lemma": "pterux"
-      },
-      {
-        "surface": "great",
-        "lemma": "megas"
       },
       {
         "surface": "eagle",
@@ -675,7 +619,7 @@
       },
       {
         "surface": "water",
-        "lemma": "hudorhudatos"
+        "lemma": "hudor"
       },
       {
         "surface": "a river",
@@ -784,10 +728,6 @@
       {
         "surface": "of Jesus",
         "lemma": "iesous"
-      },
-      {
-        "surface": "the dragon stood",
-        "lemma": "histemi"
       },
       {
         "surface": "shore",

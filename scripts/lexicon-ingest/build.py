@@ -105,13 +105,39 @@ SKIP_POS_PREFIXES: tuple[str, ...] = (
 # carry no theological freight on their own. Add sparingly — over-filtering
 # strips real lemmas from the reading experience.
 SKIP_LEMMA_SLUGS: frozenset[str] = frozenset({
+    # Auxiliary / generic verbs of being-having-doing-saying-perceiving
     'eimi',     # εἰμί — to be (~2,460× NT)
-    'lego',     # λέγω — to say (~2,350× NT)
+    'lego',     # λέγω — to say (~2,350× NT) [TBESG split: also "eipon"]
+    'eipon',    # εἶπον — alternate aorist of λέγω (~963× NT)
     'echo',     # ἔχω — to have (~710× NT)
     'poieo',    # ποιέω — to do/make (~570× NT)
     'ginomai',  # γίνομαι — to become (~670× NT)
     'erchomai', # ἔρχομαι — to come (~630× NT)
-    'pas',      # πᾶς — all/every (~1,240× NT); adjective but stopword-like in practice
+    'horao',    # ὁράω — to see (~450× NT)
+    'akouo',    # ἀκούω — to hear (~430× NT)
+    'eido',     # εἴδω / οἶδα — to know (~320× NT)
+    'didomi',   # δίδωμι — to give (~410× NT)
+    'lambano',  # λαμβάνω — to take/receive (~260× NT)
+    'laleo',    # λαλέω — to speak (~295× NT)
+    'apokrino', # ἀποκρίνομαι — to answer (~225× NT)
+    'ginosko',  # γινώσκω — to know (~220× NT) — content but extremely generic in narrative
+    'thelo',    # θέλω — to will/desire (~210× NT)
+    'dunamai',  # δύναμαι — to be able (~210× NT)
+    'exerchomai',   # ἐξέρχομαι — to go out (~220× NT)
+    'eiserchomai',  # εἰσέρχομαι — to enter (~190× NT)
+    'grapho',   # γράφω — to write (~190× NT)
+    'heurisko', # εὑρίσκω — to find (~175× NT)
+    'histemi',  # ἵστημι — to stand (~155× NT)
+    # Function words / generics that slipped through POS filtering
+    'pas',      # πᾶς — all/every (~1,240× NT)
+    'polus',    # πολύς — much/many (~360× NT)
+    'megas',    # μέγας — great (~240× NT)
+    'heis',     # εἷς — one (numeral, ~340× NT)
+    'oudeis',   # οὐδείς — no one (~225× NT)
+    'tis',      # τις — anyone/someone (~520× NT)
+    'ei',       # εἰ — if (~525× NT)
+    'ean',      # ἐάν — if/when (~330× NT)
+    'houtos',   # οὕτως — thus/in this way (~210× NT)
 })
 
 
@@ -132,12 +158,26 @@ def is_content_pos(pos_code: str) -> bool:
 
 def slugify_translit(translit: str) -> str:
     """Stable lemma key — strip macrons, lowercase, alnum only.
-    `Παῦλος` (Paulos) → `paulos`; `δίψυχος` (dipsychos) → `dipsychos`."""
+    `Παῦλος` (Paulos) → `paulos`; `δίψυχος` (dipsychos) → `dipsychos`.
+
+    Two TBESG-specific normalizations:
+      * Multiple forms are comma-separated (`ohutō, ohutōs`); take the first.
+      * TBESG transliterates rough breathing AFTER the initial vowel
+        (`uhios` for υἱός, `ehis` for εἷς, `ohutōs` for οὕτως). Standard
+        scholarly transliteration puts h FIRST (`huios`, `heis`, `houtos`).
+        Reorder so generated slugs match what hand-authored lemmas.ts uses.
+    """
+    # Take first form when TBESG lists alternates.
+    translit = translit.split(',')[0]
     # Decompose to strip combining marks (macrons, breves, etc.)
     normalized = unicodedata.normalize('NFD', translit)
     stripped = ''.join(ch for ch in normalized if unicodedata.category(ch) != 'Mn')
     stripped = stripped.lower()
-    return re.sub(r'[^a-z0-9]+', '', stripped)
+    slug = re.sub(r'[^a-z0-9]+', '', stripped)
+    # Reorder TBESG's post-vowel breathing-mark "h" to the standard position.
+    # Only applies at the start of the slug, where the rough breathing sits.
+    slug = re.sub(r'^([aeiouy])h(?!h)', r'h\1', slug)
+    return slug
 
 
 def map_pos(code: str) -> str:

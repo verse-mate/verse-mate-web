@@ -332,10 +332,6 @@
         "lemma": "boulomai"
       },
       {
-        "surface": "to know",
-        "lemma": "ginosko"
-      },
-      {
         "surface": "brothers",
         "lemma": "adelphos"
       },
@@ -381,7 +377,7 @@
     "14": [
       {
         "surface": "most",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "brothers",
@@ -406,10 +402,6 @@
       {
         "surface": "more greatly",
         "lemma": "perissos"
-      },
-      {
-        "surface": "to speak",
-        "lemma": "laleo"
       },
       {
         "surface": "word",
@@ -446,10 +438,6 @@
       {
         "surface": "love",
         "lemma": "agape"
-      },
-      {
-        "surface": "knowing",
-        "lemma": "eido"
       },
       {
         "surface": "I am appointed",
@@ -500,10 +488,6 @@
     ],
     "18": [
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
         "surface": "way",
         "lemma": "tropos"
       },
@@ -541,10 +525,6 @@
       }
     ],
     "19": [
-      {
-        "surface": "I know",
-        "lemma": "eido"
-      },
       {
         "surface": "prayers",
         "lemma": "deesis"
@@ -648,10 +628,6 @@
     ],
     "22": [
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "I go on living",
         "lemma": "zao"
       },
@@ -668,12 +644,8 @@
         "lemma": "ergon"
       },
       {
-        "surface": "what",
-        "lemma": "tis"
-      },
-      {
         "surface": "shall I choose",
-        "lemma": "ahireo"
+        "lemma": "haireo"
       },
       {
         "surface": "I do not know",
@@ -702,10 +674,6 @@
         "lemma": "christos"
       },
       {
-        "surface": "which is far",
-        "lemma": "polus"
-      },
-      {
         "surface": "better",
         "lemma": "kreisson"
       }
@@ -728,10 +696,6 @@
       {
         "surface": "Convinced of",
         "lemma": "peitho"
-      },
-      {
-        "surface": "I know",
-        "lemma": "eido"
       },
       {
         "surface": "I will remain",
@@ -810,16 +774,8 @@
         "lemma": "eite"
       },
       {
-        "surface": "see",
-        "lemma": "horao"
-      },
-      {
         "surface": "or only",
         "lemma": "eite"
-      },
-      {
-        "surface": "hear",
-        "lemma": "akouo"
       },
       {
         "surface": "in my absence",
@@ -830,20 +786,12 @@
         "lemma": "steko"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "spirit",
         "lemma": "pneuma"
       },
       {
         "surface": "contending together",
         "lemma": "sunathleo"
-      },
-      {
-        "surface": "as one",
-        "lemma": "ehis"
       },
       {
         "surface": "faith",
@@ -910,14 +858,6 @@
       {
         "surface": "struggle",
         "lemma": "agon"
-      },
-      {
-        "surface": "you saw",
-        "lemma": "horao"
-      },
-      {
-        "surface": "hear that",
-        "lemma": "akouo"
       }
     ]
   },

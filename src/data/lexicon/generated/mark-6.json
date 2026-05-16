@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Jesus went on",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "from there",
         "lemma": "ekeithen"
       },
@@ -44,14 +40,6 @@
         "lemma": "sunagoge"
       },
       {
-        "surface": "many",
-        "lemma": "polus"
-      },
-      {
-        "surface": "who heard Him",
-        "lemma": "akouo"
-      },
-      {
         "surface": "were astonished",
         "lemma": "ekplesso"
       },
@@ -60,16 +48,8 @@
         "lemma": "pothen"
       },
       {
-        "surface": "What is",
-        "lemma": "tis"
-      },
-      {
         "surface": "wisdom",
         "lemma": "sophia"
-      },
-      {
-        "surface": "He has been given",
-        "lemma": "didomi"
       },
       {
         "surface": "miracles",
@@ -83,7 +63,7 @@
       },
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of Mary",
@@ -128,14 +108,6 @@
         "lemma": "iesous"
       },
       {
-        "surface": "said",
-        "lemma": "eipon"
-      },
-      {
-        "surface": "Only",
-        "lemma": "ei"
-      },
-      {
         "surface": "hometown",
         "lemma": "patris"
       },
@@ -158,24 +130,12 @@
     ],
     "5": [
       {
-        "surface": "He could not",
-        "lemma": "dunamai"
-      },
-      {
-        "surface": "any",
-        "lemma": "oudeis"
-      },
-      {
         "surface": "miracles",
         "lemma": "dunamis"
       },
       {
         "surface": "there",
         "lemma": "ekei"
-      },
-      {
-        "surface": "except",
-        "lemma": "ei"
       },
       {
         "surface": "to lay",
@@ -250,10 +210,6 @@
         "lemma": "duo"
       },
       {
-        "surface": "giving",
-        "lemma": "didomi"
-      },
-      {
         "surface": "authority",
         "lemma": "exousia"
       },
@@ -278,10 +234,6 @@
       {
         "surface": "nothing",
         "lemma": "medeis"
-      },
-      {
-        "surface": "but",
-        "lemma": "ei"
       },
       {
         "surface": "a staff",
@@ -328,14 +280,6 @@
     ],
     "10": [
       {
-        "surface": "He told",
-        "lemma": "eipon"
-      },
-      {
-        "surface": "you enter",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "a house",
         "lemma": "oikia"
       },
@@ -346,10 +290,6 @@
       {
         "surface": "there",
         "lemma": "ekei"
-      },
-      {
-        "surface": "you leave",
-        "lemma": "exerchomai"
       },
       {
         "surface": "that area",
@@ -364,10 +304,6 @@
       {
         "surface": "will not welcome",
         "lemma": "dechomai"
-      },
-      {
-        "surface": "listen to",
-        "lemma": "akouo"
       },
       {
         "surface": "shake",
@@ -400,10 +336,6 @@
     ],
     "12": [
       {
-        "surface": "they set out",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "and preached",
         "lemma": "kerusso"
       },
@@ -418,20 +350,12 @@
         "lemma": "ekballo"
       },
       {
-        "surface": "many",
-        "lemma": "polus"
-      },
-      {
         "surface": "demons",
         "lemma": "daimonion"
       },
       {
         "surface": "healed",
         "lemma": "therapeuo"
-      },
-      {
-        "surface": "many",
-        "lemma": "polus"
       },
       {
         "surface": "of the sick",
@@ -456,20 +380,12 @@
         "lemma": "herodes"
       },
       {
-        "surface": "heard about this",
-        "lemma": "akouo"
-      },
-      {
         "surface": "name",
         "lemma": "onoma"
       },
       {
         "surface": "well known",
         "lemma": "phaneros"
-      },
-      {
-        "surface": "people were saying",
-        "lemma": "eipon"
       },
       {
         "surface": "John",
@@ -502,10 +418,6 @@
         "lemma": "allos"
       },
       {
-        "surface": "were saying",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Elijah",
         "lemma": "helias"
       },
@@ -518,10 +430,6 @@
         "lemma": "prophetes"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "prophets of old",
         "lemma": "prophetes"
       }
@@ -530,14 +438,6 @@
       {
         "surface": "Herod",
         "lemma": "herodes"
-      },
-      {
-        "surface": "heard this",
-        "lemma": "akouo"
-      },
-      {
-        "surface": "he said",
-        "lemma": "eipon"
       },
       {
         "surface": "John",
@@ -604,16 +504,12 @@
         "lemma": "ioannes"
       },
       {
-        "surface": "had been telling",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Herod",
         "lemma": "herodes"
       },
       {
         "surface": "It is not lawful",
-        "lemma": "exestiexon"
+        "lemma": "exesti"
       },
       {
         "surface": "brother’s",
@@ -634,16 +530,8 @@
         "lemma": "enecho"
       },
       {
-        "surface": "wanted",
-        "lemma": "thelo"
-      },
-      {
         "surface": "to kill",
         "lemma": "apokteino"
-      },
-      {
-        "surface": "she had been unable",
-        "lemma": "dunamai"
       }
     ],
     "20": [
@@ -664,10 +552,6 @@
         "lemma": "suntereo"
       },
       {
-        "surface": "knowing that",
-        "lemma": "eido"
-      },
-      {
         "surface": "a righteous",
         "lemma": "dikaios"
       },
@@ -680,20 +564,8 @@
         "lemma": "aner"
       },
       {
-        "surface": "he heard",
-        "lemma": "akouo"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "polus"
-      },
-      {
         "surface": "he was greatly perplexed",
         "lemma": "aporeo"
-      },
-      {
-        "surface": "he listened",
-        "lemma": "akouo"
       },
       {
         "surface": "gladly",
@@ -703,7 +575,7 @@
     "21": [
       {
         "surface": "birthday",
-        "lemma": "genesiagenethlios"
+        "lemma": "genesia"
       },
       {
         "surface": "her opportunity",
@@ -744,10 +616,6 @@
         "lemma": "herodias"
       },
       {
-        "surface": "came",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "danced",
         "lemma": "orcheomai"
       },
@@ -768,28 +636,12 @@
         "lemma": "basileus"
       },
       {
-        "surface": "said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "girl",
         "lemma": "korasion"
       },
       {
         "surface": "Ask",
         "lemma": "aiteo"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "ean"
-      },
-      {
-        "surface": "you wish",
-        "lemma": "thelo"
-      },
-      {
-        "surface": "I will give it",
-        "lemma": "didomi"
       }
     ],
     "23": [
@@ -798,20 +650,8 @@
         "lemma": "omnumi"
       },
       {
-        "surface": "Whatever",
-        "lemma": "polus"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "ean"
-      },
-      {
         "surface": "you ask",
         "lemma": "aiteo"
-      },
-      {
-        "surface": "I will give",
-        "lemma": "didomi"
       },
       {
         "surface": "half",
@@ -824,28 +664,12 @@
     ],
     "24": [
       {
-        "surface": "she went out",
-        "lemma": "exerchomai"
-      },
-      {
-        "surface": "and asked",
-        "lemma": "eipon"
-      },
-      {
         "surface": "mother",
         "lemma": "meter"
       },
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
         "surface": "should I request",
         "lemma": "aiteo"
-      },
-      {
-        "surface": "her mother answered",
-        "lemma": "eipon"
       },
       {
         "surface": "head",
@@ -866,24 +690,12 @@
         "lemma": "eutheos"
       },
       {
-        "surface": "the girl hurried back",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "king",
         "lemma": "basileus"
       },
       {
         "surface": "with her request",
         "lemma": "aiteo"
-      },
-      {
-        "surface": "I want",
-        "lemma": "thelo"
-      },
-      {
-        "surface": "you to give",
-        "lemma": "didomi"
       },
       {
         "surface": "head",
@@ -922,10 +734,6 @@
       {
         "surface": "his guests",
         "lemma": "anakeimai"
-      },
-      {
-        "surface": "he did not want",
-        "lemma": "thelo"
       },
       {
         "surface": "to refuse",
@@ -988,20 +796,12 @@
         "lemma": "pinax"
       },
       {
-        "surface": "presented",
-        "lemma": "didomi"
-      },
-      {
         "surface": "girl",
         "lemma": "korasion"
       },
       {
         "surface": "who",
         "lemma": "korasion"
-      },
-      {
-        "surface": "gave",
-        "lemma": "didomi"
       },
       {
         "surface": "mother",
@@ -1012,10 +812,6 @@
       {
         "surface": "disciples",
         "lemma": "mathetes"
-      },
-      {
-        "surface": "heard about this",
-        "lemma": "akouo"
       },
       {
         "surface": "took",
@@ -1074,10 +870,6 @@
         "lemma": "oligos"
       },
       {
-        "surface": "many people",
-        "lemma": "polus"
-      },
-      {
         "surface": "going",
         "lemma": "hupago"
       },
@@ -1114,14 +906,6 @@
     ],
     "33": [
       {
-        "surface": "many people",
-        "lemma": "polus"
-      },
-      {
-        "surface": "saw",
-        "lemma": "horao"
-      },
-      {
         "surface": "leaving",
         "lemma": "hupago"
       },
@@ -1148,18 +932,6 @@
     ],
     "34": [
       {
-        "surface": "Jesus stepped ashore",
-        "lemma": "exerchomai"
-      },
-      {
-        "surface": "and saw",
-        "lemma": "horao"
-      },
-      {
-        "surface": "a large",
-        "lemma": "polus"
-      },
-      {
         "surface": "crowd",
         "lemma": "ochlos"
       },
@@ -1182,10 +954,6 @@
       {
         "surface": "to teach",
         "lemma": "didasko"
-      },
-      {
-        "surface": "many things",
-        "lemma": "polus"
       }
     ],
     "35": [
@@ -1198,20 +966,12 @@
         "lemma": "ede"
       },
       {
-        "surface": "late",
-        "lemma": "polus"
-      },
-      {
         "surface": "disciples",
         "lemma": "mathetes"
       },
       {
         "surface": "came",
         "lemma": "proserchomai"
-      },
-      {
-        "surface": "and said",
-        "lemma": "eipon"
       },
       {
         "surface": "a desolate",
@@ -1228,10 +988,6 @@
       {
         "surface": "is already",
         "lemma": "ede"
-      },
-      {
-        "surface": "late",
-        "lemma": "polus"
       }
     ],
     "36": [
@@ -1260,23 +1016,11 @@
         "lemma": "agorazo"
       },
       {
-        "surface": "something",
-        "lemma": "tis"
-      },
-      {
         "surface": "to eat",
         "lemma": "phagein"
       }
     ],
     "37": [
-      {
-        "surface": "Jesus told",
-        "lemma": "apokrino"
-      },
-      {
-        "surface": "give",
-        "lemma": "didomi"
-      },
       {
         "surface": "something to eat",
         "lemma": "phagein"
@@ -1298,10 +1042,6 @@
         "lemma": "denarion"
       },
       {
-        "surface": "to give",
-        "lemma": "didomi"
-      },
-      {
         "surface": "bread",
         "lemma": "artos"
       },
@@ -1316,16 +1056,8 @@
         "lemma": "hupago"
       },
       {
-        "surface": "and see",
-        "lemma": "horao"
-      },
-      {
         "surface": "loaves",
         "lemma": "artos"
-      },
-      {
-        "surface": "after checking",
-        "lemma": "ginosko"
       },
       {
         "surface": "Five",
@@ -1390,10 +1122,6 @@
     ],
     "41": [
       {
-        "surface": "Taking",
-        "lemma": "lambano"
-      },
-      {
         "surface": "five",
         "lemma": "pente"
       },
@@ -1428,10 +1156,6 @@
       {
         "surface": "loaves",
         "lemma": "artos"
-      },
-      {
-        "surface": "He gave them",
-        "lemma": "didomi"
       },
       {
         "surface": "disciples",
@@ -1588,10 +1312,6 @@
     ],
     "48": [
       {
-        "surface": "He could see that",
-        "lemma": "horao"
-      },
-      {
         "surface": "were straining",
         "lemma": "basanizo"
       },
@@ -1628,19 +1348,11 @@
         "lemma": "thalassa"
       },
       {
-        "surface": "He intended",
-        "lemma": "thelo"
-      },
-      {
         "surface": "to pass by",
         "lemma": "parerchomai"
       }
     ],
     "49": [
-      {
-        "surface": "when they saw",
-        "lemma": "horao"
-      },
       {
         "surface": "walking",
         "lemma": "peripateo"
@@ -1664,16 +1376,8 @@
     ],
     "50": [
       {
-        "surface": "saw Him",
-        "lemma": "horao"
-      },
-      {
         "surface": "were terrified",
         "lemma": "tarasso"
-      },
-      {
-        "surface": "Jesus spoke up",
-        "lemma": "laleo"
       },
       {
         "surface": "at once",
@@ -1752,10 +1456,6 @@
         "lemma": "eutheos"
       },
       {
-        "surface": "got",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "boat",
         "lemma": "ploion"
       },
@@ -1792,10 +1492,6 @@
       {
         "surface": "mats",
         "lemma": "krabbatos"
-      },
-      {
-        "surface": "they heard",
-        "lemma": "akouo"
       }
     ],
     "56": [

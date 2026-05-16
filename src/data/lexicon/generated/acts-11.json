@@ -18,10 +18,6 @@
         "lemma": "ioudaia"
       },
       {
-        "surface": "heard",
-        "lemma": "akouo"
-      },
-      {
         "surface": "Gentiles",
         "lemma": "ethnos"
       },
@@ -61,10 +57,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "You visited",
-        "lemma": "eiserchomai"
-      },
       {
         "surface": "uncircumcised",
         "lemma": "akrobustia"
@@ -114,16 +106,8 @@
         "lemma": "ekstasis"
       },
       {
-        "surface": "I saw",
-        "lemma": "horao"
-      },
-      {
         "surface": "a vision",
         "lemma": "horama"
-      },
-      {
-        "surface": "a large",
-        "lemma": "megas"
       },
       {
         "surface": "sheet",
@@ -186,10 +170,6 @@
     ],
     "7": [
       {
-        "surface": "I heard",
-        "lemma": "akouo"
-      },
-      {
         "surface": "a voice",
         "lemma": "phone"
       },
@@ -216,10 +196,6 @@
         "lemma": "kurios"
       },
       {
-        "surface": "I said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "nothing",
         "lemma": "oudepote"
       },
@@ -232,10 +208,6 @@
         "lemma": "akathartos"
       },
       {
-        "surface": "has {ever} entered",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "mouth",
         "lemma": "stoma"
       }
@@ -244,10 +216,6 @@
       {
         "surface": "the voice",
         "lemma": "phone"
-      },
-      {
-        "surface": "spoke",
-        "lemma": "apokrino"
       },
       {
         "surface": "heaven",
@@ -320,10 +288,6 @@
         "lemma": "pneuma"
       },
       {
-        "surface": "told",
-        "lemma": "eipon"
-      },
-      {
         "surface": "to accompany",
         "lemma": "sunerchomai"
       },
@@ -344,10 +308,6 @@
         "lemma": "adelphos"
       },
       {
-        "surface": "we entered",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "man’s",
         "lemma": "aner"
       },
@@ -362,24 +322,12 @@
         "lemma": "apangello"
       },
       {
-        "surface": "he had seen",
-        "lemma": "horao"
-      },
-      {
         "surface": "an angel",
         "lemma": "angelos"
       },
       {
-        "surface": "standing",
-        "lemma": "histemi"
-      },
-      {
         "surface": "house",
         "lemma": "oikos"
-      },
-      {
-        "surface": "saying",
-        "lemma": "eipon"
       },
       {
         "surface": "Send",
@@ -408,10 +356,6 @@
     ],
     "14": [
       {
-        "surface": "will convey",
-        "lemma": "laleo"
-      },
-      {
         "surface": "a message",
         "lemma": "rhema"
       },
@@ -428,10 +372,6 @@
       {
         "surface": "began",
         "lemma": "archomai"
-      },
-      {
-        "surface": "to speak",
-        "lemma": "laleo"
       },
       {
         "surface": "Holy",
@@ -464,10 +404,6 @@
         "lemma": "kurios"
       },
       {
-        "surface": "He said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "John",
         "lemma": "ioannes"
       },
@@ -477,7 +413,7 @@
       },
       {
         "surface": "with water",
-        "lemma": "hudorhudatos"
+        "lemma": "hudor"
       },
       {
         "surface": "will be baptized",
@@ -494,16 +430,8 @@
     ],
     "17": [
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "God",
         "lemma": "theos"
-      },
-      {
-        "surface": "gave",
-        "lemma": "didomi"
       },
       {
         "surface": "same",
@@ -530,10 +458,6 @@
         "lemma": "christos"
       },
       {
-        "surface": "who",
-        "lemma": "tis"
-      },
-      {
         "surface": "to",
         "lemma": "dunatos"
       },
@@ -547,10 +471,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "they heard",
-        "lemma": "akouo"
-      },
       {
         "surface": "they had no further objections",
         "lemma": "hesuchazo"
@@ -566,10 +486,6 @@
       {
         "surface": "God",
         "lemma": "theos"
-      },
-      {
-        "surface": "has granted",
-        "lemma": "didomi"
       },
       {
         "surface": "Gentiles",
@@ -614,10 +530,6 @@
         "lemma": "antiocheia"
       },
       {
-        "surface": "speaking",
-        "lemma": "laleo"
-      },
-      {
         "surface": "message",
         "lemma": "logos"
       },
@@ -648,10 +560,6 @@
         "lemma": "antiocheia"
       },
       {
-        "surface": "and began speaking",
-        "lemma": "laleo"
-      },
-      {
         "surface": "Greeks",
         "lemma": "hellenistes"
       },
@@ -678,10 +586,6 @@
         "lemma": "kurios"
       },
       {
-        "surface": "a great",
-        "lemma": "polus"
-      },
-      {
         "surface": "number of people",
         "lemma": "arithmos"
       },
@@ -702,10 +606,6 @@
       {
         "surface": "news",
         "lemma": "logos"
-      },
-      {
-        "surface": "reached",
-        "lemma": "akouo"
       },
       {
         "surface": "ears",
@@ -740,10 +640,6 @@
       {
         "surface": "arrived",
         "lemma": "paraginomai"
-      },
-      {
-        "surface": "saw",
-        "lemma": "horao"
       },
       {
         "surface": "grace",
@@ -822,10 +718,6 @@
     ],
     "25": [
       {
-        "surface": "Barnabas went",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "Tarsus",
         "lemma": "tarsos"
       },
@@ -839,10 +731,6 @@
       }
     ],
     "26": [
-      {
-        "surface": "he found him",
-        "lemma": "ehurisko"
-      },
       {
         "surface": "he brought him",
         "lemma": "ago"
@@ -920,10 +808,6 @@
     ],
     "28": [
       {
-        "surface": "One",
-        "lemma": "ehis"
-      },
-      {
         "surface": "named",
         "lemma": "onoma"
       },
@@ -942,10 +826,6 @@
       {
         "surface": "Spirit that",
         "lemma": "pneuma"
-      },
-      {
-        "surface": "a great",
-        "lemma": "megas"
       },
       {
         "surface": "famine",

@@ -70,10 +70,6 @@
         "lemma": "paristemi"
       },
       {
-        "surface": "many",
-        "lemma": "polus"
-      },
-      {
         "surface": "convincing proofs",
         "lemma": "tekmerion"
       },
@@ -130,10 +126,6 @@
       {
         "surface": "promised",
         "lemma": "epangelia"
-      },
-      {
-        "surface": "you have heard",
-        "lemma": "akouo"
       }
     ],
     "5": [
@@ -147,11 +139,7 @@
       },
       {
         "surface": "with water",
-        "lemma": "hudorhudatos"
-      },
-      {
-        "surface": "in a few",
-        "lemma": "polus"
+        "lemma": "hudor"
       },
       {
         "surface": "days",
@@ -188,10 +176,6 @@
         "lemma": "chronos"
       },
       {
-        "surface": "vvv",
-        "lemma": "ei"
-      },
-      {
         "surface": "restore",
         "lemma": "apokathistemi"
       },
@@ -205,14 +189,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "Jesus replied",
-        "lemma": "eipon"
-      },
-      {
-        "surface": "to know",
-        "lemma": "ginosko"
-      },
       {
         "surface": "times",
         "lemma": "chronos"
@@ -239,10 +215,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "you will receive",
-        "lemma": "lambano"
-      },
       {
         "surface": "power",
         "lemma": "dunamis"
@@ -285,10 +257,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "He had said",
-        "lemma": "eipon"
-      },
       {
         "surface": "watched as",
         "lemma": "blepo"
@@ -352,18 +320,6 @@
       {
         "surface": "of Galilee",
         "lemma": "galilaios"
-      },
-      {
-        "surface": "they said",
-        "lemma": "eipon"
-      },
-      {
-        "surface": "why",
-        "lemma": "tis"
-      },
-      {
-        "surface": "do you stand here",
-        "lemma": "histemi"
       },
       {
         "surface": "looking",
@@ -438,10 +394,6 @@
     ],
     "13": [
       {
-        "surface": "they arrived",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "they went",
         "lemma": "anabaino"
       },
@@ -451,7 +403,7 @@
       },
       {
         "surface": "where",
-        "lemma": "ohu"
+        "lemma": "hou"
       },
       {
         "surface": "staying",
@@ -576,10 +528,6 @@
       {
         "surface": "and twenty",
         "lemma": "eikosi"
-      },
-      {
-        "surface": "said",
-        "lemma": "eipon"
       }
     ],
     "16": [
@@ -621,7 +569,7 @@
       },
       {
         "surface": "of David",
-        "lemma": "daueiddauiddabid"
+        "lemma": "daueid"
       },
       {
         "surface": "Judas",
@@ -695,7 +643,7 @@
     "19": [
       {
         "surface": "known",
-        "lemma": "gnostosgnorimos"
+        "lemma": "gnostos"
       },
       {
         "surface": "who lived",
@@ -731,14 +679,10 @@
       },
       {
         "surface": "of Blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       }
     ],
     "20": [
-      {
-        "surface": "it is written",
-        "lemma": "grapho"
-      },
       {
         "surface": "the book",
         "lemma": "biblos"
@@ -762,10 +706,6 @@
       {
         "surface": "May} another",
         "lemma": "heteros"
-      },
-      {
-        "surface": "take",
-        "lemma": "lambano"
       },
       {
         "surface": "position",
@@ -796,14 +736,6 @@
       {
         "surface": "Jesus",
         "lemma": "iesous"
-      },
-      {
-        "surface": "went in",
-        "lemma": "eiserchomai"
-      },
-      {
-        "surface": "out",
-        "lemma": "exerchomai"
       }
     ],
     "22": [
@@ -828,10 +760,6 @@
         "lemma": "analambano"
       },
       {
-        "surface": "For one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "a witness",
         "lemma": "martus"
       },
@@ -841,10 +769,6 @@
       }
     ],
     "23": [
-      {
-        "surface": "they proposed",
-        "lemma": "histemi"
-      },
       {
         "surface": "two men",
         "lemma": "duo"
@@ -871,7 +795,7 @@
       },
       {
         "surface": "Matthias",
-        "lemma": "matthiasmaththias"
+        "lemma": "matthias"
       }
     ],
     "24": [
@@ -901,10 +825,6 @@
       }
     ],
     "25": [
-      {
-        "surface": "to take up",
-        "lemma": "lambano"
-      },
       {
         "surface": "ministry",
         "lemma": "diakonia"
@@ -936,10 +856,6 @@
     ],
     "26": [
       {
-        "surface": "they cast",
-        "lemma": "didomi"
-      },
-      {
         "surface": "lots",
         "lemma": "kleros"
       },
@@ -953,7 +869,7 @@
       },
       {
         "surface": "Matthias",
-        "lemma": "matthiasmaththias"
+        "lemma": "matthias"
       },
       {
         "surface": "he was added",
@@ -970,7 +886,7 @@
     ]
   },
   "themeLemmas": [
-    "matthiasmaththias",
+    "matthias",
     "chorion",
     "analambano"
   ]

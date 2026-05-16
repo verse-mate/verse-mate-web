@@ -22,10 +22,6 @@
         "lemma": "theaomai"
       },
       {
-        "surface": "If",
-        "lemma": "ei"
-      },
-      {
         "surface": "reward",
         "lemma": "misthos"
       },
@@ -82,14 +78,6 @@
         "lemma": "aristeros"
       },
       {
-        "surface": "know",
-        "lemma": "ginosko"
-      },
-      {
-        "surface": "what",
-        "lemma": "tis"
-      },
-      {
         "surface": "right hand",
         "lemma": "dexios"
       }
@@ -138,10 +126,6 @@
         "lemma": "proseuchomai"
       },
       {
-        "surface": "standing",
-        "lemma": "histemi"
-      },
-      {
         "surface": "synagogues",
         "lemma": "sunagoge"
       },
@@ -178,10 +162,6 @@
       {
         "surface": "you pray",
         "lemma": "proseuchomai"
-      },
-      {
-        "surface": "go",
-        "lemma": "eiserchomai"
       },
       {
         "surface": "inner room",
@@ -260,10 +240,6 @@
         "lemma": "pater"
       },
       {
-        "surface": "knows",
-        "lemma": "eido"
-      },
-      {
         "surface": "need",
         "lemma": "chreia"
       },
@@ -275,7 +251,7 @@
     "9": [
       {
         "surface": "this is how",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "should pray",
@@ -317,10 +293,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "Give",
-        "lemma": "didomi"
-      },
       {
         "surface": "this day",
         "lemma": "semeron"
@@ -372,10 +344,6 @@
     ],
     "14": [
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "you forgive",
         "lemma": "aphiemi"
       },
@@ -401,10 +369,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "if",
-        "lemma": "ean"
-      },
       {
         "surface": "you do not forgive",
         "lemma": "aphiemi"
@@ -636,10 +600,6 @@
         "lemma": "soma"
       },
       {
-        "surface": "If",
-        "lemma": "ean"
-      },
-      {
         "surface": "eyes",
         "lemma": "ophthalmos"
       },
@@ -662,10 +622,6 @@
     ],
     "23": [
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "eyes",
         "lemma": "ophthalmos"
       },
@@ -686,10 +642,6 @@
         "lemma": "skoteinos"
       },
       {
-        "surface": "If",
-        "lemma": "ei"
-      },
-      {
         "surface": "light",
         "lemma": "phos"
       },
@@ -703,14 +655,6 @@
       }
     ],
     "24": [
-      {
-        "surface": "No one",
-        "lemma": "oudeis"
-      },
-      {
-        "surface": "can",
-        "lemma": "dunamai"
-      },
       {
         "surface": "serve",
         "lemma": "douleuo"
@@ -728,10 +672,6 @@
         "lemma": "miseo"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "love",
         "lemma": "agapao"
       },
@@ -744,20 +684,12 @@
         "lemma": "antecho"
       },
       {
-        "surface": "the one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "despise",
         "lemma": "kataphroneo"
       },
       {
         "surface": "other",
         "lemma": "heteros"
-      },
-      {
-        "surface": "You cannot",
-        "lemma": "dunamai"
       },
       {
         "surface": "serve both",
@@ -782,10 +714,6 @@
         "lemma": "psuche"
       },
       {
-        "surface": "what",
-        "lemma": "tis"
-      },
-      {
         "surface": "you will eat",
         "lemma": "phagein"
       },
@@ -798,10 +726,6 @@
         "lemma": "soma"
       },
       {
-        "surface": "what",
-        "lemma": "tis"
-      },
-      {
         "surface": "you will wear",
         "lemma": "enduo"
       },
@@ -811,7 +735,7 @@
       },
       {
         "surface": "more",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "food",
@@ -878,24 +802,12 @@
     ],
     "27": [
       {
-        "surface": "Who",
-        "lemma": "tis"
-      },
-      {
         "surface": "worrying",
         "lemma": "merimnao"
       },
       {
-        "surface": "can",
-        "lemma": "dunamai"
-      },
-      {
         "surface": "add",
         "lemma": "prostithemi"
-      },
-      {
-        "surface": "a single",
-        "lemma": "ehis"
       },
       {
         "surface": "hour",
@@ -907,10 +819,6 @@
       }
     ],
     "28": [
-      {
-        "surface": "why",
-        "lemma": "tis"
-      },
       {
         "surface": "do you worry",
         "lemma": "merimnao"
@@ -947,7 +855,7 @@
     "29": [
       {
         "surface": "Solomon",
-        "lemma": "solomonsalomon"
+        "lemma": "solomon"
       },
       {
         "surface": "glory",
@@ -956,20 +864,12 @@
       {
         "surface": "was adorned",
         "lemma": "periballo"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
       }
     ],
     "30": [
       {
-        "surface": "If",
-        "lemma": "ei"
-      },
-      {
         "surface": "that is how",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "God",
@@ -1004,10 +904,6 @@
         "lemma": "klibanos"
       },
       {
-        "surface": "much",
-        "lemma": "polus"
-      },
-      {
         "surface": "more",
         "lemma": "mallon"
       },
@@ -1022,24 +918,12 @@
         "lemma": "merimnao"
       },
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
         "surface": "shall we eat",
         "lemma": "phagein"
       },
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
         "surface": "shall we drink",
         "lemma": "pino"
-      },
-      {
-        "surface": "What",
-        "lemma": "tis"
       },
       {
         "surface": "shall we wear",
@@ -1062,10 +946,6 @@
       {
         "surface": "Father",
         "lemma": "pater"
-      },
-      {
-        "surface": "knows",
-        "lemma": "eido"
       },
       {
         "surface": "you need",

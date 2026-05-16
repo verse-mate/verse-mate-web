@@ -10,14 +10,6 @@
         "lemma": "arche"
       },
       {
-        "surface": "we have heard",
-        "lemma": "akouo"
-      },
-      {
-        "surface": "we have seen",
-        "lemma": "horao"
-      },
-      {
         "surface": "eyes",
         "lemma": "ophthalmos"
       },
@@ -52,10 +44,6 @@
         "lemma": "phaneroo"
       },
       {
-        "surface": "we have seen it",
-        "lemma": "horao"
-      },
-      {
         "surface": "testified to it",
         "lemma": "martureo"
       },
@@ -86,14 +74,6 @@
         "lemma": "apangello"
       },
       {
-        "surface": "we have seen",
-        "lemma": "horao"
-      },
-      {
-        "surface": "heard",
-        "lemma": "akouo"
-      },
-      {
         "surface": "fellowship",
         "lemma": "koinonia"
       },
@@ -111,7 +91,7 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "Jesus",
@@ -123,10 +103,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "write",
-        "lemma": "grapho"
-      },
       {
         "surface": "joy",
         "lemma": "chara"
@@ -140,10 +116,6 @@
       {
         "surface": "message",
         "lemma": "angelia"
-      },
-      {
-        "surface": "we have heard",
-        "lemma": "akouo"
       },
       {
         "surface": "announce",
@@ -160,21 +132,9 @@
       {
         "surface": "darkness",
         "lemma": "skotia"
-      },
-      {
-        "surface": "at all",
-        "lemma": "oudeis"
       }
     ],
     "6": [
-      {
-        "surface": "If",
-        "lemma": "ean"
-      },
-      {
-        "surface": "we say",
-        "lemma": "eipon"
-      },
       {
         "surface": "fellowship",
         "lemma": "koinonia"
@@ -198,10 +158,6 @@
     ],
     "7": [
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "we walk",
         "lemma": "peripateo"
       },
@@ -223,7 +179,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "of Jesus",
@@ -231,7 +187,7 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "cleanses",
@@ -243,14 +199,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "If",
-        "lemma": "ean"
-      },
-      {
-        "surface": "we say",
-        "lemma": "eipon"
-      },
       {
         "surface": "sin",
         "lemma": "hamartia"
@@ -265,10 +213,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "If",
-        "lemma": "ean"
-      },
       {
         "surface": "we confess",
         "lemma": "homologeo"
@@ -303,14 +247,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "If",
-        "lemma": "ean"
-      },
-      {
-        "surface": "we say",
-        "lemma": "eipon"
-      },
       {
         "surface": "we have not sinned",
         "lemma": "hamartano"

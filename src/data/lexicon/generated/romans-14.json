@@ -84,10 +84,6 @@
     ],
     "4": [
       {
-        "surface": "Who",
-        "lemma": "tis"
-      },
-      {
         "surface": "to judge",
         "lemma": "krino"
       },
@@ -116,20 +112,12 @@
         "lemma": "pipto"
       },
       {
-        "surface": "he will stand",
-        "lemma": "histemi"
-      },
-      {
         "surface": "Lord",
         "lemma": "kurios"
       },
       {
         "surface": "is able",
         "lemma": "dunateo"
-      },
-      {
-        "surface": "to make him stand",
-        "lemma": "histemi"
       }
     ],
     "5": [
@@ -230,16 +218,8 @@
     ],
     "7": [
       {
-        "surface": "none",
-        "lemma": "oudeis"
-      },
-      {
         "surface": "lives",
         "lemma": "zao"
-      },
-      {
-        "surface": "none  of us",
-        "lemma": "oudeis"
       },
       {
         "surface": "dies",
@@ -248,10 +228,6 @@
     ],
     "8": [
       {
-        "surface": "If",
-        "lemma": "ean"
-      },
-      {
         "surface": "we live",
         "lemma": "zao"
       },
@@ -264,10 +240,6 @@
         "lemma": "kurios"
       },
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "we die",
         "lemma": "apothnesko"
       },
@@ -278,10 +250,6 @@
       {
         "surface": "Lord",
         "lemma": "kurios"
-      },
-      {
-        "surface": "whether",
-        "lemma": "ean"
       },
       {
         "surface": "we live",
@@ -324,20 +292,12 @@
     ],
     "10": [
       {
-        "surface": "Why",
-        "lemma": "tis"
-      },
-      {
         "surface": "judge",
         "lemma": "krino"
       },
       {
         "surface": "brother",
         "lemma": "adelphos"
-      },
-      {
-        "surface": "why",
-        "lemma": "tis"
       },
       {
         "surface": "belittle",
@@ -361,10 +321,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "It is written",
-        "lemma": "grapho"
-      },
       {
         "surface": "live",
         "lemma": "zao"
@@ -398,10 +354,6 @@
       {
         "surface": "each",
         "lemma": "hekastos"
-      },
-      {
-        "surface": "will give",
-        "lemma": "didomi"
       },
       {
         "surface": "an account",
@@ -448,10 +400,6 @@
     ],
     "14": [
       {
-        "surface": "I am convinced",
-        "lemma": "eido"
-      },
-      {
         "surface": "fully persuaded",
         "lemma": "peitho"
       },
@@ -464,16 +412,8 @@
         "lemma": "iesous"
       },
       {
-        "surface": "nothing is",
-        "lemma": "oudeis"
-      },
-      {
         "surface": "unclean",
         "lemma": "koinos"
-      },
-      {
-        "surface": "But if",
-        "lemma": "ei"
       },
       {
         "surface": "regards",
@@ -489,10 +429,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "If",
-        "lemma": "ei"
-      },
       {
         "surface": "brother",
         "lemma": "adelphos"
@@ -720,10 +656,6 @@
       {
         "surface": "is condemned",
         "lemma": "katakrino"
-      },
-      {
-        "surface": "if",
-        "lemma": "ean"
       },
       {
         "surface": "he eats",

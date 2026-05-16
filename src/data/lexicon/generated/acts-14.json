@@ -10,10 +10,6 @@
         "lemma": "ikonion"
       },
       {
-        "surface": "went",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "Jewish",
         "lemma": "ioudaios"
       },
@@ -22,16 +18,8 @@
         "lemma": "sunagoge"
       },
       {
-        "surface": "they spoke",
-        "lemma": "laleo"
-      },
-      {
         "surface": "so  well",
-        "lemma": "ohutoohutos"
-      },
-      {
-        "surface": "a great",
-        "lemma": "polus"
+        "lemma": "houto"
       },
       {
         "surface": "number",
@@ -112,10 +100,6 @@
       {
         "surface": "grace",
         "lemma": "charis"
-      },
-      {
-        "surface": "by enabling",
-        "lemma": "didomi"
       },
       {
         "surface": "them",
@@ -258,24 +242,12 @@
     ],
     "9": [
       {
-        "surface": "was listening to",
-        "lemma": "akouo"
-      },
-      {
-        "surface": "the words of",
-        "lemma": "laleo"
-      },
-      {
         "surface": "Paul",
         "lemma": "paulos"
       },
       {
         "surface": "looked intently",
         "lemma": "atenizo"
-      },
-      {
-        "surface": "saw",
-        "lemma": "horao"
       },
       {
         "surface": "faith",
@@ -288,16 +260,8 @@
     ],
     "10": [
       {
-        "surface": "In a loud",
-        "lemma": "megas"
-      },
-      {
         "surface": "voice",
         "lemma": "phone"
-      },
-      {
-        "surface": "Paul called out",
-        "lemma": "eipon"
       },
       {
         "surface": "Stand",
@@ -324,10 +288,6 @@
       {
         "surface": "crowds",
         "lemma": "ochlos"
-      },
-      {
-        "surface": "saw",
-        "lemma": "horao"
       },
       {
         "surface": "Paul",
@@ -369,7 +329,7 @@
       },
       {
         "surface": "Zeus",
-        "lemma": "zeusdis"
+        "lemma": "zeus"
       },
       {
         "surface": "Paul",
@@ -395,7 +355,7 @@
       },
       {
         "surface": "of Zeus",
-        "lemma": "zeusdis"
+        "lemma": "zeus"
       },
       {
         "surface": "city",
@@ -418,10 +378,6 @@
         "lemma": "pulon"
       },
       {
-        "surface": "hoping",
-        "lemma": "thelo"
-      },
-      {
         "surface": "to offer a sacrifice",
         "lemma": "thuo"
       },
@@ -442,10 +398,6 @@
       {
         "surface": "Paul",
         "lemma": "paulos"
-      },
-      {
-        "surface": "found out about this",
-        "lemma": "akouo"
       },
       {
         "surface": "they tore",
@@ -472,10 +424,6 @@
       {
         "surface": "Men",
         "lemma": "aner"
-      },
-      {
-        "surface": "why",
-        "lemma": "tis"
       },
       {
         "surface": "men",
@@ -556,10 +504,6 @@
       {
         "surface": "to His goodness",
         "lemma": "agathoergeo"
-      },
-      {
-        "surface": "He gives",
-        "lemma": "didomi"
       },
       {
         "surface": "rain",
@@ -676,20 +620,12 @@
         "lemma": "anistemi"
       },
       {
-        "surface": "and went back into",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "city",
         "lemma": "polis"
       },
       {
         "surface": "next day",
         "lemma": "epaurion"
-      },
-      {
-        "surface": "he left",
-        "lemma": "exerchomai"
       },
       {
         "surface": "Barnabas",
@@ -760,16 +696,8 @@
         "lemma": "dei"
       },
       {
-        "surface": "many",
-        "lemma": "polus"
-      },
-      {
         "surface": "hardships",
         "lemma": "thlipsis"
-      },
-      {
-        "surface": "to enter",
-        "lemma": "eiserchomai"
       },
       {
         "surface": "kingdom",
@@ -829,10 +757,6 @@
       }
     ],
     "25": [
-      {
-        "surface": "they had spoken",
-        "lemma": "laleo"
-      },
       {
         "surface": "word",
         "lemma": "logos"
@@ -946,7 +870,7 @@
     ]
   },
   "themeLemmas": [
-    "zeusdis",
+    "zeus",
     "lustra",
     "ikonion"
   ]

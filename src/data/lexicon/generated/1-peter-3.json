@@ -22,10 +22,6 @@
         "lemma": "aner"
       },
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "refuse to believe",
         "lemma": "apeitheo"
       },
@@ -131,7 +127,7 @@
     "5": [
       {
         "surface": "this is how",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "holy",
@@ -324,20 +320,12 @@
     ],
     "10": [
       {
-        "surface": "would",
-        "lemma": "thelo"
-      },
-      {
         "surface": "love",
         "lemma": "agapao"
       },
       {
         "surface": "life",
         "lemma": "zoe"
-      },
-      {
-        "surface": "see",
-        "lemma": "horao"
       },
       {
         "surface": "good",
@@ -366,10 +354,6 @@
       {
         "surface": "deceitful",
         "lemma": "dolos"
-      },
-      {
-        "surface": "speech",
-        "lemma": "laleo"
       }
     ],
     "11": [
@@ -434,16 +418,8 @@
     ],
     "13": [
       {
-        "surface": "Who",
-        "lemma": "tis"
-      },
-      {
         "surface": "can harm",
         "lemma": "kakoo"
-      },
-      {
-        "surface": "if",
-        "lemma": "ean"
       },
       {
         "surface": "zealous",
@@ -455,10 +431,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "you should suffer",
         "lemma": "pascho"
@@ -568,14 +540,6 @@
       {
         "surface": "it is better",
         "lemma": "kreitton"
-      },
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
-        "surface": "it is",
-        "lemma": "thelo"
       },
       {
         "surface": "God’s",
@@ -717,7 +681,7 @@
       },
       {
         "surface": "water",
-        "lemma": "hudorhudatos"
+        "lemma": "hudor"
       }
     ],
     "21": [

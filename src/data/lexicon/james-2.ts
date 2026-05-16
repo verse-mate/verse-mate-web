@@ -10,16 +10,16 @@ const VERSES: ChapterAlignment['verses'] = {
   1: [
     { surface: 'brothers', lemma: 'adelphos' },
     { surface: 'brethren', lemma: 'adelphos' },
-    { surface: 'partiality', lemma: 'prosopolempsia', contextual:
+    { surface: 'partiality', lemma: 'prosopolepsia', contextual:
       'προσωπολημψία literally means "face-receiving" — a Christian coinage from a Hebrew idiom. James charges that judging by face/status is incompatible with allegiance to the glorious Lord.' },
-    { surface: 'favoritism', lemma: 'prosopolempsia' },
+    { surface: 'favoritism', lemma: 'prosopolepsia' },
     { surface: 'faith', lemma: 'pistis' },
-    { surface: 'Lord', lemma: 'kyrios' },
+    { surface: 'Lord', lemma: 'kurios' },
   ],
   2: [
-    { surface: 'assembly', lemma: 'synagoge', contextual:
+    { surface: 'assembly', lemma: 'sunagoge', contextual:
       'James calls the Christian gathering a συναγωγή — one of the earliest indicators of the Jewish-Christian register of the letter. The vocabulary still belongs to the Jewish covenantal world.' },
-    { surface: 'gold ring', lemma: 'chrysodaktylios', contextual:
+    { surface: 'gold ring', lemma: 'chrusodaktulios', contextual:
       'χρυσοδακτύλιος is a hapax — "gold-ringed." In Roman society this signaled equestrian rank. James paints the visitor in status-iconography and dares the assembly to seat him by it.' },
   ],
   5: [
@@ -41,8 +41,8 @@ const VERSES: ChapterAlignment['verses'] = {
     { surface: 'love', lemma: 'agapao' },
   ],
   9: [
-    { surface: 'partiality', lemma: 'prosopolempsia' },
-    { surface: 'favoritism', lemma: 'prosopolempsia' },
+    { surface: 'partiality', lemma: 'prosopolepsia' },
+    { surface: 'favoritism', lemma: 'prosopolepsia' },
     { surface: 'law', lemma: 'nomos' },
     { surface: 'sin', lemma: 'hamartia' },
   ],
@@ -105,7 +105,7 @@ const VERSES: ChapterAlignment['verses'] = {
   ],
   23: [
     { surface: 'believed', lemma: 'pistis' },
-    { surface: 'righteousness', lemma: 'dikaiosyne' },
+    { surface: 'righteousness', lemma: 'dikaiosune' },
   ],
   24: [
     { surface: 'justified', lemma: 'dikaioo' },
@@ -126,7 +126,7 @@ const VERSES: ChapterAlignment['verses'] = {
 // James 2's spine: the faith-vs-works debate (πίστις + ἔργον — chapter's
 // central argument) and the opening problem of προσωπολημψία that the
 // argument is launched to correct.
-const THEME_LEMMAS = ['pistis', 'ergon', 'prosopolempsia'];
+const THEME_LEMMAS = ['pistis', 'ergon', 'prosopolepsia'];
 
 export const JAMES_2_ALIGNMENT: ChapterAlignment = {
   bookId: 59,

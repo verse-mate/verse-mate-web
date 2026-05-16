@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Jesus saw",
-        "lemma": "horao"
-      },
-      {
         "surface": "crowds",
         "lemma": "ochlos"
       },
@@ -148,10 +144,6 @@
         "lemma": "kardia"
       },
       {
-        "surface": "will see",
-        "lemma": "horao"
-      },
-      {
         "surface": "God",
         "lemma": "theos"
       }
@@ -171,7 +163,7 @@
       },
       {
         "surface": "sons",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of God",
@@ -218,10 +210,6 @@
         "lemma": "pseudomai"
       },
       {
-        "surface": "say",
-        "lemma": "eipon"
-      },
-      {
         "surface": "evil",
         "lemma": "poneros"
       }
@@ -236,10 +224,6 @@
         "lemma": "agalliao"
       },
       {
-        "surface": "great is",
-        "lemma": "polus"
-      },
-      {
         "surface": "reward",
         "lemma": "misthos"
       },
@@ -249,7 +233,7 @@
       },
       {
         "surface": "in the same way",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "they persecuted",
@@ -270,10 +254,6 @@
         "lemma": "ge"
       },
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "salt",
         "lemma": "halas"
       },
@@ -288,14 +268,6 @@
       {
         "surface": "It is no longer good",
         "lemma": "ischuo"
-      },
-      {
-        "surface": "anything",
-        "lemma": "oudeis"
-      },
-      {
-        "surface": "except",
-        "lemma": "ei"
       },
       {
         "surface": "to be thrown",
@@ -326,10 +298,6 @@
       {
         "surface": "a hill",
         "lemma": "oros"
-      },
-      {
-        "surface": "cannot",
-        "lemma": "dunamai"
       },
       {
         "surface": "be hidden",
@@ -369,7 +337,7 @@
     "16": [
       {
         "surface": "In the same way",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "light",
@@ -382,10 +350,6 @@
       {
         "surface": "men",
         "lemma": "anthropos"
-      },
-      {
-        "surface": "they may see",
-        "lemma": "horao"
       },
       {
         "surface": "good",
@@ -452,16 +416,8 @@
         "lemma": "parerchomai"
       },
       {
-        "surface": "a single",
-        "lemma": "ehis"
-      },
-      {
         "surface": "jot",
         "lemma": "iota"
-      },
-      {
-        "surface": "a",
-        "lemma": "ehis"
       },
       {
         "surface": "stroke of a pen",
@@ -478,16 +434,8 @@
     ],
     "19": [
       {
-        "surface": "vvv",
-        "lemma": "ean"
-      },
-      {
         "surface": "breaks",
         "lemma": "luo"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
       },
       {
         "surface": "least",
@@ -507,7 +455,7 @@
       },
       {
         "surface": "to do likewise",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "will be called",
@@ -534,10 +482,6 @@
         "lemma": "kaleo"
       },
       {
-        "surface": "great",
-        "lemma": "megas"
-      },
-      {
         "surface": "kingdom",
         "lemma": "basileia"
       },
@@ -547,10 +491,6 @@
       }
     ],
     "20": [
-      {
-        "surface": "unless",
-        "lemma": "ean"
-      },
       {
         "surface": "righteousness",
         "lemma": "dikaiosune"
@@ -568,10 +508,6 @@
         "lemma": "pharisaios"
       },
       {
-        "surface": "you will never enter",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "kingdom",
         "lemma": "basileia"
       },
@@ -581,10 +517,6 @@
       }
     ],
     "21": [
-      {
-        "surface": "You have heard",
-        "lemma": "akouo"
-      },
       {
         "surface": "it was said",
         "lemma": "ero"
@@ -628,10 +560,6 @@
         "lemma": "krisis"
       },
       {
-        "surface": "says",
-        "lemma": "eipon"
-      },
-      {
         "surface": "brother",
         "lemma": "adelphos"
       },
@@ -646,10 +574,6 @@
       {
         "surface": "Sanhedrin",
         "lemma": "sunedrion"
-      },
-      {
-        "surface": "says",
-        "lemma": "eipon"
       },
       {
         "surface": "You fool",
@@ -669,10 +593,6 @@
       }
     ],
     "23": [
-      {
-        "surface": "if",
-        "lemma": "ean"
-      },
       {
         "surface": "you are offering",
         "lemma": "prosphero"
@@ -796,10 +716,6 @@
         "lemma": "amen"
       },
       {
-        "surface": "you will not get out",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "you have paid",
         "lemma": "apodidomi"
       },
@@ -813,10 +729,6 @@
       }
     ],
     "27": [
-      {
-        "surface": "You have heard",
-        "lemma": "akouo"
-      },
       {
         "surface": "it was said",
         "lemma": "ero"
@@ -854,10 +766,6 @@
     ],
     "29": [
       {
-        "surface": "If",
-        "lemma": "ei"
-      },
-      {
         "surface": "right",
         "lemma": "dexios"
       },
@@ -886,10 +794,6 @@
         "lemma": "apolluo"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "part of your body",
         "lemma": "melos"
       },
@@ -911,10 +815,6 @@
       }
     ],
     "30": [
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "right",
         "lemma": "dexios"
@@ -942,10 +842,6 @@
       {
         "surface": "lose",
         "lemma": "apolluo"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
       },
       {
         "surface": "part of your body",
@@ -980,10 +876,6 @@
       {
         "surface": "wife",
         "lemma": "gune"
-      },
-      {
-        "surface": "must give",
-        "lemma": "didomi"
       },
       {
         "surface": "a certificate of divorce",
@@ -1028,10 +920,6 @@
       {
         "surface": "Again",
         "lemma": "palin"
-      },
-      {
-        "surface": "you have heard",
-        "lemma": "akouo"
       },
       {
         "surface": "it was said",
@@ -1098,10 +986,6 @@
         "lemma": "polis"
       },
       {
-        "surface": "great",
-        "lemma": "megas"
-      },
-      {
         "surface": "King",
         "lemma": "basileus"
       }
@@ -1114,14 +998,6 @@
       {
         "surface": "head",
         "lemma": "kephale"
-      },
-      {
-        "surface": "you cannot",
-        "lemma": "dunamai"
-      },
-      {
-        "surface": "a single",
-        "lemma": "ehis"
       },
       {
         "surface": "hair",
@@ -1147,10 +1023,6 @@
       }
     ],
     "38": [
-      {
-        "surface": "You have heard",
-        "lemma": "akouo"
-      },
       {
         "surface": "it was said",
         "lemma": "ero"
@@ -1204,16 +1076,8 @@
     ],
     "40": [
       {
-        "surface": "wants",
-        "lemma": "thelo"
-      },
-      {
         "surface": "to sue",
         "lemma": "krino"
-      },
-      {
-        "surface": "take",
-        "lemma": "lambano"
       },
       {
         "surface": "tunic",
@@ -1234,10 +1098,6 @@
         "lemma": "angareuo"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "mile",
         "lemma": "milion"
       },
@@ -1252,10 +1112,6 @@
     ],
     "42": [
       {
-        "surface": "Give",
-        "lemma": "didomi"
-      },
-      {
         "surface": "who asks",
         "lemma": "aiteo"
       },
@@ -1264,19 +1120,11 @@
         "lemma": "apostrepho"
       },
       {
-        "surface": "who wants",
-        "lemma": "thelo"
-      },
-      {
         "surface": "to borrow",
         "lemma": "daneizo"
       }
     ],
     "43": [
-      {
-        "surface": "You have heard",
-        "lemma": "akouo"
-      },
       {
         "surface": "it was said",
         "lemma": "ero"
@@ -1319,7 +1167,7 @@
     "45": [
       {
         "surface": "sons",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "Father",
@@ -1360,20 +1208,12 @@
     ],
     "46": [
       {
-        "surface": "If",
-        "lemma": "ean"
-      },
-      {
         "surface": "you love",
         "lemma": "agapao"
       },
       {
         "surface": "who love",
         "lemma": "agapao"
-      },
-      {
-        "surface": "what",
-        "lemma": "tis"
       },
       {
         "surface": "reward",
@@ -1386,10 +1226,6 @@
     ],
     "47": [
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "you greet",
         "lemma": "aspazomai"
       },
@@ -1400,10 +1236,6 @@
       {
         "surface": "brothers",
         "lemma": "adelphos"
-      },
-      {
-        "surface": "what",
-        "lemma": "tis"
       },
       {
         "surface": "more than others",

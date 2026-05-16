@@ -140,10 +140,6 @@
         "lemma": "thlipsis"
       },
       {
-        "surface": "can",
-        "lemma": "dunamai"
-      },
-      {
         "surface": "comfort",
         "lemma": "parakaleo"
       },
@@ -179,7 +175,7 @@
       },
       {
         "surface": "so",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "Christ",
@@ -250,10 +246,6 @@
         "lemma": "bebaios"
       },
       {
-        "surface": "because we know",
-        "lemma": "eido"
-      },
-      {
         "surface": "you share",
         "lemma": "koinonos"
       },
@@ -263,7 +255,7 @@
       },
       {
         "surface": "so",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "comfort",
@@ -271,10 +263,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "We do not want",
-        "lemma": "thelo"
-      },
       {
         "surface": "to be unaware",
         "lemma": "agnoeo"
@@ -366,20 +354,12 @@
         "lemma": "deesis"
       },
       {
-        "surface": "many",
-        "lemma": "polus"
-      },
-      {
         "surface": "will give thanks",
         "lemma": "eucharisteo"
       },
       {
         "surface": "favor shown",
         "lemma": "charisma"
-      },
-      {
-        "surface": "their prayers",
-        "lemma": "polus"
       }
     ],
     "12": [
@@ -437,10 +417,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "we do not write you anything",
-        "lemma": "grapho"
-      },
       {
         "surface": "that is beyond",
         "lemma": "allos"
@@ -575,7 +551,7 @@
     "19": [
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of God",
@@ -652,10 +628,6 @@
         "lemma": "sphragizo"
       },
       {
-        "surface": "put",
-        "lemma": "didomi"
-      },
-      {
         "surface": "Spirit",
         "lemma": "pneuma"
       },
@@ -714,10 +686,6 @@
       {
         "surface": "faith that",
         "lemma": "pistis"
-      },
-      {
-        "surface": "you stand firm",
-        "lemma": "histemi"
       }
     ]
   },

@@ -14,10 +14,6 @@
         "lemma": "apostolos"
       },
       {
-        "surface": "Have I not seen",
-        "lemma": "horao"
-      },
-      {
         "surface": "Jesus",
         "lemma": "iesous"
       },
@@ -35,10 +31,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "Even if",
-        "lemma": "ei"
-      },
       {
         "surface": "an apostle",
         "lemma": "apostolos"
@@ -142,10 +134,6 @@
     ],
     "7": [
       {
-        "surface": "Who",
-        "lemma": "tis"
-      },
-      {
         "surface": "serves as a soldier",
         "lemma": "strateuo"
       },
@@ -156,10 +144,6 @@
       {
         "surface": "expense",
         "lemma": "opsonion"
-      },
-      {
-        "surface": "Who",
-        "lemma": "tis"
       },
       {
         "surface": "plants",
@@ -176,10 +160,6 @@
       {
         "surface": "fruit",
         "lemma": "karpos"
-      },
-      {
-        "surface": "Who",
-        "lemma": "tis"
       },
       {
         "surface": "tends",
@@ -204,26 +184,18 @@
     ],
     "8": [
       {
-        "surface": "Do I say",
-        "lemma": "laleo"
-      },
-      {
         "surface": "the Law",
         "lemma": "nomos"
       }
     ],
     "9": [
       {
-        "surface": "it is written",
-        "lemma": "grapho"
-      },
-      {
         "surface": "Law",
         "lemma": "nomos"
       },
       {
         "surface": "of Moses",
-        "lemma": "mousesmoses"
+        "lemma": "mouses"
       },
       {
         "surface": "Do not muzzle",
@@ -252,10 +224,6 @@
     ],
     "10": [
       {
-        "surface": "this was written",
-        "lemma": "grapho"
-      },
-      {
         "surface": "plowman",
         "lemma": "arotriao"
       },
@@ -282,24 +250,12 @@
     ],
     "11": [
       {
-        "surface": "If",
-        "lemma": "ei"
-      },
-      {
         "surface": "have sown",
         "lemma": "speiro"
       },
       {
         "surface": "spiritual seed",
         "lemma": "pneumatikos"
-      },
-      {
-        "surface": "is it too much",
-        "lemma": "megas"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "ei"
       },
       {
         "surface": "to reap",
@@ -311,10 +267,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "If",
-        "lemma": "ei"
-      },
       {
         "surface": "others",
         "lemma": "allos"
@@ -344,10 +296,6 @@
         "lemma": "stego"
       },
       {
-        "surface": "hinder",
-        "lemma": "didomi"
-      },
-      {
         "surface": "gospel",
         "lemma": "euangelion"
       },
@@ -357,10 +305,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "Do you not know",
-        "lemma": "eido"
-      },
       {
         "surface": "work",
         "lemma": "ergazomai"
@@ -393,7 +337,7 @@
     "14": [
       {
         "surface": "In the same way",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "Lord",
@@ -426,16 +370,8 @@
         "lemma": "chrao"
       },
       {
-        "surface": "any",
-        "lemma": "oudeis"
-      },
-      {
-        "surface": "I am not writing",
-        "lemma": "grapho"
-      },
-      {
         "surface": "something",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "would rather",
@@ -444,10 +380,6 @@
       {
         "surface": "die",
         "lemma": "apothnesko"
-      },
-      {
-        "surface": "let} anyone",
-        "lemma": "oudeis"
       },
       {
         "surface": "nullify",
@@ -459,10 +391,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "when",
-        "lemma": "ean"
-      },
       {
         "surface": "I preach the gospel",
         "lemma": "euangelizomai"
@@ -476,19 +404,11 @@
         "lemma": "anagke"
       },
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "I do not preach the gospel",
         "lemma": "euangelizomai"
       }
     ],
     "17": [
-      {
-        "surface": "If",
-        "lemma": "ei"
-      },
       {
         "surface": "my",
         "lemma": "prasso"
@@ -500,10 +420,6 @@
       {
         "surface": "a reward",
         "lemma": "misthos"
-      },
-      {
-        "surface": "if",
-        "lemma": "ei"
       },
       {
         "surface": "it is not voluntary",
@@ -519,10 +435,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "What",
-        "lemma": "tis"
-      },
       {
         "surface": "reward",
         "lemma": "misthos"
@@ -571,7 +483,7 @@
       },
       {
         "surface": "as many as possible",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       }
     ],
     "20": [
@@ -680,10 +592,6 @@
     ],
     "24": [
       {
-        "surface": "Do you not know",
-        "lemma": "eido"
-      },
-      {
         "surface": "a race",
         "lemma": "stadios"
       },
@@ -696,14 +604,6 @@
         "lemma": "trecho"
       },
       {
-        "surface": "only one",
-        "lemma": "ehis"
-      },
-      {
-        "surface": "receives",
-        "lemma": "lambano"
-      },
-      {
         "surface": "prize",
         "lemma": "brabeion"
       },
@@ -713,7 +613,7 @@
       },
       {
         "surface": "in such a way",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "take the prize",
@@ -728,10 +628,6 @@
       {
         "surface": "trains with strict discipline",
         "lemma": "egkrateuomai"
-      },
-      {
-        "surface": "for",
-        "lemma": "lambano"
       },
       {
         "surface": "a crown",
@@ -753,7 +649,7 @@
       },
       {
         "surface": "vvv",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "aimlessly",
@@ -765,7 +661,7 @@
       },
       {
         "surface": "like",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "I am beating",

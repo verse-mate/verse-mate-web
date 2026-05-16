@@ -61,7 +61,7 @@
       },
       {
         "surface": "where",
-        "lemma": "ohu"
+        "lemma": "hou"
       },
       {
         "surface": "sitting",
@@ -69,10 +69,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "saw",
-        "lemma": "horao"
-      },
       {
         "surface": "tongues",
         "lemma": "glossa"
@@ -97,7 +93,7 @@
     "4": [
       {
         "surface": "filled with",
-        "lemma": "plethopimplemi"
+        "lemma": "pletho"
       },
       {
         "surface": "the Holy",
@@ -112,10 +108,6 @@
         "lemma": "archomai"
       },
       {
-        "surface": "to speak",
-        "lemma": "laleo"
-      },
-      {
         "surface": "in other",
         "lemma": "heteros"
       },
@@ -126,10 +118,6 @@
       {
         "surface": "Spirit",
         "lemma": "pneuma"
-      },
-      {
-        "surface": "enabled",
-        "lemma": "didomi"
       }
     ],
     "5": [
@@ -180,18 +168,6 @@
         "lemma": "hekastos"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
-        "surface": "heard",
-        "lemma": "akouo"
-      },
-      {
-        "surface": "speaking",
-        "lemma": "laleo"
-      },
-      {
         "surface": "own",
         "lemma": "idios"
       },
@@ -210,10 +186,6 @@
         "lemma": "thaumazo"
       },
       {
-        "surface": "are speaking",
-        "lemma": "laleo"
-      },
-      {
         "surface": "Galileans",
         "lemma": "galilaios"
       }
@@ -222,10 +194,6 @@
       {
         "surface": "each",
         "lemma": "hekastos"
-      },
-      {
-        "surface": "hears them",
-        "lemma": "akouo"
       },
       {
         "surface": "own",
@@ -330,14 +298,6 @@
         "lemma": "araps"
       },
       {
-        "surface": "we hear",
-        "lemma": "akouo"
-      },
-      {
-        "surface": "declaring",
-        "lemma": "laleo"
-      },
-      {
         "surface": "wonders",
         "lemma": "megaleios"
       },
@@ -366,14 +326,6 @@
       {
         "surface": "one another",
         "lemma": "allos"
-      },
-      {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
-        "surface": "does",
-        "lemma": "thelo"
       }
     ],
     "13": [
@@ -384,10 +336,6 @@
       {
         "surface": "mocked them",
         "lemma": "chleuazo"
-      },
-      {
-        "surface": "and said",
-        "lemma": "eipon"
       },
       {
         "surface": "drunk",
@@ -402,10 +350,6 @@
       {
         "surface": "Peter",
         "lemma": "petros"
-      },
-      {
-        "surface": "stood up",
-        "lemma": "histemi"
       },
       {
         "surface": "Eleven",
@@ -441,7 +385,7 @@
       },
       {
         "surface": "known",
-        "lemma": "gnostosgnorimos"
+        "lemma": "gnostos"
       },
       {
         "surface": "listen carefully to",
@@ -515,7 +459,7 @@
       },
       {
         "surface": "sons",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "daughters",
@@ -528,10 +472,6 @@
       {
         "surface": "young men",
         "lemma": "neaniskos"
-      },
-      {
-        "surface": "will see",
-        "lemma": "horao"
       },
       {
         "surface": "visions",
@@ -578,10 +518,6 @@
     ],
     "19": [
       {
-        "surface": "I will show",
-        "lemma": "didomi"
-      },
-      {
         "surface": "wonders",
         "lemma": "teras"
       },
@@ -603,7 +539,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "fire",
@@ -637,11 +573,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
-      },
-      {
-        "surface": "of the great",
-        "lemma": "megas"
+        "lemma": "haima"
       },
       {
         "surface": "glorious",
@@ -657,10 +589,6 @@
       }
     ],
     "21": [
-      {
-        "surface": "vvv",
-        "lemma": "ean"
-      },
       {
         "surface": "calls",
         "lemma": "epikaleo"
@@ -686,10 +614,6 @@
       {
         "surface": "of Israel",
         "lemma": "israelites"
-      },
-      {
-        "surface": "listen to",
-        "lemma": "akouo"
       },
       {
         "surface": "message",
@@ -734,10 +658,6 @@
       {
         "surface": "among you",
         "lemma": "mesos"
-      },
-      {
-        "surface": "know",
-        "lemma": "eido"
       }
     ],
     "23": [
@@ -811,7 +731,7 @@
     "25": [
       {
         "surface": "David",
-        "lemma": "daueiddauiddabid"
+        "lemma": "daueid"
       },
       {
         "surface": "I saw",
@@ -874,16 +794,8 @@
         "lemma": "hades"
       },
       {
-        "surface": "will You let",
-        "lemma": "didomi"
-      },
-      {
         "surface": "Holy One",
         "lemma": "hosios"
-      },
-      {
-        "surface": "see",
-        "lemma": "horao"
       },
       {
         "surface": "decay",
@@ -927,11 +839,7 @@
       },
       {
         "surface": "I can",
-        "lemma": "exestiexon"
-      },
-      {
-        "surface": "tell",
-        "lemma": "eipon"
+        "lemma": "exesti"
       },
       {
         "surface": "with confidence",
@@ -943,7 +851,7 @@
       },
       {
         "surface": "David",
-        "lemma": "daueiddauiddabid"
+        "lemma": "daueid"
       },
       {
         "surface": "died",
@@ -970,10 +878,6 @@
       {
         "surface": "a prophet",
         "lemma": "prophetes"
-      },
-      {
-        "surface": "knew",
-        "lemma": "eido"
       },
       {
         "surface": "God",
@@ -1010,10 +914,6 @@
         "lemma": "proorao"
       },
       {
-        "surface": "David spoke",
-        "lemma": "laleo"
-      },
-      {
         "surface": "resurrection",
         "lemma": "anastasis"
       },
@@ -1032,10 +932,6 @@
       {
         "surface": "body",
         "lemma": "sarx"
-      },
-      {
-        "surface": "see",
-        "lemma": "horao"
       },
       {
         "surface": "decay",
@@ -1074,10 +970,6 @@
         "lemma": "theos"
       },
       {
-        "surface": "He has received",
-        "lemma": "lambano"
-      },
-      {
         "surface": "Father",
         "lemma": "pater"
       },
@@ -1100,16 +992,12 @@
       {
         "surface": "see",
         "lemma": "blepo"
-      },
-      {
-        "surface": "hear",
-        "lemma": "akouo"
       }
     ],
     "34": [
       {
         "surface": "David",
-        "lemma": "daueiddauiddabid"
+        "lemma": "daueid"
       },
       {
         "surface": "ascend",
@@ -1122,10 +1010,6 @@
       {
         "surface": "Lord",
         "lemma": "kurios"
-      },
-      {
-        "surface": "said",
-        "lemma": "eipon"
       },
       {
         "surface": "Lord",
@@ -1168,10 +1052,6 @@
         "lemma": "israel"
       },
       {
-        "surface": "know",
-        "lemma": "ginosko"
-      },
-      {
         "surface": "with certainty",
         "lemma": "asphalos"
       },
@@ -1198,20 +1078,12 @@
     ],
     "37": [
       {
-        "surface": "the people heard this",
-        "lemma": "akouo"
-      },
-      {
         "surface": "they were cut",
         "lemma": "katanusso"
       },
       {
         "surface": "heart",
         "lemma": "kardia"
-      },
-      {
-        "surface": "asked",
-        "lemma": "eipon"
       },
       {
         "surface": "Peter",
@@ -1232,10 +1104,6 @@
       {
         "surface": "Brothers",
         "lemma": "adelphos"
-      },
-      {
-        "surface": "what",
-        "lemma": "tis"
       }
     ],
     "38": [
@@ -1278,10 +1146,6 @@
       {
         "surface": "sins",
         "lemma": "hamartia"
-      },
-      {
-        "surface": "you will receive",
-        "lemma": "lambano"
       },
       {
         "surface": "gift",
@@ -1329,7 +1193,7 @@
     "40": [
       {
         "surface": "many",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "other",
@@ -1424,10 +1288,6 @@
       {
         "surface": "apostles",
         "lemma": "apostolos"
-      },
-      {
-        "surface": "many",
-        "lemma": "polus"
       },
       {
         "surface": "wonders",

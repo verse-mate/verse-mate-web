@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "you wrote about",
-        "lemma": "grapho"
-      },
-      {
         "surface": "It is good",
         "lemma": "kalos"
       },
@@ -134,10 +130,6 @@
         "lemma": "allelon"
       },
       {
-        "surface": "except",
-        "lemma": "ei"
-      },
-      {
         "surface": "mutual consent",
         "lemma": "sumphonos"
       },
@@ -182,10 +174,6 @@
     ],
     "7": [
       {
-        "surface": "I wish that",
-        "lemma": "thelo"
-      },
-      {
         "surface": "men",
         "lemma": "anthropos"
       },
@@ -207,11 +195,11 @@
       },
       {
         "surface": "this gift",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "that",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       }
     ],
     "8": [
@@ -228,19 +216,11 @@
         "lemma": "kalos"
       },
       {
-        "surface": "vvv",
-        "lemma": "ean"
-      },
-      {
         "surface": "to remain unmarried",
         "lemma": "meno"
       }
     ],
     "9": [
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "they cannot control themselves",
         "lemma": "egkrateuomai"
@@ -290,10 +270,6 @@
     ],
     "11": [
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "she does",
         "lemma": "chorizo"
       },
@@ -336,10 +312,6 @@
         "lemma": "kurios"
       },
       {
-        "surface": "If",
-        "lemma": "ei"
-      },
-      {
         "surface": "brother",
         "lemma": "adelphos"
       },
@@ -365,10 +337,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "woman",
         "lemma": "gune"
@@ -450,10 +418,6 @@
     ],
     "15": [
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "unbeliever",
         "lemma": "apistos"
       },
@@ -492,20 +456,8 @@
     ],
     "16": [
       {
-        "surface": "How",
-        "lemma": "tis"
-      },
-      {
-        "surface": "do you know",
-        "lemma": "eido"
-      },
-      {
         "surface": "wife",
         "lemma": "gune"
-      },
-      {
-        "surface": "whether",
-        "lemma": "ei"
       },
       {
         "surface": "you will save",
@@ -516,20 +468,8 @@
         "lemma": "aner"
       },
       {
-        "surface": "how",
-        "lemma": "tis"
-      },
-      {
-        "surface": "do you know",
-        "lemma": "eido"
-      },
-      {
         "surface": "husband",
         "lemma": "aner"
-      },
-      {
-        "surface": "whether",
-        "lemma": "ei"
       },
       {
         "surface": "you will save",
@@ -542,10 +482,6 @@
     ],
     "17": [
       {
-        "surface": "Regardless",
-        "lemma": "ei"
-      },
-      {
         "surface": "each one",
         "lemma": "hekastos"
       },
@@ -555,7 +491,7 @@
       },
       {
         "surface": "the life",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "Lord",
@@ -579,7 +515,7 @@
       },
       {
         "surface": "This is what",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "I prescribe",
@@ -622,16 +558,8 @@
         "lemma": "peritome"
       },
       {
-        "surface": "nothing",
-        "lemma": "oudeis"
-      },
-      {
         "surface": "uncircumcision",
         "lemma": "akrobustia"
-      },
-      {
-        "surface": "nothing",
-        "lemma": "oudeis"
       },
       {
         "surface": "Keeping",
@@ -676,14 +604,6 @@
       {
         "surface": "Do not let it concern",
         "lemma": "melo"
-      },
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
-        "surface": "you can",
-        "lemma": "dunamai"
       },
       {
         "surface": "your freedom",
@@ -786,10 +706,6 @@
         "lemma": "kurios"
       },
       {
-        "surface": "I give",
-        "lemma": "didomi"
-      },
-      {
         "surface": "a judgment",
         "lemma": "gnome"
       },
@@ -833,7 +749,7 @@
       },
       {
         "surface": "as he is",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       }
     ],
     "27": [
@@ -872,20 +788,12 @@
     ],
     "28": [
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "you do marry",
         "lemma": "gameo"
       },
       {
         "surface": "you have not sinned",
         "lemma": "hamartano"
-      },
-      {
-        "surface": "if",
-        "lemma": "ean"
       },
       {
         "surface": "a virgin",
@@ -991,10 +899,6 @@
       }
     ],
     "32": [
-      {
-        "surface": "I want",
-        "lemma": "thelo"
-      },
       {
         "surface": "free from concern",
         "lemma": "amerimnos"
@@ -1119,7 +1023,7 @@
       },
       {
         "surface": "devotion",
-        "lemma": "euprosedroseuparedros"
+        "lemma": "euprosedros"
       },
       {
         "surface": "Lord",
@@ -1127,10 +1031,6 @@
       }
     ],
     "36": [
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "thinks",
         "lemma": "nomizo"
@@ -1144,10 +1044,6 @@
         "lemma": "parthenos"
       },
       {
-        "surface": "and if",
-        "lemma": "ean"
-      },
-      {
         "surface": "beyond her youth",
         "lemma": "huperakmos"
       },
@@ -1157,11 +1053,7 @@
       },
       {
         "surface": "to marry",
-        "lemma": "ohutoohutos"
-      },
-      {
-        "surface": "he wishes",
-        "lemma": "thelo"
+        "lemma": "houto"
       },
       {
         "surface": "he is not sinning",
@@ -1176,10 +1068,6 @@
       {
         "surface": "is firmly",
         "lemma": "hedraios"
-      },
-      {
-        "surface": "established",
-        "lemma": "histemi"
       },
       {
         "surface": "heart",
@@ -1229,7 +1117,7 @@
     "38": [
       {
         "surface": "marries",
-        "lemma": "gamiskogamizo"
+        "lemma": "gamisko"
       },
       {
         "surface": "virgin",
@@ -1241,7 +1129,7 @@
       },
       {
         "surface": "marry her",
-        "lemma": "gamiskogamizo"
+        "lemma": "gamisko"
       },
       {
         "surface": "even better",
@@ -1270,10 +1158,6 @@
         "lemma": "zao"
       },
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "husband",
         "lemma": "aner"
       },
@@ -1288,10 +1172,6 @@
       {
         "surface": "to marry",
         "lemma": "gameo"
-      },
-      {
-        "surface": "she wishes",
-        "lemma": "thelo"
       },
       {
         "surface": "as long as",
@@ -1316,16 +1196,12 @@
         "lemma": "makarios"
       },
       {
-        "surface": "if",
-        "lemma": "ean"
-      },
-      {
         "surface": "she remains",
         "lemma": "meno"
       },
       {
         "surface": "as she is",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "I think that",

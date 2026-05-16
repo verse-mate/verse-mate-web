@@ -22,10 +22,6 @@
         "lemma": "mathetes"
       },
       {
-        "surface": "requested",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Lord",
         "lemma": "kurios"
       },
@@ -52,10 +48,6 @@
     ],
     "2": [
       {
-        "surface": "Jesus told",
-        "lemma": "eipon"
-      },
-      {
         "surface": "you pray",
         "lemma": "proseuchomai"
       },
@@ -77,10 +69,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "Give",
-        "lemma": "didomi"
-      },
       {
         "surface": "day",
         "lemma": "hemera"
@@ -122,14 +110,6 @@
     ],
     "5": [
       {
-        "surface": "Jesus said",
-        "lemma": "eipon"
-      },
-      {
-        "surface": "Suppose one",
-        "lemma": "tis"
-      },
-      {
         "surface": "goes",
         "lemma": "poreuo"
       },
@@ -140,10 +120,6 @@
       {
         "surface": "at midnight",
         "lemma": "mesonuktios"
-      },
-      {
-        "surface": "says",
-        "lemma": "eipon"
       },
       {
         "surface": "Friend",
@@ -186,10 +162,6 @@
         "lemma": "esothen"
       },
       {
-        "surface": "answers",
-        "lemma": "apokrino"
-      },
-      {
         "surface": "vvv",
         "lemma": "parecho"
       },
@@ -218,30 +190,14 @@
         "lemma": "koite"
       },
       {
-        "surface": "I cannot",
-        "lemma": "dunamai"
-      },
-      {
         "surface": "get up",
         "lemma": "anistemi"
-      },
-      {
-        "surface": "to give",
-        "lemma": "didomi"
       }
     ],
     "8": [
       {
-        "surface": "though",
-        "lemma": "ei"
-      },
-      {
         "surface": "he will not get up",
         "lemma": "anistemi"
-      },
-      {
-        "surface": "to provide",
-        "lemma": "didomi"
       },
       {
         "surface": "friendship",
@@ -254,10 +210,6 @@
       {
         "surface": "he will get up",
         "lemma": "egeiro"
-      },
-      {
-        "surface": "and give",
-        "lemma": "didomi"
       },
       {
         "surface": "as much as",
@@ -274,16 +226,8 @@
         "lemma": "aiteo"
       },
       {
-        "surface": "it will be given",
-        "lemma": "didomi"
-      },
-      {
         "surface": "seek",
         "lemma": "zeteo"
-      },
-      {
-        "surface": "you will find",
-        "lemma": "ehurisko"
       },
       {
         "surface": "knock",
@@ -300,16 +244,8 @@
         "lemma": "aiteo"
       },
       {
-        "surface": "receives",
-        "lemma": "lambano"
-      },
-      {
         "surface": "seeks",
         "lemma": "zeteo"
-      },
-      {
-        "surface": "finds",
-        "lemma": "ehurisko"
       },
       {
         "surface": "knocks",
@@ -322,16 +258,12 @@
     ],
     "11": [
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
         "surface": "father",
         "lemma": "pater"
       },
       {
         "surface": "son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "asks for",
@@ -370,24 +302,12 @@
     ],
     "13": [
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "who are",
         "lemma": "huparcho"
       },
       {
         "surface": "evil",
         "lemma": "poneros"
-      },
-      {
-        "surface": "know how",
-        "lemma": "eido"
-      },
-      {
-        "surface": "to give",
-        "lemma": "didomi"
       },
       {
         "surface": "good",
@@ -412,10 +332,6 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
-      },
-      {
-        "surface": "give",
-        "lemma": "didomi"
       },
       {
         "surface": "the Holy",
@@ -448,16 +364,8 @@
         "lemma": "daimonion"
       },
       {
-        "surface": "was gone",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "man who had been mute",
         "lemma": "kophos"
-      },
-      {
-        "surface": "spoke",
-        "lemma": "laleo"
       },
       {
         "surface": "crowds",
@@ -469,10 +377,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "said",
-        "lemma": "eipon"
-      },
       {
         "surface": "Beelzebul",
         "lemma": "beelzeboul"
@@ -518,16 +422,8 @@
     ],
     "17": [
       {
-        "surface": "Knowing",
-        "lemma": "eido"
-      },
-      {
         "surface": "thoughts",
         "lemma": "dianoema"
-      },
-      {
-        "surface": "said",
-        "lemma": "eipon"
       },
       {
         "surface": "kingdom",
@@ -556,10 +452,6 @@
     ],
     "18": [
       {
-        "surface": "If",
-        "lemma": "ei"
-      },
-      {
         "surface": "Satan",
         "lemma": "satanas"
       },
@@ -570,10 +462,6 @@
       {
         "surface": "kingdom",
         "lemma": "basileia"
-      },
-      {
-        "surface": "stand",
-        "lemma": "histemi"
       },
       {
         "surface": "drive out",
@@ -590,10 +478,6 @@
     ],
     "19": [
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "drive out",
         "lemma": "ekballo"
       },
@@ -606,12 +490,8 @@
         "lemma": "beelzeboul"
       },
       {
-        "surface": "whom",
-        "lemma": "tis"
-      },
-      {
         "surface": "sons",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "drive them out",
@@ -623,10 +503,6 @@
       }
     ],
     "20": [
-      {
-        "surface": "if",
-        "lemma": "ei"
-      },
       {
         "surface": "drive out",
         "lemma": "ekballo"
@@ -736,10 +612,6 @@
         "lemma": "pneuma"
       },
       {
-        "surface": "comes out",
-        "lemma": "exerchomai"
-      },
-      {
         "surface": "a man",
         "lemma": "anthropos"
       },
@@ -764,10 +636,6 @@
         "lemma": "anapausis"
       },
       {
-        "surface": "does not find it",
-        "lemma": "ehurisko"
-      },
-      {
         "surface": "Then",
         "lemma": "tote"
       },
@@ -778,17 +646,9 @@
       {
         "surface": "house",
         "lemma": "oikos"
-      },
-      {
-        "surface": "I left",
-        "lemma": "exerchomai"
       }
     ],
     "25": [
-      {
-        "surface": "it finds the house",
-        "lemma": "ehurisko"
-      },
       {
         "surface": "swept clean",
         "lemma": "saroo"
@@ -826,10 +686,6 @@
       {
         "surface": "more wicked",
         "lemma": "poneros"
-      },
-      {
-        "surface": "they go in",
-        "lemma": "eiserchomai"
       },
       {
         "surface": "and dwell",
@@ -874,10 +730,6 @@
         "lemma": "phone"
       },
       {
-        "surface": "and said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Blessed",
         "lemma": "makarios"
       },
@@ -891,7 +743,7 @@
       },
       {
         "surface": "the breasts",
-        "lemma": "mastosmazos"
+        "lemma": "mastos"
       },
       {
         "surface": "nursed You",
@@ -900,16 +752,8 @@
     ],
     "28": [
       {
-        "surface": "replied",
-        "lemma": "eipon"
-      },
-      {
         "surface": "Blessed",
         "lemma": "makarios"
-      },
-      {
-        "surface": "hear",
-        "lemma": "akouo"
       },
       {
         "surface": "word",
@@ -954,14 +798,6 @@
         "lemma": "semeion"
       },
       {
-        "surface": "will be given",
-        "lemma": "didomi"
-      },
-      {
-        "surface": "except",
-        "lemma": "ei"
-      },
-      {
         "surface": "sign",
         "lemma": "semeion"
       },
@@ -985,11 +821,11 @@
       },
       {
         "surface": "so",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of Man",
@@ -1038,24 +874,20 @@
         "lemma": "ge"
       },
       {
-        "surface": "to hear",
-        "lemma": "akouo"
-      },
-      {
         "surface": "wisdom",
         "lemma": "sophia"
       },
       {
         "surface": "of Solomon",
-        "lemma": "solomonsalomon"
+        "lemma": "solomon"
       },
       {
         "surface": "One greater",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "than Solomon",
-        "lemma": "solomonsalomon"
+        "lemma": "solomon"
       },
       {
         "surface": "is here",
@@ -1101,7 +933,7 @@
       },
       {
         "surface": "One greater",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "than Jonah",
@@ -1113,10 +945,6 @@
       }
     ],
     "33": [
-      {
-        "surface": "No one",
-        "lemma": "oudeis"
-      },
       {
         "surface": "lights",
         "lemma": "hapto"
@@ -1216,10 +1044,6 @@
     ],
     "36": [
       {
-        "surface": "if",
-        "lemma": "ei"
-      },
-      {
         "surface": "body",
         "lemma": "soma"
       },
@@ -1258,10 +1082,6 @@
     ],
     "37": [
       {
-        "surface": "Jesus was speaking",
-        "lemma": "laleo"
-      },
-      {
         "surface": "a Pharisee",
         "lemma": "pharisaios"
       },
@@ -1272,10 +1092,6 @@
       {
         "surface": "dine",
         "lemma": "aristao"
-      },
-      {
-        "surface": "He went in",
-        "lemma": "eiserchomai"
       },
       {
         "surface": "and reclined at the table",
@@ -1292,10 +1108,6 @@
         "lemma": "thaumazo"
       },
       {
-        "surface": "to see",
-        "lemma": "horao"
-      },
-      {
         "surface": "Jesus did not first wash",
         "lemma": "baptizo"
       },
@@ -1308,10 +1120,6 @@
       {
         "surface": "Lord",
         "lemma": "kurios"
-      },
-      {
-        "surface": "said",
-        "lemma": "eipon"
       },
       {
         "surface": "Now",
@@ -1361,10 +1169,6 @@
       }
     ],
     "41": [
-      {
-        "surface": "give",
-        "lemma": "didomi"
-      },
       {
         "surface": "as alms",
         "lemma": "eleemosune"
@@ -1466,20 +1270,12 @@
       {
         "surface": "walk",
         "lemma": "peripateo"
-      },
-      {
-        "surface": "even noticing",
-        "lemma": "eido"
       }
     ],
     "45": [
       {
         "surface": "experts in the law",
         "lemma": "nomikos"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "apokrino"
       },
       {
         "surface": "Teacher",
@@ -1496,10 +1292,6 @@
         "lemma": "nomikos"
       },
       {
-        "surface": "He replied",
-        "lemma": "eipon"
-      },
-      {
         "surface": "you weigh men down",
         "lemma": "phortizo"
       },
@@ -1510,10 +1302,6 @@
       {
         "surface": "will not lift",
         "lemma": "prospsauo"
-      },
-      {
-        "surface": "a",
-        "lemma": "ehis"
       },
       {
         "surface": "finger {to lighten",
@@ -1582,10 +1370,6 @@
         "lemma": "theos"
       },
       {
-        "surface": "said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "I will send",
         "lemma": "apostello"
       },
@@ -1617,7 +1401,7 @@
       },
       {
         "surface": "blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "prophets",
@@ -1639,7 +1423,7 @@
     "51": [
       {
         "surface": "the blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "of Abel",
@@ -1647,7 +1431,7 @@
       },
       {
         "surface": "the blood",
-        "lemma": "ahima"
+        "lemma": "haima"
       },
       {
         "surface": "of Zechariah",
@@ -1692,23 +1476,11 @@
         "lemma": "gnosis"
       },
       {
-        "surface": "have not entered",
-        "lemma": "eiserchomai"
-      },
-      {
         "surface": "you have hindered",
         "lemma": "koluo"
-      },
-      {
-        "surface": "were entering",
-        "lemma": "eiserchomai"
       }
     ],
     "53": [
-      {
-        "surface": "went on",
-        "lemma": "exerchomai"
-      },
       {
         "surface": "from there",
         "lemma": "kakeithen"
@@ -1739,7 +1511,7 @@
       },
       {
         "surface": "many things",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       }
     ],
     "54": [

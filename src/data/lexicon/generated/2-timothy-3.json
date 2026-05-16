@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "understand",
-        "lemma": "ginosko"
-      },
-      {
         "surface": "the last",
         "lemma": "eschatos"
       },
@@ -198,10 +194,6 @@
         "lemma": "medepote"
       },
       {
-        "surface": "able",
-        "lemma": "dunamai"
-      },
-      {
         "surface": "a knowledge",
         "lemma": "epignosis"
       },
@@ -225,11 +217,11 @@
       },
       {
         "surface": "Moses",
-        "lemma": "mousesmoses"
+        "lemma": "mouses"
       },
       {
         "surface": "so",
-        "lemma": "ohutoohutos"
+        "lemma": "houto"
       },
       {
         "surface": "men",
@@ -267,7 +259,7 @@
       },
       {
         "surface": "much",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "folly",
@@ -323,7 +315,7 @@
       },
       {
         "surface": "that",
-        "lemma": "ohios"
+        "lemma": "hoios"
       },
       {
         "surface": "Antioch",
@@ -339,7 +331,7 @@
       },
       {
         "surface": "What",
-        "lemma": "ohios"
+        "lemma": "hoios"
       },
       {
         "surface": "persecutions",
@@ -359,10 +351,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "desire",
-        "lemma": "thelo"
-      },
       {
         "surface": "to live",
         "lemma": "zao"
@@ -428,14 +416,6 @@
         "lemma": "pistoo"
       },
       {
-        "surface": "since you know",
-        "lemma": "eido"
-      },
-      {
-        "surface": "whom",
-        "lemma": "tis"
-      },
-      {
         "surface": "you have learned them",
         "lemma": "manthano"
       }
@@ -446,20 +426,12 @@
         "lemma": "brephos"
       },
       {
-        "surface": "you have known",
-        "lemma": "eido"
-      },
-      {
         "surface": "Holy",
         "lemma": "hieros"
       },
       {
         "surface": "Scriptures",
         "lemma": "gramma"
-      },
-      {
-        "surface": "are able",
-        "lemma": "dunamai"
       },
       {
         "surface": "to make you wise",
@@ -546,6 +518,6 @@
   "themeLemmas": [
     "prokopto",
     "diogmos",
-    "ohios"
+    "hoios"
   ]
 }

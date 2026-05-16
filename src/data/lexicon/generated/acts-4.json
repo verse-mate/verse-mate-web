@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "were speaking",
-        "lemma": "laleo"
-      },
-      {
         "surface": "people",
         "lemma": "laos"
       },
@@ -91,14 +87,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "many",
-        "lemma": "polus"
-      },
-      {
-        "surface": "heard",
-        "lemma": "akouo"
-      },
       {
         "surface": "message",
         "lemma": "logos"
@@ -186,10 +174,6 @@
     ],
     "7": [
       {
-        "surface": "They had",
-        "lemma": "histemi"
-      },
-      {
         "surface": "brought} in",
         "lemma": "mesos"
       },
@@ -225,7 +209,7 @@
       },
       {
         "surface": "filled",
-        "lemma": "plethopimplemi"
+        "lemma": "pletho"
       },
       {
         "surface": "with the Holy",
@@ -234,10 +218,6 @@
       {
         "surface": "Spirit",
         "lemma": "pneuma"
-      },
-      {
-        "surface": "said",
-        "lemma": "eipon"
       },
       {
         "surface": "Rulers",
@@ -253,10 +233,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "If",
-        "lemma": "ei"
-      },
       {
         "surface": "are being examined",
         "lemma": "anakrino"
@@ -278,10 +254,6 @@
         "lemma": "asthenes"
       },
       {
-        "surface": "how",
-        "lemma": "tis"
-      },
-      {
         "surface": "was healed",
         "lemma": "sozo"
       }
@@ -289,7 +261,7 @@
     "10": [
       {
         "surface": "known",
-        "lemma": "gnostosgnorimos"
+        "lemma": "gnostos"
       },
       {
         "surface": "people",
@@ -364,10 +336,6 @@
         "lemma": "soteria"
       },
       {
-        "surface": "no one",
-        "lemma": "oudeis"
-      },
-      {
         "surface": "else",
         "lemma": "allos"
       },
@@ -382,10 +350,6 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
-      },
-      {
-        "surface": "given",
-        "lemma": "didomi"
       },
       {
         "surface": "men",
@@ -460,14 +424,6 @@
         "lemma": "therapeuo"
       },
       {
-        "surface": "standing there",
-        "lemma": "histemi"
-      },
-      {
-        "surface": "nothing",
-        "lemma": "oudeis"
-      },
-      {
         "surface": "to say in response",
         "lemma": "antilego"
       }
@@ -496,10 +452,6 @@
     ],
     "16": [
       {
-        "surface": "What",
-        "lemma": "tis"
-      },
-      {
         "surface": "men",
         "lemma": "anthropos"
       },
@@ -517,15 +469,11 @@
       },
       {
         "surface": "a remarkable",
-        "lemma": "gnostosgnorimos"
+        "lemma": "gnostos"
       },
       {
         "surface": "miracle",
         "lemma": "semeion"
-      },
-      {
-        "surface": "we cannot",
-        "lemma": "dunamai"
       },
       {
         "surface": "deny it",
@@ -539,7 +487,7 @@
       },
       {
         "surface": "any further",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "people",
@@ -552,10 +500,6 @@
       {
         "surface": "not",
         "lemma": "meketi"
-      },
-      {
-        "surface": "to speak",
-        "lemma": "laleo"
       },
       {
         "surface": "to",
@@ -610,24 +554,12 @@
         "lemma": "ioannes"
       },
       {
-        "surface": "replied",
-        "lemma": "apokrino"
-      },
-      {
         "surface": "Judge for yourselves",
         "lemma": "krino"
       },
       {
-        "surface": "whether",
-        "lemma": "ei"
-      },
-      {
         "surface": "right",
         "lemma": "dikaios"
-      },
-      {
-        "surface": "to listen",
-        "lemma": "akouo"
       },
       {
         "surface": "rather",
@@ -638,24 +570,6 @@
         "lemma": "theos"
       }
     ],
-    "20": [
-      {
-        "surface": "cannot",
-        "lemma": "dunamai"
-      },
-      {
-        "surface": "speaking about",
-        "lemma": "laleo"
-      },
-      {
-        "surface": "we have seen",
-        "lemma": "horao"
-      },
-      {
-        "surface": "heard",
-        "lemma": "akouo"
-      }
-    ],
     "21": [
       {
         "surface": "further threats",
@@ -664,10 +578,6 @@
       {
         "surface": "they let them go",
         "lemma": "apoluo"
-      },
-      {
-        "surface": "They could not find a way",
-        "lemma": "ehurisko"
       },
       {
         "surface": "to punish",
@@ -701,7 +611,7 @@
       },
       {
         "surface": "over",
-        "lemma": "pleionpleion"
+        "lemma": "pleion"
       },
       {
         "surface": "forty",
@@ -736,17 +646,9 @@
       {
         "surface": "elders",
         "lemma": "presbuteros"
-      },
-      {
-        "surface": "had said",
-        "lemma": "eipon"
       }
     ],
     "24": [
-      {
-        "surface": "the believers heard this",
-        "lemma": "akouo"
-      },
       {
         "surface": "they lifted up",
         "lemma": "airo"
@@ -768,10 +670,6 @@
         "lemma": "despotes"
       },
       {
-        "surface": "they said",
-        "lemma": "eipon"
-      },
-      {
         "surface": "heaven",
         "lemma": "ouranos"
       },
@@ -785,10 +683,6 @@
       }
     ],
     "25": [
-      {
-        "surface": "spoke",
-        "lemma": "eipon"
-      },
       {
         "surface": "the Holy",
         "lemma": "hagios"
@@ -811,11 +705,7 @@
       },
       {
         "surface": "David",
-        "lemma": "daueiddauiddabid"
-      },
-      {
-        "surface": "Why",
-        "lemma": "tis"
+        "lemma": "daueid"
       },
       {
         "surface": "do} the nations",
@@ -958,16 +848,8 @@
         "lemma": "apeile"
       },
       {
-        "surface": "enable",
-        "lemma": "didomi"
-      },
-      {
         "surface": "servants",
         "lemma": "doulos"
-      },
-      {
-        "surface": "to speak",
-        "lemma": "laleo"
       },
       {
         "surface": "word",
@@ -1039,7 +921,7 @@
       },
       {
         "surface": "they were all filled with",
-        "lemma": "plethopimplemi"
+        "lemma": "pletho"
       },
       {
         "surface": "Holy",
@@ -1048,10 +930,6 @@
       {
         "surface": "Spirit",
         "lemma": "pneuma"
-      },
-      {
-        "surface": "spoke",
-        "lemma": "laleo"
       },
       {
         "surface": "word",
@@ -1076,24 +954,12 @@
         "lemma": "pisteuo"
       },
       {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
         "surface": "in heart",
         "lemma": "kardia"
       },
       {
         "surface": "soul",
         "lemma": "psuche"
-      },
-      {
-        "surface": "one",
-        "lemma": "ehis"
-      },
-      {
-        "surface": "claimed that",
-        "lemma": "eipon"
       },
       {
         "surface": "possessions",
@@ -1105,10 +971,6 @@
       }
     ],
     "33": [
-      {
-        "surface": "With great",
-        "lemma": "megas"
-      },
       {
         "surface": "power",
         "lemma": "dunamis"
@@ -1136,10 +998,6 @@
       {
         "surface": "Jesus",
         "lemma": "iesous"
-      },
-      {
-        "surface": "abundant",
-        "lemma": "megas"
       },
       {
         "surface": "grace",
@@ -1245,7 +1103,7 @@
       },
       {
         "surface": "Son",
-        "lemma": "uhios"
+        "lemma": "huios"
       },
       {
         "surface": "of Encouragement",
