@@ -143,7 +143,13 @@ export default function LexiconPopover({
           <div style={{ marginTop: 4, fontSize: 12, color: 'rgba(255,255,255,0.55)' }}>
             {entry.pos} • {entry.strongs}
             {entry.pronunciation ? ` • ${entry.pronunciation}` : ''}
-            {typeof entry.ntFrequency === 'number'
+            {/* Frequency: show NT-only, OT-only, or both depending on which
+                fields are populated. Hebrew lemmas keyed to TBESH always
+                get otFrequency; Greek to TBESG always get ntFrequency. */}
+            {typeof entry.otFrequency === 'number' && entry.otFrequency > 0
+              ? ` • ${entry.otFrequency}× in OT`
+              : ''}
+            {typeof entry.ntFrequency === 'number' && entry.ntFrequency > 0
               ? ` • ${entry.ntFrequency}× in NT`
               : ''}
           </div>

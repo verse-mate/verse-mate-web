@@ -1,0 +1,991 @@
+{
+  "bookId": 10,
+  "book": "2 Samuel",
+  "chapter": 16,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "When David",
+        "lemma": "david"
+      },
+      {
+        "surface": "had gone",
+        "lemma": "avar"
+      },
+      {
+        "surface": "a little",
+        "lemma": "meat"
+      },
+      {
+        "surface": "beyond the summit",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "Ziba",
+        "lemma": "tsiva"
+      },
+      {
+        "surface": "the servant",
+        "lemma": "naar"
+      },
+      {
+        "surface": "of",
+        "lemma": "mephivoshet"
+      },
+      {
+        "surface": "Mephibosheth",
+        "lemma": "mephivoshet"
+      },
+      {
+        "surface": "was there",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "He had a pair",
+        "lemma": "tsemed"
+      },
+      {
+        "surface": "of saddled",
+        "lemma": "chavash"
+      },
+      {
+        "surface": "donkeys",
+        "lemma": "chamor"
+      },
+      {
+        "surface": "two hundred loaves",
+        "lemma": "meah"
+      },
+      {
+        "surface": "of bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "a hundred",
+        "lemma": "meah"
+      },
+      {
+        "surface": "clusters of raisins",
+        "lemma": "tsammuq"
+      },
+      {
+        "surface": "a hundred",
+        "lemma": "meah"
+      },
+      {
+        "surface": "summer fruits",
+        "lemma": "qayits"
+      },
+      {
+        "surface": "and a skin",
+        "lemma": "nevel"
+      },
+      {
+        "surface": "of wine",
+        "lemma": "yayin"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "Ziba",
+        "lemma": "tsiva"
+      },
+      {
+        "surface": "The donkeys",
+        "lemma": "chamor"
+      },
+      {
+        "surface": "are for the king’s",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "household",
+        "lemma": "bet"
+      },
+      {
+        "surface": "to ride",
+        "lemma": "rakhav"
+      },
+      {
+        "surface": "the bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "and summer fruit",
+        "lemma": "qayits"
+      },
+      {
+        "surface": "are for the young men",
+        "lemma": "naar"
+      },
+      {
+        "surface": "to eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "and the wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "is to refresh those",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "who become exhausted",
+        "lemma": "yaeph"
+      },
+      {
+        "surface": "in the wilderness",
+        "lemma": "midbar"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Where",
+        "lemma": "ayyeh"
+      },
+      {
+        "surface": "is your master’s",
+        "lemma": "adon"
+      },
+      {
+        "surface": "grandson",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "And Ziba",
+        "lemma": "tsiva"
+      },
+      {
+        "surface": "Indeed",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "in Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "Today",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "the kingdom",
+        "lemma": "mamlakhut"
+      }
+    ],
+    "4": [
+      {
+        "surface": "So the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "to Ziba",
+        "lemma": "tsiva"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "mephivoshet"
+      },
+      {
+        "surface": "to Mephibosheth",
+        "lemma": "mephivoshet"
+      },
+      {
+        "surface": "is now yours",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "I humbly bow before you",
+        "lemma": "shachah"
+      },
+      {
+        "surface": "Ziba",
+        "lemma": "tsiva"
+      },
+      {
+        "surface": "May I find",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "in your eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "my lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      }
+    ],
+    "5": [
+      {
+        "surface": "As King",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "David",
+        "lemma": "david"
+      },
+      {
+        "surface": "Bahurim",
+        "lemma": "bachurim"
+      },
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "from the family",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "of the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Saul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "was just",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "His name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "was Shimei",
+        "lemma": "shimi"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Gera",
+        "lemma": "gera"
+      },
+      {
+        "surface": "he kept yelling out curses",
+        "lemma": "qalal"
+      }
+    ],
+    "6": [
+      {
+        "surface": "He threw stones",
+        "lemma": "saqal"
+      },
+      {
+        "surface": "at David",
+        "lemma": "david"
+      },
+      {
+        "surface": "the servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "of the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "though the troops",
+        "lemma": "am"
+      },
+      {
+        "surface": "the mighty men were",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "on David’s",
+        "lemma": "david"
+      },
+      {
+        "surface": "right",
+        "lemma": "yamin"
+      },
+      {
+        "surface": "and left",
+        "lemma": "semol"
+      }
+    ],
+    "7": [
+      {
+        "surface": "And as",
+        "lemma": "koh"
+      },
+      {
+        "surface": "he yelled curses",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "Shimei",
+        "lemma": "shimi"
+      },
+      {
+        "surface": "you worthless",
+        "lemma": "beliyyaal"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "of bloodshed",
+        "lemma": "dam"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "of the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Saul",
+        "lemma": "shaul"
+      },
+      {
+        "surface": "place",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "you have reigned",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "and the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the kingdom",
+        "lemma": "melukhah"
+      },
+      {
+        "surface": "into the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of your son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Absalom",
+        "lemma": "avishalom"
+      },
+      {
+        "surface": "See",
+        "lemma": "hen"
+      },
+      {
+        "surface": "you have come to ruin",
+        "lemma": "ra"
+      },
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "of bloodshed",
+        "lemma": "dam"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Then Abishai",
+        "lemma": "avishay"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Zeruiah",
+        "lemma": "tseruyah"
+      },
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "dead",
+        "lemma": "mut"
+      },
+      {
+        "surface": "dog",
+        "lemma": "kelev"
+      },
+      {
+        "surface": "curse",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "my lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "Let me go over",
+        "lemma": "avar"
+      },
+      {
+        "surface": "and cut off his head",
+        "lemma": "rosh"
+      }
+    ],
+    "10": [
+      {
+        "surface": "But the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "O sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Zeruiah",
+        "lemma": "tseruyah"
+      },
+      {
+        "surface": "he curses me",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Curse",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "David",
+        "lemma": "david"
+      },
+      {
+        "surface": "who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "Why",
+        "lemma": "maddua"
+      },
+      {
+        "surface": "this",
+        "lemma": "ken"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Then David",
+        "lemma": "david"
+      },
+      {
+        "surface": "Abishai",
+        "lemma": "avishay"
+      },
+      {
+        "surface": "his servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "Behold",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "my own son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "my own flesh and blood",
+        "lemma": "meeh"
+      },
+      {
+        "surface": "seeks",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "my life",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "then",
+        "lemma": "attah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "benymini"
+      },
+      {
+        "surface": "this Benjamite",
+        "lemma": "benymini"
+      },
+      {
+        "surface": "Leave him alone",
+        "lemma": "nuach"
+      },
+      {
+        "surface": "and let him curse me",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "for the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Perhaps",
+        "lemma": "ulay"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "my affliction",
+        "lemma": "avan"
+      },
+      {
+        "surface": "with good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "for",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the cursing I receive",
+        "lemma": "qelalah"
+      },
+      {
+        "surface": "today",
+        "lemma": "yom"
+      }
+    ],
+    "13": [
+      {
+        "surface": "So David",
+        "lemma": "david"
+      },
+      {
+        "surface": "and his men",
+        "lemma": "enosh"
+      },
+      {
+        "surface": "proceeded",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "along the road",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "as Shimei",
+        "lemma": "shimi"
+      },
+      {
+        "surface": "went",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "along the ridge",
+        "lemma": "tsela"
+      },
+      {
+        "surface": "of the hill",
+        "lemma": "har"
+      },
+      {
+        "surface": "opposite him",
+        "lemma": "ummah"
+      },
+      {
+        "surface": "As Shimei went",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "he yelled curses",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "threw stones",
+        "lemma": "saqal"
+      },
+      {
+        "surface": "and flung",
+        "lemma": "aphar"
+      },
+      {
+        "surface": "dust",
+        "lemma": "aphar"
+      },
+      {
+        "surface": "at David",
+        "lemma": "ummah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Finally, the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "exhausted",
+        "lemma": "ayeph"
+      },
+      {
+        "surface": "And there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "he refreshed himself",
+        "lemma": "naphash"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Then Absalom",
+        "lemma": "avishalom"
+      },
+      {
+        "surface": "the men",
+        "lemma": "ish"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "to Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "and Ahithophel was",
+        "lemma": "achitophel"
+      }
+    ],
+    "16": [
+      {
+        "surface": "David’s",
+        "lemma": "david"
+      },
+      {
+        "surface": "friend",
+        "lemma": "reeh"
+      },
+      {
+        "surface": "Hushai",
+        "lemma": "chushay"
+      },
+      {
+        "surface": "the Archite",
+        "lemma": "arki"
+      },
+      {
+        "surface": "Absalom",
+        "lemma": "avishalom"
+      },
+      {
+        "surface": "him",
+        "lemma": "avishalom"
+      },
+      {
+        "surface": "Long live",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "Long live",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      }
+    ],
+    "17": [
+      {
+        "surface": "the loyalty",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "your friend",
+        "lemma": "rea"
+      },
+      {
+        "surface": "Absalom",
+        "lemma": "avishalom"
+      },
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "your friend",
+        "lemma": "rea"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Hushai",
+        "lemma": "chushay"
+      },
+      {
+        "surface": "chosen",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "by the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "people",
+        "lemma": "am"
+      },
+      {
+        "surface": "the men",
+        "lemma": "ish"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Furthermore",
+        "lemma": "sheni"
+      },
+      {
+        "surface": "whom",
+        "lemma": "mi"
+      },
+      {
+        "surface": "serve",
+        "lemma": "avad"
+      },
+      {
+        "surface": "his son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "I served",
+        "lemma": "avad"
+      },
+      {
+        "surface": "presence",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "so also",
+        "lemma": "ken"
+      },
+      {
+        "surface": "in yours",
+        "lemma": "paneh"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Then Absalom",
+        "lemma": "avishalom"
+      },
+      {
+        "surface": "Ahithophel",
+        "lemma": "achitophel"
+      },
+      {
+        "surface": "Give me",
+        "lemma": "yahav"
+      },
+      {
+        "surface": "counsel",
+        "lemma": "etsah"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Ahithophel",
+        "lemma": "achitophel"
+      },
+      {
+        "surface": "concubines",
+        "lemma": "pilegesh"
+      },
+      {
+        "surface": "he has left",
+        "lemma": "nuach"
+      },
+      {
+        "surface": "to take care of",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "the palace",
+        "lemma": "bet"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "you have become a stench",
+        "lemma": "baash"
+      },
+      {
+        "surface": "then the hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "will be strengthened",
+        "lemma": "chazaq"
+      }
+    ],
+    "22": [
+      {
+        "surface": "So they pitched",
+        "lemma": "natah"
+      },
+      {
+        "surface": "a tent",
+        "lemma": "hoel"
+      },
+      {
+        "surface": "for Absalom",
+        "lemma": "avishalom"
+      },
+      {
+        "surface": "the roof",
+        "lemma": "gag"
+      },
+      {
+        "surface": "and he",
+        "lemma": "avishalom"
+      },
+      {
+        "surface": "concubines",
+        "lemma": "pilegesh"
+      },
+      {
+        "surface": "in the sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "23": [
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the advice",
+        "lemma": "etsah"
+      },
+      {
+        "surface": "of Ahithophel",
+        "lemma": "achitophel"
+      },
+      {
+        "surface": "the consultation",
+        "lemma": "shaal"
+      },
+      {
+        "surface": "of the word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "Such",
+        "lemma": "ken"
+      },
+      {
+        "surface": "David",
+        "lemma": "david"
+      },
+      {
+        "surface": "Absalom",
+        "lemma": "avishalom"
+      },
+      {
+        "surface": "had for Ahithophel’s",
+        "lemma": "achitophel"
+      },
+      {
+        "surface": "advice",
+        "lemma": "etsah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "david",
+    "avishalom",
+    "qalal"
+  ]
+}

@@ -33,8 +33,9 @@ MIN_LOCAL_COUNT = 2
 # as subtle-tier tappable words and the chapter's distinctive language gets
 # the visual emphasis.
 GENERIC_RELIGIOUS_VOCAB = frozenset({
+    # ─── Greek / NT ───
     'theos',        # θεός — God (~1,300× NT)
-    'kyrios',       # κύριος — Lord (~720× NT)
+    'kurios',       # κύριος — Lord (~720× NT)
     'iesous',       # Ἰησοῦς — Jesus (~917× NT)
     'christos',     # Χριστός — Christ (~530× NT)
     'pater',        # πατήρ — Father
@@ -51,7 +52,41 @@ GENERIC_RELIGIOUS_VOCAB = frozenset({
     'hemera',       # ἡμέρα — day
     'soma',         # σῶμα — body
     'kardia',       # καρδία — heart
-    'psyche',       # ψυχή — soul
+    'psuche',       # ψυχή — soul
+    # ─── Hebrew / OT ───
+    'yehovah',      # יְהוָה / YHWH (~6,800× OT)
+    'elohim',       # אֱלֹהִים — God (~2,600× OT)
+    'adonai',       # אֲדֹנָי — Lord
+    'adon',         # אָדוֹן — lord, master
+    'el',           # אֵל — God / mighty one
+    'av',           # אָב — father
+    'em',           # אֵם — mother
+    'ben',          # בֵּן — son (~5,000× OT — narrative everywhere)
+    'bat',          # בַּת — daughter
+    'ish',          # אִישׁ — man (~2,160× OT)
+    'ishshah',      # אִשָּׁה — woman
+    'am',           # עַם — people
+    'goy',          # גּוֹי — nation
+    'yad',          # יָד — hand
+    'panim',        # פָּנִים — face
+    'ayin',         # עַיִן — eye
+    'rosh',         # רֹאשׁ — head
+    'lev',          # לֵב — heart
+    'erets',        # אֶרֶץ — earth/land (~2,500× OT)
+    'shamayim',     # שָׁמַיִם — heavens
+    'bayit',        # בַּיִת — house (~2,000× OT)
+    'ir',           # עִיר — city
+    'derekh',       # דֶּרֶךְ — way
+    'yom',          # יוֹם — day
+    'shanah',       # שָׁנָה — year
+    'malak',        # מַלְאָךְ — angel/messenger
+    'mishpat',      # מִשְׁפָּט — judgment (occurs everywhere in Torah)
+    'nefesh',       # נֶפֶשׁ — soul (very common despite theological weight)
+    'davar',        # דָּבָר — word / thing (extremely common — narrative connector)
+    'melekh',       # מֶלֶךְ — king
+    'avadim',       # עֲבָדִים — servants (plural)
+    'eved',         # עֶבֶד — servant
+    'baal',         # בַּעַל — master / owner / Baal
 })
 
 

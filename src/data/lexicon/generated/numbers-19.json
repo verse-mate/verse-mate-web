@@ -1,0 +1,997 @@
+{
+  "bookId": 4,
+  "book": "Numbers",
+  "chapter": 19,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "and Aaron",
+        "lemma": "haaron"
+      }
+    ],
+    "2": [
+      {
+        "surface": "is the statute",
+        "lemma": "chuqqah"
+      },
+      {
+        "surface": "of the law",
+        "lemma": "torah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "Instruct",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "to bring",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "an unblemished",
+        "lemma": "tamim"
+      },
+      {
+        "surface": "red",
+        "lemma": "adom"
+      },
+      {
+        "surface": "heifer",
+        "lemma": "parah"
+      },
+      {
+        "surface": "has no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "defect",
+        "lemma": "mum"
+      },
+      {
+        "surface": "been placed",
+        "lemma": "alah"
+      },
+      {
+        "surface": "under a yoke",
+        "lemma": "ol"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Eleazar",
+        "lemma": "elazar"
+      },
+      {
+        "surface": "the priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "outside",
+        "lemma": "chuts"
+      },
+      {
+        "surface": "the camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "and slaughtered",
+        "lemma": "shachat"
+      },
+      {
+        "surface": "in his presence",
+        "lemma": "paneh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Eleazar",
+        "lemma": "elazar"
+      },
+      {
+        "surface": "the priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "is to take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "some of its blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "on his finger",
+        "lemma": "etsba"
+      },
+      {
+        "surface": "and sprinkle",
+        "lemma": "nazah"
+      },
+      {
+        "surface": "it",
+        "lemma": "dam"
+      },
+      {
+        "surface": "seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "times",
+        "lemma": "paam"
+      },
+      {
+        "surface": "the front",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of the Tent",
+        "lemma": "hoel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Then the heifer",
+        "lemma": "parah"
+      },
+      {
+        "surface": "must be burned",
+        "lemma": "saraph"
+      },
+      {
+        "surface": "in his sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "Its hide",
+        "lemma": "or"
+      },
+      {
+        "surface": "its flesh",
+        "lemma": "basar"
+      },
+      {
+        "surface": "and its blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "are to be burned",
+        "lemma": "saraph"
+      },
+      {
+        "surface": "its dung",
+        "lemma": "peresh"
+      }
+    ],
+    "6": [
+      {
+        "surface": "The priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "is to take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "cedar",
+        "lemma": "erez"
+      },
+      {
+        "surface": "wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "hyssop",
+        "lemma": "ezov"
+      },
+      {
+        "surface": "and scarlet wool",
+        "lemma": "shani"
+      },
+      {
+        "surface": "and throw",
+        "lemma": "shalakh"
+      },
+      {
+        "surface": "onto",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "the burning",
+        "lemma": "serephah"
+      },
+      {
+        "surface": "heifer",
+        "lemma": "parah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Then the priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "must wash",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "his clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and bathe",
+        "lemma": "rachats"
+      },
+      {
+        "surface": "his body",
+        "lemma": "basar"
+      },
+      {
+        "surface": "in water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "after that",
+        "lemma": "achar"
+      },
+      {
+        "surface": "the camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "but he",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "will be ceremonially unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The one who burned",
+        "lemma": "saraph"
+      },
+      {
+        "surface": "must also wash",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "his clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and bathe",
+        "lemma": "rachats"
+      },
+      {
+        "surface": "his body",
+        "lemma": "basar"
+      },
+      {
+        "surface": "in water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "and he too will be ceremonially unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Then a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "who is ceremonially clean",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "is to gather up",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "the ashes",
+        "lemma": "epher"
+      },
+      {
+        "surface": "of the heifer",
+        "lemma": "parah"
+      },
+      {
+        "surface": "and store them",
+        "lemma": "nuach"
+      },
+      {
+        "surface": "in a ceremonially clean",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "outside",
+        "lemma": "chuts"
+      },
+      {
+        "surface": "the camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "kept",
+        "lemma": "mishmeret"
+      },
+      {
+        "surface": "by the congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "for preparing the water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "of purification",
+        "lemma": "niddah"
+      },
+      {
+        "surface": "for purification from sin",
+        "lemma": "chattaah"
+      }
+    ],
+    "10": [
+      {
+        "surface": "The man who has gathered up",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "the ashes",
+        "lemma": "epher"
+      },
+      {
+        "surface": "of the heifer",
+        "lemma": "parah"
+      },
+      {
+        "surface": "must also wash",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "his clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and he will be ceremonially unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      },
+      {
+        "surface": "is a permanent",
+        "lemma": "olam"
+      },
+      {
+        "surface": "statute",
+        "lemma": "chuqqah"
+      },
+      {
+        "surface": "for the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and for the foreigner",
+        "lemma": "ger"
+      },
+      {
+        "surface": "residing",
+        "lemma": "gur"
+      },
+      {
+        "surface": "among them",
+        "lemma": "tavekh"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Whoever touches",
+        "lemma": "naga"
+      },
+      {
+        "surface": "dead",
+        "lemma": "mut"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "adam"
+      },
+      {
+        "surface": "body",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "for seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      }
+    ],
+    "12": [
+      {
+        "surface": "must purify himself",
+        "lemma": "chata"
+      },
+      {
+        "surface": "on the third",
+        "lemma": "shelishi"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "and on the seventh",
+        "lemma": "shevii"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "then he will be clean",
+        "lemma": "taher"
+      },
+      {
+        "surface": "purify himself",
+        "lemma": "chata"
+      },
+      {
+        "surface": "on the third",
+        "lemma": "shelishi"
+      },
+      {
+        "surface": "and seventh",
+        "lemma": "shevii"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "be clean",
+        "lemma": "taher"
+      }
+    ],
+    "13": [
+      {
+        "surface": "who touches",
+        "lemma": "naga"
+      },
+      {
+        "surface": "a human",
+        "lemma": "adam"
+      },
+      {
+        "surface": "corpse",
+        "lemma": "mut"
+      },
+      {
+        "surface": "to purify",
+        "lemma": "chata"
+      },
+      {
+        "surface": "defiles",
+        "lemma": "tame"
+      },
+      {
+        "surface": "the tabernacle",
+        "lemma": "mishkan"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "person",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "must be cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "from Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "the water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "of purification",
+        "lemma": "niddah"
+      },
+      {
+        "surface": "been sprinkled",
+        "lemma": "zaraq"
+      },
+      {
+        "surface": "and his uncleanness",
+        "lemma": "tumah"
+      },
+      {
+        "surface": "is still on him",
+        "lemma": "od"
+      }
+    ],
+    "14": [
+      {
+        "surface": "is the law",
+        "lemma": "torah"
+      },
+      {
+        "surface": "a person",
+        "lemma": "adam"
+      },
+      {
+        "surface": "dies",
+        "lemma": "mut"
+      },
+      {
+        "surface": "in a tent",
+        "lemma": "hoel"
+      },
+      {
+        "surface": "the tent",
+        "lemma": "hoel"
+      },
+      {
+        "surface": "already in the tent",
+        "lemma": "hoel"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "for seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      }
+    ],
+    "15": [
+      {
+        "surface": "open",
+        "lemma": "patach"
+      },
+      {
+        "surface": "container",
+        "lemma": "keli"
+      },
+      {
+        "surface": "without",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "a lid",
+        "lemma": "tsamid"
+      },
+      {
+        "surface": "fastened",
+        "lemma": "patil"
+      },
+      {
+        "surface": "is unclean",
+        "lemma": "tame"
+      }
+    ],
+    "16": [
+      {
+        "surface": "the open field",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "touches",
+        "lemma": "naga"
+      },
+      {
+        "surface": "someone who has been killed",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "by the sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "has died of natural causes",
+        "lemma": "mut"
+      },
+      {
+        "surface": "anyone who touches a human",
+        "lemma": "adam"
+      },
+      {
+        "surface": "bone",
+        "lemma": "etsem"
+      },
+      {
+        "surface": "a grave",
+        "lemma": "qever"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "for seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      }
+    ],
+    "17": [
+      {
+        "surface": "For the purification of the unclean person",
+        "lemma": "tame"
+      },
+      {
+        "surface": "take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "some of the ashes",
+        "lemma": "aphar"
+      },
+      {
+        "surface": "of the burnt",
+        "lemma": "serephah"
+      },
+      {
+        "surface": "sin offering",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "a jar",
+        "lemma": "keli"
+      },
+      {
+        "surface": "and pour fresh",
+        "lemma": "chay"
+      },
+      {
+        "surface": "water",
+        "lemma": "mayim"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Then a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "who is ceremonially clean",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "is to take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "some hyssop",
+        "lemma": "ezov"
+      },
+      {
+        "surface": "dip",
+        "lemma": "taval"
+      },
+      {
+        "surface": "it in the water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "and sprinkle",
+        "lemma": "nazah"
+      },
+      {
+        "surface": "the tent",
+        "lemma": "hoel"
+      },
+      {
+        "surface": "the furnishings",
+        "lemma": "keli"
+      },
+      {
+        "surface": "and the people",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "He is also to sprinkle the one who touched",
+        "lemma": "naga"
+      },
+      {
+        "surface": "a bone",
+        "lemma": "etsem"
+      },
+      {
+        "surface": "a grave",
+        "lemma": "qever"
+      },
+      {
+        "surface": "or a person who has died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "been slain",
+        "lemma": "chalal"
+      }
+    ],
+    "19": [
+      {
+        "surface": "The man who is ceremonially clean",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "is to sprinkle",
+        "lemma": "nazah"
+      },
+      {
+        "surface": "the unclean person",
+        "lemma": "tame"
+      },
+      {
+        "surface": "on the third",
+        "lemma": "shelishi"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "and on the seventh",
+        "lemma": "shevii"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "After he purifies",
+        "lemma": "chata"
+      },
+      {
+        "surface": "the unclean person on the seventh",
+        "lemma": "shevii"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the one being cleansed must wash",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "his clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and bathe",
+        "lemma": "rachats"
+      },
+      {
+        "surface": "in water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "and that evening",
+        "lemma": "erev"
+      },
+      {
+        "surface": "he will be clean",
+        "lemma": "taher"
+      }
+    ],
+    "20": [
+      {
+        "surface": "But if a person",
+        "lemma": "ish"
+      },
+      {
+        "surface": "is unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "purify",
+        "lemma": "chata"
+      },
+      {
+        "surface": "he",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "will be cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "from",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "the assembly",
+        "lemma": "qahal"
+      },
+      {
+        "surface": "he has defiled",
+        "lemma": "tame"
+      },
+      {
+        "surface": "the sanctuary",
+        "lemma": "miqdash"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "The water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "of purification",
+        "lemma": "niddah"
+      },
+      {
+        "surface": "been sprinkled",
+        "lemma": "zaraq"
+      },
+      {
+        "surface": "is unclean",
+        "lemma": "tame"
+      }
+    ],
+    "21": [
+      {
+        "surface": "is a permanent",
+        "lemma": "olam"
+      },
+      {
+        "surface": "statute",
+        "lemma": "chuqqah"
+      },
+      {
+        "surface": "The one who sprinkles",
+        "lemma": "nazah"
+      },
+      {
+        "surface": "the water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "of purification",
+        "lemma": "niddah"
+      },
+      {
+        "surface": "must wash",
+        "lemma": "kavas"
+      },
+      {
+        "surface": "his clothes",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and whoever touches",
+        "lemma": "naga"
+      },
+      {
+        "surface": "the water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "of purification",
+        "lemma": "niddah"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      }
+    ],
+    "22": [
+      {
+        "surface": "the unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "person touches",
+        "lemma": "naga"
+      },
+      {
+        "surface": "will become unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "and anyone",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "who touches it",
+        "lemma": "naga"
+      },
+      {
+        "surface": "will be unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "tame",
+    "mayim",
+    "naga"
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 32,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Of David",
+        "lemma": "david"
+      },
+      {
+        "surface": "A Maskil",
+        "lemma": "maskil"
+      },
+      {
+        "surface": "Blessed is he",
+        "lemma": "esher"
+      },
+      {
+        "surface": "whose transgressions",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "are forgiven",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "whose sins",
+        "lemma": "chataah"
+      },
+      {
+        "surface": "are covered",
+        "lemma": "kasah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Blessed",
+        "lemma": "esher"
+      },
+      {
+        "surface": "is the man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "whose iniquity",
+        "lemma": "avan"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "count",
+        "lemma": "chashav"
+      },
+      {
+        "surface": "in whose spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "there is no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "deceit",
+        "lemma": "remiyyah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "I kept silent",
+        "lemma": "charash"
+      },
+      {
+        "surface": "my bones",
+        "lemma": "etsem"
+      },
+      {
+        "surface": "became brittle",
+        "lemma": "balah"
+      },
+      {
+        "surface": "from my groaning",
+        "lemma": "sheagah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "day",
+        "lemma": "yomam"
+      },
+      {
+        "surface": "and night",
+        "lemma": "laylah"
+      },
+      {
+        "surface": "Your hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "was heavy",
+        "lemma": "kavad"
+      },
+      {
+        "surface": "my strength",
+        "lemma": "leshad"
+      },
+      {
+        "surface": "was drained",
+        "lemma": "haphakh"
+      },
+      {
+        "surface": "as in the summer",
+        "lemma": "qayits"
+      },
+      {
+        "surface": "heat",
+        "lemma": "charavon"
+      },
+      {
+        "surface": "Selah",
+        "lemma": "selah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Then I acknowledged",
+        "lemma": "yada"
+      },
+      {
+        "surface": "my sin to You",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "hide",
+        "lemma": "kasah"
+      },
+      {
+        "surface": "my iniquity",
+        "lemma": "avan"
+      },
+      {
+        "surface": "I will confess",
+        "lemma": "yadah"
+      },
+      {
+        "surface": "my transgressions",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "forgave",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the guilt",
+        "lemma": "avan"
+      },
+      {
+        "surface": "of my sin",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "Selah",
+        "lemma": "selah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "the godly",
+        "lemma": "chasid"
+      },
+      {
+        "surface": "pray",
+        "lemma": "palal"
+      },
+      {
+        "surface": "You may be found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "when great",
+        "lemma": "rav"
+      },
+      {
+        "surface": "waters",
+        "lemma": "sheteph"
+      },
+      {
+        "surface": "rise",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "come near",
+        "lemma": "naga"
+      }
+    ],
+    "7": [
+      {
+        "surface": "are my hiding place",
+        "lemma": "seter"
+      },
+      {
+        "surface": "You protect me",
+        "lemma": "natsar"
+      },
+      {
+        "surface": "from trouble",
+        "lemma": "tsar"
+      },
+      {
+        "surface": "You surround me",
+        "lemma": "savav"
+      },
+      {
+        "surface": "with songs",
+        "lemma": "ron"
+      },
+      {
+        "surface": "of deliverance",
+        "lemma": "pallet"
+      },
+      {
+        "surface": "Selah",
+        "lemma": "selah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "I will instruct you",
+        "lemma": "sakhal"
+      },
+      {
+        "surface": "and teach",
+        "lemma": "yara"
+      },
+      {
+        "surface": "you the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "you should go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "I will give you counsel",
+        "lemma": "yaats"
+      },
+      {
+        "surface": "and watch",
+        "lemma": "ayin"
+      }
+    ],
+    "9": [
+      {
+        "surface": "like the horse",
+        "lemma": "sus"
+      },
+      {
+        "surface": "or mule",
+        "lemma": "pered"
+      },
+      {
+        "surface": "which have no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "understanding",
+        "lemma": "bin"
+      },
+      {
+        "surface": "they must be controlled",
+        "lemma": "balam"
+      },
+      {
+        "surface": "with bit",
+        "lemma": "meteg"
+      },
+      {
+        "surface": "and bridle",
+        "lemma": "resen"
+      },
+      {
+        "surface": "to make them",
+        "lemma": "bal"
+      },
+      {
+        "surface": "come",
+        "lemma": "qarav"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Many",
+        "lemma": "rav"
+      },
+      {
+        "surface": "are the sorrows",
+        "lemma": "makhov"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "but loving devotion",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "surrounds him",
+        "lemma": "savav"
+      },
+      {
+        "surface": "who trusts",
+        "lemma": "batach"
+      },
+      {
+        "surface": "in the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Be glad",
+        "lemma": "samach"
+      },
+      {
+        "surface": "in the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "and rejoice",
+        "lemma": "gil"
+      },
+      {
+        "surface": "O righteous ones",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "shout for joy",
+        "lemma": "run"
+      },
+      {
+        "surface": "you upright",
+        "lemma": "yashar"
+      },
+      {
+        "surface": "in heart",
+        "lemma": "lev"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "selah",
+    "avan",
+    "savav"
+  ]
+}

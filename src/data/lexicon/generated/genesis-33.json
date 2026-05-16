@@ -1,0 +1,705 @@
+{
+  "bookId": 1,
+  "book": "Genesis",
+  "chapter": 33,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Now Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "looked up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "Esau",
+        "lemma": "esav"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "hundred",
+        "lemma": "meah"
+      },
+      {
+        "surface": "men",
+        "lemma": "ish"
+      },
+      {
+        "surface": "So he divided",
+        "lemma": "chatsah"
+      },
+      {
+        "surface": "the children",
+        "lemma": "yeled"
+      },
+      {
+        "surface": "among Leah",
+        "lemma": "leah"
+      },
+      {
+        "surface": "Rachel",
+        "lemma": "rachel"
+      },
+      {
+        "surface": "and the two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "maidservants",
+        "lemma": "shiphchah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "He put",
+        "lemma": "sum"
+      },
+      {
+        "surface": "the maidservants",
+        "lemma": "shiphchah"
+      },
+      {
+        "surface": "children",
+        "lemma": "yeled"
+      },
+      {
+        "surface": "in front",
+        "lemma": "rishon"
+      },
+      {
+        "surface": "Leah",
+        "lemma": "leah"
+      },
+      {
+        "surface": "and her children",
+        "lemma": "yeled"
+      },
+      {
+        "surface": "next",
+        "lemma": "acharon"
+      },
+      {
+        "surface": "and Rachel",
+        "lemma": "rachel"
+      },
+      {
+        "surface": "and Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "at the rear",
+        "lemma": "acharon"
+      }
+    ],
+    "3": [
+      {
+        "surface": "went on",
+        "lemma": "avar"
+      },
+      {
+        "surface": "ahead",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "and bowed",
+        "lemma": "shachah"
+      },
+      {
+        "surface": "to the ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "times",
+        "lemma": "paam"
+      },
+      {
+        "surface": "he approached",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "his brother",
+        "lemma": "ach"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Esau, however",
+        "lemma": "esav"
+      },
+      {
+        "surface": "ran to him",
+        "lemma": "ruts"
+      },
+      {
+        "surface": "and embraced him",
+        "lemma": "chavaq"
+      },
+      {
+        "surface": "threw his arms around",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "his neck",
+        "lemma": "tsavvar"
+      },
+      {
+        "surface": "and kissed him",
+        "lemma": "nashaq"
+      },
+      {
+        "surface": "And they both wept",
+        "lemma": "bakhah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "When Esau looked up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the women",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "and children",
+        "lemma": "yeled"
+      },
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "These are the children",
+        "lemma": "yeled"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "has graciously given",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "your servant",
+        "lemma": "eved"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Then the maidservants",
+        "lemma": "shiphchah"
+      },
+      {
+        "surface": "children",
+        "lemma": "yeled"
+      },
+      {
+        "surface": "approached",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "and bowed down",
+        "lemma": "shachah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Leah",
+        "lemma": "leah"
+      },
+      {
+        "surface": "and her children",
+        "lemma": "yeled"
+      },
+      {
+        "surface": "approached",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "and bowed down",
+        "lemma": "shachah"
+      },
+      {
+        "surface": "and then",
+        "lemma": "achar"
+      },
+      {
+        "surface": "Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "and Rachel",
+        "lemma": "rachel"
+      },
+      {
+        "surface": "approached",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "and bowed down",
+        "lemma": "shachah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "What",
+        "lemma": "mi"
+      },
+      {
+        "surface": "company",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "to meet me",
+        "lemma": "pagash"
+      },
+      {
+        "surface": "To find",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "in your sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "my lord",
+        "lemma": "adon"
+      }
+    ],
+    "9": [
+      {
+        "surface": "I already have",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "plenty",
+        "lemma": "rav"
+      },
+      {
+        "surface": "my brother",
+        "lemma": "ach"
+      },
+      {
+        "surface": "Esau",
+        "lemma": "esav"
+      }
+    ],
+    "10": [
+      {
+        "surface": "But Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "please",
+        "lemma": "na"
+      },
+      {
+        "surface": "I have found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "in your sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "then receive",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "this gift",
+        "lemma": "minchah"
+      },
+      {
+        "surface": "from my hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "your face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "since you have received me favorably",
+        "lemma": "ratsah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Please",
+        "lemma": "na"
+      },
+      {
+        "surface": "accept",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "my gift",
+        "lemma": "berakhah"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "has been gracious",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "and I have",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "So Jacob pressed",
+        "lemma": "patsar"
+      },
+      {
+        "surface": "until he accepted",
+        "lemma": "laqach"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Let us be on our way",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "and I will go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "ahead of you",
+        "lemma": "neged"
+      }
+    ],
+    "13": [
+      {
+        "surface": "My lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "knows",
+        "lemma": "yada"
+      },
+      {
+        "surface": "the children",
+        "lemma": "yeled"
+      },
+      {
+        "surface": "are frail",
+        "lemma": "rakh"
+      },
+      {
+        "surface": "sheep",
+        "lemma": "tson"
+      },
+      {
+        "surface": "and cattle",
+        "lemma": "baqar"
+      },
+      {
+        "surface": "that are nursing their young",
+        "lemma": "ul"
+      },
+      {
+        "surface": "If they are driven hard",
+        "lemma": "daphaq"
+      },
+      {
+        "surface": "for even a",
+        "lemma": "echad"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the animals",
+        "lemma": "tson"
+      },
+      {
+        "surface": "will die",
+        "lemma": "mut"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Please",
+        "lemma": "na"
+      },
+      {
+        "surface": "let my lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "go",
+        "lemma": "avar"
+      },
+      {
+        "surface": "ahead of",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "his servant",
+        "lemma": "eved"
+      },
+      {
+        "surface": "will continue",
+        "lemma": "nahal"
+      },
+      {
+        "surface": "on slowly",
+        "lemma": "itti"
+      },
+      {
+        "surface": "at a comfortable pace",
+        "lemma": "regel"
+      },
+      {
+        "surface": "for the livestock",
+        "lemma": "melakhah"
+      },
+      {
+        "surface": "and children",
+        "lemma": "yeled"
+      },
+      {
+        "surface": "my lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "at Seir",
+        "lemma": "seir"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Let me leave",
+        "lemma": "yatsag"
+      },
+      {
+        "surface": "people",
+        "lemma": "am"
+      },
+      {
+        "surface": "Esau",
+        "lemma": "esav"
+      },
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "Let me find",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "in the sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of my lord",
+        "lemma": "adon"
+      }
+    ],
+    "16": [
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "Esau",
+        "lemma": "esav"
+      },
+      {
+        "surface": "started on his way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "to Seir",
+        "lemma": "seir"
+      }
+    ],
+    "17": [
+      {
+        "surface": "but Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "went on",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "to Succoth",
+        "lemma": "sukkot"
+      },
+      {
+        "surface": "where he built",
+        "lemma": "banah"
+      },
+      {
+        "surface": "a house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "and shelters",
+        "lemma": "sukkah"
+      },
+      {
+        "surface": "for his livestock",
+        "lemma": "miqneh"
+      },
+      {
+        "surface": "the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "Succoth",
+        "lemma": "sukkot"
+      }
+    ],
+    "18": [
+      {
+        "surface": "After Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "paddan"
+      },
+      {
+        "surface": "from Paddan-aram",
+        "lemma": "aram"
+      },
+      {
+        "surface": "safely",
+        "lemma": "shalem"
+      },
+      {
+        "surface": "at the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "of Shechem",
+        "lemma": "shekhem"
+      },
+      {
+        "surface": "in the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Canaan",
+        "lemma": "kenaan"
+      },
+      {
+        "surface": "and he camped",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "just outside",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the city",
+        "lemma": "ir"
+      }
+    ],
+    "19": [
+      {
+        "surface": "And the plot",
+        "lemma": "chelqah"
+      },
+      {
+        "surface": "of ground",
+        "lemma": "saday"
+      },
+      {
+        "surface": "he pitched",
+        "lemma": "natah"
+      },
+      {
+        "surface": "his tent",
+        "lemma": "hoel"
+      },
+      {
+        "surface": "he purchased",
+        "lemma": "qanah"
+      },
+      {
+        "surface": "from",
+        "lemma": "yad"
+      },
+      {
+        "surface": "the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Hamor",
+        "lemma": "chamor"
+      },
+      {
+        "surface": "Shechem’s",
+        "lemma": "shekhem"
+      },
+      {
+        "surface": "for a hundred",
+        "lemma": "meah"
+      },
+      {
+        "surface": "pieces of silver",
+        "lemma": "qesitah"
+      }
+    ],
+    "20": [
+      {
+        "surface": "There",
+        "lemma": "sham"
+      },
+      {
+        "surface": "he set up",
+        "lemma": "natsav"
+      },
+      {
+        "surface": "an altar",
+        "lemma": "mizbeach"
+      },
+      {
+        "surface": "El-Elohe-Israel",
+        "lemma": "el"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "yeled",
+    "paneh",
+    "esav"
+  ]
+}

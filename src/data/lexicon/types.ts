@@ -28,6 +28,8 @@ export interface LexEntry {
   semanticRange?: string[];
   /** Total NT occurrences (helps the user judge how distinctive a word is). */
   ntFrequency?: number;
+  /** Total OT occurrences (Hebrew + Aramaic combined). */
+  otFrequency?: number;
   /**
    * Theologically loaded words (logos, sarx, dikaiosynē, kosmos, agapē, …)
    * that get abused without context. The UI surfaces a "context-sensitive"

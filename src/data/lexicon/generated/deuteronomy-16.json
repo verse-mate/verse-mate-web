@@ -1,0 +1,961 @@
+{
+  "bookId": 5,
+  "book": "Deuteronomy",
+  "chapter": 16,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Observe",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "the month",
+        "lemma": "chodesh"
+      },
+      {
+        "surface": "of Abib",
+        "lemma": "aviv"
+      },
+      {
+        "surface": "the Passover",
+        "lemma": "pesach"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "in the month",
+        "lemma": "chodesh"
+      },
+      {
+        "surface": "of Abib",
+        "lemma": "aviv"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "by night",
+        "lemma": "laylah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "You are to offer",
+        "lemma": "zavach"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the Passover sacrifice",
+        "lemma": "pesach"
+      },
+      {
+        "surface": "from the herd",
+        "lemma": "baqar"
+      },
+      {
+        "surface": "or flock",
+        "lemma": "tson"
+      },
+      {
+        "surface": "in the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will choose",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "as a dwelling",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "for His Name",
+        "lemma": "shem"
+      }
+    ],
+    "3": [
+      {
+        "surface": "eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "leavened bread",
+        "lemma": "chamets"
+      },
+      {
+        "surface": "for seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "you are to eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "unleavened bread",
+        "lemma": "matstsah"
+      },
+      {
+        "surface": "the bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "of affliction",
+        "lemma": "oni"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "in haste",
+        "lemma": "chippazon"
+      },
+      {
+        "surface": "you may remember",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "of your life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      }
+    ],
+    "4": [
+      {
+        "surface": "leaven",
+        "lemma": "seor"
+      },
+      {
+        "surface": "your land",
+        "lemma": "gevul"
+      },
+      {
+        "surface": "for seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the meat",
+        "lemma": "basar"
+      },
+      {
+        "surface": "you sacrifice",
+        "lemma": "zavach"
+      },
+      {
+        "surface": "in the evening",
+        "lemma": "erev"
+      },
+      {
+        "surface": "of the first",
+        "lemma": "rishon"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "shall remain",
+        "lemma": "lun"
+      },
+      {
+        "surface": "until morning",
+        "lemma": "boqer"
+      }
+    ],
+    "5": [
+      {
+        "surface": "to sacrifice",
+        "lemma": "zavach"
+      },
+      {
+        "surface": "the Passover animal",
+        "lemma": "pesach"
+      },
+      {
+        "surface": "in any",
+        "lemma": "echad"
+      },
+      {
+        "surface": "of the towns",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      }
+    ],
+    "6": [
+      {
+        "surface": "offer",
+        "lemma": "zavach"
+      },
+      {
+        "surface": "the Passover sacrifice",
+        "lemma": "pesach"
+      },
+      {
+        "surface": "the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "will choose",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "as a dwelling",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "for His Name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "Do this in the evening",
+        "lemma": "erev"
+      },
+      {
+        "surface": "as the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "at the same time",
+        "lemma": "moed"
+      },
+      {
+        "surface": "from Egypt",
+        "lemma": "mitsrayim"
+      }
+    ],
+    "7": [
+      {
+        "surface": "And you shall roast it",
+        "lemma": "bashal"
+      },
+      {
+        "surface": "and eat it",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "in the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "will choose",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "and in the morning",
+        "lemma": "boqer"
+      },
+      {
+        "surface": "you shall return",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "to your tents",
+        "lemma": "hoel"
+      }
+    ],
+    "8": [
+      {
+        "surface": "For six",
+        "lemma": "shesh"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "you must eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "unleavened bread",
+        "lemma": "matstsah"
+      },
+      {
+        "surface": "and on the seventh",
+        "lemma": "shevii"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "you shall hold a solemn assembly",
+        "lemma": "atsarah"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "any work",
+        "lemma": "melakhah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "You are to count off",
+        "lemma": "saphar"
+      },
+      {
+        "surface": "seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "weeks",
+        "lemma": "shavua"
+      },
+      {
+        "surface": "from",
+        "lemma": "saphar"
+      },
+      {
+        "surface": "the time",
+        "lemma": "shavua"
+      },
+      {
+        "surface": "you first put the sickle",
+        "lemma": "chermesh"
+      },
+      {
+        "surface": "to the standing grain",
+        "lemma": "qamah"
+      }
+    ],
+    "10": [
+      {
+        "surface": "the Feast",
+        "lemma": "chag"
+      },
+      {
+        "surface": "of Weeks",
+        "lemma": "shavua"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "with a freewill offering",
+        "lemma": "nedavah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "has blessed you",
+        "lemma": "barakh"
+      }
+    ],
+    "11": [
+      {
+        "surface": "and you shall rejoice",
+        "lemma": "samach"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "in the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "He",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will choose",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "as a dwelling",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "for His Name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "your sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "your menservants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "and maidservants",
+        "lemma": "amah"
+      },
+      {
+        "surface": "and the Levite",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "within your gates",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "as well as the foreigner",
+        "lemma": "ger"
+      },
+      {
+        "surface": "the fatherless",
+        "lemma": "yatom"
+      },
+      {
+        "surface": "and the widows",
+        "lemma": "almanah"
+      },
+      {
+        "surface": "among you",
+        "lemma": "qerev"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Remember",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "slaves",
+        "lemma": "eved"
+      },
+      {
+        "surface": "in Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and carefully",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "statutes",
+        "lemma": "choq"
+      }
+    ],
+    "13": [
+      {
+        "surface": "the Feast",
+        "lemma": "chag"
+      },
+      {
+        "surface": "of Tabernacles",
+        "lemma": "sukkah"
+      },
+      {
+        "surface": "for seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "after you have gathered",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "the produce of your threshing floor",
+        "lemma": "goren"
+      },
+      {
+        "surface": "and your winepress",
+        "lemma": "yeqev"
+      }
+    ],
+    "14": [
+      {
+        "surface": "And you shall rejoice",
+        "lemma": "samach"
+      },
+      {
+        "surface": "in your feast",
+        "lemma": "chag"
+      },
+      {
+        "surface": "your sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "your menservants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "and maidservants",
+        "lemma": "amah"
+      },
+      {
+        "surface": "and the Levite",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "as well as the foreigner",
+        "lemma": "ger"
+      },
+      {
+        "surface": "the fatherless",
+        "lemma": "yatom"
+      },
+      {
+        "surface": "and the widows",
+        "lemma": "almanah"
+      },
+      {
+        "surface": "among you",
+        "lemma": "shaar"
+      }
+    ],
+    "15": [
+      {
+        "surface": "For seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "you shall celebrate a feast",
+        "lemma": "chagag"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "in the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "He",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will choose",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "will bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "your produce",
+        "lemma": "tevuah"
+      },
+      {
+        "surface": "the work",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "of your hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "so that your joy",
+        "lemma": "sameach"
+      },
+      {
+        "surface": "complete",
+        "lemma": "akh"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "times",
+        "lemma": "paam"
+      },
+      {
+        "surface": "a year",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "your men",
+        "lemma": "zakhur"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "in the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "He will choose",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "at the Feast",
+        "lemma": "chag"
+      },
+      {
+        "surface": "of Unleavened Bread",
+        "lemma": "matstsah"
+      },
+      {
+        "surface": "the Feast",
+        "lemma": "chag"
+      },
+      {
+        "surface": "of Weeks",
+        "lemma": "shavua"
+      },
+      {
+        "surface": "and the Feast",
+        "lemma": "chag"
+      },
+      {
+        "surface": "of Tabernacles",
+        "lemma": "sukkah"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "empty-handed",
+        "lemma": "reqam"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Everyone",
+        "lemma": "ish"
+      },
+      {
+        "surface": "must appear with a gift",
+        "lemma": "mattanah"
+      },
+      {
+        "surface": "as he is able",
+        "lemma": "yad"
+      },
+      {
+        "surface": "according to the blessing",
+        "lemma": "berakhah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      }
+    ],
+    "18": [
+      {
+        "surface": "judges",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "and officials",
+        "lemma": "shoter"
+      },
+      {
+        "surface": "for your tribes",
+        "lemma": "shevet"
+      },
+      {
+        "surface": "town",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "They are to judge",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "with righteous",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "judgment",
+        "lemma": "mishpat"
+      }
+    ],
+    "19": [
+      {
+        "surface": "deny",
+        "lemma": "natah"
+      },
+      {
+        "surface": "justice",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "or show partiality",
+        "lemma": "nakhar"
+      },
+      {
+        "surface": "accept",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "a bribe",
+        "lemma": "shachad"
+      },
+      {
+        "surface": "a bribe",
+        "lemma": "shachad"
+      },
+      {
+        "surface": "blinds",
+        "lemma": "avar"
+      },
+      {
+        "surface": "the eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of the wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "and twists",
+        "lemma": "salaph"
+      },
+      {
+        "surface": "the words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the righteous",
+        "lemma": "tsaddiq"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Pursue",
+        "lemma": "radaph"
+      },
+      {
+        "surface": "justice",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "and justice alone",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "you may live",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "and you may possess",
+        "lemma": "yarash"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      }
+    ],
+    "21": [
+      {
+        "surface": "set up",
+        "lemma": "nata"
+      },
+      {
+        "surface": "wooden",
+        "lemma": "ets"
+      },
+      {
+        "surface": "Asherah pole",
+        "lemma": "asherah"
+      },
+      {
+        "surface": "next to",
+        "lemma": "etsel"
+      },
+      {
+        "surface": "the altar",
+        "lemma": "mizbeach"
+      },
+      {
+        "surface": "for the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      }
+    ],
+    "22": [
+      {
+        "surface": "set up",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "a sacred pillar",
+        "lemma": "matstsevah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "hates",
+        "lemma": "sane"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "maqom",
+    "chag",
+    "bachar"
+  ]
+}

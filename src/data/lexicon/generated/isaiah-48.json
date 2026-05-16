@@ -1,0 +1,701 @@
+{
+  "bookId": 23,
+  "book": "Isaiah",
+  "chapter": 48,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "O house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "by the name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "from the line",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "who swear",
+        "lemma": "shava"
+      },
+      {
+        "surface": "by the name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "who invoke",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "in truth",
+        "lemma": "emet"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "tsedaqah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "after the holy",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "and lean",
+        "lemma": "samakh"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "is His name",
+        "lemma": "shem"
+      }
+    ],
+    "3": [
+      {
+        "surface": "I foretold",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "the former things",
+        "lemma": "rishon"
+      },
+      {
+        "surface": "out of My mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "Suddenly",
+        "lemma": "pitom"
+      }
+    ],
+    "4": [
+      {
+        "surface": "For I knew",
+        "lemma": "yada"
+      },
+      {
+        "surface": "are stubborn",
+        "lemma": "qasheh"
+      },
+      {
+        "surface": "your neck",
+        "lemma": "oreph"
+      },
+      {
+        "surface": "is iron",
+        "lemma": "barzel"
+      },
+      {
+        "surface": "and your forehead",
+        "lemma": "metsach"
+      },
+      {
+        "surface": "is bronze",
+        "lemma": "nechushah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Therefore I declared it",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "before",
+        "lemma": "terem"
+      },
+      {
+        "surface": "My idol",
+        "lemma": "otsev"
+      },
+      {
+        "surface": "my carved image",
+        "lemma": "pesel"
+      },
+      {
+        "surface": "and molten god",
+        "lemma": "nesekh"
+      },
+      {
+        "surface": "has ordained it",
+        "lemma": "tsavah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "look at them",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "acknowledge them",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "From now on",
+        "lemma": "attah"
+      },
+      {
+        "surface": "new things",
+        "lemma": "chadash"
+      },
+      {
+        "surface": "hidden things",
+        "lemma": "natsar"
+      }
+    ],
+    "7": [
+      {
+        "surface": "They are created",
+        "lemma": "bara"
+      },
+      {
+        "surface": "now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "today",
+        "lemma": "yom"
+      },
+      {
+        "surface": "I already",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "knew them",
+        "lemma": "yada"
+      }
+    ],
+    "8": [
+      {
+        "surface": "understood",
+        "lemma": "yada"
+      },
+      {
+        "surface": "your ears",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "been open",
+        "lemma": "patach"
+      },
+      {
+        "surface": "I knew",
+        "lemma": "yada"
+      },
+      {
+        "surface": "how deceitful you are",
+        "lemma": "bagad"
+      },
+      {
+        "surface": "a rebel",
+        "lemma": "pasah"
+      },
+      {
+        "surface": "from birth",
+        "lemma": "beten"
+      }
+    ],
+    "9": [
+      {
+        "surface": "of My name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "I will delay",
+        "lemma": "arakh"
+      },
+      {
+        "surface": "My wrath",
+        "lemma": "aph"
+      },
+      {
+        "surface": "for the sake of My praise",
+        "lemma": "tehillah"
+      },
+      {
+        "surface": "I will restrain it",
+        "lemma": "chatam"
+      },
+      {
+        "surface": "so that you will not",
+        "lemma": "bilti"
+      },
+      {
+        "surface": "be cut off",
+        "lemma": "karat"
+      }
+    ],
+    "10": [
+      {
+        "surface": "See",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "I have refined you",
+        "lemma": "tsaraph"
+      },
+      {
+        "surface": "as silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "I have tested",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "you in the furnace",
+        "lemma": "kur"
+      },
+      {
+        "surface": "of affliction",
+        "lemma": "oni"
+      }
+    ],
+    "11": [
+      {
+        "surface": "how",
+        "lemma": "ekh"
+      },
+      {
+        "surface": "can I let Myself be defamed",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "My glory",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "to another",
+        "lemma": "acher"
+      }
+    ],
+    "12": [
+      {
+        "surface": "O Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "and Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "am the first",
+        "lemma": "rishon"
+      },
+      {
+        "surface": "the last",
+        "lemma": "acharon"
+      }
+    ],
+    "13": [
+      {
+        "surface": "My own hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "founded",
+        "lemma": "yasad"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and My right hand",
+        "lemma": "yamin"
+      },
+      {
+        "surface": "spread out",
+        "lemma": "taphach"
+      },
+      {
+        "surface": "the heavens",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "they stand up",
+        "lemma": "amad"
+      },
+      {
+        "surface": "together",
+        "lemma": "yachad"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Come together",
+        "lemma": "qavats"
+      },
+      {
+        "surface": "Which",
+        "lemma": "mi"
+      },
+      {
+        "surface": "has foretold",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "The LORD’s",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "chosen ally",
+        "lemma": "haav"
+      },
+      {
+        "surface": "His desire",
+        "lemma": "chephets"
+      },
+      {
+        "surface": "against Babylon",
+        "lemma": "bavel"
+      },
+      {
+        "surface": "and His arm",
+        "lemma": "zeroa"
+      },
+      {
+        "surface": "will be against the Chaldeans",
+        "lemma": "kasdi"
+      }
+    ],
+    "15": [
+      {
+        "surface": "have spoken",
+        "lemma": "davar"
+      },
+      {
+        "surface": "and he will succeed",
+        "lemma": "tsalach"
+      },
+      {
+        "surface": "in his mission",
+        "lemma": "derekh"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Come near",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "From the beginning",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "spoken",
+        "lemma": "davar"
+      },
+      {
+        "surface": "in secret",
+        "lemma": "seter"
+      },
+      {
+        "surface": "was there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "And now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "has sent me",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "accompanied by His Spirit",
+        "lemma": "ruach"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Thus",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your Redeemer",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "the Holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "One of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "who teaches",
+        "lemma": "lamad"
+      },
+      {
+        "surface": "you for your benefit",
+        "lemma": "yaal"
+      },
+      {
+        "surface": "who directs",
+        "lemma": "darakh"
+      },
+      {
+        "surface": "you in the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "you should go",
+        "lemma": "halakh"
+      }
+    ],
+    "18": [
+      {
+        "surface": "If only",
+        "lemma": "lu"
+      },
+      {
+        "surface": "you had paid attention",
+        "lemma": "qashav"
+      },
+      {
+        "surface": "to My commandments",
+        "lemma": "mitsvah"
+      },
+      {
+        "surface": "your peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "like a river",
+        "lemma": "nahar"
+      },
+      {
+        "surface": "and your righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "like waves",
+        "lemma": "gal"
+      },
+      {
+        "surface": "of the sea",
+        "lemma": "yam"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Your descendants",
+        "lemma": "zera"
+      },
+      {
+        "surface": "as countless as the sand",
+        "lemma": "chol"
+      },
+      {
+        "surface": "and your offspring",
+        "lemma": "tseetsa"
+      },
+      {
+        "surface": "as numerous as its grains",
+        "lemma": "meah"
+      },
+      {
+        "surface": "their name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "be cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "or eliminated",
+        "lemma": "shamad"
+      },
+      {
+        "surface": "from My presence",
+        "lemma": "paneh"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Babylon",
+        "lemma": "bavel"
+      },
+      {
+        "surface": "Flee",
+        "lemma": "barach"
+      },
+      {
+        "surface": "from the Chaldeans",
+        "lemma": "kasdi"
+      },
+      {
+        "surface": "Declare it",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "with a shout",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of joy",
+        "lemma": "rinnah"
+      },
+      {
+        "surface": "the ends",
+        "lemma": "qatseh"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has redeemed",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "His servant",
+        "lemma": "eved"
+      },
+      {
+        "surface": "Jacob",
+        "lemma": "yaaqov"
+      }
+    ],
+    "21": [
+      {
+        "surface": "thirst",
+        "lemma": "tsame"
+      },
+      {
+        "surface": "when He led them",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "through the deserts",
+        "lemma": "chorbah"
+      },
+      {
+        "surface": "He made water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "flow",
+        "lemma": "nazal"
+      },
+      {
+        "surface": "from the rock",
+        "lemma": "tsur"
+      },
+      {
+        "surface": "He split",
+        "lemma": "baqa"
+      },
+      {
+        "surface": "the rock",
+        "lemma": "tsur"
+      },
+      {
+        "surface": "and water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "gushed out",
+        "lemma": "zuv"
+      }
+    ],
+    "22": [
+      {
+        "surface": "There is no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "for the wicked",
+        "lemma": "rasah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "yisrael",
+    "shem",
+    "nagad"
+  ]
+}

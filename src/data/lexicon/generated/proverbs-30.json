@@ -1,0 +1,983 @@
+{
+  "bookId": 20,
+  "book": "Proverbs",
+  "chapter": 30,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "These are the words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of Agur",
+        "lemma": "agur"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Jakeh",
+        "lemma": "yaqeh"
+      },
+      {
+        "surface": "the burden",
+        "lemma": "massa"
+      },
+      {
+        "surface": "that this man",
+        "lemma": "gaver"
+      },
+      {
+        "surface": "declared",
+        "lemma": "neum"
+      },
+      {
+        "surface": "to Ithiel",
+        "lemma": "itiel"
+      },
+      {
+        "surface": "I am weary, O God",
+        "lemma": "itiel"
+      },
+      {
+        "surface": "and worn out",
+        "lemma": "ukhal"
+      }
+    ],
+    "2": [
+      {
+        "surface": "the most ignorant",
+        "lemma": "baar"
+      },
+      {
+        "surface": "of men",
+        "lemma": "ish"
+      },
+      {
+        "surface": "the understanding",
+        "lemma": "binah"
+      },
+      {
+        "surface": "of a man",
+        "lemma": "adam"
+      }
+    ],
+    "3": [
+      {
+        "surface": "learned",
+        "lemma": "lamad"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "and I have no knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "of the Holy One",
+        "lemma": "qadosh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "has ascended",
+        "lemma": "alah"
+      },
+      {
+        "surface": "to heaven",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "and come down",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "has gathered",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "the wind",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "in His hands",
+        "lemma": "chophen"
+      },
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "has bound up",
+        "lemma": "tsarar"
+      },
+      {
+        "surface": "the waters",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "in His cloak",
+        "lemma": "simlah"
+      },
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "has established",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "the ends",
+        "lemma": "ephes"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "is His name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "and what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "is the name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of His Son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "you know",
+        "lemma": "yada"
+      }
+    ],
+    "5": [
+      {
+        "surface": "word",
+        "lemma": "imrah"
+      },
+      {
+        "surface": "of God",
+        "lemma": "eloah"
+      },
+      {
+        "surface": "is flawless",
+        "lemma": "tsaraph"
+      },
+      {
+        "surface": "is a shield",
+        "lemma": "magen"
+      },
+      {
+        "surface": "to those who take refuge",
+        "lemma": "chasah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "add",
+        "lemma": "yasaph"
+      },
+      {
+        "surface": "His words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "He rebuke",
+        "lemma": "yakhach"
+      },
+      {
+        "surface": "and prove you a liar",
+        "lemma": "kazav"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "things I ask",
+        "lemma": "shaal"
+      },
+      {
+        "surface": "refuse me",
+        "lemma": "mana"
+      },
+      {
+        "surface": "before",
+        "lemma": "terem"
+      },
+      {
+        "surface": "I die",
+        "lemma": "mut"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Keep falsehood",
+        "lemma": "shav"
+      },
+      {
+        "surface": "and deceitful",
+        "lemma": "kazav"
+      },
+      {
+        "surface": "words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "far",
+        "lemma": "rachaq"
+      },
+      {
+        "surface": "poverty",
+        "lemma": "resh"
+      },
+      {
+        "surface": "nor riches",
+        "lemma": "osher"
+      },
+      {
+        "surface": "feed me",
+        "lemma": "taraph"
+      },
+      {
+        "surface": "with the bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "that is my portion",
+        "lemma": "choq"
+      }
+    ],
+    "9": [
+      {
+        "surface": "I may have too much",
+        "lemma": "sava"
+      },
+      {
+        "surface": "and deny You",
+        "lemma": "kachash"
+      },
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "is the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "I may become poor",
+        "lemma": "yarash"
+      },
+      {
+        "surface": "and steal",
+        "lemma": "ganav"
+      },
+      {
+        "surface": "profaning",
+        "lemma": "taphas"
+      },
+      {
+        "surface": "the name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of my God",
+        "lemma": "elohim"
+      }
+    ],
+    "10": [
+      {
+        "surface": "slander",
+        "lemma": "lashan"
+      },
+      {
+        "surface": "a servant",
+        "lemma": "eved"
+      },
+      {
+        "surface": "his master",
+        "lemma": "adon"
+      },
+      {
+        "surface": "he will curse you",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "and you will bear the guilt",
+        "lemma": "asham"
+      }
+    ],
+    "11": [
+      {
+        "surface": "There is a generation",
+        "lemma": "dor"
+      },
+      {
+        "surface": "of those who curse",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "their mothers",
+        "lemma": "em"
+      }
+    ],
+    "12": [
+      {
+        "surface": "There is a generation",
+        "lemma": "dor"
+      },
+      {
+        "surface": "of those who are pure",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "in their own eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "and yet unwashed",
+        "lemma": "rachats"
+      },
+      {
+        "surface": "of their filth",
+        "lemma": "tsoah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "There is a generation",
+        "lemma": "dor"
+      },
+      {
+        "surface": "how",
+        "lemma": "mah"
+      },
+      {
+        "surface": "haughty",
+        "lemma": "rum"
+      },
+      {
+        "surface": "are their eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "and pretentious",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "are their glances",
+        "lemma": "aphaph"
+      }
+    ],
+    "14": [
+      {
+        "surface": "there is a generation",
+        "lemma": "dor"
+      },
+      {
+        "surface": "whose teeth",
+        "lemma": "shen"
+      },
+      {
+        "surface": "are swords",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "and whose jaws",
+        "lemma": "metallah"
+      },
+      {
+        "surface": "are knives",
+        "lemma": "maakhelet"
+      },
+      {
+        "surface": "devouring",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the oppressed",
+        "lemma": "ani"
+      },
+      {
+        "surface": "from the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and the needy",
+        "lemma": "evyon"
+      },
+      {
+        "surface": "from among men",
+        "lemma": "adam"
+      }
+    ],
+    "15": [
+      {
+        "surface": "The leech",
+        "lemma": "aluqah"
+      },
+      {
+        "surface": "has two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "Give",
+        "lemma": "yahav"
+      },
+      {
+        "surface": "and Give",
+        "lemma": "yahav"
+      },
+      {
+        "surface": "are three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "satisfied",
+        "lemma": "sava"
+      },
+      {
+        "surface": "four that",
+        "lemma": "arba"
+      },
+      {
+        "surface": "Enough",
+        "lemma": "hon"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Sheol",
+        "lemma": "sheol"
+      },
+      {
+        "surface": "the barren",
+        "lemma": "otser"
+      },
+      {
+        "surface": "womb",
+        "lemma": "racham"
+      },
+      {
+        "surface": "land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "satisfied",
+        "lemma": "sava"
+      },
+      {
+        "surface": "with water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "and fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "Enough",
+        "lemma": "hon"
+      }
+    ],
+    "17": [
+      {
+        "surface": "As for the eye",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "that mocks",
+        "lemma": "laag"
+      },
+      {
+        "surface": "and scorns",
+        "lemma": "buz"
+      },
+      {
+        "surface": "obedience",
+        "lemma": "yiqqahah"
+      },
+      {
+        "surface": "to a mother",
+        "lemma": "em"
+      },
+      {
+        "surface": "may the ravens",
+        "lemma": "orev"
+      },
+      {
+        "surface": "of the valley",
+        "lemma": "nachal"
+      },
+      {
+        "surface": "pluck it out",
+        "lemma": "naqar"
+      },
+      {
+        "surface": "and young",
+        "lemma": "ben"
+      },
+      {
+        "surface": "vultures",
+        "lemma": "nesher"
+      },
+      {
+        "surface": "devour it",
+        "lemma": "akhal"
+      }
+    ],
+    "18": [
+      {
+        "surface": "are three things",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "too wonderful",
+        "lemma": "pala"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "understand",
+        "lemma": "yada"
+      }
+    ],
+    "19": [
+      {
+        "surface": "the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of an eagle",
+        "lemma": "nesher"
+      },
+      {
+        "surface": "in the sky",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of a snake",
+        "lemma": "nachash"
+      },
+      {
+        "surface": "a rock",
+        "lemma": "tsur"
+      },
+      {
+        "surface": "the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of a ship",
+        "lemma": "oniyyah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lev"
+      },
+      {
+        "surface": "at sea",
+        "lemma": "yam"
+      },
+      {
+        "surface": "and the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of a man",
+        "lemma": "gaver"
+      },
+      {
+        "surface": "with a maiden",
+        "lemma": "almah"
+      }
+    ],
+    "20": [
+      {
+        "surface": "This",
+        "lemma": "ken"
+      },
+      {
+        "surface": "is the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of an adulteress",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "She eats",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "and wipes",
+        "lemma": "machah"
+      },
+      {
+        "surface": "her mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "I have done",
+        "lemma": "paal"
+      },
+      {
+        "surface": "wrong",
+        "lemma": "aven"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "three things",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "trembles",
+        "lemma": "ragaz"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "bear up",
+        "lemma": "nasa"
+      }
+    ],
+    "22": [
+      {
+        "surface": "a servant",
+        "lemma": "eved"
+      },
+      {
+        "surface": "becomes king",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "a fool",
+        "lemma": "naval"
+      },
+      {
+        "surface": "is filled",
+        "lemma": "sava"
+      },
+      {
+        "surface": "with food",
+        "lemma": "lechem"
+      }
+    ],
+    "23": [
+      {
+        "surface": "an unloved woman",
+        "lemma": "sane"
+      },
+      {
+        "surface": "marries",
+        "lemma": "baal"
+      },
+      {
+        "surface": "and a maidservant",
+        "lemma": "shiphchah"
+      },
+      {
+        "surface": "supplants",
+        "lemma": "yarash"
+      },
+      {
+        "surface": "her mistress",
+        "lemma": "geveret"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "things on earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "are small",
+        "lemma": "qatan"
+      },
+      {
+        "surface": "are exceedingly",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "wise",
+        "lemma": "chakham"
+      }
+    ],
+    "25": [
+      {
+        "surface": "The ants",
+        "lemma": "nemalah"
+      },
+      {
+        "surface": "are creatures",
+        "lemma": "am"
+      },
+      {
+        "surface": "strength",
+        "lemma": "az"
+      },
+      {
+        "surface": "yet they store up",
+        "lemma": "kun"
+      },
+      {
+        "surface": "their food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "in the summer",
+        "lemma": "qayits"
+      }
+    ],
+    "26": [
+      {
+        "surface": "the rock badgers",
+        "lemma": "shaphan"
+      },
+      {
+        "surface": "are creatures",
+        "lemma": "am"
+      },
+      {
+        "surface": "power",
+        "lemma": "atsum"
+      },
+      {
+        "surface": "yet they make",
+        "lemma": "sum"
+      },
+      {
+        "surface": "their homes",
+        "lemma": "bet"
+      },
+      {
+        "surface": "in the rocks",
+        "lemma": "sela"
+      }
+    ],
+    "27": [
+      {
+        "surface": "the locusts",
+        "lemma": "arbeh"
+      },
+      {
+        "surface": "have no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "in formation",
+        "lemma": "chatsats"
+      }
+    ],
+    "28": [
+      {
+        "surface": "and the lizard",
+        "lemma": "semamit"
+      },
+      {
+        "surface": "can be caught",
+        "lemma": "taphas"
+      },
+      {
+        "surface": "in one’s hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "is found in the palaces",
+        "lemma": "hekhal"
+      },
+      {
+        "surface": "of kings",
+        "lemma": "melekh"
+      }
+    ],
+    "29": [
+      {
+        "surface": "are three things",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "that are stately",
+        "lemma": "yatav"
+      },
+      {
+        "surface": "in their stride",
+        "lemma": "tsaad"
+      },
+      {
+        "surface": "and four that",
+        "lemma": "arba"
+      },
+      {
+        "surface": "are impressive",
+        "lemma": "yatav"
+      },
+      {
+        "surface": "in their walk",
+        "lemma": "halakh"
+      }
+    ],
+    "30": [
+      {
+        "surface": "a lion",
+        "lemma": "layish"
+      },
+      {
+        "surface": "mighty",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "among beasts",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      }
+    ],
+    "31": [
+      {
+        "surface": "a strutting rooster",
+        "lemma": "zarzir"
+      },
+      {
+        "surface": "a he-goat",
+        "lemma": "tayish"
+      },
+      {
+        "surface": "and a king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "with his army",
+        "lemma": "alqum"
+      }
+    ],
+    "32": [
+      {
+        "surface": "you have foolishly",
+        "lemma": "naval"
+      },
+      {
+        "surface": "exalted yourself",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "you have plotted evil",
+        "lemma": "zamam"
+      },
+      {
+        "surface": "put your hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "over your mouth",
+        "lemma": "peh"
+      }
+    ],
+    "33": [
+      {
+        "surface": "as the churning",
+        "lemma": "mits"
+      },
+      {
+        "surface": "of milk",
+        "lemma": "chalav"
+      },
+      {
+        "surface": "butter",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "and the twisting",
+        "lemma": "mits"
+      },
+      {
+        "surface": "of the nose",
+        "lemma": "aph"
+      },
+      {
+        "surface": "blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "so the stirring",
+        "lemma": "mits"
+      },
+      {
+        "surface": "of anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "strife",
+        "lemma": "riv"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "mi",
+    "arba",
+    "shalosh"
+  ]
+}

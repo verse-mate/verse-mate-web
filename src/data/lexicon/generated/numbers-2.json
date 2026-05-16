@@ -1,0 +1,937 @@
+{
+  "bookId": 4,
+  "book": "Numbers",
+  "chapter": 2,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "and Aaron",
+        "lemma": "haaron"
+      }
+    ],
+    "2": [
+      {
+        "surface": "The Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "are to camp",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "around",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "the Tent",
+        "lemma": "hoel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      },
+      {
+        "surface": "at a distance from it",
+        "lemma": "neged"
+      },
+      {
+        "surface": "each man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "his standard",
+        "lemma": "degel"
+      },
+      {
+        "surface": "with the banners",
+        "lemma": "ot"
+      }
+    ],
+    "3": [
+      {
+        "surface": "On the east side",
+        "lemma": "qedem"
+      },
+      {
+        "surface": "toward the sunrise",
+        "lemma": "mizrach"
+      },
+      {
+        "surface": "the divisions",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "are to camp",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "under their standard",
+        "lemma": "degel"
+      },
+      {
+        "surface": "The leader",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of the Judahites",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "is Nahshon",
+        "lemma": "nachshon"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Amminadab",
+        "lemma": "amminadav"
+      }
+    ],
+    "4": [
+      {
+        "surface": "and his division",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "numbers",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "74600",
+        "lemma": "arba"
+      }
+    ],
+    "5": [
+      {
+        "surface": "The tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Issachar",
+        "lemma": "yissaskhar"
+      },
+      {
+        "surface": "will camp",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "The leader",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the Issacharites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "is Nethanel",
+        "lemma": "netanel"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Zuar",
+        "lemma": "tsuar"
+      }
+    ],
+    "6": [
+      {
+        "surface": "and his division",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "numbers",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "54400",
+        "lemma": "arba"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Next will be the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Zebulun",
+        "lemma": "zevulun"
+      },
+      {
+        "surface": "The leader",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the Zebulunites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "is Eliab",
+        "lemma": "eliav"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Helon",
+        "lemma": "chelon"
+      }
+    ],
+    "8": [
+      {
+        "surface": "and his division",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "numbers",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "57400",
+        "lemma": "sheva"
+      }
+    ],
+    "9": [
+      {
+        "surface": "number of men",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "in the divisions",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "of the camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "is 186,400",
+        "lemma": "meah"
+      },
+      {
+        "surface": "they shall set out",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "first",
+        "lemma": "rishon"
+      }
+    ],
+    "10": [
+      {
+        "surface": "On the south side",
+        "lemma": "teman"
+      },
+      {
+        "surface": "the divisions",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "of Reuben",
+        "lemma": "reuven"
+      },
+      {
+        "surface": "are to camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "under their standard",
+        "lemma": "degel"
+      },
+      {
+        "surface": "The leader",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the Reubenites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "is Elizur",
+        "lemma": "elitsur"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Shedeur",
+        "lemma": "shedeur"
+      }
+    ],
+    "11": [
+      {
+        "surface": "and his division",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "numbers",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "46500",
+        "lemma": "shesh"
+      }
+    ],
+    "12": [
+      {
+        "surface": "The tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Simeon",
+        "lemma": "shimon"
+      },
+      {
+        "surface": "will camp",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "The leader",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the Simeonites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "is Shelumiel",
+        "lemma": "shelumiel"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "tsurishadday"
+      },
+      {
+        "surface": "of Zurishaddai",
+        "lemma": "tsurishadday"
+      }
+    ],
+    "13": [
+      {
+        "surface": "and his division",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "numbers",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "59300",
+        "lemma": "tesah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Next will be the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Gad",
+        "lemma": "gad"
+      },
+      {
+        "surface": "The leader",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the Gadites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "is Eliasaph",
+        "lemma": "elyasaph"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Deuel",
+        "lemma": "reuel"
+      }
+    ],
+    "15": [
+      {
+        "surface": "and his division",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "numbers",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "45650",
+        "lemma": "chamesh"
+      }
+    ],
+    "16": [
+      {
+        "surface": "number of men",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "in the divisions",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "of the camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "of Reuben",
+        "lemma": "reuven"
+      },
+      {
+        "surface": "is 151,450",
+        "lemma": "meah"
+      },
+      {
+        "surface": "they shall set out",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "second",
+        "lemma": "sheni"
+      }
+    ],
+    "17": [
+      {
+        "surface": "In the middle",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "of the camps",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "the Tent",
+        "lemma": "hoel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      },
+      {
+        "surface": "is to travel",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "with the camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "of the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "They are to set out",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "they encamped",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "each",
+        "lemma": "ish"
+      },
+      {
+        "surface": "his own place",
+        "lemma": "yad"
+      },
+      {
+        "surface": "under his standard",
+        "lemma": "degel"
+      }
+    ],
+    "18": [
+      {
+        "surface": "On the west side",
+        "lemma": "yam"
+      },
+      {
+        "surface": "the divisions",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "of Ephraim",
+        "lemma": "ephrayim"
+      },
+      {
+        "surface": "are to camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "under their standard",
+        "lemma": "degel"
+      },
+      {
+        "surface": "The leader",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the Ephraimites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "is Elishama",
+        "lemma": "elishama"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ammihud",
+        "lemma": "ammihud"
+      }
+    ],
+    "19": [
+      {
+        "surface": "and his division",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "numbers",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "40500",
+        "lemma": "arbaim"
+      }
+    ],
+    "20": [
+      {
+        "surface": "The tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Manasseh",
+        "lemma": "menashsheh"
+      },
+      {
+        "surface": "The leader",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the Manassites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "is Gamaliel",
+        "lemma": "gamliel"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Pedahzur",
+        "lemma": "pedahtsur"
+      }
+    ],
+    "21": [
+      {
+        "surface": "and his division",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "numbers",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "32200",
+        "lemma": "shenayim"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Next will be the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Benjamin",
+        "lemma": "binyamin"
+      },
+      {
+        "surface": "The leader",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the Benjamites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "is Abidan",
+        "lemma": "avidan"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Gideoni",
+        "lemma": "gidoni"
+      }
+    ],
+    "23": [
+      {
+        "surface": "and his division",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "numbers",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "35400",
+        "lemma": "chamesh"
+      }
+    ],
+    "24": [
+      {
+        "surface": "number of men",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "in the divisions",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "of the camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "of Ephraim",
+        "lemma": "ephrayim"
+      },
+      {
+        "surface": "is 108,100",
+        "lemma": "meah"
+      },
+      {
+        "surface": "they shall set out",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "third",
+        "lemma": "shelishi"
+      }
+    ],
+    "25": [
+      {
+        "surface": "On the north side",
+        "lemma": "tsaphon"
+      },
+      {
+        "surface": "the divisions",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "of Dan",
+        "lemma": "dan"
+      },
+      {
+        "surface": "are to camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "under their standard",
+        "lemma": "degel"
+      },
+      {
+        "surface": "The leader",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the Danites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "is Ahiezer",
+        "lemma": "achiezer"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ammishaddai",
+        "lemma": "ammishadday"
+      }
+    ],
+    "26": [
+      {
+        "surface": "and his division",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "numbers",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "62700",
+        "lemma": "shenayim"
+      }
+    ],
+    "27": [
+      {
+        "surface": "The tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "will camp",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "The leader",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the Asherites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "is Pagiel",
+        "lemma": "pagiel"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ocran",
+        "lemma": "okhran"
+      }
+    ],
+    "28": [
+      {
+        "surface": "and his division",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "numbers",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "41500",
+        "lemma": "echad"
+      }
+    ],
+    "29": [
+      {
+        "surface": "Next will be the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Naphtali",
+        "lemma": "naphtali"
+      },
+      {
+        "surface": "The leader",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the Naphtalites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "is Ahira",
+        "lemma": "achira"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Enan",
+        "lemma": "enan"
+      }
+    ],
+    "30": [
+      {
+        "surface": "and his division",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "numbers",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "53400",
+        "lemma": "shalosh"
+      }
+    ],
+    "31": [
+      {
+        "surface": "number of men",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "in the camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "of Dan",
+        "lemma": "dan"
+      },
+      {
+        "surface": "is 157,600",
+        "lemma": "meah"
+      },
+      {
+        "surface": "they shall set out",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "last",
+        "lemma": "acharon"
+      },
+      {
+        "surface": "under their standards",
+        "lemma": "degel"
+      }
+    ],
+    "32": [
+      {
+        "surface": "are the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "numbered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "of those counted",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "in the camps",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "by their divisions",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "was 603,550",
+        "lemma": "shesh"
+      }
+    ],
+    "33": [
+      {
+        "surface": "But the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "counted",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "among",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "the other Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "had commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "34": [
+      {
+        "surface": "So the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "they camped",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "under their standards",
+        "lemma": "degel"
+      },
+      {
+        "surface": "in this way",
+        "lemma": "ken"
+      },
+      {
+        "surface": "and set out",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "in the same way",
+        "lemma": "ken"
+      },
+      {
+        "surface": "each man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "with his clan",
+        "lemma": "mishpachah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "tsava",
+    "paqad",
+    "nasi"
+  ]
+}

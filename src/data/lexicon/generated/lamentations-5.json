@@ -1,0 +1,473 @@
+{
+  "bookId": 25,
+  "book": "Lamentations",
+  "chapter": 5,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Remember",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "Look",
+        "lemma": "navat"
+      },
+      {
+        "surface": "our disgrace",
+        "lemma": "cherpah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Our inheritance",
+        "lemma": "nachalah"
+      },
+      {
+        "surface": "has been turned over",
+        "lemma": "haphakh"
+      },
+      {
+        "surface": "to strangers",
+        "lemma": "zur"
+      },
+      {
+        "surface": "our houses",
+        "lemma": "bet"
+      },
+      {
+        "surface": "to foreigners",
+        "lemma": "nokhri"
+      }
+    ],
+    "3": [
+      {
+        "surface": "fatherless",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "orphans",
+        "lemma": "yatom"
+      },
+      {
+        "surface": "our mothers",
+        "lemma": "em"
+      },
+      {
+        "surface": "are widows",
+        "lemma": "almanah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "We must buy",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "the water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "we drink",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "our wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "at a price",
+        "lemma": "mechir"
+      }
+    ],
+    "5": [
+      {
+        "surface": "pursued",
+        "lemma": "radaph"
+      },
+      {
+        "surface": "we are weary",
+        "lemma": "yaga"
+      },
+      {
+        "surface": "rest",
+        "lemma": "nuach"
+      }
+    ],
+    "6": [
+      {
+        "surface": "to Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and Assyria",
+        "lemma": "ashshur"
+      },
+      {
+        "surface": "to get enough",
+        "lemma": "sava"
+      },
+      {
+        "surface": "bread",
+        "lemma": "lechem"
+      }
+    ],
+    "7": [
+      {
+        "surface": "sinned",
+        "lemma": "chata"
+      },
+      {
+        "surface": "and are no more",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "bear",
+        "lemma": "saval"
+      },
+      {
+        "surface": "their punishment",
+        "lemma": "avan"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Slaves",
+        "lemma": "eved"
+      },
+      {
+        "surface": "rule",
+        "lemma": "mashal"
+      },
+      {
+        "surface": "there is no one",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "to deliver us",
+        "lemma": "paraq"
+      },
+      {
+        "surface": "from their hands",
+        "lemma": "yad"
+      }
+    ],
+    "9": [
+      {
+        "surface": "our bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "at the risk of our lives",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "because of",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "in the wilderness",
+        "lemma": "midbar"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Our skin",
+        "lemma": "or"
+      },
+      {
+        "surface": "is as hot",
+        "lemma": "kamar"
+      },
+      {
+        "surface": "as an oven",
+        "lemma": "tannur"
+      },
+      {
+        "surface": "with",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "fever",
+        "lemma": "zalaphah"
+      },
+      {
+        "surface": "from our hunger",
+        "lemma": "raav"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Women",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "have been ravished",
+        "lemma": "anah"
+      },
+      {
+        "surface": "in Zion",
+        "lemma": "tsiyyon"
+      },
+      {
+        "surface": "virgins",
+        "lemma": "betulah"
+      },
+      {
+        "surface": "in the cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Princes",
+        "lemma": "sar"
+      },
+      {
+        "surface": "have been hung up",
+        "lemma": "talah"
+      },
+      {
+        "surface": "by their hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "elders",
+        "lemma": "zaqen"
+      },
+      {
+        "surface": "respect",
+        "lemma": "paneh"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Young men",
+        "lemma": "bachur"
+      },
+      {
+        "surface": "toil",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "at millstones",
+        "lemma": "techon"
+      },
+      {
+        "surface": "boys",
+        "lemma": "naar"
+      },
+      {
+        "surface": "stagger",
+        "lemma": "kashal"
+      },
+      {
+        "surface": "under loads of wood",
+        "lemma": "ets"
+      }
+    ],
+    "14": [
+      {
+        "surface": "The elders",
+        "lemma": "zaqen"
+      },
+      {
+        "surface": "have left",
+        "lemma": "shavat"
+      },
+      {
+        "surface": "the city gate",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "the young men",
+        "lemma": "bachur"
+      },
+      {
+        "surface": "have stopped their music",
+        "lemma": "neginah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Joy",
+        "lemma": "masvos"
+      },
+      {
+        "surface": "has left",
+        "lemma": "shavat"
+      },
+      {
+        "surface": "our hearts",
+        "lemma": "lev"
+      },
+      {
+        "surface": "our dancing",
+        "lemma": "machol"
+      },
+      {
+        "surface": "has turned",
+        "lemma": "haphakh"
+      },
+      {
+        "surface": "to mourning",
+        "lemma": "evel"
+      }
+    ],
+    "16": [
+      {
+        "surface": "The crown",
+        "lemma": "atarah"
+      },
+      {
+        "surface": "has fallen",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "from our head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "Woe",
+        "lemma": "oy"
+      },
+      {
+        "surface": "we have sinned",
+        "lemma": "chata"
+      }
+    ],
+    "17": [
+      {
+        "surface": "our hearts",
+        "lemma": "lev"
+      },
+      {
+        "surface": "faint",
+        "lemma": "daveh"
+      },
+      {
+        "surface": "our eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "grow dim",
+        "lemma": "chashakh"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Mount",
+        "lemma": "har"
+      },
+      {
+        "surface": "Zion",
+        "lemma": "tsiyyon"
+      },
+      {
+        "surface": "which lies desolate",
+        "lemma": "shamem"
+      },
+      {
+        "surface": "patrolled",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "by foxes",
+        "lemma": "shual"
+      }
+    ],
+    "19": [
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "forever",
+        "lemma": "olam"
+      },
+      {
+        "surface": "Your throne",
+        "lemma": "kisse"
+      },
+      {
+        "surface": "endures from generation",
+        "lemma": "dor"
+      },
+      {
+        "surface": "to generation",
+        "lemma": "dor"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "have You forgotten us",
+        "lemma": "shakhach"
+      },
+      {
+        "surface": "forever",
+        "lemma": "netsach"
+      },
+      {
+        "surface": "Why have You forsaken us",
+        "lemma": "azav"
+      },
+      {
+        "surface": "for so long",
+        "lemma": "orekh"
+      }
+    ],
+    "21": [
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "renew",
+        "lemma": "chadash"
+      },
+      {
+        "surface": "our days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "as of old",
+        "lemma": "qedem"
+      }
+    ],
+    "22": [
+      {
+        "surface": "You have utterly rejected us",
+        "lemma": "maas"
+      },
+      {
+        "surface": "and remain angry",
+        "lemma": "qatsaph"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "paneh",
+    "zaqen",
+    "tsiyyon"
+  ]
+}

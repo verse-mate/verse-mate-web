@@ -1,0 +1,1197 @@
+{
+  "bookId": 2,
+  "book": "Exodus",
+  "chapter": 25,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Tell",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "to bring",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "an offering",
+        "lemma": "terumah"
+      },
+      {
+        "surface": "You are to receive",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "My offering",
+        "lemma": "terumah"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "compels him",
+        "lemma": "nadav"
+      }
+    ],
+    "3": [
+      {
+        "surface": "is the offering",
+        "lemma": "terumah"
+      },
+      {
+        "surface": "you are to accept",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "and bronze",
+        "lemma": "nechoshet"
+      }
+    ],
+    "4": [
+      {
+        "surface": "blue",
+        "lemma": "tekhelet"
+      },
+      {
+        "surface": "purple",
+        "lemma": "argaman"
+      },
+      {
+        "surface": "and scarlet yarn",
+        "lemma": "tola"
+      },
+      {
+        "surface": "fine linen",
+        "lemma": "shesh"
+      },
+      {
+        "surface": "and goat hair",
+        "lemma": "ez"
+      }
+    ],
+    "5": [
+      {
+        "surface": "ram",
+        "lemma": "ayil"
+      },
+      {
+        "surface": "skins",
+        "lemma": "or"
+      },
+      {
+        "surface": "dyed red",
+        "lemma": "adam"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "or"
+      },
+      {
+        "surface": "and fine leather",
+        "lemma": "tachash"
+      },
+      {
+        "surface": "acacia",
+        "lemma": "shittah"
+      },
+      {
+        "surface": "wood",
+        "lemma": "ets"
+      }
+    ],
+    "6": [
+      {
+        "surface": "olive oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "for the light",
+        "lemma": "maor"
+      },
+      {
+        "surface": "spices",
+        "lemma": "besem"
+      },
+      {
+        "surface": "for the anointing",
+        "lemma": "mishchah"
+      },
+      {
+        "surface": "oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "and for the fragrant",
+        "lemma": "sam"
+      },
+      {
+        "surface": "incense",
+        "lemma": "qetoret"
+      }
+    ],
+    "7": [
+      {
+        "surface": "and onyx stones",
+        "lemma": "even"
+      },
+      {
+        "surface": "and gemstones",
+        "lemma": "even"
+      },
+      {
+        "surface": "to be mounted",
+        "lemma": "millu"
+      },
+      {
+        "surface": "on the ephod",
+        "lemma": "ephod"
+      },
+      {
+        "surface": "and breastpiece",
+        "lemma": "choshen"
+      }
+    ],
+    "8": [
+      {
+        "surface": "a sanctuary",
+        "lemma": "miqdash"
+      },
+      {
+        "surface": "so that I may dwell",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "among them",
+        "lemma": "tavekh"
+      }
+    ],
+    "9": [
+      {
+        "surface": "the tabernacle",
+        "lemma": "mishkan"
+      },
+      {
+        "surface": "design",
+        "lemma": "tavnit"
+      },
+      {
+        "surface": "its furnishings",
+        "lemma": "keli"
+      },
+      {
+        "surface": "the pattern",
+        "lemma": "tavnit"
+      }
+    ],
+    "10": [
+      {
+        "surface": "an ark",
+        "lemma": "aron"
+      },
+      {
+        "surface": "of acacia",
+        "lemma": "shittah"
+      },
+      {
+        "surface": "wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "two",
+        "lemma": "ammah"
+      },
+      {
+        "surface": "and a half cubits",
+        "lemma": "chetsi"
+      },
+      {
+        "surface": "long",
+        "lemma": "orekh"
+      },
+      {
+        "surface": "a cubit",
+        "lemma": "ammah"
+      },
+      {
+        "surface": "and a half",
+        "lemma": "chetsi"
+      },
+      {
+        "surface": "wide",
+        "lemma": "rochav"
+      },
+      {
+        "surface": "and a cubit",
+        "lemma": "ammah"
+      },
+      {
+        "surface": "and a half",
+        "lemma": "chetsi"
+      },
+      {
+        "surface": "high",
+        "lemma": "qomah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Overlay",
+        "lemma": "tsaphah"
+      },
+      {
+        "surface": "it with pure",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "both inside",
+        "lemma": "bet"
+      },
+      {
+        "surface": "and out",
+        "lemma": "chuts"
+      },
+      {
+        "surface": "a gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "molding",
+        "lemma": "zer"
+      },
+      {
+        "surface": "around it",
+        "lemma": "saviv"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Cast",
+        "lemma": "yatsaq"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "rings",
+        "lemma": "tabbaat"
+      },
+      {
+        "surface": "its four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "feet",
+        "lemma": "paam"
+      },
+      {
+        "surface": "two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "rings",
+        "lemma": "tabbaat"
+      },
+      {
+        "surface": "one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "side",
+        "lemma": "tsela"
+      },
+      {
+        "surface": "and two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "the other",
+        "lemma": "sheni"
+      }
+    ],
+    "13": [
+      {
+        "surface": "poles",
+        "lemma": "bad"
+      },
+      {
+        "surface": "of acacia",
+        "lemma": "shittah"
+      },
+      {
+        "surface": "wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "and overlay",
+        "lemma": "tsaphah"
+      },
+      {
+        "surface": "with gold",
+        "lemma": "zahav"
+      }
+    ],
+    "14": [
+      {
+        "surface": "the poles",
+        "lemma": "bad"
+      },
+      {
+        "surface": "into the rings",
+        "lemma": "tabbaat"
+      },
+      {
+        "surface": "the sides",
+        "lemma": "tsela"
+      },
+      {
+        "surface": "of the ark",
+        "lemma": "aron"
+      },
+      {
+        "surface": "in order to carry",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "it",
+        "lemma": "aron"
+      }
+    ],
+    "15": [
+      {
+        "surface": "The poles",
+        "lemma": "bad"
+      },
+      {
+        "surface": "in the rings",
+        "lemma": "tabbaat"
+      },
+      {
+        "surface": "of the ark",
+        "lemma": "aron"
+      },
+      {
+        "surface": "be removed",
+        "lemma": "sur"
+      }
+    ],
+    "16": [
+      {
+        "surface": "the ark",
+        "lemma": "aron"
+      },
+      {
+        "surface": "the Testimony",
+        "lemma": "edut"
+      }
+    ],
+    "17": [
+      {
+        "surface": "a mercy seat",
+        "lemma": "kapporet"
+      },
+      {
+        "surface": "of pure",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "two",
+        "lemma": "ammah"
+      },
+      {
+        "surface": "and a half cubits",
+        "lemma": "chetsi"
+      },
+      {
+        "surface": "long",
+        "lemma": "orekh"
+      },
+      {
+        "surface": "and a cubit",
+        "lemma": "ammah"
+      },
+      {
+        "surface": "and a half",
+        "lemma": "chetsi"
+      },
+      {
+        "surface": "wide",
+        "lemma": "rochav"
+      }
+    ],
+    "18": [
+      {
+        "surface": "two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "of hammered",
+        "lemma": "miqshah"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "at the",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "ends",
+        "lemma": "qatsah"
+      },
+      {
+        "surface": "of the mercy seat",
+        "lemma": "kapporet"
+      }
+    ],
+    "19": [
+      {
+        "surface": "one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "cherub",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "end",
+        "lemma": "qatsah"
+      },
+      {
+        "surface": "and one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "on the other",
+        "lemma": "qatsah"
+      },
+      {
+        "surface": "from one piece of gold",
+        "lemma": "qatsah"
+      }
+    ],
+    "20": [
+      {
+        "surface": "And the cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "wings",
+        "lemma": "kanaph"
+      },
+      {
+        "surface": "that spread",
+        "lemma": "paras"
+      },
+      {
+        "surface": "upward",
+        "lemma": "maal"
+      },
+      {
+        "surface": "overshadowing",
+        "lemma": "sukh"
+      },
+      {
+        "surface": "the mercy seat",
+        "lemma": "kapporet"
+      },
+      {
+        "surface": "The cherubim are to face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "each",
+        "lemma": "ish"
+      },
+      {
+        "surface": "other",
+        "lemma": "ach"
+      },
+      {
+        "surface": "the mercy seat",
+        "lemma": "kapporet"
+      }
+    ],
+    "21": [
+      {
+        "surface": "the mercy seat",
+        "lemma": "kapporet"
+      },
+      {
+        "surface": "the ark",
+        "lemma": "aron"
+      },
+      {
+        "surface": "the Testimony",
+        "lemma": "edut"
+      },
+      {
+        "surface": "the ark",
+        "lemma": "aron"
+      }
+    ],
+    "22": [
+      {
+        "surface": "And I will meet",
+        "lemma": "yaad"
+      },
+      {
+        "surface": "there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "the mercy seat",
+        "lemma": "kapporet"
+      },
+      {
+        "surface": "between",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "cherubim",
+        "lemma": "keruv"
+      },
+      {
+        "surface": "the ark",
+        "lemma": "aron"
+      },
+      {
+        "surface": "of the Testimony",
+        "lemma": "edut"
+      },
+      {
+        "surface": "I will speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "I command",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      }
+    ],
+    "23": [
+      {
+        "surface": "a table",
+        "lemma": "shulchan"
+      },
+      {
+        "surface": "of acacia",
+        "lemma": "shittah"
+      },
+      {
+        "surface": "wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "two cubits",
+        "lemma": "ammah"
+      },
+      {
+        "surface": "long",
+        "lemma": "orekh"
+      },
+      {
+        "surface": "a cubit",
+        "lemma": "ammah"
+      },
+      {
+        "surface": "wide",
+        "lemma": "rochav"
+      },
+      {
+        "surface": "and a cubit",
+        "lemma": "ammah"
+      },
+      {
+        "surface": "and a half",
+        "lemma": "chetsi"
+      },
+      {
+        "surface": "high",
+        "lemma": "qomah"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Overlay",
+        "lemma": "tsaphah"
+      },
+      {
+        "surface": "with pure",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "a gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "molding",
+        "lemma": "zer"
+      },
+      {
+        "surface": "around it",
+        "lemma": "saviv"
+      }
+    ],
+    "25": [
+      {
+        "surface": "a rim",
+        "lemma": "misgeret"
+      },
+      {
+        "surface": "around it",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "a handbreadth wide",
+        "lemma": "tophach"
+      },
+      {
+        "surface": "a gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "molding",
+        "lemma": "zer"
+      },
+      {
+        "surface": "on",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "the rim",
+        "lemma": "misgeret"
+      }
+    ],
+    "26": [
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "rings",
+        "lemma": "tabbaat"
+      },
+      {
+        "surface": "them",
+        "lemma": "tabbaat"
+      },
+      {
+        "surface": "the four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "corners",
+        "lemma": "peah"
+      },
+      {
+        "surface": "at its four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "legs",
+        "lemma": "regel"
+      }
+    ],
+    "27": [
+      {
+        "surface": "The rings",
+        "lemma": "tabbaat"
+      },
+      {
+        "surface": "close",
+        "lemma": "ummah"
+      },
+      {
+        "surface": "to the rim",
+        "lemma": "misgeret"
+      },
+      {
+        "surface": "to serve as holders",
+        "lemma": "bet"
+      },
+      {
+        "surface": "for the poles",
+        "lemma": "bad"
+      },
+      {
+        "surface": "used to carry",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the table",
+        "lemma": "shulchan"
+      }
+    ],
+    "28": [
+      {
+        "surface": "the poles",
+        "lemma": "bad"
+      },
+      {
+        "surface": "of acacia",
+        "lemma": "shittah"
+      },
+      {
+        "surface": "wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "and overlay",
+        "lemma": "tsaphah"
+      },
+      {
+        "surface": "with gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "so that the table",
+        "lemma": "shulchan"
+      },
+      {
+        "surface": "may be carried",
+        "lemma": "nasa"
+      }
+    ],
+    "29": [
+      {
+        "surface": "the plates",
+        "lemma": "qearah"
+      },
+      {
+        "surface": "and dishes",
+        "lemma": "kaph"
+      },
+      {
+        "surface": "as well as the pitchers",
+        "lemma": "qasah"
+      },
+      {
+        "surface": "and bowls",
+        "lemma": "menaqqiyyah"
+      },
+      {
+        "surface": "for pouring drink offerings",
+        "lemma": "nasakh"
+      },
+      {
+        "surface": "out of pure",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      }
+    ],
+    "30": [
+      {
+        "surface": "the Bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "of the Presence",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the table",
+        "lemma": "shulchan"
+      },
+      {
+        "surface": "before Me",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "at all times",
+        "lemma": "tamid"
+      }
+    ],
+    "31": [
+      {
+        "surface": "a lampstand",
+        "lemma": "menorah"
+      },
+      {
+        "surface": "of pure",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "hammered",
+        "lemma": "miqshah"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "It",
+        "lemma": "menorah"
+      },
+      {
+        "surface": "its base",
+        "lemma": "yarekh"
+      },
+      {
+        "surface": "and shaft",
+        "lemma": "qaneh"
+      },
+      {
+        "surface": "its cups",
+        "lemma": "gevia"
+      },
+      {
+        "surface": "and its buds",
+        "lemma": "kaphtor"
+      },
+      {
+        "surface": "and petals",
+        "lemma": "perach"
+      }
+    ],
+    "32": [
+      {
+        "surface": "Six",
+        "lemma": "shesh"
+      },
+      {
+        "surface": "branches",
+        "lemma": "qaneh"
+      },
+      {
+        "surface": "from the sides",
+        "lemma": "tsad"
+      },
+      {
+        "surface": "of the lampstand",
+        "lemma": "menorah"
+      },
+      {
+        "surface": "three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "on one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "side",
+        "lemma": "tsad"
+      },
+      {
+        "surface": "and three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "on the other",
+        "lemma": "sheni"
+      }
+    ],
+    "33": [
+      {
+        "surface": "There are to be three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "cups",
+        "lemma": "gevia"
+      },
+      {
+        "surface": "shaped like almond blossoms",
+        "lemma": "shaqad"
+      },
+      {
+        "surface": "on the first",
+        "lemma": "echad"
+      },
+      {
+        "surface": "branch",
+        "lemma": "qaneh"
+      },
+      {
+        "surface": "each with buds",
+        "lemma": "kaphtor"
+      },
+      {
+        "surface": "and petals",
+        "lemma": "perach"
+      },
+      {
+        "surface": "three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "on the next",
+        "lemma": "echad"
+      },
+      {
+        "surface": "branch",
+        "lemma": "qaneh"
+      },
+      {
+        "surface": "and the same",
+        "lemma": "ken"
+      },
+      {
+        "surface": "for all six",
+        "lemma": "shesh"
+      },
+      {
+        "surface": "branches",
+        "lemma": "qaneh"
+      },
+      {
+        "surface": "the lampstand",
+        "lemma": "menorah"
+      }
+    ],
+    "34": [
+      {
+        "surface": "And on the lampstand",
+        "lemma": "menorah"
+      },
+      {
+        "surface": "there shall be four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "cups",
+        "lemma": "gevia"
+      },
+      {
+        "surface": "shaped like almond blossoms",
+        "lemma": "shaqad"
+      },
+      {
+        "surface": "with buds",
+        "lemma": "kaphtor"
+      },
+      {
+        "surface": "and petals",
+        "lemma": "perach"
+      }
+    ],
+    "35": [
+      {
+        "surface": "For the six",
+        "lemma": "shesh"
+      },
+      {
+        "surface": "branches",
+        "lemma": "qaneh"
+      },
+      {
+        "surface": "the lampstand",
+        "lemma": "menorah"
+      },
+      {
+        "surface": "a bud",
+        "lemma": "kaphtor"
+      },
+      {
+        "surface": "must be under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the first pair",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "of branches",
+        "lemma": "qaneh"
+      },
+      {
+        "surface": "a bud",
+        "lemma": "kaphtor"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the second pair",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "and a bud",
+        "lemma": "kaphtor"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the third pair",
+        "lemma": "shenayim"
+      }
+    ],
+    "36": [
+      {
+        "surface": "The buds",
+        "lemma": "kaphtor"
+      },
+      {
+        "surface": "and branches",
+        "lemma": "qaneh"
+      },
+      {
+        "surface": "of one piece with the lampstand",
+        "lemma": "echad"
+      },
+      {
+        "surface": "hammered",
+        "lemma": "miqshah"
+      },
+      {
+        "surface": "out of pure",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      }
+    ],
+    "37": [
+      {
+        "surface": "seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "lamps",
+        "lemma": "ner"
+      },
+      {
+        "surface": "and set them up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "so that they",
+        "lemma": "ner"
+      },
+      {
+        "surface": "illuminate",
+        "lemma": "or"
+      },
+      {
+        "surface": "the area",
+        "lemma": "ever"
+      },
+      {
+        "surface": "front of it",
+        "lemma": "paneh"
+      }
+    ],
+    "38": [
+      {
+        "surface": "The wick trimmers",
+        "lemma": "melqach"
+      },
+      {
+        "surface": "and their trays",
+        "lemma": "machtah"
+      },
+      {
+        "surface": "must be of pure",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      }
+    ],
+    "39": [
+      {
+        "surface": "utensils",
+        "lemma": "keli"
+      },
+      {
+        "surface": "a talent",
+        "lemma": "kikkar"
+      },
+      {
+        "surface": "of pure",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "gold",
+        "lemma": "zahav"
+      }
+    ],
+    "40": [
+      {
+        "surface": "according to the pattern",
+        "lemma": "tavnit"
+      },
+      {
+        "surface": "on the mountain",
+        "lemma": "har"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "zahav",
+    "tahor",
+    "shenayim"
+  ]
+}

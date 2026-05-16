@@ -1,0 +1,679 @@
+{
+  "bookId": 30,
+  "book": "Amos",
+  "chapter": 1,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "These are the words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of Amos",
+        "lemma": "amos"
+      },
+      {
+        "surface": "among the sheepherders",
+        "lemma": "noqed"
+      },
+      {
+        "surface": "of Tekoa",
+        "lemma": "teqoa"
+      },
+      {
+        "surface": "he saw",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "two years",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the earthquake",
+        "lemma": "raash"
+      },
+      {
+        "surface": "in the days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "when Uzziah",
+        "lemma": "uzziyyah"
+      },
+      {
+        "surface": "was king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "and Jeroboam",
+        "lemma": "yarovam"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Jehoash",
+        "lemma": "yoash"
+      },
+      {
+        "surface": "was king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "2": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "roars",
+        "lemma": "shaag"
+      },
+      {
+        "surface": "from Zion",
+        "lemma": "tsiyyon"
+      },
+      {
+        "surface": "His voice",
+        "lemma": "qol"
+      },
+      {
+        "surface": "from Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "the pastures",
+        "lemma": "naah"
+      },
+      {
+        "surface": "of the shepherds",
+        "lemma": "beteqedharoim"
+      },
+      {
+        "surface": "mourn",
+        "lemma": "aval"
+      },
+      {
+        "surface": "and the summit",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "of Carmel",
+        "lemma": "karmel"
+      },
+      {
+        "surface": "withers",
+        "lemma": "yavesh"
+      }
+    ],
+    "3": [
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "transgressions",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "of Damascus",
+        "lemma": "dammeseq"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "they threshed",
+        "lemma": "dush"
+      },
+      {
+        "surface": "Gilead",
+        "lemma": "gilad"
+      },
+      {
+        "surface": "with sledges",
+        "lemma": "charuts"
+      },
+      {
+        "surface": "of iron",
+        "lemma": "barzel"
+      }
+    ],
+    "4": [
+      {
+        "surface": "So I will send",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "upon the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Hazael",
+        "lemma": "chazael"
+      },
+      {
+        "surface": "to consume",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the citadels",
+        "lemma": "armon"
+      },
+      {
+        "surface": "of",
+        "lemma": "benhadad"
+      },
+      {
+        "surface": "Ben-hadad",
+        "lemma": "benhadad"
+      }
+    ],
+    "5": [
+      {
+        "surface": "I will break down",
+        "lemma": "shavar"
+      },
+      {
+        "surface": "the gates",
+        "lemma": "beriach"
+      },
+      {
+        "surface": "of Damascus",
+        "lemma": "dammeseq"
+      },
+      {
+        "surface": "I will cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "from the Valley of Aven",
+        "lemma": "biqah"
+      },
+      {
+        "surface": "and the one who wields",
+        "lemma": "tamakh"
+      },
+      {
+        "surface": "the scepter",
+        "lemma": "shevet"
+      },
+      {
+        "surface": "in Beth-eden",
+        "lemma": "beteden"
+      },
+      {
+        "surface": "The people",
+        "lemma": "am"
+      },
+      {
+        "surface": "of Aram",
+        "lemma": "aram"
+      },
+      {
+        "surface": "will be exiled",
+        "lemma": "galah"
+      },
+      {
+        "surface": "to Kir",
+        "lemma": "qir"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "transgressions",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "of Gaza",
+        "lemma": "azzah"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "they exiled",
+        "lemma": "galah"
+      },
+      {
+        "surface": "a whole",
+        "lemma": "shalem"
+      },
+      {
+        "surface": "population",
+        "lemma": "galut"
+      },
+      {
+        "surface": "delivering them up",
+        "lemma": "sagar"
+      },
+      {
+        "surface": "to Edom",
+        "lemma": "edom"
+      }
+    ],
+    "7": [
+      {
+        "surface": "So I will send",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "upon the walls",
+        "lemma": "chomah"
+      },
+      {
+        "surface": "of Gaza",
+        "lemma": "azzah"
+      },
+      {
+        "surface": "to consume",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "its citadels",
+        "lemma": "armon"
+      }
+    ],
+    "8": [
+      {
+        "surface": "I will cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "of Ashdod",
+        "lemma": "ashdod"
+      },
+      {
+        "surface": "and the one who wields",
+        "lemma": "tamakh"
+      },
+      {
+        "surface": "the scepter",
+        "lemma": "shevet"
+      },
+      {
+        "surface": "in Ashkelon",
+        "lemma": "ashqelon"
+      },
+      {
+        "surface": "My hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "Ekron",
+        "lemma": "eqron"
+      },
+      {
+        "surface": "and the remnant",
+        "lemma": "sheerit"
+      },
+      {
+        "surface": "of the Philistines",
+        "lemma": "pelishti"
+      },
+      {
+        "surface": "will perish",
+        "lemma": "avad"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      }
+    ],
+    "9": [
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "transgressions",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "of Tyre",
+        "lemma": "tsor"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "they delivered up",
+        "lemma": "sagar"
+      },
+      {
+        "surface": "a whole",
+        "lemma": "shalem"
+      },
+      {
+        "surface": "congregation of exiles",
+        "lemma": "galut"
+      },
+      {
+        "surface": "to Edom",
+        "lemma": "edom"
+      },
+      {
+        "surface": "a covenant",
+        "lemma": "berit"
+      },
+      {
+        "surface": "of brotherhood",
+        "lemma": "ach"
+      }
+    ],
+    "10": [
+      {
+        "surface": "So I will send",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "upon the walls",
+        "lemma": "chomah"
+      },
+      {
+        "surface": "of Tyre",
+        "lemma": "tsor"
+      },
+      {
+        "surface": "to consume",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "its citadels",
+        "lemma": "armon"
+      }
+    ],
+    "11": [
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "transgressions",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "of Edom",
+        "lemma": "edom"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "he pursued",
+        "lemma": "radaph"
+      },
+      {
+        "surface": "his brother",
+        "lemma": "ach"
+      },
+      {
+        "surface": "with the sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "and stifled",
+        "lemma": "shachat"
+      },
+      {
+        "surface": "all compassion",
+        "lemma": "racham"
+      },
+      {
+        "surface": "his anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "raged",
+        "lemma": "taraph"
+      },
+      {
+        "surface": "continually",
+        "lemma": "ad"
+      },
+      {
+        "surface": "and his fury",
+        "lemma": "evrah"
+      },
+      {
+        "surface": "flamed",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "incessantly",
+        "lemma": "netsach"
+      }
+    ],
+    "12": [
+      {
+        "surface": "So I will send",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "upon Teman",
+        "lemma": "teman"
+      },
+      {
+        "surface": "to consume",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the citadels",
+        "lemma": "armon"
+      },
+      {
+        "surface": "of Bozrah",
+        "lemma": "botsrah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "transgressions",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "of the Ammonites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "four",
+        "lemma": "arba"
+      },
+      {
+        "surface": "they ripped open",
+        "lemma": "baqa"
+      },
+      {
+        "surface": "the pregnant",
+        "lemma": "harah"
+      },
+      {
+        "surface": "women of Gilead",
+        "lemma": "gilad"
+      },
+      {
+        "surface": "enlarge",
+        "lemma": "rachav"
+      },
+      {
+        "surface": "their territory",
+        "lemma": "gevul"
+      }
+    ],
+    "14": [
+      {
+        "surface": "So I will kindle",
+        "lemma": "yatsat"
+      },
+      {
+        "surface": "a fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "in the walls",
+        "lemma": "chomah"
+      },
+      {
+        "surface": "of Rabbah",
+        "lemma": "rabbah"
+      },
+      {
+        "surface": "to consume",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "its citadels",
+        "lemma": "armon"
+      },
+      {
+        "surface": "amid war cries",
+        "lemma": "teruah"
+      },
+      {
+        "surface": "on the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of battle",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "and a violent wind",
+        "lemma": "saar"
+      },
+      {
+        "surface": "on the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of tempest",
+        "lemma": "suphah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Their king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "will go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "into exile",
+        "lemma": "golah"
+      },
+      {
+        "surface": "and his princes",
+        "lemma": "sar"
+      },
+      {
+        "surface": "together",
+        "lemma": "yachad"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "shalosh",
+    "pesah",
+    "koh"
+  ]
+}

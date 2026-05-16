@@ -1,0 +1,1323 @@
+{
+  "bookId": 4,
+  "book": "Numbers",
+  "chapter": 15,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "as a home",
+        "lemma": "moshav"
+      }
+    ],
+    "3": [
+      {
+        "surface": "a food offering",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the herd",
+        "lemma": "baqar"
+      },
+      {
+        "surface": "flock",
+        "lemma": "tson"
+      },
+      {
+        "surface": "a pleasing",
+        "lemma": "nichoach"
+      },
+      {
+        "surface": "aroma",
+        "lemma": "reach"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "either a burnt offering",
+        "lemma": "olah"
+      },
+      {
+        "surface": "a sacrifice",
+        "lemma": "zevach"
+      },
+      {
+        "surface": "for a special",
+        "lemma": "pala"
+      },
+      {
+        "surface": "vow",
+        "lemma": "neder"
+      },
+      {
+        "surface": "freewill offering",
+        "lemma": "nedavah"
+      },
+      {
+        "surface": "appointed feast",
+        "lemma": "moed"
+      }
+    ],
+    "4": [
+      {
+        "surface": "then the one presenting",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "his offering",
+        "lemma": "qorban"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "shall also present",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "a grain offering",
+        "lemma": "minchah"
+      },
+      {
+        "surface": "of a tenth of an ephah",
+        "lemma": "issaron"
+      },
+      {
+        "surface": "of fine flour",
+        "lemma": "solet"
+      },
+      {
+        "surface": "mixed",
+        "lemma": "balal"
+      },
+      {
+        "surface": "with a quarter",
+        "lemma": "revii"
+      },
+      {
+        "surface": "hin",
+        "lemma": "hin"
+      },
+      {
+        "surface": "of olive oil",
+        "lemma": "shemen"
+      }
+    ],
+    "5": [
+      {
+        "surface": "the burnt offering",
+        "lemma": "olah"
+      },
+      {
+        "surface": "sacrifice",
+        "lemma": "zevach"
+      },
+      {
+        "surface": "of each",
+        "lemma": "echad"
+      },
+      {
+        "surface": "lamb",
+        "lemma": "keves"
+      },
+      {
+        "surface": "a quarter",
+        "lemma": "revii"
+      },
+      {
+        "surface": "hin",
+        "lemma": "hin"
+      },
+      {
+        "surface": "of wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "as a drink offering",
+        "lemma": "nesekh"
+      }
+    ],
+    "6": [
+      {
+        "surface": "With a ram",
+        "lemma": "ayil"
+      },
+      {
+        "surface": "a grain offering",
+        "lemma": "minchah"
+      },
+      {
+        "surface": "of two-tenths of an ephah",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "of fine flour",
+        "lemma": "solet"
+      },
+      {
+        "surface": "mixed",
+        "lemma": "balal"
+      },
+      {
+        "surface": "with a third",
+        "lemma": "shelishi"
+      },
+      {
+        "surface": "of a hin",
+        "lemma": "hin"
+      },
+      {
+        "surface": "of olive oil",
+        "lemma": "shemen"
+      }
+    ],
+    "7": [
+      {
+        "surface": "and",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "a third",
+        "lemma": "shelishi"
+      },
+      {
+        "surface": "of a hin",
+        "lemma": "hin"
+      },
+      {
+        "surface": "of wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "as a drink offering",
+        "lemma": "nesekh"
+      },
+      {
+        "surface": "a pleasing",
+        "lemma": "nichoach"
+      },
+      {
+        "surface": "aroma",
+        "lemma": "reach"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "a young",
+        "lemma": "ben"
+      },
+      {
+        "surface": "bull",
+        "lemma": "baqar"
+      },
+      {
+        "surface": "as a burnt offering",
+        "lemma": "olah"
+      },
+      {
+        "surface": "sacrifice",
+        "lemma": "zevach"
+      },
+      {
+        "surface": "to fulfill",
+        "lemma": "pala"
+      },
+      {
+        "surface": "a vow",
+        "lemma": "neder"
+      },
+      {
+        "surface": "as a peace offering",
+        "lemma": "shelem"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "present",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "the bull",
+        "lemma": "baqar"
+      },
+      {
+        "surface": "a grain offering",
+        "lemma": "minchah"
+      },
+      {
+        "surface": "of three-tenths of an ephah",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "of fine flour",
+        "lemma": "solet"
+      },
+      {
+        "surface": "mixed",
+        "lemma": "balal"
+      },
+      {
+        "surface": "with half",
+        "lemma": "chetsi"
+      },
+      {
+        "surface": "a hin",
+        "lemma": "hin"
+      },
+      {
+        "surface": "of olive oil",
+        "lemma": "shemen"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Also present",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "half",
+        "lemma": "chetsi"
+      },
+      {
+        "surface": "a hin",
+        "lemma": "hin"
+      },
+      {
+        "surface": "of wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "as a drink offering",
+        "lemma": "nesekh"
+      },
+      {
+        "surface": "It is a food offering",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "a pleasing",
+        "lemma": "nichoach"
+      },
+      {
+        "surface": "aroma",
+        "lemma": "reach"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "This",
+        "lemma": "kakhah"
+      },
+      {
+        "surface": "for each",
+        "lemma": "echad"
+      },
+      {
+        "surface": "bull",
+        "lemma": "shor"
+      },
+      {
+        "surface": "ram",
+        "lemma": "ayil"
+      },
+      {
+        "surface": "lamb",
+        "lemma": "seh"
+      },
+      {
+        "surface": "goat",
+        "lemma": "ez"
+      }
+    ],
+    "12": [
+      {
+        "surface": "This is how",
+        "lemma": "kakhah"
+      },
+      {
+        "surface": "each one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "many",
+        "lemma": "mispar"
+      }
+    ],
+    "13": [
+      {
+        "surface": "who is native-born",
+        "lemma": "ezrach"
+      },
+      {
+        "surface": "things in this way",
+        "lemma": "kakhah"
+      },
+      {
+        "surface": "when he presents",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "a food offering",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "as a pleasing",
+        "lemma": "nichoach"
+      },
+      {
+        "surface": "aroma",
+        "lemma": "reach"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "And for the generations to come",
+        "lemma": "dor"
+      },
+      {
+        "surface": "a foreigner",
+        "lemma": "ger"
+      },
+      {
+        "surface": "residing",
+        "lemma": "gur"
+      },
+      {
+        "surface": "among you",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "a food offering",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "as a pleasing",
+        "lemma": "nichoach"
+      },
+      {
+        "surface": "aroma",
+        "lemma": "reach"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "The assembly",
+        "lemma": "qahal"
+      },
+      {
+        "surface": "is to have the same",
+        "lemma": "echad"
+      },
+      {
+        "surface": "statute",
+        "lemma": "chuqqah"
+      },
+      {
+        "surface": "and for the foreign resident",
+        "lemma": "ger"
+      },
+      {
+        "surface": "it is a permanent",
+        "lemma": "olam"
+      },
+      {
+        "surface": "statute",
+        "lemma": "chuqqah"
+      },
+      {
+        "surface": "for the generations to come",
+        "lemma": "dor"
+      },
+      {
+        "surface": "You and the foreigner",
+        "lemma": "ger"
+      },
+      {
+        "surface": "the same before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "16": [
+      {
+        "surface": "The same",
+        "lemma": "echad"
+      },
+      {
+        "surface": "law",
+        "lemma": "torah"
+      },
+      {
+        "surface": "and the same",
+        "lemma": "echad"
+      },
+      {
+        "surface": "ordinance",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "and to the foreigner",
+        "lemma": "ger"
+      },
+      {
+        "surface": "residing",
+        "lemma": "gur"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Then the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "to Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      }
+    ],
+    "19": [
+      {
+        "surface": "and you eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "of the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "you shall lift",
+        "lemma": "rum"
+      },
+      {
+        "surface": "up an offering",
+        "lemma": "terumah"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "20": [
+      {
+        "surface": "From the first",
+        "lemma": "reshit"
+      },
+      {
+        "surface": "of your dough",
+        "lemma": "arisah"
+      },
+      {
+        "surface": "you are to lift",
+        "lemma": "rum"
+      },
+      {
+        "surface": "up a cake",
+        "lemma": "challah"
+      },
+      {
+        "surface": "as a contribution",
+        "lemma": "terumah"
+      },
+      {
+        "surface": "offer",
+        "lemma": "rum"
+      },
+      {
+        "surface": "just like",
+        "lemma": "ken"
+      },
+      {
+        "surface": "an offering",
+        "lemma": "terumah"
+      },
+      {
+        "surface": "from the threshing floor",
+        "lemma": "goren"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Throughout your generations",
+        "lemma": "dor"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "an offering",
+        "lemma": "terumah"
+      },
+      {
+        "surface": "from the first",
+        "lemma": "reshit"
+      },
+      {
+        "surface": "of your dough",
+        "lemma": "arisah"
+      }
+    ],
+    "22": [
+      {
+        "surface": "you stray unintentionally",
+        "lemma": "shagah"
+      },
+      {
+        "surface": "commandments",
+        "lemma": "mitsvah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has spoken",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "23": [
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "you through",
+        "lemma": "yad"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "gave them",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "and continuing through",
+        "lemma": "haleah"
+      },
+      {
+        "surface": "the generations to come",
+        "lemma": "dor"
+      }
+    ],
+    "24": [
+      {
+        "surface": "unintentionally",
+        "lemma": "shegagah"
+      },
+      {
+        "surface": "without the knowledge",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of the congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "young bull",
+        "lemma": "par"
+      },
+      {
+        "surface": "as a burnt offering",
+        "lemma": "olah"
+      },
+      {
+        "surface": "a pleasing",
+        "lemma": "nichoach"
+      },
+      {
+        "surface": "aroma",
+        "lemma": "reach"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "with its grain offering",
+        "lemma": "minchah"
+      },
+      {
+        "surface": "and drink offering",
+        "lemma": "nesekh"
+      },
+      {
+        "surface": "according to the regulation",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "and one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "male goat",
+        "lemma": "sair"
+      },
+      {
+        "surface": "as a sin offering",
+        "lemma": "chattaah"
+      }
+    ],
+    "25": [
+      {
+        "surface": "The priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "is to make atonement",
+        "lemma": "kipher"
+      },
+      {
+        "surface": "congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "so that they may be forgiven",
+        "lemma": "salach"
+      },
+      {
+        "surface": "was unintentional",
+        "lemma": "shegagah"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "qorban"
+      },
+      {
+        "surface": "a food offering",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "and a sin offering",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "presented before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "their unintentional sin",
+        "lemma": "shegagah"
+      }
+    ],
+    "26": [
+      {
+        "surface": "congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "and the foreigners",
+        "lemma": "ger"
+      },
+      {
+        "surface": "residing",
+        "lemma": "gur"
+      },
+      {
+        "surface": "among them",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "will be forgiven",
+        "lemma": "salach"
+      },
+      {
+        "surface": "the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "unintentionally",
+        "lemma": "shegagah"
+      }
+    ],
+    "27": [
+      {
+        "surface": "one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "person",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "sins",
+        "lemma": "chata"
+      },
+      {
+        "surface": "unintentionally",
+        "lemma": "shegagah"
+      },
+      {
+        "surface": "he is to present",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "a year-old",
+        "lemma": "bat"
+      },
+      {
+        "surface": "female goat",
+        "lemma": "ez"
+      },
+      {
+        "surface": "as a sin offering",
+        "lemma": "chattaah"
+      }
+    ],
+    "28": [
+      {
+        "surface": "And the priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "shall make atonement",
+        "lemma": "kipher"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the person",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "who erred",
+        "lemma": "shegagah"
+      },
+      {
+        "surface": "by sinning unintentionally",
+        "lemma": "shagag"
+      },
+      {
+        "surface": "and when atonement has been made",
+        "lemma": "kipher"
+      },
+      {
+        "surface": "he will be forgiven",
+        "lemma": "salach"
+      }
+    ],
+    "29": [
+      {
+        "surface": "the same",
+        "lemma": "echad"
+      },
+      {
+        "surface": "law",
+        "lemma": "torah"
+      },
+      {
+        "surface": "in error",
+        "lemma": "shegagah"
+      },
+      {
+        "surface": "whether he is a native-born",
+        "lemma": "ezrach"
+      },
+      {
+        "surface": "Israelite",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or a foreigner",
+        "lemma": "ger"
+      },
+      {
+        "surface": "residing",
+        "lemma": "gur"
+      },
+      {
+        "surface": "among you",
+        "lemma": "tavekh"
+      }
+    ],
+    "30": [
+      {
+        "surface": "But the person",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "sins defiantly",
+        "lemma": "yad"
+      },
+      {
+        "surface": "a native",
+        "lemma": "ezrach"
+      },
+      {
+        "surface": "foreigner",
+        "lemma": "ger"
+      },
+      {
+        "surface": "blasphemes",
+        "lemma": "gadaph"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "person",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "shall be cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "from among",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "his people",
+        "lemma": "am"
+      }
+    ],
+    "31": [
+      {
+        "surface": "He",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "shall certainly be cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "he has despised",
+        "lemma": "bazah"
+      },
+      {
+        "surface": "the word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "broken",
+        "lemma": "parar"
+      },
+      {
+        "surface": "His commandment",
+        "lemma": "mitsvah"
+      },
+      {
+        "surface": "his guilt remains",
+        "lemma": "avan"
+      }
+    ],
+    "32": [
+      {
+        "surface": "While the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "in the wilderness",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "was found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "gathering",
+        "lemma": "qashash"
+      },
+      {
+        "surface": "wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "on the Sabbath",
+        "lemma": "shabbat"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      }
+    ],
+    "33": [
+      {
+        "surface": "Those who found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "gathering",
+        "lemma": "qashash"
+      },
+      {
+        "surface": "wood",
+        "lemma": "ets"
+      },
+      {
+        "surface": "brought",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "Aaron",
+        "lemma": "haaron"
+      },
+      {
+        "surface": "congregation",
+        "lemma": "edah"
+      }
+    ],
+    "34": [
+      {
+        "surface": "declared",
+        "lemma": "parash"
+      },
+      {
+        "surface": "what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "they placed",
+        "lemma": "nuach"
+      },
+      {
+        "surface": "in custody",
+        "lemma": "mishmar"
+      }
+    ],
+    "35": [
+      {
+        "surface": "And the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "The man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "must surely be put to death",
+        "lemma": "mut"
+      },
+      {
+        "surface": "congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "is to stone",
+        "lemma": "ragam"
+      },
+      {
+        "surface": "outside",
+        "lemma": "chuts"
+      },
+      {
+        "surface": "the camp",
+        "lemma": "machaneh"
+      }
+    ],
+    "36": [
+      {
+        "surface": "congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "outside",
+        "lemma": "chuts"
+      },
+      {
+        "surface": "the camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "and stoned",
+        "lemma": "ragam"
+      },
+      {
+        "surface": "him",
+        "lemma": "even"
+      },
+      {
+        "surface": "to death",
+        "lemma": "mut"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "had commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "37": [
+      {
+        "surface": "And the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "38": [
+      {
+        "surface": "Speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "throughout the generations to come",
+        "lemma": "dor"
+      },
+      {
+        "surface": "tassels",
+        "lemma": "tsitsit"
+      },
+      {
+        "surface": "the corners",
+        "lemma": "kanaph"
+      },
+      {
+        "surface": "of their garments",
+        "lemma": "beged"
+      },
+      {
+        "surface": "a blue",
+        "lemma": "tekhelet"
+      },
+      {
+        "surface": "cord",
+        "lemma": "patil"
+      },
+      {
+        "surface": "each tassel",
+        "lemma": "tsitsit"
+      }
+    ],
+    "39": [
+      {
+        "surface": "as tassels",
+        "lemma": "tsitsit"
+      },
+      {
+        "surface": "so that you may remember",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "the commandments",
+        "lemma": "mitsvah"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "prostitute yourselves",
+        "lemma": "zanah"
+      },
+      {
+        "surface": "by following",
+        "lemma": "tur"
+      },
+      {
+        "surface": "your own heart",
+        "lemma": "levav"
+      },
+      {
+        "surface": "and your own eyes",
+        "lemma": "ayin"
+      }
+    ],
+    "40": [
+      {
+        "surface": "you will remember",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "My commandments",
+        "lemma": "mitsvah"
+      },
+      {
+        "surface": "holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "to your God",
+        "lemma": "elohim"
+      }
+    ],
+    "41": [
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "echad",
+    "qarav",
+    "mosheh"
+  ]
+}

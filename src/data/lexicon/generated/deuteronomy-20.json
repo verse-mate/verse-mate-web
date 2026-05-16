@@ -1,0 +1,781 @@
+{
+  "bookId": 5,
+  "book": "Deuteronomy",
+  "chapter": 20,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "to war",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "your enemies",
+        "lemma": "oyev"
+      },
+      {
+        "surface": "horses",
+        "lemma": "sus"
+      },
+      {
+        "surface": "chariots",
+        "lemma": "rekhev"
+      },
+      {
+        "surface": "and an army",
+        "lemma": "am"
+      },
+      {
+        "surface": "larger",
+        "lemma": "rav"
+      },
+      {
+        "surface": "be afraid",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "who brought you",
+        "lemma": "alah"
+      },
+      {
+        "surface": "out of the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      }
+    ],
+    "2": [
+      {
+        "surface": "go",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "battle",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "the priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "is to come forward",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "and address",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the army",
+        "lemma": "am"
+      }
+    ],
+    "3": [
+      {
+        "surface": "O Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "today",
+        "lemma": "yom"
+      },
+      {
+        "surface": "are going",
+        "lemma": "qarev"
+      },
+      {
+        "surface": "into battle",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "your enemies",
+        "lemma": "oyev"
+      },
+      {
+        "surface": "be fainthearted",
+        "lemma": "rakhakh"
+      },
+      {
+        "surface": "afraid",
+        "lemma": "yare"
+      },
+      {
+        "surface": "be alarmed",
+        "lemma": "chaphaz"
+      },
+      {
+        "surface": "or terrified",
+        "lemma": "arats"
+      },
+      {
+        "surface": "because of them",
+        "lemma": "paneh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "goes",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "to fight",
+        "lemma": "lacham"
+      },
+      {
+        "surface": "your enemies",
+        "lemma": "oyev"
+      },
+      {
+        "surface": "to give you the victory",
+        "lemma": "yasah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Furthermore, the officers",
+        "lemma": "shoter"
+      },
+      {
+        "surface": "are to address",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the army",
+        "lemma": "am"
+      },
+      {
+        "surface": "Has any",
+        "lemma": "mi"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "built",
+        "lemma": "banah"
+      },
+      {
+        "surface": "a new",
+        "lemma": "chadash"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "dedicated it",
+        "lemma": "chanakh"
+      },
+      {
+        "surface": "Let him return",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "home",
+        "lemma": "bet"
+      },
+      {
+        "surface": "he may die",
+        "lemma": "mut"
+      },
+      {
+        "surface": "in battle",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "and another",
+        "lemma": "acher"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "dedicate it",
+        "lemma": "chanakh"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Has any",
+        "lemma": "mi"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "planted",
+        "lemma": "nata"
+      },
+      {
+        "surface": "a vineyard",
+        "lemma": "kerem"
+      },
+      {
+        "surface": "begun to enjoy its fruit",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "Let him return",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "home",
+        "lemma": "bet"
+      },
+      {
+        "surface": "he may die",
+        "lemma": "mut"
+      },
+      {
+        "surface": "in battle",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "and another",
+        "lemma": "acher"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "enjoy its fruit",
+        "lemma": "chalal"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Has any",
+        "lemma": "mi"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "become pledged",
+        "lemma": "aras"
+      },
+      {
+        "surface": "to a woman",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "married her",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "Let him return",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "home",
+        "lemma": "bet"
+      },
+      {
+        "surface": "he may die",
+        "lemma": "mut"
+      },
+      {
+        "surface": "in battle",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "and another",
+        "lemma": "acher"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "marry her",
+        "lemma": "laqach"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Then the officers",
+        "lemma": "shoter"
+      },
+      {
+        "surface": "shall speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "further",
+        "lemma": "yasaph"
+      },
+      {
+        "surface": "the army",
+        "lemma": "am"
+      },
+      {
+        "surface": "Is any",
+        "lemma": "mi"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "afraid",
+        "lemma": "yare"
+      },
+      {
+        "surface": "or fainthearted",
+        "lemma": "rakh"
+      },
+      {
+        "surface": "Let him return",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "home",
+        "lemma": "bet"
+      },
+      {
+        "surface": "so that the hearts",
+        "lemma": "levav"
+      },
+      {
+        "surface": "of his brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "melt",
+        "lemma": "masas"
+      },
+      {
+        "surface": "like his own",
+        "lemma": "levav"
+      }
+    ],
+    "9": [
+      {
+        "surface": "When the officers",
+        "lemma": "shoter"
+      },
+      {
+        "surface": "have finished",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "addressing",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the army",
+        "lemma": "am"
+      },
+      {
+        "surface": "they are to appoint",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "commanders",
+        "lemma": "sar"
+      },
+      {
+        "surface": "to lead it",
+        "lemma": "rosh"
+      }
+    ],
+    "10": [
+      {
+        "surface": "you approach",
+        "lemma": "qarav"
+      },
+      {
+        "surface": "a city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "to fight",
+        "lemma": "lacham"
+      },
+      {
+        "surface": "of peace",
+        "lemma": "shalom"
+      }
+    ],
+    "11": [
+      {
+        "surface": "they accept",
+        "lemma": "un"
+      },
+      {
+        "surface": "your offer of peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "and open their gates",
+        "lemma": "patach"
+      },
+      {
+        "surface": "the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "there",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "forced laborers",
+        "lemma": "mas"
+      },
+      {
+        "surface": "to serve",
+        "lemma": "avad"
+      }
+    ],
+    "12": [
+      {
+        "surface": "to make peace",
+        "lemma": "salem"
+      },
+      {
+        "surface": "war",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "lay siege",
+        "lemma": "tsur"
+      }
+    ],
+    "13": [
+      {
+        "surface": "When the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "into your hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "you must put",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "male",
+        "lemma": "zakhur"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "peh"
+      },
+      {
+        "surface": "to the sword",
+        "lemma": "cherev"
+      }
+    ],
+    "14": [
+      {
+        "surface": "the women",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "children",
+        "lemma": "taph"
+      },
+      {
+        "surface": "livestock",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "in the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "its spoil",
+        "lemma": "shalal"
+      },
+      {
+        "surface": "you may take as plunder",
+        "lemma": "bazaz"
+      },
+      {
+        "surface": "and you shall use",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the spoil",
+        "lemma": "shalal"
+      },
+      {
+        "surface": "of your enemies",
+        "lemma": "oyev"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      }
+    ],
+    "15": [
+      {
+        "surface": "This is how",
+        "lemma": "ken"
+      },
+      {
+        "surface": "the cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "that are far away",
+        "lemma": "rachoq"
+      },
+      {
+        "surface": "nations nearby",
+        "lemma": "goy"
+      }
+    ],
+    "16": [
+      {
+        "surface": "in the cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "nations",
+        "lemma": "am"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "as an inheritance",
+        "lemma": "nachalah"
+      },
+      {
+        "surface": "you must not leave alive",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "that breathes",
+        "lemma": "neshamah"
+      }
+    ],
+    "17": [
+      {
+        "surface": "you must devote them to complete destruction",
+        "lemma": "charam"
+      },
+      {
+        "surface": "the Hittites",
+        "lemma": "chitti"
+      },
+      {
+        "surface": "Amorites",
+        "lemma": "emori"
+      },
+      {
+        "surface": "Canaanites",
+        "lemma": "kenaani"
+      },
+      {
+        "surface": "Perizzites",
+        "lemma": "perizzi"
+      },
+      {
+        "surface": "Hivites",
+        "lemma": "chivvi"
+      },
+      {
+        "surface": "and Jebusites",
+        "lemma": "yevusi"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "has commanded you",
+        "lemma": "tsavah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "teach",
+        "lemma": "lamad"
+      },
+      {
+        "surface": "the detestable things",
+        "lemma": "toevah"
+      },
+      {
+        "surface": "for their gods",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "and so cause you to sin",
+        "lemma": "chata"
+      },
+      {
+        "surface": "against the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      }
+    ],
+    "19": [
+      {
+        "surface": "you lay siege",
+        "lemma": "tsur"
+      },
+      {
+        "surface": "a city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "for an extended",
+        "lemma": "rav"
+      },
+      {
+        "surface": "time",
+        "lemma": "yom"
+      },
+      {
+        "surface": "while fighting",
+        "lemma": "lacham"
+      },
+      {
+        "surface": "to capture it",
+        "lemma": "taphas"
+      },
+      {
+        "surface": "destroy",
+        "lemma": "shachat"
+      },
+      {
+        "surface": "its trees",
+        "lemma": "ets"
+      },
+      {
+        "surface": "by putting",
+        "lemma": "nadach"
+      },
+      {
+        "surface": "an axe",
+        "lemma": "garzen"
+      },
+      {
+        "surface": "you can eat their fruit",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "cut them down",
+        "lemma": "karat"
+      },
+      {
+        "surface": "Are the trees",
+        "lemma": "ets"
+      },
+      {
+        "surface": "of the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "human",
+        "lemma": "adam"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "that you should besiege them",
+        "lemma": "matsor"
+      }
+    ],
+    "20": [
+      {
+        "surface": "you may destroy",
+        "lemma": "shachat"
+      },
+      {
+        "surface": "the trees",
+        "lemma": "ets"
+      },
+      {
+        "surface": "you know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "produce fruit",
+        "lemma": "maakhal"
+      },
+      {
+        "surface": "Use them",
+        "lemma": "karat"
+      },
+      {
+        "surface": "to build",
+        "lemma": "banah"
+      },
+      {
+        "surface": "siege works",
+        "lemma": "matsor"
+      },
+      {
+        "surface": "the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "war",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "it falls",
+        "lemma": "yarad"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "milchamah",
+    "halakh",
+    "bet"
+  ]
+}
