@@ -1,0 +1,983 @@
+{
+  "bookId": 26,
+  "book": "Ezekiel",
+  "chapter": 13,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then the word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "prophesy",
+        "lemma": "nava"
+      },
+      {
+        "surface": "the prophets",
+        "lemma": "navi"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "who are now prophesying",
+        "lemma": "nava"
+      },
+      {
+        "surface": "those who prophesy",
+        "lemma": "navi"
+      },
+      {
+        "surface": "out of their own imagination",
+        "lemma": "lev"
+      },
+      {
+        "surface": "the word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "Woe",
+        "lemma": "hoy"
+      },
+      {
+        "surface": "the foolish",
+        "lemma": "naval"
+      },
+      {
+        "surface": "prophets",
+        "lemma": "navi"
+      },
+      {
+        "surface": "follow",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "their own spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "bilti"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Your prophets",
+        "lemma": "navi"
+      },
+      {
+        "surface": "O Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "like foxes",
+        "lemma": "shual"
+      },
+      {
+        "surface": "among the ruins",
+        "lemma": "chorbah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "go up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "to the gaps",
+        "lemma": "perets"
+      },
+      {
+        "surface": "or restore",
+        "lemma": "gadar"
+      },
+      {
+        "surface": "the wall",
+        "lemma": "gader"
+      },
+      {
+        "surface": "the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "so that it would stand",
+        "lemma": "amad"
+      },
+      {
+        "surface": "in the battle",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "on the Day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "They see",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "false visions",
+        "lemma": "shav"
+      },
+      {
+        "surface": "and speak lying",
+        "lemma": "kazav"
+      },
+      {
+        "surface": "divinations",
+        "lemma": "qesem"
+      },
+      {
+        "surface": "Thus declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "when the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "send them",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "yet they wait",
+        "lemma": "yachal"
+      },
+      {
+        "surface": "for the fulfillment",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "of their message",
+        "lemma": "davar"
+      }
+    ],
+    "7": [
+      {
+        "surface": "seen",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "a false",
+        "lemma": "shav"
+      },
+      {
+        "surface": "vision",
+        "lemma": "machazeh"
+      },
+      {
+        "surface": "a lying",
+        "lemma": "kazav"
+      },
+      {
+        "surface": "divination",
+        "lemma": "miqsam"
+      },
+      {
+        "surface": "Thus declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "spoken",
+        "lemma": "davar"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Therefore",
+        "lemma": "ken"
+      },
+      {
+        "surface": "this is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "you have uttered",
+        "lemma": "davar"
+      },
+      {
+        "surface": "vain words",
+        "lemma": "shav"
+      },
+      {
+        "surface": "and seen",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "false visions",
+        "lemma": "kazav"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      }
+    ],
+    "9": [
+      {
+        "surface": "My hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "the prophets",
+        "lemma": "navi"
+      },
+      {
+        "surface": "who see",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "false visions",
+        "lemma": "shav"
+      },
+      {
+        "surface": "and speak lying",
+        "lemma": "kazav"
+      },
+      {
+        "surface": "divinations",
+        "lemma": "qasam"
+      },
+      {
+        "surface": "to the council",
+        "lemma": "sod"
+      },
+      {
+        "surface": "of My people",
+        "lemma": "am"
+      },
+      {
+        "surface": "or be recorded",
+        "lemma": "katav"
+      },
+      {
+        "surface": "in the register",
+        "lemma": "katav"
+      },
+      {
+        "surface": "of the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "the land",
+        "lemma": "adamah"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "Then you will know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "am the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      }
+    ],
+    "10": [
+      {
+        "surface": "they have led My people",
+        "lemma": "am"
+      },
+      {
+        "surface": "astray",
+        "lemma": "taah"
+      },
+      {
+        "surface": "Peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "when there is no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "and whitewashing",
+        "lemma": "tuach"
+      },
+      {
+        "surface": "any flimsy wall",
+        "lemma": "chayits"
+      },
+      {
+        "surface": "that is built",
+        "lemma": "banah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "those whitewashing the wall",
+        "lemma": "tuach"
+      },
+      {
+        "surface": "that it will fall",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "Rain",
+        "lemma": "geshem"
+      },
+      {
+        "surface": "in torrents",
+        "lemma": "shataph"
+      },
+      {
+        "surface": "I will send hailstones",
+        "lemma": "even"
+      },
+      {
+        "surface": "plunging down",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "and a windstorm",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "will burst forth",
+        "lemma": "baqa"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Surely",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "when the wall",
+        "lemma": "qir"
+      },
+      {
+        "surface": "has fallen",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "Where",
+        "lemma": "ayyeh"
+      },
+      {
+        "surface": "is the whitewash",
+        "lemma": "tiach"
+      },
+      {
+        "surface": "you covered it",
+        "lemma": "tuach"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Therefore",
+        "lemma": "ken"
+      },
+      {
+        "surface": "this is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "In My wrath",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "I will release",
+        "lemma": "baqa"
+      },
+      {
+        "surface": "a windstorm",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "and in My anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "torrents",
+        "lemma": "shataph"
+      },
+      {
+        "surface": "of rain",
+        "lemma": "geshem"
+      },
+      {
+        "surface": "and hail",
+        "lemma": "even"
+      },
+      {
+        "surface": "with destructive",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "fury",
+        "lemma": "chemah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "I will tear down",
+        "lemma": "haras"
+      },
+      {
+        "surface": "the wall",
+        "lemma": "qir"
+      },
+      {
+        "surface": "you whitewashed",
+        "lemma": "tuach"
+      },
+      {
+        "surface": "and level",
+        "lemma": "naga"
+      },
+      {
+        "surface": "the ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "so that its foundation",
+        "lemma": "yesod"
+      },
+      {
+        "surface": "is exposed",
+        "lemma": "galah"
+      },
+      {
+        "surface": "The city will fall",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "and you will be destroyed",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "within it",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "Then you will know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "And after I have vented",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "My wrath",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "against the wall",
+        "lemma": "qir"
+      },
+      {
+        "surface": "and against those who whitewashed it",
+        "lemma": "tuach"
+      },
+      {
+        "surface": "The wall",
+        "lemma": "qir"
+      },
+      {
+        "surface": "is gone",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "and so",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "are those who whitewashed",
+        "lemma": "tuach"
+      }
+    ],
+    "16": [
+      {
+        "surface": "those prophets",
+        "lemma": "navi"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "who prophesied",
+        "lemma": "nava"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "a vision",
+        "lemma": "chazon"
+      },
+      {
+        "surface": "of peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "when there was no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      }
+    ],
+    "17": [
+      {
+        "surface": "O son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "set",
+        "lemma": "sum"
+      },
+      {
+        "surface": "your face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of your people",
+        "lemma": "am"
+      },
+      {
+        "surface": "who prophesy",
+        "lemma": "nava"
+      },
+      {
+        "surface": "out of their own imagination",
+        "lemma": "lev"
+      },
+      {
+        "surface": "Prophesy",
+        "lemma": "nava"
+      }
+    ],
+    "18": [
+      {
+        "surface": "this is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "Woe",
+        "lemma": "hoy"
+      },
+      {
+        "surface": "to the women who sew",
+        "lemma": "taphar"
+      },
+      {
+        "surface": "magic charms",
+        "lemma": "keset"
+      },
+      {
+        "surface": "their wrists",
+        "lemma": "atstsil"
+      },
+      {
+        "surface": "veils",
+        "lemma": "mispachah"
+      },
+      {
+        "surface": "the heads",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "height",
+        "lemma": "qomah"
+      },
+      {
+        "surface": "in order to ensnare",
+        "lemma": "tsud"
+      },
+      {
+        "surface": "their souls",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "Will you ensnare",
+        "lemma": "tsud"
+      },
+      {
+        "surface": "the souls",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "of My people",
+        "lemma": "am"
+      }
+    ],
+    "19": [
+      {
+        "surface": "You have profaned",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "My people",
+        "lemma": "am"
+      },
+      {
+        "surface": "for handfuls",
+        "lemma": "shoal"
+      },
+      {
+        "surface": "of barley",
+        "lemma": "seorah"
+      },
+      {
+        "surface": "and scraps",
+        "lemma": "pat"
+      },
+      {
+        "surface": "of bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "By lying",
+        "lemma": "kazav"
+      },
+      {
+        "surface": "to My people",
+        "lemma": "am"
+      },
+      {
+        "surface": "you have killed",
+        "lemma": "mut"
+      },
+      {
+        "surface": "those",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "have died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "and spared",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "those",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "have lived",
+        "lemma": "chayah"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Therefore",
+        "lemma": "ken"
+      },
+      {
+        "surface": "this is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "See",
+        "lemma": "hen"
+      },
+      {
+        "surface": "the magic charms",
+        "lemma": "keset"
+      },
+      {
+        "surface": "ensnare",
+        "lemma": "tsud"
+      },
+      {
+        "surface": "souls",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "like birds",
+        "lemma": "parach"
+      },
+      {
+        "surface": "your arms",
+        "lemma": "zeroa"
+      },
+      {
+        "surface": "So I will free",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "the souls",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "have ensnared",
+        "lemma": "tsud"
+      },
+      {
+        "surface": "like birds",
+        "lemma": "parach"
+      }
+    ],
+    "21": [
+      {
+        "surface": "your veils",
+        "lemma": "mispachah"
+      },
+      {
+        "surface": "and deliver",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "My people",
+        "lemma": "am"
+      },
+      {
+        "surface": "from your hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "longer",
+        "lemma": "od"
+      },
+      {
+        "surface": "prey",
+        "lemma": "matsudah"
+      },
+      {
+        "surface": "in your hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "Then you will know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "22": [
+      {
+        "surface": "you have disheartened",
+        "lemma": "kaah"
+      },
+      {
+        "surface": "the righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "with your lies",
+        "lemma": "sheqer"
+      },
+      {
+        "surface": "have caused them no grief",
+        "lemma": "kaav"
+      },
+      {
+        "surface": "and because you have encouraged",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "the wicked",
+        "lemma": "ra"
+      },
+      {
+        "surface": "not",
+        "lemma": "bilti"
+      },
+      {
+        "surface": "from their evil",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "ways",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "to save their lives",
+        "lemma": "chayah"
+      }
+    ],
+    "23": [
+      {
+        "surface": "therefore",
+        "lemma": "ken"
+      },
+      {
+        "surface": "longer",
+        "lemma": "od"
+      },
+      {
+        "surface": "see",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "false visions",
+        "lemma": "shav"
+      },
+      {
+        "surface": "or practice",
+        "lemma": "qasam"
+      },
+      {
+        "surface": "divination",
+        "lemma": "qesem"
+      },
+      {
+        "surface": "I will deliver",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "My people",
+        "lemma": "am"
+      },
+      {
+        "surface": "from your hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "Then you will know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "am the LORD",
+        "lemma": "yehovah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "yehovih",
+    "yisrael",
+    "tuach"
+  ]
+}

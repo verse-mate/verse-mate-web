@@ -1,0 +1,661 @@
+{
+  "bookId": 20,
+  "book": "Proverbs",
+  "chapter": 18,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "He who isolates himself",
+        "lemma": "parad"
+      },
+      {
+        "surface": "pursues",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "selfish desires",
+        "lemma": "taavah"
+      },
+      {
+        "surface": "he rebels",
+        "lemma": "gala"
+      },
+      {
+        "surface": "sound judgment",
+        "lemma": "tushiyyah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "A fool",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "delight",
+        "lemma": "chaphets"
+      },
+      {
+        "surface": "in understanding",
+        "lemma": "tavunah"
+      },
+      {
+        "surface": "in airing",
+        "lemma": "galah"
+      },
+      {
+        "surface": "his opinions",
+        "lemma": "lev"
+      }
+    ],
+    "3": [
+      {
+        "surface": "With a wicked man",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "contempt",
+        "lemma": "buz"
+      },
+      {
+        "surface": "and shame",
+        "lemma": "qalon"
+      },
+      {
+        "surface": "disgrace",
+        "lemma": "cherpah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "The words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of a man’s",
+        "lemma": "ish"
+      },
+      {
+        "surface": "mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "are deep",
+        "lemma": "amoq"
+      },
+      {
+        "surface": "waters",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "the fountain",
+        "lemma": "maqor"
+      },
+      {
+        "surface": "of wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "is a bubbling",
+        "lemma": "nava"
+      },
+      {
+        "surface": "brook",
+        "lemma": "nachal"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Showing partiality",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "to the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "nor is depriving",
+        "lemma": "natah"
+      },
+      {
+        "surface": "the innocent",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "of justice",
+        "lemma": "mishpat"
+      }
+    ],
+    "6": [
+      {
+        "surface": "A fool’s",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "strife",
+        "lemma": "riv"
+      },
+      {
+        "surface": "and his mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "a beating",
+        "lemma": "mahalummah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "A fool’s",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "is his ruin",
+        "lemma": "mechittah"
+      },
+      {
+        "surface": "and his lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "are a snare",
+        "lemma": "moqesh"
+      },
+      {
+        "surface": "to his soul",
+        "lemma": "nephesh"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of a gossip",
+        "lemma": "ragan"
+      },
+      {
+        "surface": "are like choice morsels",
+        "lemma": "laham"
+      },
+      {
+        "surface": "go down",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "into the inmost being",
+        "lemma": "cheder"
+      }
+    ],
+    "9": [
+      {
+        "surface": "is slothful",
+        "lemma": "raphah"
+      },
+      {
+        "surface": "in his work",
+        "lemma": "melakhah"
+      },
+      {
+        "surface": "is brother",
+        "lemma": "ach"
+      },
+      {
+        "surface": "to him",
+        "lemma": "baal"
+      },
+      {
+        "surface": "who destroys",
+        "lemma": "mashchit"
+      }
+    ],
+    "10": [
+      {
+        "surface": "The name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is a strong",
+        "lemma": "oz"
+      },
+      {
+        "surface": "tower",
+        "lemma": "migdal"
+      },
+      {
+        "surface": "the righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "run",
+        "lemma": "ruts"
+      },
+      {
+        "surface": "and are safe",
+        "lemma": "sagav"
+      }
+    ],
+    "11": [
+      {
+        "surface": "A rich",
+        "lemma": "ashir"
+      },
+      {
+        "surface": "man’s wealth",
+        "lemma": "hon"
+      },
+      {
+        "surface": "is his fortified",
+        "lemma": "oz"
+      },
+      {
+        "surface": "city",
+        "lemma": "qiryah"
+      },
+      {
+        "surface": "it is like a high",
+        "lemma": "sagav"
+      },
+      {
+        "surface": "wall",
+        "lemma": "chomah"
+      },
+      {
+        "surface": "in his imagination",
+        "lemma": "maskit"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "his downfall",
+        "lemma": "shever"
+      },
+      {
+        "surface": "a man’s",
+        "lemma": "ish"
+      },
+      {
+        "surface": "heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "is proud",
+        "lemma": "gavah"
+      },
+      {
+        "surface": "but humility",
+        "lemma": "anavah"
+      },
+      {
+        "surface": "comes before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "honor",
+        "lemma": "kavod"
+      }
+    ],
+    "13": [
+      {
+        "surface": "a matter",
+        "lemma": "davar"
+      },
+      {
+        "surface": "before",
+        "lemma": "terem"
+      },
+      {
+        "surface": "is folly",
+        "lemma": "ivvelet"
+      },
+      {
+        "surface": "and disgrace",
+        "lemma": "kelimmah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "The spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "of a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "can endure",
+        "lemma": "kul"
+      },
+      {
+        "surface": "his sickness",
+        "lemma": "machaleh"
+      },
+      {
+        "surface": "but who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "can survive",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "a broken",
+        "lemma": "naka"
+      },
+      {
+        "surface": "spirit",
+        "lemma": "ruach"
+      }
+    ],
+    "15": [
+      {
+        "surface": "The heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "of the discerning",
+        "lemma": "bin"
+      },
+      {
+        "surface": "acquires",
+        "lemma": "qanah"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "and the ear",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "of the wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "seeks",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "it out",
+        "lemma": "daat"
+      }
+    ],
+    "16": [
+      {
+        "surface": "A man’s",
+        "lemma": "adam"
+      },
+      {
+        "surface": "gift",
+        "lemma": "mattan"
+      },
+      {
+        "surface": "opens doors",
+        "lemma": "rachav"
+      },
+      {
+        "surface": "and brings him",
+        "lemma": "nachah"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "great men",
+        "lemma": "gadol"
+      }
+    ],
+    "17": [
+      {
+        "surface": "The first",
+        "lemma": "rishon"
+      },
+      {
+        "surface": "to state his case",
+        "lemma": "riv"
+      },
+      {
+        "surface": "seems right",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "until another",
+        "lemma": "rea"
+      },
+      {
+        "surface": "and cross-examines him",
+        "lemma": "chaqar"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Casting the lot",
+        "lemma": "goral"
+      },
+      {
+        "surface": "ends",
+        "lemma": "shavat"
+      },
+      {
+        "surface": "quarrels",
+        "lemma": "midyan"
+      },
+      {
+        "surface": "and separates",
+        "lemma": "parad"
+      },
+      {
+        "surface": "strong opponents",
+        "lemma": "atsum"
+      }
+    ],
+    "19": [
+      {
+        "surface": "An offended",
+        "lemma": "pasah"
+      },
+      {
+        "surface": "brother is harder to win",
+        "lemma": "ach"
+      },
+      {
+        "surface": "than a fortified",
+        "lemma": "oz"
+      },
+      {
+        "surface": "city",
+        "lemma": "qiryah"
+      },
+      {
+        "surface": "and disputes",
+        "lemma": "madon"
+      },
+      {
+        "surface": "are like the bars",
+        "lemma": "beriach"
+      },
+      {
+        "surface": "of a castle",
+        "lemma": "armon"
+      }
+    ],
+    "20": [
+      {
+        "surface": "From the fruit",
+        "lemma": "peri"
+      },
+      {
+        "surface": "of his mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "a man’s",
+        "lemma": "ish"
+      },
+      {
+        "surface": "belly",
+        "lemma": "beten"
+      },
+      {
+        "surface": "is filled",
+        "lemma": "sava"
+      },
+      {
+        "surface": "with the harvest",
+        "lemma": "tevuah"
+      },
+      {
+        "surface": "from his lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "he is satisfied",
+        "lemma": "sava"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "and death",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "are in the power",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of the tongue",
+        "lemma": "lashon"
+      },
+      {
+        "surface": "and those who love it",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "will eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "its fruit",
+        "lemma": "peri"
+      }
+    ],
+    "22": [
+      {
+        "surface": "He who finds",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "a wife",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "finds",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "a good thing",
+        "lemma": "tov"
+      },
+      {
+        "surface": "and obtains",
+        "lemma": "puq"
+      },
+      {
+        "surface": "favor",
+        "lemma": "ratson"
+      },
+      {
+        "surface": "from the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "23": [
+      {
+        "surface": "The poor man",
+        "lemma": "rush"
+      },
+      {
+        "surface": "pleads for mercy",
+        "lemma": "tachanun"
+      },
+      {
+        "surface": "but the rich man",
+        "lemma": "ashir"
+      },
+      {
+        "surface": "answers",
+        "lemma": "un"
+      },
+      {
+        "surface": "harshly",
+        "lemma": "az"
+      }
+    ],
+    "24": [
+      {
+        "surface": "A man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "of many companions",
+        "lemma": "rea"
+      },
+      {
+        "surface": "may come to ruin",
+        "lemma": "raa"
+      },
+      {
+        "surface": "but there is",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "a friend",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "who stays closer",
+        "lemma": "daveq"
+      },
+      {
+        "surface": "than a brother",
+        "lemma": "ach"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "peh",
+    "paneh",
+    "tsaddiq"
+  ]
+}

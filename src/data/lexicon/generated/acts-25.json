@@ -1,0 +1,983 @@
+{
+  "bookId": 44,
+  "book": "Acts",
+  "chapter": 25,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Three",
+        "lemma": "treis"
+      },
+      {
+        "surface": "days",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "his arrival",
+        "lemma": "epibaino"
+      },
+      {
+        "surface": "province",
+        "lemma": "eparchia"
+      },
+      {
+        "surface": "Festus",
+        "lemma": "phestos"
+      },
+      {
+        "surface": "went up",
+        "lemma": "anabaino"
+      },
+      {
+        "surface": "Caesarea",
+        "lemma": "kaisareia"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierosoluma"
+      }
+    ],
+    "2": [
+      {
+        "surface": "chief priests",
+        "lemma": "archiereus"
+      },
+      {
+        "surface": "Jewish",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "leaders",
+        "lemma": "protos"
+      },
+      {
+        "surface": "presented their case",
+        "lemma": "emphanizo"
+      },
+      {
+        "surface": "Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "urged",
+        "lemma": "parakaleo"
+      }
+    ],
+    "3": [
+      {
+        "surface": "to grant them",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "a concession",
+        "lemma": "charis"
+      },
+      {
+        "surface": "summoning",
+        "lemma": "metapempo"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierousalem"
+      },
+      {
+        "surface": "an ambush",
+        "lemma": "enedra"
+      },
+      {
+        "surface": "to kill",
+        "lemma": "anaireo"
+      },
+      {
+        "surface": "way",
+        "lemma": "hodos"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Festus",
+        "lemma": "phestos"
+      },
+      {
+        "surface": "Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "is being held",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "Caesarea",
+        "lemma": "kaisareia"
+      },
+      {
+        "surface": "am",
+        "lemma": "mello"
+      },
+      {
+        "surface": "going there",
+        "lemma": "ekporeuo"
+      },
+      {
+        "surface": "soon",
+        "lemma": "tachos"
+      }
+    ],
+    "5": [
+      {
+        "surface": "man",
+        "lemma": "aner"
+      },
+      {
+        "surface": "wrong",
+        "lemma": "atopos"
+      },
+      {
+        "surface": "leaders",
+        "lemma": "dunatos"
+      },
+      {
+        "surface": "come down with me",
+        "lemma": "sugkatabaino"
+      },
+      {
+        "surface": "and accuse",
+        "lemma": "kategoreo"
+      }
+    ],
+    "6": [
+      {
+        "surface": "spending",
+        "lemma": "diatribo"
+      },
+      {
+        "surface": "more than",
+        "lemma": "pleion"
+      },
+      {
+        "surface": "eight",
+        "lemma": "okto"
+      },
+      {
+        "surface": "ten",
+        "lemma": "deka"
+      },
+      {
+        "surface": "days",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "Festus went down",
+        "lemma": "katabaino"
+      },
+      {
+        "surface": "Caesarea",
+        "lemma": "kaisareia"
+      },
+      {
+        "surface": "next day",
+        "lemma": "epaurion"
+      },
+      {
+        "surface": "he sat",
+        "lemma": "kathizo"
+      },
+      {
+        "surface": "judgment seat",
+        "lemma": "bema"
+      },
+      {
+        "surface": "and ordered that",
+        "lemma": "keleuo"
+      },
+      {
+        "surface": "Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "be brought in",
+        "lemma": "ago"
+      }
+    ],
+    "7": [
+      {
+        "surface": "arrived",
+        "lemma": "paraginomai"
+      },
+      {
+        "surface": "Jews",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "who had come down",
+        "lemma": "katabaino"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierosoluma"
+      },
+      {
+        "surface": "stood around",
+        "lemma": "periistemi"
+      },
+      {
+        "surface": "bringing",
+        "lemma": "kataphero"
+      },
+      {
+        "surface": "serious",
+        "lemma": "barus"
+      },
+      {
+        "surface": "charges",
+        "lemma": "aitiama"
+      },
+      {
+        "surface": "they could not",
+        "lemma": "ischuo"
+      },
+      {
+        "surface": "prove",
+        "lemma": "apodeiknumi"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "made his defense",
+        "lemma": "apologeomai"
+      },
+      {
+        "surface": "I have committed no offense",
+        "lemma": "hamartano"
+      },
+      {
+        "surface": "law",
+        "lemma": "nomos"
+      },
+      {
+        "surface": "Jews",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "temple",
+        "lemma": "hieros"
+      },
+      {
+        "surface": "Caesar",
+        "lemma": "kaisar"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Festus",
+        "lemma": "phestos"
+      },
+      {
+        "surface": "to do the Jews a favor",
+        "lemma": "katatithemi"
+      },
+      {
+        "surface": "to Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "to go up",
+        "lemma": "anabaino"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierosoluma"
+      },
+      {
+        "surface": "to stand trial",
+        "lemma": "krino"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "judgment seat",
+        "lemma": "bema"
+      },
+      {
+        "surface": "of Caesar",
+        "lemma": "kaisar"
+      },
+      {
+        "surface": "where",
+        "lemma": "hou"
+      },
+      {
+        "surface": "ought",
+        "lemma": "dei"
+      },
+      {
+        "surface": "to be tried",
+        "lemma": "krino"
+      },
+      {
+        "surface": "I have done nothing wrong",
+        "lemma": "adikeo"
+      },
+      {
+        "surface": "to the Jews",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "know",
+        "lemma": "epiginosko"
+      },
+      {
+        "surface": "very well",
+        "lemma": "kallion"
+      }
+    ],
+    "11": [
+      {
+        "surface": "I am guilty",
+        "lemma": "adikeo"
+      },
+      {
+        "surface": "of",
+        "lemma": "prasso"
+      },
+      {
+        "surface": "worthy",
+        "lemma": "axios"
+      },
+      {
+        "surface": "of death",
+        "lemma": "thanatos"
+      },
+      {
+        "surface": "I do not refuse",
+        "lemma": "paraiteomai"
+      },
+      {
+        "surface": "to die",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "accusations",
+        "lemma": "kategoreo"
+      },
+      {
+        "surface": "to hand me over",
+        "lemma": "charizo"
+      },
+      {
+        "surface": "I appeal",
+        "lemma": "epikaleo"
+      },
+      {
+        "surface": "to Caesar",
+        "lemma": "kaisar"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Then",
+        "lemma": "tote"
+      },
+      {
+        "surface": "Festus",
+        "lemma": "phestos"
+      },
+      {
+        "surface": "conferred",
+        "lemma": "sullaleo"
+      },
+      {
+        "surface": "council",
+        "lemma": "sumboulion"
+      },
+      {
+        "surface": "You have appealed",
+        "lemma": "epikaleo"
+      },
+      {
+        "surface": "to Caesar",
+        "lemma": "kaisar"
+      },
+      {
+        "surface": "Caesar",
+        "lemma": "kaisar"
+      },
+      {
+        "surface": "you will go",
+        "lemma": "poreuo"
+      }
+    ],
+    "13": [
+      {
+        "surface": "days",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "had passed",
+        "lemma": "diaginomai"
+      },
+      {
+        "surface": "King",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "Agrippa",
+        "lemma": "agrippas"
+      },
+      {
+        "surface": "Bernice",
+        "lemma": "bernike"
+      },
+      {
+        "surface": "came down",
+        "lemma": "katantao"
+      },
+      {
+        "surface": "Caesarea",
+        "lemma": "kaisareia"
+      },
+      {
+        "surface": "to pay their respects",
+        "lemma": "aspazomai"
+      },
+      {
+        "surface": "to Festus",
+        "lemma": "phestos"
+      }
+    ],
+    "14": [
+      {
+        "surface": "they were staying",
+        "lemma": "diatribo"
+      },
+      {
+        "surface": "several",
+        "lemma": "pleion"
+      },
+      {
+        "surface": "days",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "Festus",
+        "lemma": "phestos"
+      },
+      {
+        "surface": "laid out",
+        "lemma": "anatithemi"
+      },
+      {
+        "surface": "Paul’s case",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "king",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "man",
+        "lemma": "aner"
+      },
+      {
+        "surface": "Felix",
+        "lemma": "phelix"
+      },
+      {
+        "surface": "left",
+        "lemma": "kataleipo"
+      },
+      {
+        "surface": "in prison",
+        "lemma": "desmios"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierosoluma"
+      },
+      {
+        "surface": "chief priests",
+        "lemma": "archiereus"
+      },
+      {
+        "surface": "elders",
+        "lemma": "presbuteros"
+      },
+      {
+        "surface": "Jews",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "presented their case",
+        "lemma": "emphanizo"
+      },
+      {
+        "surface": "and requested",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "a judgment",
+        "lemma": "katadikazo"
+      }
+    ],
+    "16": [
+      {
+        "surface": "the Roman custom",
+        "lemma": "ethos"
+      },
+      {
+        "surface": "to hand",
+        "lemma": "charizo"
+      },
+      {
+        "surface": "man {over",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "an opportunity",
+        "lemma": "topos"
+      },
+      {
+        "surface": "face",
+        "lemma": "prosopon"
+      },
+      {
+        "surface": "accusers",
+        "lemma": "kategoros"
+      },
+      {
+        "surface": "defend himself",
+        "lemma": "apologia"
+      },
+      {
+        "surface": "charges",
+        "lemma": "egklema"
+      }
+    ],
+    "17": [
+      {
+        "surface": "came",
+        "lemma": "sunerchomai"
+      },
+      {
+        "surface": "here {with me",
+        "lemma": "enthade"
+      },
+      {
+        "surface": "not",
+        "lemma": "medeis"
+      },
+      {
+        "surface": "delay",
+        "lemma": "anabole"
+      },
+      {
+        "surface": "next day",
+        "lemma": "hexes"
+      },
+      {
+        "surface": "I sat",
+        "lemma": "kathizo"
+      },
+      {
+        "surface": "judgment seat",
+        "lemma": "bema"
+      },
+      {
+        "surface": "and ordered that",
+        "lemma": "keleuo"
+      },
+      {
+        "surface": "man",
+        "lemma": "aner"
+      },
+      {
+        "surface": "be brought in",
+        "lemma": "ago"
+      }
+    ],
+    "18": [
+      {
+        "surface": "accusers",
+        "lemma": "kategoros"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "phero"
+      },
+      {
+        "surface": "they did not charge him",
+        "lemma": "aitia"
+      },
+      {
+        "surface": "with any of the crimes",
+        "lemma": "poneros"
+      },
+      {
+        "surface": "had expected",
+        "lemma": "huponoeo"
+      }
+    ],
+    "19": [
+      {
+        "surface": "contentions",
+        "lemma": "zetema"
+      },
+      {
+        "surface": "own",
+        "lemma": "idios"
+      },
+      {
+        "surface": "religion",
+        "lemma": "deisidaimonia"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "who had died",
+        "lemma": "thnesko"
+      },
+      {
+        "surface": "Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "affirmed",
+        "lemma": "phasko"
+      },
+      {
+        "surface": "to be alive",
+        "lemma": "zao"
+      }
+    ],
+    "20": [
+      {
+        "surface": "was at a loss",
+        "lemma": "aporeo"
+      },
+      {
+        "surface": "how to investigate",
+        "lemma": "zetesis"
+      },
+      {
+        "surface": "he was willing",
+        "lemma": "boulomai"
+      },
+      {
+        "surface": "to go",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierosoluma"
+      },
+      {
+        "surface": "and",
+        "lemma": "kakei"
+      },
+      {
+        "surface": "be tried {there",
+        "lemma": "krino"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "appealed",
+        "lemma": "epikaleo"
+      },
+      {
+        "surface": "to be held over",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "decision",
+        "lemma": "diagnosis"
+      },
+      {
+        "surface": "Emperor",
+        "lemma": "sebastos"
+      },
+      {
+        "surface": "I ordered that",
+        "lemma": "keleuo"
+      },
+      {
+        "surface": "be held",
+        "lemma": "tereo"
+      },
+      {
+        "surface": "I could send",
+        "lemma": "anapempo"
+      },
+      {
+        "surface": "Caesar",
+        "lemma": "kaisar"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Agrippa",
+        "lemma": "agrippas"
+      },
+      {
+        "surface": "Festus",
+        "lemma": "phestos"
+      },
+      {
+        "surface": "I would like",
+        "lemma": "boulomai"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "Tomorrow",
+        "lemma": "aurion"
+      },
+      {
+        "surface": "Festus declared",
+        "lemma": "phemi"
+      }
+    ],
+    "23": [
+      {
+        "surface": "next day",
+        "lemma": "epaurion"
+      },
+      {
+        "surface": "Agrippa",
+        "lemma": "agrippas"
+      },
+      {
+        "surface": "Bernice",
+        "lemma": "bernike"
+      },
+      {
+        "surface": "pomp",
+        "lemma": "phantasia"
+      },
+      {
+        "surface": "auditorium",
+        "lemma": "akroaterion"
+      },
+      {
+        "surface": "the commanders",
+        "lemma": "chiliarchos"
+      },
+      {
+        "surface": "leading",
+        "lemma": "exoche"
+      },
+      {
+        "surface": "men",
+        "lemma": "aner"
+      },
+      {
+        "surface": "city",
+        "lemma": "polis"
+      },
+      {
+        "surface": "Festus",
+        "lemma": "phestos"
+      },
+      {
+        "surface": "ordered that",
+        "lemma": "keleuo"
+      },
+      {
+        "surface": "Paul",
+        "lemma": "paulos"
+      },
+      {
+        "surface": "be brought in",
+        "lemma": "ago"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Festus",
+        "lemma": "phestos"
+      },
+      {
+        "surface": "said",
+        "lemma": "phemi"
+      },
+      {
+        "surface": "King",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "Agrippa",
+        "lemma": "agrippas"
+      },
+      {
+        "surface": "who",
+        "lemma": "aner"
+      },
+      {
+        "surface": "are present with",
+        "lemma": "sumpareimi"
+      },
+      {
+        "surface": "you see",
+        "lemma": "theoreo"
+      },
+      {
+        "surface": "whole",
+        "lemma": "hapas"
+      },
+      {
+        "surface": "Jewish",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "community",
+        "lemma": "plethos"
+      },
+      {
+        "surface": "has petitioned",
+        "lemma": "entugchano"
+      },
+      {
+        "surface": "here",
+        "lemma": "enthade"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierosoluma"
+      },
+      {
+        "surface": "crying out",
+        "lemma": "boao"
+      },
+      {
+        "surface": "that he ought",
+        "lemma": "dei"
+      },
+      {
+        "surface": "to live",
+        "lemma": "zao"
+      },
+      {
+        "surface": "any longer",
+        "lemma": "meketi"
+      }
+    ],
+    "25": [
+      {
+        "surface": "found",
+        "lemma": "katalambano"
+      },
+      {
+        "surface": "had done",
+        "lemma": "prasso"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "medeis"
+      },
+      {
+        "surface": "worthy",
+        "lemma": "axios"
+      },
+      {
+        "surface": "of death",
+        "lemma": "thanatos"
+      },
+      {
+        "surface": "has now appealed to",
+        "lemma": "epikaleo"
+      },
+      {
+        "surface": "Emperor",
+        "lemma": "sebastos"
+      },
+      {
+        "surface": "I decided",
+        "lemma": "krino"
+      },
+      {
+        "surface": "to send him",
+        "lemma": "pempo"
+      }
+    ],
+    "26": [
+      {
+        "surface": "definite",
+        "lemma": "asphales"
+      },
+      {
+        "surface": "our sovereign",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "I have brought",
+        "lemma": "proago"
+      },
+      {
+        "surface": "especially",
+        "lemma": "malista"
+      },
+      {
+        "surface": "King",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "Agrippa",
+        "lemma": "agrippas"
+      },
+      {
+        "surface": "after this inquiry",
+        "lemma": "anakrisis"
+      }
+    ],
+    "27": [
+      {
+        "surface": "it seems",
+        "lemma": "dokeo"
+      },
+      {
+        "surface": "unreasonable",
+        "lemma": "alogos"
+      },
+      {
+        "surface": "to send on",
+        "lemma": "pempo"
+      },
+      {
+        "surface": "a prisoner",
+        "lemma": "desmios"
+      },
+      {
+        "surface": "specifying",
+        "lemma": "semaino"
+      },
+      {
+        "surface": "charges",
+        "lemma": "aitia"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "phestos",
+    "agrippas",
+    "sebastos"
+  ]
+}

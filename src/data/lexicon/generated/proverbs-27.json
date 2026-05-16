@@ -1,0 +1,775 @@
+{
+  "bookId": 20,
+  "book": "Proverbs",
+  "chapter": 27,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "boast",
+        "lemma": "halal"
+      },
+      {
+        "surface": "about tomorrow",
+        "lemma": "yom"
+      },
+      {
+        "surface": "know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "a day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "may bring",
+        "lemma": "yalad"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Let another",
+        "lemma": "zur"
+      },
+      {
+        "surface": "praise you",
+        "lemma": "halal"
+      },
+      {
+        "surface": "your own mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "a stranger",
+        "lemma": "nokhri"
+      },
+      {
+        "surface": "your own lips",
+        "lemma": "saphah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "A stone",
+        "lemma": "even"
+      },
+      {
+        "surface": "is heavy",
+        "lemma": "koved"
+      },
+      {
+        "surface": "and sand",
+        "lemma": "chol"
+      },
+      {
+        "surface": "is a burden",
+        "lemma": "netel"
+      },
+      {
+        "surface": "but aggravation",
+        "lemma": "kaas"
+      },
+      {
+        "surface": "from a fool",
+        "lemma": "evil"
+      },
+      {
+        "surface": "outweighs them",
+        "lemma": "kaved"
+      },
+      {
+        "surface": "both",
+        "lemma": "shenayim"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Wrath",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "is cruel",
+        "lemma": "akhzeriyyut"
+      },
+      {
+        "surface": "and anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "is like a flood",
+        "lemma": "sheteph"
+      },
+      {
+        "surface": "but who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "can withstand",
+        "lemma": "amad"
+      },
+      {
+        "surface": "jealousy",
+        "lemma": "qinah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Better",
+        "lemma": "tov"
+      },
+      {
+        "surface": "an open",
+        "lemma": "galah"
+      },
+      {
+        "surface": "rebuke",
+        "lemma": "tokhechah"
+      },
+      {
+        "surface": "than love",
+        "lemma": "ahavah"
+      },
+      {
+        "surface": "that is concealed",
+        "lemma": "satar"
+      }
+    ],
+    "6": [
+      {
+        "surface": "The wounds",
+        "lemma": "petsa"
+      },
+      {
+        "surface": "of a friend",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "are faithful",
+        "lemma": "aman"
+      },
+      {
+        "surface": "but the kisses",
+        "lemma": "neshiqah"
+      },
+      {
+        "surface": "of an enemy",
+        "lemma": "sane"
+      },
+      {
+        "surface": "are deceitful",
+        "lemma": "atar"
+      }
+    ],
+    "7": [
+      {
+        "surface": "The soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "that is full",
+        "lemma": "savea"
+      },
+      {
+        "surface": "loathes",
+        "lemma": "bus"
+      },
+      {
+        "surface": "honey",
+        "lemma": "nophet"
+      },
+      {
+        "surface": "but to a hungry",
+        "lemma": "raev"
+      },
+      {
+        "surface": "soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "bitter thing",
+        "lemma": "mar"
+      },
+      {
+        "surface": "is sweet",
+        "lemma": "matoq"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Like a bird",
+        "lemma": "tsippor"
+      },
+      {
+        "surface": "that strays",
+        "lemma": "nadad"
+      },
+      {
+        "surface": "its nest",
+        "lemma": "qen"
+      },
+      {
+        "surface": "is a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "who wanders",
+        "lemma": "nadad"
+      },
+      {
+        "surface": "from his home",
+        "lemma": "maqom"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "and incense",
+        "lemma": "qetoret"
+      },
+      {
+        "surface": "bring joy",
+        "lemma": "samach"
+      },
+      {
+        "surface": "to the heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "and the counsel",
+        "lemma": "etsah"
+      },
+      {
+        "surface": "of a friend",
+        "lemma": "rea"
+      },
+      {
+        "surface": "is sweetness",
+        "lemma": "meteq"
+      },
+      {
+        "surface": "to the soul",
+        "lemma": "nephesh"
+      }
+    ],
+    "10": [
+      {
+        "surface": "forsake",
+        "lemma": "azav"
+      },
+      {
+        "surface": "your friend",
+        "lemma": "rea"
+      },
+      {
+        "surface": "friend",
+        "lemma": "reeh"
+      },
+      {
+        "surface": "to your brother’s",
+        "lemma": "ach"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "in the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of your calamity",
+        "lemma": "ed"
+      },
+      {
+        "surface": "better",
+        "lemma": "tov"
+      },
+      {
+        "surface": "a neighbor",
+        "lemma": "shakhen"
+      },
+      {
+        "surface": "nearby",
+        "lemma": "qarov"
+      },
+      {
+        "surface": "than a brother",
+        "lemma": "ach"
+      },
+      {
+        "surface": "far away",
+        "lemma": "rachoq"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Be wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "my son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and bring joy",
+        "lemma": "samach"
+      },
+      {
+        "surface": "to my heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "him who taunts me",
+        "lemma": "charaph"
+      }
+    ],
+    "12": [
+      {
+        "surface": "The prudent",
+        "lemma": "arum"
+      },
+      {
+        "surface": "danger",
+        "lemma": "ra"
+      },
+      {
+        "surface": "and take cover",
+        "lemma": "satar"
+      },
+      {
+        "surface": "but the simple",
+        "lemma": "peti"
+      },
+      {
+        "surface": "keep going",
+        "lemma": "avar"
+      },
+      {
+        "surface": "and pay the penalty",
+        "lemma": "anash"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "the garment",
+        "lemma": "beged"
+      },
+      {
+        "surface": "posts security",
+        "lemma": "arav"
+      },
+      {
+        "surface": "for a stranger",
+        "lemma": "zur"
+      },
+      {
+        "surface": "get collateral",
+        "lemma": "chaval"
+      },
+      {
+        "surface": "if it is for",
+        "lemma": "bead"
+      },
+      {
+        "surface": "a foreigner",
+        "lemma": "nokhri"
+      }
+    ],
+    "14": [
+      {
+        "surface": "If one blesses",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "his neighbor",
+        "lemma": "rea"
+      },
+      {
+        "surface": "with a loud",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "voice",
+        "lemma": "qol"
+      },
+      {
+        "surface": "early",
+        "lemma": "shakham"
+      },
+      {
+        "surface": "in the morning",
+        "lemma": "boqer"
+      },
+      {
+        "surface": "it will be counted",
+        "lemma": "chashav"
+      },
+      {
+        "surface": "as a curse",
+        "lemma": "qelalah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "A constant",
+        "lemma": "tarad"
+      },
+      {
+        "surface": "dripping",
+        "lemma": "deleph"
+      },
+      {
+        "surface": "on a rainy",
+        "lemma": "sagrid"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "and a contentious",
+        "lemma": "madon"
+      },
+      {
+        "surface": "woman",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "are alike",
+        "lemma": "shavah"
+      }
+    ],
+    "16": [
+      {
+        "surface": "restraining her",
+        "lemma": "tsaphan"
+      },
+      {
+        "surface": "is like holding back",
+        "lemma": "tsaphan"
+      },
+      {
+        "surface": "the wind",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "with one’s right hand",
+        "lemma": "yamin"
+      }
+    ],
+    "17": [
+      {
+        "surface": "As iron",
+        "lemma": "barzel"
+      },
+      {
+        "surface": "sharpens",
+        "lemma": "chadad"
+      },
+      {
+        "surface": "iron",
+        "lemma": "barzel"
+      },
+      {
+        "surface": "so one man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "sharpens",
+        "lemma": "chadad"
+      },
+      {
+        "surface": "another",
+        "lemma": "rea"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Whoever tends",
+        "lemma": "natsar"
+      },
+      {
+        "surface": "a fig tree",
+        "lemma": "teenah"
+      },
+      {
+        "surface": "will eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "its fruit",
+        "lemma": "peri"
+      },
+      {
+        "surface": "and he who looks after",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "his master",
+        "lemma": "adon"
+      },
+      {
+        "surface": "will be honored",
+        "lemma": "kavad"
+      }
+    ],
+    "19": [
+      {
+        "surface": "As water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "reflects the face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "so",
+        "lemma": "ken"
+      },
+      {
+        "surface": "the heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "reflects the true man",
+        "lemma": "adam"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Sheol",
+        "lemma": "sheol"
+      },
+      {
+        "surface": "and Abaddon",
+        "lemma": "avaddon"
+      },
+      {
+        "surface": "satisfied",
+        "lemma": "sava"
+      },
+      {
+        "surface": "so the eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "satisfied",
+        "lemma": "sava"
+      }
+    ],
+    "21": [
+      {
+        "surface": "A crucible",
+        "lemma": "mitsreph"
+      },
+      {
+        "surface": "for silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "and a furnace",
+        "lemma": "kur"
+      },
+      {
+        "surface": "for gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "but a man is tested",
+        "lemma": "ish"
+      },
+      {
+        "surface": "by the praise",
+        "lemma": "mahalal"
+      },
+      {
+        "surface": "accorded him",
+        "lemma": "peh"
+      }
+    ],
+    "22": [
+      {
+        "surface": "you grind",
+        "lemma": "katash"
+      },
+      {
+        "surface": "a fool",
+        "lemma": "evil"
+      },
+      {
+        "surface": "like grain",
+        "lemma": "riphah"
+      },
+      {
+        "surface": "with mortar",
+        "lemma": "makhtesh"
+      },
+      {
+        "surface": "and",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "a pestle",
+        "lemma": "eli"
+      },
+      {
+        "surface": "yet his folly",
+        "lemma": "ivvelet"
+      },
+      {
+        "surface": "depart",
+        "lemma": "sur"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Be sure to know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "the state",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of your flocks",
+        "lemma": "tson"
+      },
+      {
+        "surface": "and pay close attention",
+        "lemma": "shit"
+      },
+      {
+        "surface": "to your herds",
+        "lemma": "eder"
+      }
+    ],
+    "24": [
+      {
+        "surface": "riches",
+        "lemma": "chosen"
+      },
+      {
+        "surface": "forever",
+        "lemma": "olam"
+      },
+      {
+        "surface": "a crown",
+        "lemma": "nezer"
+      },
+      {
+        "surface": "endure to every",
+        "lemma": "dor"
+      },
+      {
+        "surface": "generation",
+        "lemma": "dor"
+      }
+    ],
+    "25": [
+      {
+        "surface": "When hay",
+        "lemma": "chatsir"
+      },
+      {
+        "surface": "is removed",
+        "lemma": "galah"
+      },
+      {
+        "surface": "and new growth",
+        "lemma": "deshe"
+      },
+      {
+        "surface": "and the grass",
+        "lemma": "esev"
+      },
+      {
+        "surface": "from the hills",
+        "lemma": "har"
+      },
+      {
+        "surface": "is gathered",
+        "lemma": "asaph"
+      }
+    ],
+    "26": [
+      {
+        "surface": "the lambs",
+        "lemma": "keves"
+      },
+      {
+        "surface": "will provide you with clothing",
+        "lemma": "levush"
+      },
+      {
+        "surface": "and the goats",
+        "lemma": "attud"
+      },
+      {
+        "surface": "with the price",
+        "lemma": "mechir"
+      },
+      {
+        "surface": "of a field",
+        "lemma": "saday"
+      }
+    ],
+    "27": [
+      {
+        "surface": "You will have plenty",
+        "lemma": "day"
+      },
+      {
+        "surface": "of goats’",
+        "lemma": "ez"
+      },
+      {
+        "surface": "milk",
+        "lemma": "chalav"
+      },
+      {
+        "surface": "to feed you",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "for your household",
+        "lemma": "bet"
+      },
+      {
+        "surface": "and nourishment",
+        "lemma": "chay"
+      },
+      {
+        "surface": "for your maidservants",
+        "lemma": "naarah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "rea",
+    "nephesh",
+    "zur"
+  ]
+}

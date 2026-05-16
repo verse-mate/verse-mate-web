@@ -1,0 +1,699 @@
+{
+  "bookId": 37,
+  "book": "Haggai",
+  "chapter": 1,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "In the second",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "year",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "of the reign",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Darius",
+        "lemma": "daryavesh"
+      },
+      {
+        "surface": "on the first",
+        "lemma": "echad"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of the sixth",
+        "lemma": "shishshi"
+      },
+      {
+        "surface": "month",
+        "lemma": "chodesh"
+      },
+      {
+        "surface": "the word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "through",
+        "lemma": "yad"
+      },
+      {
+        "surface": "Haggai",
+        "lemma": "chaggay"
+      },
+      {
+        "surface": "the prophet",
+        "lemma": "navi"
+      },
+      {
+        "surface": "Zerubbabel",
+        "lemma": "zerubbavel"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Shealtiel",
+        "lemma": "shealtiel"
+      },
+      {
+        "surface": "governor",
+        "lemma": "pechah"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "Joshua",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Jehozadak",
+        "lemma": "yehotsadaq"
+      },
+      {
+        "surface": "the high",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "priest",
+        "lemma": "kohen"
+      }
+    ],
+    "2": [
+      {
+        "surface": "that this is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "people",
+        "lemma": "am"
+      },
+      {
+        "surface": "to rebuild",
+        "lemma": "banah"
+      },
+      {
+        "surface": "the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Then the word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "through",
+        "lemma": "yad"
+      },
+      {
+        "surface": "Haggai",
+        "lemma": "chaggay"
+      },
+      {
+        "surface": "the prophet",
+        "lemma": "navi"
+      }
+    ],
+    "4": [
+      {
+        "surface": "in your paneled",
+        "lemma": "saphan"
+      },
+      {
+        "surface": "houses",
+        "lemma": "bet"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "lies in ruins",
+        "lemma": "charev"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "this is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "Consider carefully",
+        "lemma": "sum"
+      },
+      {
+        "surface": "your ways",
+        "lemma": "derekh"
+      }
+    ],
+    "6": [
+      {
+        "surface": "You have planted",
+        "lemma": "zara"
+      },
+      {
+        "surface": "much",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "little",
+        "lemma": "meat"
+      },
+      {
+        "surface": "You eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "but never",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "have enough",
+        "lemma": "sovah"
+      },
+      {
+        "surface": "You drink",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "but never",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "have your fill",
+        "lemma": "shakhar"
+      },
+      {
+        "surface": "You put on clothes",
+        "lemma": "lavash"
+      },
+      {
+        "surface": "but never",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "get warm",
+        "lemma": "chamam"
+      },
+      {
+        "surface": "You earn wages",
+        "lemma": "sakhar"
+      },
+      {
+        "surface": "a bag",
+        "lemma": "tseror"
+      },
+      {
+        "surface": "pierced through",
+        "lemma": "naqav"
+      }
+    ],
+    "7": [
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "Consider carefully",
+        "lemma": "sum"
+      },
+      {
+        "surface": "your ways",
+        "lemma": "derekh"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Go up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "into the hills",
+        "lemma": "har"
+      },
+      {
+        "surface": "lumber",
+        "lemma": "ets"
+      },
+      {
+        "surface": "and build",
+        "lemma": "banah"
+      },
+      {
+        "surface": "the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "so that I may take pleasure",
+        "lemma": "ratsah"
+      },
+      {
+        "surface": "and be glorified",
+        "lemma": "kavad"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "You expected",
+        "lemma": "panah"
+      },
+      {
+        "surface": "much",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "but behold",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "it amounted to little",
+        "lemma": "meat"
+      },
+      {
+        "surface": "home",
+        "lemma": "bet"
+      },
+      {
+        "surface": "I blew away",
+        "lemma": "naphach"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "My house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "still lies in ruins",
+        "lemma": "charev"
+      },
+      {
+        "surface": "while each",
+        "lemma": "ish"
+      },
+      {
+        "surface": "is busy",
+        "lemma": "ruts"
+      },
+      {
+        "surface": "with his own house",
+        "lemma": "bet"
+      }
+    ],
+    "10": [
+      {
+        "surface": "the heavens",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "have withheld",
+        "lemma": "kala"
+      },
+      {
+        "surface": "their dew",
+        "lemma": "tal"
+      },
+      {
+        "surface": "and the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "has withheld",
+        "lemma": "kala"
+      },
+      {
+        "surface": "its crops",
+        "lemma": "yevul"
+      }
+    ],
+    "11": [
+      {
+        "surface": "a drought",
+        "lemma": "chorev"
+      },
+      {
+        "surface": "the fields",
+        "lemma": "erets"
+      },
+      {
+        "surface": "the mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "the grain",
+        "lemma": "dagan"
+      },
+      {
+        "surface": "new wine",
+        "lemma": "tirosh"
+      },
+      {
+        "surface": "oil",
+        "lemma": "yitshar"
+      },
+      {
+        "surface": "the ground",
+        "lemma": "adamah"
+      },
+      {
+        "surface": "man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "and beast",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "the labor",
+        "lemma": "yegia"
+      },
+      {
+        "surface": "of your hands",
+        "lemma": "kaph"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Then Zerubbabel",
+        "lemma": "zerubbavel"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Shealtiel",
+        "lemma": "shealtiel"
+      },
+      {
+        "surface": "and Joshua",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Jehozadak",
+        "lemma": "yehotsadaq"
+      },
+      {
+        "surface": "the high",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "the remnant",
+        "lemma": "sheerit"
+      },
+      {
+        "surface": "of the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "the voice",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "their God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "and the words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the prophet",
+        "lemma": "navi"
+      },
+      {
+        "surface": "Haggai",
+        "lemma": "chaggay"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "their God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "had sent him",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "So the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "feared",
+        "lemma": "yare"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Haggai",
+        "lemma": "chaggay"
+      },
+      {
+        "surface": "the messenger",
+        "lemma": "maleakh"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the message",
+        "lemma": "malakhut"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "to the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "So the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "stirred",
+        "lemma": "ur"
+      },
+      {
+        "surface": "the spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "of Zerubbabel",
+        "lemma": "zerubbavel"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Shealtiel",
+        "lemma": "shealtiel"
+      },
+      {
+        "surface": "governor",
+        "lemma": "pechah"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "the spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "of Joshua",
+        "lemma": "yehoshua"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Jehozadak",
+        "lemma": "yehotsadaq"
+      },
+      {
+        "surface": "the high",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "the spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "the remnant",
+        "lemma": "sheerit"
+      },
+      {
+        "surface": "of the people",
+        "lemma": "am"
+      },
+      {
+        "surface": "began the work",
+        "lemma": "melakhah"
+      },
+      {
+        "surface": "on the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "their God",
+        "lemma": "elohim"
+      }
+    ],
+    "15": [
+      {
+        "surface": "on the twenty-fourth",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of the sixth",
+        "lemma": "shishshi"
+      },
+      {
+        "surface": "month",
+        "lemma": "chodesh"
+      },
+      {
+        "surface": "in the second",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "year",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "of King",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "Darius",
+        "lemma": "daryavesh"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "bet",
+    "tsava",
+    "chaggay"
+  ]
+}

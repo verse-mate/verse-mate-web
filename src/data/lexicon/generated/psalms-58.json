@@ -1,0 +1,367 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 58,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "For the choirmaster",
+        "lemma": "natsach"
+      },
+      {
+        "surface": "To the tune of",
+        "lemma": "altashchet"
+      },
+      {
+        "surface": "Do Not Destroy",
+        "lemma": "altashchet"
+      },
+      {
+        "surface": "A Miktam",
+        "lemma": "mikhtam"
+      },
+      {
+        "surface": "of David",
+        "lemma": "david"
+      },
+      {
+        "surface": "Do you indeed",
+        "lemma": "umnam"
+      },
+      {
+        "surface": "speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "justly",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "O rulers",
+        "lemma": "elem"
+      },
+      {
+        "surface": "Do you judge",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "uprightly",
+        "lemma": "meshar"
+      },
+      {
+        "surface": "O sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of men",
+        "lemma": "adam"
+      }
+    ],
+    "2": [
+      {
+        "surface": "in your hearts",
+        "lemma": "lev"
+      },
+      {
+        "surface": "you devise",
+        "lemma": "paal"
+      },
+      {
+        "surface": "injustice",
+        "lemma": "evel"
+      },
+      {
+        "surface": "with your hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "you mete out",
+        "lemma": "palas"
+      },
+      {
+        "surface": "violence",
+        "lemma": "chamas"
+      },
+      {
+        "surface": "on the earth",
+        "lemma": "erets"
+      }
+    ],
+    "3": [
+      {
+        "surface": "The wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "are estranged",
+        "lemma": "zur"
+      },
+      {
+        "surface": "from the womb",
+        "lemma": "rechem"
+      },
+      {
+        "surface": "the liars",
+        "lemma": "davar"
+      },
+      {
+        "surface": "go astray",
+        "lemma": "taah"
+      },
+      {
+        "surface": "from birth",
+        "lemma": "beten"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Their venom",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "is like",
+        "lemma": "demut"
+      },
+      {
+        "surface": "the venom",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "of a snake",
+        "lemma": "nachash"
+      },
+      {
+        "surface": "a cobra",
+        "lemma": "peten"
+      },
+      {
+        "surface": "that shuts",
+        "lemma": "cheresh"
+      },
+      {
+        "surface": "its ears",
+        "lemma": "ozen"
+      }
+    ],
+    "5": [
+      {
+        "surface": "the tune",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of the charmer",
+        "lemma": "lachash"
+      },
+      {
+        "surface": "who skillfully",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "weaves his spell",
+        "lemma": "chavar"
+      }
+    ],
+    "6": [
+      {
+        "surface": "O God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "shatter",
+        "lemma": "haras"
+      },
+      {
+        "surface": "their teeth",
+        "lemma": "shen"
+      },
+      {
+        "surface": "in their mouths",
+        "lemma": "peh"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "tear out",
+        "lemma": "natats"
+      },
+      {
+        "surface": "the fangs",
+        "lemma": "maltaah"
+      },
+      {
+        "surface": "of the lions",
+        "lemma": "kephir"
+      }
+    ],
+    "7": [
+      {
+        "surface": "May they vanish",
+        "lemma": "maas"
+      },
+      {
+        "surface": "water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "that runs off",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "when they draw the bow",
+        "lemma": "darakh"
+      },
+      {
+        "surface": "may their arrows",
+        "lemma": "chets"
+      },
+      {
+        "surface": "be blunted",
+        "lemma": "mul"
+      }
+    ],
+    "8": [
+      {
+        "surface": "a slug",
+        "lemma": "shavlul"
+      },
+      {
+        "surface": "that dissolves",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "in its slime",
+        "lemma": "temes"
+      },
+      {
+        "surface": "like a woman’s",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "stillborn child",
+        "lemma": "nephel"
+      },
+      {
+        "surface": "may they never",
+        "lemma": "bal"
+      },
+      {
+        "surface": "see",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Before",
+        "lemma": "terem"
+      },
+      {
+        "surface": "your pots",
+        "lemma": "sir"
+      },
+      {
+        "surface": "can feel",
+        "lemma": "bin"
+      },
+      {
+        "surface": "the burning thorns",
+        "lemma": "atad"
+      },
+      {
+        "surface": "whether green",
+        "lemma": "chay"
+      },
+      {
+        "surface": "dry",
+        "lemma": "charon"
+      },
+      {
+        "surface": "He will sweep them away",
+        "lemma": "saar"
+      }
+    ],
+    "10": [
+      {
+        "surface": "The righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "will rejoice",
+        "lemma": "samach"
+      },
+      {
+        "surface": "they see",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "they are avenged",
+        "lemma": "naqam"
+      },
+      {
+        "surface": "they will wash",
+        "lemma": "rachats"
+      },
+      {
+        "surface": "their feet",
+        "lemma": "paam"
+      },
+      {
+        "surface": "in the blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Then men",
+        "lemma": "adam"
+      },
+      {
+        "surface": "There is surely",
+        "lemma": "akh"
+      },
+      {
+        "surface": "a reward",
+        "lemma": "peri"
+      },
+      {
+        "surface": "for the righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "There is",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "surely",
+        "lemma": "akh"
+      },
+      {
+        "surface": "a God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "who judges",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "tsaddiq",
+    "shaphat",
+    "rasah"
+  ]
+}

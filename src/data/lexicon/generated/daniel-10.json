@@ -1,0 +1,895 @@
+{
+  "bookId": 27,
+  "book": "Daniel",
+  "chapter": 10,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "In the third",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "year",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "of Cyrus",
+        "lemma": "koresh"
+      },
+      {
+        "surface": "king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Persia",
+        "lemma": "paras"
+      },
+      {
+        "surface": "a message",
+        "lemma": "davar"
+      },
+      {
+        "surface": "was revealed",
+        "lemma": "galah"
+      },
+      {
+        "surface": "to Daniel",
+        "lemma": "daniyyel"
+      },
+      {
+        "surface": "Belteshazzar",
+        "lemma": "beleteshatstsar"
+      },
+      {
+        "surface": "The message",
+        "lemma": "davar"
+      },
+      {
+        "surface": "was true",
+        "lemma": "emet"
+      },
+      {
+        "surface": "and it concerned a great",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "conflict",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "And the understanding",
+        "lemma": "binah"
+      },
+      {
+        "surface": "of the message",
+        "lemma": "davar"
+      },
+      {
+        "surface": "was given to him",
+        "lemma": "bin"
+      },
+      {
+        "surface": "in a vision",
+        "lemma": "mareh"
+      }
+    ],
+    "2": [
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "Daniel",
+        "lemma": "daniyyel"
+      },
+      {
+        "surface": "mourning",
+        "lemma": "aval"
+      },
+      {
+        "surface": "for three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "full",
+        "lemma": "yom"
+      },
+      {
+        "surface": "weeks",
+        "lemma": "shavua"
+      }
+    ],
+    "3": [
+      {
+        "surface": "I ate",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "rich",
+        "lemma": "chemdah"
+      },
+      {
+        "surface": "food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "meat",
+        "lemma": "basar"
+      },
+      {
+        "surface": "or wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "my mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "anoint myself with oil",
+        "lemma": "sukh"
+      },
+      {
+        "surface": "the three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "weeks",
+        "lemma": "shavua"
+      },
+      {
+        "surface": "were completed",
+        "lemma": "male"
+      }
+    ],
+    "4": [
+      {
+        "surface": "On the twenty-fourth",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of the first",
+        "lemma": "rishon"
+      },
+      {
+        "surface": "month",
+        "lemma": "chodesh"
+      },
+      {
+        "surface": "the bank",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of the great",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "river",
+        "lemma": "nahar"
+      },
+      {
+        "surface": "the Tigris",
+        "lemma": "chiddeqel"
+      }
+    ],
+    "5": [
+      {
+        "surface": "I lifted up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "my eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "and behold",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "there was a certain",
+        "lemma": "echad"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "dressed",
+        "lemma": "lavash"
+      },
+      {
+        "surface": "in linen",
+        "lemma": "bad"
+      },
+      {
+        "surface": "with a belt",
+        "lemma": "chagar"
+      },
+      {
+        "surface": "of fine gold",
+        "lemma": "ketem"
+      },
+      {
+        "surface": "from Uphaz",
+        "lemma": "uphaz"
+      },
+      {
+        "surface": "around his waist",
+        "lemma": "moten"
+      }
+    ],
+    "6": [
+      {
+        "surface": "His body was",
+        "lemma": "geviyyah"
+      },
+      {
+        "surface": "like beryl",
+        "lemma": "tarshish"
+      },
+      {
+        "surface": "his face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "like the brilliance",
+        "lemma": "mareh"
+      },
+      {
+        "surface": "of lightning",
+        "lemma": "baraq"
+      },
+      {
+        "surface": "his eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "like flaming",
+        "lemma": "esh"
+      },
+      {
+        "surface": "torches",
+        "lemma": "lappid"
+      },
+      {
+        "surface": "his arms",
+        "lemma": "zeroa"
+      },
+      {
+        "surface": "and legs",
+        "lemma": "margelah"
+      },
+      {
+        "surface": "like the gleam",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of polished",
+        "lemma": "qalal"
+      },
+      {
+        "surface": "bronze",
+        "lemma": "nechoshet"
+      },
+      {
+        "surface": "and",
+        "lemma": "qol"
+      },
+      {
+        "surface": "his voice",
+        "lemma": "davar"
+      },
+      {
+        "surface": "like the sound",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of a multitude",
+        "lemma": "hamon"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Only",
+        "lemma": "bad"
+      },
+      {
+        "surface": "Daniel",
+        "lemma": "daniyyel"
+      },
+      {
+        "surface": "the vision",
+        "lemma": "marah"
+      },
+      {
+        "surface": "the men",
+        "lemma": "enosh"
+      },
+      {
+        "surface": "but",
+        "lemma": "aval"
+      },
+      {
+        "surface": "a great",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "terror",
+        "lemma": "charadah"
+      },
+      {
+        "surface": "fell",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "and they ran",
+        "lemma": "barach"
+      },
+      {
+        "surface": "and hid themselves",
+        "lemma": "chava"
+      }
+    ],
+    "8": [
+      {
+        "surface": "was left alone",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "great",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "vision",
+        "lemma": "marah"
+      },
+      {
+        "surface": "strength",
+        "lemma": "koach"
+      },
+      {
+        "surface": "remained",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "my face",
+        "lemma": "hod"
+      },
+      {
+        "surface": "grew",
+        "lemma": "haphakh"
+      },
+      {
+        "surface": "deathly pale",
+        "lemma": "mashchit"
+      }
+    ],
+    "9": [
+      {
+        "surface": "the sound",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of his words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "fell into a deep sleep",
+        "lemma": "radam"
+      },
+      {
+        "surface": "with my face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "to the ground",
+        "lemma": "erets"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Suddenly",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "a hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "touched",
+        "lemma": "naga"
+      },
+      {
+        "surface": "and set me trembling",
+        "lemma": "nua"
+      },
+      {
+        "surface": "my hands",
+        "lemma": "kaph"
+      },
+      {
+        "surface": "and knees",
+        "lemma": "berekh"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Daniel",
+        "lemma": "daniyyel"
+      },
+      {
+        "surface": "you are a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "who is highly precious",
+        "lemma": "chemdah"
+      },
+      {
+        "surface": "Consider carefully",
+        "lemma": "bin"
+      },
+      {
+        "surface": "the words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "about to say",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Stand up",
+        "lemma": "amad"
+      },
+      {
+        "surface": "I have now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "been sent",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "And when he had said",
+        "lemma": "davar"
+      },
+      {
+        "surface": "I stood up",
+        "lemma": "amad"
+      },
+      {
+        "surface": "trembling",
+        "lemma": "raad"
+      }
+    ],
+    "12": [
+      {
+        "surface": "be afraid",
+        "lemma": "yare"
+      },
+      {
+        "surface": "Daniel",
+        "lemma": "daniyyel"
+      },
+      {
+        "surface": "the first",
+        "lemma": "rishon"
+      },
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "to understand",
+        "lemma": "bin"
+      },
+      {
+        "surface": "and to humble",
+        "lemma": "anah"
+      },
+      {
+        "surface": "yourself before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "your words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "in response to them",
+        "lemma": "davar"
+      }
+    ],
+    "13": [
+      {
+        "surface": "However, the prince",
+        "lemma": "sar"
+      },
+      {
+        "surface": "of the kingdom",
+        "lemma": "malkhut"
+      },
+      {
+        "surface": "of Persia",
+        "lemma": "paras"
+      },
+      {
+        "surface": "opposed",
+        "lemma": "amad"
+      },
+      {
+        "surface": "me",
+        "lemma": "neged"
+      },
+      {
+        "surface": "for twenty-one",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "Then Michael",
+        "lemma": "mikhael"
+      },
+      {
+        "surface": "one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "of the chief",
+        "lemma": "rishon"
+      },
+      {
+        "surface": "princes",
+        "lemma": "sar"
+      },
+      {
+        "surface": "to help me",
+        "lemma": "azar"
+      },
+      {
+        "surface": "had been left",
+        "lemma": "yatar"
+      },
+      {
+        "surface": "there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "with",
+        "lemma": "etsel"
+      },
+      {
+        "surface": "the kings",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Persia",
+        "lemma": "paras"
+      }
+    ],
+    "14": [
+      {
+        "surface": "to explain to you",
+        "lemma": "bin"
+      },
+      {
+        "surface": "will happen",
+        "lemma": "qarah"
+      },
+      {
+        "surface": "to your people",
+        "lemma": "am"
+      },
+      {
+        "surface": "in the latter",
+        "lemma": "acharit"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the vision",
+        "lemma": "chazon"
+      },
+      {
+        "surface": "concerns those days",
+        "lemma": "yom"
+      }
+    ],
+    "15": [
+      {
+        "surface": "While he was speaking",
+        "lemma": "davar"
+      },
+      {
+        "surface": "words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "my face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "toward the ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and became speechless",
+        "lemma": "alam"
+      }
+    ],
+    "16": [
+      {
+        "surface": "And suddenly",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "one with the likeness",
+        "lemma": "demut"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of a man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "touched",
+        "lemma": "naga"
+      },
+      {
+        "surface": "my lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "and I opened",
+        "lemma": "patach"
+      },
+      {
+        "surface": "my mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "the one standing",
+        "lemma": "amad"
+      },
+      {
+        "surface": "before me",
+        "lemma": "neged"
+      },
+      {
+        "surface": "My lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "because of the vision",
+        "lemma": "marah"
+      },
+      {
+        "surface": "I am overcome",
+        "lemma": "haphakh"
+      },
+      {
+        "surface": "with anguish",
+        "lemma": "tsir"
+      },
+      {
+        "surface": "and I have",
+        "lemma": "atsar"
+      },
+      {
+        "surface": "strength",
+        "lemma": "koach"
+      }
+    ],
+    "17": [
+      {
+        "surface": "How",
+        "lemma": "hekh"
+      },
+      {
+        "surface": "can I",
+        "lemma": "yakhol"
+      },
+      {
+        "surface": "your",
+        "lemma": "adon"
+      },
+      {
+        "surface": "servant",
+        "lemma": "eved"
+      },
+      {
+        "surface": "speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "my lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "Now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "have",
+        "lemma": "amad"
+      },
+      {
+        "surface": "strength",
+        "lemma": "koach"
+      },
+      {
+        "surface": "is any breath",
+        "lemma": "neshamah"
+      },
+      {
+        "surface": "left",
+        "lemma": "shaar"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Again",
+        "lemma": "yasaph"
+      },
+      {
+        "surface": "the one with the likeness",
+        "lemma": "mareh"
+      },
+      {
+        "surface": "of a man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "touched",
+        "lemma": "naga"
+      },
+      {
+        "surface": "and strengthened me",
+        "lemma": "chazaq"
+      }
+    ],
+    "19": [
+      {
+        "surface": "be afraid",
+        "lemma": "yare"
+      },
+      {
+        "surface": "you who are highly precious",
+        "lemma": "chemdah"
+      },
+      {
+        "surface": "Peace be",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "Be strong now",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "be very strong",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "As he spoke",
+        "lemma": "davar"
+      },
+      {
+        "surface": "I was strengthened",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "Speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "my lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "you have strengthened me",
+        "lemma": "chazaq"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Do you know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "at once",
+        "lemma": "attah"
+      },
+      {
+        "surface": "to fight",
+        "lemma": "lacham"
+      },
+      {
+        "surface": "the prince",
+        "lemma": "sar"
+      },
+      {
+        "surface": "of Persia",
+        "lemma": "paras"
+      },
+      {
+        "surface": "behold",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "the prince",
+        "lemma": "sar"
+      },
+      {
+        "surface": "of Greece",
+        "lemma": "yavan"
+      }
+    ],
+    "21": [
+      {
+        "surface": "But first",
+        "lemma": "aval"
+      },
+      {
+        "surface": "I will tell",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "what is inscribed",
+        "lemma": "rasham"
+      },
+      {
+        "surface": "in the Book",
+        "lemma": "katav"
+      },
+      {
+        "surface": "of Truth",
+        "lemma": "emet"
+      },
+      {
+        "surface": "Yet no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "has the courage",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "Michael",
+        "lemma": "mikhael"
+      },
+      {
+        "surface": "your prince",
+        "lemma": "sar"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "chazaq",
+    "sar",
+    "daniyyel"
+  ]
+}

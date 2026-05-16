@@ -1,0 +1,649 @@
+{
+  "bookId": 33,
+  "book": "Micah",
+  "chapter": 6,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "now",
+        "lemma": "na"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Arise",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "plead your case",
+        "lemma": "riv"
+      },
+      {
+        "surface": "the mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "and let the hills",
+        "lemma": "givah"
+      },
+      {
+        "surface": "your voice",
+        "lemma": "qol"
+      }
+    ],
+    "2": [
+      {
+        "surface": "O mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "the LORD’s",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "indictment",
+        "lemma": "riv"
+      },
+      {
+        "surface": "you enduring",
+        "lemma": "etan"
+      },
+      {
+        "surface": "foundations",
+        "lemma": "mosad"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has a case",
+        "lemma": "riv"
+      },
+      {
+        "surface": "His people",
+        "lemma": "am"
+      },
+      {
+        "surface": "and He will argue",
+        "lemma": "yakhach"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "3": [
+      {
+        "surface": "My people",
+        "lemma": "am"
+      },
+      {
+        "surface": "what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "Testify",
+        "lemma": "un"
+      },
+      {
+        "surface": "how",
+        "lemma": "mah"
+      },
+      {
+        "surface": "I have wearied you",
+        "lemma": "laah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "I brought you up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "from the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and redeemed you",
+        "lemma": "padah"
+      },
+      {
+        "surface": "from the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of slavery",
+        "lemma": "eved"
+      },
+      {
+        "surface": "I sent",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "before you",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "as well as Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "and Miriam",
+        "lemma": "miryam"
+      }
+    ],
+    "5": [
+      {
+        "surface": "My people",
+        "lemma": "am"
+      },
+      {
+        "surface": "remember",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "Balak",
+        "lemma": "balaq"
+      },
+      {
+        "surface": "king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Moab",
+        "lemma": "moav"
+      },
+      {
+        "surface": "counseled",
+        "lemma": "yaats"
+      },
+      {
+        "surface": "and what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "Balaam",
+        "lemma": "bilam"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Beor",
+        "lemma": "beor"
+      },
+      {
+        "surface": "answered",
+        "lemma": "un"
+      },
+      {
+        "surface": "Shittim",
+        "lemma": "shittim"
+      },
+      {
+        "surface": "Gilgal",
+        "lemma": "gilgal"
+      },
+      {
+        "surface": "you may acknowledge",
+        "lemma": "yada"
+      },
+      {
+        "surface": "the righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "With what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "shall I come before",
+        "lemma": "qadam"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "when I bow",
+        "lemma": "kaphaph"
+      },
+      {
+        "surface": "before the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "on high",
+        "lemma": "marom"
+      },
+      {
+        "surface": "Should I come to Him",
+        "lemma": "qadam"
+      },
+      {
+        "surface": "with burnt offerings",
+        "lemma": "olah"
+      },
+      {
+        "surface": "with year-old",
+        "lemma": "ben"
+      },
+      {
+        "surface": "calves",
+        "lemma": "egel"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Would the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "be pleased",
+        "lemma": "ratsah"
+      },
+      {
+        "surface": "with thousands",
+        "lemma": "eleph"
+      },
+      {
+        "surface": "of rams",
+        "lemma": "ayil"
+      },
+      {
+        "surface": "with ten thousand",
+        "lemma": "revavah"
+      },
+      {
+        "surface": "rivers",
+        "lemma": "nachal"
+      },
+      {
+        "surface": "of oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "my firstborn",
+        "lemma": "bekhor"
+      },
+      {
+        "surface": "for my transgression",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "the fruit",
+        "lemma": "peri"
+      },
+      {
+        "surface": "of my body",
+        "lemma": "beten"
+      },
+      {
+        "surface": "for the sin",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "of my soul",
+        "lemma": "nephesh"
+      }
+    ],
+    "8": [
+      {
+        "surface": "He has shown",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "O man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "what is",
+        "lemma": "mah"
+      },
+      {
+        "surface": "good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "And what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "does the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "require",
+        "lemma": "darash"
+      },
+      {
+        "surface": "justly",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "to love",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "mercy",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "and to walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "humbly",
+        "lemma": "tsana"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      }
+    ],
+    "9": [
+      {
+        "surface": "The voice",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "to the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "and it is sound wisdom",
+        "lemma": "tushiyyah"
+      },
+      {
+        "surface": "Your name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "the rod",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "and the One",
+        "lemma": "mi"
+      },
+      {
+        "surface": "who ordained it",
+        "lemma": "yaad"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Can I forget any longer",
+        "lemma": "od"
+      },
+      {
+        "surface": "O house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "the treasures",
+        "lemma": "otsar"
+      },
+      {
+        "surface": "of wickedness",
+        "lemma": "resah"
+      },
+      {
+        "surface": "and the short",
+        "lemma": "razon"
+      },
+      {
+        "surface": "ephah",
+        "lemma": "ephah"
+      },
+      {
+        "surface": "which is accursed",
+        "lemma": "zaam"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Can I excuse",
+        "lemma": "zakhah"
+      },
+      {
+        "surface": "dishonest",
+        "lemma": "resah"
+      },
+      {
+        "surface": "scales",
+        "lemma": "mozen"
+      },
+      {
+        "surface": "or bags",
+        "lemma": "kis"
+      },
+      {
+        "surface": "of false",
+        "lemma": "mirmah"
+      },
+      {
+        "surface": "weights",
+        "lemma": "even"
+      }
+    ],
+    "12": [
+      {
+        "surface": "the wealthy of the city",
+        "lemma": "ashir"
+      },
+      {
+        "surface": "are full of",
+        "lemma": "male"
+      },
+      {
+        "surface": "violence",
+        "lemma": "chamas"
+      },
+      {
+        "surface": "speak",
+        "lemma": "davar"
+      },
+      {
+        "surface": "lies",
+        "lemma": "sheqer"
+      },
+      {
+        "surface": "their tongues",
+        "lemma": "lashon"
+      },
+      {
+        "surface": "are deceitful",
+        "lemma": "remiyyah"
+      },
+      {
+        "surface": "in their mouths",
+        "lemma": "peh"
+      }
+    ],
+    "13": [
+      {
+        "surface": "am striking you",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "severely",
+        "lemma": "chalah"
+      },
+      {
+        "surface": "to ruin you",
+        "lemma": "shamem"
+      },
+      {
+        "surface": "your sins",
+        "lemma": "chattaah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "will eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "be satisfied",
+        "lemma": "sava"
+      },
+      {
+        "surface": "and your hunger",
+        "lemma": "yeshach"
+      },
+      {
+        "surface": "will remain with you",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "What you acquire",
+        "lemma": "nasag"
+      },
+      {
+        "surface": "preserve",
+        "lemma": "palat"
+      },
+      {
+        "surface": "you save",
+        "lemma": "palat"
+      },
+      {
+        "surface": "to the sword",
+        "lemma": "cherev"
+      }
+    ],
+    "15": [
+      {
+        "surface": "will sow",
+        "lemma": "zara"
+      },
+      {
+        "surface": "reap",
+        "lemma": "qatser"
+      },
+      {
+        "surface": "will press",
+        "lemma": "darakh"
+      },
+      {
+        "surface": "olives",
+        "lemma": "zayit"
+      },
+      {
+        "surface": "anoint yourselves",
+        "lemma": "sukh"
+      },
+      {
+        "surface": "with oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "you will tread grapes",
+        "lemma": "tirosh"
+      },
+      {
+        "surface": "drink",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "the wine",
+        "lemma": "yayin"
+      }
+    ],
+    "16": [
+      {
+        "surface": "You have kept",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "the statutes",
+        "lemma": "chuqqah"
+      },
+      {
+        "surface": "of Omri",
+        "lemma": "omri"
+      },
+      {
+        "surface": "the practices",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "of Ahab’s",
+        "lemma": "achav"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "you have followed",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "their counsel",
+        "lemma": "moetsah"
+      },
+      {
+        "surface": "a desolation",
+        "lemma": "shammah"
+      },
+      {
+        "surface": "an object of contempt",
+        "lemma": "shereqah"
+      },
+      {
+        "surface": "you will bear",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the scorn",
+        "lemma": "cherpah"
+      },
+      {
+        "surface": "of the nations",
+        "lemma": "am"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "mah",
+    "riv",
+    "bet"
+  ]
+}

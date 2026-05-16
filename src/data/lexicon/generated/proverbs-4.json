@@ -1,0 +1,651 @@
+{
+  "bookId": 20,
+  "book": "Proverbs",
+  "chapter": 4,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "my sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "instruction",
+        "lemma": "musar"
+      },
+      {
+        "surface": "pay attention",
+        "lemma": "qashav"
+      },
+      {
+        "surface": "and gain",
+        "lemma": "yada"
+      },
+      {
+        "surface": "understanding",
+        "lemma": "binah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "sound",
+        "lemma": "tov"
+      },
+      {
+        "surface": "teaching",
+        "lemma": "leqach"
+      },
+      {
+        "surface": "abandon",
+        "lemma": "azav"
+      },
+      {
+        "surface": "my directive",
+        "lemma": "torah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "a son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "tender",
+        "lemma": "rakh"
+      },
+      {
+        "surface": "and the only child",
+        "lemma": "yachid"
+      },
+      {
+        "surface": "of",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "my mother",
+        "lemma": "em"
+      }
+    ],
+    "4": [
+      {
+        "surface": "he taught",
+        "lemma": "yara"
+      },
+      {
+        "surface": "Let your heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "lay hold",
+        "lemma": "tamakh"
+      },
+      {
+        "surface": "of my words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "keep",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "my commands",
+        "lemma": "mitsvah"
+      },
+      {
+        "surface": "and you will live",
+        "lemma": "chayah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Get",
+        "lemma": "qanah"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "get",
+        "lemma": "qanah"
+      },
+      {
+        "surface": "understanding",
+        "lemma": "binah"
+      },
+      {
+        "surface": "forget",
+        "lemma": "shakhach"
+      },
+      {
+        "surface": "my words",
+        "lemma": "emer"
+      },
+      {
+        "surface": "or turn from them",
+        "lemma": "natah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "forsake wisdom",
+        "lemma": "azav"
+      },
+      {
+        "surface": "and she will preserve you",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "love her",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "and she will guard you",
+        "lemma": "natsar"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "is supreme",
+        "lemma": "reshit"
+      },
+      {
+        "surface": "so acquire",
+        "lemma": "qanah"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "you may acquire",
+        "lemma": "qinyan"
+      },
+      {
+        "surface": "gain",
+        "lemma": "qanah"
+      },
+      {
+        "surface": "understanding",
+        "lemma": "binah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Prize her",
+        "lemma": "salal"
+      },
+      {
+        "surface": "and she will exalt you",
+        "lemma": "rum"
+      },
+      {
+        "surface": "you embrace her",
+        "lemma": "chavaq"
+      },
+      {
+        "surface": "she will honor you",
+        "lemma": "kavad"
+      }
+    ],
+    "9": [
+      {
+        "surface": "a garland",
+        "lemma": "livyah"
+      },
+      {
+        "surface": "of grace",
+        "lemma": "chen"
+      },
+      {
+        "surface": "on your head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "she will present you",
+        "lemma": "magan"
+      },
+      {
+        "surface": "with a crown",
+        "lemma": "atarah"
+      },
+      {
+        "surface": "of beauty",
+        "lemma": "tipharah"
+      }
+    ],
+    "10": [
+      {
+        "surface": "my son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and receive",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "my words",
+        "lemma": "emer"
+      },
+      {
+        "surface": "and the years",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "of your life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "will be many",
+        "lemma": "ravah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "I will guide you",
+        "lemma": "yara"
+      },
+      {
+        "surface": "in the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "I will lead you",
+        "lemma": "darakh"
+      },
+      {
+        "surface": "on straight",
+        "lemma": "yosher"
+      },
+      {
+        "surface": "paths",
+        "lemma": "magal"
+      }
+    ],
+    "12": [
+      {
+        "surface": "When you walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "your steps",
+        "lemma": "tsaad"
+      },
+      {
+        "surface": "be impeded",
+        "lemma": "yatsar"
+      },
+      {
+        "surface": "you run",
+        "lemma": "ruts"
+      },
+      {
+        "surface": "stumble",
+        "lemma": "kashal"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Hold on",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "to instruction",
+        "lemma": "musar"
+      },
+      {
+        "surface": "let go",
+        "lemma": "raphah"
+      },
+      {
+        "surface": "Guard it",
+        "lemma": "natsar"
+      },
+      {
+        "surface": "is your life",
+        "lemma": "chay"
+      }
+    ],
+    "14": [
+      {
+        "surface": "on the path",
+        "lemma": "orach"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "walk",
+        "lemma": "ashar"
+      },
+      {
+        "surface": "in the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of evildoers",
+        "lemma": "ra"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Avoid it",
+        "lemma": "para"
+      },
+      {
+        "surface": "travel",
+        "lemma": "avar"
+      },
+      {
+        "surface": "Turn",
+        "lemma": "satah"
+      },
+      {
+        "surface": "and pass on by",
+        "lemma": "avar"
+      }
+    ],
+    "16": [
+      {
+        "surface": "sleep",
+        "lemma": "yashen"
+      },
+      {
+        "surface": "they do evil",
+        "lemma": "raa"
+      },
+      {
+        "surface": "they are deprived",
+        "lemma": "gazal"
+      },
+      {
+        "surface": "of slumber",
+        "lemma": "shenah"
+      },
+      {
+        "surface": "they make someone fall",
+        "lemma": "kashal"
+      }
+    ],
+    "17": [
+      {
+        "surface": "they eat",
+        "lemma": "lacham"
+      },
+      {
+        "surface": "the bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "of wickedness",
+        "lemma": "resah"
+      },
+      {
+        "surface": "and drink",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "the wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "of violence",
+        "lemma": "chamas"
+      }
+    ],
+    "18": [
+      {
+        "surface": "The path",
+        "lemma": "orach"
+      },
+      {
+        "surface": "of the righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "is like the first gleam",
+        "lemma": "or"
+      },
+      {
+        "surface": "of dawn",
+        "lemma": "nogah"
+      },
+      {
+        "surface": "shining brighter",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "midday",
+        "lemma": "kun"
+      }
+    ],
+    "19": [
+      {
+        "surface": "But the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "is like the darkest gloom",
+        "lemma": "aphelah"
+      },
+      {
+        "surface": "know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "makes them stumble",
+        "lemma": "kashal"
+      }
+    ],
+    "20": [
+      {
+        "surface": "My son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "pay attention",
+        "lemma": "qashav"
+      },
+      {
+        "surface": "to my words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "incline",
+        "lemma": "natah"
+      },
+      {
+        "surface": "your ear",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "to my sayings",
+        "lemma": "emer"
+      }
+    ],
+    "21": [
+      {
+        "surface": "lose",
+        "lemma": "luz"
+      },
+      {
+        "surface": "sight of them",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "keep them",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "within",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "your heart",
+        "lemma": "levav"
+      }
+    ],
+    "22": [
+      {
+        "surface": "are life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "to those who find them",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "and health",
+        "lemma": "marpe"
+      },
+      {
+        "surface": "body",
+        "lemma": "basar"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Guard",
+        "lemma": "natsar"
+      },
+      {
+        "surface": "your heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "diligence",
+        "lemma": "mishmar"
+      },
+      {
+        "surface": "flow",
+        "lemma": "totsaah"
+      },
+      {
+        "surface": "springs of life",
+        "lemma": "chay"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Put",
+        "lemma": "sur"
+      },
+      {
+        "surface": "deception",
+        "lemma": "iqqshut"
+      },
+      {
+        "surface": "from your mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "keep",
+        "lemma": "rachaq"
+      },
+      {
+        "surface": "your lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "from perverse speech",
+        "lemma": "lezut"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Let your eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "look",
+        "lemma": "navat"
+      },
+      {
+        "surface": "forward",
+        "lemma": "nokhach"
+      },
+      {
+        "surface": "fix your gaze",
+        "lemma": "aphaph"
+      },
+      {
+        "surface": "straight",
+        "lemma": "yashar"
+      },
+      {
+        "surface": "ahead",
+        "lemma": "neged"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Make a level",
+        "lemma": "palas"
+      },
+      {
+        "surface": "path",
+        "lemma": "magal"
+      },
+      {
+        "surface": "for your feet",
+        "lemma": "regel"
+      },
+      {
+        "surface": "your ways",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "will be sure",
+        "lemma": "kun"
+      }
+    ],
+    "27": [
+      {
+        "surface": "swerve",
+        "lemma": "natah"
+      },
+      {
+        "surface": "to the right",
+        "lemma": "yamin"
+      },
+      {
+        "surface": "or to the left",
+        "lemma": "semol"
+      },
+      {
+        "surface": "turn",
+        "lemma": "sur"
+      },
+      {
+        "surface": "your feet {away",
+        "lemma": "regel"
+      },
+      {
+        "surface": "from evil",
+        "lemma": "ra"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "qanah",
+    "chokhmah",
+    "chay"
+  ]
+}

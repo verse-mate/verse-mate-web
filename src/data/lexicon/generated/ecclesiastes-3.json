@@ -1,0 +1,629 @@
+{
+  "bookId": 21,
+  "book": "Ecclesiastes",
+  "chapter": 3,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "there is a season",
+        "lemma": "zeman"
+      },
+      {
+        "surface": "purpose",
+        "lemma": "chephets"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "shamayim"
+      }
+    ],
+    "2": [
+      {
+        "surface": "to be born",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "to die",
+        "lemma": "mut"
+      },
+      {
+        "surface": "to plant",
+        "lemma": "nata"
+      },
+      {
+        "surface": "to uproot",
+        "lemma": "aqar"
+      }
+    ],
+    "3": [
+      {
+        "surface": "to kill",
+        "lemma": "harag"
+      },
+      {
+        "surface": "to heal",
+        "lemma": "rapah"
+      },
+      {
+        "surface": "to break down",
+        "lemma": "parats"
+      },
+      {
+        "surface": "to build",
+        "lemma": "banah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "to weep",
+        "lemma": "bakhah"
+      },
+      {
+        "surface": "to laugh",
+        "lemma": "sachaq"
+      },
+      {
+        "surface": "to mourn",
+        "lemma": "saphad"
+      },
+      {
+        "surface": "to dance",
+        "lemma": "raqad"
+      }
+    ],
+    "5": [
+      {
+        "surface": "to cast away",
+        "lemma": "shalakh"
+      },
+      {
+        "surface": "stones",
+        "lemma": "even"
+      },
+      {
+        "surface": "to gather",
+        "lemma": "kanas"
+      },
+      {
+        "surface": "stones {together",
+        "lemma": "even"
+      },
+      {
+        "surface": "to embrace",
+        "lemma": "chavaq"
+      },
+      {
+        "surface": "to refrain",
+        "lemma": "rachaq"
+      },
+      {
+        "surface": "from embracing",
+        "lemma": "chavaq"
+      }
+    ],
+    "6": [
+      {
+        "surface": "to search",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "to count as lost",
+        "lemma": "avad"
+      },
+      {
+        "surface": "to keep",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "to discard",
+        "lemma": "shalakh"
+      }
+    ],
+    "7": [
+      {
+        "surface": "to mend",
+        "lemma": "taphar"
+      },
+      {
+        "surface": "to be silent",
+        "lemma": "chashah"
+      },
+      {
+        "surface": "to speak",
+        "lemma": "davar"
+      }
+    ],
+    "8": [
+      {
+        "surface": "to love",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "to hate",
+        "lemma": "sane"
+      },
+      {
+        "surface": "for war",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "for peace",
+        "lemma": "shalom"
+      }
+    ],
+    "9": [
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "gain",
+        "lemma": "yitron"
+      },
+      {
+        "surface": "toil",
+        "lemma": "amel"
+      }
+    ],
+    "10": [
+      {
+        "surface": "the burden",
+        "lemma": "inyan"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "upon the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of men",
+        "lemma": "adam"
+      },
+      {
+        "surface": "to occupy",
+        "lemma": "anah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "beautiful",
+        "lemma": "yapheh"
+      },
+      {
+        "surface": "eternity",
+        "lemma": "olam"
+      },
+      {
+        "surface": "in the hearts of men",
+        "lemma": "lev"
+      },
+      {
+        "surface": "yet",
+        "lemma": "beli"
+      },
+      {
+        "surface": "they",
+        "lemma": "adam"
+      },
+      {
+        "surface": "fathom",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "the work",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "from beginning",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "end",
+        "lemma": "soph"
+      }
+    ],
+    "12": [
+      {
+        "surface": "I know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "there is nothing",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "better",
+        "lemma": "tov"
+      },
+      {
+        "surface": "to rejoice",
+        "lemma": "samach"
+      },
+      {
+        "surface": "good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "while they live",
+        "lemma": "chay"
+      }
+    ],
+    "13": [
+      {
+        "surface": "man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "should eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "and drink",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "satisfaction",
+        "lemma": "tov"
+      },
+      {
+        "surface": "his labor",
+        "lemma": "amal"
+      },
+      {
+        "surface": "the gift",
+        "lemma": "mattat"
+      },
+      {
+        "surface": "of God",
+        "lemma": "elohim"
+      }
+    ],
+    "14": [
+      {
+        "surface": "I know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "can be added",
+        "lemma": "yasaph"
+      },
+      {
+        "surface": "or taken",
+        "lemma": "gara"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "so that they should fear",
+        "lemma": "yare"
+      },
+      {
+        "surface": "Him",
+        "lemma": "paneh"
+      }
+    ],
+    "15": [
+      {
+        "surface": "What exists",
+        "lemma": "mah"
+      },
+      {
+        "surface": "has already",
+        "lemma": "kevar"
+      },
+      {
+        "surface": "has already",
+        "lemma": "kevar"
+      },
+      {
+        "surface": "for God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "will call to account",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "what has passed",
+        "lemma": "radaph"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Furthermore",
+        "lemma": "od"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "that in the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "of judgment",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "there is",
+        "lemma": "sham"
+      },
+      {
+        "surface": "wickedness",
+        "lemma": "resah"
+      },
+      {
+        "surface": "and in the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "of righteousness",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "there is",
+        "lemma": "sham"
+      },
+      {
+        "surface": "wickedness",
+        "lemma": "resah"
+      }
+    ],
+    "17": [
+      {
+        "surface": "in my heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "will judge",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "the righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "activity",
+        "lemma": "chephets"
+      },
+      {
+        "surface": "deed",
+        "lemma": "maaseh"
+      }
+    ],
+    "18": [
+      {
+        "surface": "to myself",
+        "lemma": "lev"
+      },
+      {
+        "surface": "the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of men",
+        "lemma": "adam"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "tests them",
+        "lemma": "barar"
+      },
+      {
+        "surface": "are but beasts",
+        "lemma": "behemah"
+      }
+    ],
+    "19": [
+      {
+        "surface": "the fates",
+        "lemma": "miqreh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of both men",
+        "lemma": "adam"
+      },
+      {
+        "surface": "and",
+        "lemma": "miqreh"
+      },
+      {
+        "surface": "beasts",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "are the same",
+        "lemma": "echad"
+      },
+      {
+        "surface": "dies",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "so",
+        "lemma": "ken"
+      },
+      {
+        "surface": "dies",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "have the same",
+        "lemma": "echad"
+      },
+      {
+        "surface": "breath",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "Man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "has no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "advantage",
+        "lemma": "motar"
+      },
+      {
+        "surface": "the animals",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "is futile",
+        "lemma": "hevel"
+      }
+    ],
+    "20": [
+      {
+        "surface": "go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "dust",
+        "lemma": "aphar"
+      },
+      {
+        "surface": "dust",
+        "lemma": "aphar"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "knows",
+        "lemma": "yada"
+      },
+      {
+        "surface": "if the spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "of man",
+        "lemma": "ben"
+      },
+      {
+        "surface": "rises",
+        "lemma": "alah"
+      },
+      {
+        "surface": "upward",
+        "lemma": "maal"
+      },
+      {
+        "surface": "and the spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "of the animal",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "descends",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "into the earth",
+        "lemma": "erets"
+      }
+    ],
+    "22": [
+      {
+        "surface": "there is nothing",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "better",
+        "lemma": "tov"
+      },
+      {
+        "surface": "for a man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "to enjoy",
+        "lemma": "samach"
+      },
+      {
+        "surface": "his work",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "is his lot",
+        "lemma": "cheleq"
+      },
+      {
+        "surface": "who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "what",
+        "lemma": "mah"
+      },
+      {
+        "surface": "after him",
+        "lemma": "achar"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "adam",
+    "tov",
+    "behemah"
+  ]
+}

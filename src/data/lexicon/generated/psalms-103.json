@@ -1,0 +1,549 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 103,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Of David",
+        "lemma": "david"
+      },
+      {
+        "surface": "Bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "O my soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "that is within me",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "bless His holy",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "name",
+        "lemma": "shem"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "O my soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "forget",
+        "lemma": "shakhach"
+      },
+      {
+        "surface": "His kind deeds",
+        "lemma": "gemul"
+      }
+    ],
+    "3": [
+      {
+        "surface": "He who forgives",
+        "lemma": "salach"
+      },
+      {
+        "surface": "your iniquities",
+        "lemma": "avan"
+      },
+      {
+        "surface": "and heals",
+        "lemma": "rapah"
+      },
+      {
+        "surface": "your diseases",
+        "lemma": "tachalu"
+      }
+    ],
+    "4": [
+      {
+        "surface": "who redeems",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "your life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "from the Pit",
+        "lemma": "shachat"
+      },
+      {
+        "surface": "and crowns",
+        "lemma": "atar"
+      },
+      {
+        "surface": "you with loving devotion",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "and compassion",
+        "lemma": "racham"
+      }
+    ],
+    "5": [
+      {
+        "surface": "who satisfies you",
+        "lemma": "sava"
+      },
+      {
+        "surface": "with good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "things",
+        "lemma": "adi"
+      },
+      {
+        "surface": "so that your youth",
+        "lemma": "naur"
+      },
+      {
+        "surface": "is renewed",
+        "lemma": "chadash"
+      },
+      {
+        "surface": "like the eagle’s",
+        "lemma": "nesher"
+      }
+    ],
+    "6": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "and justice",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "the oppressed",
+        "lemma": "ashaq"
+      }
+    ],
+    "7": [
+      {
+        "surface": "He made known",
+        "lemma": "yada"
+      },
+      {
+        "surface": "His ways",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "to Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "His deeds",
+        "lemma": "alilah"
+      },
+      {
+        "surface": "to the people",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is compassionate",
+        "lemma": "rachum"
+      },
+      {
+        "surface": "and gracious",
+        "lemma": "channun"
+      },
+      {
+        "surface": "slow",
+        "lemma": "arekh"
+      },
+      {
+        "surface": "to anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "abounding",
+        "lemma": "rav"
+      },
+      {
+        "surface": "in loving devotion",
+        "lemma": "chesed"
+      }
+    ],
+    "9": [
+      {
+        "surface": "always",
+        "lemma": "netsach"
+      },
+      {
+        "surface": "accuse us",
+        "lemma": "riv"
+      },
+      {
+        "surface": "harbor His anger",
+        "lemma": "natar"
+      },
+      {
+        "surface": "forever",
+        "lemma": "olam"
+      }
+    ],
+    "10": [
+      {
+        "surface": "our sins",
+        "lemma": "chet"
+      },
+      {
+        "surface": "or repaid us",
+        "lemma": "gamal"
+      },
+      {
+        "surface": "our iniquities",
+        "lemma": "avan"
+      }
+    ],
+    "11": [
+      {
+        "surface": "as high",
+        "lemma": "gavah"
+      },
+      {
+        "surface": "as the heavens",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "so great",
+        "lemma": "gavar"
+      },
+      {
+        "surface": "is His loving devotion",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "those who fear Him",
+        "lemma": "yare"
+      }
+    ],
+    "12": [
+      {
+        "surface": "As far",
+        "lemma": "rachaq"
+      },
+      {
+        "surface": "as the east",
+        "lemma": "mizrach"
+      },
+      {
+        "surface": "the west",
+        "lemma": "maarav"
+      },
+      {
+        "surface": "so far has He removed",
+        "lemma": "rachaq"
+      },
+      {
+        "surface": "our transgressions from us",
+        "lemma": "pesah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "has compassion",
+        "lemma": "racham"
+      },
+      {
+        "surface": "his children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "so the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has compassion",
+        "lemma": "racham"
+      },
+      {
+        "surface": "those who fear Him",
+        "lemma": "yare"
+      }
+    ],
+    "14": [
+      {
+        "surface": "knows",
+        "lemma": "yada"
+      },
+      {
+        "surface": "our frame",
+        "lemma": "yetser"
+      },
+      {
+        "surface": "He is mindful",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "are dust",
+        "lemma": "aphar"
+      }
+    ],
+    "15": [
+      {
+        "surface": "As for man",
+        "lemma": "enosh"
+      },
+      {
+        "surface": "his days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "are like grass",
+        "lemma": "chatsir"
+      },
+      {
+        "surface": "he blooms",
+        "lemma": "tsuts"
+      },
+      {
+        "surface": "like a flower",
+        "lemma": "tsits"
+      },
+      {
+        "surface": "of the field",
+        "lemma": "saday"
+      }
+    ],
+    "16": [
+      {
+        "surface": "the wind",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "passes",
+        "lemma": "avar"
+      },
+      {
+        "surface": "it vanishes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "and its place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "remembers it",
+        "lemma": "nakhar"
+      },
+      {
+        "surface": "more",
+        "lemma": "od"
+      }
+    ],
+    "17": [
+      {
+        "surface": "But from everlasting",
+        "lemma": "olam"
+      },
+      {
+        "surface": "everlasting",
+        "lemma": "olam"
+      },
+      {
+        "surface": "the loving devotion",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "those who fear Him",
+        "lemma": "yare"
+      },
+      {
+        "surface": "and His righteousness",
+        "lemma": "tsedaqah"
+      },
+      {
+        "surface": "to their children’s",
+        "lemma": "ben"
+      },
+      {
+        "surface": "children",
+        "lemma": "ben"
+      }
+    ],
+    "18": [
+      {
+        "surface": "to those who keep",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "His covenant",
+        "lemma": "berit"
+      },
+      {
+        "surface": "and remember",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "His precepts",
+        "lemma": "piqqud"
+      }
+    ],
+    "19": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has established",
+        "lemma": "kun"
+      },
+      {
+        "surface": "His throne",
+        "lemma": "kisse"
+      },
+      {
+        "surface": "in heaven",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "and His kingdom",
+        "lemma": "malkhut"
+      },
+      {
+        "surface": "rules",
+        "lemma": "mashal"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "all His angels",
+        "lemma": "maleakh"
+      },
+      {
+        "surface": "mighty",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "in strength",
+        "lemma": "koach"
+      },
+      {
+        "surface": "His word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "to the voice",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of His command",
+        "lemma": "davar"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "His hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "you servants",
+        "lemma": "sharat"
+      },
+      {
+        "surface": "His will",
+        "lemma": "ratson"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "His works",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "places",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "of His dominion",
+        "lemma": "memshalah"
+      },
+      {
+        "surface": "Bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "O my soul",
+        "lemma": "nephesh"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "barakh",
+    "chesed",
+    "yare"
+  ]
+}

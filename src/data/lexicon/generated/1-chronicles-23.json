@@ -1,0 +1,1113 @@
+{
+  "bookId": 13,
+  "book": "1 Chronicles",
+  "chapter": 23,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "When David",
+        "lemma": "david"
+      },
+      {
+        "surface": "was old",
+        "lemma": "zaqen"
+      },
+      {
+        "surface": "and full of",
+        "lemma": "sava"
+      },
+      {
+        "surface": "years",
+        "lemma": "yom"
+      },
+      {
+        "surface": "he installed his son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Solomon",
+        "lemma": "shelomoh"
+      },
+      {
+        "surface": "as king",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Then he gathered",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "the leaders",
+        "lemma": "sar"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "as well as the priests",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "and Levites",
+        "lemma": "leviyyi"
+      }
+    ],
+    "3": [
+      {
+        "surface": "The Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "thirty",
+        "lemma": "sheloshim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "were counted",
+        "lemma": "saphar"
+      },
+      {
+        "surface": "and the total number",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "of men",
+        "lemma": "gaver"
+      },
+      {
+        "surface": "38,000",
+        "lemma": "sheloshim"
+      }
+    ],
+    "4": [
+      {
+        "surface": "“24,000",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "are to oversee",
+        "lemma": "natsach"
+      },
+      {
+        "surface": "the work",
+        "lemma": "melakhah"
+      },
+      {
+        "surface": "of the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "6,000",
+        "lemma": "shesh"
+      },
+      {
+        "surface": "are to be officers",
+        "lemma": "shoter"
+      },
+      {
+        "surface": "and judges",
+        "lemma": "shaphat"
+      }
+    ],
+    "5": [
+      {
+        "surface": "4,000",
+        "lemma": "arba"
+      },
+      {
+        "surface": "are to be gatekeepers",
+        "lemma": "shoer"
+      },
+      {
+        "surface": "and 4,000",
+        "lemma": "arba"
+      },
+      {
+        "surface": "are to praise",
+        "lemma": "halal"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "with the instruments",
+        "lemma": "keli"
+      },
+      {
+        "surface": "for giving praise",
+        "lemma": "halal"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Then David",
+        "lemma": "david"
+      },
+      {
+        "surface": "divided the Levites",
+        "lemma": "chalaq"
+      },
+      {
+        "surface": "into divisions",
+        "lemma": "machaloqet"
+      },
+      {
+        "surface": "according to the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Levi",
+        "lemma": "levi"
+      },
+      {
+        "surface": "Gershon",
+        "lemma": "gereshon"
+      },
+      {
+        "surface": "Kohath",
+        "lemma": "qehat"
+      },
+      {
+        "surface": "and Merari",
+        "lemma": "merari"
+      }
+    ],
+    "7": [
+      {
+        "surface": "The Gershonites",
+        "lemma": "gereshunni"
+      },
+      {
+        "surface": "Ladan",
+        "lemma": "ladan"
+      },
+      {
+        "surface": "and Shimei",
+        "lemma": "shimi"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ladan",
+        "lemma": "ladan"
+      },
+      {
+        "surface": "Jehiel",
+        "lemma": "yechiel"
+      },
+      {
+        "surface": "the first",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "Zetham",
+        "lemma": "zetam"
+      },
+      {
+        "surface": "and Joel",
+        "lemma": "yoel"
+      },
+      {
+        "surface": "three in all",
+        "lemma": "shalosh"
+      }
+    ],
+    "9": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Shimei",
+        "lemma": "shimi"
+      },
+      {
+        "surface": "Shelomoth",
+        "lemma": "shelomot"
+      },
+      {
+        "surface": "Haziel",
+        "lemma": "chaziel"
+      },
+      {
+        "surface": "and Haran",
+        "lemma": "haran"
+      },
+      {
+        "surface": "three in all",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "the heads",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "of Ladan",
+        "lemma": "ladan"
+      }
+    ],
+    "10": [
+      {
+        "surface": "And the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Shimei",
+        "lemma": "shimi"
+      },
+      {
+        "surface": "Jahath",
+        "lemma": "yachat"
+      },
+      {
+        "surface": "Zina",
+        "lemma": "zina"
+      },
+      {
+        "surface": "Jeush",
+        "lemma": "yeush"
+      },
+      {
+        "surface": "and Beriah",
+        "lemma": "beriah"
+      },
+      {
+        "surface": "were the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Shimei",
+        "lemma": "shimi"
+      },
+      {
+        "surface": "four in all",
+        "lemma": "arba"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Jahath",
+        "lemma": "yachat"
+      },
+      {
+        "surface": "the first",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "and Zizah",
+        "lemma": "zizah"
+      },
+      {
+        "surface": "was the second",
+        "lemma": "sheni"
+      },
+      {
+        "surface": "but Jeush",
+        "lemma": "yeush"
+      },
+      {
+        "surface": "and Beriah",
+        "lemma": "beriah"
+      },
+      {
+        "surface": "have many",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and received a single",
+        "lemma": "echad"
+      },
+      {
+        "surface": "assignment",
+        "lemma": "pequddah"
+      }
+    ],
+    "12": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Kohath",
+        "lemma": "qehat"
+      },
+      {
+        "surface": "Amram",
+        "lemma": "amram"
+      },
+      {
+        "surface": "Izhar",
+        "lemma": "yitshar"
+      },
+      {
+        "surface": "Hebron",
+        "lemma": "chevron"
+      },
+      {
+        "surface": "and Uzziel",
+        "lemma": "uzziel"
+      },
+      {
+        "surface": "four in all",
+        "lemma": "arba"
+      }
+    ],
+    "13": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Amram",
+        "lemma": "amram"
+      },
+      {
+        "surface": "Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "and Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "and his descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "were set apart",
+        "lemma": "badal"
+      },
+      {
+        "surface": "to consecrate",
+        "lemma": "qadash"
+      },
+      {
+        "surface": "the most holy things",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "to burn incense",
+        "lemma": "qatar"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "to minister before Him",
+        "lemma": "sharat"
+      },
+      {
+        "surface": "and to pronounce blessings",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "in His name",
+        "lemma": "shem"
+      }
+    ],
+    "14": [
+      {
+        "surface": "As for Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "the man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "of God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "his sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the tribe",
+        "lemma": "shevet"
+      },
+      {
+        "surface": "of Levi",
+        "lemma": "levi"
+      }
+    ],
+    "15": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "Gershom",
+        "lemma": "gereshom"
+      },
+      {
+        "surface": "and Eliezer",
+        "lemma": "eliezer"
+      }
+    ],
+    "16": [
+      {
+        "surface": "The descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Gershom",
+        "lemma": "gereshom"
+      },
+      {
+        "surface": "Shebuel",
+        "lemma": "shevuel"
+      },
+      {
+        "surface": "was the first",
+        "lemma": "rosh"
+      }
+    ],
+    "17": [
+      {
+        "surface": "The descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Eliezer",
+        "lemma": "eliezer"
+      },
+      {
+        "surface": "Rehabiah",
+        "lemma": "rechavyah"
+      },
+      {
+        "surface": "the first",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "Eliezer",
+        "lemma": "eliezer"
+      },
+      {
+        "surface": "any other",
+        "lemma": "acher"
+      },
+      {
+        "surface": "sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "but the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Rehabiah",
+        "lemma": "rechavyah"
+      },
+      {
+        "surface": "were very",
+        "lemma": "maal"
+      },
+      {
+        "surface": "numerous",
+        "lemma": "ravah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Izhar",
+        "lemma": "yitshar"
+      },
+      {
+        "surface": "Shelomith",
+        "lemma": "shelomit"
+      },
+      {
+        "surface": "was the first",
+        "lemma": "rosh"
+      }
+    ],
+    "19": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Hebron",
+        "lemma": "chevron"
+      },
+      {
+        "surface": "Jeriah",
+        "lemma": "yeriyyah"
+      },
+      {
+        "surface": "was the first",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "Amariah",
+        "lemma": "amaryah"
+      },
+      {
+        "surface": "the second",
+        "lemma": "sheni"
+      },
+      {
+        "surface": "Jahaziel",
+        "lemma": "yachaziel"
+      },
+      {
+        "surface": "the third",
+        "lemma": "shelishi"
+      },
+      {
+        "surface": "and Jekameam",
+        "lemma": "yeqamam"
+      },
+      {
+        "surface": "the fourth",
+        "lemma": "revii"
+      }
+    ],
+    "20": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Uzziel",
+        "lemma": "uzziel"
+      },
+      {
+        "surface": "Micah",
+        "lemma": "mikhah"
+      },
+      {
+        "surface": "was the first",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "and Isshiah",
+        "lemma": "yishshiyyah"
+      },
+      {
+        "surface": "the second",
+        "lemma": "sheni"
+      }
+    ],
+    "21": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Merari",
+        "lemma": "merari"
+      },
+      {
+        "surface": "Mahli",
+        "lemma": "machli"
+      },
+      {
+        "surface": "and Mushi",
+        "lemma": "mushi"
+      },
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Mahli",
+        "lemma": "machli"
+      },
+      {
+        "surface": "Eleazar",
+        "lemma": "elazar"
+      },
+      {
+        "surface": "and Kish",
+        "lemma": "qish"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Eleazar",
+        "lemma": "elazar"
+      },
+      {
+        "surface": "died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "Their cousins",
+        "lemma": "ach"
+      },
+      {
+        "surface": "the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Kish",
+        "lemma": "qish"
+      },
+      {
+        "surface": "married them",
+        "lemma": "nasa"
+      }
+    ],
+    "23": [
+      {
+        "surface": "The sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Mushi",
+        "lemma": "mushi"
+      },
+      {
+        "surface": "Mahli",
+        "lemma": "machli"
+      },
+      {
+        "surface": "Eder",
+        "lemma": "eder"
+      },
+      {
+        "surface": "and Jeremoth",
+        "lemma": "yerimot"
+      },
+      {
+        "surface": "three in all",
+        "lemma": "shalosh"
+      }
+    ],
+    "24": [
+      {
+        "surface": "were the descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Levi",
+        "lemma": "levi"
+      },
+      {
+        "surface": "the heads",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "individually",
+        "lemma": "gulgolet"
+      },
+      {
+        "surface": "by name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "those twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the service",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "of the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "25": [
+      {
+        "surface": "David",
+        "lemma": "david"
+      },
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "has given rest",
+        "lemma": "nuach"
+      },
+      {
+        "surface": "to His people",
+        "lemma": "am"
+      },
+      {
+        "surface": "and has come to dwell",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "in Jerusalem",
+        "lemma": "yerushalaim"
+      }
+    ],
+    "26": [
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "longer need to carry",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the tabernacle",
+        "lemma": "mishkan"
+      },
+      {
+        "surface": "of the articles",
+        "lemma": "keli"
+      },
+      {
+        "surface": "for its service",
+        "lemma": "avodah"
+      }
+    ],
+    "27": [
+      {
+        "surface": "according to the final",
+        "lemma": "acharon"
+      },
+      {
+        "surface": "instructions",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of David",
+        "lemma": "david"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "were counted",
+        "lemma": "mispar"
+      }
+    ],
+    "28": [
+      {
+        "surface": "their duty",
+        "lemma": "maamad"
+      },
+      {
+        "surface": "was to assist",
+        "lemma": "yad"
+      },
+      {
+        "surface": "the descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "with the service",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "of the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the courts",
+        "lemma": "chatser"
+      },
+      {
+        "surface": "and chambers",
+        "lemma": "lishkah"
+      },
+      {
+        "surface": "the purification",
+        "lemma": "tohorah"
+      },
+      {
+        "surface": "the holy things",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "and the work",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "of the service",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "of the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of God",
+        "lemma": "elohim"
+      }
+    ],
+    "29": [
+      {
+        "surface": "as well as for the rows",
+        "lemma": "maarekhet"
+      },
+      {
+        "surface": "of the showbread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "the fine flour",
+        "lemma": "solet"
+      },
+      {
+        "surface": "for the grain offering",
+        "lemma": "minchah"
+      },
+      {
+        "surface": "the wafers",
+        "lemma": "raqiq"
+      },
+      {
+        "surface": "of unleavened bread",
+        "lemma": "matstsah"
+      },
+      {
+        "surface": "the baking",
+        "lemma": "machavat"
+      },
+      {
+        "surface": "the mixing",
+        "lemma": "ravakh"
+      },
+      {
+        "surface": "measurements of quantity",
+        "lemma": "mesurah"
+      },
+      {
+        "surface": "and size",
+        "lemma": "middah"
+      }
+    ],
+    "30": [
+      {
+        "surface": "They were also to stand",
+        "lemma": "amad"
+      },
+      {
+        "surface": "every morning",
+        "lemma": "boqer"
+      },
+      {
+        "surface": "to give thanks",
+        "lemma": "yadah"
+      },
+      {
+        "surface": "and praise",
+        "lemma": "halal"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "and likewise",
+        "lemma": "ken"
+      },
+      {
+        "surface": "in the evening",
+        "lemma": "erev"
+      }
+    ],
+    "31": [
+      {
+        "surface": "burnt offerings",
+        "lemma": "olah"
+      },
+      {
+        "surface": "were presented",
+        "lemma": "alah"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "on the Sabbaths",
+        "lemma": "shabbat"
+      },
+      {
+        "surface": "New Moons",
+        "lemma": "chodesh"
+      },
+      {
+        "surface": "and appointed feasts",
+        "lemma": "moed"
+      },
+      {
+        "surface": "they were to serve regularly",
+        "lemma": "tamid"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "in the numbers",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "prescribed",
+        "lemma": "mishpat"
+      }
+    ],
+    "32": [
+      {
+        "surface": "So the Levites were to carry out",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "the responsibilities",
+        "lemma": "mishmeret"
+      },
+      {
+        "surface": "for the Tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      },
+      {
+        "surface": "the Holy Place",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "and, under",
+        "lemma": "mishmeret"
+      },
+      {
+        "surface": "their brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "the descendants",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "the service",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "of the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "eliezer",
+    "bet",
+    "avodah"
+  ]
+}

@@ -1,0 +1,755 @@
+{
+  "bookId": 20,
+  "book": "Proverbs",
+  "chapter": 22,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "A good name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "is more desirable",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "than great",
+        "lemma": "rav"
+      },
+      {
+        "surface": "riches",
+        "lemma": "osher"
+      },
+      {
+        "surface": "favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "is better",
+        "lemma": "tov"
+      },
+      {
+        "surface": "than silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "and gold",
+        "lemma": "zahav"
+      }
+    ],
+    "2": [
+      {
+        "surface": "The rich",
+        "lemma": "ashir"
+      },
+      {
+        "surface": "and the poor",
+        "lemma": "rush"
+      },
+      {
+        "surface": "have this in common",
+        "lemma": "pagash"
+      },
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "The prudent",
+        "lemma": "arum"
+      },
+      {
+        "surface": "danger",
+        "lemma": "ra"
+      },
+      {
+        "surface": "and take cover",
+        "lemma": "satar"
+      },
+      {
+        "surface": "but the simple",
+        "lemma": "peti"
+      },
+      {
+        "surface": "keep going",
+        "lemma": "avar"
+      },
+      {
+        "surface": "and suffer the consequences",
+        "lemma": "anash"
+      }
+    ],
+    "4": [
+      {
+        "surface": "The rewards",
+        "lemma": "eqev"
+      },
+      {
+        "surface": "of humility",
+        "lemma": "anavah"
+      },
+      {
+        "surface": "and the fear",
+        "lemma": "yirah"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "are wealth",
+        "lemma": "osher"
+      },
+      {
+        "surface": "and honor",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "and life",
+        "lemma": "chay"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Thorns",
+        "lemma": "tsen"
+      },
+      {
+        "surface": "and snares",
+        "lemma": "pach"
+      },
+      {
+        "surface": "lie on the path",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of the perverse",
+        "lemma": "iqqesh"
+      },
+      {
+        "surface": "he who guards",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "his soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "stays far",
+        "lemma": "rachaq"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Train up",
+        "lemma": "chanakh"
+      },
+      {
+        "surface": "a child",
+        "lemma": "naar"
+      },
+      {
+        "surface": "the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "he should go",
+        "lemma": "peh"
+      },
+      {
+        "surface": "he is old",
+        "lemma": "zaqen"
+      },
+      {
+        "surface": "depart",
+        "lemma": "sur"
+      }
+    ],
+    "7": [
+      {
+        "surface": "The rich",
+        "lemma": "ashir"
+      },
+      {
+        "surface": "rule",
+        "lemma": "mashal"
+      },
+      {
+        "surface": "over the poor",
+        "lemma": "rush"
+      },
+      {
+        "surface": "and the borrower",
+        "lemma": "lavah"
+      },
+      {
+        "surface": "is slave",
+        "lemma": "eved"
+      },
+      {
+        "surface": "to the lender",
+        "lemma": "lavah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "He who sows",
+        "lemma": "zara"
+      },
+      {
+        "surface": "injustice",
+        "lemma": "evel"
+      },
+      {
+        "surface": "will reap disaster",
+        "lemma": "qatser"
+      },
+      {
+        "surface": "and the rod",
+        "lemma": "shevet"
+      },
+      {
+        "surface": "of his fury",
+        "lemma": "evrah"
+      },
+      {
+        "surface": "will be destroyed",
+        "lemma": "kalah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "A generous man",
+        "lemma": "tov"
+      },
+      {
+        "surface": "will be blessed",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "his bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "with the poor",
+        "lemma": "dal"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Drive out",
+        "lemma": "garash"
+      },
+      {
+        "surface": "the mocker",
+        "lemma": "luts"
+      },
+      {
+        "surface": "and conflict",
+        "lemma": "madon"
+      },
+      {
+        "surface": "even quarreling",
+        "lemma": "din"
+      },
+      {
+        "surface": "and insults",
+        "lemma": "qalon"
+      },
+      {
+        "surface": "will cease",
+        "lemma": "shavat"
+      }
+    ],
+    "11": [
+      {
+        "surface": "He who loves",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "a pure heart",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "and gracious",
+        "lemma": "chen"
+      },
+      {
+        "surface": "lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "will have the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "for a friend",
+        "lemma": "rea"
+      }
+    ],
+    "12": [
+      {
+        "surface": "The LORD’s",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "keep watch over",
+        "lemma": "natsar"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "but He frustrates",
+        "lemma": "salaph"
+      },
+      {
+        "surface": "the words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the faithless",
+        "lemma": "bagad"
+      }
+    ],
+    "13": [
+      {
+        "surface": "The slacker",
+        "lemma": "atsel"
+      },
+      {
+        "surface": "There is a lion",
+        "lemma": "ari"
+      },
+      {
+        "surface": "outside",
+        "lemma": "chuts"
+      },
+      {
+        "surface": "I will be slain",
+        "lemma": "ratsach"
+      },
+      {
+        "surface": "in",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "the streets",
+        "lemma": "rechov"
+      }
+    ],
+    "14": [
+      {
+        "surface": "The mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "of an adulteress",
+        "lemma": "zur"
+      },
+      {
+        "surface": "is a deep",
+        "lemma": "amoq"
+      },
+      {
+        "surface": "pit",
+        "lemma": "shuchah"
+      },
+      {
+        "surface": "he who is under the wrath",
+        "lemma": "zaam"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will fall",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "into it",
+        "lemma": "sham"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Foolishness",
+        "lemma": "ivvelet"
+      },
+      {
+        "surface": "is bound up",
+        "lemma": "qashar"
+      },
+      {
+        "surface": "in the heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "of a child",
+        "lemma": "naar"
+      },
+      {
+        "surface": "but the rod",
+        "lemma": "shevet"
+      },
+      {
+        "surface": "of discipline",
+        "lemma": "musar"
+      },
+      {
+        "surface": "drives it far",
+        "lemma": "rachaq"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Oppressing",
+        "lemma": "ashaq"
+      },
+      {
+        "surface": "the poor",
+        "lemma": "dal"
+      },
+      {
+        "surface": "to enrich",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "to the rich",
+        "lemma": "ashir"
+      },
+      {
+        "surface": "will surely lead",
+        "lemma": "akh"
+      },
+      {
+        "surface": "to poverty",
+        "lemma": "machsor"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Incline",
+        "lemma": "natah"
+      },
+      {
+        "surface": "your ear",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "the words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "apply",
+        "lemma": "shit"
+      },
+      {
+        "surface": "your mind",
+        "lemma": "lev"
+      },
+      {
+        "surface": "to my knowledge",
+        "lemma": "daat"
+      }
+    ],
+    "18": [
+      {
+        "surface": "it is pleasing",
+        "lemma": "naim"
+      },
+      {
+        "surface": "you keep them",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "within you",
+        "lemma": "beten"
+      },
+      {
+        "surface": "and they are constantly",
+        "lemma": "yachad"
+      },
+      {
+        "surface": "your lips",
+        "lemma": "saphah"
+      }
+    ],
+    "19": [
+      {
+        "surface": "So that your trust",
+        "lemma": "mivtach"
+      },
+      {
+        "surface": "in the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "I instruct you",
+        "lemma": "yada"
+      },
+      {
+        "surface": "today",
+        "lemma": "yom"
+      }
+    ],
+    "20": [
+      {
+        "surface": "written",
+        "lemma": "katav"
+      },
+      {
+        "surface": "thirty sayings",
+        "lemma": "shilshom"
+      },
+      {
+        "surface": "about counsel",
+        "lemma": "moetsah"
+      },
+      {
+        "surface": "and knowledge",
+        "lemma": "daat"
+      }
+    ],
+    "21": [
+      {
+        "surface": "to show you",
+        "lemma": "yada"
+      },
+      {
+        "surface": "true",
+        "lemma": "qoshet"
+      },
+      {
+        "surface": "and reliable",
+        "lemma": "emet"
+      },
+      {
+        "surface": "words",
+        "lemma": "emer"
+      },
+      {
+        "surface": "soundly",
+        "lemma": "emet"
+      },
+      {
+        "surface": "answer",
+        "lemma": "emer"
+      },
+      {
+        "surface": "those who sent you",
+        "lemma": "shalach"
+      }
+    ],
+    "22": [
+      {
+        "surface": "rob",
+        "lemma": "gazal"
+      },
+      {
+        "surface": "a poor",
+        "lemma": "dal"
+      },
+      {
+        "surface": "is poor",
+        "lemma": "dal"
+      },
+      {
+        "surface": "crush",
+        "lemma": "dakah"
+      },
+      {
+        "surface": "the afflicted",
+        "lemma": "ani"
+      },
+      {
+        "surface": "at the gate",
+        "lemma": "shaar"
+      }
+    ],
+    "23": [
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will take up",
+        "lemma": "riv"
+      },
+      {
+        "surface": "their case",
+        "lemma": "riv"
+      },
+      {
+        "surface": "and will plunder",
+        "lemma": "qava"
+      },
+      {
+        "surface": "those who rob them",
+        "lemma": "qava"
+      }
+    ],
+    "24": [
+      {
+        "surface": "make friends",
+        "lemma": "beteqedharoim"
+      },
+      {
+        "surface": "an angry",
+        "lemma": "aph"
+      },
+      {
+        "surface": "man",
+        "lemma": "baal"
+      },
+      {
+        "surface": "a hot-tempered",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      }
+    ],
+    "25": [
+      {
+        "surface": "you may learn",
+        "lemma": "alaph"
+      },
+      {
+        "surface": "his ways",
+        "lemma": "orach"
+      },
+      {
+        "surface": "and entangle",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "yourself",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "in a snare",
+        "lemma": "moqesh"
+      }
+    ],
+    "26": [
+      {
+        "surface": "one who gives pledges",
+        "lemma": "taqa"
+      },
+      {
+        "surface": "who puts up security",
+        "lemma": "arav"
+      },
+      {
+        "surface": "for debts",
+        "lemma": "mashshaah"
+      }
+    ],
+    "27": [
+      {
+        "surface": "you have nothing",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "to pay",
+        "lemma": "salem"
+      },
+      {
+        "surface": "why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "should your bed",
+        "lemma": "mishkav"
+      },
+      {
+        "surface": "be taken",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "from under you",
+        "lemma": "tachat"
+      }
+    ],
+    "28": [
+      {
+        "surface": "move",
+        "lemma": "nasag"
+      },
+      {
+        "surface": "an ancient",
+        "lemma": "olam"
+      },
+      {
+        "surface": "boundary stone",
+        "lemma": "gevul"
+      }
+    ],
+    "29": [
+      {
+        "surface": "Do you see",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "skilled",
+        "lemma": "mahir"
+      },
+      {
+        "surface": "in his work",
+        "lemma": "melakhah"
+      },
+      {
+        "surface": "He will be stationed",
+        "lemma": "yatsav"
+      },
+      {
+        "surface": "in the presence",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of kings",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "he will not",
+        "lemma": "bal"
+      },
+      {
+        "surface": "stand",
+        "lemma": "yatsav"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "obscure men",
+        "lemma": "chashokh"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "dal",
+    "daat",
+    "ashir"
+  ]
+}

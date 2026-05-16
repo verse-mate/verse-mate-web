@@ -1,0 +1,975 @@
+{
+  "bookId": 8,
+  "book": "Ruth",
+  "chapter": 2,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Now Naomi",
+        "lemma": "noomi"
+      },
+      {
+        "surface": "had a relative",
+        "lemma": "yada"
+      },
+      {
+        "surface": "on her husband’s side",
+        "lemma": "ish"
+      },
+      {
+        "surface": "a prominent",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "of noble character",
+        "lemma": "chayil"
+      },
+      {
+        "surface": "from the clan",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "of Elimelech",
+        "lemma": "elimelekh"
+      },
+      {
+        "surface": "whose name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "was Boaz",
+        "lemma": "boaz"
+      }
+    ],
+    "2": [
+      {
+        "surface": "And Ruth",
+        "lemma": "rut"
+      },
+      {
+        "surface": "the Moabitess",
+        "lemma": "moavi"
+      },
+      {
+        "surface": "to Naomi",
+        "lemma": "noomi"
+      },
+      {
+        "surface": "Please",
+        "lemma": "na"
+      },
+      {
+        "surface": "let me go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "into the fields",
+        "lemma": "saday"
+      },
+      {
+        "surface": "and glean",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "heads of grain",
+        "lemma": "shibbol"
+      },
+      {
+        "surface": "after someone",
+        "lemma": "achar"
+      },
+      {
+        "surface": "sight",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "I may find",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "Go ahead",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "my daughter",
+        "lemma": "bat"
+      }
+    ],
+    "3": [
+      {
+        "surface": "So Ruth departed",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "into the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "and gleaned",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "after",
+        "lemma": "achar"
+      },
+      {
+        "surface": "the harvesters",
+        "lemma": "qatser"
+      },
+      {
+        "surface": "And she happened",
+        "lemma": "qarah"
+      },
+      {
+        "surface": "to come",
+        "lemma": "miqreh"
+      },
+      {
+        "surface": "to the part",
+        "lemma": "chelqah"
+      },
+      {
+        "surface": "of the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "belonging to Boaz",
+        "lemma": "boaz"
+      },
+      {
+        "surface": "from the clan",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "of Elimelech",
+        "lemma": "elimelekh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Just then",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "Boaz",
+        "lemma": "boaz"
+      },
+      {
+        "surface": "from",
+        "lemma": "betlechem"
+      },
+      {
+        "surface": "Bethlehem",
+        "lemma": "betlechem"
+      },
+      {
+        "surface": "to the harvesters",
+        "lemma": "qatser"
+      },
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "bless you",
+        "lemma": "barakh"
+      }
+    ],
+    "5": [
+      {
+        "surface": "And Boaz",
+        "lemma": "boaz"
+      },
+      {
+        "surface": "the foreman",
+        "lemma": "naar"
+      },
+      {
+        "surface": "his harvesters",
+        "lemma": "qatser"
+      },
+      {
+        "surface": "Whose",
+        "lemma": "mi"
+      },
+      {
+        "surface": "young woman",
+        "lemma": "naarah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "The foreman",
+        "lemma": "naar"
+      },
+      {
+        "surface": "answered",
+        "lemma": "un"
+      },
+      {
+        "surface": "the Moabitess",
+        "lemma": "moavi"
+      },
+      {
+        "surface": "Naomi",
+        "lemma": "noomi"
+      },
+      {
+        "surface": "from the land",
+        "lemma": "saday"
+      },
+      {
+        "surface": "of Moab",
+        "lemma": "moav"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Please",
+        "lemma": "na"
+      },
+      {
+        "surface": "let me glean",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "and gather",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "among the sheaves",
+        "lemma": "omer"
+      },
+      {
+        "surface": "after",
+        "lemma": "achar"
+      },
+      {
+        "surface": "the harvesters",
+        "lemma": "qatser"
+      },
+      {
+        "surface": "and has continued",
+        "lemma": "amad"
+      },
+      {
+        "surface": "morning",
+        "lemma": "boqer"
+      },
+      {
+        "surface": "now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "a short time",
+        "lemma": "meat"
+      },
+      {
+        "surface": "in the shelter",
+        "lemma": "bet"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Then Boaz",
+        "lemma": "boaz"
+      },
+      {
+        "surface": "Ruth",
+        "lemma": "rut"
+      },
+      {
+        "surface": "my daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "and glean",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "in another",
+        "lemma": "acher"
+      },
+      {
+        "surface": "field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "go away",
+        "lemma": "avar"
+      },
+      {
+        "surface": "but stay here",
+        "lemma": "koh"
+      },
+      {
+        "surface": "close",
+        "lemma": "davaq"
+      },
+      {
+        "surface": "my servant girls",
+        "lemma": "naarah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Let your eyes be on",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "they are harvesting",
+        "lemma": "qatser"
+      },
+      {
+        "surface": "and follow along",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "after these girls",
+        "lemma": "achar"
+      },
+      {
+        "surface": "I have ordered",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "the young men",
+        "lemma": "naar"
+      },
+      {
+        "surface": "not",
+        "lemma": "bilti"
+      },
+      {
+        "surface": "to touch you",
+        "lemma": "naga"
+      },
+      {
+        "surface": "And when you are thirsty",
+        "lemma": "tsame"
+      },
+      {
+        "surface": "go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "and drink",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "the jars",
+        "lemma": "keli"
+      },
+      {
+        "surface": "the young men",
+        "lemma": "naar"
+      },
+      {
+        "surface": "have filled",
+        "lemma": "shaav"
+      }
+    ],
+    "10": [
+      {
+        "surface": "At this, she fell",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "her face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "bowing low",
+        "lemma": "shachah"
+      },
+      {
+        "surface": "to the ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "Why",
+        "lemma": "maddua"
+      },
+      {
+        "surface": "have I found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "such favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "in your eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "that you should take notice of me",
+        "lemma": "nakhar"
+      },
+      {
+        "surface": "a foreigner",
+        "lemma": "nokhri"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Boaz",
+        "lemma": "boaz"
+      },
+      {
+        "surface": "replied",
+        "lemma": "un"
+      },
+      {
+        "surface": "I have been made fully aware",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "your mother-in-law",
+        "lemma": "chamot"
+      },
+      {
+        "surface": "since",
+        "lemma": "achar"
+      },
+      {
+        "surface": "the death",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "of your husband",
+        "lemma": "ish"
+      },
+      {
+        "surface": "how you left",
+        "lemma": "azav"
+      },
+      {
+        "surface": "and mother",
+        "lemma": "em"
+      },
+      {
+        "surface": "and the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of your birth",
+        "lemma": "moledet"
+      },
+      {
+        "surface": "and how you came",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "a people",
+        "lemma": "am"
+      },
+      {
+        "surface": "know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "before",
+        "lemma": "temol"
+      }
+    ],
+    "12": [
+      {
+        "surface": "May the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "repay",
+        "lemma": "salem"
+      },
+      {
+        "surface": "your work",
+        "lemma": "poal"
+      },
+      {
+        "surface": "a rich",
+        "lemma": "shalem"
+      },
+      {
+        "surface": "reward",
+        "lemma": "maskoret"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "wings",
+        "lemma": "kanaph"
+      },
+      {
+        "surface": "refuge",
+        "lemma": "chasah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "My lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "may I continue to find",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "in your eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "you have comforted",
+        "lemma": "nacham"
+      },
+      {
+        "surface": "and spoken",
+        "lemma": "davar"
+      },
+      {
+        "surface": "kindly",
+        "lemma": "lev"
+      },
+      {
+        "surface": "your maidservant",
+        "lemma": "shiphchah"
+      },
+      {
+        "surface": "like one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "of your servant girls",
+        "lemma": "shiphchah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Boaz",
+        "lemma": "boaz"
+      },
+      {
+        "surface": "Come over",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "here",
+        "lemma": "halom"
+      },
+      {
+        "surface": "have",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "and dip",
+        "lemma": "taval"
+      },
+      {
+        "surface": "it",
+        "lemma": "pat"
+      },
+      {
+        "surface": "into the vinegar sauce",
+        "lemma": "chomets"
+      },
+      {
+        "surface": "beside",
+        "lemma": "tsad"
+      },
+      {
+        "surface": "the harvesters",
+        "lemma": "qatser"
+      },
+      {
+        "surface": "and he offered",
+        "lemma": "tsavat"
+      },
+      {
+        "surface": "roasted grain",
+        "lemma": "qali"
+      },
+      {
+        "surface": "and she ate",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "and was satisfied",
+        "lemma": "sava"
+      },
+      {
+        "surface": "and had some left over",
+        "lemma": "yatar"
+      }
+    ],
+    "15": [
+      {
+        "surface": "When Ruth got up",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "to glean",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "Boaz",
+        "lemma": "boaz"
+      },
+      {
+        "surface": "ordered",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "his young men",
+        "lemma": "naar"
+      },
+      {
+        "surface": "she gathers",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "among",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the sheaves",
+        "lemma": "omer"
+      },
+      {
+        "surface": "insult her",
+        "lemma": "kalam"
+      }
+    ],
+    "16": [
+      {
+        "surface": "pull out",
+        "lemma": "shalal"
+      },
+      {
+        "surface": "the bundles",
+        "lemma": "tsevet"
+      },
+      {
+        "surface": "and leave them",
+        "lemma": "azav"
+      },
+      {
+        "surface": "for her to gather",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "rebuke",
+        "lemma": "gaar"
+      }
+    ],
+    "17": [
+      {
+        "surface": "So Ruth gathered grain",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "in the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      },
+      {
+        "surface": "And when she beat out",
+        "lemma": "chavat"
+      },
+      {
+        "surface": "she had gleaned",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "about an ephah",
+        "lemma": "ephah"
+      },
+      {
+        "surface": "of barley",
+        "lemma": "seorah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "She picked up the grain",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the town",
+        "lemma": "ir"
+      },
+      {
+        "surface": "where her mother-in-law",
+        "lemma": "chamot"
+      },
+      {
+        "surface": "she had gleaned",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "she had saved",
+        "lemma": "yatar"
+      },
+      {
+        "surface": "from her meal",
+        "lemma": "sova"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Then her mother-in-law",
+        "lemma": "chamot"
+      },
+      {
+        "surface": "Where",
+        "lemma": "ephoh"
+      },
+      {
+        "surface": "did you glean",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "today",
+        "lemma": "yom"
+      },
+      {
+        "surface": "and where",
+        "lemma": "an"
+      },
+      {
+        "surface": "Blessed",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "who noticed you",
+        "lemma": "nakhar"
+      },
+      {
+        "surface": "So she told",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "her mother-in-law",
+        "lemma": "chamot"
+      },
+      {
+        "surface": "The name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of the man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "today",
+        "lemma": "yom"
+      },
+      {
+        "surface": "is Boaz",
+        "lemma": "boaz"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Then Naomi",
+        "lemma": "noomi"
+      },
+      {
+        "surface": "to her daughter-in-law",
+        "lemma": "kallah"
+      },
+      {
+        "surface": "be blessed",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "by the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "withdrawn",
+        "lemma": "azav"
+      },
+      {
+        "surface": "His kindness",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "the living",
+        "lemma": "chay"
+      },
+      {
+        "surface": "or the dead",
+        "lemma": "mut"
+      },
+      {
+        "surface": "Naomi",
+        "lemma": "noomi"
+      },
+      {
+        "surface": "The man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "is a close relative",
+        "lemma": "qarov"
+      },
+      {
+        "surface": "kinsman-redeemers",
+        "lemma": "gaal"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Then Ruth",
+        "lemma": "rut"
+      },
+      {
+        "surface": "the Moabitess",
+        "lemma": "moavi"
+      },
+      {
+        "surface": "Stay",
+        "lemma": "davaq"
+      },
+      {
+        "surface": "my young men",
+        "lemma": "naar"
+      },
+      {
+        "surface": "they have finished gathering",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "harvest",
+        "lemma": "qatsir"
+      }
+    ],
+    "22": [
+      {
+        "surface": "And Naomi",
+        "lemma": "noomi"
+      },
+      {
+        "surface": "her daughter-in-law",
+        "lemma": "kallah"
+      },
+      {
+        "surface": "Ruth",
+        "lemma": "rut"
+      },
+      {
+        "surface": "My daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "it is good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "his young women",
+        "lemma": "naarah"
+      },
+      {
+        "surface": "will happen",
+        "lemma": "paga"
+      },
+      {
+        "surface": "in another",
+        "lemma": "acher"
+      },
+      {
+        "surface": "field",
+        "lemma": "saday"
+      }
+    ],
+    "23": [
+      {
+        "surface": "So Ruth stayed close",
+        "lemma": "davaq"
+      },
+      {
+        "surface": "to the servant girls",
+        "lemma": "naarah"
+      },
+      {
+        "surface": "of Boaz",
+        "lemma": "boaz"
+      },
+      {
+        "surface": "to glean",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "the barley",
+        "lemma": "seorah"
+      },
+      {
+        "surface": "and wheat",
+        "lemma": "chittah"
+      },
+      {
+        "surface": "harvests",
+        "lemma": "qatsir"
+      },
+      {
+        "surface": "were finished",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "her mother-in-law",
+        "lemma": "chamot"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "laqat",
+    "boaz",
+    "saday"
+  ]
+}

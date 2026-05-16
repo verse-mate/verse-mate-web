@@ -1,0 +1,545 @@
+{
+  "bookId": 23,
+  "book": "Isaiah",
+  "chapter": 53,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "has believed",
+        "lemma": "aman"
+      },
+      {
+        "surface": "our message",
+        "lemma": "shemuah"
+      },
+      {
+        "surface": "whom",
+        "lemma": "mi"
+      },
+      {
+        "surface": "has the arm",
+        "lemma": "zeroa"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "been revealed",
+        "lemma": "galah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "He grew up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "before Him",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "like a tender shoot",
+        "lemma": "yoneq"
+      },
+      {
+        "surface": "and like a root",
+        "lemma": "sheresh"
+      },
+      {
+        "surface": "out of dry",
+        "lemma": "tsiyyah"
+      },
+      {
+        "surface": "ground",
+        "lemma": "erets"
+      },
+      {
+        "surface": "stately form",
+        "lemma": "toar"
+      },
+      {
+        "surface": "or majesty",
+        "lemma": "hadar"
+      },
+      {
+        "surface": "beauty",
+        "lemma": "mareh"
+      },
+      {
+        "surface": "that we should desire Him",
+        "lemma": "chamad"
+      }
+    ],
+    "3": [
+      {
+        "surface": "He was despised",
+        "lemma": "bazah"
+      },
+      {
+        "surface": "and rejected",
+        "lemma": "chadel"
+      },
+      {
+        "surface": "by men",
+        "lemma": "ish"
+      },
+      {
+        "surface": "a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "of sorrows",
+        "lemma": "makhov"
+      },
+      {
+        "surface": "acquainted",
+        "lemma": "yada"
+      },
+      {
+        "surface": "with grief",
+        "lemma": "choli"
+      },
+      {
+        "surface": "Like one from whom men hide",
+        "lemma": "master"
+      },
+      {
+        "surface": "their faces",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "He was despised",
+        "lemma": "bazah"
+      },
+      {
+        "surface": "and we esteemed Him",
+        "lemma": "chashav"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Surely",
+        "lemma": "akhen"
+      },
+      {
+        "surface": "took up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "our infirmities",
+        "lemma": "choli"
+      },
+      {
+        "surface": "and carried",
+        "lemma": "saval"
+      },
+      {
+        "surface": "our sorrows",
+        "lemma": "makhov"
+      },
+      {
+        "surface": "considered Him",
+        "lemma": "chashav"
+      },
+      {
+        "surface": "stricken",
+        "lemma": "naga"
+      },
+      {
+        "surface": "struck down",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "by God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "and afflicted",
+        "lemma": "anah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "was pierced",
+        "lemma": "chalal"
+      },
+      {
+        "surface": "for our transgressions",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "He was crushed",
+        "lemma": "dakah"
+      },
+      {
+        "surface": "for our iniquities",
+        "lemma": "avan"
+      },
+      {
+        "surface": "the punishment",
+        "lemma": "musar"
+      },
+      {
+        "surface": "that brought us peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "and by His stripes",
+        "lemma": "chabburah"
+      },
+      {
+        "surface": "we are healed",
+        "lemma": "rapah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "like sheep",
+        "lemma": "tson"
+      },
+      {
+        "surface": "have gone astray",
+        "lemma": "taah"
+      },
+      {
+        "surface": "each one",
+        "lemma": "ish"
+      },
+      {
+        "surface": "has turned",
+        "lemma": "panah"
+      },
+      {
+        "surface": "to his own way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "and the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "has laid",
+        "lemma": "paga"
+      },
+      {
+        "surface": "the iniquity",
+        "lemma": "avan"
+      }
+    ],
+    "7": [
+      {
+        "surface": "He was oppressed",
+        "lemma": "nagas"
+      },
+      {
+        "surface": "and afflicted",
+        "lemma": "anah"
+      },
+      {
+        "surface": "open",
+        "lemma": "patach"
+      },
+      {
+        "surface": "His mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "He was led",
+        "lemma": "yaval"
+      },
+      {
+        "surface": "like a lamb",
+        "lemma": "seh"
+      },
+      {
+        "surface": "to the slaughter",
+        "lemma": "tevach"
+      },
+      {
+        "surface": "and as a sheep",
+        "lemma": "rachel"
+      },
+      {
+        "surface": "before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "her shearers",
+        "lemma": "gazaz"
+      },
+      {
+        "surface": "is silent",
+        "lemma": "alam"
+      },
+      {
+        "surface": "open",
+        "lemma": "patach"
+      },
+      {
+        "surface": "His mouth",
+        "lemma": "peh"
+      }
+    ],
+    "8": [
+      {
+        "surface": "By oppression",
+        "lemma": "otser"
+      },
+      {
+        "surface": "and judgment",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "He was taken away",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "can recount",
+        "lemma": "siach"
+      },
+      {
+        "surface": "His descendants",
+        "lemma": "dor"
+      },
+      {
+        "surface": "He was cut off",
+        "lemma": "gazar"
+      },
+      {
+        "surface": "from the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of the living",
+        "lemma": "chay"
+      },
+      {
+        "surface": "He was stricken",
+        "lemma": "nega"
+      },
+      {
+        "surface": "for the transgression",
+        "lemma": "pesah"
+      },
+      {
+        "surface": "of My people",
+        "lemma": "am"
+      }
+    ],
+    "9": [
+      {
+        "surface": "a grave",
+        "lemma": "qever"
+      },
+      {
+        "surface": "the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "a rich man",
+        "lemma": "ashir"
+      },
+      {
+        "surface": "in His death",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "violence",
+        "lemma": "chamas"
+      },
+      {
+        "surface": "was any deceit",
+        "lemma": "mirmah"
+      },
+      {
+        "surface": "in His mouth",
+        "lemma": "peh"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Yet it was the LORD’s",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will",
+        "lemma": "chaphets"
+      },
+      {
+        "surface": "to crush Him",
+        "lemma": "dakah"
+      },
+      {
+        "surface": "and to cause Him to suffer",
+        "lemma": "chalah"
+      },
+      {
+        "surface": "His soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "is made",
+        "lemma": "sum"
+      },
+      {
+        "surface": "a guilt offering",
+        "lemma": "asham"
+      },
+      {
+        "surface": "His offspring",
+        "lemma": "zera"
+      },
+      {
+        "surface": "He will prolong",
+        "lemma": "arakh"
+      },
+      {
+        "surface": "His days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "and the good pleasure",
+        "lemma": "chephets"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will prosper",
+        "lemma": "tsalach"
+      },
+      {
+        "surface": "in His hand",
+        "lemma": "yad"
+      }
+    ],
+    "11": [
+      {
+        "surface": "After the anguish",
+        "lemma": "amal"
+      },
+      {
+        "surface": "of His soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "and be satisfied",
+        "lemma": "sava"
+      },
+      {
+        "surface": "By His knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "My righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "Servant",
+        "lemma": "eved"
+      },
+      {
+        "surface": "will justify",
+        "lemma": "tsadaq"
+      },
+      {
+        "surface": "many",
+        "lemma": "rav"
+      },
+      {
+        "surface": "will bear",
+        "lemma": "saval"
+      },
+      {
+        "surface": "their iniquities",
+        "lemma": "avan"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Therefore",
+        "lemma": "ken"
+      },
+      {
+        "surface": "I will allot Him a portion",
+        "lemma": "chalaq"
+      },
+      {
+        "surface": "with the great",
+        "lemma": "rav"
+      },
+      {
+        "surface": "and He will divide",
+        "lemma": "chalaq"
+      },
+      {
+        "surface": "the spoils",
+        "lemma": "shalal"
+      },
+      {
+        "surface": "the strong",
+        "lemma": "atsum"
+      },
+      {
+        "surface": "because",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "He has poured out",
+        "lemma": "arah"
+      },
+      {
+        "surface": "His life",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "unto death",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "and He was numbered",
+        "lemma": "manah"
+      },
+      {
+        "surface": "the transgressors",
+        "lemma": "pasah"
+      },
+      {
+        "surface": "bore",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the sin",
+        "lemma": "chet"
+      },
+      {
+        "surface": "of many",
+        "lemma": "rav"
+      },
+      {
+        "surface": "and made intercession",
+        "lemma": "paga"
+      },
+      {
+        "surface": "for the transgressors",
+        "lemma": "pasah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "rav",
+    "peh",
+    "paneh"
+  ]
+}

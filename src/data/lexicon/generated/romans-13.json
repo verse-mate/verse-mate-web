@@ -1,0 +1,505 @@
+{
+  "bookId": 45,
+  "book": "Romans",
+  "chapter": 13,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "must submit himself",
+        "lemma": "hupotasso"
+      },
+      {
+        "surface": "to the governing authorities",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "authority",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "have been appointed",
+        "lemma": "tasso"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ],
+    "2": [
+      {
+        "surface": "resists",
+        "lemma": "antitasso"
+      },
+      {
+        "surface": "authority",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "is opposing",
+        "lemma": "anthistemi"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "has set in place",
+        "lemma": "diatage"
+      },
+      {
+        "surface": "do so",
+        "lemma": "anthistemi"
+      },
+      {
+        "surface": "judgment",
+        "lemma": "krima"
+      }
+    ],
+    "3": [
+      {
+        "surface": "rulers",
+        "lemma": "archon"
+      },
+      {
+        "surface": "a terror",
+        "lemma": "phobos"
+      },
+      {
+        "surface": "to good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "conduct",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "to bad",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "to be unafraid",
+        "lemma": "phobeo"
+      },
+      {
+        "surface": "one in authority",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "right",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "approval",
+        "lemma": "epainos"
+      }
+    ],
+    "4": [
+      {
+        "surface": "God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "servant",
+        "lemma": "diakonos"
+      },
+      {
+        "surface": "good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "wrong",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "be afraid",
+        "lemma": "phobeo"
+      },
+      {
+        "surface": "he does not carry",
+        "lemma": "phoreo"
+      },
+      {
+        "surface": "sword",
+        "lemma": "machaira"
+      },
+      {
+        "surface": "in vain",
+        "lemma": "eike"
+      },
+      {
+        "surface": "God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "servant",
+        "lemma": "diakonos"
+      },
+      {
+        "surface": "an agent",
+        "lemma": "ekdikos"
+      },
+      {
+        "surface": "retribution",
+        "lemma": "orge"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "prasso"
+      },
+      {
+        "surface": "wrongdoer",
+        "lemma": "kakos"
+      }
+    ],
+    "5": [
+      {
+        "surface": "it is necessary",
+        "lemma": "anagke"
+      },
+      {
+        "surface": "to submit  to authority",
+        "lemma": "hupotasso"
+      },
+      {
+        "surface": "only",
+        "lemma": "monon"
+      },
+      {
+        "surface": "punishment",
+        "lemma": "orge"
+      },
+      {
+        "surface": "conscience",
+        "lemma": "suneidesis"
+      }
+    ],
+    "6": [
+      {
+        "surface": "you pay",
+        "lemma": "teleo"
+      },
+      {
+        "surface": "taxes",
+        "lemma": "phoros"
+      },
+      {
+        "surface": "God’s",
+        "lemma": "theos"
+      },
+      {
+        "surface": "servants",
+        "lemma": "leitourgos"
+      },
+      {
+        "surface": "who devote themselves",
+        "lemma": "proskartereo"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Pay",
+        "lemma": "apodidomi"
+      },
+      {
+        "surface": "you owe him",
+        "lemma": "opheile"
+      },
+      {
+        "surface": "taxes",
+        "lemma": "phoros"
+      },
+      {
+        "surface": "taxes are due",
+        "lemma": "phoros"
+      },
+      {
+        "surface": "revenue",
+        "lemma": "telos"
+      },
+      {
+        "surface": "revenue is due",
+        "lemma": "telos"
+      },
+      {
+        "surface": "respect",
+        "lemma": "phobos"
+      },
+      {
+        "surface": "respect is due",
+        "lemma": "phobos"
+      },
+      {
+        "surface": "honor",
+        "lemma": "time"
+      },
+      {
+        "surface": "honor is due",
+        "lemma": "time"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Be indebted",
+        "lemma": "opheilo"
+      },
+      {
+        "surface": "to no one",
+        "lemma": "medeis"
+      },
+      {
+        "surface": "to one another",
+        "lemma": "allelon"
+      },
+      {
+        "surface": "in love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "loves",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "neighbor",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "has fulfilled",
+        "lemma": "pleroo"
+      },
+      {
+        "surface": "the law",
+        "lemma": "nomos"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Do not commit adultery",
+        "lemma": "moicheuo"
+      },
+      {
+        "surface": "Do not murder",
+        "lemma": "phoneuo"
+      },
+      {
+        "surface": "Do not steal",
+        "lemma": "klepto"
+      },
+      {
+        "surface": "Do not covet",
+        "lemma": "epithumeo"
+      },
+      {
+        "surface": "other",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "commandments",
+        "lemma": "entole"
+      },
+      {
+        "surface": "are summed up",
+        "lemma": "anakephalaioomai"
+      },
+      {
+        "surface": "decree",
+        "lemma": "logos"
+      },
+      {
+        "surface": "Love",
+        "lemma": "agapao"
+      },
+      {
+        "surface": "neighbor",
+        "lemma": "plesion"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Love",
+        "lemma": "agape"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ergazomai"
+      },
+      {
+        "surface": "does no wrong",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "neighbor",
+        "lemma": "plesion"
+      },
+      {
+        "surface": "love is",
+        "lemma": "agape"
+      },
+      {
+        "surface": "the fulfillment",
+        "lemma": "pleroma"
+      },
+      {
+        "surface": "of the law",
+        "lemma": "nomos"
+      }
+    ],
+    "11": [
+      {
+        "surface": "occasion",
+        "lemma": "kairos"
+      },
+      {
+        "surface": "The hour",
+        "lemma": "hora"
+      },
+      {
+        "surface": "has come",
+        "lemma": "ede"
+      },
+      {
+        "surface": "to wake up",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "your slumber",
+        "lemma": "hupnos"
+      },
+      {
+        "surface": "salvation",
+        "lemma": "soteria"
+      },
+      {
+        "surface": "is nearer",
+        "lemma": "enguteros"
+      },
+      {
+        "surface": "now",
+        "lemma": "nun"
+      },
+      {
+        "surface": "we {first} believed",
+        "lemma": "pisteuo"
+      }
+    ],
+    "12": [
+      {
+        "surface": "night",
+        "lemma": "nux"
+      },
+      {
+        "surface": "is nearly over",
+        "lemma": "prokopto"
+      },
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "has drawn near",
+        "lemma": "engizo"
+      },
+      {
+        "surface": "let us lay aside",
+        "lemma": "apotithemi"
+      },
+      {
+        "surface": "deeds",
+        "lemma": "ergon"
+      },
+      {
+        "surface": "of darkness",
+        "lemma": "skotos"
+      },
+      {
+        "surface": "put on",
+        "lemma": "enduo"
+      },
+      {
+        "surface": "armor",
+        "lemma": "hoplon"
+      },
+      {
+        "surface": "of light",
+        "lemma": "phos"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Let us behave",
+        "lemma": "peripateo"
+      },
+      {
+        "surface": "decently",
+        "lemma": "euschemonos"
+      },
+      {
+        "surface": "the daytime",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "in carousing",
+        "lemma": "komos"
+      },
+      {
+        "surface": "drunkenness",
+        "lemma": "methe"
+      },
+      {
+        "surface": "in sexual immorality",
+        "lemma": "koite"
+      },
+      {
+        "surface": "debauchery",
+        "lemma": "aselgeia"
+      },
+      {
+        "surface": "in dissension",
+        "lemma": "eris"
+      },
+      {
+        "surface": "jealousy",
+        "lemma": "zelos"
+      }
+    ],
+    "14": [
+      {
+        "surface": "clothe yourselves with",
+        "lemma": "enduo"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "provision",
+        "lemma": "pronoia"
+      },
+      {
+        "surface": "the desires",
+        "lemma": "epithumia"
+      },
+      {
+        "surface": "flesh",
+        "lemma": "sarx"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "phoros",
+    "anthistemi",
+    "plesion"
+  ]
+}

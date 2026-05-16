@@ -1,0 +1,955 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 104,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "O my soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "my God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "You are very",
+        "lemma": "meod"
+      },
+      {
+        "surface": "great",
+        "lemma": "gadal"
+      },
+      {
+        "surface": "You are clothed with",
+        "lemma": "lavash"
+      },
+      {
+        "surface": "splendor",
+        "lemma": "hod"
+      },
+      {
+        "surface": "and majesty",
+        "lemma": "hadar"
+      }
+    ],
+    "2": [
+      {
+        "surface": "He wraps Himself",
+        "lemma": "atah"
+      },
+      {
+        "surface": "in light",
+        "lemma": "or"
+      },
+      {
+        "surface": "as with a garment",
+        "lemma": "salmah"
+      },
+      {
+        "surface": "He stretches out",
+        "lemma": "natah"
+      },
+      {
+        "surface": "the heavens",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "like a tent",
+        "lemma": "yeriah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "laying the beams",
+        "lemma": "qarah"
+      },
+      {
+        "surface": "of His chambers",
+        "lemma": "aliyyah"
+      },
+      {
+        "surface": "in the waters above",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "making",
+        "lemma": "sum"
+      },
+      {
+        "surface": "His chariot",
+        "lemma": "rekhuv"
+      },
+      {
+        "surface": "walking",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "the wings",
+        "lemma": "kanaph"
+      },
+      {
+        "surface": "of the wind",
+        "lemma": "ruach"
+      }
+    ],
+    "4": [
+      {
+        "surface": "the winds",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "His messengers",
+        "lemma": "maleakh"
+      },
+      {
+        "surface": "flames",
+        "lemma": "lahat"
+      },
+      {
+        "surface": "of fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "His servants",
+        "lemma": "sharat"
+      }
+    ],
+    "5": [
+      {
+        "surface": "He set",
+        "lemma": "yasad"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "its foundations",
+        "lemma": "makhon"
+      },
+      {
+        "surface": "never",
+        "lemma": "bal"
+      },
+      {
+        "surface": "to be moved",
+        "lemma": "mot"
+      }
+    ],
+    "6": [
+      {
+        "surface": "You covered",
+        "lemma": "kasah"
+      },
+      {
+        "surface": "it with the deep",
+        "lemma": "tehom"
+      },
+      {
+        "surface": "like a garment",
+        "lemma": "levush"
+      },
+      {
+        "surface": "the waters",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "stood",
+        "lemma": "amad"
+      },
+      {
+        "surface": "the mountains",
+        "lemma": "har"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Your rebuke",
+        "lemma": "gearah"
+      },
+      {
+        "surface": "the waters fled",
+        "lemma": "nus"
+      },
+      {
+        "surface": "the sound",
+        "lemma": "qol"
+      },
+      {
+        "surface": "of Your thunder",
+        "lemma": "raam"
+      },
+      {
+        "surface": "they hurried away",
+        "lemma": "chaphaz"
+      }
+    ],
+    "8": [
+      {
+        "surface": "the mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "rose",
+        "lemma": "alah"
+      },
+      {
+        "surface": "and the valleys",
+        "lemma": "biqah"
+      },
+      {
+        "surface": "sank",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "the place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "You assigned",
+        "lemma": "yasad"
+      }
+    ],
+    "9": [
+      {
+        "surface": "You set",
+        "lemma": "sum"
+      },
+      {
+        "surface": "a boundary",
+        "lemma": "gevul"
+      },
+      {
+        "surface": "they cannot",
+        "lemma": "bal"
+      },
+      {
+        "surface": "cross",
+        "lemma": "avar"
+      },
+      {
+        "surface": "that they may never",
+        "lemma": "bal"
+      },
+      {
+        "surface": "cover",
+        "lemma": "kasah"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      }
+    ],
+    "10": [
+      {
+        "surface": "He sends forth",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "springs",
+        "lemma": "mayan"
+      },
+      {
+        "surface": "in the valleys",
+        "lemma": "nachal"
+      },
+      {
+        "surface": "they flow",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "between",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the mountains",
+        "lemma": "har"
+      }
+    ],
+    "11": [
+      {
+        "surface": "They give drink",
+        "lemma": "shaqah"
+      },
+      {
+        "surface": "beast",
+        "lemma": "chay"
+      },
+      {
+        "surface": "of the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "the wild donkeys",
+        "lemma": "pere"
+      },
+      {
+        "surface": "quench",
+        "lemma": "shavar"
+      },
+      {
+        "surface": "their thirst",
+        "lemma": "tsama"
+      }
+    ],
+    "12": [
+      {
+        "surface": "The birds",
+        "lemma": "oph"
+      },
+      {
+        "surface": "of the air",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "nest",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "among",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the branches",
+        "lemma": "ophe"
+      }
+    ],
+    "13": [
+      {
+        "surface": "He waters",
+        "lemma": "shaqah"
+      },
+      {
+        "surface": "the mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "from His chambers",
+        "lemma": "aliyyah"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "is satisfied",
+        "lemma": "sava"
+      },
+      {
+        "surface": "by the fruit",
+        "lemma": "peri"
+      },
+      {
+        "surface": "of His works",
+        "lemma": "maaseh"
+      }
+    ],
+    "14": [
+      {
+        "surface": "He makes the grass",
+        "lemma": "chatsir"
+      },
+      {
+        "surface": "grow",
+        "lemma": "tsamach"
+      },
+      {
+        "surface": "for the livestock",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "and provides crops",
+        "lemma": "esev"
+      },
+      {
+        "surface": "for man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "to cultivate",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      }
+    ],
+    "15": [
+      {
+        "surface": "wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "that gladdens",
+        "lemma": "samach"
+      },
+      {
+        "surface": "the heart",
+        "lemma": "levav"
+      },
+      {
+        "surface": "of man",
+        "lemma": "enosh"
+      },
+      {
+        "surface": "oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "that makes his face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "to shine",
+        "lemma": "tsahal"
+      },
+      {
+        "surface": "and bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "that sustains",
+        "lemma": "saad"
+      },
+      {
+        "surface": "his",
+        "lemma": "enosh"
+      },
+      {
+        "surface": "heart",
+        "lemma": "levav"
+      }
+    ],
+    "16": [
+      {
+        "surface": "The trees",
+        "lemma": "ets"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "have their fill",
+        "lemma": "sava"
+      },
+      {
+        "surface": "the cedars",
+        "lemma": "erez"
+      },
+      {
+        "surface": "of Lebanon",
+        "lemma": "levanon"
+      },
+      {
+        "surface": "He planted",
+        "lemma": "nata"
+      }
+    ],
+    "17": [
+      {
+        "surface": "the birds",
+        "lemma": "tsippor"
+      },
+      {
+        "surface": "build their nests",
+        "lemma": "qanan"
+      },
+      {
+        "surface": "the stork",
+        "lemma": "chasidah"
+      },
+      {
+        "surface": "makes her home",
+        "lemma": "bet"
+      },
+      {
+        "surface": "in the cypresses",
+        "lemma": "berosh"
+      }
+    ],
+    "18": [
+      {
+        "surface": "The high",
+        "lemma": "gavoah"
+      },
+      {
+        "surface": "mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "are for the wild goats",
+        "lemma": "yael"
+      },
+      {
+        "surface": "the cliffs",
+        "lemma": "sela"
+      },
+      {
+        "surface": "a refuge",
+        "lemma": "machaseh"
+      },
+      {
+        "surface": "for the rock badgers",
+        "lemma": "shaphan"
+      }
+    ],
+    "19": [
+      {
+        "surface": "the moon",
+        "lemma": "yareach"
+      },
+      {
+        "surface": "to mark the seasons",
+        "lemma": "moed"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "knows",
+        "lemma": "yada"
+      },
+      {
+        "surface": "when to set",
+        "lemma": "mavo"
+      }
+    ],
+    "20": [
+      {
+        "surface": "You bring",
+        "lemma": "shit"
+      },
+      {
+        "surface": "darkness",
+        "lemma": "choshekh"
+      },
+      {
+        "surface": "night",
+        "lemma": "laylah"
+      },
+      {
+        "surface": "the beasts",
+        "lemma": "chay"
+      },
+      {
+        "surface": "of the forest",
+        "lemma": "yaar"
+      },
+      {
+        "surface": "prowl",
+        "lemma": "ramas"
+      }
+    ],
+    "21": [
+      {
+        "surface": "The young lions",
+        "lemma": "kephir"
+      },
+      {
+        "surface": "roar",
+        "lemma": "shaag"
+      },
+      {
+        "surface": "for their prey",
+        "lemma": "tereph"
+      },
+      {
+        "surface": "and seek",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "their food",
+        "lemma": "okhel"
+      },
+      {
+        "surface": "from God",
+        "lemma": "el"
+      }
+    ],
+    "22": [
+      {
+        "surface": "The sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "rises",
+        "lemma": "zarach"
+      },
+      {
+        "surface": "and they withdraw",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "they lie down",
+        "lemma": "ravats"
+      },
+      {
+        "surface": "their dens",
+        "lemma": "meonah"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "to his work",
+        "lemma": "poal"
+      },
+      {
+        "surface": "and to his labor",
+        "lemma": "avodah"
+      },
+      {
+        "surface": "evening",
+        "lemma": "erev"
+      }
+    ],
+    "24": [
+      {
+        "surface": "How",
+        "lemma": "mah"
+      },
+      {
+        "surface": "many",
+        "lemma": "ravav"
+      },
+      {
+        "surface": "are Your works",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "In wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "is full of",
+        "lemma": "male"
+      },
+      {
+        "surface": "Your creatures",
+        "lemma": "qinyan"
+      }
+    ],
+    "25": [
+      {
+        "surface": "is the sea",
+        "lemma": "yam"
+      },
+      {
+        "surface": "vast",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "and wide",
+        "lemma": "rachav"
+      },
+      {
+        "surface": "teeming with creatures",
+        "lemma": "remes"
+      },
+      {
+        "surface": "beyond number",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "living things",
+        "lemma": "chay"
+      },
+      {
+        "surface": "both great",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "small",
+        "lemma": "qatan"
+      }
+    ],
+    "26": [
+      {
+        "surface": "There",
+        "lemma": "sham"
+      },
+      {
+        "surface": "the ships",
+        "lemma": "oniyyah"
+      },
+      {
+        "surface": "pass",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "and Leviathan",
+        "lemma": "livyatan"
+      },
+      {
+        "surface": "You formed",
+        "lemma": "yatsar"
+      },
+      {
+        "surface": "to frolic",
+        "lemma": "sachaq"
+      }
+    ],
+    "27": [
+      {
+        "surface": "look",
+        "lemma": "savar"
+      },
+      {
+        "surface": "their food",
+        "lemma": "okhel"
+      }
+    ],
+    "28": [
+      {
+        "surface": "they gather it up",
+        "lemma": "laqat"
+      },
+      {
+        "surface": "when You open",
+        "lemma": "patach"
+      },
+      {
+        "surface": "Your hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "they are satisfied",
+        "lemma": "sava"
+      },
+      {
+        "surface": "with good things",
+        "lemma": "tov"
+      }
+    ],
+    "29": [
+      {
+        "surface": "When You hide",
+        "lemma": "satar"
+      },
+      {
+        "surface": "Your face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "they are terrified",
+        "lemma": "bahal"
+      },
+      {
+        "surface": "when You take away",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "their breath",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "they die",
+        "lemma": "gava"
+      },
+      {
+        "surface": "dust",
+        "lemma": "aphar"
+      }
+    ],
+    "30": [
+      {
+        "surface": "When You send",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "Your Spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "they are created",
+        "lemma": "bara"
+      },
+      {
+        "surface": "and You renew",
+        "lemma": "chadash"
+      },
+      {
+        "surface": "the face",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "adamah"
+      }
+    ],
+    "31": [
+      {
+        "surface": "May the glory",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "forever",
+        "lemma": "olam"
+      },
+      {
+        "surface": "may the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "rejoice",
+        "lemma": "samach"
+      },
+      {
+        "surface": "in His works",
+        "lemma": "maaseh"
+      }
+    ],
+    "32": [
+      {
+        "surface": "He looks",
+        "lemma": "navat"
+      },
+      {
+        "surface": "on the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and it trembles",
+        "lemma": "raad"
+      },
+      {
+        "surface": "He touches",
+        "lemma": "naga"
+      },
+      {
+        "surface": "the mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "and they smolder",
+        "lemma": "ashan"
+      }
+    ],
+    "33": [
+      {
+        "surface": "I will sing",
+        "lemma": "shir"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "all my life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "I will sing praise",
+        "lemma": "zamar"
+      },
+      {
+        "surface": "to my God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "while I have my being",
+        "lemma": "od"
+      }
+    ],
+    "34": [
+      {
+        "surface": "May my meditation",
+        "lemma": "siach"
+      },
+      {
+        "surface": "be pleasing",
+        "lemma": "arev"
+      },
+      {
+        "surface": "rejoice",
+        "lemma": "samach"
+      },
+      {
+        "surface": "in the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "35": [
+      {
+        "surface": "May sinners",
+        "lemma": "chatta"
+      },
+      {
+        "surface": "vanish",
+        "lemma": "tamam"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "be no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "more",
+        "lemma": "od"
+      },
+      {
+        "surface": "Bless",
+        "lemma": "barakh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "O my soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "Hallelujah",
+        "lemma": "halal"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "har",
+    "ruach",
+    "chay"
+  ]
+}

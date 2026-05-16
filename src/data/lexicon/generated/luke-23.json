@@ -1,0 +1,1419 @@
+{
+  "bookId": 42,
+  "book": "Luke",
+  "chapter": 23,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "whole",
+        "lemma": "hapas"
+      },
+      {
+        "surface": "council",
+        "lemma": "plethos"
+      },
+      {
+        "surface": "rose",
+        "lemma": "anistemi"
+      },
+      {
+        "surface": "and led",
+        "lemma": "ago"
+      },
+      {
+        "surface": "Pilate",
+        "lemma": "pilatos"
+      }
+    ],
+    "2": [
+      {
+        "surface": "they began",
+        "lemma": "archomai"
+      },
+      {
+        "surface": "to accuse",
+        "lemma": "kategoreo"
+      },
+      {
+        "surface": "subverting",
+        "lemma": "diastrepho"
+      },
+      {
+        "surface": "nation",
+        "lemma": "ethnos"
+      },
+      {
+        "surface": "forbidding",
+        "lemma": "koluo"
+      },
+      {
+        "surface": "payment of taxes",
+        "lemma": "phoros"
+      },
+      {
+        "surface": "to Caesar",
+        "lemma": "kaisar"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "a King",
+        "lemma": "basileus"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Pilate",
+        "lemma": "pilatos"
+      },
+      {
+        "surface": "asked",
+        "lemma": "erotao"
+      },
+      {
+        "surface": "King",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "Jews",
+        "lemma": "ioudaios"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Pilate",
+        "lemma": "pilatos"
+      },
+      {
+        "surface": "chief priests",
+        "lemma": "archiereus"
+      },
+      {
+        "surface": "crowds",
+        "lemma": "ochlos"
+      },
+      {
+        "surface": "basis for a charge",
+        "lemma": "aitios"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      }
+    ],
+    "5": [
+      {
+        "surface": "they kept insisting",
+        "lemma": "epischuo"
+      },
+      {
+        "surface": "He stirs up",
+        "lemma": "anaseio"
+      },
+      {
+        "surface": "people",
+        "lemma": "laos"
+      },
+      {
+        "surface": "all",
+        "lemma": "holos"
+      },
+      {
+        "surface": "Judea",
+        "lemma": "ioudaia"
+      },
+      {
+        "surface": "with His teaching",
+        "lemma": "didasko"
+      },
+      {
+        "surface": "He began",
+        "lemma": "archomai"
+      },
+      {
+        "surface": "Galilee",
+        "lemma": "galilaia"
+      },
+      {
+        "surface": "here",
+        "lemma": "hode"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Pilate",
+        "lemma": "pilatos"
+      },
+      {
+        "surface": "he asked",
+        "lemma": "eperotao"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "a Galilean",
+        "lemma": "galilaios"
+      }
+    ],
+    "7": [
+      {
+        "surface": "learning",
+        "lemma": "epiginosko"
+      },
+      {
+        "surface": "Herod’s",
+        "lemma": "herodes"
+      },
+      {
+        "surface": "jurisdiction",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "he sent Him",
+        "lemma": "anapempo"
+      },
+      {
+        "surface": "Herod",
+        "lemma": "herodes"
+      },
+      {
+        "surface": "Jerusalem",
+        "lemma": "hierosoluma"
+      },
+      {
+        "surface": "time",
+        "lemma": "hemera"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Herod",
+        "lemma": "herodes"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "greatly",
+        "lemma": "lian"
+      },
+      {
+        "surface": "pleased",
+        "lemma": "chairo"
+      },
+      {
+        "surface": "a long",
+        "lemma": "hikanos"
+      },
+      {
+        "surface": "time",
+        "lemma": "chronos"
+      },
+      {
+        "surface": "was hoping",
+        "lemma": "elpizo"
+      },
+      {
+        "surface": "miracle",
+        "lemma": "semeion"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Herod questioned",
+        "lemma": "eperotao"
+      },
+      {
+        "surface": "great",
+        "lemma": "hikanos"
+      },
+      {
+        "surface": "length",
+        "lemma": "logos"
+      }
+    ],
+    "10": [
+      {
+        "surface": "chief priests",
+        "lemma": "archiereus"
+      },
+      {
+        "surface": "scribes",
+        "lemma": "grammateus"
+      },
+      {
+        "surface": "vehemently",
+        "lemma": "eutonos"
+      },
+      {
+        "surface": "accusing",
+        "lemma": "kategoreo"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Herod",
+        "lemma": "herodes"
+      },
+      {
+        "surface": "soldiers",
+        "lemma": "strateuma"
+      },
+      {
+        "surface": "ridiculed",
+        "lemma": "exoutheneo"
+      },
+      {
+        "surface": "mocked Him",
+        "lemma": "empaizo"
+      },
+      {
+        "surface": "Dressing Him in",
+        "lemma": "periballo"
+      },
+      {
+        "surface": "a fine",
+        "lemma": "lampros"
+      },
+      {
+        "surface": "robe",
+        "lemma": "esthes"
+      },
+      {
+        "surface": "they sent Him back",
+        "lemma": "anapempo"
+      },
+      {
+        "surface": "Pilate",
+        "lemma": "pilatos"
+      }
+    ],
+    "12": [
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "Herod",
+        "lemma": "herodes"
+      },
+      {
+        "surface": "Pilate",
+        "lemma": "pilatos"
+      },
+      {
+        "surface": "friends",
+        "lemma": "philos"
+      },
+      {
+        "surface": "before this time",
+        "lemma": "prouparcho"
+      },
+      {
+        "surface": "enemies",
+        "lemma": "echthra"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Pilate",
+        "lemma": "pilatos"
+      },
+      {
+        "surface": "called together",
+        "lemma": "sugkaleo"
+      },
+      {
+        "surface": "chief priests",
+        "lemma": "archiereus"
+      },
+      {
+        "surface": "rulers",
+        "lemma": "archon"
+      },
+      {
+        "surface": "people",
+        "lemma": "laos"
+      }
+    ],
+    "14": [
+      {
+        "surface": "You brought",
+        "lemma": "prosphero"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "was inciting",
+        "lemma": "apostrepho"
+      },
+      {
+        "surface": "people {to rebellion",
+        "lemma": "laos"
+      },
+      {
+        "surface": "have examined Him",
+        "lemma": "anakrino"
+      },
+      {
+        "surface": "Him",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "guilty",
+        "lemma": "aitios"
+      },
+      {
+        "surface": "your charges",
+        "lemma": "kategoreo"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Herod",
+        "lemma": "herodes"
+      },
+      {
+        "surface": "he sent Him back",
+        "lemma": "anapempo"
+      },
+      {
+        "surface": "done",
+        "lemma": "prasso"
+      },
+      {
+        "surface": "deserving",
+        "lemma": "axios"
+      },
+      {
+        "surface": "of death",
+        "lemma": "thanatos"
+      }
+    ],
+    "16": [
+      {
+        "surface": "I will punish",
+        "lemma": "paideuo"
+      },
+      {
+        "surface": "and release Him",
+        "lemma": "apoluo"
+      }
+    ],
+    "18": [
+      {
+        "surface": "they all cried out",
+        "lemma": "anakrazo"
+      },
+      {
+        "surface": "in unison",
+        "lemma": "pamplethei"
+      },
+      {
+        "surface": "Away with",
+        "lemma": "airo"
+      },
+      {
+        "surface": "Release",
+        "lemma": "apoluo"
+      },
+      {
+        "surface": "Barabbas",
+        "lemma": "barabbas"
+      }
+    ],
+    "19": [
+      {
+        "surface": "had been imprisoned",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "insurrection",
+        "lemma": "stasis"
+      },
+      {
+        "surface": "city",
+        "lemma": "polis"
+      },
+      {
+        "surface": "for murder",
+        "lemma": "phonos"
+      }
+    ],
+    "20": [
+      {
+        "surface": "to release",
+        "lemma": "apoluo"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Pilate",
+        "lemma": "pilatos"
+      },
+      {
+        "surface": "addressed",
+        "lemma": "prosphoneo"
+      },
+      {
+        "surface": "again",
+        "lemma": "palin"
+      }
+    ],
+    "21": [
+      {
+        "surface": "they kept shouting",
+        "lemma": "epiphoneo"
+      },
+      {
+        "surface": "Crucify Him",
+        "lemma": "stauroo"
+      },
+      {
+        "surface": "Crucify",
+        "lemma": "stauroo"
+      }
+    ],
+    "22": [
+      {
+        "surface": "A third time",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "evil",
+        "lemma": "kakos"
+      },
+      {
+        "surface": "offense worthy",
+        "lemma": "aitios"
+      },
+      {
+        "surface": "of death",
+        "lemma": "thanatos"
+      },
+      {
+        "surface": "after I punish",
+        "lemma": "paideuo"
+      },
+      {
+        "surface": "I will release Him",
+        "lemma": "apoluo"
+      }
+    ],
+    "23": [
+      {
+        "surface": "they were insistent",
+        "lemma": "epikeimai"
+      },
+      {
+        "surface": "demanding",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "with loud voices",
+        "lemma": "phone"
+      },
+      {
+        "surface": "to be crucified",
+        "lemma": "stauroo"
+      },
+      {
+        "surface": "clamor",
+        "lemma": "phone"
+      },
+      {
+        "surface": "prevailed",
+        "lemma": "katischuo"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Pilate",
+        "lemma": "pilatos"
+      },
+      {
+        "surface": "sentenced that",
+        "lemma": "epikrino"
+      },
+      {
+        "surface": "demand",
+        "lemma": "aitema"
+      }
+    ],
+    "25": [
+      {
+        "surface": "they had requested",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "he released",
+        "lemma": "apoluo"
+      },
+      {
+        "surface": "imprisoned",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "insurrection",
+        "lemma": "stasis"
+      },
+      {
+        "surface": "murder",
+        "lemma": "phonos"
+      },
+      {
+        "surface": "he handed",
+        "lemma": "paradidomi"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "will",
+        "lemma": "thelema"
+      }
+    ],
+    "26": [
+      {
+        "surface": "the soldiers led Him away",
+        "lemma": "apago"
+      },
+      {
+        "surface": "they seized",
+        "lemma": "epilambano"
+      },
+      {
+        "surface": "Simon",
+        "lemma": "simon"
+      },
+      {
+        "surface": "of Cyrene",
+        "lemma": "kurenaios"
+      },
+      {
+        "surface": "the country",
+        "lemma": "agros"
+      },
+      {
+        "surface": "and they put",
+        "lemma": "epitithemi"
+      },
+      {
+        "surface": "cross",
+        "lemma": "stauros"
+      },
+      {
+        "surface": "to carry",
+        "lemma": "phero"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      }
+    ],
+    "27": [
+      {
+        "surface": "number",
+        "lemma": "plethos"
+      },
+      {
+        "surface": "of people",
+        "lemma": "laos"
+      },
+      {
+        "surface": "followed",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "women",
+        "lemma": "gune"
+      },
+      {
+        "surface": "kept mourning",
+        "lemma": "kopto"
+      },
+      {
+        "surface": "wailing",
+        "lemma": "threneo"
+      }
+    ],
+    "28": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "turned",
+        "lemma": "strepho"
+      },
+      {
+        "surface": "Daughters",
+        "lemma": "thugater"
+      },
+      {
+        "surface": "of Jerusalem",
+        "lemma": "hierousalem"
+      },
+      {
+        "surface": "weep",
+        "lemma": "klaio"
+      },
+      {
+        "surface": "weep",
+        "lemma": "klaio"
+      },
+      {
+        "surface": "children",
+        "lemma": "teknon"
+      }
+    ],
+    "29": [
+      {
+        "surface": "the days",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "people will say",
+        "lemma": "ero"
+      },
+      {
+        "surface": "Blessed are",
+        "lemma": "makarios"
+      },
+      {
+        "surface": "barren women",
+        "lemma": "steira"
+      },
+      {
+        "surface": "wombs",
+        "lemma": "koilia"
+      },
+      {
+        "surface": "bore",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "breasts",
+        "lemma": "mastos"
+      },
+      {
+        "surface": "nursed",
+        "lemma": "trepho"
+      }
+    ],
+    "30": [
+      {
+        "surface": "At that time",
+        "lemma": "tote"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "archomai"
+      },
+      {
+        "surface": "mountains",
+        "lemma": "oros"
+      },
+      {
+        "surface": "Fall",
+        "lemma": "pipto"
+      },
+      {
+        "surface": "hills",
+        "lemma": "bounos"
+      },
+      {
+        "surface": "Cover",
+        "lemma": "kalupto"
+      }
+    ],
+    "31": [
+      {
+        "surface": "tree",
+        "lemma": "xulon"
+      },
+      {
+        "surface": "is green",
+        "lemma": "hugros"
+      },
+      {
+        "surface": "dry",
+        "lemma": "xeros"
+      }
+    ],
+    "32": [
+      {
+        "surface": "Two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "others",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "who were criminals",
+        "lemma": "kakourgos"
+      },
+      {
+        "surface": "were also led away",
+        "lemma": "ago"
+      },
+      {
+        "surface": "to be executed",
+        "lemma": "anaireo"
+      }
+    ],
+    "33": [
+      {
+        "surface": "place",
+        "lemma": "topos"
+      },
+      {
+        "surface": "called",
+        "lemma": "kaleo"
+      },
+      {
+        "surface": "The Skull",
+        "lemma": "kranion"
+      },
+      {
+        "surface": "they crucified",
+        "lemma": "stauroo"
+      },
+      {
+        "surface": "there",
+        "lemma": "ekei"
+      },
+      {
+        "surface": "criminals",
+        "lemma": "kakourgos"
+      },
+      {
+        "surface": "His right",
+        "lemma": "dexios"
+      },
+      {
+        "surface": "His left",
+        "lemma": "aristeros"
+      }
+    ],
+    "34": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "forgive",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "they divided up",
+        "lemma": "diamerizo"
+      },
+      {
+        "surface": "garments",
+        "lemma": "himation"
+      },
+      {
+        "surface": "by casting",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "lots",
+        "lemma": "kleros"
+      }
+    ],
+    "35": [
+      {
+        "surface": "people",
+        "lemma": "laos"
+      },
+      {
+        "surface": "watching",
+        "lemma": "theoreo"
+      },
+      {
+        "surface": "rulers",
+        "lemma": "archon"
+      },
+      {
+        "surface": "sneered at Him",
+        "lemma": "ekmukterizo"
+      },
+      {
+        "surface": "He saved",
+        "lemma": "sozo"
+      },
+      {
+        "surface": "others",
+        "lemma": "allos"
+      },
+      {
+        "surface": "let Him save",
+        "lemma": "sozo"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Chosen One",
+        "lemma": "eklektos"
+      }
+    ],
+    "36": [
+      {
+        "surface": "soldiers",
+        "lemma": "stratiotes"
+      },
+      {
+        "surface": "mocked",
+        "lemma": "empaizo"
+      },
+      {
+        "surface": "and came up",
+        "lemma": "proserchomai"
+      },
+      {
+        "surface": "to offer",
+        "lemma": "prosphero"
+      },
+      {
+        "surface": "sour wine",
+        "lemma": "oxos"
+      }
+    ],
+    "37": [
+      {
+        "surface": "King",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "Jews",
+        "lemma": "ioudaios"
+      },
+      {
+        "surface": "save",
+        "lemma": "sozo"
+      }
+    ],
+    "38": [
+      {
+        "surface": "an inscription",
+        "lemma": "epigraphe"
+      },
+      {
+        "surface": "KING",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "JEWS",
+        "lemma": "ioudaios"
+      }
+    ],
+    "39": [
+      {
+        "surface": "criminals",
+        "lemma": "kakourgos"
+      },
+      {
+        "surface": "who hung there",
+        "lemma": "kremao"
+      },
+      {
+        "surface": "heaped abuse on",
+        "lemma": "blasphemeo"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "Save",
+        "lemma": "sozo"
+      }
+    ],
+    "40": [
+      {
+        "surface": "other one",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "rebuked",
+        "lemma": "epitimao"
+      },
+      {
+        "surface": "saying",
+        "lemma": "phemi"
+      },
+      {
+        "surface": "fear",
+        "lemma": "phobeo"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "judgment",
+        "lemma": "krima"
+      }
+    ],
+    "41": [
+      {
+        "surface": "justly",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "we are receiving",
+        "lemma": "apolambano"
+      },
+      {
+        "surface": "our actions",
+        "lemma": "prasso"
+      },
+      {
+        "surface": "deserve",
+        "lemma": "axios"
+      },
+      {
+        "surface": "has done",
+        "lemma": "prasso"
+      },
+      {
+        "surface": "wrong",
+        "lemma": "atopos"
+      }
+    ],
+    "42": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "remember",
+        "lemma": "mimnesko"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      }
+    ],
+    "43": [
+      {
+        "surface": "Truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "today",
+        "lemma": "semeron"
+      },
+      {
+        "surface": "Paradise",
+        "lemma": "paradeisos"
+      }
+    ],
+    "44": [
+      {
+        "surface": "vvv",
+        "lemma": "ede"
+      },
+      {
+        "surface": "the sixth",
+        "lemma": "hektos"
+      },
+      {
+        "surface": "hour",
+        "lemma": "hora"
+      },
+      {
+        "surface": "darkness",
+        "lemma": "skotos"
+      },
+      {
+        "surface": "all",
+        "lemma": "holos"
+      },
+      {
+        "surface": "land",
+        "lemma": "ge"
+      },
+      {
+        "surface": "the ninth",
+        "lemma": "ennatos"
+      },
+      {
+        "surface": "hour",
+        "lemma": "hora"
+      }
+    ],
+    "45": [
+      {
+        "surface": "sun",
+        "lemma": "helios"
+      },
+      {
+        "surface": "was darkened",
+        "lemma": "ekleipo"
+      },
+      {
+        "surface": "veil",
+        "lemma": "katapetasma"
+      },
+      {
+        "surface": "temple",
+        "lemma": "naos"
+      },
+      {
+        "surface": "was torn",
+        "lemma": "schizo"
+      },
+      {
+        "surface": "down the middle",
+        "lemma": "mesos"
+      }
+    ],
+    "46": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "called out",
+        "lemma": "phoneo"
+      },
+      {
+        "surface": "in a loud voice",
+        "lemma": "phone"
+      },
+      {
+        "surface": "Father",
+        "lemma": "pater"
+      },
+      {
+        "surface": "hands",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "I commit",
+        "lemma": "paratithemi"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "He breathed His last",
+        "lemma": "ekpneo"
+      }
+    ],
+    "47": [
+      {
+        "surface": "centurion",
+        "lemma": "hekatontarchos"
+      },
+      {
+        "surface": "he gave glory",
+        "lemma": "doxazo"
+      },
+      {
+        "surface": "to God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "Surely",
+        "lemma": "ontos"
+      },
+      {
+        "surface": "a righteous",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "man",
+        "lemma": "anthropos"
+      }
+    ],
+    "48": [
+      {
+        "surface": "people",
+        "lemma": "ochlos"
+      },
+      {
+        "surface": "who had gathered",
+        "lemma": "sumparaginomai"
+      },
+      {
+        "surface": "spectacle",
+        "lemma": "theoria"
+      },
+      {
+        "surface": "saw",
+        "lemma": "theoreo"
+      },
+      {
+        "surface": "they returned home",
+        "lemma": "hupostrepho"
+      },
+      {
+        "surface": "beating",
+        "lemma": "tupto"
+      },
+      {
+        "surface": "breasts",
+        "lemma": "stethos"
+      }
+    ],
+    "49": [
+      {
+        "surface": "knew",
+        "lemma": "gnostos"
+      },
+      {
+        "surface": "the women",
+        "lemma": "gune"
+      },
+      {
+        "surface": "had followed",
+        "lemma": "sunakoloutheo"
+      },
+      {
+        "surface": "Galilee",
+        "lemma": "galilaia"
+      },
+      {
+        "surface": "at a distance",
+        "lemma": "makrothen"
+      }
+    ],
+    "50": [
+      {
+        "surface": "vvv",
+        "lemma": "aner"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "huparcho"
+      },
+      {
+        "surface": "a Council member",
+        "lemma": "bouleutes"
+      },
+      {
+        "surface": "named",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "Joseph",
+        "lemma": "ioseph"
+      },
+      {
+        "surface": "a good",
+        "lemma": "agathos"
+      },
+      {
+        "surface": "righteous",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "man",
+        "lemma": "aner"
+      }
+    ],
+    "51": [
+      {
+        "surface": "had not consented",
+        "lemma": "sugkatatithemi"
+      },
+      {
+        "surface": "decision",
+        "lemma": "boule"
+      },
+      {
+        "surface": "action",
+        "lemma": "praxis"
+      },
+      {
+        "surface": "the Judean town",
+        "lemma": "polis"
+      },
+      {
+        "surface": "of Arimathea",
+        "lemma": "arimathaia"
+      },
+      {
+        "surface": "was waiting for",
+        "lemma": "prosdechomai"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      }
+    ],
+    "52": [
+      {
+        "surface": "went",
+        "lemma": "proserchomai"
+      },
+      {
+        "surface": "to Pilate",
+        "lemma": "pilatos"
+      },
+      {
+        "surface": "to ask for",
+        "lemma": "aiteo"
+      },
+      {
+        "surface": "body",
+        "lemma": "soma"
+      },
+      {
+        "surface": "of Jesus",
+        "lemma": "iesous"
+      }
+    ],
+    "53": [
+      {
+        "surface": "he took it down",
+        "lemma": "kathaireo"
+      },
+      {
+        "surface": "wrapped",
+        "lemma": "entulisso"
+      },
+      {
+        "surface": "in a linen cloth",
+        "lemma": "sindon"
+      },
+      {
+        "surface": "placed",
+        "lemma": "tithemi"
+      },
+      {
+        "surface": "a tomb",
+        "lemma": "mnema"
+      },
+      {
+        "surface": "cut into the rock",
+        "lemma": "laxeutos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "oupo"
+      },
+      {
+        "surface": "been laid",
+        "lemma": "keimai"
+      }
+    ],
+    "54": [
+      {
+        "surface": "Preparation",
+        "lemma": "paraskeue"
+      },
+      {
+        "surface": "Day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "the Sabbath",
+        "lemma": "sabbaton"
+      },
+      {
+        "surface": "was beginning",
+        "lemma": "epiphosko"
+      }
+    ],
+    "55": [
+      {
+        "surface": "women",
+        "lemma": "gune"
+      },
+      {
+        "surface": "had come with",
+        "lemma": "sunerchomai"
+      },
+      {
+        "surface": "Galilee",
+        "lemma": "galilaia"
+      },
+      {
+        "surface": "followed",
+        "lemma": "katakoloutheo"
+      },
+      {
+        "surface": "and they saw",
+        "lemma": "theaomai"
+      },
+      {
+        "surface": "tomb",
+        "lemma": "mnemeion"
+      },
+      {
+        "surface": "body",
+        "lemma": "soma"
+      },
+      {
+        "surface": "was placed",
+        "lemma": "tithemi"
+      }
+    ],
+    "56": [
+      {
+        "surface": "they returned",
+        "lemma": "hupostrepho"
+      },
+      {
+        "surface": "to prepare",
+        "lemma": "hetoimazo"
+      },
+      {
+        "surface": "spices",
+        "lemma": "aroma"
+      },
+      {
+        "surface": "perfumes",
+        "lemma": "muron"
+      },
+      {
+        "surface": "they rested",
+        "lemma": "hesuchazo"
+      },
+      {
+        "surface": "Sabbath",
+        "lemma": "sabbaton"
+      },
+      {
+        "surface": "commandment",
+        "lemma": "entole"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "kakourgos",
+    "anapempo",
+    "aitios"
+  ]
+}

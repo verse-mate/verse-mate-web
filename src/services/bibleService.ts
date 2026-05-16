@@ -374,7 +374,6 @@ export async function fetchVerseInsights(book: string, chapter: number): Promise
       insights.push({
         verse,
         crossReferences: extractCrossRefs(body),
-        originalLanguage: '',
         historicalContext: body,
       });
     }
@@ -384,7 +383,6 @@ export async function fetchVerseInsights(book: string, chapter: number): Promise
       insights.push({
         verse: 1,
         crossReferences: [],
-        originalLanguage: '',
         historicalContext: cache.summary,
       });
     }

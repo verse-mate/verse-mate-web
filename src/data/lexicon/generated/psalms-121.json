@@ -1,0 +1,185 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 121,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "A song",
+        "lemma": "shir"
+      },
+      {
+        "surface": "of ascents",
+        "lemma": "maalah"
+      },
+      {
+        "surface": "I lift up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "my eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "the hills",
+        "lemma": "har"
+      },
+      {
+        "surface": "From where",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "does my help",
+        "lemma": "ezer"
+      }
+    ],
+    "2": [
+      {
+        "surface": "My help",
+        "lemma": "ezer"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of heaven",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "and earth",
+        "lemma": "erets"
+      }
+    ],
+    "3": [
+      {
+        "surface": "your foot",
+        "lemma": "regel"
+      },
+      {
+        "surface": "to slip",
+        "lemma": "mot"
+      },
+      {
+        "surface": "your Protector",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "slumber",
+        "lemma": "num"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Behold",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "the Protector",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "slumber",
+        "lemma": "num"
+      },
+      {
+        "surface": "sleep",
+        "lemma": "yashen"
+      }
+    ],
+    "5": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is your keeper",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is the shade",
+        "lemma": "tsel"
+      },
+      {
+        "surface": "your right",
+        "lemma": "yamin"
+      },
+      {
+        "surface": "hand",
+        "lemma": "yad"
+      }
+    ],
+    "6": [
+      {
+        "surface": "The sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "strike",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "you by day",
+        "lemma": "yomam"
+      },
+      {
+        "surface": "nor the moon",
+        "lemma": "yareach"
+      },
+      {
+        "surface": "by night",
+        "lemma": "laylah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will guard you",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "He will preserve",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "your soul",
+        "lemma": "nephesh"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will watch over",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "both now",
+        "lemma": "attah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "shamar",
+    "num",
+    "ezer"
+  ]
+}

@@ -1,0 +1,1679 @@
+{
+  "bookId": 12,
+  "book": "2 Kings",
+  "chapter": 9,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Now Elisha",
+        "lemma": "elisah"
+      },
+      {
+        "surface": "the prophet",
+        "lemma": "navi"
+      },
+      {
+        "surface": "one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "of the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of the prophets",
+        "lemma": "navi"
+      },
+      {
+        "surface": "Tuck your cloak",
+        "lemma": "chagar"
+      },
+      {
+        "surface": "under your belt",
+        "lemma": "moten"
+      },
+      {
+        "surface": "take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "flask",
+        "lemma": "pakh"
+      },
+      {
+        "surface": "of oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "and go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "to Ramoth-gilead",
+        "lemma": "ramot"
+      }
+    ],
+    "2": [
+      {
+        "surface": "for Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Jehoshaphat",
+        "lemma": "yehoshaphat"
+      },
+      {
+        "surface": "the son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Nimshi",
+        "lemma": "nimshi"
+      },
+      {
+        "surface": "get him away",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "from",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "his companions",
+        "lemma": "ach"
+      },
+      {
+        "surface": "to an inner room",
+        "lemma": "cheder"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Then take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "the flask",
+        "lemma": "pakh"
+      },
+      {
+        "surface": "of oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "pour",
+        "lemma": "yatsaq"
+      },
+      {
+        "surface": "his head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "I anoint",
+        "lemma": "mashach"
+      },
+      {
+        "surface": "you king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "Then open",
+        "lemma": "patach"
+      },
+      {
+        "surface": "the door",
+        "lemma": "dal"
+      },
+      {
+        "surface": "and run",
+        "lemma": "nus"
+      },
+      {
+        "surface": "delay",
+        "lemma": "chakhah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "So the young",
+        "lemma": "naar"
+      },
+      {
+        "surface": "prophet",
+        "lemma": "navi"
+      },
+      {
+        "surface": "went",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "to Ramoth-gilead",
+        "lemma": "ramot"
+      }
+    ],
+    "5": [
+      {
+        "surface": "the army",
+        "lemma": "chayil"
+      },
+      {
+        "surface": "commanders",
+        "lemma": "sar"
+      },
+      {
+        "surface": "there",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "I have a message",
+        "lemma": "davar"
+      },
+      {
+        "surface": "commander",
+        "lemma": "sar"
+      },
+      {
+        "surface": "which",
+        "lemma": "mi"
+      },
+      {
+        "surface": "Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "commander",
+        "lemma": "sar"
+      }
+    ],
+    "6": [
+      {
+        "surface": "So Jehu got up",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "into the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "where the young prophet poured",
+        "lemma": "yatsaq"
+      },
+      {
+        "surface": "the oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "his head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "I anoint you",
+        "lemma": "mashach"
+      },
+      {
+        "surface": "king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "the LORD’s",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "people",
+        "lemma": "am"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "7": [
+      {
+        "surface": "And you are to strike down",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of your master",
+        "lemma": "adon"
+      },
+      {
+        "surface": "Ahab",
+        "lemma": "achav"
+      },
+      {
+        "surface": "so that I may avenge",
+        "lemma": "naqam"
+      },
+      {
+        "surface": "the blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "of My servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "the prophets",
+        "lemma": "navi"
+      },
+      {
+        "surface": "and the blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "the servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "shed by the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of Jezebel",
+        "lemma": "izevel"
+      }
+    ],
+    "8": [
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Ahab",
+        "lemma": "achav"
+      },
+      {
+        "surface": "will perish",
+        "lemma": "avad"
+      },
+      {
+        "surface": "and I will cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "from Ahab",
+        "lemma": "achav"
+      },
+      {
+        "surface": "every male",
+        "lemma": "shatan"
+      },
+      {
+        "surface": "both slave",
+        "lemma": "atsar"
+      },
+      {
+        "surface": "and free",
+        "lemma": "azav"
+      },
+      {
+        "surface": "in Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "9": [
+      {
+        "surface": "the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Ahab",
+        "lemma": "achav"
+      },
+      {
+        "surface": "like the houses",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of Jeroboam",
+        "lemma": "yarovam"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Nebat",
+        "lemma": "nevat"
+      },
+      {
+        "surface": "and",
+        "lemma": "bet"
+      },
+      {
+        "surface": "Baasha",
+        "lemma": "basah"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ahijah",
+        "lemma": "achiyyah"
+      }
+    ],
+    "10": [
+      {
+        "surface": "on the plot of ground",
+        "lemma": "cheleq"
+      },
+      {
+        "surface": "at Jezreel",
+        "lemma": "yizreel"
+      },
+      {
+        "surface": "the dogs",
+        "lemma": "kelev"
+      },
+      {
+        "surface": "will devour",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "Jezebel",
+        "lemma": "izevel"
+      },
+      {
+        "surface": "and there will be no one",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "to bury her",
+        "lemma": "qavar"
+      },
+      {
+        "surface": "Then the young prophet opened",
+        "lemma": "patach"
+      },
+      {
+        "surface": "the door",
+        "lemma": "dal"
+      },
+      {
+        "surface": "and ran",
+        "lemma": "nus"
+      }
+    ],
+    "11": [
+      {
+        "surface": "When Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "the servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "of his master",
+        "lemma": "adon"
+      },
+      {
+        "surface": "Is everything all right",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "Why",
+        "lemma": "maddua"
+      },
+      {
+        "surface": "madman",
+        "lemma": "shaga"
+      },
+      {
+        "surface": "know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "his kind",
+        "lemma": "ish"
+      },
+      {
+        "surface": "and their babble",
+        "lemma": "siach"
+      }
+    ],
+    "12": [
+      {
+        "surface": "That is a lie",
+        "lemma": "sheqer"
+      },
+      {
+        "surface": "Tell",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "now",
+        "lemma": "na"
+      },
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "I anoint",
+        "lemma": "mashach"
+      },
+      {
+        "surface": "you king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Quickly",
+        "lemma": "mahar"
+      },
+      {
+        "surface": "each man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "took",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "his garment",
+        "lemma": "beged"
+      },
+      {
+        "surface": "and put it",
+        "lemma": "sum"
+      },
+      {
+        "surface": "under Jehu",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the bare",
+        "lemma": "gerem"
+      },
+      {
+        "surface": "steps",
+        "lemma": "maalah"
+      },
+      {
+        "surface": "Then they blew",
+        "lemma": "taqa"
+      },
+      {
+        "surface": "the ram’s horn",
+        "lemma": "shophar"
+      },
+      {
+        "surface": "Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "is king",
+        "lemma": "malakh"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Thus Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Jehoshaphat",
+        "lemma": "yehoshaphat"
+      },
+      {
+        "surface": "the son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Nimshi",
+        "lemma": "nimshi"
+      },
+      {
+        "surface": "conspired",
+        "lemma": "qashar"
+      },
+      {
+        "surface": "Joram",
+        "lemma": "yoram"
+      },
+      {
+        "surface": "Now Joram",
+        "lemma": "yoram"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "defending",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "Ramoth-gilead",
+        "lemma": "ramot"
+      },
+      {
+        "surface": "against",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "Hazael",
+        "lemma": "chazael"
+      },
+      {
+        "surface": "king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Aram",
+        "lemma": "aram"
+      }
+    ],
+    "15": [
+      {
+        "surface": "but King",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "Joram",
+        "lemma": "yehoram"
+      },
+      {
+        "surface": "to Jezreel",
+        "lemma": "yizreel"
+      },
+      {
+        "surface": "to recover",
+        "lemma": "rapah"
+      },
+      {
+        "surface": "the wounds",
+        "lemma": "makkah"
+      },
+      {
+        "surface": "he had suffered",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "at the hands of the Arameans",
+        "lemma": "arammi"
+      },
+      {
+        "surface": "in the battle",
+        "lemma": "lacham"
+      },
+      {
+        "surface": "Hazael",
+        "lemma": "chazael"
+      },
+      {
+        "surface": "their king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "So Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "you commanders wish to make me king",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "escape",
+        "lemma": "palit"
+      },
+      {
+        "surface": "the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "to go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "and tell it",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "in Jezreel",
+        "lemma": "yizreel"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Then Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "got into his chariot",
+        "lemma": "rakhav"
+      },
+      {
+        "surface": "and went",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "to Jezreel",
+        "lemma": "yizreel"
+      },
+      {
+        "surface": "Joram",
+        "lemma": "yoram"
+      },
+      {
+        "surface": "was laid up",
+        "lemma": "shakhav"
+      },
+      {
+        "surface": "there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "And Ahaziah",
+        "lemma": "achazyah"
+      },
+      {
+        "surface": "king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "had gone down",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "him",
+        "lemma": "yoram"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Now the watchman",
+        "lemma": "tsaphah"
+      },
+      {
+        "surface": "standing",
+        "lemma": "amad"
+      },
+      {
+        "surface": "the tower",
+        "lemma": "migdal"
+      },
+      {
+        "surface": "in Jezreel",
+        "lemma": "yizreel"
+      },
+      {
+        "surface": "Jehu’s",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "troops",
+        "lemma": "shiphah"
+      },
+      {
+        "surface": "a company of troops",
+        "lemma": "shiphah"
+      },
+      {
+        "surface": "Choose",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "a rider",
+        "lemma": "rakkav"
+      },
+      {
+        "surface": "Joram",
+        "lemma": "yehoram"
+      },
+      {
+        "surface": "Send him out",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "Have you come in peace",
+        "lemma": "shalom"
+      }
+    ],
+    "18": [
+      {
+        "surface": "So a horseman",
+        "lemma": "rakhav"
+      },
+      {
+        "surface": "rode off",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "Have you come in peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "know about peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "Fall in",
+        "lemma": "savav"
+      },
+      {
+        "surface": "behind me",
+        "lemma": "achar"
+      },
+      {
+        "surface": "And the watchman",
+        "lemma": "tsaphah"
+      },
+      {
+        "surface": "reported",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "The messenger",
+        "lemma": "maleakh"
+      }
+    ],
+    "19": [
+      {
+        "surface": "So the king sent out",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "a second",
+        "lemma": "sheni"
+      },
+      {
+        "surface": "horseman",
+        "lemma": "rakhav"
+      },
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "the king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "Have you come in peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "What",
+        "lemma": "mah"
+      },
+      {
+        "surface": "know about peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "Fall in",
+        "lemma": "savav"
+      },
+      {
+        "surface": "behind me",
+        "lemma": "achar"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Again the watchman",
+        "lemma": "tsaphah"
+      },
+      {
+        "surface": "reported",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "And the charioteer",
+        "lemma": "minhag"
+      },
+      {
+        "surface": "is driving like",
+        "lemma": "minhag"
+      },
+      {
+        "surface": "Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Nimshi",
+        "lemma": "nimshi"
+      },
+      {
+        "surface": "he is driving",
+        "lemma": "nahag"
+      },
+      {
+        "surface": "like a madman",
+        "lemma": "shiggaon"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Harness",
+        "lemma": "asar"
+      },
+      {
+        "surface": "Joram",
+        "lemma": "yehoram"
+      },
+      {
+        "surface": "and they harnessed",
+        "lemma": "asar"
+      },
+      {
+        "surface": "his chariot",
+        "lemma": "rekhev"
+      },
+      {
+        "surface": "Then Joram",
+        "lemma": "yehoram"
+      },
+      {
+        "surface": "king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "and Ahaziah",
+        "lemma": "achazyah"
+      },
+      {
+        "surface": "king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "each",
+        "lemma": "ish"
+      },
+      {
+        "surface": "in his own chariot",
+        "lemma": "rekhev"
+      },
+      {
+        "surface": "Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "on the property",
+        "lemma": "chelqah"
+      },
+      {
+        "surface": "of Naboth",
+        "lemma": "navot"
+      },
+      {
+        "surface": "the Jezreelite",
+        "lemma": "yizreeli"
+      }
+    ],
+    "22": [
+      {
+        "surface": "When Joram",
+        "lemma": "yehoram"
+      },
+      {
+        "surface": "Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "Have you come in peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "How",
+        "lemma": "mah"
+      },
+      {
+        "surface": "peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "as long as",
+        "lemma": "rav"
+      },
+      {
+        "surface": "the idolatry",
+        "lemma": "zanun"
+      },
+      {
+        "surface": "and witchcraft",
+        "lemma": "kesheph"
+      },
+      {
+        "surface": "of your mother",
+        "lemma": "em"
+      },
+      {
+        "surface": "Jezebel abound",
+        "lemma": "izevel"
+      }
+    ],
+    "23": [
+      {
+        "surface": "Joram",
+        "lemma": "yehoram"
+      },
+      {
+        "surface": "turned around",
+        "lemma": "haphakh"
+      },
+      {
+        "surface": "and fled",
+        "lemma": "nus"
+      },
+      {
+        "surface": "Ahaziah",
+        "lemma": "achazyah"
+      },
+      {
+        "surface": "Treachery",
+        "lemma": "mirmah"
+      },
+      {
+        "surface": "Ahaziah",
+        "lemma": "achazyah"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Then Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "drew",
+        "lemma": "male"
+      },
+      {
+        "surface": "his bow",
+        "lemma": "qeshet"
+      },
+      {
+        "surface": "and shot",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "Joram",
+        "lemma": "yehoram"
+      },
+      {
+        "surface": "between",
+        "lemma": "bayin"
+      },
+      {
+        "surface": "the shoulders",
+        "lemma": "zeroa"
+      },
+      {
+        "surface": "The arrow",
+        "lemma": "chitstsi"
+      },
+      {
+        "surface": "his heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "and he slumped down",
+        "lemma": "kara"
+      },
+      {
+        "surface": "in his chariot",
+        "lemma": "rekhev"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Bidkar",
+        "lemma": "bidqar"
+      },
+      {
+        "surface": "his officer",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "Pick him up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "and throw him",
+        "lemma": "shalakh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "chelqah"
+      },
+      {
+        "surface": "into the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "of Naboth",
+        "lemma": "navot"
+      },
+      {
+        "surface": "the Jezreelite",
+        "lemma": "yizreeli"
+      },
+      {
+        "surface": "remember that",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "were riding",
+        "lemma": "rakhav"
+      },
+      {
+        "surface": "together",
+        "lemma": "tsemed"
+      },
+      {
+        "surface": "behind",
+        "lemma": "achar"
+      },
+      {
+        "surface": "Ahab",
+        "lemma": "achav"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "lifted up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "burden",
+        "lemma": "massa"
+      }
+    ],
+    "26": [
+      {
+        "surface": "the blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "of Naboth",
+        "lemma": "navot"
+      },
+      {
+        "surface": "and the blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "of his sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "yesterday",
+        "lemma": "emesh"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "so will I repay",
+        "lemma": "salem"
+      },
+      {
+        "surface": "plot of ground",
+        "lemma": "chelqah"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Now then",
+        "lemma": "attah"
+      },
+      {
+        "surface": "according to the word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "pick him up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "and throw him",
+        "lemma": "shalakh"
+      },
+      {
+        "surface": "on the plot of ground",
+        "lemma": "chelqah"
+      }
+    ],
+    "27": [
+      {
+        "surface": "When King",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "Ahaziah",
+        "lemma": "achazyah"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "he fled",
+        "lemma": "nus"
+      },
+      {
+        "surface": "up the road",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "bet"
+      },
+      {
+        "surface": "toward Beth-haggan",
+        "lemma": "gan"
+      },
+      {
+        "surface": "And Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "pursued him",
+        "lemma": "radaph"
+      },
+      {
+        "surface": "Shoot",
+        "lemma": "nakhah"
+      },
+      {
+        "surface": "his chariot",
+        "lemma": "merkavah"
+      },
+      {
+        "surface": "on the Ascent",
+        "lemma": "maaleh"
+      },
+      {
+        "surface": "of Gur",
+        "lemma": "gur"
+      },
+      {
+        "surface": "near Ibleam",
+        "lemma": "yivleam"
+      },
+      {
+        "surface": "and he fled",
+        "lemma": "nus"
+      },
+      {
+        "surface": "to Megiddo",
+        "lemma": "megiddon"
+      },
+      {
+        "surface": "and died",
+        "lemma": "mut"
+      },
+      {
+        "surface": "there",
+        "lemma": "sham"
+      }
+    ],
+    "28": [
+      {
+        "surface": "Then his servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "carried him by chariot",
+        "lemma": "rakhav"
+      },
+      {
+        "surface": "to Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "and buried",
+        "lemma": "qavar"
+      },
+      {
+        "surface": "in his tomb",
+        "lemma": "qevurah"
+      },
+      {
+        "surface": "in the City",
+        "lemma": "ir"
+      },
+      {
+        "surface": "of David",
+        "lemma": "david"
+      }
+    ],
+    "29": [
+      {
+        "surface": "In the eleventh",
+        "lemma": "echad"
+      },
+      {
+        "surface": "year",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "of Joram",
+        "lemma": "yoram"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ahab",
+        "lemma": "achav"
+      },
+      {
+        "surface": "Ahaziah",
+        "lemma": "achazyah"
+      },
+      {
+        "surface": "had become king",
+        "lemma": "malakh"
+      },
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      }
+    ],
+    "30": [
+      {
+        "surface": "Now when Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "in Jezreel",
+        "lemma": "yizreel"
+      },
+      {
+        "surface": "Jezebel",
+        "lemma": "izevel"
+      },
+      {
+        "surface": "So she painted",
+        "lemma": "sum"
+      },
+      {
+        "surface": "her eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "adorned",
+        "lemma": "yatav"
+      },
+      {
+        "surface": "her head",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "and looked down",
+        "lemma": "shaqaph"
+      },
+      {
+        "surface": "from",
+        "lemma": "bead"
+      },
+      {
+        "surface": "a window",
+        "lemma": "challon"
+      }
+    ],
+    "31": [
+      {
+        "surface": "And as Jehu",
+        "lemma": "yehu"
+      },
+      {
+        "surface": "the gate",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "Have you come in peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "O Zimri",
+        "lemma": "zimri"
+      },
+      {
+        "surface": "murderer",
+        "lemma": "harag"
+      },
+      {
+        "surface": "of your master",
+        "lemma": "adon"
+      }
+    ],
+    "32": [
+      {
+        "surface": "He looked up",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the window",
+        "lemma": "challon"
+      },
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "Who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "And two",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "or three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "eunuchs",
+        "lemma": "saris"
+      },
+      {
+        "surface": "looked down",
+        "lemma": "shaqaph"
+      }
+    ],
+    "33": [
+      {
+        "surface": "Throw her down",
+        "lemma": "shamat"
+      },
+      {
+        "surface": "So they threw her down",
+        "lemma": "shamat"
+      },
+      {
+        "surface": "and her blood",
+        "lemma": "dam"
+      },
+      {
+        "surface": "splattered",
+        "lemma": "nazah"
+      },
+      {
+        "surface": "the wall",
+        "lemma": "qir"
+      },
+      {
+        "surface": "the horses",
+        "lemma": "sus"
+      },
+      {
+        "surface": "as they trampled her underfoot",
+        "lemma": "ramas"
+      }
+    ],
+    "34": [
+      {
+        "surface": "and ate",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "and drank",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "Take care of",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "cursed woman",
+        "lemma": "arar"
+      },
+      {
+        "surface": "and bury her",
+        "lemma": "qavar"
+      },
+      {
+        "surface": "the daughter",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of a king",
+        "lemma": "melekh"
+      }
+    ],
+    "35": [
+      {
+        "surface": "But when they went out",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "to bury her",
+        "lemma": "qavar"
+      },
+      {
+        "surface": "they found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "skull",
+        "lemma": "gulgolet"
+      },
+      {
+        "surface": "her feet",
+        "lemma": "regel"
+      },
+      {
+        "surface": "and the palms",
+        "lemma": "kaph"
+      },
+      {
+        "surface": "of her hands",
+        "lemma": "yad"
+      }
+    ],
+    "36": [
+      {
+        "surface": "and told",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "is the word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "He spoke",
+        "lemma": "davar"
+      },
+      {
+        "surface": "through",
+        "lemma": "yad"
+      },
+      {
+        "surface": "His servant",
+        "lemma": "eved"
+      },
+      {
+        "surface": "Elijah",
+        "lemma": "eliyyah"
+      },
+      {
+        "surface": "the Tishbite",
+        "lemma": "tishbi"
+      },
+      {
+        "surface": "On the plot of ground",
+        "lemma": "cheleq"
+      },
+      {
+        "surface": "at Jezreel",
+        "lemma": "yizreel"
+      },
+      {
+        "surface": "the dogs",
+        "lemma": "kelev"
+      },
+      {
+        "surface": "will devour",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the flesh",
+        "lemma": "basar"
+      },
+      {
+        "surface": "of Jezebel",
+        "lemma": "izevel"
+      }
+    ],
+    "37": [
+      {
+        "surface": "And Jezebel’s",
+        "lemma": "izevel"
+      },
+      {
+        "surface": "body",
+        "lemma": "nevelah"
+      },
+      {
+        "surface": "like dung",
+        "lemma": "domen"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "in the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "on the plot of ground",
+        "lemma": "cheleq"
+      },
+      {
+        "surface": "at Jezreel",
+        "lemma": "yizreel"
+      },
+      {
+        "surface": "is Jezebel",
+        "lemma": "izevel"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "yehu",
+    "shalom",
+    "yizreel"
+  ]
+}

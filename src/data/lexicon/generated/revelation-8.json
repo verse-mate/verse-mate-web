@@ -1,0 +1,567 @@
+{
+  "bookId": 66,
+  "book": "Revelation",
+  "chapter": 8,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "the Lamb opened",
+        "lemma": "anoigo"
+      },
+      {
+        "surface": "seventh",
+        "lemma": "hebdomos"
+      },
+      {
+        "surface": "seal",
+        "lemma": "sphragis"
+      },
+      {
+        "surface": "silence",
+        "lemma": "sige"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "half an hour",
+        "lemma": "hemiorion"
+      }
+    ],
+    "2": [
+      {
+        "surface": "seven",
+        "lemma": "hepta"
+      },
+      {
+        "surface": "angels",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "seven",
+        "lemma": "hepta"
+      },
+      {
+        "surface": "trumpets",
+        "lemma": "salpigx"
+      }
+    ],
+    "3": [
+      {
+        "surface": "another",
+        "lemma": "allos"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "a golden",
+        "lemma": "chruseos"
+      },
+      {
+        "surface": "censer",
+        "lemma": "libanotos"
+      },
+      {
+        "surface": "altar",
+        "lemma": "thusiasterion"
+      },
+      {
+        "surface": "incense",
+        "lemma": "thumiama"
+      },
+      {
+        "surface": "prayers",
+        "lemma": "proseuche"
+      },
+      {
+        "surface": "saints",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "golden",
+        "lemma": "chruseos"
+      },
+      {
+        "surface": "altar",
+        "lemma": "thusiasterion"
+      },
+      {
+        "surface": "throne",
+        "lemma": "thronos"
+      }
+    ],
+    "4": [
+      {
+        "surface": "smoke",
+        "lemma": "kapnos"
+      },
+      {
+        "surface": "incense",
+        "lemma": "thumiama"
+      },
+      {
+        "surface": "prayers",
+        "lemma": "proseuche"
+      },
+      {
+        "surface": "saints",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "rose up",
+        "lemma": "anabaino"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "the hand",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      }
+    ],
+    "5": [
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "censer",
+        "lemma": "libanotos"
+      },
+      {
+        "surface": "filled",
+        "lemma": "gemizo"
+      },
+      {
+        "surface": "fire",
+        "lemma": "pur"
+      },
+      {
+        "surface": "altar",
+        "lemma": "thusiasterion"
+      },
+      {
+        "surface": "hurled it",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "peals of thunder",
+        "lemma": "bronte"
+      },
+      {
+        "surface": "rumblings",
+        "lemma": "phone"
+      },
+      {
+        "surface": "flashes of lightning",
+        "lemma": "astrape"
+      },
+      {
+        "surface": "an earthquake",
+        "lemma": "seismos"
+      }
+    ],
+    "6": [
+      {
+        "surface": "seven",
+        "lemma": "hepta"
+      },
+      {
+        "surface": "angels",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "seven",
+        "lemma": "hepta"
+      },
+      {
+        "surface": "trumpets",
+        "lemma": "salpigx"
+      },
+      {
+        "surface": "prepared",
+        "lemma": "hetoimazo"
+      },
+      {
+        "surface": "sound them",
+        "lemma": "salpizo"
+      }
+    ],
+    "7": [
+      {
+        "surface": "first angel",
+        "lemma": "protos"
+      },
+      {
+        "surface": "sounded his trumpet",
+        "lemma": "salpizo"
+      },
+      {
+        "surface": "hail",
+        "lemma": "chalaza"
+      },
+      {
+        "surface": "fire",
+        "lemma": "pur"
+      },
+      {
+        "surface": "mixed",
+        "lemma": "mignumi"
+      },
+      {
+        "surface": "blood",
+        "lemma": "haima"
+      },
+      {
+        "surface": "were hurled down",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "third",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "was burned up",
+        "lemma": "katakaio"
+      },
+      {
+        "surface": "third",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "trees",
+        "lemma": "dendron"
+      },
+      {
+        "surface": "the green",
+        "lemma": "chloros"
+      },
+      {
+        "surface": "grass",
+        "lemma": "chortos"
+      }
+    ],
+    "8": [
+      {
+        "surface": "second",
+        "lemma": "deuteros"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "sounded his trumpet",
+        "lemma": "salpizo"
+      },
+      {
+        "surface": "mountain",
+        "lemma": "oros"
+      },
+      {
+        "surface": "burning",
+        "lemma": "kaio"
+      },
+      {
+        "surface": "with fire",
+        "lemma": "pur"
+      },
+      {
+        "surface": "was thrown",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "third",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "blood",
+        "lemma": "haima"
+      }
+    ],
+    "9": [
+      {
+        "surface": "third",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "living",
+        "lemma": "psuche"
+      },
+      {
+        "surface": "creatures",
+        "lemma": "ktisma"
+      },
+      {
+        "surface": "sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "died",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "third",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "ships",
+        "lemma": "ploion"
+      },
+      {
+        "surface": "were destroyed",
+        "lemma": "diaphtheiro"
+      }
+    ],
+    "10": [
+      {
+        "surface": "third",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "sounded his trumpet",
+        "lemma": "salpizo"
+      },
+      {
+        "surface": "star",
+        "lemma": "aster"
+      },
+      {
+        "surface": "burning",
+        "lemma": "kaio"
+      },
+      {
+        "surface": "a torch",
+        "lemma": "lampas"
+      },
+      {
+        "surface": "fell",
+        "lemma": "pipto"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "landed",
+        "lemma": "pipto"
+      },
+      {
+        "surface": "third",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "rivers",
+        "lemma": "potamos"
+      },
+      {
+        "surface": "springs",
+        "lemma": "pege"
+      },
+      {
+        "surface": "water",
+        "lemma": "hudor"
+      }
+    ],
+    "11": [
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "star",
+        "lemma": "aster"
+      },
+      {
+        "surface": "Wormwood",
+        "lemma": "apsinthos"
+      },
+      {
+        "surface": "third",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "waters",
+        "lemma": "hudor"
+      },
+      {
+        "surface": "bitter like wormwood oil",
+        "lemma": "apsinthos"
+      },
+      {
+        "surface": "people",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "died",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "bitter",
+        "lemma": "pikraino"
+      },
+      {
+        "surface": "waters",
+        "lemma": "hudor"
+      }
+    ],
+    "12": [
+      {
+        "surface": "fourth",
+        "lemma": "tetartos"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "sounded his trumpet",
+        "lemma": "salpizo"
+      },
+      {
+        "surface": "third",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "sun",
+        "lemma": "helios"
+      },
+      {
+        "surface": "moon",
+        "lemma": "selene"
+      },
+      {
+        "surface": "stars",
+        "lemma": "aster"
+      },
+      {
+        "surface": "were struck",
+        "lemma": "plesso"
+      },
+      {
+        "surface": "third",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "were darkened",
+        "lemma": "skotizo"
+      },
+      {
+        "surface": "third",
+        "lemma": "tritos"
+      },
+      {
+        "surface": "day",
+        "lemma": "hemera"
+      },
+      {
+        "surface": "was without light",
+        "lemma": "phaino"
+      },
+      {
+        "surface": "night",
+        "lemma": "nux"
+      },
+      {
+        "surface": "as well",
+        "lemma": "homoios"
+      }
+    ],
+    "13": [
+      {
+        "surface": "eagle",
+        "lemma": "aetos"
+      },
+      {
+        "surface": "flying",
+        "lemma": "petomai"
+      },
+      {
+        "surface": "overhead",
+        "lemma": "mesouranema"
+      },
+      {
+        "surface": "in a loud voice",
+        "lemma": "phone"
+      },
+      {
+        "surface": "dwell",
+        "lemma": "katoikeo"
+      },
+      {
+        "surface": "earth",
+        "lemma": "ge"
+      },
+      {
+        "surface": "trumpet",
+        "lemma": "salpigx"
+      },
+      {
+        "surface": "blasts",
+        "lemma": "phone"
+      },
+      {
+        "surface": "about",
+        "lemma": "mello"
+      },
+      {
+        "surface": "to be sounded",
+        "lemma": "salpizo"
+      },
+      {
+        "surface": "remaining",
+        "lemma": "loipos"
+      },
+      {
+        "surface": "three",
+        "lemma": "treis"
+      },
+      {
+        "surface": "angels",
+        "lemma": "angelos"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "salpizo",
+    "libanotos",
+    "apsinthos"
+  ]
+}

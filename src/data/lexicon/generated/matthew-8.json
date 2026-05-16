@@ -1,0 +1,965 @@
+{
+  "bookId": 40,
+  "book": "Matthew",
+  "chapter": 8,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "came down",
+        "lemma": "katabaino"
+      },
+      {
+        "surface": "mountain",
+        "lemma": "oros"
+      },
+      {
+        "surface": "crowds",
+        "lemma": "ochlos"
+      },
+      {
+        "surface": "followed",
+        "lemma": "akoloutheo"
+      }
+    ],
+    "2": [
+      {
+        "surface": "a leper",
+        "lemma": "lepros"
+      },
+      {
+        "surface": "came",
+        "lemma": "proserchomai"
+      },
+      {
+        "surface": "and knelt before",
+        "lemma": "proskuneo"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "make me clean",
+        "lemma": "katharizo"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Jesus reached out",
+        "lemma": "ekteino"
+      },
+      {
+        "surface": "hand",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "and touched",
+        "lemma": "hapto"
+      },
+      {
+        "surface": "Be clean",
+        "lemma": "katharizo"
+      },
+      {
+        "surface": "immediately",
+        "lemma": "eutheos"
+      },
+      {
+        "surface": "leprosy",
+        "lemma": "lepra"
+      },
+      {
+        "surface": "was cleansed",
+        "lemma": "katharizo"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "go",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "show",
+        "lemma": "deiknuo"
+      },
+      {
+        "surface": "priest",
+        "lemma": "hiereus"
+      },
+      {
+        "surface": "offer",
+        "lemma": "prosphero"
+      },
+      {
+        "surface": "gift",
+        "lemma": "doron"
+      },
+      {
+        "surface": "prescribed",
+        "lemma": "prostasso"
+      },
+      {
+        "surface": "by Moses",
+        "lemma": "mouses"
+      },
+      {
+        "surface": "a testimony",
+        "lemma": "marturion"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Capernaum",
+        "lemma": "kapernaoum"
+      },
+      {
+        "surface": "a centurion",
+        "lemma": "hekatontarchos"
+      },
+      {
+        "surface": "came",
+        "lemma": "proserchomai"
+      },
+      {
+        "surface": "and pleaded",
+        "lemma": "parakaleo"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "servant",
+        "lemma": "pais"
+      },
+      {
+        "surface": "lies",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "home",
+        "lemma": "oikia"
+      },
+      {
+        "surface": "paralyzed",
+        "lemma": "paralutikos"
+      },
+      {
+        "surface": "and in terrible",
+        "lemma": "deinos"
+      },
+      {
+        "surface": "agony",
+        "lemma": "basanizo"
+      }
+    ],
+    "7": [
+      {
+        "surface": "and heal",
+        "lemma": "therapeuo"
+      }
+    ],
+    "8": [
+      {
+        "surface": "centurion",
+        "lemma": "hekatontarchos"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "worthy",
+        "lemma": "hikanos"
+      },
+      {
+        "surface": "roof",
+        "lemma": "stege"
+      },
+      {
+        "surface": "just",
+        "lemma": "monon"
+      },
+      {
+        "surface": "the word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "servant",
+        "lemma": "pais"
+      },
+      {
+        "surface": "will be healed",
+        "lemma": "iaomai"
+      }
+    ],
+    "9": [
+      {
+        "surface": "a man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "authority",
+        "lemma": "exousia"
+      },
+      {
+        "surface": "soldiers",
+        "lemma": "stratiotes"
+      },
+      {
+        "surface": "to go",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "he goes",
+        "lemma": "poreuo"
+      },
+      {
+        "surface": "another",
+        "lemma": "allos"
+      },
+      {
+        "surface": "servant",
+        "lemma": "doulos"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "He marveled",
+        "lemma": "thaumazo"
+      },
+      {
+        "surface": "following Him",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "Truly",
+        "lemma": "amen"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "israel"
+      },
+      {
+        "surface": "with such great",
+        "lemma": "tosoutos"
+      },
+      {
+        "surface": "faith",
+        "lemma": "pistis"
+      }
+    ],
+    "11": [
+      {
+        "surface": "will come",
+        "lemma": "heko"
+      },
+      {
+        "surface": "the east",
+        "lemma": "anatole"
+      },
+      {
+        "surface": "the west",
+        "lemma": "dusme"
+      },
+      {
+        "surface": "to share the banquet",
+        "lemma": "anaklino"
+      },
+      {
+        "surface": "Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "Isaac",
+        "lemma": "isaak"
+      },
+      {
+        "surface": "Jacob",
+        "lemma": "iakob"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "ouranos"
+      }
+    ],
+    "12": [
+      {
+        "surface": "sons",
+        "lemma": "huios"
+      },
+      {
+        "surface": "kingdom",
+        "lemma": "basileia"
+      },
+      {
+        "surface": "will be thrown",
+        "lemma": "ekballo"
+      },
+      {
+        "surface": "outer",
+        "lemma": "exoteros"
+      },
+      {
+        "surface": "darkness",
+        "lemma": "skotos"
+      },
+      {
+        "surface": "where there",
+        "lemma": "ekei"
+      },
+      {
+        "surface": "weeping",
+        "lemma": "klauthmos"
+      },
+      {
+        "surface": "gnashing",
+        "lemma": "brugmos"
+      },
+      {
+        "surface": "of teeth",
+        "lemma": "odous"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "centurion",
+        "lemma": "hekatontarchos"
+      },
+      {
+        "surface": "Go",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "you have believed",
+        "lemma": "pisteuo"
+      },
+      {
+        "surface": "servant",
+        "lemma": "pais"
+      },
+      {
+        "surface": "was healed",
+        "lemma": "iaomai"
+      },
+      {
+        "surface": "hour",
+        "lemma": "hora"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Peter’s",
+        "lemma": "petros"
+      },
+      {
+        "surface": "house",
+        "lemma": "oikia"
+      },
+      {
+        "surface": "mother-in-law",
+        "lemma": "penthera"
+      },
+      {
+        "surface": "sick in bed",
+        "lemma": "ballo"
+      },
+      {
+        "surface": "with a fever",
+        "lemma": "puresso"
+      }
+    ],
+    "15": [
+      {
+        "surface": "He touched",
+        "lemma": "hapto"
+      },
+      {
+        "surface": "hand",
+        "lemma": "cheir"
+      },
+      {
+        "surface": "fever",
+        "lemma": "puretos"
+      },
+      {
+        "surface": "left",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "she got up",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "began to serve",
+        "lemma": "diakoneo"
+      }
+    ],
+    "16": [
+      {
+        "surface": "evening",
+        "lemma": "opsia"
+      },
+      {
+        "surface": "who were demon-possessed",
+        "lemma": "daimonizomai"
+      },
+      {
+        "surface": "were brought",
+        "lemma": "prosphero"
+      },
+      {
+        "surface": "He drove out",
+        "lemma": "ekballo"
+      },
+      {
+        "surface": "spirits",
+        "lemma": "pneuma"
+      },
+      {
+        "surface": "with a word",
+        "lemma": "logos"
+      },
+      {
+        "surface": "healed",
+        "lemma": "therapeuo"
+      },
+      {
+        "surface": "sick",
+        "lemma": "kakos"
+      }
+    ],
+    "17": [
+      {
+        "surface": "to fulfill",
+        "lemma": "pleroo"
+      },
+      {
+        "surface": "was spoken",
+        "lemma": "ero"
+      },
+      {
+        "surface": "prophet",
+        "lemma": "prophetes"
+      },
+      {
+        "surface": "Isaiah",
+        "lemma": "hesaias"
+      },
+      {
+        "surface": "infirmities",
+        "lemma": "astheneia"
+      },
+      {
+        "surface": "carried",
+        "lemma": "bastazo"
+      },
+      {
+        "surface": "diseases",
+        "lemma": "nosos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "crowd",
+        "lemma": "ochlos"
+      },
+      {
+        "surface": "He gave orders",
+        "lemma": "keleuo"
+      },
+      {
+        "surface": "to cross",
+        "lemma": "aperchomai"
+      }
+    ],
+    "19": [
+      {
+        "surface": "of the scribes",
+        "lemma": "grammateus"
+      },
+      {
+        "surface": "came",
+        "lemma": "proserchomai"
+      },
+      {
+        "surface": "Teacher",
+        "lemma": "didaskalos"
+      },
+      {
+        "surface": "I will follow",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "You go",
+        "lemma": "aperchomai"
+      }
+    ],
+    "20": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Foxes",
+        "lemma": "alopex"
+      },
+      {
+        "surface": "dens",
+        "lemma": "pholeos"
+      },
+      {
+        "surface": "birds",
+        "lemma": "peteinos"
+      },
+      {
+        "surface": "air have",
+        "lemma": "ouranos"
+      },
+      {
+        "surface": "nests",
+        "lemma": "kataskenosis"
+      },
+      {
+        "surface": "the Son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "of Man",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "place",
+        "lemma": "pou"
+      },
+      {
+        "surface": "to lay",
+        "lemma": "klino"
+      },
+      {
+        "surface": "head",
+        "lemma": "kephale"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Another",
+        "lemma": "heteros"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "first",
+        "lemma": "proton"
+      },
+      {
+        "surface": "let",
+        "lemma": "epitrepo"
+      },
+      {
+        "surface": "go",
+        "lemma": "aperchomai"
+      },
+      {
+        "surface": "bury",
+        "lemma": "thapto"
+      },
+      {
+        "surface": "father",
+        "lemma": "pater"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Follow",
+        "lemma": "akoloutheo"
+      },
+      {
+        "surface": "let",
+        "lemma": "aphiemi"
+      },
+      {
+        "surface": "dead",
+        "lemma": "nekros"
+      },
+      {
+        "surface": "bury",
+        "lemma": "thapto"
+      },
+      {
+        "surface": "dead",
+        "lemma": "nekros"
+      }
+    ],
+    "23": [
+      {
+        "surface": "got into",
+        "lemma": "embaino"
+      },
+      {
+        "surface": "boat",
+        "lemma": "ploion"
+      },
+      {
+        "surface": "disciples",
+        "lemma": "mathetes"
+      },
+      {
+        "surface": "followed",
+        "lemma": "akoloutheo"
+      }
+    ],
+    "24": [
+      {
+        "surface": "storm",
+        "lemma": "seismos"
+      },
+      {
+        "surface": "sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "boat",
+        "lemma": "ploion"
+      },
+      {
+        "surface": "was engulfed",
+        "lemma": "kalupto"
+      },
+      {
+        "surface": "waves",
+        "lemma": "kuma"
+      },
+      {
+        "surface": "was sleeping",
+        "lemma": "katheudo"
+      }
+    ],
+    "25": [
+      {
+        "surface": "The disciples went",
+        "lemma": "proserchomai"
+      },
+      {
+        "surface": "and woke",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "save us",
+        "lemma": "sozo"
+      },
+      {
+        "surface": "We are perishing",
+        "lemma": "apolluo"
+      }
+    ],
+    "26": [
+      {
+        "surface": "You of little faith",
+        "lemma": "oligopistos"
+      },
+      {
+        "surface": "so afraid",
+        "lemma": "deilos"
+      },
+      {
+        "surface": "Then",
+        "lemma": "tote"
+      },
+      {
+        "surface": "He got up",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "and rebuked",
+        "lemma": "epitimao"
+      },
+      {
+        "surface": "winds",
+        "lemma": "anemos"
+      },
+      {
+        "surface": "sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "calm",
+        "lemma": "galene"
+      }
+    ],
+    "27": [
+      {
+        "surface": "The men",
+        "lemma": "anthropos"
+      },
+      {
+        "surface": "were amazed",
+        "lemma": "thaumazo"
+      },
+      {
+        "surface": "What kind of man",
+        "lemma": "potapos"
+      },
+      {
+        "surface": "winds",
+        "lemma": "anemos"
+      },
+      {
+        "surface": "sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "obey",
+        "lemma": "hupakouo"
+      }
+    ],
+    "28": [
+      {
+        "surface": "region",
+        "lemma": "chora"
+      },
+      {
+        "surface": "Gadarenes",
+        "lemma": "gadarenos"
+      },
+      {
+        "surface": "He was met by",
+        "lemma": "hupantao"
+      },
+      {
+        "surface": "two",
+        "lemma": "duo"
+      },
+      {
+        "surface": "demon-possessed men",
+        "lemma": "daimonizomai"
+      },
+      {
+        "surface": "tombs",
+        "lemma": "mnemeion"
+      },
+      {
+        "surface": "They were so",
+        "lemma": "lian"
+      },
+      {
+        "surface": "violent",
+        "lemma": "chalepos"
+      },
+      {
+        "surface": "could",
+        "lemma": "ischuo"
+      },
+      {
+        "surface": "pass",
+        "lemma": "parerchomai"
+      },
+      {
+        "surface": "way",
+        "lemma": "hodos"
+      }
+    ],
+    "29": [
+      {
+        "surface": "Son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "of God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "they shouted",
+        "lemma": "krazo"
+      },
+      {
+        "surface": "here",
+        "lemma": "hode"
+      },
+      {
+        "surface": "to torture",
+        "lemma": "basanizo"
+      },
+      {
+        "surface": "appointed time",
+        "lemma": "kairos"
+      }
+    ],
+    "30": [
+      {
+        "surface": "In the distance",
+        "lemma": "makran"
+      },
+      {
+        "surface": "herd",
+        "lemma": "agele"
+      },
+      {
+        "surface": "of pigs",
+        "lemma": "choiros"
+      },
+      {
+        "surface": "feeding",
+        "lemma": "bosko"
+      }
+    ],
+    "31": [
+      {
+        "surface": "demons",
+        "lemma": "daimon"
+      },
+      {
+        "surface": "begged",
+        "lemma": "parakaleo"
+      },
+      {
+        "surface": "You drive us out",
+        "lemma": "ekballo"
+      },
+      {
+        "surface": "send us",
+        "lemma": "apostello"
+      },
+      {
+        "surface": "herd",
+        "lemma": "agele"
+      },
+      {
+        "surface": "of pigs",
+        "lemma": "choiros"
+      }
+    ],
+    "32": [
+      {
+        "surface": "Go",
+        "lemma": "hupago"
+      },
+      {
+        "surface": "and went",
+        "lemma": "aperchomai"
+      },
+      {
+        "surface": "pigs",
+        "lemma": "choiros"
+      },
+      {
+        "surface": "herd",
+        "lemma": "agele"
+      },
+      {
+        "surface": "rushed",
+        "lemma": "hormao"
+      },
+      {
+        "surface": "steep bank",
+        "lemma": "kremnos"
+      },
+      {
+        "surface": "sea",
+        "lemma": "thalassa"
+      },
+      {
+        "surface": "died",
+        "lemma": "apothnesko"
+      },
+      {
+        "surface": "waters",
+        "lemma": "hudor"
+      }
+    ],
+    "33": [
+      {
+        "surface": "tending the pigs",
+        "lemma": "bosko"
+      },
+      {
+        "surface": "ran off",
+        "lemma": "pheugo"
+      },
+      {
+        "surface": "town",
+        "lemma": "polis"
+      },
+      {
+        "surface": "and reported",
+        "lemma": "apangello"
+      },
+      {
+        "surface": "demon-possessed men",
+        "lemma": "daimonizomai"
+      }
+    ],
+    "34": [
+      {
+        "surface": "town",
+        "lemma": "polis"
+      },
+      {
+        "surface": "meet",
+        "lemma": "hupantesis"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "they begged Him",
+        "lemma": "parakaleo"
+      },
+      {
+        "surface": "to leave",
+        "lemma": "metabaino"
+      },
+      {
+        "surface": "region",
+        "lemma": "horion"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "agele",
+    "choiros",
+    "daimonizomai"
+  ]
+}

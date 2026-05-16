@@ -1,0 +1,927 @@
+{
+  "bookId": 40,
+  "book": "Matthew",
+  "chapter": 1,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "This is the record",
+        "lemma": "biblos"
+      },
+      {
+        "surface": "of the genealogy",
+        "lemma": "genesis"
+      },
+      {
+        "surface": "of Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "the son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "of David",
+        "lemma": "daueid"
+      },
+      {
+        "surface": "the son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "of Abraham",
+        "lemma": "abraam"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Isaac",
+        "lemma": "isaak"
+      },
+      {
+        "surface": "Isaac",
+        "lemma": "isaak"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Jacob",
+        "lemma": "iakob"
+      },
+      {
+        "surface": "Jacob",
+        "lemma": "iakob"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Judah",
+        "lemma": "ioudas"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Judah",
+        "lemma": "ioudas"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Perez",
+        "lemma": "phares"
+      },
+      {
+        "surface": "Zerah",
+        "lemma": "zara"
+      },
+      {
+        "surface": "Tamar",
+        "lemma": "thamar"
+      },
+      {
+        "surface": "Perez",
+        "lemma": "phares"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Hezron",
+        "lemma": "esrom"
+      },
+      {
+        "surface": "Hezron",
+        "lemma": "esrom"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Ram",
+        "lemma": "aram"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Ram",
+        "lemma": "aram"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Amminadab",
+        "lemma": "aminadab"
+      },
+      {
+        "surface": "Amminadab",
+        "lemma": "aminadab"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Nahshon",
+        "lemma": "naasson"
+      },
+      {
+        "surface": "Nahshon",
+        "lemma": "naasson"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Salmon",
+        "lemma": "salmon"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Salmon",
+        "lemma": "salmon"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Boaz",
+        "lemma": "booz"
+      },
+      {
+        "surface": "Rahab",
+        "lemma": "rhachab"
+      },
+      {
+        "surface": "Boaz",
+        "lemma": "booz"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Obed",
+        "lemma": "obed"
+      },
+      {
+        "surface": "Ruth",
+        "lemma": "rhouth"
+      },
+      {
+        "surface": "Obed",
+        "lemma": "obed"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Jesse",
+        "lemma": "iessai"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Jesse",
+        "lemma": "iessai"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "David",
+        "lemma": "daueid"
+      },
+      {
+        "surface": "king",
+        "lemma": "basileus"
+      },
+      {
+        "surface": "David",
+        "lemma": "daueid"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Solomon",
+        "lemma": "solomon"
+      },
+      {
+        "surface": "Uriah’s",
+        "lemma": "ourias"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Solomon",
+        "lemma": "solomon"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Rehoboam",
+        "lemma": "rhoboam"
+      },
+      {
+        "surface": "Rehoboam",
+        "lemma": "rhoboam"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Abijah",
+        "lemma": "abia"
+      },
+      {
+        "surface": "Abijah",
+        "lemma": "abia"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Asa",
+        "lemma": "asa"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Asa",
+        "lemma": "asa"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Jehoshaphat",
+        "lemma": "iosaphat"
+      },
+      {
+        "surface": "Jehoshaphat",
+        "lemma": "iosaphat"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Joram",
+        "lemma": "ioram"
+      },
+      {
+        "surface": "Joram",
+        "lemma": "ioram"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Uzziah",
+        "lemma": "ozias"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Uzziah",
+        "lemma": "ozias"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Jotham",
+        "lemma": "ioatham"
+      },
+      {
+        "surface": "Jotham",
+        "lemma": "ioatham"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Ahaz",
+        "lemma": "achaz"
+      },
+      {
+        "surface": "Ahaz",
+        "lemma": "achaz"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Hezekiah",
+        "lemma": "ezekias"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Hezekiah",
+        "lemma": "ezekias"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Manasseh",
+        "lemma": "manasses"
+      },
+      {
+        "surface": "Manasseh",
+        "lemma": "manasses"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Amon",
+        "lemma": "amos"
+      },
+      {
+        "surface": "Amon",
+        "lemma": "amos"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Josiah",
+        "lemma": "iosias"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Josiah",
+        "lemma": "iosias"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Jeconiah",
+        "lemma": "iechonias"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "adelphos"
+      },
+      {
+        "surface": "exile",
+        "lemma": "metoikesia"
+      },
+      {
+        "surface": "to Babylon",
+        "lemma": "babulon"
+      }
+    ],
+    "12": [
+      {
+        "surface": "exile",
+        "lemma": "metoikesia"
+      },
+      {
+        "surface": "to Babylon",
+        "lemma": "babulon"
+      },
+      {
+        "surface": "Jeconiah",
+        "lemma": "iechonias"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Shealtiel",
+        "lemma": "salathiel"
+      },
+      {
+        "surface": "Shealtiel",
+        "lemma": "salathiel"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Zerubbabel",
+        "lemma": "zorobabel"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Zerubbabel",
+        "lemma": "zorobabel"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Abiud",
+        "lemma": "abioud"
+      },
+      {
+        "surface": "Abiud",
+        "lemma": "abioud"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Eliakim",
+        "lemma": "eliakeim"
+      },
+      {
+        "surface": "Eliakim",
+        "lemma": "eliakeim"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Azor",
+        "lemma": "azor"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Azor",
+        "lemma": "azor"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Zadok",
+        "lemma": "sadok"
+      },
+      {
+        "surface": "Zadok",
+        "lemma": "sadok"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Achim",
+        "lemma": "acheim"
+      },
+      {
+        "surface": "Achim",
+        "lemma": "acheim"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Eliud",
+        "lemma": "elioud"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Eliud",
+        "lemma": "elioud"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Eleazar",
+        "lemma": "eleazar"
+      },
+      {
+        "surface": "Eleazar",
+        "lemma": "eleazar"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Matthan",
+        "lemma": "matthan"
+      },
+      {
+        "surface": "Matthan",
+        "lemma": "matthan"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Jacob",
+        "lemma": "iakob"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Jacob",
+        "lemma": "iakob"
+      },
+      {
+        "surface": "the father of",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Joseph",
+        "lemma": "ioseph"
+      },
+      {
+        "surface": "husband",
+        "lemma": "aner"
+      },
+      {
+        "surface": "of Mary",
+        "lemma": "maria"
+      },
+      {
+        "surface": "was born",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      }
+    ],
+    "17": [
+      {
+        "surface": "there were fourteen",
+        "lemma": "dekatessares"
+      },
+      {
+        "surface": "generations",
+        "lemma": "genea"
+      },
+      {
+        "surface": "Abraham",
+        "lemma": "abraam"
+      },
+      {
+        "surface": "David",
+        "lemma": "daueid"
+      },
+      {
+        "surface": "fourteen",
+        "lemma": "dekatessares"
+      },
+      {
+        "surface": "David",
+        "lemma": "daueid"
+      },
+      {
+        "surface": "exile",
+        "lemma": "metoikesia"
+      },
+      {
+        "surface": "to Babylon",
+        "lemma": "babulon"
+      },
+      {
+        "surface": "fourteen",
+        "lemma": "dekatessares"
+      },
+      {
+        "surface": "exile",
+        "lemma": "metoikesia"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      }
+    ],
+    "18": [
+      {
+        "surface": "This is how",
+        "lemma": "houto"
+      },
+      {
+        "surface": "birth",
+        "lemma": "genesis"
+      },
+      {
+        "surface": "of Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "Christ",
+        "lemma": "christos"
+      },
+      {
+        "surface": "mother",
+        "lemma": "meter"
+      },
+      {
+        "surface": "Mary",
+        "lemma": "maria"
+      },
+      {
+        "surface": "was pledged in marriage",
+        "lemma": "mnesteuo"
+      },
+      {
+        "surface": "to Joseph",
+        "lemma": "ioseph"
+      },
+      {
+        "surface": "came together",
+        "lemma": "sunerchomai"
+      },
+      {
+        "surface": "the Holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      }
+    ],
+    "19": [
+      {
+        "surface": "Joseph",
+        "lemma": "ioseph"
+      },
+      {
+        "surface": "husband",
+        "lemma": "aner"
+      },
+      {
+        "surface": "a righteous man",
+        "lemma": "dikaios"
+      },
+      {
+        "surface": "to disgrace her publicly",
+        "lemma": "deigmatizo"
+      },
+      {
+        "surface": "he resolved",
+        "lemma": "boulomai"
+      },
+      {
+        "surface": "to divorce",
+        "lemma": "apoluo"
+      },
+      {
+        "surface": "quietly",
+        "lemma": "lathra"
+      }
+    ],
+    "20": [
+      {
+        "surface": "he had pondered",
+        "lemma": "enthumeomai"
+      },
+      {
+        "surface": "an angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "appeared",
+        "lemma": "phaino"
+      },
+      {
+        "surface": "a dream",
+        "lemma": "onar"
+      },
+      {
+        "surface": "Joseph",
+        "lemma": "ioseph"
+      },
+      {
+        "surface": "son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "of David",
+        "lemma": "daueid"
+      },
+      {
+        "surface": "do not be afraid",
+        "lemma": "phobeo"
+      },
+      {
+        "surface": "to embrace",
+        "lemma": "paralambano"
+      },
+      {
+        "surface": "Mary",
+        "lemma": "maria"
+      },
+      {
+        "surface": "wife",
+        "lemma": "gune"
+      },
+      {
+        "surface": "conceived",
+        "lemma": "gennao"
+      },
+      {
+        "surface": "the Holy",
+        "lemma": "hagios"
+      },
+      {
+        "surface": "Spirit",
+        "lemma": "pneuma"
+      }
+    ],
+    "21": [
+      {
+        "surface": "She will give birth to",
+        "lemma": "tikto"
+      },
+      {
+        "surface": "a Son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "you are to give",
+        "lemma": "kaleo"
+      },
+      {
+        "surface": "name",
+        "lemma": "onoma"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      },
+      {
+        "surface": "will save",
+        "lemma": "sozo"
+      },
+      {
+        "surface": "people",
+        "lemma": "laos"
+      },
+      {
+        "surface": "sins",
+        "lemma": "hamartia"
+      }
+    ],
+    "22": [
+      {
+        "surface": "All",
+        "lemma": "holos"
+      },
+      {
+        "surface": "fulfill",
+        "lemma": "pleroo"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "had said",
+        "lemma": "ero"
+      },
+      {
+        "surface": "prophet",
+        "lemma": "prophetes"
+      }
+    ],
+    "23": [
+      {
+        "surface": "virgin",
+        "lemma": "parthenos"
+      },
+      {
+        "surface": "will give birth to",
+        "lemma": "tikto"
+      },
+      {
+        "surface": "a son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "they will call",
+        "lemma": "kaleo"
+      },
+      {
+        "surface": "Immanuel",
+        "lemma": "emmanouel"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Joseph",
+        "lemma": "ioseph"
+      },
+      {
+        "surface": "woke up",
+        "lemma": "egeiro"
+      },
+      {
+        "surface": "angel",
+        "lemma": "angelos"
+      },
+      {
+        "surface": "of the Lord",
+        "lemma": "kurios"
+      },
+      {
+        "surface": "had commanded",
+        "lemma": "prostasso"
+      },
+      {
+        "surface": "embraced",
+        "lemma": "paralambano"
+      },
+      {
+        "surface": "wife",
+        "lemma": "gune"
+      }
+    ],
+    "25": [
+      {
+        "surface": "she gave birth to",
+        "lemma": "tikto"
+      },
+      {
+        "surface": "a Son",
+        "lemma": "huios"
+      },
+      {
+        "surface": "he gave Him the name",
+        "lemma": "kaleo"
+      },
+      {
+        "surface": "Jesus",
+        "lemma": "iesous"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "metoikesia",
+    "gennao",
+    "salmon"
+  ]
+}

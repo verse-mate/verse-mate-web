@@ -1,0 +1,1589 @@
+{
+  "bookId": 4,
+  "book": "Numbers",
+  "chapter": 1,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "On the first",
+        "lemma": "echad"
+      },
+      {
+        "surface": "day of the second",
+        "lemma": "sheni"
+      },
+      {
+        "surface": "month",
+        "lemma": "chodesh"
+      },
+      {
+        "surface": "of the second",
+        "lemma": "sheni"
+      },
+      {
+        "surface": "year",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "of the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "in the Tent",
+        "lemma": "ohel"
+      },
+      {
+        "surface": "of Meeting",
+        "lemma": "moed"
+      },
+      {
+        "surface": "in the Wilderness",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "of Sinai",
+        "lemma": "sinay"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Take a census",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "by their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "listing",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "man",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "by name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "one by one",
+        "lemma": "gulgolet"
+      }
+    ],
+    "3": [
+      {
+        "surface": "and Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "are to number",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "who are twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "by their divisions",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "in Israel’s",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "army",
+        "lemma": "tsava"
+      }
+    ],
+    "4": [
+      {
+        "surface": "And one man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "from each tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "the head",
+        "lemma": "rosh"
+      }
+    ],
+    "5": [
+      {
+        "surface": "are the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of the men",
+        "lemma": "enosh"
+      },
+      {
+        "surface": "are to assist",
+        "lemma": "amad"
+      },
+      {
+        "surface": "From the tribe of Reuben",
+        "lemma": "reuven"
+      },
+      {
+        "surface": "Elizur",
+        "lemma": "elitsur"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Shedeur",
+        "lemma": "shedeur"
+      }
+    ],
+    "6": [
+      {
+        "surface": "from Simeon",
+        "lemma": "shimon"
+      },
+      {
+        "surface": "Shelumiel",
+        "lemma": "shelumiel"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Zurishaddai",
+        "lemma": "tsurishadday"
+      }
+    ],
+    "7": [
+      {
+        "surface": "from Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "Nahshon",
+        "lemma": "nachshon"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Amminadab",
+        "lemma": "amminadav"
+      }
+    ],
+    "8": [
+      {
+        "surface": "from Issachar",
+        "lemma": "yissaskhar"
+      },
+      {
+        "surface": "Nethanel",
+        "lemma": "netanel"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Zuar",
+        "lemma": "tsuar"
+      }
+    ],
+    "9": [
+      {
+        "surface": "from Zebulun",
+        "lemma": "zevulun"
+      },
+      {
+        "surface": "Eliab",
+        "lemma": "eliav"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Helon",
+        "lemma": "chelon"
+      }
+    ],
+    "10": [
+      {
+        "surface": "from the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "from Ephraim",
+        "lemma": "ephrayim"
+      },
+      {
+        "surface": "Elishama",
+        "lemma": "elishama"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ammihud",
+        "lemma": "ammihud"
+      },
+      {
+        "surface": "and from Manasseh",
+        "lemma": "menashsheh"
+      },
+      {
+        "surface": "Gamaliel",
+        "lemma": "gamliel"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Pedahzur",
+        "lemma": "pedahtsur"
+      }
+    ],
+    "11": [
+      {
+        "surface": "from Benjamin",
+        "lemma": "binyamin"
+      },
+      {
+        "surface": "Abidan",
+        "lemma": "avidan"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Gideoni",
+        "lemma": "gidoni"
+      }
+    ],
+    "12": [
+      {
+        "surface": "from Dan",
+        "lemma": "dan"
+      },
+      {
+        "surface": "Ahiezer",
+        "lemma": "achiezer"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ammishaddai",
+        "lemma": "ammishadday"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Pagiel",
+        "lemma": "pagiel"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ocran",
+        "lemma": "okhran"
+      }
+    ],
+    "14": [
+      {
+        "surface": "from Gad",
+        "lemma": "gad"
+      },
+      {
+        "surface": "Eliasaph",
+        "lemma": "elyasaph"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Deuel",
+        "lemma": "deuel"
+      }
+    ],
+    "15": [
+      {
+        "surface": "and from Naphtali",
+        "lemma": "naphtali"
+      },
+      {
+        "surface": "Ahira",
+        "lemma": "achira"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Enan",
+        "lemma": "enan"
+      }
+    ],
+    "16": [
+      {
+        "surface": "were appointed",
+        "lemma": "qari"
+      },
+      {
+        "surface": "from the congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "the leaders",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of the tribes",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "the heads",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "of the clans",
+        "lemma": "eleph"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      }
+    ],
+    "17": [
+      {
+        "surface": "So Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "and Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "took",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "had been designated",
+        "lemma": "naqav"
+      },
+      {
+        "surface": "by name",
+        "lemma": "shem"
+      }
+    ],
+    "18": [
+      {
+        "surface": "on the first",
+        "lemma": "echad"
+      },
+      {
+        "surface": "day of the second",
+        "lemma": "sheni"
+      },
+      {
+        "surface": "month",
+        "lemma": "chodesh"
+      },
+      {
+        "surface": "they assembled",
+        "lemma": "qahal"
+      },
+      {
+        "surface": "congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "and recorded their ancestry",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "one by one",
+        "lemma": "gulgolet"
+      },
+      {
+        "surface": "the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "of those twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      }
+    ],
+    "19": [
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "had commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "So Moses numbered them",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "in the Wilderness",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "of Sinai",
+        "lemma": "sinay"
+      }
+    ],
+    "20": [
+      {
+        "surface": "From the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Reuben",
+        "lemma": "reuven"
+      },
+      {
+        "surface": "the firstborn",
+        "lemma": "bekhor"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "according to the records",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "of their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "one",
+        "lemma": "gulgolet"
+      },
+      {
+        "surface": "by one the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "male",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the army",
+        "lemma": "tsava"
+      }
+    ],
+    "21": [
+      {
+        "surface": "those registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "to the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Reuben",
+        "lemma": "reuven"
+      },
+      {
+        "surface": "numbered 46,500",
+        "lemma": "shesh"
+      }
+    ],
+    "22": [
+      {
+        "surface": "From the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Simeon",
+        "lemma": "shimon"
+      },
+      {
+        "surface": "according to the records",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "of their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "one by one",
+        "lemma": "gulgolet"
+      },
+      {
+        "surface": "the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "male",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the army",
+        "lemma": "tsava"
+      }
+    ],
+    "23": [
+      {
+        "surface": "those registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "to the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Simeon",
+        "lemma": "shimon"
+      },
+      {
+        "surface": "numbered 59,300",
+        "lemma": "tesah"
+      }
+    ],
+    "24": [
+      {
+        "surface": "From the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Gad",
+        "lemma": "gad"
+      },
+      {
+        "surface": "according to the records",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "of their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the army",
+        "lemma": "tsava"
+      }
+    ],
+    "25": [
+      {
+        "surface": "those registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "to the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Gad",
+        "lemma": "gad"
+      },
+      {
+        "surface": "numbered 45,650",
+        "lemma": "chamesh"
+      }
+    ],
+    "26": [
+      {
+        "surface": "From the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "according to the records",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "of their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the army",
+        "lemma": "tsava"
+      }
+    ],
+    "27": [
+      {
+        "surface": "those registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "to the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "numbered 74,600",
+        "lemma": "arba"
+      }
+    ],
+    "28": [
+      {
+        "surface": "From the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Issachar",
+        "lemma": "yissaskhar"
+      },
+      {
+        "surface": "according to the records",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "of their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the army",
+        "lemma": "tsava"
+      }
+    ],
+    "29": [
+      {
+        "surface": "those registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "to the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Issachar",
+        "lemma": "yissaskhar"
+      },
+      {
+        "surface": "numbered 54,400",
+        "lemma": "arba"
+      }
+    ],
+    "30": [
+      {
+        "surface": "From the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Zebulun",
+        "lemma": "zevulun"
+      },
+      {
+        "surface": "according to the records",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "of their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the army",
+        "lemma": "tsava"
+      }
+    ],
+    "31": [
+      {
+        "surface": "those registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "to the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Zebulun",
+        "lemma": "zevulun"
+      },
+      {
+        "surface": "numbered 57,400",
+        "lemma": "sheva"
+      }
+    ],
+    "32": [
+      {
+        "surface": "From the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "From the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Ephraim",
+        "lemma": "ephrayim"
+      },
+      {
+        "surface": "according to the records",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "of their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the army",
+        "lemma": "tsava"
+      }
+    ],
+    "33": [
+      {
+        "surface": "those registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "to the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Ephraim",
+        "lemma": "ephrayim"
+      },
+      {
+        "surface": "numbered 40,500",
+        "lemma": "arbaim"
+      }
+    ],
+    "34": [
+      {
+        "surface": "And from the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Manasseh",
+        "lemma": "menashsheh"
+      },
+      {
+        "surface": "according to the records",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "of their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the army",
+        "lemma": "tsava"
+      }
+    ],
+    "35": [
+      {
+        "surface": "those registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "to the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Manasseh",
+        "lemma": "menashsheh"
+      },
+      {
+        "surface": "numbered 32,200",
+        "lemma": "shenayim"
+      }
+    ],
+    "36": [
+      {
+        "surface": "From the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Benjamin",
+        "lemma": "binyamin"
+      },
+      {
+        "surface": "according to the records",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "of their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the army",
+        "lemma": "tsava"
+      }
+    ],
+    "37": [
+      {
+        "surface": "those registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "to the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Benjamin",
+        "lemma": "binyamin"
+      },
+      {
+        "surface": "numbered 35,400",
+        "lemma": "chamesh"
+      }
+    ],
+    "38": [
+      {
+        "surface": "From the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Dan",
+        "lemma": "dan"
+      },
+      {
+        "surface": "according to the records",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "of their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the army",
+        "lemma": "tsava"
+      }
+    ],
+    "39": [
+      {
+        "surface": "those registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "to the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Dan",
+        "lemma": "dan"
+      },
+      {
+        "surface": "numbered 62,700",
+        "lemma": "shenayim"
+      }
+    ],
+    "40": [
+      {
+        "surface": "From the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "according to the records",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "of their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the army",
+        "lemma": "tsava"
+      }
+    ],
+    "41": [
+      {
+        "surface": "those registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "to the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "numbered 41,500",
+        "lemma": "echad"
+      }
+    ],
+    "42": [
+      {
+        "surface": "From the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Naphtali",
+        "lemma": "naphtali"
+      },
+      {
+        "surface": "according to the records",
+        "lemma": "toledah"
+      },
+      {
+        "surface": "of their clans",
+        "lemma": "mishpachah"
+      },
+      {
+        "surface": "counting",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "the names",
+        "lemma": "shem"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in the army",
+        "lemma": "tsava"
+      }
+    ],
+    "43": [
+      {
+        "surface": "those registered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "to the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Naphtali",
+        "lemma": "naphtali"
+      },
+      {
+        "surface": "numbered 53,400",
+        "lemma": "shalosh"
+      }
+    ],
+    "44": [
+      {
+        "surface": "numbered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "by Moses",
+        "lemma": "mosheh"
+      },
+      {
+        "surface": "and Aaron",
+        "lemma": "aharon"
+      },
+      {
+        "surface": "with the assistance of the twelve",
+        "lemma": "shenayim"
+      },
+      {
+        "surface": "leaders",
+        "lemma": "nasi"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "each one",
+        "lemma": "echad"
+      }
+    ],
+    "45": [
+      {
+        "surface": "the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "twenty",
+        "lemma": "esrim"
+      },
+      {
+        "surface": "years of age",
+        "lemma": "ben"
+      },
+      {
+        "surface": "or older",
+        "lemma": "maal"
+      },
+      {
+        "surface": "in Israel’s",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "army",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "counted",
+        "lemma": "paqad"
+      }
+    ],
+    "46": [
+      {
+        "surface": "those counted",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "totaled 603,550",
+        "lemma": "shesh"
+      }
+    ],
+    "47": [
+      {
+        "surface": "The Levites, however",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "numbered",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "along with them",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "by the tribe",
+        "lemma": "matteh"
+      }
+    ],
+    "48": [
+      {
+        "surface": "For the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "had said to",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ],
+    "49": [
+      {
+        "surface": "number",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "the tribe",
+        "lemma": "matteh"
+      },
+      {
+        "surface": "of Levi",
+        "lemma": "levi"
+      },
+      {
+        "surface": "in the census",
+        "lemma": "rosh"
+      },
+      {
+        "surface": "with",
+        "lemma": "tavekh"
+      },
+      {
+        "surface": "the other Israelites",
+        "lemma": "ben"
+      }
+    ],
+    "50": [
+      {
+        "surface": "you are to appoint",
+        "lemma": "paqad"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "the tabernacle",
+        "lemma": "mishkan"
+      },
+      {
+        "surface": "of the Testimony",
+        "lemma": "edut"
+      },
+      {
+        "surface": "its furnishings",
+        "lemma": "keli"
+      },
+      {
+        "surface": "shall carry",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the tabernacle",
+        "lemma": "mishkan"
+      },
+      {
+        "surface": "its articles",
+        "lemma": "keli"
+      },
+      {
+        "surface": "care for it",
+        "lemma": "sharat"
+      },
+      {
+        "surface": "and camp",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "around",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "it",
+        "lemma": "mishkan"
+      }
+    ],
+    "51": [
+      {
+        "surface": "Whenever the tabernacle",
+        "lemma": "mishkan"
+      },
+      {
+        "surface": "is to move",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "are to take it down",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "and whenever it",
+        "lemma": "mishkan"
+      },
+      {
+        "surface": "is to be pitched",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "are to set it up",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "Any outsider",
+        "lemma": "zur"
+      },
+      {
+        "surface": "who goes near it",
+        "lemma": "qarev"
+      },
+      {
+        "surface": "must be put to death",
+        "lemma": "mut"
+      }
+    ],
+    "52": [
+      {
+        "surface": "The Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "are to camp",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "by their divisions",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "each man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "his own camp",
+        "lemma": "machaneh"
+      },
+      {
+        "surface": "his own standard",
+        "lemma": "degel"
+      }
+    ],
+    "53": [
+      {
+        "surface": "But the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "are to camp",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "around",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "the tabernacle",
+        "lemma": "mishkan"
+      },
+      {
+        "surface": "of the Testimony",
+        "lemma": "edut"
+      },
+      {
+        "surface": "and watch over it",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "wrath",
+        "lemma": "qetseph"
+      },
+      {
+        "surface": "the congregation",
+        "lemma": "edah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "So the Levites",
+        "lemma": "leviyyi"
+      },
+      {
+        "surface": "are responsible",
+        "lemma": "mishmeret"
+      },
+      {
+        "surface": "for the tabernacle",
+        "lemma": "mishkan"
+      },
+      {
+        "surface": "of the Testimony",
+        "lemma": "edut"
+      }
+    ],
+    "54": [
+      {
+        "surface": "Thus the Israelites",
+        "lemma": "ben"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "had commanded",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "Moses",
+        "lemma": "mosheh"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "paqad",
+    "tsava",
+    "shem"
+  ]
+}

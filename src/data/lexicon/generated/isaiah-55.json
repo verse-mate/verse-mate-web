@@ -1,0 +1,551 @@
+{
+  "bookId": 23,
+  "book": "Isaiah",
+  "chapter": 55,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Come",
+        "lemma": "hoy"
+      },
+      {
+        "surface": "who are thirsty",
+        "lemma": "tsame"
+      },
+      {
+        "surface": "come",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "to the waters",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "without",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "money",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "come",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "buy",
+        "lemma": "shavar"
+      },
+      {
+        "surface": "and eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "Come",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "buy",
+        "lemma": "shavar"
+      },
+      {
+        "surface": "wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "and milk",
+        "lemma": "chalav"
+      },
+      {
+        "surface": "money",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "cost",
+        "lemma": "mechir"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "spend",
+        "lemma": "shaqal"
+      },
+      {
+        "surface": "money",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "and your labor",
+        "lemma": "yegia"
+      },
+      {
+        "surface": "satisfy",
+        "lemma": "sovah"
+      },
+      {
+        "surface": "and eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "what is good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "and your soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "will delight",
+        "lemma": "anag"
+      },
+      {
+        "surface": "in the richest of foods",
+        "lemma": "deshen"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Incline",
+        "lemma": "natah"
+      },
+      {
+        "surface": "your ear",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "and come",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "so that your soul",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "may live",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "I will make",
+        "lemma": "karat"
+      },
+      {
+        "surface": "an everlasting",
+        "lemma": "olam"
+      },
+      {
+        "surface": "covenant",
+        "lemma": "berit"
+      },
+      {
+        "surface": "My loving devotion",
+        "lemma": "chesed"
+      },
+      {
+        "surface": "promised",
+        "lemma": "aman"
+      },
+      {
+        "surface": "to David",
+        "lemma": "david"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Behold",
+        "lemma": "hen"
+      },
+      {
+        "surface": "a witness",
+        "lemma": "ed"
+      },
+      {
+        "surface": "to the nations",
+        "lemma": "leom"
+      },
+      {
+        "surface": "a leader",
+        "lemma": "nagid"
+      },
+      {
+        "surface": "and commander",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "of the peoples",
+        "lemma": "leom"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Surely",
+        "lemma": "hen"
+      },
+      {
+        "surface": "a nation",
+        "lemma": "goy"
+      },
+      {
+        "surface": "know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "and nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "know you",
+        "lemma": "yada"
+      },
+      {
+        "surface": "will run",
+        "lemma": "ruts"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the Holy",
+        "lemma": "qadosh"
+      },
+      {
+        "surface": "One of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "has bestowed glory on you",
+        "lemma": "paar"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Seek",
+        "lemma": "darash"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "while He may be found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "near",
+        "lemma": "qarov"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Let the wicked man",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "forsake",
+        "lemma": "azav"
+      },
+      {
+        "surface": "his way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "and the unrighteous",
+        "lemma": "aven"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "his thoughts",
+        "lemma": "machashavah"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "that He may have compassion",
+        "lemma": "racham"
+      },
+      {
+        "surface": "our God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "He will freely",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "pardon",
+        "lemma": "salach"
+      }
+    ],
+    "8": [
+      {
+        "surface": "My thoughts",
+        "lemma": "machashavah"
+      },
+      {
+        "surface": "your thoughts",
+        "lemma": "machashavah"
+      },
+      {
+        "surface": "your ways",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "My ways",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "as the heavens",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "are higher",
+        "lemma": "gavah"
+      },
+      {
+        "surface": "than the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "so",
+        "lemma": "ken"
+      },
+      {
+        "surface": "My ways",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "are higher",
+        "lemma": "gavah"
+      },
+      {
+        "surface": "than your ways",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "and My thoughts",
+        "lemma": "machashavah"
+      },
+      {
+        "surface": "than your thoughts",
+        "lemma": "machashavah"
+      }
+    ],
+    "10": [
+      {
+        "surface": "rain",
+        "lemma": "geshem"
+      },
+      {
+        "surface": "and snow",
+        "lemma": "sheleg"
+      },
+      {
+        "surface": "fall",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "heaven",
+        "lemma": "shamayim"
+      },
+      {
+        "surface": "watering",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "making it bud",
+        "lemma": "yalad"
+      },
+      {
+        "surface": "and sprout",
+        "lemma": "tsamach"
+      },
+      {
+        "surface": "seed",
+        "lemma": "zera"
+      },
+      {
+        "surface": "to sow",
+        "lemma": "zara"
+      },
+      {
+        "surface": "and food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "to eat",
+        "lemma": "akhal"
+      }
+    ],
+    "11": [
+      {
+        "surface": "so",
+        "lemma": "ken"
+      },
+      {
+        "surface": "My word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "from My mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "empty",
+        "lemma": "reqam"
+      },
+      {
+        "surface": "I please",
+        "lemma": "chaphets"
+      },
+      {
+        "surface": "and it will prosper",
+        "lemma": "tsalach"
+      },
+      {
+        "surface": "I send it",
+        "lemma": "shalach"
+      }
+    ],
+    "12": [
+      {
+        "surface": "with joy",
+        "lemma": "simchah"
+      },
+      {
+        "surface": "and be led forth",
+        "lemma": "yaval"
+      },
+      {
+        "surface": "in peace",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "the mountains",
+        "lemma": "har"
+      },
+      {
+        "surface": "and hills",
+        "lemma": "givah"
+      },
+      {
+        "surface": "will burst",
+        "lemma": "patsach"
+      },
+      {
+        "surface": "into song",
+        "lemma": "rinnah"
+      },
+      {
+        "surface": "before you",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "the trees",
+        "lemma": "ets"
+      },
+      {
+        "surface": "of the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "will clap",
+        "lemma": "maach"
+      },
+      {
+        "surface": "their hands",
+        "lemma": "kaph"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Instead of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the thornbush",
+        "lemma": "naatsuts"
+      },
+      {
+        "surface": "the cypress",
+        "lemma": "berosh"
+      },
+      {
+        "surface": "will grow",
+        "lemma": "alah"
+      },
+      {
+        "surface": "and instead of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the brier",
+        "lemma": "sarpad"
+      },
+      {
+        "surface": "the myrtle",
+        "lemma": "hadas"
+      },
+      {
+        "surface": "will spring up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "a name",
+        "lemma": "shem"
+      },
+      {
+        "surface": "for the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "an everlasting",
+        "lemma": "olam"
+      },
+      {
+        "surface": "sign",
+        "lemma": "ot"
+      },
+      {
+        "surface": "to be destroyed",
+        "lemma": "karat"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "machashavah",
+    "halakh",
+    "keseph"
+  ]
+}

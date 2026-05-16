@@ -1,0 +1,655 @@
+{
+  "bookId": 18,
+  "book": "Job",
+  "chapter": 19,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then Job",
+        "lemma": "iyyov"
+      },
+      {
+        "surface": "answered",
+        "lemma": "un"
+      }
+    ],
+    "2": [
+      {
+        "surface": "will you torment",
+        "lemma": "yagah"
+      },
+      {
+        "surface": "me",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "and crush me",
+        "lemma": "dakah"
+      },
+      {
+        "surface": "with your words",
+        "lemma": "millah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Ten",
+        "lemma": "eser"
+      },
+      {
+        "surface": "times",
+        "lemma": "paam"
+      },
+      {
+        "surface": "you have reproached me",
+        "lemma": "kalam"
+      },
+      {
+        "surface": "you shamelessly",
+        "lemma": "bush"
+      },
+      {
+        "surface": "mistreat",
+        "lemma": "hakhar"
+      }
+    ],
+    "4": [
+      {
+        "surface": "vvv",
+        "lemma": "omnam"
+      },
+      {
+        "surface": "I have truly gone astray",
+        "lemma": "shagah"
+      },
+      {
+        "surface": "my error",
+        "lemma": "meshugah"
+      },
+      {
+        "surface": "concerns me",
+        "lemma": "lun"
+      }
+    ],
+    "5": [
+      {
+        "surface": "indeed",
+        "lemma": "omnam"
+      },
+      {
+        "surface": "you would exalt yourselves",
+        "lemma": "gadal"
+      },
+      {
+        "surface": "and use my disgrace",
+        "lemma": "cherpah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "understand",
+        "lemma": "yada"
+      },
+      {
+        "surface": "it is God",
+        "lemma": "eloah"
+      },
+      {
+        "surface": "who has wronged me",
+        "lemma": "avat"
+      },
+      {
+        "surface": "and drawn His net",
+        "lemma": "matsod"
+      },
+      {
+        "surface": "around",
+        "lemma": "naqaph"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Though",
+        "lemma": "hen"
+      },
+      {
+        "surface": "I cry out",
+        "lemma": "tsaaq"
+      },
+      {
+        "surface": "Violence",
+        "lemma": "chamas"
+      },
+      {
+        "surface": "response",
+        "lemma": "un"
+      },
+      {
+        "surface": "though I call for help",
+        "lemma": "shava"
+      },
+      {
+        "surface": "there is no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "justice",
+        "lemma": "mishpat"
+      }
+    ],
+    "8": [
+      {
+        "surface": "He has blocked",
+        "lemma": "gadar"
+      },
+      {
+        "surface": "my way",
+        "lemma": "orach"
+      },
+      {
+        "surface": "pass",
+        "lemma": "avar"
+      },
+      {
+        "surface": "my paths",
+        "lemma": "nativ"
+      },
+      {
+        "surface": "with darkness",
+        "lemma": "choshekh"
+      }
+    ],
+    "9": [
+      {
+        "surface": "He has stripped me",
+        "lemma": "pashat"
+      },
+      {
+        "surface": "of my honor",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "and removed",
+        "lemma": "sur"
+      },
+      {
+        "surface": "the crown",
+        "lemma": "atarah"
+      },
+      {
+        "surface": "from my head",
+        "lemma": "rosh"
+      }
+    ],
+    "10": [
+      {
+        "surface": "He tears me down",
+        "lemma": "natats"
+      },
+      {
+        "surface": "on every side",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "until I am gone",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "He uproots",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "my hope",
+        "lemma": "tiqvah"
+      },
+      {
+        "surface": "like a tree",
+        "lemma": "ets"
+      }
+    ],
+    "11": [
+      {
+        "surface": "His anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "burns",
+        "lemma": "charah"
+      },
+      {
+        "surface": "and He counts me",
+        "lemma": "chashav"
+      },
+      {
+        "surface": "among His enemies",
+        "lemma": "tsar"
+      }
+    ],
+    "12": [
+      {
+        "surface": "His troops",
+        "lemma": "gedud"
+      },
+      {
+        "surface": "together",
+        "lemma": "yachad"
+      },
+      {
+        "surface": "they construct",
+        "lemma": "salal"
+      },
+      {
+        "surface": "a ramp",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "and encamp",
+        "lemma": "chanah"
+      },
+      {
+        "surface": "around",
+        "lemma": "saviv"
+      },
+      {
+        "surface": "my tent",
+        "lemma": "ohel"
+      }
+    ],
+    "13": [
+      {
+        "surface": "He has removed",
+        "lemma": "rachaq"
+      },
+      {
+        "surface": "my brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "my acquaintances",
+        "lemma": "yada"
+      },
+      {
+        "surface": "have abandoned",
+        "lemma": "zur"
+      }
+    ],
+    "14": [
+      {
+        "surface": "My kinsmen",
+        "lemma": "qarov"
+      },
+      {
+        "surface": "have failed me",
+        "lemma": "chadal"
+      },
+      {
+        "surface": "and my friends",
+        "lemma": "yada"
+      },
+      {
+        "surface": "have forgotten me",
+        "lemma": "shakhach"
+      }
+    ],
+    "15": [
+      {
+        "surface": "My guests",
+        "lemma": "bet"
+      },
+      {
+        "surface": "and maidservants",
+        "lemma": "amah"
+      },
+      {
+        "surface": "count me",
+        "lemma": "chashav"
+      },
+      {
+        "surface": "as a stranger",
+        "lemma": "zur"
+      },
+      {
+        "surface": "a foreigner",
+        "lemma": "nokhri"
+      },
+      {
+        "surface": "in their sight",
+        "lemma": "ayin"
+      }
+    ],
+    "16": [
+      {
+        "surface": "for my servant",
+        "lemma": "eved"
+      },
+      {
+        "surface": "answer",
+        "lemma": "un"
+      },
+      {
+        "surface": "though I implore",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "my own mouth",
+        "lemma": "peh"
+      }
+    ],
+    "17": [
+      {
+        "surface": "My breath",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "is repulsive",
+        "lemma": "zur"
+      },
+      {
+        "surface": "to my wife",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "and I am loathsome",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "to my own family",
+        "lemma": "ben"
+      }
+    ],
+    "18": [
+      {
+        "surface": "little boys",
+        "lemma": "avil"
+      },
+      {
+        "surface": "scorn",
+        "lemma": "maas"
+      },
+      {
+        "surface": "when I appear",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "they deride",
+        "lemma": "davar"
+      }
+    ],
+    "19": [
+      {
+        "surface": "my best friends",
+        "lemma": "mat"
+      },
+      {
+        "surface": "despise me",
+        "lemma": "taav"
+      },
+      {
+        "surface": "I love",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "have turned",
+        "lemma": "haphakh"
+      }
+    ],
+    "20": [
+      {
+        "surface": "My skin",
+        "lemma": "or"
+      },
+      {
+        "surface": "and flesh",
+        "lemma": "basar"
+      },
+      {
+        "surface": "cling",
+        "lemma": "davaq"
+      },
+      {
+        "surface": "to my bones",
+        "lemma": "etsem"
+      },
+      {
+        "surface": "I have escaped",
+        "lemma": "malat"
+      },
+      {
+        "surface": "by the skin",
+        "lemma": "or"
+      },
+      {
+        "surface": "of my teeth",
+        "lemma": "shen"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Have pity on me",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "my friends",
+        "lemma": "rea"
+      },
+      {
+        "surface": "have pity",
+        "lemma": "chanan"
+      },
+      {
+        "surface": "the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of God",
+        "lemma": "eloah"
+      },
+      {
+        "surface": "has struck",
+        "lemma": "naga"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "do you persecute me",
+        "lemma": "radaph"
+      },
+      {
+        "surface": "God does",
+        "lemma": "el"
+      },
+      {
+        "surface": "get enough",
+        "lemma": "sava"
+      },
+      {
+        "surface": "of my flesh",
+        "lemma": "basar"
+      }
+    ],
+    "23": [
+      {
+        "surface": "I wish",
+        "lemma": "mi"
+      },
+      {
+        "surface": "that my words",
+        "lemma": "millah"
+      },
+      {
+        "surface": "were recorded",
+        "lemma": "katav"
+      },
+      {
+        "surface": "and inscribed",
+        "lemma": "chaqaq"
+      },
+      {
+        "surface": "in a book",
+        "lemma": "sepher"
+      }
+    ],
+    "24": [
+      {
+        "surface": "by an iron",
+        "lemma": "barzel"
+      },
+      {
+        "surface": "on lead",
+        "lemma": "opheret"
+      },
+      {
+        "surface": "or chiseled",
+        "lemma": "chatsav"
+      },
+      {
+        "surface": "in stone",
+        "lemma": "tsur"
+      },
+      {
+        "surface": "forever",
+        "lemma": "ad"
+      }
+    ],
+    "25": [
+      {
+        "surface": "know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "that my Redeemer",
+        "lemma": "gaal"
+      },
+      {
+        "surface": "lives",
+        "lemma": "chay"
+      },
+      {
+        "surface": "and in the end",
+        "lemma": "acharon"
+      },
+      {
+        "surface": "He will stand",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "aphar"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Even after",
+        "lemma": "achar"
+      },
+      {
+        "surface": "my skin",
+        "lemma": "or"
+      },
+      {
+        "surface": "has been destroyed",
+        "lemma": "naqaph"
+      },
+      {
+        "surface": "yet in my flesh",
+        "lemma": "basar"
+      },
+      {
+        "surface": "I will see",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "God",
+        "lemma": "eloah"
+      }
+    ],
+    "27": [
+      {
+        "surface": "will see",
+        "lemma": "chazah"
+      },
+      {
+        "surface": "my eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "as a stranger",
+        "lemma": "zur"
+      },
+      {
+        "surface": "How my heart",
+        "lemma": "kilyah"
+      },
+      {
+        "surface": "yearns",
+        "lemma": "kalah"
+      },
+      {
+        "surface": "within me",
+        "lemma": "cheq"
+      }
+    ],
+    "28": [
+      {
+        "surface": "Let us",
+        "lemma": "mah"
+      },
+      {
+        "surface": "persecute",
+        "lemma": "radaph"
+      },
+      {
+        "surface": "since the root",
+        "lemma": "sheresh"
+      },
+      {
+        "surface": "of the matter",
+        "lemma": "davar"
+      },
+      {
+        "surface": "lies",
+        "lemma": "matsa"
+      }
+    ],
+    "29": [
+      {
+        "surface": "then you should fear",
+        "lemma": "gur"
+      },
+      {
+        "surface": "the sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "wrath",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "brings punishment",
+        "lemma": "avan"
+      },
+      {
+        "surface": "by the sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "you may know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "there is a judgment",
+        "lemma": "din"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "yada",
+    "zur",
+    "chanan"
+  ]
+}

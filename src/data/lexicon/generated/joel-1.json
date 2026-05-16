@@ -1,0 +1,789 @@
+{
+  "bookId": 29,
+  "book": "Joel",
+  "chapter": 1,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "This is the word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "Joel",
+        "lemma": "yoel"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Pethuel",
+        "lemma": "petuel"
+      }
+    ],
+    "2": [
+      {
+        "surface": "O elders",
+        "lemma": "zaqen"
+      },
+      {
+        "surface": "and give ear",
+        "lemma": "azan"
+      },
+      {
+        "surface": "in the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "in your days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "in the days",
+        "lemma": "yom"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Tell",
+        "lemma": "saphar"
+      },
+      {
+        "surface": "to your children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "let your children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "tell it to their children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and their children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "to the next",
+        "lemma": "acher"
+      },
+      {
+        "surface": "generation",
+        "lemma": "dor"
+      }
+    ],
+    "4": [
+      {
+        "surface": "What the devouring locust",
+        "lemma": "gazam"
+      },
+      {
+        "surface": "has left",
+        "lemma": "yeter"
+      },
+      {
+        "surface": "the swarming locust",
+        "lemma": "arbeh"
+      },
+      {
+        "surface": "has eaten",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "what the swarming locust",
+        "lemma": "arbeh"
+      },
+      {
+        "surface": "has left",
+        "lemma": "yeter"
+      },
+      {
+        "surface": "the young locust",
+        "lemma": "yeleq"
+      },
+      {
+        "surface": "has eaten",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "and what the young locust",
+        "lemma": "yeleq"
+      },
+      {
+        "surface": "has left",
+        "lemma": "yeter"
+      },
+      {
+        "surface": "the destroying locust",
+        "lemma": "chasil"
+      },
+      {
+        "surface": "has eaten",
+        "lemma": "akhal"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Wake up",
+        "lemma": "quts"
+      },
+      {
+        "surface": "you drunkards",
+        "lemma": "shikkor"
+      },
+      {
+        "surface": "and weep",
+        "lemma": "bakhah"
+      },
+      {
+        "surface": "wail",
+        "lemma": "yalal"
+      },
+      {
+        "surface": "you drinkers",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "of wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "the sweet wine",
+        "lemma": "asis"
+      },
+      {
+        "surface": "it has been cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "from your mouth",
+        "lemma": "peh"
+      }
+    ],
+    "6": [
+      {
+        "surface": "a nation",
+        "lemma": "goy"
+      },
+      {
+        "surface": "has invaded",
+        "lemma": "alah"
+      },
+      {
+        "surface": "My land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "powerful",
+        "lemma": "atsum"
+      },
+      {
+        "surface": "and without",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "number",
+        "lemma": "mispar"
+      },
+      {
+        "surface": "its teeth",
+        "lemma": "shen"
+      },
+      {
+        "surface": "are the teeth",
+        "lemma": "shen"
+      },
+      {
+        "surface": "of a lion",
+        "lemma": "ari"
+      },
+      {
+        "surface": "and its fangs are the fangs",
+        "lemma": "metallah"
+      },
+      {
+        "surface": "of a lioness",
+        "lemma": "levi"
+      }
+    ],
+    "7": [
+      {
+        "surface": "It has laid",
+        "lemma": "sum"
+      },
+      {
+        "surface": "waste",
+        "lemma": "shammah"
+      },
+      {
+        "surface": "My grapevine",
+        "lemma": "gephen"
+      },
+      {
+        "surface": "and splintered",
+        "lemma": "qetsaphah"
+      },
+      {
+        "surface": "My fig tree",
+        "lemma": "teenah"
+      },
+      {
+        "surface": "It has stripped off the bark",
+        "lemma": "chasaph"
+      },
+      {
+        "surface": "and thrown it away",
+        "lemma": "shalakh"
+      },
+      {
+        "surface": "the branches",
+        "lemma": "sarig"
+      },
+      {
+        "surface": "have turned white",
+        "lemma": "laven"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Wail",
+        "lemma": "alah"
+      },
+      {
+        "surface": "like a virgin",
+        "lemma": "betulah"
+      },
+      {
+        "surface": "dressed",
+        "lemma": "chagar"
+      },
+      {
+        "surface": "in sackcloth",
+        "lemma": "saq"
+      },
+      {
+        "surface": "the husband",
+        "lemma": "baal"
+      },
+      {
+        "surface": "of her youth",
+        "lemma": "naur"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Grain and drink offerings",
+        "lemma": "minchah"
+      },
+      {
+        "surface": "have been cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "from the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the priests",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "are in mourning",
+        "lemma": "aval"
+      },
+      {
+        "surface": "those who minister",
+        "lemma": "sharat"
+      },
+      {
+        "surface": "before the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "10": [
+      {
+        "surface": "The field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "is ruined",
+        "lemma": "shadad"
+      },
+      {
+        "surface": "the land",
+        "lemma": "adamah"
+      },
+      {
+        "surface": "mourns",
+        "lemma": "aval"
+      },
+      {
+        "surface": "the grain",
+        "lemma": "dagan"
+      },
+      {
+        "surface": "is destroyed",
+        "lemma": "shadad"
+      },
+      {
+        "surface": "the new wine",
+        "lemma": "tirosh"
+      },
+      {
+        "surface": "is dried up",
+        "lemma": "yavesh"
+      },
+      {
+        "surface": "and the oil fails",
+        "lemma": "yitshar"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Be dismayed",
+        "lemma": "bush"
+      },
+      {
+        "surface": "O farmers",
+        "lemma": "ikkar"
+      },
+      {
+        "surface": "wail",
+        "lemma": "yalal"
+      },
+      {
+        "surface": "O vinedressers",
+        "lemma": "korem"
+      },
+      {
+        "surface": "the wheat",
+        "lemma": "chittah"
+      },
+      {
+        "surface": "barley",
+        "lemma": "seorah"
+      },
+      {
+        "surface": "the harvest",
+        "lemma": "qatsir"
+      },
+      {
+        "surface": "of the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "has perished",
+        "lemma": "avad"
+      }
+    ],
+    "12": [
+      {
+        "surface": "The grapevine",
+        "lemma": "gephen"
+      },
+      {
+        "surface": "is dried up",
+        "lemma": "yavesh"
+      },
+      {
+        "surface": "and the fig tree",
+        "lemma": "teenah"
+      },
+      {
+        "surface": "is withered",
+        "lemma": "amal"
+      },
+      {
+        "surface": "the pomegranate",
+        "lemma": "rimmon"
+      },
+      {
+        "surface": "palm",
+        "lemma": "tamar"
+      },
+      {
+        "surface": "and apple",
+        "lemma": "tappuach"
+      },
+      {
+        "surface": "the trees",
+        "lemma": "ets"
+      },
+      {
+        "surface": "of the orchard",
+        "lemma": "saday"
+      },
+      {
+        "surface": "are withered",
+        "lemma": "yavesh"
+      },
+      {
+        "surface": "the joy",
+        "lemma": "sasvon"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "mankind",
+        "lemma": "adam"
+      },
+      {
+        "surface": "has dried up",
+        "lemma": "bush"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Put on sackcloth",
+        "lemma": "chagar"
+      },
+      {
+        "surface": "and lament",
+        "lemma": "saphad"
+      },
+      {
+        "surface": "O priests",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "wail",
+        "lemma": "yalal"
+      },
+      {
+        "surface": "O ministers",
+        "lemma": "sharat"
+      },
+      {
+        "surface": "of the altar",
+        "lemma": "mizbeach"
+      },
+      {
+        "surface": "spend the night",
+        "lemma": "lun"
+      },
+      {
+        "surface": "in sackcloth",
+        "lemma": "saq"
+      },
+      {
+        "surface": "O ministers",
+        "lemma": "sharat"
+      },
+      {
+        "surface": "of my God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the grain",
+        "lemma": "minchah"
+      },
+      {
+        "surface": "and drink offerings",
+        "lemma": "nesekh"
+      },
+      {
+        "surface": "are withheld",
+        "lemma": "mana"
+      },
+      {
+        "surface": "from the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of your God",
+        "lemma": "elohim"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Consecrate",
+        "lemma": "qadash"
+      },
+      {
+        "surface": "a fast",
+        "lemma": "tsom"
+      },
+      {
+        "surface": "a solemn assembly",
+        "lemma": "atsarah"
+      },
+      {
+        "surface": "Gather",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "the elders",
+        "lemma": "zaqen"
+      },
+      {
+        "surface": "of the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "to the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "your God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "and cry out",
+        "lemma": "zaaq"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Alas",
+        "lemma": "ahah"
+      },
+      {
+        "surface": "for the day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the Day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is near",
+        "lemma": "qarov"
+      },
+      {
+        "surface": "as destruction",
+        "lemma": "shod"
+      },
+      {
+        "surface": "from the Almighty",
+        "lemma": "shadday"
+      }
+    ],
+    "16": [
+      {
+        "surface": "the food",
+        "lemma": "okhel"
+      },
+      {
+        "surface": "been cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "before",
+        "lemma": "neged"
+      },
+      {
+        "surface": "our very eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "joy",
+        "lemma": "simchah"
+      },
+      {
+        "surface": "and gladness",
+        "lemma": "gil"
+      },
+      {
+        "surface": "from the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of our God",
+        "lemma": "elohim"
+      }
+    ],
+    "17": [
+      {
+        "surface": "The seeds",
+        "lemma": "perudah"
+      },
+      {
+        "surface": "lie shriveled",
+        "lemma": "avash"
+      },
+      {
+        "surface": "beneath",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the clods",
+        "lemma": "migraphah"
+      },
+      {
+        "surface": "the storehouses",
+        "lemma": "otsar"
+      },
+      {
+        "surface": "are in ruins",
+        "lemma": "shamem"
+      },
+      {
+        "surface": "the granaries",
+        "lemma": "mammgurah"
+      },
+      {
+        "surface": "are broken down",
+        "lemma": "haras"
+      },
+      {
+        "surface": "the grain",
+        "lemma": "dagan"
+      },
+      {
+        "surface": "has withered away",
+        "lemma": "yavesh"
+      }
+    ],
+    "18": [
+      {
+        "surface": "How",
+        "lemma": "mah"
+      },
+      {
+        "surface": "the cattle",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "groan",
+        "lemma": "anach"
+      },
+      {
+        "surface": "The herds",
+        "lemma": "eder"
+      },
+      {
+        "surface": "wander in confusion",
+        "lemma": "bukh"
+      },
+      {
+        "surface": "they have no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "pasture",
+        "lemma": "mireh"
+      },
+      {
+        "surface": "the flocks",
+        "lemma": "eder"
+      },
+      {
+        "surface": "of sheep",
+        "lemma": "tson"
+      },
+      {
+        "surface": "are suffering",
+        "lemma": "asham"
+      }
+    ],
+    "19": [
+      {
+        "surface": "O LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "has consumed",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the open",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "pastures",
+        "lemma": "naah"
+      },
+      {
+        "surface": "and flames",
+        "lemma": "lehavah"
+      },
+      {
+        "surface": "have scorched",
+        "lemma": "lahat"
+      },
+      {
+        "surface": "the trees",
+        "lemma": "ets"
+      },
+      {
+        "surface": "of the field",
+        "lemma": "saday"
+      }
+    ],
+    "20": [
+      {
+        "surface": "the beasts",
+        "lemma": "behemah"
+      },
+      {
+        "surface": "of the field",
+        "lemma": "saday"
+      },
+      {
+        "surface": "pant",
+        "lemma": "arag"
+      },
+      {
+        "surface": "the streams",
+        "lemma": "aphiq"
+      },
+      {
+        "surface": "of water",
+        "lemma": "mayim"
+      },
+      {
+        "surface": "have dried up",
+        "lemma": "yavesh"
+      },
+      {
+        "surface": "and fire",
+        "lemma": "esh"
+      },
+      {
+        "surface": "has consumed",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the open",
+        "lemma": "midbar"
+      },
+      {
+        "surface": "pastures",
+        "lemma": "naah"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "yavesh",
+    "saday",
+    "akhal"
+  ]
+}

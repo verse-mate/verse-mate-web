@@ -1,0 +1,160 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 150,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Hallelujah",
+        "lemma": "halal"
+      },
+      {
+        "surface": "Praise",
+        "lemma": "halal"
+      },
+      {
+        "surface": "God",
+        "lemma": "el"
+      },
+      {
+        "surface": "in His sanctuary",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "Praise Him",
+        "lemma": "halal"
+      },
+      {
+        "surface": "in His mighty",
+        "lemma": "oz"
+      },
+      {
+        "surface": "heavens",
+        "lemma": "raqia"
+      }
+    ],
+    "2": [
+      {
+        "surface": "Praise Him",
+        "lemma": "halal"
+      },
+      {
+        "surface": "for His mighty acts",
+        "lemma": "gevurah"
+      },
+      {
+        "surface": "praise Him",
+        "lemma": "halal"
+      },
+      {
+        "surface": "for His excellent",
+        "lemma": "rov"
+      },
+      {
+        "surface": "greatness",
+        "lemma": "godel"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Praise Him",
+        "lemma": "halal"
+      },
+      {
+        "surface": "with the sound",
+        "lemma": "teqa"
+      },
+      {
+        "surface": "of the horn",
+        "lemma": "shophar"
+      },
+      {
+        "surface": "praise Him",
+        "lemma": "halal"
+      },
+      {
+        "surface": "with the harp",
+        "lemma": "nevel"
+      },
+      {
+        "surface": "and lyre",
+        "lemma": "kinnor"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Praise Him",
+        "lemma": "halal"
+      },
+      {
+        "surface": "with tambourine",
+        "lemma": "toph"
+      },
+      {
+        "surface": "and dancing",
+        "lemma": "machol"
+      },
+      {
+        "surface": "praise Him",
+        "lemma": "halal"
+      },
+      {
+        "surface": "with strings",
+        "lemma": "men"
+      },
+      {
+        "surface": "and flute",
+        "lemma": "ugav"
+      }
+    ],
+    "5": [
+      {
+        "surface": "Praise Him",
+        "lemma": "halal"
+      },
+      {
+        "surface": "with clashing",
+        "lemma": "shema"
+      },
+      {
+        "surface": "cymbals",
+        "lemma": "tsiltsal"
+      },
+      {
+        "surface": "praise Him",
+        "lemma": "halal"
+      },
+      {
+        "surface": "with resounding",
+        "lemma": "teruah"
+      },
+      {
+        "surface": "cymbals",
+        "lemma": "tsiltsal"
+      }
+    ],
+    "6": [
+      {
+        "surface": "that has breath",
+        "lemma": "neshamah"
+      },
+      {
+        "surface": "praise",
+        "lemma": "halal"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yah"
+      },
+      {
+        "surface": "Hallelujah",
+        "lemma": "halal"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "halal",
+    "tsiltsal"
+  ]
+}

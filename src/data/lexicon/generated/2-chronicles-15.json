@@ -1,0 +1,707 @@
+{
+  "bookId": 14,
+  "book": "2 Chronicles",
+  "chapter": 15,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Now the Spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "of God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "Azariah",
+        "lemma": "azaryah"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Oded",
+        "lemma": "oded"
+      }
+    ],
+    "2": [
+      {
+        "surface": "to meet",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "Asa",
+        "lemma": "asa"
+      },
+      {
+        "surface": "Asa",
+        "lemma": "asa"
+      },
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "and Benjamin",
+        "lemma": "binyamin"
+      },
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "you seek Him",
+        "lemma": "darash"
+      },
+      {
+        "surface": "He will be found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "you forsake Him",
+        "lemma": "azav"
+      },
+      {
+        "surface": "He will forsake",
+        "lemma": "azav"
+      }
+    ],
+    "3": [
+      {
+        "surface": "For many",
+        "lemma": "rav"
+      },
+      {
+        "surface": "years",
+        "lemma": "yom"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "the true",
+        "lemma": "emet"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "a priest",
+        "lemma": "kohen"
+      },
+      {
+        "surface": "to instruct them",
+        "lemma": "yara"
+      },
+      {
+        "surface": "the law",
+        "lemma": "torah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "But in their distress",
+        "lemma": "tsar"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "and sought Him",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "and He was found",
+        "lemma": "matsa"
+      }
+    ],
+    "5": [
+      {
+        "surface": "there was no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "safety",
+        "lemma": "shalom"
+      },
+      {
+        "surface": "of the lands",
+        "lemma": "erets"
+      },
+      {
+        "surface": "many",
+        "lemma": "rav"
+      },
+      {
+        "surface": "conflicts",
+        "lemma": "mehumah"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Nation",
+        "lemma": "goy"
+      },
+      {
+        "surface": "was crushed",
+        "lemma": "katat"
+      },
+      {
+        "surface": "by nation",
+        "lemma": "goy"
+      },
+      {
+        "surface": "and city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "by city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "afflicted them",
+        "lemma": "hamam"
+      },
+      {
+        "surface": "adversity",
+        "lemma": "batstsarah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "be strong",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "be discouraged",
+        "lemma": "raphah"
+      },
+      {
+        "surface": "your work",
+        "lemma": "peullah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "rewarded",
+        "lemma": "sakhar"
+      }
+    ],
+    "8": [
+      {
+        "surface": "When Asa",
+        "lemma": "asa"
+      },
+      {
+        "surface": "words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "and the prophecy",
+        "lemma": "nevuah"
+      },
+      {
+        "surface": "of Azariah son of Oded",
+        "lemma": "oded"
+      },
+      {
+        "surface": "the prophet",
+        "lemma": "navi"
+      },
+      {
+        "surface": "he took courage",
+        "lemma": "chazaq"
+      },
+      {
+        "surface": "and removed",
+        "lemma": "avar"
+      },
+      {
+        "surface": "the detestable idols",
+        "lemma": "shiqquts"
+      },
+      {
+        "surface": "land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "and Benjamin",
+        "lemma": "binyamin"
+      },
+      {
+        "surface": "and from the cities",
+        "lemma": "ir"
+      },
+      {
+        "surface": "he had captured",
+        "lemma": "lakhad"
+      },
+      {
+        "surface": "in the hill country",
+        "lemma": "har"
+      },
+      {
+        "surface": "of Ephraim",
+        "lemma": "ephrayim"
+      },
+      {
+        "surface": "He then restored",
+        "lemma": "chadash"
+      },
+      {
+        "surface": "the altar",
+        "lemma": "mizbeach"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "was in front",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of the portico",
+        "lemma": "ulam"
+      },
+      {
+        "surface": "of the LORD’s {temple",
+        "lemma": "yehovah"
+      }
+    ],
+    "9": [
+      {
+        "surface": "And he assembled",
+        "lemma": "qavats"
+      },
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "and Benjamin",
+        "lemma": "binyamin"
+      },
+      {
+        "surface": "along with those from the tribes of Ephraim",
+        "lemma": "ephrayim"
+      },
+      {
+        "surface": "Manasseh",
+        "lemma": "menashsheh"
+      },
+      {
+        "surface": "and Simeon",
+        "lemma": "shimon"
+      },
+      {
+        "surface": "who had settled",
+        "lemma": "gur"
+      },
+      {
+        "surface": "great numbers",
+        "lemma": "rov"
+      },
+      {
+        "surface": "had come over",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "from Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "his God",
+        "lemma": "elohim"
+      }
+    ],
+    "10": [
+      {
+        "surface": "So they gathered together",
+        "lemma": "qavats"
+      },
+      {
+        "surface": "in Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "in the third",
+        "lemma": "shelishi"
+      },
+      {
+        "surface": "month",
+        "lemma": "chodesh"
+      },
+      {
+        "surface": "of the fifteenth",
+        "lemma": "chamesh"
+      },
+      {
+        "surface": "year",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "of Asa’s",
+        "lemma": "asa"
+      },
+      {
+        "surface": "reign",
+        "lemma": "malkhut"
+      }
+    ],
+    "11": [
+      {
+        "surface": "time",
+        "lemma": "yom"
+      },
+      {
+        "surface": "they sacrificed",
+        "lemma": "zavach"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "hundred",
+        "lemma": "meah"
+      },
+      {
+        "surface": "oxen",
+        "lemma": "baqar"
+      },
+      {
+        "surface": "and seven",
+        "lemma": "sheva"
+      },
+      {
+        "surface": "thousand",
+        "lemma": "eleph"
+      },
+      {
+        "surface": "sheep",
+        "lemma": "tson"
+      },
+      {
+        "surface": "all the plunder",
+        "lemma": "shalal"
+      }
+    ],
+    "12": [
+      {
+        "surface": "into a covenant",
+        "lemma": "berit"
+      },
+      {
+        "surface": "to seek",
+        "lemma": "darash"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "their heart",
+        "lemma": "levav"
+      },
+      {
+        "surface": "soul",
+        "lemma": "nephesh"
+      }
+    ],
+    "13": [
+      {
+        "surface": "seek",
+        "lemma": "darash"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "would be put to death",
+        "lemma": "mut"
+      },
+      {
+        "surface": "young",
+        "lemma": "qatan"
+      },
+      {
+        "surface": "old",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "woman",
+        "lemma": "ishshah"
+      }
+    ],
+    "14": [
+      {
+        "surface": "They took an oath",
+        "lemma": "shava"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "with a loud",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "voice",
+        "lemma": "qol"
+      },
+      {
+        "surface": "with shouting",
+        "lemma": "teruah"
+      },
+      {
+        "surface": "trumpets",
+        "lemma": "chatsotserah"
+      },
+      {
+        "surface": "and rams’ horns",
+        "lemma": "shophar"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "rejoiced",
+        "lemma": "samach"
+      },
+      {
+        "surface": "the oath",
+        "lemma": "shevuah"
+      },
+      {
+        "surface": "they had sworn",
+        "lemma": "shava"
+      },
+      {
+        "surface": "their heart",
+        "lemma": "levav"
+      },
+      {
+        "surface": "They had sought Him",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "and He was found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "So the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "gave them rest",
+        "lemma": "nuach"
+      },
+      {
+        "surface": "on every side",
+        "lemma": "saviv"
+      }
+    ],
+    "16": [
+      {
+        "surface": "King",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "Asa",
+        "lemma": "asa"
+      },
+      {
+        "surface": "removed",
+        "lemma": "sur"
+      },
+      {
+        "surface": "his grandmother",
+        "lemma": "em"
+      },
+      {
+        "surface": "Maacah",
+        "lemma": "maakhah"
+      },
+      {
+        "surface": "from her position as queen mother",
+        "lemma": "gevirah"
+      },
+      {
+        "surface": "a detestable",
+        "lemma": "miphletset"
+      },
+      {
+        "surface": "Asherah pole",
+        "lemma": "asherah"
+      },
+      {
+        "surface": "Asa",
+        "lemma": "asa"
+      },
+      {
+        "surface": "chopped down",
+        "lemma": "karat"
+      },
+      {
+        "surface": "the pole",
+        "lemma": "miphletset"
+      },
+      {
+        "surface": "crushed it",
+        "lemma": "daqaq"
+      },
+      {
+        "surface": "and burned",
+        "lemma": "saraph"
+      },
+      {
+        "surface": "it in the Kidron",
+        "lemma": "qidron"
+      },
+      {
+        "surface": "Valley",
+        "lemma": "nachal"
+      }
+    ],
+    "17": [
+      {
+        "surface": "The high places",
+        "lemma": "bamah"
+      },
+      {
+        "surface": "removed",
+        "lemma": "sur"
+      },
+      {
+        "surface": "from Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "Asa’s",
+        "lemma": "asa"
+      },
+      {
+        "surface": "heart",
+        "lemma": "levav"
+      },
+      {
+        "surface": "fully devoted",
+        "lemma": "shalem"
+      },
+      {
+        "surface": "his days",
+        "lemma": "yom"
+      }
+    ],
+    "18": [
+      {
+        "surface": "into the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "the silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "and gold",
+        "lemma": "zahav"
+      },
+      {
+        "surface": "and the articles",
+        "lemma": "keli"
+      },
+      {
+        "surface": "that he",
+        "lemma": "qodesh"
+      },
+      {
+        "surface": "had dedicated",
+        "lemma": "qodesh"
+      }
+    ],
+    "19": [
+      {
+        "surface": "war",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "the thirty-fifth",
+        "lemma": "sheloshim"
+      },
+      {
+        "surface": "year",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "of Asa’s",
+        "lemma": "asa"
+      },
+      {
+        "surface": "reign",
+        "lemma": "malkhut"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "asa",
+    "yisrael",
+    "yehudah"
+  ]
+}

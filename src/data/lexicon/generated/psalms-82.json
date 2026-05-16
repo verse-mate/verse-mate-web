@@ -1,0 +1,221 @@
+{
+  "bookId": 19,
+  "book": "Psalm",
+  "chapter": 82,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "A Psalm",
+        "lemma": "mizmor"
+      },
+      {
+        "surface": "of Asaph",
+        "lemma": "asaph"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "presides",
+        "lemma": "natsav"
+      },
+      {
+        "surface": "in the divine",
+        "lemma": "el"
+      },
+      {
+        "surface": "assembly",
+        "lemma": "edah"
+      },
+      {
+        "surface": "He renders judgment",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "among",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "the gods",
+        "lemma": "elohim"
+      }
+    ],
+    "2": [
+      {
+        "surface": "will you judge",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "unjustly",
+        "lemma": "evel"
+      },
+      {
+        "surface": "and show partiality",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "to the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "Selah",
+        "lemma": "selah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Defend the cause",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "of the weak",
+        "lemma": "dal"
+      },
+      {
+        "surface": "and fatherless",
+        "lemma": "yatom"
+      },
+      {
+        "surface": "uphold the rights",
+        "lemma": "tsadaq"
+      },
+      {
+        "surface": "of the afflicted",
+        "lemma": "ani"
+      },
+      {
+        "surface": "and oppressed",
+        "lemma": "rush"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Rescue",
+        "lemma": "palat"
+      },
+      {
+        "surface": "the weak",
+        "lemma": "dal"
+      },
+      {
+        "surface": "and needy",
+        "lemma": "evyon"
+      },
+      {
+        "surface": "save them",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "from the hand",
+        "lemma": "yad"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "or understand",
+        "lemma": "bin"
+      },
+      {
+        "surface": "they wander",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "in the darkness",
+        "lemma": "chashekhah"
+      },
+      {
+        "surface": "the foundations",
+        "lemma": "mosad"
+      },
+      {
+        "surface": "of the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "are shaken",
+        "lemma": "mot"
+      }
+    ],
+    "6": [
+      {
+        "surface": "are gods",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of the Most High",
+        "lemma": "elyon"
+      }
+    ],
+    "7": [
+      {
+        "surface": "But",
+        "lemma": "akhen"
+      },
+      {
+        "surface": "like mortals",
+        "lemma": "adam"
+      },
+      {
+        "surface": "you will die",
+        "lemma": "mut"
+      },
+      {
+        "surface": "and like",
+        "lemma": "echad"
+      },
+      {
+        "surface": "rulers",
+        "lemma": "sar"
+      },
+      {
+        "surface": "you will fall",
+        "lemma": "naphal"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Arise",
+        "lemma": "qamay"
+      },
+      {
+        "surface": "O God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "judge",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "the nations",
+        "lemma": "goy"
+      },
+      {
+        "surface": "inheritance",
+        "lemma": "nachal"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "shaphat",
+    "rasah",
+    "dal"
+  ]
+}

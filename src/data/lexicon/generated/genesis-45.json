@@ -1,0 +1,985 @@
+{
+  "bookId": 1,
+  "book": "Genesis",
+  "chapter": 45,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "Then Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "could",
+        "lemma": "yakhol"
+      },
+      {
+        "surface": "control himself",
+        "lemma": "aphaq"
+      },
+      {
+        "surface": "his attendants",
+        "lemma": "natsav"
+      },
+      {
+        "surface": "of them were with",
+        "lemma": "amad"
+      },
+      {
+        "surface": "when he",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "made himself known",
+        "lemma": "yada"
+      },
+      {
+        "surface": "his brothers",
+        "lemma": "ach"
+      }
+    ],
+    "2": [
+      {
+        "surface": "But he wept",
+        "lemma": "bekhi"
+      },
+      {
+        "surface": "that the Egyptians",
+        "lemma": "mitsri"
+      },
+      {
+        "surface": "and Pharaoh’s",
+        "lemma": "paroh"
+      },
+      {
+        "surface": "household",
+        "lemma": "bet"
+      }
+    ],
+    "3": [
+      {
+        "surface": "Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "his brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "am Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "still",
+        "lemma": "od"
+      },
+      {
+        "surface": "alive",
+        "lemma": "chay"
+      },
+      {
+        "surface": "But they",
+        "lemma": "ach"
+      },
+      {
+        "surface": "to answer",
+        "lemma": "un"
+      },
+      {
+        "surface": "they were terrified",
+        "lemma": "bahal"
+      },
+      {
+        "surface": "in his presence",
+        "lemma": "paneh"
+      }
+    ],
+    "4": [
+      {
+        "surface": "Then Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "his brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "Please",
+        "lemma": "na"
+      },
+      {
+        "surface": "come near me",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "And they did so",
+        "lemma": "nagash"
+      },
+      {
+        "surface": "am Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "your brother",
+        "lemma": "ach"
+      },
+      {
+        "surface": "you sold",
+        "lemma": "makhar"
+      },
+      {
+        "surface": "into Egypt",
+        "lemma": "mitsrayim"
+      }
+    ],
+    "5": [
+      {
+        "surface": "And now",
+        "lemma": "attah"
+      },
+      {
+        "surface": "be distressed",
+        "lemma": "atsav"
+      },
+      {
+        "surface": "or angry",
+        "lemma": "charah"
+      },
+      {
+        "surface": "with yourselves",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "you sold",
+        "lemma": "makhar"
+      },
+      {
+        "surface": "into this place",
+        "lemma": "hennah"
+      },
+      {
+        "surface": "it was to save lives",
+        "lemma": "michyah"
+      },
+      {
+        "surface": "that God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "sent me",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "before you",
+        "lemma": "paneh"
+      }
+    ],
+    "6": [
+      {
+        "surface": "the famine",
+        "lemma": "raav"
+      },
+      {
+        "surface": "has covered",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "two years",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "and there will be five",
+        "lemma": "chamesh"
+      },
+      {
+        "surface": "more",
+        "lemma": "od"
+      },
+      {
+        "surface": "years",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "without",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "plowing",
+        "lemma": "charish"
+      },
+      {
+        "surface": "or harvesting",
+        "lemma": "qatsir"
+      }
+    ],
+    "7": [
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "sent me",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "before you",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "to preserve",
+        "lemma": "sum"
+      },
+      {
+        "surface": "as a remnant",
+        "lemma": "sheerit"
+      },
+      {
+        "surface": "on the earth",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and to save your lives",
+        "lemma": "chayah"
+      },
+      {
+        "surface": "by a great",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "deliverance",
+        "lemma": "peletah"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Therefore",
+        "lemma": "attah"
+      },
+      {
+        "surface": "who sent",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "here",
+        "lemma": "hennah"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "who has made me",
+        "lemma": "sum"
+      },
+      {
+        "surface": "to Pharaoh",
+        "lemma": "paroh"
+      },
+      {
+        "surface": "lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "his household",
+        "lemma": "bet"
+      },
+      {
+        "surface": "and ruler",
+        "lemma": "mashal"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      }
+    ],
+    "9": [
+      {
+        "surface": "Now return",
+        "lemma": "alah"
+      },
+      {
+        "surface": "quickly",
+        "lemma": "mahar"
+      },
+      {
+        "surface": "This is what",
+        "lemma": "koh"
+      },
+      {
+        "surface": "your son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "has made me",
+        "lemma": "sum"
+      },
+      {
+        "surface": "lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "Come down",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "delay",
+        "lemma": "amad"
+      }
+    ],
+    "10": [
+      {
+        "surface": "in the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Goshen",
+        "lemma": "goshen"
+      },
+      {
+        "surface": "near me",
+        "lemma": "qarov"
+      },
+      {
+        "surface": "and your children",
+        "lemma": "ben"
+      },
+      {
+        "surface": "and grandchildren",
+        "lemma": "ben"
+      },
+      {
+        "surface": "your flocks",
+        "lemma": "tson"
+      },
+      {
+        "surface": "and herds",
+        "lemma": "baqar"
+      }
+    ],
+    "11": [
+      {
+        "surface": "And there",
+        "lemma": "sham"
+      },
+      {
+        "surface": "I will provide",
+        "lemma": "kul"
+      },
+      {
+        "surface": "there will be five",
+        "lemma": "chamesh"
+      },
+      {
+        "surface": "more",
+        "lemma": "od"
+      },
+      {
+        "surface": "years",
+        "lemma": "shaneh"
+      },
+      {
+        "surface": "of famine",
+        "lemma": "raav"
+      },
+      {
+        "surface": "and your household",
+        "lemma": "bet"
+      },
+      {
+        "surface": "will come to destitution",
+        "lemma": "yarash"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Behold",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "You",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "and my brother",
+        "lemma": "ach"
+      },
+      {
+        "surface": "Benjamin",
+        "lemma": "binyamin"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "I, Joseph",
+        "lemma": "peh"
+      },
+      {
+        "surface": "am the one speaking",
+        "lemma": "davar"
+      }
+    ],
+    "13": [
+      {
+        "surface": "Tell",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "my splendor",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "in Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "And bring",
+        "lemma": "yarad"
+      },
+      {
+        "surface": "down here",
+        "lemma": "hennah"
+      },
+      {
+        "surface": "quickly",
+        "lemma": "mahar"
+      }
+    ],
+    "14": [
+      {
+        "surface": "Then Joseph threw his arms around",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "his brother",
+        "lemma": "ach"
+      },
+      {
+        "surface": "Benjamin",
+        "lemma": "binyamin"
+      },
+      {
+        "surface": "and wept",
+        "lemma": "bakhah"
+      },
+      {
+        "surface": "and Benjamin",
+        "lemma": "binyamin"
+      },
+      {
+        "surface": "wept",
+        "lemma": "bakhah"
+      },
+      {
+        "surface": "they embraced",
+        "lemma": "tsavvar"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Joseph kissed",
+        "lemma": "nashaq"
+      },
+      {
+        "surface": "of his brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "as he wept",
+        "lemma": "bakhah"
+      },
+      {
+        "surface": "And afterward",
+        "lemma": "achar"
+      },
+      {
+        "surface": "his brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "talked",
+        "lemma": "davar"
+      }
+    ],
+    "16": [
+      {
+        "surface": "When the news",
+        "lemma": "qol"
+      },
+      {
+        "surface": "Pharaoh’s",
+        "lemma": "paroh"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "that Joseph’s",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "Pharaoh",
+        "lemma": "paroh"
+      },
+      {
+        "surface": "and his servants",
+        "lemma": "eved"
+      },
+      {
+        "surface": "were pleased",
+        "lemma": "yatav"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Pharaoh",
+        "lemma": "paroh"
+      },
+      {
+        "surface": "Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "your brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "Load",
+        "lemma": "taan"
+      },
+      {
+        "surface": "your animals",
+        "lemma": "beir"
+      },
+      {
+        "surface": "and return",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "to the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Canaan",
+        "lemma": "kenaan"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Then bring",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "and your families",
+        "lemma": "bet"
+      },
+      {
+        "surface": "the best",
+        "lemma": "tuv"
+      },
+      {
+        "surface": "of the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and you shall eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "from the fat",
+        "lemma": "chelev"
+      },
+      {
+        "surface": "of the land",
+        "lemma": "erets"
+      }
+    ],
+    "19": [
+      {
+        "surface": "are also directed to tell them",
+        "lemma": "tsavah"
+      },
+      {
+        "surface": "Take",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "wagons",
+        "lemma": "agalah"
+      },
+      {
+        "surface": "from the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "for your young children",
+        "lemma": "taph"
+      },
+      {
+        "surface": "and your wives",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "and bring",
+        "lemma": "nasa"
+      }
+    ],
+    "20": [
+      {
+        "surface": "But pay no regard",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "your belongings",
+        "lemma": "keli"
+      },
+      {
+        "surface": "the best",
+        "lemma": "tuv"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      }
+    ],
+    "21": [
+      {
+        "surface": "So the sons",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "as they were told",
+        "lemma": "ken"
+      },
+      {
+        "surface": "Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "wagons",
+        "lemma": "agalah"
+      },
+      {
+        "surface": "Pharaoh",
+        "lemma": "paroh"
+      },
+      {
+        "surface": "had instructed",
+        "lemma": "peh"
+      },
+      {
+        "surface": "provisions",
+        "lemma": "tsedah"
+      },
+      {
+        "surface": "for their journey",
+        "lemma": "derekh"
+      }
+    ],
+    "22": [
+      {
+        "surface": "new",
+        "lemma": "chaliphah"
+      },
+      {
+        "surface": "garments",
+        "lemma": "simlah"
+      },
+      {
+        "surface": "to each of them",
+        "lemma": "ish"
+      },
+      {
+        "surface": "but to Benjamin",
+        "lemma": "binyamin"
+      },
+      {
+        "surface": "three",
+        "lemma": "shalosh"
+      },
+      {
+        "surface": "hundred shekels",
+        "lemma": "meah"
+      },
+      {
+        "surface": "of silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "and five",
+        "lemma": "chamesh"
+      },
+      {
+        "surface": "sets",
+        "lemma": "chaliphah"
+      },
+      {
+        "surface": "of clothes",
+        "lemma": "simlah"
+      }
+    ],
+    "23": [
+      {
+        "surface": "And he sent",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "ten",
+        "lemma": "eser"
+      },
+      {
+        "surface": "donkeys",
+        "lemma": "chamor"
+      },
+      {
+        "surface": "loaded",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "with the best",
+        "lemma": "tuv"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and ten",
+        "lemma": "eser"
+      },
+      {
+        "surface": "female donkeys",
+        "lemma": "aton"
+      },
+      {
+        "surface": "loaded",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "with grain",
+        "lemma": "bar"
+      },
+      {
+        "surface": "and bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "and provisions",
+        "lemma": "mazon"
+      },
+      {
+        "surface": "journey",
+        "lemma": "derekh"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Then Joseph sent his brothers",
+        "lemma": "ach"
+      },
+      {
+        "surface": "on their way",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "and as they were leaving",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "quarrel",
+        "lemma": "ragaz"
+      },
+      {
+        "surface": "on the way",
+        "lemma": "derekh"
+      }
+    ],
+    "25": [
+      {
+        "surface": "So the brothers went up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "out of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "in the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Canaan",
+        "lemma": "kenaan"
+      }
+    ],
+    "26": [
+      {
+        "surface": "Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "is still",
+        "lemma": "od"
+      },
+      {
+        "surface": "alive",
+        "lemma": "chay"
+      },
+      {
+        "surface": "they said",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "is ruler",
+        "lemma": "mashal"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "of Egypt",
+        "lemma": "mitsrayim"
+      },
+      {
+        "surface": "But Jacob was stunned",
+        "lemma": "pug"
+      },
+      {
+        "surface": "believe",
+        "lemma": "aman"
+      }
+    ],
+    "27": [
+      {
+        "surface": "However, when they relayed",
+        "lemma": "davar"
+      },
+      {
+        "surface": "Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "had told",
+        "lemma": "davar"
+      },
+      {
+        "surface": "the wagons",
+        "lemma": "agalah"
+      },
+      {
+        "surface": "Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "had sent",
+        "lemma": "shalach"
+      },
+      {
+        "surface": "to carry him",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the spirit",
+        "lemma": "ruach"
+      },
+      {
+        "surface": "Jacob",
+        "lemma": "yaaqov"
+      },
+      {
+        "surface": "was revived",
+        "lemma": "chayah"
+      }
+    ],
+    "28": [
+      {
+        "surface": "Enough",
+        "lemma": "rav"
+      },
+      {
+        "surface": "Israel",
+        "lemma": "yisrael"
+      },
+      {
+        "surface": "My son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "Joseph",
+        "lemma": "yoseph"
+      },
+      {
+        "surface": "is still",
+        "lemma": "od"
+      },
+      {
+        "surface": "alive",
+        "lemma": "chay"
+      },
+      {
+        "surface": "I will go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "before",
+        "lemma": "terem"
+      },
+      {
+        "surface": "I die",
+        "lemma": "mut"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "yoseph",
+    "ach",
+    "mitsrayim"
+  ]
+}

@@ -1,0 +1,999 @@
+{
+  "bookId": 20,
+  "book": "Proverbs",
+  "chapter": 15,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "A gentle",
+        "lemma": "rakh"
+      },
+      {
+        "surface": "answer",
+        "lemma": "maaneh"
+      },
+      {
+        "surface": "wrath",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "but a harsh",
+        "lemma": "etsev"
+      },
+      {
+        "surface": "word",
+        "lemma": "davar"
+      },
+      {
+        "surface": "stirs up",
+        "lemma": "alah"
+      },
+      {
+        "surface": "anger",
+        "lemma": "aph"
+      }
+    ],
+    "2": [
+      {
+        "surface": "The tongue",
+        "lemma": "lashon"
+      },
+      {
+        "surface": "of the wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "commends",
+        "lemma": "yatav"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "but the mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "of the fool",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "spouts",
+        "lemma": "nava"
+      },
+      {
+        "surface": "folly",
+        "lemma": "ivvelet"
+      }
+    ],
+    "3": [
+      {
+        "surface": "The eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "place",
+        "lemma": "maqom"
+      },
+      {
+        "surface": "observing",
+        "lemma": "tsaphah"
+      },
+      {
+        "surface": "the evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "and the good",
+        "lemma": "tov"
+      }
+    ],
+    "4": [
+      {
+        "surface": "A soothing",
+        "lemma": "marpe"
+      },
+      {
+        "surface": "tongue",
+        "lemma": "lashon"
+      },
+      {
+        "surface": "is a tree",
+        "lemma": "ets"
+      },
+      {
+        "surface": "of life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "but a perverse",
+        "lemma": "seleph"
+      },
+      {
+        "surface": "crushes",
+        "lemma": "shever"
+      },
+      {
+        "surface": "the spirit",
+        "lemma": "ruach"
+      }
+    ],
+    "5": [
+      {
+        "surface": "A fool",
+        "lemma": "evil"
+      },
+      {
+        "surface": "rejects",
+        "lemma": "naats"
+      },
+      {
+        "surface": "discipline",
+        "lemma": "musar"
+      },
+      {
+        "surface": "but whoever heeds",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "correction",
+        "lemma": "tokhechah"
+      },
+      {
+        "surface": "is prudent",
+        "lemma": "aram"
+      }
+    ],
+    "6": [
+      {
+        "surface": "The house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "has great",
+        "lemma": "rav"
+      },
+      {
+        "surface": "treasure",
+        "lemma": "chosen"
+      },
+      {
+        "surface": "but the income",
+        "lemma": "tevuah"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "is trouble",
+        "lemma": "akhar"
+      }
+    ],
+    "7": [
+      {
+        "surface": "The lips",
+        "lemma": "saphah"
+      },
+      {
+        "surface": "of the wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "spread",
+        "lemma": "zarah"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "so",
+        "lemma": "ken"
+      },
+      {
+        "surface": "the hearts",
+        "lemma": "lev"
+      },
+      {
+        "surface": "of fools",
+        "lemma": "kesil"
+      }
+    ],
+    "8": [
+      {
+        "surface": "The sacrifice",
+        "lemma": "zevach"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "is detestable",
+        "lemma": "toevah"
+      },
+      {
+        "surface": "to the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "but the prayer",
+        "lemma": "tephillah"
+      },
+      {
+        "surface": "of the upright",
+        "lemma": "yashar"
+      },
+      {
+        "surface": "is His delight",
+        "lemma": "ratson"
+      }
+    ],
+    "9": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "detests",
+        "lemma": "toevah"
+      },
+      {
+        "surface": "the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "but He loves",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "those who pursue",
+        "lemma": "radaph"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "tsedaqah"
+      }
+    ],
+    "10": [
+      {
+        "surface": "Discipline",
+        "lemma": "musar"
+      },
+      {
+        "surface": "is harsh",
+        "lemma": "ra"
+      },
+      {
+        "surface": "for him who leaves",
+        "lemma": "azav"
+      },
+      {
+        "surface": "the path",
+        "lemma": "orach"
+      },
+      {
+        "surface": "he who hates",
+        "lemma": "sane"
+      },
+      {
+        "surface": "correction",
+        "lemma": "tokhechah"
+      },
+      {
+        "surface": "will die",
+        "lemma": "mut"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Sheol",
+        "lemma": "sheol"
+      },
+      {
+        "surface": "and Abaddon",
+        "lemma": "avaddon"
+      },
+      {
+        "surface": "lie open before",
+        "lemma": "neged"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the hearts",
+        "lemma": "libbah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ben"
+      },
+      {
+        "surface": "of men",
+        "lemma": "adam"
+      }
+    ],
+    "12": [
+      {
+        "surface": "A mocker",
+        "lemma": "luts"
+      },
+      {
+        "surface": "love",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "to be reproved",
+        "lemma": "yakhach"
+      },
+      {
+        "surface": "the wise",
+        "lemma": "chakham"
+      }
+    ],
+    "13": [
+      {
+        "surface": "A joyful",
+        "lemma": "sameach"
+      },
+      {
+        "surface": "heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "makes a cheerful",
+        "lemma": "yatav"
+      },
+      {
+        "surface": "countenance",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "but sorrow",
+        "lemma": "atstsevet"
+      },
+      {
+        "surface": "of the heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "crushes",
+        "lemma": "naka"
+      },
+      {
+        "surface": "the spirit",
+        "lemma": "ruach"
+      }
+    ],
+    "14": [
+      {
+        "surface": "A discerning",
+        "lemma": "bin"
+      },
+      {
+        "surface": "heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "seeks",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "but the mouth",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of a fool",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "feeds on",
+        "lemma": "beteqedharoim"
+      },
+      {
+        "surface": "folly",
+        "lemma": "ivvelet"
+      }
+    ],
+    "15": [
+      {
+        "surface": "the days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of the oppressed",
+        "lemma": "ani"
+      },
+      {
+        "surface": "are bad",
+        "lemma": "ra"
+      },
+      {
+        "surface": "but a cheerful",
+        "lemma": "tov"
+      },
+      {
+        "surface": "heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "has a continual",
+        "lemma": "tamid"
+      },
+      {
+        "surface": "feast",
+        "lemma": "mishteh"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Better",
+        "lemma": "tov"
+      },
+      {
+        "surface": "a little",
+        "lemma": "meat"
+      },
+      {
+        "surface": "with the fear",
+        "lemma": "yirah"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "than great",
+        "lemma": "rav"
+      },
+      {
+        "surface": "treasure",
+        "lemma": "otsar"
+      },
+      {
+        "surface": "with turmoil",
+        "lemma": "mehumah"
+      }
+    ],
+    "17": [
+      {
+        "surface": "Better",
+        "lemma": "tov"
+      },
+      {
+        "surface": "a dish",
+        "lemma": "aruchah"
+      },
+      {
+        "surface": "of vegetables",
+        "lemma": "yaraq"
+      },
+      {
+        "surface": "where",
+        "lemma": "sham"
+      },
+      {
+        "surface": "there is love",
+        "lemma": "ahavah"
+      },
+      {
+        "surface": "than a fattened",
+        "lemma": "avas"
+      },
+      {
+        "surface": "ox",
+        "lemma": "shor"
+      },
+      {
+        "surface": "with hatred",
+        "lemma": "sinah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "A hot-tempered",
+        "lemma": "chemah"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "stirs up",
+        "lemma": "garah"
+      },
+      {
+        "surface": "strife",
+        "lemma": "madon"
+      },
+      {
+        "surface": "but he who is slow",
+        "lemma": "arekh"
+      },
+      {
+        "surface": "to anger",
+        "lemma": "aph"
+      },
+      {
+        "surface": "calms",
+        "lemma": "shaqat"
+      },
+      {
+        "surface": "dispute",
+        "lemma": "riv"
+      }
+    ],
+    "19": [
+      {
+        "surface": "The way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of the slacker",
+        "lemma": "atsel"
+      },
+      {
+        "surface": "is like a hedge",
+        "lemma": "mesukhah"
+      },
+      {
+        "surface": "of thorns",
+        "lemma": "chedeq"
+      },
+      {
+        "surface": "but the path",
+        "lemma": "orach"
+      },
+      {
+        "surface": "of the upright",
+        "lemma": "yashar"
+      },
+      {
+        "surface": "is a highway",
+        "lemma": "salal"
+      }
+    ],
+    "20": [
+      {
+        "surface": "A wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "brings joy",
+        "lemma": "samach"
+      },
+      {
+        "surface": "but a foolish",
+        "lemma": "kesil"
+      },
+      {
+        "surface": "man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "despises",
+        "lemma": "bazah"
+      },
+      {
+        "surface": "his mother",
+        "lemma": "em"
+      }
+    ],
+    "21": [
+      {
+        "surface": "Folly",
+        "lemma": "ivvelet"
+      },
+      {
+        "surface": "is joy",
+        "lemma": "simchah"
+      },
+      {
+        "surface": "to one who lacks",
+        "lemma": "chaser"
+      },
+      {
+        "surface": "judgment",
+        "lemma": "lev"
+      },
+      {
+        "surface": "but a man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "of understanding",
+        "lemma": "tavunah"
+      },
+      {
+        "surface": "walks",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "a straight path",
+        "lemma": "yashar"
+      }
+    ],
+    "22": [
+      {
+        "surface": "Plans",
+        "lemma": "machashavah"
+      },
+      {
+        "surface": "fail",
+        "lemma": "parar"
+      },
+      {
+        "surface": "for lack",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "of counsel",
+        "lemma": "sod"
+      },
+      {
+        "surface": "but with many",
+        "lemma": "rov"
+      },
+      {
+        "surface": "advisers",
+        "lemma": "yaats"
+      },
+      {
+        "surface": "they succeed",
+        "lemma": "qamay"
+      }
+    ],
+    "23": [
+      {
+        "surface": "A man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "takes joy",
+        "lemma": "simchah"
+      },
+      {
+        "surface": "in a fitting reply",
+        "lemma": "maaneh"
+      },
+      {
+        "surface": "and how",
+        "lemma": "mah"
+      },
+      {
+        "surface": "good is",
+        "lemma": "tov"
+      },
+      {
+        "surface": "word",
+        "lemma": "davar"
+      }
+    ],
+    "24": [
+      {
+        "surface": "The path",
+        "lemma": "orach"
+      },
+      {
+        "surface": "of life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "leads upward",
+        "lemma": "maal"
+      },
+      {
+        "surface": "for the wise",
+        "lemma": "sakhal"
+      },
+      {
+        "surface": "he may avoid",
+        "lemma": "sur"
+      },
+      {
+        "surface": "going down",
+        "lemma": "mattah"
+      },
+      {
+        "surface": "to Sheol",
+        "lemma": "sheol"
+      }
+    ],
+    "25": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "tears down",
+        "lemma": "nasach"
+      },
+      {
+        "surface": "the house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "of the proud",
+        "lemma": "geeh"
+      },
+      {
+        "surface": "but He protects",
+        "lemma": "natsav"
+      },
+      {
+        "surface": "the boundaries",
+        "lemma": "gevul"
+      },
+      {
+        "surface": "of the widow",
+        "lemma": "almanah"
+      }
+    ],
+    "26": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "detests",
+        "lemma": "toevah"
+      },
+      {
+        "surface": "the thoughts",
+        "lemma": "machashavah"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "ra"
+      },
+      {
+        "surface": "but the words",
+        "lemma": "emer"
+      },
+      {
+        "surface": "of the pure",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "are pleasant to Him",
+        "lemma": "noam"
+      }
+    ],
+    "27": [
+      {
+        "surface": "He who is greedy",
+        "lemma": "batsa"
+      },
+      {
+        "surface": "for unjust gain",
+        "lemma": "betsa"
+      },
+      {
+        "surface": "brings trouble",
+        "lemma": "akhar"
+      },
+      {
+        "surface": "on his household",
+        "lemma": "bet"
+      },
+      {
+        "surface": "but he who hates",
+        "lemma": "sane"
+      },
+      {
+        "surface": "bribes",
+        "lemma": "mattanah"
+      },
+      {
+        "surface": "will live",
+        "lemma": "chayah"
+      }
+    ],
+    "28": [
+      {
+        "surface": "The heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "of the righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "ponders",
+        "lemma": "hagah"
+      },
+      {
+        "surface": "how to answer",
+        "lemma": "un"
+      },
+      {
+        "surface": "but the mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "of the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "blurts out",
+        "lemma": "nava"
+      },
+      {
+        "surface": "evil",
+        "lemma": "ra"
+      }
+    ],
+    "29": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is far",
+        "lemma": "rachoq"
+      },
+      {
+        "surface": "from the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "the prayer",
+        "lemma": "tephillah"
+      },
+      {
+        "surface": "of the righteous",
+        "lemma": "tsaddiq"
+      }
+    ],
+    "30": [
+      {
+        "surface": "The light",
+        "lemma": "maor"
+      },
+      {
+        "surface": "of the eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "cheers",
+        "lemma": "samach"
+      },
+      {
+        "surface": "the heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "and good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "news",
+        "lemma": "shemuah"
+      },
+      {
+        "surface": "nourishes",
+        "lemma": "dashen"
+      },
+      {
+        "surface": "the bones",
+        "lemma": "etsem"
+      }
+    ],
+    "31": [
+      {
+        "surface": "vvv",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "life-giving",
+        "lemma": "chay"
+      },
+      {
+        "surface": "reproof",
+        "lemma": "tokhechah"
+      },
+      {
+        "surface": "will dwell",
+        "lemma": "lun"
+      },
+      {
+        "surface": "among",
+        "lemma": "qerev"
+      },
+      {
+        "surface": "the wise",
+        "lemma": "chakham"
+      }
+    ],
+    "32": [
+      {
+        "surface": "He who ignores",
+        "lemma": "para"
+      },
+      {
+        "surface": "discipline",
+        "lemma": "musar"
+      },
+      {
+        "surface": "despises",
+        "lemma": "maas"
+      },
+      {
+        "surface": "himself",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "correction",
+        "lemma": "tokhechah"
+      },
+      {
+        "surface": "gains",
+        "lemma": "qanah"
+      },
+      {
+        "surface": "understanding",
+        "lemma": "lev"
+      }
+    ],
+    "33": [
+      {
+        "surface": "The fear",
+        "lemma": "yirah"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "is the instruction",
+        "lemma": "musar"
+      },
+      {
+        "surface": "of wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "and humility",
+        "lemma": "anavah"
+      },
+      {
+        "surface": "comes before",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "honor",
+        "lemma": "kavod"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "tov",
+    "rasah",
+    "ra"
+  ]
+}

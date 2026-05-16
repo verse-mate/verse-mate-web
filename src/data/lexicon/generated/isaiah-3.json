@@ -1,0 +1,869 @@
+{
+  "bookId": 23,
+  "book": "Isaiah",
+  "chapter": 3,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "behold",
+        "lemma": "hinneh"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adon"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      },
+      {
+        "surface": "is about to remove",
+        "lemma": "sur"
+      },
+      {
+        "surface": "from Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "and Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "both supply",
+        "lemma": "mishan"
+      },
+      {
+        "surface": "and support",
+        "lemma": "mishenah"
+      },
+      {
+        "surface": "supply",
+        "lemma": "mishan"
+      },
+      {
+        "surface": "of food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "and water",
+        "lemma": "mayim"
+      }
+    ],
+    "2": [
+      {
+        "surface": "the mighty man",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "and the warrior",
+        "lemma": "ish"
+      },
+      {
+        "surface": "the judge",
+        "lemma": "shaphat"
+      },
+      {
+        "surface": "and the prophet",
+        "lemma": "navi"
+      },
+      {
+        "surface": "the soothsayer",
+        "lemma": "qasam"
+      },
+      {
+        "surface": "and the elder",
+        "lemma": "zaqen"
+      }
+    ],
+    "3": [
+      {
+        "surface": "the commander",
+        "lemma": "sar"
+      },
+      {
+        "surface": "of fifty",
+        "lemma": "chamishshim"
+      },
+      {
+        "surface": "and the dignitary",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "the counselor",
+        "lemma": "yaats"
+      },
+      {
+        "surface": "the cunning",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "magician",
+        "lemma": "cheresh"
+      },
+      {
+        "surface": "and the clever",
+        "lemma": "bin"
+      },
+      {
+        "surface": "enchanter",
+        "lemma": "lachash"
+      }
+    ],
+    "4": [
+      {
+        "surface": "mere lads",
+        "lemma": "naar"
+      },
+      {
+        "surface": "their leaders",
+        "lemma": "sar"
+      },
+      {
+        "surface": "and children",
+        "lemma": "taalul"
+      },
+      {
+        "surface": "will rule",
+        "lemma": "mashal"
+      }
+    ],
+    "5": [
+      {
+        "surface": "The people",
+        "lemma": "am"
+      },
+      {
+        "surface": "will oppress one another",
+        "lemma": "nagas"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "against man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "neighbor",
+        "lemma": "ish"
+      },
+      {
+        "surface": "against neighbor",
+        "lemma": "rea"
+      },
+      {
+        "surface": "the young",
+        "lemma": "naar"
+      },
+      {
+        "surface": "will rise up",
+        "lemma": "rahav"
+      },
+      {
+        "surface": "against the old",
+        "lemma": "zaqen"
+      },
+      {
+        "surface": "and the base",
+        "lemma": "qalah"
+      },
+      {
+        "surface": "against the honorable",
+        "lemma": "kavad"
+      }
+    ],
+    "6": [
+      {
+        "surface": "A man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "will seize",
+        "lemma": "taphas"
+      },
+      {
+        "surface": "his brother",
+        "lemma": "ach"
+      },
+      {
+        "surface": "house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "You have a cloak",
+        "lemma": "simlah"
+      },
+      {
+        "surface": "leader",
+        "lemma": "qatsin"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "Take charge",
+        "lemma": "yad"
+      },
+      {
+        "surface": "heap of rubble",
+        "lemma": "makhshelah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "he will cry aloud",
+        "lemma": "nasa"
+      },
+      {
+        "surface": "a healer",
+        "lemma": "chavash"
+      },
+      {
+        "surface": "I have no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "food",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "or clothing",
+        "lemma": "simlah"
+      },
+      {
+        "surface": "in my house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "make me",
+        "lemma": "sum"
+      },
+      {
+        "surface": "leader",
+        "lemma": "qatsin"
+      },
+      {
+        "surface": "of the people",
+        "lemma": "am"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Jerusalem",
+        "lemma": "yerushalaim"
+      },
+      {
+        "surface": "has stumbled",
+        "lemma": "kashal"
+      },
+      {
+        "surface": "and Judah",
+        "lemma": "yehudah"
+      },
+      {
+        "surface": "has fallen",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "they spoke",
+        "lemma": "lashon"
+      },
+      {
+        "surface": "and acted",
+        "lemma": "maalal"
+      },
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "defying",
+        "lemma": "marah"
+      },
+      {
+        "surface": "His glorious",
+        "lemma": "kavod"
+      },
+      {
+        "surface": "presence",
+        "lemma": "ayin"
+      }
+    ],
+    "9": [
+      {
+        "surface": "The expression",
+        "lemma": "hakkarah"
+      },
+      {
+        "surface": "on their faces",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "testifies",
+        "lemma": "un"
+      },
+      {
+        "surface": "and like Sodom",
+        "lemma": "sedom"
+      },
+      {
+        "surface": "they flaunt",
+        "lemma": "nagad"
+      },
+      {
+        "surface": "their sin",
+        "lemma": "chattaah"
+      },
+      {
+        "surface": "conceal it",
+        "lemma": "kachad"
+      },
+      {
+        "surface": "Woe",
+        "lemma": "oy"
+      },
+      {
+        "surface": "to them",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "they have brought",
+        "lemma": "gamal"
+      },
+      {
+        "surface": "disaster",
+        "lemma": "ra"
+      }
+    ],
+    "10": [
+      {
+        "surface": "the righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "it will be well",
+        "lemma": "tov"
+      },
+      {
+        "surface": "for they will enjoy",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "the fruit",
+        "lemma": "peri"
+      },
+      {
+        "surface": "of their labor",
+        "lemma": "maalal"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Woe",
+        "lemma": "oy"
+      },
+      {
+        "surface": "to the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "disaster is upon them",
+        "lemma": "ra"
+      },
+      {
+        "surface": "they will be repaid",
+        "lemma": "gemul"
+      },
+      {
+        "surface": "with what their hands",
+        "lemma": "yad"
+      }
+    ],
+    "12": [
+      {
+        "surface": "Youths",
+        "lemma": "alal"
+      },
+      {
+        "surface": "oppress",
+        "lemma": "nagas"
+      },
+      {
+        "surface": "My people",
+        "lemma": "am"
+      },
+      {
+        "surface": "and women",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "rule",
+        "lemma": "mashal"
+      },
+      {
+        "surface": "O My people",
+        "lemma": "am"
+      },
+      {
+        "surface": "your guides",
+        "lemma": "ashar"
+      },
+      {
+        "surface": "mislead you",
+        "lemma": "taah"
+      },
+      {
+        "surface": "they turn you",
+        "lemma": "bala"
+      },
+      {
+        "surface": "from your paths",
+        "lemma": "orach"
+      }
+    ],
+    "13": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "arises",
+        "lemma": "natsav"
+      },
+      {
+        "surface": "to contend",
+        "lemma": "riv"
+      },
+      {
+        "surface": "He stands",
+        "lemma": "amad"
+      },
+      {
+        "surface": "to judge",
+        "lemma": "din"
+      },
+      {
+        "surface": "the people",
+        "lemma": "am"
+      }
+    ],
+    "14": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "this charge",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "the elders",
+        "lemma": "zaqen"
+      },
+      {
+        "surface": "and leaders",
+        "lemma": "sar"
+      },
+      {
+        "surface": "of His people",
+        "lemma": "am"
+      },
+      {
+        "surface": "have devoured",
+        "lemma": "baar"
+      },
+      {
+        "surface": "the vineyard",
+        "lemma": "kerem"
+      },
+      {
+        "surface": "the plunder",
+        "lemma": "gezelah"
+      },
+      {
+        "surface": "of the poor",
+        "lemma": "ani"
+      },
+      {
+        "surface": "is in your houses",
+        "lemma": "bet"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Why",
+        "lemma": "mah"
+      },
+      {
+        "surface": "do you crush",
+        "lemma": "dakah"
+      },
+      {
+        "surface": "My people",
+        "lemma": "am"
+      },
+      {
+        "surface": "and grind",
+        "lemma": "tachan"
+      },
+      {
+        "surface": "the faces",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "of the poor",
+        "lemma": "ani"
+      },
+      {
+        "surface": "declares",
+        "lemma": "neum"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "GOD",
+        "lemma": "yehovih"
+      },
+      {
+        "surface": "of Hosts",
+        "lemma": "tsava"
+      }
+    ],
+    "16": [
+      {
+        "surface": "The LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "the daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of Zion",
+        "lemma": "tsiyyon"
+      },
+      {
+        "surface": "are haughty",
+        "lemma": "gavah"
+      },
+      {
+        "surface": "walking",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "with heads",
+        "lemma": "garon"
+      },
+      {
+        "surface": "held high",
+        "lemma": "natah"
+      },
+      {
+        "surface": "and wanton",
+        "lemma": "saqar"
+      },
+      {
+        "surface": "eyes",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "prancing",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "and skipping",
+        "lemma": "taphaph"
+      },
+      {
+        "surface": "as they go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "jingling",
+        "lemma": "akhas"
+      },
+      {
+        "surface": "the bracelets on their ankles",
+        "lemma": "regel"
+      }
+    ],
+    "17": [
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "will bring sores",
+        "lemma": "saphach"
+      },
+      {
+        "surface": "on the heads",
+        "lemma": "qodqod"
+      },
+      {
+        "surface": "of the daughters",
+        "lemma": "bat"
+      },
+      {
+        "surface": "of Zion",
+        "lemma": "tsiyyon"
+      },
+      {
+        "surface": "and the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "will make their foreheads",
+        "lemma": "pot"
+      },
+      {
+        "surface": "bare",
+        "lemma": "arah"
+      }
+    ],
+    "18": [
+      {
+        "surface": "day",
+        "lemma": "yom"
+      },
+      {
+        "surface": "the Lord",
+        "lemma": "adonai"
+      },
+      {
+        "surface": "will take away",
+        "lemma": "sur"
+      },
+      {
+        "surface": "their finery",
+        "lemma": "tipharah"
+      },
+      {
+        "surface": "their anklets",
+        "lemma": "ekhes"
+      },
+      {
+        "surface": "and headbands",
+        "lemma": "shavis"
+      },
+      {
+        "surface": "and crescents",
+        "lemma": "saharon"
+      }
+    ],
+    "19": [
+      {
+        "surface": "their pendants",
+        "lemma": "netiphah"
+      },
+      {
+        "surface": "bracelets",
+        "lemma": "sherah"
+      },
+      {
+        "surface": "and veils",
+        "lemma": "raalah"
+      }
+    ],
+    "20": [
+      {
+        "surface": "their headdresses",
+        "lemma": "peer"
+      },
+      {
+        "surface": "ankle chains",
+        "lemma": "tseadah"
+      },
+      {
+        "surface": "and sashes",
+        "lemma": "qishshur"
+      },
+      {
+        "surface": "their perfume",
+        "lemma": "nephesh"
+      },
+      {
+        "surface": "bottles",
+        "lemma": "bet"
+      },
+      {
+        "surface": "and charms",
+        "lemma": "lachash"
+      }
+    ],
+    "21": [
+      {
+        "surface": "their signet rings",
+        "lemma": "tabbaat"
+      },
+      {
+        "surface": "and nose",
+        "lemma": "aph"
+      },
+      {
+        "surface": "rings",
+        "lemma": "nezem"
+      }
+    ],
+    "22": [
+      {
+        "surface": "their festive robes",
+        "lemma": "machalatsah"
+      },
+      {
+        "surface": "capes",
+        "lemma": "maataphah"
+      },
+      {
+        "surface": "cloaks",
+        "lemma": "mitpachat"
+      },
+      {
+        "surface": "and purses",
+        "lemma": "charit"
+      }
+    ],
+    "23": [
+      {
+        "surface": "and their mirrors",
+        "lemma": "gillavon"
+      },
+      {
+        "surface": "linen garments",
+        "lemma": "sadin"
+      },
+      {
+        "surface": "tiaras",
+        "lemma": "tsaniph"
+      },
+      {
+        "surface": "and shawls",
+        "lemma": "radid"
+      }
+    ],
+    "24": [
+      {
+        "surface": "Instead of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "fragrance",
+        "lemma": "besem"
+      },
+      {
+        "surface": "a stench",
+        "lemma": "maq"
+      },
+      {
+        "surface": "instead of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "a belt",
+        "lemma": "chagor"
+      },
+      {
+        "surface": "a rope",
+        "lemma": "niqpah"
+      },
+      {
+        "surface": "instead of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "styled",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "hair",
+        "lemma": "miqsheh"
+      },
+      {
+        "surface": "baldness",
+        "lemma": "qorchah"
+      },
+      {
+        "surface": "instead of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "fine clothing",
+        "lemma": "petigil"
+      },
+      {
+        "surface": "sackcloth",
+        "lemma": "machagoret"
+      },
+      {
+        "surface": "instead of",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "beauty",
+        "lemma": "yophi"
+      }
+    ],
+    "25": [
+      {
+        "surface": "Your men",
+        "lemma": "mat"
+      },
+      {
+        "surface": "will fall",
+        "lemma": "naphal"
+      },
+      {
+        "surface": "by the sword",
+        "lemma": "cherev"
+      },
+      {
+        "surface": "and your warriors",
+        "lemma": "gevurah"
+      },
+      {
+        "surface": "in battle",
+        "lemma": "milchamah"
+      }
+    ],
+    "26": [
+      {
+        "surface": "And the gates of Zion",
+        "lemma": "petach"
+      },
+      {
+        "surface": "will lament",
+        "lemma": "anah"
+      },
+      {
+        "surface": "and mourn",
+        "lemma": "aval"
+      },
+      {
+        "surface": "destitute",
+        "lemma": "naqah"
+      },
+      {
+        "surface": "on the ground",
+        "lemma": "erets"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "tachat",
+    "bet",
+    "zaqen"
+  ]
+}

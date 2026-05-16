@@ -1,0 +1,809 @@
+{
+  "bookId": 21,
+  "book": "Ecclesiastes",
+  "chapter": 9,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "and concluded",
+        "lemma": "bur"
+      },
+      {
+        "surface": "the righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "and the wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "as well as their deeds",
+        "lemma": "avad"
+      },
+      {
+        "surface": "are in God’s",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "Man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "does not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "lies ahead",
+        "lemma": "paneh"
+      },
+      {
+        "surface": "love",
+        "lemma": "ahavah"
+      },
+      {
+        "surface": "hate",
+        "lemma": "sinah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "There is a common",
+        "lemma": "echad"
+      },
+      {
+        "surface": "fate",
+        "lemma": "miqreh"
+      },
+      {
+        "surface": "for the righteous",
+        "lemma": "tsaddiq"
+      },
+      {
+        "surface": "and the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "for the good and the bad",
+        "lemma": "tov"
+      },
+      {
+        "surface": "for the clean",
+        "lemma": "tahor"
+      },
+      {
+        "surface": "and the unclean",
+        "lemma": "tame"
+      },
+      {
+        "surface": "for the one who sacrifices",
+        "lemma": "zavach"
+      },
+      {
+        "surface": "who does not",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "As it is for the good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "so it is for the sinner",
+        "lemma": "chata"
+      },
+      {
+        "surface": "as it is for the one who makes a vow",
+        "lemma": "shava"
+      },
+      {
+        "surface": "for the one who refuses",
+        "lemma": "yare"
+      },
+      {
+        "surface": "to take a vow",
+        "lemma": "shevuah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "is an evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "There is one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "fate",
+        "lemma": "miqreh"
+      },
+      {
+        "surface": "the hearts",
+        "lemma": "lev"
+      },
+      {
+        "surface": "of men",
+        "lemma": "ben"
+      },
+      {
+        "surface": "are full of",
+        "lemma": "male"
+      },
+      {
+        "surface": "evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "and madness",
+        "lemma": "holelah"
+      },
+      {
+        "surface": "while they are alive",
+        "lemma": "chay"
+      },
+      {
+        "surface": "and afterward",
+        "lemma": "achar"
+      },
+      {
+        "surface": "the dead",
+        "lemma": "mut"
+      }
+    ],
+    "4": [
+      {
+        "surface": "There is",
+        "lemma": "yesh"
+      },
+      {
+        "surface": "hope",
+        "lemma": "bittachon"
+      },
+      {
+        "surface": "for anyone who",
+        "lemma": "mi"
+      },
+      {
+        "surface": "is among",
+        "lemma": "bachar"
+      },
+      {
+        "surface": "the living",
+        "lemma": "chay"
+      },
+      {
+        "surface": "a live",
+        "lemma": "chay"
+      },
+      {
+        "surface": "dog",
+        "lemma": "kelev"
+      },
+      {
+        "surface": "is better",
+        "lemma": "tov"
+      },
+      {
+        "surface": "a dead",
+        "lemma": "mut"
+      },
+      {
+        "surface": "lion",
+        "lemma": "ari"
+      }
+    ],
+    "5": [
+      {
+        "surface": "the living",
+        "lemma": "chay"
+      },
+      {
+        "surface": "know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "that they will die",
+        "lemma": "mut"
+      },
+      {
+        "surface": "but the dead",
+        "lemma": "mut"
+      },
+      {
+        "surface": "know",
+        "lemma": "yada"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "meumah"
+      },
+      {
+        "surface": "They have no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "further",
+        "lemma": "od"
+      },
+      {
+        "surface": "reward",
+        "lemma": "sakhar"
+      },
+      {
+        "surface": "the memory",
+        "lemma": "zekher"
+      },
+      {
+        "surface": "of them is forgotten",
+        "lemma": "shakhach"
+      }
+    ],
+    "6": [
+      {
+        "surface": "Their love",
+        "lemma": "ahavah"
+      },
+      {
+        "surface": "their hate",
+        "lemma": "sinah"
+      },
+      {
+        "surface": "their envy",
+        "lemma": "qinah"
+      },
+      {
+        "surface": "have already",
+        "lemma": "kevar"
+      },
+      {
+        "surface": "vanished",
+        "lemma": "avad"
+      },
+      {
+        "surface": "and they will never again have",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "a share",
+        "lemma": "cheleq"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      }
+    ],
+    "7": [
+      {
+        "surface": "Go",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "eat",
+        "lemma": "akhal"
+      },
+      {
+        "surface": "your bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "with joy",
+        "lemma": "simchah"
+      },
+      {
+        "surface": "and drink",
+        "lemma": "shatah"
+      },
+      {
+        "surface": "your wine",
+        "lemma": "yayin"
+      },
+      {
+        "surface": "with a cheerful",
+        "lemma": "tov"
+      },
+      {
+        "surface": "heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "God",
+        "lemma": "elohim"
+      },
+      {
+        "surface": "has already",
+        "lemma": "kevar"
+      },
+      {
+        "surface": "approved",
+        "lemma": "ratsah"
+      },
+      {
+        "surface": "your works",
+        "lemma": "maaseh"
+      }
+    ],
+    "8": [
+      {
+        "surface": "Let your garments",
+        "lemma": "beged"
+      },
+      {
+        "surface": "white",
+        "lemma": "lavan"
+      },
+      {
+        "surface": "spare",
+        "lemma": "chaser"
+      },
+      {
+        "surface": "the oil",
+        "lemma": "shemen"
+      },
+      {
+        "surface": "your head",
+        "lemma": "rosh"
+      }
+    ],
+    "9": [
+      {
+        "surface": "life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "your beloved",
+        "lemma": "ahav"
+      },
+      {
+        "surface": "wife",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "the days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "of the fleeting",
+        "lemma": "hevel"
+      },
+      {
+        "surface": "life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "your fleeting",
+        "lemma": "hevel"
+      },
+      {
+        "surface": "days",
+        "lemma": "yom"
+      },
+      {
+        "surface": "is your portion",
+        "lemma": "cheleq"
+      },
+      {
+        "surface": "in life",
+        "lemma": "chay"
+      },
+      {
+        "surface": "and in your labor",
+        "lemma": "amal"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      }
+    ],
+    "10": [
+      {
+        "surface": "you find",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "with your hands",
+        "lemma": "yad"
+      },
+      {
+        "surface": "with all your might",
+        "lemma": "koach"
+      },
+      {
+        "surface": "in Sheol",
+        "lemma": "sheol"
+      },
+      {
+        "surface": "are going",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "there is",
+        "lemma": "sham"
+      },
+      {
+        "surface": "no",
+        "lemma": "ayin"
+      },
+      {
+        "surface": "work",
+        "lemma": "maaseh"
+      },
+      {
+        "surface": "or planning",
+        "lemma": "cheshbon"
+      },
+      {
+        "surface": "or knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "or wisdom",
+        "lemma": "chokhmah"
+      }
+    ],
+    "11": [
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "The race",
+        "lemma": "merots"
+      },
+      {
+        "surface": "to the swift",
+        "lemma": "qal"
+      },
+      {
+        "surface": "nor the battle",
+        "lemma": "milchamah"
+      },
+      {
+        "surface": "to the strong",
+        "lemma": "gibbor"
+      },
+      {
+        "surface": "the bread",
+        "lemma": "lechem"
+      },
+      {
+        "surface": "to the wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "the wealth",
+        "lemma": "osher"
+      },
+      {
+        "surface": "to the intelligent",
+        "lemma": "bin"
+      },
+      {
+        "surface": "the favor",
+        "lemma": "chen"
+      },
+      {
+        "surface": "to the skillful",
+        "lemma": "yada"
+      },
+      {
+        "surface": "and chance",
+        "lemma": "pega"
+      },
+      {
+        "surface": "happen",
+        "lemma": "qarah"
+      }
+    ],
+    "12": [
+      {
+        "surface": "man",
+        "lemma": "adam"
+      },
+      {
+        "surface": "knows",
+        "lemma": "yada"
+      },
+      {
+        "surface": "Like fish",
+        "lemma": "dag"
+      },
+      {
+        "surface": "caught",
+        "lemma": "achaz"
+      },
+      {
+        "surface": "in a cruel",
+        "lemma": "ra"
+      },
+      {
+        "surface": "net",
+        "lemma": "matsod"
+      },
+      {
+        "surface": "or birds",
+        "lemma": "tsippor"
+      },
+      {
+        "surface": "trapped",
+        "lemma": "achaz"
+      },
+      {
+        "surface": "in a snare",
+        "lemma": "pach"
+      },
+      {
+        "surface": "so men",
+        "lemma": "ben"
+      },
+      {
+        "surface": "are ensnared",
+        "lemma": "yaqosh"
+      },
+      {
+        "surface": "in an evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "that suddenly",
+        "lemma": "pitom"
+      },
+      {
+        "surface": "falls",
+        "lemma": "naphal"
+      }
+    ],
+    "13": [
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "under",
+        "lemma": "tachat"
+      },
+      {
+        "surface": "the sun",
+        "lemma": "shemesh"
+      },
+      {
+        "surface": "was great",
+        "lemma": "gadol"
+      }
+    ],
+    "14": [
+      {
+        "surface": "There was a small",
+        "lemma": "qatan"
+      },
+      {
+        "surface": "city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "with few",
+        "lemma": "meat"
+      },
+      {
+        "surface": "men",
+        "lemma": "enosh"
+      },
+      {
+        "surface": "A mighty",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "king",
+        "lemma": "melekh"
+      },
+      {
+        "surface": "surrounded it",
+        "lemma": "savav"
+      },
+      {
+        "surface": "and built",
+        "lemma": "banah"
+      },
+      {
+        "surface": "large",
+        "lemma": "gadol"
+      },
+      {
+        "surface": "siege ramps",
+        "lemma": "matsod"
+      }
+    ],
+    "15": [
+      {
+        "surface": "Now a poor",
+        "lemma": "misken"
+      },
+      {
+        "surface": "wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "was found",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "saved",
+        "lemma": "malat"
+      },
+      {
+        "surface": "the city",
+        "lemma": "ir"
+      },
+      {
+        "surface": "by his wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "one",
+        "lemma": "adam"
+      },
+      {
+        "surface": "remembered",
+        "lemma": "zakhar"
+      },
+      {
+        "surface": "poor",
+        "lemma": "misken"
+      },
+      {
+        "surface": "man",
+        "lemma": "ish"
+      }
+    ],
+    "16": [
+      {
+        "surface": "Wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "is better",
+        "lemma": "tov"
+      },
+      {
+        "surface": "than strength",
+        "lemma": "gevurah"
+      },
+      {
+        "surface": "but the wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "of the poor",
+        "lemma": "misken"
+      },
+      {
+        "surface": "man is despised",
+        "lemma": "bazah"
+      },
+      {
+        "surface": "and his words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "are not",
+        "lemma": "ayin"
+      }
+    ],
+    "17": [
+      {
+        "surface": "The calm",
+        "lemma": "nachat"
+      },
+      {
+        "surface": "words",
+        "lemma": "davar"
+      },
+      {
+        "surface": "of the wise",
+        "lemma": "chakham"
+      },
+      {
+        "surface": "over the shouts",
+        "lemma": "zeaqah"
+      },
+      {
+        "surface": "of a ruler",
+        "lemma": "mashal"
+      },
+      {
+        "surface": "among fools",
+        "lemma": "kesil"
+      }
+    ],
+    "18": [
+      {
+        "surface": "Wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "is better",
+        "lemma": "tov"
+      },
+      {
+        "surface": "than weapons",
+        "lemma": "keli"
+      },
+      {
+        "surface": "of war",
+        "lemma": "qerav"
+      },
+      {
+        "surface": "but one",
+        "lemma": "echad"
+      },
+      {
+        "surface": "sinner",
+        "lemma": "chata"
+      },
+      {
+        "surface": "destroys",
+        "lemma": "avad"
+      },
+      {
+        "surface": "much",
+        "lemma": "ravah"
+      },
+      {
+        "surface": "good",
+        "lemma": "tov"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "tov",
+    "chay",
+    "tachat"
+  ]
+}

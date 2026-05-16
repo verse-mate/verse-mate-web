@@ -1,0 +1,509 @@
+{
+  "bookId": 20,
+  "book": "Proverbs",
+  "chapter": 2,
+  "version": "BSB",
+  "verses": {
+    "1": [
+      {
+        "surface": "My son",
+        "lemma": "ben"
+      },
+      {
+        "surface": "you accept",
+        "lemma": "laqach"
+      },
+      {
+        "surface": "my words",
+        "lemma": "emer"
+      },
+      {
+        "surface": "and hide",
+        "lemma": "tsaphan"
+      },
+      {
+        "surface": "my commandments",
+        "lemma": "mitsvah"
+      }
+    ],
+    "2": [
+      {
+        "surface": "if you incline",
+        "lemma": "qashav"
+      },
+      {
+        "surface": "your ear",
+        "lemma": "ozen"
+      },
+      {
+        "surface": "to wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "and direct",
+        "lemma": "natah"
+      },
+      {
+        "surface": "your heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "to understanding",
+        "lemma": "tavunah"
+      }
+    ],
+    "3": [
+      {
+        "surface": "to insight",
+        "lemma": "binah"
+      },
+      {
+        "surface": "your voice",
+        "lemma": "qol"
+      },
+      {
+        "surface": "to understanding",
+        "lemma": "tavunah"
+      }
+    ],
+    "4": [
+      {
+        "surface": "you seek",
+        "lemma": "baqash"
+      },
+      {
+        "surface": "it like silver",
+        "lemma": "keseph"
+      },
+      {
+        "surface": "and search it out",
+        "lemma": "chaphas"
+      },
+      {
+        "surface": "like hidden treasure",
+        "lemma": "matmon"
+      }
+    ],
+    "5": [
+      {
+        "surface": "you will discern",
+        "lemma": "bin"
+      },
+      {
+        "surface": "the fear",
+        "lemma": "yirah"
+      },
+      {
+        "surface": "of the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "and discover",
+        "lemma": "matsa"
+      },
+      {
+        "surface": "the knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "of God",
+        "lemma": "elohim"
+      }
+    ],
+    "6": [
+      {
+        "surface": "the LORD",
+        "lemma": "yehovah"
+      },
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "from His mouth",
+        "lemma": "peh"
+      },
+      {
+        "surface": "come knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "and understanding",
+        "lemma": "tavunah"
+      }
+    ],
+    "7": [
+      {
+        "surface": "He stores up",
+        "lemma": "tsaphan"
+      },
+      {
+        "surface": "sound wisdom",
+        "lemma": "tushiyyah"
+      },
+      {
+        "surface": "for the upright",
+        "lemma": "yashar"
+      },
+      {
+        "surface": "He is a shield",
+        "lemma": "magen"
+      },
+      {
+        "surface": "to those who walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "with integrity",
+        "lemma": "tom"
+      }
+    ],
+    "8": [
+      {
+        "surface": "to guard",
+        "lemma": "natsar"
+      },
+      {
+        "surface": "the paths",
+        "lemma": "orach"
+      },
+      {
+        "surface": "of justice",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "and protect",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of His saints",
+        "lemma": "chasid"
+      }
+    ],
+    "9": [
+      {
+        "surface": "you will discern",
+        "lemma": "bin"
+      },
+      {
+        "surface": "righteousness",
+        "lemma": "tsedeq"
+      },
+      {
+        "surface": "and justice",
+        "lemma": "mishpat"
+      },
+      {
+        "surface": "and equity",
+        "lemma": "meshar"
+      },
+      {
+        "surface": "good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "path",
+        "lemma": "magal"
+      }
+    ],
+    "10": [
+      {
+        "surface": "wisdom",
+        "lemma": "chokhmah"
+      },
+      {
+        "surface": "your heart",
+        "lemma": "lev"
+      },
+      {
+        "surface": "and knowledge",
+        "lemma": "daat"
+      },
+      {
+        "surface": "will delight",
+        "lemma": "naem"
+      },
+      {
+        "surface": "your soul",
+        "lemma": "nephesh"
+      }
+    ],
+    "11": [
+      {
+        "surface": "Discretion",
+        "lemma": "mezimmah"
+      },
+      {
+        "surface": "will watch over you",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "and understanding",
+        "lemma": "tavunah"
+      },
+      {
+        "surface": "will guard you",
+        "lemma": "natsar"
+      }
+    ],
+    "12": [
+      {
+        "surface": "to deliver you",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "from the way",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "from the man",
+        "lemma": "ish"
+      },
+      {
+        "surface": "who speaks",
+        "lemma": "davar"
+      },
+      {
+        "surface": "perversity",
+        "lemma": "tahpukhah"
+      }
+    ],
+    "13": [
+      {
+        "surface": "from those who leave",
+        "lemma": "azav"
+      },
+      {
+        "surface": "the straight",
+        "lemma": "yosher"
+      },
+      {
+        "surface": "paths",
+        "lemma": "orach"
+      },
+      {
+        "surface": "to walk",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "in the ways",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of darkness",
+        "lemma": "choshekh"
+      }
+    ],
+    "14": [
+      {
+        "surface": "from those who enjoy",
+        "lemma": "sameach"
+      },
+      {
+        "surface": "evil",
+        "lemma": "ra"
+      },
+      {
+        "surface": "and rejoice",
+        "lemma": "gil"
+      },
+      {
+        "surface": "in the twistedness",
+        "lemma": "tahpukhah"
+      },
+      {
+        "surface": "of evil",
+        "lemma": "ra"
+      }
+    ],
+    "15": [
+      {
+        "surface": "paths",
+        "lemma": "orach"
+      },
+      {
+        "surface": "are crooked",
+        "lemma": "iqqesh"
+      },
+      {
+        "surface": "and whose ways",
+        "lemma": "magal"
+      },
+      {
+        "surface": "are devious",
+        "lemma": "luz"
+      }
+    ],
+    "16": [
+      {
+        "surface": "It will rescue you",
+        "lemma": "natsal"
+      },
+      {
+        "surface": "from the forbidden",
+        "lemma": "zur"
+      },
+      {
+        "surface": "woman",
+        "lemma": "ishshah"
+      },
+      {
+        "surface": "from the stranger",
+        "lemma": "nokhri"
+      },
+      {
+        "surface": "with seductive",
+        "lemma": "chalaq"
+      },
+      {
+        "surface": "words",
+        "lemma": "emer"
+      }
+    ],
+    "17": [
+      {
+        "surface": "who abandons",
+        "lemma": "azav"
+      },
+      {
+        "surface": "the partner",
+        "lemma": "alluph"
+      },
+      {
+        "surface": "of her youth",
+        "lemma": "naur"
+      },
+      {
+        "surface": "and forgets",
+        "lemma": "shakhach"
+      },
+      {
+        "surface": "the covenant",
+        "lemma": "berit"
+      },
+      {
+        "surface": "of her God",
+        "lemma": "elohim"
+      }
+    ],
+    "18": [
+      {
+        "surface": "her house",
+        "lemma": "bet"
+      },
+      {
+        "surface": "sinks down",
+        "lemma": "shuach"
+      },
+      {
+        "surface": "death",
+        "lemma": "mavet"
+      },
+      {
+        "surface": "and her tracks",
+        "lemma": "magal"
+      },
+      {
+        "surface": "the departed spirits",
+        "lemma": "rapah"
+      }
+    ],
+    "19": [
+      {
+        "surface": "negotiate",
+        "lemma": "nasag"
+      },
+      {
+        "surface": "the paths",
+        "lemma": "orach"
+      },
+      {
+        "surface": "of life",
+        "lemma": "chay"
+      }
+    ],
+    "20": [
+      {
+        "surface": "you will follow",
+        "lemma": "halakh"
+      },
+      {
+        "surface": "in the ways",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "of the good",
+        "lemma": "tov"
+      },
+      {
+        "surface": "and keep to",
+        "lemma": "shamar"
+      },
+      {
+        "surface": "the paths",
+        "lemma": "orach"
+      },
+      {
+        "surface": "of the righteous",
+        "lemma": "tsaddiq"
+      }
+    ],
+    "21": [
+      {
+        "surface": "the upright",
+        "lemma": "yashar"
+      },
+      {
+        "surface": "will inhabit",
+        "lemma": "shakhan"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and the blameless",
+        "lemma": "tamim"
+      },
+      {
+        "surface": "will remain",
+        "lemma": "yatar"
+      }
+    ],
+    "22": [
+      {
+        "surface": "but the wicked",
+        "lemma": "rasah"
+      },
+      {
+        "surface": "will be cut off",
+        "lemma": "karat"
+      },
+      {
+        "surface": "the land",
+        "lemma": "erets"
+      },
+      {
+        "surface": "and the unfaithful",
+        "lemma": "bagad"
+      },
+      {
+        "surface": "will} be uprooted",
+        "lemma": "nasach"
+      }
+    ]
+  },
+  "themeLemmas": [
+    "orach",
+    "tavunah",
+    "shamar"
+  ]
+}
