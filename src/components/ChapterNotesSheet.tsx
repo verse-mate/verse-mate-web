@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { X, FileText, Mail, ArrowLeft } from 'lucide-react';
+import { X, FileText, Mail, ArrowLeft, MoreHorizontal, Pencil, Trash2, Check } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 import { login as apiLogin, API_BASE_URL } from '@/services/bibleService';
 import { toast } from 'sonner';
@@ -63,7 +63,7 @@ export function hasPendingChapterNoteDraft(bookId: number, chapter: number): boo
  * `BookmarksScreen` uses for chapter-level bookmarks (`!b.verse`).
  */
 export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Props) {
-  const { state, dispatch, addNote } = useApp();
+  const { state, dispatch, addNote, updateNote, removeNote } = useApp();
   // Restore any draft persisted across an SSO redirect (Google/Apple).
   // Email sign-in doesn't redirect, so its draft lives in this same
   // useState across the in-place view switches.
@@ -75,6 +75,14 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
   const [password, setPassword] = useState('');
   const [authError, setAuthError] = useState<string | null>(null);
   const [authSubmitting, setAuthSubmitting] = useState(false);
+
+  // Inline edit/delete state for the "Recently Added Notes" list. Only one
+  // note can be expanded (or edited) at a time. Editing reveals an inline
+  // textarea + Save/Cancel actions; the "..." button toggles the action
+  // row for that note.
+  const [expandedNoteId, setExpandedNoteId] = useState<string | null>(null);
+  const [editingNoteId, setEditingNoteId] = useState<string | null>(null);
+  const [editText, setEditText] = useState('');
 
   // When the user transitions guest → signed-in mid-modal (via inline
   // email submit), flip back to compose so they see the textarea + Add
@@ -181,11 +189,11 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
           data-testid="chapter-notes-sheet"
           role="dialog"
           aria-label={`Notes for ${book} ${chapter}`}
-          className="pointer-events-auto w-full max-w-[480px] bg-dark-surface rounded-2xl border border-dark shadow-[0_10px_30px_rgba(0,0,0,0.5)] animate-fade-in flex flex-col"
+          className="pointer-events-auto w-full max-w-[480px] bg-background rounded-2xl border border-border shadow-[0_10px_30px_rgba(0,0,0,0.5)] animate-fade-in flex flex-col"
           style={{ maxHeight: '85vh' }}
         >
-          <header className="flex items-center justify-between px-4 pt-4 pb-3 border-b border-dark">
-            <h3 className="text-[16px] font-semibold text-dark-fg">
+          <header className="flex items-center justify-between px-4 pt-4 pb-3 border-b border-border">
+            <h3 className="text-[16px] font-semibold text-foreground">
               Notes for {book} {chapter}
             </h3>
             <button
@@ -194,40 +202,21 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
               data-testid="chapter-notes-sheet-close"
               className="w-9 h-9 flex items-center justify-center"
             >
-              <X size={18} className="text-dark-fg" />
+              <X size={18} className="text-foreground" />
             </button>
           </header>
 
           {view === 'compose' && (
-            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
-              {chapterNotes.length > 0 && (
-                <ul className="space-y-2" data-testid="chapter-notes-existing-list">
-                  {chapterNotes.map(n => (
-                    <li
-                      key={n.id}
-                      data-testid={`chapter-note-item-${n.id}`}
-                      className="rounded-2xl bg-dark-raised border border-dark px-4 py-3"
-                    >
-                      {n.verse > 0 && (
-                        <p className="text-[11px] uppercase tracking-wide text-dark-muted mb-1">
-                          Verse {n.verse}
-                        </p>
-                      )}
-                      <p className="text-[14px] text-dark-fg whitespace-pre-wrap">{n.text}</p>
-                    </li>
-                  ))}
-                </ul>
-              )}
-
+            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-6">
               <section>
-                <h4 className="text-[14px] font-semibold text-dark-fg mb-2">Add New Note</h4>
+                <h4 className="text-[14px] font-semibold text-foreground mb-2">Add New Note</h4>
                 <textarea
                   data-testid="chapter-notes-textarea"
                   value={text}
                   onChange={e => setText(e.target.value)}
                   placeholder="Write your note here..."
                   rows={4}
-                  className="w-full rounded-2xl bg-dark-raised border border-dark px-4 py-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
+                  className="w-full rounded-2xl bg-secondary border border-border px-4 py-3 text-[14px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
                 />
                 <div className="flex justify-end mt-3">
                   <button
@@ -241,12 +230,126 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                   </button>
                 </div>
               </section>
+
+              {chapterNotes.length > 0 && (
+                <section>
+                  <h4 className="text-[14px] font-semibold text-foreground mb-2">
+                    Recently Added Notes
+                  </h4>
+                  <ul className="space-y-2" data-testid="chapter-notes-existing-list">
+                    {chapterNotes.map(n => {
+                      const isExpanded = expandedNoteId === n.id;
+                      const isEditing = editingNoteId === n.id;
+                      return (
+                        <li
+                          key={n.id}
+                          data-testid={`chapter-note-item-${n.id}`}
+                          className="rounded-2xl bg-secondary border border-border px-4 py-3"
+                        >
+                          {n.verse > 0 && (
+                            <p className="text-[11px] uppercase tracking-wide text-muted-foreground mb-1">
+                              Verse {n.verse}
+                            </p>
+                          )}
+
+                          {isEditing ? (
+                            <div className="flex flex-col gap-2">
+                              <textarea
+                                data-testid={`chapter-note-edit-textarea-${n.id}`}
+                                value={editText}
+                                onChange={e => setEditText(e.target.value)}
+                                rows={3}
+                                className="w-full rounded-xl bg-background border border-border px-3 py-2 text-[14px] text-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] resize-none"
+                              />
+                              <div className="flex justify-end gap-2">
+                                <button
+                                  data-testid={`chapter-note-edit-cancel-${n.id}`}
+                                  onClick={() => {
+                                    setEditingNoteId(null);
+                                    setEditText('');
+                                  }}
+                                  className="px-3 h-9 rounded-lg bg-background border border-border text-foreground text-[12px]"
+                                >
+                                  Cancel
+                                </button>
+                                <button
+                                  data-testid={`chapter-note-edit-save-${n.id}`}
+                                  onClick={async () => {
+                                    const next = editText.trim();
+                                    if (!next || next === n.text) {
+                                      setEditingNoteId(null);
+                                      setEditText('');
+                                      return;
+                                    }
+                                    await updateNote(n.id, next);
+                                    setEditingNoteId(null);
+                                    setEditText('');
+                                  }}
+                                  disabled={editText.trim().length === 0}
+                                  className="px-3 h-9 rounded-lg bg-gold text-[#1A1A1A] text-[12px] font-medium disabled:opacity-40 inline-flex items-center gap-1"
+                                >
+                                  <Check size={14} /> Save
+                                </button>
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="flex items-start gap-2">
+                              <p className="text-[14px] text-foreground whitespace-pre-wrap flex-1 min-w-0">
+                                {n.text}
+                              </p>
+                              <button
+                                aria-label="Note options"
+                                data-testid={`chapter-note-options-${n.id}`}
+                                onClick={() =>
+                                  setExpandedNoteId(prev => (prev === n.id ? null : n.id))
+                                }
+                                className="shrink-0 w-8 h-8 -mr-1 -mt-1 flex items-center justify-center text-muted-foreground hover:text-foreground"
+                              >
+                                <MoreHorizontal size={18} strokeWidth={1.75} />
+                              </button>
+                            </div>
+                          )}
+
+                          {isExpanded && !isEditing && (
+                            <div
+                              data-testid={`chapter-note-actions-${n.id}`}
+                              className="mt-3 pt-3 border-t border-border flex justify-end gap-2"
+                            >
+                              <button
+                                data-testid={`chapter-note-edit-${n.id}`}
+                                onClick={() => {
+                                  setEditingNoteId(n.id);
+                                  setEditText(n.text);
+                                  setExpandedNoteId(null);
+                                }}
+                                className="px-3 h-9 rounded-lg bg-background border border-border text-foreground text-[12px] inline-flex items-center gap-1"
+                              >
+                                <Pencil size={14} /> Edit
+                              </button>
+                              <button
+                                data-testid={`chapter-note-delete-${n.id}`}
+                                onClick={async () => {
+                                  setExpandedNoteId(null);
+                                  await removeNote(n.id);
+                                }}
+                                className="px-3 h-9 rounded-lg bg-[#2a1617] border border-[#4d1f22] text-red-400 text-[12px] inline-flex items-center gap-1"
+                              >
+                                <Trash2 size={14} /> Delete
+                              </button>
+                            </div>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </section>
+              )}
             </div>
           )}
 
           {(view === 'signin-providers' || view === 'signin-email') && (
             <div data-testid="chapter-notes-signin-cta" className="px-5 py-6 flex flex-col">
-              <p className="text-[14px] text-dark-fg/80 mb-5 text-center leading-snug">
+              <p className="text-[14px] text-foreground/80 mb-5 text-center leading-snug">
                 Sign in to save your note — we'll bring you right back.
               </p>
 
@@ -279,14 +382,14 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
 
                   <div className="flex items-center gap-3 py-1">
                     <div className="flex-1 h-px bg-dark" />
-                    <span className="text-[11px] text-dark-muted/70">or</span>
+                    <span className="text-[11px] text-muted-foreground/70">or</span>
                     <div className="flex-1 h-px bg-dark" />
                   </div>
 
                   <button
                     data-testid="login-email-button"
                     onClick={() => setView('signin-email')}
-                    className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] bg-dark-raised border border-dark text-dark-fg"
+                    className="flex items-center justify-center gap-3 w-full h-12 rounded-xl font-medium text-[14px] bg-secondary border border-border text-foreground"
                   >
                     <Mail size={18} />
                     Continue with Email
@@ -295,7 +398,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                   <button
                     onClick={() => setView('compose')}
                     data-testid="chapter-notes-signin-cancel"
-                    className="w-full mt-2 text-[12px] text-dark-muted"
+                    className="w-full mt-2 text-[12px] text-muted-foreground"
                   >
                     Back to note
                   </button>
@@ -309,7 +412,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                     }}
                     aria-label="Back to providers"
                     data-testid="chapter-notes-signin-email-back"
-                    className="self-start flex items-center gap-1 text-[12px] text-dark-muted"
+                    className="self-start flex items-center gap-1 text-[12px] text-muted-foreground"
                   >
                     <ArrowLeft size={14} /> Back
                   </button>
@@ -320,7 +423,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                     placeholder="Email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
-                    className="w-full h-11 rounded-xl bg-dark-raised border border-dark px-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
+                    className="w-full h-11 rounded-xl bg-secondary border border-border px-3 text-[14px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
                   />
                   <input
                     data-testid="login-password"
@@ -329,7 +432,7 @@ export default function ChapterNotesSheet({ book, bookId, chapter, onClose }: Pr
                     placeholder="Password"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
-                    className="w-full h-11 rounded-xl bg-dark-raised border border-dark px-3 text-[14px] text-dark-fg placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
+                    className="w-full h-11 rounded-xl bg-secondary border border-border px-3 text-[14px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))]"
                   />
                   {authError && (
                     <p data-testid="login-error" className="text-[12px] text-red-400 text-center">

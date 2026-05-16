@@ -117,6 +117,51 @@ export interface TopicEvent {
   references: string[];
 }
 
+/**
+ * One verse inside a topic section. Mirrors verse-mate (old FE)'s
+ * ParsedTopicVerse — `verseNumber` is the source-book verse number,
+ * `text` is the verse body without the trailing "(Book Ch:Verse)"
+ * citation, and `reference` is that citation (may be empty if the
+ * source markdown omitted it).
+ */
+export interface TopicVerse {
+  verseNumber: string;
+  text: string;
+  reference: string;
+}
+
+/**
+ * One subtitle section of a topic — produced by parsing the markdown
+ * the backend returns at GET /topics/:id/references. Mirrors the
+ * verse-mate (old FE) parser plus the per-section reference list we
+ * surface as clickable pills.
+ */
+export interface TopicSection {
+  id: string;
+  topicId: string;
+  subtitle: string;
+  /** Raw reference list ("(Genesis 11:1-9)" or "Genesis 11:1-9"). */
+  referenceList: string;
+  /** Same references parsed into individual "Book Ch:Verse" strings. */
+  references: string[];
+  verses: TopicVerse[];
+}
+
+/**
+ * GET /topics/:id?bible_version=… response — the topic record itself,
+ * its references markdown, and the three AI explanation variants used
+ * by the Summary / By-Line / Detailed tabs on TopicEventsScreen.
+ */
+export interface TopicDetails {
+  topic: Topic | null;
+  sections: TopicSection[];
+  explanation: {
+    summary: string;
+    byline: string;
+    detailed: string;
+  };
+}
+
 export interface MostQuotedVerse {
   reference: string;
   book: string;

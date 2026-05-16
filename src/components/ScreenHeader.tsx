@@ -2,6 +2,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { ReactNode } from 'react';
 import { useRightPanel } from '@/contexts/RightPanelContext';
+import { vmTokens } from '@/styles/themeStyles';
 
 interface ScreenHeaderProps {
   title: string;
@@ -20,8 +21,16 @@ interface ScreenHeaderProps {
 }
 
 /**
- * ScreenHeader — sub-page header with BLACK bg (#000) and white text.
- * Production: background-color var(--night) = #000.
+ * ScreenHeader — sub-page header.
+ *
+ * Mobile (full-screen): dark 56px bar with back chevron + centered title
+ * (the prototype's `.sub-screen-header`).
+ * Desktop (right-panel context): hide the dark bar entirely — the main
+ * .app-header above the split-body already carries the navigation chrome,
+ * so a second dark bar inside the right panel would stack two dark
+ * headers vertically. Instead render a quiet white title row with the
+ * back chevron + centered title so the panel is self-navigable but
+ * doesn't introduce a second slab of black.
  */
 export default function ScreenHeader({ title, onBack, rightAction, backTestId, titleTestId }: ScreenHeaderProps) {
   const navigate = useNavigate();
@@ -31,47 +40,37 @@ export default function ScreenHeader({ title, onBack, rightAction, backTestId, t
 
   const isInRightPanel = !!rightPanel?.isRightPanel;
 
+  if (isInRightPanel) {
+    // Inside the desktop right-panel the title is hoisted into the main
+    // .app-header (dark top banner) — see DesktopLayout. ScreenHeader
+    // therefore renders nothing here so the sub-screen body starts
+    // flush at the top of the right pane. The back action still fires
+    // via the RightPanelContext.goBack handler.
+    return null;
+  }
+
   return (
     <header
-      className="shrink-0 safe-top"
-      style={{
-        backgroundColor: '#1A1A1A',
-        paddingTop: isInRightPanel ? 0 : 'max(env(safe-area-inset-top), 48px)',
-        borderBottom: '1px solid #323232',
-      }}
+      className="sub-screen-header safe-top"
+      style={{ paddingTop: 'max(env(safe-area-inset-top), 0px)' }}
     >
-      <div className="relative flex items-center justify-center px-3" style={{ height: isInRightPanel ? 48 : 56 }}>
-        <button
-          onClick={handleBack}
-          aria-label="Back"
-          data-testid={backTestId || 'screen-header-back-button'}
-          style={{
-            background: 'none',
-            border: 'none',
-            padding: '8px',
-            marginRight: '12px',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            position: 'absolute',
-            left: '8px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '44px',
-            height: '44px',
-          }}
-        >
-          <ArrowLeft size={24} color="#fff" strokeWidth={2} />
-        </button>
-        <h1
-          data-testid={titleTestId || 'screen-header-title'}
-          style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 18, lineHeight: '24px', color: '#FFFFFF', letterSpacing: '-0.01em' }}
-        >
-          {title}
-        </h1>
-        {rightAction && (
-          <div className="absolute right-2 flex items-center">{rightAction}</div>
-        )}
+      <button
+        className="icon-btn"
+        onClick={handleBack}
+        aria-label="Back"
+        data-testid={backTestId || 'screen-header-back-button'}
+      >
+        <ArrowLeft size={22} color={vmTokens.headerFg} strokeWidth={2} />
+      </button>
+      <h1
+        className="sub-screen-title"
+        data-testid={titleTestId || 'screen-header-title'}
+        style={{ flex: 1, textAlign: 'center' }}
+      >
+        {title}
+      </h1>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {rightAction}
       </div>
     </header>
   );

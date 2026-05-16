@@ -1,6 +1,35 @@
 <!doctype html>
-<html lang="en" class="dark">
+<!-- The `dark` class is applied dynamically by the AppContext theme effect
+     (src/contexts/AppContext.tsx) based on the user's Settings → Theme
+     selection (Auto / Light / Dark). We pre-apply it inline below so the
+     first paint matches the stored preference and avoids a light flash on
+     hard refresh for users who chose Dark or System-while-dark. -->
+<html lang="en">
   <head>
+    <script>
+      // Inline pre-paint theme bootstrap. Mirrors the logic in
+      // AppContext's theme useEffect so the html class is correct before
+      // React mounts.
+      (function () {
+        try {
+          var raw = localStorage.getItem('versemate-settings');
+          var pref = 'dark';
+          if (raw) {
+            var parsed = JSON.parse(raw);
+            if (parsed && (parsed.theme === 'light' || parsed.theme === 'dark' || parsed.theme === 'system')) {
+              pref = parsed.theme;
+            }
+          }
+          var isDark =
+            pref === 'dark' ||
+            (pref === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) document.documentElement.classList.add('dark');
+        } catch (_) {
+          // On any failure, fall through to default-dark to match prior behavior.
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>VerseMate — Bible Reading Companion</title>

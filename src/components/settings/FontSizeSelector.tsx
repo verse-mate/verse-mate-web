@@ -9,6 +9,7 @@
 
 import { Minus, Plus } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
+import { vmTokens } from '@/styles/themeStyles';
 
 const MIN_FONT_SIZE = 13;
 const MAX_FONT_SIZE = 26;
@@ -22,14 +23,14 @@ const sectionStyle: React.CSSProperties = {
 const sectionTitleStyle: React.CSSProperties = {
   fontSize: 20,
   fontWeight: 600,
-  color: '#E7E7E7',
+  color: vmTokens.textPrimary,
   marginBottom: 16,
   fontFamily: 'Roboto, sans-serif',
 };
 
 const containerStyle: React.CSSProperties = {
-  backgroundColor: '#323232',
-  border: '1px solid #3a3a3a',
+  backgroundColor: vmTokens.surfaceRaisedBg,
+  border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
   borderRadius: 8,
   padding: 20,
 };
@@ -44,12 +45,12 @@ const headerRowStyle: React.CSSProperties = {
 const labelStyle: React.CSSProperties = {
   fontSize: 14,
   fontWeight: 500,
-  color: '#E7E7E7',
+  color: vmTokens.textPrimary,
 };
 
 const valueTextStyle: React.CSSProperties = {
   fontSize: 12,
-  color: 'rgba(255,255,255,0.6)',
+  color: vmTokens.textTertiary,
 };
 
 const controlRowStyle: React.CSSProperties = {
@@ -62,7 +63,7 @@ const baseButtonStyle: React.CSSProperties = {
   width: 36,
   height: 36,
   borderRadius: 18,
-  background: '#3a3a3a',
+  background: vmTokens.surfaceRaisedBorder,
   border: 'none',
   display: 'flex',
   alignItems: 'center',
@@ -86,7 +87,7 @@ const rangeLabelsStyle: React.CSSProperties = {
 
 const rangeTextStyle: React.CSSProperties = {
   fontSize: 11,
-  color: 'rgba(231,231,231,0.5)',
+  color: vmTokens.textMuted,
 };
 
 export function FontSizeSelector() {
@@ -121,7 +122,7 @@ export function FontSizeSelector() {
             data-testid="font-size-decrease"
             style={{ ...baseButtonStyle, opacity: atMin ? 0.4 : 1, cursor: atMin ? 'default' : 'pointer' }}
           >
-            <Minus size={20} color={atMin ? 'rgba(231,231,231,0.4)' : '#E7E7E7'} />
+            <Minus size={20} color={atMin ? vmTokens.textMuted : vmTokens.textPrimary} />
           </button>
 
           <div style={trackContainerStyle}>
@@ -149,7 +150,7 @@ export function FontSizeSelector() {
             data-testid="font-size-increase"
             style={{ ...baseButtonStyle, opacity: atMax ? 0.4 : 1, cursor: atMax ? 'default' : 'pointer' }}
           >
-            <Plus size={20} color={atMax ? 'rgba(231,231,231,0.4)' : '#E7E7E7'} />
+            <Plus size={20} color={atMax ? vmTokens.textMuted : vmTokens.textPrimary} />
           </button>
         </div>
 

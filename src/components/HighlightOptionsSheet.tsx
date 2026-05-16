@@ -45,16 +45,16 @@ export default function HighlightOptionsSheet({ highlight, onClose }: Props) {
     <>
       <div className="absolute inset-0 z-40 bg-black/60" onClick={onClose} />
       <div
-        className="absolute inset-x-0 bottom-0 z-50 bg-dark-surface rounded-t-[24px] border-t border-dark safe-bottom animate-slide-up"
+        className="absolute inset-x-0 bottom-0 z-50 bg-background rounded-t-[24px] border-t border-border safe-bottom animate-slide-up"
         role="dialog"
       >
         {/* Drag handle */}
         <div className="flex justify-center pt-3">
-          <div className="w-10 h-1 rounded-full bg-dark-muted/40" />
+          <div className="w-10 h-1 rounded-full bg-muted-foreground/40" />
         </div>
 
         {/* Title */}
-        <h3 className="text-center text-[16px] font-semibold text-dark-fg mt-4 mb-4">
+        <h3 className="text-center text-[16px] font-semibold text-foreground mt-4 mb-4">
           Highlight Options
         </h3>
 
@@ -62,14 +62,14 @@ export default function HighlightOptionsSheet({ highlight, onClose }: Props) {
         <div className="grid grid-cols-3 gap-2 px-4 sm:gap-3 sm:px-5">
           <button
             onClick={handleCopy}
-            className="h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 bg-dark-raised border-dark text-dark-fg"
+            className="h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 bg-secondary border-border text-foreground"
           >
             <Copy size={20} strokeWidth={1.5} />
             <span className="text-[13px] font-normal">Copy</span>
           </button>
           <button
             onClick={handleShare}
-            className="h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 bg-dark-raised border-dark text-dark-fg"
+            className="h-[88px] rounded-2xl border flex flex-col items-center justify-center gap-1.5 bg-secondary border-border text-foreground"
           >
             <ShareIcon size={20} color="currentColor" />
             <span className="text-[13px] font-normal">Share</span>
@@ -87,7 +87,7 @@ export default function HighlightOptionsSheet({ highlight, onClose }: Props) {
         <div className="px-5 pt-5 pb-6">
           <button
             onClick={onClose}
-            className="w-full h-12 rounded-xl bg-dark-raised border border-dark text-dark-fg text-[14px] font-medium"
+            className="w-full h-12 rounded-xl bg-secondary border border-border text-foreground text-[14px] font-medium"
           >
             Cancel
           </button>

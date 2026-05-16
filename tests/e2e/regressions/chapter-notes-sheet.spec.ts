@@ -209,4 +209,77 @@ test.describe('Bible — chapter-notes sheet (#130) — signed in', () => {
     await expect(page.getByTestId('notes-list')).toBeVisible({ timeout: 10_000 });
     await expect(page.getByTestId('chapter-group-1-1')).toBeVisible({ timeout: 10_000 });
   });
+
+  test('Recently Added Notes — toggling options reveals Edit + Delete', async ({ page }) => {
+    const reader = new ReaderPage(page);
+    await reader.goto('genesis', 1);
+
+    // Save a note first so we have a row to act on.
+    await reader.tap(page.getByTestId('chapter-notes-button-1-1'));
+    const seed = `e2e-row-${Date.now()}`;
+    await page.getByTestId('chapter-notes-textarea').fill(seed);
+    await page.getByTestId('chapter-notes-add-button').click();
+    await expect(page.getByTestId('chapter-notes-sheet')).not.toBeVisible({ timeout: 10_000 });
+
+    // Re-open the modal; the new note should appear under "Recently Added Notes".
+    await reader.tap(page.getByTestId('chapter-notes-button-1-1'));
+    await expect(page.getByText(/recently added notes/i)).toBeVisible({ timeout: 10_000 });
+    const noteRow = page.locator('[data-testid^="chapter-note-item-"]').filter({ hasText: seed });
+    await expect(noteRow).toBeVisible({ timeout: 10_000 });
+
+    // Click the ... options on that row.
+    await noteRow.locator('[data-testid^="chapter-note-options-"]').click();
+
+    // Edit and Delete buttons appear inline.
+    await expect(noteRow.locator('[data-testid^="chapter-note-edit-"]').first()).toBeVisible();
+    await expect(noteRow.locator('[data-testid^="chapter-note-delete-"]')).toBeVisible();
+  });
+
+  test('Recently Added Notes — Edit swaps to inline textarea and persists', async ({ page }) => {
+    const reader = new ReaderPage(page);
+    await reader.goto('genesis', 1);
+
+    // Seed a note.
+    await reader.tap(page.getByTestId('chapter-notes-button-1-1'));
+    const original = `e2e-edit-${Date.now()}`;
+    await page.getByTestId('chapter-notes-textarea').fill(original);
+    await page.getByTestId('chapter-notes-add-button').click();
+    await expect(page.getByTestId('chapter-notes-sheet')).not.toBeVisible({ timeout: 10_000 });
+
+    // Re-open + enter edit mode.
+    await reader.tap(page.getByTestId('chapter-notes-button-1-1'));
+    const row = page.locator('[data-testid^="chapter-note-item-"]').filter({ hasText: original });
+    await row.locator('[data-testid^="chapter-note-options-"]').click();
+    await row.locator('[data-testid^="chapter-note-edit-"]').first().click();
+
+    const editBox = row.locator('[data-testid^="chapter-note-edit-textarea-"]');
+    await expect(editBox).toBeVisible();
+    const updated = `${original}-updated`;
+    await editBox.fill(updated);
+    await row.locator('[data-testid^="chapter-note-edit-save-"]').click();
+
+    await expect(row).toContainText(updated, { timeout: 10_000 });
+    await expect(editBox).toHaveCount(0); // back to display mode
+  });
+
+  test('Recently Added Notes — Delete removes the note from the list', async ({ page }) => {
+    const reader = new ReaderPage(page);
+    await reader.goto('genesis', 1);
+
+    // Seed a note.
+    await reader.tap(page.getByTestId('chapter-notes-button-1-1'));
+    const subject = `e2e-delete-${Date.now()}`;
+    await page.getByTestId('chapter-notes-textarea').fill(subject);
+    await page.getByTestId('chapter-notes-add-button').click();
+    await expect(page.getByTestId('chapter-notes-sheet')).not.toBeVisible({ timeout: 10_000 });
+
+    // Re-open and delete.
+    await reader.tap(page.getByTestId('chapter-notes-button-1-1'));
+    const row = page.locator('[data-testid^="chapter-note-item-"]').filter({ hasText: subject });
+    await expect(row).toBeVisible({ timeout: 10_000 });
+    await row.locator('[data-testid^="chapter-note-options-"]').click();
+    await row.locator('[data-testid^="chapter-note-delete-"]').click();
+
+    await expect(row).toHaveCount(0, { timeout: 10_000 });
+  });
 });

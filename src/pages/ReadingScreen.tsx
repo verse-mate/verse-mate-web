@@ -19,6 +19,11 @@ import TokenizedVerse from '@/components/TokenizedVerse';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
 import { loadAlignmentFor, type ChapterAlignment } from '@/data/lexicon';
+import { vmTokens } from '@/styles/themeStyles';
+
+// Style primitives come from @/styles/themeStyles so colors flip with the
+// active theme. Hex values that are intentionally constant across themes
+// (gold accent, header chrome) reference vmTokens.* instead.
 
 export default function ReadingScreen() {
   const { state, dispatch, addBookmark, removeBookmark } = useApp();
@@ -229,25 +234,30 @@ export default function ReadingScreen() {
   }, [state.bookId, state.chapter]);
 
   return (
-    <div className="flex flex-col h-full relative" style={{ backgroundColor: '#1B1B1B' }}>
-      {/* ─── DARK HEADER (#1A1A1A) with TEXT pill tabs — hidden on desktop (DesktopLayout renders shared header) ─── */}
-      <header className="reading-screen-header shrink-0 safe-top" style={{ backgroundColor: '#1A1A1A', paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}>
+    // No `position: relative` on the outer div — prototype's .progress-bar
+    // is `position: absolute; left:0; right:0` and must bubble up to
+    // .split-body so it spans BOTH the reading + commentary panels (not just
+    // the reading panel). Mobile header is hidden at ≥768px so no overlap
+    // issue from that.
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.headerBg }}>
+      {/* ─── DARK HEADER with TEXT pill tabs — hidden on desktop (DesktopLayout renders shared header) ─── */}
+      <header className="reading-screen-header shrink-0 safe-top" style={{ backgroundColor: vmTokens.headerBg, paddingTop: 'max(env(safe-area-inset-top, 0px), 24px)' }}>
         <div className="flex items-center justify-between px-4" style={{ height: 56 }}>
           {/* Left: Book + chapter dropdown */}
           <button
             onClick={() => setShowBookSelector(true)}
             data-testid="chapter-selector-button"
             className="flex items-center gap-1.5 min-h-[44px] pr-2 -ml-1"
-            style={{ color: '#FFFFFF' }}
+            style={{ color: vmTokens.headerFg }}
           >
-            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: '#FFFFFF' }}>{state.book} {state.chapter}</span>
-            <ChevronDown size={18} style={{ color: '#FFFFFF' }} strokeWidth={2} />
+            <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '24px', color: vmTokens.headerFg }}>{state.book} {state.chapter}</span>
+            <ChevronDown size={18} style={{ color: vmTokens.headerFg }} strokeWidth={2} />
           </button>
 
           {/* Right: TEXT pill tabs (Bible/Insight) + Menu */}
           <div className="flex items-center gap-2">
             {/* Pill container */}
-            <div style={{ display: 'flex', backgroundColor: '#323232', borderRadius: 100, padding: '3px' }}>
+            <div style={{ display: 'flex', backgroundColor: vmTokens.pillBg, borderRadius: 100, padding: '3px' }}>
               {/* Bible pill — active (gold) */}
               <button
                 aria-label="Bible"
@@ -259,8 +269,8 @@ export default function ReadingScreen() {
                   lineHeight: '24px',
                   padding: '2px 12px',
                   borderRadius: 100,
-                  backgroundColor: '#B09A6D',
-                  color: '#000000',
+                  backgroundColor: vmTokens.gold,
+                  color: vmTokens.goldOnLight,
                   border: 'none',
                   cursor: 'pointer',
                 }}
@@ -286,7 +296,7 @@ export default function ReadingScreen() {
                   padding: '2px 12px',
                   borderRadius: 100,
                   backgroundColor: 'transparent',
-                  color: '#FFFFFF',
+                  color: vmTokens.headerFg,
                   border: 'none',
                   cursor: 'pointer',
                 }}
@@ -300,34 +310,28 @@ export default function ReadingScreen() {
               data-testid="hamburger-menu-button"
               className="flex items-center justify-center w-[44px] h-[44px] -mr-2"
             >
-              <Menu size={22} style={{ color: '#FFFFFF' }} strokeWidth={2} />
+              <Menu size={22} style={{ color: vmTokens.headerFg }} strokeWidth={2} />
             </button>
           </div>
         </div>
       </header>
 
-      {/* ─── BLACK BODY (#000000) — scripture ─── */}
+      {/* Prototype .reading-body + .reading-inner wrap the scripture column.
+          .chapter-meta holds the h1 + icon buttons. .font-scripture is the
+          verse body. All layout / colors come from prototype.css. */}
       <div
         ref={scrollRef}
         onTouchStart={handleBodyTouchStart}
         onTouchEnd={handleBodyTouchEnd}
         data-testid="chapter-pager-view"
-        className="flex-1 overflow-y-auto relative"
-        style={{ backgroundColor: '#000000' }}
+        className="reading-body"
       >
-        <div
-          className="px-4 md:px-12 lg:px-16 pt-5 pb-[48px]"
-          style={{ maxWidth: 'min(100%, 800px)', margin: '0 auto' }}
-        >
-        {/* Chapter header block */}
-        <div className="flex items-start justify-between mb-3">
-          <h1
-            data-testid="chapter-header"
-            style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 24, lineHeight: '32px', color: '#E7E7E7' }}
-          >
+        <div className="reading-inner">
+        <div className="chapter-meta">
+          <h1 className="chapter-title" data-testid="chapter-header">
             {state.book} {state.chapter}
           </h1>
-          <div className="flex items-center gap-2 mt-1.5 -mr-2">
+          <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginTop: 6 }}>
             {(() => {
               const chapterBookmark = state.bookmarks.find(
                 b =>
@@ -338,6 +342,7 @@ export default function ReadingScreen() {
               const isBookmarked = !!chapterBookmark;
               return (
                 <button
+                  className="icon-btn"
                   aria-label={isBookmarked ? 'Remove bookmark' : 'Bookmark chapter'}
                   data-testid={`bookmark-toggle-${state.bookId}-${state.chapter}`}
                   onClick={() => {
@@ -352,37 +357,28 @@ export default function ReadingScreen() {
                       });
                     }
                   }}
-                  className="w-11 h-11 flex items-center justify-center rounded-full"
-                  style={{ WebkitTapHighlightColor: 'rgba(176,154,109,0.3)' }}
                 >
                   <Bookmark
-                    size={22}
-                    style={isBookmarked ? { color: '#B09A6D', fill: '#B09A6D' } : { color: '#E7E7E7' }}
+                    size={18}
+                    style={isBookmarked ? { color: vmTokens.textPrimary, fill: vmTokens.textPrimary } : { color: vmTokens.textPrimary }}
                     strokeWidth={1.75}
                   />
                 </button>
               );
             })()}
             <button
+              className="icon-btn"
               aria-label="Notes for this chapter"
               data-testid={`chapter-notes-button-${state.bookId}-${state.chapter}`}
               onClick={() => setShowNotesSheet(true)}
-              className="w-11 h-11 flex items-center justify-center rounded-full"
-              style={{ WebkitTapHighlightColor: 'rgba(176,154,109,0.3)' }}
             >
-              <FileText size={22} style={{ color: '#E7E7E7' }} strokeWidth={1.75} />
+              <FileText size={18} style={{ color: vmTokens.textPrimary }} strokeWidth={1.75} />
             </button>
           </div>
         </div>
 
-        {/* Verses grouped by API subtitles */}
-        <div
-          className="font-scripture"
-          style={{
-            fontSize: `${state.settings.fontSize}px`,
-            color: '#FFFFFF',
-          }}
-        >
+        {/* Verses grouped by API subtitles — prototype .font-scripture */}
+        <div className="font-scripture" style={{ fontSize: `${state.settings.fontSize}px` }}>
           {(() => {
             const verses = chapter?.verses || [];
             const groups: Array<{ title: string | null; range: string; items: typeof verses }> = [];
@@ -407,15 +403,11 @@ export default function ReadingScreen() {
             }
 
             return groups.map((group, gi) => (
-              <div key={gi} className={gi > 0 ? 'mt-5' : ''}>
+              <div key={gi} style={{ marginTop: gi > 0 ? 8 : 0 }}>
                 {group.title && (
                   <>
-                    <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 20, lineHeight: '28px', color: '#E7E7E7', marginBottom: 4 }}>
-                      {group.title}
-                    </h2>
-                    <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: '20px', color: 'rgba(255,255,255,0.6)', marginBottom: 12 }}>
-                      {group.range}
-                    </p>
+                    <h2 className="section-subtitle">{group.title}</h2>
+                    <p className="section-range">{group.range}</p>
                   </>
                 )}
                 <div>
@@ -437,30 +429,21 @@ export default function ReadingScreen() {
                           onMouseLeave: () => { if (pressTimer) { clearTimeout(pressTimer); setPressTimer(null); } },
                         } : {
                           onClick: () => {
-                            // On desktop, open verse insight only if no text is selected
                             const sel = window.getSelection();
                             if (!sel || sel.isCollapsed || !sel.toString().trim()) {
                               openVerseInsight(verse.number);
                             }
                           },
                         })}
-                        className={`inline transition-colors ${isDesktop ? 'select-text cursor-text' : 'cursor-pointer select-none'} ${
-                          hl ? highlightColorClass[hl.color] : ''
-                        } ${autoClass ? `${autoClass} rounded px-0.5` : ''} ${
-                          isSelected ? 'ring-2 ring-accent ring-offset-1 rounded' : ''
-                        }`}
+                        className={`verse-span ${hl ? highlightColorClass[hl.color] : ''} ${autoClass || ''} ${isSelected ? 'selected' : ''}`}
                         style={!isDesktop ? {
-                          // Suppress iOS long-press text selection + the iOS
-                          // copy/look-up callout that competes with the
-                          // app's long-press → VerseActions handler. On
-                          // desktop the SelectionToolbar still relies on
-                          // text selection, so leave it enabled there.
+                          // Suppress iOS long-press text selection callout
                           WebkitUserSelect: 'none',
                           WebkitTouchCallout: 'none',
                         } : undefined}
                       >
                         {state.settings.showVerseNumbers !== false && (
-                          <sup className="text-verse-number text-[12px] mr-[2px] select-none align-super">
+                          <sup className="text-verse-number" style={{ fontSize: '12px', marginRight: 2, userSelect: 'none', verticalAlign: 'super' }}>
                             {verse.number}
                           </sup>
                         )}
@@ -481,7 +464,33 @@ export default function ReadingScreen() {
             ));
           })()}
         </div>
-        </div>{/* end inner max-width wrapper */}
+        </div>{/* end .reading-inner */}
+
+        {/* Chapter nav buttons — INSIDE .reading-body so their absolute
+            positioning resolves to .reading-body (the prototype's relative
+            ancestor), not .split-body. Without this they bubble all the
+            way up to .split-body and end up positioned across BOTH panes
+            instead of within the reading column. */}
+        {state.chapter > 1 && (
+          <button
+            onClick={() => goToChapter(-1)}
+            aria-label="Previous chapter"
+            data-testid="previous-chapter-button"
+            className="chapter-nav-btn chapter-nav-prev"
+          >
+            <ChevronLeft size={20} color={vmTokens.textPrimary} strokeWidth={2.25} />
+          </button>
+        )}
+        {state.chapter < maxChapter && (
+          <button
+            onClick={() => goToChapter(1)}
+            aria-label="Next chapter"
+            data-testid="next-chapter-button"
+            className="chapter-nav-btn chapter-nav-next"
+          >
+            <ChevronRight size={20} color={vmTokens.textPrimary} strokeWidth={2.25} />
+          </button>
+        )}
 
         {/* Desktop: floating toolbar on text selection */}
         {isDesktop && (
@@ -489,85 +498,22 @@ export default function ReadingScreen() {
         )}
       </div>
 
-      {/* ─── FLOATING CHAPTER NAV — vertically centered on desktop, bottom: 45px on mobile ─── */}
-      {state.chapter > 1 && (
-        <button
-          onClick={() => goToChapter(-1)}
-          aria-label="Previous chapter"
-          data-testid="previous-chapter-button"
-          className="chapter-nav-btn chapter-nav-prev"
-          style={{ position: 'absolute', width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
-        >
-          <ChevronLeft size={20} color="#fff" strokeWidth={2.5} />
-        </button>
-      )}
-      {state.chapter < maxChapter && (
-        <button
-          onClick={() => goToChapter(1)}
-          aria-label="Next chapter"
-          data-testid="next-chapter-button"
-          className="chapter-nav-btn chapter-nav-next"
-          style={{ position: 'absolute', width: 40, height: 40, borderRadius: '50%', background: '#323232', border: '1px solid #323232', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.4)', zIndex: 20, cursor: 'pointer' }}
-        >
-          <ChevronRight size={20} color="#fff" strokeWidth={2.5} />
-        </button>
-      )}
-
-      {/* ─── GOLD PROGRESS BAR — dark bg (#000), dark track (#1E1E1E), gold fill ─── */}
-      <div
-        data-testid="progress-bar"
-        style={{
-          height: 32,
-          display: 'flex',
-          alignItems: 'center',
-          gap: 16,
-          backgroundColor: '#000000',
-          borderTop: '1px solid #323232',
-          padding: '0 24px',
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          flexShrink: 0,
-        }}
-      >
+      {/* Progress bar — prototype .progress-bar / .progress-track /
+          .progress-fill / .progress-pct. Bottom-anchored. */}
+      <div className="progress-bar" data-testid="progress-bar">
         {(() => {
           const bookProgress =
             maxChapter > 0 ? Math.round((state.chapter / maxChapter) * 100) : 0;
           return (
             <>
-              <div
-                style={{
-                  flex: 1,
-                  height: 6,
-                  backgroundColor: '#1E1E1E',
-                  borderRadius: 10,
-                  position: 'relative',
-                  overflow: 'hidden',
-                }}
-              >
+              <div className="progress-track">
                 <div
                   data-testid="progress-bar-fill"
-                  style={{
-                    height: '100%',
-                    backgroundColor: '#B09A6D',
-                    borderRadius: 10,
-                    width: `${Math.max(2, bookProgress)}%`,
-                    transition: 'width 0.3s ease',
-                  }}
+                  className="progress-fill"
+                  style={{ width: `${Math.max(2, bookProgress)}%` }}
                 />
               </div>
-              <span
-                data-testid="progress-bar-percentage"
-                style={{
-                  fontFamily: 'Roboto, sans-serif',
-                  fontWeight: 500,
-                  fontSize: 14,
-                  lineHeight: '16px',
-                  color: '#B09A6D',
-                  whiteSpace: 'nowrap',
-                } as React.CSSProperties}
-              >
+              <span data-testid="progress-bar-percentage" className="progress-pct">
                 {bookProgress}%
               </span>
             </>

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Highlighter, ChevronRight } from 'lucide-react';
 import ScreenHeader from '@/components/ScreenHeader';
 import { api } from '@/services/api';
+import { vmTokens } from '@/styles/themeStyles';
 
 interface HighlightTheme {
   theme_id: number;
@@ -69,6 +70,7 @@ export default function HighlightsScreen() {
   };
 
   const toggleTheme = async (themeId: number) => {
+    if (!state.isSignedIn) return;
     const next = new Set(enabledThemes);
     const newState = !next.has(themeId);
     if (newState) next.add(themeId);
@@ -82,6 +84,7 @@ export default function HighlightsScreen() {
   };
 
   const toggleAllThemes = async (enable: boolean) => {
+    if (!state.isSignedIn) return;
     const next = enable ? new Set(themes.map(t => t.theme_id)) : new Set<number>();
     setEnabledThemes(next);
     for (const t of themes) {
@@ -112,16 +115,16 @@ export default function HighlightsScreen() {
     flexDirection: 'column',
     gap: 12,
     padding: '12px 8px',
-    borderTop: '1px solid #323232',
-    backgroundColor: '#000000',
+    borderTop: `1px solid ${vmTokens.divider}`,
+    backgroundColor: vmTokens.commentaryBg,
     scrollbarWidth: 'none',
   };
 
   const chapterGroupStyle: React.CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#323232',
-    border: '1px solid #323232',
+    backgroundColor: vmTokens.surfaceRaisedBg,
+    border: `1px solid ${vmTokens.divider}`,
     borderRadius: 10,
     overflow: 'hidden',
     cursor: 'pointer',
@@ -129,20 +132,20 @@ export default function HighlightsScreen() {
   };
 
   const themeCardStyle: React.CSSProperties = {
-    backgroundColor: '#323232',
-    border: '1px solid #323232',
+    backgroundColor: vmTokens.surfaceRaisedBg,
+    border: `1px solid ${vmTokens.divider}`,
     borderRadius: 10,
     padding: '12px 16px',
   };
 
   return (
-    <div className="flex flex-col h-full" style={{ backgroundColor: '#1B1B1B' }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.commentaryBg }}>
       <ScreenHeader title="Highlights" onBack={() => navigate('/menu')} backTestId="highlights-back-button" />
 
       <div data-testid="highlights-list" style={listStyle}>
         {groupedHighlights.length === 0 ? (
-          <div data-testid="highlights-empty-state" style={{ padding: '32px 16px', textAlign: 'center', color: 'rgba(255,255,255,0.6)', fontStyle: 'italic', fontSize: 14 }}>
-            <Highlighter size={36} style={{ margin: '0 auto 8px', color: 'rgba(255,255,255,0.6)' }} strokeWidth={1.5} />
+          <div data-testid="highlights-empty-state" style={{ padding: '32px 16px', textAlign: 'center', color: vmTokens.textTertiary, fontStyle: 'italic', fontSize: 14 }}>
+            <Highlighter size={36} style={{ margin: '0 auto 8px', color: vmTokens.textTertiary }} strokeWidth={1.5} />
             <p style={{ fontSize: 13 }}>No highlights yet</p>
           </div>
         ) : (
@@ -164,14 +167,14 @@ export default function HighlightsScreen() {
                   textAlign: 'left',
                 } as React.CSSProperties}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 600, color: '#E7E7E7', fontSize: 15 }}>
-                  <Highlighter size={18} style={{ color: '#E7E7E7' }} strokeWidth={1.75} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 600, color: vmTokens.textPrimary, fontSize: 15 }}>
+                  <Highlighter size={18} style={{ color: vmTokens.textPrimary }} strokeWidth={1.75} />
                   {g.book} {g.chapter}
-                  <span style={{ backgroundColor: '#1B1B1B', color: 'rgba(255,255,255,0.6)', fontSize: 12, padding: '2px 8px', borderRadius: 12 }}>
+                  <span style={{ backgroundColor: vmTokens.commentaryBg, color: vmTokens.textTertiary, fontSize: 12, padding: '2px 8px', borderRadius: 12 }}>
                     {g.count}
                   </span>
                 </div>
-                <ChevronRight size={20} style={{ color: 'rgba(255,255,255,0.6)', flexShrink: 0 }} />
+                <ChevronRight size={20} style={{ color: vmTokens.textTertiary, flexShrink: 0 }} />
               </button>
             ))}
           </>
@@ -179,10 +182,10 @@ export default function HighlightsScreen() {
 
         {/* Auto Highlights section */}
         <div style={{ marginTop: 8 }}>
-          <h2 style={{ textAlign: 'center', fontSize: 15, fontWeight: 600, color: '#E7E7E7', marginBottom: 12 }}>
+          <h2 style={{ textAlign: 'center', fontSize: 15, fontWeight: 600, color: vmTokens.textPrimary, marginBottom: 12 }}>
             Auto Highlights
           </h2>
-          <p style={{ textAlign: 'center', fontSize: 12, color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginBottom: 16, padding: '0 8px' }}>
+          <p style={{ textAlign: 'center', fontSize: 12, color: vmTokens.textTertiary, lineHeight: 1.6, marginBottom: 16, padding: '0 8px' }}>
             Auto-generated highlights help identify key verses, promises,
             commands, and more throughout the Bible.
             <br />
@@ -192,10 +195,10 @@ export default function HighlightsScreen() {
           <div style={{ ...themeCardStyle, marginBottom: 12 }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
               <div style={{ flex: 1, minWidth: 0 }}>
-                <p style={{ fontSize: 14, color: '#B09A6D', fontWeight: 500 }}>
+                <p style={{ fontSize: 14, color: vmTokens.gold, fontWeight: 500 }}>
                   Enable All Auto-Highlights
                 </p>
-                <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', marginTop: 2 }}>
+                <p style={{ fontSize: 12, color: vmTokens.textTertiary, marginTop: 2 }}>
                   Turn all Auto-generated highlights on or off
                 </p>
               </div>
@@ -204,7 +207,7 @@ export default function HighlightsScreen() {
           </div>
 
           {themes.length === 0 ? (
-            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', padding: '16px 0', textAlign: 'center' }}>
+            <p style={{ fontSize: 12, color: vmTokens.textTertiary, padding: '16px 0', textAlign: 'center' }}>
               Loading themes...
             </p>
           ) : (
@@ -217,12 +220,12 @@ export default function HighlightsScreen() {
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, flex: 1, minWidth: 0 }}>
                         <span
                           className={colorDot[t.color] || 'bg-gray-400'}
-                          style={{ width: 10, height: 10, borderRadius: '50%', flexShrink: 0, marginTop: 5, border: '1px solid rgba(255,255,255,0.1)' }}
+                          style={{ width: 10, height: 10, borderRadius: '50%', flexShrink: 0, marginTop: 5, border: `1px solid ${vmTokens.faintDivider}` }}
                         />
                         <div style={{ minWidth: 0 }}>
-                          <p style={{ fontSize: 14, color: '#E7E7E7', fontWeight: 500 }}>{t.name}</p>
+                          <p style={{ fontSize: 14, color: vmTokens.textPrimary, fontWeight: 500 }}>{t.name}</p>
                           {t.description && (
-                            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', marginTop: 2, lineHeight: 1.4 }}>
+                            <p style={{ fontSize: 12, color: vmTokens.textTertiary, marginTop: 2, lineHeight: 1.4 }}>
                               {t.description}
                             </p>
                           )}
@@ -248,19 +251,28 @@ function ThemeToggle({
   value: boolean;
   onChange: (v: boolean) => void;
 }) {
+  // iOS-style switch: OFF track uses the warm cream divider so the white
+  // knob is visible against it; ON track is the gold brand accent. Knob is
+  // a white circle with a soft shadow + a thin border so it never reads
+  // as invisible-white-on-white in light mode.
   return (
     <button
       onClick={() => onChange(!value)}
       role="switch"
       aria-checked={value}
       className="relative w-11 h-6 rounded-full shrink-0 mt-1 transition-colors"
-      style={{ backgroundColor: value ? '#B09A6D' : '#323232' }}
+      style={{
+        backgroundColor: value ? vmTokens.gold : vmTokens.divider,
+        border: `1px solid ${value ? vmTokens.gold : vmTokens.surfaceRaisedBorder}`,
+      }}
     >
       <span
-        className="absolute top-0.5 left-0.5 w-5 h-5 rounded-full shadow transition-transform"
+        className="absolute top-0.5 left-0.5 w-5 h-5 rounded-full transition-transform"
         style={{
           transform: value ? 'translateX(20px)' : 'translateX(0)',
-          backgroundColor: '#ffffff',
+          backgroundColor: '#FFFFFF',
+          border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
+          boxShadow: '0 1px 3px rgba(27,27,27,0.15)',
         }}
       />
     </button>
