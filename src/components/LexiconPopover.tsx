@@ -110,13 +110,25 @@ export default function LexiconPopover({
         align="center"
         side="bottom"
         sideOffset={6}
+        // Top padding accounts for the chapter header (~56px content +
+        // safe-area-inset on devices with notches, padded to ~96 total)
+        // so the popover never tucks up under "James 1" / the book selector.
+        // Bottom uses the standard 16px gutter; the progress bar at the
+        // very bottom is allowed to peek beneath the card if needed.
+        collisionPadding={{ top: 96, right: 16, bottom: 16, left: 16 }}
+        avoidCollisions
+        sticky="always"
         className="w-[320px] p-0 border-0 shadow-2xl"
         style={{
           backgroundColor: '#1B1B1B',
           color: '#FFFFFF',
           border: '1px solid #2E2E2E',
           fontFamily: 'Roboto, sans-serif',
-          maxHeight: '70vh',
+          // Radix exposes the actual available height after collision detection.
+          // Capping max-height to it guarantees the popover NEVER overflows the
+          // viewport regardless of where the tapped word sits — top-of-screen,
+          // bottom-of-screen, or middle. The internal scroll handles overflow.
+          maxHeight: 'var(--radix-popover-content-available-height)',
           overflowY: 'auto',
         }}
         onClick={(e) => e.stopPropagation()}
