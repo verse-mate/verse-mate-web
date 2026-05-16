@@ -70,6 +70,7 @@ export default function HighlightsScreen() {
   };
 
   const toggleTheme = async (themeId: number) => {
+    if (!state.isSignedIn) return;
     const next = new Set(enabledThemes);
     const newState = !next.has(themeId);
     if (newState) next.add(themeId);
@@ -83,6 +84,7 @@ export default function HighlightsScreen() {
   };
 
   const toggleAllThemes = async (enable: boolean) => {
+    if (!state.isSignedIn) return;
     const next = enable ? new Set(themes.map(t => t.theme_id)) : new Set<number>();
     setEnabledThemes(next);
     for (const t of themes) {
