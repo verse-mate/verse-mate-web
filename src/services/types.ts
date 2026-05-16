@@ -95,7 +95,6 @@ export interface Commentary {
 export interface VerseInsight {
   verse: number;
   crossReferences: string[];
-  originalLanguage: string;
   historicalContext: string;
 }
 
