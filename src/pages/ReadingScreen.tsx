@@ -15,8 +15,10 @@ import VerseActions from '@/components/VerseActions';
 import VerseInsightSheet from '@/components/VerseInsightSheet';
 import SelectionToolbar from '@/components/SelectionToolbar';
 import ChapterNotesSheet, { hasPendingChapterNoteDraft } from '@/components/ChapterNotesSheet';
+import TokenizedVerse from '@/components/TokenizedVerse';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
+import { getAlignmentFor } from '@/data/lexicon';
 
 export default function ReadingScreen() {
   const { state, dispatch, addBookmark, removeBookmark } = useApp();
@@ -210,6 +212,12 @@ export default function ReadingScreen() {
 
   const subtitles = chapter?.subtitles || [];
   const verseCount = chapter?.verses.length || 0;
+  // Layer-1 lexical prototype: if the current chapter has a hand-curated
+  // lexicon + alignment (currently James 1 only), enable tap-to-define
+  // for the tokens that match. Other chapters render unchanged.
+  const lexAlignment = state.bookId && state.chapter
+    ? getAlignmentFor(state.bookId, state.chapter)
+    : null;
 
   return (
     <div className="flex flex-col h-full relative" style={{ backgroundColor: '#1B1B1B' }}>
@@ -447,7 +455,15 @@ export default function ReadingScreen() {
                             {verse.number}
                           </sup>
                         )}
-                        {verse.text}{' '}
+                        {lexAlignment ? (
+                          <TokenizedVerse
+                            text={verse.text}
+                            verseNumber={verse.number}
+                            alignment={lexAlignment}
+                          />
+                        ) : (
+                          verse.text
+                        )}{' '}
                       </span>
                     );
                   })}
