@@ -30,7 +30,29 @@ interface Props {
  */
 export default function StudyPanel({ book, bookId, chapter }: Props) {
   const { state } = useApp();
-  const study: InductiveStudy | null = bookId ? getStudyFor(bookId, chapter) : null;
+  // getStudyFor is async (each chapter is its own code-split chunk; static
+  // bundling of 1,189 chapters would blow Cloudflare Workers' 25 MiB
+  // per-asset limit). Local state holds the resolved study; a `loading`
+  // flag covers the first paint on a chapter we haven't seen yet.
+  const [study, setStudy] = useState<InductiveStudy | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  useEffect(() => {
+    if (!bookId) {
+      setStudy(null);
+      setLoading(false);
+      return;
+    }
+    let cancelled = false;
+    setLoading(true);
+    getStudyFor(bookId, chapter).then((s) => {
+      if (cancelled) return;
+      setStudy(s);
+      setLoading(false);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [bookId, chapter]);
   // Body text matches the user's reading font size so Study reads at the same
   // weight as the Bible side and the Summary / By Line / Detailed tabs.
   // Sub-elements (pills, tags, captions, definitions) keep their own fixed
@@ -87,6 +109,20 @@ export default function StudyPanel({ book, bookId, chapter }: Props) {
   const toggle = (id: string) => {
     setOverrides(prev => ({ ...prev, [id]: !isOpen(id) }));
   };
+
+  // Loading state — the chapter chunk is being fetched. First visit to a
+  // chapter is typically <50ms once the bundle CDN edge is warm. Show a
+  // bare placeholder so we don't flash the "coming soon" empty state.
+  if (loading) {
+    return (
+      <div>
+        <h2 style={titleStyle}>Inductive Study of {book} {chapter}</h2>
+        <div style={{ marginTop: 24, padding: 24, textAlign: 'center', color: vmTokens.textSecondary, fontSize: 14 }}>
+          Loading…
+        </div>
+      </div>
+    );
+  }
 
   if (!study) {
     return (
