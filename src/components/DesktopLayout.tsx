@@ -752,7 +752,11 @@ function CommentaryPanel({
   // of the API commentaries array, so route it before the no-commentaries
   // early return.
   if (tab === 'study') {
-    return <StudyPanel book={book} bookId={bookId} chapter={chapter} />;
+    // `key` forces remount on chapter change so StudyPanel's useState
+    // initializers re-read the new chapter's sessionStorage. Without it,
+    // the prior chapter's open/collapsed card state persists into the
+    // new chapter and then gets written under the new key.
+    return <StudyPanel key={`${bookId}:${chapter}`} book={book} bookId={bookId} chapter={chapter} />;
   }
 
   if (commentaries.length === 0) {
