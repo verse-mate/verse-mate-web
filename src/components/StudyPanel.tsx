@@ -3,9 +3,9 @@ import { ChevronDown, ChevronUp, BookOpen, Copy, Check } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import { useApp } from '@/contexts/AppContext';
-import { getStudyFor, InductiveStudy } from '@/data/studies';
+import { getStudyFor, type InductiveStudy } from '@versemate/studies';
 import { vmTokens } from '@/styles/themeStyles';
-import {
+import type {
   StudyStep,
   StepProse,
   StepQA,
@@ -14,7 +14,7 @@ import {
   StepContrasts,
   StepBullets,
   StepSegments,
-} from '@/data/studies/types';
+} from '@versemate/studies/types';
 
 interface Props {
   book: string;
