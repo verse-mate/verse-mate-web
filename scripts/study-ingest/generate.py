@@ -403,7 +403,10 @@ def extract_json(raw: str) -> dict:
       2. After repair_json — fixes common model mistakes (count: 13+, etc.)
       3. strict=False — accepts control chars (real newlines) inside strings,
          which models sometimes emit in multi-paragraph `body` fields.
-      4. Repair + strict=False — both fixes combined."""
+      4. Repair + strict=False — both fixes combined.
+      5. json-repair library — recovers from unescaped `"` inside strings
+         (the dominant model failure on dialogue-heavy OT chapters). Heavy
+         hammer; do this last so cleaner inputs use the standard parser."""
     s = raw.strip()
     s = re.sub(r'^```(?:json)?\s*', '', s)
     s = re.sub(r'\s*```\s*$', '', s)
@@ -428,6 +431,16 @@ def extract_json(raw: str) -> dict:
         except json.JSONDecodeError as e:
             last_err = e
             last_body = body
+    # Last resort: json-repair library. Handles unescaped quotes inside
+    # strings (the systematic failure on dialogue/poetry chapters where
+    # the model embeds Bible quotes without escaping).
+    try:
+        from json_repair import repair_json as jr_repair
+        result = jr_repair(s, return_objects=True)
+        if isinstance(result, dict):
+            return result
+    except Exception:
+        pass
     # All strategies failed — show ~10 lines of context around the last
     # failure so we know what to fix next.
     lines = last_body.split('\n')
