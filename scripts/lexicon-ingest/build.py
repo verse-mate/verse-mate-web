@@ -550,6 +550,14 @@ def write_lexicon(lexicons: list[dict[str, dict]], lemmas_used: set[str],
             continue
         strongs, entry = slug_to_entry[slug]
         existing = out.get(slug, {})
+        # Preserve enriched fields when they exist (enrich.py adds rich
+        # pastoral notes + pronunciation + semanticRange + related). Without
+        # this guard, re-running build.py blows away an entire enrich.py
+        # session — 4500 lemmas regressed silently the first time we hit it.
+        # `notes` from build.py is the raw Abbott-Smith / TBESH definition;
+        # only use it as a fallback when no enriched version exists.
+        existing_notes = existing.get('notes', '')
+        is_enriched_notes = existing_notes and len(existing_notes) > 120
         out[slug] = {
             **existing,
             'lemma': entry['lemma'],
@@ -558,7 +566,7 @@ def write_lexicon(lexicons: list[dict[str, dict]], lemmas_used: set[str],
             'pos': entry['pos'],
             'basicGloss': entry['gloss'],
             'loaded': existing.get('loaded', False),
-            'notes': entry['notes'],
+            'notes': existing_notes if is_enriched_notes else entry['notes'],
             freq_field(strongs): freq_counter.get(slug, 0),
         }
         written += 1
