@@ -1,5 +1,6 @@
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import type { LexEntry, AlignedToken } from '@/data/lexicon/types';
+import { vmTokens } from '@/styles/themeStyles';
 
 // Hebrew + Aramaic block (U+0590-U+05FF) — if a lemma contains any character
 // in this range, render it RTL. Greek lemmas have no Hebrew chars so the
@@ -31,11 +32,14 @@ interface LexiconPopoverProps {
 // exists. Click events stop propagation so the parent verse span's
 // tap handler (which opens VerseInsightSheet) doesn't fire at the same time.
 
+// Brand-constant gold (identical across themes) + a token reference for the
+// section body color so the popover follows the app's theme. The gold tint
+// for the highlight wash works as-is on both light and dark surfaces.
 const SECTION_LABEL_STYLE: React.CSSProperties = {
   fontSize: 10,
   fontWeight: 600,
   letterSpacing: '0.08em',
-  color: '#B09A6D',
+  color: vmTokens.gold,
   textTransform: 'uppercase',
   marginBottom: 6,
 };
@@ -43,7 +47,7 @@ const SECTION_LABEL_STYLE: React.CSSProperties = {
 const SECTION_BODY_STYLE: React.CSSProperties = {
   fontSize: 14,
   lineHeight: '20px',
-  color: '#E7E7E7',
+  color: vmTokens.textPrimary,
   margin: 0,
 };
 
@@ -60,7 +64,7 @@ function Section({
     <div
       style={{
         padding: '12px 16px',
-        borderBottom: '1px solid #2E2E2E',
+        borderBottom: `1px solid ${vmTokens.divider}`,
         backgroundColor: highlight ? 'rgba(176, 154, 109, 0.07)' : 'transparent',
       }}
     >
@@ -120,9 +124,9 @@ export default function LexiconPopover({
         sticky="always"
         className="w-[320px] p-0 border-0 shadow-2xl"
         style={{
-          backgroundColor: '#1B1B1B',
-          color: '#FFFFFF',
-          border: '1px solid #2E2E2E',
+          backgroundColor: vmTokens.surfaceRaisedBg,
+          color: vmTokens.textPrimary,
+          border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
           fontFamily: 'Roboto, sans-serif',
           // Radix exposes the actual available height after collision detection.
           // Capping max-height to it guarantees the popover NEVER overflows the
@@ -138,8 +142,13 @@ export default function LexiconPopover({
         <div
           style={{
             padding: '14px 16px 10px',
-            borderBottom: '1px solid #2E2E2E',
-            backgroundColor: '#161616',
+            borderBottom: `1px solid ${vmTokens.divider}`,
+            // Same surface as the popover body. The bottom-border + sticky
+            // shadow provide the visual separation. Earlier attempts used
+            // `chromeBg` to mimic the dark-mode visual depth, but that token
+            // maps to --bg-app which is intentionally #1B1B1B even in light
+            // mode (it's the page-shell color, not a card surface).
+            backgroundColor: vmTokens.surfaceRaisedBg,
             position: 'sticky',
             top: 0,
             zIndex: 1,
@@ -152,7 +161,7 @@ export default function LexiconPopover({
                 fontFamily: 'Georgia, "Times New Roman", serif',
                 fontSize: 22,
                 fontWeight: 500,
-                color: '#FFFFFF',
+                color: vmTokens.textPrimary,
                 letterSpacing: '0.01em',
                 // Isolate the Hebrew sub-run so adjacent LTR translit + metadata
                 // line below it don't get reordered by the bidi algorithm.
@@ -161,11 +170,11 @@ export default function LexiconPopover({
             >
               {entry.lemma}
             </span>
-            <span style={{ fontSize: 14, color: '#B09A6D', fontWeight: 500 }}>
+            <span style={{ fontSize: 14, color: vmTokens.gold, fontWeight: 500 }}>
               {entry.translit}
             </span>
           </div>
-          <div style={{ marginTop: 4, fontSize: 12, color: 'rgba(255,255,255,0.55)' }}>
+          <div style={{ marginTop: 4, fontSize: 12, color: vmTokens.textTertiary }}>
             {entry.pos} • {entry.strongs}
             {entry.pronunciation ? ` • ${entry.pronunciation}` : ''}
             {/* Frequency: show NT-only, OT-only, or both depending on which
@@ -201,7 +210,7 @@ export default function LexiconPopover({
                 paddingLeft: 16,
                 fontSize: 13,
                 lineHeight: '19px',
-                color: 'rgba(255,255,255,0.85)',
+                color: vmTokens.textPrimary,
               }}
             >
               {entry.semanticRange.map((s, i) => (
@@ -225,17 +234,17 @@ export default function LexiconPopover({
                       style={{
                         fontFamily: 'Georgia, "Times New Roman", serif',
                         fontSize: 15,
-                        color: '#FFFFFF',
+                        color: vmTokens.textPrimary,
                         unicodeBidi: 'isolate',
                       }}
                     >
                       {r.lemma}
                     </span>
-                    <span style={{ fontSize: 12, color: '#B09A6D' }}>
+                    <span style={{ fontSize: 12, color: vmTokens.gold }}>
                       {r.translit}
                     </span>
                   </div>
-                  <div style={{ color: 'rgba(255,255,255,0.7)', marginTop: 1 }}>
+                  <div style={{ color: vmTokens.textSecondary, marginTop: 1 }}>
                     {r.note}
                   </div>
                 </div>
@@ -252,7 +261,7 @@ export default function LexiconPopover({
                 ...SECTION_BODY_STYLE,
                 fontSize: 13,
                 lineHeight: '19px',
-                color: 'rgba(255,255,255,0.85)',
+                color: vmTokens.textPrimary,
               }}
             >
               {entry.notes}
@@ -267,7 +276,7 @@ export default function LexiconPopover({
               style={{
                 fontSize: 11,
                 fontStyle: 'italic',
-                color: 'rgba(255,255,255,0.55)',
+                color: vmTokens.textTertiary,
                 lineHeight: '15px',
               }}
             >
