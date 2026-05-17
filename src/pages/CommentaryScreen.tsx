@@ -221,7 +221,15 @@ export default function CommentaryScreen() {
             commentaries early-return. */}
         {tab === 'study' ? (
           <div className="pt-4">
-            <StudyPanel book={decodedBook} bookId={bookId} chapter={chapterNum} />
+            {/* `key` forces remount on chapter change — see DesktopLayout
+                for the full reasoning. Prevents Genesis open-card state
+                from bleeding into Matthew. */}
+            <StudyPanel
+              key={`${bookId}:${chapterNum}`}
+              book={decodedBook}
+              bookId={bookId}
+              chapter={chapterNum}
+            />
           </div>
         ) : commentaries.length === 0 ? (
           <p className="text-[14px] text-center py-8" style={{ color: vmTokens.textTertiary }}>
