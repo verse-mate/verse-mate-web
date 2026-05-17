@@ -71,29 +71,60 @@ def ts_const_name(slug: str, chapter: int) -> str:
 
 
 def render_index(chapters: list[tuple[int, int, str, str]]) -> str:
-    """Build the full index.ts text."""
-    imports = '\n'.join(
-        f"import {{ {const_name} }} from './{slug}-{chapter}';"
-        for (_book_id, chapter, slug, const_name) in chapters
-    )
+    """Build the full index.ts text using DYNAMIC imports so each chapter
+    becomes its own bundler chunk (one module per chapter). Without this,
+    a static `import` of every chapter (1,189 files × ~50KB each) collapses
+    into a single ~55 MiB JS chunk that exceeds Cloudflare Workers' 25 MiB
+    per-asset limit and breaks production deploys."""
     map_entries = '\n'.join(
-        f"  '{book_id}:{chapter}': {const_name},"
-        for (book_id, chapter, _slug, const_name) in chapters
+        f"  '{book_id}:{chapter}': () => import('./{slug}-{chapter}'),"
+        for (book_id, chapter, slug, _const_name) in chapters
     )
-    return f"""import {{ InductiveStudy }} from './types';
-{imports}
+    return f"""import type {{ InductiveStudy }} from './types';
 
-const STUDIES: Record<string, InductiveStudy> = {{
+type StudyLoader = () => Promise<Record<string, unknown>>;
+
+// Dynamic-import map: `${{bookId}}:${{chapter}}` → loader for that chapter's
+// module. Each entry becomes a separate code-split chunk under any
+// import.meta-aware bundler (Vite, Metro, esbuild, webpack).
+const LOADERS: Record<string, StudyLoader> = {{
 {map_entries}
 }};
 
+// In-memory cache so repeated calls for the same chapter don't re-import.
+// The bundler's own module cache also handles this, but caching at the
+// study layer means we don't pay the Object.values scan twice either.
+const CACHE = new Map<string, InductiveStudy>();
+
 /**
  * Look up the inductive study for a given book + chapter.
- * Returns null when no authored study exists for the chapter yet.
+ * Returns null when no authored study exists for the chapter.
  * Keyed by `${{bookId}}:${{chapter}}`.
+ *
+ * ASYNC — chapter modules are lazily loaded. Callers should `await` and
+ * render a loading state for the round-trip (typically <50ms once the
+ * chunk has been fetched once).
  */
-export function getStudyFor(bookId: number, chapter: number): InductiveStudy | null {{
-  return STUDIES[`${{bookId}}:${{chapter}}`] ?? null;
+export async function getStudyFor(
+  bookId: number,
+  chapter: number,
+): Promise<InductiveStudy | null> {{
+  const key = `${{bookId}}:${{chapter}}`;
+  const cached = CACHE.get(key);
+  if (cached) return cached;
+  const loader = LOADERS[key];
+  if (!loader) return null;
+  const mod = await loader();
+  // Each chapter file exports its study as a single named const
+  // (FIRST_JOHN_2_STUDY, JAMES_1_STUDY, PSALMS_23_STUDY, ...). Find it by
+  // shape rather than by name so consumers don't need to know the
+  // generator's naming convention.
+  const study = Object.values(mod).find(
+    (v) => v && typeof v === 'object' && 'steps' in (v as object),
+  ) as InductiveStudy | undefined;
+  if (!study) return null;
+  CACHE.set(key, study);
+  return study;
 }}
 
 export type {{ InductiveStudy }} from './types';
