@@ -1,0 +1,10 @@
+# Per-developer operational state — not for the repo.
+# Raw API responses saved before parse (recoverable via --from-saved).
+.last-response-*.txt
+# Batch IDs logged at submit time, useful locally but not shared.
+.batches.log
+# Batch result downloads (intermediate, before write_ts).
+.batch-results/
+# Python bytecode caches.
+__pycache__/
+*.pyc
