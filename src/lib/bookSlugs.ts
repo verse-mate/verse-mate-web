@@ -98,9 +98,12 @@ export function getBookIdFromSlug(slug: string): number | null {
  * legacy numeric URLs (which we 301-redirect to slug URLs) and slug URLs.
  */
 export function parseBookParam(param: string): number | null {
-  const numericId = Number.parseInt(param, 10);
-  if (!Number.isNaN(numericId) && numericId >= 1 && numericId <= 66) {
-    return numericId;
+  // Pure-digit input only — otherwise slugs like `1-john` would be parsed
+  // as 1 (Genesis), because Number.parseInt stops at the first non-digit.
+  if (/^\d+$/.test(param)) {
+    const numericId = Number.parseInt(param, 10);
+    if (numericId >= 1 && numericId <= 66) return numericId;
+    return null;
   }
   return getBookIdFromSlug(param);
 }
