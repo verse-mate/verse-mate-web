@@ -7,7 +7,8 @@ lexicon alignment, then calls Claude with the Versemate framework
 encoded in the system prompt and the hand-authored 1 John 1 study as a
 gold-standard one-shot example. Output is a JSON object matching the
 InductiveStudy TypeScript type, which the script wraps as a TS file and
-writes into src/data/studies/.
+writes into the @versemate/studies sibling package at
+../../verse-mate-studies/src/.
 
 Usage:
   export ANTHROPIC_API_KEY=...
@@ -29,7 +30,9 @@ import anthropic
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent  # verse-mate-web/
-STUDIES_DIR = ROOT / 'src' / 'data' / 'studies'
+# Studies live in the @versemate/studies sibling package (../verse-mate-studies),
+# shared by both the web app (Vite) and the React Native app (Expo Metro).
+STUDIES_DIR = ROOT.parent / 'verse-mate-studies' / 'src'
 LEXICON_DIR = ROOT / 'src' / 'data' / 'lexicon' / 'generated'
 GOLD_STUDY_PATH = STUDIES_DIR / '1-john-1.ts'
 SECONDARY_STUDY_PATH = STUDIES_DIR / 'james-1.ts'
@@ -369,10 +372,14 @@ def repair_json(s: str) -> str:
     """Apply conservative regex repairs for the most common model JSON
     mistakes. Each pattern is chosen so it cannot match anything in legal
     JSON — so this is safe to run unconditionally.
-      * `"count": 13+,`  → `"count": 13,`   (model's hedge for "at least N")
-      * `"count": ~13,`  → `"count": 13,`   (model's approximation)
-      * `[1, 2, 3,]`     → `[1, 2, 3]`     (trailing comma in array)
-      * `{"k": 1,}`      → `{"k": 1}`      (trailing comma in object)
+      * `"count": 13+,`     → `"count": 13,`   (model's hedge for "at least N")
+      * `"count": ~13,`     → `"count": 13,`   (model's approximation)
+      * `[1, 2, 3,]`        → `[1, 2, 3]`      (trailing comma in array)
+      * `{"k": 1,}`         → `{"k": 1}`       (trailing comma in object)
+      * `chapter\\u's`      → `chapter's`     (broken \\u escape — model
+                                                typo where \\u is not
+                                                followed by 4 hex digits;
+                                                drop the bad sequence)
     """
     # Strip `+` immediately after a number (only matches when followed by
     # non-digit, so `1e+5` exponent notation is preserved).
@@ -381,6 +388,10 @@ def repair_json(s: str) -> str:
     s = re.sub(r'(:\s*)~(\d)', r'\1\2', s)
     # Trailing commas in arrays and objects.
     s = re.sub(r',(\s*[\]\}])', r'\1', s)
+    # Broken \u escapes (\u not followed by exactly 4 hex digits) — drop
+    # the \u; keep whatever followed. JSON has no other \u-prefixed escape,
+    # so this regex can't damage valid input.
+    s = re.sub(r'\\u(?![0-9A-Fa-f]{4})', '', s)
     return s
 
 
@@ -488,7 +499,7 @@ def main() -> int:
     parser.add_argument('--model', default=DEFAULT_MODEL,
                         help=f'Anthropic model (default: {DEFAULT_MODEL})')
     parser.add_argument('--output', type=Path,
-                        help='Output path (default: src/data/studies/<book>-<chapter>.ts)')
+                        help='Output path (default: ../verse-mate-studies/src/<book>-<chapter>.ts)')
     parser.add_argument('--dry-run', action='store_true',
                         help='Print prompt sizes; do not call API; do not write')
     parser.add_argument('--from-saved', action='store_true',
