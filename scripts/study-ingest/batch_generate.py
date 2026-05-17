@@ -61,6 +61,62 @@ OT_BOOKS = [
     'zechariah', 'malachi',
 ]
 
+# OT chapters that get the higher-quality model (--marquee-model) instead of
+# the bulk model. Pick: anchors of the redemptive-historical narrative,
+# theologically dense pastoral passages, the most-studied / most-preached
+# chapters. Edit freely — anything not in this set falls through to --model.
+# Counted: ~100 chapters.
+MARQUEE_OT_CHAPTERS: set[tuple[str, int]] = {
+    # ── Pentateuch (creation, fall, patriarchs, Exodus, Sinai, atonement) ──
+    ('genesis', 1), ('genesis', 2), ('genesis', 3), ('genesis', 12),
+    ('genesis', 15), ('genesis', 17), ('genesis', 22), ('genesis', 28),
+    ('genesis', 32), ('genesis', 37), ('genesis', 45), ('genesis', 50),
+    ('exodus', 3), ('exodus', 12), ('exodus', 14), ('exodus', 19),
+    ('exodus', 20), ('exodus', 32), ('exodus', 34),
+    ('leviticus', 16), ('leviticus', 19),
+    ('numbers', 6), ('numbers', 21),
+    ('deuteronomy', 6), ('deuteronomy', 28), ('deuteronomy', 30),
+    # ── Historical (covenant moments, key narratives) ──
+    ('joshua', 1), ('joshua', 24),
+    ('judges', 7),
+    ('ruth', 1), ('ruth', 4),
+    ('1-samuel', 3), ('1-samuel', 16), ('1-samuel', 17),
+    ('2-samuel', 7),
+    ('1-kings', 18), ('1-kings', 19),
+    ('2-chronicles', 7),
+    ('nehemiah', 8),
+    # ── Wisdom / Poetry (heavy on Psalms — the most-read OT) ──
+    ('job', 1), ('job', 38), ('job', 42),
+    ('psalms', 1), ('psalms', 8), ('psalms', 19), ('psalms', 22),
+    ('psalms', 23), ('psalms', 27), ('psalms', 32), ('psalms', 34),
+    ('psalms', 37), ('psalms', 42), ('psalms', 46), ('psalms', 51),
+    ('psalms', 63), ('psalms', 73), ('psalms', 84), ('psalms', 90),
+    ('psalms', 91), ('psalms', 100), ('psalms', 103), ('psalms', 110),
+    ('psalms', 119), ('psalms', 121), ('psalms', 130), ('psalms', 139),
+    ('psalms', 145), ('psalms', 150),
+    ('proverbs', 1), ('proverbs', 3), ('proverbs', 8), ('proverbs', 31),
+    ('ecclesiastes', 3), ('ecclesiastes', 12),
+    ('song-of-solomon', 8),
+    # ── Major Prophets (Christological + covenant chapters) ──
+    ('isaiah', 1), ('isaiah', 6), ('isaiah', 7), ('isaiah', 9),
+    ('isaiah', 40), ('isaiah', 52), ('isaiah', 53), ('isaiah', 55),
+    ('isaiah', 61),
+    ('jeremiah', 29), ('jeremiah', 31),
+    ('lamentations', 3),
+    ('ezekiel', 36), ('ezekiel', 37),
+    ('daniel', 2), ('daniel', 3), ('daniel', 6), ('daniel', 7),
+    ('daniel', 9),
+    # ── Minor Prophets (sharpest pastoral / messianic moments) ──
+    ('hosea', 1), ('hosea', 14),
+    ('joel', 2),
+    ('amos', 5),
+    ('jonah', 1), ('jonah', 2), ('jonah', 3), ('jonah', 4),
+    ('micah', 5), ('micah', 6),
+    ('habakkuk', 3),
+    ('zechariah', 9),
+    ('malachi', 3),
+}
+
 
 def fetch_book_chapter_count(book_id: int) -> int:
     """Hit /bible/books once per book to learn how many chapters it has.
@@ -101,10 +157,16 @@ def existing_studies() -> set[str]:
     return out
 
 
-def build_requests(targets: list[tuple[str, int]], skip_existing: bool) -> list[dict]:
+def build_requests(targets: list[tuple[str, int]], skip_existing: bool,
+                   model: str, marquee_model: str | None = None) -> list[dict]:
     """Build one Batch API request per (book_slug, chapter).
     custom_id format: '<slug>__<chapter>' (Batch API requires
-    `^[a-zA-Z0-9_-]{1,64}$` — no colons) so collect() can map back."""
+    `^[a-zA-Z0-9_-]{1,64}$` — no colons) so collect() can map back.
+
+    Per-request model selection: if marquee_model is provided AND the chapter
+    is in MARQUEE_OT_CHAPTERS, that request uses marquee_model; otherwise
+    model. This lets one batch mix e.g. Opus 4.7 for ~100 marquee OT chapters
+    with Sonnet 4.6 for the ~830-chapter long tail."""
     examples_block = build_examples_block(load_gold_example(), load_secondary_example())
     have = existing_studies() if skip_existing else set()
     requests: list[dict] = []
@@ -122,10 +184,13 @@ def build_requests(targets: list[tuple[str, int]], skip_existing: bool) -> list[
             continue
         lexicon = load_lexicon(slug, chapter)
         user_prompt = build_user_prompt(book_name, slug, chapter, verses, lexicon)
+        request_model = (marquee_model
+                         if marquee_model and (slug, chapter) in MARQUEE_OT_CHAPTERS
+                         else model)
         requests.append({
             'custom_id': key,
             'params': {
-                'model': DEFAULT_MODEL,
+                'model': request_model,
                 'max_tokens': MAX_TOKENS,
                 'system': [
                     {'type': 'text', 'text': SYSTEM_PROMPT},
@@ -144,13 +209,42 @@ def build_requests(targets: list[tuple[str, int]], skip_existing: bool) -> list[
     return requests
 
 
-def estimate_cost(num_requests: int) -> str:
-    """Rough cost estimate at Opus 4.7 Batch API pricing.
-    Per call: ~$0.85 sync → ~$0.42 batch. Cache write on the first request only."""
-    per_call = 0.42
-    cache_write = 0.35  # one-time
-    total = cache_write + per_call * num_requests
-    return f'~${total:.2f}  (~${per_call:.2f}/chapter at Batch API + ${cache_write:.2f} cache write)'
+_MODEL_RATES = {
+    'opus':   (0.42, 0.35),   # (per_call, cache_write) — Opus 4.7 batch
+    'sonnet': (0.09, 0.07),   # Sonnet 4.6 — ~5× cheaper output
+    'haiku':  (0.024, 0.02),  # Haiku 4.5 — ~18× cheaper output
+}
+
+
+def _rate_for(model: str) -> tuple[float, float]:
+    for k, v in _MODEL_RATES.items():
+        if k in model:
+            return v
+    return _MODEL_RATES['opus']  # unknown → assume Opus
+
+
+def estimate_cost(requests: list[dict], model: str, marquee_model: str | None) -> str:
+    """Rough cost estimate at Batch API pricing (50% off sync rates).
+    Splits requests by per-call model so hybrid batches (Sonnet bulk + Opus
+    marquee) get a real estimate, not a single-rate guess."""
+    if not marquee_model or marquee_model == model:
+        per_call, cache_write = _rate_for(model)
+        total = cache_write + per_call * len(requests)
+        return (f'~${total:.2f}  ({len(requests)} × ${per_call:.3f}/ch on '
+                f'{model} batch + ${cache_write:.2f} cache write)')
+    # Hybrid: count per-model
+    bulk_count = sum(1 for r in requests if r['params']['model'] == model)
+    marquee_count = sum(1 for r in requests if r['params']['model'] == marquee_model)
+    bulk_per, _ = _rate_for(model)
+    marq_per, _ = _rate_for(marquee_model)
+    # Both models share the same cached system+examples block per their own
+    # cache namespace, so each model pays one cache_write of its own.
+    _, bulk_cw = _rate_for(model)
+    _, marq_cw = _rate_for(marquee_model)
+    total = bulk_cw + marq_cw + bulk_per * bulk_count + marq_per * marquee_count
+    return (f'~${total:.2f}  (hybrid: {bulk_count} × ${bulk_per:.3f}/ch on '
+            f'{model} bulk + {marquee_count} × ${marq_per:.3f}/ch on '
+            f'{marquee_model} marquee + ${bulk_cw + marq_cw:.2f} cache writes)')
 
 
 def expand_targets(args) -> list[tuple[str, int]]:
@@ -200,11 +294,13 @@ def parse_chapter_range(spec: str, max_chapters: int) -> list[int]:
 def cmd_submit(args) -> int:
     targets = expand_targets(args)
     print(f'[1/3] Building requests for {len(targets)} chapter(s)...', file=sys.stderr)
-    requests = build_requests(targets, skip_existing=not args.no_skip_existing)
+    requests = build_requests(targets, skip_existing=not args.no_skip_existing,
+                              model=args.model, marquee_model=args.marquee_model)
     if not requests:
         print('Nothing to submit (all targets already have TS files, or none found).', file=sys.stderr)
         return 0
-    print(f'      {len(requests)} requests built. Estimated cost: {estimate_cost(len(requests))}',
+    print(f'      {len(requests)} requests built. Estimated cost: '
+          f'{estimate_cost(requests, args.model, args.marquee_model)}',
           file=sys.stderr)
 
     if not args.yes:
@@ -347,6 +443,16 @@ def main() -> int:
                    help='Re-generate even for chapters that already have a TS file')
     g.add_argument('--yes', '-y', action='store_true',
                    help='Skip the confirmation prompt before submitting')
+    g.add_argument('--model', default=DEFAULT_MODEL,
+                   help=f'Anthropic model for bulk requests (default: {DEFAULT_MODEL}). '
+                        'Sonnet/Haiku are 5-18x cheaper than Opus; pilot on one '
+                        'chapter with generate.py --model first to confirm quality.')
+    g.add_argument('--marquee-model',
+                   help='Use this model for the ~100 chapters in MARQUEE_OT_CHAPTERS '
+                        '(Gen 1-3, Psalm 23/51/139, Isaiah 53, Daniel, etc.). Example: '
+                        '--model claude-sonnet-4-6 --marquee-model claude-opus-4-7 '
+                        'gives you Opus quality where it matters and Sonnet bulk for '
+                        'the long tail.')
 
     args = parser.parse_args()
 
