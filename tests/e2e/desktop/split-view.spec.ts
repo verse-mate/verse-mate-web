@@ -55,9 +55,10 @@ test.describe('Desktop — split view layout', () => {
     await expect(desktop.tabSummary).toBeVisible();
     await expect(desktop.tabByline).toBeVisible();
     await expect(desktop.tabStudy).toBeVisible();
-    // Detailed has been removed; Visuals is gated to books with curated
-    // assets and stays hidden on Genesis.
-    await expect(desktop.tabVisuals).toHaveCount(0);
+    // Visuals now ships for every book (Genesis through Revelation),
+    // minimum content being the BibleProject overview poster + the
+    // chapter-aware overview video.
+    await expect(desktop.tabVisuals).toBeVisible();
   });
 
   test('switching to Summary tab shows summary heading in right panel', async ({ page }) => {
@@ -70,14 +71,18 @@ test.describe('Desktop — split view layout', () => {
     ).toBeVisible({ timeout: 15_000 });
   });
 
-  test('Visuals tab appears on James and is hidden on Genesis', async ({ page }) => {
+  test('Visuals tab renders on every book — Genesis (poster only) and James (full set)', async ({ page }) => {
     const desktop = new DesktopReaderPage(page);
 
-    // Off for books without curated visuals.
+    // Genesis ships only the BibleProject poster + the chapter-aware video.
     await desktop.goto('genesis', 1);
-    await expect(desktop.tabVisuals).toHaveCount(0);
+    await expect(desktop.tabVisuals).toBeVisible();
+    await desktop.tabVisuals.click();
+    await expect(
+      desktop.rightPanel.getByText(/visuals for genesis 1/i),
+    ).toBeVisible({ timeout: 15_000 });
 
-    // On for James — the launch book for the Visuals catalogue.
+    // James is the launch book with all four hand-curated cards.
     await desktop.goto('james', 1);
     await expect(desktop.tabVisuals).toBeVisible();
     await desktop.tabVisuals.click();
