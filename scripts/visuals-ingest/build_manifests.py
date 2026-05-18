@@ -23,13 +23,57 @@ OUT_TS = ROOT / "src" / "data" / "visuals" / "registry.ts"
 
 # Source-of-truth: same POSTERS table used by ingest_bibleproject.py +
 # per-book video metadata with chapter ranges.
+import urllib.parse
+
 from ingest_bibleproject import POSTERS  # type: ignore
 from bibleproject_videos import VIDEOS  # type: ignore
+from ingest_precept import PRECEPT_CHARTS  # type: ignore
+
+PRECEPT_CURATED_PATH = Path(__file__).resolve().parent / "precept_chapter_curated.json"
+
+
+def _safe_stem(filename: str) -> str:
+    """Mirror ingest_precept_chapters.safe_stem so manifest filenames
+    match what was written to disk."""
+    base = Path(filename).stem.lower()
+    out = []
+    for ch in base:
+        out.append(ch if (ch.isalnum() or ch in "-_") else "_")
+    stem = "".join(out).strip("_")
+    while "__" in stem:
+        stem = stem.replace("__", "_")
+    return stem or "chart"
+
+
+def _ext_from_url(url: str) -> str:
+    s = Path(urllib.parse.urlparse(url).path).suffix.lower()
+    if s in {".jpg", ".jpeg"}:
+        return ".jpg"
+    if s == ".gif":
+        return ".gif"
+    return ".png"
+
+
+def _local_name(url: str, filename: str) -> str:
+    """The exact local file the chapter ingest writes for a given source
+    URL/filename pair."""
+    return f"precept_{_safe_stem(filename)}{_ext_from_url(url)}"
+
+
+def load_precept_chapter_data() -> dict:
+    if not PRECEPT_CURATED_PATH.exists():
+        return {}
+    return json.loads(PRECEPT_CURATED_PATH.read_text())
 
 # Books that ship a hand-curated VerseMate Original. James is the
 # launch book; future books are added here only when their originals
 # are produced and reviewed.
 BOOKS_WITH_ORIGINALS: set[str] = {"james"}
+
+# Populated in main() by load_precept_chapter_data() so book_cards() can
+# read curated per-chapter Precept image data while staying side-effect
+# free at import time.
+PRECEPT_CHAPTERS: dict = {}
 
 
 def book_videos(slug: str) -> list[dict]:
@@ -74,28 +118,145 @@ def book_cards(slug: str, display: str) -> list[dict]:
             },
         })
 
-    # 2. James-only hand-curated originals (Swindoll, Parallels, Heatmap).
-    if slug in BOOKS_WITH_ORIGINALS and slug == "james":
-        swindoll = book_dir / "swindoll_james_chart.png"
-        if swindoll.exists():
+    # 2. Chuck Swindoll's Bible chart — Insight for Living publishes a chart
+    # for every book in the Protestant canon, all reachable via a predictable
+    # CDN URL pattern. We render page 1 to a local PNG thumbnail; the
+    # download link goes straight back to the upstream PDF.
+    swindoll_png = book_dir / "swindoll_chart.png"
+    if swindoll_png.exists():
+        # The CDN uses TitleCase, hyphenated for multi-word slugs (matches
+        # SLUG_TO_CDN in ingest_swindoll.py).
+        cdn_book = "-".join(p.capitalize() for p in slug.split("-"))
+        if slug == "song-of-solomon":
+            cdn_book = "Song-of-Solomon"
+        cards.append({
+            "id": "swindoll-chart",
+            "title": f"Chuck Swindoll — {display} Bible Chart",
+            "caption": (
+                f"Single-page structural chart of {display}, organizing the "
+                "book by major sections, themes, and key verses. Free "
+                "resource from Insight for Living Ministries."
+            ),
+            "thumb": f"/visuals/{slug}/swindoll_chart.png",
+            "full":  f"/visuals/{slug}/swindoll_chart.png",
+            "attribution": {
+                "label": "Insight for Living Ministries",
+                "href":  "https://insight.org/resources/bible",
+            },
+            "download": {
+                "label": "Original PDF",
+                "href":  f"https://cdn.iflmedia.com/pdf/bible-charts/{cdn_book}-Bible-chart.pdf",
+            },
+        })
+
+    # 3. Precept Austin chart (Bruce Hurt). Only ~40 books have a
+    # distinct chart upstream; the curated map in ingest_precept.py is the
+    # source of truth for which ones ship.
+    precept_png = book_dir / "precept_chart.png"
+    if precept_png.exists() and slug in PRECEPT_CHARTS:
+        source_image = (
+            f"https://www.preceptaustin.org/files/images/{PRECEPT_CHARTS[slug]}"
+        )
+        cards.append({
+            "id": "precept-chart",
+            "title": f"Precept Austin — {display} Chart",
+            "caption": (
+                f"Bruce Hurt's inductive-study chart for {display}, mapping "
+                "the book's flow, key themes, and turning points. Drawn from "
+                "Precept Austin's free verse-by-verse commentary."
+            ),
+            "thumb": f"/visuals/{slug}/precept_chart.png",
+            "full":  f"/visuals/{slug}/precept_chart.png",
+            "attribution": {
+                "label": "Precept Austin · Bruce Hurt",
+                "href":  "https://www.preceptaustin.org/",
+            },
+            "download": {
+                "label": "Source image",
+                "href":  source_image,
+            },
+        })
+
+    # 4. Precept Austin per-chapter charts (Bruce Hurt). Each unique source
+    # image becomes one card; the `chapters` field below carries the list
+    # of chapters that page embedded the chart on, so the React filter can
+    # show only chapter-relevant cards. Book-level entries get `chapters`
+    # omitted so they show on every chapter.
+    if slug in PRECEPT_CHAPTERS:
+        cdata = PRECEPT_CHAPTERS[slug]
+        # First the book-level reused charts (one card, no chapter filter).
+        seen_local: set[str] = set()
+        for entry in cdata.get("book_level", []):
+            local = _local_name(entry["url"], entry["filename"])
+            target = book_dir / local
+            if not target.exists() or local in seen_local:
+                continue
+            seen_local.add(local)
             cards.append({
-                "id": "swindoll-chart",
-                "title": "Chuck Swindoll — Structural Chart",
+                "id": f"precept-book-{Path(local).stem.removeprefix('precept_')}",
+                "title": f"Precept Austin — {display} ({entry['filename']})",
                 "caption": (
-                    "Divides James into major sections, anchoring each with "
-                    "theme and key verse. From Insight for Living's free Bible charts."
+                    f"Bruce Hurt's chart embedded across multiple {display} "
+                    "chapters on Precept Austin's commentary."
                 ),
-                "thumb": "/visuals/james/swindoll_james_chart.png",
-                "full":  "/visuals/james/swindoll_james_chart.png",
+                "thumb": f"/visuals/{slug}/{local}",
+                "full":  f"/visuals/{slug}/{local}",
                 "attribution": {
-                    "label": "Insight for Living Ministries",
-                    "href": "https://insight.org/resources/bible/the-general-epistles/james",
+                    "label": "Precept Austin · Bruce Hurt",
+                    "href":  "https://www.preceptaustin.org/",
                 },
                 "download": {
-                    "label": "Original PDF",
-                    "href": "https://cdn.iflmedia.com/pdf/bible-charts/James-Bible-chart.pdf",
+                    "label": "Source image",
+                    "href":  entry["url"],
                 },
             })
+        # Then the per-chapter ones — collect unique (filename, url) pairs
+        # across all chapters in this book, with the union of chapters
+        # they appear on.
+        per_chapter_entries: dict[str, dict] = {}
+        for chapter_str, entries in cdata.get("per_chapter", {}).items():
+            for entry in entries:
+                local = _local_name(entry["url"], entry["filename"])
+                target = book_dir / local
+                if not target.exists():
+                    continue
+                rec = per_chapter_entries.setdefault(local, {
+                    "url": entry["url"],
+                    "filename": entry["filename"],
+                    "chapters": set(),
+                })
+                rec["chapters"].update(int(c) for c in entry.get("chapters", [chapter_str]))
+        for local, rec in sorted(per_chapter_entries.items()):
+            chapters_sorted = sorted(rec["chapters"])
+            if len(chapters_sorted) == 1:
+                ch_label = f"Chapter {chapters_sorted[0]}"
+            elif chapters_sorted == list(range(chapters_sorted[0], chapters_sorted[-1] + 1)):
+                ch_label = f"Chapters {chapters_sorted[0]}–{chapters_sorted[-1]}"
+            else:
+                ch_label = f"Chapters {', '.join(str(c) for c in chapters_sorted)}"
+            cards.append({
+                "id": f"precept-ch-{Path(local).stem.removeprefix('precept_')}",
+                "title": f"Precept Austin — {display} {ch_label}",
+                "caption": (
+                    f"Bruce Hurt's commentary chart for {display} "
+                    f"{ch_label.lower()} — {rec['filename']}."
+                ),
+                "thumb": f"/visuals/{slug}/{local}",
+                "full":  f"/visuals/{slug}/{local}",
+                "attribution": {
+                    "label": "Precept Austin · Bruce Hurt",
+                    "href":  "https://www.preceptaustin.org/",
+                },
+                "download": {
+                    "label": "Source image",
+                    "href":  rec["url"],
+                },
+                "chapters": chapters_sorted,
+            })
+
+    # 5. James-only hand-curated originals (Parallels + Heatmap). Swindoll
+    # and Precept are covered above for every book that has them.
+    if slug in BOOKS_WITH_ORIGINALS and slug == "james":
         parallels = book_dir / "versemate_james_proverbs_parallels.png"
         if parallels.exists():
             cards.append({
@@ -137,6 +298,8 @@ def book_cards(slug: str, display: str) -> list[dict]:
 
 
 def main() -> None:
+    global PRECEPT_CHAPTERS
+    PRECEPT_CHAPTERS = load_precept_chapter_data()
     OUT_TS.parent.mkdir(parents=True, exist_ok=True)
     entries: list[str] = []
     book_count = 0
@@ -175,6 +338,10 @@ export type VisualCard = {{
   full: string;
   attribution: {{ label: string; href: string }};
   download?: {{ label: string; href: string }};
+  /** Optional chapter-scope. When present, the card is only relevant for
+   *  these chapters (used by Precept Austin per-chapter charts). Absent
+   *  for book-level cards that apply to every chapter. */
+  chapters?: number[];
 }};
 
 export type VideoEntry = {{
@@ -218,6 +385,19 @@ export function getVideoForChapter(
     if (chapter >= v.chapterStart && chapter <= v.chapterEnd) return v;
   }}
   return manifest.videos[0] ?? null;
+}}
+
+/** Filter a book's cards to ones relevant to the given chapter. Cards
+ *  with no `chapters` field apply to every chapter (book-level). Cards
+ *  with `chapters` only show when the current chapter is in the list. */
+export function getCardsForChapter(
+  manifest: VisualsManifest | null,
+  chapter: number,
+): VisualCard[] {{
+  if (!manifest) return [];
+  return manifest.cards.filter(
+    (c) => !c.chapters || c.chapters.includes(chapter),
+  );
 }}
 """
     OUT_TS.write_text(ts)
