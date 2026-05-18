@@ -5,6 +5,7 @@ import { vmTokens } from '@/styles/themeStyles';
 import {
   getVisualsForBook,
   getVideoForChapter,
+  getCardsForChapter,
   type VisualCard,
 } from '@/data/visuals/registry';
 
@@ -24,7 +25,13 @@ export default function VisualsPanel({ book, chapter }: Props) {
   // the user lands on a book without curated visuals — we show an empty
   // state instead of crashing.
   const manifest = useMemo(() => getVisualsForBook(book), [book]);
-  const visuals: VisualCard[] = manifest?.cards ?? [];
+  // Filter to cards relevant for this chapter: book-level cards (no
+  // `chapters` field) always pass; chapter-scoped cards (Precept Austin
+  // per-chapter charts) only appear on chapters listed in their array.
+  const visuals: VisualCard[] = useMemo(
+    () => getCardsForChapter(manifest, chapter),
+    [manifest, chapter],
+  );
   // Pick the BibleProject overview whose chapter range covers the current
   // chapter — Genesis 5 → Part 1 (1–11), Genesis 25 → Part 2 (12–50).
   const video = useMemo(
