@@ -93,6 +93,21 @@ export function getBookIdFromSlug(slug: string): number | null {
 }
 
 /**
+ * Convert a display name (e.g. "2 Kings", "Song of Solomon") to its canonical
+ * URL slug ("2-kings", "song-of-solomon"). Spaces become hyphens; everything
+ * is lowercased. Use this whenever you have a `book.name` (display form) and
+ * need to match it against the slug-keyed maps (BOOKS_WITH_VISUALS, etc.).
+ *
+ * Why this exists: state.book is the API's display name. Latent bug
+ * `ffdb4d3` hid the Visuals tab on every hyphenated-slug book because a raw
+ * .toLowerCase() turns "2 Kings" into "2 kings" — space, not hyphen — and
+ * misses the registry key "2-kings".
+ */
+export function nameToSlug(name: string | null | undefined): string {
+  return (name || '').toLowerCase().replace(/ /g, '-');
+}
+
+/**
  * Accepts either a numeric book ID (1–66) or a slug, returns the canonical
  * numeric ID. Used by the /bible/<bookId>/<chapter> route to support both
  * legacy numeric URLs (which we 301-redirect to slug URLs) and slug URLs.

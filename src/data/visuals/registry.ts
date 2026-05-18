@@ -5685,9 +5685,12 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
 },
 };
 
-export const BOOKS_WITH_VISUALS: Set<string> = new Set(
-  Object.keys(VISUALS_REGISTRY),
-);
+// BOOKS_WITH_VISUALS is generated as a separate light-weight module
+// (booksWithVisuals.ts) so the tab-visibility gate in DesktopLayout /
+// CommentaryScreen can check membership without pulling the multi-MB
+// registry into the initial JS bundle. Re-export here for any callers
+// that still expect both from one module.
+export { BOOKS_WITH_VISUALS } from './booksWithVisuals';
 
 /** Lookup helper — slug is matched case-insensitively. */
 export function getVisualsForBook(slug: string): VisualsManifest | null {
