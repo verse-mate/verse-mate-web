@@ -25,6 +25,7 @@ import {
 import ShareIcon from '@/components/ShareIcon';
 import BookSelector from '@/components/BookSelector';
 import StudyPanel from '@/components/StudyPanel';
+import VisualsPanel from '@/components/VisualsPanel';
 import { RightPanelProvider } from '@/contexts/RightPanelContext';
 import { useTopicView } from '@/contexts/TopicViewContext';
 import { AudioInlineEntry } from '@/audio';
@@ -56,7 +57,10 @@ const RIGHT_PANEL_COMPONENTS: Record<Exclude<RightPanelView, 'commentary'>, { co
   signin: { component: SignInScreen, label: 'Sign In' },
 };
 
-type Tab = 'summary' | 'byline' | 'detailed' | 'study';
+type Tab = 'summary' | 'byline' | 'detailed' | 'study' | 'visuals';
+
+// Books that have curated visual aids. Keep in sync with CommentaryScreen.
+const BOOKS_WITH_VISUALS = new Set(['james']);
 
 const MIN_LEFT_PCT = 35;
 const MAX_LEFT_PCT = 80;
@@ -167,7 +171,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const [tab, setTab] = useState<Tab>(() => {
     try {
       const v = sessionStorage.getItem('versemate-commentary-tab');
-      if (v === 'summary' || v === 'byline' || v === 'detailed' || v === 'study') return v;
+      if (v === 'summary' || v === 'byline' || v === 'detailed' || v === 'study' || v === 'visuals') return v;
     } catch { /* ignore */ }
     return 'byline';
   });
@@ -276,12 +280,21 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     };
   }, []);
 
+  const hasVisuals = BOOKS_WITH_VISUALS.has((state.book || '').toLowerCase());
   const tabs: { id: Tab; label: string }[] = [
     { id: 'summary', label: 'Summary' },
     { id: 'byline', label: 'By Line' },
     { id: 'detailed', label: 'Detailed' },
     { id: 'study', label: 'Study' },
+    ...(hasVisuals ? [{ id: 'visuals' as Tab, label: 'Visuals' }] : []),
   ];
+
+  // If the Visuals tab is sticky from sessionStorage but the current book
+  // doesn't have curated visuals, fall back to By Line so the right pane
+  // never routes to an empty tab.
+  useEffect(() => {
+    if (tab === 'visuals' && !hasVisuals) setTab('byline');
+  }, [hasVisuals, tab]);
 
   const otBooks = books.filter(b => b.testament === 'OT');
   const ntBooks = books.filter(b => b.testament === 'NT');
@@ -757,6 +770,12 @@ function CommentaryPanel({
     // the prior chapter's open/collapsed card state persists into the
     // new chapter and then gets written under the new key.
     return <StudyPanel key={`${bookId}:${chapter}`} book={book} bookId={bookId} chapter={chapter} />;
+  }
+
+  // Visuals tab is also commentary-independent — its content comes from
+  // curated assets in /public/visuals/<book>/, not the API.
+  if (tab === 'visuals') {
+    return <VisualsPanel key={`${bookId}:${chapter}`} book={book} bookId={bookId} chapter={chapter} />;
   }
 
   if (commentaries.length === 0) {
