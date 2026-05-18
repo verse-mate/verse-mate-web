@@ -8,13 +8,15 @@ import MarkdownBlock from '@/components/MarkdownBlock';
 import ShareIcon from '@/components/ShareIcon';
 import StudyPanel from '@/components/StudyPanel';
 import VisualsPanel from '@/components/VisualsPanel';
+import { BOOKS_WITH_VISUALS } from '@/data/visuals/registry';
 import { AudioInlineEntry } from '@/audio';
 import { useApp } from '@/contexts/AppContext';
 
 type Tab = 'summary' | 'byline' | 'study' | 'visuals';
 
 // Books that have curated visual aids. Add more as visuals are produced.
-const BOOKS_WITH_VISUALS = new Set(['james']);
+// `BOOKS_WITH_VISUALS` is imported from the generated registry; its
+// contents update automatically when build_manifests.py is re-run.
 
 export default function CommentaryScreen() {
   const { book: bookParam, chapter } = useParams<{ book: string; chapter: string }>();

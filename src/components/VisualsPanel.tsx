@@ -1,18 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Play, X, Copy, Check, ZoomIn, Minimize2 } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import { vmTokens } from '@/styles/themeStyles';
-
-type Visual = {
-  id: string;
-  title: string;
-  caption: string;
-  thumb: string;
-  full: string;
-  attribution: { label: string; href: string };
-  /** Optional download link (PDF) shown on the lightbox. */
-  download?: { label: string; href: string };
-};
+import {
+  getVisualsForBook,
+  getVideoForChapter,
+  type VisualCard,
+} from '@/data/visuals/registry';
 
 type Props = {
   book: string;
@@ -20,76 +14,23 @@ type Props = {
   chapter: number;
 };
 
-// BibleProject "Book of James Summary: A Complete Animated Overview" — CC BY-SA 4.0.
-// YouTube is the most reliable cross-browser embed source for their videos.
-const BP_VIDEO_YT_ID = 'qn-hLHWwRYY';
-const BP_VIDEO_EMBED = `https://www.youtube-nocookie.com/embed/${BP_VIDEO_YT_ID}?autoplay=1&rel=0&modestbranding=1`;
-const BP_VIDEO_PAGE = 'https://bibleproject.com/videos/james/';
-
-const JAMES_VISUALS: Visual[] = [
-  {
-    id: 'bp-poster',
-    title: 'BibleProject — Read Scripture: James',
-    caption:
-      'Hand-illustrated single-page overview: introduction, twelve teachings on wholehearted devotion to Jesus, cross-references to the Sermon on the Mount.',
-    thumb: '/visuals/james/bibleproject_james_poster.jpg',
-    full: '/visuals/james/bibleproject_james_poster.jpg',
-    attribution: {
-      label: 'BibleProject · CC BY-SA 4.0',
-      href: 'https://bibleproject.com/guides/book-of-james/',
-    },
-  },
-  {
-    id: 'swindoll-chart',
-    title: 'Chuck Swindoll — Structural Chart',
-    caption:
-      "Divides James into major sections, anchoring each with theme and key verse. From Insight for Living's free Bible charts.",
-    thumb: '/visuals/james/swindoll_james_chart.png',
-    full: '/visuals/james/swindoll_james_chart.png',
-    attribution: {
-      label: 'Insight for Living Ministries',
-      href: 'https://insight.org/resources/bible/the-general-epistles/james',
-    },
-    download: {
-      label: 'Original PDF',
-      href: 'https://cdn.iflmedia.com/pdf/bible-charts/James-Bible-chart.pdf',
-    },
-  },
-  {
-    id: 'vm-parallels',
-    title: 'VerseMate Original — James & Proverbs',
-    caption:
-      'Twelve thematic parallels in NASB 1995 showing how James drew his teaching from Solomon’s wisdom well.',
-    thumb: '/visuals/james/versemate_james_proverbs_parallels.png',
-    full: '/visuals/james/versemate_james_proverbs_parallels.png',
-    attribution: { label: 'VerseMate Original', href: '#' },
-    download: {
-      label: 'Print-ready PDF',
-      href: '/visuals/james/versemate_james_proverbs_parallels.pdf',
-    },
-  },
-  {
-    id: 'vm-heatmap',
-    title: 'VerseMate Original — Architecture of James',
-    caption:
-      'Dot-matrix heatmap of faith, works, tongue, and wisdom across all 108 verses. Chapter 2 = the faith/works debate; chapter 3 = the tongue treatise.',
-    thumb: '/visuals/james/versemate_james_keyword_heatmap.png',
-    full: '/visuals/james/versemate_james_keyword_heatmap.png',
-    attribution: { label: 'VerseMate Original', href: '#' },
-    download: {
-      label: 'Print-ready PDF',
-      href: '/visuals/james/versemate_james_keyword_heatmap.pdf',
-    },
-  },
-];
-
 export default function VisualsPanel({ book, chapter }: Props) {
   const [openImageId, setOpenImageId] = useState<string | null>(null);
   const [videoOpen, setVideoOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [zoomed, setZoomed] = useState(false);
 
-  const visuals = JAMES_VISUALS;
+  // Per-book manifest from the generated registry. Falls back to null when
+  // the user lands on a book without curated visuals — we show an empty
+  // state instead of crashing.
+  const manifest = useMemo(() => getVisualsForBook(book), [book]);
+  const visuals: VisualCard[] = manifest?.cards ?? [];
+  // Pick the BibleProject overview whose chapter range covers the current
+  // chapter — Genesis 5 → Part 1 (1–11), Genesis 25 → Part 2 (12–50).
+  const video = useMemo(
+    () => getVideoForChapter(manifest, chapter),
+    [manifest, chapter],
+  );
   const openImage = visuals.find((v) => v.id === openImageId) ?? null;
 
   // Clear modals when book/chapter changes — the YouTube iframe unmounts
@@ -122,8 +63,7 @@ export default function VisualsPanel({ book, chapter }: Props) {
     const lines = [
       `Visuals for ${book} ${chapter}`,
       '',
-      `Video: ${BP_VIDEO_PAGE}`,
-      '',
+      ...(video ? [`Video: ${video.page}`, ''] : []),
       ...visuals.flatMap((v) => [`${v.title} — ${v.caption}`, `Source: ${v.attribution.label}`, '']),
     ];
     return lines.join('\n').trim();
@@ -160,6 +100,31 @@ export default function VisualsPanel({ book, chapter }: Props) {
       })
       .catch(() => {});
   };
+
+  // Empty state — book has no curated visuals yet. Shouldn't normally
+  // appear because the Visuals tab is gated on BOOKS_WITH_VISUALS, but
+  // we render a graceful message instead of a blank page just in case
+  // the registry and the tab-gate ever drift apart.
+  if (!manifest) {
+    return (
+      <div style={{ paddingTop: 32, textAlign: 'center' }}>
+        <h2
+          style={{
+            fontFamily: 'Roboto, sans-serif',
+            fontWeight: 700,
+            fontSize: 20,
+            color: vmTokens.textPrimary,
+            marginBottom: 12,
+          }}
+        >
+          Visuals for {book} {chapter}
+        </h2>
+        <p style={{ fontFamily: 'Roboto, sans-serif', fontSize: 14, color: vmTokens.textSecondary }}>
+          No curated visuals for this book yet.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -208,11 +173,14 @@ export default function VisualsPanel({ book, chapter }: Props) {
         </div>
       </div>
 
-      {/* Video card — full-width, clickable, opens overlay player. */}
+      {/* Video card — only rendered when a YouTube ID is known for this
+          book. (The James launch had a verified ID; we'll add more book
+          videos as they're verified into the registry.) */}
+      {video && (
       <button
         onClick={() => setVideoOpen(true)}
         data-testid="visuals-video-card"
-        aria-label="Play the BibleProject Book of James overview video"
+        aria-label={`Play the BibleProject ${book} overview video`}
         style={{
           width: '100%',
           aspectRatio: '16 / 9',
@@ -227,7 +195,7 @@ export default function VisualsPanel({ book, chapter }: Props) {
         }}
       >
         <img
-          src="/visuals/james/bibleproject_james_poster.jpg"
+          src={visuals[0]?.thumb ?? ''}
           alt=""
           aria-hidden="true"
           style={{
@@ -283,7 +251,7 @@ export default function VisualsPanel({ book, chapter }: Props) {
                 marginBottom: 2,
               }}
             >
-              Book of James — Overview
+              {video.title}
             </div>
             <div
               style={{
@@ -292,7 +260,17 @@ export default function VisualsPanel({ book, chapter }: Props) {
                 color: 'rgba(250,246,234,0.85)',
               }}
             >
-              8 min · animated explainer
+              BibleProject overview · animated explainer
+            </div>
+            <div
+              style={{
+                fontFamily: 'Roboto, sans-serif',
+                fontSize: 11,
+                color: 'rgba(250,246,234,0.75)',
+                marginTop: 4,
+              }}
+            >
+              Covers chapters {video.chapterStart}–{video.chapterEnd}
             </div>
           </div>
         </div>
@@ -317,11 +295,9 @@ export default function VisualsPanel({ book, chapter }: Props) {
           BibleProject · CC BY-SA 4.0
         </div>
       </button>
-      {/* Video attribution is shown as a small corner badge on the video card
-          itself (see below) and again inside the play overlay; no separate
-          attribution row below the card. Spacer keeps the image grid from
-          colliding with the card. */}
-      <div style={{ height: 20 }} />
+      )}
+      {/* Spacer between the video card (when shown) and the image grid. */}
+      <div style={{ height: video ? 20 : 0 }} />
 
       {/* Image grid — 2 columns on tablet/desktop, 1 on narrow mobile. */}
       <div
@@ -443,7 +419,7 @@ export default function VisualsPanel({ book, chapter }: Props) {
       </div>
 
       {/* === Video Modal === */}
-      {videoOpen && (
+      {videoOpen && video && (
         <Overlay onClose={() => setVideoOpen(false)} testId="visuals-video-overlay">
           <div
             style={{
@@ -466,7 +442,7 @@ export default function VisualsPanel({ book, chapter }: Props) {
               }}
             >
               <iframe
-                src={BP_VIDEO_EMBED}
+                src={video.embedUrl}
                 title="Book of James — BibleProject Overview"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -493,7 +469,7 @@ export default function VisualsPanel({ book, chapter }: Props) {
             >
               Video by{' '}
               <a
-                href={BP_VIDEO_PAGE}
+                href={video.page}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: vmTokens.gold, textDecoration: 'none' }}
