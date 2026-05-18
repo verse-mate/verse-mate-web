@@ -87,6 +87,7 @@ export default function VisualsPanel({ book, chapter }: Props) {
   const [openImageId, setOpenImageId] = useState<string | null>(null);
   const [videoOpen, setVideoOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [zoomed, setZoomed] = useState(false);
 
   const visuals = JAMES_VISUALS;
   const openImage = visuals.find((v) => v.id === openImageId) ?? null;
@@ -96,7 +97,13 @@ export default function VisualsPanel({ book, chapter }: Props) {
   useEffect(() => {
     setOpenImageId(null);
     setVideoOpen(false);
+    setZoomed(false);
   }, [book, chapter]);
+
+  // Reset zoom when switching between images or closing the lightbox.
+  useEffect(() => {
+    setZoomed(false);
+  }, [openImageId]);
 
   // Close any open modal on Escape.
   useEffect(() => {
@@ -389,28 +396,20 @@ export default function VisualsPanel({ book, chapter }: Props) {
                 {v.attribution.label}
               </div>
             </div>
-            <div style={{ padding: '10px 12px 12px' }}>
+            <div style={{ padding: '8px 12px 10px' }}>
               <div
                 style={{
                   fontFamily: 'Roboto, sans-serif',
                   fontWeight: 600,
-                  fontSize: 14,
+                  fontSize: 13,
                   color: vmTokens.textPrimary,
-                  marginBottom: 4,
-                  lineHeight: '20px',
+                  lineHeight: '18px',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
                 }}
               >
                 {v.title}
-              </div>
-              <div
-                style={{
-                  fontFamily: 'Roboto, sans-serif',
-                  fontSize: 12,
-                  color: vmTokens.textSecondary,
-                  lineHeight: '16px',
-                }}
-              >
-                {v.caption}
               </div>
             </div>
           </button>
@@ -507,126 +506,159 @@ export default function VisualsPanel({ book, chapter }: Props) {
         </Overlay>
       )}
 
-      {/* === Image Lightbox === */}
+      {/* === Image Lightbox — image-first, minimal chrome === */}
       {openImage && (
-        <Overlay onClose={() => setOpenImageId(null)} testId="visuals-image-overlay">
+        <Overlay onClose={() => setOpenImageId(null)} testId="visuals-image-overlay" fill>
           <div
             style={{
-              width: '100%',
-              maxWidth: 1200,
-              maxHeight: '92vh',
-              background: vmTokens.surfaceRaisedBg,
-              borderRadius: 12,
-              overflow: 'hidden',
+              width: '100vw',
+              height: '100vh',
               position: 'relative',
               display: 'flex',
               flexDirection: 'column',
             }}
             onClick={(e) => e.stopPropagation()}
           >
-            <CloseButton onClose={() => setOpenImageId(null)} />
+            {/* Thin top bar: title + download + close. No card chrome below. */}
             <div
               style={{
-                flex: 1,
-                overflow: 'auto',
-                background: vmTokens.pageBg,
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                zIndex: 3,
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                padding: 16,
-                minHeight: 0,
+                gap: 12,
+                padding: '10px 12px',
+                background: 'linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%)',
               }}
             >
-              <img
-                src={openImage.full}
-                alt={openImage.title}
-                style={{
-                  maxWidth: '100%',
-                  maxHeight: '100%',
-                  height: 'auto',
-                  display: 'block',
-                  objectFit: 'contain',
-                }}
-              />
-            </div>
-            <div
-              style={{
-                padding: 16,
-                borderTop: `1px solid ${vmTokens.divider}`,
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 10,
-              }}
-            >
-              <div>
-                <div
-                  style={{
-                    fontFamily: 'Roboto, sans-serif',
-                    fontWeight: 700,
-                    fontSize: 15,
-                    color: vmTokens.textPrimary,
-                    marginBottom: 4,
-                    lineHeight: '20px',
-                  }}
-                >
-                  {openImage.title}
-                </div>
-                <div
-                  style={{
-                    fontFamily: 'Roboto, sans-serif',
-                    fontSize: 12,
-                    color: vmTokens.textSecondary,
-                    lineHeight: '18px',
-                  }}
-                >
-                  {openImage.caption}
-                </div>
-              </div>
               <div
                 style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  gap: 10,
+                  flex: 1,
+                  minWidth: 0,
+                  fontFamily: 'Roboto, sans-serif',
+                  fontWeight: 600,
+                  fontSize: 14,
+                  color: '#FAF6EA',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
                 }}
               >
+                {openImage.title}
+              </div>
+              {openImage.download && (
                 <a
-                  href={openImage.attribution.href}
+                  href={openImage.download.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
                     fontFamily: 'Roboto, sans-serif',
-                    fontSize: 11,
-                    color: vmTokens.gold,
-                    textTransform: 'uppercase',
-                    letterSpacing: 1.2,
+                    fontSize: 12,
                     fontWeight: 500,
+                    color: '#FAF6EA',
+                    background: 'rgba(0,0,0,0.55)',
+                    border: `1px solid ${vmTokens.gold}`,
+                    padding: '4px 10px',
+                    borderRadius: 4,
                     textDecoration: 'none',
+                    whiteSpace: 'nowrap',
                   }}
+                  data-testid="visuals-lightbox-download"
                 >
-                  {openImage.attribution.label}
+                  PDF ↓
                 </a>
-                {openImage.download && (
-                  <a
-                    href={openImage.download.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      fontFamily: 'Roboto, sans-serif',
-                      fontSize: 13,
-                      color: vmTokens.gold,
-                      border: `1px solid ${vmTokens.gold}`,
-                      padding: '6px 12px',
-                      borderRadius: 6,
-                      textDecoration: 'none',
-                      fontWeight: 500,
-                    }}
-                  >
-                    {openImage.download.label}
-                  </a>
-                )}
-              </div>
+              )}
+              <button
+                onClick={() => setOpenImageId(null)}
+                aria-label="Close"
+                data-testid="visuals-overlay-close"
+                style={{
+                  width: 36,
+                  height: 36,
+                  borderRadius: '50%',
+                  background: 'rgba(0,0,0,0.55)',
+                  border: 'none',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <X size={20} color="#FAF6EA" />
+              </button>
+            </div>
+
+            {/* Image area — fills the entire viewport. Click toggles between
+                fit-to-screen and 1:1 native size (which scrolls). Mobile
+                browsers can also pinch-zoom natively via touch-action. */}
+            <div
+              style={{
+                flex: 1,
+                overflow: 'auto',
+                display: 'flex',
+                alignItems: zoomed ? 'flex-start' : 'center',
+                justifyContent: zoomed ? 'flex-start' : 'center',
+                touchAction: 'pinch-zoom',
+                WebkitOverflowScrolling: 'touch',
+              }}
+              onClick={() => setZoomed((z) => !z)}
+            >
+              <img
+                src={openImage.full}
+                alt={openImage.title}
+                draggable={false}
+                style={
+                  zoomed
+                    ? {
+                        width: 'auto',
+                        maxWidth: 'none',
+                        height: 'auto',
+                        cursor: 'zoom-out',
+                        display: 'block',
+                        userSelect: 'none',
+                      }
+                    : {
+                        maxWidth: '100%',
+                        maxHeight: '100%',
+                        height: 'auto',
+                        cursor: 'zoom-in',
+                        display: 'block',
+                        objectFit: 'contain',
+                        userSelect: 'none',
+                      }
+                }
+              />
+            </div>
+
+            {/* Tiny corner attribution — required by CC BY-SA but unobtrusive. */}
+            <div
+              style={{
+                position: 'absolute',
+                bottom: 10,
+                left: 10,
+                zIndex: 3,
+                fontFamily: 'Roboto, sans-serif',
+                fontSize: 10,
+                color: 'rgba(250,246,234,0.85)',
+                background: 'rgba(0,0,0,0.55)',
+                padding: '3px 8px',
+                borderRadius: 4,
+                pointerEvents: 'auto',
+              }}
+            >
+              <a
+                href={openImage.attribution.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                style={{ color: 'inherit', textDecoration: 'none' }}
+              >
+                {openImage.attribution.label}
+              </a>
             </div>
           </div>
         </Overlay>
@@ -639,10 +671,14 @@ function Overlay({
   children,
   onClose,
   testId,
+  fill,
 }: {
   children: React.ReactNode;
   onClose: () => void;
   testId?: string;
+  /** Fully-opaque dark backdrop — used for the image lightbox where we
+   *  want zero bleed-through from the underlying gallery. */
+  fill?: boolean;
 }) {
   return (
     <div
@@ -651,11 +687,11 @@ function Overlay({
       style={{
         position: 'fixed',
         inset: 0,
-        background: 'rgba(0,0,0,0.75)',
+        background: fill ? '#0a0a0a' : 'rgba(0,0,0,0.75)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 16,
+        padding: fill ? 0 : 16,
         zIndex: 1000,
       }}
     >
