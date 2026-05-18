@@ -22,16 +22,17 @@ test.skip(
 );
 
 test.describe('Commentary — tabs', () => {
-  test('all three tab buttons render', async ({ page }) => {
+  test('all four tab buttons render', async ({ page }) => {
     const commentary = new CommentaryPage(page);
     await commentary.goto('Genesis', 1);
 
     await expect(commentary.tabSummary).toBeVisible();
     await expect(commentary.tabByline).toBeVisible();
     await expect(commentary.tabStudy).toBeVisible();
-    // Detailed has been removed; Visuals is gated to books with curated
-    // assets and should NOT be visible on Genesis.
-    await expect(commentary.tabVisuals).toHaveCount(0);
+    // Visuals now ships for every book in the registry (Genesis through
+    // Revelation) — minimum content is the BibleProject overview poster
+    // plus per-chapter overview video.
+    await expect(commentary.tabVisuals).toBeVisible();
   });
 
   test('Summary tab is active by default and shows the share button', async ({ page }) => {
@@ -60,19 +61,21 @@ test.describe('Commentary — tabs', () => {
     await expect(commentary.shareByline).toBeVisible();
   });
 
-  test('Visuals tab renders on James and stays hidden on Genesis', async ({ page }) => {
+  test('Visuals tab renders on every book — Genesis (poster only) and James (full set)', async ({ page }) => {
     const commentary = new CommentaryPage(page);
 
-    // Gated OFF for books without curated visuals (Genesis is one).
+    // Genesis ships only the BibleProject poster + the chapter-aware
+    // overview video (no hand-curated originals yet).
     await commentary.goto('Genesis', 1);
-    await expect(commentary.tabVisuals).toHaveCount(0);
+    await expect(commentary.tabVisuals).toBeVisible();
+    await commentary.tabVisuals.click();
+    await expect(page.getByText(/visuals for genesis 1/i)).toBeVisible({ timeout: 15_000 });
 
-    // Gated ON for James — the launch book for the Visuals catalogue.
+    // James is the launch book with all four hand-curated cards
+    // (BibleProject poster, Swindoll chart, parallels, heatmap).
     await commentary.goto('James', 1);
     await expect(commentary.tabVisuals).toBeVisible();
     await commentary.tabVisuals.click();
-    // The panel renders a "Visuals for James 1" heading; either it shows
-    // immediately or the body scrolls to it. Wait on visibility.
     await expect(page.getByText(/visuals for james 1/i)).toBeVisible({ timeout: 15_000 });
   });
 });
