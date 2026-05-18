@@ -74,28 +74,40 @@ def book_cards(slug: str, display: str) -> list[dict]:
             },
         })
 
-    # 2. James-only hand-curated originals (Swindoll, Parallels, Heatmap).
+    # 2. Chuck Swindoll's Bible chart — Insight for Living publishes a chart
+    # for every book in the Protestant canon, all reachable via a predictable
+    # CDN URL pattern. We render page 1 to a local PNG thumbnail; the
+    # download link goes straight back to the upstream PDF.
+    swindoll_png = book_dir / "swindoll_chart.png"
+    if swindoll_png.exists():
+        # The CDN uses TitleCase, hyphenated for multi-word slugs (matches
+        # SLUG_TO_CDN in ingest_swindoll.py).
+        cdn_book = "-".join(p.capitalize() for p in slug.split("-"))
+        if slug == "song-of-solomon":
+            cdn_book = "Song-of-Solomon"
+        cards.append({
+            "id": "swindoll-chart",
+            "title": f"Chuck Swindoll — {display} Bible Chart",
+            "caption": (
+                f"Single-page structural chart of {display}, organizing the "
+                "book by major sections, themes, and key verses. Free "
+                "resource from Insight for Living Ministries."
+            ),
+            "thumb": f"/visuals/{slug}/swindoll_chart.png",
+            "full":  f"/visuals/{slug}/swindoll_chart.png",
+            "attribution": {
+                "label": "Insight for Living Ministries",
+                "href":  "https://insight.org/resources/bible",
+            },
+            "download": {
+                "label": "Original PDF",
+                "href":  f"https://cdn.iflmedia.com/pdf/bible-charts/{cdn_book}-Bible-chart.pdf",
+            },
+        })
+
+    # 3. James-only hand-curated originals (Parallels + Heatmap). Swindoll
+    # is now covered above for every book including James.
     if slug in BOOKS_WITH_ORIGINALS and slug == "james":
-        swindoll = book_dir / "swindoll_james_chart.png"
-        if swindoll.exists():
-            cards.append({
-                "id": "swindoll-chart",
-                "title": "Chuck Swindoll — Structural Chart",
-                "caption": (
-                    "Divides James into major sections, anchoring each with "
-                    "theme and key verse. From Insight for Living's free Bible charts."
-                ),
-                "thumb": "/visuals/james/swindoll_james_chart.png",
-                "full":  "/visuals/james/swindoll_james_chart.png",
-                "attribution": {
-                    "label": "Insight for Living Ministries",
-                    "href": "https://insight.org/resources/bible/the-general-epistles/james",
-                },
-                "download": {
-                    "label": "Original PDF",
-                    "href": "https://cdn.iflmedia.com/pdf/bible-charts/James-Bible-chart.pdf",
-                },
-            })
         parallels = book_dir / "versemate_james_proverbs_parallels.png"
         if parallels.exists():
             cards.append({

@@ -71,6 +71,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-genesis/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Genesis Bible Chart",
+      "caption": "Single-page structural chart of Genesis, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/genesis/swindoll_chart.png",
+      "full": "/visuals/genesis/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Genesis-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -104,6 +119,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-exodus/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Exodus Bible Chart",
+      "caption": "Single-page structural chart of Exodus, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/exodus/swindoll_chart.png",
+      "full": "/visuals/exodus/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Exodus-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -128,6 +158,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-leviticus/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Leviticus Bible Chart",
+      "caption": "Single-page structural chart of Leviticus, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/leviticus/swindoll_chart.png",
+      "full": "/visuals/leviticus/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Leviticus-Bible-chart.pdf"
       }
     }
   ]
@@ -154,6 +199,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-numbers/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Numbers Bible Chart",
+      "caption": "Single-page structural chart of Numbers, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/numbers/swindoll_chart.png",
+      "full": "/visuals/numbers/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Numbers-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -178,6 +238,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-deuteronomy/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Deuteronomy Bible Chart",
+      "caption": "Single-page structural chart of Deuteronomy, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/deuteronomy/swindoll_chart.png",
+      "full": "/visuals/deuteronomy/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Deuteronomy-Bible-chart.pdf"
       }
     }
   ]
@@ -204,6 +279,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-joshua/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Joshua Bible Chart",
+      "caption": "Single-page structural chart of Joshua, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/joshua/swindoll_chart.png",
+      "full": "/visuals/joshua/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Joshua-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -228,6 +318,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-judges/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Judges Bible Chart",
+      "caption": "Single-page structural chart of Judges, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/judges/swindoll_chart.png",
+      "full": "/visuals/judges/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Judges-Bible-chart.pdf"
       }
     }
   ]
@@ -254,6 +359,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-ruth/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Ruth Bible Chart",
+      "caption": "Single-page structural chart of Ruth, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/ruth/swindoll_chart.png",
+      "full": "/visuals/ruth/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Ruth-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -278,6 +398,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-samuel/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 1 Samuel Bible Chart",
+      "caption": "Single-page structural chart of 1 Samuel, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/1-samuel/swindoll_chart.png",
+      "full": "/visuals/1-samuel/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/1-Samuel-Bible-chart.pdf"
       }
     }
   ]
@@ -304,6 +439,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-samuel/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 2 Samuel Bible Chart",
+      "caption": "Single-page structural chart of 2 Samuel, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/2-samuel/swindoll_chart.png",
+      "full": "/visuals/2-samuel/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/2-Samuel-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -328,6 +478,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-kings/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 1 Kings Bible Chart",
+      "caption": "Single-page structural chart of 1 Kings, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/1-kings/swindoll_chart.png",
+      "full": "/visuals/1-kings/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/1-Kings-Bible-chart.pdf"
       }
     }
   ]
@@ -354,6 +519,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-kings/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 2 Kings Bible Chart",
+      "caption": "Single-page structural chart of 2 Kings, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/2-kings/swindoll_chart.png",
+      "full": "/visuals/2-kings/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/2-Kings-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -378,6 +558,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-chronicles/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 1 Chronicles Bible Chart",
+      "caption": "Single-page structural chart of 1 Chronicles, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/1-chronicles/swindoll_chart.png",
+      "full": "/visuals/1-chronicles/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/1-Chronicles-Bible-chart.pdf"
       }
     }
   ]
@@ -404,6 +599,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-chronicles/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 2 Chronicles Bible Chart",
+      "caption": "Single-page structural chart of 2 Chronicles, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/2-chronicles/swindoll_chart.png",
+      "full": "/visuals/2-chronicles/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/2-Chronicles-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -428,6 +638,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-ezra/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Ezra Bible Chart",
+      "caption": "Single-page structural chart of Ezra, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/ezra/swindoll_chart.png",
+      "full": "/visuals/ezra/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Ezra-Bible-chart.pdf"
       }
     }
   ]
@@ -454,6 +679,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-nehemiah/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Nehemiah Bible Chart",
+      "caption": "Single-page structural chart of Nehemiah, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/nehemiah/swindoll_chart.png",
+      "full": "/visuals/nehemiah/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Nehemiah-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -478,6 +718,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-esther/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Esther Bible Chart",
+      "caption": "Single-page structural chart of Esther, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/esther/swindoll_chart.png",
+      "full": "/visuals/esther/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Esther-Bible-chart.pdf"
       }
     }
   ]
@@ -504,6 +759,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-job/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Job Bible Chart",
+      "caption": "Single-page structural chart of Job, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/job/swindoll_chart.png",
+      "full": "/visuals/job/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Job-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -528,6 +798,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-psalms/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Psalms Bible Chart",
+      "caption": "Single-page structural chart of Psalms, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/psalms/swindoll_chart.png",
+      "full": "/visuals/psalms/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Psalms-Bible-chart.pdf"
       }
     }
   ]
@@ -554,6 +839,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-proverbs/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Proverbs Bible Chart",
+      "caption": "Single-page structural chart of Proverbs, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/proverbs/swindoll_chart.png",
+      "full": "/visuals/proverbs/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Proverbs-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -579,6 +879,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-ecclesiastes/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Ecclesiastes Bible Chart",
+      "caption": "Single-page structural chart of Ecclesiastes, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/ecclesiastes/swindoll_chart.png",
+      "full": "/visuals/ecclesiastes/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Ecclesiastes-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -603,6 +918,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-song-of-solomon/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Song of Songs Bible Chart",
+      "caption": "Single-page structural chart of Song of Songs, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/song-of-solomon/swindoll_chart.png",
+      "full": "/visuals/song-of-solomon/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Song-of-Solomon-Bible-chart.pdf"
       }
     }
   ]
@@ -637,6 +967,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-isaiah/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Isaiah Bible Chart",
+      "caption": "Single-page structural chart of Isaiah, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/isaiah/swindoll_chart.png",
+      "full": "/visuals/isaiah/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Isaiah-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -662,6 +1007,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-jeremiah/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Jeremiah Bible Chart",
+      "caption": "Single-page structural chart of Jeremiah, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/jeremiah/swindoll_chart.png",
+      "full": "/visuals/jeremiah/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Jeremiah-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -686,6 +1046,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-lamentations/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Lamentations Bible Chart",
+      "caption": "Single-page structural chart of Lamentations, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/lamentations/swindoll_chart.png",
+      "full": "/visuals/lamentations/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Lamentations-Bible-chart.pdf"
       }
     }
   ]
@@ -720,6 +1095,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-ezekiel/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Ezekiel Bible Chart",
+      "caption": "Single-page structural chart of Ezekiel, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/ezekiel/swindoll_chart.png",
+      "full": "/visuals/ezekiel/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Ezekiel-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -744,6 +1134,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-daniel/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Daniel Bible Chart",
+      "caption": "Single-page structural chart of Daniel, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/daniel/swindoll_chart.png",
+      "full": "/visuals/daniel/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Daniel-Bible-chart.pdf"
       }
     }
   ]
@@ -770,6 +1175,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-hosea/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Hosea Bible Chart",
+      "caption": "Single-page structural chart of Hosea, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/hosea/swindoll_chart.png",
+      "full": "/visuals/hosea/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Hosea-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -794,6 +1214,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-joel/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Joel Bible Chart",
+      "caption": "Single-page structural chart of Joel, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/joel/swindoll_chart.png",
+      "full": "/visuals/joel/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Joel-Bible-chart.pdf"
       }
     }
   ]
@@ -820,6 +1255,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-amos/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Amos Bible Chart",
+      "caption": "Single-page structural chart of Amos, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/amos/swindoll_chart.png",
+      "full": "/visuals/amos/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Amos-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -844,6 +1294,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-obadiah/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Obadiah Bible Chart",
+      "caption": "Single-page structural chart of Obadiah, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/obadiah/swindoll_chart.png",
+      "full": "/visuals/obadiah/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Obadiah-Bible-chart.pdf"
       }
     }
   ]
@@ -870,6 +1335,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-jonah/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Jonah Bible Chart",
+      "caption": "Single-page structural chart of Jonah, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/jonah/swindoll_chart.png",
+      "full": "/visuals/jonah/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Jonah-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -894,6 +1374,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-micah/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Micah Bible Chart",
+      "caption": "Single-page structural chart of Micah, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/micah/swindoll_chart.png",
+      "full": "/visuals/micah/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Micah-Bible-chart.pdf"
       }
     }
   ]
@@ -920,6 +1415,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-nahum/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Nahum Bible Chart",
+      "caption": "Single-page structural chart of Nahum, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/nahum/swindoll_chart.png",
+      "full": "/visuals/nahum/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Nahum-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -944,6 +1454,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-habakkuk/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Habakkuk Bible Chart",
+      "caption": "Single-page structural chart of Habakkuk, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/habakkuk/swindoll_chart.png",
+      "full": "/visuals/habakkuk/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Habakkuk-Bible-chart.pdf"
       }
     }
   ]
@@ -970,6 +1495,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-zephaniah/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Zephaniah Bible Chart",
+      "caption": "Single-page structural chart of Zephaniah, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/zephaniah/swindoll_chart.png",
+      "full": "/visuals/zephaniah/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Zephaniah-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -994,6 +1534,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-haggai/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Haggai Bible Chart",
+      "caption": "Single-page structural chart of Haggai, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/haggai/swindoll_chart.png",
+      "full": "/visuals/haggai/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Haggai-Bible-chart.pdf"
       }
     }
   ]
@@ -1020,6 +1575,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-zechariah/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Zechariah Bible Chart",
+      "caption": "Single-page structural chart of Zechariah, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/zechariah/swindoll_chart.png",
+      "full": "/visuals/zechariah/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Zechariah-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1044,6 +1614,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-malachi/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Malachi Bible Chart",
+      "caption": "Single-page structural chart of Malachi, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/malachi/swindoll_chart.png",
+      "full": "/visuals/malachi/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Malachi-Bible-chart.pdf"
       }
     }
   ]
@@ -1078,6 +1663,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-matthew/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Matthew Bible Chart",
+      "caption": "Single-page structural chart of Matthew, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/matthew/swindoll_chart.png",
+      "full": "/visuals/matthew/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Matthew-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1102,6 +1702,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-mark/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Mark Bible Chart",
+      "caption": "Single-page structural chart of Mark, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/mark/swindoll_chart.png",
+      "full": "/visuals/mark/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Mark-Bible-chart.pdf"
       }
     }
   ]
@@ -1136,6 +1751,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-luke/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Luke Bible Chart",
+      "caption": "Single-page structural chart of Luke, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/luke/swindoll_chart.png",
+      "full": "/visuals/luke/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Luke-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1168,6 +1798,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-john/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — John Bible Chart",
+      "caption": "Single-page structural chart of John, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/john/swindoll_chart.png",
+      "full": "/visuals/john/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/John-Bible-chart.pdf"
       }
     }
   ]
@@ -1202,6 +1847,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-acts/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Acts Bible Chart",
+      "caption": "Single-page structural chart of Acts, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/acts/swindoll_chart.png",
+      "full": "/visuals/acts/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Acts-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1235,6 +1895,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-romans/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Romans Bible Chart",
+      "caption": "Single-page structural chart of Romans, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/romans/swindoll_chart.png",
+      "full": "/visuals/romans/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Romans-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1259,6 +1934,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-corinthians/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 1 Corinthians Bible Chart",
+      "caption": "Single-page structural chart of 1 Corinthians, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/1-corinthians/swindoll_chart.png",
+      "full": "/visuals/1-corinthians/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/1-Corinthians-Bible-chart.pdf"
       }
     }
   ]
@@ -1285,6 +1975,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-corinthians/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 2 Corinthians Bible Chart",
+      "caption": "Single-page structural chart of 2 Corinthians, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/2-corinthians/swindoll_chart.png",
+      "full": "/visuals/2-corinthians/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/2-Corinthians-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1309,6 +2014,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-galatians/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Galatians Bible Chart",
+      "caption": "Single-page structural chart of Galatians, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/galatians/swindoll_chart.png",
+      "full": "/visuals/galatians/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Galatians-Bible-chart.pdf"
       }
     }
   ]
@@ -1335,6 +2055,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-ephesians/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Ephesians Bible Chart",
+      "caption": "Single-page structural chart of Ephesians, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/ephesians/swindoll_chart.png",
+      "full": "/visuals/ephesians/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Ephesians-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1359,6 +2094,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-philippians/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Philippians Bible Chart",
+      "caption": "Single-page structural chart of Philippians, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/philippians/swindoll_chart.png",
+      "full": "/visuals/philippians/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Philippians-Bible-chart.pdf"
       }
     }
   ]
@@ -1385,6 +2135,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-colossians/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Colossians Bible Chart",
+      "caption": "Single-page structural chart of Colossians, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/colossians/swindoll_chart.png",
+      "full": "/visuals/colossians/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Colossians-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1409,6 +2174,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-thessalonians/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 1 Thessalonians Bible Chart",
+      "caption": "Single-page structural chart of 1 Thessalonians, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/1-thessalonians/swindoll_chart.png",
+      "full": "/visuals/1-thessalonians/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/1-Thessalonians-Bible-chart.pdf"
       }
     }
   ]
@@ -1435,6 +2215,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-thessalonians/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 2 Thessalonians Bible Chart",
+      "caption": "Single-page structural chart of 2 Thessalonians, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/2-thessalonians/swindoll_chart.png",
+      "full": "/visuals/2-thessalonians/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/2-Thessalonians-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1459,6 +2254,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-timothy/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 1 Timothy Bible Chart",
+      "caption": "Single-page structural chart of 1 Timothy, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/1-timothy/swindoll_chart.png",
+      "full": "/visuals/1-timothy/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/1-Timothy-Bible-chart.pdf"
       }
     }
   ]
@@ -1485,6 +2295,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-timothy/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 2 Timothy Bible Chart",
+      "caption": "Single-page structural chart of 2 Timothy, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/2-timothy/swindoll_chart.png",
+      "full": "/visuals/2-timothy/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/2-Timothy-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1509,6 +2334,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-titus/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Titus Bible Chart",
+      "caption": "Single-page structural chart of Titus, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/titus/swindoll_chart.png",
+      "full": "/visuals/titus/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Titus-Bible-chart.pdf"
       }
     }
   ]
@@ -1535,6 +2375,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-philemon/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Philemon Bible Chart",
+      "caption": "Single-page structural chart of Philemon, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/philemon/swindoll_chart.png",
+      "full": "/visuals/philemon/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Philemon-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1559,6 +2414,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-hebrews/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Hebrews Bible Chart",
+      "caption": "Single-page structural chart of Hebrews, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/hebrews/swindoll_chart.png",
+      "full": "/visuals/hebrews/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Hebrews-Bible-chart.pdf"
       }
     }
   ]
@@ -1588,13 +2458,13 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
     },
     {
       "id": "swindoll-chart",
-      "title": "Chuck Swindoll — Structural Chart",
-      "caption": "Divides James into major sections, anchoring each with theme and key verse. From Insight for Living's free Bible charts.",
-      "thumb": "/visuals/james/swindoll_james_chart.png",
-      "full": "/visuals/james/swindoll_james_chart.png",
+      "title": "Chuck Swindoll — James Bible Chart",
+      "caption": "Single-page structural chart of James, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/james/swindoll_chart.png",
+      "full": "/visuals/james/swindoll_chart.png",
       "attribution": {
         "label": "Insight for Living Ministries",
-        "href": "https://insight.org/resources/bible/the-general-epistles/james"
+        "href": "https://insight.org/resources/bible"
       },
       "download": {
         "label": "Original PDF",
@@ -1655,6 +2525,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-peter/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 1 Peter Bible Chart",
+      "caption": "Single-page structural chart of 1 Peter, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/1-peter/swindoll_chart.png",
+      "full": "/visuals/1-peter/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/1-Peter-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1679,6 +2564,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-peter/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 2 Peter Bible Chart",
+      "caption": "Single-page structural chart of 2 Peter, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/2-peter/swindoll_chart.png",
+      "full": "/visuals/2-peter/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/2-Peter-Bible-chart.pdf"
       }
     }
   ]
@@ -1705,6 +2605,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-john/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 1 John Bible Chart",
+      "caption": "Single-page structural chart of 1 John, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/1-john/swindoll_chart.png",
+      "full": "/visuals/1-john/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/1-John-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1729,6 +2644,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-john/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 2 John Bible Chart",
+      "caption": "Single-page structural chart of 2 John, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/2-john/swindoll_chart.png",
+      "full": "/visuals/2-john/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/2-John-Bible-chart.pdf"
       }
     }
   ]
@@ -1755,6 +2685,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-3-john/"
       }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — 3 John Bible Chart",
+      "caption": "Single-page structural chart of 3 John, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/3-john/swindoll_chart.png",
+      "full": "/visuals/3-john/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/3-John-Bible-chart.pdf"
+      }
     }
   ]
 },
@@ -1779,6 +2724,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-jude/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Jude Bible Chart",
+      "caption": "Single-page structural chart of Jude, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/jude/swindoll_chart.png",
+      "full": "/visuals/jude/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Jude-Bible-chart.pdf"
       }
     }
   ]
@@ -1812,6 +2772,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-revelation/"
+      }
+    },
+    {
+      "id": "swindoll-chart",
+      "title": "Chuck Swindoll — Revelation Bible Chart",
+      "caption": "Single-page structural chart of Revelation, organizing the book by major sections, themes, and key verses. Free resource from Insight for Living Ministries.",
+      "thumb": "/visuals/revelation/swindoll_chart.png",
+      "full": "/visuals/revelation/swindoll_chart.png",
+      "attribution": {
+        "label": "Insight for Living Ministries",
+        "href": "https://insight.org/resources/bible"
+      },
+      "download": {
+        "label": "Original PDF",
+        "href": "https://cdn.iflmedia.com/pdf/bible-charts/Revelation-Bible-chart.pdf"
       }
     }
   ]
