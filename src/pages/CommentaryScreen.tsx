@@ -1,14 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchCommentary, fetchBooks } from '@/services/bibleService';
 import { Commentary } from '@/services/types';
-import { parseBookParam } from '@/lib/bookSlugs';
+import { parseBookParam, nameToSlug } from '@/lib/bookSlugs';
 import { ChevronDown, ChevronUp, Menu, Copy, Check } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import ShareIcon from '@/components/ShareIcon';
 import StudyPanel from '@/components/StudyPanel';
-import VisualsPanel from '@/components/VisualsPanel';
-import { BOOKS_WITH_VISUALS } from '@/data/visuals/registry';
+// VisualsPanel pulls the full VISUALS_REGISTRY. Lazy so users who never
+// open the Visuals tab don't pay for it on initial mobile page load.
+const VisualsPanel = lazy(() => import('@/components/VisualsPanel'));
+import { BOOKS_WITH_VISUALS } from '@/data/visuals/booksWithVisuals';
 import { AudioInlineEntry } from '@/audio';
 import { useApp } from '@/contexts/AppContext';
 
@@ -108,7 +110,10 @@ export default function CommentaryScreen() {
     fetchCommentary(decodedBook, chapterNum).then(setCommentaries);
   }, [decodedBook, chapterNum]);
 
-  const hasVisuals = BOOKS_WITH_VISUALS.has((decodedBook || '').toLowerCase());
+  // decodedBook is the API display name; the registry is slug-keyed. Use
+  // nameToSlug so "2 Kings" → "2-kings" matches; a raw .toLowerCase() leaves
+  // a space and silently misses for every hyphenated-slug book.
+  const hasVisuals = BOOKS_WITH_VISUALS.has(nameToSlug(decodedBook));
   const tabs: { id: Tab; label: string }[] = [
     { id: 'summary', label: 'Summary' },
     { id: 'byline', label: 'By Line' },
@@ -203,10 +208,17 @@ export default function CommentaryScreen() {
         className="shrink-0"
         style={{ backgroundColor: vmTokens.headerBg, display: 'flex', justifyContent: 'center', padding: '12px 16px' }}
       >
-        <div style={{ display: 'flex', backgroundColor: vmTokens.pillBg, borderRadius: 100, padding: '3px', gap: 0 }}>
+        <div
+          role="tablist"
+          aria-label="Commentary view"
+          style={{ display: 'flex', backgroundColor: vmTokens.pillBg, borderRadius: 100, padding: '3px', gap: 0 }}
+        >
           {tabs.map(t => (
             <button
               key={t.id}
+              role="tab"
+              aria-selected={tab === t.id}
+              tabIndex={tab === t.id ? 0 : -1}
               onClick={() => setTab(t.id)}
               data-testid={`tab-${t.id}`}
               style={{
@@ -247,12 +259,14 @@ export default function CommentaryScreen() {
           </div>
         ) : tab === 'visuals' ? (
           <div className="pt-4">
-            <VisualsPanel
-              key={`${bookId}:${chapterNum}`}
-              book={decodedBook}
-              bookId={bookId}
-              chapter={chapterNum}
-            />
+            <Suspense fallback={<p className="text-[14px] text-center py-8" style={{ color: vmTokens.textTertiary }}>Loading visuals…</p>}>
+              <VisualsPanel
+                key={`${bookId}:${chapterNum}`}
+                book={decodedBook}
+                bookId={bookId}
+                chapter={chapterNum}
+              />
+            </Suspense>
           </div>
         ) : commentaries.length === 0 ? (
           <p className="text-[14px] text-center py-8" style={{ color: vmTokens.textTertiary }}>
