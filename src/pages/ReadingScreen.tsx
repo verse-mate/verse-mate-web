@@ -35,10 +35,25 @@ export default function ReadingScreen() {
   // direct hits — together they keep state and URL aligned in both
   // directions, so book selector / chapter arrows / verse links all
   // update the address bar to a shareable, indexable URL.
+  //
+  // Only push state → URL when the state passage ACTUALLY changed (book
+  // or chapter). React-Router params changes that arrive before AppContext
+  // catches up (e.g. /bible/genesis/1 → /bible/psalms/119 via Link or
+  // browser back/forward) must NOT trigger a navigate back to the stale
+  // state target; BibleRoute owns the URL→state direction in that case.
+  // VER-71: intermittent /bible/psalms/119 → /bible/psalms/2 (or
+  // /bible/genesis/1) was caused by this effect re-firing on a pathname
+  // change with stale state and overwriting the new URL.
+  const lastSyncedPassageRef = useRef<{ bookId: number; chapter: number } | null>(null);
   useEffect(() => {
     if (!state.bookId || !state.chapter) return;
     const slug = getBookSlug(state.bookId);
     if (!slug) return;
+    const last = lastSyncedPassageRef.current;
+    const passageChanged =
+      last === null || last.bookId !== state.bookId || last.chapter !== state.chapter;
+    lastSyncedPassageRef.current = { bookId: state.bookId, chapter: state.chapter };
+    if (!passageChanged) return;
     const target = `/bible/${slug}/${state.chapter}`;
     if (location.pathname !== target) {
       navigate(target, { replace: true });
