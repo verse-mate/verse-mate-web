@@ -289,34 +289,32 @@ export default function VisualsPanel({ book, chapter }: Props) {
             </div>
           </div>
         </div>
+        {/* Tiny attribution corner badge — keeps CC BY-SA 4.0 credit on
+            the video card without crowding the layout below. */}
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 8,
+            right: 8,
+            background: 'rgba(0,0,0,0.55)',
+            color: 'rgba(250,246,234,0.9)',
+            padding: '2px 8px',
+            borderRadius: 4,
+            fontFamily: 'Roboto, sans-serif',
+            fontSize: 10,
+            fontWeight: 500,
+            letterSpacing: 0.2,
+            pointerEvents: 'none',
+          }}
+        >
+          BibleProject · CC BY-SA 4.0
+        </div>
       </button>
-      <p
-        style={{
-          fontFamily: 'Roboto, sans-serif',
-          fontSize: 12,
-          color: vmTokens.textSecondary,
-          margin: '0 0 24px 0',
-        }}
-      >
-        Video by{' '}
-        <a
-          href="https://bibleproject.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: vmTokens.gold, textDecoration: 'none' }}
-        >
-          BibleProject
-        </a>{' '}
-        · Licensed under{' '}
-        <a
-          href="https://creativecommons.org/licenses/by-sa/4.0/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: vmTokens.gold, textDecoration: 'none' }}
-        >
-          CC BY-SA 4.0
-        </a>
-      </p>
+      {/* Video attribution is shown as a small corner badge on the video card
+          itself (see below) and again inside the play overlay; no separate
+          attribution row below the card. Spacer keeps the image grid from
+          colliding with the card. */}
+      <div style={{ height: 20 }} />
 
       {/* Image grid — 2 columns on tablet/desktop, 1 on narrow mobile. */}
       <div
@@ -346,8 +344,9 @@ export default function VisualsPanel({ book, chapter }: Props) {
           >
             <div
               style={{
+                position: 'relative',
                 width: '100%',
-                aspectRatio: '4 / 3',
+                aspectRatio: '16 / 9',
                 background: vmTokens.pageBg,
                 overflow: 'hidden',
                 display: 'flex',
@@ -366,8 +365,31 @@ export default function VisualsPanel({ book, chapter }: Props) {
                   display: 'block',
                 }}
               />
+              {/* Corner attribution badge — small, dark, doesn't fight the image. */}
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: 6,
+                  right: 6,
+                  background: 'rgba(0,0,0,0.55)',
+                  color: 'rgba(250,246,234,0.9)',
+                  padding: '2px 7px',
+                  borderRadius: 4,
+                  fontFamily: 'Roboto, sans-serif',
+                  fontSize: 10,
+                  fontWeight: 500,
+                  letterSpacing: 0.2,
+                  pointerEvents: 'none',
+                  maxWidth: '70%',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {v.attribution.label}
+              </div>
             </div>
-            <div style={{ padding: 12 }}>
+            <div style={{ padding: '10px 12px 12px' }}>
               <div
                 style={{
                   fontFamily: 'Roboto, sans-serif',
@@ -386,59 +408,39 @@ export default function VisualsPanel({ book, chapter }: Props) {
                   fontSize: 12,
                   color: vmTokens.textSecondary,
                   lineHeight: '16px',
-                  marginBottom: 8,
                 }}
               >
                 {v.caption}
-              </div>
-              <div
-                style={{
-                  fontFamily: 'Roboto, sans-serif',
-                  fontSize: 11,
-                  color: vmTokens.gold,
-                  fontWeight: 500,
-                  textTransform: 'uppercase',
-                  letterSpacing: 1.2,
-                }}
-              >
-                {v.attribution.label}
               </div>
             </div>
           </button>
         ))}
       </div>
 
-      {/* Attribution footer */}
+      {/* Minimal credit line — full attribution lives on each card's badge
+          and inside the lightbox; this is the catch-all required by CC BY-SA. */}
       <div
         style={{
-          marginTop: 24,
-          paddingTop: 16,
+          marginTop: 20,
+          paddingTop: 10,
           borderTop: `1px solid ${vmTokens.divider}`,
           fontFamily: 'Roboto, sans-serif',
-          fontSize: 12,
+          fontSize: 10.5,
           color: vmTokens.textSecondary,
-          lineHeight: '18px',
+          lineHeight: '14px',
+          opacity: 0.75,
         }}
       >
-        BibleProject video and poster shared under{' '}
+        Credits: BibleProject (
         <a
           href="https://creativecommons.org/licenses/by-sa/4.0/"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: vmTokens.gold, textDecoration: 'none' }}
+          style={{ color: vmTokens.textSecondary, textDecoration: 'underline' }}
         >
           CC BY-SA 4.0
         </a>
-        . Swindoll chart courtesy{' '}
-        <a
-          href="https://insight.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: vmTokens.gold, textDecoration: 'none' }}
-        >
-          Insight for Living Ministries
-        </a>
-        . VerseMate originals © VerseMate.
+        ) · Insight for Living · VerseMate originals
       </div>
 
       {/* === Video Modal === */}
