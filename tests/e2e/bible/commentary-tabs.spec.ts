@@ -28,7 +28,10 @@ test.describe('Commentary — tabs', () => {
 
     await expect(commentary.tabSummary).toBeVisible();
     await expect(commentary.tabByline).toBeVisible();
-    await expect(commentary.tabDetailed).toBeVisible();
+    await expect(commentary.tabStudy).toBeVisible();
+    // Detailed has been removed; Visuals is gated to books with curated
+    // assets and should NOT be visible on Genesis.
+    await expect(commentary.tabVisuals).toHaveCount(0);
   });
 
   test('Summary tab is active by default and shows the share button', async ({ page }) => {
@@ -57,21 +60,19 @@ test.describe('Commentary — tabs', () => {
     await expect(commentary.shareByline).toBeVisible();
   });
 
-  test('switching to Detailed shows the in-depth share button', async ({ page }) => {
+  test('Visuals tab renders on James and stays hidden on Genesis', async ({ page }) => {
     const commentary = new CommentaryPage(page);
-    await commentary.goto('Genesis', 1);
 
-    await commentary.tabDetailed.click();
-    // Detailed-type entry only renders when the API has detailed
-    // commentary for the chapter. When it doesn't (e.g. the live API
-    // serving the test target hasn't pre-generated detailed for Genesis 1
-    // yet), CommentaryScreen short-circuits to either the "No commentary
-    // available" guard (commentaries.length === 0) or the
-    // "Detailed commentary not available." fallback. Either is a valid
-    // render — match the byline test's pattern and accept all three.
-    const empty = page.getByText(
-      /detailed commentary not available|no commentary available for this chapter/i,
-    );
-    await expect(commentary.shareDetailed.or(empty)).toBeVisible({ timeout: 15_000 });
+    // Gated OFF for books without curated visuals (Genesis is one).
+    await commentary.goto('Genesis', 1);
+    await expect(commentary.tabVisuals).toHaveCount(0);
+
+    // Gated ON for James — the launch book for the Visuals catalogue.
+    await commentary.goto('James', 1);
+    await expect(commentary.tabVisuals).toBeVisible();
+    await commentary.tabVisuals.click();
+    // The panel renders a "Visuals for James 1" heading; either it shows
+    // immediately or the body scrolls to it. Wait on visibility.
+    await expect(page.getByText(/visuals for james 1/i)).toBeVisible({ timeout: 15_000 });
   });
 });

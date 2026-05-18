@@ -43,15 +43,17 @@ test.describe('Commentary — audio inline-entry (guest)', () => {
     );
   });
 
-  test('audio-inline-entry persists across tab switches (Summary ↔ Detailed)', async ({ page }) => {
+  test('audio-inline-entry persists across tab switches (Summary ↔ By Line)', async ({ page }) => {
     const commentary = new CommentaryPage(page);
     await commentary.goto('Genesis', 1);
 
     // Sanity: chip on Summary tab.
     await expect(commentary.audioInlineEntry.first()).toBeVisible({ timeout: 30_000 });
 
-    // Switch to Detailed — chip should re-mount in that tab body.
-    await commentary.tabDetailed.click();
+    // Switch to By Line — chip should re-mount in that tab body. (The
+    // by-line tab mounts AudioInlineEntry against the first byline
+    // explanation, which is the same audio source family as summary.)
+    await commentary.tabByline.click();
     await expect(commentary.audioInlineEntry.first()).toBeVisible({ timeout: 15_000 });
   });
 });
