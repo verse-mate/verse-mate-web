@@ -620,13 +620,18 @@ export default function VisualsPanel({ book, chapter }: Props) {
             </div>
 
             {/* Image area — fills the entire viewport.
-             *  - Fit mode: click the image to zoom to 1:1 (the container
+             *  - Fit mode: tap the image to zoom to 1:1 (the container
              *    becomes scrollable so the user can read fine print).
-             *  - Zoom mode: clicking the image does NOT toggle back —
+             *  - Zoom mode: tapping the image does NOT toggle back —
              *    otherwise it would fight the user trying to scroll/pan.
-             *    Exit via the "fit screen" button in the top bar, or by
-             *    clicking the dark dead space outside the image.
-             *  Mobile pinch-zoom is always available via touch-action. */}
+             *    Exit via the "fit screen" button in the top bar, by
+             *    tapping the dead space outside the image, or Esc.
+             *
+             *  touch-action: pan-x pan-y pinch-zoom — explicitly allow
+             *  single-finger pan AND two-finger pinch. The earlier
+             *  `touch-action: pinch-zoom` blocked single-finger pan,
+             *  which on mobile meant you couldn't scroll the zoomed
+             *  image with one finger. */}
             <div
               style={{
                 flex: 1,
@@ -634,8 +639,9 @@ export default function VisualsPanel({ book, chapter }: Props) {
                 display: 'flex',
                 alignItems: zoomed ? 'flex-start' : 'center',
                 justifyContent: zoomed ? 'flex-start' : 'center',
-                touchAction: 'pinch-zoom',
+                touchAction: 'pan-x pan-y pinch-zoom',
                 WebkitOverflowScrolling: 'touch',
+                overscrollBehavior: 'contain',
               }}
               onClick={(e) => {
                 if (e.target === e.currentTarget) {
