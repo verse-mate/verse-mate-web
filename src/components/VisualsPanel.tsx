@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Play, X, Copy, Check } from 'lucide-react';
+import { Play, X, Copy, Check, ZoomIn, Minimize2 } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import { vmTokens } from '@/styles/themeStyles';
 
@@ -549,6 +549,33 @@ export default function VisualsPanel({ book, chapter }: Props) {
               >
                 {openImage.title}
               </div>
+              {/* Zoom toggle — explicit control so the user is never trapped
+                  in zoom mode with no obvious way out. Clicking the image
+                  enters zoom; this button (or pressing Escape) exits. */}
+              <button
+                onClick={() => setZoomed((z) => !z)}
+                aria-label={zoomed ? 'Fit to screen' : 'Zoom to actual size'}
+                title={zoomed ? 'Fit to screen' : 'Zoom in'}
+                data-testid="visuals-lightbox-zoom-toggle"
+                style={{
+                  width: 36,
+                  height: 36,
+                  borderRadius: '50%',
+                  background: 'rgba(0,0,0,0.55)',
+                  border: 'none',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                {zoomed ? (
+                  <Minimize2 size={18} color="#FAF6EA" />
+                ) : (
+                  <ZoomIn size={18} color="#FAF6EA" />
+                )}
+              </button>
               {openImage.download && (
                 <a
                   href={openImage.download.href}
@@ -592,9 +619,14 @@ export default function VisualsPanel({ book, chapter }: Props) {
               </button>
             </div>
 
-            {/* Image area — fills the entire viewport. Click toggles between
-                fit-to-screen and 1:1 native size (which scrolls). Mobile
-                browsers can also pinch-zoom natively via touch-action. */}
+            {/* Image area — fills the entire viewport.
+             *  - Fit mode: click the image to zoom to 1:1 (the container
+             *    becomes scrollable so the user can read fine print).
+             *  - Zoom mode: clicking the image does NOT toggle back —
+             *    otherwise it would fight the user trying to scroll/pan.
+             *    Exit via the "fit screen" button in the top bar, or by
+             *    clicking the dark dead space outside the image.
+             *  Mobile pinch-zoom is always available via touch-action. */}
             <div
               style={{
                 flex: 1,
@@ -605,19 +637,28 @@ export default function VisualsPanel({ book, chapter }: Props) {
                 touchAction: 'pinch-zoom',
                 WebkitOverflowScrolling: 'touch',
               }}
-              onClick={() => setZoomed((z) => !z)}
+              onClick={(e) => {
+                if (e.target === e.currentTarget) {
+                  if (zoomed) setZoomed(false);
+                  else setOpenImageId(null);
+                }
+              }}
             >
               <img
                 src={openImage.full}
                 alt={openImage.title}
                 draggable={false}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (!zoomed) setZoomed(true);
+                }}
                 style={
                   zoomed
                     ? {
                         width: 'auto',
                         maxWidth: 'none',
                         height: 'auto',
-                        cursor: 'zoom-out',
+                        cursor: 'grab',
                         display: 'block',
                         userSelect: 'none',
                       }
