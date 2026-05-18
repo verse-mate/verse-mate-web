@@ -2,7 +2,11 @@ import { useEffect, useMemo, useState } from 'react';
 import { Play, X, Copy, Check, ZoomIn, Minimize2 } from 'lucide-react';
 import ShareIcon from '@/components/ShareIcon';
 import { vmTokens } from '@/styles/themeStyles';
-import { getVisualsForBook, type VisualCard } from '@/data/visuals/registry';
+import {
+  getVisualsForBook,
+  getVideoForChapter,
+  type VisualCard,
+} from '@/data/visuals/registry';
 
 type Props = {
   book: string;
@@ -21,7 +25,12 @@ export default function VisualsPanel({ book, chapter }: Props) {
   // state instead of crashing.
   const manifest = useMemo(() => getVisualsForBook(book), [book]);
   const visuals: VisualCard[] = manifest?.cards ?? [];
-  const video = manifest?.video ?? null;
+  // Pick the BibleProject overview whose chapter range covers the current
+  // chapter — Genesis 5 → Part 1 (1–11), Genesis 25 → Part 2 (12–50).
+  const video = useMemo(
+    () => getVideoForChapter(manifest, chapter),
+    [manifest, chapter],
+  );
   const openImage = visuals.find((v) => v.id === openImageId) ?? null;
 
   // Clear modals when book/chapter changes — the YouTube iframe unmounts
@@ -251,7 +260,17 @@ export default function VisualsPanel({ book, chapter }: Props) {
                 color: 'rgba(250,246,234,0.85)',
               }}
             >
-              {video.duration ? `${video.duration} · animated explainer` : 'BibleProject overview · animated explainer'}
+              BibleProject overview · animated explainer
+            </div>
+            <div
+              style={{
+                fontFamily: 'Roboto, sans-serif',
+                fontSize: 11,
+                color: 'rgba(250,246,234,0.75)',
+                marginTop: 4,
+              }}
+            >
+              Covers chapters {video.chapterStart}–{video.chapterEnd}
             </div>
           </div>
         </div>
