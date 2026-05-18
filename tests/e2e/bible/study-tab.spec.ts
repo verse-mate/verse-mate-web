@@ -54,6 +54,5 @@ test.describe('Commentary — Study tab', () => {
     // DOM from the Summary tab.
     await expect(commentary.shareSummary).toHaveCount(0);
     await expect(commentary.shareByline).toHaveCount(0);
-    await expect(commentary.shareDetailed).toHaveCount(0);
   });
 });

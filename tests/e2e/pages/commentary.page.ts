@@ -14,11 +14,10 @@ export class CommentaryPage {
   readonly hamburgerMenu: Locator;
   readonly tabSummary: Locator;
   readonly tabByline: Locator;
-  readonly tabDetailed: Locator;
   readonly tabStudy: Locator;
+  readonly tabVisuals: Locator;
   readonly shareSummary: Locator;
   readonly shareByline: Locator;
-  readonly shareDetailed: Locator;
   readonly bylineExpandAll: Locator;
   readonly audioInlineEntry: Locator;
 
@@ -30,11 +29,10 @@ export class CommentaryPage {
     this.hamburgerMenu = page.getByTestId('hamburger-menu-button');
     this.tabSummary = page.getByTestId('tab-summary');
     this.tabByline = page.getByTestId('tab-byline');
-    this.tabDetailed = page.getByTestId('tab-detailed');
     this.tabStudy = page.getByTestId('tab-study');
+    this.tabVisuals = page.getByTestId('tab-visuals');
     this.shareSummary = page.getByTestId('share-summary-button');
     this.shareByline = page.getByTestId('share-byline-button');
-    this.shareDetailed = page.getByTestId('share-detailed-button');
     this.bylineExpandAll = page.getByTestId('byline-expand-all-button');
     this.audioInlineEntry = page.getByTestId('audio-inline-entry');
   }
