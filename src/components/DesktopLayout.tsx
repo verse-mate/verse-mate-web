@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef, lazy, Suspense } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -26,8 +26,12 @@ import {
 import ShareIcon from '@/components/ShareIcon';
 import BookSelector from '@/components/BookSelector';
 import StudyPanel from '@/components/StudyPanel';
-import VisualsPanel from '@/components/VisualsPanel';
-import { BOOKS_WITH_VISUALS } from '@/data/visuals/registry';
+// VisualsPanel pulls the full VISUALS_REGISTRY (image URLs, captions,
+// chapter-scope arrays — ~1 MB of data). Lazy-load so users who never
+// open the Visuals tab don't pay for it on initial page load.
+const VisualsPanel = lazy(() => import('@/components/VisualsPanel'));
+import { BOOKS_WITH_VISUALS } from '@/data/visuals/booksWithVisuals';
+import { nameToSlug } from '@/lib/bookSlugs';
 import { RightPanelProvider } from '@/contexts/RightPanelContext';
 import { useTopicView } from '@/contexts/TopicViewContext';
 import { AudioInlineEntry } from '@/audio';
@@ -283,7 +287,10 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     };
   }, []);
 
-  const hasVisuals = BOOKS_WITH_VISUALS.has((state.book || '').toLowerCase());
+  // state.book is the API display name ("2 Kings", "Song of Solomon"); the
+  // registry is keyed by URL slug ("2-kings", "song-of-solomon"). Normalize
+  // via nameToSlug — a raw .toLowerCase() leaves spaces and silently misses.
+  const hasVisuals = BOOKS_WITH_VISUALS.has(nameToSlug(state.book));
   const tabs: { id: Tab; label: string }[] = [
     { id: 'summary', label: 'Summary' },
     { id: 'byline', label: 'By Line' },
@@ -415,10 +422,13 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 zIndex: 2,
               }}
             >
-              <div className="pill-group">
+              <div className="pill-group" role="tablist" aria-label="Commentary view">
                 {tabs.map(t => (
                   <button
                     key={t.id}
+                    role="tab"
+                    aria-selected={tab === t.id}
+                    tabIndex={tab === t.id ? 0 : -1}
                     className={`pill ${tab === t.id ? 'active' : ''}`}
                     onClick={() => setTab(t.id)}
                     data-testid={`desktop-tab-${t.id}`}
@@ -439,10 +449,13 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
                 zIndex: 2,
               }}
             >
-              <div className="pill-group">
+              <div className="pill-group" role="tablist" aria-label="Topic insight view">
                 {TOPIC_INSIGHT_TABS.map(t => (
                   <button
                     key={t.id}
+                    role="tab"
+                    aria-selected={topicInsightTab === t.id}
+                    tabIndex={topicInsightTab === t.id ? 0 : -1}
                     className={`pill ${topicInsightTab === t.id ? 'active' : ''}`}
                     onClick={() => setTopicInsightTab(t.id as TopicInsightTab)}
                     data-testid={`desktop-topic-tab-${t.id}`}
@@ -535,10 +548,13 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               padding: '8px 16px',
             }}
           >
-            <div className="pill-group">
+            <div className="pill-group" role="tablist" aria-label="Commentary view">
               {tabs.map(t => (
                 <button
                   key={t.id}
+                  role="tab"
+                  aria-selected={tab === t.id}
+                  tabIndex={tab === t.id ? 0 : -1}
                   className={`pill ${tab === t.id ? 'active' : ''}`}
                   onClick={() => setTab(t.id)}
                   data-testid={`desktop-tab-${t.id}`}
@@ -560,10 +576,13 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               padding: '8px 16px',
             }}
           >
-            <div className="pill-group">
+            <div className="pill-group" role="tablist" aria-label="Topic insight view">
               {TOPIC_INSIGHT_TABS.map(t => (
                 <button
                   key={t.id}
+                  role="tab"
+                  aria-selected={topicInsightTab === t.id}
+                  tabIndex={topicInsightTab === t.id ? 0 : -1}
                   className={`pill ${topicInsightTab === t.id ? 'active' : ''}`}
                   onClick={() => setTopicInsightTab(t.id as TopicInsightTab)}
                   data-testid={`desktop-topic-tab-${t.id}`}
@@ -842,7 +861,11 @@ function CommentaryPanel({
   // Visuals tab is also commentary-independent — its content comes from
   // curated assets in /public/visuals/<book>/, not the API.
   if (tab === 'visuals') {
-    return <VisualsPanel key={`${bookId}:${chapter}`} book={book} bookId={bookId} chapter={chapter} />;
+    return (
+      <Suspense fallback={<p style={{ color: vmTokens.textSecondary, fontSize: 14, textAlign: 'center', paddingTop: 32 }}>Loading visuals…</p>}>
+        <VisualsPanel key={`${bookId}:${chapter}`} book={book} bookId={bookId} chapter={chapter} />
+      </Suspense>
+    );
   }
 
   if (commentaries.length === 0) {

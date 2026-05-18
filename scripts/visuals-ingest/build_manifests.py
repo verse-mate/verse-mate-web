@@ -20,6 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent.parent
 PUBLIC_VISUALS = ROOT / "public" / "visuals"
 OUT_TS = ROOT / "src" / "data" / "visuals" / "registry.ts"
+OUT_BOOKS_TS = ROOT / "src" / "data" / "visuals" / "booksWithVisuals.ts"
 
 # Source-of-truth: same POSTERS table used by ingest_bibleproject.py +
 # per-book video metadata with chapter ranges.
@@ -302,6 +303,7 @@ def main() -> None:
     PRECEPT_CHAPTERS = load_precept_chapter_data()
     OUT_TS.parent.mkdir(parents=True, exist_ok=True)
     entries: list[str] = []
+    slugs_with_visuals: list[str] = []
     book_count = 0
     for slug, (_url, display, _yt) in POSTERS.items():
         cards = book_cards(slug, display)
@@ -310,6 +312,7 @@ def main() -> None:
             continue
         entry = {"videos": videos, "cards": cards}
         entries.append(f"  '{slug}': {json.dumps(entry, indent=2, ensure_ascii=False)},")
+        slugs_with_visuals.append(slug)
         book_count += 1
 
     body = "\n".join(entries)
@@ -363,9 +366,12 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {{
 {body}
 }};
 
-export const BOOKS_WITH_VISUALS: Set<string> = new Set(
-  Object.keys(VISUALS_REGISTRY),
-);
+// BOOKS_WITH_VISUALS is generated as a separate light-weight module
+// (booksWithVisuals.ts) so the tab-visibility gate in DesktopLayout /
+// CommentaryScreen can check membership without pulling the multi-MB
+// registry into the initial JS bundle. Re-export here for any callers
+// that still expect both from one module.
+export {{ BOOKS_WITH_VISUALS }} from './booksWithVisuals';
 
 /** Lookup helper — slug is matched case-insensitively. */
 export function getVisualsForBook(slug: string): VisualsManifest | null {{
@@ -403,6 +409,34 @@ export function getCardsForChapter(
     OUT_TS.write_text(ts)
     print(f"✓ Wrote {OUT_TS}")
     print(f"  Books with visuals: {book_count}")
+
+    # Emit a *tiny* companion module that holds nothing but the slug set.
+    # The tab-visibility gate on the desktop + mobile commentary screens
+    # imports only this module so the multi-MB VISUALS_REGISTRY can stay
+    # behind a lazy() boundary inside VisualsPanel.
+    slug_list = ",\n".join(f"  '{s}'" for s in slugs_with_visuals)
+    light_ts = f"""/* eslint-disable */
+/**
+ * GENERATED FILE — do not edit by hand.
+ *
+ * Built by `scripts/visuals-ingest/build_manifests.py` alongside
+ * registry.ts. This module exists ONLY so the tab-visibility check
+ * (DesktopLayout.tsx, CommentaryScreen.tsx) can ask "does this book
+ * have curated visuals?" without dragging the full VISUALS_REGISTRY
+ * — and all of its image URLs, captions, chapter-scope arrays — into
+ * the initial JS bundle.
+ *
+ *   import {{ BOOKS_WITH_VISUALS }} from '@/data/visuals/booksWithVisuals';
+ *
+ * VisualsPanel itself, which actually needs the registry, is lazy-loaded
+ * by its consumers so the heavy module is only fetched on first open.
+ */
+export const BOOKS_WITH_VISUALS: ReadonlySet<string> = new Set<string>([
+{slug_list},
+]);
+"""
+    OUT_BOOKS_TS.write_text(light_ts)
+    print(f"✓ Wrote {OUT_BOOKS_TS}")
 
 
 if __name__ == "__main__":
