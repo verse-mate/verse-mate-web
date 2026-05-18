@@ -7,10 +7,14 @@ import { ChevronDown, ChevronUp, Menu, Copy, Check } from 'lucide-react';
 import MarkdownBlock from '@/components/MarkdownBlock';
 import ShareIcon from '@/components/ShareIcon';
 import StudyPanel from '@/components/StudyPanel';
+import VisualsPanel from '@/components/VisualsPanel';
 import { AudioInlineEntry } from '@/audio';
 import { useApp } from '@/contexts/AppContext';
 
-type Tab = 'summary' | 'byline' | 'detailed' | 'study';
+type Tab = 'summary' | 'byline' | 'detailed' | 'study' | 'visuals';
+
+// Books that have curated visual aids. Add more as visuals are produced.
+const BOOKS_WITH_VISUALS = new Set(['james']);
 
 export default function CommentaryScreen() {
   const { book: bookParam, chapter } = useParams<{ book: string; chapter: string }>();
@@ -20,7 +24,7 @@ export default function CommentaryScreen() {
   const [tab, setTab] = useState<Tab>(() => {
     try {
       const v = sessionStorage.getItem('versemate-commentary-tab');
-      if (v === 'summary' || v === 'byline' || v === 'detailed' || v === 'study') return v;
+      if (v === 'summary' || v === 'byline' || v === 'detailed' || v === 'study' || v === 'visuals') return v;
     } catch { /* ignore */ }
     return 'summary';
   });
@@ -102,12 +106,21 @@ export default function CommentaryScreen() {
     fetchCommentary(decodedBook, chapterNum).then(setCommentaries);
   }, [decodedBook, chapterNum]);
 
+  const hasVisuals = BOOKS_WITH_VISUALS.has((decodedBook || '').toLowerCase());
   const tabs: { id: Tab; label: string }[] = [
     { id: 'summary', label: 'Summary' },
     { id: 'byline', label: 'By Line' },
     { id: 'detailed', label: 'Detailed' },
     { id: 'study', label: 'Study' },
+    ...(hasVisuals ? [{ id: 'visuals' as Tab, label: 'Visuals' }] : []),
   ];
+
+  // If the Visuals tab is sticky from sessionStorage but the current book
+  // doesn't have curated visuals, fall back to Summary so the body never
+  // routes to an empty tab.
+  useEffect(() => {
+    if (tab === 'visuals' && !hasVisuals) setTab('summary');
+  }, [hasVisuals, tab]);
 
   return (
     <div className="flex flex-col h-full" style={{ backgroundColor: vmTokens.chromeBg }}>
@@ -225,6 +238,15 @@ export default function CommentaryScreen() {
                 for the full reasoning. Prevents Genesis open-card state
                 from bleeding into Matthew. */}
             <StudyPanel
+              key={`${bookId}:${chapterNum}`}
+              book={decodedBook}
+              bookId={bookId}
+              chapter={chapterNum}
+            />
+          </div>
+        ) : tab === 'visuals' ? (
+          <div className="pt-4">
+            <VisualsPanel
               key={`${bookId}:${chapterNum}`}
               book={decodedBook}
               bookId={bookId}
