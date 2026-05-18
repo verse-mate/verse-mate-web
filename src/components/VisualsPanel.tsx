@@ -8,6 +8,7 @@ import {
   getCardsForChapter,
   type VisualCard,
 } from '@/data/visuals/registry';
+import { nameToSlug } from '@/lib/bookSlugs';
 
 type Props = {
   book: string;
@@ -24,7 +25,12 @@ export default function VisualsPanel({ book, chapter }: Props) {
   // Per-book manifest from the generated registry. Falls back to null when
   // the user lands on a book without curated visuals — we show an empty
   // state instead of crashing.
-  const manifest = useMemo(() => getVisualsForBook(book), [book]);
+  //
+  // `book` is the API display name ("2 Kings", "Song of Solomon"); the
+  // registry is keyed by URL slug ("2-kings", "song-of-solomon"). Without
+  // nameToSlug the panel renders "No curated visuals" for every
+  // hyphenated-slug book even though the tab is now correctly visible.
+  const manifest = useMemo(() => getVisualsForBook(nameToSlug(book)), [book]);
   // Filter to cards relevant for this chapter: book-level cards (no
   // `chapters` field) always pass; chapter-scoped cards (Precept Austin
   // per-chapter charts) only appear on chapters listed in their array.
