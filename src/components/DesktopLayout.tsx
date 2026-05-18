@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useApp } from '@/contexts/AppContext';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { fetchCommentary, fetchBooks, fetchChapter } from '@/services/bibleService';
 import { BibleBook } from '@/services/types';
 import { Commentary } from '@/services/types';
@@ -302,6 +303,13 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
   const isSidebarCompact = sidebarWidth < SIDEBAR_COMPACT_THRESHOLD;
 
+  // Below the desktop breakpoint (≥1024 keeps the full split-view with pills
+  // inline in the header) the right pane is too narrow to fit the 4-tab
+  // Insight pill group beside the chapter-selector + hamburger without
+  // overlap. At those widths we mirror the mobile/portrait pattern and
+  // render the pills on their own row beneath the header.
+  const isCompactSplit = useMediaQuery('(max-width: 1023px)');
+
   return (
     // Prototype layout: .app-shell wraps the sidebar + main column.
     // .sidebar / .sidebar-header / .sidebar-scroll come straight from
@@ -395,8 +403,9 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               this is the Summary/By-Line/Study chooser (plus Visuals on
               books that have curated visuals); on topic routes the same
               slot holds the Summary/By-Line/Detailed chooser fed from
-              TopicViewContext. */}
-          {!isTopicRoute && rightPanelView === 'commentary' && (
+              TopicViewContext. At compact widths the pill row moves below
+              the header so it doesn't overlap the hamburger button (VER-69). */}
+          {!isTopicRoute && rightPanelView === 'commentary' && !isCompactSplit && (
             <div
               style={{
                 position: 'absolute',
@@ -420,7 +429,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               </div>
             </div>
           )}
-          {isTopicRoute && (
+          {isTopicRoute && !isCompactSplit && (
             <div
               style={{
                 position: 'absolute',
@@ -509,6 +518,62 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             </button>
           </div>
         </header>
+
+        {/* Compact-width pill row — rendered below the header instead of
+            absolutely positioned inside it so the Insight tabs don't get
+            clipped by the hamburger button at phone-landscape / small-tablet
+            widths (see [[ver-69]]). Mirrors the portrait-mode CommentaryScreen
+            pattern. Hidden on `≥1024px`, where the inline header pills fit. */}
+        {isCompactSplit && !isTopicRoute && rightPanelView === 'commentary' && (
+          <div
+            data-testid="desktop-compact-tab-row"
+            className="shrink-0"
+            style={{
+              backgroundColor: vmTokens.headerBg,
+              display: 'flex',
+              justifyContent: 'center',
+              padding: '8px 16px',
+            }}
+          >
+            <div className="pill-group">
+              {tabs.map(t => (
+                <button
+                  key={t.id}
+                  className={`pill ${tab === t.id ? 'active' : ''}`}
+                  onClick={() => setTab(t.id)}
+                  data-testid={`desktop-tab-${t.id}`}
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+        {isCompactSplit && isTopicRoute && (
+          <div
+            data-testid="desktop-compact-topic-tab-row"
+            className="shrink-0"
+            style={{
+              backgroundColor: vmTokens.headerBg,
+              display: 'flex',
+              justifyContent: 'center',
+              padding: '8px 16px',
+            }}
+          >
+            <div className="pill-group">
+              {TOPIC_INSIGHT_TABS.map(t => (
+                <button
+                  key={t.id}
+                  className={`pill ${topicInsightTab === t.id ? 'active' : ''}`}
+                  onClick={() => setTopicInsightTab(t.id as TopicInsightTab)}
+                  data-testid={`desktop-topic-tab-${t.id}`}
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Prototype .split-body — left/right panels separated by .divider.
             Bible routes split between passage (left) and commentary (right);
