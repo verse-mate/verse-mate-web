@@ -2,14 +2,17 @@
 /**
  * GENERATED FILE — do not edit by hand.
  *
- * Built by `visual_aids/scripts/build_manifests.py` from the assets in
- * public/visuals/<slug>/. To regenerate after adding new assets:
+ * Built by `scripts/visuals-ingest/build_manifests.py` from the assets in
+ * public/visuals/<slug>/ plus the per-book metadata tables in the same
+ * directory. To regenerate after adding new assets or videos:
  *
- *   python3 visual_aids/scripts/build_manifests.py
+ *   python3 scripts/visuals-ingest/build_manifests.py
  *
- * Books listed here automatically light up the Visuals tab in
- * CommentaryScreen / DesktopLayout. Books without a manifest entry show
- * the Visuals tab hidden, falling back to Summary / By-Line / Study.
+ * Each book's `videos[]` entries carry an inclusive chapterRange so the
+ * VisualsPanel can show the right BibleProject overview for the chapter
+ * the user is currently reading (e.g. Genesis 5 → Part 1, Genesis 25 →
+ * Part 2). Books with a single overview have one entry covering all
+ * chapters; books without a verified YouTube ID have an empty array.
  */
 
 export type VisualCard = {
@@ -22,20 +25,41 @@ export type VisualCard = {
   download?: { label: string; href: string };
 };
 
+export type VideoEntry = {
+  youtubeId: string;
+  title: string;
+  embedUrl: string;
+  page: string;
+  /** Inclusive chapter range this video covers. */
+  chapterStart: number;
+  chapterEnd: number;
+};
+
 export type VisualsManifest = {
-  video: {
-    youtubeId: string;
-    title: string;
-    duration?: string;
-    embedUrl: string;
-    page: string;
-  } | null;
+  videos: VideoEntry[];
   cards: VisualCard[];
 };
 
 export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
   'genesis': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "GQI72THyO5I",
+      "title": "Genesis 1–11 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/GQI72THyO5I?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/genesis/",
+      "chapterStart": 1,
+      "chapterEnd": 11
+    },
+    {
+      "youtubeId": "F4isSyennFo",
+      "title": "Genesis 12–50 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/F4isSyennFo?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/genesis/",
+      "chapterStart": 12,
+      "chapterEnd": 50
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -47,22 +71,28 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-genesis/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Genesis",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Genesis. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/genesis/versemate_keyword_heatmap.png",
-      "full": "/visuals/genesis/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'exodus': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "jH_aojNJM3E",
+      "title": "Exodus 1–18 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/jH_aojNJM3E?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/exodus/",
+      "chapterStart": 1,
+      "chapterEnd": 18
+    },
+    {
+      "youtubeId": "oNpTha80yyE",
+      "title": "Exodus 19–40 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/oNpTha80yyE?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/exodus/",
+      "chapterStart": 19,
+      "chapterEnd": 40
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -74,22 +104,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-exodus/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Exodus",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Exodus. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/exodus/versemate_keyword_heatmap.png",
-      "full": "/visuals/exodus/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'leviticus': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "IJ-FekWUZzE",
+      "title": "Leviticus — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/IJ-FekWUZzE?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/leviticus/",
+      "chapterStart": 1,
+      "chapterEnd": 27
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -101,22 +129,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-leviticus/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Leviticus",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Leviticus. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/leviticus/versemate_keyword_heatmap.png",
-      "full": "/visuals/leviticus/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'numbers': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "tp5MIrMZFqo",
+      "title": "Numbers — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/tp5MIrMZFqo?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/numbers/",
+      "chapterStart": 1,
+      "chapterEnd": 36
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -128,22 +154,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-numbers/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Numbers",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Numbers. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/numbers/versemate_keyword_heatmap.png",
-      "full": "/visuals/numbers/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'deuteronomy': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "q5QEH9bH8AU",
+      "title": "Deuteronomy — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/q5QEH9bH8AU?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/deuteronomy/",
+      "chapterStart": 1,
+      "chapterEnd": 34
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -155,22 +179,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-deuteronomy/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Deuteronomy",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Deuteronomy. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/deuteronomy/versemate_keyword_heatmap.png",
-      "full": "/visuals/deuteronomy/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'joshua': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "JqOqJlFF_eU",
+      "title": "Joshua — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/JqOqJlFF_eU?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/joshua/",
+      "chapterStart": 1,
+      "chapterEnd": 24
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -182,22 +204,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-joshua/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Joshua",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Joshua. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/joshua/versemate_keyword_heatmap.png",
-      "full": "/visuals/joshua/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'judges': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "kOYy8iCfIJ4",
+      "title": "Judges — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/kOYy8iCfIJ4?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/judges/",
+      "chapterStart": 1,
+      "chapterEnd": 21
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -209,22 +229,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-judges/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Judges",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Judges. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/judges/versemate_keyword_heatmap.png",
-      "full": "/visuals/judges/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'ruth': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "0h1eoBeR4Jk",
+      "title": "Ruth — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/0h1eoBeR4Jk?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/ruth/",
+      "chapterStart": 1,
+      "chapterEnd": 4
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -236,22 +254,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-ruth/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Ruth",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Ruth. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/ruth/versemate_keyword_heatmap.png",
-      "full": "/visuals/ruth/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '1-samuel': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "QJOju5Dw0V0",
+      "title": "1 Samuel — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/QJOju5Dw0V0?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/1-samuel/",
+      "chapterStart": 1,
+      "chapterEnd": 31
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -263,22 +279,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-samuel/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 1 Samuel",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 1 Samuel. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/1-samuel/versemate_keyword_heatmap.png",
-      "full": "/visuals/1-samuel/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '2-samuel': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "YvoWDXNDJgs",
+      "title": "2 Samuel — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/YvoWDXNDJgs?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/2-samuel/",
+      "chapterStart": 1,
+      "chapterEnd": 24
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -290,22 +304,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-samuel/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 2 Samuel",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 2 Samuel. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/2-samuel/versemate_keyword_heatmap.png",
-      "full": "/visuals/2-samuel/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '1-kings': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "bVFW3wbi9pk",
+      "title": "1–2 Kings — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/bVFW3wbi9pk?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/1-kings/",
+      "chapterStart": 1,
+      "chapterEnd": 22
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -317,22 +329,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-kings/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 1 Kings",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 1 Kings. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/1-kings/versemate_keyword_heatmap.png",
-      "full": "/visuals/1-kings/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '2-kings': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "bVFW3wbi9pk",
+      "title": "1–2 Kings — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/bVFW3wbi9pk?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/2-kings/",
+      "chapterStart": 1,
+      "chapterEnd": 25
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -344,22 +354,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-kings/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 2 Kings",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 2 Kings. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/2-kings/versemate_keyword_heatmap.png",
-      "full": "/visuals/2-kings/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '1-chronicles': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "HR7xaHv3Ias",
+      "title": "1–2 Chronicles — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/HR7xaHv3Ias?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/1-chronicles/",
+      "chapterStart": 1,
+      "chapterEnd": 29
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -371,22 +379,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-chronicles/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 1 Chronicles",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 1 Chronicles. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/1-chronicles/versemate_keyword_heatmap.png",
-      "full": "/visuals/1-chronicles/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '2-chronicles': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "HR7xaHv3Ias",
+      "title": "1–2 Chronicles — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/HR7xaHv3Ias?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/2-chronicles/",
+      "chapterStart": 1,
+      "chapterEnd": 36
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -398,22 +404,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-chronicles/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 2 Chronicles",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 2 Chronicles. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/2-chronicles/versemate_keyword_heatmap.png",
-      "full": "/visuals/2-chronicles/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'ezra': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "MkETkRv9tG8",
+      "title": "Ezra–Nehemiah — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/MkETkRv9tG8?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/ezra/",
+      "chapterStart": 1,
+      "chapterEnd": 10
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -425,22 +429,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-ezra/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Ezra",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Ezra. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/ezra/versemate_keyword_heatmap.png",
-      "full": "/visuals/ezra/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'nehemiah': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "MkETkRv9tG8",
+      "title": "Ezra–Nehemiah — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/MkETkRv9tG8?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/nehemiah/",
+      "chapterStart": 1,
+      "chapterEnd": 13
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -452,22 +454,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-nehemiah/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Nehemiah",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Nehemiah. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/nehemiah/versemate_keyword_heatmap.png",
-      "full": "/visuals/nehemiah/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'esther': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "JydNSlufRIs",
+      "title": "Esther — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/JydNSlufRIs?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/esther/",
+      "chapterStart": 1,
+      "chapterEnd": 10
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -479,22 +479,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-esther/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Esther",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Esther. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/esther/versemate_keyword_heatmap.png",
-      "full": "/visuals/esther/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'job': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "xQwnH8th_fs",
+      "title": "Job — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/xQwnH8th_fs?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/job/",
+      "chapterStart": 1,
+      "chapterEnd": 42
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -506,22 +504,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-job/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Job",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Job. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/job/versemate_keyword_heatmap.png",
-      "full": "/visuals/job/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'psalms': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "j9phNEaPrv8",
+      "title": "Psalms — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/j9phNEaPrv8?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/psalms/",
+      "chapterStart": 1,
+      "chapterEnd": 150
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -533,22 +529,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-psalms/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Psalms",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Psalms. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/psalms/versemate_keyword_heatmap.png",
-      "full": "/visuals/psalms/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'proverbs': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "AzmYV8GNAIM",
+      "title": "Proverbs — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/AzmYV8GNAIM?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/proverbs/",
+      "chapterStart": 1,
+      "chapterEnd": 31
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -560,22 +554,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-proverbs/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Proverbs",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Proverbs. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/proverbs/versemate_keyword_heatmap.png",
-      "full": "/visuals/proverbs/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'ecclesiastes': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "lrsQ1tc-2wk",
+      "title": "Ecclesiastes — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/lrsQ1tc-2wk?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/ecclesiastes/",
+      "chapterStart": 1,
+      "chapterEnd": 12
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -587,22 +579,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-ecclesiastes/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Ecclesiastes",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Ecclesiastes. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/ecclesiastes/versemate_keyword_heatmap.png",
-      "full": "/visuals/ecclesiastes/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'song-of-solomon': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "4KC7xE4fgOw",
+      "title": "Song of Songs — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/4KC7xE4fgOw?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/song-of-solomon/",
+      "chapterStart": 1,
+      "chapterEnd": 8
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -614,22 +604,28 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-song-of-solomon/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Song of Songs",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Song of Songs. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/song-of-solomon/versemate_keyword_heatmap.png",
-      "full": "/visuals/song-of-solomon/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'isaiah': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "d0A6Uchb1F8",
+      "title": "Isaiah 1–39 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/d0A6Uchb1F8?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/isaiah/",
+      "chapterStart": 1,
+      "chapterEnd": 39
+    },
+    {
+      "youtubeId": "_TzdEPuqgQg",
+      "title": "Isaiah 40–66 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/_TzdEPuqgQg?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/isaiah/",
+      "chapterStart": 40,
+      "chapterEnd": 66
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -641,22 +637,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-isaiah/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Isaiah",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Isaiah. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/isaiah/versemate_keyword_heatmap.png",
-      "full": "/visuals/isaiah/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'jeremiah': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "RSK36cHbrk0",
+      "title": "Jeremiah — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/RSK36cHbrk0?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/jeremiah/",
+      "chapterStart": 1,
+      "chapterEnd": 52
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -668,22 +662,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-jeremiah/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Jeremiah",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Jeremiah. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/jeremiah/versemate_keyword_heatmap.png",
-      "full": "/visuals/jeremiah/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'lamentations': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "p8GDFPdaQZQ",
+      "title": "Lamentations — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/p8GDFPdaQZQ?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/lamentations/",
+      "chapterStart": 1,
+      "chapterEnd": 5
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -695,22 +687,28 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-lamentations/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Lamentations",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Lamentations. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/lamentations/versemate_keyword_heatmap.png",
-      "full": "/visuals/lamentations/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'ezekiel': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "R-CIPu1nko8",
+      "title": "Ezekiel 1–33 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/R-CIPu1nko8?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/ezekiel/",
+      "chapterStart": 1,
+      "chapterEnd": 33
+    },
+    {
+      "youtubeId": "SDeCWW_Bnyw",
+      "title": "Ezekiel 34–48 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/SDeCWW_Bnyw?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/ezekiel/",
+      "chapterStart": 34,
+      "chapterEnd": 48
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -722,22 +720,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-ezekiel/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Ezekiel",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Ezekiel. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/ezekiel/versemate_keyword_heatmap.png",
-      "full": "/visuals/ezekiel/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'daniel': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "9cSC9uobtPM",
+      "title": "Daniel — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/9cSC9uobtPM?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/daniel/",
+      "chapterStart": 1,
+      "chapterEnd": 12
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -749,22 +745,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-daniel/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Daniel",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Daniel. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/daniel/versemate_keyword_heatmap.png",
-      "full": "/visuals/daniel/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'hosea': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "kE6SZ1ogOVU",
+      "title": "Hosea — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/kE6SZ1ogOVU?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/hosea/",
+      "chapterStart": 1,
+      "chapterEnd": 14
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -776,22 +770,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-hosea/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Hosea",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Hosea. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/hosea/versemate_keyword_heatmap.png",
-      "full": "/visuals/hosea/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'joel': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "zQLazbgz90c",
+      "title": "Joel — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/zQLazbgz90c?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/joel/",
+      "chapterStart": 1,
+      "chapterEnd": 3
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -803,22 +795,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-joel/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Joel",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Joel. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/joel/versemate_keyword_heatmap.png",
-      "full": "/visuals/joel/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'amos': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "mGgWaPGpGz4",
+      "title": "Amos — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/mGgWaPGpGz4?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/amos/",
+      "chapterStart": 1,
+      "chapterEnd": 9
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -830,22 +820,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-amos/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Amos",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Amos. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/amos/versemate_keyword_heatmap.png",
-      "full": "/visuals/amos/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'obadiah': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "i4ogCrEoG5s",
+      "title": "Obadiah — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/i4ogCrEoG5s?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/obadiah/",
+      "chapterStart": 1,
+      "chapterEnd": 1
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -857,22 +845,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-obadiah/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Obadiah",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Obadiah. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/obadiah/versemate_keyword_heatmap.png",
-      "full": "/visuals/obadiah/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'jonah': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "dLIabZc0O4c",
+      "title": "Jonah — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/dLIabZc0O4c?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/jonah/",
+      "chapterStart": 1,
+      "chapterEnd": 4
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -884,22 +870,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-jonah/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Jonah",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Jonah. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/jonah/versemate_keyword_heatmap.png",
-      "full": "/visuals/jonah/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'micah': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "MFEUEcylwLc",
+      "title": "Micah — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/MFEUEcylwLc?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/micah/",
+      "chapterStart": 1,
+      "chapterEnd": 7
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -911,22 +895,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-micah/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Micah",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Micah. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/micah/versemate_keyword_heatmap.png",
-      "full": "/visuals/micah/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'nahum': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "Y30DanA5EhU",
+      "title": "Nahum — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/Y30DanA5EhU?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/nahum/",
+      "chapterStart": 1,
+      "chapterEnd": 3
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -938,22 +920,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-nahum/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Nahum",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Nahum. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/nahum/versemate_keyword_heatmap.png",
-      "full": "/visuals/nahum/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'habakkuk': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "OPMaRqGJPUU",
+      "title": "Habakkuk — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/OPMaRqGJPUU?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/habakkuk/",
+      "chapterStart": 1,
+      "chapterEnd": 3
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -965,22 +945,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-habakkuk/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Habakkuk",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Habakkuk. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/habakkuk/versemate_keyword_heatmap.png",
-      "full": "/visuals/habakkuk/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'zephaniah': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "oFZknKPNvz8",
+      "title": "Zephaniah — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/oFZknKPNvz8?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/zephaniah/",
+      "chapterStart": 1,
+      "chapterEnd": 3
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -992,22 +970,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-zephaniah/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Zephaniah",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Zephaniah. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/zephaniah/versemate_keyword_heatmap.png",
-      "full": "/visuals/zephaniah/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'haggai': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "juPvv_xcX-U",
+      "title": "Haggai — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/juPvv_xcX-U?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/haggai/",
+      "chapterStart": 1,
+      "chapterEnd": 2
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1019,22 +995,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-haggai/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Haggai",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Haggai. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/haggai/versemate_keyword_heatmap.png",
-      "full": "/visuals/haggai/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'zechariah': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "_106IfO6Kc0",
+      "title": "Zechariah — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/_106IfO6Kc0?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/zechariah/",
+      "chapterStart": 1,
+      "chapterEnd": 14
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1046,22 +1020,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-zechariah/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Zechariah",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Zechariah. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/zechariah/versemate_keyword_heatmap.png",
-      "full": "/visuals/zechariah/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'malachi': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "HPGShWZ4Jvk",
+      "title": "Malachi — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/HPGShWZ4Jvk?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/malachi/",
+      "chapterStart": 1,
+      "chapterEnd": 4
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1073,22 +1045,28 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-malachi/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Malachi",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Malachi. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/malachi/versemate_keyword_heatmap.png",
-      "full": "/visuals/malachi/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'matthew': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "iriW0zX492c",
+      "title": "Matthew 1–13 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/iriW0zX492c?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/matthew/",
+      "chapterStart": 1,
+      "chapterEnd": 13
+    },
+    {
+      "youtubeId": "VSVPCPK-Zf8",
+      "title": "Matthew 14–28 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/VSVPCPK-Zf8?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/matthew/",
+      "chapterStart": 14,
+      "chapterEnd": 28
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1100,22 +1078,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-matthew/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Matthew",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Matthew. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/matthew/versemate_keyword_heatmap.png",
-      "full": "/visuals/matthew/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'mark': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "HGHqu9-DtXk",
+      "title": "Mark — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/HGHqu9-DtXk?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/mark/",
+      "chapterStart": 1,
+      "chapterEnd": 16
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1127,22 +1103,28 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-mark/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Mark",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Mark. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/mark/versemate_keyword_heatmap.png",
-      "full": "/visuals/mark/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'luke': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "XIb_dCIxzr0",
+      "title": "Luke 1–9 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/XIb_dCIxzr0?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/luke/",
+      "chapterStart": 1,
+      "chapterEnd": 9
+    },
+    {
+      "youtubeId": "26z_KhwNdD8",
+      "title": "Luke 10–24 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/26z_KhwNdD8?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/luke/",
+      "chapterStart": 10,
+      "chapterEnd": 24
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1154,22 +1136,28 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-luke/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Luke",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Luke. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/luke/versemate_keyword_heatmap.png",
-      "full": "/visuals/luke/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'john': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "G-2e9mMf7E8",
+      "title": "John 1–12 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/G-2e9mMf7E8?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/john/",
+      "chapterStart": 1,
+      "chapterEnd": 12
+    },
+    {
+      "youtubeId": "RUfh_wOsauk",
+      "title": "John 13–21 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/RUfh_wOsauk?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/john/",
+      "chapterStart": 13,
+      "chapterEnd": 21
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1181,22 +1169,28 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-john/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of John",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across John. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/john/versemate_keyword_heatmap.png",
-      "full": "/visuals/john/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'acts': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "CGbNw855ksw",
+      "title": "Acts 1–12 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/CGbNw855ksw?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/acts/",
+      "chapterStart": 1,
+      "chapterEnd": 12
+    },
+    {
+      "youtubeId": "Z-17KxpjL0Q",
+      "title": "Acts 13–28 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/Z-17KxpjL0Q?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/acts/",
+      "chapterStart": 13,
+      "chapterEnd": 28
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1208,22 +1202,28 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-acts/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Acts",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Acts. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/acts/versemate_keyword_heatmap.png",
-      "full": "/visuals/acts/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'romans': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "6KrQ1ZwUlPU",
+      "title": "Romans 1–4 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/6KrQ1ZwUlPU?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/romans/",
+      "chapterStart": 1,
+      "chapterEnd": 4
+    },
+    {
+      "youtubeId": "ZuEsGgIFdso",
+      "title": "Romans 5–16 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/ZuEsGgIFdso?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/romans/",
+      "chapterStart": 5,
+      "chapterEnd": 16
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1235,22 +1235,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-romans/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Romans",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Romans. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/romans/versemate_keyword_heatmap.png",
-      "full": "/visuals/romans/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '1-corinthians': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "veU6dB3996o",
+      "title": "1 Corinthians — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/veU6dB3996o?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/1-corinthians/",
+      "chapterStart": 1,
+      "chapterEnd": 16
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1262,22 +1260,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-corinthians/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 1 Corinthians",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 1 Corinthians. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/1-corinthians/versemate_keyword_heatmap.png",
-      "full": "/visuals/1-corinthians/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '2-corinthians': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "3lfPK2vfC54",
+      "title": "2 Corinthians — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/3lfPK2vfC54?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/2-corinthians/",
+      "chapterStart": 1,
+      "chapterEnd": 13
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1289,22 +1285,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-corinthians/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 2 Corinthians",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 2 Corinthians. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/2-corinthians/versemate_keyword_heatmap.png",
-      "full": "/visuals/2-corinthians/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'galatians': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "vmx4UjRFp0M",
+      "title": "Galatians — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/vmx4UjRFp0M?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/galatians/",
+      "chapterStart": 1,
+      "chapterEnd": 6
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1316,22 +1310,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-galatians/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Galatians",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Galatians. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/galatians/versemate_keyword_heatmap.png",
-      "full": "/visuals/galatians/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'ephesians': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "Y71r-T98E2Q",
+      "title": "Ephesians — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/Y71r-T98E2Q?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/ephesians/",
+      "chapterStart": 1,
+      "chapterEnd": 6
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1343,22 +1335,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-ephesians/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Ephesians",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Ephesians. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/ephesians/versemate_keyword_heatmap.png",
-      "full": "/visuals/ephesians/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'philippians': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "oE9qqW1-BkU",
+      "title": "Philippians — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/oE9qqW1-BkU?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/philippians/",
+      "chapterStart": 1,
+      "chapterEnd": 4
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1370,22 +1360,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-philippians/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Philippians",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Philippians. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/philippians/versemate_keyword_heatmap.png",
-      "full": "/visuals/philippians/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'colossians': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "pXTXlDxQsvc",
+      "title": "Colossians — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/pXTXlDxQsvc?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/colossians/",
+      "chapterStart": 1,
+      "chapterEnd": 4
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1397,22 +1385,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-colossians/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Colossians",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Colossians. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/colossians/versemate_keyword_heatmap.png",
-      "full": "/visuals/colossians/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '1-thessalonians': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "No7Nq6IX23c",
+      "title": "1 Thessalonians — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/No7Nq6IX23c?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/1-thessalonians/",
+      "chapterStart": 1,
+      "chapterEnd": 5
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1424,22 +1410,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-thessalonians/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 1 Thessalonians",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 1 Thessalonians. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/1-thessalonians/versemate_keyword_heatmap.png",
-      "full": "/visuals/1-thessalonians/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '2-thessalonians': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "kbPBDKOn1cc",
+      "title": "2 Thessalonians — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/kbPBDKOn1cc?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/2-thessalonians/",
+      "chapterStart": 1,
+      "chapterEnd": 3
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1451,22 +1435,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-thessalonians/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 2 Thessalonians",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 2 Thessalonians. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/2-thessalonians/versemate_keyword_heatmap.png",
-      "full": "/visuals/2-thessalonians/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '1-timothy': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "7RoqnGcEjcs",
+      "title": "1 Timothy — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/7RoqnGcEjcs?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/1-timothy/",
+      "chapterStart": 1,
+      "chapterEnd": 6
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1478,22 +1460,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-timothy/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 1 Timothy",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 1 Timothy. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/1-timothy/versemate_keyword_heatmap.png",
-      "full": "/visuals/1-timothy/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '2-timothy': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "urlvnxCaL00",
+      "title": "2 Timothy — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/urlvnxCaL00?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/2-timothy/",
+      "chapterStart": 1,
+      "chapterEnd": 4
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1505,22 +1485,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-timothy/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 2 Timothy",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 2 Timothy. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/2-timothy/versemate_keyword_heatmap.png",
-      "full": "/visuals/2-timothy/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'titus': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "qgAZH5ExwrM",
+      "title": "Titus — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/qgAZH5ExwrM?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/titus/",
+      "chapterStart": 1,
+      "chapterEnd": 3
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1532,22 +1510,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-titus/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Titus",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Titus. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/titus/versemate_keyword_heatmap.png",
-      "full": "/visuals/titus/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'philemon': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "aW9Q3Jt6Yvk",
+      "title": "Philemon — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/aW9Q3Jt6Yvk?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/philemon/",
+      "chapterStart": 1,
+      "chapterEnd": 1
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1559,22 +1535,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-philemon/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Philemon",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Philemon. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/philemon/versemate_keyword_heatmap.png",
-      "full": "/visuals/philemon/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'hebrews': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "z9wqN-nwSzE",
+      "title": "Hebrews — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/z9wqN-nwSzE?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/hebrews/",
+      "chapterStart": 1,
+      "chapterEnd": 13
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1586,28 +1560,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-hebrews/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Hebrews",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Hebrews. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/hebrews/versemate_keyword_heatmap.png",
-      "full": "/visuals/hebrews/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'james': {
-  "video": {
-    "youtubeId": "qn-hLHWwRYY",
-    "title": "Book of James — Overview",
-    "duration": "",
-    "embedUrl": "https://www.youtube-nocookie.com/embed/qn-hLHWwRYY?autoplay=1&rel=0&modestbranding=1",
-    "page": "https://bibleproject.com/videos/james/"
-  },
+  "videos": [
+    {
+      "youtubeId": "qn-hLHWwRYY",
+      "title": "James — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/qn-hLHWwRYY?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/james/",
+      "chapterStart": 1,
+      "chapterEnd": 5
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1653,18 +1619,31 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
     {
       "id": "vm-heatmap",
       "title": "VerseMate Original — Architecture of James",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across James. Auto-generated from the Greek/Hebrew lexicon.",
+      "caption": "Dot-matrix heatmap of faith, works, tongue, and wisdom across all 108 verses. Chapter 2 = the faith/works debate; chapter 3 = the tongue treatise.",
       "thumb": "/visuals/james/versemate_james_keyword_heatmap.png",
       "full": "/visuals/james/versemate_james_keyword_heatmap.png",
       "attribution": {
         "label": "VerseMate Original",
         "href": "#"
+      },
+      "download": {
+        "label": "Print-ready PDF",
+        "href": "/visuals/james/versemate_james_keyword_heatmap.pdf"
       }
     }
   ]
 },
   '1-peter': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "WhP7AZQlzCg",
+      "title": "1 Peter — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/WhP7AZQlzCg?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/1-peter/",
+      "chapterStart": 1,
+      "chapterEnd": 5
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1676,22 +1655,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-peter/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 1 Peter",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 1 Peter. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/1-peter/versemate_keyword_heatmap.png",
-      "full": "/visuals/1-peter/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '2-peter': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "wWLv_ITyKYc",
+      "title": "2 Peter — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/wWLv_ITyKYc?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/2-peter/",
+      "chapterStart": 1,
+      "chapterEnd": 3
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1703,22 +1680,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-peter/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 2 Peter",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 2 Peter. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/2-peter/versemate_keyword_heatmap.png",
-      "full": "/visuals/2-peter/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '1-john': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "l3QkE6nKylM",
+      "title": "1–3 John — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/l3QkE6nKylM?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/1-john/",
+      "chapterStart": 1,
+      "chapterEnd": 5
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1730,22 +1705,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-1-john/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 1 John",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 1 John. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/1-john/versemate_keyword_heatmap.png",
-      "full": "/visuals/1-john/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '2-john': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "l3QkE6nKylM",
+      "title": "1–3 John — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/l3QkE6nKylM?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/2-john/",
+      "chapterStart": 1,
+      "chapterEnd": 1
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1757,22 +1730,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-2-john/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 2 John",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 2 John. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/2-john/versemate_keyword_heatmap.png",
-      "full": "/visuals/2-john/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   '3-john': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "l3QkE6nKylM",
+      "title": "1–3 John — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/l3QkE6nKylM?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/3-john/",
+      "chapterStart": 1,
+      "chapterEnd": 1
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1784,22 +1755,20 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-3-john/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of 3 John",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across 3 John. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/3-john/versemate_keyword_heatmap.png",
-      "full": "/visuals/3-john/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'jude': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "6UoCmakZmys",
+      "title": "Jude — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/6UoCmakZmys?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/jude/",
+      "chapterStart": 1,
+      "chapterEnd": 1
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1811,22 +1780,28 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-jude/"
       }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Jude",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Jude. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/jude/versemate_keyword_heatmap.png",
-      "full": "/visuals/jude/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
-      }
     }
   ]
 },
   'revelation': {
-  "video": null,
+  "videos": [
+    {
+      "youtubeId": "5nvVVcYD-0w",
+      "title": "Revelation 1–11 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/5nvVVcYD-0w?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/revelation/",
+      "chapterStart": 1,
+      "chapterEnd": 11
+    },
+    {
+      "youtubeId": "QpnIrbq2bKo",
+      "title": "Revelation 12–22 — Overview",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/QpnIrbq2bKo?autoplay=1&rel=0&modestbranding=1",
+      "page": "https://bibleproject.com/videos/revelation/",
+      "chapterStart": 12,
+      "chapterEnd": 22
+    }
+  ],
   "cards": [
     {
       "id": "bp-poster",
@@ -1837,17 +1812,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "attribution": {
         "label": "BibleProject · CC BY-SA 4.0",
         "href": "https://bibleproject.com/guides/book-of-revelation/"
-      }
-    },
-    {
-      "id": "vm-heatmap",
-      "title": "VerseMate Original — Architecture of Revelation",
-      "caption": "Dot-matrix heatmap showing where the four most frequent key words cluster across Revelation. Auto-generated from the Greek/Hebrew lexicon.",
-      "thumb": "/visuals/revelation/versemate_keyword_heatmap.png",
-      "full": "/visuals/revelation/versemate_keyword_heatmap.png",
-      "attribution": {
-        "label": "VerseMate Original",
-        "href": "#"
       }
     }
   ]
@@ -1861,4 +1825,19 @@ export const BOOKS_WITH_VISUALS: Set<string> = new Set(
 /** Lookup helper — slug is matched case-insensitively. */
 export function getVisualsForBook(slug: string): VisualsManifest | null {
   return VISUALS_REGISTRY[slug.toLowerCase()] ?? null;
+}
+
+/** Pick the BibleProject overview that covers the given chapter, or null
+ *  if the book has no videos / the chapter falls outside every range
+ *  (shouldn't happen — chapter ranges in the manifest are exhaustive
+ *  for every book that has any video). */
+export function getVideoForChapter(
+  manifest: VisualsManifest | null,
+  chapter: number,
+): VideoEntry | null {
+  if (!manifest) return null;
+  for (const v of manifest.videos) {
+    if (chapter >= v.chapterStart && chapter <= v.chapterEnd) return v;
+  }
+  return manifest.videos[0] ?? null;
 }
