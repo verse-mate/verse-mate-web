@@ -22,8 +22,8 @@ export class DesktopReaderPage {
   readonly hamburgerMenu: Locator;
   readonly tabSummary: Locator;
   readonly tabByline: Locator;
-  readonly tabDetailed: Locator;
   readonly tabStudy: Locator;
+  readonly tabVisuals: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -37,8 +37,8 @@ export class DesktopReaderPage {
     this.hamburgerMenu = page.getByTestId('desktop-hamburger-menu-button');
     this.tabSummary = page.getByTestId('desktop-tab-summary');
     this.tabByline = page.getByTestId('desktop-tab-byline');
-    this.tabDetailed = page.getByTestId('desktop-tab-detailed');
     this.tabStudy = page.getByTestId('desktop-tab-study');
+    this.tabVisuals = page.getByTestId('desktop-tab-visuals');
   }
 
   /**

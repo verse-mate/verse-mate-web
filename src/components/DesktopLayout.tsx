@@ -57,7 +57,7 @@ const RIGHT_PANEL_COMPONENTS: Record<Exclude<RightPanelView, 'commentary'>, { co
   signin: { component: SignInScreen, label: 'Sign In' },
 };
 
-type Tab = 'summary' | 'byline' | 'detailed' | 'study' | 'visuals';
+type Tab = 'summary' | 'byline' | 'study' | 'visuals';
 
 // Books that have curated visual aids. Keep in sync with CommentaryScreen.
 const BOOKS_WITH_VISUALS = new Set(['james']);
@@ -135,8 +135,9 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // `/topics/:topicId/:eventId`, `/topics/:topicId/:eventId/most-quoted`)
   // render their own full-width content in the LEFT panel via <Outlet />.
   // The chrome that's tied to a Bible passage — chapter selector, the
-  // Summary/By-Line/Detailed/Study commentary tabs, and the entire right
-  // pane — has nothing to display in a topic context, so we hide all of
+  // Summary/By-Line/Study commentary tabs (plus Visuals on books that
+  // have them), and the entire right pane — has nothing to display in
+  // a topic context, so we hide all of
   // it and let the topic content take the full split-body width.
   const isTopicRoute =
     location.pathname.startsWith('/topic/') ||
@@ -171,7 +172,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const [tab, setTab] = useState<Tab>(() => {
     try {
       const v = sessionStorage.getItem('versemate-commentary-tab');
-      if (v === 'summary' || v === 'byline' || v === 'detailed' || v === 'study' || v === 'visuals') return v;
+      if (v === 'summary' || v === 'byline' || v === 'study' || v === 'visuals') return v;
     } catch { /* ignore */ }
     return 'byline';
   });
@@ -198,7 +199,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
     // Reset right panel + commentary tab whenever the user navigates to a
     // new chapter. Without this, opening Settings then jumping to a new
     // book leaves Settings pinned in the right pane, and a chapter change
-    // mid-Detailed-tab leaves Detailed active even though By-Line is the
+    // mid-Summary-tab leaves Summary active even though By-Line is the
     // canonical default for a fresh chapter.
     setRightPanelView('commentary');
     setTab('byline');
@@ -284,7 +285,6 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const tabs: { id: Tab; label: string }[] = [
     { id: 'summary', label: 'Summary' },
     { id: 'byline', label: 'By Line' },
-    { id: 'detailed', label: 'Detailed' },
     { id: 'study', label: 'Study' },
     ...(hasVisuals ? [{ id: 'visuals' as Tab, label: 'Visuals' }] : []),
   ];
@@ -391,9 +391,10 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
           {/* Commentary pill-group — absolute-positioned at the horizontal
               center of the right panel (split-aware). On Bible routes
-              this is the Summary/By-Line/Detailed/Study chooser; on
-              topic routes the same slot holds the Summary/By-Line/
-              Detailed chooser fed from TopicViewContext. */}
+              this is the Summary/By-Line/Study chooser (plus Visuals on
+              books that have curated visuals); on topic routes the same
+              slot holds the Summary/By-Line/Detailed chooser fed from
+              TopicViewContext. */}
           {!isTopicRoute && rightPanelView === 'commentary' && (
             <div
               style={{
@@ -847,10 +848,11 @@ function CommentaryPanel({
     );
   }
 
-  if (tab === 'byline') {
-    const byLineItems = commentaries.filter(c => c.type === 'byline');
-    const allExpanded = expanded === -2;
-    return (
+  // byline is the only remaining case (Tab type is narrowed to 'byline'
+  // here after early returns for 'study', 'visuals', 'summary').
+  const byLineItems = commentaries.filter(c => c.type === 'byline');
+  const allExpanded = expanded === -2;
+  return (
       <div>
         <div className="commentary-toolbar">
           <h2 className="commentary-h2">
@@ -958,65 +960,6 @@ function CommentaryPanel({
         </div>
       </div>
     );
-  }
-
-  // detailed tab
-  const detailed = commentaries.find(c => c.type === 'detailed');
-  return detailed ? (
-    <div>
-      <div className="commentary-toolbar">
-        <h2 className="commentary-h2">
-          In-Depth Analysis of {book} {chapter}
-        </h2>
-        <div className="commentary-actions">
-          <button
-            onClick={() => {
-              const body = detailed.detail
-                ? `In-Depth Analysis of ${book} ${chapter}\n\n${stripMarkdown(detailed.detail)}`
-                : `In-Depth Analysis of ${book} ${chapter}`;
-              copyToClipboard(body, 'detailed');
-            }}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
-            aria-label="Copy in-depth analysis"
-            title="Copy in-depth analysis"
-          >
-            {copiedTab === 'detailed'
-              ? <Check size={18} color={vmTokens.gold} strokeWidth={2} />
-              : <Copy size={18} color={vmTokens.textPrimary} strokeWidth={1.5} />}
-          </button>
-          <button
-            onClick={() => navigator.share?.({
-              title: `In-Depth Analysis of ${book} ${chapter}`,
-              text: detailed.detail
-                ? `In-Depth Analysis of ${book} ${chapter}\n\n${stripMarkdown(detailed.detail)}`
-                : `In-Depth Analysis of ${book} ${chapter}`,
-              url: window.location.href,
-            }).catch(() => {})}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
-            aria-label="Share in-depth analysis"
-          >
-            <ShareIcon size={18} color={vmTokens.textPrimary} />
-          </button>
-        </div>
-      </div>
-      {bookId && detailed.explanationId ? (
-        <div style={{ marginBottom: 12 }}>
-          <AudioInlineEntry
-            explanationId={detailed.explanationId}
-            explanationType="detailed"
-            bookId={bookId}
-            chapterNumber={chapter}
-            sourceHref={`/read/${book}/${chapter}/commentary`}
-          />
-        </div>
-      ) : null}
-      <CommentaryBody text={detailed.detail} />
-    </div>
-  ) : (
-    <p style={{ color: vmTokens.textSecondary, fontSize: 14, textAlign: 'center', paddingTop: 32 }}>
-      Detailed commentary not available.
-    </p>
-  );
 }
 
 // ─── CommentaryBody ──────────────────────────────────────────────────────────
