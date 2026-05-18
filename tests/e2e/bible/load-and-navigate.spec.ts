@@ -77,3 +77,21 @@ test.describe('Bible — FAB navigation', () => {
     await expect(reader.nextChapter).toBeVisible();
   });
 });
+
+test.describe('Bible — URL stability (VER-71)', () => {
+  // VER-71: /bible/psalms/119 intermittently redirected to /bible/psalms/2 or
+  // /bible/genesis/1 because ReadingScreen's state→URL sync effect re-fired on
+  // pathname changes with stale state and overwrote the new URL. Direct hits
+  // on a deep chapter must NOT bounce away after AppContext / BibleRoute / the
+  // books cache settle.
+  test('direct hit on /bible/psalms/119 stays on Psalms 119 after load', async ({ page }) => {
+    const reader = new ReaderPage(page);
+    await reader.goto('psalms', 119);
+    await reader.expectChapterLoaded('Psalms', 119);
+    // Hold for a beat to let any deferred effect re-fire (the original bug
+    // surfaced ~3–4s after navigation, after fetchBooks resolved).
+    await page.waitForTimeout(4_000);
+    await expect(page).toHaveURL(/\/bible\/psalms\/119(?:[/?#]|$)/);
+    await reader.expectChapterLoaded('Psalms', 119);
+  });
+});
