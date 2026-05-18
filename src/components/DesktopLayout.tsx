@@ -26,6 +26,7 @@ import ShareIcon from '@/components/ShareIcon';
 import BookSelector from '@/components/BookSelector';
 import StudyPanel from '@/components/StudyPanel';
 import VisualsPanel from '@/components/VisualsPanel';
+import { BOOKS_WITH_VISUALS } from '@/data/visuals/registry';
 import { RightPanelProvider } from '@/contexts/RightPanelContext';
 import { useTopicView } from '@/contexts/TopicViewContext';
 import { AudioInlineEntry } from '@/audio';
@@ -59,8 +60,8 @@ const RIGHT_PANEL_COMPONENTS: Record<Exclude<RightPanelView, 'commentary'>, { co
 
 type Tab = 'summary' | 'byline' | 'study' | 'visuals';
 
-// Books that have curated visual aids. Keep in sync with CommentaryScreen.
-const BOOKS_WITH_VISUALS = new Set(['james']);
+// `BOOKS_WITH_VISUALS` is imported from the generated registry; its
+// contents update automatically when build_manifests.py is re-run.
 
 const MIN_LEFT_PCT = 35;
 const MAX_LEFT_PCT = 80;
