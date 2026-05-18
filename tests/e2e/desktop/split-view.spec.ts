@@ -54,7 +54,10 @@ test.describe('Desktop — split view layout', () => {
 
     await expect(desktop.tabSummary).toBeVisible();
     await expect(desktop.tabByline).toBeVisible();
-    await expect(desktop.tabDetailed).toBeVisible();
+    await expect(desktop.tabStudy).toBeVisible();
+    // Detailed has been removed; Visuals is gated to books with curated
+    // assets and stays hidden on Genesis.
+    await expect(desktop.tabVisuals).toHaveCount(0);
   });
 
   test('switching to Summary tab shows summary heading in right panel', async ({ page }) => {
@@ -67,13 +70,19 @@ test.describe('Desktop — split view layout', () => {
     ).toBeVisible({ timeout: 15_000 });
   });
 
-  test('switching to Detailed tab shows in-depth heading in right panel', async ({ page }) => {
+  test('Visuals tab appears on James and is hidden on Genesis', async ({ page }) => {
     const desktop = new DesktopReaderPage(page);
-    await desktop.goto('genesis', 1);
 
-    await desktop.tabDetailed.click();
+    // Off for books without curated visuals.
+    await desktop.goto('genesis', 1);
+    await expect(desktop.tabVisuals).toHaveCount(0);
+
+    // On for James — the launch book for the Visuals catalogue.
+    await desktop.goto('james', 1);
+    await expect(desktop.tabVisuals).toBeVisible();
+    await desktop.tabVisuals.click();
     await expect(
-      desktop.rightPanel.getByText(/In-Depth Analysis of Genesis 1|Detailed commentary not available/i),
+      desktop.rightPanel.getByText(/visuals for james 1/i),
     ).toBeVisible({ timeout: 15_000 });
   });
 

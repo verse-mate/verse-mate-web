@@ -11,7 +11,7 @@ import VisualsPanel from '@/components/VisualsPanel';
 import { AudioInlineEntry } from '@/audio';
 import { useApp } from '@/contexts/AppContext';
 
-type Tab = 'summary' | 'byline' | 'detailed' | 'study' | 'visuals';
+type Tab = 'summary' | 'byline' | 'study' | 'visuals';
 
 // Books that have curated visual aids. Add more as visuals are produced.
 const BOOKS_WITH_VISUALS = new Set(['james']);
@@ -24,7 +24,7 @@ export default function CommentaryScreen() {
   const [tab, setTab] = useState<Tab>(() => {
     try {
       const v = sessionStorage.getItem('versemate-commentary-tab');
-      if (v === 'summary' || v === 'byline' || v === 'detailed' || v === 'study' || v === 'visuals') return v;
+      if (v === 'summary' || v === 'byline' || v === 'study' || v === 'visuals') return v;
     } catch { /* ignore */ }
     return 'summary';
   });
@@ -110,7 +110,6 @@ export default function CommentaryScreen() {
   const tabs: { id: Tab; label: string }[] = [
     { id: 'summary', label: 'Summary' },
     { id: 'byline', label: 'By Line' },
-    { id: 'detailed', label: 'Detailed' },
     { id: 'study', label: 'Study' },
     ...(hasVisuals ? [{ id: 'visuals' as Tab, label: 'Visuals' }] : []),
   ];
@@ -322,7 +321,7 @@ export default function CommentaryScreen() {
               );
             })()}
           </div>
-        ) : tab === 'byline' ? (
+        ) : (
           (() => {
             const byLineItems = commentaries.filter(c => c.type === 'byline');
             const allExpanded = expanded === -2;
@@ -429,66 +428,6 @@ export default function CommentaryScreen() {
                   )}
                 </div>
               </div>
-            );
-          })()
-        ) : (
-          (() => {
-            const detailed = commentaries.find(c => c.type === 'detailed');
-            return detailed ? (
-              <div className="pt-4">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
-                  <h2 style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: 20, lineHeight: '28px', color: vmTokens.textPrimary, margin: 0 }}>
-                    In-Depth Analysis of {decodedBook} {chapterNum}
-                  </h2>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
-                    <button
-                      onClick={() => {
-                        const body = detailed?.detail
-                          ? `In-Depth Analysis of ${decodedBook} ${chapterNum}\n\n${stripMarkdown(detailed.detail)}`
-                          : `In-Depth Analysis of ${decodedBook} ${chapterNum}`;
-                        copyToClipboard(body, 'detailed');
-                      }}
-                      style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
-                      aria-label="Copy in-depth analysis"
-                      data-testid="copy-detailed-button"
-                    >
-                      {copiedTab === 'detailed'
-                        ? <Check size={20} color={vmTokens.gold} strokeWidth={2} />
-                        : <Copy size={20} color={vmTokens.textPrimary} strokeWidth={1.5} />}
-                    </button>
-                    <button
-                      onClick={() => navigator.share?.({
-                        title: `In-Depth Analysis of ${decodedBook} ${chapterNum}`,
-                        text: detailed?.detail
-                          ? `In-Depth Analysis of ${decodedBook} ${chapterNum}\n\n${stripMarkdown(detailed.detail)}`
-                          : `In-Depth Analysis of ${decodedBook} ${chapterNum}`,
-                        url: window.location.href,
-                      }).catch(() => {})}
-                      style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8 }}
-                      aria-label="Share in-depth analysis"
-                      data-testid="share-detailed-button"
-                    >
-                      <ShareIcon size={20} color={vmTokens.textPrimary} />
-                    </button>
-                  </div>
-                </div>
-                {bookId && detailed.explanationId ? (
-                  <div className="mb-3">
-                    <AudioInlineEntry
-                      explanationId={detailed.explanationId}
-                      explanationType="detailed"
-                      bookId={bookId}
-                      chapterNumber={chapterNum}
-                      sourceHref={`/read/${decodedBook}/${chapterNum}/commentary`}
-                    />
-                  </div>
-                ) : null}
-                <CommentaryBody text={detailed.detail} />
-              </div>
-            ) : (
-              <p className="text-[14px] py-8 text-center" style={{ color: vmTokens.textTertiary }}>
-                Detailed commentary not available.
-              </p>
             );
           })()
         )}
