@@ -43,19 +43,15 @@ WEAK_HINTS = (
     "compare", "contrast", "summary", "structure",
     "outline", "framework", "panor", "stages",
 )
-# Negative signals — filenames that almost always mean inline photo,
-# decorative ornament, or sidebar widget rather than a study chart.
-NEGATIVE_HINTS = (
-    "_small",  # Precept's inline thumbnail naming convention
-    "small.",  # same idea on a different separator
-    "icon",
-    "logo",
-    "button",
-    "banner",
-    "header",
-    "divider",
-    "ornament",
-)
+# Negative signals — once meant "decorative ornament / sidebar widget",
+# but the audit showed every pattern here either had zero matches in the
+# probe (logo/button/banner/header/divider/ornament) or matched real
+# content (`_small` thumbnails of Cyrus's cylinder, Babylon archeological
+# plans, the Salvator-Rosa "Covenant" painting; `icon` matches Iconium
+# from Acts). The remaining true noise — Facebook / Twitter / WordPress
+# share buttons, the "broken links" placeholder graphic — is excluded
+# upstream by NOISE_FILENAMES in probe_precept_chapters.py.
+NEGATIVE_HINTS: tuple[str, ...] = ()
 
 # Filenames already pulled in as the book-level Precept chart by
 # ingest_precept.py — we never want to re-list them as per-chapter cards.
@@ -187,10 +183,15 @@ def score(filename: str) -> int:
     return s
 
 
-# Minimum filename score to keep a candidate. We require at least one
-# "strong" keyword (chart/map/timeline/etc.) — a bare .png with no other
-# signal is not enough.
-MIN_SCORE = 10
+# Minimum filename score to keep a candidate. Set to 0 so anything that
+# isn't an explicit book-level Precept chart (already surfaced via
+# ingest_precept.PRECEPT_CHARTS) passes — maps, photos, illustrations,
+# tables, diagrams all clear the gate. Strong-keyword candidates still
+# sort first via the score function for the per-chapter ranking.
+#
+# We rely on NOISE_FILENAMES (in probe_precept_chapters.py) for true
+# noise and on PER_BOOK_FILENAME_DENYLIST for editorial exclusions.
+MIN_SCORE = 0
 
 # A chart that appears on more than this fraction of a book's chapters
 # is treated as book-level reuse (e.g. the master outline embedded on
@@ -261,6 +262,30 @@ def main() -> None:
             else:
                 for ch in ch_set:
                     per_chapter.setdefault(ch, []).append(entry)
+
+        # Pull in images from the /<book>_commentaries index page. These
+        # are always book-level (Bruce's curated overview chart often
+        # only appears here, never on chapter pages — see Genesis,
+        # Numbers, Ezra). Dedup by filename: if a chapter probe already
+        # surfaced the same image, skip — that entry already covers it.
+        index_data = data.get("index") or {}
+        seen_book_fns = {e["filename"] for e in book_level}
+        for img_url in index_data.get("images") or []:
+            fn = url_filename(img_url)
+            if fn in denylist or fn in seen_book_fns:
+                continue
+            sc = score(fn)
+            if sc < MIN_SCORE:
+                continue
+            book_level.append({
+                "filename": fn,
+                "url": img_url,
+                "score": sc,
+                "chapters": [],
+                "source": "index",
+            })
+            seen_book_fns.add(fn)
+            total_seen += 1
 
         # Rank per-chapter entries by score descending.
         for ch in per_chapter:
