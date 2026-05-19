@@ -15542,61 +15542,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-acts13",
-      "title": "Precept Austin — Acts Chapter 13",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 13 — acts13.jpg.",
-      "thumb": "/visuals/acts/precept_acts13.jpg",
-      "full": "/visuals/acts/precept_acts13.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/acts13.jpg"
-      },
-      "chapters": [
-        13
-      ]
-    },
-    {
-      "id": "precept-ch-acts27map",
-      "title": "Precept Austin — Acts Chapters 27–28",
-      "caption": "Bruce Hurt's commentary chart for Acts chapters 27–28 — acts27map.gif.",
-      "thumb": "/visuals/acts/precept_acts27map.gif",
-      "full": "/visuals/acts/precept_acts27map.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/acts27map.gif"
-      },
-      "chapters": [
-        27,
-        28
-      ]
-    },
-    {
-      "id": "precept-ch-acts2tongue",
-      "title": "Precept Austin — Acts Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 2 — acts2tongue.jpg.",
-      "thumb": "/visuals/acts/precept_acts2tongue.jpg",
-      "full": "/visuals/acts/precept_acts2tongue.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/acts2tongue.jpg"
-      },
-      "chapters": [
-        2
-      ]
-    },
-    {
       "id": "precept-ch-acts_to_the_gospels",
       "title": "Precept Austin — Acts Chapter 1",
       "caption": "Bruce Hurt's commentary chart for Acts chapter 1 — acts to the gospels.png.",
@@ -15612,24 +15557,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         1
-      ]
-    },
-    {
-      "id": "precept-ch-acts_to_the_gospels_small",
-      "title": "Precept Austin — Acts Chapter 18",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 18 — acts to the gospels_small.png.",
-      "thumb": "/visuals/acts/precept_acts_to_the_gospels_small.png",
-      "full": "/visuals/acts/precept_acts_to_the_gospels_small.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Acts%20to%20the%20Gospels_small.png"
-      },
-      "chapters": [
-        18
       ]
     },
     {
@@ -15723,186 +15650,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-aeropagussermon",
-      "title": "Precept Austin — Acts Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 17 — aeropagussermon.jpg.",
-      "thumb": "/visuals/acts/precept_aeropagussermon.jpg",
-      "full": "/visuals/acts/precept_aeropagussermon.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/aeropagussermon.jpg"
-      },
-      "chapters": [
-        17
-      ]
-    },
-    {
-      "id": "precept-ch-agora",
-      "title": "Precept Austin — Acts Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 17 — agora.jpg.",
-      "thumb": "/visuals/acts/precept_agora.jpg",
-      "full": "/visuals/acts/precept_agora.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/agora.jpg"
-      },
-      "chapters": [
-        17
-      ]
-    },
-    {
-      "id": "precept-ch-antiochreturn",
-      "title": "Precept Austin — Acts Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 14 — antiochreturn.png.",
-      "thumb": "/visuals/acts/precept_antiochreturn.png",
-      "full": "/visuals/acts/precept_antiochreturn.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/antiochreturn.png"
-      },
-      "chapters": [
-        14
-      ]
-    },
-    {
-      "id": "precept-ch-antiochtoj",
-      "title": "Precept Austin — Acts Chapter 15",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 15 — antiochtoj.png.",
-      "thumb": "/visuals/acts/precept_antiochtoj.png",
-      "full": "/visuals/acts/precept_antiochtoj.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/antiochtoj.png"
-      },
-      "chapters": [
-        15
-      ]
-    },
-    {
-      "id": "precept-ch-antonia",
-      "title": "Precept Austin — Acts Chapter 21",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 21 — antonia.jpg.",
-      "thumb": "/visuals/acts/precept_antonia.jpg",
-      "full": "/visuals/acts/precept_antonia.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/antonia.jpg"
-      },
-      "chapters": [
-        21
-      ]
-    },
-    {
-      "id": "precept-ch-antoniasteps",
-      "title": "Precept Austin — Acts Chapter 21",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 21 — antoniasteps.jpg.",
-      "thumb": "/visuals/acts/precept_antoniasteps.jpg",
-      "full": "/visuals/acts/precept_antoniasteps.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/antoniasteps.jpg"
-      },
-      "chapters": [
-        21
-      ]
-    },
-    {
-      "id": "precept-ch-appianway",
-      "title": "Precept Austin — Acts Chapter 28",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 28 — appianway.jpg.",
-      "thumb": "/visuals/acts/precept_appianway.jpg",
-      "full": "/visuals/acts/precept_appianway.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/appianway.jpg"
-      },
-      "chapters": [
-        28
-      ]
-    },
-    {
-      "id": "precept-ch-artemisstatue",
-      "title": "Precept Austin — Acts Chapter 19",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 19 — artemisstatue.jpg.",
-      "thumb": "/visuals/acts/precept_artemisstatue.jpg",
-      "full": "/visuals/acts/precept_artemisstatue.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/artemisstatue.JPG"
-      },
-      "chapters": [
-        19
-      ]
-    },
-    {
-      "id": "precept-ch-artemistemple",
-      "title": "Precept Austin — Acts Chapter 19",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 19 — artemistemple.jpg.",
-      "thumb": "/visuals/acts/precept_artemistemple.jpg",
-      "full": "/visuals/acts/precept_artemistemple.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/artemistemple.jpg"
-      },
-      "chapters": [
-        19
-      ]
-    },
-    {
-      "id": "precept-ch-ascension",
-      "title": "Precept Austin — Acts Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 1 — ascension.jpg.",
-      "thumb": "/visuals/acts/precept_ascension.jpg",
-      "full": "/visuals/acts/precept_ascension.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/ascension.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
       "id": "precept-ch-athenscityplan",
       "title": "Precept Austin — Acts Chapter 17",
       "caption": "Bruce Hurt's commentary chart for Acts chapter 17 — athenscityplan.png.",
@@ -15918,115 +15665,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         17
-      ]
-    },
-    {
-      "id": "precept-ch-baptismeunuch",
-      "title": "Precept Austin — Acts Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 8 — baptismeunuch.jpg.",
-      "thumb": "/visuals/acts/precept_baptismeunuch.jpg",
-      "full": "/visuals/acts/precept_baptismeunuch.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/baptismeunuch.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-bc_runner1",
-      "title": "Precept Austin — Acts Chapter 20",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 20 — bc_runner1.gif.",
-      "thumb": "/visuals/acts/precept_bc_runner1.gif",
-      "full": "/visuals/acts/precept_bc_runner1.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/bc_runner1.gif"
-      },
-      "chapters": [
-        20
-      ]
-    },
-    {
-      "id": "precept-ch-bernice",
-      "title": "Precept Austin — Acts Chapter 26",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 26 — bernice.jpg.",
-      "thumb": "/visuals/acts/precept_bernice.jpg",
-      "full": "/visuals/acts/precept_bernice.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/bernice.jpg"
-      },
-      "chapters": [
-        26
-      ]
-    },
-    {
-      "id": "precept-ch-caesareaancient",
-      "title": "Precept Austin — Acts Chapters 24–25",
-      "caption": "Bruce Hurt's commentary chart for Acts chapters 24–25 — caesareaancient.jpg.",
-      "thumb": "/visuals/acts/precept_caesareaancient.jpg",
-      "full": "/visuals/acts/precept_caesareaancient.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/caesareaancient.jpg"
-      },
-      "chapters": [
-        24,
-        25
-      ]
-    },
-    {
-      "id": "precept-ch-cauda",
-      "title": "Precept Austin — Acts Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 27 — cauda.jpg.",
-      "thumb": "/visuals/acts/precept_cauda.jpg",
-      "full": "/visuals/acts/precept_cauda.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/cauda.jpg"
-      },
-      "chapters": [
-        27
-      ]
-    },
-    {
-      "id": "precept-ch-cnidus",
-      "title": "Precept Austin — Acts Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 27 — cnidus.jpg.",
-      "thumb": "/visuals/acts/precept_cnidus.jpg",
-      "full": "/visuals/acts/precept_cnidus.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/cnidus.jpg"
-      },
-      "chapters": [
-        27
       ]
     },
     {
@@ -16104,60 +15742,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-demon",
-      "title": "Precept Austin — Acts Chapter 19",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 19 — demon.jpg.",
-      "thumb": "/visuals/acts/precept_demon.jpg",
-      "full": "/visuals/acts/precept_demon.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/demon.jpg"
-      },
-      "chapters": [
-        19
-      ]
-    },
-    {
-      "id": "precept-ch-dynamite",
-      "title": "Precept Austin — Acts Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 1 — dynamite.png.",
-      "thumb": "/visuals/acts/precept_dynamite.png",
-      "full": "/visuals/acts/precept_dynamite.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/dynamite.png"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
-      "id": "precept-ch-ephesustheater",
-      "title": "Precept Austin — Acts Chapter 19",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 19 — ephesustheater.jpg.",
-      "thumb": "/visuals/acts/precept_ephesustheater.jpg",
-      "full": "/visuals/acts/precept_ephesustheater.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/ephesustheater.jpg"
-      },
-      "chapters": [
-        19
-      ]
-    },
-    {
       "id": "precept-ch-fairhavens1",
       "title": "Precept Austin — Acts Chapter 27",
       "caption": "Bruce Hurt's commentary chart for Acts chapter 27 — fairhavens1.jpg.",
@@ -16194,96 +15778,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-faithchinese",
-      "title": "Precept Austin — Acts Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 27 — faithchinese.jpg.",
-      "thumb": "/visuals/acts/precept_faithchinese.jpg",
-      "full": "/visuals/acts/precept_faithchinese.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/faithchinese.jpg"
-      },
-      "chapters": [
-        27
-      ]
-    },
-    {
-      "id": "precept-ch-felixpaul",
-      "title": "Precept Austin — Acts Chapter 24",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 24 — felixpaul.gif.",
-      "thumb": "/visuals/acts/precept_felixpaul.gif",
-      "full": "/visuals/acts/precept_felixpaul.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/felixpaul.gif"
-      },
-      "chapters": [
-        24
-      ]
-    },
-    {
-      "id": "precept-ch-felixpaulcolor",
-      "title": "Precept Austin — Acts Chapter 24",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 24 — felixpaulcolor.jpg.",
-      "thumb": "/visuals/acts/precept_felixpaulcolor.jpg",
-      "full": "/visuals/acts/precept_felixpaulcolor.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/felixpaulcolor.jpg"
-      },
-      "chapters": [
-        24
-      ]
-    },
-    {
-      "id": "precept-ch-finger",
-      "title": "Precept Austin — Acts Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 8 — finger.jpg.",
-      "thumb": "/visuals/acts/precept_finger.jpg",
-      "full": "/visuals/acts/precept_finger.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/finger.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-goad",
-      "title": "Precept Austin — Acts Chapter 26",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 26 — goad.jpg.",
-      "thumb": "/visuals/acts/precept_goad.jpg",
-      "full": "/visuals/acts/precept_goad.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/goad.jpg"
-      },
-      "chapters": [
-        26
-      ]
-    },
-    {
       "id": "precept-ch-gospel_bridge_2",
       "title": "Precept Austin — Acts Chapter 2",
       "caption": "Bruce Hurt's commentary chart for Acts chapter 2 — gospel bridge 2.gif.",
@@ -16299,60 +15793,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         2
-      ]
-    },
-    {
-      "id": "precept-ch-gospel_bridge_3",
-      "title": "Precept Austin — Acts Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 2 — gospel bridge 3.gif.",
-      "thumb": "/visuals/acts/precept_gospel_bridge_3.gif",
-      "full": "/visuals/acts/precept_gospel_bridge_3.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/gospel%20bridge%203.gif"
-      },
-      "chapters": [
-        2
-      ]
-    },
-    {
-      "id": "precept-ch-heart",
-      "title": "Precept Austin — Acts Chapter 19",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 19 — heart.png.",
-      "thumb": "/visuals/acts/precept_heart.png",
-      "full": "/visuals/acts/precept_heart.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/heart.png"
-      },
-      "chapters": [
-        19
-      ]
-    },
-    {
-      "id": "precept-ch-heaven",
-      "title": "Precept Austin — Acts Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 7 — heaven.jpg.",
-      "thumb": "/visuals/acts/precept_heaven.jpg",
-      "full": "/visuals/acts/precept_heaven.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/heaven.jpg"
-      },
-      "chapters": [
-        7
       ]
     },
     {
@@ -16374,61 +15814,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-homecoming",
-      "title": "Precept Austin — Acts Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 14 — homecoming.jpg.",
-      "thumb": "/visuals/acts/precept_homecoming.jpg",
-      "full": "/visuals/acts/precept_homecoming.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/homecoming.jpg"
-      },
-      "chapters": [
-        14
-      ]
-    },
-    {
-      "id": "precept-ch-iconium",
-      "title": "Precept Austin — Acts Chapters 13–14",
-      "caption": "Bruce Hurt's commentary chart for Acts chapters 13–14 — iconium.png.",
-      "thumb": "/visuals/acts/precept_iconium.png",
-      "full": "/visuals/acts/precept_iconium.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/iconium.png"
-      },
-      "chapters": [
-        13,
-        14
-      ]
-    },
-    {
-      "id": "precept-ch-iconiumlystra",
-      "title": "Precept Austin — Acts Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 14 — iconiumlystra.png.",
-      "thumb": "/visuals/acts/precept_iconiumlystra.png",
-      "full": "/visuals/acts/precept_iconiumlystra.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/iconiumlystra.png"
-      },
-      "chapters": [
-        14
-      ]
-    },
-    {
       "id": "precept-ch-jerusalem-caesarea",
       "title": "Precept Austin — Acts Chapter 21",
       "caption": "Bruce Hurt's commentary chart for Acts chapter 21 — jerusalem-caesarea.jpg.",
@@ -16444,78 +15829,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         21
-      ]
-    },
-    {
-      "id": "precept-ch-jesusknocking1",
-      "title": "Precept Austin — Acts Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 16 — jesusknocking1.jpg.",
-      "thumb": "/visuals/acts/precept_jesusknocking1.jpg",
-      "full": "/visuals/acts/precept_jesusknocking1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/jesusknocking1.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-josephinterpret",
-      "title": "Precept Austin — Acts Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 7 — josephinterpret.jpg.",
-      "thumb": "/visuals/acts/precept_josephinterpret.jpg",
-      "full": "/visuals/acts/precept_josephinterpret.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/josephinterpret.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-josephjealous",
-      "title": "Precept Austin — Acts Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 7 — josephjealous.jpg.",
-      "thumb": "/visuals/acts/precept_josephjealous.jpg",
-      "full": "/visuals/acts/precept_josephjealous.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/josephjealous.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-josephrecognized",
-      "title": "Precept Austin — Acts Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 7 — josephrecognized.jpg.",
-      "thumb": "/visuals/acts/precept_josephrecognized.jpg",
-      "full": "/visuals/acts/precept_josephrecognized.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/josephrecognized.jpg"
-      },
-      "chapters": [
-        7
       ]
     },
     {
@@ -16537,80 +15850,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-justice",
-      "title": "Precept Austin — Acts Chapter 28",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 28 — justice.jpg.",
-      "thumb": "/visuals/acts/precept_justice.jpg",
-      "full": "/visuals/acts/precept_justice.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/justice.jpg"
-      },
-      "chapters": [
-        28
-      ]
-    },
-    {
-      "id": "precept-ch-lamb_cross",
-      "title": "Precept Austin — Acts Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 8 — lamb cross.jpg.",
-      "thumb": "/visuals/acts/precept_lamb_cross.jpg",
-      "full": "/visuals/acts/precept_lamb_cross.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/lamb%20cross.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-lamb_passover",
-      "title": "Precept Austin — Acts Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 8 — lamb passover.gif.",
-      "thumb": "/visuals/acts/precept_lamb_passover.gif",
-      "full": "/visuals/acts/precept_lamb_passover.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/lamb%20passover.gif"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-luke2",
-      "title": "Precept Austin — Acts Chapters 26–28",
-      "caption": "Bruce Hurt's commentary chart for Acts chapters 26–28 — luke2.jpg.",
-      "thumb": "/visuals/acts/precept_luke2.jpg",
-      "full": "/visuals/acts/precept_luke2.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/luke2.jpg"
-      },
-      "chapters": [
-        26,
-        27,
-        28
-      ]
-    },
-    {
       "id": "precept-ch-lystra",
       "title": "Precept Austin — Acts Chapter 14",
       "caption": "Bruce Hurt's commentary chart for Acts chapter 14 — lystra.png.",
@@ -16626,24 +15865,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         14
-      ]
-    },
-    {
-      "id": "precept-ch-lystratotroas",
-      "title": "Precept Austin — Acts Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 16 — lystratotroas.jpg.",
-      "thumb": "/visuals/acts/precept_lystratotroas.jpg",
-      "full": "/visuals/acts/precept_lystratotroas.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/lystratotroas.jpg"
-      },
-      "chapters": [
-        16
       ]
     },
     {
@@ -16685,78 +15906,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-messinastrait",
-      "title": "Precept Austin — Acts Chapter 28",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 28 — messinastrait.jpg.",
-      "thumb": "/visuals/acts/precept_messinastrait.jpg",
-      "full": "/visuals/acts/precept_messinastrait.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/messinastrait.jpg"
-      },
-      "chapters": [
-        28
-      ]
-    },
-    {
-      "id": "precept-ch-miletus-cos",
-      "title": "Precept Austin — Acts Chapter 21",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 21 — miletus-cos.jpg.",
-      "thumb": "/visuals/acts/precept_miletus-cos.jpg",
-      "full": "/visuals/acts/precept_miletus-cos.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/miletus-cos.jpg"
-      },
-      "chapters": [
-        21
-      ]
-    },
-    {
-      "id": "precept-ch-mosesnile",
-      "title": "Precept Austin — Acts Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 7 — mosesnile.jpg.",
-      "thumb": "/visuals/acts/precept_mosesnile.jpg",
-      "full": "/visuals/acts/precept_mosesnile.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/mosesnile.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-myra",
-      "title": "Precept Austin — Acts Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 27 — myra.jpg.",
-      "thumb": "/visuals/acts/precept_myra.jpg",
-      "full": "/visuals/acts/precept_myra.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/myra.jpg"
-      },
-      "chapters": [
-        27
-      ]
-    },
-    {
       "id": "precept-ch-myra1",
       "title": "Precept Austin — Acts Chapter 27",
       "caption": "Bruce Hurt's commentary chart for Acts chapter 27 — myra1.jpg.",
@@ -16790,116 +15939,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         13
-      ]
-    },
-    {
-      "id": "precept-ch-paulagrippa",
-      "title": "Precept Austin — Acts Chapters 25–26",
-      "caption": "Bruce Hurt's commentary chart for Acts chapters 25–26 — paulagrippa.jpg.",
-      "thumb": "/visuals/acts/precept_paulagrippa.jpg",
-      "full": "/visuals/acts/precept_paulagrippa.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/paulagrippa.jpg"
-      },
-      "chapters": [
-        25,
-        26
-      ]
-    },
-    {
-      "id": "precept-ch-paulbarnabassplit",
-      "title": "Precept Austin — Acts Chapter 15",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 15 — paulbarnabassplit.jpg.",
-      "thumb": "/visuals/acts/precept_paulbarnabassplit.jpg",
-      "full": "/visuals/acts/precept_paulbarnabassplit.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/paulbarnabassplit.jpg"
-      },
-      "chapters": [
-        15
-      ]
-    },
-    {
-      "id": "precept-ch-paulcon",
-      "title": "Precept Austin — Acts Chapters 9, 26",
-      "caption": "Bruce Hurt's commentary chart for Acts chapters 9, 26 — paulcon.jpg.",
-      "thumb": "/visuals/acts/precept_paulcon.jpg",
-      "full": "/visuals/acts/precept_paulcon.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/paulcon.jpg"
-      },
-      "chapters": [
-        9,
-        26
-      ]
-    },
-    {
-      "id": "precept-ch-paulfestus",
-      "title": "Precept Austin — Acts Chapter 25",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 25 — paulfestus.jpg.",
-      "thumb": "/visuals/acts/precept_paulfestus.jpg",
-      "full": "/visuals/acts/precept_paulfestus.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/paulfestus.jpg"
-      },
-      "chapters": [
-        25
-      ]
-    },
-    {
-      "id": "precept-ch-peterlame",
-      "title": "Precept Austin — Acts Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 3 — peterlame.jpg.",
-      "thumb": "/visuals/acts/precept_peterlame.jpg",
-      "full": "/visuals/acts/precept_peterlame.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/peterlame.jpg"
-      },
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "id": "precept-ch-petersvision",
-      "title": "Precept Austin — Acts Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 10 — petersvision.jpg.",
-      "thumb": "/visuals/acts/precept_petersvision.jpg",
-      "full": "/visuals/acts/precept_petersvision.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/petersvision.jpg"
-      },
-      "chapters": [
-        10
       ]
     },
     {
@@ -16957,24 +15996,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-rhegium",
-      "title": "Precept Austin — Acts Chapter 28",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 28 — rhegium.jpg.",
-      "thumb": "/visuals/acts/precept_rhegium.jpg",
-      "full": "/visuals/acts/precept_rhegium.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/rhegium.jpg"
-      },
-      "chapters": [
-        28
-      ]
-    },
-    {
       "id": "precept-ch-rome1",
       "title": "Precept Austin — Acts Chapter 28",
       "caption": "Bruce Hurt's commentary chart for Acts chapter 28 — rome1.jpg.",
@@ -16990,42 +16011,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         28
-      ]
-    },
-    {
-      "id": "precept-ch-romeancient",
-      "title": "Precept Austin — Acts Chapter 28",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 28 — romeancient.jpg.",
-      "thumb": "/visuals/acts/precept_romeancient.jpg",
-      "full": "/visuals/acts/precept_romeancient.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/romeancient.jpg"
-      },
-      "chapters": [
-        28
-      ]
-    },
-    {
-      "id": "precept-ch-rudder",
-      "title": "Precept Austin — Acts Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 27 — rudder.jpg.",
-      "thumb": "/visuals/acts/precept_rudder.jpg",
-      "full": "/visuals/acts/precept_rudder.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/rudder.jpg"
-      },
-      "chapters": [
-        27
       ]
     },
     {
@@ -17065,24 +16050,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-sanhedrin",
-      "title": "Precept Austin — Acts Chapter 4",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 4 — sanhedrin.jpg.",
-      "thumb": "/visuals/acts/precept_sanhedrin.jpg",
-      "full": "/visuals/acts/precept_sanhedrin.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Sanhedrin.jpg"
-      },
-      "chapters": [
-        4
-      ]
-    },
-    {
       "id": "precept-ch-sanhedrinhall",
       "title": "Precept Austin — Acts Chapters 7, 22",
       "caption": "Bruce Hurt's commentary chart for Acts chapters 7, 22 — sanhedrinhall.jpg.",
@@ -17098,24 +16065,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         7,
-        22
-      ]
-    },
-    {
-      "id": "precept-ch-scourge2",
-      "title": "Precept Austin — Acts Chapter 22",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 22 — scourge2.jpg.",
-      "thumb": "/visuals/acts/precept_scourge2.jpg",
-      "full": "/visuals/acts/precept_scourge2.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/scourge2.jpg"
-      },
-      "chapters": [
         22
       ]
     },
@@ -17136,132 +16085,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "chapters": [
         16,
         17
-      ]
-    },
-    {
-      "id": "precept-ch-sergius",
-      "title": "Precept Austin — Acts Chapter 13",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 13 — sergius.png.",
-      "thumb": "/visuals/acts/precept_sergius.png",
-      "full": "/visuals/acts/precept_sergius.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/sergius.png"
-      },
-      "chapters": [
-        13
-      ]
-    },
-    {
-      "id": "precept-ch-shigella",
-      "title": "Precept Austin — Acts Chapter 28",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 28 — shigella.jpg.",
-      "thumb": "/visuals/acts/precept_shigella.jpg",
-      "full": "/visuals/acts/precept_shigella.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/shigella.jpg"
-      },
-      "chapters": [
-        28
-      ]
-    },
-    {
-      "id": "precept-ch-ship",
-      "title": "Precept Austin — Acts Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 27 — ship.jpg.",
-      "thumb": "/visuals/acts/precept_ship.jpg",
-      "full": "/visuals/acts/precept_ship.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/ship.jpg"
-      },
-      "chapters": [
-        27
-      ]
-    },
-    {
-      "id": "precept-ch-shipeye",
-      "title": "Precept Austin — Acts Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 27 — shipeye.jpg.",
-      "thumb": "/visuals/acts/precept_shipeye.jpg",
-      "full": "/visuals/acts/precept_shipeye.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/shipeye.jpg"
-      },
-      "chapters": [
-        27
-      ]
-    },
-    {
-      "id": "precept-ch-shipsounding",
-      "title": "Precept Austin — Acts Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 27 — shipsounding.jpg.",
-      "thumb": "/visuals/acts/precept_shipsounding.jpg",
-      "full": "/visuals/acts/precept_shipsounding.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/shipsounding.jpg"
-      },
-      "chapters": [
-        27
-      ]
-    },
-    {
-      "id": "precept-ch-shipwreck",
-      "title": "Precept Austin — Acts Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 27 — shipwreck.jpg.",
-      "thumb": "/visuals/acts/precept_shipwreck.jpg",
-      "full": "/visuals/acts/precept_shipwreck.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/shipwreck.jpg"
-      },
-      "chapters": [
-        27
-      ]
-    },
-    {
-      "id": "precept-ch-shut",
-      "title": "Precept Austin — Acts Chapter 15",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 15 — shut.jpg.",
-      "thumb": "/visuals/acts/precept_shut.jpg",
-      "full": "/visuals/acts/precept_shut.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/shut.jpg"
-      },
-      "chapters": [
-        15
       ]
     },
     {
@@ -17301,80 +16124,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-simonmagus",
-      "title": "Precept Austin — Acts Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 8 — simonmagus.jpg.",
-      "thumb": "/visuals/acts/precept_simonmagus.jpg",
-      "full": "/visuals/acts/precept_simonmagus.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/simonmagus.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-solomonporch",
-      "title": "Precept Austin — Acts Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 3 — solomonporch.jpg.",
-      "thumb": "/visuals/acts/precept_solomonporch.jpg",
-      "full": "/visuals/acts/precept_solomonporch.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/solomonporch.jpg"
-      },
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "id": "precept-ch-straightstreet",
-      "title": "Precept Austin — Acts Chapter 9",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 9 — straightstreet.jpeg.",
-      "thumb": "/visuals/acts/precept_straightstreet.jpg",
-      "full": "/visuals/acts/precept_straightstreet.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/straightstreet.jpeg"
-      },
-      "chapters": [
-        9
-      ]
-    },
-    {
-      "id": "precept-ch-synagogue",
-      "title": "Precept Austin — Acts Chapters 13, 14, 17",
-      "caption": "Bruce Hurt's commentary chart for Acts chapters 13, 14, 17 — synagogue.png.",
-      "thumb": "/visuals/acts/precept_synagogue.png",
-      "full": "/visuals/acts/precept_synagogue.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/synagogue.png"
-      },
-      "chapters": [
-        13,
-        14,
-        17
-      ]
-    },
-    {
       "id": "precept-ch-syracuse",
       "title": "Precept Austin — Acts Chapter 28",
       "caption": "Bruce Hurt's commentary chart for Acts chapter 28 — syracuse.jpg.",
@@ -17411,61 +16160,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-temple_6_small",
-      "title": "Precept Austin — Acts Chapters 10, 21",
-      "caption": "Bruce Hurt's commentary chart for Acts chapters 10, 21 — temple_6_small.png.",
-      "thumb": "/visuals/acts/precept_temple_6_small.png",
-      "full": "/visuals/acts/precept_temple_6_small.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/temple_6_small.png"
-      },
-      "chapters": [
-        10,
-        21
-      ]
-    },
-    {
-      "id": "precept-ch-templecomplex",
-      "title": "Precept Austin — Acts Chapter 21",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 21 — templecomplex.jpg.",
-      "thumb": "/visuals/acts/precept_templecomplex.jpg",
-      "full": "/visuals/acts/precept_templecomplex.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/templecomplex.jpg"
-      },
-      "chapters": [
-        21
-      ]
-    },
-    {
-      "id": "precept-ch-the_sacrifice_of_isaac_small",
-      "title": "Precept Austin — Acts Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 8 — the_sacrifice_of_isaac_small.jpg.",
-      "thumb": "/visuals/acts/precept_the_sacrifice_of_isaac_small.jpg",
-      "full": "/visuals/acts/precept_the_sacrifice_of_isaac_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/The_Sacrifice_of_Isaac_small.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
       "id": "precept-ch-thyatira",
       "title": "Precept Austin — Acts Chapter 16",
       "caption": "Bruce Hurt's commentary chart for Acts chapter 16 — thyatira.jpg.",
@@ -17481,24 +16175,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         16
-      ]
-    },
-    {
-      "id": "precept-ch-timeflies",
-      "title": "Precept Austin — Acts Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 17 — timeflies.jpg.",
-      "thumb": "/visuals/acts/precept_timeflies.jpg",
-      "full": "/visuals/acts/precept_timeflies.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/timeflies.jpg"
-      },
-      "chapters": [
-        17
       ]
     },
     {
@@ -17589,61 +16265,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         11
-      ]
-    },
-    {
-      "id": "precept-ch-unkgod_small",
-      "title": "Precept Austin — Acts Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 17 — unkgod_small.jpg.",
-      "thumb": "/visuals/acts/precept_unkgod_small.jpg",
-      "full": "/visuals/acts/precept_unkgod_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/unkgod_small.jpg"
-      },
-      "chapters": [
-        17
-      ]
-    },
-    {
-      "id": "precept-ch-viaegnatia",
-      "title": "Precept Austin — Acts Chapters 16–17",
-      "caption": "Bruce Hurt's commentary chart for Acts chapters 16–17 — viaegnatia.jpg.",
-      "thumb": "/visuals/acts/precept_viaegnatia.jpg",
-      "full": "/visuals/acts/precept_viaegnatia.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/viaegnatia.JPG"
-      },
-      "chapters": [
-        16,
-        17
-      ]
-    },
-    {
-      "id": "precept-ch-whitewash",
-      "title": "Precept Austin — Acts Chapter 23",
-      "caption": "Bruce Hurt's commentary chart for Acts chapter 23 — whitewash.jpg.",
-      "thumb": "/visuals/acts/precept_whitewash.jpg",
-      "full": "/visuals/acts/precept_whitewash.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/whitewash.jpg"
-      },
-      "chapters": [
-        23
       ]
     }
   ]
