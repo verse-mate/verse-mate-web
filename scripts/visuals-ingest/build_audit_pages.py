@@ -15,6 +15,7 @@ Run from repo root:
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -22,6 +23,7 @@ ROOT = HERE.parent.parent
 PUBLIC_VISUALS = ROOT / "public" / "visuals"
 AUDIT_DIR = HERE / "audit"
 CURATED = HERE / "precept_chapter_curated.json"
+REGISTRY = ROOT / "src" / "data" / "visuals" / "registry.ts"
 
 
 PAGE_CSS = """
@@ -220,7 +222,8 @@ def render_index(books: list[tuple[str, str, int]]) -> str:
 <body>
 <header>
   <h1>Precept Visuals Audit</h1>
-  <p>One contact sheet per book — {total:,} images across {len(books)} books. Click a book, scroll the grid, and check the box on anything you want removed. Use the "Copy denylist snippet" button at the bottom to grab a Python block to paste into PER_BOOK_FILENAME_DENYLIST.</p>
+  <p>One contact sheet per book — <strong>{total:,} unique images across {len(books)} books</strong>. The number next to each book is the total cards in that book's whole library, not what a single chapter view shows. Each card lists its chapter scope ("chapter 4", "chapters 1–11", "book-level", etc.) so you can see where it actually appears on the site.</p>
+  <p style="color:#8a93a6;margin-top:8px">Click a book, scroll the grid, and check the box on anything you want removed. Use the "Copy denylist snippet" button at the bottom to grab a Python block to paste into PER_BOOK_FILENAME_DENYLIST.</p>
 </header>
 <ul>{rows}</ul>
 </body>
@@ -235,14 +238,31 @@ from ingest_bibleproject import POSTERS  # type: ignore
 def main() -> None:
     AUDIT_DIR.mkdir(exist_ok=True)
     curated = json.loads(CURATED.read_text()) if CURATED.exists() else {}
+    # Cross-reference with the generated registry so the audit only shows
+    # cards the live app actually serves. Without this, files that got
+    # excluded from the manifest (denylist hit, lost a 1-map-per-chapter
+    # competition, etc.) but weren't deleted from disk show up as
+    # phantom cards. Set of (book_slug, "precept_<file>.<ext>") tuples.
+    referenced: set[tuple[str, str]] = set()
+    if REGISTRY.exists():
+        for book, name in re.findall(
+            r'/visuals/([\w-]+)/(precept_[^"]+)', REGISTRY.read_text()
+        ):
+            referenced.add((book, name))
     books_summary: list[tuple[str, str, int]] = []
 
     for slug, (_url, display, _yt) in POSTERS.items():
         book_dir = PUBLIC_VISUALS / slug
         if not book_dir.exists():
             continue
-        # Walk every precept_* file on disk (truth is the file system).
-        files = sorted(book_dir.glob("precept_*"))
+        # Walk every precept_* file on disk that the registry references.
+        # Files not in the registry are orphans (excluded by curate but
+        # never deleted) and shouldn't clutter the audit — see the
+        # orphan-prune step in this PR.
+        files = sorted(
+            f for f in book_dir.glob("precept_*")
+            if (slug, f.name) in referenced
+        )
         if not files:
             continue
         # Build a lookup from upstream filename to its chapter scope from
