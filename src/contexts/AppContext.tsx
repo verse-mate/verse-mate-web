@@ -1,7 +1,7 @@
 // AppContext — single source of truth for VerseMate app state.
 // User data (bookmarks / notes / highlights) is fetched from the real API
 // when the user is signed in; settings stay local-only.
-import React, { createContext, useContext, useReducer, useEffect, ReactNode, useCallback } from 'react';
+import React, { createContext, useContext, useReducer, useEffect, useRef, ReactNode, useCallback } from 'react';
 import { BibleVersion, Bookmark, Note, Highlight, HighlightColor } from '@/services/types';
 import { BIBLE_BOOKS } from '@/services/bibleData';
 import { getBookIdFromSlug } from '@/lib/bookSlugs';
@@ -232,6 +232,15 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 export function AppProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  // Read the latest state inside async callbacks to dodge stale closures.
+  // VER-71: the effect below captures state.book / state.chapter / state.bookId
+  // at the moment it fires, but `resolveBookId` is async — by the time it
+  // resolves, the user may have navigated (BibleRoute's URL→state sync), so
+  // dispatching with the closure-captured values can revert state to the
+  // previous passage and bounce the URL to /bible/genesis/1 (or worse).
+  const stateRef = useRef(state);
+  stateRef.current = state;
+
   // Warm the books cache on mount
   useEffect(() => {
     apiFetchBooks().catch(() => undefined);
@@ -242,13 +251,25 @@ export function AppProvider({ children }: { children: ReactNode }) {
   // This lets screens dispatch SET_PASSAGE with just a book name + chapter
   // and the ID gets resolved automatically.
   useEffect(() => {
+    const bookSnap = state.book;
+    let cancelled = false;
     (async () => {
-      const id = await resolveBookId(state.book);
-      if (id && id !== state.bookId) {
-        dispatch({ type: 'SET_PASSAGE', book: state.book, chapter: state.chapter, bookId: id });
+      const id = await resolveBookId(bookSnap);
+      if (cancelled) return;
+      const latest = stateRef.current;
+      // Only correct bookId if the book name we resolved is still the active
+      // book and the resolved id genuinely differs. Reading bookId/chapter
+      // off the closure (instead of the ref) is what raced with concurrent
+      // SET_PASSAGE dispatches and produced the residual VER-71 genesis/1
+      // bounce.
+      if (latest.book !== bookSnap) return;
+      if (id && id !== latest.bookId) {
+        dispatch({ type: 'SET_PASSAGE', book: latest.book, chapter: latest.chapter, bookId: id });
       }
     })();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    return () => {
+      cancelled = true;
+    };
   }, [state.book]);
 
   // Persist settings
