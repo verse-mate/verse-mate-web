@@ -58,7 +58,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 28** · templesolomon.jpg (score 0) <https://www.preceptaustin.org/files/images/templesolomon.jpg>
 - **Ch 28** · templesolomon2.jpg (score 0) <https://www.preceptaustin.org/files/images/templesolomon2.jpg>
 
-## 1-corinthians — 3 book-level, 46 per-chapter (probed 16 chapters)
+## 1-corinthians — 3 book-level, 12 per-chapter (probed 16 chapters)
 
 ### Book-level
 - 1cor_problems.png (score 2, 16 chapters) <https://www.preceptaustin.org/files/images/1cor_problems.png>
@@ -67,50 +67,16 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 ### Per-chapter
 - **Ch 1** · corinthpix.png (score 2) <https://www.preceptaustin.org/files/images/corinthpix.png>
 - **Ch 1** · corinth_city.jpg (score 0) <https://www.preceptaustin.org/files/images/corinth_city.jpg>
-- **Ch 1** · wisdom1.jpg (score 0) <https://www.preceptaustin.org/files/images/wisdom1.jpg>
-- **Ch 2** · spurgeonpodium.jpg (score 10) <https://www.preceptaustin.org/files/images/spurgeonpodium.jpg>
-- **Ch 2** · wisdom1.jpg (score 0) <https://www.preceptaustin.org/files/images/wisdom1.jpg>
-- **Ch 3** · aphrodite.jpg (score 0) <https://www.preceptaustin.org/files/images/aphrodite.jpg>
 - **Ch 3** · carnal.jpg (score 0) <https://www.preceptaustin.org/files/images/carnal.jpg>
-- **Ch 4** · benhur.jpg (score 0) <https://www.preceptaustin.org/files/images/benhur.jpg>
 - **Ch 4** · galley.jpg (score 0) <https://www.preceptaustin.org/files/images/galley.jpg>
-- **Ch 4** · pedagogue.jpg (score 0) <https://www.preceptaustin.org/files/images/pedagogue.jpg>
-- **Ch 5** · porn.jpg (score 0) <https://www.preceptaustin.org/files/images/porn.jpg>
-- **Ch 6** · family.png (score 2) <https://www.preceptaustin.org/files/images/family.png>
-- **Ch 6** · acrocorinth.jpg (score 0) <https://www.preceptaustin.org/files/images/acrocorinth.jpg>
-- **Ch 6** · bema1.jpg (score 0) <https://www.preceptaustin.org/files/images/bema1.jpg>
-- **Ch 6** · bema2.jpg (score 0) <https://www.preceptaustin.org/files/images/bema2.jpg>
 - **Ch 6** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
-- **Ch 8** · dine.jpg (score 0) <https://www.preceptaustin.org/files/images/dine.jpg>
-- **Ch 9** · bc_runner1.gif (score 0) <https://www.preceptaustin.org/files/images/bc_runner1.gif>
-- **Ch 9** · bema.jpg (score 0) <https://www.preceptaustin.org/files/images/bema.jpg>
-- **Ch 9** · box.jpg (score 0) <https://www.preceptaustin.org/files/images/box.jpg>
-- **Ch 9** · isthmian.jpg (score 0) <https://www.preceptaustin.org/files/images/isthmian.jpg>
-- **Ch 9** · taylor.jpg (score 0) <https://www.preceptaustin.org/files/images/taylor.jpg>
-- **Ch 9** · thresh.jpg (score 0) <https://www.preceptaustin.org/files/images/thresh.jpg>
-- **Ch 9** · wreath.jpg (score 0) <https://www.preceptaustin.org/files/images/wreath.jpg>
-- **Ch 10** · bronze.jpg (score 0) <https://www.preceptaustin.org/files/images/bronze.jpg>
-- **Ch 10** · calf.jpg (score 0) <https://www.preceptaustin.org/files/images/calf.jpg>
-- **Ch 10** · censer1.jpg (score 0) <https://www.preceptaustin.org/files/images/censer1.jpg>
-- **Ch 10** · dine.jpg (score 0) <https://www.preceptaustin.org/files/images/dine.jpg>
-- **Ch 11** · imitate.jpg (score 0) <https://www.preceptaustin.org/files/images/imitate.jpg>
-- **Ch 11** · imitate1.jpg (score 0) <https://www.preceptaustin.org/files/images/imitate1.jpg>
 - **Ch 12** · gifts.jpg (score 0) <https://www.preceptaustin.org/files/images/gifts.jpg>
 - **Ch 12** · giftvariety.jpg (score 0) <https://www.preceptaustin.org/files/images/giftvariety.jpg>
-- **Ch 12** · spirit1.gif (score 0) <https://www.preceptaustin.org/files/images/spirit1.gif>
 - **Ch 13** · timelineface.jpg (score 10) <https://www.preceptaustin.org/files/images/timelineface.jpg>
-- **Ch 13** · jealousy.jpg (score 0) <https://www.preceptaustin.org/files/images/jealousy.jpg>
-- **Ch 13** · mirror1.jpg (score 0) <https://www.preceptaustin.org/files/images/mirror1.jpg>
 - **Ch 15** · appear.jpg (score 0) <https://www.preceptaustin.org/files/images/appear.jpg>
 - **Ch 15** · calen.jpg (score 0) <https://www.preceptaustin.org/files/images/calen.jpg>
-- **Ch 15** · firstfruits1.jpg (score 0) <https://www.preceptaustin.org/files/images/firstfruits1.jpg>
-- **Ch 15** · immortal.jpg (score 0) <https://www.preceptaustin.org/files/images/immortal.jpg>
 - **Ch 15** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
-- **Ch 15** · neck.jpg (score 0) <https://www.preceptaustin.org/files/images/neck.jpg>
-- **Ch 15** · seed.jpg (score 0) <https://www.preceptaustin.org/files/images/seed.jpg>
-- **Ch 15** · soilshallow.jpg (score 0) <https://www.preceptaustin.org/files/images/soilshallow.jpg>
 - **Ch 16** · 3missionaryjourney.gif (score 0) <https://www.preceptaustin.org/files/images/3missionaryjourney.gif>
-- **Ch 16** · charity.jpg (score 0) <https://www.preceptaustin.org/files/images/charity.jpg>
 
 ## 1-kings — 7 book-level, 130 per-chapter (probed 22 chapters)
 
