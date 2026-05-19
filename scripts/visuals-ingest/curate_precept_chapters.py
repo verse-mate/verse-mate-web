@@ -523,6 +523,19 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "davidunited.png",
         "sauldeath.jpg",
         "saulsbody.jpg",
+        # Audit pass (9 cards Andy marked from /audit/1-chronicles.html) —
+        # generic stock photos (bones, sackcloth, time-flies clock, tree),
+        # Dome-of-the-Rock photo, Aaron's incense altar reused, Joshua
+        # scene reused, Nadab AI, Valley of Rephaim.
+        "bones.jpg",
+        "domerock1.jpg",
+        "exodusincense.png",
+        "joshua3.jpg",
+        "nadab.jpg",
+        "sackcloth.jpg",
+        "timeflies.jpg",
+        "tree.png",
+        "valleyrephaim.jpg",
     },
     "2-samuel": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions

@@ -3,7 +3,7 @@
 Auto-generated shortlist of chart-like Precept Austin images. **Book-level** rows are charts embedded on most chapter pages (i.e. reused) — surfaced once at the book level. **Per-chapter** rows are charts only on a single chapter or a small subset. Review before ingesting.
 
 
-## 1-chronicles — 10 book-level, 49 per-chapter (probed 24 chapters)
+## 1-chronicles — 10 book-level, 40 per-chapter (probed 24 chapters)
 
 ### Book-level
 - 1chrtimeline.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/1chrtimeline.png>
@@ -31,7 +31,6 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 1** · joktan.png (score 2) <https://www.preceptaustin.org/files/images/joktan.png>
 - **Ch 1** · keturah.png (score 2) <https://www.preceptaustin.org/files/images/keturah.png>
 - **Ch 1** · shemline.png (score 2) <https://www.preceptaustin.org/files/images/shemline.png>
-- **Ch 1** · tree.png (score 2) <https://www.preceptaustin.org/files/images/tree.png>
 - **Ch 1** · adamtree.gif (score 0) <https://www.preceptaustin.org/files/images/adamtree.gif>
 - **Ch 2** · boaz.png (score 2) <https://www.preceptaustin.org/files/images/boaz.png>
 - **Ch 2** · davidlineage3.png (score 2) <https://www.preceptaustin.org/files/images/davidlineage3.png>
@@ -42,30 +41,22 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 4** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
 - **Ch 10** · 1samuelmapesv.jpg (score 10) <https://www.preceptaustin.org/files/images/1samuelmapesv.jpg>
 - **Ch 10** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
-- **Ch 10** · bones.jpg (score 0) <https://www.preceptaustin.org/files/images/bones.jpg>
 - **Ch 11** · davidcity.jpg (score 0) <https://www.preceptaustin.org/files/images/davidcity.jpg>
 - **Ch 12** · map of tribes of israel.gif (score 10) <https://www.preceptaustin.org/files/images/map%20of%20tribes%20of%20israel.gif>
 - **Ch 13** · ark2esv.jpg (score 0) <https://www.preceptaustin.org/files/images/ark2esv.jpg>
 - **Ch 14** · davidtree.png (score 2) <https://www.preceptaustin.org/files/images/davidtree.png>
 - **Ch 14** · davidsfamily.jpg (score 0) <https://www.preceptaustin.org/files/images/davidsfamily.jpg>
 - **Ch 14** · rephaim.jpg (score 0) <https://www.preceptaustin.org/files/images/rephaim.jpg>
-- **Ch 14** · valleyrephaim.jpg (score 0) <https://www.preceptaustin.org/files/images/valleyrephaim.jpg>
 - **Ch 15** · ark2esv.jpg (score 0) <https://www.preceptaustin.org/files/images/ark2esv.jpg>
-- **Ch 15** · joshua3.jpg (score 0) <https://www.preceptaustin.org/files/images/joshua3.jpg>
 - **Ch 16** · ark2esv.jpg (score 0) <https://www.preceptaustin.org/files/images/ark2esv.jpg>
 - **Ch 18** · zadok.png (score 2) <https://www.preceptaustin.org/files/images/zadok.png>
 - **Ch 21** · moriah.png (score 2) <https://www.preceptaustin.org/files/images/moriah.png>
-- **Ch 21** · domerock1.jpg (score 0) <https://www.preceptaustin.org/files/images/domerock1.jpg>
-- **Ch 21** · sackcloth.jpg (score 0) <https://www.preceptaustin.org/files/images/sackcloth.jpg>
 - **Ch 22** · zeph-1.gif (score 0) <https://www.preceptaustin.org/files/images/zeph-1.gif>
 - **Ch 23** · ex614.jpg (score 0) <https://www.preceptaustin.org/files/images/ex614.jpg>
 - **Ch 24** · ex614.jpg (score 0) <https://www.preceptaustin.org/files/images/ex614.jpg>
-- **Ch 24** · nadab.jpg (score 0) <https://www.preceptaustin.org/files/images/nadab.jpg>
 - **Ch 24** · priesthood.jpg (score 0) <https://www.preceptaustin.org/files/images/priesthood.jpg>
-- **Ch 28** · exodusincense.png (score 2) <https://www.preceptaustin.org/files/images/exodusincense.png>
 - **Ch 28** · templesolomon.jpg (score 0) <https://www.preceptaustin.org/files/images/templesolomon.jpg>
 - **Ch 28** · templesolomon2.jpg (score 0) <https://www.preceptaustin.org/files/images/templesolomon2.jpg>
-- **Ch 29** · timeflies.jpg (score 0) <https://www.preceptaustin.org/files/images/timeflies.jpg>
 
 ## 1-corinthians — 3 book-level, 46 per-chapter (probed 16 chapters)
 
