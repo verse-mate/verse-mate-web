@@ -65,7 +65,26 @@ BOOK_LEVEL_FILENAMES = {Path(fn).name.lower() for fn in PRECEPT_CHARTS.values()}
 # patriarchal chronology). Those still pass the score heuristic; we
 # exclude them by hand here.
 PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
-    "exodus": {"genesistimeline.png"},
+    # Bruce embeds the same Exodus route map at TWO filenames; keep
+    # exodusmap.gif and drop the byte-identical exodus.gif duplicate.
+    "exodus": {
+        "genesistimeline.png",
+        "exodus.gif",      # byte-identical dup of exodusmap.gif
+        "pogrom.jpg",      # 1614 Frankfurt pogrom print — not biblical
+        "taskmaster.jpg",  # generic illustrative art
+    },
+    "leviticus": {
+        "levi.png",        # stock photo of stacked commentary books
+        "leviticus.png",   # same decorative photo, alt filename (was in
+                           # PRECEPT_CHARTS pre-#164; loose filter pulls
+                           # it back from /leviticus_commentaries index)
+    },
+    "deuteronomy": {
+        "mosesnebo1.png",  # AI-style art of Moses on Nebo
+        "bee.jpg",         # photo of a bee swarm
+        "grap.jpg",        # Poussin painting of grape carriers (art)
+        "grapes.jpg",      # blue geometric pictogram of grape carriers
+    },
     # Genesis editorial removals (flagged by Andy on the production preview):
     # - genesis.jpg (Michelangelo's Creation of Adam) — decorative art, not a
     #   study aid

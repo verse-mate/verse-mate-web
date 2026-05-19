@@ -1420,20 +1420,16 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 12** · dan-12-river-tigris_small.jpg (score 0) <https://www.preceptaustin.org/files/images/DAN-12-RIVER-TIGRIS_small.jpg>
 - **Ch 12** · daniel 12_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Daniel%2012_small.jpg>
 
-## deuteronomy — 4 book-level, 74 per-chapter (probed 34 chapters)
+## deuteronomy — 3 book-level, 71 per-chapter (probed 34 chapters)
 
 ### Book-level
 - deuttime.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/deuttime.png>
-- mosesnebo1.png (score 2, 33 chapters) <https://www.preceptaustin.org/files/images/mosesnebo1.png>
 - deut.jpg (score 0, 34 chapters) <https://www.preceptaustin.org/files/images/deut.jpg>
 - deuter.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/deuter.jpg>
 ### Per-chapter
 - **Ch 1** · arad.jpg (score 0) <https://www.preceptaustin.org/files/images/arad.jpg>
-- **Ch 1** · bee.jpg (score 0) <https://www.preceptaustin.org/files/images/bee.jpg>
 - **Ch 1** · deut14.jpg (score 0) <https://www.preceptaustin.org/files/images/deut14.jpg>
 - **Ch 1** · edrei1.jpg (score 0) <https://www.preceptaustin.org/files/images/edrei1.jpg>
-- **Ch 1** · grap.jpg (score 0) <https://www.preceptaustin.org/files/images/grap.jpg>
-- **Ch 1** · grapes.jpg (score 0) <https://www.preceptaustin.org/files/images/grapes.jpg>
 - **Ch 1** · regions1.jpg (score 0) <https://www.preceptaustin.org/files/images/regions1.jpg>
 - **Ch 1** · sei.jpg (score 0) <https://www.preceptaustin.org/files/images/sei.jpg>
 - **Ch 1** · spy.jpg (score 0) <https://www.preceptaustin.org/files/images/spy.jpg>
@@ -1629,19 +1625,15 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 12** · eccl-remember.png (score 2) <https://www.preceptaustin.org/files/images/eccl-remember.png>
 - **Ch 12** · eccl-silver.png (score 2) <https://www.preceptaustin.org/files/images/eccl-silver.png>
 
-## exodus — 5 book-level, 121 per-chapter (probed 40 chapters)
+## exodus — 4 book-level, 118 per-chapter (probed 40 chapters)
 
 ### Book-level
 - egyptmap.png (score 12, 40 chapters) <https://www.preceptaustin.org/files/images/egyptmap.png>
 - exodusegypt.png (score 2, 40 chapters) <https://www.preceptaustin.org/files/images/exodusegypt.png>
 - exodustabernacle.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/exodustabernacle.png>
-- exodus.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/exodus.gif>
 - pentateuch.jpg (score 0, 40 chapters) <https://www.preceptaustin.org/files/images/pentateuch.jpg>
 ### Per-chapter
 - **Ch 1** · exodustimeline.png (score 12) <https://www.preceptaustin.org/files/images/exodustimeline.png>
-- **Ch 1** · exodus.gif (score 0) <https://www.preceptaustin.org/files/images/exodus.gif>
-- **Ch 1** · pogrom.jpg (score 0) <https://www.preceptaustin.org/files/images/pogrom.jpg>
-- **Ch 1** · taskmaster.jpg (score 0) <https://www.preceptaustin.org/files/images/taskmaster.jpg>
 - **Ch 2** · exodustimeline.png (score 12) <https://www.preceptaustin.org/files/images/exodustimeline.png>
 - **Ch 2** · midian1.jpg (score 10) <https://www.preceptaustin.org/files/images/midian1.jpg>
 - **Ch 2** · moseshidden.jpg (score 0) <https://www.preceptaustin.org/files/images/moseshidden.jpg>
@@ -2344,11 +2336,10 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 20** · aarontree.jpg (score 0) <https://www.preceptaustin.org/files/images/aarontree.jpg>
 - **Ch 21** · 1samap.png (score 12) <https://www.preceptaustin.org/files/images/1samap.png>
 
-## leviticus — 3 book-level, 40 per-chapter (probed 27 chapters)
+## leviticus — 2 book-level, 39 per-chapter (probed 27 chapters)
 
 ### Book-level
 - leviticuschart.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/Leviticuschart.jpg>
-- levi.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/levi.png>
 - leviticus1.png (score 2, 27 chapters) <https://www.preceptaustin.org/files/images/leviticus1.png>
 ### Per-chapter
 - **Ch 1** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
@@ -2360,7 +2351,6 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 10** · nadab.jpg (score 0) <https://www.preceptaustin.org/files/images/nadab.jpg>
 - **Ch 11** · eccl-swarm.png (score 2) <https://www.preceptaustin.org/files/images/eccl-swarm.png>
 - **Ch 12** · circumcision.png (score 2) <https://www.preceptaustin.org/files/images/CIRCUMCISION.png>
-- **Ch 14** · leviticus.png (score 2) <https://www.preceptaustin.org/files/images/leviticus.png>
 - **Ch 16** · exodustabernacle.png (score 2) <https://www.preceptaustin.org/files/images/exodustabernacle.png>
 - **Ch 16** · goathand.png (score 2) <https://www.preceptaustin.org/files/images/goathand.png>
 - **Ch 16** · goatled.png (score 2) <https://www.preceptaustin.org/files/images/goatled.png>
