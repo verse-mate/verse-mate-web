@@ -2058,7 +2058,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 21** · mosesancestry.jpg (score 0) <https://www.preceptaustin.org/files/images/mosesancestry.jpg>
 - **Ch 22** · tribe.jpg (score 0) <https://www.preceptaustin.org/files/images/tribe.jpg>
 
-## judges — 7 book-level, 53 per-chapter (probed 21 chapters)
+## judges — 7 book-level, 27 per-chapter (probed 21 chapters)
 
 ### Book-level
 - judges timeline.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/judges%20timeline.png>
@@ -2071,52 +2071,26 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 ### Per-chapter
 - **Ch 1** · gad.png (score 2) <https://www.preceptaustin.org/files/images/gad.png>
 - **Ch 1** · negev.jpg (score 0) <https://www.preceptaustin.org/files/images/negev.jpg>
-- **Ch 2** · angel.jpg (score 0) <https://www.preceptaustin.org/files/images/angel.jpg>
 - **Ch 3** · ehudmap.jpg (score 10) <https://www.preceptaustin.org/files/images/ehudmap.jpg>
 - **Ch 3** · ehudkills.jpg (score 0) <https://www.preceptaustin.org/files/images/ehudkills.jpg>
-- **Ch 3** · shofar.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar.jpg>
 - **Ch 4** · barakdefeatssisera.jpg (score 0) <https://www.preceptaustin.org/files/images/barakdefeatssisera.jpg>
 - **Ch 4** · barakgathersarmy.jpg (score 0) <https://www.preceptaustin.org/files/images/barakgathersarmy.jpg>
-- **Ch 4** · deborahpicture.jpg (score 0) <https://www.preceptaustin.org/files/images/deborahpicture.jpg>
-- **Ch 4** · deborahvictory.jpg (score 0) <https://www.preceptaustin.org/files/images/deborahvictory.jpg>
 - **Ch 4** · debramah.jpg (score 0) <https://www.preceptaustin.org/files/images/debramah.jpg>
 - **Ch 4** · kishon.jpg (score 0) <https://www.preceptaustin.org/files/images/kishon.jpg>
 - **Ch 4** · tabor.jpg (score 0) <https://www.preceptaustin.org/files/images/tabor.jpg>
-- **Ch 4** · tabormt.jpg (score 0) <https://www.preceptaustin.org/files/images/tabormt.jpg>
 - **Ch 6** · locust.jpg (score 0) <https://www.preceptaustin.org/files/images/locust.jpg>
-- **Ch 6** · shofar.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar.jpg>
-- **Ch 6** · thresh.jpg (score 0) <https://www.preceptaustin.org/files/images/thresh.jpg>
-- **Ch 6** · winnow.jpg (score 0) <https://www.preceptaustin.org/files/images/winnow.jpg>
 - **Ch 7** · gideonesv.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonesv.jpg>
-- **Ch 7** · gideonlamps.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonlamps.jpg>
-- **Ch 7** · gideonlappingwater.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonlappingwater.jpg>
-- **Ch 8** · gideonbread.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonbread.jpg>
-- **Ch 8** · gideonephod.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonephod.jpg>
 - **Ch 8** · gideonesv.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonesv.jpg>
-- **Ch 8** · gideongoldearrings.jpg (score 0) <https://www.preceptaustin.org/files/images/gideongoldearrings.jpg>
 - **Ch 8** · gideonkarkor.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonkarkor.jpg>
 - **Ch 8** · gideonpursue.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonpursue.jpg>
-- **Ch 8** · priest.jpg (score 0) <https://www.preceptaustin.org/files/images/priest.jpg>
-- **Ch 8** · thresh.jpg (score 0) <https://www.preceptaustin.org/files/images/thresh.jpg>
-- **Ch 9** · abimelechdeath.jpg (score 0) <https://www.preceptaustin.org/files/images/abimelechdeath.jpg>
 - **Ch 9** · ebal1.jpg (score 0) <https://www.preceptaustin.org/files/images/ebal1.jpg>
-- **Ch 9** · millstone.jpg (score 0) <https://www.preceptaustin.org/files/images/millstone.jpg>
 - **Ch 10** · 1samap.png (score 12) <https://www.preceptaustin.org/files/images/1samap.png>
 - **Ch 10** · prom.jpg (score 0) <https://www.preceptaustin.org/files/images/prom.jpg>
 - **Ch 11** · prom.jpg (score 0) <https://www.preceptaustin.org/files/images/prom.jpg>
 - **Ch 13** · judges chart.gif (score 10) <https://www.preceptaustin.org/files/images/Judges%20Chart.gif>
 - **Ch 13** · samsonmap1.jpg (score 10) <https://www.preceptaustin.org/files/images/samsonmap1.jpg>
 - **Ch 14** · samsonmap1.jpg (score 10) <https://www.preceptaustin.org/files/images/samsonmap1.jpg>
-- **Ch 14** · samsonlion1.jpg (score 0) <https://www.preceptaustin.org/files/images/samsonlion1.jpg>
-- **Ch 15** · samsonjawbone.jpg (score 0) <https://www.preceptaustin.org/files/images/samsonjawbone.jpg>
 - **Ch 16** · samsonmap1.jpg (score 10) <https://www.preceptaustin.org/files/images/samsonmap1.jpg>
-- **Ch 16** · frog.jpg (score 0) <https://www.preceptaustin.org/files/images/frog.jpg>
-- **Ch 16** · samsonblind.jpg (score 0) <https://www.preceptaustin.org/files/images/samsonblind.jpg>
-- **Ch 16** · samsondeath1.jpg (score 0) <https://www.preceptaustin.org/files/images/samsondeath1.jpg>
-- **Ch 16** · samsondelilah.jpg (score 0) <https://www.preceptaustin.org/files/images/samsondelilah.jpg>
-- **Ch 16** · samsong.jpg (score 0) <https://www.preceptaustin.org/files/images/samsong.jpg>
-- **Ch 16** · samsonknee1.jpg (score 0) <https://www.preceptaustin.org/files/images/samsonknee1.jpg>
-- **Ch 16** · samsontreadmill.jpg (score 0) <https://www.preceptaustin.org/files/images/samsontreadmill.jpg>
 - **Ch 17** · judgeslaish.jpg (score 0) <https://www.preceptaustin.org/files/images/judgeslaish.jpg>
 - **Ch 18** · judgeslaish.jpg (score 0) <https://www.preceptaustin.org/files/images/judgeslaish.jpg>
 - **Ch 20** · 1samap.png (score 12) <https://www.preceptaustin.org/files/images/1samap.png>

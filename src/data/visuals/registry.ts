@@ -3811,42 +3811,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-abimelechdeath",
-      "title": "Precept Austin — Judges Chapter 9",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 9 — abimelechdeath.jpg.",
-      "thumb": "/visuals/judges/precept_abimelechdeath.jpg",
-      "full": "/visuals/judges/precept_abimelechdeath.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/abimelechdeath.jpg"
-      },
-      "chapters": [
-        9
-      ]
-    },
-    {
-      "id": "precept-ch-angel",
-      "title": "Precept Austin — Judges Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 2 — angel.jpg.",
-      "thumb": "/visuals/judges/precept_angel.jpg",
-      "full": "/visuals/judges/precept_angel.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/angel.jpg"
-      },
-      "chapters": [
-        2
-      ]
-    },
-    {
       "id": "precept-ch-barakdefeatssisera",
       "title": "Precept Austin — Judges Chapter 4",
       "caption": "Bruce Hurt's commentary chart for Judges chapter 4 — barakdefeatssisera.jpg.",
@@ -3877,42 +3841,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/barakgathersarmy.jpg"
-      },
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "id": "precept-ch-deborahpicture",
-      "title": "Precept Austin — Judges Chapter 4",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 4 — deborahpicture.jpg.",
-      "thumb": "/visuals/judges/precept_deborahpicture.jpg",
-      "full": "/visuals/judges/precept_deborahpicture.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/deborahpicture.jpg"
-      },
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "id": "precept-ch-deborahvictory",
-      "title": "Precept Austin — Judges Chapter 4",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 4 — deborahvictory.jpg.",
-      "thumb": "/visuals/judges/precept_deborahvictory.jpg",
-      "full": "/visuals/judges/precept_deborahvictory.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/deborahvictory.jpg"
       },
       "chapters": [
         4
@@ -3991,24 +3919,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-frog",
-      "title": "Precept Austin — Judges Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 16 — frog.jpg.",
-      "thumb": "/visuals/judges/precept_frog.jpg",
-      "full": "/visuals/judges/precept_frog.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/frog.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
       "id": "precept-ch-gad",
       "title": "Precept Austin — Judges Chapter 1",
       "caption": "Bruce Hurt's commentary chart for Judges chapter 1 — gad.png.",
@@ -4024,42 +3934,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         1
-      ]
-    },
-    {
-      "id": "precept-ch-gideonbread",
-      "title": "Precept Austin — Judges Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 8 — gideonbread.jpg.",
-      "thumb": "/visuals/judges/precept_gideonbread.jpg",
-      "full": "/visuals/judges/precept_gideonbread.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/gideonbread.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-gideonephod",
-      "title": "Precept Austin — Judges Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 8 — gideonephod.jpg.",
-      "thumb": "/visuals/judges/precept_gideonephod.jpg",
-      "full": "/visuals/judges/precept_gideonephod.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/gideonephod.jpg"
-      },
-      "chapters": [
-        8
       ]
     },
     {
@@ -4082,24 +3956,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-gideongoldearrings",
-      "title": "Precept Austin — Judges Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 8 — gideongoldearrings.jpg.",
-      "thumb": "/visuals/judges/precept_gideongoldearrings.jpg",
-      "full": "/visuals/judges/precept_gideongoldearrings.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/gideongoldearrings.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
       "id": "precept-ch-gideonkarkor",
       "title": "Precept Austin — Judges Chapter 8",
       "caption": "Bruce Hurt's commentary chart for Judges chapter 8 — gideonkarkor.jpg.",
@@ -4115,42 +3971,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         8
-      ]
-    },
-    {
-      "id": "precept-ch-gideonlamps",
-      "title": "Precept Austin — Judges Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 7 — gideonlamps.jpg.",
-      "thumb": "/visuals/judges/precept_gideonlamps.jpg",
-      "full": "/visuals/judges/precept_gideonlamps.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/gideonlamps.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-gideonlappingwater",
-      "title": "Precept Austin — Judges Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 7 — gideonlappingwater.jpg.",
-      "thumb": "/visuals/judges/precept_gideonlappingwater.jpg",
-      "full": "/visuals/judges/precept_gideonlappingwater.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/gideonlappingwater.jpg"
-      },
-      "chapters": [
-        7
       ]
     },
     {
@@ -4245,24 +4065,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-millstone",
-      "title": "Precept Austin — Judges Chapter 9",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 9 — millstone.jpg.",
-      "thumb": "/visuals/judges/precept_millstone.jpg",
-      "full": "/visuals/judges/precept_millstone.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/millstone.jpg"
-      },
-      "chapters": [
-        9
-      ]
-    },
-    {
       "id": "precept-ch-negev",
       "title": "Precept Austin — Judges Chapter 1",
       "caption": "Bruce Hurt's commentary chart for Judges chapter 1 — negev.jpg.",
@@ -4278,24 +4080,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         1
-      ]
-    },
-    {
-      "id": "precept-ch-priest",
-      "title": "Precept Austin — Judges Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 8 — priest.jpg.",
-      "thumb": "/visuals/judges/precept_priest.jpg",
-      "full": "/visuals/judges/precept_priest.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/priest.jpg"
-      },
-      "chapters": [
-        8
       ]
     },
     {
@@ -4315,132 +4099,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "chapters": [
         10,
         11
-      ]
-    },
-    {
-      "id": "precept-ch-samsonblind",
-      "title": "Precept Austin — Judges Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 16 — samsonblind.jpg.",
-      "thumb": "/visuals/judges/precept_samsonblind.jpg",
-      "full": "/visuals/judges/precept_samsonblind.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/samsonblind.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-samsondeath1",
-      "title": "Precept Austin — Judges Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 16 — samsondeath1.jpg.",
-      "thumb": "/visuals/judges/precept_samsondeath1.jpg",
-      "full": "/visuals/judges/precept_samsondeath1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/samsondeath1.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-samsondelilah",
-      "title": "Precept Austin — Judges Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 16 — samsondelilah.jpg.",
-      "thumb": "/visuals/judges/precept_samsondelilah.jpg",
-      "full": "/visuals/judges/precept_samsondelilah.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/samsondelilah.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-samsong",
-      "title": "Precept Austin — Judges Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 16 — samsong.jpg.",
-      "thumb": "/visuals/judges/precept_samsong.jpg",
-      "full": "/visuals/judges/precept_samsong.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/samsong.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-samsonjawbone",
-      "title": "Precept Austin — Judges Chapter 15",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 15 — samsonjawbone.jpg.",
-      "thumb": "/visuals/judges/precept_samsonjawbone.jpg",
-      "full": "/visuals/judges/precept_samsonjawbone.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/samsonjawbone.jpg"
-      },
-      "chapters": [
-        15
-      ]
-    },
-    {
-      "id": "precept-ch-samsonknee1",
-      "title": "Precept Austin — Judges Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 16 — samsonknee1.jpg.",
-      "thumb": "/visuals/judges/precept_samsonknee1.jpg",
-      "full": "/visuals/judges/precept_samsonknee1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/samsonknee1.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-samsonlion1",
-      "title": "Precept Austin — Judges Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 14 — samsonlion1.jpg.",
-      "thumb": "/visuals/judges/precept_samsonlion1.jpg",
-      "full": "/visuals/judges/precept_samsonlion1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/samsonlion1.jpg"
-      },
-      "chapters": [
-        14
       ]
     },
     {
@@ -4464,43 +4122,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-samsontreadmill",
-      "title": "Precept Austin — Judges Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 16 — samsontreadmill.jpg.",
-      "thumb": "/visuals/judges/precept_samsontreadmill.jpg",
-      "full": "/visuals/judges/precept_samsontreadmill.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/samsontreadmill.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-shofar",
-      "title": "Precept Austin — Judges Chapters 3, 6",
-      "caption": "Bruce Hurt's commentary chart for Judges chapters 3, 6 — shofar.jpg.",
-      "thumb": "/visuals/judges/precept_shofar.jpg",
-      "full": "/visuals/judges/precept_shofar.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/shofar.jpg"
-      },
-      "chapters": [
-        3,
-        6
-      ]
-    },
-    {
       "id": "precept-ch-tabor",
       "title": "Precept Austin — Judges Chapter 4",
       "caption": "Bruce Hurt's commentary chart for Judges chapter 4 — tabor.jpg.",
@@ -4516,61 +4137,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         4
-      ]
-    },
-    {
-      "id": "precept-ch-tabormt",
-      "title": "Precept Austin — Judges Chapter 4",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 4 — tabormt.jpg.",
-      "thumb": "/visuals/judges/precept_tabormt.jpg",
-      "full": "/visuals/judges/precept_tabormt.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/tabormt.jpg"
-      },
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "id": "precept-ch-thresh",
-      "title": "Precept Austin — Judges Chapters 6, 8",
-      "caption": "Bruce Hurt's commentary chart for Judges chapters 6, 8 — thresh.jpg.",
-      "thumb": "/visuals/judges/precept_thresh.jpg",
-      "full": "/visuals/judges/precept_thresh.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/thresh.jpg"
-      },
-      "chapters": [
-        6,
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-winnow",
-      "title": "Precept Austin — Judges Chapter 6",
-      "caption": "Bruce Hurt's commentary chart for Judges chapter 6 — winnow.jpg.",
-      "thumb": "/visuals/judges/precept_winnow.jpg",
-      "full": "/visuals/judges/precept_winnow.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/winnow.jpg"
-      },
-      "chapters": [
-        6
       ]
     }
   ]

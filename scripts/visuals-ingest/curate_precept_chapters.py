@@ -278,6 +278,35 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "judges_chart_small.gif",   # dup of judges_chart.gif
         "judges_timeline_small.png",  # dup of judges_timeline.png
         "judgestimeline2.jpg",       # dup of judgestimeline.png
+        # Audit pass (24 cards Andy marked from /audit/judges.html) —
+        # Samson scene set (jawbone, lion, treadmill, knee, death,
+        # Delilah, blind, golden), Gideon scenes (lamps, ephod,
+        # earrings, bread, lapping water), Deborah paintings,
+        # Abimelech's death, threshing/winnowing stock, shofar.
+        "abimelechdeath.jpg",
+        "angel.jpg",
+        "deborahpicture.jpg",
+        "deborahvictory.jpg",
+        "frog.jpg",
+        "gideonbread.jpg",
+        "gideonephod.jpg",
+        "gideongoldearrings.jpg",
+        "gideonlamps.jpg",
+        "gideonlappingwater.jpg",
+        "millstone.jpg",
+        "priest.jpg",
+        "samsonblind.jpg",
+        "samsondeath1.jpg",
+        "samsondelilah.jpg",
+        "samsong.jpg",
+        "samsonjawbone.jpg",
+        "samsonknee1.jpg",
+        "samsonlion1.jpg",
+        "samsontreadmill.jpg",
+        "shofar.jpg",
+        "tabormt.jpg",
+        "thresh.jpg",
+        "winnow.jpg",
     },
     # Within-book byte-identical duplicates detected by MD5 across the
     # whole public/visuals/ tree. For each duplicate group we keep the
