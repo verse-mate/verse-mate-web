@@ -66,6 +66,24 @@ BOOK_LEVEL_FILENAMES = {Path(fn).name.lower() for fn in PRECEPT_CHARTS.values()}
 # exclude them by hand here.
 PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
     "exodus": {"genesistimeline.png"},
+    # Genesis editorial removals (flagged by Andy on the production preview):
+    # - genesis.jpg (Michelangelo's Creation of Adam) — decorative art, not a
+    #   study aid
+    # - cambrian.jpg, evolutionape.jpg, evolutionapetoman.png — Bruce embeds
+    #   evolutionary biology illustrations to argue against them, but they
+    #   read as decorative on the Visuals tab without his surrounding text
+    # - light1.jpg (electromagnetic spectrum), ocean.jpg (sea anemone photo),
+    #   stars.jpg (Milky Way photo) — generic science stock imagery, not
+    #   study-grade for Genesis 1
+    "genesis": {
+        "genesis.jpg",
+        "cambrian.jpg",
+        "evolutionape.jpg",
+        "evolutionapetoman.png",
+        "light1.jpg",
+        "ocean.jpg",
+        "stars.jpg",
+    },
 }
 
 # Manual book-level additions: charts we curate in by hand on top of
