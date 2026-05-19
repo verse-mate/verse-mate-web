@@ -22,6 +22,12 @@ PUBLIC_VISUALS = ROOT / "public" / "visuals"
 OUT_TS = ROOT / "src" / "data" / "visuals" / "registry.ts"
 OUT_BOOKS_TS = ROOT / "src" / "data" / "visuals" / "booksWithVisuals.ts"
 
+# Sibling package consumed by verse-mate-mobile via Metro. Same content
+# as OUT_TS, but with a leaner shape: types live in ./types, helpers in
+# ./index.ts, so this file is JUST the data + a slug set.
+VISUALS_PKG_DIR = ROOT.parent / "verse-mate-visuals"
+PKG_REGISTRY_TS = VISUALS_PKG_DIR / "src" / "registry.ts"
+
 # Source-of-truth: same POSTERS table used by ingest_bibleproject.py +
 # per-book video metadata with chapter ranges.
 import urllib.parse
@@ -437,6 +443,51 @@ export const BOOKS_WITH_VISUALS: ReadonlySet<string> = new Set<string>([
 """
     OUT_BOOKS_TS.write_text(light_ts)
     print(f"✓ Wrote {OUT_BOOKS_TS}")
+
+    # Mirror the registry into the sibling @versemate/visuals package so
+    # verse-mate-mobile picks the same content up via Metro. Same body
+    # as OUT_TS but with a leaner module shape (types imported from
+    # ./types, helpers in ./index.ts), keeping the mobile bundle clean.
+    if VISUALS_PKG_DIR.exists():
+        pkg_ts = f"""/* eslint-disable */
+/**
+ * GENERATED FILE — do not edit by hand.
+ *
+ * Built by verse-mate-web/scripts/visuals-ingest/build_manifests.py
+ * alongside verse-mate-web/src/data/visuals/registry.ts. Both files
+ * carry identical content; the web app reads its local copy directly,
+ * while @versemate/visuals (this package) is the source-of-truth for
+ * verse-mate-mobile via Metro's TS bundler.
+ *
+ * To regenerate after adding new assets or editing videos:
+ *
+ *   cd verse-mate-web
+ *   python3 scripts/visuals-ingest/build_manifests.py
+ */
+
+import type {{ VisualsManifest }} from './types';
+
+export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {{
+{body}
+}};
+
+/**
+ * Slug set for tab-visibility gating. Importable WITHOUT pulling the
+ * full registry into the bundle when callers only need to ask
+ * "does this book have curated visuals?". Both bundlers (Vite, Metro)
+ * tree-shake unused exports, so importing `BOOKS_WITH_VISUALS` from
+ * `@versemate/visuals` does not force `VISUALS_REGISTRY` to evaluate
+ * at the same site.
+ */
+export const BOOKS_WITH_VISUALS: ReadonlySet<string> = new Set<string>(
+  Object.keys(VISUALS_REGISTRY),
+);
+"""
+        PKG_REGISTRY_TS.parent.mkdir(parents=True, exist_ok=True)
+        PKG_REGISTRY_TS.write_text(pkg_ts)
+        print(f"✓ Wrote {PKG_REGISTRY_TS}")
+    else:
+        print(f"  (skipping {PKG_REGISTRY_TS}: package dir not present)")
 
 
 if __name__ == "__main__":
