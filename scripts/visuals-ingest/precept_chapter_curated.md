@@ -1517,14 +1517,12 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 61** · isaiah_glorious_throne_of_jehovah_the_holy_one.png (score 2) <https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png>
 - **Ch 61** · timegap2.jpg (score 0) <https://www.preceptaustin.org/files/images/timegap2.jpg>
 
-## james — 1 book-level, 5 per-chapter (probed 5 chapters)
+## james — 1 book-level, 3 per-chapter (probed 5 chapters)
 
 ### Book-level
 - james_jesus_brother.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/james_jesus_brother.png>
 ### Per-chapter
 - **Ch 3** · bridle.jpg (score 0) <https://www.preceptaustin.org/files/images/bridle.jpg>
-- **Ch 3** · chicago.jpg (score 0) <https://www.preceptaustin.org/files/images/chicago.jpg>
-- **Ch 3** · imagegod.jpg (score 0) <https://www.preceptaustin.org/files/images/imagegod.jpg>
 - **Ch 4** · james413.png (score 2) <https://www.preceptaustin.org/files/images/james413.png>
 - **Ch 4** · clockredeem.jpeg (score 0) <https://www.preceptaustin.org/files/images/clockredeem.jpeg>
 

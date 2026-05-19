@@ -17555,21 +17555,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-chart",
-      "title": "Precept Austin — Hebrews Chart",
-      "caption": "Bruce Hurt's inductive-study chart for Hebrews, mapping the book's flow, key themes, and turning points. Drawn from Precept Austin's free verse-by-verse commentary.",
-      "thumb": "/visuals/hebrews/precept_chart.png",
-      "full": "/visuals/hebrews/precept_chart.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/hebrews.png"
-      }
-    },
-    {
       "id": "precept-ch-heb",
       "title": "Precept Austin — Hebrews Chapter 13",
       "caption": "Bruce Hurt's commentary chart for Hebrews chapter 13 — heb.png.",
@@ -17724,60 +17709,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/bridle.jpg"
-      },
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "id": "precept-ch-chicago",
-      "title": "Precept Austin — James Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for James chapter 3 — chicago.jpg.",
-      "thumb": "/visuals/james/precept_chicago.jpg",
-      "full": "/visuals/james/precept_chicago.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/chicago.jpg"
-      },
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "id": "precept-ch-clockredeem",
-      "title": "Precept Austin — James Chapter 4",
-      "caption": "Bruce Hurt's commentary chart for James chapter 4 — clockredeem.jpeg.",
-      "thumb": "/visuals/james/precept_clockredeem.jpg",
-      "full": "/visuals/james/precept_clockredeem.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/clockredeem.jpeg"
-      },
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "id": "precept-ch-imagegod",
-      "title": "Precept Austin — James Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for James chapter 3 — imagegod.jpg.",
-      "thumb": "/visuals/james/precept_imagegod.jpg",
-      "full": "/visuals/james/precept_imagegod.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/imagegod.jpg"
       },
       "chapters": [
         3

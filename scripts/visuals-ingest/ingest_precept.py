@@ -78,7 +78,7 @@ PRECEPT_CHARTS: dict[str, str] = {
     "acts":          "acts.png",
     "romans":        "romans.png",
     "titus":         "titus.png",
-    "hebrews":       "hebrews.png",
+    # Hebrews removed in audit pass — Bruce's chart didn't survive editorial review.
     "james":         "james_chart.png",
     "1-peter":       "1_peter.png",
     "2-peter":       "2_peter.png",
