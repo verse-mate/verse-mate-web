@@ -412,6 +412,26 @@
           ]
         }
       ],
+      "15": [
+        {
+          "filename": "ark2esv.jpg",
+          "url": "https://www.preceptaustin.org/files/images/ark2esv.jpg",
+          "score": 0,
+          "chapters": [
+            "13",
+            "15",
+            "16"
+          ]
+        },
+        {
+          "filename": "joshua3.jpg",
+          "url": "https://www.preceptaustin.org/files/images/joshua3.jpg",
+          "score": 0,
+          "chapters": [
+            "15"
+          ]
+        }
+      ],
       "16": [
         {
           "filename": "ark2esv.jpg",
@@ -433,26 +453,6 @@
             "13",
             "15",
             "16"
-          ]
-        }
-      ],
-      "15": [
-        {
-          "filename": "ark2esv.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ark2esv.jpg",
-          "score": 0,
-          "chapters": [
-            "13",
-            "15",
-            "16"
-          ]
-        },
-        {
-          "filename": "joshua3.jpg",
-          "url": "https://www.preceptaustin.org/files/images/joshua3.jpg",
-          "score": 0,
-          "chapters": [
-            "15"
           ]
         }
       ],
@@ -536,6 +536,17 @@
           ]
         }
       ],
+      "23": [
+        {
+          "filename": "ex614.jpg",
+          "url": "https://www.preceptaustin.org/files/images/ex614.jpg",
+          "score": 0,
+          "chapters": [
+            "23",
+            "24"
+          ]
+        }
+      ],
       "24": [
         {
           "filename": "ex614.jpg",
@@ -559,17 +570,6 @@
           "url": "https://www.preceptaustin.org/files/images/priesthood.jpg",
           "score": 0,
           "chapters": [
-            "24"
-          ]
-        }
-      ],
-      "23": [
-        {
-          "filename": "ex614.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ex614.jpg",
-          "score": 0,
-          "chapters": [
-            "23",
             "24"
           ]
         }
@@ -1178,93 +1178,6 @@
       }
     ],
     "per_chapter": {
-      "2": [
-        {
-          "filename": "1kichart2.png",
-          "url": "https://www.preceptaustin.org/files/images/1kichart2.png",
-          "score": 12,
-          "chapters": [
-            "1",
-            "2"
-          ]
-        },
-        {
-          "filename": "1samuelmapesv.jpg",
-          "url": "https://www.preceptaustin.org/files/images/1samuelmapesv.jpg",
-          "score": 10,
-          "chapters": [
-            "2"
-          ]
-        },
-        {
-          "filename": "1ki.png",
-          "url": "https://www.preceptaustin.org/files/images/1ki.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2"
-          ]
-        },
-        {
-          "filename": "1kichr.png",
-          "url": "https://www.preceptaustin.org/files/images/1kichr.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2"
-          ]
-        },
-        {
-          "filename": "1kichrsetting.png",
-          "url": "https://www.preceptaustin.org/files/images/1kichrsetting.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2"
-          ]
-        },
-        {
-          "filename": "abiathar.webp",
-          "url": "https://www.preceptaustin.org/files/images/abiathar.webp",
-          "score": 0,
-          "chapters": [
-            "2"
-          ]
-        },
-        {
-          "filename": "bathsol.webp",
-          "url": "https://www.preceptaustin.org/files/images/bathsol.webp",
-          "score": 0,
-          "chapters": [
-            "2"
-          ]
-        },
-        {
-          "filename": "daviddeath.webp",
-          "url": "https://www.preceptaustin.org/files/images/daviddeath.webp",
-          "score": 0,
-          "chapters": [
-            "2"
-          ]
-        },
-        {
-          "filename": "hornsaltar.webp",
-          "url": "https://www.preceptaustin.org/files/images/hornsaltar.webp",
-          "score": 0,
-          "chapters": [
-            "1",
-            "2"
-          ]
-        },
-        {
-          "filename": "shimei.webp",
-          "url": "https://www.preceptaustin.org/files/images/shimei.webp",
-          "score": 0,
-          "chapters": [
-            "2"
-          ]
-        }
-      ],
       "1": [
         {
           "filename": "1kichart2.png",
@@ -1368,15 +1281,94 @@
           ]
         }
       ],
-      "3": [
+      "2": [
         {
-          "filename": "truman.png",
-          "url": "https://www.preceptaustin.org/files/images/truman.png",
-          "score": 2,
+          "filename": "1kichart2.png",
+          "url": "https://www.preceptaustin.org/files/images/1kichart2.png",
+          "score": 12,
           "chapters": [
-            "3"
+            "1",
+            "2"
           ]
         },
+        {
+          "filename": "1samuelmapesv.jpg",
+          "url": "https://www.preceptaustin.org/files/images/1samuelmapesv.jpg",
+          "score": 10,
+          "chapters": [
+            "2"
+          ]
+        },
+        {
+          "filename": "1ki.png",
+          "url": "https://www.preceptaustin.org/files/images/1ki.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "filename": "1kichr.png",
+          "url": "https://www.preceptaustin.org/files/images/1kichr.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "filename": "1kichrsetting.png",
+          "url": "https://www.preceptaustin.org/files/images/1kichrsetting.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "filename": "abiathar.webp",
+          "url": "https://www.preceptaustin.org/files/images/abiathar.webp",
+          "score": 0,
+          "chapters": [
+            "2"
+          ]
+        },
+        {
+          "filename": "bathsol.webp",
+          "url": "https://www.preceptaustin.org/files/images/bathsol.webp",
+          "score": 0,
+          "chapters": [
+            "2"
+          ]
+        },
+        {
+          "filename": "daviddeath.webp",
+          "url": "https://www.preceptaustin.org/files/images/daviddeath.webp",
+          "score": 0,
+          "chapters": [
+            "2"
+          ]
+        },
+        {
+          "filename": "hornsaltar.webp",
+          "url": "https://www.preceptaustin.org/files/images/hornsaltar.webp",
+          "score": 0,
+          "chapters": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "filename": "shimei.webp",
+          "url": "https://www.preceptaustin.org/files/images/shimei.webp",
+          "score": 0,
+          "chapters": [
+            "2"
+          ]
+        }
+      ],
+      "3": [
         {
           "filename": "babel.jpg",
           "url": "https://www.preceptaustin.org/files/images/babel.jpg",
@@ -1563,51 +1555,6 @@
           ]
         }
       ],
-      "9": [
-        {
-          "filename": "exodusvia.png",
-          "url": "https://www.preceptaustin.org/files/images/exodusvia.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "napthali.png",
-          "url": "https://www.preceptaustin.org/files/images/napthali.png",
-          "score": 2,
-          "chapters": [
-            "4",
-            "9",
-            "12",
-            "14"
-          ]
-        },
-        {
-          "filename": "solomonfortress.png",
-          "url": "https://www.preceptaustin.org/files/images/solomonfortress.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "ezion.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ezion.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "ezion2.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ezion2.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        }
-      ],
       "12": [
         {
           "filename": "dividedkingdom.jpg",
@@ -1627,14 +1574,6 @@
             "9",
             "12",
             "14"
-          ]
-        },
-        {
-          "filename": "dan1.jpg",
-          "url": "https://www.preceptaustin.org/files/images/dan1.jpg",
-          "score": 0,
-          "chapters": [
-            "12"
           ]
         },
         {
@@ -1741,19 +1680,48 @@
           ]
         },
         {
-          "filename": "shishak.jpg",
-          "url": "https://www.preceptaustin.org/files/images/shishak.jpg",
-          "score": 0,
-          "chapters": [
-            "14"
-          ]
-        },
-        {
           "filename": "shishak2.webp",
           "url": "https://www.preceptaustin.org/files/images/shishak2.webp",
           "score": 0,
           "chapters": [
             "14"
+          ]
+        }
+      ],
+      "9": [
+        {
+          "filename": "exodusvia.png",
+          "url": "https://www.preceptaustin.org/files/images/exodusvia.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "napthali.png",
+          "url": "https://www.preceptaustin.org/files/images/napthali.png",
+          "score": 2,
+          "chapters": [
+            "4",
+            "9",
+            "12",
+            "14"
+          ]
+        },
+        {
+          "filename": "solomonfortress.png",
+          "url": "https://www.preceptaustin.org/files/images/solomonfortress.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "ezion.jpg",
+          "url": "https://www.preceptaustin.org/files/images/ezion.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
           ]
         }
       ],
@@ -1786,29 +1754,12 @@
       ],
       "6": [
         {
-          "filename": "exodusincense.png",
-          "url": "https://www.preceptaustin.org/files/images/exodusincense.png",
-          "score": 2,
-          "chapters": [
-            "6",
-            "7"
-          ]
-        },
-        {
           "filename": "exodusglory.jpg",
           "url": "https://www.preceptaustin.org/files/images/exodusglory.jpg",
           "score": 0,
           "chapters": [
             "6",
             "8"
-          ]
-        },
-        {
-          "filename": "ezekie7.gif",
-          "url": "https://www.preceptaustin.org/files/images/ezekie7.gif",
-          "score": 0,
-          "chapters": [
-            "6"
           ]
         },
         {
@@ -1849,27 +1800,11 @@
       ],
       "8": [
         {
-          "filename": "circumcise.jpg",
-          "url": "https://www.preceptaustin.org/files/images/circumcise.jpg",
-          "score": 0,
-          "chapters": [
-            "8"
-          ]
-        },
-        {
           "filename": "exodusglory.jpg",
           "url": "https://www.preceptaustin.org/files/images/exodusglory.jpg",
           "score": 0,
           "chapters": [
             "6",
-            "8"
-          ]
-        },
-        {
-          "filename": "solomonarktotemple.jpg",
-          "url": "https://www.preceptaustin.org/files/images/solomonarktotemple.jpg",
-          "score": 0,
-          "chapters": [
             "8"
           ]
         },
@@ -1884,15 +1819,6 @@
         }
       ],
       "7": [
-        {
-          "filename": "exodusincense.png",
-          "url": "https://www.preceptaustin.org/files/images/exodusincense.png",
-          "score": 2,
-          "chapters": [
-            "6",
-            "7"
-          ]
-        },
         {
           "filename": "solomonhouse.jpg",
           "url": "https://www.preceptaustin.org/files/images/solomonhouse.jpg",
@@ -1915,14 +1841,6 @@
         {
           "filename": "sheba.jpg",
           "url": "https://www.preceptaustin.org/files/images/sheba.jpg",
-          "score": 0,
-          "chapters": [
-            "10"
-          ]
-        },
-        {
-          "filename": "shebaqueen.jpg",
-          "url": "https://www.preceptaustin.org/files/images/shebaqueen.jpg",
           "score": 0,
           "chapters": [
             "10"
@@ -1979,14 +1897,6 @@
         {
           "filename": "solomonsilver.webp",
           "url": "https://www.preceptaustin.org/files/images/solomonsilver.webp",
-          "score": 0,
-          "chapters": [
-            "10"
-          ]
-        },
-        {
-          "filename": "solomonthrone.jpg",
-          "url": "https://www.preceptaustin.org/files/images/solomonthrone.jpg",
           "score": 0,
           "chapters": [
             "10"
@@ -2391,7 +2301,7 @@
         }
       ]
     },
-    "kept": 148
+    "kept": 137
   },
   "1-samuel": {
     "chapters_probed": 31,
@@ -2583,6 +2493,344 @@
       }
     ],
     "per_chapter": {
+      "2": [
+        {
+          "filename": "1saman.png",
+          "url": "https://www.preceptaustin.org/files/images/1saman.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "filename": "aarontree.jpg",
+          "url": "https://www.preceptaustin.org/files/images/aarontree.jpg",
+          "score": 0,
+          "chapters": [
+            "2"
+          ]
+        }
+      ],
+      "6": [
+        {
+          "filename": "1saman.png",
+          "url": "https://www.preceptaustin.org/files/images/1saman.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "filename": "ark2esv.jpg",
+          "url": "https://www.preceptaustin.org/files/images/ark2esv.jpg",
+          "score": 0,
+          "chapters": [
+            "6"
+          ]
+        },
+        {
+          "filename": "arkcaptured.jpg",
+          "url": "https://www.preceptaustin.org/files/images/arkcaptured.jpg",
+          "score": 0,
+          "chapters": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "filename": "goldenmice.jpg",
+          "url": "https://www.preceptaustin.org/files/images/goldenmice.jpg",
+          "score": 0,
+          "chapters": [
+            "6"
+          ]
+        }
+      ],
+      "1": [
+        {
+          "filename": "judgestimeline.png",
+          "url": "https://www.preceptaustin.org/files/images/judgestimeline.png",
+          "score": 12,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "judgestimeline2.jpg",
+          "url": "https://www.preceptaustin.org/files/images/judgestimeline2.jpg",
+          "score": 10,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "1saman.png",
+          "url": "https://www.preceptaustin.org/files/images/1saman.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "filename": "napthali.png",
+          "url": "https://www.preceptaustin.org/files/images/napthali.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "3",
+            "8",
+            "9",
+            "11",
+            "27",
+            "31"
+          ]
+        },
+        {
+          "filename": "hannah.jpg",
+          "url": "https://www.preceptaustin.org/files/images/hannah.jpg",
+          "score": 0,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "ramah.jpg",
+          "url": "https://www.preceptaustin.org/files/images/ramah.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "filename": "samuelsbirth.jpg",
+          "url": "https://www.preceptaustin.org/files/images/samuelsbirth.jpg",
+          "score": 0,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "shiloh.jpg",
+          "url": "https://www.preceptaustin.org/files/images/shiloh.jpg",
+          "score": 0,
+          "chapters": [
+            "1"
+          ]
+        }
+      ],
+      "8": [
+        {
+          "filename": "1saman.png",
+          "url": "https://www.preceptaustin.org/files/images/1saman.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "filename": "napthali.png",
+          "url": "https://www.preceptaustin.org/files/images/napthali.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "3",
+            "8",
+            "9",
+            "11",
+            "27",
+            "31"
+          ]
+        },
+        {
+          "filename": "ramah.jpg",
+          "url": "https://www.preceptaustin.org/files/images/ramah.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "7",
+            "8"
+          ]
+        }
+      ],
+      "4": [
+        {
+          "filename": "1saman.png",
+          "url": "https://www.preceptaustin.org/files/images/1saman.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "filename": "ark.jpg",
+          "url": "https://www.preceptaustin.org/files/images/ark.jpg",
+          "score": 0,
+          "chapters": [
+            "4"
+          ]
+        },
+        {
+          "filename": "ark1.jpg",
+          "url": "https://www.preceptaustin.org/files/images/ark1.jpg",
+          "score": 0,
+          "chapters": [
+            "4"
+          ]
+        },
+        {
+          "filename": "arkcaptured.jpg",
+          "url": "https://www.preceptaustin.org/files/images/arkcaptured.jpg",
+          "score": 0,
+          "chapters": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "filename": "ebenezer.jpg",
+          "url": "https://www.preceptaustin.org/files/images/ebenezer.jpg",
+          "score": 0,
+          "chapters": [
+            "4"
+          ]
+        },
+        {
+          "filename": "philistinesdefeatisrael.jpg",
+          "url": "https://www.preceptaustin.org/files/images/philistinesdefeatisrael.jpg",
+          "score": 0,
+          "chapters": [
+            "4"
+          ]
+        }
+      ],
+      "7": [
+        {
+          "filename": "1saman.png",
+          "url": "https://www.preceptaustin.org/files/images/1saman.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "filename": "arkcaptured.jpg",
+          "url": "https://www.preceptaustin.org/files/images/arkcaptured.jpg",
+          "score": 0,
+          "chapters": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "filename": "bethel.jpg",
+          "url": "https://www.preceptaustin.org/files/images/bethel.jpg",
+          "score": 0,
+          "chapters": [
+            "7"
+          ]
+        },
+        {
+          "filename": "gilgal.jpg",
+          "url": "https://www.preceptaustin.org/files/images/gilgal.jpg",
+          "score": 0,
+          "chapters": [
+            "7"
+          ]
+        },
+        {
+          "filename": "judges.jpg",
+          "url": "https://www.preceptaustin.org/files/images/judges.jpg",
+          "score": 0,
+          "chapters": [
+            "7"
+          ]
+        },
+        {
+          "filename": "pogo.jpg",
+          "url": "https://www.preceptaustin.org/files/images/pogo.jpg",
+          "score": 0,
+          "chapters": [
+            "7"
+          ]
+        },
+        {
+          "filename": "ramah.jpg",
+          "url": "https://www.preceptaustin.org/files/images/ramah.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "filename": "samuelo.jpg",
+          "url": "https://www.preceptaustin.org/files/images/samuelo.jpg",
+          "score": 0,
+          "chapters": [
+            "7"
+          ]
+        },
+        {
+          "filename": "sincycle.jpg",
+          "url": "https://www.preceptaustin.org/files/images/sincycle.jpg",
+          "score": 0,
+          "chapters": [
+            "7",
+            "12"
+          ]
+        }
+      ],
       "3": [
         {
           "filename": "1saman.png",
@@ -2698,401 +2946,6 @@
           ]
         }
       ],
-      "6": [
-        {
-          "filename": "1saman.png",
-          "url": "https://www.preceptaustin.org/files/images/1saman.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "filename": "ark2esv.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ark2esv.jpg",
-          "score": 0,
-          "chapters": [
-            "6"
-          ]
-        },
-        {
-          "filename": "arkcaptured.jpg",
-          "url": "https://www.preceptaustin.org/files/images/arkcaptured.jpg",
-          "score": 0,
-          "chapters": [
-            "4",
-            "5",
-            "6",
-            "7"
-          ]
-        },
-        {
-          "filename": "goldenmice.jpg",
-          "url": "https://www.preceptaustin.org/files/images/goldenmice.jpg",
-          "score": 0,
-          "chapters": [
-            "6"
-          ]
-        }
-      ],
-      "8": [
-        {
-          "filename": "1saman.png",
-          "url": "https://www.preceptaustin.org/files/images/1saman.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "filename": "napthali.png",
-          "url": "https://www.preceptaustin.org/files/images/napthali.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "3",
-            "8",
-            "9",
-            "11",
-            "27",
-            "31"
-          ]
-        },
-        {
-          "filename": "ramah.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ramah.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "7",
-            "8"
-          ]
-        }
-      ],
-      "1": [
-        {
-          "filename": "judgestimeline.png",
-          "url": "https://www.preceptaustin.org/files/images/judgestimeline.png",
-          "score": 12,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "judgestimeline2.jpg",
-          "url": "https://www.preceptaustin.org/files/images/judgestimeline2.jpg",
-          "score": 10,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "1saman.png",
-          "url": "https://www.preceptaustin.org/files/images/1saman.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "filename": "napthali.png",
-          "url": "https://www.preceptaustin.org/files/images/napthali.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "3",
-            "8",
-            "9",
-            "11",
-            "27",
-            "31"
-          ]
-        },
-        {
-          "filename": "hannah.jpg",
-          "url": "https://www.preceptaustin.org/files/images/hannah.jpg",
-          "score": 0,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "ramah.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ramah.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "filename": "samuelsbirth.jpg",
-          "url": "https://www.preceptaustin.org/files/images/samuelsbirth.jpg",
-          "score": 0,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "shiloh.jpg",
-          "url": "https://www.preceptaustin.org/files/images/shiloh.jpg",
-          "score": 0,
-          "chapters": [
-            "1"
-          ]
-        }
-      ],
-      "2": [
-        {
-          "filename": "1saman.png",
-          "url": "https://www.preceptaustin.org/files/images/1saman.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "filename": "aarontree.jpg",
-          "url": "https://www.preceptaustin.org/files/images/aarontree.jpg",
-          "score": 0,
-          "chapters": [
-            "2"
-          ]
-        }
-      ],
-      "7": [
-        {
-          "filename": "1saman.png",
-          "url": "https://www.preceptaustin.org/files/images/1saman.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "filename": "arkcaptured.jpg",
-          "url": "https://www.preceptaustin.org/files/images/arkcaptured.jpg",
-          "score": 0,
-          "chapters": [
-            "4",
-            "5",
-            "6",
-            "7"
-          ]
-        },
-        {
-          "filename": "bethel.jpg",
-          "url": "https://www.preceptaustin.org/files/images/bethel.jpg",
-          "score": 0,
-          "chapters": [
-            "7"
-          ]
-        },
-        {
-          "filename": "gilgal.jpg",
-          "url": "https://www.preceptaustin.org/files/images/gilgal.jpg",
-          "score": 0,
-          "chapters": [
-            "7"
-          ]
-        },
-        {
-          "filename": "judges.jpg",
-          "url": "https://www.preceptaustin.org/files/images/judges.jpg",
-          "score": 0,
-          "chapters": [
-            "7"
-          ]
-        },
-        {
-          "filename": "pogo.jpg",
-          "url": "https://www.preceptaustin.org/files/images/pogo.jpg",
-          "score": 0,
-          "chapters": [
-            "7"
-          ]
-        },
-        {
-          "filename": "ramah.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ramah.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "filename": "samuelo.jpg",
-          "url": "https://www.preceptaustin.org/files/images/samuelo.jpg",
-          "score": 0,
-          "chapters": [
-            "7"
-          ]
-        },
-        {
-          "filename": "sincycle.jpg",
-          "url": "https://www.preceptaustin.org/files/images/sincycle.jpg",
-          "score": 0,
-          "chapters": [
-            "7",
-            "12"
-          ]
-        }
-      ],
-      "4": [
-        {
-          "filename": "1saman.png",
-          "url": "https://www.preceptaustin.org/files/images/1saman.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "filename": "ark.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ark.jpg",
-          "score": 0,
-          "chapters": [
-            "4"
-          ]
-        },
-        {
-          "filename": "ark1.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ark1.jpg",
-          "score": 0,
-          "chapters": [
-            "4"
-          ]
-        },
-        {
-          "filename": "arkcaptured.jpg",
-          "url": "https://www.preceptaustin.org/files/images/arkcaptured.jpg",
-          "score": 0,
-          "chapters": [
-            "4",
-            "5",
-            "6",
-            "7"
-          ]
-        },
-        {
-          "filename": "ebenezer.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ebenezer.jpg",
-          "score": 0,
-          "chapters": [
-            "4"
-          ]
-        },
-        {
-          "filename": "philistinesdefeatisrael.jpg",
-          "url": "https://www.preceptaustin.org/files/images/philistinesdefeatisrael.jpg",
-          "score": 0,
-          "chapters": [
-            "4"
-          ]
-        }
-      ],
-      "9": [
-        {
-          "filename": "napthali.png",
-          "url": "https://www.preceptaustin.org/files/images/napthali.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "3",
-            "8",
-            "9",
-            "11",
-            "27",
-            "31"
-          ]
-        },
-        {
-          "filename": "kingsize.jpg",
-          "url": "https://www.preceptaustin.org/files/images/kingsize.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        }
-      ],
-      "27": [
-        {
-          "filename": "mapdavid.jpg",
-          "url": "https://www.preceptaustin.org/files/images/mapdavid.jpg",
-          "score": 10,
-          "chapters": [
-            "27",
-            "28"
-          ]
-        },
-        {
-          "filename": "napthali.png",
-          "url": "https://www.preceptaustin.org/files/images/napthali.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "3",
-            "8",
-            "9",
-            "11",
-            "27",
-            "31"
-          ]
-        },
-        {
-          "filename": "ziklag.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ziklag.jpg",
-          "score": 0,
-          "chapters": [
-            "27"
-          ]
-        }
-      ],
       "11": [
         {
           "filename": "napthali.png",
@@ -3181,6 +3034,63 @@
           "score": 0,
           "chapters": [
             "31"
+          ]
+        }
+      ],
+      "27": [
+        {
+          "filename": "mapdavid.jpg",
+          "url": "https://www.preceptaustin.org/files/images/mapdavid.jpg",
+          "score": 10,
+          "chapters": [
+            "27",
+            "28"
+          ]
+        },
+        {
+          "filename": "napthali.png",
+          "url": "https://www.preceptaustin.org/files/images/napthali.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "3",
+            "8",
+            "9",
+            "11",
+            "27",
+            "31"
+          ]
+        },
+        {
+          "filename": "ziklag.jpg",
+          "url": "https://www.preceptaustin.org/files/images/ziklag.jpg",
+          "score": 0,
+          "chapters": [
+            "27"
+          ]
+        }
+      ],
+      "9": [
+        {
+          "filename": "napthali.png",
+          "url": "https://www.preceptaustin.org/files/images/napthali.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "3",
+            "8",
+            "9",
+            "11",
+            "27",
+            "31"
+          ]
+        },
+        {
+          "filename": "kingsize.jpg",
+          "url": "https://www.preceptaustin.org/files/images/kingsize.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
           ]
         }
       ],
@@ -3501,7 +3411,7 @@
           ]
         }
       ],
-      "22": [
+      "18": [
         {
           "filename": "1sa3.png",
           "url": "https://www.preceptaustin.org/files/images/1sa3.png",
@@ -3548,19 +3458,58 @@
           ]
         },
         {
-          "filename": "davidcave.jpg",
-          "url": "https://www.preceptaustin.org/files/images/davidcave.jpg",
-          "score": 0,
+          "filename": "saulspear.png",
+          "url": "https://www.preceptaustin.org/files/images/saulspear.png",
+          "score": 2,
           "chapters": [
-            "22"
+            "18"
+          ]
+        }
+      ],
+      "19": [
+        {
+          "filename": "1sa3.png",
+          "url": "https://www.preceptaustin.org/files/images/1sa3.png",
+          "score": 2,
+          "chapters": [
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"
           ]
         },
         {
-          "filename": "davidddd.jpeg",
-          "url": "https://www.preceptaustin.org/files/images/davidddd.jpeg",
-          "score": 0,
+          "filename": "1sa3kings.png",
+          "url": "https://www.preceptaustin.org/files/images/1sa3kings.png",
+          "score": 2,
           "chapters": [
-            "22"
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"
+          ]
+        },
+        {
+          "filename": "1samain.png",
+          "url": "https://www.preceptaustin.org/files/images/1samain.png",
+          "score": 2,
+          "chapters": [
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"
           ]
         },
         {
@@ -3597,11 +3546,12 @@
           ]
         },
         {
-          "filename": "doeg.jpg",
-          "url": "https://www.preceptaustin.org/files/images/doeg.jpg",
+          "filename": "saulterror.jpg",
+          "url": "https://www.preceptaustin.org/files/images/saulterror.jpg",
           "score": 0,
           "chapters": [
-            "22"
+            "16",
+            "19"
           ]
         }
       ],
@@ -3697,95 +3647,6 @@
           "score": 0,
           "chapters": [
             "16"
-          ]
-        },
-        {
-          "filename": "saulterror.jpg",
-          "url": "https://www.preceptaustin.org/files/images/saulterror.jpg",
-          "score": 0,
-          "chapters": [
-            "16",
-            "19"
-          ]
-        }
-      ],
-      "19": [
-        {
-          "filename": "1sa3.png",
-          "url": "https://www.preceptaustin.org/files/images/1sa3.png",
-          "score": 2,
-          "chapters": [
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23"
-          ]
-        },
-        {
-          "filename": "1sa3kings.png",
-          "url": "https://www.preceptaustin.org/files/images/1sa3kings.png",
-          "score": 2,
-          "chapters": [
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23"
-          ]
-        },
-        {
-          "filename": "1samain.png",
-          "url": "https://www.preceptaustin.org/files/images/1samain.png",
-          "score": 2,
-          "chapters": [
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23"
-          ]
-        },
-        {
-          "filename": "davidflee.jpg",
-          "url": "https://www.preceptaustin.org/files/images/davidflee.jpg",
-          "score": 0,
-          "chapters": [
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "28",
-            "30",
-            "31"
-          ]
-        },
-        {
-          "filename": "davidflees.jpg",
-          "url": "https://www.preceptaustin.org/files/images/davidflees.jpg",
-          "score": 0,
-          "chapters": [
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26"
           ]
         },
         {
@@ -3894,7 +3755,7 @@
           ]
         }
       ],
-      "18": [
+      "22": [
         {
           "filename": "1sa3.png",
           "url": "https://www.preceptaustin.org/files/images/1sa3.png",
@@ -3941,11 +3802,187 @@
           ]
         },
         {
-          "filename": "saulspear.png",
-          "url": "https://www.preceptaustin.org/files/images/saulspear.png",
+          "filename": "davidcave.jpg",
+          "url": "https://www.preceptaustin.org/files/images/davidcave.jpg",
+          "score": 0,
+          "chapters": [
+            "22"
+          ]
+        },
+        {
+          "filename": "davidddd.jpeg",
+          "url": "https://www.preceptaustin.org/files/images/davidddd.jpeg",
+          "score": 0,
+          "chapters": [
+            "22"
+          ]
+        },
+        {
+          "filename": "davidflee.jpg",
+          "url": "https://www.preceptaustin.org/files/images/davidflee.jpg",
+          "score": 0,
+          "chapters": [
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "28",
+            "30",
+            "31"
+          ]
+        },
+        {
+          "filename": "davidflees.jpg",
+          "url": "https://www.preceptaustin.org/files/images/davidflees.jpg",
+          "score": 0,
+          "chapters": [
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26"
+          ]
+        },
+        {
+          "filename": "doeg.jpg",
+          "url": "https://www.preceptaustin.org/files/images/doeg.jpg",
+          "score": 0,
+          "chapters": [
+            "22"
+          ]
+        }
+      ],
+      "17": [
+        {
+          "filename": "goliathmap.jpg",
+          "url": "https://www.preceptaustin.org/files/images/goliathmap.jpg",
+          "score": 10,
+          "chapters": [
+            "17"
+          ]
+        },
+        {
+          "filename": "1sa3.png",
+          "url": "https://www.preceptaustin.org/files/images/1sa3.png",
           "score": 2,
           "chapters": [
-            "18"
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"
+          ]
+        },
+        {
+          "filename": "1sa3kings.png",
+          "url": "https://www.preceptaustin.org/files/images/1sa3kings.png",
+          "score": 2,
+          "chapters": [
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"
+          ]
+        },
+        {
+          "filename": "1samain.png",
+          "url": "https://www.preceptaustin.org/files/images/1samain.png",
+          "score": 2,
+          "chapters": [
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"
+          ]
+        },
+        {
+          "filename": "greave.png",
+          "url": "https://www.preceptaustin.org/files/images/greave.png",
+          "score": 2,
+          "chapters": [
+            "17"
+          ]
+        },
+        {
+          "filename": "bear.jpg",
+          "url": "https://www.preceptaustin.org/files/images/bear.jpg",
+          "score": 0,
+          "chapters": [
+            "17"
+          ]
+        },
+        {
+          "filename": "davidlion.jpg",
+          "url": "https://www.preceptaustin.org/files/images/davidlion.jpg",
+          "score": 0,
+          "chapters": [
+            "17"
+          ]
+        },
+        {
+          "filename": "giant.jpg",
+          "url": "https://www.preceptaustin.org/files/images/giant.jpg",
+          "score": 0,
+          "chapters": [
+            "17"
+          ]
+        },
+        {
+          "filename": "goliathhead.jpg",
+          "url": "https://www.preceptaustin.org/files/images/goliathhead.jpg",
+          "score": 0,
+          "chapters": [
+            "17"
+          ]
+        },
+        {
+          "filename": "sling.jpg",
+          "url": "https://www.preceptaustin.org/files/images/sling.jpg",
+          "score": 0,
+          "chapters": [
+            "17"
+          ]
+        },
+        {
+          "filename": "terebinth.jpg",
+          "url": "https://www.preceptaustin.org/files/images/terebinth.jpg",
+          "score": 0,
+          "chapters": [
+            "17"
+          ]
+        },
+        {
+          "filename": "valleyelah.jpg",
+          "url": "https://www.preceptaustin.org/files/images/valleyelah.jpg",
+          "score": 0,
+          "chapters": [
+            "17"
+          ]
+        },
+        {
+          "filename": "weavers.jpg",
+          "url": "https://www.preceptaustin.org/files/images/weavers.jpg",
+          "score": 0,
+          "chapters": [
+            "17"
           ]
         }
       ],
@@ -4077,130 +4114,63 @@
           ]
         }
       ],
-      "17": [
+      "24": [
         {
-          "filename": "goliathmap.jpg",
-          "url": "https://www.preceptaustin.org/files/images/goliathmap.jpg",
-          "score": 10,
+          "filename": "davidcuts.jpg",
+          "url": "https://www.preceptaustin.org/files/images/davidcuts.jpg",
+          "score": 0,
           "chapters": [
-            "17"
+            "24"
           ]
         },
         {
-          "filename": "1sa3.png",
-          "url": "https://www.preceptaustin.org/files/images/1sa3.png",
-          "score": 2,
+          "filename": "davidflee.jpg",
+          "url": "https://www.preceptaustin.org/files/images/davidflee.jpg",
+          "score": 0,
           "chapters": [
-            "16",
-            "17",
-            "18",
             "19",
             "20",
             "21",
             "22",
-            "23"
+            "23",
+            "24",
+            "25",
+            "26",
+            "28",
+            "30",
+            "31"
           ]
         },
         {
-          "filename": "1sa3kings.png",
-          "url": "https://www.preceptaustin.org/files/images/1sa3kings.png",
-          "score": 2,
+          "filename": "davidflees.jpg",
+          "url": "https://www.preceptaustin.org/files/images/davidflees.jpg",
+          "score": 0,
           "chapters": [
-            "16",
-            "17",
-            "18",
             "19",
             "20",
             "21",
             "22",
-            "23"
+            "23",
+            "24",
+            "25",
+            "26"
           ]
         },
         {
-          "filename": "1samain.png",
-          "url": "https://www.preceptaustin.org/files/images/1samain.png",
-          "score": 2,
-          "chapters": [
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23"
-          ]
-        },
-        {
-          "filename": "greave.png",
-          "url": "https://www.preceptaustin.org/files/images/greave.png",
-          "score": 2,
-          "chapters": [
-            "17"
-          ]
-        },
-        {
-          "filename": "bear.jpg",
-          "url": "https://www.preceptaustin.org/files/images/bear.jpg",
+          "filename": "engedidavidfalls.jpg",
+          "url": "https://www.preceptaustin.org/files/images/engedidavidfalls.jpg",
           "score": 0,
           "chapters": [
-            "17"
+            "23",
+            "24"
           ]
         },
         {
-          "filename": "davidlion.jpg",
-          "url": "https://www.preceptaustin.org/files/images/davidlion.jpg",
+          "filename": "wildgoat1.jpg",
+          "url": "https://www.preceptaustin.org/files/images/wildgoat1.jpg",
           "score": 0,
           "chapters": [
-            "17"
-          ]
-        },
-        {
-          "filename": "giant.jpg",
-          "url": "https://www.preceptaustin.org/files/images/giant.jpg",
-          "score": 0,
-          "chapters": [
-            "17"
-          ]
-        },
-        {
-          "filename": "goliathhead.jpg",
-          "url": "https://www.preceptaustin.org/files/images/goliathhead.jpg",
-          "score": 0,
-          "chapters": [
-            "17"
-          ]
-        },
-        {
-          "filename": "sling.jpg",
-          "url": "https://www.preceptaustin.org/files/images/sling.jpg",
-          "score": 0,
-          "chapters": [
-            "17"
-          ]
-        },
-        {
-          "filename": "terebinth.jpg",
-          "url": "https://www.preceptaustin.org/files/images/terebinth.jpg",
-          "score": 0,
-          "chapters": [
-            "17"
-          ]
-        },
-        {
-          "filename": "valleyelah.jpg",
-          "url": "https://www.preceptaustin.org/files/images/valleyelah.jpg",
-          "score": 0,
-          "chapters": [
-            "17"
-          ]
-        },
-        {
-          "filename": "weavers.jpg",
-          "url": "https://www.preceptaustin.org/files/images/weavers.jpg",
-          "score": 0,
-          "chapters": [
-            "17"
+            "24"
           ]
         }
       ],
@@ -4327,66 +4297,6 @@
           "score": 0,
           "chapters": [
             "25"
-          ]
-        }
-      ],
-      "24": [
-        {
-          "filename": "davidcuts.jpg",
-          "url": "https://www.preceptaustin.org/files/images/davidcuts.jpg",
-          "score": 0,
-          "chapters": [
-            "24"
-          ]
-        },
-        {
-          "filename": "davidflee.jpg",
-          "url": "https://www.preceptaustin.org/files/images/davidflee.jpg",
-          "score": 0,
-          "chapters": [
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "28",
-            "30",
-            "31"
-          ]
-        },
-        {
-          "filename": "davidflees.jpg",
-          "url": "https://www.preceptaustin.org/files/images/davidflees.jpg",
-          "score": 0,
-          "chapters": [
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26"
-          ]
-        },
-        {
-          "filename": "engedidavidfalls.jpg",
-          "url": "https://www.preceptaustin.org/files/images/engedidavidfalls.jpg",
-          "score": 0,
-          "chapters": [
-            "23",
-            "24"
-          ]
-        },
-        {
-          "filename": "wildgoat1.jpg",
-          "url": "https://www.preceptaustin.org/files/images/wildgoat1.jpg",
-          "score": 0,
-          "chapters": [
-            "24"
           ]
         }
       ],
@@ -5241,63 +5151,6 @@
           ]
         }
       ],
-      "25": [
-        {
-          "filename": "kingsallchart.jpg",
-          "url": "https://www.preceptaustin.org/files/images/kingsallchart.jpg",
-          "score": 10,
-          "chapters": [
-            "25",
-            "28",
-            "33"
-          ]
-        },
-        {
-          "filename": "samsonmap1.jpg",
-          "url": "https://www.preceptaustin.org/files/images/samsonmap1.jpg",
-          "score": 10,
-          "chapters": [
-            "25"
-          ]
-        },
-        {
-          "filename": "amaziah.png",
-          "url": "https://www.preceptaustin.org/files/images/amaziah.png",
-          "score": 2,
-          "chapters": [
-            "25"
-          ]
-        },
-        {
-          "filename": "napthali.png",
-          "url": "https://www.preceptaustin.org/files/images/napthali.png",
-          "score": 2,
-          "chapters": [
-            "16",
-            "17",
-            "25",
-            "26",
-            "30"
-          ]
-        },
-        {
-          "filename": "2chrtime.jpg",
-          "url": "https://www.preceptaustin.org/files/images/2chrtime.jpg",
-          "score": 0,
-          "chapters": [
-            "25"
-          ]
-        },
-        {
-          "filename": "cornergate.jpg",
-          "url": "https://www.preceptaustin.org/files/images/cornergate.jpg",
-          "score": 0,
-          "chapters": [
-            "25",
-            "26"
-          ]
-        }
-      ],
       "30": [
         {
           "filename": "2ch3013.png",
@@ -5366,6 +5219,63 @@
             "25",
             "26",
             "30"
+          ]
+        }
+      ],
+      "25": [
+        {
+          "filename": "kingsallchart.jpg",
+          "url": "https://www.preceptaustin.org/files/images/kingsallchart.jpg",
+          "score": 10,
+          "chapters": [
+            "25",
+            "28",
+            "33"
+          ]
+        },
+        {
+          "filename": "samsonmap1.jpg",
+          "url": "https://www.preceptaustin.org/files/images/samsonmap1.jpg",
+          "score": 10,
+          "chapters": [
+            "25"
+          ]
+        },
+        {
+          "filename": "amaziah.png",
+          "url": "https://www.preceptaustin.org/files/images/amaziah.png",
+          "score": 2,
+          "chapters": [
+            "25"
+          ]
+        },
+        {
+          "filename": "napthali.png",
+          "url": "https://www.preceptaustin.org/files/images/napthali.png",
+          "score": 2,
+          "chapters": [
+            "16",
+            "17",
+            "25",
+            "26",
+            "30"
+          ]
+        },
+        {
+          "filename": "2chrtime.jpg",
+          "url": "https://www.preceptaustin.org/files/images/2chrtime.jpg",
+          "score": 0,
+          "chapters": [
+            "25"
+          ]
+        },
+        {
+          "filename": "cornergate.jpg",
+          "url": "https://www.preceptaustin.org/files/images/cornergate.jpg",
+          "score": 0,
+          "chapters": [
+            "25",
+            "26"
           ]
         }
       ],
@@ -5728,6 +5638,60 @@
           ]
         }
       ],
+      "33": [
+        {
+          "filename": "jothamopheldiagram.png",
+          "url": "https://www.preceptaustin.org/files/images/jothamopheldiagram.png",
+          "score": 12,
+          "chapters": [
+            "27",
+            "33"
+          ]
+        },
+        {
+          "filename": "kingsallchart.jpg",
+          "url": "https://www.preceptaustin.org/files/images/kingsallchart.jpg",
+          "score": 10,
+          "chapters": [
+            "25",
+            "28",
+            "33"
+          ]
+        },
+        {
+          "filename": "hoshea171.png",
+          "url": "https://www.preceptaustin.org/files/images/hoshea171.png",
+          "score": 2,
+          "chapters": [
+            "33"
+          ]
+        },
+        {
+          "filename": "courts.jpg",
+          "url": "https://www.preceptaustin.org/files/images/courts.jpg",
+          "score": 0,
+          "chapters": [
+            "33"
+          ]
+        },
+        {
+          "filename": "greentree.webp",
+          "url": "https://www.preceptaustin.org/files/images/greentree.webp",
+          "score": 0,
+          "chapters": [
+            "33"
+          ]
+        },
+        {
+          "filename": "jothamophel.jpg",
+          "url": "https://www.preceptaustin.org/files/images/jothamophel.jpg",
+          "score": 0,
+          "chapters": [
+            "27",
+            "33"
+          ]
+        }
+      ],
       "28": [
         {
           "filename": "kingsallchart.jpg",
@@ -5908,60 +5872,6 @@
           ]
         }
       ],
-      "33": [
-        {
-          "filename": "jothamopheldiagram.png",
-          "url": "https://www.preceptaustin.org/files/images/jothamopheldiagram.png",
-          "score": 12,
-          "chapters": [
-            "27",
-            "33"
-          ]
-        },
-        {
-          "filename": "kingsallchart.jpg",
-          "url": "https://www.preceptaustin.org/files/images/kingsallchart.jpg",
-          "score": 10,
-          "chapters": [
-            "25",
-            "28",
-            "33"
-          ]
-        },
-        {
-          "filename": "hoshea171.png",
-          "url": "https://www.preceptaustin.org/files/images/hoshea171.png",
-          "score": 2,
-          "chapters": [
-            "33"
-          ]
-        },
-        {
-          "filename": "courts.jpg",
-          "url": "https://www.preceptaustin.org/files/images/courts.jpg",
-          "score": 0,
-          "chapters": [
-            "33"
-          ]
-        },
-        {
-          "filename": "greentree.webp",
-          "url": "https://www.preceptaustin.org/files/images/greentree.webp",
-          "score": 0,
-          "chapters": [
-            "33"
-          ]
-        },
-        {
-          "filename": "jothamophel.jpg",
-          "url": "https://www.preceptaustin.org/files/images/jothamophel.jpg",
-          "score": 0,
-          "chapters": [
-            "27",
-            "33"
-          ]
-        }
-      ],
       "27": [
         {
           "filename": "jothamopheldiagram.png",
@@ -6044,6 +5954,88 @@
           "chapters": [
             "27",
             "33"
+          ]
+        }
+      ],
+      "31": [
+        {
+          "filename": "jerusalemnehemiah1.png",
+          "url": "https://www.preceptaustin.org/files/images/jerusalemnehemiah1.png",
+          "score": 2,
+          "chapters": [
+            "31"
+          ]
+        },
+        {
+          "filename": "jerusalemhezekiah.jpg",
+          "url": "https://www.preceptaustin.org/files/images/jerusalemhezekiah.jpg",
+          "score": 0,
+          "chapters": [
+            "29",
+            "30",
+            "31",
+            "32"
+          ]
+        },
+        {
+          "filename": "leviticalcities.jpg",
+          "url": "https://www.preceptaustin.org/files/images/leviticalcities.jpg",
+          "score": 0,
+          "chapters": [
+            "31"
+          ]
+        }
+      ],
+      "32": [
+        {
+          "filename": "hezekiahstunnel1.png",
+          "url": "https://www.preceptaustin.org/files/images/hezekiahstunnel1.png",
+          "score": 2,
+          "chapters": [
+            "32"
+          ]
+        },
+        {
+          "filename": "hezekiahstunnelmark.png",
+          "url": "https://www.preceptaustin.org/files/images/hezekiahstunnelmark.png",
+          "score": 2,
+          "chapters": [
+            "32"
+          ]
+        },
+        {
+          "filename": "jerusalemhezekiah.jpg",
+          "url": "https://www.preceptaustin.org/files/images/jerusalemhezekiah.jpg",
+          "score": 0,
+          "chapters": [
+            "29",
+            "30",
+            "31",
+            "32"
+          ]
+        },
+        {
+          "filename": "lachishattack.jpg",
+          "url": "https://www.preceptaustin.org/files/images/lachishattack.jpg",
+          "score": 0,
+          "chapters": [
+            "32"
+          ]
+        },
+        {
+          "filename": "lachishflay.jpg",
+          "url": "https://www.preceptaustin.org/files/images/lachishflay.jpg",
+          "score": 0,
+          "chapters": [
+            "32"
+          ]
+        },
+        {
+          "filename": "sennaprism.jpg",
+          "url": "https://www.preceptaustin.org/files/images/sennaprism.jpg",
+          "score": 0,
+          "chapters": [
+            "32"
           ]
         }
       ],
@@ -6152,88 +6144,6 @@
             "29",
             "30",
             "31",
-            "32"
-          ]
-        }
-      ],
-      "31": [
-        {
-          "filename": "jerusalemnehemiah1.png",
-          "url": "https://www.preceptaustin.org/files/images/jerusalemnehemiah1.png",
-          "score": 2,
-          "chapters": [
-            "31"
-          ]
-        },
-        {
-          "filename": "jerusalemhezekiah.jpg",
-          "url": "https://www.preceptaustin.org/files/images/jerusalemhezekiah.jpg",
-          "score": 0,
-          "chapters": [
-            "29",
-            "30",
-            "31",
-            "32"
-          ]
-        },
-        {
-          "filename": "leviticalcities.jpg",
-          "url": "https://www.preceptaustin.org/files/images/leviticalcities.jpg",
-          "score": 0,
-          "chapters": [
-            "31"
-          ]
-        }
-      ],
-      "32": [
-        {
-          "filename": "hezekiahstunnel1.png",
-          "url": "https://www.preceptaustin.org/files/images/hezekiahstunnel1.png",
-          "score": 2,
-          "chapters": [
-            "32"
-          ]
-        },
-        {
-          "filename": "hezekiahstunnelmark.png",
-          "url": "https://www.preceptaustin.org/files/images/hezekiahstunnelmark.png",
-          "score": 2,
-          "chapters": [
-            "32"
-          ]
-        },
-        {
-          "filename": "jerusalemhezekiah.jpg",
-          "url": "https://www.preceptaustin.org/files/images/jerusalemhezekiah.jpg",
-          "score": 0,
-          "chapters": [
-            "29",
-            "30",
-            "31",
-            "32"
-          ]
-        },
-        {
-          "filename": "lachishattack.jpg",
-          "url": "https://www.preceptaustin.org/files/images/lachishattack.jpg",
-          "score": 0,
-          "chapters": [
-            "32"
-          ]
-        },
-        {
-          "filename": "lachishflay.jpg",
-          "url": "https://www.preceptaustin.org/files/images/lachishflay.jpg",
-          "score": 0,
-          "chapters": [
-            "32"
-          ]
-        },
-        {
-          "filename": "sennaprism.jpg",
-          "url": "https://www.preceptaustin.org/files/images/sennaprism.jpg",
-          "score": 0,
-          "chapters": [
             "32"
           ]
         }
@@ -6376,6 +6286,46 @@
       }
     ],
     "per_chapter": {
+      "1": [
+        {
+          "filename": "3missionaryjourney.gif",
+          "url": "https://www.preceptaustin.org/files/images/3missionaryjourney.gif",
+          "score": 0,
+          "chapters": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "filename": "acrocorinth.jpg",
+          "url": "https://www.preceptaustin.org/files/images/acrocorinth.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "8",
+            "9"
+          ]
+        },
+        {
+          "filename": "corinth.jpg",
+          "url": "https://www.preceptaustin.org/files/images/corinth.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "8",
+            "9"
+          ]
+        },
+        {
+          "filename": "letter.jpg",
+          "url": "https://www.preceptaustin.org/files/images/letter.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "9"
+          ]
+        }
+      ],
       "8": [
         {
           "filename": "equil.png",
@@ -6441,46 +6391,6 @@
           "url": "https://www.preceptaustin.org/files/images/giving.jpg",
           "score": 0,
           "chapters": [
-            "8",
-            "9"
-          ]
-        },
-        {
-          "filename": "letter.jpg",
-          "url": "https://www.preceptaustin.org/files/images/letter.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "9"
-          ]
-        }
-      ],
-      "1": [
-        {
-          "filename": "3missionaryjourney.gif",
-          "url": "https://www.preceptaustin.org/files/images/3missionaryjourney.gif",
-          "score": 0,
-          "chapters": [
-            "1",
-            "2"
-          ]
-        },
-        {
-          "filename": "acrocorinth.jpg",
-          "url": "https://www.preceptaustin.org/files/images/acrocorinth.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "8",
-            "9"
-          ]
-        },
-        {
-          "filename": "corinth.jpg",
-          "url": "https://www.preceptaustin.org/files/images/corinth.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
             "8",
             "9"
           ]
@@ -6762,6 +6672,120 @@
       }
     ],
     "per_chapter": {
+      "23": [
+        {
+          "filename": "2kingsmap.jpg",
+          "url": "https://www.preceptaustin.org/files/images/2kingsmap.jpg",
+          "score": 10,
+          "chapters": [
+            "1",
+            "2",
+            "4",
+            "14",
+            "23"
+          ]
+        },
+        {
+          "filename": "highplaces.png",
+          "url": "https://www.preceptaustin.org/files/images/highplaces.png",
+          "score": 2,
+          "chapters": [
+            "12",
+            "14",
+            "15",
+            "17",
+            "23"
+          ]
+        }
+      ],
+      "2": [
+        {
+          "filename": "2kingsmap.jpg",
+          "url": "https://www.preceptaustin.org/files/images/2kingsmap.jpg",
+          "score": 10,
+          "chapters": [
+            "1",
+            "2",
+            "4",
+            "14",
+            "23"
+          ]
+        },
+        {
+          "filename": "kingschart.jpg",
+          "url": "https://www.preceptaustin.org/files/images/kingschart.jpg",
+          "score": 10,
+          "chapters": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"
+          ]
+        },
+        {
+          "filename": "elijahelisha.png",
+          "url": "https://www.preceptaustin.org/files/images/elijahelisha.png",
+          "score": 2,
+          "chapters": [
+            "2"
+          ]
+        },
+        {
+          "filename": "elijahparts.png",
+          "url": "https://www.preceptaustin.org/files/images/elijahparts.png",
+          "score": 2,
+          "chapters": [
+            "2"
+          ]
+        },
+        {
+          "filename": "elishabears.png",
+          "url": "https://www.preceptaustin.org/files/images/elishabears.png",
+          "score": 2,
+          "chapters": [
+            "2"
+          ]
+        },
+        {
+          "filename": "elishajericho.png",
+          "url": "https://www.preceptaustin.org/files/images/elishajericho.png",
+          "score": 2,
+          "chapters": [
+            "2"
+          ]
+        },
+        {
+          "filename": "elishastrikes.png",
+          "url": "https://www.preceptaustin.org/files/images/elishastrikes.png",
+          "score": 2,
+          "chapters": [
+            "2"
+          ]
+        },
+        {
+          "filename": "elijahministry.jpg",
+          "url": "https://www.preceptaustin.org/files/images/elijahministry.jpg",
+          "score": 0,
+          "chapters": [
+            "2"
+          ]
+        },
+        {
+          "filename": "elisha.jpg",
+          "url": "https://www.preceptaustin.org/files/images/elisha.jpg",
+          "score": 0,
+          "chapters": [
+            "2"
+          ]
+        }
+      ],
       "14": [
         {
           "filename": "2kingsmap.jpg",
@@ -6882,120 +6906,6 @@
           ]
         }
       ],
-      "2": [
-        {
-          "filename": "2kingsmap.jpg",
-          "url": "https://www.preceptaustin.org/files/images/2kingsmap.jpg",
-          "score": 10,
-          "chapters": [
-            "1",
-            "2",
-            "4",
-            "14",
-            "23"
-          ]
-        },
-        {
-          "filename": "kingschart.jpg",
-          "url": "https://www.preceptaustin.org/files/images/kingschart.jpg",
-          "score": 10,
-          "chapters": [
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"
-          ]
-        },
-        {
-          "filename": "elijahelisha.png",
-          "url": "https://www.preceptaustin.org/files/images/elijahelisha.png",
-          "score": 2,
-          "chapters": [
-            "2"
-          ]
-        },
-        {
-          "filename": "elijahparts.png",
-          "url": "https://www.preceptaustin.org/files/images/elijahparts.png",
-          "score": 2,
-          "chapters": [
-            "2"
-          ]
-        },
-        {
-          "filename": "elishabears.png",
-          "url": "https://www.preceptaustin.org/files/images/elishabears.png",
-          "score": 2,
-          "chapters": [
-            "2"
-          ]
-        },
-        {
-          "filename": "elishajericho.png",
-          "url": "https://www.preceptaustin.org/files/images/elishajericho.png",
-          "score": 2,
-          "chapters": [
-            "2"
-          ]
-        },
-        {
-          "filename": "elishastrikes.png",
-          "url": "https://www.preceptaustin.org/files/images/elishastrikes.png",
-          "score": 2,
-          "chapters": [
-            "2"
-          ]
-        },
-        {
-          "filename": "elijahministry.jpg",
-          "url": "https://www.preceptaustin.org/files/images/elijahministry.jpg",
-          "score": 0,
-          "chapters": [
-            "2"
-          ]
-        },
-        {
-          "filename": "elisha.jpg",
-          "url": "https://www.preceptaustin.org/files/images/elisha.jpg",
-          "score": 0,
-          "chapters": [
-            "2"
-          ]
-        }
-      ],
-      "23": [
-        {
-          "filename": "2kingsmap.jpg",
-          "url": "https://www.preceptaustin.org/files/images/2kingsmap.jpg",
-          "score": 10,
-          "chapters": [
-            "1",
-            "2",
-            "4",
-            "14",
-            "23"
-          ]
-        },
-        {
-          "filename": "highplaces.png",
-          "url": "https://www.preceptaustin.org/files/images/highplaces.png",
-          "score": 2,
-          "chapters": [
-            "12",
-            "14",
-            "15",
-            "17",
-            "23"
-          ]
-        }
-      ],
       "4": [
         {
           "filename": "2kingsmap.jpg",
@@ -7085,315 +6995,7 @@
           ]
         }
       ],
-      "9": [
-        {
-          "filename": "kingschart.jpg",
-          "url": "https://www.preceptaustin.org/files/images/kingschart.jpg",
-          "score": 10,
-          "chapters": [
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"
-          ]
-        },
-        {
-          "filename": "elishaservant.png",
-          "url": "https://www.preceptaustin.org/files/images/elishaservant.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehoram.png",
-          "url": "https://www.preceptaustin.org/files/images/jehoram.png",
-          "score": 2,
-          "chapters": [
-            "3",
-            "9"
-          ]
-        },
-        {
-          "filename": "jehuahaziahburial.png",
-          "url": "https://www.preceptaustin.org/files/images/jehuahaziahburial.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehuanoint.png",
-          "url": "https://www.preceptaustin.org/files/images/jehuanoint.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehuapproaching.png",
-          "url": "https://www.preceptaustin.org/files/images/jehuapproaching.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehuavenge.png",
-          "url": "https://www.preceptaustin.org/files/images/jehuavenge.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehucastbody.png",
-          "url": "https://www.preceptaustin.org/files/images/jehucastbody.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehuchosen.png",
-          "url": "https://www.preceptaustin.org/files/images/jehuchosen.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehugird.png",
-          "url": "https://www.preceptaustin.org/files/images/jehugird.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehujezservants.png",
-          "url": "https://www.preceptaustin.org/files/images/jehujezservants.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehukillsahaziah.png",
-          "url": "https://www.preceptaustin.org/files/images/jehukillsahaziah.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehuking.png",
-          "url": "https://www.preceptaustin.org/files/images/jehuking.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehumeetsjoram.png",
-          "url": "https://www.preceptaustin.org/files/images/jehumeetsjoram.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehushootsjoram.png",
-          "url": "https://www.preceptaustin.org/files/images/jehushootsjoram.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jezebelwindow.png",
-          "url": "https://www.preceptaustin.org/files/images/jezebelwindow.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "joramflees.png",
-          "url": "https://www.preceptaustin.org/files/images/joramflees.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "ramoth-gilead2.png",
-          "url": "https://www.preceptaustin.org/files/images/ramoth-gilead2.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "baal.jpg",
-          "url": "https://www.preceptaustin.org/files/images/baal.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jehu.jpg",
-          "url": "https://www.preceptaustin.org/files/images/jehu.jpg",
-          "score": 0,
-          "chapters": [
-            "9",
-            "10"
-          ]
-        },
-        {
-          "filename": "jehuexecutes.jpg",
-          "url": "https://www.preceptaustin.org/files/images/jehuexecutes.jpg",
-          "score": 0,
-          "chapters": [
-            "9",
-            "10"
-          ]
-        },
-        {
-          "filename": "jezdogs.jpg",
-          "url": "https://www.preceptaustin.org/files/images/jezdogs.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jezebeldogs.jpg",
-          "url": "https://www.preceptaustin.org/files/images/jezebeldogs.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jezebeldore.jpg",
-          "url": "https://www.preceptaustin.org/files/images/jezebeldore.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "jezebelseal.jpg",
-          "url": "https://www.preceptaustin.org/files/images/jezebelseal.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        }
-      ],
-      "3": [
-        {
-          "filename": "dividedkingdom.jpg",
-          "url": "https://www.preceptaustin.org/files/images/dividedkingdom.jpg",
-          "score": 10,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "kingschart.jpg",
-          "url": "https://www.preceptaustin.org/files/images/kingschart.jpg",
-          "score": 10,
-          "chapters": [
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"
-          ]
-        },
-        {
-          "filename": "jehoram.png",
-          "url": "https://www.preceptaustin.org/files/images/jehoram.png",
-          "score": 2,
-          "chapters": [
-            "3",
-            "9"
-          ]
-        },
-        {
-          "filename": "meshaking.png",
-          "url": "https://www.preceptaustin.org/files/images/meshaking.png",
-          "score": 2,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "dividedheart.jpeg",
-          "url": "https://www.preceptaustin.org/files/images/dividedheart.jpeg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "moabbattle.jpg",
-          "url": "https://www.preceptaustin.org/files/images/moabbattle.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "moabblood.jpeg",
-          "url": "https://www.preceptaustin.org/files/images/moabblood.jpeg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "moabitestone.jpg",
-          "url": "https://www.preceptaustin.org/files/images/moabitestone.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "moablood1.jpeg",
-          "url": "https://www.preceptaustin.org/files/images/moablood1.jpeg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "stele.jpg",
-          "url": "https://www.preceptaustin.org/files/images/stele.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        }
-      ],
-      "12": [
+      "11": [
         {
           "filename": "joashchart.png",
           "url": "https://www.preceptaustin.org/files/images/joashchart.png",
@@ -7422,39 +7024,51 @@
           ]
         },
         {
-          "filename": "245.png",
-          "url": "https://www.preceptaustin.org/files/images/245.png",
+          "filename": "athaliah.png",
+          "url": "https://www.preceptaustin.org/files/images/athaliah.png",
           "score": 2,
           "chapters": [
-            "12"
+            "11"
           ]
         },
         {
-          "filename": "2king127.png",
-          "url": "https://www.preceptaustin.org/files/images/2king127.png",
+          "filename": "athaliahjoash.png",
+          "url": "https://www.preceptaustin.org/files/images/athaliahjoash.png",
           "score": 2,
           "chapters": [
-            "12"
+            "11"
           ]
         },
         {
-          "filename": "2kings122.png",
-          "url": "https://www.preceptaustin.org/files/images/2kings122.png",
+          "filename": "joashbaal.png",
+          "url": "https://www.preceptaustin.org/files/images/joashbaal.png",
           "score": 2,
           "chapters": [
-            "12"
+            "11"
           ]
         },
         {
-          "filename": "highplaces.png",
-          "url": "https://www.preceptaustin.org/files/images/highplaces.png",
+          "filename": "joashcaptains.png",
+          "url": "https://www.preceptaustin.org/files/images/joashcaptains.png",
           "score": 2,
           "chapters": [
-            "12",
-            "14",
-            "15",
-            "17",
-            "23"
+            "11"
+          ]
+        },
+        {
+          "filename": "joashcovenant.png",
+          "url": "https://www.preceptaustin.org/files/images/joashcovenant.png",
+          "score": 2,
+          "chapters": [
+            "11"
+          ]
+        },
+        {
+          "filename": "joashdavid.png",
+          "url": "https://www.preceptaustin.org/files/images/joashdavid.png",
+          "score": 2,
+          "chapters": [
+            "11"
           ]
         },
         {
@@ -7467,178 +7081,75 @@
           ]
         },
         {
-          "filename": "israelaram.jpg",
-          "url": "https://www.preceptaustin.org/files/images/israelaram.jpg",
-          "score": 0,
-          "chapters": [
-            "10",
-            "12"
-          ]
-        }
-      ],
-      "5": [
-        {
-          "filename": "kingschart.jpg",
-          "url": "https://www.preceptaustin.org/files/images/kingschart.jpg",
-          "score": 10,
-          "chapters": [
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"
-          ]
-        },
-        {
-          "filename": "aramsyria.png",
-          "url": "https://www.preceptaustin.org/files/images/aramsyria.png",
+          "filename": "joashhidden.png",
+          "url": "https://www.preceptaustin.org/files/images/joashhidden.png",
           "score": 2,
           "chapters": [
-            "5",
-            "6",
-            "8",
-            "13"
+            "11"
           ]
         },
         {
-          "filename": "elishagehazi.png",
-          "url": "https://www.preceptaustin.org/files/images/elishagehazi.png",
+          "filename": "joashkilled.png",
+          "url": "https://www.preceptaustin.org/files/images/joashkilled.png",
           "score": 2,
           "chapters": [
-            "5"
+            "11"
           ]
         },
         {
-          "filename": "elishamsg.png",
-          "url": "https://www.preceptaustin.org/files/images/elishamsg.png",
+          "filename": "joashking.png",
+          "url": "https://www.preceptaustin.org/files/images/joashking.png",
           "score": 2,
           "chapters": [
-            "5"
+            "11"
           ]
         },
         {
-          "filename": "elishawhite.png",
-          "url": "https://www.preceptaustin.org/files/images/elishawhite.png",
+          "filename": "joashqueen.png",
+          "url": "https://www.preceptaustin.org/files/images/joashqueen.png",
           "score": 2,
           "chapters": [
-            "5"
+            "11"
           ]
         },
         {
-          "filename": "gehaziruns.png",
-          "url": "https://www.preceptaustin.org/files/images/gehaziruns.png",
+          "filename": "joashrejoiced.png",
+          "url": "https://www.preceptaustin.org/files/images/joashrejoiced.png",
           "score": 2,
           "chapters": [
-            "5"
+            "11"
           ]
         },
         {
-          "filename": "jehoramrend.png",
-          "url": "https://www.preceptaustin.org/files/images/jehoramrend.png",
+          "filename": "joashsentenced.png",
+          "url": "https://www.preceptaustin.org/files/images/joashsentenced.png",
           "score": 2,
           "chapters": [
-            "5",
-            "6"
+            "11"
           ]
         },
         {
-          "filename": "naamandips.png",
-          "url": "https://www.preceptaustin.org/files/images/naamandips.png",
+          "filename": "joashthrone.png",
+          "url": "https://www.preceptaustin.org/files/images/joashthrone.png",
           "score": 2,
           "chapters": [
-            "5"
+            "11"
           ]
         },
         {
-          "filename": "naamangirl.png",
-          "url": "https://www.preceptaustin.org/files/images/naamangirl.png",
+          "filename": "joashtosoldiers.png",
+          "url": "https://www.preceptaustin.org/files/images/joashtosoldiers.png",
           "score": 2,
           "chapters": [
-            "5"
+            "11"
           ]
         },
         {
-          "filename": "naamanjordan.png",
-          "url": "https://www.preceptaustin.org/files/images/naamanjordan.png",
+          "filename": "joashtreason.png",
+          "url": "https://www.preceptaustin.org/files/images/joashtreason.png",
           "score": 2,
           "chapters": [
-            "5",
-            "6",
-            "7"
-          ]
-        },
-        {
-          "filename": "naamanking.png",
-          "url": "https://www.preceptaustin.org/files/images/naamanking.png",
-          "score": 2,
-          "chapters": [
-            "5"
-          ]
-        },
-        {
-          "filename": "naamanpauses.png",
-          "url": "https://www.preceptaustin.org/files/images/naamanpauses.png",
-          "score": 2,
-          "chapters": [
-            "5"
-          ]
-        },
-        {
-          "filename": "ahabb.webp",
-          "url": "https://www.preceptaustin.org/files/images/ahabb.webp",
-          "score": 0,
-          "chapters": [
-            "5"
-          ]
-        },
-        {
-          "filename": "aramkings.jpg",
-          "url": "https://www.preceptaustin.org/files/images/aramkings.jpg",
-          "score": 0,
-          "chapters": [
-            "5",
-            "6",
-            "8",
-            "13"
-          ]
-        },
-        {
-          "filename": "fishbait.jpg",
-          "url": "https://www.preceptaustin.org/files/images/fishbait.jpg",
-          "score": 0,
-          "chapters": [
-            "5"
-          ]
-        },
-        {
-          "filename": "naamanheal.jpg",
-          "url": "https://www.preceptaustin.org/files/images/naamanheal.jpg",
-          "score": 0,
-          "chapters": [
-            "5"
-          ]
-        },
-        {
-          "filename": "peace_dove_olive_branch animation.gif",
-          "url": "https://www.preceptaustin.org/files/images/peace_dove_olive_branch%20animation.gif",
-          "score": 0,
-          "chapters": [
-            "4",
-            "5"
-          ]
-        },
-        {
-          "filename": "templeton.gif",
-          "url": "https://www.preceptaustin.org/files/images/templeton.gif",
-          "score": 0,
-          "chapters": [
-            "5"
+            "11"
           ]
         }
       ],
@@ -7836,6 +7347,89 @@
           "score": 0,
           "chapters": [
             "6"
+          ]
+        }
+      ],
+      "12": [
+        {
+          "filename": "joashchart.png",
+          "url": "https://www.preceptaustin.org/files/images/joashchart.png",
+          "score": 12,
+          "chapters": [
+            "11",
+            "12"
+          ]
+        },
+        {
+          "filename": "kingschart.jpg",
+          "url": "https://www.preceptaustin.org/files/images/kingschart.jpg",
+          "score": 10,
+          "chapters": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"
+          ]
+        },
+        {
+          "filename": "245.png",
+          "url": "https://www.preceptaustin.org/files/images/245.png",
+          "score": 2,
+          "chapters": [
+            "12"
+          ]
+        },
+        {
+          "filename": "2king127.png",
+          "url": "https://www.preceptaustin.org/files/images/2king127.png",
+          "score": 2,
+          "chapters": [
+            "12"
+          ]
+        },
+        {
+          "filename": "2kings122.png",
+          "url": "https://www.preceptaustin.org/files/images/2kings122.png",
+          "score": 2,
+          "chapters": [
+            "12"
+          ]
+        },
+        {
+          "filename": "highplaces.png",
+          "url": "https://www.preceptaustin.org/files/images/highplaces.png",
+          "score": 2,
+          "chapters": [
+            "12",
+            "14",
+            "15",
+            "17",
+            "23"
+          ]
+        },
+        {
+          "filename": "joashfamilytree.png",
+          "url": "https://www.preceptaustin.org/files/images/joashfamilytree.png",
+          "score": 2,
+          "chapters": [
+            "11",
+            "12"
+          ]
+        },
+        {
+          "filename": "israelaram.jpg",
+          "url": "https://www.preceptaustin.org/files/images/israelaram.jpg",
+          "score": 0,
+          "chapters": [
+            "10",
+            "12"
           ]
         }
       ],
@@ -8247,6 +7841,314 @@
           ]
         }
       ],
+      "3": [
+        {
+          "filename": "dividedkingdom.jpg",
+          "url": "https://www.preceptaustin.org/files/images/dividedkingdom.jpg",
+          "score": 10,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "kingschart.jpg",
+          "url": "https://www.preceptaustin.org/files/images/kingschart.jpg",
+          "score": 10,
+          "chapters": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"
+          ]
+        },
+        {
+          "filename": "jehoram.png",
+          "url": "https://www.preceptaustin.org/files/images/jehoram.png",
+          "score": 2,
+          "chapters": [
+            "3",
+            "9"
+          ]
+        },
+        {
+          "filename": "meshaking.png",
+          "url": "https://www.preceptaustin.org/files/images/meshaking.png",
+          "score": 2,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "dividedheart.jpeg",
+          "url": "https://www.preceptaustin.org/files/images/dividedheart.jpeg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "moabbattle.jpg",
+          "url": "https://www.preceptaustin.org/files/images/moabbattle.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "moabblood.jpeg",
+          "url": "https://www.preceptaustin.org/files/images/moabblood.jpeg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "moabitestone.jpg",
+          "url": "https://www.preceptaustin.org/files/images/moabitestone.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "moablood1.jpeg",
+          "url": "https://www.preceptaustin.org/files/images/moablood1.jpeg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "stele.jpg",
+          "url": "https://www.preceptaustin.org/files/images/stele.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        }
+      ],
+      "9": [
+        {
+          "filename": "kingschart.jpg",
+          "url": "https://www.preceptaustin.org/files/images/kingschart.jpg",
+          "score": 10,
+          "chapters": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"
+          ]
+        },
+        {
+          "filename": "elishaservant.png",
+          "url": "https://www.preceptaustin.org/files/images/elishaservant.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehoram.png",
+          "url": "https://www.preceptaustin.org/files/images/jehoram.png",
+          "score": 2,
+          "chapters": [
+            "3",
+            "9"
+          ]
+        },
+        {
+          "filename": "jehuahaziahburial.png",
+          "url": "https://www.preceptaustin.org/files/images/jehuahaziahburial.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehuanoint.png",
+          "url": "https://www.preceptaustin.org/files/images/jehuanoint.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehuapproaching.png",
+          "url": "https://www.preceptaustin.org/files/images/jehuapproaching.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehuavenge.png",
+          "url": "https://www.preceptaustin.org/files/images/jehuavenge.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehucastbody.png",
+          "url": "https://www.preceptaustin.org/files/images/jehucastbody.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehuchosen.png",
+          "url": "https://www.preceptaustin.org/files/images/jehuchosen.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehugird.png",
+          "url": "https://www.preceptaustin.org/files/images/jehugird.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehujezservants.png",
+          "url": "https://www.preceptaustin.org/files/images/jehujezservants.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehukillsahaziah.png",
+          "url": "https://www.preceptaustin.org/files/images/jehukillsahaziah.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehuking.png",
+          "url": "https://www.preceptaustin.org/files/images/jehuking.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehumeetsjoram.png",
+          "url": "https://www.preceptaustin.org/files/images/jehumeetsjoram.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehushootsjoram.png",
+          "url": "https://www.preceptaustin.org/files/images/jehushootsjoram.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jezebelwindow.png",
+          "url": "https://www.preceptaustin.org/files/images/jezebelwindow.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "joramflees.png",
+          "url": "https://www.preceptaustin.org/files/images/joramflees.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "ramoth-gilead2.png",
+          "url": "https://www.preceptaustin.org/files/images/ramoth-gilead2.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "baal.jpg",
+          "url": "https://www.preceptaustin.org/files/images/baal.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jehu.jpg",
+          "url": "https://www.preceptaustin.org/files/images/jehu.jpg",
+          "score": 0,
+          "chapters": [
+            "9",
+            "10"
+          ]
+        },
+        {
+          "filename": "jehuexecutes.jpg",
+          "url": "https://www.preceptaustin.org/files/images/jehuexecutes.jpg",
+          "score": 0,
+          "chapters": [
+            "9",
+            "10"
+          ]
+        },
+        {
+          "filename": "jezdogs.jpg",
+          "url": "https://www.preceptaustin.org/files/images/jezdogs.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jezebeldogs.jpg",
+          "url": "https://www.preceptaustin.org/files/images/jezebeldogs.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jezebeldore.jpg",
+          "url": "https://www.preceptaustin.org/files/images/jezebeldore.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "jezebelseal.jpg",
+          "url": "https://www.preceptaustin.org/files/images/jezebelseal.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
+          ]
+        }
+      ],
       "10": [
         {
           "filename": "kingschart.jpg",
@@ -8350,16 +8252,7 @@
           ]
         }
       ],
-      "11": [
-        {
-          "filename": "joashchart.png",
-          "url": "https://www.preceptaustin.org/files/images/joashchart.png",
-          "score": 12,
-          "chapters": [
-            "11",
-            "12"
-          ]
-        },
+      "5": [
         {
           "filename": "kingschart.jpg",
           "url": "https://www.preceptaustin.org/files/images/kingschart.jpg",
@@ -8379,132 +8272,149 @@
           ]
         },
         {
-          "filename": "athaliah.png",
-          "url": "https://www.preceptaustin.org/files/images/athaliah.png",
+          "filename": "aramsyria.png",
+          "url": "https://www.preceptaustin.org/files/images/aramsyria.png",
           "score": 2,
           "chapters": [
-            "11"
+            "5",
+            "6",
+            "8",
+            "13"
           ]
         },
         {
-          "filename": "athaliahjoash.png",
-          "url": "https://www.preceptaustin.org/files/images/athaliahjoash.png",
+          "filename": "elishagehazi.png",
+          "url": "https://www.preceptaustin.org/files/images/elishagehazi.png",
           "score": 2,
           "chapters": [
-            "11"
+            "5"
           ]
         },
         {
-          "filename": "joashbaal.png",
-          "url": "https://www.preceptaustin.org/files/images/joashbaal.png",
+          "filename": "elishamsg.png",
+          "url": "https://www.preceptaustin.org/files/images/elishamsg.png",
           "score": 2,
           "chapters": [
-            "11"
+            "5"
           ]
         },
         {
-          "filename": "joashcaptains.png",
-          "url": "https://www.preceptaustin.org/files/images/joashcaptains.png",
+          "filename": "elishawhite.png",
+          "url": "https://www.preceptaustin.org/files/images/elishawhite.png",
           "score": 2,
           "chapters": [
-            "11"
+            "5"
           ]
         },
         {
-          "filename": "joashcovenant.png",
-          "url": "https://www.preceptaustin.org/files/images/joashcovenant.png",
+          "filename": "gehaziruns.png",
+          "url": "https://www.preceptaustin.org/files/images/gehaziruns.png",
           "score": 2,
           "chapters": [
-            "11"
+            "5"
           ]
         },
         {
-          "filename": "joashdavid.png",
-          "url": "https://www.preceptaustin.org/files/images/joashdavid.png",
+          "filename": "jehoramrend.png",
+          "url": "https://www.preceptaustin.org/files/images/jehoramrend.png",
           "score": 2,
           "chapters": [
-            "11"
+            "5",
+            "6"
           ]
         },
         {
-          "filename": "joashfamilytree.png",
-          "url": "https://www.preceptaustin.org/files/images/joashfamilytree.png",
+          "filename": "naamandips.png",
+          "url": "https://www.preceptaustin.org/files/images/naamandips.png",
           "score": 2,
           "chapters": [
-            "11",
-            "12"
+            "5"
           ]
         },
         {
-          "filename": "joashhidden.png",
-          "url": "https://www.preceptaustin.org/files/images/joashhidden.png",
+          "filename": "naamangirl.png",
+          "url": "https://www.preceptaustin.org/files/images/naamangirl.png",
           "score": 2,
           "chapters": [
-            "11"
+            "5"
           ]
         },
         {
-          "filename": "joashkilled.png",
-          "url": "https://www.preceptaustin.org/files/images/joashkilled.png",
+          "filename": "naamanjordan.png",
+          "url": "https://www.preceptaustin.org/files/images/naamanjordan.png",
           "score": 2,
           "chapters": [
-            "11"
+            "5",
+            "6",
+            "7"
           ]
         },
         {
-          "filename": "joashking.png",
-          "url": "https://www.preceptaustin.org/files/images/joashking.png",
+          "filename": "naamanking.png",
+          "url": "https://www.preceptaustin.org/files/images/naamanking.png",
           "score": 2,
           "chapters": [
-            "11"
+            "5"
           ]
         },
         {
-          "filename": "joashqueen.png",
-          "url": "https://www.preceptaustin.org/files/images/joashqueen.png",
+          "filename": "naamanpauses.png",
+          "url": "https://www.preceptaustin.org/files/images/naamanpauses.png",
           "score": 2,
           "chapters": [
-            "11"
+            "5"
           ]
         },
         {
-          "filename": "joashrejoiced.png",
-          "url": "https://www.preceptaustin.org/files/images/joashrejoiced.png",
-          "score": 2,
+          "filename": "ahabb.webp",
+          "url": "https://www.preceptaustin.org/files/images/ahabb.webp",
+          "score": 0,
           "chapters": [
-            "11"
+            "5"
           ]
         },
         {
-          "filename": "joashsentenced.png",
-          "url": "https://www.preceptaustin.org/files/images/joashsentenced.png",
-          "score": 2,
+          "filename": "aramkings.jpg",
+          "url": "https://www.preceptaustin.org/files/images/aramkings.jpg",
+          "score": 0,
           "chapters": [
-            "11"
+            "5",
+            "6",
+            "8",
+            "13"
           ]
         },
         {
-          "filename": "joashthrone.png",
-          "url": "https://www.preceptaustin.org/files/images/joashthrone.png",
-          "score": 2,
+          "filename": "fishbait.jpg",
+          "url": "https://www.preceptaustin.org/files/images/fishbait.jpg",
+          "score": 0,
           "chapters": [
-            "11"
+            "5"
           ]
         },
         {
-          "filename": "joashtosoldiers.png",
-          "url": "https://www.preceptaustin.org/files/images/joashtosoldiers.png",
-          "score": 2,
+          "filename": "naamanheal.jpg",
+          "url": "https://www.preceptaustin.org/files/images/naamanheal.jpg",
+          "score": 0,
           "chapters": [
-            "11"
+            "5"
           ]
         },
         {
-          "filename": "joashtreason.png",
-          "url": "https://www.preceptaustin.org/files/images/joashtreason.png",
-          "score": 2,
+          "filename": "peace_dove_olive_branch animation.gif",
+          "url": "https://www.preceptaustin.org/files/images/peace_dove_olive_branch%20animation.gif",
+          "score": 0,
           "chapters": [
-            "11"
+            "4",
+            "5"
+          ]
+        },
+        {
+          "filename": "templeton.gif",
+          "url": "https://www.preceptaustin.org/files/images/templeton.gif",
+          "score": 0,
+          "chapters": [
+            "5"
           ]
         }
       ],
@@ -9537,6 +9447,60 @@
           ]
         }
       ],
+      "17": [
+        {
+          "filename": "davidtree.png",
+          "url": "https://www.preceptaustin.org/files/images/davidtree.png",
+          "score": 2,
+          "chapters": [
+            "3",
+            "5",
+            "14",
+            "17",
+            "21"
+          ]
+        },
+        {
+          "filename": "enrogel1.jpg",
+          "url": "https://www.preceptaustin.org/files/images/enrogel1.jpg",
+          "score": 0,
+          "chapters": [
+            "17"
+          ]
+        },
+        {
+          "filename": "mahanaim1.jpg",
+          "url": "https://www.preceptaustin.org/files/images/mahanaim1.jpg",
+          "score": 0,
+          "chapters": [
+            "17",
+            "18",
+            "19"
+          ]
+        },
+        {
+          "filename": "well.jpg",
+          "url": "https://www.preceptaustin.org/files/images/well.jpg",
+          "score": 0,
+          "chapters": [
+            "17"
+          ]
+        }
+      ],
+      "21": [
+        {
+          "filename": "davidtree.png",
+          "url": "https://www.preceptaustin.org/files/images/davidtree.png",
+          "score": 2,
+          "chapters": [
+            "3",
+            "5",
+            "14",
+            "17",
+            "21"
+          ]
+        }
+      ],
       "3": [
         {
           "filename": "davidtree.png",
@@ -9612,60 +9576,6 @@
           "score": 0,
           "chapters": [
             "5"
-          ]
-        }
-      ],
-      "21": [
-        {
-          "filename": "davidtree.png",
-          "url": "https://www.preceptaustin.org/files/images/davidtree.png",
-          "score": 2,
-          "chapters": [
-            "3",
-            "5",
-            "14",
-            "17",
-            "21"
-          ]
-        }
-      ],
-      "17": [
-        {
-          "filename": "davidtree.png",
-          "url": "https://www.preceptaustin.org/files/images/davidtree.png",
-          "score": 2,
-          "chapters": [
-            "3",
-            "5",
-            "14",
-            "17",
-            "21"
-          ]
-        },
-        {
-          "filename": "enrogel1.jpg",
-          "url": "https://www.preceptaustin.org/files/images/enrogel1.jpg",
-          "score": 0,
-          "chapters": [
-            "17"
-          ]
-        },
-        {
-          "filename": "mahanaim1.jpg",
-          "url": "https://www.preceptaustin.org/files/images/mahanaim1.jpg",
-          "score": 0,
-          "chapters": [
-            "17",
-            "18",
-            "19"
-          ]
-        },
-        {
-          "filename": "well.jpg",
-          "url": "https://www.preceptaustin.org/files/images/well.jpg",
-          "score": 0,
-          "chapters": [
-            "17"
           ]
         }
       ],
@@ -9768,7 +9678,7 @@
           ]
         }
       ],
-      "18": [
+      "19": [
         {
           "filename": "mahanaim1.jpg",
           "url": "https://www.preceptaustin.org/files/images/mahanaim1.jpg",
@@ -9780,7 +9690,7 @@
           ]
         }
       ],
-      "19": [
+      "18": [
         {
           "filename": "mahanaim1.jpg",
           "url": "https://www.preceptaustin.org/files/images/mahanaim1.jpg",
@@ -9951,55 +9861,6 @@
           ]
         }
       ],
-      "22": [
-        {
-          "filename": "damascus.jpg",
-          "url": "https://www.preceptaustin.org/files/images/damascus.jpg",
-          "score": 0,
-          "chapters": [
-            "9",
-            "22",
-            "26"
-          ]
-        },
-        {
-          "filename": "paulconversion.jpg",
-          "url": "https://www.preceptaustin.org/files/images/paulconversion.jpg",
-          "score": 0,
-          "chapters": [
-            "9",
-            "22",
-            "26"
-          ]
-        },
-        {
-          "filename": "sanhedrinhall.jpg",
-          "url": "https://www.preceptaustin.org/files/images/sanhedrinhall.jpg",
-          "score": 0,
-          "chapters": [
-            "7",
-            "22"
-          ]
-        },
-        {
-          "filename": "saulconversion.jpg",
-          "url": "https://www.preceptaustin.org/files/images/saulconversion.jpg",
-          "score": 0,
-          "chapters": [
-            "9",
-            "22",
-            "26"
-          ]
-        },
-        {
-          "filename": "scourge2.jpg",
-          "url": "https://www.preceptaustin.org/files/images/scourge2.jpg",
-          "score": 0,
-          "chapters": [
-            "22"
-          ]
-        }
-      ],
       "7": [
         {
           "filename": "abramstars.jpg",
@@ -10083,6 +9944,55 @@
           ]
         }
       ],
+      "22": [
+        {
+          "filename": "damascus.jpg",
+          "url": "https://www.preceptaustin.org/files/images/damascus.jpg",
+          "score": 0,
+          "chapters": [
+            "9",
+            "22",
+            "26"
+          ]
+        },
+        {
+          "filename": "paulconversion.jpg",
+          "url": "https://www.preceptaustin.org/files/images/paulconversion.jpg",
+          "score": 0,
+          "chapters": [
+            "9",
+            "22",
+            "26"
+          ]
+        },
+        {
+          "filename": "sanhedrinhall.jpg",
+          "url": "https://www.preceptaustin.org/files/images/sanhedrinhall.jpg",
+          "score": 0,
+          "chapters": [
+            "7",
+            "22"
+          ]
+        },
+        {
+          "filename": "saulconversion.jpg",
+          "url": "https://www.preceptaustin.org/files/images/saulconversion.jpg",
+          "score": 0,
+          "chapters": [
+            "9",
+            "22",
+            "26"
+          ]
+        },
+        {
+          "filename": "scourge2.jpg",
+          "url": "https://www.preceptaustin.org/files/images/scourge2.jpg",
+          "score": 0,
+          "chapters": [
+            "22"
+          ]
+        }
+      ],
       "8": [
         {
           "filename": "philipmap.jpg",
@@ -10138,79 +10048,6 @@
           "score": 0,
           "chapters": [
             "8"
-          ]
-        }
-      ],
-      "9": [
-        {
-          "filename": "actsmaturity.png",
-          "url": "https://www.preceptaustin.org/files/images/actsmaturity.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "actsoption1.png",
-          "url": "https://www.preceptaustin.org/files/images/actsoption1.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "actsoption2.png",
-          "url": "https://www.preceptaustin.org/files/images/actsoption2.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "damascus.jpg",
-          "url": "https://www.preceptaustin.org/files/images/damascus.jpg",
-          "score": 0,
-          "chapters": [
-            "9",
-            "22",
-            "26"
-          ]
-        },
-        {
-          "filename": "paulcon.jpg",
-          "url": "https://www.preceptaustin.org/files/images/paulcon.jpg",
-          "score": 0,
-          "chapters": [
-            "9",
-            "26"
-          ]
-        },
-        {
-          "filename": "paulconversion.jpg",
-          "url": "https://www.preceptaustin.org/files/images/paulconversion.jpg",
-          "score": 0,
-          "chapters": [
-            "9",
-            "22",
-            "26"
-          ]
-        },
-        {
-          "filename": "saulconversion.jpg",
-          "url": "https://www.preceptaustin.org/files/images/saulconversion.jpg",
-          "score": 0,
-          "chapters": [
-            "9",
-            "22",
-            "26"
-          ]
-        },
-        {
-          "filename": "straightstreet.jpeg",
-          "url": "https://www.preceptaustin.org/files/images/straightstreet.jpeg",
-          "score": 0,
-          "chapters": [
-            "9"
           ]
         }
       ],
@@ -10287,6 +10124,79 @@
             "9",
             "22",
             "26"
+          ]
+        }
+      ],
+      "9": [
+        {
+          "filename": "actsmaturity.png",
+          "url": "https://www.preceptaustin.org/files/images/actsmaturity.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "actsoption1.png",
+          "url": "https://www.preceptaustin.org/files/images/actsoption1.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "actsoption2.png",
+          "url": "https://www.preceptaustin.org/files/images/actsoption2.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "damascus.jpg",
+          "url": "https://www.preceptaustin.org/files/images/damascus.jpg",
+          "score": 0,
+          "chapters": [
+            "9",
+            "22",
+            "26"
+          ]
+        },
+        {
+          "filename": "paulcon.jpg",
+          "url": "https://www.preceptaustin.org/files/images/paulcon.jpg",
+          "score": 0,
+          "chapters": [
+            "9",
+            "26"
+          ]
+        },
+        {
+          "filename": "paulconversion.jpg",
+          "url": "https://www.preceptaustin.org/files/images/paulconversion.jpg",
+          "score": 0,
+          "chapters": [
+            "9",
+            "22",
+            "26"
+          ]
+        },
+        {
+          "filename": "saulconversion.jpg",
+          "url": "https://www.preceptaustin.org/files/images/saulconversion.jpg",
+          "score": 0,
+          "chapters": [
+            "9",
+            "22",
+            "26"
+          ]
+        },
+        {
+          "filename": "straightstreet.jpeg",
+          "url": "https://www.preceptaustin.org/files/images/straightstreet.jpeg",
+          "score": 0,
+          "chapters": [
+            "9"
           ]
         }
       ],
@@ -10702,34 +10612,6 @@
           ]
         }
       ],
-      "20": [
-        {
-          "filename": "troastomiletus.png",
-          "url": "https://www.preceptaustin.org/files/images/troastomiletus.png",
-          "score": 2,
-          "chapters": [
-            "20"
-          ]
-        },
-        {
-          "filename": "3missionaryjourney.gif",
-          "url": "https://www.preceptaustin.org/files/images/3missionaryjourney.gif",
-          "score": 0,
-          "chapters": [
-            "19",
-            "20",
-            "21"
-          ]
-        },
-        {
-          "filename": "bc_runner1.gif",
-          "url": "https://www.preceptaustin.org/files/images/bc_runner1.gif",
-          "score": 0,
-          "chapters": [
-            "20"
-          ]
-        }
-      ],
       "19": [
         {
           "filename": "heart.png",
@@ -10779,6 +10661,34 @@
           "score": 0,
           "chapters": [
             "19"
+          ]
+        }
+      ],
+      "20": [
+        {
+          "filename": "troastomiletus.png",
+          "url": "https://www.preceptaustin.org/files/images/troastomiletus.png",
+          "score": 2,
+          "chapters": [
+            "20"
+          ]
+        },
+        {
+          "filename": "3missionaryjourney.gif",
+          "url": "https://www.preceptaustin.org/files/images/3missionaryjourney.gif",
+          "score": 0,
+          "chapters": [
+            "19",
+            "20",
+            "21"
+          ]
+        },
+        {
+          "filename": "bc_runner1.gif",
+          "url": "https://www.preceptaustin.org/files/images/bc_runner1.gif",
+          "score": 0,
+          "chapters": [
+            "20"
           ]
         }
       ],
@@ -11692,63 +11602,6 @@
       }
     ],
     "per_chapter": {
-      "3": [
-        {
-          "filename": "gad.png",
-          "url": "https://www.preceptaustin.org/files/images/gad.png",
-          "score": 2,
-          "chapters": [
-            "3",
-            "4"
-          ]
-        },
-        {
-          "filename": "bashan.jpg",
-          "url": "https://www.preceptaustin.org/files/images/bashan.jpg",
-          "score": 0,
-          "chapters": [
-            "3",
-            "4"
-          ]
-        },
-        {
-          "filename": "deut14.jpg",
-          "url": "https://www.preceptaustin.org/files/images/deut14.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "3",
-            "4",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "filename": "edrei1.jpg",
-          "url": "https://www.preceptaustin.org/files/images/edrei1.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4"
-          ]
-        }
-      ],
-      "8": [
-        {
-          "filename": "deut14.jpg",
-          "url": "https://www.preceptaustin.org/files/images/deut14.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "3",
-            "4",
-            "7",
-            "8"
-          ]
-        }
-      ],
       "1": [
         {
           "filename": "arad.jpg",
@@ -11800,7 +11653,7 @@
           ]
         }
       ],
-      "7": [
+      "8": [
         {
           "filename": "deut14.jpg",
           "url": "https://www.preceptaustin.org/files/images/deut14.jpg",
@@ -11815,6 +11668,63 @@
         }
       ],
       "4": [
+        {
+          "filename": "gad.png",
+          "url": "https://www.preceptaustin.org/files/images/gad.png",
+          "score": 2,
+          "chapters": [
+            "3",
+            "4"
+          ]
+        },
+        {
+          "filename": "bashan.jpg",
+          "url": "https://www.preceptaustin.org/files/images/bashan.jpg",
+          "score": 0,
+          "chapters": [
+            "3",
+            "4"
+          ]
+        },
+        {
+          "filename": "deut14.jpg",
+          "url": "https://www.preceptaustin.org/files/images/deut14.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "3",
+            "4",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "filename": "edrei1.jpg",
+          "url": "https://www.preceptaustin.org/files/images/edrei1.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "7": [
+        {
+          "filename": "deut14.jpg",
+          "url": "https://www.preceptaustin.org/files/images/deut14.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "3",
+            "4",
+            "7",
+            "8"
+          ]
+        }
+      ],
+      "3": [
         {
           "filename": "gad.png",
           "url": "https://www.preceptaustin.org/files/images/gad.png",
@@ -11930,7 +11840,7 @@
           ]
         }
       ],
-      "9": [
+      "6": [
         {
           "filename": "route2.jpg",
           "url": "https://www.preceptaustin.org/files/images/route2.jpg",
@@ -11942,7 +11852,7 @@
           ]
         }
       ],
-      "6": [
+      "9": [
         {
           "filename": "route2.jpg",
           "url": "https://www.preceptaustin.org/files/images/route2.jpg",
@@ -13229,6 +13139,17 @@
       }
     ],
     "per_chapter": {
+      "1": [
+        {
+          "filename": "exodustimeline.png",
+          "url": "https://www.preceptaustin.org/files/images/exodustimeline.png",
+          "score": 12,
+          "chapters": [
+            "1",
+            "2"
+          ]
+        }
+      ],
       "2": [
         {
           "filename": "exodustimeline.png",
@@ -13246,17 +13167,6 @@
           "chapters": [
             "2",
             "3"
-          ]
-        }
-      ],
-      "1": [
-        {
-          "filename": "exodustimeline.png",
-          "url": "https://www.preceptaustin.org/files/images/exodustimeline.png",
-          "score": 12,
-          "chapters": [
-            "1",
-            "2"
           ]
         }
       ],
@@ -13391,51 +13301,6 @@
           ]
         }
       ],
-      "25": [
-        {
-          "filename": "exodustabernacle.png",
-          "url": "https://www.preceptaustin.org/files/images/exodustabernacle.png",
-          "score": 2,
-          "chapters": [
-            "25",
-            "40"
-          ]
-        },
-        {
-          "filename": "exodusark.jpg",
-          "url": "https://www.preceptaustin.org/files/images/exodusark.jpg",
-          "score": 0,
-          "chapters": [
-            "25",
-            "35",
-            "37",
-            "40"
-          ]
-        },
-        {
-          "filename": "exoduslampstand.jpg",
-          "url": "https://www.preceptaustin.org/files/images/exoduslampstand.jpg",
-          "score": 0,
-          "chapters": [
-            "25",
-            "26",
-            "35",
-            "37",
-            "40"
-          ]
-        },
-        {
-          "filename": "exodusshowbread.jpg",
-          "url": "https://www.preceptaustin.org/files/images/exodusshowbread.jpg",
-          "score": 0,
-          "chapters": [
-            "25",
-            "26",
-            "37",
-            "40"
-          ]
-        }
-      ],
       "40": [
         {
           "filename": "exodusincense.png",
@@ -13530,6 +13395,51 @@
             "30",
             "35",
             "36",
+            "40"
+          ]
+        }
+      ],
+      "25": [
+        {
+          "filename": "exodustabernacle.png",
+          "url": "https://www.preceptaustin.org/files/images/exodustabernacle.png",
+          "score": 2,
+          "chapters": [
+            "25",
+            "40"
+          ]
+        },
+        {
+          "filename": "exodusark.jpg",
+          "url": "https://www.preceptaustin.org/files/images/exodusark.jpg",
+          "score": 0,
+          "chapters": [
+            "25",
+            "35",
+            "37",
+            "40"
+          ]
+        },
+        {
+          "filename": "exoduslampstand.jpg",
+          "url": "https://www.preceptaustin.org/files/images/exoduslampstand.jpg",
+          "score": 0,
+          "chapters": [
+            "25",
+            "26",
+            "35",
+            "37",
+            "40"
+          ]
+        },
+        {
+          "filename": "exodusshowbread.jpg",
+          "url": "https://www.preceptaustin.org/files/images/exodusshowbread.jpg",
+          "score": 0,
+          "chapters": [
+            "25",
+            "26",
+            "37",
             "40"
           ]
         }
@@ -13714,6 +13624,20 @@
           ]
         }
       ],
+      "36": [
+        {
+          "filename": "exodustabernacleesvbig.jpg",
+          "url": "https://www.preceptaustin.org/files/images/exodustabernacleesvbig.jpg",
+          "score": 0,
+          "chapters": [
+            "26",
+            "30",
+            "35",
+            "36",
+            "40"
+          ]
+        }
+      ],
       "30": [
         {
           "filename": "exodusincense.png",
@@ -13739,21 +13663,15 @@
           ]
         }
       ],
-      "36": [
+      "27": [
         {
-          "filename": "exodustabernacleesvbig.jpg",
-          "url": "https://www.preceptaustin.org/files/images/exodustabernacleesvbig.jpg",
+          "filename": "exodusaltars.jpg",
+          "url": "https://www.preceptaustin.org/files/images/exodusaltars.jpg",
           "score": 0,
           "chapters": [
-            "26",
-            "30",
-            "35",
-            "36",
-            "40"
+            "27"
           ]
-        }
-      ],
-      "38": [
+        },
         {
           "filename": "exodusbrazen2.jpg",
           "url": "https://www.preceptaustin.org/files/images/exodusbrazen2.jpg",
@@ -13777,15 +13695,7 @@
           ]
         }
       ],
-      "27": [
-        {
-          "filename": "exodusaltars.jpg",
-          "url": "https://www.preceptaustin.org/files/images/exodusaltars.jpg",
-          "score": 0,
-          "chapters": [
-            "27"
-          ]
-        },
+      "38": [
         {
           "filename": "exodusbrazen2.jpg",
           "url": "https://www.preceptaustin.org/files/images/exodusbrazen2.jpg",
@@ -14306,7 +14216,7 @@
           ]
         }
       ],
-      "14": [
+      "18": [
         {
           "filename": "mamre.jpg",
           "url": "https://www.preceptaustin.org/files/images/mamre.jpg",
@@ -14321,11 +14231,11 @@
           ]
         },
         {
-          "filename": "melchizedek1.jpeg",
-          "url": "https://www.preceptaustin.org/files/images/melchizedek1.jpeg",
+          "filename": "oakmamre.jpg",
+          "url": "https://www.preceptaustin.org/files/images/oakmamre.jpg",
           "score": 0,
           "chapters": [
-            "14"
+            "18"
           ]
         }
       ],
@@ -14359,7 +14269,7 @@
           ]
         }
       ],
-      "18": [
+      "14": [
         {
           "filename": "mamre.jpg",
           "url": "https://www.preceptaustin.org/files/images/mamre.jpg",
@@ -14374,11 +14284,11 @@
           ]
         },
         {
-          "filename": "oakmamre.jpg",
-          "url": "https://www.preceptaustin.org/files/images/oakmamre.jpg",
+          "filename": "melchizedek1.jpeg",
+          "url": "https://www.preceptaustin.org/files/images/melchizedek1.jpeg",
           "score": 0,
           "chapters": [
-            "18"
+            "14"
           ]
         }
       ],
@@ -15053,6 +14963,78 @@
           ]
         }
       ],
+      "44": [
+        {
+          "filename": "timelineisreal1.png",
+          "url": "https://www.preceptaustin.org/files/images/timelineisreal1.png",
+          "score": 12,
+          "chapters": [
+            "44"
+          ]
+        },
+        {
+          "filename": "isaiah_glorious_throne_of_jehovah_the_holy_one.png",
+          "url": "https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png",
+          "score": 2,
+          "chapters": [
+            "34",
+            "35",
+            "44",
+            "49",
+            "50",
+            "61"
+          ]
+        },
+        {
+          "filename": "isaiah_pix.jpg",
+          "url": "https://www.preceptaustin.org/files/images/isaiah_pix.jpg",
+          "score": 0,
+          "chapters": [
+            "34",
+            "35",
+            "44",
+            "49",
+            "50",
+            "61"
+          ]
+        }
+      ],
+      "61": [
+        {
+          "filename": "isaiah_glorious_throne_of_jehovah_the_holy_one.png",
+          "url": "https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png",
+          "score": 2,
+          "chapters": [
+            "34",
+            "35",
+            "44",
+            "49",
+            "50",
+            "61"
+          ]
+        },
+        {
+          "filename": "isaiah_pix.jpg",
+          "url": "https://www.preceptaustin.org/files/images/isaiah_pix.jpg",
+          "score": 0,
+          "chapters": [
+            "34",
+            "35",
+            "44",
+            "49",
+            "50",
+            "61"
+          ]
+        },
+        {
+          "filename": "timegap2.jpg",
+          "url": "https://www.preceptaustin.org/files/images/timegap2.jpg",
+          "score": 0,
+          "chapters": [
+            "61"
+          ]
+        }
+      ],
       "49": [
         {
           "filename": "isaiah_glorious_throne_of_jehovah_the_holy_one.png",
@@ -15082,42 +15064,6 @@
         }
       ],
       "50": [
-        {
-          "filename": "isaiah_glorious_throne_of_jehovah_the_holy_one.png",
-          "url": "https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png",
-          "score": 2,
-          "chapters": [
-            "34",
-            "35",
-            "44",
-            "49",
-            "50",
-            "61"
-          ]
-        },
-        {
-          "filename": "isaiah_pix.jpg",
-          "url": "https://www.preceptaustin.org/files/images/isaiah_pix.jpg",
-          "score": 0,
-          "chapters": [
-            "34",
-            "35",
-            "44",
-            "49",
-            "50",
-            "61"
-          ]
-        }
-      ],
-      "44": [
-        {
-          "filename": "timelineisreal1.png",
-          "url": "https://www.preceptaustin.org/files/images/timelineisreal1.png",
-          "score": 12,
-          "chapters": [
-            "44"
-          ]
-        },
         {
           "filename": "isaiah_glorious_throne_of_jehovah_the_holy_one.png",
           "url": "https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png",
@@ -15191,81 +15137,6 @@
           ]
         }
       ],
-      "61": [
-        {
-          "filename": "isaiah_glorious_throne_of_jehovah_the_holy_one.png",
-          "url": "https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png",
-          "score": 2,
-          "chapters": [
-            "34",
-            "35",
-            "44",
-            "49",
-            "50",
-            "61"
-          ]
-        },
-        {
-          "filename": "isaiah_pix.jpg",
-          "url": "https://www.preceptaustin.org/files/images/isaiah_pix.jpg",
-          "score": 0,
-          "chapters": [
-            "34",
-            "35",
-            "44",
-            "49",
-            "50",
-            "61"
-          ]
-        },
-        {
-          "filename": "timegap2.jpg",
-          "url": "https://www.preceptaustin.org/files/images/timegap2.jpg",
-          "score": 0,
-          "chapters": [
-            "61"
-          ]
-        }
-      ],
-      "39": [
-        {
-          "filename": "1kichart2.png",
-          "url": "https://www.preceptaustin.org/files/images/1kichart2.png",
-          "score": 12,
-          "chapters": [
-            "36",
-            "37",
-            "38",
-            "39"
-          ]
-        }
-      ],
-      "38": [
-        {
-          "filename": "1kichart2.png",
-          "url": "https://www.preceptaustin.org/files/images/1kichart2.png",
-          "score": 12,
-          "chapters": [
-            "36",
-            "37",
-            "38",
-            "39"
-          ]
-        }
-      ],
-      "37": [
-        {
-          "filename": "1kichart2.png",
-          "url": "https://www.preceptaustin.org/files/images/1kichart2.png",
-          "score": 12,
-          "chapters": [
-            "36",
-            "37",
-            "38",
-            "39"
-          ]
-        }
-      ],
       "36": [
         {
           "filename": "1kichart2.png",
@@ -15316,6 +15187,45 @@
           "score": 0,
           "chapters": [
             "36"
+          ]
+        }
+      ],
+      "39": [
+        {
+          "filename": "1kichart2.png",
+          "url": "https://www.preceptaustin.org/files/images/1kichart2.png",
+          "score": 12,
+          "chapters": [
+            "36",
+            "37",
+            "38",
+            "39"
+          ]
+        }
+      ],
+      "38": [
+        {
+          "filename": "1kichart2.png",
+          "url": "https://www.preceptaustin.org/files/images/1kichart2.png",
+          "score": 12,
+          "chapters": [
+            "36",
+            "37",
+            "38",
+            "39"
+          ]
+        }
+      ],
+      "37": [
+        {
+          "filename": "1kichart2.png",
+          "url": "https://www.preceptaustin.org/files/images/1kichart2.png",
+          "score": 12,
+          "chapters": [
+            "36",
+            "37",
+            "38",
+            "39"
           ]
         }
       ]
@@ -15584,17 +15494,6 @@
           ]
         }
       ],
-      "29": [
-        {
-          "filename": "jeremiahtimeline.png",
-          "url": "https://www.preceptaustin.org/files/images/jeremiahtimeline.png",
-          "score": 12,
-          "chapters": [
-            "28",
-            "29"
-          ]
-        }
-      ],
       "28": [
         {
           "filename": "jeremiahtimeline.png",
@@ -15611,6 +15510,17 @@
           "score": 2,
           "chapters": [
             "28"
+          ]
+        }
+      ],
+      "29": [
+        {
+          "filename": "jeremiahtimeline.png",
+          "url": "https://www.preceptaustin.org/files/images/jeremiahtimeline.png",
+          "score": 12,
+          "chapters": [
+            "28",
+            "29"
           ]
         }
       ],
@@ -16374,58 +16284,6 @@
           ]
         }
       ],
-      "8": [
-        {
-          "filename": "lights.jpg",
-          "url": "https://www.preceptaustin.org/files/images/lights.jpg",
-          "score": 0,
-          "chapters": [
-            "8"
-          ]
-        },
-        {
-          "filename": "rejection.jpg",
-          "url": "https://www.preceptaustin.org/files/images/rejection.jpg",
-          "score": 0,
-          "chapters": [
-            "8"
-          ]
-        },
-        {
-          "filename": "templecomplex.jpg",
-          "url": "https://www.preceptaustin.org/files/images/templecomplex.jpg",
-          "score": 0,
-          "chapters": [
-            "8"
-          ]
-        },
-        {
-          "filename": "templemount2.jpg",
-          "url": "https://www.preceptaustin.org/files/images/templemount2.jpg",
-          "score": 0,
-          "chapters": [
-            "2",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "filename": "truth.jpg",
-          "url": "https://www.preceptaustin.org/files/images/truth.jpg",
-          "score": 0,
-          "chapters": [
-            "8"
-          ]
-        },
-        {
-          "filename": "warning.jpg",
-          "url": "https://www.preceptaustin.org/files/images/warning.jpg",
-          "score": 0,
-          "chapters": [
-            "8"
-          ]
-        }
-      ],
       "7": [
         {
           "filename": "circumcision.png",
@@ -16498,6 +16356,58 @@
           "chapters": [
             "2",
             "7",
+            "8"
+          ]
+        }
+      ],
+      "8": [
+        {
+          "filename": "lights.jpg",
+          "url": "https://www.preceptaustin.org/files/images/lights.jpg",
+          "score": 0,
+          "chapters": [
+            "8"
+          ]
+        },
+        {
+          "filename": "rejection.jpg",
+          "url": "https://www.preceptaustin.org/files/images/rejection.jpg",
+          "score": 0,
+          "chapters": [
+            "8"
+          ]
+        },
+        {
+          "filename": "templecomplex.jpg",
+          "url": "https://www.preceptaustin.org/files/images/templecomplex.jpg",
+          "score": 0,
+          "chapters": [
+            "8"
+          ]
+        },
+        {
+          "filename": "templemount2.jpg",
+          "url": "https://www.preceptaustin.org/files/images/templemount2.jpg",
+          "score": 0,
+          "chapters": [
+            "2",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "filename": "truth.jpg",
+          "url": "https://www.preceptaustin.org/files/images/truth.jpg",
+          "score": 0,
+          "chapters": [
+            "8"
+          ]
+        },
+        {
+          "filename": "warning.jpg",
+          "url": "https://www.preceptaustin.org/files/images/warning.jpg",
+          "score": 0,
+          "chapters": [
             "8"
           ]
         }
@@ -16812,18 +16722,6 @@
           ]
         }
       ],
-      "5": [
-        {
-          "filename": "gilgal.jpg",
-          "url": "https://www.preceptaustin.org/files/images/gilgal.jpg",
-          "score": 0,
-          "chapters": [
-            "4",
-            "5",
-            "10"
-          ]
-        }
-      ],
       "10": [
         {
           "filename": "bethhoron1.jpg",
@@ -16877,6 +16775,18 @@
         }
       ],
       "4": [
+        {
+          "filename": "gilgal.jpg",
+          "url": "https://www.preceptaustin.org/files/images/gilgal.jpg",
+          "score": 0,
+          "chapters": [
+            "4",
+            "5",
+            "10"
+          ]
+        }
+      ],
+      "5": [
         {
           "filename": "gilgal.jpg",
           "url": "https://www.preceptaustin.org/files/images/gilgal.jpg",
@@ -17050,6 +16960,57 @@
           ]
         }
       ],
+      "15": [
+        {
+          "filename": "napthali.png",
+          "url": "https://www.preceptaustin.org/files/images/napthali.png",
+          "score": 2,
+          "chapters": [
+            "15",
+            "16",
+            "17",
+            "19"
+          ]
+        },
+        {
+          "filename": "zorah.jpg",
+          "url": "https://www.preceptaustin.org/files/images/zorah.jpg",
+          "score": 0,
+          "chapters": [
+            "15"
+          ]
+        }
+      ],
+      "16": [
+        {
+          "filename": "napthali.png",
+          "url": "https://www.preceptaustin.org/files/images/napthali.png",
+          "score": 2,
+          "chapters": [
+            "15",
+            "16",
+            "17",
+            "19"
+          ]
+        },
+        {
+          "filename": "ephraimz.jpg",
+          "url": "https://www.preceptaustin.org/files/images/ephraimz.jpg",
+          "score": 0,
+          "chapters": [
+            "16",
+            "17"
+          ]
+        },
+        {
+          "filename": "israel1100.jpg",
+          "url": "https://www.preceptaustin.org/files/images/israel1100.jpg",
+          "score": 0,
+          "chapters": [
+            "16"
+          ]
+        }
+      ],
       "19": [
         {
           "filename": "simeonmap.jpg",
@@ -17087,68 +17048,6 @@
           ]
         }
       ],
-      "16": [
-        {
-          "filename": "napthali.png",
-          "url": "https://www.preceptaustin.org/files/images/napthali.png",
-          "score": 2,
-          "chapters": [
-            "15",
-            "16",
-            "17",
-            "19"
-          ]
-        },
-        {
-          "filename": "ephraimz.jpg",
-          "url": "https://www.preceptaustin.org/files/images/ephraimz.jpg",
-          "score": 0,
-          "chapters": [
-            "16",
-            "17"
-          ]
-        },
-        {
-          "filename": "israel1100.jpg",
-          "url": "https://www.preceptaustin.org/files/images/israel1100.jpg",
-          "score": 0,
-          "chapters": [
-            "16"
-          ]
-        }
-      ],
-      "15": [
-        {
-          "filename": "napthali.png",
-          "url": "https://www.preceptaustin.org/files/images/napthali.png",
-          "score": 2,
-          "chapters": [
-            "15",
-            "16",
-            "17",
-            "19"
-          ]
-        },
-        {
-          "filename": "zorah.jpg",
-          "url": "https://www.preceptaustin.org/files/images/zorah.jpg",
-          "score": 0,
-          "chapters": [
-            "15"
-          ]
-        }
-      ],
-      "20": [
-        {
-          "filename": "leviticalcities.jpg",
-          "url": "https://www.preceptaustin.org/files/images/leviticalcities.jpg",
-          "score": 0,
-          "chapters": [
-            "20",
-            "21"
-          ]
-        }
-      ],
       "21": [
         {
           "filename": "levitetowns.jpg",
@@ -17172,6 +17071,17 @@
           "url": "https://www.preceptaustin.org/files/images/mosesancestry.jpg",
           "score": 0,
           "chapters": [
+            "21"
+          ]
+        }
+      ],
+      "20": [
+        {
+          "filename": "leviticalcities.jpg",
+          "url": "https://www.preceptaustin.org/files/images/leviticalcities.jpg",
+          "score": 0,
+          "chapters": [
+            "20",
             "21"
           ]
         }
@@ -17384,6 +17294,17 @@
           ]
         }
       ],
+      "7": [
+        {
+          "filename": "gideonesv.jpg",
+          "url": "https://www.preceptaustin.org/files/images/gideonesv.jpg",
+          "score": 0,
+          "chapters": [
+            "7",
+            "8"
+          ]
+        }
+      ],
       "8": [
         {
           "filename": "gideonesv.jpg",
@@ -17411,17 +17332,6 @@
           ]
         }
       ],
-      "7": [
-        {
-          "filename": "gideonesv.jpg",
-          "url": "https://www.preceptaustin.org/files/images/gideonesv.jpg",
-          "score": 0,
-          "chapters": [
-            "7",
-            "8"
-          ]
-        }
-      ],
       "9": [
         {
           "filename": "ebal1.jpg",
@@ -17432,7 +17342,7 @@
           ]
         }
       ],
-      "20": [
+      "21": [
         {
           "filename": "1samap.png",
           "url": "https://www.preceptaustin.org/files/images/1samap.png",
@@ -17441,14 +17351,6 @@
             "10",
             "20",
             "21"
-          ]
-        },
-        {
-          "filename": "aarontree.jpg",
-          "url": "https://www.preceptaustin.org/files/images/aarontree.jpg",
-          "score": 0,
-          "chapters": [
-            "20"
           ]
         }
       ],
@@ -17473,7 +17375,7 @@
           ]
         }
       ],
-      "21": [
+      "20": [
         {
           "filename": "1samap.png",
           "url": "https://www.preceptaustin.org/files/images/1samap.png",
@@ -17482,6 +17384,14 @@
             "10",
             "20",
             "21"
+          ]
+        },
+        {
+          "filename": "aarontree.jpg",
+          "url": "https://www.preceptaustin.org/files/images/aarontree.jpg",
+          "score": 0,
+          "chapters": [
+            "20"
           ]
         }
       ],
@@ -17516,7 +17426,7 @@
           ]
         }
       ],
-      "14": [
+      "16": [
         {
           "filename": "samsonmap1.jpg",
           "url": "https://www.preceptaustin.org/files/images/samsonmap1.jpg",
@@ -17528,7 +17438,7 @@
           ]
         }
       ],
-      "16": [
+      "14": [
         {
           "filename": "samsonmap1.jpg",
           "url": "https://www.preceptaustin.org/files/images/samsonmap1.jpg",
@@ -17632,7 +17542,7 @@
           ]
         }
       ],
-      "8": [
+      "3": [
         {
           "filename": "tabernacle schematic2.gif",
           "url": "https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif",
@@ -17645,7 +17555,7 @@
           ]
         }
       ],
-      "3": [
+      "8": [
         {
           "filename": "tabernacle schematic2.gif",
           "url": "https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif",
@@ -18238,69 +18148,6 @@
           ]
         }
       ],
-      "3": [
-        {
-          "filename": "luke_genealogy.png",
-          "url": "https://www.preceptaustin.org/files/images/Luke_genealogy.png",
-          "score": 12,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "caesarmap.jpg",
-          "url": "https://www.preceptaustin.org/files/images/caesarmap.jpg",
-          "score": 10,
-          "chapters": [
-            "2",
-            "3"
-          ]
-        },
-        {
-          "filename": "baptist.jpg",
-          "url": "https://www.preceptaustin.org/files/images/baptist.jpg",
-          "score": 0,
-          "chapters": [
-            "3",
-            "4"
-          ]
-        },
-        {
-          "filename": "herodfamilytree.jpg",
-          "url": "https://www.preceptaustin.org/files/images/herodfamilytree.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "2",
-            "3"
-          ]
-        },
-        {
-          "filename": "johnb.jpg",
-          "url": "https://www.preceptaustin.org/files/images/johnb.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "sermon1.gif",
-          "url": "https://www.preceptaustin.org/files/images/sermon1.gif",
-          "score": 0,
-          "chapters": [
-            "3",
-            "20"
-          ]
-        },
-        {
-          "filename": "winnow.jpg",
-          "url": "https://www.preceptaustin.org/files/images/winnow.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        }
-      ],
       "2": [
         {
           "filename": "caesarmap.jpg",
@@ -18403,6 +18250,69 @@
           ]
         }
       ],
+      "3": [
+        {
+          "filename": "luke_genealogy.png",
+          "url": "https://www.preceptaustin.org/files/images/Luke_genealogy.png",
+          "score": 12,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "caesarmap.jpg",
+          "url": "https://www.preceptaustin.org/files/images/caesarmap.jpg",
+          "score": 10,
+          "chapters": [
+            "2",
+            "3"
+          ]
+        },
+        {
+          "filename": "baptist.jpg",
+          "url": "https://www.preceptaustin.org/files/images/baptist.jpg",
+          "score": 0,
+          "chapters": [
+            "3",
+            "4"
+          ]
+        },
+        {
+          "filename": "herodfamilytree.jpg",
+          "url": "https://www.preceptaustin.org/files/images/herodfamilytree.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "filename": "johnb.jpg",
+          "url": "https://www.preceptaustin.org/files/images/johnb.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "sermon1.gif",
+          "url": "https://www.preceptaustin.org/files/images/sermon1.gif",
+          "score": 0,
+          "chapters": [
+            "3",
+            "20"
+          ]
+        },
+        {
+          "filename": "winnow.jpg",
+          "url": "https://www.preceptaustin.org/files/images/winnow.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        }
+      ],
       "23": [
         {
           "filename": "mapjerusalem.png",
@@ -18443,101 +18353,6 @@
           "score": 0,
           "chapters": [
             "23"
-          ]
-        }
-      ],
-      "20": [
-        {
-          "filename": "passionweek.png",
-          "url": "https://www.preceptaustin.org/files/images/passionweek.png",
-          "score": 2,
-          "chapters": [
-            "20"
-          ]
-        },
-        {
-          "filename": "courtofgentiles.jpg",
-          "url": "https://www.preceptaustin.org/files/images/courtofgentiles.jpg",
-          "score": 0,
-          "chapters": [
-            "19",
-            "20",
-            "21"
-          ]
-        },
-        {
-          "filename": "jesusauthority.jpg",
-          "url": "https://www.preceptaustin.org/files/images/jesusauthority.jpg",
-          "score": 0,
-          "chapters": [
-            "20"
-          ]
-        },
-        {
-          "filename": "johnbaptist.jpg",
-          "url": "https://www.preceptaustin.org/files/images/johnbaptist.jpg",
-          "score": 0,
-          "chapters": [
-            "20"
-          ]
-        },
-        {
-          "filename": "luke201.jpg",
-          "url": "https://www.preceptaustin.org/files/images/Luke201.jpg",
-          "score": 0,
-          "chapters": [
-            "20"
-          ]
-        },
-        {
-          "filename": "luke202.jpg",
-          "url": "https://www.preceptaustin.org/files/images/Luke202.jpg",
-          "score": 0,
-          "chapters": [
-            "20"
-          ]
-        },
-        {
-          "filename": "luke203.jpg",
-          "url": "https://www.preceptaustin.org/files/images/Luke203.jpg",
-          "score": 0,
-          "chapters": [
-            "20"
-          ]
-        },
-        {
-          "filename": "progrev.jpg",
-          "url": "https://www.preceptaustin.org/files/images/progrev.jpg",
-          "score": 0,
-          "chapters": [
-            "20"
-          ]
-        },
-        {
-          "filename": "sermon1.gif",
-          "url": "https://www.preceptaustin.org/files/images/sermon1.gif",
-          "score": 0,
-          "chapters": [
-            "3",
-            "20"
-          ]
-        },
-        {
-          "filename": "watchtower.jpg",
-          "url": "https://www.preceptaustin.org/files/images/watchtower.jpg",
-          "score": 0,
-          "chapters": [
-            "20"
-          ]
-        },
-        {
-          "filename": "zeph-1.gif",
-          "url": "https://www.preceptaustin.org/files/images/zeph-1.gif",
-          "score": 0,
-          "chapters": [
-            "1",
-            "18",
-            "20"
           ]
         }
       ],
@@ -18628,6 +18443,101 @@
           "score": 0,
           "chapters": [
             "18"
+          ]
+        },
+        {
+          "filename": "zeph-1.gif",
+          "url": "https://www.preceptaustin.org/files/images/zeph-1.gif",
+          "score": 0,
+          "chapters": [
+            "1",
+            "18",
+            "20"
+          ]
+        }
+      ],
+      "20": [
+        {
+          "filename": "passionweek.png",
+          "url": "https://www.preceptaustin.org/files/images/passionweek.png",
+          "score": 2,
+          "chapters": [
+            "20"
+          ]
+        },
+        {
+          "filename": "courtofgentiles.jpg",
+          "url": "https://www.preceptaustin.org/files/images/courtofgentiles.jpg",
+          "score": 0,
+          "chapters": [
+            "19",
+            "20",
+            "21"
+          ]
+        },
+        {
+          "filename": "jesusauthority.jpg",
+          "url": "https://www.preceptaustin.org/files/images/jesusauthority.jpg",
+          "score": 0,
+          "chapters": [
+            "20"
+          ]
+        },
+        {
+          "filename": "johnbaptist.jpg",
+          "url": "https://www.preceptaustin.org/files/images/johnbaptist.jpg",
+          "score": 0,
+          "chapters": [
+            "20"
+          ]
+        },
+        {
+          "filename": "luke201.jpg",
+          "url": "https://www.preceptaustin.org/files/images/Luke201.jpg",
+          "score": 0,
+          "chapters": [
+            "20"
+          ]
+        },
+        {
+          "filename": "luke202.jpg",
+          "url": "https://www.preceptaustin.org/files/images/Luke202.jpg",
+          "score": 0,
+          "chapters": [
+            "20"
+          ]
+        },
+        {
+          "filename": "luke203.jpg",
+          "url": "https://www.preceptaustin.org/files/images/Luke203.jpg",
+          "score": 0,
+          "chapters": [
+            "20"
+          ]
+        },
+        {
+          "filename": "progrev.jpg",
+          "url": "https://www.preceptaustin.org/files/images/progrev.jpg",
+          "score": 0,
+          "chapters": [
+            "20"
+          ]
+        },
+        {
+          "filename": "sermon1.gif",
+          "url": "https://www.preceptaustin.org/files/images/sermon1.gif",
+          "score": 0,
+          "chapters": [
+            "3",
+            "20"
+          ]
+        },
+        {
+          "filename": "watchtower.jpg",
+          "url": "https://www.preceptaustin.org/files/images/watchtower.jpg",
+          "score": 0,
+          "chapters": [
+            "20"
           ]
         },
         {
@@ -18801,86 +18711,6 @@
           ]
         }
       ],
-      "9": [
-        {
-          "filename": "galilee.png",
-          "url": "https://www.preceptaustin.org/files/images/galilee.png",
-          "score": 2,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "bethsaida.jpg",
-          "url": "https://www.preceptaustin.org/files/images/bethsaida.jpg",
-          "score": 0,
-          "chapters": [
-            "9",
-            "10"
-          ]
-        },
-        {
-          "filename": "child.jpg",
-          "url": "https://www.preceptaustin.org/files/images/child.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "exodusglory.jpg",
-          "url": "https://www.preceptaustin.org/files/images/exodusglory.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "kog.jpg",
-          "url": "https://www.preceptaustin.org/files/images/kog.jpg",
-          "score": 0,
-          "chapters": [
-            "4",
-            "6",
-            "9",
-            "10",
-            "13",
-            "17"
-          ]
-        },
-        {
-          "filename": "loaves.jpg",
-          "url": "https://www.preceptaustin.org/files/images/loaves.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "sentout.jpg",
-          "url": "https://www.preceptaustin.org/files/images/sentout.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "shake.jpg",
-          "url": "https://www.preceptaustin.org/files/images/shake.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        },
-        {
-          "filename": "transfigure.jpg",
-          "url": "https://www.preceptaustin.org/files/images/transfigure.jpg",
-          "score": 0,
-          "chapters": [
-            "9"
-          ]
-        }
-      ],
       "6": [
         {
           "filename": "kog.jpg",
@@ -18981,6 +18811,86 @@
           "score": 0,
           "chapters": [
             "17"
+          ]
+        }
+      ],
+      "9": [
+        {
+          "filename": "galilee.png",
+          "url": "https://www.preceptaustin.org/files/images/galilee.png",
+          "score": 2,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "bethsaida.jpg",
+          "url": "https://www.preceptaustin.org/files/images/bethsaida.jpg",
+          "score": 0,
+          "chapters": [
+            "9",
+            "10"
+          ]
+        },
+        {
+          "filename": "child.jpg",
+          "url": "https://www.preceptaustin.org/files/images/child.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "exodusglory.jpg",
+          "url": "https://www.preceptaustin.org/files/images/exodusglory.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "kog.jpg",
+          "url": "https://www.preceptaustin.org/files/images/kog.jpg",
+          "score": 0,
+          "chapters": [
+            "4",
+            "6",
+            "9",
+            "10",
+            "13",
+            "17"
+          ]
+        },
+        {
+          "filename": "loaves.jpg",
+          "url": "https://www.preceptaustin.org/files/images/loaves.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "sentout.jpg",
+          "url": "https://www.preceptaustin.org/files/images/sentout.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "shake.jpg",
+          "url": "https://www.preceptaustin.org/files/images/shake.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
+          ]
+        },
+        {
+          "filename": "transfigure.jpg",
+          "url": "https://www.preceptaustin.org/files/images/transfigure.jpg",
+          "score": 0,
+          "chapters": [
+            "9"
           ]
         }
       ],
@@ -19883,52 +19793,6 @@
           ]
         }
       ],
-      "5": [
-        {
-          "filename": "decapolis.png",
-          "url": "https://www.preceptaustin.org/files/images/decapolis.png",
-          "score": 2,
-          "chapters": [
-            "5",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "filename": "funeral.png",
-          "url": "https://www.preceptaustin.org/files/images/funeral.png",
-          "score": 2,
-          "chapters": [
-            "5"
-          ]
-        },
-        {
-          "filename": "galileeministry.jpg",
-          "url": "https://www.preceptaustin.org/files/images/galileeministry.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "4",
-            "5"
-          ]
-        },
-        {
-          "filename": "mark5.jpg",
-          "url": "https://www.preceptaustin.org/files/images/mark5.jpg",
-          "score": 0,
-          "chapters": [
-            "5"
-          ]
-        },
-        {
-          "filename": "woman.jpg",
-          "url": "https://www.preceptaustin.org/files/images/woman.jpg",
-          "score": 0,
-          "chapters": [
-            "5"
-          ]
-        }
-      ],
       "4": [
         {
           "filename": "galileeministry.jpg",
@@ -19991,6 +19855,52 @@
           ]
         }
       ],
+      "5": [
+        {
+          "filename": "decapolis.png",
+          "url": "https://www.preceptaustin.org/files/images/decapolis.png",
+          "score": 2,
+          "chapters": [
+            "5",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "filename": "funeral.png",
+          "url": "https://www.preceptaustin.org/files/images/funeral.png",
+          "score": 2,
+          "chapters": [
+            "5"
+          ]
+        },
+        {
+          "filename": "galileeministry.jpg",
+          "url": "https://www.preceptaustin.org/files/images/galileeministry.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "filename": "mark5.jpg",
+          "url": "https://www.preceptaustin.org/files/images/mark5.jpg",
+          "score": 0,
+          "chapters": [
+            "5"
+          ]
+        },
+        {
+          "filename": "woman.jpg",
+          "url": "https://www.preceptaustin.org/files/images/woman.jpg",
+          "score": 0,
+          "chapters": [
+            "5"
+          ]
+        }
+      ],
       "2": [
         {
           "filename": "housecutout.png",
@@ -20042,6 +19952,52 @@
           "score": 0,
           "chapters": [
             "2"
+          ]
+        }
+      ],
+      "12": [
+        {
+          "filename": "corner.jpg",
+          "url": "https://www.preceptaustin.org/files/images/corner.jpg",
+          "score": 0,
+          "chapters": [
+            "12"
+          ]
+        },
+        {
+          "filename": "courtofgentiles.jpg",
+          "url": "https://www.preceptaustin.org/files/images/courtofgentiles.jpg",
+          "score": 0,
+          "chapters": [
+            "11",
+            "12",
+            "13"
+          ]
+        },
+        {
+          "filename": "luke14diningtable.gif",
+          "url": "https://www.preceptaustin.org/files/images/luke14diningtable.GIF",
+          "score": 0,
+          "chapters": [
+            "2",
+            "12",
+            "14"
+          ]
+        },
+        {
+          "filename": "vineyard.jpg",
+          "url": "https://www.preceptaustin.org/files/images/vineyard.jpg",
+          "score": 0,
+          "chapters": [
+            "12"
+          ]
+        },
+        {
+          "filename": "winepress.jpg",
+          "url": "https://www.preceptaustin.org/files/images/winepress.jpg",
+          "score": 0,
+          "chapters": [
+            "12"
           ]
         }
       ],
@@ -20105,52 +20061,6 @@
           ]
         }
       ],
-      "12": [
-        {
-          "filename": "corner.jpg",
-          "url": "https://www.preceptaustin.org/files/images/corner.jpg",
-          "score": 0,
-          "chapters": [
-            "12"
-          ]
-        },
-        {
-          "filename": "courtofgentiles.jpg",
-          "url": "https://www.preceptaustin.org/files/images/courtofgentiles.jpg",
-          "score": 0,
-          "chapters": [
-            "11",
-            "12",
-            "13"
-          ]
-        },
-        {
-          "filename": "luke14diningtable.gif",
-          "url": "https://www.preceptaustin.org/files/images/luke14diningtable.GIF",
-          "score": 0,
-          "chapters": [
-            "2",
-            "12",
-            "14"
-          ]
-        },
-        {
-          "filename": "vineyard.jpg",
-          "url": "https://www.preceptaustin.org/files/images/vineyard.jpg",
-          "score": 0,
-          "chapters": [
-            "12"
-          ]
-        },
-        {
-          "filename": "winepress.jpg",
-          "url": "https://www.preceptaustin.org/files/images/winepress.jpg",
-          "score": 0,
-          "chapters": [
-            "12"
-          ]
-        }
-      ],
       "3": [
         {
           "filename": "idumea.jpg",
@@ -20158,6 +20068,50 @@
           "score": 0,
           "chapters": [
             "3"
+          ]
+        }
+      ],
+      "7": [
+        {
+          "filename": "decapolis.png",
+          "url": "https://www.preceptaustin.org/files/images/decapolis.png",
+          "score": 2,
+          "chapters": [
+            "5",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "filename": "kosher.jpg",
+          "url": "https://www.preceptaustin.org/files/images/kosher.jpg",
+          "score": 0,
+          "chapters": [
+            "7"
+          ]
+        },
+        {
+          "filename": "syro.jpg",
+          "url": "https://www.preceptaustin.org/files/images/syro.jpg",
+          "score": 0,
+          "chapters": [
+            "7"
+          ]
+        },
+        {
+          "filename": "tradition.jpg",
+          "url": "https://www.preceptaustin.org/files/images/tradition.jpg",
+          "score": 0,
+          "chapters": [
+            "7"
+          ]
+        },
+        {
+          "filename": "tyre.jpg",
+          "url": "https://www.preceptaustin.org/files/images/tyre.jpg",
+          "score": 0,
+          "chapters": [
+            "7"
           ]
         }
       ],
@@ -20211,50 +20165,6 @@
           "score": 0,
           "chapters": [
             "8"
-          ]
-        }
-      ],
-      "7": [
-        {
-          "filename": "decapolis.png",
-          "url": "https://www.preceptaustin.org/files/images/decapolis.png",
-          "score": 2,
-          "chapters": [
-            "5",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "filename": "kosher.jpg",
-          "url": "https://www.preceptaustin.org/files/images/kosher.jpg",
-          "score": 0,
-          "chapters": [
-            "7"
-          ]
-        },
-        {
-          "filename": "syro.jpg",
-          "url": "https://www.preceptaustin.org/files/images/syro.jpg",
-          "score": 0,
-          "chapters": [
-            "7"
-          ]
-        },
-        {
-          "filename": "tradition.jpg",
-          "url": "https://www.preceptaustin.org/files/images/tradition.jpg",
-          "score": 0,
-          "chapters": [
-            "7"
-          ]
-        },
-        {
-          "filename": "tyre.jpg",
-          "url": "https://www.preceptaustin.org/files/images/tyre.jpg",
-          "score": 0,
-          "chapters": [
-            "7"
           ]
         }
       ],
@@ -20740,52 +20650,6 @@
           ]
         }
       ],
-      "3": [
-        {
-          "filename": "galilee.png",
-          "url": "https://www.preceptaustin.org/files/images/galilee.png",
-          "score": 2,
-          "chapters": [
-            "2",
-            "3",
-            "4",
-            "26",
-            "28"
-          ]
-        },
-        {
-          "filename": "baptist.jpg",
-          "url": "https://www.preceptaustin.org/files/images/baptist.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "johnb.jpg",
-          "url": "https://www.preceptaustin.org/files/images/johnb.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "locust1.jpg",
-          "url": "https://www.preceptaustin.org/files/images/locust1.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "winnow.jpg",
-          "url": "https://www.preceptaustin.org/files/images/winnow.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        }
-      ],
       "28": [
         {
           "filename": "galilee.png",
@@ -20961,6 +20825,52 @@
           "chapters": [
             "4",
             "8"
+          ]
+        }
+      ],
+      "3": [
+        {
+          "filename": "galilee.png",
+          "url": "https://www.preceptaustin.org/files/images/galilee.png",
+          "score": 2,
+          "chapters": [
+            "2",
+            "3",
+            "4",
+            "26",
+            "28"
+          ]
+        },
+        {
+          "filename": "baptist.jpg",
+          "url": "https://www.preceptaustin.org/files/images/baptist.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "johnb.jpg",
+          "url": "https://www.preceptaustin.org/files/images/johnb.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "locust1.jpg",
+          "url": "https://www.preceptaustin.org/files/images/locust1.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "winnow.jpg",
+          "url": "https://www.preceptaustin.org/files/images/winnow.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
           ]
         }
       ],
@@ -21233,45 +21143,6 @@
           ]
         }
       ],
-      "22": [
-        {
-          "filename": "courtofgentiles.jpg",
-          "url": "https://www.preceptaustin.org/files/images/courtofgentiles.jpg",
-          "score": 0,
-          "chapters": [
-            "21",
-            "22"
-          ]
-        },
-        {
-          "filename": "kog.jpg",
-          "url": "https://www.preceptaustin.org/files/images/kog.jpg",
-          "score": 0,
-          "chapters": [
-            "10",
-            "13",
-            "21",
-            "22",
-            "25"
-          ]
-        },
-        {
-          "filename": "sermon1.gif",
-          "url": "https://www.preceptaustin.org/files/images/sermon1.gif",
-          "score": 0,
-          "chapters": [
-            "22"
-          ]
-        },
-        {
-          "filename": "zeph-1.gif",
-          "url": "https://www.preceptaustin.org/files/images/zeph-1.gif",
-          "score": 0,
-          "chapters": [
-            "22"
-          ]
-        }
-      ],
       "13": [
         {
           "filename": "devilsowing1.png",
@@ -21347,6 +21218,45 @@
           "score": 0,
           "chapters": [
             "13"
+          ]
+        }
+      ],
+      "22": [
+        {
+          "filename": "courtofgentiles.jpg",
+          "url": "https://www.preceptaustin.org/files/images/courtofgentiles.jpg",
+          "score": 0,
+          "chapters": [
+            "21",
+            "22"
+          ]
+        },
+        {
+          "filename": "kog.jpg",
+          "url": "https://www.preceptaustin.org/files/images/kog.jpg",
+          "score": 0,
+          "chapters": [
+            "10",
+            "13",
+            "21",
+            "22",
+            "25"
+          ]
+        },
+        {
+          "filename": "sermon1.gif",
+          "url": "https://www.preceptaustin.org/files/images/sermon1.gif",
+          "score": 0,
+          "chapters": [
+            "22"
+          ]
+        },
+        {
+          "filename": "zeph-1.gif",
+          "url": "https://www.preceptaustin.org/files/images/zeph-1.gif",
+          "score": 0,
+          "chapters": [
+            "22"
           ]
         }
       ],
@@ -22230,7 +22140,16 @@
           ]
         }
       ],
-      "8": [
+      "7": [
+        {
+          "filename": "camp3.jpg",
+          "url": "https://www.preceptaustin.org/files/images/camp3.jpg",
+          "score": 0,
+          "chapters": [
+            "7",
+            "10"
+          ]
+        },
         {
           "filename": "tab.jpg",
           "url": "https://www.preceptaustin.org/files/images/tab.jpg",
@@ -22264,28 +22183,6 @@
           ]
         }
       ],
-      "7": [
-        {
-          "filename": "camp3.jpg",
-          "url": "https://www.preceptaustin.org/files/images/camp3.jpg",
-          "score": 0,
-          "chapters": [
-            "7",
-            "10"
-          ]
-        },
-        {
-          "filename": "tab.jpg",
-          "url": "https://www.preceptaustin.org/files/images/tab.jpg",
-          "score": 0,
-          "chapters": [
-            "6",
-            "7",
-            "8",
-            "11"
-          ]
-        }
-      ],
       "6": [
         {
           "filename": "tab.jpg",
@@ -22299,16 +22196,20 @@
           ]
         }
       ],
-      "9": [
+      "8": [
         {
-          "filename": "lamb of god passover.gif",
-          "url": "https://www.preceptaustin.org/files/images/lamb%20of%20God%20passover.gif",
+          "filename": "tab.jpg",
+          "url": "https://www.preceptaustin.org/files/images/tab.jpg",
           "score": 0,
           "chapters": [
-            "9",
-            "28"
+            "6",
+            "7",
+            "8",
+            "11"
           ]
-        },
+        }
+      ],
+      "12": [
         {
           "filename": "paran.jpg",
           "url": "https://www.preceptaustin.org/files/images/paran.jpg",
@@ -22320,7 +22221,16 @@
           ]
         }
       ],
-      "12": [
+      "9": [
+        {
+          "filename": "lamb of god passover.gif",
+          "url": "https://www.preceptaustin.org/files/images/lamb%20of%20God%20passover.gif",
+          "score": 0,
+          "chapters": [
+            "9",
+            "28"
+          ]
+        },
         {
           "filename": "paran.jpg",
           "url": "https://www.preceptaustin.org/files/images/paran.jpg",
@@ -22407,15 +22317,7 @@
           ]
         }
       ],
-      "20": [
-        {
-          "filename": "hor.jpeg",
-          "url": "https://www.preceptaustin.org/files/images/hor.jpeg",
-          "score": 0,
-          "chapters": [
-            "20"
-          ]
-        },
+      "27": [
         {
           "filename": "kadesh.jpg",
           "url": "https://www.preceptaustin.org/files/images/kadesh.jpg",
@@ -22426,7 +22328,15 @@
           ]
         }
       ],
-      "27": [
+      "20": [
+        {
+          "filename": "hor.jpeg",
+          "url": "https://www.preceptaustin.org/files/images/hor.jpeg",
+          "score": 0,
+          "chapters": [
+            "20"
+          ]
+        },
         {
           "filename": "kadesh.jpg",
           "url": "https://www.preceptaustin.org/files/images/kadesh.jpg",
@@ -22839,374 +22749,6 @@
       }
     ],
     "per_chapter": {
-      "3": [
-        {
-          "filename": "rev_map.png",
-          "url": "https://www.preceptaustin.org/files/images/rev_map.png",
-          "score": 12,
-          "chapters": [
-            "1",
-            "3",
-            "4"
-          ]
-        },
-        {
-          "filename": "rev_overview.png",
-          "url": "https://www.preceptaustin.org/files/images/rev_overview.png",
-          "score": 12,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        {
-          "filename": "rev.png",
-          "url": "https://www.preceptaustin.org/files/images/rev.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        {
-          "filename": "rev_historical_setting.png",
-          "url": "https://www.preceptaustin.org/files/images/rev_historical_setting.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4"
-          ]
-        },
-        {
-          "filename": "emperorclothes.jpg",
-          "url": "https://www.preceptaustin.org/files/images/emperorclothes.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "jesusknocking1.jpg",
-          "url": "https://www.preceptaustin.org/files/images/jesusknocking1.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "keyofdavid.jpg",
-          "url": "https://www.preceptaustin.org/files/images/keyofdavid.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "laodicealycus.jpg",
-          "url": "https://www.preceptaustin.org/files/images/laodicealycus.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "laodicealycusriver.jpg",
-          "url": "https://www.preceptaustin.org/files/images/laodicealycusriver.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "maranatha.jpg",
-          "url": "https://www.preceptaustin.org/files/images/maranatha.jpg",
-          "score": 0,
-          "chapters": [
-            "3",
-            "5"
-          ]
-        },
-        {
-          "filename": "patmos2.jpg",
-          "url": "https://www.preceptaustin.org/files/images/patmos2.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        {
-          "filename": "revelation310.jpg",
-          "url": "https://www.preceptaustin.org/files/images/revelation310.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "sardiswall.jpg",
-          "url": "https://www.preceptaustin.org/files/images/sardiswall.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        },
-        {
-          "filename": "spit.jpg",
-          "url": "https://www.preceptaustin.org/files/images/spit.jpg",
-          "score": 0,
-          "chapters": [
-            "3"
-          ]
-        }
-      ],
-      "5": [
-        {
-          "filename": "rev_overview.png",
-          "url": "https://www.preceptaustin.org/files/images/rev_overview.png",
-          "score": 12,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        {
-          "filename": "rev.png",
-          "url": "https://www.preceptaustin.org/files/images/rev.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        {
-          "filename": "maranatha.jpg",
-          "url": "https://www.preceptaustin.org/files/images/maranatha.jpg",
-          "score": 0,
-          "chapters": [
-            "3",
-            "5"
-          ]
-        },
-        {
-          "filename": "patmos2.jpg",
-          "url": "https://www.preceptaustin.org/files/images/patmos2.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        {
-          "filename": "scroll.jpg",
-          "url": "https://www.preceptaustin.org/files/images/scroll.jpg",
-          "score": 0,
-          "chapters": [
-            "5"
-          ]
-        },
-        {
-          "filename": "scroll1.jpg",
-          "url": "https://www.preceptaustin.org/files/images/scroll1.jpg",
-          "score": 0,
-          "chapters": [
-            "5"
-          ]
-        },
-        {
-          "filename": "worship.jpg",
-          "url": "https://www.preceptaustin.org/files/images/worship.jpg",
-          "score": 0,
-          "chapters": [
-            "5"
-          ]
-        }
-      ],
-      "1": [
-        {
-          "filename": "rev_map.png",
-          "url": "https://www.preceptaustin.org/files/images/rev_map.png",
-          "score": 12,
-          "chapters": [
-            "1",
-            "3",
-            "4"
-          ]
-        },
-        {
-          "filename": "rev_overview.png",
-          "url": "https://www.preceptaustin.org/files/images/rev_overview.png",
-          "score": 12,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        {
-          "filename": "alpha.png",
-          "url": "https://www.preceptaustin.org/files/images/alpha.png",
-          "score": 2,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "blood.png",
-          "url": "https://www.preceptaustin.org/files/images/blood.png",
-          "score": 2,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "glorifiedchrist.png",
-          "url": "https://www.preceptaustin.org/files/images/glorifiedchrist.png",
-          "score": 2,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "johnpatmos.png",
-          "url": "https://www.preceptaustin.org/files/images/johnpatmos.png",
-          "score": 2,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "loudvoice.png",
-          "url": "https://www.preceptaustin.org/files/images/loudvoice.png",
-          "score": 2,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "rev.png",
-          "url": "https://www.preceptaustin.org/files/images/rev.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        {
-          "filename": "rev_historical_setting.png",
-          "url": "https://www.preceptaustin.org/files/images/rev_historical_setting.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4"
-          ]
-        },
-        {
-          "filename": "tribulation.png",
-          "url": "https://www.preceptaustin.org/files/images/tribulation.png",
-          "score": 2,
-          "chapters": [
-            "1",
-            "2"
-          ]
-        },
-        {
-          "filename": "johnpatmos1.jpg",
-          "url": "https://www.preceptaustin.org/files/images/johnpatmos1.jpg",
-          "score": 0,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "kairoslysippus.jpg",
-          "url": "https://www.preceptaustin.org/files/images/kairoslysippus.jpg",
-          "score": 0,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "martyr.jpg",
-          "url": "https://www.preceptaustin.org/files/images/martyr.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "2"
-          ]
-        },
-        {
-          "filename": "patmos2.jpg",
-          "url": "https://www.preceptaustin.org/files/images/patmos2.jpg",
-          "score": 0,
-          "chapters": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        {
-          "filename": "revelationpatmos.jpg",
-          "url": "https://www.preceptaustin.org/files/images/revelationpatmos.jpg",
-          "score": 0,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "secondcoming.jpg",
-          "url": "https://www.preceptaustin.org/files/images/secondcoming.jpg",
-          "score": 0,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "sun.jpg",
-          "url": "https://www.preceptaustin.org/files/images/sun.jpg",
-          "score": 0,
-          "chapters": [
-            "1"
-          ]
-        },
-        {
-          "filename": "tachometer.jpg",
-          "url": "https://www.preceptaustin.org/files/images/tachometer.jpg",
-          "score": 0,
-          "chapters": [
-            "1"
-          ]
-        }
-      ],
       "2": [
         {
           "filename": "ephesusmap.png",
@@ -23498,6 +23040,171 @@
           ]
         }
       ],
+      "1": [
+        {
+          "filename": "rev_map.png",
+          "url": "https://www.preceptaustin.org/files/images/rev_map.png",
+          "score": 12,
+          "chapters": [
+            "1",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "filename": "rev_overview.png",
+          "url": "https://www.preceptaustin.org/files/images/rev_overview.png",
+          "score": 12,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "filename": "alpha.png",
+          "url": "https://www.preceptaustin.org/files/images/alpha.png",
+          "score": 2,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "blood.png",
+          "url": "https://www.preceptaustin.org/files/images/blood.png",
+          "score": 2,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "glorifiedchrist.png",
+          "url": "https://www.preceptaustin.org/files/images/glorifiedchrist.png",
+          "score": 2,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "johnpatmos.png",
+          "url": "https://www.preceptaustin.org/files/images/johnpatmos.png",
+          "score": 2,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "loudvoice.png",
+          "url": "https://www.preceptaustin.org/files/images/loudvoice.png",
+          "score": 2,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "rev.png",
+          "url": "https://www.preceptaustin.org/files/images/rev.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "filename": "rev_historical_setting.png",
+          "url": "https://www.preceptaustin.org/files/images/rev_historical_setting.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "filename": "tribulation.png",
+          "url": "https://www.preceptaustin.org/files/images/tribulation.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "filename": "johnpatmos1.jpg",
+          "url": "https://www.preceptaustin.org/files/images/johnpatmos1.jpg",
+          "score": 0,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "kairoslysippus.jpg",
+          "url": "https://www.preceptaustin.org/files/images/kairoslysippus.jpg",
+          "score": 0,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "martyr.jpg",
+          "url": "https://www.preceptaustin.org/files/images/martyr.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "filename": "patmos2.jpg",
+          "url": "https://www.preceptaustin.org/files/images/patmos2.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "filename": "revelationpatmos.jpg",
+          "url": "https://www.preceptaustin.org/files/images/revelationpatmos.jpg",
+          "score": 0,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "secondcoming.jpg",
+          "url": "https://www.preceptaustin.org/files/images/secondcoming.jpg",
+          "score": 0,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "sun.jpg",
+          "url": "https://www.preceptaustin.org/files/images/sun.jpg",
+          "score": 0,
+          "chapters": [
+            "1"
+          ]
+        },
+        {
+          "filename": "tachometer.jpg",
+          "url": "https://www.preceptaustin.org/files/images/tachometer.jpg",
+          "score": 0,
+          "chapters": [
+            "1"
+          ]
+        }
+      ],
       "4": [
         {
           "filename": "rev_map.png",
@@ -23581,7 +23288,210 @@
           ]
         }
       ],
-      "14": [
+      "3": [
+        {
+          "filename": "rev_map.png",
+          "url": "https://www.preceptaustin.org/files/images/rev_map.png",
+          "score": 12,
+          "chapters": [
+            "1",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "filename": "rev_overview.png",
+          "url": "https://www.preceptaustin.org/files/images/rev_overview.png",
+          "score": 12,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "filename": "rev.png",
+          "url": "https://www.preceptaustin.org/files/images/rev.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "filename": "rev_historical_setting.png",
+          "url": "https://www.preceptaustin.org/files/images/rev_historical_setting.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "filename": "emperorclothes.jpg",
+          "url": "https://www.preceptaustin.org/files/images/emperorclothes.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "jesusknocking1.jpg",
+          "url": "https://www.preceptaustin.org/files/images/jesusknocking1.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "keyofdavid.jpg",
+          "url": "https://www.preceptaustin.org/files/images/keyofdavid.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "laodicealycus.jpg",
+          "url": "https://www.preceptaustin.org/files/images/laodicealycus.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "laodicealycusriver.jpg",
+          "url": "https://www.preceptaustin.org/files/images/laodicealycusriver.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "maranatha.jpg",
+          "url": "https://www.preceptaustin.org/files/images/maranatha.jpg",
+          "score": 0,
+          "chapters": [
+            "3",
+            "5"
+          ]
+        },
+        {
+          "filename": "patmos2.jpg",
+          "url": "https://www.preceptaustin.org/files/images/patmos2.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "filename": "revelation310.jpg",
+          "url": "https://www.preceptaustin.org/files/images/revelation310.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "sardiswall.jpg",
+          "url": "https://www.preceptaustin.org/files/images/sardiswall.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        },
+        {
+          "filename": "spit.jpg",
+          "url": "https://www.preceptaustin.org/files/images/spit.jpg",
+          "score": 0,
+          "chapters": [
+            "3"
+          ]
+        }
+      ],
+      "5": [
+        {
+          "filename": "rev_overview.png",
+          "url": "https://www.preceptaustin.org/files/images/rev_overview.png",
+          "score": 12,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "filename": "rev.png",
+          "url": "https://www.preceptaustin.org/files/images/rev.png",
+          "score": 2,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "filename": "maranatha.jpg",
+          "url": "https://www.preceptaustin.org/files/images/maranatha.jpg",
+          "score": 0,
+          "chapters": [
+            "3",
+            "5"
+          ]
+        },
+        {
+          "filename": "patmos2.jpg",
+          "url": "https://www.preceptaustin.org/files/images/patmos2.jpg",
+          "score": 0,
+          "chapters": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "filename": "scroll.jpg",
+          "url": "https://www.preceptaustin.org/files/images/scroll.jpg",
+          "score": 0,
+          "chapters": [
+            "5"
+          ]
+        },
+        {
+          "filename": "scroll1.jpg",
+          "url": "https://www.preceptaustin.org/files/images/scroll1.jpg",
+          "score": 0,
+          "chapters": [
+            "5"
+          ]
+        },
+        {
+          "filename": "worship.jpg",
+          "url": "https://www.preceptaustin.org/files/images/worship.jpg",
+          "score": 0,
+          "chapters": [
+            "5"
+          ]
+        }
+      ],
+      "7": [
         {
           "filename": "r915.png",
           "url": "https://www.preceptaustin.org/files/images/r915.png",
@@ -23592,7 +23502,7 @@
           ]
         }
       ],
-      "7": [
+      "14": [
         {
           "filename": "r915.png",
           "url": "https://www.preceptaustin.org/files/images/r915.png",
