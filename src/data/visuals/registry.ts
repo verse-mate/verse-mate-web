@@ -797,42 +797,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-ch-amalekite",
-      "title": "Precept Austin — Exodus Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 17 — amalekite.jpg.",
-      "thumb": "/visuals/exodus/precept_amalekite.jpg",
-      "full": "/visuals/exodus/precept_amalekite.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/amalekite.jpg"
-      },
-      "chapters": [
-        17
-      ]
-    },
-    {
-      "id": "precept-ch-burnbush",
-      "title": "Precept Austin — Exodus Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 3 — burnbush.gif.",
-      "thumb": "/visuals/exodus/precept_burnbush.gif",
-      "full": "/visuals/exodus/precept_burnbush.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/burnbush.gif"
-      },
-      "chapters": [
-        3
-      ]
-    },
-    {
       "id": "precept-ch-ex614",
       "title": "Precept Austin — Exodus Chapter 6",
       "caption": "Bruce Hurt's commentary chart for Exodus chapter 6 — ex614.jpg.",
@@ -869,24 +833,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-exodus_15_bitter_water",
-      "title": "Precept Austin — Exodus Chapter 15",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 15 — exodus 15 bitter water.jpg.",
-      "thumb": "/visuals/exodus/precept_exodus_15_bitter_water.jpg",
-      "full": "/visuals/exodus/precept_exodus_15_bitter_water.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodus%2015%20bitter%20water.jpg"
-      },
-      "chapters": [
-        15
-      ]
-    },
-    {
       "id": "precept-ch-exodusaltars",
       "title": "Precept Austin — Exodus Chapter 27",
       "caption": "Bruce Hurt's commentary chart for Exodus chapter 27 — exodusaltars.jpg.",
@@ -902,42 +848,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         27
-      ]
-    },
-    {
-      "id": "precept-ch-exodusamalekite",
-      "title": "Precept Austin — Exodus Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 17 — exodusamalekite.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusamalekite.jpg",
-      "full": "/visuals/exodus/precept_exodusamalekite.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusamalekite.jpg"
-      },
-      "chapters": [
-        17
-      ]
-    },
-    {
-      "id": "precept-ch-exodusapis",
-      "title": "Precept Austin — Exodus Chapter 9",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 9 — exodusapis.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusapis.jpg",
-      "full": "/visuals/exodus/precept_exodusapis.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusapis.jpg"
-      },
-      "chapters": [
-        9
       ]
     },
     {
@@ -962,42 +872,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-exodusarke",
-      "title": "Precept Austin — Exodus Chapter 25",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 25 — exodusarke.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusarke.jpg",
-      "full": "/visuals/exodus/precept_exodusarke.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusarke.jpg"
-      },
-      "chapters": [
-        25
-      ]
-    },
-    {
-      "id": "precept-ch-exodusblood",
-      "title": "Precept Austin — Exodus Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 7 — exodusblood.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusblood.jpg",
-      "full": "/visuals/exodus/precept_exodusblood.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusblood.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
       "id": "precept-ch-exodusbrazen2",
       "title": "Precept Austin — Exodus Chapters 27, 35, 38, 40",
       "caption": "Bruce Hurt's commentary chart for Exodus chapters 27, 35, 38, 40 — exodusbrazen2.jpg.",
@@ -1019,114 +893,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-exoduschariot",
-      "title": "Precept Austin — Exodus Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 14 — exoduschariot.jpg.",
-      "thumb": "/visuals/exodus/precept_exoduschariot.jpg",
-      "full": "/visuals/exodus/precept_exoduschariot.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exoduschariot.jpg"
-      },
-      "chapters": [
-        14
-      ]
-    },
-    {
-      "id": "precept-ch-exodusdate",
-      "title": "Precept Austin — Exodus Chapter 15",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 15 — exodusdate.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusdate.jpg",
-      "full": "/visuals/exodus/precept_exodusdate.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusdate.jpg"
-      },
-      "chapters": [
-        15
-      ]
-    },
-    {
-      "id": "precept-ch-exodusdead",
-      "title": "Precept Austin — Exodus Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 7 — exodusdead.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusdead.jpg",
-      "full": "/visuals/exodus/precept_exodusdead.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusdead.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-exodusdead1",
-      "title": "Precept Austin — Exodus Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 7 — exodusdead1.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusdead1.jpg",
-      "full": "/visuals/exodus/precept_exodusdead1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusdead1.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-exodusdead2",
-      "title": "Precept Austin — Exodus Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 7 — exodusdead2.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusdead2.jpg",
-      "full": "/visuals/exodus/precept_exodusdead2.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusdead2.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-exoduseagle",
-      "title": "Precept Austin — Exodus Chapter 19",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 19 — exoduseagle.jpg.",
-      "thumb": "/visuals/exodus/precept_exoduseagle.jpg",
-      "full": "/visuals/exodus/precept_exoduseagle.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exoduseagle.jpg"
-      },
-      "chapters": [
-        19
-      ]
-    },
-    {
       "id": "precept-ch-exodusfleshpot",
       "title": "Precept Austin — Exodus Chapter 16",
       "caption": "Bruce Hurt's commentary chart for Exodus chapter 16 — exodusfleshpot.jpg.",
@@ -1145,78 +911,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-exodusfly",
-      "title": "Precept Austin — Exodus Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 8 — exodusfly.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusfly.jpg",
-      "full": "/visuals/exodus/precept_exodusfly.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusfly.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-exodusfrog",
-      "title": "Precept Austin — Exodus Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 8 — exodusfrog.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusfrog.jpg",
-      "full": "/visuals/exodus/precept_exodusfrog.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusfrog.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-exodusfrogheket",
-      "title": "Precept Austin — Exodus Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 8 — exodusfrogheket.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusfrogheket.jpg",
-      "full": "/visuals/exodus/precept_exodusfrogheket.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusfrogheket.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-exodusgeb",
-      "title": "Precept Austin — Exodus Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 8 — exodusgeb.png.",
-      "thumb": "/visuals/exodus/precept_exodusgeb.png",
-      "full": "/visuals/exodus/precept_exodusgeb.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusgeb.png"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
       "id": "precept-ch-exodusglory",
       "title": "Precept Austin — Exodus Chapter 40",
       "caption": "Bruce Hurt's commentary chart for Exodus chapter 40 — exodusglory.jpg.",
@@ -1232,60 +926,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         40
-      ]
-    },
-    {
-      "id": "precept-ch-exodusglorynight",
-      "title": "Precept Austin — Exodus Chapter 40",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 40 — exodusglorynight.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusglorynight.jpg",
-      "full": "/visuals/exodus/precept_exodusglorynight.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusglorynight.jpg"
-      },
-      "chapters": [
-        40
-      ]
-    },
-    {
-      "id": "precept-ch-exodushornet",
-      "title": "Precept Austin — Exodus Chapter 23",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 23 — exodushornet.jpg.",
-      "thumb": "/visuals/exodus/precept_exodushornet.jpg",
-      "full": "/visuals/exodus/precept_exodushornet.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodushornet.jpg"
-      },
-      "chapters": [
-        23
-      ]
-    },
-    {
-      "id": "precept-ch-exodushyssop",
-      "title": "Precept Austin — Exodus Chapter 12",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 12 — exodushyssop.jpg.",
-      "thumb": "/visuals/exodus/precept_exodushyssop.jpg",
-      "full": "/visuals/exodus/precept_exodushyssop.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodushyssop.jpg"
-      },
-      "chapters": [
-        12
       ]
     },
     {
@@ -1332,44 +972,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-exoduslapis",
-      "title": "Precept Austin — Exodus Chapter 24",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 24 — exoduslapis.jpg.",
-      "thumb": "/visuals/exodus/precept_exoduslapis.jpg",
-      "full": "/visuals/exodus/precept_exoduslapis.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exoduslapis.jpg"
-      },
-      "chapters": [
-        24
-      ]
-    },
-    {
-      "id": "precept-ch-exoduslaver",
-      "title": "Precept Austin — Exodus Chapters 30, 35, 40",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapters 30, 35, 40 — exoduslaver.jpg.",
-      "thumb": "/visuals/exodus/precept_exoduslaver.jpg",
-      "full": "/visuals/exodus/precept_exoduslaver.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exoduslaver.jpg"
-      },
-      "chapters": [
-        30,
-        35,
-        40
-      ]
-    },
-    {
       "id": "precept-ch-exodusmap",
       "title": "Precept Austin — Exodus Chapter 12",
       "caption": "Bruce Hurt's commentary chart for Exodus chapter 12 — exodusmap.gif.",
@@ -1385,116 +987,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         12
-      ]
-    },
-    {
-      "id": "precept-ch-exodusmercyseat",
-      "title": "Precept Austin — Exodus Chapters 25–26",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapters 25–26 — exodusmercyseat.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusmercyseat.jpg",
-      "full": "/visuals/exodus/precept_exodusmercyseat.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusmercyseat.jpg"
-      },
-      "chapters": [
-        25,
-        26
-      ]
-    },
-    {
-      "id": "precept-ch-exodusmirror",
-      "title": "Precept Austin — Exodus Chapter 38",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 38 — exodusmirror.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusmirror.jpg",
-      "full": "/visuals/exodus/precept_exodusmirror.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusmirror.jpg"
-      },
-      "chapters": [
-        38
-      ]
-    },
-    {
-      "id": "precept-ch-exodusmtsinai",
-      "title": "Precept Austin — Exodus Chapters 19, 24",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapters 19, 24 — exodusmtsinai.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusmtsinai.jpg",
-      "full": "/visuals/exodus/precept_exodusmtsinai.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusmtsinai.jpg"
-      },
-      "chapters": [
-        19,
-        24
-      ]
-    },
-    {
-      "id": "precept-ch-exodusnilegod",
-      "title": "Precept Austin — Exodus Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 7 — exodusnilegod.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusnilegod.jpg",
-      "full": "/visuals/exodus/precept_exodusnilegod.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusnilegod.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-exodusphylactery",
-      "title": "Precept Austin — Exodus Chapter 13",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 13 — exodusphylactery.gif.",
-      "thumb": "/visuals/exodus/precept_exodusphylactery.gif",
-      "full": "/visuals/exodus/precept_exodusphylactery.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusphylactery.gif"
-      },
-      "chapters": [
-        13
-      ]
-    },
-    {
-      "id": "precept-ch-exoduspriest",
-      "title": "Precept Austin — Exodus Chapter 40",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 40 — exoduspriest.jpg.",
-      "thumb": "/visuals/exodus/precept_exoduspriest.jpg",
-      "full": "/visuals/exodus/precept_exoduspriest.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exoduspriest.jpg"
-      },
-      "chapters": [
-        40
       ]
     },
     {
@@ -1535,78 +1027,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-exodusredmoses",
-      "title": "Precept Austin — Exodus Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 14 — exodusredmoses.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusredmoses.jpg",
-      "full": "/visuals/exodus/precept_exodusredmoses.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusredmoses.jpg"
-      },
-      "chapters": [
-        14
-      ]
-    },
-    {
-      "id": "precept-ch-exodusredsea",
-      "title": "Precept Austin — Exodus Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 14 — exodusredsea.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusredsea.jpg",
-      "full": "/visuals/exodus/precept_exodusredsea.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusredsea.jpg"
-      },
-      "chapters": [
-        14
-      ]
-    },
-    {
-      "id": "precept-ch-exodusshof",
-      "title": "Precept Austin — Exodus Chapter 19",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 19 — exodusshof.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusshof.jpg",
-      "full": "/visuals/exodus/precept_exodusshof.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusshof.jpg"
-      },
-      "chapters": [
-        19
-      ]
-    },
-    {
-      "id": "precept-ch-exodusshofar",
-      "title": "Precept Austin — Exodus Chapter 19",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 19 — exodusshofar.jpg.",
-      "thumb": "/visuals/exodus/precept_exodusshofar.jpg",
-      "full": "/visuals/exodus/precept_exodusshofar.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusshofar.jpg"
-      },
-      "chapters": [
-        19
-      ]
-    },
-    {
       "id": "precept-ch-exodusshowbread",
       "title": "Precept Austin — Exodus Chapters 25, 26, 37, 40",
       "caption": "Bruce Hurt's commentary chart for Exodus chapters 25, 26, 37, 40 — exodusshowbread.jpg.",
@@ -1625,26 +1045,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         26,
         37,
         40
-      ]
-    },
-    {
-      "id": "precept-ch-exodussin",
-      "title": "Precept Austin — Exodus Chapters 15–17",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapters 15–17 — exodussin.jpg.",
-      "thumb": "/visuals/exodus/precept_exodussin.jpg",
-      "full": "/visuals/exodus/precept_exodussin.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodussin.jpg"
-      },
-      "chapters": [
-        15,
-        16,
-        17
       ]
     },
     {
@@ -1746,26 +1146,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-exodustable",
-      "title": "Precept Austin — Exodus Chapters 25, 35, 37",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapters 25, 35, 37 — exodustable.jpg.",
-      "thumb": "/visuals/exodus/precept_exodustable.jpg",
-      "full": "/visuals/exodus/precept_exodustable.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodustable.jpg"
-      },
-      "chapters": [
-        25,
-        35,
-        37
-      ]
-    },
-    {
       "id": "precept-ch-exodustimeline",
       "title": "Precept Austin — Exodus Chapters 1–2",
       "caption": "Bruce Hurt's commentary chart for Exodus chapters 1–2 — exodustimeline.png.",
@@ -1785,25 +1165,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-exodustribeplacement",
-      "title": "Precept Austin — Exodus Chapters 26, 29",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapters 26, 29 — exodustribeplacement.jpg.",
-      "thumb": "/visuals/exodus/precept_exodustribeplacement.jpg",
-      "full": "/visuals/exodus/precept_exodustribeplacement.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodustribeplacement.jpg"
-      },
-      "chapters": [
-        26,
-        29
-      ]
-    },
-    {
       "id": "precept-ch-exodusvia",
       "title": "Precept Austin — Exodus Chapter 13",
       "caption": "Bruce Hurt's commentary chart for Exodus chapter 13 — exodusvia.png.",
@@ -1819,24 +1180,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         13
-      ]
-    },
-    {
-      "id": "precept-ch-exoduswall",
-      "title": "Precept Austin — Exodus Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 14 — exoduswall.jpg.",
-      "thumb": "/visuals/exodus/precept_exoduswall.jpg",
-      "full": "/visuals/exodus/precept_exoduswall.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exoduswall.jpg"
-      },
-      "chapters": [
-        14
       ]
     },
     {
@@ -1876,62 +1219,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-fish",
-      "title": "Precept Austin — Exodus Chapters 20, 34",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapters 20, 34 — fish.jpg.",
-      "thumb": "/visuals/exodus/precept_fish.jpg",
-      "full": "/visuals/exodus/precept_fish.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/fish.jpg"
-      },
-      "chapters": [
-        20,
-        34
-      ]
-    },
-    {
-      "id": "precept-ch-foxes",
-      "title": "Precept Austin — Exodus Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 17 — foxes.jpg.",
-      "thumb": "/visuals/exodus/precept_foxes.jpg",
-      "full": "/visuals/exodus/precept_foxes.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/foxes.jpg"
-      },
-      "chapters": [
-        17
-      ]
-    },
-    {
-      "id": "precept-ch-guard",
-      "title": "Precept Austin — Exodus Chapters 20, 34",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapters 20, 34 — guard.jpg.",
-      "thumb": "/visuals/exodus/precept_guard.jpg",
-      "full": "/visuals/exodus/precept_guard.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/guard.jpg"
-      },
-      "chapters": [
-        20,
-        34
-      ]
-    },
-    {
       "id": "precept-ch-judges_chart_small",
       "title": "Precept Austin — Exodus Chapter 23",
       "caption": "Bruce Hurt's commentary chart for Exodus chapter 23 — judges chart_small.gif.",
@@ -1947,60 +1234,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         23
-      ]
-    },
-    {
-      "id": "precept-ch-justice",
-      "title": "Precept Austin — Exodus Chapter 23",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 23 — justice.jpg.",
-      "thumb": "/visuals/exodus/precept_justice.jpg",
-      "full": "/visuals/exodus/precept_justice.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/justice.jpg"
-      },
-      "chapters": [
-        23
-      ]
-    },
-    {
-      "id": "precept-ch-lamb_of_god_passover_small",
-      "title": "Precept Austin — Exodus Chapter 12",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 12 — lamb of god passover_small.gif.",
-      "thumb": "/visuals/exodus/precept_lamb_of_god_passover_small.gif",
-      "full": "/visuals/exodus/precept_lamb_of_god_passover_small.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/lamb%20of%20God%20passover_small.gif"
-      },
-      "chapters": [
-        12
-      ]
-    },
-    {
-      "id": "precept-ch-locust",
-      "title": "Precept Austin — Exodus Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 10 — locust.jpg.",
-      "thumb": "/visuals/exodus/precept_locust.jpg",
-      "full": "/visuals/exodus/precept_locust.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/locust.jpg"
-      },
-      "chapters": [
-        10
       ]
     },
     {
@@ -2020,153 +1253,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "chapters": [
         2,
         3
-      ]
-    },
-    {
-      "id": "precept-ch-mirror",
-      "title": "Precept Austin — Exodus Chapters 20, 34",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapters 20, 34 — mirror.jpg.",
-      "thumb": "/visuals/exodus/precept_mirror.jpg",
-      "full": "/visuals/exodus/precept_mirror.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/mirror.jpg"
-      },
-      "chapters": [
-        20,
-        34
-      ]
-    },
-    {
-      "id": "precept-ch-moseshidden",
-      "title": "Precept Austin — Exodus Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 2 — moseshidden.jpg.",
-      "thumb": "/visuals/exodus/precept_moseshidden.jpg",
-      "full": "/visuals/exodus/precept_moseshidden.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/moseshidden.jpg"
-      },
-      "chapters": [
-        2
-      ]
-    },
-    {
-      "id": "precept-ch-moseskills",
-      "title": "Precept Austin — Exodus Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 2 — moseskills.jpg.",
-      "thumb": "/visuals/exodus/precept_moseskills.jpg",
-      "full": "/visuals/exodus/precept_moseskills.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/moseskills.jpg"
-      },
-      "chapters": [
-        2
-      ]
-    },
-    {
-      "id": "precept-ch-mosestriking",
-      "title": "Precept Austin — Exodus Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 17 — mosestriking.jpg.",
-      "thumb": "/visuals/exodus/precept_mosestriking.jpg",
-      "full": "/visuals/exodus/precept_mosestriking.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/mosestriking.jpg"
-      },
-      "chapters": [
-        17
-      ]
-    },
-    {
-      "id": "precept-ch-peda",
-      "title": "Precept Austin — Exodus Chapters 20, 34",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapters 20, 34 — peda.jpg.",
-      "thumb": "/visuals/exodus/precept_peda.jpg",
-      "full": "/visuals/exodus/precept_peda.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/peda.jpg"
-      },
-      "chapters": [
-        20,
-        34
-      ]
-    },
-    {
-      "id": "precept-ch-scales1",
-      "title": "Precept Austin — Exodus Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 7 — scales1.gif.",
-      "thumb": "/visuals/exodus/precept_scales1.gif",
-      "full": "/visuals/exodus/precept_scales1.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/scales1.gif"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-sheep_lamb_lying_down_small",
-      "title": "Precept Austin — Exodus Chapter 12",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 12 — sheep lamb lying down_small.jpg.",
-      "thumb": "/visuals/exodus/precept_sheep_lamb_lying_down_small.jpg",
-      "full": "/visuals/exodus/precept_sheep_lamb_lying_down_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/sheep%20lamb%20lying%20down_small.jpg"
-      },
-      "chapters": [
-        12
-      ]
-    },
-    {
-      "id": "precept-ch-sinaifire",
-      "title": "Precept Austin — Exodus Chapters 19, 24",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapters 19, 24 — sinaifire.jpg.",
-      "thumb": "/visuals/exodus/precept_sinaifire.jpg",
-      "full": "/visuals/exodus/precept_sinaifire.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/sinaifire.jpg"
-      },
-      "chapters": [
-        19,
-        24
       ]
     },
     {

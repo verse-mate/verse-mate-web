@@ -116,11 +116,66 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
     # Bruce embeds the same Exodus route map at TWO filenames; keep
     # exodusmap.gif and drop the byte-identical exodus.gif duplicate.
     "exodus": {
+        # Prior-preview removals.
         "genesistimeline.png",
         "exodus.gif",          # byte-identical dup of exodusmap.gif
         "pogrom.jpg",          # 1614 Frankfurt pogrom print — not biblical
         "taskmaster.jpg",      # generic illustrative art
         "aaronhur.jpg",        # byte-identical dup of exodusamalekite.jpg
+        # Audit pass (50 cards Andy marked from /audit/exodus.html) —
+        # plague illustrations, Sinai art, ritual-object photos, AI scene
+        # paintings (Moses striking the rock, Moses kills the Egyptian,
+        # etc.) plus a couple of generic stock photos.
+        "amalekite.jpg",
+        "burnbush.gif",
+        "exodus_15_bitter_water.jpg",
+        "exodusamalekite.jpg",
+        "exodusapis.jpg",
+        "exodusarke.jpg",
+        "exodusblood.jpg",
+        "exoduschariot.jpg",
+        "exodusdate.jpg",
+        "exodusdead.jpg",
+        "exodusdead1.jpg",
+        "exodusdead2.jpg",
+        "exoduseagle.jpg",
+        "exodusfly.jpg",
+        "exodusfrog.jpg",
+        "exodusfrogheket.jpg",
+        "exodusgeb.png",
+        "exodusglorynight.jpg",
+        "exodushornet.jpg",
+        "exodushyssop.jpg",
+        "exoduslapis.jpg",
+        "exoduslaver.jpg",
+        "exodusmercyseat.jpg",
+        "exodusmirror.jpg",
+        "exodusmtsinai.jpg",
+        "exodusnilegod.jpg",
+        "exodusphylactery.gif",
+        "exoduspriest.jpg",
+        "exodusredmoses.jpg",
+        "exodusredsea.jpg",
+        "exodusshof.jpg",
+        "exodusshofar.jpg",
+        "exodussin.jpg",
+        "exodustable.jpg",
+        "exodustribeplacement.jpg",
+        "exoduswall.jpg",
+        "fish.jpg",
+        "foxes.jpg",
+        "guard.jpg",
+        "justice.jpg",
+        "lamb_of_god_passover_small.gif",
+        "locust.jpg",
+        "mirror.jpg",
+        "moseshidden.jpg",
+        "moseskills.jpg",
+        "mosestriking.jpg",
+        "peda.jpg",
+        "scales1.gif",
+        "sheep_lamb_lying_down_small.jpg",
+        "sinaifire.jpg",
     },
     "leviticus": {
         "levi.png",        # stock photo of stacked commentary books
