@@ -92,6 +92,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
+      "id": "precept-chart",
+      "title": "Precept Austin — Genesis Chart",
+      "caption": "Bruce Hurt's inductive-study chart for Genesis, mapping the book's flow, key themes, and turning points. Drawn from Precept Austin's free verse-by-verse commentary.",
+      "thumb": "/visuals/genesis/precept_chart.png",
+      "full": "/visuals/genesis/precept_chart.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/genesis_book_of_beginnings.png"
+      }
+    },
+    {
       "id": "precept-ch-canaanmap",
       "title": "Precept Austin — Genesis Chapter 10",
       "caption": "Bruce Hurt's commentary chart for Genesis chapter 10 — canaanmap.jpg.",
@@ -261,25 +276,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-genesistimeline",
-      "title": "Precept Austin — Exodus Chapters 1–2",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapters 1–2 — genesistimeline.png.",
-      "thumb": "/visuals/exodus/precept_genesistimeline.png",
-      "full": "/visuals/exodus/precept_genesistimeline.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/genesistimeline.png"
-      },
-      "chapters": [
-        1,
-        2
-      ]
-    },
-    {
       "id": "precept-ch-midian1",
       "title": "Precept Austin — Exodus Chapters 2–3",
       "caption": "Bruce Hurt's commentary chart for Exodus chapters 2–3 — midian1.jpg.",
@@ -358,21 +354,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-chart",
-      "title": "Precept Austin — Leviticus Chart",
-      "caption": "Bruce Hurt's inductive-study chart for Leviticus, mapping the book's flow, key themes, and turning points. Drawn from Precept Austin's free verse-by-verse commentary.",
-      "thumb": "/visuals/leviticus/precept_chart.png",
-      "full": "/visuals/leviticus/precept_chart.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/leviticus.png"
-      }
-    },
-    {
       "id": "precept-ch-tabernacle_schematic2",
       "title": "Precept Austin — Leviticus Chapters 1, 3, 4, 8",
       "caption": "Bruce Hurt's commentary chart for Leviticus chapters 1, 3, 4, 8 — tabernacle schematic2.gif.",
@@ -431,6 +412,36 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Original PDF",
         "href": "https://cdn.iflmedia.com/pdf/bible-charts/Numbers-Bible-chart.pdf"
+      }
+    },
+    {
+      "id": "precept-book-numbers",
+      "title": "Precept Austin — Numbers (numbers.jpg)",
+      "caption": "Bruce Hurt's chart embedded across multiple Numbers chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/numbers/precept_numbers.jpg",
+      "full": "/visuals/numbers/precept_numbers.jpg",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/numbers.jpg"
+      }
+    },
+    {
+      "id": "precept-book-numberstime",
+      "title": "Precept Austin — Numbers (numberstime.jpg)",
+      "caption": "Bruce Hurt's chart embedded across multiple Numbers chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/numbers/precept_numberstime.jpg",
+      "full": "/visuals/numbers/precept_numberstime.jpg",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/numberstime.jpg"
       }
     },
     {
@@ -523,6 +534,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/deutchart.png"
+      }
+    },
+    {
+      "id": "precept-book-deuttime",
+      "title": "Precept Austin — Deuteronomy (deuttime.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple Deuteronomy chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/deuteronomy/precept_deuttime.png",
+      "full": "/visuals/deuteronomy/precept_deuttime.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/deuttime.png"
       }
     }
   ]
@@ -699,6 +725,21 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Original PDF",
         "href": "https://cdn.iflmedia.com/pdf/bible-charts/Judges-Bible-chart.pdf"
+      }
+    },
+    {
+      "id": "precept-book-judgesjensen",
+      "title": "Precept Austin — Judges (judgesjensen.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple Judges chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/judges/precept_judgesjensen.png",
+      "full": "/visuals/judges/precept_judgesjensen.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/judgesjensen.png"
       }
     },
     {
@@ -1083,6 +1124,36 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/1samap.png"
       }
+    },
+    {
+      "id": "precept-book-2saplot",
+      "title": "Precept Austin — 2 Samuel (2saplot.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple 2 Samuel chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/2-samuel/precept_2saplot.png",
+      "full": "/visuals/2-samuel/precept_2saplot.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/2saplot.png"
+      }
+    },
+    {
+      "id": "precept-book-2satime",
+      "title": "Precept Austin — 2 Samuel (2satime.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple 2 Samuel chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/2-samuel/precept_2satime.png",
+      "full": "/visuals/2-samuel/precept_2satime.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/2satime.png"
+      }
     }
   ]
 },
@@ -1137,6 +1208,36 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/1kichart.png"
+      }
+    },
+    {
+      "id": "precept-book-1kichart2",
+      "title": "Precept Austin — 1 Kings (1kichart2.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple 1 Kings chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/1-kings/precept_1kichart2.png",
+      "full": "/visuals/1-kings/precept_1kichart2.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/1kichart2.png"
+      }
+    },
+    {
+      "id": "precept-book-12kingsall",
+      "title": "Precept Austin — 1 Kings (12kingsall.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple 1 Kings chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/1-kings/precept_12kingsall.png",
+      "full": "/visuals/1-kings/precept_12kingsall.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/12kingsall.png"
       }
     },
     {
@@ -1688,6 +1789,51 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
+      "id": "precept-book-1chrtimeline",
+      "title": "Precept Austin — 1 Chronicles (1chrtimeline.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple 1 Chronicles chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/1-chronicles/precept_1chrtimeline.png",
+      "full": "/visuals/1-chronicles/precept_1chrtimeline.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/1chrtimeline.png"
+      }
+    },
+    {
+      "id": "precept-book-1kichart",
+      "title": "Precept Austin — 1 Chronicles (1kichart.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple 1 Chronicles chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/1-chronicles/precept_1kichart.png",
+      "full": "/visuals/1-chronicles/precept_1kichart.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/1kichart.png"
+      }
+    },
+    {
+      "id": "precept-book-1kichart2",
+      "title": "Precept Austin — 1 Chronicles (1kichart2.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple 1 Chronicles chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/1-chronicles/precept_1kichart2.png",
+      "full": "/visuals/1-chronicles/precept_1kichart2.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/1kichart2.png"
+      }
+    },
+    {
       "id": "precept-ch-1chronicles",
       "title": "Precept Austin — 1 Chronicles Chapter 1",
       "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 1 — 1chronicles.png.",
@@ -1812,6 +1958,51 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/2chronicles.jpg"
+      }
+    },
+    {
+      "id": "precept-book-2chrtime",
+      "title": "Precept Austin — 2 Chronicles (2chrtime.jpg)",
+      "caption": "Bruce Hurt's chart embedded across multiple 2 Chronicles chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/2-chronicles/precept_2chrtime.jpg",
+      "full": "/visuals/2-chronicles/precept_2chrtime.jpg",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/2chrtime.jpg"
+      }
+    },
+    {
+      "id": "precept-book-1kichart",
+      "title": "Precept Austin — 2 Chronicles (1kichart.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple 2 Chronicles chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/2-chronicles/precept_1kichart.png",
+      "full": "/visuals/2-chronicles/precept_1kichart.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/1kichart.png"
+      }
+    },
+    {
+      "id": "precept-book-1kichart2",
+      "title": "Precept Austin — 2 Chronicles (1kichart2.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple 2 Chronicles chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/2-chronicles/precept_1kichart2.png",
+      "full": "/visuals/2-chronicles/precept_1kichart2.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/1kichart2.png"
       }
     },
     {
@@ -2087,6 +2278,66 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/ezrachart.png"
       }
+    },
+    {
+      "id": "precept-book-ezrahistory",
+      "title": "Precept Austin — Ezra (ezrahistory.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple Ezra chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/ezra/precept_ezrahistory.png",
+      "full": "/visuals/ezra/precept_ezrahistory.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/ezrahistory.png"
+      }
+    },
+    {
+      "id": "precept-book-ezrahistroy2",
+      "title": "Precept Austin — Ezra (ezrahistroy2.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple Ezra chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/ezra/precept_ezrahistroy2.png",
+      "full": "/visuals/ezra/precept_ezrahistroy2.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/ezrahistroy2.png"
+      }
+    },
+    {
+      "id": "precept-book-ezrareturn",
+      "title": "Precept Austin — Ezra (ezrareturn.png)",
+      "caption": "Bruce Hurt's chart embedded across multiple Ezra chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/ezra/precept_ezrareturn.png",
+      "full": "/visuals/ezra/precept_ezrareturn.png",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/ezrareturn.png"
+      }
+    },
+    {
+      "id": "precept-book-persiaezraesv",
+      "title": "Precept Austin — Ezra (persiaezraesv.jpg)",
+      "caption": "Bruce Hurt's chart embedded across multiple Ezra chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/ezra/precept_persiaezraesv.jpg",
+      "full": "/visuals/ezra/precept_persiaezraesv.jpg",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/persiaezraesv.jpg"
+      }
     }
   ]
 },
@@ -2141,6 +2392,36 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/nehemiahchart.png"
+      }
+    },
+    {
+      "id": "precept-book-persiannehemiahesv",
+      "title": "Precept Austin — Nehemiah (persiannehemiahesv.jpg)",
+      "caption": "Bruce Hurt's chart embedded across multiple Nehemiah chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/nehemiah/precept_persiannehemiahesv.jpg",
+      "full": "/visuals/nehemiah/precept_persiannehemiahesv.jpg",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/persiannehemiahesv.jpg"
+      }
+    },
+    {
+      "id": "precept-book-nehemiah",
+      "title": "Precept Austin — Nehemiah (nehemiah.jpg)",
+      "caption": "Bruce Hurt's chart embedded across multiple Nehemiah chapters on Precept Austin's commentary.",
+      "thumb": "/visuals/nehemiah/precept_nehemiah.jpg",
+      "full": "/visuals/nehemiah/precept_nehemiah.jpg",
+      "attribution": {
+        "label": "Precept Austin · Bruce Hurt",
+        "href": "https://www.preceptaustin.org/"
+      },
+      "download": {
+        "label": "Source image",
+        "href": "https://www.preceptaustin.org/files/images/nehemiah.jpg"
       }
     }
   ]
