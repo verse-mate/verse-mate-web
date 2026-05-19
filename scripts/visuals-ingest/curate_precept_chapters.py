@@ -75,7 +75,7 @@ GLOBAL_FILENAME_SUBSTRINGS_DENY: tuple[str, ...] = (
     # Bruce's AI-generated Jesus parable illustrations
     "jesus-",
     "jesusarrest", "jesusbeating", "jesuscamel", "jesuscarrying",
-    "jesuscondemned", "jesuscross", "jesusdivorce",
+    "jesuscondemned", "jesuscross", "jesusdivorce", "jesuschild",
     # AI-generated OT scene illustrations (Joash crowning, etc.)
     "joashcrown", "joramcrown",
     # Stock-photo sermon illustrations
@@ -94,6 +94,7 @@ GLOBAL_FILENAME_SUBSTRINGS_DENY: tuple[str, ...] = (
     "cup.jpg", "fishhook", "judaskiss", "lostsheep",
     "mustard.gif", "mustard1", "mustardseed",
     "noman.jpg", "pearl", "pitcher1", "prison.webp",
+    "prison.png", "prison.webp", "prison.jpg",
     "recline", "reed.jpg", "reprove", "rich.jpg",
     "sandals.jpg", "scribe.jpg", "sheepgoats", "sower.jpg",
     "sower1", "tassel", "tear.png", "tomb.jpg", "torture",

@@ -26365,25 +26365,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-jesuschild",
-      "title": "Precept Austin — Matthew Chapters 18–19",
-      "caption": "Bruce Hurt's commentary chart for Matthew chapters 18–19 — jesuschild.webp.",
-      "thumb": "/visuals/matthew/precept_jesuschild.png",
-      "full": "/visuals/matthew/precept_jesuschild.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/jesuschild.webp"
-      },
-      "chapters": [
-        18,
-        19
-      ]
-    },
-    {
       "id": "precept-ch-johnb",
       "title": "Precept Austin — Matthew Chapter 3",
       "caption": "Bruce Hurt's commentary chart for Matthew chapter 3 — johnb.jpg.",
@@ -28540,24 +28521,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         11
-      ]
-    },
-    {
-      "id": "precept-ch-jesuschild",
-      "title": "Precept Austin — Mark Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for Mark chapter 10 — jesuschild.png.",
-      "thumb": "/visuals/mark/precept_jesuschild.png",
-      "full": "/visuals/mark/precept_jesuschild.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/jesuschild.png"
-      },
-      "chapters": [
-        10
       ]
     },
     {
