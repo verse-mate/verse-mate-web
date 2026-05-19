@@ -182,6 +182,29 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "leviticus.png",   # same decorative photo, alt filename (was in
                            # PRECEPT_CHARTS pre-#164; loose filter pulls
                            # it back from /leviticus_commentaries index)
+        # Audit pass (20 cards Andy marked from /audit/leviticus.html) —
+        # Hebrew-calendar reuse, AI/sermon priest illustrations, ritual
+        # object photos, Day-of-Atonement scene panels.
+        "calen.jpg",
+        "circumcise.jpg",
+        "circumcision.png",
+        "exodusmtsinai.jpg",
+        "firstfruits.jpg",
+        "goats.png",
+        "holiday.jpg",
+        "lev1614.png",
+        "lev166a.png",
+        "lev167b.png",
+        "liberty.jpg",
+        "menorah.jpg",
+        "mercyseat.jpg",
+        "nadab.jpg",
+        "priest.jpg",
+        "rejoice.png",
+        "ripples.jpg",
+        "shofar1.jpg",
+        "thronegrace.png",
+        "yom.jpg",
     },
     "deuteronomy": {
         "mosesnebo1.png",  # AI-style art of Moses on Nebo
