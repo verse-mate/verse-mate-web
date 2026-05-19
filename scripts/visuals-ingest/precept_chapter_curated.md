@@ -2517,7 +2517,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 ### Per-chapter
 - **Ch 9** · dis10-3.gif (score 0) <https://www.preceptaustin.org/files/images/dis10-3.gif>
 
-## zechariah — 5 book-level, 14 per-chapter (probed 5 chapters)
+## zechariah — 5 book-level, 8 per-chapter (probed 5 chapters)
 
 ### Book-level
 - zechmap.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/zechmap.jpg>
@@ -2526,37 +2526,27 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - zechtime.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/zechtime.png>
 - prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
 ### Per-chapter
-- **Ch 4** · zechariaholive.jpg (score 0) <https://www.preceptaustin.org/files/images/zechariaholive.jpg>
-- **Ch 5** · zechariahscroll.jpg (score 0) <https://www.preceptaustin.org/files/images/zechariahscroll.jpg>
 - **Ch 12** · armageddon.jpg (score 0) <https://www.preceptaustin.org/files/images/Armageddon.jpg>
-- **Ch 12** · templemount.jpg (score 0) <https://www.preceptaustin.org/files/images/templemount.jpg>
-- **Ch 13** · artesian_well.png (score 2) <https://www.preceptaustin.org/files/images/Artesian_Well.png>
 - **Ch 14** · zech14chart.jpg (score 10) <https://www.preceptaustin.org/files/images/zech14chart.jpg>
 - **Ch 14** · zechtimeline.jpg (score 10) <https://www.preceptaustin.org/files/images/zechtimeline.jpg>
 - **Ch 14** · dolsummary.jpg (score 3) <https://www.preceptaustin.org/files/images/dolsummary.jpg>
-- **Ch 14** · dolapply.jpg (score 0) <https://www.preceptaustin.org/files/images/dolapply.jpg>
 - **Ch 14** · dolho.jpg (score 0) <https://www.preceptaustin.org/files/images/dolho.jpg>
 - **Ch 14** · millennium.gif (score 0) <https://www.preceptaustin.org/files/images/millennium.gif>
 - **Ch 14** · zechluther.jpg (score 0) <https://www.preceptaustin.org/files/images/zechluther.jpg>
-- **Ch 14** · zechreturn.jpg (score 0) <https://www.preceptaustin.org/files/images/zechreturn.jpg>
 - **Ch 14** · zechwar.jpg (score 0) <https://www.preceptaustin.org/files/images/zechwar.jpg>
 
-## zephaniah — 9 book-level, 15 per-chapter (probed 3 chapters)
+## zephaniah — 7 book-level, 10 per-chapter (probed 3 chapters)
 
 ### Book-level
 - dolchart1.jpg (score 10, 2 chapters) <https://www.preceptaustin.org/files/images/DOLchart1.jpg>
 - zephaniahmap.jpg (score 10, 2 chapters) <https://www.preceptaustin.org/files/images/zephaniahmap.jpg>
 - zephaniah_setting.png (score 2, 3 chapters) <https://www.preceptaustin.org/files/images/zephaniah_setting.png>
 - prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
-- zeph-1.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/zeph-1.gif>
 - zeph1.jpg (score 0, 2 chapters) <https://www.preceptaustin.org/files/images/zeph1.jpg>
-- zephaniah.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/Zephaniah.jpg>
 - zephdol.jpg (score 0, 2 chapters) <https://www.preceptaustin.org/files/images/zephdol.jpg>
 - zephsum.jpg (score 0, 3 chapters) <https://www.preceptaustin.org/files/images/zephsum.jpg>
 ### Per-chapter
 - **Ch 1** · jerusalemnehemiah1.png (score 2) <https://www.preceptaustin.org/files/images/jerusalemnehemiah1.png>
-- **Ch 1** · nearfar.png (score 2) <https://www.preceptaustin.org/files/images/nearfar.png>
-- **Ch 1** · dolart.jpg (score 0) <https://www.preceptaustin.org/files/images/DOLart.jpg>
 - **Ch 1** · joel3.jpg (score 0) <https://www.preceptaustin.org/files/images/joel3.jpg>
 - **Ch 1** · zephtime.jpg (score 0) <https://www.preceptaustin.org/files/images/zephtime.jpg>
 - **Ch 2** · dolchart2.jpg (score 10) <https://www.preceptaustin.org/files/images/DOLchart2.jpg>
@@ -2565,7 +2555,4 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 2** · zeph214.png (score 2) <https://www.preceptaustin.org/files/images/zeph214.png>
 - **Ch 2** · zeph26.png (score 2) <https://www.preceptaustin.org/files/images/zeph26.png>
 - **Ch 2** · zeph28.png (score 2) <https://www.preceptaustin.org/files/images/zeph28.png>
-- **Ch 2** · nineveh.jpg (score 0) <https://www.preceptaustin.org/files/images/nineveh.jpg>
-- **Ch 2** · nineveh1.jpg (score 0) <https://www.preceptaustin.org/files/images/nineveh1.jpg>
-- **Ch 2** · nineveh4.jpg (score 0) <https://www.preceptaustin.org/files/images/nineveh4.jpg>
 - **Ch 3** · zeph3sum.jpg (score 0) <https://www.preceptaustin.org/files/images/zeph3sum.jpg>

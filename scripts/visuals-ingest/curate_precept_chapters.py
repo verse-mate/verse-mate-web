@@ -956,6 +956,28 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         # V4 auto-prune pass (character + scene patterns)
         "malachidol.jpg",
     },
+    "zephaniah": {
+        # Audit pass — Day-of-the-Lord art (dolart, nearfar), Nineveh
+        # photos used across multiple books, generic Zephaniah image.
+        "dolart.jpg",
+        "nearfar.png",
+        "nineveh.jpg",
+        "nineveh1.jpg",
+        "nineveh4.jpg",
+        "zeph-1.gif",
+        "zephaniah.jpg",
+    },
+    "zechariah": {
+        # Audit pass — artesian well stock, Day-of-Lord apply chart,
+        # Temple Mount photo, AI olive-lampstand vision, scroll AI,
+        # zech-return decorative.
+        "artesian_well.png",
+        "dolapply.jpg",
+        "templemount.jpg",
+        "zechariaholive.jpg",
+        "zechariahscroll.jpg",
+        "zechreturn.jpg",
+    },
     "proverbs": {
         # Audit pass (7 cards Andy marked from /audit/proverbs.html) —
         # generic sermon-prop stocks (ear, fork in the road, heart gif,
