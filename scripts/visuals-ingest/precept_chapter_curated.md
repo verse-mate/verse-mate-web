@@ -407,17 +407,14 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 31** · davidflee.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflee.jpg>
 - **Ch 31** · saulsbody.jpg (score 0) <https://www.preceptaustin.org/files/images/saulsbody.jpg>
 
-## 1-timothy — 3 book-level, 4 per-chapter (probed 6 chapters)
+## 1-timothy — 3 book-level, 1 per-chapter (probed 6 chapters)
 
 ### Book-level
 - 1timothymap.jpg (score 10, 6 chapters) <https://www.preceptaustin.org/files/images/1timothymap.jpg>
 - 1ti.png (score 2, 6 chapters) <https://www.preceptaustin.org/files/images/1ti.png>
 - 1timothytime.jpg (score 0, 6 chapters) <https://www.preceptaustin.org/files/images/1timothytime.jpg>
 ### Per-chapter
-- **Ch 1** · mirror.jpg (score 0) <https://www.preceptaustin.org/files/images/mirror.jpg>
-- **Ch 1** · peda.jpg (score 0) <https://www.preceptaustin.org/files/images/peda.jpg>
 - **Ch 2** · gospel bridge 3.gif (score 0) <https://www.preceptaustin.org/files/images/gospel%20bridge%203.gif>
-- **Ch 5** · thresh.jpg (score 0) <https://www.preceptaustin.org/files/images/thresh.jpg>
 
 ## 2-chronicles — 8 book-level, 161 per-chapter (probed 36 chapters)
 
@@ -593,34 +590,22 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 36** · messiahslinethroughjoseph.png (score 2) <https://www.preceptaustin.org/files/images/messiahslinethroughjoseph.png>
 - **Ch 36** · east gate w color_small.jpg (score 0) <https://www.preceptaustin.org/files/images/east%20gate%20w%20color_small.jpg>
 
-## 2-corinthians — 7 book-level, 17 per-chapter (probed 13 chapters)
+## 2-corinthians — 5 book-level, 7 per-chapter (probed 13 chapters)
 
 ### Book-level
 - 2cor.png (score 2, 13 chapters) <https://www.preceptaustin.org/files/images/2cor.png>
 - 3missionaryjourney.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/3missionaryjourney.gif>
-- acrocorinth.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/acrocorinth.jpg>
 - corinth.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/corinth.gif>
 - corinth.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/corinth.jpg>
 - corinth_city.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/corinth_city.jpg>
-- letter.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/letter.jpg>
 ### Per-chapter
 - **Ch 1** · 3missionaryjourney.gif (score 0) <https://www.preceptaustin.org/files/images/3missionaryjourney.gif>
-- **Ch 1** · acrocorinth.jpg (score 0) <https://www.preceptaustin.org/files/images/acrocorinth.jpg>
 - **Ch 1** · corinth.jpg (score 0) <https://www.preceptaustin.org/files/images/corinth.jpg>
-- **Ch 1** · letter.jpg (score 0) <https://www.preceptaustin.org/files/images/letter.jpg>
 - **Ch 2** · 3missionaryjourney.gif (score 0) <https://www.preceptaustin.org/files/images/3missionaryjourney.gif>
-- **Ch 2** · triumphal.jpg (score 0) <https://www.preceptaustin.org/files/images/triumphal.jpg>
-- **Ch 5** · bema2.jpg (score 0) <https://www.preceptaustin.org/files/images/bema2.jpg>
-- **Ch 5** · bemajesus.jpg (score 0) <https://www.preceptaustin.org/files/images/bemajesus.jpg>
-- **Ch 8** · equil.png (score 2) <https://www.preceptaustin.org/files/images/equil.png>
-- **Ch 8** · acrocorinth.jpg (score 0) <https://www.preceptaustin.org/files/images/acrocorinth.jpg>
 - **Ch 8** · corinth.jpg (score 0) <https://www.preceptaustin.org/files/images/corinth.jpg>
 - **Ch 8** · giving.jpg (score 0) <https://www.preceptaustin.org/files/images/giving.jpg>
-- **Ch 9** · acrocorinth.jpg (score 0) <https://www.preceptaustin.org/files/images/acrocorinth.jpg>
 - **Ch 9** · corinth.jpg (score 0) <https://www.preceptaustin.org/files/images/corinth.jpg>
 - **Ch 9** · giving.jpg (score 0) <https://www.preceptaustin.org/files/images/giving.jpg>
-- **Ch 9** · letter.jpg (score 0) <https://www.preceptaustin.org/files/images/letter.jpg>
-- **Ch 11** · fust.jpg (score 0) <https://www.preceptaustin.org/files/images/fust.jpg>
 
 ## 2-kings — 12 book-level, 283 per-chapter (probed 25 chapters)
 
@@ -969,13 +954,11 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 24** · moriah.png (score 2) <https://www.preceptaustin.org/files/images/moriah.png>
 - **Ch 24** · domerock1.jpg (score 0) <https://www.preceptaustin.org/files/images/domerock1.jpg>
 
-## 2-thessalonians — 1 book-level, 4 per-chapter (probed 3 chapters)
+## 2-thessalonians — 1 book-level, 2 per-chapter (probed 3 chapters)
 
 ### Book-level
 - 2th.png (score 2, 3 chapters) <https://www.preceptaustin.org/files/images/2th.png>
 ### Per-chapter
-- **Ch 1** · suffering.jpg (score 0) <https://www.preceptaustin.org/files/images/suffering.jpg>
-- **Ch 2** · dayofwrath.jpg (score 0) <https://www.preceptaustin.org/files/images/dayofwrath.jpg>
 - **Ch 2** · tribulationfalse.jpg (score 0) <https://www.preceptaustin.org/files/images/tribulationfalse.jpg>
 - **Ch 2** · tribulationtrue.jpg (score 0) <https://www.preceptaustin.org/files/images/tribulationtrue.jpg>
 
@@ -1383,7 +1366,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 17** · zedekiahnet1.png (score 2) <https://www.preceptaustin.org/files/images/zedekiahnet1.png>
 - **Ch 17** · covenant - salvator rosa 1615-1673_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Covenant%20-%20Salvator%20Rosa%201615-1673_small.jpg>
 
-## galatians — 3 book-level, 6 per-chapter (probed 6 chapters)
+## galatians — 3 book-level, 3 per-chapter (probed 6 chapters)
 
 ### Book-level
 - galmap.gif (score 10, 6 chapters) <https://www.preceptaustin.org/files/images/galmap.gif>
@@ -1391,10 +1374,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - galtiming.png (score 2, 3 chapters) <https://www.preceptaustin.org/files/images/galtiming.png>
 ### Per-chapter
 - **Ch 1** · galchron.png (score 12) <https://www.preceptaustin.org/files/images/galchron.png>
-- **Ch 2** · paulpeter.jpg (score 0) <https://www.preceptaustin.org/files/images/paulpeter.jpg>
 - **Ch 3** · 430.jpg (score 0) <https://www.preceptaustin.org/files/images/430.jpg>
-- **Ch 3** · mirror.jpg (score 0) <https://www.preceptaustin.org/files/images/mirror.jpg>
-- **Ch 3** · peda.jpg (score 0) <https://www.preceptaustin.org/files/images/peda.jpg>
 - **Ch 5** · liberty1.jpg (score 0) <https://www.preceptaustin.org/files/images/liberty1.jpg>
 
 ## genesis — 0 book-level, 53 per-chapter (probed 25 chapters)

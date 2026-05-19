@@ -615,6 +615,10 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         # V4 auto-prune pass (character + scene patterns)
         "paul_epistle.jpg",
         "yoke.jpg",
+        # Audit pass
+        "mirror.jpg",
+        "paulpeter.jpg",
+        "peda.jpg",
     },
     "2-kings": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
@@ -800,6 +804,10 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "mousetrap.jpg",
         # V4 auto-prune pass (character + scene patterns)
         "paul_epistle.jpg",
+        # Audit pass
+        "mirror.jpg",
+        "peda.jpg",
+        "thresh.jpg",
     },
     "mark": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
@@ -1287,10 +1295,21 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         # V4 auto-prune pass (character + scene patterns)
         "paul_epistle.jpg",
         "yoke.jpg",
+        # Audit pass
+        "acrocorinth.jpg",
+        "bema2.jpg",
+        "bemajesus.jpg",
+        "equil.png",
+        "fust.jpg",
+        "letter.jpg",
+        "triumphal.jpg",
     },
     "2-thessalonians": {
         # V4 auto-prune pass (character + scene patterns)
         "paul_epistle.jpg",
+        # Audit pass
+        "dayofwrath.jpg",
+        "suffering.jpg",
     },
     "colossians": {
         # V4 auto-prune pass (character + scene patterns)
