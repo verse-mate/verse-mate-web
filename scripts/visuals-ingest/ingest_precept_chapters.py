@@ -160,6 +160,17 @@ def ingest_book(slug: str, data: dict, dry_run: bool) -> tuple[int, int]:
         try:
             raw = fetch_bytes(url)
             size = save_image(raw, target, target.suffix)
+            # Drop anything that lands over 2 MB on disk. PIL's 1600px
+            # resize only triggers on width, so tall PNGs (Bruce's AI
+            # full-page scenes, often 1024×2048+) come in 3-4 MB even
+            # after resize. Rather than re-encoding heuristically we
+            # just skip them — they're virtually always decorative
+            # AI art, not study-grade reference.
+            MAX_BYTES = 2 * 1024 * 1024
+            if size > MAX_BYTES:
+                target.unlink()
+                print(f"  · {slug:18}  {name}  ({size // 1024} KB, >2MB — dropped)")
+                continue
             print(f"  ✓ {slug:18}  {name}  ({size // 1024} KB)")
             saved += 1
             time.sleep(0.1)

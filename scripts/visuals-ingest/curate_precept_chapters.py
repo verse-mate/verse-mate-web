@@ -64,6 +64,53 @@ BOOK_LEVEL_FILENAMES = {Path(fn).name.lower() for fn in PRECEPT_CHARTS.values()}
 # (e.g. the Genesis timeline at the start of Exodus to set up the
 # patriarchal chronology). Those still pass the score heuristic; we
 # exclude them by hand here.
+# Filenames matching any of these substrings are excluded across every
+# book. Bruce embeds dozens of AI-generated parable/sermon illustrations
+# and stock-photo sermon visuals (military "about face", balance scales,
+# crowns, ships in storms) which read as decorative pulpit content
+# rather than study-grade biblical reference. Per-book exceptions can
+# still override individual filenames via PER_BOOK_FILENAME_DENYLIST if
+# needed.
+GLOBAL_FILENAME_SUBSTRINGS_DENY: tuple[str, ...] = (
+    # Bruce's AI-generated Jesus parable illustrations
+    "jesus-",
+    "jesusarrest", "jesusbeating", "jesuscamel", "jesuscarrying",
+    "jesuscondemned", "jesuscross", "jesusdivorce",
+    # AI-generated OT scene illustrations (Joash crowning, etc.)
+    "joashcrown", "joramcrown",
+    # Stock-photo sermon illustrations
+    "aboutface",          # military "about face" → "repent"
+    "balance.jpg",        # generic scales-of-justice stock
+    "longfuse",           # generic "long fuse" sermon illustration
+    "church_holy_spirit", # stock church + dove
+    "crown_small", "crown.gif", "crown.png",
+    "shipstorm",          # storm-on-the-sea decorative
+    "lastsupper1",        # decorative DaVinci-style art
+    "baptismjesus",       # decorative baptism scene
+    "transfig.jpg",       # decorative transfiguration art
+    # Decorative single-object stock photos used as sermon props
+    "balance.jpg", "beat.jpg", "bind.png", "bind.webp",
+    "fear.png", "fig.jpg", "fig1.png",
+    "cup.jpg", "fishhook", "judaskiss", "lostsheep",
+    "mustard.gif", "mustard1", "mustardseed",
+    "noman.jpg", "pearl", "pitcher1", "prison.webp",
+    "recline", "reed.jpg", "reprove", "rich.jpg",
+    "sandals.jpg", "scribe.jpg", "sheepgoats", "sower.jpg",
+    "sower1", "tassel", "tear.png", "tomb.jpg", "torture",
+    "wept.jpg",
+    # Numbered sermon-slide fragments from a Matthew 13 set
+    "mt131.png", "mt132.png", "mt134.png", "mt135.png",
+    "mt136.png", "mt137.png", "mt138.png",
+    "shepherdholding", "pilateswife", "kingofjews",
+    "last.png", "who.png", "waiting.png", "leaven.gif",
+    "broad1", "twoone",
+    "eccl-fear", "eccl-tear",
+    "elijahfear",
+    # Ecclesiastes parable visualizations
+    "luke16rich",
+)
+
+
 PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
     # Bruce embeds the same Exodus route map at TWO filenames; keep
     # exodusmap.gif and drop the byte-identical exodus.gif duplicate.
@@ -295,6 +342,9 @@ def main() -> None:
 
         denylist = PER_BOOK_FILENAME_DENYLIST.get(slug, set())
 
+        def is_globally_denied(fn: str) -> bool:
+            return any(sub in fn for sub in GLOBAL_FILENAME_SUBSTRINGS_DENY)
+
         # Pass 1: collect every (chapter, filename) candidate that beats
         # the MIN_SCORE threshold. We track which chapters each filename
         # appears on so we can split book-level vs chapter-specific.
@@ -305,7 +355,7 @@ def main() -> None:
             for img_url in info.get("images") or []:
                 total_seen += 1
                 fn = url_filename(img_url)
-                if fn in denylist:
+                if fn in denylist or is_globally_denied(fn):
                     continue
                 sc = score(fn)
                 if sc < MIN_SCORE:
@@ -339,7 +389,7 @@ def main() -> None:
         seen_book_fns = {e["filename"] for e in book_level}
         for img_url in index_data.get("images") or []:
             fn = url_filename(img_url)
-            if fn in denylist or fn in seen_book_fns:
+            if fn in denylist or fn in seen_book_fns or is_globally_denied(fn):
                 continue
             sc = score(fn)
             if sc < MIN_SCORE:
@@ -353,6 +403,69 @@ def main() -> None:
             })
             seen_book_fns.add(fn)
             total_seen += 1
+
+        # Enforce "one map per chapter / one map per book". Bruce often
+        # embeds two or three overlapping maps on the same chapter page
+        # (a generic Israel map plus a battle-specific one plus a
+        # regional one). For UX the user wants the highest-signal map
+        # only — drop the others from the relevant scopes. Identification
+        # is by substring "map" in the filename.
+        def _is_map(fn: str) -> bool:
+            return "map" in fn.lower()
+
+        # First pass: build a canonical reference per filename so updates
+        # to chapters arrays propagate across the per_chapter[ch] lists
+        # (each list holds a separate dict after dedup, but they share
+        # filename identity).
+        canonical_entry: dict[str, dict] = {}
+        for ch_list in per_chapter.values():
+            for e in ch_list:
+                canonical_entry.setdefault(e["filename"], e)
+
+        # Per-chapter: walk each chapter, pick the top map, demote the
+        # rest from this chapter (both in the list and in their chapters
+        # arrays so build_manifests sees the narrower scope).
+        for ch_str in sorted(per_chapter, key=int):
+            ch_int = int(ch_str)
+            maps = [e for e in per_chapter[ch_str] if _is_map(e["filename"])]
+            if len(maps) <= 1:
+                continue
+            maps.sort(key=lambda c: (-c["score"], c["filename"]))
+            winner_fn = maps[0]["filename"]
+            kept = []
+            for e in per_chapter[ch_str]:
+                if _is_map(e["filename"]) and e["filename"] != winner_fn:
+                    # Remove this chapter from the canonical entry's range
+                    canon = canonical_entry[e["filename"]]
+                    canon["chapters"] = [c for c in canon.get("chapters", [])
+                                          if int(c) != ch_int]
+                    continue
+                kept.append(e)
+            per_chapter[ch_str] = kept
+
+        # Mirror the canonical chapters array back into every per_chapter
+        # list entry so build_manifests reads consistent data.
+        for ch_list in per_chapter.values():
+            for e in ch_list:
+                canon = canonical_entry.get(e["filename"])
+                if canon and "chapters" in canon:
+                    e["chapters"] = canon["chapters"]
+
+        # Drop any entry now stranded with empty chapters.
+        for ch_str in list(per_chapter.keys()):
+            per_chapter[ch_str] = [e for e in per_chapter[ch_str]
+                                    if not _is_map(e["filename"])
+                                    or e.get("chapters")]
+            if not per_chapter[ch_str]:
+                del per_chapter[ch_str]
+
+        # Book-level: keep one map at most.
+        bl_maps = [e for e in book_level if _is_map(e["filename"])]
+        if len(bl_maps) > 1:
+            bl_maps.sort(key=lambda c: (-c["score"], c["filename"]))
+            keep_fn = bl_maps[0]["filename"]
+            book_level = [e for e in book_level
+                          if not _is_map(e["filename"]) or e["filename"] == keep_fn]
 
         # Rank per-chapter entries by score descending.
         for ch in per_chapter:
