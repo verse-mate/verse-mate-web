@@ -16733,21 +16733,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-book-acrocorinth",
-      "title": "Precept Austin — 2 Corinthians (acrocorinth.jpg)",
-      "caption": "Bruce Hurt's chart embedded across multiple 2 Corinthians chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/2-corinthians/precept_acrocorinth.jpg",
-      "full": "/visuals/2-corinthians/precept_acrocorinth.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/acrocorinth.jpg"
-      }
-    },
-    {
       "id": "precept-book-corinth",
       "title": "Precept Austin — 2 Corinthians (corinth.gif)",
       "caption": "Bruce Hurt's chart embedded across multiple 2 Corinthians chapters on Precept Austin's commentary.",
@@ -16793,21 +16778,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-book-letter",
-      "title": "Precept Austin — 2 Corinthians (letter.jpg)",
-      "caption": "Bruce Hurt's chart embedded across multiple 2 Corinthians chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/2-corinthians/precept_letter.jpg",
-      "full": "/visuals/2-corinthians/precept_letter.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/letter.jpg"
-      }
-    },
-    {
       "id": "precept-ch-3missionaryjourney",
       "title": "Precept Austin — 2 Corinthians Chapters 1–2",
       "caption": "Bruce Hurt's commentary chart for 2 Corinthians chapters 1–2 — 3missionaryjourney.gif.",
@@ -16824,62 +16794,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "chapters": [
         1,
         2
-      ]
-    },
-    {
-      "id": "precept-ch-acrocorinth",
-      "title": "Precept Austin — 2 Corinthians Chapters 1, 8, 9",
-      "caption": "Bruce Hurt's commentary chart for 2 Corinthians chapters 1, 8, 9 — acrocorinth.jpg.",
-      "thumb": "/visuals/2-corinthians/precept_acrocorinth.jpg",
-      "full": "/visuals/2-corinthians/precept_acrocorinth.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/acrocorinth.jpg"
-      },
-      "chapters": [
-        1,
-        8,
-        9
-      ]
-    },
-    {
-      "id": "precept-ch-bema2",
-      "title": "Precept Austin — 2 Corinthians Chapter 5",
-      "caption": "Bruce Hurt's commentary chart for 2 Corinthians chapter 5 — bema2.jpg.",
-      "thumb": "/visuals/2-corinthians/precept_bema2.jpg",
-      "full": "/visuals/2-corinthians/precept_bema2.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/bema2.jpg"
-      },
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "id": "precept-ch-bemajesus",
-      "title": "Precept Austin — 2 Corinthians Chapter 5",
-      "caption": "Bruce Hurt's commentary chart for 2 Corinthians chapter 5 — bemajesus.jpg.",
-      "thumb": "/visuals/2-corinthians/precept_bemajesus.jpg",
-      "full": "/visuals/2-corinthians/precept_bemajesus.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/bemajesus.jpg"
-      },
-      "chapters": [
-        5
       ]
     },
     {
@@ -16903,42 +16817,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-equil",
-      "title": "Precept Austin — 2 Corinthians Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for 2 Corinthians chapter 8 — equil.png.",
-      "thumb": "/visuals/2-corinthians/precept_equil.png",
-      "full": "/visuals/2-corinthians/precept_equil.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/equil.png"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-fust",
-      "title": "Precept Austin — 2 Corinthians Chapter 11",
-      "caption": "Bruce Hurt's commentary chart for 2 Corinthians chapter 11 — fust.jpg.",
-      "thumb": "/visuals/2-corinthians/precept_fust.jpg",
-      "full": "/visuals/2-corinthians/precept_fust.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/fust.jpg"
-      },
-      "chapters": [
-        11
-      ]
-    },
-    {
       "id": "precept-ch-giving",
       "title": "Precept Austin — 2 Corinthians Chapters 8–9",
       "caption": "Bruce Hurt's commentary chart for 2 Corinthians chapters 8–9 — giving.jpg.",
@@ -16955,43 +16833,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "chapters": [
         8,
         9
-      ]
-    },
-    {
-      "id": "precept-ch-letter",
-      "title": "Precept Austin — 2 Corinthians Chapters 1, 9",
-      "caption": "Bruce Hurt's commentary chart for 2 Corinthians chapters 1, 9 — letter.jpg.",
-      "thumb": "/visuals/2-corinthians/precept_letter.jpg",
-      "full": "/visuals/2-corinthians/precept_letter.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/letter.jpg"
-      },
-      "chapters": [
-        1,
-        9
-      ]
-    },
-    {
-      "id": "precept-ch-triumphal",
-      "title": "Precept Austin — 2 Corinthians Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for 2 Corinthians chapter 2 — triumphal.jpg.",
-      "thumb": "/visuals/2-corinthians/precept_triumphal.jpg",
-      "full": "/visuals/2-corinthians/precept_triumphal.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/triumphal.jpg"
-      },
-      "chapters": [
-        2
       ]
     }
   ]
@@ -17131,60 +16972,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         5
-      ]
-    },
-    {
-      "id": "precept-ch-mirror",
-      "title": "Precept Austin — Galatians Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for Galatians chapter 3 — mirror.jpg.",
-      "thumb": "/visuals/galatians/precept_mirror.jpg",
-      "full": "/visuals/galatians/precept_mirror.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/mirror.jpg"
-      },
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "id": "precept-ch-paulpeter",
-      "title": "Precept Austin — Galatians Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for Galatians chapter 2 — paulpeter.jpg.",
-      "thumb": "/visuals/galatians/precept_paulpeter.jpg",
-      "full": "/visuals/galatians/precept_paulpeter.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/paulpeter.jpg"
-      },
-      "chapters": [
-        2
-      ]
-    },
-    {
-      "id": "precept-ch-peda",
-      "title": "Precept Austin — Galatians Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for Galatians chapter 3 — peda.jpg.",
-      "thumb": "/visuals/galatians/precept_peda.jpg",
-      "full": "/visuals/galatians/precept_peda.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/peda.jpg"
-      },
-      "chapters": [
-        3
       ]
     }
   ]
@@ -17454,42 +17241,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-ch-dayofwrath",
-      "title": "Precept Austin — 2 Thessalonians Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for 2 Thessalonians chapter 2 — dayofwrath.jpg.",
-      "thumb": "/visuals/2-thessalonians/precept_dayofwrath.jpg",
-      "full": "/visuals/2-thessalonians/precept_dayofwrath.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/dayofwrath.jpg"
-      },
-      "chapters": [
-        2
-      ]
-    },
-    {
-      "id": "precept-ch-suffering",
-      "title": "Precept Austin — 2 Thessalonians Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for 2 Thessalonians chapter 1 — suffering.jpg.",
-      "thumb": "/visuals/2-thessalonians/precept_suffering.jpg",
-      "full": "/visuals/2-thessalonians/precept_suffering.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/suffering.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
       "id": "precept-ch-tribulationfalse",
       "title": "Precept Austin — 2 Thessalonians Chapter 2",
       "caption": "Bruce Hurt's commentary chart for 2 Thessalonians chapter 2 — tribulationfalse.jpg.",
@@ -17626,60 +17377,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         2
-      ]
-    },
-    {
-      "id": "precept-ch-mirror",
-      "title": "Precept Austin — 1 Timothy Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for 1 Timothy chapter 1 — mirror.jpg.",
-      "thumb": "/visuals/1-timothy/precept_mirror.jpg",
-      "full": "/visuals/1-timothy/precept_mirror.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/mirror.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
-      "id": "precept-ch-peda",
-      "title": "Precept Austin — 1 Timothy Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for 1 Timothy chapter 1 — peda.jpg.",
-      "thumb": "/visuals/1-timothy/precept_peda.jpg",
-      "full": "/visuals/1-timothy/precept_peda.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/peda.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
-      "id": "precept-ch-thresh",
-      "title": "Precept Austin — 1 Timothy Chapter 5",
-      "caption": "Bruce Hurt's commentary chart for 1 Timothy chapter 5 — thresh.jpg.",
-      "thumb": "/visuals/1-timothy/precept_thresh.jpg",
-      "full": "/visuals/1-timothy/precept_thresh.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/thresh.jpg"
-      },
-      "chapters": [
-        5
       ]
     }
   ]
