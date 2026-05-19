@@ -1796,17 +1796,9 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 5** · liberty1.jpg (score 0) <https://www.preceptaustin.org/files/images/liberty1.jpg>
 - **Ch 5** · yoke.jpg (score 0) <https://www.preceptaustin.org/files/images/yoke.jpg>
 
-## genesis — 1 book-level, 116 per-chapter (probed 25 chapters)
+## genesis — 0 book-level, 110 per-chapter (probed 25 chapters)
 
-### Book-level
-- genesis.jpg (score 0, 17 chapters) <https://www.preceptaustin.org/files/images/genesis.jpg>
 ### Per-chapter
-- **Ch 1** · evolutionapetoman.png (score 2) <https://www.preceptaustin.org/files/images/evolutionapetoman.png>
-- **Ch 1** · cambrian.jpg (score 0) <https://www.preceptaustin.org/files/images/cambrian.jpg>
-- **Ch 1** · evolutionape.jpg (score 0) <https://www.preceptaustin.org/files/images/evolutionape.jpg>
-- **Ch 1** · light1.jpg (score 0) <https://www.preceptaustin.org/files/images/light1.jpg>
-- **Ch 1** · ocean.jpg (score 0) <https://www.preceptaustin.org/files/images/ocean.jpg>
-- **Ch 1** · stars.jpg (score 0) <https://www.preceptaustin.org/files/images/stars.jpg>
 - **Ch 2** · tigris.png (score 2) <https://www.preceptaustin.org/files/images/tigris.png>
 - **Ch 2** · gardeneden1.jpg (score 0) <https://www.preceptaustin.org/files/images/gardeneden1.jpg>
 - **Ch 2** · telomere.gif (score 0) <https://www.preceptaustin.org/files/images/telomere.gif>

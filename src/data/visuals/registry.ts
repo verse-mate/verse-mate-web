@@ -107,21 +107,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-book-genesis",
-      "title": "Precept Austin — Genesis (genesis.jpg)",
-      "caption": "Bruce Hurt's chart embedded across multiple Genesis chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/genesis/precept_genesis.jpg",
-      "full": "/visuals/genesis/precept_genesis.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/genesis.jpg"
-      }
-    },
-    {
       "id": "precept-ch-abeisaac",
       "title": "Precept Austin — Genesis Chapter 22",
       "caption": "Bruce Hurt's commentary chart for Genesis chapter 22 — abeisaac.jpg.",
@@ -565,24 +550,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-cambrian",
-      "title": "Precept Austin — Genesis Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Genesis chapter 1 — cambrian.jpg.",
-      "thumb": "/visuals/genesis/precept_cambrian.jpg",
-      "full": "/visuals/genesis/precept_cambrian.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/cambrian.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
       "id": "precept-ch-canaanmap",
       "title": "Precept Austin — Genesis Chapter 10",
       "caption": "Bruce Hurt's commentary chart for Genesis chapter 10 — canaanmap.jpg.",
@@ -653,42 +620,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         8
-      ]
-    },
-    {
-      "id": "precept-ch-evolutionape",
-      "title": "Precept Austin — Genesis Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Genesis chapter 1 — evolutionape.jpg.",
-      "thumb": "/visuals/genesis/precept_evolutionape.jpg",
-      "full": "/visuals/genesis/precept_evolutionape.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/evolutionape.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
-      "id": "precept-ch-evolutionapetoman",
-      "title": "Precept Austin — Genesis Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Genesis chapter 1 — evolutionapetoman.png.",
-      "thumb": "/visuals/genesis/precept_evolutionapetoman.png",
-      "full": "/visuals/genesis/precept_evolutionapetoman.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/evolutionapetoman.png"
-      },
-      "chapters": [
-        1
       ]
     },
     {
@@ -1124,24 +1055,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-light1",
-      "title": "Precept Austin — Genesis Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Genesis chapter 1 — light1.jpg.",
-      "thumb": "/visuals/genesis/precept_light1.jpg",
-      "full": "/visuals/genesis/precept_light1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/light1.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
       "id": "precept-ch-lot",
       "title": "Precept Austin — Genesis Chapter 13",
       "caption": "Bruce Hurt's commentary chart for Genesis chapter 13 — lot.png.",
@@ -1474,24 +1387,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-ocean",
-      "title": "Precept Austin — Genesis Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Genesis chapter 1 — ocean.jpg.",
-      "thumb": "/visuals/genesis/precept_ocean.jpg",
-      "full": "/visuals/genesis/precept_ocean.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/ocean.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
       "id": "precept-ch-paran",
       "title": "Precept Austin — Genesis Chapter 21",
       "caption": "Bruce Hurt's commentary chart for Genesis chapter 21 — paran.jpg.",
@@ -1670,24 +1565,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         15
-      ]
-    },
-    {
-      "id": "precept-ch-stars",
-      "title": "Precept Austin — Genesis Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Genesis chapter 1 — stars.jpg.",
-      "thumb": "/visuals/genesis/precept_stars.jpg",
-      "full": "/visuals/genesis/precept_stars.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/stars.jpg"
-      },
-      "chapters": [
-        1
       ]
     },
     {
