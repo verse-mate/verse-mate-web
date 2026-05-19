@@ -52,7 +52,7 @@ PRECEPT_CHARTS: dict[str, str] = {
     "nehemiah":      "nehemiahchart.png",
     "esther":        "estherchart.png",
     "job":           "jobchart.png",
-    "jeremiah":      "jeremiahchart.png",
+    # Jeremiah removed in audit pass — Bruce's chart didn't survive editorial review.
     "habakkuk":      "habakkukchart.png",
     # Old Testament — book-named charts (verified to be substantial PNGs).
     # NOTE: "leviticus.png" turned out to be a decorative photo of stacked

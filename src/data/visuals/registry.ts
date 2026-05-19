@@ -10607,21 +10607,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-chart",
-      "title": "Precept Austin — Jeremiah Chart",
-      "caption": "Bruce Hurt's inductive-study chart for Jeremiah, mapping the book's flow, key themes, and turning points. Drawn from Precept Austin's free verse-by-verse commentary.",
-      "thumb": "/visuals/jeremiah/precept_chart.png",
-      "full": "/visuals/jeremiah/precept_chart.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/jeremiahchart.png"
-      }
-    },
-    {
       "id": "precept-book-jeremiahtimeline",
       "title": "Precept Austin — Jeremiah (jeremiahtimeline.png)",
       "caption": "Bruce Hurt's chart embedded across multiple Jeremiah chapters on Precept Austin's commentary.",
@@ -10697,36 +10682,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-book-bulla",
-      "title": "Precept Austin — Jeremiah (bulla.jpg)",
-      "caption": "Bruce Hurt's chart embedded across multiple Jeremiah chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/jeremiah/precept_bulla.jpg",
-      "full": "/visuals/jeremiah/precept_bulla.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/bulla.jpg"
-      }
-    },
-    {
-      "id": "precept-book-jer_image",
-      "title": "Precept Austin — Jeremiah (jer_image.jpg)",
-      "caption": "Bruce Hurt's chart embedded across multiple Jeremiah chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/jeremiah/precept_jer_image.jpg",
-      "full": "/visuals/jeremiah/precept_jer_image.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/jer_image.jpg"
-      }
-    },
-    {
       "id": "precept-book-jer_struc",
       "title": "Precept Austin — Jeremiah (jer_struc.jpg)",
       "caption": "Bruce Hurt's chart embedded across multiple Jeremiah chapters on Precept Austin's commentary.",
@@ -10772,24 +10727,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-ch-cistern",
-      "title": "Precept Austin — Jeremiah Chapter 38",
-      "caption": "Bruce Hurt's commentary chart for Jeremiah chapter 38 — cistern.jpg.",
-      "thumb": "/visuals/jeremiah/precept_cistern.jpg",
-      "full": "/visuals/jeremiah/precept_cistern.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/cistern.jpg"
-      },
-      "chapters": [
-        38
-      ]
-    },
-    {
       "id": "precept-ch-cornergate",
       "title": "Precept Austin — Jeremiah Chapter 38",
       "caption": "Bruce Hurt's commentary chart for Jeremiah chapter 38 — cornergate.jpg.",
@@ -10802,42 +10739,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/cornergate.jpg"
-      },
-      "chapters": [
-        38
-      ]
-    },
-    {
-      "id": "precept-ch-earthenware",
-      "title": "Precept Austin — Jeremiah Chapter 32",
-      "caption": "Bruce Hurt's commentary chart for Jeremiah chapter 32 — earthenware.jpg.",
-      "thumb": "/visuals/jeremiah/precept_earthenware.jpg",
-      "full": "/visuals/jeremiah/precept_earthenware.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/earthenware.jpg"
-      },
-      "chapters": [
-        32
-      ]
-    },
-    {
-      "id": "precept-ch-gedaliah",
-      "title": "Precept Austin — Jeremiah Chapter 38",
-      "caption": "Bruce Hurt's commentary chart for Jeremiah chapter 38 — gedaliah.jpg.",
-      "thumb": "/visuals/jeremiah/precept_gedaliah.jpg",
-      "full": "/visuals/jeremiah/precept_gedaliah.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/gedaliah.jpg"
       },
       "chapters": [
         38
@@ -11053,21 +10954,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-book-ezek_mic",
-      "title": "Precept Austin — Ezekiel (ezek_mic.jpg)",
-      "caption": "Bruce Hurt's chart embedded across multiple Ezekiel chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/ezekiel/precept_ezek_mic.jpg",
-      "full": "/visuals/ezekiel/precept_ezek_mic.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/ezek_mic.jpg"
-      }
-    },
-    {
       "id": "precept-book-heat-3",
       "title": "Precept Austin — Ezekiel (heat-3.jpg)",
       "caption": "Bruce Hurt's chart embedded across multiple Ezekiel chapters on Precept Austin's commentary.",
@@ -11081,93 +10967,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/heat-3.jpg"
       }
-    },
-    {
-      "id": "precept-book-millennium",
-      "title": "Precept Austin — Ezekiel (millennium.gif)",
-      "caption": "Bruce Hurt's chart embedded across multiple Ezekiel chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/ezekiel/precept_millennium.gif",
-      "full": "/visuals/ezekiel/precept_millennium.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/millennium.gif"
-      }
-    },
-    {
-      "id": "precept-ch-cedartree",
-      "title": "Precept Austin — Ezekiel Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Ezekiel chapter 17 — cedartree.jpg.",
-      "thumb": "/visuals/ezekiel/precept_cedartree.jpg",
-      "full": "/visuals/ezekiel/precept_cedartree.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/cedartree.jpg"
-      },
-      "chapters": [
-        17
-      ]
-    },
-    {
-      "id": "precept-ch-covenant_-_salvator_rosa_1615-1673_small",
-      "title": "Precept Austin — Ezekiel Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Ezekiel chapter 17 — covenant - salvator rosa 1615-1673_small.jpg.",
-      "thumb": "/visuals/ezekiel/precept_covenant_-_salvator_rosa_1615-1673_small.jpg",
-      "full": "/visuals/ezekiel/precept_covenant_-_salvator_rosa_1615-1673_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Covenant%20-%20Salvator%20Rosa%201615-1673_small.jpg"
-      },
-      "chapters": [
-        17
-      ]
-    },
-    {
-      "id": "precept-ch-eagle2_jpg",
-      "title": "Precept Austin — Ezekiel Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Ezekiel chapter 17 — eagle2.jpg.png.",
-      "thumb": "/visuals/ezekiel/precept_eagle2_jpg.png",
-      "full": "/visuals/ezekiel/precept_eagle2_jpg.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/eagle2.jpg.png"
-      },
-      "chapters": [
-        17
-      ]
-    },
-    {
-      "id": "precept-ch-ezek_mic",
-      "title": "Precept Austin — Ezekiel Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Ezekiel chapter 17 — ezek_mic.jpg.",
-      "thumb": "/visuals/ezekiel/precept_ezek_mic.jpg",
-      "full": "/visuals/ezekiel/precept_ezek_mic.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/ezek_mic.jpg"
-      },
-      "chapters": [
-        17
-      ]
     }
   ]
 },
