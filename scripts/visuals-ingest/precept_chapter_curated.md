@@ -3,304 +3,3256 @@
 Auto-generated shortlist of chart-like Precept Austin images. **Book-level** rows are charts embedded on most chapter pages (i.e. reused) — surfaced once at the book level. **Per-chapter** rows are charts only on a single chapter or a small subset. Review before ingesting.
 
 
-## 1-chronicles — 1 book-level, 4 per-chapter (probed 24 chapters)
+## 1-chronicles — 10 book-level, 64 per-chapter (probed 24 chapters)
 
 ### Book-level
+- 1chrtimeline.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/1chrtimeline.png>
+- 1kichart2.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/1kichart2.png>
 - 1samap.png (score 12, 16 chapters) <https://www.preceptaustin.org/files/images/1samap.png>
+- 12kingsall.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/12kingsall.png>
+- 1ki.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1ki.png>
+- 1kichr.png (score 2, 23 chapters) <https://www.preceptaustin.org/files/images/1kichr.png>
+- 1kichrsetting.png (score 2, 23 chapters) <https://www.preceptaustin.org/files/images/1kichrsetting.png>
+- 2saplot.png (score 2, 12 chapters) <https://www.preceptaustin.org/files/images/2saplot.png>
+- 2samuelesv.jpg (score 0, 15 chapters) <https://www.preceptaustin.org/files/images/2samuelesv.jpg>
+- prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
 ### Per-chapter
 - **Ch 1** · 1chronicles.png (score 12) <https://www.preceptaustin.org/files/images/1chronicles.png>
+- **Ch 1** · abegenisaac.png (score 2) <https://www.preceptaustin.org/files/images/abegenisaac.png>
+- **Ch 1** · abegenjacob.png (score 2) <https://www.preceptaustin.org/files/images/abegenjacob.png>
+- **Ch 1** · abraham.png (score 2) <https://www.preceptaustin.org/files/images/abraham.png>
+- **Ch 1** · arpachshad.png (score 2) <https://www.preceptaustin.org/files/images/arpachshad.png>
+- **Ch 1** · canaan.png (score 2) <https://www.preceptaustin.org/files/images/canaan.png>
+- **Ch 1** · cush.png (score 2) <https://www.preceptaustin.org/files/images/cush.png>
+- **Ch 1** · egypt.png (score 2) <https://www.preceptaustin.org/files/images/egypt.png>
+- **Ch 1** · ham.png (score 2) <https://www.preceptaustin.org/files/images/ham.png>
+- **Ch 1** · ishmael.png (score 2) <https://www.preceptaustin.org/files/images/ishmael.png>
+- **Ch 1** · japheth.png (score 2) <https://www.preceptaustin.org/files/images/japheth.png>
+- **Ch 1** · joktan.png (score 2) <https://www.preceptaustin.org/files/images/joktan.png>
+- **Ch 1** · keturah.png (score 2) <https://www.preceptaustin.org/files/images/keturah.png>
+- **Ch 1** · shemline.png (score 2) <https://www.preceptaustin.org/files/images/shemline.png>
+- **Ch 1** · shemtoterah.png (score 2) <https://www.preceptaustin.org/files/images/shemtoterah.png>
+- **Ch 1** · tree.png (score 2) <https://www.preceptaustin.org/files/images/tree.png>
+- **Ch 1** · adamtree.gif (score 0) <https://www.preceptaustin.org/files/images/adamtree.gif>
+- **Ch 2** · boaz.png (score 2) <https://www.preceptaustin.org/files/images/boaz.png>
+- **Ch 2** · davidlineage3.png (score 2) <https://www.preceptaustin.org/files/images/davidlineage3.png>
 - **Ch 3** · luke_genealogy.png (score 12) <https://www.preceptaustin.org/files/images/Luke_genealogy.png>
+- **Ch 3** · daviddualline.png (score 2) <https://www.preceptaustin.org/files/images/daviddualline.png>
+- **Ch 3** · davidline.png (score 2) <https://www.preceptaustin.org/files/images/davidline.png>
+- **Ch 3** · davidlineage3.png (score 2) <https://www.preceptaustin.org/files/images/davidlineage3.png>
+- **Ch 3** · davidtoamaziah.png (score 2) <https://www.preceptaustin.org/files/images/davidtoamaziah.png>
+- **Ch 3** · davidunited.png (score 2) <https://www.preceptaustin.org/files/images/davidunited.png>
+- **Ch 4** · 1chr45.png (score 2) <https://www.preceptaustin.org/files/images/1chr45.png>
+- **Ch 4** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
 - **Ch 10** · 1samuelmapesv.jpg (score 10) <https://www.preceptaustin.org/files/images/1samuelmapesv.jpg>
+- **Ch 10** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 10** · bones.jpg (score 0) <https://www.preceptaustin.org/files/images/bones.jpg>
+- **Ch 10** · sauldeath.jpg (score 0) <https://www.preceptaustin.org/files/images/sauldeath.jpg>
+- **Ch 10** · saulsbody.jpg (score 0) <https://www.preceptaustin.org/files/images/saulsbody.jpg>
+- **Ch 11** · davidcity.jpg (score 0) <https://www.preceptaustin.org/files/images/davidcity.jpg>
+- **Ch 11** · davidmen.jpg (score 0) <https://www.preceptaustin.org/files/images/davidmen.jpg>
 - **Ch 12** · map of tribes of israel.gif (score 10) <https://www.preceptaustin.org/files/images/map%20of%20tribes%20of%20israel.gif>
+- **Ch 13** · ark2esv.jpg (score 0) <https://www.preceptaustin.org/files/images/ark2esv.jpg>
+- **Ch 14** · daviddefeatphil.png (score 2) <https://www.preceptaustin.org/files/images/daviddefeatphil.png>
+- **Ch 14** · davidtree.png (score 2) <https://www.preceptaustin.org/files/images/davidtree.png>
+- **Ch 14** · davidsfamily.jpg (score 0) <https://www.preceptaustin.org/files/images/davidsfamily.jpg>
+- **Ch 14** · rephaim.jpg (score 0) <https://www.preceptaustin.org/files/images/rephaim.jpg>
+- **Ch 14** · valleyrephaim.jpg (score 0) <https://www.preceptaustin.org/files/images/valleyrephaim.jpg>
+- **Ch 15** · ark2esv.jpg (score 0) <https://www.preceptaustin.org/files/images/ark2esv.jpg>
+- **Ch 15** · joshua3.jpg (score 0) <https://www.preceptaustin.org/files/images/joshua3.jpg>
+- **Ch 16** · ark2esv.jpg (score 0) <https://www.preceptaustin.org/files/images/ark2esv.jpg>
+- **Ch 16** · shofar.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar.jpg>
+- **Ch 18** · davidsconquests.png (score 2) <https://www.preceptaustin.org/files/images/davidsconquests.png>
+- **Ch 18** · zadok.png (score 2) <https://www.preceptaustin.org/files/images/zadok.png>
+- **Ch 18** · davidcon.jpg (score 0) <https://www.preceptaustin.org/files/images/davidcon.jpg>
+- **Ch 20** · daviddefeatphil.png (score 2) <https://www.preceptaustin.org/files/images/daviddefeatphil.png>
+- **Ch 21** · moriah.png (score 2) <https://www.preceptaustin.org/files/images/moriah.png>
+- **Ch 21** · domerock1.jpg (score 0) <https://www.preceptaustin.org/files/images/domerock1.jpg>
+- **Ch 21** · sackcloth.jpg (score 0) <https://www.preceptaustin.org/files/images/sackcloth.jpg>
+- **Ch 22** · zeph-1.gif (score 0) <https://www.preceptaustin.org/files/images/zeph-1.gif>
+- **Ch 23** · ex614.jpg (score 0) <https://www.preceptaustin.org/files/images/ex614.jpg>
+- **Ch 24** · ex614.jpg (score 0) <https://www.preceptaustin.org/files/images/ex614.jpg>
+- **Ch 24** · nadab.jpg (score 0) <https://www.preceptaustin.org/files/images/nadab.jpg>
+- **Ch 24** · priesthood.jpg (score 0) <https://www.preceptaustin.org/files/images/priesthood.jpg>
+- **Ch 28** · exodusincense.png (score 2) <https://www.preceptaustin.org/files/images/exodusincense.png>
+- **Ch 28** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 28** · exoduslampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslampstand.jpg>
+- **Ch 28** · exodusshowbread.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusshowbread.jpg>
+- **Ch 28** · templesolomon.jpg (score 0) <https://www.preceptaustin.org/files/images/templesolomon.jpg>
+- **Ch 28** · templesolomon2.jpg (score 0) <https://www.preceptaustin.org/files/images/templesolomon2.jpg>
+- **Ch 29** · timeflies.jpg (score 0) <https://www.preceptaustin.org/files/images/timeflies.jpg>
 
-## 1-corinthians — 0 book-level, 2 per-chapter (probed 16 chapters)
-
-### Per-chapter
-- **Ch 2** · spurgeonpodium.jpg (score 10) <https://www.preceptaustin.org/files/images/spurgeonpodium.jpg>
-- **Ch 13** · timelineface.jpg (score 10) <https://www.preceptaustin.org/files/images/timelineface.jpg>
-
-## 1-kings — 0 book-level, 9 per-chapter (probed 22 chapters)
-
-### Per-chapter
-- **Ch 1** · 1kichart2.png (score 12) <https://www.preceptaustin.org/files/images/1kichart2.png>
-- **Ch 2** · 1kichart2.png (score 12) <https://www.preceptaustin.org/files/images/1kichart2.png>
-- **Ch 2** · 1samuelmapesv.jpg (score 10) <https://www.preceptaustin.org/files/images/1samuelmapesv.jpg>
-- **Ch 4** · solomonkingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/solomonkingdom.jpg>
-- **Ch 4** · solomonskingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/solomonskingdom.jpg>
-- **Ch 11** · solomonskingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/solomonskingdom.jpg>
-- **Ch 12** · dividedkingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/dividedkingdom.jpg>
-- **Ch 14** · dividedkingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/dividedkingdom.jpg>
-- **Ch 17** · elijahmap.jpg (score 10) <https://www.preceptaustin.org/files/images/elijahmap.jpg>
-
-## 1-samuel — 3 book-level, 10 per-chapter (probed 31 chapters)
+## 1-corinthians — 4 book-level, 56 per-chapter (probed 16 chapters)
 
 ### Book-level
+- 1cor_problems.png (score 2, 16 chapters) <https://www.preceptaustin.org/files/images/1cor_problems.png>
+- corinth.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/corinth.gif>
+- corinthesv.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/corinthesv.jpg>
+- paul_epistle.jpg (score 0, 16 chapters) <https://www.preceptaustin.org/files/images/paul_epistle.jpg>
+### Per-chapter
+- **Ch 1** · corinthpix.png (score 2) <https://www.preceptaustin.org/files/images/corinthpix.png>
+- **Ch 1** · corinth_city.jpg (score 0) <https://www.preceptaustin.org/files/images/corinth_city.jpg>
+- **Ch 1** · wisdom1.jpg (score 0) <https://www.preceptaustin.org/files/images/wisdom1.jpg>
+- **Ch 2** · spurgeonpodium.jpg (score 10) <https://www.preceptaustin.org/files/images/spurgeonpodium.jpg>
+- **Ch 2** · wisdom1.jpg (score 0) <https://www.preceptaustin.org/files/images/wisdom1.jpg>
+- **Ch 3** · aphrodite.jpg (score 0) <https://www.preceptaustin.org/files/images/aphrodite.jpg>
+- **Ch 3** · carnal.jpg (score 0) <https://www.preceptaustin.org/files/images/carnal.jpg>
+- **Ch 4** · benhur.jpg (score 0) <https://www.preceptaustin.org/files/images/benhur.jpg>
+- **Ch 4** · galley.jpg (score 0) <https://www.preceptaustin.org/files/images/galley.jpg>
+- **Ch 4** · pedagogue.jpg (score 0) <https://www.preceptaustin.org/files/images/pedagogue.jpg>
+- **Ch 5** · porn.jpg (score 0) <https://www.preceptaustin.org/files/images/porn.jpg>
+- **Ch 6** · family.png (score 2) <https://www.preceptaustin.org/files/images/family.png>
+- **Ch 6** · acrocorinth.jpg (score 0) <https://www.preceptaustin.org/files/images/acrocorinth.jpg>
+- **Ch 6** · bema1.jpg (score 0) <https://www.preceptaustin.org/files/images/bema1.jpg>
+- **Ch 6** · bema2.jpg (score 0) <https://www.preceptaustin.org/files/images/bema2.jpg>
+- **Ch 6** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 8** · dine.jpg (score 0) <https://www.preceptaustin.org/files/images/dine.jpg>
+- **Ch 9** · bc_runner1.gif (score 0) <https://www.preceptaustin.org/files/images/bc_runner1.gif>
+- **Ch 9** · bema.jpg (score 0) <https://www.preceptaustin.org/files/images/bema.jpg>
+- **Ch 9** · box.jpg (score 0) <https://www.preceptaustin.org/files/images/box.jpg>
+- **Ch 9** · isthmian.jpg (score 0) <https://www.preceptaustin.org/files/images/isthmian.jpg>
+- **Ch 9** · taylor.jpg (score 0) <https://www.preceptaustin.org/files/images/taylor.jpg>
+- **Ch 9** · thresh.jpg (score 0) <https://www.preceptaustin.org/files/images/thresh.jpg>
+- **Ch 9** · wreath.jpg (score 0) <https://www.preceptaustin.org/files/images/wreath.jpg>
+- **Ch 10** · bronze.jpg (score 0) <https://www.preceptaustin.org/files/images/bronze.jpg>
+- **Ch 10** · calf.jpg (score 0) <https://www.preceptaustin.org/files/images/calf.jpg>
+- **Ch 10** · censer1.jpg (score 0) <https://www.preceptaustin.org/files/images/censer1.jpg>
+- **Ch 10** · dine.jpg (score 0) <https://www.preceptaustin.org/files/images/dine.jpg>
+- **Ch 10** · exodusredmoses.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusredmoses.jpg>
+- **Ch 10** · korah.jpg (score 0) <https://www.preceptaustin.org/files/images/korah.jpg>
+- **Ch 10** · korahfall.jpg (score 0) <https://www.preceptaustin.org/files/images/korahfall.jpg>
+- **Ch 10** · manna.jpg (score 0) <https://www.preceptaustin.org/files/images/manna.jpg>
+- **Ch 10** · molech.jpg (score 0) <https://www.preceptaustin.org/files/images/molech.jpg>
+- **Ch 10** · mosesstrike.jpg (score 0) <https://www.preceptaustin.org/files/images/mosesstrike.jpg>
+- **Ch 10** · quail.jpg (score 0) <https://www.preceptaustin.org/files/images/quail.jpg>
+- **Ch 11** · imitate.jpg (score 0) <https://www.preceptaustin.org/files/images/imitate.jpg>
+- **Ch 11** · imitate1.jpg (score 0) <https://www.preceptaustin.org/files/images/imitate1.jpg>
+- **Ch 11** · recline.jpg (score 0) <https://www.preceptaustin.org/files/images/recline.JPG>
+- **Ch 12** · gifts.jpg (score 0) <https://www.preceptaustin.org/files/images/gifts.jpg>
+- **Ch 12** · giftvariety.jpg (score 0) <https://www.preceptaustin.org/files/images/giftvariety.jpg>
+- **Ch 12** · spirit1.gif (score 0) <https://www.preceptaustin.org/files/images/spirit1.gif>
+- **Ch 13** · timelineface.jpg (score 10) <https://www.preceptaustin.org/files/images/timelineface.jpg>
+- **Ch 13** · longfuse.png (score 2) <https://www.preceptaustin.org/files/images/longfuse.png>
+- **Ch 13** · jealousy.jpg (score 0) <https://www.preceptaustin.org/files/images/jealousy.jpg>
+- **Ch 13** · mirror1.jpg (score 0) <https://www.preceptaustin.org/files/images/mirror1.jpg>
+- **Ch 15** · appear.jpg (score 0) <https://www.preceptaustin.org/files/images/appear.jpg>
+- **Ch 15** · calen.jpg (score 0) <https://www.preceptaustin.org/files/images/calen.jpg>
+- **Ch 15** · death.jpg (score 0) <https://www.preceptaustin.org/files/images/death.jpg>
+- **Ch 15** · firstfruits1.jpg (score 0) <https://www.preceptaustin.org/files/images/firstfruits1.jpg>
+- **Ch 15** · immortal.jpg (score 0) <https://www.preceptaustin.org/files/images/immortal.jpg>
+- **Ch 15** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 15** · neck.jpg (score 0) <https://www.preceptaustin.org/files/images/neck.jpg>
+- **Ch 15** · seed.jpg (score 0) <https://www.preceptaustin.org/files/images/seed.jpg>
+- **Ch 15** · soilshallow.jpg (score 0) <https://www.preceptaustin.org/files/images/soilshallow.jpg>
+- **Ch 16** · 3missionaryjourney.gif (score 0) <https://www.preceptaustin.org/files/images/3missionaryjourney.gif>
+- **Ch 16** · charity.jpg (score 0) <https://www.preceptaustin.org/files/images/charity.jpg>
+
+## 1-kings — 8 book-level, 180 per-chapter (probed 22 chapters)
+
+### Book-level
+- 1kichart2.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/1kichart2.png>
+- 12kingsall.png (score 2, 20 chapters) <https://www.preceptaustin.org/files/images/12kingsall.png>
+- 1ki.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1ki.png>
+- 1kichr.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1kichr.png>
+- 1kichrsetting.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1kichrsetting.png>
+- 1kitime.png (score 2, 22 chapters) <https://www.preceptaustin.org/files/images/1kitime.png>
+- 1kjensen.png (score 2, 22 chapters) <https://www.preceptaustin.org/files/images/1kjensen.png>
+- solomon.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/solomon.jpg>
+### Per-chapter
+- **Ch 1** · 1kichart2.png (score 12) <https://www.preceptaustin.org/files/images/1kichart2.png>
+- **Ch 1** · 1ki.png (score 2) <https://www.preceptaustin.org/files/images/1ki.png>
+- **Ch 1** · 1kichr.png (score 2) <https://www.preceptaustin.org/files/images/1kichr.png>
+- **Ch 1** · 1kichrsetting.png (score 2) <https://www.preceptaustin.org/files/images/1kichrsetting.png>
+- **Ch 1** · adonijah.webp (score 0) <https://www.preceptaustin.org/files/images/adonijah.webp>
+- **Ch 1** · adonijahhorsemen.webp (score 0) <https://www.preceptaustin.org/files/images/adonijahhorsemen.webp>
+- **Ch 1** · davidcold.webp (score 0) <https://www.preceptaustin.org/files/images/davidcold.webp>
+- **Ch 1** · enrogel1.jpg (score 0) <https://www.preceptaustin.org/files/images/enrogel1.jpg>
+- **Ch 1** · guestsfled.webp (score 0) <https://www.preceptaustin.org/files/images/guestsfled.webp>
+- **Ch 1** · hornsaltar.webp (score 0) <https://www.preceptaustin.org/files/images/hornsaltar.webp>
+- **Ch 1** · shofar.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar.jpg>
+- **Ch 1** · upperroom.jpg (score 0) <https://www.preceptaustin.org/files/images/upperroom.jpg>
+- **Ch 1** · zadokline.jpg (score 0) <https://www.preceptaustin.org/files/images/zadokline.jpg>
+- **Ch 2** · 1kichart2.png (score 12) <https://www.preceptaustin.org/files/images/1kichart2.png>
+- **Ch 2** · 1samuelmapesv.jpg (score 10) <https://www.preceptaustin.org/files/images/1samuelmapesv.jpg>
+- **Ch 2** · 1ki.png (score 2) <https://www.preceptaustin.org/files/images/1ki.png>
+- **Ch 2** · 1kichr.png (score 2) <https://www.preceptaustin.org/files/images/1kichr.png>
+- **Ch 2** · 1kichrsetting.png (score 2) <https://www.preceptaustin.org/files/images/1kichrsetting.png>
+- **Ch 2** · abiathar.webp (score 0) <https://www.preceptaustin.org/files/images/abiathar.webp>
+- **Ch 2** · bathsol.webp (score 0) <https://www.preceptaustin.org/files/images/bathsol.webp>
+- **Ch 2** · daviddeath.webp (score 0) <https://www.preceptaustin.org/files/images/daviddeath.webp>
+- **Ch 2** · hornsaltar.webp (score 0) <https://www.preceptaustin.org/files/images/hornsaltar.webp>
+- **Ch 2** · shimei.webp (score 0) <https://www.preceptaustin.org/files/images/shimei.webp>
+- **Ch 3** · truman.png (score 2) <https://www.preceptaustin.org/files/images/truman.png>
+- **Ch 3** · babel.jpg (score 0) <https://www.preceptaustin.org/files/images/babel.jpg>
+- **Ch 3** · citydavid1.jpg (score 0) <https://www.preceptaustin.org/files/images/citydavid1.jpg>
+- **Ch 3** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 3** · exodusbrazen2.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusbrazen2.jpg>
+- **Ch 3** · exodustabernacleesvbig.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernacleesvbig.jpg>
+- **Ch 3** · gibeon.jpg (score 0) <https://www.preceptaustin.org/files/images/gibeon.jpg>
+- **Ch 3** · gibeon2.jpg (score 0) <https://www.preceptaustin.org/files/images/gibeon2.jpg>
+- **Ch 3** · solomon.jpg (score 0) <https://www.preceptaustin.org/files/images/solomon.jpg>
+- **Ch 3** · solomonbaby.webp (score 0) <https://www.preceptaustin.org/files/images/solomonbaby.webp>
+- **Ch 3** · solomongordoniah.webp (score 0) <https://www.preceptaustin.org/files/images/solomongordoniah.webp>
+- **Ch 4** · solomonkingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/solomonkingdom.jpg>
+- **Ch 4** · solomonskingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/solomonskingdom.jpg>
+- **Ch 4** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 4** · peace_dove_olive_branch animation.gif (score 0) <https://www.preceptaustin.org/files/images/peace_dove_olive_branch%20animation.gif>
+- **Ch 4** · solomon4.webp (score 0) <https://www.preceptaustin.org/files/images/solomon4.webp>
+- **Ch 4** · solomon40.webp (score 0) <https://www.preceptaustin.org/files/images/solomon40.webp>
+- **Ch 4** · solomoncedar1.webp (score 0) <https://www.preceptaustin.org/files/images/solomoncedar1.webp>
+- **Ch 4** · solomondistricts.jpg (score 0) <https://www.preceptaustin.org/files/images/solomondistricts.jpg>
+- **Ch 4** · solomonflour.webp (score 0) <https://www.preceptaustin.org/files/images/solomonflour.webp>
+- **Ch 4** · solomonkor2.webp (score 0) <https://www.preceptaustin.org/files/images/solomonkor2.webp>
+- **Ch 4** · solomonoxen.webp (score 0) <https://www.preceptaustin.org/files/images/solomonoxen.webp>
+- **Ch 5** · solomonstone.webp (score 0) <https://www.preceptaustin.org/files/images/solomonstone.webp>
+- **Ch 5** · tyre-joppa.jpg (score 0) <https://www.preceptaustin.org/files/images/tyre-joppa.jpg>
+- **Ch 5** · tyreprophecy.jpg (score 0) <https://www.preceptaustin.org/files/images/tyreprophecy.jpg>
+- **Ch 6** · exodusincense.png (score 2) <https://www.preceptaustin.org/files/images/exodusincense.png>
+- **Ch 6** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 6** · exodusglory.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusglory.jpg>
+- **Ch 6** · expulsion.jpg (score 0) <https://www.preceptaustin.org/files/images/expulsion.jpg>
+- **Ch 6** · ezekie7.gif (score 0) <https://www.preceptaustin.org/files/images/ezekie7.gif>
+- **Ch 6** · solomonstemple1.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonstemple1.jpg>
+- **Ch 6** · solomonstemplecity2.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonstemplecity2.jpg>
+- **Ch 6** · solomonstone.webp (score 0) <https://www.preceptaustin.org/files/images/solomonstone.webp>
+- **Ch 6** · solomonstoreroom.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonstoreroom.jpg>
+- **Ch 6** · solomontempleplan.jpg (score 0) <https://www.preceptaustin.org/files/images/solomontempleplan.jpg>
+- **Ch 7** · exodusincense.png (score 2) <https://www.preceptaustin.org/files/images/exodusincense.png>
+- **Ch 7** · exodusbrazen2.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusbrazen2.jpg>
+- **Ch 7** · exodusdate.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusdate.jpg>
+- **Ch 7** · exoduslampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslampstand.jpg>
+- **Ch 7** · exodusshowbread.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusshowbread.jpg>
+- **Ch 7** · solomonhouse.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonhouse.jpg>
+- **Ch 7** · solomonjachin.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonjachin.jpg>
+- **Ch 7** · solomonjerusalem.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonjerusalem.jpg>
+- **Ch 7** · solomonstand.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonstand.jpg>
+- **Ch 7** · solomonstemple1.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonstemple1.jpg>
+- **Ch 8** · circumcise.jpg (score 0) <https://www.preceptaustin.org/files/images/circumcise.jpg>
+- **Ch 8** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 8** · exodusglory.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusglory.jpg>
+- **Ch 8** · expulsion.jpg (score 0) <https://www.preceptaustin.org/files/images/expulsion.jpg>
+- **Ch 8** · solomonark.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonark.jpg>
+- **Ch 8** · solomonarktotemple.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonarktotemple.jpg>
+- **Ch 8** · solomonjerusalem.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonjerusalem.jpg>
+- **Ch 8** · solomontempleplan.jpg (score 0) <https://www.preceptaustin.org/files/images/solomontempleplan.jpg>
+- **Ch 9** · exodusvia.png (score 2) <https://www.preceptaustin.org/files/images/exodusvia.png>
+- **Ch 9** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 9** · solomonfortress.png (score 2) <https://www.preceptaustin.org/files/images/solomonfortress.png>
+- **Ch 9** · solomongezer.png (score 2) <https://www.preceptaustin.org/files/images/solomongezer.png>
+- **Ch 9** · ezion.jpg (score 0) <https://www.preceptaustin.org/files/images/ezion.jpg>
+- **Ch 9** · ezion2.jpg (score 0) <https://www.preceptaustin.org/files/images/ezion2.jpg>
+- **Ch 10** · solomon.png (score 2) <https://www.preceptaustin.org/files/images/solomon.png>
+- **Ch 10** · sheba.jpg (score 0) <https://www.preceptaustin.org/files/images/sheba.jpg>
+- **Ch 10** · shebaqueen.jpg (score 0) <https://www.preceptaustin.org/files/images/shebaqueen.jpg>
+- **Ch 10** · solomonchariot.webp (score 0) <https://www.preceptaustin.org/files/images/solomonchariot.webp>
+- **Ch 10** · solomonking.webp (score 0) <https://www.preceptaustin.org/files/images/solomonking.webp>
+- **Ch 10** · solomonmeal.webp (score 0) <https://www.preceptaustin.org/files/images/solomonmeal.webp>
+- **Ch 10** · solomonmeetsheba.webp (score 0) <https://www.preceptaustin.org/files/images/solomonmeetsheba.webp>
+- **Ch 10** · solomonpeacock.webp (score 0) <https://www.preceptaustin.org/files/images/solomonpeacock.webp>
+- **Ch 10** · solomonsheba.webp (score 0) <https://www.preceptaustin.org/files/images/solomonsheba.webp>
+- **Ch 10** · solomonsilver.webp (score 0) <https://www.preceptaustin.org/files/images/solomonsilver.webp>
+- **Ch 10** · solomonthrone.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonthrone.jpg>
+- **Ch 11** · solomonskingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/solomonskingdom.jpg>
+- **Ch 11** · aramkings.jpg (score 0) <https://www.preceptaustin.org/files/images/aramkings.jpg>
+- **Ch 11** · frog.jpg (score 0) <https://www.preceptaustin.org/files/images/frog.jpg>
+- **Ch 11** · solomon101.webp (score 0) <https://www.preceptaustin.org/files/images/solomon101.webp>
+- **Ch 11** · solomon700.webp (score 0) <https://www.preceptaustin.org/files/images/solomon700.webp>
+- **Ch 11** · solomonchemosh.webp (score 0) <https://www.preceptaustin.org/files/images/solomonchemosh.webp>
+- **Ch 12** · dividedkingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/dividedkingdom.jpg>
+- **Ch 12** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 12** · dan1.jpg (score 0) <https://www.preceptaustin.org/files/images/dan1.jpg>
+- **Ch 12** · ephraimz.jpg (score 0) <https://www.preceptaustin.org/files/images/ephraimz.jpg>
+- **Ch 12** · gideonesv.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonesv.jpg>
+- **Ch 12** · jeroboamgold.webp (score 0) <https://www.preceptaustin.org/files/images/jeroboamgold.webp>
+- **Ch 12** · scorpion.webp (score 0) <https://www.preceptaustin.org/files/images/scorpion.webp>
+- **Ch 13** · lion.webp (score 0) <https://www.preceptaustin.org/files/images/lion.webp>
+- **Ch 13** · lion3.webp (score 0) <https://www.preceptaustin.org/files/images/lion3.webp>
+- **Ch 13** · oldprophet.webp (score 0) <https://www.preceptaustin.org/files/images/oldprophet.webp>
+- **Ch 13** · splitaltar.webp (score 0) <https://www.preceptaustin.org/files/images/splitaltar.webp>
+- **Ch 13** · withered.webp (score 0) <https://www.preceptaustin.org/files/images/withered.webp>
+- **Ch 14** · dividedkingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/dividedkingdom.jpg>
+- **Ch 14** · israelassy.png (score 2) <https://www.preceptaustin.org/files/images/israelassy.png>
+- **Ch 14** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 14** · ahijah.webp (score 0) <https://www.preceptaustin.org/files/images/ahijah.webp>
+- **Ch 14** · dogs.webp (score 0) <https://www.preceptaustin.org/files/images/dogs.webp>
+- **Ch 14** · greentree.webp (score 0) <https://www.preceptaustin.org/files/images/greentree.webp>
+- **Ch 14** · jeroboamson1.webp (score 0) <https://www.preceptaustin.org/files/images/jeroboamson1.webp>
+- **Ch 14** · reed.webp (score 0) <https://www.preceptaustin.org/files/images/reed.webp>
+- **Ch 14** · shishak.jpg (score 0) <https://www.preceptaustin.org/files/images/shishak.jpg>
+- **Ch 14** · shishak2.webp (score 0) <https://www.preceptaustin.org/files/images/shishak2.webp>
+- **Ch 15** · davidcon.jpg (score 0) <https://www.preceptaustin.org/files/images/davidcon.jpg>
+- **Ch 15** · maacah.webp (score 0) <https://www.preceptaustin.org/files/images/maacah.webp>
+- **Ch 15** · ramah1.jpg (score 0) <https://www.preceptaustin.org/files/images/ramah1.jpg>
+- **Ch 16** · dogs.webp (score 0) <https://www.preceptaustin.org/files/images/dogs.webp>
+- **Ch 16** · elijahahabworship.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahahabworship.jpg>
+- **Ch 17** · elijahmap.jpg (score 10) <https://www.preceptaustin.org/files/images/elijahmap.jpg>
+- **Ch 17** · map of elijah without topography_small.gif (score 10) <https://www.preceptaustin.org/files/images/map%20of%20elijah%20without%20topography_small.gif>
+- **Ch 17** · elijah.jpg (score 0) <https://www.preceptaustin.org/files/images/elijah.jpg>
+- **Ch 17** · elijahbrook.webp (score 0) <https://www.preceptaustin.org/files/images/elijahbrook.webp>
+- **Ch 17** · elijahconfrontsahab.webp (score 0) <https://www.preceptaustin.org/files/images/elijahconfrontsahab.webp>
+- **Ch 17** · elijahflouroil.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahflouroil.jpg>
+- **Ch 17** · elijahministry.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahministry.jpg>
+- **Ch 17** · elijahonson.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahonson.jpg>
+- **Ch 17** · elijahraven.webp (score 0) <https://www.preceptaustin.org/files/images/elijahraven.webp>
+- **Ch 17** · elijahsondies.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahsondies.jpg>
+- **Ch 17** · elijahwoman.webp (score 0) <https://www.preceptaustin.org/files/images/elijahwoman.webp>
+- **Ch 18** · elijahaltar.webp (score 0) <https://www.preceptaustin.org/files/images/elijahaltar.webp>
+- **Ch 18** · elijahcarmel.webp (score 0) <https://www.preceptaustin.org/files/images/elijahcarmel.webp>
+- **Ch 18** · elijahcattle.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahcattle.jpg>
+- **Ch 18** · elijahfrenzy.webp (score 0) <https://www.preceptaustin.org/files/images/elijahfrenzy.webp>
+- **Ch 18** · elijahnocloud.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahnocloud.jpg>
+- **Ch 18** · elijahoba.webp (score 0) <https://www.preceptaustin.org/files/images//elijahoba.webp>
+- **Ch 18** · elijahpaint.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahpaint.jpg>
+- **Ch 18** · elijahpr.webp (score 0) <https://www.preceptaustin.org/files/images/elijahpr.webp>
+- **Ch 18** · elijahpray.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahpray.jpg>
+- **Ch 18** · elijahrun.webp (score 0) <https://www.preceptaustin.org/files/images/elijahrun.webp>
+- **Ch 18** · elijahseize.webp (score 0) <https://www.preceptaustin.org/files/images/elijahseize.webp>
+- **Ch 18** · elijahstorm.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahstorm.jpg>
+- **Ch 18** · elijahtrench.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahtrench.jpg>
+- **Ch 18** · elijahwater.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahwater.jpg>
+- **Ch 18** · topographyisrael_small.jpg (score 0) <https://www.preceptaustin.org/files/images/TopographyIsrael_small.jpg>
+- **Ch 19** · map of elijah without topography_small.gif (score 10) <https://www.preceptaustin.org/files/images/map%20of%20elijah%20without%20topography_small.gif>
+- **Ch 19** · elijahcave.webp (score 0) <https://www.preceptaustin.org/files/images/elijahcave.webp>
+- **Ch 19** · elijahfear.webp (score 0) <https://www.preceptaustin.org/files/images/elijahfear.webp>
+- **Ch 19** · elijahhoreb.webp (score 0) <https://www.preceptaustin.org/files/images/elijahhoreb.webp>
+- **Ch 19** · elijahjezanger.webp (score 0) <https://www.preceptaustin.org/files/images/elijahjezanger.webp>
+- **Ch 19** · elijahjuniper.webp (score 0) <https://www.preceptaustin.org/files/images/elijahjuniper.webp>
+- **Ch 19** · elijahmantle.webp (score 0) <https://www.preceptaustin.org/files/images/elijahmantle.webp>
+- **Ch 19** · elijahmess1.webp (score 0) <https://www.preceptaustin.org/files/images/elijahmess1.webp>
+- **Ch 19** · elijahmouthcave.webp (score 0) <https://www.preceptaustin.org/files/images/elijahmouthcave.webp>
+- **Ch 20** · ahabb.webp (score 0) <https://www.preceptaustin.org/files/images/ahabb.webp>
+- **Ch 20** · ahabben.jpg (score 0) <https://www.preceptaustin.org/files/images/ahabben.jpg>
+- **Ch 20** · ahabgoat.webp (score 0) <https://www.preceptaustin.org/files/images/ahabgoat.webp>
+- **Ch 20** · ahabvex.webp (score 0) <https://www.preceptaustin.org/files/images/ahabvex.webp>
+- **Ch 21** · ahabsack.webp (score 0) <https://www.preceptaustin.org/files/images/ahabsack.webp>
+- **Ch 21** · ahabsul1.webp (score 0) <https://www.preceptaustin.org/files/images/ahabsul1.webp>
+- **Ch 21** · ahabvex.webp (score 0) <https://www.preceptaustin.org/files/images/ahabvex.webp>
+- **Ch 21** · ahahelijah.webp (score 0) <https://www.preceptaustin.org/files/images/ahahelijah.webp>
+- **Ch 21** · ahahnaboth.webp (score 0) <https://www.preceptaustin.org/files/images/ahahnaboth.webp>
+- **Ch 22** · ababjeh.webp (score 0) <https://www.preceptaustin.org/files/images/ababjeh.webp>
+- **Ch 22** · ahabben.jpg (score 0) <https://www.preceptaustin.org/files/images/ahabben.jpg>
+- **Ch 22** · ahabjeh.webp (score 0) <https://www.preceptaustin.org/files/images/ahabjeh.webp>
+- **Ch 22** · ahabmic.webp (score 0) <https://www.preceptaustin.org/files/images/ahabmic.webp>
+- **Ch 22** · ahabpro.webp (score 0) <https://www.preceptaustin.org/files/images/ahabpro.webp>
+- **Ch 22** · ahabsheep.webp (score 0) <https://www.preceptaustin.org/files/images/ahabsheep.webp>
+- **Ch 22** · ahabwound.webp (score 0) <https://www.preceptaustin.org/files/images/ahabwound.webp>
+- **Ch 22** · ahabzed.webp (score 0) <https://www.preceptaustin.org/files/images/ahabzed.webp>
+- **Ch 22** · jehezion.jpg (score 0) <https://www.preceptaustin.org/files/images/jehezion.jpg>
+- **Ch 22** · ramoth.webp (score 0) <https://www.preceptaustin.org/files/images/ramoth.webp>
+
+## 1-samuel — 10 book-level, 177 per-chapter (probed 31 chapters)
+
+### Book-level
+- 1kichart2.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/1kichart2.png>
 - 1samap.png (score 12, 29 chapters) <https://www.preceptaustin.org/files/images/1samap.png>
 - 1samueltimeline.png (score 12, 31 chapters) <https://www.preceptaustin.org/files/images/1samueltimeline.png>
 - 1samuelmapesv.jpg (score 10, 29 chapters) <https://www.preceptaustin.org/files/images/1samuelmapesv.jpg>
+- 1sa3.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1sa3.png>
+- 1sa3kings.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1sa3kings.png>
+- 1sam.png (score 2, 31 chapters) <https://www.preceptaustin.org/files/images/1sam.png>
+- 1samain.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1samain.png>
+- 1saman.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1saman.png>
+- 1satime.png (score 2, 31 chapters) <https://www.preceptaustin.org/files/images/1satime.png>
 ### Per-chapter
 - **Ch 1** · judgestimeline.png (score 12) <https://www.preceptaustin.org/files/images/judgestimeline.png>
 - **Ch 1** · judgestimeline2.jpg (score 10) <https://www.preceptaustin.org/files/images/judgestimeline2.jpg>
+- **Ch 1** · 1saman.png (score 2) <https://www.preceptaustin.org/files/images/1saman.png>
+- **Ch 1** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 1** · hannah.jpg (score 0) <https://www.preceptaustin.org/files/images/hannah.jpg>
+- **Ch 1** · ramah.jpg (score 0) <https://www.preceptaustin.org/files/images/ramah.jpg>
+- **Ch 1** · samuelsbirth.jpg (score 0) <https://www.preceptaustin.org/files/images/samuelsbirth.jpg>
+- **Ch 1** · shiloh.jpg (score 0) <https://www.preceptaustin.org/files/images/shiloh.jpg>
+- **Ch 2** · 1saman.png (score 2) <https://www.preceptaustin.org/files/images/1saman.png>
+- **Ch 2** · aarontree.jpg (score 0) <https://www.preceptaustin.org/files/images/aarontree.jpg>
+- **Ch 3** · 1saman.png (score 2) <https://www.preceptaustin.org/files/images/1saman.png>
+- **Ch 3** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 3** · biblelight.jpg (score 0) <https://www.preceptaustin.org/files/images/biblelight.jpg>
+- **Ch 3** · exoduslampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslampstand.jpg>
+- **Ch 3** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
+- **Ch 4** · 1saman.png (score 2) <https://www.preceptaustin.org/files/images/1saman.png>
+- **Ch 4** · ark.jpg (score 0) <https://www.preceptaustin.org/files/images/ark.jpg>
+- **Ch 4** · ark1.jpg (score 0) <https://www.preceptaustin.org/files/images/ark1.jpg>
+- **Ch 4** · arkcaptured.jpg (score 0) <https://www.preceptaustin.org/files/images/arkcaptured.jpg>
+- **Ch 4** · ebenezer.jpg (score 0) <https://www.preceptaustin.org/files/images/ebenezer.jpg>
+- **Ch 4** · philistinesdefeatisrael.jpg (score 0) <https://www.preceptaustin.org/files/images/philistinesdefeatisrael.jpg>
+- **Ch 5** · 1saman.png (score 2) <https://www.preceptaustin.org/files/images/1saman.png>
+- **Ch 5** · hemorrhoid.png (score 2) <https://www.preceptaustin.org/files/images/hemorrhoid.png>
+- **Ch 5** · arkcaptured.jpg (score 0) <https://www.preceptaustin.org/files/images/arkcaptured.jpg>
+- **Ch 5** · bubonic.jpg (score 0) <https://www.preceptaustin.org/files/images/bubonic.jpg>
+- **Ch 5** · dagon1.jpg (score 0) <https://www.preceptaustin.org/files/images/dagon1.jpg>
+- **Ch 5** · dagondestroyed.gif (score 0) <https://www.preceptaustin.org/files/images/dagondestroyed.gif>
+- **Ch 6** · 1saman.png (score 2) <https://www.preceptaustin.org/files/images/1saman.png>
+- **Ch 6** · ark2esv.jpg (score 0) <https://www.preceptaustin.org/files/images/ark2esv.jpg>
+- **Ch 6** · arkcaptured.jpg (score 0) <https://www.preceptaustin.org/files/images/arkcaptured.jpg>
+- **Ch 6** · goldenmice.jpg (score 0) <https://www.preceptaustin.org/files/images/goldenmice.jpg>
+- **Ch 7** · 1saman.png (score 2) <https://www.preceptaustin.org/files/images/1saman.png>
+- **Ch 7** · arkcaptured.jpg (score 0) <https://www.preceptaustin.org/files/images/arkcaptured.jpg>
+- **Ch 7** · bethel.jpg (score 0) <https://www.preceptaustin.org/files/images/bethel.jpg>
+- **Ch 7** · gilgal.jpg (score 0) <https://www.preceptaustin.org/files/images/gilgal.jpg>
+- **Ch 7** · judges.jpg (score 0) <https://www.preceptaustin.org/files/images/judges.jpg>
+- **Ch 7** · pogo.jpg (score 0) <https://www.preceptaustin.org/files/images/pogo.jpg>
+- **Ch 7** · ramah.jpg (score 0) <https://www.preceptaustin.org/files/images/ramah.jpg>
+- **Ch 7** · samuelo.jpg (score 0) <https://www.preceptaustin.org/files/images/samuelo.jpg>
+- **Ch 7** · sincycle.jpg (score 0) <https://www.preceptaustin.org/files/images/sincycle.jpg>
+- **Ch 8** · 1saman.png (score 2) <https://www.preceptaustin.org/files/images/1saman.png>
+- **Ch 8** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 8** · ramah.jpg (score 0) <https://www.preceptaustin.org/files/images/ramah.jpg>
+- **Ch 9** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 9** · kingsize.jpg (score 0) <https://www.preceptaustin.org/files/images/kingsize.jpg>
+- **Ch 11** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 11** · jabesh.jpg (score 0) <https://www.preceptaustin.org/files/images/jabesh.jpg>
+- **Ch 11** · jabeshesv.jpg (score 0) <https://www.preceptaustin.org/files/images/jabeshesv.jpg>
+- **Ch 11** · thresh.jpg (score 0) <https://www.preceptaustin.org/files/images/thresh.jpg>
+- **Ch 12** · sincycle.jpg (score 0) <https://www.preceptaustin.org/files/images/sincycle.jpg>
 - **Ch 13** · israelgenericmap.png (score 12) <https://www.preceptaustin.org/files/images/israelgenericmap.png>
 - **Ch 13** · map of michmash battle.gif (score 10) <https://www.preceptaustin.org/files/images/map%20of%20michmash%20battle.gif>
+- **Ch 13** · plowshare.png (score 2) <https://www.preceptaustin.org/files/images/plowshare.png>
+- **Ch 13** · mattock.jpg (score 0) <https://www.preceptaustin.org/files/images/mattock.jpg>
+- **Ch 13** · michmash.jpg (score 0) <https://www.preceptaustin.org/files/images/michmash.jpg>
+- **Ch 13** · michmash1.jpg (score 0) <https://www.preceptaustin.org/files/images/michmash1.jpg>
+- **Ch 13** · michmash2.jpg (score 0) <https://www.preceptaustin.org/files/images/michmash2.jpg>
+- **Ch 13** · shofar.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar.jpg>
 - **Ch 14** · israelgenericmap.png (score 12) <https://www.preceptaustin.org/files/images/israelgenericmap.png>
 - **Ch 14** · map of michmash battle.gif (score 10) <https://www.preceptaustin.org/files/images/map%20of%20michmash%20battle.gif>
+- **Ch 14** · exoduspriest.png (score 2) <https://www.preceptaustin.org/files/images/exoduspriest.png>
+- **Ch 14** · michmash.jpg (score 0) <https://www.preceptaustin.org/files/images/michmash.jpg>
+- **Ch 14** · michmash2.jpg (score 0) <https://www.preceptaustin.org/files/images/michmash2.jpg>
+- **Ch 14** · michmash3.jpg (score 0) <https://www.preceptaustin.org/files/images/michmash3.jpg>
+- **Ch 14** · pom.jpg (score 0) <https://www.preceptaustin.org/files/images/pom.jpg>
+- **Ch 14** · ps119.jpg (score 0) <https://www.preceptaustin.org/files/images/ps119.jpg>
+- **Ch 14** · saulswars.jpg (score 0) <https://www.preceptaustin.org/files/images/saulswars.jpg>
 - **Ch 15** · israelgenericmap.png (score 12) <https://www.preceptaustin.org/files/images/israelgenericmap.png>
+- **Ch 15** · amalek.jpg (score 0) <https://www.preceptaustin.org/files/images/amalek.jpg>
+- **Ch 15** · amalekite.jpg (score 0) <https://www.preceptaustin.org/files/images/amalekite.jpg>
+- **Ch 15** · buck.jpeg (score 0) <https://www.preceptaustin.org/files/images/buck.jpeg>
+- **Ch 15** · crown.jpg (score 0) <https://www.preceptaustin.org/files/images/crown.jpg>
+- **Ch 16** · 1sa3.png (score 2) <https://www.preceptaustin.org/files/images/1sa3.png>
+- **Ch 16** · 1sa3kings.png (score 2) <https://www.preceptaustin.org/files/images/1sa3kings.png>
+- **Ch 16** · 1samain.png (score 2) <https://www.preceptaustin.org/files/images/1samain.png>
+- **Ch 16** · aboutface.jpg (score 0) <https://www.preceptaustin.org/files/images/aboutface.jpg>
+- **Ch 16** · anointdavid.jpg (score 0) <https://www.preceptaustin.org/files/images/anointdavid.jpg>
+- **Ch 16** · bethlehem.jpg (score 0) <https://www.preceptaustin.org/files/images/bethlehem.jpg>
+- **Ch 16** · davidharp.jpg (score 0) <https://www.preceptaustin.org/files/images/davidharp.jpg>
+- **Ch 16** · fill2.jpg (score 0) <https://www.preceptaustin.org/files/images/fill2.jpg>
+- **Ch 16** · harp.jpg (score 0) <https://www.preceptaustin.org/files/images/harp.jpg>
+- **Ch 16** · ruth_41.gif (score 0) <https://www.preceptaustin.org/files/images/ruth_41.gif>
+- **Ch 16** · saulterror.jpg (score 0) <https://www.preceptaustin.org/files/images/saulterror.jpg>
 - **Ch 17** · goliathmap.jpg (score 10) <https://www.preceptaustin.org/files/images/goliathmap.jpg>
+- **Ch 17** · 1sa3.png (score 2) <https://www.preceptaustin.org/files/images/1sa3.png>
+- **Ch 17** · 1sa3kings.png (score 2) <https://www.preceptaustin.org/files/images/1sa3kings.png>
+- **Ch 17** · 1samain.png (score 2) <https://www.preceptaustin.org/files/images/1samain.png>
+- **Ch 17** · greave.png (score 2) <https://www.preceptaustin.org/files/images/greave.png>
+- **Ch 17** · bear.jpg (score 0) <https://www.preceptaustin.org/files/images/bear.jpg>
+- **Ch 17** · davidlion.jpg (score 0) <https://www.preceptaustin.org/files/images/davidlion.jpg>
+- **Ch 17** · giant.jpg (score 0) <https://www.preceptaustin.org/files/images/giant.jpg>
+- **Ch 17** · goliathhead.jpg (score 0) <https://www.preceptaustin.org/files/images/goliathhead.jpg>
+- **Ch 17** · sling.jpg (score 0) <https://www.preceptaustin.org/files/images/sling.jpg>
+- **Ch 17** · terebinth.jpg (score 0) <https://www.preceptaustin.org/files/images/terebinth.jpg>
+- **Ch 17** · valleyelah.jpg (score 0) <https://www.preceptaustin.org/files/images/valleyelah.jpg>
+- **Ch 17** · weavers.jpg (score 0) <https://www.preceptaustin.org/files/images/weavers.jpg>
+- **Ch 18** · 1sa3.png (score 2) <https://www.preceptaustin.org/files/images/1sa3.png>
+- **Ch 18** · 1sa3kings.png (score 2) <https://www.preceptaustin.org/files/images/1sa3kings.png>
+- **Ch 18** · 1samain.png (score 2) <https://www.preceptaustin.org/files/images/1samain.png>
+- **Ch 18** · saulspear.png (score 2) <https://www.preceptaustin.org/files/images/saulspear.png>
+- **Ch 19** · 1sa3.png (score 2) <https://www.preceptaustin.org/files/images/1sa3.png>
+- **Ch 19** · 1sa3kings.png (score 2) <https://www.preceptaustin.org/files/images/1sa3kings.png>
+- **Ch 19** · 1samain.png (score 2) <https://www.preceptaustin.org/files/images/1samain.png>
+- **Ch 19** · davidflee.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflee.jpg>
+- **Ch 19** · davidflees.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflees.jpg>
+- **Ch 19** · saulterror.jpg (score 0) <https://www.preceptaustin.org/files/images/saulterror.jpg>
+- **Ch 20** · 1sa3.png (score 2) <https://www.preceptaustin.org/files/images/1sa3.png>
+- **Ch 20** · 1sa3kings.png (score 2) <https://www.preceptaustin.org/files/images/1sa3kings.png>
+- **Ch 20** · 1samain.png (score 2) <https://www.preceptaustin.org/files/images/1samain.png>
+- **Ch 20** · davidflee.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflee.jpg>
+- **Ch 20** · davidflees.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflees.jpg>
+- **Ch 20** · djparting.jpg (score 0) <https://www.preceptaustin.org/files/images/djparting.jpg>
+- **Ch 20** · jondav.jpg (score 0) <https://www.preceptaustin.org/files/images/jondav.jpg>
+- **Ch 21** · 1sa3.png (score 2) <https://www.preceptaustin.org/files/images/1sa3.png>
+- **Ch 21** · 1sa3kings.png (score 2) <https://www.preceptaustin.org/files/images/1sa3kings.png>
+- **Ch 21** · 1samain.png (score 2) <https://www.preceptaustin.org/files/images/1samain.png>
+- **Ch 21** · nob.png (score 2) <https://www.preceptaustin.org/files/images/nob.png>
+- **Ch 21** · bread.jpg (score 0) <https://www.preceptaustin.org/files/images/bread.jpg>
+- **Ch 21** · davidflee.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflee.jpg>
+- **Ch 21** · davidflees.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflees.jpg>
+- **Ch 21** · davidmad.jpg (score 0) <https://www.preceptaustin.org/files/images/davidmad.jpg>
+- **Ch 21** · davidnob.jpg (score 0) <https://www.preceptaustin.org/files/images/davidnob.jpg>
+- **Ch 21** · davidsword.jpg (score 0) <https://www.preceptaustin.org/files/images/davidsword.jpg>
+- **Ch 21** · scrabble.jpg (score 0) <https://www.preceptaustin.org/files/images/scrabble.jpg>
+- **Ch 22** · 1sa3.png (score 2) <https://www.preceptaustin.org/files/images/1sa3.png>
+- **Ch 22** · 1sa3kings.png (score 2) <https://www.preceptaustin.org/files/images/1sa3kings.png>
+- **Ch 22** · 1samain.png (score 2) <https://www.preceptaustin.org/files/images/1samain.png>
+- **Ch 22** · davidcave.jpg (score 0) <https://www.preceptaustin.org/files/images/davidcave.jpg>
+- **Ch 22** · davidddd.jpeg (score 0) <https://www.preceptaustin.org/files/images/davidddd.jpeg>
+- **Ch 22** · davidflee.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflee.jpg>
+- **Ch 22** · davidflees.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflees.jpg>
+- **Ch 22** · doeg.jpg (score 0) <https://www.preceptaustin.org/files/images/doeg.jpg>
+- **Ch 23** · 1sa3.png (score 2) <https://www.preceptaustin.org/files/images/1sa3.png>
+- **Ch 23** · 1sa3kings.png (score 2) <https://www.preceptaustin.org/files/images/1sa3kings.png>
+- **Ch 23** · 1samain.png (score 2) <https://www.preceptaustin.org/files/images/1samain.png>
+- **Ch 23** · davidflee.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflee.jpg>
+- **Ch 23** · davidflees.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflees.jpg>
+- **Ch 23** · davidjon.jpg (score 0) <https://www.preceptaustin.org/files/images/davidjon.jpg>
+- **Ch 23** · davidmen.jpg (score 0) <https://www.preceptaustin.org/files/images/davidmen.jpg>
+- **Ch 23** · engedidavidfalls.jpg (score 0) <https://www.preceptaustin.org/files/images/engedidavidfalls.jpg>
+- **Ch 23** · judeanwild.jpg (score 0) <https://www.preceptaustin.org/files/images/judeanwild.jpg>
+- **Ch 23** · maon.jpg (score 0) <https://www.preceptaustin.org/files/images/maon.jpg>
+- **Ch 23** · priest.jpg (score 0) <https://www.preceptaustin.org/files/images/priest.jpg>
+- **Ch 23** · thresh.jpg (score 0) <https://www.preceptaustin.org/files/images/thresh.jpg>
+- **Ch 24** · davidcuts.jpg (score 0) <https://www.preceptaustin.org/files/images/davidcuts.jpg>
+- **Ch 24** · davidflee.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflee.jpg>
+- **Ch 24** · davidflees.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflees.jpg>
+- **Ch 24** · engedidavidfalls.jpg (score 0) <https://www.preceptaustin.org/files/images/engedidavidfalls.jpg>
+- **Ch 24** · wildgoat1.jpg (score 0) <https://www.preceptaustin.org/files/images/wildgoat1.jpg>
+- **Ch 25** · davidabig.jpg (score 0) <https://www.preceptaustin.org/files/images/davidabig.jpg>
+- **Ch 25** · davidflee.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflee.jpg>
+- **Ch 25** · davidflees.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflees.jpg>
+- **Ch 25** · nabal.jpg (score 0) <https://www.preceptaustin.org/files/images/nabal.jpg>
+- **Ch 26** · davidflee.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflee.jpg>
+- **Ch 26** · davidflees.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflees.jpg>
+- **Ch 26** · davidjug.jpg (score 0) <https://www.preceptaustin.org/files/images/davidjug.jpg>
+- **Ch 26** · davidjug1.jpeg (score 0) <https://www.preceptaustin.org/files/images/davidjug1.jpeg>
+- **Ch 26** · davidspear.jpg (score 0) <https://www.preceptaustin.org/files/images/davidspear.jpg>
+- **Ch 26** · hachilah.jpg (score 0) <https://www.preceptaustin.org/files/images/hachilah.jpg>
+- **Ch 26** · partridge1.jpg (score 0) <https://www.preceptaustin.org/files/images/partridge1.jpg>
 - **Ch 27** · mapdavid.jpg (score 10) <https://www.preceptaustin.org/files/images/mapdavid.jpg>
+- **Ch 27** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 27** · ziklag.jpg (score 0) <https://www.preceptaustin.org/files/images/ziklag.jpg>
 - **Ch 28** · mapdavid.jpg (score 10) <https://www.preceptaustin.org/files/images/mapdavid.jpg>
+- **Ch 28** · horns.png (score 2) <https://www.preceptaustin.org/files/images/horns.png>
+- **Ch 28** · davidflee.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflee.jpg>
+- **Ch 28** · endor.jpg (score 0) <https://www.preceptaustin.org/files/images/endor.jpg>
+- **Ch 28** · gilboajezreel.jpg (score 0) <https://www.preceptaustin.org/files/images/gilboajezreel.jpg>
+- **Ch 28** · witchendor.jpg (score 0) <https://www.preceptaustin.org/files/images/witchendor.jpg>
+- **Ch 28** · witchendor2.jpg (score 0) <https://www.preceptaustin.org/files/images/witchendor2.jpg>
+- **Ch 29** · saulbattles.jpg (score 0) <https://www.preceptaustin.org/files/images/saulbattles.jpg>
+- **Ch 30** · davidflee.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflee.jpg>
+- **Ch 30** · ziklagburning.jpg (score 0) <https://www.preceptaustin.org/files/images/ziklagburning.jpg>
+- **Ch 31** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 31** · bones.jpg (score 0) <https://www.preceptaustin.org/files/images/bones.jpg>
+- **Ch 31** · davidflee.jpg (score 0) <https://www.preceptaustin.org/files/images/davidflee.jpg>
+- **Ch 31** · saulsbody.jpg (score 0) <https://www.preceptaustin.org/files/images/saulsbody.jpg>
 
-## 1-timothy — 1 book-level, 0 per-chapter (probed 6 chapters)
+## 1-timothy — 4 book-level, 7 per-chapter (probed 6 chapters)
 
 ### Book-level
 - 1timothymap.jpg (score 10, 6 chapters) <https://www.preceptaustin.org/files/images/1timothymap.jpg>
+- 1ti.png (score 2, 6 chapters) <https://www.preceptaustin.org/files/images/1ti.png>
+- 1timothytime.jpg (score 0, 6 chapters) <https://www.preceptaustin.org/files/images/1timothytime.jpg>
+- paul_epistle.jpg (score 0, 6 chapters) <https://www.preceptaustin.org/files/images/paul_epistle.jpg>
+### Per-chapter
+- **Ch 1** · fish.jpg (score 0) <https://www.preceptaustin.org/files/images/fish.jpg>
+- **Ch 1** · guard.jpg (score 0) <https://www.preceptaustin.org/files/images/guard.jpg>
+- **Ch 1** · mirror.jpg (score 0) <https://www.preceptaustin.org/files/images/mirror.jpg>
+- **Ch 1** · peda.jpg (score 0) <https://www.preceptaustin.org/files/images/peda.jpg>
+- **Ch 2** · gospel bridge 3.gif (score 0) <https://www.preceptaustin.org/files/images/gospel%20bridge%203.gif>
+- **Ch 3** · mousetrap.jpg (score 0) <https://www.preceptaustin.org/files/images/mousetrap.jpg>
+- **Ch 5** · thresh.jpg (score 0) <https://www.preceptaustin.org/files/images/thresh.jpg>
 
-## 2-chronicles — 1 book-level, 15 per-chapter (probed 36 chapters)
+## 2-chronicles — 8 book-level, 205 per-chapter (probed 36 chapters)
 
 ### Book-level
+- 1kichart2.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/1kichart2.png>
 - 2chronicles.jpg (score 10, 36 chapters) <https://www.preceptaustin.org/files/images/2chronicles.jpg>
+- 12kingsall.png (score 2, 27 chapters) <https://www.preceptaustin.org/files/images/12kingsall.png>
+- 1ki.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1ki.png>
+- 1kichr.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1kichr.png>
+- 1kichrsetting.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1kichrsetting.png>
+- 2chrtime.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/2chrtime.jpg>
+- prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
 ### Per-chapter
+- **Ch 1** · gibeon2.jpg (score 0) <https://www.preceptaustin.org/files/images/gibeon2.jpg>
+- **Ch 1** · horse1.jpg (score 0) <https://www.preceptaustin.org/files/images/horse1.jpg>
+- **Ch 1** · sycamore.jpg (score 0) <https://www.preceptaustin.org/files/images/sycamore.jpg>
+- **Ch 2** · joppa.jpg (score 0) <https://www.preceptaustin.org/files/images/joppa.jpg>
+- **Ch 2** · stonecutter.jpg (score 0) <https://www.preceptaustin.org/files/images/stonecutter.jpg>
+- **Ch 3** · ezekie7.gif (score 0) <https://www.preceptaustin.org/files/images/ezekie7.gif>
+- **Ch 3** · solomonstemplecity2.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonstemplecity2.jpg>
+- **Ch 3** · solomontempleplan.jpg (score 0) <https://www.preceptaustin.org/files/images/solomontempleplan.jpg>
+- **Ch 4** · exodusbrazen2.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusbrazen2.jpg>
+- **Ch 4** · exoduslampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslampstand.jpg>
+- **Ch 4** · exodusshowbread.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusshowbread.jpg>
+- **Ch 8** · ezion.jpg (score 0) <https://www.preceptaustin.org/files/images/ezion.jpg>
+- **Ch 8** · ezion2.jpg (score 0) <https://www.preceptaustin.org/files/images/ezion2.jpg>
+- **Ch 8** · ophir.jpg (score 0) <https://www.preceptaustin.org/files/images/ophir.jpg>
 - **Ch 9** · solomonkingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/solomonkingdom.jpg>
+- **Ch 9** · solomon.png (score 2) <https://www.preceptaustin.org/files/images/solomon.png>
+- **Ch 9** · sheba.jpg (score 0) <https://www.preceptaustin.org/files/images/sheba.jpg>
+- **Ch 9** · shebaqueen.jpg (score 0) <https://www.preceptaustin.org/files/images/shebaqueen.jpg>
+- **Ch 9** · solomonchariot.webp (score 0) <https://www.preceptaustin.org/files/images/solomonchariot.webp>
+- **Ch 9** · solomonking.webp (score 0) <https://www.preceptaustin.org/files/images/solomonking.webp>
+- **Ch 9** · solomonmeal.webp (score 0) <https://www.preceptaustin.org/files/images/solomonmeal.webp>
+- **Ch 9** · solomonmeetsheba.webp (score 0) <https://www.preceptaustin.org/files/images/solomonmeetsheba.webp>
+- **Ch 9** · solomonpeacock.webp (score 0) <https://www.preceptaustin.org/files/images/solomonpeacock.webp>
+- **Ch 9** · solomonsheba.webp (score 0) <https://www.preceptaustin.org/files/images/solomonsheba.webp>
+- **Ch 9** · solomonsilver.webp (score 0) <https://www.preceptaustin.org/files/images/solomonsilver.webp>
+- **Ch 9** · solomonthrone.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonthrone.jpg>
+- **Ch 10** · ephraimz.jpg (score 0) <https://www.preceptaustin.org/files/images/ephraimz.jpg>
+- **Ch 10** · scorpion.webp (score 0) <https://www.preceptaustin.org/files/images/scorpion.webp>
+- **Ch 11** · goat.webp (score 0) <https://www.preceptaustin.org/files/images/goat.webp>
+- **Ch 12** · shishak.jpg (score 0) <https://www.preceptaustin.org/files/images/shishak.jpg>
+- **Ch 13** · abijah1.webp (score 0) <https://www.preceptaustin.org/files/images/abijah1.webp>
+- **Ch 14** · mareshah1.webp (score 0) <https://www.preceptaustin.org/files/images/mareshah1.webp>
+- **Ch 14** · mareshah2.jpg (score 0) <https://www.preceptaustin.org/files/images/mareshah2.jpg>
+- **Ch 14** · mareshah3.jpg (score 0) <https://www.preceptaustin.org/files/images/mareshah3.jpg>
+- **Ch 14** · smite.webp (score 0) <https://www.preceptaustin.org/files/images/smite.webp>
+- **Ch 15** · davidcity.jpg (score 0) <https://www.preceptaustin.org/files/images/davidcity.jpg>
 - **Ch 16** · 1samuelmapesv.jpg (score 10) <https://www.preceptaustin.org/files/images/1samuelmapesv.jpg>
+- **Ch 16** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 16** · eagle1.jpg (score 0) <https://www.preceptaustin.org/files/images/eagle1.jpg>
+- **Ch 16** · ramah1.jpg (score 0) <https://www.preceptaustin.org/files/images/ramah1.jpg>
+- **Ch 17** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 18** · ahabramoth.jpg (score 0) <https://www.preceptaustin.org/files/images/ahabramoth.jpg>
+- **Ch 18** · ahabzed.webp (score 0) <https://www.preceptaustin.org/files/images/ahabzed.webp>
 - **Ch 20** · egyptmap.png (score 12) <https://www.preceptaustin.org/files/images/egyptmap.png>
+- **Ch 20** · jehcorpses.png (score 2) <https://www.preceptaustin.org/files/images/jehcorpses.png>
+- **Ch 20** · jeheye.png (score 2) <https://www.preceptaustin.org/files/images/jeheye.png>
+- **Ch 20** · jehpraise.png (score 2) <https://www.preceptaustin.org/files/images/jehpraise.png>
+- **Ch 20** · davidcon.jpg (score 0) <https://www.preceptaustin.org/files/images/davidcon.jpg>
+- **Ch 20** · engedi.jpg (score 0) <https://www.preceptaustin.org/files/images/engedi.jpg>
+- **Ch 20** · jehengedi.jpg (score 0) <https://www.preceptaustin.org/files/images/jehengedi.jpg>
+- **Ch 20** · tekoa.jpg (score 0) <https://www.preceptaustin.org/files/images/tekoa.jpg>
+- **Ch 21** · 1ki.png (score 2) <https://www.preceptaustin.org/files/images/1ki.png>
+- **Ch 21** · ahaziahtree.png (score 2) <https://www.preceptaustin.org/files/images/ahaziahtree.png>
+- **Ch 21** · aramsyria.png (score 2) <https://www.preceptaustin.org/files/images/aramsyria.png>
+- **Ch 21** · davidlineage.png (score 2) <https://www.preceptaustin.org/files/images/davidlineage.png>
+- **Ch 21** · joramsurrounded.png (score 2) <https://www.preceptaustin.org/files/images/joramsurrounded.png>
+- **Ch 21** · libnah.jpg (score 0) <https://www.preceptaustin.org/files/images/libnah.jpg>
+- **Ch 21** · rectalprolapse.jpg (score 0) <https://www.preceptaustin.org/files/images/rectalprolapse.jpg>
+- **Ch 22** · athaliah.png (score 2) <https://www.preceptaustin.org/files/images/athaliah.png>
+- **Ch 22** · athaliahjoash.png (score 2) <https://www.preceptaustin.org/files/images/athaliahjoash.png>
+- **Ch 22** · joashfamilytree.png (score 2) <https://www.preceptaustin.org/files/images/joashfamilytree.png>
+- **Ch 22** · ramoth-gilead.jpg (score 0) <https://www.preceptaustin.org/files/images/ramoth-gilead.jpg>
+- **Ch 23** · joashbaal.png (score 2) <https://www.preceptaustin.org/files/images/joashbaal.png>
+- **Ch 23** · joashcovenant.png (score 2) <https://www.preceptaustin.org/files/images/joashcovenant.png>
+- **Ch 23** · joashcrown.png (score 2) <https://www.preceptaustin.org/files/images/joashcrown.png>
+- **Ch 23** · joashcrowned.png (score 2) <https://www.preceptaustin.org/files/images/joashcrowned.png>
+- **Ch 23** · joashdavid.png (score 2) <https://www.preceptaustin.org/files/images/joashdavid.png>
+- **Ch 23** · joashkilled.png (score 2) <https://www.preceptaustin.org/files/images/joashkilled.png>
+- **Ch 23** · joashrejoiced.png (score 2) <https://www.preceptaustin.org/files/images/joashrejoiced.png>
+- **Ch 23** · joashsentenced.png (score 2) <https://www.preceptaustin.org/files/images/joashsentenced.png>
+- **Ch 23** · joashthrone.png (score 2) <https://www.preceptaustin.org/files/images/joashthrone.png>
+- **Ch 23** · joashtreason.png (score 2) <https://www.preceptaustin.org/files/images/joashtreason.png>
+- **Ch 23** · crown2.jpg (score 0) <https://www.preceptaustin.org/files/images/crown2.jpg>
 - **Ch 24** · joashchart.png (score 12) <https://www.preceptaustin.org/files/images/joashchart.png>
+- **Ch 24** · 2410.png (score 2) <https://www.preceptaustin.org/files/images/2410.png>
+- **Ch 24** · 2413.png (score 2) <https://www.preceptaustin.org/files/images/2413.png>
+- **Ch 24** · 2417.png (score 2) <https://www.preceptaustin.org/files/images/2417.png>
+- **Ch 24** · 243.png (score 2) <https://www.preceptaustin.org/files/images/243.png>
+- **Ch 24** · 245.png (score 2) <https://www.preceptaustin.org/files/images/245.png>
+- **Ch 24** · 2471.png (score 2) <https://www.preceptaustin.org/files/images/2471.png>
+- **Ch 24** · 249.png (score 2) <https://www.preceptaustin.org/files/images/249.png>
+- **Ch 24** · 2king127.png (score 2) <https://www.preceptaustin.org/files/images/2king127.png>
+- **Ch 24** · 2kings122.png (score 2) <https://www.preceptaustin.org/files/images/2kings122.png>
+- **Ch 24** · aramattacks.png (score 2) <https://www.preceptaustin.org/files/images/aramattacks.png>
+- **Ch 24** · jehoida2415.png (score 2) <https://www.preceptaustin.org/files/images/jehoida2415.png>
+- **Ch 24** · joashfamilytree.png (score 2) <https://www.preceptaustin.org/files/images/joashfamilytree.png>
+- **Ch 24** · joashsickdied.png (score 2) <https://www.preceptaustin.org/files/images/joashsickdied.png>
+- **Ch 24** · zechariahstoned1.png (score 2) <https://www.preceptaustin.org/files/images/zechariahstoned1.png>
+- **Ch 24** · turnaway.jpg (score 0) <https://www.preceptaustin.org/files/images/turnaway.jpg>
 - **Ch 25** · kingsallchart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingsallchart.jpg>
 - **Ch 25** · samsonmap1.jpg (score 10) <https://www.preceptaustin.org/files/images/samsonmap1.jpg>
 - **Ch 25** · seirmap.jpg (score 10) <https://www.preceptaustin.org/files/images/seirmap.jpg>
+- **Ch 25** · amaziah.png (score 2) <https://www.preceptaustin.org/files/images/amaziah.png>
+- **Ch 25** · davidsconquests.png (score 2) <https://www.preceptaustin.org/files/images/davidsconquests.png>
+- **Ch 25** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 25** · 2chrtime.jpg (score 0) <https://www.preceptaustin.org/files/images/2chrtime.jpg>
+- **Ch 25** · cornergate.jpg (score 0) <https://www.preceptaustin.org/files/images/cornergate.jpg>
 - **Ch 26** · 1kichart2.png (score 12) <https://www.preceptaustin.org/files/images/1kichart2.png>
 - **Ch 26** · 1samap.png (score 12) <https://www.preceptaustin.org/files/images/1samap.png>
+- **Ch 26** · 1ki.png (score 2) <https://www.preceptaustin.org/files/images/1ki.png>
+- **Ch 26** · azariah.png (score 2) <https://www.preceptaustin.org/files/images/azariah.png>
+- **Ch 26** · azariahleper.png (score 2) <https://www.preceptaustin.org/files/images/azariahleper.png>
+- **Ch 26** · exodusincense.png (score 2) <https://www.preceptaustin.org/files/images/exodusincense.png>
+- **Ch 26** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 26** · uzziah2613.png (score 2) <https://www.preceptaustin.org/files/images/uzziah2613.png>
+- **Ch 26** · uzziah2614.png (score 2) <https://www.preceptaustin.org/files/images/uzziah2614.png>
+- **Ch 26** · uzziah2616.png (score 2) <https://www.preceptaustin.org/files/images/uzziah2616.png>
+- **Ch 26** · uzziah2617.png (score 2) <https://www.preceptaustin.org/files/images/uzziah2617.png>
+- **Ch 26** · uzziah2619a.png (score 2) <https://www.preceptaustin.org/files/images/uzziah2619a.png>
+- **Ch 26** · uzziah2619b.png (score 2) <https://www.preceptaustin.org/files/images/uzziah2619b.png>
+- **Ch 26** · uzziah2620.png (score 2) <https://www.preceptaustin.org/files/images/uzziah2620.png>
+- **Ch 26** · uzziah2622.png (score 2) <https://www.preceptaustin.org/files/images/uzziah2622.png>
+- **Ch 26** · uzziah2623.png (score 2) <https://www.preceptaustin.org/files/images/uzziah2623.png>
+- **Ch 26** · uzziaharmy.png (score 2) <https://www.preceptaustin.org/files/images/uzziaharmy.png>
+- **Ch 26** · uzziahevil.png (score 2) <https://www.preceptaustin.org/files/images/uzziahevil.png>
+- **Ch 26** · uzziahfamily.png (score 2) <https://www.preceptaustin.org/files/images/uzziahfamily.png>
+- **Ch 26** · uzziahinvent.png (score 2) <https://www.preceptaustin.org/files/images/uzziahinvent.png>
+- **Ch 26** · uzziahleper.png (score 2) <https://www.preceptaustin.org/files/images/uzziahleper.png>
+- **Ch 26** · uzziahmade.png (score 2) <https://www.preceptaustin.org/files/images/uzziahmade.png>
+- **Ch 26** · uzziahsoil.png (score 2) <https://www.preceptaustin.org/files/images/uzziahsoil.png>
+- **Ch 26** · uzziahthree.png (score 2) <https://www.preceptaustin.org/files/images/uzziahthree.png>
+- **Ch 26** · uzziahtower.png (score 2) <https://www.preceptaustin.org/files/images/uzziahtower.png>
+- **Ch 26** · uzziahtutor.png (score 2) <https://www.preceptaustin.org/files/images/uzziahtutor.png>
+- **Ch 26** · viamaris.png (score 2) <https://www.preceptaustin.org/files/images/viamaris.png>
+- **Ch 26** · aboutface.jpg (score 0) <https://www.preceptaustin.org/files/images/aboutface.jpg>
+- **Ch 26** · cornergate.jpg (score 0) <https://www.preceptaustin.org/files/images/cornergate.jpg>
+- **Ch 26** · eloth.jpg (score 0) <https://www.preceptaustin.org/files/images/eloth.jpg>
+- **Ch 26** · uzziahachilles.jpg (score 0) <https://www.preceptaustin.org/files/images/uzziahachilles.JPG>
 - **Ch 27** · jothamopheldiagram.png (score 12) <https://www.preceptaustin.org/files/images/jothamopheldiagram.png>
+- **Ch 27** · azariah.png (score 2) <https://www.preceptaustin.org/files/images/azariah.png>
+- **Ch 27** · jotham272.png (score 2) <https://www.preceptaustin.org/files/images/jotham272.png>
+- **Ch 27** · jotham273.png (score 2) <https://www.preceptaustin.org/files/images/jotham273.png>
+- **Ch 27** · jotham274.png (score 2) <https://www.preceptaustin.org/files/images/jotham274.png>
+- **Ch 27** · jothamammonites.png (score 2) <https://www.preceptaustin.org/files/images/jothamammonites.png>
+- **Ch 27** · jothamfuneral.png (score 2) <https://www.preceptaustin.org/files/images/jothamfuneral.png>
+- **Ch 27** · jothammighty.png (score 2) <https://www.preceptaustin.org/files/images/jothammighty.png>
+- **Ch 27** · jothamwars.png (score 2) <https://www.preceptaustin.org/files/images/jothamwars.png>
+- **Ch 27** · jothamophel.jpg (score 0) <https://www.preceptaustin.org/files/images/jothamophel.jpg>
 - **Ch 28** · kingsallchart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingsallchart.jpg>
+- **Ch 28** · ahaz163.png (score 2) <https://www.preceptaustin.org/files/images/ahaz163.png>
+- **Ch 28** · ahaz164.png (score 2) <https://www.preceptaustin.org/files/images/ahaz164.png>
+- **Ch 28** · ahaz168.png (score 2) <https://www.preceptaustin.org/files/images/ahaz168.png>
+- **Ch 28** · ahaz2812.png (score 2) <https://www.preceptaustin.org/files/images/ahaz2812.png>
+- **Ch 28** · ahaz2814.png (score 2) <https://www.preceptaustin.org/files/images/ahaz2814.png>
+- **Ch 28** · ahaz2815.png (score 2) <https://www.preceptaustin.org/files/images/ahaz2815.png>
+- **Ch 28** · ahaz2816.png (score 2) <https://www.preceptaustin.org/files/images/ahaz2816.png>
+- **Ch 28** · ahaz2817.png (score 2) <https://www.preceptaustin.org/files/images/ahaz2817.png>
+- **Ch 28** · ahaz2819.png (score 2) <https://www.preceptaustin.org/files/images/ahaz2819.png>
+- **Ch 28** · ahaz282.png (score 2) <https://www.preceptaustin.org/files/images/ahaz282.png>
+- **Ch 28** · ahaz2820.png (score 2) <https://www.preceptaustin.org/files/images/ahaz2820.png>
+- **Ch 28** · ahaz2821.png (score 2) <https://www.preceptaustin.org/files/images/ahaz2821.png>
+- **Ch 28** · ahaz2822.png (score 2) <https://www.preceptaustin.org/files/images/ahaz2822.png>
+- **Ch 28** · ahaz2823.png (score 2) <https://www.preceptaustin.org/files/images/ahaz2823.png>
+- **Ch 28** · ahaz2827.png (score 2) <https://www.preceptaustin.org/files/images/ahaz2827.png>
+- **Ch 28** · ahaz283.png (score 2) <https://www.preceptaustin.org/files/images/ahaz283.png>
+- **Ch 28** · ahaz285.png (score 2) <https://www.preceptaustin.org/files/images/ahaz285.png>
+- **Ch 28** · ahaz286.png (score 2) <https://www.preceptaustin.org/files/images/ahaz286.png>
+- **Ch 28** · ahaz287.png (score 2) <https://www.preceptaustin.org/files/images/ahaz287.png>
+- **Ch 28** · ahaz288.png (score 2) <https://www.preceptaustin.org/files/images/ahaz288.png>
+- **Ch 28** · ahaz289.png (score 2) <https://www.preceptaustin.org/files/images/ahaz289.png>
+- **Ch 28** · ahazsurrounded.png (score 2) <https://www.preceptaustin.org/files/images/ahazsurrounded.png>
+- **Ch 28** · highplaces.png (score 2) <https://www.preceptaustin.org/files/images/highplaces.png>
 - **Ch 29** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
+- **Ch 29** · 2ch2911.png (score 2) <https://www.preceptaustin.org/files/images/2ch2911.png>
+- **Ch 29** · 2ch2921.png (score 2) <https://www.preceptaustin.org/files/images/2ch2921.png>
+- **Ch 29** · 2ch2922.png (score 2) <https://www.preceptaustin.org/files/images/2ch2922.png>
+- **Ch 29** · 2ch294.png (score 2) <https://www.preceptaustin.org/files/images/2ch294.png>
+- **Ch 29** · 2chr2916.png (score 2) <https://www.preceptaustin.org/files/images/2chr2916.png>
+- **Ch 29** · hezekiah2925.png (score 2) <https://www.preceptaustin.org/files/images/hezekiah2925.png>
+- **Ch 29** · hezekiah2926.png (score 2) <https://www.preceptaustin.org/files/images/hezekiah2926.png>
+- **Ch 29** · hezekiah2928.png (score 2) <https://www.preceptaustin.org/files/images/hezekiah2928.png>
+- **Ch 29** · hezekiah293.png (score 2) <https://www.preceptaustin.org/files/images/hezekiah293.png>
+- **Ch 29** · hezekiah2930.png (score 2) <https://www.preceptaustin.org/files/images/hezekiah2930.png>
+- **Ch 29** · levisons1.png (score 2) <https://www.preceptaustin.org/files/images/levisons1.png>
+- **Ch 29** · jerusalemhezekiah.jpg (score 0) <https://www.preceptaustin.org/files/images/jerusalemhezekiah.jpg>
+- **Ch 30** · 2ch3013.png (score 2) <https://www.preceptaustin.org/files/images/2ch3013.png>
+- **Ch 30** · 2ch306.png (score 2) <https://www.preceptaustin.org/files/images/2ch306.png>
+- **Ch 30** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 30** · citydavid1.jpg (score 0) <https://www.preceptaustin.org/files/images/citydavid1.jpg>
+- **Ch 30** · jerusalemhezekiah.jpg (score 0) <https://www.preceptaustin.org/files/images/jerusalemhezekiah.jpg>
+- **Ch 30** · revive1.jpg (score 0) <https://www.preceptaustin.org/files/images/revive1.jpg>
+- **Ch 31** · jerusalemnehemiah1.png (score 2) <https://www.preceptaustin.org/files/images/jerusalemnehemiah1.png>
+- **Ch 31** · jerusalemhezekiah.jpg (score 0) <https://www.preceptaustin.org/files/images/jerusalemhezekiah.jpg>
+- **Ch 31** · leviticalcities.jpg (score 0) <https://www.preceptaustin.org/files/images/leviticalcities.jpg>
+- **Ch 32** · hezekiahstunnel1.png (score 2) <https://www.preceptaustin.org/files/images/hezekiahstunnel1.png>
+- **Ch 32** · hezekiahstunnelmark.png (score 2) <https://www.preceptaustin.org/files/images/hezekiahstunnelmark.png>
+- **Ch 32** · hezekiah.jpg (score 0) <https://www.preceptaustin.org/files/images/hezekiah.jpg>
+- **Ch 32** · jerusalemhezekiah.jpg (score 0) <https://www.preceptaustin.org/files/images/jerusalemhezekiah.jpg>
+- **Ch 32** · lachishattack.jpg (score 0) <https://www.preceptaustin.org/files/images/lachishattack.jpg>
+- **Ch 32** · lachishflay.jpg (score 0) <https://www.preceptaustin.org/files/images/lachishflay.jpg>
+- **Ch 32** · sennaprism.jpg (score 0) <https://www.preceptaustin.org/files/images/sennaprism.jpg>
 - **Ch 33** · jothamopheldiagram.png (score 12) <https://www.preceptaustin.org/files/images/jothamopheldiagram.png>
 - **Ch 33** · kingsallchart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingsallchart.jpg>
+- **Ch 33** · hoshea171.png (score 2) <https://www.preceptaustin.org/files/images/hoshea171.png>
+- **Ch 33** · courts.jpg (score 0) <https://www.preceptaustin.org/files/images/courts.jpg>
+- **Ch 33** · greentree.webp (score 0) <https://www.preceptaustin.org/files/images/greentree.webp>
+- **Ch 33** · jothamophel.jpg (score 0) <https://www.preceptaustin.org/files/images/jothamophel.jpg>
+- **Ch 34** · gad.png (score 2) <https://www.preceptaustin.org/files/images/gad.png>
 - **Ch 36** · timelineisreal2.png (score 12) <https://www.preceptaustin.org/files/images/timelineisreal2.png>
+- **Ch 36** · cyrus.png (score 2) <https://www.preceptaustin.org/files/images/cyrus.png>
+- **Ch 36** · jehoiakimdates4.png (score 2) <https://www.preceptaustin.org/files/images/jehoiakimdates4.png>
+- **Ch 36** · messiahslinethroughjoseph.png (score 2) <https://www.preceptaustin.org/files/images/messiahslinethroughjoseph.png>
+- **Ch 36** · east gate w color_small.jpg (score 0) <https://www.preceptaustin.org/files/images/east%20gate%20w%20color_small.jpg>
+- **Ch 36** · ezekie7_small.gif (score 0) <https://www.preceptaustin.org/files/images/ezekie7_small.gif>
+- **Ch 36** · mtolive2_small.jpg (score 0) <https://www.preceptaustin.org/files/images/mtolive2_small.jpg>
 
-## 2-kings — 4 book-level, 29 per-chapter (probed 25 chapters)
+## 2-corinthians — 8 book-level, 19 per-chapter (probed 13 chapters)
+
+### Book-level
+- 2cor.png (score 2, 13 chapters) <https://www.preceptaustin.org/files/images/2cor.png>
+- 3missionaryjourney.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/3missionaryjourney.gif>
+- acrocorinth.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/acrocorinth.jpg>
+- corinth.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/corinth.gif>
+- corinth.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/corinth.jpg>
+- corinth_city.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/corinth_city.jpg>
+- letter.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/letter.jpg>
+- paul_epistle.jpg (score 0, 13 chapters) <https://www.preceptaustin.org/files/images/paul_epistle.jpg>
+### Per-chapter
+- **Ch 1** · 3missionaryjourney.gif (score 0) <https://www.preceptaustin.org/files/images/3missionaryjourney.gif>
+- **Ch 1** · acrocorinth.jpg (score 0) <https://www.preceptaustin.org/files/images/acrocorinth.jpg>
+- **Ch 1** · corinth.jpg (score 0) <https://www.preceptaustin.org/files/images/corinth.jpg>
+- **Ch 1** · letter.jpg (score 0) <https://www.preceptaustin.org/files/images/letter.jpg>
+- **Ch 2** · 3missionaryjourney.gif (score 0) <https://www.preceptaustin.org/files/images/3missionaryjourney.gif>
+- **Ch 2** · triumphal.jpg (score 0) <https://www.preceptaustin.org/files/images/triumphal.jpg>
+- **Ch 5** · bema2.jpg (score 0) <https://www.preceptaustin.org/files/images/bema2.jpg>
+- **Ch 5** · bemajesus.jpg (score 0) <https://www.preceptaustin.org/files/images/bemajesus.jpg>
+- **Ch 6** · yoke.jpg (score 0) <https://www.preceptaustin.org/files/images/yoke.jpg>
+- **Ch 7** · aboutface.jpg (score 0) <https://www.preceptaustin.org/files/images/aboutface.jpg>
+- **Ch 8** · equil.png (score 2) <https://www.preceptaustin.org/files/images/equil.png>
+- **Ch 8** · acrocorinth.jpg (score 0) <https://www.preceptaustin.org/files/images/acrocorinth.jpg>
+- **Ch 8** · corinth.jpg (score 0) <https://www.preceptaustin.org/files/images/corinth.jpg>
+- **Ch 8** · giving.jpg (score 0) <https://www.preceptaustin.org/files/images/giving.jpg>
+- **Ch 9** · acrocorinth.jpg (score 0) <https://www.preceptaustin.org/files/images/acrocorinth.jpg>
+- **Ch 9** · corinth.jpg (score 0) <https://www.preceptaustin.org/files/images/corinth.jpg>
+- **Ch 9** · giving.jpg (score 0) <https://www.preceptaustin.org/files/images/giving.jpg>
+- **Ch 9** · letter.jpg (score 0) <https://www.preceptaustin.org/files/images/letter.jpg>
+- **Ch 11** · fust.jpg (score 0) <https://www.preceptaustin.org/files/images/fust.jpg>
+
+## 2-kings — 12 book-level, 288 per-chapter (probed 25 chapters)
 
 ### Book-level
 - 1kichart2.png (score 12, 13 chapters) <https://www.preceptaustin.org/files/images/1kichart2.png>
 - 2kingstimeline.png (score 12, 25 chapters) <https://www.preceptaustin.org/files/images/2kingstimeline.png>
 - 2chronicles.jpg (score 10, 13 chapters) <https://www.preceptaustin.org/files/images/2chronicles.jpg>
+- 2kingsmap.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/2kingsmap.jpg>
 - kingsallchart.jpg (score 10, 13 chapters) <https://www.preceptaustin.org/files/images/kingsallchart.jpg>
+- 12kingsall.png (score 2, 25 chapters) <https://www.preceptaustin.org/files/images/12kingsall.png>
+- 1ki.png (score 2, 14 chapters) <https://www.preceptaustin.org/files/images/1ki.png>
+- 1kichr.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1kichr.png>
+- 1kichrsetting.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1kichrsetting.png>
+- 1kjensen.png (score 2, 25 chapters) <https://www.preceptaustin.org/files/images/1kjensen.png>
+- elisha.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/elisha.jpg>
+- prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
 ### Per-chapter
 - **Ch 1** · 2kingsmap.jpg (score 10) <https://www.preceptaustin.org/files/images/2kingsmap.jpg>
+- **Ch 1** · ahaziahfall.png (score 2) <https://www.preceptaustin.org/files/images/ahaziahfall.png>
+- **Ch 1** · baalz.png (score 2) <https://www.preceptaustin.org/files/images/baalz.png>
+- **Ch 1** · elijahfire.png (score 2) <https://www.preceptaustin.org/files/images/elijahfire.png>
+- **Ch 1** · elijahhair.png (score 2) <https://www.preceptaustin.org/files/images/elijahhair.png>
+- **Ch 1** · elijahmes.png (score 2) <https://www.preceptaustin.org/files/images/elijahmes.png>
 - **Ch 2** · 2kingsmap.jpg (score 10) <https://www.preceptaustin.org/files/images/2kingsmap.jpg>
 - **Ch 2** · kingschart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingschart.jpg>
+- **Ch 2** · elijahelisha.png (score 2) <https://www.preceptaustin.org/files/images/elijahelisha.png>
+- **Ch 2** · elijahparts.png (score 2) <https://www.preceptaustin.org/files/images/elijahparts.png>
+- **Ch 2** · elishabears.png (score 2) <https://www.preceptaustin.org/files/images/elishabears.png>
+- **Ch 2** · elishajericho.png (score 2) <https://www.preceptaustin.org/files/images/elishajericho.png>
+- **Ch 2** · elishastrikes.png (score 2) <https://www.preceptaustin.org/files/images/elishastrikes.png>
+- **Ch 2** · elijahministry.jpg (score 0) <https://www.preceptaustin.org/files/images/elijahministry.jpg>
+- **Ch 2** · elisha.jpg (score 0) <https://www.preceptaustin.org/files/images/elisha.jpg>
 - **Ch 3** · dividedkingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/dividedkingdom.jpg>
 - **Ch 3** · kingschart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingschart.jpg>
+- **Ch 3** · jehoram.png (score 2) <https://www.preceptaustin.org/files/images/jehoram.png>
+- **Ch 3** · meshaking.png (score 2) <https://www.preceptaustin.org/files/images/meshaking.png>
+- **Ch 3** · dividedheart.jpeg (score 0) <https://www.preceptaustin.org/files/images/dividedheart.jpeg>
+- **Ch 3** · moabbattle.jpg (score 0) <https://www.preceptaustin.org/files/images/moabbattle.jpg>
+- **Ch 3** · moabblood.jpeg (score 0) <https://www.preceptaustin.org/files/images/moabblood.jpeg>
+- **Ch 3** · moabitestone.jpg (score 0) <https://www.preceptaustin.org/files/images/moabitestone.jpg>
+- **Ch 3** · moablood1.jpeg (score 0) <https://www.preceptaustin.org/files/images/moablood1.jpeg>
+- **Ch 3** · stele.jpg (score 0) <https://www.preceptaustin.org/files/images/stele.jpg>
 - **Ch 4** · 2kingsmap.jpg (score 10) <https://www.preceptaustin.org/files/images/2kingsmap.jpg>
 - **Ch 4** · kingschart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingschart.jpg>
+- **Ch 4** · donkey.png (score 2) <https://www.preceptaustin.org/files/images/donkey.png>
+- **Ch 4** · elishachild.png (score 2) <https://www.preceptaustin.org/files/images/elishachild.png>
+- **Ch 4** · kneelelisha.png (score 2) <https://www.preceptaustin.org/files/images/kneelelisha.png>
+- **Ch 4** · girdloins.jpg (score 0) <https://www.preceptaustin.org/files/images/girdloins.jpg>
+- **Ch 4** · gourd.jpg (score 0) <https://www.preceptaustin.org/files/images/gourd.jpg>
+- **Ch 4** · peace_dove_olive_branch animation.gif (score 0) <https://www.preceptaustin.org/files/images/peace_dove_olive_branch%20animation.gif>
+- **Ch 4** · shunammite.jpg (score 0) <https://www.preceptaustin.org/files/images/shunammite.jpg>
 - **Ch 5** · kingschart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingschart.jpg>
+- **Ch 5** · aramsyria.png (score 2) <https://www.preceptaustin.org/files/images/aramsyria.png>
+- **Ch 5** · elishagehazi.png (score 2) <https://www.preceptaustin.org/files/images/elishagehazi.png>
+- **Ch 5** · elishamsg.png (score 2) <https://www.preceptaustin.org/files/images/elishamsg.png>
+- **Ch 5** · elishawhite.png (score 2) <https://www.preceptaustin.org/files/images/elishawhite.png>
+- **Ch 5** · gehaziruns.png (score 2) <https://www.preceptaustin.org/files/images/gehaziruns.png>
+- **Ch 5** · jehoramrend.png (score 2) <https://www.preceptaustin.org/files/images/jehoramrend.png>
+- **Ch 5** · naamandips.png (score 2) <https://www.preceptaustin.org/files/images/naamandips.png>
+- **Ch 5** · naamangirl.png (score 2) <https://www.preceptaustin.org/files/images/naamangirl.png>
+- **Ch 5** · naamanjordan.png (score 2) <https://www.preceptaustin.org/files/images/naamanjordan.png>
+- **Ch 5** · naamanking.png (score 2) <https://www.preceptaustin.org/files/images/naamanking.png>
+- **Ch 5** · naamanpauses.png (score 2) <https://www.preceptaustin.org/files/images/naamanpauses.png>
+- **Ch 5** · ahabb.webp (score 0) <https://www.preceptaustin.org/files/images/ahabb.webp>
+- **Ch 5** · aramkings.jpg (score 0) <https://www.preceptaustin.org/files/images/aramkings.jpg>
+- **Ch 5** · fishbait.jpg (score 0) <https://www.preceptaustin.org/files/images/fishbait.jpg>
+- **Ch 5** · naamanheal.jpg (score 0) <https://www.preceptaustin.org/files/images/naamanheal.jpg>
+- **Ch 5** · peace_dove_olive_branch animation.gif (score 0) <https://www.preceptaustin.org/files/images/peace_dove_olive_branch%20animation.gif>
+- **Ch 5** · templeton.gif (score 0) <https://www.preceptaustin.org/files/images/templeton.gif>
 - **Ch 6** · kingschart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingschart.jpg>
+- **Ch 6** · aramsyria.png (score 2) <https://www.preceptaustin.org/files/images/aramsyria.png>
+- **Ch 6** · dothan2.png (score 2) <https://www.preceptaustin.org/files/images/dothan2.png>
+- **Ch 6** · dothansur.png (score 2) <https://www.preceptaustin.org/files/images/dothansur.png>
+- **Ch 6** · elishaaxehead.png (score 2) <https://www.preceptaustin.org/files/images/elishaaxehead.png>
+- **Ch 6** · elishaaxeheadlost.png (score 2) <https://www.preceptaustin.org/files/images/elishaaxeheadlost.png>
+- **Ch 6** · elishablind.png (score 2) <https://www.preceptaustin.org/files/images/elishablind.png>
+- **Ch 6** · elishachariots.png (score 2) <https://www.preceptaustin.org/files/images/elishachariots.png>
+- **Ch 6** · elishadoor.png (score 2) <https://www.preceptaustin.org/files/images/elishadoor.png>
+- **Ch 6** · elishafamine.png (score 2) <https://www.preceptaustin.org/files/images/elishafamine.png>
+- **Ch 6** · elishafeast.png (score 2) <https://www.preceptaustin.org/files/images/elishafeast.png>
+- **Ch 6** · elishafeed.png (score 2) <https://www.preceptaustin.org/files/images/elishafeed.png>
+- **Ch 6** · elishakill.png (score 2) <https://www.preceptaustin.org/files/images/elishakill.png>
+- **Ch 6** · elishakinghelp.png (score 2) <https://www.preceptaustin.org/files/images/elishakinghelp.png>
+- **Ch 6** · elishasamariasiege.png (score 2) <https://www.preceptaustin.org/files/images/elishasamariasiege.png>
+- **Ch 6** · elishasent.png (score 2) <https://www.preceptaustin.org/files/images/elishasent.png>
+- **Ch 6** · elishatoking.png (score 2) <https://www.preceptaustin.org/files/images/elishatoking.png>
+- **Ch 6** · jehoramrend.png (score 2) <https://www.preceptaustin.org/files/images/jehoramrend.png>
+- **Ch 6** · naamanjordan.png (score 2) <https://www.preceptaustin.org/files/images/naamanjordan.png>
+- **Ch 6** · aramkings.jpg (score 0) <https://www.preceptaustin.org/files/images/aramkings.jpg>
+- **Ch 6** · gift.gif (score 0) <https://www.preceptaustin.org/files/images/gift.gif>
+- **Ch 6** · jordanrift.jpg (score 0) <https://www.preceptaustin.org/files/images/jordanrift.jpg>
 - **Ch 7** · hittitemap.png (score 12) <https://www.preceptaustin.org/files/images/hittitemap.png>
 - **Ch 7** · kingschart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingschart.jpg>
+- **Ch 7** · elishaarafled.png (score 2) <https://www.preceptaustin.org/files/images/elishaarafled.png>
+- **Ch 7** · elishaargues.png (score 2) <https://www.preceptaustin.org/files/images/elishaargues.png>
+- **Ch 7** · elishabarley.png (score 2) <https://www.preceptaustin.org/files/images/elishabarley.png>
+- **Ch 7** · elishachariot.png (score 2) <https://www.preceptaustin.org/files/images/elishachariot.png>
+- **Ch 7** · elishafamineends.png (score 2) <https://www.preceptaustin.org/files/images/elishafamineends.png>
+- **Ch 7** · elishafled.png (score 2) <https://www.preceptaustin.org/files/images/elishafled.png>
+- **Ch 7** · elishajordan.png (score 2) <https://www.preceptaustin.org/files/images/elishajordan.png>
+- **Ch 7** · elishaking.png (score 2) <https://www.preceptaustin.org/files/images/elishaking.png>
+- **Ch 7** · elishaleprous.png (score 2) <https://www.preceptaustin.org/files/images/elishaleprous.png>
+- **Ch 7** · elishaleprousgo.png (score 2) <https://www.preceptaustin.org/files/images/elishaleprousgo.png>
+- **Ch 7** · elishallepers.png (score 2) <https://www.preceptaustin.org/files/images/elishallepers.png>
+- **Ch 7** · elishaplunder.png (score 2) <https://www.preceptaustin.org/files/images/elishaplunder.png>
+- **Ch 7** · elishaporters.png (score 2) <https://www.preceptaustin.org/files/images/elishaporters.png>
+- **Ch 7** · elishatellking.png (score 2) <https://www.preceptaustin.org/files/images/elishatellking.png>
+- **Ch 7** · elishatrampled.png (score 2) <https://www.preceptaustin.org/files/images/elishatrampled.png>
+- **Ch 7** · naamanjordan.png (score 2) <https://www.preceptaustin.org/files/images/naamanjordan.png>
 - **Ch 8** · kingschart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingschart.jpg>
+- **Ch 8** · 1kichr.png (score 2) <https://www.preceptaustin.org/files/images/1kichr.png>
+- **Ch 8** · 1kichrsetting.png (score 2) <https://www.preceptaustin.org/files/images/1kichrsetting.png>
+- **Ch 8** · ahaziah.png (score 2) <https://www.preceptaustin.org/files/images/ahaziah.png>
+- **Ch 8** · ahaziahtree.png (score 2) <https://www.preceptaustin.org/files/images/ahaziahtree.png>
+- **Ch 8** · aramsyria.png (score 2) <https://www.preceptaustin.org/files/images/aramsyria.png>
+- **Ch 8** · benhadadsick.png (score 2) <https://www.preceptaustin.org/files/images/benhadadsick.png>
+- **Ch 8** · davidlineage.png (score 2) <https://www.preceptaustin.org/files/images/davidlineage.png>
+- **Ch 8** · elisha2.png (score 2) <https://www.preceptaustin.org/files/images/elisha2.png>
+- **Ch 8** · elishagifts.png (score 2) <https://www.preceptaustin.org/files/images/elishagifts.png>
+- **Ch 8** · elishawarnswoman.png (score 2) <https://www.preceptaustin.org/files/images/elishawarnswoman.png>
+- **Ch 8** · elishawept.png (score 2) <https://www.preceptaustin.org/files/images/elishawept.png>
+- **Ch 8** · gehazikingwoman.png (score 2) <https://www.preceptaustin.org/files/images/gehazikingwoman.png>
+- **Ch 8** · gehazitojehoram.png (score 2) <https://www.preceptaustin.org/files/images/gehazitojehoram.png>
+- **Ch 8** · hazaelfire.png (score 2) <https://www.preceptaustin.org/files/images/hazaelfire.png>
+- **Ch 8** · hazaelmurders.png (score 2) <https://www.preceptaustin.org/files/images/hazaelmurders.png>
+- **Ch 8** · hazaeltoking.png (score 2) <https://www.preceptaustin.org/files/images/hazaeltoking.png>
+- **Ch 8** · joramcrown.png (score 2) <https://www.preceptaustin.org/files/images/joramcrown.png>
+- **Ch 8** · joramjeh.png (score 2) <https://www.preceptaustin.org/files/images/joramjeh.png>
+- **Ch 8** · joramsurrounded.png (score 2) <https://www.preceptaustin.org/files/images/joramsurrounded.png>
+- **Ch 8** · joramtree.png (score 2) <https://www.preceptaustin.org/files/images/joramtree.png>
+- **Ch 8** · joramwounded.png (score 2) <https://www.preceptaustin.org/files/images/joramwounded.png>
+- **Ch 8** · ramoth-gilead1.png (score 2) <https://www.preceptaustin.org/files/images/ramoth-gilead1.png>
+- **Ch 8** · samariaphil.png (score 2) <https://www.preceptaustin.org/files/images/samariaphil.png>
+- **Ch 8** · shunem.png (score 2) <https://www.preceptaustin.org/files/images/shunem.png>
+- **Ch 8** · aramkings.jpg (score 0) <https://www.preceptaustin.org/files/images/aramkings.jpg>
+- **Ch 8** · elishatodamascus.jpg (score 0) <https://www.preceptaustin.org/files/images/elishatodamascus.jpg>
+- **Ch 8** · joramaha.jpg (score 0) <https://www.preceptaustin.org/files/images/joramaha.jpg>
+- **Ch 8** · libnah.jpg (score 0) <https://www.preceptaustin.org/files/images/libnah.jpg>
+- **Ch 8** · teldan.jpg (score 0) <https://www.preceptaustin.org/files/images/teldan.jpg>
 - **Ch 9** · kingschart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingschart.jpg>
+- **Ch 9** · elishaservant.png (score 2) <https://www.preceptaustin.org/files/images/elishaservant.png>
+- **Ch 9** · jehoram.png (score 2) <https://www.preceptaustin.org/files/images/jehoram.png>
+- **Ch 9** · jehuahaziahburial.png (score 2) <https://www.preceptaustin.org/files/images/jehuahaziahburial.png>
+- **Ch 9** · jehuanoint.png (score 2) <https://www.preceptaustin.org/files/images/jehuanoint.png>
+- **Ch 9** · jehuapproaching.png (score 2) <https://www.preceptaustin.org/files/images/jehuapproaching.png>
+- **Ch 9** · jehuavenge.png (score 2) <https://www.preceptaustin.org/files/images/jehuavenge.png>
+- **Ch 9** · jehucastbody.png (score 2) <https://www.preceptaustin.org/files/images/jehucastbody.png>
+- **Ch 9** · jehuchosen.png (score 2) <https://www.preceptaustin.org/files/images/jehuchosen.png>
+- **Ch 9** · jehugird.png (score 2) <https://www.preceptaustin.org/files/images/jehugird.png>
+- **Ch 9** · jehujezservants.png (score 2) <https://www.preceptaustin.org/files/images/jehujezservants.png>
+- **Ch 9** · jehukillsahaziah.png (score 2) <https://www.preceptaustin.org/files/images/jehukillsahaziah.png>
+- **Ch 9** · jehuking.png (score 2) <https://www.preceptaustin.org/files/images/jehuking.png>
+- **Ch 9** · jehumeetsjoram.png (score 2) <https://www.preceptaustin.org/files/images/jehumeetsjoram.png>
+- **Ch 9** · jehushootsjoram.png (score 2) <https://www.preceptaustin.org/files/images/jehushootsjoram.png>
+- **Ch 9** · jezebelwindow.png (score 2) <https://www.preceptaustin.org/files/images/jezebelwindow.png>
+- **Ch 9** · joramflees.png (score 2) <https://www.preceptaustin.org/files/images/joramflees.png>
+- **Ch 9** · ramoth-gilead2.png (score 2) <https://www.preceptaustin.org/files/images/ramoth-gilead2.png>
+- **Ch 9** · baal.jpg (score 0) <https://www.preceptaustin.org/files/images/baal.jpg>
+- **Ch 9** · jehu.jpg (score 0) <https://www.preceptaustin.org/files/images/jehu.jpg>
+- **Ch 9** · jehuexecutes.jpg (score 0) <https://www.preceptaustin.org/files/images/jehuexecutes.jpg>
+- **Ch 9** · jezdogs.jpg (score 0) <https://www.preceptaustin.org/files/images/jezdogs.jpg>
+- **Ch 9** · jezebeldogs.jpg (score 0) <https://www.preceptaustin.org/files/images/jezebeldogs.jpg>
+- **Ch 9** · jezebeldore.jpg (score 0) <https://www.preceptaustin.org/files/images/jezebeldore.jpg>
+- **Ch 9** · jezebelseal.jpg (score 0) <https://www.preceptaustin.org/files/images/jezebelseal.jpg>
 - **Ch 10** · kingschart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingschart.jpg>
+- **Ch 10** · heads1.png (score 2) <https://www.preceptaustin.org/files/images/heads1.png>
+- **Ch 10** · jehubaal.png (score 2) <https://www.preceptaustin.org/files/images/jehubaal.png>
+- **Ch 10** · jehugath.png (score 2) <https://www.preceptaustin.org/files/images/jehugath.png>
+- **Ch 10** · jehuheads.png (score 2) <https://www.preceptaustin.org/files/images/jehuheads.png>
+- **Ch 10** · jehure.png (score 2) <https://www.preceptaustin.org/files/images/jehure.png>
+- **Ch 10** · covenant - salvator rosa 1615-1673.jpg (score 0) <https://www.preceptaustin.org/files/images/Covenant%20-%20Salvator%20Rosa%201615-1673.jpg>
+- **Ch 10** · israelaram.jpg (score 0) <https://www.preceptaustin.org/files/images/israelaram.jpg>
+- **Ch 10** · jehu.jpg (score 0) <https://www.preceptaustin.org/files/images/jehu.jpg>
+- **Ch 10** · jehuexecutes.jpg (score 0) <https://www.preceptaustin.org/files/images/jehuexecutes.jpg>
+- **Ch 10** · syncretism.jpg (score 0) <https://www.preceptaustin.org/files/images/syncretism.jpg>
 - **Ch 11** · joashchart.png (score 12) <https://www.preceptaustin.org/files/images/joashchart.png>
 - **Ch 11** · kingschart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingschart.jpg>
+- **Ch 11** · athaliah.png (score 2) <https://www.preceptaustin.org/files/images/athaliah.png>
+- **Ch 11** · athaliahjoash.png (score 2) <https://www.preceptaustin.org/files/images/athaliahjoash.png>
+- **Ch 11** · joashbaal.png (score 2) <https://www.preceptaustin.org/files/images/joashbaal.png>
+- **Ch 11** · joashcaptains.png (score 2) <https://www.preceptaustin.org/files/images/joashcaptains.png>
+- **Ch 11** · joashcovenant.png (score 2) <https://www.preceptaustin.org/files/images/joashcovenant.png>
+- **Ch 11** · joashcrown.png (score 2) <https://www.preceptaustin.org/files/images/joashcrown.png>
+- **Ch 11** · joashcrowned.png (score 2) <https://www.preceptaustin.org/files/images/joashcrowned.png>
+- **Ch 11** · joashdavid.png (score 2) <https://www.preceptaustin.org/files/images/joashdavid.png>
+- **Ch 11** · joashfamilytree.png (score 2) <https://www.preceptaustin.org/files/images/joashfamilytree.png>
+- **Ch 11** · joashhidden.png (score 2) <https://www.preceptaustin.org/files/images/joashhidden.png>
+- **Ch 11** · joashkilled.png (score 2) <https://www.preceptaustin.org/files/images/joashkilled.png>
+- **Ch 11** · joashking.png (score 2) <https://www.preceptaustin.org/files/images/joashking.png>
+- **Ch 11** · joashqueen.png (score 2) <https://www.preceptaustin.org/files/images/joashqueen.png>
+- **Ch 11** · joashrejoiced.png (score 2) <https://www.preceptaustin.org/files/images/joashrejoiced.png>
+- **Ch 11** · joashsentenced.png (score 2) <https://www.preceptaustin.org/files/images/joashsentenced.png>
+- **Ch 11** · joashthrone.png (score 2) <https://www.preceptaustin.org/files/images/joashthrone.png>
+- **Ch 11** · joashtosoldiers.png (score 2) <https://www.preceptaustin.org/files/images/joashtosoldiers.png>
+- **Ch 11** · joashtreason.png (score 2) <https://www.preceptaustin.org/files/images/joashtreason.png>
 - **Ch 12** · joashchart.png (score 12) <https://www.preceptaustin.org/files/images/joashchart.png>
 - **Ch 12** · kingschart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingschart.jpg>
+- **Ch 12** · 245.png (score 2) <https://www.preceptaustin.org/files/images/245.png>
+- **Ch 12** · 2king127.png (score 2) <https://www.preceptaustin.org/files/images/2king127.png>
+- **Ch 12** · 2kings122.png (score 2) <https://www.preceptaustin.org/files/images/2kings122.png>
+- **Ch 12** · highplaces.png (score 2) <https://www.preceptaustin.org/files/images/highplaces.png>
+- **Ch 12** · joashfamilytree.png (score 2) <https://www.preceptaustin.org/files/images/joashfamilytree.png>
+- **Ch 12** · israelaram.jpg (score 0) <https://www.preceptaustin.org/files/images/israelaram.jpg>
 - **Ch 13** · kingschartcolor1.png (score 12) <https://www.preceptaustin.org/files/images/kingschartcolor1.png>
 - **Ch 13** · kingschartjehoahaz1.png (score 12) <https://www.preceptaustin.org/files/images/kingschartjehoahaz1.png>
+- **Ch 13** · aramsyria.png (score 2) <https://www.preceptaustin.org/files/images/aramsyria.png>
+- **Ch 13** · asherah1.png (score 2) <https://www.preceptaustin.org/files/images/asherah1.png>
+- **Ch 13** · bowarrows.png (score 2) <https://www.preceptaustin.org/files/images/bowarrows.png>
+- **Ch 13** · bowhand.png (score 2) <https://www.preceptaustin.org/files/images/bowhand.png>
+- **Ch 13** · covenantwithabrahamisaacjacob.png (score 2) <https://www.preceptaustin.org/files/images/covenantwithabrahamisaacjacob.png>
+- **Ch 13** · jehoahazarmy.png (score 2) <https://www.preceptaustin.org/files/images/jehoahazarmy.png>
+- **Ch 13** · joashlamentselisha.png (score 2) <https://www.preceptaustin.org/files/images/joashlamentselisha.png>
+- **Ch 13** · moabiteelisha.png (score 2) <https://www.preceptaustin.org/files/images/moabiteelisha.png>
+- **Ch 13** · moabites.png (score 2) <https://www.preceptaustin.org/files/images/moabites.png>
+- **Ch 13** · strikethree.png (score 2) <https://www.preceptaustin.org/files/images/strikethree.png>
+- **Ch 13** · aramkings.jpg (score 0) <https://www.preceptaustin.org/files/images/aramkings.jpg>
+- **Ch 13** · sincycle.jpg (score 0) <https://www.preceptaustin.org/files/images/sincycle.jpg>
 - **Ch 14** · 2kingsmap.jpg (score 10) <https://www.preceptaustin.org/files/images/2kingsmap.jpg>
 - **Ch 14** · samsonmap1.jpg (score 10) <https://www.preceptaustin.org/files/images/samsonmap1.jpg>
+- **Ch 14** · amaziah.png (score 2) <https://www.preceptaustin.org/files/images/amaziah.png>
+- **Ch 14** · davidsconquests.png (score 2) <https://www.preceptaustin.org/files/images/davidsconquests.png>
+- **Ch 14** · highplaces.png (score 2) <https://www.preceptaustin.org/files/images/highplaces.png>
+- **Ch 14** · kingscolor.png (score 2) <https://www.preceptaustin.org/files/images/kingscolor.png>
+- **Ch 14** · cornergate.jpg (score 0) <https://www.preceptaustin.org/files/images/cornergate.jpg>
+- **Ch 14** · elath.jpg (score 0) <https://www.preceptaustin.org/files/images/elath.jpg>
+- **Ch 14** · hamath.jpg (score 0) <https://www.preceptaustin.org/files/images/hamath.jpg>
 - **Ch 15** · jehuchart.png (score 12) <https://www.preceptaustin.org/files/images/jehuchart.png>
 - **Ch 15** · kingschron.png (score 12) <https://www.preceptaustin.org/files/images/kingschron.png>
+- **Ch 15** · assyriankings.png (score 2) <https://www.preceptaustin.org/files/images/assyriankings.png>
+- **Ch 15** · azariah.png (score 2) <https://www.preceptaustin.org/files/images/azariah.png>
+- **Ch 15** · azariah1.png (score 2) <https://www.preceptaustin.org/files/images/azariah1.png>
+- **Ch 15** · azariahleper.png (score 2) <https://www.preceptaustin.org/files/images/azariahleper.png>
+- **Ch 15** · highplaces.png (score 2) <https://www.preceptaustin.org/files/images/highplaces.png>
+- **Ch 15** · hoshea.png (score 2) <https://www.preceptaustin.org/files/images/hoshea.png>
+- **Ch 15** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 15** · hosheapekah.jpg (score 0) <https://www.preceptaustin.org/files/images/hosheapekah.jpg>
+- **Ch 15** · tiglath.jpg (score 0) <https://www.preceptaustin.org/files/images/tiglath.jpg>
+- **Ch 15** · tirzah.jpg (score 0) <https://www.preceptaustin.org/files/images/tirzah.jpg>
 - **Ch 16** · amosmap.jpg (score 10) <https://www.preceptaustin.org/files/images/amosmap.jpg>
+- **Ch 16** · ahaz1610.png (score 2) <https://www.preceptaustin.org/files/images/ahaz1610.png>
+- **Ch 16** · ahaz1611.png (score 2) <https://www.preceptaustin.org/files/images/ahaz1611.png>
+- **Ch 16** · ahaz1612.png (score 2) <https://www.preceptaustin.org/files/images/ahaz1612.png>
+- **Ch 16** · ahaz1613a.png (score 2) <https://www.preceptaustin.org/files/images/ahaz1613a.png>
+- **Ch 16** · ahaz1614.png (score 2) <https://www.preceptaustin.org/files/images/ahaz1614.png>
+- **Ch 16** · ahaz1615.png (score 2) <https://www.preceptaustin.org/files/images/ahaz1615.png>
+- **Ch 16** · ahaz1617.png (score 2) <https://www.preceptaustin.org/files/images/ahaz1617.png>
+- **Ch 16** · ahaz1618.png (score 2) <https://www.preceptaustin.org/files/images/ahaz1618.png>
+- **Ch 16** · ahaz162.png (score 2) <https://www.preceptaustin.org/files/images/ahaz162.png>
+- **Ch 16** · ahaz163.png (score 2) <https://www.preceptaustin.org/files/images/ahaz163.png>
+- **Ch 16** · ahaz164.png (score 2) <https://www.preceptaustin.org/files/images/ahaz164.png>
+- **Ch 16** · ahaz165.png (score 2) <https://www.preceptaustin.org/files/images/ahaz165.png>
+- **Ch 16** · ahaz167.png (score 2) <https://www.preceptaustin.org/files/images/ahaz167.png>
+- **Ch 16** · ahaz168.png (score 2) <https://www.preceptaustin.org/files/images/ahaz168.png>
+- **Ch 16** · ahaz169.png (score 2) <https://www.preceptaustin.org/files/images/ahaz169.png>
+- **Ch 16** · ahaz2827.png (score 2) <https://www.preceptaustin.org/files/images/ahaz2827.png>
+- **Ch 16** · ahazrezinpekah.png (score 2) <https://www.preceptaustin.org/files/images/ahazrezinpekah.png>
+- **Ch 16** · azariah.png (score 2) <https://www.preceptaustin.org/files/images/azariah.png>
+- **Ch 16** · ahaztribute.jpg (score 0) <https://www.preceptaustin.org/files/images/ahaztribute.jpg>
+- **Ch 16** · eloth.jpg (score 0) <https://www.preceptaustin.org/files/images/eloth.jpg>
+- **Ch 17** · 2ki1725.png (score 2) <https://www.preceptaustin.org/files/images/2ki1725.png>
+- **Ch 17** · 2ki1727.png (score 2) <https://www.preceptaustin.org/files/images/2ki1727.png>
+- **Ch 17** · 2ki1729.png (score 2) <https://www.preceptaustin.org/files/images/2ki1729.png>
+- **Ch 17** · 2ki1732.png (score 2) <https://www.preceptaustin.org/files/images/2ki1732.png>
+- **Ch 17** · highplaces.png (score 2) <https://www.preceptaustin.org/files/images/highplaces.png>
+- **Ch 17** · hoshea171.png (score 2) <https://www.preceptaustin.org/files/images/hoshea171.png>
+- **Ch 17** · samariadeportations.png (score 2) <https://www.preceptaustin.org/files/images/samariadeportations.png>
+- **Ch 17** · maacah.webp (score 0) <https://www.preceptaustin.org/files/images/maacah.webp>
+- **Ch 17** · samaraexile.jpg (score 0) <https://www.preceptaustin.org/files/images/samaraexile.jpg>
 - **Ch 18** · israelgenericmap.png (score 12) <https://www.preceptaustin.org/files/images/israelgenericmap.png>
+- **Ch 18** · 2ki1810.png (score 2) <https://www.preceptaustin.org/files/images/2ki1810.png>
+- **Ch 18** · 2ki183.png (score 2) <https://www.preceptaustin.org/files/images/2ki183.png>
+- **Ch 18** · 2ki184.png (score 2) <https://www.preceptaustin.org/files/images/2ki184.png>
+- **Ch 18** · 2ki189.png (score 2) <https://www.preceptaustin.org/files/images/2ki189.png>
+- **Ch 18** · 2ki189a.png (score 2) <https://www.preceptaustin.org/files/images/2ki189a.png>
+- **Ch 18** · hoshea171.png (score 2) <https://www.preceptaustin.org/files/images/hoshea171.png>
+- **Ch 18** · sennacheribprism.png (score 2) <https://www.preceptaustin.org/files/images/sennacheribprism.png>
+- **Ch 18** · sennacheribseige.png (score 2) <https://www.preceptaustin.org/files/images/sennacheribseige.png>
+- **Ch 18** · hezekiah.jpg (score 0) <https://www.preceptaustin.org/files/images/hezekiah.jpg>
+- **Ch 18** · hezekiahspool.jpg (score 0) <https://www.preceptaustin.org/files/images/hezekiahspool.jpg>
+- **Ch 18** · nehushtan.jpg (score 0) <https://www.preceptaustin.org/files/images/nehushtan.jpg>
+- **Ch 18** · sennacherib.jpg (score 0) <https://www.preceptaustin.org/files/images/sennacherib.jpg>
+- **Ch 19** · hezekiahletter.png (score 2) <https://www.preceptaustin.org/files/images/hezekiahletter.png>
+- **Ch 19** · hezekiahprayer.png (score 2) <https://www.preceptaustin.org/files/images/hezekiahprayer.png>
+- **Ch 19** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 20** · hezekiahstunnelmark.png (score 2) <https://www.preceptaustin.org/files/images/hezekiahstunnelmark.png>
+- **Ch 21** · hoshea171.png (score 2) <https://www.preceptaustin.org/files/images/hoshea171.png>
+- **Ch 21** · isaiahsaw.png (score 2) <https://www.preceptaustin.org/files/images/isaiahsaw.png>
+- **Ch 21** · isaiahtime.png (score 2) <https://www.preceptaustin.org/files/images/isaiahtime.png>
+- **Ch 21** · plumblinejerusalem.png (score 2) <https://www.preceptaustin.org/files/images/plumblinejerusalem.png>
+- **Ch 21** · courts.jpg (score 0) <https://www.preceptaustin.org/files/images/courts.jpg>
+- **Ch 21** · greentree.webp (score 0) <https://www.preceptaustin.org/files/images/greentree.webp>
 - **Ch 23** · 2kingsmap.jpg (score 10) <https://www.preceptaustin.org/files/images/2kingsmap.jpg>
+- **Ch 23** · highplaces.png (score 2) <https://www.preceptaustin.org/files/images/highplaces.png>
+- **Ch 24** · jehoiakimdates4.png (score 2) <https://www.preceptaustin.org/files/images/jehoiakimdates4.png>
+- **Ch 24** · exile1.jpg (score 0) <https://www.preceptaustin.org/files/images/exile1.jpg>
+- **Ch 24** · jehoiakimscroll.jpg (score 0) <https://www.preceptaustin.org/files/images/jehoiakimscroll.jpg>
 - **Ch 25** · timelineisreal2.png (score 12) <https://www.preceptaustin.org/files/images/timelineisreal2.png>
 - **Ch 25** · babylonmap.jpg (score 10) <https://www.preceptaustin.org/files/images/babylonmap.jpg>
+- **Ch 25** · 2ki189a.png (score 2) <https://www.preceptaustin.org/files/images/2ki189a.png>
+- **Ch 25** · jehoiakimdates4.png (score 2) <https://www.preceptaustin.org/files/images/jehoiakimdates4.png>
+- **Ch 25** · pillars.png (score 2) <https://www.preceptaustin.org/files/images/pillars.png>
+- **Ch 25** · pillars1.png (score 2) <https://www.preceptaustin.org/files/images/pillars1.png>
+- **Ch 25** · exile1.jpg (score 0) <https://www.preceptaustin.org/files/images/exile1.jpg>
+- **Ch 25** · stands.jpg (score 0) <https://www.preceptaustin.org/files/images/stands.jpg>
+- **Ch 25** · zedekiahblind.jpg (score 0) <https://www.preceptaustin.org/files/images/zedekiahblind.jpg>
 
-## 2-samuel — 1 book-level, 0 per-chapter (probed 24 chapters)
+## 2-samuel — 8 book-level, 61 per-chapter (probed 24 chapters)
 
 ### Book-level
+- 1kichart2.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/1kichart2.png>
 - 1samap.png (score 12, 24 chapters) <https://www.preceptaustin.org/files/images/1samap.png>
-
-## acts — 0 book-level, 6 per-chapter (probed 28 chapters)
-
+- 1scoverage.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/1scoverage.png>
+- 2saplot.png (score 2, 24 chapters) <https://www.preceptaustin.org/files/images/2saplot.png>
+- 2satime.png (score 2, 24 chapters) <https://www.preceptaustin.org/files/images/2satime.png>
+- 2samuel.jpg (score 0, 24 chapters) <https://www.preceptaustin.org/files/images/2samuel.jpg>
+- 2samuelesv.jpg (score 0, 23 chapters) <https://www.preceptaustin.org/files/images/2samuelesv.jpg>
+- davidlife.jpg (score 0, 13 chapters) <https://www.preceptaustin.org/files/images/davidlife.jpg>
 ### Per-chapter
+- **Ch 2** · poolgibeon.png (score 2) <https://www.preceptaustin.org/files/images/poolgibeon.png>
+- **Ch 2** · poolgibeonsteps.png (score 2) <https://www.preceptaustin.org/files/images/poolgibeonsteps.png>
+- **Ch 2** · davidstriumphs.jpg (score 0) <https://www.preceptaustin.org/files/images/davidstriumphs.jpg>
+- **Ch 2** · gibeon1.jpg (score 0) <https://www.preceptaustin.org/files/images/gibeon1.jpg>
+- **Ch 2** · jordanrift.jpg (score 0) <https://www.preceptaustin.org/files/images/jordanrift.jpg>
+- **Ch 2** · jordanrift1.jpg (score 0) <https://www.preceptaustin.org/files/images/jordanrift1.jpg>
+- **Ch 2** · mahanaim.jpg (score 0) <https://www.preceptaustin.org/files/images/mahanaim.jpg>
+- **Ch 2** · shofar.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar.jpg>
+- **Ch 2** · spear.jpg (score 0) <https://www.preceptaustin.org/files/images/spear.jpg>
+- **Ch 3** · davidtree.png (score 2) <https://www.preceptaustin.org/files/images/davidtree.png>
+- **Ch 3** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 3** · davidsfamily.jpg (score 0) <https://www.preceptaustin.org/files/images/davidsfamily.jpg>
+- **Ch 3** · leviticalcities.jpg (score 0) <https://www.preceptaustin.org/files/images/leviticalcities.jpg>
+- **Ch 4** · gibeon1.jpg (score 0) <https://www.preceptaustin.org/files/images/gibeon1.jpg>
+- **Ch 4** · jordanrift.jpg (score 0) <https://www.preceptaustin.org/files/images/jordanrift.jpg>
+- **Ch 4** · jordanrift1.jpg (score 0) <https://www.preceptaustin.org/files/images/jordanrift1.jpg>
+- **Ch 5** · daviddefeatphil.png (score 2) <https://www.preceptaustin.org/files/images/daviddefeatphil.png>
+- **Ch 5** · davidtree.png (score 2) <https://www.preceptaustin.org/files/images/davidtree.png>
+- **Ch 5** · davidcity.jpg (score 0) <https://www.preceptaustin.org/files/images/davidcity.jpg>
+- **Ch 5** · davidsfamily.jpg (score 0) <https://www.preceptaustin.org/files/images/davidsfamily.jpg>
+- **Ch 5** · rephaim.jpg (score 0) <https://www.preceptaustin.org/files/images/rephaim.jpg>
+- **Ch 5** · valleyrephaim.jpg (score 0) <https://www.preceptaustin.org/files/images/valleyrephaim.jpg>
+- **Ch 6** · ark2esv.jpg (score 0) <https://www.preceptaustin.org/files/images/ark2esv.jpg>
+- **Ch 6** · exodusglory.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusglory.jpg>
+- **Ch 7** · zeph-1.gif (score 0) <https://www.preceptaustin.org/files/images/zeph-1.gif>
+- **Ch 8** · davidsconquests.png (score 2) <https://www.preceptaustin.org/files/images/davidsconquests.png>
+- **Ch 8** · zadok.png (score 2) <https://www.preceptaustin.org/files/images/zadok.png>
+- **Ch 8** · davidcon.jpg (score 0) <https://www.preceptaustin.org/files/images/davidcon.jpg>
+- **Ch 9** · meph.jpg (score 0) <https://www.preceptaustin.org/files/images/meph.jpg>
+- **Ch 12** · david and nathan 2_small.jpg (score 0) <https://www.preceptaustin.org/files/images/David%20and%20Nathan%202_small.jpg>
+- **Ch 12** · sworddam.jpg (score 0) <https://www.preceptaustin.org/files/images/sworddam.jpg>
+- **Ch 13** · geshur.png (score 2) <https://www.preceptaustin.org/files/images/geshur.png>
+- **Ch 13** · absalomtamar.jpg (score 0) <https://www.preceptaustin.org/files/images/absalomtamar.jpg>
+- **Ch 13** · tamar.jpg (score 0) <https://www.preceptaustin.org/files/images/tamar.jpg>
+- **Ch 13** · tamar1.jpg (score 0) <https://www.preceptaustin.org/files/images/tamar1.jpg>
+- **Ch 13** · tamarrape.jpg (score 0) <https://www.preceptaustin.org/files/images/tamarrape.jpg>
+- **Ch 14** · davidtree.png (score 2) <https://www.preceptaustin.org/files/images/davidtree.png>
+- **Ch 14** · geshur.png (score 2) <https://www.preceptaustin.org/files/images/geshur.png>
+- **Ch 14** · barleyfire.jpg (score 0) <https://www.preceptaustin.org/files/images/barleyfire.jpg>
+- **Ch 14** · davidabjoab.jpg (score 0) <https://www.preceptaustin.org/files/images/davidabjoab.jpg>
+- **Ch 14** · tekoa.jpg (score 0) <https://www.preceptaustin.org/files/images/tekoa.jpg>
+- **Ch 14** · womantekoa.jpg (score 0) <https://www.preceptaustin.org/files/images/womantekoa.jpg>
+- **Ch 15** · absalomsreb.jpg (score 0) <https://www.preceptaustin.org/files/images/absalomsreb.jpg>
+- **Ch 15** · ark2esv.jpg (score 0) <https://www.preceptaustin.org/files/images/ark2esv.jpg>
+- **Ch 15** · vision.jpg (score 0) <https://www.preceptaustin.org/files/images/vision.jpg>
+- **Ch 17** · davidtree.png (score 2) <https://www.preceptaustin.org/files/images/davidtree.png>
+- **Ch 17** · enrogel1.jpg (score 0) <https://www.preceptaustin.org/files/images/enrogel1.jpg>
+- **Ch 17** · mahanaim1.jpg (score 0) <https://www.preceptaustin.org/files/images/mahanaim1.jpg>
+- **Ch 17** · well.jpg (score 0) <https://www.preceptaustin.org/files/images/well.jpg>
+- **Ch 18** · absalomhang.jpg (score 0) <https://www.preceptaustin.org/files/images/absalomhang.jpg>
+- **Ch 18** · absalomtomb.jpg (score 0) <https://www.preceptaustin.org/files/images/absalomtomb.jpg>
+- **Ch 18** · mahanaim1.jpg (score 0) <https://www.preceptaustin.org/files/images/mahanaim1.jpg>
+- **Ch 18** · shofar.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar.jpg>
+- **Ch 19** · mahanaim1.jpg (score 0) <https://www.preceptaustin.org/files/images/mahanaim1.jpg>
+- **Ch 20** · abelbethmaacah.png (score 2) <https://www.preceptaustin.org/files/images/abelbethmaacah.png>
+- **Ch 20** · zadok.png (score 2) <https://www.preceptaustin.org/files/images/zadok.png>
+- **Ch 20** · shofar.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar.jpg>
+- **Ch 21** · davidtree.png (score 2) <https://www.preceptaustin.org/files/images/davidtree.png>
+- **Ch 22** · waterrescue.jpg (score 0) <https://www.preceptaustin.org/files/images/waterrescue.jpg>
+- **Ch 24** · moriah.png (score 2) <https://www.preceptaustin.org/files/images/moriah.png>
+- **Ch 24** · domerock1.jpg (score 0) <https://www.preceptaustin.org/files/images/domerock1.jpg>
+
+## 2-thessalonians — 2 book-level, 4 per-chapter (probed 3 chapters)
+
+### Book-level
+- 2th.png (score 2, 3 chapters) <https://www.preceptaustin.org/files/images/2th.png>
+- paul_epistle.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/paul_epistle.jpg>
+### Per-chapter
+- **Ch 1** · suffering.jpg (score 0) <https://www.preceptaustin.org/files/images/suffering.jpg>
+- **Ch 2** · dayofwrath.jpg (score 0) <https://www.preceptaustin.org/files/images/dayofwrath.jpg>
+- **Ch 2** · tribulationfalse.jpg (score 0) <https://www.preceptaustin.org/files/images/tribulationfalse.jpg>
+- **Ch 2** · tribulationtrue.jpg (score 0) <https://www.preceptaustin.org/files/images/tribulationtrue.jpg>
+
+## acts — 2 book-level, 153 per-chapter (probed 28 chapters)
+
+### Book-level
+- church_holy_spirit.png (score 2, 27 chapters) <https://www.preceptaustin.org/files/images/church_holy_spirit.png>
+- luke.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/luke.jpg>
+### Per-chapter
+- **Ch 1** · acts to the gospels.png (score 2) <https://www.preceptaustin.org/files/images//Acts%20to%20the%20Gospels.png>
+- **Ch 1** · dynamite.png (score 2) <https://www.preceptaustin.org/files/images/dynamite.png>
+- **Ch 1** · ascension.jpg (score 0) <https://www.preceptaustin.org/files/images/ascension.jpg>
+- **Ch 2** · acts2tongue.jpg (score 0) <https://www.preceptaustin.org/files/images/acts2tongue.jpg>
+- **Ch 2** · gospel bridge 2.gif (score 0) <https://www.preceptaustin.org/files/images/gospel%20bridge%202.gif>
+- **Ch 2** · gospel bridge 3.gif (score 0) <https://www.preceptaustin.org/files/images/gospel%20bridge%203.gif>
+- **Ch 3** · peterlame.jpg (score 0) <https://www.preceptaustin.org/files/images/peterlame.jpg>
+- **Ch 3** · solomonporch.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonporch.jpg>
+- **Ch 4** · sanhedrin.jpg (score 0) <https://www.preceptaustin.org/files/images/Sanhedrin.jpg>
+- **Ch 7** · abramstars.jpg (score 0) <https://www.preceptaustin.org/files/images/abramstars.jpg>
+- **Ch 7** · heaven.jpg (score 0) <https://www.preceptaustin.org/files/images/heaven.jpg>
+- **Ch 7** · josephinterpret.jpg (score 0) <https://www.preceptaustin.org/files/images/josephinterpret.jpg>
+- **Ch 7** · josephjealous.jpg (score 0) <https://www.preceptaustin.org/files/images/josephjealous.jpg>
+- **Ch 7** · josephrecognized.jpg (score 0) <https://www.preceptaustin.org/files/images/josephrecognized.jpg>
+- **Ch 7** · molech.jpg (score 0) <https://www.preceptaustin.org/files/images/molech.jpg>
+- **Ch 7** · mosesnile.jpg (score 0) <https://www.preceptaustin.org/files/images/mosesnile.jpg>
+- **Ch 7** · sanhedrinhall.jpg (score 0) <https://www.preceptaustin.org/files/images/sanhedrinhall.jpg>
+- **Ch 7** · sinaimoses.jpg (score 0) <https://www.preceptaustin.org/files/images/sinaimoses.jpg>
+- **Ch 7** · stephen.jpg (score 0) <https://www.preceptaustin.org/files/images/stephen.jpg>
 - **Ch 8** · philipmap.jpg (score 10) <https://www.preceptaustin.org/files/images/philipmap.jpg>
+- **Ch 8** · baptismeunuch.jpg (score 0) <https://www.preceptaustin.org/files/images/baptismeunuch.jpg>
+- **Ch 8** · crown_small.gif (score 0) <https://www.preceptaustin.org/files/images/crown_small.gif>
+- **Ch 8** · finger.jpg (score 0) <https://www.preceptaustin.org/files/images/finger.jpg>
+- **Ch 8** · lamb cross.jpg (score 0) <https://www.preceptaustin.org/files/images/lamb%20cross.jpg>
+- **Ch 8** · lamb passover.gif (score 0) <https://www.preceptaustin.org/files/images/lamb%20passover.gif>
+- **Ch 8** · simonmagus.jpg (score 0) <https://www.preceptaustin.org/files/images/simonmagus.jpg>
+- **Ch 8** · the_sacrifice_of_isaac_small.jpg (score 0) <https://www.preceptaustin.org/files/images/The_Sacrifice_of_Isaac_small.jpg>
+- **Ch 9** · actsmaturity.png (score 2) <https://www.preceptaustin.org/files/images/actsmaturity.png>
+- **Ch 9** · actsoption1.png (score 2) <https://www.preceptaustin.org/files/images/actsoption1.png>
+- **Ch 9** · actsoption2.png (score 2) <https://www.preceptaustin.org/files/images/actsoption2.png>
+- **Ch 9** · damascus.jpg (score 0) <https://www.preceptaustin.org/files/images/damascus.jpg>
+- **Ch 9** · paulcon.jpg (score 0) <https://www.preceptaustin.org/files/images/paulcon.jpg>
+- **Ch 9** · paulconversion.jpg (score 0) <https://www.preceptaustin.org/files/images/paulconversion.jpg>
+- **Ch 9** · saulconversion.jpg (score 0) <https://www.preceptaustin.org/files/images/saulconversion.jpg>
+- **Ch 9** · straightstreet.jpeg (score 0) <https://www.preceptaustin.org/files/images/straightstreet.jpeg>
+- **Ch 10** · temple_6_small.png (score 2) <https://www.preceptaustin.org/files/images/temple_6_small.png>
+- **Ch 10** · petersvision.jpg (score 0) <https://www.preceptaustin.org/files/images/petersvision.jpg>
+- **Ch 11** · acts11.png (score 2) <https://www.preceptaustin.org/files/images/acts11.png>
+- **Ch 11** · tyre-sidon.jpg (score 0) <https://www.preceptaustin.org/files/images/tyre-sidon.jpg>
+- **Ch 12** · herodfamilytree2.jpg (score 0) <https://www.preceptaustin.org/files/images/herodfamilytree2.jpg>
 - **Ch 13** · psidianantioch.png (score 12) <https://www.preceptaustin.org/files/images/psidianantioch.png>
+- **Ch 13** · judges chart_small.gif (score 10) <https://www.preceptaustin.org/files/images/Judges%20Chart_small.gif>
+- **Ch 13** · iconium.png (score 2) <https://www.preceptaustin.org/files/images/iconium.png>
+- **Ch 13** · paphos.png (score 2) <https://www.preceptaustin.org/files/images/paphos.png>
+- **Ch 13** · salamis.png (score 2) <https://www.preceptaustin.org/files/images/salamis.png>
+- **Ch 13** · sergius.png (score 2) <https://www.preceptaustin.org/files/images/sergius.png>
+- **Ch 13** · synagogue.png (score 2) <https://www.preceptaustin.org/files/images/synagogue.png>
+- **Ch 13** · acts13.jpg (score 0) <https://www.preceptaustin.org/files/images/acts13.jpg>
+- **Ch 13** · scales1.gif (score 0) <https://www.preceptaustin.org/files/images/scales1.gif>
+- **Ch 14** · antiochreturn.png (score 2) <https://www.preceptaustin.org/files/images/antiochreturn.png>
+- **Ch 14** · iconium.png (score 2) <https://www.preceptaustin.org/files/images/iconium.png>
+- **Ch 14** · iconiumlystra.png (score 2) <https://www.preceptaustin.org/files/images/iconiumlystra.png>
+- **Ch 14** · lystra.png (score 2) <https://www.preceptaustin.org/files/images/lystra.png>
+- **Ch 14** · synagogue.png (score 2) <https://www.preceptaustin.org/files/images/synagogue.png>
+- **Ch 14** · homecoming.jpg (score 0) <https://www.preceptaustin.org/files/images/homecoming.jpg>
+- **Ch 15** · antiochtoj.png (score 2) <https://www.preceptaustin.org/files/images/antiochtoj.png>
+- **Ch 15** · paulbarnabassplit.jpg (score 0) <https://www.preceptaustin.org/files/images/paulbarnabassplit.jpg>
+- **Ch 15** · shut.jpg (score 0) <https://www.preceptaustin.org/files/images/shut.jpg>
+- **Ch 15** · yoke.jpg (score 0) <https://www.preceptaustin.org/files/images/yoke.jpg>
+- **Ch 16** · jesusknocking1.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusknocking1.jpg>
+- **Ch 16** · lystratotroas.jpg (score 0) <https://www.preceptaustin.org/files/images/lystratotroas.jpg>
+- **Ch 16** · secondjourholman.gif (score 0) <https://www.preceptaustin.org/files/images/secondjourholman.gif>
+- **Ch 16** · thyatira.jpg (score 0) <https://www.preceptaustin.org/files/images/thyatira.jpg>
+- **Ch 16** · troastophillipi.jpg (score 0) <https://www.preceptaustin.org/files/images/troastophillipi.jpg>
+- **Ch 16** · viaegnatia.jpg (score 0) <https://www.preceptaustin.org/files/images/viaegnatia.JPG>
+- **Ch 17** · athenscityplan.png (score 2) <https://www.preceptaustin.org/files/images/athenscityplan.png>
+- **Ch 17** · synagogue.png (score 2) <https://www.preceptaustin.org/files/images/synagogue.png>
+- **Ch 17** · aeropagussermon.jpg (score 0) <https://www.preceptaustin.org/files/images/aeropagussermon.jpg>
+- **Ch 17** · agora.jpg (score 0) <https://www.preceptaustin.org/files/images/agora.jpg>
+- **Ch 17** · piraeus.jpg (score 0) <https://www.preceptaustin.org/files/images/piraeus.JPG>
+- **Ch 17** · secondjourholman.gif (score 0) <https://www.preceptaustin.org/files/images/secondjourholman.gif>
+- **Ch 17** · timeflies.jpg (score 0) <https://www.preceptaustin.org/files/images/timeflies.jpg>
+- **Ch 17** · unkgod_small.jpg (score 0) <https://www.preceptaustin.org/files/images/unkgod_small.jpg>
+- **Ch 17** · viaegnatia.jpg (score 0) <https://www.preceptaustin.org/files/images/viaegnatia.JPG>
+- **Ch 18** · acts to the gospels_small.png (score 2) <https://www.preceptaustin.org/files/images/Acts%20to%20the%20Gospels_small.png>
+- **Ch 19** · heart.png (score 2) <https://www.preceptaustin.org/files/images/heart.png>
+- **Ch 19** · 3missionaryjourney.gif (score 0) <https://www.preceptaustin.org/files/images/3missionaryjourney.gif>
+- **Ch 19** · artemisstatue.jpg (score 0) <https://www.preceptaustin.org/files/images/artemisstatue.JPG>
+- **Ch 19** · artemistemple.jpg (score 0) <https://www.preceptaustin.org/files/images/artemistemple.jpg>
+- **Ch 19** · demon.jpg (score 0) <https://www.preceptaustin.org/files/images/demon.jpg>
+- **Ch 19** · ephesustheater.jpg (score 0) <https://www.preceptaustin.org/files/images/ephesustheater.jpg>
+- **Ch 20** · troastomiletus.png (score 2) <https://www.preceptaustin.org/files/images/troastomiletus.png>
+- **Ch 20** · 3missionaryjourney.gif (score 0) <https://www.preceptaustin.org/files/images/3missionaryjourney.gif>
+- **Ch 20** · bc_runner1.gif (score 0) <https://www.preceptaustin.org/files/images/bc_runner1.gif>
+- **Ch 21** · temple_6_small.png (score 2) <https://www.preceptaustin.org/files/images/temple_6_small.png>
+- **Ch 21** · 3missionaryjourney.gif (score 0) <https://www.preceptaustin.org/files/images/3missionaryjourney.gif>
+- **Ch 21** · antonia.jpg (score 0) <https://www.preceptaustin.org/files/images/antonia.jpg>
+- **Ch 21** · antoniasteps.jpg (score 0) <https://www.preceptaustin.org/files/images/antoniasteps.jpg>
+- **Ch 21** · jerusalem-caesarea.jpg (score 0) <https://www.preceptaustin.org/files/images/jerusalem-caesarea.jpg>
+- **Ch 21** · miletus-cos.jpg (score 0) <https://www.preceptaustin.org/files/images/miletus-cos.jpg>
+- **Ch 21** · templecomplex.jpg (score 0) <https://www.preceptaustin.org/files/images/templecomplex.jpg>
+- **Ch 22** · aboutface.jpg (score 0) <https://www.preceptaustin.org/files/images/aboutface.jpg>
+- **Ch 22** · damascus.jpg (score 0) <https://www.preceptaustin.org/files/images/damascus.jpg>
+- **Ch 22** · paulconversion.jpg (score 0) <https://www.preceptaustin.org/files/images/paulconversion.jpg>
+- **Ch 22** · sanhedrinhall.jpg (score 0) <https://www.preceptaustin.org/files/images/sanhedrinhall.jpg>
+- **Ch 22** · saulconversion.jpg (score 0) <https://www.preceptaustin.org/files/images/saulconversion.jpg>
+- **Ch 22** · scourge2.jpg (score 0) <https://www.preceptaustin.org/files/images/scourge2.jpg>
+- **Ch 23** · whitewash.jpg (score 0) <https://www.preceptaustin.org/files/images/whitewash.jpg>
+- **Ch 24** · caesareaancient.jpg (score 0) <https://www.preceptaustin.org/files/images/caesareaancient.jpg>
+- **Ch 24** · felixpaul.gif (score 0) <https://www.preceptaustin.org/files/images/felixpaul.gif>
+- **Ch 24** · felixpaulcolor.jpg (score 0) <https://www.preceptaustin.org/files/images/felixpaulcolor.jpg>
+- **Ch 25** · caesareaancient.jpg (score 0) <https://www.preceptaustin.org/files/images/caesareaancient.jpg>
+- **Ch 25** · paulagrippa.jpg (score 0) <https://www.preceptaustin.org/files/images/paulagrippa.jpg>
+- **Ch 25** · paulfestus.jpg (score 0) <https://www.preceptaustin.org/files/images/paulfestus.jpg>
+- **Ch 26** · aboutface.jpg (score 0) <https://www.preceptaustin.org/files/images/aboutface.jpg>
+- **Ch 26** · balance.jpg (score 0) <https://www.preceptaustin.org/files/images/balance.jpg>
+- **Ch 26** · bernice.jpg (score 0) <https://www.preceptaustin.org/files/images/bernice.jpg>
+- **Ch 26** · damascus.jpg (score 0) <https://www.preceptaustin.org/files/images/damascus.jpg>
+- **Ch 26** · goad.jpg (score 0) <https://www.preceptaustin.org/files/images/goad.jpg>
+- **Ch 26** · luke2.jpg (score 0) <https://www.preceptaustin.org/files/images/luke2.jpg>
+- **Ch 26** · paulagrippa.jpg (score 0) <https://www.preceptaustin.org/files/images/paulagrippa.jpg>
+- **Ch 26** · paulcon.jpg (score 0) <https://www.preceptaustin.org/files/images/paulcon.jpg>
+- **Ch 26** · paulconversion.jpg (score 0) <https://www.preceptaustin.org/files/images/paulconversion.jpg>
+- **Ch 26** · saulconversion.jpg (score 0) <https://www.preceptaustin.org/files/images/saulconversion.jpg>
 - **Ch 27** · acts27map.gif (score 10) <https://www.preceptaustin.org/files/images/acts27map.gif>
 - **Ch 27** · timelineacts.jpg (score 10) <https://www.preceptaustin.org/files/images/timelineacts.jpg>
+- **Ch 27** · cretephoenix.png (score 2) <https://www.preceptaustin.org/files/images/cretephoenix.png>
+- **Ch 27** · maltakoura.png (score 2) <https://www.preceptaustin.org/files/images/maltakoura.png>
+- **Ch 27** · sidoncyprus.png (score 2) <https://www.preceptaustin.org/files/images/sidoncyprus.png>
+- **Ch 27** · adramyttium.jpg (score 0) <https://www.preceptaustin.org/files/images/adramyttium.jpg>
+- **Ch 27** · adriatic.jpg (score 0) <https://www.preceptaustin.org/files/images/adriatic.jpg>
+- **Ch 27** · cauda.jpg (score 0) <https://www.preceptaustin.org/files/images/cauda.jpg>
+- **Ch 27** · cnidus.jpg (score 0) <https://www.preceptaustin.org/files/images/cnidus.jpg>
+- **Ch 27** · crete.jpg (score 0) <https://www.preceptaustin.org/files/images/crete.jpg>
+- **Ch 27** · cyprus.jpg (score 0) <https://www.preceptaustin.org/files/images/cyprus.jpg>
+- **Ch 27** · fairhavens1.jpg (score 0) <https://www.preceptaustin.org/files/images/fairhavens1.jpg>
+- **Ch 27** · fairhavens2.jpg (score 0) <https://www.preceptaustin.org/files/images/fairhavens2.jpg>
+- **Ch 27** · faithchinese.jpg (score 0) <https://www.preceptaustin.org/files/images/faithchinese.jpg>
+- **Ch 27** · luke2.jpg (score 0) <https://www.preceptaustin.org/files/images/luke2.jpg>
+- **Ch 27** · malta.jpg (score 0) <https://www.preceptaustin.org/files/images/malta.jpg>
+- **Ch 27** · myra.jpg (score 0) <https://www.preceptaustin.org/files/images/myra.jpg>
+- **Ch 27** · myra1.jpg (score 0) <https://www.preceptaustin.org/files/images/myra1.jpg>
+- **Ch 27** · rudder.jpg (score 0) <https://www.preceptaustin.org/files/images/rudder.jpg>
+- **Ch 27** · salmone.jpg (score 0) <https://www.preceptaustin.org/files/images/salmone.jpg>
+- **Ch 27** · ship.jpg (score 0) <https://www.preceptaustin.org/files/images/ship.jpg>
+- **Ch 27** · shipeye.jpg (score 0) <https://www.preceptaustin.org/files/images/shipeye.jpg>
+- **Ch 27** · shipsounding.jpg (score 0) <https://www.preceptaustin.org/files/images/shipsounding.jpg>
+- **Ch 27** · shipwreck.jpg (score 0) <https://www.preceptaustin.org/files/images/shipwreck.jpg>
+- **Ch 27** · sidon1.jpg (score 0) <https://www.preceptaustin.org/files/images/sidon1.jpg>
+- **Ch 27** · syrtis.jpg (score 0) <https://www.preceptaustin.org/files/images/syrtis.jpg>
 - **Ch 28** · acts27map.gif (score 10) <https://www.preceptaustin.org/files/images/acts27map.gif>
 - **Ch 28** · timeline2tim.jpg (score 10) <https://www.preceptaustin.org/files/images/timeline2tim.jpg>
+- **Ch 28** · maltakoura.png (score 2) <https://www.preceptaustin.org/files/images/maltakoura.png>
+- **Ch 28** · appianway.jpg (score 0) <https://www.preceptaustin.org/files/images/appianway.jpg>
+- **Ch 28** · justice.jpg (score 0) <https://www.preceptaustin.org/files/images/justice.jpg>
+- **Ch 28** · luke2.jpg (score 0) <https://www.preceptaustin.org/files/images/luke2.jpg>
+- **Ch 28** · malta.jpg (score 0) <https://www.preceptaustin.org/files/images/malta.jpg>
+- **Ch 28** · messinastrait.jpg (score 0) <https://www.preceptaustin.org/files/images/messinastrait.jpg>
+- **Ch 28** · rhegium.jpg (score 0) <https://www.preceptaustin.org/files/images/rhegium.jpg>
+- **Ch 28** · rome1.jpg (score 0) <https://www.preceptaustin.org/files/images/rome1.jpg>
+- **Ch 28** · romeancient.jpg (score 0) <https://www.preceptaustin.org/files/images/romeancient.jpg>
+- **Ch 28** · shigella.jpg (score 0) <https://www.preceptaustin.org/files/images/shigella.jpg>
+- **Ch 28** · syracuse.jpg (score 0) <https://www.preceptaustin.org/files/images/syracuse.jpg>
 
-## amos — 0 book-level, 1 per-chapter (probed 1 chapters)
+## amos — 9 book-level, 6 per-chapter (probed 1 chapters)
 
+### Book-level
+- amos_geo.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/amos_geo.png>
+- amosmap.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/amosmap.jpg>
+- dolchart1.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/DOLchart1.jpg>
+- dolchart2.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/DOLchart2.jpg>
+- amos_con.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/amos_con.png>
+- amostime.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/amostime.png>
+- fulfill.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/fulfill.png>
+- amos-1.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/amos-1.gif>
+- prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
 ### Per-chapter
 - **Ch 9** · amos_geo.png (score 12) <https://www.preceptaustin.org/files/images/amos_geo.png>
+- **Ch 9** · amos_con.png (score 2) <https://www.preceptaustin.org/files/images/amos_con.png>
+- **Ch 9** · deep.png (score 2) <https://www.preceptaustin.org/files/images/deep.png>
+- **Ch 9** · amos-1.gif (score 0) <https://www.preceptaustin.org/files/images/amos-1.gif>
+- **Ch 9** · amostime.jpg (score 0) <https://www.preceptaustin.org/files/images/amostime.jpg>
+- **Ch 9** · winnow.jpg (score 0) <https://www.preceptaustin.org/files/images/winnow.jpg>
 
-## daniel — 0 book-level, 1 per-chapter (probed 9 chapters)
+## colossians — 2 book-level, 3 per-chapter (probed 1 chapters)
 
+### Book-level
+- col.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/col.png>
+- paul_epistle.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/paul_epistle.jpg>
 ### Per-chapter
+- **Ch 3** · artesian_well.png (score 2) <https://www.preceptaustin.org/files/images/Artesian_Well.png>
+- **Ch 3** · col.png (score 2) <https://www.preceptaustin.org/files/images/col.png>
+- **Ch 3** · paul_epistle.jpg (score 0) <https://www.preceptaustin.org/files/images/paul_epistle.jpg>
+
+## daniel — 5 book-level, 32 per-chapter (probed 9 chapters)
+
+### Book-level
+- daniel_contemp.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/daniel_contemp.png>
+- daniel_dreams.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/daniel_dreams.png>
+- daniel_visions.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/daniel_visions.png>
+- dan_lion.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/dan_lion.jpg>
+- godsplan.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/godsplan.jpg>
+### Per-chapter
+- **Ch 1** · babel, tower of_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Babel%2c%20Tower%20of_small.jpg>
+- **Ch 2** · daniel_contemp.png (score 2) <https://www.preceptaustin.org/files/images/daniel_contemp.png>
+- **Ch 2** · daniel_dreams.png (score 2) <https://www.preceptaustin.org/files/images/daniel_dreams.png>
+- **Ch 2** · daniel_visions.png (score 2) <https://www.preceptaustin.org/files/images/daniel_visions.png>
+- **Ch 2** · dan_lion.jpg (score 0) <https://www.preceptaustin.org/files/images/dan_lion.jpg>
+- **Ch 4** · babycity.jpg (score 0) <https://www.preceptaustin.org/files/images/babycity.jpg>
+- **Ch 4** · daniel 4.jpg (score 0) <https://www.preceptaustin.org/files/images/Daniel%204.jpg>
+- **Ch 4** · hanggarden.jpg (score 0) <https://www.preceptaustin.org/files/images/hanggarden.jpg>
+- **Ch 4** · ishtar.jpg (score 0) <https://www.preceptaustin.org/files/images/ishtar.jpg>
+- **Ch 4** · nebcow.jpg (score 0) <https://www.preceptaustin.org/files/images/nebcow.jpg>
+- **Ch 5** · naboncyl.jpg (score 0) <https://www.preceptaustin.org/files/images/naboncyl.jpg>
+- **Ch 5** · nabonidus.jpg (score 0) <https://www.preceptaustin.org/files/images/nabonidus.jpg>
+- **Ch 5** · writingwall.jpg (score 0) <https://www.preceptaustin.org/files/images/writingwall.jpg>
+- **Ch 6** · babylonian-empire-map_small.png (score 12) <https://www.preceptaustin.org/files/images/babylonian-empire-map_small.png>
+- **Ch 6** · cyrus_cilinder_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Cyrus_cilinder_small.jpg>
+- **Ch 6** · dan_lion.jpg (score 0) <https://www.preceptaustin.org/files/images/dan_lion.jpg>
+- **Ch 6** · daniel praying_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Daniel%20praying_small.jpg>
+- **Ch 6** · darius calls to daniel_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Darius%20calls%20to%20Daniel_small.jpg>
+- **Ch 6** · persian_small.gif (score 0) <https://www.preceptaustin.org/files/images/Persian_small.gif>
+- **Ch 6** · praying-hands_small.jpg (score 0) <https://www.preceptaustin.org/files/images/praying-hands_small.jpg>
 - **Ch 8** · medo-persia map with susa.gif (score 10) <https://www.preceptaustin.org/files/images/Medo-Persia%20Map%20with%20Susa.gif>
+- **Ch 8** · susa.png (score 2) <https://www.preceptaustin.org/files/images/susa.png>
+- **Ch 8** · antiochusivepiphanes.jpg (score 0) <https://www.preceptaustin.org/files/images/AntiochusIVEpiphanes.jpg>
+- **Ch 8** · dan-8-goat.jpg (score 0) <https://www.preceptaustin.org/files/images/DAN-8-GOAT.jpg>
+- **Ch 8** · dan-8-ram.jpg (score 0) <https://www.preceptaustin.org/files/images/DAN-8-RAM.jpg>
+- **Ch 8** · dan-8-ulai.jpg (score 0) <https://www.preceptaustin.org/files/images/DAN-8-ULAI.jpg>
+- **Ch 8** · ptolemy all 4 needs caption.gif (score 0) <https://www.preceptaustin.org/files/images/ptolemy%20all%204%20needs%20caption.gif>
+- **Ch 10** · among-lampstands_small.jpg (score 0) <https://www.preceptaustin.org/files/images/AMONG-LAMPSTANDS_small.jpg>
+- **Ch 10** · da 10 by side of river_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Da%2010%20By%20Side%20of%20River_small.jpg>
+- **Ch 10** · dan-10-man_small.jpg (score 0) <https://www.preceptaustin.org/files/images/DAN-10-MAN_small.jpg>
+- **Ch 12** · dan-12-river-tigris_small.jpg (score 0) <https://www.preceptaustin.org/files/images/DAN-12-RIVER-TIGRIS_small.jpg>
+- **Ch 12** · daniel 12_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Daniel%2012_small.jpg>
 
-## ecclesiastes — 0 book-level, 1 per-chapter (probed 12 chapters)
+## deuteronomy — 4 book-level, 74 per-chapter (probed 34 chapters)
+
+### Book-level
+- deuttime.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/deuttime.png>
+- mosesnebo1.png (score 2, 33 chapters) <https://www.preceptaustin.org/files/images/mosesnebo1.png>
+- deut.jpg (score 0, 34 chapters) <https://www.preceptaustin.org/files/images/deut.jpg>
+- deuter.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/deuter.jpg>
+### Per-chapter
+- **Ch 1** · arad.jpg (score 0) <https://www.preceptaustin.org/files/images/arad.jpg>
+- **Ch 1** · bee.jpg (score 0) <https://www.preceptaustin.org/files/images/bee.jpg>
+- **Ch 1** · deut14.jpg (score 0) <https://www.preceptaustin.org/files/images/deut14.jpg>
+- **Ch 1** · edrei1.jpg (score 0) <https://www.preceptaustin.org/files/images/edrei1.jpg>
+- **Ch 1** · grap.jpg (score 0) <https://www.preceptaustin.org/files/images/grap.jpg>
+- **Ch 1** · grapes.jpg (score 0) <https://www.preceptaustin.org/files/images/grapes.jpg>
+- **Ch 1** · regions1.jpg (score 0) <https://www.preceptaustin.org/files/images/regions1.jpg>
+- **Ch 1** · sei.jpg (score 0) <https://www.preceptaustin.org/files/images/sei.jpg>
+- **Ch 1** · spy.jpg (score 0) <https://www.preceptaustin.org/files/images/spy.jpg>
+- **Ch 2** · kingshigh.png (score 2) <https://www.preceptaustin.org/files/images/kingshigh.png>
+- **Ch 2** · ammon.jpg (score 0) <https://www.preceptaustin.org/files/images/ammon.jpg>
+- **Ch 2** · arad.jpg (score 0) <https://www.preceptaustin.org/files/images/arad.jpg>
+- **Ch 2** · arnon.jpg (score 0) <https://www.preceptaustin.org/files/images/arnon.jpg>
+- **Ch 2** · arnongorge.jpg (score 0) <https://www.preceptaustin.org/files/images/arnongorge.jpg>
+- **Ch 2** · edrei1.jpg (score 0) <https://www.preceptaustin.org/files/images/edrei1.jpg>
+- **Ch 2** · route2.jpg (score 0) <https://www.preceptaustin.org/files/images/route2.jpg>
+- **Ch 2** · sei.jpg (score 0) <https://www.preceptaustin.org/files/images/sei.jpg>
+- **Ch 3** · almigthyhand.png (score 2) <https://www.preceptaustin.org/files/images/almigthyhand.png>
+- **Ch 3** · gad.png (score 2) <https://www.preceptaustin.org/files/images/gad.png>
+- **Ch 3** · bashan.jpg (score 0) <https://www.preceptaustin.org/files/images/bashan.jpg>
+- **Ch 3** · deut14.jpg (score 0) <https://www.preceptaustin.org/files/images/deut14.jpg>
+- **Ch 3** · edrei1.jpg (score 0) <https://www.preceptaustin.org/files/images/edrei1.jpg>
+- **Ch 3** · hermon1.jpg (score 0) <https://www.preceptaustin.org/files/images/hermon1.jpg>
+- **Ch 3** · jabbok.jpg (score 0) <https://www.preceptaustin.org/files/images/jabbok.jpg>
+- **Ch 3** · jordanrift.jpg (score 0) <https://www.preceptaustin.org/files/images/jordanrift.jpg>
+- **Ch 4** · gad.png (score 2) <https://www.preceptaustin.org/files/images/gad.png>
+- **Ch 4** · bashan.jpg (score 0) <https://www.preceptaustin.org/files/images/bashan.jpg>
+- **Ch 4** · deut14.jpg (score 0) <https://www.preceptaustin.org/files/images/deut14.jpg>
+- **Ch 4** · edrei1.jpg (score 0) <https://www.preceptaustin.org/files/images/edrei1.jpg>
+- **Ch 4** · exodusmtsinai.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusmtsinai.jpg>
+- **Ch 4** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
+- **Ch 5** · exodusmtsinai.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusmtsinai.jpg>
+- **Ch 5** · fork in the road.jpg (score 0) <https://www.preceptaustin.org/files/images/fork%20in%20the%20road.jpg>
+- **Ch 5** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
+- **Ch 6** · exodusphylactery.gif (score 0) <https://www.preceptaustin.org/files/images/exodusphylactery.gif>
+- **Ch 6** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
+- **Ch 6** · route2.jpg (score 0) <https://www.preceptaustin.org/files/images/route2.jpg>
+- **Ch 7** · deut14.jpg (score 0) <https://www.preceptaustin.org/files/images/deut14.jpg>
+- **Ch 7** · mousetrap.jpg (score 0) <https://www.preceptaustin.org/files/images/mousetrap.jpg>
+- **Ch 8** · deut14.jpg (score 0) <https://www.preceptaustin.org/files/images/deut14.jpg>
+- **Ch 8** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
+- **Ch 9** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
+- **Ch 9** · route2.jpg (score 0) <https://www.preceptaustin.org/files/images/route2.jpg>
+- **Ch 9** · sinaifire.jpg (score 0) <https://www.preceptaustin.org/files/images/sinaifire.jpg>
+- **Ch 10** · ark1.jpg (score 0) <https://www.preceptaustin.org/files/images/ark1.jpg>
+- **Ch 10** · circumcise.jpg (score 0) <https://www.preceptaustin.org/files/images/circumcise.jpg>
+- **Ch 11** · korahfall.jpg (score 0) <https://www.preceptaustin.org/files/images/korahfall.jpg>
+- **Ch 16** · calendar.png (score 2) <https://www.preceptaustin.org/files/images/calendar.png>
+- **Ch 16** · calen.jpg (score 0) <https://www.preceptaustin.org/files/images/calen.jpg>
+- **Ch 16** · holiday.jpg (score 0) <https://www.preceptaustin.org/files/images/holiday.jpg>
+- **Ch 16** · justice.jpg (score 0) <https://www.preceptaustin.org/files/images/justice.jpg>
+- **Ch 18** · molech.jpg (score 0) <https://www.preceptaustin.org/files/images/molech.jpg>
+- **Ch 19** · avenger.jpg (score 0) <https://www.preceptaustin.org/files/images/avenger.jpg>
+- **Ch 19** · levicity.jpg (score 0) <https://www.preceptaustin.org/files/images/levicity.jpg>
+- **Ch 20** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 22** · exodusphylactery.gif (score 0) <https://www.preceptaustin.org/files/images/exodusphylactery.gif>
+- **Ch 27** · gerizim.jpg (score 0) <https://www.preceptaustin.org/files/images/gerizim.jpg>
+- **Ch 28** · dt2865.png (score 2) <https://www.preceptaustin.org/files/images/dt2865.png>
+- **Ch 28** · dt2866.png (score 2) <https://www.preceptaustin.org/files/images/dt2866.png>
+- **Ch 28** · dust.jpg (score 0) <https://www.preceptaustin.org/files/images/dust.jpg>
+- **Ch 28** · locust.jpg (score 0) <https://www.preceptaustin.org/files/images/locust.jpg>
+- **Ch 28** · siege.jpg (score 0) <https://www.preceptaustin.org/files/images/siege.jpg>
+- **Ch 31** · peak.jpg (score 0) <https://www.preceptaustin.org/files/images/peak.jpg>
+- **Ch 32** · deut3246.png (score 2) <https://www.preceptaustin.org/files/images/deut3246.png>
+- **Ch 32** · deut3247.png (score 2) <https://www.preceptaustin.org/files/images/deut3247.png>
+- **Ch 32** · deut32v2.png (score 2) <https://www.preceptaustin.org/files/images/deut32v2.png>
+- **Ch 32** · mosesnebo.jpg (score 0) <https://www.preceptaustin.org/files/images/mosesnebo.jpg>
+- **Ch 32** · mosesstrike.jpg (score 0) <https://www.preceptaustin.org/files/images/mosesstrike.jpg>
+- **Ch 32** · rith.jpg (score 0) <https://www.preceptaustin.org/files/images/rith.jpg>
+- **Ch 32** · sworddam.jpg (score 0) <https://www.preceptaustin.org/files/images/sworddam.jpg>
+- **Ch 33** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 34** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 34** · nebo1.jpg (score 0) <https://www.preceptaustin.org/files/images/nebo1.jpg>
+- **Ch 34** · onehorseshay.jpg (score 0) <https://www.preceptaustin.org/files/images/onehorseshay.jpg>
+
+## ecclesiastes — 0 book-level, 122 per-chapter (probed 12 chapters)
 
 ### Per-chapter
+- **Ch 1** · eccl-summary.png (score 5) <https://www.preceptaustin.org/files/images/eccl-summary.png>
+- **Ch 1** · eccl-chasing.png (score 2) <https://www.preceptaustin.org/files/images/eccl-chasing.png>
+- **Ch 1** · eccl-fading.png (score 2) <https://www.preceptaustin.org/files/images/eccl-fading.png>
+- **Ch 1** · eccl-generation.png (score 2) <https://www.preceptaustin.org/files/images/eccl-generation.png>
+- **Ch 1** · eccl-new.png (score 2) <https://www.preceptaustin.org/files/images/eccl-new.png>
+- **Ch 1** · eccl-rivers.png (score 2) <https://www.preceptaustin.org/files/images/eccl-rivers.png>
+- **Ch 1** · eccl-seek.png (score 2) <https://www.preceptaustin.org/files/images/eccl-seek.png>
+- **Ch 1** · eccl-sol.png (score 2) <https://www.preceptaustin.org/files/images/eccl-sol.png>
+- **Ch 1** · eccl-sun.png (score 2) <https://www.preceptaustin.org/files/images/eccl-sun.png>
+- **Ch 1** · eccl-under.png (score 2) <https://www.preceptaustin.org/files/images/eccl-under.png>
+- **Ch 1** · eccl-under2.png (score 2) <https://www.preceptaustin.org/files/images/eccl-under2.png>
+- **Ch 1** · eccl-vanity.png (score 2) <https://www.preceptaustin.org/files/images/eccl-vanity.png>
+- **Ch 1** · eccl-weary.png (score 2) <https://www.preceptaustin.org/files/images/eccl-weary.png>
+- **Ch 1** · eccl-wind1.png (score 2) <https://www.preceptaustin.org/files/images/eccl-wind1.png>
+- **Ch 1** · bc_runner1.gif (score 0) <https://www.preceptaustin.org/files/images/bc_runner1.gif>
+- **Ch 1** · solomon.jpg (score 0) <https://www.preceptaustin.org/files/images/solomon.jpg>
+- **Ch 2** · eccl-222.png (score 2) <https://www.preceptaustin.org/files/images/eccl-222.png>
+- **Ch 2** · eccl-after.png (score 2) <https://www.preceptaustin.org/files/images/eccl-after.png>
+- **Ch 2** · eccl-done.png (score 2) <https://www.preceptaustin.org/files/images/eccl-done.png>
+- **Ch 2** · eccl-food.png (score 2) <https://www.preceptaustin.org/files/images/eccl-food.png>
+- **Ch 2** · eccl-heir.png (score 2) <https://www.preceptaustin.org/files/images/eccl-heir.png>
+- **Ch 2** · eccl-light.png (score 2) <https://www.preceptaustin.org/files/images/eccl-light.png>
+- **Ch 2** · eccl-sinner.png (score 2) <https://www.preceptaustin.org/files/images/eccl-sinner.png>
+- **Ch 2** · eccl-sleep.png (score 2) <https://www.preceptaustin.org/files/images/eccl-sleep.png>
+- **Ch 2** · eccl-striving.png (score 2) <https://www.preceptaustin.org/files/images/eccl-striving.png>
+- **Ch 2** · clockredeem.jpeg (score 0) <https://www.preceptaustin.org/files/images/clockredeem.jpeg>
+- **Ch 3** · eccl-311.png (score 2) <https://www.preceptaustin.org/files/images/eccl-311.png>
+- **Ch 3** · eccl-begin.png (score 2) <https://www.preceptaustin.org/files/images/eccl-begin.png>
+- **Ch 3** · eccl-death.png (score 2) <https://www.preceptaustin.org/files/images/eccl-death.png>
+- **Ch 3** · eccl-dust.png (score 2) <https://www.preceptaustin.org/files/images/eccl-dust.png>
+- **Ch 3** · eccl-joy.png (score 2) <https://www.preceptaustin.org/files/images/eccl-joy.png>
+- **Ch 3** · eccl-love.png (score 2) <https://www.preceptaustin.org/files/images/eccl-love.png>
+- **Ch 3** · eccl-plant.png (score 2) <https://www.preceptaustin.org/files/images/eccl-plant.png>
+- **Ch 3** · eccl-rend.png (score 2) <https://www.preceptaustin.org/files/images/eccl-rend.png>
+- **Ch 3** · eccl-stone.png (score 2) <https://www.preceptaustin.org/files/images/eccl-stone.png>
+- **Ch 3** · eccl-tapestry.png (score 2) <https://www.preceptaustin.org/files/images/eccl-tapestry.png>
+- **Ch 3** · eccl-tear.png (score 2) <https://www.preceptaustin.org/files/images/eccl-tear.png>
+- **Ch 3** · eccl-throw.png (score 2) <https://www.preceptaustin.org/files/images/eccl-throw.png>
+- **Ch 3** · eccl-time.png (score 2) <https://www.preceptaustin.org/files/images/eccl-time.png>
+- **Ch 3** · eccl-under.png (score 2) <https://www.preceptaustin.org/files/images/eccl-under.png>
+- **Ch 3** · eccl-weep.png (score 2) <https://www.preceptaustin.org/files/images/eccl-weep.png>
+- **Ch 3** · hourglass.png (score 2) <https://www.preceptaustin.org/files/images/hourglass.png>
+- **Ch 3** · clockredeem.jpeg (score 0) <https://www.preceptaustin.org/files/images/clockredeem.jpeg>
+- **Ch 4** · eccl-cord3.png (score 2) <https://www.preceptaustin.org/files/images/eccl-cord3.png>
+- **Ch 4** · eccl-help.png (score 2) <https://www.preceptaustin.org/files/images/eccl-help.png>
+- **Ch 4** · eccl-lazy.png (score 2) <https://www.preceptaustin.org/files/images/eccl-lazy.png>
+- **Ch 4** · eccl-liedown.png (score 2) <https://www.preceptaustin.org/files/images/eccl-liedown.png>
+- **Ch 4** · eccl-oppress.png (score 2) <https://www.preceptaustin.org/files/images/eccl-oppress.png>
+- **Ch 4** · eccl-riches.png (score 2) <https://www.preceptaustin.org/files/images/eccl-riches.png>
+- **Ch 4** · eccl-tonto.png (score 2) <https://www.preceptaustin.org/files/images/eccl-tonto.png>
+- **Ch 5** · eccl-blessed.png (score 2) <https://www.preceptaustin.org/files/images/eccl-blessed.png>
+- **Ch 5** · eccl-bureau.png (score 2) <https://www.preceptaustin.org/files/images/eccl-bureau.png>
+- **Ch 5** · eccl-cradle.png (score 2) <https://www.preceptaustin.org/files/images/eccl-cradle.png>
+- **Ch 5** · eccl-dark.png (score 2) <https://www.preceptaustin.org/files/images/eccl-dark.png>
+- **Ch 5** · eccl-grasp.png (score 2) <https://www.preceptaustin.org/files/images/eccl-grasp.png>
+- **Ch 5** · eccl-hoard.png (score 2) <https://www.preceptaustin.org/files/images/eccl-hoard.png>
+- **Ch 5** · eccl-joy1.png (score 2) <https://www.preceptaustin.org/files/images/eccl-joy1.png>
+- **Ch 5** · eccl-steps.png (score 2) <https://www.preceptaustin.org/files/images/eccl-steps.png>
+- **Ch 5** · eccl-words.png (score 2) <https://www.preceptaustin.org/files/images/eccl-words.png>
+- **Ch 5** · contentment.jpg (score 0) <https://www.preceptaustin.org/files/images/contentment.jpg>
+- **Ch 5** · luke16mammon.jpg (score 0) <https://www.preceptaustin.org/files/images/luke16mammon.jpg>
+- **Ch 6** · eccl-bird.png (score 2) <https://www.preceptaustin.org/files/images/eccl-bird.png>
+- **Ch 6** · eccl-hamster.png (score 2) <https://www.preceptaustin.org/files/images/eccl-hamster.png>
+- **Ch 6** · eccl-rich.png (score 2) <https://www.preceptaustin.org/files/images/eccl-rich.png>
+- **Ch 6** · eccl-under.png (score 2) <https://www.preceptaustin.org/files/images/eccl-under.png>
+- **Ch 6** · bc_runner1.gif (score 0) <https://www.preceptaustin.org/files/images/bc_runner1.gif>
+- **Ch 6** · kairos.jpg (score 0) <https://www.preceptaustin.org/files/images/kairos.jpg>
 - **Ch 7** · eccl-chart.png (score 12) <https://www.preceptaustin.org/files/images/eccl-chart.png>
+- **Ch 7** · eccl-cross.png (score 2) <https://www.preceptaustin.org/files/images/eccl-cross.png>
+- **Ch 7** · eccl-days.png (score 2) <https://www.preceptaustin.org/files/images/eccl-days.png>
+- **Ch 7** · eccl-funeral.png (score 2) <https://www.preceptaustin.org/files/images/eccl-funeral.png>
+- **Ch 7** · eccl-mirror.png (score 2) <https://www.preceptaustin.org/files/images/eccl-mirror.png>
+- **Ch 7** · eccl-past.png (score 2) <https://www.preceptaustin.org/files/images/eccl-past.png>
+- **Ch 7** · eccl-race.png (score 2) <https://www.preceptaustin.org/files/images/eccl-race.png>
+- **Ch 7** · eccl-ten.png (score 2) <https://www.preceptaustin.org/files/images/eccl-ten.png>
+- **Ch 7** · eccl-umbrella.png (score 2) <https://www.preceptaustin.org/files/images/eccl-umbrella.png>
+- **Ch 9** · eccl-death1.png (score 2) <https://www.preceptaustin.org/files/images/eccl-death1.png>
+- **Ch 9** · eccl-dog.png (score 2) <https://www.preceptaustin.org/files/images/eccl-dog.png>
+- **Ch 9** · eccl-eat1.png (score 2) <https://www.preceptaustin.org/files/images/eccl-eat1.png>
+- **Ch 9** · eccl-fish.png (score 2) <https://www.preceptaustin.org/files/images/eccl-fish.png>
+- **Ch 9** · eccl-hand.png (score 2) <https://www.preceptaustin.org/files/images/eccl-hand.png>
+- **Ch 9** · eccl-hand1.png (score 2) <https://www.preceptaustin.org/files/images/eccl-hand1.png>
+- **Ch 9** · eccl-king.png (score 2) <https://www.preceptaustin.org/files/images/eccl-king.png>
+- **Ch 9** · eccl-poor.png (score 2) <https://www.preceptaustin.org/files/images/eccl-poor.png>
+- **Ch 9** · eccl-purpose.png (score 2) <https://www.preceptaustin.org/files/images/eccl-purpose.png>
+- **Ch 9** · eccl-sheol.png (score 2) <https://www.preceptaustin.org/files/images/eccl-sheol.png>
+- **Ch 9** · eccl-sin.png (score 2) <https://www.preceptaustin.org/files/images/eccl-sin.png>
+- **Ch 9** · eccl-whisper.png (score 2) <https://www.preceptaustin.org/files/images/eccl-whisper.png>
+- **Ch 9** · eccl-white.png (score 2) <https://www.preceptaustin.org/files/images/eccl-white.png>
+- **Ch 9** · eccl-wife.png (score 2) <https://www.preceptaustin.org/files/images/eccl-wife.png>
+- **Ch 10** · eccl-ax.png (score 2) <https://www.preceptaustin.org/files/images/eccl-ax.png>
+- **Ch 10** · eccl-bird1.png (score 2) <https://www.preceptaustin.org/files/images/eccl-bird1.png>
+- **Ch 10** · eccl-composure.png (score 2) <https://www.preceptaustin.org/files/images/eccl-composure.png>
+- **Ch 10** · eccl-error.png (score 2) <https://www.preceptaustin.org/files/images/eccl-error.png>
+- **Ch 10** · eccl-flower.png (score 2) <https://www.preceptaustin.org/files/images/eccl-flower.png>
+- **Ch 10** · eccl-fly.png (score 2) <https://www.preceptaustin.org/files/images/eccl-fly.png>
+- **Ch 10** · eccl-fly1.png (score 2) <https://www.preceptaustin.org/files/images/eccl-fly1.png>
+- **Ch 10** · eccl-fog.png (score 2) <https://www.preceptaustin.org/files/images/eccl-fog.png>
+- **Ch 10** · eccl-fool.png (score 2) <https://www.preceptaustin.org/files/images/eccl-fool.png>
+- **Ch 10** · eccl-foolishwords.png (score 2) <https://www.preceptaustin.org/files/images/eccl-foolishwords.png>
+- **Ch 10** · eccl-houseruin.png (score 2) <https://www.preceptaustin.org/files/images/eccl-houseruin.png>
+- **Ch 10** · eccl-lad.png (score 2) <https://www.preceptaustin.org/files/images/eccl-lad.png>
+- **Ch 10** · eccl-lost.png (score 2) <https://www.preceptaustin.org/files/images/eccl-lost.png>
+- **Ch 10** · eccl-multiply.png (score 2) <https://www.preceptaustin.org/files/images/eccl-multiply.png>
+- **Ch 10** · eccl-pit.png (score 2) <https://www.preceptaustin.org/files/images/eccl-pit.png>
+- **Ch 10** · eccl-sharp.png (score 2) <https://www.preceptaustin.org/files/images/eccl-sharp.png>
+- **Ch 10** · eccl-slave.png (score 2) <https://www.preceptaustin.org/files/images/eccl-slave.png>
+- **Ch 10** · eccl-snake.jpg (score 0) <https://www.preceptaustin.org/files/images/eccl-snake.jpg>
+- **Ch 11** · eccl-anger.png (score 2) <https://www.preceptaustin.org/files/images/eccl-anger.png>
+- **Ch 11** · eccl-bread.png (score 2) <https://www.preceptaustin.org/files/images/eccl-bread.png>
+- **Ch 11** · eccl-calendar.png (score 2) <https://www.preceptaustin.org/files/images/eccl-calendar.png>
+- **Ch 11** · eccl-old.png (score 2) <https://www.preceptaustin.org/files/images/eccl-old.png>
+- **Ch 11** · eccl-seed.png (score 2) <https://www.preceptaustin.org/files/images/eccl-seed.png>
+- **Ch 11** · eccl-sun1.png (score 2) <https://www.preceptaustin.org/files/images/eccl-sun1.png>
+- **Ch 11** · eccl-tree.png (score 2) <https://www.preceptaustin.org/files/images/eccl-tree.png>
+- **Ch 11** · sunriseshibui1.jpg (score 0) <https://www.preceptaustin.org/files/images/sunriseshibui1.jpg>
+- **Ch 12** · eccl-fear.png (score 2) <https://www.preceptaustin.org/files/images/eccl-fear.png>
+- **Ch 12** · eccl-goad.png (score 2) <https://www.preceptaustin.org/files/images/eccl-goad.png>
+- **Ch 12** · eccl-grass1.png (score 2) <https://www.preceptaustin.org/files/images/eccl-grass1.png>
+- **Ch 12** · eccl-house.png (score 2) <https://www.preceptaustin.org/files/images/eccl-house.png>
+- **Ch 12** · eccl-remember.png (score 2) <https://www.preceptaustin.org/files/images/eccl-remember.png>
+- **Ch 12** · eccl-silver.png (score 2) <https://www.preceptaustin.org/files/images/eccl-silver.png>
 
-## exodus — 1 book-level, 7 per-chapter (probed 40 chapters)
+## exodus — 5 book-level, 121 per-chapter (probed 40 chapters)
 
 ### Book-level
 - egyptmap.png (score 12, 40 chapters) <https://www.preceptaustin.org/files/images/egyptmap.png>
+- exodusegypt.png (score 2, 40 chapters) <https://www.preceptaustin.org/files/images/exodusegypt.png>
+- exodustabernacle.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/exodustabernacle.png>
+- exodus.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/exodus.gif>
+- pentateuch.jpg (score 0, 40 chapters) <https://www.preceptaustin.org/files/images/pentateuch.jpg>
 ### Per-chapter
 - **Ch 1** · exodustimeline.png (score 12) <https://www.preceptaustin.org/files/images/exodustimeline.png>
+- **Ch 1** · exodus.gif (score 0) <https://www.preceptaustin.org/files/images/exodus.gif>
+- **Ch 1** · pogrom.jpg (score 0) <https://www.preceptaustin.org/files/images/pogrom.jpg>
+- **Ch 1** · taskmaster.jpg (score 0) <https://www.preceptaustin.org/files/images/taskmaster.jpg>
 - **Ch 2** · exodustimeline.png (score 12) <https://www.preceptaustin.org/files/images/exodustimeline.png>
 - **Ch 2** · midian1.jpg (score 10) <https://www.preceptaustin.org/files/images/midian1.jpg>
+- **Ch 2** · moseshidden.jpg (score 0) <https://www.preceptaustin.org/files/images/moseshidden.jpg>
+- **Ch 2** · moseskills.jpg (score 0) <https://www.preceptaustin.org/files/images/moseskills.jpg>
 - **Ch 3** · midian1.jpg (score 10) <https://www.preceptaustin.org/files/images/midian1.jpg>
+- **Ch 3** · experiencegod.png (score 2) <https://www.preceptaustin.org/files/images/experiencegod.png>
+- **Ch 3** · burnbush.gif (score 0) <https://www.preceptaustin.org/files/images/burnbush.gif>
+- **Ch 6** · ex614.jpg (score 0) <https://www.preceptaustin.org/files/images/ex614.jpg>
+- **Ch 7** · exodusblood.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusblood.jpg>
+- **Ch 7** · exodusdead.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusdead.jpg>
+- **Ch 7** · exodusdead1.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusdead1.jpg>
+- **Ch 7** · exodusdead2.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusdead2.jpg>
+- **Ch 7** · exodusnilegod.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusnilegod.jpg>
+- **Ch 7** · scales1.gif (score 0) <https://www.preceptaustin.org/files/images/scales1.gif>
+- **Ch 8** · exodusgeb.png (score 2) <https://www.preceptaustin.org/files/images/exodusgeb.png>
+- **Ch 8** · exodusfly.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusfly.jpg>
+- **Ch 8** · exodusfrog.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusfrog.jpg>
+- **Ch 8** · exodusfrogheket.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusfrogheket.jpg>
+- **Ch 9** · exodusapis.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusapis.jpg>
+- **Ch 10** · locust.jpg (score 0) <https://www.preceptaustin.org/files/images/locust.jpg>
 - **Ch 12** · exodusmap.gif (score 10) <https://www.preceptaustin.org/files/images/exodusmap.gif>
+- **Ch 12** · exodushyssop.jpg (score 0) <https://www.preceptaustin.org/files/images/exodushyssop.jpg>
+- **Ch 12** · lamb of god passover_small.gif (score 0) <https://www.preceptaustin.org/files/images/lamb%20of%20God%20passover_small.gif>
+- **Ch 12** · sheep lamb lying down_small.jpg (score 0) <https://www.preceptaustin.org/files/images/sheep%20lamb%20lying%20down_small.jpg>
+- **Ch 13** · exodusvia.png (score 2) <https://www.preceptaustin.org/files/images/exodusvia.png>
+- **Ch 13** · exodusphylactery.gif (score 0) <https://www.preceptaustin.org/files/images/exodusphylactery.gif>
+- **Ch 13** · exodusred.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusred.jpg>
+- **Ch 14** · exodus142.jpg (score 0) <https://www.preceptaustin.org/files/images/exodus142.jpg>
+- **Ch 14** · exoduschariot.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduschariot.jpg>
+- **Ch 14** · exodusredmoses.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusredmoses.jpg>
+- **Ch 14** · exodusredsea.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusredsea.jpg>
+- **Ch 14** · exoduswall.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduswall.jpg>
+- **Ch 15** · exodus 15 bitter water.jpg (score 0) <https://www.preceptaustin.org/files/images/exodus%2015%20bitter%20water.jpg>
+- **Ch 15** · exodusdate.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusdate.jpg>
+- **Ch 15** · exodussin.jpg (score 0) <https://www.preceptaustin.org/files/images/exodussin.jpg>
+- **Ch 16** · exodusfleshpot.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusfleshpot.jpg>
+- **Ch 16** · exodussin.jpg (score 0) <https://www.preceptaustin.org/files/images/exodussin.jpg>
+- **Ch 17** · aaronhur.jpg (score 0) <https://www.preceptaustin.org/files/images/aaronhur.jpg>
+- **Ch 17** · amalekite.jpg (score 0) <https://www.preceptaustin.org/files/images/amalekite.jpg>
+- **Ch 17** · exodusamalekite.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusamalekite.jpg>
+- **Ch 17** · exodussin.jpg (score 0) <https://www.preceptaustin.org/files/images/exodussin.jpg>
+- **Ch 17** · foxes.jpg (score 0) <https://www.preceptaustin.org/files/images/foxes.jpg>
+- **Ch 17** · mosestriking.jpg (score 0) <https://www.preceptaustin.org/files/images/mosestriking.jpg>
+- **Ch 19** · exoduseagle.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduseagle.jpg>
+- **Ch 19** · exodusmtsinai.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusmtsinai.jpg>
+- **Ch 19** · exodusshof.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusshof.jpg>
+- **Ch 19** · exodusshofar.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusshofar.jpg>
+- **Ch 19** · exodussinai.jpg (score 0) <https://www.preceptaustin.org/files/images/exodussinai.jpg>
+- **Ch 19** · sinaifire.jpg (score 0) <https://www.preceptaustin.org/files/images/sinaifire.jpg>
+- **Ch 20** · fish.jpg (score 0) <https://www.preceptaustin.org/files/images/fish.jpg>
+- **Ch 20** · guard.jpg (score 0) <https://www.preceptaustin.org/files/images/guard.jpg>
+- **Ch 20** · mirror.jpg (score 0) <https://www.preceptaustin.org/files/images/mirror.jpg>
+- **Ch 20** · peda.jpg (score 0) <https://www.preceptaustin.org/files/images/peda.jpg>
+- **Ch 23** · judges chart_small.gif (score 10) <https://www.preceptaustin.org/files/images/Judges%20Chart_small.gif>
+- **Ch 23** · exodushornet.jpg (score 0) <https://www.preceptaustin.org/files/images/exodushornet.jpg>
+- **Ch 23** · feasts.jpg (score 0) <https://www.preceptaustin.org/files/images/feasts.jpg>
+- **Ch 23** · justice.jpg (score 0) <https://www.preceptaustin.org/files/images/justice.jpg>
+- **Ch 24** · exoduslapis.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslapis.jpg>
+- **Ch 24** · exodusmtsinai.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusmtsinai.jpg>
+- **Ch 24** · sinaifire.jpg (score 0) <https://www.preceptaustin.org/files/images/sinaifire.jpg>
+- **Ch 25** · exodustabernacle.png (score 2) <https://www.preceptaustin.org/files/images/exodustabernacle.png>
+- **Ch 25** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 25** · exodusarke.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusarke.jpg>
+- **Ch 25** · exoduslampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslampstand.jpg>
+- **Ch 25** · exodusmercyseat.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusmercyseat.jpg>
+- **Ch 25** · exodusshowbread.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusshowbread.jpg>
+- **Ch 25** · exodustable.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustable.jpg>
 - **Ch 26** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
+- **Ch 26** · exoduslampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslampstand.jpg>
+- **Ch 26** · exodusmercyseat.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusmercyseat.jpg>
+- **Ch 26** · exodusshowbread.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusshowbread.jpg>
+- **Ch 26** · exodussocket.jpg (score 0) <https://www.preceptaustin.org/files/images/exodussocket.jpg>
+- **Ch 26** · exodustabernacleesvbig.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernacleesvbig.jpg>
+- **Ch 26** · exodustribeplacement.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustribeplacement.jpg>
+- **Ch 27** · exodusaltars.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusaltars.jpg>
+- **Ch 27** · exodusbrazen2.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusbrazen2.jpg>
+- **Ch 27** · exodustabernaclecourt.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernaclecourt.jpg>
+- **Ch 28** · exoduspriest.png (score 2) <https://www.preceptaustin.org/files/images/exoduspriest.png>
+- **Ch 29** · exodustribeplacement.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustribeplacement.jpg>
+- **Ch 30** · exodusincense.png (score 2) <https://www.preceptaustin.org/files/images/exodusincense.png>
+- **Ch 30** · exoduslaver.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslaver.jpg>
+- **Ch 30** · exodustabernacleesvbig.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernacleesvbig.jpg>
+- **Ch 34** · fish.jpg (score 0) <https://www.preceptaustin.org/files/images/fish.jpg>
+- **Ch 34** · guard.jpg (score 0) <https://www.preceptaustin.org/files/images/guard.jpg>
+- **Ch 34** · mirror.jpg (score 0) <https://www.preceptaustin.org/files/images/mirror.jpg>
+- **Ch 34** · peda.jpg (score 0) <https://www.preceptaustin.org/files/images/peda.jpg>
 - **Ch 35** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
+- **Ch 35** · exodusincense.png (score 2) <https://www.preceptaustin.org/files/images/exodusincense.png>
+- **Ch 35** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 35** · exodusbrazen2.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusbrazen2.jpg>
+- **Ch 35** · exoduslampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslampstand.jpg>
+- **Ch 35** · exoduslaver.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslaver.jpg>
+- **Ch 35** · exodustabernaclecourt.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernaclecourt.jpg>
+- **Ch 35** · exodustabernacleesvbig.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernacleesvbig.jpg>
+- **Ch 35** · exodustable.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustable.jpg>
+- **Ch 36** · exodustabernacleesvbig.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernacleesvbig.jpg>
+- **Ch 37** · exodusincense.png (score 2) <https://www.preceptaustin.org/files/images/exodusincense.png>
+- **Ch 37** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 37** · exoduslampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslampstand.jpg>
+- **Ch 37** · exodusshowbread.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusshowbread.jpg>
+- **Ch 37** · exodustable.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustable.jpg>
+- **Ch 38** · exodusbrazen2.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusbrazen2.jpg>
+- **Ch 38** · exodusmirror.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusmirror.jpg>
+- **Ch 38** · exodustabernaclecourt.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernaclecourt.jpg>
+- **Ch 39** · exoduspriest.png (score 2) <https://www.preceptaustin.org/files/images/exoduspriest.png>
+- **Ch 40** · exodusincense.png (score 2) <https://www.preceptaustin.org/files/images/exodusincense.png>
+- **Ch 40** · exodustabernacle.png (score 2) <https://www.preceptaustin.org/files/images/exodustabernacle.png>
+- **Ch 40** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 40** · exodusbrazen2.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusbrazen2.jpg>
+- **Ch 40** · exodusglory.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusglory.jpg>
+- **Ch 40** · exodusglorynight.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusglorynight.jpg>
+- **Ch 40** · exoduslampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslampstand.jpg>
+- **Ch 40** · exoduslaver.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslaver.jpg>
+- **Ch 40** · exoduspriest.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduspriest.jpg>
+- **Ch 40** · exodusshowbread.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusshowbread.jpg>
+- **Ch 40** · exodustabernaclecourt.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernaclecourt.jpg>
+- **Ch 40** · exodustabernacleesvbig.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernacleesvbig.jpg>
 
-## ezekiel — 1 book-level, 0 per-chapter (probed 5 chapters)
+## ezekiel — 5 book-level, 5 per-chapter (probed 5 chapters)
 
 ### Book-level
 - ezekiel_chronology.png (score 12, 5 chapters) <https://www.preceptaustin.org/files/images/ezekiel_chronology.png>
+- ezek_glory.png (score 2, 5 chapters) <https://www.preceptaustin.org/files/images/ezek_glory.png>
+- ezek_mic.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/ezek_mic.jpg>
+- heat-3.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/heat-3.jpg>
+- millennium.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/millennium.gif>
+### Per-chapter
+- **Ch 17** · eagle2.jpg.png (score 2) <https://www.preceptaustin.org/files/images/eagle2.jpg.png>
+- **Ch 17** · zedekiahnet1.png (score 2) <https://www.preceptaustin.org/files/images/zedekiahnet1.png>
+- **Ch 17** · cedartree.jpg (score 0) <https://www.preceptaustin.org/files/images/cedartree.jpg>
+- **Ch 17** · covenant - salvator rosa 1615-1673_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Covenant%20-%20Salvator%20Rosa%201615-1673_small.jpg>
+- **Ch 17** · ezek_mic.jpg (score 0) <https://www.preceptaustin.org/files/images/ezek_mic.jpg>
 
-## galatians — 1 book-level, 1 per-chapter (probed 6 chapters)
+## galatians — 4 book-level, 12 per-chapter (probed 6 chapters)
 
 ### Book-level
 - galmap.gif (score 10, 6 chapters) <https://www.preceptaustin.org/files/images/galmap.gif>
+- gal.png (score 2, 6 chapters) <https://www.preceptaustin.org/files/images/gal.png>
+- galtiming.png (score 2, 3 chapters) <https://www.preceptaustin.org/files/images/galtiming.png>
+- paul_epistle.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/paul_epistle.jpg>
 ### Per-chapter
 - **Ch 1** · galchron.png (score 12) <https://www.preceptaustin.org/files/images/galchron.png>
+- **Ch 1** · paul_epistle.jpg (score 0) <https://www.preceptaustin.org/files/images/paul_epistle.jpg>
+- **Ch 2** · paulpeter.jpg (score 0) <https://www.preceptaustin.org/files/images/paulpeter.jpg>
+- **Ch 3** · 430.jpg (score 0) <https://www.preceptaustin.org/files/images/430.jpg>
+- **Ch 3** · abramstars.jpg (score 0) <https://www.preceptaustin.org/files/images/abramstars.jpg>
+- **Ch 3** · fish.jpg (score 0) <https://www.preceptaustin.org/files/images/fish.jpg>
+- **Ch 3** · guard.jpg (score 0) <https://www.preceptaustin.org/files/images/guard.jpg>
+- **Ch 3** · mirror.jpg (score 0) <https://www.preceptaustin.org/files/images/mirror.jpg>
+- **Ch 3** · peda.jpg (score 0) <https://www.preceptaustin.org/files/images/peda.jpg>
+- **Ch 3** · sworddam.jpg (score 0) <https://www.preceptaustin.org/files/images/sworddam.jpg>
+- **Ch 5** · liberty1.jpg (score 0) <https://www.preceptaustin.org/files/images/liberty1.jpg>
+- **Ch 5** · yoke.jpg (score 0) <https://www.preceptaustin.org/files/images/yoke.jpg>
 
-## genesis — 0 book-level, 3 per-chapter (probed 25 chapters)
+## genesis — 1 book-level, 116 per-chapter (probed 25 chapters)
 
+### Book-level
+- genesis.jpg (score 0, 17 chapters) <https://www.preceptaustin.org/files/images/genesis.jpg>
 ### Per-chapter
+- **Ch 1** · evolutionapetoman.png (score 2) <https://www.preceptaustin.org/files/images/evolutionapetoman.png>
+- **Ch 1** · cambrian.jpg (score 0) <https://www.preceptaustin.org/files/images/cambrian.jpg>
+- **Ch 1** · evolutionape.jpg (score 0) <https://www.preceptaustin.org/files/images/evolutionape.jpg>
+- **Ch 1** · light1.jpg (score 0) <https://www.preceptaustin.org/files/images/light1.jpg>
+- **Ch 1** · ocean.jpg (score 0) <https://www.preceptaustin.org/files/images/ocean.jpg>
+- **Ch 1** · stars.jpg (score 0) <https://www.preceptaustin.org/files/images/stars.jpg>
+- **Ch 2** · tigris.png (score 2) <https://www.preceptaustin.org/files/images/tigris.png>
+- **Ch 2** · gardeneden1.jpg (score 0) <https://www.preceptaustin.org/files/images/gardeneden1.jpg>
+- **Ch 2** · telomere.gif (score 0) <https://www.preceptaustin.org/files/images/telomere.gif>
+- **Ch 3** · banished.jpg (score 0) <https://www.preceptaustin.org/files/images/banished.jpg>
+- **Ch 3** · expulsion.jpg (score 0) <https://www.preceptaustin.org/files/images/expulsion.jpg>
+- **Ch 3** · ge3.jpg (score 0) <https://www.preceptaustin.org/files/images/ge3.jpg>
+- **Ch 4** · adamtree.gif (score 0) <https://www.preceptaustin.org/files/images/adamtree.gif>
+- **Ch 4** · cainbody.jpg (score 0) <https://www.preceptaustin.org/files/images/cainbody.jpg>
+- **Ch 4** · caincount.jpg (score 0) <https://www.preceptaustin.org/files/images/caincount.jpg>
+- **Ch 4** · cainflee.jpg (score 0) <https://www.preceptaustin.org/files/images/cainflee.jpg>
+- **Ch 4** · cainmurder.jpg (score 0) <https://www.preceptaustin.org/files/images/cainmurder.jpg>
+- **Ch 4** · cainpunish.jpg (score 0) <https://www.preceptaustin.org/files/images/cainpunish.jpg>
+- **Ch 6** · mesopotamia.png (score 2) <https://www.preceptaustin.org/files/images/mesopotamia.png>
+- **Ch 6** · noahsarkconstruction.png (score 2) <https://www.preceptaustin.org/files/images/noahsarkconstruction.png>
+- **Ch 6** · arksize.jpg (score 0) <https://www.preceptaustin.org/files/images/arksize.jpg>
+- **Ch 6** · gilgamesh.jpg (score 0) <https://www.preceptaustin.org/files/images/gilgamesh.jpg>
+- **Ch 6** · noahsark.jpg (score 0) <https://www.preceptaustin.org/files/images/noahsark.jpg>
+- **Ch 7** · mesopotamia.png (score 2) <https://www.preceptaustin.org/files/images/mesopotamia.png>
+- **Ch 7** · ararat.jpg (score 0) <https://www.preceptaustin.org/files/images/ararat.jpg>
+- **Ch 7** · arkshut.jpg (score 0) <https://www.preceptaustin.org/files/images/arkshut.jpg>
+- **Ch 7** · arkshut2.jpg (score 0) <https://www.preceptaustin.org/files/images/arkshut2.jpg>
+- **Ch 8** · ararat.jpg (score 0) <https://www.preceptaustin.org/files/images/ararat.jpg>
+- **Ch 8** · ararat3d.gif (score 0) <https://www.preceptaustin.org/files/images/ararat3d.gif>
+- **Ch 8** · arkdecks1.jpg (score 0) <https://www.preceptaustin.org/files/images/arkdecks1.jpg>
+- **Ch 8** · arkrested.jpg (score 0) <https://www.preceptaustin.org/files/images/arkrested.jpg>
+- **Ch 8** · dove.jpg (score 0) <https://www.preceptaustin.org/files/images/dove.jpg>
+- **Ch 8** · floodpost.jpg (score 0) <https://www.preceptaustin.org/files/images/floodpost.jpg>
+- **Ch 8** · noahaltar.jpg (score 0) <https://www.preceptaustin.org/files/images/noahaltar.jpg>
+- **Ch 8** · noahfromararat.jpg (score 0) <https://www.preceptaustin.org/files/images/noahfromararat.jpg>
+- **Ch 8** · noahpeoplesearth.jpg (score 0) <https://www.preceptaustin.org/files/images/noahpeoplesearth.jpg>
+- **Ch 9** · nations2.jpg (score 0) <https://www.preceptaustin.org/files/images/nations2.jpg>
+- **Ch 9** · noahsons.jpg (score 0) <https://www.preceptaustin.org/files/images/noahsons.jpg>
+- **Ch 9** · rainbow1.jpg (score 0) <https://www.preceptaustin.org/files/images/rainbow1.jpg>
 - **Ch 10** · canaanmap.jpg (score 10) <https://www.preceptaustin.org/files/images/canaanmap.jpg>
+- **Ch 10** · semitic.png (score 2) <https://www.preceptaustin.org/files/images/semitic.png>
+- **Ch 10** · nations.jpg (score 0) <https://www.preceptaustin.org/files/images/nations.jpg>
+- **Ch 10** · nations2.jpg (score 0) <https://www.preceptaustin.org/files/images/nations2.jpg>
+- **Ch 10** · nationsmacarthur.jpg (score 0) <https://www.preceptaustin.org/files/images/nationsmacarthur.jpg>
+- **Ch 10** · nimrod.jpg (score 0) <https://www.preceptaustin.org/files/images/nimrod.jpg>
+- **Ch 10** · noahsons.jpg (score 0) <https://www.preceptaustin.org/files/images/noahsons.jpg>
+- **Ch 10** · shem1.jpg (score 0) <https://www.preceptaustin.org/files/images/shem1.jpg>
+- **Ch 10** · tableofnations.jpg (score 0) <https://www.preceptaustin.org/files/images/tableofnations.jpg>
+- **Ch 11** · shinarcities.png (score 2) <https://www.preceptaustin.org/files/images/shinarcities.png>
+- **Ch 11** · ai.jpg (score 0) <https://www.preceptaustin.org/files/images/ai.jpg>
+- **Ch 11** · arpach1.jpg (score 0) <https://www.preceptaustin.org/files/images/arpach1.jpg>
+- **Ch 11** · babel.jpg (score 0) <https://www.preceptaustin.org/files/images/babel.jpg>
+- **Ch 11** · haran.jpg (score 0) <https://www.preceptaustin.org/files/images/haran.jpg>
+- **Ch 11** · shem1.jpg (score 0) <https://www.preceptaustin.org/files/images/shem1.jpg>
+- **Ch 11** · shinar.jpg (score 0) <https://www.preceptaustin.org/files/images/shinar.jpg>
+- **Ch 11** · terah.jpg (score 0) <https://www.preceptaustin.org/files/images/terah.jpg>
+- **Ch 11** · ur.jpg (score 0) <https://www.preceptaustin.org/files/images/ur.jpg>
+- **Ch 11** · wholeworld.jpg (score 0) <https://www.preceptaustin.org/files/images/wholeworld.jpg>
+- **Ch 12** · abram.jpg (score 0) <https://www.preceptaustin.org/files/images/abram.jpg>
+- **Ch 12** · abramegypt.jpg (score 0) <https://www.preceptaustin.org/files/images/abramegypt.jpg>
+- **Ch 12** · abramstars.jpg (score 0) <https://www.preceptaustin.org/files/images/abramstars.jpg>
 - **Ch 13** · joshuamap.png (score 12) <https://www.preceptaustin.org/files/images/joshuamap.png>
+- **Ch 13** · lot.png (score 2) <https://www.preceptaustin.org/files/images/lot.png>
+- **Ch 13** · negev1.png (score 2) <https://www.preceptaustin.org/files/images/negev1.png>
+- **Ch 13** · abramegypt.jpg (score 0) <https://www.preceptaustin.org/files/images/abramegypt.jpg>
+- **Ch 13** · abramstars.jpg (score 0) <https://www.preceptaustin.org/files/images/abramstars.jpg>
+- **Ch 13** · mamre.jpg (score 0) <https://www.preceptaustin.org/files/images/mamre.jpg>
+- **Ch 14** · abramstars.jpg (score 0) <https://www.preceptaustin.org/files/images/abramstars.jpg>
+- **Ch 14** · mamre.jpg (score 0) <https://www.preceptaustin.org/files/images/mamre.jpg>
+- **Ch 14** · melchizedek1.jpeg (score 0) <https://www.preceptaustin.org/files/images/melchizedek1.jpeg>
 - **Ch 15** · solomonskingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/solomonskingdom.jpg>
+- **Ch 15** · ge3.png (score 2) <https://www.preceptaustin.org/files/images/ge3.png>
+- **Ch 15** · abramstars.jpg (score 0) <https://www.preceptaustin.org/files/images/abramstars.jpg>
+- **Ch 15** · ge15.jpg (score 0) <https://www.preceptaustin.org/files/images/ge15.jpg>
+- **Ch 15** · progrev.jpg (score 0) <https://www.preceptaustin.org/files/images/progrev.jpg>
+- **Ch 16** · abramstars.jpg (score 0) <https://www.preceptaustin.org/files/images/abramstars.jpg>
+- **Ch 16** · beer1.jpg (score 0) <https://www.preceptaustin.org/files/images/beer1.jpg>
+- **Ch 16** · mamre.jpg (score 0) <https://www.preceptaustin.org/files/images/mamre.jpg>
+- **Ch 17** · circumcision.png (score 2) <https://www.preceptaustin.org/files/images/CIRCUMCISION.png>
+- **Ch 17** · abramstars.jpg (score 0) <https://www.preceptaustin.org/files/images/abramstars.jpg>
+- **Ch 17** · circumcise.jpg (score 0) <https://www.preceptaustin.org/files/images/circumcise.jpg>
+- **Ch 18** · abramstars.jpg (score 0) <https://www.preceptaustin.org/files/images/abramstars.jpg>
+- **Ch 18** · feetwashing.jpg (score 0) <https://www.preceptaustin.org/files/images/feetwashing.jpg>
+- **Ch 18** · mamre.jpg (score 0) <https://www.preceptaustin.org/files/images/mamre.jpg>
+- **Ch 18** · oakmamre.jpg (score 0) <https://www.preceptaustin.org/files/images/oakmamre.jpg>
+- **Ch 18** · tent.jpg (score 0) <https://www.preceptaustin.org/files/images/tent.jpg>
+- **Ch 18** · three.jpg (score 0) <https://www.preceptaustin.org/files/images/three.jpg>
+- **Ch 19** · abrahamsodom.jpg (score 0) <https://www.preceptaustin.org/files/images/abrahamsodom.jpg>
+- **Ch 19** · abramstars.jpg (score 0) <https://www.preceptaustin.org/files/images/abramstars.jpg>
+- **Ch 19** · lotswife.jpg (score 0) <https://www.preceptaustin.org/files/images/lotswife.jpg>
+- **Ch 19** · sodom.jpg (score 0) <https://www.preceptaustin.org/files/images/sodom.jpg>
+- **Ch 19** · sodom1.jpg (score 0) <https://www.preceptaustin.org/files/images/sodom1.jpg>
+- **Ch 20** · abrahamabim2.jpg (score 0) <https://www.preceptaustin.org/files/images/abrahamabim2.jpg>
+- **Ch 20** · abramstars.jpg (score 0) <https://www.preceptaustin.org/files/images/abramstars.jpg>
+- **Ch 20** · mamre.jpg (score 0) <https://www.preceptaustin.org/files/images/mamre.jpg>
+- **Ch 21** · circumcision.png (score 2) <https://www.preceptaustin.org/files/images/CIRCUMCISION.png>
+- **Ch 21** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 21** · abramstars.jpg (score 0) <https://www.preceptaustin.org/files/images/abramstars.jpg>
+- **Ch 21** · hagarishmael2.jpg (score 0) <https://www.preceptaustin.org/files/images/hagarishmael2.jpg>
+- **Ch 21** · hagarishmaeldepart.jpg (score 0) <https://www.preceptaustin.org/files/images/hagarishmaeldepart.jpg>
+- **Ch 21** · mamre.jpg (score 0) <https://www.preceptaustin.org/files/images/mamre.jpg>
+- **Ch 21** · paran.jpg (score 0) <https://www.preceptaustin.org/files/images/paran.jpg>
+- **Ch 21** · tamarisk.jpg (score 0) <https://www.preceptaustin.org/files/images/tamarisk.jpg>
+- **Ch 22** · abeisaac.jpg (score 0) <https://www.preceptaustin.org/files/images/abeisaac.jpg>
+- **Ch 24** · ge241.png (score 2) <https://www.preceptaustin.org/files/images/ge241.png>
+- **Ch 24** · ge2410.png (score 2) <https://www.preceptaustin.org/files/images/ge2410.png>
+- **Ch 24** · ge2411.png (score 2) <https://www.preceptaustin.org/files/images/ge2411.png>
+- **Ch 24** · ge2416.png (score 2) <https://www.preceptaustin.org/files/images/ge2416.png>
+- **Ch 24** · ge2418.png (score 2) <https://www.preceptaustin.org/files/images/ge2418.png>
+- **Ch 24** · ge242.png (score 2) <https://www.preceptaustin.org/files/images/ge242.png>
+- **Ch 24** · ge2420.png (score 2) <https://www.preceptaustin.org/files/images/ge2420.png>
+- **Ch 24** · ge2422.png (score 2) <https://www.preceptaustin.org/files/images/ge2422.png>
+- **Ch 24** · ge24631.png (score 2) <https://www.preceptaustin.org/files/images/ge24631.png>
+- **Ch 24** · ge2464.png (score 2) <https://www.preceptaustin.org/files/images/ge2464.png>
+- **Ch 24** · ge2465.png (score 2) <https://www.preceptaustin.org/files/images/ge2465.png>
+- **Ch 24** · ge2467.png (score 2) <https://www.preceptaustin.org/files/images/ge2467.png>
 
-## hebrews — 0 book-level, 1 per-chapter (probed 1 chapters)
+## habakkuk — 6 book-level, 0 per-chapter (probed 3 chapters)
+
+### Book-level
+- habakkukdipchart.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/habakkukdipchart.png>
+- zephaniahmap.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/zephaniahmap.jpg>
+- hab.png (score 2, 3 chapters) <https://www.preceptaustin.org/files/images/hab.png>
+- habakkuktime.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/habakkuktime.png>
+- habakkukryrie.gif (score 0, 3 chapters) <https://www.preceptaustin.org/files/images/habakkukryrie.gif>
+- prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
+
+## hebrews — 0 book-level, 4 per-chapter (probed 1 chapters)
 
 ### Per-chapter
 - **Ch 13** · timeline.png (score 12) <https://www.preceptaustin.org/files/images/timeline.png>
+- **Ch 13** · heb.png (score 2) <https://www.preceptaustin.org/files/images/heb.png>
+- **Ch 13** · hebrewstime.png (score 2) <https://www.preceptaustin.org/files/images/hebrewstime.png>
+- **Ch 13** · hebrewstime.jpg (score 0) <https://www.preceptaustin.org/files/images/hebrewstime.jpg>
 
-## hosea — 1 book-level, 0 per-chapter (probed 5 chapters)
+## hosea — 6 book-level, 0 per-chapter (probed 5 chapters)
 
 ### Book-level
 - hosea_geo.png (score 12, 5 chapters) <https://www.preceptaustin.org/files/images/hosea_geo.png>
+- hoseamap.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/hoseamap.jpg>
+- hosea_love.png (score 2, 5 chapters) <https://www.preceptaustin.org/files/images/hosea_love.png>
+- hoseatime.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/hoseatime.png>
+- hosea_gomer.jpg (score 0, 5 chapters) <https://www.preceptaustin.org/files/images/hosea_gomer.jpg>
+- prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
 
-## isaiah — 0 book-level, 9 per-chapter (probed 22 chapters)
+## isaiah — 4 book-level, 69 per-chapter (probed 22 chapters)
 
+### Book-level
+- isaiah_and_jeremiah_geography.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/isaiah_and_jeremiah_geography.png>
+- isaiah_con.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/isaiah_con.png>
+- isaiah_glorious_throne_of_jehovah_the_holy_one.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png>
+- isaiah_pix.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/isaiah_pix.jpg>
 ### Per-chapter
+- **Ch 6** · isaiah 6 - 2_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Isaiah%206%20-%202_small.jpg>
+- **Ch 6** · isaiah 6-3_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Isaiah%206-3_small.jpg>
+- **Ch 6** · rca-dog_small.jpg (score 0) <https://www.preceptaustin.org/files/images/rca-dog_small.jpg>
 - **Ch 7** · kingsallchart.jpg (score 10) <https://www.preceptaustin.org/files/images/kingsallchart.jpg>
+- **Ch 7** · ahaz163.png (score 2) <https://www.preceptaustin.org/files/images/ahaz163.png>
+- **Ch 7** · ahaz712.png (score 2) <https://www.preceptaustin.org/files/images/ahaz712.png>
+- **Ch 7** · ahaz714.png (score 2) <https://www.preceptaustin.org/files/images/ahaz714.png>
+- **Ch 7** · ahaz717.png (score 2) <https://www.preceptaustin.org/files/images/ahaz717.png>
+- **Ch 7** · ahaz718.png (score 2) <https://www.preceptaustin.org/files/images/ahaz718.png>
+- **Ch 7** · ahaz719.png (score 2) <https://www.preceptaustin.org/files/images/ahaz719.png>
+- **Ch 7** · ahaz72.png (score 2) <https://www.preceptaustin.org/files/images/ahaz72.png>
+- **Ch 7** · ahaz720.png (score 2) <https://www.preceptaustin.org/files/images/ahaz720.png>
+- **Ch 7** · ahaz721.png (score 2) <https://www.preceptaustin.org/files/images/ahaz721.png>
+- **Ch 7** · ahaz722.png (score 2) <https://www.preceptaustin.org/files/images/ahaz722.png>
+- **Ch 7** · ahaz723.png (score 2) <https://www.preceptaustin.org/files/images/ahaz723.png>
+- **Ch 7** · ahaz724.png (score 2) <https://www.preceptaustin.org/files/images/ahaz724.png>
+- **Ch 7** · ahaz725.png (score 2) <https://www.preceptaustin.org/files/images/ahaz725.png>
+- **Ch 7** · ahaz73.png (score 2) <https://www.preceptaustin.org/files/images/ahaz73.png>
+- **Ch 7** · ahaz78.png (score 2) <https://www.preceptaustin.org/files/images/ahaz78.png>
+- **Ch 7** · ahazisaiah.png (score 2) <https://www.preceptaustin.org/files/images/ahazisaiah.png>
+- **Ch 7** · ahazrezinpekah.png (score 2) <https://www.preceptaustin.org/files/images/ahazrezinpekah.png>
+- **Ch 7** · ripleys.png (score 2) <https://www.preceptaustin.org/files/images/ripleys.png>
+- **Ch 8** · ahazdefeateda.png (score 2) <https://www.preceptaustin.org/files/images/ahazdefeateda.png>
+- **Ch 9** · perfect.png (score 2) <https://www.preceptaustin.org/files/images/perfect.png>
 - **Ch 10** · map_of_assyria.png (score 12) <https://www.preceptaustin.org/files/images/Map_of_Assyria.png>
+- **Ch 11** · isaiah 11 - lion - hicks 1834_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Isaiah%2011%20-%20Lion%20-%20Hicks%201834_small.jpg>
+- **Ch 12** · praise for salvation.jpg (score 0) <https://www.preceptaustin.org/files/images/Praise%20for%20salvation.jpg>
+- **Ch 13** · babylon 1_small.jpg (score 0) <https://www.preceptaustin.org/files/images/babylon%201_small.jpg>
+- **Ch 13** · babylon_plan_1944_small.jpg (score 0) <https://www.preceptaustin.org/files/images/babylon_plan_1944_small.jpg>
 - **Ch 34** · isaiah_and_jeremiah_geography.png (score 12) <https://www.preceptaustin.org/files/images/isaiah_and_jeremiah_geography.png>
+- **Ch 34** · isaiah_con.png (score 2) <https://www.preceptaustin.org/files/images/isaiah_con.png>
+- **Ch 34** · isaiah_glorious_throne_of_jehovah_the_holy_one.png (score 2) <https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png>
+- **Ch 34** · r92.png (score 2) <https://www.preceptaustin.org/files/images/r92.png>
+- **Ch 34** · actojerus.jpg (score 0) <https://www.preceptaustin.org/files/images/actojerus.jpg>
+- **Ch 34** · actosouth.jpg (score 0) <https://www.preceptaustin.org/files/images/actosouth.jpg>
+- **Ch 34** · armageddon.jpg (score 0) <https://www.preceptaustin.org/files/images/Armageddon.jpg>
+- **Ch 34** · bozrah2.jpg (score 0) <https://www.preceptaustin.org/files/images/bozrah2.jpg>
+- **Ch 34** · bozrahjordan.jpg (score 0) <https://www.preceptaustin.org/files/images/bozrahjordan.jpg>
+- **Ch 34** · harmagedon.jpg (score 0) <https://www.preceptaustin.org/files/images/harmagedon.jpg>
+- **Ch 34** · isaiah_pix.jpg (score 0) <https://www.preceptaustin.org/files/images/isaiah_pix.jpg>
+- **Ch 34** · petrasize.jpg (score 0) <https://www.preceptaustin.org/files/images/petrasize.jpg>
 - **Ch 35** · isaiah_and_jeremiah_geography.png (score 12) <https://www.preceptaustin.org/files/images/isaiah_and_jeremiah_geography.png>
+- **Ch 35** · isaiah35.png (score 2) <https://www.preceptaustin.org/files/images/isaiah35.png>
+- **Ch 35** · isaiah_con.png (score 2) <https://www.preceptaustin.org/files/images/isaiah_con.png>
+- **Ch 35** · isaiah_glorious_throne_of_jehovah_the_holy_one.png (score 2) <https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png>
+- **Ch 35** · isaiah_pix.jpg (score 0) <https://www.preceptaustin.org/files/images/isaiah_pix.jpg>
 - **Ch 36** · 1kichart2.png (score 12) <https://www.preceptaustin.org/files/images/1kichart2.png>
+- **Ch 36** · hoshea171.png (score 2) <https://www.preceptaustin.org/files/images/hoshea171.png>
+- **Ch 36** · sennacheribprism.png (score 2) <https://www.preceptaustin.org/files/images/sennacheribprism.png>
+- **Ch 36** · sennacheribseige.png (score 2) <https://www.preceptaustin.org/files/images/sennacheribseige.png>
+- **Ch 36** · hezekiah.jpg (score 0) <https://www.preceptaustin.org/files/images/hezekiah.jpg>
+- **Ch 36** · hezekiahspool.jpg (score 0) <https://www.preceptaustin.org/files/images/hezekiahspool.jpg>
+- **Ch 36** · sennacherib.jpg (score 0) <https://www.preceptaustin.org/files/images/sennacherib.jpg>
 - **Ch 37** · 1kichart2.png (score 12) <https://www.preceptaustin.org/files/images/1kichart2.png>
 - **Ch 38** · 1kichart2.png (score 12) <https://www.preceptaustin.org/files/images/1kichart2.png>
 - **Ch 39** · 1kichart2.png (score 12) <https://www.preceptaustin.org/files/images/1kichart2.png>
 - **Ch 44** · timelineisreal1.png (score 12) <https://www.preceptaustin.org/files/images/timelineisreal1.png>
+- **Ch 44** · isaiah_glorious_throne_of_jehovah_the_holy_one.png (score 2) <https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png>
+- **Ch 44** · isaiah_pix.jpg (score 0) <https://www.preceptaustin.org/files/images/isaiah_pix.jpg>
+- **Ch 44** · mosesstrike.jpg (score 0) <https://www.preceptaustin.org/files/images/mosesstrike.jpg>
+- **Ch 49** · isaiah_glorious_throne_of_jehovah_the_holy_one.png (score 2) <https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png>
+- **Ch 49** · isaiah_pix.jpg (score 0) <https://www.preceptaustin.org/files/images/isaiah_pix.jpg>
+- **Ch 50** · isaiah_glorious_throne_of_jehovah_the_holy_one.png (score 2) <https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png>
+- **Ch 50** · isaiah_pix.jpg (score 0) <https://www.preceptaustin.org/files/images/isaiah_pix.jpg>
+- **Ch 53** · perfect.png (score 2) <https://www.preceptaustin.org/files/images/perfect.png>
+- **Ch 53** · messianic.jpg (score 0) <https://www.preceptaustin.org/files/images/messianic.jpg>
+- **Ch 61** · isaiah_glorious_throne_of_jehovah_the_holy_one.png (score 2) <https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png>
+- **Ch 61** · isaiah_pix.jpg (score 0) <https://www.preceptaustin.org/files/images/isaiah_pix.jpg>
+- **Ch 61** · timegap2.jpg (score 0) <https://www.preceptaustin.org/files/images/timegap2.jpg>
 
-## jeremiah — 2 book-level, 3 per-chapter (probed 14 chapters)
+## james — 1 book-level, 6 per-chapter (probed 5 chapters)
 
 ### Book-level
+- james_jesus_brother.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/james_jesus_brother.png>
+### Per-chapter
+- **Ch 3** · bridle.jpg (score 0) <https://www.preceptaustin.org/files/images/bridle.jpg>
+- **Ch 3** · chicago.jpg (score 0) <https://www.preceptaustin.org/files/images/chicago.jpg>
+- **Ch 3** · imagegod.jpg (score 0) <https://www.preceptaustin.org/files/images/imagegod.jpg>
+- **Ch 4** · james413.png (score 2) <https://www.preceptaustin.org/files/images/james413.png>
+- **Ch 4** · clockredeem.jpeg (score 0) <https://www.preceptaustin.org/files/images/clockredeem.jpeg>
+- **Ch 5** · longfuse.png (score 2) <https://www.preceptaustin.org/files/images/longfuse.png>
+
+## jeremiah — 10 book-level, 20 per-chapter (probed 14 chapters)
+
+### Book-level
+- jeremiahtimeline.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/jeremiahtimeline.png>
 - timelineisreal1.png (score 12, 12 chapters) <https://www.preceptaustin.org/files/images/timelineisreal1.png>
 - jeremiahmap.jpg (score 10, 10 chapters) <https://www.preceptaustin.org/files/images/jeremiahmap.jpg>
+- jer.png (score 2, 10 chapters) <https://www.preceptaustin.org/files/images/jer.png>
+- jer_con.png (score 2, 10 chapters) <https://www.preceptaustin.org/files/images/jer_con.png>
+- bulla.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/bulla.jpg>
+- jer_image.jpg (score 0, 14 chapters) <https://www.preceptaustin.org/files/images/jer_image.jpg>
+- jer_struc.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/jer_struc.jpg>
+- jer_struc2.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/jer_struc2.jpg>
+- jer_struc3.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/jer_struc3.jpg>
 ### Per-chapter
+- **Ch 20** · jeremiahstock.png (score 2) <https://www.preceptaustin.org/files/images/jeremiahstock.png>
 - **Ch 22** · luke_genealogy.png (score 12) <https://www.preceptaustin.org/files/images/Luke_genealogy.png>
+- **Ch 22** · messiahslinethroughjoseph.png (score 2) <https://www.preceptaustin.org/files/images/messiahslinethroughjoseph.png>
+- **Ch 24** · figs.png (score 2) <https://www.preceptaustin.org/files/images/figs.png>
+- **Ch 24** · jehoiakimdates4.png (score 2) <https://www.preceptaustin.org/files/images/jehoiakimdates4.png>
+- **Ch 25** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
+- **Ch 27** · jeremiahzedekiah1.png (score 2) <https://www.preceptaustin.org/files/images/jeremiahzedekiah1.png>
+- **Ch 27** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 27** · yoke.png (score 2) <https://www.preceptaustin.org/files/images/yoke.png>
+- **Ch 27** · yoke.jpg (score 0) <https://www.preceptaustin.org/files/images/yoke.jpg>
 - **Ch 28** · jeremiahtimeline.png (score 12) <https://www.preceptaustin.org/files/images/jeremiahtimeline.png>
+- **Ch 28** · jeremiahyoke.png (score 2) <https://www.preceptaustin.org/files/images/jeremiahyoke.png>
 - **Ch 29** · jeremiahtimeline.png (score 12) <https://www.preceptaustin.org/files/images/jeremiahtimeline.png>
+- **Ch 32** · highplaces.png (score 2) <https://www.preceptaustin.org/files/images/highplaces.png>
+- **Ch 32** · earthenware.jpg (score 0) <https://www.preceptaustin.org/files/images/earthenware.jpg>
+- **Ch 38** · cisternrescue.png (score 2) <https://www.preceptaustin.org/files/images/cisternrescue.png>
+- **Ch 38** · cistern.jpg (score 0) <https://www.preceptaustin.org/files/images/cistern.jpg>
+- **Ch 38** · cornergate.jpg (score 0) <https://www.preceptaustin.org/files/images/cornergate.jpg>
+- **Ch 38** · gedaliah.jpg (score 0) <https://www.preceptaustin.org/files/images/gedaliah.jpg>
+- **Ch 38** · jehucal.jpg (score 0) <https://www.preceptaustin.org/files/images/jehucal.jpg>
 
-## joel — 0 book-level, 1 per-chapter (probed 3 chapters)
+## joel — 5 book-level, 12 per-chapter (probed 3 chapters)
 
+### Book-level
+- joelmap.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/joelmap.jpg>
+- joeltime.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/joeltime.png>
+- seven-feasts.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/seven-feasts.png>
+- joel-1.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/joel-1.gif>
+- joel-sym.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/joel-sym.gif>
 ### Per-chapter
+- **Ch 1** · joeltime.png (score 2) <https://www.preceptaustin.org/files/images/joeltime.png>
+- **Ch 1** · joel-1.gif (score 0) <https://www.preceptaustin.org/files/images/joel-1.gif>
+- **Ch 1** · locust.jpg (score 0) <https://www.preceptaustin.org/files/images/locust.jpg>
+- **Ch 2** · city of david.gif (score 0) <https://www.preceptaustin.org/files/images/City of David.gif>
+- **Ch 2** · citydavid1.jpg (score 0) <https://www.preceptaustin.org/files/images/citydavid1.jpg>
+- **Ch 2** · image002.jpg (score 0) <https://www.preceptaustin.org/files/images/ezekiel_810-18_files/image002.jpg>
+- **Ch 2** · judges 2_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Judges%202_small.jpg>
+- **Ch 2** · ophel.jpg (score 0) <https://www.preceptaustin.org/files/images/OPHEL.jpg>
+- **Ch 2** · prophecy peaks - see zeph 1 also.gif (score 0) <https://www.preceptaustin.org/files/images/Prophecy peaks - see zeph 1 also.gif>
+- **Ch 2** · shofar.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar.jpg>
 - **Ch 3** · dolchart2.jpg (score 10) <https://www.preceptaustin.org/files/images/DOLchart2.jpg>
+- **Ch 3** · zeph-1.gif (score 0) <https://www.preceptaustin.org/files/images/zeph-1.gif>
 
-## john — 1 book-level, 5 per-chapter (probed 21 chapters)
+## john — 3 book-level, 106 per-chapter (probed 21 chapters)
 
 ### Book-level
 - john_overview.png (score 12, 11 chapters) <https://www.preceptaustin.org/files/images/john_overview.png>
+- john_life.png (score 2, 20 chapters) <https://www.preceptaustin.org/files/images/john_life.png>
+- john-1.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/john-1.jpg>
 ### Per-chapter
+- **Ch 1** · baptismjesus.png (score 2) <https://www.preceptaustin.org/files/images/baptismjesus.png>
+- **Ch 1** · church_holy_spirit.png (score 2) <https://www.preceptaustin.org/files/images/church_holy_spirit.png>
+- **Ch 1** · baptist.jpg (score 0) <https://www.preceptaustin.org/files/images/baptist.jpg>
+- **Ch 1** · bethanybj.jpg (score 0) <https://www.preceptaustin.org/files/images/bethanybj.jpg>
+- **Ch 1** · bethsaida.jpg (score 0) <https://www.preceptaustin.org/files/images/bethsaida.jpg>
+- **Ch 1** · cana.jpg (score 0) <https://www.preceptaustin.org/files/images/cana.jpg>
+- **Ch 1** · crown_small.gif (score 0) <https://www.preceptaustin.org/files/images/crown_small.gif>
+- **Ch 1** · figtree.jpg (score 0) <https://www.preceptaustin.org/files/images/figtree.jpg>
+- **Ch 1** · finger.jpg (score 0) <https://www.preceptaustin.org/files/images/finger.jpg>
+- **Ch 1** · fol.jpg (score 0) <https://www.preceptaustin.org/files/images/fol.jpg>
+- **Ch 1** · johnb.jpg (score 0) <https://www.preceptaustin.org/files/images/johnb.jpg>
+- **Ch 1** · jordanbap.jpg (score 0) <https://www.preceptaustin.org/files/images/jordanbap.jpg>
+- **Ch 1** · lamb cross.jpg (score 0) <https://www.preceptaustin.org/files/images/lamb%20cross.jpg>
+- **Ch 1** · lamb passover.gif (score 0) <https://www.preceptaustin.org/files/images/lamb%20passover.gif>
+- **Ch 1** · log.jpg (score 0) <https://www.preceptaustin.org/files/images/log.jpg>
+- **Ch 1** · nazareth.jpg (score 0) <https://www.preceptaustin.org/files/images/nazareth.jpg>
+- **Ch 1** · sandals.jpg (score 0) <https://www.preceptaustin.org/files/images/sandals.jpg>
+- **Ch 1** · the_sacrifice_of_isaac_small.jpg (score 0) <https://www.preceptaustin.org/files/images/The_Sacrifice_of_Isaac_small.jpg>
+- **Ch 2** · mark_life_of_christ.png (score 2) <https://www.preceptaustin.org/files/images/mark_life_of_christ.png>
+- **Ch 2** · cana.jpg (score 0) <https://www.preceptaustin.org/files/images/cana.jpg>
+- **Ch 2** · luke14diningtable.gif (score 0) <https://www.preceptaustin.org/files/images/luke14diningtable.GIF>
+- **Ch 2** · res.jpg (score 0) <https://www.preceptaustin.org/files/images/res.jpg>
+- **Ch 2** · templecleansing.jpg (score 0) <https://www.preceptaustin.org/files/images/templecleansing.jpg>
+- **Ch 2** · templemount2.jpg (score 0) <https://www.preceptaustin.org/files/images/templemount2.jpg>
+- **Ch 2** · templeton.gif (score 0) <https://www.preceptaustin.org/files/images/templeton.gif>
+- **Ch 2** · waterpot.jpg (score 0) <https://www.preceptaustin.org/files/images/waterpot.jpg>
+- **Ch 2** · waterwine.jpg (score 0) <https://www.preceptaustin.org/files/images/waterwine.jpg>
+- **Ch 2** · wed.jpg (score 0) <https://www.preceptaustin.org/files/images/wed.jpg>
+- **Ch 3** · mark_life_of_christ.png (score 2) <https://www.preceptaustin.org/files/images/mark_life_of_christ.png>
+- **Ch 3** · aenon.jpg (score 0) <https://www.preceptaustin.org/files/images/aenon.jpg>
+- **Ch 3** · nehushtan.jpg (score 0) <https://www.preceptaustin.org/files/images/nehushtan.jpg>
+- **Ch 3** · nicodemus.jpg (score 0) <https://www.preceptaustin.org/files/images/nicodemus.jpg>
+- **Ch 3** · nicodemussamaritan.jpg (score 0) <https://www.preceptaustin.org/files/images/nicodemussamaritan.jpg>
+- **Ch 3** · sworddam.jpg (score 0) <https://www.preceptaustin.org/files/images/sworddam.jpg>
 - **Ch 4** · samariamap.jpg (score 10) <https://www.preceptaustin.org/files/images/samariamap.jpg>
+- **Ch 4** · artesian.png (score 2) <https://www.preceptaustin.org/files/images/artesian.png>
+- **Ch 4** · cana.jpg (score 0) <https://www.preceptaustin.org/files/images/cana.jpg>
+- **Ch 4** · jacobswell.jpg (score 0) <https://www.preceptaustin.org/files/images/jacobswell.jpg>
+- **Ch 4** · jesusandsam.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusandsam.jpg>
+- **Ch 4** · nicodemussamaritan.jpg (score 0) <https://www.preceptaustin.org/files/images/nicodemussamaritan.jpg>
+- **Ch 4** · royal.jpg (score 0) <https://www.preceptaustin.org/files/images/royal.jpg>
+- **Ch 4** · sam.jpg (score 0) <https://www.preceptaustin.org/files/images/sam.jpg>
+- **Ch 4** · samar.jpg (score 0) <https://www.preceptaustin.org/files/images/samar.jpg>
+- **Ch 4** · samaria.gif (score 0) <https://www.preceptaustin.org/files/images/samaria.gif>
 - **Ch 5** · johntimeline.jpg (score 10) <https://www.preceptaustin.org/files/images/johntimeline.jpg>
+- **Ch 5** · baptismjesus.png (score 2) <https://www.preceptaustin.org/files/images/baptismjesus.png>
+- **Ch 5** · bethesda1.jpg (score 0) <https://www.preceptaustin.org/files/images/bethesda1.jpg>
+- **Ch 5** · bethesda2.jpg (score 0) <https://www.preceptaustin.org/files/images/bethesda2.jpg>
+- **Ch 5** · bethesdapool.jpg (score 0) <https://www.preceptaustin.org/files/images/bethesdapool.jpg>
+- **Ch 5** · courtofgentiles.jpg (score 0) <https://www.preceptaustin.org/files/images/courtofgentiles.jpg>
+- **Ch 5** · equal.jpg (score 0) <https://www.preceptaustin.org/files/images/equal.jpg>
+- **Ch 5** · finger.jpg (score 0) <https://www.preceptaustin.org/files/images/finger.jpg>
+- **Ch 5** · jerusalemelevation2.jpg (score 0) <https://www.preceptaustin.org/files/images/jerusalemelevation2.jpg>
+- **Ch 5** · judgment.jpg (score 0) <https://www.preceptaustin.org/files/images/judgment.jpg>
+- **Ch 5** · millenniumjohn529.jpg (score 0) <https://www.preceptaustin.org/files/images/millenniumjohn529.jpg>
+- **Ch 5** · paralytic.jpg (score 0) <https://www.preceptaustin.org/files/images/paralytic.jpg>
+- **Ch 5** · search.jpg (score 0) <https://www.preceptaustin.org/files/images/search.jpg>
 - **Ch 6** · johntimeline.jpg (score 10) <https://www.preceptaustin.org/files/images/johntimeline.jpg>
+- **Ch 6** · golan.png (score 2) <https://www.preceptaustin.org/files/images/golan.png>
+- **Ch 6** · bethsaida.jpg (score 0) <https://www.preceptaustin.org/files/images/bethsaida.jpg>
+- **Ch 6** · boatjesus.jpg (score 0) <https://www.preceptaustin.org/files/images/boatjesus.jpg>
+- **Ch 6** · galileeministry.jpg (score 0) <https://www.preceptaustin.org/files/images/galileeministry.jpg>
+- **Ch 6** · galileeministry1.jpg (score 0) <https://www.preceptaustin.org/files/images/galileeministry1.jpg>
+- **Ch 6** · jesusfeeds.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusfeeds.jpg>
+- **Ch 6** · loaves.jpg (score 0) <https://www.preceptaustin.org/files/images/loaves.jpg>
+- **Ch 6** · pray.jpg (score 0) <https://www.preceptaustin.org/files/images/pray.jpg>
+- **Ch 6** · shipstorm.jpg (score 0) <https://www.preceptaustin.org/files/images/shipstorm.jpg>
+- **Ch 6** · synagoguecaper.jpg (score 0) <https://www.preceptaustin.org/files/images/synagoguecaper.jpg>
+- **Ch 6** · walkwater.jpg (score 0) <https://www.preceptaustin.org/files/images/walkwater.jpg>
+- **Ch 7** · church_holy_spirit.png (score 2) <https://www.preceptaustin.org/files/images/church_holy_spirit.png>
+- **Ch 7** · circumcision.png (score 2) <https://www.preceptaustin.org/files/images/CIRCUMCISION.png>
+- **Ch 7** · justicestatue.png (score 2) <https://www.preceptaustin.org/files/images/justicestatue.png>
+- **Ch 7** · last.png (score 2) <https://www.preceptaustin.org/files/images/last.png>
+- **Ch 7** · calen.jpg (score 0) <https://www.preceptaustin.org/files/images/calen.jpg>
+- **Ch 7** · clockredeem.jpeg (score 0) <https://www.preceptaustin.org/files/images/clockredeem.jpeg>
+- **Ch 7** · feasts.jpg (score 0) <https://www.preceptaustin.org/files/images/feasts.jpg>
+- **Ch 7** · holiday.jpg (score 0) <https://www.preceptaustin.org/files/images/holiday.jpg>
+- **Ch 7** · john7.jpg (score 0) <https://www.preceptaustin.org/files/images/john7.jpg>
+- **Ch 7** · sukkot.jpg (score 0) <https://www.preceptaustin.org/files/images/sukkot.jpg>
+- **Ch 7** · templemount2.jpg (score 0) <https://www.preceptaustin.org/files/images/templemount2.jpg>
+- **Ch 8** · lights.jpg (score 0) <https://www.preceptaustin.org/files/images/lights.jpg>
+- **Ch 8** · rejection.jpg (score 0) <https://www.preceptaustin.org/files/images/rejection.jpg>
+- **Ch 8** · templecomplex.jpg (score 0) <https://www.preceptaustin.org/files/images/templecomplex.jpg>
+- **Ch 8** · templemount2.jpg (score 0) <https://www.preceptaustin.org/files/images/templemount2.jpg>
+- **Ch 8** · truth.jpg (score 0) <https://www.preceptaustin.org/files/images/truth.jpg>
+- **Ch 8** · warning.jpg (score 0) <https://www.preceptaustin.org/files/images/warning.jpg>
+- **Ch 9** · blindman.jpg (score 0) <https://www.preceptaustin.org/files/images/blindman.jpg>
+- **Ch 9** · siloampix.jpg (score 0) <https://www.preceptaustin.org/files/images/siloampix.jpg>
 - **Ch 10** · israelmap.png (score 12) <https://www.preceptaustin.org/files/images/israelmap.png>
 - **Ch 10** · lukemap.jpg (score 10) <https://www.preceptaustin.org/files/images/lukemap.jpg>
+- **Ch 10** · dedication.jpg (score 0) <https://www.preceptaustin.org/files/images/dedication.jpg>
+- **Ch 10** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
+- **Ch 10** · portico.jpg (score 0) <https://www.preceptaustin.org/files/images/portico.jpg>
+- **Ch 10** · safe.jpg (score 0) <https://www.preceptaustin.org/files/images/safe.jpg>
+- **Ch 10** · sheep lamb lying down_small.jpg (score 0) <https://www.preceptaustin.org/files/images/sheep%20lamb%20lying%20down_small.jpg>
+- **Ch 10** · sheepfold.jpg (score 0) <https://www.preceptaustin.org/files/images/sheepfold.jpg>
+- **Ch 10** · sheeppix.jpg (score 0) <https://www.preceptaustin.org/files/images/sheeppix.jpg>
+- **Ch 10** · shepherd annointing with oil_small1.gif (score 0) <https://www.preceptaustin.org/files/images/shepherd%20annointing%20with%20oil_small1.gif>
+- **Ch 10** · shepherd holding a sheep_small.gif (score 0) <https://www.preceptaustin.org/files/images/shepherd%20holding%20a%20sheep_small.gif>
+- **Ch 10** · shepherd w lamb on shoulders_small.gif (score 0) <https://www.preceptaustin.org/files/images/shepherd%20w%20lamb%20on%20shoulders_small.gif>
+- **Ch 11** · christeternity.jpg (score 0) <https://www.preceptaustin.org/files/images/christeternity.jpg>
+- **Ch 11** · john_21.gif (score 0) <https://www.preceptaustin.org/files/images/john_21.gif>
+- **Ch 11** · john_23.gif (score 0) <https://www.preceptaustin.org/files/images/john_23.gif>
+- **Ch 20** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 20** · shroud.gif (score 0) <https://www.preceptaustin.org/files/images/shroud.gif>
+- **Ch 21** · boatjesus.jpg (score 0) <https://www.preceptaustin.org/files/images/boatjesus.jpg>
 
-## joshua — 3 book-level, 2 per-chapter (probed 24 chapters)
+## joshua — 5 book-level, 66 per-chapter (probed 24 chapters)
 
 ### Book-level
 - joshuaoutline.png (score 15, 23 chapters) <https://www.preceptaustin.org/files/images/joshuaoutline.png>
 - joshuaoutline.jpg (score 13, 22 chapters) <https://www.preceptaustin.org/files/images/joshuaoutline.jpg>
 - joshuamap.png (score 12, 23 chapters) <https://www.preceptaustin.org/files/images/joshuamap.png>
+- joshualand.png (score 2, 23 chapters) <https://www.preceptaustin.org/files/images/joshualand.png>
+- joshuamain.jpg (score 0, 22 chapters) <https://www.preceptaustin.org/files/images/joshuamain.jpg>
 ### Per-chapter
+- **Ch 1** · promised1.jpg (score 0) <https://www.preceptaustin.org/files/images/promised1.jpg>
+- **Ch 2** · jerichoesv.jpg (score 0) <https://www.preceptaustin.org/files/images/jerichoesv.jpg>
+- **Ch 2** · jerichohills.jpg (score 0) <https://www.preceptaustin.org/files/images/jerichohills.jpg>
+- **Ch 2** · shittim.jpg (score 0) <https://www.preceptaustin.org/files/images/shittim.jpg>
+- **Ch 2** · shittimtojericho.jpg (score 0) <https://www.preceptaustin.org/files/images/shittimtojericho.jpg>
+- **Ch 3** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 3** · jordanflood.jpg (score 0) <https://www.preceptaustin.org/files/images/jordanflood.jpg>
+- **Ch 3** · joshua3.jpg (score 0) <https://www.preceptaustin.org/files/images/joshua3.jpg>
+- **Ch 3** · shittimtojericho.jpg (score 0) <https://www.preceptaustin.org/files/images/shittimtojericho.jpg>
+- **Ch 4** · gilgal.jpg (score 0) <https://www.preceptaustin.org/files/images/gilgal.jpg>
+- **Ch 5** · flint.jpg (score 0) <https://www.preceptaustin.org/files/images/flint.jpg>
+- **Ch 5** · gilgal.jpg (score 0) <https://www.preceptaustin.org/files/images/gilgal.jpg>
+- **Ch 6** · jerichoesv.jpg (score 0) <https://www.preceptaustin.org/files/images/jerichoesv.jpg>
+- **Ch 6** · joshua6.jpg (score 0) <https://www.preceptaustin.org/files/images/joshua6.jpg>
+- **Ch 7** · achanbab.jpg (score 0) <https://www.preceptaustin.org/files/images/achanbab.jpg>
+- **Ch 7** · achanbury.jpg (score 0) <https://www.preceptaustin.org/files/images/achanbury.jpg>
+- **Ch 7** · achanstone.jpg (score 0) <https://www.preceptaustin.org/files/images/achanstone.jpg>
+- **Ch 8** · aijavelin.jpg (score 0) <https://www.preceptaustin.org/files/images/aijavelin.jpg>
+- **Ch 8** · ebal.jpg (score 0) <https://www.preceptaustin.org/files/images/ebal.jpg>
+- **Ch 8** · ebal1.jpg (score 0) <https://www.preceptaustin.org/files/images/ebal1.jpg>
+- **Ch 8** · gerizim1.jpg (score 0) <https://www.preceptaustin.org/files/images/gerizim1.jpg>
+- **Ch 9** · gibeon.jpg (score 0) <https://www.preceptaustin.org/files/images/gibeon.jpg>
+- **Ch 10** · aijalon.jpg (score 0) <https://www.preceptaustin.org/files/images/aijalon.jpg>
+- **Ch 10** · bethhoron.jpg (score 0) <https://www.preceptaustin.org/files/images/bethhoron.jpg>
+- **Ch 10** · bethhoron1.jpg (score 0) <https://www.preceptaustin.org/files/images/bethhoron1.jpg>
+- **Ch 10** · central.jpg (score 0) <https://www.preceptaustin.org/files/images/central.jpg>
+- **Ch 10** · conquest.jpg (score 0) <https://www.preceptaustin.org/files/images/conquest.jpg>
+- **Ch 10** · fivekings.jpg (score 0) <https://www.preceptaustin.org/files/images/fivekings.jpg>
+- **Ch 10** · gilgal.jpg (score 0) <https://www.preceptaustin.org/files/images/gilgal.jpg>
+- **Ch 10** · hailstonesjoshua.jpg (score 0) <https://www.preceptaustin.org/files/images/hailstonesjoshua.jpg>
+- **Ch 10** · joshua10.jpg (score 0) <https://www.preceptaustin.org/files/images/joshua10.jpg>
+- **Ch 10** · sunstandstill1.jpg (score 0) <https://www.preceptaustin.org/files/images/sunstandstill1.jpg>
+- **Ch 11** · hazor.jpg (score 0) <https://www.preceptaustin.org/files/images/hazor.jpg>
+- **Ch 11** · north.jpg (score 0) <https://www.preceptaustin.org/files/images/north.jpg>
+- **Ch 12** · gad.png (score 2) <https://www.preceptaustin.org/files/images/gad.png>
+- **Ch 12** · arnon.jpg (score 0) <https://www.preceptaustin.org/files/images/arnon.jpg>
+- **Ch 12** · bashan.jpg (score 0) <https://www.preceptaustin.org/files/images/bashan.jpg>
+- **Ch 12** · edrei1.jpg (score 0) <https://www.preceptaustin.org/files/images/edrei1.jpg>
 - **Ch 13** · maptribes.jpg (score 10) <https://www.preceptaustin.org/files/images/maptribes.jpg>
+- **Ch 13** · gad.png (score 2) <https://www.preceptaustin.org/files/images/gad.png>
+- **Ch 13** · landremain.jpg (score 0) <https://www.preceptaustin.org/files/images/landremain.jpg>
+- **Ch 14** · tribe.jpg (score 0) <https://www.preceptaustin.org/files/images/tribe.jpg>
+- **Ch 15** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 15** · mansoul.jpg (score 0) <https://www.preceptaustin.org/files/images/mansoul.jpg>
+- **Ch 15** · zorah.jpg (score 0) <https://www.preceptaustin.org/files/images/zorah.jpg>
+- **Ch 16** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 16** · ephraimz.jpg (score 0) <https://www.preceptaustin.org/files/images/ephraimz.jpg>
+- **Ch 16** · israel1100.jpg (score 0) <https://www.preceptaustin.org/files/images/israel1100.jpg>
+- **Ch 17** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 17** · edrei1.jpg (score 0) <https://www.preceptaustin.org/files/images/edrei1.jpg>
+- **Ch 17** · ephraimz.jpg (score 0) <https://www.preceptaustin.org/files/images/ephraimz.jpg>
 - **Ch 19** · simeonmap.jpg (score 10) <https://www.preceptaustin.org/files/images/simeonmap.jpg>
+- **Ch 19** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 19** · dan.jpg (score 0) <https://www.preceptaustin.org/files/images/dan.jpg>
+- **Ch 19** · lot.jpg (score 0) <https://www.preceptaustin.org/files/images/lot.jpg>
+- **Ch 19** · zebulun.jpg (score 0) <https://www.preceptaustin.org/files/images/zebulun.jpg>
+- **Ch 20** · avenger.jpg (score 0) <https://www.preceptaustin.org/files/images/avenger.jpg>
+- **Ch 20** · leviticalcities.jpg (score 0) <https://www.preceptaustin.org/files/images/leviticalcities.jpg>
+- **Ch 21** · levitetowns.jpg (score 0) <https://www.preceptaustin.org/files/images/levitetowns.jpg>
+- **Ch 21** · leviticalcities.jpg (score 0) <https://www.preceptaustin.org/files/images/leviticalcities.jpg>
+- **Ch 21** · mosesancestry.jpg (score 0) <https://www.preceptaustin.org/files/images/mosesancestry.jpg>
+- **Ch 22** · circumcise.jpg (score 0) <https://www.preceptaustin.org/files/images/circumcise.jpg>
+- **Ch 22** · discharge.jpg (score 0) <https://www.preceptaustin.org/files/images/discharge.jpg>
+- **Ch 22** · tribe.jpg (score 0) <https://www.preceptaustin.org/files/images/tribe.jpg>
+- **Ch 23** · mousetrap.jpg (score 0) <https://www.preceptaustin.org/files/images/mousetrap.jpg>
+- **Ch 24** · joshua24.jpg (score 0) <https://www.preceptaustin.org/files/images/joshua24.jpg>
 
-## judges — 0 book-level, 8 per-chapter (probed 21 chapters)
+## judges — 11 book-level, 53 per-chapter (probed 21 chapters)
 
+### Book-level
+- judges timeline.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/judges%20timeline.png>
+- judges timeline_small.png (score 12, 21 chapters) <https://www.preceptaustin.org/files/images/judges%20timeline_small.png>
+- judgestimeline.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/judgestimeline.png>
+- judges chart.gif (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/Judges%20Chart.gif>
+- judges chart_small.gif (score 10, 21 chapters) <https://www.preceptaustin.org/files/images/Judges%20Chart_small.gif>
+- judgesmap.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/judgesmap.jpg>
+- judgesmap2.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/judgesmap2.jpg>
+- judgestimeline2.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/judgestimeline2.jpg>
+- judgesjensen.png (score 2, 21 chapters) <https://www.preceptaustin.org/files/images/judgesjensen.png>
+- napthali.png (score 2, 11 chapters) <https://www.preceptaustin.org/files/images/napthali.png>
+- sincycle.jpg (score 0, 20 chapters) <https://www.preceptaustin.org/files/images/sincycle.jpg>
 ### Per-chapter
+- **Ch 1** · gad.png (score 2) <https://www.preceptaustin.org/files/images/gad.png>
+- **Ch 1** · negev.jpg (score 0) <https://www.preceptaustin.org/files/images/negev.jpg>
+- **Ch 2** · angel.jpg (score 0) <https://www.preceptaustin.org/files/images/angel.jpg>
 - **Ch 3** · ehudmap.jpg (score 10) <https://www.preceptaustin.org/files/images/ehudmap.jpg>
+- **Ch 3** · ehudkills.jpg (score 0) <https://www.preceptaustin.org/files/images/ehudkills.jpg>
+- **Ch 3** · shofar.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar.jpg>
+- **Ch 4** · barakdefeatssisera.jpg (score 0) <https://www.preceptaustin.org/files/images/barakdefeatssisera.jpg>
+- **Ch 4** · barakgathersarmy.jpg (score 0) <https://www.preceptaustin.org/files/images/barakgathersarmy.jpg>
+- **Ch 4** · deborahpicture.jpg (score 0) <https://www.preceptaustin.org/files/images/deborahpicture.jpg>
+- **Ch 4** · deborahvictory.jpg (score 0) <https://www.preceptaustin.org/files/images/deborahvictory.jpg>
+- **Ch 4** · debramah.jpg (score 0) <https://www.preceptaustin.org/files/images/debramah.jpg>
+- **Ch 4** · kishon.jpg (score 0) <https://www.preceptaustin.org/files/images/kishon.jpg>
+- **Ch 4** · tabor.jpg (score 0) <https://www.preceptaustin.org/files/images/tabor.jpg>
+- **Ch 4** · tabormt.jpg (score 0) <https://www.preceptaustin.org/files/images/tabormt.jpg>
+- **Ch 6** · locust.jpg (score 0) <https://www.preceptaustin.org/files/images/locust.jpg>
+- **Ch 6** · shofar.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar.jpg>
+- **Ch 6** · thresh.jpg (score 0) <https://www.preceptaustin.org/files/images/thresh.jpg>
+- **Ch 6** · winnow.jpg (score 0) <https://www.preceptaustin.org/files/images/winnow.jpg>
+- **Ch 7** · gideonesv.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonesv.jpg>
+- **Ch 7** · gideonlamps.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonlamps.jpg>
+- **Ch 7** · gideonlappingwater.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonlappingwater.jpg>
+- **Ch 8** · gideonbread.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonbread.jpg>
+- **Ch 8** · gideonephod.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonephod.jpg>
+- **Ch 8** · gideonesv.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonesv.jpg>
+- **Ch 8** · gideongoldearrings.jpg (score 0) <https://www.preceptaustin.org/files/images/gideongoldearrings.jpg>
+- **Ch 8** · gideonkarkor.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonkarkor.jpg>
+- **Ch 8** · gideonpursue.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonpursue.jpg>
+- **Ch 8** · priest.jpg (score 0) <https://www.preceptaustin.org/files/images/priest.jpg>
+- **Ch 8** · thresh.jpg (score 0) <https://www.preceptaustin.org/files/images/thresh.jpg>
+- **Ch 9** · abimelechdeath.jpg (score 0) <https://www.preceptaustin.org/files/images/abimelechdeath.jpg>
+- **Ch 9** · ebal1.jpg (score 0) <https://www.preceptaustin.org/files/images/ebal1.jpg>
+- **Ch 9** · millstone.jpg (score 0) <https://www.preceptaustin.org/files/images/millstone.jpg>
 - **Ch 10** · 1samap.png (score 12) <https://www.preceptaustin.org/files/images/1samap.png>
+- **Ch 10** · prom.jpg (score 0) <https://www.preceptaustin.org/files/images/prom.jpg>
+- **Ch 11** · prom.jpg (score 0) <https://www.preceptaustin.org/files/images/prom.jpg>
 - **Ch 13** · judges chart.gif (score 10) <https://www.preceptaustin.org/files/images/Judges%20Chart.gif>
 - **Ch 13** · samsonmap1.jpg (score 10) <https://www.preceptaustin.org/files/images/samsonmap1.jpg>
 - **Ch 14** · samsonmap1.jpg (score 10) <https://www.preceptaustin.org/files/images/samsonmap1.jpg>
+- **Ch 14** · samsonlion1.jpg (score 0) <https://www.preceptaustin.org/files/images/samsonlion1.jpg>
+- **Ch 15** · samsonjawbone.jpg (score 0) <https://www.preceptaustin.org/files/images/samsonjawbone.jpg>
 - **Ch 16** · samsonmap1.jpg (score 10) <https://www.preceptaustin.org/files/images/samsonmap1.jpg>
+- **Ch 16** · frog.jpg (score 0) <https://www.preceptaustin.org/files/images/frog.jpg>
+- **Ch 16** · samsonblind.jpg (score 0) <https://www.preceptaustin.org/files/images/samsonblind.jpg>
+- **Ch 16** · samsondeath1.jpg (score 0) <https://www.preceptaustin.org/files/images/samsondeath1.jpg>
+- **Ch 16** · samsondelilah.jpg (score 0) <https://www.preceptaustin.org/files/images/samsondelilah.jpg>
+- **Ch 16** · samsong.jpg (score 0) <https://www.preceptaustin.org/files/images/samsong.jpg>
+- **Ch 16** · samsonknee1.jpg (score 0) <https://www.preceptaustin.org/files/images/samsonknee1.jpg>
+- **Ch 16** · samsontreadmill.jpg (score 0) <https://www.preceptaustin.org/files/images/samsontreadmill.jpg>
+- **Ch 17** · judgeslaish.jpg (score 0) <https://www.preceptaustin.org/files/images/judgeslaish.jpg>
+- **Ch 18** · judgeslaish.jpg (score 0) <https://www.preceptaustin.org/files/images/judgeslaish.jpg>
 - **Ch 20** · 1samap.png (score 12) <https://www.preceptaustin.org/files/images/1samap.png>
+- **Ch 20** · aarontree.jpg (score 0) <https://www.preceptaustin.org/files/images/aarontree.jpg>
 - **Ch 21** · 1samap.png (score 12) <https://www.preceptaustin.org/files/images/1samap.png>
 
-## leviticus — 0 book-level, 4 per-chapter (probed 27 chapters)
+## leviticus — 3 book-level, 40 per-chapter (probed 27 chapters)
 
+### Book-level
+- leviticuschart.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/Leviticuschart.jpg>
+- levi.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/levi.png>
+- leviticus1.png (score 2, 27 chapters) <https://www.preceptaustin.org/files/images/leviticus1.png>
 ### Per-chapter
 - **Ch 1** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
+- **Ch 1** · leviticus offerings_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Leviticus%20offerings_small.jpg>
 - **Ch 3** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
 - **Ch 4** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
 - **Ch 8** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
+- **Ch 8** · priest.jpg (score 0) <https://www.preceptaustin.org/files/images/priest.jpg>
+- **Ch 10** · nadab.jpg (score 0) <https://www.preceptaustin.org/files/images/nadab.jpg>
+- **Ch 11** · eccl-swarm.png (score 2) <https://www.preceptaustin.org/files/images/eccl-swarm.png>
+- **Ch 12** · circumcision.png (score 2) <https://www.preceptaustin.org/files/images/CIRCUMCISION.png>
+- **Ch 14** · leviticus.png (score 2) <https://www.preceptaustin.org/files/images/leviticus.png>
+- **Ch 16** · exodustabernacle.png (score 2) <https://www.preceptaustin.org/files/images/exodustabernacle.png>
+- **Ch 16** · goathand.png (score 2) <https://www.preceptaustin.org/files/images/goathand.png>
+- **Ch 16** · goatled.png (score 2) <https://www.preceptaustin.org/files/images/goatled.png>
+- **Ch 16** · goats.png (score 2) <https://www.preceptaustin.org/files/images/goats.png>
+- **Ch 16** · goatsins.png (score 2) <https://www.preceptaustin.org/files/images/goatsins.png>
+- **Ch 16** · lev1614.png (score 2) <https://www.preceptaustin.org/files/images/lev1614.png>
+- **Ch 16** · lev163.png (score 2) <https://www.preceptaustin.org/files/images/lev163.png>
+- **Ch 16** · lev164.png (score 2) <https://www.preceptaustin.org/files/images/lev164.png>
+- **Ch 16** · lev166a.png (score 2) <https://www.preceptaustin.org/files/images/lev166a.png>
+- **Ch 16** · lev167b.png (score 2) <https://www.preceptaustin.org/files/images/lev167b.png>
+- **Ch 16** · thronegrace.png (score 2) <https://www.preceptaustin.org/files/images/thronegrace.png>
+- **Ch 16** · exodusaltars.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusaltars.jpg>
+- **Ch 16** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 16** · exodusbrazen2.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusbrazen2.jpg>
+- **Ch 16** · exodustabernaclecourt.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernaclecourt.jpg>
+- **Ch 16** · mercyseat.jpg (score 0) <https://www.preceptaustin.org/files/images/mercyseat.jpg>
+- **Ch 16** · priest.jpg (score 0) <https://www.preceptaustin.org/files/images/priest.jpg>
+- **Ch 16** · ripples.jpg (score 0) <https://www.preceptaustin.org/files/images/ripples.jpg>
+- **Ch 16** · yom.jpg (score 0) <https://www.preceptaustin.org/files/images/yom.jpg>
+- **Ch 23** · rejoice.png (score 2) <https://www.preceptaustin.org/files/images/rejoice.png>
+- **Ch 23** · calen.jpg (score 0) <https://www.preceptaustin.org/files/images/calen.jpg>
+- **Ch 23** · feasts.jpg (score 0) <https://www.preceptaustin.org/files/images/feasts.jpg>
+- **Ch 23** · firstfruits.jpg (score 0) <https://www.preceptaustin.org/files/images/firstfruits.jpg>
+- **Ch 23** · holiday.jpg (score 0) <https://www.preceptaustin.org/files/images/holiday.jpg>
+- **Ch 23** · shofar1.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar1.jpg>
+- **Ch 23** · yom.jpg (score 0) <https://www.preceptaustin.org/files/images/yom.jpg>
+- **Ch 24** · menorah.jpg (score 0) <https://www.preceptaustin.org/files/images/menorah.jpg>
+- **Ch 25** · liberty.jpg (score 0) <https://www.preceptaustin.org/files/images/liberty.jpg>
+- **Ch 26** · circumcise.jpg (score 0) <https://www.preceptaustin.org/files/images/circumcise.jpg>
+- **Ch 26** · exodusmtsinai.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusmtsinai.jpg>
 
-## luke — 0 book-level, 12 per-chapter (probed 24 chapters)
+## luke — 6 book-level, 254 per-chapter (probed 24 chapters)
 
+### Book-level
+- luke_genealogy.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/Luke_genealogy.png>
+- luke_life_of_christ.png (score 2, 22 chapters) <https://www.preceptaustin.org/files/images/luke_life_of_christ.png>
+- luke_son_of_man.png (score 2, 24 chapters) <https://www.preceptaustin.org/files/images/luke_son_of_man.png>
+- luketime.png (score 2, 22 chapters) <https://www.preceptaustin.org/files/images/luketime.png>
+- luke.jpg (score 0, 24 chapters) <https://www.preceptaustin.org/files/images/luke.jpg>
+- luketime.jpg (score 0, 22 chapters) <https://www.preceptaustin.org/files/images/luketime.jpg>
 ### Per-chapter
 - **Ch 1** · israelmap.png (score 12) <https://www.preceptaustin.org/files/images/israelmap.png>
 - **Ch 1** · lukemap.jpg (score 10) <https://www.preceptaustin.org/files/images/lukemap.jpg>
 - **Ch 1** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle schematic2.gif>
+- **Ch 1** · circumcision.png (score 2) <https://www.preceptaustin.org/files/images/CIRCUMCISION.png>
+- **Ch 1** · cohn.jpg (score 0) <https://www.preceptaustin.org/files/images/cohn.jpg>
+- **Ch 1** · herodfamilytree.jpg (score 0) <https://www.preceptaustin.org/files/images/herodfamilytree.jpg>
+- **Ch 1** · herodstemple.jpg (score 0) <https://www.preceptaustin.org/files/images/herodstemple.jpg>
+- **Ch 1** · luke1vision.jpg (score 0) <https://www.preceptaustin.org/files/images/luke1vision.jpg>
+- **Ch 1** · luketimeesv.jpg (score 0) <https://www.preceptaustin.org/files/images/luketimeesv.jpg>
+- **Ch 1** · mary.jpg (score 0) <https://www.preceptaustin.org/files/images/mary.jpg>
+- **Ch 1** · maryelizabeth.jpg (score 0) <https://www.preceptaustin.org/files/images/maryelizabeth.jpg>
+- **Ch 1** · nazarethtohillcountry.jpg (score 0) <https://www.preceptaustin.org/files/images/nazarethtohillcountry.jpg>
+- **Ch 1** · templemodel.jpg (score 0) <https://www.preceptaustin.org/files/images/templemodel.jpg>
+- **Ch 1** · zeph-1.gif (score 0) <https://www.preceptaustin.org/files/images/zeph-1.gif>
 - **Ch 2** · caesarmap.jpg (score 10) <https://www.preceptaustin.org/files/images/caesarmap.jpg>
+- **Ch 2** · circumcision.png (score 2) <https://www.preceptaustin.org/files/images/CIRCUMCISION.png>
+- **Ch 2** · birth.gif (score 0) <https://www.preceptaustin.org/files/images/birth.gif>
+- **Ch 2** · herodfamilytree.jpg (score 0) <https://www.preceptaustin.org/files/images/herodfamilytree.jpg>
+- **Ch 2** · infant.jpg (score 0) <https://www.preceptaustin.org/files/images/infant.jpg>
+- **Ch 2** · infantadoration.jpg (score 0) <https://www.preceptaustin.org/files/images/infantadoration.jpg>
+- **Ch 2** · jerusalemesv1.jpg (score 0) <https://www.preceptaustin.org/files/images/jerusalemesv1.jpg>
+- **Ch 2** · jesusboy.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusboy.jpg>
+- **Ch 2** · shepherds.jpg (score 0) <https://www.preceptaustin.org/files/images/shepherds.jpg>
+- **Ch 2** · shepherds2.jpg (score 0) <https://www.preceptaustin.org/files/images/shepherds2.jpg>
+- **Ch 2** · simeon.jpg (score 0) <https://www.preceptaustin.org/files/images/simeon.jpg>
+- **Ch 2** · simeon1.jpg (score 0) <https://www.preceptaustin.org/files/images/simeon1.jpg>
+- **Ch 2** · womenscourt.jpg (score 0) <https://www.preceptaustin.org/files/images/womenscourt.jpg>
 - **Ch 3** · luke_genealogy.png (score 12) <https://www.preceptaustin.org/files/images/Luke_genealogy.png>
 - **Ch 3** · caesarmap.jpg (score 10) <https://www.preceptaustin.org/files/images/caesarmap.jpg>
+- **Ch 3** · baptismjesus.png (score 2) <https://www.preceptaustin.org/files/images/baptismjesus.png>
+- **Ch 3** · aboutface.jpg (score 0) <https://www.preceptaustin.org/files/images/aboutface.jpg>
+- **Ch 3** · balance.jpg (score 0) <https://www.preceptaustin.org/files/images/balance.jpg>
+- **Ch 3** · baptist.jpg (score 0) <https://www.preceptaustin.org/files/images/baptist.jpg>
+- **Ch 3** · herod.gif (score 0) <https://www.preceptaustin.org/files/images/herod.gif>
+- **Ch 3** · herod.jpg (score 0) <https://www.preceptaustin.org/files/images/herod.jpg>
+- **Ch 3** · herodfamilytree.jpg (score 0) <https://www.preceptaustin.org/files/images/herodfamilytree.jpg>
+- **Ch 3** · johnb.jpg (score 0) <https://www.preceptaustin.org/files/images/johnb.jpg>
+- **Ch 3** · pontius.jpg (score 0) <https://www.preceptaustin.org/files/images/pontius.JPG>
+- **Ch 3** · sermon1.gif (score 0) <https://www.preceptaustin.org/files/images/sermon1.gif>
+- **Ch 3** · winnow.jpg (score 0) <https://www.preceptaustin.org/files/images/winnow.jpg>
+- **Ch 4** · lukelifeofjesus.png (score 2) <https://www.preceptaustin.org/files/images/lukelifeofjesus.png>
+- **Ch 4** · mark_life_of_christ.png (score 2) <https://www.preceptaustin.org/files/images/mark_life_of_christ.png>
+- **Ch 4** · baptist.jpg (score 0) <https://www.preceptaustin.org/files/images/baptist.jpg>
+- **Ch 4** · demon1.jpg (score 0) <https://www.preceptaustin.org/files/images/demon1.jpg>
+- **Ch 4** · galileeministry1.jpg (score 0) <https://www.preceptaustin.org/files/images/galileeministry1.jpg>
+- **Ch 4** · isaiahscroll.jpg (score 0) <https://www.preceptaustin.org/files/images/isaiahscroll.jpg>
+- **Ch 4** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 4** · liberty.jpg (score 0) <https://www.preceptaustin.org/files/images/liberty.jpg>
+- **Ch 4** · nazarethcliff.jpg (score 0) <https://www.preceptaustin.org/files/images/nazarethcliff.jpg>
+- **Ch 4** · synagogueesv.jpg (score 0) <https://www.preceptaustin.org/files/images/synagogueesv.jpg>
+- **Ch 4** · wilderness1.jpg (score 0) <https://www.preceptaustin.org/files/images/wilderness1.jpg>
+- **Ch 5** · wineskin.png (score 2) <https://www.preceptaustin.org/files/images/wineskin.png>
+- **Ch 5** · boatjesus.jpg (score 0) <https://www.preceptaustin.org/files/images/boatjesus.jpg>
+- **Ch 5** · galileeministry1.jpg (score 0) <https://www.preceptaustin.org/files/images/galileeministry1.jpg>
+- **Ch 5** · leprosy.jpg (score 0) <https://www.preceptaustin.org/files/images/leprosy.jpg>
+- **Ch 5** · luke14diningtable.gif (score 0) <https://www.preceptaustin.org/files/images/luke14diningtable.GIF>
+- **Ch 5** · luke5fish.jpg (score 0) <https://www.preceptaustin.org/files/images/luke5fish.jpg>
+- **Ch 5** · luke5housetop.jpg (score 0) <https://www.preceptaustin.org/files/images/luke5housetop.jpg>
+- **Ch 5** · luke5levi2.jpg (score 0) <https://www.preceptaustin.org/files/images/luke5levi2.jpg>
+- **Ch 5** · petershouseaerialview.jpg (score 0) <https://www.preceptaustin.org/files/images/petershouseaerialview.jpg>
+- **Ch 6** · bread.jpg (score 0) <https://www.preceptaustin.org/files/images/bread.jpg>
+- **Ch 6** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 6** · luke16mammon.jpg (score 0) <https://www.preceptaustin.org/files/images/luke16mammon.jpg>
+- **Ch 6** · mote.jpg (score 0) <https://www.preceptaustin.org/files/images/mote.jpg>
+- **Ch 6** · sermon on the mount by bloch_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Sermon%20on%20the%20mount%20by%20Bloch_small.jpg>
+- **Ch 6** · sermonplain.jpg (score 0) <https://www.preceptaustin.org/files/images/sermonplain.jpg>
+- **Ch 6** · wheat.jpg (score 0) <https://www.preceptaustin.org/files/images/wheat.jpg>
+- **Ch 7** · alabaster.jpg (score 0) <https://www.preceptaustin.org/files/images/alabaster.jpg>
+- **Ch 7** · galileeministry.jpg (score 0) <https://www.preceptaustin.org/files/images/galileeministry.jpg>
+- **Ch 7** · hair.jpg (score 0) <https://www.preceptaustin.org/files/images/hair.jpg>
+- **Ch 7** · luke14diningtable.gif (score 0) <https://www.preceptaustin.org/files/images/luke14diningtable.GIF>
+- **Ch 7** · nain.jpg (score 0) <https://www.preceptaustin.org/files/images/nain.jpg>
+- **Ch 7** · nainwidow.jpg (score 0) <https://www.preceptaustin.org/files/images/nainwidow.jpg>
+- **Ch 7** · petershouse.jpg (score 0) <https://www.preceptaustin.org/files/images/petershouse.jpg>
+- **Ch 7** · petershouseaerialview.jpg (score 0) <https://www.preceptaustin.org/files/images/petershouseaerialview.jpg>
+- **Ch 8** · decapolis.png (score 2) <https://www.preceptaustin.org/files/images/decapolis.png>
+- **Ch 8** · boatjesus.jpg (score 0) <https://www.preceptaustin.org/files/images/boatjesus.jpg>
+- **Ch 8** · galileeministry.jpg (score 0) <https://www.preceptaustin.org/files/images/galileeministry.jpg>
+- **Ch 8** · jairus.jpg (score 0) <https://www.preceptaustin.org/files/images/jairus.jpg>
+- **Ch 8** · lamp.jpg (score 0) <https://www.preceptaustin.org/files/images/lamp.jpg>
+- **Ch 8** · lampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/lampstand.jpg>
+- **Ch 8** · shipstorm.jpg (score 0) <https://www.preceptaustin.org/files/images/shipstorm.jpg>
+- **Ch 8** · sower.jpg (score 0) <https://www.preceptaustin.org/files/images/sower.jpg>
+- **Ch 8** · sower1.jpg (score 0) <https://www.preceptaustin.org/files/images/sower1.jpg>
+- **Ch 8** · tassel.jpg (score 0) <https://www.preceptaustin.org/files/images/tassel.jpg>
+- **Ch 8** · woman.jpg (score 0) <https://www.preceptaustin.org/files/images/woman.jpg>
+- **Ch 9** · galilee.png (score 2) <https://www.preceptaustin.org/files/images/galilee.png>
+- **Ch 9** · bethsaida.jpg (score 0) <https://www.preceptaustin.org/files/images/bethsaida.jpg>
+- **Ch 9** · child.jpg (score 0) <https://www.preceptaustin.org/files/images/child.jpg>
+- **Ch 9** · exodusglory.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusglory.jpg>
+- **Ch 9** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 9** · loaves.jpg (score 0) <https://www.preceptaustin.org/files/images/loaves.jpg>
+- **Ch 9** · sentout.jpg (score 0) <https://www.preceptaustin.org/files/images/sentout.jpg>
+- **Ch 9** · shake.jpg (score 0) <https://www.preceptaustin.org/files/images/shake.jpg>
+- **Ch 9** · transfig.jpg (score 0) <https://www.preceptaustin.org/files/images/transfig.jpg>
+- **Ch 9** · transfigure.jpg (score 0) <https://www.preceptaustin.org/files/images/transfigure.jpg>
 - **Ch 10** · israelmap.png (score 12) <https://www.preceptaustin.org/files/images/israelmap.png>
 - **Ch 10** · lukemap.jpg (score 10) <https://www.preceptaustin.org/files/images/lukemap.jpg>
+- **Ch 10** · bethphage.jpg (score 0) <https://www.preceptaustin.org/files/images/bethphage.jpg>
+- **Ch 10** · bethsaida.jpg (score 0) <https://www.preceptaustin.org/files/images/bethsaida.jpg>
+- **Ch 10** · disciplessent.jpg (score 0) <https://www.preceptaustin.org/files/images/disciplessent.jpg>
+- **Ch 10** · goodsamaritan.jpg (score 0) <https://www.preceptaustin.org/files/images/goodsamaritan.jpg>
+- **Ch 10** · harvest.jpg (score 0) <https://www.preceptaustin.org/files/images/harvest.jpg>
+- **Ch 10** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 10** · marymartha.jpg (score 0) <https://www.preceptaustin.org/files/images/marymartha.jpg>
+- **Ch 10** · marymartha1.jpg (score 0) <https://www.preceptaustin.org/files/images/marymartha1.jpg>
+- **Ch 10** · marymartha2.jpg (score 0) <https://www.preceptaustin.org/files/images/marymartha2.jpg>
+- **Ch 10** · samaritan.jpg (score 0) <https://www.preceptaustin.org/files/images/samaritan.jpg>
+- **Ch 10** · sandals.jpg (score 0) <https://www.preceptaustin.org/files/images/sandals.jpg>
+- **Ch 10** · synagoguecaper.jpg (score 0) <https://www.preceptaustin.org/files/images/synagoguecaper.jpg>
+- **Ch 10** · tyre.jpg (score 0) <https://www.preceptaustin.org/files/images/tyre.jpg>
+- **Ch 11** · luke1112.png (score 2) <https://www.preceptaustin.org/files/images/luke1112.png>
+- **Ch 11** · matthew710.png (score 2) <https://www.preceptaustin.org/files/images/matthew710.png>
+- **Ch 11** · jonah.jpg (score 0) <https://www.preceptaustin.org/files/images/jonah.jpg>
+- **Ch 11** · jonahnin.webp (score 0) <https://www.preceptaustin.org/files/images/jonahnin.webp>
+- **Ch 11** · lawyer.jpg (score 0) <https://www.preceptaustin.org/files/images/lawyer.jpg>
+- **Ch 11** · lordsprayer.jpg (score 0) <https://www.preceptaustin.org/files/images/lordsprayer.jpg>
+- **Ch 11** · mute.jpg (score 0) <https://www.preceptaustin.org/files/images/mute.jpg>
+- **Ch 11** · recline.jpg (score 0) <https://www.preceptaustin.org/files/images/recline.JPG>
+- **Ch 11** · solomonsheba.webp (score 0) <https://www.preceptaustin.org/files/images/solomonsheba.webp>
+- **Ch 11** · woe.jpg (score 0) <https://www.preceptaustin.org/files/images/woe.jpg>
+- **Ch 12** · engarde.png (score 2) <https://www.preceptaustin.org/files/images/engarde.png>
+- **Ch 12** · girdloins.jpg (score 0) <https://www.preceptaustin.org/files/images/girdloins.jpg>
+- **Ch 12** · hypocrite.jpg (score 0) <https://www.preceptaustin.org/files/images/hypocrite.jpg>
+- **Ch 12** · lilies.jpg (score 0) <https://www.preceptaustin.org/files/images/lilies.jpg>
+- **Ch 12** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
 - **Ch 13** · israelmap.png (score 12) <https://www.preceptaustin.org/files/images/israelmap.png>
+- **Ch 13** · mustardseed.png (score 2) <https://www.preceptaustin.org/files/images/mustardseed.png>
+- **Ch 13** · synagogue.png (score 2) <https://www.preceptaustin.org/files/images/synagogue.png>
+- **Ch 13** · figtree.jpg (score 0) <https://www.preceptaustin.org/files/images/figtree.jpg>
+- **Ch 13** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 13** · luke13healing.jpg (score 0) <https://www.preceptaustin.org/files/images/luke13healing.jpg>
+- **Ch 13** · luke13jerusalemdestroyed.jpg (score 0) <https://www.preceptaustin.org/files/images/luke13jerusalemdestroyed.jpg>
+- **Ch 13** · luke13narrowdoor.jpg (score 0) <https://www.preceptaustin.org/files/images/luke13narrowdoor.jpg>
+- **Ch 13** · mustard.gif (score 0) <https://www.preceptaustin.org/files/images/mustard.gif>
+- **Ch 13** · siloam.jpg (score 0) <https://www.preceptaustin.org/files/images/siloam.jpg>
+- **Ch 13** · synagogueteach.jpg (score 0) <https://www.preceptaustin.org/files/images/synagogueteach.jpg>
+- **Ch 14** · luke1428.jpg (score 0) <https://www.preceptaustin.org/files/images/luke1428.jpg>
+- **Ch 14** · luke14cross.jpg (score 0) <https://www.preceptaustin.org/files/images/luke14cross.jpg>
+- **Ch 14** · luke14diningtable.gif (score 0) <https://www.preceptaustin.org/files/images/luke14diningtable.GIF>
+- **Ch 14** · luke14follow.jpg (score 0) <https://www.preceptaustin.org/files/images/luke14follow.jpg>
+- **Ch 14** · luke14salt.jpg (score 0) <https://www.preceptaustin.org/files/images/luke14salt.jpg>
+- **Ch 15** · prodigal.png (score 2) <https://www.preceptaustin.org/files/images/prodigal.png>
+- **Ch 15** · luke15carob.jpg (score 0) <https://www.preceptaustin.org/files/images/luke15carob.jpg>
+- **Ch 15** · luke15carry.jpg (score 0) <https://www.preceptaustin.org/files/images/luke15carry.jpg>
+- **Ch 15** · luke15coin.jpg (score 0) <https://www.preceptaustin.org/files/images/luke15coin.jpg>
+- **Ch 15** · luke15coin1.jpg (score 0) <https://www.preceptaustin.org/files/images/luke15coin1.jpg>
+- **Ch 15** · luke15return.jpg (score 0) <https://www.preceptaustin.org/files/images/luke15return.jpg>
+- **Ch 15** · luke15squander.jpg (score 0) <https://www.preceptaustin.org/files/images/luke15squander.jpg>
+- **Ch 15** · luke15swine.jpg (score 0) <https://www.preceptaustin.org/files/images/luke15swine.jpg>
+- **Ch 15** · prodigallament.jpg (score 0) <https://www.preceptaustin.org/files/images/prodigallament.jpg>
+- **Ch 15** · shepherd rescuing a lost sheep.gif (score 0) <https://www.preceptaustin.org/files/images/shepherd rescuing a lost sheep.gif>
+- **Ch 16** · eccl-sheol.png (score 2) <https://www.preceptaustin.org/files/images/eccl-sheol.png>
+- **Ch 16** · luke16coin.png (score 2) <https://www.preceptaustin.org/files/images/luke16coin.png>
+- **Ch 16** · luke16hell.png (score 2) <https://www.preceptaustin.org/files/images/luke16hell.png>
+- **Ch 16** · luke16.jpg (score 0) <https://www.preceptaustin.org/files/images/luke16.jpg>
+- **Ch 16** · luke16lazarus.jpg (score 0) <https://www.preceptaustin.org/files/images/luke16lazarus.jpg>
+- **Ch 16** · luke16mammon.jpg (score 0) <https://www.preceptaustin.org/files/images/luke16mammon.jpg>
+- **Ch 16** · luke16rich.jpg (score 0) <https://www.preceptaustin.org/files/images/luke16rich.jpg>
+- **Ch 17** · galileetojer.jpg (score 0) <https://www.preceptaustin.org/files/images/galileetojer.jpg>
+- **Ch 17** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 17** · lotswife.jpg (score 0) <https://www.preceptaustin.org/files/images/lotswife.jpg>
+- **Ch 17** · luke17.jpg (score 0) <https://www.preceptaustin.org/files/images/luke17.jpg>
+- **Ch 17** · luke171aa.jpg (score 0) <https://www.preceptaustin.org/files/images/luke171aa.jpg>
+- **Ch 17** · luke172.jpg (score 0) <https://www.preceptaustin.org/files/images/luke172.jpg>
+- **Ch 18** · blesschildren.jpg (score 0) <https://www.preceptaustin.org/files/images/blesschildren.jpg>
+- **Ch 18** · blind1.jpg (score 0) <https://www.preceptaustin.org/files/images/blind1.jpg>
+- **Ch 18** · camel.jpg (score 0) <https://www.preceptaustin.org/files/images/camel.jpg>
+- **Ch 18** · contempt.jpg (score 0) <https://www.preceptaustin.org/files/images/contempt.jpg>
+- **Ch 18** · luke181.jpg (score 0) <https://www.preceptaustin.org/files/images/luke181.jpg>
+- **Ch 18** · luke182.jpg (score 0) <https://www.preceptaustin.org/files/images/Luke182.jpg>
+- **Ch 18** · luke183.jpg (score 0) <https://www.preceptaustin.org/files/images/Luke183.jpg>
+- **Ch 18** · luke184.jpg (score 0) <https://www.preceptaustin.org/files/images/Luke184.jpg>
+- **Ch 18** · matthew7narrowgate.jpg (score 0) <https://www.preceptaustin.org/files/images/matthew7narrowgate.jpg>
+- **Ch 18** · pharisee.jpg (score 0) <https://www.preceptaustin.org/files/images/pharisee.jpg>
+- **Ch 18** · rich.jpg (score 0) <https://www.preceptaustin.org/files/images/rich.jpg>
+- **Ch 18** · richyoung.jpg (score 0) <https://www.preceptaustin.org/files/images/richyoung.jpg>
+- **Ch 18** · templestairs.jpg (score 0) <https://www.preceptaustin.org/files/images/templestairs.jpg>
+- **Ch 18** · zeph-1.gif (score 0) <https://www.preceptaustin.org/files/images/zeph-1.gif>
+- **Ch 19** · jesus-bethphage.png (score 2) <https://www.preceptaustin.org/files/images/jesus-bethphage.png>
+- **Ch 19** · bema.jpg (score 0) <https://www.preceptaustin.org/files/images/bema.jpg>
+- **Ch 19** · courtofgentiles.jpg (score 0) <https://www.preceptaustin.org/files/images/courtofgentiles.jpg>
+- **Ch 19** · goldengate.jpg (score 0) <https://www.preceptaustin.org/files/images/goldengate.jpg>
+- **Ch 19** · jericho1.jpg (score 0) <https://www.preceptaustin.org/files/images/jericho1.jpg>
+- **Ch 19** · luke13jerusalemdestroyed.jpg (score 0) <https://www.preceptaustin.org/files/images/luke13jerusalemdestroyed.jpg>
+- **Ch 19** · luke191.jpg (score 0) <https://www.preceptaustin.org/files/images/Luke191.jpg>
+- **Ch 19** · luke192.jpg (score 0) <https://www.preceptaustin.org/files/images/Luke192.jpg>
+- **Ch 19** · luke193.jpg (score 0) <https://www.preceptaustin.org/files/images/Luke193.jpg>
+- **Ch 19** · luke194.jpg (score 0) <https://www.preceptaustin.org/files/images/Luke194.jpg>
+- **Ch 19** · moneychangers.jpg (score 0) <https://www.preceptaustin.org/files/images/moneychangers.jpg>
+- **Ch 19** · palm.jpg (score 0) <https://www.preceptaustin.org/files/images/palm.jpg>
+- **Ch 19** · perhapstoday.jpg (score 0) <https://www.preceptaustin.org/files/images/perhapstoday.jpg>
+- **Ch 19** · stone.jpg (score 0) <https://www.preceptaustin.org/files/images/stone.JPG>
+- **Ch 19** · vision.jpg (score 0) <https://www.preceptaustin.org/files/images/vision.jpg>
+- **Ch 19** · wept.jpg (score 0) <https://www.preceptaustin.org/files/images/wept.jpg>
+- **Ch 19** · zaccheus.jpg (score 0) <https://www.preceptaustin.org/files/images/zaccheus.jpg>
+- **Ch 20** · jesus-coin.png (score 2) <https://www.preceptaustin.org/files/images/jesus-coin.png>
+- **Ch 20** · passionweek.png (score 2) <https://www.preceptaustin.org/files/images/passionweek.png>
+- **Ch 20** · courtofgentiles.jpg (score 0) <https://www.preceptaustin.org/files/images/courtofgentiles.jpg>
+- **Ch 20** · denarius.jpg (score 0) <https://www.preceptaustin.org/files/images/denarius.jpg>
+- **Ch 20** · jesusauthority.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusauthority.jpg>
+- **Ch 20** · johnbaptist.jpg (score 0) <https://www.preceptaustin.org/files/images/johnbaptist.jpg>
+- **Ch 20** · luke201.jpg (score 0) <https://www.preceptaustin.org/files/images/Luke201.jpg>
+- **Ch 20** · luke202.jpg (score 0) <https://www.preceptaustin.org/files/images/Luke202.jpg>
+- **Ch 20** · luke203.jpg (score 0) <https://www.preceptaustin.org/files/images/Luke203.jpg>
+- **Ch 20** · progrev.jpg (score 0) <https://www.preceptaustin.org/files/images/progrev.jpg>
+- **Ch 20** · sermon1.gif (score 0) <https://www.preceptaustin.org/files/images/sermon1.gif>
+- **Ch 20** · watchtower.jpg (score 0) <https://www.preceptaustin.org/files/images/watchtower.jpg>
+- **Ch 20** · zeph-1.gif (score 0) <https://www.preceptaustin.org/files/images/zeph-1.gif>
+- **Ch 21** · courtwomen.png (score 2) <https://www.preceptaustin.org/files/images/courtwomen.png>
+- **Ch 21** · earthquake.png (score 2) <https://www.preceptaustin.org/files/images/earthquake.png>
+- **Ch 21** · templedestruction.png (score 2) <https://www.preceptaustin.org/files/images/templedestruction.png>
+- **Ch 21** · courtofgentiles.jpg (score 0) <https://www.preceptaustin.org/files/images/courtofgentiles.jpg>
+- **Ch 21** · luke13jerusalemdestroyed.jpg (score 0) <https://www.preceptaustin.org/files/images/luke13jerusalemdestroyed.jpg>
+- **Ch 21** · mousetrap.jpg (score 0) <https://www.preceptaustin.org/files/images/mousetrap.jpg>
+- **Ch 21** · nero.jpg (score 0) <https://www.preceptaustin.org/files/images/nero.jpg>
+- **Ch 21** · perhapstoday.jpg (score 0) <https://www.preceptaustin.org/files/images/perhapstoday.jpg>
+- **Ch 21** · secondcoming.jpg (score 0) <https://www.preceptaustin.org/files/images/secondcoming.jpg>
+- **Ch 21** · stone.jpg (score 0) <https://www.preceptaustin.org/files/images/stone.JPG>
+- **Ch 21** · vision.jpg (score 0) <https://www.preceptaustin.org/files/images/vision.jpg>
+- **Ch 21** · widow.jpg (score 0) <https://www.preceptaustin.org/files/images/widow.jpg>
+- **Ch 22** · judas.png (score 2) <https://www.preceptaustin.org/files/images/judas.png>
+- **Ch 22** · aboutface.jpg (score 0) <https://www.preceptaustin.org/files/images/aboutface.jpg>
+- **Ch 22** · beat.jpg (score 0) <https://www.preceptaustin.org/files/images/beat.jpg>
+- **Ch 22** · calen.jpg (score 0) <https://www.preceptaustin.org/files/images/calen.jpg>
+- **Ch 22** · christ_gethsemane.jpg (score 0) <https://www.preceptaustin.org/files/images/Christ_Gethsemane.jpg>
+- **Ch 22** · gethsemane.jpg (score 0) <https://www.preceptaustin.org/files/images/gethsemane.jpg>
+- **Ch 22** · jesusarrest.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusarrest.jpg>
+- **Ch 22** · jesusmocked.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusmocked.jpg>
+- **Ch 22** · judas.jpg (score 0) <https://www.preceptaustin.org/files/images/judas.jpg>
+- **Ch 22** · judaskiss.jpg (score 0) <https://www.preceptaustin.org/files/images/judaskiss.jpg>
+- **Ch 22** · lamb of god passover.gif (score 0) <https://www.preceptaustin.org/files/images/lamb of God passover.gif>
+- **Ch 22** · lastsupper1.jpg (score 0) <https://www.preceptaustin.org/files/images/lastsupper1.jpg>
+- **Ch 22** · olives.jpg (score 0) <https://www.preceptaustin.org/files/images/olives.jpg>
+- **Ch 22** · pitcher1.jpg (score 0) <https://www.preceptaustin.org/files/images/pitcher1.jpg>
+- **Ch 22** · recline.jpg (score 0) <https://www.preceptaustin.org/files/images/recline.JPG>
+- **Ch 22** · sanhedrin.jpg (score 0) <https://www.preceptaustin.org/files/images/Sanhedrin.jpg>
+- **Ch 22** · sanhedrinhall.jpg (score 0) <https://www.preceptaustin.org/files/images/sanhedrinhall.jpg>
+- **Ch 22** · seder.jpg (score 0) <https://www.preceptaustin.org/files/images/seder.jpg>
+- **Ch 22** · sederplate.jpg (score 0) <https://www.preceptaustin.org/files/images/sederplate.jpg>
+- **Ch 22** · upperroom.jpg (score 0) <https://www.preceptaustin.org/files/images/upperroom.jpg>
 - **Ch 23** · mapjerusalem.png (score 12) <https://www.preceptaustin.org/files/images/mapjerusalem.png>
 - **Ch 23** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle schematic2.gif>
+- **Ch 23** · crossbeam.jpg (score 0) <https://www.preceptaustin.org/files/images/crossbeam.jpg>
+- **Ch 23** · golgotha.jpg (score 0) <https://www.preceptaustin.org/files/images/golgotha.jpg>
+- **Ch 23** · herod.jpg (score 0) <https://www.preceptaustin.org/files/images/herod.jpg>
+- **Ch 23** · jesuscross1.jpg (score 0) <https://www.preceptaustin.org/files/images/jesuscross1.jpg>
+- **Ch 23** · pilate.jpg (score 0) <https://www.preceptaustin.org/files/images/pilate.jpg>
+- **Ch 23** · pilatestone.jpg (score 0) <https://www.preceptaustin.org/files/images/pilatestone.JPG>
+- **Ch 23** · tomb.jpg (score 0) <https://www.preceptaustin.org/files/images/tomb.jpg>
 - **Ch 24** · emmausmap.jpg (score 10) <https://www.preceptaustin.org/files/images/emmausmap.jpg>
+- **Ch 24** · appear.jpg (score 0) <https://www.preceptaustin.org/files/images/appear.jpg>
+- **Ch 24** · emmaus.jpg (score 0) <https://www.preceptaustin.org/files/images/emmaus.jpg>
+- **Ch 24** · emmaussupper.jpg (score 0) <https://www.preceptaustin.org/files/images/emmaussupper.jpg>
 
-## mark — 1 book-level, 2 per-chapter (probed 16 chapters)
+## malachi — 5 book-level, 1 per-chapter (probed 4 chapters)
+
+### Book-level
+- malachimap.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/malachimap.jpg>
+- dolsummary.jpg (score 3, 2 chapters) <https://www.preceptaustin.org/files/images/dolsummary.jpg>
+- malachitime.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/malachitime.png>
+- malachidol.jpg (score 0, 2 chapters) <https://www.preceptaustin.org/files/images/malachidol.jpg>
+- prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
+### Per-chapter
+- **Ch 3** · windowheaven.jpg (score 0) <https://www.preceptaustin.org/files/images/windowheaven.jpg>
+
+## mark — 3 book-level, 140 per-chapter (probed 16 chapters)
 
 ### Book-level
 - mark_overview.png (score 12, 16 chapters) <https://www.preceptaustin.org/files/images/mark_overview.png>
+- mark_life_of_christ.png (score 2, 16 chapters) <https://www.preceptaustin.org/files/images/mark_life_of_christ.png>
+- mark.jpg (score 0, 16 chapters) <https://www.preceptaustin.org/files/images/mark.jpg>
 ### Per-chapter
 - **Ch 1** · markmap.jpg (score 10) <https://www.preceptaustin.org/files/images/markmap.jpg>
+- **Ch 1** · baptismjesus.png (score 2) <https://www.preceptaustin.org/files/images/baptismjesus.png>
+- **Ch 1** · church_holy_spirit.png (score 2) <https://www.preceptaustin.org/files/images/church_holy_spirit.png>
+- **Ch 1** · galilee.png (score 2) <https://www.preceptaustin.org/files/images/galilee.png>
+- **Ch 1** · synagogue.png (score 2) <https://www.preceptaustin.org/files/images/synagogue.png>
+- **Ch 1** · aboutface.jpg (score 0) <https://www.preceptaustin.org/files/images/aboutface.jpg>
+- **Ch 1** · baptist.jpg (score 0) <https://www.preceptaustin.org/files/images/baptist.jpg>
+- **Ch 1** · boatjesus.jpg (score 0) <https://www.preceptaustin.org/files/images/boatjesus.jpg>
+- **Ch 1** · fishhook.jpg (score 0) <https://www.preceptaustin.org/files/images/fishhook.jpg>
+- **Ch 1** · galileeministry.jpg (score 0) <https://www.preceptaustin.org/files/images/galileeministry.jpg>
+- **Ch 1** · jesusknocking1.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusknocking1.jpg>
+- **Ch 1** · johnb.jpg (score 0) <https://www.preceptaustin.org/files/images/johnb.jpg>
+- **Ch 1** · locust1.jpg (score 0) <https://www.preceptaustin.org/files/images/locust1.jpg>
+- **Ch 1** · metamorphosis.jpeg (score 0) <https://www.preceptaustin.org/files/images/metamorphosis.jpeg>
+- **Ch 1** · petershouse.jpg (score 0) <https://www.preceptaustin.org/files/images/petershouse.jpg>
+- **Ch 1** · petershouseaerialview.jpg (score 0) <https://www.preceptaustin.org/files/images/petershouseaerialview.jpg>
+- **Ch 1** · sandals.jpg (score 0) <https://www.preceptaustin.org/files/images/sandals.jpg>
+- **Ch 1** · synagoguecaper.jpg (score 0) <https://www.preceptaustin.org/files/images/synagoguecaper.jpg>
+- **Ch 2** · housecutout.png (score 2) <https://www.preceptaustin.org/files/images/housecutout.png>
+- **Ch 2** · bread.jpg (score 0) <https://www.preceptaustin.org/files/images/bread.jpg>
+- **Ch 2** · luke14diningtable.gif (score 0) <https://www.preceptaustin.org/files/images/luke14diningtable.GIF>
+- **Ch 2** · luke5housetop.jpg (score 0) <https://www.preceptaustin.org/files/images/luke5housetop.jpg>
+- **Ch 2** · luke5levi2.jpg (score 0) <https://www.preceptaustin.org/files/images/luke5levi2.jpg>
+- **Ch 2** · petershouseaerialview.jpg (score 0) <https://www.preceptaustin.org/files/images/petershouseaerialview.jpg>
+- **Ch 2** · wheat.jpg (score 0) <https://www.preceptaustin.org/files/images/wheat.jpg>
+- **Ch 3** · idumea.jpg (score 0) <https://www.preceptaustin.org/files/images/idumea.jpg>
+- **Ch 4** · mustardseed.png (score 2) <https://www.preceptaustin.org/files/images/mustardseed.png>
+- **Ch 4** · galileeministry.jpg (score 0) <https://www.preceptaustin.org/files/images/galileeministry.jpg>
+- **Ch 4** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 4** · lamp.jpg (score 0) <https://www.preceptaustin.org/files/images/lamp.jpg>
+- **Ch 4** · lampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/lampstand.jpg>
+- **Ch 4** · mustard.gif (score 0) <https://www.preceptaustin.org/files/images/mustard.gif>
+- **Ch 4** · petershouseaerialview.jpg (score 0) <https://www.preceptaustin.org/files/images/petershouseaerialview.jpg>
+- **Ch 4** · sea.jpg (score 0) <https://www.preceptaustin.org/files/images/sea.jpg>
+- **Ch 4** · shipstorm.jpg (score 0) <https://www.preceptaustin.org/files/images/shipstorm.jpg>
+- **Ch 4** · soil.jpg (score 0) <https://www.preceptaustin.org/files/images/soil.jpg>
+- **Ch 4** · soilshallow.jpg (score 0) <https://www.preceptaustin.org/files/images/soilshallow.jpg>
+- **Ch 4** · sower.jpg (score 0) <https://www.preceptaustin.org/files/images/sower.jpg>
+- **Ch 4** · sower1.jpg (score 0) <https://www.preceptaustin.org/files/images/sower1.jpg>
+- **Ch 4** · worldlywise.jpg (score 0) <https://www.preceptaustin.org/files/images/worldlywise.jpg>
+- **Ch 5** · decapolis.png (score 2) <https://www.preceptaustin.org/files/images/decapolis.png>
+- **Ch 5** · funeral.png (score 2) <https://www.preceptaustin.org/files/images/funeral.png>
+- **Ch 5** · galileeministry.jpg (score 0) <https://www.preceptaustin.org/files/images/galileeministry.jpg>
+- **Ch 5** · mark5.jpg (score 0) <https://www.preceptaustin.org/files/images/mark5.jpg>
+- **Ch 5** · tassel.jpg (score 0) <https://www.preceptaustin.org/files/images/tassel.jpg>
+- **Ch 5** · woman.jpg (score 0) <https://www.preceptaustin.org/files/images/woman.jpg>
+- **Ch 6** · aboutface.jpg (score 0) <https://www.preceptaustin.org/files/images/aboutface.jpg>
+- **Ch 6** · bethsaida.jpg (score 0) <https://www.preceptaustin.org/files/images/bethsaida.jpg>
+- **Ch 6** · genneseret1.jpg (score 0) <https://www.preceptaustin.org/files/images/genneseret1.jpg>
+- **Ch 6** · johnshead.jpg (score 0) <https://www.preceptaustin.org/files/images/johnshead.jpg>
+- **Ch 6** · loaves.jpg (score 0) <https://www.preceptaustin.org/files/images/loaves.jpg>
+- **Ch 6** · nazareth.jpg (score 0) <https://www.preceptaustin.org/files/images/nazareth.jpg>
+- **Ch 6** · sandals.jpg (score 0) <https://www.preceptaustin.org/files/images/sandals.jpg>
+- **Ch 6** · sentout.jpg (score 0) <https://www.preceptaustin.org/files/images/sentout.jpg>
+- **Ch 7** · decapolis.png (score 2) <https://www.preceptaustin.org/files/images/decapolis.png>
+- **Ch 7** · kosher.jpg (score 0) <https://www.preceptaustin.org/files/images/kosher.jpg>
+- **Ch 7** · syro.jpg (score 0) <https://www.preceptaustin.org/files/images/syro.jpg>
+- **Ch 7** · tradition.jpg (score 0) <https://www.preceptaustin.org/files/images/tradition.jpg>
+- **Ch 7** · tyre.jpg (score 0) <https://www.preceptaustin.org/files/images/tyre.jpg>
+- **Ch 8** · decapolis.png (score 2) <https://www.preceptaustin.org/files/images/decapolis.png>
+- **Ch 8** · who.png (score 2) <https://www.preceptaustin.org/files/images/who.png>
+- **Ch 8** · bethsaida.jpg (score 0) <https://www.preceptaustin.org/files/images/bethsaida.jpg>
+- **Ch 8** · caesareap.jpg (score 0) <https://www.preceptaustin.org/files/images/caesareap.jpg>
+- **Ch 8** · caesareaphilippi.jpg (score 0) <https://www.preceptaustin.org/files/images/caesareaphilippi.jpg>
+- **Ch 8** · magadan.jpg (score 0) <https://www.preceptaustin.org/files/images/magadan.jpg>
+- **Ch 8** · panias.jpg (score 0) <https://www.preceptaustin.org/files/images/panias.jpg>
+- **Ch 9** · capernaum.jpg (score 0) <https://www.preceptaustin.org/files/images/capernaum.jpg>
+- **Ch 9** · child.jpg (score 0) <https://www.preceptaustin.org/files/images/child.jpg>
+- **Ch 9** · exodusglory.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusglory.jpg>
+- **Ch 9** · hermon.jpg (score 0) <https://www.preceptaustin.org/files/images/hermon.jpg>
+- **Ch 9** · millstone.jpg (score 0) <https://www.preceptaustin.org/files/images/millstone.jpg>
+- **Ch 9** · transfig.jpg (score 0) <https://www.preceptaustin.org/files/images/transfig.jpg>
+- **Ch 9** · transfigure.jpg (score 0) <https://www.preceptaustin.org/files/images/transfigure.jpg>
+- **Ch 10** · jesus-ten.png (score 2) <https://www.preceptaustin.org/files/images/jesus-ten.png>
+- **Ch 10** · jesuschild.png (score 2) <https://www.preceptaustin.org/files/images/jesuschild.png>
+- **Ch 10** · jesusdivorce.png (score 2) <https://www.preceptaustin.org/files/images/jesusdivorce.png>
+- **Ch 10** · last.png (score 2) <https://www.preceptaustin.org/files/images/last.png>
+- **Ch 10** · child.jpg (score 0) <https://www.preceptaustin.org/files/images/child.jpg>
+- **Ch 10** · cup.jpg (score 0) <https://www.preceptaustin.org/files/images/cup.jpg>
+- **Ch 10** · divorce.webp (score 0) <https://www.preceptaustin.org/files/images/divorce.webp>
+- **Ch 10** · first.jpg (score 0) <https://www.preceptaustin.org/files/images/first.jpg>
+- **Ch 10** · healing.webp (score 0) <https://www.preceptaustin.org/files/images/healing.webp>
+- **Ch 10** · jericho.jpg (score 0) <https://www.preceptaustin.org/files/images/jericho.jpg>
+- **Ch 10** · jerusalemelevation2.jpg (score 0) <https://www.preceptaustin.org/files/images/jerusalemelevation2.jpg>
+- **Ch 10** · rich.jpg (score 0) <https://www.preceptaustin.org/files/images/rich.jpg>
+- **Ch 10** · richyoung.jpg (score 0) <https://www.preceptaustin.org/files/images/richyoung.jpg>
+- **Ch 11** · jesus-bethphage.png (score 2) <https://www.preceptaustin.org/files/images/jesus-bethphage.png>
+- **Ch 11** · jesus-fig.png (score 2) <https://www.preceptaustin.org/files/images/jesus-fig.png>
+- **Ch 11** · jesus-fig1.png (score 2) <https://www.preceptaustin.org/files/images/jesus-fig1.png>
+- **Ch 11** · bethphage.jpg (score 0) <https://www.preceptaustin.org/files/images/bethphage.jpg>
+- **Ch 11** · courtofgentiles.jpg (score 0) <https://www.preceptaustin.org/files/images/courtofgentiles.jpg>
+- **Ch 11** · fig.jpg (score 0) <https://www.preceptaustin.org/files/images/fig.jpg>
+- **Ch 11** · goldengate.jpg (score 0) <https://www.preceptaustin.org/files/images/goldengate.jpg>
+- **Ch 11** · jesusauthority.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusauthority.jpg>
+- **Ch 11** · johnbaptist.jpg (score 0) <https://www.preceptaustin.org/files/images/johnbaptist.jpg>
+- **Ch 11** · moneychangers.jpg (score 0) <https://www.preceptaustin.org/files/images/moneychangers.jpg>
+- **Ch 11** · palm.jpg (score 0) <https://www.preceptaustin.org/files/images/palm.jpg>
+- **Ch 12** · courtwomen.png (score 2) <https://www.preceptaustin.org/files/images/courtwomen.png>
+- **Ch 12** · jesus-coin.png (score 2) <https://www.preceptaustin.org/files/images/jesus-coin.png>
+- **Ch 12** · corner.jpg (score 0) <https://www.preceptaustin.org/files/images/corner.jpg>
+- **Ch 12** · courtofgentiles.jpg (score 0) <https://www.preceptaustin.org/files/images/courtofgentiles.jpg>
+- **Ch 12** · denarius.jpg (score 0) <https://www.preceptaustin.org/files/images/denarius.jpg>
+- **Ch 12** · luke14diningtable.gif (score 0) <https://www.preceptaustin.org/files/images/luke14diningtable.GIF>
+- **Ch 12** · scribe.jpg (score 0) <https://www.preceptaustin.org/files/images/scribe.jpg>
+- **Ch 12** · vineyard.jpg (score 0) <https://www.preceptaustin.org/files/images/vineyard.jpg>
+- **Ch 12** · widow.jpg (score 0) <https://www.preceptaustin.org/files/images/widow.jpg>
+- **Ch 12** · winepress.jpg (score 0) <https://www.preceptaustin.org/files/images/winepress.jpg>
+- **Ch 13** · abomination.png (score 2) <https://www.preceptaustin.org/files/images/abomination.png>
+- **Ch 13** · earthquake.png (score 2) <https://www.preceptaustin.org/files/images/earthquake.png>
+- **Ch 13** · courtofgentiles.jpg (score 0) <https://www.preceptaustin.org/files/images/courtofgentiles.jpg>
+- **Ch 13** · nero.jpg (score 0) <https://www.preceptaustin.org/files/images/nero.jpg>
+- **Ch 13** · secondcoming.jpg (score 0) <https://www.preceptaustin.org/files/images/secondcoming.jpg>
+- **Ch 13** · stone.jpg (score 0) <https://www.preceptaustin.org/files/images/stone.JPG>
+- **Ch 13** · vision.jpg (score 0) <https://www.preceptaustin.org/files/images/vision.jpg>
+- **Ch 14** · anoint.jpg (score 0) <https://www.preceptaustin.org/files/images/anoint.jpg>
+- **Ch 14** · christ_gethsemane.jpg (score 0) <https://www.preceptaustin.org/files/images/Christ_Gethsemane.jpg>
+- **Ch 14** · gethsemane.jpg (score 0) <https://www.preceptaustin.org/files/images/gethsemane.jpg>
+- **Ch 14** · gethsemane1.jpg (score 0) <https://www.preceptaustin.org/files/images/gethsemane1.jpg>
+- **Ch 14** · jesuscondemned.jpg (score 0) <https://www.preceptaustin.org/files/images/jesuscondemned.jpg>
+- **Ch 14** · judaskiss.jpg (score 0) <https://www.preceptaustin.org/files/images/judaskiss.jpg>
+- **Ch 14** · lamb of god passover.gif (score 0) <https://www.preceptaustin.org/files/images/lamb of God passover.gif>
+- **Ch 14** · lastsupper1.jpg (score 0) <https://www.preceptaustin.org/files/images/lastsupper1.jpg>
+- **Ch 14** · luke14diningtable.gif (score 0) <https://www.preceptaustin.org/files/images/luke14diningtable.GIF>
+- **Ch 14** · maryanoint.jpg (score 0) <https://www.preceptaustin.org/files/images/maryanoint.jpg>
+- **Ch 14** · pilate.jpg (score 0) <https://www.preceptaustin.org/files/images/pilate.jpg>
+- **Ch 14** · pitcher1.jpg (score 0) <https://www.preceptaustin.org/files/images/pitcher1.jpg>
+- **Ch 14** · recline.jpg (score 0) <https://www.preceptaustin.org/files/images/recline.JPG>
+- **Ch 14** · sanhedrin.jpg (score 0) <https://www.preceptaustin.org/files/images/Sanhedrin.jpg>
+- **Ch 14** · skandalon.jpg (score 0) <https://www.preceptaustin.org/files/images/skandalon.jpg>
 - **Ch 15** · mapjerusalem.png (score 12) <https://www.preceptaustin.org/files/images/mapjerusalem.png>
+- **Ch 15** · crosschristnailed.png (score 2) <https://www.preceptaustin.org/files/images/crosschristnailed.png>
+- **Ch 15** · crossbeam.jpg (score 0) <https://www.preceptaustin.org/files/images/crossbeam.jpg>
+- **Ch 15** · crossthree.jpg (score 0) <https://www.preceptaustin.org/files/images/crossthree.jpg>
+- **Ch 15** · golgotha.jpg (score 0) <https://www.preceptaustin.org/files/images/golgotha.jpg>
+- **Ch 15** · jesuscross1.jpg (score 0) <https://www.preceptaustin.org/files/images/jesuscross1.jpg>
+- **Ch 15** · myrrhresin.jpg (score 0) <https://www.preceptaustin.org/files/images/myrrhresin.jpg>
+- **Ch 15** · pilate.jpg (score 0) <https://www.preceptaustin.org/files/images/pilate.jpg>
+- **Ch 15** · scourge2.jpg (score 0) <https://www.preceptaustin.org/files/images/scourge2.jpg>
+- **Ch 15** · tomb.jpg (score 0) <https://www.preceptaustin.org/files/images/tomb.jpg>
+- **Ch 16** · appear.jpg (score 0) <https://www.preceptaustin.org/files/images/appear.jpg>
 
-## matthew — 1 book-level, 3 per-chapter (probed 25 chapters)
+## matthew — 3 book-level, 230 per-chapter (probed 25 chapters)
 
 ### Book-level
 - matthewtimeline.jpg (score 10, 24 chapters) <https://www.preceptaustin.org/files/images/matthewtimeline.jpg>
+- matthew_life.png (score 2, 24 chapters) <https://www.preceptaustin.org/files/images/matthew_life.png>
+- matthew.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/matthew.jpg>
 ### Per-chapter
+- **Ch 1** · judah.jpg (score 0) <https://www.preceptaustin.org/files/images/judah.jpg>
+- **Ch 1** · rahab.jpg (score 0) <https://www.preceptaustin.org/files/images/rahab.jpg>
+- **Ch 2** · galilee.png (score 2) <https://www.preceptaustin.org/files/images/galilee.png>
+- **Ch 2** · herodtet.png (score 2) <https://www.preceptaustin.org/files/images/herodtet.png>
+- **Ch 2** · birth.gif (score 0) <https://www.preceptaustin.org/files/images/birth.gif>
+- **Ch 2** · flightegypt.jpg (score 0) <https://www.preceptaustin.org/files/images/flightegypt.jpg>
+- **Ch 2** · jesusbirth.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusbirth.jpg>
+- **Ch 2** · magistar.jpg (score 0) <https://www.preceptaustin.org/files/images/magistar.jpg>
+- **Ch 2** · massacre.jpg (score 0) <https://www.preceptaustin.org/files/images/massacre.jpg>
+- **Ch 2** · returnegypt.jpg (score 0) <https://www.preceptaustin.org/files/images/returnegypt.jpg>
+- **Ch 3** · baptismjesus.png (score 2) <https://www.preceptaustin.org/files/images/baptismjesus.png>
+- **Ch 3** · church_holy_spirit.png (score 2) <https://www.preceptaustin.org/files/images/church_holy_spirit.png>
+- **Ch 3** · galilee.png (score 2) <https://www.preceptaustin.org/files/images/galilee.png>
+- **Ch 3** · aboutface.jpg (score 0) <https://www.preceptaustin.org/files/images/aboutface.jpg>
+- **Ch 3** · balance.jpg (score 0) <https://www.preceptaustin.org/files/images/balance.jpg>
+- **Ch 3** · baptist.jpg (score 0) <https://www.preceptaustin.org/files/images/baptist.jpg>
+- **Ch 3** · johnb.jpg (score 0) <https://www.preceptaustin.org/files/images/johnb.jpg>
+- **Ch 3** · locust1.jpg (score 0) <https://www.preceptaustin.org/files/images/locust1.jpg>
+- **Ch 3** · winnow.jpg (score 0) <https://www.preceptaustin.org/files/images/winnow.jpg>
+- **Ch 4** · galilee.png (score 2) <https://www.preceptaustin.org/files/images/galilee.png>
+- **Ch 4** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 4** · aboutface.jpg (score 0) <https://www.preceptaustin.org/files/images/aboutface.jpg>
+- **Ch 4** · boatjesus.jpg (score 0) <https://www.preceptaustin.org/files/images/boatjesus.jpg>
+- **Ch 4** · fishhook.jpg (score 0) <https://www.preceptaustin.org/files/images/fishhook.jpg>
+- **Ch 4** · galileeministry.jpg (score 0) <https://www.preceptaustin.org/files/images/galileeministry.jpg>
+- **Ch 4** · herod.gif (score 0) <https://www.preceptaustin.org/files/images/herod.gif>
+- **Ch 4** · petershouseaerialview.jpg (score 0) <https://www.preceptaustin.org/files/images/petershouseaerialview.jpg>
+- **Ch 4** · sandals.jpg (score 0) <https://www.preceptaustin.org/files/images/sandals.jpg>
+- **Ch 8** · outerdarkness.png (score 2) <https://www.preceptaustin.org/files/images/outerdarkness.png>
+- **Ch 8** · galileeministry.jpg (score 0) <https://www.preceptaustin.org/files/images/galileeministry.jpg>
+- **Ch 8** · mark5.jpg (score 0) <https://www.preceptaustin.org/files/images/mark5.jpg>
+- **Ch 8** · petershouse.jpg (score 0) <https://www.preceptaustin.org/files/images/petershouse.jpg>
+- **Ch 8** · petershouseaerialview.jpg (score 0) <https://www.preceptaustin.org/files/images/petershouseaerialview.jpg>
+- **Ch 8** · shipstorm.jpg (score 0) <https://www.preceptaustin.org/files/images/shipstorm.jpg>
+- **Ch 9** · funeral.png (score 2) <https://www.preceptaustin.org/files/images/funeral.png>
+- **Ch 9** · jesusblind.png (score 2) <https://www.preceptaustin.org/files/images/jesusblind.png>
+- **Ch 9** · tear.png (score 2) <https://www.preceptaustin.org/files/images/tear.png>
+- **Ch 9** · blindheal.jpg (score 0) <https://www.preceptaustin.org/files/images/blindheal.jpg>
+- **Ch 9** · boat.jpg (score 0) <https://www.preceptaustin.org/files/images/boat.jpg>
+- **Ch 9** · harvest.jpg (score 0) <https://www.preceptaustin.org/files/images/harvest.jpg>
+- **Ch 9** · luke14diningtable.gif (score 0) <https://www.preceptaustin.org/files/images/luke14diningtable.GIF>
+- **Ch 9** · luke5levi2.jpg (score 0) <https://www.preceptaustin.org/files/images/luke5levi2.jpg>
+- **Ch 9** · paralyticheal.jpg (score 0) <https://www.preceptaustin.org/files/images/paralyticheal.jpg>
+- **Ch 9** · tassel.jpg (score 0) <https://www.preceptaustin.org/files/images/tassel.jpg>
+- **Ch 9** · woman.jpg (score 0) <https://www.preceptaustin.org/files/images/woman.jpg>
+- **Ch 10** · godsplan.jpg (score 0) <https://www.preceptaustin.org/files/images/godsplan.jpg>
+- **Ch 10** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 10** · sentout.jpg (score 0) <https://www.preceptaustin.org/files/images/sentout.jpg>
+- **Ch 10** · shepherdholding.gif (score 0) <https://www.preceptaustin.org/files/images/shepherdholding.gif>
+- **Ch 11** · bethsaida.jpg (score 0) <https://www.preceptaustin.org/files/images/bethsaida.jpg>
+- **Ch 11** · johnbaptist.jpg (score 0) <https://www.preceptaustin.org/files/images/johnbaptist.jpg>
+- **Ch 11** · messianic.jpg (score 0) <https://www.preceptaustin.org/files/images/messianic.jpg>
+- **Ch 11** · reed.jpg (score 0) <https://www.preceptaustin.org/files/images/reed.jpg>
+- **Ch 11** · skandalon.jpg (score 0) <https://www.preceptaustin.org/files/images/skandalon.jpg>
+- **Ch 11** · synagoguecaper.jpg (score 0) <https://www.preceptaustin.org/files/images/synagoguecaper.jpg>
+- **Ch 11** · timegap2.jpg (score 0) <https://www.preceptaustin.org/files/images/timegap2.jpg>
+- **Ch 11** · tyre.jpg (score 0) <https://www.preceptaustin.org/files/images/tyre.jpg>
+- **Ch 12** · bread.jpg (score 0) <https://www.preceptaustin.org/files/images/bread.jpg>
+- **Ch 12** · davidbread.jpg (score 0) <https://www.preceptaustin.org/files/images/davidbread.jpg>
+- **Ch 12** · jonah.jpg (score 0) <https://www.preceptaustin.org/files/images/jonah.jpg>
+- **Ch 12** · solomonsheba.webp (score 0) <https://www.preceptaustin.org/files/images/solomonsheba.webp>
+- **Ch 12** · wheat.jpg (score 0) <https://www.preceptaustin.org/files/images/wheat.jpg>
+- **Ch 13** · devilsowing1.png (score 2) <https://www.preceptaustin.org/files/images/devilsowing1.png>
+- **Ch 13** · mt131.png (score 2) <https://www.preceptaustin.org/files/images/mt131.png>
+- **Ch 13** · mt132.png (score 2) <https://www.preceptaustin.org/files/images/mt132.png>
+- **Ch 13** · mt134.png (score 2) <https://www.preceptaustin.org/files/images/mt134.png>
+- **Ch 13** · mt135.png (score 2) <https://www.preceptaustin.org/files/images/mt135.png>
+- **Ch 13** · mt136.png (score 2) <https://www.preceptaustin.org/files/images/mt136.png>
+- **Ch 13** · mt137.png (score 2) <https://www.preceptaustin.org/files/images/mt137.png>
+- **Ch 13** · mt138.png (score 2) <https://www.preceptaustin.org/files/images/mt138.png>
+- **Ch 13** · mustard1.png (score 2) <https://www.preceptaustin.org/files/images/mustard1.png>
+- **Ch 13** · mustardseed.png (score 2) <https://www.preceptaustin.org/files/images/mustardseed.png>
+- **Ch 13** · dragnet.jpg (score 0) <https://www.preceptaustin.org/files/images/dragnet.jpg>
+- **Ch 13** · furnace.jpg (score 0) <https://www.preceptaustin.org/files/images/furnace.jpg>
+- **Ch 13** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 13** · leaven.gif (score 0) <https://www.preceptaustin.org/files/images/leaven.gif>
+- **Ch 13** · soil.jpg (score 0) <https://www.preceptaustin.org/files/images/soil.jpg>
+- **Ch 13** · sower.jpg (score 0) <https://www.preceptaustin.org/files/images/sower.jpg>
+- **Ch 13** · sower1.jpg (score 0) <https://www.preceptaustin.org/files/images/sower1.jpg>
+- **Ch 13** · sunriseshibui1.jpg (score 0) <https://www.preceptaustin.org/files/images/sunriseshibui1.jpg>
+- **Ch 13** · tares.jpg (score 0) <https://www.preceptaustin.org/files/images/tares.jpg>
+- **Ch 13** · tares1.jpg (score 0) <https://www.preceptaustin.org/files/images/tares1.jpg>
+- **Ch 13** · weedburn.jpg (score 0) <https://www.preceptaustin.org/files/images/weedburn.jpg>
 - **Ch 14** · tetrarchmap.png (score 12) <https://www.preceptaustin.org/files/images/tetrarchmap.png>
+- **Ch 14** · herodline2.png (score 2) <https://www.preceptaustin.org/files/images/herodline2.png>
+- **Ch 14** · bethsaida.jpg (score 0) <https://www.preceptaustin.org/files/images/bethsaida.jpg>
+- **Ch 14** · genneseret1.jpg (score 0) <https://www.preceptaustin.org/files/images/genneseret1.jpg>
+- **Ch 14** · johnshead.jpg (score 0) <https://www.preceptaustin.org/files/images/johnshead.jpg>
+- **Ch 14** · loaves.jpg (score 0) <https://www.preceptaustin.org/files/images/loaves.jpg>
+- **Ch 15** · decapolis.png (score 2) <https://www.preceptaustin.org/files/images/decapolis.png>
+- **Ch 15** · kosher.jpg (score 0) <https://www.preceptaustin.org/files/images/kosher.jpg>
+- **Ch 15** · magadan.jpg (score 0) <https://www.preceptaustin.org/files/images/magadan.jpg>
+- **Ch 15** · syro.jpg (score 0) <https://www.preceptaustin.org/files/images/syro.jpg>
+- **Ch 15** · tradition.jpg (score 0) <https://www.preceptaustin.org/files/images/tradition.jpg>
+- **Ch 15** · tyre.jpg (score 0) <https://www.preceptaustin.org/files/images/tyre.jpg>
+- **Ch 16** · who.png (score 2) <https://www.preceptaustin.org/files/images/who.png>
+- **Ch 16** · caesareap.jpg (score 0) <https://www.preceptaustin.org/files/images/caesareap.jpg>
+- **Ch 16** · caesareaphilippi.jpg (score 0) <https://www.preceptaustin.org/files/images/caesareaphilippi.jpg>
+- **Ch 16** · panias.jpg (score 0) <https://www.preceptaustin.org/files/images/panias.jpg>
+- **Ch 17** · mustardseed.png (score 2) <https://www.preceptaustin.org/files/images/mustardseed.png>
+- **Ch 17** · capernaum.jpg (score 0) <https://www.preceptaustin.org/files/images/capernaum.jpg>
+- **Ch 17** · galileeministry1.jpg (score 0) <https://www.preceptaustin.org/files/images/galileeministry1.jpg>
+- **Ch 18** · longfuse.png (score 2) <https://www.preceptaustin.org/files/images/longfuse.png>
+- **Ch 18** · bind.webp (score 0) <https://www.preceptaustin.org/files/images/bind.webp>
+- **Ch 18** · child.jpg (score 0) <https://www.preceptaustin.org/files/images/child.jpg>
+- **Ch 18** · debt.webp (score 0) <https://www.preceptaustin.org/files/images/debt.webp>
+- **Ch 18** · greates.webp (score 0) <https://www.preceptaustin.org/files/images/greates.webp>
+- **Ch 18** · jesuschild.webp (score 0) <https://www.preceptaustin.org/files/images/jesuschild.webp>
+- **Ch 18** · lostsheep2.webp (score 0) <https://www.preceptaustin.org/files/images/lostsheep2.webp>
+- **Ch 18** · millstone.jpg (score 0) <https://www.preceptaustin.org/files/images/millstone.jpg>
+- **Ch 18** · millstone1.webp (score 0) <https://www.preceptaustin.org/files/images/millstone1.webp>
+- **Ch 18** · noman.jpg (score 0) <https://www.preceptaustin.org/files/images/noman.jpg>
+- **Ch 18** · prison.webp (score 0) <https://www.preceptaustin.org/files/images/prison.webp>
+- **Ch 18** · reprove.webp (score 0) <https://www.preceptaustin.org/files/images/reprove.webp>
+- **Ch 18** · skan.webp (score 0) <https://www.preceptaustin.org/files/images/skan.webp>
+- **Ch 18** · skandalon.jpg (score 0) <https://www.preceptaustin.org/files/images/skandalon.jpg>
+- **Ch 18** · torture.webp (score 0) <https://www.preceptaustin.org/files/images/torture.webp>
+- **Ch 19** · jesuscamel.png (score 2) <https://www.preceptaustin.org/files/images/jesuscamel.png>
+- **Ch 19** · jesuschild.png (score 2) <https://www.preceptaustin.org/files/images/jesuschild.png>
+- **Ch 19** · jesusdivorce.png (score 2) <https://www.preceptaustin.org/files/images/jesusdivorce.png>
+- **Ch 19** · last.png (score 2) <https://www.preceptaustin.org/files/images/last.png>
+- **Ch 19** · healing.webp (score 0) <https://www.preceptaustin.org/files/images/healing.webp>
+- **Ch 19** · rich.jpg (score 0) <https://www.preceptaustin.org/files/images/rich.jpg>
+- **Ch 19** · richyoung.jpg (score 0) <https://www.preceptaustin.org/files/images/richyoung.jpg>
+- **Ch 19** · twoone.webp (score 0) <https://www.preceptaustin.org/files/images/twoone.webp>
+- **Ch 20** · jesus-salome.png (score 2) <https://www.preceptaustin.org/files/images/jesus-salome.png>
+- **Ch 20** · jesus-ten.png (score 2) <https://www.preceptaustin.org/files/images/jesus-ten.png>
+- **Ch 20** · beat.jpg (score 0) <https://www.preceptaustin.org/files/images/beat.jpg>
+- **Ch 20** · cup.jpg (score 0) <https://www.preceptaustin.org/files/images/cup.jpg>
+- **Ch 20** · denarius.jpg (score 0) <https://www.preceptaustin.org/files/images/denarius.jpg>
+- **Ch 20** · jerusalemelevation2.jpg (score 0) <https://www.preceptaustin.org/files/images/jerusalemelevation2.jpg>
+- **Ch 21** · jesus-bethphage.png (score 2) <https://www.preceptaustin.org/files/images/jesus-bethphage.png>
+- **Ch 21** · jesus-children.png (score 2) <https://www.preceptaustin.org/files/images/jesus-children.png>
+- **Ch 21** · jesus-fig.png (score 2) <https://www.preceptaustin.org/files/images/jesus-fig.png>
+- **Ch 21** · jesus-fig1.png (score 2) <https://www.preceptaustin.org/files/images/jesus-fig1.png>
+- **Ch 21** · jesus-healing.png (score 2) <https://www.preceptaustin.org/files/images/jesus-healing.png>
+- **Ch 21** · jesus-money.png (score 2) <https://www.preceptaustin.org/files/images/jesus-money.png>
+- **Ch 21** · bethany.jpg (score 0) <https://www.preceptaustin.org/files/images/bethany.jpg>
+- **Ch 21** · bethphage.jpg (score 0) <https://www.preceptaustin.org/files/images/bethphage.jpg>
+- **Ch 21** · courtofgentiles.jpg (score 0) <https://www.preceptaustin.org/files/images/courtofgentiles.jpg>
+- **Ch 21** · exodusdate.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusdate.jpg>
+- **Ch 21** · jesusauthority.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusauthority.jpg>
+- **Ch 21** · johnbaptist.jpg (score 0) <https://www.preceptaustin.org/files/images/johnbaptist.jpg>
+- **Ch 21** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 21** · moneychangers.jpg (score 0) <https://www.preceptaustin.org/files/images/moneychangers.jpg>
+- **Ch 21** · palm.jpg (score 0) <https://www.preceptaustin.org/files/images/palm.jpg>
+- **Ch 21** · triumphalentry.jpg (score 0) <https://www.preceptaustin.org/files/images/TriumphalEntry.jpg>
+- **Ch 21** · vineyard.jpg (score 0) <https://www.preceptaustin.org/files/images/vineyard.jpg>
+- **Ch 21** · vision.jpg (score 0) <https://www.preceptaustin.org/files/images/vision.jpg>
+- **Ch 21** · watchtower.jpg (score 0) <https://www.preceptaustin.org/files/images/watchtower.jpg>
+- **Ch 21** · wept.jpg (score 0) <https://www.preceptaustin.org/files/images/wept.jpg>
+- **Ch 21** · winepress.jpg (score 0) <https://www.preceptaustin.org/files/images/winepress.jpg>
+- **Ch 22** · jesus-bind.png (score 2) <https://www.preceptaustin.org/files/images/jesus-bind.png>
+- **Ch 22** · jesus-called.png (score 2) <https://www.preceptaustin.org/files/images/jesus-called.png>
+- **Ch 22** · jesus-coin.png (score 2) <https://www.preceptaustin.org/files/images/jesus-coin.png>
+- **Ch 22** · jesus-went.png (score 2) <https://www.preceptaustin.org/files/images/jesus-went.png>
+- **Ch 22** · courtofgentiles.jpg (score 0) <https://www.preceptaustin.org/files/images/courtofgentiles.jpg>
+- **Ch 22** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 22** · scribe.jpg (score 0) <https://www.preceptaustin.org/files/images/scribe.jpg>
+- **Ch 22** · sermon1.gif (score 0) <https://www.preceptaustin.org/files/images/sermon1.gif>
+- **Ch 22** · zeph-1.gif (score 0) <https://www.preceptaustin.org/files/images/zeph-1.gif>
+- **Ch 23** · goatsins.png (score 2) <https://www.preceptaustin.org/files/images/goatsins.png>
+- **Ch 23** · jesus-broad1.png (score 2) <https://www.preceptaustin.org/files/images/jesus-broad1.png>
+- **Ch 23** · jesus-cup.png (score 2) <https://www.preceptaustin.org/files/images/jesus-cup.png>
+- **Ch 23** · jesus-dill.png (score 2) <https://www.preceptaustin.org/files/images/jesus-dill.png>
+- **Ch 23** · jesus-dill1.png (score 2) <https://www.preceptaustin.org/files/images/jesus-dill1.png>
+- **Ch 23** · jesus-fill.png (score 2) <https://www.preceptaustin.org/files/images/jesus-fill.png>
+- **Ch 23** · jesus-gnat.png (score 2) <https://www.preceptaustin.org/files/images/jesus-gnat.png>
+- **Ch 23** · jesus-hen.png (score 2) <https://www.preceptaustin.org/files/images/jesus-hen.png>
+- **Ch 23** · jesus-tomb.png (score 2) <https://www.preceptaustin.org/files/images/jesus-tomb.png>
+- **Ch 23** · jesus-white.png (score 2) <https://www.preceptaustin.org/files/images/jesus-white.png>
+- **Ch 23** · jesus-tefillin.jpg (score 0) <https://www.preceptaustin.org/files/images/jesus-tefillin.jpg>
+- **Ch 23** · jesus-tefillin1.jpg (score 0) <https://www.preceptaustin.org/files/images/jesus-tefillin1.jpg>
+- **Ch 23** · mammon.jpg (score 0) <https://www.preceptaustin.org/files/images/mammon.jpg>
+- **Ch 23** · woe.jpg (score 0) <https://www.preceptaustin.org/files/images/woe.jpg>
+- **Ch 24** · earthquake.png (score 2) <https://www.preceptaustin.org/files/images/earthquake.png>
+- **Ch 24** · mountofolivesjesus.jpg (score 0) <https://www.preceptaustin.org/files/images/mountofolivesjesus.jpg>
+- **Ch 24** · stone.jpg (score 0) <https://www.preceptaustin.org/files/images/stone.JPG>
+- **Ch 24** · templemodel.jpg (score 0) <https://www.preceptaustin.org/files/images/templemodel.jpg>
+- **Ch 24** · vision.jpg (score 0) <https://www.preceptaustin.org/files/images/vision.jpg>
+- **Ch 25** · fear.png (score 2) <https://www.preceptaustin.org/files/images/fear.png>
+- **Ch 25** · hell.png (score 2) <https://www.preceptaustin.org/files/images/hell.png>
+- **Ch 25** · outerdarkness.png (score 2) <https://www.preceptaustin.org/files/images/outerdarkness.png>
+- **Ch 25** · sheepgoats.png (score 2) <https://www.preceptaustin.org/files/images/sheepgoats.png>
+- **Ch 25** · talentone.png (score 2) <https://www.preceptaustin.org/files/images/talentone.png>
+- **Ch 25** · talents.png (score 2) <https://www.preceptaustin.org/files/images/talents.png>
+- **Ch 25** · talentsfive.png (score 2) <https://www.preceptaustin.org/files/images/talentsfive.png>
+- **Ch 25** · talentwelldone.png (score 2) <https://www.preceptaustin.org/files/images/talentwelldone.png>
+- **Ch 25** · virgin-defcom.png (score 2) <https://www.preceptaustin.org/files/images/virgin-defcom.png>
+- **Ch 25** · virgin-open.png (score 2) <https://www.preceptaustin.org/files/images/virgin-open.png>
+- **Ch 25** · virgin-torch.png (score 2) <https://www.preceptaustin.org/files/images/virgin-torch.png>
+- **Ch 25** · virginwent.png (score 2) <https://www.preceptaustin.org/files/images/virginwent.png>
+- **Ch 25** · waiting.png (score 2) <https://www.preceptaustin.org/files/images/waiting.png>
+- **Ch 25** · girdloins.jpg (score 0) <https://www.preceptaustin.org/files/images/girdloins.jpg>
+- **Ch 25** · kog.jpg (score 0) <https://www.preceptaustin.org/files/images/kog.jpg>
+- **Ch 25** · marriagesupper.jpg (score 0) <https://www.preceptaustin.org/files/images/marriagesupper.jpg>
+- **Ch 25** · perhapstoday.jpg (score 0) <https://www.preceptaustin.org/files/images/perhapstoday.jpg>
 - **Ch 26** · mapjerusalem.png (score 12) <https://www.preceptaustin.org/files/images/mapjerusalem.png>
+- **Ch 26** · galilee.png (score 2) <https://www.preceptaustin.org/files/images/galilee.png>
+- **Ch 26** · bethphage.jpg (score 0) <https://www.preceptaustin.org/files/images/bethphage.jpg>
+- **Ch 26** · christ_gethsemane.jpg (score 0) <https://www.preceptaustin.org/files/images/Christ_Gethsemane.jpg>
+- **Ch 26** · gethsemane.jpg (score 0) <https://www.preceptaustin.org/files/images/gethsemane.jpg>
+- **Ch 26** · gethsemane1.jpg (score 0) <https://www.preceptaustin.org/files/images/gethsemane1.jpg>
+- **Ch 26** · jesusarrest.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusarrest.jpg>
+- **Ch 26** · jesuscondemned.jpg (score 0) <https://www.preceptaustin.org/files/images/jesuscondemned.jpg>
+- **Ch 26** · judaskiss.jpg (score 0) <https://www.preceptaustin.org/files/images/judaskiss.jpg>
+- **Ch 26** · lamb of god passover.gif (score 0) <https://www.preceptaustin.org/files/images/lamb%20of%20God%20passover.gif>
+- **Ch 26** · lastsupper1.jpg (score 0) <https://www.preceptaustin.org/files/images/lastsupper1.jpg>
+- **Ch 26** · luke14diningtable.gif (score 0) <https://www.preceptaustin.org/files/images/luke14diningtable.GIF>
+- **Ch 26** · pilate.jpg (score 0) <https://www.preceptaustin.org/files/images/pilate.jpg>
+- **Ch 26** · pitcher1.jpg (score 0) <https://www.preceptaustin.org/files/images/pitcher1.jpg>
+- **Ch 26** · recline.jpg (score 0) <https://www.preceptaustin.org/files/images/recline.JPG>
+- **Ch 26** · sederplate.jpg (score 0) <https://www.preceptaustin.org/files/images/sederplate.jpg>
+- **Ch 26** · skandalon.jpg (score 0) <https://www.preceptaustin.org/files/images/skandalon.jpg>
+- **Ch 26** · upperroom.jpg (score 0) <https://www.preceptaustin.org/files/images/upperroom.jpg>
 - **Ch 27** · mapjerusalem.png (score 12) <https://www.preceptaustin.org/files/images/mapjerusalem.png>
+- **Ch 27** · barabbas.png (score 2) <https://www.preceptaustin.org/files/images/barabbas.png>
+- **Ch 27** · crossbeam.jpg (score 0) <https://www.preceptaustin.org/files/images/crossbeam.jpg>
+- **Ch 27** · golgotha.jpg (score 0) <https://www.preceptaustin.org/files/images/golgotha.jpg>
+- **Ch 27** · jesusbeatingbreast.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusbeatingbreast.jpg>
+- **Ch 27** · jesuscarryingcross.jpg (score 0) <https://www.preceptaustin.org/files/images/jesuscarryingcross.jpg>
+- **Ch 27** · jesuscondemned.jpg (score 0) <https://www.preceptaustin.org/files/images/jesuscondemned.jpg>
+- **Ch 27** · jesuscross1.jpg (score 0) <https://www.preceptaustin.org/files/images/jesuscross1.jpg>
+- **Ch 27** · kingofjews.jpg (score 0) <https://www.preceptaustin.org/files/images/kingofjews.jpg>
+- **Ch 27** · pilate.jpg (score 0) <https://www.preceptaustin.org/files/images/pilate.jpg>
+- **Ch 27** · pilateswife.jpg (score 0) <https://www.preceptaustin.org/files/images/pilateswife.jpg>
+- **Ch 27** · scourge2.jpg (score 0) <https://www.preceptaustin.org/files/images/scourge2.jpg>
+- **Ch 27** · tomb.jpg (score 0) <https://www.preceptaustin.org/files/images/tomb.jpg>
+- **Ch 28** · galilee.png (score 2) <https://www.preceptaustin.org/files/images/galilee.png>
+- **Ch 28** · tomb.jpg (score 0) <https://www.preceptaustin.org/files/images/tomb.jpg>
 
-## numbers — 0 book-level, 3 per-chapter (probed 36 chapters)
+## micah — 3 book-level, 3 per-chapter (probed 7 chapters)
 
+### Book-level
+- micahmap.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/micahmap.jpg>
+- micahtime.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/micahtime.png>
+- prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
 ### Per-chapter
+- **Ch 2** · bozrah.jpg (score 0) <https://www.preceptaustin.org/files/images/bozrah.jpg>
+- **Ch 4** · river.gif (score 0) <https://www.preceptaustin.org/files/images/river.gif>
+- **Ch 4** · zeph-1.gif (score 0) <https://www.preceptaustin.org/files/images/zeph-1.gif>
+
+## numbers — 2 book-level, 128 per-chapter (probed 36 chapters)
+
+### Book-level
+- numbers.jpg (score 0, 36 chapters) <https://www.preceptaustin.org/files/images/numbers.jpg>
+- numberstime.jpg (score 0, 36 chapters) <https://www.preceptaustin.org/files/images/numberstime.jpg>
+### Per-chapter
+- **Ch 1** · census.jpg (score 0) <https://www.preceptaustin.org/files/images/census.jpg>
+- **Ch 2** · camp2.jpg (score 0) <https://www.preceptaustin.org/files/images/camp2.jpg>
+- **Ch 2** · census1.jpg (score 0) <https://www.preceptaustin.org/files/images/census1.jpg>
+- **Ch 2** · exodustribeplacement.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustribeplacement.jpg>
 - **Ch 3** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
+- **Ch 3** · exodustabernacleesvbig.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernacleesvbig.jpg>
+- **Ch 3** · nadab.jpg (score 0) <https://www.preceptaustin.org/files/images/nadab.jpg>
+- **Ch 4** · duty.jpg (score 0) <https://www.preceptaustin.org/files/images/duty.jpg>
+- **Ch 4** · duty2.jpg (score 0) <https://www.preceptaustin.org/files/images/duty2.jpg>
+- **Ch 4** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 4** · exodusbrazen2.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusbrazen2.jpg>
+- **Ch 4** · exoduslampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslampstand.jpg>
+- **Ch 4** · exoduslaver.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslaver.jpg>
+- **Ch 4** · exodusshowbread.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusshowbread.jpg>
+- **Ch 4** · exodustabernaclecourt.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernaclecourt.jpg>
+- **Ch 6** · tab.jpg (score 0) <https://www.preceptaustin.org/files/images/tab.jpg>
+- **Ch 7** · camp3.jpg (score 0) <https://www.preceptaustin.org/files/images/camp3.jpg>
+- **Ch 7** · exodusmercyseat.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusmercyseat.jpg>
+- **Ch 7** · tab.jpg (score 0) <https://www.preceptaustin.org/files/images/tab.jpg>
+- **Ch 8** · tab.jpg (score 0) <https://www.preceptaustin.org/files/images/tab.jpg>
+- **Ch 9** · lamb of god passover.gif (score 0) <https://www.preceptaustin.org/files/images/lamb%20of%20God%20passover.gif>
+- **Ch 9** · paran.jpg (score 0) <https://www.preceptaustin.org/files/images/paran.jpg>
+- **Ch 9** · tabernacle.jpg (score 0) <https://www.preceptaustin.org/files/images/tabernacle.jpg>
+- **Ch 10** · ark.jpg (score 0) <https://www.preceptaustin.org/files/images/ark.jpg>
+- **Ch 10** · camp3.jpg (score 0) <https://www.preceptaustin.org/files/images/camp3.jpg>
+- **Ch 10** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
+- **Ch 10** · loc.jpg (score 0) <https://www.preceptaustin.org/files/images/loc.jpg>
+- **Ch 10** · march.jpg (score 0) <https://www.preceptaustin.org/files/images/march.jpg>
+- **Ch 10** · paran.jpg (score 0) <https://www.preceptaustin.org/files/images/paran.jpg>
+- **Ch 10** · tru.jpg (score 0) <https://www.preceptaustin.org/files/images/tru.jpg>
+- **Ch 11** · gulf.jpg (score 0) <https://www.preceptaustin.org/files/images/gulf.jpg>
+- **Ch 11** · manna.jpg (score 0) <https://www.preceptaustin.org/files/images/manna.jpg>
+- **Ch 11** · quail.jpg (score 0) <https://www.preceptaustin.org/files/images/quail.jpg>
+- **Ch 11** · tab.jpg (score 0) <https://www.preceptaustin.org/files/images/tab.jpg>
+- **Ch 12** · paran.jpg (score 0) <https://www.preceptaustin.org/files/images/paran.jpg>
+- **Ch 13** · grap.jpg (score 0) <https://www.preceptaustin.org/files/images/grap.jpg>
+- **Ch 13** · grapes.jpg (score 0) <https://www.preceptaustin.org/files/images/grapes.jpg>
+- **Ch 13** · locust1.jpg (score 0) <https://www.preceptaustin.org/files/images/locust1.jpg>
+- **Ch 13** · spy.jpg (score 0) <https://www.preceptaustin.org/files/images/spy.jpg>
+- **Ch 14** · horman.jpg (score 0) <https://www.preceptaustin.org/files/images/horman.jpg>
+- **Ch 15** · exodusphylactery.gif (score 0) <https://www.preceptaustin.org/files/images/exodusphylactery.gif>
+- **Ch 15** · tassel.jpg (score 0) <https://www.preceptaustin.org/files/images/tassel.jpg>
+- **Ch 16** · famtree.png (score 2) <https://www.preceptaustin.org/files/images/famtree.png>
+- **Ch 16** · censer.jpg (score 0) <https://www.preceptaustin.org/files/images/censer.jpg>
+- **Ch 16** · censer1.jpg (score 0) <https://www.preceptaustin.org/files/images/censer1.jpg>
+- **Ch 16** · complaint.jpg (score 0) <https://www.preceptaustin.org/files/images/complaint.jpg>
+- **Ch 16** · exodusbrazen2.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusbrazen2.jpg>
+- **Ch 16** · korah.jpg (score 0) <https://www.preceptaustin.org/files/images/korah.jpg>
+- **Ch 16** · korahfall.jpg (score 0) <https://www.preceptaustin.org/files/images/korahfall.jpg>
+- **Ch 16** · korahfire.jpg (score 0) <https://www.preceptaustin.org/files/images/korahfire.jpg>
+- **Ch 17** · almond.jpg (score 0) <https://www.preceptaustin.org/files/images/almond.jpg>
+- **Ch 17** · ark1.jpg (score 0) <https://www.preceptaustin.org/files/images/ark1.jpg>
+- **Ch 17** · arkbudall.jpg (score 0) <https://www.preceptaustin.org/files/images/arkbudall.jpg>
 - **Ch 18** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
+- **Ch 18** · priest.jpg (score 0) <https://www.preceptaustin.org/files/images/priest.jpg>
+- **Ch 19** · exodushyssop.jpg (score 0) <https://www.preceptaustin.org/files/images/exodushyssop.jpg>
+- **Ch 20** · king.png (score 2) <https://www.preceptaustin.org/files/images/king.png>
+- **Ch 20** · hor.jpeg (score 0) <https://www.preceptaustin.org/files/images/hor.jpeg>
+- **Ch 20** · kadesh.jpg (score 0) <https://www.preceptaustin.org/files/images/kadesh.jpg>
+- **Ch 21** · arad.jpg (score 0) <https://www.preceptaustin.org/files/images/arad.jpg>
+- **Ch 21** · arnon.jpg (score 0) <https://www.preceptaustin.org/files/images/arnon.jpg>
+- **Ch 21** · bronze.jpg (score 0) <https://www.preceptaustin.org/files/images/bronze.jpg>
+- **Ch 21** · edrei.jpg (score 0) <https://www.preceptaustin.org/files/images/edrei.jpg>
+- **Ch 21** · heshbon.jpg (score 0) <https://www.preceptaustin.org/files/images/heshbon.jpg>
+- **Ch 21** · jabbok.jpg (score 0) <https://www.preceptaustin.org/files/images/jabbok.jpg>
+- **Ch 21** · jazer.jpg (score 0) <https://www.preceptaustin.org/files/images/jazer.jpg>
+- **Ch 21** · moab.jpg (score 0) <https://www.preceptaustin.org/files/images/moab.jpg>
+- **Ch 21** · moabst1.jpg (score 0) <https://www.preceptaustin.org/files/images/moabst1.jpg>
+- **Ch 21** · topographyisrael_small.jpg (score 0) <https://www.preceptaustin.org/files/images/TopographyIsrael_small.jpg>
+- **Ch 21** · zered.jpg (score 0) <https://www.preceptaustin.org/files/images/zered.jpg>
+- **Ch 22** · arad.jpg (score 0) <https://www.preceptaustin.org/files/images/arad.jpg>
+- **Ch 22** · balaamdonk.jpg (score 0) <https://www.preceptaustin.org/files/images/balaamdonk.jpg>
+- **Ch 22** · exodustribeplacement.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustribeplacement.jpg>
+- **Ch 22** · moabplain.jpg (score 0) <https://www.preceptaustin.org/files/images/moabplain.jpg>
+- **Ch 22** · pethor.jpg (score 0) <https://www.preceptaustin.org/files/images/pethor.jpg>
+- **Ch 22** · sheep.jpg (score 0) <https://www.preceptaustin.org/files/images/sheep.jpg>
+- **Ch 23** · exodustribeplacement.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustribeplacement.jpg>
+- **Ch 23** · peor.jpg (score 0) <https://www.preceptaustin.org/files/images/peor.jpg>
+- **Ch 23** · pisgah.jpg (score 0) <https://www.preceptaustin.org/files/images/pisgah.jpg>
+- **Ch 24** · exodustribeplacement.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustribeplacement.jpg>
+- **Ch 24** · zeph-1.gif (score 0) <https://www.preceptaustin.org/files/images/zeph-1.gif>
+- **Ch 25** · phinehas.jpg (score 0) <https://www.preceptaustin.org/files/images/phinehas.jpg>
+- **Ch 25** · shittim.jpg (score 0) <https://www.preceptaustin.org/files/images/shittim.jpg>
+- **Ch 26** · ex614.jpg (score 0) <https://www.preceptaustin.org/files/images/ex614.jpg>
+- **Ch 26** · levi.jpg (score 0) <https://www.preceptaustin.org/files/images/levi.jpg>
+- **Ch 26** · numbering.jpg (score 0) <https://www.preceptaustin.org/files/images/numbering.jpg>
+- **Ch 26** · plain.jpg (score 0) <https://www.preceptaustin.org/files/images/plain.jpg>
+- **Ch 27** · josh.png (score 2) <https://www.preceptaustin.org/files/images/josh.png>
+- **Ch 27** · joshua.jpg (score 0) <https://www.preceptaustin.org/files/images/joshua.jpg>
+- **Ch 27** · kadesh.jpg (score 0) <https://www.preceptaustin.org/files/images/kadesh.jpg>
+- **Ch 27** · mosesland.jpg (score 0) <https://www.preceptaustin.org/files/images/mosesland.jpg>
+- **Ch 27** · nebo.jpg (score 0) <https://www.preceptaustin.org/files/images/nebo.jpg>
+- **Ch 27** · priest.jpg (score 0) <https://www.preceptaustin.org/files/images/priest.jpg>
+- **Ch 28** · calendar.png (score 2) <https://www.preceptaustin.org/files/images/calendar.png>
+- **Ch 28** · calen.jpg (score 0) <https://www.preceptaustin.org/files/images/calen.jpg>
+- **Ch 28** · feasts.jpg (score 0) <https://www.preceptaustin.org/files/images/feasts.jpg>
+- **Ch 28** · firstfruits.jpg (score 0) <https://www.preceptaustin.org/files/images/firstfruits.jpg>
+- **Ch 28** · holiday.jpg (score 0) <https://www.preceptaustin.org/files/images/holiday.jpg>
+- **Ch 28** · lamb of god passover.gif (score 0) <https://www.preceptaustin.org/files/images/lamb%20of%20God%20passover.gif>
+- **Ch 28** · newmoon.jpg (score 0) <https://www.preceptaustin.org/files/images/newmoon.jpg>
+- **Ch 29** · calendar.png (score 2) <https://www.preceptaustin.org/files/images/calendar.png>
+- **Ch 29** · feasts.jpg (score 0) <https://www.preceptaustin.org/files/images/feasts.jpg>
+- **Ch 29** · holiday.jpg (score 0) <https://www.preceptaustin.org/files/images/holiday.jpg>
+- **Ch 29** · newmoon.jpg (score 0) <https://www.preceptaustin.org/files/images/newmoon.jpg>
+- **Ch 29** · shofar1.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar1.jpg>
+- **Ch 29** · sukkot.jpg (score 0) <https://www.preceptaustin.org/files/images/sukkot.jpg>
+- **Ch 29** · yom.jpg (score 0) <https://www.preceptaustin.org/files/images/yom.jpg>
+- **Ch 31** · captive.jpg (score 0) <https://www.preceptaustin.org/files/images/captive.jpg>
+- **Ch 31** · kill.jpg (score 0) <https://www.preceptaustin.org/files/images/kill.jpg>
+- **Ch 31** · kings.jpg (score 0) <https://www.preceptaustin.org/files/images/kings.jpg>
+- **Ch 31** · phinehas.jpg (score 0) <https://www.preceptaustin.org/files/images/phinehas.jpg>
+- **Ch 31** · signet.jpg (score 0) <https://www.preceptaustin.org/files/images/signet.jpg>
+- **Ch 31** · spoils.jpg (score 0) <https://www.preceptaustin.org/files/images/spoils.jpg>
+- **Ch 31** · veng.jpg (score 0) <https://www.preceptaustin.org/files/images/veng.jpg>
 - **Ch 32** · mapnu.png (score 12) <https://www.preceptaustin.org/files/images/mapnu.png>
+- **Ch 32** · gilead.jpg (score 0) <https://www.preceptaustin.org/files/images/gilead.jpg>
+- **Ch 32** · jazer.jpg (score 0) <https://www.preceptaustin.org/files/images/jazer.jpg>
+- **Ch 33** · moab1.jpg (score 0) <https://www.preceptaustin.org/files/images/moab1.jpg>
+- **Ch 33** · ram.jpg (score 0) <https://www.preceptaustin.org/files/images/ram.jpg>
+- **Ch 33** · rith.jpg (score 0) <https://www.preceptaustin.org/files/images/rith.jpg>
+- **Ch 33** · wild.jpg (score 0) <https://www.preceptaustin.org/files/images/wild.jpg>
+- **Ch 34** · prom.jpg (score 0) <https://www.preceptaustin.org/files/images/prom.jpg>
+- **Ch 34** · prom1.jpg (score 0) <https://www.preceptaustin.org/files/images/prom1.jpg>
+- **Ch 35** · 1000.jpg (score 0) <https://www.preceptaustin.org/files/images/1000.jpg>
+- **Ch 35** · avenger.jpg (score 0) <https://www.preceptaustin.org/files/images/avenger.jpg>
+- **Ch 35** · levicity.jpg (score 0) <https://www.preceptaustin.org/files/images/levicity.jpg>
+- **Ch 35** · moab1.jpg (score 0) <https://www.preceptaustin.org/files/images/moab1.jpg>
+- **Ch 36** · prom.jpg (score 0) <https://www.preceptaustin.org/files/images/prom.jpg>
 
-## revelation — 0 book-level, 15 per-chapter (probed 22 chapters)
+## proverbs — 1 book-level, 7 per-chapter (probed 10 chapters)
 
+### Book-level
+- proverbs.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/proverbs.jpg>
+### Per-chapter
+- **Ch 4** · ear.jpg (score 0) <https://www.preceptaustin.org/files/images/ear.jpg>
+- **Ch 4** · fork in the road.jpg (score 0) <https://www.preceptaustin.org/files/images/fork%20in%20the%20road.jpg>
+- **Ch 4** · heart.gif (score 0) <https://www.preceptaustin.org/files/images/heart.gif>
+- **Ch 4** · horse.jpg (score 0) <https://www.preceptaustin.org/files/images/horse.jpg>
+- **Ch 4** · sandals.jpg (score 0) <https://www.preceptaustin.org/files/images/sandals.jpg>
+- **Ch 4** · sungalilee.jpg (score 0) <https://www.preceptaustin.org/files/images/sungalilee.jpg>
+- **Ch 7** · slaughter.jpg (score 0) <https://www.preceptaustin.org/files/images/slaughter.jpg>
+
+## revelation — 8 book-level, 101 per-chapter (probed 22 chapters)
+
+### Book-level
+- rev_map.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/rev_map.png>
+- rev_overview.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/rev_overview.png>
+- rev.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/rev.png>
+- rev_historical_setting.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/rev_historical_setting.png>
+- rev_interpretation.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/rev_interpretation.png>
+- waiting.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/waiting.png>
+- godsplan.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/godsplan.jpg>
+- patmos2.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/patmos2.jpg>
 ### Per-chapter
 - **Ch 1** · rev_map.png (score 12) <https://www.preceptaustin.org/files/images/rev_map.png>
 - **Ch 1** · rev_overview.png (score 12) <https://www.preceptaustin.org/files/images/rev_overview.png>
 - **Ch 1** · revelationmap.jpg (score 10) <https://www.preceptaustin.org/files/images/revelationmap.jpg>
+- **Ch 1** · alpha.png (score 2) <https://www.preceptaustin.org/files/images/alpha.png>
+- **Ch 1** · blood.png (score 2) <https://www.preceptaustin.org/files/images/blood.png>
+- **Ch 1** · glorifiedchrist.png (score 2) <https://www.preceptaustin.org/files/images/glorifiedchrist.png>
+- **Ch 1** · johnpatmos.png (score 2) <https://www.preceptaustin.org/files/images/johnpatmos.png>
+- **Ch 1** · loudvoice.png (score 2) <https://www.preceptaustin.org/files/images/loudvoice.png>
+- **Ch 1** · rev.png (score 2) <https://www.preceptaustin.org/files/images/rev.png>
+- **Ch 1** · rev_historical_setting.png (score 2) <https://www.preceptaustin.org/files/images/rev_historical_setting.png>
+- **Ch 1** · tribulation.png (score 2) <https://www.preceptaustin.org/files/images/tribulation.png>
+- **Ch 1** · johnpatmos1.jpg (score 0) <https://www.preceptaustin.org/files/images/johnpatmos1.jpg>
+- **Ch 1** · kairoslysippus.jpg (score 0) <https://www.preceptaustin.org/files/images/kairoslysippus.jpg>
+- **Ch 1** · martyr.jpg (score 0) <https://www.preceptaustin.org/files/images/martyr.jpg>
+- **Ch 1** · menorah.jpg (score 0) <https://www.preceptaustin.org/files/images/menorah.jpg>
+- **Ch 1** · patmos2.jpg (score 0) <https://www.preceptaustin.org/files/images/patmos2.jpg>
+- **Ch 1** · revelationpatmos.jpg (score 0) <https://www.preceptaustin.org/files/images/revelationpatmos.jpg>
+- **Ch 1** · secondcoming.jpg (score 0) <https://www.preceptaustin.org/files/images/secondcoming.jpg>
+- **Ch 1** · sun.jpg (score 0) <https://www.preceptaustin.org/files/images/sun.jpg>
+- **Ch 1** · tachometer.jpg (score 0) <https://www.preceptaustin.org/files/images/tachometer.jpg>
 - **Ch 2** · ephesusmap.png (score 12) <https://www.preceptaustin.org/files/images/ephesusmap.png>
 - **Ch 2** · rev_map.png (score 12) <https://www.preceptaustin.org/files/images/rev_map.png>
 - **Ch 2** · rev_overview.png (score 12) <https://www.preceptaustin.org/files/images/rev_overview.png>
@@ -308,22 +3260,141 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 2** · smyrnamap.jpg (score 10) <https://www.preceptaustin.org/files/images/smyrnamap.jpg>
 - **Ch 2** · templediana.jpg (score 10) <https://www.preceptaustin.org/files/images/templediana.jpg>
 - **Ch 2** · thyatiradiagram.jpg (score 10) <https://www.preceptaustin.org/files/images/thyatiradiagram.jpg>
+- **Ch 2** · caduceus.png (score 2) <https://www.preceptaustin.org/files/images/caduceus.png>
+- **Ch 2** · rev.png (score 2) <https://www.preceptaustin.org/files/images/rev.png>
+- **Ch 2** · rev_historical_setting.png (score 2) <https://www.preceptaustin.org/files/images/rev_historical_setting.png>
+- **Ch 2** · tribulation.png (score 2) <https://www.preceptaustin.org/files/images/tribulation.png>
+- **Ch 2** · bema.jpg (score 0) <https://www.preceptaustin.org/files/images/bema.jpg>
+- **Ch 2** · ephesus-arch.jpg (score 0) <https://www.preceptaustin.org/files/images/ephesus-arch.jpg>
+- **Ch 2** · ephesus-artemis.jpg (score 0) <https://www.preceptaustin.org/files/images/ephesus-artemis.jpg>
+- **Ch 2** · ephesus-firstlove.jpg (score 0) <https://www.preceptaustin.org/files/images/ephesus-firstlove.jpg>
+- **Ch 2** · ephesus-temple.jpg (score 0) <https://www.preceptaustin.org/files/images/ephesus-temple.jpg>
+- **Ch 2** · ephesussediment.jpeg (score 0) <https://www.preceptaustin.org/files/images/ephesussediment.jpeg>
+- **Ch 2** · ephsed.jpg (score 0) <https://www.preceptaustin.org/files/images/ephsed.jpg>
+- **Ch 2** · exoduslampstand.jpg (score 0) <https://www.preceptaustin.org/files/images/exoduslampstand.jpg>
+- **Ch 2** · jezebel.jpg (score 0) <https://www.preceptaustin.org/files/images/jezebel.jpg>
+- **Ch 2** · martyr.jpg (score 0) <https://www.preceptaustin.org/files/images/martyr.jpg>
+- **Ch 2** · mousetrap.jpg (score 0) <https://www.preceptaustin.org/files/images/mousetrap.jpg>
+- **Ch 2** · myrrhresin.jpg (score 0) <https://www.preceptaustin.org/files/images/myrrhresin.jpg>
+- **Ch 2** · myrrhtree.jpg (score 0) <https://www.preceptaustin.org/files/images/myrrhtree.jpg>
+- **Ch 2** · patmos2.jpg (score 0) <https://www.preceptaustin.org/files/images/patmos2.jpg>
+- **Ch 2** · pergamum-balaam.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamum-balaam.jpg>
+- **Ch 2** · pergamum-city.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamum-city.jpg>
+- **Ch 2** · pergamum.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamum.jpg>
+- **Ch 2** · pergamum1.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamum1.jpg>
+- **Ch 2** · pergamumasc.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamumasc.jpg>
+- **Ch 2** · pergamumathena.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamumathena.jpg>
+- **Ch 2** · pergamumcoin.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamumcoin.jpg>
+- **Ch 2** · pergamumlayout.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamumlayout.jpg>
+- **Ch 2** · pergamumneo1.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamumneo1.jpg>
+- **Ch 2** · pergamumsword.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamumsword.jpg>
+- **Ch 2** · pergamumtheater.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamumtheater.jpg>
+- **Ch 2** · pergamumzeus.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamumzeus.jpg>
+- **Ch 2** · pergamumzeus1.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamumzeus1.jpg>
+- **Ch 2** · pergamumzeusaltar.jpg (score 0) <https://www.preceptaustin.org/files/images/pergamumzeusaltar.jpg>
+- **Ch 2** · smyrnapagos.jpg (score 0) <https://www.preceptaustin.org/files/images/smyrnapagos.jpg>
+- **Ch 2** · smyrnaruin.jpg (score 0) <https://www.preceptaustin.org/files/images/smyrnaruin.jpg>
+- **Ch 2** · thyatiraruins1.jpeg (score 0) <https://www.preceptaustin.org/files/images/thyatiraruins1.jpeg>
 - **Ch 3** · rev_map.png (score 12) <https://www.preceptaustin.org/files/images/rev_map.png>
 - **Ch 3** · rev_overview.png (score 12) <https://www.preceptaustin.org/files/images/rev_overview.png>
+- **Ch 3** · rev.png (score 2) <https://www.preceptaustin.org/files/images/rev.png>
+- **Ch 3** · rev_historical_setting.png (score 2) <https://www.preceptaustin.org/files/images/rev_historical_setting.png>
+- **Ch 3** · emperorclothes.jpg (score 0) <https://www.preceptaustin.org/files/images/emperorclothes.jpg>
+- **Ch 3** · jesusknocking1.jpg (score 0) <https://www.preceptaustin.org/files/images/jesusknocking1.jpg>
+- **Ch 3** · keyofdavid.jpg (score 0) <https://www.preceptaustin.org/files/images/keyofdavid.jpg>
+- **Ch 3** · laodicealycus.jpg (score 0) <https://www.preceptaustin.org/files/images/laodicealycus.jpg>
+- **Ch 3** · laodicealycusriver.jpg (score 0) <https://www.preceptaustin.org/files/images/laodicealycusriver.jpg>
+- **Ch 3** · maranatha.jpg (score 0) <https://www.preceptaustin.org/files/images/maranatha.jpg>
+- **Ch 3** · patmos2.jpg (score 0) <https://www.preceptaustin.org/files/images/patmos2.jpg>
+- **Ch 3** · revelation310.jpg (score 0) <https://www.preceptaustin.org/files/images/revelation310.jpg>
+- **Ch 3** · sardiswall.jpg (score 0) <https://www.preceptaustin.org/files/images/sardiswall.jpg>
+- **Ch 3** · scales1.gif (score 0) <https://www.preceptaustin.org/files/images/scales1.gif>
+- **Ch 3** · spit.jpg (score 0) <https://www.preceptaustin.org/files/images/spit.jpg>
 - **Ch 4** · rev_map.png (score 12) <https://www.preceptaustin.org/files/images/rev_map.png>
 - **Ch 4** · rev_overview.png (score 12) <https://www.preceptaustin.org/files/images/rev_overview.png>
+- **Ch 4** · rev.png (score 2) <https://www.preceptaustin.org/files/images/rev.png>
+- **Ch 4** · rev_historical_setting.png (score 2) <https://www.preceptaustin.org/files/images/rev_historical_setting.png>
+- **Ch 4** · 24elders.jpg (score 0) <https://www.preceptaustin.org/files/images/24elders.jpg>
+- **Ch 4** · fourlc.jpg (score 0) <https://www.preceptaustin.org/files/images/fourlc.jpg>
+- **Ch 4** · patmos2.jpg (score 0) <https://www.preceptaustin.org/files/images/patmos2.jpg>
+- **Ch 4** · throneheaven.jpg (score 0) <https://www.preceptaustin.org/files/images/throneheaven.jpg>
 - **Ch 5** · rev_overview.png (score 12) <https://www.preceptaustin.org/files/images/rev_overview.png>
+- **Ch 5** · rev.png (score 2) <https://www.preceptaustin.org/files/images/rev.png>
+- **Ch 5** · maranatha.jpg (score 0) <https://www.preceptaustin.org/files/images/maranatha.jpg>
+- **Ch 5** · patmos2.jpg (score 0) <https://www.preceptaustin.org/files/images/patmos2.jpg>
+- **Ch 5** · scroll.jpg (score 0) <https://www.preceptaustin.org/files/images/scroll.jpg>
+- **Ch 5** · scroll1.jpg (score 0) <https://www.preceptaustin.org/files/images/scroll1.jpg>
+- **Ch 5** · worship.jpg (score 0) <https://www.preceptaustin.org/files/images/worship.jpg>
+- **Ch 7** · r915.png (score 2) <https://www.preceptaustin.org/files/images/r915.png>
+- **Ch 9** · rev9.jpeg (score 0) <https://www.preceptaustin.org/files/images/rev9.jpeg>
+- **Ch 10** · r911.png (score 2) <https://www.preceptaustin.org/files/images/r911.png>
+- **Ch 10** · r96.png (score 2) <https://www.preceptaustin.org/files/images/r96.png>
+- **Ch 10** · r97.png (score 2) <https://www.preceptaustin.org/files/images/r97.png>
+- **Ch 11** · r93.png (score 2) <https://www.preceptaustin.org/files/images/r93.png>
+- **Ch 11** · r94.png (score 2) <https://www.preceptaustin.org/files/images/r94.png>
+- **Ch 14** · r915.png (score 2) <https://www.preceptaustin.org/files/images/r915.png>
+- **Ch 16** · armageddon.jpg (score 0) <https://www.preceptaustin.org/files/images/armageddon.jpg>
 
-## zechariah — 0 book-level, 2 per-chapter (probed 5 chapters)
+## romans — 3 book-level, 3 per-chapter (probed 5 chapters)
 
+### Book-level
+- paul_epistle.jpg (score 0, 3 chapters) <https://www.preceptaustin.org/files/images/paul_epistle.jpg>
+- romansroad.gif (score 0, 3 chapters) <https://www.preceptaustin.org/files/images/romansroad.gif>
+- romeesv.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/romeesv.jpg>
 ### Per-chapter
+- **Ch 2** · longfuse.png (score 2) <https://www.preceptaustin.org/files/images/longfuse.png>
+- **Ch 2** · aboutface.jpg (score 0) <https://www.preceptaustin.org/files/images/aboutface.jpg>
+- **Ch 9** · dis10-3.gif (score 0) <https://www.preceptaustin.org/files/images/dis10-3.gif>
+
+## zechariah — 5 book-level, 14 per-chapter (probed 5 chapters)
+
+### Book-level
+- zechmap.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/zechmap.jpg>
+- seven-feasts.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/seven-feasts.png>
+- zech.png (score 2, 5 chapters) <https://www.preceptaustin.org/files/images/zech.png>
+- zechtime.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/zechtime.png>
+- prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
+### Per-chapter
+- **Ch 4** · zechariaholive.jpg (score 0) <https://www.preceptaustin.org/files/images/zechariaholive.jpg>
+- **Ch 5** · zechariahscroll.jpg (score 0) <https://www.preceptaustin.org/files/images/zechariahscroll.jpg>
+- **Ch 12** · armageddon.jpg (score 0) <https://www.preceptaustin.org/files/images/Armageddon.jpg>
+- **Ch 12** · templemount.jpg (score 0) <https://www.preceptaustin.org/files/images/templemount.jpg>
+- **Ch 13** · artesian_well.png (score 2) <https://www.preceptaustin.org/files/images/Artesian_Well.png>
 - **Ch 14** · zech14chart.jpg (score 10) <https://www.preceptaustin.org/files/images/zech14chart.jpg>
 - **Ch 14** · zechtimeline.jpg (score 10) <https://www.preceptaustin.org/files/images/zechtimeline.jpg>
+- **Ch 14** · dolsummary.jpg (score 3) <https://www.preceptaustin.org/files/images/dolsummary.jpg>
+- **Ch 14** · dolapply.jpg (score 0) <https://www.preceptaustin.org/files/images/dolapply.jpg>
+- **Ch 14** · dolho.jpg (score 0) <https://www.preceptaustin.org/files/images/dolho.jpg>
+- **Ch 14** · millennium.gif (score 0) <https://www.preceptaustin.org/files/images/millennium.gif>
+- **Ch 14** · zechluther.jpg (score 0) <https://www.preceptaustin.org/files/images/zechluther.jpg>
+- **Ch 14** · zechreturn.jpg (score 0) <https://www.preceptaustin.org/files/images/zechreturn.jpg>
+- **Ch 14** · zechwar.jpg (score 0) <https://www.preceptaustin.org/files/images/zechwar.jpg>
 
-## zephaniah — 2 book-level, 1 per-chapter (probed 3 chapters)
+## zephaniah — 9 book-level, 15 per-chapter (probed 3 chapters)
 
 ### Book-level
 - dolchart1.jpg (score 10, 2 chapters) <https://www.preceptaustin.org/files/images/DOLchart1.jpg>
 - zephaniahmap.jpg (score 10, 2 chapters) <https://www.preceptaustin.org/files/images/zephaniahmap.jpg>
+- zephaniah_setting.png (score 2, 3 chapters) <https://www.preceptaustin.org/files/images/zephaniah_setting.png>
+- prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
+- zeph-1.gif (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/zeph-1.gif>
+- zeph1.jpg (score 0, 2 chapters) <https://www.preceptaustin.org/files/images/zeph1.jpg>
+- zephaniah.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/Zephaniah.jpg>
+- zephdol.jpg (score 0, 2 chapters) <https://www.preceptaustin.org/files/images/zephdol.jpg>
+- zephsum.jpg (score 0, 3 chapters) <https://www.preceptaustin.org/files/images/zephsum.jpg>
 ### Per-chapter
+- **Ch 1** · jerusalemnehemiah1.png (score 2) <https://www.preceptaustin.org/files/images/jerusalemnehemiah1.png>
+- **Ch 1** · nearfar.png (score 2) <https://www.preceptaustin.org/files/images/nearfar.png>
+- **Ch 1** · dolart.jpg (score 0) <https://www.preceptaustin.org/files/images/DOLart.jpg>
+- **Ch 1** · joel3.jpg (score 0) <https://www.preceptaustin.org/files/images/joel3.jpg>
+- **Ch 1** · zephtime.jpg (score 0) <https://www.preceptaustin.org/files/images/zephtime.jpg>
 - **Ch 2** · dolchart2.jpg (score 10) <https://www.preceptaustin.org/files/images/DOLchart2.jpg>
+- **Ch 2** · zeph12summary.jpg (score 3) <https://www.preceptaustin.org/files/images/zeph12summary.jpg>
+- **Ch 2** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
+- **Ch 2** · zeph214.png (score 2) <https://www.preceptaustin.org/files/images/zeph214.png>
+- **Ch 2** · zeph26.png (score 2) <https://www.preceptaustin.org/files/images/zeph26.png>
+- **Ch 2** · zeph28.png (score 2) <https://www.preceptaustin.org/files/images/zeph28.png>
+- **Ch 2** · nineveh.jpg (score 0) <https://www.preceptaustin.org/files/images/nineveh.jpg>
+- **Ch 2** · nineveh1.jpg (score 0) <https://www.preceptaustin.org/files/images/nineveh1.jpg>
+- **Ch 2** · nineveh4.jpg (score 0) <https://www.preceptaustin.org/files/images/nineveh4.jpg>
+- **Ch 3** · zeph3sum.jpg (score 0) <https://www.preceptaustin.org/files/images/zeph3sum.jpg>

@@ -42,7 +42,13 @@ MAX_WIDTH = 1600
 
 
 def fetch_bytes(url: str) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    # Some upstream filenames contain literal spaces (e.g. "Tabernacle
+    # schematic2.gif") that urllib's strict URL validator rejects. Re-
+    # encode the path segment so the request goes through.
+    parsed = urllib.parse.urlsplit(url)
+    safe_path = urllib.parse.quote(urllib.parse.unquote(parsed.path), safe="/")
+    safe_url = urllib.parse.urlunsplit(parsed._replace(path=safe_path))
+    req = urllib.request.Request(safe_url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=30) as resp:
         return resp.read()
 

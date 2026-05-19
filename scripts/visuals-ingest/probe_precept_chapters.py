@@ -131,6 +131,7 @@ NOISE_FILENAMES = frozenset({
     "instagram.jpg", "instagram.png", "youtube.jpg", "youtube.png",
     "rss.png", "rss.jpg", "email.png", "email.jpg",
     "print.png", "print.jpg",
+    "brokenlinks.png",  # archive.org-link placeholder graphic
 })
 
 
@@ -176,11 +177,45 @@ def probe_chapter(slug: str, chapter: int) -> dict:
     return {"url": None, "images": [], "error": last_error or "no candidate matched"}
 
 
+def probe_book_index(slug: str) -> dict:
+    """Fetch the /<book>_commentaries index page, collect every Precept-
+    hosted image. Many books carry their best charts here rather than on
+    chapter pages (Genesis's overview, Numbers's Jensen structural,
+    Ezra's three-returns chart). Returns a dict mirroring probe_chapter.
+    """
+    underscored = slug.replace("-", "_")
+    base = f"https://{PRECEPT_HOST}"
+    for url in (f"{base}/{underscored}_commentaries", f"{base}/{slug}-commentaries"):
+        try:
+            html = fetch(url)
+        except Exception:
+            continue
+        ex = ImgExtractor()
+        ex.feed(html)
+        images: list[str] = []
+        seen = set()
+        for src in ex.srcs:
+            abs_src = normalize(src, url)
+            if not is_precept_image(abs_src):
+                continue
+            if abs_src in seen:
+                continue
+            seen.add(abs_src)
+            images.append(abs_src)
+        return {"url": url, "images": images}
+    return {"url": None, "images": [], "error": "no index URL matched"}
+
+
 def probe_book(slug: str) -> dict:
     n_chapters = CHAPTERS_PER_BOOK.get(slug)
     if not n_chapters:
         return {"slug": slug, "error": "unknown chapter count"}
     print(f"\n=== {slug}  ({n_chapters} chapters)")
+    index_info = probe_book_index(slug)
+    if index_info.get("images"):
+        print(f"   index   ✓  {index_info['url'].split('/')[-1]}  imgs={len(index_info['images'])}")
+    else:
+        print(f"   index   ✗  {index_info.get('error','no images')}")
     chapters: dict[str, dict] = {}
     fn_counter: Counter[str] = Counter()
     # Fan out chapter probes 4-wide. Precept Austin's WAF accepts modest
@@ -207,6 +242,7 @@ def probe_book(slug: str) -> dict:
     return {
         "slug": slug,
         "n_chapters": n_chapters,
+        "index": index_info,
         "chapters": chapters,
         "book_level_filenames": book_level,
         "chapter_specific_filenames": chapter_specific,

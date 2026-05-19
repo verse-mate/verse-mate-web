@@ -2,6 +2,13 @@
   "genesis": {
     "slug": "genesis",
     "n_chapters": 50,
+    "index": {
+      "url": "https://www.preceptaustin.org/genesis_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/genesis.jpg",
+        "https://www.preceptaustin.org/files/images/genesis_book_of_beginnings.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/genesis-1-commentary",
@@ -512,6 +519,17 @@
   "exodus": {
     "slug": "exodus",
     "n_chapters": 40,
+    "index": {
+      "url": "https://www.preceptaustin.org/exodus_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/exoduschart.png",
+        "https://www.preceptaustin.org/files/images/exodusegypt.png",
+        "https://www.preceptaustin.org/files/images/egyptmap.png",
+        "https://www.preceptaustin.org/files/images/exodus.gif",
+        "https://www.preceptaustin.org/files/images/exodustabernacle.png",
+        "https://www.preceptaustin.org/files/images/pentateuch.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/exodus-1-commentary",
@@ -1089,6 +1107,14 @@
   "leviticus": {
     "slug": "leviticus",
     "n_chapters": 27,
+    "index": {
+      "url": "https://www.preceptaustin.org/leviticus_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/levi.png",
+        "https://www.preceptaustin.org/files/images/leviticus1.png",
+        "https://www.preceptaustin.org/files/images/Leviticuschart.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/leviticus_1_commentary",
@@ -1337,6 +1363,13 @@
   "numbers": {
     "slug": "numbers",
     "n_chapters": 36,
+    "index": {
+      "url": "https://www.preceptaustin.org/numbers_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/numbers.jpg",
+        "https://www.preceptaustin.org/files/images/numberstime.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/numbers-1-commentary",
@@ -1833,6 +1866,16 @@
   "deuteronomy": {
     "slug": "deuteronomy",
     "n_chapters": 34,
+    "index": {
+      "url": "https://www.preceptaustin.org/deuteronomy_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/mosesnebo1.png",
+        "https://www.preceptaustin.org/files/images/deutchart.png",
+        "https://www.preceptaustin.org/files/images/deut.jpg",
+        "https://www.preceptaustin.org/files/images/deuter.jpg",
+        "https://www.preceptaustin.org/files/images/deuttime.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/deuteronomy-1-commentary",
@@ -2245,6 +2288,16 @@
   "joshua": {
     "slug": "joshua",
     "n_chapters": 24,
+    "index": {
+      "url": "https://www.preceptaustin.org/joshua_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/joshuamain.jpg",
+        "https://www.preceptaustin.org/files/images/joshuaoutline.jpg",
+        "https://www.preceptaustin.org/files/images/joshualand.png",
+        "https://www.preceptaustin.org/files/images/joshuamap.png",
+        "https://www.preceptaustin.org/files/images/joshuaoutline.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/joshua-1-commentary",
@@ -2611,6 +2664,19 @@
   "judges": {
     "slug": "judges",
     "n_chapters": 21,
+    "index": {
+      "url": "https://www.preceptaustin.org/judges_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/judgesjensen.png",
+        "https://www.preceptaustin.org/files/images/judgestimeline2.jpg",
+        "https://www.preceptaustin.org/files/images/judgestimeline.png",
+        "https://www.preceptaustin.org/files/images/judges%20timeline.png",
+        "https://www.preceptaustin.org/files/images/Judges%20Chart.gif",
+        "https://www.preceptaustin.org/files/images/sincycle.jpg",
+        "https://www.preceptaustin.org/files/images/judgesmap.jpg",
+        "https://www.preceptaustin.org/files/images/judgesmap2.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/judges_1_commentary",
@@ -2922,6 +2988,16 @@
   "ruth": {
     "slug": "ruth",
     "n_chapters": 4,
+    "index": {
+      "url": "https://www.preceptaustin.org/ruth_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/ruthgleaning.jpg",
+        "https://www.preceptaustin.org/files/images/ruth.png",
+        "https://www.preceptaustin.org/files/images/ruthtime.jpg",
+        "https://www.preceptaustin.org/files/images/ruthglean.jpg",
+        "https://www.preceptaustin.org/files/images/Ruth%203%20At%20Boaz's%20Feet.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -2950,6 +3026,22 @@
   "1-samuel": {
     "slug": "1-samuel",
     "n_chapters": 31,
+    "index": {
+      "url": "https://www.preceptaustin.org/1_samuel_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/1sam.png",
+        "https://www.preceptaustin.org/files/images/1satime.png",
+        "https://www.preceptaustin.org/files/images/1samueltimeline.png",
+        "https://www.preceptaustin.org/files/images/1kichart.png",
+        "https://www.preceptaustin.org/files/images/1kichart2.png",
+        "https://www.preceptaustin.org/files/images/1samuelmapesv.jpg",
+        "https://www.preceptaustin.org/files/images/1samap.png",
+        "https://www.preceptaustin.org/files/images/1sa3.png",
+        "https://www.preceptaustin.org/files/images/1sa3kings.png",
+        "https://www.preceptaustin.org/files/images/1samain.png",
+        "https://www.preceptaustin.org/files/images/1saman.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/1-samuel-1-commentary",
@@ -3591,6 +3683,20 @@
   "2-samuel": {
     "slug": "2-samuel",
     "n_chapters": 24,
+    "index": {
+      "url": "https://www.preceptaustin.org/2_samuel_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/2samuel.jpg",
+        "https://www.preceptaustin.org/files/images/2saplot.png",
+        "https://www.preceptaustin.org/files/images/2satime.png",
+        "https://www.preceptaustin.org/files/images/1scoverage.png",
+        "https://www.preceptaustin.org/files/images/1kichart.png",
+        "https://www.preceptaustin.org/files/images/1kichart2.png",
+        "https://www.preceptaustin.org/files/images/2samuelesv.jpg",
+        "https://www.preceptaustin.org/files/images/1samap.png",
+        "https://www.preceptaustin.org/files/images/davidlife.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/2-samuel-1-commentary",
@@ -3966,6 +4072,20 @@
   "1-kings": {
     "slug": "1-kings",
     "n_chapters": 22,
+    "index": {
+      "url": "https://www.preceptaustin.org/1_kings_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/solomon.jpg",
+        "https://www.preceptaustin.org/files/images/1kjensen.png",
+        "https://www.preceptaustin.org/files/images/1kitime.png",
+        "https://www.preceptaustin.org/files/images/1ki.png",
+        "https://www.preceptaustin.org/files/images/1kichart.png",
+        "https://www.preceptaustin.org/files/images/1kichart2.png",
+        "https://www.preceptaustin.org/files/images/1kichr.png",
+        "https://www.preceptaustin.org/files/images/1kichrsetting.png",
+        "https://www.preceptaustin.org/files/images/12kingsall.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/1-kings-1-commentary",
@@ -4512,6 +4632,22 @@
   "2-kings": {
     "slug": "2-kings",
     "n_chapters": 25,
+    "index": {
+      "url": "https://www.preceptaustin.org/2_kings_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/elisha.jpg",
+        "https://www.preceptaustin.org/files/images/2kingstimeline.png",
+        "https://www.preceptaustin.org/files/images/1ki.png",
+        "https://www.preceptaustin.org/files/images/2kingsmap.jpg",
+        "https://www.preceptaustin.org/files/images/1kichart.png",
+        "https://www.preceptaustin.org/files/images/1kichart2.png",
+        "https://www.preceptaustin.org/files/images/1kichr.png",
+        "https://www.preceptaustin.org/files/images/1kichrsetting.png",
+        "https://www.preceptaustin.org/files/images/12kingsall.png",
+        "https://www.preceptaustin.org/files/images/kingsallchart.jpg",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/2-kings-1-commentary",
@@ -5344,6 +5480,19 @@
   "1-chronicles": {
     "slug": "1-chronicles",
     "n_chapters": 29,
+    "index": {
+      "url": "https://www.preceptaustin.org/1_chronicles_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/1chrtimeline.png",
+        "https://www.preceptaustin.org/files/images/1ki.png",
+        "https://www.preceptaustin.org/files/images/1kichart.png",
+        "https://www.preceptaustin.org/files/images/1kichart2.png",
+        "https://www.preceptaustin.org/files/images/1kichr.png",
+        "https://www.preceptaustin.org/files/images/1kichrsetting.png",
+        "https://www.preceptaustin.org/files/images/12kingsall.png",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/1-chronicles-1-commentary",
@@ -5738,6 +5887,20 @@
   "2-chronicles": {
     "slug": "2-chronicles",
     "n_chapters": 36,
+    "index": {
+      "url": "https://www.preceptaustin.org/2_chronicles_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/2chronicles.jpg",
+        "https://www.preceptaustin.org/files/images/2chrtime.jpg",
+        "https://www.preceptaustin.org/files/images/1ki.png",
+        "https://www.preceptaustin.org/files/images/1kichart.png",
+        "https://www.preceptaustin.org/files/images/1kichart2.png",
+        "https://www.preceptaustin.org/files/images/1kichr.png",
+        "https://www.preceptaustin.org/files/images/1kichrsetting.png",
+        "https://www.preceptaustin.org/files/images/12kingsall.png",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/2-chronicles-1-commentary",
@@ -6392,6 +6555,17 @@
   "ezra": {
     "slug": "ezra",
     "n_chapters": 10,
+    "index": {
+      "url": "https://www.preceptaustin.org/ezra_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/ezrapix.jpg",
+        "https://www.preceptaustin.org/files/images/ezrachart.png",
+        "https://www.preceptaustin.org/files/images/ezrahistory.png",
+        "https://www.preceptaustin.org/files/images/ezrahistroy2.png",
+        "https://www.preceptaustin.org/files/images/ezrareturn.png",
+        "https://www.preceptaustin.org/files/images/persiaezraesv.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -6450,6 +6624,15 @@
   "nehemiah": {
     "slug": "nehemiah",
     "n_chapters": 13,
+    "index": {
+      "url": "https://www.preceptaustin.org/nehemiah_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/nehemiahpix.jpg",
+        "https://www.preceptaustin.org/files/images/nehemiahchart.png",
+        "https://www.preceptaustin.org/files/images/persiannehemiahesv.jpg",
+        "https://www.preceptaustin.org/files/images/nehemiah.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -6523,6 +6706,16 @@
   "esther": {
     "slug": "esther",
     "n_chapters": 10,
+    "index": {
+      "url": "https://www.preceptaustin.org/esther_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/estherpix.jpg",
+        "https://www.preceptaustin.org/files/images/estherchart.png",
+        "https://www.preceptaustin.org/files/images/estherhistory.png",
+        "https://www.preceptaustin.org/files/images/persiaestheresv.jpg",
+        "https://www.preceptaustin.org/files/images/esther.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -6581,6 +6774,14 @@
   "job": {
     "slug": "job",
     "n_chapters": 42,
+    "index": {
+      "url": "https://www.preceptaustin.org/job_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/job.jpg",
+        "https://www.preceptaustin.org/files/images/jobchart.png",
+        "https://www.preceptaustin.org/files/images/suffering.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -6799,6 +7000,10 @@
   "psalms": {
     "slug": "psalms",
     "n_chapters": 150,
+    "index": {
+      "url": "https://www.preceptaustin.org/psalms_commentaries",
+      "images": []
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -7557,6 +7762,12 @@
   "proverbs": {
     "slug": "proverbs",
     "n_chapters": 31,
+    "index": {
+      "url": "https://www.preceptaustin.org/proverbs_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/proverbs.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/proverbs-1-commentary",
@@ -7727,6 +7938,12 @@
   "ecclesiastes": {
     "slug": "ecclesiastes",
     "n_chapters": 12,
+    "index": {
+      "url": "https://www.preceptaustin.org/ecclesiastes_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/eccl.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/ecclesiastes-1-commentary",
@@ -8050,6 +8267,14 @@
   "song-of-solomon": {
     "slug": "song-of-solomon",
     "n_chapters": 8,
+    "index": {
+      "url": "https://www.preceptaustin.org/song_of_solomon_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/songofsolomon.jpg",
+        "https://www.preceptaustin.org/files/images/songpoem.png",
+        "https://www.preceptaustin.org/files/images/fox.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -8098,6 +8323,15 @@
   "isaiah": {
     "slug": "isaiah",
     "n_chapters": 66,
+    "index": {
+      "url": "https://www.preceptaustin.org/isaiah_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/isaiah_pix.jpg",
+        "https://www.preceptaustin.org/files/images/isaiah_glorious_throne_of_jehovah_the_holy_one.png",
+        "https://www.preceptaustin.org/files/images/isaiah_and_jeremiah_geography.png",
+        "https://www.preceptaustin.org/files/images/isaiah_con.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -8556,6 +8790,20 @@
   "jeremiah": {
     "slug": "jeremiah",
     "n_chapters": 52,
+    "index": {
+      "url": "https://www.preceptaustin.org/jeremiah_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/jer_image.jpg",
+        "https://www.preceptaustin.org/files/images/jer.png",
+        "https://www.preceptaustin.org/files/images/jer_con.png",
+        "https://www.preceptaustin.org/files/images/jeremiahmap.jpg",
+        "https://www.preceptaustin.org/files/images/jeremiahtimeline.png",
+        "https://www.preceptaustin.org/files/images/bulla.jpg",
+        "https://www.preceptaustin.org/files/images/jer_struc.jpg",
+        "https://www.preceptaustin.org/files/images/jer_struc2.jpg",
+        "https://www.preceptaustin.org/files/images/jer_struc3.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -8925,6 +9173,13 @@
   "lamentations": {
     "slug": "lamentations",
     "n_chapters": 5,
+    "index": {
+      "url": "https://www.preceptaustin.org/lamentations_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/lam_rembrandt.jpg",
+        "https://www.preceptaustin.org/files/images/lam.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -8958,6 +9213,16 @@
   "ezekiel": {
     "slug": "ezekiel",
     "n_chapters": 48,
+    "index": {
+      "url": "https://www.preceptaustin.org/ezekiel_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/ezek_mic.jpg",
+        "https://www.preceptaustin.org/files/images/ezek_glory.png",
+        "https://www.preceptaustin.org/files/images/ezekiel_chronology.png",
+        "https://www.preceptaustin.org/files/images/millennium.gif",
+        "https://www.preceptaustin.org/files/images/heat-3.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -9229,6 +9494,17 @@
   "daniel": {
     "slug": "daniel",
     "n_chapters": 12,
+    "index": {
+      "url": "https://www.preceptaustin.org/daniel_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/dan_lion.jpg",
+        "https://www.preceptaustin.org/files/images/godsplan.jpg",
+        "https://www.preceptaustin.org/files/images/daniel.png",
+        "https://www.preceptaustin.org/files/images/daniel_dreams.png",
+        "https://www.preceptaustin.org/files/images/daniel_visions.png",
+        "https://www.preceptaustin.org/files/images/daniel_contemp.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/daniel_1_commentary",
@@ -9370,6 +9646,18 @@
   "hosea": {
     "slug": "hosea",
     "n_chapters": 14,
+    "index": {
+      "url": "https://www.preceptaustin.org/hosea_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/hosea_gomer.jpg",
+        "https://www.preceptaustin.org/files/images/hosea_love.png",
+        "https://www.preceptaustin.org/files/images/hosea.png",
+        "https://www.preceptaustin.org/files/images/hoseamap.jpg",
+        "https://www.preceptaustin.org/files/images/hosea_geo.png",
+        "https://www.preceptaustin.org/files/images/hoseatime.png",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -9473,6 +9761,17 @@
   "joel": {
     "slug": "joel",
     "n_chapters": 3,
+    "index": {
+      "url": "https://www.preceptaustin.org/joel_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/joel.png",
+        "https://www.preceptaustin.org/files/images/joeltime.png",
+        "https://www.preceptaustin.org/files/images/joelmap.jpg",
+        "https://www.preceptaustin.org/files/images/seven-feasts.png",
+        "https://www.preceptaustin.org/files/images/joel-1.gif",
+        "https://www.preceptaustin.org/files/images/joel-sym.gif"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/joel-1-commentary",
@@ -9526,6 +9825,21 @@
   "amos": {
     "slug": "amos",
     "n_chapters": 9,
+    "index": {
+      "url": "https://www.preceptaustin.org/amos_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/amos.png",
+        "https://www.preceptaustin.org/files/images/amos_con.png",
+        "https://www.preceptaustin.org/files/images/amos_geo.png",
+        "https://www.preceptaustin.org/files/images/amos-1.gif",
+        "https://www.preceptaustin.org/files/images/amostime.png",
+        "https://www.preceptaustin.org/files/images/amosmap.jpg",
+        "https://www.preceptaustin.org/files/images/fulfill.png",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg",
+        "https://www.preceptaustin.org/files/images/DOLchart1.jpg",
+        "https://www.preceptaustin.org/files/images/DOLchart2.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -9594,6 +9908,14 @@
   "obadiah": {
     "slug": "obadiah",
     "n_chapters": 1,
+    "index": {
+      "url": "https://www.preceptaustin.org/obadiah_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/oba.png",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg",
+        "https://www.preceptaustin.org/files/images/zeph-1.gif"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -9607,6 +9929,17 @@
   "jonah": {
     "slug": "jonah",
     "n_chapters": 4,
+    "index": {
+      "url": "https://www.preceptaustin.org/jonah_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/jonah.png",
+        "https://www.preceptaustin.org/files/images/jonah_con.png",
+        "https://www.preceptaustin.org/files/images/jonah_map.png",
+        "https://www.preceptaustin.org/files/images/jonahtime.png",
+        "https://www.preceptaustin.org/files/images/jonahmap.jpg",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -9635,6 +9968,15 @@
   "micah": {
     "slug": "micah",
     "n_chapters": 7,
+    "index": {
+      "url": "https://www.preceptaustin.org/micah_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/mic.png",
+        "https://www.preceptaustin.org/files/images/micahtime.png",
+        "https://www.preceptaustin.org/files/images/micahmap.jpg",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/micah_1_commentary",
@@ -9694,6 +10036,21 @@
   "nahum": {
     "slug": "nahum",
     "n_chapters": 3,
+    "index": {
+      "url": "https://www.preceptaustin.org/nahum_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/nah.png",
+        "https://www.preceptaustin.org/files/images/nahumtime.png",
+        "https://www.preceptaustin.org/files/images/nahummap.jpg",
+        "https://www.preceptaustin.org/files/images/nineveh2.jpg",
+        "https://www.preceptaustin.org/files/images/nineveh3.jpg",
+        "https://www.preceptaustin.org/files/images/nineveh.jpg",
+        "https://www.preceptaustin.org/files/images/nineveh4.jpg",
+        "https://www.preceptaustin.org/files/images/nineveh1.jpg",
+        "https://www.preceptaustin.org/files/images/nineveh5.jpg",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -9717,6 +10074,17 @@
   "habakkuk": {
     "slug": "habakkuk",
     "n_chapters": 3,
+    "index": {
+      "url": "https://www.preceptaustin.org/habakkuk_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/hab.png",
+        "https://www.preceptaustin.org/files/images/zephaniahmap.jpg",
+        "https://www.preceptaustin.org/files/images/habakkuktime.png",
+        "https://www.preceptaustin.org/files/images/habakkukryrie.gif",
+        "https://www.preceptaustin.org/files/images/habakkukdipchart.png",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/habakkuk_1_commentary",
@@ -9749,6 +10117,19 @@
   "zephaniah": {
     "slug": "zephaniah",
     "n_chapters": 3,
+    "index": {
+      "url": "https://www.preceptaustin.org/zephaniah_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/Zephaniah.jpg",
+        "https://www.preceptaustin.org/files/images/zephdol.jpg",
+        "https://www.preceptaustin.org/files/images/zephaniah.png",
+        "https://www.preceptaustin.org/files/images/zephaniah_setting.png",
+        "https://www.preceptaustin.org/files/images/zeph1.jpg",
+        "https://www.preceptaustin.org/files/images/zephaniahmap.jpg",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg",
+        "https://www.preceptaustin.org/files/images/zeph-1.gif"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/zephaniah-1-commentary",
@@ -9828,6 +10209,18 @@
   "haggai": {
     "slug": "haggai",
     "n_chapters": 2,
+    "index": {
+      "url": "https://www.preceptaustin.org/haggai_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/haggai.png",
+        "https://www.preceptaustin.org/files/images/spiritual_state.png",
+        "https://www.preceptaustin.org/files/images/hag-hist.gif",
+        "https://www.preceptaustin.org/files/images/hag-sermon.gif",
+        "https://www.preceptaustin.org/files/images/haggaitime.png",
+        "https://www.preceptaustin.org/files/images/haggaimap.jpg",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -9846,6 +10239,15 @@
   "zechariah": {
     "slug": "zechariah",
     "n_chapters": 14,
+    "index": {
+      "url": "https://www.preceptaustin.org/zechariah_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/zechtime.png",
+        "https://www.preceptaustin.org/files/images/zechmap.jpg",
+        "https://www.preceptaustin.org/files/images/seven-feasts.png",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -9960,6 +10362,15 @@
   "malachi": {
     "slug": "malachi",
     "n_chapters": 4,
+    "index": {
+      "url": "https://www.preceptaustin.org/malachi_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/malachi.png",
+        "https://www.preceptaustin.org/files/images/malachitime.png",
+        "https://www.preceptaustin.org/files/images/malachimap.jpg",
+        "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/malachi_1_commentary",
@@ -9995,6 +10406,14 @@
   "matthew": {
     "slug": "matthew",
     "n_chapters": 28,
+    "index": {
+      "url": "https://www.preceptaustin.org/matthew_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/matthew.jpg",
+        "https://www.preceptaustin.org/files/images/matthew.png",
+        "https://www.preceptaustin.org/files/images/matthew_life.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/matthew-1-commentary",
@@ -10653,6 +11072,14 @@
   "mark": {
     "slug": "mark",
     "n_chapters": 16,
+    "index": {
+      "url": "https://www.preceptaustin.org/mark_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/mark.jpg",
+        "https://www.preceptaustin.org/files/images/mark_overview.png",
+        "https://www.preceptaustin.org/files/images/mark_life_of_christ.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/mark-1-commentary",
@@ -11059,6 +11486,15 @@
   "luke": {
     "slug": "luke",
     "n_chapters": 24,
+    "index": {
+      "url": "https://www.preceptaustin.org/luke_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/luke.jpg",
+        "https://www.preceptaustin.org/files/images/luke_son_of_man.png",
+        "https://www.preceptaustin.org/files/images/luke_life_of_christ.png",
+        "https://www.preceptaustin.org/files/images/Luke_genealogy.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/luke-1-commentary",
@@ -11782,6 +12218,15 @@
   "john": {
     "slug": "john",
     "n_chapters": 21,
+    "index": {
+      "url": "https://www.preceptaustin.org/john_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/john-1.jpg",
+        "https://www.preceptaustin.org/files/images/john.png",
+        "https://www.preceptaustin.org/files/images/john_life.png",
+        "https://www.preceptaustin.org/files/images/john_overview.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/john-1-commentary",
@@ -12150,6 +12595,14 @@
   "acts": {
     "slug": "acts",
     "n_chapters": 28,
+    "index": {
+      "url": "https://www.preceptaustin.org/acts_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/luke.jpg",
+        "https://www.preceptaustin.org/files/images/acts.png",
+        "https://www.preceptaustin.org/files/images/church_holy_spirit.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/acts-1-commentary",
@@ -12637,6 +13090,15 @@
   "romans": {
     "slug": "romans",
     "n_chapters": 16,
+    "index": {
+      "url": "https://www.preceptaustin.org/romans_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/paul_epistle.jpg",
+        "https://www.preceptaustin.org/files/images/romans.png",
+        "https://www.preceptaustin.org/files/images/romansroad.gif",
+        "https://www.preceptaustin.org/files/images/romeesv.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/romans_1",
@@ -12742,6 +13204,15 @@
   "1-corinthians": {
     "slug": "1-corinthians",
     "n_chapters": 16,
+    "index": {
+      "url": "https://www.preceptaustin.org/1_corinthians_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/paul_epistle.jpg",
+        "https://www.preceptaustin.org/files/images/1cor_problems.png",
+        "https://www.preceptaustin.org/files/images/corinthesv.jpg",
+        "https://www.preceptaustin.org/files/images/corinth.gif"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/1-corinthians-1-commentary",
@@ -12975,6 +13446,19 @@
   "2-corinthians": {
     "slug": "2-corinthians",
     "n_chapters": 13,
+    "index": {
+      "url": "https://www.preceptaustin.org/2_corinthians_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/paul_epistle.jpg",
+        "https://www.preceptaustin.org/files/images/2cor.png",
+        "https://www.preceptaustin.org/files/images/letter.jpg",
+        "https://www.preceptaustin.org/files/images/corinth_city.jpg",
+        "https://www.preceptaustin.org/files/images/corinth.jpg",
+        "https://www.preceptaustin.org/files/images/acrocorinth.jpg",
+        "https://www.preceptaustin.org/files/images/3missionaryjourney.gif",
+        "https://www.preceptaustin.org/files/images/corinth.gif"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/2-corinthians-1-commentary",
@@ -13109,6 +13593,14 @@
   "galatians": {
     "slug": "galatians",
     "n_chapters": 6,
+    "index": {
+      "url": "https://www.preceptaustin.org/galatians_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/paul_epistle.jpg",
+        "https://www.preceptaustin.org/files/images/gal.png",
+        "https://www.preceptaustin.org/files/images/galmap.gif"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/galatians-1-commentary",
@@ -13191,6 +13683,11 @@
   "ephesians": {
     "slug": "ephesians",
     "n_chapters": 6,
+    "index": {
+      "url": null,
+      "images": [],
+      "error": "no index URL matched"
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13229,6 +13726,14 @@
   "philippians": {
     "slug": "philippians",
     "n_chapters": 4,
+    "index": {
+      "url": "https://www.preceptaustin.org/philippians_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/paul_epistle.jpg",
+        "https://www.preceptaustin.org/files/images/phil.png",
+        "https://www.preceptaustin.org/files/images/philippiesv.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13257,6 +13762,13 @@
   "colossians": {
     "slug": "colossians",
     "n_chapters": 4,
+    "index": {
+      "url": "https://www.preceptaustin.org/colossians_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/paul_epistle.jpg",
+        "https://www.preceptaustin.org/files/images/col.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13292,6 +13804,14 @@
   "1-thessalonians": {
     "slug": "1-thessalonians",
     "n_chapters": 5,
+    "index": {
+      "url": "https://www.preceptaustin.org/1_thessalonians_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/paul_epistle.jpg",
+        "https://www.preceptaustin.org/files/images/1th.png",
+        "https://www.preceptaustin.org/files/images/thesprophecy.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13325,6 +13845,13 @@
   "2-thessalonians": {
     "slug": "2-thessalonians",
     "n_chapters": 3,
+    "index": {
+      "url": "https://www.preceptaustin.org/2_thessalonians_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/paul_epistle.jpg",
+        "https://www.preceptaustin.org/files/images/2th.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/2-thessalonians-1-commentary",
@@ -13362,6 +13889,14 @@
   "1-timothy": {
     "slug": "1-timothy",
     "n_chapters": 6,
+    "index": {
+      "url": "https://www.preceptaustin.org/1_timothy_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/paul_epistle.jpg",
+        "https://www.preceptaustin.org/files/images/1ti.png",
+        "https://www.preceptaustin.org/files/images/1timothytime.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/1-timothy-1-commentary",
@@ -13444,6 +13979,13 @@
   "2-timothy": {
     "slug": "2-timothy",
     "n_chapters": 4,
+    "index": {
+      "url": "https://www.preceptaustin.org/2_timothy_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/paul_epistle.jpg",
+        "https://www.preceptaustin.org/files/images/2ti.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13472,6 +14014,14 @@
   "titus": {
     "slug": "titus",
     "n_chapters": 3,
+    "index": {
+      "url": "https://www.preceptaustin.org/titus_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/paul_epistle.jpg",
+        "https://www.preceptaustin.org/files/images/titus.png",
+        "https://www.preceptaustin.org/files/images/titus.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13495,6 +14045,13 @@
   "philemon": {
     "slug": "philemon",
     "n_chapters": 1,
+    "index": {
+      "url": "https://www.preceptaustin.org/philemon_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/paul_epistle.jpg",
+        "https://www.preceptaustin.org/files/images/phile.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13508,6 +14065,11 @@
   "hebrews": {
     "slug": "hebrews",
     "n_chapters": 13,
+    "index": {
+      "url": null,
+      "images": [],
+      "error": "no index URL matched"
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13590,6 +14152,13 @@
   "james": {
     "slug": "james",
     "n_chapters": 5,
+    "index": {
+      "url": "https://www.preceptaustin.org/james_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/james_chart.png",
+        "https://www.preceptaustin.org/files/images/james_jesus_brother.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/james-1-commentary",
@@ -13643,6 +14212,14 @@
   "1-peter": {
     "slug": "1-peter",
     "n_chapters": 5,
+    "index": {
+      "url": "https://www.preceptaustin.org/1_peter_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/peter_repent.jpg",
+        "https://www.preceptaustin.org/files/images/1_peter.png",
+        "https://www.preceptaustin.org/files/images/1petertime.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13676,6 +14253,13 @@
   "2-peter": {
     "slug": "2-peter",
     "n_chapters": 3,
+    "index": {
+      "url": "https://www.preceptaustin.org/2_peter_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/peter_lookingup.jpg",
+        "https://www.preceptaustin.org/files/images/2_peter.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13699,6 +14283,22 @@
   "1-john": {
     "slug": "1-john",
     "n_chapters": 5,
+    "index": {
+      "url": "https://www.preceptaustin.org/1_john_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/1jo.png",
+        "https://www.preceptaustin.org/files/images/1j1.jpg",
+        "https://www.preceptaustin.org/files/images/1J2a.jpg",
+        "https://www.preceptaustin.org/files/images/1J2b.jpg",
+        "https://www.preceptaustin.org/files/images/1J2c.jpg",
+        "https://www.preceptaustin.org/files/images/1J3a.jpg",
+        "https://www.preceptaustin.org/files/images/1J3b.jpg",
+        "https://www.preceptaustin.org/files/images/1J4a.jpg",
+        "https://www.preceptaustin.org/files/images/1J4b.jpg",
+        "https://www.preceptaustin.org/files/images/1john51a.jpg",
+        "https://www.preceptaustin.org/files/images/1john52.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13732,6 +14332,14 @@
   "2-john": {
     "slug": "2-john",
     "n_chapters": 1,
+    "index": {
+      "url": "https://www.preceptaustin.org/2_john_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/2jo.png",
+        "https://www.preceptaustin.org/files/images/2john1.jpg",
+        "https://www.preceptaustin.org/files/images/2john2.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13745,6 +14353,12 @@
   "3-john": {
     "slug": "3-john",
     "n_chapters": 1,
+    "index": {
+      "url": "https://www.preceptaustin.org/3_john_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/3jo.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13758,6 +14372,13 @@
   "jude": {
     "slug": "jude",
     "n_chapters": 1,
+    "index": {
+      "url": "https://www.preceptaustin.org/jude_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/falseteachers.jpg",
+        "https://www.preceptaustin.org/files/images/jude.png"
+      ]
+    },
     "chapters": {
       "1": {
         "url": null,
@@ -13771,6 +14392,19 @@
   "revelation": {
     "slug": "revelation",
     "n_chapters": 22,
+    "index": {
+      "url": "https://www.preceptaustin.org/revelation_commentaries",
+      "images": [
+        "https://www.preceptaustin.org/files/images/patmos2.jpg",
+        "https://www.preceptaustin.org/files/images/rev_overview.png",
+        "https://www.preceptaustin.org/files/images/rev.png",
+        "https://www.preceptaustin.org/files/images/rev_historical_setting.png",
+        "https://www.preceptaustin.org/files/images/rev_interpretation.png",
+        "https://www.preceptaustin.org/files/images/rev_map.png",
+        "https://www.preceptaustin.org/files/images/waiting.png",
+        "https://www.preceptaustin.org/files/images/godsplan.jpg"
+      ]
+    },
     "chapters": {
       "1": {
         "url": "https://www.preceptaustin.org/revelation-1-commentary",
