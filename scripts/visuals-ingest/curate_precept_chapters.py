@@ -69,9 +69,10 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
     # exodusmap.gif and drop the byte-identical exodus.gif duplicate.
     "exodus": {
         "genesistimeline.png",
-        "exodus.gif",      # byte-identical dup of exodusmap.gif
-        "pogrom.jpg",      # 1614 Frankfurt pogrom print — not biblical
-        "taskmaster.jpg",  # generic illustrative art
+        "exodus.gif",          # byte-identical dup of exodusmap.gif
+        "pogrom.jpg",          # 1614 Frankfurt pogrom print — not biblical
+        "taskmaster.jpg",      # generic illustrative art
+        "aaronhur.jpg",        # byte-identical dup of exodusamalekite.jpg
     },
     "leviticus": {
         "levi.png",        # stock photo of stacked commentary books
@@ -85,6 +86,35 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "grap.jpg",        # Poussin painting of grape carriers (art)
         "grapes.jpg",      # blue geometric pictogram of grape carriers
     },
+    "joshua": {
+        "joshualand.png",  # tribal-allotment column chart (low signal)
+        "joshuamain.jpg",  # main book outline chart (low signal)
+        "promised1.jpg",   # modern Middle East political map (anachronistic)
+    },
+    "judges": {
+        "napthali.png",    # generic Twelve Tribes map (covered by other books)
+        "sincycle.jpg",    # "Cycle of Sin in Judges" diagram (user-flagged)
+        "judgesmap2.jpg",  # judges-influence territory map
+        # Within-book duplicates of the cycle-of-sin chart and timeline:
+        # Bruce hosts each at both a full-size and "_small" thumbnail
+        # filename. Keep the full versions.
+        "judges_chart_small.gif",   # dup of judges_chart.gif
+        "judges_timeline_small.png",  # dup of judges_timeline.png
+        "judgestimeline2.jpg",       # dup of judgestimeline.png
+    },
+    # Within-book byte-identical duplicates detected by MD5 across the
+    # whole public/visuals/ tree. For each duplicate group we keep the
+    # more descriptive filename. (The user previously flagged exodus.gif
+    # vs exodusmap.gif as one such pair — that one is covered above.)
+    "1-samuel": {"saulswars.jpg"},           # dup of saulbattles.jpg
+    "2-kings":  {"hamath.jpg"},               # dup of elishatodamascus.jpg
+    "acts":     {"luke.jpg"},                 # dup of luke2.jpg
+    "luke": {
+        "pontius.jpg",                        # dup of pilatestone.jpg
+        "lukelifeofjesus.png",                # dup of luke_life_of_christ.png
+    },
+    "matthew":  {"herodtet.png"},             # dup of tetrarchmap.png
+    "numbers":  {"plain.jpg"},                # dup of moabplain.jpg
     # Genesis editorial removals (flagged by Andy on the production preview):
     # - genesis.jpg (Michelangelo's Creation of Adam) — decorative art, not a
     #   study aid
