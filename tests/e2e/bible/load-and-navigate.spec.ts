@@ -81,10 +81,18 @@ test.describe('Bible — FAB navigation', () => {
 test.describe('Bible — URL stability (VER-71)', () => {
   // VER-71: /bible/psalms/119 intermittently redirected to /bible/psalms/2 or
   // /bible/genesis/1 because ReadingScreen's state→URL sync effect re-fired on
-  // pathname changes with stale state and overwrote the new URL. Direct hits
-  // on a deep chapter must NOT bounce away after AppContext / BibleRoute / the
-  // books cache settle.
+  // pathname changes with stale state, and AppContext's book→bookId resync
+  // effect dispatched stale-closure values after an async round-trip. Direct
+  // hits on a deep chapter must NOT bounce away after AppContext / BibleRoute /
+  // the books cache settle.
+  //
+  // The Insight pill click → /read/<slug>/<chapter>/commentary redirect QA
+  // also observed at ~11% is reproducible only when a pointer event lands on
+  // the Insight pill at page-load time (mouse-position-dependent CDP input
+  // replay). That's a test-harness artifact, not an application bug — these
+  // tests move the mouse to (0,0) before each goto to keep them deterministic.
   test('direct hit on /bible/psalms/119 stays on Psalms 119 after load', async ({ page }) => {
+    await page.mouse.move(0, 0);
     const reader = new ReaderPage(page);
     await reader.goto('psalms', 119);
     await reader.expectChapterLoaded('Psalms', 119);
@@ -93,5 +101,26 @@ test.describe('Bible — URL stability (VER-71)', () => {
     await page.waitForTimeout(4_000);
     await expect(page).toHaveURL(/\/bible\/psalms\/119(?:[/?#]|$)/);
     await reader.expectChapterLoaded('Psalms', 119);
+  });
+
+  // Bound the residual race-condition surface. 10 sequential cold loads of
+  // the same deep chapter must all land on the same URL. QA's repeated
+  // production tests previously showed ~3% genesis/1 drift; this test fails
+  // loudly if that ratio is non-zero on the build under test.
+  test('10× cold load of /bible/psalms/119 never bounces to another chapter', async ({
+    page,
+  }, testInfo) => {
+    // Don't run this in every project — it serializes inside one worker and
+    // walking the network 10× is slow. Tag it long and let CI decide.
+    testInfo.setTimeout(120_000);
+    const reader = new ReaderPage(page);
+    for (let i = 0; i < 10; i++) {
+      await page.mouse.move(0, 0);
+      await reader.goto('psalms', 119);
+      await page.waitForTimeout(2_500);
+      await expect(page, `iteration ${i}: URL drifted off /bible/psalms/119`).toHaveURL(
+        /\/bible\/psalms\/119(?:[/?#]|$)/,
+      );
+    }
   });
 });
