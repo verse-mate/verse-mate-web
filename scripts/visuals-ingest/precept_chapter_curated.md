@@ -144,15 +144,13 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 ### Per-chapter
 - **Ch 7** · eccl-chart.png (score 12) <https://www.preceptaustin.org/files/images/eccl-chart.png>
 
-## exodus — 1 book-level, 9 per-chapter (probed 40 chapters)
+## exodus — 1 book-level, 7 per-chapter (probed 40 chapters)
 
 ### Book-level
 - egyptmap.png (score 12, 40 chapters) <https://www.preceptaustin.org/files/images/egyptmap.png>
 ### Per-chapter
 - **Ch 1** · exodustimeline.png (score 12) <https://www.preceptaustin.org/files/images/exodustimeline.png>
-- **Ch 1** · genesistimeline.png (score 12) <https://www.preceptaustin.org/files/images/genesistimeline.png>
 - **Ch 2** · exodustimeline.png (score 12) <https://www.preceptaustin.org/files/images/exodustimeline.png>
-- **Ch 2** · genesistimeline.png (score 12) <https://www.preceptaustin.org/files/images/genesistimeline.png>
 - **Ch 2** · midian1.jpg (score 10) <https://www.preceptaustin.org/files/images/midian1.jpg>
 - **Ch 3** · midian1.jpg (score 10) <https://www.preceptaustin.org/files/images/midian1.jpg>
 - **Ch 12** · exodusmap.gif (score 10) <https://www.preceptaustin.org/files/images/exodusmap.gif>
