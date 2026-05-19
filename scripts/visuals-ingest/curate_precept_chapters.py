@@ -955,6 +955,8 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
     "malachi": {
         # V4 auto-prune pass (character + scene patterns)
         "malachidol.jpg",
+        # Audit pass
+        "windowheaven.jpg",
     },
     "zephaniah": {
         # Audit pass — Day-of-the-Lord art (dolart, nearfar), Nineveh

@@ -12990,24 +12990,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/prophetsofisrael.jpg"
       }
-    },
-    {
-      "id": "precept-ch-windowheaven",
-      "title": "Precept Austin — Malachi Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for Malachi chapter 3 — windowheaven.jpg.",
-      "thumb": "/visuals/malachi/precept_windowheaven.jpg",
-      "full": "/visuals/malachi/precept_windowheaven.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/windowheaven.jpg"
-      },
-      "chapters": [
-        3
-      ]
     }
   ]
 },
