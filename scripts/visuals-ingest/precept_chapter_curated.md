@@ -2056,15 +2056,13 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 24** · emmaus.jpg (score 0) <https://www.preceptaustin.org/files/images/emmaus.jpg>
 - **Ch 24** · emmaussupper.jpg (score 0) <https://www.preceptaustin.org/files/images/emmaussupper.jpg>
 
-## malachi — 4 book-level, 1 per-chapter (probed 4 chapters)
+## malachi — 4 book-level, 0 per-chapter (probed 4 chapters)
 
 ### Book-level
 - malachimap.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/malachimap.jpg>
 - dolsummary.jpg (score 3, 2 chapters) <https://www.preceptaustin.org/files/images/dolsummary.jpg>
 - malachitime.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/malachitime.png>
 - prophetsofisrael.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/prophetsofisrael.jpg>
-### Per-chapter
-- **Ch 3** · windowheaven.jpg (score 0) <https://www.preceptaustin.org/files/images/windowheaven.jpg>
 
 ## mark — 2 book-level, 93 per-chapter (probed 16 chapters)
 
