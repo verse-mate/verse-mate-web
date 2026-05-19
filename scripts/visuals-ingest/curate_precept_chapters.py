@@ -1348,6 +1348,12 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "zechariahscroll.jpg",
         "zechreturn.jpg",
     },
+    "james": {
+        # Audit pass
+        "chicago.jpg",
+        "clockredeem.jpg",
+        "imagegod.jpg",
+    },
     "proverbs": {
         # Audit pass (7 cards Andy marked from /audit/proverbs.html) —
         # generic sermon-prop stocks (ear, fork in the road, heart gif,
