@@ -5450,24 +5450,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-meph",
-      "title": "Precept Austin — 2 Samuel Chapter 9",
-      "caption": "Bruce Hurt's commentary chart for 2 Samuel chapter 9 — meph.jpg.",
-      "thumb": "/visuals/2-samuel/precept_meph.jpg",
-      "full": "/visuals/2-samuel/precept_meph.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/meph.jpg"
-      },
-      "chapters": [
-        9
-      ]
-    },
-    {
       "id": "precept-ch-moriah",
       "title": "Precept Austin — 2 Samuel Chapter 24",
       "caption": "Bruce Hurt's commentary chart for 2 Samuel chapter 24 — moriah.png.",
@@ -5540,60 +5522,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-tamar",
-      "title": "Precept Austin — 2 Samuel Chapter 13",
-      "caption": "Bruce Hurt's commentary chart for 2 Samuel chapter 13 — tamar.jpg.",
-      "thumb": "/visuals/2-samuel/precept_tamar.jpg",
-      "full": "/visuals/2-samuel/precept_tamar.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/tamar.jpg"
-      },
-      "chapters": [
-        13
-      ]
-    },
-    {
-      "id": "precept-ch-tamar1",
-      "title": "Precept Austin — 2 Samuel Chapter 13",
-      "caption": "Bruce Hurt's commentary chart for 2 Samuel chapter 13 — tamar1.jpg.",
-      "thumb": "/visuals/2-samuel/precept_tamar1.jpg",
-      "full": "/visuals/2-samuel/precept_tamar1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/tamar1.jpg"
-      },
-      "chapters": [
-        13
-      ]
-    },
-    {
-      "id": "precept-ch-tamarrape",
-      "title": "Precept Austin — 2 Samuel Chapter 13",
-      "caption": "Bruce Hurt's commentary chart for 2 Samuel chapter 13 — tamarrape.jpg.",
-      "thumb": "/visuals/2-samuel/precept_tamarrape.jpg",
-      "full": "/visuals/2-samuel/precept_tamarrape.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/tamarrape.jpg"
-      },
-      "chapters": [
-        13
-      ]
-    },
-    {
       "id": "precept-ch-tekoa",
       "title": "Precept Austin — 2 Samuel Chapter 14",
       "caption": "Bruce Hurt's commentary chart for 2 Samuel chapter 14 — tekoa.jpg.",
@@ -5609,24 +5537,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         14
-      ]
-    },
-    {
-      "id": "precept-ch-valleyrephaim",
-      "title": "Precept Austin — 2 Samuel Chapter 5",
-      "caption": "Bruce Hurt's commentary chart for 2 Samuel chapter 5 — valleyrephaim.jpg.",
-      "thumb": "/visuals/2-samuel/precept_valleyrephaim.jpg",
-      "full": "/visuals/2-samuel/precept_valleyrephaim.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/valleyrephaim.jpg"
-      },
-      "chapters": [
-        5
       ]
     },
     {
@@ -5648,24 +5558,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-waterrescue",
-      "title": "Precept Austin — 2 Samuel Chapter 22",
-      "caption": "Bruce Hurt's commentary chart for 2 Samuel chapter 22 — waterrescue.jpg.",
-      "thumb": "/visuals/2-samuel/precept_waterrescue.jpg",
-      "full": "/visuals/2-samuel/precept_waterrescue.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/waterrescue.jpg"
-      },
-      "chapters": [
-        22
-      ]
-    },
-    {
       "id": "precept-ch-well",
       "title": "Precept Austin — 2 Samuel Chapter 17",
       "caption": "Bruce Hurt's commentary chart for 2 Samuel chapter 17 — well.jpg.",
@@ -5681,24 +5573,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         17
-      ]
-    },
-    {
-      "id": "precept-ch-womantekoa",
-      "title": "Precept Austin — 2 Samuel Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for 2 Samuel chapter 14 — womantekoa.jpg.",
-      "thumb": "/visuals/2-samuel/precept_womantekoa.jpg",
-      "full": "/visuals/2-samuel/precept_womantekoa.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/womantekoa.jpg"
-      },
-      "chapters": [
-        14
       ]
     },
     {
