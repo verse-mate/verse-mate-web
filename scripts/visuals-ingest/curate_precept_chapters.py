@@ -516,6 +516,16 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "davidsconquests.png",
         "davidstriumphs.jpg",
         "spear.jpg",
+        # Audit pass (7 cards Andy marked from /audit/2-samuel.html) —
+        # Mephibosheth, Tamar/Amnon scene art, Valley of Rephaim,
+        # water-rescue + wise-woman-of-Tekoa AI illustrations.
+        "meph.jpg",
+        "tamar.jpg",
+        "tamar1.jpg",
+        "tamarrape.jpg",
+        "valleyrephaim.jpg",
+        "waterrescue.jpg",
+        "womantekoa.jpg",
     },
     "galatians": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
