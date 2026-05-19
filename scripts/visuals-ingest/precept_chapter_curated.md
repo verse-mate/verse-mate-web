@@ -2581,7 +2581,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 ### Per-chapter
 - **Ch 3** · windowheaven.jpg (score 0) <https://www.preceptaustin.org/files/images/windowheaven.jpg>
 
-## mark — 3 book-level, 107 per-chapter (probed 16 chapters)
+## mark — 3 book-level, 106 per-chapter (probed 16 chapters)
 
 ### Book-level
 - mark_overview.png (score 12, 16 chapters) <https://www.preceptaustin.org/files/images/mark_overview.png>
@@ -2646,7 +2646,6 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 9** · hermon.jpg (score 0) <https://www.preceptaustin.org/files/images/hermon.jpg>
 - **Ch 9** · millstone.jpg (score 0) <https://www.preceptaustin.org/files/images/millstone.jpg>
 - **Ch 9** · transfigure.jpg (score 0) <https://www.preceptaustin.org/files/images/transfigure.jpg>
-- **Ch 10** · jesuschild.png (score 2) <https://www.preceptaustin.org/files/images/jesuschild.png>
 - **Ch 10** · child.jpg (score 0) <https://www.preceptaustin.org/files/images/child.jpg>
 - **Ch 10** · divorce.webp (score 0) <https://www.preceptaustin.org/files/images/divorce.webp>
 - **Ch 10** · first.jpg (score 0) <https://www.preceptaustin.org/files/images/first.jpg>
@@ -2696,7 +2695,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 15** · scourge2.jpg (score 0) <https://www.preceptaustin.org/files/images/scourge2.jpg>
 - **Ch 16** · appear.jpg (score 0) <https://www.preceptaustin.org/files/images/appear.jpg>
 
-## matthew — 3 book-level, 147 per-chapter (probed 25 chapters)
+## matthew — 3 book-level, 145 per-chapter (probed 25 chapters)
 
 ### Book-level
 - matthewtimeline.jpg (score 10, 24 chapters) <https://www.preceptaustin.org/files/images/matthewtimeline.jpg>
@@ -2781,12 +2780,10 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 18** · child.jpg (score 0) <https://www.preceptaustin.org/files/images/child.jpg>
 - **Ch 18** · debt.webp (score 0) <https://www.preceptaustin.org/files/images/debt.webp>
 - **Ch 18** · greates.webp (score 0) <https://www.preceptaustin.org/files/images/greates.webp>
-- **Ch 18** · jesuschild.webp (score 0) <https://www.preceptaustin.org/files/images/jesuschild.webp>
 - **Ch 18** · millstone.jpg (score 0) <https://www.preceptaustin.org/files/images/millstone.jpg>
 - **Ch 18** · millstone1.webp (score 0) <https://www.preceptaustin.org/files/images/millstone1.webp>
 - **Ch 18** · skan.webp (score 0) <https://www.preceptaustin.org/files/images/skan.webp>
 - **Ch 18** · skandalon.jpg (score 0) <https://www.preceptaustin.org/files/images/skandalon.jpg>
-- **Ch 19** · jesuschild.png (score 2) <https://www.preceptaustin.org/files/images/jesuschild.png>
 - **Ch 19** · healing.webp (score 0) <https://www.preceptaustin.org/files/images/healing.webp>
 - **Ch 19** · richyoung.jpg (score 0) <https://www.preceptaustin.org/files/images/richyoung.jpg>
 - **Ch 20** · denarius.jpg (score 0) <https://www.preceptaustin.org/files/images/denarius.jpg>
