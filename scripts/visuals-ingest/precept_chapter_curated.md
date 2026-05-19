@@ -1393,7 +1393,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 12** · dan-12-river-tigris_small.jpg (score 0) <https://www.preceptaustin.org/files/images/DAN-12-RIVER-TIGRIS_small.jpg>
 - **Ch 12** · daniel 12_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Daniel%2012_small.jpg>
 
-## deuteronomy — 3 book-level, 71 per-chapter (probed 34 chapters)
+## deuteronomy — 3 book-level, 42 per-chapter (probed 34 chapters)
 
 ### Book-level
 - deuttime.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/deuttime.png>
@@ -1405,7 +1405,6 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 1** · edrei1.jpg (score 0) <https://www.preceptaustin.org/files/images/edrei1.jpg>
 - **Ch 1** · regions1.jpg (score 0) <https://www.preceptaustin.org/files/images/regions1.jpg>
 - **Ch 1** · sei.jpg (score 0) <https://www.preceptaustin.org/files/images/sei.jpg>
-- **Ch 1** · spy.jpg (score 0) <https://www.preceptaustin.org/files/images/spy.jpg>
 - **Ch 2** · kingshigh.png (score 2) <https://www.preceptaustin.org/files/images/kingshigh.png>
 - **Ch 2** · ammon.jpg (score 0) <https://www.preceptaustin.org/files/images/ammon.jpg>
 - **Ch 2** · arad.jpg (score 0) <https://www.preceptaustin.org/files/images/arad.jpg>
@@ -1414,63 +1413,35 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 2** · edrei1.jpg (score 0) <https://www.preceptaustin.org/files/images/edrei1.jpg>
 - **Ch 2** · route2.jpg (score 0) <https://www.preceptaustin.org/files/images/route2.jpg>
 - **Ch 2** · sei.jpg (score 0) <https://www.preceptaustin.org/files/images/sei.jpg>
-- **Ch 3** · almigthyhand.png (score 2) <https://www.preceptaustin.org/files/images/almigthyhand.png>
 - **Ch 3** · gad.png (score 2) <https://www.preceptaustin.org/files/images/gad.png>
 - **Ch 3** · bashan.jpg (score 0) <https://www.preceptaustin.org/files/images/bashan.jpg>
 - **Ch 3** · deut14.jpg (score 0) <https://www.preceptaustin.org/files/images/deut14.jpg>
 - **Ch 3** · edrei1.jpg (score 0) <https://www.preceptaustin.org/files/images/edrei1.jpg>
-- **Ch 3** · hermon1.jpg (score 0) <https://www.preceptaustin.org/files/images/hermon1.jpg>
-- **Ch 3** · jabbok.jpg (score 0) <https://www.preceptaustin.org/files/images/jabbok.jpg>
-- **Ch 3** · jordanrift.jpg (score 0) <https://www.preceptaustin.org/files/images/jordanrift.jpg>
 - **Ch 4** · gad.png (score 2) <https://www.preceptaustin.org/files/images/gad.png>
 - **Ch 4** · bashan.jpg (score 0) <https://www.preceptaustin.org/files/images/bashan.jpg>
 - **Ch 4** · deut14.jpg (score 0) <https://www.preceptaustin.org/files/images/deut14.jpg>
 - **Ch 4** · edrei1.jpg (score 0) <https://www.preceptaustin.org/files/images/edrei1.jpg>
-- **Ch 4** · exodusmtsinai.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusmtsinai.jpg>
-- **Ch 4** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
-- **Ch 5** · exodusmtsinai.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusmtsinai.jpg>
 - **Ch 5** · fork in the road.jpg (score 0) <https://www.preceptaustin.org/files/images/fork%20in%20the%20road.jpg>
-- **Ch 5** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
-- **Ch 6** · exodusphylactery.gif (score 0) <https://www.preceptaustin.org/files/images/exodusphylactery.gif>
-- **Ch 6** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
 - **Ch 6** · route2.jpg (score 0) <https://www.preceptaustin.org/files/images/route2.jpg>
 - **Ch 7** · deut14.jpg (score 0) <https://www.preceptaustin.org/files/images/deut14.jpg>
-- **Ch 7** · mousetrap.jpg (score 0) <https://www.preceptaustin.org/files/images/mousetrap.jpg>
 - **Ch 8** · deut14.jpg (score 0) <https://www.preceptaustin.org/files/images/deut14.jpg>
-- **Ch 8** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
-- **Ch 9** · listening1.jpg (score 0) <https://www.preceptaustin.org/files/images/listening1.jpg>
 - **Ch 9** · route2.jpg (score 0) <https://www.preceptaustin.org/files/images/route2.jpg>
-- **Ch 9** · sinaifire.jpg (score 0) <https://www.preceptaustin.org/files/images/sinaifire.jpg>
 - **Ch 10** · ark1.jpg (score 0) <https://www.preceptaustin.org/files/images/ark1.jpg>
-- **Ch 10** · circumcise.jpg (score 0) <https://www.preceptaustin.org/files/images/circumcise.jpg>
-- **Ch 11** · korahfall.jpg (score 0) <https://www.preceptaustin.org/files/images/korahfall.jpg>
 - **Ch 16** · calendar.png (score 2) <https://www.preceptaustin.org/files/images/calendar.png>
 - **Ch 16** · calen.jpg (score 0) <https://www.preceptaustin.org/files/images/calen.jpg>
 - **Ch 16** · holiday.jpg (score 0) <https://www.preceptaustin.org/files/images/holiday.jpg>
-- **Ch 16** · justice.jpg (score 0) <https://www.preceptaustin.org/files/images/justice.jpg>
-- **Ch 18** · molech.jpg (score 0) <https://www.preceptaustin.org/files/images/molech.jpg>
-- **Ch 19** · avenger.jpg (score 0) <https://www.preceptaustin.org/files/images/avenger.jpg>
 - **Ch 19** · levicity.jpg (score 0) <https://www.preceptaustin.org/files/images/levicity.jpg>
 - **Ch 20** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
-- **Ch 22** · exodusphylactery.gif (score 0) <https://www.preceptaustin.org/files/images/exodusphylactery.gif>
 - **Ch 27** · gerizim.jpg (score 0) <https://www.preceptaustin.org/files/images/gerizim.jpg>
 - **Ch 28** · dt2865.png (score 2) <https://www.preceptaustin.org/files/images/dt2865.png>
 - **Ch 28** · dt2866.png (score 2) <https://www.preceptaustin.org/files/images/dt2866.png>
 - **Ch 28** · dust.jpg (score 0) <https://www.preceptaustin.org/files/images/dust.jpg>
-- **Ch 28** · locust.jpg (score 0) <https://www.preceptaustin.org/files/images/locust.jpg>
-- **Ch 28** · siege.jpg (score 0) <https://www.preceptaustin.org/files/images/siege.jpg>
 - **Ch 31** · peak.jpg (score 0) <https://www.preceptaustin.org/files/images/peak.jpg>
 - **Ch 32** · deut3246.png (score 2) <https://www.preceptaustin.org/files/images/deut3246.png>
-- **Ch 32** · deut3247.png (score 2) <https://www.preceptaustin.org/files/images/deut3247.png>
 - **Ch 32** · deut32v2.png (score 2) <https://www.preceptaustin.org/files/images/deut32v2.png>
-- **Ch 32** · mosesnebo.jpg (score 0) <https://www.preceptaustin.org/files/images/mosesnebo.jpg>
-- **Ch 32** · mosesstrike.jpg (score 0) <https://www.preceptaustin.org/files/images/mosesstrike.jpg>
 - **Ch 32** · rith.jpg (score 0) <https://www.preceptaustin.org/files/images/rith.jpg>
-- **Ch 32** · sworddam.jpg (score 0) <https://www.preceptaustin.org/files/images/sworddam.jpg>
 - **Ch 33** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
 - **Ch 34** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
-- **Ch 34** · nebo1.jpg (score 0) <https://www.preceptaustin.org/files/images/nebo1.jpg>
-- **Ch 34** · onehorseshay.jpg (score 0) <https://www.preceptaustin.org/files/images/onehorseshay.jpg>
 
 ## ecclesiastes — 0 book-level, 120 per-chapter (probed 12 chapters)
 

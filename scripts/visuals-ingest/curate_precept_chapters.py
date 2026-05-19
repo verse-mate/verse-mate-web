@@ -211,6 +211,34 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "bee.jpg",         # photo of a bee swarm
         "grap.jpg",        # Poussin painting of grape carriers (art)
         "grapes.jpg",      # blue geometric pictogram of grape carriers
+        # Audit pass (24 cards Andy marked from /audit/deuteronomy.html) —
+        # Allstate-logo "Almighty hand" parody, generic-region maps,
+        # AI Moses-on-Nebo / Moses-striking-rock paintings, Victor "His
+        # Master's Voice" gramophone, mousetrap stock, justice statue.
+        "almigthyhand.png",
+        "avenger.jpg",
+        "circumcise.jpg",
+        "deut3247.png",
+        "exodusmtsinai.jpg",
+        "exodusphylactery.gif",
+        "fork_in_the_road.jpg",
+        "hermon1.jpg",
+        "jabbok.jpg",
+        "jordanrift.jpg",
+        "justice.jpg",
+        "korahfall.jpg",
+        "listening1.jpg",
+        "locust.jpg",
+        "molech.jpg",
+        "mosesnebo.jpg",
+        "mosesstrike.jpg",
+        "mousetrap.jpg",
+        "nebo1.jpg",
+        "onehorseshay.jpg",
+        "siege.jpg",
+        "sinaifire.jpg",
+        "spy.jpg",
+        "sworddam.jpg",
     },
     "joshua": {
         "joshualand.png",  # tribal-allotment column chart (low signal)
