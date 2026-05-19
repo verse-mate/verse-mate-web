@@ -320,6 +320,69 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "frog.jpg",
         "shofar.jpg",
         "solomonark.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "ahabb.png",
+        "ahabben.jpg",
+        "ahabjeh.png",
+        "ahabmic.png",
+        "ahabpro.png",
+        "ahabsack.png",
+        "ahabvex.png",
+        "ahabwound.png",
+        "ahabzed.png",
+        "davidcold.png",
+        "davidcon.jpg",
+        "daviddeath.png",
+        "elijah.jpg",
+        "elijahahabworship.jpg",
+        "elijahaltar.png",
+        "elijahbrook.png",
+        "elijahcarmel.png",
+        "elijahcattle.jpg",
+        "elijahcave.png",
+        "elijahconfrontsahab.png",
+        "elijahflouroil.jpg",
+        "elijahhoreb.png",
+        "elijahjuniper.png",
+        "elijahmantle.png",
+        "elijahmess1.png",
+        "elijahmouthcave.png",
+        "elijahnocloud.jpg",
+        "elijahoba.png",
+        "elijahonson.jpg",
+        "elijahpaint.jpg",
+        "elijahpr.png",
+        "elijahpray.jpg",
+        "elijahraven.png",
+        "elijahrun.png",
+        "elijahseize.png",
+        "elijahsondies.jpg",
+        "elijahstorm.jpg",
+        "elijahtrench.jpg",
+        "elijahwater.jpg",
+        "elijahwoman.png",
+        "hornsaltar.png",
+        "jeroboamgold.png",
+        "jeroboamson1.png",
+        "lion.png",
+        "lion3.png",
+        "shimei.png",
+        "solomon.jpg",
+        "solomon.png",
+        "solomon101.png",
+        "solomon700.png",
+        "solomonbaby.png",
+        "solomoncedar1.png",
+        "solomonchemosh.png",
+        "solomongezer.png",
+        "solomongordoniah.png",
+        "solomonjachin.jpg",
+        "solomonjerusalem.jpg",
+        "solomonkor2.png",
+        "solomonsheba.png",
+        "solomonstand.jpg",
+        "solomonstoreroom.jpg",
+        "splitaltar.png",
     },
     "1-samuel": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
@@ -412,6 +475,9 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "molech.jpg",
         "mosesstrike.jpg",
         "quail.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "death.jpg",
+        "paul_epistle.jpg",
     },
     "1-chronicles": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
@@ -420,6 +486,16 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "exodusshowbread.jpg",
         "shemtoterah.png",
         "shofar.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "davidcon.jpg",
+        "daviddefeatphil.png",
+        "davidline.png",
+        "davidmen.jpg",
+        "davidsconquests.png",
+        "davidtoamaziah.png",
+        "davidunited.png",
+        "sauldeath.jpg",
+        "saulsbody.jpg",
     },
     "2-samuel": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
@@ -427,6 +503,19 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "jordanrift1.jpg",
         "shofar.jpg",
         "sworddam.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "absalomhang.jpg",
+        "absalomsreb.jpg",
+        "absalomtamar.jpg",
+        "barleyfire.jpg",
+        "david_and_nathan_2_small.jpg",
+        "davidabjoab.jpg",
+        "davidcon.jpg",
+        "daviddefeatphil.png",
+        "davidlife.jpg",
+        "davidsconquests.png",
+        "davidstriumphs.jpg",
+        "spear.jpg",
     },
     "galatians": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
@@ -434,6 +523,9 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "fish.jpg",
         "guard.jpg",
         "sworddam.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "paul_epistle.jpg",
+        "yoke.jpg",
     },
     "2-kings": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
@@ -441,6 +533,29 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "exodusark.jpg",
         "jordanrift.jpg",
         "meshaking.png",
+        # V4 auto-prune pass (character + scene patterns)
+        "ahabb.png",
+        "ahazrezinpekah.png",
+        "ahaztribute.jpg",
+        "davidsconquests.png",
+        "elisha.jpg",
+        "elishabears.png",
+        "elishajericho.png",
+        "elishatodamascus.jpg",
+        "hezekiah.jpg",
+        "hezekiahprayer.png",
+        "isaiahsaw.png",
+        "jehu.jpg",
+        "jehuexecutes.jpg",
+        "jezebeldogs.jpg",
+        "jezebeldore.jpg",
+        "jezebelseal.jpg",
+        "joramaha.jpg",
+        "joramjeh.png",
+        "moabbattle.jpg",
+        "naamanheal.jpg",
+        "naamanjordan.png",
+        "zedekiahblind.jpg",
     },
     "acts": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
@@ -448,6 +563,11 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "molech.jpg",
         "scales1.gif",
         "sinaimoses.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "paulconversion.jpg",
+        "saulconversion.jpg",
+        "stephen.jpg",
+        "yoke.jpg",
     },
     "revelation": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
@@ -455,30 +575,66 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "menorah.jpg",
         "mousetrap.jpg",
         "scales1.gif",
+        # V4 auto-prune pass (character + scene patterns)
+        "jezebel.jpg",
+        "pergamumsword.jpg",
+        "pergamumzeusaltar.jpg",
     },
     "1-timothy": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
         "fish.jpg",
         "guard.jpg",
         "mousetrap.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "paul_epistle.jpg",
     },
     "mark": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
         "crossthree.jpg",
         "lampstand.jpg",
         "mark.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "anoint.jpg",
+        "bread.jpg",
+        "courtwomen.png",
+        "denarius.jpg",
+        "maryanoint.jpg",
+        "millstone.jpg",
+        "pilate.jpg",
+        "soil.jpg",
+        "stone.jpg",
+        "widow.jpg",
     },
     "john": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
         "exodusark.jpg",
         "listening1.jpg",
         "sworddam.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "blindman.jpg",
+        "judgment.jpg",
     },
     "2-chronicles": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
         "exodusbrazen2.jpg",
         "exoduslampstand.jpg",
         "exodusshowbread.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "ahabramoth.jpg",
+        "ahabzed.png",
+        "ahaz2822.png",
+        "ahazsurrounded.png",
+        "davidcon.jpg",
+        "davidsconquests.png",
+        "hezekiah.jpg",
+        "joashsickdied.png",
+        "solomon.png",
+        "solomonsheba.png",
+        "stonecutter.jpg",
+        "uzziahachilles.jpg",
+        "uzziahevil.png",
+        "uzziahmade.png",
+        "uzziahthree.png",
     },
     "joel": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
@@ -488,14 +644,80 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
     "jeremiah": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
         "listening1.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "jehucal.jpg",
+        "yoke.jpg",
     },
     "matthew": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
         "exodusdate.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "blindheal.jpg",
+        "bread.jpg",
+        "davidbread.jpg",
+        "denarius.jpg",
+        "herod.gif",
+        "herodline2.png",
+        "jesusblind.png",
+        "marriagesupper.jpg",
+        "millstone.jpg",
+        "millstone1.png",
+        "pilate.jpg",
+        "rahab.jpg",
+        "soil.jpg",
+        "solomonsheba.png",
+        "stone.jpg",
     },
     "isaiah": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
         "mosesstrike.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "ahazdefeateda.png",
+        "ahazisaiah.png",
+        "ahazrezinpekah.png",
+        "hezekiah.jpg",
+        "isaiah35.png",
+        "isaiah_11_-_lion_-_hicks_1834_small.jpg",
+        "isaiah_6-3_small.jpg",
+        "isaiah_6_-_2_small.jpg",
+    },
+    "ecclesiastes": {
+        # V4 auto-prune pass (character + scene patterns)
+        "contentment.jpg",
+        "eccl-bread.png",
+        "eccl-death1.png",
+        "eccl-sharp.png",
+        "solomon.jpg",
+    },
+    "amos": {
+        # V4 auto-prune pass (character + scene patterns)
+        "amos-1.gif",
+    },
+    "romans": {
+        # V4 auto-prune pass (character + scene patterns)
+        "paul_epistle.jpg",
+    },
+    "2-corinthians": {
+        # V4 auto-prune pass (character + scene patterns)
+        "paul_epistle.jpg",
+        "yoke.jpg",
+    },
+    "2-thessalonians": {
+        # V4 auto-prune pass (character + scene patterns)
+        "paul_epistle.jpg",
+    },
+    "colossians": {
+        # V4 auto-prune pass (character + scene patterns)
+        "paul_epistle.jpg",
+    },
+    "hosea": {
+        # V4 auto-prune pass (character + scene patterns)
+        "hosea_gomer.jpg",
+        "hosea_love.png",
+    },
+    "malachi": {
+        # V4 auto-prune pass (character + scene patterns)
+        "malachidol.jpg",
     },
     # Within-book byte-identical duplicates detected by MD5 across the
     # whole public/visuals/ tree. For each duplicate group we keep the
@@ -513,6 +735,23 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "lotswife.jpg",
         "luke5fish.jpg",
         "mousetrap.jpg",
+        # V4 auto-prune pass (character + scene patterns)
+        "blind1.jpg",
+        "bread.jpg",
+        "courtwomen.png",
+        "denarius.jpg",
+        "herod.gif",
+        "herod.jpg",
+        "judas.jpg",
+        "judas.png",
+        "luke13jerusalemdestroyed.jpg",
+        "nainwidow.jpg",
+        "pilate.jpg",
+        "prodigallament.jpg",
+        "solomonsheba.png",
+        "stone.jpg",
+        "widow.jpg",
+        "womenscourt.jpg",
     },
     "matthew":  {"herodtet.png"},             # dup of tetrarchmap.png
     "numbers": {
