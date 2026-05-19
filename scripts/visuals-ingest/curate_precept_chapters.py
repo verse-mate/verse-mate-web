@@ -839,6 +839,19 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         # V4 auto-prune pass (character + scene patterns)
         "malachidol.jpg",
     },
+    "proverbs": {
+        # Audit pass (7 cards Andy marked from /audit/proverbs.html) —
+        # generic sermon-prop stocks (ear, fork in the road, heart gif,
+        # horse, slaughter), Galilee sunrise photo, generic Proverbs
+        # decorative.
+        "ear.jpg",
+        "fork_in_the_road.jpg",
+        "heart.gif",
+        "horse.jpg",
+        "proverbs.jpg",
+        "slaughter.jpg",
+        "sungalilee.jpg",
+    },
     # Within-book byte-identical duplicates detected by MD5 across the
     # whole public/visuals/ tree. For each duplicate group we keep the
     # more descriptive filename. (The user previously flagged exodus.gif
