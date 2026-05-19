@@ -1711,10 +1711,9 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 20** · aarontree.jpg (score 0) <https://www.preceptaustin.org/files/images/aarontree.jpg>
 - **Ch 21** · 1samap.png (score 12) <https://www.preceptaustin.org/files/images/1samap.png>
 
-## leviticus — 2 book-level, 17 per-chapter (probed 27 chapters)
+## leviticus — 1 book-level, 17 per-chapter (probed 27 chapters)
 
 ### Book-level
-- leviticuschart.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/Leviticuschart.jpg>
 - leviticus1.png (score 2, 27 chapters) <https://www.preceptaustin.org/files/images/leviticus1.png>
 ### Per-chapter
 - **Ch 1** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>

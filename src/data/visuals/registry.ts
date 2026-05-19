@@ -1155,21 +1155,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-book-leviticuschart",
-      "title": "Precept Austin — Leviticus (leviticuschart.jpg)",
-      "caption": "Bruce Hurt's chart embedded across multiple Leviticus chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/leviticus/precept_leviticuschart.jpg",
-      "full": "/visuals/leviticus/precept_leviticuschart.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Leviticuschart.jpg"
-      }
-    },
-    {
       "id": "precept-book-leviticus1",
       "title": "Precept Austin — Leviticus (leviticus1.png)",
       "caption": "Bruce Hurt's chart embedded across multiple Leviticus chapters on Precept Austin's commentary.",
