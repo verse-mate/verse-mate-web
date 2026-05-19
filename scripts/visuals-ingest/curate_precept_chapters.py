@@ -308,6 +308,124 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "thresh.jpg",
         "winnow.jpg",
     },
+    "1-kings": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "aramkings.jpg",
+        "exodusark.jpg",
+        "exodusbrazen2.jpg",
+        "exodusdate.jpg",
+        "exoduslampstand.jpg",
+        "exodusshowbread.jpg",
+        "expulsion.jpg",
+        "frog.jpg",
+        "shofar.jpg",
+        "solomonark.jpg",
+    },
+    "1-samuel": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "amalekite.jpg",
+        "ark.jpg",
+        "exoduslampstand.jpg",
+        "exoduspriest.png",
+        "judeanwild.jpg",
+        "listening1.jpg",
+        "priest.jpg",
+        "shofar.jpg",
+    },
+    "1-corinthians": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "exodusredmoses.jpg",
+        "korah.jpg",
+        "korahfall.jpg",
+        "manna.jpg",
+        "molech.jpg",
+        "mosesstrike.jpg",
+        "quail.jpg",
+    },
+    "1-chronicles": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "exodusark.jpg",
+        "exoduslampstand.jpg",
+        "exodusshowbread.jpg",
+        "shemtoterah.png",
+        "shofar.jpg",
+    },
+    "2-samuel": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "jordanrift.jpg",
+        "jordanrift1.jpg",
+        "shofar.jpg",
+        "sworddam.jpg",
+    },
+    "galatians": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "abramstars.jpg",
+        "fish.jpg",
+        "guard.jpg",
+        "sworddam.jpg",
+    },
+    "2-kings": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "aramkings.jpg",
+        "exodusark.jpg",
+        "jordanrift.jpg",
+        "meshaking.png",
+    },
+    "acts": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "abramstars.jpg",
+        "molech.jpg",
+        "scales1.gif",
+        "sinaimoses.jpg",
+    },
+    "revelation": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "exoduslampstand.jpg",
+        "menorah.jpg",
+        "mousetrap.jpg",
+        "scales1.gif",
+    },
+    "1-timothy": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "fish.jpg",
+        "guard.jpg",
+        "mousetrap.jpg",
+    },
+    "mark": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "crossthree.jpg",
+        "lampstand.jpg",
+        "mark.jpg",
+    },
+    "john": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "exodusark.jpg",
+        "listening1.jpg",
+        "sworddam.jpg",
+    },
+    "2-chronicles": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "exodusbrazen2.jpg",
+        "exoduslampstand.jpg",
+        "exodusshowbread.jpg",
+    },
+    "joel": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "locust.jpg",
+        "shofar.jpg",
+    },
+    "jeremiah": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "listening1.jpg",
+    },
+    "matthew": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "exodusdate.jpg",
+    },
+    "isaiah": {
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "mosesstrike.jpg",
+    },
     # Within-book byte-identical duplicates detected by MD5 across the
     # whole public/visuals/ tree. For each duplicate group we keep the
     # more descriptive filename. (The user previously flagged exodus.gif
@@ -318,6 +436,12 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
     "luke": {
         "pontius.jpg",                        # dup of pilatestone.jpg
         "lukelifeofjesus.png",                # dup of luke_life_of_christ.png
+        # Auto-prune pass: pattern-matched on Andy's manual deletions
+        "lampstand.jpg",
+        "listening1.jpg",
+        "lotswife.jpg",
+        "luke5fish.jpg",
+        "mousetrap.jpg",
     },
     "matthew":  {"herodtet.png"},             # dup of tetrarchmap.png
     "numbers": {
