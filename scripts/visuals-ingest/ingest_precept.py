@@ -39,6 +39,10 @@ PUBLIC_VISUALS = ROOT / "public" / "visuals"
 # (the per-book chart was either shared/generic or wasn't really a chart).
 PRECEPT_CHARTS: dict[str, str] = {
     # Old Testament — clear "chart"-named files
+    # Genesis's chart isn't on the /<book>_commentaries page (where the
+    # other entries here came from); it lives on /genesis-1-resources.
+    # Same /files/images/ pattern, so we still fetch it here.
+    "genesis":       "genesis_book_of_beginnings.png",
     "exodus":        "exoduschart.png",
     "deuteronomy":   "deutchart.png",
     "joshua":        "joshuachart.png",
@@ -50,8 +54,9 @@ PRECEPT_CHARTS: dict[str, str] = {
     "job":           "jobchart.png",
     "jeremiah":      "jeremiahchart.png",
     "habakkuk":      "habakkukchart.png",
-    # Old Testament — book-named charts (verified to be substantial PNGs)
-    "leviticus":     "leviticus.png",
+    # Old Testament — book-named charts (verified to be substantial PNGs).
+    # NOTE: "leviticus.png" turned out to be a decorative photo of stacked
+    # commentary books rather than a study chart — removed from the map.
     "ruth":          "ruth.png",
     "ecclesiastes":  "eccl.png",
     "daniel":        "daniel.png",
@@ -84,8 +89,14 @@ PRECEPT_CHARTS: dict[str, str] = {
 }
 
 # Books NOT in the map (and why):
-#   genesis, numbers, judges, proverbs, song-of-solomon, mark, luke
+#   numbers, judges, proverbs, song-of-solomon, mark, luke
 #     — primary image is a small thumbnail rather than a content chart
+#   leviticus
+#     — `leviticus.png` is a decorative photo of stacked commentary books
+#       (oil lamp, magnifying glass, open Bible), not a study chart
+#   (genesis was previously skipped here too — the commentary page only
+#    has a thumbnail — but its real chart turns up on the /resources page,
+#    so it's now in the map above.)
 #   psalms, ephesians
 #     — no chart found / page didn't return content
 #   isaiah, lamentations, ezekiel, revelation
