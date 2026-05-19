@@ -3034,96 +3034,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-ch-achanbab",
-      "title": "Precept Austin — Joshua Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 7 — achanbab.jpg.",
-      "thumb": "/visuals/joshua/precept_achanbab.jpg",
-      "full": "/visuals/joshua/precept_achanbab.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/achanbab.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-achanbury",
-      "title": "Precept Austin — Joshua Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 7 — achanbury.jpg.",
-      "thumb": "/visuals/joshua/precept_achanbury.jpg",
-      "full": "/visuals/joshua/precept_achanbury.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/achanbury.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-achanstone",
-      "title": "Precept Austin — Joshua Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 7 — achanstone.jpg.",
-      "thumb": "/visuals/joshua/precept_achanstone.jpg",
-      "full": "/visuals/joshua/precept_achanstone.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/achanstone.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-aijalon",
-      "title": "Precept Austin — Joshua Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 10 — aijalon.jpg.",
-      "thumb": "/visuals/joshua/precept_aijalon.jpg",
-      "full": "/visuals/joshua/precept_aijalon.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/aijalon.jpg"
-      },
-      "chapters": [
-        10
-      ]
-    },
-    {
-      "id": "precept-ch-aijavelin",
-      "title": "Precept Austin — Joshua Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 8 — aijavelin.jpg.",
-      "thumb": "/visuals/joshua/precept_aijavelin.jpg",
-      "full": "/visuals/joshua/precept_aijavelin.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/aijavelin.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
       "id": "precept-ch-arnon",
       "title": "Precept Austin — Joshua Chapter 12",
       "caption": "Bruce Hurt's commentary chart for Joshua chapter 12 — arnon.jpg.",
@@ -3142,24 +3052,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-avenger",
-      "title": "Precept Austin — Joshua Chapter 20",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 20 — avenger.jpg.",
-      "thumb": "/visuals/joshua/precept_avenger.jpg",
-      "full": "/visuals/joshua/precept_avenger.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/avenger.jpg"
-      },
-      "chapters": [
-        20
-      ]
-    },
-    {
       "id": "precept-ch-bashan",
       "title": "Precept Austin — Joshua Chapter 12",
       "caption": "Bruce Hurt's commentary chart for Joshua chapter 12 — bashan.jpg.",
@@ -3175,24 +3067,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         12
-      ]
-    },
-    {
-      "id": "precept-ch-bethhoron",
-      "title": "Precept Austin — Joshua Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 10 — bethhoron.jpg.",
-      "thumb": "/visuals/joshua/precept_bethhoron.jpg",
-      "full": "/visuals/joshua/precept_bethhoron.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/bethhoron.jpg"
-      },
-      "chapters": [
-        10
       ]
     },
     {
@@ -3232,24 +3106,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-circumcise",
-      "title": "Precept Austin — Joshua Chapter 22",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 22 — circumcise.jpg.",
-      "thumb": "/visuals/joshua/precept_circumcise.jpg",
-      "full": "/visuals/joshua/precept_circumcise.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/circumcise.jpg"
-      },
-      "chapters": [
-        22
-      ]
-    },
-    {
       "id": "precept-ch-conquest",
       "title": "Precept Austin — Joshua Chapter 10",
       "caption": "Bruce Hurt's commentary chart for Joshua chapter 10 — conquest.jpg.",
@@ -3283,24 +3139,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         19
-      ]
-    },
-    {
-      "id": "precept-ch-discharge",
-      "title": "Precept Austin — Joshua Chapter 22",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 22 — discharge.jpg.",
-      "thumb": "/visuals/joshua/precept_discharge.jpg",
-      "full": "/visuals/joshua/precept_discharge.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/discharge.jpg"
-      },
-      "chapters": [
-        22
       ]
     },
     {
@@ -3396,42 +3234,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-fivekings",
-      "title": "Precept Austin — Joshua Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 10 — fivekings.jpg.",
-      "thumb": "/visuals/joshua/precept_fivekings.jpg",
-      "full": "/visuals/joshua/precept_fivekings.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/fivekings.jpg"
-      },
-      "chapters": [
-        10
-      ]
-    },
-    {
-      "id": "precept-ch-flint",
-      "title": "Precept Austin — Joshua Chapter 5",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 5 — flint.jpg.",
-      "thumb": "/visuals/joshua/precept_flint.jpg",
-      "full": "/visuals/joshua/precept_flint.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/flint.jpg"
-      },
-      "chapters": [
-        5
-      ]
-    },
-    {
       "id": "precept-ch-gad",
       "title": "Precept Austin — Joshua Chapters 12–13",
       "caption": "Bruce Hurt's commentary chart for Joshua chapters 12–13 — gad.png.",
@@ -3448,24 +3250,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "chapters": [
         12,
         13
-      ]
-    },
-    {
-      "id": "precept-ch-gerizim1",
-      "title": "Precept Austin — Joshua Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 8 — gerizim1.jpg.",
-      "thumb": "/visuals/joshua/precept_gerizim1.jpg",
-      "full": "/visuals/joshua/precept_gerizim1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/gerizim1.jpg"
-      },
-      "chapters": [
-        8
       ]
     },
     {
@@ -3634,60 +3418,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-joshua24",
-      "title": "Precept Austin — Joshua Chapter 24",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 24 — joshua24.jpg.",
-      "thumb": "/visuals/joshua/precept_joshua24.jpg",
-      "full": "/visuals/joshua/precept_joshua24.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/joshua24.jpg"
-      },
-      "chapters": [
-        24
-      ]
-    },
-    {
-      "id": "precept-ch-joshua3",
-      "title": "Precept Austin — Joshua Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 3 — joshua3.jpg.",
-      "thumb": "/visuals/joshua/precept_joshua3.jpg",
-      "full": "/visuals/joshua/precept_joshua3.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/joshua3.jpg"
-      },
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "id": "precept-ch-joshua6",
-      "title": "Precept Austin — Joshua Chapter 6",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 6 — joshua6.jpg.",
-      "thumb": "/visuals/joshua/precept_joshua6.jpg",
-      "full": "/visuals/joshua/precept_joshua6.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/joshua6.jpg"
-      },
-      "chapters": [
-        6
-      ]
-    },
-    {
       "id": "precept-ch-landremain",
       "title": "Precept Austin — Joshua Chapter 13",
       "caption": "Bruce Hurt's commentary chart for Joshua chapter 13 — landremain.jpg.",
@@ -3743,42 +3473,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-lot",
-      "title": "Precept Austin — Joshua Chapter 19",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 19 — lot.jpg.",
-      "thumb": "/visuals/joshua/precept_lot.jpg",
-      "full": "/visuals/joshua/precept_lot.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/lot.jpg"
-      },
-      "chapters": [
-        19
-      ]
-    },
-    {
-      "id": "precept-ch-mansoul",
-      "title": "Precept Austin — Joshua Chapter 15",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 15 — mansoul.jpg.",
-      "thumb": "/visuals/joshua/precept_mansoul.jpg",
-      "full": "/visuals/joshua/precept_mansoul.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/mansoul.jpg"
-      },
-      "chapters": [
-        15
-      ]
-    },
-    {
       "id": "precept-ch-maptribes",
       "title": "Precept Austin — Joshua Chapter 13",
       "caption": "Bruce Hurt's commentary chart for Joshua chapter 13 — maptribes.jpg.",
@@ -3812,24 +3506,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         21
-      ]
-    },
-    {
-      "id": "precept-ch-mousetrap",
-      "title": "Precept Austin — Joshua Chapter 23",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 23 — mousetrap.jpg.",
-      "thumb": "/visuals/joshua/precept_mousetrap.jpg",
-      "full": "/visuals/joshua/precept_mousetrap.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/mousetrap.jpg"
-      },
-      "chapters": [
-        23
       ]
     },
     {
@@ -3924,24 +3600,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         19
-      ]
-    },
-    {
-      "id": "precept-ch-sunstandstill1",
-      "title": "Precept Austin — Joshua Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for Joshua chapter 10 — sunstandstill1.jpg.",
-      "thumb": "/visuals/joshua/precept_sunstandstill1.jpg",
-      "full": "/visuals/joshua/precept_sunstandstill1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/sunstandstill1.jpg"
-      },
-      "chapters": [
-        10
       ]
     },
     {

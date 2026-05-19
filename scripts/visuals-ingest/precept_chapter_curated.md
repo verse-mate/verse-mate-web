@@ -2004,7 +2004,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 20** · shroud.gif (score 0) <https://www.preceptaustin.org/files/images/shroud.gif>
 - **Ch 21** · boatjesus.jpg (score 0) <https://www.preceptaustin.org/files/images/boatjesus.jpg>
 
-## joshua — 3 book-level, 65 per-chapter (probed 24 chapters)
+## joshua — 3 book-level, 46 per-chapter (probed 24 chapters)
 
 ### Book-level
 - joshuaoutline.png (score 15, 23 chapters) <https://www.preceptaustin.org/files/images/joshuaoutline.png>
@@ -2017,31 +2017,19 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 2** · shittimtojericho.jpg (score 0) <https://www.preceptaustin.org/files/images/shittimtojericho.jpg>
 - **Ch 3** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
 - **Ch 3** · jordanflood.jpg (score 0) <https://www.preceptaustin.org/files/images/jordanflood.jpg>
-- **Ch 3** · joshua3.jpg (score 0) <https://www.preceptaustin.org/files/images/joshua3.jpg>
 - **Ch 3** · shittimtojericho.jpg (score 0) <https://www.preceptaustin.org/files/images/shittimtojericho.jpg>
 - **Ch 4** · gilgal.jpg (score 0) <https://www.preceptaustin.org/files/images/gilgal.jpg>
-- **Ch 5** · flint.jpg (score 0) <https://www.preceptaustin.org/files/images/flint.jpg>
 - **Ch 5** · gilgal.jpg (score 0) <https://www.preceptaustin.org/files/images/gilgal.jpg>
 - **Ch 6** · jerichoesv.jpg (score 0) <https://www.preceptaustin.org/files/images/jerichoesv.jpg>
-- **Ch 6** · joshua6.jpg (score 0) <https://www.preceptaustin.org/files/images/joshua6.jpg>
-- **Ch 7** · achanbab.jpg (score 0) <https://www.preceptaustin.org/files/images/achanbab.jpg>
-- **Ch 7** · achanbury.jpg (score 0) <https://www.preceptaustin.org/files/images/achanbury.jpg>
-- **Ch 7** · achanstone.jpg (score 0) <https://www.preceptaustin.org/files/images/achanstone.jpg>
-- **Ch 8** · aijavelin.jpg (score 0) <https://www.preceptaustin.org/files/images/aijavelin.jpg>
 - **Ch 8** · ebal.jpg (score 0) <https://www.preceptaustin.org/files/images/ebal.jpg>
 - **Ch 8** · ebal1.jpg (score 0) <https://www.preceptaustin.org/files/images/ebal1.jpg>
-- **Ch 8** · gerizim1.jpg (score 0) <https://www.preceptaustin.org/files/images/gerizim1.jpg>
 - **Ch 9** · gibeon.jpg (score 0) <https://www.preceptaustin.org/files/images/gibeon.jpg>
-- **Ch 10** · aijalon.jpg (score 0) <https://www.preceptaustin.org/files/images/aijalon.jpg>
-- **Ch 10** · bethhoron.jpg (score 0) <https://www.preceptaustin.org/files/images/bethhoron.jpg>
 - **Ch 10** · bethhoron1.jpg (score 0) <https://www.preceptaustin.org/files/images/bethhoron1.jpg>
 - **Ch 10** · central.jpg (score 0) <https://www.preceptaustin.org/files/images/central.jpg>
 - **Ch 10** · conquest.jpg (score 0) <https://www.preceptaustin.org/files/images/conquest.jpg>
-- **Ch 10** · fivekings.jpg (score 0) <https://www.preceptaustin.org/files/images/fivekings.jpg>
 - **Ch 10** · gilgal.jpg (score 0) <https://www.preceptaustin.org/files/images/gilgal.jpg>
 - **Ch 10** · hailstonesjoshua.jpg (score 0) <https://www.preceptaustin.org/files/images/hailstonesjoshua.jpg>
 - **Ch 10** · joshua10.jpg (score 0) <https://www.preceptaustin.org/files/images/joshua10.jpg>
-- **Ch 10** · sunstandstill1.jpg (score 0) <https://www.preceptaustin.org/files/images/sunstandstill1.jpg>
 - **Ch 11** · hazor.jpg (score 0) <https://www.preceptaustin.org/files/images/hazor.jpg>
 - **Ch 11** · north.jpg (score 0) <https://www.preceptaustin.org/files/images/north.jpg>
 - **Ch 12** · gad.png (score 2) <https://www.preceptaustin.org/files/images/gad.png>
@@ -2053,7 +2041,6 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 13** · landremain.jpg (score 0) <https://www.preceptaustin.org/files/images/landremain.jpg>
 - **Ch 14** · tribe.jpg (score 0) <https://www.preceptaustin.org/files/images/tribe.jpg>
 - **Ch 15** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
-- **Ch 15** · mansoul.jpg (score 0) <https://www.preceptaustin.org/files/images/mansoul.jpg>
 - **Ch 15** · zorah.jpg (score 0) <https://www.preceptaustin.org/files/images/zorah.jpg>
 - **Ch 16** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
 - **Ch 16** · ephraimz.jpg (score 0) <https://www.preceptaustin.org/files/images/ephraimz.jpg>
@@ -2064,18 +2051,12 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 19** · simeonmap.jpg (score 10) <https://www.preceptaustin.org/files/images/simeonmap.jpg>
 - **Ch 19** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
 - **Ch 19** · dan.jpg (score 0) <https://www.preceptaustin.org/files/images/dan.jpg>
-- **Ch 19** · lot.jpg (score 0) <https://www.preceptaustin.org/files/images/lot.jpg>
 - **Ch 19** · zebulun.jpg (score 0) <https://www.preceptaustin.org/files/images/zebulun.jpg>
-- **Ch 20** · avenger.jpg (score 0) <https://www.preceptaustin.org/files/images/avenger.jpg>
 - **Ch 20** · leviticalcities.jpg (score 0) <https://www.preceptaustin.org/files/images/leviticalcities.jpg>
 - **Ch 21** · levitetowns.jpg (score 0) <https://www.preceptaustin.org/files/images/levitetowns.jpg>
 - **Ch 21** · leviticalcities.jpg (score 0) <https://www.preceptaustin.org/files/images/leviticalcities.jpg>
 - **Ch 21** · mosesancestry.jpg (score 0) <https://www.preceptaustin.org/files/images/mosesancestry.jpg>
-- **Ch 22** · circumcise.jpg (score 0) <https://www.preceptaustin.org/files/images/circumcise.jpg>
-- **Ch 22** · discharge.jpg (score 0) <https://www.preceptaustin.org/files/images/discharge.jpg>
 - **Ch 22** · tribe.jpg (score 0) <https://www.preceptaustin.org/files/images/tribe.jpg>
-- **Ch 23** · mousetrap.jpg (score 0) <https://www.preceptaustin.org/files/images/mousetrap.jpg>
-- **Ch 24** · joshua24.jpg (score 0) <https://www.preceptaustin.org/files/images/joshua24.jpg>
 
 ## judges — 7 book-level, 53 per-chapter (probed 21 chapters)
 

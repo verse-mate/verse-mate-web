@@ -244,6 +244,29 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "joshualand.png",  # tribal-allotment column chart (low signal)
         "joshuamain.jpg",  # main book outline chart (low signal)
         "promised1.jpg",   # modern Middle East political map (anachronistic)
+        # Audit pass (19 cards Andy marked from /audit/joshua.html) —
+        # Achan-rebellion scene paintings, Aijalon valley + Beth-horon
+        # AI battle art, circumcision diagram, "sun stands still"
+        # decorative, mousetrap stock photo.
+        "achanbab.jpg",
+        "achanbury.jpg",
+        "achanstone.jpg",
+        "aijalon.jpg",
+        "aijavelin.jpg",
+        "avenger.jpg",
+        "bethhoron.jpg",
+        "circumcise.jpg",
+        "discharge.jpg",
+        "fivekings.jpg",
+        "flint.jpg",
+        "gerizim1.jpg",
+        "joshua24.jpg",
+        "joshua3.jpg",
+        "joshua6.jpg",
+        "lot.jpg",
+        "mansoul.jpg",
+        "mousetrap.jpg",
+        "sunstandstill1.jpg",
     },
     "judges": {
         "napthali.png",    # generic Twelve Tribes map (covered by other books)
