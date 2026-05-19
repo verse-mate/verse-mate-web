@@ -12374,21 +12374,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-book-zeph-1",
-      "title": "Precept Austin — Zephaniah (zeph-1.gif)",
-      "caption": "Bruce Hurt's chart embedded across multiple Zephaniah chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/zephaniah/precept_zeph-1.gif",
-      "full": "/visuals/zephaniah/precept_zeph-1.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/zeph-1.gif"
-      }
-    },
-    {
       "id": "precept-book-zeph1",
       "title": "Precept Austin — Zephaniah (zeph1.jpg)",
       "caption": "Bruce Hurt's chart embedded across multiple Zephaniah chapters on Precept Austin's commentary.",
@@ -12401,21 +12386,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/zeph1.jpg"
-      }
-    },
-    {
-      "id": "precept-book-zephaniah",
-      "title": "Precept Austin — Zephaniah (zephaniah.jpg)",
-      "caption": "Bruce Hurt's chart embedded across multiple Zephaniah chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/zephaniah/precept_zephaniah.jpg",
-      "full": "/visuals/zephaniah/precept_zephaniah.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Zephaniah.jpg"
       }
     },
     {
@@ -12447,24 +12417,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/zephsum.jpg"
       }
-    },
-    {
-      "id": "precept-ch-dolart",
-      "title": "Precept Austin — Zephaniah Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Zephaniah chapter 1 — dolart.jpg.",
-      "thumb": "/visuals/zephaniah/precept_dolart.jpg",
-      "full": "/visuals/zephaniah/precept_dolart.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/DOLart.jpg"
-      },
-      "chapters": [
-        1
-      ]
     },
     {
       "id": "precept-ch-dolchart2",
@@ -12533,78 +12485,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/napthali.png"
-      },
-      "chapters": [
-        2
-      ]
-    },
-    {
-      "id": "precept-ch-nearfar",
-      "title": "Precept Austin — Zephaniah Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Zephaniah chapter 1 — nearfar.png.",
-      "thumb": "/visuals/zephaniah/precept_nearfar.png",
-      "full": "/visuals/zephaniah/precept_nearfar.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/nearfar.png"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
-      "id": "precept-ch-nineveh",
-      "title": "Precept Austin — Zephaniah Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for Zephaniah chapter 2 — nineveh.jpg.",
-      "thumb": "/visuals/zephaniah/precept_nineveh.jpg",
-      "full": "/visuals/zephaniah/precept_nineveh.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/nineveh.jpg"
-      },
-      "chapters": [
-        2
-      ]
-    },
-    {
-      "id": "precept-ch-nineveh1",
-      "title": "Precept Austin — Zephaniah Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for Zephaniah chapter 2 — nineveh1.jpg.",
-      "thumb": "/visuals/zephaniah/precept_nineveh1.jpg",
-      "full": "/visuals/zephaniah/precept_nineveh1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/nineveh1.jpg"
-      },
-      "chapters": [
-        2
-      ]
-    },
-    {
-      "id": "precept-ch-nineveh4",
-      "title": "Precept Austin — Zephaniah Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for Zephaniah chapter 2 — nineveh4.jpg.",
-      "thumb": "/visuals/zephaniah/precept_nineveh4.jpg",
-      "full": "/visuals/zephaniah/precept_nineveh4.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/nineveh4.jpg"
       },
       "chapters": [
         2
@@ -12871,42 +12751,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-artesian_well",
-      "title": "Precept Austin — Zechariah Chapter 13",
-      "caption": "Bruce Hurt's commentary chart for Zechariah chapter 13 — artesian_well.png.",
-      "thumb": "/visuals/zechariah/precept_artesian_well.png",
-      "full": "/visuals/zechariah/precept_artesian_well.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Artesian_Well.png"
-      },
-      "chapters": [
-        13
-      ]
-    },
-    {
-      "id": "precept-ch-dolapply",
-      "title": "Precept Austin — Zechariah Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for Zechariah chapter 14 — dolapply.jpg.",
-      "thumb": "/visuals/zechariah/precept_dolapply.jpg",
-      "full": "/visuals/zechariah/precept_dolapply.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/dolapply.jpg"
-      },
-      "chapters": [
-        14
-      ]
-    },
-    {
       "id": "precept-ch-dolho",
       "title": "Precept Austin — Zechariah Chapter 14",
       "caption": "Bruce Hurt's commentary chart for Zechariah chapter 14 — dolho.jpg.",
@@ -12961,24 +12805,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-templemount",
-      "title": "Precept Austin — Zechariah Chapter 12",
-      "caption": "Bruce Hurt's commentary chart for Zechariah chapter 12 — templemount.jpg.",
-      "thumb": "/visuals/zechariah/precept_templemount.jpg",
-      "full": "/visuals/zechariah/precept_templemount.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/templemount.jpg"
-      },
-      "chapters": [
-        12
-      ]
-    },
-    {
       "id": "precept-ch-zech14chart",
       "title": "Precept Austin — Zechariah Chapter 14",
       "caption": "Bruce Hurt's commentary chart for Zechariah chapter 14 — zech14chart.jpg.",
@@ -12997,42 +12823,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-zechariaholive",
-      "title": "Precept Austin — Zechariah Chapter 4",
-      "caption": "Bruce Hurt's commentary chart for Zechariah chapter 4 — zechariaholive.jpg.",
-      "thumb": "/visuals/zechariah/precept_zechariaholive.jpg",
-      "full": "/visuals/zechariah/precept_zechariaholive.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/zechariaholive.jpg"
-      },
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "id": "precept-ch-zechariahscroll",
-      "title": "Precept Austin — Zechariah Chapter 5",
-      "caption": "Bruce Hurt's commentary chart for Zechariah chapter 5 — zechariahscroll.jpg.",
-      "thumb": "/visuals/zechariah/precept_zechariahscroll.jpg",
-      "full": "/visuals/zechariah/precept_zechariahscroll.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/zechariahscroll.jpg"
-      },
-      "chapters": [
-        5
-      ]
-    },
-    {
       "id": "precept-ch-zechluther",
       "title": "Precept Austin — Zechariah Chapter 14",
       "caption": "Bruce Hurt's commentary chart for Zechariah chapter 14 — zechluther.jpg.",
@@ -13045,24 +12835,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/zechluther.jpg"
-      },
-      "chapters": [
-        14
-      ]
-    },
-    {
-      "id": "precept-ch-zechreturn",
-      "title": "Precept Austin — Zechariah Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for Zechariah chapter 14 — zechreturn.jpg.",
-      "thumb": "/visuals/zechariah/precept_zechreturn.jpg",
-      "full": "/visuals/zechariah/precept_zechreturn.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/zechreturn.jpg"
       },
       "chapters": [
         14
