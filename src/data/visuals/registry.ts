@@ -1838,21 +1838,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-book-exodus",
-      "title": "Precept Austin — Exodus (exodus.gif)",
-      "caption": "Bruce Hurt's chart embedded across multiple Exodus chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/exodus/precept_exodus.gif",
-      "full": "/visuals/exodus/precept_exodus.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodus.gif"
-      }
-    },
-    {
       "id": "precept-book-pentateuch",
       "title": "Precept Austin — Exodus (pentateuch.jpg)",
       "caption": "Bruce Hurt's chart embedded across multiple Exodus chapters on Precept Austin's commentary.",
@@ -1937,24 +1922,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         6
-      ]
-    },
-    {
-      "id": "precept-ch-exodus",
-      "title": "Precept Austin — Exodus Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 1 — exodus.gif.",
-      "thumb": "/visuals/exodus/precept_exodus.gif",
-      "full": "/visuals/exodus/precept_exodus.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodus.gif"
-      },
-      "chapters": [
-        1
       ]
     },
     {
@@ -3222,24 +3189,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-pogrom",
-      "title": "Precept Austin — Exodus Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 1 — pogrom.jpg.",
-      "thumb": "/visuals/exodus/precept_pogrom.jpg",
-      "full": "/visuals/exodus/precept_pogrom.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/pogrom.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
       "id": "precept-ch-scales1",
       "title": "Precept Austin — Exodus Chapter 7",
       "caption": "Bruce Hurt's commentary chart for Exodus chapter 7 — scales1.gif.",
@@ -3312,24 +3261,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         26,
         35
       ]
-    },
-    {
-      "id": "precept-ch-taskmaster",
-      "title": "Precept Austin — Exodus Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Exodus chapter 1 — taskmaster.jpg.",
-      "thumb": "/visuals/exodus/precept_taskmaster.jpg",
-      "full": "/visuals/exodus/precept_taskmaster.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/taskmaster.jpg"
-      },
-      "chapters": [
-        1
-      ]
     }
   ]
 },
@@ -3384,21 +3315,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/Leviticuschart.jpg"
-      }
-    },
-    {
-      "id": "precept-book-levi",
-      "title": "Precept Austin — Leviticus (levi.png)",
-      "caption": "Bruce Hurt's chart embedded across multiple Leviticus chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/leviticus/precept_levi.png",
-      "full": "/visuals/leviticus/precept_levi.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/levi.png"
       }
     },
     {
@@ -3810,24 +3726,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         16
-      ]
-    },
-    {
-      "id": "precept-ch-leviticus",
-      "title": "Precept Austin — Leviticus Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for Leviticus chapter 14 — leviticus.png.",
-      "thumb": "/visuals/leviticus/precept_leviticus.png",
-      "full": "/visuals/leviticus/precept_leviticus.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/leviticus.png"
-      },
-      "chapters": [
-        14
       ]
     },
     {
@@ -6088,21 +5986,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-book-mosesnebo1",
-      "title": "Precept Austin — Deuteronomy (mosesnebo1.png)",
-      "caption": "Bruce Hurt's chart embedded across multiple Deuteronomy chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/deuteronomy/precept_mosesnebo1.png",
-      "full": "/visuals/deuteronomy/precept_mosesnebo1.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/mosesnebo1.png"
-      }
-    },
-    {
       "id": "precept-book-deut",
       "title": "Precept Austin — Deuteronomy (deut.jpg)",
       "caption": "Bruce Hurt's chart embedded across multiple Deuteronomy chapters on Precept Austin's commentary.",
@@ -6276,24 +6159,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "chapters": [
         3,
         4
-      ]
-    },
-    {
-      "id": "precept-ch-bee",
-      "title": "Precept Austin — Deuteronomy Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Deuteronomy chapter 1 — bee.jpg.",
-      "thumb": "/visuals/deuteronomy/precept_bee.jpg",
-      "full": "/visuals/deuteronomy/precept_bee.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/bee.jpg"
-      },
-      "chapters": [
-        1
       ]
     },
     {
@@ -6610,42 +6475,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         27
-      ]
-    },
-    {
-      "id": "precept-ch-grap",
-      "title": "Precept Austin — Deuteronomy Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Deuteronomy chapter 1 — grap.jpg.",
-      "thumb": "/visuals/deuteronomy/precept_grap.jpg",
-      "full": "/visuals/deuteronomy/precept_grap.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/grap.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
-      "id": "precept-ch-grapes",
-      "title": "Precept Austin — Deuteronomy Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Deuteronomy chapter 1 — grapes.jpg.",
-      "thumb": "/visuals/deuteronomy/precept_grapes.jpg",
-      "full": "/visuals/deuteronomy/precept_grapes.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/grapes.jpg"
-      },
-      "chapters": [
-        1
       ]
     },
     {
