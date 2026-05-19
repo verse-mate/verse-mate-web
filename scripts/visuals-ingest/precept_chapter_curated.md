@@ -121,7 +121,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 16** · 3missionaryjourney.gif (score 0) <https://www.preceptaustin.org/files/images/3missionaryjourney.gif>
 - **Ch 16** · charity.jpg (score 0) <https://www.preceptaustin.org/files/images/charity.jpg>
 
-## 1-kings — 7 book-level, 141 per-chapter (probed 22 chapters)
+## 1-kings — 7 book-level, 130 per-chapter (probed 22 chapters)
 
 ### Book-level
 - 1kichart2.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/1kichart2.png>
@@ -154,7 +154,6 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 2** · daviddeath.webp (score 0) <https://www.preceptaustin.org/files/images/daviddeath.webp>
 - **Ch 2** · hornsaltar.webp (score 0) <https://www.preceptaustin.org/files/images/hornsaltar.webp>
 - **Ch 2** · shimei.webp (score 0) <https://www.preceptaustin.org/files/images/shimei.webp>
-- **Ch 3** · truman.png (score 2) <https://www.preceptaustin.org/files/images/truman.png>
 - **Ch 3** · babel.jpg (score 0) <https://www.preceptaustin.org/files/images/babel.jpg>
 - **Ch 3** · citydavid1.jpg (score 0) <https://www.preceptaustin.org/files/images/citydavid1.jpg>
 - **Ch 3** · exodustabernacleesvbig.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernacleesvbig.jpg>
@@ -176,27 +175,20 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 5** · solomonstone.webp (score 0) <https://www.preceptaustin.org/files/images/solomonstone.webp>
 - **Ch 5** · tyre-joppa.jpg (score 0) <https://www.preceptaustin.org/files/images/tyre-joppa.jpg>
 - **Ch 5** · tyreprophecy.jpg (score 0) <https://www.preceptaustin.org/files/images/tyreprophecy.jpg>
-- **Ch 6** · exodusincense.png (score 2) <https://www.preceptaustin.org/files/images/exodusincense.png>
 - **Ch 6** · exodusglory.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusglory.jpg>
-- **Ch 6** · ezekie7.gif (score 0) <https://www.preceptaustin.org/files/images/ezekie7.gif>
 - **Ch 6** · solomonstemple1.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonstemple1.jpg>
 - **Ch 6** · solomonstemplecity2.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonstemplecity2.jpg>
 - **Ch 6** · solomonstone.webp (score 0) <https://www.preceptaustin.org/files/images/solomonstone.webp>
 - **Ch 6** · solomontempleplan.jpg (score 0) <https://www.preceptaustin.org/files/images/solomontempleplan.jpg>
-- **Ch 7** · exodusincense.png (score 2) <https://www.preceptaustin.org/files/images/exodusincense.png>
 - **Ch 7** · solomonhouse.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonhouse.jpg>
 - **Ch 7** · solomonstemple1.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonstemple1.jpg>
-- **Ch 8** · circumcise.jpg (score 0) <https://www.preceptaustin.org/files/images/circumcise.jpg>
 - **Ch 8** · exodusglory.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusglory.jpg>
-- **Ch 8** · solomonarktotemple.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonarktotemple.jpg>
 - **Ch 8** · solomontempleplan.jpg (score 0) <https://www.preceptaustin.org/files/images/solomontempleplan.jpg>
 - **Ch 9** · exodusvia.png (score 2) <https://www.preceptaustin.org/files/images/exodusvia.png>
 - **Ch 9** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
 - **Ch 9** · solomonfortress.png (score 2) <https://www.preceptaustin.org/files/images/solomonfortress.png>
 - **Ch 9** · ezion.jpg (score 0) <https://www.preceptaustin.org/files/images/ezion.jpg>
-- **Ch 9** · ezion2.jpg (score 0) <https://www.preceptaustin.org/files/images/ezion2.jpg>
 - **Ch 10** · sheba.jpg (score 0) <https://www.preceptaustin.org/files/images/sheba.jpg>
-- **Ch 10** · shebaqueen.jpg (score 0) <https://www.preceptaustin.org/files/images/shebaqueen.jpg>
 - **Ch 10** · solomonchariot.webp (score 0) <https://www.preceptaustin.org/files/images/solomonchariot.webp>
 - **Ch 10** · solomonking.webp (score 0) <https://www.preceptaustin.org/files/images/solomonking.webp>
 - **Ch 10** · solomonmeal.webp (score 0) <https://www.preceptaustin.org/files/images/solomonmeal.webp>
@@ -204,14 +196,12 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 10** · solomonpeacock.webp (score 0) <https://www.preceptaustin.org/files/images/solomonpeacock.webp>
 - **Ch 10** · solomonsheba.webp (score 0) <https://www.preceptaustin.org/files/images/solomonsheba.webp>
 - **Ch 10** · solomonsilver.webp (score 0) <https://www.preceptaustin.org/files/images/solomonsilver.webp>
-- **Ch 10** · solomonthrone.jpg (score 0) <https://www.preceptaustin.org/files/images/solomonthrone.jpg>
 - **Ch 11** · solomonskingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/solomonskingdom.jpg>
 - **Ch 11** · solomon101.webp (score 0) <https://www.preceptaustin.org/files/images/solomon101.webp>
 - **Ch 11** · solomon700.webp (score 0) <https://www.preceptaustin.org/files/images/solomon700.webp>
 - **Ch 11** · solomonchemosh.webp (score 0) <https://www.preceptaustin.org/files/images/solomonchemosh.webp>
 - **Ch 12** · dividedkingdom.jpg (score 10) <https://www.preceptaustin.org/files/images/dividedkingdom.jpg>
 - **Ch 12** · napthali.png (score 2) <https://www.preceptaustin.org/files/images/napthali.png>
-- **Ch 12** · dan1.jpg (score 0) <https://www.preceptaustin.org/files/images/dan1.jpg>
 - **Ch 12** · ephraimz.jpg (score 0) <https://www.preceptaustin.org/files/images/ephraimz.jpg>
 - **Ch 12** · gideonesv.jpg (score 0) <https://www.preceptaustin.org/files/images/gideonesv.jpg>
 - **Ch 12** · jeroboamgold.webp (score 0) <https://www.preceptaustin.org/files/images/jeroboamgold.webp>
@@ -229,7 +219,6 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 14** · greentree.webp (score 0) <https://www.preceptaustin.org/files/images/greentree.webp>
 - **Ch 14** · jeroboamson1.webp (score 0) <https://www.preceptaustin.org/files/images/jeroboamson1.webp>
 - **Ch 14** · reed.webp (score 0) <https://www.preceptaustin.org/files/images/reed.webp>
-- **Ch 14** · shishak.jpg (score 0) <https://www.preceptaustin.org/files/images/shishak.jpg>
 - **Ch 14** · shishak2.webp (score 0) <https://www.preceptaustin.org/files/images/shishak2.webp>
 - **Ch 15** · maacah.webp (score 0) <https://www.preceptaustin.org/files/images/maacah.webp>
 - **Ch 15** · ramah1.jpg (score 0) <https://www.preceptaustin.org/files/images/ramah1.jpg>

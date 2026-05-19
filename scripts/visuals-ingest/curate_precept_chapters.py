@@ -383,6 +383,33 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "solomonstand.jpg",
         "solomonstoreroom.jpg",
         "splitaltar.png",
+        # Audit pass (21 cards Andy marked from /audit/1-kings.html) —
+        # more elijah/ahab/solomon scene art the v4 prefix-matcher
+        # didn't catch (abiathar AI, ahijah, oldprophet, withered hand,
+        # Sheba-queen visit, throne, Shishak invasion), plus generic
+        # decoratives (dogs.png, reed.png, truman.png, dove animation,
+        # ezion gulf photo, ezekie7 hand-drawing).
+        "ababjeh.png",
+        "abiathar.png",
+        "ahahelijah.png",
+        "ahahnaboth.png",
+        "ahijah.png",
+        "bathsol.png",
+        "circumcise.jpg",
+        "dan1.jpg",
+        "dogs.png",
+        "exodusincense.png",
+        "ezekie7.gif",
+        "ezion2.jpg",
+        "oldprophet.png",
+        "peace_dove_olive_branch_animation.gif",
+        "reed.png",
+        "shebaqueen.jpg",
+        "shishak.jpg",
+        "solomonarktotemple.jpg",
+        "solomonthrone.jpg",
+        "truman.png",
+        "withered.png",
     },
     "1-samuel": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
