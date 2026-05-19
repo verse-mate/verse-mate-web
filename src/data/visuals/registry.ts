@@ -11069,289 +11069,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       }
     },
     {
-      "id": "precept-book-dan_lion",
-      "title": "Precept Austin — Daniel (dan_lion.jpg)",
-      "caption": "Bruce Hurt's chart embedded across multiple Daniel chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/daniel/precept_dan_lion.jpg",
-      "full": "/visuals/daniel/precept_dan_lion.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/dan_lion.jpg"
-      }
-    },
-    {
-      "id": "precept-book-godsplan",
-      "title": "Precept Austin — Daniel (godsplan.jpg)",
-      "caption": "Bruce Hurt's chart embedded across multiple Daniel chapters on Precept Austin's commentary.",
-      "thumb": "/visuals/daniel/precept_godsplan.jpg",
-      "full": "/visuals/daniel/precept_godsplan.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/godsplan.jpg"
-      }
-    },
-    {
-      "id": "precept-ch-among-lampstands_small",
-      "title": "Precept Austin — Daniel Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 10 — among-lampstands_small.jpg.",
-      "thumb": "/visuals/daniel/precept_among-lampstands_small.jpg",
-      "full": "/visuals/daniel/precept_among-lampstands_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/AMONG-LAMPSTANDS_small.jpg"
-      },
-      "chapters": [
-        10
-      ]
-    },
-    {
-      "id": "precept-ch-antiochusivepiphanes",
-      "title": "Precept Austin — Daniel Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 8 — antiochusivepiphanes.jpg.",
-      "thumb": "/visuals/daniel/precept_antiochusivepiphanes.jpg",
-      "full": "/visuals/daniel/precept_antiochusivepiphanes.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/AntiochusIVEpiphanes.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-babel_tower_of_small",
-      "title": "Precept Austin — Daniel Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 1 — babel, tower of_small.jpg.",
-      "thumb": "/visuals/daniel/precept_babel_tower_of_small.jpg",
-      "full": "/visuals/daniel/precept_babel_tower_of_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Babel%2c%20Tower%20of_small.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
-      "id": "precept-ch-babylonian-empire-map_small",
-      "title": "Precept Austin — Daniel Chapter 6",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 6 — babylonian-empire-map_small.png.",
-      "thumb": "/visuals/daniel/precept_babylonian-empire-map_small.png",
-      "full": "/visuals/daniel/precept_babylonian-empire-map_small.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/babylonian-empire-map_small.png"
-      },
-      "chapters": [
-        6
-      ]
-    },
-    {
-      "id": "precept-ch-cyrus_cilinder_small",
-      "title": "Precept Austin — Daniel Chapter 6",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 6 — cyrus_cilinder_small.jpg.",
-      "thumb": "/visuals/daniel/precept_cyrus_cilinder_small.jpg",
-      "full": "/visuals/daniel/precept_cyrus_cilinder_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Cyrus_cilinder_small.jpg"
-      },
-      "chapters": [
-        6
-      ]
-    },
-    {
-      "id": "precept-ch-da_10_by_side_of_river_small",
-      "title": "Precept Austin — Daniel Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 10 — da 10 by side of river_small.jpg.",
-      "thumb": "/visuals/daniel/precept_da_10_by_side_of_river_small.jpg",
-      "full": "/visuals/daniel/precept_da_10_by_side_of_river_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Da%2010%20By%20Side%20of%20River_small.jpg"
-      },
-      "chapters": [
-        10
-      ]
-    },
-    {
-      "id": "precept-ch-dan-10-man_small",
-      "title": "Precept Austin — Daniel Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 10 — dan-10-man_small.jpg.",
-      "thumb": "/visuals/daniel/precept_dan-10-man_small.jpg",
-      "full": "/visuals/daniel/precept_dan-10-man_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/DAN-10-MAN_small.jpg"
-      },
-      "chapters": [
-        10
-      ]
-    },
-    {
-      "id": "precept-ch-dan-12-river-tigris_small",
-      "title": "Precept Austin — Daniel Chapter 12",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 12 — dan-12-river-tigris_small.jpg.",
-      "thumb": "/visuals/daniel/precept_dan-12-river-tigris_small.jpg",
-      "full": "/visuals/daniel/precept_dan-12-river-tigris_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/DAN-12-RIVER-TIGRIS_small.jpg"
-      },
-      "chapters": [
-        12
-      ]
-    },
-    {
-      "id": "precept-ch-dan-8-goat",
-      "title": "Precept Austin — Daniel Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 8 — dan-8-goat.jpg.",
-      "thumb": "/visuals/daniel/precept_dan-8-goat.jpg",
-      "full": "/visuals/daniel/precept_dan-8-goat.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/DAN-8-GOAT.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-dan-8-ram",
-      "title": "Precept Austin — Daniel Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 8 — dan-8-ram.jpg.",
-      "thumb": "/visuals/daniel/precept_dan-8-ram.jpg",
-      "full": "/visuals/daniel/precept_dan-8-ram.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/DAN-8-RAM.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-dan-8-ulai",
-      "title": "Precept Austin — Daniel Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 8 — dan-8-ulai.jpg.",
-      "thumb": "/visuals/daniel/precept_dan-8-ulai.jpg",
-      "full": "/visuals/daniel/precept_dan-8-ulai.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/DAN-8-ULAI.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-dan_lion",
-      "title": "Precept Austin — Daniel Chapters 2, 6",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapters 2, 6 — dan_lion.jpg.",
-      "thumb": "/visuals/daniel/precept_dan_lion.jpg",
-      "full": "/visuals/daniel/precept_dan_lion.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/dan_lion.jpg"
-      },
-      "chapters": [
-        2,
-        6
-      ]
-    },
-    {
-      "id": "precept-ch-daniel_12_small",
-      "title": "Precept Austin — Daniel Chapter 12",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 12 — daniel 12_small.jpg.",
-      "thumb": "/visuals/daniel/precept_daniel_12_small.jpg",
-      "full": "/visuals/daniel/precept_daniel_12_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Daniel%2012_small.jpg"
-      },
-      "chapters": [
-        12
-      ]
-    },
-    {
-      "id": "precept-ch-daniel_4",
-      "title": "Precept Austin — Daniel Chapter 4",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 4 — daniel 4.jpg.",
-      "thumb": "/visuals/daniel/precept_daniel_4.jpg",
-      "full": "/visuals/daniel/precept_daniel_4.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Daniel%204.jpg"
-      },
-      "chapters": [
-        4
-      ]
-    },
-    {
       "id": "precept-ch-daniel_contemp",
       "title": "Precept Austin — Daniel Chapter 2",
       "caption": "Bruce Hurt's commentary chart for Daniel chapter 2 — daniel_contemp.png.",
@@ -11388,24 +11105,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-daniel_praying_small",
-      "title": "Precept Austin — Daniel Chapter 6",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 6 — daniel praying_small.jpg.",
-      "thumb": "/visuals/daniel/precept_daniel_praying_small.jpg",
-      "full": "/visuals/daniel/precept_daniel_praying_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Daniel%20praying_small.jpg"
-      },
-      "chapters": [
-        6
-      ]
-    },
-    {
       "id": "precept-ch-daniel_visions",
       "title": "Precept Austin — Daniel Chapter 2",
       "caption": "Bruce Hurt's commentary chart for Daniel chapter 2 — daniel_visions.png.",
@@ -11424,24 +11123,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-darius_calls_to_daniel_small",
-      "title": "Precept Austin — Daniel Chapter 6",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 6 — darius calls to daniel_small.jpg.",
-      "thumb": "/visuals/daniel/precept_darius_calls_to_daniel_small.jpg",
-      "full": "/visuals/daniel/precept_darius_calls_to_daniel_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Darius%20calls%20to%20Daniel_small.jpg"
-      },
-      "chapters": [
-        6
-      ]
-    },
-    {
       "id": "precept-ch-medo-persia_map_with_susa",
       "title": "Precept Austin — Daniel Chapter 8",
       "caption": "Bruce Hurt's commentary chart for Daniel chapter 8 — medo-persia map with susa.gif.",
@@ -11457,60 +11138,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         8
-      ]
-    },
-    {
-      "id": "precept-ch-nabonidus",
-      "title": "Precept Austin — Daniel Chapter 5",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 5 — nabonidus.jpg.",
-      "thumb": "/visuals/daniel/precept_nabonidus.jpg",
-      "full": "/visuals/daniel/precept_nabonidus.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/nabonidus.jpg"
-      },
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "id": "precept-ch-persian_small",
-      "title": "Precept Austin — Daniel Chapter 6",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 6 — persian_small.gif.",
-      "thumb": "/visuals/daniel/precept_persian_small.gif",
-      "full": "/visuals/daniel/precept_persian_small.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Persian_small.gif"
-      },
-      "chapters": [
-        6
-      ]
-    },
-    {
-      "id": "precept-ch-praying-hands_small",
-      "title": "Precept Austin — Daniel Chapter 6",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 6 — praying-hands_small.jpg.",
-      "thumb": "/visuals/daniel/precept_praying-hands_small.jpg",
-      "full": "/visuals/daniel/precept_praying-hands_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/praying-hands_small.jpg"
-      },
-      "chapters": [
-        6
       ]
     },
     {
@@ -11547,24 +11174,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         8
-      ]
-    },
-    {
-      "id": "precept-ch-writingwall",
-      "title": "Precept Austin — Daniel Chapter 5",
-      "caption": "Bruce Hurt's commentary chart for Daniel chapter 5 — writingwall.jpg.",
-      "thumb": "/visuals/daniel/precept_writingwall.jpg",
-      "full": "/visuals/daniel/precept_writingwall.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/writingwall.jpg"
-      },
-      "chapters": [
-        5
       ]
     }
   ]
@@ -11921,24 +11530,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-judges_2_small",
-      "title": "Precept Austin — Joel Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for Joel chapter 2 — judges 2_small.jpg.",
-      "thumb": "/visuals/joel/precept_judges_2_small.jpg",
-      "full": "/visuals/joel/precept_judges_2_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Judges%202_small.jpg"
-      },
-      "chapters": [
-        2
-      ]
-    },
-    {
       "id": "precept-ch-ophel",
       "title": "Precept Austin — Joel Chapter 2",
       "caption": "Bruce Hurt's commentary chart for Joel chapter 2 — ophel.jpg.",
@@ -11972,24 +11563,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         2
-      ]
-    },
-    {
-      "id": "precept-ch-zeph-1",
-      "title": "Precept Austin — Joel Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for Joel chapter 3 — zeph-1.gif.",
-      "thumb": "/visuals/joel/precept_zeph-1.gif",
-      "full": "/visuals/joel/precept_zeph-1.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/zeph-1.gif"
-      },
-      "chapters": [
-        3
       ]
     }
   ]
@@ -12216,42 +11789,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/amostime.jpg"
-      },
-      "chapters": [
-        9
-      ]
-    },
-    {
-      "id": "precept-ch-deep",
-      "title": "Precept Austin — Amos Chapter 9",
-      "caption": "Bruce Hurt's commentary chart for Amos chapter 9 — deep.png.",
-      "thumb": "/visuals/amos/precept_deep.png",
-      "full": "/visuals/amos/precept_deep.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/deep.png"
-      },
-      "chapters": [
-        9
-      ]
-    },
-    {
-      "id": "precept-ch-winnow",
-      "title": "Precept Austin — Amos Chapter 9",
-      "caption": "Bruce Hurt's commentary chart for Amos chapter 9 — winnow.jpg.",
-      "thumb": "/visuals/amos/precept_winnow.jpg",
-      "full": "/visuals/amos/precept_winnow.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/winnow.jpg"
       },
       "chapters": [
         9
