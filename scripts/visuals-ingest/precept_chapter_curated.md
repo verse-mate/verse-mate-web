@@ -1166,7 +1166,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 28** · shigella.jpg (score 0) <https://www.preceptaustin.org/files/images/shigella.jpg>
 - **Ch 28** · syracuse.jpg (score 0) <https://www.preceptaustin.org/files/images/syracuse.jpg>
 
-## amos — 8 book-level, 5 per-chapter (probed 1 chapters)
+## amos — 8 book-level, 3 per-chapter (probed 1 chapters)
 
 ### Book-level
 - amos_geo.png (score 12, 0 chapters) <https://www.preceptaustin.org/files/images/amos_geo.png>
@@ -1180,9 +1180,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 ### Per-chapter
 - **Ch 9** · amos_geo.png (score 12) <https://www.preceptaustin.org/files/images/amos_geo.png>
 - **Ch 9** · amos_con.png (score 2) <https://www.preceptaustin.org/files/images/amos_con.png>
-- **Ch 9** · deep.png (score 2) <https://www.preceptaustin.org/files/images/deep.png>
 - **Ch 9** · amostime.jpg (score 0) <https://www.preceptaustin.org/files/images/amostime.jpg>
-- **Ch 9** · winnow.jpg (score 0) <https://www.preceptaustin.org/files/images/winnow.jpg>
 
 ## colossians — 1 book-level, 2 per-chapter (probed 1 chapters)
 
@@ -1192,46 +1190,29 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 3** · artesian_well.png (score 2) <https://www.preceptaustin.org/files/images/Artesian_Well.png>
 - **Ch 3** · col.png (score 2) <https://www.preceptaustin.org/files/images/col.png>
 
-## daniel — 5 book-level, 32 per-chapter (probed 9 chapters)
+## daniel — 3 book-level, 17 per-chapter (probed 9 chapters)
 
 ### Book-level
 - daniel_contemp.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/daniel_contemp.png>
 - daniel_dreams.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/daniel_dreams.png>
 - daniel_visions.png (score 2, 0 chapters) <https://www.preceptaustin.org/files/images/daniel_visions.png>
-- dan_lion.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/dan_lion.jpg>
-- godsplan.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/godsplan.jpg>
 ### Per-chapter
 - **Ch 1** · babel, tower of_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Babel%2c%20Tower%20of_small.jpg>
 - **Ch 2** · daniel_contemp.png (score 2) <https://www.preceptaustin.org/files/images/daniel_contemp.png>
 - **Ch 2** · daniel_dreams.png (score 2) <https://www.preceptaustin.org/files/images/daniel_dreams.png>
 - **Ch 2** · daniel_visions.png (score 2) <https://www.preceptaustin.org/files/images/daniel_visions.png>
-- **Ch 2** · dan_lion.jpg (score 0) <https://www.preceptaustin.org/files/images/dan_lion.jpg>
 - **Ch 4** · babycity.jpg (score 0) <https://www.preceptaustin.org/files/images/babycity.jpg>
 - **Ch 4** · daniel 4.jpg (score 0) <https://www.preceptaustin.org/files/images/Daniel%204.jpg>
 - **Ch 4** · hanggarden.jpg (score 0) <https://www.preceptaustin.org/files/images/hanggarden.jpg>
 - **Ch 4** · ishtar.jpg (score 0) <https://www.preceptaustin.org/files/images/ishtar.jpg>
 - **Ch 4** · nebcow.jpg (score 0) <https://www.preceptaustin.org/files/images/nebcow.jpg>
 - **Ch 5** · naboncyl.jpg (score 0) <https://www.preceptaustin.org/files/images/naboncyl.jpg>
-- **Ch 5** · nabonidus.jpg (score 0) <https://www.preceptaustin.org/files/images/nabonidus.jpg>
-- **Ch 5** · writingwall.jpg (score 0) <https://www.preceptaustin.org/files/images/writingwall.jpg>
-- **Ch 6** · babylonian-empire-map_small.png (score 12) <https://www.preceptaustin.org/files/images/babylonian-empire-map_small.png>
-- **Ch 6** · cyrus_cilinder_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Cyrus_cilinder_small.jpg>
-- **Ch 6** · dan_lion.jpg (score 0) <https://www.preceptaustin.org/files/images/dan_lion.jpg>
 - **Ch 6** · daniel praying_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Daniel%20praying_small.jpg>
 - **Ch 6** · darius calls to daniel_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Darius%20calls%20to%20Daniel_small.jpg>
-- **Ch 6** · persian_small.gif (score 0) <https://www.preceptaustin.org/files/images/Persian_small.gif>
-- **Ch 6** · praying-hands_small.jpg (score 0) <https://www.preceptaustin.org/files/images/praying-hands_small.jpg>
 - **Ch 8** · medo-persia map with susa.gif (score 10) <https://www.preceptaustin.org/files/images/Medo-Persia%20Map%20with%20Susa.gif>
 - **Ch 8** · susa.png (score 2) <https://www.preceptaustin.org/files/images/susa.png>
-- **Ch 8** · antiochusivepiphanes.jpg (score 0) <https://www.preceptaustin.org/files/images/AntiochusIVEpiphanes.jpg>
-- **Ch 8** · dan-8-goat.jpg (score 0) <https://www.preceptaustin.org/files/images/DAN-8-GOAT.jpg>
-- **Ch 8** · dan-8-ram.jpg (score 0) <https://www.preceptaustin.org/files/images/DAN-8-RAM.jpg>
-- **Ch 8** · dan-8-ulai.jpg (score 0) <https://www.preceptaustin.org/files/images/DAN-8-ULAI.jpg>
 - **Ch 8** · ptolemy all 4 needs caption.gif (score 0) <https://www.preceptaustin.org/files/images/ptolemy%20all%204%20needs%20caption.gif>
-- **Ch 10** · among-lampstands_small.jpg (score 0) <https://www.preceptaustin.org/files/images/AMONG-LAMPSTANDS_small.jpg>
 - **Ch 10** · da 10 by side of river_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Da%2010%20By%20Side%20of%20River_small.jpg>
-- **Ch 10** · dan-10-man_small.jpg (score 0) <https://www.preceptaustin.org/files/images/DAN-10-MAN_small.jpg>
-- **Ch 12** · dan-12-river-tigris_small.jpg (score 0) <https://www.preceptaustin.org/files/images/DAN-12-RIVER-TIGRIS_small.jpg>
 - **Ch 12** · daniel 12_small.jpg (score 0) <https://www.preceptaustin.org/files/images/Daniel%2012_small.jpg>
 
 ## deuteronomy — 3 book-level, 42 per-chapter (probed 34 chapters)
@@ -1628,7 +1609,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 38** · cisternrescue.png (score 2) <https://www.preceptaustin.org/files/images/cisternrescue.png>
 - **Ch 38** · cornergate.jpg (score 0) <https://www.preceptaustin.org/files/images/cornergate.jpg>
 
-## joel — 5 book-level, 10 per-chapter (probed 3 chapters)
+## joel — 5 book-level, 9 per-chapter (probed 3 chapters)
 
 ### Book-level
 - joelmap.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/joelmap.jpg>
@@ -1646,7 +1627,6 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 2** · ophel.jpg (score 0) <https://www.preceptaustin.org/files/images/OPHEL.jpg>
 - **Ch 2** · prophecy peaks - see zeph 1 also.gif (score 0) <https://www.preceptaustin.org/files/images/Prophecy peaks - see zeph 1 also.gif>
 - **Ch 3** · dolchart2.jpg (score 10) <https://www.preceptaustin.org/files/images/DOLchart2.jpg>
-- **Ch 3** · zeph-1.gif (score 0) <https://www.preceptaustin.org/files/images/zeph-1.gif>
 
 ## john — 3 book-level, 92 per-chapter (probed 21 chapters)
 

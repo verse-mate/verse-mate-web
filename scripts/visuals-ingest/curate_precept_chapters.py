@@ -760,6 +760,9 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
         "locust.jpg",
         "shofar.jpg",
+        # Audit pass — generic Judges/Zephaniah thumbnail leak.
+        "judges_2_small.jpg",
+        "zeph-1.gif",
     },
     "jeremiah": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
@@ -892,6 +895,40 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
     "amos": {
         # V4 auto-prune pass (character + scene patterns)
         "amos-1.gif",
+        # Audit pass — generic decoratives
+        "deep.png",
+        "winnow.jpg",
+    },
+    "daniel": {
+        # Audit pass (21 cards Andy marked from /audit/daniel.html) —
+        # all the _small thumbnails Bruce uses inline (tower of Babel,
+        # Babylon empire map small, Cyrus cylinder photo, Daniel-by-river,
+        # Daniel-12-Tigris, Daniel-10-man, Daniel-12 small, praying-hands,
+        # darius-calls-to-daniel illustration). Plus dan-8-goat/ram/ulai
+        # vision panels, dan_lion (Daniel in lions' den AI), godsplan,
+        # Nabonidus, persian_small, writingwall, antiochusivepiphanes,
+        # daniel_4 (Nebuchadnezzar's madness scene).
+        "among-lampstands_small.jpg",
+        "antiochusivepiphanes.jpg",
+        "babel_tower_of_small.jpg",
+        "babylonian-empire-map_small.png",
+        "cyrus_cilinder_small.jpg",
+        "da_10_by_side_of_river_small.jpg",
+        "dan-10-man_small.jpg",
+        "dan-12-river-tigris_small.jpg",
+        "dan-8-goat.jpg",
+        "dan-8-ram.jpg",
+        "dan-8-ulai.jpg",
+        "dan_lion.jpg",
+        "daniel_12_small.jpg",
+        "daniel_4.jpg",
+        "daniel_praying_small.jpg",
+        "darius_calls_to_daniel_small.jpg",
+        "godsplan.jpg",
+        "nabonidus.jpg",
+        "persian_small.gif",
+        "praying-hands_small.jpg",
+        "writingwall.jpg",
     },
     "romans": {
         # V4 auto-prune pass (character + scene patterns)
