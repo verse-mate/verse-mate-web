@@ -2489,17 +2489,10 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 35** · moab1.jpg (score 0) <https://www.preceptaustin.org/files/images/moab1.jpg>
 - **Ch 36** · prom.jpg (score 0) <https://www.preceptaustin.org/files/images/prom.jpg>
 
-## proverbs — 1 book-level, 6 per-chapter (probed 10 chapters)
+## proverbs — 0 book-level, 1 per-chapter (probed 10 chapters)
 
-### Book-level
-- proverbs.jpg (score 0, 0 chapters) <https://www.preceptaustin.org/files/images/proverbs.jpg>
 ### Per-chapter
-- **Ch 4** · ear.jpg (score 0) <https://www.preceptaustin.org/files/images/ear.jpg>
 - **Ch 4** · fork in the road.jpg (score 0) <https://www.preceptaustin.org/files/images/fork%20in%20the%20road.jpg>
-- **Ch 4** · heart.gif (score 0) <https://www.preceptaustin.org/files/images/heart.gif>
-- **Ch 4** · horse.jpg (score 0) <https://www.preceptaustin.org/files/images/horse.jpg>
-- **Ch 4** · sungalilee.jpg (score 0) <https://www.preceptaustin.org/files/images/sungalilee.jpg>
-- **Ch 7** · slaughter.jpg (score 0) <https://www.preceptaustin.org/files/images/slaughter.jpg>
 
 ## revelation — 7 book-level, 90 per-chapter (probed 22 chapters)
 
