@@ -2171,7 +2171,7 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 20** · aarontree.jpg (score 0) <https://www.preceptaustin.org/files/images/aarontree.jpg>
 - **Ch 21** · 1samap.png (score 12) <https://www.preceptaustin.org/files/images/1samap.png>
 
-## leviticus — 2 book-level, 39 per-chapter (probed 27 chapters)
+## leviticus — 2 book-level, 17 per-chapter (probed 27 chapters)
 
 ### Book-level
 - leviticuschart.jpg (score 10, 0 chapters) <https://www.preceptaustin.org/files/images/Leviticuschart.jpg>
@@ -2182,40 +2182,18 @@ Auto-generated shortlist of chart-like Precept Austin images. **Book-level** row
 - **Ch 3** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
 - **Ch 4** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
 - **Ch 8** · tabernacle schematic2.gif (score 10) <https://www.preceptaustin.org/files/images/Tabernacle%20schematic2.gif>
-- **Ch 8** · priest.jpg (score 0) <https://www.preceptaustin.org/files/images/priest.jpg>
-- **Ch 10** · nadab.jpg (score 0) <https://www.preceptaustin.org/files/images/nadab.jpg>
 - **Ch 11** · eccl-swarm.png (score 2) <https://www.preceptaustin.org/files/images/eccl-swarm.png>
-- **Ch 12** · circumcision.png (score 2) <https://www.preceptaustin.org/files/images/CIRCUMCISION.png>
 - **Ch 16** · exodustabernacle.png (score 2) <https://www.preceptaustin.org/files/images/exodustabernacle.png>
 - **Ch 16** · goathand.png (score 2) <https://www.preceptaustin.org/files/images/goathand.png>
 - **Ch 16** · goatled.png (score 2) <https://www.preceptaustin.org/files/images/goatled.png>
-- **Ch 16** · goats.png (score 2) <https://www.preceptaustin.org/files/images/goats.png>
 - **Ch 16** · goatsins.png (score 2) <https://www.preceptaustin.org/files/images/goatsins.png>
-- **Ch 16** · lev1614.png (score 2) <https://www.preceptaustin.org/files/images/lev1614.png>
 - **Ch 16** · lev163.png (score 2) <https://www.preceptaustin.org/files/images/lev163.png>
 - **Ch 16** · lev164.png (score 2) <https://www.preceptaustin.org/files/images/lev164.png>
-- **Ch 16** · lev166a.png (score 2) <https://www.preceptaustin.org/files/images/lev166a.png>
-- **Ch 16** · lev167b.png (score 2) <https://www.preceptaustin.org/files/images/lev167b.png>
-- **Ch 16** · thronegrace.png (score 2) <https://www.preceptaustin.org/files/images/thronegrace.png>
 - **Ch 16** · exodusaltars.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusaltars.jpg>
 - **Ch 16** · exodusark.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusark.jpg>
 - **Ch 16** · exodusbrazen2.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusbrazen2.jpg>
 - **Ch 16** · exodustabernaclecourt.jpg (score 0) <https://www.preceptaustin.org/files/images/exodustabernaclecourt.jpg>
-- **Ch 16** · mercyseat.jpg (score 0) <https://www.preceptaustin.org/files/images/mercyseat.jpg>
-- **Ch 16** · priest.jpg (score 0) <https://www.preceptaustin.org/files/images/priest.jpg>
-- **Ch 16** · ripples.jpg (score 0) <https://www.preceptaustin.org/files/images/ripples.jpg>
-- **Ch 16** · yom.jpg (score 0) <https://www.preceptaustin.org/files/images/yom.jpg>
-- **Ch 23** · rejoice.png (score 2) <https://www.preceptaustin.org/files/images/rejoice.png>
-- **Ch 23** · calen.jpg (score 0) <https://www.preceptaustin.org/files/images/calen.jpg>
 - **Ch 23** · feasts.jpg (score 0) <https://www.preceptaustin.org/files/images/feasts.jpg>
-- **Ch 23** · firstfruits.jpg (score 0) <https://www.preceptaustin.org/files/images/firstfruits.jpg>
-- **Ch 23** · holiday.jpg (score 0) <https://www.preceptaustin.org/files/images/holiday.jpg>
-- **Ch 23** · shofar1.jpg (score 0) <https://www.preceptaustin.org/files/images/shofar1.jpg>
-- **Ch 23** · yom.jpg (score 0) <https://www.preceptaustin.org/files/images/yom.jpg>
-- **Ch 24** · menorah.jpg (score 0) <https://www.preceptaustin.org/files/images/menorah.jpg>
-- **Ch 25** · liberty.jpg (score 0) <https://www.preceptaustin.org/files/images/liberty.jpg>
-- **Ch 26** · circumcise.jpg (score 0) <https://www.preceptaustin.org/files/images/circumcise.jpg>
-- **Ch 26** · exodusmtsinai.jpg (score 0) <https://www.preceptaustin.org/files/images/exodusmtsinai.jpg>
 
 ## luke — 6 book-level, 224 per-chapter (probed 24 chapters)
 
