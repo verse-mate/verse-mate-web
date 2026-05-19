@@ -8001,24 +8001,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-bones",
-      "title": "Precept Austin — 1 Chronicles Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 10 — bones.jpg.",
-      "thumb": "/visuals/1-chronicles/precept_bones.jpg",
-      "full": "/visuals/1-chronicles/precept_bones.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/bones.jpg"
-      },
-      "chapters": [
-        10
-      ]
-    },
-    {
       "id": "precept-ch-canaan",
       "title": "Precept Austin — 1 Chronicles Chapter 1",
       "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 1 — canaan.png.",
@@ -8146,24 +8128,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-domerock1",
-      "title": "Precept Austin — 1 Chronicles Chapter 21",
-      "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 21 — domerock1.jpg.",
-      "thumb": "/visuals/1-chronicles/precept_domerock1.jpg",
-      "full": "/visuals/1-chronicles/precept_domerock1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/domerock1.jpg"
-      },
-      "chapters": [
-        21
-      ]
-    },
-    {
       "id": "precept-ch-egypt",
       "title": "Precept Austin — 1 Chronicles Chapter 1",
       "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 1 — egypt.png.",
@@ -8198,24 +8162,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "chapters": [
         23,
         24
-      ]
-    },
-    {
-      "id": "precept-ch-exodusincense",
-      "title": "Precept Austin — 1 Chronicles Chapter 28",
-      "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 28 — exodusincense.png.",
-      "thumb": "/visuals/1-chronicles/precept_exodusincense.png",
-      "full": "/visuals/1-chronicles/precept_exodusincense.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusincense.png"
-      },
-      "chapters": [
-        28
       ]
     },
     {
@@ -8291,24 +8237,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-joshua3",
-      "title": "Precept Austin — 1 Chronicles Chapter 15",
-      "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 15 — joshua3.jpg.",
-      "thumb": "/visuals/1-chronicles/precept_joshua3.jpg",
-      "full": "/visuals/1-chronicles/precept_joshua3.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/joshua3.jpg"
-      },
-      "chapters": [
-        15
-      ]
-    },
-    {
       "id": "precept-ch-keturah",
       "title": "Precept Austin — 1 Chronicles Chapter 1",
       "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 1 — keturah.png.",
@@ -8381,24 +8309,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-nadab",
-      "title": "Precept Austin — 1 Chronicles Chapter 24",
-      "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 24 — nadab.jpg.",
-      "thumb": "/visuals/1-chronicles/precept_nadab.jpg",
-      "full": "/visuals/1-chronicles/precept_nadab.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/nadab.jpg"
-      },
-      "chapters": [
-        24
-      ]
-    },
-    {
       "id": "precept-ch-napthali",
       "title": "Precept Austin — 1 Chronicles Chapters 4, 10",
       "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapters 4, 10 — napthali.png.",
@@ -8454,24 +8364,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-sackcloth",
-      "title": "Precept Austin — 1 Chronicles Chapter 21",
-      "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 21 — sackcloth.jpg.",
-      "thumb": "/visuals/1-chronicles/precept_sackcloth.jpg",
-      "full": "/visuals/1-chronicles/precept_sackcloth.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/sackcloth.jpg"
-      },
-      "chapters": [
-        21
-      ]
-    },
-    {
       "id": "precept-ch-shemline",
       "title": "Precept Austin — 1 Chronicles Chapter 1",
       "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 1 — shemline.png.",
@@ -8523,60 +8415,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         28
-      ]
-    },
-    {
-      "id": "precept-ch-timeflies",
-      "title": "Precept Austin — 1 Chronicles Chapter 29",
-      "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 29 — timeflies.jpg.",
-      "thumb": "/visuals/1-chronicles/precept_timeflies.jpg",
-      "full": "/visuals/1-chronicles/precept_timeflies.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/timeflies.jpg"
-      },
-      "chapters": [
-        29
-      ]
-    },
-    {
-      "id": "precept-ch-tree",
-      "title": "Precept Austin — 1 Chronicles Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 1 — tree.png.",
-      "thumb": "/visuals/1-chronicles/precept_tree.png",
-      "full": "/visuals/1-chronicles/precept_tree.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/tree.png"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
-      "id": "precept-ch-valleyrephaim",
-      "title": "Precept Austin — 1 Chronicles Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for 1 Chronicles chapter 14 — valleyrephaim.jpg.",
-      "thumb": "/visuals/1-chronicles/precept_valleyrephaim.jpg",
-      "full": "/visuals/1-chronicles/precept_valleyrephaim.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/valleyrephaim.jpg"
-      },
-      "chapters": [
-        14
       ]
     },
     {
