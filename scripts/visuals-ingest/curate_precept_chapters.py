@@ -182,6 +182,7 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "leviticus.png",   # same decorative photo, alt filename (was in
                            # PRECEPT_CHARTS pre-#164; loose filter pulls
                            # it back from /leviticus_commentaries index)
+        "leviticuschart.jpg",  # decorative Leviticus title cover
         # Audit pass (20 cards Andy marked from /audit/leviticus.html) —
         # Hebrew-calendar reuse, AI/sermon priest illustrations, ritual
         # object photos, Day-of-Atonement scene panels.
