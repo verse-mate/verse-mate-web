@@ -767,6 +767,26 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         # V4 auto-prune pass (character + scene patterns)
         "jehucal.jpg",
         "yoke.jpg",
+        # Audit pass (6 cards Andy marked from /audit/jeremiah.html) —
+        # bulla seal photo, Bruce's book-level "chart" decorative,
+        # cistern photo, earthenware vessel, Gedaliah AI, generic
+        # Jeremiah image.
+        "bulla.jpg",
+        "cistern.jpg",
+        "earthenware.jpg",
+        "gedaliah.jpg",
+        "jer_image.jpg",
+    },
+    "ezekiel": {
+        # Audit pass (5 cards Andy marked from /audit/ezekiel.html) —
+        # cedar-tree parable photo, Salvator-Rosa "Covenant" painting
+        # (already denied on 2-Kings; flag here too), eagle illustration
+        # for ch.17, Ezek+Michelangelo art, millennium decorative gif.
+        "cedartree.jpg",
+        "covenant_-_salvator_rosa_1615-1673_small.jpg",
+        "eagle2_jpg.png",
+        "ezek_mic.jpg",
+        "millennium.gif",
     },
     "matthew": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions
