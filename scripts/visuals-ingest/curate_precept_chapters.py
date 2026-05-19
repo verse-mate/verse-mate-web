@@ -593,6 +593,40 @@ PER_BOOK_FILENAME_DENYLIST: dict[str, set[str]] = {
         "naamanheal.jpg",
         "naamanjordan.png",
         "zedekiahblind.jpg",
+        # Audit pass (27 cards Andy marked from /audit/2-kings.html) —
+        # Baal scenes, exile illustration, Salvator-Rosa "Covenant"
+        # painting, plague/curse stocks (gift gif, fishbait, gourd,
+        # girdloins, jehoiakim scroll, jezdogs, libnah, moabblood,
+        # nehushtan, syncretism), pillars/stands/stele/teldan/templeton
+        # decoratives. Even Sennacherib Prism + Moabite Stone artifacts
+        # weren't compelling on this book's tab.
+        "2king127.png",
+        "2kings122.png",
+        "baal.jpg",
+        "baalz.png",
+        "covenant_-_salvator_rosa_1615-1673.jpg",
+        "dividedheart.jpg",
+        "exile1.jpg",
+        "fishbait.jpg",
+        "gift.gif",
+        "girdloins.jpg",
+        "gourd.jpg",
+        "jehoiakimscroll.jpg",
+        "jezdogs.jpg",
+        "libnah.jpg",
+        "moabblood.jpg",
+        "moabitestone.jpg",
+        "moablood1.jpg",
+        "nehushtan.jpg",
+        "peace_dove_olive_branch_animation.gif",
+        "pillars1.png",
+        "sennacheribprism.png",
+        "sennacheribseige.png",
+        "stands.jpg",
+        "stele.jpg",
+        "syncretism.jpg",
+        "teldan.jpg",
+        "templeton.gif",
     },
     "acts": {
         # Auto-prune pass: pattern-matched on Andy's manual deletions

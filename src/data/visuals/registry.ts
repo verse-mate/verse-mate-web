@@ -6725,42 +6725,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-2king127",
-      "title": "Precept Austin — 2 Kings Chapter 12",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 12 — 2king127.png.",
-      "thumb": "/visuals/2-kings/precept_2king127.png",
-      "full": "/visuals/2-kings/precept_2king127.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/2king127.png"
-      },
-      "chapters": [
-        12
-      ]
-    },
-    {
-      "id": "precept-ch-2kings122",
-      "title": "Precept Austin — 2 Kings Chapter 12",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 12 — 2kings122.png.",
-      "thumb": "/visuals/2-kings/precept_2kings122.png",
-      "full": "/visuals/2-kings/precept_2kings122.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/2kings122.png"
-      },
-      "chapters": [
-        12
-      ]
-    },
-    {
       "id": "precept-ch-2kingsmap",
       "title": "Precept Austin — 2 Kings Chapters 1, 2, 4, 14, 23",
       "caption": "Bruce Hurt's commentary chart for 2 Kings chapters 1, 2, 4, 14, 23 — 2kingsmap.jpg.",
@@ -6913,42 +6877,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-baal",
-      "title": "Precept Austin — 2 Kings Chapter 9",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 9 — baal.jpg.",
-      "thumb": "/visuals/2-kings/precept_baal.jpg",
-      "full": "/visuals/2-kings/precept_baal.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/baal.jpg"
-      },
-      "chapters": [
-        9
-      ]
-    },
-    {
-      "id": "precept-ch-baalz",
-      "title": "Precept Austin — 2 Kings Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 1 — baalz.png.",
-      "thumb": "/visuals/2-kings/precept_baalz.png",
-      "full": "/visuals/2-kings/precept_baalz.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/baalz.png"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
       "id": "precept-ch-babylonmap",
       "title": "Precept Austin — 2 Kings Chapter 25",
       "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 25 — babylonmap.jpg.",
@@ -7000,42 +6928,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         21
-      ]
-    },
-    {
-      "id": "precept-ch-covenant_-_salvator_rosa_1615-1673",
-      "title": "Precept Austin — 2 Kings Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 10 — covenant - salvator rosa 1615-1673.jpg.",
-      "thumb": "/visuals/2-kings/precept_covenant_-_salvator_rosa_1615-1673.jpg",
-      "full": "/visuals/2-kings/precept_covenant_-_salvator_rosa_1615-1673.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/Covenant%20-%20Salvator%20Rosa%201615-1673.jpg"
-      },
-      "chapters": [
-        10
-      ]
-    },
-    {
-      "id": "precept-ch-dividedheart",
-      "title": "Precept Austin — 2 Kings Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 3 — dividedheart.jpeg.",
-      "thumb": "/visuals/2-kings/precept_dividedheart.jpg",
-      "full": "/visuals/2-kings/precept_dividedheart.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/dividedheart.jpeg"
-      },
-      "chapters": [
-        3
       ]
     },
     {
@@ -7126,97 +7018,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         16
-      ]
-    },
-    {
-      "id": "precept-ch-exile1",
-      "title": "Precept Austin — 2 Kings Chapters 24–25",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapters 24–25 — exile1.jpg.",
-      "thumb": "/visuals/2-kings/precept_exile1.jpg",
-      "full": "/visuals/2-kings/precept_exile1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exile1.jpg"
-      },
-      "chapters": [
-        24,
-        25
-      ]
-    },
-    {
-      "id": "precept-ch-fishbait",
-      "title": "Precept Austin — 2 Kings Chapter 5",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 5 — fishbait.jpg.",
-      "thumb": "/visuals/2-kings/precept_fishbait.jpg",
-      "full": "/visuals/2-kings/precept_fishbait.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/fishbait.jpg"
-      },
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "id": "precept-ch-gift",
-      "title": "Precept Austin — 2 Kings Chapter 6",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 6 — gift.gif.",
-      "thumb": "/visuals/2-kings/precept_gift.gif",
-      "full": "/visuals/2-kings/precept_gift.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/gift.gif"
-      },
-      "chapters": [
-        6
-      ]
-    },
-    {
-      "id": "precept-ch-girdloins",
-      "title": "Precept Austin — 2 Kings Chapter 4",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 4 — girdloins.jpg.",
-      "thumb": "/visuals/2-kings/precept_girdloins.jpg",
-      "full": "/visuals/2-kings/precept_girdloins.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/girdloins.jpg"
-      },
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "id": "precept-ch-gourd",
-      "title": "Precept Austin — 2 Kings Chapter 4",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 4 — gourd.jpg.",
-      "thumb": "/visuals/2-kings/precept_gourd.jpg",
-      "full": "/visuals/2-kings/precept_gourd.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/gourd.jpg"
-      },
-      "chapters": [
-        4
       ]
     },
     {
@@ -7422,24 +7223,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-jehoiakimscroll",
-      "title": "Precept Austin — 2 Kings Chapter 24",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 24 — jehoiakimscroll.jpg.",
-      "thumb": "/visuals/2-kings/precept_jehoiakimscroll.jpg",
-      "full": "/visuals/2-kings/precept_jehoiakimscroll.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/jehoiakimscroll.jpg"
-      },
-      "chapters": [
-        24
-      ]
-    },
-    {
       "id": "precept-ch-jehoram",
       "title": "Precept Austin — 2 Kings Chapters 3, 9",
       "caption": "Bruce Hurt's commentary chart for 2 Kings chapters 3, 9 — jehoram.png.",
@@ -7474,24 +7257,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         15
-      ]
-    },
-    {
-      "id": "precept-ch-jezdogs",
-      "title": "Precept Austin — 2 Kings Chapter 9",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 9 — jezdogs.jpg.",
-      "thumb": "/visuals/2-kings/precept_jezdogs.jpg",
-      "full": "/visuals/2-kings/precept_jezdogs.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/jezdogs.jpg"
-      },
-      "chapters": [
-        9
       ]
     },
     {
@@ -7651,78 +7416,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-libnah",
-      "title": "Precept Austin — 2 Kings Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 8 — libnah.jpg.",
-      "thumb": "/visuals/2-kings/precept_libnah.jpg",
-      "full": "/visuals/2-kings/precept_libnah.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/libnah.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-moabblood",
-      "title": "Precept Austin — 2 Kings Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 3 — moabblood.jpeg.",
-      "thumb": "/visuals/2-kings/precept_moabblood.jpg",
-      "full": "/visuals/2-kings/precept_moabblood.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/moabblood.jpeg"
-      },
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "id": "precept-ch-moabitestone",
-      "title": "Precept Austin — 2 Kings Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 3 — moabitestone.jpg.",
-      "thumb": "/visuals/2-kings/precept_moabitestone.jpg",
-      "full": "/visuals/2-kings/precept_moabitestone.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/moabitestone.jpg"
-      },
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "id": "precept-ch-moablood1",
-      "title": "Precept Austin — 2 Kings Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 3 — moablood1.jpeg.",
-      "thumb": "/visuals/2-kings/precept_moablood1.jpg",
-      "full": "/visuals/2-kings/precept_moablood1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/moablood1.jpeg"
-      },
-      "chapters": [
-        3
-      ]
-    },
-    {
       "id": "precept-ch-napthali",
       "title": "Precept Austin — 2 Kings Chapter 15",
       "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 15 — napthali.png.",
@@ -7738,61 +7431,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         15
-      ]
-    },
-    {
-      "id": "precept-ch-nehushtan",
-      "title": "Precept Austin — 2 Kings Chapter 18",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 18 — nehushtan.jpg.",
-      "thumb": "/visuals/2-kings/precept_nehushtan.jpg",
-      "full": "/visuals/2-kings/precept_nehushtan.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/nehushtan.jpg"
-      },
-      "chapters": [
-        18
-      ]
-    },
-    {
-      "id": "precept-ch-peace_dove_olive_branch_animation",
-      "title": "Precept Austin — 2 Kings Chapters 4–5",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapters 4–5 — peace_dove_olive_branch animation.gif.",
-      "thumb": "/visuals/2-kings/precept_peace_dove_olive_branch_animation.gif",
-      "full": "/visuals/2-kings/precept_peace_dove_olive_branch_animation.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/peace_dove_olive_branch%20animation.gif"
-      },
-      "chapters": [
-        4,
-        5
-      ]
-    },
-    {
-      "id": "precept-ch-pillars1",
-      "title": "Precept Austin — 2 Kings Chapter 25",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 25 — pillars1.png.",
-      "thumb": "/visuals/2-kings/precept_pillars1.png",
-      "full": "/visuals/2-kings/precept_pillars1.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/pillars1.png"
-      },
-      "chapters": [
-        25
       ]
     },
     {
@@ -7868,42 +7506,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-sennacheribprism",
-      "title": "Precept Austin — 2 Kings Chapter 18",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 18 — sennacheribprism.png.",
-      "thumb": "/visuals/2-kings/precept_sennacheribprism.png",
-      "full": "/visuals/2-kings/precept_sennacheribprism.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/sennacheribprism.png"
-      },
-      "chapters": [
-        18
-      ]
-    },
-    {
-      "id": "precept-ch-sennacheribseige",
-      "title": "Precept Austin — 2 Kings Chapter 18",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 18 — sennacheribseige.png.",
-      "thumb": "/visuals/2-kings/precept_sennacheribseige.png",
-      "full": "/visuals/2-kings/precept_sennacheribseige.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/sennacheribseige.png"
-      },
-      "chapters": [
-        18
-      ]
-    },
-    {
       "id": "precept-ch-shunammite",
       "title": "Precept Austin — 2 Kings Chapter 4",
       "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 4 — shunammite.jpg.",
@@ -7955,96 +7557,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         13
-      ]
-    },
-    {
-      "id": "precept-ch-stands",
-      "title": "Precept Austin — 2 Kings Chapter 25",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 25 — stands.jpg.",
-      "thumb": "/visuals/2-kings/precept_stands.jpg",
-      "full": "/visuals/2-kings/precept_stands.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/stands.jpg"
-      },
-      "chapters": [
-        25
-      ]
-    },
-    {
-      "id": "precept-ch-stele",
-      "title": "Precept Austin — 2 Kings Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 3 — stele.jpg.",
-      "thumb": "/visuals/2-kings/precept_stele.jpg",
-      "full": "/visuals/2-kings/precept_stele.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/stele.jpg"
-      },
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "id": "precept-ch-syncretism",
-      "title": "Precept Austin — 2 Kings Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 10 — syncretism.jpg.",
-      "thumb": "/visuals/2-kings/precept_syncretism.jpg",
-      "full": "/visuals/2-kings/precept_syncretism.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/syncretism.jpg"
-      },
-      "chapters": [
-        10
-      ]
-    },
-    {
-      "id": "precept-ch-teldan",
-      "title": "Precept Austin — 2 Kings Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 8 — teldan.jpg.",
-      "thumb": "/visuals/2-kings/precept_teldan.jpg",
-      "full": "/visuals/2-kings/precept_teldan.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/teldan.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
-      "id": "precept-ch-templeton",
-      "title": "Precept Austin — 2 Kings Chapter 5",
-      "caption": "Bruce Hurt's commentary chart for 2 Kings chapter 5 — templeton.gif.",
-      "thumb": "/visuals/2-kings/precept_templeton.gif",
-      "full": "/visuals/2-kings/precept_templeton.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/templeton.gif"
-      },
-      "chapters": [
-        5
       ]
     },
     {
