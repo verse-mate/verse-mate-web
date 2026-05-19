@@ -222,7 +222,8 @@ def render_index(books: list[tuple[str, str, int]]) -> str:
 <body>
 <header>
   <h1>Precept Visuals Audit</h1>
-  <p>One contact sheet per book — {total:,} images across {len(books)} books. Click a book, scroll the grid, and check the box on anything you want removed. Use the "Copy denylist snippet" button at the bottom to grab a Python block to paste into PER_BOOK_FILENAME_DENYLIST.</p>
+  <p>One contact sheet per book — <strong>{total:,} unique images across {len(books)} books</strong>. The number next to each book is the total cards in that book's whole library, not what a single chapter view shows. Each card lists its chapter scope ("chapter 4", "chapters 1–11", "book-level", etc.) so you can see where it actually appears on the site.</p>
+  <p style="color:#8a93a6;margin-top:8px">Click a book, scroll the grid, and check the box on anything you want removed. Use the "Copy denylist snippet" button at the bottom to grab a Python block to paste into PER_BOOK_FILENAME_DENYLIST.</p>
 </header>
 <ul>{rows}</ul>
 </body>
