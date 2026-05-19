@@ -8702,60 +8702,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-2417",
-      "title": "Precept Austin — 2 Chronicles Chapter 24",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 24 — 2417.png.",
-      "thumb": "/visuals/2-chronicles/precept_2417.png",
-      "full": "/visuals/2-chronicles/precept_2417.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/2417.png"
-      },
-      "chapters": [
-        24
-      ]
-    },
-    {
-      "id": "precept-ch-243",
-      "title": "Precept Austin — 2 Chronicles Chapter 24",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 24 — 243.png.",
-      "thumb": "/visuals/2-chronicles/precept_243.png",
-      "full": "/visuals/2-chronicles/precept_243.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/243.png"
-      },
-      "chapters": [
-        24
-      ]
-    },
-    {
-      "id": "precept-ch-2471",
-      "title": "Precept Austin — 2 Chronicles Chapter 24",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 24 — 2471.png.",
-      "thumb": "/visuals/2-chronicles/precept_2471.png",
-      "full": "/visuals/2-chronicles/precept_2471.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/2471.png"
-      },
-      "chapters": [
-        24
-      ]
-    },
-    {
       "id": "precept-ch-2chrtime",
       "title": "Precept Austin — 2 Chronicles Chapter 25",
       "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 25 — 2chrtime.jpg.",
@@ -8771,60 +8717,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         25
-      ]
-    },
-    {
-      "id": "precept-ch-2king127",
-      "title": "Precept Austin — 2 Chronicles Chapter 24",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 24 — 2king127.png.",
-      "thumb": "/visuals/2-chronicles/precept_2king127.png",
-      "full": "/visuals/2-chronicles/precept_2king127.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/2king127.png"
-      },
-      "chapters": [
-        24
-      ]
-    },
-    {
-      "id": "precept-ch-2kings122",
-      "title": "Precept Austin — 2 Chronicles Chapter 24",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 24 — 2kings122.png.",
-      "thumb": "/visuals/2-chronicles/precept_2kings122.png",
-      "full": "/visuals/2-chronicles/precept_2kings122.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/2kings122.png"
-      },
-      "chapters": [
-        24
-      ]
-    },
-    {
-      "id": "precept-ch-abijah1",
-      "title": "Precept Austin — 2 Chronicles Chapter 13",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 13 — abijah1.webp.",
-      "thumb": "/visuals/2-chronicles/precept_abijah1.png",
-      "full": "/visuals/2-chronicles/precept_abijah1.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/abijah1.webp"
-      },
-      "chapters": [
-        13
       ]
     },
     {
@@ -9010,42 +8902,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-eagle1",
-      "title": "Precept Austin — 2 Chronicles Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 16 — eagle1.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_eagle1.jpg",
-      "full": "/visuals/2-chronicles/precept_eagle1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/eagle1.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-east_gate_w_color_small",
-      "title": "Precept Austin — 2 Chronicles Chapter 36",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 36 — east gate w color_small.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_east_gate_w_color_small.jpg",
-      "full": "/visuals/2-chronicles/precept_east_gate_w_color_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/east%20gate%20w%20color_small.jpg"
-      },
-      "chapters": [
-        36
-      ]
-    },
-    {
       "id": "precept-ch-egyptmap",
       "title": "Precept Austin — 2 Chronicles Chapter 20",
       "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 20 — egyptmap.png.",
@@ -9118,24 +8974,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-exodusincense",
-      "title": "Precept Austin — 2 Chronicles Chapter 26",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 26 — exodusincense.png.",
-      "thumb": "/visuals/2-chronicles/precept_exodusincense.png",
-      "full": "/visuals/2-chronicles/precept_exodusincense.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusincense.png"
-      },
-      "chapters": [
-        26
-      ]
-    },
-    {
       "id": "precept-ch-ezekie7",
       "title": "Precept Austin — 2 Chronicles Chapter 3",
       "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 3 — ezekie7.gif.",
@@ -9151,24 +8989,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         3
-      ]
-    },
-    {
-      "id": "precept-ch-ezekie7_small",
-      "title": "Precept Austin — 2 Chronicles Chapter 36",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 36 — ezekie7_small.gif.",
-      "thumb": "/visuals/2-chronicles/precept_ezekie7_small.gif",
-      "full": "/visuals/2-chronicles/precept_ezekie7_small.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/ezekie7_small.gif"
-      },
-      "chapters": [
-        36
       ]
     },
     {
@@ -9190,24 +9010,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-ezion2",
-      "title": "Precept Austin — 2 Chronicles Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 8 — ezion2.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_ezion2.jpg",
-      "full": "/visuals/2-chronicles/precept_ezion2.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/ezion2.jpg"
-      },
-      "chapters": [
-        8
-      ]
-    },
-    {
       "id": "precept-ch-gad",
       "title": "Precept Austin — 2 Chronicles Chapter 34",
       "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 34 — gad.png.",
@@ -9223,42 +9025,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         34
-      ]
-    },
-    {
-      "id": "precept-ch-gibeon2",
-      "title": "Precept Austin — 2 Chronicles Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 1 — gibeon2.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_gibeon2.jpg",
-      "full": "/visuals/2-chronicles/precept_gibeon2.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/gibeon2.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
-      "id": "precept-ch-goat",
-      "title": "Precept Austin — 2 Chronicles Chapter 11",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 11 — goat.webp.",
-      "thumb": "/visuals/2-chronicles/precept_goat.png",
-      "full": "/visuals/2-chronicles/precept_goat.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/goat.webp"
-      },
-      "chapters": [
-        11
       ]
     },
     {
@@ -9298,24 +9064,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-horse1",
-      "title": "Precept Austin — 2 Chronicles Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 1 — horse1.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_horse1.jpg",
-      "full": "/visuals/2-chronicles/precept_horse1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/horse1.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
       "id": "precept-ch-hoshea171",
       "title": "Precept Austin — 2 Chronicles Chapter 33",
       "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 33 — hoshea171.png.",
@@ -9346,24 +9094,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/jehengedi.jpg"
-      },
-      "chapters": [
-        20
-      ]
-    },
-    {
-      "id": "precept-ch-jeheye",
-      "title": "Precept Austin — 2 Chronicles Chapter 20",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 20 — jeheye.png.",
-      "thumb": "/visuals/2-chronicles/precept_jeheye.png",
-      "full": "/visuals/2-chronicles/precept_jeheye.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/jeheye.png"
       },
       "chapters": [
         20
@@ -9464,24 +9194,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-joppa",
-      "title": "Precept Austin — 2 Chronicles Chapter 2",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 2 — joppa.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_joppa.jpg",
-      "full": "/visuals/2-chronicles/precept_joppa.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/joppa.jpg"
-      },
-      "chapters": [
-        2
-      ]
-    },
-    {
       "id": "precept-ch-jothamammonites",
       "title": "Precept Austin — 2 Chronicles Chapter 27",
       "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 27 — jothamammonites.png.",
@@ -9558,42 +9270,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-lachishattack",
-      "title": "Precept Austin — 2 Chronicles Chapter 32",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 32 — lachishattack.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_lachishattack.jpg",
-      "full": "/visuals/2-chronicles/precept_lachishattack.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/lachishattack.jpg"
-      },
-      "chapters": [
-        32
-      ]
-    },
-    {
-      "id": "precept-ch-lachishflay",
-      "title": "Precept Austin — 2 Chronicles Chapter 32",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 32 — lachishflay.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_lachishflay.jpg",
-      "full": "/visuals/2-chronicles/precept_lachishflay.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/lachishflay.jpg"
-      },
-      "chapters": [
-        32
-      ]
-    },
-    {
       "id": "precept-ch-levisons1",
       "title": "Precept Austin — 2 Chronicles Chapter 29",
       "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 29 — levisons1.png.",
@@ -9645,24 +9321,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         21
-      ]
-    },
-    {
-      "id": "precept-ch-mareshah1",
-      "title": "Precept Austin — 2 Chronicles Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 14 — mareshah1.webp.",
-      "thumb": "/visuals/2-chronicles/precept_mareshah1.png",
-      "full": "/visuals/2-chronicles/precept_mareshah1.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/mareshah1.webp"
-      },
-      "chapters": [
-        14
       ]
     },
     {
@@ -9720,24 +9378,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-mtolive2_small",
-      "title": "Precept Austin — 2 Chronicles Chapter 36",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 36 — mtolive2_small.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_mtolive2_small.jpg",
-      "full": "/visuals/2-chronicles/precept_mtolive2_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/mtolive2_small.jpg"
-      },
-      "chapters": [
-        36
-      ]
-    },
-    {
       "id": "precept-ch-napthali",
       "title": "Precept Austin — 2 Chronicles Chapters 16, 17, 25, 26, 30",
       "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapters 16, 17, 25, 26, 30 — napthali.png.",
@@ -9757,24 +9397,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
         25,
         26,
         30
-      ]
-    },
-    {
-      "id": "precept-ch-ophir",
-      "title": "Precept Austin — 2 Chronicles Chapter 8",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 8 — ophir.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_ophir.jpg",
-      "full": "/visuals/2-chronicles/precept_ophir.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/ophir.jpg"
-      },
-      "chapters": [
-        8
       ]
     },
     {
@@ -9811,42 +9433,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         22
-      ]
-    },
-    {
-      "id": "precept-ch-rectalprolapse",
-      "title": "Precept Austin — 2 Chronicles Chapter 21",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 21 — rectalprolapse.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_rectalprolapse.jpg",
-      "full": "/visuals/2-chronicles/precept_rectalprolapse.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/rectalprolapse.jpg"
-      },
-      "chapters": [
-        21
-      ]
-    },
-    {
-      "id": "precept-ch-revive1",
-      "title": "Precept Austin — 2 Chronicles Chapter 30",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 30 — revive1.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_revive1.jpg",
-      "full": "/visuals/2-chronicles/precept_revive1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/revive1.jpg"
-      },
-      "chapters": [
-        30
       ]
     },
     {
@@ -9904,60 +9490,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-shebaqueen",
-      "title": "Precept Austin — 2 Chronicles Chapter 9",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 9 — shebaqueen.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_shebaqueen.jpg",
-      "full": "/visuals/2-chronicles/precept_shebaqueen.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/shebaqueen.jpg"
-      },
-      "chapters": [
-        9
-      ]
-    },
-    {
-      "id": "precept-ch-shishak",
-      "title": "Precept Austin — 2 Chronicles Chapter 12",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 12 — shishak.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_shishak.jpg",
-      "full": "/visuals/2-chronicles/precept_shishak.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/shishak.jpg"
-      },
-      "chapters": [
-        12
-      ]
-    },
-    {
-      "id": "precept-ch-smite",
-      "title": "Precept Austin — 2 Chronicles Chapter 14",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 14 — smite.webp.",
-      "thumb": "/visuals/2-chronicles/precept_smite.png",
-      "full": "/visuals/2-chronicles/precept_smite.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/smite.webp"
-      },
-      "chapters": [
-        14
-      ]
-    },
-    {
       "id": "precept-ch-solomonkingdom",
       "title": "Precept Austin — 2 Chronicles Chapter 9",
       "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 9 — solomonkingdom.jpg.",
@@ -10012,42 +9544,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-solomonthrone",
-      "title": "Precept Austin — 2 Chronicles Chapter 9",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 9 — solomonthrone.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_solomonthrone.jpg",
-      "full": "/visuals/2-chronicles/precept_solomonthrone.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/solomonthrone.jpg"
-      },
-      "chapters": [
-        9
-      ]
-    },
-    {
-      "id": "precept-ch-sycamore",
-      "title": "Precept Austin — 2 Chronicles Chapter 1",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 1 — sycamore.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_sycamore.jpg",
-      "full": "/visuals/2-chronicles/precept_sycamore.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/sycamore.jpg"
-      },
-      "chapters": [
-        1
-      ]
-    },
-    {
       "id": "precept-ch-tabernacle_schematic2",
       "title": "Precept Austin — 2 Chronicles Chapter 29",
       "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 29 — tabernacle schematic2.gif.",
@@ -10099,24 +9595,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         36
-      ]
-    },
-    {
-      "id": "precept-ch-turnaway",
-      "title": "Precept Austin — 2 Chronicles Chapter 24",
-      "caption": "Bruce Hurt's commentary chart for 2 Chronicles chapter 24 — turnaway.jpg.",
-      "thumb": "/visuals/2-chronicles/precept_turnaway.jpg",
-      "full": "/visuals/2-chronicles/precept_turnaway.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/turnaway.jpg"
-      },
-      "chapters": [
-        24
       ]
     },
     {
