@@ -1580,24 +1580,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-almond",
-      "title": "Precept Austin — Numbers Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 17 — almond.jpg.",
-      "thumb": "/visuals/numbers/precept_almond.jpg",
-      "full": "/visuals/numbers/precept_almond.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/almond.jpg"
-      },
-      "chapters": [
-        17
-      ]
-    },
-    {
       "id": "precept-ch-arad",
       "title": "Precept Austin — Numbers Chapters 21–22",
       "caption": "Bruce Hurt's commentary chart for Numbers chapters 21–22 — arad.jpg.",
@@ -1614,24 +1596,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "chapters": [
         21,
         22
-      ]
-    },
-    {
-      "id": "precept-ch-ark",
-      "title": "Precept Austin — Numbers Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 10 — ark.jpg.",
-      "thumb": "/visuals/numbers/precept_ark.jpg",
-      "full": "/visuals/numbers/precept_ark.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/ark.jpg"
-      },
-      "chapters": [
-        10
       ]
     },
     {
@@ -1653,24 +1617,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-arkbudall",
-      "title": "Precept Austin — Numbers Chapter 17",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 17 — arkbudall.jpg.",
-      "thumb": "/visuals/numbers/precept_arkbudall.jpg",
-      "full": "/visuals/numbers/precept_arkbudall.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/arkbudall.jpg"
-      },
-      "chapters": [
-        17
-      ]
-    },
-    {
       "id": "precept-ch-arnon",
       "title": "Precept Austin — Numbers Chapter 21",
       "caption": "Bruce Hurt's commentary chart for Numbers chapter 21 — arnon.jpg.",
@@ -1683,60 +1629,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "download": {
         "label": "Source image",
         "href": "https://www.preceptaustin.org/files/images/arnon.jpg"
-      },
-      "chapters": [
-        21
-      ]
-    },
-    {
-      "id": "precept-ch-avenger",
-      "title": "Precept Austin — Numbers Chapter 35",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 35 — avenger.jpg.",
-      "thumb": "/visuals/numbers/precept_avenger.jpg",
-      "full": "/visuals/numbers/precept_avenger.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/avenger.jpg"
-      },
-      "chapters": [
-        35
-      ]
-    },
-    {
-      "id": "precept-ch-balaamdonk",
-      "title": "Precept Austin — Numbers Chapter 22",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 22 — balaamdonk.jpg.",
-      "thumb": "/visuals/numbers/precept_balaamdonk.jpg",
-      "full": "/visuals/numbers/precept_balaamdonk.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/balaamdonk.jpg"
-      },
-      "chapters": [
-        22
-      ]
-    },
-    {
-      "id": "precept-ch-bronze",
-      "title": "Precept Austin — Numbers Chapter 21",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 21 — bronze.jpg.",
-      "thumb": "/visuals/numbers/precept_bronze.jpg",
-      "full": "/visuals/numbers/precept_bronze.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/bronze.jpg"
       },
       "chapters": [
         21
@@ -1814,60 +1706,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "chapters": [
         7,
         10
-      ]
-    },
-    {
-      "id": "precept-ch-captive",
-      "title": "Precept Austin — Numbers Chapter 31",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 31 — captive.jpg.",
-      "thumb": "/visuals/numbers/precept_captive.jpg",
-      "full": "/visuals/numbers/precept_captive.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/captive.jpg"
-      },
-      "chapters": [
-        31
-      ]
-    },
-    {
-      "id": "precept-ch-censer",
-      "title": "Precept Austin — Numbers Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 16 — censer.jpg.",
-      "thumb": "/visuals/numbers/precept_censer.jpg",
-      "full": "/visuals/numbers/precept_censer.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/censer.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-censer1",
-      "title": "Precept Austin — Numbers Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 16 — censer1.jpg.",
-      "thumb": "/visuals/numbers/precept_censer1.jpg",
-      "full": "/visuals/numbers/precept_censer1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/censer1.jpg"
-      },
-      "chapters": [
-        16
       ]
     },
     {
@@ -2016,133 +1854,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-exodusbrazen2",
-      "title": "Precept Austin — Numbers Chapters 4, 16",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapters 4, 16 — exodusbrazen2.jpg.",
-      "thumb": "/visuals/numbers/precept_exodusbrazen2.jpg",
-      "full": "/visuals/numbers/precept_exodusbrazen2.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusbrazen2.jpg"
-      },
-      "chapters": [
-        4,
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-exodushyssop",
-      "title": "Precept Austin — Numbers Chapter 19",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 19 — exodushyssop.jpg.",
-      "thumb": "/visuals/numbers/precept_exodushyssop.jpg",
-      "full": "/visuals/numbers/precept_exodushyssop.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodushyssop.jpg"
-      },
-      "chapters": [
-        19
-      ]
-    },
-    {
-      "id": "precept-ch-exoduslampstand",
-      "title": "Precept Austin — Numbers Chapter 4",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 4 — exoduslampstand.jpg.",
-      "thumb": "/visuals/numbers/precept_exoduslampstand.jpg",
-      "full": "/visuals/numbers/precept_exoduslampstand.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exoduslampstand.jpg"
-      },
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "id": "precept-ch-exoduslaver",
-      "title": "Precept Austin — Numbers Chapter 4",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 4 — exoduslaver.jpg.",
-      "thumb": "/visuals/numbers/precept_exoduslaver.jpg",
-      "full": "/visuals/numbers/precept_exoduslaver.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exoduslaver.jpg"
-      },
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "id": "precept-ch-exodusmercyseat",
-      "title": "Precept Austin — Numbers Chapter 7",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 7 — exodusmercyseat.jpg.",
-      "thumb": "/visuals/numbers/precept_exodusmercyseat.jpg",
-      "full": "/visuals/numbers/precept_exodusmercyseat.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusmercyseat.jpg"
-      },
-      "chapters": [
-        7
-      ]
-    },
-    {
-      "id": "precept-ch-exodusphylactery",
-      "title": "Precept Austin — Numbers Chapter 15",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 15 — exodusphylactery.gif.",
-      "thumb": "/visuals/numbers/precept_exodusphylactery.gif",
-      "full": "/visuals/numbers/precept_exodusphylactery.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusphylactery.gif"
-      },
-      "chapters": [
-        15
-      ]
-    },
-    {
-      "id": "precept-ch-exodusshowbread",
-      "title": "Precept Austin — Numbers Chapter 4",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 4 — exodusshowbread.jpg.",
-      "thumb": "/visuals/numbers/precept_exodusshowbread.jpg",
-      "full": "/visuals/numbers/precept_exodusshowbread.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodusshowbread.jpg"
-      },
-      "chapters": [
-        4
-      ]
-    },
-    {
       "id": "precept-ch-exodustabernaclecourt",
       "title": "Precept Austin — Numbers Chapter 4",
       "caption": "Bruce Hurt's commentary chart for Numbers chapter 4 — exodustabernaclecourt.jpg.",
@@ -2176,27 +1887,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         3
-      ]
-    },
-    {
-      "id": "precept-ch-exodustribeplacement",
-      "title": "Precept Austin — Numbers Chapters 2, 22, 23, 24",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapters 2, 22, 23, 24 — exodustribeplacement.jpg.",
-      "thumb": "/visuals/numbers/precept_exodustribeplacement.jpg",
-      "full": "/visuals/numbers/precept_exodustribeplacement.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/exodustribeplacement.jpg"
-      },
-      "chapters": [
-        2,
-        22,
-        23,
-        24
       ]
     },
     {
@@ -2237,24 +1927,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-firstfruits",
-      "title": "Precept Austin — Numbers Chapter 28",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 28 — firstfruits.jpg.",
-      "thumb": "/visuals/numbers/precept_firstfruits.jpg",
-      "full": "/visuals/numbers/precept_firstfruits.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/firstfruits.jpg"
-      },
-      "chapters": [
-        28
-      ]
-    },
-    {
       "id": "precept-ch-gilead",
       "title": "Precept Austin — Numbers Chapter 32",
       "caption": "Bruce Hurt's commentary chart for Numbers chapter 32 — gilead.jpg.",
@@ -2270,42 +1942,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         32
-      ]
-    },
-    {
-      "id": "precept-ch-grap",
-      "title": "Precept Austin — Numbers Chapter 13",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 13 — grap.jpg.",
-      "thumb": "/visuals/numbers/precept_grap.jpg",
-      "full": "/visuals/numbers/precept_grap.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/grap.jpg"
-      },
-      "chapters": [
-        13
-      ]
-    },
-    {
-      "id": "precept-ch-grapes",
-      "title": "Precept Austin — Numbers Chapter 13",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 13 — grapes.jpg.",
-      "thumb": "/visuals/numbers/precept_grapes.jpg",
-      "full": "/visuals/numbers/precept_grapes.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/grapes.jpg"
-      },
-      "chapters": [
-        13
       ]
     },
     {
@@ -2345,43 +1981,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-holiday",
-      "title": "Precept Austin — Numbers Chapters 28–29",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapters 28–29 — holiday.jpg.",
-      "thumb": "/visuals/numbers/precept_holiday.jpg",
-      "full": "/visuals/numbers/precept_holiday.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/holiday.jpg"
-      },
-      "chapters": [
-        28,
-        29
-      ]
-    },
-    {
-      "id": "precept-ch-hor",
-      "title": "Precept Austin — Numbers Chapter 20",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 20 — hor.jpeg.",
-      "thumb": "/visuals/numbers/precept_hor.jpg",
-      "full": "/visuals/numbers/precept_hor.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/hor.jpeg"
-      },
-      "chapters": [
-        20
-      ]
-    },
-    {
       "id": "precept-ch-horman",
       "title": "Precept Austin — Numbers Chapter 14",
       "caption": "Bruce Hurt's commentary chart for Numbers chapter 14 — horman.jpg.",
@@ -2397,24 +1996,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         14
-      ]
-    },
-    {
-      "id": "precept-ch-jabbok",
-      "title": "Precept Austin — Numbers Chapter 21",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 21 — jabbok.jpg.",
-      "thumb": "/visuals/numbers/precept_jabbok.jpg",
-      "full": "/visuals/numbers/precept_jabbok.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/jabbok.jpg"
-      },
-      "chapters": [
-        21
       ]
     },
     {
@@ -2437,42 +2018,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-josh",
-      "title": "Precept Austin — Numbers Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 27 — josh.png.",
-      "thumb": "/visuals/numbers/precept_josh.png",
-      "full": "/visuals/numbers/precept_josh.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/josh.png"
-      },
-      "chapters": [
-        27
-      ]
-    },
-    {
-      "id": "precept-ch-joshua",
-      "title": "Precept Austin — Numbers Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 27 — joshua.jpg.",
-      "thumb": "/visuals/numbers/precept_joshua.jpg",
-      "full": "/visuals/numbers/precept_joshua.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/joshua.jpg"
-      },
-      "chapters": [
-        27
-      ]
-    },
-    {
       "id": "precept-ch-kadesh",
       "title": "Precept Austin — Numbers Chapters 20, 27",
       "caption": "Bruce Hurt's commentary chart for Numbers chapters 20, 27 — kadesh.jpg.",
@@ -2489,133 +2034,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "chapters": [
         20,
         27
-      ]
-    },
-    {
-      "id": "precept-ch-kill",
-      "title": "Precept Austin — Numbers Chapter 31",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 31 — kill.jpg.",
-      "thumb": "/visuals/numbers/precept_kill.jpg",
-      "full": "/visuals/numbers/precept_kill.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/kill.jpg"
-      },
-      "chapters": [
-        31
-      ]
-    },
-    {
-      "id": "precept-ch-king",
-      "title": "Precept Austin — Numbers Chapter 20",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 20 — king.png.",
-      "thumb": "/visuals/numbers/precept_king.png",
-      "full": "/visuals/numbers/precept_king.png",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/king.png"
-      },
-      "chapters": [
-        20
-      ]
-    },
-    {
-      "id": "precept-ch-kings",
-      "title": "Precept Austin — Numbers Chapter 31",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 31 — kings.jpg.",
-      "thumb": "/visuals/numbers/precept_kings.jpg",
-      "full": "/visuals/numbers/precept_kings.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/kings.jpg"
-      },
-      "chapters": [
-        31
-      ]
-    },
-    {
-      "id": "precept-ch-korah",
-      "title": "Precept Austin — Numbers Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 16 — korah.jpg.",
-      "thumb": "/visuals/numbers/precept_korah.jpg",
-      "full": "/visuals/numbers/precept_korah.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/korah.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-korahfall",
-      "title": "Precept Austin — Numbers Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 16 — korahfall.jpg.",
-      "thumb": "/visuals/numbers/precept_korahfall.jpg",
-      "full": "/visuals/numbers/precept_korahfall.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/korahfall.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-korahfire",
-      "title": "Precept Austin — Numbers Chapter 16",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 16 — korahfire.jpg.",
-      "thumb": "/visuals/numbers/precept_korahfire.jpg",
-      "full": "/visuals/numbers/precept_korahfire.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/korahfire.jpg"
-      },
-      "chapters": [
-        16
-      ]
-    },
-    {
-      "id": "precept-ch-lamb_of_god_passover",
-      "title": "Precept Austin — Numbers Chapters 9, 28",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapters 9, 28 — lamb of god passover.gif.",
-      "thumb": "/visuals/numbers/precept_lamb_of_god_passover.gif",
-      "full": "/visuals/numbers/precept_lamb_of_god_passover.gif",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/lamb%20of%20God%20passover.gif"
-      },
-      "chapters": [
-        9,
-        28
       ]
     },
     {
@@ -2670,42 +2088,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         10
-      ]
-    },
-    {
-      "id": "precept-ch-locust1",
-      "title": "Precept Austin — Numbers Chapter 13",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 13 — locust1.jpg.",
-      "thumb": "/visuals/numbers/precept_locust1.jpg",
-      "full": "/visuals/numbers/precept_locust1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/locust1.jpg"
-      },
-      "chapters": [
-        13
-      ]
-    },
-    {
-      "id": "precept-ch-manna",
-      "title": "Precept Austin — Numbers Chapter 11",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 11 — manna.jpg.",
-      "thumb": "/visuals/numbers/precept_manna.jpg",
-      "full": "/visuals/numbers/precept_manna.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/manna.jpg"
-      },
-      "chapters": [
-        11
       ]
     },
     {
@@ -2800,115 +2182,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-moabst1",
-      "title": "Precept Austin — Numbers Chapter 21",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 21 — moabst1.jpg.",
-      "thumb": "/visuals/numbers/precept_moabst1.jpg",
-      "full": "/visuals/numbers/precept_moabst1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/moabst1.jpg"
-      },
-      "chapters": [
-        21
-      ]
-    },
-    {
-      "id": "precept-ch-mosesland",
-      "title": "Precept Austin — Numbers Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 27 — mosesland.jpg.",
-      "thumb": "/visuals/numbers/precept_mosesland.jpg",
-      "full": "/visuals/numbers/precept_mosesland.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/mosesland.jpg"
-      },
-      "chapters": [
-        27
-      ]
-    },
-    {
-      "id": "precept-ch-nadab",
-      "title": "Precept Austin — Numbers Chapter 3",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 3 — nadab.jpg.",
-      "thumb": "/visuals/numbers/precept_nadab.jpg",
-      "full": "/visuals/numbers/precept_nadab.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/nadab.jpg"
-      },
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "id": "precept-ch-nebo",
-      "title": "Precept Austin — Numbers Chapter 27",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 27 — nebo.jpg.",
-      "thumb": "/visuals/numbers/precept_nebo.jpg",
-      "full": "/visuals/numbers/precept_nebo.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/nebo.jpg"
-      },
-      "chapters": [
-        27
-      ]
-    },
-    {
-      "id": "precept-ch-newmoon",
-      "title": "Precept Austin — Numbers Chapters 28–29",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapters 28–29 — newmoon.jpg.",
-      "thumb": "/visuals/numbers/precept_newmoon.jpg",
-      "full": "/visuals/numbers/precept_newmoon.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/newmoon.jpg"
-      },
-      "chapters": [
-        28,
-        29
-      ]
-    },
-    {
-      "id": "precept-ch-numbering",
-      "title": "Precept Austin — Numbers Chapter 26",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 26 — numbering.jpg.",
-      "thumb": "/visuals/numbers/precept_numbering.jpg",
-      "full": "/visuals/numbers/precept_numbering.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/numbering.jpg"
-      },
-      "chapters": [
-        26
-      ]
-    },
-    {
       "id": "precept-ch-paran",
       "title": "Precept Austin — Numbers Chapters 9, 10, 12",
       "caption": "Bruce Hurt's commentary chart for Numbers chapters 9, 10, 12 — paran.jpg.",
@@ -2984,43 +2257,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-pisgah",
-      "title": "Precept Austin — Numbers Chapter 23",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 23 — pisgah.jpg.",
-      "thumb": "/visuals/numbers/precept_pisgah.jpg",
-      "full": "/visuals/numbers/precept_pisgah.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/pisgah.jpg"
-      },
-      "chapters": [
-        23
-      ]
-    },
-    {
-      "id": "precept-ch-priest",
-      "title": "Precept Austin — Numbers Chapters 18, 27",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapters 18, 27 — priest.jpg.",
-      "thumb": "/visuals/numbers/precept_priest.jpg",
-      "full": "/visuals/numbers/precept_priest.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/priest.jpg"
-      },
-      "chapters": [
-        18,
-        27
-      ]
-    },
-    {
       "id": "precept-ch-prom",
       "title": "Precept Austin — Numbers Chapters 34, 36",
       "caption": "Bruce Hurt's commentary chart for Numbers chapters 34, 36 — prom.jpg.",
@@ -3058,24 +2294,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-quail",
-      "title": "Precept Austin — Numbers Chapter 11",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 11 — quail.jpg.",
-      "thumb": "/visuals/numbers/precept_quail.jpg",
-      "full": "/visuals/numbers/precept_quail.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/quail.jpg"
-      },
-      "chapters": [
-        11
-      ]
-    },
-    {
       "id": "precept-ch-ram",
       "title": "Precept Austin — Numbers Chapter 33",
       "caption": "Bruce Hurt's commentary chart for Numbers chapter 33 — ram.jpg.",
@@ -3094,42 +2312,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-rith",
-      "title": "Precept Austin — Numbers Chapter 33",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 33 — rith.jpg.",
-      "thumb": "/visuals/numbers/precept_rith.jpg",
-      "full": "/visuals/numbers/precept_rith.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/rith.jpg"
-      },
-      "chapters": [
-        33
-      ]
-    },
-    {
-      "id": "precept-ch-sheep",
-      "title": "Precept Austin — Numbers Chapter 22",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 22 — sheep.jpg.",
-      "thumb": "/visuals/numbers/precept_sheep.jpg",
-      "full": "/visuals/numbers/precept_sheep.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/sheep.jpg"
-      },
-      "chapters": [
-        22
-      ]
-    },
-    {
       "id": "precept-ch-shittim",
       "title": "Precept Austin — Numbers Chapter 25",
       "caption": "Bruce Hurt's commentary chart for Numbers chapter 25 — shittim.jpg.",
@@ -3145,96 +2327,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       },
       "chapters": [
         25
-      ]
-    },
-    {
-      "id": "precept-ch-shofar1",
-      "title": "Precept Austin — Numbers Chapter 29",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 29 — shofar1.jpg.",
-      "thumb": "/visuals/numbers/precept_shofar1.jpg",
-      "full": "/visuals/numbers/precept_shofar1.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/shofar1.jpg"
-      },
-      "chapters": [
-        29
-      ]
-    },
-    {
-      "id": "precept-ch-signet",
-      "title": "Precept Austin — Numbers Chapter 31",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 31 — signet.jpg.",
-      "thumb": "/visuals/numbers/precept_signet.jpg",
-      "full": "/visuals/numbers/precept_signet.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/signet.jpg"
-      },
-      "chapters": [
-        31
-      ]
-    },
-    {
-      "id": "precept-ch-spoils",
-      "title": "Precept Austin — Numbers Chapter 31",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 31 — spoils.jpg.",
-      "thumb": "/visuals/numbers/precept_spoils.jpg",
-      "full": "/visuals/numbers/precept_spoils.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/spoils.jpg"
-      },
-      "chapters": [
-        31
-      ]
-    },
-    {
-      "id": "precept-ch-spy",
-      "title": "Precept Austin — Numbers Chapter 13",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 13 — spy.jpg.",
-      "thumb": "/visuals/numbers/precept_spy.jpg",
-      "full": "/visuals/numbers/precept_spy.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/spy.jpg"
-      },
-      "chapters": [
-        13
-      ]
-    },
-    {
-      "id": "precept-ch-sukkot",
-      "title": "Precept Austin — Numbers Chapter 29",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 29 — sukkot.jpg.",
-      "thumb": "/visuals/numbers/precept_sukkot.jpg",
-      "full": "/visuals/numbers/precept_sukkot.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/sukkot.jpg"
-      },
-      "chapters": [
-        29
       ]
     },
     {
@@ -3259,24 +2351,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       ]
     },
     {
-      "id": "precept-ch-tabernacle",
-      "title": "Precept Austin — Numbers Chapter 9",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 9 — tabernacle.jpg.",
-      "thumb": "/visuals/numbers/precept_tabernacle.jpg",
-      "full": "/visuals/numbers/precept_tabernacle.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/tabernacle.jpg"
-      },
-      "chapters": [
-        9
-      ]
-    },
-    {
       "id": "precept-ch-tabernacle_schematic2",
       "title": "Precept Austin — Numbers Chapters 3, 18",
       "caption": "Bruce Hurt's commentary chart for Numbers chapters 3, 18 — tabernacle schematic2.gif.",
@@ -3293,96 +2367,6 @@ export const VISUALS_REGISTRY: Record<string, VisualsManifest> = {
       "chapters": [
         3,
         18
-      ]
-    },
-    {
-      "id": "precept-ch-topographyisrael_small",
-      "title": "Precept Austin — Numbers Chapter 21",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 21 — topographyisrael_small.jpg.",
-      "thumb": "/visuals/numbers/precept_topographyisrael_small.jpg",
-      "full": "/visuals/numbers/precept_topographyisrael_small.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/TopographyIsrael_small.jpg"
-      },
-      "chapters": [
-        21
-      ]
-    },
-    {
-      "id": "precept-ch-tru",
-      "title": "Precept Austin — Numbers Chapter 10",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 10 — tru.jpg.",
-      "thumb": "/visuals/numbers/precept_tru.jpg",
-      "full": "/visuals/numbers/precept_tru.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/tru.jpg"
-      },
-      "chapters": [
-        10
-      ]
-    },
-    {
-      "id": "precept-ch-veng",
-      "title": "Precept Austin — Numbers Chapter 31",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 31 — veng.jpg.",
-      "thumb": "/visuals/numbers/precept_veng.jpg",
-      "full": "/visuals/numbers/precept_veng.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/veng.jpg"
-      },
-      "chapters": [
-        31
-      ]
-    },
-    {
-      "id": "precept-ch-wild",
-      "title": "Precept Austin — Numbers Chapter 33",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 33 — wild.jpg.",
-      "thumb": "/visuals/numbers/precept_wild.jpg",
-      "full": "/visuals/numbers/precept_wild.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/wild.jpg"
-      },
-      "chapters": [
-        33
-      ]
-    },
-    {
-      "id": "precept-ch-yom",
-      "title": "Precept Austin — Numbers Chapter 29",
-      "caption": "Bruce Hurt's commentary chart for Numbers chapter 29 — yom.jpg.",
-      "thumb": "/visuals/numbers/precept_yom.jpg",
-      "full": "/visuals/numbers/precept_yom.jpg",
-      "attribution": {
-        "label": "Precept Austin · Bruce Hurt",
-        "href": "https://www.preceptaustin.org/"
-      },
-      "download": {
-        "label": "Source image",
-        "href": "https://www.preceptaustin.org/files/images/yom.jpg"
-      },
-      "chapters": [
-        29
       ]
     },
     {
