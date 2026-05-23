@@ -1,6 +1,6 @@
 # Lexicon Ingest
 
-Generates `src/data/lexicon/generated/` from open scholarly sources.
+Generates `../verse-mate-lexicon/src/generated/` from open scholarly sources.
 
 ## Sources
 
@@ -30,8 +30,8 @@ First run downloads the BSB xlsx (53 MB) + TBESG (5 MB) into `./data/`. Subseque
 
 ## Output
 
-* `src/data/lexicon/generated/_lemmas.json` — global lexicon (every lemma referenced by any built book, keyed by translit slug for parity with the hand-curated `lemmas.ts`).
-* `src/data/lexicon/generated/<book-slug>-<chapter>.json` — one alignment file per chapter, matching the `ChapterAlignment` TypeScript shape.
+* `../verse-mate-lexicon/src/generated/_lemmas.json` — global lexicon (every lemma referenced by any built book, keyed by translit slug for parity with the hand-curated `lemmas.ts`).
+* `../verse-mate-lexicon/src/generated/<book-slug>-<chapter>.json` — one alignment file per chapter, matching the `ChapterAlignment` TypeScript shape.
 
 The TypeScript renderer prefers hand-curated entries (`lemmas.ts`) over generated ones for the same lemma key — so the rich James 1–5 cards are preserved.
 

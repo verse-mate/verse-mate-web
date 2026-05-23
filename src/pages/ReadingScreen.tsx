@@ -18,7 +18,7 @@ import ChapterNotesSheet, { hasPendingChapterNoteDraft } from '@/components/Chap
 import TokenizedVerse from '@/components/TokenizedVerse';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { getBookSlug } from '@/lib/bookSlugs';
-import { loadAlignmentFor, type ChapterAlignment } from '@/data/lexicon';
+import { loadAlignmentFor, type ChapterAlignment } from '@versemate/lexicon';
 import { vmTokens } from '@/styles/themeStyles';
 
 // Style primitives come from @/styles/themeStyles so colors flip with the
