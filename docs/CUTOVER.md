@@ -78,3 +78,7 @@ Total rollback time: ~5 minutes. CF cuts over near-instantly.
 - User sessions (cookies) — both Workers read the same `accessToken` / `refreshToken` cookies thanks to Phase 4
 - SEO — frontend-next has the same URL shape Phase 3 added, so users land on the same routes
 - Analytics — same PostHog project key on both sides
+
+## Web Help & Feedback (VER-121)
+
+Web Help & Feedback is now in-app and routes to the existing Slack-backed support channel. The About > Contact link no longer opens a mail client. Sign-in is required.

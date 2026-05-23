@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import ScreenHeader from '@/components/ScreenHeader';
 import { vmTokens } from '@/styles/themeStyles';
 
@@ -76,13 +76,13 @@ export default function AboutScreen() {
             >
               Terms of Service
             </a>
-            <a
-              href="mailto:info@versemate.org"
+            <Link
+              to="/menu/help"
               data-testid="about-contact-link"
               style={{ fontFamily: 'Roboto, sans-serif', fontSize: 13, color: vmTokens.gold, textDecoration: 'none' }}
             >
               Contact
-            </a>
+            </Link>
           </nav>
           <p style={{ fontFamily: 'Roboto, sans-serif', fontSize: 11, color: vmTokens.textMuted, letterSpacing: '0.15em' }}>
             SB · AC · AM · AZ · SZ · VB · VK · VK · AT

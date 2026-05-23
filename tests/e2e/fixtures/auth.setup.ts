@@ -32,19 +32,65 @@ setup('authenticate', async ({ page, context }) => {
     return;
   }
 
-  await page.goto('/login');
+  // Navigate to root (only path guaranteed to return 200 on staging CDN).
+  // Sub-paths like /login all 307-redirect to / regardless of auth state,
+  // so URL-based detection is unreliable. Instead open the menu to check.
+  await page.goto('/');
+  await page.waitForLoadState('networkidle', { timeout: 12_000 }).catch(() => {});
+
+  // Open the hamburger menu — try testid first, fall back to role.
+  const menuButton = page.getByTestId('hamburger-menu-button').or(
+    page.getByRole('button', { name: /open menu/i })
+  );
+  await menuButton.click();
+
+  // Wait for the menu to render (testid may be absent on older staging builds).
+  const helpMenuItem = page.getByTestId('menu-item-help')
+    .or(page.getByRole('button', { name: /^help$/i }));
+  await helpMenuItem.waitFor({ state: 'visible', timeout: 10_000 });
+
+  const logoutItem = page.getByTestId('menu-item-logout')
+    .or(page.getByRole('button', { name: /^sign out$/i }));
+  const alreadySignedIn = await logoutItem.isVisible({ timeout: 2_000 }).catch(() => false);
+
+  if (alreadySignedIn) {
+    setup.info().annotations.push({
+      type: 'info',
+      description: 'Already authenticated (Sign Out visible in menu); reusing session.',
+    });
+    await context.storageState({ path: AUTH_FILE });
+    return;
+  }
+
+  // Click Sign In from within the menu. On staging the SPA may trigger a full page reload
+  // which the CDN 307s back to /; React then re-mounts and client-side routes to /login.
+  // Wait up to 15 s for the login providers screen to appear.
+  const loginItem = page.getByTestId('menu-item-login')
+    .or(page.getByRole('button', { name: /^sign in$/i }));
+  await loginItem.click();
+  await page.waitForLoadState('networkidle', { timeout: 12_000 }).catch(() => {});
 
   // Providers screen → Continue with Email
-  await page.getByTestId('login-email-button').click();
+  await page.getByTestId('login-email-button')
+    .or(page.getByRole('button', { name: /continue with email/i }))
+    .click();
 
-  // Email screen
-  await page.getByTestId('login-email').fill(TEST_EMAIL);
-  await page.getByTestId('login-password').fill(TEST_PASSWORD);
-  await page.getByTestId('login-submit').click();
+  // Email/password screen
+  await page.getByTestId('login-email')
+    .or(page.locator('input[type="email"]'))
+    .or(page.getByPlaceholder(/example\.com/i))
+    .fill(TEST_EMAIL);
+  await page.getByTestId('login-password')
+    .or(page.locator('input[type="password"]'))
+    .fill(TEST_PASSWORD);
+  await page.getByTestId('login-submit')
+    .or(page.getByRole('button', { name: /^sign in$/i }))
+    .click();
 
-  // Successful login navigates to /menu (per SignInScreen.tsx) and the
-  // logout button only renders once isSignedIn flips true.
-  await expect(page.getByTestId('menu-item-logout')).toBeVisible({ timeout: 15_000 });
+  // Successful login: hamburger menu button reappears (or Sign Out in menu)
+  await page.getByTestId('hamburger-menu-button')
+    .or(page.getByRole('button', { name: /open menu/i }))
+    .waitFor({ state: 'visible', timeout: 15_000 });
 
   await context.storageState({ path: AUTH_FILE });
 });

@@ -132,9 +132,10 @@ test.describe('Divergences — current behavior snapshots', () => {
       'href',
       /https?:\/\/.+\/terms/,
     );
+    // T3 (VER-157): Contact is now an in-app Link to /menu/help, not mailto:
     await expect(page.getByTestId('about-contact-link')).toHaveAttribute(
       'href',
-      /^mailto:.+@versemate\.org/,
+      /\/menu\/help/,
     );
   });
 });
