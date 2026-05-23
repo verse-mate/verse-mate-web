@@ -14,12 +14,24 @@
         "lemma": "shadday"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "reserve",
         "lemma": "tsaphan"
       },
       {
+        "surface": "times for judgment",
+        "lemma": "et"
+      },
+      {
         "surface": "Why may those who know Him",
         "lemma": "yada"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
       },
       {
         "surface": "see",
@@ -110,16 +122,16 @@
     ],
     "5": [
       {
-        "surface": "Indeed",
-        "lemma": "hen"
-      },
-      {
         "surface": "like wild donkeys",
         "lemma": "pere"
       },
       {
         "surface": "in the desert",
         "lemma": "midbar"
+      },
+      {
+        "surface": "the poor go",
+        "lemma": "yatsa"
       },
       {
         "surface": "to work",
@@ -344,11 +356,19 @@
         "lemma": "sum"
       },
       {
+        "surface": "no one",
+        "lemma": "lo"
+      },
+      {
         "surface": "with wrongdoing",
         "lemma": "tiphlah"
       }
     ],
     "13": [
+      {
+        "surface": "are",
+        "lemma": "hayah"
+      },
       {
         "surface": "those who rebel",
         "lemma": "marad"
@@ -358,12 +378,20 @@
         "lemma": "or"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "knowing",
         "lemma": "nakhar"
       },
       {
         "surface": "its ways",
         "lemma": "derekh"
+      },
+      {
+        "surface": "or staying",
+        "lemma": "yashav"
       },
       {
         "surface": "on its paths",
@@ -400,6 +428,10 @@
         "lemma": "laylah"
       },
       {
+        "surface": "he is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a thief",
         "lemma": "gannav"
       }
@@ -420,6 +452,14 @@
       {
         "surface": "for twilight",
         "lemma": "nesheph"
+      },
+      {
+        "surface": "Thinking",
+        "lemma": "amar"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       },
       {
         "surface": "eye",
@@ -458,6 +498,10 @@
       {
         "surface": "they shut themselves in",
         "lemma": "chatam"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
       },
       {
         "surface": "to experience",
@@ -518,6 +562,10 @@
       {
         "surface": "is cursed",
         "lemma": "qalal"
+      },
+      {
+        "surface": "so that no one",
+        "lemma": "lo"
       },
       {
         "surface": "turns",
@@ -584,6 +632,10 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "more",
         "lemma": "od"
       },
@@ -608,6 +660,14 @@
       {
         "surface": "on the barren",
         "lemma": "aqar"
+      },
+      {
+        "surface": "and childless",
+        "lemma": "lo"
+      },
+      {
+        "surface": "and show no",
+        "lemma": "lo"
       },
       {
         "surface": "kindness",
@@ -636,6 +696,10 @@
         "lemma": "qamay"
       },
       {
+        "surface": "they have no",
+        "lemma": "lo"
+      },
+      {
         "surface": "assurance",
         "lemma": "aman"
       },
@@ -645,6 +709,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "He gives",
+        "lemma": "natan"
+      },
       {
         "surface": "a sense of security",
         "lemma": "betach"
@@ -680,6 +748,10 @@
         "lemma": "qaphats"
       },
       {
+        "surface": "like all others",
+        "lemma": "kol"
+      },
+      {
         "surface": "they are cut off",
         "lemma": "malal"
       },
@@ -693,6 +765,14 @@
       }
     ],
     "25": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "this is not so",
+        "lemma": "lo"
+      },
       {
         "surface": "who",
         "lemma": "mi"
@@ -708,12 +788,16 @@
       {
         "surface": "my words",
         "lemma": "millah"
+      },
+      {
+        "surface": "to nothing",
+        "lemma": "al"
       }
     ]
   },
   "themeLemmas": [
+    "lo",
     "or",
-    "gazal",
-    "beli"
+    "gazal"
   ]
 }

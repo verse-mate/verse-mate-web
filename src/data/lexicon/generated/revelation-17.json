@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "seven",
         "lemma": "hepta"
       },
       {
         "surface": "angels",
         "lemma": "angelos"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "seven",
@@ -22,6 +30,14 @@
         "lemma": "phiale"
       },
       {
+        "surface": "came",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "said",
+        "lemma": "laleo"
+      },
+      {
         "surface": "I will show",
         "lemma": "deiknuo"
       },
@@ -30,12 +46,20 @@
         "lemma": "krima"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "prostitute",
         "lemma": "porne"
       },
       {
         "surface": "sits",
         "lemma": "kathemai"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "waters",
@@ -90,6 +114,10 @@
         "lemma": "eremos"
       },
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "a woman",
         "lemma": "gune"
       },
@@ -118,6 +146,10 @@
         "lemma": "onoma"
       },
       {
+        "surface": "and had",
+        "lemma": "echo"
+      },
+      {
         "surface": "seven",
         "lemma": "hepta"
       },
@@ -138,6 +170,10 @@
       {
         "surface": "woman",
         "lemma": "gune"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
       },
       {
         "surface": "dressed in",
@@ -170,6 +206,10 @@
       {
         "surface": "pearls",
         "lemma": "margarites"
+      },
+      {
+        "surface": "She held",
+        "lemma": "echo"
       },
       {
         "surface": "hand",
@@ -214,8 +254,16 @@
         "lemma": "onoma"
       },
       {
+        "surface": "was written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "BABYLON",
         "lemma": "babulon"
+      },
+      {
+        "surface": "GREAT",
+        "lemma": "megas"
       },
       {
         "surface": "MOTHER",
@@ -235,6 +283,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "I could see that",
+        "lemma": "horao"
+      },
       {
         "surface": "woman was",
         "lemma": "gune"
@@ -262,12 +314,20 @@
       {
         "surface": "I was utterly amazed",
         "lemma": "thaumazo"
+      },
+      {
+        "surface": "at the sight",
+        "lemma": "horao"
       }
     ],
     "7": [
       {
         "surface": "are you so amazed",
         "lemma": "thaumazo"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
       },
       {
         "surface": "angel",
@@ -294,6 +354,10 @@
         "lemma": "bastazo"
       },
       {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "seven",
         "lemma": "hepta"
       },
@@ -314,6 +378,18 @@
       {
         "surface": "beast",
         "lemma": "therion"
+      },
+      {
+        "surface": "you saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "it was",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "is about",
@@ -348,6 +424,10 @@
         "lemma": "onoma"
       },
       {
+        "surface": "were not written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "Book",
         "lemma": "biblion"
       },
@@ -376,6 +456,14 @@
         "lemma": "therion"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "will be",
         "lemma": "pareimi"
       }
@@ -390,6 +478,10 @@
         "lemma": "nous"
       },
       {
+        "surface": "with",
+        "lemma": "echo"
+      },
+      {
         "surface": "wisdom",
         "lemma": "sophia"
       },
@@ -400,6 +492,10 @@
       {
         "surface": "heads",
         "lemma": "kephale"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "seven",
@@ -420,6 +516,10 @@
     ],
     "10": [
       {
+        "surface": "There are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "seven",
         "lemma": "hepta"
       },
@@ -436,12 +536,28 @@
         "lemma": "pipto"
       },
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "other",
         "lemma": "allos"
       },
       {
         "surface": "has} not yet",
         "lemma": "oupo"
+      },
+      {
+        "surface": "come",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "he does come",
+        "lemma": "erchomai"
       },
       {
         "surface": "must",
@@ -462,8 +578,24 @@
         "lemma": "therion"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "an eighth king",
         "lemma": "ogdoos"
+      },
+      {
+        "surface": "who belongs to",
+        "lemma": "eimi"
       },
       {
         "surface": "seven",
@@ -488,6 +620,14 @@
         "lemma": "keras"
       },
       {
+        "surface": "you saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "ten",
         "lemma": "deka"
       },
@@ -500,8 +640,20 @@
         "lemma": "oupo"
       },
       {
+        "surface": "received",
+        "lemma": "lambano"
+      },
+      {
         "surface": "a kingdom",
         "lemma": "basileia"
+      },
+      {
+        "surface": "will receive",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "hour",
@@ -522,8 +674,20 @@
     ],
     "13": [
       {
+        "surface": "have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "purpose",
         "lemma": "gnome"
+      },
+      {
+        "surface": "to yield",
+        "lemma": "didomi"
       },
       {
         "surface": "power",
@@ -556,6 +720,10 @@
         "lemma": "nikao"
       },
       {
+        "surface": "He is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       },
@@ -586,8 +754,16 @@
     ],
     "15": [
       {
+        "surface": "the angel said",
+        "lemma": "lego"
+      },
+      {
         "surface": "waters",
         "lemma": "hudor"
+      },
+      {
+        "surface": "you saw",
+        "lemma": "horao"
       },
       {
         "surface": "where",
@@ -600,6 +776,10 @@
       {
         "surface": "was seated",
         "lemma": "kathemai"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "peoples",
@@ -632,12 +812,20 @@
         "lemma": "therion"
       },
       {
+        "surface": "you saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "will hate",
         "lemma": "miseo"
       },
       {
         "surface": "prostitute",
         "lemma": "porne"
+      },
+      {
+        "surface": "will leave",
+        "lemma": "poieo"
       },
       {
         "surface": "desolate",
@@ -670,16 +858,36 @@
         "lemma": "theos"
       },
       {
+        "surface": "has put it",
+        "lemma": "didomi"
+      },
+      {
         "surface": "hearts",
         "lemma": "kardia"
+      },
+      {
+        "surface": "to carry out",
+        "lemma": "poieo"
       },
       {
         "surface": "purpose",
         "lemma": "gnome"
       },
       {
+        "surface": "vvv",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "heis"
+      },
+      {
         "surface": "uniting",
         "lemma": "gnome"
+      },
+      {
+        "surface": "to give",
+        "lemma": "didomi"
       },
       {
         "surface": "kingdom",
@@ -708,8 +916,24 @@
         "lemma": "gune"
       },
       {
+        "surface": "you saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "city",
         "lemma": "polis"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "echo"
       },
       {
         "surface": "rules",

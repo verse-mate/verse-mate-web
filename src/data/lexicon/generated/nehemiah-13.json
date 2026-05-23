@@ -18,6 +18,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "was read aloud",
+        "lemma": "qara"
+      },
+      {
         "surface": "in the hearing",
         "lemma": "ozen"
       },
@@ -34,12 +38,20 @@
         "lemma": "katav"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "Ammonite",
         "lemma": "ammoni"
       },
       {
         "surface": "or Moabite",
         "lemma": "moavi"
+      },
+      {
+        "surface": "enter",
+        "lemma": "bo"
       },
       {
         "surface": "the assembly",
@@ -51,6 +63,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "they had not",
+        "lemma": "lo"
+      },
       {
         "surface": "met",
         "lemma": "qadam"
@@ -98,6 +114,14 @@
     ],
     "3": [
       {
+        "surface": "As soon as",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "the people heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "this law",
         "lemma": "torah"
       },
@@ -108,6 +132,10 @@
       {
         "surface": "from Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "of foreign descent",
@@ -136,6 +164,10 @@
         "lemma": "toviyyah"
       },
       {
+        "surface": "had been put in charge of",
+        "lemma": "natan"
+      },
+      {
         "surface": "the storerooms",
         "lemma": "lishkah"
       },
@@ -149,6 +181,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "and had prepared",
+        "lemma": "asah"
+      },
       {
         "surface": "a large",
         "lemma": "gadol"
@@ -164,6 +200,10 @@
       {
         "surface": "they had previously",
         "lemma": "paneh"
+      },
+      {
+        "surface": "stored",
+        "lemma": "natan"
       },
       {
         "surface": "the grain offerings",
@@ -220,8 +260,24 @@
     ],
     "6": [
       {
+        "surface": "While all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "was happening",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "I was not",
+        "lemma": "lo"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "I had returned",
+        "lemma": "bo"
       },
       {
         "surface": "Artaxerxes",
@@ -262,6 +318,10 @@
     ],
     "7": [
       {
+        "surface": "to return",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -278,8 +338,16 @@
         "lemma": "elyashiv"
       },
       {
+        "surface": "had done",
+        "lemma": "asah"
+      },
+      {
         "surface": "on behalf of Tobiah",
         "lemma": "toviyyah"
+      },
+      {
+        "surface": "by providing",
+        "lemma": "asah"
       },
       {
         "surface": "a room",
@@ -312,6 +380,10 @@
         "lemma": "shalakh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "of Tobiah’s",
         "lemma": "toviyyah"
       },
@@ -334,6 +406,10 @@
     ],
     "9": [
       {
+        "surface": "Then I ordered",
+        "lemma": "amar"
+      },
+      {
         "surface": "that the rooms",
         "lemma": "lishkah"
       },
@@ -352,6 +428,10 @@
       {
         "surface": "of God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "restored",
+        "lemma": "shuv"
       },
       {
         "surface": "to them",
@@ -380,6 +460,14 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "had not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "been given to them",
+        "lemma": "natan"
+      },
+      {
         "surface": "all",
         "lemma": "ish"
       },
@@ -390,6 +478,10 @@
       {
         "surface": "and singers",
         "lemma": "shir"
+      },
+      {
+        "surface": "responsible for performing",
+        "lemma": "asah"
       },
       {
         "surface": "the service",
@@ -412,6 +504,10 @@
       {
         "surface": "the officials",
         "lemma": "sagan"
+      },
+      {
+        "surface": "and asked",
+        "lemma": "amar"
       },
       {
         "surface": "Why",
@@ -444,8 +540,16 @@
     ],
     "12": [
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "brought",
+        "lemma": "bo"
       },
       {
         "surface": "a tenth",
@@ -552,6 +656,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "and do not",
+        "lemma": "al"
+      },
+      {
         "surface": "blot out",
         "lemma": "machah"
       },
@@ -578,6 +686,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "I saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "people in Judah",
         "lemma": "yehudah"
       },
@@ -592,6 +704,10 @@
       {
         "surface": "on the Sabbath",
         "lemma": "shabbat"
+      },
+      {
+        "surface": "and bringing in",
+        "lemma": "bo"
       },
       {
         "surface": "grain",
@@ -618,8 +734,16 @@
         "lemma": "teenah"
       },
       {
+        "surface": "All kinds",
+        "lemma": "kol"
+      },
+      {
         "surface": "of goods",
         "lemma": "massa"
+      },
+      {
+        "surface": "were being brought",
+        "lemma": "bo"
       },
       {
         "surface": "into Jerusalem",
@@ -656,8 +780,20 @@
         "lemma": "tsori"
       },
       {
+        "surface": "who lived",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "were importing",
+        "lemma": "bo"
+      },
+      {
         "surface": "fish",
         "lemma": "dag"
+      },
+      {
+        "surface": "and all kinds",
+        "lemma": "kol"
       },
       {
         "surface": "of merchandise",
@@ -698,12 +834,20 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "and asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
       },
       {
         "surface": "evil",
         "lemma": "ra"
+      },
+      {
+        "surface": "are doing",
+        "lemma": "asah"
       },
       {
         "surface": "profaning",
@@ -720,12 +864,32 @@
     ],
     "18": [
       {
+        "surface": "Did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "your forefathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
         "surface": "the same things",
         "lemma": "koh"
       },
       {
         "surface": "so that our God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "brought",
+        "lemma": "bo"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "disaster",
@@ -778,12 +942,20 @@
         "lemma": "shabbat"
       },
       {
+        "surface": "I ordered",
+        "lemma": "amar"
+      },
+      {
         "surface": "that the gates",
         "lemma": "dal"
       },
       {
         "surface": "be shut",
         "lemma": "sagar"
+      },
+      {
+        "surface": "and not",
+        "lemma": "lo"
       },
       {
         "surface": "opened",
@@ -810,8 +982,16 @@
         "lemma": "shaar"
       },
       {
+        "surface": "so that no",
+        "lemma": "lo"
+      },
+      {
         "surface": "load",
         "lemma": "massa"
+      },
+      {
+        "surface": "could enter",
+        "lemma": "bo"
       },
       {
         "surface": "on the Sabbath",
@@ -838,6 +1018,10 @@
       {
         "surface": "and those who sell",
         "lemma": "makhar"
+      },
+      {
+        "surface": "all kinds",
+        "lemma": "kol"
       },
       {
         "surface": "of goods",
@@ -878,6 +1062,10 @@
         "lemma": "chomah"
       },
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "you do it again",
         "lemma": "shanah"
       },
@@ -890,11 +1078,27 @@
         "lemma": "yad"
       },
       {
+        "surface": "time on",
+        "lemma": "et"
+      },
+      {
+        "surface": "they did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "return",
+        "lemma": "bo"
+      },
+      {
         "surface": "on the Sabbath",
         "lemma": "shabbat"
       }
     ],
     "22": [
+      {
+        "surface": "Then I instructed",
+        "lemma": "amar"
+      },
       {
         "surface": "the Levites",
         "lemma": "leviyyi"
@@ -950,8 +1154,16 @@
         "lemma": "yom"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "Jews",
         "lemma": "yehudi"
+      },
+      {
+        "surface": "who had married",
+        "lemma": "yashav"
       },
       {
         "surface": "women",
@@ -1042,8 +1254,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "You must not",
+        "lemma": "im"
+      },
+      {
         "surface": "give your daughters",
         "lemma": "bat"
+      },
+      {
+        "surface": "in marriage",
+        "lemma": "natan"
       },
       {
         "surface": "to their sons",
@@ -1064,6 +1284,10 @@
     ],
     "26": [
       {
+        "surface": "Did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
@@ -1080,6 +1304,14 @@
         "lemma": "chata"
       },
       {
+        "surface": "There was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "a king",
         "lemma": "melekh"
       },
@@ -1090,6 +1322,10 @@
       {
         "surface": "nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "and he was",
+        "lemma": "hayah"
       },
       {
         "surface": "loved",
@@ -1104,8 +1340,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "made him",
+        "lemma": "natan"
+      },
+      {
         "surface": "king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -1126,6 +1370,18 @@
     ],
     "27": [
       {
+        "surface": "Must we now hear",
+        "lemma": "shama"
+      },
+      {
+        "surface": "that you too are doing",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "terrible",
         "lemma": "gadol"
       },
@@ -1140,6 +1396,10 @@
       {
         "surface": "against our God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "by marrying",
+        "lemma": "yashav"
       },
       {
         "surface": "foreign",
@@ -1228,6 +1488,10 @@
         "lemma": "taher"
       },
       {
+        "surface": "from everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "foreign",
         "lemma": "nekhar"
       },
@@ -1270,6 +1534,10 @@
         "lemma": "zaman"
       },
       {
+        "surface": "times",
+        "lemma": "et"
+      },
+      {
         "surface": "and for the firstfruits",
         "lemma": "bikkur"
       },
@@ -1288,8 +1556,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "shabbat",
-    "leviyyi",
-    "yerushalaim"
+    "lo"
   ]
 }

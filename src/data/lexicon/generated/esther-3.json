@@ -50,11 +50,19 @@
         "lemma": "kisse"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the princes",
         "lemma": "sar"
       }
     ],
     "2": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the royal",
         "lemma": "melekh"
@@ -100,6 +108,10 @@
         "lemma": "mordekhay"
       },
       {
+        "surface": "would not",
+        "lemma": "lo"
+      },
+      {
         "surface": "bow down",
         "lemma": "kara"
       },
@@ -124,6 +136,10 @@
       {
         "surface": "gate",
         "lemma": "shaar"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
       },
       {
         "surface": "Mordecai",
@@ -156,12 +172,28 @@
         "lemma": "yom"
       },
       {
+        "surface": "they warned",
+        "lemma": "amar"
+      },
+      {
+        "surface": "but he would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "comply",
+        "lemma": "shama"
+      },
+      {
         "surface": "So they reported it",
         "lemma": "nagad"
       },
       {
         "surface": "to Haman",
         "lemma": "haman"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
       },
       {
         "surface": "whether Mordecai’s",
@@ -188,6 +220,10 @@
       {
         "surface": "When Haman",
         "lemma": "haman"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
       },
       {
         "surface": "Mordecai",
@@ -264,6 +300,10 @@
         "lemma": "shamad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "of Mordecai’s",
         "lemma": "mordekhay"
       },
@@ -274,6 +314,10 @@
       {
         "surface": "the Jews",
         "lemma": "yehudi"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "the kingdom",
@@ -364,6 +408,10 @@
         "lemma": "haman"
       },
       {
+        "surface": "informed",
+        "lemma": "amar"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
@@ -400,6 +448,10 @@
         "lemma": "am"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "province",
         "lemma": "medinah"
       },
@@ -416,12 +468,20 @@
         "lemma": "shanah"
       },
       {
+        "surface": "from everyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "else’s",
         "lemma": "am"
       },
       {
         "surface": "and they do not",
         "lemma": "ayin"
+      },
+      {
+        "surface": "obey",
+        "lemma": "asah"
       },
       {
         "surface": "the king’s",
@@ -450,6 +510,10 @@
     ],
     "9": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "it pleases",
         "lemma": "tov"
       },
@@ -464,6 +528,10 @@
       {
         "surface": "to destroy them",
         "lemma": "avad"
+      },
+      {
+        "surface": "and I will deposit",
+        "lemma": "bo"
       },
       {
         "surface": "ten",
@@ -492,6 +560,10 @@
       {
         "surface": "to pay",
         "lemma": "shaqal"
+      },
+      {
+        "surface": "those who carry it out",
+        "lemma": "asah"
       }
     ],
     "10": [
@@ -510,6 +582,10 @@
       {
         "surface": "his finger",
         "lemma": "yad"
+      },
+      {
+        "surface": "and gave",
+        "lemma": "natan"
       },
       {
         "surface": "it to Haman",
@@ -542,6 +618,10 @@
         "lemma": "keseph"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -552,6 +632,14 @@
       {
         "surface": "These people",
         "lemma": "am"
+      },
+      {
+        "surface": "are given",
+        "lemma": "natan"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
       },
       {
         "surface": "as you please",
@@ -584,8 +672,16 @@
         "lemma": "sapher"
       },
       {
+        "surface": "were summoned",
+        "lemma": "qara"
+      },
+      {
         "surface": "and the order was written",
         "lemma": "katav"
+      },
+      {
+        "surface": "exactly as",
+        "lemma": "kol"
       },
       {
         "surface": "Haman",
@@ -690,6 +786,10 @@
         "lemma": "ruts"
       },
       {
+        "surface": "each",
+        "lemma": "kol"
+      },
+      {
         "surface": "of the royal",
         "lemma": "melekh"
       },
@@ -708,6 +808,10 @@
       {
         "surface": "and annihilate",
         "lemma": "avad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the Jews",
@@ -776,12 +880,24 @@
         "lemma": "dat"
       },
       {
+        "surface": "was to be issued",
+        "lemma": "natan"
+      },
+      {
+        "surface": "in every",
+        "lemma": "kol"
+      },
+      {
         "surface": "province",
         "lemma": "medinah"
       },
       {
         "surface": "and published",
         "lemma": "galah"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -802,6 +918,10 @@
         "lemma": "ruts"
       },
       {
+        "surface": "left",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "spurred on",
         "lemma": "dachaph"
       },
@@ -818,6 +938,10 @@
         "lemma": "dat"
       },
       {
+        "surface": "was issued",
+        "lemma": "natan"
+      },
+      {
         "surface": "in the citadel",
         "lemma": "birah"
       },
@@ -832,6 +956,10 @@
       {
         "surface": "and Haman",
         "lemma": "haman"
+      },
+      {
+        "surface": "sat down",
+        "lemma": "yashav"
       },
       {
         "surface": "to drink",
@@ -853,7 +981,7 @@
   },
   "themeLemmas": [
     "haman",
-    "mordekhay",
-    "chodesh"
+    "kol",
+    "mordekhay"
   ]
 }

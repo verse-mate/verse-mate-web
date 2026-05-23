@@ -18,6 +18,10 @@
         "lemma": "noach"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the animals",
         "lemma": "chay"
       },
@@ -88,6 +92,10 @@
       {
         "surface": "The waters",
         "lemma": "mayim"
+      },
+      {
+        "surface": "receded",
+        "lemma": "shuv"
       },
       {
         "surface": "steadily",
@@ -192,6 +200,10 @@
       {
         "surface": "of the mountains",
         "lemma": "har"
+      },
+      {
+        "surface": "became visible",
+        "lemma": "raah"
       }
     ],
     "6": [
@@ -220,6 +232,10 @@
         "lemma": "challon"
       },
       {
+        "surface": "he had made",
+        "lemma": "asah"
+      },
+      {
         "surface": "in the ark",
         "lemma": "tevah"
       }
@@ -232,6 +248,10 @@
       {
         "surface": "a raven",
         "lemma": "orev"
+      },
+      {
+        "surface": "It kept flying back and forth",
+        "lemma": "yatsa"
       },
       {
         "surface": "the waters",
@@ -254,6 +274,10 @@
       {
         "surface": "a dove",
         "lemma": "yonah"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
       },
       {
         "surface": "if the waters",
@@ -282,12 +306,20 @@
         "lemma": "matsa"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "place to rest",
         "lemma": "manoach"
       },
       {
         "surface": "her foot",
         "lemma": "kaph"
+      },
+      {
+        "surface": "and she returned",
+        "lemma": "shuv"
       },
       {
         "surface": "the ark",
@@ -302,6 +334,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -312,6 +348,10 @@
       {
         "surface": "his hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "and brought",
+        "lemma": "bo"
       },
       {
         "surface": "the ark",
@@ -354,12 +394,16 @@
     ],
     "11": [
       {
-        "surface": "And behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the dove",
         "lemma": "yonah"
+      },
+      {
+        "surface": "returned",
+        "lemma": "bo"
+      },
+      {
+        "surface": "in the evening",
+        "lemma": "et"
       },
       {
         "surface": "with a freshly plucked",
@@ -426,6 +470,10 @@
       {
         "surface": "but this time",
         "lemma": "yasaph"
+      },
+      {
+        "surface": "she did not return",
+        "lemma": "shuv"
       }
     ],
     "13": [
@@ -486,6 +534,10 @@
         "lemma": "tevah"
       },
       {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "that the surface",
         "lemma": "paneh"
       },
@@ -540,6 +592,10 @@
     ],
     "16": [
       {
+        "surface": "Come out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the ark",
         "lemma": "tevah"
       },
@@ -562,6 +618,14 @@
     ],
     "17": [
       {
+        "surface": "Bring out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the living creatures",
         "lemma": "chay"
       },
@@ -572,6 +636,10 @@
       {
         "surface": "livestock",
         "lemma": "behemah"
+      },
+      {
+        "surface": "and everything",
+        "lemma": "kol"
       },
       {
         "surface": "that crawls",
@@ -608,6 +676,10 @@
         "lemma": "noach"
       },
       {
+        "surface": "came out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "his sons",
         "lemma": "ben"
       },
@@ -626,16 +698,32 @@
     ],
     "19": [
       {
+        "surface": "Every",
+        "lemma": "kol"
+      },
+      {
         "surface": "living creature",
         "lemma": "chay"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "creeping thing",
         "lemma": "remes"
       },
       {
+        "surface": "and every",
+        "lemma": "kol"
+      },
+      {
         "surface": "bird",
         "lemma": "oph"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "that moves",
@@ -644,6 +732,10 @@
       {
         "surface": "the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "came out",
+        "lemma": "yatsa"
       },
       {
         "surface": "the ark",
@@ -676,12 +768,20 @@
         "lemma": "laqach"
       },
       {
+        "surface": "from every kind",
+        "lemma": "kol"
+      },
+      {
         "surface": "of clean",
         "lemma": "tahor"
       },
       {
         "surface": "animal",
         "lemma": "behemah"
+      },
+      {
+        "surface": "and",
+        "lemma": "kol"
       },
       {
         "surface": "clean",
@@ -726,8 +826,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "His heart",
         "lemma": "lev"
+      },
+      {
+        "surface": "Never again",
+        "lemma": "lo"
       },
       {
         "surface": "will I curse",
@@ -762,6 +870,10 @@
         "lemma": "naur"
       },
       {
+        "surface": "And never",
+        "lemma": "lo"
+      },
+      {
         "surface": "again",
         "lemma": "yasaph"
       },
@@ -770,8 +882,16 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "living creatures",
         "lemma": "chay"
+      },
+      {
+        "surface": "I have done",
+        "lemma": "asah"
       }
     ],
     "22": [
@@ -820,14 +940,18 @@
         "lemma": "laylah"
       },
       {
+        "surface": "shall never",
+        "lemma": "lo"
+      },
+      {
         "surface": "cease",
         "lemma": "shavat"
       }
     ]
   },
   "themeLemmas": [
+    "kol",
     "tevah",
-    "mayim",
-    "noach"
+    "mayim"
   ]
 }

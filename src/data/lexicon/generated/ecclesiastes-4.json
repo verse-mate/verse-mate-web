@@ -6,8 +6,24 @@
   "verses": {
     "1": [
       {
+        "surface": "Again I looked",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "considered",
+        "lemma": "raah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the oppression",
         "lemma": "ashuq"
+      },
+      {
+        "surface": "taking place",
+        "lemma": "asah"
       },
       {
         "surface": "under",
@@ -16,10 +32,6 @@
       {
         "surface": "the sun",
         "lemma": "shemesh"
-      },
-      {
-        "surface": "I saw",
-        "lemma": "hinneh"
       },
       {
         "surface": "the tears",
@@ -98,12 +110,32 @@
         "lemma": "shenayim"
       },
       {
+        "surface": "has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "yet",
         "lemma": "aden"
       },
       {
+        "surface": "existed",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "has not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "the evil",
         "lemma": "ra"
+      },
+      {
+        "surface": "is done",
+        "lemma": "asah"
       },
       {
         "surface": "under",
@@ -115,6 +147,14 @@
       }
     ],
     "4": [
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that all",
+        "lemma": "kol"
+      },
       {
         "surface": "labor",
         "lemma": "amal"
@@ -202,6 +242,14 @@
     ],
     "7": [
       {
+        "surface": "Again",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "futility",
         "lemma": "hevel"
       },
@@ -254,6 +302,10 @@
       {
         "surface": "his eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "content",
@@ -328,6 +380,10 @@
     ],
     "10": [
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "one",
         "lemma": "echad"
       },
@@ -342,10 +398,6 @@
       {
         "surface": "can lift him up",
         "lemma": "qamay"
-      },
-      {
-        "surface": "but pity",
-        "lemma": "i"
       },
       {
         "surface": "the one",
@@ -369,6 +421,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
       {
         "surface": "two",
         "lemma": "shenayim"
@@ -396,6 +452,10 @@
     ],
     "12": [
       {
+        "surface": "And though",
+        "lemma": "im"
+      },
+      {
         "surface": "one",
         "lemma": "echad"
       },
@@ -418,6 +478,10 @@
       {
         "surface": "of three",
         "lemma": "shalash"
+      },
+      {
+        "surface": "strands is not",
+        "lemma": "lo"
       },
       {
         "surface": "quickly",
@@ -458,6 +522,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
       },
@@ -471,6 +539,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "the youth has come",
+        "lemma": "yatsa"
+      },
       {
         "surface": "from the prison",
         "lemma": "bet"
@@ -493,6 +565,14 @@
       }
     ],
     "15": [
+      {
+        "surface": "I saw that",
+        "lemma": "raah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "who lived",
         "lemma": "chay"
@@ -536,12 +616,24 @@
         "lemma": "qets"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "before them",
         "lemma": "paneh"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "be celebrated",
@@ -567,7 +659,7 @@
   },
   "themeLemmas": [
     "tov",
-    "echad",
-    "tachat"
+    "lo",
+    "echad"
   ]
 }

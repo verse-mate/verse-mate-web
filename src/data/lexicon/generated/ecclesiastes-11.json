@@ -32,6 +32,10 @@
     ],
     "2": [
       {
+        "surface": "Divide",
+        "lemma": "natan"
+      },
+      {
         "surface": "your portion",
         "lemma": "cheleq"
       },
@@ -42,6 +46,10 @@
       {
         "surface": "eight",
         "lemma": "shemoneh"
+      },
+      {
+        "surface": "you do not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
@@ -56,11 +64,23 @@
         "lemma": "ra"
       },
       {
+        "surface": "may befall",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       }
     ],
     "3": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "the clouds",
+        "lemma": "av"
+      },
       {
         "surface": "are full",
         "lemma": "male"
@@ -78,6 +98,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "whether",
+        "lemma": "im"
+      },
+      {
         "surface": "a tree",
         "lemma": "ets"
       },
@@ -88,6 +112,10 @@
       {
         "surface": "to the south",
         "lemma": "darom"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "to the north",
@@ -124,8 +152,24 @@
         "lemma": "ruach"
       },
       {
+        "surface": "will fail",
+        "lemma": "lo"
+      },
+      {
         "surface": "to sow",
         "lemma": "zara"
+      },
+      {
+        "surface": "and he who observes",
+        "lemma": "raah"
+      },
+      {
+        "surface": "the clouds",
+        "lemma": "av"
+      },
+      {
+        "surface": "will fail",
+        "lemma": "lo"
       },
       {
         "surface": "to reap",
@@ -166,6 +210,10 @@
         "lemma": "kakhah"
       },
       {
+        "surface": "you cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "understand",
         "lemma": "yada"
       },
@@ -176,6 +224,14 @@
       {
         "surface": "of God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "the Maker",
+        "lemma": "asah"
+      },
+      {
+        "surface": "of all things",
+        "lemma": "kol"
       }
     ],
     "6": [
@@ -190,6 +246,10 @@
       {
         "surface": "in the morning",
         "lemma": "boqer"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
       },
       {
         "surface": "rest",
@@ -218,6 +278,10 @@
       {
         "surface": "will succeed",
         "lemma": "kasher"
+      },
+      {
+        "surface": "or if",
+        "lemma": "im"
       },
       {
         "surface": "both",
@@ -250,11 +314,19 @@
         "lemma": "ayin"
       },
       {
+        "surface": "to see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the sun",
         "lemma": "shemesh"
       }
     ],
     "8": [
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
       {
         "surface": "a man",
         "lemma": "adam"
@@ -276,6 +348,10 @@
         "lemma": "samach"
       },
       {
+        "surface": "in them all",
+        "lemma": "kol"
+      },
+      {
         "surface": "But let him remember",
         "lemma": "zakhar"
       },
@@ -288,8 +364,20 @@
         "lemma": "choshekh"
       },
       {
+        "surface": "they will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "many",
         "lemma": "ravah"
+      },
+      {
+        "surface": "Everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "to come",
+        "lemma": "bo"
       },
       {
         "surface": "is futile",
@@ -350,8 +438,16 @@
         "lemma": "yada"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "will bring you",
+        "lemma": "bo"
       },
       {
         "surface": "to judgment",
@@ -399,7 +495,7 @@
   },
   "themeLemmas": [
     "yada",
-    "zara",
-    "yaldut"
+    "im",
+    "lo"
   ]
 }

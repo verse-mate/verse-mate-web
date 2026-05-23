@@ -40,6 +40,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "has",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a bodily",
         "lemma": "basar"
       },
@@ -60,6 +64,10 @@
       {
         "surface": "uncleanness",
         "lemma": "tumah"
+      },
+      {
+        "surface": "is",
+        "lemma": "hayah"
       },
       {
         "surface": "from his discharge",
@@ -92,6 +100,10 @@
     ],
     "4": [
       {
+        "surface": "Any",
+        "lemma": "kol"
+      },
+      {
         "surface": "bed",
         "lemma": "mishkav"
       },
@@ -108,8 +120,16 @@
         "lemma": "tame"
       },
       {
+        "surface": "and any",
+        "lemma": "kol"
+      },
+      {
         "surface": "furniture",
         "lemma": "keli"
+      },
+      {
+        "surface": "he sits",
+        "lemma": "yashav"
       },
       {
         "surface": "will be unclean",
@@ -156,12 +176,20 @@
     ],
     "6": [
       {
+        "surface": "Whoever sits",
+        "lemma": "yashav"
+      },
+      {
         "surface": "furniture",
         "lemma": "keli"
       },
       {
         "surface": "the man with the discharge",
         "lemma": "zuv"
+      },
+      {
+        "surface": "was sitting",
+        "lemma": "yashav"
       },
       {
         "surface": "must wash",
@@ -266,6 +294,10 @@
     ],
     "9": [
       {
+        "surface": "Any",
+        "lemma": "kol"
+      },
+      {
         "surface": "saddle",
         "lemma": "merkav"
       },
@@ -284,8 +316,20 @@
     ],
     "10": [
       {
+        "surface": "Whoever",
+        "lemma": "kol"
+      },
+      {
         "surface": "touches",
         "lemma": "naga"
+      },
+      {
+        "surface": "anything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "under him",
@@ -336,6 +380,14 @@
       {
         "surface": "touches",
         "lemma": "naga"
+      },
+      {
+        "surface": "anyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "first rinsing",
@@ -394,6 +446,10 @@
       {
         "surface": "must be broken",
         "lemma": "shavar"
+      },
+      {
+        "surface": "and any",
+        "lemma": "kol"
       },
       {
         "surface": "wooden",
@@ -504,6 +560,10 @@
         "lemma": "yonah"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "before",
         "lemma": "paneh"
       },
@@ -524,6 +584,10 @@
         "lemma": "moed"
       },
       {
+        "surface": "and give them",
+        "lemma": "natan"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
       }
@@ -532,6 +596,10 @@
       {
         "surface": "The priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "is to sacrifice",
+        "lemma": "asah"
       },
       {
         "surface": "one",
@@ -588,6 +656,10 @@
         "lemma": "rachats"
       },
       {
+        "surface": "his whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "body",
         "lemma": "basar"
       },
@@ -606,12 +678,20 @@
     ],
     "17": [
       {
+        "surface": "Any",
+        "lemma": "kol"
+      },
+      {
         "surface": "clothing",
         "lemma": "beged"
       },
       {
         "surface": "or leather",
         "lemma": "or"
+      },
+      {
+        "surface": "there is",
+        "lemma": "hayah"
       },
       {
         "surface": "an emission",
@@ -682,8 +762,16 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "has",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a discharge",
         "lemma": "zuv"
+      },
+      {
+        "surface": "consisting",
+        "lemma": "hayah"
       },
       {
         "surface": "of blood",
@@ -692,6 +780,10 @@
       {
         "surface": "from her body",
         "lemma": "basar"
+      },
+      {
+        "surface": "she will be",
+        "lemma": "hayah"
       },
       {
         "surface": "unclean due to her menstruation",
@@ -704,6 +796,10 @@
       {
         "surface": "days",
         "lemma": "yom"
+      },
+      {
+        "surface": "and anyone",
+        "lemma": "kol"
       },
       {
         "surface": "who touches",
@@ -720,8 +816,16 @@
     ],
     "20": [
       {
+        "surface": "Anything",
+        "lemma": "kol"
+      },
+      {
         "surface": "she lies",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "or sits",
+        "lemma": "yashav"
       },
       {
         "surface": "during her menstruation",
@@ -733,6 +837,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "and anyone",
+        "lemma": "kol"
+      },
       {
         "surface": "who touches",
         "lemma": "naga"
@@ -768,12 +876,24 @@
     ],
     "22": [
       {
+        "surface": "Whoever",
+        "lemma": "kol"
+      },
+      {
         "surface": "touches",
         "lemma": "naga"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "furniture",
         "lemma": "keli"
+      },
+      {
+        "surface": "she was sitting",
+        "lemma": "yashav"
       },
       {
         "surface": "must wash",
@@ -802,12 +922,20 @@
     ],
     "23": [
       {
+        "surface": "And whether",
+        "lemma": "im"
+      },
+      {
         "surface": "a bed",
         "lemma": "mishkav"
       },
       {
         "surface": "furniture",
         "lemma": "keli"
+      },
+      {
+        "surface": "was sitting",
+        "lemma": "yashav"
       },
       {
         "surface": "whoever touches",
@@ -823,6 +951,10 @@
       }
     ],
     "24": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -840,6 +972,10 @@
         "lemma": "niddah"
       },
       {
+        "surface": "touches",
+        "lemma": "hayah"
+      },
+      {
         "surface": "he will be unclean",
         "lemma": "tame"
       },
@@ -850,6 +986,10 @@
       {
         "surface": "days",
         "lemma": "yom"
+      },
+      {
+        "surface": "and any",
+        "lemma": "kol"
       },
       {
         "surface": "bed",
@@ -886,6 +1026,14 @@
         "lemma": "yom"
       },
       {
+        "surface": "at a time",
+        "lemma": "et"
+      },
+      {
+        "surface": "other than",
+        "lemma": "lo"
+      },
+      {
         "surface": "her menstrual period",
         "lemma": "niddah"
       },
@@ -898,8 +1046,16 @@
         "lemma": "niddah"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "unclean",
         "lemma": "tame"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the days",
@@ -924,6 +1080,10 @@
     ],
     "26": [
       {
+        "surface": "Any",
+        "lemma": "kol"
+      },
+      {
         "surface": "bed",
         "lemma": "mishkav"
       },
@@ -932,8 +1092,16 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "or any",
+        "lemma": "kol"
+      },
+      {
         "surface": "furniture",
         "lemma": "keli"
+      },
+      {
+        "surface": "she sits",
+        "lemma": "yashav"
       },
       {
         "surface": "during the days",
@@ -942,6 +1110,10 @@
       {
         "surface": "of her discharge",
         "lemma": "zov"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "unclean",
@@ -957,6 +1129,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "Anyone",
+        "lemma": "kol"
+      },
       {
         "surface": "who touches",
         "lemma": "naga"
@@ -991,6 +1167,10 @@
       }
     ],
     "28": [
+      {
+        "surface": "When",
+        "lemma": "im"
+      },
       {
         "surface": "a woman is cleansed",
         "lemma": "taher"
@@ -1054,6 +1234,10 @@
         "lemma": "yonah"
       },
       {
+        "surface": "and bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
       },
@@ -1074,6 +1258,10 @@
       {
         "surface": "The priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "is to sacrifice",
+        "lemma": "asah"
       },
       {
         "surface": "one",
@@ -1134,6 +1322,10 @@
         "lemma": "tumah"
       },
       {
+        "surface": "so that they do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "die",
         "lemma": "mut"
       },
@@ -1158,6 +1350,10 @@
       {
         "surface": "of him who has a discharge",
         "lemma": "zuv"
+      },
+      {
+        "surface": "has",
+        "lemma": "yatsa"
       },
       {
         "surface": "an emission",
@@ -1209,7 +1405,7 @@
   },
   "themeLemmas": [
     "tame",
-    "mayim",
-    "erev"
+    "kol",
+    "mayim"
   ]
 }

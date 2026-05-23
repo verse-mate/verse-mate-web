@@ -26,6 +26,10 @@
         "lemma": "qadim"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
       },
@@ -90,6 +94,10 @@
       {
         "surface": "according to his ways",
         "lemma": "derekh"
+      },
+      {
+        "surface": "and repay",
+        "lemma": "shuv"
       },
       {
         "surface": "according to his deeds",
@@ -184,6 +192,10 @@
     ],
     "6": [
       {
+        "surface": "must return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to your God",
         "lemma": "elohim"
       },
@@ -244,6 +256,10 @@
         "lemma": "ephrayim"
       },
       {
+        "surface": "boasts",
+        "lemma": "amar"
+      },
+      {
         "surface": "How rich I have become",
         "lemma": "ashar"
       },
@@ -256,12 +272,20 @@
         "lemma": "on"
       },
       {
+        "surface": "In all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my labors",
         "lemma": "yegia"
       },
       {
         "surface": "they can find",
         "lemma": "matsa"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "iniquity",
@@ -288,6 +312,10 @@
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "I will again make you dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "in tents",
@@ -334,6 +362,10 @@
     ],
     "11": [
       {
+        "surface": "Is there",
+        "lemma": "im"
+      },
+      {
         "surface": "iniquity",
         "lemma": "aven"
       },
@@ -344,6 +376,10 @@
       {
         "surface": "They will surely",
         "lemma": "akh"
+      },
+      {
+        "surface": "come",
+        "lemma": "hayah"
       },
       {
         "surface": "to nothing",
@@ -472,6 +508,10 @@
         "lemma": "dam"
       },
       {
+        "surface": "and repay",
+        "lemma": "shuv"
+      },
+      {
         "surface": "for his contempt",
         "lemma": "cherpah"
       }
@@ -479,7 +519,7 @@
   },
   "themeLemmas": [
     "navi",
-    "shamar",
-    "mitsrayim"
+    "shuv",
+    "shamar"
   ]
 }

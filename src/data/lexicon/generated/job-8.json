@@ -68,6 +68,10 @@
     ],
     "4": [
       {
+        "surface": "When",
+        "lemma": "im"
+      },
+      {
         "surface": "your children",
         "lemma": "ben"
       },
@@ -86,6 +90,10 @@
     ],
     "5": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "would earnestly seek",
         "lemma": "shachar"
       },
@@ -103,6 +111,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
       {
         "surface": "are pure",
         "lemma": "zakh"
@@ -138,6 +150,10 @@
         "lemma": "reshit"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "modest",
         "lemma": "mitsar"
       },
@@ -151,10 +167,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "Please",
-        "lemma": "na"
-      },
       {
         "surface": "inquire",
         "lemma": "shaal"
@@ -174,6 +186,10 @@
       {
         "surface": "the discoveries",
         "lemma": "cheqer"
+      },
+      {
+        "surface": "of their fathers",
+        "lemma": "av"
       }
     ],
     "9": [
@@ -184,6 +200,10 @@
       {
         "surface": "and know",
         "lemma": "yada"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
       },
       {
         "surface": "our days",
@@ -200,8 +220,20 @@
     ],
     "10": [
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "teach you",
         "lemma": "yara"
+      },
+      {
+        "surface": "and tell",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and speak",
+        "lemma": "yatsa"
       },
       {
         "surface": "from their understanding",
@@ -216,6 +248,10 @@
       {
         "surface": "grow",
         "lemma": "gaah"
+      },
+      {
+        "surface": "where there is no",
+        "lemma": "lo"
       },
       {
         "surface": "marsh",
@@ -248,12 +284,20 @@
         "lemma": "ev"
       },
       {
+        "surface": "are still uncut",
+        "lemma": "lo"
+      },
+      {
         "surface": "they dry up",
         "lemma": "yavesh"
       },
       {
         "surface": "more quickly than",
         "lemma": "paneh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "kol"
       },
       {
         "surface": "grass",
@@ -268,6 +312,10 @@
       {
         "surface": "is the destiny",
         "lemma": "orach"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "who forget",
@@ -322,12 +370,20 @@
         "lemma": "bet"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "but it gives way",
         "lemma": "amad"
       },
       {
         "surface": "he holds fast",
         "lemma": "chazaq"
+      },
+      {
+        "surface": "but it does not",
+        "lemma": "lo"
       },
       {
         "surface": "endure",
@@ -346,6 +402,10 @@
       {
         "surface": "the sunshine",
         "lemma": "shemesh"
+      },
+      {
+        "surface": "spreading",
+        "lemma": "yatsa"
       },
       {
         "surface": "its shoots",
@@ -384,6 +444,10 @@
     ],
     "18": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "he is uprooted",
         "lemma": "bala"
       },
@@ -394,13 +458,17 @@
       {
         "surface": "it will disown",
         "lemma": "kachash"
+      },
+      {
+        "surface": "saying, ‘ I never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "saw you",
+        "lemma": "raah"
       }
     ],
     "19": [
-      {
-        "surface": "Surely",
-        "lemma": "hen"
-      },
       {
         "surface": "is the joy",
         "lemma": "masvos"
@@ -424,12 +492,12 @@
     ],
     "20": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "God",
         "lemma": "el"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "reject",
@@ -438,6 +506,10 @@
       {
         "surface": "the blameless",
         "lemma": "tam"
+      },
+      {
+        "surface": "nor will He",
+        "lemma": "lo"
       },
       {
         "surface": "strengthen",
@@ -502,8 +574,8 @@
     ]
   },
   "themeLemmas": [
-    "bet",
-    "tsedeq",
-    "shadday"
+    "lo",
+    "im",
+    "bet"
   ]
 }

@@ -18,6 +18,10 @@
         "lemma": "am"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "nation",
         "lemma": "ummah"
       },
@@ -28,6 +32,10 @@
       {
         "surface": "dwell",
         "lemma": "dur"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -196,6 +204,10 @@
         "lemma": "teem"
       },
       {
+        "surface": "that all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the wise men",
         "lemma": "chakkim"
       },
@@ -244,6 +256,10 @@
       {
         "surface": "I",
         "lemma": "ana"
+      },
+      {
+        "surface": "told them",
+        "lemma": "amar"
       },
       {
         "surface": "the dream",
@@ -300,6 +316,10 @@
         "lemma": "elah"
       },
       {
+        "surface": "And I told him",
+        "lemma": "amar"
+      },
+      {
         "surface": "the dream",
         "lemma": "chelem"
       }
@@ -338,6 +358,10 @@
         "lemma": "elah"
       },
       {
+        "surface": "and that",
+        "lemma": "kol"
+      },
+      {
         "surface": "no",
         "lemma": "la"
       },
@@ -348,6 +372,10 @@
       {
         "surface": "baffles",
         "lemma": "anas"
+      },
+      {
+        "surface": "So explain to me",
+        "lemma": "amar"
       },
       {
         "surface": "the visions",
@@ -386,10 +414,6 @@
       {
         "surface": "come to pass",
         "lemma": "hava"
-      },
-      {
-        "surface": "There was",
-        "lemma": "alu"
       },
       {
         "surface": "a tree",
@@ -472,6 +496,10 @@
         "lemma": "mazon"
       },
       {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the beasts",
         "lemma": "cheva"
       },
@@ -498,6 +526,10 @@
       {
         "surface": "nested",
         "lemma": "dur"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "creature",
@@ -780,10 +812,6 @@
     ],
     "18": [
       {
-        "surface": "This",
-        "lemma": "denah"
-      },
-      {
         "surface": "is the dream",
         "lemma": "chelem"
       },
@@ -810,6 +838,10 @@
       {
         "surface": "Belteshazzar",
         "lemma": "beleteshatstsar"
+      },
+      {
+        "surface": "tell me",
+        "lemma": "amar"
       },
       {
         "surface": "the interpretation",
@@ -906,6 +938,10 @@
         "lemma": "beleteshatstsar"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "let the dream",
         "lemma": "chelem"
       },
@@ -980,6 +1016,10 @@
         "lemma": "chazot"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "ara"
       }
@@ -1004,6 +1044,10 @@
       {
         "surface": "providing food",
         "lemma": "mazon"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "the beasts",
@@ -1110,6 +1154,10 @@
         "lemma": "shamayin"
       },
       {
+        "surface": "and saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Cut down",
         "lemma": "gedad"
       },
@@ -1195,10 +1243,6 @@
       }
     ],
     "24": [
-      {
-        "surface": "This",
-        "lemma": "denah"
-      },
       {
         "surface": "is the interpretation",
         "lemma": "peshar"
@@ -1324,6 +1368,10 @@
     ],
     "26": [
       {
+        "surface": "the command",
+        "lemma": "amar"
+      },
+      {
         "surface": "to leave",
         "lemma": "shevaq"
       },
@@ -1420,6 +1468,10 @@
     ],
     "28": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "this happened",
         "lemma": "meta"
       },
@@ -1470,10 +1522,6 @@
       {
         "surface": "exclaimed",
         "lemma": "anah"
-      },
-      {
-        "surface": "Is this",
-        "lemma": "da"
       },
       {
         "surface": "not",
@@ -1548,6 +1596,10 @@
       {
         "surface": "heaven",
         "lemma": "shamayin"
+      },
+      {
+        "surface": "It is decreed",
+        "lemma": "amar"
       },
       {
         "surface": "King",
@@ -1802,6 +1854,10 @@
     ],
     "35": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the peoples",
         "lemma": "dur"
       },
@@ -1852,6 +1908,10 @@
       {
         "surface": "His hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "or say",
+        "lemma": "amar"
       },
       {
         "surface": "What",
@@ -1962,6 +2022,10 @@
         "lemma": "shamayin"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His works",
         "lemma": "mavad"
       },
@@ -1996,8 +2060,8 @@
     ]
   },
   "themeLemmas": [
-    "ara",
     "shamayin",
-    "malkhu"
+    "malkhu",
+    "kol"
   ]
 }

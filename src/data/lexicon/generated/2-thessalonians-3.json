@@ -52,6 +52,10 @@
         "lemma": "anthropos"
       },
       {
+        "surface": "everyone  holds to",
+        "lemma": "pas"
+      },
+      {
         "surface": "faith",
         "lemma": "pistis"
       }
@@ -60,6 +64,10 @@
       {
         "surface": "Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "faithful",
@@ -86,6 +94,14 @@
       {
         "surface": "the Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "you are doing",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "will continue to do",
+        "lemma": "poieo"
       },
       {
         "surface": "we command",
@@ -152,6 +168,10 @@
         "lemma": "stello"
       },
       {
+        "surface": "any",
+        "lemma": "pas"
+      },
+      {
         "surface": "brother",
         "lemma": "adelphos"
       },
@@ -173,6 +193,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "know",
+        "lemma": "eido"
+      },
       {
         "surface": "you ought",
         "lemma": "dei"
@@ -226,8 +250,16 @@
     ],
     "9": [
       {
+        "surface": "we lack",
+        "lemma": "echo"
+      },
+      {
         "surface": "this right",
         "lemma": "exousia"
+      },
+      {
+        "surface": "offer",
+        "lemma": "didomi"
       },
       {
         "surface": "as an example",
@@ -240,8 +272,16 @@
     ],
     "10": [
       {
+        "surface": "we were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "we gave you this command",
         "lemma": "parangello"
+      },
+      {
+        "surface": "is unwilling",
+        "lemma": "thelo"
       },
       {
         "surface": "to work",
@@ -253,6 +293,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "we hear that",
+        "lemma": "akouo"
+      },
       {
         "surface": "are leading",
         "lemma": "peripateo"
@@ -376,8 +420,20 @@
         "lemma": "eirene"
       },
       {
+        "surface": "give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "peace",
         "lemma": "eirene"
+      },
+      {
+        "surface": "all times",
+        "lemma": "pas"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "way",
@@ -386,6 +442,10 @@
       {
         "surface": "Lord be",
         "lemma": "kurios"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       }
     ],
     "17": [
@@ -406,8 +466,16 @@
         "lemma": "paulos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "my mark",
         "lemma": "semeion"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "letter",
@@ -416,6 +484,10 @@
       {
         "surface": "it is the way",
         "lemma": "houto"
+      },
+      {
+        "surface": "I write",
+        "lemma": "grapho"
       }
     ],
     "18": [
@@ -434,6 +506,10 @@
       {
         "surface": "Christ",
         "lemma": "christos"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       }
     ]
   },

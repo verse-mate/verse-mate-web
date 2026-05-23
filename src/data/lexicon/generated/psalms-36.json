@@ -136,8 +136,16 @@
         "lemma": "derekh"
       },
       {
+        "surface": "that is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
+      },
+      {
+        "surface": "he fails",
+        "lemma": "lo"
       },
       {
         "surface": "to reject",
@@ -286,6 +294,10 @@
         "lemma": "or"
       },
       {
+        "surface": "we see",
+        "lemma": "raah"
+      },
+      {
         "surface": "light",
         "lemma": "or"
       }
@@ -318,12 +330,20 @@
     ],
     "11": [
       {
+        "surface": "Let not",
+        "lemma": "al"
+      },
+      {
         "surface": "the foot",
         "lemma": "regel"
       },
       {
         "surface": "of the proud",
         "lemma": "gaavah"
+      },
+      {
+        "surface": "come against me",
+        "lemma": "bo"
       },
       {
         "surface": "nor the hand",
@@ -336,6 +356,10 @@
       {
         "surface": "drive me",
         "lemma": "nud"
+      },
+      {
+        "surface": "away",
+        "lemma": "al"
       }
     ],
     "12": [
@@ -356,14 +380,18 @@
         "lemma": "dachah"
       },
       {
+        "surface": "and unable",
+        "lemma": "lo"
+      },
+      {
         "surface": "to rise",
         "lemma": "qamay"
       }
     ]
   },
   "themeLemmas": [
+    "lo",
     "chesed",
-    "tsedaqah",
-    "rasah"
+    "tsedaqah"
   ]
 }

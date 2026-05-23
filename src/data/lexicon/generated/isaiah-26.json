@@ -68,6 +68,10 @@
         "lemma": "goy"
       },
       {
+        "surface": "may enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "one that remains",
         "lemma": "shamar"
       },
@@ -128,6 +132,10 @@
       {
         "surface": "He has humbled",
         "lemma": "shachach"
+      },
+      {
+        "surface": "those who dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "on high",
@@ -286,6 +294,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of the world",
         "lemma": "tevel"
       },
@@ -334,6 +346,10 @@
       {
         "surface": "and fails",
         "lemma": "bal"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
       },
       {
         "surface": "the majesty",
@@ -406,6 +422,10 @@
       {
         "surface": "peace",
         "lemma": "shalom"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "that we have accomplished",
@@ -492,6 +512,10 @@
         "lemma": "avad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "memory",
         "lemma": "zekher"
       }
@@ -524,6 +548,10 @@
       {
         "surface": "You have extended",
         "lemma": "rachaq"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the borders",
@@ -590,6 +618,10 @@
         "lemma": "ken"
       },
       {
+        "surface": "were we",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in Your presence",
         "lemma": "paneh"
       },
@@ -616,6 +648,10 @@
         "lemma": "ruach"
       },
       {
+        "surface": "We have given",
+        "lemma": "asah"
+      },
+      {
         "surface": "no",
         "lemma": "bal"
       },
@@ -634,6 +670,10 @@
       {
         "surface": "brought",
         "lemma": "naphal"
+      },
+      {
+        "surface": "any life",
+        "lemma": "yashav"
       },
       {
         "surface": "into the world",
@@ -708,6 +748,10 @@
         "lemma": "am"
       },
       {
+        "surface": "enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "your rooms",
         "lemma": "cheder"
       },
@@ -746,12 +790,12 @@
     ],
     "21": [
       {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "is coming",
+        "lemma": "yatsa"
       },
       {
         "surface": "out of His dwelling",
@@ -760,6 +804,10 @@
       {
         "surface": "to punish",
         "lemma": "paqad"
+      },
+      {
+        "surface": "the inhabitants",
+        "lemma": "yashav"
       },
       {
         "surface": "of the earth",
@@ -782,6 +830,10 @@
         "lemma": "dam"
       },
       {
+        "surface": "and will no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
       },
@@ -797,7 +849,7 @@
   },
   "themeLemmas": [
     "bal",
-    "tsaddiq",
-    "paqad"
+    "yashav",
+    "tsaddiq"
   ]
 }

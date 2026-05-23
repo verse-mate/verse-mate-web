@@ -14,6 +14,10 @@
         "lemma": "goy"
       },
       {
+        "surface": "to listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "pay attention",
         "lemma": "qashav"
       },
@@ -26,12 +30,20 @@
         "lemma": "erets"
       },
       {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "and all that fills it",
         "lemma": "melo"
       },
       {
         "surface": "the world",
         "lemma": "tevel"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "that springs from it",
@@ -48,6 +60,10 @@
         "lemma": "qetseph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
@@ -62,6 +78,10 @@
       {
         "surface": "He will devote them to destruction",
         "lemma": "charam"
+      },
+      {
+        "surface": "He will give them over",
+        "lemma": "natan"
       },
       {
         "surface": "to slaughter",
@@ -103,6 +123,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the stars",
         "lemma": "tsava"
@@ -168,10 +192,6 @@
       {
         "surface": "in the heavens",
         "lemma": "shamayim"
-      },
-      {
-        "surface": "then",
-        "lemma": "hinneh"
       },
       {
         "surface": "it will come down",
@@ -370,6 +390,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a blazing",
         "lemma": "baar"
       },
@@ -379,6 +403,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "It will not",
+        "lemma": "lo"
+      },
       {
         "surface": "be quenched",
         "lemma": "kavah"
@@ -484,12 +512,24 @@
         "lemma": "chor"
       },
       {
+        "surface": "will be left to proclaim",
+        "lemma": "qara"
+      },
+      {
         "surface": "a king",
         "lemma": "melukhah"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "her princes",
         "lemma": "sar"
+      },
+      {
+        "surface": "will come",
+        "lemma": "hayah"
       },
       {
         "surface": "to nothing",
@@ -520,6 +560,10 @@
       {
         "surface": "and briers",
         "lemma": "choach"
+      },
+      {
+        "surface": "She will become",
+        "lemma": "hayah"
       },
       {
         "surface": "a haunt",
@@ -558,6 +602,10 @@
       {
         "surface": "and one wild goat",
         "lemma": "sair"
+      },
+      {
+        "surface": "will call",
+        "lemma": "qara"
       },
       {
         "surface": "another",
@@ -648,12 +696,20 @@
         "lemma": "darash"
       },
       {
+        "surface": "and read",
+        "lemma": "qara"
+      },
+      {
         "surface": "the scroll",
         "lemma": "sepher"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "Not",
+        "lemma": "lo"
       },
       {
         "surface": "one",
@@ -732,8 +788,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "dor",
-    "dam",
-    "tsava"
+    "dam"
   ]
 }

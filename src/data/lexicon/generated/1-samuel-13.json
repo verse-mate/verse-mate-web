@@ -64,6 +64,10 @@
         "lemma": "eleph"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Saul",
         "lemma": "shaul"
       },
@@ -86,6 +90,10 @@
       {
         "surface": "and a thousand",
         "lemma": "eleph"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
       },
       {
         "surface": "Jonathan",
@@ -146,6 +154,10 @@
         "lemma": "pelishti"
       },
       {
+        "surface": "heard about it",
+        "lemma": "shama"
+      },
+      {
         "surface": "So Saul",
         "lemma": "shaul"
       },
@@ -158,18 +170,42 @@
         "lemma": "shophar"
       },
       {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Let the Hebrews",
         "lemma": "ivri"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
       }
     ],
     "4": [
       {
+        "surface": "And all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "the news",
+        "lemma": "amar"
       },
       {
         "surface": "Saul",
@@ -300,6 +336,10 @@
     ],
     "6": [
       {
+        "surface": "Seeing",
+        "lemma": "raah"
+      },
+      {
         "surface": "in danger",
         "lemma": "tsar"
       },
@@ -382,6 +422,10 @@
         "lemma": "gilgal"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his troops",
         "lemma": "am"
       },
@@ -416,6 +460,14 @@
         "lemma": "shemuel"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Gilgal",
         "lemma": "gilgal"
       },
@@ -432,6 +484,10 @@
       {
         "surface": "So he",
         "lemma": "shaul"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Bring me",
@@ -472,8 +528,20 @@
         "lemma": "shemuel"
       },
       {
+        "surface": "arrived",
+        "lemma": "bo"
+      },
+      {
         "surface": "and Saul",
         "lemma": "shaul"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "qara"
       },
       {
         "surface": "to greet him",
@@ -486,12 +554,28 @@
         "lemma": "mah"
       },
       {
+        "surface": "have you done",
+        "lemma": "asah"
+      },
+      {
         "surface": "Samuel",
         "lemma": "shemuel"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "And Saul",
         "lemma": "shaul"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I saw",
+        "lemma": "raah"
       },
       {
         "surface": "the troops",
@@ -500,6 +584,14 @@
       {
         "surface": "were deserting",
         "lemma": "naphats"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
       },
       {
         "surface": "at the appointed",
@@ -524,6 +616,10 @@
     ],
     "12": [
       {
+        "surface": "I thought",
+        "lemma": "amar"
+      },
+      {
         "surface": "Now",
         "lemma": "attah"
       },
@@ -538,6 +634,10 @@
       {
         "surface": "at Gilgal",
         "lemma": "gilgal"
+      },
+      {
+        "surface": "and I have not",
+        "lemma": "lo"
       },
       {
         "surface": "sought",
@@ -572,6 +672,14 @@
       {
         "surface": "Samuel",
         "lemma": "shemuel"
+      },
+      {
+        "surface": "declared",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You have not",
+        "lemma": "lo"
       },
       {
         "surface": "kept",
@@ -628,6 +736,10 @@
         "lemma": "mamlakhah"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "endure",
         "lemma": "qamay"
       },
@@ -658,6 +770,10 @@
       {
         "surface": "His people",
         "lemma": "am"
+      },
+      {
+        "surface": "you have not",
+        "lemma": "lo"
       },
       {
         "surface": "kept",
@@ -740,6 +856,10 @@
         "lemma": "am"
       },
       {
+        "surface": "were staying",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Geba",
         "lemma": "geva"
       },
@@ -764,6 +884,10 @@
       {
         "surface": "And raiders",
         "lemma": "shachat"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of the Philistine",
@@ -846,12 +970,20 @@
     ],
     "19": [
       {
+        "surface": "And no",
+        "lemma": "lo"
+      },
+      {
         "surface": "blacksmith",
         "lemma": "charash"
       },
       {
         "surface": "could be found",
         "lemma": "matsa"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -866,8 +998,16 @@
         "lemma": "pelishti"
       },
       {
+        "surface": "had said",
+        "lemma": "amar"
+      },
+      {
         "surface": "The Hebrews",
         "lemma": "ivri"
+      },
+      {
+        "surface": "to make",
+        "lemma": "asah"
       },
       {
         "surface": "swords",
@@ -879,6 +1019,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "Instead, all",
+        "lemma": "kol"
+      },
       {
         "surface": "the Israelites",
         "lemma": "yisrael"
@@ -900,6 +1044,10 @@
         "lemma": "machareshah"
       },
       {
+        "surface": "mattocks",
+        "lemma": "et"
+      },
+      {
         "surface": "axes",
         "lemma": "qardom"
       },
@@ -914,12 +1062,20 @@
         "lemma": "petsirah"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a pim",
         "lemma": "peh"
       },
       {
         "surface": "for sharpening a plowshare",
         "lemma": "machareshah"
+      },
+      {
+        "surface": "or mattock",
+        "lemma": "et"
       },
       {
         "surface": "a third of a shekel",
@@ -944,12 +1100,20 @@
     ],
     "22": [
       {
+        "surface": "So",
+        "lemma": "hayah"
+      },
+      {
         "surface": "on the day",
         "lemma": "yom"
       },
       {
         "surface": "of battle",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "a sword",
@@ -966,6 +1130,10 @@
       {
         "surface": "in the hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "kol"
       },
       {
         "surface": "of the troops",
@@ -1000,6 +1168,10 @@
       {
         "surface": "of the Philistines",
         "lemma": "pelishti"
+      },
+      {
+        "surface": "had gone out",
+        "lemma": "yatsa"
       },
       {
         "surface": "to the pass",

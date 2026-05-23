@@ -14,8 +14,16 @@
         "lemma": "noomi"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "My daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "should I not",
+        "lemma": "lo"
       },
       {
         "surface": "seek",
@@ -36,6 +44,10 @@
         "lemma": "attah"
       },
       {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "Boaz",
         "lemma": "boaz"
       },
@@ -44,12 +56,12 @@
         "lemma": "naarah"
       },
       {
-        "surface": "a relative of ours",
-        "lemma": "modaat"
+        "surface": "you have been working",
+        "lemma": "hayah"
       },
       {
-        "surface": "In fact",
-        "lemma": "hinneh"
+        "surface": "a relative of ours",
+        "lemma": "modaat"
       },
       {
         "surface": "tonight",
@@ -94,6 +106,10 @@
         "lemma": "goren"
       },
       {
+        "surface": "but do not",
+        "lemma": "al"
+      },
+      {
         "surface": "let the man",
         "lemma": "ish"
       },
@@ -132,6 +148,10 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "Then go in",
+        "lemma": "bo"
+      },
+      {
         "surface": "and uncover",
         "lemma": "galah"
       },
@@ -146,6 +166,28 @@
       {
         "surface": "will explain",
         "lemma": "nagad"
+      },
+      {
+        "surface": "you should do",
+        "lemma": "asah"
+      }
+    ],
+    "5": [
+      {
+        "surface": "I will do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "you say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Ruth answered",
+        "lemma": "amar"
       }
     ],
     "6": [
@@ -156,6 +198,14 @@
       {
         "surface": "to the threshing floor",
         "lemma": "goren"
+      },
+      {
+        "surface": "and did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "her mother-in-law",
@@ -184,6 +234,10 @@
         "lemma": "yatav"
       },
       {
+        "surface": "he went",
+        "lemma": "bo"
+      },
+      {
         "surface": "to lie down",
         "lemma": "shakhav"
       },
@@ -194,6 +248,10 @@
       {
         "surface": "of the heap of grain",
         "lemma": "aremah"
+      },
+      {
+        "surface": "Then Ruth went in secretly",
+        "lemma": "bo"
       },
       {
         "surface": "uncovered",
@@ -226,10 +284,6 @@
         "lemma": "laphat"
       },
       {
-        "surface": "and there",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "lying",
         "lemma": "shakhav"
       },
@@ -248,12 +302,20 @@
         "lemma": "mi"
       },
       {
+        "surface": "he asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "your servant",
         "lemma": "amah"
       },
       {
         "surface": "Ruth",
         "lemma": "rut"
+      },
+      {
+        "surface": "she replied",
+        "lemma": "amar"
       },
       {
         "surface": "Spread",
@@ -273,6 +335,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Then Boaz said",
+        "lemma": "amar"
+      },
       {
         "surface": "May the LORD",
         "lemma": "yehovah"
@@ -318,8 +384,16 @@
         "lemma": "bachur"
       },
       {
+        "surface": "whether",
+        "lemma": "im"
+      },
+      {
         "surface": "rich",
         "lemma": "ashir"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "poor",
@@ -332,12 +406,32 @@
         "lemma": "attah"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       },
       {
         "surface": "my daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "I will do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "whatever",
+        "lemma": "kol"
+      },
+      {
+        "surface": "you request",
+        "lemma": "amar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "my fellow townspeople",
@@ -388,6 +482,10 @@
         "lemma": "boqer"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "he wants to redeem you",
         "lemma": "gaal"
       },
@@ -398,6 +496,14 @@
       {
         "surface": "Let him redeem you",
         "lemma": "gaal"
+      },
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "he does not",
+        "lemma": "lo"
       },
       {
         "surface": "want",
@@ -462,6 +568,14 @@
         "lemma": "nakhar"
       },
       {
+        "surface": "Then Boaz said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "let it be known",
         "lemma": "yada"
       },
@@ -470,11 +584,19 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to the threshing floor",
         "lemma": "goren"
       }
     ],
     "15": [
+      {
+        "surface": "And he told her",
+        "lemma": "amar"
+      },
       {
         "surface": "Bring",
         "lemma": "yahav"
@@ -508,14 +630,26 @@
         "lemma": "shit"
       },
       {
+        "surface": "Then he went",
+        "lemma": "bo"
+      },
+      {
         "surface": "into the city",
         "lemma": "ir"
       }
     ],
     "16": [
       {
+        "surface": "When Ruth returned",
+        "lemma": "bo"
+      },
+      {
         "surface": "her mother-in-law",
         "lemma": "chamot"
+      },
+      {
+        "surface": "Naomi asked her",
+        "lemma": "amar"
       },
       {
         "surface": "How did it go",
@@ -530,11 +664,27 @@
         "lemma": "nagad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Boaz",
         "lemma": "ish"
+      },
+      {
+        "surface": "had done",
+        "lemma": "asah"
       }
     ],
     "17": [
+      {
+        "surface": "And she said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "He gave",
+        "lemma": "natan"
+      },
       {
         "surface": "six",
         "lemma": "shesh"
@@ -542,6 +692,18 @@
       {
         "surface": "measures of barley",
         "lemma": "seorah"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "go back",
+        "lemma": "bo"
       },
       {
         "surface": "your mother-in-law",
@@ -554,8 +716,16 @@
     ],
     "18": [
       {
+        "surface": "Wait",
+        "lemma": "yashav"
+      },
+      {
         "surface": "my daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "said Naomi",
+        "lemma": "amar"
       },
       {
         "surface": "you find out",
@@ -578,6 +748,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "rest",
         "lemma": "shaqat"
       },
@@ -596,8 +770,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "shakhav",
-    "gaal",
-    "yada"
+    "gaal"
   ]
 }

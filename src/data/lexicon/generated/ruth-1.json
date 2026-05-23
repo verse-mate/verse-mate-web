@@ -18,6 +18,10 @@
         "lemma": "shaphat"
       },
       {
+        "surface": "there was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a famine",
         "lemma": "raav"
       },
@@ -132,12 +136,20 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "and they entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "saday"
       },
       {
         "surface": "of Moab",
         "lemma": "moav"
+      },
+      {
+        "surface": "and settled",
+        "lemma": "hayah"
       },
       {
         "surface": "there",
@@ -212,6 +224,10 @@
         "lemma": "rut"
       },
       {
+        "surface": "And after they had lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Moab",
         "lemma": "sham"
       },
@@ -264,6 +280,10 @@
     ],
     "6": [
       {
+        "surface": "Naomi heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "in Moab",
         "lemma": "moav"
       },
@@ -280,6 +300,10 @@
         "lemma": "am"
       },
       {
+        "surface": "by providing",
+        "lemma": "natan"
+      },
+      {
         "surface": "with food",
         "lemma": "lechem"
       },
@@ -290,6 +314,10 @@
       {
         "surface": "prepared",
         "lemma": "qamay"
+      },
+      {
+        "surface": "to leave",
+        "lemma": "shuv"
       },
       {
         "surface": "the land",
@@ -310,8 +338,16 @@
         "lemma": "kallah"
       },
       {
+        "surface": "she left",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the place",
         "lemma": "maqom"
+      },
+      {
+        "surface": "she had been living",
+        "lemma": "hayah"
       },
       {
         "surface": "and set out",
@@ -320,6 +356,10 @@
       {
         "surface": "on the road",
         "lemma": "derekh"
+      },
+      {
+        "surface": "leading back",
+        "lemma": "shuv"
       },
       {
         "surface": "the land",
@@ -336,6 +376,10 @@
         "lemma": "noomi"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to her two",
         "lemma": "shenayim"
       },
@@ -346,6 +390,10 @@
       {
         "surface": "Go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "back",
+        "lemma": "shuv"
       },
       {
         "surface": "each of you",
@@ -364,8 +412,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "show",
+        "lemma": "asah"
+      },
+      {
         "surface": "loving devotion",
         "lemma": "chesed"
+      },
+      {
+        "surface": "you have shown",
+        "lemma": "asah"
       },
       {
         "surface": "your dead",
@@ -376,6 +432,10 @@
       {
         "surface": "May the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "enable",
+        "lemma": "natan"
       },
       {
         "surface": "each",
@@ -412,6 +472,14 @@
     ],
     "10": [
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "we will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to your people",
         "lemma": "am"
       }
@@ -420,6 +488,14 @@
       {
         "surface": "But Naomi",
         "lemma": "noomi"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Return home",
+        "lemma": "shuv"
       },
       {
         "surface": "my daughters",
@@ -446,11 +522,19 @@
         "lemma": "meeh"
       },
       {
+        "surface": "to become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "husbands",
         "lemma": "enosh"
       }
     ],
     "12": [
+      {
+        "surface": "Return home",
+        "lemma": "shuv"
+      },
       {
         "surface": "my daughters",
         "lemma": "bat"
@@ -464,8 +548,16 @@
         "lemma": "zaqen"
       },
       {
+        "surface": "to have",
+        "lemma": "hayah"
+      },
+      {
         "surface": "another husband",
         "lemma": "ish"
+      },
+      {
+        "surface": "I thought",
+        "lemma": "amar"
       },
       {
         "surface": "there was",
@@ -474,6 +566,10 @@
       {
         "surface": "hope",
         "lemma": "tiqvah"
+      },
+      {
+        "surface": "to have",
+        "lemma": "hayah"
       },
       {
         "surface": "a husband",
@@ -510,8 +606,16 @@
         "lemma": "bilti"
       },
       {
+        "surface": "having",
+        "lemma": "hayah"
+      },
+      {
         "surface": "husbands",
         "lemma": "ish"
+      },
+      {
+        "surface": "No",
+        "lemma": "al"
       },
       {
         "surface": "my daughters",
@@ -528,6 +632,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has gone out",
+        "lemma": "yatsa"
       }
     ],
     "14": [
@@ -566,12 +674,16 @@
     ],
     "15": [
       {
-        "surface": "Look",
-        "lemma": "hinneh"
+        "surface": "said Naomi",
+        "lemma": "amar"
       },
       {
         "surface": "your sister-in-law",
         "lemma": "yevemet"
+      },
+      {
+        "surface": "has gone back",
+        "lemma": "shuv"
       },
       {
         "surface": "her people",
@@ -580,6 +692,10 @@
       {
         "surface": "her gods",
         "lemma": "elohim"
+      },
+      {
+        "surface": "follow",
+        "lemma": "shuv"
       },
       {
         "surface": "her back home",
@@ -592,12 +708,24 @@
         "lemma": "rut"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "urge",
         "lemma": "paga"
       },
       {
         "surface": "to leave you",
         "lemma": "azav"
+      },
+      {
+        "surface": "or to turn",
+        "lemma": "shuv"
       },
       {
         "surface": "from following you",
@@ -662,6 +790,10 @@
         "lemma": "koh"
       },
       {
+        "surface": "punish",
+        "lemma": "asah"
+      },
+      {
         "surface": "and ever so",
         "lemma": "koh"
       },
@@ -687,6 +819,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "When Naomi saw",
+        "lemma": "raah"
+      },
       {
         "surface": "was determined",
         "lemma": "amats"
@@ -714,12 +850,24 @@
         "lemma": "halakh"
       },
       {
+        "surface": "they came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to",
         "lemma": "betlechem"
       },
       {
         "surface": "Bethlehem",
         "lemma": "betlechem"
+      },
+      {
+        "surface": "When they",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "entered",
+        "lemma": "bo"
       },
       {
         "surface": "vvv",
@@ -730,6 +878,10 @@
         "lemma": "betlechem"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "town",
         "lemma": "ir"
       },
@@ -738,14 +890,34 @@
         "lemma": "hum"
       },
       {
+        "surface": "and the women of the town exclaimed",
+        "lemma": "amar"
+      },
+      {
         "surface": "be Naomi",
         "lemma": "noomi"
       }
     ],
     "20": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "call",
+        "lemma": "qara"
+      },
+      {
         "surface": "Naomi",
         "lemma": "noomi"
+      },
+      {
+        "surface": "she replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Call",
+        "lemma": "qara"
       },
       {
         "surface": "Mara",
@@ -774,12 +946,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "has brought me back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "empty",
         "lemma": "reqam"
       },
       {
         "surface": "Why",
         "lemma": "mah"
+      },
+      {
+        "surface": "call",
+        "lemma": "qara"
       },
       {
         "surface": "Naomi",
@@ -808,6 +988,10 @@
         "lemma": "noomi"
       },
       {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from the land",
         "lemma": "saday"
       },
@@ -826,6 +1010,10 @@
       {
         "surface": "the Moabitess",
         "lemma": "moavi"
+      },
+      {
+        "surface": "arrived",
+        "lemma": "bo"
       },
       {
         "surface": "vvv",
@@ -850,8 +1038,8 @@
     ]
   },
   "themeLemmas": [
+    "shuv",
     "halakh",
-    "betlechem",
-    "shenayim"
+    "betlechem"
   ]
 }

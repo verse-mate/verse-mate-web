@@ -14,6 +14,10 @@
         "lemma": "adam"
       },
       {
+        "surface": "He said",
+        "lemma": "amar"
+      },
+      {
         "surface": "stand up",
         "lemma": "amad"
       },
@@ -36,12 +40,20 @@
         "lemma": "ruach"
       },
       {
+        "surface": "entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "and set me",
         "lemma": "amad"
       },
       {
         "surface": "my feet",
         "lemma": "regel"
+      },
+      {
+        "surface": "and I heard",
+        "lemma": "shama"
       },
       {
         "surface": "Him speaking",
@@ -56,6 +68,10 @@
       {
         "surface": "of man",
         "lemma": "adam"
+      },
+      {
+        "surface": "He said",
+        "lemma": "amar"
       },
       {
         "surface": "am sending",
@@ -82,6 +98,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "and their fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "have rebelled",
         "lemma": "pasah"
       }
@@ -104,6 +124,10 @@
         "lemma": "shalach"
       },
       {
+        "surface": "and you are to say",
+        "lemma": "amar"
+      },
+      {
         "surface": "This is what",
         "lemma": "koh"
       },
@@ -114,9 +138,25 @@
       {
         "surface": "GOD",
         "lemma": "yehovih"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       }
     ],
     "5": [
+      {
+        "surface": "And whether",
+        "lemma": "im"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
+      },
       {
         "surface": "refuse to listen",
         "lemma": "chadal"
@@ -138,6 +178,10 @@
         "lemma": "navi"
       },
       {
+        "surface": "has been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "among them",
         "lemma": "tavekh"
       }
@@ -152,12 +196,20 @@
         "lemma": "adam"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       },
       {
         "surface": "or their words",
         "lemma": "davar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be afraid",
@@ -172,8 +224,16 @@
         "lemma": "sillon"
       },
       {
+        "surface": "and you dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "scorpions",
         "lemma": "aqrav"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be afraid",
@@ -210,6 +270,18 @@
         "lemma": "davar"
       },
       {
+        "surface": "whether",
+        "lemma": "im"
+      },
+      {
+        "surface": "they listen",
+        "lemma": "shama"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "refuse",
         "lemma": "chadal"
       },
@@ -228,8 +300,20 @@
         "lemma": "adam"
       },
       {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "tell you",
         "lemma": "davar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "rebellious",
@@ -254,12 +338,16 @@
       {
         "surface": "and eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
       }
     ],
     "9": [
       {
-        "surface": "and saw",
-        "lemma": "hinneh"
+        "surface": "Then I looked",
+        "lemma": "raah"
       },
       {
         "surface": "a hand",
@@ -268,10 +356,6 @@
       {
         "surface": "reaching out",
         "lemma": "shalach"
-      },
-      {
-        "surface": "and",
-        "lemma": "hinneh"
       },
       {
         "surface": "was a scroll",
@@ -315,7 +399,7 @@
   },
   "themeLemmas": [
     "meri",
-    "yare",
-    "shalach"
+    "shama",
+    "im"
   ]
 }

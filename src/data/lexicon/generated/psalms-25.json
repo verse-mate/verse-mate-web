@@ -32,8 +32,16 @@
         "lemma": "batach"
       },
       {
+        "surface": "Do not let me",
+        "lemma": "al"
+      },
+      {
         "surface": "be put to shame",
         "lemma": "bush"
+      },
+      {
+        "surface": "do not let",
+        "lemma": "al"
       },
       {
         "surface": "my enemies",
@@ -45,6 +53,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "none",
+        "lemma": "lo"
+      },
       {
         "surface": "who wait for You",
         "lemma": "qavah"
@@ -110,6 +122,10 @@
         "lemma": "yesah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
       },
@@ -144,6 +160,10 @@
       {
         "surface": "Remember",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "not",
+        "lemma": "al"
       },
       {
         "surface": "the sins",
@@ -227,6 +247,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the LORD’s",
         "lemma": "yehovah"
@@ -366,6 +390,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will free",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "my feet",
         "lemma": "regel"
       },
@@ -406,11 +434,19 @@
         "lemma": "rachav"
       },
       {
+        "surface": "free me",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from my distress",
         "lemma": "metsuqah"
       }
     ],
     "18": [
+      {
+        "surface": "Consider",
+        "lemma": "raah"
+      },
       {
         "surface": "my affliction",
         "lemma": "oni"
@@ -424,11 +460,19 @@
         "lemma": "nasa"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my sins",
         "lemma": "chattaah"
       }
     ],
     "19": [
+      {
+        "surface": "Consider",
+        "lemma": "raah"
+      },
       {
         "surface": "my enemies",
         "lemma": "oyev"
@@ -462,6 +506,10 @@
       {
         "surface": "and deliver me",
         "lemma": "natsal"
+      },
+      {
+        "surface": "let me not",
+        "lemma": "al"
       },
       {
         "surface": "be put to shame",
@@ -504,14 +552,18 @@
         "lemma": "elohim"
       },
       {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its distress",
         "lemma": "batstsarah"
       }
     ]
   },
   "themeLemmas": [
+    "kol",
     "bush",
-    "zakhar",
-    "qavah"
+    "al"
   ]
 }

@@ -26,6 +26,10 @@
         "lemma": "shem"
       },
       {
+        "surface": "You have worked",
+        "lemma": "asah"
+      },
+      {
         "surface": "wonders",
         "lemma": "pele"
       },
@@ -120,6 +124,10 @@
     ],
     "4": [
       {
+        "surface": "You have been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a refuge",
         "lemma": "maoz"
       },
@@ -198,6 +206,10 @@
         "lemma": "tsel"
       },
       {
+        "surface": "of a cloud",
+        "lemma": "av"
+      },
+      {
         "surface": "cools the heat",
         "lemma": "chorev"
       },
@@ -228,12 +240,20 @@
         "lemma": "tsava"
       },
       {
+        "surface": "will prepare",
+        "lemma": "asah"
+      },
+      {
         "surface": "a lavish",
         "lemma": "shemen"
       },
       {
         "surface": "banquet",
         "lemma": "mishteh"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "the peoples",
@@ -278,6 +298,10 @@
         "lemma": "lot"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "peoples",
         "lemma": "am"
       },
@@ -288,6 +312,10 @@
       {
         "surface": "that covers",
         "lemma": "nasakh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "nations",
@@ -324,6 +352,10 @@
         "lemma": "dimah"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "face",
         "lemma": "paneh"
       },
@@ -338,6 +370,10 @@
       {
         "surface": "of His people",
         "lemma": "am"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "earth",
@@ -358,8 +394,8 @@
         "lemma": "yom"
       },
       {
-        "surface": "Surely",
-        "lemma": "hinneh"
+        "surface": "it will be said",
+        "lemma": "amar"
       },
       {
         "surface": "is our God",
@@ -506,8 +542,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "har",
-    "chorev",
-    "arits"
+    "chorev"
   ]
 }

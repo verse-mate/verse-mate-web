@@ -6,16 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to myself",
         "lemma": "lev"
       },
       {
         "surface": "Come",
         "lemma": "halakh"
-      },
-      {
-        "surface": "now",
-        "lemma": "na"
       },
       {
         "surface": "I will test",
@@ -26,12 +26,12 @@
         "lemma": "simchah"
       },
       {
-        "surface": "what is good",
-        "lemma": "tov"
+        "surface": "enjoy",
+        "lemma": "raah"
       },
       {
-        "surface": "proved",
-        "lemma": "hinneh"
+        "surface": "what is good",
+        "lemma": "tov"
       },
       {
         "surface": "to be futile",
@@ -39,6 +39,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "I said",
+        "lemma": "amar"
+      },
       {
         "surface": "of laughter",
         "lemma": "sechoq"
@@ -54,6 +58,10 @@
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "accomplish",
+        "lemma": "asah"
       }
     ],
     "3": [
@@ -90,6 +98,10 @@
         "lemma": "chokhmah"
       },
       {
+        "surface": "I could see",
+        "lemma": "raah"
+      },
+      {
         "surface": "what",
         "lemma": "ay"
       },
@@ -100,6 +112,10 @@
       {
         "surface": "for men",
         "lemma": "ben"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
       },
       {
         "surface": "under",
@@ -150,6 +166,10 @@
     ],
     "5": [
       {
+        "surface": "I made",
+        "lemma": "asah"
+      },
+      {
         "surface": "gardens",
         "lemma": "gannah"
       },
@@ -162,6 +182,10 @@
         "lemma": "nata"
       },
       {
+        "surface": "all kinds",
+        "lemma": "kol"
+      },
+      {
         "surface": "of fruit",
         "lemma": "peri"
       },
@@ -171,6 +195,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "I built",
+        "lemma": "asah"
+      },
       {
         "surface": "reservoirs",
         "lemma": "berekhah"
@@ -214,6 +242,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "owned",
+        "lemma": "hayah"
+      },
+      {
         "surface": "more",
         "lemma": "ravah"
       },
@@ -224,6 +256,10 @@
       {
         "surface": "and flocks",
         "lemma": "tson"
+      },
+      {
+        "surface": "than anyone",
+        "lemma": "kol"
       },
       {
         "surface": "in Jerusalem",
@@ -258,6 +294,10 @@
       {
         "surface": "and provinces",
         "lemma": "medinah"
+      },
+      {
+        "surface": "I gathered",
+        "lemma": "asah"
       },
       {
         "surface": "male and",
@@ -298,8 +338,16 @@
         "lemma": "yasaph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "who had preceded me",
+        "lemma": "hayah"
       },
       {
         "surface": "my wisdom",
@@ -312,12 +360,20 @@
     ],
     "10": [
       {
+        "surface": "Anything",
+        "lemma": "kol"
+      },
+      {
         "surface": "my eyes",
         "lemma": "ayin"
       },
       {
         "surface": "desired",
         "lemma": "shaal"
+      },
+      {
+        "surface": "I did not",
+        "lemma": "lo"
       },
       {
         "surface": "deny myself",
@@ -332,6 +388,10 @@
         "lemma": "lev"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "pleasure",
         "lemma": "simchah"
       },
@@ -344,12 +404,24 @@
         "lemma": "sameach"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my work",
         "lemma": "amal"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the reward",
         "lemma": "cheleq"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "my labor",
@@ -362,12 +434,20 @@
         "lemma": "panah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the works",
         "lemma": "maaseh"
       },
       {
         "surface": "that my hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "had accomplished",
+        "lemma": "asah"
       },
       {
         "surface": "and what",
@@ -378,8 +458,12 @@
         "lemma": "amal"
       },
       {
-        "surface": "I found",
-        "lemma": "hinneh"
+        "surface": "to achieve",
+        "lemma": "asah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "to be futile",
@@ -416,6 +500,10 @@
         "lemma": "panah"
       },
       {
+        "surface": "to consider",
+        "lemma": "raah"
+      },
+      {
         "surface": "wisdom",
         "lemma": "chokhmah"
       },
@@ -440,11 +528,23 @@
         "lemma": "adam"
       },
       {
+        "surface": "successor",
+        "lemma": "bo"
+      },
+      {
         "surface": "than what has already",
         "lemma": "kevar"
+      },
+      {
+        "surface": "been accomplished",
+        "lemma": "asah"
       }
     ],
     "13": [
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
       {
         "surface": "that",
         "lemma": "yesh"
@@ -514,9 +614,17 @@
       {
         "surface": "overcomes",
         "lemma": "qarah"
+      },
+      {
+        "surface": "both",
+        "lemma": "kol"
       }
     ],
     "15": [
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
       {
         "surface": "to myself",
         "lemma": "lev"
@@ -584,12 +692,20 @@
         "lemma": "kevar"
       },
       {
+        "surface": "both",
+        "lemma": "kol"
+      },
+      {
         "surface": "will be forgotten",
         "lemma": "shakhach"
       },
       {
         "surface": "in the days",
         "lemma": "yom"
+      },
+      {
+        "surface": "to come",
+        "lemma": "bo"
       },
       {
         "surface": "Alas",
@@ -622,6 +738,10 @@
         "lemma": "maaseh"
       },
       {
+        "surface": "that is done",
+        "lemma": "asah"
+      },
+      {
         "surface": "under",
         "lemma": "tachat"
       },
@@ -632,6 +752,10 @@
       {
         "surface": "was grievous",
         "lemma": "ra"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "is futile",
@@ -650,6 +774,10 @@
       {
         "surface": "hated",
         "lemma": "sane"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "I had toiled",
@@ -672,6 +800,10 @@
         "lemma": "adam"
       },
       {
+        "surface": "who comes",
+        "lemma": "hayah"
+      },
+      {
         "surface": "after me",
         "lemma": "achar"
       }
@@ -686,6 +818,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "whether that man will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "wise",
         "lemma": "chakham"
       },
@@ -696,6 +832,10 @@
       {
         "surface": "Yet he will take",
         "lemma": "shalat"
+      },
+      {
+        "surface": "over all",
+        "lemma": "kol"
       },
       {
         "surface": "the labor",
@@ -734,6 +874,10 @@
       {
         "surface": "to despair",
         "lemma": "yaash"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the labor",
@@ -778,12 +922,20 @@
         "lemma": "kishron"
       },
       {
+        "surface": "and he must give",
+        "lemma": "natan"
+      },
+      {
         "surface": "his portion",
         "lemma": "cheleq"
       },
       {
         "surface": "to a man",
         "lemma": "adam"
+      },
+      {
+        "surface": "who has not",
+        "lemma": "lo"
       },
       {
         "surface": "worked",
@@ -816,6 +968,10 @@
         "lemma": "hava"
       },
       {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the toil",
         "lemma": "amal"
       },
@@ -837,6 +993,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "his days",
         "lemma": "yom"
@@ -860,6 +1020,10 @@
       {
         "surface": "his mind",
         "lemma": "lev"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "rest",
@@ -892,8 +1056,16 @@
         "lemma": "shatah"
       },
       {
+        "surface": "and enjoy",
+        "lemma": "raah"
+      },
+      {
         "surface": "his work",
         "lemma": "amal"
+      },
+      {
+        "surface": "seen",
+        "lemma": "raah"
       },
       {
         "surface": "from the hand",
@@ -940,6 +1112,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "He gives",
+        "lemma": "natan"
+      },
+      {
         "surface": "wisdom",
         "lemma": "chokhmah"
       },
@@ -956,6 +1132,10 @@
         "lemma": "chata"
       },
       {
+        "surface": "He assigns",
+        "lemma": "natan"
+      },
+      {
         "surface": "the task",
         "lemma": "inyan"
       },
@@ -966,6 +1146,10 @@
       {
         "surface": "and accumulating that which",
         "lemma": "kanas"
+      },
+      {
+        "surface": "he will hand over",
+        "lemma": "natan"
       },
       {
         "surface": "to one who pleases",
@@ -990,8 +1174,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "amal",
-    "hevel",
-    "tachat"
+    "asah"
   ]
 }

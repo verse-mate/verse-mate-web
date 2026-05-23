@@ -22,6 +22,10 @@
         "lemma": "yasaph"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
@@ -78,6 +82,10 @@
       {
         "surface": "was Sisera",
         "lemma": "sisra"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "in Harosheth-hagoyim",
@@ -162,9 +170,17 @@
       {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
       }
     ],
     "5": [
+      {
+        "surface": "would sit",
+        "lemma": "yashav"
+      },
       {
         "surface": "under",
         "lemma": "tachat"
@@ -238,6 +254,14 @@
       {
         "surface": "in Naphtali",
         "lemma": "naphtali"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Surely",
+        "lemma": "lo"
       },
       {
         "surface": "the LORD",
@@ -342,6 +366,10 @@
         "lemma": "qishon"
       },
       {
+        "surface": "and I will deliver him",
+        "lemma": "natan"
+      },
+      {
         "surface": "into your hand",
         "lemma": "yad"
       }
@@ -352,6 +380,14 @@
         "lemma": "baraq"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "you will go",
         "lemma": "halakh"
       },
@@ -360,8 +396,20 @@
         "lemma": "halakh"
       },
       {
+        "surface": "but if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "lo"
       },
       {
         "surface": "go",
@@ -374,6 +422,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "Deborah replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "but",
         "lemma": "ephes"
       },
@@ -384,6 +436,14 @@
       {
         "surface": "are taking",
         "lemma": "halakh"
+      },
+      {
+        "surface": "will bring you",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "honor",
@@ -574,6 +634,10 @@
         "lemma": "zaaq"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "nine",
         "lemma": "tesah"
       },
@@ -588,6 +652,10 @@
       {
         "surface": "chariots",
         "lemma": "rekhev"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the men",
@@ -612,6 +680,10 @@
         "lemma": "deborah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Barak",
         "lemma": "baraq"
       },
@@ -628,6 +700,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "has delivered",
+        "lemma": "natan"
+      },
+      {
         "surface": "Sisera",
         "lemma": "sisra"
       },
@@ -636,8 +712,16 @@
         "lemma": "yad"
       },
       {
+        "surface": "Has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "gone",
+        "lemma": "yatsa"
       },
       {
         "surface": "before you",
@@ -706,8 +790,16 @@
         "lemma": "sisra"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his charioteers",
         "lemma": "rekhev"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "his army",
@@ -756,6 +848,10 @@
         "lemma": "charoshet"
       },
       {
+        "surface": "and the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "army",
         "lemma": "machaneh"
       },
@@ -770,6 +866,10 @@
       {
         "surface": "by the sword",
         "lemma": "cherev"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "a single",
@@ -856,8 +956,16 @@
         "lemma": "yael"
       },
       {
+        "surface": "went out to greet",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Sisera",
         "lemma": "sisra"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "Come in",
@@ -870,6 +978,10 @@
       {
         "surface": "Come in",
         "lemma": "sur"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be afraid",
@@ -894,8 +1006,8 @@
     ],
     "19": [
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "Sisera said",
+        "lemma": "amar"
       },
       {
         "surface": "give me a little",
@@ -948,8 +1060,24 @@
         "lemma": "ohel"
       },
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "anyone",
         "lemma": "ish"
+      },
+      {
+        "surface": "comes",
+        "lemma": "bo"
       },
       {
         "surface": "and asks you",
@@ -966,6 +1094,10 @@
       {
         "surface": "here",
         "lemma": "poh"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "No",
@@ -1014,6 +1146,10 @@
         "lemma": "maqqevet"
       },
       {
+        "surface": "and went",
+        "lemma": "bo"
+      },
+      {
         "surface": "silently",
         "lemma": "lat"
       },
@@ -1060,8 +1196,24 @@
         "lemma": "yael"
       },
       {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to greet him",
+        "lemma": "qara"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Come",
         "lemma": "halakh"
+      },
+      {
+        "surface": "and I will show you",
+        "lemma": "raah"
       },
       {
         "surface": "the man",
@@ -1072,8 +1224,8 @@
         "lemma": "baqash"
       },
       {
-        "surface": "and there",
-        "lemma": "hinneh"
+        "surface": "So he went in",
+        "lemma": "bo"
       },
       {
         "surface": "lay",

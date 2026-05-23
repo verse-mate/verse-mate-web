@@ -96,6 +96,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "bring me",
+        "lemma": "bo"
+      },
+      {
         "surface": "to his chambers",
         "lemma": "cheder"
       },
@@ -164,6 +168,14 @@
     ],
     "6": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "stare",
+        "lemma": "raah"
+      },
+      {
         "surface": "am dark",
         "lemma": "shecharchoret"
       },
@@ -202,6 +214,10 @@
       {
         "surface": "but my own vineyard",
         "lemma": "kerem"
+      },
+      {
+        "surface": "I have neglected",
+        "lemma": "lo"
       }
     ],
     "7": [
@@ -242,6 +258,10 @@
         "lemma": "mah"
       },
       {
+        "surface": "should I be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a veiled woman",
         "lemma": "atah"
       },
@@ -256,6 +276,14 @@
     ],
     "8": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "you do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -266,6 +294,10 @@
       {
         "surface": "of women",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "follow",
+        "lemma": "yatsa"
       },
       {
         "surface": "the tracks",
@@ -338,6 +370,10 @@
     ],
     "11": [
       {
+        "surface": "We will make",
+        "lemma": "asah"
+      },
+      {
         "surface": "ornaments",
         "lemma": "tor"
       },
@@ -366,6 +402,10 @@
       {
         "surface": "my perfume",
         "lemma": "nered"
+      },
+      {
+        "surface": "spread",
+        "lemma": "natan"
       },
       {
         "surface": "its fragrance",
@@ -426,20 +466,12 @@
     ],
     "15": [
       {
-        "surface": "How",
-        "lemma": "hen"
-      },
-      {
         "surface": "beautiful you are",
         "lemma": "yapheh"
       },
       {
         "surface": "my darling",
         "lemma": "rayah"
-      },
-      {
-        "surface": "Oh, how very",
-        "lemma": "hen"
       },
       {
         "surface": "beautiful",
@@ -455,10 +487,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "How",
-        "lemma": "hen"
-      },
       {
         "surface": "handsome you are",
         "lemma": "yapheh"

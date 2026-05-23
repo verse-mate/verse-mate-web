@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "a king",
         "lemma": "melekh"
       },
@@ -38,6 +34,10 @@
       {
         "surface": "Each",
         "lemma": "ish"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "like a shelter",
@@ -94,12 +94,24 @@
         "lemma": "ayin"
       },
       {
+        "surface": "of those who see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "will no longer",
+        "lemma": "lo"
+      },
+      {
         "surface": "be closed",
         "lemma": "shaah"
       },
       {
         "surface": "and the ears",
         "lemma": "ozen"
+      },
+      {
+        "surface": "of those who hear",
+        "lemma": "shama"
       },
       {
         "surface": "will listen",
@@ -146,6 +158,10 @@
     ],
     "5": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer {will",
         "lemma": "od"
       },
@@ -154,12 +170,24 @@
         "lemma": "naval"
       },
       {
+        "surface": "be called",
+        "lemma": "qara"
+      },
+      {
         "surface": "noble",
         "lemma": "nadiv"
       },
       {
+        "surface": "nor",
+        "lemma": "lo"
+      },
+      {
         "surface": "a scoundrel",
         "lemma": "kilay"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "amar"
       },
       {
         "surface": "be respected",
@@ -184,8 +212,16 @@
         "lemma": "lev"
       },
       {
+        "surface": "plots",
+        "lemma": "asah"
+      },
+      {
         "surface": "iniquity",
         "lemma": "aven"
+      },
+      {
+        "surface": "He practices",
+        "lemma": "asah"
       },
       {
         "surface": "ungodliness",
@@ -306,6 +342,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "listen to me",
+        "lemma": "shama"
+      },
+      {
         "surface": "Give ear",
         "lemma": "azan"
       },
@@ -354,6 +394,10 @@
       {
         "surface": "will not",
         "lemma": "beli"
+      },
+      {
+        "surface": "arrive",
+        "lemma": "bo"
       }
     ],
     "11": [
@@ -438,6 +482,10 @@
         "lemma": "shamir"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
       },
@@ -484,6 +532,10 @@
         "lemma": "bachan"
       },
       {
+        "surface": "will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "caves",
         "lemma": "mearah"
       },
@@ -522,6 +574,10 @@
         "lemma": "midbar"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "an orchard",
         "lemma": "karmel"
       },
@@ -556,6 +612,10 @@
         "lemma": "tsedaqah"
       },
       {
+        "surface": "will dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the fertile field",
         "lemma": "karmel"
       }
@@ -568,6 +628,10 @@
       {
         "surface": "of righteousness",
         "lemma": "tsedaqah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "peace",
@@ -594,6 +658,10 @@
       {
         "surface": "Then my people",
         "lemma": "am"
+      },
+      {
+        "surface": "will dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "in a peaceful",
@@ -652,6 +720,10 @@
         "lemma": "zara"
       },
       {
+        "surface": "abundant",
+        "lemma": "kol"
+      },
+      {
         "surface": "waters",
         "lemma": "mayim"
       },
@@ -671,7 +743,7 @@
   },
   "themeLemmas": [
     "nadiv",
-    "tsedaqah",
-    "shaanan"
+    "hayah",
+    "tsedaqah"
   ]
 }

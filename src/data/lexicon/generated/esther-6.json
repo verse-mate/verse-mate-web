@@ -22,6 +22,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "so he ordered",
+        "lemma": "amar"
+      },
+      {
         "surface": "the Book",
         "lemma": "sepher"
       },
@@ -32,6 +36,18 @@
       {
         "surface": "the Chronicles",
         "lemma": "davar"
+      },
+      {
+        "surface": "to be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "brought in",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and read",
+        "lemma": "qara"
       },
       {
         "surface": "to",
@@ -110,6 +126,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "inquired",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
       },
@@ -122,8 +142,24 @@
         "lemma": "gedulah"
       },
       {
+        "surface": "has been bestowed",
+        "lemma": "asah"
+      },
+      {
         "surface": "on Mordecai",
         "lemma": "mordekhay"
+      },
+      {
+        "surface": "Nothing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "has been done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "the king’s",
@@ -148,8 +184,16 @@
         "lemma": "melekh"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Now Haman",
         "lemma": "haman"
+      },
+      {
+        "surface": "had just entered",
+        "lemma": "bo"
       },
       {
         "surface": "the outer",
@@ -162,6 +206,10 @@
       {
         "surface": "of the palace",
         "lemma": "bet"
+      },
+      {
+        "surface": "to ask",
+        "lemma": "amar"
       },
       {
         "surface": "the king",
@@ -194,12 +242,12 @@
         "lemma": "naar"
       },
       {
-        "surface": "Haman",
-        "lemma": "haman"
+        "surface": "answered him",
+        "lemma": "amar"
       },
       {
-        "surface": "is there",
-        "lemma": "hinneh"
+        "surface": "Haman",
+        "lemma": "haman"
       },
       {
         "surface": "standing",
@@ -208,6 +256,14 @@
       {
         "surface": "in the court",
         "lemma": "chatser"
+      },
+      {
+        "surface": "Bring him in",
+        "lemma": "bo"
+      },
+      {
+        "surface": "ordered",
+        "lemma": "amar"
       },
       {
         "surface": "the king",
@@ -220,12 +276,24 @@
         "lemma": "haman"
       },
       {
+        "surface": "entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "and the king",
         "lemma": "melekh"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "should be done",
+        "lemma": "asah"
       },
       {
         "surface": "for the man",
@@ -248,6 +316,10 @@
         "lemma": "haman"
       },
       {
+        "surface": "thought",
+        "lemma": "amar"
+      },
+      {
         "surface": "to himself",
         "lemma": "lev"
       },
@@ -264,6 +336,10 @@
         "lemma": "chaphets"
       },
       {
+        "surface": "to honor",
+        "lemma": "asah"
+      },
+      {
         "surface": "more",
         "lemma": "yoter"
       }
@@ -272,6 +348,10 @@
       {
         "surface": "And Haman",
         "lemma": "haman"
+      },
+      {
+        "surface": "told",
+        "lemma": "amar"
       },
       {
         "surface": "the king",
@@ -295,6 +375,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "have them bring",
+        "lemma": "bo"
+      },
       {
         "surface": "a royal",
         "lemma": "malkhut"
@@ -332,11 +416,19 @@
         "lemma": "keter"
       },
       {
+        "surface": "placed",
+        "lemma": "natan"
+      },
+      {
         "surface": "on its head",
         "lemma": "rosh"
       }
     ],
     "9": [
+      {
+        "surface": "Let",
+        "lemma": "natan"
+      },
       {
         "surface": "the robe",
         "lemma": "levush"
@@ -398,12 +490,20 @@
         "lemma": "rechov"
       },
       {
+        "surface": "proclaiming",
+        "lemma": "qara"
+      },
+      {
         "surface": "before him",
         "lemma": "paneh"
       },
       {
         "surface": "This is what",
         "lemma": "kakhah"
+      },
+      {
+        "surface": "is done",
+        "lemma": "asah"
       },
       {
         "surface": "for the man",
@@ -428,12 +528,20 @@
         "lemma": "mahar"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
       {
         "surface": "to Haman",
         "lemma": "haman"
+      },
+      {
+        "surface": "and do",
+        "lemma": "asah"
       },
       {
         "surface": "you proposed",
@@ -460,12 +568,20 @@
         "lemma": "yehudi"
       },
       {
+        "surface": "who is sitting",
+        "lemma": "yashav"
+      },
+      {
         "surface": "at the king’s",
         "lemma": "melekh"
       },
       {
         "surface": "gate",
         "lemma": "shaar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "neglect",
@@ -518,12 +634,20 @@
         "lemma": "rechov"
       },
       {
+        "surface": "crying out",
+        "lemma": "qara"
+      },
+      {
         "surface": "before him",
         "lemma": "paneh"
       },
       {
         "surface": "This is what",
         "lemma": "kakhah"
+      },
+      {
+        "surface": "is done",
+        "lemma": "asah"
       },
       {
         "surface": "for the man",
@@ -546,6 +670,10 @@
       {
         "surface": "Then Mordecai",
         "lemma": "mordekhay"
+      },
+      {
+        "surface": "returned",
+        "lemma": "shuv"
       },
       {
         "surface": "the king’s",
@@ -598,8 +726,16 @@
         "lemma": "zeresh"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his friends",
         "lemma": "ahav"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "had happened",
@@ -616,6 +752,14 @@
       {
         "surface": "Zeresh",
         "lemma": "zeresh"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Since",
+        "lemma": "im"
       },
       {
         "surface": "Mordecai",
@@ -636,6 +780,10 @@
       {
         "surface": "is Jewish",
         "lemma": "yehudi"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "you will not prevail",
@@ -686,12 +834,16 @@
       {
         "surface": "Esther",
         "lemma": "ester"
+      },
+      {
+        "surface": "had prepared",
+        "lemma": "asah"
       }
     ]
   },
   "themeLemmas": [
+    "amar",
     "haman",
-    "mordekhay",
-    "yeqar"
+    "asah"
   ]
 }

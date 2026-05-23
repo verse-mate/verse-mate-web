@@ -82,6 +82,10 @@
     ],
     "3": [
       {
+        "surface": "were the sons",
+        "lemma": "av"
+      },
+      {
         "surface": "of Etam",
         "lemma": "etam"
       },
@@ -116,12 +120,20 @@
         "lemma": "penuel"
       },
       {
+        "surface": "was the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of Gedor",
         "lemma": "gedor"
       },
       {
         "surface": "and Ezer",
         "lemma": "ezer"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "av"
       },
       {
         "surface": "Hushah",
@@ -144,6 +156,10 @@
         "lemma": "ephratah"
       },
       {
+        "surface": "and the father",
+        "lemma": "av"
+      },
+      {
         "surface": "vvv",
         "lemma": "betlechem"
       },
@@ -158,8 +174,16 @@
         "lemma": "ashchur"
       },
       {
+        "surface": "the father of",
+        "lemma": "av"
+      },
+      {
         "surface": "Tekoa",
         "lemma": "teqoa"
+      },
+      {
+        "surface": "had",
+        "lemma": "hayah"
       },
       {
         "surface": "two",
@@ -274,6 +298,10 @@
         "lemma": "yabets"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "more honorable",
         "lemma": "kavad"
       },
@@ -286,8 +314,16 @@
         "lemma": "em"
       },
       {
+        "surface": "had named him",
+        "lemma": "qara"
+      },
+      {
         "surface": "Jabez",
         "lemma": "yabets"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "I bore him",
@@ -304,12 +340,20 @@
         "lemma": "yabets"
       },
       {
+        "surface": "called out",
+        "lemma": "qara"
+      },
+      {
         "surface": "to the God",
         "lemma": "elohim"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "If only",
+        "lemma": "im"
       },
       {
         "surface": "You would bless me",
@@ -328,6 +372,14 @@
         "lemma": "yad"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "and keep me",
+        "lemma": "asah"
+      },
+      {
         "surface": "from harm",
         "lemma": "ra"
       },
@@ -342,6 +394,10 @@
       {
         "surface": "And God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "granted",
+        "lemma": "bo"
       },
       {
         "surface": "the request",
@@ -368,6 +424,10 @@
       {
         "surface": "Mehir",
         "lemma": "mechir"
+      },
+      {
+        "surface": "was the father",
+        "lemma": "av"
       },
       {
         "surface": "of Eshton",
@@ -398,6 +458,10 @@
       {
         "surface": "and of Tehinnah",
         "lemma": "techinnah"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
       },
       {
         "surface": "vvv",
@@ -472,12 +536,20 @@
         "lemma": "yoav"
       },
       {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of those living in",
         "lemma": "gay"
       },
       {
         "surface": "Ge-harashim",
         "lemma": "charashim"
+      },
+      {
+        "surface": "its people were",
+        "lemma": "hayah"
       },
       {
         "surface": "craftsmen",
@@ -594,6 +666,10 @@
         "lemma": "yishbach"
       },
       {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of Eshtemoa",
         "lemma": "eshtemoa"
       }
@@ -640,6 +716,10 @@
         "lemma": "yered"
       },
       {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of Gedor",
         "lemma": "gedor"
       },
@@ -648,12 +728,20 @@
         "lemma": "chever"
       },
       {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of Soco",
         "lemma": "svokhoh"
       },
       {
         "surface": "and Jekuthiel",
         "lemma": "yequtiel"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
       },
       {
         "surface": "of Zanoah",
@@ -680,6 +768,10 @@
       {
         "surface": "of Naham",
         "lemma": "nacham"
+      },
+      {
+        "surface": "were the fathers",
+        "lemma": "av"
       },
       {
         "surface": "of Keilah",
@@ -770,12 +862,20 @@
         "lemma": "er"
       },
       {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of Lecah",
         "lemma": "lekhah"
       },
       {
         "surface": "Laadah",
         "lemma": "ladah"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
       },
       {
         "surface": "of Mareshah",
@@ -850,12 +950,20 @@
         "lemma": "yatsar"
       },
       {
+        "surface": "who lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "at Netaim",
         "lemma": "netaim"
       },
       {
         "surface": "and Gederah",
         "lemma": "gederah"
+      },
+      {
+        "surface": "They lived",
+        "lemma": "yashav"
       },
       {
         "surface": "there",
@@ -978,8 +1086,16 @@
         "lemma": "ben"
       },
       {
+        "surface": "so their whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "clan",
         "lemma": "mishpachah"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
       },
       {
         "surface": "become as numerous",
@@ -995,6 +1111,10 @@
       }
     ],
     "28": [
+      {
+        "surface": "They lived",
+        "lemma": "yashav"
+      },
       {
         "surface": "vvv",
         "lemma": "beersheva"
@@ -1121,6 +1241,10 @@
       }
     ],
     "33": [
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
       {
         "surface": "their surrounding",
         "lemma": "saviv"
@@ -1276,6 +1400,10 @@
     ],
     "38": [
       {
+        "surface": "listed",
+        "lemma": "bo"
+      },
+      {
         "surface": "by name",
         "lemma": "shem"
       },
@@ -1286,6 +1414,10 @@
       {
         "surface": "of their clans",
         "lemma": "mishpachah"
+      },
+      {
+        "surface": "Their families",
+        "lemma": "av"
       },
       {
         "surface": "increased",
@@ -1368,6 +1500,10 @@
         "lemma": "cham"
       },
       {
+        "surface": "had lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "there",
         "lemma": "sham"
       },
@@ -1384,6 +1520,10 @@
       {
         "surface": "by name",
         "lemma": "shem"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "in the days",
@@ -1428,6 +1568,10 @@
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "Then they settled",
+        "lemma": "yashav"
       },
       {
         "surface": "in their place",
@@ -1518,6 +1662,10 @@
         "lemma": "peletah"
       },
       {
+        "surface": "And they have lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "there",
         "lemma": "sham"
       },
@@ -1529,7 +1677,7 @@
   },
   "themeLemmas": [
     "yalad",
-    "mishpachah",
-    "yehudah"
+    "yashav",
+    "mishpachah"
   ]
 }

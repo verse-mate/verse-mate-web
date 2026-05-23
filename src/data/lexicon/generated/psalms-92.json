@@ -152,12 +152,20 @@
         "lemma": "ish"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
       {
         "surface": "and a fool",
         "lemma": "kesil"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "understand",
@@ -176,6 +184,10 @@
       {
         "surface": "grass",
         "lemma": "esev"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "evildoers",
@@ -206,10 +218,6 @@
     ],
     "9": [
       {
-        "surface": "surely",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "Your enemies",
         "lemma": "oyev"
       },
@@ -218,16 +226,16 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "surely",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "Your enemies",
         "lemma": "oyev"
       },
       {
         "surface": "will perish",
         "lemma": "avad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "evildoers",
@@ -280,6 +288,10 @@
       {
         "surface": "my ears",
         "lemma": "ozen"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
       },
       {
         "surface": "the wailing",
@@ -362,6 +374,10 @@
       {
         "surface": "and green",
         "lemma": "raan"
+      },
+      {
+        "surface": "they will remain",
+        "lemma": "hayah"
       }
     ],
     "15": [
@@ -382,6 +398,10 @@
         "lemma": "tsur"
       },
       {
+        "surface": "there is no",
+        "lemma": "lo"
+      },
+      {
         "surface": "unrighteousness",
         "lemma": "evel"
       }
@@ -389,7 +409,7 @@
   },
   "themeLemmas": [
     "parach",
-    "raan",
-    "paal"
+    "lo",
+    "raan"
   ]
 }

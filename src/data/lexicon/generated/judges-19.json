@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
         "surface": "days",
         "lemma": "yom"
       },
@@ -80,6 +84,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "her father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
       },
@@ -94,6 +102,10 @@
       {
         "surface": "in Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "After she had been",
+        "lemma": "hayah"
       },
       {
         "surface": "there",
@@ -134,6 +146,10 @@
         "lemma": "lev"
       },
       {
+        "surface": "and bring her back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "taking his servant",
         "lemma": "naar"
       },
@@ -146,6 +162,14 @@
         "lemma": "chamor"
       },
       {
+        "surface": "So the girl brought him",
+        "lemma": "bo"
+      },
+      {
+        "surface": "into her father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
       },
@@ -154,8 +178,20 @@
         "lemma": "naarah"
       },
       {
+        "surface": "father",
+        "lemma": "av"
+      },
+      {
+        "surface": "saw him",
+        "lemma": "raah"
+      },
+      {
         "surface": "he gladly",
         "lemma": "samach"
+      },
+      {
+        "surface": "welcomed him",
+        "lemma": "qara"
       }
     ],
     "4": [
@@ -168,8 +204,16 @@
         "lemma": "naarah"
       },
       {
+        "surface": "father",
+        "lemma": "av"
+      },
+      {
         "surface": "persuaded him to stay",
         "lemma": "chazaq"
+      },
+      {
+        "surface": "so he remained",
+        "lemma": "yashav"
       },
       {
         "surface": "three",
@@ -226,6 +270,14 @@
         "lemma": "naarah"
       },
       {
+        "surface": "father",
+        "lemma": "av"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "his son-in-law",
         "lemma": "chatan"
       },
@@ -256,6 +308,10 @@
     ],
     "6": [
       {
+        "surface": "So they sat down",
+        "lemma": "yashav"
+      },
+      {
         "surface": "and the two",
         "lemma": "shenayim"
       },
@@ -276,12 +332,16 @@
         "lemma": "naarah"
       },
       {
-        "surface": "the man",
-        "lemma": "ish"
+        "surface": "father",
+        "lemma": "av"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "the man",
+        "lemma": "ish"
       },
       {
         "surface": "agree",
@@ -356,8 +416,12 @@
         "lemma": "naarah"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "father",
+        "lemma": "av"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "refresh",
@@ -414,8 +478,12 @@
         "lemma": "naarah"
       },
       {
-        "surface": "Look",
-        "lemma": "hinneh"
+        "surface": "father",
+        "lemma": "av"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "the day",
@@ -430,16 +498,8 @@
         "lemma": "arav"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
-      },
-      {
         "surface": "spend the night",
         "lemma": "lun"
-      },
-      {
-        "surface": "See",
-        "lemma": "hinneh"
       },
       {
         "surface": "the day",
@@ -488,6 +548,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "was unwilling",
+        "lemma": "lo"
+      },
+      {
         "surface": "to spend the night",
         "lemma": "lun"
       },
@@ -498,6 +562,10 @@
       {
         "surface": "and departed",
         "lemma": "halakh"
+      },
+      {
+        "surface": "and arrived",
+        "lemma": "bo"
       },
       {
         "surface": "opposite",
@@ -550,12 +618,12 @@
         "lemma": "naar"
       },
       {
-        "surface": "his master",
-        "lemma": "adon"
+        "surface": "said",
+        "lemma": "amar"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "his master",
+        "lemma": "adon"
       },
       {
         "surface": "let us stop",
@@ -580,6 +648,14 @@
         "lemma": "adon"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "We will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turn aside",
         "lemma": "sur"
       },
@@ -590,6 +666,10 @@
       {
         "surface": "of foreigners",
         "lemma": "nokhri"
+      },
+      {
+        "surface": "there are no",
+        "lemma": "lo"
       },
       {
         "surface": "Israelites",
@@ -605,6 +685,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "He continued",
+        "lemma": "amar"
+      },
       {
         "surface": "Come",
         "lemma": "halakh"
@@ -648,6 +732,10 @@
         "lemma": "shemesh"
       },
       {
+        "surface": "set",
+        "lemma": "bo"
+      },
+      {
         "surface": "as they neared",
         "lemma": "etsel"
       },
@@ -666,12 +754,24 @@
         "lemma": "sur"
       },
       {
+        "surface": "to go in",
+        "lemma": "bo"
+      },
+      {
         "surface": "and lodge",
         "lemma": "lun"
       },
       {
         "surface": "in Gibeah",
         "lemma": "givah"
+      },
+      {
+        "surface": "The Levite went in",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and sat down",
+        "lemma": "yashav"
       },
       {
         "surface": "in the city",
@@ -748,6 +848,10 @@
         "lemma": "benymini"
       },
       {
+        "surface": "came in",
+        "lemma": "bo"
+      },
+      {
         "surface": "his work",
         "lemma": "maaseh"
       },
@@ -760,6 +864,10 @@
       {
         "surface": "When he looked up",
         "lemma": "nasa"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "raah"
       },
       {
         "surface": "vvv",
@@ -786,6 +894,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Where",
         "lemma": "an"
       },
@@ -796,9 +908,17 @@
       {
         "surface": "and where",
         "lemma": "ayin"
+      },
+      {
+        "surface": "have you come from",
+        "lemma": "bo"
       }
     ],
     "18": [
+      {
+        "surface": "The Levite replied",
+        "lemma": "amar"
+      },
       {
         "surface": "traveling",
         "lemma": "avar"
@@ -928,6 +1048,10 @@
         "lemma": "shalom"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the old",
         "lemma": "zaqen"
       },
@@ -936,8 +1060,16 @@
         "lemma": "ish"
       },
       {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "you need",
         "lemma": "machsor"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "spend the night",
@@ -949,6 +1081,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "So he brought him",
+        "lemma": "bo"
+      },
       {
         "surface": "to his house",
         "lemma": "bet"
@@ -988,10 +1124,6 @@
         "lemma": "lev"
       },
       {
-        "surface": "suddenly",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the wicked",
         "lemma": "beliyyaal"
       },
@@ -1020,6 +1152,10 @@
         "lemma": "dal"
       },
       {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the old",
         "lemma": "zaqen"
       },
@@ -1036,8 +1172,16 @@
         "lemma": "bet"
       },
       {
+        "surface": "Bring out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the man",
         "lemma": "ish"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "your house",
@@ -1062,8 +1206,24 @@
         "lemma": "bet"
       },
       {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "No",
+        "lemma": "al"
+      },
+      {
         "surface": "my brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "do this wicked thing",
@@ -1078,8 +1238,20 @@
         "lemma": "ish"
       },
       {
+        "surface": "is a guest",
+        "lemma": "bo"
+      },
+      {
         "surface": "in my house",
         "lemma": "bet"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "commit",
+        "lemma": "asah"
       },
       {
         "surface": "outrage",
@@ -1088,8 +1260,8 @@
     ],
     "24": [
       {
-        "surface": "Look",
-        "lemma": "hinneh"
+        "surface": "let me bring out",
+        "lemma": "yatsa"
       },
       {
         "surface": "my virgin",
@@ -1108,8 +1280,20 @@
         "lemma": "anah"
       },
       {
+        "surface": "and do",
+        "lemma": "asah"
+      },
+      {
         "surface": "as you wish",
         "lemma": "tov"
+      },
+      {
+        "surface": "But do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       },
       {
         "surface": "a vile",
@@ -1134,12 +1318,24 @@
         "lemma": "avah"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen to him",
+        "lemma": "shama"
+      },
+      {
         "surface": "took",
         "lemma": "chazaq"
       },
       {
         "surface": "his concubine",
         "lemma": "pilegesh"
+      },
+      {
+        "surface": "and sent her",
+        "lemma": "yatsa"
       },
       {
         "surface": "outside",
@@ -1152,6 +1348,10 @@
       {
         "surface": "and abused",
         "lemma": "alal"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "the night",
@@ -1174,6 +1374,10 @@
       {
         "surface": "the woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "went back",
+        "lemma": "bo"
       },
       {
         "surface": "to the house",
@@ -1222,12 +1426,12 @@
         "lemma": "bet"
       },
       {
-        "surface": "on his journey",
-        "lemma": "derekh"
+        "surface": "to go out",
+        "lemma": "yatsa"
       },
       {
-        "surface": "there was",
-        "lemma": "hinneh"
+        "surface": "on his journey",
+        "lemma": "derekh"
       },
       {
         "surface": "vvv",
@@ -1264,6 +1468,10 @@
         "lemma": "qamay"
       },
       {
+        "surface": "he told her",
+        "lemma": "amar"
+      },
+      {
         "surface": "Let us go",
         "lemma": "halakh"
       },
@@ -1297,6 +1505,10 @@
       }
     ],
     "29": [
+      {
+        "surface": "When he reached",
+        "lemma": "bo"
+      },
       {
         "surface": "his house",
         "lemma": "bet"
@@ -1338,6 +1550,10 @@
         "lemma": "shalach"
       },
       {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "the territory",
         "lemma": "gevul"
       },
@@ -1347,6 +1563,34 @@
       }
     ],
     "30": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "it said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Nothing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "has been seen",
+        "lemma": "raah"
+      },
+      {
+        "surface": "or done",
+        "lemma": "hayah"
+      },
       {
         "surface": "from the day",
         "lemma": "yom"
@@ -1388,6 +1632,6 @@
   "themeLemmas": [
     "bet",
     "halakh",
-    "lun"
+    "amar"
   ]
 }

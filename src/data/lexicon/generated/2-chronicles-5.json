@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "So all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the work",
         "lemma": "melakhah"
       },
       {
         "surface": "Solomon",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "had performed",
+        "lemma": "asah"
       },
       {
         "surface": "for the house",
@@ -30,6 +38,14 @@
         "lemma": "shelomoh"
       },
       {
+        "surface": "brought in {the items",
+        "lemma": "bo"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
@@ -46,8 +62,16 @@
         "lemma": "zahav"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the furnishings",
         "lemma": "keli"
+      },
+      {
+        "surface": "and he placed them",
+        "lemma": "natan"
       },
       {
         "surface": "in the treasuries",
@@ -84,12 +108,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the tribal",
         "lemma": "matteh"
       },
       {
         "surface": "heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "and family leaders",
+        "lemma": "av"
       },
       {
         "surface": "vvv",
@@ -130,6 +162,10 @@
     ],
     "3": [
       {
+        "surface": "So all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the men",
         "lemma": "ish"
       },
@@ -160,12 +196,20 @@
     ],
     "4": [
       {
+        "surface": "When all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the elders",
         "lemma": "zaqen"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "had arrived",
+        "lemma": "bo"
       },
       {
         "surface": "the Levites",
@@ -196,6 +240,10 @@
       {
         "surface": "of Meeting",
         "lemma": "moed"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "its",
@@ -240,6 +288,10 @@
         "lemma": "shelomoh"
       },
       {
+        "surface": "and the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
@@ -268,6 +320,10 @@
         "lemma": "baqar"
       },
       {
+        "surface": "they could not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be counted",
         "lemma": "saphar"
       },
@@ -280,6 +336,10 @@
       {
         "surface": "Then the priests",
         "lemma": "kohen"
+      },
+      {
+        "surface": "brought",
+        "lemma": "bo"
       },
       {
         "surface": "the ark",
@@ -323,6 +383,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "For",
+        "lemma": "hayah"
+      },
       {
         "surface": "the cherubim",
         "lemma": "keruv"
@@ -378,6 +442,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "were visible",
+        "lemma": "raah"
+      },
+      {
         "surface": "in front",
         "lemma": "paneh"
       },
@@ -386,8 +454,16 @@
         "lemma": "devir"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "from outside the Holy Place",
         "lemma": "chuts"
+      },
+      {
+        "surface": "and they are",
+        "lemma": "hayah"
       },
       {
         "surface": "there",
@@ -420,6 +496,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "had placed in it",
+        "lemma": "natan"
+      },
+      {
         "surface": "at Horeb",
         "lemma": "chorev"
       },
@@ -436,11 +516,19 @@
         "lemma": "ben"
       },
       {
+        "surface": "after they had come out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
       }
     ],
     "11": [
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "the priests",
         "lemma": "kohen"
@@ -462,8 +550,16 @@
         "lemma": "machaloqet"
       },
       {
+        "surface": "And when",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the priests",
         "lemma": "kohen"
+      },
+      {
+        "surface": "came out",
+        "lemma": "yatsa"
       },
       {
         "surface": "the Holy Place",
@@ -471,6 +567,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "the Levitical",
         "lemma": "leviyyi"
@@ -648,6 +748,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "could",
+        "lemma": "lo"
+      },
+      {
         "surface": "not",
         "lemma": "yakhol"
       },
@@ -690,8 +794,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "aron",
-    "kohen",
-    "bet"
+    "kohen"
   ]
 }

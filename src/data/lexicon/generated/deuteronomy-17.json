@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "You shall not",
+        "lemma": "lo"
+      },
+      {
         "surface": "sacrifice",
         "lemma": "zavach"
       },
@@ -28,6 +32,10 @@
       {
         "surface": "with any defect",
         "lemma": "mum"
+      },
+      {
+        "surface": "or",
+        "lemma": "kol"
       },
       {
         "surface": "serious",
@@ -80,8 +88,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "gives",
+        "lemma": "natan"
+      },
+      {
         "surface": "is found",
         "lemma": "matsa"
+      },
+      {
+        "surface": "doing",
+        "lemma": "asah"
       },
       {
         "surface": "evil",
@@ -138,18 +154,30 @@
         "lemma": "yareach"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "of the host",
         "lemma": "tsava"
       },
       {
         "surface": "of heaven",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "I have forbidden",
+        "lemma": "lo"
       }
     ],
     "4": [
       {
         "surface": "and if it is reported",
         "lemma": "nagad"
+      },
+      {
+        "surface": "and you hear about it",
+        "lemma": "shama"
       },
       {
         "surface": "you must investigate it",
@@ -160,12 +188,12 @@
         "lemma": "yatav"
       },
       {
-        "surface": "If",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the report",
         "lemma": "davar"
+      },
+      {
+        "surface": "is",
+        "lemma": "asah"
       },
       {
         "surface": "true",
@@ -182,6 +210,10 @@
     ],
     "5": [
       {
+        "surface": "you must bring out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "your gates",
         "lemma": "shaar"
       },
@@ -192,6 +224,10 @@
       {
         "surface": "woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "has done",
+        "lemma": "asah"
       },
       {
         "surface": "evil",
@@ -232,6 +268,10 @@
         "lemma": "mut"
       },
       {
+        "surface": "but he shall not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be executed",
         "lemma": "mut"
       },
@@ -258,6 +298,10 @@
         "lemma": "ed"
       },
       {
+        "surface": "shall be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the first",
         "lemma": "rishon"
       },
@@ -272,6 +316,10 @@
       {
         "surface": "the hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -354,6 +402,10 @@
     ],
     "9": [
       {
+        "surface": "You are to go",
+        "lemma": "bo"
+      },
+      {
         "surface": "the Levitical",
         "lemma": "leviyyi"
       },
@@ -388,6 +440,10 @@
     ],
     "10": [
       {
+        "surface": "You must abide by",
+        "lemma": "asah"
+      },
+      {
         "surface": "the verdict",
         "lemma": "davar"
       },
@@ -412,6 +468,14 @@
         "lemma": "shamar"
       },
       {
+        "surface": "to do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "they instruct you",
         "lemma": "yara"
       }
@@ -432,6 +496,14 @@
       {
         "surface": "and the verdict",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "they proclaim",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "lo"
       },
       {
         "surface": "turn aside",
@@ -460,12 +532,20 @@
         "lemma": "ish"
       },
       {
+        "surface": "acts",
+        "lemma": "asah"
+      },
+      {
         "surface": "presumptuously",
         "lemma": "zadon"
       },
       {
         "surface": "refusing",
         "lemma": "bilti"
+      },
+      {
+        "surface": "to listen",
+        "lemma": "shama"
       },
       {
         "surface": "the priest",
@@ -514,12 +594,24 @@
     ],
     "13": [
       {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
       {
+        "surface": "will hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "and be afraid",
         "lemma": "yare"
+      },
+      {
+        "surface": "and will no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -531,6 +623,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "you enter",
+        "lemma": "bo"
+      },
       {
         "surface": "the land",
         "lemma": "erets"
@@ -544,8 +640,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "is giving",
+        "lemma": "natan"
+      },
+      {
         "surface": "and have taken possession of it",
         "lemma": "yarash"
+      },
+      {
+        "surface": "and settled",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "and you say",
+        "lemma": "amar"
       },
       {
         "surface": "Let us set",
@@ -554,6 +662,10 @@
       {
         "surface": "a king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "like all",
+        "lemma": "kol"
       },
       {
         "surface": "the nations",
@@ -602,8 +714,20 @@
         "lemma": "ach"
       },
       {
+        "surface": "you are not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to set",
+        "lemma": "natan"
+      },
+      {
         "surface": "a foreigner",
         "lemma": "ish"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "one of your brothers",
@@ -611,6 +735,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "the king must not",
+        "lemma": "lo"
+      },
       {
         "surface": "acquire many",
         "lemma": "ravah"
@@ -620,8 +748,16 @@
         "lemma": "sus"
       },
       {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
         "surface": "send the people",
         "lemma": "am"
+      },
+      {
+        "surface": "back",
+        "lemma": "shuv"
       },
       {
         "surface": "to Egypt",
@@ -640,8 +776,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "has said",
+        "lemma": "amar"
+      },
+      {
         "surface": "You are",
         "lemma": "yasaph"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to go back",
+        "lemma": "shuv"
       },
       {
         "surface": "way",
@@ -654,6 +802,10 @@
     ],
     "17": [
       {
+        "surface": "He must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "take many",
         "lemma": "ravah"
       },
@@ -662,12 +814,20 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "lest",
+        "lemma": "lo"
+      },
+      {
         "surface": "his heart",
         "lemma": "levav"
       },
       {
         "surface": "go astray",
         "lemma": "sur"
+      },
+      {
+        "surface": "He must not",
+        "lemma": "lo"
       },
       {
         "surface": "accumulate",
@@ -687,6 +847,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "When he is seated",
+        "lemma": "yashav"
+      },
       {
         "surface": "his royal",
         "lemma": "mamlakhah"
@@ -726,6 +890,18 @@
     ],
     "19": [
       {
+        "surface": "It is to remain",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "and he is to read",
+        "lemma": "qara"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the days",
         "lemma": "yom"
       },
@@ -752,6 +928,10 @@
       {
         "surface": "by carefully observing",
         "lemma": "shamar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the words",
@@ -830,8 +1010,8 @@
     ]
   },
   "themeLemmas": [
-    "ra",
-    "mut",
-    "ravah"
+    "lo",
+    "kol",
+    "asah"
   ]
 }

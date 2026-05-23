@@ -88,6 +88,10 @@
     ],
     "4": [
       {
+        "surface": "The woman shall continue",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in purification",
         "lemma": "tohorah"
       },
@@ -104,12 +108,24 @@
         "lemma": "yom"
       },
       {
+        "surface": "She must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "touch",
         "lemma": "naga"
       },
       {
+        "surface": "anything",
+        "lemma": "kol"
+      },
+      {
         "surface": "sacred",
         "lemma": "qodesh"
+      },
+      {
+        "surface": "or go",
+        "lemma": "bo"
       },
       {
         "surface": "the sanctuary",
@@ -130,6 +146,10 @@
     ],
     "5": [
       {
+        "surface": "If, however",
+        "lemma": "im"
+      },
+      {
         "surface": "she gives birth to",
         "lemma": "yalad"
       },
@@ -148,6 +168,10 @@
       {
         "surface": "as she is during her menstruation",
         "lemma": "niddah"
+      },
+      {
+        "surface": "Then she must continue",
+        "lemma": "yashav"
       },
       {
         "surface": "purification",
@@ -186,6 +210,10 @@
       {
         "surface": "for a daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "she is to bring",
+        "lemma": "bo"
       },
       {
         "surface": "the priest",
@@ -279,6 +307,14 @@
       }
     ],
     "8": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "she cannot",
+        "lemma": "lo"
+      },
       {
         "surface": "afford",
         "lemma": "matsa"

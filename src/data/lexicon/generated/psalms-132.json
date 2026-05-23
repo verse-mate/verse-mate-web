@@ -26,6 +26,10 @@
         "lemma": "david"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the hardships he endured",
         "lemma": "anah"
       }
@@ -54,8 +58,20 @@
     ],
     "3": [
       {
+        "surface": "I will not",
+        "lemma": "im"
+      },
+      {
+        "surface": "enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "my house",
         "lemma": "bet"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "get",
@@ -67,6 +83,14 @@
       }
     ],
     "4": [
+      {
+        "surface": "I will not",
+        "lemma": "im"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
+      },
       {
         "surface": "sleep",
         "lemma": "shenat"
@@ -112,8 +136,8 @@
     ],
     "6": [
       {
-        "surface": "vvv",
-        "lemma": "hinneh"
+        "surface": "We heard that the ark was",
+        "lemma": "shama"
       },
       {
         "surface": "in Ephrathah",
@@ -133,6 +157,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "Let us go",
+        "lemma": "bo"
+      },
       {
         "surface": "to His dwelling place",
         "lemma": "mishkan"
@@ -200,6 +228,14 @@
         "lemma": "david"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "reject",
+        "lemma": "shuv"
+      },
+      {
         "surface": "Your anointed one",
         "lemma": "mashiach"
       }
@@ -218,6 +254,14 @@
         "lemma": "david"
       },
       {
+        "surface": "a promise He will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "revoke",
+        "lemma": "shuv"
+      },
+      {
         "surface": "One of your descendants",
         "lemma": "peri"
       },
@@ -231,6 +275,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "your sons",
         "lemma": "ben"
@@ -254,6 +302,10 @@
       {
         "surface": "then their sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "sit",
+        "lemma": "yashav"
       },
       {
         "surface": "on your throne",
@@ -306,6 +358,10 @@
       {
         "surface": "here",
         "lemma": "poh"
+      },
+      {
+        "surface": "I will dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "I have desired this home",
@@ -414,8 +470,8 @@
     ]
   },
   "themeLemmas": [
+    "im",
     "david",
-    "ad",
-    "lavash"
+    "ad"
   ]
 }

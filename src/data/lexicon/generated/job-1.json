@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "There was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -28,6 +32,10 @@
       {
         "surface": "And this man",
         "lemma": "ish"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "blameless",
@@ -73,6 +81,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "and he owned",
+        "lemma": "hayah"
+      },
       {
         "surface": "7,000",
         "lemma": "sheva"
@@ -130,6 +142,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "ben"
       },
@@ -146,6 +162,10 @@
       {
         "surface": "would take turns",
         "lemma": "halakh"
+      },
+      {
+        "surface": "holding",
+        "lemma": "asah"
       },
       {
         "surface": "feasts",
@@ -177,6 +197,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
       {
         "surface": "the days",
         "lemma": "yom"
@@ -218,8 +242,16 @@
         "lemma": "olah"
       },
       {
+        "surface": "for all of them",
+        "lemma": "kol"
+      },
+      {
         "surface": "Job",
         "lemma": "iyyov"
+      },
+      {
+        "surface": "thought",
+        "lemma": "amar"
       },
       {
         "surface": "Perhaps",
@@ -252,6 +284,14 @@
       {
         "surface": "was Job’s",
         "lemma": "iyyov"
+      },
+      {
+        "surface": "regular",
+        "lemma": "kol"
+      },
+      {
+        "surface": "practice",
+        "lemma": "asah"
       }
     ],
     "6": [
@@ -268,6 +308,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to present themselves",
         "lemma": "yatsav"
       },
@@ -280,6 +324,10 @@
         "lemma": "satan"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "with them",
         "lemma": "tavekh"
       }
@@ -288,6 +336,14 @@
       {
         "surface": "Where",
         "lemma": "ayin"
+      },
+      {
+        "surface": "have you come from",
+        "lemma": "bo"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -322,6 +378,10 @@
       {
         "surface": "Then the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Satan",
@@ -408,6 +468,10 @@
     ],
     "10": [
       {
+        "surface": "Have You not",
+        "lemma": "lo"
+      },
+      {
         "surface": "placed a hedge",
         "lemma": "sukh"
       },
@@ -426,6 +490,10 @@
       {
         "surface": "and",
         "lemma": "bead"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "You have blessed",
@@ -466,6 +534,14 @@
         "lemma": "naga"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "and he will surely",
+        "lemma": "im"
+      },
+      {
         "surface": "curse You",
         "lemma": "barakh"
       },
@@ -476,8 +552,8 @@
     ],
     "12": [
       {
-        "surface": "Very well",
-        "lemma": "hinneh"
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -488,8 +564,16 @@
         "lemma": "satan"
       },
       {
+        "surface": "Everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "in your hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "al"
       },
       {
         "surface": "lay",
@@ -502,6 +586,10 @@
       {
         "surface": "Then Satan",
         "lemma": "satan"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "from the presence",
@@ -556,12 +644,24 @@
         "lemma": "maleakh"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and reported",
+        "lemma": "amar"
+      },
+      {
         "surface": "Job",
         "lemma": "iyyov"
       },
       {
         "surface": "While the oxen",
         "lemma": "baqar"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
       },
       {
         "surface": "plowing",
@@ -628,6 +728,14 @@
         "lemma": "davar"
       },
       {
+        "surface": "messenger came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and reported",
+        "lemma": "amar"
+      },
+      {
         "surface": "The fire",
         "lemma": "esh"
       },
@@ -680,6 +788,14 @@
       {
         "surface": "speaking",
         "lemma": "davar"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and reported",
+        "lemma": "amar"
       },
       {
         "surface": "The Chaldeans",
@@ -744,6 +860,14 @@
         "lemma": "davar"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and reported",
+        "lemma": "amar"
+      },
+      {
         "surface": "Your sons",
         "lemma": "ben"
       },
@@ -778,16 +902,16 @@
     ],
     "19": [
       {
-        "surface": "when suddenly",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "a mighty",
         "lemma": "gadol"
       },
       {
         "surface": "wind",
         "lemma": "ruach"
+      },
+      {
+        "surface": "swept in",
+        "lemma": "bo"
       },
       {
         "surface": "from",
@@ -848,6 +972,10 @@
         "lemma": "qamay"
       },
       {
+        "surface": "tore",
+        "lemma": "qara"
+      },
+      {
         "surface": "his robe",
         "lemma": "meil"
       },
@@ -874,8 +1002,16 @@
     ],
     "21": [
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Naked",
         "lemma": "arom"
+      },
+      {
+        "surface": "I came",
+        "lemma": "yatsa"
       },
       {
         "surface": "from my mother’s",
@@ -890,8 +1026,16 @@
         "lemma": "arom"
       },
       {
+        "surface": "I will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "and the LORD",
@@ -906,6 +1050,10 @@
         "lemma": "barakh"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the name",
         "lemma": "shem"
       },
@@ -916,12 +1064,28 @@
     ],
     "22": [
       {
+        "surface": "In all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Job",
         "lemma": "iyyov"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "sin",
         "lemma": "chata"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
+        "surface": "charge",
+        "lemma": "natan"
       },
       {
         "surface": "God",
@@ -935,7 +1099,7 @@
   },
   "themeLemmas": [
     "iyyov",
-    "satan",
-    "bet"
+    "amar",
+    "bo"
   ]
 }

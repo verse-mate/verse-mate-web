@@ -62,6 +62,10 @@
       {
         "surface": "At this time the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       }
     ],
     "3": [
@@ -116,6 +120,10 @@
         "lemma": "esav"
       },
       {
+        "surface": "who live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Seir",
         "lemma": "seir"
       },
@@ -134,8 +142,20 @@
     ],
     "5": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "provoke",
         "lemma": "garah"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
       },
       {
         "surface": "any of their land",
@@ -144,6 +164,10 @@
       {
         "surface": "a footprint",
         "lemma": "midrakh"
+      },
+      {
+        "surface": "I have given",
+        "lemma": "natan"
       },
       {
         "surface": "Mount",
@@ -202,6 +226,10 @@
         "lemma": "barakh"
       },
       {
+        "surface": "you in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the work",
         "lemma": "maaseh"
       },
@@ -244,6 +272,10 @@
       {
         "surface": "and you have lacked",
         "lemma": "chaser"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
       }
     ],
     "8": [
@@ -262,6 +294,10 @@
       {
         "surface": "of Esau",
         "lemma": "esav"
+      },
+      {
+        "surface": "who live",
+        "lemma": "yashav"
       },
       {
         "surface": "in Seir",
@@ -314,12 +350,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "harass",
         "lemma": "tsur"
       },
       {
         "surface": "the Moabites",
         "lemma": "moav"
+      },
+      {
+        "surface": "or",
+        "lemma": "al"
       },
       {
         "surface": "provoke",
@@ -330,8 +374,20 @@
         "lemma": "milchamah"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
+      },
+      {
         "surface": "any of their land",
         "lemma": "erets"
+      },
+      {
+        "surface": "I have given",
+        "lemma": "natan"
       },
       {
         "surface": "Ar",
@@ -358,6 +414,10 @@
       {
         "surface": "used to",
         "lemma": "paneh"
+      },
+      {
+        "surface": "live",
+        "lemma": "yashav"
       },
       {
         "surface": "a people",
@@ -398,6 +458,10 @@
         "lemma": "moavi"
       },
       {
+        "surface": "called",
+        "lemma": "qara"
+      },
+      {
         "surface": "Emites",
         "lemma": "emim"
       }
@@ -410,6 +474,10 @@
       {
         "surface": "used to",
         "lemma": "paneh"
+      },
+      {
+        "surface": "live",
+        "lemma": "yashav"
       },
       {
         "surface": "in Seir",
@@ -436,6 +504,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "and settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in their place",
         "lemma": "tachat"
       },
@@ -444,12 +516,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "in the land",
         "lemma": "erets"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "as their possession",
@@ -528,6 +608,10 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "that entire",
+        "lemma": "kol"
+      },
+      {
         "surface": "generation",
         "lemma": "dor"
       },
@@ -570,6 +654,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "to eliminate them",
         "lemma": "hamam"
       },
@@ -587,6 +675,14 @@
       }
     ],
     "16": [
+      {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "the fighting",
         "lemma": "milchamah"
@@ -654,6 +750,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "harass them",
         "lemma": "tsur"
       },
@@ -662,12 +762,24 @@
         "lemma": "garah"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
+      },
+      {
         "surface": "any of the land",
         "lemma": "erets"
       },
       {
         "surface": "of the Ammonites",
         "lemma": "ben"
+      },
+      {
+        "surface": "I have given it",
+        "lemma": "natan"
       },
       {
         "surface": "to the descendants",
@@ -700,8 +812,16 @@
         "lemma": "rapah"
       },
       {
+        "surface": "used to live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "though the Ammonites",
         "lemma": "ammoni"
+      },
+      {
+        "surface": "called",
+        "lemma": "qara"
       },
       {
         "surface": "Zamzummites",
@@ -746,11 +866,19 @@
         "lemma": "yarash"
       },
       {
+        "surface": "and settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in their place",
         "lemma": "tachat"
       }
     ],
     "22": [
+      {
+        "surface": "He had done",
+        "lemma": "asah"
+      },
       {
         "surface": "for the descendants",
         "lemma": "ben"
@@ -758,6 +886,10 @@
       {
         "surface": "of Esau",
         "lemma": "esav"
+      },
+      {
+        "surface": "who lived",
+        "lemma": "yashav"
       },
       {
         "surface": "in Seir",
@@ -780,6 +912,10 @@
         "lemma": "yarash"
       },
       {
+        "surface": "and have lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in their place",
         "lemma": "tachat"
       },
@@ -792,6 +928,10 @@
       {
         "surface": "And the Avvim",
         "lemma": "avvim"
+      },
+      {
+        "surface": "who lived",
+        "lemma": "yashav"
       },
       {
         "surface": "in villages",
@@ -810,8 +950,16 @@
         "lemma": "kaphtori"
       },
       {
+        "surface": "who came",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "out of Caphtor",
         "lemma": "kaphtor"
+      },
+      {
+        "surface": "and settled",
+        "lemma": "yashav"
       },
       {
         "surface": "in their place",
@@ -838,6 +986,14 @@
       {
         "surface": "Valley",
         "lemma": "nachal"
+      },
+      {
+        "surface": "See",
+        "lemma": "raah"
+      },
+      {
+        "surface": "I have delivered",
+        "lemma": "natan"
       },
       {
         "surface": "into your hand",
@@ -890,12 +1046,20 @@
         "lemma": "chalal"
       },
       {
+        "surface": "to put",
+        "lemma": "natan"
+      },
+      {
         "surface": "the dread",
         "lemma": "pachad"
       },
       {
         "surface": "and fear",
         "lemma": "yirah"
+      },
+      {
+        "surface": "upon all",
+        "lemma": "kol"
       },
       {
         "surface": "vvv",
@@ -912,6 +1076,10 @@
       {
         "surface": "heaven",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "They will hear",
+        "lemma": "shama"
       },
       {
         "surface": "the reports of you",
@@ -966,6 +1134,10 @@
       {
         "surface": "of Heshbon",
         "lemma": "cheshbon"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "27": [
@@ -980,6 +1152,10 @@
       {
         "surface": "we will stay on the main road",
         "lemma": "derekh"
+      },
+      {
+        "surface": "We will not",
+        "lemma": "lo"
       },
       {
         "surface": "turn",
@@ -1006,6 +1182,10 @@
       {
         "surface": "to eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "and",
+        "lemma": "natan"
       },
       {
         "surface": "water",
@@ -1038,6 +1218,10 @@
         "lemma": "esav"
       },
       {
+        "surface": "who live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Seir",
         "lemma": "seir"
       },
@@ -1046,8 +1230,16 @@
         "lemma": "moavi"
       },
       {
+        "surface": "who live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Ar",
         "lemma": "ar"
+      },
+      {
+        "surface": "did for us",
+        "lemma": "asah"
       },
       {
         "surface": "we cross",
@@ -1068,6 +1260,10 @@
       {
         "surface": "our God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "is giving",
+        "lemma": "natan"
       }
     ],
     "30": [
@@ -1086,6 +1282,10 @@
       {
         "surface": "would",
         "lemma": "avah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "let us pass",
@@ -1116,6 +1316,10 @@
         "lemma": "amats"
       },
       {
+        "surface": "He might deliver him",
+        "lemma": "natan"
+      },
+      {
         "surface": "into your hand",
         "lemma": "yad"
       },
@@ -1130,8 +1334,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "See",
+        "lemma": "raah"
+      },
+      {
         "surface": "I have begun",
         "lemma": "chalal"
+      },
+      {
+        "surface": "to deliver",
+        "lemma": "natan"
       },
       {
         "surface": "Sihon",
@@ -1168,12 +1384,24 @@
         "lemma": "sichon"
       },
       {
+        "surface": "and his whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "army",
         "lemma": "am"
       },
       {
+        "surface": "came out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "for battle",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "against us",
+        "lemma": "qara"
       },
       {
         "surface": "at Jahaz",
@@ -1190,6 +1418,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "delivered him over",
+        "lemma": "natan"
+      },
+      {
         "surface": "to us",
         "lemma": "paneh"
       },
@@ -1202,14 +1434,26 @@
         "lemma": "ben"
       },
       {
+        "surface": "and his whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "army",
         "lemma": "am"
       }
     ],
     "34": [
       {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
         "surface": "we captured",
         "lemma": "lakhad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "his cities",
@@ -1222,6 +1466,10 @@
       {
         "surface": "the people",
         "lemma": "mat"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "city",
@@ -1238,6 +1486,10 @@
       {
         "surface": "We left",
         "lemma": "shaar"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "survivors",
@@ -1292,8 +1544,16 @@
         "lemma": "gilad"
       },
       {
+        "surface": "not one",
+        "lemma": "lo"
+      },
+      {
         "surface": "city",
         "lemma": "qiryah"
+      },
+      {
+        "surface": "had walls",
+        "lemma": "hayah"
       },
       {
         "surface": "too high",
@@ -1308,11 +1568,23 @@
         "lemma": "elohim"
       },
       {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "us",
         "lemma": "paneh"
+      },
+      {
+        "surface": "all of them",
+        "lemma": "kol"
       }
     ],
     "37": [
+      {
+        "surface": "you did not",
+        "lemma": "lo"
+      },
       {
         "surface": "go near",
         "lemma": "qarav"
@@ -1324,6 +1596,10 @@
       {
         "surface": "of the Ammonites",
         "lemma": "ben"
+      },
+      {
+        "surface": "or the land",
+        "lemma": "kol"
       },
       {
         "surface": "along the banks",
@@ -1346,6 +1622,10 @@
         "lemma": "har"
       },
       {
+        "surface": "or any",
+        "lemma": "kol"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -1360,8 +1640,8 @@
     ]
   },
   "themeLemmas": [
-    "avar",
-    "paneh",
-    "seir"
+    "natan",
+    "yashav",
+    "avar"
   ]
 }

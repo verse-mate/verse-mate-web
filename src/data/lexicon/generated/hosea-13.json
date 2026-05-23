@@ -52,6 +52,10 @@
         "lemma": "yasaph"
       },
       {
+        "surface": "and make",
+        "lemma": "asah"
+      },
+      {
         "surface": "cast images",
         "lemma": "massekhah"
       },
@@ -68,12 +72,20 @@
         "lemma": "keseph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the work",
         "lemma": "maaseh"
       },
       {
         "surface": "of craftsmen",
         "lemma": "charash"
+      },
+      {
+        "surface": "say of them",
+        "lemma": "amar"
       },
       {
         "surface": "They offer human sacrifice",
@@ -92,6 +104,10 @@
       {
         "surface": "Therefore",
         "lemma": "ken"
+      },
+      {
+        "surface": "they will be",
+        "lemma": "hayah"
       },
       {
         "surface": "like the morning",
@@ -154,6 +170,10 @@
       {
         "surface": "you know",
         "lemma": "yada"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "God",
@@ -226,6 +246,10 @@
         "lemma": "shachal"
       },
       {
+        "surface": "I will pounce",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a leopard",
         "lemma": "namer"
       },
@@ -250,6 +274,10 @@
       {
         "surface": "I will attack them",
         "lemma": "pagash"
+      },
+      {
+        "surface": "and I will tear",
+        "lemma": "qara"
       },
       {
         "surface": "open their chests",
@@ -308,12 +336,24 @@
         "lemma": "yasah"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your cities",
         "lemma": "ir"
       },
       {
         "surface": "and the rulers",
         "lemma": "shaphat"
+      },
+      {
+        "surface": "you said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Give",
+        "lemma": "natan"
       },
       {
         "surface": "a king",
@@ -328,6 +368,10 @@
       {
         "surface": "So in My anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "I gave",
+        "lemma": "natan"
       },
       {
         "surface": "a king",
@@ -374,6 +418,14 @@
         "lemma": "chevel"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "an unwise",
         "lemma": "chakham"
       },
@@ -382,8 +434,16 @@
         "lemma": "ben"
       },
       {
+        "surface": "the time arrives",
+        "lemma": "et"
+      },
+      {
         "surface": "he",
         "lemma": "ben"
+      },
+      {
+        "surface": "fails",
+        "lemma": "lo"
       },
       {
         "surface": "to present himself",
@@ -470,6 +530,10 @@
         "lemma": "qadim"
       },
       {
+        "surface": "will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "a wind",
         "lemma": "ruach"
       },
@@ -508,6 +572,10 @@
       {
         "surface": "his treasury",
         "lemma": "otsar"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "precious",
@@ -562,8 +630,8 @@
     ]
   },
   "themeLemmas": [
-    "ehi",
-    "yisrael",
-    "yasah"
+    "lo",
+    "kol",
+    "ehi"
   ]
 }

@@ -86,11 +86,19 @@
         "lemma": "thlipsis"
       },
       {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
         "surface": "we are destined",
         "lemma": "keimai"
       }
     ],
     "4": [
+      {
+        "surface": "we were",
+        "lemma": "eimi"
+      },
       {
         "surface": "we kept warning you",
         "lemma": "prolego"
@@ -102,6 +110,14 @@
       {
         "surface": "suffer persecution",
         "lemma": "thlibo"
+      },
+      {
+        "surface": "you know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "it has come to pass",
+        "lemma": "ginomai"
       }
     ],
     "5": [
@@ -116,6 +132,10 @@
       {
         "surface": "sent",
         "lemma": "pempo"
+      },
+      {
+        "surface": "find out about",
+        "lemma": "ginosko"
       },
       {
         "surface": "faith",
@@ -134,6 +154,10 @@
         "lemma": "kopos"
       },
       {
+        "surface": "might have been",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "vain",
         "lemma": "kenos"
       }
@@ -146,6 +170,10 @@
       {
         "surface": "Timothy",
         "lemma": "timotheos"
+      },
+      {
+        "surface": "has returned",
+        "lemma": "erchomai"
       },
       {
         "surface": "with the good news",
@@ -172,14 +200,26 @@
         "lemma": "pantote"
       },
       {
+        "surface": "you have preserved",
+        "lemma": "echo"
+      },
+      {
         "surface": "longing",
         "lemma": "epipotheo"
+      },
+      {
+        "surface": "to see",
+        "lemma": "horao"
       }
     ],
     "7": [
       {
         "surface": "brothers",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "distress",
@@ -218,6 +258,14 @@
     ],
     "9": [
       {
+        "surface": "How",
+        "lemma": "tis"
+      },
+      {
+        "surface": "can we",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "vvv",
         "lemma": "antapodidomi"
       },
@@ -228,6 +276,10 @@
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "pas"
       },
       {
         "surface": "vvv",
@@ -250,6 +302,10 @@
       {
         "surface": "we pray",
         "lemma": "deomai"
+      },
+      {
+        "surface": "we may see",
+        "lemma": "horao"
       },
       {
         "surface": "face to face",
@@ -314,6 +370,10 @@
       {
         "surface": "one another",
         "lemma": "allelon"
+      },
+      {
+        "surface": "everyone else",
+        "lemma": "pas"
       }
     ],
     "13": [
@@ -354,12 +414,12 @@
         "lemma": "iesous"
       },
       {
-        "surface": "saints",
-        "lemma": "hagios"
+        "surface": "all",
+        "lemma": "pas"
       },
       {
-        "surface": "Amen",
-        "lemma": "amen"
+        "surface": "saints",
+        "lemma": "hagios"
       }
     ]
   },

@@ -82,6 +82,14 @@
         "lemma": "erets"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "its dwellers",
+        "lemma": "yashav"
+      },
+      {
         "surface": "quake",
         "lemma": "mug"
       },
@@ -100,8 +108,16 @@
     ],
     "4": [
       {
+        "surface": "I say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the proud",
         "lemma": "halal"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "boast",
@@ -110,6 +126,10 @@
       {
         "surface": "and to the wicked",
         "lemma": "rasah"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "lift up",
@@ -121,6 +141,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "lift up",
         "lemma": "rum"
@@ -152,12 +176,20 @@
         "lemma": "rum"
       },
       {
+        "surface": "comes neither",
+        "lemma": "lo"
+      },
+      {
         "surface": "from east",
         "lemma": "motsa"
       },
       {
         "surface": "nor west",
         "lemma": "maarav"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "out of the desert",
@@ -220,6 +252,10 @@
         "lemma": "akh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the wicked",
         "lemma": "rasah"
       },
@@ -259,6 +295,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the horns",
         "lemma": "qeren"

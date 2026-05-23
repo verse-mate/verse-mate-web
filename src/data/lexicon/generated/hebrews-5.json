@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "Every",
+        "lemma": "pas"
+      },
+      {
         "surface": "high priest",
         "lemma": "archiereus"
       },
       {
         "surface": "is appointed",
         "lemma": "kathistemi"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lambano"
       },
       {
         "surface": "men",
@@ -43,6 +51,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "He is able",
+        "lemma": "dunamai"
+      },
       {
         "surface": "to deal gently",
         "lemma": "metriopatheo"
@@ -84,6 +96,10 @@
     ],
     "4": [
       {
+        "surface": "takes",
+        "lemma": "lambano"
+      },
+      {
         "surface": "honor",
         "lemma": "time"
       },
@@ -114,8 +130,20 @@
         "lemma": "doxazo"
       },
       {
+        "surface": "of becoming",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "a high priest",
         "lemma": "archiereus"
+      },
+      {
+        "surface": "said",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "Son",
@@ -134,6 +162,10 @@
       {
         "surface": "another passage",
         "lemma": "heteros"
+      },
+      {
+        "surface": "God says",
+        "lemma": "lego"
       },
       {
         "surface": "a priest",
@@ -186,6 +218,10 @@
         "lemma": "dakru"
       },
       {
+        "surface": "could",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "save",
         "lemma": "sozo"
       },
@@ -203,6 +239,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "He was",
+        "lemma": "eimi"
+      },
       {
         "surface": "a Son",
         "lemma": "huios"
@@ -226,6 +266,10 @@
         "lemma": "teleioo"
       },
       {
+        "surface": "He became",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "the source",
         "lemma": "aitios"
       },
@@ -236,6 +280,10 @@
       {
         "surface": "salvation",
         "lemma": "soteria"
+      },
+      {
+        "surface": "to all",
+        "lemma": "pas"
       },
       {
         "surface": "obey",
@@ -266,12 +314,20 @@
     ],
     "11": [
       {
+        "surface": "much",
+        "lemma": "polus"
+      },
+      {
         "surface": "to say",
         "lemma": "logos"
       },
       {
         "surface": "hard to explain",
         "lemma": "dusermeneutos"
+      },
+      {
+        "surface": "you are",
+        "lemma": "ginomai"
       },
       {
         "surface": "dull",
@@ -292,8 +348,16 @@
         "lemma": "opheilo"
       },
       {
+        "surface": "to be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "teachers",
         "lemma": "didaskalos"
+      },
+      {
+        "surface": "you",
+        "lemma": "echo"
       },
       {
         "surface": "need",
@@ -320,6 +384,14 @@
         "lemma": "logion"
       },
       {
+        "surface": "vvv",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "echo"
+      },
+      {
         "surface": "You need",
         "lemma": "chreia"
       },
@@ -338,12 +410,20 @@
     ],
     "13": [
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "lives on",
         "lemma": "metecho"
       },
       {
         "surface": "milk",
         "lemma": "gala"
+      },
+      {
+        "surface": "is still",
+        "lemma": "eimi"
       },
       {
         "surface": "an infant",
@@ -372,12 +452,20 @@
         "lemma": "trophe"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "for the mature",
         "lemma": "teleios"
       },
       {
         "surface": "constant use",
         "lemma": "hexis"
+      },
+      {
+        "surface": "have",
+        "lemma": "echo"
       },
       {
         "surface": "trained",
@@ -403,7 +491,7 @@
   },
   "themeLemmas": [
     "stereos",
-    "gala",
-    "melchisedek"
+    "melchisedek",
+    "gala"
   ]
 }

@@ -52,6 +52,10 @@
         "lemma": "zimrah"
       },
       {
+        "surface": "strike",
+        "lemma": "natan"
+      },
+      {
         "surface": "the tambourine",
         "lemma": "toph"
       },
@@ -130,12 +134,24 @@
         "lemma": "yehoseph"
       },
       {
+        "surface": "when he went out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "where I heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "an unfamiliar",
+        "lemma": "lo"
       },
       {
         "surface": "language",
@@ -169,6 +185,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "You called out",
+        "lemma": "qara"
+      },
       {
         "surface": "in distress",
         "lemma": "batstsarah"
@@ -208,6 +228,10 @@
     ],
     "8": [
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "O My people",
         "lemma": "am"
       },
@@ -218,9 +242,21 @@
       {
         "surface": "O Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "if only",
+        "lemma": "im"
+      },
+      {
+        "surface": "you would listen",
+        "lemma": "shama"
       }
     ],
     "9": [
+      {
+        "surface": "There must be no",
+        "lemma": "lo"
+      },
       {
         "surface": "strange",
         "lemma": "zur"
@@ -228,6 +264,10 @@
       {
         "surface": "god",
         "lemma": "el"
+      },
+      {
+        "surface": "nor shall you",
+        "lemma": "lo"
       },
       {
         "surface": "bow",
@@ -278,8 +318,20 @@
         "lemma": "am"
       },
       {
+        "surface": "would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen to Me",
+        "lemma": "shama"
+      },
+      {
         "surface": "and Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "would not",
+        "lemma": "lo"
       },
       {
         "surface": "obey",
@@ -310,12 +362,12 @@
     ],
     "13": [
       {
-        "surface": "If only",
-        "lemma": "lu"
-      },
-      {
         "surface": "My people",
         "lemma": "am"
+      },
+      {
+        "surface": "would listen",
+        "lemma": "shama"
       },
       {
         "surface": "if Israel",
@@ -344,6 +396,10 @@
         "lemma": "oyev"
       },
       {
+        "surface": "and turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "My hand",
         "lemma": "yad"
       },
@@ -364,6 +420,14 @@
       {
         "surface": "would feign obedience",
         "lemma": "kachash"
+      },
+      {
+        "surface": "and their doom",
+        "lemma": "et"
+      },
+      {
+        "surface": "would last forever",
+        "lemma": "hayah"
       }
     ],
     "16": [
@@ -394,8 +458,8 @@
     ]
   },
   "themeLemmas": [
-    "yisrael",
-    "yaaqov",
-    "mitsrayim"
+    "shama",
+    "lo",
+    "yisrael"
   ]
 }

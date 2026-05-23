@@ -54,12 +54,20 @@
         "lemma": "malkiyyah"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "Jeremiah",
         "lemma": "yirmeyah"
       },
       {
         "surface": "had been telling",
         "lemma": "davar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -74,6 +82,14 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Whoever stays",
+        "lemma": "yashav"
       },
       {
         "surface": "city",
@@ -96,12 +112,20 @@
         "lemma": "dever"
       },
       {
+        "surface": "but whoever surrenders",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the Chaldeans",
         "lemma": "kasdi"
       },
       {
         "surface": "will live",
         "lemma": "chayah"
+      },
+      {
+        "surface": "he will retain",
+        "lemma": "hayah"
       },
       {
         "surface": "his life",
@@ -126,8 +150,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "city",
         "lemma": "ir"
+      },
+      {
+        "surface": "will surely be delivered",
+        "lemma": "natan"
       },
       {
         "surface": "into the hands",
@@ -156,6 +188,10 @@
         "lemma": "sar"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -182,6 +218,10 @@
       {
         "surface": "city",
         "lemma": "ir"
+      },
+      {
+        "surface": "as well as all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -222,8 +262,8 @@
     ],
     "5": [
       {
-        "surface": "Here",
-        "lemma": "hinneh"
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "King",
@@ -354,8 +394,16 @@
         "lemma": "bet"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "that Jeremiah",
         "lemma": "yirmeyah"
+      },
+      {
+        "surface": "had been put",
+        "lemma": "natan"
       },
       {
         "surface": "the cistern",
@@ -364,6 +412,10 @@
       {
         "surface": "While the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "was sitting",
+        "lemma": "yashav"
       },
       {
         "surface": "at the Gate",
@@ -382,6 +434,10 @@
       {
         "surface": "Ebed-melech",
         "lemma": "evedmelekh"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "from the king’s",
@@ -416,6 +472,14 @@
       {
         "surface": "have acted wickedly",
         "lemma": "raa"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "they have done",
+        "lemma": "asah"
       },
       {
         "surface": "to Jeremiah",
@@ -542,6 +606,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "and went",
+        "lemma": "bo"
+      },
+      {
         "surface": "to the king’s",
         "lemma": "melekh"
       },
@@ -612,6 +680,10 @@
         "lemma": "kushi"
       },
       {
+        "surface": "cried out",
+        "lemma": "amar"
+      },
+      {
         "surface": "Jeremiah",
         "lemma": "yirmeyah"
       },
@@ -644,6 +716,10 @@
         "lemma": "yirmeyah"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "so",
         "lemma": "ken"
       }
@@ -672,6 +748,10 @@
       {
         "surface": "And Jeremiah",
         "lemma": "yirmeyah"
+      },
+      {
+        "surface": "remained",
+        "lemma": "yashav"
       },
       {
         "surface": "in the courtyard",
@@ -732,12 +812,20 @@
         "lemma": "davar"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
       {
         "surface": "Jeremiah",
         "lemma": "yirmeyah"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "hide",
@@ -758,12 +846,24 @@
         "lemma": "yirmeyah"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "you will surely put me to death",
         "lemma": "mut"
       },
       {
         "surface": "I give you advice",
         "lemma": "yaats"
+      },
+      {
+        "surface": "you will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
       }
     ],
     "16": [
@@ -796,12 +896,28 @@
         "lemma": "chay"
       },
       {
+        "surface": "has given",
+        "lemma": "asah"
+      },
+      {
         "surface": "life",
         "lemma": "nephesh"
       },
       {
+        "surface": "I will not",
+        "lemma": "im"
+      },
+      {
         "surface": "kill you",
         "lemma": "mut"
+      },
+      {
+        "surface": "nor",
+        "lemma": "im"
+      },
+      {
+        "surface": "will I deliver you",
+        "lemma": "natan"
       },
       {
         "surface": "into the hands",
@@ -824,6 +940,10 @@
       {
         "surface": "Then Jeremiah",
         "lemma": "yirmeyah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Zedekiah",
@@ -854,6 +974,18 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "you indeed surrender",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the officers",
         "lemma": "sar"
       },
@@ -878,6 +1010,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be burned down",
         "lemma": "saraph"
       },
@@ -891,6 +1027,18 @@
       }
     ],
     "18": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "surrender",
+        "lemma": "yatsa"
+      },
       {
         "surface": "the officers",
         "lemma": "sar"
@@ -908,6 +1056,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "will be delivered",
+        "lemma": "natan"
+      },
+      {
         "surface": "into the hands",
         "lemma": "yad"
       },
@@ -918,6 +1070,10 @@
       {
         "surface": "They will burn it down",
         "lemma": "saraph"
+      },
+      {
+        "surface": "yourself will not",
+        "lemma": "lo"
       },
       {
         "surface": "escape",
@@ -936,6 +1092,10 @@
       {
         "surface": "Zedekiah",
         "lemma": "tsidqiyyah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Jeremiah",
@@ -958,6 +1118,10 @@
         "lemma": "kasdi"
       },
       {
+        "surface": "may deliver",
+        "lemma": "natan"
+      },
+      {
         "surface": "into their hands",
         "lemma": "yad"
       },
@@ -968,8 +1132,24 @@
     ],
     "20": [
       {
+        "surface": "They will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "hand you over",
+        "lemma": "natan"
+      },
+      {
         "surface": "Jeremiah",
         "lemma": "yirmeyah"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Obey",
+        "lemma": "shama"
       },
       {
         "surface": "the voice",
@@ -998,8 +1178,16 @@
     ],
     "21": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "refuse",
         "lemma": "maen"
+      },
+      {
+        "surface": "to surrender",
+        "lemma": "yatsa"
       },
       {
         "surface": "is the word",
@@ -1008,9 +1196,17 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has shown me",
+        "lemma": "raah"
       }
     ],
     "22": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the women",
         "lemma": "ishshah"
@@ -1032,6 +1228,10 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "will be brought out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the officials",
         "lemma": "sar"
       },
@@ -1042,6 +1242,10 @@
       {
         "surface": "of Babylon",
         "lemma": "bavel"
+      },
+      {
+        "surface": "will say",
+        "lemma": "amar"
       },
       {
         "surface": "They misled you",
@@ -1082,6 +1286,10 @@
     ],
     "23": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "your wives",
         "lemma": "ishshah"
       },
@@ -1090,8 +1298,16 @@
         "lemma": "ben"
       },
       {
+        "surface": "will be brought out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the Chaldeans",
         "lemma": "kasdi"
+      },
+      {
+        "surface": "yourself will not",
+        "lemma": "lo"
       },
       {
         "surface": "escape",
@@ -1132,8 +1348,16 @@
         "lemma": "tsidqiyyah"
       },
       {
+        "surface": "warned",
+        "lemma": "amar"
+      },
+      {
         "surface": "Jeremiah",
         "lemma": "yirmeyah"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "let anyone",
@@ -1148,6 +1372,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
         "surface": "you will die",
         "lemma": "mut"
       }
@@ -1158,8 +1386,20 @@
         "lemma": "sar"
       },
       {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "I have spoken",
         "lemma": "davar"
+      },
+      {
+        "surface": "and they come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and demand",
+        "lemma": "amar"
       },
       {
         "surface": "Tell",
@@ -1190,8 +1430,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "hide it",
         "lemma": "kachad"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "we will kill you",
@@ -1199,6 +1447,10 @@
       }
     ],
     "26": [
+      {
+        "surface": "then tell them",
+        "lemma": "amar"
+      },
       {
         "surface": "was presenting",
         "lemma": "naphal"
@@ -1220,6 +1472,10 @@
         "lemma": "bilti"
       },
       {
+        "surface": "return me",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to the house",
         "lemma": "bet"
       },
@@ -1238,8 +1494,16 @@
     ],
     "27": [
       {
+        "surface": "When all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the officials",
         "lemma": "sar"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "Jeremiah",
@@ -1252,6 +1516,10 @@
       {
         "surface": "he relayed",
         "lemma": "nagad"
+      },
+      {
+        "surface": "the exact",
+        "lemma": "kol"
       },
       {
         "surface": "words",
@@ -1270,6 +1538,14 @@
         "lemma": "charash"
       },
       {
+        "surface": "no one",
+        "lemma": "lo"
+      },
+      {
+        "surface": "had overheard",
+        "lemma": "shama"
+      },
+      {
         "surface": "the conversation",
         "lemma": "davar"
       }
@@ -1278,6 +1554,10 @@
       {
         "surface": "And Jeremiah",
         "lemma": "yirmeyah"
+      },
+      {
+        "surface": "remained",
+        "lemma": "yashav"
       },
       {
         "surface": "in the courtyard",
@@ -1303,7 +1583,7 @@
   },
   "themeLemmas": [
     "yirmeyah",
-    "evedmelekh",
-    "mut"
+    "amar",
+    "evedmelekh"
   ]
 }

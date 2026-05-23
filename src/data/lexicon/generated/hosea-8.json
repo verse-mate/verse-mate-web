@@ -88,8 +88,16 @@
         "lemma": "malakh"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "They make princes",
         "lemma": "sur"
+      },
+      {
+        "surface": "but without",
+        "lemma": "lo"
       },
       {
         "surface": "My approval",
@@ -102,6 +110,10 @@
       {
         "surface": "and gold",
         "lemma": "zahav"
+      },
+      {
+        "surface": "they make",
+        "lemma": "asah"
       },
       {
         "surface": "idols",
@@ -134,6 +146,10 @@
         "lemma": "charah"
       },
       {
+        "surface": "incapable",
+        "lemma": "lo"
+      },
+      {
         "surface": "of innocence",
         "lemma": "niqqavon"
       }
@@ -148,8 +164,20 @@
         "lemma": "charash"
       },
       {
+        "surface": "made it",
+        "lemma": "asah"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "It will be",
+        "lemma": "hayah"
       },
       {
         "surface": "broken to pieces",
@@ -198,12 +226,20 @@
         "lemma": "beli"
       },
       {
+        "surface": "to yield",
+        "lemma": "asah"
+      },
+      {
         "surface": "flour",
         "lemma": "qemach"
       },
       {
         "surface": "Even if",
         "lemma": "ulay"
+      },
+      {
+        "surface": "it should produce",
+        "lemma": "asah"
       },
       {
         "surface": "the foreigners",
@@ -226,6 +262,10 @@
       {
         "surface": "Now",
         "lemma": "attah"
+      },
+      {
+        "surface": "they are",
+        "lemma": "hayah"
       },
       {
         "surface": "among the nations",
@@ -326,6 +366,10 @@
         "lemma": "chata"
       },
       {
+        "surface": "they became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "altars",
         "lemma": "mizbeach"
       },
@@ -382,6 +426,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "accept them",
         "lemma": "ratsah"
       },
@@ -406,6 +454,10 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
       }
@@ -418,6 +470,10 @@
       {
         "surface": "has forgotten",
         "lemma": "shakhach"
+      },
+      {
+        "surface": "his Maker",
+        "lemma": "asah"
       },
       {
         "surface": "and built",
@@ -467,7 +523,7 @@
   },
   "themeLemmas": [
     "yisrael",
-    "attah",
-    "zur"
+    "lo",
+    "asah"
   ]
 }

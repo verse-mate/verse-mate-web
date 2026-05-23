@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "No man",
+        "lemma": "lo"
+      },
+      {
         "surface": "with crushed",
         "lemma": "patsa"
       },
@@ -18,6 +22,10 @@
         "lemma": "shophkhah"
       },
       {
+        "surface": "may enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the assembly",
         "lemma": "qahal"
       },
@@ -28,8 +36,16 @@
     ],
     "2": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "one of illegitimate birth",
         "lemma": "mamzer"
+      },
+      {
+        "surface": "may enter",
+        "lemma": "bo"
       },
       {
         "surface": "the assembly",
@@ -38,6 +54,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "nor may any of his descendants",
+        "lemma": "lo"
       },
       {
         "surface": "to the tenth",
@@ -50,12 +70,24 @@
     ],
     "3": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "Ammonite",
         "lemma": "ammoni"
       },
       {
         "surface": "or Moabite",
         "lemma": "moavi"
+      },
+      {
+        "surface": "or any of their descendants",
+        "lemma": "lo"
+      },
+      {
+        "surface": "may enter",
+        "lemma": "bo"
       },
       {
         "surface": "the assembly",
@@ -76,6 +108,10 @@
     ],
     "4": [
       {
+        "surface": "they did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "meet",
         "lemma": "qadam"
       },
@@ -90,6 +126,10 @@
       {
         "surface": "on your way",
         "lemma": "derekh"
+      },
+      {
+        "surface": "out of",
+        "lemma": "yatsa"
       },
       {
         "surface": "Egypt",
@@ -142,6 +182,14 @@
         "lemma": "avah"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "Balaam",
         "lemma": "bilam"
       },
@@ -180,6 +228,10 @@
     ],
     "6": [
       {
+        "surface": "You are not to",
+        "lemma": "lo"
+      },
+      {
         "surface": "seek",
         "lemma": "darash"
       },
@@ -190,9 +242,17 @@
       {
         "surface": "or prosperity from them",
         "lemma": "tov"
+      },
+      {
+        "surface": "as long as you live",
+        "lemma": "kol"
       }
     ],
     "7": [
+      {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
       {
         "surface": "despise",
         "lemma": "taav"
@@ -206,12 +266,20 @@
         "lemma": "ach"
       },
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "despise",
         "lemma": "taav"
       },
       {
         "surface": "an Egyptian",
         "lemma": "mitsri"
+      },
+      {
+        "surface": "you lived",
+        "lemma": "hayah"
       },
       {
         "surface": "as a foreigner",
@@ -240,6 +308,10 @@
         "lemma": "yalad"
       },
       {
+        "surface": "may enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the assembly",
         "lemma": "qahal"
       },
@@ -250,12 +322,20 @@
     ],
     "9": [
       {
+        "surface": "you are encamped",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "your enemies",
         "lemma": "oyev"
       },
       {
         "surface": "then you shall keep yourself",
         "lemma": "shamar"
+      },
+      {
+        "surface": "from every",
+        "lemma": "kol"
       },
       {
         "surface": "wicked",
@@ -272,6 +352,14 @@
         "lemma": "ish"
       },
       {
+        "surface": "becomes",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "unclean",
         "lemma": "tahor"
       },
@@ -284,8 +372,16 @@
         "lemma": "qareh"
       },
       {
+        "surface": "he must leave",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the camp",
         "lemma": "machaneh"
+      },
+      {
+        "surface": "and stay",
+        "lemma": "bo"
       },
       {
         "surface": "outside",
@@ -314,11 +410,23 @@
         "lemma": "shemesh"
       },
       {
+        "surface": "sets",
+        "lemma": "bo"
+      },
+      {
+        "surface": "he may return",
+        "lemma": "bo"
+      },
+      {
         "surface": "the camp",
         "lemma": "machaneh"
       }
     ],
     "12": [
+      {
+        "surface": "You must have",
+        "lemma": "hayah"
+      },
       {
         "surface": "a place",
         "lemma": "yad"
@@ -332,11 +440,19 @@
         "lemma": "machaneh"
       },
       {
+        "surface": "to go",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "and relieve yourself",
         "lemma": "sham"
       }
     ],
     "13": [
+      {
+        "surface": "And you must have",
+        "lemma": "hayah"
+      },
       {
         "surface": "a digging tool",
         "lemma": "yated"
@@ -344,6 +460,14 @@
       {
         "surface": "your equipment",
         "lemma": "azen"
+      },
+      {
+        "surface": "so that",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "when you relieve yourself",
+        "lemma": "yashav"
       },
       {
         "surface": "you can dig a hole",
@@ -384,6 +508,10 @@
         "lemma": "natsal"
       },
       {
+        "surface": "and deliver",
+        "lemma": "natan"
+      },
+      {
         "surface": "your enemies",
         "lemma": "oyev"
       },
@@ -396,8 +524,20 @@
         "lemma": "machaneh"
       },
       {
+        "surface": "must be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "holy",
         "lemma": "qadosh"
+      },
+      {
+        "surface": "lest",
+        "lemma": "lo"
+      },
+      {
+        "surface": "He see",
+        "lemma": "raah"
       },
       {
         "surface": "anything",
@@ -408,11 +548,19 @@
         "lemma": "ervah"
       },
       {
+        "surface": "and turn away",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from you",
         "lemma": "achar"
       }
     ],
     "15": [
+      {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
       {
         "surface": "return",
         "lemma": "sagar"
@@ -431,6 +579,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "Let him live",
+        "lemma": "yashav"
+      },
       {
         "surface": "among you",
         "lemma": "qerev"
@@ -456,14 +608,26 @@
         "lemma": "tov"
       },
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "oppress him",
         "lemma": "yanah"
       }
     ],
     "17": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "son",
@@ -474,11 +638,23 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "is to be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a shrine prostitute",
         "lemma": "qadesh"
       }
     ],
     "18": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "bring",
+        "lemma": "bo"
+      },
       {
         "surface": "the wages",
         "lemma": "etnan"
@@ -504,6 +680,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "to fulfill any",
+        "lemma": "kol"
+      },
+      {
         "surface": "vow",
         "lemma": "neder"
       },
@@ -526,6 +706,10 @@
     ],
     "19": [
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "charge",
         "lemma": "nashakh"
       },
@@ -546,6 +730,10 @@
         "lemma": "okhel"
       },
       {
+        "surface": "or any",
+        "lemma": "kol"
+      },
+      {
         "surface": "other",
         "lemma": "davar"
       },
@@ -564,6 +752,10 @@
         "lemma": "nashakh"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "your brother",
         "lemma": "ach"
       },
@@ -580,6 +772,10 @@
         "lemma": "barakh"
       },
       {
+        "surface": "in everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "to which you put",
         "lemma": "mishlach"
       },
@@ -590,6 +786,10 @@
       {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "are entering",
+        "lemma": "bo"
       },
       {
         "surface": "to possess",
@@ -614,6 +814,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be slow to keep it",
         "lemma": "achar"
       },
@@ -624,6 +828,10 @@
       {
         "surface": "will surely require it",
         "lemma": "darash"
+      },
+      {
+        "surface": "and you will be",
+        "lemma": "hayah"
       },
       {
         "surface": "guilty of sin",
@@ -640,6 +848,14 @@
         "lemma": "nadar"
       },
       {
+        "surface": "you will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "guilty of sin",
         "lemma": "chet"
       }
@@ -648,6 +864,10 @@
       {
         "surface": "Be careful",
         "lemma": "shamar"
+      },
+      {
+        "surface": "to follow through",
+        "lemma": "asah"
       },
       {
         "surface": "on what comes",
@@ -684,6 +904,10 @@
     ],
     "24": [
       {
+        "surface": "you enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "your neighbor’s",
         "lemma": "rea"
       },
@@ -708,11 +932,23 @@
         "lemma": "enav"
       },
       {
+        "surface": "but you must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "put",
+        "lemma": "natan"
+      },
+      {
         "surface": "your basket",
         "lemma": "keli"
       }
     ],
     "25": [
+      {
+        "surface": "you enter",
+        "lemma": "bo"
+      },
       {
         "surface": "your neighbor’s",
         "lemma": "rea"
@@ -734,6 +970,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "but you must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "put",
         "lemma": "nuph"
       },
@@ -752,8 +992,8 @@
     ]
   },
   "themeLemmas": [
-    "machaneh",
-    "qahal",
-    "rea"
+    "lo",
+    "bo",
+    "hayah"
   ]
 }

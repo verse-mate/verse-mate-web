@@ -72,6 +72,10 @@
         "lemma": "mum"
       },
       {
+        "surface": "and has never",
+        "lemma": "lo"
+      },
+      {
         "surface": "been placed",
         "lemma": "alah"
       },
@@ -82,12 +86,20 @@
     ],
     "3": [
       {
+        "surface": "Give",
+        "lemma": "natan"
+      },
+      {
         "surface": "Eleazar",
         "lemma": "elazar"
       },
       {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "and he will have it brought",
+        "lemma": "yatsa"
       },
       {
         "surface": "outside",
@@ -262,6 +274,10 @@
         "lemma": "achar"
       },
       {
+        "surface": "he may enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the camp",
         "lemma": "machaneh"
       },
@@ -354,6 +370,10 @@
         "lemma": "machaneh"
       },
       {
+        "surface": "They must be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "kept",
         "lemma": "mishmeret"
       },
@@ -408,6 +428,10 @@
         "lemma": "erev"
       },
       {
+        "surface": "This",
+        "lemma": "hayah"
+      },
+      {
         "surface": "is a permanent",
         "lemma": "olam"
       },
@@ -436,6 +460,10 @@
       {
         "surface": "Whoever touches",
         "lemma": "naga"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "dead",
@@ -488,6 +516,14 @@
         "lemma": "taher"
       },
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "he does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "purify himself",
         "lemma": "chata"
       },
@@ -504,11 +540,19 @@
         "lemma": "yom"
       },
       {
+        "surface": "he will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be clean",
         "lemma": "taher"
       }
     ],
     "13": [
+      {
+        "surface": "Anyone",
+        "lemma": "kol"
+      },
       {
         "surface": "who touches",
         "lemma": "naga"
@@ -520,6 +564,10 @@
       {
         "surface": "corpse",
         "lemma": "mut"
+      },
+      {
+        "surface": "and fails",
+        "lemma": "lo"
       },
       {
         "surface": "to purify",
@@ -550,6 +598,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "He remains",
+        "lemma": "hayah"
+      },
+      {
         "surface": "unclean",
         "lemma": "tame"
       },
@@ -560,6 +612,10 @@
       {
         "surface": "of purification",
         "lemma": "niddah"
+      },
+      {
+        "surface": "has not",
+        "lemma": "lo"
       },
       {
         "surface": "been sprinkled",
@@ -592,8 +648,20 @@
         "lemma": "ohel"
       },
       {
+        "surface": "Everyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who enters",
+        "lemma": "bo"
+      },
+      {
         "surface": "the tent",
         "lemma": "ohel"
+      },
+      {
+        "surface": "and everyone",
+        "lemma": "kol"
       },
       {
         "surface": "already in the tent",
@@ -613,6 +681,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "and any",
+        "lemma": "kol"
+      },
       {
         "surface": "open",
         "lemma": "patach"
@@ -639,6 +711,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "Anyone",
+        "lemma": "kol"
+      },
       {
         "surface": "the open field",
         "lemma": "paneh"
@@ -706,6 +782,10 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "put them",
+        "lemma": "natan"
+      },
+      {
         "surface": "a jar",
         "lemma": "keli"
       },
@@ -752,12 +832,20 @@
         "lemma": "ohel"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the furnishings",
         "lemma": "keli"
       },
       {
         "surface": "and the people",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
       },
       {
         "surface": "there",
@@ -860,6 +948,10 @@
         "lemma": "tame"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "purify",
         "lemma": "chata"
       },
@@ -900,6 +992,10 @@
         "lemma": "niddah"
       },
       {
+        "surface": "has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "been sprinkled",
         "lemma": "zaraq"
       },
@@ -909,6 +1005,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "This",
+        "lemma": "hayah"
+      },
       {
         "surface": "is a permanent",
         "lemma": "olam"
@@ -960,6 +1060,10 @@
     ],
     "22": [
       {
+        "surface": "Anything",
+        "lemma": "kol"
+      },
+      {
         "surface": "the unclean",
         "lemma": "tame"
       },
@@ -992,6 +1096,6 @@
   "themeLemmas": [
     "tame",
     "mayim",
-    "naga"
+    "kol"
   ]
 }

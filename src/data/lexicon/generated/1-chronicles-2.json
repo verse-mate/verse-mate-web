@@ -58,6 +58,10 @@
       {
         "surface": "Gad",
         "lemma": "gad"
+      },
+      {
+        "surface": "and Asher",
+        "lemma": "asher"
       }
     ],
     "3": [
@@ -110,6 +114,10 @@
         "lemma": "bekhor"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "wicked",
         "lemma": "ra"
       },
@@ -158,6 +166,10 @@
       {
         "surface": "sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       }
     ],
     "5": [
@@ -210,6 +222,10 @@
       {
         "surface": "five",
         "lemma": "chamesh"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       }
     ],
     "7": [
@@ -502,6 +518,10 @@
         "lemma": "amasa"
       },
       {
+        "surface": "father",
+        "lemma": "av"
+      },
+      {
         "surface": "was Jether",
         "lemma": "yeter"
       },
@@ -622,12 +642,20 @@
         "lemma": "chetsron"
       },
       {
+        "surface": "slept with",
+        "lemma": "bo"
+      },
+      {
         "surface": "the daughter",
         "lemma": "bat"
       },
       {
         "surface": "of Machir",
         "lemma": "makhir"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
       },
       {
         "surface": "of Gilead",
@@ -666,6 +694,10 @@
       {
         "surface": "Jair",
         "lemma": "yair"
+      },
+      {
+        "surface": "who had",
+        "lemma": "hayah"
       },
       {
         "surface": "twenty-three",
@@ -722,12 +754,20 @@
         "lemma": "ir"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "descendants",
         "lemma": "ben"
       },
       {
         "surface": "of Machir",
         "lemma": "makhir"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
       },
       {
         "surface": "of Gilead",
@@ -774,6 +814,10 @@
       {
         "surface": "Ashhur",
         "lemma": "ashchur"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
       },
       {
         "surface": "of Tekoa",
@@ -826,6 +870,10 @@
       {
         "surface": "Jerahmeel",
         "lemma": "yerachmeel"
+      },
+      {
+        "surface": "had",
+        "lemma": "hayah"
       },
       {
         "surface": "another",
@@ -972,6 +1020,10 @@
         "lemma": "mut"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "children",
         "lemma": "ben"
       }
@@ -1048,6 +1100,10 @@
         "lemma": "mut"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "children",
         "lemma": "ben"
       }
@@ -1070,6 +1126,10 @@
         "lemma": "zaza"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the descendants",
         "lemma": "ben"
       },
@@ -1082,6 +1142,14 @@
       {
         "surface": "Sheshan",
         "lemma": "sheshan"
+      },
+      {
+        "surface": "had",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "sons",
@@ -1122,6 +1190,10 @@
         "lemma": "bat"
       },
       {
+        "surface": "in marriage",
+        "lemma": "natan"
+      },
+      {
         "surface": "to his servant",
         "lemma": "eved"
       },
@@ -1146,6 +1218,14 @@
       {
         "surface": "was the father of",
         "lemma": "yalad"
+      },
+      {
+        "surface": "Nathan",
+        "lemma": "natan"
+      },
+      {
+        "surface": "Nathan",
+        "lemma": "natan"
       },
       {
         "surface": "was the father of",
@@ -1312,6 +1392,10 @@
         "lemma": "bekhor"
       },
       {
+        "surface": "was the father of",
+        "lemma": "av"
+      },
+      {
         "surface": "Ziph",
         "lemma": "ziph"
       },
@@ -1322,6 +1406,10 @@
       {
         "surface": "his second son",
         "lemma": "ben"
+      },
+      {
+        "surface": "who was the father of",
+        "lemma": "av"
       },
       {
         "surface": "Hebron",
@@ -1368,6 +1456,10 @@
         "lemma": "racham"
       },
       {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of Jorkeam",
         "lemma": "yorqeam"
       },
@@ -1400,6 +1492,10 @@
       {
         "surface": "and Maon",
         "lemma": "maon"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "av"
       },
       {
         "surface": "vvv",
@@ -1522,12 +1618,20 @@
         "lemma": "shaaph"
       },
       {
+        "surface": "father",
+        "lemma": "av"
+      },
+      {
         "surface": "of Madmannah",
         "lemma": "madmannah"
       },
       {
         "surface": "and of Sheva",
         "lemma": "sheva"
+      },
+      {
+        "surface": "father",
+        "lemma": "av"
       },
       {
         "surface": "of Machbenah",
@@ -1551,6 +1655,10 @@
       }
     ],
     "50": [
+      {
+        "surface": "were",
+        "lemma": "hayah"
+      },
       {
         "surface": "the descendants",
         "lemma": "ben"
@@ -1580,6 +1688,10 @@
         "lemma": "shoval"
       },
       {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
         "surface": "vvv",
         "lemma": "qiryatyearim"
       },
@@ -1594,6 +1706,10 @@
         "lemma": "salma"
       },
       {
+        "surface": "the father of",
+        "lemma": "av"
+      },
+      {
         "surface": "vvv",
         "lemma": "betlechem"
       },
@@ -1606,6 +1722,10 @@
         "lemma": "chareph"
       },
       {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
         "surface": "vvv",
         "lemma": "betgader"
       },
@@ -1616,12 +1736,20 @@
     ],
     "52": [
       {
+        "surface": "These were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the descendants",
         "lemma": "ben"
       },
       {
         "surface": "of Shobal",
         "lemma": "shoval"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
       },
       {
         "surface": "vvv",
@@ -1672,6 +1800,10 @@
       {
         "surface": "and Mishraites",
         "lemma": "mishrai"
+      },
+      {
+        "surface": "descended",
+        "lemma": "yatsa"
       },
       {
         "surface": "the Zorathites",
@@ -1738,6 +1870,10 @@
         "lemma": "saphar"
       },
       {
+        "surface": "who lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "at Jabez",
         "lemma": "yabets"
       },
@@ -1758,8 +1894,16 @@
         "lemma": "qeni"
       },
       {
+        "surface": "who came",
+        "lemma": "bo"
+      },
+      {
         "surface": "from Hammath",
         "lemma": "chammat"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
       },
       {
         "surface": "of the house",
@@ -1774,6 +1918,6 @@
   "themeLemmas": [
     "yalad",
     "kalev",
-    "chetsron"
+    "hayah"
   ]
 }

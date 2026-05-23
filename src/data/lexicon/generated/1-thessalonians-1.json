@@ -64,6 +64,14 @@
         "lemma": "theos"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "remembering you",
+        "lemma": "poieo"
+      },
+      {
         "surface": "prayers",
         "lemma": "proseuche"
       }
@@ -136,6 +144,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "we know",
+        "lemma": "eido"
+      },
+      {
         "surface": "that He has chosen",
         "lemma": "ekloge"
       }
@@ -144,6 +156,10 @@
       {
         "surface": "gospel",
         "lemma": "euangelion"
+      },
+      {
+        "surface": "came",
+        "lemma": "ginomai"
       },
       {
         "surface": "only",
@@ -166,11 +182,27 @@
         "lemma": "pneuma"
       },
       {
+        "surface": "great",
+        "lemma": "polus"
+      },
+      {
         "surface": "conviction",
         "lemma": "plerophoria"
+      },
+      {
+        "surface": "you know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "we lived",
+        "lemma": "ginomai"
       }
     ],
     "6": [
+      {
+        "surface": "became",
+        "lemma": "ginomai"
+      },
       {
         "surface": "imitators",
         "lemma": "mimetes"
@@ -200,14 +232,26 @@
         "lemma": "pneuma"
       },
       {
+        "surface": "great",
+        "lemma": "polus"
+      },
+      {
         "surface": "suffering",
         "lemma": "thlipsis"
       }
     ],
     "7": [
       {
+        "surface": "have become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "an example",
         "lemma": "tupos"
+      },
+      {
+        "surface": "to all",
+        "lemma": "pas"
       },
       {
         "surface": "believers",
@@ -256,12 +300,28 @@
         "lemma": "theos"
       },
       {
+        "surface": "has gone out",
+        "lemma": "exerchomai"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "place",
         "lemma": "topos"
       },
       {
+        "surface": "have",
+        "lemma": "echo"
+      },
+      {
         "surface": "need",
         "lemma": "chreia"
+      },
+      {
+        "surface": "to say",
+        "lemma": "laleo"
       }
     ],
     "9": [
@@ -272,6 +332,10 @@
       {
         "surface": "of welcome",
         "lemma": "eisodos"
+      },
+      {
+        "surface": "you gave us",
+        "lemma": "echo"
       },
       {
         "surface": "you turned",
@@ -330,6 +394,10 @@
       {
         "surface": "deliverer",
         "lemma": "rhuomai"
+      },
+      {
+        "surface": "coming",
+        "lemma": "erchomai"
       },
       {
         "surface": "wrath",

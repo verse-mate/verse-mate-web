@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe to you",
-        "lemma": "hoy"
-      },
-      {
         "surface": "O Ariel",
         "lemma": "ariel"
       },
@@ -56,12 +52,20 @@
         "lemma": "ariel"
       },
       {
+        "surface": "and there will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "mourning",
         "lemma": "taaniyyah"
       },
       {
         "surface": "and lamentation",
         "lemma": "aniyyah"
+      },
+      {
+        "surface": "she will be",
+        "lemma": "hayah"
       },
       {
         "surface": "like an altar hearth",
@@ -124,6 +128,10 @@
         "lemma": "qol"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a spirit",
         "lemma": "ov"
       },
@@ -152,6 +160,10 @@
       {
         "surface": "foes",
         "lemma": "zur"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "like fine",
@@ -238,6 +250,10 @@
     ],
     "7": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the many",
         "lemma": "hamon"
       },
@@ -254,6 +270,10 @@
         "lemma": "ariel"
       },
       {
+        "surface": "even all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who war against her",
         "lemma": "tsava"
       },
@@ -264,6 +284,10 @@
       {
         "surface": "and attacking",
         "lemma": "tsuq"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "like a dream",
@@ -328,6 +352,14 @@
         "lemma": "ken"
       },
       {
+        "surface": "will it be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the many",
         "lemma": "hamon"
       },
@@ -370,12 +402,20 @@
         "lemma": "shakhar"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "with wine",
         "lemma": "yayin"
       },
       {
         "surface": "stagger",
         "lemma": "nua"
+      },
+      {
+        "surface": "but not",
+        "lemma": "lo"
       },
       {
         "surface": "from strong drink",
@@ -426,8 +466,16 @@
     ],
     "11": [
       {
+        "surface": "And the entire",
+        "lemma": "kol"
+      },
+      {
         "surface": "vision",
         "lemma": "chazut"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "like the words",
@@ -442,8 +490,20 @@
         "lemma": "sepher"
       },
       {
+        "surface": "is handed",
+        "lemma": "natan"
+      },
+      {
         "surface": "someone to read",
         "lemma": "yada"
+      },
+      {
+        "surface": "he will say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I cannot",
+        "lemma": "lo"
       },
       {
         "surface": "is sealed",
@@ -456,14 +516,34 @@
         "lemma": "sepher"
       },
       {
+        "surface": "is handed",
+        "lemma": "natan"
+      },
+      {
+        "surface": "unable",
+        "lemma": "lo"
+      },
+      {
         "surface": "to read",
         "lemma": "yada"
+      },
+      {
+        "surface": "he will say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I cannot read",
+        "lemma": "lo"
       }
     ],
     "13": [
       {
         "surface": "the Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "people",
@@ -496,6 +576,10 @@
       {
         "surface": "Their worship",
         "lemma": "yirah"
+      },
+      {
+        "surface": "is but",
+        "lemma": "hayah"
       },
       {
         "surface": "rules",
@@ -562,10 +646,6 @@
     ],
     "15": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to those who dig deep",
         "lemma": "amaq"
       },
@@ -590,8 +670,16 @@
         "lemma": "maaseh"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "Who",
         "lemma": "mi"
+      },
+      {
+        "surface": "sees us",
+        "lemma": "raah"
       },
       {
         "surface": "and who",
@@ -606,6 +694,10 @@
       {
         "surface": "You have turned things upside down",
         "lemma": "hophekh"
+      },
+      {
+        "surface": "as if",
+        "lemma": "im"
       },
       {
         "surface": "the potter",
@@ -624,12 +716,36 @@
         "lemma": "maaseh"
       },
       {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to him who formed it",
+        "lemma": "asah"
+      },
+      {
+        "surface": "He did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "make me",
+        "lemma": "asah"
+      },
+      {
         "surface": "Can the pottery",
         "lemma": "yetser"
       },
       {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
         "surface": "of the potter",
         "lemma": "yatsar"
+      },
+      {
+        "surface": "He has no",
+        "lemma": "lo"
       },
       {
         "surface": "understanding",
@@ -637,6 +753,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
       {
         "surface": "In a very",
         "lemma": "od"
@@ -652,6 +772,10 @@
       {
         "surface": "will not Lebanon",
         "lemma": "levanon"
+      },
+      {
+        "surface": "become",
+        "lemma": "shuv"
       },
       {
         "surface": "an orchard",
@@ -680,6 +804,10 @@
         "lemma": "cheresh"
       },
       {
+        "surface": "will hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "the words",
         "lemma": "davar"
       },
@@ -702,6 +830,10 @@
       {
         "surface": "of the blind",
         "lemma": "ivver"
+      },
+      {
+        "surface": "will see",
+        "lemma": "raah"
       }
     ],
     "19": [
@@ -758,6 +890,10 @@
       {
         "surface": "will disappear",
         "lemma": "kalah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "who look",
@@ -828,12 +964,20 @@
         "lemma": "avraham"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the house",
         "lemma": "bet"
       },
       {
         "surface": "of Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -846,6 +990,10 @@
       {
         "surface": "be ashamed",
         "lemma": "bush"
+      },
+      {
+        "surface": "and no",
+        "lemma": "lo"
       },
       {
         "surface": "more",
@@ -861,6 +1009,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "when he sees",
+        "lemma": "raah"
+      },
       {
         "surface": "his children",
         "lemma": "yeled"
@@ -942,8 +1094,8 @@
     ]
   },
   "themeLemmas": [
-    "ariel",
-    "yada",
-    "tsava"
+    "lo",
+    "hayah",
+    "amar"
   ]
 }

@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "I am saying is that",
+        "lemma": "lego"
+      },
+      {
         "surface": "heir",
         "lemma": "kleronomos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "a child",
@@ -22,11 +30,23 @@
         "lemma": "doulos"
       },
       {
+        "surface": "although he is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the owner",
         "lemma": "kurios"
+      },
+      {
+        "surface": "of everything",
+        "lemma": "pas"
       }
     ],
     "2": [
+      {
+        "surface": "He is",
+        "lemma": "eimi"
+      },
       {
         "surface": "guardians",
         "lemma": "epitropos"
@@ -50,8 +70,16 @@
         "lemma": "houto"
       },
       {
+        "surface": "we were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "children",
         "lemma": "nepios"
+      },
+      {
+        "surface": "were",
+        "lemma": "eimi"
       },
       {
         "surface": "enslaved",
@@ -76,6 +104,10 @@
         "lemma": "pleroma"
       },
       {
+        "surface": "come",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -88,8 +120,16 @@
         "lemma": "huios"
       },
       {
+        "surface": "born",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "a woman",
         "lemma": "gune"
+      },
+      {
+        "surface": "born",
+        "lemma": "ginomai"
       },
       {
         "surface": "the law",
@@ -115,6 +155,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "you are",
+        "lemma": "eimi"
+      },
       {
         "surface": "sons",
         "lemma": "huios"
@@ -154,6 +198,10 @@
     ],
     "7": [
       {
+        "surface": "you are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a slave",
         "lemma": "doulos"
       },
@@ -180,6 +228,10 @@
         "lemma": "tote"
       },
       {
+        "surface": "when you did not know",
+        "lemma": "eido"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -192,6 +244,10 @@
         "lemma": "phusis"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "gods",
         "lemma": "theos"
       }
@@ -202,12 +258,20 @@
         "lemma": "nun"
       },
       {
+        "surface": "you know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
       {
         "surface": "or rather",
         "lemma": "mallon"
+      },
+      {
+        "surface": "are known",
+        "lemma": "ginosko"
       },
       {
         "surface": "God",
@@ -232,6 +296,10 @@
       {
         "surface": "principles",
         "lemma": "stoicheion"
+      },
+      {
+        "surface": "Do you wish",
+        "lemma": "thelo"
       },
       {
         "surface": "to be enslaved",
@@ -292,11 +360,19 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "You have done me no wrong",
         "lemma": "adikeo"
       }
     ],
     "13": [
+      {
+        "surface": "You know",
+        "lemma": "eido"
+      },
       {
         "surface": "an illness",
         "lemma": "astheneia"
@@ -368,9 +444,17 @@
       {
         "surface": "eyes",
         "lemma": "ophthalmos"
+      },
+      {
+        "surface": "and given them",
+        "lemma": "didomi"
       }
     ],
     "16": [
+      {
+        "surface": "Have I now become",
+        "lemma": "ginomai"
+      },
       {
         "surface": "enemy",
         "lemma": "echthros"
@@ -388,6 +472,10 @@
       {
         "surface": "in a good way",
         "lemma": "kalos"
+      },
+      {
+        "surface": "they want",
+        "lemma": "thelo"
       },
       {
         "surface": "to isolate",
@@ -448,6 +536,10 @@
     ],
     "20": [
       {
+        "surface": "I wish",
+        "lemma": "thelo"
+      },
+      {
         "surface": "I could be",
         "lemma": "pareimi"
       },
@@ -470,8 +562,24 @@
     ],
     "21": [
       {
+        "surface": "Tell",
+        "lemma": "lego"
+      },
+      {
+        "surface": "want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the law",
         "lemma": "nomos"
+      },
+      {
+        "surface": "do you not understand what",
+        "lemma": "akouo"
       },
       {
         "surface": "law says",
@@ -480,8 +588,16 @@
     ],
     "22": [
       {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "Abraham",
         "lemma": "abraam"
+      },
+      {
+        "surface": "had",
+        "lemma": "echo"
       },
       {
         "surface": "two",
@@ -492,8 +608,16 @@
         "lemma": "huios"
       },
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "slave woman",
         "lemma": "paidiske"
+      },
+      {
+        "surface": "the other",
+        "lemma": "heis"
       },
       {
         "surface": "free woman",
@@ -524,8 +648,16 @@
     ],
     "24": [
       {
+        "surface": "vvv",
+        "lemma": "eimi"
+      },
+      {
         "surface": "serve as illustrations",
         "lemma": "allegoreo"
+      },
+      {
+        "surface": "represent",
+        "lemma": "eimi"
       },
       {
         "surface": "two",
@@ -534,6 +666,10 @@
       {
         "surface": "covenants",
         "lemma": "diatheke"
+      },
+      {
+        "surface": "One covenant",
+        "lemma": "heis"
       },
       {
         "surface": "Mount",
@@ -552,6 +688,10 @@
         "lemma": "douleia"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Hagar",
         "lemma": "agar"
       }
@@ -560,6 +700,10 @@
       {
         "surface": "Hagar",
         "lemma": "agar"
+      },
+      {
+        "surface": "stands for",
+        "lemma": "eimi"
       },
       {
         "surface": "Mount",
@@ -604,8 +748,16 @@
         "lemma": "ano"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "free",
         "lemma": "eleutheros"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "mother",
@@ -613,6 +765,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
       {
         "surface": "Rejoice",
         "lemma": "euphraino"
@@ -638,6 +794,10 @@
         "lemma": "odino"
       },
       {
+        "surface": "vvv",
+        "lemma": "polus"
+      },
+      {
         "surface": "more",
         "lemma": "mallon"
       },
@@ -648,6 +808,10 @@
       {
         "surface": "desolate woman",
         "lemma": "eremos"
+      },
+      {
+        "surface": "has",
+        "lemma": "echo"
       },
       {
         "surface": "a husband",
@@ -662,6 +826,10 @@
       {
         "surface": "Isaac",
         "lemma": "isaak"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "children",
@@ -704,8 +872,16 @@
     ],
     "30": [
       {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
         "surface": "Scripture",
         "lemma": "graphe"
+      },
+      {
+        "surface": "say",
+        "lemma": "lego"
       },
       {
         "surface": "Expel",
@@ -746,6 +922,10 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "we are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "children",
         "lemma": "teknon"
       },
@@ -760,8 +940,8 @@
     ]
   },
   "themeLemmas": [
-    "agar",
     "odino",
-    "paidiske"
+    "paidiske",
+    "sina"
   ]
 }

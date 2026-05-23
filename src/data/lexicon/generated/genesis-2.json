@@ -18,6 +18,10 @@
         "lemma": "kalah"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their vast array",
         "lemma": "tsava"
       }
@@ -44,6 +48,10 @@
         "lemma": "melakhah"
       },
       {
+        "surface": "He had been doing",
+        "lemma": "asah"
+      },
+      {
         "surface": "so on that",
         "lemma": "shevii"
       },
@@ -54,6 +62,10 @@
       {
         "surface": "He rested",
         "lemma": "shavat"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
       },
       {
         "surface": "His work",
@@ -86,6 +98,10 @@
         "lemma": "shavat"
       },
       {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the work",
         "lemma": "melakhah"
       },
@@ -96,6 +112,10 @@
       {
         "surface": "He",
         "lemma": "elohim"
+      },
+      {
+        "surface": "had accomplished",
+        "lemma": "asah"
       }
     ],
     "4": [
@@ -128,11 +148,19 @@
         "lemma": "elohim"
       },
       {
+        "surface": "made",
+        "lemma": "asah"
+      },
+      {
         "surface": "them",
         "lemma": "erets"
       }
     ],
     "5": [
+      {
+        "surface": "Now",
+        "lemma": "kol"
+      },
       {
         "surface": "no shrub",
         "lemma": "siach"
@@ -146,8 +174,16 @@
         "lemma": "terem"
       },
       {
+        "surface": "appeared",
+        "lemma": "hayah"
+      },
+      {
         "surface": "on the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "nor had any",
+        "lemma": "kol"
       },
       {
         "surface": "plant",
@@ -168,6 +204,10 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "had not yet",
+        "lemma": "lo"
       },
       {
         "surface": "sent rain",
@@ -210,6 +250,10 @@
       {
         "surface": "and watered",
         "lemma": "shaqah"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "surface",
@@ -264,6 +308,10 @@
       {
         "surface": "and the man",
         "lemma": "adam"
+      },
+      {
+        "surface": "became",
+        "lemma": "hayah"
       },
       {
         "surface": "a living",
@@ -334,6 +382,10 @@
         "lemma": "tsamach"
       },
       {
+        "surface": "to every",
+        "lemma": "kol"
+      },
+      {
         "surface": "tree",
         "lemma": "ets"
       },
@@ -392,6 +444,10 @@
         "lemma": "nahar"
       },
       {
+        "surface": "flowed out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "of Eden",
         "lemma": "eden"
       },
@@ -436,6 +492,10 @@
       {
         "surface": "winds through",
         "lemma": "savav"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "land",
@@ -504,6 +564,10 @@
       {
         "surface": "winds through",
         "lemma": "savav"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "land",
@@ -616,6 +680,10 @@
         "lemma": "akhal"
       },
       {
+        "surface": "from every",
+        "lemma": "kol"
+      },
+      {
         "surface": "tree",
         "lemma": "ets"
       },
@@ -625,6 +693,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "but you must not",
+        "lemma": "lo"
+      },
       {
         "surface": "eat",
         "lemma": "akhal"
@@ -668,6 +740,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "also said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "It is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
       },
@@ -676,8 +756,16 @@
         "lemma": "adam"
       },
       {
+        "surface": "to be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "alone",
         "lemma": "bad"
+      },
+      {
+        "surface": "I will make",
+        "lemma": "asah"
       },
       {
         "surface": "a suitable",
@@ -706,12 +794,20 @@
         "lemma": "yatsar"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "beast",
         "lemma": "chay"
       },
       {
         "surface": "of the field",
         "lemma": "saday"
+      },
+      {
+        "surface": "and every",
+        "lemma": "kol"
       },
       {
         "surface": "bird",
@@ -722,16 +818,36 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "and He brought them",
+        "lemma": "bo"
+      },
+      {
         "surface": "the man",
         "lemma": "adam"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
       },
       {
         "surface": "what",
         "lemma": "mah"
       },
       {
+        "surface": "he would name",
+        "lemma": "qara"
+      },
+      {
+        "surface": "each one",
+        "lemma": "kol"
+      },
+      {
         "surface": "And whatever the man",
         "lemma": "adam"
+      },
+      {
+        "surface": "called",
+        "lemma": "qara"
       },
       {
         "surface": "each living",
@@ -752,8 +868,16 @@
         "lemma": "adam"
       },
       {
+        "surface": "gave",
+        "lemma": "qara"
+      },
+      {
         "surface": "names",
         "lemma": "shem"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "the livestock",
@@ -768,6 +892,10 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "and to every",
+        "lemma": "kol"
+      },
+      {
         "surface": "beast",
         "lemma": "chay"
       },
@@ -778,6 +906,10 @@
       {
         "surface": "But for Adam",
         "lemma": "adam"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "suitable",
@@ -872,6 +1004,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "and brought her",
+        "lemma": "bo"
+      },
+      {
         "surface": "him",
         "lemma": "adam"
       }
@@ -880,6 +1016,10 @@
       {
         "surface": "And the man",
         "lemma": "adam"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "is now",
@@ -900,6 +1040,10 @@
       {
         "surface": "of my flesh",
         "lemma": "basar"
+      },
+      {
+        "surface": "shall be called",
+        "lemma": "qara"
       },
       {
         "surface": "woman",
@@ -928,6 +1072,10 @@
         "lemma": "azav"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "mother",
         "lemma": "em"
       },
@@ -938,6 +1086,10 @@
       {
         "surface": "to his wife",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "and they will become",
+        "lemma": "hayah"
       },
       {
         "surface": "one",
@@ -958,6 +1110,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "both",
         "lemma": "shenayim"
       },
@@ -966,13 +1122,17 @@
         "lemma": "arom"
       },
       {
+        "surface": "and they were not",
+        "lemma": "lo"
+      },
+      {
         "surface": "ashamed",
         "lemma": "bush"
       }
     ]
   },
   "themeLemmas": [
-    "adam",
+    "kol",
     "chay",
     "tov"
   ]

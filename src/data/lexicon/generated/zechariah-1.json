@@ -34,6 +34,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the prophet",
         "lemma": "navi"
       },
@@ -56,6 +60,10 @@
       {
         "surface": "of Iddo",
         "lemma": "iddo"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -70,9 +78,17 @@
       {
         "surface": "angry",
         "lemma": "qatsaph"
+      },
+      {
+        "surface": "your fathers",
+        "lemma": "av"
       }
     ],
     "3": [
+      {
+        "surface": "So tell",
+        "lemma": "amar"
+      },
       {
         "surface": "that this is what",
         "lemma": "koh"
@@ -84,6 +100,14 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Return",
+        "lemma": "shuv"
       },
       {
         "surface": "declares",
@@ -98,6 +122,14 @@
         "lemma": "tsava"
       },
       {
+        "surface": "and I will return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -108,12 +140,28 @@
     ],
     "4": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "like your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "the former",
         "lemma": "rishon"
       },
       {
         "surface": "prophets",
         "lemma": "navi"
+      },
+      {
+        "surface": "proclaimed",
+        "lemma": "qara"
       },
       {
         "surface": "that this is what",
@@ -128,8 +176,12 @@
         "lemma": "tsava"
       },
       {
-        "surface": "now",
-        "lemma": "na"
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Turn",
+        "lemma": "shuv"
       },
       {
         "surface": "from your evil",
@@ -146,6 +198,14 @@
       {
         "surface": "deeds",
         "lemma": "maalal"
+      },
+      {
+        "surface": "But they did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
       },
       {
         "surface": "or pay attention",
@@ -166,6 +226,10 @@
         "lemma": "ayyeh"
       },
       {
+        "surface": "are your fathers now",
+        "lemma": "av"
+      },
+      {
         "surface": "And the prophets",
         "lemma": "navi"
       },
@@ -182,6 +246,10 @@
       {
         "surface": "But",
         "lemma": "akh"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
       },
       {
         "surface": "My words",
@@ -208,6 +276,18 @@
         "lemma": "nasag"
       },
       {
+        "surface": "your fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "They repented",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -220,6 +300,10 @@
         "lemma": "zamam"
       },
       {
+        "surface": "to do",
+        "lemma": "asah"
+      },
+      {
         "surface": "according to our ways",
         "lemma": "derekh"
       },
@@ -230,6 +314,10 @@
       {
         "surface": "so",
         "lemma": "ken"
+      },
+      {
+        "surface": "He has done",
+        "lemma": "asah"
       }
     ],
     "7": [
@@ -278,6 +366,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the prophet",
         "lemma": "navi"
       },
@@ -304,12 +396,12 @@
     ],
     "8": [
       {
-        "surface": "into the night",
-        "lemma": "laylah"
+        "surface": "I looked out",
+        "lemma": "raah"
       },
       {
-        "surface": "and saw",
-        "lemma": "hinneh"
+        "surface": "into the night",
+        "lemma": "laylah"
       },
       {
         "surface": "a man",
@@ -374,12 +466,24 @@
         "lemma": "adon"
       },
       {
+        "surface": "I asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "And the angel",
         "lemma": "maleakh"
       },
       {
         "surface": "who was speaking",
         "lemma": "davar"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "will show",
+        "lemma": "raah"
       },
       {
         "surface": "you what",
@@ -458,12 +562,16 @@
         "lemma": "erets"
       },
       {
-        "surface": "and behold",
-        "lemma": "hinneh"
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "is at rest",
+        "lemma": "yashav"
       },
       {
         "surface": "and tranquil",
@@ -480,12 +588,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "withhold mercy",
+        "lemma": "lo"
       },
       {
         "surface": "from Jerusalem",
@@ -552,6 +668,18 @@
         "lemma": "davar"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Proclaim",
+        "lemma": "qara"
+      },
+      {
+        "surface": "this word",
+        "lemma": "amar"
+      },
+      {
         "surface": "This is what",
         "lemma": "koh"
       },
@@ -562,6 +690,10 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "I am very",
@@ -624,6 +756,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -666,6 +806,10 @@
     ],
     "17": [
       {
+        "surface": "Proclaim",
+        "lemma": "qara"
+      },
+      {
         "surface": "further that",
         "lemma": "od"
       },
@@ -680,6 +824,10 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "My cities",
@@ -732,6 +880,10 @@
         "lemma": "nasa"
       },
       {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "four",
         "lemma": "arba"
       },
@@ -741,6 +893,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "So I asked",
+        "lemma": "amar"
+      },
       {
         "surface": "the angel",
         "lemma": "maleakh"
@@ -752,6 +908,10 @@
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "And he told",
+        "lemma": "amar"
       },
       {
         "surface": "are the horns",
@@ -780,6 +940,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "showed me",
+        "lemma": "raah"
+      },
+      {
         "surface": "four",
         "lemma": "arba"
       },
@@ -792,6 +956,22 @@
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "coming",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "I asked",
+        "lemma": "amar"
+      },
+      {
+        "surface": "And He replied",
+        "lemma": "amar"
       },
       {
         "surface": "are the horns",
@@ -810,6 +990,10 @@
         "lemma": "peh"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "one",
         "lemma": "ish"
       },
@@ -820,6 +1004,10 @@
       {
         "surface": "his head",
         "lemma": "rosh"
+      },
+      {
+        "surface": "have come",
+        "lemma": "bo"
       },
       {
         "surface": "to terrify",
@@ -860,8 +1048,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "tsava",
-    "yerushalaim",
-    "maleakh"
+    "yerushalaim"
   ]
 }

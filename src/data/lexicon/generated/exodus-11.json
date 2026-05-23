@@ -10,8 +10,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "I will bring",
+        "lemma": "bo"
       },
       {
         "surface": "Pharaoh",
@@ -60,10 +68,6 @@
     ],
     "2": [
       {
-        "surface": "Now",
-        "lemma": "na"
-      },
-      {
         "surface": "announce",
         "lemma": "davar"
       },
@@ -104,6 +108,10 @@
       {
         "surface": "And the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "the people",
@@ -164,6 +172,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "declared",
+        "lemma": "amar"
+      },
+      {
         "surface": "This is what",
         "lemma": "koh"
       },
@@ -172,8 +184,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "About midnight",
         "lemma": "chatsot"
+      },
+      {
+        "surface": "will go",
+        "lemma": "yatsa"
       },
       {
         "surface": "throughout",
@@ -185,6 +205,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "and every",
+        "lemma": "kol"
+      },
       {
         "surface": "firstborn son",
         "lemma": "bekhor"
@@ -208,6 +232,10 @@
       {
         "surface": "of Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "who sits",
+        "lemma": "yashav"
       },
       {
         "surface": "his throne",
@@ -234,6 +262,10 @@
         "lemma": "bekhor"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the cattle",
         "lemma": "behemah"
       }
@@ -248,6 +280,14 @@
         "lemma": "tsaaqah"
       },
       {
+        "surface": "will go out",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "over all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -256,14 +296,34 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "has never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "been heard before",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "and will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "again",
         "lemma": "yasaph"
       }
     ],
     "7": [
       {
+        "surface": "But among all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "even a dog",
@@ -308,6 +368,10 @@
     ],
     "8": [
       {
+        "surface": "And all",
+        "lemma": "kol"
+      },
+      {
         "surface": "officials",
         "lemma": "eved"
       },
@@ -318,6 +382,18 @@
       {
         "surface": "and bow",
         "lemma": "shachah"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Go",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -336,12 +412,20 @@
         "lemma": "ken"
       },
       {
+        "surface": "I will depart",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "And hot",
         "lemma": "chori"
       },
       {
         "surface": "with anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "Moses left",
+        "lemma": "yatsa"
       },
       {
         "surface": "Pharaoh’s",
@@ -354,12 +438,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
       {
         "surface": "Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
       },
       {
         "surface": "My wonders",
@@ -386,6 +482,14 @@
       {
         "surface": "and Aaron",
         "lemma": "aharon"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "wonders",
@@ -416,6 +520,10 @@
         "lemma": "lev"
       },
       {
+        "surface": "so that he would not",
+        "lemma": "lo"
+      },
+      {
         "surface": "let the Israelites",
         "lemma": "ben"
       },
@@ -432,6 +540,6 @@
   "themeLemmas": [
     "paroh",
     "mitsrayim",
-    "mosheh"
+    "kol"
   ]
 }

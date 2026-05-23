@@ -60,6 +60,10 @@
     ],
     "2": [
       {
+        "surface": "I cry out",
+        "lemma": "qara"
+      },
+      {
         "surface": "by day",
         "lemma": "yomam"
       },
@@ -76,6 +80,10 @@
         "lemma": "laylah"
       },
       {
+        "surface": "but I have no",
+        "lemma": "lo"
+      },
+      {
         "surface": "rest",
         "lemma": "dumiyyah"
       }
@@ -84,6 +92,10 @@
       {
         "surface": "are holy",
         "lemma": "qadosh"
+      },
+      {
+        "surface": "enthroned",
+        "lemma": "yashav"
       },
       {
         "surface": "on the praises",
@@ -95,6 +107,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "our fathers",
+        "lemma": "av"
+      },
       {
         "surface": "trusted",
         "lemma": "batach"
@@ -122,6 +138,10 @@
         "lemma": "batach"
       },
       {
+        "surface": "and were not",
+        "lemma": "lo"
+      },
+      {
         "surface": "disappointed",
         "lemma": "bush"
       }
@@ -130,6 +150,10 @@
       {
         "surface": "am a worm",
         "lemma": "tola"
+      },
+      {
+        "surface": "and not",
+        "lemma": "lo"
       },
       {
         "surface": "a man",
@@ -153,6 +177,14 @@
       }
     ],
     "7": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who see me",
+        "lemma": "raah"
+      },
       {
         "surface": "mock",
         "lemma": "laag"
@@ -238,6 +270,10 @@
     ],
     "11": [
       {
+        "surface": "Be not",
+        "lemma": "al"
+      },
+      {
         "surface": "far",
         "lemma": "rachaq"
       },
@@ -316,6 +352,10 @@
         "lemma": "mayim"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my bones",
         "lemma": "etsem"
       },
@@ -326,6 +366,10 @@
       {
         "surface": "My heart",
         "lemma": "lev"
+      },
+      {
+        "surface": "is",
+        "lemma": "hayah"
       },
       {
         "surface": "like wax",
@@ -422,12 +466,20 @@
         "lemma": "saphar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my bones",
         "lemma": "etsem"
       },
       {
         "surface": "stare",
         "lemma": "navat"
+      },
+      {
+        "surface": "and gloat",
+        "lemma": "raah"
       }
     ],
     "18": [
@@ -456,6 +508,10 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "be not",
+        "lemma": "al"
       },
       {
         "surface": "far off",
@@ -566,6 +622,10 @@
         "lemma": "halal"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "descendants",
         "lemma": "zera"
       },
@@ -576,6 +636,10 @@
       {
         "surface": "honor Him",
         "lemma": "kavad"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "offspring",
@@ -591,6 +655,10 @@
       }
     ],
     "24": [
+      {
+        "surface": "He has not",
+        "lemma": "lo"
+      },
       {
         "surface": "despised",
         "lemma": "bazah"
@@ -608,12 +676,20 @@
         "lemma": "ani"
       },
       {
+        "surface": "He has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "hidden",
         "lemma": "satar"
       },
       {
         "surface": "His face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "but has attended",
+        "lemma": "shama"
       },
       {
         "surface": "cry for help",
@@ -690,6 +766,10 @@
     ],
     "27": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the ends",
         "lemma": "ephes"
       },
@@ -702,8 +782,16 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "and turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "the families",
@@ -742,6 +830,10 @@
     ],
     "29": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the rich",
         "lemma": "dashen"
       },
@@ -758,6 +850,10 @@
         "lemma": "shachah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who go down",
         "lemma": "yarad"
       },
@@ -772,6 +868,10 @@
       {
         "surface": "before Him",
         "lemma": "paneh"
+      },
+      {
+        "surface": "even those unable",
+        "lemma": "lo"
       },
       {
         "surface": "to preserve",
@@ -806,6 +906,10 @@
     ],
     "31": [
       {
+        "surface": "They will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "and proclaim",
         "lemma": "nagad"
       },
@@ -820,12 +924,16 @@
       {
         "surface": "yet unborn",
         "lemma": "yalad"
+      },
+      {
+        "surface": "He has done",
+        "lemma": "asah"
       }
     ]
   },
   "themeLemmas": [
-    "batach",
-    "zera",
-    "saphar"
+    "kol",
+    "lo",
+    "batach"
   ]
 }

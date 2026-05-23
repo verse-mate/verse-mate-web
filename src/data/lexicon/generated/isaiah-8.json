@@ -10,6 +10,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Take",
         "lemma": "laqach"
       },
@@ -98,6 +102,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Name",
+        "lemma": "qara"
+      },
+      {
         "surface": "him",
         "lemma": "shem"
       },
@@ -118,6 +130,14 @@
       {
         "surface": "knows",
         "lemma": "yada"
+      },
+      {
+        "surface": "how to cry",
+        "lemma": "qara"
+      },
+      {
+        "surface": "Father",
+        "lemma": "av"
       },
       {
         "surface": "or ‘Mother",
@@ -222,10 +242,6 @@
         "lemma": "adonai"
       },
       {
-        "surface": "will surely",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "bring",
         "lemma": "alah"
       },
@@ -252,6 +268,10 @@
       {
         "surface": "of Assyria",
         "lemma": "ashshur"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "his pomp",
@@ -342,6 +362,10 @@
         "lemma": "azan"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "you distant",
         "lemma": "merchaq"
       },
@@ -388,6 +412,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "but it will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "happen",
         "lemma": "qamay"
       },
@@ -404,6 +432,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has spoken",
+        "lemma": "amar"
       },
       {
         "surface": "with a strong",
@@ -432,16 +464,36 @@
     ],
     "12": [
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "call",
+        "lemma": "amar"
+      },
+      {
         "surface": "conspiracy",
         "lemma": "qesher"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "people",
         "lemma": "am"
       },
       {
+        "surface": "regard",
+        "lemma": "amar"
+      },
+      {
         "surface": "as conspiracy",
         "lemma": "qesher"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "lo"
       },
       {
         "surface": "fear",
@@ -450,6 +502,10 @@
       {
         "surface": "what they fear",
         "lemma": "mora"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "live in dread",
@@ -479,6 +535,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "And He will be",
+        "lemma": "hayah"
+      },
       {
         "surface": "a sanctuary",
         "lemma": "miqdash"
@@ -510,6 +570,10 @@
       {
         "surface": "of offense",
         "lemma": "mikhshol"
+      },
+      {
+        "surface": "to the dwellers",
+        "lemma": "yashav"
       },
       {
         "surface": "of Jerusalem",
@@ -604,16 +668,16 @@
     ],
     "18": [
       {
-        "surface": "Here",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "and the children",
         "lemma": "yeled"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has given",
+        "lemma": "natan"
       },
       {
         "surface": "as signs",
@@ -650,6 +714,10 @@
     ],
     "19": [
       {
+        "surface": "men tell",
+        "lemma": "amar"
+      },
+      {
         "surface": "to consult",
         "lemma": "darash"
       },
@@ -668,6 +736,10 @@
       {
         "surface": "and mutter",
         "lemma": "hagah"
+      },
+      {
+        "surface": "shouldn’t",
+        "lemma": "lo"
       },
       {
         "surface": "a people",
@@ -702,6 +774,18 @@
       {
         "surface": "and to the testimony",
         "lemma": "teudah"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "speak",
+        "lemma": "amar"
       },
       {
         "surface": "word",
@@ -768,10 +852,6 @@
         "lemma": "erets"
       },
       {
-        "surface": "and see",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "only distress",
         "lemma": "batstsarah"
       },
@@ -798,8 +878,8 @@
     ]
   },
   "themeLemmas": [
-    "hinneh",
-    "halakh",
-    "chatat"
+    "amar",
+    "lo",
+    "kol"
   ]
 }

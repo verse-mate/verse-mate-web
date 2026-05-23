@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "I saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the Lord",
         "lemma": "adonai"
       },
@@ -16,6 +20,10 @@
       {
         "surface": "the altar",
         "lemma": "mizbeach"
+      },
+      {
+        "surface": "and He said",
+        "lemma": "amar"
       },
       {
         "surface": "Strike",
@@ -42,6 +50,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of all the people",
+        "lemma": "kol"
+      },
+      {
         "surface": "and I will kill",
         "lemma": "harag"
       },
@@ -54,12 +66,20 @@
         "lemma": "cherev"
       },
       {
+        "surface": "None",
+        "lemma": "lo"
+      },
+      {
         "surface": "of those who flee",
         "lemma": "nus"
       },
       {
         "surface": "will get away",
         "lemma": "nus"
+      },
+      {
+        "surface": "none",
+        "lemma": "lo"
       },
       {
         "surface": "of the fugitives",
@@ -71,6 +91,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "Though",
+        "lemma": "im"
+      },
       {
         "surface": "they dig down",
         "lemma": "chatar"
@@ -92,6 +116,10 @@
         "lemma": "laqach"
       },
       {
+        "surface": "and though",
+        "lemma": "im"
+      },
+      {
         "surface": "they climb up",
         "lemma": "alah"
       },
@@ -109,6 +137,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "Though",
+        "lemma": "im"
+      },
       {
         "surface": "they hide themselves",
         "lemma": "chava"
@@ -132,6 +164,10 @@
       {
         "surface": "and seize them",
         "lemma": "laqach"
+      },
+      {
+        "surface": "and though",
+        "lemma": "im"
       },
       {
         "surface": "they hide",
@@ -171,6 +207,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Though",
+        "lemma": "im"
+      },
       {
         "surface": "they are driven",
         "lemma": "halakh"
@@ -216,6 +256,10 @@
         "lemma": "ra"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "for good",
         "lemma": "tov"
       }
@@ -246,8 +290,20 @@
         "lemma": "mug"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "its dwellers",
+        "lemma": "yashav"
+      },
+      {
         "surface": "mourn",
         "lemma": "aval"
+      },
+      {
+        "surface": "all the land",
+        "lemma": "kol"
       },
       {
         "surface": "rises",
@@ -296,6 +352,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "He summons",
+        "lemma": "qara"
+      },
+      {
         "surface": "the waters",
         "lemma": "mayim"
       },
@@ -326,6 +386,10 @@
     ],
     "7": [
       {
+        "surface": "Are you not",
+        "lemma": "lo"
+      },
+      {
         "surface": "vvv",
         "lemma": "ben"
       },
@@ -348,6 +412,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "Did I not",
+        "lemma": "lo"
       },
       {
         "surface": "bring",
@@ -384,10 +452,6 @@
     ],
     "8": [
       {
-        "surface": "Surely",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the eyes",
         "lemma": "ayin"
       },
@@ -420,6 +484,10 @@
         "lemma": "adamah"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "utterly destroy",
         "lemma": "shamad"
       },
@@ -442,10 +510,6 @@
     ],
     "9": [
       {
-        "surface": "surely",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "will give the command",
         "lemma": "tsavah"
       },
@@ -462,6 +526,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "among all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
@@ -472,6 +540,10 @@
       {
         "surface": "in a sieve",
         "lemma": "kevarah"
+      },
+      {
+        "surface": "but not",
+        "lemma": "lo"
       },
       {
         "surface": "a pebble",
@@ -487,6 +559,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the sinners",
         "lemma": "chatta"
@@ -504,8 +580,16 @@
         "lemma": "cherev"
       },
       {
+        "surface": "all those who say",
+        "lemma": "amar"
+      },
+      {
         "surface": "Disaster",
         "lemma": "ra"
+      },
+      {
+        "surface": "will never",
+        "lemma": "lo"
       },
       {
         "surface": "draw near",
@@ -584,8 +668,16 @@
         "lemma": "edom"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "bear",
+        "lemma": "qara"
       },
       {
         "surface": "My name",
@@ -598,16 +690,20 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "who will do",
+        "lemma": "asah"
       }
     ],
     "13": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the days",
         "lemma": "yom"
+      },
+      {
+        "surface": "are coming",
+        "lemma": "bo"
       },
       {
         "surface": "declares",
@@ -658,6 +754,10 @@
         "lemma": "asis"
       },
       {
+        "surface": "with which all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the hills",
         "lemma": "givah"
       },
@@ -667,6 +767,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "I will restore",
+        "lemma": "shuv"
+      },
       {
         "surface": "My people",
         "lemma": "am"
@@ -682,6 +786,10 @@
       {
         "surface": "they will rebuild",
         "lemma": "banah"
+      },
+      {
+        "surface": "and inhabit",
+        "lemma": "yashav"
       },
       {
         "surface": "the ruined",
@@ -708,6 +816,10 @@
         "lemma": "yayin"
       },
       {
+        "surface": "they will make",
+        "lemma": "asah"
+      },
+      {
         "surface": "gardens",
         "lemma": "gannah"
       },
@@ -730,6 +842,10 @@
         "lemma": "adamah"
       },
       {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
         "surface": "again",
         "lemma": "od"
       },
@@ -742,6 +858,14 @@
         "lemma": "adamah"
       },
       {
+        "surface": "I have given",
+        "lemma": "natan"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -752,8 +876,8 @@
     ]
   },
   "themeLemmas": [
-    "sham",
-    "yisrael",
-    "neum"
+    "lo",
+    "kol",
+    "sham"
   ]
 }

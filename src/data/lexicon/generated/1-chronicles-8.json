@@ -120,6 +120,14 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of the families",
+        "lemma": "av"
+      },
+      {
+        "surface": "living",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Geba",
         "lemma": "geva"
       },
@@ -242,6 +250,10 @@
       {
         "surface": "heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of families",
+        "lemma": "av"
       }
     ],
     "11": [
@@ -314,12 +326,24 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of families",
+        "lemma": "av"
+      },
+      {
+        "surface": "living in",
+        "lemma": "yashav"
+      },
+      {
         "surface": "Aijalon",
         "lemma": "ayyalon"
       },
       {
         "surface": "drove out",
         "lemma": "barach"
+      },
+      {
+        "surface": "the inhabitants",
+        "lemma": "yashav"
       },
       {
         "surface": "of Gath",
@@ -568,6 +592,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of families",
+        "lemma": "av"
+      },
+      {
         "surface": "the chiefs",
         "lemma": "rosh"
       },
@@ -576,14 +604,26 @@
         "lemma": "toledah"
       },
       {
+        "surface": "and they lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
       }
     ],
     "29": [
       {
+        "surface": "Jeiel the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of Gibeon",
         "lemma": "givon"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "in Gibeon",
@@ -658,6 +698,10 @@
       {
         "surface": "Shimeah",
         "lemma": "shimah"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "alongside",
@@ -912,6 +956,10 @@
         "lemma": "chanan"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "were the sons",
         "lemma": "ben"
       },
@@ -968,6 +1016,10 @@
         "lemma": "ulam"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "mighty",
         "lemma": "gibbor"
       },
@@ -1000,6 +1052,10 @@
         "lemma": "meah"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "were the descendants",
         "lemma": "ben"
       },
@@ -1011,7 +1067,7 @@
   },
   "themeLemmas": [
     "yalad",
-    "merivbaal",
-    "zikhri"
+    "yashav",
+    "merivbaal"
   ]
 }

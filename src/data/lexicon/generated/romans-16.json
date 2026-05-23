@@ -56,8 +56,16 @@
         "lemma": "chrezo"
       },
       {
+        "surface": "has been",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "a great help",
         "lemma": "prostatis"
+      },
+      {
+        "surface": "to many people",
+        "lemma": "polus"
       }
     ],
     "3": [
@@ -100,6 +108,10 @@
         "lemma": "monos"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "churches",
         "lemma": "ekklesia"
       },
@@ -134,6 +146,10 @@
         "lemma": "epainetos"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the first convert",
         "lemma": "aparche"
       },
@@ -158,6 +174,10 @@
       {
         "surface": "has worked",
         "lemma": "kopiao"
+      },
+      {
+        "surface": "very hard",
+        "lemma": "polus"
       }
     ],
     "7": [
@@ -182,12 +202,20 @@
         "lemma": "sunaichmalotos"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "outstanding",
         "lemma": "episemos"
       },
       {
         "surface": "apostles",
         "lemma": "apostolos"
+      },
+      {
+        "surface": "were",
+        "lemma": "ginomai"
       },
       {
         "surface": "Christ",
@@ -286,6 +314,10 @@
         "lemma": "narkissos"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the Lord",
         "lemma": "kurios"
       }
@@ -326,6 +358,10 @@
       {
         "surface": "has worked",
         "lemma": "kopiao"
+      },
+      {
+        "surface": "very hard",
+        "lemma": "polus"
       },
       {
         "surface": "the Lord",
@@ -410,6 +446,10 @@
         "lemma": "olumpas"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "saints",
         "lemma": "hagios"
       }
@@ -430,6 +470,10 @@
       {
         "surface": "kiss",
         "lemma": "philema"
+      },
+      {
+        "surface": "All",
+        "lemma": "pas"
       },
       {
         "surface": "churches",
@@ -456,6 +500,10 @@
       {
         "surface": "to watch out for",
         "lemma": "skopeo"
+      },
+      {
+        "surface": "create",
+        "lemma": "poieo"
       },
       {
         "surface": "divisions",
@@ -518,6 +566,10 @@
     ],
     "19": [
       {
+        "surface": "Everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "has heard",
         "lemma": "aphikneomai"
       },
@@ -528,6 +580,14 @@
       {
         "surface": "I rejoice",
         "lemma": "chairo"
+      },
+      {
+        "surface": "I want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to be",
+        "lemma": "eimi"
       },
       {
         "surface": "wise",
@@ -624,6 +684,10 @@
         "lemma": "tertios"
       },
       {
+        "surface": "wrote down",
+        "lemma": "grapho"
+      },
+      {
         "surface": "letter",
         "lemma": "epistole"
       },
@@ -683,6 +747,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "is able",
+        "lemma": "dunamai"
+      },
       {
         "surface": "to strengthen",
         "lemma": "sterizo"
@@ -758,6 +826,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "nations",
         "lemma": "ethnos"
       },
@@ -798,10 +870,6 @@
       {
         "surface": "Christ",
         "lemma": "christos"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ]
   },

@@ -10,6 +10,10 @@
         "lemma": "shelomoh"
       },
       {
+        "surface": "Endow",
+        "lemma": "natan"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -264,6 +268,10 @@
         "lemma": "i"
       },
       {
+        "surface": "bring",
+        "lemma": "shuv"
+      },
+      {
         "surface": "tribute",
         "lemma": "minchah"
       },
@@ -290,12 +298,20 @@
     ],
     "11": [
       {
+        "surface": "May all",
+        "lemma": "kol"
+      },
+      {
         "surface": "kings",
         "lemma": "melekh"
       },
       {
         "surface": "bow down",
         "lemma": "shachah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "nations",
@@ -402,6 +418,10 @@
         "lemma": "sheva"
       },
       {
+        "surface": "be given",
+        "lemma": "natan"
+      },
+      {
         "surface": "May people ever",
         "lemma": "tamid"
       },
@@ -418,11 +438,19 @@
         "lemma": "barakh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
       }
     ],
     "16": [
+      {
+        "surface": "May there be",
+        "lemma": "hayah"
+      },
       {
         "surface": "an abundance",
         "lemma": "pissah"
@@ -478,6 +506,10 @@
         "lemma": "shem"
       },
       {
+        "surface": "endure",
+        "lemma": "hayah"
+      },
+      {
         "surface": "forever",
         "lemma": "olam"
       },
@@ -496,6 +528,10 @@
       {
         "surface": "long as the sun shines",
         "lemma": "shemesh"
+      },
+      {
+        "surface": "may all",
+        "lemma": "kol"
       },
       {
         "surface": "nations",
@@ -536,6 +572,10 @@
         "lemma": "bad"
       },
       {
+        "surface": "does",
+        "lemma": "asah"
+      },
+      {
         "surface": "marvelous deeds",
         "lemma": "pala"
       }
@@ -556,6 +596,10 @@
       {
         "surface": "forever",
         "lemma": "olam"
+      },
+      {
+        "surface": "may all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -602,8 +646,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "evyon",
-    "barakh",
-    "shem"
+    "barakh"
   ]
 }

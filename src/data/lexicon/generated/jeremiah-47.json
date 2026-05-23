@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Jeremiah",
         "lemma": "yirmeyah"
       },
@@ -52,8 +56,8 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "See how",
-        "lemma": "hinneh"
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the waters",
@@ -66,6 +70,10 @@
       {
         "surface": "from the north",
         "lemma": "tsaphon"
+      },
+      {
+        "surface": "and becoming",
+        "lemma": "hayah"
       },
       {
         "surface": "an overflowing",
@@ -92,12 +100,24 @@
         "lemma": "ir"
       },
       {
+        "surface": "and their inhabitants",
+        "lemma": "yashav"
+      },
+      {
         "surface": "The people",
         "lemma": "adam"
       },
       {
         "surface": "will cry out",
         "lemma": "zaaq"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -142,6 +162,14 @@
         "lemma": "galgal"
       },
       {
+        "surface": "The fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turn back",
         "lemma": "panah"
       },
@@ -164,8 +192,16 @@
         "lemma": "yom"
       },
       {
+        "surface": "has come",
+        "lemma": "bo"
+      },
+      {
         "surface": "to destroy",
         "lemma": "shadad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the Philistines",
@@ -182,6 +218,10 @@
       {
         "surface": "and Sidon",
         "lemma": "tsidon"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "remaining",
@@ -248,10 +288,6 @@
     ],
     "6": [
       {
-        "surface": "Alas",
-        "lemma": "hoy"
-      },
-      {
         "surface": "O sword",
         "lemma": "cherev"
       },
@@ -260,8 +296,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "until you rest",
+        "lemma": "lo"
+      },
+      {
         "surface": "Return",
         "lemma": "asaph"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
       },
       {
         "surface": "your sheath",
@@ -313,7 +357,7 @@
   },
   "themeLemmas": [
     "pelishti",
-    "sheerit",
-    "shataph"
+    "kol",
+    "yashav"
   ]
 }

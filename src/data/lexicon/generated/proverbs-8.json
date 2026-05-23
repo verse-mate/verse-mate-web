@@ -6,12 +6,24 @@
   "verses": {
     "1": [
       {
+        "surface": "Does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "wisdom",
         "lemma": "chokhmah"
       },
       {
+        "surface": "call out",
+        "lemma": "qara"
+      },
+      {
         "surface": "and understanding",
         "lemma": "tavunah"
+      },
+      {
+        "surface": "raise",
+        "lemma": "natan"
       },
       {
         "surface": "her voice",
@@ -68,6 +80,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "I call out",
+        "lemma": "qara"
+      },
+      {
         "surface": "and my cry",
         "lemma": "qol"
       },
@@ -103,6 +119,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
       {
         "surface": "I speak",
         "lemma": "davar"
@@ -152,6 +172,10 @@
     ],
     "8": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the words",
         "lemma": "emer"
       },
@@ -177,6 +201,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "They are",
+        "lemma": "kol"
+      },
       {
         "surface": "all plain",
         "lemma": "nakhoach"
@@ -208,6 +236,10 @@
         "lemma": "musar"
       },
       {
+        "surface": "instead of",
+        "lemma": "al"
+      },
+      {
         "surface": "silver",
         "lemma": "keseph"
       },
@@ -236,6 +268,10 @@
       {
         "surface": "than rubies",
         "lemma": "panin"
+      },
+      {
+        "surface": "and nothing",
+        "lemma": "kol"
       },
       {
         "surface": "you desire",
@@ -366,6 +402,10 @@
       {
         "surface": "rule",
         "lemma": "sarar"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "nobles",
@@ -604,6 +644,10 @@
     ],
     "26": [
       {
+        "surface": "He made",
+        "lemma": "asah"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -698,6 +742,10 @@
         "lemma": "mayim"
       },
       {
+        "surface": "would not",
+        "lemma": "lo"
+      },
+      {
         "surface": "surpass",
         "lemma": "avar"
       },
@@ -720,12 +768,20 @@
     ],
     "30": [
       {
+        "surface": "Then I was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a skilled craftsman",
         "lemma": "amon"
       },
       {
         "surface": "at His side",
         "lemma": "etsel"
+      },
+      {
+        "surface": "and",
+        "lemma": "hayah"
       },
       {
         "surface": "His delight",
@@ -742,6 +798,10 @@
       {
         "surface": "rejoicing",
         "lemma": "sachaq"
+      },
+      {
+        "surface": "always",
+        "lemma": "kol"
       },
       {
         "surface": "in His presence",
@@ -780,6 +840,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "for blessed",
         "lemma": "esher"
       },
@@ -794,12 +858,20 @@
     ],
     "33": [
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "to instruction",
         "lemma": "musar"
       },
       {
         "surface": "and be wise",
         "lemma": "chakham"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "ignore it",
@@ -814,6 +886,10 @@
       {
         "surface": "is the man",
         "lemma": "adam"
+      },
+      {
+        "surface": "who listens",
+        "lemma": "shama"
       },
       {
         "surface": "watching",
@@ -880,6 +956,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who hate me",
         "lemma": "sane"
       },
@@ -894,8 +974,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "matsa",
-    "peh",
-    "ahav"
+    "shama"
   ]
 }

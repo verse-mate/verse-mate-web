@@ -14,12 +14,20 @@
         "lemma": "chodesh"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "entered",
+        "lemma": "bo"
       },
       {
         "surface": "the Wilderness",
@@ -32,6 +40,10 @@
       {
         "surface": "and",
         "lemma": "am"
+      },
+      {
+        "surface": "stayed",
+        "lemma": "yashav"
       },
       {
         "surface": "in Kadesh",
@@ -55,6 +67,14 @@
       }
     ],
     "2": [
+      {
+        "surface": "Now there was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
       {
         "surface": "water",
         "lemma": "mayim"
@@ -90,8 +110,8 @@
         "lemma": "mosheh"
       },
       {
-        "surface": "If only",
-        "lemma": "lu"
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "we had perished",
@@ -114,6 +134,10 @@
       {
         "surface": "Why",
         "lemma": "mah"
+      },
+      {
+        "surface": "have you brought",
+        "lemma": "bo"
       },
       {
         "surface": "the LORD’s",
@@ -154,12 +178,20 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "to bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "wretched",
         "lemma": "ra"
       },
       {
         "surface": "place",
         "lemma": "maqom"
+      },
+      {
+        "surface": "It is not",
+        "lemma": "lo"
       },
       {
         "surface": "a place",
@@ -204,6 +236,10 @@
         "lemma": "aharon"
       },
       {
+        "surface": "went",
+        "lemma": "bo"
+      },
+      {
         "surface": "from the presence",
         "lemma": "paneh"
       },
@@ -234,6 +270,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "appeared",
+        "lemma": "raah"
       }
     ],
     "7": [
@@ -288,8 +328,16 @@
         "lemma": "ayin"
       },
       {
+        "surface": "and it will pour out",
+        "lemma": "natan"
+      },
+      {
         "surface": "its water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "You will bring out",
+        "lemma": "yatsa"
       },
       {
         "surface": "water",
@@ -364,8 +412,12 @@
         "lemma": "sela"
       },
       {
-        "surface": "now",
-        "lemma": "na"
+        "surface": "and Moses said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Listen",
+        "lemma": "shama"
       },
       {
         "surface": "you rebels",
@@ -374,6 +426,10 @@
       {
         "surface": "must we bring you water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "out",
+        "lemma": "yatsa"
       },
       {
         "surface": "rock",
@@ -418,6 +474,10 @@
         "lemma": "mayim"
       },
       {
+        "surface": "gushed out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "and the congregation",
         "lemma": "edah"
       },
@@ -436,12 +496,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
       {
         "surface": "Aaron",
         "lemma": "aharon"
+      },
+      {
+        "surface": "you did not",
+        "lemma": "lo"
       },
       {
         "surface": "trust",
@@ -464,12 +532,24 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "you will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "assembly",
         "lemma": "qahal"
       },
       {
         "surface": "into the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "I have given",
+        "lemma": "natan"
       }
     ],
     "13": [
@@ -536,8 +616,16 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the hardship",
@@ -550,12 +638,20 @@
     ],
     "15": [
       {
+        "surface": "how our fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "went down",
         "lemma": "yarad"
       },
       {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "where we lived",
+        "lemma": "yashav"
       },
       {
         "surface": "many",
@@ -572,6 +668,10 @@
       {
         "surface": "mistreated",
         "lemma": "raa"
+      },
+      {
+        "surface": "and our fathers",
+        "lemma": "av"
       }
     ],
     "16": [
@@ -582,6 +682,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "He heard",
+        "lemma": "shama"
       },
       {
         "surface": "our voice",
@@ -596,12 +700,12 @@
         "lemma": "maleakh"
       },
       {
-        "surface": "out of Egypt",
-        "lemma": "mitsrayim"
+        "surface": "and brought us",
+        "lemma": "yatsa"
       },
       {
-        "surface": "Now look",
-        "lemma": "hinneh"
+        "surface": "out of Egypt",
+        "lemma": "mitsrayim"
       },
       {
         "surface": "are in Kadesh",
@@ -622,16 +726,16 @@
     ],
     "17": [
       {
-        "surface": "Please",
-        "lemma": "na"
-      },
-      {
         "surface": "let us pass",
         "lemma": "avar"
       },
       {
         "surface": "through your land",
         "lemma": "erets"
+      },
+      {
+        "surface": "We will not",
+        "lemma": "lo"
       },
       {
         "surface": "go through",
@@ -644,6 +748,10 @@
       {
         "surface": "or vineyard",
         "lemma": "kerem"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "drink",
@@ -668,6 +776,10 @@
       {
         "surface": "Highway",
         "lemma": "derekh"
+      },
+      {
+        "surface": "we will not",
+        "lemma": "lo"
       },
       {
         "surface": "turn",
@@ -696,8 +808,24 @@
         "lemma": "edom"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You may not",
+        "lemma": "lo"
+      },
+      {
         "surface": "travel",
         "lemma": "avar"
+      },
+      {
+        "surface": "or we will come out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and confront you",
+        "lemma": "qara"
       },
       {
         "surface": "with the sword",
@@ -718,6 +846,14 @@
         "lemma": "ben"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and if",
+        "lemma": "im"
+      },
+      {
         "surface": "or our herds",
         "lemma": "miqneh"
       },
@@ -728,6 +864,10 @@
       {
         "surface": "your water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "we will pay",
+        "lemma": "natan"
       },
       {
         "surface": "for it",
@@ -756,8 +896,24 @@
         "lemma": "edom"
       },
       {
+        "surface": "insisted",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You may not",
+        "lemma": "lo"
+      },
+      {
         "surface": "pass through",
         "lemma": "avar"
+      },
+      {
+        "surface": "And they came out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to confront the Israelites",
+        "lemma": "qara"
       },
       {
         "surface": "with a large",
@@ -784,6 +940,10 @@
       {
         "surface": "refused",
         "lemma": "maen"
+      },
+      {
+        "surface": "to allow",
+        "lemma": "natan"
       },
       {
         "surface": "Israel",
@@ -816,12 +976,20 @@
         "lemma": "qadesh"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "to Mount",
@@ -858,6 +1026,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -880,8 +1052,20 @@
         "lemma": "am"
       },
       {
+        "surface": "he will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "I have given",
+        "lemma": "natan"
       },
       {
         "surface": "the Israelites",
@@ -982,6 +1166,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -1004,6 +1192,10 @@
       {
         "surface": "in the sight",
         "lemma": "ayin"
+      },
+      {
+        "surface": "of the whole",
+        "lemma": "kol"
       },
       {
         "surface": "congregation",
@@ -1078,8 +1270,16 @@
     ],
     "29": [
       {
+        "surface": "When the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
       },
       {
         "surface": "Aaron",
@@ -1088,6 +1288,10 @@
       {
         "surface": "had died",
         "lemma": "gava"
+      },
+      {
+        "surface": "the entire",
+        "lemma": "kol"
       },
       {
         "surface": "house",

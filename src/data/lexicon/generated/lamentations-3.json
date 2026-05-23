@@ -10,6 +10,10 @@
         "lemma": "gaver"
       },
       {
+        "surface": "who has seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "affliction",
         "lemma": "oni"
       },
@@ -36,6 +40,10 @@
         "lemma": "choshekh"
       },
       {
+        "surface": "instead of",
+        "lemma": "lo"
+      },
+      {
         "surface": "light",
         "lemma": "or"
       }
@@ -46,8 +54,16 @@
         "lemma": "akh"
       },
       {
+        "surface": "He keeps turning",
+        "lemma": "shuv"
+      },
+      {
         "surface": "His hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "all day long",
+        "lemma": "kol"
       }
     ],
     "4": [
@@ -92,6 +108,10 @@
     ],
     "6": [
       {
+        "surface": "He has made me dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in darkness",
         "lemma": "machshakh"
       },
@@ -108,6 +128,14 @@
       {
         "surface": "He has walled me in",
         "lemma": "gadar"
+      },
+      {
+        "surface": "so I cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "escape",
+        "lemma": "yatsa"
       },
       {
         "surface": "He has weighed me down",
@@ -222,6 +250,10 @@
     ],
     "13": [
       {
+        "surface": "He pierced",
+        "lemma": "bo"
+      },
+      {
         "surface": "my kidneys",
         "lemma": "kilyah"
       },
@@ -232,8 +264,16 @@
     ],
     "14": [
       {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a laughingstock",
         "lemma": "sechoq"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "my people",
@@ -242,6 +282,10 @@
       {
         "surface": "they mock me in song",
         "lemma": "neginah"
+      },
+      {
+        "surface": "all day long",
+        "lemma": "kol"
       }
     ],
     "15": [
@@ -308,6 +352,10 @@
     ],
     "18": [
       {
+        "surface": "So I say",
+        "lemma": "amar"
+      },
+      {
         "surface": "My strength",
         "lemma": "netsach"
       },
@@ -366,6 +414,10 @@
     ],
     "21": [
       {
+        "surface": "Yet I call",
+        "lemma": "shuv"
+      },
+      {
         "surface": "mind",
         "lemma": "lev"
       },
@@ -384,12 +436,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "we are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "consumed",
         "lemma": "tamam"
       },
       {
         "surface": "His mercies",
         "lemma": "racham"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
       },
       {
         "surface": "fail",
@@ -418,6 +478,10 @@
       {
         "surface": "is my portion",
         "lemma": "cheleq"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "my soul",
@@ -496,6 +560,10 @@
     ],
     "28": [
       {
+        "surface": "Let him sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "alone",
         "lemma": "badad"
       },
@@ -509,6 +577,10 @@
       }
     ],
     "29": [
+      {
+        "surface": "Let him bury",
+        "lemma": "natan"
+      },
       {
         "surface": "his face",
         "lemma": "peh"
@@ -532,6 +604,10 @@
     ],
     "30": [
       {
+        "surface": "Let him offer",
+        "lemma": "natan"
+      },
+      {
         "surface": "his cheek",
         "lemma": "lechi"
       },
@@ -554,6 +630,10 @@
         "lemma": "adonai"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "cast us off",
         "lemma": "zanach"
       },
@@ -563,6 +643,10 @@
       }
     ],
     "32": [
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
       {
         "surface": "He causes grief",
         "lemma": "yagah"
@@ -581,6 +665,10 @@
       }
     ],
     "33": [
+      {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
       {
         "surface": "willingly",
         "lemma": "lev"
@@ -610,6 +698,10 @@
       {
         "surface": "underfoot",
         "lemma": "tachat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the prisoners",
@@ -658,12 +750,32 @@
       {
         "surface": "of these the Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "approve",
+        "lemma": "raah"
       }
     ],
     "37": [
       {
         "surface": "Who",
         "lemma": "mi"
+      },
+      {
+        "surface": "has spoken",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and it came to pass",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "unless",
+        "lemma": "lo"
       },
       {
         "surface": "the Lord",
@@ -676,12 +788,20 @@
     ],
     "38": [
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "both adversity",
         "lemma": "ra"
       },
       {
         "surface": "and good",
         "lemma": "tov"
+      },
+      {
+        "surface": "come",
+        "lemma": "yatsa"
       },
       {
         "surface": "from the mouth",
@@ -732,6 +852,10 @@
         "lemma": "derekh"
       },
       {
+        "surface": "and turn back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       }
@@ -768,6 +892,10 @@
         "lemma": "marah"
       },
       {
+        "surface": "have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "forgiven",
         "lemma": "salach"
       }
@@ -788,6 +916,10 @@
       {
         "surface": "You have killed",
         "lemma": "harag"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "pity",
@@ -836,6 +968,10 @@
     ],
     "46": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "our enemies",
         "lemma": "oyev"
       },
@@ -856,6 +992,10 @@
       {
         "surface": "and pitfall",
         "lemma": "pachat"
+      },
+      {
+        "surface": "have come",
+        "lemma": "hayah"
       },
       {
         "surface": "devastation",
@@ -906,6 +1046,10 @@
         "lemma": "nagar"
       },
       {
+        "surface": "unceasingly",
+        "lemma": "lo"
+      },
+      {
         "surface": "without",
         "lemma": "ayin"
       },
@@ -926,6 +1070,10 @@
       {
         "surface": "from heaven",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "and sees",
+        "lemma": "raah"
       }
     ],
     "51": [
@@ -940,6 +1088,10 @@
       {
         "surface": "to my soul",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "because of all",
+        "lemma": "kol"
       },
       {
         "surface": "the daughters",
@@ -1004,11 +1156,19 @@
         "lemma": "rosh"
       },
       {
+        "surface": "and I thought",
+        "lemma": "amar"
+      },
+      {
         "surface": "I was going to die",
         "lemma": "gazar"
       }
     ],
     "55": [
+      {
+        "surface": "I called on",
+        "lemma": "qara"
+      },
       {
         "surface": "Your name",
         "lemma": "shem"
@@ -1028,8 +1188,16 @@
     ],
     "56": [
       {
+        "surface": "You heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "my plea",
         "lemma": "qol"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "ignore",
@@ -1052,6 +1220,18 @@
       {
         "surface": "when",
         "lemma": "yom"
+      },
+      {
+        "surface": "I called on You",
+        "lemma": "qara"
+      },
+      {
+        "surface": "You said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be afraid",
@@ -1086,6 +1266,10 @@
     ],
     "59": [
       {
+        "surface": "You have seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -1104,8 +1288,20 @@
     ],
     "60": [
       {
+        "surface": "You have seen",
+        "lemma": "raah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their malice",
         "lemma": "neqamah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "their plots",
@@ -1118,8 +1314,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "You have heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "their insults",
         "lemma": "cherpah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "their plots",
@@ -1138,6 +1342,10 @@
       {
         "surface": "of my assailants",
         "lemma": "qamay"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "day long",
@@ -1164,6 +1372,10 @@
     ],
     "64": [
       {
+        "surface": "You will pay them back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "what they deserve",
         "lemma": "gemul"
       },
@@ -1181,6 +1393,10 @@
       }
     ],
     "65": [
+      {
+        "surface": "Put",
+        "lemma": "natan"
+      },
       {
         "surface": "a veil of anguish",
         "lemma": "meginnah"
@@ -1222,8 +1438,8 @@
     ]
   },
   "themeLemmas": [
-    "nephesh",
-    "tov",
-    "gaver"
+    "lo",
+    "kol",
+    "nephesh"
   ]
 }

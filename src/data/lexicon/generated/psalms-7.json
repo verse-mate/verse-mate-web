@@ -58,6 +58,10 @@
         "lemma": "natsal"
       },
       {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my pursuers",
         "lemma": "radaph"
       }
@@ -98,6 +102,18 @@
         "lemma": "elohim"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "I have done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "injustice",
         "lemma": "evel"
       },
@@ -111,6 +127,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
       {
         "surface": "I have rewarded",
         "lemma": "gamal"
@@ -234,6 +254,10 @@
         "lemma": "savav"
       },
       {
+        "surface": "take Your seat",
+        "lemma": "shuv"
+      },
+      {
         "surface": "on high",
         "lemma": "marom"
       }
@@ -288,10 +312,6 @@
       {
         "surface": "the righteous",
         "lemma": "tsaddiq"
-      },
-      {
-        "surface": "O",
-        "lemma": "na"
       },
       {
         "surface": "righteous",
@@ -358,11 +378,27 @@
         "lemma": "zaam"
       },
       {
+        "surface": "each",
+        "lemma": "kol"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       }
     ],
     "12": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "one does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "repent",
+        "lemma": "shuv"
+      },
       {
         "surface": "God will sharpen",
         "lemma": "latash"
@@ -411,10 +447,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the wicked man travails",
         "lemma": "chaval"
@@ -472,6 +504,10 @@
         "lemma": "amal"
       },
       {
+        "surface": "recoils",
+        "lemma": "shuv"
+      },
+      {
         "surface": "on himself",
         "lemma": "rosh"
       },
@@ -520,8 +556,8 @@
     ]
   },
   "themeLemmas": [
+    "im",
     "tsaddiq",
-    "kun",
-    "yasah"
+    "shuv"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "the word",
         "lemma": "davar"
       },
@@ -28,6 +32,10 @@
       {
         "surface": "has a case",
         "lemma": "riv"
+      },
+      {
+        "surface": "the people",
+        "lemma": "yashav"
       },
       {
         "surface": "of the land",
@@ -110,6 +118,14 @@
         "lemma": "aval"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "will waste away",
         "lemma": "amal"
       },
@@ -148,12 +164,20 @@
         "lemma": "akh"
       },
       {
+        "surface": "let no",
+        "lemma": "al"
+      },
+      {
         "surface": "man",
         "lemma": "ish"
       },
       {
         "surface": "contend",
         "lemma": "riv"
+      },
+      {
+        "surface": "let no",
+        "lemma": "al"
       },
       {
         "surface": "man",
@@ -310,6 +334,10 @@
     ],
     "9": [
       {
+        "surface": "And it shall be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like people",
         "lemma": "am"
       },
@@ -326,6 +354,10 @@
         "lemma": "derekh"
       },
       {
+        "surface": "and repay",
+        "lemma": "shuv"
+      },
+      {
         "surface": "for their deeds",
         "lemma": "maalal"
       }
@@ -336,12 +368,20 @@
         "lemma": "akhal"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be satisfied",
         "lemma": "sava"
       },
       {
         "surface": "they will be promiscuous",
         "lemma": "zanah"
+      },
+      {
+        "surface": "but not",
+        "lemma": "lo"
       },
       {
         "surface": "multiply",
@@ -488,6 +528,10 @@
     ],
     "14": [
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "punish",
         "lemma": "paqad"
       },
@@ -528,6 +572,10 @@
         "lemma": "am"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "understanding",
         "lemma": "bin"
       },
@@ -537,6 +585,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "Though",
+        "lemma": "im"
+      },
       {
         "surface": "prostitute yourself",
         "lemma": "zanah"
@@ -550,8 +602,20 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "avoid",
+        "lemma": "al"
+      },
+      {
         "surface": "such guilt",
         "lemma": "asham"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "journey",
+        "lemma": "bo"
       },
       {
         "surface": "to Gilgal",
@@ -568,6 +632,10 @@
       {
         "surface": "to Beth-aven",
         "lemma": "betaven"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
       },
       {
         "surface": "swear on oath",
@@ -689,7 +757,7 @@
   },
   "themeLemmas": [
     "zanah",
-    "yisrael",
-    "riv"
+    "al",
+    "lo"
   ]
 }

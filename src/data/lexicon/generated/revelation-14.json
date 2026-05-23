@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "I looked",
+        "lemma": "horao"
+      },
+      {
         "surface": "Lamb",
         "lemma": "arnion"
+      },
+      {
+        "surface": "standing",
+        "lemma": "histemi"
       },
       {
         "surface": "Mount",
@@ -22,6 +30,10 @@
         "lemma": "hekaton"
       },
       {
+        "surface": "who had",
+        "lemma": "echo"
+      },
+      {
         "surface": "name",
         "lemma": "onoma"
       },
@@ -34,11 +46,19 @@
         "lemma": "onoma"
       },
       {
+        "surface": "written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "foreheads",
         "lemma": "metopon"
       }
     ],
     "2": [
+      {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
       {
         "surface": "a sound",
         "lemma": "phone"
@@ -52,8 +72,16 @@
         "lemma": "phone"
       },
       {
+        "surface": "of many",
+        "lemma": "polus"
+      },
+      {
         "surface": "waters",
         "lemma": "hudor"
+      },
+      {
+        "surface": "the loud",
+        "lemma": "megas"
       },
       {
         "surface": "rumbling",
@@ -66,6 +94,10 @@
       {
         "surface": "sound",
         "lemma": "phone"
+      },
+      {
+        "surface": "I heard",
+        "lemma": "akouo"
       },
       {
         "surface": "harpists",
@@ -110,6 +142,14 @@
         "lemma": "presbuteros"
       },
       {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "could",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "learn",
         "lemma": "manthano"
       },
@@ -132,12 +172,20 @@
     ],
     "4": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "have not been defiled",
         "lemma": "moluno"
       },
       {
         "surface": "women",
         "lemma": "gune"
+      },
+      {
+        "surface": "they are",
+        "lemma": "eimi"
       },
       {
         "surface": "virgins",
@@ -150,10 +198,6 @@
       {
         "surface": "Lamb",
         "lemma": "arnion"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "an"
       },
       {
         "surface": "He goes",
@@ -186,8 +230,16 @@
         "lemma": "pseudos"
       },
       {
+        "surface": "was found",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "mouths",
         "lemma": "stoma"
+      },
+      {
+        "surface": "they are",
+        "lemma": "eimi"
       },
       {
         "surface": "blameless",
@@ -195,6 +247,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
       {
         "surface": "another",
         "lemma": "allos"
@@ -210,6 +266,10 @@
       {
         "surface": "overhead",
         "lemma": "mesouranema"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "the eternal",
@@ -232,6 +292,10 @@
         "lemma": "ge"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "nation",
         "lemma": "ethnos"
       },
@@ -250,6 +314,14 @@
     ],
     "7": [
       {
+        "surface": "And he said",
+        "lemma": "lego"
+      },
+      {
+        "surface": "a loud",
+        "lemma": "megas"
+      },
+      {
         "surface": "voice",
         "lemma": "phone"
       },
@@ -260,6 +332,10 @@
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "give",
+        "lemma": "didomi"
       },
       {
         "surface": "glory",
@@ -274,8 +350,16 @@
         "lemma": "krisis"
       },
       {
+        "surface": "has come",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "Worship",
         "lemma": "proskuneo"
+      },
+      {
+        "surface": "made",
+        "lemma": "poieo"
       },
       {
         "surface": "heavens",
@@ -316,6 +400,10 @@
         "lemma": "akoloutheo"
       },
       {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "Fallen",
         "lemma": "pipto"
       },
@@ -326,6 +414,14 @@
       {
         "surface": "Babylon",
         "lemma": "babulon"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "nations",
@@ -366,6 +462,14 @@
         "lemma": "akoloutheo"
       },
       {
+        "surface": "calling out",
+        "lemma": "lego"
+      },
+      {
+        "surface": "a loud",
+        "lemma": "megas"
+      },
+      {
         "surface": "voice",
         "lemma": "phone"
       },
@@ -380,6 +484,10 @@
       {
         "surface": "image",
         "lemma": "eikon"
+      },
+      {
+        "surface": "receives",
+        "lemma": "lambano"
       },
       {
         "surface": "its mark",
@@ -482,6 +590,10 @@
         "lemma": "nux"
       },
       {
+        "surface": "there is",
+        "lemma": "echo"
+      },
+      {
         "surface": "rest",
         "lemma": "anapausis"
       },
@@ -498,6 +610,10 @@
         "lemma": "eikon"
       },
       {
+        "surface": "receives",
+        "lemma": "lambano"
+      },
+      {
         "surface": "mark",
         "lemma": "charagma"
       },
@@ -510,6 +626,10 @@
       {
         "surface": "Here",
         "lemma": "hode"
+      },
+      {
+        "surface": "is a call for",
+        "lemma": "eimi"
       },
       {
         "surface": "perseverance",
@@ -542,12 +662,24 @@
     ],
     "13": [
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "a voice",
         "lemma": "phone"
       },
       {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "telling me",
+        "lemma": "lego"
+      },
+      {
+        "surface": "to write",
+        "lemma": "grapho"
       },
       {
         "surface": "Blessed are",
@@ -568,6 +700,10 @@
       {
         "surface": "this moment on",
         "lemma": "arti"
+      },
+      {
+        "surface": "says",
+        "lemma": "lego"
       },
       {
         "surface": "Spirit",
@@ -591,6 +727,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "I looked",
+        "lemma": "horao"
+      },
       {
         "surface": "a white",
         "lemma": "leukos"
@@ -618,6 +758,10 @@
       {
         "surface": "of Man",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "a golden",
@@ -654,12 +798,20 @@
         "lemma": "angelos"
       },
       {
+        "surface": "came out",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "temple",
         "lemma": "naos"
       },
       {
         "surface": "crying out",
         "lemma": "krazo"
+      },
+      {
+        "surface": "a loud",
+        "lemma": "megas"
       },
       {
         "surface": "voice",
@@ -688,6 +840,10 @@
       {
         "surface": "time",
         "lemma": "hora"
+      },
+      {
+        "surface": "has come",
+        "lemma": "erchomai"
       },
       {
         "surface": "to harvest",
@@ -746,12 +902,20 @@
         "lemma": "angelos"
       },
       {
+        "surface": "came",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "temple",
         "lemma": "naos"
       },
       {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "had",
+        "lemma": "echo"
       },
       {
         "surface": "a sharp",
@@ -772,12 +936,20 @@
         "lemma": "angelos"
       },
       {
+        "surface": "with",
+        "lemma": "echo"
+      },
+      {
         "surface": "authority",
         "lemma": "exousia"
       },
       {
         "surface": "fire",
         "lemma": "pur"
+      },
+      {
+        "surface": "came",
+        "lemma": "exerchomai"
       },
       {
         "surface": "altar",
@@ -788,8 +960,16 @@
         "lemma": "phoneo"
       },
       {
+        "surface": "in a loud",
+        "lemma": "megas"
+      },
+      {
         "surface": "voice",
         "lemma": "phone"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "sharp",
@@ -870,6 +1050,10 @@
         "lemma": "ballo"
       },
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "winepress",
         "lemma": "lenos"
       },
@@ -898,6 +1082,10 @@
       {
         "surface": "the blood",
         "lemma": "haima"
+      },
+      {
+        "surface": "that flowed",
+        "lemma": "exerchomai"
       },
       {
         "surface": "it",

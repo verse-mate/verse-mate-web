@@ -30,6 +30,10 @@
         "lemma": "hava"
       },
       {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "the kingdom",
         "lemma": "malkhu"
       }
@@ -46,10 +50,6 @@
       {
         "surface": "including Daniel",
         "lemma": "daniyyel"
-      },
-      {
-        "surface": "these",
-        "lemma": "illen"
       },
       {
         "surface": "satraps",
@@ -114,6 +114,10 @@
         "lemma": "qum"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "kingdom",
         "lemma": "malkhu"
       }
@@ -156,6 +160,10 @@
         "lemma": "shekhach"
       },
       {
+        "surface": "no",
+        "lemma": "kol"
+      },
+      {
         "surface": "charge",
         "lemma": "illah"
       },
@@ -190,12 +198,12 @@
     ],
     "5": [
       {
-        "surface": "these",
-        "lemma": "illekh"
-      },
-      {
         "surface": "men",
         "lemma": "gevar"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "We will never",
@@ -206,12 +214,12 @@
         "lemma": "shekhach"
       },
       {
-        "surface": "charge",
-        "lemma": "illah"
+        "surface": "any",
+        "lemma": "kol"
       },
       {
-        "surface": "against this",
-        "lemma": "denah"
+        "surface": "charge",
+        "lemma": "illah"
       },
       {
         "surface": "Daniel",
@@ -248,6 +256,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "O King",
         "lemma": "melekh"
       },
@@ -265,6 +277,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the royal",
         "lemma": "malkhu"
@@ -322,8 +338,16 @@
         "lemma": "yom"
       },
       {
+        "surface": "anyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "petitions",
         "lemma": "bea"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "god",
@@ -405,6 +429,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "Therefore",
+        "lemma": "kol"
+      },
       {
         "surface": "King",
         "lemma": "melekh"
@@ -510,10 +538,6 @@
     ],
     "11": [
       {
-        "surface": "these",
-        "lemma": "illekh"
-      },
-      {
         "surface": "men",
         "lemma": "gevar"
       },
@@ -552,6 +576,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "and asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "his royal",
         "lemma": "melekh"
       },
@@ -580,12 +608,20 @@
         "lemma": "yom"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "man",
         "lemma": "enash"
       },
       {
         "surface": "petitions",
         "lemma": "bea"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "god",
@@ -762,10 +798,6 @@
     ],
     "15": [
       {
-        "surface": "the",
-        "lemma": "illekh"
-      },
-      {
         "surface": "men",
         "lemma": "gevar"
       },
@@ -776,6 +808,10 @@
       {
         "surface": "the king {together",
         "lemma": "melekh"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "to him",
@@ -802,6 +838,10 @@
         "lemma": "paras"
       },
       {
+        "surface": "no",
+        "lemma": "kol"
+      },
+      {
         "surface": "decree",
         "lemma": "esar"
       },
@@ -826,6 +866,10 @@
       {
         "surface": "the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "gave the order",
+        "lemma": "amar"
       },
       {
         "surface": "and they brought",
@@ -1170,6 +1214,10 @@
         "lemma": "saggi"
       },
       {
+        "surface": "and gave orders",
+        "lemma": "amar"
+      },
+      {
         "surface": "to lift",
         "lemma": "seliq"
       },
@@ -1216,12 +1264,12 @@
     ],
     "24": [
       {
-        "surface": "of the king",
-        "lemma": "melekh"
+        "surface": "At the command",
+        "lemma": "amar"
       },
       {
-        "surface": "the",
-        "lemma": "illekh"
+        "surface": "of the king",
+        "lemma": "melekh"
       },
       {
         "surface": "men",
@@ -1250,10 +1298,6 @@
       {
         "surface": "of lions",
         "lemma": "aryeh"
-      },
-      {
-        "surface": "they",
-        "lemma": "innun"
       },
       {
         "surface": "and their children",
@@ -1292,6 +1336,10 @@
         "lemma": "deqaq"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their bones",
         "lemma": "gerem"
       }
@@ -1312,6 +1360,10 @@
       {
         "surface": "to the people",
         "lemma": "am"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "nation",
@@ -1346,6 +1398,10 @@
       {
         "surface": "decree",
         "lemma": "teem"
+      },
+      {
+        "surface": "in every",
+        "lemma": "kol"
       },
       {
         "surface": "part",
@@ -1488,6 +1544,6 @@
   "themeLemmas": [
     "daniyyel",
     "la",
-    "elah"
+    "kol"
   ]
 }

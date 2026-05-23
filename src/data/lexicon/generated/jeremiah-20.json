@@ -38,6 +38,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "Jeremiah",
         "lemma": "yirmeyah"
       },
@@ -66,6 +70,10 @@
       {
         "surface": "beaten",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "and put",
+        "lemma": "natan"
       },
       {
         "surface": "the stocks",
@@ -102,6 +110,10 @@
         "lemma": "pashchur"
       },
       {
+        "surface": "released",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Jeremiah",
         "lemma": "yirmeyah"
       },
@@ -114,8 +126,20 @@
         "lemma": "yirmeyah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "call",
+        "lemma": "qara"
       },
       {
         "surface": "you Pashhur",
@@ -140,8 +164,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I will make you",
+        "lemma": "natan"
+      },
+      {
         "surface": "a terror",
         "lemma": "magor"
+      },
+      {
+        "surface": "and to all",
+        "lemma": "kol"
       },
       {
         "surface": "your friends",
@@ -166,6 +202,10 @@
       {
         "surface": "And I will hand Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "over to",
+        "lemma": "natan"
       },
       {
         "surface": "the king",
@@ -194,6 +234,14 @@
     ],
     "5": [
       {
+        "surface": "I will give away",
+        "lemma": "natan"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the wealth",
         "lemma": "chosen"
       },
@@ -202,12 +250,20 @@
         "lemma": "ir"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its products",
         "lemma": "yegia"
       },
       {
         "surface": "and valuables",
         "lemma": "yeqar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the treasures",
@@ -238,6 +294,10 @@
         "lemma": "laqach"
       },
       {
+        "surface": "and carry them off",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Babylon",
         "lemma": "bavel"
       }
@@ -246,6 +306,14 @@
       {
         "surface": "Pashhur",
         "lemma": "pashchur"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who live",
+        "lemma": "yashav"
       },
       {
         "surface": "in your house",
@@ -258,6 +326,10 @@
       {
         "surface": "into captivity",
         "lemma": "shevi"
+      },
+      {
+        "surface": "You will go",
+        "lemma": "bo"
       },
       {
         "surface": "to Babylon",
@@ -278,6 +350,10 @@
       {
         "surface": "be buried",
         "lemma": "qavar"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "your friends",
@@ -314,12 +390,24 @@
         "lemma": "yakhol"
       },
       {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a laughingstock",
         "lemma": "sechoq"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
       },
       {
         "surface": "mocks",
@@ -340,6 +428,10 @@
         "lemma": "zaaq"
       },
       {
+        "surface": "I proclaim",
+        "lemma": "qara"
+      },
+      {
         "surface": "violence",
         "lemma": "chamas"
       },
@@ -356,6 +448,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "has become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a reproach",
         "lemma": "cherpah"
       },
@@ -364,11 +460,23 @@
         "lemma": "qeles"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
       }
     ],
     "9": [
+      {
+        "surface": "If I say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
       {
         "surface": "mention Him",
         "lemma": "zakhar"
@@ -384,6 +492,10 @@
       {
         "surface": "in His name",
         "lemma": "shem"
+      },
+      {
+        "surface": "His message becomes",
+        "lemma": "hayah"
       },
       {
         "surface": "a fire",
@@ -414,11 +526,19 @@
         "lemma": "kul"
       },
       {
+        "surface": "and I cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "prevail",
         "lemma": "yakhol"
       }
     ],
     "10": [
+      {
+        "surface": "I have heard",
+        "lemma": "shama"
+      },
       {
         "surface": "the whispering",
         "lemma": "dibbah"
@@ -442,6 +562,10 @@
       {
         "surface": "let us report him",
         "lemma": "nagad"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "my trusted friends",
@@ -498,8 +622,16 @@
         "lemma": "kashal"
       },
       {
+        "surface": "and will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "prevail",
         "lemma": "yakhol"
+      },
+      {
+        "surface": "they have not",
+        "lemma": "lo"
       },
       {
         "surface": "succeeded",
@@ -520,6 +652,10 @@
       {
         "surface": "disgrace",
         "lemma": "kelimmah"
+      },
+      {
+        "surface": "that will never",
+        "lemma": "lo"
       },
       {
         "surface": "be forgotten",
@@ -544,12 +680,20 @@
         "lemma": "tsaddiq"
       },
       {
+        "surface": "who sees",
+        "lemma": "raah"
+      },
+      {
         "surface": "the heart",
         "lemma": "kilyah"
       },
       {
         "surface": "and mind",
         "lemma": "lev"
+      },
+      {
+        "surface": "let me see",
+        "lemma": "raah"
       },
       {
         "surface": "Your vengeance",
@@ -628,6 +772,10 @@
         "lemma": "yalad"
       },
       {
+        "surface": "never",
+        "lemma": "al"
+      },
+      {
         "surface": "be blessed",
         "lemma": "barakh"
       }
@@ -644,6 +792,14 @@
       {
         "surface": "brought",
         "lemma": "basar"
+      },
+      {
+        "surface": "my father {the news",
+        "lemma": "av"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "A son",
@@ -664,6 +820,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like the cities",
         "lemma": "ir"
       },
@@ -676,8 +836,16 @@
         "lemma": "haphakh"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "compassion",
         "lemma": "nacham"
+      },
+      {
+        "surface": "May he hear",
+        "lemma": "shama"
       },
       {
         "surface": "an outcry",
@@ -692,11 +860,19 @@
         "lemma": "teruah"
       },
       {
+        "surface": "vvv",
+        "lemma": "et"
+      },
+      {
         "surface": "at noon",
         "lemma": "tsohar"
       }
     ],
     "17": [
+      {
+        "surface": "he did not",
+        "lemma": "lo"
+      },
       {
         "surface": "kill me",
         "lemma": "mut"
@@ -708,6 +884,10 @@
       {
         "surface": "so that my mother",
         "lemma": "em"
+      },
+      {
+        "surface": "might have been",
+        "lemma": "hayah"
       },
       {
         "surface": "my grave",
@@ -732,8 +912,16 @@
         "lemma": "mah"
       },
       {
+        "surface": "did I come out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "of the womb",
         "lemma": "rechem"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
       },
       {
         "surface": "only trouble",
@@ -758,8 +946,8 @@
     ]
   },
   "themeLemmas": [
-    "pashchur",
-    "yirmeyah",
-    "yakhol"
+    "kol",
+    "lo",
+    "pashchur"
   ]
 }

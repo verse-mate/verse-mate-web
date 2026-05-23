@@ -26,12 +26,24 @@
         "lemma": "ziphi"
       },
       {
+        "surface": "went",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Saul",
         "lemma": "shaul"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Is David",
         "lemma": "david"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "hiding",
@@ -59,6 +71,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
       {
         "surface": "my prayer",
         "lemma": "tephillah"
@@ -102,6 +118,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "men with no",
+        "lemma": "lo"
+      },
+      {
         "surface": "regard",
         "lemma": "sum"
       },
@@ -115,10 +135,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "Surely",
-        "lemma": "hinneh"
-      },
       {
         "surface": "God",
         "lemma": "elohim"
@@ -141,6 +157,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "He will reward",
+        "lemma": "shuv"
+      },
       {
         "surface": "my enemies",
         "lemma": "sharar"
@@ -190,12 +210,20 @@
         "lemma": "natsal"
       },
       {
+        "surface": "from every",
+        "lemma": "kol"
+      },
+      {
         "surface": "trouble",
         "lemma": "batstsarah"
       },
       {
         "surface": "and my eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "have looked in triumph on",
+        "lemma": "raah"
       },
       {
         "surface": "my foes",
@@ -206,6 +234,6 @@
   "themeLemmas": [
     "shem",
     "nephesh",
-    "david"
+    "lo"
   ]
 }

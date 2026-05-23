@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "came",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "brothers",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "I did not come",
+        "lemma": "erchomai"
       },
       {
         "surface": "eloquence",
@@ -36,6 +44,10 @@
         "lemma": "krino"
       },
       {
+        "surface": "to know",
+        "lemma": "eido"
+      },
+      {
         "surface": "Jesus",
         "lemma": "iesous"
       },
@@ -50,12 +62,20 @@
     ],
     "3": [
       {
+        "surface": "came",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "weakness",
         "lemma": "astheneia"
       },
       {
         "surface": "fear",
         "lemma": "phobos"
+      },
+      {
+        "surface": "much",
+        "lemma": "polus"
       },
       {
         "surface": "trembling",
@@ -102,6 +122,10 @@
         "lemma": "pistis"
       },
       {
+        "surface": "would not rest",
+        "lemma": "eimi"
+      },
+      {
         "surface": "men’s",
         "lemma": "anthropos"
       },
@@ -122,6 +146,10 @@
       {
         "surface": "mature",
         "lemma": "teleios"
+      },
+      {
+        "surface": "we speak a message",
+        "lemma": "laleo"
       },
       {
         "surface": "of wisdom",
@@ -149,6 +177,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "we speak of",
+        "lemma": "laleo"
+      },
       {
         "surface": "the mysterious",
         "lemma": "musterion"
@@ -184,6 +216,10 @@
     ],
     "8": [
       {
+        "surface": "None",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "rulers",
         "lemma": "archon"
       },
@@ -192,8 +228,12 @@
         "lemma": "aion"
       },
       {
-        "surface": "vvv",
-        "lemma": "an"
+        "surface": "understood",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "they had",
+        "lemma": "ginosko"
       },
       {
         "surface": "they would not have crucified",
@@ -210,12 +250,24 @@
     ],
     "9": [
       {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "eye",
         "lemma": "ophthalmos"
       },
       {
+        "surface": "has seen",
+        "lemma": "horao"
+      },
+      {
         "surface": "ear",
         "lemma": "ous"
+      },
+      {
+        "surface": "has heard",
+        "lemma": "akouo"
       },
       {
         "surface": "heart",
@@ -264,6 +316,10 @@
         "lemma": "ereunao"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "deep  things",
         "lemma": "bathos"
       },
@@ -274,8 +330,16 @@
     ],
     "11": [
       {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
         "surface": "among men",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "knows",
+        "lemma": "eido"
       },
       {
         "surface": "of man",
@@ -294,6 +358,14 @@
         "lemma": "houto"
       },
       {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "knows",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "of God",
         "lemma": "theos"
       },
@@ -307,6 +379,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "have not received",
+        "lemma": "lambano"
+      },
       {
         "surface": "spirit",
         "lemma": "pneuma"
@@ -324,6 +400,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "we may understand",
+        "lemma": "eido"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -333,6 +413,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "what we speak",
+        "lemma": "laleo"
+      },
       {
         "surface": "words",
         "lemma": "logos"
@@ -392,8 +476,20 @@
         "lemma": "theos"
       },
       {
+        "surface": "they are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "foolishness",
         "lemma": "moria"
+      },
+      {
+        "surface": "he cannot",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "understand them",
+        "lemma": "ginosko"
       },
       {
         "surface": "they are} spiritually",
@@ -414,11 +510,23 @@
         "lemma": "anakrino"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "is not subject to anyone’s judgment",
         "lemma": "anakrino"
       }
     ],
     "16": [
+      {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "has known",
+        "lemma": "ginosko"
+      },
       {
         "surface": "the mind",
         "lemma": "nous"
@@ -430,6 +538,10 @@
       {
         "surface": "to instruct",
         "lemma": "sumbibazo"
+      },
+      {
+        "surface": "have",
+        "lemma": "echo"
       },
       {
         "surface": "the mind",

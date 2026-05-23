@@ -22,6 +22,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "gave",
+        "lemma": "didomi"
+      },
+      {
         "surface": "to show",
         "lemma": "deiknuo"
       },
@@ -36,6 +40,10 @@
       {
         "surface": "soon",
         "lemma": "tachos"
+      },
+      {
+        "surface": "come to pass",
+        "lemma": "ginomai"
       },
       {
         "surface": "He made it known",
@@ -66,6 +74,10 @@
       {
         "surface": "everything",
         "lemma": "hosos"
+      },
+      {
+        "surface": "he saw",
+        "lemma": "horao"
       },
       {
         "surface": "word",
@@ -106,8 +118,16 @@
         "lemma": "propheteia"
       },
       {
+        "surface": "hear",
+        "lemma": "akouo"
+      },
+      {
         "surface": "obey",
         "lemma": "tereo"
+      },
+      {
+        "surface": "is written",
+        "lemma": "grapho"
       },
       {
         "surface": "time is",
@@ -138,6 +158,18 @@
       {
         "surface": "peace",
         "lemma": "eirene"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "is to come",
+        "lemma": "erchomai"
       },
       {
         "surface": "seven",
@@ -208,6 +240,10 @@
     ],
     "6": [
       {
+        "surface": "has made",
+        "lemma": "poieo"
+      },
+      {
         "surface": "a kingdom",
         "lemma": "basileia"
       },
@@ -238,24 +274,36 @@
       {
         "surface": "ever",
         "lemma": "aion"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ],
     "7": [
       {
+        "surface": "He is coming",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "clouds",
         "lemma": "nephele"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "eye",
         "lemma": "ophthalmos"
       },
       {
+        "surface": "will see",
+        "lemma": "horao"
+      },
+      {
         "surface": "pierced",
         "lemma": "ekkenteo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "tribes",
@@ -268,13 +316,13 @@
       {
         "surface": "will mourn",
         "lemma": "kopto"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ],
     "8": [
+      {
+        "surface": "am",
+        "lemma": "eimi"
+      },
       {
         "surface": "Alpha",
         "lemma": "alpha"
@@ -284,12 +332,28 @@
         "lemma": "omega"
       },
       {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
         "surface": "the Lord",
         "lemma": "kurios"
       },
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "is to come",
+        "lemma": "erchomai"
       },
       {
         "surface": "Almighty",
@@ -324,6 +388,10 @@
       {
         "surface": "Jesus",
         "lemma": "iesous"
+      },
+      {
+        "surface": "was",
+        "lemma": "ginomai"
       },
       {
         "surface": "island",
@@ -364,12 +432,24 @@
         "lemma": "hemera"
       },
       {
+        "surface": "I was",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "the Spirit",
         "lemma": "pneuma"
       },
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "behind",
         "lemma": "opiso"
+      },
+      {
+        "surface": "a loud",
+        "lemma": "megas"
       },
       {
         "surface": "voice",
@@ -381,6 +461,14 @@
       }
     ],
     "11": [
+      {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Write",
+        "lemma": "grapho"
+      },
       {
         "surface": "a scroll",
         "lemma": "biblion"
@@ -444,8 +532,16 @@
         "lemma": "phone"
       },
       {
+        "surface": "was speaking",
+        "lemma": "laleo"
+      },
+      {
         "surface": "having turned",
         "lemma": "epistrepho"
+      },
+      {
+        "surface": "I saw",
+        "lemma": "horao"
       },
       {
         "surface": "seven",
@@ -570,11 +666,19 @@
         "lemma": "phone"
       },
       {
+        "surface": "of many",
+        "lemma": "polus"
+      },
+      {
         "surface": "waters",
         "lemma": "hudor"
       }
     ],
     "16": [
+      {
+        "surface": "He held",
+        "lemma": "echo"
+      },
       {
         "surface": "right",
         "lemma": "dexios"
@@ -630,6 +734,10 @@
     ],
     "17": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "I fell",
         "lemma": "pipto"
       },
@@ -650,8 +758,16 @@
         "lemma": "dexios"
       },
       {
+        "surface": "and said",
+        "lemma": "lego"
+      },
+      {
         "surface": "be afraid",
         "lemma": "phobeo"
+      },
+      {
+        "surface": "am",
+        "lemma": "eimi"
       },
       {
         "surface": "First",
@@ -668,8 +784,16 @@
         "lemma": "zao"
       },
       {
+        "surface": "I was",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "dead",
         "lemma": "nekros"
+      },
+      {
+        "surface": "now I am",
+        "lemma": "eimi"
       },
       {
         "surface": "alive",
@@ -682,6 +806,10 @@
       {
         "surface": "ever",
         "lemma": "aion"
+      },
+      {
+        "surface": "I hold",
+        "lemma": "echo"
       },
       {
         "surface": "keys",
@@ -698,8 +826,24 @@
     ],
     "19": [
       {
+        "surface": "write down",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "you have seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "will",
         "lemma": "mello"
+      },
+      {
+        "surface": "happen",
+        "lemma": "ginomai"
       }
     ],
     "20": [
@@ -714,6 +858,10 @@
       {
         "surface": "stars",
         "lemma": "aster"
+      },
+      {
+        "surface": "you saw",
+        "lemma": "horao"
       },
       {
         "surface": "right hand",
@@ -740,6 +888,10 @@
         "lemma": "aster"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the angels",
         "lemma": "angelos"
       },
@@ -758,6 +910,10 @@
       {
         "surface": "lampstands",
         "lemma": "luchnia"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "the seven",

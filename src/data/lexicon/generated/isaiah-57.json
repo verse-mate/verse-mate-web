@@ -76,6 +76,10 @@
         "lemma": "nakhoach"
       },
       {
+        "surface": "enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "into peace",
         "lemma": "shalom"
       },
@@ -144,6 +148,10 @@
         "lemma": "lashon"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "children",
         "lemma": "yeled"
       },
@@ -172,6 +180,10 @@
       {
         "surface": "under",
         "lemma": "tachat"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "luxuriant",
@@ -396,6 +408,14 @@
         "lemma": "derekh"
       },
       {
+        "surface": "but you did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
         "surface": "There is no hope",
         "lemma": "yaash"
       },
@@ -410,6 +430,10 @@
       {
         "surface": "of your strength",
         "lemma": "yad"
+      },
+      {
+        "surface": "you did not",
+        "lemma": "lo"
       },
       {
         "surface": "grow weak",
@@ -434,8 +458,16 @@
         "lemma": "kazav"
       },
       {
+        "surface": "failed",
+        "lemma": "lo"
+      },
+      {
         "surface": "to remember Me",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "take this",
@@ -446,12 +478,20 @@
         "lemma": "lev"
       },
       {
+        "surface": "Is it not",
+        "lemma": "lo"
+      },
+      {
         "surface": "long",
         "lemma": "olam"
       },
       {
         "surface": "been silent",
         "lemma": "chashah"
+      },
+      {
+        "surface": "you do not",
+        "lemma": "lo"
       },
       {
         "surface": "fear Me",
@@ -470,6 +510,10 @@
       {
         "surface": "and your works",
         "lemma": "maaseh"
+      },
+      {
+        "surface": "and they will not",
+        "lemma": "lo"
       },
       {
         "surface": "profit you",
@@ -496,6 +540,10 @@
       {
         "surface": "will carry off",
         "lemma": "nasa"
+      },
+      {
+        "surface": "all of them",
+        "lemma": "kol"
       },
       {
         "surface": "a breath",
@@ -531,6 +579,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "And it will be said",
+        "lemma": "amar"
+      },
       {
         "surface": "Build it up",
         "lemma": "salal"
@@ -568,6 +620,10 @@
       {
         "surface": "thus",
         "lemma": "koh"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the One who is high",
@@ -644,8 +700,16 @@
     ],
     "16": [
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "accuse you forever",
         "lemma": "riv"
+      },
+      {
+        "surface": "nor will I",
+        "lemma": "lo"
       },
       {
         "surface": "always",
@@ -670,6 +734,10 @@
       {
         "surface": "the breath of life",
         "lemma": "neshamah"
+      },
+      {
+        "surface": "have made",
+        "lemma": "asah"
       }
     ],
     "17": [
@@ -715,6 +783,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "I have seen",
+        "lemma": "raah"
+      },
       {
         "surface": "his ways",
         "lemma": "derekh"
@@ -770,6 +842,10 @@
         "lemma": "qarov"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -790,6 +866,10 @@
       {
         "surface": "sea",
         "lemma": "yam"
+      },
+      {
+        "surface": "it cannot",
+        "lemma": "lo"
       },
       {
         "surface": "be still",
@@ -822,6 +902,10 @@
         "lemma": "shalom"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "my God",
         "lemma": "elohim"
       },
@@ -832,8 +916,8 @@
     ]
   },
   "themeLemmas": [
-    "sum",
-    "shalom",
-    "ruach"
+    "lo",
+    "amar",
+    "sum"
   ]
 }

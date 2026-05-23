@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
         "surface": "after",
         "lemma": "achar"
       },
@@ -30,6 +34,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "spoke",
+        "lemma": "amar"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
       },
@@ -48,6 +56,10 @@
       {
         "surface": "assistant",
         "lemma": "sharat"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -72,6 +84,10 @@
         "lemma": "qamay"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "these people",
         "lemma": "am"
       },
@@ -88,6 +104,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "am giving",
+        "lemma": "natan"
+      },
+      {
         "surface": "the children",
         "lemma": "ben"
       },
@@ -97,6 +117,14 @@
       }
     ],
     "3": [
+      {
+        "surface": "I have given you",
+        "lemma": "natan"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
       {
         "surface": "place",
         "lemma": "maqom"
@@ -128,6 +156,10 @@
         "lemma": "gevul"
       },
       {
+        "surface": "shall extend",
+        "lemma": "hayah"
+      },
+      {
         "surface": "from the wilderness",
         "lemma": "midbar"
       },
@@ -146,6 +178,10 @@
       {
         "surface": "Euphrates",
         "lemma": "perat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -170,6 +206,10 @@
     ],
     "5": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "one",
         "lemma": "ish"
       },
@@ -182,6 +222,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the days",
         "lemma": "yom"
       },
@@ -190,12 +234,28 @@
         "lemma": "chay"
       },
       {
+        "surface": "I was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
       {
+        "surface": "so will I be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "I will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "leave you",
         "lemma": "raphah"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "forsake you",
@@ -222,6 +282,14 @@
       {
         "surface": "I swore",
         "lemma": "shava"
+      },
+      {
+        "surface": "to their fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "I would give",
+        "lemma": "natan"
       }
     ],
     "7": [
@@ -242,6 +310,14 @@
         "lemma": "shamar"
       },
       {
+        "surface": "to observe",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the law",
         "lemma": "torah"
       },
@@ -256,6 +332,10 @@
       {
         "surface": "commanded you",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "turn",
@@ -274,6 +354,10 @@
         "lemma": "sakhal"
       },
       {
+        "surface": "wherever",
+        "lemma": "kol"
+      },
+      {
         "surface": "you go",
         "lemma": "halakh"
       }
@@ -286,6 +370,10 @@
       {
         "surface": "of the Law",
         "lemma": "torah"
+      },
+      {
+        "surface": "must not",
+        "lemma": "lo"
       },
       {
         "surface": "depart",
@@ -312,6 +400,14 @@
         "lemma": "shamar"
       },
       {
+        "surface": "to do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "written",
         "lemma": "katav"
       },
@@ -330,6 +426,10 @@
     ],
     "9": [
       {
+        "surface": "Have I not",
+        "lemma": "lo"
+      },
+      {
         "surface": "commanded you",
         "lemma": "tsavah"
       },
@@ -340,6 +440,10 @@
       {
         "surface": "and courageous",
         "lemma": "amats"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be afraid",
@@ -356,6 +460,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "you wherever",
+        "lemma": "kol"
       },
       {
         "surface": "you go",
@@ -430,6 +538,10 @@
         "lemma": "yarden"
       },
       {
+        "surface": "to go in",
+        "lemma": "bo"
+      },
+      {
         "surface": "and take possession of",
         "lemma": "yarash"
       },
@@ -444,6 +556,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "is giving",
+        "lemma": "natan"
       },
       {
         "surface": "to possess",
@@ -470,6 +586,10 @@
       {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       }
     ],
     "13": [
@@ -494,6 +614,10 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "when he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yehovah"
       },
@@ -504,6 +628,10 @@
       {
         "surface": "will give you rest",
         "lemma": "nuach"
+      },
+      {
+        "surface": "and He will give",
+        "lemma": "natan"
       },
       {
         "surface": "land",
@@ -524,6 +652,10 @@
         "lemma": "miqneh"
       },
       {
+        "surface": "may remain",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the land",
         "lemma": "erets"
       },
@@ -532,12 +664,20 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "on this side",
         "lemma": "ever"
       },
       {
         "surface": "of the Jordan",
         "lemma": "yarden"
+      },
+      {
+        "surface": "But all",
+        "lemma": "kol"
       },
       {
         "surface": "your mighty men",
@@ -594,6 +734,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "is giving",
+        "lemma": "natan"
+      },
+      {
+        "surface": "Then you may return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to the land",
         "lemma": "erets"
       },
@@ -618,6 +766,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "on the east",
         "lemma": "mizrach"
       },
@@ -640,8 +792,16 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "Everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "you have commanded us",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "we will do",
+        "lemma": "asah"
       },
       {
         "surface": "you send us",
@@ -654,8 +814,20 @@
     ],
     "17": [
       {
+        "surface": "we obeyed",
+        "lemma": "shama"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "in all things",
+        "lemma": "kol"
+      },
+      {
+        "surface": "so we will obey you",
+        "lemma": "shama"
       },
       {
         "surface": "And may the LORD",
@@ -666,11 +838,23 @@
         "lemma": "elohim"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "He was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
     ],
     "18": [
+      {
+        "surface": "Anyone",
+        "lemma": "kol"
+      },
       {
         "surface": "rebels",
         "lemma": "marah"
@@ -680,8 +864,20 @@
         "lemma": "peh"
       },
       {
+        "surface": "and does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "obey",
+        "lemma": "shama"
+      },
+      {
         "surface": "your words",
         "lemma": "davar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "you command him",
@@ -702,8 +898,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "mosheh",
-    "tsavah",
-    "yehoshua"
+    "natan"
   ]
 }

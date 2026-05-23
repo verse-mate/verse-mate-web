@@ -216,8 +216,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "had given",
+        "lemma": "natan"
+      },
+      {
         "surface": "The king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "had granted",
+        "lemma": "natan"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "his requests",
@@ -288,6 +300,10 @@
     ],
     "8": [
       {
+        "surface": "Ezra arrived",
+        "lemma": "bo"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -336,6 +352,10 @@
       {
         "surface": "month",
         "lemma": "chodesh"
+      },
+      {
+        "surface": "and he arrived",
+        "lemma": "bo"
       },
       {
         "surface": "Jerusalem",
@@ -392,6 +412,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "to practice it",
+        "lemma": "asah"
+      },
+      {
         "surface": "and to teach",
         "lemma": "lamad"
       },
@@ -424,6 +448,10 @@
       {
         "surface": "Artaxerxes",
         "lemma": "artachshashta"
+      },
+      {
+        "surface": "had given",
+        "lemma": "natan"
       },
       {
         "surface": "to Ezra",
@@ -512,6 +540,10 @@
       {
         "surface": "decree",
         "lemma": "teem"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "volunteers",
@@ -628,6 +660,10 @@
     ],
     "16": [
       {
+        "surface": "together with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the silver",
         "lemma": "kesaph"
       },
@@ -638,6 +674,10 @@
       {
         "surface": "you may find",
         "lemma": "shekhach"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "the province",
@@ -674,16 +714,8 @@
     ],
     "17": [
       {
-        "surface": "With this",
-        "lemma": "denah"
-      },
-      {
         "surface": "money",
         "lemma": "kesaph"
-      },
-      {
-        "surface": "therefore",
-        "lemma": "denah"
       },
       {
         "surface": "you are to buy",
@@ -716,10 +748,6 @@
       {
         "surface": "and offer",
         "lemma": "qerev"
-      },
-      {
-        "surface": "them",
-        "lemma": "himmo"
       },
       {
         "surface": "the altar",
@@ -874,6 +902,10 @@
         "lemma": "teem"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the treasurers",
         "lemma": "gizbar"
       },
@@ -884,6 +916,10 @@
       {
         "surface": "of the Euphrates",
         "lemma": "nehar"
+      },
+      {
+        "surface": "Whatever",
+        "lemma": "kol"
       },
       {
         "surface": "Ezra",
@@ -986,6 +1022,10 @@
     ],
     "23": [
       {
+        "surface": "Whatever",
+        "lemma": "kol"
+      },
+      {
         "surface": "is commanded",
         "lemma": "teem"
       },
@@ -1064,6 +1104,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "of the priests",
         "lemma": "kahen"
       },
@@ -1086,10 +1130,6 @@
       {
         "surface": "or other servants",
         "lemma": "pelach"
-      },
-      {
-        "surface": "of this",
-        "lemma": "denah"
       },
       {
         "surface": "house",
@@ -1134,6 +1174,10 @@
         "lemma": "din"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -1144,6 +1188,10 @@
       {
         "surface": "of the Euphrates",
         "lemma": "nehar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "who know",
@@ -1171,6 +1219,10 @@
       }
     ],
     "26": [
+      {
+        "surface": "If anyone",
+        "lemma": "kol"
+      },
       {
         "surface": "does",
         "lemma": "hava"
@@ -1254,6 +1306,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "of our fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "has put",
+        "lemma": "natan"
+      },
+      {
         "surface": "into the heart",
         "lemma": "lev"
       },
@@ -1298,6 +1358,10 @@
       {
         "surface": "his counselors",
         "lemma": "yaats"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "his",
@@ -1347,7 +1411,7 @@
   },
   "themeLemmas": [
     "elah",
-    "ezra",
-    "yerushalem"
+    "kol",
+    "ezra"
   ]
 }

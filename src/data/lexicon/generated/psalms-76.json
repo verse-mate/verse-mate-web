@@ -56,6 +56,10 @@
         "lemma": "sokh"
       },
       {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in Salem",
         "lemma": "shalem"
       },
@@ -134,6 +138,10 @@
         "lemma": "shenah"
       },
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "men",
         "lemma": "ish"
       },
@@ -204,6 +212,10 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "You pronounced",
+        "lemma": "shama"
+      },
+      {
         "surface": "judgment",
         "lemma": "din"
       },
@@ -236,6 +248,10 @@
       {
         "surface": "to save",
         "lemma": "yasah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the lowly",
@@ -294,6 +310,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "let all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the neighboring lands",
         "lemma": "saviv"
       },
@@ -340,6 +360,6 @@
   "themeLemmas": [
     "yare",
     "selah",
-    "chemah"
+    "kol"
   ]
 }

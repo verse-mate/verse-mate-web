@@ -10,6 +10,10 @@
         "lemma": "epangelia"
       },
       {
+        "surface": "of entering",
+        "lemma": "eiserchomai"
+      },
+      {
         "surface": "rest",
         "lemma": "katapausis"
       },
@@ -31,6 +35,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "we",
+        "lemma": "eimi"
+      },
       {
         "surface": "received the good news",
         "lemma": "euangelizomai"
@@ -54,12 +62,20 @@
       {
         "surface": "faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "comprehended it",
+        "lemma": "akouo"
       }
     ],
     "3": [
       {
         "surface": "have believed",
         "lemma": "pisteuo"
+      },
+      {
+        "surface": "enter",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "rest",
@@ -78,12 +94,20 @@
         "lemma": "orge"
       },
       {
+        "surface": "They shall never enter",
+        "lemma": "eiserchomai"
+      },
+      {
         "surface": "rest",
         "lemma": "katapausis"
       },
       {
         "surface": "works",
         "lemma": "ergon"
+      },
+      {
+        "surface": "have been finished",
+        "lemma": "ginomai"
       },
       {
         "surface": "the foundation",
@@ -128,6 +152,10 @@
         "lemma": "katapauo"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "works",
         "lemma": "ergon"
       }
@@ -136,6 +164,10 @@
       {
         "surface": "again",
         "lemma": "palin"
+      },
+      {
+        "surface": "They shall never enter",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "rest",
@@ -148,12 +180,20 @@
         "lemma": "apoleipo"
       },
       {
+        "surface": "to enter",
+        "lemma": "eiserchomai"
+      },
+      {
         "surface": "formerly",
         "lemma": "proteron"
       },
       {
         "surface": "heard the good news",
         "lemma": "euangelizomai"
+      },
+      {
+        "surface": "did not enter",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "their disobedience",
@@ -186,6 +226,10 @@
         "lemma": "chronos"
       },
       {
+        "surface": "He spoke",
+        "lemma": "lego"
+      },
+      {
         "surface": "David",
         "lemma": "daueid"
       },
@@ -196,6 +240,10 @@
       {
         "surface": "Today",
         "lemma": "semeron"
+      },
+      {
+        "surface": "you hear",
+        "lemma": "akouo"
       },
       {
         "surface": "voice",
@@ -220,8 +268,8 @@
         "lemma": "katapauo"
       },
       {
-        "surface": "vvv",
-        "lemma": "an"
+        "surface": "God would not have spoken",
+        "lemma": "laleo"
       },
       {
         "surface": "another",
@@ -252,6 +300,10 @@
     ],
     "10": [
       {
+        "surface": "enters",
+        "lemma": "eiserchomai"
+      },
+      {
         "surface": "rest",
         "lemma": "katapausis"
       },
@@ -272,6 +324,10 @@
       {
         "surface": "Let us, therefore, make every effort",
         "lemma": "spoudazo"
+      },
+      {
+        "surface": "to enter",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "rest",
@@ -310,6 +366,10 @@
       {
         "surface": "Sharper",
         "lemma": "tomoteros"
+      },
+      {
+        "surface": "any",
+        "lemma": "pas"
       },
       {
         "surface": "double-edged",
@@ -366,8 +426,16 @@
         "lemma": "ktisis"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "hidden",
         "lemma": "aphanes"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
       },
       {
         "surface": "is uncovered",
@@ -387,6 +455,14 @@
       }
     ],
     "14": [
+      {
+        "surface": "since we have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "a great",
+        "lemma": "megas"
+      },
       {
         "surface": "high priest",
         "lemma": "archiereus"
@@ -422,8 +498,16 @@
     ],
     "15": [
       {
+        "surface": "we do not have",
+        "lemma": "echo"
+      },
+      {
         "surface": "a high priest",
         "lemma": "archiereus"
+      },
+      {
+        "surface": "who is unable",
+        "lemma": "dunamai"
       },
       {
         "surface": "to sympathize",
@@ -436,6 +520,10 @@
       {
         "surface": "one who was tempted",
         "lemma": "peirazo"
+      },
+      {
+        "surface": "every way",
+        "lemma": "pas"
       },
       {
         "surface": "we are",
@@ -464,8 +552,16 @@
         "lemma": "parresia"
       },
       {
+        "surface": "we may receive",
+        "lemma": "lambano"
+      },
+      {
         "surface": "mercy",
         "lemma": "eleos"
+      },
+      {
+        "surface": "find",
+        "lemma": "heurisko"
       },
       {
         "surface": "grace",

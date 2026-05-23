@@ -14,6 +14,14 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "I am speaking",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "to those who know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "the law",
         "lemma": "nomos"
       },
@@ -86,6 +94,10 @@
     ],
     "3": [
       {
+        "surface": "she is joined",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "to another",
         "lemma": "heteros"
       },
@@ -118,6 +130,10 @@
         "lemma": "apothnesko"
       },
       {
+        "surface": "she is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "free",
         "lemma": "eleutheros"
       },
@@ -126,8 +142,16 @@
         "lemma": "nomos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "an adulteress",
         "lemma": "moichalis"
+      },
+      {
+        "surface": "if she marries",
+        "lemma": "ginomai"
       },
       {
         "surface": "another",
@@ -160,6 +184,10 @@
         "lemma": "christos"
       },
       {
+        "surface": "might belong",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "to another",
         "lemma": "heteros"
       },
@@ -181,6 +209,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "we lived",
+        "lemma": "eimi"
+      },
       {
         "surface": "flesh",
         "lemma": "sarx"
@@ -258,6 +290,10 @@
     ],
     "7": [
       {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
         "surface": "shall we say",
         "lemma": "ero"
       },
@@ -270,6 +306,14 @@
         "lemma": "hamartia"
       },
       {
+        "surface": "Certainly not",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "I would not have been mindful of",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "sin",
         "lemma": "hamartia"
       },
@@ -278,12 +322,20 @@
         "lemma": "nomos"
       },
       {
+        "surface": "I would not have been aware of",
+        "lemma": "eido"
+      },
+      {
         "surface": "coveting",
         "lemma": "epithumia"
       },
       {
         "surface": "law",
         "lemma": "nomos"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
       },
       {
         "surface": "Do not covet",
@@ -296,6 +348,10 @@
         "lemma": "hamartia"
       },
       {
+        "surface": "seizing",
+        "lemma": "lambano"
+      },
+      {
         "surface": "its opportunity",
         "lemma": "aphorme"
       },
@@ -306,6 +362,10 @@
       {
         "surface": "produced",
         "lemma": "katergazomai"
+      },
+      {
+        "surface": "every kind",
+        "lemma": "pas"
       },
       {
         "surface": "of covetous desire",
@@ -338,6 +398,10 @@
         "lemma": "entole"
       },
       {
+        "surface": "came",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "sin",
         "lemma": "hamartia"
       },
@@ -351,6 +415,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "discovered that",
+        "lemma": "heurisko"
+      },
       {
         "surface": "commandment",
         "lemma": "entole"
@@ -368,6 +436,10 @@
       {
         "surface": "sin",
         "lemma": "hamartia"
+      },
+      {
+        "surface": "seizing",
+        "lemma": "lambano"
       },
       {
         "surface": "its opportunity",
@@ -418,8 +490,16 @@
         "lemma": "agathos"
       },
       {
+        "surface": "become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "death",
         "lemma": "thanatos"
+      },
+      {
+        "surface": "Certainly not",
+        "lemma": "ginomai"
       },
       {
         "surface": "sin",
@@ -454,6 +534,10 @@
         "lemma": "hamartia"
       },
       {
+        "surface": "might become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "utterly",
         "lemma": "huperbole"
       },
@@ -464,12 +548,24 @@
     ],
     "14": [
       {
+        "surface": "We know",
+        "lemma": "eido"
+      },
+      {
         "surface": "the law",
         "lemma": "nomos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "spiritual",
         "lemma": "pneumatikos"
+      },
+      {
+        "surface": "am",
+        "lemma": "eimi"
       },
       {
         "surface": "unspiritual",
@@ -486,8 +582,16 @@
     ],
     "15": [
       {
+        "surface": "I do not understand",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "I do",
         "lemma": "katergazomai"
+      },
+      {
+        "surface": "I want to do",
+        "lemma": "thelo"
       },
       {
         "surface": "I do not do",
@@ -496,9 +600,21 @@
       {
         "surface": "I hate",
         "lemma": "miseo"
+      },
+      {
+        "surface": "I do",
+        "lemma": "poieo"
       }
     ],
     "16": [
+      {
+        "surface": "I do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "I do not want to do",
+        "lemma": "thelo"
+      },
       {
         "surface": "I admit",
         "lemma": "sumphemi"
@@ -532,6 +648,10 @@
     ],
     "18": [
       {
+        "surface": "I know",
+        "lemma": "eido"
+      },
+      {
         "surface": "good",
         "lemma": "agathos"
       },
@@ -540,12 +660,20 @@
         "lemma": "oikeo"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "flesh",
         "lemma": "sarx"
       },
       {
         "surface": "have",
         "lemma": "parakeimai"
+      },
+      {
+        "surface": "desire",
+        "lemma": "thelo"
       },
       {
         "surface": "to do",
@@ -558,8 +686,16 @@
     ],
     "19": [
       {
+        "surface": "I do not do",
+        "lemma": "poieo"
+      },
+      {
         "surface": "the good",
         "lemma": "agathos"
+      },
+      {
+        "surface": "I want to do",
+        "lemma": "thelo"
       },
       {
         "surface": "I keep on doing",
@@ -568,9 +704,21 @@
       {
         "surface": "the evil",
         "lemma": "kakos"
+      },
+      {
+        "surface": "I do not want to do",
+        "lemma": "thelo"
       }
     ],
     "20": [
+      {
+        "surface": "do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "I do not want",
+        "lemma": "thelo"
+      },
       {
         "surface": "who do",
         "lemma": "katergazomai"
@@ -588,6 +736,18 @@
       {
         "surface": "principle",
         "lemma": "nomos"
+      },
+      {
+        "surface": "I have discovered",
+        "lemma": "heurisko"
+      },
+      {
+        "surface": "want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to do",
+        "lemma": "poieo"
       },
       {
         "surface": "good",
@@ -666,6 +826,10 @@
         "lemma": "hamartia"
       },
       {
+        "surface": "that dwells",
+        "lemma": "eimi"
+      },
+      {
         "surface": "me",
         "lemma": "melos"
       }
@@ -678,6 +842,10 @@
       {
         "surface": "man",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "Who",
+        "lemma": "tis"
       },
       {
         "surface": "will rescue",

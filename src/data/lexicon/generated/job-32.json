@@ -110,6 +110,10 @@
         "lemma": "rea"
       },
       {
+        "surface": "they had failed",
+        "lemma": "lo"
+      },
+      {
         "surface": "to refute Job",
         "lemma": "maaneh"
       },
@@ -148,6 +152,10 @@
       {
         "surface": "But when he",
         "lemma": "elihu"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
       },
       {
         "surface": "the three",
@@ -226,6 +234,10 @@
     ],
     "7": [
       {
+        "surface": "I thought",
+        "lemma": "amar"
+      },
+      {
         "surface": "that age",
         "lemma": "yom"
       },
@@ -278,6 +290,10 @@
     ],
     "9": [
       {
+        "surface": "It is not only",
+        "lemma": "lo"
+      },
+      {
         "surface": "the old",
         "lemma": "rav"
       },
@@ -304,6 +320,14 @@
         "lemma": "ken"
       },
       {
+        "surface": "I say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "will declare",
         "lemma": "chavah"
       },
@@ -313,10 +337,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "Indeed",
-        "lemma": "hen"
-      },
       {
         "surface": "I waited",
         "lemma": "yachal"
@@ -370,6 +390,10 @@
     ],
     "13": [
       {
+        "surface": "claim",
+        "lemma": "amar"
+      },
+      {
         "surface": "We have found",
         "lemma": "matsa"
       },
@@ -382,6 +406,10 @@
         "lemma": "el"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "man",
         "lemma": "ish"
       },
@@ -392,12 +420,24 @@
     ],
     "14": [
       {
+        "surface": "But Job has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "directed",
         "lemma": "arakh"
       },
       {
         "surface": "his words",
         "lemma": "millah"
+      },
+      {
+        "surface": "and I will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "answer him",
+        "lemma": "shuv"
       },
       {
         "surface": "with your arguments",
@@ -408,6 +448,10 @@
       {
         "surface": "Job’s friends are dismayed",
         "lemma": "chatat"
+      },
+      {
+        "surface": "with no",
+        "lemma": "lo"
       },
       {
         "surface": "more",
@@ -432,8 +476,16 @@
         "lemma": "yachal"
       },
       {
+        "surface": "they are silent",
+        "lemma": "lo"
+      },
+      {
         "surface": "they stand",
         "lemma": "amad"
+      },
+      {
+        "surface": "and no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -482,12 +534,12 @@
     ],
     "19": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "my belly",
         "lemma": "beten"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "is like unvented",
@@ -538,8 +590,16 @@
         "lemma": "nasa"
       },
       {
+        "surface": "to no",
+        "lemma": "al"
+      },
+      {
         "surface": "one",
         "lemma": "ish"
+      },
+      {
+        "surface": "nor will",
+        "lemma": "lo"
       },
       {
         "surface": "I flatter",
@@ -552,12 +612,20 @@
     ],
     "22": [
       {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know how",
         "lemma": "yada"
       },
       {
         "surface": "to flatter",
         "lemma": "kanah"
+      },
+      {
+        "surface": "or my Maker",
+        "lemma": "asah"
       },
       {
         "surface": "would remove me",
@@ -570,8 +638,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "un",
-    "iyyov",
-    "millah"
+    "iyyov"
   ]
 }

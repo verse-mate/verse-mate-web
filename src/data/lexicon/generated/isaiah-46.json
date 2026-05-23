@@ -64,6 +64,10 @@
         "lemma": "yachad"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "unable",
         "lemma": "yakhol"
       },
@@ -90,12 +94,20 @@
     ],
     "3": [
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "O house",
         "lemma": "bet"
       },
       {
         "surface": "of Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the remnant",
@@ -138,6 +150,10 @@
       {
         "surface": "you turn gray",
         "lemma": "sevah"
+      },
+      {
+        "surface": "have made you",
+        "lemma": "asah"
       },
       {
         "surface": "will carry you",
@@ -208,6 +224,10 @@
         "lemma": "tsaraph"
       },
       {
+        "surface": "to fashion it",
+        "lemma": "asah"
+      },
+      {
         "surface": "into a god",
         "lemma": "el"
       },
@@ -246,6 +266,10 @@
         "lemma": "amad"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "budging",
         "lemma": "mush"
       },
@@ -258,12 +282,20 @@
         "lemma": "tsaaq"
       },
       {
+        "surface": "but it does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "answer",
         "lemma": "un"
       },
       {
         "surface": "it saves",
         "lemma": "yasah"
+      },
+      {
+        "surface": "no one",
+        "lemma": "lo"
       },
       {
         "surface": "from his troubles",
@@ -278,6 +310,10 @@
       {
         "surface": "and be brave",
         "lemma": "ish"
+      },
+      {
+        "surface": "take",
+        "lemma": "shuv"
       },
       {
         "surface": "heart",
@@ -340,6 +376,18 @@
         "lemma": "qedem"
       },
       {
+        "surface": "is still",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to come",
+        "lemma": "asah"
+      },
+      {
+        "surface": "I say",
+        "lemma": "amar"
+      },
+      {
         "surface": "My purpose",
         "lemma": "etsah"
       },
@@ -348,11 +396,23 @@
         "lemma": "qamay"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "My good pleasure",
         "lemma": "chephets"
+      },
+      {
+        "surface": "I will accomplish",
+        "lemma": "asah"
       }
     ],
     "11": [
+      {
+        "surface": "I summon",
+        "lemma": "qara"
+      },
       {
         "surface": "a bird of prey",
         "lemma": "ayit"
@@ -382,11 +442,23 @@
         "lemma": "davar"
       },
       {
+        "surface": "I will bring it to pass",
+        "lemma": "bo"
+      },
+      {
         "surface": "I have planned it",
         "lemma": "yatsar"
+      },
+      {
+        "surface": "do it",
+        "lemma": "asah"
       }
     ],
     "12": [
+      {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
       {
         "surface": "you stubborn",
         "lemma": "abbir"
@@ -414,6 +486,10 @@
         "lemma": "qarav"
       },
       {
+        "surface": "it is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "far away",
         "lemma": "rachaq"
       },
@@ -422,8 +498,16 @@
         "lemma": "teshuah"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be delayed",
         "lemma": "achar"
+      },
+      {
+        "surface": "I will grant",
+        "lemma": "natan"
       },
       {
         "surface": "salvation",
@@ -444,8 +528,8 @@
     ]
   },
   "themeLemmas": [
-    "saval",
-    "nasa",
-    "zakhar"
+    "lo",
+    "asah",
+    "saval"
   ]
 }

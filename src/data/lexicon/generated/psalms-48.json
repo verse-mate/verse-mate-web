@@ -68,6 +68,10 @@
         "lemma": "masvos"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -120,10 +124,6 @@
     ],
     "4": [
       {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the kings",
         "lemma": "melekh"
       },
@@ -141,6 +141,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
       {
         "surface": "and",
         "lemma": "ken"
@@ -204,8 +208,16 @@
     ],
     "8": [
       {
+        "surface": "we have heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "so",
         "lemma": "ken"
+      },
+      {
+        "surface": "we have seen",
+        "lemma": "raah"
       },
       {
         "surface": "in the city",

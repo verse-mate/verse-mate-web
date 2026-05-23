@@ -56,6 +56,10 @@
     ],
     "2": [
       {
+        "surface": "And he did what was",
+        "lemma": "asah"
+      },
+      {
         "surface": "right",
         "lemma": "yashar"
       },
@@ -66,6 +70,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "wholeheartedly",
@@ -94,11 +102,19 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       }
     ],
     "4": [
+      {
+        "surface": "he did not",
+        "lemma": "lo"
+      },
       {
         "surface": "put their sons",
         "lemma": "ben"
@@ -132,6 +148,14 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "Fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be put to death",
         "lemma": "mut"
       },
@@ -144,8 +168,16 @@
         "lemma": "ben"
       },
       {
+        "surface": "must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be put to death",
         "lemma": "mut"
+      },
+      {
+        "surface": "their fathers",
+        "lemma": "av"
       },
       {
         "surface": "each",
@@ -172,6 +204,10 @@
       {
         "surface": "the people of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "and assigned them according to their families",
+        "lemma": "av"
       },
       {
         "surface": "to commanders",
@@ -206,6 +242,10 @@
         "lemma": "maal"
       },
       {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "Judah",
         "lemma": "yehudah"
       },
@@ -224,6 +264,10 @@
       {
         "surface": "chosen men",
         "lemma": "bachar"
+      },
+      {
+        "surface": "able to serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the army",
@@ -286,8 +330,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "O king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "do not let",
+        "lemma": "al"
       },
       {
         "surface": "the army",
@@ -296,6 +352,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "go",
+        "lemma": "bo"
       },
       {
         "surface": "the LORD",
@@ -310,11 +370,27 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "not with any",
+        "lemma": "kol"
+      },
+      {
         "surface": "of the Ephraimites",
         "lemma": "ben"
       }
     ],
     "8": [
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and fight",
+        "lemma": "asah"
+      },
       {
         "surface": "bravely",
         "lemma": "chazaq"
@@ -366,6 +442,10 @@
         "lemma": "amatsyah"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "the man",
         "lemma": "ish"
       },
@@ -378,12 +458,20 @@
         "lemma": "mah"
       },
       {
+        "surface": "should I do",
+        "lemma": "asah"
+      },
+      {
         "surface": "about the hundred",
         "lemma": "meah"
       },
       {
         "surface": "talents",
         "lemma": "kikkar"
+      },
+      {
+        "surface": "I have given",
+        "lemma": "natan"
       },
       {
         "surface": "to the troops",
@@ -402,8 +490,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "is able to give",
+        "lemma": "natan"
       },
       {
         "surface": "much more",
@@ -424,6 +520,10 @@
         "lemma": "gedud"
       },
       {
+        "surface": "had come",
+        "lemma": "bo"
+      },
+      {
         "surface": "from Ephraim",
         "lemma": "ephrayim"
       },
@@ -442,6 +542,10 @@
       {
         "surface": "with Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "and returned",
+        "lemma": "shuv"
       },
       {
         "surface": "home",
@@ -516,6 +620,10 @@
         "lemma": "chay"
       },
       {
+        "surface": "They took them",
+        "lemma": "bo"
+      },
+      {
         "surface": "to the top",
         "lemma": "rosh"
       },
@@ -526,6 +634,10 @@
       {
         "surface": "and threw them down",
         "lemma": "shalakh"
+      },
+      {
+        "surface": "so that all",
+        "lemma": "kol"
       },
       {
         "surface": "were dashed to pieces",
@@ -544,6 +656,10 @@
       {
         "surface": "Amaziah",
         "lemma": "amatsyah"
+      },
+      {
+        "surface": "had dismissed",
+        "lemma": "shuv"
       },
       {
         "surface": "vvv",
@@ -608,12 +724,20 @@
         "lemma": "amatsyah"
       },
       {
+        "surface": "returned",
+        "lemma": "bo"
+      },
+      {
         "surface": "from the slaughter",
         "lemma": "nakhah"
       },
       {
         "surface": "the Edomites",
         "lemma": "edomi"
+      },
+      {
+        "surface": "he brought back",
+        "lemma": "bo"
       },
       {
         "surface": "the gods",
@@ -670,6 +794,10 @@
         "lemma": "navi"
       },
       {
+        "surface": "who said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Why",
         "lemma": "mah"
       },
@@ -684,6 +812,10 @@
       {
         "surface": "gods",
         "lemma": "elohim"
+      },
+      {
+        "surface": "could not",
+        "lemma": "lo"
       },
       {
         "surface": "deliver",
@@ -702,6 +834,14 @@
       {
         "surface": "While he was still speaking",
         "lemma": "davar"
+      },
+      {
+        "surface": "the king asked",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Have we made you",
+        "lemma": "natan"
       },
       {
         "surface": "the counselor",
@@ -732,6 +872,10 @@
         "lemma": "chadal"
       },
       {
+        "surface": "but he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "I know",
         "lemma": "yada"
       },
@@ -746,6 +890,18 @@
       {
         "surface": "to destroy you",
         "lemma": "shachat"
+      },
+      {
+        "surface": "you have done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "heeded",
+        "lemma": "shama"
       },
       {
         "surface": "my advice",
@@ -806,8 +962,16 @@
         "lemma": "halakh"
       },
       {
+        "surface": "let us meet",
+        "lemma": "raah"
+      },
+      {
         "surface": "face to face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
       }
     ],
     "18": [
@@ -860,6 +1024,14 @@
         "lemma": "levanon"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Give",
+        "lemma": "natan"
+      },
+      {
         "surface": "your daughter",
         "lemma": "bat"
       },
@@ -898,8 +1070,8 @@
     ],
     "19": [
       {
-        "surface": "Look",
-        "lemma": "hinneh"
+        "surface": "You have said",
+        "lemma": "amar"
       },
       {
         "surface": "I have defeated",
@@ -924,6 +1096,10 @@
       {
         "surface": "Now",
         "lemma": "attah"
+      },
+      {
+        "surface": "stay",
+        "lemma": "yashav"
       },
       {
         "surface": "at home",
@@ -956,8 +1132,20 @@
         "lemma": "amatsyah"
       },
       {
+        "surface": "would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "from God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "deliver them",
+        "lemma": "natan"
       },
       {
         "surface": "into the hand of Jehoash",
@@ -1008,6 +1196,10 @@
       {
         "surface": "faced",
         "lemma": "paneh"
+      },
+      {
+        "surface": "each other",
+        "lemma": "raah"
       },
       {
         "surface": "vvv",
@@ -1106,6 +1298,10 @@
         "lemma": "yehoachaz"
       },
       {
+        "surface": "Then Jehoash brought him",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -1152,12 +1348,20 @@
     ],
     "24": [
       {
+        "surface": "He took all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the gold",
         "lemma": "zahav"
       },
       {
         "surface": "and silver",
         "lemma": "keseph"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the articles",
@@ -1198,6 +1402,10 @@
       {
         "surface": "some hostages",
         "lemma": "ben"
+      },
+      {
+        "surface": "Then he returned",
+        "lemma": "shuv"
       },
       {
         "surface": "to Samaria",
@@ -1288,6 +1496,10 @@
         "lemma": "acharon"
       },
       {
+        "surface": "are they not",
+        "lemma": "lo"
+      },
+      {
         "surface": "written",
         "lemma": "katav"
       },
@@ -1309,6 +1521,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "From the time",
+        "lemma": "et"
+      },
       {
         "surface": "Amaziah",
         "lemma": "amatsyah"
@@ -1378,6 +1594,10 @@
       {
         "surface": "and buried",
         "lemma": "qavar"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
       },
       {
         "surface": "in the City",

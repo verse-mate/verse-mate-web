@@ -42,6 +42,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "rare",
         "lemma": "yaqar"
       },
@@ -59,6 +63,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
       {
         "surface": "at that time",
         "lemma": "yom"
@@ -82,6 +90,14 @@
       {
         "surface": "that he could",
         "lemma": "yakhol"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "was lying",
@@ -144,12 +160,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "called",
+        "lemma": "qara"
+      },
+      {
         "surface": "to Samuel",
         "lemma": "shemuel"
       },
       {
-        "surface": "Here I am",
-        "lemma": "hen"
+        "surface": "and he answered",
+        "lemma": "amar"
       }
     ],
     "5": [
@@ -162,8 +182,28 @@
         "lemma": "eli"
       },
       {
-        "surface": "Here I am",
-        "lemma": "hen"
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "you have called",
+        "lemma": "qara"
+      },
+      {
+        "surface": "I did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "call",
+        "lemma": "qara"
+      },
+      {
+        "surface": "Eli replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Go back",
+        "lemma": "shuv"
       },
       {
         "surface": "and lie down",
@@ -188,6 +228,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "called",
+        "lemma": "qara"
+      },
+      {
         "surface": "Samuel",
         "lemma": "shemuel"
       },
@@ -208,12 +252,32 @@
         "lemma": "eli"
       },
       {
-        "surface": "Here I am",
-        "lemma": "hen"
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "you have called",
+        "lemma": "qara"
       },
       {
         "surface": "My son",
         "lemma": "ben"
+      },
+      {
+        "surface": "I did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "call",
+        "lemma": "qara"
+      },
+      {
+        "surface": "Eli replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Go back",
+        "lemma": "shuv"
       },
       {
         "surface": "and lie down",
@@ -268,6 +332,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "called",
+        "lemma": "qara"
+      },
+      {
         "surface": "to Samuel",
         "lemma": "shemuel"
       },
@@ -284,8 +352,12 @@
         "lemma": "eli"
       },
       {
-        "surface": "Here I am",
-        "lemma": "hen"
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "you have called",
+        "lemma": "qara"
       },
       {
         "surface": "Then Eli",
@@ -298,6 +370,10 @@
       {
         "surface": "that it was the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "who was calling",
+        "lemma": "qara"
       },
       {
         "surface": "the boy",
@@ -318,8 +394,28 @@
         "lemma": "eli"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Samuel",
         "lemma": "shemuel"
+      },
+      {
+        "surface": "and",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "He calls you",
+        "lemma": "qara"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Speak",
@@ -332,6 +428,10 @@
       {
         "surface": "Your servant",
         "lemma": "eved"
+      },
+      {
+        "surface": "is listening",
+        "lemma": "shama"
       },
       {
         "surface": "So Samuel",
@@ -356,8 +456,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "and stood there",
         "lemma": "yatsav"
+      },
+      {
+        "surface": "calling",
+        "lemma": "qara"
       },
       {
         "surface": "as before",
@@ -376,12 +484,20 @@
         "lemma": "shemuel"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "Speak",
         "lemma": "davar"
       },
       {
         "surface": "Your servant",
         "lemma": "eved"
+      },
+      {
+        "surface": "is listening",
+        "lemma": "shama"
       }
     ],
     "11": [
@@ -390,8 +506,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Samuel",
         "lemma": "shemuel"
+      },
+      {
+        "surface": "am about to do",
+        "lemma": "asah"
       },
       {
         "surface": "something",
@@ -410,6 +534,14 @@
         "lemma": "ozen"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who hear it",
+        "lemma": "shama"
+      },
+      {
         "surface": "will tingle",
         "lemma": "tsalal"
       }
@@ -426,6 +558,10 @@
       {
         "surface": "Eli",
         "lemma": "eli"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "I have spoken",
@@ -478,6 +614,10 @@
         "lemma": "qalal"
       },
       {
+        "surface": "and he did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "restrain",
         "lemma": "kahah"
       }
@@ -510,6 +650,10 @@
       {
         "surface": "house",
         "lemma": "bet"
+      },
+      {
+        "surface": "shall never",
+        "lemma": "im"
       },
       {
         "surface": "be atoned for",
@@ -580,8 +724,16 @@
         "lemma": "eli"
       },
       {
+        "surface": "called",
+        "lemma": "qara"
+      },
+      {
         "surface": "to him",
         "lemma": "shemuel"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "Samuel",
@@ -592,8 +744,8 @@
         "lemma": "ben"
       },
       {
-        "surface": "Here I am",
-        "lemma": "hen"
+        "surface": "answered Samuel",
+        "lemma": "amar"
       }
     ],
     "17": [
@@ -608,6 +760,14 @@
       {
         "surface": "He gave you",
         "lemma": "davar"
+      },
+      {
+        "surface": "Eli asked",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "hide",
@@ -628,6 +788,10 @@
       {
         "surface": "severely",
         "lemma": "yasaph"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
       },
       {
         "surface": "you hide",
@@ -652,12 +816,28 @@
         "lemma": "nagad"
       },
       {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "and did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "hide",
         "lemma": "kachad"
       },
       {
         "surface": "is the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "replied Eli",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Let Him do",
+        "lemma": "asah"
       },
       {
         "surface": "what is good",
@@ -682,6 +862,18 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "and {He let} none",
+        "lemma": "lo"
+      },
+      {
+        "surface": "of",
+        "lemma": "kol"
+      },
+      {
         "surface": "Samuel’s words",
         "lemma": "davar"
       },
@@ -695,6 +887,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "So all",
+        "lemma": "kol"
+      },
       {
         "surface": "Israel",
         "lemma": "yisrael"
@@ -742,6 +938,10 @@
         "lemma": "yasaph"
       },
       {
+        "surface": "to appear",
+        "lemma": "raah"
+      },
+      {
         "surface": "at Shiloh",
         "lemma": "shiloh"
       },
@@ -772,8 +972,8 @@
     ]
   },
   "themeLemmas": [
-    "eli",
     "shemuel",
-    "shakhav"
+    "amar",
+    "qara"
   ]
 }

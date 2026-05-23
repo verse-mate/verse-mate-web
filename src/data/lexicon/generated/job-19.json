@@ -46,6 +46,10 @@
         "lemma": "kalam"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "you shamelessly",
         "lemma": "bush"
       },
@@ -73,6 +77,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "indeed",
         "lemma": "omnam"
@@ -110,16 +118,16 @@
     ],
     "7": [
       {
-        "surface": "Though",
-        "lemma": "hen"
-      },
-      {
         "surface": "I cry out",
         "lemma": "tsaaq"
       },
       {
         "surface": "Violence",
         "lemma": "chamas"
+      },
+      {
+        "surface": "I get no",
+        "lemma": "lo"
       },
       {
         "surface": "response",
@@ -146,6 +154,10 @@
       {
         "surface": "my way",
         "lemma": "orach"
+      },
+      {
+        "surface": "so I cannot",
+        "lemma": "lo"
       },
       {
         "surface": "pass",
@@ -232,6 +244,10 @@
         "lemma": "gedud"
       },
       {
+        "surface": "advance",
+        "lemma": "bo"
+      },
+      {
         "surface": "together",
         "lemma": "yachad"
       },
@@ -310,6 +326,10 @@
         "lemma": "zur"
       },
       {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a foreigner",
         "lemma": "nokhri"
       },
@@ -320,8 +340,16 @@
     ],
     "16": [
       {
+        "surface": "I call",
+        "lemma": "qara"
+      },
+      {
         "surface": "for my servant",
         "lemma": "eved"
+      },
+      {
+        "surface": "but he does not",
+        "lemma": "lo"
       },
       {
         "surface": "answer",
@@ -377,6 +405,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "my best friends",
         "lemma": "mat"
@@ -464,6 +496,10 @@
         "lemma": "el"
       },
       {
+        "surface": "Will you never",
+        "lemma": "lo"
+      },
+      {
         "surface": "get enough",
         "lemma": "sava"
       },
@@ -498,6 +534,10 @@
       {
         "surface": "by an iron",
         "lemma": "barzel"
+      },
+      {
+        "surface": "stylus",
+        "lemma": "et"
       },
       {
         "surface": "on lead",
@@ -578,6 +618,14 @@
         "lemma": "ayin"
       },
       {
+        "surface": "will behold Him",
+        "lemma": "raah"
+      },
+      {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "as a stranger",
         "lemma": "zur"
       },
@@ -595,6 +643,10 @@
       }
     ],
     "28": [
+      {
+        "surface": "you say",
+        "lemma": "amar"
+      },
       {
         "surface": "Let us",
         "lemma": "mah"
@@ -648,8 +700,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "yada",
-    "zur",
-    "chanan"
+    "zur"
   ]
 }

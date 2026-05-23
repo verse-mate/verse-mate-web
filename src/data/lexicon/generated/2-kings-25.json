@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "So",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in the ninth",
         "lemma": "teshii"
       },
@@ -42,8 +46,16 @@
         "lemma": "bavel"
       },
       {
+        "surface": "marched",
+        "lemma": "bo"
+      },
+      {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "with his entire",
+        "lemma": "kol"
       },
       {
         "surface": "army",
@@ -70,6 +82,10 @@
       {
         "surface": "And the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "was kept",
+        "lemma": "bo"
       },
       {
         "surface": "under siege",
@@ -122,6 +138,14 @@
         "lemma": "erets"
       },
       {
+        "surface": "had",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "food",
         "lemma": "lechem"
       }
@@ -146,6 +170,10 @@
       {
         "surface": "the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the men",
@@ -224,6 +252,10 @@
       {
         "surface": "of Jericho",
         "lemma": "yericho"
+      },
+      {
+        "surface": "and his whole",
+        "lemma": "kol"
       },
       {
         "surface": "army",
@@ -306,6 +338,10 @@
         "lemma": "nechoshet"
       },
       {
+        "surface": "and took him",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Babylon",
         "lemma": "bavel"
       }
@@ -368,6 +404,10 @@
         "lemma": "bavel"
       },
       {
+        "surface": "entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
       }
@@ -394,12 +434,20 @@
         "lemma": "bet"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the houses",
         "lemma": "bet"
       },
       {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "significant",
@@ -411,6 +459,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "And the whole",
+        "lemma": "kol"
+      },
       {
         "surface": "army",
         "lemma": "chayil"
@@ -604,6 +656,10 @@
         "lemma": "kaph"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the articles",
         "lemma": "keli"
       },
@@ -672,6 +728,10 @@
         "lemma": "shelomoh"
       },
       {
+        "surface": "had made",
+        "lemma": "asah"
+      },
+      {
         "surface": "for the house",
         "lemma": "bet"
       },
@@ -682,6 +742,10 @@
       {
         "surface": "the weight} of the bronze",
         "lemma": "nechoshet"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
       },
       {
         "surface": "articles",
@@ -744,6 +808,10 @@
       {
         "surface": "pomegranates",
         "lemma": "rimmon"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "around",
@@ -844,6 +912,10 @@
       {
         "surface": "royal",
         "lemma": "melekh"
+      },
+      {
+        "surface": "advisors",
+        "lemma": "raah"
       },
       {
         "surface": "the scribe",
@@ -1018,6 +1090,10 @@
     ],
     "23": [
       {
+        "surface": "When all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the commanders",
         "lemma": "sar"
       },
@@ -1028,6 +1104,10 @@
       {
         "surface": "and their men",
         "lemma": "enosh"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
       },
       {
         "surface": "the king",
@@ -1044,6 +1124,10 @@
       {
         "surface": "Gedaliah {as governor",
         "lemma": "gedalyah"
+      },
+      {
+        "surface": "they came",
+        "lemma": "bo"
       },
       {
         "surface": "Gedaliah",
@@ -1124,6 +1208,14 @@
         "lemma": "enosh"
       },
       {
+        "surface": "assuring",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       },
@@ -1134,6 +1226,10 @@
       {
         "surface": "of the Chaldeans",
         "lemma": "kasdi"
+      },
+      {
+        "surface": "Live",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -1194,6 +1290,10 @@
         "lemma": "zera"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "ten",
         "lemma": "eser"
       },
@@ -1222,11 +1322,19 @@
         "lemma": "kasdi"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "at Mizpah",
         "lemma": "mitspah"
       }
     ],
     "26": [
+      {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
       {
         "surface": "the people",
         "lemma": "am"
@@ -1250,6 +1358,10 @@
       {
         "surface": "arose",
         "lemma": "qamay"
+      },
+      {
+        "surface": "and fled",
+        "lemma": "bo"
       },
       {
         "surface": "to Egypt",
@@ -1360,6 +1472,10 @@
         "lemma": "tov"
       },
       {
+        "surface": "and set",
+        "lemma": "natan"
+      },
+      {
         "surface": "his throne",
         "lemma": "kisse"
       },
@@ -1402,6 +1518,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "for the rest",
+        "lemma": "kol"
+      },
+      {
         "surface": "of his life",
         "lemma": "chay"
       }
@@ -1416,12 +1536,20 @@
         "lemma": "aruchah"
       },
       {
+        "surface": "provided Jehoiachin",
+        "lemma": "natan"
+      },
+      {
         "surface": "a daily",
         "lemma": "yom"
       },
       {
         "surface": "portion",
         "lemma": "tamid"
+      },
+      {
+        "surface": "for the rest",
+        "lemma": "kol"
       },
       {
         "surface": "of his life",
@@ -1431,7 +1559,7 @@
   },
   "themeLemmas": [
     "bavel",
-    "nechoshet",
-    "tabbach"
+    "kol",
+    "nechoshet"
   ]
 }

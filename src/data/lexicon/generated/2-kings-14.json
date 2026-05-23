@@ -56,6 +56,10 @@
     ],
     "2": [
       {
+        "surface": "He was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "twenty-five",
         "lemma": "esrim"
       },
@@ -102,6 +106,10 @@
     ],
     "3": [
       {
+        "surface": "And he did",
+        "lemma": "asah"
+      },
+      {
         "surface": "what was right",
         "lemma": "yashar"
       },
@@ -114,18 +122,46 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "as his father",
+        "lemma": "av"
+      },
+      {
         "surface": "David {had done",
         "lemma": "david"
       },
       {
+        "surface": "He did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "Joash",
         "lemma": "yoash"
+      },
+      {
+        "surface": "had done",
+        "lemma": "asah"
       }
     ],
     "4": [
       {
         "surface": "the high places",
         "lemma": "bamah"
+      },
+      {
+        "surface": "were not",
+        "lemma": "lo"
       },
       {
         "surface": "taken away",
@@ -178,11 +214,19 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       }
     ],
     "6": [
+      {
+        "surface": "he did not",
+        "lemma": "lo"
+      },
       {
         "surface": "put the sons",
         "lemma": "ben"
@@ -220,6 +264,14 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "Fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be put to death",
         "lemma": "mut"
       },
@@ -232,8 +284,16 @@
         "lemma": "ben"
       },
       {
+        "surface": "must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be put to death",
         "lemma": "mut"
+      },
+      {
+        "surface": "their fathers",
+        "lemma": "av"
       },
       {
         "surface": "each",
@@ -280,6 +340,10 @@
       {
         "surface": "in battle",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "and called",
+        "lemma": "qara"
       },
       {
         "surface": "it Joktheel",
@@ -340,8 +404,16 @@
         "lemma": "halakh"
       },
       {
+        "surface": "let us meet",
+        "lemma": "raah"
+      },
+      {
         "surface": "face to face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
       }
     ],
     "9": [
@@ -392,6 +464,14 @@
       {
         "surface": "in Lebanon",
         "lemma": "levanon"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Give",
+        "lemma": "natan"
       },
       {
         "surface": "your daughter",
@@ -452,6 +532,10 @@
         "lemma": "kavad"
       },
       {
+        "surface": "and stay",
+        "lemma": "yashav"
+      },
+      {
         "surface": "at home",
         "lemma": "bet"
       },
@@ -482,6 +566,14 @@
         "lemma": "amatsyah"
       },
       {
+        "surface": "would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "so Jehoash",
         "lemma": "yehoash"
       },
@@ -508,6 +600,10 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "faced each other",
+        "lemma": "raah"
       },
       {
         "surface": "vvv",
@@ -606,6 +702,10 @@
         "lemma": "achazyah"
       },
       {
+        "surface": "Then Jehoash went",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -656,12 +756,20 @@
         "lemma": "laqach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the gold",
         "lemma": "zahav"
       },
       {
         "surface": "and silver",
         "lemma": "keseph"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the articles",
@@ -694,6 +802,10 @@
       {
         "surface": "as well as some hostages",
         "lemma": "ben"
+      },
+      {
+        "surface": "Then he returned",
+        "lemma": "shuv"
       },
       {
         "surface": "to Samaria",
@@ -762,6 +874,10 @@
       {
         "surface": "rested",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
       },
       {
         "surface": "and was buried",
@@ -872,6 +988,10 @@
         "lemma": "amatsyah"
       },
       {
+        "surface": "are they not",
+        "lemma": "lo"
+      },
+      {
         "surface": "written",
         "lemma": "katav"
       },
@@ -952,6 +1072,10 @@
         "lemma": "yerushalaim"
       },
       {
+        "surface": "his fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "in the City",
         "lemma": "ir"
       },
@@ -961,6 +1085,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
       {
         "surface": "the people",
         "lemma": "am"
@@ -994,6 +1122,10 @@
         "lemma": "tachat"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "Amaziah",
         "lemma": "amatsyah"
       }
@@ -1006,6 +1138,10 @@
       {
         "surface": "Elath",
         "lemma": "elat"
+      },
+      {
+        "surface": "and restored it",
+        "lemma": "shuv"
       },
       {
         "surface": "to Judah",
@@ -1022,6 +1158,10 @@
       {
         "surface": "rested",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
       }
     ],
     "23": [
@@ -1088,6 +1228,10 @@
     ],
     "24": [
       {
+        "surface": "And he did",
+        "lemma": "asah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
@@ -1100,8 +1244,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turn away",
         "lemma": "sur"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
       },
       {
         "surface": "the sins that",
@@ -1130,12 +1282,20 @@
     ],
     "25": [
       {
+        "surface": "restored",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the boundary",
         "lemma": "gevul"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "bo"
       },
       {
         "surface": "from Lebo-hamath",
@@ -1208,6 +1368,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "that the affliction",
         "lemma": "oni"
       },
@@ -1256,6 +1420,10 @@
       {
         "surface": "had said",
         "lemma": "davar"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "that He would not blot out",
@@ -1312,12 +1480,20 @@
         "lemma": "yarovam"
       },
       {
+        "surface": "along with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "and might",
         "lemma": "gevurah"
       },
       {
         "surface": "he waged war",
         "lemma": "lacham"
+      },
+      {
+        "surface": "and recovered",
+        "lemma": "shuv"
       },
       {
         "surface": "both Damascus",
@@ -1364,6 +1540,10 @@
       {
         "surface": "rested",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
       },
       {
         "surface": "the kings",

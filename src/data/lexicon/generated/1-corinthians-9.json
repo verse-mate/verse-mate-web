@@ -6,12 +6,24 @@
   "verses": {
     "1": [
       {
+        "surface": "Am I",
+        "lemma": "eimi"
+      },
+      {
         "surface": "free",
         "lemma": "eleutheros"
       },
       {
+        "surface": "Am I",
+        "lemma": "eimi"
+      },
+      {
         "surface": "an apostle",
         "lemma": "apostolos"
+      },
+      {
+        "surface": "Have I not seen",
+        "lemma": "horao"
       },
       {
         "surface": "Jesus",
@@ -20,6 +32,10 @@
       {
         "surface": "Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "Are",
+        "lemma": "eimi"
       },
       {
         "surface": "workmanship",
@@ -32,12 +48,24 @@
     ],
     "2": [
       {
+        "surface": "I am",
+        "lemma": "eimi"
+      },
+      {
         "surface": "an apostle",
         "lemma": "apostolos"
       },
       {
         "surface": "to others",
         "lemma": "allos"
+      },
+      {
+        "surface": "I am",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "seal",
@@ -54,6 +82,10 @@
     ],
     "3": [
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "my",
         "lemma": "emos"
       },
@@ -68,6 +100,10 @@
     ],
     "4": [
       {
+        "surface": "Have we",
+        "lemma": "echo"
+      },
+      {
         "surface": "right",
         "lemma": "exousia"
       },
@@ -81,6 +117,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "Have we",
+        "lemma": "echo"
+      },
       {
         "surface": "right",
         "lemma": "exousia"
@@ -134,6 +174,10 @@
     ],
     "7": [
       {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
         "surface": "serves as a soldier",
         "lemma": "strateuo"
       },
@@ -144,6 +188,10 @@
       {
         "surface": "expense",
         "lemma": "opsonion"
+      },
+      {
+        "surface": "Who",
+        "lemma": "tis"
       },
       {
         "surface": "plants",
@@ -160,6 +208,10 @@
       {
         "surface": "fruit",
         "lemma": "karpos"
+      },
+      {
+        "surface": "Who",
+        "lemma": "tis"
       },
       {
         "surface": "tends",
@@ -184,11 +236,23 @@
     ],
     "8": [
       {
+        "surface": "Do I say",
+        "lemma": "laleo"
+      },
+      {
         "surface": "the Law",
         "lemma": "nomos"
+      },
+      {
+        "surface": "say",
+        "lemma": "lego"
       }
     ],
     "9": [
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
       {
         "surface": "Law",
         "lemma": "nomos"
@@ -224,6 +288,14 @@
     ],
     "10": [
       {
+        "surface": "He actually speaking",
+        "lemma": "lego"
+      },
+      {
+        "surface": "this was written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "plowman",
         "lemma": "arotriao"
       },
@@ -256,6 +328,10 @@
       {
         "surface": "spiritual seed",
         "lemma": "pneumatikos"
+      },
+      {
+        "surface": "is it too much",
+        "lemma": "megas"
       },
       {
         "surface": "to reap",
@@ -296,6 +372,14 @@
         "lemma": "stego"
       },
       {
+        "surface": "anything",
+        "lemma": "pas"
+      },
+      {
+        "surface": "hinder",
+        "lemma": "didomi"
+      },
+      {
         "surface": "gospel",
         "lemma": "euangelion"
       },
@@ -305,6 +389,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "Do you not know",
+        "lemma": "eido"
+      },
       {
         "surface": "work",
         "lemma": "ergazomai"
@@ -370,8 +458,20 @@
         "lemma": "chrao"
       },
       {
+        "surface": "any",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "I am not writing",
+        "lemma": "grapho"
+      },
+      {
         "surface": "something",
         "lemma": "houto"
+      },
+      {
+        "surface": "be done",
+        "lemma": "ginomai"
       },
       {
         "surface": "would rather",
@@ -380,6 +480,10 @@
       {
         "surface": "die",
         "lemma": "apothnesko"
+      },
+      {
+        "surface": "let} anyone",
+        "lemma": "oudeis"
       },
       {
         "surface": "nullify",
@@ -394,6 +498,10 @@
       {
         "surface": "I preach the gospel",
         "lemma": "euangelizomai"
+      },
+      {
+        "surface": "have",
+        "lemma": "eimi"
       },
       {
         "surface": "to boast",
@@ -418,6 +526,10 @@
         "lemma": "hekon"
       },
       {
+        "surface": "I have",
+        "lemma": "echo"
+      },
+      {
         "surface": "a reward",
         "lemma": "misthos"
       },
@@ -435,6 +547,14 @@
       }
     ],
     "18": [
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
       {
         "surface": "reward",
         "lemma": "misthos"
@@ -470,12 +590,24 @@
     ],
     "19": [
       {
+        "surface": "I am",
+        "lemma": "eimi"
+      },
+      {
         "surface": "free of obligation",
         "lemma": "eleutheros"
       },
       {
+        "surface": "anyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "I make myself a slave",
         "lemma": "douloo"
+      },
+      {
+        "surface": "to everyone",
+        "lemma": "pas"
       },
       {
         "surface": "win",
@@ -490,6 +622,10 @@
       {
         "surface": "Jews",
         "lemma": "ioudaios"
+      },
+      {
+        "surface": "I became",
+        "lemma": "ginomai"
       },
       {
         "surface": "a Jew",
@@ -512,6 +648,10 @@
         "lemma": "nomos"
       },
       {
+        "surface": "am",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the law",
         "lemma": "nomos"
       },
@@ -532,6 +672,10 @@
       {
         "surface": "without the law",
         "lemma": "anomos"
+      },
+      {
+        "surface": "though I am",
+        "lemma": "eimi"
       },
       {
         "surface": "outside the law",
@@ -564,6 +708,10 @@
         "lemma": "asthenes"
       },
       {
+        "surface": "I became",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "weak",
         "lemma": "asthenes"
       },
@@ -576,6 +724,18 @@
         "lemma": "asthenes"
       },
       {
+        "surface": "I have become",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "to all people",
+        "lemma": "pas"
+      },
+      {
         "surface": "by all possible means",
         "lemma": "pantos"
       },
@@ -586,14 +746,34 @@
     ],
     "23": [
       {
+        "surface": "I do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "all this",
+        "lemma": "pas"
+      },
+      {
         "surface": "gospel",
         "lemma": "euangelion"
+      },
+      {
+        "surface": "I may share",
+        "lemma": "ginomai"
       }
     ],
     "24": [
       {
+        "surface": "Do you not know",
+        "lemma": "eido"
+      },
+      {
         "surface": "a race",
         "lemma": "stadios"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "runners",
@@ -602,6 +782,14 @@
       {
         "surface": "run",
         "lemma": "trecho"
+      },
+      {
+        "surface": "only one",
+        "lemma": "heis"
+      },
+      {
+        "surface": "receives",
+        "lemma": "lambano"
       },
       {
         "surface": "prize",
@@ -622,12 +810,20 @@
     ],
     "25": [
       {
+        "surface": "Everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "competes in the games",
         "lemma": "agonizomai"
       },
       {
         "surface": "trains with strict discipline",
         "lemma": "egkrateuomai"
+      },
+      {
+        "surface": "for",
+        "lemma": "lambano"
       },
       {
         "surface": "a crown",
@@ -692,6 +888,10 @@
       {
         "surface": "to others",
         "lemma": "allos"
+      },
+      {
+        "surface": "will not be",
+        "lemma": "ginomai"
       },
       {
         "surface": "disqualified",

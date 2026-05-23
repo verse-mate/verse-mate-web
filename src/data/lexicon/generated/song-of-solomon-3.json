@@ -30,6 +30,10 @@
         "lemma": "baqash"
       },
       {
+        "surface": "but did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "find him",
         "lemma": "matsa"
       }
@@ -38,10 +42,6 @@
       {
         "surface": "I will arise",
         "lemma": "qamay"
-      },
-      {
-        "surface": "now",
-        "lemma": "na"
       },
       {
         "surface": "and go about",
@@ -76,6 +76,10 @@
         "lemma": "baqash"
       },
       {
+        "surface": "but did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "find him",
         "lemma": "matsa"
       }
@@ -96,6 +100,10 @@
       {
         "surface": "of the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "Have you seen the one",
+        "lemma": "raah"
       },
       {
         "surface": "I",
@@ -132,8 +140,16 @@
         "lemma": "achaz"
       },
       {
+        "surface": "and would not",
+        "lemma": "lo"
+      },
+      {
         "surface": "let go",
         "lemma": "raphah"
+      },
+      {
+        "surface": "I had brought him",
+        "lemma": "bo"
       },
       {
         "surface": "my mother’s",
@@ -178,8 +194,16 @@
         "lemma": "saday"
       },
       {
+        "surface": "Do not",
+        "lemma": "im"
+      },
+      {
         "surface": "arouse",
         "lemma": "ur"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "awaken",
@@ -228,6 +252,10 @@
         "lemma": "levonah"
       },
       {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the spices",
         "lemma": "avaqah"
       },
@@ -237,10 +265,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "it is Solomon’s",
         "lemma": "shelomoh"
@@ -267,6 +291,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "are skilled",
         "lemma": "achaz"
@@ -314,6 +342,10 @@
         "lemma": "shelomoh"
       },
       {
+        "surface": "has made",
+        "lemma": "asah"
+      },
+      {
         "surface": "his carriage",
         "lemma": "appiryon"
       },
@@ -327,6 +359,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "He has made",
+        "lemma": "asah"
+      },
       {
         "surface": "its posts",
         "lemma": "ammud"
@@ -374,12 +410,20 @@
     ],
     "11": [
       {
+        "surface": "Come out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "O daughters",
         "lemma": "bat"
       },
       {
         "surface": "of Zion",
         "lemma": "tsiyyon"
+      },
+      {
+        "surface": "and gaze",
+        "lemma": "raah"
       },
       {
         "surface": "at King",

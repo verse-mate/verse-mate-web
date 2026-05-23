@@ -10,6 +10,10 @@
         "lemma": "nun"
       },
       {
+        "surface": "no",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "condemnation",
         "lemma": "katakrima"
       },
@@ -146,6 +150,10 @@
     ],
     "5": [
       {
+        "surface": "who live",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the flesh",
         "lemma": "sarx"
       },
@@ -224,12 +232,20 @@
       {
         "surface": "law",
         "lemma": "nomos"
+      },
+      {
+        "surface": "can it do so",
+        "lemma": "dunamai"
       }
     ],
     "8": [
       {
         "surface": "the flesh",
         "lemma": "sarx"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "dunamai"
       },
       {
         "surface": "please",
@@ -242,16 +258,16 @@
     ],
     "9": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the flesh",
         "lemma": "sarx"
       },
       {
         "surface": "the Spirit",
         "lemma": "pneuma"
-      },
-      {
-        "surface": "if",
-        "lemma": "eiper"
       },
       {
         "surface": "the Spirit",
@@ -266,12 +282,20 @@
         "lemma": "oikeo"
       },
       {
+        "surface": "have",
+        "lemma": "echo"
+      },
+      {
         "surface": "the Spirit",
         "lemma": "pneuma"
       },
       {
         "surface": "of Christ",
         "lemma": "christos"
+      },
+      {
+        "surface": "belong",
+        "lemma": "eimi"
       }
     ],
     "10": [
@@ -368,6 +392,10 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "we have",
+        "lemma": "eimi"
+      },
+      {
         "surface": "an obligation",
         "lemma": "opheiletes"
       },
@@ -440,6 +468,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "sons",
         "lemma": "huios"
       },
@@ -449,6 +481,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "you did not receive",
+        "lemma": "lambano"
+      },
       {
         "surface": "a spirit",
         "lemma": "pneuma"
@@ -464,6 +500,10 @@
       {
         "surface": "fear",
         "lemma": "phobos"
+      },
+      {
+        "surface": "you received",
+        "lemma": "lambano"
       },
       {
         "surface": "the Spirit",
@@ -500,6 +540,10 @@
         "lemma": "pneuma"
       },
       {
+        "surface": "we are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "God’s",
         "lemma": "theos"
       },
@@ -532,10 +576,6 @@
       {
         "surface": "with Christ",
         "lemma": "christos"
-      },
-      {
-        "surface": "if indeed",
-        "lemma": "eiper"
       },
       {
         "surface": "we suffer with Him",
@@ -664,6 +704,14 @@
     ],
     "22": [
       {
+        "surface": "We know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "whole",
+        "lemma": "pas"
+      },
+      {
         "surface": "creation",
         "lemma": "ktisis"
       },
@@ -684,6 +732,10 @@
       {
         "surface": "only",
         "lemma": "monon"
+      },
+      {
+        "surface": "who have",
+        "lemma": "echo"
       },
       {
         "surface": "firstfruits",
@@ -732,8 +784,16 @@
         "lemma": "blepo"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "hope at all",
         "lemma": "elpis"
+      },
+      {
+        "surface": "Who",
+        "lemma": "tis"
       },
       {
         "surface": "hopes for",
@@ -780,6 +840,14 @@
         "lemma": "astheneia"
       },
       {
+        "surface": "we do not know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "how",
+        "lemma": "tis"
+      },
+      {
         "surface": "we ought",
         "lemma": "dei"
       },
@@ -814,6 +882,10 @@
         "lemma": "kardia"
       },
       {
+        "surface": "knows",
+        "lemma": "eido"
+      },
+      {
         "surface": "mind",
         "lemma": "phronema"
       },
@@ -836,6 +908,10 @@
     ],
     "28": [
       {
+        "surface": "we know",
+        "lemma": "eido"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -854,6 +930,10 @@
       {
         "surface": "Him",
         "lemma": "theos"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "called",
@@ -886,8 +966,16 @@
         "lemma": "huios"
       },
       {
+        "surface": "would be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "prototokos"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "brothers",
@@ -922,12 +1010,20 @@
     ],
     "31": [
       {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
         "surface": "shall we say",
         "lemma": "ero"
       },
       {
         "surface": "God is",
         "lemma": "theos"
+      },
+      {
+        "surface": "who can be",
+        "lemma": "tis"
       }
     ],
     "32": [
@@ -948,11 +1044,23 @@
         "lemma": "paradidomi"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "freely give",
         "lemma": "charizo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       }
     ],
     "33": [
+      {
+        "surface": "Who",
+        "lemma": "tis"
+      },
       {
         "surface": "will bring any charge",
         "lemma": "egkaleo"
@@ -975,6 +1083,10 @@
       }
     ],
     "34": [
+      {
+        "surface": "Who is",
+        "lemma": "tis"
+      },
       {
         "surface": "to condemn us",
         "lemma": "katakrino"
@@ -1000,6 +1112,10 @@
         "lemma": "egeiro"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the right hand",
         "lemma": "dexios"
       },
@@ -1013,6 +1129,10 @@
       }
     ],
     "35": [
+      {
+        "surface": "Who",
+        "lemma": "tis"
+      },
       {
         "surface": "shall separate",
         "lemma": "chorizo"
@@ -1056,6 +1176,10 @@
     ],
     "36": [
       {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "we face death",
         "lemma": "thanatoo"
       },
@@ -1081,6 +1205,10 @@
       }
     ],
     "37": [
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
       {
         "surface": "we are more than conquerors",
         "lemma": "hupernikao"
@@ -1140,6 +1268,10 @@
       {
         "surface": "in all creation",
         "lemma": "ktisis"
+      },
+      {
+        "surface": "will be able",
+        "lemma": "dunamai"
       },
       {
         "surface": "to separate",

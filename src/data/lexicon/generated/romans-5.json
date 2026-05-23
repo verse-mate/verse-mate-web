@@ -14,6 +14,10 @@
         "lemma": "pistis"
       },
       {
+        "surface": "we have",
+        "lemma": "echo"
+      },
+      {
         "surface": "peace",
         "lemma": "eirene"
       },
@@ -36,6 +40,10 @@
     ],
     "2": [
       {
+        "surface": "we have gained",
+        "lemma": "echo"
+      },
+      {
         "surface": "access",
         "lemma": "prosagoge"
       },
@@ -46,6 +54,10 @@
       {
         "surface": "grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "we stand",
+        "lemma": "histemi"
       },
       {
         "surface": "we rejoice",
@@ -76,6 +88,10 @@
       {
         "surface": "sufferings",
         "lemma": "thlipsis"
+      },
+      {
+        "surface": "because we know",
+        "lemma": "eido"
       },
       {
         "surface": "suffering",
@@ -140,6 +156,10 @@
       {
         "surface": "Spirit",
         "lemma": "pneuma"
+      },
+      {
+        "surface": "He has given",
+        "lemma": "didomi"
       }
     ],
     "6": [
@@ -150,6 +170,10 @@
       {
         "surface": "the right time",
         "lemma": "kairos"
+      },
+      {
+        "surface": "we were",
+        "lemma": "eimi"
       },
       {
         "surface": "still",
@@ -216,6 +240,10 @@
         "lemma": "agape"
       },
       {
+        "surface": "were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "still",
         "lemma": "eti"
       },
@@ -242,6 +270,10 @@
         "lemma": "haima"
       },
       {
+        "surface": "how much",
+        "lemma": "polus"
+      },
+      {
         "surface": "more",
         "lemma": "mallon"
       },
@@ -255,6 +287,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "when we were",
+        "lemma": "eimi"
+      },
       {
         "surface": "enemies of God",
         "lemma": "echthros"
@@ -274,6 +310,10 @@
       {
         "surface": "Son",
         "lemma": "huios"
+      },
+      {
+        "surface": "how much",
+        "lemma": "polus"
       },
       {
         "surface": "more",
@@ -322,6 +362,10 @@
         "lemma": "nun"
       },
       {
+        "surface": "we have now received",
+        "lemma": "lambano"
+      },
+      {
         "surface": "reconciliation",
         "lemma": "katallage"
       }
@@ -332,8 +376,16 @@
         "lemma": "hamartia"
       },
       {
+        "surface": "entered",
+        "lemma": "eiserchomai"
+      },
+      {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "man",
@@ -360,8 +412,16 @@
         "lemma": "dierchomai"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "men",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "sinned",
@@ -372,6 +432,10 @@
       {
         "surface": "sin",
         "lemma": "hamartia"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
       },
       {
         "surface": "the world",
@@ -388,6 +452,10 @@
       {
         "surface": "is not taken into account",
         "lemma": "ellogeo"
+      },
+      {
+        "surface": "when there is",
+        "lemma": "eimi"
       },
       {
         "surface": "law",
@@ -428,6 +496,10 @@
         "lemma": "parabasis"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a pattern",
         "lemma": "tupos"
       },
@@ -446,12 +518,24 @@
         "lemma": "paraptoma"
       },
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "died",
         "lemma": "apothnesko"
       },
       {
         "surface": "trespass",
         "lemma": "paraptoma"
+      },
+      {
+        "surface": "one man",
+        "lemma": "heis"
+      },
+      {
+        "surface": "how much",
+        "lemma": "polus"
       },
       {
         "surface": "more",
@@ -474,6 +558,10 @@
         "lemma": "charis"
       },
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "man",
         "lemma": "anthropos"
       },
@@ -488,12 +576,20 @@
       {
         "surface": "abound",
         "lemma": "perisseuo"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       }
     ],
     "16": [
       {
         "surface": "gift",
         "lemma": "dorema"
+      },
+      {
+        "surface": "the one man’s",
+        "lemma": "heis"
       },
       {
         "surface": "sin",
@@ -504,12 +600,20 @@
         "lemma": "krima"
       },
       {
+        "surface": "one sin",
+        "lemma": "heis"
+      },
+      {
         "surface": "condemnation",
         "lemma": "katakrima"
       },
       {
         "surface": "gift",
         "lemma": "charisma"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "trespasses",
@@ -526,6 +630,10 @@
         "lemma": "paraptoma"
       },
       {
+        "surface": "one man",
+        "lemma": "heis"
+      },
+      {
         "surface": "death",
         "lemma": "thanatos"
       },
@@ -534,8 +642,20 @@
         "lemma": "basileuo"
       },
       {
+        "surface": "one man",
+        "lemma": "heis"
+      },
+      {
+        "surface": "how much",
+        "lemma": "polus"
+      },
+      {
         "surface": "more",
         "lemma": "mallon"
+      },
+      {
+        "surface": "receive",
+        "lemma": "lambano"
       },
       {
         "surface": "abundance",
@@ -562,6 +682,10 @@
         "lemma": "zoe"
       },
       {
+        "surface": "one man",
+        "lemma": "heis"
+      },
+      {
         "surface": "Jesus",
         "lemma": "iesous"
       },
@@ -572,6 +696,10 @@
     ],
     "18": [
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "trespass",
         "lemma": "paraptoma"
       },
@@ -580,12 +708,20 @@
         "lemma": "katakrima"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "men",
         "lemma": "anthropos"
       },
       {
         "surface": "so",
         "lemma": "houto"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "act of righteousness",
@@ -600,6 +736,10 @@
         "lemma": "zoe"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "men",
         "lemma": "anthropos"
       }
@@ -610,8 +750,16 @@
         "lemma": "parakoe"
       },
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "man",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "were made",
@@ -628,6 +776,14 @@
       {
         "surface": "obedience",
         "lemma": "hupakoe"
+      },
+      {
+        "surface": "one man",
+        "lemma": "heis"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "will be made",

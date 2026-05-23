@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "three",
         "lemma": "shalosh"
       },
@@ -28,6 +32,14 @@
       {
         "surface": "four",
         "lemma": "arba"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "revoke My judgment",
+        "lemma": "shuv"
       },
       {
         "surface": "he burned",
@@ -118,8 +130,16 @@
         "lemma": "harag"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the officials",
         "lemma": "sar"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -134,6 +154,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "three",
@@ -152,6 +176,14 @@
         "lemma": "arba"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "revoke My judgment",
+        "lemma": "shuv"
+      },
+      {
         "surface": "they reject",
         "lemma": "maas"
       },
@@ -162,6 +194,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and fail",
+        "lemma": "lo"
       },
       {
         "surface": "to keep",
@@ -178,6 +214,10 @@
       {
         "surface": "by the lies",
         "lemma": "kazav"
+      },
+      {
+        "surface": "their fathers",
+        "lemma": "av"
       },
       {
         "surface": "walked",
@@ -220,6 +260,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "three",
         "lemma": "shalosh"
       },
@@ -234,6 +278,14 @@
       {
         "surface": "four",
         "lemma": "arba"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "revoke My judgment",
+        "lemma": "shuv"
       },
       {
         "surface": "they sell",
@@ -294,6 +346,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "and his father",
+        "lemma": "av"
+      },
+      {
         "surface": "have relations with",
         "lemma": "halakh"
       },
@@ -322,6 +378,10 @@
       {
         "surface": "beside",
         "lemma": "etsel"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "altar",
@@ -516,15 +576,15 @@
         "lemma": "navi"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to prophesy",
         "lemma": "nava"
       }
     ],
     "13": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "am about to crush you",
         "lemma": "uq"
@@ -568,6 +628,10 @@
         "lemma": "chazaq"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "prevail",
         "lemma": "amats"
       },
@@ -578,6 +642,10 @@
       {
         "surface": "and the mighty",
         "lemma": "gibbor"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "save",
@@ -594,6 +662,10 @@
         "lemma": "taphas"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "stand his ground",
         "lemma": "amad"
       },
@@ -606,12 +678,20 @@
         "lemma": "regel"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "escape",
         "lemma": "malat"
       },
       {
         "surface": "and the horseman",
         "lemma": "rakhav"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "save",
@@ -658,8 +738,8 @@
     ]
   },
   "themeLemmas": [
-    "shalosh",
-    "pesah",
-    "moav"
+    "lo",
+    "amar",
+    "shuv"
   ]
 }

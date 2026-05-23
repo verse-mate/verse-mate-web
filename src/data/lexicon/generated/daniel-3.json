@@ -116,6 +116,10 @@
         "lemma": "tiphtay"
       },
       {
+        "surface": "and all the other",
+        "lemma": "kol"
+      },
+      {
         "surface": "officials",
         "lemma": "shilton"
       },
@@ -172,6 +176,10 @@
       {
         "surface": "magistrates",
         "lemma": "tiphtay"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the rulers",
@@ -238,6 +246,10 @@
       {
         "surface": "and language",
         "lemma": "lishshan"
+      },
+      {
+        "surface": "this is what you are commanded",
+        "lemma": "amar"
       }
     ],
     "5": [
@@ -276,6 +288,10 @@
       {
         "surface": "pipes",
         "lemma": "sumponeyah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "kinds",
@@ -358,12 +374,16 @@
     ],
     "7": [
       {
-        "surface": "Therefore",
-        "lemma": "denah"
+        "surface": "vvv",
+        "lemma": "kol"
       },
       {
         "surface": "vvv",
         "lemma": "zeman"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -398,6 +418,10 @@
         "lemma": "pesanterin"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "kinds",
         "lemma": "zan"
       },
@@ -408,6 +432,10 @@
       {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "nation",
@@ -447,10 +475,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "At this time",
-        "lemma": "denah"
-      },
       {
         "surface": "some astrologers",
         "lemma": "kasday"
@@ -516,6 +540,10 @@
         "lemma": "teem"
       },
       {
+        "surface": "everyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "hears",
         "lemma": "shema"
       },
@@ -546,6 +574,10 @@
       {
         "surface": "pipes",
         "lemma": "sumponeyah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "kinds",
@@ -648,10 +680,6 @@
         "lemma": "avednego"
       },
       {
-        "surface": "who",
-        "lemma": "illekh"
-      },
-      {
         "surface": "have ignored",
         "lemma": "la"
       },
@@ -706,6 +734,10 @@
         "lemma": "regaz"
       },
       {
+        "surface": "summoned",
+        "lemma": "amar"
+      },
+      {
         "surface": "Shadrach",
         "lemma": "shadrakh"
       },
@@ -720,10 +752,6 @@
       {
         "surface": "and Abednego",
         "lemma": "avednego"
-      },
-      {
-        "surface": "these",
-        "lemma": "illekh"
       },
       {
         "surface": "men",
@@ -742,6 +770,10 @@
       {
         "surface": "and Nebuchadnezzar",
         "lemma": "nevukhadnetstsar"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Shadrach",
@@ -832,6 +864,10 @@
       {
         "surface": "pipes",
         "lemma": "sumponeyah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "kinds",
@@ -966,10 +1002,6 @@
       {
         "surface": "to answer you",
         "lemma": "tuv"
-      },
-      {
-        "surface": "this",
-        "lemma": "denah"
       },
       {
         "surface": "matter",
@@ -1136,6 +1168,10 @@
     ],
     "20": [
       {
+        "surface": "and he commanded",
+        "lemma": "amar"
+      },
+      {
         "surface": "some mighty men",
         "lemma": "gibbar"
       },
@@ -1185,10 +1221,6 @@
       }
     ],
     "21": [
-      {
-        "surface": "they",
-        "lemma": "illekh"
-      },
       {
         "surface": "were tied up",
         "lemma": "kephat"
@@ -1268,10 +1300,6 @@
         "lemma": "qetal"
       },
       {
-        "surface": "the",
-        "lemma": "illekh"
-      },
-      {
         "surface": "men",
         "lemma": "gevar"
       },
@@ -1297,10 +1325,6 @@
       }
     ],
     "23": [
-      {
-        "surface": "And these",
-        "lemma": "illekh"
-      },
       {
         "surface": "three",
         "lemma": "telat"
@@ -1372,6 +1396,10 @@
         "lemma": "anah"
       },
       {
+        "surface": "and asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "his advisers",
         "lemma": "haddavar"
       },
@@ -1418,8 +1446,8 @@
     ],
     "25": [
       {
-        "surface": "Look",
-        "lemma": "ha"
+        "surface": "he exclaimed",
+        "lemma": "amar"
       },
       {
         "surface": "I",
@@ -1502,6 +1530,10 @@
       {
         "surface": "furnace",
         "lemma": "attun"
+      },
+      {
+        "surface": "and called out",
+        "lemma": "amar"
       },
       {
         "surface": "Shadrach",
@@ -1604,10 +1636,6 @@
       {
         "surface": "on the bodies",
         "lemma": "geshem"
-      },
-      {
-        "surface": "of these",
-        "lemma": "illekh"
       },
       {
         "surface": "men",
@@ -1728,6 +1756,10 @@
         "lemma": "segid"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "god",
         "lemma": "elah"
       },
@@ -1746,12 +1778,20 @@
         "lemma": "am"
       },
       {
+        "surface": "of any",
+        "lemma": "kol"
+      },
+      {
         "surface": "nation",
         "lemma": "ummah"
       },
       {
         "surface": "or language",
         "lemma": "lishshan"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "anything offensive",
@@ -1816,10 +1856,6 @@
       {
         "surface": "deliver",
         "lemma": "netsal"
-      },
-      {
-        "surface": "in this way",
-        "lemma": "denah"
       }
     ],
     "30": [

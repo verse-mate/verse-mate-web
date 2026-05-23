@@ -82,8 +82,20 @@
         "lemma": "agapetos"
       },
       {
+        "surface": "although I made",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "effort",
         "lemma": "spoude"
+      },
+      {
+        "surface": "to write",
+        "lemma": "grapho"
       },
       {
         "surface": "salvation",
@@ -94,8 +106,16 @@
         "lemma": "koinos"
       },
       {
+        "surface": "I felt",
+        "lemma": "echo"
+      },
+      {
         "surface": "it necessary",
         "lemma": "anagke"
+      },
+      {
+        "surface": "to write",
+        "lemma": "grapho"
       },
       {
         "surface": "and urge",
@@ -190,6 +210,10 @@
     ],
     "5": [
       {
+        "surface": "Although you are fully aware of this",
+        "lemma": "eido"
+      },
+      {
         "surface": "I want",
         "lemma": "boulomai"
       },
@@ -274,6 +298,10 @@
       {
         "surface": "judgment",
         "lemma": "krisis"
+      },
+      {
+        "surface": "on that great",
+        "lemma": "megas"
       },
       {
         "surface": "day",
@@ -422,6 +450,10 @@
         "lemma": "krisis"
       },
       {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "The Lord",
         "lemma": "kurios"
       },
@@ -438,6 +470,10 @@
       {
         "surface": "what",
         "lemma": "hosos"
+      },
+      {
+        "surface": "they do not understand",
+        "lemma": "eido"
       },
       {
         "surface": "irrational",
@@ -499,6 +535,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
       {
         "surface": "hidden reefs",
         "lemma": "spilas"
@@ -628,6 +668,10 @@
         "lemma": "kurios"
       },
       {
+        "surface": "is coming",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "myriads",
         "lemma": "murias"
       },
@@ -638,16 +682,32 @@
     ],
     "15": [
       {
+        "surface": "to execute",
+        "lemma": "poieo"
+      },
+      {
         "surface": "judgment",
         "lemma": "krisis"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       },
       {
         "surface": "to convict",
         "lemma": "elegcho"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "ungodly",
         "lemma": "asebes"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "ungodly",
@@ -662,8 +722,16 @@
         "lemma": "asebeia"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "harsh word",
         "lemma": "skleros"
+      },
+      {
+        "surface": "spoken",
+        "lemma": "laleo"
       },
       {
         "surface": "by ungodly",
@@ -675,6 +743,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
       {
         "surface": "discontented",
         "lemma": "mempsimoiros"
@@ -694,6 +766,10 @@
       {
         "surface": "mouths",
         "lemma": "stoma"
+      },
+      {
+        "surface": "spew",
+        "lemma": "laleo"
       },
       {
         "surface": "arrogance",
@@ -748,12 +824,20 @@
     ],
     "18": [
       {
+        "surface": "they said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "the last",
         "lemma": "eschatos"
       },
       {
         "surface": "times",
         "lemma": "chronos"
+      },
+      {
+        "surface": "there will be",
+        "lemma": "eimi"
       },
       {
         "surface": "scoffers",
@@ -774,12 +858,20 @@
     ],
     "19": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "cause divisions",
         "lemma": "apodiorizo"
       },
       {
         "surface": "who are worldly",
         "lemma": "psuchikos"
+      },
+      {
+        "surface": "and devoid of",
+        "lemma": "echo"
       },
       {
         "surface": "the Spirit",
@@ -908,12 +1000,20 @@
     ],
     "24": [
       {
+        "surface": "is able",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "to keep",
         "lemma": "phulasso"
       },
       {
         "surface": "from stumbling",
         "lemma": "aptaistos"
+      },
+      {
+        "surface": "to present you",
+        "lemma": "histemi"
       },
       {
         "surface": "unblemished",
@@ -970,6 +1070,10 @@
         "lemma": "kurios"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "time",
         "lemma": "aion"
       },
@@ -978,12 +1082,12 @@
         "lemma": "nun"
       },
       {
-        "surface": "eternity",
-        "lemma": "aion"
+        "surface": "all",
+        "lemma": "pas"
       },
       {
-        "surface": "Amen",
-        "lemma": "amen"
+        "surface": "eternity",
+        "lemma": "aion"
       }
     ]
   },

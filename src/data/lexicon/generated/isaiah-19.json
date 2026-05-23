@@ -14,10 +14,6 @@
         "lemma": "mitsrayim"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -28,6 +24,14 @@
       {
         "surface": "a swift",
         "lemma": "qal"
+      },
+      {
+        "surface": "cloud",
+        "lemma": "av"
+      },
+      {
+        "surface": "He is coming",
+        "lemma": "bo"
       },
       {
         "surface": "to Egypt",
@@ -294,6 +298,10 @@
         "lemma": "yeor"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the fields sown",
         "lemma": "mizra"
       },
@@ -322,6 +330,10 @@
       {
         "surface": "will mourn",
         "lemma": "anah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "who cast",
@@ -388,12 +400,24 @@
         "lemma": "shatah"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "dejected",
         "lemma": "dakah"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the hired",
         "lemma": "sekher"
+      },
+      {
+        "surface": "workers",
+        "lemma": "asah"
       },
       {
         "surface": "will be sick",
@@ -444,6 +468,10 @@
       {
         "surface": "How",
         "lemma": "ekh"
+      },
+      {
+        "surface": "can you say",
+        "lemma": "amar"
       },
       {
         "surface": "Pharaoh",
@@ -580,6 +608,10 @@
         "lemma": "taah"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "she does",
         "lemma": "maaseh"
       },
@@ -598,8 +630,20 @@
     ],
     "15": [
       {
+        "surface": "There is",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
         "surface": "Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "can do",
+        "lemma": "asah"
       },
       {
         "surface": "head",
@@ -626,6 +670,10 @@
       {
         "surface": "the Egyptians",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "like women",
@@ -680,6 +728,10 @@
       {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "whenever",
+        "lemma": "kol"
       },
       {
         "surface": "Judah is mentioned",
@@ -756,6 +808,10 @@
         "lemma": "echad"
       },
       {
+        "surface": "will be called",
+        "lemma": "amar"
+      },
+      {
         "surface": "the City",
         "lemma": "ir"
       },
@@ -768,6 +824,10 @@
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "there will be",
+        "lemma": "hayah"
       },
       {
         "surface": "an altar",
@@ -807,6 +867,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "It will be",
+        "lemma": "hayah"
+      },
       {
         "surface": "a sign",
         "lemma": "ot"
@@ -944,6 +1008,10 @@
         "lemma": "rapah"
       },
       {
+        "surface": "They will turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -962,6 +1030,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "there will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a highway",
         "lemma": "mesillah"
       },
@@ -976,6 +1048,10 @@
       {
         "surface": "The Assyrians",
         "lemma": "ashshur"
+      },
+      {
+        "surface": "will go",
+        "lemma": "bo"
       },
       {
         "surface": "to Egypt",
@@ -1010,6 +1086,10 @@
       {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "will join",
+        "lemma": "hayah"
       },
       {
         "surface": "a three-party",
@@ -1050,6 +1130,10 @@
         "lemma": "barakh"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Blessed be",
         "lemma": "barakh"
       },
@@ -1082,6 +1166,6 @@
   "themeLemmas": [
     "mitsrayim",
     "tsava",
-    "ashshur"
+    "hayah"
   ]
 }

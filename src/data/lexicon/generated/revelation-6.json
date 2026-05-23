@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "I watched",
+        "lemma": "horao"
+      },
+      {
         "surface": "Lamb",
         "lemma": "arnion"
       },
       {
         "surface": "opened",
         "lemma": "anoigo"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "seven",
@@ -22,6 +30,14 @@
         "lemma": "sphragis"
       },
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "four",
         "lemma": "tessares"
       },
@@ -30,15 +46,27 @@
         "lemma": "zoon"
       },
       {
+        "surface": "say",
+        "lemma": "lego"
+      },
+      {
         "surface": "a voice",
         "lemma": "phone"
       },
       {
         "surface": "like thunder",
         "lemma": "bronte"
+      },
+      {
+        "surface": "Come",
+        "lemma": "erchomai"
       }
     ],
     "2": [
+      {
+        "surface": "I looked",
+        "lemma": "horao"
+      },
       {
         "surface": "a white",
         "lemma": "leukos"
@@ -48,12 +76,24 @@
         "lemma": "hippos"
       },
       {
+        "surface": "held",
+        "lemma": "echo"
+      },
+      {
         "surface": "a bow",
         "lemma": "toxon"
       },
       {
+        "surface": "was given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "a crown",
         "lemma": "stephanos"
+      },
+      {
+        "surface": "he rode out",
+        "lemma": "exerchomai"
       },
       {
         "surface": "to overcome",
@@ -78,12 +118,24 @@
         "lemma": "sphragis"
       },
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "second",
         "lemma": "deuteros"
       },
       {
         "surface": "living creature",
         "lemma": "zoon"
+      },
+      {
+        "surface": "say",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Come",
+        "lemma": "erchomai"
       }
     ],
     "4": [
@@ -96,8 +148,20 @@
         "lemma": "hippos"
       },
       {
+        "surface": "went forth",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "It was bright red",
         "lemma": "purros"
+      },
+      {
+        "surface": "was granted permission",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "to take away",
+        "lemma": "lambano"
       },
       {
         "surface": "peace",
@@ -114,6 +178,14 @@
       {
         "surface": "one another",
         "lemma": "allelon"
+      },
+      {
+        "surface": "was given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "a great",
+        "lemma": "megas"
       },
       {
         "surface": "sword",
@@ -134,6 +206,10 @@
         "lemma": "sphragis"
       },
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "third",
         "lemma": "tritos"
       },
@@ -142,12 +218,28 @@
         "lemma": "zoon"
       },
       {
+        "surface": "say",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Come",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "I looked",
+        "lemma": "horao"
+      },
+      {
         "surface": "a black",
         "lemma": "melas"
       },
       {
         "surface": "horse",
         "lemma": "hippos"
+      },
+      {
+        "surface": "held",
+        "lemma": "echo"
       },
       {
         "surface": "hand",
@@ -159,6 +251,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
       {
         "surface": "a voice",
         "lemma": "phone"
@@ -174,6 +270,10 @@
       {
         "surface": "living creatures",
         "lemma": "zoon"
+      },
+      {
+        "surface": "saying",
+        "lemma": "lego"
       },
       {
         "surface": "A quart",
@@ -230,6 +330,10 @@
         "lemma": "sphragis"
       },
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "the voice",
         "lemma": "phone"
       },
@@ -240,9 +344,21 @@
       {
         "surface": "living creature",
         "lemma": "zoon"
+      },
+      {
+        "surface": "say",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Come",
+        "lemma": "erchomai"
       }
     ],
     "8": [
+      {
+        "surface": "I looked",
+        "lemma": "horao"
+      },
       {
         "surface": "a pale green",
         "lemma": "chloros"
@@ -266,6 +382,10 @@
       {
         "surface": "followed",
         "lemma": "akoloutheo"
+      },
+      {
+        "surface": "were given",
+        "lemma": "didomi"
       },
       {
         "surface": "authority",
@@ -318,6 +438,10 @@
         "lemma": "sphragis"
       },
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "altar",
         "lemma": "thusiasterion"
       },
@@ -340,12 +464,20 @@
       {
         "surface": "testimony",
         "lemma": "marturia"
+      },
+      {
+        "surface": "they had upheld",
+        "lemma": "echo"
       }
     ],
     "10": [
       {
         "surface": "they cried out",
         "lemma": "krazo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "megas"
       },
       {
         "surface": "in a loud voice",
@@ -388,6 +520,10 @@
       {
         "surface": "each",
         "lemma": "hekastos"
+      },
+      {
+        "surface": "was given",
+        "lemma": "didomi"
       },
       {
         "surface": "a white",
@@ -440,6 +576,10 @@
     ],
     "12": [
       {
+        "surface": "I watched as",
+        "lemma": "horao"
+      },
+      {
         "surface": "the Lamb opened",
         "lemma": "anoigo"
       },
@@ -452,12 +592,24 @@
         "lemma": "sphragis"
       },
       {
+        "surface": "there was",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "a great",
+        "lemma": "megas"
+      },
+      {
         "surface": "earthquake",
         "lemma": "seismos"
       },
       {
         "surface": "sun",
         "lemma": "helios"
+      },
+      {
+        "surface": "became",
+        "lemma": "ginomai"
       },
       {
         "surface": "black",
@@ -478,6 +630,10 @@
       {
         "surface": "moon",
         "lemma": "selene"
+      },
+      {
+        "surface": "turned",
+        "lemma": "ginomai"
       },
       {
         "surface": "blood red",
@@ -518,6 +674,10 @@
         "lemma": "seio"
       },
       {
+        "surface": "a great",
+        "lemma": "megas"
+      },
+      {
         "surface": "wind",
         "lemma": "anemos"
       }
@@ -538,6 +698,10 @@
       {
         "surface": "being rolled up",
         "lemma": "helisso"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "mountain",
@@ -582,6 +746,10 @@
         "lemma": "ischuros"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "slave",
         "lemma": "doulos"
       },
@@ -607,6 +775,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "they said",
+        "lemma": "lego"
+      },
       {
         "surface": "mountains",
         "lemma": "oros"
@@ -646,12 +818,32 @@
     ],
     "17": [
       {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "day",
         "lemma": "hemera"
       },
       {
         "surface": "wrath",
         "lemma": "orge"
+      },
+      {
+        "surface": "has come",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "is able",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "to withstand it",
+        "lemma": "histemi"
       }
     ]
   },

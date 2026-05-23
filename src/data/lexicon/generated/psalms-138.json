@@ -14,6 +14,10 @@
         "lemma": "yadah"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my heart",
         "lemma": "lev"
       },
@@ -70,12 +74,20 @@
       {
         "surface": "and Your word",
         "lemma": "imrah"
+      },
+      {
+        "surface": "all else",
+        "lemma": "kol"
       }
     ],
     "3": [
       {
         "surface": "On the day",
         "lemma": "yom"
+      },
+      {
+        "surface": "I called",
+        "lemma": "qara"
       },
       {
         "surface": "You answered me",
@@ -96,6 +108,10 @@
     ],
     "4": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the kings",
         "lemma": "melekh"
       },
@@ -110,6 +126,10 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "they hear",
+        "lemma": "shama"
       },
       {
         "surface": "the words",
@@ -156,6 +176,10 @@
         "lemma": "rum"
       },
       {
+        "surface": "He attends",
+        "lemma": "raah"
+      },
+      {
         "surface": "to the lowly",
         "lemma": "shaphal"
       },
@@ -173,6 +197,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "I walk",
         "lemma": "halakh"
@@ -240,6 +268,10 @@
         "lemma": "olam"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "abandon",
         "lemma": "raphah"
       },
@@ -255,7 +287,7 @@
   },
   "themeLemmas": [
     "yadah",
-    "shem",
-    "chesed"
+    "kol",
+    "shem"
   ]
 }

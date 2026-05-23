@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Bezalel constructed",
+        "lemma": "asah"
+      },
+      {
         "surface": "the altar",
         "lemma": "mizbeach"
       },
@@ -64,6 +68,10 @@
     ],
     "2": [
       {
+        "surface": "He made",
+        "lemma": "asah"
+      },
+      {
         "surface": "a horn",
         "lemma": "qeren"
       },
@@ -80,6 +88,10 @@
         "lemma": "qeren"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "and he overlaid",
         "lemma": "tsaphah"
       },
@@ -89,6 +101,14 @@
       }
     ],
     "3": [
+      {
+        "surface": "He made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "the altar’s",
         "lemma": "mizbeach"
@@ -123,6 +143,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "He made",
+        "lemma": "asah"
+      },
       {
         "surface": "a grate",
         "lemma": "makhber"
@@ -196,6 +220,10 @@
     ],
     "6": [
       {
+        "surface": "And he made",
+        "lemma": "asah"
+      },
+      {
         "surface": "the poles",
         "lemma": "bad"
       },
@@ -218,6 +246,10 @@
     ],
     "7": [
       {
+        "surface": "Then he inserted",
+        "lemma": "bo"
+      },
+      {
         "surface": "the poles",
         "lemma": "bad"
       },
@@ -238,6 +270,10 @@
         "lemma": "nasa"
       },
       {
+        "surface": "He made",
+        "lemma": "asah"
+      },
+      {
         "surface": "with boards",
         "lemma": "luach"
       },
@@ -247,6 +283,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Next he made",
+        "lemma": "asah"
+      },
       {
         "surface": "the bronze",
         "lemma": "nechoshet"
@@ -281,6 +321,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "Then he constructed",
+        "lemma": "asah"
+      },
       {
         "surface": "the courtyard",
         "lemma": "chatser"
@@ -560,6 +604,10 @@
     ],
     "16": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the curtains",
         "lemma": "qela"
       },
@@ -616,6 +664,10 @@
       {
         "surface": "of the posts was silver",
         "lemma": "keseph"
+      },
+      {
+        "surface": "So all",
+        "lemma": "kol"
       },
       {
         "surface": "the posts",
@@ -752,6 +804,10 @@
     ],
     "20": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the tent pegs",
         "lemma": "yated"
       },
@@ -860,6 +916,14 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -924,6 +988,10 @@
     ],
     "24": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the gold",
         "lemma": "zahav"
       },
@@ -932,12 +1000,20 @@
         "lemma": "tenuphah"
       },
       {
+        "surface": "used",
+        "lemma": "asah"
+      },
+      {
         "surface": "for the work",
         "lemma": "melakhah"
       },
       {
         "surface": "on the sanctuary",
         "lemma": "qodesh"
+      },
+      {
+        "surface": "totaled",
+        "lemma": "hayah"
       },
       {
         "surface": "29",
@@ -1028,6 +1104,10 @@
         "lemma": "sheqel"
       },
       {
+        "surface": "from everyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "twenty",
         "lemma": "esrim"
       },
@@ -1072,6 +1152,10 @@
       {
         "surface": "of silver",
         "lemma": "keseph"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
       },
       {
         "surface": "used to cast",
@@ -1124,6 +1208,10 @@
         "lemma": "eleph"
       },
       {
+        "surface": "he made",
+        "lemma": "asah"
+      },
+      {
         "surface": "the hooks",
         "lemma": "vav"
       },
@@ -1172,6 +1260,10 @@
     ],
     "30": [
       {
+        "surface": "He used it to make",
+        "lemma": "asah"
+      },
+      {
         "surface": "the bases",
         "lemma": "eden"
       },
@@ -1204,6 +1296,10 @@
         "lemma": "makhber"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the utensils",
         "lemma": "keli"
       },
@@ -1234,12 +1330,20 @@
         "lemma": "shaar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the tent pegs",
         "lemma": "yated"
       },
       {
         "surface": "for the tabernacle",
         "lemma": "mishkan"
+      },
+      {
+        "surface": "and",
+        "lemma": "kol"
       },
       {
         "surface": "its surrounding",
@@ -1254,6 +1358,6 @@
   "themeLemmas": [
     "nechoshet",
     "eden",
-    "ammud"
+    "asah"
   ]
 }

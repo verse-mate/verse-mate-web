@@ -50,10 +50,6 @@
     ],
     "3": [
       {
-        "surface": "Surely",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "you have instructed",
         "lemma": "yasar"
       },
@@ -106,6 +102,10 @@
         "lemma": "attah"
       },
       {
+        "surface": "trouble has come",
+        "lemma": "bo"
+      },
+      {
         "surface": "and you are weary",
         "lemma": "laah"
       },
@@ -122,6 +122,10 @@
       {
         "surface": "Is your reverence",
         "lemma": "yirah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "your confidence",
@@ -144,10 +148,6 @@
       {
         "surface": "Consider",
         "lemma": "zakhar"
-      },
-      {
-        "surface": "now, I plead",
-        "lemma": "na"
       },
       {
         "surface": "Who",
@@ -175,6 +175,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "I have observed",
+        "lemma": "raah"
+      },
       {
         "surface": "those who plow",
         "lemma": "charash"
@@ -340,6 +344,10 @@
         "lemma": "raad"
       },
       {
+        "surface": "came over me",
+        "lemma": "qara"
+      },
+      {
         "surface": "and made all",
         "lemma": "rov"
       },
@@ -384,6 +392,10 @@
         "lemma": "amad"
       },
       {
+        "surface": "but I could not",
+        "lemma": "lo"
+      },
+      {
         "surface": "discern",
         "lemma": "nakhar"
       },
@@ -402,6 +414,10 @@
       {
         "surface": "my eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "and I heard",
+        "lemma": "shama"
       },
       {
         "surface": "a whispering",
@@ -426,18 +442,26 @@
         "lemma": "eloah"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "a man",
         "lemma": "gaver"
       },
       {
         "surface": "more pure",
         "lemma": "taher"
+      },
+      {
+        "surface": "than his Maker",
+        "lemma": "asah"
       }
     ],
     "18": [
       {
-        "surface": "If",
-        "lemma": "hen"
+        "surface": "God puts no",
+        "lemma": "lo"
       },
       {
         "surface": "trust",
@@ -530,14 +554,18 @@
         "lemma": "mut"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "wisdom",
         "lemma": "chokhmah"
       }
     ]
   },
   "themeLemmas": [
+    "lo",
     "avad",
-    "ruach",
-    "qol"
+    "ruach"
   ]
 }

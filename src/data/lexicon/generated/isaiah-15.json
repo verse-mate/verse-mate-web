@@ -92,12 +92,20 @@
         "lemma": "medeva"
       },
       {
+        "surface": "Every",
+        "lemma": "kol"
+      },
+      {
         "surface": "head",
         "lemma": "rosh"
       },
       {
         "surface": "is shaved",
         "lemma": "qorchah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "beard",
@@ -130,6 +138,10 @@
         "lemma": "rechov"
       },
       {
+        "surface": "they all",
+        "lemma": "kol"
+      },
+      {
         "surface": "wail",
         "lemma": "yalal"
       },
@@ -158,6 +170,10 @@
       {
         "surface": "their voices",
         "lemma": "qol"
+      },
+      {
+        "surface": "are heard",
+        "lemma": "shama"
       },
       {
         "surface": "Jahaz",
@@ -252,6 +268,10 @@
         "lemma": "nimrim"
       },
       {
+        "surface": "are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "dried up",
         "lemma": "meshammah"
       },
@@ -274,6 +294,14 @@
       {
         "surface": "and the greenery",
         "lemma": "yereq"
+      },
+      {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no more",
+        "lemma": "lo"
       }
     ],
     "7": [
@@ -389,7 +417,7 @@
   },
   "themeLemmas": [
     "moav",
-    "bekhi",
-    "zaaq"
+    "kol",
+    "bekhi"
   ]
 }

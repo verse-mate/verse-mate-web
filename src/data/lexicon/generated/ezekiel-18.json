@@ -12,6 +12,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -30,6 +38,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "The fathers",
+        "lemma": "av"
       },
       {
         "surface": "have eaten",
@@ -70,6 +82,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "you will no",
+        "lemma": "im"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
       },
@@ -88,12 +104,16 @@
     ],
     "4": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "soul",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "both father",
+        "lemma": "av"
       },
       {
         "surface": "and",
@@ -122,8 +142,16 @@
         "lemma": "ish"
       },
       {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "righteous",
         "lemma": "tsaddiq"
+      },
+      {
+        "surface": "and does",
+        "lemma": "asah"
       },
       {
         "surface": "what is just",
@@ -136,12 +164,20 @@
     ],
     "6": [
       {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "eat",
         "lemma": "akhal"
       },
       {
         "surface": "the mountain",
         "lemma": "har"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "look",
@@ -160,6 +196,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "defile",
         "lemma": "tame"
       },
@@ -170,6 +210,10 @@
       {
         "surface": "wife",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "approach",
@@ -186,12 +230,20 @@
     ],
     "7": [
       {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "oppress",
         "lemma": "yanah"
       },
       {
         "surface": "another",
         "lemma": "ish"
+      },
+      {
+        "surface": "but restores",
+        "lemma": "shuv"
       },
       {
         "surface": "the pledge",
@@ -202,12 +254,20 @@
         "lemma": "chov"
       },
       {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "commit",
         "lemma": "gazal"
       },
       {
         "surface": "robbery",
         "lemma": "gezelah"
+      },
+      {
+        "surface": "but gives",
+        "lemma": "natan"
       },
       {
         "surface": "his bread",
@@ -232,8 +292,20 @@
     ],
     "8": [
       {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "engage",
+        "lemma": "natan"
+      },
+      {
         "surface": "in usury",
         "lemma": "neshekh"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "take",
@@ -250,6 +322,10 @@
       {
         "surface": "from iniquity",
         "lemma": "evel"
+      },
+      {
+        "surface": "and executes",
+        "lemma": "asah"
       },
       {
         "surface": "true",
@@ -332,11 +408,23 @@
         "lemma": "dam"
       },
       {
+        "surface": "or does",
+        "lemma": "asah"
+      },
+      {
         "surface": "any",
         "lemma": "echad"
       }
     ],
     "11": [
+      {
+        "surface": "has done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "none",
+        "lemma": "kol"
+      },
       {
         "surface": "the son eats",
         "lemma": "akhal"
@@ -376,6 +464,14 @@
         "lemma": "gezelah"
       },
       {
+        "surface": "and does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "restore",
+        "lemma": "shuv"
+      },
+      {
         "surface": "a pledge",
         "lemma": "chavol"
       },
@@ -392,11 +488,19 @@
         "lemma": "gillul"
       },
       {
+        "surface": "he commits",
+        "lemma": "asah"
+      },
+      {
         "surface": "abominations",
         "lemma": "toevah"
       }
     ],
     "13": [
+      {
+        "surface": "He engages",
+        "lemma": "natan"
+      },
       {
         "surface": "in usury",
         "lemma": "neshekh"
@@ -414,6 +518,18 @@
         "lemma": "chayah"
       },
       {
+        "surface": "He will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "Since he has committed",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "abominations",
         "lemma": "toevah"
       },
@@ -424,13 +540,13 @@
       {
         "surface": "his blood",
         "lemma": "dam"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       }
     ],
     "14": [
-      {
-        "surface": "Now",
-        "lemma": "hinneh"
-      },
       {
         "surface": "suppose this son has",
         "lemma": "yalad"
@@ -440,11 +556,43 @@
         "lemma": "ben"
       },
       {
+        "surface": "who sees",
+        "lemma": "raah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the sins",
         "lemma": "chattaah"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
+        "surface": "has committed",
+        "lemma": "asah"
+      },
+      {
+        "surface": "considers them",
+        "lemma": "raah"
+      },
+      {
+        "surface": "and does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do likewise",
+        "lemma": "asah"
       }
     ],
     "15": [
+      {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
       {
         "surface": "eat",
         "lemma": "akhal"
@@ -452,6 +600,10 @@
       {
         "surface": "the mountain",
         "lemma": "har"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "look",
@@ -470,6 +622,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "defile",
         "lemma": "tame"
       },
@@ -483,6 +639,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
       {
         "surface": "oppress",
         "lemma": "yanah"
@@ -508,6 +668,10 @@
         "lemma": "gezelah"
       },
       {
+        "surface": "He gives",
+        "lemma": "natan"
+      },
+      {
         "surface": "his bread",
         "lemma": "lechem"
       },
@@ -530,6 +694,10 @@
     ],
     "17": [
       {
+        "surface": "He withholds",
+        "lemma": "shuv"
+      },
+      {
         "surface": "his hand",
         "lemma": "yad"
       },
@@ -542,12 +710,20 @@
         "lemma": "laqach"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "interest",
         "lemma": "neshekh"
       },
       {
         "surface": "or usury",
         "lemma": "tarbit"
+      },
+      {
+        "surface": "keeps",
+        "lemma": "asah"
       },
       {
         "surface": "My ordinances",
@@ -562,8 +738,16 @@
         "lemma": "chuqqah"
       },
       {
+        "surface": "Such a man will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "die",
         "lemma": "mut"
+      },
+      {
+        "surface": "for his father’s",
+        "lemma": "av"
       },
       {
         "surface": "iniquity",
@@ -575,6 +759,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "As for his father",
+        "lemma": "av"
+      },
       {
         "surface": "he will die",
         "lemma": "mut"
@@ -600,6 +788,14 @@
         "lemma": "ach"
       },
       {
+        "surface": "and did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "was wrong",
+        "lemma": "lo"
+      },
+      {
         "surface": "among",
         "lemma": "tavekh"
       },
@@ -609,6 +805,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "Yet you may ask",
+        "lemma": "amar"
+      },
       {
         "surface": "Why",
         "lemma": "maddua"
@@ -626,8 +826,16 @@
         "lemma": "avan"
       },
       {
+        "surface": "of his father",
+        "lemma": "av"
+      },
+      {
         "surface": "Since the son",
         "lemma": "ben"
+      },
+      {
+        "surface": "has done",
+        "lemma": "asah"
       },
       {
         "surface": "what is just",
@@ -640,6 +848,14 @@
       {
         "surface": "carefully",
         "lemma": "shamar"
+      },
+      {
+        "surface": "observing",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "My statutes",
@@ -668,12 +884,28 @@
         "lemma": "ben"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "bear",
         "lemma": "nasa"
       },
       {
         "surface": "the iniquity",
         "lemma": "avan"
+      },
+      {
+        "surface": "of his father",
+        "lemma": "av"
+      },
+      {
+        "surface": "and a father",
+        "lemma": "av"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "bear",
@@ -696,12 +928,20 @@
         "lemma": "tsaddiq"
       },
       {
+        "surface": "will fall",
+        "lemma": "hayah"
+      },
+      {
         "surface": "and the wickedness",
         "lemma": "rishah"
       },
       {
         "surface": "of the wicked man",
         "lemma": "rasah"
+      },
+      {
+        "surface": "will fall",
+        "lemma": "hayah"
       }
     ],
     "21": [
@@ -710,16 +950,36 @@
         "lemma": "rasah"
       },
       {
+        "surface": "turns",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the sins",
         "lemma": "chattaah"
+      },
+      {
+        "surface": "he has committed",
+        "lemma": "asah"
       },
       {
         "surface": "keeps",
         "lemma": "shamar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "My statutes",
         "lemma": "chuqqah"
+      },
+      {
+        "surface": "and does",
+        "lemma": "asah"
       },
       {
         "surface": "what is just",
@@ -734,14 +994,26 @@
         "lemma": "chayah"
       },
       {
+        "surface": "he will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "die",
         "lemma": "mut"
       }
     ],
     "22": [
       {
+        "surface": "None",
+        "lemma": "kol"
+      },
+      {
         "surface": "of the transgressions",
         "lemma": "pesah"
+      },
+      {
+        "surface": "he has committed",
+        "lemma": "asah"
       },
       {
         "surface": "will be held",
@@ -750,6 +1022,10 @@
       {
         "surface": "Because of the righteousness",
         "lemma": "tsedaqah"
+      },
+      {
+        "surface": "he has practiced",
+        "lemma": "asah"
       },
       {
         "surface": "he will live",
@@ -782,6 +1058,14 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "Wouldn’t I prefer",
+        "lemma": "lo"
+      },
+      {
+        "surface": "that he turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from his ways",
         "lemma": "derekh"
       },
@@ -796,12 +1080,24 @@
         "lemma": "tsaddiq"
       },
       {
+        "surface": "turns",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from his righteousness",
         "lemma": "tsedaqah"
       },
       {
+        "surface": "and practices",
+        "lemma": "asah"
+      },
+      {
         "surface": "iniquity",
         "lemma": "evel"
+      },
+      {
+        "surface": "committing",
+        "lemma": "asah"
       },
       {
         "surface": "the same abominations",
@@ -816,8 +1112,16 @@
         "lemma": "chayah"
       },
       {
+        "surface": "None",
+        "lemma": "lo"
+      },
+      {
         "surface": "of the righteous acts",
         "lemma": "tsedaqah"
+      },
+      {
+        "surface": "he did",
+        "lemma": "asah"
       },
       {
         "surface": "will be remembered",
@@ -842,6 +1146,10 @@
     ],
     "25": [
       {
+        "surface": "Yet you say",
+        "lemma": "amar"
+      },
+      {
         "surface": "The way",
         "lemma": "derekh"
       },
@@ -850,12 +1158,16 @@
         "lemma": "adonai"
       },
       {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "just",
         "lemma": "takhan"
       },
       {
-        "surface": "now",
-        "lemma": "na"
+        "surface": "Hear",
+        "lemma": "shama"
       },
       {
         "surface": "O house",
@@ -870,8 +1182,20 @@
         "lemma": "derekh"
       },
       {
+        "surface": "that is unjust",
+        "lemma": "lo"
+      },
+      {
+        "surface": "Is it not",
+        "lemma": "lo"
+      },
+      {
         "surface": "your ways",
         "lemma": "derekh"
+      },
+      {
+        "surface": "that are unjust",
+        "lemma": "lo"
       }
     ],
     "26": [
@@ -880,8 +1204,16 @@
         "lemma": "tsaddiq"
       },
       {
+        "surface": "turns",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from his righteousness",
         "lemma": "tsedaqah"
+      },
+      {
+        "surface": "and practices",
+        "lemma": "asah"
       },
       {
         "surface": "iniquity",
@@ -898,6 +1230,10 @@
       {
         "surface": "because of the iniquity",
         "lemma": "evel"
+      },
+      {
+        "surface": "he has committed",
+        "lemma": "asah"
       }
     ],
     "27": [
@@ -906,8 +1242,20 @@
         "lemma": "rasah"
       },
       {
+        "surface": "turns",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from the wickedness",
         "lemma": "rishah"
+      },
+      {
+        "surface": "he has committed",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and does",
+        "lemma": "asah"
       },
       {
         "surface": "what is just",
@@ -928,12 +1276,32 @@
     ],
     "28": [
       {
+        "surface": "Because he considered",
+        "lemma": "raah"
+      },
+      {
+        "surface": "and turned",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the transgressions",
         "lemma": "pesah"
       },
       {
+        "surface": "he had committed",
+        "lemma": "asah"
+      },
+      {
         "surface": "he will surely live",
         "lemma": "chayah"
+      },
+      {
+        "surface": "he will not",
+        "lemma": "lo"
       },
       {
         "surface": "die",
@@ -950,12 +1318,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "The way",
         "lemma": "derekh"
       },
       {
         "surface": "of the Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
       },
       {
         "surface": "just",
@@ -966,6 +1342,10 @@
         "lemma": "derekh"
       },
       {
+        "surface": "unjust",
+        "lemma": "lo"
+      },
+      {
         "surface": "O house",
         "lemma": "bet"
       },
@@ -974,8 +1354,16 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "Is it not",
+        "lemma": "lo"
+      },
+      {
         "surface": "your ways",
         "lemma": "derekh"
+      },
+      {
+        "surface": "that are unjust",
+        "lemma": "lo"
       }
     ],
     "30": [
@@ -1016,12 +1404,32 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "Repent",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and turn",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your transgressions",
         "lemma": "pesah"
       },
       {
         "surface": "so that your iniquity",
         "lemma": "avan"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "become",
+        "lemma": "hayah"
       },
       {
         "surface": "downfall",
@@ -1034,12 +1442,20 @@
         "lemma": "shalakh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the transgressions",
         "lemma": "pesah"
       },
       {
         "surface": "you have committed",
         "lemma": "pasah"
+      },
+      {
+        "surface": "and fashion",
+        "lemma": "asah"
       },
       {
         "surface": "a new",
@@ -1076,6 +1492,10 @@
     ],
     "32": [
       {
+        "surface": "I take no",
+        "lemma": "lo"
+      },
+      {
         "surface": "pleasure",
         "lemma": "chaphets"
       },
@@ -1096,14 +1516,18 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "So repent",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and live",
         "lemma": "chayah"
       }
     ]
   },
   "themeLemmas": [
-    "mut",
-    "chayah",
-    "yisrael"
+    "lo",
+    "asah",
+    "shuv"
   ]
 }

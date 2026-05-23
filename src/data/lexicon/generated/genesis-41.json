@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "After",
+        "lemma": "hayah"
+      },
+      {
         "surface": "two full years",
         "lemma": "shaneh"
       },
@@ -270,10 +274,6 @@
         "lemma": "yaqats"
       },
       {
-        "surface": "and realized",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "it was a dream",
         "lemma": "chalom"
       }
@@ -296,8 +296,16 @@
         "lemma": "shalach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the magicians",
         "lemma": "chartom"
+      },
+      {
+        "surface": "and",
+        "lemma": "kol"
       },
       {
         "surface": "wise men",
@@ -374,6 +382,10 @@
       {
         "surface": "his servants",
         "lemma": "eved"
+      },
+      {
+        "surface": "and he put",
+        "lemma": "natan"
       },
       {
         "surface": "the chief",
@@ -466,8 +478,16 @@
     ],
     "13": [
       {
+        "surface": "And it happened",
+        "lemma": "hayah"
+      },
+      {
         "surface": "he had interpreted",
         "lemma": "patar"
+      },
+      {
+        "surface": "I was restored",
+        "lemma": "shuv"
       },
       {
         "surface": "my position",
@@ -512,6 +532,10 @@
         "lemma": "simlah"
       },
       {
+        "surface": "he went in",
+        "lemma": "bo"
+      },
+      {
         "surface": "Pharaoh",
         "lemma": "paroh"
       }
@@ -520,6 +544,10 @@
       {
         "surface": "Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Joseph",
@@ -536,6 +564,18 @@
       {
         "surface": "one can interpret it",
         "lemma": "patar"
+      },
+      {
+        "surface": "have heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "it said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "that when you hear",
+        "lemma": "shama"
       },
       {
         "surface": "a dream",
@@ -674,8 +714,20 @@
         "lemma": "alah"
       },
       {
+        "surface": "I have never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "such ugly",
         "lemma": "roa"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -722,12 +774,24 @@
     ],
     "21": [
       {
+        "surface": "When they had devoured",
+        "lemma": "bo"
+      },
+      {
         "surface": "them, however",
         "lemma": "qerev"
       },
       {
+        "surface": "no one could",
+        "lemma": "lo"
+      },
+      {
         "surface": "tell",
         "lemma": "yada"
+      },
+      {
+        "surface": "they had done so",
+        "lemma": "bo"
       },
       {
         "surface": "their appearance",
@@ -750,6 +814,10 @@
       {
         "surface": "In my dream",
         "lemma": "chalom"
+      },
+      {
+        "surface": "I also saw",
+        "lemma": "raah"
       },
       {
         "surface": "seven",
@@ -840,6 +908,10 @@
         "lemma": "shibbol"
       },
       {
+        "surface": "I told",
+        "lemma": "amar"
+      },
+      {
         "surface": "the magicians",
         "lemma": "chartom"
       },
@@ -856,6 +928,10 @@
       {
         "surface": "At this, Joseph",
         "lemma": "yoseph"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Pharaoh",
@@ -884,6 +960,10 @@
       {
         "surface": "to Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "He is about to do",
+        "lemma": "asah"
       }
     ],
     "26": [
@@ -990,6 +1070,10 @@
         "lemma": "qadim"
       },
       {
+        "surface": "they are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "seven",
         "lemma": "sheva"
       },
@@ -1016,15 +1100,19 @@
         "lemma": "elohim"
       },
       {
+        "surface": "has shown",
+        "lemma": "raah"
+      },
+      {
         "surface": "Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "He is about to do",
+        "lemma": "asah"
       }
     ],
     "29": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "seven",
         "lemma": "sheva"
@@ -1040,6 +1128,14 @@
       {
         "surface": "abundance",
         "lemma": "sava"
+      },
+      {
+        "surface": "are coming",
+        "lemma": "bo"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -1070,6 +1166,10 @@
       {
         "surface": "them",
         "lemma": "achar"
+      },
+      {
+        "surface": "Then all",
+        "lemma": "kol"
       },
       {
         "surface": "the abundance",
@@ -1108,6 +1208,10 @@
       {
         "surface": "in the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "be remembered",
@@ -1172,6 +1276,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "will carry it out",
+        "lemma": "asah"
+      },
+      {
         "surface": "shortly",
         "lemma": "mahar"
       }
@@ -1184,6 +1292,10 @@
       {
         "surface": "Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "should look for",
+        "lemma": "raah"
       },
       {
         "surface": "a discerning",
@@ -1214,6 +1326,10 @@
       {
         "surface": "Let Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "take action",
+        "lemma": "asah"
       },
       {
         "surface": "and appoint",
@@ -1270,6 +1386,10 @@
         "lemma": "qavats"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the excess food",
         "lemma": "okhel"
       },
@@ -1280,6 +1400,10 @@
       {
         "surface": "years",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "that they may come",
+        "lemma": "bo"
       },
       {
         "surface": "and lay up",
@@ -1308,6 +1432,10 @@
         "lemma": "okhel"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a reserve",
         "lemma": "piqqadon"
       },
@@ -1328,6 +1456,10 @@
         "lemma": "raav"
       },
       {
+        "surface": "to come",
+        "lemma": "hayah"
+      },
+      {
         "surface": "upon the land",
         "lemma": "erets"
       },
@@ -1338,6 +1470,10 @@
       {
         "surface": "Then the country",
         "lemma": "erets"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "perish",
@@ -1362,6 +1498,10 @@
         "lemma": "paroh"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his officials",
         "lemma": "eved"
       }
@@ -1370,6 +1510,10 @@
       {
         "surface": "So Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
       },
       {
         "surface": "them",
@@ -1398,6 +1542,10 @@
         "lemma": "paroh"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Joseph",
         "lemma": "yoseph"
       },
@@ -1408,6 +1556,10 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "has made all",
+        "lemma": "kol"
       },
       {
         "surface": "known to you",
@@ -1428,8 +1580,16 @@
     ],
     "40": [
       {
+        "surface": "shall be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "my house",
         "lemma": "bet"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "my people",
@@ -1458,8 +1618,24 @@
         "lemma": "paroh"
       },
       {
+        "surface": "also told",
+        "lemma": "amar"
+      },
+      {
         "surface": "Joseph",
         "lemma": "yoseph"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "raah"
+      },
+      {
+        "surface": "I hereby place",
+        "lemma": "natan"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -1486,6 +1662,10 @@
       {
         "surface": "his finger",
         "lemma": "yad"
+      },
+      {
+        "surface": "put",
+        "lemma": "natan"
       },
       {
         "surface": "Joseph’s",
@@ -1538,12 +1718,24 @@
         "lemma": "merkavah"
       },
       {
+        "surface": "with men calling out",
+        "lemma": "qara"
+      },
+      {
         "surface": "before him",
         "lemma": "paneh"
       },
       {
         "surface": "Bow the knee",
         "lemma": "avrekh"
+      },
+      {
+        "surface": "So he placed",
+        "lemma": "natan"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -1560,6 +1752,10 @@
         "lemma": "paroh"
       },
       {
+        "surface": "declared",
+        "lemma": "amar"
+      },
+      {
         "surface": "Joseph",
         "lemma": "yoseph"
       },
@@ -1572,8 +1768,16 @@
         "lemma": "bilade"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "one",
         "lemma": "ish"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -1602,6 +1806,10 @@
         "lemma": "paroh"
       },
       {
+        "surface": "gave",
+        "lemma": "qara"
+      },
+      {
         "surface": "Joseph",
         "lemma": "yoseph"
       },
@@ -1616,6 +1824,10 @@
       {
         "surface": "Zaphenath-paneah",
         "lemma": "tsophnatpaneach"
+      },
+      {
+        "surface": "and he gave",
+        "lemma": "natan"
       },
       {
         "surface": "Asenath",
@@ -1648,6 +1860,10 @@
       {
         "surface": "And Joseph",
         "lemma": "yoseph"
+      },
+      {
+        "surface": "took charge",
+        "lemma": "yatsa"
       },
       {
         "surface": "the land",
@@ -1692,6 +1908,10 @@
         "lemma": "yoseph"
       },
       {
+        "surface": "left",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Pharaoh’s",
         "lemma": "paroh"
       },
@@ -1702,6 +1922,10 @@
       {
         "surface": "and traveled",
         "lemma": "avar"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -1730,6 +1954,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "brought forth",
+        "lemma": "asah"
+      },
+      {
         "surface": "bountifully",
         "lemma": "qomets"
       }
@@ -1748,6 +1976,10 @@
         "lemma": "qavats"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the excess food",
         "lemma": "okhel"
       },
@@ -1760,6 +1992,10 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "and stored",
+        "lemma": "natan"
+      },
+      {
         "surface": "it",
         "lemma": "okhel"
       },
@@ -1770,6 +2006,10 @@
       {
         "surface": "In every city",
         "lemma": "ir"
+      },
+      {
+        "surface": "he laid up",
+        "lemma": "natan"
       },
       {
         "surface": "the food",
@@ -1840,6 +2080,10 @@
         "lemma": "raav"
       },
       {
+        "surface": "arrived",
+        "lemma": "bo"
+      },
+      {
         "surface": "two",
         "lemma": "shenayim"
       },
@@ -1886,6 +2130,10 @@
         "lemma": "yoseph"
       },
       {
+        "surface": "named",
+        "lemma": "qara"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
       },
@@ -1902,8 +2150,20 @@
         "lemma": "nashah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my hardship",
         "lemma": "amal"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "my father’s",
+        "lemma": "av"
       },
       {
         "surface": "household",
@@ -1988,16 +2248,36 @@
         "lemma": "yoseph"
       },
       {
+        "surface": "had said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "And although there was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "famine",
         "lemma": "raav"
+      },
+      {
+        "surface": "in every",
+        "lemma": "kol"
       },
       {
         "surface": "country",
         "lemma": "erets"
       },
       {
+        "surface": "there was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "food",
         "lemma": "lechem"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -2012,6 +2292,10 @@
       {
         "surface": "When extreme hunger",
         "lemma": "raev"
+      },
+      {
+        "surface": "came to all",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -2042,6 +2326,14 @@
         "lemma": "paroh"
       },
       {
+        "surface": "told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Egyptians",
         "lemma": "mitsri"
       },
@@ -2052,12 +2344,28 @@
       {
         "surface": "Joseph",
         "lemma": "yoseph"
+      },
+      {
+        "surface": "and do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "he tells",
+        "lemma": "amar"
       }
     ],
     "56": [
       {
         "surface": "When the famine",
         "lemma": "raav"
+      },
+      {
+        "surface": "had spread",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the",
@@ -2074,6 +2382,10 @@
       {
         "surface": "opened up",
         "lemma": "patach"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "and sold grain",
@@ -2102,8 +2414,16 @@
     ],
     "57": [
       {
+        "surface": "And every",
+        "lemma": "kol"
+      },
+      {
         "surface": "nation",
         "lemma": "erets"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "Joseph",
@@ -2126,6 +2446,10 @@
         "lemma": "chazaq"
       },
       {
+        "surface": "over all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       }
@@ -2134,6 +2458,6 @@
   "themeLemmas": [
     "paroh",
     "sheva",
-    "yoseph"
+    "kol"
   ]
 }

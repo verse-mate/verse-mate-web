@@ -18,6 +18,18 @@
         "lemma": "sardeis"
       },
       {
+        "surface": "write",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "the words",
+        "lemma": "lego"
+      },
+      {
+        "surface": "holds",
+        "lemma": "echo"
+      },
+      {
         "surface": "seven",
         "lemma": "hepta"
       },
@@ -38,8 +50,16 @@
         "lemma": "aster"
       },
       {
+        "surface": "I know",
+        "lemma": "eido"
+      },
+      {
         "surface": "deeds",
         "lemma": "ergon"
+      },
+      {
+        "surface": "you have",
+        "lemma": "echo"
       },
       {
         "surface": "a reputation",
@@ -50,11 +70,19 @@
         "lemma": "zao"
       },
       {
+        "surface": "you are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "dead",
         "lemma": "nekros"
       }
     ],
     "2": [
+      {
+        "surface": "vvv",
+        "lemma": "ginomai"
+      },
       {
         "surface": "Wake up",
         "lemma": "gregoreo"
@@ -76,6 +104,10 @@
         "lemma": "apothnesko"
       },
       {
+        "surface": "I have found",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "deeds",
         "lemma": "ergon"
       },
@@ -92,6 +124,14 @@
       {
         "surface": "Remember",
         "lemma": "mnemoneuo"
+      },
+      {
+        "surface": "you have received",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "heard",
+        "lemma": "akouo"
       },
       {
         "surface": "Keep it",
@@ -114,6 +154,10 @@
         "lemma": "kleptes"
       },
       {
+        "surface": "you will not know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "the hour",
         "lemma": "hora"
       },
@@ -127,6 +171,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "you do have",
+        "lemma": "echo"
+      },
       {
         "surface": "a few",
         "lemma": "oligos"
@@ -146,6 +194,10 @@
       {
         "surface": "garments",
         "lemma": "himation"
+      },
+      {
+        "surface": "they are",
+        "lemma": "eimi"
       },
       {
         "surface": "worthy",
@@ -212,12 +264,28 @@
     ],
     "6": [
       {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "an ear",
         "lemma": "ous"
       },
       {
+        "surface": "let him hear",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
         "surface": "Spirit",
         "lemma": "pneuma"
+      },
+      {
+        "surface": "says",
+        "lemma": "lego"
       },
       {
         "surface": "churches",
@@ -238,12 +306,24 @@
         "lemma": "philadelpheia"
       },
       {
+        "surface": "write",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "the words",
+        "lemma": "lego"
+      },
+      {
         "surface": "holy",
         "lemma": "hagios"
       },
       {
         "surface": "true",
         "lemma": "alethinos"
+      },
+      {
+        "surface": "holds",
+        "lemma": "echo"
       },
       {
         "surface": "key",
@@ -258,6 +338,10 @@
         "lemma": "anoigo"
       },
       {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "can shut",
         "lemma": "kleio"
       },
@@ -266,14 +350,26 @@
         "lemma": "kleio"
       },
       {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "can open",
         "lemma": "anoigo"
       }
     ],
     "8": [
       {
+        "surface": "I know",
+        "lemma": "eido"
+      },
+      {
         "surface": "deeds",
         "lemma": "ergon"
+      },
+      {
+        "surface": "I have placed",
+        "lemma": "didomi"
       },
       {
         "surface": "an open",
@@ -284,8 +380,20 @@
         "lemma": "thura"
       },
       {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "shut",
         "lemma": "kleio"
+      },
+      {
+        "surface": "you have",
+        "lemma": "echo"
       },
       {
         "surface": "only a little",
@@ -322,12 +430,32 @@
         "lemma": "satanas"
       },
       {
+        "surface": "claim",
+        "lemma": "lego"
+      },
+      {
+        "surface": "to be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Jews",
         "lemma": "ioudaios"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "liars",
         "lemma": "pseudomai"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "I will make",
+        "lemma": "poieo"
       },
       {
         "surface": "come",
@@ -340,6 +468,10 @@
       {
         "surface": "feet",
         "lemma": "pous"
+      },
+      {
+        "surface": "they will know",
+        "lemma": "ginosko"
       },
       {
         "surface": "love",
@@ -376,6 +508,10 @@
         "lemma": "mello"
       },
       {
+        "surface": "to come",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "whole",
         "lemma": "holos"
       },
@@ -398,6 +534,10 @@
     ],
     "11": [
       {
+        "surface": "I am coming",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "soon",
         "lemma": "tachu"
       },
@@ -406,8 +546,16 @@
         "lemma": "krateo"
       },
       {
+        "surface": "you have",
+        "lemma": "echo"
+      },
+      {
         "surface": "no one",
         "lemma": "medeis"
+      },
+      {
+        "surface": "will take",
+        "lemma": "lambano"
       },
       {
         "surface": "crown",
@@ -418,6 +566,10 @@
       {
         "surface": "overcomes",
         "lemma": "nikao"
+      },
+      {
+        "surface": "I will make",
+        "lemma": "poieo"
       },
       {
         "surface": "a pillar",
@@ -434,6 +586,14 @@
       {
         "surface": "vvv",
         "lemma": "eti"
+      },
+      {
+        "surface": "he will never again leave it",
+        "lemma": "exerchomai"
+      },
+      {
+        "surface": "I will write",
+        "lemma": "grapho"
       },
       {
         "surface": "name",
@@ -486,12 +646,28 @@
     ],
     "13": [
       {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "an ear",
         "lemma": "ous"
       },
       {
+        "surface": "let him hear",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
         "surface": "Spirit",
         "lemma": "pneuma"
+      },
+      {
+        "surface": "says",
+        "lemma": "lego"
       },
       {
         "surface": "churches",
@@ -512,8 +688,12 @@
         "lemma": "laodikeia"
       },
       {
-        "surface": "Amen",
-        "lemma": "amen"
+        "surface": "write",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "the words",
+        "lemma": "lego"
       },
       {
         "surface": "faithful",
@@ -542,8 +722,16 @@
     ],
     "15": [
       {
+        "surface": "I know",
+        "lemma": "eido"
+      },
+      {
         "surface": "deeds",
         "lemma": "ergon"
+      },
+      {
+        "surface": "you are",
+        "lemma": "eimi"
       },
       {
         "surface": "cold",
@@ -552,6 +740,10 @@
       {
         "surface": "hot",
         "lemma": "zestos"
+      },
+      {
+        "surface": "you were",
+        "lemma": "eimi"
       },
       {
         "surface": "one",
@@ -566,6 +758,10 @@
       {
         "surface": "So",
         "lemma": "houto"
+      },
+      {
+        "surface": "you are",
+        "lemma": "eimi"
       },
       {
         "surface": "lukewarm",
@@ -594,6 +790,14 @@
     ],
     "17": [
       {
+        "surface": "You say",
+        "lemma": "lego"
+      },
+      {
+        "surface": "I am",
+        "lemma": "eimi"
+      },
+      {
         "surface": "rich",
         "lemma": "plousios"
       },
@@ -602,8 +806,24 @@
         "lemma": "plouteo"
       },
       {
+        "surface": "vvv",
+        "lemma": "echo"
+      },
+      {
         "surface": "need",
         "lemma": "chreia"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "you do not realize",
+        "lemma": "eido"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "wretched",
@@ -720,12 +940,20 @@
     ],
     "20": [
       {
+        "surface": "I stand",
+        "lemma": "histemi"
+      },
+      {
         "surface": "door",
         "lemma": "thura"
       },
       {
         "surface": "knock",
         "lemma": "krouo"
+      },
+      {
+        "surface": "hears",
+        "lemma": "akouo"
       },
       {
         "surface": "voice",
@@ -740,6 +968,10 @@
         "lemma": "thura"
       },
       {
+        "surface": "I will come in",
+        "lemma": "eiserchomai"
+      },
+      {
         "surface": "dine",
         "lemma": "deipneo"
       }
@@ -748,6 +980,10 @@
       {
         "surface": "overcomes",
         "lemma": "nikao"
+      },
+      {
+        "surface": "I will grant the right",
+        "lemma": "didomi"
       },
       {
         "surface": "to sit",
@@ -776,12 +1012,28 @@
     ],
     "22": [
       {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "an ear",
         "lemma": "ous"
       },
       {
+        "surface": "let him hear",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
         "surface": "Spirit",
         "lemma": "pneuma"
+      },
+      {
+        "surface": "says",
+        "lemma": "lego"
       },
       {
         "surface": "churches",

@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Micah",
         "lemma": "mikhah"
       },
@@ -60,8 +64,16 @@
     ],
     "2": [
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "O peoples",
         "lemma": "am"
+      },
+      {
+        "surface": "all of you",
+        "lemma": "kol"
       },
       {
         "surface": "listen",
@@ -84,6 +96,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "bear",
+        "lemma": "hayah"
+      },
+      {
         "surface": "witness",
         "lemma": "ed"
       },
@@ -102,12 +118,12 @@
     ],
     "3": [
       {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "comes forth",
+        "lemma": "yatsa"
       },
       {
         "surface": "from His dwelling place",
@@ -178,6 +194,10 @@
     ],
     "5": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "for the transgression",
         "lemma": "pesah"
       },
@@ -210,6 +230,10 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "Is it not",
+        "lemma": "lo"
+      },
+      {
         "surface": "Samaria",
         "lemma": "shomeron"
       },
@@ -224,6 +248,10 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "Is it not",
+        "lemma": "lo"
       },
       {
         "surface": "Jerusalem",
@@ -278,12 +306,20 @@
     ],
     "7": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "her carved images",
         "lemma": "pesil"
       },
       {
         "surface": "will be smashed to pieces",
         "lemma": "katat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "her wages",
@@ -300,6 +336,10 @@
       {
         "surface": "and I will destroy",
         "lemma": "sum"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "her idols",
@@ -320,6 +360,10 @@
       {
         "surface": "they",
         "lemma": "etnan"
+      },
+      {
+        "surface": "will be used again",
+        "lemma": "shuv"
       },
       {
         "surface": "on a prostitute",
@@ -348,6 +392,10 @@
         "lemma": "arom"
       },
       {
+        "surface": "I will howl",
+        "lemma": "asah"
+      },
+      {
         "surface": "like a jackal",
         "lemma": "tan"
       },
@@ -374,6 +422,10 @@
         "lemma": "anash"
       },
       {
+        "surface": "it has reached",
+        "lemma": "bo"
+      },
+      {
         "surface": "even Judah",
         "lemma": "yehudah"
       },
@@ -395,6 +447,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "tell it",
         "lemma": "nagad"
@@ -438,12 +494,28 @@
         "lemma": "eryah"
       },
       {
+        "surface": "O dwellers",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Shaphir",
         "lemma": "shaphir"
       },
       {
+        "surface": "The dwellers",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Zaanan",
         "lemma": "tsaanan"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "come out",
+        "lemma": "yatsa"
       },
       {
         "surface": "vvv",
@@ -467,6 +539,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "the dwellers",
+        "lemma": "yashav"
+      },
       {
         "surface": "of Maroth",
         "lemma": "marot"
@@ -514,6 +590,10 @@
         "lemma": "rekhesh"
       },
       {
+        "surface": "O dweller",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Lachish",
         "lemma": "lakhish"
       },
@@ -550,6 +630,10 @@
       {
         "surface": "Therefore",
         "lemma": "ken"
+      },
+      {
+        "surface": "send",
+        "lemma": "natan"
       },
       {
         "surface": "farewell gifts",
@@ -590,8 +674,16 @@
         "lemma": "od"
       },
       {
+        "surface": "bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "a conqueror",
         "lemma": "yarash"
+      },
+      {
+        "surface": "O dweller",
+        "lemma": "yashav"
       },
       {
         "surface": "of Mareshah",
@@ -604,6 +696,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       },
       {
         "surface": "Adullam",
@@ -646,8 +742,8 @@
     ]
   },
   "themeLemmas": [
-    "yisrael",
-    "yerushalaim",
-    "yehudah"
+    "yashav",
+    "kol",
+    "yisrael"
   ]
 }

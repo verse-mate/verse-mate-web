@@ -78,12 +78,20 @@
         "lemma": "qol"
       },
       {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "his kingdom",
         "lemma": "malkhut"
       },
       {
         "surface": "to put it in writing",
         "lemma": "mikhtav"
+      },
+      {
+        "surface": "as follows",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -104,6 +112,10 @@
         "lemma": "paras"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yehovah"
       },
@@ -114,6 +126,14 @@
       {
         "surface": "of heaven",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "has given",
+        "lemma": "natan"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the kingdoms",
@@ -150,12 +170,20 @@
         "lemma": "mi"
       },
       {
+        "surface": "belongs to",
+        "lemma": "kol"
+      },
+      {
         "surface": "His people",
         "lemma": "am"
       },
       {
         "surface": "may his God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "and may he go",
@@ -200,8 +228,16 @@
     ],
     "4": [
       {
+        "surface": "And let every",
+        "lemma": "kol"
+      },
+      {
         "surface": "survivor",
         "lemma": "shaar"
+      },
+      {
+        "surface": "wherever",
+        "lemma": "kol"
       },
       {
         "surface": "lives",
@@ -254,6 +290,10 @@
     ],
     "5": [
       {
+        "surface": "So the family",
+        "lemma": "av"
+      },
+      {
         "surface": "heads",
         "lemma": "rosh"
       },
@@ -272,6 +312,10 @@
       {
         "surface": "and Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
       },
       {
         "surface": "whose spirit",
@@ -311,6 +355,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "And all",
+        "lemma": "kol"
+      },
       {
         "surface": "their neighbors",
         "lemma": "saviv"
@@ -352,6 +400,10 @@
         "lemma": "bad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their freewill offerings",
         "lemma": "nadav"
       }
@@ -364,6 +416,10 @@
       {
         "surface": "Cyrus",
         "lemma": "koresh"
+      },
+      {
+        "surface": "also brought out",
+        "lemma": "yatsa"
       },
       {
         "surface": "the articles",
@@ -382,8 +438,16 @@
         "lemma": "nevukhadnetstsar"
       },
       {
+        "surface": "had carried away",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "and placed",
+        "lemma": "natan"
       },
       {
         "surface": "in the temple",
@@ -406,6 +470,10 @@
       {
         "surface": "of Persia",
         "lemma": "paras"
+      },
+      {
+        "surface": "had them brought out",
+        "lemma": "yatsa"
       },
       {
         "surface": "the hand",
@@ -518,6 +586,10 @@
     ],
     "11": [
       {
+        "surface": "In all, there were",
+        "lemma": "kol"
+      },
+      {
         "surface": "5400",
         "lemma": "chamesh"
       },
@@ -542,6 +614,10 @@
         "lemma": "alah"
       },
       {
+        "surface": "all these",
+        "lemma": "kol"
+      },
+      {
         "surface": "when the exiles",
         "lemma": "golah"
       },
@@ -560,8 +636,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "yerushalaim",
-    "bet",
-    "zahav"
+    "bet"
   ]
 }

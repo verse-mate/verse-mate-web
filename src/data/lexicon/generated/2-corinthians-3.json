@@ -32,6 +32,10 @@
     ],
     "2": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "letter",
         "lemma": "epistole"
       },
@@ -44,14 +48,26 @@
         "lemma": "kardia"
       },
       {
+        "surface": "known",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "read",
         "lemma": "anaginosko"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       }
     ],
     "3": [
       {
         "surface": "It is clear",
         "lemma": "phaneroo"
+      },
+      {
+        "surface": "you are",
+        "lemma": "eimi"
       },
       {
         "surface": "a letter",
@@ -116,11 +132,19 @@
         "lemma": "theos"
       },
       {
+        "surface": "is ours",
+        "lemma": "echo"
+      },
+      {
         "surface": "Christ",
         "lemma": "christos"
       }
     ],
     "5": [
+      {
+        "surface": "we are",
+        "lemma": "eimi"
+      },
       {
         "surface": "competent",
         "lemma": "hikanos"
@@ -202,6 +226,10 @@
         "lemma": "lithos"
       },
       {
+        "surface": "came",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "such} glory",
         "lemma": "doxa"
       },
@@ -212,6 +240,10 @@
       {
         "surface": "Israelites",
         "lemma": "israel"
+      },
+      {
+        "surface": "could",
+        "lemma": "dunamai"
       },
       {
         "surface": "gaze",
@@ -239,6 +271,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "will",
+        "lemma": "eimi"
+      },
       {
         "surface": "ministry",
         "lemma": "diakonia"
@@ -268,6 +304,10 @@
       {
         "surface": "was glorious",
         "lemma": "doxa"
+      },
+      {
+        "surface": "how much",
+        "lemma": "polus"
       },
       {
         "surface": "more",
@@ -318,6 +358,10 @@
         "lemma": "doxa"
       },
       {
+        "surface": "how much greater",
+        "lemma": "polus"
+      },
+      {
         "surface": "glory",
         "lemma": "doxa"
       },
@@ -328,12 +372,20 @@
     ],
     "12": [
       {
+        "surface": "since we have",
+        "lemma": "echo"
+      },
+      {
         "surface": "a hope",
         "lemma": "elpis"
       },
       {
         "surface": "we are",
         "lemma": "chrao"
+      },
+      {
+        "surface": "very",
+        "lemma": "polus"
       },
       {
         "surface": "bold",
@@ -478,6 +530,10 @@
         "lemma": "kurios"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Spirit",
         "lemma": "pneuma"
       },
@@ -506,6 +562,10 @@
       {
         "surface": "faces",
         "lemma": "prosopon"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "reflect",

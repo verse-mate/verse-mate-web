@@ -34,6 +34,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "my prayer",
         "lemma": "tephillah"
       },
@@ -44,9 +48,17 @@
       {
         "surface": "let my cry for help",
         "lemma": "shavah"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
       }
     ],
     "2": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "hide",
         "lemma": "satar"
@@ -82,6 +94,10 @@
       {
         "surface": "when",
         "lemma": "yom"
+      },
+      {
+        "surface": "I call",
+        "lemma": "qara"
       }
     ],
     "3": [
@@ -160,6 +176,10 @@
     ],
     "6": [
       {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like",
         "lemma": "damah"
       },
@@ -186,6 +206,10 @@
         "lemma": "shaqad"
       },
       {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a lone",
         "lemma": "badad"
       },
@@ -199,6 +223,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "day long",
         "lemma": "yom"
@@ -296,6 +324,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "sit enthroned",
+        "lemma": "yashav"
+      },
+      {
         "surface": "forever",
         "lemma": "olam"
       },
@@ -322,12 +354,20 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "it is time",
+        "lemma": "et"
+      },
+      {
         "surface": "to show her favor",
         "lemma": "chanan"
       },
       {
         "surface": "the appointed time",
         "lemma": "moed"
+      },
+      {
+        "surface": "has come",
+        "lemma": "bo"
       }
     ],
     "14": [
@@ -370,6 +410,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the kings",
         "lemma": "melekh"
       },
@@ -396,6 +440,10 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "He has appeared",
+        "lemma": "raah"
+      },
+      {
         "surface": "in His glory",
         "lemma": "kavod"
       }
@@ -412,6 +460,10 @@
       {
         "surface": "of the destitute",
         "lemma": "arar"
+      },
+      {
+        "surface": "He will not",
+        "lemma": "lo"
       },
       {
         "surface": "despise",
@@ -483,6 +535,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "to hear",
+        "lemma": "shama"
+      },
       {
         "surface": "a prisoner’s",
         "lemma": "asir"
@@ -576,8 +632,16 @@
     ],
     "24": [
       {
+        "surface": "I say",
+        "lemma": "amar"
+      },
+      {
         "surface": "O my God",
         "lemma": "el"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "take me",
@@ -636,6 +700,10 @@
         "lemma": "amad"
       },
       {
+        "surface": "they will all",
+        "lemma": "kol"
+      },
+      {
         "surface": "wear out",
         "lemma": "balah"
       },
@@ -660,6 +728,10 @@
       {
         "surface": "and Your years",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "will never",
+        "lemma": "lo"
       },
       {
         "surface": "end",

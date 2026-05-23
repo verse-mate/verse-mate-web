@@ -72,6 +72,10 @@
         "lemma": "tugchano"
       },
       {
+        "surface": "a lasting",
+        "lemma": "polus"
+      },
+      {
         "surface": "peace",
         "lemma": "eirene"
       },
@@ -82,6 +86,10 @@
       {
         "surface": "foresight",
         "lemma": "pronoia"
+      },
+      {
+        "surface": "has brought",
+        "lemma": "ginomai"
       },
       {
         "surface": "improvements",
@@ -114,6 +122,10 @@
         "lemma": "apodechomai"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "gratitude",
         "lemma": "eucharistia"
       }
@@ -140,11 +152,19 @@
         "lemma": "epieikeia"
       },
       {
+        "surface": "to hear",
+        "lemma": "akouo"
+      },
+      {
         "surface": "briefly",
         "lemma": "suntomos"
       }
     ],
     "5": [
+      {
+        "surface": "We have found",
+        "lemma": "heurisko"
+      },
       {
         "surface": "man to be",
         "lemma": "aner"
@@ -160,6 +180,10 @@
       {
         "surface": "dissension",
         "lemma": "stasis"
+      },
+      {
+        "surface": "among",
+        "lemma": "pas"
       },
       {
         "surface": "Jews",
@@ -206,8 +230,16 @@
         "lemma": "anakrino"
       },
       {
+        "surface": "you will be able",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "to learn the truth",
         "lemma": "epiginosko"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "charges",
@@ -228,6 +260,10 @@
         "lemma": "phasko"
       },
       {
+        "surface": "were",
+        "lemma": "echo"
+      },
+      {
         "surface": "true",
         "lemma": "houto"
       }
@@ -242,12 +278,24 @@
         "lemma": "neuo"
       },
       {
+        "surface": "to speak",
+        "lemma": "lego"
+      },
+      {
         "surface": "he",
         "lemma": "paulos"
       },
       {
+        "surface": "began his response",
+        "lemma": "apokrino"
+      },
+      {
         "surface": "Knowing that",
         "lemma": "epistamai"
+      },
+      {
+        "surface": "have been",
+        "lemma": "eimi"
       },
       {
         "surface": "a judge",
@@ -256,6 +304,10 @@
       {
         "surface": "nation",
         "lemma": "ethnos"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "years",
@@ -267,6 +319,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
       {
         "surface": "verify {for yourself",
         "lemma": "epiginosko"
@@ -298,12 +354,20 @@
     ],
     "12": [
       {
+        "surface": "my accusers did not find",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "debating",
         "lemma": "dialego"
       },
       {
         "surface": "temple",
         "lemma": "hieros"
+      },
+      {
+        "surface": "riling up",
+        "lemma": "poieo"
       },
       {
         "surface": "a crowd",
@@ -319,6 +383,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "can they",
+        "lemma": "dunamai"
+      },
       {
         "surface": "prove",
         "lemma": "paristemi"
@@ -354,6 +422,10 @@
         "lemma": "hodos"
       },
       {
+        "surface": "they call",
+        "lemma": "lego"
+      },
+      {
         "surface": "a sect",
         "lemma": "hairesis"
       },
@@ -362,8 +434,16 @@
         "lemma": "pisteuo"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "Law",
         "lemma": "nomos"
+      },
+      {
+        "surface": "written",
+        "lemma": "grapho"
       },
       {
         "surface": "Prophets",
@@ -371,6 +451,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "and I have",
+        "lemma": "echo"
+      },
       {
         "surface": "hope",
         "lemma": "elpis"
@@ -386,6 +470,10 @@
       {
         "surface": "that there will",
         "lemma": "mello"
+      },
+      {
+        "surface": "be",
+        "lemma": "eimi"
       },
       {
         "surface": "a resurrection",
@@ -404,6 +492,10 @@
       {
         "surface": "strive",
         "lemma": "askeo"
+      },
+      {
+        "surface": "to maintain",
+        "lemma": "echo"
       },
       {
         "surface": "a clear",
@@ -436,6 +528,10 @@
         "lemma": "paraginomai"
       },
       {
+        "surface": "to bring",
+        "lemma": "poieo"
+      },
+      {
         "surface": "alms",
         "lemma": "eleemosune"
       },
@@ -449,6 +545,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "they found",
+        "lemma": "heurisko"
+      },
       {
         "surface": "temple",
         "lemma": "hieros"
@@ -464,6 +564,10 @@
       {
         "surface": "an uproar",
         "lemma": "thorubos"
+      },
+      {
+        "surface": "some",
+        "lemma": "tis"
       },
       {
         "surface": "Jews",
@@ -486,12 +590,32 @@
       {
         "surface": "bring charges",
         "lemma": "kategoreo"
+      },
+      {
+        "surface": "they have",
+        "lemma": "echo"
       }
     ],
     "20": [
       {
+        "surface": "let these men state",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "any",
+        "lemma": "tis"
+      },
+      {
         "surface": "crime",
         "lemma": "adikema"
+      },
+      {
+        "surface": "they found",
+        "lemma": "heurisko"
+      },
+      {
+        "surface": "when I stood",
+        "lemma": "histemi"
       },
       {
         "surface": "Sanhedrin",
@@ -500,8 +624,16 @@
     ],
     "21": [
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "I called out",
         "lemma": "krazo"
+      },
+      {
+        "surface": "as I stood",
+        "lemma": "histemi"
       },
       {
         "surface": "the resurrection",
@@ -530,12 +662,20 @@
         "lemma": "akribos"
       },
       {
+        "surface": "who was well informed",
+        "lemma": "eido"
+      },
+      {
         "surface": "Way",
         "lemma": "hodos"
       },
       {
         "surface": "adjourned the hearing",
         "lemma": "anaballo"
+      },
+      {
+        "surface": "and said",
+        "lemma": "eipon"
       },
       {
         "surface": "Lysias",
@@ -566,6 +706,10 @@
       {
         "surface": "to keep Paul under guard",
         "lemma": "tereo"
+      },
+      {
+        "surface": "to allow him",
+        "lemma": "echo"
       },
       {
         "surface": "some freedom",
@@ -614,6 +758,10 @@
         "lemma": "drousilla"
       },
       {
+        "surface": "who was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a Jewess",
         "lemma": "ioudaios"
       },
@@ -624,6 +772,10 @@
       {
         "surface": "Paul",
         "lemma": "paulos"
+      },
+      {
+        "surface": "listened to",
+        "lemma": "akouo"
       },
       {
         "surface": "faith",
@@ -664,8 +816,16 @@
         "lemma": "phelix"
       },
       {
+        "surface": "became",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "frightened",
         "lemma": "emphobos"
+      },
+      {
+        "surface": "and said",
+        "lemma": "apokrino"
       },
       {
         "surface": "You may go",
@@ -702,6 +862,10 @@
         "lemma": "paulos"
       },
       {
+        "surface": "would offer",
+        "lemma": "didomi"
+      },
+      {
         "surface": "a bribe",
         "lemma": "chrema"
       },
@@ -732,6 +896,10 @@
         "lemma": "phelix"
       },
       {
+        "surface": "vvv",
+        "lemma": "lambano"
+      },
+      {
         "surface": "was succeeded by",
         "lemma": "diadochos"
       },
@@ -742,6 +910,10 @@
       {
         "surface": "Festus",
         "lemma": "phestos"
+      },
+      {
+        "surface": "wishing",
+        "lemma": "thelo"
       },
       {
         "surface": "to do the Jews a favor",

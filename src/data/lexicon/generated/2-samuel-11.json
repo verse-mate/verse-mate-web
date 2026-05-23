@@ -10,8 +10,16 @@
         "lemma": "teshuvah"
       },
       {
+        "surface": "at the time when",
+        "lemma": "et"
+      },
+      {
         "surface": "kings",
         "lemma": "maleakh"
+      },
+      {
+        "surface": "march out to war",
+        "lemma": "yatsa"
       },
       {
         "surface": "David",
@@ -28,6 +36,10 @@
       {
         "surface": "his servants",
         "lemma": "eved"
+      },
+      {
+        "surface": "the whole army",
+        "lemma": "kol"
       },
       {
         "surface": "of Israel",
@@ -52,6 +64,10 @@
       {
         "surface": "but David",
         "lemma": "david"
+      },
+      {
+        "surface": "remained",
+        "lemma": "yashav"
       },
       {
         "surface": "in Jerusalem",
@@ -92,6 +108,10 @@
         "lemma": "gag"
       },
       {
+        "surface": "he saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "a woman",
         "lemma": "ishshah"
       },
@@ -128,6 +148,10 @@
       {
         "surface": "about the woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "and he was told",
+        "lemma": "amar"
       },
       {
         "surface": "vvv",
@@ -176,6 +200,10 @@
         "lemma": "laqach"
       },
       {
+        "surface": "and when she came",
+        "lemma": "bo"
+      },
+      {
         "surface": "he slept",
         "lemma": "shakhav"
       },
@@ -186,6 +214,10 @@
       {
         "surface": "from her uncleanness",
         "lemma": "tumah"
+      },
+      {
+        "surface": "Then she returned",
+        "lemma": "shuv"
       },
       {
         "surface": "home",
@@ -208,6 +240,10 @@
       {
         "surface": "to David",
         "lemma": "david"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "am pregnant",
@@ -262,6 +298,10 @@
         "lemma": "uriyyah"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
@@ -296,6 +336,10 @@
         "lemma": "david"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Uriah",
         "lemma": "uriyyah"
       },
@@ -320,6 +364,10 @@
         "lemma": "uriyyah"
       },
       {
+        "surface": "left",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the palace",
         "lemma": "bet"
       },
@@ -330,6 +378,10 @@
       {
         "surface": "from the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "followed",
+        "lemma": "yatsa"
       },
       {
         "surface": "him",
@@ -354,12 +406,20 @@
         "lemma": "bet"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his master’s",
         "lemma": "adon"
       },
       {
         "surface": "servants",
         "lemma": "eved"
+      },
+      {
+        "surface": "he did not",
+        "lemma": "lo"
       },
       {
         "surface": "go down",
@@ -384,12 +444,24 @@
         "lemma": "uriyyah"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "go",
         "lemma": "yarad"
       },
       {
         "surface": "home",
         "lemma": "bet"
+      },
+      {
+        "surface": "Haven’t you",
+        "lemma": "lo"
+      },
+      {
+        "surface": "just arrived",
+        "lemma": "bo"
       },
       {
         "surface": "from a journey",
@@ -400,12 +472,20 @@
         "lemma": "david"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Uriah",
         "lemma": "uriyyah"
       },
       {
         "surface": "Why",
         "lemma": "maddua"
+      },
+      {
+        "surface": "didn’t you",
+        "lemma": "lo"
       },
       {
         "surface": "go",
@@ -422,6 +502,10 @@
         "lemma": "uriyyah"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "The ark",
         "lemma": "aron"
       },
@@ -432,6 +516,10 @@
       {
         "surface": "and Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "are dwelling",
+        "lemma": "yashav"
       },
       {
         "surface": "in tents",
@@ -460,6 +548,10 @@
       {
         "surface": "the open field",
         "lemma": "paneh"
+      },
+      {
+        "surface": "go",
+        "lemma": "bo"
       },
       {
         "surface": "my house",
@@ -494,11 +586,23 @@
         "lemma": "chay"
       },
       {
+        "surface": "I will not",
+        "lemma": "im"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
         "surface": "such a thing",
         "lemma": "davar"
       }
     ],
     "12": [
+      {
+        "surface": "Stay",
+        "lemma": "yashav"
+      },
       {
         "surface": "one more day",
         "lemma": "yom"
@@ -506,6 +610,10 @@
       {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Uriah",
@@ -524,6 +632,10 @@
         "lemma": "uriyyah"
       },
       {
+        "surface": "stayed",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -540,6 +652,10 @@
       {
         "surface": "Then David",
         "lemma": "david"
+      },
+      {
+        "surface": "invited",
+        "lemma": "qara"
       },
       {
         "surface": "to eat",
@@ -562,6 +678,10 @@
         "lemma": "erev"
       },
       {
+        "surface": "Uriah went out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "to lie down",
         "lemma": "shakhav"
       },
@@ -576,6 +696,10 @@
       {
         "surface": "servants",
         "lemma": "eved"
+      },
+      {
+        "surface": "but he did not",
+        "lemma": "lo"
       },
       {
         "surface": "go",
@@ -646,6 +770,10 @@
         "lemma": "milchamah"
       },
       {
+        "surface": "then withdraw",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from him",
         "lemma": "achar"
       },
@@ -660,6 +788,10 @@
     ],
     "16": [
       {
+        "surface": "So as",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Joab",
         "lemma": "yoav"
       },
@@ -670,6 +802,10 @@
       {
         "surface": "the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "he assigned",
+        "lemma": "natan"
       },
       {
         "surface": "Uriah",
@@ -696,6 +832,10 @@
       {
         "surface": "of the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "came out",
+        "lemma": "yatsa"
       },
       {
         "surface": "and fought",
@@ -748,6 +888,10 @@
         "lemma": "david"
       },
       {
+        "surface": "a full account",
+        "lemma": "kol"
+      },
+      {
         "surface": "of the battle",
         "lemma": "milchamah"
       }
@@ -774,6 +918,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "a full",
+        "lemma": "kol"
+      },
+      {
         "surface": "account",
         "lemma": "davar"
       },
@@ -783,6 +931,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
       {
         "surface": "the king’s",
         "lemma": "melekh"
@@ -794,6 +946,10 @@
       {
         "surface": "flares",
         "lemma": "alah"
+      },
+      {
+        "surface": "he may ask",
+        "lemma": "amar"
       },
       {
         "surface": "Why",
@@ -810,6 +966,10 @@
       {
         "surface": "to fight",
         "lemma": "lacham"
+      },
+      {
+        "surface": "Did you not",
+        "lemma": "lo"
       },
       {
         "surface": "realize",
@@ -844,6 +1004,10 @@
       {
         "surface": "of Jerubbesheth",
         "lemma": "yerubbeshet"
+      },
+      {
+        "surface": "Was it not",
+        "lemma": "lo"
       },
       {
         "surface": "a woman",
@@ -882,6 +1046,10 @@
         "lemma": "chomah"
       },
       {
+        "surface": "If he asks you this, then you are to say",
+        "lemma": "amar"
+      },
+      {
         "surface": "Your servant",
         "lemma": "eved"
       },
@@ -916,6 +1084,10 @@
         "lemma": "david"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Joab",
         "lemma": "yoav"
       },
@@ -930,6 +1102,10 @@
         "lemma": "maleakh"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
@@ -942,8 +1118,16 @@
         "lemma": "gavar"
       },
       {
+        "surface": "and came out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "in the field",
         "lemma": "saday"
+      },
+      {
+        "surface": "but we drove them back",
+        "lemma": "hayah"
       },
       {
         "surface": "the entrance",
@@ -1006,8 +1190,16 @@
         "lemma": "david"
       },
       {
+        "surface": "told",
+        "lemma": "amar"
+      },
+      {
         "surface": "the messenger",
         "lemma": "maleakh"
+      },
+      {
+        "surface": "Say",
+        "lemma": "amar"
       },
       {
         "surface": "this",
@@ -1016,6 +1208,10 @@
       {
         "surface": "Joab",
         "lemma": "yoav"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "matter",
@@ -1068,6 +1264,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "her husband",
         "lemma": "ish"
       },
@@ -1106,6 +1306,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "and she became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "wife",
         "lemma": "ishshah"
       },
@@ -1124,6 +1328,10 @@
       {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "had done",
+        "lemma": "asah"
       },
       {
         "surface": "was evil",

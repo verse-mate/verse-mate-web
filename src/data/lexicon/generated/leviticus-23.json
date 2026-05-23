@@ -28,6 +28,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "My appointed feasts",
         "lemma": "moed"
       },
@@ -38,6 +42,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "you are to proclaim",
+        "lemma": "qara"
       },
       {
         "surface": "as sacred",
@@ -60,6 +68,10 @@
       {
         "surface": "work",
         "lemma": "melakhah"
+      },
+      {
+        "surface": "may be done",
+        "lemma": "asah"
       },
       {
         "surface": "but the seventh",
@@ -86,8 +98,24 @@
         "lemma": "miqra"
       },
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "work",
         "lemma": "melakhah"
+      },
+      {
+        "surface": "wherever",
+        "lemma": "kol"
       },
       {
         "surface": "you live",
@@ -118,6 +146,10 @@
       {
         "surface": "assemblies",
         "lemma": "miqra"
+      },
+      {
+        "surface": "you are to proclaim",
+        "lemma": "qara"
       },
       {
         "surface": "at their appointed times",
@@ -210,12 +242,28 @@
         "lemma": "yom"
       },
       {
+        "surface": "you are to hold",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a sacred",
         "lemma": "qodesh"
       },
       {
         "surface": "assembly",
         "lemma": "miqra"
+      },
+      {
+        "surface": "you are not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "regular",
@@ -264,6 +312,18 @@
         "lemma": "miqra"
       },
       {
+        "surface": "you must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "regular",
         "lemma": "avodah"
       },
@@ -296,8 +356,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "you enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "am giving",
+        "lemma": "natan"
       },
       {
         "surface": "and you reap",
@@ -306,6 +378,10 @@
       {
         "surface": "its harvest",
         "lemma": "qatsir"
+      },
+      {
+        "surface": "you are to bring",
+        "lemma": "bo"
       },
       {
         "surface": "the priest",
@@ -374,6 +450,10 @@
       {
         "surface": "the sheaf",
         "lemma": "omer"
+      },
+      {
+        "surface": "you shall offer",
+        "lemma": "asah"
       },
       {
         "surface": "a year-old",
@@ -452,6 +532,10 @@
     ],
     "14": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "eat",
         "lemma": "akhal"
       },
@@ -476,6 +560,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "you have brought",
+        "lemma": "bo"
+      },
+      {
         "surface": "offering",
         "lemma": "qorban"
       },
@@ -496,6 +584,10 @@
         "lemma": "dor"
       },
       {
+        "surface": "wherever",
+        "lemma": "kol"
+      },
+      {
         "surface": "you live",
         "lemma": "moshav"
       }
@@ -512,6 +604,10 @@
       {
         "surface": "the day",
         "lemma": "yom"
+      },
+      {
+        "surface": "you brought",
+        "lemma": "bo"
       },
       {
         "surface": "the sheaf",
@@ -581,6 +677,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "Bring",
+        "lemma": "bo"
+      },
       {
         "surface": "two",
         "lemma": "shenayim"
@@ -664,6 +764,10 @@
         "lemma": "ayil"
       },
       {
+        "surface": "They will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a burnt offering",
         "lemma": "olah"
       },
@@ -697,6 +801,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "You shall also prepare",
+        "lemma": "asah"
+      },
       {
         "surface": "one",
         "lemma": "echad"
@@ -764,6 +872,10 @@
         "lemma": "keves"
       },
       {
+        "surface": "shall be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "holy",
         "lemma": "qodesh"
       },
@@ -786,12 +898,28 @@
         "lemma": "yom"
       },
       {
+        "surface": "you are to proclaim",
+        "lemma": "qara"
+      },
+      {
         "surface": "a sacred",
         "lemma": "qodesh"
       },
       {
         "surface": "assembly",
         "lemma": "miqra"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "regular work",
@@ -804,6 +932,10 @@
       {
         "surface": "statute",
         "lemma": "chuqqah"
+      },
+      {
+        "surface": "wherever",
+        "lemma": "kol"
       },
       {
         "surface": "you live",
@@ -826,6 +958,10 @@
       {
         "surface": "of your land",
         "lemma": "erets"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "reap",
@@ -900,6 +1036,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "On the first",
         "lemma": "echad"
       },
@@ -914,6 +1054,10 @@
       {
         "surface": "month",
         "lemma": "chodesh"
+      },
+      {
+        "surface": "you are to have",
+        "lemma": "hayah"
       },
       {
         "surface": "a day of rest",
@@ -937,6 +1081,18 @@
       }
     ],
     "25": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
       {
         "surface": "regular work",
         "lemma": "melakhah"
@@ -994,6 +1150,10 @@
         "lemma": "kippur"
       },
       {
+        "surface": "You shall hold",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a sacred",
         "lemma": "qodesh"
       },
@@ -1028,6 +1188,18 @@
         "lemma": "yom"
       },
       {
+        "surface": "you are not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "work",
         "lemma": "melakhah"
       },
@@ -1057,6 +1229,14 @@
       }
     ],
     "29": [
+      {
+        "surface": "anyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
+      },
       {
         "surface": "humble himself",
         "lemma": "anah"
@@ -1088,6 +1268,18 @@
         "lemma": "am"
       },
       {
+        "surface": "anyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "does",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "work",
         "lemma": "melakhah"
       },
@@ -1097,6 +1289,18 @@
       }
     ],
     "31": [
+      {
+        "surface": "You are not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
       {
         "surface": "work {at all",
         "lemma": "melakhah"
@@ -1112,6 +1316,10 @@
       {
         "surface": "for the generations to come",
         "lemma": "dor"
+      },
+      {
+        "surface": "wherever",
+        "lemma": "kol"
       },
       {
         "surface": "you live",
@@ -1184,6 +1392,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "On the fifteenth",
         "lemma": "chamesh"
       },
@@ -1238,6 +1450,18 @@
         "lemma": "miqra"
       },
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "regular work",
         "lemma": "melakhah"
       }
@@ -1272,6 +1496,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "you are to hold",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a sacred",
         "lemma": "qodesh"
       },
@@ -1296,6 +1524,18 @@
         "lemma": "atsarah"
       },
       {
+        "surface": "you must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "regular work",
         "lemma": "melakhah"
       }
@@ -1308,6 +1548,10 @@
       {
         "surface": "appointed feasts",
         "lemma": "moed"
+      },
+      {
+        "surface": "you are to proclaim",
+        "lemma": "qara"
       },
       {
         "surface": "as sacred",
@@ -1376,12 +1620,24 @@
         "lemma": "mattanah"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your vow offerings",
         "lemma": "neder"
       },
       {
+        "surface": "and to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the freewill offerings",
         "lemma": "nedavah"
+      },
+      {
+        "surface": "you give",
+        "lemma": "natan"
       },
       {
         "surface": "to the LORD",
@@ -1592,6 +1848,10 @@
     ],
     "42": [
       {
+        "surface": "You are to dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in booths",
         "lemma": "sukkah"
       },
@@ -1604,12 +1864,20 @@
         "lemma": "yom"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the native-born",
         "lemma": "ezrach"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "must dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "in booths",
@@ -1630,8 +1898,16 @@
         "lemma": "ben"
       },
       {
+        "surface": "dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in booths",
         "lemma": "sukkah"
+      },
+      {
+        "surface": "when I brought them out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of the land",
@@ -1674,8 +1950,8 @@
     ]
   },
   "themeLemmas": [
-    "qodesh",
-    "miqra",
-    "melakhah"
+    "kol",
+    "asah",
+    "qodesh"
   ]
 }

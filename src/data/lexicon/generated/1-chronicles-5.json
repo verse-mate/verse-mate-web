@@ -30,6 +30,10 @@
         "lemma": "bekhorah"
       },
       {
+        "surface": "was given",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the sons",
         "lemma": "ben"
       },
@@ -50,8 +54,16 @@
         "lemma": "chalal"
       },
       {
+        "surface": "his father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "bed",
         "lemma": "yatsua"
+      },
+      {
+        "surface": "So he is not",
+        "lemma": "lo"
       },
       {
         "surface": "reckoned",
@@ -280,6 +292,10 @@
         "lemma": "yoel"
       },
       {
+        "surface": "settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Aroer",
         "lemma": "aroer"
       },
@@ -297,6 +313,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "They also settled",
+        "lemma": "yashav"
+      },
       {
         "surface": "in the east",
         "lemma": "mizrach"
@@ -340,6 +360,10 @@
         "lemma": "shaul"
       },
       {
+        "surface": "they waged",
+        "lemma": "asah"
+      },
+      {
         "surface": "war",
         "lemma": "milchamah"
       },
@@ -354,6 +378,10 @@
       {
         "surface": "at their hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "and they occupied",
+        "lemma": "yashav"
       },
       {
         "surface": "the dwellings of the Hagrites",
@@ -380,6 +408,10 @@
       {
         "surface": "of Gad",
         "lemma": "gad"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "next to the Reubenites",
@@ -432,6 +464,10 @@
       {
         "surface": "Their kinsmen",
         "lemma": "ach"
+      },
+      {
+        "surface": "by families were",
+        "lemma": "av"
       },
       {
         "surface": "Michael",
@@ -556,9 +592,17 @@
       {
         "surface": "was head",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of their family",
+        "lemma": "av"
       }
     ],
     "16": [
+      {
+        "surface": "They lived",
+        "lemma": "yashav"
+      },
       {
         "surface": "in Gilead",
         "lemma": "gilad"
@@ -572,6 +616,10 @@
         "lemma": "bat"
       },
       {
+        "surface": "and throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "the pasturelands",
         "lemma": "migrash"
       },
@@ -581,6 +629,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "All of them",
+        "lemma": "kol"
+      },
       {
         "surface": "were recorded in the genealogies",
         "lemma": "yachas"
@@ -640,6 +692,10 @@
         "lemma": "arbaim"
       },
       {
+        "surface": "warriors",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "vvv",
         "lemma": "ben"
       },
@@ -682,6 +738,10 @@
     ],
     "19": [
       {
+        "surface": "They waged",
+        "lemma": "asah"
+      },
+      {
         "surface": "war",
         "lemma": "milchamah"
       },
@@ -722,6 +782,14 @@
       {
         "surface": "and the Hagrites",
         "lemma": "hagri"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "were delivered",
+        "lemma": "natan"
       },
       {
         "surface": "into their hands",
@@ -800,6 +868,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "And they occupied",
+        "lemma": "yashav"
+      },
+      {
         "surface": "the land",
         "lemma": "tachat"
       },
@@ -824,6 +896,10 @@
       {
         "surface": "were numerous",
         "lemma": "ravah"
+      },
+      {
+        "surface": "They settled",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -858,6 +934,10 @@
       {
         "surface": "were the heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of their families",
+        "lemma": "av"
       },
       {
         "surface": "Epher",
@@ -910,6 +990,10 @@
       {
         "surface": "and heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of their families",
+        "lemma": "av"
       }
     ],
     "25": [
@@ -920,6 +1004,10 @@
       {
         "surface": "to the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of their fathers",
+        "lemma": "av"
       },
       {
         "surface": "and they prostituted",
@@ -1020,6 +1108,10 @@
         "lemma": "galah"
       },
       {
+        "surface": "And he brought them",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Halah",
         "lemma": "chalach"
       },
@@ -1046,8 +1138,8 @@
     ]
   },
   "themeLemmas": [
+    "yashav",
     "yisrael",
-    "milchamah",
-    "tiglatpileser"
+    "milchamah"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "envy",
         "lemma": "qana"
       },
@@ -20,6 +24,10 @@
       {
         "surface": "or desire",
         "lemma": "avah"
+      },
+      {
+        "surface": "their company",
+        "lemma": "hayah"
       }
     ],
     "2": [
@@ -84,6 +92,10 @@
         "lemma": "male"
       },
       {
+        "surface": "with every",
+        "lemma": "kol"
+      },
+      {
         "surface": "precious",
         "lemma": "yaqar"
       },
@@ -132,6 +144,10 @@
         "lemma": "tachbulah"
       },
       {
+        "surface": "should you wage",
+        "lemma": "asah"
+      },
+      {
         "surface": "war",
         "lemma": "milchamah"
       },
@@ -162,6 +178,10 @@
         "lemma": "evil"
       },
       {
+        "surface": "he does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "open",
         "lemma": "patach"
       },
@@ -182,6 +202,10 @@
       {
         "surface": "evil",
         "lemma": "raa"
+      },
+      {
+        "surface": "will be called",
+        "lemma": "qara"
       },
       {
         "surface": "a schemer",
@@ -264,12 +288,20 @@
     ],
     "12": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
+        "surface": "you say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "we did not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
         "lemma": "yada"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "who weighs",
@@ -294,6 +326,10 @@
       {
         "surface": "know",
         "lemma": "yada"
+      },
+      {
+        "surface": "Will He not repay",
+        "lemma": "shuv"
       },
       {
         "surface": "a man",
@@ -352,6 +388,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "you find it",
         "lemma": "matsa"
       },
@@ -368,11 +408,19 @@
         "lemma": "tiqvah"
       },
       {
+        "surface": "will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "be cut off",
         "lemma": "karat"
       }
     ],
     "15": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "lie in wait",
         "lemma": "arav"
@@ -388,6 +436,10 @@
       {
         "surface": "of the righteous",
         "lemma": "tsaddiq"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "destroy",
@@ -430,6 +482,10 @@
     ],
     "17": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "gloat",
         "lemma": "samach"
       },
@@ -440,6 +496,10 @@
       {
         "surface": "falls",
         "lemma": "naphal"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
       },
       {
         "surface": "let your heart",
@@ -460,15 +520,27 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will see",
+        "lemma": "raah"
+      },
+      {
         "surface": "and disapprove",
         "lemma": "raa"
       },
       {
         "surface": "and turn His wrath",
         "lemma": "aph"
+      },
+      {
+        "surface": "away",
+        "lemma": "shuv"
       }
     ],
     "19": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "fret",
         "lemma": "charah"
@@ -476,6 +548,10 @@
       {
         "surface": "over evildoers",
         "lemma": "raa"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
       },
       {
         "surface": "be envious",
@@ -490,6 +566,14 @@
       {
         "surface": "the evil man",
         "lemma": "ra"
+      },
+      {
+        "surface": "has",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "future",
@@ -524,6 +608,10 @@
       {
         "surface": "and the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
       },
       {
         "surface": "associate",
@@ -588,6 +676,10 @@
     ],
     "24": [
       {
+        "surface": "Whoever tells",
+        "lemma": "amar"
+      },
+      {
         "surface": "the guilty",
         "lemma": "rasah"
       },
@@ -628,6 +720,10 @@
       {
         "surface": "blessing",
         "lemma": "berakhah"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       }
     ],
     "26": [
@@ -638,6 +734,10 @@
       {
         "surface": "answer",
         "lemma": "davar"
+      },
+      {
+        "surface": "given",
+        "lemma": "shuv"
       },
       {
         "surface": "is like a kiss",
@@ -684,6 +784,14 @@
     ],
     "28": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "testify",
+        "lemma": "hayah"
+      },
+      {
         "surface": "against your neighbor",
         "lemma": "rea"
       },
@@ -701,6 +809,26 @@
       }
     ],
     "29": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I will do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "he has done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "I will repay",
+        "lemma": "shuv"
+      },
       {
         "surface": "the man",
         "lemma": "ish"
@@ -750,6 +878,10 @@
         "lemma": "alah"
       },
       {
+        "surface": "everywhere",
+        "lemma": "kol"
+      },
+      {
         "surface": "thistles",
         "lemma": "charul"
       },
@@ -786,6 +918,10 @@
       {
         "surface": "to heart",
         "lemma": "lev"
+      },
+      {
+        "surface": "I looked",
+        "lemma": "raah"
       },
       {
         "surface": "and received",
@@ -836,6 +972,10 @@
         "lemma": "resh"
       },
       {
+        "surface": "will come upon you",
+        "lemma": "bo"
+      },
+      {
         "surface": "like a robber",
         "lemma": "halakh"
       },
@@ -850,8 +990,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "rasah",
-    "yada",
-    "tsaddiq"
+    "lo"
   ]
 }

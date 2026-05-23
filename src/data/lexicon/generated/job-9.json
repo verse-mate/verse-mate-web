@@ -46,12 +46,20 @@
     ],
     "3": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "one wished",
         "lemma": "chaphets"
       },
       {
         "surface": "to contend",
         "lemma": "riv"
+      },
+      {
+        "surface": "he could not",
+        "lemma": "lo"
       },
       {
         "surface": "answer Him",
@@ -106,6 +114,10 @@
         "lemma": "har"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "their knowledge",
         "lemma": "yada"
       },
@@ -142,8 +154,16 @@
     ],
     "7": [
       {
+        "surface": "He commands",
+        "lemma": "amar"
+      },
+      {
         "surface": "the sun",
         "lemma": "cheres"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "to shine",
@@ -186,6 +206,10 @@
     ],
     "9": [
       {
+        "surface": "He is the Maker",
+        "lemma": "asah"
+      },
+      {
         "surface": "of the Bear",
         "lemma": "ayish"
       },
@@ -207,6 +231,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "He does",
+        "lemma": "asah"
+      },
       {
         "surface": "great things",
         "lemma": "gadol"
@@ -230,16 +258,24 @@
     ],
     "11": [
       {
-        "surface": "Were He",
-        "lemma": "hen"
-      },
-      {
         "surface": "to pass",
         "lemma": "avar"
       },
       {
+        "surface": "I would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see Him",
+        "lemma": "raah"
+      },
+      {
         "surface": "were He to move",
         "lemma": "chalaph"
+      },
+      {
+        "surface": "I would not",
+        "lemma": "lo"
       },
       {
         "surface": "recognize",
@@ -247,10 +283,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "If",
-        "lemma": "hen"
-      },
       {
         "surface": "He takes away",
         "lemma": "chataph"
@@ -260,18 +292,38 @@
         "lemma": "mi"
       },
       {
+        "surface": "can stop Him",
+        "lemma": "shuv"
+      },
+      {
         "surface": "Who",
         "lemma": "mi"
       },
       {
+        "surface": "dares to ask",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "are You doing",
+        "lemma": "asah"
       }
     ],
     "13": [
       {
         "surface": "God",
         "lemma": "eloah"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "restrain",
+        "lemma": "shuv"
       },
       {
         "surface": "His anger",
@@ -310,8 +362,16 @@
     ],
     "15": [
       {
+        "surface": "even if",
+        "lemma": "im"
+      },
+      {
         "surface": "I were right",
         "lemma": "tsadaq"
+      },
+      {
+        "surface": "I could not",
+        "lemma": "lo"
       },
       {
         "surface": "answer",
@@ -328,8 +388,20 @@
     ],
     "16": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "I summoned Him",
+        "lemma": "qara"
+      },
+      {
         "surface": "and He answered me",
         "lemma": "un"
+      },
+      {
+        "surface": "I do not",
+        "lemma": "lo"
       },
       {
         "surface": "believe",
@@ -368,6 +440,18 @@
     ],
     "18": [
       {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "let me",
+        "lemma": "natan"
+      },
+      {
+        "surface": "catch",
+        "lemma": "shuv"
+      },
+      {
         "surface": "my breath",
         "lemma": "ruach"
       },
@@ -382,16 +466,20 @@
     ],
     "19": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "it is a matter of strength",
         "lemma": "koach"
       },
       {
-        "surface": "He is indeed",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "mighty",
         "lemma": "ammits"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
       },
       {
         "surface": "it is a matter of justice",
@@ -407,6 +495,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "Even if",
+        "lemma": "im"
+      },
       {
         "surface": "I were righteous",
         "lemma": "tsadaq"
@@ -434,6 +526,10 @@
         "lemma": "tam"
       },
       {
+        "surface": "I have no",
+        "lemma": "lo"
+      },
+      {
         "surface": "concern",
         "lemma": "yada"
       },
@@ -456,6 +552,10 @@
         "lemma": "echad"
       },
       {
+        "surface": "I say",
+        "lemma": "amar"
+      },
+      {
         "surface": "destroys",
         "lemma": "kalah"
       },
@@ -469,6 +569,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "When",
+        "lemma": "im"
+      },
       {
         "surface": "the scourge",
         "lemma": "shot"
@@ -500,6 +604,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "is given",
+        "lemma": "natan"
+      },
+      {
         "surface": "into the hand",
         "lemma": "yad"
       },
@@ -514,6 +622,14 @@
       {
         "surface": "its judges",
         "lemma": "shaphat"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "it is not He",
+        "lemma": "lo"
       },
       {
         "surface": "who",
@@ -536,6 +652,14 @@
       {
         "surface": "they flee",
         "lemma": "barach"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
+        "surface": "seeing",
+        "lemma": "raah"
       },
       {
         "surface": "good",
@@ -570,6 +694,14 @@
     ],
     "27": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "I were to say",
+        "lemma": "amar"
+      },
+      {
         "surface": "I will forget",
         "lemma": "shakhach"
       },
@@ -596,12 +728,20 @@
         "lemma": "yagor"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my sufferings",
         "lemma": "atstsevet"
       },
       {
         "surface": "I know",
         "lemma": "yada"
+      },
+      {
+        "surface": "You will not",
+        "lemma": "lo"
       },
       {
         "surface": "acquit me",
@@ -627,6 +767,10 @@
       }
     ],
     "30": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "I should wash",
         "lemma": "rachats"
@@ -668,6 +812,10 @@
     ],
     "32": [
       {
+        "surface": "He is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -680,11 +828,19 @@
         "lemma": "yachad"
       },
       {
+        "surface": "each other",
+        "lemma": "bo"
+      },
+      {
         "surface": "to court",
         "lemma": "mishpat"
       }
     ],
     "33": [
+      {
+        "surface": "Nor",
+        "lemma": "lo"
+      },
       {
         "surface": "is there",
         "lemma": "yesh"
@@ -724,6 +880,10 @@
         "lemma": "emah"
       },
       {
+        "surface": "will no",
+        "lemma": "al"
+      },
+      {
         "surface": "longer frighten me",
         "lemma": "baat"
       }
@@ -734,14 +894,22 @@
         "lemma": "davar"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "fear of Him",
         "lemma": "yare"
+      },
+      {
+        "surface": "as it is",
+        "lemma": "lo"
       }
     ]
   },
   "themeLemmas": [
-    "un",
-    "mi",
-    "yada"
+    "lo",
+    "im",
+    "un"
   ]
 }

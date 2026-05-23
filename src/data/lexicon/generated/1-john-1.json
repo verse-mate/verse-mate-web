@@ -6,8 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the beginning",
         "lemma": "arche"
+      },
+      {
+        "surface": "we have heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "we have seen",
+        "lemma": "horao"
       },
       {
         "surface": "eyes",
@@ -44,6 +56,10 @@
         "lemma": "phaneroo"
       },
       {
+        "surface": "we have seen it",
+        "lemma": "horao"
+      },
+      {
         "surface": "testified to it",
         "lemma": "martureo"
       },
@@ -60,6 +76,10 @@
         "lemma": "zoe"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Father",
         "lemma": "pater"
       },
@@ -72,6 +92,18 @@
       {
         "surface": "We proclaim",
         "lemma": "apangello"
+      },
+      {
+        "surface": "we have seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "may have",
+        "lemma": "echo"
       },
       {
         "surface": "fellowship",
@@ -104,8 +136,16 @@
     ],
     "4": [
       {
+        "surface": "write",
+        "lemma": "grapho"
+      },
+      {
         "surface": "joy",
         "lemma": "chara"
+      },
+      {
+        "surface": "may be",
+        "lemma": "eimi"
       },
       {
         "surface": "complete",
@@ -114,8 +154,16 @@
     ],
     "5": [
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "message",
         "lemma": "angelia"
+      },
+      {
+        "surface": "we have heard",
+        "lemma": "akouo"
       },
       {
         "surface": "announce",
@@ -126,15 +174,35 @@
         "lemma": "theos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "light",
         "lemma": "phos"
       },
       {
+        "surface": "there is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "darkness",
         "lemma": "skotia"
+      },
+      {
+        "surface": "at all",
+        "lemma": "oudeis"
       }
     ],
     "6": [
+      {
+        "surface": "we say",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "we have",
+        "lemma": "echo"
+      },
       {
         "surface": "fellowship",
         "lemma": "koinonia"
@@ -152,6 +220,10 @@
         "lemma": "pseudomai"
       },
       {
+        "surface": "practice",
+        "lemma": "poieo"
+      },
+      {
         "surface": "truth",
         "lemma": "aletheia"
       }
@@ -166,8 +238,16 @@
         "lemma": "phos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "light",
         "lemma": "phos"
+      },
+      {
+        "surface": "we have",
+        "lemma": "echo"
       },
       {
         "surface": "fellowship",
@@ -194,11 +274,23 @@
         "lemma": "katharizo"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "sin",
         "lemma": "hamartia"
       }
     ],
     "8": [
+      {
+        "surface": "we say",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "we have",
+        "lemma": "echo"
+      },
       {
         "surface": "sin",
         "lemma": "hamartia"
@@ -210,6 +302,10 @@
       {
         "surface": "truth",
         "lemma": "aletheia"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       }
     ],
     "9": [
@@ -220,6 +316,10 @@
       {
         "surface": "sins",
         "lemma": "hamartia"
+      },
+      {
+        "surface": "He is",
+        "lemma": "eimi"
       },
       {
         "surface": "faithful",
@@ -242,14 +342,26 @@
         "lemma": "katharizo"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "unrighteousness",
         "lemma": "adikia"
       }
     ],
     "10": [
       {
+        "surface": "we say",
+        "lemma": "eipon"
+      },
+      {
         "surface": "we have not sinned",
         "lemma": "hamartano"
+      },
+      {
+        "surface": "we make Him out to be",
+        "lemma": "poieo"
       },
       {
         "surface": "a liar",
@@ -258,6 +370,10 @@
       {
         "surface": "word",
         "lemma": "logos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       }
     ]
   },

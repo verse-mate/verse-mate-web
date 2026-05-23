@@ -46,6 +46,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "through",
         "lemma": "yad"
       },
@@ -96,6 +100,10 @@
       {
         "surface": "priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "stating",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -112,8 +120,28 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "The time",
+        "lemma": "et"
+      },
+      {
+        "surface": "has not yet",
+        "lemma": "lo"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
       },
       {
         "surface": "to rebuild",
@@ -138,6 +166,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "through",
         "lemma": "yad"
       },
@@ -148,9 +180,21 @@
       {
         "surface": "the prophet",
         "lemma": "navi"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "4": [
+      {
+        "surface": "Is it a time",
+        "lemma": "et"
+      },
+      {
+        "surface": "to live",
+        "lemma": "yashav"
+      },
       {
         "surface": "in your paneled",
         "lemma": "saphan"
@@ -186,6 +230,10 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Consider carefully",
         "lemma": "sum"
       },
@@ -202,6 +250,10 @@
       {
         "surface": "much",
         "lemma": "ravah"
+      },
+      {
+        "surface": "but harvested",
+        "lemma": "bo"
       },
       {
         "surface": "little",
@@ -270,6 +322,10 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Consider carefully",
         "lemma": "sum"
       },
@@ -286,6 +342,10 @@
       {
         "surface": "into the hills",
         "lemma": "har"
+      },
+      {
+        "surface": "bring down",
+        "lemma": "bo"
       },
       {
         "surface": "lumber",
@@ -308,6 +368,10 @@
         "lemma": "kavad"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       }
@@ -322,12 +386,12 @@
         "lemma": "ravah"
       },
       {
-        "surface": "but behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "it amounted to little",
         "lemma": "meat"
+      },
+      {
+        "surface": "And what you brought",
+        "lemma": "bo"
       },
       {
         "surface": "home",
@@ -398,6 +462,10 @@
     ],
     "11": [
       {
+        "surface": "I have summoned",
+        "lemma": "qara"
+      },
+      {
         "surface": "a drought",
         "lemma": "chorev"
       },
@@ -426,12 +494,20 @@
         "lemma": "adamah"
       },
       {
+        "surface": "yields",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "man",
         "lemma": "adam"
       },
       {
         "surface": "and beast",
         "lemma": "behemah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the labor",
@@ -476,12 +552,20 @@
         "lemma": "kohen"
       },
       {
+        "surface": "as well as all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the remnant",
         "lemma": "sheerit"
       },
       {
         "surface": "of the people",
         "lemma": "am"
+      },
+      {
+        "surface": "obeyed",
+        "lemma": "shama"
       },
       {
         "surface": "the voice",
@@ -544,6 +628,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "delivered",
+        "lemma": "amar"
       },
       {
         "surface": "the message",
@@ -628,12 +716,24 @@
         "lemma": "ruach"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the remnant",
         "lemma": "sheerit"
       },
       {
         "surface": "of the people",
         "lemma": "am"
+      },
+      {
+        "surface": "And they came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and",
+        "lemma": "asah"
       },
       {
         "surface": "began the work",
@@ -693,7 +793,7 @@
   },
   "themeLemmas": [
     "bet",
-    "tsava",
-    "chaggay"
+    "amar",
+    "tsava"
   ]
 }

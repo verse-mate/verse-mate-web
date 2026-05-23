@@ -22,12 +22,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "be} not",
+        "lemma": "al"
+      },
+      {
         "surface": "silent",
         "lemma": "demi"
       },
       {
+        "surface": "be} not",
+        "lemma": "al"
+      },
+      {
         "surface": "speechless",
         "lemma": "charash"
+      },
+      {
+        "surface": "be} not",
+        "lemma": "al"
       },
       {
         "surface": "still",
@@ -39,10 +51,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "See",
-        "lemma": "hinneh"
-      },
       {
         "surface": "Your enemies",
         "lemma": "oyev"
@@ -88,6 +96,10 @@
     ],
     "4": [
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Come",
         "lemma": "halakh"
       },
@@ -110,6 +122,10 @@
       {
         "surface": "be remembered",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "more",
@@ -178,6 +194,10 @@
         "lemma": "peleshet"
       },
       {
+        "surface": "the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Tyre",
         "lemma": "tsor"
       }
@@ -190,6 +210,10 @@
       {
         "surface": "has joined",
         "lemma": "lavah"
+      },
+      {
+        "surface": "lending",
+        "lemma": "hayah"
       },
       {
         "surface": "strength",
@@ -209,6 +233,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "Do",
+        "lemma": "asah"
+      },
       {
         "surface": "as You did to Midian",
         "lemma": "midyan"
@@ -244,6 +272,10 @@
         "lemma": "endor"
       },
       {
+        "surface": "and became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like dung",
         "lemma": "domen"
       },
@@ -270,6 +302,10 @@
         "lemma": "zeev"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their princes",
         "lemma": "nesikh"
       },
@@ -283,6 +319,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
       {
         "surface": "Let us possess",
         "lemma": "yarash"
@@ -436,6 +476,10 @@
         "lemma": "elyon"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       }
@@ -443,7 +487,7 @@
   },
   "themeLemmas": [
     "shem",
-    "yaats",
-    "shit"
+    "al",
+    "yaats"
   ]
 }

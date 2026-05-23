@@ -34,12 +34,20 @@
         "lemma": "qadash"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its furnishings",
         "lemma": "keli"
       },
       {
         "surface": "the altar",
         "lemma": "mizbeach"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "its utensils",
@@ -58,6 +66,10 @@
       {
         "surface": "the heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of their families",
+        "lemma": "av"
       },
       {
         "surface": "presented an offering",
@@ -81,6 +93,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "They brought",
+        "lemma": "bo"
+      },
       {
         "surface": "as their offering",
         "lemma": "qorban"
@@ -152,6 +168,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -160,6 +180,10 @@
       {
         "surface": "Accept these gifts",
         "lemma": "laqach"
+      },
+      {
+        "surface": "that they may be",
+        "lemma": "hayah"
       },
       {
         "surface": "used",
@@ -176,6 +200,10 @@
       {
         "surface": "of Meeting",
         "lemma": "moed"
+      },
+      {
+        "surface": "And give",
+        "lemma": "natan"
       },
       {
         "surface": "the Levites",
@@ -212,11 +240,19 @@
         "lemma": "baqar"
       },
       {
+        "surface": "and gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "the Levites",
         "lemma": "leviyyi"
       }
     ],
     "7": [
+      {
+        "surface": "He gave",
+        "lemma": "natan"
+      },
       {
         "surface": "the Gershonites",
         "lemma": "ben"
@@ -247,6 +283,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "he gave",
+        "lemma": "natan"
+      },
       {
         "surface": "the Merarites",
         "lemma": "ben"
@@ -297,6 +337,14 @@
       }
     ],
     "9": [
+      {
+        "surface": "But he did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "give any",
+        "lemma": "natan"
+      },
       {
         "surface": "to the Kohathites",
         "lemma": "ben"
@@ -364,6 +412,10 @@
       {
         "surface": "And the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Moses",
@@ -3446,6 +3498,10 @@
         "lemma": "shivim"
       },
       {
+        "surface": "The total weight",
+        "lemma": "kol"
+      },
+      {
         "surface": "of the silver",
         "lemma": "keseph"
       },
@@ -3512,6 +3568,10 @@
         "lemma": "sheqel"
       },
       {
+        "surface": "The total",
+        "lemma": "kol"
+      },
+      {
         "surface": "weight of the gold",
         "lemma": "zahav"
       },
@@ -3529,6 +3589,10 @@
       }
     ],
     "87": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the livestock",
         "lemma": "baqar"
@@ -3583,6 +3647,10 @@
       }
     ],
     "88": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the livestock",
         "lemma": "baqar"
@@ -3654,6 +3722,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "the Tent",
         "lemma": "ohel"
       },
@@ -3664,6 +3736,10 @@
       {
         "surface": "to speak",
         "lemma": "davar"
+      },
+      {
+        "surface": "he heard",
+        "lemma": "shama"
       },
       {
         "surface": "the voice",

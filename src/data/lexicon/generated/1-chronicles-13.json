@@ -14,6 +14,10 @@
         "lemma": "yaats"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his leaders",
         "lemma": "nagid"
       },
@@ -36,12 +40,24 @@
         "lemma": "david"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "assembly",
         "lemma": "qahal"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
       },
       {
         "surface": "it seems good",
@@ -70,6 +86,10 @@
       {
         "surface": "of our brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -114,6 +134,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "we did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "inquire of Him",
         "lemma": "darash"
       },
@@ -128,6 +152,10 @@
     ],
     "4": [
       {
+        "surface": "And",
+        "lemma": "amar"
+      },
+      {
         "surface": "this proposal",
         "lemma": "davar"
       },
@@ -140,12 +168,24 @@
         "lemma": "yashar"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "assembly",
         "lemma": "qahal"
+      },
+      {
+        "surface": "agreed to it",
+        "lemma": "asah"
       }
     ],
     "5": [
@@ -158,6 +198,10 @@
         "lemma": "qahal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -168,6 +212,10 @@
       {
         "surface": "in Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "to bring",
+        "lemma": "bo"
       },
       {
         "surface": "the ark",
@@ -190,6 +238,10 @@
       {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -236,8 +288,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "who is enthroned",
+        "lemma": "yashav"
+      },
+      {
         "surface": "between the cherubim",
         "lemma": "keruv"
+      },
+      {
+        "surface": "is called",
+        "lemma": "qara"
       },
       {
         "surface": "by the Name",
@@ -296,6 +356,10 @@
         "lemma": "david"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "yisrael"
       },
@@ -310,6 +374,10 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "their might",
@@ -341,6 +409,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "When they came",
+        "lemma": "bo"
+      },
       {
         "surface": "the threshing floor",
         "lemma": "goren"
@@ -446,6 +518,10 @@
         "lemma": "uzza"
       },
       {
+        "surface": "So he named",
+        "lemma": "qara"
+      },
+      {
         "surface": "place",
         "lemma": "maqom"
       },
@@ -480,8 +556,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "and asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "How",
         "lemma": "hekh"
+      },
+      {
+        "surface": "can I ever bring",
+        "lemma": "bo"
       },
       {
         "surface": "the ark",
@@ -496,6 +580,10 @@
       {
         "surface": "So he",
         "lemma": "david"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
       },
       {
         "surface": "move",
@@ -544,6 +632,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "remained",
+        "lemma": "yashav"
+      },
+      {
         "surface": "the family",
         "lemma": "bet"
       },
@@ -586,12 +678,16 @@
       {
         "surface": "household",
         "lemma": "bet"
+      },
+      {
+        "surface": "and everything",
+        "lemma": "kol"
       }
     ]
   },
   "themeLemmas": [
+    "kol",
     "david",
-    "aron",
-    "ovededom"
+    "aron"
   ]
 }

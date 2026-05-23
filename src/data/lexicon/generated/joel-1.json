@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Joel",
         "lemma": "yoel"
       },
@@ -28,6 +32,10 @@
     ],
     "2": [
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "O elders",
         "lemma": "zaqen"
       },
@@ -36,16 +44,36 @@
         "lemma": "azan"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "ever happened",
+        "lemma": "hayah"
       },
       {
         "surface": "in your days",
         "lemma": "yom"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "in the days",
         "lemma": "yom"
+      },
+      {
+        "surface": "of your fathers",
+        "lemma": "av"
       }
     ],
     "3": [
@@ -144,6 +172,10 @@
       {
         "surface": "wail",
         "lemma": "yalal"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "you drinkers",
@@ -416,6 +448,10 @@
         "lemma": "tappuach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the trees",
         "lemma": "ets"
       },
@@ -470,6 +506,10 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "Come",
+        "lemma": "bo"
+      },
+      {
         "surface": "spend the night",
         "lemma": "lun"
       },
@@ -516,6 +556,10 @@
         "lemma": "tsom"
       },
       {
+        "surface": "proclaim",
+        "lemma": "qara"
+      },
+      {
         "surface": "a solemn assembly",
         "lemma": "atsarah"
       },
@@ -526,6 +570,14 @@
       {
         "surface": "the elders",
         "lemma": "zaqen"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "the residents",
+        "lemma": "yashav"
       },
       {
         "surface": "of the land",
@@ -554,10 +606,6 @@
     ],
     "15": [
       {
-        "surface": "Alas",
-        "lemma": "ahah"
-      },
-      {
         "surface": "for the day",
         "lemma": "yom"
       },
@@ -574,6 +622,10 @@
         "lemma": "qarov"
       },
       {
+        "surface": "and it will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "as destruction",
         "lemma": "shod"
       },
@@ -583,6 +635,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "Has not",
+        "lemma": "lo"
+      },
       {
         "surface": "the food",
         "lemma": "okhel"
@@ -706,6 +762,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "I call",
+        "lemma": "qara"
+      },
+      {
         "surface": "fire",
         "lemma": "esh"
       },
@@ -728,6 +788,10 @@
       {
         "surface": "have scorched",
         "lemma": "lahat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the trees",
@@ -784,6 +848,6 @@
   "themeLemmas": [
     "yavesh",
     "saday",
-    "akhal"
+    "kol"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "I looked",
+        "lemma": "horao"
+      },
+      {
         "surface": "a door",
         "lemma": "thura"
       },
@@ -26,8 +30,20 @@
         "lemma": "protos"
       },
       {
+        "surface": "I had previously heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "speak",
+        "lemma": "laleo"
+      },
+      {
         "surface": "a trumpet",
         "lemma": "salpigx"
+      },
+      {
+        "surface": "was saying",
+        "lemma": "lego"
       },
       {
         "surface": "Come up",
@@ -44,12 +60,20 @@
       {
         "surface": "must",
         "lemma": "dei"
+      },
+      {
+        "surface": "happen",
+        "lemma": "ginomai"
       }
     ],
     "2": [
       {
         "surface": "At once",
         "lemma": "eutheos"
+      },
+      {
+        "surface": "I was",
+        "lemma": "ginomai"
       },
       {
         "surface": "the Spirit",
@@ -210,6 +234,10 @@
         "lemma": "pur"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "seven",
         "lemma": "hepta"
       },
@@ -306,6 +334,10 @@
         "lemma": "tritos"
       },
       {
+        "surface": "had",
+        "lemma": "echo"
+      },
+      {
         "surface": "a face",
         "lemma": "prosopon"
       },
@@ -332,12 +364,20 @@
     ],
     "8": [
       {
+        "surface": "each",
+        "lemma": "heis"
+      },
+      {
         "surface": "four",
         "lemma": "tessares"
       },
       {
         "surface": "living creatures",
         "lemma": "zoon"
+      },
+      {
+        "surface": "had",
+        "lemma": "echo"
       },
       {
         "surface": "six",
@@ -368,8 +408,16 @@
         "lemma": "nux"
       },
       {
+        "surface": "they never",
+        "lemma": "echo"
+      },
+      {
         "surface": "stop",
         "lemma": "anapausis"
+      },
+      {
+        "surface": "saying",
+        "lemma": "lego"
       },
       {
         "surface": "Holy",
@@ -394,12 +442,28 @@
       {
         "surface": "Almighty",
         "lemma": "pantokrator"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "is to come",
+        "lemma": "erchomai"
       }
     ],
     "9": [
       {
         "surface": "living creatures",
         "lemma": "zoon"
+      },
+      {
+        "surface": "give",
+        "lemma": "didomi"
       },
       {
         "surface": "glory",
@@ -482,6 +546,10 @@
       {
         "surface": "throne",
         "lemma": "thronos"
+      },
+      {
+        "surface": "saying",
+        "lemma": "lego"
       }
     ],
     "11": [
@@ -490,12 +558,20 @@
         "lemma": "axios"
       },
       {
+        "surface": "are You",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       },
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "to receive",
+        "lemma": "lambano"
       },
       {
         "surface": "glory",
@@ -514,8 +590,16 @@
         "lemma": "ktizo"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "will",
         "lemma": "thelema"
+      },
+      {
+        "surface": "they exist",
+        "lemma": "eimi"
       },
       {
         "surface": "were created",

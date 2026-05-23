@@ -98,12 +98,20 @@
         "lemma": "attah"
       },
       {
+        "surface": "they will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "no",
         "lemma": "ayin"
       },
       {
         "surface": "king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "we do not",
+        "lemma": "lo"
       },
       {
         "surface": "revere",
@@ -120,6 +128,10 @@
       {
         "surface": "can a king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       }
     ],
     "4": [
@@ -328,6 +340,10 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "Then they will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the mountains",
         "lemma": "har"
       },
@@ -368,6 +384,10 @@
       {
         "surface": "you have remained",
         "lemma": "amad"
+      },
+      {
+        "surface": "Did not",
+        "lemma": "lo"
       },
       {
         "surface": "the battle",
@@ -504,12 +524,20 @@
         "lemma": "nir"
       },
       {
+        "surface": "For it is time",
+        "lemma": "et"
+      },
+      {
         "surface": "to seek",
         "lemma": "darash"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "He comes",
+        "lemma": "bo"
       },
       {
         "surface": "and sends righteousness",
@@ -580,6 +608,10 @@
         "lemma": "am"
       },
       {
+        "surface": "so that all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your fortresses",
         "lemma": "mivtsar"
       },
@@ -626,6 +658,10 @@
         "lemma": "kakhah"
       },
       {
+        "surface": "it will be done",
+        "lemma": "asah"
+      },
+      {
         "surface": "vvv",
         "lemma": "betel"
       },
@@ -665,7 +701,7 @@
   },
   "themeLemmas": [
     "yisrael",
-    "peri",
-    "mizbeach"
+    "mizbeach",
+    "givah"
   ]
 }

@@ -146,6 +146,10 @@
         "lemma": "enosh"
       },
       {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "understand",
         "lemma": "bin"
       },
@@ -164,6 +168,10 @@
       {
         "surface": "comprehend",
         "lemma": "bin"
+      },
+      {
+        "surface": "fully",
+        "lemma": "kol"
       }
     ],
     "6": [
@@ -224,6 +232,10 @@
       {
         "surface": "disgraces",
         "lemma": "kalam"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
       }
     ],
     "8": [
@@ -264,6 +276,10 @@
       {
         "surface": "his ear {away",
         "lemma": "ozen"
+      },
+      {
+        "surface": "from hearing",
+        "lemma": "shama"
       },
       {
         "surface": "the law",
@@ -388,6 +404,10 @@
       {
         "surface": "his sins",
         "lemma": "pesah"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "prosper",
@@ -534,6 +554,10 @@
         "lemma": "bor"
       },
       {
+        "surface": "let no one",
+        "lemma": "al"
+      },
+      {
         "surface": "support",
         "lemma": "tamakh"
       }
@@ -628,6 +652,10 @@
         "lemma": "ashar"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "go unpunished",
         "lemma": "naqah"
       }
@@ -636,6 +664,10 @@
       {
         "surface": "To show partiality",
         "lemma": "nakhar"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
       },
       {
         "surface": "good",
@@ -676,12 +708,20 @@
         "lemma": "hon"
       },
       {
+        "surface": "and does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
       {
         "surface": "poverty",
         "lemma": "cheser"
+      },
+      {
+        "surface": "awaits him",
+        "lemma": "bo"
       }
     ],
     "23": [
@@ -720,8 +760,16 @@
         "lemma": "gazal"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "or mother",
         "lemma": "em"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "It is not",
@@ -798,6 +846,10 @@
     ],
     "27": [
       {
+        "surface": "Whoever gives",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the poor",
         "lemma": "rush"
       },
@@ -860,6 +912,6 @@
   "themeLemmas": [
     "rav",
     "rasah",
-    "bin"
+    "lo"
   ]
 }

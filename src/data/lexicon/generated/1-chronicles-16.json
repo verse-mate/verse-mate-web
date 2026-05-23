@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "So they brought",
+        "lemma": "bo"
+      },
+      {
         "surface": "the ark",
         "lemma": "aron"
       },
@@ -98,6 +102,10 @@
         "lemma": "chalaq"
       },
       {
+        "surface": "to every",
+        "lemma": "kol"
+      },
+      {
         "surface": "man",
         "lemma": "ish"
       },
@@ -127,6 +135,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "David appointed",
+        "lemma": "natan"
+      },
       {
         "surface": "the Levites",
         "lemma": "leviyyi"
@@ -238,6 +250,10 @@
         "lemma": "asaph"
       },
       {
+        "surface": "sounded",
+        "lemma": "shama"
+      },
+      {
         "surface": "the cymbals",
         "lemma": "metselet"
       }
@@ -294,6 +310,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "committed",
+        "lemma": "natan"
+      },
+      {
         "surface": "to",
         "lemma": "yad"
       },
@@ -324,6 +344,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "call",
+        "lemma": "qara"
+      },
+      {
         "surface": "upon His name",
         "lemma": "shem"
       },
@@ -352,6 +376,10 @@
       {
         "surface": "tell",
         "lemma": "siach"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "His wonders",
@@ -424,6 +452,10 @@
         "lemma": "pala"
       },
       {
+        "surface": "He has done",
+        "lemma": "asah"
+      },
+      {
         "surface": "His marvels",
         "lemma": "mophet"
       },
@@ -474,6 +506,10 @@
       {
         "surface": "His judgments carry",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -556,6 +592,10 @@
     ],
     "18": [
       {
+        "surface": "I will give",
+        "lemma": "natan"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -573,6 +613,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "When they were",
+        "lemma": "hayah"
+      },
       {
         "surface": "few",
         "lemma": "mat"
@@ -618,6 +662,10 @@
         "lemma": "nuach"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "man",
         "lemma": "ish"
       },
@@ -636,12 +684,20 @@
     ],
     "22": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "touch",
         "lemma": "naga"
       },
       {
         "surface": "My anointed ones",
         "lemma": "mashiach"
+      },
+      {
+        "surface": "Do no",
+        "lemma": "al"
       },
       {
         "surface": "harm",
@@ -660,6 +716,10 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -700,6 +760,10 @@
         "lemma": "pala"
       },
       {
+        "surface": "among all",
+        "lemma": "kol"
+      },
+      {
         "surface": "peoples",
         "lemma": "am"
       }
@@ -722,11 +786,19 @@
         "lemma": "halal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "gods",
         "lemma": "elohim"
       }
     ],
     "26": [
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "the gods",
         "lemma": "elohim"
@@ -742,6 +814,10 @@
       {
         "surface": "but it is the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "who made",
+        "lemma": "asah"
       },
       {
         "surface": "the heavens",
@@ -834,6 +910,10 @@
         "lemma": "minchah"
       },
       {
+        "surface": "and come",
+        "lemma": "bo"
+      },
+      {
         "surface": "before Him",
         "lemma": "paneh"
       },
@@ -862,6 +942,10 @@
       {
         "surface": "before Him",
         "lemma": "paneh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -902,6 +986,10 @@
         "lemma": "gil"
       },
       {
+        "surface": "Let them say",
+        "lemma": "amar"
+      },
+      {
         "surface": "among the nations",
         "lemma": "goy"
       },
@@ -934,6 +1022,10 @@
       {
         "surface": "exult",
         "lemma": "alats"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       }
     ],
     "33": [
@@ -956,6 +1048,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "He is coming",
+        "lemma": "bo"
       },
       {
         "surface": "to judge",
@@ -989,6 +1085,10 @@
       }
     ],
     "35": [
+      {
+        "surface": "Then cry out",
+        "lemma": "amar"
+      },
       {
         "surface": "Save us",
         "lemma": "yasah"
@@ -1060,8 +1160,16 @@
         "lemma": "olam"
       },
       {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -1240,6 +1348,10 @@
         "lemma": "erev"
       },
       {
+        "surface": "according to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "that was written",
         "lemma": "katav"
       },
@@ -1320,6 +1432,10 @@
         "lemma": "metselet"
       },
       {
+        "surface": "for the music",
+        "lemma": "shama"
+      },
+      {
         "surface": "and instruments",
         "lemma": "keli"
       },
@@ -1345,6 +1461,10 @@
       }
     ],
     "43": [
+      {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
       {
         "surface": "the people",
         "lemma": "am"
@@ -1376,8 +1496,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "paneh",
-    "yisrael",
-    "yadah"
+    "yisrael"
   ]
 }

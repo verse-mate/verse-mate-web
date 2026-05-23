@@ -22,6 +22,10 @@
         "lemma": "beteqedharoim"
       },
       {
+        "surface": "I shall not",
+        "lemma": "lo"
+      },
+      {
         "surface": "want",
         "lemma": "chaser"
       }
@@ -53,6 +57,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "He restores",
+        "lemma": "shuv"
+      },
       {
         "surface": "my soul",
         "lemma": "nephesh"
@@ -90,6 +98,10 @@
       {
         "surface": "I will fear",
         "lemma": "yare"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "evil",
@@ -168,12 +180,20 @@
         "lemma": "radaph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the days",
         "lemma": "yom"
       },
       {
         "surface": "of my life",
         "lemma": "chay"
+      },
+      {
+        "surface": "and I will dwell",
+        "lemma": "shuv"
       },
       {
         "surface": "in the house",
@@ -189,5 +209,8 @@
       }
     ]
   },
-  "themeLemmas": []
+  "themeLemmas": [
+    "shuv",
+    "lo"
+  ]
 }

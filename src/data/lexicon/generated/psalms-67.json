@@ -64,6 +64,10 @@
         "lemma": "yeshuah"
       },
       {
+        "surface": "among all",
+        "lemma": "kol"
+      },
+      {
         "surface": "nations",
         "lemma": "goy"
       }
@@ -80,6 +84,10 @@
       {
         "surface": "O God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "let all",
+        "lemma": "kol"
       },
       {
         "surface": "the peoples",
@@ -146,6 +154,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "let all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the peoples",
         "lemma": "am"
       },
@@ -158,6 +170,10 @@
       {
         "surface": "The earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "has yielded",
+        "lemma": "natan"
       },
       {
         "surface": "its harvest",
@@ -186,6 +202,10 @@
         "lemma": "barakh"
       },
       {
+        "surface": "that all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the ends",
         "lemma": "ephes"
       },
@@ -201,7 +221,7 @@
   },
   "themeLemmas": [
     "yadah",
-    "barakh",
-    "selah"
+    "kol",
+    "barakh"
   ]
 }

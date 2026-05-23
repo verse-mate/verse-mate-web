@@ -6,16 +6,16 @@
   "verses": {
     "1": [
       {
-        "surface": "Surely",
-        "lemma": "hen"
-      },
-      {
         "surface": "the arm",
         "lemma": "yad"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
       },
       {
         "surface": "too short",
@@ -32,6 +32,10 @@
       {
         "surface": "too dull",
         "lemma": "kavad"
+      },
+      {
+        "surface": "to hear",
+        "lemma": "shama"
       }
     ],
     "2": [
@@ -62,6 +66,10 @@
       {
         "surface": "His face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "so that He does not hear",
+        "lemma": "shama"
       }
     ],
     "3": [
@@ -114,6 +122,10 @@
       {
         "surface": "No one",
         "lemma": "ayin"
+      },
+      {
+        "surface": "calls",
+        "lemma": "qara"
       },
       {
         "surface": "for justice",
@@ -220,8 +232,20 @@
         "lemma": "qur"
       },
       {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "be made into",
+        "lemma": "hayah"
+      },
+      {
         "surface": "clothing",
         "lemma": "beged"
+      },
+      {
+        "surface": "and they cannot",
+        "lemma": "lo"
       },
       {
         "surface": "cover themselves",
@@ -320,6 +344,10 @@
         "lemma": "shalom"
       },
       {
+        "surface": "they have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "known",
         "lemma": "yada"
       },
@@ -342,6 +370,10 @@
       {
         "surface": "paths",
         "lemma": "nativ"
+      },
+      {
+        "surface": "no one",
+        "lemma": "kol"
       },
       {
         "surface": "who treads",
@@ -370,6 +402,10 @@
         "lemma": "tsedaqah"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "reach us",
         "lemma": "nasag"
       },
@@ -380,10 +416,6 @@
       {
         "surface": "for light",
         "lemma": "or"
-      },
-      {
-        "surface": "but there",
-        "lemma": "hinneh"
       },
       {
         "surface": "is darkness",
@@ -449,6 +481,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "We all",
+        "lemma": "kol"
+      },
       {
         "surface": "growl",
         "lemma": "hamah"
@@ -610,12 +646,24 @@
       {
         "surface": "and honesty",
         "lemma": "nekhochah"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "enter",
+        "lemma": "bo"
       }
     ],
     "15": [
       {
         "surface": "Truth",
         "lemma": "emet"
+      },
+      {
+        "surface": "is",
+        "lemma": "hayah"
       },
       {
         "surface": "missing",
@@ -638,6 +686,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "looked",
+        "lemma": "raah"
+      },
+      {
         "surface": "and was displeased",
         "lemma": "raa"
       },
@@ -651,6 +703,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "He saw",
+        "lemma": "raah"
+      },
       {
         "surface": "there was no",
         "lemma": "ayin"
@@ -798,6 +854,10 @@
         "lemma": "mizrach"
       },
       {
+        "surface": "He will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "like a raging",
         "lemma": "tsar"
       },
@@ -824,12 +884,20 @@
         "lemma": "gaal"
       },
       {
+        "surface": "will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Zion",
         "lemma": "tsiyyon"
       },
       {
         "surface": "to those in Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "who turn",
+        "lemma": "shuv"
       },
       {
         "surface": "from transgression",
@@ -850,6 +918,10 @@
         "lemma": "berit"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -868,6 +940,10 @@
       {
         "surface": "in your mouth",
         "lemma": "peh"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "depart",
@@ -906,14 +982,18 @@
         "lemma": "olam"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       }
     ]
   },
   "themeLemmas": [
+    "lo",
     "tsedaqah",
-    "peh",
-    "zera"
+    "peh"
   ]
 }

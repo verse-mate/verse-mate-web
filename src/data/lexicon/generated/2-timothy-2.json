@@ -28,6 +28,14 @@
     ],
     "2": [
       {
+        "surface": "you have heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "witnesses",
         "lemma": "martus"
       },
@@ -42,6 +50,10 @@
       {
         "surface": "men",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "will be",
+        "lemma": "eimi"
       },
       {
         "surface": "qualified",
@@ -82,6 +94,10 @@
       {
         "surface": "A soldier",
         "lemma": "strateuo"
+      },
+      {
+        "surface": "refrains from",
+        "lemma": "oudeis"
       },
       {
         "surface": "entangling himself",
@@ -154,12 +170,24 @@
         "lemma": "noeo"
       },
       {
+        "surface": "I am saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       },
       {
+        "surface": "will give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "insight",
         "lemma": "sunesis"
+      },
+      {
+        "surface": "all things",
+        "lemma": "pas"
       }
     ],
     "8": [
@@ -226,6 +254,10 @@
       {
         "surface": "I endure",
         "lemma": "hupomeno"
+      },
+      {
+        "surface": "all things",
+        "lemma": "pas"
       },
       {
         "surface": "elect",
@@ -306,6 +338,10 @@
         "lemma": "pistos"
       },
       {
+        "surface": "He cannot",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "deny",
         "lemma": "arneomai"
       }
@@ -330,6 +366,14 @@
       {
         "surface": "succeeds",
         "lemma": "chresimos"
+      },
+      {
+        "surface": "only",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "listeners",
+        "lemma": "akouo"
       },
       {
         "surface": "to ruin",
@@ -406,12 +450,20 @@
         "lemma": "logos"
       },
       {
+        "surface": "will",
+        "lemma": "echo"
+      },
+      {
         "surface": "spread",
         "lemma": "nome"
       },
       {
         "surface": "gangrene",
         "lemma": "gangraina"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "Hymenaeus",
@@ -432,12 +484,20 @@
         "lemma": "aletheia"
       },
       {
+        "surface": "They say that",
+        "lemma": "lego"
+      },
+      {
         "surface": "resurrection",
         "lemma": "anastasis"
       },
       {
         "surface": "vvv",
         "lemma": "ede"
+      },
+      {
+        "surface": "has already occurred",
+        "lemma": "ginomai"
       },
       {
         "surface": "they undermine",
@@ -462,12 +522,32 @@
         "lemma": "themelios"
       },
       {
+        "surface": "stands",
+        "lemma": "histemi"
+      },
+      {
+        "surface": "bearing",
+        "lemma": "echo"
+      },
+      {
         "surface": "seal",
         "lemma": "sphragis"
       },
       {
         "surface": "The Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "knows",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "Everyone",
+        "lemma": "pas"
       },
       {
         "surface": "calls on",
@@ -492,8 +572,16 @@
     ],
     "20": [
       {
+        "surface": "A large",
+        "lemma": "megas"
+      },
+      {
         "surface": "house",
         "lemma": "oikia"
+      },
+      {
+        "surface": "contains",
+        "lemma": "eimi"
       },
       {
         "surface": "only",
@@ -534,6 +622,10 @@
         "lemma": "ekkathairo"
       },
       {
+        "surface": "he will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a vessel",
         "lemma": "skeuos"
       },
@@ -556,6 +648,10 @@
       {
         "surface": "and prepared",
         "lemma": "hetoimazo"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "good",
@@ -634,6 +730,10 @@
         "lemma": "zetesis"
       },
       {
+        "surface": "for you know",
+        "lemma": "eido"
+      },
+      {
         "surface": "it breeds",
         "lemma": "gennao"
       },
@@ -660,8 +760,16 @@
         "lemma": "machomai"
       },
       {
+        "surface": "must be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "kind",
         "lemma": "epios"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       },
       {
         "surface": "able to teach",
@@ -688,6 +796,10 @@
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "may grant",
+        "lemma": "didomi"
       },
       {
         "surface": "repentance",

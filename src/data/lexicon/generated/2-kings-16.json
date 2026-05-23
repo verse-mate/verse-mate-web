@@ -84,6 +84,18 @@
         "lemma": "david"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
+        "surface": "he did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
         "surface": "what was right",
         "lemma": "yashar"
       },
@@ -176,6 +188,10 @@
         "lemma": "tachat"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "green",
         "lemma": "raan"
       },
@@ -242,11 +258,19 @@
         "lemma": "yakhol"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "overcome him",
         "lemma": "lacham"
       }
     ],
     "6": [
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
       {
         "surface": "Rezin",
         "lemma": "retsin"
@@ -258,6 +282,10 @@
       {
         "surface": "of Aram",
         "lemma": "aram"
+      },
+      {
+        "surface": "recovered",
+        "lemma": "shuv"
       },
       {
         "surface": "Elath",
@@ -276,6 +304,10 @@
         "lemma": "yehudi"
       },
       {
+        "surface": "and sent",
+        "lemma": "bo"
+      },
+      {
         "surface": "the Edomites",
         "lemma": "arammi"
       },
@@ -286,6 +318,10 @@
       {
         "surface": "where",
         "lemma": "sham"
+      },
+      {
+        "surface": "they live",
+        "lemma": "yashav"
       },
       {
         "surface": "day",
@@ -320,6 +356,10 @@
       {
         "surface": "of Assyria",
         "lemma": "ashshur"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "am your servant",
@@ -430,6 +470,10 @@
         "lemma": "ashshur"
       },
       {
+        "surface": "responded",
+        "lemma": "shama"
+      },
+      {
         "surface": "marched up",
         "lemma": "alah"
       },
@@ -476,6 +520,10 @@
         "lemma": "dammeseq"
       },
       {
+        "surface": "to meet",
+        "lemma": "qara"
+      },
+      {
         "surface": "vvv",
         "lemma": "tiglatpileser"
       },
@@ -490,6 +538,10 @@
       {
         "surface": "of Assyria",
         "lemma": "ashshur"
+      },
+      {
+        "surface": "On seeing",
+        "lemma": "raah"
       },
       {
         "surface": "the altar",
@@ -554,6 +606,10 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "according to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
@@ -574,12 +630,20 @@
         "lemma": "ken"
       },
       {
+        "surface": "he completed it",
+        "lemma": "asah"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
       {
         "surface": "Ahaz",
         "lemma": "achaz"
+      },
+      {
+        "surface": "returned",
+        "lemma": "bo"
       }
     ],
     "12": [
@@ -588,8 +652,16 @@
         "lemma": "melekh"
       },
       {
+        "surface": "came back",
+        "lemma": "bo"
+      },
+      {
         "surface": "from Damascus",
         "lemma": "dammeseq"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "raah"
       },
       {
         "surface": "the altar",
@@ -700,6 +772,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and he put",
+        "lemma": "natan"
+      },
+      {
         "surface": "the north",
         "lemma": "tsaphon"
       },
@@ -786,6 +862,10 @@
         "lemma": "nesekh"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -798,6 +878,10 @@
         "lemma": "zaraq"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the blood",
         "lemma": "dam"
       },
@@ -806,8 +890,16 @@
         "lemma": "olah"
       },
       {
+        "surface": "and",
+        "lemma": "kol"
+      },
+      {
         "surface": "sacrifices",
         "lemma": "zevach"
+      },
+      {
+        "surface": "But I will use",
+        "lemma": "hayah"
       },
       {
         "surface": "the bronze",
@@ -830,6 +922,14 @@
       {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "just as",
+        "lemma": "kol"
       },
       {
         "surface": "King",
@@ -892,6 +992,10 @@
       {
         "surface": "were under it",
         "lemma": "tachat"
+      },
+      {
+        "surface": "and put",
+        "lemma": "natan"
       },
       {
         "surface": "a stone",
@@ -970,6 +1074,10 @@
         "lemma": "achaz"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "written",
         "lemma": "katav"
       },
@@ -1000,8 +1108,16 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "his fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "and was buried",
         "lemma": "qavar"
+      },
+      {
+        "surface": "them",
+        "lemma": "av"
       },
       {
         "surface": "in the City",
@@ -1030,8 +1146,8 @@
     ]
   },
   "themeLemmas": [
-    "achaz",
     "mizbeach",
+    "kol",
     "bet"
   ]
 }

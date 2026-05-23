@@ -68,6 +68,10 @@
         "lemma": "dekate"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "First",
         "lemma": "proton"
       },
@@ -96,6 +100,10 @@
         "lemma": "salem"
       },
       {
+        "surface": "means",
+        "lemma": "eimi"
+      },
+      {
         "surface": "king",
         "lemma": "basileus"
       },
@@ -116,6 +124,10 @@
       {
         "surface": "or genealogy",
         "lemma": "agenealogetos"
+      },
+      {
+        "surface": "without",
+        "lemma": "echo"
       },
       {
         "surface": "beginning",
@@ -176,6 +188,10 @@
         "lemma": "abraam"
       },
       {
+        "surface": "gave",
+        "lemma": "didomi"
+      },
+      {
         "surface": "a tenth",
         "lemma": "dekate"
       },
@@ -190,6 +206,10 @@
         "lemma": "nomos"
       },
       {
+        "surface": "vvv",
+        "lemma": "echo"
+      },
+      {
         "surface": "commands",
         "lemma": "entole"
       },
@@ -200,6 +220,10 @@
       {
         "surface": "of Levi",
         "lemma": "leui"
+      },
+      {
+        "surface": "who become",
+        "lemma": "lambano"
       },
       {
         "surface": "priests",
@@ -214,8 +238,16 @@
         "lemma": "laos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "brothers",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "they too are descended",
+        "lemma": "exerchomai"
       },
       {
         "surface": "Abraham",
@@ -240,11 +272,19 @@
         "lemma": "eulogeo"
       },
       {
+        "surface": "had",
+        "lemma": "echo"
+      },
+      {
         "surface": "promises",
         "lemma": "epangelia"
       }
     ],
     "7": [
+      {
+        "surface": "vvv",
+        "lemma": "pas"
+      },
       {
         "surface": "indisputably",
         "lemma": "antilogia"
@@ -276,6 +316,10 @@
         "lemma": "anthropos"
       },
       {
+        "surface": "collect",
+        "lemma": "lambano"
+      },
+      {
         "surface": "the tenth",
         "lemma": "dekate"
       },
@@ -298,8 +342,16 @@
         "lemma": "epos"
       },
       {
+        "surface": "to speak",
+        "lemma": "eipon"
+      },
+      {
         "surface": "Levi",
         "lemma": "leui"
+      },
+      {
+        "surface": "collects",
+        "lemma": "lambano"
       },
       {
         "surface": "the tenth",
@@ -324,6 +376,10 @@
         "lemma": "sunantao"
       },
       {
+        "surface": "Levi was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "still",
         "lemma": "eti"
       },
@@ -342,6 +398,10 @@
         "lemma": "teleiosis"
       },
       {
+        "surface": "could have been attained",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Levitical",
         "lemma": "leuitikos"
       },
@@ -356,6 +416,10 @@
       {
         "surface": "received the law",
         "lemma": "nomotheteo"
+      },
+      {
+        "surface": "why",
+        "lemma": "tis"
       },
       {
         "surface": "was there still",
@@ -376,6 +440,10 @@
       {
         "surface": "to appear",
         "lemma": "anistemi"
+      },
+      {
+        "surface": "one",
+        "lemma": "lego"
       },
       {
         "surface": "order",
@@ -418,6 +486,10 @@
     ],
     "13": [
       {
+        "surface": "are said",
+        "lemma": "lego"
+      },
+      {
         "surface": "belonged to",
         "lemma": "metecho"
       },
@@ -428,6 +500,10 @@
       {
         "surface": "tribe",
         "lemma": "phule"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
       },
       {
         "surface": "has ever served",
@@ -464,11 +540,23 @@
         "lemma": "mouses"
       },
       {
+        "surface": "said",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "priests",
         "lemma": "hiereus"
       }
     ],
     "15": [
+      {
+        "surface": "this point  is",
+        "lemma": "eimi"
+      },
       {
         "surface": "even",
         "lemma": "eti"
@@ -503,6 +591,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "has become a priest",
+        "lemma": "ginomai"
+      },
       {
         "surface": "a law",
         "lemma": "nomos"
@@ -554,6 +646,10 @@
       {
         "surface": "commandment",
         "lemma": "entole"
+      },
+      {
+        "surface": "is",
+        "lemma": "ginomai"
       },
       {
         "surface": "set aside",
@@ -608,6 +704,10 @@
         "lemma": "horkomosia"
       },
       {
+        "surface": "became",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "priests",
         "lemma": "hiereus"
       },
@@ -620,6 +720,10 @@
       {
         "surface": "an oath",
         "lemma": "horkomosia"
+      },
+      {
+        "surface": "said",
+        "lemma": "lego"
       },
       {
         "surface": "The Lord",
@@ -652,6 +756,10 @@
         "lemma": "iesous"
       },
       {
+        "surface": "has become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "the guarantee",
         "lemma": "enguos"
       },
@@ -665,6 +773,14 @@
       }
     ],
     "23": [
+      {
+        "surface": "there",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "have been",
+        "lemma": "ginomai"
+      },
       {
         "surface": "many",
         "lemma": "pleion"
@@ -696,6 +812,10 @@
         "lemma": "aion"
       },
       {
+        "surface": "He has",
+        "lemma": "echo"
+      },
+      {
         "surface": "a permanent",
         "lemma": "aparabatos"
       },
@@ -705,6 +825,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "He is able",
+        "lemma": "dunamai"
+      },
       {
         "surface": "to save",
         "lemma": "sozo"
@@ -764,6 +888,10 @@
         "lemma": "hamartolos"
       },
       {
+        "surface": "exalted",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "above",
         "lemma": "hupselos"
       },
@@ -776,6 +904,10 @@
       {
         "surface": "high priests",
         "lemma": "archiereus"
+      },
+      {
+        "surface": "does",
+        "lemma": "echo"
       },
       {
         "surface": "need",
@@ -814,6 +946,10 @@
         "lemma": "laos"
       },
       {
+        "surface": "He sacrificed for sin",
+        "lemma": "poieo"
+      },
+      {
         "surface": "once for all",
         "lemma": "ephapax"
       },
@@ -838,6 +974,10 @@
       {
         "surface": "men",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "who are",
+        "lemma": "echo"
       },
       {
         "surface": "weak",

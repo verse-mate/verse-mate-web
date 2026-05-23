@@ -14,6 +14,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "who had",
+        "lemma": "hayah"
+      },
+      {
         "surface": "very",
         "lemma": "meod"
       },
@@ -26,6 +30,10 @@
         "lemma": "miqneh"
       },
       {
+        "surface": "surveyed",
+        "lemma": "raah"
+      },
+      {
         "surface": "the lands",
         "lemma": "erets"
       },
@@ -36,10 +44,6 @@
       {
         "surface": "and Gilead",
         "lemma": "gilad"
-      },
-      {
-        "surface": "and they saw",
-        "lemma": "hinneh"
       },
       {
         "surface": "that the region",
@@ -64,6 +68,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -82,6 +90,10 @@
       {
         "surface": "of the congregation",
         "lemma": "edah"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       }
     ],
     "3": [
@@ -162,6 +174,10 @@
     ],
     "5": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "we have found",
         "lemma": "matsa"
       },
@@ -174,8 +190,16 @@
         "lemma": "ayin"
       },
       {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
         "surface": "land",
         "lemma": "erets"
+      },
+      {
+        "surface": "be given",
+        "lemma": "natan"
       },
       {
         "surface": "to your servants",
@@ -184,6 +208,10 @@
       {
         "surface": "as a possession",
         "lemma": "achuzzah"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "make us cross",
@@ -200,6 +228,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "the Gadites",
         "lemma": "ben"
       },
@@ -212,8 +244,16 @@
         "lemma": "ach"
       },
       {
+        "surface": "go",
+        "lemma": "bo"
+      },
+      {
         "surface": "to war",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "sit",
+        "lemma": "yashav"
       },
       {
         "surface": "here",
@@ -244,12 +284,24 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has given",
+        "lemma": "natan"
       }
     ],
     "8": [
       {
         "surface": "This is what",
         "lemma": "koh"
+      },
+      {
+        "surface": "your fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
       },
       {
         "surface": "when I sent",
@@ -262,6 +314,10 @@
       {
         "surface": "from Kadesh-barnea",
         "lemma": "qadeshbarnea"
+      },
+      {
+        "surface": "to inspect",
+        "lemma": "raah"
       },
       {
         "surface": "the land",
@@ -282,6 +338,10 @@
         "lemma": "eshkol"
       },
       {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -298,12 +358,20 @@
         "lemma": "bilti"
       },
       {
+        "surface": "entering",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "had given",
+        "lemma": "natan"
       }
     ],
     "10": [
@@ -326,9 +394,17 @@
       {
         "surface": "and He swore an oath",
         "lemma": "shava"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "11": [
+      {
+        "surface": "they did not",
+        "lemma": "lo"
+      },
       {
         "surface": "follow Me",
         "lemma": "achar"
@@ -336,6 +412,10 @@
       {
         "surface": "wholeheartedly",
         "lemma": "male"
+      },
+      {
+        "surface": "not one",
+        "lemma": "im"
       },
       {
         "surface": "of the men",
@@ -360,6 +440,10 @@
       {
         "surface": "out of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "will see",
+        "lemma": "raah"
       },
       {
         "surface": "the land",
@@ -462,8 +546,16 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "generation",
         "lemma": "dor"
+      },
+      {
+        "surface": "who had done",
+        "lemma": "asah"
       },
       {
         "surface": "evil",
@@ -484,10 +576,6 @@
     ],
     "14": [
       {
-        "surface": "Now behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "you, a brood",
         "lemma": "tarbut"
       },
@@ -502,6 +590,10 @@
       {
         "surface": "in place",
         "lemma": "tachat"
+      },
+      {
+        "surface": "of your fathers",
+        "lemma": "av"
       },
       {
         "surface": "to further",
@@ -529,6 +621,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "you turn away",
+        "lemma": "shuv"
+      },
       {
         "surface": "from following Him",
         "lemma": "achar"
@@ -558,6 +654,10 @@
       {
         "surface": "Then the Gadites and Reubenites approached",
         "lemma": "nagash"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "We want to build",
@@ -602,12 +702,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "we have brought them",
+        "lemma": "bo"
+      },
+      {
         "surface": "their place",
         "lemma": "maqom"
       },
       {
         "surface": "Meanwhile, our little ones",
         "lemma": "taph"
+      },
+      {
+        "surface": "will remain",
+        "lemma": "yashav"
       },
       {
         "surface": "in the fortified",
@@ -622,11 +730,23 @@
         "lemma": "paneh"
       },
       {
+        "surface": "the inhabitants",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of the land",
         "lemma": "erets"
       }
     ],
     "18": [
+      {
+        "surface": "We will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
+      },
       {
         "surface": "our homes",
         "lemma": "bet"
@@ -649,6 +769,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "we will not",
+        "lemma": "lo"
+      },
       {
         "surface": "have an inheritance",
         "lemma": "nachal"
@@ -688,6 +812,22 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "you will do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "you will arm yourselves",
         "lemma": "chalats"
       },
@@ -705,6 +845,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "and if every one",
+        "lemma": "kol"
+      },
       {
         "surface": "of your armed men",
         "lemma": "chalats"
@@ -756,6 +900,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "you may return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "free",
         "lemma": "naqi"
       },
@@ -772,6 +924,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "will belong",
+        "lemma": "hayah"
+      },
+      {
         "surface": "as a possession",
         "lemma": "achuzzah"
       },
@@ -786,12 +942,20 @@
     ],
     "23": [
       {
-        "surface": "this",
-        "lemma": "ken"
+        "surface": "But if",
+        "lemma": "im"
       },
       {
-        "surface": "you will certainly",
-        "lemma": "hinneh"
+        "surface": "you do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "this",
+        "lemma": "ken"
       },
       {
         "surface": "sin",
@@ -834,6 +998,14 @@
       {
         "surface": "for your flocks",
         "lemma": "tsoneh"
+      },
+      {
+        "surface": "but do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "what you have promised",
+        "lemma": "yatsa"
       }
     ],
     "25": [
@@ -846,12 +1018,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
       {
         "surface": "Your servants",
         "lemma": "eved"
+      },
+      {
+        "surface": "will do",
+        "lemma": "asah"
       },
       {
         "surface": "our lord",
@@ -876,8 +1056,16 @@
         "lemma": "miqneh"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "our animals",
         "lemma": "behemah"
+      },
+      {
+        "surface": "will remain",
+        "lemma": "hayah"
       },
       {
         "surface": "here",
@@ -904,6 +1092,10 @@
       {
         "surface": "for war",
         "lemma": "tsava"
+      },
+      {
+        "surface": "and every man",
+        "lemma": "kol"
       },
       {
         "surface": "will cross over",
@@ -960,6 +1152,10 @@
         "lemma": "nun"
       },
       {
+        "surface": "and to the family",
+        "lemma": "av"
+      },
+      {
         "surface": "leaders",
         "lemma": "rosh"
       },
@@ -982,6 +1178,14 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "the Gadites",
         "lemma": "ben"
       },
@@ -996,6 +1200,10 @@
       {
         "surface": "the Jordan",
         "lemma": "yarden"
+      },
+      {
+        "surface": "with every",
+        "lemma": "kol"
       },
       {
         "surface": "man armed",
@@ -1026,6 +1234,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "then you are to give",
+        "lemma": "natan"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -1039,6 +1251,14 @@
       }
     ],
     "30": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
+      },
       {
         "surface": "arm themselves",
         "lemma": "chalats"
@@ -1092,6 +1312,10 @@
       {
         "surface": "so",
         "lemma": "ken"
+      },
+      {
+        "surface": "we will do",
+        "lemma": "asah"
       }
     ],
     "32": [
@@ -1136,6 +1360,10 @@
       {
         "surface": "So Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "the Gadites",
@@ -1336,6 +1564,10 @@
         "lemma": "sevam"
       },
       {
+        "surface": "And they renamed",
+        "lemma": "qara"
+      },
+      {
         "surface": "the cities",
         "lemma": "ir"
       },
@@ -1388,6 +1620,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "Gilead",
         "lemma": "gilad"
       },
@@ -1402,6 +1638,10 @@
       {
         "surface": "of Manasseh",
         "lemma": "menashsheh"
+      },
+      {
+        "surface": "and they settled",
+        "lemma": "yashav"
       }
     ],
     "41": [
@@ -1428,6 +1668,10 @@
       {
         "surface": "their villages",
         "lemma": "chavvah"
+      },
+      {
+        "surface": "and called",
+        "lemma": "qara"
       },
       {
         "surface": "them",
@@ -1460,6 +1704,10 @@
         "lemma": "bat"
       },
       {
+        "surface": "and called",
+        "lemma": "qara"
+      },
+      {
         "surface": "Nobah",
         "lemma": "novach"
       },
@@ -1472,6 +1720,6 @@
   "themeLemmas": [
     "paneh",
     "mosheh",
-    "chalats"
+    "amar"
   ]
 }

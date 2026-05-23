@@ -10,6 +10,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Abram",
         "lemma": "avram"
       },
@@ -26,15 +30,27 @@
         "lemma": "moledet"
       },
       {
+        "surface": "and your father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "household",
         "lemma": "bet"
       },
       {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "I will show you",
+        "lemma": "raah"
       }
     ],
     "2": [
+      {
+        "surface": "I will make",
+        "lemma": "asah"
+      },
       {
         "surface": "you into a great",
         "lemma": "gadol"
@@ -54,6 +70,10 @@
       {
         "surface": "great",
         "lemma": "gadal"
+      },
+      {
+        "surface": "so that you will be",
+        "lemma": "hayah"
       },
       {
         "surface": "a blessing",
@@ -76,6 +96,10 @@
       {
         "surface": "those who curse you",
         "lemma": "qalal"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the families",
@@ -132,6 +156,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "when he left",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Haran",
         "lemma": "charan"
       }
@@ -162,6 +190,10 @@
         "lemma": "lot"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the possessions",
         "lemma": "rekhush"
       },
@@ -170,8 +202,16 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "they had acquired",
+        "lemma": "asah"
+      },
+      {
         "surface": "in Haran",
         "lemma": "charan"
+      },
+      {
+        "surface": "and set out",
+        "lemma": "yatsa"
       },
       {
         "surface": "for the land",
@@ -180,6 +220,10 @@
       {
         "surface": "of Canaan",
         "lemma": "kenaan"
+      },
+      {
+        "surface": "When they came",
+        "lemma": "bo"
       },
       {
         "surface": "to the land",
@@ -234,8 +278,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "appeared",
+        "lemma": "raah"
+      },
+      {
         "surface": "Abram",
         "lemma": "avram"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I will give",
+        "lemma": "natan"
       },
       {
         "surface": "land",
@@ -260,6 +316,10 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "who had appeared",
+        "lemma": "raah"
       }
     ],
     "8": [
@@ -328,6 +388,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and he called",
+        "lemma": "qara"
+      },
+      {
         "surface": "on the name",
         "lemma": "shem"
       },
@@ -355,6 +419,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Now there was",
+        "lemma": "hayah"
+      },
       {
         "surface": "a famine",
         "lemma": "raav"
@@ -398,8 +466,16 @@
         "lemma": "qarav"
       },
       {
+        "surface": "to enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
       },
       {
         "surface": "his wife",
@@ -408,10 +484,6 @@
       {
         "surface": "Sarai",
         "lemma": "saray"
-      },
-      {
-        "surface": "Look",
-        "lemma": "hinneh"
       },
       {
         "surface": "I know",
@@ -428,8 +500,20 @@
     ],
     "12": [
       {
+        "surface": "and",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the Egyptians",
         "lemma": "mitsri"
+      },
+      {
+        "surface": "see you",
+        "lemma": "raah"
+      },
+      {
+        "surface": "they will say",
+        "lemma": "amar"
       },
       {
         "surface": "is his wife",
@@ -446,8 +530,8 @@
     ],
     "13": [
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "my sister",
@@ -472,8 +556,16 @@
     ],
     "14": [
       {
+        "surface": "So",
+        "lemma": "hayah"
+      },
+      {
         "surface": "when Abram",
         "lemma": "avram"
+      },
+      {
+        "surface": "entered",
+        "lemma": "bo"
       },
       {
         "surface": "Egypt",
@@ -482,6 +574,10 @@
       {
         "surface": "the Egyptians",
         "lemma": "mitsri"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
       },
       {
         "surface": "the woman",
@@ -504,6 +600,10 @@
       {
         "surface": "officials",
         "lemma": "sar"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
       },
       {
         "surface": "they commended",
@@ -538,6 +638,10 @@
       {
         "surface": "well",
         "lemma": "yatav"
+      },
+      {
+        "surface": "and Abram acquired",
+        "lemma": "hayah"
       },
       {
         "surface": "sheep",
@@ -608,16 +712,32 @@
         "lemma": "paroh"
       },
       {
+        "surface": "summoned",
+        "lemma": "qara"
+      },
+      {
         "surface": "Abram",
         "lemma": "avram"
+      },
+      {
+        "surface": "and asked",
+        "lemma": "amar"
       },
       {
         "surface": "What",
         "lemma": "mah"
       },
       {
+        "surface": "have you done",
+        "lemma": "asah"
+      },
+      {
         "surface": "Why",
         "lemma": "mah"
+      },
+      {
+        "surface": "didn’t",
+        "lemma": "lo"
       },
       {
         "surface": "you tell",
@@ -634,6 +754,10 @@
         "lemma": "mah"
       },
       {
+        "surface": "did you say",
+        "lemma": "amar"
+      },
+      {
         "surface": "my sister",
         "lemma": "achot"
       },
@@ -648,10 +772,6 @@
       {
         "surface": "Now then",
         "lemma": "attah"
-      },
-      {
-        "surface": "here",
-        "lemma": "hinneh"
       },
       {
         "surface": "is your wife",
@@ -686,12 +806,16 @@
       {
         "surface": "with his wife",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "and all his possessions",
+        "lemma": "kol"
       }
     ]
   },
   "themeLemmas": [
     "avram",
-    "paroh",
-    "sham"
+    "amar",
+    "raah"
   ]
 }

@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "I will send",
         "lemma": "shalach"
       },
@@ -42,6 +38,10 @@
         "lemma": "pitom"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "His temple",
         "lemma": "hekhal"
       },
@@ -58,8 +58,12 @@
         "lemma": "chaphets"
       },
       {
-        "surface": "see",
-        "lemma": "hinneh"
+        "surface": "He is coming",
+        "lemma": "bo"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -84,12 +88,20 @@
         "lemma": "yom"
       },
       {
+        "surface": "of His coming",
+        "lemma": "bo"
+      },
+      {
         "surface": "And who",
         "lemma": "mi"
       },
       {
         "surface": "can stand",
         "lemma": "amad"
+      },
+      {
+        "surface": "when He appears",
+        "lemma": "raah"
       },
       {
         "surface": "will be like a refiner’s",
@@ -109,6 +121,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "And He will sit",
+        "lemma": "yashav"
+      },
       {
         "surface": "as a refiner",
         "lemma": "tsaraph"
@@ -210,6 +226,10 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "And I will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a swift",
         "lemma": "mahar"
       },
@@ -262,8 +282,16 @@
         "lemma": "ger"
       },
       {
+        "surface": "but do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "fear Me",
         "lemma": "yare"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -280,6 +308,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "change",
         "lemma": "shanah"
       },
@@ -292,6 +324,10 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "been destroyed",
         "lemma": "kalah"
       }
@@ -302,6 +338,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "of your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "you have turned away",
         "lemma": "sur"
       },
@@ -310,8 +350,24 @@
         "lemma": "choq"
       },
       {
+        "surface": "and have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "kept them",
         "lemma": "shamar"
+      },
+      {
+        "surface": "Return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and I will return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -322,8 +378,16 @@
         "lemma": "tsava"
       },
       {
+        "surface": "But you ask",
+        "lemma": "amar"
+      },
+      {
         "surface": "How",
         "lemma": "mah"
+      },
+      {
+        "surface": "can we return",
+        "lemma": "shuv"
       }
     ],
     "8": [
@@ -342,6 +406,10 @@
       {
         "surface": "are robbing",
         "lemma": "qava"
+      },
+      {
+        "surface": "But you ask",
+        "lemma": "amar"
       },
       {
         "surface": "How",
@@ -370,6 +438,10 @@
         "lemma": "meerah"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "nation",
         "lemma": "goy"
       },
@@ -380,12 +452,24 @@
     ],
     "10": [
       {
+        "surface": "Bring",
+        "lemma": "bo"
+      },
+      {
+        "surface": "the full",
+        "lemma": "kol"
+      },
+      {
         "surface": "tithe",
         "lemma": "maaser"
       },
       {
         "surface": "the storehouse",
         "lemma": "bet"
+      },
+      {
+        "surface": "so that there may be",
+        "lemma": "hayah"
       },
       {
         "surface": "food",
@@ -400,12 +484,24 @@
         "lemma": "bachan"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "See if",
+        "lemma": "im"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "lo"
       },
       {
         "surface": "open",
@@ -446,6 +542,10 @@
         "lemma": "akhal"
       },
       {
+        "surface": "so that it will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "destroy",
         "lemma": "shachat"
       },
@@ -466,8 +566,16 @@
         "lemma": "saday"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "fail to produce fruit",
         "lemma": "shakhol"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -480,6 +588,10 @@
     ],
     "12": [
       {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
@@ -488,12 +600,20 @@
         "lemma": "ashar"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a land",
         "lemma": "erets"
       },
       {
         "surface": "of delight",
         "lemma": "chephets"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -514,8 +634,16 @@
         "lemma": "chazaq"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "Yet you ask",
+        "lemma": "amar"
       },
       {
         "surface": "What",
@@ -527,6 +655,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "You have said",
+        "lemma": "amar"
+      },
       {
         "surface": "It is futile",
         "lemma": "shav"
@@ -590,6 +722,10 @@
         "lemma": "ashar"
       },
       {
+        "surface": "do evildoers",
+        "lemma": "asah"
+      },
+      {
         "surface": "prosper",
         "lemma": "banah"
       },
@@ -636,6 +772,10 @@
         "lemma": "qashav"
       },
       {
+        "surface": "and heard them",
+        "lemma": "shama"
+      },
+      {
         "surface": "So a scroll",
         "lemma": "sepher"
       },
@@ -670,6 +810,14 @@
     ],
     "17": [
       {
+        "surface": "They will be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -680,6 +828,10 @@
       {
         "surface": "on the day",
         "lemma": "yom"
+      },
+      {
+        "surface": "prepare",
+        "lemma": "asah"
       },
       {
         "surface": "My treasured possession",
@@ -708,6 +860,14 @@
     ],
     "18": [
       {
+        "surface": "So you will again",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "distinguish",
+        "lemma": "raah"
+      },
+      {
         "surface": "between",
         "lemma": "bayin"
       },
@@ -730,12 +890,16 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       }
     ]
   },
   "themeLemmas": [
+    "amar",
     "tsava",
-    "qava",
-    "mah"
+    "lo"
   ]
 }

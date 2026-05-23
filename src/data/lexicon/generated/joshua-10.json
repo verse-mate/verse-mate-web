@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
         "surface": "vvv",
         "lemma": "adonitsedeq"
       },
@@ -20,6 +24,10 @@
       {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
       },
       {
         "surface": "Joshua",
@@ -38,6 +46,10 @@
         "lemma": "charam"
       },
       {
+        "surface": "doing to",
+        "lemma": "asah"
+      },
+      {
         "surface": "Ai",
         "lemma": "ay"
       },
@@ -46,12 +58,20 @@
         "lemma": "melekh"
       },
       {
+        "surface": "he had done to",
+        "lemma": "asah"
+      },
+      {
         "surface": "Jericho",
         "lemma": "yericho"
       },
       {
         "surface": "and its king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "the people",
+        "lemma": "yashav"
       },
       {
         "surface": "of Gibeon",
@@ -64,6 +84,10 @@
       {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "and were living",
+        "lemma": "hayah"
       },
       {
         "surface": "near them",
@@ -110,6 +134,10 @@
       {
         "surface": "Ai",
         "lemma": "ay"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "its men",
@@ -188,6 +216,10 @@
       {
         "surface": "of Eglon",
         "lemma": "eglon"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "4": [
@@ -266,6 +298,10 @@
         "lemma": "alah"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their armies",
         "lemma": "machaneh"
       },
@@ -308,6 +344,10 @@
         "lemma": "gilgal"
       },
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "abandon",
         "lemma": "raphah"
       },
@@ -332,12 +372,20 @@
         "lemma": "azar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the kings",
         "lemma": "melekh"
       },
       {
         "surface": "of the Amorites",
         "lemma": "emori"
+      },
+      {
+        "surface": "from",
+        "lemma": "yashav"
       },
       {
         "surface": "the hill country",
@@ -354,8 +402,16 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "and his whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "army",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "including all",
+        "lemma": "kol"
       },
       {
         "surface": "the mighty men",
@@ -380,16 +436,32 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be afraid",
         "lemma": "yare"
       },
       {
+        "surface": "I have delivered them",
+        "lemma": "natan"
+      },
+      {
         "surface": "into your hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "Not",
+        "lemma": "lo"
       },
       {
         "surface": "one",
@@ -410,6 +482,10 @@
         "lemma": "alah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "night",
         "lemma": "laylah"
       },
@@ -420,6 +496,10 @@
       {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "caught",
+        "lemma": "bo"
       },
       {
         "surface": "by surprise",
@@ -584,6 +664,10 @@
         "lemma": "emori"
       },
       {
+        "surface": "over",
+        "lemma": "natan"
+      },
+      {
         "surface": "to",
         "lemma": "paneh"
       },
@@ -666,6 +750,10 @@
         "lemma": "oyev"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "written",
         "lemma": "katav"
       },
@@ -694,6 +782,14 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "and delayed",
+        "lemma": "lo"
+      },
+      {
+        "surface": "going down",
+        "lemma": "bo"
+      },
+      {
         "surface": "about a full",
         "lemma": "tamim"
       },
@@ -703,6 +799,14 @@
       }
     ],
     "14": [
+      {
+        "surface": "There has been",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -718,6 +822,10 @@
       {
         "surface": "when the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "listened",
+        "lemma": "shama"
       },
       {
         "surface": "to the voice",
@@ -744,6 +852,14 @@
       {
         "surface": "Then Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -824,6 +940,10 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Roll",
         "lemma": "galal"
       },
@@ -858,6 +978,10 @@
     ],
     "19": [
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "stop there",
         "lemma": "amad"
       },
@@ -874,6 +998,18 @@
         "lemma": "zanav"
       },
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "let them",
+        "lemma": "natan"
+      },
+      {
+        "surface": "reach",
+        "lemma": "bo"
+      },
+      {
         "surface": "their cities",
         "lemma": "ir"
       },
@@ -884,6 +1020,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "has delivered them",
+        "lemma": "natan"
       },
       {
         "surface": "into your hand",
@@ -928,6 +1068,10 @@
         "lemma": "sarad"
       },
       {
+        "surface": "retreated",
+        "lemma": "bo"
+      },
+      {
         "surface": "the fortified",
         "lemma": "mivtsar"
       },
@@ -938,8 +1082,16 @@
     ],
     "21": [
       {
+        "surface": "The whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "army",
         "lemma": "am"
+      },
+      {
+        "surface": "returned",
+        "lemma": "shuv"
       },
       {
         "surface": "safely",
@@ -956,6 +1108,10 @@
       {
         "surface": "at Makkedah",
         "lemma": "maqqedah"
+      },
+      {
+        "surface": "and no one",
+        "lemma": "lo"
       },
       {
         "surface": "dared to utter",
@@ -984,6 +1140,10 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Open",
         "lemma": "patach"
       },
@@ -1002,12 +1162,24 @@
       {
         "surface": "kings",
         "lemma": "melekh"
+      },
+      {
+        "surface": "me",
+        "lemma": "yatsa"
       }
     ],
     "23": [
       {
         "surface": "So",
         "lemma": "ken"
+      },
+      {
+        "surface": "they",
+        "lemma": "asah"
+      },
+      {
+        "surface": "brought",
+        "lemma": "yatsa"
       },
       {
         "surface": "five",
@@ -1048,6 +1220,10 @@
     ],
     "24": [
       {
+        "surface": "When they had brought",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "kings",
         "lemma": "melekh"
       },
@@ -1060,12 +1236,24 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "summoned",
+        "lemma": "qara"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the men",
         "lemma": "ish"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "vvv",
@@ -1122,6 +1310,10 @@
     ],
     "25": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       },
@@ -1132,6 +1324,10 @@
       {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Be strong",
@@ -1146,8 +1342,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will do",
+        "lemma": "asah"
+      },
+      {
         "surface": "this",
         "lemma": "kakhah"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "the enemies",
@@ -1192,11 +1396,19 @@
         "lemma": "ets"
       },
       {
+        "surface": "and left them",
+        "lemma": "hayah"
+      },
+      {
         "surface": "evening",
         "lemma": "erev"
       }
     ],
     "27": [
+      {
+        "surface": "At sunset",
+        "lemma": "bo"
+      },
       {
         "surface": "Joshua",
         "lemma": "yehoshua"
@@ -1284,12 +1496,24 @@
         "lemma": "charam"
       },
       {
+        "surface": "everyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "leaving",
         "lemma": "shaar"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "survivors",
         "lemma": "sarid"
+      },
+      {
+        "surface": "So he did",
+        "lemma": "asah"
       },
       {
         "surface": "to the king",
@@ -1298,6 +1522,10 @@
       {
         "surface": "of Makkedah",
         "lemma": "maqqedah"
+      },
+      {
+        "surface": "he had done",
+        "lemma": "asah"
       },
       {
         "surface": "to the king",
@@ -1312,6 +1540,10 @@
       {
         "surface": "Then Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -1344,6 +1576,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "delivered",
+        "lemma": "natan"
+      },
+      {
         "surface": "and its king",
         "lemma": "melekh"
       },
@@ -1360,6 +1596,10 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "nephesh"
       },
@@ -1372,12 +1612,24 @@
         "lemma": "shaar"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "survivors",
         "lemma": "sarid"
       },
       {
+        "surface": "And he did",
+        "lemma": "asah"
+      },
+      {
         "surface": "to the king of Libnah",
         "lemma": "melekh"
+      },
+      {
+        "surface": "he had done",
+        "lemma": "asah"
       },
       {
         "surface": "to the king",
@@ -1392,6 +1644,10 @@
       {
         "surface": "And Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -1424,6 +1680,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "delivered",
+        "lemma": "natan"
+      },
+      {
         "surface": "Lachish",
         "lemma": "lakhish"
       },
@@ -1452,12 +1712,24 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "nephesh"
       },
       {
         "surface": "to the sword",
         "lemma": "cherev"
+      },
+      {
+        "surface": "just as",
+        "lemma": "kol"
+      },
+      {
+        "surface": "he had done",
+        "lemma": "asah"
       },
       {
         "surface": "to Libnah",
@@ -1532,6 +1804,10 @@
         "lemma": "eglon"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -1566,6 +1842,18 @@
         "lemma": "charam"
       },
       {
+        "surface": "everyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "just as",
+        "lemma": "kol"
+      },
+      {
+        "surface": "he had done",
+        "lemma": "asah"
+      },
+      {
         "surface": "to Lachish",
         "lemma": "lakhish"
       }
@@ -1574,6 +1862,10 @@
       {
         "surface": "Then Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -1614,8 +1906,16 @@
         "lemma": "melekh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its villages",
         "lemma": "ir"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -1626,8 +1926,20 @@
         "lemma": "shaar"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "survivors",
         "lemma": "sarid"
+      },
+      {
+        "surface": "just as",
+        "lemma": "kol"
+      },
+      {
+        "surface": "he had done",
+        "lemma": "asah"
       },
       {
         "surface": "at Eglon",
@@ -1636,6 +1948,10 @@
       {
         "surface": "he devoted to destruction",
         "lemma": "charam"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
       }
     ],
     "38": [
@@ -1644,8 +1960,16 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "turned",
+        "lemma": "shuv"
       },
       {
         "surface": "toward Debir",
@@ -1666,6 +1990,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its villages",
         "lemma": "ir"
       },
@@ -1682,12 +2010,24 @@
         "lemma": "charam"
       },
       {
+        "surface": "everyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "leaving",
         "lemma": "shaar"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "survivors",
         "lemma": "sarid"
+      },
+      {
+        "surface": "Joshua did to",
+        "lemma": "asah"
       },
       {
         "surface": "Debir",
@@ -1698,12 +2038,20 @@
         "lemma": "melekh"
       },
       {
+        "surface": "he had done",
+        "lemma": "asah"
+      },
+      {
         "surface": "to Hebron",
         "lemma": "chevron"
       },
       {
         "surface": "and as",
         "lemma": "ken"
+      },
+      {
+        "surface": "he had done",
+        "lemma": "asah"
       },
       {
         "surface": "to Libnah",
@@ -1722,6 +2070,10 @@
       {
         "surface": "conquered",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "region",
@@ -1744,6 +2096,10 @@
         "lemma": "ashedah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their kings",
         "lemma": "melekh"
       },
@@ -1752,12 +2108,20 @@
         "lemma": "shaar"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "survivors",
         "lemma": "sarid"
       },
       {
         "surface": "He devoted to destruction",
         "lemma": "charam"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "that breathed",
@@ -1802,6 +2166,10 @@
         "lemma": "azzah"
       },
       {
+        "surface": "and the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "region",
         "lemma": "erets"
       },
@@ -1844,6 +2212,10 @@
         "lemma": "lakhad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "kings",
         "lemma": "melekh"
       },
@@ -1866,6 +2238,14 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -1880,8 +2260,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "yehoshua",
-    "yisrael",
-    "nakhah"
+    "yisrael"
   ]
 }

@@ -14,26 +14,50 @@
         "lemma": "un"
       },
       {
-        "surface": "What if",
-        "lemma": "hen"
+        "surface": "they do not",
+        "lemma": "lo"
       },
       {
         "surface": "believe",
         "lemma": "aman"
       },
       {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "to my voice",
         "lemma": "qol"
       },
       {
+        "surface": "they may say",
+        "lemma": "amar"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "appeared",
+        "lemma": "raah"
       }
     ],
     "2": [
       {
         "surface": "And the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
       },
       {
         "surface": "What is that",
@@ -46,6 +70,10 @@
       {
         "surface": "A staff",
         "lemma": "matteh"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "amar"
       }
     ],
     "3": [
@@ -58,12 +86,20 @@
         "lemma": "erets"
       },
       {
+        "surface": "said the LORD",
+        "lemma": "amar"
+      },
+      {
         "surface": "So Moses threw",
         "lemma": "shalakh"
       },
       {
         "surface": "it on the ground",
         "lemma": "erets"
+      },
+      {
+        "surface": "and it became",
+        "lemma": "hayah"
       },
       {
         "surface": "a snake",
@@ -104,6 +140,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -118,6 +158,10 @@
       {
         "surface": "and caught",
         "lemma": "chazaq"
+      },
+      {
+        "surface": "and it turned back",
+        "lemma": "hayah"
       },
       {
         "surface": "into a staff",
@@ -142,6 +186,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "of their fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "the God",
         "lemma": "elohim"
       },
@@ -164,6 +212,10 @@
       {
         "surface": "of Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "has appeared",
+        "lemma": "raah"
       }
     ],
     "6": [
@@ -176,6 +228,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Put",
+        "lemma": "bo"
+      },
+      {
         "surface": "your hand",
         "lemma": "yad"
       },
@@ -184,12 +244,20 @@
         "lemma": "cheq"
       },
       {
+        "surface": "So he put",
+        "lemma": "bo"
+      },
+      {
         "surface": "his hand",
         "lemma": "yad"
       },
       {
         "surface": "inside his cloak",
         "lemma": "cheq"
+      },
+      {
+        "surface": "and when he took it out",
+        "lemma": "yatsa"
       },
       {
         "surface": "his hand",
@@ -210,16 +278,36 @@
         "lemma": "yad"
       },
       {
+        "surface": "back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "your cloak",
         "lemma": "cheq"
+      },
+      {
+        "surface": "said the LORD",
+        "lemma": "amar"
       },
       {
         "surface": "So Moses put his hand",
         "lemma": "yad"
       },
       {
+        "surface": "back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "his cloak",
         "lemma": "cheq"
+      },
+      {
+        "surface": "and when he took it out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "it was restored",
+        "lemma": "shuv"
       },
       {
         "surface": "like the rest of his skin",
@@ -228,8 +316,28 @@
     ],
     "8": [
       {
+        "surface": "And the LORD said",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "they refuse",
+        "lemma": "lo"
+      },
+      {
         "surface": "to believe",
         "lemma": "aman"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
+        "surface": "heed",
+        "lemma": "shama"
       },
       {
         "surface": "the witness",
@@ -258,6 +366,18 @@
     ],
     "9": [
       {
+        "surface": "But",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "believe",
         "lemma": "aman"
       },
@@ -268,6 +388,10 @@
       {
         "surface": "signs",
         "lemma": "ot"
+      },
+      {
+        "surface": "or listen",
+        "lemma": "shama"
       },
       {
         "surface": "to your voice",
@@ -294,6 +418,10 @@
         "lemma": "yabbashah"
       },
       {
+        "surface": "Then",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the water",
         "lemma": "mayim"
       },
@@ -304,6 +432,10 @@
       {
         "surface": "the Nile",
         "lemma": "yeor"
+      },
+      {
+        "surface": "will become",
+        "lemma": "hayah"
       },
       {
         "surface": "blood",
@@ -322,6 +454,14 @@
       {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "have never",
+        "lemma": "lo"
       },
       {
         "surface": "been eloquent",
@@ -360,6 +500,10 @@
       {
         "surface": "And the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Who",
@@ -402,6 +546,10 @@
         "lemma": "ivver"
       },
       {
+        "surface": "Is it not",
+        "lemma": "lo"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       }
@@ -414,6 +562,10 @@
       {
         "surface": "go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "will help you",
+        "lemma": "hayah"
       },
       {
         "surface": "as you speak",
@@ -429,6 +581,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "But Moses replied",
+        "lemma": "amar"
+      },
       {
         "surface": "Lord",
         "lemma": "adonai"
@@ -460,6 +616,14 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "and He said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "Aaron",
         "lemma": "aharon"
       },
@@ -480,8 +644,16 @@
         "lemma": "davar"
       },
       {
-        "surface": "is now",
-        "lemma": "hinneh"
+        "surface": "on his way",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to meet you",
+        "lemma": "qara"
+      },
+      {
+        "surface": "When he sees you",
+        "lemma": "raah"
       },
       {
         "surface": "he will be glad",
@@ -510,12 +682,20 @@
         "lemma": "peh"
       },
       {
+        "surface": "will help",
+        "lemma": "hayah"
+      },
+      {
         "surface": "both of you to speak",
         "lemma": "peh"
       },
       {
         "surface": "and I will teach",
         "lemma": "yara"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
       }
     ],
     "16": [
@@ -528,8 +708,16 @@
         "lemma": "am"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "spokesman",
         "lemma": "peh"
+      },
+      {
+        "surface": "and it will be",
+        "lemma": "hayah"
       },
       {
         "surface": "God",
@@ -550,6 +738,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "you can perform",
+        "lemma": "asah"
+      },
+      {
         "surface": "signs with it",
         "lemma": "ot"
       }
@@ -564,6 +756,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "his father-in-law",
         "lemma": "choten"
       },
@@ -572,8 +768,12 @@
         "lemma": "yeter"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "let me return",
+        "lemma": "shuv"
       },
       {
         "surface": "my brothers",
@@ -582,6 +782,10 @@
       {
         "surface": "in Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
       },
       {
         "surface": "if they are still",
@@ -598,12 +802,20 @@
       {
         "surface": "in peace",
         "lemma": "shalom"
+      },
+      {
+        "surface": "Jethro replied",
+        "lemma": "amar"
       }
     ],
     "19": [
       {
         "surface": "Now the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "had said",
+        "lemma": "amar"
       },
       {
         "surface": "Moses",
@@ -618,8 +830,16 @@
         "lemma": "halakh"
       },
       {
+        "surface": "back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the men",
@@ -664,6 +884,10 @@
         "lemma": "chamor"
       },
       {
+        "surface": "and headed back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "vvv",
         "lemma": "erets"
       },
@@ -698,6 +922,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "instructed",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -706,8 +934,20 @@
         "lemma": "halakh"
       },
       {
+        "surface": "back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "see that",
+        "lemma": "raah"
+      },
+      {
+        "surface": "you perform",
+        "lemma": "asah"
       },
       {
         "surface": "before",
@@ -716,6 +956,10 @@
       {
         "surface": "Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the wonders",
@@ -738,6 +982,10 @@
         "lemma": "lev"
       },
       {
+        "surface": "so that he will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "let the people",
         "lemma": "am"
       },
@@ -747,6 +995,10 @@
       }
     ],
     "22": [
+      {
+        "surface": "Then tell",
+        "lemma": "amar"
+      },
       {
         "surface": "Pharaoh that",
         "lemma": "paroh"
@@ -758,6 +1010,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "Israel",
@@ -773,6 +1029,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "and I told you",
+        "lemma": "amar"
+      },
       {
         "surface": "to let My son",
         "lemma": "ben"
@@ -792,10 +1052,6 @@
       {
         "surface": "to let him go",
         "lemma": "shalach"
-      },
-      {
-        "surface": "behold",
-        "lemma": "hinneh"
       },
       {
         "surface": "will kill",
@@ -818,6 +1074,10 @@
       {
         "surface": "along the way",
         "lemma": "derekh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "hayah"
       },
       {
         "surface": "the LORD",
@@ -876,12 +1136,20 @@
       {
         "surface": "of blood",
         "lemma": "dam"
+      },
+      {
+        "surface": "she said",
+        "lemma": "amar"
       }
     ],
     "26": [
       {
         "surface": "So the LORD let him alone",
         "lemma": "raphah"
+      },
+      {
+        "surface": "she said",
+        "lemma": "amar"
       },
       {
         "surface": "bridegroom",
@@ -902,12 +1170,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "had said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Aaron",
         "lemma": "aharon"
       },
       {
         "surface": "Go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "and meet",
+        "lemma": "qara"
       },
       {
         "surface": "Moses",
@@ -952,12 +1228,20 @@
         "lemma": "aharon"
       },
       {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "had sent him",
         "lemma": "shalach"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the signs",
@@ -986,6 +1270,10 @@
         "lemma": "asaph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the elders",
         "lemma": "zaqen"
       },
@@ -1008,6 +1296,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -1018,6 +1310,10 @@
       {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "And Moses performed",
+        "lemma": "asah"
       },
       {
         "surface": "the signs",
@@ -1042,6 +1338,10 @@
         "lemma": "aman"
       },
       {
+        "surface": "And when they heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -1052,6 +1352,10 @@
       {
         "surface": "to the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "had seen",
+        "lemma": "raah"
       },
       {
         "surface": "their affliction",
@@ -1068,8 +1372,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "mosheh",
-    "halakh",
-    "shalach"
+    "hayah"
   ]
 }

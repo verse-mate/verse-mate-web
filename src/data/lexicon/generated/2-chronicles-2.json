@@ -10,6 +10,10 @@
         "lemma": "shelomoh"
       },
       {
+        "surface": "purposed",
+        "lemma": "amar"
+      },
+      {
         "surface": "to build",
         "lemma": "banah"
       },
@@ -90,6 +94,14 @@
         "lemma": "tsor"
       },
       {
+        "surface": "you did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "my father",
+        "lemma": "av"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
@@ -108,13 +120,13 @@
       {
         "surface": "a house",
         "lemma": "bet"
+      },
+      {
+        "surface": "to live",
+        "lemma": "yashav"
       }
     ],
     "4": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "I am about to build",
         "lemma": "banah"
@@ -222,6 +234,10 @@
         "lemma": "gadol"
       },
       {
+        "surface": "than all",
+        "lemma": "kol"
+      },
+      {
         "surface": "gods",
         "lemma": "elohim"
       }
@@ -250,6 +266,10 @@
       {
         "surface": "even the highest heavens",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "lo"
       },
       {
         "surface": "contain Him",
@@ -298,6 +318,10 @@
         "lemma": "patach"
       },
       {
+        "surface": "to work",
+        "lemma": "asah"
+      },
+      {
         "surface": "with gold",
         "lemma": "zahav"
       },
@@ -336,6 +360,10 @@
       {
         "surface": "and Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "my father",
+        "lemma": "av"
       },
       {
         "surface": "David",
@@ -396,10 +424,6 @@
         "lemma": "levanon"
       },
       {
-        "surface": "And indeed",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "my servants",
         "lemma": "eved"
       },
@@ -439,6 +463,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "I will pay",
+        "lemma": "natan"
+      },
       {
         "surface": "your servants",
         "lemma": "eved"
@@ -502,6 +530,10 @@
     ],
     "11": [
       {
+        "surface": "Then",
+        "lemma": "amar"
+      },
+      {
         "surface": "Hiram",
         "lemma": "churam"
       },
@@ -538,6 +570,10 @@
         "lemma": "am"
       },
       {
+        "surface": "He has set you",
+        "lemma": "natan"
+      },
+      {
         "surface": "as king",
         "lemma": "melekh"
       }
@@ -546,6 +582,10 @@
       {
         "surface": "And Hiram",
         "lemma": "churam"
+      },
+      {
+        "surface": "added",
+        "lemma": "amar"
       },
       {
         "surface": "Blessed be",
@@ -564,12 +604,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "made",
+        "lemma": "asah"
+      },
+      {
         "surface": "the heavens",
         "lemma": "shamayim"
       },
       {
         "surface": "and the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "has given",
+        "lemma": "natan"
       },
       {
         "surface": "King",
@@ -664,6 +712,10 @@
         "lemma": "dan"
       },
       {
+        "surface": "and his father",
+        "lemma": "av"
+      },
+      {
         "surface": "is a man",
         "lemma": "ish"
       },
@@ -674,6 +726,10 @@
       {
         "surface": "He is skilled",
         "lemma": "yada"
+      },
+      {
+        "surface": "in work",
+        "lemma": "asah"
       },
       {
         "surface": "with gold",
@@ -716,6 +772,10 @@
         "lemma": "buts"
       },
       {
+        "surface": "He is experienced in every kind",
+        "lemma": "kol"
+      },
+      {
         "surface": "of engraving",
         "lemma": "patach"
       },
@@ -724,8 +784,16 @@
         "lemma": "chashav"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "design",
         "lemma": "machashavah"
+      },
+      {
+        "surface": "is given",
+        "lemma": "natan"
       },
       {
         "surface": "your craftsmen",
@@ -738,6 +806,10 @@
       {
         "surface": "of my lord",
         "lemma": "adon"
+      },
+      {
+        "surface": "your father",
+        "lemma": "av"
       },
       {
         "surface": "David",
@@ -776,6 +848,10 @@
       {
         "surface": "and wine",
         "lemma": "yayin"
+      },
+      {
+        "surface": "he promised",
+        "lemma": "amar"
       }
     ],
     "16": [
@@ -792,8 +868,16 @@
         "lemma": "levanon"
       },
       {
+        "surface": "as many",
+        "lemma": "kol"
+      },
+      {
         "surface": "as you need",
         "lemma": "tsorekh"
+      },
+      {
+        "surface": "and we will float them",
+        "lemma": "bo"
       },
       {
         "surface": "as rafts",
@@ -826,6 +910,10 @@
         "lemma": "saphar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the foreign",
         "lemma": "ger"
       },
@@ -850,6 +938,10 @@
         "lemma": "sephar"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "David had conducted",
         "lemma": "david"
       },
@@ -863,6 +955,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "Solomon made",
+        "lemma": "asah"
+      },
       {
         "surface": "70,000 of them",
         "lemma": "shivim"

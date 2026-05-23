@@ -32,8 +32,16 @@
         "lemma": "ben"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "and tell",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -87,6 +95,14 @@
       }
     ],
     "4": [
+      {
+        "surface": "instead of",
+        "lemma": "lo"
+      },
+      {
+        "surface": "bringing",
+        "lemma": "bo"
+      },
       {
         "surface": "the entrance",
         "lemma": "petach"
@@ -162,6 +178,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "will bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "to the LORD",
         "lemma": "yehovah"
       },
@@ -180,6 +200,10 @@
       {
         "surface": "fields",
         "lemma": "saday"
+      },
+      {
+        "surface": "They are to bring them",
+        "lemma": "bo"
       },
       {
         "surface": "the priest",
@@ -270,6 +294,10 @@
     ],
     "7": [
       {
+        "surface": "They must no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
       },
@@ -294,6 +322,10 @@
         "lemma": "achar"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a permanent",
         "lemma": "olam"
       },
@@ -307,6 +339,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Tell",
+        "lemma": "amar"
+      },
       {
         "surface": "that if anyone",
         "lemma": "ish"
@@ -346,6 +382,14 @@
     ],
     "9": [
       {
+        "surface": "but does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "the entrance",
         "lemma": "petach"
       },
@@ -356,6 +400,10 @@
       {
         "surface": "of Meeting",
         "lemma": "moed"
+      },
+      {
+        "surface": "to sacrifice",
+        "lemma": "asah"
       },
       {
         "surface": "to the LORD",
@@ -404,8 +452,16 @@
         "lemma": "akhal"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "blood",
         "lemma": "dam"
+      },
+      {
+        "surface": "I will set",
+        "lemma": "natan"
       },
       {
         "surface": "My face",
@@ -442,6 +498,10 @@
         "lemma": "dam"
       },
       {
+        "surface": "have given",
+        "lemma": "natan"
+      },
+      {
         "surface": "to make atonement",
         "lemma": "kipher"
       },
@@ -468,8 +528,16 @@
     ],
     "12": [
       {
+        "surface": "I say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "None",
+        "lemma": "kol"
       },
       {
         "surface": "may eat",
@@ -478,6 +546,10 @@
       {
         "surface": "blood",
         "lemma": "dam"
+      },
+      {
+        "surface": "nor may",
+        "lemma": "lo"
       },
       {
         "surface": "any foreigner",
@@ -564,6 +636,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "flesh",
         "lemma": "basar"
       },
@@ -572,8 +648,16 @@
         "lemma": "dam"
       },
       {
+        "surface": "Therefore I have told",
+        "lemma": "amar"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
       },
       {
         "surface": "eat",
@@ -584,12 +668,20 @@
         "lemma": "dam"
       },
       {
+        "surface": "of any",
+        "lemma": "kol"
+      },
+      {
         "surface": "living thing",
         "lemma": "basar"
       },
       {
         "surface": "the life",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "flesh",
@@ -609,6 +701,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "And any",
+        "lemma": "kol"
+      },
       {
         "surface": "person",
         "lemma": "nephesh"
@@ -664,6 +760,14 @@
     ],
     "16": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "he does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "wash",
         "lemma": "kavas"
       },
@@ -688,6 +792,6 @@
   "themeLemmas": [
     "dam",
     "nephesh",
-    "akhal"
+    "kol"
   ]
 }

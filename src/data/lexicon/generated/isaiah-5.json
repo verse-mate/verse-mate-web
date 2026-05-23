@@ -30,6 +30,10 @@
         "lemma": "yedid"
       },
       {
+        "surface": "had",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a vineyard",
         "lemma": "kerem"
       },
@@ -84,8 +88,16 @@
         "lemma": "qavah"
       },
       {
+        "surface": "to yield",
+        "lemma": "asah"
+      },
+      {
         "surface": "good grapes",
         "lemma": "enav"
+      },
+      {
+        "surface": "but the fruit it produced",
+        "lemma": "asah"
       },
       {
         "surface": "was sour",
@@ -98,6 +110,10 @@
         "lemma": "attah"
       },
       {
+        "surface": "O dwellers",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -108,10 +124,6 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
-      },
-      {
-        "surface": "I exhort",
-        "lemma": "na"
       },
       {
         "surface": "you to judge",
@@ -136,8 +148,20 @@
         "lemma": "od"
       },
       {
+        "surface": "could have been done",
+        "lemma": "asah"
+      },
+      {
         "surface": "for My vineyard",
         "lemma": "kerem"
+      },
+      {
+        "surface": "than",
+        "lemma": "lo"
+      },
+      {
+        "surface": "I have done",
+        "lemma": "asah"
       },
       {
         "surface": "Why",
@@ -150,6 +174,10 @@
       {
         "surface": "sweet grapes",
         "lemma": "enav"
+      },
+      {
+        "surface": "did it bring forth",
+        "lemma": "asah"
       },
       {
         "surface": "sour fruit",
@@ -166,6 +194,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "am about to do",
+        "lemma": "asah"
+      },
+      {
         "surface": "to My vineyard",
         "lemma": "kerem"
       },
@@ -178,6 +210,10 @@
         "lemma": "mesukhah"
       },
       {
+        "surface": "and it will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "consumed",
         "lemma": "baar"
       },
@@ -188,6 +224,10 @@
       {
         "surface": "its wall",
         "lemma": "gader"
+      },
+      {
+        "surface": "and it will be",
+        "lemma": "hayah"
       },
       {
         "surface": "trampled",
@@ -204,8 +244,16 @@
         "lemma": "batah"
       },
       {
+        "surface": "neither",
+        "lemma": "lo"
+      },
+      {
         "surface": "pruned",
         "lemma": "zamar"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "cultivated",
@@ -226,6 +274,10 @@
       {
         "surface": "I will command",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "the clouds",
+        "lemma": "av"
       },
       {
         "surface": "that rain",
@@ -282,10 +334,6 @@
         "lemma": "mishpat"
       },
       {
-        "surface": "but saw",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "bloodshed",
         "lemma": "mispach"
       },
@@ -294,19 +342,11 @@
         "lemma": "tsedaqah"
       },
       {
-        "surface": "but heard",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "a cry of distress",
         "lemma": "tsaaqah"
       }
     ],
     "8": [
-      {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
       {
         "surface": "to you who add",
         "lemma": "naga"
@@ -340,6 +380,10 @@
         "lemma": "maqom"
       },
       {
+        "surface": "and you live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "alone",
         "lemma": "bad"
       },
@@ -366,12 +410,20 @@
         "lemma": "tsava"
       },
       {
+        "surface": "Surely",
+        "lemma": "im"
+      },
+      {
         "surface": "many",
         "lemma": "rav"
       },
       {
         "surface": "houses",
         "lemma": "bet"
+      },
+      {
+        "surface": "will become",
+        "lemma": "hayah"
       },
       {
         "surface": "desolate",
@@ -384,6 +436,10 @@
       {
         "surface": "vvv",
         "lemma": "ayin"
+      },
+      {
+        "surface": "left unoccupied",
+        "lemma": "yashav"
       }
     ],
     "10": [
@@ -398,6 +454,10 @@
       {
         "surface": "of vineyard",
         "lemma": "kerem"
+      },
+      {
+        "surface": "will yield",
+        "lemma": "asah"
       },
       {
         "surface": "but a",
@@ -416,15 +476,15 @@
         "lemma": "zera"
       },
       {
+        "surface": "only",
+        "lemma": "asah"
+      },
+      {
         "surface": "an ephah of grain",
         "lemma": "ephah"
       }
     ],
     "11": [
-      {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
       {
         "surface": "to those who rise early",
         "lemma": "shakham"
@@ -484,12 +544,24 @@
         "lemma": "yayin"
       },
       {
+        "surface": "They disregard",
+        "lemma": "lo"
+      },
+      {
         "surface": "the actions",
         "lemma": "poal"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and fail",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
       },
       {
         "surface": "the work",
@@ -688,10 +760,6 @@
     ],
     "18": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to those who draw",
         "lemma": "mashakh"
       },
@@ -722,12 +790,20 @@
     ],
     "19": [
       {
+        "surface": "to those who say",
+        "lemma": "amar"
+      },
+      {
         "surface": "Let Him hurry",
         "lemma": "mahar"
       },
       {
         "surface": "and hasten His work",
         "lemma": "maaseh"
+      },
+      {
+        "surface": "we may see it",
+        "lemma": "raah"
       },
       {
         "surface": "Let the plan",
@@ -742,14 +818,18 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "so that we may know it",
         "lemma": "yada"
       }
     ],
     "20": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
+        "surface": "to those who call",
+        "lemma": "amar"
       },
       {
         "surface": "evil",
@@ -810,10 +890,6 @@
     ],
     "21": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to those who are wise",
         "lemma": "chakham"
       },
@@ -835,10 +911,6 @@
       }
     ],
     "22": [
-      {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
       {
         "surface": "to those who are heroes",
         "lemma": "gibbor"
@@ -932,6 +1004,10 @@
         "lemma": "sheresh"
       },
       {
+        "surface": "will decay",
+        "lemma": "hayah"
+      },
+      {
         "surface": "and their blossoms",
         "lemma": "perach"
       },
@@ -1018,6 +1094,10 @@
         "lemma": "nevelah"
       },
       {
+        "surface": "lie",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like refuse",
         "lemma": "suchah"
       },
@@ -1030,8 +1110,20 @@
         "lemma": "chuts"
       },
       {
+        "surface": "Despite all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "turned away",
+        "lemma": "shuv"
       },
       {
         "surface": "His hand",
@@ -1076,16 +1168,16 @@
         "lemma": "erets"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "how speedily",
         "lemma": "meherah"
       },
       {
         "surface": "and swiftly",
         "lemma": "qal"
+      },
+      {
+        "surface": "they come",
+        "lemma": "bo"
       }
     ],
     "27": [
@@ -1106,12 +1198,24 @@
         "lemma": "kashal"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "one slumbers",
         "lemma": "num"
       },
       {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
         "surface": "sleeps",
         "lemma": "yashen"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       },
       {
         "surface": "belt",
@@ -1120,6 +1224,10 @@
       {
         "surface": "is loose",
         "lemma": "patach"
+      },
+      {
+        "surface": "and no",
+        "lemma": "lo"
       },
       {
         "surface": "sandal",
@@ -1142,6 +1250,10 @@
       {
         "surface": "are sharpened",
         "lemma": "shanan"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "their bows",
@@ -1240,10 +1352,6 @@
         "lemma": "erets"
       },
       {
-        "surface": "he will see",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "darkness",
         "lemma": "choshekh"
       },
@@ -1266,8 +1374,8 @@
     ]
   },
   "themeLemmas": [
-    "kerem",
-    "hoy",
-    "tsava"
+    "lo",
+    "asah",
+    "kerem"
   ]
 }

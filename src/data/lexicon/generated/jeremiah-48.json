@@ -30,8 +30,8 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "Woe",
-        "lemma": "hoy"
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "Nebo",
@@ -210,6 +210,10 @@
         "lemma": "tsar"
       },
       {
+        "surface": "resound",
+        "lemma": "shama"
+      },
+      {
         "surface": "over the destruction",
         "lemma": "shever"
       }
@@ -226,6 +230,10 @@
       {
         "surface": "for your lives",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "Become",
+        "lemma": "hayah"
       },
       {
         "surface": "like a juniper",
@@ -258,6 +266,10 @@
         "lemma": "kemosh"
       },
       {
+        "surface": "will go",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "into exile",
         "lemma": "golah"
       },
@@ -280,8 +292,20 @@
         "lemma": "shadad"
       },
       {
+        "surface": "will move",
+        "lemma": "bo"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "city",
         "lemma": "ir"
+      },
+      {
+        "surface": "and not",
+        "lemma": "lo"
       },
       {
         "surface": "one town",
@@ -310,9 +334,17 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has said",
+        "lemma": "amar"
       }
     ],
     "9": [
+      {
+        "surface": "Put",
+        "lemma": "natan"
+      },
       {
         "surface": "salt",
         "lemma": "tsits"
@@ -330,12 +362,20 @@
         "lemma": "ir"
       },
       {
+        "surface": "will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "desolate",
         "lemma": "shammah"
       },
       {
         "surface": "with no one",
         "lemma": "ayin"
+      },
+      {
+        "surface": "to dwell",
+        "lemma": "yashav"
       }
     ],
     "10": [
@@ -346,6 +386,10 @@
       {
         "surface": "who is remiss",
         "lemma": "remiyyah"
+      },
+      {
+        "surface": "in doing",
+        "lemma": "asah"
       },
       {
         "surface": "the work",
@@ -394,6 +438,10 @@
         "lemma": "shemer"
       },
       {
+        "surface": "he has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "been poured",
         "lemma": "ruq"
       },
@@ -404,6 +452,10 @@
       {
         "surface": "vessel",
         "lemma": "keli"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "gone",
@@ -426,6 +478,10 @@
         "lemma": "reach"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "is unchanged",
         "lemma": "mur"
       }
@@ -436,12 +492,12 @@
         "lemma": "ken"
       },
       {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the days",
         "lemma": "yom"
+      },
+      {
+        "surface": "are coming",
+        "lemma": "bo"
       },
       {
         "surface": "declares",
@@ -518,6 +574,10 @@
       {
         "surface": "How",
         "lemma": "ekh"
+      },
+      {
+        "surface": "can you say",
+        "lemma": "amar"
       },
       {
         "surface": "are warriors",
@@ -622,8 +682,16 @@
         "lemma": "nud"
       },
       {
+        "surface": "all you",
+        "lemma": "kol"
+      },
+      {
         "surface": "who surround him",
         "lemma": "saviv"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
       },
       {
         "surface": "who knows",
@@ -632,6 +700,10 @@
       {
         "surface": "his name",
         "lemma": "shem"
+      },
+      {
+        "surface": "tell",
+        "lemma": "amar"
       },
       {
         "surface": "how",
@@ -668,12 +740,20 @@
         "lemma": "kavod"
       },
       {
+        "surface": "sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "on parched ground",
         "lemma": "tsama"
       },
       {
         "surface": "O daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "dwelling",
+        "lemma": "yashav"
       },
       {
         "surface": "in Dibon",
@@ -714,6 +794,10 @@
         "lemma": "tsaphah"
       },
       {
+        "surface": "O dweller",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Aroer",
         "lemma": "aroer"
       },
@@ -732,6 +816,10 @@
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "has happened",
+        "lemma": "hayah"
       }
     ],
     "20": [
@@ -776,6 +864,10 @@
       {
         "surface": "Judgment",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "has come",
+        "lemma": "bo"
       },
       {
         "surface": "vvv",
@@ -846,6 +938,10 @@
       {
         "surface": "Bozrah",
         "lemma": "botsrah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the towns",
@@ -924,11 +1020,23 @@
         "lemma": "qe"
       },
       {
+        "surface": "become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a laughingstock",
         "lemma": "sechoq"
       }
     ],
     "27": [
+      {
+        "surface": "Was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
       {
         "surface": "Israel",
         "lemma": "yisrael"
@@ -972,8 +1080,16 @@
         "lemma": "sela"
       },
       {
+        "surface": "O dwellers",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Moab",
         "lemma": "moav"
+      },
+      {
+        "surface": "Be",
+        "lemma": "hayah"
       },
       {
         "surface": "like a dove",
@@ -997,6 +1113,10 @@
       }
     ],
     "29": [
+      {
+        "surface": "We have heard",
+        "lemma": "shama"
+      },
       {
         "surface": "of Moab’s",
         "lemma": "moav"
@@ -1052,12 +1172,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "but it is futile",
+        "lemma": "lo"
+      },
+      {
         "surface": "His boasting",
         "lemma": "bad"
       },
       {
+        "surface": "is as empty",
+        "lemma": "lo"
+      },
+      {
         "surface": "as",
         "lemma": "ken"
+      },
+      {
+        "surface": "his deeds",
+        "lemma": "asah"
       }
     ],
     "31": [
@@ -1072,6 +1204,10 @@
       {
         "surface": "I will cry out",
         "lemma": "zaaq"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "of Moab",
@@ -1190,6 +1326,10 @@
         "lemma": "yeqev"
       },
       {
+        "surface": "no one",
+        "lemma": "lo"
+      },
+      {
         "surface": "treads them",
         "lemma": "darakh"
       },
@@ -1200,6 +1340,10 @@
       {
         "surface": "their shouts",
         "lemma": "hedad"
+      },
+      {
+        "surface": "are not",
+        "lemma": "lo"
       },
       {
         "surface": "for joy",
@@ -1218,6 +1362,10 @@
       {
         "surface": "Elealeh",
         "lemma": "elale"
+      },
+      {
+        "surface": "they raise",
+        "lemma": "natan"
       },
       {
         "surface": "their voices",
@@ -1246,6 +1394,10 @@
       {
         "surface": "of Nimrim",
         "lemma": "nimrim"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "hayah"
       },
       {
         "surface": "have dried up",
@@ -1332,11 +1484,19 @@
         "lemma": "yitrah"
       },
       {
+        "surface": "they acquired",
+        "lemma": "asah"
+      },
+      {
         "surface": "has perished",
         "lemma": "avad"
       }
     ],
     "37": [
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
       {
         "surface": "head",
         "lemma": "rosh"
@@ -1346,12 +1506,20 @@
         "lemma": "qorchah"
       },
       {
+        "surface": "and every",
+        "lemma": "kol"
+      },
+      {
         "surface": "beard",
         "lemma": "zaqan"
       },
       {
         "surface": "is clipped",
         "lemma": "gara"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "hand",
@@ -1372,6 +1540,10 @@
     ],
     "38": [
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the rooftops",
         "lemma": "gag"
       },
@@ -1382,6 +1554,10 @@
       {
         "surface": "and in the public squares",
         "lemma": "rechov"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
       },
       {
         "surface": "is mourning",
@@ -1454,12 +1630,20 @@
         "lemma": "moav"
       },
       {
+        "surface": "has become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "an object of ridicule",
         "lemma": "sechoq"
       },
       {
         "surface": "and horror",
         "lemma": "mechittah"
+      },
+      {
+        "surface": "to all those",
+        "lemma": "kol"
       },
       {
         "surface": "around him",
@@ -1476,8 +1660,8 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "an eagle",
@@ -1534,6 +1718,10 @@
         "lemma": "gibbor"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like the heart",
         "lemma": "lev"
       },
@@ -1582,6 +1770,10 @@
         "lemma": "pach"
       },
       {
+        "surface": "O dweller",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Moab",
         "lemma": "moav"
       },
@@ -1626,6 +1818,10 @@
       {
         "surface": "in the snare",
         "lemma": "pach"
+      },
+      {
+        "surface": "I will bring",
+        "lemma": "bo"
       },
       {
         "surface": "Moab",
@@ -1674,6 +1870,10 @@
         "lemma": "esh"
       },
       {
+        "surface": "has gone forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from Heshbon",
         "lemma": "cheshbon"
       },
@@ -1715,10 +1915,6 @@
       }
     ],
     "46": [
-      {
-        "surface": "Woe",
-        "lemma": "oy"
-      },
       {
         "surface": "O Moab",
         "lemma": "moav"
@@ -1766,6 +1962,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "I will restore",
+        "lemma": "shuv"
+      },
+      {
         "surface": "Moab",
         "lemma": "moav"
       },
@@ -1797,7 +1997,7 @@
   },
   "themeLemmas": [
     "moav",
-    "neum",
-    "shadad"
+    "kol",
+    "neum"
   ]
 }

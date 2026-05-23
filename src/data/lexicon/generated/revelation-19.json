@@ -6,6 +6,18 @@
   "verses": {
     "1": [
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "the roar",
+        "lemma": "megas"
+      },
+      {
+        "surface": "of a great",
+        "lemma": "polus"
+      },
+      {
         "surface": "multitude",
         "lemma": "ochlos"
       },
@@ -14,8 +26,8 @@
         "lemma": "ouranos"
       },
       {
-        "surface": "Hallelujah",
-        "lemma": "allelouia"
+        "surface": "shouting",
+        "lemma": "lego"
       },
       {
         "surface": "Salvation",
@@ -50,6 +62,10 @@
       {
         "surface": "He has judged",
         "lemma": "krino"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "prostitute",
@@ -92,10 +108,6 @@
       {
         "surface": "they called out",
         "lemma": "ero"
-      },
-      {
-        "surface": "Hallelujah",
-        "lemma": "allelouia"
       },
       {
         "surface": "smoke",
@@ -152,12 +164,8 @@
         "lemma": "thronos"
       },
       {
-        "surface": "Amen",
-        "lemma": "amen"
-      },
-      {
-        "surface": "Hallelujah",
-        "lemma": "allelouia"
+        "surface": "saying",
+        "lemma": "lego"
       }
     ],
     "5": [
@@ -166,8 +174,16 @@
         "lemma": "phone"
       },
       {
+        "surface": "came",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "throne",
         "lemma": "thronos"
+      },
+      {
+        "surface": "saying",
+        "lemma": "lego"
       },
       {
         "surface": "Praise",
@@ -176,6 +192,10 @@
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "all you",
+        "lemma": "pas"
       },
       {
         "surface": "who serve",
@@ -188,12 +208,24 @@
       {
         "surface": "small",
         "lemma": "mikros"
+      },
+      {
+        "surface": "great alike",
+        "lemma": "megas"
       }
     ],
     "6": [
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "the roar",
         "lemma": "phone"
+      },
+      {
+        "surface": "of a great",
+        "lemma": "polus"
       },
       {
         "surface": "multitude",
@@ -202,6 +234,10 @@
       {
         "surface": "the rushing",
         "lemma": "phone"
+      },
+      {
+        "surface": "of many",
+        "lemma": "polus"
       },
       {
         "surface": "waters",
@@ -220,8 +256,8 @@
         "lemma": "bronte"
       },
       {
-        "surface": "Hallelujah",
-        "lemma": "allelouia"
+        "surface": "crying out",
+        "lemma": "lego"
       },
       {
         "surface": "Lord",
@@ -250,6 +286,10 @@
         "lemma": "agalliao"
       },
       {
+        "surface": "give",
+        "lemma": "didomi"
+      },
+      {
         "surface": "glory",
         "lemma": "doxa"
       },
@@ -262,6 +302,10 @@
         "lemma": "arnion"
       },
       {
+        "surface": "has come",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "bride",
         "lemma": "gune"
       },
@@ -271,6 +315,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "was given",
+        "lemma": "didomi"
+      },
       {
         "surface": "clothing of",
         "lemma": "periballo"
@@ -292,6 +340,10 @@
         "lemma": "bussinos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "righteous acts",
         "lemma": "dikaioma"
       },
@@ -301,6 +353,14 @@
       }
     ],
     "9": [
+      {
+        "surface": "the angel told",
+        "lemma": "lego"
+      },
+      {
+        "surface": "to write",
+        "lemma": "grapho"
+      },
       {
         "surface": "Blessed are",
         "lemma": "makarios"
@@ -320,6 +380,14 @@
       {
         "surface": "Lamb",
         "lemma": "arnion"
+      },
+      {
+        "surface": "he said",
+        "lemma": "lego"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "true",
@@ -348,12 +416,28 @@
         "lemma": "proskuneo"
       },
       {
+        "surface": "he told",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Do not do that",
+        "lemma": "horao"
+      },
+      {
+        "surface": "I am",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a fellow servant",
         "lemma": "sundoulos"
       },
       {
         "surface": "brothers",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "rely on",
+        "lemma": "echo"
       },
       {
         "surface": "testimony",
@@ -380,6 +464,10 @@
         "lemma": "iesous"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "spirit",
         "lemma": "pneuma"
       },
@@ -389,6 +477,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
       {
         "surface": "heaven",
         "lemma": "ouranos"
@@ -444,6 +536,10 @@
         "lemma": "pur"
       },
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "royal crowns",
         "lemma": "diadema"
       },
@@ -452,8 +548,24 @@
         "lemma": "kephale"
       },
       {
+        "surface": "He has",
+        "lemma": "echo"
+      },
+      {
         "surface": "a name",
         "lemma": "onoma"
+      },
+      {
+        "surface": "written on Him",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "only",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "knows",
+        "lemma": "eido"
       }
     ],
     "13": [
@@ -588,8 +700,16 @@
     ],
     "16": [
       {
+        "surface": "He has",
+        "lemma": "echo"
+      },
+      {
         "surface": "a name",
         "lemma": "onoma"
+      },
+      {
+        "surface": "written",
+        "lemma": "grapho"
       },
       {
         "surface": "robe",
@@ -618,8 +738,20 @@
     ],
     "17": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "an",
+        "lemma": "heis"
+      },
+      {
         "surface": "angel",
         "lemma": "angelos"
+      },
+      {
+        "surface": "standing",
+        "lemma": "histemi"
       },
       {
         "surface": "sun",
@@ -630,8 +762,16 @@
         "lemma": "krazo"
       },
       {
+        "surface": "a loud",
+        "lemma": "megas"
+      },
+      {
         "surface": "voice",
         "lemma": "phone"
+      },
+      {
+        "surface": "to all",
+        "lemma": "pas"
       },
       {
         "surface": "birds",
@@ -648,6 +788,10 @@
       {
         "surface": "gather together",
         "lemma": "sunago"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "supper",
@@ -684,6 +828,10 @@
         "lemma": "hippos"
       },
       {
+        "surface": "of everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "slave",
         "lemma": "doulos"
       },
@@ -694,9 +842,17 @@
       {
         "surface": "small",
         "lemma": "mikros"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       }
     ],
     "19": [
+      {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
       {
         "surface": "beast",
         "lemma": "therion"
@@ -716,6 +872,10 @@
       {
         "surface": "assembled",
         "lemma": "sunago"
+      },
+      {
+        "surface": "to wage",
+        "lemma": "poieo"
       },
       {
         "surface": "war",
@@ -748,12 +908,20 @@
         "lemma": "pseudoprophetes"
       },
       {
+        "surface": "had performed",
+        "lemma": "poieo"
+      },
+      {
         "surface": "signs",
         "lemma": "semeion"
       },
       {
         "surface": "deceiving",
         "lemma": "planao"
+      },
+      {
+        "surface": "who had",
+        "lemma": "lambano"
       },
       {
         "surface": "mark",
@@ -814,6 +982,10 @@
         "lemma": "rhomphaia"
       },
       {
+        "surface": "proceeded",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "mouth",
         "lemma": "stoma"
       },
@@ -824,6 +996,10 @@
       {
         "surface": "horse",
         "lemma": "hippos"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "birds",
@@ -840,8 +1016,8 @@
     ]
   },
   "themeLemmas": [
-    "allelouia",
     "bussinos",
-    "orneon"
+    "orneon",
+    "strateuma"
   ]
 }

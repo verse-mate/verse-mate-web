@@ -16,6 +16,10 @@
     ],
     "2": [
       {
+        "surface": "I have heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "many",
         "lemma": "rav"
       },
@@ -26,6 +30,10 @@
       {
         "surface": "comforters",
         "lemma": "nacham"
+      },
+      {
+        "surface": "are you all",
+        "lemma": "kol"
       }
     ],
     "3": [
@@ -58,10 +66,6 @@
       {
         "surface": "speak",
         "lemma": "davar"
-      },
-      {
-        "surface": "if",
-        "lemma": "lu"
       },
       {
         "surface": "you",
@@ -120,12 +124,20 @@
     ],
     "6": [
       {
+        "surface": "Even if",
+        "lemma": "im"
+      },
+      {
         "surface": "I speak",
         "lemma": "davar"
       },
       {
         "surface": "my pain",
         "lemma": "keev"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
       },
       {
         "surface": "relieved",
@@ -162,6 +174,10 @@
         "lemma": "shamem"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my family",
         "lemma": "edah"
       }
@@ -170,6 +186,10 @@
       {
         "surface": "You have bound me",
         "lemma": "qamat"
+      },
+      {
+        "surface": "and it has become",
+        "lemma": "hayah"
       },
       {
         "surface": "a witness",
@@ -284,6 +304,10 @@
     ],
     "12": [
       {
+        "surface": "I was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "at ease",
         "lemma": "shalev"
       },
@@ -328,6 +352,10 @@
       {
         "surface": "my kidneys",
         "lemma": "kilyah"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "mercy",
@@ -422,6 +450,10 @@
         "lemma": "kaph"
       },
       {
+        "surface": "are free of",
+        "lemma": "lo"
+      },
+      {
         "surface": "violence",
         "lemma": "chamas"
       },
@@ -440,6 +472,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "cover",
         "lemma": "kasah"
       },
@@ -450,6 +486,14 @@
       {
         "surface": "may my cry for help",
         "lemma": "zeaqah"
+      },
+      {
+        "surface": "never",
+        "lemma": "al"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "laid to rest",
@@ -542,12 +586,20 @@
       {
         "surface": "the way",
         "lemma": "orach"
+      },
+      {
+        "surface": "of no",
+        "lemma": "lo"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
       }
     ]
   },
   "themeLemmas": [
+    "lo",
     "un",
-    "rea",
-    "rav"
+    "hayah"
   ]
 }

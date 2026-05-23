@@ -22,6 +22,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "spoke",
+        "lemma": "laleo"
+      },
+      {
         "surface": "fathers",
         "lemma": "pater"
       },
@@ -40,6 +44,10 @@
         "lemma": "hemera"
       },
       {
+        "surface": "He has spoken",
+        "lemma": "laleo"
+      },
+      {
         "surface": "His Son",
         "lemma": "huios"
       },
@@ -52,11 +60,23 @@
         "lemma": "kleronomos"
       },
       {
+        "surface": "of all things",
+        "lemma": "pas"
+      },
+      {
+        "surface": "He made",
+        "lemma": "poieo"
+      },
+      {
         "surface": "universe",
         "lemma": "aion"
       }
     ],
     "3": [
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
       {
         "surface": "the radiance",
         "lemma": "apaugasma"
@@ -78,12 +98,20 @@
         "lemma": "phero"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "powerful",
         "lemma": "dunamis"
       },
       {
         "surface": "word",
         "lemma": "rhema"
+      },
+      {
+        "surface": "He had provided",
+        "lemma": "poieo"
       },
       {
         "surface": "purification",
@@ -111,6 +139,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "So He became",
+        "lemma": "ginomai"
+      },
       {
         "surface": "as far",
         "lemma": "tosoutos"
@@ -142,8 +174,20 @@
     ],
     "5": [
       {
+        "surface": "to which",
+        "lemma": "tis"
+      },
+      {
         "surface": "angels",
         "lemma": "angelos"
+      },
+      {
+        "surface": "did God ever say",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "Son",
@@ -162,8 +206,16 @@
         "lemma": "palin"
       },
       {
+        "surface": "will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Father",
         "lemma": "pater"
+      },
+      {
+        "surface": "will be",
+        "lemma": "eimi"
       },
       {
         "surface": "Son",
@@ -188,6 +240,14 @@
         "lemma": "oikoumene"
       },
       {
+        "surface": "He says",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Let} all",
+        "lemma": "pas"
+      },
+      {
         "surface": "God’s",
         "lemma": "theos"
       },
@@ -204,6 +264,14 @@
       {
         "surface": "angels",
         "lemma": "angelos"
+      },
+      {
+        "surface": "He says",
+        "lemma": "lego"
+      },
+      {
+        "surface": "makes",
+        "lemma": "poieo"
       },
       {
         "surface": "angels",
@@ -320,6 +388,10 @@
         "lemma": "ouranos"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the work",
         "lemma": "ergon"
       },
@@ -336,6 +408,10 @@
       {
         "surface": "remain",
         "lemma": "diameno"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "pas"
       },
       {
         "surface": "they will all wear out",
@@ -364,6 +440,10 @@
         "lemma": "allasso"
       },
       {
+        "surface": "remain",
+        "lemma": "eimi"
+      },
+      {
         "surface": "years",
         "lemma": "etos"
       },
@@ -373,6 +453,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "which",
+        "lemma": "tis"
+      },
       {
         "surface": "angels",
         "lemma": "angelos"
@@ -407,6 +491,14 @@
       }
     ],
     "14": [
+      {
+        "surface": "Are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "the angels",
+        "lemma": "pas"
+      },
       {
         "surface": "ministering",
         "lemma": "leitourgikos"

@@ -36,6 +36,10 @@
         "lemma": "euchomai"
       },
       {
+        "surface": "every way",
+        "lemma": "pas"
+      },
+      {
         "surface": "may prosper",
         "lemma": "euodoo"
       },
@@ -62,6 +66,10 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "came",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "testified",
         "lemma": "martureo"
       },
@@ -80,8 +88,20 @@
     ],
     "4": [
       {
+        "surface": "I have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "greater",
+        "lemma": "megas"
+      },
+      {
         "surface": "joy",
         "lemma": "chara"
+      },
+      {
+        "surface": "hear that",
+        "lemma": "akouo"
       },
       {
         "surface": "my",
@@ -104,6 +124,10 @@
       {
         "surface": "Beloved",
         "lemma": "agapetos"
+      },
+      {
+        "surface": "you are",
+        "lemma": "poieo"
       },
       {
         "surface": "faithful",
@@ -136,6 +160,10 @@
         "lemma": "agape"
       },
       {
+        "surface": "You will do",
+        "lemma": "poieo"
+      },
+      {
         "surface": "well",
         "lemma": "kalos"
       },
@@ -154,8 +182,16 @@
     ],
     "7": [
       {
+        "surface": "they went out",
+        "lemma": "exerchomai"
+      },
+      {
         "surface": "Name",
         "lemma": "onoma"
+      },
+      {
+        "surface": "accepting",
+        "lemma": "lambano"
       },
       {
         "surface": "nothing",
@@ -176,6 +212,10 @@
         "lemma": "hupolambano"
       },
       {
+        "surface": "we may be",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "fellow workers",
         "lemma": "sunergos"
       },
@@ -185,6 +225,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "I have written",
+        "lemma": "grapho"
+      },
       {
         "surface": "church",
         "lemma": "ekklesia"
@@ -203,6 +247,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "I come",
+        "lemma": "erchomai"
+      },
       {
         "surface": "I will call attention to",
         "lemma": "hupomimnesko"
@@ -266,12 +314,20 @@
         "lemma": "agathopoieo"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
       {
         "surface": "does evil",
         "lemma": "kakopoieo"
+      },
+      {
+        "surface": "has not seen",
+        "lemma": "horao"
       },
       {
         "surface": "God",
@@ -288,6 +344,10 @@
         "lemma": "martureo"
       },
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "truth",
         "lemma": "aletheia"
       },
@@ -296,8 +356,16 @@
         "lemma": "martureo"
       },
       {
+        "surface": "you know",
+        "lemma": "eido"
+      },
+      {
         "surface": "testimony",
         "lemma": "marturia"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "true",
@@ -305,6 +373,26 @@
       }
     ],
     "13": [
+      {
+        "surface": "I have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "many things",
+        "lemma": "polus"
+      },
+      {
+        "surface": "to write",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "I would prefer",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to do so",
+        "lemma": "grapho"
+      },
       {
         "surface": "pen",
         "lemma": "kalamos"
@@ -320,8 +408,16 @@
         "lemma": "elpizo"
       },
       {
+        "surface": "to see",
+        "lemma": "horao"
+      },
+      {
         "surface": "soon",
         "lemma": "eutheos"
+      },
+      {
+        "surface": "speak with you",
+        "lemma": "laleo"
       },
       {
         "surface": "face",

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "a grievance",
         "lemma": "pragma"
       },
@@ -32,6 +36,10 @@
     ],
     "2": [
       {
+        "surface": "Do you not know",
+        "lemma": "eido"
+      },
+      {
         "surface": "saints",
         "lemma": "hagios"
       },
@@ -52,6 +60,10 @@
         "lemma": "kosmos"
       },
       {
+        "surface": "vvv",
+        "lemma": "eimi"
+      },
+      {
         "surface": "are you not competent",
         "lemma": "anaxios"
       },
@@ -66,6 +78,10 @@
     ],
     "3": [
       {
+        "surface": "Do you not know",
+        "lemma": "eido"
+      },
+      {
         "surface": "we will judge",
         "lemma": "krino"
       },
@@ -79,6 +95,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "you need",
+        "lemma": "echo"
+      },
       {
         "surface": "to settle",
         "lemma": "kriterion"
@@ -102,6 +122,10 @@
     ],
     "5": [
       {
+        "surface": "I say this",
+        "lemma": "lego"
+      },
+      {
         "surface": "shame",
         "lemma": "entrope"
       },
@@ -112,6 +136,10 @@
       {
         "surface": "really",
         "lemma": "houto"
+      },
+      {
+        "surface": "one",
+        "lemma": "oudeis"
       },
       {
         "surface": "wise enough",
@@ -150,8 +178,16 @@
     ],
     "7": [
       {
+        "surface": "you have",
+        "lemma": "echo"
+      },
+      {
         "surface": "lawsuits",
         "lemma": "krima"
+      },
+      {
+        "surface": "means that",
+        "lemma": "eimi"
       },
       {
         "surface": "are} thoroughly",
@@ -197,6 +233,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "Do you not know",
+        "lemma": "eido"
+      },
       {
         "surface": "the wicked",
         "lemma": "adikos"
@@ -274,6 +314,10 @@
     ],
     "11": [
       {
+        "surface": "you were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "you were washed",
         "lemma": "apolouo"
       },
@@ -312,12 +356,24 @@
     ],
     "12": [
       {
+        "surface": "Everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "is permissible",
         "lemma": "exesti"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "is beneficial",
         "lemma": "sumphero"
+      },
+      {
+        "surface": "Everything",
+        "lemma": "pas"
       },
       {
         "surface": "is permissible",
@@ -398,8 +454,16 @@
     ],
     "15": [
       {
+        "surface": "Do you not know",
+        "lemma": "eido"
+      },
+      {
         "surface": "bodies",
         "lemma": "soma"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "members",
@@ -422,11 +486,23 @@
         "lemma": "christos"
       },
       {
+        "surface": "and unite them",
+        "lemma": "poieo"
+      },
+      {
         "surface": "with a prostitute",
         "lemma": "porne"
+      },
+      {
+        "surface": "Never",
+        "lemma": "ginomai"
       }
     ],
     "16": [
+      {
+        "surface": "don’t you know",
+        "lemma": "eido"
+      },
       {
         "surface": "unites himself",
         "lemma": "kollao"
@@ -434,6 +510,14 @@
       {
         "surface": "with a prostitute",
         "lemma": "porne"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one with her",
+        "lemma": "heis"
       },
       {
         "surface": "in body",
@@ -446,6 +530,14 @@
       {
         "surface": "two",
         "lemma": "duo"
+      },
+      {
+        "surface": "will become",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
       },
       {
         "surface": "flesh",
@@ -462,6 +554,14 @@
         "lemma": "kurios"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one with Him",
+        "lemma": "heis"
+      },
+      {
         "surface": "in spirit",
         "lemma": "pneuma"
       }
@@ -476,12 +576,24 @@
         "lemma": "porneia"
       },
       {
+        "surface": "Every other",
+        "lemma": "pas"
+      },
+      {
         "surface": "sin",
         "lemma": "hamartema"
       },
       {
         "surface": "a man",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "can commit",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "body",
@@ -506,6 +618,10 @@
     ],
     "19": [
       {
+        "surface": "Do you not know",
+        "lemma": "eido"
+      },
+      {
         "surface": "body",
         "lemma": "soma"
       },
@@ -522,8 +638,20 @@
         "lemma": "pneuma"
       },
       {
+        "surface": "who is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "you have received",
+        "lemma": "echo"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "You are",
+        "lemma": "eimi"
       }
     ],
     "20": [

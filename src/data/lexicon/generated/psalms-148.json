@@ -36,12 +36,20 @@
         "lemma": "halal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His angels",
         "lemma": "maleakh"
       },
       {
         "surface": "praise Him",
         "lemma": "halal"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "His heavenly hosts",
@@ -64,6 +72,10 @@
       {
         "surface": "praise Him",
         "lemma": "halal"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "you shining",
@@ -128,8 +140,16 @@
         "lemma": "olam"
       },
       {
+        "surface": "He issued",
+        "lemma": "natan"
+      },
+      {
         "surface": "a decree",
         "lemma": "choq"
+      },
+      {
+        "surface": "that will never",
+        "lemma": "lo"
       },
       {
         "surface": "pass away",
@@ -148,6 +168,10 @@
       {
         "surface": "the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "great sea creatures",
@@ -184,6 +208,10 @@
         "lemma": "ruach"
       },
       {
+        "surface": "fulfilling",
+        "lemma": "asah"
+      },
+      {
         "surface": "His word",
         "lemma": "davar"
       }
@@ -192,6 +220,10 @@
       {
         "surface": "mountains",
         "lemma": "har"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "hills",
@@ -206,6 +238,10 @@
         "lemma": "ets"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "cedars",
         "lemma": "erez"
       }
@@ -214,6 +250,10 @@
       {
         "surface": "wild animals",
         "lemma": "chay"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "cattle",
@@ -242,12 +282,20 @@
         "lemma": "erets"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "peoples",
         "lemma": "leom"
       },
       {
         "surface": "princes",
         "lemma": "sar"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "rulers",
@@ -332,6 +380,10 @@
         "lemma": "tehillah"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His saints",
         "lemma": "chasid"
       },
@@ -355,6 +407,7 @@
   },
   "themeLemmas": [
     "halal",
+    "kol",
     "shem"
   ]
 }

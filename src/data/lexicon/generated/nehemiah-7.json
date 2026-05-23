@@ -90,6 +90,14 @@
     ],
     "3": [
       {
+        "surface": "And I told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "open",
         "lemma": "patach"
       },
@@ -128,6 +136,10 @@
       {
         "surface": "And appoint",
         "lemma": "amad"
+      },
+      {
+        "surface": "the residents",
+        "lemma": "yashav"
       },
       {
         "surface": "of Jerusalem",
@@ -200,6 +212,10 @@
       {
         "surface": "Then my God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "put it",
+        "lemma": "natan"
       },
       {
         "surface": "my heart",
@@ -288,6 +304,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "They returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -305,6 +325,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "accompanied",
+        "lemma": "bo"
+      },
       {
         "surface": "Zerubbabel",
         "lemma": "zerubbavel"
@@ -1450,6 +1474,10 @@
       {
         "surface": "numbered 392",
         "lemma": "shalosh"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       }
     ],
     "61": [
@@ -1484,6 +1512,10 @@
       {
         "surface": "and Immer",
         "lemma": "immer"
+      },
+      {
+        "surface": "but they could not",
+        "lemma": "lo"
       },
       {
         "surface": "prove",
@@ -1578,6 +1610,10 @@
         "lemma": "giladi"
       },
       {
+        "surface": "and was called",
+        "lemma": "qara"
+      },
+      {
         "surface": "their name",
         "lemma": "shem"
       }
@@ -1590,6 +1626,10 @@
       {
         "surface": "their family records",
         "lemma": "katav"
+      },
+      {
+        "surface": "but they could not",
+        "lemma": "lo"
       },
       {
         "surface": "find them",
@@ -1608,6 +1648,14 @@
       {
         "surface": "The governor",
         "lemma": "tirshata"
+      },
+      {
+        "surface": "ordered",
+        "lemma": "amar"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "to eat",
@@ -1635,6 +1683,10 @@
       }
     ],
     "66": [
+      {
+        "surface": "The whole",
+        "lemma": "kol"
+      },
       {
         "surface": "assembly",
         "lemma": "qahal"
@@ -1702,12 +1754,24 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of the families",
+        "lemma": "av"
+      },
+      {
+        "surface": "contributed",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the project",
         "lemma": "melakhah"
       },
       {
         "surface": "The governor",
         "lemma": "tirshata"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "to the treasury",
@@ -1752,6 +1816,14 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of the families",
+        "lemma": "av"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the treasury",
         "lemma": "otsar"
       },
@@ -1792,6 +1864,10 @@
       {
         "surface": "of the people",
         "lemma": "am"
+      },
+      {
+        "surface": "gave a total of",
+        "lemma": "natan"
       },
       {
         "surface": "20,000",
@@ -1856,8 +1932,16 @@
         "lemma": "am"
       },
       {
+        "surface": "and the rest of",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "settled",
+        "lemma": "yashav"
       },
       {
         "surface": "in their own towns",

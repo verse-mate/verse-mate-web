@@ -26,8 +26,16 @@
         "lemma": "peitharcheo"
       },
       {
+        "surface": "and",
+        "lemma": "eimi"
+      },
+      {
         "surface": "ready",
         "lemma": "hetoimos"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "good",
@@ -48,6 +56,10 @@
         "lemma": "medeis"
       },
       {
+        "surface": "and to be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "peaceable",
         "lemma": "amachos"
       },
@@ -60,11 +72,23 @@
         "lemma": "endeiknumi"
       },
       {
+        "surface": "full",
+        "lemma": "pas"
+      },
+      {
         "surface": "consideration",
         "lemma": "prautes"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       }
     ],
     "3": [
+      {
+        "surface": "were",
+        "lemma": "eimi"
+      },
       {
         "surface": "foolish",
         "lemma": "anoetos"
@@ -154,6 +178,10 @@
         "lemma": "ergon"
       },
       {
+        "surface": "had done",
+        "lemma": "poieo"
+      },
+      {
         "surface": "mercy",
         "lemma": "eleos"
       },
@@ -208,6 +236,10 @@
       {
         "surface": "grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "we would become",
+        "lemma": "ginomai"
       },
       {
         "surface": "heirs",
@@ -268,6 +300,10 @@
         "lemma": "ergon"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "excellent",
         "lemma": "kalos"
       },
@@ -310,6 +346,10 @@
         "lemma": "nomikos"
       },
       {
+        "surface": "these things are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "pointless",
         "lemma": "anopheles"
       },
@@ -332,6 +372,10 @@
         "lemma": "anthropos"
       },
       {
+        "surface": "a first",
+        "lemma": "heis"
+      },
+      {
         "surface": "second",
         "lemma": "deuteros"
       },
@@ -342,12 +386,20 @@
     ],
     "11": [
       {
+        "surface": "knowing",
+        "lemma": "eido"
+      },
+      {
         "surface": "is corrupt",
         "lemma": "ekstrepho"
       },
       {
         "surface": "sinful",
         "lemma": "hamartano"
+      },
+      {
+        "surface": "he is",
+        "lemma": "eimi"
       },
       {
         "surface": "self-condemned",
@@ -370,6 +422,10 @@
       {
         "surface": "make every effort",
         "lemma": "spoudazo"
+      },
+      {
+        "surface": "to come",
+        "lemma": "erchomai"
       },
       {
         "surface": "Nicopolis",
@@ -444,11 +500,19 @@
         "lemma": "chreia"
       },
       {
+        "surface": "they will not be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "unfruitful",
         "lemma": "akarpos"
       }
     ],
     "15": [
+      {
+        "surface": "All",
+        "lemma": "pas"
+      },
       {
         "surface": "send you greetings",
         "lemma": "aspazomai"
@@ -468,6 +532,10 @@
       {
         "surface": "Grace be",
         "lemma": "charis"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       }
     ]
   },

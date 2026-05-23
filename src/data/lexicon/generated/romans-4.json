@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
         "surface": "shall we say",
         "lemma": "ero"
       },
@@ -20,6 +24,10 @@
       {
         "surface": "the flesh",
         "lemma": "sarx"
+      },
+      {
+        "surface": "has discovered",
+        "lemma": "heurisko"
       }
     ],
     "2": [
@@ -36,6 +44,10 @@
         "lemma": "ergon"
       },
       {
+        "surface": "he had",
+        "lemma": "echo"
+      },
+      {
         "surface": "something to boast about",
         "lemma": "kauchema"
       },
@@ -46,8 +58,16 @@
     ],
     "3": [
       {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
         "surface": "Scripture",
         "lemma": "graphe"
+      },
+      {
+        "surface": "say",
+        "lemma": "lego"
       },
       {
         "surface": "Abraham",
@@ -126,6 +146,10 @@
       {
         "surface": "David",
         "lemma": "daueid"
+      },
+      {
+        "surface": "speaks",
+        "lemma": "lego"
       },
       {
         "surface": "blessedness",
@@ -210,6 +234,10 @@
         "lemma": "akrobustia"
       },
       {
+        "surface": "We have been saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "Abraham’s",
         "lemma": "abraam"
       },
@@ -232,6 +260,10 @@
         "lemma": "logizomai"
       },
       {
+        "surface": "Was it after",
+        "lemma": "eimi"
+      },
+      {
         "surface": "his circumcision",
         "lemma": "peritome"
       },
@@ -249,6 +281,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "he received",
+        "lemma": "lambano"
+      },
       {
         "surface": "the sign",
         "lemma": "semeion"
@@ -274,8 +310,16 @@
         "lemma": "akrobustia"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the father",
         "lemma": "pater"
+      },
+      {
+        "surface": "of all",
+        "lemma": "pas"
       },
       {
         "surface": "believe",
@@ -350,6 +394,10 @@
         "lemma": "sperma"
       },
       {
+        "surface": "would be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "heir",
         "lemma": "kleronomos"
       },
@@ -414,6 +462,10 @@
         "lemma": "hou"
       },
       {
+        "surface": "there is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "law",
         "lemma": "nomos"
       },
@@ -436,8 +488,16 @@
         "lemma": "charis"
       },
       {
+        "surface": "and may be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "guaranteed",
         "lemma": "bebaios"
+      },
+      {
+        "surface": "to all",
+        "lemma": "pas"
       },
       {
         "surface": "offspring",
@@ -460,11 +520,23 @@
         "lemma": "abraam"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "the father",
         "lemma": "pater"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       }
     ],
     "17": [
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
       {
         "surface": "I have made",
         "lemma": "tithemi"
@@ -472,6 +544,10 @@
       {
         "surface": "a father",
         "lemma": "pater"
+      },
+      {
+        "surface": "of many",
+        "lemma": "polus"
       },
       {
         "surface": "nations",
@@ -496,6 +572,14 @@
       {
         "surface": "calls",
         "lemma": "kaleo"
+      },
+      {
+        "surface": "into being",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "exist",
+        "lemma": "eimi"
       }
     ],
     "18": [
@@ -512,8 +596,16 @@
         "lemma": "pisteuo"
       },
       {
+        "surface": "became",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "the father",
         "lemma": "pater"
+      },
+      {
+        "surface": "of many",
+        "lemma": "polus"
       },
       {
         "surface": "nations",
@@ -530,6 +622,10 @@
       {
         "surface": "offspring",
         "lemma": "sperma"
+      },
+      {
+        "surface": "be",
+        "lemma": "eimi"
       }
     ],
     "19": [
@@ -608,6 +704,10 @@
         "lemma": "pistis"
       },
       {
+        "surface": "and gave",
+        "lemma": "didomi"
+      },
+      {
         "surface": "glory",
         "lemma": "doxa"
       },
@@ -622,8 +722,16 @@
         "lemma": "plerophoreo"
       },
       {
+        "surface": "God was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "able",
         "lemma": "dunatos"
+      },
+      {
+        "surface": "to do",
+        "lemma": "poieo"
       },
       {
         "surface": "He had promised",
@@ -644,6 +752,10 @@
       {
         "surface": "it was credited",
         "lemma": "logizomai"
+      },
+      {
+        "surface": "were written",
+        "lemma": "grapho"
       },
       {
         "surface": "only",

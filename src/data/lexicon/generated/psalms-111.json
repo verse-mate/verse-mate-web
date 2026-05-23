@@ -18,6 +18,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my heart",
         "lemma": "levav"
       },
@@ -52,6 +56,10 @@
         "lemma": "darash"
       },
       {
+        "surface": "by all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who delight in them",
         "lemma": "chephets"
       }
@@ -84,6 +92,10 @@
     ],
     "4": [
       {
+        "surface": "He has caused",
+        "lemma": "asah"
+      },
+      {
         "surface": "His wonders",
         "lemma": "pala"
       },
@@ -105,6 +117,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "He provides",
+        "lemma": "natan"
+      },
       {
         "surface": "food",
         "lemma": "tereph"
@@ -144,6 +160,10 @@
         "lemma": "maaseh"
       },
       {
+        "surface": "by giving",
+        "lemma": "natan"
+      },
+      {
         "surface": "the inheritance",
         "lemma": "nachalah"
       },
@@ -170,6 +190,10 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His precepts",
         "lemma": "piqqud"
       },
@@ -190,6 +214,10 @@
       {
         "surface": "and ever",
         "lemma": "olam"
+      },
+      {
+        "surface": "enacted",
+        "lemma": "asah"
       },
       {
         "surface": "in truth",
@@ -256,6 +284,14 @@
         "lemma": "chokhmah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who follow His precepts",
+        "lemma": "asah"
+      },
+      {
         "surface": "gain rich",
         "lemma": "tov"
       },
@@ -278,8 +314,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "olam",
-    "maaseh",
-    "ad"
+    "maaseh"
   ]
 }

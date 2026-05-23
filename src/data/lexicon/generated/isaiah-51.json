@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "you who pursue",
         "lemma": "radaph"
       },
@@ -52,12 +56,20 @@
         "lemma": "avraham"
       },
       {
+        "surface": "your father",
+        "lemma": "av"
+      },
+      {
         "surface": "Sarah",
         "lemma": "sarah"
       },
       {
         "surface": "who gave you birth",
         "lemma": "chul"
+      },
+      {
+        "surface": "I called him",
+        "lemma": "qara"
       },
       {
         "surface": "he was but one",
@@ -88,6 +100,10 @@
       {
         "surface": "and will look with compassion",
         "lemma": "nacham"
+      },
+      {
+        "surface": "on all her",
+        "lemma": "kol"
       },
       {
         "surface": "ruins",
@@ -164,6 +180,10 @@
         "lemma": "torah"
       },
       {
+        "surface": "will go out from Me",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "and My justice will become",
         "lemma": "mishpat"
       },
@@ -192,6 +212,10 @@
       {
         "surface": "My salvation",
         "lemma": "yesah"
+      },
+      {
+        "surface": "is on the way",
+        "lemma": "yatsa"
       },
       {
         "surface": "and My arms",
@@ -272,6 +296,10 @@
         "lemma": "beged"
       },
       {
+        "surface": "and its people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "will die",
         "lemma": "mut"
       },
@@ -280,8 +308,16 @@
         "lemma": "yeshuah"
       },
       {
+        "surface": "will last forever",
+        "lemma": "hayah"
+      },
+      {
         "surface": "and My righteousness",
         "lemma": "tsedaqah"
+      },
+      {
+        "surface": "will never",
+        "lemma": "lo"
       },
       {
         "surface": "fail",
@@ -289,6 +325,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
       {
         "surface": "you who know",
         "lemma": "yada"
@@ -310,6 +350,10 @@
         "lemma": "lev"
       },
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "fear",
         "lemma": "yare"
       },
@@ -320,6 +364,10 @@
       {
         "surface": "of men",
         "lemma": "enosh"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "be broken",
@@ -358,6 +406,10 @@
       {
         "surface": "But My righteousness",
         "lemma": "tsedaqah"
+      },
+      {
+        "surface": "will last forever",
+        "lemma": "hayah"
       },
       {
         "surface": "My salvation",
@@ -414,6 +466,10 @@
         "lemma": "olam"
       },
       {
+        "surface": "Was it not",
+        "lemma": "lo"
+      },
+      {
         "surface": "who cut Rahab",
         "lemma": "rahav"
       },
@@ -431,6 +487,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Was it not",
+        "lemma": "lo"
+      },
       {
         "surface": "who dried up",
         "lemma": "charev"
@@ -484,6 +544,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and enter",
+        "lemma": "bo"
       },
       {
         "surface": "Zion",
@@ -556,6 +624,10 @@
         "lemma": "adam"
       },
       {
+        "surface": "who withers",
+        "lemma": "natan"
+      },
+      {
         "surface": "like grass",
         "lemma": "chatsir"
       }
@@ -568,6 +640,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "your Maker",
+        "lemma": "asah"
       },
       {
         "surface": "who stretched out",
@@ -592,6 +668,10 @@
       {
         "surface": "vvv",
         "lemma": "tamid"
+      },
+      {
+        "surface": "all day long",
+        "lemma": "kol"
       },
       {
         "surface": "because of",
@@ -640,6 +720,10 @@
         "lemma": "patach"
       },
       {
+        "surface": "he will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "die",
         "lemma": "mut"
       },
@@ -650,6 +734,10 @@
       {
         "surface": "and his bread",
         "lemma": "lechem"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "be lacking",
@@ -736,6 +824,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "and to say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Zion",
         "lemma": "tsiyyon"
       },
@@ -804,6 +896,10 @@
     ],
     "18": [
       {
+        "surface": "Among all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the sons",
         "lemma": "ben"
       },
@@ -818,6 +914,10 @@
       {
         "surface": "one to guide",
         "lemma": "nahal"
+      },
+      {
+        "surface": "among all",
+        "lemma": "kol"
       },
       {
         "surface": "the sons",
@@ -844,6 +944,10 @@
       {
         "surface": "pairs",
         "lemma": "shenayim"
+      },
+      {
+        "surface": "have befallen",
+        "lemma": "qara"
       },
       {
         "surface": "devastation",
@@ -896,6 +1000,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "street",
         "lemma": "chuts"
       },
@@ -934,8 +1042,8 @@
         "lemma": "ken"
       },
       {
-        "surface": "now",
-        "lemma": "na"
+        "surface": "hear",
+        "lemma": "shama"
       },
       {
         "surface": "you afflicted one",
@@ -946,6 +1054,10 @@
         "lemma": "shakhar"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "with wine",
         "lemma": "yayin"
       }
@@ -954,6 +1066,10 @@
       {
         "surface": "Thus",
         "lemma": "koh"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "your Lord",
@@ -974,10 +1090,6 @@
       {
         "surface": "His people",
         "lemma": "am"
-      },
-      {
-        "surface": "See",
-        "lemma": "hinneh"
       },
       {
         "surface": "I have removed",
@@ -1008,6 +1120,10 @@
         "lemma": "chemah"
       },
       {
+        "surface": "you will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "drink",
         "lemma": "shatah"
       },
@@ -1028,6 +1144,10 @@
       {
         "surface": "of your tormentors",
         "lemma": "yagah"
+      },
+      {
+        "surface": "told",
+        "lemma": "amar"
       },
       {
         "surface": "you",
@@ -1064,7 +1184,7 @@
     ]
   },
   "themeLemmas": [
-    "kos",
+    "lo",
     "ur",
     "sum"
   ]

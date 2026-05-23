@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "This is what happened",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in the days",
         "lemma": "yom"
       },
@@ -48,6 +52,10 @@
         "lemma": "achashverosh"
       },
       {
+        "surface": "sat",
+        "lemma": "yashav"
+      },
+      {
         "surface": "his royal",
         "lemma": "malkhut"
       },
@@ -78,8 +86,16 @@
         "lemma": "malakh"
       },
       {
+        "surface": "Xerxes held",
+        "lemma": "asah"
+      },
+      {
         "surface": "a feast",
         "lemma": "mishteh"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "his officials",
@@ -130,6 +146,10 @@
       {
         "surface": "days",
         "lemma": "yom"
+      },
+      {
+        "surface": "he displayed",
+        "lemma": "raah"
       },
       {
         "surface": "the glorious",
@@ -186,12 +206,20 @@
         "lemma": "melekh"
       },
       {
+        "surface": "held",
+        "lemma": "asah"
+      },
+      {
         "surface": "a seven-day",
         "lemma": "sheva"
       },
       {
         "surface": "feast",
         "lemma": "mishteh"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -360,12 +388,20 @@
         "lemma": "shetiyyah"
       },
       {
+        "surface": "and every",
+        "lemma": "kol"
+      },
+      {
         "surface": "official",
         "lemma": "rav"
       },
       {
         "surface": "of his household",
         "lemma": "bet"
+      },
+      {
+        "surface": "was to serve",
+        "lemma": "asah"
       },
       {
         "surface": "each",
@@ -388,6 +424,10 @@
       {
         "surface": "Vashti",
         "lemma": "vashti"
+      },
+      {
+        "surface": "gave",
+        "lemma": "asah"
       },
       {
         "surface": "a banquet",
@@ -440,6 +480,10 @@
         "lemma": "yayin"
       },
       {
+        "surface": "he ordered",
+        "lemma": "amar"
+      },
+      {
         "surface": "the seven",
         "lemma": "sheva"
       },
@@ -486,6 +530,10 @@
     ],
     "11": [
       {
+        "surface": "to bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "Queen",
         "lemma": "malkah"
       },
@@ -508,6 +556,10 @@
       {
         "surface": "crown",
         "lemma": "keter"
+      },
+      {
+        "surface": "to display",
+        "lemma": "raah"
       },
       {
         "surface": "her beauty",
@@ -542,6 +594,10 @@
       {
         "surface": "refused",
         "lemma": "maen"
+      },
+      {
+        "surface": "to come",
+        "lemma": "bo"
       },
       {
         "surface": "at the king’s",
@@ -582,12 +638,20 @@
         "lemma": "melekh"
       },
       {
+        "surface": "consulted",
+        "lemma": "amar"
+      },
+      {
         "surface": "the wise men",
         "lemma": "chakham"
       },
       {
         "surface": "who knew",
         "lemma": "yada"
+      },
+      {
+        "surface": "the times",
+        "lemma": "et"
       },
       {
         "surface": "customary",
@@ -668,8 +732,16 @@
         "lemma": "maday"
       },
       {
+        "surface": "who had personal access to",
+        "lemma": "raah"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "and ranked",
+        "lemma": "yashav"
       },
       {
         "surface": "highest",
@@ -690,12 +762,20 @@
         "lemma": "mah"
       },
       {
+        "surface": "should be done",
+        "lemma": "asah"
+      },
+      {
         "surface": "with Queen",
         "lemma": "malkah"
       },
       {
         "surface": "Vashti",
         "lemma": "vashti"
+      },
+      {
+        "surface": "she refused to obey",
+        "lemma": "lo"
       },
       {
         "surface": "the command",
@@ -736,6 +816,10 @@
         "lemma": "memukhan"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "Queen",
         "lemma": "malkah"
       },
@@ -748,6 +832,10 @@
         "lemma": "avah"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "only",
         "lemma": "bad"
       },
@@ -756,12 +844,20 @@
         "lemma": "melekh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the princes",
         "lemma": "sar"
       },
       {
         "surface": "and the peoples",
         "lemma": "am"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "the provinces",
@@ -786,6 +882,14 @@
         "lemma": "malkah"
       },
       {
+        "surface": "will become known",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "women",
         "lemma": "ishshah"
       },
@@ -798,12 +902,20 @@
         "lemma": "baal"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
       {
         "surface": "Xerxes",
         "lemma": "achashverosh"
+      },
+      {
+        "surface": "ordered",
+        "lemma": "amar"
       },
       {
         "surface": "Queen",
@@ -814,8 +926,20 @@
         "lemma": "vashti"
       },
       {
+        "surface": "to be brought",
+        "lemma": "bo"
+      },
+      {
         "surface": "before him",
         "lemma": "paneh"
+      },
+      {
+        "surface": "but she did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
       }
     ],
     "18": [
@@ -836,12 +960,24 @@
         "lemma": "maday"
       },
       {
+        "surface": "have heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "the queen’s",
         "lemma": "malkah"
       },
       {
         "surface": "conduct",
         "lemma": "davar"
+      },
+      {
+        "surface": "will say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "the same thing to all",
+        "lemma": "kol"
       },
       {
         "surface": "the king’s",
@@ -866,12 +1002,20 @@
     ],
     "19": [
       {
+        "surface": "So if",
+        "lemma": "im"
+      },
+      {
         "surface": "it pleases",
         "lemma": "tov"
       },
       {
         "surface": "the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "let him issue",
+        "lemma": "yatsa"
       },
       {
         "surface": "a royal",
@@ -898,12 +1042,24 @@
         "lemma": "maday"
       },
       {
+        "surface": "so that it cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "be repealed",
         "lemma": "avar"
       },
       {
         "surface": "Vashti",
         "lemma": "vashti"
+      },
+      {
+        "surface": "shall never again",
+        "lemma": "lo"
+      },
+      {
+        "surface": "enter",
+        "lemma": "bo"
       },
       {
         "surface": "the presence",
@@ -920,6 +1076,10 @@
       {
         "surface": "and that her royal position",
         "lemma": "malkhut"
+      },
+      {
+        "surface": "shall be given",
+        "lemma": "natan"
       },
       {
         "surface": "to a woman",
@@ -940,12 +1100,28 @@
         "lemma": "melekh"
       },
       {
+        "surface": "issues",
+        "lemma": "asah"
+      },
+      {
+        "surface": "will be heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "his vast",
         "lemma": "rav"
       },
       {
         "surface": "kingdom",
         "lemma": "malkhut"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "women",
@@ -958,6 +1134,10 @@
       {
         "surface": "the greatest",
         "lemma": "gadol"
+      },
+      {
+        "surface": "will honor",
+        "lemma": "natan"
       },
       {
         "surface": "their husbands",
@@ -986,6 +1166,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "as Memucan",
         "lemma": "memukhan"
       },
@@ -1002,6 +1186,10 @@
       {
         "surface": "letters",
         "lemma": "sepher"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the provinces",
@@ -1032,8 +1220,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "that every",
+        "lemma": "kol"
+      },
+      {
         "surface": "man",
         "lemma": "ish"
+      },
+      {
+        "surface": "should be",
+        "lemma": "hayah"
       },
       {
         "surface": "master",
@@ -1046,8 +1242,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "malkhut",
-    "sar",
-    "malkah"
+    "sar"
   ]
 }

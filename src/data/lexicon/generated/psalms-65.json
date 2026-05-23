@@ -48,12 +48,24 @@
     ],
     "2": [
       {
+        "surface": "O You who listen to",
+        "lemma": "shama"
+      },
+      {
         "surface": "prayer",
         "lemma": "tephillah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "people",
         "lemma": "basar"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       }
     ],
     "3": [
@@ -142,6 +154,10 @@
         "lemma": "mivtach"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the ends",
         "lemma": "qetsev"
       },
@@ -211,6 +227,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Those who live",
+        "lemma": "yashav"
+      },
       {
         "surface": "far away",
         "lemma": "qetsat"

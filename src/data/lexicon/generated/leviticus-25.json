@@ -36,8 +36,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "and say to them",
+        "lemma": "amar"
+      },
+      {
+        "surface": "you enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "am giving",
+        "lemma": "natan"
       },
       {
         "surface": "the land itself",
@@ -100,6 +112,10 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "there shall} be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a Sabbath",
         "lemma": "shabbat"
       },
@@ -120,6 +136,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "You are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to sow",
         "lemma": "zara"
       },
@@ -137,6 +157,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "You are not",
+        "lemma": "lo"
+      },
       {
         "surface": "to reap",
         "lemma": "qatser"
@@ -166,6 +190,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "must have",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a year",
         "lemma": "shaneh"
       },
@@ -182,6 +210,10 @@
       {
         "surface": "during the Sabbath year",
         "lemma": "shabbat"
+      },
+      {
+        "surface": "shall be",
+        "lemma": "hayah"
       },
       {
         "surface": "food for you",
@@ -222,8 +254,16 @@
         "lemma": "erets"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "its growth",
         "lemma": "tevuah"
+      },
+      {
+        "surface": "may serve",
+        "lemma": "hayah"
       },
       {
         "surface": "as food",
@@ -330,6 +370,10 @@
         "lemma": "shophar"
       },
       {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "your land",
         "lemma": "erets"
       }
@@ -348,6 +392,10 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "and proclaim",
+        "lemma": "qara"
+      },
+      {
         "surface": "liberty",
         "lemma": "deror"
       },
@@ -356,12 +404,28 @@
         "lemma": "erets"
       },
       {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "its inhabitants",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "shall be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Jubilee",
         "lemma": "yovel"
       },
       {
         "surface": "when each",
         "lemma": "ish"
+      },
+      {
+        "surface": "of you is to return",
+        "lemma": "shuv"
       },
       {
         "surface": "his property",
@@ -386,12 +450,24 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a Jubilee",
         "lemma": "yovel"
       },
       {
+        "surface": "you are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to sow the land",
         "lemma": "zara"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "reap",
@@ -414,6 +490,10 @@
       {
         "surface": "a Jubilee",
         "lemma": "yovel"
+      },
+      {
+        "surface": "it shall be",
+        "lemma": "hayah"
       },
       {
         "surface": "holy",
@@ -446,6 +526,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "of you shall return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "his own property",
         "lemma": "achuzzah"
       }
@@ -470,6 +554,10 @@
       {
         "surface": "him",
         "lemma": "amit"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "al"
       },
       {
         "surface": "take advantage",
@@ -582,6 +670,10 @@
     ],
     "17": [
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "take advantage",
         "lemma": "yanah"
       },
@@ -612,6 +704,10 @@
     ],
     "18": [
       {
+        "surface": "You are to keep",
+        "lemma": "asah"
+      },
+      {
         "surface": "My statutes",
         "lemma": "chuqqah"
       },
@@ -620,8 +716,16 @@
         "lemma": "shamar"
       },
       {
+        "surface": "observe",
+        "lemma": "asah"
+      },
+      {
         "surface": "My judgments",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "so that you may dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "securely",
@@ -638,6 +742,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "will yield",
+        "lemma": "natan"
+      },
+      {
         "surface": "its fruit",
         "lemma": "peri"
       },
@@ -650,11 +758,19 @@
         "lemma": "sova"
       },
       {
+        "surface": "and dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in safety",
         "lemma": "betach"
       }
     ],
     "20": [
+      {
+        "surface": "you may wonder",
+        "lemma": "amar"
+      },
       {
         "surface": "What",
         "lemma": "mah"
@@ -672,8 +788,8 @@
         "lemma": "shaneh"
       },
       {
-        "surface": "if",
-        "lemma": "hen"
+        "surface": "we do not",
+        "lemma": "lo"
       },
       {
         "surface": "sow",
@@ -704,6 +820,10 @@
       {
         "surface": "year",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "so that the land will yield",
+        "lemma": "asah"
       },
       {
         "surface": "a crop",
@@ -754,12 +874,20 @@
       {
         "surface": "harvest",
         "lemma": "tevuah"
+      },
+      {
+        "surface": "comes in",
+        "lemma": "bo"
       }
     ],
     "23": [
       {
         "surface": "The land",
         "lemma": "erets"
+      },
+      {
+        "surface": "must not",
+        "lemma": "lo"
       },
       {
         "surface": "be sold",
@@ -784,12 +912,20 @@
     ],
     "24": [
       {
+        "surface": "Thus for every",
+        "lemma": "kol"
+      },
+      {
         "surface": "piece of property",
         "lemma": "erets"
       },
       {
         "surface": "you possess",
         "lemma": "achuzzah"
+      },
+      {
+        "surface": "you must provide for",
+        "lemma": "natan"
       },
       {
         "surface": "the redemption",
@@ -826,6 +962,10 @@
         "lemma": "gaal"
       },
       {
+        "surface": "may come",
+        "lemma": "bo"
+      },
+      {
         "surface": "and redeem",
         "lemma": "gaal"
       },
@@ -842,6 +982,14 @@
       {
         "surface": "a man",
         "lemma": "ish"
+      },
+      {
+        "surface": "has",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no one",
+        "lemma": "lo"
       },
       {
         "surface": "to redeem it",
@@ -878,6 +1026,10 @@
         "lemma": "mimkar"
       },
       {
+        "surface": "repay",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the balance",
         "lemma": "adaph"
       },
@@ -890,11 +1042,23 @@
         "lemma": "makhar"
       },
       {
+        "surface": "and return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to his property",
         "lemma": "achuzzah"
       }
     ],
     "28": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "he cannot",
+        "lemma": "lo"
+      },
       {
         "surface": "obtain",
         "lemma": "matsa"
@@ -904,8 +1068,16 @@
         "lemma": "day"
       },
       {
+        "surface": "to repay",
+        "lemma": "shuv"
+      },
+      {
         "surface": "what he sold",
         "lemma": "mimkar"
+      },
+      {
+        "surface": "will remain",
+        "lemma": "hayah"
       },
       {
         "surface": "in possession",
@@ -926,6 +1098,14 @@
       {
         "surface": "In the Jubilee",
         "lemma": "yovel"
+      },
+      {
+        "surface": "however, it is to be released",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "so that he may return",
+        "lemma": "shuv"
       },
       {
         "surface": "to his property",
@@ -954,6 +1134,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "he retains",
+        "lemma": "hayah"
+      },
+      {
         "surface": "his right of redemption",
         "lemma": "geullah"
       },
@@ -974,11 +1158,23 @@
         "lemma": "yom"
       },
       {
+        "surface": "it may be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "redeemed",
         "lemma": "geullah"
       }
     ],
     "30": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "it is not",
+        "lemma": "lo"
+      },
       {
         "surface": "redeemed",
         "lemma": "gaal"
@@ -1014,6 +1210,14 @@
       {
         "surface": "and his descendants",
         "lemma": "dor"
+      },
+      {
+        "surface": "It is not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to be released",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the Jubilee",
@@ -1054,6 +1258,14 @@
         "lemma": "geullah"
       },
       {
+        "surface": "and they shall be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "released",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "in the Jubilee",
         "lemma": "yovel"
       }
@@ -1074,6 +1286,10 @@
       {
         "surface": "always",
         "lemma": "olam"
+      },
+      {
+        "surface": "have",
+        "lemma": "hayah"
       },
       {
         "surface": "the right to redeem",
@@ -1118,6 +1334,10 @@
         "lemma": "achuzzah"
       },
       {
+        "surface": "and must be released",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "in the Jubilee",
         "lemma": "yovel"
       },
@@ -1158,6 +1378,10 @@
       {
         "surface": "around their cities",
         "lemma": "ir"
+      },
+      {
+        "surface": "may not",
+        "lemma": "lo"
       },
       {
         "surface": "be sold",
@@ -1204,6 +1428,10 @@
     ],
     "36": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "take",
         "lemma": "laqach"
       },
@@ -1234,12 +1462,28 @@
     ],
     "37": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "lend",
+        "lemma": "natan"
+      },
+      {
         "surface": "your silver",
         "lemma": "keseph"
       },
       {
         "surface": "at interest",
         "lemma": "neshekh"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
+        "surface": "sell him",
+        "lemma": "natan"
       },
       {
         "surface": "your food",
@@ -1260,6 +1504,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "brought you",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "out of the land",
         "lemma": "erets"
       },
@@ -1268,12 +1516,20 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "to give",
+        "lemma": "natan"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
         "surface": "of Canaan",
         "lemma": "kenaan"
+      },
+      {
+        "surface": "and to be",
+        "lemma": "hayah"
       },
       {
         "surface": "God",
@@ -1294,6 +1550,10 @@
         "lemma": "makhar"
       },
       {
+        "surface": "then you must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "force him",
         "lemma": "avad"
       },
@@ -1307,6 +1567,10 @@
       }
     ],
     "40": [
+      {
+        "surface": "Let him stay",
+        "lemma": "hayah"
+      },
       {
         "surface": "as a hired worker",
         "lemma": "sakhir"
@@ -1334,12 +1598,24 @@
         "lemma": "ben"
       },
       {
+        "surface": "are to be released",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and he may return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "his clan",
         "lemma": "mishpachah"
       },
       {
         "surface": "the property",
         "lemma": "achuzzah"
+      },
+      {
+        "surface": "of his fathers",
+        "lemma": "av"
       }
     ],
     "42": [
@@ -1348,12 +1624,20 @@
         "lemma": "eved"
       },
       {
+        "surface": "I brought",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "out of the land",
         "lemma": "erets"
       },
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "they are not",
+        "lemma": "lo"
       },
       {
         "surface": "to be sold",
@@ -1365,6 +1649,10 @@
       }
     ],
     "43": [
+      {
+        "surface": "You are not",
+        "lemma": "lo"
+      },
       {
         "surface": "to rule",
         "lemma": "radah"
@@ -1390,6 +1678,10 @@
       {
         "surface": "and maidservants",
         "lemma": "amah"
+      },
+      {
+        "surface": "shall come",
+        "lemma": "hayah"
       },
       {
         "surface": "the nations",
@@ -1438,6 +1730,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "These may become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "property",
         "lemma": "achuzzah"
       }
@@ -1478,6 +1774,10 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "man",
@@ -1539,6 +1839,10 @@
       }
     ],
     "48": [
+      {
+        "surface": "he retains",
+        "lemma": "hayah"
+      },
       {
         "surface": "the right of redemption",
         "lemma": "geullah"
@@ -1628,12 +1932,20 @@
         "lemma": "mimkar"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "determined by the number",
         "lemma": "mispar"
       },
       {
         "surface": "of years",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "based on",
+        "lemma": "hayah"
       },
       {
         "surface": "the daily",
@@ -1646,6 +1958,10 @@
     ],
     "51": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "many",
         "lemma": "rav"
       },
@@ -1656,6 +1972,10 @@
       {
         "surface": "remain",
         "lemma": "od"
+      },
+      {
+        "surface": "he must pay",
+        "lemma": "shuv"
       },
       {
         "surface": "for his redemption",
@@ -1675,6 +1995,10 @@
       }
     ],
     "52": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "only a few",
         "lemma": "meat"
@@ -1700,6 +2024,10 @@
         "lemma": "chashav"
       },
       {
+        "surface": "and pay",
+        "lemma": "shuv"
+      },
+      {
         "surface": "his redemption",
         "lemma": "geullah"
       },
@@ -1714,6 +2042,10 @@
     ],
     "53": [
       {
+        "surface": "He shall be treated",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a man hired",
         "lemma": "sakhir"
       },
@@ -1724,6 +2056,10 @@
       {
         "surface": "to year",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "but a foreign owner must not",
+        "lemma": "lo"
       },
       {
         "surface": "rule over him",
@@ -1740,12 +2076,24 @@
     ],
     "54": [
       {
+        "surface": "Even if",
+        "lemma": "im"
+      },
+      {
+        "surface": "he is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "redeemed",
         "lemma": "gaal"
       },
       {
         "surface": "and his children",
         "lemma": "ben"
+      },
+      {
+        "surface": "shall be released",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the Year",
@@ -1770,6 +2118,10 @@
         "lemma": "eved"
       },
       {
+        "surface": "I brought",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "out of the land",
         "lemma": "erets"
       },
@@ -1788,8 +2140,8 @@
     ]
   },
   "themeLemmas": [
-    "zara",
     "shaneh",
-    "yovel"
+    "hayah",
+    "lo"
   ]
 }

@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Chisel out",
@@ -38,6 +46,10 @@
         "lemma": "har"
       },
       {
+        "surface": "and make",
+        "lemma": "asah"
+      },
+      {
         "surface": "an ark",
         "lemma": "aron"
       },
@@ -58,6 +70,10 @@
       {
         "surface": "the words",
         "lemma": "davar"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
       },
       {
         "surface": "the first",
@@ -81,6 +97,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "So I made",
+        "lemma": "asah"
+      },
       {
         "surface": "an ark",
         "lemma": "aron"
@@ -190,6 +210,10 @@
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "gave them",
+        "lemma": "natan"
       }
     ],
     "5": [
@@ -218,6 +242,10 @@
         "lemma": "aron"
       },
       {
+        "surface": "I had made",
+        "lemma": "asah"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -228,6 +256,10 @@
       {
         "surface": "and there",
         "lemma": "sham"
+      },
+      {
+        "surface": "they have remained",
+        "lemma": "hayah"
       }
     ],
     "6": [
@@ -320,6 +352,10 @@
     ],
     "8": [
       {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -380,6 +416,14 @@
       {
         "surface": "Levi",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "has",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "portion",
@@ -456,12 +500,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "listened",
+        "lemma": "shama"
+      },
+      {
         "surface": "and",
         "lemma": "yehovah"
       },
       {
         "surface": "agreed",
         "lemma": "avah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "to destroy you",
@@ -472,6 +524,10 @@
       {
         "surface": "Then the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Get up",
@@ -494,6 +550,10 @@
         "lemma": "am"
       },
       {
+        "surface": "that they may enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "and possess",
         "lemma": "yarash"
       },
@@ -504,6 +564,14 @@
       {
         "surface": "I swore",
         "lemma": "shava"
+      },
+      {
+        "surface": "their fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "to give them",
+        "lemma": "natan"
       }
     ],
     "12": [
@@ -548,6 +616,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His ways",
         "lemma": "derekh"
       },
@@ -568,8 +640,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your heart",
         "lemma": "levav"
+      },
+      {
+        "surface": "and with all",
+        "lemma": "kol"
       },
       {
         "surface": "your soul",
@@ -608,10 +688,6 @@
     ],
     "14": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "to the LORD",
         "lemma": "yehovah"
       },
@@ -634,6 +710,10 @@
       {
         "surface": "and the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "and everything",
+        "lemma": "kol"
       }
     ],
     "15": [
@@ -644,6 +724,10 @@
       {
         "surface": "has set His affection",
         "lemma": "chashaq"
+      },
+      {
+        "surface": "on your fathers",
+        "lemma": "av"
       },
       {
         "surface": "and loved",
@@ -660,6 +744,10 @@
       {
         "surface": "after",
         "lemma": "achar"
+      },
+      {
+        "surface": "above all",
+        "lemma": "kol"
       },
       {
         "surface": "the peoples",
@@ -686,6 +774,10 @@
       {
         "surface": "your necks",
         "lemma": "oreph"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "more",
@@ -734,6 +826,10 @@
         "lemma": "el"
       },
       {
+        "surface": "showing no",
+        "lemma": "lo"
+      },
+      {
         "surface": "partiality",
         "lemma": "nasa"
       },
@@ -742,11 +838,19 @@
         "lemma": "laqach"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "bribe",
         "lemma": "shachad"
       }
     ],
     "18": [
+      {
+        "surface": "He executes",
+        "lemma": "asah"
+      },
       {
         "surface": "justice",
         "lemma": "mishpat"
@@ -768,6 +872,10 @@
         "lemma": "ger"
       },
       {
+        "surface": "giving",
+        "lemma": "natan"
+      },
+      {
         "surface": "food",
         "lemma": "lechem"
       },
@@ -784,6 +892,10 @@
       {
         "surface": "the foreigner",
         "lemma": "ger"
+      },
+      {
+        "surface": "you yourselves were",
+        "lemma": "hayah"
       },
       {
         "surface": "foreigners",
@@ -838,6 +950,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "has done",
+        "lemma": "asah"
+      },
+      {
         "surface": "great",
         "lemma": "gadol"
       },
@@ -848,9 +964,17 @@
       {
         "surface": "your eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "have seen",
+        "lemma": "raah"
       }
     ],
     "22": [
+      {
+        "surface": "Your fathers",
+        "lemma": "av"
+      },
       {
         "surface": "went down",
         "lemma": "yarad"
@@ -900,6 +1024,6 @@
   "themeLemmas": [
     "luach",
     "rishon",
-    "har"
+    "lo"
   ]
 }

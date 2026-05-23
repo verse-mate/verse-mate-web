@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "man",
         "lemma": "enosh"
       },
@@ -88,8 +92,16 @@
     ],
     "4": [
       {
+        "surface": "When",
+        "lemma": "im"
+      },
+      {
         "surface": "I lie down",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "I think",
+        "lemma": "amar"
       },
       {
         "surface": "When",
@@ -194,6 +206,18 @@
         "lemma": "ayin"
       },
       {
+        "surface": "will never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "again",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
         "surface": "happiness",
         "lemma": "tov"
       }
@@ -206,6 +230,10 @@
       {
         "surface": "that beholds me",
         "lemma": "roi"
+      },
+      {
+        "surface": "will no",
+        "lemma": "lo"
       },
       {
         "surface": "longer see me",
@@ -246,11 +274,23 @@
         "lemma": "sheol"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "come back up",
         "lemma": "alah"
       }
     ],
     "10": [
+      {
+        "surface": "He never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "returns",
+        "lemma": "shuv"
+      },
       {
         "surface": "to his house",
         "lemma": "bet"
@@ -269,6 +309,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
       {
         "surface": "restrain",
         "lemma": "chasakh"
@@ -308,6 +352,10 @@
         "lemma": "yam"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "the monster of the deep",
         "lemma": "tan"
       },
@@ -321,6 +369,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "I think",
+        "lemma": "amar"
+      },
       {
         "surface": "my bed",
         "lemma": "eres"
@@ -386,6 +438,10 @@
       {
         "surface": "I loathe my life",
         "lemma": "maas"
+      },
+      {
+        "surface": "I would not",
+        "lemma": "lo"
       },
       {
         "surface": "live",
@@ -458,6 +514,10 @@
         "lemma": "shaah"
       },
       {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
         "surface": "leave me alone",
         "lemma": "raphah"
       },
@@ -504,6 +564,10 @@
         "lemma": "miphga"
       },
       {
+        "surface": "so that I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a burden",
         "lemma": "massa"
       }
@@ -512,6 +576,10 @@
       {
         "surface": "Why",
         "lemma": "mah"
+      },
+      {
+        "surface": "do You not",
+        "lemma": "lo"
       },
       {
         "surface": "pardon",
@@ -552,8 +620,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "mah",
-    "sum",
-    "siach"
+    "sum"
   ]
 }

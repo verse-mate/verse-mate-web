@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Again",
+        "lemma": "shuv"
+      },
+      {
         "surface": "I lifted up",
         "lemma": "nasa"
       },
@@ -14,8 +18,8 @@
         "lemma": "ayin"
       },
       {
-        "surface": "before me",
-        "lemma": "hinneh"
+        "surface": "and saw",
+        "lemma": "raah"
       },
       {
         "surface": "a flying",
@@ -32,12 +36,28 @@
         "lemma": "mah"
       },
       {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "asked the angel",
+        "lemma": "amar"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
         "surface": "a flying",
         "lemma": "uph"
       },
       {
         "surface": "scroll",
         "lemma": "megillah"
+      },
+      {
+        "surface": "I replied",
+        "lemma": "amar"
       },
       {
         "surface": "twenty",
@@ -66,16 +86,32 @@
     ],
     "3": [
       {
+        "surface": "Then he told",
+        "lemma": "amar"
+      },
+      {
         "surface": "is the curse",
         "lemma": "alah"
+      },
+      {
+        "surface": "that is going out",
+        "lemma": "yatsa"
       },
       {
         "surface": "the face",
         "lemma": "paneh"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "thief",
@@ -84,6 +120,10 @@
       {
         "surface": "will be removed",
         "lemma": "naqah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "perjurer",
@@ -96,6 +136,10 @@
     ],
     "4": [
       {
+        "surface": "I will send it out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -106,6 +150,10 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "and it will enter",
+        "lemma": "bo"
       },
       {
         "surface": "the house",
@@ -166,8 +214,12 @@
         "lemma": "davar"
       },
       {
-        "surface": "Now",
-        "lemma": "na"
+        "surface": "came forward",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and told",
+        "lemma": "amar"
       },
       {
         "surface": "lift up",
@@ -178,8 +230,16 @@
         "lemma": "ayin"
       },
       {
+        "surface": "and see",
+        "lemma": "raah"
+      },
+      {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "is approaching",
+        "lemma": "yatsa"
       }
     ],
     "6": [
@@ -188,12 +248,32 @@
         "lemma": "mah"
       },
       {
+        "surface": "I asked",
+        "lemma": "amar"
+      },
+      {
+        "surface": "And he replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "A measuring basket",
         "lemma": "ephah"
       },
       {
+        "surface": "is going forth",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "Then he continued",
+        "lemma": "amar"
+      },
+      {
         "surface": "is their iniquity",
         "lemma": "ayin"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -201,10 +281,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "And behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the cover",
         "lemma": "kikkar"
@@ -226,6 +302,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "sitting",
+        "lemma": "yashav"
+      },
+      {
         "surface": "inside",
         "lemma": "tavekh"
       },
@@ -238,6 +318,10 @@
       {
         "surface": "is Wickedness",
         "lemma": "rishah"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
       },
       {
         "surface": "And he shoved her down",
@@ -274,12 +358,20 @@
         "lemma": "ayin"
       },
       {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "two",
         "lemma": "shenayim"
       },
       {
         "surface": "women",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "approaching",
+        "lemma": "yatsa"
       },
       {
         "surface": "with the wind",
@@ -340,6 +432,10 @@
         "lemma": "ephah"
       },
       {
+        "surface": "I asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "the angel",
         "lemma": "maleakh"
       },
@@ -366,6 +462,10 @@
         "lemma": "shinar"
       },
       {
+        "surface": "he told",
+        "lemma": "amar"
+      },
+      {
         "surface": "And when it is ready",
         "lemma": "kun"
       },
@@ -384,8 +484,8 @@
     ]
   },
   "themeLemmas": [
-    "nasa",
-    "ephah",
-    "bet"
+    "amar",
+    "yatsa",
+    "raah"
   ]
 }

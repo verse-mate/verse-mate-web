@@ -18,8 +18,16 @@
         "lemma": "mah"
       },
       {
+        "surface": "has happened",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Look",
         "lemma": "navat"
+      },
+      {
+        "surface": "and see",
+        "lemma": "raah"
       },
       {
         "surface": "our disgrace",
@@ -49,6 +57,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "We have become",
+        "lemma": "hayah"
+      },
       {
         "surface": "fatherless",
         "lemma": "ayin"
@@ -84,6 +96,10 @@
         "lemma": "ets"
       },
       {
+        "surface": "comes",
+        "lemma": "bo"
+      },
+      {
         "surface": "at a price",
         "lemma": "mechir"
       }
@@ -98,11 +114,19 @@
         "lemma": "yaga"
       },
       {
+        "surface": "and find no",
+        "lemma": "lo"
+      },
+      {
         "surface": "rest",
         "lemma": "nuach"
       }
     ],
     "6": [
+      {
+        "surface": "We submitted",
+        "lemma": "natan"
+      },
       {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
@@ -121,6 +145,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "Our fathers",
+        "lemma": "av"
+      },
       {
         "surface": "sinned",
         "lemma": "chata"
@@ -161,6 +189,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "We get",
+        "lemma": "bo"
+      },
       {
         "surface": "our bread",
         "lemma": "lechem"
@@ -250,6 +282,10 @@
       {
         "surface": "elders",
         "lemma": "zaqen"
+      },
+      {
+        "surface": "receive no",
+        "lemma": "lo"
       },
       {
         "surface": "respect",
@@ -344,10 +380,6 @@
         "lemma": "rosh"
       },
       {
-        "surface": "Woe",
-        "lemma": "oy"
-      },
-      {
         "surface": "we have sinned",
         "lemma": "chata"
       }
@@ -356,6 +388,10 @@
       {
         "surface": "our hearts",
         "lemma": "lev"
+      },
+      {
+        "surface": "are",
+        "lemma": "hayah"
       },
       {
         "surface": "faint",
@@ -398,6 +434,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "reign",
+        "lemma": "yashav"
+      },
+      {
         "surface": "forever",
         "lemma": "olam"
       },
@@ -438,8 +478,16 @@
     ],
     "21": [
       {
+        "surface": "Restore us",
+        "lemma": "shuv"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "so we may return",
+        "lemma": "shuv"
       },
       {
         "surface": "renew",
@@ -467,7 +515,7 @@
   },
   "themeLemmas": [
     "paneh",
-    "zaqen",
-    "tsiyyon"
+    "hayah",
+    "zaqen"
   ]
 }

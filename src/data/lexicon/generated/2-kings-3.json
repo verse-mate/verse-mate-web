@@ -64,6 +64,10 @@
     ],
     "2": [
       {
+        "surface": "And he did",
+        "lemma": "asah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
@@ -74,6 +78,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "as his father",
+        "lemma": "av"
       },
       {
         "surface": "and mother had done",
@@ -90,6 +102,14 @@
       {
         "surface": "of Baal",
         "lemma": "baal"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
+        "surface": "had made",
+        "lemma": "asah"
       }
     ],
     "3": [
@@ -122,6 +142,10 @@
         "lemma": "chata"
       },
       {
+        "surface": "he did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turn away",
         "lemma": "sur"
       }
@@ -140,8 +164,16 @@
         "lemma": "moav"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a sheep breeder",
         "lemma": "noqed"
+      },
+      {
+        "surface": "and he would render",
+        "lemma": "shuv"
       },
       {
         "surface": "to the king",
@@ -181,6 +213,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "But after",
+        "lemma": "hayah"
+      },
       {
         "surface": "the death",
         "lemma": "mavet"
@@ -224,12 +260,20 @@
         "lemma": "yehoram"
       },
       {
+        "surface": "set out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from Samaria",
         "lemma": "shomeron"
       },
       {
         "surface": "and mobilized",
         "lemma": "paqad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -286,6 +330,10 @@
         "lemma": "alah"
       },
       {
+        "surface": "replied Jehoshaphat",
+        "lemma": "amar"
+      },
+      {
         "surface": "my people are",
         "lemma": "am"
       },
@@ -303,6 +351,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Then he asked",
+        "lemma": "amar"
+      },
       {
         "surface": "Which",
         "lemma": "ay"
@@ -326,6 +378,10 @@
       {
         "surface": "of Edom",
         "lemma": "edom"
+      },
+      {
+        "surface": "replied Joram",
+        "lemma": "amar"
       }
     ],
     "9": [
@@ -374,6 +430,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "they had no",
+        "lemma": "lo"
+      },
+      {
         "surface": "water",
         "lemma": "mayim"
       },
@@ -388,8 +448,8 @@
     ],
     "10": [
       {
-        "surface": "Alas",
-        "lemma": "ahah"
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "the king",
@@ -404,12 +464,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "has summoned",
+        "lemma": "qara"
+      },
+      {
         "surface": "three",
         "lemma": "shalosh"
       },
       {
         "surface": "kings",
         "lemma": "melekh"
+      },
+      {
+        "surface": "to deliver",
+        "lemma": "natan"
       },
       {
         "surface": "into the hand",
@@ -424,6 +492,10 @@
       {
         "surface": "But Jehoshaphat",
         "lemma": "yehoshaphat"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
       },
       {
         "surface": "Is there no",
@@ -508,6 +580,10 @@
         "lemma": "yehoshaphat"
       },
       {
+        "surface": "affirmed",
+        "lemma": "amar"
+      },
+      {
         "surface": "The word",
         "lemma": "davar"
       },
@@ -550,6 +626,10 @@
         "lemma": "elisah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -570,8 +650,20 @@
         "lemma": "navi"
       },
       {
+        "surface": "of your father",
+        "lemma": "av"
+      },
+      {
         "surface": "of your mother",
         "lemma": "em"
+      },
+      {
+        "surface": "No",
+        "lemma": "al"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "the king",
@@ -586,12 +678,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "who has summoned",
+        "lemma": "qara"
+      },
+      {
         "surface": "three",
         "lemma": "shalosh"
       },
       {
         "surface": "kings",
         "lemma": "melekh"
+      },
+      {
+        "surface": "to deliver",
+        "lemma": "natan"
       },
       {
         "surface": "into the hand",
@@ -606,6 +706,10 @@
       {
         "surface": "Then Elisha",
         "lemma": "elisah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "As surely as the LORD",
@@ -652,8 +756,20 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "I would not",
+        "lemma": "im"
+      },
+      {
         "surface": "look",
         "lemma": "navat"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
+        "surface": "acknowledge you",
+        "lemma": "raah"
       }
     ],
     "15": [
@@ -670,6 +786,10 @@
         "lemma": "nagan"
       },
       {
+        "surface": "And while",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the harpist",
         "lemma": "nagan"
       },
@@ -684,9 +804,17 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
       }
     ],
     "16": [
+      {
+        "surface": "and he said",
+        "lemma": "amar"
+      },
       {
         "surface": "This is what",
         "lemma": "koh"
@@ -694,6 +822,14 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Dig",
+        "lemma": "asah"
       },
       {
         "surface": "valley",
@@ -712,6 +848,18 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "wind",
@@ -760,6 +908,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and He will also deliver",
+        "lemma": "natan"
+      },
+      {
         "surface": "the Moabites",
         "lemma": "moav"
       },
@@ -774,12 +926,20 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "fortified",
         "lemma": "mivtsar"
       },
       {
         "surface": "city",
         "lemma": "ir"
+      },
+      {
+        "surface": "and every",
+        "lemma": "kol"
       },
       {
         "surface": "city",
@@ -794,6 +954,10 @@
         "lemma": "naphal"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
       },
@@ -806,12 +970,20 @@
         "lemma": "satam"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "spring",
         "lemma": "mayan"
       },
       {
         "surface": "and ruin",
         "lemma": "kaav"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "good",
@@ -840,8 +1012,8 @@
         "lemma": "mayim"
       },
       {
-        "surface": "suddenly",
-        "lemma": "hinneh"
+        "surface": "flowed",
+        "lemma": "bo"
       },
       {
         "surface": "from the direction",
@@ -862,8 +1034,16 @@
     ],
     "21": [
       {
+        "surface": "Now all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Moabites",
         "lemma": "moav"
+      },
+      {
+        "surface": "had heard",
+        "lemma": "shama"
       },
       {
         "surface": "the kings",
@@ -876,6 +1056,10 @@
       {
         "surface": "to fight",
         "lemma": "lacham"
+      },
+      {
+        "surface": "So all",
+        "lemma": "kol"
       },
       {
         "surface": "who could bear arms",
@@ -924,6 +1108,10 @@
         "lemma": "mayim"
       },
       {
+        "surface": "looked",
+        "lemma": "raah"
+      },
+      {
         "surface": "as red",
         "lemma": "adom"
       },
@@ -944,6 +1132,10 @@
       {
         "surface": "is blood",
         "lemma": "dam"
+      },
+      {
+        "surface": "they exclaimed",
+        "lemma": "amar"
       },
       {
         "surface": "The kings",
@@ -980,6 +1172,10 @@
     ],
     "24": [
       {
+        "surface": "But when the Moabites came",
+        "lemma": "bo"
+      },
+      {
         "surface": "the camp",
         "lemma": "machaneh"
       },
@@ -1012,6 +1208,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "So the Israelites invaded their land",
+        "lemma": "bo"
+      },
+      {
         "surface": "and struck down",
         "lemma": "nakhah"
       },
@@ -1042,6 +1242,10 @@
         "lemma": "even"
       },
       {
+        "surface": "on every",
+        "lemma": "kol"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
       },
@@ -1058,12 +1262,20 @@
         "lemma": "satam"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "spring",
         "lemma": "mayan"
       },
       {
         "surface": "and cut down",
         "lemma": "naphal"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "good",
@@ -1110,6 +1322,10 @@
       {
         "surface": "of Moab",
         "lemma": "moav"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
       },
       {
         "surface": "the battle",
@@ -1182,6 +1398,10 @@
         "lemma": "chomah"
       },
       {
+        "surface": "And there was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "great",
         "lemma": "gadol"
       },
@@ -1198,6 +1418,10 @@
         "lemma": "nasa"
       },
       {
+        "surface": "and returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to their own land",
         "lemma": "erets"
       }
@@ -1206,6 +1430,6 @@
   "themeLemmas": [
     "yisrael",
     "moav",
-    "yehoshaphat"
+    "amar"
   ]
 }

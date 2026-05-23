@@ -18,12 +18,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "restored",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the captives",
         "lemma": "shivah"
       },
       {
         "surface": "of Zion",
         "lemma": "tsiyyon"
+      },
+      {
+        "surface": "we were",
+        "lemma": "hayah"
       },
       {
         "surface": "like dreamers",
@@ -52,12 +60,20 @@
         "lemma": "rinnah"
       },
       {
+        "surface": "it was said",
+        "lemma": "amar"
+      },
+      {
         "surface": "among the nations",
         "lemma": "goy"
       },
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has done",
+        "lemma": "asah"
       },
       {
         "surface": "great",
@@ -70,8 +86,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "has done",
+        "lemma": "asah"
+      },
+      {
         "surface": "great",
         "lemma": "gadal"
+      },
+      {
+        "surface": "we are",
+        "lemma": "hayah"
       },
       {
         "surface": "filled with joy",
@@ -79,6 +103,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Restore",
+        "lemma": "shuv"
+      },
       {
         "surface": "our captives",
         "lemma": "shevut"
@@ -136,6 +164,10 @@
         "lemma": "zera"
       },
       {
+        "surface": "will surely return",
+        "lemma": "bo"
+      },
+      {
         "surface": "with shouts of joy",
         "lemma": "rinnah"
       },
@@ -151,7 +183,7 @@
   },
   "themeLemmas": [
     "rinnah",
-    "nasa",
-    "gadal"
+    "shuv",
+    "nasa"
   ]
 }

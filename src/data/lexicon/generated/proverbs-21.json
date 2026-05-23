@@ -36,6 +36,10 @@
     ],
     "2": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "a man’s",
         "lemma": "ish"
       },
@@ -65,6 +69,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "To do",
+        "lemma": "asah"
+      },
       {
         "surface": "righteousness",
         "lemma": "tsedaqah"
@@ -194,6 +202,10 @@
         "lemma": "maen"
       },
       {
+        "surface": "to do",
+        "lemma": "asah"
+      },
+      {
         "surface": "what is just",
         "lemma": "mishpat"
       }
@@ -232,6 +244,10 @@
       {
         "surface": "Better",
         "lemma": "tov"
+      },
+      {
+        "surface": "to live",
+        "lemma": "yashav"
       },
       {
         "surface": "a corner",
@@ -370,6 +386,14 @@
         "lemma": "dal"
       },
       {
+        "surface": "shall cry out",
+        "lemma": "qara"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "and receive no answer",
         "lemma": "un"
       }
@@ -412,6 +436,10 @@
       {
         "surface": "Justice",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "executed",
+        "lemma": "asah"
       },
       {
         "surface": "is a joy",
@@ -490,6 +518,10 @@
         "lemma": "shemen"
       },
       {
+        "surface": "will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "be rich",
         "lemma": "ashar"
       }
@@ -524,6 +556,10 @@
       {
         "surface": "Better",
         "lemma": "tov"
+      },
+      {
+        "surface": "to live",
+        "lemma": "yashav"
       },
       {
         "surface": "in the desert",
@@ -680,6 +716,10 @@
         "lemma": "yahir"
       },
       {
+        "surface": "of him who acts",
+        "lemma": "asah"
+      },
+      {
         "surface": "with excessive",
         "lemma": "evrah"
       },
@@ -708,9 +748,17 @@
       {
         "surface": "refuse",
         "lemma": "maen"
+      },
+      {
+        "surface": "to work",
+        "lemma": "asah"
       }
     ],
     "26": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "day long",
         "lemma": "yom"
@@ -726,6 +774,14 @@
       {
         "surface": "but the righteous",
         "lemma": "tsaddiq"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "restraint",
@@ -744,6 +800,10 @@
       {
         "surface": "is detestable",
         "lemma": "toevah"
+      },
+      {
+        "surface": "brought",
+        "lemma": "bo"
       },
       {
         "surface": "with ill intent",
@@ -766,6 +826,10 @@
       {
         "surface": "but the man",
         "lemma": "ish"
+      },
+      {
+        "surface": "who listens to truth",
+        "lemma": "shama"
       },
       {
         "surface": "will speak",
@@ -869,7 +933,7 @@
   },
   "themeLemmas": [
     "rasah",
-    "yashar",
-    "tsaddiq"
+    "asah",
+    "yashar"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "are",
+        "lemma": "echo"
+      },
+      {
         "surface": "surrounded by",
         "lemma": "perikeimai"
       },
@@ -24,6 +28,10 @@
       {
         "surface": "let us throw off",
         "lemma": "apotithemi"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "encumbrance",
@@ -224,6 +232,10 @@
         "lemma": "mastigoo"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "son",
         "lemma": "huios"
       },
@@ -254,6 +266,10 @@
         "lemma": "huios"
       },
       {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
         "surface": "son",
         "lemma": "huios"
       },
@@ -268,12 +284,28 @@
     ],
     "8": [
       {
+        "surface": "you do not experience",
+        "lemma": "eimi"
+      },
+      {
         "surface": "discipline",
         "lemma": "paideia"
       },
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "else",
         "lemma": "metochos"
+      },
+      {
+        "surface": "you are",
+        "lemma": "eimi"
       },
       {
         "surface": "illegitimate children",
@@ -290,6 +322,10 @@
         "lemma": "eita"
       },
       {
+        "surface": "we have all had",
+        "lemma": "echo"
+      },
+      {
         "surface": "earthly",
         "lemma": "sarx"
       },
@@ -304,6 +340,10 @@
       {
         "surface": "we respected them",
         "lemma": "entrepo"
+      },
+      {
+        "surface": "much",
+        "lemma": "polus"
       },
       {
         "surface": "submit",
@@ -354,12 +394,20 @@
     ],
     "11": [
       {
+        "surface": "vvv",
+        "lemma": "pas"
+      },
+      {
         "surface": "discipline",
         "lemma": "paideia"
       },
       {
         "surface": "seems",
         "lemma": "dokeo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "eimi"
       },
       {
         "surface": "enjoyable",
@@ -422,6 +470,10 @@
     ],
     "13": [
       {
+        "surface": "Make",
+        "lemma": "poieo"
+      },
+      {
         "surface": "straight",
         "lemma": "orthos"
       },
@@ -460,8 +512,20 @@
         "lemma": "eirene"
       },
       {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "holiness",
         "lemma": "hagiasmos"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "will see",
+        "lemma": "horao"
       },
       {
         "surface": "Lord",
@@ -508,6 +572,10 @@
       {
         "surface": "defile",
         "lemma": "miaino"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       }
     ],
     "16": [
@@ -524,6 +592,10 @@
         "lemma": "esau"
       },
       {
+        "surface": "a single",
+        "lemma": "heis"
+      },
+      {
         "surface": "meal",
         "lemma": "brosis"
       },
@@ -538,8 +610,16 @@
     ],
     "17": [
       {
+        "surface": "you know",
+        "lemma": "eido"
+      },
+      {
         "surface": "afterward",
         "lemma": "metepeita"
+      },
+      {
+        "surface": "when he wanted",
+        "lemma": "thelo"
       },
       {
         "surface": "to inherit",
@@ -552,6 +632,10 @@
       {
         "surface": "he was rejected",
         "lemma": "apodokimazo"
+      },
+      {
+        "surface": "He could find",
+        "lemma": "heurisko"
       },
       {
         "surface": "ground",
@@ -614,6 +698,10 @@
         "lemma": "phone"
       },
       {
+        "surface": "hearers",
+        "lemma": "akouo"
+      },
+      {
         "surface": "beg that",
         "lemma": "paraiteomai"
       },
@@ -634,10 +722,6 @@
       {
         "surface": "was commanded",
         "lemma": "diastello"
-      },
-      {
-        "surface": "If even",
-        "lemma": "kan"
       },
       {
         "surface": "an animal",
@@ -662,6 +746,10 @@
         "lemma": "phantazo"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "so",
         "lemma": "houto"
       },
@@ -672,6 +760,14 @@
       {
         "surface": "Moses",
         "lemma": "mouses"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "I am",
+        "lemma": "eimi"
       },
       {
         "surface": "trembling",
@@ -754,6 +850,10 @@
         "lemma": "krites"
       },
       {
+        "surface": "of all",
+        "lemma": "pas"
+      },
+      {
         "surface": "to the spirits",
         "lemma": "pneuma"
       },
@@ -792,6 +892,10 @@
         "lemma": "haima"
       },
       {
+        "surface": "that speaks",
+        "lemma": "laleo"
+      },
+      {
         "surface": "a better word",
         "lemma": "kreitton"
       },
@@ -810,6 +914,10 @@
         "lemma": "paraiteomai"
       },
       {
+        "surface": "speaks",
+        "lemma": "laleo"
+      },
+      {
         "surface": "escape",
         "lemma": "ekpheugo"
       },
@@ -824,6 +932,10 @@
       {
         "surface": "earth",
         "lemma": "ge"
+      },
+      {
+        "surface": "how much",
+        "lemma": "polus"
       },
       {
         "surface": "less",
@@ -910,6 +1022,10 @@
         "lemma": "saleuo"
       },
       {
+        "surface": "created things",
+        "lemma": "poieo"
+      },
+      {
         "surface": "unshakable",
         "lemma": "saleuo"
       },
@@ -930,6 +1046,10 @@
       {
         "surface": "kingdom",
         "lemma": "basileia"
+      },
+      {
+        "surface": "let us be filled with",
+        "lemma": "echo"
       },
       {
         "surface": "gratitude",

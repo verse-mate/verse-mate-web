@@ -24,6 +24,10 @@
     ],
     "2": [
       {
+        "surface": "Listen closely",
+        "lemma": "shama"
+      },
+      {
         "surface": "to the thunder",
         "lemma": "rogez"
       },
@@ -34,6 +38,10 @@
       {
         "surface": "and the rumbling",
         "lemma": "hegeh"
+      },
+      {
+        "surface": "that comes",
+        "lemma": "yatsa"
       },
       {
         "surface": "from His mouth",
@@ -52,6 +60,10 @@
       {
         "surface": "beneath",
         "lemma": "tachat"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "sky",
@@ -92,12 +104,20 @@
         "lemma": "qol"
       },
       {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "restrain the lightning",
         "lemma": "aqav"
       },
       {
         "surface": "His voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "resounds",
+        "lemma": "shama"
       }
     ],
     "5": [
@@ -118,8 +138,16 @@
         "lemma": "qol"
       },
       {
+        "surface": "He does",
+        "lemma": "asah"
+      },
+      {
         "surface": "great things",
         "lemma": "gadol"
+      },
+      {
+        "surface": "we cannot",
+        "lemma": "lo"
       },
       {
         "surface": "comprehend",
@@ -127,6 +155,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "He says",
+        "lemma": "amar"
+      },
       {
         "surface": "to the snow",
         "lemma": "sheleg"
@@ -166,8 +198,16 @@
         "lemma": "yad"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "man",
         "lemma": "adam"
+      },
+      {
+        "surface": "so that all",
+        "lemma": "kol"
       },
       {
         "surface": "men",
@@ -188,6 +228,10 @@
         "lemma": "chay"
       },
       {
+        "surface": "enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "their lairs",
         "lemma": "erev"
       },
@@ -204,6 +248,10 @@
       {
         "surface": "The tempest",
         "lemma": "suphah"
+      },
+      {
+        "surface": "comes",
+        "lemma": "bo"
       },
       {
         "surface": "its chamber",
@@ -232,6 +280,10 @@
         "lemma": "qerach"
       },
       {
+        "surface": "is formed",
+        "lemma": "natan"
+      },
+      {
         "surface": "and the watery",
         "lemma": "mayim"
       },
@@ -248,6 +300,10 @@
       {
         "surface": "He loads",
         "lemma": "tarach"
+      },
+      {
+        "surface": "the clouds",
+        "lemma": "av"
       },
       {
         "surface": "with moisture",
@@ -284,6 +340,10 @@
         "lemma": "paal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "He commands",
         "lemma": "tsavah"
       },
@@ -302,8 +362,16 @@
     ],
     "13": [
       {
+        "surface": "Whether",
+        "lemma": "im"
+      },
+      {
         "surface": "for punishment",
         "lemma": "shevet"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "for His land",
@@ -376,6 +444,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "the clouds",
+        "lemma": "av"
+      },
+      {
         "surface": "float",
         "lemma": "miphlas"
       },
@@ -446,6 +518,14 @@
         "lemma": "mah"
       },
       {
+        "surface": "we should say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "we cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "draw up our case",
         "lemma": "arakh"
       },
@@ -472,6 +552,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "ask",
+        "lemma": "amar"
+      },
+      {
         "surface": "to be swallowed up",
         "lemma": "bala"
       }
@@ -480,6 +564,14 @@
       {
         "surface": "Now",
         "lemma": "attah"
+      },
+      {
+        "surface": "no one",
+        "lemma": "lo"
+      },
+      {
+        "surface": "can gaze",
+        "lemma": "raah"
       },
       {
         "surface": "at the sun",
@@ -538,6 +630,10 @@
         "lemma": "shadday"
       },
       {
+        "surface": "is beyond",
+        "lemma": "lo"
+      },
+      {
         "surface": "our reach",
         "lemma": "matsa"
       },
@@ -562,6 +658,10 @@
         "lemma": "tsedaqah"
       },
       {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "oppress",
         "lemma": "anah"
       }
@@ -580,6 +680,18 @@
         "lemma": "yare"
       },
       {
+        "surface": "for He is not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "partial",
+        "lemma": "raah"
+      },
+      {
+        "surface": "to the",
+        "lemma": "kol"
+      },
+      {
         "surface": "wise",
         "lemma": "chakham"
       },
@@ -590,8 +702,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "yada",
-    "qol",
-    "or"
+    "qol"
   ]
 }

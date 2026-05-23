@@ -14,6 +14,10 @@
         "lemma": "pisteuo"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "spirit",
         "lemma": "pneuma"
       },
@@ -26,12 +30,24 @@
         "lemma": "pneuma"
       },
       {
+        "surface": "they are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "false prophets",
         "lemma": "pseudoprophetes"
+      },
+      {
+        "surface": "have gone out",
+        "lemma": "exerchomai"
       },
       {
         "surface": "world",
@@ -40,12 +56,20 @@
     ],
     "2": [
       {
+        "surface": "you will know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "Spirit",
         "lemma": "pneuma"
       },
       {
         "surface": "of God",
         "lemma": "theos"
+      },
+      {
+        "surface": "Every",
+        "lemma": "pas"
       },
       {
         "surface": "spirit",
@@ -64,8 +88,16 @@
         "lemma": "christos"
       },
       {
+        "surface": "has come",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "the flesh",
         "lemma": "sarx"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "God",
@@ -73,6 +105,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "every",
+        "lemma": "pas"
+      },
       {
         "surface": "spirit",
         "lemma": "pneuma"
@@ -86,12 +122,32 @@
         "lemma": "iesous"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "antichrist",
         "lemma": "antichristos"
+      },
+      {
+        "surface": "you have heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "is coming",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "which is",
+        "lemma": "eimi"
       },
       {
         "surface": "already",
@@ -112,6 +168,10 @@
         "lemma": "teknion"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -120,14 +180,30 @@
         "lemma": "nikao"
       },
       {
+        "surface": "greater",
+        "lemma": "megas"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "world",
         "lemma": "kosmos"
       }
     ],
     "5": [
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "they speak",
+        "lemma": "laleo"
       },
       {
         "surface": "world’s",
@@ -136,20 +212,48 @@
       {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "listens to",
+        "lemma": "akouo"
       }
     ],
     "6": [
       {
-        "surface": "God",
-        "lemma": "theos"
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "God",
         "lemma": "theos"
       },
       {
+        "surface": "knows",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "listens to",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "God",
+        "lemma": "theos"
+      },
+      {
+        "surface": "does not listen to",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "we know",
+        "lemma": "ginosko"
       },
       {
         "surface": "Spirit",
@@ -186,8 +290,16 @@
         "lemma": "agape"
       },
       {
+        "surface": "comes",
+        "lemma": "eimi"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "Everyone",
+        "lemma": "pas"
       },
       {
         "surface": "loves",
@@ -202,6 +314,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "knows",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       }
@@ -212,12 +328,20 @@
         "lemma": "agapao"
       },
       {
+        "surface": "does not know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "love",
@@ -266,6 +390,10 @@
       {
         "surface": "And love",
         "lemma": "agape"
+      },
+      {
+        "surface": "consists",
+        "lemma": "eimi"
       },
       {
         "surface": "loved",
@@ -328,6 +456,10 @@
     ],
     "12": [
       {
+        "surface": "No one",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "has ever seen",
         "lemma": "theaomai"
       },
@@ -356,14 +488,26 @@
         "lemma": "agape"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "perfected",
         "lemma": "teleioo"
       }
     ],
     "13": [
       {
+        "surface": "we know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "we remain",
         "lemma": "meno"
+      },
+      {
+        "surface": "He has given",
+        "lemma": "didomi"
       },
       {
         "surface": "Spirit",
@@ -410,6 +554,10 @@
         "lemma": "iesous"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Son",
         "lemma": "huios"
       },
@@ -432,6 +580,10 @@
     ],
     "16": [
       {
+        "surface": "have come to know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "believe",
         "lemma": "pisteuo"
       },
@@ -444,8 +596,16 @@
         "lemma": "theos"
       },
       {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "love",
@@ -482,6 +642,10 @@
         "lemma": "teleioo"
       },
       {
+        "surface": "we may have",
+        "lemma": "echo"
+      },
+      {
         "surface": "confidence",
         "lemma": "parresia"
       },
@@ -496,9 +660,17 @@
       {
         "surface": "world",
         "lemma": "kosmos"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       }
     ],
     "18": [
+      {
+        "surface": "There is",
+        "lemma": "eimi"
+      },
       {
         "surface": "fear",
         "lemma": "phobos"
@@ -526,6 +698,10 @@
       {
         "surface": "fear",
         "lemma": "phobos"
+      },
+      {
+        "surface": "involves",
+        "lemma": "echo"
       },
       {
         "surface": "punishment",
@@ -560,6 +736,10 @@
     ],
     "20": [
       {
+        "surface": "says",
+        "lemma": "eipon"
+      },
+      {
         "surface": "I love",
         "lemma": "agapao"
       },
@@ -576,6 +756,10 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "he is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a liar",
         "lemma": "pseustes"
       },
@@ -588,15 +772,31 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "he has seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "love",
         "lemma": "agapao"
       },
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "he has not seen",
+        "lemma": "horao"
       }
     ],
     "21": [
+      {
+        "surface": "we have",
+        "lemma": "echo"
+      },
       {
         "surface": "commandment",
         "lemma": "entole"

@@ -34,6 +34,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "or harbor",
+        "lemma": "bo"
+      },
+      {
         "surface": "Word has reached",
         "lemma": "galah"
       },
@@ -50,6 +54,10 @@
       {
         "surface": "Be silent",
         "lemma": "damam"
+      },
+      {
+        "surface": "O dwellers",
+        "lemma": "yashav"
       },
       {
         "surface": "of the coastland",
@@ -106,6 +114,10 @@
         "lemma": "tevuah"
       },
       {
+        "surface": "she was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the merchant",
         "lemma": "sachar"
       },
@@ -136,12 +148,24 @@
         "lemma": "yam"
       },
       {
+        "surface": "has spoken",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "been in labor",
         "lemma": "chul"
       },
       {
         "surface": "or given birth",
         "lemma": "yalad"
+      },
+      {
+        "surface": "I have not",
+        "lemma": "lo"
       },
       {
         "surface": "raised",
@@ -194,6 +218,10 @@
       {
         "surface": "wail",
         "lemma": "yalal"
+      },
+      {
+        "surface": "O inhabitants",
+        "lemma": "yashav"
       },
       {
         "surface": "of the coastland",
@@ -286,6 +314,10 @@
         "lemma": "chalal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its glorious",
         "lemma": "gaon"
       },
@@ -296,6 +328,10 @@
       {
         "surface": "to disgrace",
         "lemma": "qalal"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the renowned",
@@ -384,8 +420,16 @@
     ],
     "12": [
       {
+        "surface": "He said",
+        "lemma": "amar"
+      },
+      {
         "surface": "You shall rejoice",
         "lemma": "alaz"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "more",
@@ -424,15 +468,15 @@
         "lemma": "sham"
       },
       {
+        "surface": "you will find no",
+        "lemma": "lo"
+      },
+      {
         "surface": "rest",
         "lemma": "nuach"
       }
     ],
     "13": [
-      {
-        "surface": "Look at",
-        "lemma": "hen"
-      },
       {
         "surface": "the land",
         "lemma": "erets"
@@ -444,6 +488,14 @@
       {
         "surface": "a people",
         "lemma": "am"
+      },
+      {
+        "surface": "now",
+        "lemma": "lo"
+      },
+      {
+        "surface": "of no account",
+        "lemma": "hayah"
       },
       {
         "surface": "The Assyrians",
@@ -550,6 +602,10 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "it will happen",
+        "lemma": "hayah"
+      },
+      {
         "surface": "to Tyre",
         "lemma": "tsor"
       },
@@ -610,6 +666,10 @@
     ],
     "17": [
       {
+        "surface": "And at",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the end",
         "lemma": "qets"
       },
@@ -634,12 +694,20 @@
         "lemma": "tsor"
       },
       {
+        "surface": "Then she will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to hire",
         "lemma": "etnan"
       },
       {
         "surface": "as a prostitute",
         "lemma": "zanah"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "the kingdoms",
@@ -664,12 +732,20 @@
         "lemma": "etnan"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "set apart",
         "lemma": "qodesh"
       },
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "they will not",
+        "lemma": "lo"
       },
       {
         "surface": "be stored",
@@ -680,8 +756,16 @@
         "lemma": "chasan"
       },
       {
+        "surface": "her",
+        "lemma": "hayah"
+      },
+      {
         "surface": "profit",
         "lemma": "sachar"
+      },
+      {
+        "surface": "will go to those who live",
+        "lemma": "yashav"
       },
       {
         "surface": "before",
@@ -711,7 +795,7 @@
   },
   "themeLemmas": [
     "tsor",
-    "sachar",
-    "yam"
+    "lo",
+    "hayah"
   ]
 }

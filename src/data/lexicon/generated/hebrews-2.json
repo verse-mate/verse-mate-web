@@ -18,6 +18,10 @@
         "lemma": "prosecho"
       },
       {
+        "surface": "we have heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "so that we do not drift away",
         "lemma": "pararreo"
       }
@@ -28,12 +32,24 @@
         "lemma": "logos"
       },
       {
+        "surface": "spoken",
+        "lemma": "laleo"
+      },
+      {
         "surface": "angels",
         "lemma": "angelos"
       },
       {
+        "surface": "was",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "binding",
         "lemma": "bebaios"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "transgression",
@@ -42,6 +58,10 @@
       {
         "surface": "disobedience",
         "lemma": "parakoe"
+      },
+      {
+        "surface": "received",
+        "lemma": "lambano"
       },
       {
         "surface": "its just",
@@ -66,8 +86,16 @@
         "lemma": "soteria"
       },
       {
+        "surface": "was",
+        "lemma": "lambano"
+      },
+      {
         "surface": "first",
         "lemma": "arche"
+      },
+      {
+        "surface": "announced",
+        "lemma": "laleo"
       },
       {
         "surface": "Lord",
@@ -76,6 +104,10 @@
       {
         "surface": "was confirmed",
         "lemma": "bebaioo"
+      },
+      {
+        "surface": "heard Him",
+        "lemma": "akouo"
       }
     ],
     "4": [
@@ -136,6 +168,10 @@
       {
         "surface": "to come",
         "lemma": "mello"
+      },
+      {
+        "surface": "we are speaking",
+        "lemma": "laleo"
       }
     ],
     "6": [
@@ -146,6 +182,18 @@
       {
         "surface": "it is testified",
         "lemma": "diamarturomai"
+      },
+      {
+        "surface": "in these words",
+        "lemma": "lego"
+      },
+      {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "man",
@@ -196,6 +244,10 @@
         "lemma": "hupotasso"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "feet",
         "lemma": "pous"
       },
@@ -204,8 +256,16 @@
         "lemma": "hupotasso"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "He left",
         "lemma": "aphiemi"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
       },
       {
         "surface": "outside of his control",
@@ -218,6 +278,14 @@
       {
         "surface": "vvv",
         "lemma": "oupo"
+      },
+      {
+        "surface": "we do not see",
+        "lemma": "horao"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
       },
       {
         "surface": "subject",
@@ -280,12 +348,20 @@
       {
         "surface": "death",
         "lemma": "thanatos"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
       }
     ],
     "10": [
       {
         "surface": "In bringing",
         "lemma": "ago"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "sons",
@@ -298,6 +374,10 @@
       {
         "surface": "it was fitting",
         "lemma": "prepo"
+      },
+      {
+        "surface": "all things exist",
+        "lemma": "pas"
       },
       {
         "surface": "to make",
@@ -326,6 +406,14 @@
         "lemma": "hagiazo"
       },
       {
+        "surface": "are",
+        "lemma": "pas"
+      },
+      {
+        "surface": "the same family",
+        "lemma": "heis"
+      },
+      {
         "surface": "Jesus is not ashamed",
         "lemma": "epaischunomai"
       },
@@ -339,6 +427,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "He says",
+        "lemma": "lego"
+      },
       {
         "surface": "I will proclaim",
         "lemma": "apangello"
@@ -366,6 +458,10 @@
         "lemma": "palin"
       },
       {
+        "surface": "will",
+        "lemma": "eimi"
+      },
+      {
         "surface": "put My trust",
         "lemma": "peitho"
       },
@@ -380,6 +476,10 @@
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "has given",
+        "lemma": "didomi"
       }
     ],
     "14": [
@@ -412,12 +512,20 @@
         "lemma": "katargeo"
       },
       {
+        "surface": "holds",
+        "lemma": "echo"
+      },
+      {
         "surface": "power",
         "lemma": "kratos"
       },
       {
         "surface": "of death",
         "lemma": "thanatos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "devil",
@@ -434,8 +542,16 @@
         "lemma": "hosos"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "lives",
         "lemma": "zao"
+      },
+      {
+        "surface": "were",
+        "lemma": "eimi"
       },
       {
         "surface": "held",
@@ -486,6 +602,14 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "every way",
+        "lemma": "pas"
+      },
+      {
+        "surface": "He might become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "a merciful",
         "lemma": "eleemon"
       },
@@ -522,6 +646,10 @@
       {
         "surface": "when He was tempted",
         "lemma": "peirazo"
+      },
+      {
+        "surface": "He is able",
+        "lemma": "dunamai"
       },
       {
         "surface": "to help",

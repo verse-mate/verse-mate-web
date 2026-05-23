@@ -44,6 +44,10 @@
         "lemma": "paulos"
       },
       {
+        "surface": "tell",
+        "lemma": "lego"
+      },
+      {
         "surface": "you let yourselves be circumcised",
         "lemma": "peritemno"
       },
@@ -66,6 +70,10 @@
         "lemma": "marturomai"
       },
       {
+        "surface": "to every",
+        "lemma": "pas"
+      },
+      {
         "surface": "man",
         "lemma": "anthropos"
       },
@@ -74,8 +82,16 @@
         "lemma": "peritemno"
       },
       {
+        "surface": "he is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "obligated",
         "lemma": "opheiletes"
+      },
+      {
+        "surface": "to obey",
+        "lemma": "poieo"
       },
       {
         "surface": "whole",
@@ -178,6 +194,10 @@
         "lemma": "kalos"
       },
       {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
         "surface": "has obstructed",
         "lemma": "egkopto"
       },
@@ -246,6 +266,10 @@
       {
         "surface": "judgment",
         "lemma": "krima"
+      },
+      {
+        "surface": "he may be",
+        "lemma": "eimi"
       }
     ],
     "11": [
@@ -264,6 +288,10 @@
       {
         "surface": "circumcision",
         "lemma": "peritome"
+      },
+      {
+        "surface": "why",
+        "lemma": "tis"
       },
       {
         "surface": "vvv",
@@ -340,12 +368,20 @@
     ],
     "14": [
       {
+        "surface": "entire",
+        "lemma": "pas"
+      },
+      {
         "surface": "law",
         "lemma": "nomos"
       },
       {
         "surface": "is fulfilled",
         "lemma": "pleroo"
+      },
+      {
+        "surface": "a single",
+        "lemma": "heis"
       },
       {
         "surface": "decree",
@@ -387,6 +423,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "I say",
+        "lemma": "lego"
+      },
       {
         "surface": "walk",
         "lemma": "peripateo"
@@ -436,6 +476,14 @@
       {
         "surface": "to each other",
         "lemma": "allelon"
+      },
+      {
+        "surface": "you do not do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "you want",
+        "lemma": "thelo"
       }
     ],
     "18": [
@@ -446,6 +494,10 @@
       {
         "surface": "the Spirit",
         "lemma": "pneuma"
+      },
+      {
+        "surface": "you are",
+        "lemma": "eimi"
       },
       {
         "surface": "the law",
@@ -460,6 +512,10 @@
       {
         "surface": "flesh",
         "lemma": "sarx"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "obvious",
@@ -568,6 +624,10 @@
         "lemma": "pneuma"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "love",
         "lemma": "agape"
       },
@@ -604,6 +664,10 @@
       {
         "surface": "and self-control",
         "lemma": "egkrateia"
+      },
+      {
+        "surface": "there is",
+        "lemma": "eimi"
       },
       {
         "surface": "law",
@@ -655,6 +719,10 @@
       }
     ],
     "26": [
+      {
+        "surface": "Let us not become",
+        "lemma": "ginomai"
+      },
       {
         "surface": "conceited",
         "lemma": "kenodoxos"

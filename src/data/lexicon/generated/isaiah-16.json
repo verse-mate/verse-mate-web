@@ -56,6 +56,10 @@
         "lemma": "qen"
       },
       {
+        "surface": "so are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the daughters",
         "lemma": "bat"
       },
@@ -74,8 +78,16 @@
     ],
     "3": [
       {
+        "surface": "Give us",
+        "lemma": "bo"
+      },
+      {
         "surface": "counsel",
         "lemma": "etsah"
+      },
+      {
+        "surface": "render",
+        "lemma": "asah"
       },
       {
         "surface": "a decision",
@@ -100,6 +112,10 @@
       {
         "surface": "the refugees",
         "lemma": "nadach"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "betray",
@@ -210,11 +226,19 @@
         "lemma": "tsedeq"
       },
       {
+        "surface": "will sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in faithfulness",
         "lemma": "emet"
       }
     ],
     "6": [
+      {
+        "surface": "We have heard",
+        "lemma": "shama"
+      },
       {
         "surface": "of Moab’s",
         "lemma": "moav"
@@ -246,6 +270,10 @@
       {
         "surface": "But his boasting",
         "lemma": "bad"
+      },
+      {
+        "surface": "is empty",
+        "lemma": "lo"
       }
     ],
     "7": [
@@ -264,6 +292,10 @@
       {
         "surface": "let them wail",
         "lemma": "yalal"
+      },
+      {
+        "surface": "together",
+        "lemma": "kol"
       },
       {
         "surface": "for Moab",
@@ -432,6 +464,10 @@
         "lemma": "karmel"
       },
       {
+        "surface": "no one",
+        "lemma": "lo"
+      },
+      {
         "surface": "sings",
         "lemma": "run"
       },
@@ -442,6 +478,10 @@
       {
         "surface": "in the vineyards",
         "lemma": "kerem"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       },
       {
         "surface": "one tramples",
@@ -500,6 +540,10 @@
         "lemma": "moav"
       },
       {
+        "surface": "appears",
+        "lemma": "raah"
+      },
+      {
         "surface": "the high place",
         "lemma": "bamah"
       },
@@ -508,12 +552,20 @@
         "lemma": "laah"
       },
       {
+        "surface": "and enters",
+        "lemma": "bo"
+      },
+      {
         "surface": "his sanctuary",
         "lemma": "miqdash"
       },
       {
         "surface": "to pray",
         "lemma": "palal"
+      },
+      {
+        "surface": "it will do him no",
+        "lemma": "lo"
       },
       {
         "surface": "good",
@@ -580,6 +632,10 @@
         "lemma": "qalah"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "her many",
         "lemma": "rav"
       },
@@ -594,12 +650,16 @@
       {
         "surface": "will be few",
         "lemma": "meat"
+      },
+      {
+        "surface": "and feeble",
+        "lemma": "lo"
       }
     ]
   },
   "themeLemmas": [
     "moav",
-    "qircheres",
-    "yalal"
+    "lo",
+    "qircheres"
   ]
 }

@@ -68,6 +68,10 @@
         "lemma": "thura"
       },
       {
+        "surface": "called",
+        "lemma": "lego"
+      },
+      {
         "surface": "Beautiful",
         "lemma": "horaios"
       },
@@ -94,6 +98,10 @@
     ],
     "3": [
       {
+        "surface": "he saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "Peter",
         "lemma": "petros"
       },
@@ -112,6 +120,10 @@
       {
         "surface": "he asked them",
         "lemma": "erotao"
+      },
+      {
+        "surface": "for",
+        "lemma": "lambano"
       },
       {
         "surface": "money",
@@ -134,6 +146,10 @@
       {
         "surface": "Look",
         "lemma": "blepo"
+      },
+      {
+        "surface": "said Peter",
+        "lemma": "eipon"
       }
     ],
     "5": [
@@ -144,6 +160,10 @@
       {
         "surface": "expecting",
         "lemma": "prosdokao"
+      },
+      {
+        "surface": "to receive",
+        "lemma": "lambano"
       }
     ],
     "6": [
@@ -152,12 +172,24 @@
         "lemma": "petros"
       },
       {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "Silver",
         "lemma": "argurion"
       },
       {
         "surface": "gold",
         "lemma": "chrusion"
+      },
+      {
+        "surface": "I have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "I give",
+        "lemma": "didomi"
       },
       {
         "surface": "name",
@@ -224,8 +256,16 @@
         "lemma": "exallomai"
       },
       {
+        "surface": "to his feet",
+        "lemma": "histemi"
+      },
+      {
         "surface": "began to walk",
         "lemma": "peripateo"
+      },
+      {
+        "surface": "he went",
+        "lemma": "eiserchomai"
       },
       {
         "surface": "temple courts",
@@ -250,8 +290,16 @@
     ],
     "9": [
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "people",
         "lemma": "laos"
+      },
+      {
+        "surface": "saw",
+        "lemma": "horao"
       },
       {
         "surface": "walking",
@@ -322,6 +370,10 @@
         "lemma": "ioannes"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "people",
         "lemma": "laos"
       },
@@ -352,6 +404,14 @@
         "lemma": "petros"
       },
       {
+        "surface": "saw this",
+        "lemma": "horao"
+      },
+      {
+        "surface": "he addressed",
+        "lemma": "apokrino"
+      },
+      {
         "surface": "people",
         "lemma": "laos"
       },
@@ -364,8 +424,16 @@
         "lemma": "israelites"
       },
       {
+        "surface": "why",
+        "lemma": "tis"
+      },
+      {
         "surface": "are you surprised",
         "lemma": "thaumazo"
+      },
+      {
+        "surface": "Why",
+        "lemma": "tis"
       },
       {
         "surface": "do you stare",
@@ -382,6 +450,10 @@
       {
         "surface": "godliness",
         "lemma": "eusebeia"
+      },
+      {
+        "surface": "we had made",
+        "lemma": "poieo"
       },
       {
         "surface": "walk",
@@ -506,6 +578,10 @@
         "lemma": "nekros"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "witnesses",
         "lemma": "martus"
       }
@@ -524,6 +600,10 @@
         "lemma": "theoreo"
       },
       {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
         "surface": "has been made strong",
         "lemma": "stereoo"
       },
@@ -534,6 +614,10 @@
       {
         "surface": "faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "that has given",
+        "lemma": "didomi"
       },
       {
         "surface": "complete healing",
@@ -548,6 +632,10 @@
       {
         "surface": "brothers",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "I know",
+        "lemma": "eido"
       },
       {
         "surface": "you acted",
@@ -578,6 +666,10 @@
       {
         "surface": "foretold",
         "lemma": "prokatangello"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "prophets",
@@ -622,6 +714,10 @@
       {
         "surface": "of refreshing",
         "lemma": "anapsuxis"
+      },
+      {
+        "surface": "may come",
+        "lemma": "erchomai"
       },
       {
         "surface": "the presence",
@@ -670,8 +766,16 @@
         "lemma": "apokatastasis"
       },
       {
+        "surface": "of all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "announced",
+        "lemma": "laleo"
       },
       {
         "surface": "long ago",
@@ -692,6 +796,10 @@
         "lemma": "mouses"
       },
       {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       },
@@ -710,9 +818,29 @@
       {
         "surface": "brothers",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "You must listen to",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
+        "surface": "He tells",
+        "lemma": "laleo"
       }
     ],
     "23": [
+      {
+        "surface": "Everyone",
+        "lemma": "pas"
+      },
+      {
+        "surface": "does not listen",
+        "lemma": "akouo"
+      },
       {
         "surface": "to Him",
         "lemma": "prophetes"
@@ -727,6 +855,10 @@
       }
     ],
     "24": [
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
       {
         "surface": "prophets",
         "lemma": "prophetes"
@@ -744,6 +876,10 @@
         "lemma": "kathexes"
       },
       {
+        "surface": "have spoken",
+        "lemma": "laleo"
+      },
+      {
         "surface": "have proclaimed",
         "lemma": "katangello"
       },
@@ -753,6 +889,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
       {
         "surface": "sons",
         "lemma": "huios"
@@ -778,12 +918,20 @@
         "lemma": "pater"
       },
       {
+        "surface": "when He said",
+        "lemma": "lego"
+      },
+      {
         "surface": "Abraham",
         "lemma": "abraam"
       },
       {
         "surface": "offspring",
         "lemma": "sperma"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "families",

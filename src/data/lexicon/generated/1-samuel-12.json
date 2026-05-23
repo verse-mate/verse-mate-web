@@ -10,12 +10,32 @@
         "lemma": "shemuel"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
       {
+        "surface": "I have listened",
+        "lemma": "shama"
+      },
+      {
         "surface": "to your voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that you have said",
+        "lemma": "amar"
       },
       {
         "surface": "and I have set",
@@ -30,10 +50,6 @@
       {
         "surface": "Now",
         "lemma": "attah"
-      },
-      {
-        "surface": "here is",
-        "lemma": "hinneh"
       },
       {
         "surface": "the king",
@@ -60,10 +76,6 @@
         "lemma": "ben"
       },
       {
-        "surface": "are here",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "have walked",
         "lemma": "halakh"
       },
@@ -81,10 +93,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "Here I am",
-        "lemma": "hen"
-      },
       {
         "surface": "Bear witness",
         "lemma": "un"
@@ -160,16 +168,36 @@
       {
         "surface": "my eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "Tell me, and I will restore it",
+        "lemma": "shuv"
       }
     ],
     "4": [
+      {
+        "surface": "You have not",
+        "lemma": "lo"
+      },
       {
         "surface": "cheated us",
         "lemma": "ashaq"
       },
       {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
         "surface": "oppressed us",
         "lemma": "ratsats"
+      },
+      {
+        "surface": "they replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "have you taken",
@@ -189,6 +217,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "Samuel said",
+        "lemma": "amar"
+      },
       {
         "surface": "The LORD",
         "lemma": "yehovah"
@@ -210,6 +242,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "you have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "found",
         "lemma": "matsa"
       },
@@ -224,6 +260,10 @@
       {
         "surface": "He is a witness",
         "lemma": "ed"
+      },
+      {
+        "surface": "they replied",
+        "lemma": "amar"
       }
     ],
     "6": [
@@ -232,12 +272,20 @@
         "lemma": "shemuel"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "appointed",
+        "lemma": "asah"
       },
       {
         "surface": "Moses",
@@ -250,6 +298,10 @@
       {
         "surface": "brought",
         "lemma": "alah"
+      },
+      {
+        "surface": "your fathers up",
+        "lemma": "av"
       },
       {
         "surface": "out of the land",
@@ -282,12 +334,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the righteous acts",
         "lemma": "tsedaqah"
       },
       {
         "surface": "He",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "your fathers",
+        "lemma": "av"
       }
     ],
     "8": [
@@ -296,8 +360,16 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "went",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "your fathers",
+        "lemma": "av"
       },
       {
         "surface": "cried out",
@@ -324,8 +396,20 @@
         "lemma": "aharon"
       },
       {
+        "surface": "who brought",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "out of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and settled them",
+        "lemma": "yashav"
       },
       {
         "surface": "place",
@@ -398,6 +482,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "We have sinned",
@@ -486,11 +574,19 @@
         "lemma": "saviv"
       },
       {
+        "surface": "and you dwelt",
+        "lemma": "yashav"
+      },
+      {
         "surface": "securely",
         "lemma": "betach"
       }
     ],
     "12": [
+      {
+        "surface": "But when you saw",
+        "lemma": "raah"
+      },
       {
         "surface": "Nahash",
         "lemma": "nachash"
@@ -502,6 +598,18 @@
       {
         "surface": "of the Ammonites",
         "lemma": "ben"
+      },
+      {
+        "surface": "was moving",
+        "lemma": "bo"
+      },
+      {
+        "surface": "you said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       },
       {
         "surface": "we must have a king",
@@ -530,10 +638,6 @@
         "lemma": "attah"
       },
       {
-        "surface": "here is",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -546,12 +650,12 @@
         "lemma": "shaal"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has placed",
+        "lemma": "natan"
       },
       {
         "surface": "a king",
@@ -559,6 +663,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "you fear",
         "lemma": "yare"
@@ -572,8 +680,16 @@
         "lemma": "avad"
       },
       {
+        "surface": "and obey",
+        "lemma": "shama"
+      },
+      {
         "surface": "His voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "and if you do not",
+        "lemma": "lo"
       },
       {
         "surface": "rebel",
@@ -586,6 +702,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and if",
+        "lemma": "hayah"
       },
       {
         "surface": "the king",
@@ -610,6 +730,14 @@
     ],
     "15": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you disobey",
+        "lemma": "lo"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -632,6 +760,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "as it was against your fathers",
+        "lemma": "av"
       }
     ],
     "16": [
@@ -642,6 +778,10 @@
       {
         "surface": "present yourselves",
         "lemma": "yatsav"
+      },
+      {
+        "surface": "and see",
+        "lemma": "raah"
       },
       {
         "surface": "great",
@@ -656,11 +796,19 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will do",
+        "lemma": "asah"
+      },
+      {
         "surface": "before your eyes",
         "lemma": "ayin"
       }
     ],
     "17": [
+      {
+        "surface": "Is it not",
+        "lemma": "lo"
+      },
       {
         "surface": "the wheat",
         "lemma": "chittah"
@@ -674,8 +822,16 @@
         "lemma": "yom"
       },
       {
+        "surface": "I will call",
+        "lemma": "qara"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "to send",
+        "lemma": "natan"
       },
       {
         "surface": "thunder",
@@ -690,12 +846,20 @@
         "lemma": "yada"
       },
       {
+        "surface": "and see",
+        "lemma": "raah"
+      },
+      {
         "surface": "what a great",
         "lemma": "rav"
       },
       {
         "surface": "evil",
         "lemma": "ra"
+      },
+      {
+        "surface": "you have committed",
+        "lemma": "asah"
       },
       {
         "surface": "in the sight",
@@ -720,6 +884,10 @@
         "lemma": "shemuel"
       },
       {
+        "surface": "called",
+        "lemma": "qara"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -732,12 +900,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "sent",
+        "lemma": "natan"
+      },
+      {
         "surface": "thunder",
         "lemma": "qol"
       },
       {
         "surface": "and rain",
         "lemma": "matar"
+      },
+      {
+        "surface": "As a result, all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -761,6 +937,14 @@
       }
     ],
     "19": [
+      {
+        "surface": "They",
+        "lemma": "kol"
+      },
+      {
+        "surface": "pleaded",
+        "lemma": "amar"
+      },
       {
         "surface": "Samuel",
         "lemma": "shemuel"
@@ -786,12 +970,20 @@
         "lemma": "eved"
       },
       {
+        "surface": "so that we will not",
+        "lemma": "al"
+      },
+      {
         "surface": "die",
         "lemma": "mut"
       },
       {
         "surface": "we have added",
         "lemma": "yasaph"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "our sins",
@@ -812,6 +1004,10 @@
     ],
     "20": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       },
@@ -820,8 +1016,24 @@
         "lemma": "shemuel"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "have committed",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "turn aside",
@@ -844,11 +1056,19 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your heart",
         "lemma": "levav"
       }
     ],
     "21": [
+      {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
       {
         "surface": "turn aside",
         "lemma": "sur"
@@ -860,6 +1080,10 @@
       {
         "surface": "worthless",
         "lemma": "tohu"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "lo"
       },
       {
         "surface": "profit you",
@@ -888,6 +1112,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "abandon",
         "lemma": "natash"
       },
@@ -904,15 +1132,15 @@
         "lemma": "yaal"
       },
       {
+        "surface": "to make",
+        "lemma": "asah"
+      },
+      {
         "surface": "own",
         "lemma": "am"
       }
     ],
     "23": [
-      {
-        "surface": "far be it from me",
-        "lemma": "chalilah"
-      },
       {
         "surface": "should sin",
         "lemma": "chata"
@@ -972,8 +1200,16 @@
         "lemma": "emet"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your heart",
         "lemma": "levav"
+      },
+      {
+        "surface": "consider",
+        "lemma": "raah"
       },
       {
         "surface": "great things He has done",
@@ -981,6 +1217,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "you persist in doing evil",
         "lemma": "raa"
@@ -996,8 +1236,8 @@
     ]
   },
   "themeLemmas": [
-    "shemuel",
-    "avad",
-    "attah"
+    "lo",
+    "amar",
+    "kol"
   ]
 }

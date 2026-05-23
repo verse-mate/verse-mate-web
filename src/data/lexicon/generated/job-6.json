@@ -16,10 +16,6 @@
     ],
     "2": [
       {
-        "surface": "If only",
-        "lemma": "lu"
-      },
-      {
         "surface": "my grief",
         "lemma": "kaas"
       },
@@ -118,6 +114,10 @@
         "lemma": "deshe"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "an ox",
         "lemma": "shor"
       },
@@ -146,6 +146,10 @@
       {
         "surface": "salt",
         "lemma": "melach"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "is there",
@@ -196,8 +200,16 @@
         "lemma": "sheelah"
       },
       {
+        "surface": "were granted",
+        "lemma": "bo"
+      },
+      {
         "surface": "and God",
         "lemma": "eloah"
+      },
+      {
+        "surface": "would fulfill",
+        "lemma": "natan"
       },
       {
         "surface": "my hope",
@@ -236,6 +248,10 @@
         "lemma": "od"
       },
       {
+        "surface": "brings me",
+        "lemma": "hayah"
+      },
+      {
         "surface": "comfort",
         "lemma": "nechamah"
       },
@@ -244,8 +260,16 @@
         "lemma": "salad"
       },
       {
+        "surface": "through unrelenting",
+        "lemma": "lo"
+      },
+      {
         "surface": "pain",
         "lemma": "chil"
+      },
+      {
+        "surface": "I have not",
+        "lemma": "lo"
       },
       {
         "surface": "denied",
@@ -304,6 +328,10 @@
         "lemma": "even"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "my flesh",
         "lemma": "basar"
       },
@@ -313,6 +341,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "Is there any",
+        "lemma": "im"
+      },
       {
         "surface": "help",
         "lemma": "ezrah"
@@ -398,6 +430,10 @@
         "lemma": "tsamat"
       },
       {
+        "surface": "in the dry season",
+        "lemma": "et"
+      },
+      {
         "surface": "and vanishing",
         "lemma": "daakh"
       },
@@ -472,6 +508,10 @@
         "lemma": "batach"
       },
       {
+        "surface": "their arrival",
+        "lemma": "bo"
+      },
+      {
         "surface": "brings disappointment",
         "lemma": "chapher"
       }
@@ -480,6 +520,18 @@
       {
         "surface": "now",
         "lemma": "attah"
+      },
+      {
+        "surface": "you are",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "of no help",
+        "lemma": "lo"
+      },
+      {
+        "surface": "you see",
+        "lemma": "raah"
       },
       {
         "surface": "terror",
@@ -491,6 +543,10 @@
       }
     ],
     "22": [
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
       {
         "surface": "Give me something",
         "lemma": "yahav"
@@ -650,8 +706,24 @@
     ],
     "29": [
       {
+        "surface": "Reconsider",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "unjust",
         "lemma": "evel"
+      },
+      {
+        "surface": "Reconsider",
+        "lemma": "shuv"
       },
       {
         "surface": "for my righteousness",
@@ -672,8 +744,16 @@
         "lemma": "lashon"
       },
       {
+        "surface": "Can",
+        "lemma": "im"
+      },
+      {
         "surface": "my mouth",
         "lemma": "chekh"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "discern",
@@ -687,7 +767,7 @@
   },
   "themeLemmas": [
     "mah",
-    "koach",
-    "yakhach"
+    "im",
+    "lo"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
         "surface": "Michael",
         "lemma": "mikhael"
       },
@@ -30,16 +34,48 @@
         "lemma": "amad"
       },
       {
+        "surface": "There will be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "of distress",
         "lemma": "batstsarah"
+      },
+      {
+        "surface": "will not have",
+        "lemma": "lo"
+      },
+      {
+        "surface": "occurred",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "from the beginning",
+        "lemma": "hayah"
       },
       {
         "surface": "of nations",
         "lemma": "goy"
       },
       {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
         "surface": "your people",
         "lemma": "am"
+      },
+      {
+        "surface": "everyone whose name",
+        "lemma": "kol"
       },
       {
         "surface": "is found",
@@ -160,6 +196,10 @@
         "lemma": "sepher"
       },
       {
+        "surface": "the time",
+        "lemma": "et"
+      },
+      {
         "surface": "of the end",
         "lemma": "qets"
       },
@@ -186,8 +226,8 @@
         "lemma": "daniyyel"
       },
       {
-        "surface": "and saw",
-        "lemma": "hinneh"
+        "surface": "looked",
+        "lemma": "raah"
       },
       {
         "surface": "two",
@@ -231,6 +271,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "One of them said",
+        "lemma": "amar"
+      },
       {
         "surface": "to the man",
         "lemma": "ish"
@@ -310,6 +354,10 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "and I heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "swear",
         "lemma": "shava"
       },
@@ -354,14 +402,30 @@
         "lemma": "naphats"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "will be completed",
         "lemma": "kalah"
       }
     ],
     "8": [
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "but I did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "understand",
         "lemma": "bin"
+      },
+      {
+        "surface": "So I asked",
+        "lemma": "amar"
       },
       {
         "surface": "My lord",
@@ -386,6 +450,10 @@
         "lemma": "daniyyel"
       },
       {
+        "surface": "he replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "the words",
         "lemma": "davar"
       },
@@ -396,6 +464,10 @@
       {
         "surface": "and sealed",
         "lemma": "chatam"
+      },
+      {
+        "surface": "the time",
+        "lemma": "et"
       },
       {
         "surface": "of the end",
@@ -428,6 +500,10 @@
         "lemma": "rasah"
       },
       {
+        "surface": "None",
+        "lemma": "lo"
+      },
+      {
         "surface": "of the wicked",
         "lemma": "rasah"
       },
@@ -446,6 +522,10 @@
     ],
     "11": [
       {
+        "surface": "And from the time",
+        "lemma": "et"
+      },
+      {
         "surface": "the daily sacrifice",
         "lemma": "tamid"
       },
@@ -460,6 +540,10 @@
       {
         "surface": "of desolation",
         "lemma": "shamem"
+      },
+      {
+        "surface": "set up",
+        "lemma": "natan"
       },
       {
         "surface": "there will be 1,290",
@@ -524,8 +608,8 @@
     ]
   },
   "themeLemmas": [
+    "et",
     "qets",
-    "rav",
-    "olam"
+    "rav"
   ]
 }

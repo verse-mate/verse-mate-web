@@ -66,6 +66,10 @@
     ],
     "3": [
       {
+        "surface": "come",
+        "lemma": "eimi"
+      },
+      {
         "surface": "adornment",
         "lemma": "kosmos"
       },
@@ -114,6 +118,10 @@
       {
         "surface": "spirit",
         "lemma": "pneuma"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "precious",
@@ -182,6 +190,10 @@
       {
         "surface": "lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "And you are",
+        "lemma": "ginomai"
       },
       {
         "surface": "children",
@@ -260,6 +272,10 @@
         "lemma": "telos"
       },
       {
+        "surface": "all of you",
+        "lemma": "pas"
+      },
+      {
         "surface": "be like-minded",
         "lemma": "homophron"
       },
@@ -320,12 +336,20 @@
     ],
     "10": [
       {
+        "surface": "would",
+        "lemma": "thelo"
+      },
+      {
         "surface": "love",
         "lemma": "agapao"
       },
       {
         "surface": "life",
         "lemma": "zoe"
+      },
+      {
+        "surface": "see",
+        "lemma": "horao"
       },
       {
         "surface": "good",
@@ -354,6 +378,10 @@
       {
         "surface": "deceitful",
         "lemma": "dolos"
+      },
+      {
+        "surface": "speech",
+        "lemma": "laleo"
       }
     ],
     "11": [
@@ -364,6 +392,10 @@
       {
         "surface": "evil",
         "lemma": "kakos"
+      },
+      {
+        "surface": "do",
+        "lemma": "poieo"
       },
       {
         "surface": "good",
@@ -412,14 +444,26 @@
         "lemma": "kurios"
       },
       {
+        "surface": "those who do",
+        "lemma": "poieo"
+      },
+      {
         "surface": "evil",
         "lemma": "kakos"
       }
     ],
     "13": [
       {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
         "surface": "can harm",
         "lemma": "kakoo"
+      },
+      {
+        "surface": "you are",
+        "lemma": "ginomai"
       },
       {
         "surface": "zealous",
@@ -486,6 +530,10 @@
         "lemma": "apologia"
       },
       {
+        "surface": "to everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "asks",
         "lemma": "aiteo"
       },
@@ -507,6 +555,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "keeping",
+        "lemma": "echo"
+      },
       {
         "surface": "a clear",
         "lemma": "agathos"
@@ -540,6 +592,10 @@
       {
         "surface": "it is better",
         "lemma": "kreitton"
+      },
+      {
+        "surface": "it is",
+        "lemma": "thelo"
       },
       {
         "surface": "God’s",
@@ -750,6 +806,10 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "and is",
+        "lemma": "eimi"
       },
       {
         "surface": "the right hand",

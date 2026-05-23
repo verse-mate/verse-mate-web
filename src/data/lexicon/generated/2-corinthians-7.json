@@ -10,12 +10,20 @@
         "lemma": "agapetos"
       },
       {
+        "surface": "since we have",
+        "lemma": "echo"
+      },
+      {
         "surface": "promises",
         "lemma": "epangelia"
       },
       {
         "surface": "let us cleanse",
         "lemma": "katharizo"
+      },
+      {
+        "surface": "everything that",
+        "lemma": "pas"
       },
       {
         "surface": "defiles",
@@ -56,15 +64,31 @@
         "lemma": "adikeo"
       },
       {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "we have corrupted",
         "lemma": "phtheiro"
       },
       {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "we have exploited",
         "lemma": "pleonekteo"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
       }
     ],
     "3": [
+      {
+        "surface": "I do not say this",
+        "lemma": "lego"
+      },
       {
         "surface": "condemn you",
         "lemma": "katakrisis"
@@ -72,6 +96,10 @@
       {
         "surface": "I have said before",
         "lemma": "prolego"
+      },
+      {
+        "surface": "you {so} occupy",
+        "lemma": "eimi"
       },
       {
         "surface": "hearts",
@@ -88,8 +116,16 @@
     ],
     "4": [
       {
+        "surface": "Great is",
+        "lemma": "polus"
+      },
+      {
         "surface": "confidence",
         "lemma": "parresia"
+      },
+      {
+        "surface": "great is",
+        "lemma": "polus"
       },
       {
         "surface": "pride",
@@ -104,6 +140,10 @@
         "lemma": "paraklesis"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "troubles",
         "lemma": "thlipsis"
       },
@@ -114,6 +154,10 @@
     ],
     "5": [
       {
+        "surface": "arrived",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "Macedonia",
         "lemma": "makedonia"
       },
@@ -122,12 +166,24 @@
         "lemma": "sarx"
       },
       {
+        "surface": "had",
+        "lemma": "echo"
+      },
+      {
+        "surface": "no",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "rest",
         "lemma": "anesis"
       },
       {
         "surface": "we were pressed",
         "lemma": "thlibo"
+      },
+      {
+        "surface": "every direction",
+        "lemma": "pas"
       },
       {
         "surface": "conflicts",
@@ -362,8 +418,16 @@
         "lemma": "ekdikesis"
       },
       {
+        "surface": "every way",
+        "lemma": "pas"
+      },
+      {
         "surface": "you have proved",
         "lemma": "sunistemi"
+      },
+      {
+        "surface": "to be",
+        "lemma": "eimi"
       },
       {
         "surface": "innocent",
@@ -375,6 +439,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "I wrote",
+        "lemma": "grapho"
+      },
       {
         "surface": "did wrong",
         "lemma": "adikeo"
@@ -424,6 +492,10 @@
       {
         "surface": "has been refreshed",
         "lemma": "anapauo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       }
     ],
     "14": [
@@ -434,6 +506,14 @@
       {
         "surface": "I had boasted",
         "lemma": "kauchaomai"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
+        "surface": "we said",
+        "lemma": "laleo"
       },
       {
         "surface": "was true",
@@ -452,6 +532,10 @@
         "lemma": "titos"
       },
       {
+        "surface": "has proved to be",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "true",
         "lemma": "aletheia"
       }
@@ -462,12 +546,20 @@
         "lemma": "splagchnon"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "even greater",
         "lemma": "perissos"
       },
       {
         "surface": "when he remembers",
         "lemma": "anamimnesko"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "obedient",
@@ -490,6 +582,10 @@
       {
         "surface": "I rejoice",
         "lemma": "chairo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "pas"
       },
       {
         "surface": "I can have complete confidence",

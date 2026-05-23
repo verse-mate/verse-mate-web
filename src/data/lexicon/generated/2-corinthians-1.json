@@ -50,8 +50,16 @@
         "lemma": "korinthos"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "saints",
         "lemma": "hagios"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "eimi"
       },
       {
         "surface": "Achaia",
@@ -126,6 +134,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "of all",
+        "lemma": "pas"
+      },
+      {
         "surface": "comfort",
         "lemma": "paraklesis"
       }
@@ -136,12 +148,24 @@
         "lemma": "parakaleo"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "troubles",
         "lemma": "thlipsis"
       },
       {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "comfort",
         "lemma": "parakaleo"
+      },
+      {
+        "surface": "any",
+        "lemma": "pas"
       },
       {
         "surface": "trouble",
@@ -192,10 +216,6 @@
     ],
     "6": [
       {
-        "surface": "If",
-        "lemma": "eite"
-      },
-      {
         "surface": "we are afflicted",
         "lemma": "thlibo"
       },
@@ -206,10 +226,6 @@
       {
         "surface": "salvation",
         "lemma": "soteria"
-      },
-      {
-        "surface": "if",
-        "lemma": "eite"
       },
       {
         "surface": "we are comforted",
@@ -246,6 +262,14 @@
         "lemma": "bebaios"
       },
       {
+        "surface": "because we know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "eimi"
+      },
+      {
         "surface": "you share",
         "lemma": "koinonos"
       },
@@ -264,6 +288,10 @@
     ],
     "8": [
       {
+        "surface": "We do not want",
+        "lemma": "thelo"
+      },
+      {
         "surface": "to be unaware",
         "lemma": "agnoeo"
       },
@@ -274,6 +302,10 @@
       {
         "surface": "hardships",
         "lemma": "thlipsis"
+      },
+      {
+        "surface": "encountered",
+        "lemma": "ginomai"
       },
       {
         "surface": "the province of Asia",
@@ -302,12 +334,20 @@
     ],
     "9": [
       {
+        "surface": "felt",
+        "lemma": "echo"
+      },
+      {
         "surface": "sentence",
         "lemma": "apokrima"
       },
       {
         "surface": "of death",
         "lemma": "thanatos"
+      },
+      {
+        "surface": "we would not",
+        "lemma": "eimi"
       },
       {
         "surface": "trust",
@@ -354,15 +394,27 @@
         "lemma": "deesis"
       },
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "will give thanks",
         "lemma": "eucharisteo"
       },
       {
         "surface": "favor shown",
         "lemma": "charisma"
+      },
+      {
+        "surface": "their prayers",
+        "lemma": "polus"
       }
     ],
     "12": [
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
       {
         "surface": "boast",
         "lemma": "kauchesis"
@@ -418,6 +470,10 @@
     ],
     "13": [
       {
+        "surface": "we do not write you anything",
+        "lemma": "grapho"
+      },
+      {
         "surface": "that is beyond",
         "lemma": "allos"
       },
@@ -456,6 +512,10 @@
         "lemma": "kauchema"
       },
       {
+        "surface": "of us",
+        "lemma": "eimi"
+      },
+      {
         "surface": "day",
         "lemma": "hemera"
       },
@@ -478,8 +538,16 @@
         "lemma": "boulomai"
       },
       {
+        "surface": "to visit",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "first",
         "lemma": "proteron"
+      },
+      {
+        "surface": "you might receive",
+        "lemma": "echo"
       },
       {
         "surface": "a double",
@@ -498,6 +566,10 @@
       {
         "surface": "Macedonia",
         "lemma": "makedonia"
+      },
+      {
+        "surface": "to return",
+        "lemma": "erchomai"
       },
       {
         "surface": "Macedonia",
@@ -546,6 +618,10 @@
       {
         "surface": "message",
         "lemma": "logos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       }
     ],
     "19": [
@@ -576,6 +652,14 @@
       {
         "surface": "Timothy",
         "lemma": "timotheos"
+      },
+      {
+        "surface": "was",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "it has always been",
+        "lemma": "ginomai"
       }
     ],
     "20": [
@@ -590,10 +674,6 @@
       {
         "surface": "of God",
         "lemma": "theos"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       },
       {
         "surface": "the glory",
@@ -626,6 +706,10 @@
       {
         "surface": "placed His seal",
         "lemma": "sphragizo"
+      },
+      {
+        "surface": "put",
+        "lemma": "didomi"
       },
       {
         "surface": "Spirit",
@@ -662,6 +746,10 @@
         "lemma": "pheidomai"
       },
       {
+        "surface": "that I did not return",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "Corinth",
         "lemma": "korinthos"
       }
@@ -676,6 +764,10 @@
         "lemma": "pistis"
       },
       {
+        "surface": "we are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "fellow workers",
         "lemma": "sunergos"
       },
@@ -686,6 +778,10 @@
       {
         "surface": "faith that",
         "lemma": "pistis"
+      },
+      {
+        "surface": "you stand firm",
+        "lemma": "histemi"
       }
     ]
   },

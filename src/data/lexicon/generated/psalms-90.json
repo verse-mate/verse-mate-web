@@ -26,6 +26,10 @@
         "lemma": "adonai"
       },
       {
+        "surface": "have been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "dwelling place",
         "lemma": "maon"
       },
@@ -78,12 +82,24 @@
     ],
     "3": [
       {
+        "surface": "You return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "man",
         "lemma": "enosh"
       },
       {
         "surface": "dust",
         "lemma": "dakka"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Return",
+        "lemma": "shuv"
       },
       {
         "surface": "O sons",
@@ -136,6 +152,10 @@
       {
         "surface": "in their sleep",
         "lemma": "shenah"
+      },
+      {
+        "surface": "they are",
+        "lemma": "hayah"
       },
       {
         "surface": "like the new grass",
@@ -218,6 +238,10 @@
     ],
     "9": [
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "our days",
         "lemma": "yom"
       },
@@ -258,6 +282,10 @@
       {
         "surface": "or eighty",
         "lemma": "shemonim"
+      },
+      {
+        "surface": "if we are strong",
+        "lemma": "im"
       },
       {
         "surface": "yet their pride",
@@ -328,6 +356,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "that we may present",
+        "lemma": "bo"
+      },
+      {
         "surface": "a heart",
         "lemma": "levav"
       },
@@ -337,6 +369,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "Return",
+        "lemma": "shuv"
+      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -372,6 +408,10 @@
         "lemma": "samach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "our days",
         "lemma": "yom"
       }
@@ -394,6 +434,10 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "as we have seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       }
@@ -402,6 +446,10 @@
       {
         "surface": "May Your work",
         "lemma": "poal"
+      },
+      {
+        "surface": "be shown",
+        "lemma": "raah"
       },
       {
         "surface": "Your servants",
@@ -428,6 +476,10 @@
       {
         "surface": "our God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "rest",
+        "lemma": "hayah"
       },
       {
         "surface": "establish",
@@ -457,7 +509,7 @@
   },
   "themeLemmas": [
     "shaneh",
-    "boqer",
-    "yada"
+    "shuv",
+    "hayah"
   ]
 }

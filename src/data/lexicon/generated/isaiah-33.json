@@ -6,12 +6,12 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "O destroyer",
         "lemma": "shadad"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
       },
       {
         "surface": "destroyed",
@@ -20,6 +20,10 @@
       {
         "surface": "O traitor",
         "lemma": "bagad"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
       },
       {
         "surface": "betrayed",
@@ -64,6 +68,10 @@
         "lemma": "qavah"
       },
       {
+        "surface": "Be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "our strength",
         "lemma": "zeroa"
       },
@@ -74,6 +82,10 @@
       {
         "surface": "our salvation",
         "lemma": "yeshuah"
+      },
+      {
+        "surface": "in time",
+        "lemma": "et"
       },
       {
         "surface": "of trouble",
@@ -172,8 +184,16 @@
     ],
     "6": [
       {
+        "surface": "He will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the sure foundation",
         "lemma": "emunah"
+      },
+      {
+        "surface": "for your times",
+        "lemma": "et"
       },
       {
         "surface": "a storehouse",
@@ -205,10 +225,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
       {
         "surface": "their valiant ones",
         "lemma": "erel"
@@ -272,6 +288,10 @@
         "lemma": "maas"
       },
       {
+        "surface": "and human life",
+        "lemma": "lo"
+      },
+      {
         "surface": "is disregarded",
         "lemma": "chashav"
       }
@@ -306,6 +326,10 @@
         "lemma": "sharon"
       },
       {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a desert",
         "lemma": "aravah"
       },
@@ -330,6 +354,10 @@
       {
         "surface": "I will arise",
         "lemma": "qamay"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -388,6 +416,10 @@
         "lemma": "am"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "burned",
         "lemma": "misraphah"
       },
@@ -416,6 +448,14 @@
       {
         "surface": "You who are far off",
         "lemma": "rachoq"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
+        "surface": "I have done",
+        "lemma": "asah"
       },
       {
         "surface": "you who are near",
@@ -542,6 +582,10 @@
         "lemma": "ozen"
       },
       {
+        "surface": "against",
+        "lemma": "shama"
+      },
+      {
         "surface": "murderous plots",
         "lemma": "dam"
       },
@@ -552,6 +596,10 @@
       {
         "surface": "his eyes tightly",
         "lemma": "ayin"
+      },
+      {
+        "surface": "against",
+        "lemma": "raah"
       },
       {
         "surface": "evil",
@@ -584,6 +632,10 @@
         "lemma": "lechem"
       },
       {
+        "surface": "will be provided",
+        "lemma": "natan"
+      },
+      {
         "surface": "and his water",
         "lemma": "mayim"
       },
@@ -608,6 +660,10 @@
       {
         "surface": "in His beauty",
         "lemma": "yophi"
+      },
+      {
+        "surface": "and behold",
+        "lemma": "raah"
       },
       {
         "surface": "a land",
@@ -661,6 +717,14 @@
       }
     ],
     "19": [
+      {
+        "surface": "You will no",
+        "lemma": "lo"
+      },
+      {
+        "surface": "longer see",
+        "lemma": "raah"
+      },
       {
         "surface": "the insolent",
         "lemma": "yaaz"
@@ -716,6 +780,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "will see",
+        "lemma": "raah"
+      },
+      {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -756,6 +824,10 @@
         "lemma": "bal"
       },
       {
+        "surface": "will any",
+        "lemma": "kol"
+      },
+      {
         "surface": "of its cords",
         "lemma": "chevel"
       },
@@ -765,6 +837,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "But",
+        "lemma": "im"
+      },
       {
         "surface": "there",
         "lemma": "sham"
@@ -808,6 +884,10 @@
       {
         "surface": "will row",
         "lemma": "halakh"
+      },
+      {
+        "surface": "and no",
+        "lemma": "lo"
       },
       {
         "surface": "majestic",
@@ -916,12 +996,20 @@
         "lemma": "shakhen"
       },
       {
+        "surface": "will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "I am sick",
         "lemma": "chalah"
       },
       {
         "surface": "The people",
         "lemma": "am"
+      },
+      {
+        "surface": "who dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "will be forgiven",
@@ -935,7 +1023,7 @@
   },
   "themeLemmas": [
     "bal",
-    "shadad",
-    "bagad"
+    "lo",
+    "shadad"
   ]
 }

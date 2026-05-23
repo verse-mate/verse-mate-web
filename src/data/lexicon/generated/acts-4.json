@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "were speaking",
+        "lemma": "laleo"
+      },
+      {
         "surface": "people",
         "lemma": "laos"
       },
@@ -66,6 +70,10 @@
         "lemma": "epiballo"
       },
       {
+        "surface": "it was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "vvv",
         "lemma": "ede"
       },
@@ -88,6 +96,14 @@
     ],
     "4": [
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
+        "surface": "heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "message",
         "lemma": "logos"
       },
@@ -102,6 +118,10 @@
       {
         "surface": "men",
         "lemma": "aner"
+      },
+      {
+        "surface": "grew to",
+        "lemma": "ginomai"
       },
       {
         "surface": "five",
@@ -174,6 +194,10 @@
     ],
     "7": [
       {
+        "surface": "They had",
+        "lemma": "histemi"
+      },
+      {
         "surface": "brought} in",
         "lemma": "mesos"
       },
@@ -196,6 +220,10 @@
       {
         "surface": "name",
         "lemma": "onoma"
+      },
+      {
+        "surface": "do",
+        "lemma": "poieo"
       }
     ],
     "8": [
@@ -218,6 +246,10 @@
       {
         "surface": "Spirit",
         "lemma": "pneuma"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
       },
       {
         "surface": "Rulers",
@@ -254,14 +286,30 @@
         "lemma": "asthenes"
       },
       {
+        "surface": "how",
+        "lemma": "tis"
+      },
+      {
         "surface": "was healed",
         "lemma": "sozo"
       }
     ],
     "10": [
       {
+        "surface": "then let this be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "known",
         "lemma": "gnostos"
+      },
+      {
+        "surface": "to all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "to all",
+        "lemma": "pas"
       },
       {
         "surface": "people",
@@ -314,6 +362,10 @@
     ],
     "11": [
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "stone",
         "lemma": "lithos"
       },
@@ -326,6 +378,10 @@
         "lemma": "exoutheneo"
       },
       {
+        "surface": "has become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "the cornerstone",
         "lemma": "kephale"
       }
@@ -336,8 +392,20 @@
         "lemma": "soteria"
       },
       {
+        "surface": "exists",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "else",
         "lemma": "allos"
+      },
+      {
+        "surface": "there is",
+        "lemma": "eimi"
       },
       {
         "surface": "other",
@@ -350,6 +418,10 @@
       {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "given",
+        "lemma": "didomi"
       },
       {
         "surface": "men",
@@ -386,6 +458,10 @@
         "lemma": "katalambano"
       },
       {
+        "surface": "they were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "unschooled",
         "lemma": "agrammatos"
       },
@@ -406,6 +482,10 @@
         "lemma": "epiginosko"
       },
       {
+        "surface": "had been",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Jesus",
         "lemma": "iesous"
       }
@@ -422,6 +502,18 @@
       {
         "surface": "had been healed",
         "lemma": "therapeuo"
+      },
+      {
+        "surface": "standing there",
+        "lemma": "histemi"
+      },
+      {
+        "surface": "they had",
+        "lemma": "echo"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "oudeis"
       },
       {
         "surface": "to say in response",
@@ -452,12 +544,28 @@
     ],
     "16": [
       {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
+        "surface": "shall we do",
+        "lemma": "poieo"
+      },
+      {
         "surface": "men",
         "lemma": "anthropos"
       },
       {
+        "surface": "they asked",
+        "lemma": "lego"
+      },
+      {
         "surface": "It is clear",
         "lemma": "phaneros"
+      },
+      {
+        "surface": "to everyone",
+        "lemma": "pas"
       },
       {
         "surface": "living",
@@ -474,6 +582,14 @@
       {
         "surface": "miracle",
         "lemma": "semeion"
+      },
+      {
+        "surface": "has occurred",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "we cannot",
+        "lemma": "dunamai"
       },
       {
         "surface": "deny it",
@@ -500,6 +616,10 @@
       {
         "surface": "not",
         "lemma": "meketi"
+      },
+      {
+        "surface": "to speak",
+        "lemma": "laleo"
       },
       {
         "surface": "to",
@@ -554,12 +674,24 @@
         "lemma": "ioannes"
       },
       {
+        "surface": "replied",
+        "lemma": "apokrino"
+      },
+      {
         "surface": "Judge for yourselves",
         "lemma": "krino"
       },
       {
+        "surface": "it is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "right",
         "lemma": "dikaios"
+      },
+      {
+        "surface": "to listen",
+        "lemma": "akouo"
       },
       {
         "surface": "rather",
@@ -568,6 +700,24 @@
       {
         "surface": "God",
         "lemma": "theos"
+      }
+    ],
+    "20": [
+      {
+        "surface": "cannot",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "speaking about",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "we have seen",
+        "lemma": "horao"
+      },
+      {
+        "surface": "heard",
+        "lemma": "akouo"
       }
     ],
     "21": [
@@ -580,6 +730,10 @@
         "lemma": "apoluo"
       },
       {
+        "surface": "They could not find a way",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "to punish",
         "lemma": "kolazo"
       },
@@ -588,12 +742,20 @@
         "lemma": "laos"
       },
       {
+        "surface": "vvv",
+        "lemma": "pas"
+      },
+      {
         "surface": "were glorifying",
         "lemma": "doxazo"
       },
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "had happened",
+        "lemma": "ginomai"
       }
     ],
     "22": [
@@ -608,6 +770,10 @@
       {
         "surface": "healed",
         "lemma": "iasis"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
       },
       {
         "surface": "over",
@@ -628,6 +794,10 @@
         "lemma": "apoluo"
       },
       {
+        "surface": "Peter and John returned",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "own people",
         "lemma": "idios"
       },
@@ -646,9 +816,17 @@
       {
         "surface": "elders",
         "lemma": "presbuteros"
+      },
+      {
+        "surface": "had said",
+        "lemma": "eipon"
       }
     ],
     "24": [
+      {
+        "surface": "the believers heard this",
+        "lemma": "akouo"
+      },
       {
         "surface": "they lifted up",
         "lemma": "airo"
@@ -670,6 +848,14 @@
         "lemma": "despotes"
       },
       {
+        "surface": "they said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "made",
+        "lemma": "poieo"
+      },
+      {
         "surface": "heaven",
         "lemma": "ouranos"
       },
@@ -680,9 +866,17 @@
       {
         "surface": "sea",
         "lemma": "thalassa"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
       }
     ],
     "25": [
+      {
+        "surface": "spoke",
+        "lemma": "eipon"
+      },
       {
         "surface": "the Holy",
         "lemma": "hagios"
@@ -706,6 +900,10 @@
       {
         "surface": "David",
         "lemma": "daueid"
+      },
+      {
+        "surface": "Why",
+        "lemma": "tis"
       },
       {
         "surface": "do} the nations",
@@ -814,6 +1012,10 @@
     ],
     "28": [
       {
+        "surface": "They carried out",
+        "lemma": "poieo"
+      },
+      {
         "surface": "what",
         "lemma": "hosos"
       },
@@ -828,6 +1030,10 @@
       {
         "surface": "had decided beforehand",
         "lemma": "proorizo"
+      },
+      {
+        "surface": "would happen",
+        "lemma": "ginomai"
       }
     ],
     "29": [
@@ -848,12 +1054,24 @@
         "lemma": "apeile"
       },
       {
+        "surface": "enable",
+        "lemma": "didomi"
+      },
+      {
         "surface": "servants",
         "lemma": "doulos"
       },
       {
+        "surface": "to speak",
+        "lemma": "laleo"
+      },
+      {
         "surface": "word",
         "lemma": "logos"
+      },
+      {
+        "surface": "complete",
+        "lemma": "pas"
       },
       {
         "surface": "boldness",
@@ -872,6 +1090,10 @@
       {
         "surface": "heal",
         "lemma": "iasis"
+      },
+      {
+        "surface": "perform",
+        "lemma": "ginomai"
       },
       {
         "surface": "signs",
@@ -904,6 +1126,10 @@
         "lemma": "deomai"
       },
       {
+        "surface": "their",
+        "lemma": "eimi"
+      },
+      {
         "surface": "meeting",
         "lemma": "sunago"
       },
@@ -932,6 +1158,10 @@
         "lemma": "pneuma"
       },
       {
+        "surface": "spoke",
+        "lemma": "laleo"
+      },
+      {
         "surface": "word",
         "lemma": "logos"
       },
@@ -954,6 +1184,14 @@
         "lemma": "pisteuo"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "in heart",
         "lemma": "kardia"
       },
@@ -962,15 +1200,39 @@
         "lemma": "psuche"
       },
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
+        "surface": "claimed that",
+        "lemma": "eipon"
+      },
+      {
         "surface": "possessions",
         "lemma": "huparcho"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "his own",
         "lemma": "idios"
+      },
+      {
+        "surface": "they shared",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "everything they owned",
+        "lemma": "pas"
       }
     ],
     "33": [
+      {
+        "surface": "With great",
+        "lemma": "megas"
+      },
       {
         "surface": "power",
         "lemma": "dunamis"
@@ -1000,11 +1262,27 @@
         "lemma": "iesous"
       },
       {
+        "surface": "abundant",
+        "lemma": "megas"
+      },
+      {
         "surface": "grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       }
     ],
     "34": [
+      {
+        "surface": "There were",
+        "lemma": "eimi"
+      },
       {
         "surface": "needy",
         "lemma": "endees"
@@ -1068,6 +1346,10 @@
         "lemma": "hekastos"
       },
       {
+        "surface": "he had",
+        "lemma": "echo"
+      },
+      {
         "surface": "need",
         "lemma": "chreia"
       }
@@ -1096,6 +1378,10 @@
       {
         "surface": "Barnabas",
         "lemma": "barnabas"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "eimi"
       },
       {
         "surface": "meaning",

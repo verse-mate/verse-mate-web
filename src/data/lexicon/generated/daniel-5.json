@@ -56,6 +56,10 @@
         "lemma": "beleshatstsar"
       },
       {
+        "surface": "gave orders",
+        "lemma": "amar"
+      },
+      {
         "surface": "to bring",
         "lemma": "atah"
       },
@@ -74,6 +78,10 @@
       {
         "surface": "Nebuchadnezzar",
         "lemma": "nevukhadnetstsar"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
       },
       {
         "surface": "had taken",
@@ -258,6 +266,10 @@
         "lemma": "chazah"
       },
       {
+        "surface": "the hand",
+        "lemma": "pas"
+      },
+      {
         "surface": "was writing",
         "lemma": "ketav"
       }
@@ -290,10 +302,6 @@
       {
         "surface": "and his knees",
         "lemma": "arkhuvah"
-      },
-      {
-        "surface": "knocked together",
-        "lemma": "da"
       }
     ],
     "7": [
@@ -326,6 +334,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to these wise men",
         "lemma": "chakkim"
       },
@@ -336,10 +348,6 @@
       {
         "surface": "reads",
         "lemma": "qera"
-      },
-      {
-        "surface": "this",
-        "lemma": "denah"
       },
       {
         "surface": "inscription",
@@ -387,6 +395,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "the king’s",
         "lemma": "melekh"
@@ -504,6 +516,14 @@
         "lemma": "malkah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "let your thoughts",
         "lemma": "rayon"
       },
@@ -546,6 +566,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "of your father",
+        "lemma": "av"
+      },
+      {
         "surface": "he was found",
         "lemma": "shekhach"
       },
@@ -568,6 +592,10 @@
       {
         "surface": "of the gods",
         "lemma": "elah"
+      },
+      {
+        "surface": "Your father",
+        "lemma": "av"
       },
       {
         "surface": "King",
@@ -602,11 +630,19 @@
         "lemma": "gezar"
       },
       {
+        "surface": "Your own father",
+        "lemma": "av"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       }
     ],
     "12": [
+      {
+        "surface": "did this",
+        "lemma": "kol"
+      },
       {
         "surface": "Daniel",
         "lemma": "daniyyel"
@@ -706,6 +742,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "him",
         "lemma": "daniyyel"
       },
@@ -720,6 +760,10 @@
       {
         "surface": "the exiles",
         "lemma": "ben"
+      },
+      {
+        "surface": "my father",
+        "lemma": "av"
       },
       {
         "surface": "the king",
@@ -784,10 +828,6 @@
       {
         "surface": "to read",
         "lemma": "qera"
-      },
-      {
-        "surface": "this",
-        "lemma": "denah"
       },
       {
         "surface": "inscription",
@@ -914,6 +954,10 @@
         "lemma": "daniyyel"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the king",
         "lemma": "melekh"
       },
@@ -980,6 +1024,10 @@
         "lemma": "yehav"
       },
       {
+        "surface": "your father",
+        "lemma": "av"
+      },
+      {
         "surface": "Nebuchadnezzar",
         "lemma": "nevukhadnetstsar"
       },
@@ -1012,6 +1060,10 @@
       {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "nation",
@@ -1248,8 +1300,8 @@
         "lemma": "yeda"
       },
       {
-        "surface": "this",
-        "lemma": "denah"
+        "surface": "all",
+        "lemma": "kol"
       }
     ],
     "23": [
@@ -1378,6 +1430,10 @@
         "lemma": "nishma"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your ways",
         "lemma": "orach"
       }
@@ -1396,19 +1452,11 @@
         "lemma": "resham"
       },
       {
-        "surface": "the",
-        "lemma": "denah"
-      },
-      {
         "surface": "inscription",
         "lemma": "ketav"
       }
     ],
     "25": [
-      {
-        "surface": "Now this",
-        "lemma": "denah"
-      },
       {
         "surface": "is the inscription",
         "lemma": "ketav"
@@ -1435,10 +1483,6 @@
       }
     ],
     "26": [
-      {
-        "surface": "And this",
-        "lemma": "denah"
-      },
       {
         "surface": "is the interpretation",
         "lemma": "peshar"
@@ -1520,6 +1564,10 @@
       {
         "surface": "Belshazzar",
         "lemma": "beleshatstsar"
+      },
+      {
+        "surface": "gave the command",
+        "lemma": "amar"
       },
       {
         "surface": "and they clothed",

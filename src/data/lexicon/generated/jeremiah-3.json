@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "If",
-        "lemma": "hen"
-      },
-      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -26,12 +22,24 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to marry",
+        "lemma": "hayah"
+      },
+      {
         "surface": "another",
         "lemma": "acher"
       },
       {
         "surface": "can he ever",
         "lemma": "od"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "Would not",
+        "lemma": "lo"
       },
       {
         "surface": "a land",
@@ -52,6 +60,10 @@
       {
         "surface": "lovers",
         "lemma": "rea"
+      },
+      {
+        "surface": "and you would return",
+        "lemma": "shuv"
       },
       {
         "surface": "declares",
@@ -76,12 +88,24 @@
         "lemma": "shephi"
       },
       {
+        "surface": "and see",
+        "lemma": "raah"
+      },
+      {
         "surface": "Is there any place where",
         "lemma": "ephoh"
       },
       {
+        "surface": "you have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "been violated",
         "lemma": "shagal"
+      },
+      {
+        "surface": "You sat",
+        "lemma": "yashav"
       },
       {
         "surface": "the highways",
@@ -122,8 +146,20 @@
         "lemma": "mana"
       },
       {
+        "surface": "and no",
+        "lemma": "lo"
+      },
+      {
         "surface": "spring rains",
         "lemma": "malqosh"
+      },
+      {
+        "surface": "have fallen",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "Yet you have",
+        "lemma": "hayah"
       },
       {
         "surface": "the brazen look",
@@ -144,8 +180,20 @@
     ],
     "4": [
       {
+        "surface": "Have you not",
+        "lemma": "lo"
+      },
+      {
         "surface": "just",
         "lemma": "attah"
+      },
+      {
+        "surface": "called",
+        "lemma": "qara"
+      },
+      {
+        "surface": "My Father",
+        "lemma": "av"
       },
       {
         "surface": "my friend",
@@ -174,12 +222,12 @@
         "lemma": "netsach"
       },
       {
-        "surface": "This",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "you have spoken",
         "lemma": "davar"
+      },
+      {
+        "surface": "but you keep doing",
+        "lemma": "asah"
       },
       {
         "surface": "all the evil",
@@ -208,6 +256,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Have you seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "faithless",
         "lemma": "meshuvah"
       },
@@ -216,8 +272,16 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "has done",
+        "lemma": "asah"
+      },
+      {
         "surface": "has gone up",
         "lemma": "halakh"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "high",
@@ -230,6 +294,10 @@
       {
         "surface": "and under",
         "lemma": "tachat"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "green",
@@ -250,8 +318,32 @@
     ],
     "7": [
       {
+        "surface": "I thought",
+        "lemma": "amar"
+      },
+      {
         "surface": "that after",
         "lemma": "achar"
+      },
+      {
+        "surface": "she had done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "she would return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "But she did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
       },
       {
         "surface": "and her unfaithful",
@@ -264,9 +356,17 @@
       {
         "surface": "Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "saw it",
+        "lemma": "raah"
       }
     ],
     "8": [
+      {
+        "surface": "She saw",
+        "lemma": "raah"
+      },
       {
         "surface": "faithless",
         "lemma": "meshuvah"
@@ -278,6 +378,10 @@
       {
         "surface": "had committed adultery",
         "lemma": "naaph"
+      },
+      {
+        "surface": "I gave",
+        "lemma": "natan"
       },
       {
         "surface": "a certificate",
@@ -304,6 +408,10 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "had no",
+        "lemma": "lo"
+      },
+      {
         "surface": "fear",
         "lemma": "yare"
       },
@@ -313,6 +421,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "Indifferent to",
+        "lemma": "hayah"
+      },
       {
         "surface": "her own infidelity",
         "lemma": "zenut"
@@ -340,6 +452,10 @@
     ],
     "10": [
       {
+        "surface": "in spite of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "her unfaithful",
         "lemma": "bagod"
       },
@@ -350,6 +466,18 @@
       {
         "surface": "Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "her heart",
@@ -372,6 +500,10 @@
       {
         "surface": "And the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Faithless",
@@ -404,12 +536,20 @@
         "lemma": "halakh"
       },
       {
+        "surface": "proclaim",
+        "lemma": "qara"
+      },
+      {
         "surface": "message",
         "lemma": "davar"
       },
       {
         "surface": "toward the north",
         "lemma": "tsaphon"
+      },
+      {
+        "surface": "Return",
+        "lemma": "shuv"
       },
       {
         "surface": "O faithless",
@@ -428,6 +568,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "I will no longer",
+        "lemma": "lo"
+      },
+      {
         "surface": "look on you with anger",
         "lemma": "naphal"
       },
@@ -442,6 +586,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "lo"
       },
       {
         "surface": "be angry",
@@ -494,12 +642,24 @@
         "lemma": "tachat"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "green",
         "lemma": "raan"
       },
       {
         "surface": "tree",
         "lemma": "ets"
+      },
+      {
+        "surface": "and have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "obeyed",
+        "lemma": "shama"
       },
       {
         "surface": "My voice",
@@ -515,6 +675,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "Return",
+        "lemma": "shuv"
+      },
       {
         "surface": "O faithless",
         "lemma": "shovav"
@@ -556,11 +720,19 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Zion",
         "lemma": "tsiyyon"
       }
     ],
     "15": [
+      {
+        "surface": "Then I will give",
+        "lemma": "natan"
+      },
       {
         "surface": "shepherds",
         "lemma": "beteqedharoim"
@@ -608,8 +780,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "they will no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
+      },
+      {
+        "surface": "discuss",
+        "lemma": "amar"
       },
       {
         "surface": "the ark",
@@ -624,12 +804,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "It will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "come",
         "lemma": "alah"
       },
       {
         "surface": "mind",
         "lemma": "lev"
+      },
+      {
+        "surface": "and no one",
+        "lemma": "lo"
       },
       {
         "surface": "will remember",
@@ -640,11 +828,27 @@
         "lemma": "paqad"
       },
       {
+        "surface": "nor",
+        "lemma": "lo"
+      },
+      {
         "surface": "will another one",
         "lemma": "od"
+      },
+      {
+        "surface": "be made",
+        "lemma": "asah"
       }
     ],
     "17": [
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
+        "surface": "they will call",
+        "lemma": "qara"
+      },
       {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
@@ -656,6 +860,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the nations",
@@ -676,6 +884,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "They will no longer",
+        "lemma": "lo"
       },
       {
         "surface": "follow",
@@ -720,6 +932,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "and they will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "together",
         "lemma": "yachad"
       },
@@ -736,11 +952,19 @@
         "lemma": "erets"
       },
       {
+        "surface": "I gave} to your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "as an inheritance",
         "lemma": "nachal"
       }
     ],
     "19": [
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
       {
         "surface": "How",
         "lemma": "ekh"
@@ -752,6 +976,10 @@
       {
         "surface": "My sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "and give",
+        "lemma": "natan"
       },
       {
         "surface": "a desirable",
@@ -776,6 +1004,26 @@
       {
         "surface": "the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "I thought",
+        "lemma": "amar"
+      },
+      {
+        "surface": "you would call Me",
+        "lemma": "qara"
+      },
+      {
+        "surface": "Father",
+        "lemma": "av"
+      },
+      {
+        "surface": "and never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "turn away",
+        "lemma": "shuv"
       },
       {
         "surface": "from following Me",
@@ -830,6 +1078,10 @@
         "lemma": "qol"
       },
       {
+        "surface": "is heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "the barren heights",
         "lemma": "shephi"
       },
@@ -872,6 +1124,10 @@
     ],
     "22": [
       {
+        "surface": "Return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "O faithless",
         "lemma": "shovav"
       },
@@ -886,10 +1142,6 @@
       {
         "surface": "your faithlessness",
         "lemma": "meshuvah"
-      },
-      {
-        "surface": "Here we are",
-        "lemma": "hen"
       },
       {
         "surface": "We come",
@@ -960,6 +1212,10 @@
         "lemma": "akhal"
       },
       {
+        "surface": "what our fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "have worked for",
         "lemma": "yegia"
       },
@@ -1010,12 +1266,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "and our fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "from our youth",
         "lemma": "naur"
       },
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "we have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "obeyed",
+        "lemma": "shama"
       },
       {
         "surface": "the voice",
@@ -1032,8 +1300,8 @@
     ]
   },
   "themeLemmas": [
-    "yisrael",
-    "neum",
-    "yehudah"
+    "lo",
+    "shuv",
+    "yisrael"
   ]
 }

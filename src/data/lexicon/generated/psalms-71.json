@@ -14,6 +14,10 @@
         "lemma": "chasah"
       },
       {
+        "surface": "let me never",
+        "lemma": "al"
+      },
+      {
         "surface": "be put to shame",
         "lemma": "bush"
       }
@@ -46,6 +50,10 @@
     ],
     "3": [
       {
+        "surface": "Be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "my rock",
         "lemma": "tsur"
       },
@@ -56,6 +64,10 @@
       {
         "surface": "where I can always",
         "lemma": "tamid"
+      },
+      {
+        "surface": "go",
+        "lemma": "bo"
       },
       {
         "surface": "Give the command",
@@ -158,6 +170,10 @@
     ],
     "7": [
       {
+        "surface": "I have become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a portent",
         "lemma": "mophet"
       },
@@ -192,11 +208,19 @@
         "lemma": "tipharah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
       }
     ],
     "9": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "discard me",
         "lemma": "shalakh"
@@ -204,6 +228,10 @@
       {
         "surface": "in my old age",
         "lemma": "ziqnah"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "forsake me",
@@ -224,6 +252,10 @@
         "lemma": "oyev"
       },
       {
+        "surface": "speak",
+        "lemma": "amar"
+      },
+      {
         "surface": "and those who lie in wait",
         "lemma": "shamar"
       },
@@ -237,6 +269,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "saying",
+        "lemma": "amar"
+      },
       {
         "surface": "God",
         "lemma": "elohim"
@@ -263,6 +299,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "Be not",
+        "lemma": "al"
+      },
       {
         "surface": "far",
         "lemma": "rachaq"
@@ -338,6 +378,10 @@
       {
         "surface": "You more",
         "lemma": "yasaph"
+      },
+      {
+        "surface": "more",
+        "lemma": "kol"
       }
     ],
     "15": [
@@ -358,6 +402,14 @@
         "lemma": "teshuah"
       },
       {
+        "surface": "all day long",
+        "lemma": "kol"
+      },
+      {
+        "surface": "I cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -367,6 +419,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "I will come",
+        "lemma": "bo"
+      },
       {
         "surface": "in the strength",
         "lemma": "gevurah"
@@ -424,6 +480,10 @@
         "lemma": "sevah"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "forsake me",
         "lemma": "azav"
       },
@@ -446,6 +506,14 @@
       {
         "surface": "Your might",
         "lemma": "gevurah"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who are to come",
+        "lemma": "bo"
       }
     ],
     "19": [
@@ -462,6 +530,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "have done",
+        "lemma": "asah"
+      },
+      {
         "surface": "great things",
         "lemma": "gadol"
       },
@@ -475,6 +547,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "You have shown me",
+        "lemma": "raah"
+      },
       {
         "surface": "many",
         "lemma": "rav"
@@ -492,6 +568,10 @@
         "lemma": "chayah"
       },
       {
+        "surface": "once again",
+        "lemma": "shuv"
+      },
+      {
         "surface": "Even from the depths",
         "lemma": "tehom"
       },
@@ -502,6 +582,10 @@
       {
         "surface": "You will bring me",
         "lemma": "alah"
+      },
+      {
+        "surface": "back up",
+        "lemma": "shuv"
       }
     ],
     "21": [
@@ -592,6 +676,10 @@
         "lemma": "tsedaqah"
       },
       {
+        "surface": "all day long",
+        "lemma": "kol"
+      },
+      {
         "surface": "those who seek",
         "lemma": "baqash"
       },
@@ -611,7 +699,7 @@
   },
   "themeLemmas": [
     "tsedaqah",
-    "tehillah",
-    "tamid"
+    "kol",
+    "al"
   ]
 }

@@ -38,6 +38,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "and to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the clan",
         "lemma": "mishpachah"
       },
@@ -48,12 +52,12 @@
     ],
     "2": [
       {
-        "surface": "Please",
-        "lemma": "na"
-      },
-      {
         "surface": "ask",
         "lemma": "davar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the leaders",
@@ -76,6 +80,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the sons",
         "lemma": "ben"
       },
@@ -86,6 +94,10 @@
       {
         "surface": "rule",
         "lemma": "mashal"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "just one",
@@ -122,12 +134,20 @@
         "lemma": "davar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "words",
         "lemma": "davar"
       },
       {
         "surface": "in the presence",
         "lemma": "ozen"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the leaders",
@@ -154,11 +174,19 @@
         "lemma": "avimelekh"
       },
       {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
         "surface": "is our brother",
         "lemma": "ach"
       }
     ],
     "4": [
+      {
+        "surface": "So they gave",
+        "lemma": "natan"
+      },
       {
         "surface": "seventy shekels",
         "lemma": "shivim"
@@ -209,6 +237,14 @@
       }
     ],
     "5": [
+      {
+        "surface": "He went",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to his father’s",
+        "lemma": "av"
+      },
       {
         "surface": "house",
         "lemma": "bet"
@@ -272,12 +308,20 @@
     ],
     "6": [
       {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the leaders",
         "lemma": "baal"
       },
       {
         "surface": "of Shechem",
         "lemma": "shekhem"
+      },
+      {
+        "surface": "and",
+        "lemma": "kol"
       },
       {
         "surface": "Beth-millo",
@@ -350,6 +394,14 @@
         "lemma": "qol"
       },
       {
+        "surface": "and cried out",
+        "lemma": "qara"
+      },
+      {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "O leaders",
         "lemma": "baal"
       },
@@ -360,6 +412,10 @@
       {
         "surface": "and may God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
       }
     ],
     "8": [
@@ -380,6 +436,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "They said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the olive tree",
         "lemma": "zayit"
       },
@@ -392,6 +452,10 @@
       {
         "surface": "But the olive tree",
         "lemma": "zayit"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "Should I stop giving",
@@ -432,6 +496,10 @@
         "lemma": "ets"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the fig tree",
         "lemma": "teenah"
       },
@@ -448,6 +516,10 @@
       {
         "surface": "But the fig tree",
         "lemma": "teenah"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "Should I stop giving",
@@ -484,6 +556,10 @@
         "lemma": "ets"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the grapevine",
         "lemma": "gephen"
       },
@@ -500,6 +576,10 @@
       {
         "surface": "But the grapevine",
         "lemma": "gephen"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "Should I stop giving",
@@ -536,8 +616,16 @@
     ],
     "14": [
       {
+        "surface": "Finally all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the trees",
         "lemma": "ets"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "the thornbush",
@@ -558,6 +646,14 @@
         "lemma": "atad"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "really",
         "lemma": "emet"
       },
@@ -570,6 +666,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "and find refuge",
         "lemma": "chasah"
       },
@@ -578,12 +678,20 @@
         "lemma": "tsel"
       },
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "not",
         "lemma": "ayin"
       },
       {
         "surface": "may fire",
         "lemma": "esh"
+      },
+      {
+        "surface": "come out",
+        "lemma": "yatsa"
       },
       {
         "surface": "the thornbush",
@@ -608,6 +716,14 @@
         "lemma": "attah"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you have acted",
+        "lemma": "asah"
+      },
+      {
         "surface": "faithfully",
         "lemma": "emet"
       },
@@ -624,12 +740,28 @@
         "lemma": "malakh"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you have done well",
+        "lemma": "asah"
+      },
+      {
         "surface": "Jerubbaal",
         "lemma": "yerubbaal"
       },
       {
         "surface": "and his family",
         "lemma": "bet"
+      },
+      {
+        "surface": "and if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you have done",
+        "lemma": "asah"
       },
       {
         "surface": "as he",
@@ -641,6 +773,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "my father",
+        "lemma": "av"
+      },
       {
         "surface": "fought",
         "lemma": "lacham"
@@ -670,6 +806,10 @@
       {
         "surface": "have risen up",
         "lemma": "qamay"
+      },
+      {
+        "surface": "my father’s",
+        "lemma": "av"
       },
       {
         "surface": "house",
@@ -730,6 +870,14 @@
     ],
     "19": [
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you have acted",
+        "lemma": "asah"
+      },
+      {
         "surface": "faithfully",
         "lemma": "emet"
       },
@@ -760,12 +908,20 @@
     ],
     "20": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "not",
         "lemma": "ayin"
       },
       {
         "surface": "may fire",
         "lemma": "esh"
+      },
+      {
+        "surface": "come",
+        "lemma": "yatsa"
       },
       {
         "surface": "from Abimelech",
@@ -790,6 +946,10 @@
       {
         "surface": "and may fire",
         "lemma": "esh"
+      },
+      {
+        "surface": "come",
+        "lemma": "yatsa"
       },
       {
         "surface": "from the leaders",
@@ -832,6 +992,10 @@
       {
         "surface": "to Beer",
         "lemma": "beer"
+      },
+      {
+        "surface": "and he lived",
+        "lemma": "yashav"
       },
       {
         "surface": "there",
@@ -940,6 +1104,10 @@
         "lemma": "yerubbaal"
       },
       {
+        "surface": "might come to justice",
+        "lemma": "bo"
+      },
+      {
         "surface": "and their blood",
         "lemma": "dam"
       },
@@ -1006,6 +1174,10 @@
         "lemma": "gazal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "passed",
         "lemma": "avar"
       },
@@ -1036,6 +1208,10 @@
         "lemma": "eved"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "with his brothers",
         "lemma": "ach"
       },
@@ -1062,6 +1238,10 @@
     ],
     "27": [
       {
+        "surface": "And after they had gone out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "into the fields",
         "lemma": "saday"
       },
@@ -1078,8 +1258,16 @@
         "lemma": "darakh"
       },
       {
+        "surface": "they held",
+        "lemma": "asah"
+      },
+      {
         "surface": "a festival",
         "lemma": "hillul"
+      },
+      {
+        "surface": "and went",
+        "lemma": "bo"
       },
       {
         "surface": "into the house",
@@ -1120,6 +1308,10 @@
         "lemma": "eved"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Who",
         "lemma": "mi"
       },
@@ -1138,6 +1330,10 @@
       {
         "surface": "we should serve him",
         "lemma": "avad"
+      },
+      {
+        "surface": "Is he not",
+        "lemma": "lo"
       },
       {
         "surface": "the son",
@@ -1166,6 +1362,10 @@
       {
         "surface": "of Hamor",
         "lemma": "chamor"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
       },
       {
         "surface": "of Shechem",
@@ -1202,6 +1402,10 @@
         "lemma": "avimelekh"
       },
       {
+        "surface": "I would say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to him",
         "lemma": "avimelekh"
       },
@@ -1212,6 +1416,10 @@
       {
         "surface": "your army",
         "lemma": "tsava"
+      },
+      {
+        "surface": "and come out",
+        "lemma": "yatsa"
       }
     ],
     "30": [
@@ -1226,6 +1434,10 @@
       {
         "surface": "of the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
       },
       {
         "surface": "the words",
@@ -1266,8 +1478,8 @@
         "lemma": "avimelekh"
       },
       {
-        "surface": "Look",
-        "lemma": "hinneh"
+        "surface": "to say",
+        "lemma": "amar"
       },
       {
         "surface": "Gaal",
@@ -1284,6 +1496,10 @@
       {
         "surface": "and his brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "have come",
+        "lemma": "bo"
       },
       {
         "surface": "to Shechem",
@@ -1326,6 +1542,10 @@
     ],
     "33": [
       {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in the morning",
         "lemma": "boqer"
       },
@@ -1350,6 +1570,14 @@
         "lemma": "am"
       },
       {
+        "surface": "come out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
         "surface": "you are able",
         "lemma": "matsa"
       }
@@ -1358,6 +1586,10 @@
       {
         "surface": "So Abimelech",
         "lemma": "avimelekh"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "his troops",
@@ -1402,6 +1634,10 @@
         "lemma": "eved"
       },
       {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "and stood",
         "lemma": "amad"
       },
@@ -1440,16 +1676,20 @@
         "lemma": "gaal"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
       {
-        "surface": "Zebul",
-        "lemma": "zevul"
+        "surface": "he said",
+        "lemma": "amar"
       },
       {
-        "surface": "Look",
-        "lemma": "hinneh"
+        "surface": "Zebul",
+        "lemma": "zevul"
       },
       {
         "surface": "people",
@@ -1468,12 +1708,20 @@
         "lemma": "zevul"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "The shadows",
         "lemma": "tsel"
       },
       {
         "surface": "of the mountains",
         "lemma": "har"
+      },
+      {
+        "surface": "look",
+        "lemma": "raah"
       },
       {
         "surface": "like men",
@@ -1492,10 +1740,6 @@
       {
         "surface": "again",
         "lemma": "yasaph"
-      },
-      {
-        "surface": "Look",
-        "lemma": "hinneh"
       },
       {
         "surface": "people",
@@ -1520,6 +1764,10 @@
       {
         "surface": "company",
         "lemma": "rosh"
+      },
+      {
+        "surface": "is coming",
+        "lemma": "bo"
       },
       {
         "surface": "by way of",
@@ -1548,6 +1796,14 @@
         "lemma": "zevul"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Who",
         "lemma": "mi"
       },
@@ -1560,12 +1816,20 @@
         "lemma": "avad"
       },
       {
+        "surface": "Are these not",
+        "lemma": "lo"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
       {
         "surface": "you ridiculed",
         "lemma": "maas"
+      },
+      {
+        "surface": "Go out",
+        "lemma": "yatsa"
       },
       {
         "surface": "now",
@@ -1580,6 +1844,10 @@
       {
         "surface": "So Gaal",
         "lemma": "gaal"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "before",
@@ -1646,6 +1914,10 @@
         "lemma": "avimelekh"
       },
       {
+        "surface": "stayed",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Arumah",
         "lemma": "arumah"
       },
@@ -1666,6 +1938,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "out of",
+        "lemma": "yashav"
+      },
+      {
         "surface": "Shechem",
         "lemma": "shekhem"
       }
@@ -1678,6 +1954,10 @@
       {
         "surface": "the people of Shechem",
         "lemma": "am"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "into the fields",
@@ -1722,8 +2002,16 @@
         "lemma": "saday"
       },
       {
+        "surface": "When he saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "coming out",
+        "lemma": "yatsa"
       },
       {
         "surface": "the city",
@@ -1780,6 +2068,10 @@
         "lemma": "pashat"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "in the fields",
         "lemma": "saday"
       },
@@ -1789,6 +2081,10 @@
       }
     ],
     "45": [
+      {
+        "surface": "And all",
+        "lemma": "kol"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -1836,6 +2132,14 @@
     ],
     "46": [
       {
+        "surface": "On hearing of this",
+        "lemma": "shama"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the leaders",
         "lemma": "baal"
       },
@@ -1846,6 +2150,10 @@
       {
         "surface": "of Shechem",
         "lemma": "shekhem"
+      },
+      {
+        "surface": "entered",
+        "lemma": "bo"
       },
       {
         "surface": "the inner chamber",
@@ -1874,6 +2182,10 @@
         "lemma": "nagad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the leaders",
         "lemma": "baal"
       },
@@ -1894,6 +2206,10 @@
       {
         "surface": "he",
         "lemma": "avimelekh"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "his men",
@@ -1948,6 +2264,10 @@
         "lemma": "shekhem"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "his men",
         "lemma": "am"
       },
@@ -1956,11 +2276,27 @@
         "lemma": "mahar"
       },
       {
+        "surface": "and do",
+        "lemma": "asah"
+      },
+      {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "you have seen me",
+        "lemma": "raah"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       }
     ],
     "49": [
+      {
+        "surface": "So each",
+        "lemma": "kol"
+      },
       {
         "surface": "man",
         "lemma": "ish"
@@ -2004,6 +2340,10 @@
       {
         "surface": "killing",
         "lemma": "mut"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
       },
       {
         "surface": "in the tower",
@@ -2054,6 +2394,10 @@
     ],
     "51": [
       {
+        "surface": "But there was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a strong",
         "lemma": "oz"
       },
@@ -2068,6 +2412,10 @@
       {
         "surface": "the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the men",
@@ -2114,6 +2462,10 @@
       {
         "surface": "When Abimelech",
         "lemma": "avimelekh"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "attack",
@@ -2184,8 +2536,16 @@
         "lemma": "meherah"
       },
       {
+        "surface": "called",
+        "lemma": "qara"
+      },
+      {
         "surface": "his armor-bearer",
         "lemma": "nasa"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "Draw",
@@ -2198,6 +2558,10 @@
       {
         "surface": "and kill me",
         "lemma": "mut"
+      },
+      {
+        "surface": "they say",
+        "lemma": "amar"
       },
       {
         "surface": "A woman",
@@ -2220,6 +2584,10 @@
       {
         "surface": "And when the Israelites",
         "lemma": "ish"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
       },
       {
         "surface": "Abimelech",
@@ -2248,12 +2616,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "repaid",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the wickedness",
         "lemma": "ra"
       },
       {
         "surface": "Abimelech",
         "lemma": "avimelekh"
+      },
+      {
+        "surface": "had done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "to his father",
+        "lemma": "av"
       },
       {
         "surface": "in murdering",
@@ -2272,6 +2652,14 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "also brought",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the wickedness",
@@ -2304,12 +2692,16 @@
       {
         "surface": "of Jerubbaal",
         "lemma": "yerubbaal"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       }
     ]
   },
   "themeLemmas": [
     "avimelekh",
     "shekhem",
-    "halakh"
+    "kol"
   ]
 }

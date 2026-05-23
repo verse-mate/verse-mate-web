@@ -10,6 +10,10 @@
         "lemma": "krino"
       },
       {
+        "surface": "to make",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "another",
         "lemma": "palin"
       },
@@ -24,6 +28,10 @@
         "lemma": "lupeo"
       },
       {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
         "surface": "to cheer",
         "lemma": "euphraino"
       },
@@ -33,6 +41,18 @@
       }
     ],
     "3": [
+      {
+        "surface": "I wrote",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "on my arrival",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "I would not be",
+        "lemma": "echo"
+      },
       {
         "surface": "grieved",
         "lemma": "lupe"
@@ -50,6 +70,14 @@
         "lemma": "peitho"
       },
       {
+        "surface": "all of",
+        "lemma": "pas"
+      },
+      {
+        "surface": "would share",
+        "lemma": "eimi"
+      },
+      {
         "surface": "my",
         "lemma": "emos"
       },
@@ -60,8 +88,20 @@
     ],
     "4": [
       {
+        "surface": "many",
+        "lemma": "polus"
+      },
+      {
         "surface": "tears",
         "lemma": "dakru"
+      },
+      {
+        "surface": "I wrote",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "great",
+        "lemma": "polus"
       },
       {
         "surface": "distress",
@@ -80,6 +120,10 @@
         "lemma": "lupeo"
       },
       {
+        "surface": "let you know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "how much",
         "lemma": "perissos"
       },
@@ -96,6 +140,10 @@
       {
         "surface": "he has not grieved",
         "lemma": "lupeo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "some degree",
@@ -162,12 +210,28 @@
     ],
     "9": [
       {
+        "surface": "in writing you",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "see",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "would stand the test",
         "lemma": "dokime"
       },
       {
+        "surface": "and",
+        "lemma": "eimi"
+      },
+      {
         "surface": "be obedient",
         "lemma": "hupekoos"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
       }
     ],
     "10": [
@@ -212,6 +276,10 @@
     ],
     "12": [
       {
+        "surface": "when I went",
+        "lemma": "erchomai"
+      },
+      {
         "surface": "Troas",
         "lemma": "troas"
       },
@@ -238,12 +306,20 @@
     ],
     "13": [
       {
+        "surface": "I had",
+        "lemma": "echo"
+      },
+      {
         "surface": "peace",
         "lemma": "anesis"
       },
       {
         "surface": "spirit",
         "lemma": "pneuma"
+      },
+      {
+        "surface": "did not find",
+        "lemma": "heurisko"
       },
       {
         "surface": "brother",
@@ -256,6 +332,10 @@
       {
         "surface": "I said goodbye",
         "lemma": "apotasso"
+      },
+      {
+        "surface": "and went on",
+        "lemma": "exerchomai"
       },
       {
         "surface": "Macedonia",
@@ -288,6 +368,10 @@
         "lemma": "phaneroo"
       },
       {
+        "surface": "vvv",
+        "lemma": "pas"
+      },
+      {
         "surface": "everywhere",
         "lemma": "topos"
       },
@@ -301,6 +385,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "we are",
+        "lemma": "eimi"
+      },
       {
         "surface": "to God",
         "lemma": "theos"
@@ -340,11 +428,23 @@
         "lemma": "zoe"
       },
       {
+        "surface": "who is",
+        "lemma": "tis"
+      },
+      {
         "surface": "qualified",
         "lemma": "hikanos"
       }
     ],
     "17": [
+      {
+        "surface": "we are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "so many others",
+        "lemma": "polus"
+      },
       {
         "surface": "peddle",
         "lemma": "kapeleuo"
@@ -360,6 +460,10 @@
       {
         "surface": "Christ",
         "lemma": "christos"
+      },
+      {
+        "surface": "we speak",
+        "lemma": "laleo"
       },
       {
         "surface": "God",

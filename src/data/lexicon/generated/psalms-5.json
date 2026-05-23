@@ -78,6 +78,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "You hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "my voice",
         "lemma": "qol"
       },
@@ -96,6 +100,10 @@
     ],
     "4": [
       {
+        "surface": "are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "a God",
         "lemma": "el"
       },
@@ -106,6 +114,10 @@
       {
         "surface": "in wickedness",
         "lemma": "resah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "evil",
@@ -122,6 +134,10 @@
         "lemma": "halal"
       },
       {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "stand",
         "lemma": "yatsav"
       },
@@ -132,6 +148,10 @@
       {
         "surface": "You hate",
         "lemma": "sane"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "workers",
@@ -177,6 +197,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "will enter",
+        "lemma": "bo"
+      },
       {
         "surface": "Your house",
         "lemma": "bet"
@@ -314,6 +338,10 @@
     ],
     "11": [
       {
+        "surface": "But let all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who take refuge",
         "lemma": "chasah"
       },
@@ -370,8 +398,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "rov",
-    "qol",
-    "boqer"
+    "qol"
   ]
 }

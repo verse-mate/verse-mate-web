@@ -94,6 +94,10 @@
     ],
     "3": [
       {
+        "surface": "I",
+        "lemma": "echo"
+      },
+      {
         "surface": "thank",
         "lemma": "charis"
       },
@@ -116,6 +120,10 @@
       {
         "surface": "my forefathers",
         "lemma": "progonos"
+      },
+      {
+        "surface": "I",
+        "lemma": "echo"
       },
       {
         "surface": "constantly",
@@ -152,6 +160,10 @@
         "lemma": "epipotheo"
       },
       {
+        "surface": "to see",
+        "lemma": "horao"
+      },
+      {
         "surface": "I may be filled",
         "lemma": "pleroo"
       },
@@ -161,6 +173,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "vvv",
+        "lemma": "lambano"
+      },
       {
         "surface": "I am reminded",
         "lemma": "hupomnesis"
@@ -224,6 +240,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "laying on",
         "lemma": "epithesis"
       },
@@ -236,6 +256,10 @@
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "given",
+        "lemma": "didomi"
       },
       {
         "surface": "a spirit",
@@ -324,6 +348,10 @@
       {
         "surface": "by the grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "He granted",
+        "lemma": "didomi"
       },
       {
         "surface": "Christ",
@@ -424,12 +452,20 @@
         "lemma": "epaischunomai"
       },
       {
+        "surface": "I know",
+        "lemma": "eido"
+      },
+      {
         "surface": "I have believed",
         "lemma": "pisteuo"
       },
       {
         "surface": "I am convinced",
         "lemma": "peitho"
+      },
+      {
+        "surface": "He is",
+        "lemma": "eimi"
       },
       {
         "surface": "able",
@@ -450,6 +486,10 @@
     ],
     "13": [
       {
+        "surface": "Hold on",
+        "lemma": "echo"
+      },
+      {
         "surface": "to the pattern",
         "lemma": "hupotuposis"
       },
@@ -460,6 +500,10 @@
       {
         "surface": "teaching",
         "lemma": "logos"
+      },
+      {
+        "surface": "you have heard",
+        "lemma": "akouo"
       },
       {
         "surface": "the faith",
@@ -506,6 +550,14 @@
     ],
     "15": [
       {
+        "surface": "You know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "the Province of Asia",
         "lemma": "asia"
       },
@@ -526,6 +578,10 @@
       {
         "surface": "Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "grant",
+        "lemma": "didomi"
       },
       {
         "surface": "mercy",
@@ -554,6 +610,10 @@
     ],
     "17": [
       {
+        "surface": "when he arrived",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "Rome",
         "lemma": "rhome"
       },
@@ -564,12 +624,20 @@
       {
         "surface": "he searched diligently",
         "lemma": "zeteo"
+      },
+      {
+        "surface": "he found",
+        "lemma": "heurisko"
       }
     ],
     "18": [
       {
         "surface": "Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "grant",
+        "lemma": "didomi"
       },
       {
         "surface": "His",
@@ -582,6 +650,10 @@
       {
         "surface": "day",
         "lemma": "hemera"
+      },
+      {
+        "surface": "know",
+        "lemma": "ginosko"
       },
       {
         "surface": "very well",

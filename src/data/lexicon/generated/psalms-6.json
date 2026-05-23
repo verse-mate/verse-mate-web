@@ -30,12 +30,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "rebuke me",
         "lemma": "yakhach"
       },
       {
         "surface": "in Your anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "or",
+        "lemma": "al"
       },
       {
         "surface": "discipline me",
@@ -96,6 +104,10 @@
     ],
     "4": [
       {
+        "surface": "Turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -152,6 +164,10 @@
         "lemma": "anachah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "night",
         "lemma": "laylah"
       },
@@ -194,6 +210,10 @@
         "lemma": "ataq"
       },
       {
+        "surface": "because of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my foes",
         "lemma": "tsarar"
       }
@@ -202,6 +222,10 @@
       {
         "surface": "Depart",
         "lemma": "sur"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "you workers",
@@ -216,6 +240,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "has heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "vvv",
         "lemma": "qol"
       },
@@ -228,6 +256,10 @@
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has heard",
+        "lemma": "shama"
       },
       {
         "surface": "my cry for mercy",
@@ -248,6 +280,10 @@
     ],
     "10": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "my enemies",
         "lemma": "oyev"
       },
@@ -260,6 +296,10 @@
         "lemma": "bahal"
       },
       {
+        "surface": "they will turn back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "in sudden",
         "lemma": "rega"
       },
@@ -270,8 +310,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "bahal",
-    "nephesh",
-    "bush"
+    "shuv"
   ]
 }

@@ -30,6 +30,10 @@
         "lemma": "shamar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the commandments",
         "lemma": "mitsvah"
       },
@@ -43,6 +47,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
       {
         "surface": "on the day",
         "lemma": "yom"
@@ -66,6 +74,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "is giving",
+        "lemma": "natan"
       },
       {
         "surface": "set up",
@@ -94,6 +106,10 @@
         "lemma": "katav"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the words",
         "lemma": "davar"
       },
@@ -106,6 +122,10 @@
         "lemma": "avar"
       },
       {
+        "surface": "enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -116,6 +136,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "is giving",
+        "lemma": "natan"
       },
       {
         "surface": "a land",
@@ -142,11 +166,19 @@
         "lemma": "elohim"
       },
       {
+        "surface": "of your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "has promised you",
         "lemma": "davar"
       }
     ],
     "4": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
       {
         "surface": "when you have crossed",
         "lemma": "avar"
@@ -212,6 +244,10 @@
       {
         "surface": "stones",
         "lemma": "even"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
       },
       {
         "surface": "use",
@@ -312,6 +348,10 @@
         "lemma": "even"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the words",
         "lemma": "davar"
       },
@@ -338,6 +378,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -350,8 +394,16 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "and listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "you have become",
+        "lemma": "hayah"
       },
       {
         "surface": "the people",
@@ -368,6 +420,10 @@
     ],
     "10": [
       {
+        "surface": "You shall therefore obey",
+        "lemma": "shama"
+      },
+      {
         "surface": "the voice",
         "lemma": "qol"
       },
@@ -378,6 +434,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "and follow",
+        "lemma": "asah"
       },
       {
         "surface": "His commandments",
@@ -490,6 +550,10 @@
         "lemma": "gad"
       },
       {
+        "surface": "Asher",
+        "lemma": "asher"
+      },
+      {
         "surface": "Zebulun",
         "lemma": "zevulun"
       },
@@ -512,12 +576,20 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "shall proclaim",
+        "lemma": "amar"
+      },
+      {
         "surface": "in a loud",
         "lemma": "rum"
       },
       {
         "surface": "voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "Israelite",
@@ -532,6 +604,10 @@
       {
         "surface": "the man",
         "lemma": "ish"
+      },
+      {
+        "surface": "makes",
+        "lemma": "asah"
       },
       {
         "surface": "a carved idol",
@@ -570,6 +646,10 @@
         "lemma": "seter"
       },
       {
+        "surface": "And {let} all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -592,12 +672,24 @@
         "lemma": "qalah"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "or mother",
         "lemma": "em"
       },
       {
+        "surface": "And {let} all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -622,8 +714,16 @@
         "lemma": "gevul"
       },
       {
+        "surface": "And {let} all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -648,8 +748,16 @@
         "lemma": "derekh"
       },
       {
+        "surface": "And {let} all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -682,8 +790,16 @@
         "lemma": "almanah"
       },
       {
+        "surface": "And {let} all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -700,6 +816,10 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "his father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "wife",
         "lemma": "ishshah"
       },
@@ -708,12 +828,24 @@
         "lemma": "galah"
       },
       {
+        "surface": "his father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "marriage bed",
         "lemma": "kanaph"
       },
       {
+        "surface": "And {let} all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -730,12 +862,24 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "animal",
         "lemma": "behemah"
       },
       {
+        "surface": "And {let} all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -760,6 +904,10 @@
         "lemma": "bat"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "the daughter of",
         "lemma": "bat"
       },
@@ -768,8 +916,16 @@
         "lemma": "em"
       },
       {
+        "surface": "And {let} all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -790,8 +946,16 @@
         "lemma": "choten"
       },
       {
+        "surface": "And {let} all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -816,8 +980,16 @@
         "lemma": "seter"
       },
       {
+        "surface": "And {let} all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -850,8 +1022,16 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "And {let} all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -862,6 +1042,10 @@
       {
         "surface": "Cursed is",
         "lemma": "arar"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "put",
@@ -876,8 +1060,20 @@
         "lemma": "torah"
       },
       {
+        "surface": "into practice",
+        "lemma": "asah"
+      },
+      {
+        "surface": "And {let} all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -886,8 +1082,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "arar",
-    "tsavah",
-    "even"
+    "amar"
   ]
 }

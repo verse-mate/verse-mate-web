@@ -110,6 +110,10 @@
     ],
     "3": [
       {
+        "surface": "So I turned my attention",
+        "lemma": "natan"
+      },
+      {
         "surface": "the Lord",
         "lemma": "adonai"
       },
@@ -158,10 +162,6 @@
       {
         "surface": "and confessed",
         "lemma": "yadah"
-      },
-      {
-        "surface": "O",
-        "lemma": "anna"
       },
       {
         "surface": "Lord",
@@ -236,6 +236,14 @@
     ],
     "6": [
       {
+        "surface": "We have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listened",
+        "lemma": "shama"
+      },
+      {
         "surface": "Your servants",
         "lemma": "eved"
       },
@@ -258,6 +266,14 @@
       {
         "surface": "leaders",
         "lemma": "sar"
+      },
+      {
+        "surface": "fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -298,8 +314,16 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -312,6 +336,10 @@
       {
         "surface": "and far",
         "lemma": "rachoq"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "the countries",
@@ -348,6 +376,10 @@
         "lemma": "sar"
       },
       {
+        "surface": "and our fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "we have sinned",
         "lemma": "chata"
       }
@@ -376,6 +408,14 @@
     ],
     "10": [
       {
+        "surface": "and have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "obeyed",
+        "lemma": "shama"
+      },
+      {
         "surface": "the voice",
         "lemma": "qol"
       },
@@ -396,6 +436,10 @@
         "lemma": "torah"
       },
       {
+        "surface": "He set",
+        "lemma": "natan"
+      },
+      {
         "surface": "before us",
         "lemma": "paneh"
       },
@@ -413,6 +457,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "Israel",
         "lemma": "yisrael"
@@ -432,6 +480,10 @@
       {
         "surface": "refusing",
         "lemma": "bilti"
+      },
+      {
+        "surface": "to obey",
+        "lemma": "shama"
       },
       {
         "surface": "Your voice",
@@ -492,6 +544,10 @@
         "lemma": "shaphat"
       },
       {
+        "surface": "by bringing",
+        "lemma": "bo"
+      },
+      {
         "surface": "a great",
         "lemma": "gadol"
       },
@@ -504,8 +560,24 @@
         "lemma": "tachat"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "of heaven",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "has ever been done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "has been done",
+        "lemma": "asah"
       },
       {
         "surface": "to Jerusalem",
@@ -526,8 +598,20 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "disaster",
         "lemma": "ra"
+      },
+      {
+        "surface": "has come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "yet we have not",
+        "lemma": "lo"
       },
       {
         "surface": "sought the favor",
@@ -540,6 +624,10 @@
       {
         "surface": "our God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "by turning",
+        "lemma": "shuv"
       },
       {
         "surface": "from our iniquities",
@@ -568,6 +656,10 @@
         "lemma": "shaqad"
       },
       {
+        "surface": "and brought it",
+        "lemma": "bo"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -578,6 +670,22 @@
       {
         "surface": "is righteous",
         "lemma": "tsaddiq"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "He does",
+        "lemma": "asah"
+      },
+      {
+        "surface": "yet we have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "obeyed",
+        "lemma": "shama"
       },
       {
         "surface": "His voice",
@@ -598,6 +706,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "brought",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Your people",
         "lemma": "am"
       },
@@ -616,6 +728,10 @@
       {
         "surface": "hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "and who made",
+        "lemma": "asah"
       },
       {
         "surface": "a name",
@@ -640,12 +756,12 @@
         "lemma": "adonai"
       },
       {
-        "surface": "Your righteous acts",
-        "lemma": "tsedaqah"
+        "surface": "in keeping with all",
+        "lemma": "kol"
       },
       {
-        "surface": "I pray",
-        "lemma": "na"
+        "surface": "Your righteous acts",
+        "lemma": "tsedaqah"
       },
       {
         "surface": "that Your anger",
@@ -654,6 +770,10 @@
       {
         "surface": "and wrath",
         "lemma": "chemah"
+      },
+      {
+        "surface": "may turn away",
+        "lemma": "shuv"
       },
       {
         "surface": "from Your city",
@@ -680,6 +800,10 @@
         "lemma": "avan"
       },
       {
+        "surface": "of our fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -690,6 +814,10 @@
       {
         "surface": "are a reproach",
         "lemma": "cherpah"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "around us",
@@ -704,6 +832,10 @@
       {
         "surface": "our God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
       },
       {
         "surface": "the prayers",
@@ -752,12 +884,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "and hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "open",
         "lemma": "paqach"
       },
       {
         "surface": "Your eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "and see",
+        "lemma": "raah"
       },
       {
         "surface": "the desolation",
@@ -768,8 +908,16 @@
         "lemma": "ir"
       },
       {
+        "surface": "that bears",
+        "lemma": "qara"
+      },
+      {
         "surface": "Your name",
         "lemma": "shem"
+      },
+      {
+        "surface": "are not",
+        "lemma": "lo"
       },
       {
         "surface": "presenting",
@@ -802,6 +950,10 @@
         "lemma": "adonai"
       },
       {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "O Lord",
         "lemma": "adonai"
       },
@@ -818,8 +970,16 @@
         "lemma": "qashav"
       },
       {
+        "surface": "and act",
+        "lemma": "asah"
+      },
+      {
         "surface": "O my God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "delay",
@@ -832,6 +992,10 @@
       {
         "surface": "and Your people",
         "lemma": "am"
+      },
+      {
+        "surface": "bear",
+        "lemma": "qara"
       },
       {
         "surface": "Your name",
@@ -922,6 +1086,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "I had seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "in the earlier",
         "lemma": "techillah"
       },
@@ -936,6 +1104,10 @@
       {
         "surface": "in swift flight",
         "lemma": "yeaph"
+      },
+      {
+        "surface": "about the time",
+        "lemma": "et"
       },
       {
         "surface": "of the evening",
@@ -956,8 +1128,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "O Daniel",
         "lemma": "daniyyel"
+      },
+      {
+        "surface": "I have come",
+        "lemma": "yatsa"
       },
       {
         "surface": "now",
@@ -984,6 +1164,14 @@
       {
         "surface": "an answer",
         "lemma": "davar"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "have come",
+        "lemma": "bo"
       },
       {
         "surface": "to tell you",
@@ -1060,6 +1248,10 @@
         "lemma": "avan"
       },
       {
+        "surface": "to bring in",
+        "lemma": "bo"
+      },
+      {
         "surface": "everlasting",
         "lemma": "olam"
       },
@@ -1106,6 +1298,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to restore",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and rebuild",
         "lemma": "banah"
       },
@@ -1138,12 +1334,20 @@
         "lemma": "shavua"
       },
       {
+        "surface": "It will be rebuilt",
+        "lemma": "shuv"
+      },
+      {
         "surface": "with streets",
         "lemma": "rechov"
       },
       {
         "surface": "and a trench",
         "lemma": "charuts"
+      },
+      {
+        "surface": "but in times",
+        "lemma": "et"
       },
       {
         "surface": "of distress",
@@ -1182,6 +1386,10 @@
       {
         "surface": "of the prince",
         "lemma": "nagid"
+      },
+      {
+        "surface": "who is to come",
+        "lemma": "bo"
       },
       {
         "surface": "will destroy",
@@ -1292,8 +1500,8 @@
     ]
   },
   "themeLemmas": [
-    "yerushalaim",
-    "shavua",
-    "paneh"
+    "kol",
+    "shama",
+    "yerushalaim"
   ]
 }

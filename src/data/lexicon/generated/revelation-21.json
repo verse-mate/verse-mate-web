@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "a new",
         "lemma": "kainos"
       },
@@ -42,11 +46,19 @@
         "lemma": "thalassa"
       },
       {
+        "surface": "was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "more",
         "lemma": "eti"
       }
     ],
     "2": [
+      {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
       {
         "surface": "holy",
         "lemma": "hagios"
@@ -94,12 +106,24 @@
     ],
     "3": [
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "a loud",
+        "lemma": "megas"
+      },
+      {
         "surface": "voice",
         "lemma": "phone"
       },
       {
         "surface": "throne",
         "lemma": "thronos"
+      },
+      {
+        "surface": "saying",
+        "lemma": "lego"
       },
       {
         "surface": "dwelling place",
@@ -118,12 +142,20 @@
         "lemma": "skenoo"
       },
       {
+        "surface": "will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "people",
         "lemma": "laos"
       },
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "will be",
+        "lemma": "eimi"
       },
       {
         "surface": "God",
@@ -136,12 +168,20 @@
         "lemma": "exaleipho"
       },
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "tear",
         "lemma": "dakru"
       },
       {
         "surface": "eyes",
         "lemma": "ophthalmos"
+      },
+      {
+        "surface": "there will be",
+        "lemma": "eimi"
       },
       {
         "surface": "more",
@@ -182,12 +222,36 @@
         "lemma": "thronos"
       },
       {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "I make",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "new",
         "lemma": "kainos"
       },
       {
+        "surface": "He said",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Write this down",
+        "lemma": "grapho"
+      },
+      {
         "surface": "words",
         "lemma": "logos"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "faithful",
@@ -199,6 +263,18 @@
       }
     ],
     "6": [
+      {
+        "surface": "He told",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "It is done",
+        "lemma": "ginomai"
+      },
+      {
+        "surface": "am",
+        "lemma": "eimi"
+      },
       {
         "surface": "Alpha",
         "lemma": "alpha"
@@ -218,6 +294,10 @@
       {
         "surface": "thirsty",
         "lemma": "dipsao"
+      },
+      {
+        "surface": "will give",
+        "lemma": "didomi"
       },
       {
         "surface": "freely",
@@ -246,8 +326,16 @@
         "lemma": "kleronomeo"
       },
       {
+        "surface": "I will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "will be",
+        "lemma": "eimi"
       },
       {
         "surface": "son",
@@ -284,6 +372,10 @@
         "lemma": "eidololatres"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "liars",
         "lemma": "pseudes"
       },
@@ -308,6 +400,10 @@
         "lemma": "theion"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "second",
         "lemma": "deuteros"
       },
@@ -318,12 +414,20 @@
     ],
     "9": [
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "seven",
         "lemma": "hepta"
       },
       {
         "surface": "angels",
         "lemma": "angelos"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "seven",
@@ -348,6 +452,14 @@
       {
         "surface": "plagues",
         "lemma": "plege"
+      },
+      {
+        "surface": "came",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "said",
+        "lemma": "laleo"
       },
       {
         "surface": "I will show",
@@ -378,6 +490,10 @@
       {
         "surface": "a mountain",
         "lemma": "oros"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "high",
@@ -414,6 +530,10 @@
     ],
     "11": [
       {
+        "surface": "shining with",
+        "lemma": "echo"
+      },
+      {
         "surface": "glory",
         "lemma": "doxa"
       },
@@ -448,12 +568,24 @@
     ],
     "12": [
       {
+        "surface": "The city had",
+        "lemma": "echo"
+      },
+      {
+        "surface": "a great",
+        "lemma": "megas"
+      },
+      {
         "surface": "high",
         "lemma": "hupselos"
       },
       {
         "surface": "wall",
         "lemma": "teichos"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "twelve",
@@ -544,6 +676,10 @@
         "lemma": "polis"
       },
       {
+        "surface": "had",
+        "lemma": "echo"
+      },
+      {
         "surface": "twelve",
         "lemma": "dodeka"
       },
@@ -573,6 +709,14 @@
       }
     ],
     "15": [
+      {
+        "surface": "spoke",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "had",
+        "lemma": "echo"
+      },
       {
         "surface": "a golden",
         "lemma": "chruseos"
@@ -640,6 +784,10 @@
         "lemma": "kalamos"
       },
       {
+        "surface": "and all its dimensions  were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "equal",
         "lemma": "isos"
       },
@@ -692,6 +840,10 @@
       {
         "surface": "the angel",
         "lemma": "angelos"
+      },
+      {
+        "surface": "was using",
+        "lemma": "eimi"
       }
     ],
     "18": [
@@ -748,6 +900,10 @@
       {
         "surface": "were adorned",
         "lemma": "kosmeo"
+      },
+      {
+        "surface": "with every kind of",
+        "lemma": "pas"
       },
       {
         "surface": "precious",
@@ -886,6 +1042,14 @@
         "lemma": "pulon"
       },
       {
+        "surface": "consisting",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "a single",
+        "lemma": "heis"
+      },
+      {
         "surface": "pearl",
         "lemma": "margarites"
       },
@@ -916,6 +1080,10 @@
     ],
     "22": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "temple",
         "lemma": "naos"
       },
@@ -936,6 +1104,10 @@
         "lemma": "arnion"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "temple",
         "lemma": "naos"
       }
@@ -944,6 +1116,10 @@
       {
         "surface": "city",
         "lemma": "polis"
+      },
+      {
+        "surface": "has",
+        "lemma": "echo"
       },
       {
         "surface": "need",
@@ -1026,6 +1202,10 @@
         "lemma": "hemera"
       },
       {
+        "surface": "there will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "night",
         "lemma": "nux"
       },
@@ -1054,8 +1234,20 @@
     ],
     "27": [
       {
+        "surface": "nothing",
+        "lemma": "pas"
+      },
+      {
         "surface": "unclean",
         "lemma": "koinos"
+      },
+      {
+        "surface": "will ever enter",
+        "lemma": "eiserchomai"
+      },
+      {
+        "surface": "practices",
+        "lemma": "poieo"
       },
       {
         "surface": "an abomination",
@@ -1064,6 +1256,10 @@
       {
         "surface": "a lie",
         "lemma": "pseudos"
+      },
+      {
+        "surface": "names are written",
+        "lemma": "grapho"
       },
       {
         "surface": "Lamb’s",

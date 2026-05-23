@@ -26,6 +26,10 @@
         "lemma": "naval"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "in his heart",
         "lemma": "lev"
       },
@@ -54,6 +58,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "one who does",
+        "lemma": "asah"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
       }
@@ -80,6 +88,10 @@
         "lemma": "adam"
       },
       {
+        "surface": "to see",
+        "lemma": "raah"
+      },
+      {
         "surface": "if any",
         "lemma": "yesh"
       },
@@ -98,6 +110,10 @@
     ],
     "3": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "have turned away",
         "lemma": "sug"
       },
@@ -112,6 +128,10 @@
       {
         "surface": "there is no",
         "lemma": "ayin"
+      },
+      {
+        "surface": "one who does",
+        "lemma": "asah"
       },
       {
         "surface": "good",
@@ -136,6 +156,10 @@
         "lemma": "aven"
       },
       {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
         "surface": "learn",
         "lemma": "yada"
       },
@@ -156,6 +180,14 @@
         "lemma": "lechem"
       },
       {
+        "surface": "they refuse",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to call",
+        "lemma": "qara"
+      },
+      {
         "surface": "upon God",
         "lemma": "elohim"
       }
@@ -172,6 +204,14 @@
       {
         "surface": "with dread",
         "lemma": "pachad"
+      },
+      {
+        "surface": "where there was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
       },
       {
         "surface": "to fear",
@@ -220,12 +260,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "would come",
+        "lemma": "natan"
+      },
+      {
         "surface": "from Zion",
         "lemma": "tsiyyon"
       },
       {
         "surface": "When God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "restores",
+        "lemma": "shuv"
       },
       {
         "surface": "His captive",
@@ -255,7 +303,7 @@
   },
   "themeLemmas": [
     "pachad",
-    "yisrael",
-    "tov"
+    "lo",
+    "yisrael"
   ]
 }

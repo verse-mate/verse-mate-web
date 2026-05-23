@@ -40,6 +40,10 @@
         "lemma": "martureo"
       },
       {
+        "surface": "they are",
+        "lemma": "echo"
+      },
+      {
         "surface": "zealous",
         "lemma": "zelos"
       },
@@ -68,6 +72,10 @@
       {
         "surface": "sought",
         "lemma": "zeteo"
+      },
+      {
+        "surface": "to establish",
+        "lemma": "histemi"
       },
       {
         "surface": "own",
@@ -104,6 +112,10 @@
         "lemma": "dikaiosune"
       },
       {
+        "surface": "to everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "believes",
         "lemma": "pisteuo"
       }
@@ -122,8 +134,16 @@
         "lemma": "mouses"
       },
       {
+        "surface": "writes",
+        "lemma": "grapho"
+      },
+      {
         "surface": "man who",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "does",
+        "lemma": "poieo"
       },
       {
         "surface": "will live",
@@ -140,8 +160,20 @@
         "lemma": "pistis"
       },
       {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Do not say",
+        "lemma": "eipon"
+      },
+      {
         "surface": "heart",
         "lemma": "kardia"
+      },
+      {
+        "surface": "Who",
+        "lemma": "tis"
       },
       {
         "surface": "will ascend",
@@ -152,11 +184,19 @@
         "lemma": "ouranos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "to bring Christ down",
         "lemma": "katago"
       }
     ],
     "7": [
+      {
+        "surface": "Who",
+        "lemma": "tis"
+      },
       {
         "surface": "will descend",
         "lemma": "katabaino"
@@ -164,6 +204,10 @@
       {
         "surface": "Abyss",
         "lemma": "abussos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "to bring",
@@ -180,8 +224,20 @@
     ],
     "8": [
       {
+        "surface": "what",
+        "lemma": "tis"
+      },
+      {
+        "surface": "does it say",
+        "lemma": "lego"
+      },
+      {
         "surface": "word",
         "lemma": "rhema"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "mouth",
@@ -190,6 +246,10 @@
       {
         "surface": "heart",
         "lemma": "kardia"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "word",
@@ -278,6 +338,14 @@
         "lemma": "graphe"
       },
       {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Anyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "believes",
         "lemma": "pisteuo"
       },
@@ -287,6 +355,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "there is",
+        "lemma": "eimi"
+      },
       {
         "surface": "difference",
         "lemma": "diastole"
@@ -304,8 +376,16 @@
         "lemma": "kurios"
       },
       {
+        "surface": "is Lord of all",
+        "lemma": "pas"
+      },
+      {
         "surface": "and gives richly",
         "lemma": "plouteo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "call",
@@ -313,6 +393,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "Everyone who",
+        "lemma": "pas"
+      },
       {
         "surface": "calls on",
         "lemma": "epikaleo"
@@ -344,6 +428,14 @@
         "lemma": "pisteuo"
       },
       {
+        "surface": "they have not heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "can they hear",
+        "lemma": "akouo"
+      },
+      {
         "surface": "someone to preach",
         "lemma": "kerusso"
       }
@@ -356,6 +448,10 @@
       {
         "surface": "they are sent",
         "lemma": "apostello"
+      },
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
       },
       {
         "surface": "beautiful are",
@@ -372,6 +468,10 @@
     ],
     "16": [
       {
+        "surface": "all of them",
+        "lemma": "pas"
+      },
+      {
         "surface": "welcomed",
         "lemma": "hupakouo"
       },
@@ -384,8 +484,16 @@
         "lemma": "hesaias"
       },
       {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "who",
+        "lemma": "tis"
       },
       {
         "surface": "has believed",
@@ -420,8 +528,24 @@
     ],
     "18": [
       {
+        "surface": "I ask",
+        "lemma": "lego"
+      },
+      {
+        "surface": "did they not hear",
+        "lemma": "akouo"
+      },
+      {
         "surface": "voice",
         "lemma": "phthongos"
+      },
+      {
+        "surface": "has gone out",
+        "lemma": "exerchomai"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "earth",
@@ -442,8 +566,16 @@
     ],
     "19": [
       {
+        "surface": "I ask",
+        "lemma": "lego"
+      },
+      {
         "surface": "did} Israel",
         "lemma": "israel"
+      },
+      {
+        "surface": "understand",
+        "lemma": "ginosko"
       },
       {
         "surface": "First",
@@ -452,6 +584,10 @@
       {
         "surface": "Moses",
         "lemma": "mouses"
+      },
+      {
+        "surface": "says",
+        "lemma": "lego"
       },
       {
         "surface": "will make you jealous",
@@ -484,8 +620,20 @@
         "lemma": "apotolmao"
       },
       {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
+        "surface": "I was found",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "did not seek",
         "lemma": "zeteo"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ginomai"
       },
       {
         "surface": "I revealed Myself",
@@ -500,6 +648,10 @@
       {
         "surface": "Israel",
         "lemma": "israel"
+      },
+      {
+        "surface": "he says",
+        "lemma": "lego"
       },
       {
         "surface": "All",

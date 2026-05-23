@@ -38,6 +38,10 @@
         "lemma": "daniyyel"
       },
       {
+        "surface": "was called",
+        "lemma": "qara"
+      },
+      {
         "surface": "Belteshazzar",
         "lemma": "beleteshatstsar"
       },
@@ -84,6 +88,10 @@
         "lemma": "daniyyel"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "mourning",
         "lemma": "aval"
       },
@@ -106,12 +114,20 @@
         "lemma": "akhal"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "rich",
         "lemma": "chemdah"
       },
       {
         "surface": "food",
         "lemma": "lechem"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "meat",
@@ -122,8 +138,16 @@
         "lemma": "yayin"
       },
       {
+        "surface": "entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "my mouth",
         "lemma": "peh"
+      },
+      {
+        "surface": "and I did not",
+        "lemma": "lo"
       },
       {
         "surface": "anoint myself with oil",
@@ -160,6 +184,10 @@
         "lemma": "chodesh"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the bank",
         "lemma": "yad"
       },
@@ -186,8 +214,8 @@
         "lemma": "ayin"
       },
       {
-        "surface": "and behold",
-        "lemma": "hinneh"
+        "surface": "vvv",
+        "lemma": "raah"
       },
       {
         "surface": "there was a certain",
@@ -302,12 +330,24 @@
         "lemma": "daniyyel"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the vision",
         "lemma": "marah"
       },
       {
         "surface": "the men",
         "lemma": "enosh"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see it",
+        "lemma": "raah"
       },
       {
         "surface": "but",
@@ -340,12 +380,20 @@
         "lemma": "shaar"
       },
       {
+        "surface": "gazing at",
+        "lemma": "raah"
+      },
+      {
         "surface": "great",
         "lemma": "gadol"
       },
       {
         "surface": "vision",
         "lemma": "marah"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       },
       {
         "surface": "strength",
@@ -366,9 +414,17 @@
       {
         "surface": "deathly pale",
         "lemma": "mashchit"
+      },
+      {
+        "surface": "and I was powerless",
+        "lemma": "lo"
       }
     ],
     "9": [
+      {
+        "surface": "I heard",
+        "lemma": "shama"
+      },
       {
         "surface": "the sound",
         "lemma": "qol"
@@ -376,6 +432,10 @@
       {
         "surface": "of his words",
         "lemma": "davar"
+      },
+      {
+        "surface": "and as I listened",
+        "lemma": "shama"
       },
       {
         "surface": "fell into a deep sleep",
@@ -391,10 +451,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "Suddenly",
-        "lemma": "hinneh"
-      },
       {
         "surface": "a hand",
         "lemma": "yad"
@@ -417,6 +473,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "He said",
+        "lemma": "amar"
+      },
       {
         "surface": "Daniel",
         "lemma": "daniyyel"
@@ -468,6 +528,10 @@
     ],
     "12": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       },
@@ -476,12 +540,20 @@
         "lemma": "daniyyel"
       },
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the first",
         "lemma": "rishon"
       },
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "you purposed",
+        "lemma": "natan"
       },
       {
         "surface": "to understand",
@@ -502,6 +574,14 @@
       {
         "surface": "your words",
         "lemma": "davar"
+      },
+      {
+        "surface": "were heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "have come",
+        "lemma": "bo"
       },
       {
         "surface": "in response to them",
@@ -554,6 +634,10 @@
         "lemma": "sar"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to help me",
         "lemma": "azar"
       },
@@ -579,6 +663,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "Now I have come",
+        "lemma": "bo"
+      },
       {
         "surface": "to explain to you",
         "lemma": "bin"
@@ -618,6 +706,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "I set",
+        "lemma": "natan"
+      },
+      {
         "surface": "my face",
         "lemma": "paneh"
       },
@@ -631,10 +723,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "And suddenly",
-        "lemma": "hinneh"
-      },
       {
         "surface": "one with the likeness",
         "lemma": "demut"
@@ -664,6 +752,10 @@
         "lemma": "peh"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the one standing",
         "lemma": "amad"
       },
@@ -690,6 +782,10 @@
       {
         "surface": "and I have",
         "lemma": "atsar"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "strength",
@@ -730,8 +826,16 @@
         "lemma": "amad"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "strength",
         "lemma": "koach"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "is any breath",
@@ -766,12 +870,20 @@
     ],
     "19": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       },
       {
         "surface": "you who are highly precious",
         "lemma": "chemdah"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
       },
       {
         "surface": "Peace be",
@@ -792,6 +904,10 @@
       {
         "surface": "I was strengthened",
         "lemma": "chazaq"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "Speak",
@@ -816,6 +932,18 @@
         "lemma": "mah"
       },
       {
+        "surface": "I have come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I must return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "at once",
         "lemma": "attah"
       },
@@ -832,8 +960,8 @@
         "lemma": "paras"
       },
       {
-        "surface": "behold",
-        "lemma": "hinneh"
+        "surface": "have gone forth",
+        "lemma": "yatsa"
       },
       {
         "surface": "the prince",
@@ -842,6 +970,10 @@
       {
         "surface": "of Greece",
         "lemma": "yavan"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       }
     ],
     "21": [
@@ -888,8 +1020,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "chazaq",
-    "sar",
-    "daniyyel"
+    "bo"
   ]
 }

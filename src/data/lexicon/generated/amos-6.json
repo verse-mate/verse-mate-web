@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to those at ease",
         "lemma": "shaanan"
       },
@@ -48,6 +44,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "comes",
+        "lemma": "bo"
       }
     ],
     "2": [
@@ -58,6 +58,10 @@
       {
         "surface": "to Calneh",
         "lemma": "kalneh"
+      },
+      {
+        "surface": "and see",
+        "lemma": "raah"
       },
       {
         "surface": "go",
@@ -236,6 +240,10 @@
         "lemma": "shemen"
       },
       {
+        "surface": "but you fail to",
+        "lemma": "lo"
+      },
+      {
         "surface": "grieve",
         "lemma": "chalah"
       },
@@ -350,6 +358,14 @@
     ],
     "9": [
       {
+        "surface": "And if",
+        "lemma": "im"
+      },
+      {
+        "surface": "there are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "ten",
         "lemma": "eser"
       },
@@ -388,8 +404,16 @@
         "lemma": "nasa"
       },
       {
+        "surface": "to remove them",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the house",
         "lemma": "bet"
+      },
+      {
+        "surface": "he will call",
+        "lemma": "amar"
       },
       {
         "surface": "inside",
@@ -404,8 +428,16 @@
         "lemma": "ephes"
       },
       {
+        "surface": "that person will answer",
+        "lemma": "amar"
+      },
+      {
         "surface": "Silence",
         "lemma": "hasah"
+      },
+      {
+        "surface": "the relative will retort",
+        "lemma": "amar"
       },
       {
         "surface": "the name",
@@ -414,6 +446,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "must not",
+        "lemma": "lo"
       },
       {
         "surface": "be invoked",
@@ -518,6 +554,14 @@
         "lemma": "lodevar"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Did we not",
+        "lemma": "lo"
+      },
+      {
         "surface": "take",
         "lemma": "laqach"
       },
@@ -531,10 +575,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "behold",
-        "lemma": "hen"
-      },
       {
         "surface": "I will raise up",
         "lemma": "qamay"
@@ -572,6 +612,10 @@
         "lemma": "lachats"
       },
       {
+        "surface": "from Lebo-hamath",
+        "lemma": "bo"
+      },
+      {
         "surface": "the Brook",
         "lemma": "nachal"
       },
@@ -583,7 +627,7 @@
   },
   "themeLemmas": [
     "bet",
-    "yisrael",
-    "tsava"
+    "amar",
+    "lo"
   ]
 }

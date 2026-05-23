@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "a great",
+        "lemma": "megas"
+      },
+      {
         "surface": "sign",
         "lemma": "semeion"
+      },
+      {
+        "surface": "appeared",
+        "lemma": "horao"
       },
       {
         "surface": "heaven",
@@ -56,6 +64,10 @@
         "lemma": "gaster"
       },
       {
+        "surface": "She was pregnant",
+        "lemma": "echo"
+      },
+      {
         "surface": "crying out",
         "lemma": "krazo"
       },
@@ -82,8 +94,16 @@
         "lemma": "semeion"
       },
       {
+        "surface": "appeared",
+        "lemma": "horao"
+      },
+      {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "a huge",
+        "lemma": "megas"
       },
       {
         "surface": "red",
@@ -92,6 +112,10 @@
       {
         "surface": "dragon",
         "lemma": "drakon"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "seven",
@@ -156,6 +180,10 @@
         "lemma": "drakon"
       },
       {
+        "surface": "stood",
+        "lemma": "histemi"
+      },
+      {
         "surface": "woman",
         "lemma": "gune"
       },
@@ -200,6 +228,10 @@
       {
         "surface": "rule",
         "lemma": "poimaino"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "nations",
@@ -274,6 +306,10 @@
         "lemma": "polemos"
       },
       {
+        "surface": "broke out",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "heaven",
         "lemma": "ouranos"
       },
@@ -316,11 +352,19 @@
         "lemma": "topos"
       },
       {
+        "surface": "found",
+        "lemma": "heurisko"
+      },
+      {
         "surface": "heaven",
         "lemma": "ouranos"
       }
     ],
     "9": [
+      {
+        "surface": "great",
+        "lemma": "megas"
+      },
       {
         "surface": "dragon",
         "lemma": "drakon"
@@ -376,6 +420,14 @@
     ],
     "10": [
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "a loud",
+        "lemma": "megas"
+      },
+      {
         "surface": "voice",
         "lemma": "phone"
       },
@@ -384,8 +436,16 @@
         "lemma": "ouranos"
       },
       {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
         "surface": "Now",
         "lemma": "arti"
+      },
+      {
+        "surface": "have come",
+        "lemma": "ginomai"
       },
       {
         "surface": "salvation",
@@ -496,6 +556,14 @@
         "lemma": "thalassa"
       },
       {
+        "surface": "with",
+        "lemma": "echo"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
+      },
+      {
         "surface": "fury",
         "lemma": "thumos"
       },
@@ -506,6 +574,14 @@
       {
         "surface": "has come down",
         "lemma": "katabaino"
+      },
+      {
+        "surface": "knowing",
+        "lemma": "eido"
+      },
+      {
+        "surface": "he has",
+        "lemma": "echo"
       },
       {
         "surface": "only a short",
@@ -520,6 +596,10 @@
       {
         "surface": "dragon",
         "lemma": "drakon"
+      },
+      {
+        "surface": "saw",
+        "lemma": "horao"
       },
       {
         "surface": "he had been thrown",
@@ -552,12 +632,20 @@
         "lemma": "gune"
       },
       {
+        "surface": "was given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "two",
         "lemma": "duo"
       },
       {
         "surface": "wings",
         "lemma": "pterux"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "eagle",
@@ -634,6 +722,10 @@
         "lemma": "gune"
       },
       {
+        "surface": "sweep",
+        "lemma": "poieo"
+      },
+      {
         "surface": "away in the torrent",
         "lemma": "potamophoretos"
       }
@@ -698,6 +790,10 @@
         "lemma": "aperchomai"
       },
       {
+        "surface": "to make",
+        "lemma": "poieo"
+      },
+      {
         "surface": "war",
         "lemma": "polemos"
       },
@@ -722,12 +818,20 @@
         "lemma": "theos"
       },
       {
+        "surface": "hold to",
+        "lemma": "echo"
+      },
+      {
         "surface": "testimony",
         "lemma": "marturia"
       },
       {
         "surface": "of Jesus",
         "lemma": "iesous"
+      },
+      {
+        "surface": "the dragon stood",
+        "lemma": "histemi"
       },
       {
         "surface": "shore",

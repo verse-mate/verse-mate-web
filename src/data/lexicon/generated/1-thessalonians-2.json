@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
         "surface": "brothers",
         "lemma": "adelphos"
       },
@@ -14,11 +18,19 @@
         "lemma": "eisodos"
       },
       {
+        "surface": "was",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "in vain",
         "lemma": "kenos"
       }
     ],
     "2": [
+      {
+        "surface": "you are aware",
+        "lemma": "eido"
+      },
       {
         "surface": "we had already endured suffering",
         "lemma": "propascho"
@@ -32,6 +44,10 @@
         "lemma": "philippoi"
       },
       {
+        "surface": "strong",
+        "lemma": "polus"
+      },
+      {
         "surface": "opposition",
         "lemma": "agon"
       },
@@ -42,6 +58,10 @@
       {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "to speak",
+        "lemma": "laleo"
       },
       {
         "surface": "gospel",
@@ -71,6 +91,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "we speak",
+        "lemma": "laleo"
+      },
       {
         "surface": "those approved",
         "lemma": "dokimazo"
@@ -109,6 +133,14 @@
       }
     ],
     "5": [
+      {
+        "surface": "you know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "we never used",
+        "lemma": "ginomai"
+      },
       {
         "surface": "words",
         "lemma": "logos"
@@ -156,11 +188,23 @@
         "lemma": "christos"
       },
       {
+        "surface": "we had authority",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "eimi"
+      },
+      {
         "surface": "to demand it",
         "lemma": "baros"
       }
     ],
     "7": [
+      {
+        "surface": "we were",
+        "lemma": "ginomai"
+      },
       {
         "surface": "gentle",
         "lemma": "nepios"
@@ -214,6 +258,10 @@
       {
         "surface": "beloved",
         "lemma": "agapetos"
+      },
+      {
+        "surface": "you have become",
+        "lemma": "ginomai"
       }
     ],
     "9": [
@@ -284,11 +332,19 @@
         "lemma": "amemptos"
       },
       {
+        "surface": "our conduct was",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "believed",
         "lemma": "pisteuo"
       }
     ],
     "11": [
+      {
+        "surface": "you know",
+        "lemma": "eido"
+      },
       {
         "surface": "each",
         "lemma": "hekastos"
@@ -408,6 +464,10 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "became",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "imitators",
         "lemma": "mimetes"
       },
@@ -422,6 +482,10 @@
       {
         "surface": "Judea",
         "lemma": "ioudaia"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "Christ",
@@ -482,6 +546,10 @@
         "lemma": "enantios"
       },
       {
+        "surface": "to all",
+        "lemma": "pas"
+      },
+      {
         "surface": "men",
         "lemma": "anthropos"
       }
@@ -490,6 +558,10 @@
       {
         "surface": "hindering",
         "lemma": "koluo"
+      },
+      {
+        "surface": "from telling",
+        "lemma": "laleo"
       },
       {
         "surface": "Gentiles",
@@ -550,6 +622,10 @@
         "lemma": "epithumia"
       },
       {
+        "surface": "to see",
+        "lemma": "horao"
+      },
+      {
         "surface": "face to face",
         "lemma": "prosopon"
       },
@@ -563,6 +639,14 @@
       }
     ],
     "18": [
+      {
+        "surface": "we wanted",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "to come",
+        "lemma": "erchomai"
+      },
       {
         "surface": "Paul",
         "lemma": "paulos"
@@ -585,6 +669,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "who is",
+        "lemma": "tis"
+      },
       {
         "surface": "hope",
         "lemma": "elpis"
@@ -615,6 +703,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
       {
         "surface": "glory",
         "lemma": "doxa"

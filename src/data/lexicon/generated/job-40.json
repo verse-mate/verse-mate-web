@@ -60,16 +60,16 @@
     ],
     "4": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "I am insignificant",
         "lemma": "qalal"
       },
       {
         "surface": "How",
         "lemma": "mah"
+      },
+      {
+        "surface": "can I reply to You",
+        "lemma": "shuv"
       },
       {
         "surface": "I place",
@@ -94,12 +94,20 @@
         "lemma": "echad"
       },
       {
+        "surface": "but I have no",
+        "lemma": "lo"
+      },
+      {
         "surface": "answer",
         "lemma": "un"
       },
       {
         "surface": "twice",
         "lemma": "shenayim"
+      },
+      {
+        "surface": "but I have nothing",
+        "lemma": "lo"
       },
       {
         "surface": "to add",
@@ -122,13 +130,13 @@
       {
         "surface": "the whirlwind",
         "lemma": "saar"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       }
     ],
     "7": [
-      {
-        "surface": "Now",
-        "lemma": "na"
-      },
       {
         "surface": "brace",
         "lemma": "azar"
@@ -188,10 +196,6 @@
     ],
     "10": [
       {
-        "surface": "Then",
-        "lemma": "na"
-      },
-      {
         "surface": "adorn yourself",
         "lemma": "adah"
       },
@@ -230,6 +234,14 @@
         "lemma": "aph"
       },
       {
+        "surface": "look on",
+        "lemma": "raah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "proud man",
         "lemma": "geeh"
       },
@@ -239,6 +251,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "Look on",
+        "lemma": "raah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
       {
         "surface": "proud man",
         "lemma": "geeh"
@@ -298,12 +318,12 @@
     ],
     "15": [
       {
-        "surface": "Look at",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "Behemoth",
         "lemma": "behemot"
+      },
+      {
+        "surface": "I made",
+        "lemma": "asah"
       },
       {
         "surface": "He feeds on",
@@ -319,10 +339,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "See",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the strength",
         "lemma": "koach"
@@ -410,6 +426,10 @@
         "lemma": "derekh"
       },
       {
+        "surface": "only his Maker",
+        "lemma": "asah"
+      },
+      {
         "surface": "can draw the sword",
         "lemma": "cherev"
       },
@@ -430,6 +450,10 @@
       {
         "surface": "their produce",
         "lemma": "bul"
+      },
+      {
+        "surface": "while all",
+        "lemma": "kol"
       },
       {
         "surface": "the beasts",
@@ -502,16 +526,16 @@
     ],
     "23": [
       {
-        "surface": "Though",
-        "lemma": "hen"
-      },
-      {
         "surface": "the river",
         "lemma": "nahar"
       },
       {
         "surface": "rages",
         "lemma": "ashaq"
+      },
+      {
+        "surface": "Behemoth is unafraid",
+        "lemma": "lo"
       },
       {
         "surface": "he remains secure",
@@ -555,7 +579,7 @@
   },
   "themeLemmas": [
     "un",
-    "iyyov",
-    "tseel"
+    "lo",
+    "kol"
   ]
 }

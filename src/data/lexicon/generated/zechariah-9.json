@@ -42,6 +42,10 @@
         "lemma": "adam"
       },
       {
+        "surface": "and of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the tribes",
         "lemma": "shevet"
       },
@@ -120,10 +124,6 @@
     ],
     "4": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the Lord",
         "lemma": "adonai"
       },
@@ -156,6 +156,10 @@
       {
         "surface": "Ashkelon",
         "lemma": "ashqelon"
+      },
+      {
+        "surface": "will see",
+        "lemma": "raah"
       },
       {
         "surface": "and fear",
@@ -196,12 +200,20 @@
       {
         "surface": "and Ashkelon",
         "lemma": "ashqelon"
+      },
+      {
+        "surface": "will be uninhabited",
+        "lemma": "lo"
       }
     ],
     "6": [
       {
         "surface": "A mixed race",
         "lemma": "mamzer"
+      },
+      {
+        "surface": "will occupy",
+        "lemma": "yashav"
       },
       {
         "surface": "Ashdod",
@@ -254,6 +266,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "they will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a clan",
         "lemma": "alluph"
       },
@@ -288,6 +304,10 @@
         "lemma": "avar"
       },
       {
+        "surface": "and never again",
+        "lemma": "lo"
+      },
+      {
         "surface": "will an oppressor",
         "lemma": "nagas"
       },
@@ -298,6 +318,10 @@
       {
         "surface": "now",
         "lemma": "attah"
+      },
+      {
+        "surface": "I keep watch",
+        "lemma": "raah"
       },
       {
         "surface": "with My own eyes",
@@ -334,12 +358,12 @@
         "lemma": "yerushalaim"
       },
       {
-        "surface": "See",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "your King",
         "lemma": "melekh"
+      },
+      {
+        "surface": "comes",
+        "lemma": "bo"
       },
       {
         "surface": "righteous",
@@ -472,6 +496,10 @@
     ],
     "12": [
       {
+        "surface": "Return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to your stronghold",
         "lemma": "bitstsaron"
       },
@@ -490,6 +518,10 @@
       {
         "surface": "I declare",
         "lemma": "nagad"
+      },
+      {
+        "surface": "that I will restore",
+        "lemma": "shuv"
       },
       {
         "surface": "double",
@@ -556,8 +588,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will appear",
+        "lemma": "raah"
+      },
+      {
         "surface": "and His arrow",
         "lemma": "chets"
+      },
+      {
+        "surface": "will go forth",
+        "lemma": "yatsa"
       },
       {
         "surface": "like lightning",
@@ -729,7 +769,7 @@
   },
   "themeLemmas": [
     "yam",
-    "meod",
-    "karat"
+    "raah",
+    "meod"
   ]
 }

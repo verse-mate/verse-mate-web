@@ -22,6 +22,10 @@
         "lemma": "yalad"
       },
       {
+        "surface": "no children",
+        "lemma": "lo"
+      },
+      {
         "surface": "she had an Egyptian",
         "lemma": "mitsri"
       },
@@ -44,16 +48,12 @@
         "lemma": "saray"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Abram",
         "lemma": "avram"
-      },
-      {
-        "surface": "Look",
-        "lemma": "hinneh"
-      },
-      {
-        "surface": "now",
-        "lemma": "na"
       },
       {
         "surface": "the LORD",
@@ -68,8 +68,8 @@
         "lemma": "yalad"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "go",
+        "lemma": "bo"
       },
       {
         "surface": "my maidservant",
@@ -88,6 +88,10 @@
         "lemma": "avram"
       },
       {
+        "surface": "listened",
+        "lemma": "shama"
+      },
+      {
         "surface": "to the voice",
         "lemma": "qol"
       },
@@ -104,6 +108,10 @@
       {
         "surface": "he",
         "lemma": "avram"
+      },
+      {
+        "surface": "had lived",
+        "lemma": "yashav"
       },
       {
         "surface": "vvv",
@@ -150,6 +158,10 @@
         "lemma": "hagar"
       },
       {
+        "surface": "and gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "to Abram",
         "lemma": "avram"
       },
@@ -160,12 +172,20 @@
     ],
     "4": [
       {
+        "surface": "And he slept with",
+        "lemma": "bo"
+      },
+      {
         "surface": "Hagar",
         "lemma": "hagar"
       },
       {
         "surface": "and she conceived",
         "lemma": "harah"
+      },
+      {
+        "surface": "But when Hagar realized",
+        "lemma": "raah"
       },
       {
         "surface": "she was pregnant",
@@ -186,6 +206,10 @@
         "lemma": "saray"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Abram",
         "lemma": "avram"
       },
@@ -194,12 +218,20 @@
         "lemma": "chamas"
       },
       {
+        "surface": "delivered",
+        "lemma": "natan"
+      },
+      {
         "surface": "my servant",
         "lemma": "shiphchah"
       },
       {
         "surface": "into your arms",
         "lemma": "cheq"
+      },
+      {
+        "surface": "and ever since she saw",
+        "lemma": "raah"
       },
       {
         "surface": "she was pregnant",
@@ -224,8 +256,8 @@
     ],
     "6": [
       {
-        "surface": "Here",
-        "lemma": "hinneh"
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Abram",
@@ -238,6 +270,10 @@
       {
         "surface": "is in your hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "Do",
+        "lemma": "asah"
       },
       {
         "surface": "whatever you want",
@@ -312,8 +348,16 @@
         "lemma": "saray"
       },
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "where",
         "lemma": "ay"
+      },
+      {
+        "surface": "have you come from",
+        "lemma": "bo"
       },
       {
         "surface": "and where",
@@ -338,6 +382,10 @@
       {
         "surface": "Sarai",
         "lemma": "saray"
+      },
+      {
+        "surface": "she replied",
+        "lemma": "amar"
       }
     ],
     "9": [
@@ -348,6 +396,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Return",
+        "lemma": "shuv"
       },
       {
         "surface": "your mistress",
@@ -368,12 +424,20 @@
         "lemma": "maleakh"
       },
       {
+        "surface": "added",
+        "lemma": "amar"
+      },
+      {
         "surface": "I will greatly multiply",
         "lemma": "ravah"
       },
       {
         "surface": "your offspring",
         "lemma": "zera"
+      },
+      {
+        "surface": "so that",
+        "lemma": "lo"
       },
       {
         "surface": "they will be too numerous",
@@ -394,8 +458,8 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
+        "surface": "proceeded",
+        "lemma": "amar"
       },
       {
         "surface": "you have conceived",
@@ -410,6 +474,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "And you shall name him",
+        "lemma": "qara"
+      },
+      {
         "surface": "Ishmael",
         "lemma": "yishmael"
       },
@@ -418,11 +486,19 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "has heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "your cry of affliction",
         "lemma": "oni"
       }
     ],
     "12": [
+      {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
       {
         "surface": "a wild donkey",
         "lemma": "pere"
@@ -434,6 +510,14 @@
       {
         "surface": "and his hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "will be against everyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "and everyone’s",
+        "lemma": "kol"
       },
       {
         "surface": "hand",
@@ -448,11 +532,19 @@
         "lemma": "paneh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his brothers",
         "lemma": "ach"
       }
     ],
     "13": [
+      {
+        "surface": "So Hagar gave",
+        "lemma": "qara"
+      },
       {
         "surface": "this name",
         "lemma": "shem"
@@ -474,14 +566,30 @@
         "lemma": "roi"
       },
       {
+        "surface": "she said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Here",
         "lemma": "halom"
+      },
+      {
+        "surface": "seen",
+        "lemma": "raah"
+      },
+      {
+        "surface": "the One who sees me",
+        "lemma": "raah"
       }
     ],
     "14": [
       {
         "surface": "the well",
         "lemma": "beer"
+      },
+      {
+        "surface": "was called",
+        "lemma": "qara"
       },
       {
         "surface": "vvv",
@@ -494,10 +602,6 @@
       {
         "surface": "Beer-lahai-roi",
         "lemma": "beerlachayroi"
-      },
-      {
-        "surface": "It is located",
-        "lemma": "hinneh"
       },
       {
         "surface": "between",
@@ -532,6 +636,10 @@
       {
         "surface": "and Abram",
         "lemma": "avram"
+      },
+      {
+        "surface": "gave",
+        "lemma": "qara"
       },
       {
         "surface": "the name",
@@ -591,7 +699,7 @@
   },
   "themeLemmas": [
     "avram",
-    "saray",
-    "hagar"
+    "amar",
+    "saray"
   ]
 }

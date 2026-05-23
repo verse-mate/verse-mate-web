@@ -110,6 +110,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will by no means",
+        "lemma": "lo"
+      },
+      {
         "surface": "leave the guilty unpunished",
         "lemma": "naqah"
       },
@@ -150,6 +154,10 @@
       {
         "surface": "and dries it up",
         "lemma": "yavesh"
+      },
+      {
+        "surface": "He makes all",
+        "lemma": "kol"
       },
       {
         "surface": "the rivers",
@@ -216,6 +224,14 @@
       {
         "surface": "the world",
         "lemma": "tevel"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "its dwellers",
+        "lemma": "yashav"
       }
     ],
     "6": [
@@ -304,6 +320,10 @@
         "lemma": "sheteph"
       },
       {
+        "surface": "He will make",
+        "lemma": "asah"
+      },
+      {
         "surface": "an end",
         "lemma": "kalah"
       },
@@ -338,12 +358,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will bring",
+        "lemma": "asah"
+      },
+      {
         "surface": "to an end",
         "lemma": "kalah"
       },
       {
         "surface": "Affliction",
         "lemma": "batstsarah"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "rise up",
@@ -390,6 +418,10 @@
     ],
     "11": [
       {
+        "surface": "comes forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "a plotter",
         "lemma": "chashav"
       },
@@ -420,6 +452,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Though",
+        "lemma": "im"
+      },
+      {
         "surface": "they are allied",
         "lemma": "shalem"
       },
@@ -446,6 +486,10 @@
       {
         "surface": "I will afflict",
         "lemma": "anah"
+      },
+      {
+        "surface": "you no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -482,6 +526,10 @@
       {
         "surface": "has issued a command",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "There will be no",
+        "lemma": "lo"
       },
       {
         "surface": "descendants",
@@ -526,10 +574,6 @@
     ],
     "15": [
       {
-        "surface": "Look",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the mountains",
         "lemma": "har"
       },
@@ -540,6 +584,10 @@
       {
         "surface": "of one who brings good news",
         "lemma": "basar"
+      },
+      {
+        "surface": "who proclaims",
+        "lemma": "shama"
       },
       {
         "surface": "peace",
@@ -570,6 +618,10 @@
         "lemma": "beliyyaal"
       },
       {
+        "surface": "will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "again",
         "lemma": "yasaph"
       },
@@ -578,14 +630,18 @@
         "lemma": "avar"
       },
       {
+        "surface": "they will be utterly",
+        "lemma": "kol"
+      },
+      {
         "surface": "cut off",
         "lemma": "karat"
       }
     ]
   },
   "themeLemmas": [
+    "lo",
     "naqam",
-    "avar",
-    "yavesh"
+    "kol"
   ]
 }

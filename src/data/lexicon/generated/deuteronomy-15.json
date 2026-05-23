@@ -18,6 +18,10 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "vvv",
+        "lemma": "asah"
+      },
+      {
         "surface": "you must cancel debts",
         "lemma": "shemittah"
       }
@@ -30,6 +34,10 @@
       {
         "surface": "of remission",
         "lemma": "shemittah"
+      },
+      {
+        "surface": "Every",
+        "lemma": "kol"
       },
       {
         "surface": "creditor",
@@ -46,6 +54,10 @@
       {
         "surface": "to his neighbor",
         "lemma": "rea"
+      },
+      {
+        "surface": "He is not",
+        "lemma": "lo"
       },
       {
         "surface": "to collect",
@@ -66,6 +78,10 @@
       {
         "surface": "time of release",
         "lemma": "shemittah"
+      },
+      {
+        "surface": "has been proclaimed",
+        "lemma": "qara"
       }
     ],
     "3": [
@@ -84,9 +100,21 @@
       {
         "surface": "your brother",
         "lemma": "ach"
+      },
+      {
+        "surface": "owes",
+        "lemma": "hayah"
       }
     ],
     "4": [
+      {
+        "surface": "There will be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
       {
         "surface": "poor",
         "lemma": "evyon"
@@ -116,6 +144,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "is giving",
+        "lemma": "natan"
+      },
+      {
         "surface": "to possess",
         "lemma": "yarash"
       },
@@ -125,6 +157,14 @@
       }
     ],
     "5": [
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you obey",
+        "lemma": "shama"
+      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -136,6 +176,14 @@
       {
         "surface": "and are careful",
         "lemma": "shamar"
+      },
+      {
+        "surface": "to follow",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "commandments",
@@ -180,6 +228,10 @@
         "lemma": "avat"
       },
       {
+        "surface": "from none",
+        "lemma": "lo"
+      },
+      {
         "surface": "you will rule",
         "lemma": "mashal"
       },
@@ -194,9 +246,17 @@
       {
         "surface": "but be ruled",
         "lemma": "mashal"
+      },
+      {
+        "surface": "by none",
+        "lemma": "lo"
       }
     ],
     "7": [
+      {
+        "surface": "there is",
+        "lemma": "hayah"
+      },
       {
         "surface": "a poor man",
         "lemma": "evyon"
@@ -226,12 +286,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "is giving",
+        "lemma": "natan"
+      },
+      {
+        "surface": "then you are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to harden",
         "lemma": "amats"
       },
       {
         "surface": "your heart",
         "lemma": "levav"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "shut",
@@ -326,8 +398,24 @@
         "lemma": "raa"
       },
       {
+        "surface": "and give him",
+        "lemma": "natan"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "He will cry out",
+        "lemma": "qara"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and you will be",
+        "lemma": "hayah"
       },
       {
         "surface": "guilty of sin",
@@ -336,12 +424,24 @@
     ],
     "10": [
       {
+        "surface": "Give generously",
+        "lemma": "natan"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "let your heart",
         "lemma": "levav"
       },
       {
         "surface": "be grieved",
         "lemma": "raa"
+      },
+      {
+        "surface": "when you do so",
+        "lemma": "natan"
       },
       {
         "surface": "And because of",
@@ -360,8 +460,16 @@
         "lemma": "barakh"
       },
       {
+        "surface": "you in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your work",
         "lemma": "maaseh"
+      },
+      {
+        "surface": "and in everything",
+        "lemma": "kol"
       },
       {
         "surface": "to which you put",
@@ -373,6 +481,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "there will never",
+        "lemma": "lo"
+      },
       {
         "surface": "cease",
         "lemma": "chadal"
@@ -392,6 +504,10 @@
       {
         "surface": "am commanding you",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "to",
+        "lemma": "amar"
       },
       {
         "surface": "open",
@@ -474,6 +590,10 @@
         "lemma": "shalach"
       },
       {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "send him away",
         "lemma": "shalach"
       },
@@ -500,6 +620,10 @@
         "lemma": "yeqev"
       },
       {
+        "surface": "You shall give",
+        "lemma": "natan"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -516,6 +640,10 @@
       {
         "surface": "Remember",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "you were",
+        "lemma": "hayah"
       },
       {
         "surface": "slaves",
@@ -556,6 +684,18 @@
     ],
     "16": [
       {
+        "surface": "your servant says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "want to leave",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "he loves",
         "lemma": "ahav"
       },
@@ -578,6 +718,10 @@
         "lemma": "martsea"
       },
       {
+        "surface": "and pierce it",
+        "lemma": "natan"
+      },
+      {
         "surface": "through his ear",
         "lemma": "ozen"
       },
@@ -586,12 +730,20 @@
         "lemma": "dal"
       },
       {
+        "surface": "and he will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "servant",
         "lemma": "eved"
       },
       {
         "surface": "for life",
         "lemma": "olam"
+      },
+      {
+        "surface": "treat",
+        "lemma": "asah"
       },
       {
         "surface": "your maidservant",
@@ -603,6 +755,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
       {
         "surface": "regard it",
         "lemma": "ayin"
@@ -654,6 +810,14 @@
       {
         "surface": "will bless you",
         "lemma": "barakh"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "you do",
+        "lemma": "asah"
       }
     ],
     "19": [
@@ -668,6 +832,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "firstborn",
@@ -690,6 +858,10 @@
         "lemma": "tson"
       },
       {
+        "surface": "You are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to put the firstborn",
         "lemma": "bekhor"
       },
@@ -700,6 +872,10 @@
       {
         "surface": "to work",
         "lemma": "avad"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "are you to shear",
@@ -754,6 +930,10 @@
     ],
     "21": [
       {
+        "surface": "an animal has",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a defect",
         "lemma": "mum"
       },
@@ -766,12 +946,20 @@
         "lemma": "ivver"
       },
       {
+        "surface": "or has any",
+        "lemma": "kol"
+      },
+      {
         "surface": "serious",
         "lemma": "ra"
       },
       {
         "surface": "flaw",
         "lemma": "mum"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "lo"
       },
       {
         "surface": "sacrifice",
@@ -818,6 +1006,10 @@
     ],
     "23": [
       {
+        "surface": "you must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "eat",
         "lemma": "akhal"
       },
@@ -840,8 +1032,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "shaneh",
-    "ach",
-    "evyon"
+    "natan"
   ]
 }

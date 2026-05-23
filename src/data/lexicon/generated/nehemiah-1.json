@@ -22,6 +22,10 @@
         "lemma": "chakhalyah"
       },
       {
+        "surface": "vvv",
+        "lemma": "hayah"
+      },
+      {
         "surface": "In the month",
         "lemma": "chodesh"
       },
@@ -36,6 +40,10 @@
       {
         "surface": "year",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "in the citadel",
@@ -58,6 +66,10 @@
       {
         "surface": "of my brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "arrived",
+        "lemma": "bo"
       },
       {
         "surface": "with men",
@@ -93,6 +105,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "And they told",
+        "lemma": "amar"
+      },
       {
         "surface": "The remnant",
         "lemma": "shaar"
@@ -152,8 +168,16 @@
     ],
     "4": [
       {
+        "surface": "When I heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "words",
         "lemma": "davar"
+      },
+      {
+        "surface": "I sat down",
+        "lemma": "yashav"
       },
       {
         "surface": "and wept",
@@ -190,8 +214,8 @@
     ],
     "5": [
       {
-        "surface": "O",
-        "lemma": "anna"
+        "surface": "Then I said",
+        "lemma": "amar"
       },
       {
         "surface": "LORD",
@@ -248,6 +272,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "open",
         "lemma": "patach"
       },
@@ -258,6 +286,10 @@
       {
         "surface": "attentive",
         "lemma": "qashshav"
+      },
+      {
+        "surface": "to hear",
+        "lemma": "shama"
       },
       {
         "surface": "the prayer",
@@ -312,6 +344,10 @@
         "lemma": "chata"
       },
       {
+        "surface": "and my father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
       },
@@ -324,6 +360,10 @@
       {
         "surface": "We have behaved corruptly",
         "lemma": "chaval"
+      },
+      {
+        "surface": "and have not",
+        "lemma": "lo"
       },
       {
         "surface": "kept",
@@ -360,10 +400,6 @@
         "lemma": "zakhar"
       },
       {
-        "surface": "I pray",
-        "lemma": "na"
-      },
-      {
         "surface": "the word",
         "lemma": "davar"
       },
@@ -380,6 +416,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "when You said",
+        "lemma": "amar"
+      },
+      {
         "surface": "are unfaithful",
         "lemma": "maal"
       },
@@ -394,16 +434,32 @@
     ],
     "9": [
       {
+        "surface": "but if you return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and keep",
         "lemma": "shamar"
+      },
+      {
+        "surface": "and practice",
+        "lemma": "asah"
       },
       {
         "surface": "My commandments",
         "lemma": "mitsvah"
       },
       {
+        "surface": "then even if",
+        "lemma": "im"
+      },
+      {
         "surface": "your exiles",
         "lemma": "nadach"
+      },
+      {
+        "surface": "have been",
+        "lemma": "hayah"
       },
       {
         "surface": "banished} to the farthest",
@@ -420,6 +476,10 @@
       {
         "surface": "from there",
         "lemma": "sham"
+      },
+      {
+        "surface": "and bring them",
+        "lemma": "bo"
       },
       {
         "surface": "the place",
@@ -478,6 +538,10 @@
         "lemma": "ozen"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "attentive",
         "lemma": "qashshav"
       },
@@ -518,8 +582,8 @@
         "lemma": "yom"
       },
       {
-        "surface": "I pray",
-        "lemma": "na"
+        "surface": "and grant him",
+        "lemma": "natan"
       },
       {
         "surface": "mercy",
@@ -534,6 +598,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the cupbearer",
         "lemma": "mashqeh"
       },
@@ -544,8 +612,8 @@
     ]
   },
   "themeLemmas": [
+    "hayah",
     "shamar",
-    "shaar",
-    "tephillah"
+    "shaar"
   ]
 }

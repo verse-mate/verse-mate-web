@@ -14,6 +14,10 @@
         "lemma": "david"
       },
       {
+        "surface": "I call upon You",
+        "lemma": "qara"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -28,6 +32,10 @@
       {
         "surface": "my voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "when I call",
+        "lemma": "qara"
       }
     ],
     "2": [
@@ -95,6 +103,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Do not let",
+        "lemma": "al"
+      },
       {
         "surface": "my heart",
         "lemma": "lev"
@@ -174,6 +186,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "let me not",
+        "lemma": "al"
+      },
+      {
         "surface": "refuse it",
         "lemma": "nu"
       },
@@ -202,6 +218,10 @@
       {
         "surface": "the cliffs",
         "lemma": "sela"
+      },
+      {
+        "surface": "the people will listen",
+        "lemma": "shama"
       },
       {
         "surface": "to my words",
@@ -260,6 +280,10 @@
         "lemma": "chasah"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "leave",
         "lemma": "arah"
       },
@@ -314,8 +338,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "tephillah",
-    "ra",
-    "peh"
+    "ra"
   ]
 }

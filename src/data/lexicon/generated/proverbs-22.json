@@ -54,12 +54,24 @@
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "is Maker",
+        "lemma": "asah"
+      },
+      {
+        "surface": "of them all",
+        "lemma": "kol"
       }
     ],
     "3": [
       {
         "surface": "The prudent",
         "lemma": "arum"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "danger",
@@ -164,6 +176,10 @@
         "lemma": "zaqen"
       },
       {
+        "surface": "he will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "depart",
         "lemma": "sur"
       }
@@ -230,6 +246,10 @@
         "lemma": "barakh"
       },
       {
+        "surface": "he shares",
+        "lemma": "natan"
+      },
+      {
         "surface": "his bread",
         "lemma": "lechem"
       },
@@ -250,6 +270,10 @@
       {
         "surface": "and conflict",
         "lemma": "madon"
+      },
+      {
+        "surface": "will depart",
+        "lemma": "yatsa"
       },
       {
         "surface": "even quarreling",
@@ -324,6 +348,10 @@
       {
         "surface": "The slacker",
         "lemma": "atsel"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "There is a lion",
@@ -424,6 +452,10 @@
         "lemma": "ravah"
       },
       {
+        "surface": "or giving gifts",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the rich",
         "lemma": "ashir"
       },
@@ -444,6 +476,10 @@
       {
         "surface": "your ear",
         "lemma": "ozen"
+      },
+      {
+        "surface": "and hear",
+        "lemma": "shama"
       },
       {
         "surface": "the words",
@@ -494,6 +530,10 @@
         "lemma": "mivtach"
       },
       {
+        "surface": "may be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in the LORD",
         "lemma": "yehovah"
       },
@@ -507,6 +547,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "Have I not",
+        "lemma": "lo"
+      },
       {
         "surface": "written",
         "lemma": "katav"
@@ -542,6 +586,10 @@
         "lemma": "emer"
       },
       {
+        "surface": "that you may",
+        "lemma": "shuv"
+      },
+      {
         "surface": "soundly",
         "lemma": "emet"
       },
@@ -556,6 +604,10 @@
     ],
     "22": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "rob",
         "lemma": "gazal"
       },
@@ -566,6 +618,10 @@
       {
         "surface": "is poor",
         "lemma": "dal"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
       },
       {
         "surface": "crush",
@@ -604,6 +660,10 @@
     ],
     "24": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "make friends",
         "lemma": "beteqedharoim"
       },
@@ -614,6 +674,14 @@
       {
         "surface": "man",
         "lemma": "baal"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "associate",
+        "lemma": "bo"
       },
       {
         "surface": "a hot-tempered",
@@ -648,6 +716,14 @@
     ],
     "26": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "one who gives pledges",
         "lemma": "taqa"
       },
@@ -661,6 +737,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "you have nothing",
         "lemma": "ayin"
@@ -688,6 +768,10 @@
     ],
     "28": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "move",
         "lemma": "nasag"
       },
@@ -698,6 +782,14 @@
       {
         "surface": "boundary stone",
         "lemma": "gevul"
+      },
+      {
+        "surface": "your fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "have placed",
+        "lemma": "asah"
       }
     ],
     "29": [
@@ -748,8 +840,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "dal",
-    "daat",
-    "ashir"
+    "lo"
   ]
 }

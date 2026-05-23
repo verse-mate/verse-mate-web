@@ -78,6 +78,14 @@
         "lemma": "adonai"
       },
       {
+        "surface": "I call",
+        "lemma": "qara"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
       }
@@ -128,6 +136,14 @@
       {
         "surface": "in loving devotion",
         "lemma": "chesed"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who call on You",
+        "lemma": "qara"
       }
     ],
     "6": [
@@ -166,6 +182,10 @@
         "lemma": "batstsarah"
       },
       {
+        "surface": "I call on You",
+        "lemma": "qara"
+      },
+      {
         "surface": "You answer me",
         "lemma": "un"
       }
@@ -194,8 +214,20 @@
     ],
     "9": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "You have made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       },
       {
         "surface": "and bow",
@@ -222,6 +254,10 @@
       {
         "surface": "are great",
         "lemma": "gadol"
+      },
+      {
+        "surface": "and perform",
+        "lemma": "asah"
       },
       {
         "surface": "wonders",
@@ -286,6 +322,10 @@
       {
         "surface": "my God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "my heart",
@@ -360,6 +400,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "they have no",
+        "lemma": "lo"
+      },
+      {
         "surface": "regard",
         "lemma": "sum"
       },
@@ -416,6 +460,10 @@
         "lemma": "chanan"
       },
       {
+        "surface": "grant",
+        "lemma": "natan"
+      },
+      {
         "surface": "Your strength",
         "lemma": "oz"
       },
@@ -438,6 +486,10 @@
     ],
     "17": [
       {
+        "surface": "Show",
+        "lemma": "asah"
+      },
+      {
         "surface": "a sign",
         "lemma": "ot"
       },
@@ -448,6 +500,10 @@
       {
         "surface": "that my enemies",
         "lemma": "sane"
+      },
+      {
+        "surface": "may see",
+        "lemma": "raah"
       },
       {
         "surface": "and be ashamed",
@@ -469,7 +525,7 @@
   },
   "themeLemmas": [
     "nephesh",
-    "shem",
-    "chesed"
+    "kol",
+    "shem"
   ]
 }

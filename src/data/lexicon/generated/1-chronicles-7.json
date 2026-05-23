@@ -72,6 +72,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of their families",
+        "lemma": "av"
+      },
+      {
         "surface": "In the days",
         "lemma": "yom"
       },
@@ -142,6 +146,10 @@
         "lemma": "yishshiyyah"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "five",
         "lemma": "chamesh"
       },
@@ -186,6 +194,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "belonging to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the families",
         "lemma": "mishpachah"
       },
@@ -200,6 +212,10 @@
       {
         "surface": "of valor",
         "lemma": "gibbor"
+      },
+      {
+        "surface": "totaled",
+        "lemma": "kol"
       },
       {
         "surface": "87,000",
@@ -264,6 +280,10 @@
       {
         "surface": "heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of their families",
+        "lemma": "av"
       },
       {
         "surface": "five in all",
@@ -332,6 +352,10 @@
         "lemma": "alemet"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "were Becher’s",
         "lemma": "bekher"
       },
@@ -352,6 +376,10 @@
       {
         "surface": "according to the heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of their families",
+        "lemma": "av"
       },
       {
         "surface": "20200",
@@ -418,6 +446,10 @@
     ],
     "11": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "sons",
         "lemma": "ben"
       },
@@ -430,6 +462,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of their families",
+        "lemma": "av"
+      },
+      {
         "surface": "mighty men",
         "lemma": "gibbor"
       },
@@ -440,6 +476,10 @@
       {
         "surface": "there were 17,200",
         "lemma": "sheva"
+      },
+      {
+        "surface": "fit",
+        "lemma": "yatsa"
       },
       {
         "surface": "for battle",
@@ -540,6 +580,10 @@
         "lemma": "makhir"
       },
       {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of Gilead",
         "lemma": "gilad"
       }
@@ -590,6 +634,10 @@
         "lemma": "tselophchad"
       },
       {
+        "surface": "who had",
+        "lemma": "hayah"
+      },
+      {
         "surface": "only daughters",
         "lemma": "bat"
       }
@@ -614,6 +662,10 @@
       {
         "surface": "a son",
         "lemma": "ben"
+      },
+      {
+        "surface": "and she named him",
+        "lemma": "qara"
       },
       {
         "surface": "Peresh",
@@ -709,6 +761,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "And these were",
+        "lemma": "hayah"
+      },
       {
         "surface": "the sons",
         "lemma": "ben"
@@ -832,6 +888,10 @@
     ],
     "22": [
       {
+        "surface": "Their father",
+        "lemma": "av"
+      },
+      {
         "surface": "Ephraim",
         "lemma": "ephrayim"
       },
@@ -852,11 +912,19 @@
         "lemma": "ach"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to comfort him",
         "lemma": "nacham"
       }
     ],
     "23": [
+      {
+        "surface": "And again he slept with",
+        "lemma": "bo"
+      },
       {
         "surface": "his wife",
         "lemma": "ishshah"
@@ -874,6 +942,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "So he named",
+        "lemma": "qara"
+      },
+      {
         "surface": "him",
         "lemma": "shem"
       },
@@ -884,6 +956,10 @@
       {
         "surface": "tragedy",
         "lemma": "ra"
+      },
+      {
+        "surface": "had come",
+        "lemma": "hayah"
       },
       {
         "surface": "upon his house",
@@ -1112,12 +1188,20 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       }
     ],
     "30": [
       {
         "surface": "The children",
         "lemma": "ben"
+      },
+      {
+        "surface": "of Asher",
+        "lemma": "asher"
       },
       {
         "surface": "Imnah",
@@ -1160,6 +1244,10 @@
       {
         "surface": "as well as Malchiel",
         "lemma": "malkiel"
+      },
+      {
+        "surface": "was the father of",
+        "lemma": "av"
       },
       {
         "surface": "Birzaith",
@@ -1384,12 +1472,24 @@
     ],
     "40": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "were the descendants",
         "lemma": "ben"
       },
       {
+        "surface": "of Asher",
+        "lemma": "asher"
+      },
+      {
         "surface": "heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of their families",
+        "lemma": "av"
       },
       {
         "surface": "choice",
@@ -1434,8 +1534,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "gibbor",
-    "chayil",
-    "yalad"
+    "chayil"
   ]
 }

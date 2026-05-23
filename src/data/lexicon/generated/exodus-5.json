@@ -18,8 +18,16 @@
         "lemma": "aharon"
       },
       {
+        "surface": "went",
+        "lemma": "bo"
+      },
+      {
         "surface": "Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "This is what",
@@ -36,6 +44,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "Let My people",
@@ -60,12 +72,20 @@
         "lemma": "paroh"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "Who",
         "lemma": "mi"
       },
       {
         "surface": "is the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "I should obey",
+        "lemma": "shama"
       },
       {
         "surface": "His voice",
@@ -80,12 +100,20 @@
         "lemma": "shalach"
       },
       {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "lo"
       },
       {
         "surface": "let Israel",
@@ -106,8 +134,12 @@
         "lemma": "ivri"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "has met",
+        "lemma": "qara"
+      },
+      {
+        "surface": "they answered",
+        "lemma": "amar"
       },
       {
         "surface": "let us go on",
@@ -160,6 +192,10 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -198,8 +234,8 @@
         "lemma": "paroh"
       },
       {
-        "surface": "Look",
-        "lemma": "hen"
+        "surface": "also said",
+        "lemma": "amar"
       },
       {
         "surface": "the people",
@@ -250,8 +286,16 @@
     ],
     "7": [
       {
+        "surface": "You shall no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "yasaph"
+      },
+      {
+        "surface": "supply",
+        "lemma": "natan"
       },
       {
         "surface": "the people",
@@ -300,6 +344,10 @@
         "lemma": "temol"
       },
       {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "reduce it",
         "lemma": "gara"
       },
@@ -334,6 +382,14 @@
         "lemma": "enosh"
       },
       {
+        "surface": "so they will be occupied",
+        "lemma": "asah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "al"
+      },
+      {
         "surface": "and pay no attention",
         "lemma": "shaah"
       },
@@ -356,6 +412,14 @@
         "lemma": "am"
       },
       {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "them",
         "lemma": "am"
       },
@@ -368,8 +432,16 @@
         "lemma": "paroh"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "I am no longer",
         "lemma": "ayin"
+      },
+      {
+        "surface": "giving",
+        "lemma": "natan"
       },
       {
         "surface": "straw",
@@ -416,6 +488,10 @@
         "lemma": "puts"
       },
       {
+        "surface": "all over",
+        "lemma": "kol"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -446,6 +522,10 @@
         "lemma": "uts"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Fulfill",
         "lemma": "kalah"
       },
@@ -460,6 +540,10 @@
       {
         "surface": "straw",
         "lemma": "teven"
+      },
+      {
+        "surface": "was provided",
+        "lemma": "hayah"
       }
     ],
     "14": [
@@ -488,8 +572,16 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "and asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Why",
         "lemma": "maddua"
+      },
+      {
+        "surface": "have you not",
+        "lemma": "lo"
       },
       {
         "surface": "fulfilled",
@@ -522,6 +614,10 @@
         "lemma": "shoter"
       },
       {
+        "surface": "went",
+        "lemma": "bo"
+      },
+      {
         "surface": "and appealed",
         "lemma": "tsaaq"
       },
@@ -532,6 +628,10 @@
       {
         "surface": "Why",
         "lemma": "mah"
+      },
+      {
+        "surface": "are you treating",
+        "lemma": "asah"
       },
       {
         "surface": "your servants",
@@ -552,16 +652,24 @@
         "lemma": "teven"
       },
       {
+        "surface": "has been given",
+        "lemma": "natan"
+      },
+      {
         "surface": "to your servants",
         "lemma": "eved"
       },
       {
-        "surface": "bricks",
-        "lemma": "levenah"
+        "surface": "yet we are told",
+        "lemma": "amar"
       },
       {
-        "surface": "Look",
-        "lemma": "hinneh"
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
+        "surface": "bricks",
+        "lemma": "levenah"
       },
       {
         "surface": "your servants",
@@ -586,8 +694,16 @@
         "lemma": "raphah"
       },
       {
+        "surface": "Pharaoh replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "Slackers",
         "lemma": "raphah"
+      },
+      {
+        "surface": "keep saying",
+        "lemma": "amar"
       },
       {
         "surface": "Let us go",
@@ -616,8 +732,20 @@
         "lemma": "avad"
       },
       {
+        "surface": "will be given",
+        "lemma": "natan"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "straw",
         "lemma": "teven"
+      },
+      {
+        "surface": "yet you must deliver",
+        "lemma": "natan"
       },
       {
         "surface": "the full quota",
@@ -638,8 +766,20 @@
         "lemma": "shoter"
       },
       {
+        "surface": "realized",
+        "lemma": "raah"
+      },
+      {
         "surface": "they were in trouble",
         "lemma": "ra"
+      },
+      {
+        "surface": "when they were told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
       },
       {
         "surface": "reduce",
@@ -660,6 +800,10 @@
     ],
     "20": [
       {
+        "surface": "When they left",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Pharaoh",
         "lemma": "paroh"
       },
@@ -678,6 +822,10 @@
       {
         "surface": "who stood",
         "lemma": "natsav"
+      },
+      {
+        "surface": "waiting to meet them",
+        "lemma": "qara"
       }
     ],
     "21": [
@@ -686,8 +834,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "look upon you",
+        "lemma": "raah"
+      },
+      {
         "surface": "and judge you",
         "lemma": "shaphat"
+      },
+      {
+        "surface": "the foremen said",
+        "lemma": "amar"
       },
       {
         "surface": "you have made us a stench",
@@ -704,6 +860,10 @@
       {
         "surface": "and his officials",
         "lemma": "eved"
+      },
+      {
+        "surface": "you have placed",
+        "lemma": "natan"
       },
       {
         "surface": "in their hand",
@@ -724,8 +884,16 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and asked",
+        "lemma": "amar"
       },
       {
         "surface": "Lord",
@@ -754,6 +922,10 @@
     ],
     "23": [
       {
+        "surface": "I went",
+        "lemma": "bo"
+      },
+      {
         "surface": "Pharaoh",
         "lemma": "paroh"
       },
@@ -774,6 +946,10 @@
         "lemma": "am"
       },
       {
+        "surface": "and You have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "delivered",
         "lemma": "natsal"
       },
@@ -788,8 +964,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "paroh",
-    "teven",
-    "halakh"
+    "teven"
   ]
 }

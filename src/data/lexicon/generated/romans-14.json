@@ -36,6 +36,10 @@
         "lemma": "phagein"
       },
       {
+        "surface": "all things",
+        "lemma": "pas"
+      },
+      {
         "surface": "who is weak",
         "lemma": "astheneo"
       },
@@ -84,6 +88,14 @@
     ],
     "4": [
       {
+        "surface": "Who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "to judge",
         "lemma": "krino"
       },
@@ -112,12 +124,20 @@
         "lemma": "pipto"
       },
       {
+        "surface": "he will stand",
+        "lemma": "histemi"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       },
       {
         "surface": "is able",
         "lemma": "dunateo"
+      },
+      {
+        "surface": "to make him stand",
+        "lemma": "histemi"
       }
     ],
     "5": [
@@ -136,6 +156,10 @@
       {
         "surface": "considers",
         "lemma": "krino"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "day alike",
@@ -218,8 +242,16 @@
     ],
     "7": [
       {
+        "surface": "none",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "lives",
         "lemma": "zao"
+      },
+      {
+        "surface": "none  of us",
+        "lemma": "oudeis"
       },
       {
         "surface": "dies",
@@ -260,6 +292,10 @@
         "lemma": "apothnesko"
       },
       {
+        "surface": "we belong to",
+        "lemma": "eimi"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       }
@@ -292,6 +328,10 @@
     ],
     "10": [
       {
+        "surface": "Why",
+        "lemma": "tis"
+      },
+      {
         "surface": "judge",
         "lemma": "krino"
       },
@@ -300,12 +340,20 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "why",
+        "lemma": "tis"
+      },
+      {
         "surface": "belittle",
         "lemma": "exoutheneo"
       },
       {
         "surface": "brother",
         "lemma": "adelphos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "pas"
       },
       {
         "surface": "we will all stand before",
@@ -322,12 +370,24 @@
     ],
     "11": [
       {
+        "surface": "It is written",
+        "lemma": "grapho"
+      },
+      {
         "surface": "live",
         "lemma": "zao"
       },
       {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
         "surface": "the Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "knee",
@@ -336,6 +396,10 @@
       {
         "surface": "will bow",
         "lemma": "kampto"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "tongue",
@@ -354,6 +418,10 @@
       {
         "surface": "each",
         "lemma": "hekastos"
+      },
+      {
+        "surface": "will give",
+        "lemma": "didomi"
       },
       {
         "surface": "an account",
@@ -400,6 +468,10 @@
     ],
     "14": [
       {
+        "surface": "I am convinced",
+        "lemma": "eido"
+      },
+      {
         "surface": "fully persuaded",
         "lemma": "peitho"
       },
@@ -412,12 +484,20 @@
         "lemma": "iesous"
       },
       {
+        "surface": "nothing is",
+        "lemma": "oudeis"
+      },
+      {
         "surface": "unclean",
         "lemma": "koinos"
       },
       {
         "surface": "regards",
         "lemma": "logizomai"
+      },
+      {
+        "surface": "as",
+        "lemma": "eimi"
       },
       {
         "surface": "unclean",
@@ -484,6 +564,10 @@
       {
         "surface": "of God",
         "lemma": "theos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "eating",
@@ -576,6 +660,10 @@
         "lemma": "broma"
       },
       {
+        "surface": "All food is",
+        "lemma": "pas"
+      },
+      {
         "surface": "clean",
         "lemma": "katharos"
       },
@@ -628,6 +716,10 @@
     ],
     "22": [
       {
+        "surface": "Keep",
+        "lemma": "echo"
+      },
+      {
         "surface": "belief",
         "lemma": "pistis"
       },
@@ -666,8 +758,16 @@
         "lemma": "pistis"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "sin",

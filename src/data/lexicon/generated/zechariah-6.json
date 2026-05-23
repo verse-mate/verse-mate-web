@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "And again",
+        "lemma": "shuv"
+      },
+      {
         "surface": "I lifted",
         "lemma": "nasa"
       },
@@ -14,12 +18,20 @@
         "lemma": "ayin"
       },
       {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "four",
         "lemma": "arba"
       },
       {
         "surface": "chariots",
         "lemma": "merkavah"
+      },
+      {
+        "surface": "coming out",
+        "lemma": "yatsa"
       },
       {
         "surface": "from between",
@@ -104,6 +116,10 @@
     ],
     "4": [
       {
+        "surface": "So I inquired",
+        "lemma": "amar"
+      },
+      {
         "surface": "the angel",
         "lemma": "maleakh"
       },
@@ -130,6 +146,10 @@
         "lemma": "maleakh"
       },
       {
+        "surface": "told",
+        "lemma": "amar"
+      },
+      {
         "surface": "are the four",
         "lemma": "arba"
       },
@@ -142,12 +162,20 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "going forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from their station",
         "lemma": "yatsav"
       },
       {
         "surface": "the Lord",
         "lemma": "adon"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -162,6 +190,10 @@
       {
         "surface": "horses",
         "lemma": "sus"
+      },
+      {
+        "surface": "is going",
+        "lemma": "yatsa"
       },
       {
         "surface": "the land",
@@ -194,6 +226,10 @@
         "lemma": "amots"
       },
       {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "they were eager",
         "lemma": "baqash"
       },
@@ -208,6 +244,10 @@
       {
         "surface": "the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "and the LORD said",
+        "lemma": "amar"
       },
       {
         "surface": "Go",
@@ -234,6 +274,18 @@
       {
         "surface": "Then the LORD summoned",
         "lemma": "zaaq"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Behold",
+        "lemma": "raah"
+      },
+      {
+        "surface": "those going",
+        "lemma": "yatsa"
       },
       {
         "surface": "the land",
@@ -268,6 +320,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "also came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "10": [
@@ -292,8 +352,16 @@
         "lemma": "yedayah"
       },
       {
+        "surface": "have arrived",
+        "lemma": "bo"
+      },
+      {
         "surface": "from Babylon",
         "lemma": "bavel"
+      },
+      {
+        "surface": "and go",
+        "lemma": "bo"
       },
       {
         "surface": "day",
@@ -330,6 +398,10 @@
         "lemma": "zahav"
       },
       {
+        "surface": "make",
+        "lemma": "asah"
+      },
+      {
         "surface": "an ornate crown",
         "lemma": "atarah"
       },
@@ -364,6 +436,10 @@
     ],
     "12": [
       {
+        "surface": "And you are to tell him",
+        "lemma": "amar"
+      },
+      {
         "surface": "that this is what",
         "lemma": "koh"
       },
@@ -376,8 +452,8 @@
         "lemma": "tsava"
       },
       {
-        "surface": "Here is",
-        "lemma": "hinneh"
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "a man",
@@ -434,6 +510,10 @@
         "lemma": "hod"
       },
       {
+        "surface": "and will sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "His throne",
         "lemma": "kisse"
       },
@@ -442,12 +522,20 @@
         "lemma": "mashal"
       },
       {
+        "surface": "And He will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a priest",
         "lemma": "kohen"
       },
       {
         "surface": "His throne",
         "lemma": "kisse"
+      },
+      {
+        "surface": "and there will be",
+        "lemma": "hayah"
       },
       {
         "surface": "peaceful",
@@ -470,6 +558,10 @@
       {
         "surface": "The crown",
         "lemma": "atarah"
+      },
+      {
+        "surface": "will reside",
+        "lemma": "hayah"
       },
       {
         "surface": "in the temple",
@@ -514,6 +606,10 @@
         "lemma": "rachoq"
       },
       {
+        "surface": "will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "and build",
         "lemma": "banah"
       },
@@ -542,6 +638,18 @@
         "lemma": "shalach"
       },
       {
+        "surface": "This will happen",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you diligently obey",
+        "lemma": "shama"
+      },
+      {
         "surface": "the voice",
         "lemma": "qol"
       },
@@ -556,8 +664,8 @@
     ]
   },
   "themeLemmas": [
-    "sus",
-    "halakh",
-    "hekhal"
+    "amar",
+    "yatsa",
+    "sus"
   ]
 }

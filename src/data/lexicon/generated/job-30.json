@@ -18,6 +18,10 @@
         "lemma": "tsair"
       },
       {
+        "surface": "fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "I would have refused",
         "lemma": "maas"
       },
@@ -218,8 +222,16 @@
         "lemma": "attah"
       },
       {
+        "surface": "vvv",
+        "lemma": "hayah"
+      },
+      {
         "surface": "they mock me in song",
         "lemma": "neginah"
+      },
+      {
+        "surface": "I have become",
+        "lemma": "hayah"
       },
       {
         "surface": "a byword",
@@ -234,6 +246,10 @@
       {
         "surface": "and keep far",
         "lemma": "rachaq"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
       },
       {
         "surface": "hesitate",
@@ -322,6 +338,10 @@
         "lemma": "havvah"
       },
       {
+        "surface": "with no one",
+        "lemma": "lo"
+      },
+      {
         "surface": "to restrain",
         "lemma": "azar"
       }
@@ -380,6 +400,10 @@
       {
         "surface": "has passed",
         "lemma": "avar"
+      },
+      {
+        "surface": "like a cloud",
+        "lemma": "av"
       }
     ],
     "16": [
@@ -424,6 +448,10 @@
       {
         "surface": "and my gnawing pains",
         "lemma": "araq"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
       },
       {
         "surface": "rest",
@@ -488,6 +516,10 @@
         "lemma": "shava"
       },
       {
+        "surface": "but You do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "answer",
         "lemma": "un"
       },
@@ -546,6 +578,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "You will bring me down",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to death",
         "lemma": "mavet"
       },
@@ -558,6 +594,10 @@
         "lemma": "moed"
       },
       {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the living",
         "lemma": "chay"
       }
@@ -566,6 +606,10 @@
       {
         "surface": "Yet",
         "lemma": "akh"
+      },
+      {
+        "surface": "no one",
+        "lemma": "lo"
       },
       {
         "surface": "stretches out",
@@ -580,6 +624,10 @@
         "lemma": "i"
       },
       {
+        "surface": "when",
+        "lemma": "im"
+      },
+      {
         "surface": "he cries for help",
         "lemma": "shua"
       },
@@ -589,6 +637,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "Have I not",
+        "lemma": "lo"
+      },
       {
         "surface": "wept",
         "lemma": "bakhah"
@@ -624,6 +676,10 @@
         "lemma": "ra"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "when I looked",
         "lemma": "yachal"
       },
@@ -634,6 +690,10 @@
       {
         "surface": "darkness",
         "lemma": "ophel"
+      },
+      {
+        "surface": "fell",
+        "lemma": "bo"
       }
     ],
     "27": [
@@ -644,6 +704,10 @@
       {
         "surface": "within",
         "lemma": "meeh"
+      },
+      {
+        "surface": "and cannot",
+        "lemma": "lo"
       },
       {
         "surface": "rest",
@@ -672,6 +736,10 @@
         "lemma": "qadar"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "by the sun",
         "lemma": "chammah"
       },
@@ -689,6 +757,10 @@
       }
     ],
     "29": [
+      {
+        "surface": "I have become",
+        "lemma": "hayah"
+      },
       {
         "surface": "a brother",
         "lemma": "ach"
@@ -738,6 +810,10 @@
         "lemma": "kinnor"
       },
       {
+        "surface": "is tuned",
+        "lemma": "hayah"
+      },
+      {
         "surface": "to mourning",
         "lemma": "evel"
       },
@@ -756,8 +832,8 @@
     ]
   },
   "themeLemmas": [
-    "shalach",
-    "attah",
-    "tachat"
+    "lo",
+    "hayah",
+    "shalach"
   ]
 }

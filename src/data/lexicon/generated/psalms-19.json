@@ -104,12 +104,24 @@
       {
         "surface": "without a sound",
         "lemma": "qol"
+      },
+      {
+        "surface": "to be heard",
+        "lemma": "shama"
       }
     ],
     "4": [
       {
         "surface": "their voice",
         "lemma": "qav"
+      },
+      {
+        "surface": "has gone out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "into all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -144,6 +156,10 @@
       {
         "surface": "Like a bridegroom",
         "lemma": "chatan"
+      },
+      {
+        "surface": "emerging",
+        "lemma": "yatsa"
       },
       {
         "surface": "from his chamber",
@@ -212,6 +228,10 @@
       {
         "surface": "is perfect",
         "lemma": "tamim"
+      },
+      {
+        "surface": "reviving",
+        "lemma": "shuv"
       },
       {
         "surface": "the soul",
@@ -410,6 +430,10 @@
         "lemma": "zed"
       },
       {
+        "surface": "may they not",
+        "lemma": "al"
+      },
+      {
         "surface": "rule",
         "lemma": "mashal"
       },
@@ -448,6 +472,10 @@
         "lemma": "lev"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "pleasing",
         "lemma": "ratson"
       },
@@ -471,7 +499,7 @@
   },
   "themeLemmas": [
     "rav",
-    "satar",
-    "qatseh"
+    "yatsa",
+    "satar"
   ]
 }

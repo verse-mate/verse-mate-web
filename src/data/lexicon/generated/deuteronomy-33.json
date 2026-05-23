@@ -40,8 +40,16 @@
     ],
     "2": [
       {
+        "surface": "He said",
+        "lemma": "amar"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "from Sinai",
@@ -98,6 +106,10 @@
         "lemma": "am"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the holy ones are",
         "lemma": "qadosh"
       },
@@ -150,6 +162,10 @@
     ],
     "5": [
       {
+        "surface": "So the LORD became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
@@ -192,8 +208,16 @@
         "lemma": "chayah"
       },
       {
+        "surface": "and not",
+        "lemma": "al"
+      },
+      {
         "surface": "die",
         "lemma": "mut"
+      },
+      {
+        "surface": "nor",
+        "lemma": "hayah"
       },
       {
         "surface": "his men",
@@ -210,8 +234,16 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
       },
       {
         "surface": "the cry",
@@ -220,6 +252,10 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "and bring him",
+        "lemma": "bo"
       },
       {
         "surface": "his people",
@@ -234,6 +270,10 @@
         "lemma": "riv"
       },
       {
+        "surface": "but may You be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a help",
         "lemma": "ezer"
       },
@@ -246,6 +286,10 @@
       {
         "surface": "Concerning Levi",
         "lemma": "levi"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
       },
       {
         "surface": "Give Your Thummim to Levi",
@@ -286,12 +330,36 @@
     ],
     "9": [
       {
+        "surface": "He said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "of his father",
+        "lemma": "av"
+      },
+      {
         "surface": "and mother",
         "lemma": "em"
       },
       {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "consider them",
+        "lemma": "raah"
+      },
+      {
+        "surface": "He disregarded",
+        "lemma": "lo"
+      },
+      {
         "surface": "his brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "and did not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
@@ -412,6 +480,10 @@
         "lemma": "binyamin"
       },
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "May the beloved",
         "lemma": "yedid"
       },
@@ -432,6 +504,10 @@
         "lemma": "chophaph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
       },
@@ -448,6 +524,10 @@
       {
         "surface": "Concerning Joseph",
         "lemma": "yoseph"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
       },
       {
         "surface": "May his land",
@@ -564,6 +644,10 @@
         "lemma": "seneh"
       },
       {
+        "surface": "May these rest",
+        "lemma": "bo"
+      },
+      {
         "surface": "on the head",
         "lemma": "rosh"
       },
@@ -648,12 +732,20 @@
         "lemma": "zevulun"
       },
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Rejoice",
         "lemma": "samach"
       },
       {
         "surface": "Zebulun",
         "lemma": "zevulun"
+      },
+      {
+        "surface": "in your journeys",
+        "lemma": "yatsa"
       },
       {
         "surface": "and Issachar",
@@ -665,6 +757,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "They will call",
+        "lemma": "qara"
+      },
       {
         "surface": "the peoples",
         "lemma": "am"
@@ -720,6 +816,10 @@
         "lemma": "gad"
       },
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Blessed is",
         "lemma": "barakh"
       },
@@ -754,6 +854,10 @@
     ],
     "21": [
       {
+        "surface": "He chose",
+        "lemma": "raah"
+      },
+      {
         "surface": "the best land",
         "lemma": "reshit"
       },
@@ -786,6 +890,10 @@
         "lemma": "am"
       },
       {
+        "surface": "he administered",
+        "lemma": "asah"
+      },
+      {
         "surface": "the LORD’s",
         "lemma": "yehovah"
       },
@@ -806,6 +914,10 @@
       {
         "surface": "Concerning Dan",
         "lemma": "dan"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
       },
       {
         "surface": "Dan is",
@@ -832,6 +944,10 @@
       {
         "surface": "Concerning Naphtali",
         "lemma": "naphtali"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
       },
       {
         "surface": "Naphtali",
@@ -872,12 +988,28 @@
     ],
     "24": [
       {
+        "surface": "And concerning Asher",
+        "lemma": "asher"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "May Asher",
+        "lemma": "asher"
+      },
+      {
         "surface": "be the most blessed",
         "lemma": "barakh"
       },
       {
         "surface": "of sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "may he be",
+        "lemma": "hayah"
       },
       {
         "surface": "the most favored",
@@ -994,6 +1126,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "giving the command",
+        "lemma": "amar"
+      },
+      {
         "surface": "Destroy him",
         "lemma": "shamad"
       }
@@ -1108,8 +1244,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "yisrael",
-    "shakhan",
-    "meged"
+    "shakhan"
   ]
 }

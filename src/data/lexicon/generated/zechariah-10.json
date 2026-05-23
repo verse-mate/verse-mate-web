@@ -18,12 +18,24 @@
         "lemma": "matar"
       },
       {
+        "surface": "in springtime",
+        "lemma": "et"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "makes",
+        "lemma": "asah"
+      },
+      {
         "surface": "the storm clouds",
         "lemma": "chaziz"
+      },
+      {
+        "surface": "and He will give",
+        "lemma": "natan"
       },
       {
         "surface": "everyone",
@@ -192,6 +204,10 @@
         "lemma": "qeshet"
       },
       {
+        "surface": "and every",
+        "lemma": "kol"
+      },
+      {
         "surface": "ruler",
         "lemma": "nagas"
       },
@@ -201,6 +217,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "They will be",
+        "lemma": "hayah"
+      },
       {
         "surface": "like mighty men",
         "lemma": "gibbor"
@@ -264,8 +284,20 @@
         "lemma": "yoseph"
       },
       {
+        "surface": "I will restore them",
+        "lemma": "shuv"
+      },
+      {
         "surface": "I have compassion on them",
         "lemma": "racham"
+      },
+      {
+        "surface": "and they will be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "I had not",
+        "lemma": "lo"
       },
       {
         "surface": "rejected them",
@@ -290,6 +322,10 @@
         "lemma": "ephrayim"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a mighty man",
         "lemma": "gibbor"
       },
@@ -308,6 +344,10 @@
       {
         "surface": "Their children",
         "lemma": "ben"
+      },
+      {
+        "surface": "will see it",
+        "lemma": "raah"
       },
       {
         "surface": "and be joyful",
@@ -372,9 +412,17 @@
       {
         "surface": "will live",
         "lemma": "chayah"
+      },
+      {
+        "surface": "and return",
+        "lemma": "shuv"
       }
     ],
     "10": [
+      {
+        "surface": "I will bring them back",
+        "lemma": "shuv"
+      },
       {
         "surface": "from",
         "lemma": "erets"
@@ -392,6 +440,10 @@
         "lemma": "ashshur"
       },
       {
+        "surface": "I will bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "vvv",
         "lemma": "erets"
       },
@@ -402,6 +454,10 @@
       {
         "surface": "and Lebanon",
         "lemma": "levanon"
+      },
+      {
+        "surface": "until no",
+        "lemma": "lo"
       },
       {
         "surface": "more room is found",
@@ -432,6 +488,10 @@
       {
         "surface": "of the sea",
         "lemma": "yam"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the depths",
@@ -498,8 +558,8 @@
     ]
   },
   "themeLemmas": [
+    "shuv",
     "milchamah",
-    "bet",
-    "yehudah"
+    "hayah"
   ]
 }

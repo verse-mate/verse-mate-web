@@ -64,6 +64,10 @@
         "lemma": "ephratah"
       },
       {
+        "surface": "who are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "small",
         "lemma": "tsair"
       },
@@ -74,6 +78,14 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "will come forth",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "One to be",
+        "lemma": "hayah"
       },
       {
         "surface": "ruler",
@@ -106,6 +118,10 @@
         "lemma": "ken"
       },
       {
+        "surface": "Israel will be abandoned",
+        "lemma": "natan"
+      },
+      {
         "surface": "she who is in labor",
         "lemma": "yalad"
       },
@@ -120,6 +136,10 @@
       {
         "surface": "of His brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "will return",
+        "lemma": "shuv"
       },
       {
         "surface": "the children",
@@ -164,6 +184,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "And they will dwell securely",
+        "lemma": "yashav"
+      },
+      {
         "surface": "then",
         "lemma": "attah"
       },
@@ -182,12 +206,20 @@
     ],
     "5": [
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "our peace",
         "lemma": "shalom"
       },
       {
         "surface": "Assyria",
         "lemma": "ashshur"
+      },
+      {
+        "surface": "invades",
+        "lemma": "bo"
       },
       {
         "surface": "our land",
@@ -264,6 +296,10 @@
         "lemma": "ashshur"
       },
       {
+        "surface": "invades",
+        "lemma": "bo"
+      },
+      {
         "surface": "our land",
         "lemma": "erets"
       },
@@ -284,6 +320,10 @@
       {
         "surface": "of Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "in the midst",
@@ -314,12 +354,20 @@
         "lemma": "esev"
       },
       {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "wait",
         "lemma": "qavah"
       },
       {
         "surface": "for man",
         "lemma": "ish"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "linger",
@@ -338,6 +386,10 @@
       {
         "surface": "of Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "among the nations",
@@ -388,6 +440,10 @@
         "lemma": "taraph"
       },
       {
+        "surface": "as",
+        "lemma": "im"
+      },
+      {
         "surface": "it passes through",
         "lemma": "avar"
       },
@@ -412,6 +468,10 @@
       {
         "surface": "your foes",
         "lemma": "tsar"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "your enemies",
@@ -474,6 +534,10 @@
         "lemma": "haras"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your strongholds",
         "lemma": "mivtsar"
       }
@@ -490,6 +554,14 @@
       {
         "surface": "from your hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "and you will have",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "fortune-tellers",
@@ -512,6 +584,10 @@
       {
         "surface": "from among you",
         "lemma": "qerev"
+      },
+      {
+        "surface": "so that you will no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -554,6 +630,10 @@
     ],
     "15": [
       {
+        "surface": "I will take",
+        "lemma": "asah"
+      },
+      {
         "surface": "vengeance",
         "lemma": "naqam"
       },
@@ -568,12 +648,20 @@
       {
         "surface": "upon the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "obeyed Me",
+        "lemma": "shama"
       }
     ]
   },
   "themeLemmas": [
+    "hayah",
     "qerev",
-    "karat",
-    "yisrael"
+    "lo"
   ]
 }

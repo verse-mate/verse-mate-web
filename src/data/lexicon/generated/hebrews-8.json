@@ -10,6 +10,14 @@
         "lemma": "kephalaios"
       },
       {
+        "surface": "we are saying is this",
+        "lemma": "lego"
+      },
+      {
+        "surface": "We do have",
+        "lemma": "echo"
+      },
+      {
         "surface": "a high priest",
         "lemma": "archiereus"
       },
@@ -66,6 +74,10 @@
     ],
     "3": [
       {
+        "surface": "every",
+        "lemma": "pas"
+      },
+      {
         "surface": "high priest",
         "lemma": "archiereus"
       },
@@ -90,22 +102,34 @@
         "lemma": "anagkaios"
       },
       {
+        "surface": "to have",
+        "lemma": "echo"
+      },
+      {
         "surface": "to offer",
         "lemma": "prosphero"
       }
     ],
     "4": [
       {
+        "surface": "He were",
+        "lemma": "eimi"
+      },
+      {
         "surface": "earth",
         "lemma": "ge"
       },
       {
-        "surface": "vvv",
-        "lemma": "an"
+        "surface": "He would not be",
+        "lemma": "eimi"
       },
       {
         "surface": "a priest",
         "lemma": "hiereus"
+      },
+      {
+        "surface": "since there are already",
+        "lemma": "eimi"
       },
       {
         "surface": "who offer",
@@ -158,6 +182,18 @@
         "lemma": "skene"
       },
       {
+        "surface": "See to it that",
+        "lemma": "horao"
+      },
+      {
+        "surface": "you make",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
         "surface": "pattern",
         "lemma": "tupos"
       },
@@ -196,6 +232,10 @@
         "lemma": "diatheke"
       },
       {
+        "surface": "vvv",
+        "lemma": "eimi"
+      },
+      {
         "surface": "He mediates",
         "lemma": "mesites"
       },
@@ -222,16 +262,16 @@
         "lemma": "protos"
       },
       {
+        "surface": "had been",
+        "lemma": "eimi"
+      },
+      {
         "surface": "without fault",
         "lemma": "amemptos"
       },
       {
         "surface": "place",
         "lemma": "topos"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "an"
       },
       {
         "surface": "would have been sought",
@@ -248,8 +288,20 @@
         "lemma": "memphomai"
       },
       {
+        "surface": "and said",
+        "lemma": "lego"
+      },
+      {
         "surface": "the days",
         "lemma": "hemera"
+      },
+      {
+        "surface": "are coming",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "declares",
+        "lemma": "lego"
       },
       {
         "surface": "the Lord",
@@ -288,6 +340,10 @@
       {
         "surface": "covenant",
         "lemma": "diatheke"
+      },
+      {
+        "surface": "I made",
+        "lemma": "poieo"
       },
       {
         "surface": "fathers",
@@ -330,6 +386,10 @@
         "lemma": "ameleo"
       },
       {
+        "surface": "declares",
+        "lemma": "lego"
+      },
+      {
         "surface": "the Lord",
         "lemma": "kurios"
       }
@@ -356,8 +416,16 @@
         "lemma": "hemera"
       },
       {
+        "surface": "declares",
+        "lemma": "lego"
+      },
+      {
         "surface": "the Lord",
         "lemma": "kurios"
+      },
+      {
+        "surface": "I will put",
+        "lemma": "didomi"
       },
       {
         "surface": "laws",
@@ -376,8 +444,16 @@
         "lemma": "kardia"
       },
       {
+        "surface": "I will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "will be",
+        "lemma": "eimi"
       },
       {
         "surface": "people",
@@ -402,15 +478,39 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
+        "surface": "Know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "Lord",
         "lemma": "kurios"
       },
       {
+        "surface": "vvv",
+        "lemma": "pas"
+      },
+      {
+        "surface": "they will all know",
+        "lemma": "eido"
+      },
+      {
         "surface": "the least",
         "lemma": "mikros"
+      },
+      {
+        "surface": "the greatest",
+        "lemma": "megas"
       }
     ],
     "12": [
+      {
+        "surface": "I will",
+        "lemma": "eimi"
+      },
       {
         "surface": "forgive",
         "lemma": "hileos"
@@ -433,6 +533,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "speaking of",
+        "lemma": "lego"
+      },
       {
         "surface": "a new covenant",
         "lemma": "kainos"

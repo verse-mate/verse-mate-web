@@ -44,6 +44,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "render",
+        "lemma": "shuv"
+      },
+      {
         "surface": "a reward",
         "lemma": "gemul"
       },
@@ -84,12 +88,20 @@
         "lemma": "davar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "workers",
         "lemma": "paal"
       },
       {
         "surface": "of iniquity",
         "lemma": "aven"
+      },
+      {
+        "surface": "boast",
+        "lemma": "amar"
       }
     ],
     "5": [
@@ -138,8 +150,20 @@
     ],
     "7": [
       {
+        "surface": "They say",
+        "lemma": "amar"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yah"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "the God",
@@ -148,6 +172,10 @@
       {
         "surface": "of Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "pays no heed",
@@ -190,12 +218,28 @@
         "lemma": "ozen"
       },
       {
+        "surface": "can He not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
+        "surface": "He who",
+        "lemma": "im"
+      },
+      {
         "surface": "formed",
         "lemma": "yatsar"
       },
       {
         "surface": "the eye",
         "lemma": "ayin"
+      },
+      {
+        "surface": "can He not",
+        "lemma": "lo"
       },
       {
         "surface": "see",
@@ -210,6 +254,10 @@
       {
         "surface": "the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "does He not",
+        "lemma": "lo"
       },
       {
         "surface": "discipline",
@@ -308,12 +356,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "forsake",
         "lemma": "natash"
       },
       {
         "surface": "His people",
         "lemma": "am"
+      },
+      {
+        "surface": "He will never",
+        "lemma": "lo"
       },
       {
         "surface": "abandon",
@@ -330,8 +386,16 @@
         "lemma": "tsedeq"
       },
       {
+        "surface": "will again",
+        "lemma": "shuv"
+      },
+      {
         "surface": "be righteous",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the upright",
@@ -407,6 +471,14 @@
       }
     ],
     "18": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "I say",
+        "lemma": "amar"
+      },
       {
         "surface": "My foot",
         "lemma": "regel"
@@ -508,6 +580,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "has been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "stronghold",
         "lemma": "misgav"
       },
@@ -525,6 +601,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "He will bring",
+        "lemma": "shuv"
+      },
       {
         "surface": "their own iniquity",
         "lemma": "aven"
@@ -552,8 +632,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "rasah",
-    "nephesh",
-    "aven"
+    "shuv"
   ]
 }

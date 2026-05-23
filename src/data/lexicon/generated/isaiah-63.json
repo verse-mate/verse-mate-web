@@ -10,6 +10,10 @@
         "lemma": "mi"
       },
       {
+        "surface": "coming",
+        "lemma": "bo"
+      },
+      {
         "surface": "from Edom",
         "lemma": "edom"
       },
@@ -138,6 +142,10 @@
         "lemma": "beged"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "My clothes",
         "lemma": "malbush"
       },
@@ -166,6 +174,10 @@
       {
         "surface": "of My redemption",
         "lemma": "gaal"
+      },
+      {
+        "surface": "had come",
+        "lemma": "bo"
       }
     ],
     "5": [
@@ -266,6 +278,10 @@
         "lemma": "tehillah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -304,6 +320,10 @@
     ],
     "8": [
       {
+        "surface": "For He said",
+        "lemma": "amar"
+      },
+      {
         "surface": "are surely",
         "lemma": "akh"
       },
@@ -316,8 +336,16 @@
         "lemma": "ben"
       },
       {
+        "surface": "who will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be disloyal",
         "lemma": "shaqar"
+      },
+      {
+        "surface": "So He became",
+        "lemma": "hayah"
       },
       {
         "surface": "Savior",
@@ -325,6 +353,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "In all",
+        "lemma": "kol"
+      },
       {
         "surface": "their distress",
         "lemma": "batstsarah"
@@ -364,6 +396,10 @@
       {
         "surface": "and carried them",
         "lemma": "nasa"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the days",
@@ -500,6 +536,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "to gain",
+        "lemma": "asah"
+      },
+      {
         "surface": "everlasting",
         "lemma": "olam"
       },
@@ -524,6 +564,10 @@
       {
         "surface": "in the wilderness",
         "lemma": "midbar"
+      },
+      {
+        "surface": "so that they did not",
+        "lemma": "lo"
       },
       {
         "surface": "stumble",
@@ -568,6 +612,10 @@
         "lemma": "ken"
       },
       {
+        "surface": "to make",
+        "lemma": "asah"
+      },
+      {
         "surface": "a glorious",
         "lemma": "tipharah"
       },
@@ -584,6 +632,10 @@
       {
         "surface": "from heaven",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "and see",
+        "lemma": "raah"
       },
       {
         "surface": "from Your holy",
@@ -624,8 +676,16 @@
     ],
     "16": [
       {
+        "surface": "are our Father",
+        "lemma": "av"
+      },
+      {
         "surface": "Abraham",
         "lemma": "avraham"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "know us",
@@ -636,12 +696,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "acknowledge us",
         "lemma": "nakhar"
       },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "are our Father",
+        "lemma": "av"
       },
       {
         "surface": "our Redeemer",
@@ -684,6 +752,10 @@
       {
         "surface": "from fearing You",
         "lemma": "yirah"
+      },
+      {
+        "surface": "Return",
+        "lemma": "shuv"
       },
       {
         "surface": "of Your servants",
@@ -730,12 +802,24 @@
     ],
     "19": [
       {
+        "surface": "We have become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like those You never",
         "lemma": "olam"
       },
       {
         "surface": "ruled",
         "lemma": "mashal"
+      },
+      {
+        "surface": "like those not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "called",
+        "lemma": "qara"
       },
       {
         "surface": "by Your name",
@@ -745,7 +829,7 @@
   },
   "themeLemmas": [
     "olam",
-    "yasah",
-    "shem"
+    "lo",
+    "yasah"
   ]
 }

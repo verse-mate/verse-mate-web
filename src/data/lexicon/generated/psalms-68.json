@@ -174,6 +174,10 @@
     ],
     "5": [
       {
+        "surface": "A father",
+        "lemma": "av"
+      },
+      {
         "surface": "of the fatherless",
         "lemma": "yatom"
       },
@@ -204,12 +208,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "settles",
+        "lemma": "yashav"
+      },
+      {
         "surface": "the lonely",
         "lemma": "yachid"
       },
       {
         "surface": "in families",
         "lemma": "bet"
+      },
+      {
+        "surface": "He leads",
+        "lemma": "yatsa"
       },
       {
         "surface": "the prisoners {out",
@@ -240,6 +252,10 @@
       {
         "surface": "O God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "when You went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "before",
@@ -344,6 +360,10 @@
         "lemma": "chay"
       },
       {
+        "surface": "settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "O God",
         "lemma": "elohim"
       },
@@ -364,6 +384,10 @@
       {
         "surface": "The Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "gives",
+        "lemma": "natan"
       },
       {
         "surface": "the command",
@@ -413,6 +437,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "Though",
+        "lemma": "im"
+      },
       {
         "surface": "you lie down",
         "lemma": "shakhav"
@@ -538,6 +566,10 @@
       {
         "surface": "chose",
         "lemma": "chamad"
+      },
+      {
+        "surface": "for His dwelling",
+        "lemma": "yashav"
       },
       {
         "surface": "where the LORD",
@@ -732,8 +764,20 @@
         "lemma": "adonai"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I will retrieve them",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from Bashan",
         "lemma": "bashan"
+      },
+      {
+        "surface": "I will bring them up",
+        "lemma": "shuv"
       },
       {
         "surface": "from the depths",
@@ -771,6 +815,10 @@
       }
     ],
     "24": [
+      {
+        "surface": "They have seen",
+        "lemma": "raah"
+      },
       {
         "surface": "Your procession",
         "lemma": "halikhah"
@@ -1082,19 +1130,23 @@
         "lemma": "qedem"
       },
       {
-        "surface": "behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "His} mighty",
         "lemma": "oz"
       },
       {
         "surface": "voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "resounds",
+        "lemma": "natan"
       }
     ],
     "34": [
+      {
+        "surface": "Ascribe",
+        "lemma": "natan"
+      },
       {
         "surface": "the power",
         "lemma": "oz"
@@ -1140,6 +1192,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "gives",
+        "lemma": "natan"
       },
       {
         "surface": "strength",

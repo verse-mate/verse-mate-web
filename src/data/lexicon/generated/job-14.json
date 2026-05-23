@@ -40,12 +40,20 @@
         "lemma": "tsits"
       },
       {
+        "surface": "he comes forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "then withers away",
         "lemma": "malal"
       },
       {
         "surface": "like a fleeting shadow",
         "lemma": "tsel"
+      },
+      {
+        "surface": "he does not",
+        "lemma": "lo"
       },
       {
         "surface": "endure",
@@ -62,6 +70,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "Will You bring him",
+        "lemma": "bo"
+      },
+      {
         "surface": "into judgment",
         "lemma": "mishpat"
       }
@@ -72,6 +84,10 @@
         "lemma": "mi"
       },
       {
+        "surface": "can bring out",
+        "lemma": "natan"
+      },
+      {
         "surface": "clean",
         "lemma": "tahor"
       },
@@ -80,11 +96,19 @@
         "lemma": "tame"
       },
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "one",
         "lemma": "echad"
       }
     ],
     "5": [
+      {
+        "surface": "Since",
+        "lemma": "im"
+      },
       {
         "surface": "his days",
         "lemma": "yom"
@@ -102,8 +126,16 @@
         "lemma": "chodesh"
       },
       {
+        "surface": "and since You have set",
+        "lemma": "asah"
+      },
+      {
         "surface": "limits",
         "lemma": "choq"
+      },
+      {
+        "surface": "that he cannot",
+        "lemma": "lo"
       },
       {
         "surface": "exceed",
@@ -146,6 +178,10 @@
         "lemma": "ets"
       },
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "it is cut down",
         "lemma": "karat"
       },
@@ -162,11 +198,19 @@
         "lemma": "yoneqet"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "fail",
         "lemma": "chadal"
       }
     ],
     "8": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "its roots",
         "lemma": "sheresh"
@@ -204,6 +248,10 @@
       {
         "surface": "it will bud",
         "lemma": "parach"
+      },
+      {
+        "surface": "and put forth",
+        "lemma": "asah"
       },
       {
         "surface": "twigs",
@@ -276,6 +324,10 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "and does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "rise",
         "lemma": "qamay"
       },
@@ -288,8 +340,16 @@
         "lemma": "bilti"
       },
       {
+        "surface": "he will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be awakened",
         "lemma": "quts"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "roused",
@@ -322,6 +382,10 @@
         "lemma": "aph"
       },
       {
+        "surface": "has passed",
+        "lemma": "shuv"
+      },
+      {
         "surface": "If only You would appoint",
         "lemma": "shit"
       },
@@ -336,6 +400,10 @@
     ],
     "14": [
       {
+        "surface": "When",
+        "lemma": "im"
+      },
+      {
         "surface": "a man",
         "lemma": "gaver"
       },
@@ -346,6 +414,10 @@
       {
         "surface": "will he live again",
         "lemma": "chayah"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "the days",
@@ -362,9 +434,17 @@
       {
         "surface": "my renewal",
         "lemma": "chaliphah"
+      },
+      {
+        "surface": "comes",
+        "lemma": "bo"
       }
     ],
     "15": [
+      {
+        "surface": "You will call",
+        "lemma": "qara"
+      },
       {
         "surface": "will answer",
         "lemma": "un"
@@ -394,6 +474,10 @@
       {
         "surface": "my steps",
         "lemma": "tsaad"
+      },
+      {
+        "surface": "but would not",
+        "lemma": "lo"
       },
       {
         "surface": "keep track",
@@ -526,12 +610,20 @@
         "lemma": "kavad"
       },
       {
+        "surface": "he does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know it",
         "lemma": "yada"
       },
       {
         "surface": "if they are brought low",
         "lemma": "tsaar"
+      },
+      {
+        "surface": "he is unaware",
+        "lemma": "lo"
       }
     ],
     "22": [
@@ -558,8 +650,8 @@
     ]
   },
   "themeLemmas": [
-    "mut",
-    "mayim",
-    "tiqvah"
+    "lo",
+    "im",
+    "mut"
   ]
 }

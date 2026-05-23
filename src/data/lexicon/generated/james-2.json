@@ -10,6 +10,10 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "as you hold out",
+        "lemma": "echo"
+      },
+      {
         "surface": "faith",
         "lemma": "pistis"
       },
@@ -40,6 +44,10 @@
         "lemma": "aner"
       },
       {
+        "surface": "comes",
+        "lemma": "eiserchomai"
+      },
+      {
         "surface": "meeting",
         "lemma": "sunagoge"
       },
@@ -66,6 +74,10 @@
       {
         "surface": "clothes",
         "lemma": "esthes"
+      },
+      {
+        "surface": "comes in",
+        "lemma": "eiserchomai"
       }
     ],
     "3": [
@@ -86,6 +98,10 @@
         "lemma": "esthes"
       },
       {
+        "surface": "say",
+        "lemma": "eipon"
+      },
+      {
         "surface": "Here is",
         "lemma": "hode"
       },
@@ -98,8 +114,16 @@
         "lemma": "kalos"
       },
       {
+        "surface": "say",
+        "lemma": "eipon"
+      },
+      {
         "surface": "poor man",
         "lemma": "ptochos"
+      },
+      {
+        "surface": "must stand",
+        "lemma": "histemi"
       },
       {
         "surface": "Sit",
@@ -120,6 +144,10 @@
         "lemma": "diakrino"
       },
       {
+        "surface": "become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "judges with",
         "lemma": "krites"
       },
@@ -133,6 +161,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "Listen",
+        "lemma": "akouo"
+      },
       {
         "surface": "beloved",
         "lemma": "agapetos"
@@ -252,6 +284,10 @@
         "lemma": "plesion"
       },
       {
+        "surface": "you are doing",
+        "lemma": "poieo"
+      },
+      {
         "surface": "well",
         "lemma": "kalos"
       }
@@ -300,14 +336,34 @@
         "lemma": "ptaio"
       },
       {
+        "surface": "just one point",
+        "lemma": "heis"
+      },
+      {
+        "surface": "is",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "guilty",
         "lemma": "enochos"
+      },
+      {
+        "surface": "of breaking all of it",
+        "lemma": "pas"
       }
     ],
     "11": [
       {
+        "surface": "said",
+        "lemma": "eipon"
+      },
+      {
         "surface": "Do not commit adultery",
         "lemma": "moicheuo"
+      },
+      {
+        "surface": "said",
+        "lemma": "eipon"
       },
       {
         "surface": "Do not murder",
@@ -322,6 +378,10 @@
         "lemma": "phoneuo"
       },
       {
+        "surface": "you have become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "vvv",
         "lemma": "parabates"
       },
@@ -331,6 +391,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "Speak",
+        "lemma": "laleo"
+      },
+      {
+        "surface": "act",
+        "lemma": "poieo"
+      },
       {
         "surface": "those who are going",
         "lemma": "mello"
@@ -358,6 +426,10 @@
         "lemma": "anileos"
       },
       {
+        "surface": "has not been merciful",
+        "lemma": "poieo"
+      },
+      {
         "surface": "Mercy",
         "lemma": "eleos"
       },
@@ -372,6 +444,10 @@
     ],
     "14": [
       {
+        "surface": "What",
+        "lemma": "tis"
+      },
+      {
         "surface": "good is it",
         "lemma": "ophelos"
       },
@@ -380,12 +456,28 @@
         "lemma": "adelphos"
       },
       {
+        "surface": "claims",
+        "lemma": "lego"
+      },
+      {
+        "surface": "to have",
+        "lemma": "echo"
+      },
+      {
         "surface": "faith",
         "lemma": "pistis"
       },
       {
+        "surface": "has",
+        "lemma": "echo"
+      },
+      {
         "surface": "deeds",
         "lemma": "ergon"
+      },
+      {
+        "surface": "Can",
+        "lemma": "dunamai"
       },
       {
         "surface": "faith",
@@ -424,6 +516,10 @@
     ],
     "16": [
       {
+        "surface": "tells",
+        "lemma": "eipon"
+      },
+      {
         "surface": "Go",
         "lemma": "hupago"
       },
@@ -440,12 +536,20 @@
         "lemma": "chortazo"
       },
       {
+        "surface": "provide for",
+        "lemma": "didomi"
+      },
+      {
         "surface": "physical",
         "lemma": "soma"
       },
       {
         "surface": "needs",
         "lemma": "epitedeios"
+      },
+      {
+        "surface": "what",
+        "lemma": "tis"
       },
       {
         "surface": "good  is that",
@@ -462,8 +566,16 @@
         "lemma": "pistis"
       },
       {
+        "surface": "it does not result",
+        "lemma": "echo"
+      },
+      {
         "surface": "in action",
         "lemma": "ergon"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "dead",
@@ -476,8 +588,16 @@
         "lemma": "ero"
       },
       {
+        "surface": "have",
+        "lemma": "echo"
+      },
+      {
         "surface": "faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "have",
+        "lemma": "echo"
       },
       {
         "surface": "deeds",
@@ -518,8 +638,20 @@
         "lemma": "theos"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "Good",
         "lemma": "kalos"
+      },
+      {
+        "surface": "for you",
+        "lemma": "poieo"
       },
       {
         "surface": "demons",
@@ -544,12 +676,24 @@
         "lemma": "anthropos"
       },
       {
+        "surface": "do you want",
+        "lemma": "thelo"
+      },
+      {
+        "surface": "evidence",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "faith",
         "lemma": "pistis"
       },
       {
         "surface": "deeds",
         "lemma": "ergon"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "worthless",
@@ -630,6 +774,10 @@
         "lemma": "pleroo"
       },
       {
+        "surface": "says",
+        "lemma": "lego"
+      },
+      {
         "surface": "Abraham",
         "lemma": "abraam"
       },
@@ -663,6 +811,10 @@
       }
     ],
     "24": [
+      {
+        "surface": "As you can see",
+        "lemma": "horao"
+      },
       {
         "surface": "a man",
         "lemma": "anthropos"
@@ -736,6 +888,10 @@
         "lemma": "pneuma"
       },
       {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
         "surface": "dead",
         "lemma": "nekros"
       },
@@ -750,6 +906,10 @@
       {
         "surface": "deeds",
         "lemma": "ergon"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
       },
       {
         "surface": "dead",

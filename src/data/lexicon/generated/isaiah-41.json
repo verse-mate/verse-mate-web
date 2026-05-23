@@ -60,6 +60,10 @@
         "lemma": "mizrach"
       },
       {
+        "surface": "and called him",
+        "lemma": "qara"
+      },
+      {
         "surface": "to his feet",
         "lemma": "regel"
       },
@@ -72,6 +76,10 @@
         "lemma": "goy"
       },
       {
+        "surface": "over",
+        "lemma": "natan"
+      },
+      {
         "surface": "to him",
         "lemma": "paneh"
       },
@@ -82,6 +90,10 @@
       {
         "surface": "kings before him",
         "lemma": "melekh"
+      },
+      {
+        "surface": "He turns them",
+        "lemma": "natan"
       },
       {
         "surface": "to dust",
@@ -118,6 +130,14 @@
         "lemma": "shalom"
       },
       {
+        "surface": "hardly",
+        "lemma": "lo"
+      },
+      {
+        "surface": "touching",
+        "lemma": "bo"
+      },
+      {
         "surface": "the path",
         "lemma": "orach"
       },
@@ -134,6 +154,14 @@
       {
         "surface": "has performed this",
         "lemma": "paal"
+      },
+      {
+        "surface": "and carried it out",
+        "lemma": "asah"
+      },
+      {
+        "surface": "calling forth",
+        "lemma": "qara"
       },
       {
         "surface": "the generations",
@@ -160,6 +188,10 @@
       {
         "surface": "The islands",
         "lemma": "i"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "and fear",
@@ -200,6 +232,10 @@
         "lemma": "rea"
       },
       {
+        "surface": "and says",
+        "lemma": "amar"
+      },
+      {
         "surface": "to his brother",
         "lemma": "ach"
       },
@@ -238,6 +274,10 @@
         "lemma": "paam"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "of the welding",
         "lemma": "deveq"
       },
@@ -248,6 +288,10 @@
       {
         "surface": "He nails it down",
         "lemma": "chazaq"
+      },
+      {
+        "surface": "so it will not",
+        "lemma": "lo"
       },
       {
         "surface": "be toppled",
@@ -298,8 +342,16 @@
         "lemma": "erets"
       },
       {
+        "surface": "and called you",
+        "lemma": "qara"
+      },
+      {
         "surface": "from its farthest corners",
         "lemma": "atsil"
+      },
+      {
+        "surface": "I said",
+        "lemma": "amar"
       },
       {
         "surface": "are My servant",
@@ -310,14 +362,26 @@
         "lemma": "bachar"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "rejected you",
         "lemma": "maas"
       }
     ],
     "10": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "fear",
         "lemma": "yare"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "be afraid",
@@ -350,8 +414,8 @@
     ],
     "11": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "who rage",
@@ -374,6 +438,10 @@
         "lemma": "riv"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "reduced to nothing",
         "lemma": "ayin"
       },
@@ -392,6 +460,10 @@
         "lemma": "enosh"
       },
       {
+        "surface": "but will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "find them",
         "lemma": "matsa"
       },
@@ -402,6 +474,10 @@
       {
         "surface": "against you",
         "lemma": "enosh"
+      },
+      {
+        "surface": "will come",
+        "lemma": "hayah"
       },
       {
         "surface": "to nothing",
@@ -426,6 +502,14 @@
         "lemma": "yamin"
       },
       {
+        "surface": "and tells",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "fear",
         "lemma": "yare"
       },
@@ -435,6 +519,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "fear",
         "lemma": "yare"
@@ -481,10 +569,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "I will make you",
         "lemma": "sum"
@@ -626,6 +710,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "forsake them",
         "lemma": "azav"
       }
@@ -686,6 +774,10 @@
     ],
     "19": [
       {
+        "surface": "I will plant",
+        "lemma": "natan"
+      },
+      {
         "surface": "cedars",
         "lemma": "erez"
       },
@@ -740,6 +832,10 @@
         "lemma": "yachad"
       },
       {
+        "surface": "may see",
+        "lemma": "raah"
+      },
+      {
         "surface": "and know",
         "lemma": "yada"
       },
@@ -758,6 +854,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has done",
+        "lemma": "asah"
       },
       {
         "surface": "and the Holy",
@@ -782,6 +882,10 @@
         "lemma": "riv"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -792,6 +896,10 @@
       {
         "surface": "your arguments",
         "lemma": "atstsumah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the King",
@@ -838,6 +946,14 @@
       {
         "surface": "the outcome",
         "lemma": "acharit"
+      },
+      {
+        "surface": "announce to us",
+        "lemma": "shama"
+      },
+      {
+        "surface": "what is coming",
+        "lemma": "bo"
       }
     ],
     "23": [
@@ -875,10 +991,6 @@
       }
     ],
     "24": [
-      {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
       {
         "surface": "are nothing",
         "lemma": "ayin"
@@ -918,8 +1030,16 @@
         "lemma": "mizrach"
       },
       {
+        "surface": "who calls on",
+        "lemma": "qara"
+      },
+      {
         "surface": "My name",
         "lemma": "shem"
+      },
+      {
+        "surface": "He will march over",
+        "lemma": "bo"
       },
       {
         "surface": "rulers",
@@ -964,6 +1084,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "so that we may say",
+        "lemma": "amar"
+      },
+      {
         "surface": "He was right",
         "lemma": "tsaddiq"
       },
@@ -980,8 +1104,16 @@
         "lemma": "ayin"
       },
       {
+        "surface": "foretold it",
+        "lemma": "shama"
+      },
+      {
         "surface": "no",
         "lemma": "ayin"
+      },
+      {
+        "surface": "one heard",
+        "lemma": "shama"
       },
       {
         "surface": "your words",
@@ -998,12 +1130,8 @@
         "lemma": "tsiyyon"
       },
       {
-        "surface": "Look",
-        "lemma": "hinneh"
-      },
-      {
-        "surface": "here they are",
-        "lemma": "hen"
+        "surface": "And I gave",
+        "lemma": "natan"
       },
       {
         "surface": "to Jerusalem",
@@ -1015,6 +1143,10 @@
       }
     ],
     "28": [
+      {
+        "surface": "When I look",
+        "lemma": "raah"
+      },
       {
         "surface": "there is no",
         "lemma": "ayin"
@@ -1034,12 +1166,16 @@
       {
         "surface": "when I ask them",
         "lemma": "shaal"
+      },
+      {
+        "surface": "they have nothing to say",
+        "lemma": "shuv"
       }
     ],
     "29": [
       {
-        "surface": "See",
-        "lemma": "hen"
+        "surface": "they are all",
+        "lemma": "kol"
       },
       {
         "surface": "a delusion",
@@ -1068,8 +1204,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "yisrael",
-    "sum",
-    "nagad"
+    "sum"
   ]
 }

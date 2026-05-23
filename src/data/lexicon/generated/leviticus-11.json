@@ -20,6 +20,10 @@
       {
         "surface": "and Aaron",
         "lemma": "aharon"
+      },
+      {
+        "surface": "telling",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -30,6 +34,10 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "Of all",
+        "lemma": "kol"
       },
       {
         "surface": "the beasts",
@@ -52,6 +60,10 @@
       {
         "surface": "You may eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "animal",
@@ -100,6 +112,10 @@
         "lemma": "parsah"
       },
       {
+        "surface": "you are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to eat",
         "lemma": "akhal"
       },
@@ -146,6 +162,10 @@
         "lemma": "gerah"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "have a divided",
         "lemma": "paras"
       },
@@ -170,6 +190,10 @@
       {
         "surface": "the cud",
         "lemma": "gerah"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "have a divided",
@@ -202,6 +226,10 @@
         "lemma": "paras"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "chew",
         "lemma": "garar"
       },
@@ -215,6 +243,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
       {
         "surface": "You must not eat",
         "lemma": "akhal"
@@ -238,6 +270,10 @@
     ],
     "9": [
       {
+        "surface": "Of all the creatures",
+        "lemma": "kol"
+      },
+      {
         "surface": "in the water",
         "lemma": "mayim"
       },
@@ -254,6 +290,10 @@
         "lemma": "akhal"
       },
       {
+        "surface": "anything",
+        "lemma": "kol"
+      },
+      {
         "surface": "with fins",
         "lemma": "senappir"
       },
@@ -263,6 +303,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "among all",
+        "lemma": "kol"
+      },
       {
         "surface": "the teeming",
         "lemma": "sherets"
@@ -282,6 +326,10 @@
       {
         "surface": "are detestable",
         "lemma": "sheqets"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "in the seas",
@@ -306,8 +354,16 @@
     ],
     "11": [
       {
+        "surface": "They shall be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "an abomination",
         "lemma": "sheqets"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "lo"
       },
       {
         "surface": "eat",
@@ -327,6 +383,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "Everything",
+        "lemma": "kol"
+      },
       {
         "surface": "in the water",
         "lemma": "mayim"
@@ -356,6 +416,10 @@
       {
         "surface": "birds",
         "lemma": "oph"
+      },
+      {
+        "surface": "and they must not",
+        "lemma": "lo"
       },
       {
         "surface": "be eaten",
@@ -393,6 +457,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
       {
         "surface": "kind",
         "lemma": "min"
@@ -480,6 +548,10 @@
     ],
     "20": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "flying",
         "lemma": "oph"
       },
@@ -508,6 +580,10 @@
       {
         "surface": "you may eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "kinds of",
+        "lemma": "kol"
       },
       {
         "surface": "flying",
@@ -574,6 +650,10 @@
     ],
     "23": [
       {
+        "surface": "All other",
+        "lemma": "kol"
+      },
+      {
         "surface": "flying",
         "lemma": "oph"
       },
@@ -600,6 +680,10 @@
         "lemma": "tame"
       },
       {
+        "surface": "Whoever",
+        "lemma": "kol"
+      },
+      {
         "surface": "touches",
         "lemma": "naga"
       },
@@ -617,6 +701,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "and whoever",
+        "lemma": "kol"
+      },
       {
         "surface": "picks up",
         "lemma": "nasa"
@@ -643,6 +731,10 @@
       }
     ],
     "26": [
+      {
+        "surface": "Every",
+        "lemma": "kol"
+      },
       {
         "surface": "animal",
         "lemma": "behemah"
@@ -680,6 +772,10 @@
         "lemma": "tame"
       },
       {
+        "surface": "Whoever",
+        "lemma": "kol"
+      },
+      {
         "surface": "touches",
         "lemma": "naga"
       },
@@ -689,6 +785,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the four-footed",
         "lemma": "halakh"
@@ -708,6 +808,10 @@
       {
         "surface": "are unclean",
         "lemma": "tame"
+      },
+      {
+        "surface": "whoever",
+        "lemma": "kol"
       },
       {
         "surface": "touches",
@@ -818,8 +922,16 @@
         "lemma": "tame"
       },
       {
+        "surface": "among all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the crawling creatures",
         "lemma": "sherets"
+      },
+      {
+        "surface": "Whoever",
+        "lemma": "kol"
       },
       {
         "surface": "touches",
@@ -840,6 +952,10 @@
     ],
     "32": [
       {
+        "surface": "When",
+        "lemma": "kol"
+      },
+      {
         "surface": "dies",
         "lemma": "mavet"
       },
@@ -850,6 +966,10 @@
       {
         "surface": "that article becomes unclean",
         "lemma": "tame"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "article",
@@ -872,8 +992,16 @@
         "lemma": "saq"
       },
       {
+        "surface": "or any",
+        "lemma": "kol"
+      },
+      {
         "surface": "implement",
         "lemma": "keli"
+      },
+      {
+        "surface": "used",
+        "lemma": "asah"
       },
       {
         "surface": "for work",
@@ -902,12 +1030,20 @@
         "lemma": "naphal"
       },
       {
+        "surface": "a",
+        "lemma": "kol"
+      },
+      {
         "surface": "clay",
         "lemma": "cheres"
       },
       {
         "surface": "pot",
         "lemma": "keli"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "in",
@@ -924,12 +1060,20 @@
     ],
     "34": [
       {
+        "surface": "Any",
+        "lemma": "kol"
+      },
+      {
         "surface": "vvv",
         "lemma": "akhal"
       },
       {
         "surface": "food",
         "lemma": "okhel"
+      },
+      {
+        "surface": "coming",
+        "lemma": "bo"
       },
       {
         "surface": "with water from that pot",
@@ -940,8 +1084,16 @@
         "lemma": "tame"
       },
       {
+        "surface": "and any",
+        "lemma": "kol"
+      },
+      {
         "surface": "drink",
         "lemma": "shatah"
+      },
+      {
+        "surface": "in such a",
+        "lemma": "kol"
       },
       {
         "surface": "container",
@@ -953,6 +1105,10 @@
       }
     ],
     "35": [
+      {
+        "surface": "Anything",
+        "lemma": "kol"
+      },
       {
         "surface": "one of their carcasses",
         "lemma": "nevelah"
@@ -982,6 +1138,10 @@
         "lemma": "tame"
       },
       {
+        "surface": "and will remain",
+        "lemma": "hayah"
+      },
+      {
         "surface": "unclean",
         "lemma": "tame"
       }
@@ -1006,6 +1166,10 @@
       {
         "surface": "water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "will remain",
+        "lemma": "hayah"
       },
       {
         "surface": "clean",
@@ -1034,6 +1198,10 @@
         "lemma": "naphal"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "seed",
         "lemma": "zera"
       },
@@ -1050,6 +1218,10 @@
       {
         "surface": "water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "has been put",
+        "lemma": "natan"
       },
       {
         "surface": "the seed",
@@ -1150,6 +1322,10 @@
     ],
     "41": [
       {
+        "surface": "Every",
+        "lemma": "kol"
+      },
+      {
         "surface": "creature",
         "lemma": "sherets"
       },
@@ -1166,11 +1342,19 @@
         "lemma": "sheqets"
       },
       {
+        "surface": "must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be eaten",
         "lemma": "akhal"
       }
     ],
     "42": [
+      {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
       {
         "surface": "eat",
         "lemma": "akhal"
@@ -1188,12 +1372,20 @@
         "lemma": "erets"
       },
       {
+        "surface": "whether",
+        "lemma": "kol"
+      },
+      {
         "surface": "it crawls",
         "lemma": "halakh"
       },
       {
         "surface": "its belly",
         "lemma": "gachon"
+      },
+      {
+        "surface": "or",
+        "lemma": "kol"
       },
       {
         "surface": "walks",
@@ -1218,6 +1410,10 @@
     ],
     "43": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "defile",
         "lemma": "shaqats"
       },
@@ -1226,8 +1422,16 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "by any",
+        "lemma": "kol"
+      },
+      {
         "surface": "crawling creature",
         "lemma": "sherets"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "become unclean",
@@ -1252,6 +1456,10 @@
         "lemma": "qadash"
       },
       {
+        "surface": "and be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "holy",
         "lemma": "qadosh"
       },
@@ -1260,12 +1468,20 @@
         "lemma": "qadosh"
       },
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "defile",
         "lemma": "tame"
       },
       {
         "surface": "yourselves",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "by any",
+        "lemma": "kol"
       },
       {
         "surface": "creature",
@@ -1298,8 +1514,16 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "so that I would be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "therefore be",
+        "lemma": "hayah"
       },
       {
         "surface": "holy",
@@ -1324,6 +1548,10 @@
         "lemma": "oph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "living",
         "lemma": "chay"
       },
@@ -1338,6 +1566,10 @@
       {
         "surface": "in the water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "creatures",
@@ -1384,12 +1616,16 @@
       {
         "surface": "and those",
         "lemma": "chay"
+      },
+      {
+        "surface": "may not",
+        "lemma": "lo"
       }
     ]
   },
   "themeLemmas": [
+    "kol",
     "tame",
-    "akhal",
-    "nevelah"
+    "akhal"
   ]
 }

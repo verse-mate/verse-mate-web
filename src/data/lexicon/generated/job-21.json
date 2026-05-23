@@ -16,8 +16,16 @@
     ],
     "2": [
       {
+        "surface": "Listen carefully",
+        "lemma": "shama"
+      },
+      {
         "surface": "to my words",
         "lemma": "millah"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "your consolation to me",
@@ -60,6 +68,10 @@
         "lemma": "maddua"
       },
       {
+        "surface": "should I not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be impatient",
         "lemma": "qatser"
       }
@@ -87,6 +99,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "When",
+        "lemma": "im"
+      },
       {
         "surface": "I remember",
         "lemma": "zakhar"
@@ -166,6 +182,10 @@
         "lemma": "pachad"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "rod of punishment",
         "lemma": "shevet"
       },
@@ -184,6 +204,10 @@
         "lemma": "avar"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "fail",
         "lemma": "gaal"
       },
@@ -194,6 +218,10 @@
       {
         "surface": "bear calves",
         "lemma": "palat"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "lo"
       },
       {
         "surface": "miscarry",
@@ -276,12 +304,20 @@
     ],
     "14": [
       {
+        "surface": "Yet they say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to God",
         "lemma": "el"
       },
       {
         "surface": "Leave us alone",
         "lemma": "sur"
+      },
+      {
+        "surface": "For we have no",
+        "lemma": "lo"
       },
       {
         "surface": "desire",
@@ -324,12 +360,12 @@
     ],
     "16": [
       {
-        "surface": "Still",
-        "lemma": "hen"
-      },
-      {
         "surface": "their prosperity is",
         "lemma": "tuv"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "in their own hands",
@@ -370,6 +406,10 @@
         "lemma": "ed"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "Does God, in His anger",
         "lemma": "aph"
       },
@@ -383,6 +423,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "Are",
+        "lemma": "hayah"
+      },
       {
         "surface": "they like straw",
         "lemma": "teven"
@@ -438,6 +482,10 @@
       {
         "surface": "Let his eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "his own destruction",
@@ -518,6 +566,10 @@
         "lemma": "etsem"
       },
       {
+        "surface": "completely",
+        "lemma": "kol"
+      },
+      {
         "surface": "secure",
         "lemma": "shalanan"
       },
@@ -562,6 +614,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "having never",
+        "lemma": "lo"
+      },
+      {
         "surface": "tasted",
         "lemma": "akhal"
       },
@@ -594,10 +650,6 @@
     ],
     "27": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "I know",
         "lemma": "yada"
       },
@@ -615,6 +667,10 @@
       }
     ],
     "28": [
+      {
+        "surface": "you say",
+        "lemma": "amar"
+      },
       {
         "surface": "Where",
         "lemma": "ayyeh"
@@ -646,6 +702,10 @@
     ],
     "29": [
       {
+        "surface": "Have you never",
+        "lemma": "lo"
+      },
+      {
         "surface": "asked",
         "lemma": "shaal"
       },
@@ -656,6 +716,10 @@
       {
         "surface": "the roads",
         "lemma": "derekh"
+      },
+      {
+        "surface": "Do you not",
+        "lemma": "lo"
       },
       {
         "surface": "accept",
@@ -720,6 +784,10 @@
       {
         "surface": "repays",
         "lemma": "salem"
+      },
+      {
+        "surface": "has done",
+        "lemma": "asah"
       }
     ],
     "32": [
@@ -752,6 +820,10 @@
       {
         "surface": "are sweet",
         "lemma": "mataq"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
       },
       {
         "surface": "follows",
@@ -802,8 +874,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "rasah",
-    "mah",
-    "paneh"
+    "mah"
   ]
 }

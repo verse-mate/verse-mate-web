@@ -44,6 +44,10 @@
       {
         "surface": "a man",
         "lemma": "ish"
+      },
+      {
+        "surface": "she said",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -64,8 +68,16 @@
         "lemma": "hevel"
       },
       {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Abel",
         "lemma": "hevel"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "a keeper",
@@ -102,6 +114,10 @@
         "lemma": "qayin"
       },
       {
+        "surface": "brought",
+        "lemma": "bo"
+      },
+      {
         "surface": "some of the fruit",
         "lemma": "peri"
       },
@@ -122,6 +138,10 @@
       {
         "surface": "while Abel",
         "lemma": "hevel"
+      },
+      {
+        "surface": "brought",
+        "lemma": "bo"
       },
       {
         "surface": "the best portions",
@@ -153,6 +173,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "He had no",
+        "lemma": "lo"
+      },
       {
         "surface": "regard",
         "lemma": "shaah"
@@ -196,6 +220,10 @@
         "lemma": "charah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -218,12 +246,28 @@
     ],
     "7": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "you do what is right",
         "lemma": "yatav"
       },
       {
+        "surface": "will",
+        "lemma": "lo"
+      },
+      {
+        "surface": "you not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be accepted",
         "lemma": "seet"
+      },
+      {
+        "surface": "But if",
+        "lemma": "im"
       },
       {
         "surface": "you refuse to do what is right",
@@ -256,12 +300,24 @@
         "lemma": "qayin"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "his brother",
         "lemma": "ach"
       },
       {
         "surface": "Abel, “Let us go out to the field.”",
         "lemma": "hevel"
+      },
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "while they were",
+        "lemma": "hayah"
       },
       {
         "surface": "in the field",
@@ -294,6 +350,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Cain",
         "lemma": "qayin"
       },
@@ -310,8 +370,16 @@
         "lemma": "hevel"
       },
       {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
+      },
+      {
+        "surface": "he answered",
+        "lemma": "amar"
       },
       {
         "surface": "my brother’s",
@@ -326,6 +394,14 @@
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "have you done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "replied the LORD",
+        "lemma": "amar"
       },
       {
         "surface": "The voice",
@@ -396,12 +472,24 @@
         "lemma": "adamah"
       },
       {
+        "surface": "it will} no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "yasaph"
       },
       {
+        "surface": "yield",
+        "lemma": "natan"
+      },
+      {
         "surface": "its produce",
         "lemma": "koach"
+      },
+      {
+        "surface": "You will be",
+        "lemma": "hayah"
       },
       {
         "surface": "a fugitive",
@@ -422,6 +510,10 @@
         "lemma": "qayin"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -439,10 +531,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -468,6 +556,10 @@
         "lemma": "satar"
       },
       {
+        "surface": "I {will} be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a fugitive",
         "lemma": "nua"
       },
@@ -478,6 +570,14 @@
       {
         "surface": "on the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "and",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "whoever",
+        "lemma": "kol"
       },
       {
         "surface": "finds me",
@@ -494,8 +594,16 @@
         "lemma": "ken"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "If anyone",
+        "lemma": "kol"
       },
       {
         "surface": "slays",
@@ -548,12 +656,20 @@
         "lemma": "qayin"
       },
       {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from the presence",
         "lemma": "paneh"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and settled",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -598,12 +714,20 @@
         "lemma": "chanokh"
       },
       {
+        "surface": "Then",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Cain built",
         "lemma": "banah"
       },
       {
         "surface": "a city",
         "lemma": "ir"
+      },
+      {
+        "surface": "and named",
+        "lemma": "qara"
       },
       {
         "surface": "it",
@@ -728,6 +852,18 @@
         "lemma": "yaval"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
+        "surface": "of those who dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in tents",
         "lemma": "ohel"
       },
@@ -748,6 +884,18 @@
       {
         "surface": "was Jubal",
         "lemma": "yuval"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "who play",
@@ -784,6 +932,10 @@
         "lemma": "latash"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "implement",
         "lemma": "choresh"
       },
@@ -818,6 +970,10 @@
         "lemma": "lemekh"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to his wives",
         "lemma": "ishshah"
       },
@@ -828,6 +984,10 @@
       {
         "surface": "and Zillah",
         "lemma": "tsillah"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
       },
       {
         "surface": "my voice",
@@ -922,6 +1082,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "and named",
+        "lemma": "qara"
+      },
+      {
         "surface": "him",
         "lemma": "shem"
       },
@@ -976,6 +1140,10 @@
         "lemma": "yalad"
       },
       {
+        "surface": "and he called",
+        "lemma": "qara"
+      },
+      {
         "surface": "him",
         "lemma": "shem"
       },
@@ -986,6 +1154,10 @@
       {
         "surface": "men began",
         "lemma": "chalal"
+      },
+      {
+        "surface": "to call upon",
+        "lemma": "qara"
       },
       {
         "surface": "the name",
@@ -1000,6 +1172,6 @@
   "themeLemmas": [
     "qayin",
     "yalad",
-    "hevel"
+    "hayah"
   ]
 }

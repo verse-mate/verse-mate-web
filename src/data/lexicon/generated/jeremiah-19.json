@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Go",
         "lemma": "halakh"
       },
@@ -52,6 +56,10 @@
     ],
     "2": [
       {
+        "surface": "and go",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the Valley",
         "lemma": "gay"
       },
@@ -72,6 +80,10 @@
         "lemma": "shaar"
       },
       {
+        "surface": "Proclaim",
+        "lemma": "qara"
+      },
+      {
         "surface": "there",
         "lemma": "sham"
       },
@@ -85,6 +97,14 @@
       }
     ],
     "3": [
+      {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
       {
         "surface": "the word",
         "lemma": "davar"
@@ -100,6 +120,10 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "and residents",
+        "lemma": "yashav"
       },
       {
         "surface": "of Jerusalem",
@@ -126,6 +150,14 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I am going to bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "such disaster",
         "lemma": "ra"
       },
@@ -136,6 +168,14 @@
       {
         "surface": "the ears",
         "lemma": "ozen"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who hear of it",
+        "lemma": "shama"
       },
       {
         "surface": "will ring",
@@ -168,12 +208,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "nor their fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "nor the kings",
         "lemma": "melekh"
       },
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "have ever",
+        "lemma": "lo"
       },
       {
         "surface": "known",
@@ -230,12 +278,20 @@
         "lemma": "baal"
       },
       {
+        "surface": "I never",
+        "lemma": "lo"
+      },
+      {
         "surface": "commanded",
         "lemma": "tsavah"
       },
       {
         "surface": "or mentioned",
         "lemma": "davar"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "did it even enter",
@@ -252,12 +308,12 @@
         "lemma": "ken"
       },
       {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the days",
         "lemma": "yom"
+      },
+      {
+        "surface": "are coming",
+        "lemma": "bo"
       },
       {
         "surface": "declares",
@@ -272,8 +328,16 @@
         "lemma": "maqom"
       },
       {
+        "surface": "will no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
+      },
+      {
+        "surface": "be called",
+        "lemma": "qara"
       },
       {
         "surface": "Topheth",
@@ -346,6 +410,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "and I will give",
+        "lemma": "natan"
+      },
+      {
         "surface": "their carcasses",
         "lemma": "nevelah"
       },
@@ -388,6 +456,10 @@
         "lemma": "shereqah"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "who pass",
         "lemma": "avar"
       },
@@ -398,6 +470,10 @@
       {
         "surface": "and will scoff",
         "lemma": "sharaq"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "her wounds",
@@ -486,6 +562,10 @@
     ],
     "11": [
       {
+        "surface": "and you are to proclaim",
+        "lemma": "amar"
+      },
+      {
         "surface": "that this is what",
         "lemma": "koh"
       },
@@ -496,6 +576,10 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "I will shatter",
@@ -524,6 +608,10 @@
       {
         "surface": "can",
         "lemma": "yakhol"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
       },
       {
         "surface": "again",
@@ -560,8 +648,16 @@
         "lemma": "ken"
       },
       {
+        "surface": "I will do",
+        "lemma": "asah"
+      },
+      {
         "surface": "place",
         "lemma": "maqom"
+      },
+      {
+        "surface": "and to its residents",
+        "lemma": "yashav"
       },
       {
         "surface": "declares",
@@ -570,6 +666,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "I will make",
+        "lemma": "natan"
       },
       {
         "surface": "city",
@@ -602,6 +702,10 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "defiled",
         "lemma": "tame"
       },
@@ -614,6 +718,10 @@
         "lemma": "tophet"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the houses",
         "lemma": "bet"
       },
@@ -624,6 +732,10 @@
       {
         "surface": "they burned incense",
         "lemma": "qatar"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "the host",
@@ -654,6 +766,10 @@
       {
         "surface": "Then Jeremiah",
         "lemma": "yirmeyah"
+      },
+      {
+        "surface": "returned",
+        "lemma": "bo"
       },
       {
         "surface": "from Topheth",
@@ -688,6 +804,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and proclaimed",
+        "lemma": "amar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       }
@@ -714,16 +838,28 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "Behold",
-        "lemma": "hen"
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I am about to bring",
+        "lemma": "bo"
       },
       {
         "surface": "city",
         "lemma": "ir"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the villages around it",
         "lemma": "ir"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "disaster",
@@ -746,6 +882,10 @@
         "lemma": "bilti"
       },
       {
+        "surface": "to heed",
+        "lemma": "shama"
+      },
+      {
         "surface": "My words",
         "lemma": "davar"
       }
@@ -753,7 +893,7 @@
   },
   "themeLemmas": [
     "maqom",
-    "tophet",
-    "yehudah"
+    "kol",
+    "amar"
   ]
 }

@@ -72,18 +72,38 @@
         "lemma": "esar"
       },
       {
+        "surface": "he must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "break",
         "lemma": "chalal"
       },
       {
         "surface": "his word",
         "lemma": "davar"
+      },
+      {
+        "surface": "he must do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "he has promised",
+        "lemma": "yatsa"
       }
     ],
     "3": [
       {
         "surface": "a woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "in her father’s",
+        "lemma": "av"
       },
       {
         "surface": "house",
@@ -116,6 +136,14 @@
     ],
     "4": [
       {
+        "surface": "and her father",
+        "lemma": "av"
+      },
+      {
+        "surface": "hears about",
+        "lemma": "shama"
+      },
+      {
         "surface": "her vow",
         "lemma": "neder"
       },
@@ -124,12 +152,24 @@
         "lemma": "esar"
       },
       {
+        "surface": "but",
+        "lemma": "av"
+      },
+      {
         "surface": "says nothing",
         "lemma": "charash"
       },
       {
+        "surface": "then all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the vows",
         "lemma": "neder"
+      },
+      {
+        "surface": "or",
+        "lemma": "kol"
       },
       {
         "surface": "pledges",
@@ -150,12 +190,32 @@
     ],
     "5": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "her father",
+        "lemma": "av"
+      },
+      {
         "surface": "prohibits her",
         "lemma": "nu"
       },
       {
         "surface": "on the day",
         "lemma": "yom"
+      },
+      {
+        "surface": "he hears",
+        "lemma": "shama"
+      },
+      {
+        "surface": "about it",
+        "lemma": "kol"
+      },
+      {
+        "surface": "then none",
+        "lemma": "lo"
       },
       {
         "surface": "of the vows",
@@ -186,11 +246,23 @@
         "lemma": "salach"
       },
       {
+        "surface": "her father",
+        "lemma": "av"
+      },
+      {
         "surface": "has prohibited her",
         "lemma": "nu"
       }
     ],
     "6": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "a woman marries",
+        "lemma": "hayah"
+      },
       {
         "surface": "while under a vow",
         "lemma": "neder"
@@ -212,6 +284,10 @@
       {
         "surface": "and her husband",
         "lemma": "ish"
+      },
+      {
+        "surface": "hears of it",
+        "lemma": "shama"
       },
       {
         "surface": "but says nothing",
@@ -244,6 +320,10 @@
     ],
     "8": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "her husband",
         "lemma": "ish"
       },
@@ -254,6 +334,10 @@
       {
         "surface": "when",
         "lemma": "yom"
+      },
+      {
+        "surface": "he hears of it",
+        "lemma": "shama"
       },
       {
         "surface": "he nullifies",
@@ -286,6 +370,10 @@
     ],
     "9": [
       {
+        "surface": "Every",
+        "lemma": "kol"
+      },
+      {
         "surface": "vow",
         "lemma": "neder"
       },
@@ -307,6 +395,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "a woman in her husband’s",
         "lemma": "ish"
@@ -338,16 +430,32 @@
         "lemma": "ish"
       },
       {
+        "surface": "hears of it",
+        "lemma": "shama"
+      },
+      {
         "surface": "but says nothing",
         "lemma": "charash"
+      },
+      {
+        "surface": "and does not",
+        "lemma": "lo"
       },
       {
         "surface": "prohibit her",
         "lemma": "nu"
       },
       {
+        "surface": "then all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the vows",
         "lemma": "neder"
+      },
+      {
+        "surface": "or",
+        "lemma": "kol"
       },
       {
         "surface": "pledges",
@@ -368,6 +476,10 @@
     ],
     "12": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "her husband",
         "lemma": "ish"
       },
@@ -378,6 +490,14 @@
       {
         "surface": "on the day",
         "lemma": "yom"
+      },
+      {
+        "surface": "he hears of them",
+        "lemma": "shama"
+      },
+      {
+        "surface": "then nothing",
+        "lemma": "kol"
       },
       {
         "surface": "that came from",
@@ -430,8 +550,16 @@
         "lemma": "parar"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "vow",
         "lemma": "neder"
+      },
+      {
+        "surface": "or any",
+        "lemma": "kol"
       },
       {
         "surface": "sworn",
@@ -451,6 +579,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "her husband",
         "lemma": "ish"
@@ -472,6 +604,10 @@
         "lemma": "qamay"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the vows",
         "lemma": "neder"
       },
@@ -490,9 +626,17 @@
       {
         "surface": "on the day",
         "lemma": "yom"
+      },
+      {
+        "surface": "he heard about them",
+        "lemma": "shama"
       }
     ],
     "15": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "he nullifies",
         "lemma": "parar"
@@ -500,6 +644,10 @@
       {
         "surface": "after",
         "lemma": "achar"
+      },
+      {
+        "surface": "he hears of them",
+        "lemma": "shama"
       },
       {
         "surface": "then he will bear",
@@ -544,8 +692,16 @@
         "lemma": "bayin"
       },
       {
+        "surface": "a father",
+        "lemma": "av"
+      },
+      {
         "surface": "and a young daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "still in his",
+        "lemma": "av"
       },
       {
         "surface": "home",
@@ -555,7 +711,7 @@
   },
   "themeLemmas": [
     "neder",
-    "esar",
-    "asar"
+    "kol",
+    "esar"
   ]
 }

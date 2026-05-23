@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "understand",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "the last",
         "lemma": "eschatos"
       },
@@ -30,6 +34,10 @@
       {
         "surface": "men",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "will be",
+        "lemma": "eimi"
       },
       {
         "surface": "lovers of themselves",
@@ -122,6 +130,10 @@
     ],
     "5": [
       {
+        "surface": "having",
+        "lemma": "echo"
+      },
+      {
         "surface": "a form",
         "lemma": "morphosis"
       },
@@ -143,6 +155,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "They are",
+        "lemma": "eimi"
+      },
       {
         "surface": "worm their way",
         "lemma": "enduno"
@@ -192,6 +208,14 @@
       {
         "surface": "never",
         "lemma": "medepote"
+      },
+      {
+        "surface": "able",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "to come",
+        "lemma": "erchomai"
       },
       {
         "surface": "a knowledge",
@@ -266,8 +290,16 @@
         "lemma": "anoia"
       },
       {
+        "surface": "will be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "plain",
         "lemma": "ekdelos"
+      },
+      {
+        "surface": "to everyone",
+        "lemma": "pas"
       }
     ],
     "10": [
@@ -318,6 +350,10 @@
         "lemma": "hoios"
       },
       {
+        "surface": "came upon",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "Antioch",
         "lemma": "antiocheia"
       },
@@ -348,9 +384,21 @@
       {
         "surface": "rescued",
         "lemma": "rhuomai"
+      },
+      {
+        "surface": "all of them",
+        "lemma": "pas"
       }
     ],
     "12": [
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "desire",
+        "lemma": "thelo"
+      },
       {
         "surface": "to live",
         "lemma": "zao"
@@ -416,6 +464,14 @@
         "lemma": "pistoo"
       },
       {
+        "surface": "since you know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "whom",
+        "lemma": "tis"
+      },
+      {
         "surface": "you have learned them",
         "lemma": "manthano"
       }
@@ -426,12 +482,20 @@
         "lemma": "brephos"
       },
       {
+        "surface": "you have known",
+        "lemma": "eido"
+      },
+      {
         "surface": "Holy",
         "lemma": "hieros"
       },
       {
         "surface": "Scriptures",
         "lemma": "gramma"
+      },
+      {
+        "surface": "are able",
+        "lemma": "dunamai"
       },
       {
         "surface": "to make you wise",
@@ -455,6 +519,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "All",
+        "lemma": "pas"
+      },
       {
         "surface": "Scripture is",
         "lemma": "graphe"
@@ -498,12 +566,20 @@
         "lemma": "theos"
       },
       {
+        "surface": "may be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "complete",
         "lemma": "artios"
       },
       {
         "surface": "fully equipped",
         "lemma": "exartizo"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "good",

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "About that time there was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a great",
         "lemma": "gadol"
       },
@@ -31,6 +35,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "were saying",
+        "lemma": "amar"
+      },
       {
         "surface": "and our sons",
         "lemma": "ben"
@@ -62,6 +70,10 @@
     ],
     "3": [
       {
+        "surface": "were saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "are mortgaging",
         "lemma": "arav"
       },
@@ -91,6 +103,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "were saying",
+        "lemma": "amar"
+      },
       {
         "surface": "We have borrowed",
         "lemma": "lavah"
@@ -176,6 +192,10 @@
     ],
     "6": [
       {
+        "surface": "I heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "their outcry",
         "lemma": "zeaqah"
       },
@@ -214,6 +234,10 @@
         "lemma": "sagan"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "vvv",
         "lemma": "ish"
       },
@@ -230,6 +254,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "So I called",
+        "lemma": "natan"
+      },
+      {
         "surface": "a large",
         "lemma": "gadol"
       },
@@ -239,6 +267,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
       {
         "surface": "have done our best",
         "lemma": "day"
@@ -284,14 +316,34 @@
         "lemma": "matsa"
       },
       {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
         "surface": "to say",
         "lemma": "davar"
       }
     ],
     "9": [
       {
+        "surface": "So I continued",
+        "lemma": "amar"
+      },
+      {
+        "surface": "are doing",
+        "lemma": "asah"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "right",
         "lemma": "tov"
+      },
+      {
+        "surface": "Shouldn’t",
+        "lemma": "lo"
       },
       {
         "surface": "you walk",
@@ -340,10 +392,6 @@
         "lemma": "dagan"
       },
       {
-        "surface": "Please",
-        "lemma": "na"
-      },
-      {
         "surface": "let us stop",
         "lemma": "azav"
       },
@@ -354,8 +402,8 @@
     ],
     "11": [
       {
-        "surface": "Please",
-        "lemma": "na"
+        "surface": "restore",
+        "lemma": "shuv"
       },
       {
         "surface": "immediately",
@@ -404,8 +452,32 @@
     ],
     "12": [
       {
+        "surface": "We will restore it",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "they replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "and will require",
         "lemma": "baqash"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "We will do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "So I summoned",
+        "lemma": "qara"
       },
       {
         "surface": "the priests",
@@ -414,6 +486,10 @@
       {
         "surface": "and required of the nobles and officials an oath that they",
         "lemma": "shava"
+      },
+      {
+        "surface": "would do",
+        "lemma": "asah"
       },
       {
         "surface": "what they had promised",
@@ -428,6 +504,10 @@
       {
         "surface": "the folds of my robe",
         "lemma": "chotsen"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "May God",
@@ -450,8 +530,16 @@
         "lemma": "yegia"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "man",
         "lemma": "ish"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "keep",
@@ -462,6 +550,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "May such a man be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "shaken out",
         "lemma": "naar"
       },
@@ -470,8 +562,16 @@
         "lemma": "req"
       },
       {
+        "surface": "The whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "assembly",
         "lemma": "qahal"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -488,6 +588,10 @@
       {
         "surface": "And the people",
         "lemma": "am"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
       },
       {
         "surface": "as they had promised",
@@ -510,6 +614,10 @@
       {
         "surface": "appointed me",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "to be",
+        "lemma": "hayah"
       },
       {
         "surface": "their governor",
@@ -622,6 +730,14 @@
         "lemma": "am"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
         "surface": "this",
         "lemma": "ken"
       },
@@ -652,6 +768,10 @@
         "lemma": "chomah"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my servants",
         "lemma": "naar"
       },
@@ -666,6 +786,10 @@
       {
         "surface": "the work",
         "lemma": "melakhah"
+      },
+      {
+        "surface": "we did not",
+        "lemma": "lo"
       },
       {
         "surface": "acquire",
@@ -692,6 +816,10 @@
       {
         "surface": "my table",
         "lemma": "shulchan"
+      },
+      {
+        "surface": "besides the guests",
+        "lemma": "bo"
       },
       {
         "surface": "the surrounding",
@@ -736,6 +864,10 @@
         "lemma": "tsippor"
       },
       {
+        "surface": "were prepared",
+        "lemma": "asah"
+      },
+      {
         "surface": "and once every",
         "lemma": "bayin"
       },
@@ -752,8 +884,16 @@
         "lemma": "ravah"
       },
       {
+        "surface": "of all kinds",
+        "lemma": "kol"
+      },
+      {
         "surface": "of wine was provided",
         "lemma": "yayin"
+      },
+      {
+        "surface": "But I did not",
+        "lemma": "lo"
       },
       {
         "surface": "demand",
@@ -794,14 +934,22 @@
         "lemma": "elohim"
       },
       {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "I have done",
+        "lemma": "asah"
+      },
+      {
         "surface": "people",
         "lemma": "am"
       }
     ]
   },
   "themeLemmas": [
-    "ach",
-    "naar",
-    "saday"
+    "amar",
+    "lo",
+    "asah"
   ]
 }

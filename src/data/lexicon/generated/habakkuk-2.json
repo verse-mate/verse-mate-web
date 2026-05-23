@@ -26,6 +26,10 @@
         "lemma": "tsaphah"
       },
       {
+        "surface": "to see",
+        "lemma": "raah"
+      },
+      {
         "surface": "what",
         "lemma": "mah"
       },
@@ -36,6 +40,10 @@
       {
         "surface": "and how",
         "lemma": "mah"
+      },
+      {
+        "surface": "I should answer",
+        "lemma": "shuv"
       },
       {
         "surface": "corrected",
@@ -68,6 +76,10 @@
         "lemma": "luach"
       },
       {
+        "surface": "a herald",
+        "lemma": "qara"
+      },
+      {
         "surface": "may run",
         "lemma": "ruts"
       }
@@ -94,8 +106,16 @@
         "lemma": "qets"
       },
       {
+        "surface": "and does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "lie",
         "lemma": "kazav"
+      },
+      {
+        "surface": "Though",
+        "lemma": "im"
       },
       {
         "surface": "it lingers",
@@ -106,15 +126,19 @@
         "lemma": "chakhah"
       },
       {
+        "surface": "it will surely come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "delay",
         "lemma": "achar"
       }
     ],
     "4": [
-      {
-        "surface": "Look at",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the proud one",
         "lemma": "aphal"
@@ -122,6 +146,10 @@
       {
         "surface": "his soul",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
       },
       {
         "surface": "upright",
@@ -158,6 +186,10 @@
         "lemma": "gaver"
       },
       {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
         "surface": "at rest",
         "lemma": "navah"
       },
@@ -178,12 +210,20 @@
         "lemma": "mavet"
       },
       {
+        "surface": "is never",
+        "lemma": "lo"
+      },
+      {
         "surface": "satisfied",
         "lemma": "sava"
       },
       {
         "surface": "He gathers",
         "lemma": "asaph"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the nations",
@@ -194,11 +234,23 @@
         "lemma": "qavats"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the peoples",
         "lemma": "am"
       }
     ],
     "6": [
+      {
+        "surface": "Will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "take up",
         "lemma": "nasa"
@@ -206,6 +258,10 @@
       {
         "surface": "a taunt",
         "lemma": "mashal"
+      },
+      {
+        "surface": "speaking",
+        "lemma": "amar"
       },
       {
         "surface": "with mockery",
@@ -216,12 +272,12 @@
         "lemma": "chidah"
       },
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to him who amasses",
         "lemma": "ravah"
+      },
+      {
+        "surface": "what is not his",
+        "lemma": "lo"
       },
       {
         "surface": "and makes himself rich",
@@ -237,6 +293,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "Will not",
+        "lemma": "lo"
+      },
       {
         "surface": "your creditors",
         "lemma": "nashakh"
@@ -258,6 +318,10 @@
         "lemma": "yaqats"
       },
       {
+        "surface": "Then you will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "their prey",
         "lemma": "meshissah"
       }
@@ -274,6 +338,10 @@
       {
         "surface": "nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "kol"
       },
       {
         "surface": "the remnant",
@@ -306,13 +374,17 @@
       {
         "surface": "the city",
         "lemma": "qiryah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "their dwellers",
+        "lemma": "yashav"
       }
     ],
     "9": [
-      {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
       {
         "surface": "to him who builds",
         "lemma": "batsa"
@@ -416,10 +488,6 @@
     ],
     "12": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to him who builds",
         "lemma": "banah"
       },
@@ -446,8 +514,8 @@
     ],
     "13": [
       {
-        "surface": "indeed",
-        "lemma": "hinneh"
+        "surface": "Is it not",
+        "lemma": "lo"
       },
       {
         "surface": "the LORD",
@@ -525,10 +593,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
       {
         "surface": "to him who gives drink",
         "lemma": "shaqah"
@@ -648,6 +712,14 @@
       {
         "surface": "the city",
         "lemma": "qiryah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "their dwellers",
+        "lemma": "yashav"
       }
     ],
     "18": [
@@ -696,6 +768,10 @@
         "lemma": "yetser"
       },
       {
+        "surface": "he makes",
+        "lemma": "asah"
+      },
+      {
         "surface": "idols",
         "lemma": "elil"
       },
@@ -706,8 +782,8 @@
     ],
     "19": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
+        "surface": "to him who says",
+        "lemma": "amar"
       },
       {
         "surface": "to wood",
@@ -734,10 +810,6 @@
         "lemma": "yara"
       },
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "overlaid",
         "lemma": "taphas"
       },
@@ -760,6 +832,10 @@
       {
         "surface": "in",
         "lemma": "qerev"
+      },
+      {
+        "surface": "it at all",
+        "lemma": "kol"
       }
     ],
     "20": [
@@ -776,6 +852,10 @@
         "lemma": "hekhal"
       },
       {
+        "surface": "let all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -790,8 +870,8 @@
     ]
   },
   "themeLemmas": [
-    "hoy",
-    "qiryah",
-    "nephesh"
+    "lo",
+    "kol",
+    "qiryah"
   ]
 }

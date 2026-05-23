@@ -70,6 +70,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "and He took",
+        "lemma": "bo"
+      },
+      {
         "surface": "there",
         "lemma": "sham"
       }
@@ -82,6 +90,10 @@
       {
         "surface": "of God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "He took me",
+        "lemma": "bo"
       },
       {
         "surface": "the land",
@@ -122,12 +134,12 @@
     ],
     "3": [
       {
-        "surface": "there",
-        "lemma": "sham"
+        "surface": "So He took",
+        "lemma": "bo"
       },
       {
-        "surface": "and I saw",
-        "lemma": "hinneh"
+        "surface": "there",
+        "lemma": "sham"
       },
       {
         "surface": "a man",
@@ -184,8 +196,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "look",
+        "lemma": "raah"
+      },
+      {
         "surface": "with your eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
       },
       {
         "surface": "with your ears",
@@ -194,6 +214,22 @@
       {
         "surface": "and pay attention",
         "lemma": "sum"
+      },
+      {
+        "surface": "to everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "am going to show you",
+        "lemma": "raah"
+      },
+      {
+        "surface": "is why",
+        "lemma": "raah"
+      },
+      {
+        "surface": "you have been brought",
+        "lemma": "bo"
       },
       {
         "surface": "here",
@@ -210,13 +246,17 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       }
     ],
     "5": [
-      {
-        "surface": "And I saw",
-        "lemma": "hinneh"
-      },
       {
         "surface": "a wall",
         "lemma": "chomah"
@@ -299,6 +339,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "Then he came",
+        "lemma": "bo"
+      },
       {
         "surface": "the gate",
         "lemma": "shaar"
@@ -644,6 +688,10 @@
     ],
     "14": [
       {
+        "surface": "Next he measured",
+        "lemma": "asah"
+      },
+      {
         "surface": "the gateposts",
         "lemma": "ayil"
       },
@@ -762,6 +810,10 @@
     ],
     "17": [
       {
+        "surface": "Then he brought me",
+        "lemma": "bo"
+      },
+      {
         "surface": "the outer",
         "lemma": "chitson"
       },
@@ -770,16 +822,16 @@
         "lemma": "chatser"
       },
       {
-        "surface": "and there",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "were chambers",
         "lemma": "lishkah"
       },
       {
         "surface": "and a pavement",
         "lemma": "ritspah"
+      },
+      {
+        "surface": "laid out",
+        "lemma": "asah"
       },
       {
         "surface": "all around",
@@ -938,6 +990,10 @@
         "lemma": "elam"
       },
       {
+        "surface": "all had",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the same measurements",
         "lemma": "middah"
       },
@@ -1090,10 +1146,6 @@
       {
         "surface": "the south side",
         "lemma": "darom"
-      },
-      {
-        "surface": "and I saw",
-        "lemma": "hinneh"
       },
       {
         "surface": "a gateway",
@@ -1260,6 +1312,10 @@
     ],
     "28": [
       {
+        "surface": "Next he brought me",
+        "lemma": "bo"
+      },
+      {
         "surface": "the inner",
         "lemma": "penimi"
       },
@@ -1420,6 +1476,10 @@
     ],
     "32": [
       {
+        "surface": "And he brought me",
+        "lemma": "bo"
+      },
+      {
         "surface": "the inner",
         "lemma": "penimi"
       },
@@ -1537,6 +1597,10 @@
       }
     ],
     "35": [
+      {
+        "surface": "Then he brought me",
+        "lemma": "bo"
+      },
       {
         "surface": "the north",
         "lemma": "tsaphon"
@@ -2119,6 +2183,10 @@
       }
     ],
     "48": [
+      {
+        "surface": "Then he brought me",
+        "lemma": "bo"
+      },
       {
         "surface": "the portico",
         "lemma": "ulam"

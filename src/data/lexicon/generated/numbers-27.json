@@ -132,11 +132,23 @@
         "lemma": "nasi"
       },
       {
+        "surface": "and the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       }
     ],
     "3": [
+      {
+        "surface": "Our father",
+        "lemma": "av"
+      },
       {
         "surface": "died",
         "lemma": "mut"
@@ -144,6 +156,14 @@
       {
         "surface": "in the wilderness",
         "lemma": "midbar"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "among",
@@ -174,6 +194,14 @@
         "lemma": "chet"
       },
       {
+        "surface": "and he had",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "sons",
         "lemma": "ben"
       }
@@ -186,6 +214,10 @@
       {
         "surface": "should the name",
         "lemma": "shem"
+      },
+      {
+        "surface": "of our father",
+        "lemma": "av"
       },
       {
         "surface": "disappear",
@@ -208,12 +240,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "Give",
+        "lemma": "natan"
+      },
+      {
         "surface": "property",
         "lemma": "achuzzah"
       },
       {
         "surface": "among",
         "lemma": "tavekh"
+      },
+      {
+        "surface": "our father’s",
+        "lemma": "av"
       },
       {
         "surface": "brothers",
@@ -248,6 +288,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "him",
         "lemma": "mosheh"
       }
@@ -270,6 +314,10 @@
         "lemma": "ken"
       },
       {
+        "surface": "You certainly must give",
+        "lemma": "natan"
+      },
+      {
         "surface": "property",
         "lemma": "achuzzah"
       },
@@ -282,12 +330,20 @@
         "lemma": "tavekh"
       },
       {
+        "surface": "their father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "brothers",
         "lemma": "ach"
       },
       {
         "surface": "and transfer",
         "lemma": "avar"
+      },
+      {
+        "surface": "father’s",
+        "lemma": "av"
       },
       {
         "surface": "inheritance",
@@ -334,12 +390,20 @@
     ],
     "9": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "he has no",
         "lemma": "ayin"
       },
       {
         "surface": "daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
       },
       {
         "surface": "his inheritance",
@@ -352,6 +416,10 @@
     ],
     "10": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "he has no",
         "lemma": "ayin"
       },
@@ -360,8 +428,16 @@
         "lemma": "ach"
       },
       {
+        "surface": "give",
+        "lemma": "natan"
+      },
+      {
         "surface": "his inheritance",
         "lemma": "nachalah"
+      },
+      {
+        "surface": "to his father’s",
+        "lemma": "av"
       },
       {
         "surface": "brothers",
@@ -370,12 +446,24 @@
     ],
     "11": [
       {
+        "surface": "And if",
+        "lemma": "im"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "has no",
         "lemma": "ayin"
       },
       {
         "surface": "brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
       },
       {
         "surface": "his inheritance",
@@ -396,6 +484,10 @@
       {
         "surface": "that he may take possession of it",
         "lemma": "yarash"
+      },
+      {
+        "surface": "This is to be",
+        "lemma": "hayah"
       },
       {
         "surface": "a statutory",
@@ -428,6 +520,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -444,8 +540,16 @@
         "lemma": "avarim"
       },
       {
+        "surface": "and see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "I have given",
+        "lemma": "natan"
       },
       {
         "surface": "the Israelites",
@@ -453,6 +557,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "After you have seen it",
+        "lemma": "raah"
+      },
       {
         "surface": "be gathered",
         "lemma": "asaph"
@@ -560,6 +668,10 @@
         "lemma": "ruach"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "flesh",
         "lemma": "basar"
       },
@@ -578,8 +690,24 @@
     ],
     "17": [
       {
+        "surface": "will go out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and come in",
+        "lemma": "bo"
+      },
+      {
         "surface": "before them",
         "lemma": "paneh"
+      },
+      {
+        "surface": "will lead them out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and bring them in",
+        "lemma": "bo"
       },
       {
         "surface": "so that the congregation",
@@ -588,6 +716,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "like sheep",
@@ -606,6 +742,10 @@
       {
         "surface": "And the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "Moses",
@@ -662,6 +802,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "and the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
@@ -676,8 +820,16 @@
     ],
     "20": [
       {
+        "surface": "Confer",
+        "lemma": "natan"
+      },
+      {
         "surface": "some of your authority",
         "lemma": "hod"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "congregation",
@@ -686,6 +838,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "will obey him",
+        "lemma": "shama"
       }
     ],
     "21": [
@@ -726,18 +882,38 @@
         "lemma": "peh"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
       },
       {
+        "surface": "the entire",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
+      },
+      {
+        "surface": "will go out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and come in",
+        "lemma": "bo"
       }
     ],
     "22": [
       {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
       },
       {
         "surface": "the LORD",
@@ -770,6 +946,10 @@
       {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "and the whole",
+        "lemma": "kol"
       },
       {
         "surface": "congregation",
@@ -810,6 +990,6 @@
   "themeLemmas": [
     "mosheh",
     "edah",
-    "ach"
+    "natan"
   ]
 }

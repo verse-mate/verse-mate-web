@@ -18,6 +18,10 @@
         "lemma": "david"
       },
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "my cry",
         "lemma": "rinnah"
       },
@@ -44,6 +48,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "I call out",
+        "lemma": "qara"
+      },
+      {
         "surface": "whenever my heart",
         "lemma": "lev"
       },
@@ -65,6 +73,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "You have been",
+        "lemma": "hayah"
+      },
       {
         "surface": "my refuge",
         "lemma": "machaseh"
@@ -118,12 +130,20 @@
     ],
     "5": [
       {
+        "surface": "have heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "my vows",
         "lemma": "neder"
       },
       {
         "surface": "O God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "You have given me",
+        "lemma": "natan"
       },
       {
         "surface": "the inheritance",
@@ -165,6 +185,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "May he sit enthroned",
+        "lemma": "yashav"
+      },
       {
         "surface": "in God’s",
         "lemma": "elohim"
@@ -231,7 +255,7 @@
   },
   "themeLemmas": [
     "shem",
-    "paneh",
-    "olam"
+    "shama",
+    "paneh"
   ]
 }

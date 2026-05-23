@@ -92,6 +92,10 @@
         "lemma": "yashar"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His work",
         "lemma": "maaseh"
       },
@@ -144,6 +148,14 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "were made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the stars",
         "lemma": "tsava"
       },
@@ -170,6 +182,10 @@
         "lemma": "yam"
       },
       {
+        "surface": "He puts",
+        "lemma": "natan"
+      },
+      {
         "surface": "the depths",
         "lemma": "tehom"
       },
@@ -179,6 +195,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Let all",
+        "lemma": "kol"
+      },
       {
         "surface": "the earth",
         "lemma": "erets"
@@ -192,6 +212,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "let all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of the world",
         "lemma": "tevel"
       },
@@ -201,6 +229,14 @@
       }
     ],
     "9": [
+      {
+        "surface": "spoke",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and it came to be",
+        "lemma": "hayah"
+      },
       {
         "surface": "commanded",
         "lemma": "tsavah"
@@ -310,6 +346,14 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "He sees",
+        "lemma": "raah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the sons",
         "lemma": "ben"
       },
@@ -320,12 +364,24 @@
     ],
     "14": [
       {
+        "surface": "From His dwelling",
+        "lemma": "yashav"
+      },
+      {
         "surface": "place",
         "lemma": "makhon"
       },
       {
         "surface": "He gazes",
         "lemma": "shagach"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who inhabit",
+        "lemma": "yashav"
       },
       {
         "surface": "the earth",
@@ -348,6 +404,10 @@
       {
         "surface": "He considers",
         "lemma": "bin"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "their works",
@@ -374,6 +434,10 @@
       {
         "surface": "army",
         "lemma": "chayil"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "warrior",
@@ -414,15 +478,15 @@
         "lemma": "chayil"
       },
       {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "save",
         "lemma": "malat"
       }
     ],
     "18": [
-      {
-        "surface": "Surely",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the eyes",
         "lemma": "ayin"
@@ -516,6 +580,10 @@
         "lemma": "chesed"
       },
       {
+        "surface": "rest",
+        "lemma": "hayah"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -526,8 +594,8 @@
     ]
   },
   "themeLemmas": [
-    "rov",
-    "chesed",
-    "yashar"
+    "kol",
+    "yashav",
+    "rov"
   ]
 }

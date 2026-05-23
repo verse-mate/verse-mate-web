@@ -10,6 +10,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "shepherding",
         "lemma": "beteqedharoim"
       },
@@ -50,6 +54,10 @@
         "lemma": "midbar"
       },
       {
+        "surface": "and came",
+        "lemma": "bo"
+      },
+      {
         "surface": "Horeb",
         "lemma": "chorev"
       },
@@ -72,6 +80,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "appeared",
+        "lemma": "raah"
+      },
+      {
         "surface": "in a blazing",
         "lemma": "labbah"
       },
@@ -86,6 +98,10 @@
       {
         "surface": "a bush",
         "lemma": "seneh"
+      },
+      {
+        "surface": "Moses saw",
+        "lemma": "raah"
       },
       {
         "surface": "the bush",
@@ -114,8 +130,16 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "thought",
+        "lemma": "amar"
+      },
+      {
         "surface": "I must go over",
         "lemma": "sur"
+      },
+      {
+        "surface": "and see",
+        "lemma": "raah"
       },
       {
         "surface": "marvelous",
@@ -134,6 +158,10 @@
         "lemma": "seneh"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "burning up",
         "lemma": "baar"
       }
@@ -144,12 +172,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "he had gone over",
         "lemma": "sur"
       },
       {
+        "surface": "to look",
+        "lemma": "raah"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "called out",
+        "lemma": "qara"
       },
       {
         "surface": "from within",
@@ -168,11 +208,19 @@
         "lemma": "mosheh"
       },
       {
-        "surface": "Here",
-        "lemma": "hinneh"
+        "surface": "I am",
+        "lemma": "amar"
+      },
+      {
+        "surface": "he answered",
+        "lemma": "amar"
       }
     ],
     "5": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "come",
         "lemma": "qarav"
@@ -180,6 +228,10 @@
       {
         "surface": "any closer",
         "lemma": "halom"
+      },
+      {
+        "surface": "God said",
+        "lemma": "amar"
       },
       {
         "surface": "Take off",
@@ -208,8 +260,16 @@
     ],
     "6": [
       {
+        "surface": "Then He said",
+        "lemma": "amar"
+      },
+      {
         "surface": "am the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of your father",
+        "lemma": "av"
       },
       {
         "surface": "the God",
@@ -266,6 +326,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I have indeed seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "the affliction",
         "lemma": "oni"
       },
@@ -276,6 +344,10 @@
       {
         "surface": "in Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "I have heard them",
+        "lemma": "shama"
       },
       {
         "surface": "crying out",
@@ -398,6 +470,14 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "has reached",
+        "lemma": "bo"
+      },
+      {
+        "surface": "seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "how severely",
         "lemma": "lachats"
       },
@@ -428,6 +508,10 @@
         "lemma": "paroh"
       },
       {
+        "surface": "to bring",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "My people",
         "lemma": "am"
       },
@@ -446,6 +530,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -462,6 +550,10 @@
         "lemma": "paroh"
       },
       {
+        "surface": "bring",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
       },
@@ -471,6 +563,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "God said",
+        "lemma": "amar"
+      },
       {
         "surface": "will be the sign",
         "lemma": "ot"
@@ -482,6 +582,10 @@
       {
         "surface": "When you have brought the people",
         "lemma": "am"
+      },
+      {
+        "surface": "out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of Egypt",
@@ -506,24 +610,40 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
       {
-        "surface": "Suppose",
-        "lemma": "hinneh"
+        "surface": "go",
+        "lemma": "bo"
       },
       {
         "surface": "the Israelites",
         "lemma": "ben"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "The God",
         "lemma": "elohim"
       },
       {
+        "surface": "of your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "has sent me",
         "lemma": "shalach"
+      },
+      {
+        "surface": "and they ask",
+        "lemma": "amar"
       },
       {
         "surface": "What",
@@ -536,6 +656,10 @@
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "should I tell",
+        "lemma": "amar"
       }
     ],
     "14": [
@@ -544,16 +668,36 @@
         "lemma": "elohim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "I AM",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "I AM",
+        "lemma": "hayah"
       },
       {
         "surface": "This is what",
         "lemma": "koh"
       },
       {
+        "surface": "you are to say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "I AM",
+        "lemma": "hayah"
       },
       {
         "surface": "has sent me",
@@ -570,8 +714,16 @@
         "lemma": "od"
       },
       {
+        "surface": "told",
+        "lemma": "amar"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "Say",
+        "lemma": "amar"
       },
       {
         "surface": "the Israelites",
@@ -584,6 +736,10 @@
       {
         "surface": "the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of your fathers",
+        "lemma": "av"
       },
       {
         "surface": "the God",
@@ -648,12 +804,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "The LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of your fathers",
+        "lemma": "av"
       },
       {
         "surface": "the God",
@@ -672,8 +836,20 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "has appeared",
+        "lemma": "raah"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "I have surely attended to",
         "lemma": "paqad"
+      },
+      {
+        "surface": "have seen what has been done",
+        "lemma": "asah"
       },
       {
         "surface": "in Egypt",
@@ -681,6 +857,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "And I have promised",
+        "lemma": "amar"
+      },
       {
         "surface": "to bring you up",
         "lemma": "alah"
@@ -740,8 +920,16 @@
     ],
     "18": [
       {
+        "surface": "The elders of Israel will listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "to what you say",
         "lemma": "qol"
+      },
+      {
+        "surface": "must go",
+        "lemma": "bo"
       },
       {
         "surface": "with them",
@@ -754,6 +942,10 @@
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and tell",
+        "lemma": "amar"
       },
       {
         "surface": "The LORD",
@@ -774,10 +966,6 @@
       {
         "surface": "Now",
         "lemma": "attah"
-      },
-      {
-        "surface": "please",
-        "lemma": "na"
       },
       {
         "surface": "let us take",
@@ -822,8 +1010,20 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "allow",
+        "lemma": "natan"
+      },
+      {
         "surface": "you to go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "unless",
+        "lemma": "lo"
       },
       {
         "surface": "a mighty hand compels him",
@@ -848,8 +1048,16 @@
         "lemma": "mitsri"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the wonders",
         "lemma": "pala"
+      },
+      {
+        "surface": "I will perform",
+        "lemma": "asah"
       },
       {
         "surface": "among them",
@@ -870,6 +1078,10 @@
     ],
     "21": [
       {
+        "surface": "And I will grant",
+        "lemma": "natan"
+      },
+      {
         "surface": "people",
         "lemma": "am"
       },
@@ -888,6 +1100,10 @@
       {
         "surface": "you leave",
         "lemma": "halakh"
+      },
+      {
+        "surface": "you will not",
+        "lemma": "lo"
       },
       {
         "surface": "go away",
@@ -958,8 +1174,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "mosheh",
-    "mitsrayim",
-    "shalach"
+    "mitsrayim"
   ]
 }

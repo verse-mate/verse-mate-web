@@ -10,6 +10,10 @@
         "lemma": "choter"
       },
       {
+        "surface": "will spring up",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from the stump",
         "lemma": "geza"
       },
@@ -98,6 +102,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "He will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "judge",
         "lemma": "shaphat"
       },
@@ -108,6 +116,10 @@
       {
         "surface": "see",
         "lemma": "mareh"
+      },
+      {
+        "surface": "and He will not",
+        "lemma": "lo"
       },
       {
         "surface": "decide",
@@ -188,6 +200,10 @@
       {
         "surface": "Righteousness",
         "lemma": "tsedeq"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "the belt",
@@ -338,12 +354,24 @@
     ],
     "9": [
       {
+        "surface": "They will neither",
+        "lemma": "lo"
+      },
+      {
         "surface": "harm",
         "lemma": "raa"
       },
       {
+        "surface": "nor",
+        "lemma": "lo"
+      },
+      {
         "surface": "destroy",
         "lemma": "shachat"
+      },
+      {
+        "surface": "on all",
+        "lemma": "kol"
       },
       {
         "surface": "My holy",
@@ -570,12 +598,20 @@
         "lemma": "ephrayim"
       },
       {
+        "surface": "will no longer",
+        "lemma": "lo"
+      },
+      {
         "surface": "envy",
         "lemma": "qana"
       },
       {
         "surface": "Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "nor will",
+        "lemma": "lo"
       },
       {
         "surface": "Judah",
@@ -712,6 +748,10 @@
     ],
     "16": [
       {
+        "surface": "There will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a highway",
         "lemma": "mesillah"
       },
@@ -730,6 +770,10 @@
       {
         "surface": "from Assyria",
         "lemma": "ashshur"
+      },
+      {
+        "surface": "there was",
+        "lemma": "hayah"
       },
       {
         "surface": "for Israel",
@@ -755,7 +799,7 @@
   },
   "themeLemmas": [
     "ruach",
-    "yehudah",
-    "yam"
+    "lo",
+    "yehudah"
   ]
 }

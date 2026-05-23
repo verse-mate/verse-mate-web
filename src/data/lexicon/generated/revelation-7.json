@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
         "surface": "four",
         "lemma": "tessares"
       },
       {
         "surface": "angels",
         "lemma": "angelos"
+      },
+      {
+        "surface": "standing",
+        "lemma": "histemi"
       },
       {
         "surface": "four",
@@ -58,11 +66,19 @@
         "lemma": "thalassa"
       },
       {
+        "surface": "any",
+        "lemma": "pas"
+      },
+      {
         "surface": "tree",
         "lemma": "dendron"
       }
     ],
     "2": [
+      {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
       {
         "surface": "another",
         "lemma": "allos"
@@ -78,6 +94,10 @@
       {
         "surface": "the east",
         "lemma": "anatole"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
       },
       {
         "surface": "the seal",
@@ -96,6 +116,10 @@
         "lemma": "krazo"
       },
       {
+        "surface": "in a loud",
+        "lemma": "megas"
+      },
+      {
         "surface": "voice",
         "lemma": "phone"
       },
@@ -106,6 +130,10 @@
       {
         "surface": "angels",
         "lemma": "angelos"
+      },
+      {
+        "surface": "had been given power",
+        "lemma": "didomi"
       },
       {
         "surface": "to harm",
@@ -156,6 +184,10 @@
     ],
     "4": [
       {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
         "surface": "number",
         "lemma": "arithmos"
       },
@@ -166,6 +198,10 @@
       {
         "surface": "144,000",
         "lemma": "hekaton"
+      },
+      {
+        "surface": "all the",
+        "lemma": "pas"
       },
       {
         "surface": "tribes",
@@ -338,12 +374,28 @@
     ],
     "9": [
       {
+        "surface": "I looked",
+        "lemma": "horao"
+      },
+      {
         "surface": "a multitude",
         "lemma": "ochlos"
       },
       {
+        "surface": "too large",
+        "lemma": "polus"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "to count",
         "lemma": "arithmeo"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "nation",
@@ -360,6 +412,10 @@
       {
         "surface": "tongue",
         "lemma": "glossa"
+      },
+      {
+        "surface": "standing",
+        "lemma": "histemi"
       },
       {
         "surface": "throne",
@@ -396,6 +452,10 @@
         "lemma": "krazo"
       },
       {
+        "surface": "vvv",
+        "lemma": "megas"
+      },
+      {
         "surface": "in a loud voice",
         "lemma": "phone"
       },
@@ -422,8 +482,16 @@
     ],
     "11": [
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "angels",
         "lemma": "angelos"
+      },
+      {
+        "surface": "stood",
+        "lemma": "histemi"
       },
       {
         "surface": "around",
@@ -464,8 +532,8 @@
     ],
     "12": [
       {
-        "surface": "Amen",
-        "lemma": "amen"
+        "surface": "saying",
+        "lemma": "lego"
       },
       {
         "surface": "Blessing",
@@ -506,16 +574,20 @@
       {
         "surface": "ever",
         "lemma": "aion"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ],
     "13": [
       {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
         "surface": "elders",
         "lemma": "presbuteros"
+      },
+      {
+        "surface": "addressed",
+        "lemma": "apokrino"
       },
       {
         "surface": "in",
@@ -530,14 +602,50 @@
         "lemma": "stole"
       },
       {
+        "surface": "he asked",
+        "lemma": "lego"
+      },
+      {
+        "surface": "who",
+        "lemma": "tis"
+      },
+      {
+        "surface": "are they",
+        "lemma": "eimi"
+      },
+      {
         "surface": "where",
         "lemma": "pothen"
+      },
+      {
+        "surface": "have they come {from",
+        "lemma": "erchomai"
       }
     ],
     "14": [
       {
         "surface": "I answered",
         "lemma": "ero"
+      },
+      {
+        "surface": "know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "who have come",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "great",
+        "lemma": "megas"
       },
       {
         "surface": "tribulation",
@@ -565,6 +673,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "they are",
+        "lemma": "eimi"
+      },
       {
         "surface": "throne",
         "lemma": "thronos"
@@ -624,6 +736,10 @@
         "lemma": "pipto"
       },
       {
+        "surface": "any",
+        "lemma": "pas"
+      },
+      {
         "surface": "scorching heat",
         "lemma": "kauma"
       }
@@ -668,6 +784,10 @@
       {
         "surface": "will wipe away",
         "lemma": "exaleipho"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "tear",

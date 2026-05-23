@@ -28,6 +28,10 @@
     ],
     "2": [
       {
+        "surface": "you have heard about",
+        "lemma": "akouo"
+      },
+      {
         "surface": "stewardship",
         "lemma": "oikonomia"
       },
@@ -38,6 +42,10 @@
       {
         "surface": "grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "that was given",
+        "lemma": "didomi"
       }
     ],
     "3": [
@@ -66,6 +74,10 @@
       {
         "surface": "reading",
         "lemma": "anaginosko"
+      },
+      {
+        "surface": "you will be able to",
+        "lemma": "dunamai"
       },
       {
         "surface": "understand",
@@ -140,6 +152,10 @@
         "lemma": "ethnos"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "fellow heirs",
         "lemma": "sugkleronomos"
       },
@@ -166,6 +182,10 @@
     ],
     "7": [
       {
+        "surface": "I became",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "a servant",
         "lemma": "diakonos"
       },
@@ -182,6 +202,10 @@
         "lemma": "charis"
       },
       {
+        "surface": "given",
+        "lemma": "didomi"
+      },
+      {
         "surface": "working",
         "lemma": "energeia"
       },
@@ -196,12 +220,20 @@
         "lemma": "elachistoteros"
       },
       {
+        "surface": "of all",
+        "lemma": "pas"
+      },
+      {
         "surface": "the saints",
         "lemma": "hagios"
       },
       {
         "surface": "grace",
         "lemma": "charis"
+      },
+      {
+        "surface": "was given",
+        "lemma": "didomi"
       },
       {
         "surface": "to preach",
@@ -230,6 +262,10 @@
         "lemma": "photizo"
       },
       {
+        "surface": "for everyone",
+        "lemma": "pas"
+      },
+      {
         "surface": "stewardship",
         "lemma": "oikonomia"
       },
@@ -252,6 +288,10 @@
       {
         "surface": "created",
         "lemma": "ktizo"
+      },
+      {
+        "surface": "all things",
+        "lemma": "pas"
       }
     ],
     "10": [
@@ -302,6 +342,10 @@
         "lemma": "prothesis"
       },
       {
+        "surface": "He accomplished",
+        "lemma": "poieo"
+      },
+      {
         "surface": "Christ",
         "lemma": "christos"
       },
@@ -318,6 +362,10 @@
       {
         "surface": "faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "we may",
+        "lemma": "echo"
       },
       {
         "surface": "enter  God’s  presence",
@@ -346,6 +394,10 @@
         "lemma": "thlipsis"
       },
       {
+        "surface": "are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "glory",
         "lemma": "doxa"
       }
@@ -365,6 +417,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "every",
+        "lemma": "pas"
+      },
       {
         "surface": "family",
         "lemma": "patria"
@@ -390,6 +446,10 @@
       {
         "surface": "glory",
         "lemma": "doxa"
+      },
+      {
+        "surface": "He may",
+        "lemma": "didomi"
       },
       {
         "surface": "strengthen",
@@ -448,6 +508,10 @@
         "lemma": "exischuo"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "saints",
         "lemma": "hagios"
       },
@@ -482,6 +546,10 @@
         "lemma": "christos"
       },
       {
+        "surface": "to know",
+        "lemma": "ginosko"
+      },
+      {
         "surface": "surpasses",
         "lemma": "huperballo"
       },
@@ -494,6 +562,10 @@
         "lemma": "pleroo"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "fullness",
         "lemma": "pleroma"
       },
@@ -503,6 +575,18 @@
       }
     ],
     "20": [
+      {
+        "surface": "is able",
+        "lemma": "dunamai"
+      },
+      {
+        "surface": "to do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
       {
         "surface": "we ask",
         "lemma": "aiteo"
@@ -538,16 +622,16 @@
         "lemma": "iesous"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "generations",
         "lemma": "genea"
       },
       {
         "surface": "ever",
         "lemma": "aion"
-      },
-      {
-        "surface": "Amen",
-        "lemma": "amen"
       }
     ]
   },

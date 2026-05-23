@@ -64,6 +64,10 @@
     ],
     "2": [
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "O heavens",
         "lemma": "shamayim"
       },
@@ -130,6 +134,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -138,15 +146,15 @@
         "lemma": "am"
       },
       {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "understand",
         "lemma": "bin"
       }
     ],
     "4": [
-      {
-        "surface": "Alas",
-        "lemma": "hoy"
-      },
       {
         "surface": "O sinful",
         "lemma": "chata"
@@ -234,8 +242,16 @@
         "lemma": "rosh"
       },
       {
+        "surface": "has a massive",
+        "lemma": "kol"
+      },
+      {
         "surface": "wound",
         "lemma": "choli"
+      },
+      {
+        "surface": "and your whole",
+        "lemma": "kol"
       },
       {
         "surface": "heart",
@@ -284,12 +300,24 @@
         "lemma": "makkah"
       },
       {
+        "surface": "neither",
+        "lemma": "lo"
+      },
+      {
         "surface": "cleansed",
         "lemma": "zur"
       },
       {
+        "surface": "nor",
+        "lemma": "lo"
+      },
+      {
         "surface": "bandaged",
         "lemma": "chavash"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "soothed",
@@ -414,6 +442,10 @@
         "lemma": "sarid"
       },
       {
+        "surface": "we would have become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like Sodom",
         "lemma": "sedom"
       },
@@ -427,6 +459,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
       {
         "surface": "the word",
         "lemma": "davar"
@@ -478,6 +514,10 @@
         "lemma": "zevach"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -502,6 +542,10 @@
         "lemma": "meri"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "I take no delight",
         "lemma": "chaphets"
       },
@@ -523,6 +567,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "you come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to appear",
+        "lemma": "raah"
+      },
       {
         "surface": "before Me",
         "lemma": "paneh"
@@ -550,12 +602,20 @@
     ],
     "13": [
       {
+        "surface": "Bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "your worthless",
         "lemma": "shav"
       },
       {
         "surface": "offerings",
         "lemma": "minchah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "more",
@@ -576,6 +636,14 @@
       {
         "surface": "Sabbaths",
         "lemma": "shabbat"
+      },
+      {
+        "surface": "and convocations",
+        "lemma": "qara"
+      },
+      {
+        "surface": "I cannot",
+        "lemma": "lo"
       },
       {
         "surface": "endure",
@@ -606,6 +674,10 @@
       {
         "surface": "and your appointed feasts",
         "lemma": "moed"
+      },
+      {
+        "surface": "They have become",
+        "lemma": "hayah"
       },
       {
         "surface": "a burden",
@@ -648,6 +720,10 @@
       {
         "surface": "I will not",
         "lemma": "ayin"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
       },
       {
         "surface": "Your hands",
@@ -748,20 +824,28 @@
         "lemma": "halakh"
       },
       {
-        "surface": "now",
-        "lemma": "na"
-      },
-      {
         "surface": "let us reason together",
         "lemma": "yakhach"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "Though",
+        "lemma": "im"
+      },
+      {
         "surface": "your sins",
         "lemma": "chet"
+      },
+      {
+        "surface": "are",
+        "lemma": "hayah"
       },
       {
         "surface": "like scarlet",
@@ -776,6 +860,10 @@
         "lemma": "sheleg"
       },
       {
+        "surface": "though",
+        "lemma": "im"
+      },
+      {
         "surface": "they are as red",
         "lemma": "adam"
       },
@@ -784,14 +872,26 @@
         "lemma": "tola"
       },
       {
+        "surface": "they will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like wool",
         "lemma": "tsemer"
       }
     ],
     "19": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "you are willing",
         "lemma": "avah"
+      },
+      {
+        "surface": "and obedient",
+        "lemma": "shama"
       },
       {
         "surface": "you will eat",
@@ -807,6 +907,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "you resist",
         "lemma": "maen"
@@ -850,6 +954,10 @@
         "lemma": "qiryah"
       },
       {
+        "surface": "has become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a harlot",
         "lemma": "zanah"
       },
@@ -878,6 +986,10 @@
       {
         "surface": "Your silver",
         "lemma": "keseph"
+      },
+      {
+        "surface": "has become",
+        "lemma": "hayah"
       },
       {
         "surface": "dross",
@@ -914,6 +1026,10 @@
         "lemma": "gannav"
       },
       {
+        "surface": "They all",
+        "lemma": "kol"
+      },
+      {
         "surface": "love",
         "lemma": "ahav"
       },
@@ -930,6 +1046,10 @@
         "lemma": "shalmon"
       },
       {
+        "surface": "They do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "defend",
         "lemma": "shaphat"
       },
@@ -944,6 +1064,14 @@
       {
         "surface": "of the widow",
         "lemma": "almanah"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "comes",
+        "lemma": "bo"
       }
     ],
     "24": [
@@ -976,10 +1104,6 @@
         "lemma": "neum"
       },
       {
-        "surface": "Ah",
-        "lemma": "hoy"
-      },
-      {
         "surface": "I will be relieved",
         "lemma": "nacham"
       },
@@ -998,6 +1122,10 @@
     ],
     "25": [
       {
+        "surface": "I will turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "My hand",
         "lemma": "yad"
       },
@@ -1014,11 +1142,19 @@
         "lemma": "sur"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your impurities",
         "lemma": "bedil"
       }
     ],
     "26": [
+      {
+        "surface": "I will restore",
+        "lemma": "shuv"
+      },
       {
         "surface": "your judges",
         "lemma": "shaphat"
@@ -1038,6 +1174,10 @@
       {
         "surface": "After that",
         "lemma": "achar"
+      },
+      {
+        "surface": "you will be called",
+        "lemma": "qara"
       },
       {
         "surface": "the City",
@@ -1068,6 +1208,10 @@
       {
         "surface": "with justice",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "her repentant ones",
+        "lemma": "shuv"
       },
       {
         "surface": "with righteousness",
@@ -1132,6 +1276,10 @@
     ],
     "30": [
       {
+        "surface": "you will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like an oak",
         "lemma": "elah"
       },
@@ -1160,6 +1308,10 @@
       {
         "surface": "The strong man",
         "lemma": "chason"
+      },
+      {
+        "surface": "will become",
+        "lemma": "hayah"
       },
       {
         "surface": "tinder",
@@ -1196,8 +1348,8 @@
     ]
   },
   "themeLemmas": [
-    "zur",
-    "yisrael",
-    "shaphat"
+    "lo",
+    "hayah",
+    "zur"
   ]
 }
