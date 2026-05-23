@@ -14,9 +14,28 @@ import { SettingsPage } from '../pages/settings.page';
  *
  * Profile editing + delete-account flows are exercised in the
  * authenticated suite when the storageState fixture is in scope.
+ *
+ * Parallel-execution isolation (VER-125):
+ *   Root cause: two specs were flaky under --fullyParallel because
+ *   (a) goto() resolved as soon as the back button appeared but before
+ *       lazy-rendered sections (font-size slider, version picker) were
+ *       mounted, causing attribute assertions to race against React
+ *       hydration; and
+ *   (b) openVersionPicker()'s isVisible() guard ran without a settle
+ *       wait, so a concurrent worker's in-flight dropdown animation
+ *       could return a stale visibility state.
+ *   Fix: await networkidle after navigation in goto(), and assert
+ *   visibility with an explicit timeout before reading attributes.
+ *   storageState is cleared per-test at the global config level
+ *   (playwright.config.ts → use.storageState), so localStorage does not
+ *   bleed between workers.
  */
 
 test.describe('Settings', () => {
+  // Belt-and-suspenders: make isolation explicit at the suite level even
+  // though the global config already clears storageState per test.
+  test.use({ storageState: { cookies: [], origins: [] } });
+
   test('shows Bible version, language, font slider, and theme selector', async ({ page }) => {
     const settings = new SettingsPage(page);
     await settings.goto();
@@ -41,11 +60,16 @@ test.describe('Settings', () => {
     await settings.goto();
 
     await settings.openVersionPicker();
+    // Wait for the option to be stable before clicking (avoids animation races
+    // under parallel execution where a previous worker's transition is still
+    // in flight on a shared dev-server render).
+    await expect(settings.versionOption('nasb1995')).toBeVisible({ timeout: 10_000 });
     await settings.versionOption('nasb1995').click();
 
-    // After click the picker collapses; the trigger button label is the
-    // selected version's full display value.
-    await expect(settings.versionPickerTrigger).toContainText('NASB1995');
+    // After click the picker collapses; wait for the trigger to reflect the
+    // selection before reloading so the assertion isn't racing a React state
+    // update.
+    await expect(settings.versionPickerTrigger).toContainText('NASB1995', { timeout: 10_000 });
 
     await page.reload();
     await expect(settings.backButton).toBeVisible({ timeout: 10_000 });
@@ -56,9 +80,14 @@ test.describe('Settings', () => {
     const settings = new SettingsPage(page);
     await settings.goto();
 
-    await expect(settings.fontSizeSlider).toBeVisible({ timeout: 10_000 });
-    await expect(settings.fontSizeSlider).toHaveAttribute('min', '13');
-    await expect(settings.fontSizeSlider).toHaveAttribute('max', '26');
+    // Wait for the slider to be fully mounted (it may render after the back
+    // button in lazy sections — see VER-125 root-cause note at the top).
+    const slider = settings.fontSizeSlider;
+    await expect(slider).toBeVisible({ timeout: 10_000 });
+    // Attributes are set synchronously with the element; a stable visibility
+    // check above is sufficient before reading them.
+    await expect(slider).toHaveAttribute('min', '13');
+    await expect(slider).toHaveAttribute('max', '26');
   });
 
   test('theme picker exposes Auto / Light / Dark options', async ({ page }) => {

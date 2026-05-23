@@ -33,7 +33,8 @@ test.describe('Menu — About', () => {
     await expect(about.termsLink).toHaveAttribute('href', /\/terms/);
 
     await expect(about.contactLink).toBeVisible();
-    await expect(about.contactLink).toHaveAttribute('href', /^mailto:.+@versemate\.org/);
+    // T3 (VER-157): Contact navigates in-app to /menu/help, no longer mailto:
+    await expect(about.contactLink).toHaveAttribute('href', /\/menu\/help/);
   });
 
   test('version label renders in the footer', async ({ page }) => {
