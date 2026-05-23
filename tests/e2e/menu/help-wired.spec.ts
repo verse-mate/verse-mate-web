@@ -26,8 +26,8 @@ test.describe('S2 — validation gate (no auth needed)', () => {
       { name: 'accessToken', value: 'fake-token', domain: 'localhost', path: '/' },
     ]);
 
-    // Mock the support API so the page can load without real credentials.
-    await page.route(`${BASE_API}/support/conversations`, route => route.fulfill({
+    // Mock all API calls to prevent background 401→/logout from the fake token.
+    await page.route(`${BASE_API}/**`, route => route.fulfill({
       status: 200,
       contentType: 'application/json',
       body: JSON.stringify({ success: true, conversationId: 'test-id' }),
@@ -56,7 +56,7 @@ test.describe('S2 — validation gate (no auth needed)', () => {
       { name: 'accessToken', value: 'fake-token', domain: 'localhost', path: '/' },
     ]);
 
-    await page.route(`${BASE_API}/support/conversations`, route => route.fulfill({
+    await page.route(`${BASE_API}/**`, route => route.fulfill({
       status: 200,
       contentType: 'application/json',
       body: JSON.stringify({ success: true, conversationId: 'test-id' }),
@@ -79,12 +79,16 @@ test.describe('S4 — error retry (no auth needed)', () => {
       { name: 'accessToken', value: 'fake-token', domain: 'localhost', path: '/' },
     ]);
 
-    // Make the POST fail.
-    await page.route(`${BASE_API}/support/conversations`, route => route.fulfill({
-      status: 500,
-      contentType: 'application/json',
-      body: JSON.stringify({ error: 'internal server error' }),
-    }));
+    // Mock all API calls: support/conversations returns 500; everything else returns 200 so the
+    // app's 401→/logout interceptor never fires during the test (background Bible API calls
+    // would otherwise trigger a logout with the fake token and redirect mid-test).
+    await page.route(`${BASE_API}/**`, async route => {
+      if (route.request().url().includes('/support/conversations')) {
+        await route.fulfill({ status: 500, contentType: 'application/json', body: JSON.stringify({ error: 'internal server error' }) });
+      } else {
+        await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({}) });
+      }
+    });
 
     const help = new HelpPage(page);
     await help.goto();

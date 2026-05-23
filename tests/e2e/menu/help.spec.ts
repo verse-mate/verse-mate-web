@@ -13,13 +13,20 @@ import { HelpPage } from '../pages/help.page';
  * We deliberately do NOT submit to the backend.
  */
 
-// HelpScreen has an auth guard that redirects guests to /login.
-// Inject a fake accessToken cookie so these layout-only tests can reach the form.
+// HelpScreen has an auth guard that redirects guests to /login (VER-156).
+// Inject a fake accessToken cookie and mock the entire API base so background
+// requests with the fake token never trigger a 401→/logout redirect.
+const BASE_API = process.env.VITE_API_URL ?? 'https://api.versemate.org';
 const FAKE_COOKIE = { name: 'accessToken', value: 'fake-token', domain: 'localhost', path: '/' };
 
 test.describe('Menu — Help', () => {
   test.beforeEach(async ({ page }) => {
     await page.context().addCookies([FAKE_COOKIE]);
+    await page.route(`${BASE_API}/**`, route => route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({}),
+    }));
   });
 
   test('renders heading + topic picker + textarea + submit button', async ({ page }) => {
