@@ -14,6 +14,10 @@
         "lemma": "alah"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "you, O Nineveh",
         "lemma": "paneh"
       },
@@ -52,8 +56,16 @@
     ],
     "2": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will restore",
+        "lemma": "shuv"
       },
       {
         "surface": "the splendor",
@@ -70,6 +82,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "though",
+        "lemma": "ki"
       },
       {
         "surface": "destroyers",
@@ -266,6 +282,10 @@
         "lemma": "taphaph"
       },
       {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
         "surface": "their breasts",
         "lemma": "levav"
       }
@@ -284,8 +304,16 @@
         "lemma": "mayim"
       },
       {
+        "surface": "throughout",
+        "lemma": "hu"
+      },
+      {
         "surface": "her days",
         "lemma": "yom"
+      },
+      {
+        "surface": "but now",
+        "lemma": "hemmah"
       },
       {
         "surface": "it is draining away",
@@ -342,6 +370,10 @@
         "lemma": "kavod"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "precious",
         "lemma": "chemdah"
       },
@@ -388,6 +420,10 @@
         "lemma": "chalchalah"
       },
       {
+        "surface": "and every",
+        "lemma": "kol"
+      },
+      {
         "surface": "face",
         "lemma": "paneh"
       },
@@ -416,6 +452,10 @@
       {
         "surface": "of the young lions",
         "lemma": "kephir"
+      },
+      {
+        "surface": "where",
+        "lemma": "asher"
       },
       {
         "surface": "the lion",
@@ -498,6 +538,10 @@
         "lemma": "hen"
       },
       {
+        "surface": "I am against you",
+        "lemma": "el"
+      },
+      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -552,6 +596,14 @@
       {
         "surface": "of your messengers",
         "lemma": "maleakh"
+      },
+      {
+        "surface": "will no longer",
+        "lemma": "lo"
+      },
+      {
+        "surface": "be heard",
+        "lemma": "shama"
       }
     ]
   },

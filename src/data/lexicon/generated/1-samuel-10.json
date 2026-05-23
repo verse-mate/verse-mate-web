@@ -26,12 +26,24 @@
         "lemma": "yatsaq"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "Saul’s head",
         "lemma": "rosh"
       },
       {
         "surface": "kissed him",
         "lemma": "nashaq"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Has not",
+        "lemma": "lo"
       },
       {
         "surface": "the LORD",
@@ -46,6 +58,10 @@
         "lemma": "nagid"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "His inheritance",
         "lemma": "nachalah"
       }
@@ -54,6 +70,10 @@
       {
         "surface": "When you leave",
         "lemma": "halakh"
+      },
+      {
+        "surface": "me",
+        "lemma": "immad"
       },
       {
         "surface": "today",
@@ -70,6 +90,10 @@
       {
         "surface": "men",
         "lemma": "enosh"
+      },
+      {
+        "surface": "at",
+        "lemma": "im"
       },
       {
         "surface": "Rachel’s",
@@ -92,6 +116,14 @@
         "lemma": "binyamin"
       },
       {
+        "surface": "They will say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to you",
+        "lemma": "el"
+      },
+      {
         "surface": "The donkeys",
         "lemma": "aton"
       },
@@ -106,6 +138,10 @@
       {
         "surface": "and now",
         "lemma": "hinneh"
+      },
+      {
+        "surface": "your father",
+        "lemma": "av"
       },
       {
         "surface": "has stopped",
@@ -124,8 +160,16 @@
         "lemma": "daag"
       },
       {
+        "surface": "asking",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "should I do",
+        "lemma": "asah"
       },
       {
         "surface": "about my son",
@@ -146,6 +190,14 @@
         "lemma": "sham"
       },
       {
+        "surface": "until you come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "the Oak",
         "lemma": "elon"
       },
@@ -164,6 +216,10 @@
       {
         "surface": "going up",
         "lemma": "alah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "God",
@@ -244,6 +300,10 @@
         "lemma": "shaal"
       },
       {
+        "surface": "and give",
+        "lemma": "natan"
+      },
+      {
         "surface": "two",
         "lemma": "shenayim"
       },
@@ -270,6 +330,10 @@
         "lemma": "ken"
       },
       {
+        "surface": "you will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Gibeah",
         "lemma": "givah"
       },
@@ -278,12 +342,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "where",
+        "lemma": "asher"
+      },
+      {
         "surface": "the Philistines",
         "lemma": "pelishti"
       },
       {
         "surface": "have an outpost",
         "lemma": "netsiv"
+      },
+      {
+        "surface": "As you approach",
+        "lemma": "bo"
       },
       {
         "surface": "the city",
@@ -330,6 +402,10 @@
         "lemma": "kinnor"
       },
       {
+        "surface": "and they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "will be prophesying",
         "lemma": "nava"
       }
@@ -348,8 +424,16 @@
         "lemma": "tsalach"
       },
       {
+        "surface": "upon you",
+        "lemma": "al"
+      },
+      {
         "surface": "and you will prophesy",
         "lemma": "nava"
+      },
+      {
+        "surface": "with them",
+        "lemma": "im"
       },
       {
         "surface": "and you will be transformed",
@@ -366,16 +450,44 @@
     ],
     "7": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
+        "surface": "these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "signs",
         "lemma": "ot"
+      },
+      {
+        "surface": "have come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "as the occasion",
+        "lemma": "asher"
       },
       {
         "surface": "demands",
         "lemma": "matsa"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "God is",
         "lemma": "elohim"
+      },
+      {
+        "surface": "with you",
+        "lemma": "im"
       }
     ],
     "8": [
@@ -396,8 +508,16 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "will come",
         "lemma": "yarad"
+      },
+      {
+        "surface": "to you",
+        "lemma": "el"
       },
       {
         "surface": "to offer",
@@ -428,8 +548,28 @@
         "lemma": "yom"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
+        "surface": "I come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to you",
+        "lemma": "el"
+      },
+      {
         "surface": "and show",
         "lemma": "yada"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you are to do",
+        "lemma": "asah"
       }
     ],
     "9": [
@@ -458,8 +598,20 @@
         "lemma": "lev"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the signs",
         "lemma": "ot"
+      },
+      {
+        "surface": "came to pass",
+        "lemma": "bo"
+      },
+      {
+        "surface": "that",
+        "lemma": "hu"
       },
       {
         "surface": "day",
@@ -467,6 +619,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "When Saul and his servant arrived",
+        "lemma": "bo"
+      },
       {
         "surface": "at Gibeah",
         "lemma": "givah"
@@ -478,6 +634,10 @@
       {
         "surface": "of prophets",
         "lemma": "navi"
+      },
+      {
+        "surface": "met him",
+        "lemma": "qara"
       },
       {
         "surface": "Then the Spirit",
@@ -492,6 +652,10 @@
         "lemma": "tsalach"
       },
       {
+        "surface": "upon him",
+        "lemma": "al"
+      },
+      {
         "surface": "and he prophesied",
         "lemma": "nava"
       },
@@ -502,6 +666,14 @@
     ],
     "11": [
       {
+        "surface": "When",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "all those",
+        "lemma": "kol"
+      },
+      {
         "surface": "who had formerly",
         "lemma": "etmol"
       },
@@ -510,16 +682,32 @@
         "lemma": "yada"
       },
       {
+        "surface": "saw him",
+        "lemma": "raah"
+      },
+      {
         "surface": "prophesying",
         "lemma": "nava"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "the prophets",
         "lemma": "navi"
       },
       {
+        "surface": "they asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "one",
         "lemma": "ish"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "el"
       },
       {
         "surface": "another",
@@ -528,6 +716,10 @@
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "has happened",
+        "lemma": "hayah"
       },
       {
         "surface": "to the son",
@@ -540,6 +732,10 @@
       {
         "surface": "Is Saul",
         "lemma": "shaul"
+      },
+      {
+        "surface": "also",
+        "lemma": "gam"
       },
       {
         "surface": "among the prophets",
@@ -564,8 +760,20 @@
         "lemma": "mi"
       },
       {
+        "surface": "is their father",
+        "lemma": "av"
+      },
+      {
+        "surface": "So",
+        "lemma": "al"
+      },
+      {
         "surface": "the saying",
         "lemma": "ken"
+      },
+      {
+        "surface": "became",
+        "lemma": "hayah"
       },
       {
         "surface": "a proverb",
@@ -574,6 +782,10 @@
       {
         "surface": "Is Saul",
         "lemma": "shaul"
+      },
+      {
+        "surface": "also",
+        "lemma": "gam"
       },
       {
         "surface": "among the prophets",
@@ -590,6 +802,10 @@
         "lemma": "nava"
       },
       {
+        "surface": "he went up",
+        "lemma": "bo"
+      },
+      {
         "surface": "to the high place",
         "lemma": "bamah"
       }
@@ -602,6 +818,18 @@
       {
         "surface": "uncle",
         "lemma": "dod"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
+        "surface": "him",
+        "lemma": "el"
+      },
+      {
+        "surface": "and",
+        "lemma": "el"
       },
       {
         "surface": "his servant",
@@ -624,8 +852,24 @@
         "lemma": "aton"
       },
       {
+        "surface": "Saul replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "When we saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "they were not to be found",
         "lemma": "ayin"
+      },
+      {
+        "surface": "we went",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Samuel",
@@ -646,12 +890,20 @@
         "lemma": "dod"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "what",
         "lemma": "mah"
       },
       {
         "surface": "did Samuel",
         "lemma": "shemuel"
+      },
+      {
+        "surface": "say to you",
+        "lemma": "amar"
       }
     ],
     "16": [
@@ -660,8 +912,16 @@
         "lemma": "shaul"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "He assured",
         "lemma": "nagad"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the donkeys",
@@ -672,12 +932,24 @@
         "lemma": "matsa"
       },
       {
+        "surface": "But Saul did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "tell",
         "lemma": "nagad"
       },
       {
+        "surface": "what",
+        "lemma": "asher"
+      },
+      {
         "surface": "Samuel",
         "lemma": "shemuel"
+      },
+      {
+        "surface": "had said",
+        "lemma": "amar"
       },
       {
         "surface": "about",
@@ -702,6 +974,10 @@
         "lemma": "am"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -711,6 +987,14 @@
       }
     ],
     "18": [
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
       {
         "surface": "the Israelites",
         "lemma": "ben"
@@ -732,6 +1016,14 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "brought",
         "lemma": "alah"
       },
@@ -748,12 +1040,20 @@
         "lemma": "natsal"
       },
       {
+        "surface": "you",
+        "lemma": "et"
+      },
+      {
         "surface": "from the hands",
         "lemma": "yad"
       },
       {
         "surface": "of the Egyptians",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and of all",
+        "lemma": "kol"
       },
       {
         "surface": "the kingdoms",
@@ -770,6 +1070,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
         "surface": "have rejected",
         "lemma": "maas"
       },
@@ -778,8 +1082,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "saves",
         "lemma": "yasah"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
       },
       {
         "surface": "your troubles",
@@ -790,12 +1102,24 @@
         "lemma": "batstsarah"
       },
       {
+        "surface": "and you have said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "No",
+        "lemma": "ki"
+      },
+      {
         "surface": "set",
         "lemma": "sum"
       },
       {
         "surface": "a king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "over us",
+        "lemma": "al"
       },
       {
         "surface": "Now therefore",
@@ -826,6 +1150,10 @@
       {
         "surface": "Thus Samuel",
         "lemma": "shemuel"
+      },
+      {
+        "surface": "had all",
+        "lemma": "kol"
       },
       {
         "surface": "the tribes",
@@ -902,6 +1230,10 @@
         "lemma": "baqash"
       },
       {
+        "surface": "they could not",
+        "lemma": "lo"
+      },
+      {
         "surface": "find him",
         "lemma": "matsa"
       }
@@ -924,6 +1256,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "here",
         "lemma": "halom"
       },
@@ -936,12 +1272,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "Behold",
         "lemma": "hinneh"
       },
       {
         "surface": "he has hidden",
         "lemma": "chava"
+      },
+      {
+        "surface": "himself",
+        "lemma": "hu"
+      },
+      {
+        "surface": "among",
+        "lemma": "el"
       },
       {
         "surface": "the baggage",
@@ -978,6 +1326,10 @@
         "lemma": "gavah"
       },
       {
+        "surface": "than any",
+        "lemma": "kol"
+      },
+      {
         "surface": "of the others",
         "lemma": "am"
       }
@@ -988,8 +1340,28 @@
         "lemma": "shemuel"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "Do you see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "the one",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -1004,8 +1376,20 @@
         "lemma": "ayin"
       },
       {
+        "surface": "like him",
+        "lemma": "kemo"
+      },
+      {
+        "surface": "among all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "And all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -1032,6 +1416,10 @@
       {
         "surface": "explained",
         "lemma": "davar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the people",
@@ -1070,6 +1458,10 @@
         "lemma": "shemuel"
       },
       {
+        "surface": "sent all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -1092,6 +1484,10 @@
         "lemma": "shaul"
       },
       {
+        "surface": "also",
+        "lemma": "gam"
+      },
+      {
         "surface": "went",
         "lemma": "halakh"
       },
@@ -1108,6 +1504,10 @@
         "lemma": "chayil"
       },
       {
+        "surface": "whose",
+        "lemma": "asher"
+      },
+      {
         "surface": "hearts",
         "lemma": "lev"
       },
@@ -1122,6 +1522,10 @@
       {
         "surface": "went",
         "lemma": "halakh"
+      },
+      {
+        "surface": "with him",
+        "lemma": "im"
       }
     ],
     "27": [
@@ -1134,8 +1538,16 @@
         "lemma": "ben"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "How",
         "lemma": "mah"
+      },
+      {
+        "surface": "can this man",
+        "lemma": "zeh"
       },
       {
         "surface": "save us",
@@ -1146,8 +1558,20 @@
         "lemma": "bazah"
       },
       {
+        "surface": "and brought",
+        "lemma": "bo"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "gifts",
         "lemma": "minchah"
+      },
+      {
+        "surface": "but Saul remained",
+        "lemma": "hayah"
       },
       {
         "surface": "silent about it",
@@ -1156,8 +1580,8 @@
     ]
   },
   "themeLemmas": [
-    "shemuel",
-    "shaul",
-    "matsa"
+    "amar",
+    "bo",
+    "shemuel"
   ]
 }

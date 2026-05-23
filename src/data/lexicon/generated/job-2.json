@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "On another",
+        "lemma": "hayah"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -18,8 +22,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to present themselves",
         "lemma": "yatsav"
+      },
+      {
+        "surface": "before",
+        "lemma": "al"
       },
       {
         "surface": "the LORD",
@@ -30,12 +42,24 @@
         "lemma": "satan"
       },
       {
+        "surface": "also",
+        "lemma": "gam"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "with them",
         "lemma": "tavekh"
       },
       {
         "surface": "to present himself",
         "lemma": "yatsav"
+      },
+      {
+        "surface": "before",
+        "lemma": "al"
       },
       {
         "surface": "Him",
@@ -48,8 +72,20 @@
         "lemma": "ay"
       },
       {
+        "surface": "have you come from",
+        "lemma": "bo"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Satan",
@@ -82,6 +118,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Satan",
         "lemma": "satan"
       },
@@ -98,12 +142,20 @@
         "lemma": "iyyov"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "there is no one",
         "lemma": "ayin"
       },
       {
         "surface": "on earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "like him",
+        "lemma": "kemo"
       },
       {
         "surface": "a man who is",
@@ -184,6 +236,18 @@
         "lemma": "ish"
       },
       {
+        "surface": "will give up",
+        "lemma": "natan"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "he owns",
+        "lemma": "asher"
+      },
+      {
         "surface": "in exchange for",
         "lemma": "bead"
       },
@@ -193,6 +257,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "But",
+        "lemma": "ulam"
+      },
       {
         "surface": "stretch out",
         "lemma": "shalach"
@@ -214,8 +282,16 @@
         "lemma": "etsem"
       },
       {
+        "surface": "and he will surely",
+        "lemma": "im"
+      },
+      {
         "surface": "curse You",
         "lemma": "barakh"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Your face",
@@ -226,6 +302,10 @@
       {
         "surface": "Very well",
         "lemma": "hen"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -256,6 +336,10 @@
       {
         "surface": "So Satan",
         "lemma": "satan"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "from the presence",
@@ -290,6 +374,10 @@
         "lemma": "regel"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "the crown of his head",
         "lemma": "qodqod"
       }
@@ -308,6 +396,14 @@
         "lemma": "garad"
       },
       {
+        "surface": "as he",
+        "lemma": "hu"
+      },
+      {
+        "surface": "sat",
+        "lemma": "yashav"
+      },
+      {
         "surface": "among",
         "lemma": "tavekh"
       },
@@ -320,6 +416,10 @@
       {
         "surface": "Then Job’s wife",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Do you still",
@@ -364,8 +464,20 @@
         "lemma": "davar"
       },
       {
+        "surface": "he told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "her",
+        "lemma": "el"
+      },
+      {
         "surface": "Should we accept",
         "lemma": "qaval"
+      },
+      {
+        "surface": "from",
+        "lemma": "et"
       },
       {
         "surface": "God",
@@ -376,12 +488,28 @@
         "lemma": "tov"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "adversity",
         "lemma": "ra"
       },
       {
+        "surface": "In all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "Job",
         "lemma": "iyyov"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
       },
       {
         "surface": "sin",
@@ -430,12 +558,36 @@
         "lemma": "naamati"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "about all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "adversity",
         "lemma": "ra"
       },
       {
+        "surface": "that had come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "upon him",
+        "lemma": "al"
+      },
+      {
         "surface": "each of them",
         "lemma": "ish"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "from his home",
@@ -448,6 +600,10 @@
       {
         "surface": "together",
         "lemma": "yachad"
+      },
+      {
+        "surface": "to go",
+        "lemma": "bo"
       },
       {
         "surface": "and sympathize",
@@ -472,6 +628,10 @@
         "lemma": "rachoq"
       },
       {
+        "surface": "they could barely",
+        "lemma": "lo"
+      },
+      {
         "surface": "recognize Job",
         "lemma": "nakhar"
       },
@@ -486,6 +646,10 @@
       {
         "surface": "and each man",
         "lemma": "ish"
+      },
+      {
+        "surface": "tore",
+        "lemma": "qara"
       },
       {
         "surface": "his robe",
@@ -504,14 +668,26 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "his head",
         "lemma": "rosh"
       }
     ],
     "13": [
       {
+        "surface": "Then they sat",
+        "lemma": "yashav"
+      },
+      {
         "surface": "on the ground",
         "lemma": "erets"
+      },
+      {
+        "surface": "with him",
+        "lemma": "et"
       },
       {
         "surface": "for seven",
@@ -542,6 +718,18 @@
         "lemma": "davar"
       },
       {
+        "surface": "to him",
+        "lemma": "el"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "how intense",
         "lemma": "meod"
       },
@@ -556,8 +744,8 @@
     ]
   },
   "themeLemmas": [
-    "satan",
-    "ra",
-    "iyyov"
+    "bo",
+    "amar",
+    "ra"
   ]
 }

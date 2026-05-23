@@ -14,6 +14,10 @@
         "lemma": "ra"
       },
       {
+        "surface": "I have seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "under",
         "lemma": "tachat"
       },
@@ -22,8 +26,16 @@
         "lemma": "shemesh"
       },
       {
+        "surface": "and it",
+        "lemma": "hu"
+      },
+      {
         "surface": "weighs heavily",
         "lemma": "rav"
+      },
+      {
+        "surface": "upon",
+        "lemma": "al"
       },
       {
         "surface": "mankind",
@@ -34,6 +46,10 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "gives",
+        "lemma": "natan"
       },
       {
         "surface": "a man",
@@ -72,6 +88,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "allow him",
         "lemma": "shalat"
       },
@@ -80,12 +100,20 @@
         "lemma": "akhal"
       },
       {
+        "surface": "Instead",
+        "lemma": "ki"
+      },
+      {
         "surface": "a stranger",
         "lemma": "ish"
       },
       {
         "surface": "will enjoy them",
         "lemma": "akhal"
+      },
+      {
+        "surface": "This",
+        "lemma": "zeh"
       },
       {
         "surface": "is futile",
@@ -138,16 +166,36 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "is unsatisfied",
         "lemma": "sava"
+      },
+      {
+        "surface": "with",
+        "lemma": "min"
       },
       {
         "surface": "his prosperity",
         "lemma": "tov"
       },
       {
+        "surface": "and does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "even",
+        "lemma": "gam"
+      },
+      {
         "surface": "receive a proper burial",
         "lemma": "qevurah"
+      },
+      {
+        "surface": "I say",
+        "lemma": "amar"
       },
       {
         "surface": "that a stillborn child",
@@ -156,9 +204,21 @@
       {
         "surface": "is better off",
         "lemma": "tov"
+      },
+      {
+        "surface": "than he",
+        "lemma": "min"
       }
     ],
     "4": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "a stillborn child enters",
+        "lemma": "bo"
+      },
       {
         "surface": "in futility",
         "lemma": "hevel"
@@ -186,8 +246,28 @@
     ],
     "5": [
       {
+        "surface": "The child",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "though",
+        "lemma": "gam"
+      },
+      {
+        "surface": "neither",
+        "lemma": "lo"
+      },
+      {
+        "surface": "seeing",
+        "lemma": "raah"
+      },
+      {
         "surface": "the sun",
         "lemma": "shemesh"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "knowing anything",
@@ -196,6 +276,10 @@
       {
         "surface": "has more rest",
         "lemma": "nachat"
+      },
+      {
+        "surface": "than that man",
+        "lemma": "zeh"
       }
     ],
     "6": [
@@ -220,12 +304,32 @@
         "lemma": "paam"
       },
       {
+        "surface": "but fails to",
+        "lemma": "lo"
+      },
+      {
+        "surface": "enjoy",
+        "lemma": "raah"
+      },
+      {
         "surface": "his prosperity",
         "lemma": "tov"
       },
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the same",
@@ -237,6 +341,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "a man’s",
         "lemma": "adam"
@@ -250,8 +358,16 @@
         "lemma": "peh"
       },
       {
+        "surface": "yet",
+        "lemma": "gam"
+      },
+      {
         "surface": "his appetite",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "is never",
+        "lemma": "lo"
       },
       {
         "surface": "satisfied",
@@ -268,8 +384,16 @@
         "lemma": "yoter"
       },
       {
+        "surface": "then",
+        "lemma": "ki"
+      },
+      {
         "surface": "has the wise man",
         "lemma": "chakham"
+      },
+      {
+        "surface": "over",
+        "lemma": "min"
       },
       {
         "surface": "the fool",
@@ -322,6 +446,14 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "too",
+        "lemma": "gam"
+      },
+      {
         "surface": "is futile",
         "lemma": "hevel"
       },
@@ -340,6 +472,14 @@
         "lemma": "mah"
       },
       {
+        "surface": "exists",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "was named",
+        "lemma": "qara"
+      },
+      {
         "surface": "long ago",
         "lemma": "kevar"
       },
@@ -348,19 +488,43 @@
         "lemma": "yada"
       },
       {
+        "surface": "what",
+        "lemma": "asher"
+      },
+      {
         "surface": "man is",
         "lemma": "adam"
+      },
+      {
+        "surface": "but he",
+        "lemma": "hu"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "lo"
       },
       {
         "surface": "contend",
         "lemma": "din"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "one stronger",
         "lemma": "taqaph"
+      },
+      {
+        "surface": "than he",
+        "lemma": "min"
       }
     ],
     "11": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "vvv",
         "lemma": "yesh"
@@ -396,6 +560,10 @@
     ],
     "12": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "who",
         "lemma": "mi"
       },
@@ -422,6 +590,10 @@
       {
         "surface": "days in which",
         "lemma": "yom"
+      },
+      {
+        "surface": "he passes through",
+        "lemma": "asah"
       },
       {
         "surface": "his fleeting",
@@ -452,6 +624,10 @@
         "lemma": "mah"
       },
       {
+        "surface": "will come",
+        "lemma": "hayah"
+      },
+      {
         "surface": "after him",
         "lemma": "achar"
       },
@@ -466,8 +642,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "mah",
-    "tov",
-    "hevel"
+    "tov"
   ]
 }

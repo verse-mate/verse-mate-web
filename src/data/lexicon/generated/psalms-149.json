@@ -48,6 +48,10 @@
         "lemma": "samach"
       },
       {
+        "surface": "in their Maker",
+        "lemma": "asah"
+      },
+      {
         "surface": "let the children",
         "lemma": "ben"
       },
@@ -92,6 +96,10 @@
     ],
     "4": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -134,6 +142,10 @@
         "lemma": "run"
       },
       {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
         "surface": "their beds",
         "lemma": "mishkav"
       }
@@ -165,6 +177,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "to inflict",
+        "lemma": "asah"
+      },
       {
         "surface": "vengeance",
         "lemma": "neqamah"
@@ -214,6 +230,10 @@
     ],
     "9": [
       {
+        "surface": "to execute",
+        "lemma": "asah"
+      },
+      {
         "surface": "the judgment",
         "lemma": "mishpat"
       },
@@ -222,8 +242,16 @@
         "lemma": "katav"
       },
       {
+        "surface": "This",
+        "lemma": "hu"
+      },
+      {
         "surface": "honor",
         "lemma": "hadar"
+      },
+      {
+        "surface": "is for all",
+        "lemma": "kol"
       },
       {
         "surface": "His saints",
@@ -238,6 +266,6 @@
   "themeLemmas": [
     "halal",
     "chasid",
-    "shir"
+    "asah"
   ]
 }

@@ -10,6 +10,10 @@
         "lemma": "natsach"
       },
       {
+        "surface": "To the tune of",
+        "lemma": "al"
+      },
+      {
         "surface": "A Dove",
         "lemma": "yonatelemrechoqim"
       },
@@ -38,6 +42,10 @@
         "lemma": "achaz"
       },
       {
+        "surface": "him",
+        "lemma": "et"
+      },
+      {
         "surface": "in Gath",
         "lemma": "gat"
       },
@@ -50,12 +58,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "men",
         "lemma": "enosh"
       },
       {
         "surface": "are hounding me",
         "lemma": "shaaph"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "day",
@@ -80,8 +96,16 @@
         "lemma": "shaaph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "many",
@@ -106,8 +130,16 @@
         "lemma": "yare"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "put my trust",
         "lemma": "batach"
+      },
+      {
+        "surface": "in You",
+        "lemma": "el"
       }
     ],
     "4": [
@@ -132,6 +164,10 @@
         "lemma": "batach"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       },
@@ -142,9 +178,17 @@
       {
         "surface": "can man",
         "lemma": "basar"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       }
     ],
     "5": [
+      {
+        "surface": "All day long",
+        "lemma": "kol"
+      },
       {
         "surface": "they twist",
         "lemma": "atsav"
@@ -154,8 +198,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their thoughts",
         "lemma": "machashavah"
+      },
+      {
+        "surface": "are on my",
+        "lemma": "al"
       },
       {
         "surface": "demise",
@@ -172,12 +224,20 @@
         "lemma": "tsaphan"
       },
       {
+        "surface": "they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "watch",
         "lemma": "shamar"
       },
       {
         "surface": "my steps",
         "lemma": "aqev"
+      },
+      {
+        "surface": "while",
+        "lemma": "asher"
       },
       {
         "surface": "they wait",
@@ -189,6 +249,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "In spite of",
+        "lemma": "al"
+      },
       {
         "surface": "such sin",
         "lemma": "aven"
@@ -216,6 +280,10 @@
     ],
     "8": [
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "have taken account",
         "lemma": "saphar"
       },
@@ -236,22 +304,46 @@
         "lemma": "nod"
       },
       {
+        "surface": "are they not",
+        "lemma": "lo"
+      },
+      {
         "surface": "in Your book",
         "lemma": "sepher"
       }
     ],
     "9": [
       {
+        "surface": "Then",
+        "lemma": "az"
+      },
+      {
         "surface": "my enemies",
         "lemma": "oyev"
+      },
+      {
+        "surface": "will retreat",
+        "lemma": "shuv"
       },
       {
         "surface": "on the day",
         "lemma": "yom"
       },
       {
+        "surface": "I cry for help",
+        "lemma": "qara"
+      },
+      {
+        "surface": "By this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "I will know",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "God is",
@@ -294,6 +386,10 @@
         "lemma": "batach"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       },
@@ -304,12 +400,20 @@
       {
         "surface": "can man",
         "lemma": "adam"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       }
     ],
     "12": [
       {
         "surface": "Your vows",
         "lemma": "neder"
+      },
+      {
+        "surface": "are upon me",
+        "lemma": "al"
       },
       {
         "surface": "O God",
@@ -325,6 +429,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "You have delivered",
         "lemma": "natsal"
@@ -368,8 +476,8 @@
     ]
   },
   "themeLemmas": [
-    "yonatelemrechoqim",
-    "yare",
-    "halal"
+    "kol",
+    "ki",
+    "al"
   ]
 }

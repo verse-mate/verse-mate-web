@@ -6,6 +6,14 @@
   "verses": {
     "1": [
       {
+        "surface": "Then the man brought me",
+        "lemma": "bo"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
+      },
+      {
         "surface": "the outer sanctuary",
         "lemma": "hekhal"
       },
@@ -110,6 +118,14 @@
     ],
     "3": [
       {
+        "surface": "And he went",
+        "lemma": "bo"
+      },
+      {
+        "surface": "into the inner sanctuary",
+        "lemma": "penimah"
+      },
+      {
         "surface": "and measured",
         "lemma": "madad"
       },
@@ -164,6 +180,10 @@
         "lemma": "madad"
       },
       {
+        "surface": "the room adjacent to",
+        "lemma": "el"
+      },
+      {
         "surface": "the inner sanctuary",
         "lemma": "hekhal"
       },
@@ -190,6 +210,18 @@
       {
         "surface": "wide",
         "lemma": "rochav"
+      },
+      {
+        "surface": "And he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
+        "surface": "This",
+        "lemma": "zeh"
       },
       {
         "surface": "is the Most Holy Place",
@@ -256,6 +288,10 @@
         "lemma": "tsela"
       },
       {
+        "surface": "above",
+        "lemma": "el"
+      },
+      {
         "surface": "another",
         "lemma": "tsela"
       },
@@ -266,6 +302,10 @@
       {
         "surface": "of thirty rooms each",
         "lemma": "sheloshim"
+      },
+      {
+        "surface": "There were ledges",
+        "lemma": "bo"
       },
       {
         "surface": "all around",
@@ -280,6 +320,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "to serve as",
+        "lemma": "hayah"
+      },
+      {
         "surface": "supports",
         "lemma": "achaz"
       },
@@ -290,6 +334,14 @@
       {
         "surface": "so that the supports",
         "lemma": "achaz"
+      },
+      {
+        "surface": "would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "be fastened into",
+        "lemma": "hayah"
       },
       {
         "surface": "the wall",
@@ -334,6 +386,10 @@
         "lemma": "maal"
       },
       {
+        "surface": "corresponding to",
+        "lemma": "al"
+      },
+      {
         "surface": "the narrowing of the temple wall",
         "lemma": "rochav"
       },
@@ -354,6 +410,10 @@
         "lemma": "tachton"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "the highest",
         "lemma": "elyon"
       },
@@ -363,6 +423,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "I saw",
+        "lemma": "raah"
+      },
       {
         "surface": "that the temple",
         "lemma": "bet"
@@ -432,6 +496,10 @@
       {
         "surface": "thick",
         "lemma": "rochav"
+      },
+      {
+        "surface": "and",
+        "lemma": "asher"
       },
       {
         "surface": "the open area",
@@ -538,6 +606,14 @@
       {
         "surface": "Now the building",
         "lemma": "binyan"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "faced",
+        "lemma": "el"
       },
       {
         "surface": "the temple courtyard",
@@ -694,8 +770,16 @@
         "lemma": "binyan"
       },
       {
+        "surface": "facing",
+        "lemma": "el"
+      },
+      {
         "surface": "the temple courtyard",
         "lemma": "gizrah"
+      },
+      {
+        "surface": "at",
+        "lemma": "al"
       },
       {
         "surface": "the rear of the temple",
@@ -784,6 +868,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "the windows",
         "lemma": "challon"
       },
@@ -798,8 +886,16 @@
     ],
     "17": [
       {
+        "surface": "In the space above",
+        "lemma": "al"
+      },
+      {
         "surface": "the outside of the entrance",
         "lemma": "petach"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "the inner",
@@ -812,6 +908,10 @@
       {
         "surface": "on",
         "lemma": "chuts"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the walls",
@@ -838,6 +938,10 @@
       {
         "surface": "were alternating",
         "lemma": "timrah"
+      },
+      {
+        "surface": "carved",
+        "lemma": "asah"
       },
       {
         "surface": "cherubim",
@@ -870,6 +974,10 @@
         "lemma": "adam"
       },
       {
+        "surface": "was toward",
+        "lemma": "el"
+      },
+      {
         "surface": "the palm tree",
         "lemma": "timrah"
       },
@@ -886,12 +994,24 @@
         "lemma": "kephir"
       },
       {
+        "surface": "was toward",
+        "lemma": "el"
+      },
+      {
         "surface": "the palm tree",
         "lemma": "timrah"
       },
       {
         "surface": "on the other side",
         "lemma": "poh"
+      },
+      {
+        "surface": "They were carved",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all the way around",
+        "lemma": "el"
       },
       {
         "surface": "the temple",
@@ -908,6 +1028,10 @@
         "lemma": "timrah"
       },
       {
+        "surface": "were carved",
+        "lemma": "asah"
+      },
+      {
         "surface": "on the wall",
         "lemma": "qir"
       },
@@ -918,6 +1042,14 @@
       {
         "surface": "from the floor",
         "lemma": "erets"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
+        "surface": "the space above",
+        "lemma": "al"
       },
       {
         "surface": "the entrance",
@@ -1008,8 +1140,20 @@
         "lemma": "davar"
       },
       {
+        "surface": "me",
+        "lemma": "el"
+      },
+      {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
         "surface": "is the table",
         "lemma": "shulchan"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "is before",
@@ -1094,8 +1238,20 @@
         "lemma": "timrah"
       },
       {
+        "surface": "like those",
+        "lemma": "asher"
+      },
+      {
         "surface": "on the walls",
         "lemma": "qir"
+      },
+      {
+        "surface": "were carved",
+        "lemma": "asah"
+      },
+      {
+        "surface": "on",
+        "lemma": "el"
       },
       {
         "surface": "the doors",
@@ -1110,8 +1266,16 @@
         "lemma": "ets"
       },
       {
+        "surface": "canopy",
+        "lemma": "av"
+      },
+      {
         "surface": "outside",
         "lemma": "chuts"
+      },
+      {
+        "surface": "on",
+        "lemma": "el"
       },
       {
         "surface": "the front",
@@ -1140,6 +1304,10 @@
         "lemma": "poh"
       },
       {
+        "surface": "on",
+        "lemma": "el"
+      },
+      {
         "surface": "the sidewalls",
         "lemma": "kateph"
       },
@@ -1154,6 +1322,10 @@
       {
         "surface": "of the temple",
         "lemma": "bet"
+      },
+      {
+        "surface": "also had canopies",
+        "lemma": "av"
       }
     ]
   },

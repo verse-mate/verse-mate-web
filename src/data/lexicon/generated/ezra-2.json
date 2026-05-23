@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Now these are",
+        "lemma": "elleh"
+      },
+      {
         "surface": "the people",
         "lemma": "ben"
       },
@@ -42,6 +46,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "They returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -59,6 +67,14 @@
       }
     ],
     "2": [
+      {
+        "surface": "accompanied",
+        "lemma": "bo"
+      },
+      {
+        "surface": "by",
+        "lemma": "im"
+      },
       {
         "surface": "Zerubbabel",
         "lemma": "zerubbavel"
@@ -814,6 +830,10 @@
       {
         "surface": "139",
         "lemma": "meah"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       }
     ],
     "43": [
@@ -1246,9 +1266,17 @@
       {
         "surface": "numbered 392",
         "lemma": "shalosh"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       }
     ],
     "59": [
+      {
+        "surface": "The following",
+        "lemma": "elleh"
+      },
       {
         "surface": "came up",
         "lemma": "alah"
@@ -1280,6 +1308,10 @@
       {
         "surface": "and Immer",
         "lemma": "immer"
+      },
+      {
+        "surface": "but they could not",
+        "lemma": "lo"
       },
       {
         "surface": "prove",
@@ -1362,6 +1394,10 @@
         "lemma": "barzillay"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "had married",
         "lemma": "laqach"
       },
@@ -1378,11 +1414,23 @@
         "lemma": "giladi"
       },
       {
+        "surface": "and was called",
+        "lemma": "qara"
+      },
+      {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "their name",
         "lemma": "shem"
       }
     ],
     "62": [
+      {
+        "surface": "These men",
+        "lemma": "elleh"
+      },
       {
         "surface": "searched for",
         "lemma": "baqash"
@@ -1392,12 +1440,20 @@
         "lemma": "katav"
       },
       {
+        "surface": "but they could not",
+        "lemma": "lo"
+      },
+      {
         "surface": "find them",
         "lemma": "matsa"
       },
       {
         "surface": "and so were excluded",
         "lemma": "gaal"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the priesthood {as unclean",
@@ -1410,12 +1466,24 @@
         "lemma": "tirshata"
       },
       {
+        "surface": "ordered",
+        "lemma": "amar"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to eat",
         "lemma": "akhal"
       },
       {
         "surface": "the most holy things",
         "lemma": "qodesh"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "there was a priest",
@@ -1431,6 +1499,10 @@
       }
     ],
     "64": [
+      {
+        "surface": "The whole",
+        "lemma": "kol"
+      },
       {
         "surface": "assembly",
         "lemma": "qahal"
@@ -1512,6 +1584,10 @@
     ],
     "68": [
       {
+        "surface": "When they arrived",
+        "lemma": "bo"
+      },
+      {
         "surface": "at the house",
         "lemma": "bet"
       },
@@ -1526,6 +1602,10 @@
       {
         "surface": "some of the heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of the families",
+        "lemma": "av"
       },
       {
         "surface": "gave freewill offerings",
@@ -1544,6 +1624,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "its original site",
         "lemma": "makhon"
       }
@@ -1552,6 +1636,10 @@
       {
         "surface": "According to their ability",
         "lemma": "koach"
+      },
+      {
+        "surface": "they gave",
+        "lemma": "natan"
       },
       {
         "surface": "to the treasury",
@@ -1620,12 +1708,24 @@
         "lemma": "natin"
       },
       {
+        "surface": "along with some",
+        "lemma": "min"
+      },
+      {
         "surface": "of the people",
         "lemma": "am"
       },
       {
+        "surface": "settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in their own towns",
         "lemma": "ir"
+      },
+      {
+        "surface": "and the rest",
+        "lemma": "kol"
       },
       {
         "surface": "of the Israelites",

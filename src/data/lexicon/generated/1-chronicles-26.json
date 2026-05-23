@@ -30,6 +30,10 @@
         "lemma": "qore"
       },
       {
+        "surface": "one of",
+        "lemma": "min"
+      },
+      {
         "surface": "the sons",
         "lemma": "ben"
       },
@@ -186,6 +190,10 @@
         "lemma": "shemini"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -214,6 +222,18 @@
       {
         "surface": "who ruled",
         "lemma": "mimshal"
+      },
+      {
+        "surface": "over their families",
+        "lemma": "av"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
       },
       {
         "surface": "were strong",
@@ -272,6 +292,14 @@
     ],
     "8": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
+        "surface": "these were",
+        "lemma": "elleh"
+      },
+      {
         "surface": "descendants",
         "lemma": "ben"
       },
@@ -282,6 +310,10 @@
       {
         "surface": "of Obed-edom",
         "lemma": "ovededom"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
       },
       {
         "surface": "and their sons",
@@ -368,8 +400,24 @@
         "lemma": "rosh"
       },
       {
+        "surface": "although",
+        "lemma": "ki"
+      },
+      {
+        "surface": "he was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
       },
       {
         "surface": "had appointed him",
@@ -420,9 +468,17 @@
       {
         "surface": "numbered 13",
         "lemma": "shalosh"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       }
     ],
     "12": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "divisions",
         "lemma": "machaloqet"
@@ -476,6 +532,10 @@
       {
         "surface": "for each gate",
         "lemma": "shaar"
+      },
+      {
+        "surface": "according to their families",
+        "lemma": "av"
       },
       {
         "surface": "young",
@@ -534,6 +594,10 @@
       {
         "surface": "for the North Gate",
         "lemma": "tsaphon"
+      },
+      {
+        "surface": "fell to him",
+        "lemma": "yatsa"
       }
     ],
     "15": [
@@ -562,6 +626,10 @@
       {
         "surface": "The lots for the West Gate",
         "lemma": "maarav"
+      },
+      {
+        "surface": "and",
+        "lemma": "im"
       },
       {
         "surface": "the Shallecheth",
@@ -670,6 +738,10 @@
     ],
     "19": [
       {
+        "surface": "These were",
+        "lemma": "elleh"
+      },
+      {
         "surface": "the divisions",
         "lemma": "machaloqet"
       },
@@ -698,6 +770,10 @@
       {
         "surface": "Now their fellow Levites were",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "in charge of",
+        "lemma": "al"
       },
       {
         "surface": "the treasuries",
@@ -746,6 +822,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of the families",
+        "lemma": "av"
+      },
+      {
         "surface": "of Ladan",
         "lemma": "ladan"
       },
@@ -778,6 +858,10 @@
       {
         "surface": "Joel",
         "lemma": "yoel"
+      },
+      {
+        "surface": "They were in charge of",
+        "lemma": "al"
       },
       {
         "surface": "the treasuries",
@@ -836,6 +920,10 @@
         "lemma": "nagid"
       },
       {
+        "surface": "in charge of",
+        "lemma": "al"
+      },
+      {
         "surface": "the treasuries",
         "lemma": "otsar"
       }
@@ -892,6 +980,10 @@
     ],
     "26": [
       {
+        "surface": "This",
+        "lemma": "hu"
+      },
+      {
         "surface": "Shelomith",
         "lemma": "shelomot"
       },
@@ -900,8 +992,20 @@
         "lemma": "ach"
       },
       {
+        "surface": "were in charge of",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the treasuries",
         "lemma": "otsar"
+      },
+      {
+        "surface": "for the things",
+        "lemma": "asher"
       },
       {
         "surface": "dedicated",
@@ -918,6 +1022,10 @@
       {
         "surface": "by the heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of families",
+        "lemma": "av"
       },
       {
         "surface": "who were the commanders",
@@ -946,8 +1054,16 @@
         "lemma": "qadash"
       },
       {
+        "surface": "some of",
+        "lemma": "min"
+      },
+      {
         "surface": "the plunder",
         "lemma": "shalal"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "their battles",
@@ -967,6 +1083,10 @@
       }
     ],
     "28": [
+      {
+        "surface": "Everything",
+        "lemma": "kol"
+      },
       {
         "surface": "that had been dedicated",
         "lemma": "qadash"
@@ -1016,8 +1136,16 @@
         "lemma": "tseruyah"
       },
       {
+        "surface": "along with everything else",
+        "lemma": "kol"
+      },
+      {
         "surface": "that was dedicated",
         "lemma": "qadash"
+      },
+      {
+        "surface": "was under",
+        "lemma": "al"
       },
       {
         "surface": "the care",
@@ -1060,6 +1188,10 @@
       {
         "surface": "and judges",
         "lemma": "shaphat"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "Israel",
@@ -1108,6 +1240,10 @@
         "lemma": "yarden"
       },
       {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the work",
         "lemma": "melakhah"
       },
@@ -1144,6 +1280,10 @@
       {
         "surface": "according to the genealogies",
         "lemma": "toledah"
+      },
+      {
+        "surface": "of his ancestors",
+        "lemma": "av"
       },
       {
         "surface": "In the fortieth",
@@ -1208,6 +1348,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of families",
+        "lemma": "av"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
@@ -1218,6 +1362,10 @@
       {
         "surface": "appointed them",
         "lemma": "paqad"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "the Reubenites",
@@ -1234,6 +1382,10 @@
       {
         "surface": "of Manasseh",
         "lemma": "menashshi"
+      },
+      {
+        "surface": "for every",
+        "lemma": "kol"
       },
       {
         "surface": "matter pertaining to",
@@ -1256,6 +1408,6 @@
   "themeLemmas": [
     "ach",
     "ovededom",
-    "chayil"
+    "kol"
   ]
 }

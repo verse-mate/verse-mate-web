@@ -6,12 +6,24 @@
   "verses": {
     "1": [
       {
+        "surface": "In",
+        "lemma": "et"
+      },
+      {
         "surface": "the spring",
         "lemma": "teshuvah"
       },
       {
+        "surface": "at the time when",
+        "lemma": "et"
+      },
+      {
         "surface": "kings",
         "lemma": "melekh"
+      },
+      {
+        "surface": "march out to war",
+        "lemma": "yatsa"
       },
       {
         "surface": "Joab",
@@ -38,6 +50,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "He came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Rabbah",
         "lemma": "rabbah"
       },
@@ -48,6 +64,10 @@
       {
         "surface": "but David",
         "lemma": "david"
+      },
+      {
+        "surface": "remained",
+        "lemma": "yashav"
       },
       {
         "surface": "in Jerusalem",
@@ -84,6 +104,10 @@
         "lemma": "atarah"
       },
       {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
         "surface": "the head",
         "lemma": "rosh"
       },
@@ -116,12 +140,24 @@
         "lemma": "even"
       },
       {
+        "surface": "and it was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "placed on",
+        "lemma": "al"
+      },
+      {
         "surface": "David’s",
         "lemma": "david"
       },
       {
         "surface": "head",
         "lemma": "rosh"
+      },
+      {
+        "surface": "And David took",
+        "lemma": "yatsa"
       },
       {
         "surface": "a great amount",
@@ -138,8 +174,16 @@
     ],
     "3": [
       {
+        "surface": "David brought out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "who were",
+        "lemma": "asher"
       },
       {
         "surface": "and put them to work",
@@ -166,8 +210,16 @@
         "lemma": "david"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "the same",
         "lemma": "ken"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "the Ammonite",
@@ -182,8 +234,16 @@
         "lemma": "david"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his troops",
         "lemma": "am"
+      },
+      {
+        "surface": "returned",
+        "lemma": "shuv"
       },
       {
         "surface": "to Jerusalem",
@@ -191,6 +251,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Some time later",
+        "lemma": "hayah"
+      },
       {
         "surface": "war",
         "lemma": "milchamah"
@@ -200,12 +264,20 @@
         "lemma": "amad"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "the Philistines",
         "lemma": "pelishti"
       },
       {
         "surface": "at Gezer",
         "lemma": "gezer"
+      },
+      {
+        "surface": "At that time",
+        "lemma": "az"
       },
       {
         "surface": "Sibbecai",
@@ -242,8 +314,16 @@
         "lemma": "od"
       },
       {
+        "surface": "there was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a battle",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "the Philistines",
@@ -300,6 +380,10 @@
     ],
     "6": [
       {
+        "surface": "And there was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "also",
         "lemma": "od"
       },
@@ -310,6 +394,10 @@
       {
         "surface": "at Gath",
         "lemma": "gat"
+      },
+      {
+        "surface": "where there was",
+        "lemma": "hayah"
       },
       {
         "surface": "a man",
@@ -334,6 +422,14 @@
       {
         "surface": "twenty-four in all",
         "lemma": "esrim"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
+        "surface": "too",
+        "lemma": "gam"
       },
       {
         "surface": "was descended",
@@ -380,6 +476,10 @@
     ],
     "8": [
       {
+        "surface": "So these",
+        "lemma": "el"
+      },
+      {
         "surface": "descendants",
         "lemma": "yalad"
       },
@@ -411,7 +511,7 @@
   },
   "themeLemmas": [
     "david",
-    "nakhah",
-    "rapah"
+    "hayah",
+    "nakhah"
   ]
 }

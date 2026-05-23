@@ -90,12 +90,20 @@
         "lemma": "sum"
       },
       {
+        "surface": "the clouds",
+        "lemma": "av"
+      },
+      {
         "surface": "His chariot",
         "lemma": "rekhuv"
       },
       {
         "surface": "walking",
         "lemma": "halakh"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the wings",
@@ -107,6 +115,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "He makes",
+        "lemma": "asah"
+      },
       {
         "surface": "the winds",
         "lemma": "ruach"
@@ -136,6 +148,10 @@
       {
         "surface": "the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "its foundations",
@@ -172,11 +188,19 @@
         "lemma": "amad"
       },
       {
+        "surface": "above",
+        "lemma": "al"
+      },
+      {
         "surface": "the mountains",
         "lemma": "har"
       }
     ],
     "7": [
+      {
+        "surface": "At",
+        "lemma": "min"
+      },
       {
         "surface": "Your rebuke",
         "lemma": "gearah"
@@ -184,6 +208,10 @@
       {
         "surface": "the waters fled",
         "lemma": "nus"
+      },
+      {
+        "surface": "at",
+        "lemma": "min"
       },
       {
         "surface": "the sound",
@@ -216,6 +244,10 @@
         "lemma": "yarad"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the place",
         "lemma": "maqom"
       },
@@ -244,6 +276,10 @@
       {
         "surface": "that they may never",
         "lemma": "bal"
+      },
+      {
+        "surface": "again",
+        "lemma": "shuv"
       },
       {
         "surface": "cover",
@@ -286,6 +322,10 @@
         "lemma": "shaqah"
       },
       {
+        "surface": "to every",
+        "lemma": "kol"
+      },
+      {
         "surface": "beast",
         "lemma": "chay"
       },
@@ -318,6 +358,14 @@
       {
         "surface": "nest",
         "lemma": "shakhan"
+      },
+      {
+        "surface": "beside the springs",
+        "lemma": "al"
+      },
+      {
+        "surface": "they sing",
+        "lemma": "natan"
       },
       {
         "surface": "among",
@@ -384,8 +432,16 @@
         "lemma": "avodah"
       },
       {
+        "surface": "bringing forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "food",
         "lemma": "lechem"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the earth",
@@ -460,11 +516,19 @@
         "lemma": "levanon"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "He planted",
         "lemma": "nata"
       }
     ],
     "17": [
+      {
+        "surface": "where",
+        "lemma": "asher"
+      },
       {
         "surface": "the birds",
         "lemma": "tsippor"
@@ -514,6 +578,10 @@
     ],
     "19": [
       {
+        "surface": "He made",
+        "lemma": "asah"
+      },
+      {
         "surface": "the moon",
         "lemma": "yareach"
       },
@@ -544,8 +612,16 @@
         "lemma": "choshekh"
       },
       {
+        "surface": "and it becomes",
+        "lemma": "hayah"
+      },
+      {
         "surface": "night",
         "lemma": "laylah"
+      },
+      {
+        "surface": "when all",
+        "lemma": "kol"
       },
       {
         "surface": "the beasts",
@@ -604,6 +680,10 @@
         "lemma": "ravats"
       },
       {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
         "surface": "their dens",
         "lemma": "meonah"
       }
@@ -614,12 +694,20 @@
         "lemma": "adam"
       },
       {
+        "surface": "goes forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "to his work",
         "lemma": "poal"
       },
       {
         "surface": "and to his labor",
         "lemma": "avodah"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "evening",
@@ -648,6 +736,14 @@
         "lemma": "chokhmah"
       },
       {
+        "surface": "You have made them",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -661,6 +757,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "Here",
+        "lemma": "zeh"
+      },
       {
         "surface": "is the sea",
         "lemma": "yam"
@@ -690,6 +790,10 @@
         "lemma": "gadol"
       },
       {
+        "surface": "and",
+        "lemma": "im"
+      },
+      {
         "surface": "small",
         "lemma": "qatan"
       }
@@ -712,6 +816,10 @@
         "lemma": "livyatan"
       },
       {
+        "surface": "which",
+        "lemma": "zeh"
+      },
+      {
         "surface": "You formed",
         "lemma": "yatsar"
       },
@@ -722,15 +830,35 @@
     ],
     "27": [
       {
+        "surface": "All creatures",
+        "lemma": "kol"
+      },
+      {
         "surface": "look",
         "lemma": "savar"
       },
       {
+        "surface": "to You",
+        "lemma": "el"
+      },
+      {
+        "surface": "to give them",
+        "lemma": "natan"
+      },
+      {
         "surface": "their food",
         "lemma": "okhel"
+      },
+      {
+        "surface": "in due season",
+        "lemma": "et"
       }
     ],
     "28": [
+      {
+        "surface": "When You give it",
+        "lemma": "natan"
+      },
       {
         "surface": "they gather it up",
         "lemma": "laqat"
@@ -778,6 +906,14 @@
         "lemma": "gava"
       },
       {
+        "surface": "and return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "dust",
         "lemma": "aphar"
       }
@@ -816,6 +952,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "endure",
+        "lemma": "hayah"
       },
       {
         "surface": "forever",
@@ -896,6 +1036,14 @@
         "lemma": "arev"
       },
       {
+        "surface": "to Him",
+        "lemma": "al"
+      },
+      {
+        "surface": "for I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "rejoice",
         "lemma": "samach"
       },
@@ -912,6 +1060,10 @@
       {
         "surface": "vanish",
         "lemma": "tamam"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the earth",
@@ -949,7 +1101,7 @@
   },
   "themeLemmas": [
     "har",
-    "ruach",
-    "chay"
+    "al",
+    "ruach"
   ]
 }

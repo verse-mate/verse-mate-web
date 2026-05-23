@@ -22,6 +22,10 @@
         "lemma": "palal"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -32,8 +36,20 @@
     ],
     "2": [
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "In my distress",
         "lemma": "batstsarah"
+      },
+      {
+        "surface": "I called",
+        "lemma": "qara"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -54,6 +70,10 @@
       {
         "surface": "I called for help",
         "lemma": "shava"
+      },
+      {
+        "surface": "and You heard",
+        "lemma": "shama"
       },
       {
         "surface": "my voice",
@@ -86,6 +106,10 @@
         "lemma": "savav"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Your breakers",
         "lemma": "mishbar"
       },
@@ -96,9 +120,21 @@
       {
         "surface": "swept",
         "lemma": "avar"
+      },
+      {
+        "surface": "over me",
+        "lemma": "al"
       }
     ],
     "4": [
+      {
+        "surface": "At this, I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
       {
         "surface": "I have been banished",
         "lemma": "garash"
@@ -124,6 +160,10 @@
         "lemma": "yasaph"
       },
       {
+        "surface": "toward",
+        "lemma": "el"
+      },
+      {
         "surface": "Your holy",
         "lemma": "qodesh"
       },
@@ -140,6 +180,10 @@
       {
         "surface": "engulfed me",
         "lemma": "aphaph"
+      },
+      {
+        "surface": "to take",
+        "lemma": "ad"
       },
       {
         "surface": "my life",
@@ -238,6 +282,18 @@
         "lemma": "tephillah"
       },
       {
+        "surface": "went up",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to You",
+        "lemma": "el"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Your holy",
         "lemma": "qodesh"
       },
@@ -270,6 +326,10 @@
     ],
     "9": [
       {
+        "surface": "But I",
+        "lemma": "ani"
+      },
+      {
         "surface": "with the voice",
         "lemma": "qol"
       },
@@ -284,6 +344,10 @@
       {
         "surface": "I will fulfill",
         "lemma": "salem"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
       },
       {
         "surface": "I have vowed",
@@ -304,6 +368,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "commanded",
+        "lemma": "amar"
+      },
+      {
         "surface": "the fish",
         "lemma": "dag"
       },
@@ -316,14 +384,18 @@
         "lemma": "yonah"
       },
       {
+        "surface": "onto",
+        "lemma": "el"
+      },
+      {
         "surface": "dry land",
         "lemma": "yabbashah"
       }
     ]
   },
   "themeLemmas": [
+    "amar",
     "yonah",
-    "savav",
-    "qol"
+    "savav"
   ]
 }

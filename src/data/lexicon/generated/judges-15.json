@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Later on",
+        "lemma": "hayah"
+      },
+      {
         "surface": "at the time",
         "lemma": "yom"
       },
@@ -38,22 +42,74 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "I want to go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "my wife",
         "lemma": "ishshah"
       },
       {
         "surface": "in her room",
         "lemma": "cheder"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "But her father",
+        "lemma": "av"
+      },
+      {
+        "surface": "would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "let him",
+        "lemma": "natan"
+      },
+      {
+        "surface": "enter",
+        "lemma": "bo"
       }
     ],
     "2": [
+      {
+        "surface": "I was sure",
+        "lemma": "amar"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
       {
         "surface": "you thoroughly hated her",
         "lemma": "sane"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "her father",
+        "lemma": "av"
+      },
+      {
+        "surface": "so I gave her",
+        "lemma": "natan"
+      },
+      {
         "surface": "to one of the men who accompanied you",
         "lemma": "merea"
+      },
+      {
+        "surface": "Is not",
+        "lemma": "lo"
       },
       {
         "surface": "her younger",
@@ -68,8 +124,16 @@
         "lemma": "tov"
       },
       {
+        "surface": "than she",
+        "lemma": "min"
+      },
+      {
         "surface": "Please",
         "lemma": "na"
+      },
+      {
+        "surface": "take her",
+        "lemma": "hayah"
       },
       {
         "surface": "instead",
@@ -82,12 +146,20 @@
         "lemma": "shimshon"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "This time",
         "lemma": "paam"
       },
       {
         "surface": "I will be blameless",
         "lemma": "naqah"
+      },
+      {
+        "surface": "in doing",
+        "lemma": "asah"
       },
       {
         "surface": "harm",
@@ -198,6 +270,10 @@
         "lemma": "qamah"
       },
       {
+        "surface": "as well as",
+        "lemma": "ad"
+      },
+      {
         "surface": "the vineyards",
         "lemma": "kerem"
       },
@@ -212,8 +288,20 @@
         "lemma": "mi"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "the Philistines",
         "lemma": "pelishti"
+      },
+      {
+        "surface": "demanded",
+        "lemma": "amar"
       },
       {
         "surface": "It was Samson",
@@ -228,8 +316,20 @@
         "lemma": "timni"
       },
       {
+        "surface": "they were told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "his wife",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "was given",
+        "lemma": "natan"
       },
       {
         "surface": "to his companion",
@@ -248,6 +348,10 @@
         "lemma": "saraph"
       },
       {
+        "surface": "her and her father",
+        "lemma": "av"
+      },
+      {
         "surface": "to death",
         "lemma": "esh"
       }
@@ -258,8 +362,28 @@
         "lemma": "shimshon"
       },
       {
+        "surface": "told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Because",
+        "lemma": "im"
+      },
+      {
+        "surface": "you have done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "I will not rest",
         "lemma": "chadal"
+      },
+      {
+        "surface": "until",
+        "lemma": "ki"
       },
       {
         "surface": "I have taken vengeance",
@@ -270,6 +394,10 @@
       {
         "surface": "And he struck",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
       },
       {
         "surface": "ruthlessly",
@@ -286,6 +414,10 @@
       {
         "surface": "and then went down",
         "lemma": "yarad"
+      },
+      {
+        "surface": "and stayed",
+        "lemma": "yashav"
       },
       {
         "surface": "in the cave",
@@ -336,12 +468,24 @@
         "lemma": "alah"
       },
       {
+        "surface": "us",
+        "lemma": "al"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the men",
         "lemma": "ish"
       },
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "The Philistines replied",
+        "lemma": "amar"
       },
       {
         "surface": "We have come",
@@ -354,6 +498,18 @@
       {
         "surface": "Samson",
         "lemma": "shimshon"
+      },
+      {
+        "surface": "and pay him back",
+        "lemma": "asah"
+      },
+      {
+        "surface": "for what",
+        "lemma": "asher"
+      },
+      {
+        "surface": "he has done",
+        "lemma": "asah"
       }
     ],
     "11": [
@@ -378,6 +534,10 @@
         "lemma": "yarad"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the cave",
         "lemma": "saiph"
       },
@@ -390,12 +550,24 @@
         "lemma": "etam"
       },
       {
+        "surface": "and they asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Samson",
         "lemma": "shimshon"
       },
       {
+        "surface": "Do you not",
+        "lemma": "lo"
+      },
+      {
         "surface": "realize",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the Philistines",
@@ -410,11 +582,31 @@
         "lemma": "mah"
       },
       {
+        "surface": "have you done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "I have done",
+        "lemma": "asah"
+      },
+      {
         "surface": "what",
         "lemma": "ken"
+      },
+      {
+        "surface": "they did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "amar"
       }
     ],
     "12": [
+      {
+        "surface": "But they said",
+        "lemma": "amar"
+      },
       {
         "surface": "We have come down",
         "lemma": "yarad"
@@ -422,6 +614,10 @@
       {
         "surface": "to arrest you",
         "lemma": "asar"
+      },
+      {
+        "surface": "and hand you over to",
+        "lemma": "natan"
       },
       {
         "surface": "the Philistines",
@@ -432,8 +628,16 @@
         "lemma": "shimshon"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "Swear",
         "lemma": "shava"
+      },
+      {
+        "surface": "that",
+        "lemma": "pen"
       },
       {
         "surface": "you will not kill me",
@@ -442,12 +646,32 @@
     ],
     "13": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
+        "surface": "they answered",
+        "lemma": "amar"
+      },
+      {
+        "surface": "we will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "kill you",
         "lemma": "mut"
       },
       {
+        "surface": "but",
+        "lemma": "ki"
+      },
+      {
         "surface": "we will tie you up securely",
         "lemma": "asar"
+      },
+      {
+        "surface": "and hand you over to",
+        "lemma": "natan"
       },
       {
         "surface": "them",
@@ -474,11 +698,27 @@
         "lemma": "alah"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the rock",
         "lemma": "sela"
       }
     ],
     "14": [
+      {
+        "surface": "When",
+        "lemma": "hu"
+      },
+      {
+        "surface": "Samson arrived",
+        "lemma": "bo"
+      },
+      {
+        "surface": "in",
+        "lemma": "ad"
+      },
       {
         "surface": "Lehi",
         "lemma": "lechi"
@@ -490,6 +730,10 @@
       {
         "surface": "came out shouting",
         "lemma": "rua"
+      },
+      {
+        "surface": "against him",
+        "lemma": "qara"
       },
       {
         "surface": "And the Spirit",
@@ -504,12 +748,24 @@
         "lemma": "tsalach"
       },
       {
+        "surface": "upon him",
+        "lemma": "al"
+      },
+      {
         "surface": "The ropes",
         "lemma": "avot"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "his arms",
         "lemma": "zeroa"
+      },
+      {
+        "surface": "became",
+        "lemma": "hayah"
       },
       {
         "surface": "like burnt",
@@ -526,6 +782,10 @@
       {
         "surface": "broke loose",
         "lemma": "masas"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
       },
       {
         "surface": "his hands",
@@ -580,6 +840,10 @@
         "lemma": "shimshon"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "With the jawbone",
         "lemma": "lechi"
       },
@@ -618,6 +882,10 @@
     ],
     "17": [
       {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
         "surface": "when Samson had finished",
         "lemma": "kalah"
       },
@@ -636,6 +904,14 @@
       {
         "surface": "from his hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "and he named",
+        "lemma": "qara"
+      },
+      {
+        "surface": "that",
+        "lemma": "hu"
       },
       {
         "surface": "place",
@@ -660,8 +936,28 @@
         "lemma": "tsame"
       },
       {
+        "surface": "Samson cried out",
+        "lemma": "qara"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
+        "surface": "have accomplished",
+        "lemma": "natan"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
       },
       {
         "surface": "great",
@@ -726,6 +1022,14 @@
         "lemma": "mayim"
       },
       {
+        "surface": "came out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "of it",
+        "lemma": "min"
+      },
+      {
         "surface": "When Samson drank",
         "lemma": "shatah"
       },
@@ -734,8 +1038,20 @@
         "lemma": "ruach"
       },
       {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and he was revived",
         "lemma": "chayah"
+      },
+      {
+        "surface": "That is why",
+        "lemma": "al"
+      },
+      {
+        "surface": "he named it",
+        "lemma": "qara"
       },
       {
         "surface": "vvv",
@@ -746,8 +1062,20 @@
         "lemma": "enhaqqore"
       },
       {
+        "surface": "and it remains",
+        "lemma": "asher"
+      },
+      {
         "surface": "in Lehi",
         "lemma": "lechi"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
       },
       {
         "surface": "day",
@@ -782,8 +1110,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "shimshon",
-    "pelishti",
-    "lechi"
+    "pelishti"
   ]
 }

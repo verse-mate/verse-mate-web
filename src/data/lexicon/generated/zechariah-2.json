@@ -14,6 +14,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -36,8 +40,16 @@
         "lemma": "an"
       },
       {
+        "surface": "are you",
+        "lemma": "attah"
+      },
+      {
         "surface": "going",
         "lemma": "halakh"
+      },
+      {
+        "surface": "I asked",
+        "lemma": "amar"
       },
       {
         "surface": "To measure",
@@ -46,6 +58,14 @@
       {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and to determine",
+        "lemma": "raah"
       },
       {
         "surface": "its width",
@@ -70,15 +90,35 @@
         "lemma": "davar"
       },
       {
+        "surface": "went forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "and another",
         "lemma": "acher"
       },
       {
         "surface": "angel",
         "lemma": "maleakh"
+      },
+      {
+        "surface": "came forward",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to meet him",
+        "lemma": "qara"
       }
     ],
     "4": [
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to him",
+        "lemma": "el"
+      },
       {
         "surface": "Run",
         "lemma": "ruts"
@@ -88,12 +128,20 @@
         "lemma": "davar"
       },
       {
+        "surface": "that",
+        "lemma": "hallaz"
+      },
+      {
         "surface": "young man",
         "lemma": "naar"
       },
       {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "will be a city",
+        "lemma": "yashav"
       },
       {
         "surface": "without walls",
@@ -118,6 +166,14 @@
     ],
     "5": [
       {
+        "surface": "For I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a wall",
         "lemma": "chomah"
       },
@@ -136,6 +192,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and I will be",
+        "lemma": "hayah"
       },
       {
         "surface": "the glory",
@@ -176,6 +236,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "I have scattered",
         "lemma": "paras"
       },
@@ -214,6 +278,10 @@
         "lemma": "malat"
       },
       {
+        "surface": "you who dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "with the Daughter",
         "lemma": "bat"
       },
@@ -223,6 +291,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "this is what",
         "lemma": "koh"
@@ -236,6 +308,10 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "After His Glory",
         "lemma": "kavod"
       },
@@ -244,12 +320,20 @@
         "lemma": "shalach"
       },
       {
+        "surface": "against",
+        "lemma": "el"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
       {
         "surface": "that have plundered you",
         "lemma": "shalal"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "whoever touches",
@@ -282,6 +366,14 @@
         "lemma": "yad"
       },
       {
+        "surface": "over them",
+        "lemma": "al"
+      },
+      {
+        "surface": "so that they will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "plunder",
         "lemma": "shalal"
       },
@@ -292,6 +384,10 @@
       {
         "surface": "Then you will know",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -324,6 +420,14 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I am coming",
+        "lemma": "bo"
+      },
+      {
         "surface": "to dwell",
         "lemma": "shakhan"
       },
@@ -342,6 +446,10 @@
     ],
     "11": [
       {
+        "surface": "On that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -358,8 +466,16 @@
         "lemma": "lavah"
       },
       {
+        "surface": "themselves to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and they will become",
+        "lemma": "hayah"
       },
       {
         "surface": "people",
@@ -378,6 +494,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -388,6 +508,10 @@
       {
         "surface": "has sent Me",
         "lemma": "shalach"
+      },
+      {
+        "surface": "to you",
+        "lemma": "el"
       }
     ],
     "12": [
@@ -406,6 +530,10 @@
       {
         "surface": "as His portion",
         "lemma": "cheleq"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "the Holy",
@@ -442,8 +570,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "people",
         "lemma": "basar"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "He has roused Himself",
@@ -460,8 +596,8 @@
     ]
   },
   "themeLemmas": [
+    "ki",
     "tavekh",
-    "neum",
-    "yerushalaim"
+    "neum"
   ]
 }

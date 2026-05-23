@@ -14,6 +14,18 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Joel",
         "lemma": "yoel"
       },
@@ -28,6 +40,14 @@
     ],
     "2": [
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "O elders",
         "lemma": "zaqen"
       },
@@ -36,22 +56,50 @@
         "lemma": "azan"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "Has anything like this",
+        "lemma": "zot"
+      },
+      {
+        "surface": "ever happened",
+        "lemma": "hayah"
       },
       {
         "surface": "in your days",
         "lemma": "yom"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "in the days",
         "lemma": "yom"
+      },
+      {
+        "surface": "of your fathers",
+        "lemma": "av"
       }
     ],
     "3": [
       {
         "surface": "Tell",
         "lemma": "saphar"
+      },
+      {
+        "surface": "it",
+        "lemma": "al"
       },
       {
         "surface": "to your children",
@@ -146,6 +194,10 @@
         "lemma": "yalal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "you drinkers",
         "lemma": "shatah"
       },
@@ -154,8 +206,16 @@
         "lemma": "yayin"
       },
       {
+        "surface": "because of",
+        "lemma": "al"
+      },
+      {
         "surface": "the sweet wine",
         "lemma": "asis"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "it has been cut off",
@@ -167,6 +227,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "a nation",
         "lemma": "goy"
@@ -268,6 +332,10 @@
         "lemma": "saq"
       },
       {
+        "surface": "grieving for",
+        "lemma": "al"
+      },
+      {
         "surface": "the husband",
         "lemma": "baal"
       },
@@ -328,6 +396,10 @@
         "lemma": "aval"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the grain",
         "lemma": "dagan"
       },
@@ -366,12 +438,24 @@
         "lemma": "korem"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "the wheat",
         "lemma": "chittah"
       },
       {
+        "surface": "and",
+        "lemma": "al"
+      },
+      {
         "surface": "barley",
         "lemma": "seorah"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "the harvest",
@@ -416,6 +500,10 @@
         "lemma": "tappuach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the trees",
         "lemma": "ets"
       },
@@ -428,8 +516,16 @@
         "lemma": "yavesh"
       },
       {
+        "surface": "Surely",
+        "lemma": "ki"
+      },
+      {
         "surface": "the joy",
         "lemma": "sasvon"
+      },
+      {
+        "surface": "of",
+        "lemma": "min"
       },
       {
         "surface": "vvv",
@@ -470,6 +566,10 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "Come",
+        "lemma": "bo"
+      },
+      {
         "surface": "spend the night",
         "lemma": "lun"
       },
@@ -484,6 +584,10 @@
       {
         "surface": "of my God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "the grain",
@@ -516,6 +620,10 @@
         "lemma": "tsom"
       },
       {
+        "surface": "proclaim",
+        "lemma": "qara"
+      },
+      {
         "surface": "a solemn assembly",
         "lemma": "atsarah"
       },
@@ -526,6 +634,14 @@
       {
         "surface": "the elders",
         "lemma": "zaqen"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "the residents",
+        "lemma": "yashav"
       },
       {
         "surface": "of the land",
@@ -548,6 +664,10 @@
         "lemma": "zaaq"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       }
@@ -562,6 +682,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the Day",
         "lemma": "yom"
       },
@@ -574,6 +698,10 @@
         "lemma": "qarov"
       },
       {
+        "surface": "and it will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "as destruction",
         "lemma": "shod"
       },
@@ -583,6 +711,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "Has not",
+        "lemma": "lo"
+      },
       {
         "surface": "the food",
         "lemma": "okhel"
@@ -650,6 +782,10 @@
         "lemma": "haras"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "the grain",
         "lemma": "dagan"
       },
@@ -680,12 +816,20 @@
         "lemma": "bukh"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "they have no",
         "lemma": "ayin"
       },
       {
         "surface": "pasture",
         "lemma": "mireh"
+      },
+      {
+        "surface": "Even",
+        "lemma": "gam"
       },
       {
         "surface": "the flocks",
@@ -702,8 +846,20 @@
     ],
     "19": [
       {
+        "surface": "To You",
+        "lemma": "el"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "I call",
+        "lemma": "qara"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "fire",
@@ -730,6 +886,10 @@
         "lemma": "lahat"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the trees",
         "lemma": "ets"
       },
@@ -739,6 +899,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "Even",
+        "lemma": "gam"
+      },
       {
         "surface": "the beasts",
         "lemma": "behemah"
@@ -750,6 +914,14 @@
       {
         "surface": "pant",
         "lemma": "arag"
+      },
+      {
+        "surface": "for You",
+        "lemma": "el"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "the streams",
@@ -782,8 +954,8 @@
     ]
   },
   "themeLemmas": [
+    "ki",
     "yavesh",
-    "saday",
-    "akhal"
+    "saday"
   ]
 }

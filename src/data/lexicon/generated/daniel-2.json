@@ -40,12 +40,28 @@
       {
         "surface": "and sleep",
         "lemma": "shenah"
+      },
+      {
+        "surface": "escaped",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "him",
+        "lemma": "al"
       }
     ],
     "2": [
       {
         "surface": "So the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "gave orders",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to summon",
+        "lemma": "qara"
       },
       {
         "surface": "the magicians",
@@ -72,6 +88,10 @@
         "lemma": "chalom"
       },
       {
+        "surface": "When they came",
+        "lemma": "bo"
+      },
+      {
         "surface": "and stood",
         "lemma": "amad"
       },
@@ -88,6 +108,10 @@
       {
         "surface": "he",
         "lemma": "melekh"
+      },
+      {
+        "surface": "said to them",
+        "lemma": "amar"
       },
       {
         "surface": "I have had a dream",
@@ -138,6 +162,10 @@
       {
         "surface": "forever",
         "lemma": "alam"
+      },
+      {
+        "surface": "Tell",
+        "lemma": "amar"
       },
       {
         "surface": "your servants",
@@ -240,6 +268,14 @@
         "lemma": "qeval"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
+        "surface": "me",
+        "lemma": "qodam"
+      },
+      {
         "surface": "gifts",
         "lemma": "mattna"
       },
@@ -286,6 +322,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "tell",
+        "lemma": "amar"
+      },
+      {
         "surface": "the dream",
         "lemma": "chelem"
       },
@@ -320,8 +360,16 @@
         "lemma": "yeda"
       },
       {
+        "surface": "for",
+        "lemma": "min"
+      },
+      {
         "surface": "sure",
         "lemma": "yatstsiv"
+      },
+      {
+        "surface": "that",
+        "lemma": "di"
       },
       {
         "surface": "you",
@@ -336,8 +384,20 @@
         "lemma": "iddan"
       },
       {
+        "surface": "because",
+        "lemma": "di"
+      },
+      {
         "surface": "you see",
         "lemma": "chazah"
+      },
+      {
+        "surface": "that",
+        "lemma": "di"
+      },
+      {
+        "surface": "my",
+        "lemma": "min"
       },
       {
         "surface": "word",
@@ -382,6 +442,14 @@
         "lemma": "zeman"
       },
       {
+        "surface": "to speak",
+        "lemma": "amar"
+      },
+      {
+        "surface": "before me",
+        "lemma": "qodam"
+      },
+      {
         "surface": "false",
         "lemma": "kedav"
       },
@@ -392,6 +460,10 @@
       {
         "surface": "words",
         "lemma": "millah"
+      },
+      {
+        "surface": "hoping",
+        "lemma": "ad"
       },
       {
         "surface": "the situation",
@@ -406,12 +478,20 @@
         "lemma": "hen"
       },
       {
+        "surface": "tell",
+        "lemma": "amar"
+      },
+      {
         "surface": "the dream",
         "lemma": "chelem"
       },
       {
         "surface": "and I will know",
         "lemma": "yeda"
+      },
+      {
+        "surface": "that",
+        "lemma": "di"
       },
       {
         "surface": "you can give me",
@@ -438,6 +518,10 @@
       {
         "surface": "No",
         "lemma": "la"
+      },
+      {
+        "surface": "one",
+        "lemma": "al"
       },
       {
         "surface": "on earth",
@@ -488,6 +572,10 @@
         "lemma": "denah"
       },
       {
+        "surface": "of any",
+        "lemma": "kol"
+      },
+      {
         "surface": "magician",
         "lemma": "chartom"
       },
@@ -501,6 +589,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "What",
+        "lemma": "di"
+      },
       {
         "surface": "the king",
         "lemma": "melekh"
@@ -526,20 +618,40 @@
         "lemma": "chavah"
       },
       {
+        "surface": "to",
+        "lemma": "qodam"
+      },
+      {
         "surface": "him",
         "lemma": "melekh"
+      },
+      {
+        "surface": "except",
+        "lemma": "lahen"
       },
       {
         "surface": "the gods",
         "lemma": "elah"
       },
       {
+        "surface": "whose",
+        "lemma": "di"
+      },
+      {
         "surface": "dwelling",
         "lemma": "medor"
       },
       {
+        "surface": "is",
+        "lemma": "itay"
+      },
+      {
         "surface": "not",
         "lemma": "la"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "mortals",
@@ -547,6 +659,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "This response {made",
+        "lemma": "qevel"
+      },
       {
         "surface": "the king",
         "lemma": "melekh"
@@ -564,8 +680,16 @@
         "lemma": "qetsaph"
       },
       {
+        "surface": "that he gave orders",
+        "lemma": "amar"
+      },
+      {
         "surface": "to destroy",
         "lemma": "avad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the wise men",
@@ -611,6 +735,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "When",
+        "lemma": "edayin"
+      },
       {
         "surface": "Arioch",
         "lemma": "aryokh"
@@ -662,8 +790,16 @@
     ],
     "15": [
       {
+        "surface": "Why",
+        "lemma": "al"
+      },
+      {
         "surface": "is the decree",
         "lemma": "dat"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the king",
@@ -676,6 +812,10 @@
       {
         "surface": "he asked",
         "lemma": "anah"
+      },
+      {
+        "surface": "Then",
+        "lemma": "edayin"
       },
       {
         "surface": "Arioch",
@@ -734,6 +874,10 @@
     ],
     "17": [
       {
+        "surface": "Then",
+        "lemma": "edayin"
+      },
+      {
         "surface": "Daniel",
         "lemma": "daniyyel"
       },
@@ -780,6 +924,10 @@
         "lemma": "rechem"
       },
       {
+        "surface": "from",
+        "lemma": "qodam"
+      },
+      {
         "surface": "the God",
         "lemma": "elah"
       },
@@ -788,12 +936,20 @@
         "lemma": "shamayin"
       },
       {
+        "surface": "concerning",
+        "lemma": "al"
+      },
+      {
         "surface": "this",
         "lemma": "denah"
       },
       {
         "surface": "mystery",
         "lemma": "raz"
+      },
+      {
+        "surface": "so that",
+        "lemma": "di"
       },
       {
         "surface": "Daniel",
@@ -812,6 +968,10 @@
         "lemma": "avad"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "the rest",
         "lemma": "shear"
       },
@@ -825,6 +985,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "During",
+        "lemma": "edayin"
+      },
       {
         "surface": "the night",
         "lemma": "leleya"
@@ -864,6 +1028,10 @@
     ],
     "20": [
       {
+        "surface": "and declared",
+        "lemma": "amar"
+      },
+      {
         "surface": "Blessed",
         "lemma": "berakh"
       },
@@ -876,16 +1044,32 @@
         "lemma": "shum"
       },
       {
+        "surface": "of",
+        "lemma": "di"
+      },
+      {
         "surface": "God",
         "lemma": "elah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "min"
       },
       {
         "surface": "forever",
         "lemma": "alam"
       },
       {
+        "surface": "and",
+        "lemma": "ad"
+      },
+      {
         "surface": "ever",
         "lemma": "alam"
+      },
+      {
+        "surface": "for",
+        "lemma": "di"
       },
       {
         "surface": "wisdom",
@@ -986,12 +1170,20 @@
       {
         "surface": "dwells",
         "lemma": "shere"
+      },
+      {
+        "surface": "with Him",
+        "lemma": "im"
       }
     ],
     "23": [
       {
         "surface": "O God",
         "lemma": "elah"
+      },
+      {
+        "surface": "of my fathers",
+        "lemma": "av"
       },
       {
         "surface": "I",
@@ -1004,6 +1196,10 @@
       {
         "surface": "and praise",
         "lemma": "shevach"
+      },
+      {
+        "surface": "because",
+        "lemma": "di"
       },
       {
         "surface": "You have given",
@@ -1026,8 +1222,16 @@
         "lemma": "yeda"
       },
       {
+        "surface": "what",
+        "lemma": "di"
+      },
+      {
         "surface": "we have requested",
         "lemma": "bea"
+      },
+      {
+        "surface": "for",
+        "lemma": "di"
       },
       {
         "surface": "You have made known to us",
@@ -1044,6 +1248,10 @@
     ],
     "24": [
       {
+        "surface": "Therefore",
+        "lemma": "qevel"
+      },
+      {
         "surface": "Daniel",
         "lemma": "daniyyel"
       },
@@ -1052,8 +1260,16 @@
         "lemma": "alal"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "Arioch",
         "lemma": "aryokh"
+      },
+      {
+        "surface": "whom",
+        "lemma": "di"
       },
       {
         "surface": "the king",
@@ -1080,6 +1296,18 @@
         "lemma": "azal"
       },
       {
+        "surface": "vvv",
+        "lemma": "ken"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "execute",
         "lemma": "avad"
       },
@@ -1094,6 +1322,10 @@
       {
         "surface": "Bring me",
         "lemma": "alal"
+      },
+      {
+        "surface": "before",
+        "lemma": "qodam"
       },
       {
         "surface": "the king",
@@ -1130,8 +1362,16 @@
         "lemma": "daniyyel"
       },
       {
+        "surface": "before",
+        "lemma": "qodam"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "I have found",
@@ -1142,12 +1382,20 @@
         "lemma": "gevar"
       },
       {
+        "surface": "among",
+        "lemma": "min"
+      },
+      {
         "surface": "the exiles",
         "lemma": "ben"
       },
       {
         "surface": "from Judah",
         "lemma": "yehud"
+      },
+      {
+        "surface": "who",
+        "lemma": "di"
       },
       {
         "surface": "will tell",
@@ -1176,6 +1424,10 @@
         "lemma": "daniyyel"
       },
       {
+        "surface": "whose",
+        "lemma": "di"
+      },
+      {
         "surface": "name",
         "lemma": "shum"
       },
@@ -1190,6 +1442,10 @@
       {
         "surface": "to tell me",
         "lemma": "yeda"
+      },
+      {
+        "surface": "what",
+        "lemma": "di"
       },
       {
         "surface": "I saw",
@@ -1254,6 +1510,10 @@
         "lemma": "raz"
       },
       {
+        "surface": "of which",
+        "lemma": "di"
+      },
+      {
         "surface": "he",
         "lemma": "melekh"
       },
@@ -1263,6 +1523,14 @@
       }
     ],
     "28": [
+      {
+        "surface": "But",
+        "lemma": "beram"
+      },
+      {
+        "surface": "there is",
+        "lemma": "itay"
+      },
       {
         "surface": "a God",
         "lemma": "elah"
@@ -1320,6 +1588,10 @@
         "lemma": "resh"
       },
       {
+        "surface": "as you lay on",
+        "lemma": "al"
+      },
+      {
         "surface": "your bed",
         "lemma": "mishkav"
       },
@@ -1332,6 +1604,10 @@
       {
         "surface": "As you",
         "lemma": "antah"
+      },
+      {
+        "surface": "lay on",
+        "lemma": "al"
       },
       {
         "surface": "your bed",
@@ -1404,12 +1680,36 @@
         "lemma": "la"
       },
       {
+        "surface": "because",
+        "lemma": "di"
+      },
+      {
+        "surface": "I have",
+        "lemma": "itay"
+      },
+      {
         "surface": "more wisdom",
         "lemma": "chokhmah"
       },
       {
+        "surface": "than",
+        "lemma": "min"
+      },
+      {
+        "surface": "any man",
+        "lemma": "kol"
+      },
+      {
         "surface": "alive",
         "lemma": "chay"
+      },
+      {
+        "surface": "but",
+        "lemma": "lahen"
+      },
+      {
+        "surface": "in order that",
+        "lemma": "al"
       },
       {
         "surface": "the interpretation",
@@ -1482,6 +1782,10 @@
         "lemma": "qum"
       },
       {
+        "surface": "before you",
+        "lemma": "qevel"
+      },
+      {
         "surface": "and its form",
         "lemma": "rev"
       },
@@ -1546,8 +1850,16 @@
         "lemma": "regal"
       },
       {
+        "surface": "were part",
+        "lemma": "min"
+      },
+      {
         "surface": "iron",
         "lemma": "parzel"
+      },
+      {
+        "surface": "and part",
+        "lemma": "min"
       },
       {
         "surface": "clay",
@@ -1588,8 +1900,16 @@
         "lemma": "tselem"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "its feet",
         "lemma": "regal"
+      },
+      {
+        "surface": "of",
+        "lemma": "di"
       },
       {
         "surface": "iron",
@@ -1609,6 +1929,10 @@
       }
     ],
     "35": [
+      {
+        "surface": "Then",
+        "lemma": "edayin"
+      },
       {
         "surface": "the iron",
         "lemma": "parzel"
@@ -1642,6 +1966,10 @@
         "lemma": "ur"
       },
       {
+        "surface": "on",
+        "lemma": "min"
+      },
+      {
         "surface": "the threshing floor",
         "lemma": "iddar"
       },
@@ -1662,6 +1990,10 @@
         "lemma": "nesa"
       },
       {
+        "surface": "and",
+        "lemma": "kol"
+      },
+      {
         "surface": "not",
         "lemma": "la"
       },
@@ -1676,6 +2008,10 @@
       {
         "surface": "But the stone",
         "lemma": "even"
+      },
+      {
+        "surface": "that",
+        "lemma": "di"
       },
       {
         "surface": "had struck",
@@ -1702,6 +2038,10 @@
         "lemma": "mela"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "earth",
         "lemma": "ara"
       }
@@ -1714,6 +2054,10 @@
       {
         "surface": "was the dream",
         "lemma": "chelem"
+      },
+      {
+        "surface": "now we will tell",
+        "lemma": "amar"
       },
       {
         "surface": "the king",
@@ -1740,6 +2084,10 @@
       {
         "surface": "of kings",
         "lemma": "melekh"
+      },
+      {
+        "surface": "to whom",
+        "lemma": "di"
       },
       {
         "surface": "the God",
@@ -1771,6 +2119,10 @@
       }
     ],
     "38": [
+      {
+        "surface": "Wherever",
+        "lemma": "kol"
+      },
       {
         "surface": "the sons",
         "lemma": "ben"
@@ -1812,6 +2164,10 @@
         "lemma": "shelet"
       },
       {
+        "surface": "over them all",
+        "lemma": "kol"
+      },
+      {
         "surface": "You are",
         "lemma": "antah"
       },
@@ -1822,6 +2178,10 @@
       {
         "surface": "head",
         "lemma": "resh"
+      },
+      {
+        "surface": "of",
+        "lemma": "di"
       },
       {
         "surface": "gold",
@@ -1850,6 +2210,10 @@
         "lemma": "ara"
       },
       {
+        "surface": "to yours",
+        "lemma": "min"
+      },
+      {
         "surface": "Next, a",
         "lemma": "ochori"
       },
@@ -1862,12 +2226,20 @@
         "lemma": "malkhu"
       },
       {
+        "surface": "one of",
+        "lemma": "di"
+      },
+      {
         "surface": "bronze",
         "lemma": "nechash"
       },
       {
         "surface": "will rule",
         "lemma": "shelet"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "earth",
@@ -1896,6 +2268,10 @@
         "lemma": "parzel"
       },
       {
+        "surface": "for",
+        "lemma": "qevel"
+      },
+      {
         "surface": "iron",
         "lemma": "parzel"
       },
@@ -1908,12 +2284,24 @@
         "lemma": "chashal"
       },
       {
+        "surface": "all things",
+        "lemma": "kol"
+      },
+      {
         "surface": "and like iron",
         "lemma": "parzel"
       },
       {
+        "surface": "that",
+        "lemma": "di"
+      },
+      {
         "surface": "crushes",
         "lemma": "rea"
+      },
+      {
+        "surface": "all things",
+        "lemma": "kol"
       },
       {
         "surface": "it will shatter",
@@ -1930,6 +2318,10 @@
     ],
     "41": [
       {
+        "surface": "And just as",
+        "lemma": "di"
+      },
+      {
         "surface": "you saw that",
         "lemma": "chazah"
       },
@@ -1942,8 +2334,20 @@
         "lemma": "etsba"
       },
       {
+        "surface": "were made",
+        "lemma": "min"
+      },
+      {
+        "surface": "partly of",
+        "lemma": "di"
+      },
+      {
         "surface": "fired clay",
         "lemma": "chasaph"
+      },
+      {
+        "surface": "and partly of",
+        "lemma": "min"
       },
       {
         "surface": "iron",
@@ -1962,8 +2366,16 @@
         "lemma": "malkhu"
       },
       {
+        "surface": "yet",
+        "lemma": "min"
+      },
+      {
         "surface": "some of the strength",
         "lemma": "nitsbah"
+      },
+      {
+        "surface": "of",
+        "lemma": "di"
       },
       {
         "surface": "iron",
@@ -1972,6 +2384,10 @@
       {
         "surface": "will be in it",
         "lemma": "hava"
+      },
+      {
+        "surface": "just as",
+        "lemma": "qevel"
       },
       {
         "surface": "you saw",
@@ -2000,8 +2416,16 @@
         "lemma": "regal"
       },
       {
+        "surface": "were partly",
+        "lemma": "min"
+      },
+      {
         "surface": "iron",
         "lemma": "parzel"
+      },
+      {
+        "surface": "and partly",
+        "lemma": "min"
       },
       {
         "surface": "clay",
@@ -2024,11 +2448,19 @@
         "lemma": "taqqiph"
       },
       {
+        "surface": "and partly",
+        "lemma": "min"
+      },
+      {
         "surface": "brittle",
         "lemma": "tevar"
       }
     ],
     "43": [
+      {
+        "surface": "As",
+        "lemma": "di"
+      },
       {
         "surface": "you saw",
         "lemma": "chazah"
@@ -2066,12 +2498,20 @@
         "lemma": "ha"
       },
       {
+        "surface": "than",
+        "lemma": "di"
+      },
+      {
         "surface": "iron",
         "lemma": "parzel"
       },
       {
         "surface": "mixes",
         "lemma": "arav"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "clay",
@@ -2108,6 +2548,10 @@
         "lemma": "malkhu"
       },
       {
+        "surface": "that",
+        "lemma": "di"
+      },
+      {
         "surface": "will never",
         "lemma": "alam"
       },
@@ -2140,6 +2584,10 @@
         "lemma": "deqaq"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "these",
         "lemma": "illen"
       },
@@ -2161,6 +2609,10 @@
       }
     ],
     "45": [
+      {
+        "surface": "And just as",
+        "lemma": "kol"
+      },
       {
         "surface": "you saw",
         "lemma": "chazah"
@@ -2256,6 +2708,10 @@
     ],
     "46": [
       {
+        "surface": "At this",
+        "lemma": "edayin"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
@@ -2268,6 +2724,10 @@
         "lemma": "nephal"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "his face",
         "lemma": "anaph"
       },
@@ -2278,6 +2738,10 @@
       {
         "surface": "to Daniel",
         "lemma": "daniyyel"
+      },
+      {
+        "surface": "and ordered",
+        "lemma": "amar"
       },
       {
         "surface": "that an offering",
@@ -2310,6 +2774,10 @@
         "lemma": "elah"
       },
       {
+        "surface": "is truly",
+        "lemma": "min"
+      },
+      {
         "surface": "the God",
         "lemma": "elah"
       },
@@ -2334,6 +2802,10 @@
         "lemma": "raz"
       },
       {
+        "surface": "since",
+        "lemma": "di"
+      },
+      {
         "surface": "you were able",
         "lemma": "yekhel"
       },
@@ -2351,6 +2823,10 @@
       }
     ],
     "48": [
+      {
+        "surface": "Then",
+        "lemma": "edayin"
+      },
       {
         "surface": "the king",
         "lemma": "melekh"
@@ -2384,6 +2860,14 @@
         "lemma": "shelet"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
+        "surface": "the entire",
+        "lemma": "kol"
+      },
+      {
         "surface": "province",
         "lemma": "medinah"
       },
@@ -2398,6 +2882,14 @@
       {
         "surface": "administrator",
         "lemma": "segan"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the wise men",
@@ -2442,6 +2934,10 @@
         "lemma": "avednego"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "manage",
         "lemma": "avidah"
       },
@@ -2468,8 +2964,8 @@
     ]
   },
   "themeLemmas": [
+    "di",
     "yeda",
-    "daniyyel",
-    "parzel"
+    "min"
   ]
 }

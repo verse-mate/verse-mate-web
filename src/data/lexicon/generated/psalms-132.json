@@ -22,8 +22,16 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "on behalf",
+        "lemma": "et"
+      },
+      {
         "surface": "of David",
         "lemma": "david"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the hardships he endured",
@@ -31,6 +39,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "how",
+        "lemma": "asher"
+      },
       {
         "surface": "he swore an oath",
         "lemma": "shava"
@@ -54,12 +66,28 @@
     ],
     "3": [
       {
+        "surface": "I will not",
+        "lemma": "im"
+      },
+      {
+        "surface": "enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "my house",
         "lemma": "bet"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "get",
         "lemma": "alah"
+      },
+      {
+        "surface": "into",
+        "lemma": "al"
       },
       {
         "surface": "my bed",
@@ -67,6 +95,14 @@
       }
     ],
     "4": [
+      {
+        "surface": "I will not",
+        "lemma": "im"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
+      },
       {
         "surface": "sleep",
         "lemma": "shenat"
@@ -85,6 +121,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "until",
+        "lemma": "ad"
+      },
       {
         "surface": "I find",
         "lemma": "matsa"
@@ -116,6 +156,10 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "We heard that the ark was",
+        "lemma": "shama"
+      },
+      {
         "surface": "in Ephrathah",
         "lemma": "ephratah"
       },
@@ -133,6 +177,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "Let us go",
+        "lemma": "bo"
+      },
       {
         "surface": "to His dwelling place",
         "lemma": "mishkan"
@@ -158,6 +206,10 @@
       {
         "surface": "to Your resting place",
         "lemma": "menuchah"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
       },
       {
         "surface": "and the ark",
@@ -192,12 +244,24 @@
     ],
     "10": [
       {
+        "surface": "For the sake",
+        "lemma": "avur"
+      },
+      {
         "surface": "of Your servant",
         "lemma": "eved"
       },
       {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "reject",
+        "lemma": "shuv"
       },
       {
         "surface": "Your anointed one",
@@ -218,6 +282,14 @@
         "lemma": "david"
       },
       {
+        "surface": "a promise He will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "revoke",
+        "lemma": "shuv"
+      },
+      {
         "surface": "One of your descendants",
         "lemma": "peri"
       },
@@ -231,6 +303,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "your sons",
         "lemma": "ben"
@@ -256,6 +332,14 @@
         "lemma": "ben"
       },
       {
+        "surface": "will also",
+        "lemma": "gam"
+      },
+      {
+        "surface": "sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "on your throne",
         "lemma": "kisse"
       },
@@ -269,6 +353,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -292,6 +380,10 @@
     ],
     "14": [
       {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
         "surface": "is My resting place",
         "lemma": "menuchah"
       },
@@ -306,6 +398,14 @@
       {
         "surface": "here",
         "lemma": "poh"
+      },
+      {
+        "surface": "I will dwell",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "I have desired this home",
@@ -408,14 +508,18 @@
         "lemma": "nezer"
       },
       {
+        "surface": "upon him",
+        "lemma": "al"
+      },
+      {
         "surface": "will gleam",
         "lemma": "tsuts"
       }
     ]
   },
   "themeLemmas": [
-    "david",
     "ad",
-    "lavash"
+    "im",
+    "david"
   ]
 }

@@ -10,8 +10,24 @@
         "lemma": "halakh"
       },
       {
+        "surface": "let us return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
       },
       {
         "surface": "has torn us to pieces",
@@ -90,6 +106,10 @@
         "lemma": "motsa"
       },
       {
+        "surface": "He will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "like the rain",
         "lemma": "geshem"
       },
@@ -112,12 +132,20 @@
         "lemma": "mah"
       },
       {
+        "surface": "shall I do",
+        "lemma": "asah"
+      },
+      {
         "surface": "O Ephraim",
         "lemma": "ephrayim"
       },
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "shall I do",
+        "lemma": "asah"
       },
       {
         "surface": "O Judah",
@@ -150,6 +178,10 @@
     ],
     "5": [
       {
+        "surface": "Therefore",
+        "lemma": "al"
+      },
+      {
         "surface": "I have hewn them",
         "lemma": "chatsav"
       },
@@ -174,11 +206,19 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "go forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "like lightning",
         "lemma": "or"
       }
     ],
     "6": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "I desire",
         "lemma": "chaphets"
@@ -186,6 +226,10 @@
       {
         "surface": "mercy",
         "lemma": "chesed"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "sacrifice",
@@ -205,6 +249,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "But they",
+        "lemma": "hemmah"
+      },
       {
         "surface": "like Adam",
         "lemma": "adam"
@@ -278,6 +326,14 @@
         "lemma": "shekhem"
       },
       {
+        "surface": "surely",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they have committed",
+        "lemma": "asah"
+      },
+      {
         "surface": "atrocities",
         "lemma": "zimmah"
       }
@@ -290,6 +346,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "I have seen",
+        "lemma": "raah"
       },
       {
         "surface": "a horrible thing",
@@ -318,6 +378,10 @@
     ],
     "11": [
       {
+        "surface": "Also",
+        "lemma": "gam"
+      },
+      {
         "surface": "O Judah",
         "lemma": "yehudah"
       },
@@ -330,6 +394,10 @@
         "lemma": "shit"
       },
       {
+        "surface": "when I restore",
+        "lemma": "shuv"
+      },
+      {
         "surface": "My people",
         "lemma": "am"
       },
@@ -340,8 +408,8 @@
     ]
   },
   "themeLemmas": [
-    "yisrael",
-    "yehudah",
-    "yada"
+    "ki",
+    "asah",
+    "yisrael"
   ]
 }

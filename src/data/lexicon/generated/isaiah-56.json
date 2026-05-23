@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Maintain",
         "lemma": "shamar"
       },
@@ -22,12 +26,24 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "and do",
+        "lemma": "asah"
+      },
+      {
         "surface": "what is right",
         "lemma": "tsedaqah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "My salvation",
         "lemma": "yeshuah"
+      },
+      {
+        "surface": "is coming",
+        "lemma": "bo"
       },
       {
         "surface": "soon",
@@ -50,6 +66,14 @@
       {
         "surface": "is the man",
         "lemma": "enosh"
+      },
+      {
+        "surface": "who does",
+        "lemma": "asah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
       },
       {
         "surface": "and the son",
@@ -84,11 +108,23 @@
         "lemma": "yad"
       },
       {
+        "surface": "from doing",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       }
     ],
     "3": [
+      {
+        "surface": "Let no",
+        "lemma": "al"
+      },
       {
         "surface": "foreigner",
         "lemma": "ben"
@@ -98,8 +134,16 @@
         "lemma": "lavah"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "The LORD",
@@ -110,12 +154,28 @@
         "lemma": "badal"
       },
       {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
         "surface": "His people",
         "lemma": "am"
       },
       {
         "surface": "And let the eunuch",
         "lemma": "saris"
+      },
+      {
+        "surface": "not",
+        "lemma": "al"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am but",
@@ -132,6 +192,10 @@
     ],
     "4": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "this is what",
         "lemma": "koh"
       },
@@ -140,8 +204,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "To the eunuchs",
         "lemma": "saris"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "keep",
@@ -154,6 +226,10 @@
       {
         "surface": "who choose",
         "lemma": "bachar"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
       },
       {
         "surface": "pleases Me",
@@ -169,6 +245,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "I will give",
+        "lemma": "natan"
+      },
       {
         "surface": "in My house",
         "lemma": "bet"
@@ -198,12 +278,24 @@
         "lemma": "bat"
       },
       {
+        "surface": "I will give",
+        "lemma": "natan"
+      },
+      {
         "surface": "an everlasting",
         "lemma": "olam"
       },
       {
         "surface": "name",
         "lemma": "shem"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "be cut off",
@@ -218,6 +310,10 @@
       {
         "surface": "who join",
         "lemma": "lavah"
+      },
+      {
+        "surface": "themselves to",
+        "lemma": "al"
       },
       {
         "surface": "the LORD",
@@ -240,8 +336,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and to be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "servants",
         "lemma": "eved"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "who keep",
@@ -265,6 +369,14 @@
       }
     ],
     "7": [
+      {
+        "surface": "I will bring them",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
       {
         "surface": "My holy",
         "lemma": "qodesh"
@@ -298,12 +410,24 @@
         "lemma": "ratson"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "My altar",
         "lemma": "mizbeach"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "My house",
         "lemma": "bet"
+      },
+      {
+        "surface": "will be called",
+        "lemma": "qara"
       },
       {
         "surface": "a house",
@@ -312,6 +436,10 @@
       {
         "surface": "of prayer",
         "lemma": "tephillah"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "the nations",
@@ -348,6 +476,10 @@
         "lemma": "qavats"
       },
       {
+        "surface": "to them",
+        "lemma": "al"
+      },
+      {
         "surface": "still others",
         "lemma": "od"
       },
@@ -362,6 +494,10 @@
         "lemma": "atah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "you beasts",
         "lemma": "chay"
       },
@@ -372,6 +508,10 @@
       {
         "surface": "eat greedily",
         "lemma": "akhal"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "you beasts",
@@ -392,8 +532,16 @@
         "lemma": "ivver"
       },
       {
+        "surface": "they are all",
+        "lemma": "kol"
+      },
+      {
         "surface": "oblivious",
         "lemma": "yada"
+      },
+      {
+        "surface": "they are all",
+        "lemma": "kol"
       },
       {
         "surface": "mute",
@@ -402,6 +550,10 @@
       {
         "surface": "dogs",
         "lemma": "kelev"
+      },
+      {
+        "surface": "they cannot",
+        "lemma": "lo"
       },
       {
         "surface": "bark",
@@ -430,8 +582,16 @@
         "lemma": "kelev"
       },
       {
+        "surface": "they are never",
+        "lemma": "lo"
+      },
+      {
         "surface": "satisfied",
         "lemma": "yada"
+      },
+      {
+        "surface": "They",
+        "lemma": "hemmah"
       },
       {
         "surface": "are shepherds",
@@ -442,8 +602,16 @@
         "lemma": "yada"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "discernment",
         "lemma": "bin"
+      },
+      {
+        "surface": "they all",
+        "lemma": "kol"
       },
       {
         "surface": "turn",
@@ -492,6 +660,14 @@
         "lemma": "machar"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "like today",
+        "lemma": "zeh"
+      },
+      {
         "surface": "only far",
         "lemma": "meod"
       },
@@ -502,8 +678,8 @@
     ]
   },
   "themeLemmas": [
-    "shamar",
-    "bet",
-    "yada"
+    "kol",
+    "al",
+    "shamar"
   ]
 }

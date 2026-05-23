@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "behold",
         "lemma": "hinneh"
       },
       {
         "surface": "the day",
         "lemma": "yom"
+      },
+      {
+        "surface": "is coming",
+        "lemma": "bo"
       },
       {
         "surface": "burning",
@@ -22,8 +30,24 @@
         "lemma": "tannur"
       },
       {
+        "surface": "when",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the arrogant",
         "lemma": "zed"
+      },
+      {
+        "surface": "and every",
+        "lemma": "kol"
+      },
+      {
+        "surface": "evildoer",
+        "lemma": "asah"
       },
       {
         "surface": "will be stubble",
@@ -34,8 +58,16 @@
         "lemma": "yom"
       },
       {
+        "surface": "is coming",
+        "lemma": "bo"
+      },
+      {
         "surface": "when I will set them ablaze",
         "lemma": "lahat"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -44,6 +76,10 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "Not",
+        "lemma": "lo"
       },
       {
         "surface": "a root",
@@ -88,6 +124,10 @@
         "lemma": "kanaph"
       },
       {
+        "surface": "and you will go out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "and leap",
         "lemma": "push"
       },
@@ -110,6 +150,14 @@
         "lemma": "rasah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "ashes",
         "lemma": "epher"
       },
@@ -128,6 +176,18 @@
       {
         "surface": "on the day",
         "lemma": "yom"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "am preparing",
+        "lemma": "asah"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -168,6 +228,18 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "him",
+        "lemma": "et"
+      },
+      {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -180,6 +252,10 @@
       {
         "surface": "Behold",
         "lemma": "hinneh"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
       },
       {
         "surface": "will send",
@@ -196,6 +272,10 @@
       {
         "surface": "before",
         "lemma": "paneh"
+      },
+      {
+        "surface": "the coming",
+        "lemma": "bo"
       },
       {
         "surface": "of the great",
@@ -216,8 +296,20 @@
     ],
     "6": [
       {
+        "surface": "And he will turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the hearts",
         "lemma": "lev"
+      },
+      {
+        "surface": "of the fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
       },
       {
         "surface": "their children",
@@ -230,6 +322,22 @@
       {
         "surface": "of the children",
         "lemma": "ben"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
+        "surface": "their fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "Otherwise",
+        "lemma": "pen"
+      },
+      {
+        "surface": "I will come",
+        "lemma": "bo"
       },
       {
         "surface": "and strike",
@@ -246,8 +354,8 @@
     ]
   },
   "themeLemmas": [
-    "yare",
-    "tsava",
-    "hinneh"
+    "bo",
+    "kol",
+    "al"
   ]
 }

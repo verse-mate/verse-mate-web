@@ -20,8 +20,20 @@
         "lemma": "omnam"
       },
       {
+        "surface": "then",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
         "surface": "are the people",
         "lemma": "am"
+      },
+      {
+        "surface": "with whom",
+        "lemma": "im"
       },
       {
         "surface": "wisdom itself",
@@ -34,8 +46,20 @@
     ],
     "3": [
       {
+        "surface": "But I also",
+        "lemma": "gam"
+      },
+      {
         "surface": "a mind",
         "lemma": "levav"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
+        "surface": "am not",
+        "lemma": "lo"
       },
       {
         "surface": "inferior",
@@ -48,9 +72,21 @@
       {
         "surface": "does not know",
         "lemma": "ayin"
+      },
+      {
+        "surface": "such things",
+        "lemma": "kemo"
+      },
+      {
+        "surface": "as these",
+        "lemma": "elleh"
       }
     ],
     "4": [
+      {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
       {
         "surface": "a laughingstock",
         "lemma": "sechoq"
@@ -58,6 +94,10 @@
       {
         "surface": "to my friends",
         "lemma": "rea"
+      },
+      {
+        "surface": "though I called",
+        "lemma": "qara"
       },
       {
         "surface": "on God",
@@ -132,6 +172,10 @@
         "lemma": "battuchot"
       },
       {
+        "surface": "those who carry",
+        "lemma": "bo"
+      },
+      {
         "surface": "their god",
         "lemma": "eloah"
       },
@@ -141,6 +185,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "But",
+        "lemma": "ulam"
+      },
       {
         "surface": "ask",
         "lemma": "shaal"
@@ -167,6 +215,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Or",
+        "lemma": "o"
+      },
       {
         "surface": "speak",
         "lemma": "siach"
@@ -198,8 +250,24 @@
         "lemma": "mi"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "these",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the hand",
@@ -208,12 +276,24 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
       }
     ],
     "10": [
       {
         "surface": "The life",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "living thing",
@@ -228,11 +308,19 @@
         "lemma": "ruach"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "mankind",
         "lemma": "basar"
       }
     ],
     "11": [
+      {
+        "surface": "Does not",
+        "lemma": "lo"
+      },
       {
         "surface": "the ear",
         "lemma": "ozen"
@@ -290,6 +378,10 @@
         "lemma": "gevurah"
       },
       {
+        "surface": "belong to God",
+        "lemma": "im"
+      },
+      {
         "surface": "counsel",
         "lemma": "etsah"
       },
@@ -308,6 +400,10 @@
         "lemma": "haras"
       },
       {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "be rebuilt",
         "lemma": "banah"
       },
@@ -318,6 +414,10 @@
       {
         "surface": "He imprisons",
         "lemma": "sagar"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "lo"
       },
       {
         "surface": "be released",
@@ -362,6 +462,10 @@
       {
         "surface": "and power",
         "lemma": "oz"
+      },
+      {
+        "surface": "belong to Him",
+        "lemma": "im"
       },
       {
         "surface": "The deceived",
@@ -478,6 +582,10 @@
         "lemma": "buz"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "nobles",
         "lemma": "nadiv"
       },
@@ -500,8 +608,16 @@
         "lemma": "amoq"
       },
       {
+        "surface": "of",
+        "lemma": "min"
+      },
+      {
         "surface": "darkness",
         "lemma": "choshekh"
+      },
+      {
+        "surface": "and brings",
+        "lemma": "yatsa"
       },
       {
         "surface": "deep shadows",
@@ -560,6 +676,10 @@
         "lemma": "taah"
       },
       {
+        "surface": "in a trackless",
+        "lemma": "lo"
+      },
+      {
         "surface": "wasteland",
         "lemma": "tohu"
       }
@@ -572,6 +692,10 @@
       {
         "surface": "in the darkness",
         "lemma": "choshekh"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "light",
@@ -588,8 +712,8 @@
     ]
   },
   "themeLemmas": [
-    "chokhmah",
-    "yara",
-    "un"
+    "lo",
+    "kol",
+    "im"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "This",
+        "lemma": "elleh"
+      },
+      {
         "surface": "is the account",
         "lemma": "toledah"
       },
@@ -30,6 +34,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -43,6 +51,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the names",
         "lemma": "shem"
@@ -78,6 +90,10 @@
     ],
     "3": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "were Aaron’s",
         "lemma": "aharon"
       },
@@ -92,6 +108,10 @@
       {
         "surface": "priests",
         "lemma": "kohen"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "were ordained",
@@ -152,6 +172,14 @@
         "lemma": "sinay"
       },
       {
+        "surface": "And since they had",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "sons",
         "lemma": "ben"
       },
@@ -168,8 +196,16 @@
         "lemma": "kahan"
       },
       {
+        "surface": "during",
+        "lemma": "al"
+      },
+      {
         "surface": "the lifetime",
         "lemma": "paneh"
+      },
+      {
+        "surface": "of their father",
+        "lemma": "av"
       },
       {
         "surface": "Aaron",
@@ -184,6 +220,10 @@
       {
         "surface": "said",
         "lemma": "davar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Moses",
@@ -206,6 +246,10 @@
       {
         "surface": "and present",
         "lemma": "amad"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
       },
       {
         "surface": "to",
@@ -232,6 +276,10 @@
       {
         "surface": "duties for him",
         "lemma": "mishmeret"
+      },
+      {
+        "surface": "and for the whole",
+        "lemma": "kol"
       },
       {
         "surface": "congregation",
@@ -268,6 +316,10 @@
         "lemma": "shamar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the furnishings",
         "lemma": "keli"
       },
@@ -278,6 +330,10 @@
       {
         "surface": "of Meeting",
         "lemma": "moed"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "fulfill obligations",
@@ -302,6 +358,10 @@
     ],
     "9": [
       {
+        "surface": "Assign",
+        "lemma": "natan"
+      },
+      {
         "surface": "the Levites",
         "lemma": "leviyyi"
       },
@@ -314,11 +374,27 @@
         "lemma": "ben"
       },
       {
+        "surface": "they",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "have been given exclusively",
+        "lemma": "natan"
+      },
+      {
+        "surface": "from among",
+        "lemma": "et"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
       }
     ],
     "10": [
+      {
+        "surface": "So",
+        "lemma": "et"
+      },
       {
         "surface": "you shall appoint",
         "lemma": "paqad"
@@ -362,14 +438,26 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "12": [
       {
         "surface": "Behold",
         "lemma": "hinneh"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "have taken",
@@ -396,6 +484,10 @@
         "lemma": "tachat"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "firstborn",
         "lemma": "peter"
       },
@@ -410,9 +502,21 @@
       {
         "surface": "The Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "belong",
+        "lemma": "hayah"
       }
     ],
     "13": [
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "the firstborn",
         "lemma": "bekhor"
@@ -424,6 +528,10 @@
       {
         "surface": "I struck down",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "firstborn",
@@ -442,6 +550,10 @@
         "lemma": "qadash"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
       },
@@ -454,8 +566,20 @@
         "lemma": "adam"
       },
       {
+        "surface": "and",
+        "lemma": "ad"
+      },
+      {
         "surface": "beast",
         "lemma": "behemah"
+      },
+      {
+        "surface": "They are",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am the LORD",
@@ -472,6 +596,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -482,6 +610,10 @@
       {
         "surface": "of Sinai",
         "lemma": "sinay"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "15": [
@@ -494,12 +626,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "by their families",
+        "lemma": "av"
+      },
+      {
         "surface": "and clans",
         "lemma": "mishpachah"
       },
       {
         "surface": "You are to count",
         "lemma": "paqad"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "male",
@@ -528,6 +668,14 @@
         "lemma": "paqad"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
+        "surface": "according to",
+        "lemma": "al"
+      },
+      {
         "surface": "the word",
         "lemma": "peh"
       },
@@ -536,11 +684,23 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
         "surface": "he had been commanded",
         "lemma": "tsavah"
       }
     ],
     "17": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
+      },
       {
         "surface": "the sons",
         "lemma": "ben"
@@ -567,6 +727,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "were the names",
         "lemma": "shem"
@@ -644,12 +808,24 @@
         "lemma": "mushi"
       },
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "were",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "the clans",
         "lemma": "mishpachah"
       },
       {
         "surface": "of the Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "according to their families",
+        "lemma": "av"
       }
     ],
     "21": [
@@ -674,6 +850,10 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "were the Gershonite",
         "lemma": "gereshunni"
       },
@@ -686,6 +866,10 @@
       {
         "surface": "The number",
         "lemma": "paqad"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the males",
@@ -832,6 +1016,14 @@
         "lemma": "chatser"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "surrounds",
+        "lemma": "al"
+      },
+      {
         "surface": "the tabernacle",
         "lemma": "mishkan"
       },
@@ -842,6 +1034,10 @@
       {
         "surface": "and the cords",
         "lemma": "metar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the service for these items",
@@ -874,6 +1070,10 @@
         "lemma": "ozzieli"
       },
       {
+        "surface": "these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "were the clans",
         "lemma": "mishpachah"
       },
@@ -886,6 +1086,10 @@
       {
         "surface": "The number",
         "lemma": "mispar"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the males",
@@ -932,6 +1136,10 @@
       {
         "surface": "were to camp",
         "lemma": "chanah"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the south",
@@ -1010,6 +1218,10 @@
         "lemma": "masakh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the service for these items",
         "lemma": "avodah"
       }
@@ -1078,6 +1290,10 @@
         "lemma": "mushi"
       },
       {
+        "surface": "these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "were the Merarite",
         "lemma": "merari"
       },
@@ -1090,6 +1306,10 @@
       {
         "surface": "The number",
         "lemma": "paqad"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the males",
@@ -1142,6 +1362,10 @@
         "lemma": "chanah"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the north",
         "lemma": "tsaphon"
       },
@@ -1192,8 +1416,16 @@
         "lemma": "eden"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its equipment",
         "lemma": "keli"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the service for these items",
@@ -1306,12 +1538,20 @@
     ],
     "39": [
       {
+        "surface": "The total",
+        "lemma": "kol"
+      },
+      {
         "surface": "number",
         "lemma": "paqad"
       },
       {
         "surface": "of Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "Moses",
@@ -1330,12 +1570,20 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "at",
+        "lemma": "al"
+      },
+      {
         "surface": "the LORD’s",
         "lemma": "yehovah"
       },
       {
         "surface": "command",
         "lemma": "peh"
+      },
+      {
+        "surface": "including all",
+        "lemma": "kol"
       },
       {
         "surface": "the males",
@@ -1364,12 +1612,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Moses",
         "lemma": "mosheh"
       },
       {
         "surface": "Number",
         "lemma": "paqad"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "firstborn",
@@ -1418,12 +1674,20 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "in place of",
         "lemma": "tachat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the firstborn",
@@ -1448,6 +1712,10 @@
       {
         "surface": "in place of",
         "lemma": "tachat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the firstborn",
@@ -1476,6 +1744,10 @@
         "lemma": "paqad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
       },
@@ -1488,15 +1760,27 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "had commanded",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "him",
+        "lemma": "et"
       }
     ],
     "43": [
+      {
+        "surface": "The total",
+        "lemma": "kol"
+      },
       {
         "surface": "number",
         "lemma": "paqad"
@@ -1530,6 +1814,10 @@
         "lemma": "shem"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "22273",
         "lemma": "shenayim"
       }
@@ -1544,8 +1832,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "45": [
@@ -1562,6 +1858,10 @@
         "lemma": "tachat"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
       },
@@ -1572,6 +1872,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "the livestock",
@@ -1592,6 +1896,14 @@
       {
         "surface": "The Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "belong",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am the LORD",
@@ -1660,6 +1972,10 @@
     ],
     "48": [
       {
+        "surface": "Give",
+        "lemma": "natan"
+      },
+      {
         "surface": "the money",
         "lemma": "keseph"
       },
@@ -1700,6 +2016,10 @@
       {
         "surface": "from those in excess",
         "lemma": "adaph"
+      },
+      {
+        "surface": "of",
+        "lemma": "al"
       },
       {
         "surface": "the number redeemed",
@@ -1750,6 +2070,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "the redemption",
         "lemma": "paduy"
       },
@@ -1766,12 +2090,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "in obedience to",
+        "lemma": "al"
+      },
+      {
         "surface": "the word",
         "lemma": "peh"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "just as",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -1788,8 +2120,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "mishpachah",
-    "mosheh",
-    "leviyyi"
+    "mosheh"
   ]
 }

@@ -14,12 +14,24 @@
         "lemma": "shalach"
       },
       {
+        "surface": "word throughout",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
       {
         "surface": "and Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "and he also",
+        "lemma": "gam"
       },
       {
         "surface": "wrote",
@@ -30,12 +42,20 @@
         "lemma": "iggeret"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "Ephraim",
         "lemma": "ephrayim"
       },
       {
         "surface": "and Manasseh",
         "lemma": "menashsheh"
+      },
+      {
+        "surface": "inviting them to come",
+        "lemma": "bo"
       },
       {
         "surface": "to the house",
@@ -48,6 +68,10 @@
       {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "to keep",
+        "lemma": "asah"
       },
       {
         "surface": "the Passover",
@@ -76,6 +100,10 @@
         "lemma": "sar"
       },
       {
+        "surface": "and the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "assembly",
         "lemma": "qahal"
       },
@@ -86,6 +114,10 @@
       {
         "surface": "had decided",
         "lemma": "yaats"
+      },
+      {
+        "surface": "to keep",
+        "lemma": "asah"
       },
       {
         "surface": "the Passover",
@@ -102,6 +134,30 @@
     ],
     "3": [
       {
+        "surface": "since",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they had been unable",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to keep it",
+        "lemma": "asah"
+      },
+      {
+        "surface": "at the regular",
+        "lemma": "hu"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
+        "surface": "because not",
+        "lemma": "lo"
+      },
+      {
         "surface": "enough",
         "lemma": "mah"
       },
@@ -116,6 +172,10 @@
       {
         "surface": "and the people",
         "lemma": "am"
+      },
+      {
+        "surface": "had not",
+        "lemma": "lo"
       },
       {
         "surface": "been gathered",
@@ -144,6 +204,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "assembly",
         "lemma": "qahal"
       }
@@ -166,6 +230,10 @@
         "lemma": "qol"
       },
       {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -178,8 +246,20 @@
         "lemma": "beersheva"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "Dan",
         "lemma": "dan"
+      },
+      {
+        "surface": "that the people should come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to keep",
+        "lemma": "asah"
       },
       {
         "surface": "the Passover",
@@ -200,6 +280,18 @@
       {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they had not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "observed it",
+        "lemma": "asah"
       },
       {
         "surface": "in great numbers",
@@ -228,6 +320,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -252,12 +348,24 @@
         "lemma": "sar"
       },
       {
+        "surface": "which read",
+        "lemma": "amar"
+      },
+      {
         "surface": "Children",
         "lemma": "ben"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -278,6 +386,14 @@
       {
         "surface": "and Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "so that He may return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "those of you who remain",
@@ -302,8 +418,24 @@
     ],
     "7": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "like your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "and brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "were unfaithful",
@@ -318,14 +450,38 @@
         "lemma": "elohim"
       },
       {
+        "surface": "of their fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "so that He made them",
+        "lemma": "natan"
+      },
+      {
         "surface": "an object of horror",
         "lemma": "shammah"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "can see",
+        "lemma": "raah"
       }
     ],
     "8": [
       {
         "surface": "Now",
         "lemma": "attah"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "stiffen",
@@ -336,12 +492,28 @@
         "lemma": "oreph"
       },
       {
+        "surface": "as your fathers did",
+        "lemma": "av"
+      },
+      {
+        "surface": "Submit",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "and come",
+        "lemma": "bo"
+      },
+      {
         "surface": "to His sanctuary",
         "lemma": "miqdash"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
       },
       {
         "surface": "He has consecrated",
@@ -366,9 +538,25 @@
       {
         "surface": "so that His fierce anger",
         "lemma": "charon"
+      },
+      {
+        "surface": "will turn away",
+        "lemma": "shuv"
       }
     ],
     "9": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "if you return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
+      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -394,8 +582,20 @@
         "lemma": "shavah"
       },
       {
+        "surface": "and will return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to this",
+        "lemma": "zot"
+      },
+      {
         "surface": "land",
         "lemma": "erets"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -414,15 +614,35 @@
         "lemma": "rachum"
       },
       {
+        "surface": "He will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turn His face",
         "lemma": "paneh"
       },
       {
         "surface": "away",
         "lemma": "sur"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to Him",
+        "lemma": "el"
       }
     ],
     "10": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
       {
         "surface": "the couriers",
         "lemma": "ruts"
@@ -452,6 +672,10 @@
         "lemma": "menashsheh"
       },
       {
+        "surface": "as",
+        "lemma": "ad"
+      },
+      {
         "surface": "far as Zebulun",
         "lemma": "zevulun"
       },
@@ -474,6 +698,10 @@
         "lemma": "enosh"
       },
       {
+        "surface": "from Asher",
+        "lemma": "asher"
+      },
+      {
         "surface": "Manasseh",
         "lemma": "menashsheh"
       },
@@ -486,11 +714,19 @@
         "lemma": "kana"
       },
       {
+        "surface": "themselves and came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Jerusalem",
         "lemma": "yerushalaim"
       }
     ],
     "12": [
+      {
+        "surface": "Moreover",
+        "lemma": "gam"
+      },
       {
         "surface": "the power",
         "lemma": "yad"
@@ -500,8 +736,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "to give them",
+        "lemma": "natan"
       },
       {
         "surface": "one",
@@ -510,6 +754,10 @@
       {
         "surface": "heart",
         "lemma": "lev"
+      },
+      {
+        "surface": "to obey",
+        "lemma": "asah"
       },
       {
         "surface": "the command",
@@ -560,6 +808,10 @@
       {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "to celebrate",
+        "lemma": "asah"
       },
       {
         "surface": "the Feast",
@@ -646,6 +898,10 @@
         "lemma": "qadash"
       },
       {
+        "surface": "and brought",
+        "lemma": "bo"
+      },
+      {
         "surface": "burnt offerings",
         "lemma": "olah"
       },
@@ -662,6 +918,10 @@
       {
         "surface": "They stood",
         "lemma": "amad"
+      },
+      {
+        "surface": "at",
+        "lemma": "al"
       },
       {
         "surface": "their prescribed",
@@ -710,12 +970,24 @@
     ],
     "17": [
       {
+        "surface": "Since",
+        "lemma": "ki"
+      },
+      {
         "surface": "there were many",
         "lemma": "rav"
       },
       {
         "surface": "in the assembly",
         "lemma": "qahal"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "had not",
+        "lemma": "lo"
       },
       {
         "surface": "consecrated themselves",
@@ -726,12 +998,24 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "were in charge of",
+        "lemma": "al"
+      },
+      {
         "surface": "slaughtering",
         "lemma": "shechitah"
       },
       {
         "surface": "the Passover",
         "lemma": "pesach"
+      },
+      {
+        "surface": "lambs for every",
+        "lemma": "kol"
+      },
+      {
+        "surface": "unclean person",
+        "lemma": "lo"
       },
       {
         "surface": "to consecrate the lambs",
@@ -772,8 +1056,16 @@
         "lemma": "zevulun"
       },
       {
+        "surface": "had not",
+        "lemma": "lo"
+      },
+      {
         "surface": "purified themselves",
         "lemma": "taher"
+      },
+      {
+        "surface": "yet",
+        "lemma": "ki"
       },
       {
         "surface": "they ate",
@@ -784,8 +1076,16 @@
         "lemma": "pesach"
       },
       {
+        "surface": "contrary",
+        "lemma": "lo"
+      },
+      {
         "surface": "to what was written",
         "lemma": "katav"
+      },
+      {
+        "surface": "But",
+        "lemma": "ki"
       },
       {
         "surface": "Hezekiah",
@@ -794,6 +1094,14 @@
       {
         "surface": "interceded",
         "lemma": "palal"
+      },
+      {
+        "surface": "for them",
+        "lemma": "al"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "May the LORD",
@@ -813,6 +1121,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "who",
+        "lemma": "kol"
+      },
       {
         "surface": "sets",
         "lemma": "kun"
@@ -838,6 +1150,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "of his fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "even if he is not cleansed",
+        "lemma": "lo"
+      },
+      {
         "surface": "according to the purification",
         "lemma": "tohorah"
       },
@@ -850,6 +1170,10 @@
       {
         "surface": "And the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
       },
       {
         "surface": "Hezekiah",
@@ -876,6 +1200,10 @@
       {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "celebrated",
+        "lemma": "asah"
       },
       {
         "surface": "the Feast",
@@ -948,6 +1276,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Levites",
         "lemma": "leviyyi"
       },
@@ -998,9 +1330,17 @@
       {
         "surface": "the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of their fathers",
+        "lemma": "av"
       }
     ],
     "23": [
+      {
+        "surface": "The whole",
+        "lemma": "kol"
+      },
       {
         "surface": "assembly",
         "lemma": "qahal"
@@ -1008,6 +1348,10 @@
       {
         "surface": "agreed",
         "lemma": "yaats"
+      },
+      {
+        "surface": "to observe",
+        "lemma": "asah"
       },
       {
         "surface": "seven",
@@ -1020,6 +1364,10 @@
       {
         "surface": "days",
         "lemma": "yom"
+      },
+      {
+        "surface": "so they observed",
+        "lemma": "asah"
       },
       {
         "surface": "seven",
@@ -1035,6 +1383,10 @@
       }
     ],
     "24": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "Hezekiah",
         "lemma": "chizqiyyah"
@@ -1122,6 +1474,10 @@
     ],
     "25": [
       {
+        "surface": "Then the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "assembly",
         "lemma": "qahal"
       },
@@ -1142,8 +1498,16 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "and the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "assembly",
         "lemma": "qahal"
+      },
+      {
+        "surface": "that had come",
+        "lemma": "bo"
       },
       {
         "surface": "from Israel",
@@ -1154,6 +1518,10 @@
         "lemma": "ger"
       },
       {
+        "surface": "who had come",
+        "lemma": "bo"
+      },
+      {
         "surface": "vvv",
         "lemma": "erets"
       },
@@ -1162,11 +1530,19 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "and those who lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Judah",
         "lemma": "yehudah"
       }
     ],
     "26": [
+      {
+        "surface": "So there was",
+        "lemma": "hayah"
+      },
       {
         "surface": "great",
         "lemma": "gadol"
@@ -1178,6 +1554,18 @@
       {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "like this had happened",
+        "lemma": "zot"
       },
       {
         "surface": "there",
@@ -1230,12 +1618,20 @@
         "lemma": "am"
       },
       {
+        "surface": "and God heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "their voice",
         "lemma": "qol"
       },
       {
         "surface": "and their prayer",
         "lemma": "tephillah"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "into His holy dwelling",
@@ -1252,8 +1648,8 @@
     ]
   },
   "themeLemmas": [
-    "yisrael",
-    "yerushalaim",
-    "qahal"
+    "lo",
+    "kol",
+    "yisrael"
   ]
 }

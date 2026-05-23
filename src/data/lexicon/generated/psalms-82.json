@@ -44,6 +44,10 @@
     ],
     "2": [
       {
+        "surface": "How long",
+        "lemma": "ad"
+      },
+      {
         "surface": "will you judge",
         "lemma": "shaphat"
       },
@@ -118,6 +122,10 @@
     ],
     "5": [
       {
+        "surface": "They do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -134,6 +142,10 @@
         "lemma": "chashekhah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the foundations",
         "lemma": "mosad"
       },
@@ -148,8 +160,24 @@
     ],
     "6": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "have said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "are gods",
         "lemma": "elohim"
+      },
+      {
+        "surface": "you are all",
+        "lemma": "kol"
       },
       {
         "surface": "sons",
@@ -204,8 +232,20 @@
         "lemma": "erets"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "are Your",
+        "lemma": "attah"
       },
       {
         "surface": "inheritance",
@@ -215,7 +255,7 @@
   },
   "themeLemmas": [
     "shaphat",
-    "rasah",
-    "dal"
+    "kol",
+    "rasah"
   ]
 }

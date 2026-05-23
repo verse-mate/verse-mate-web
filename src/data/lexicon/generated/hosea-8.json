@@ -10,6 +10,10 @@
         "lemma": "shophar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "your lips",
         "lemma": "chekh"
       },
@@ -18,12 +22,20 @@
         "lemma": "nesher"
       },
       {
+        "surface": "looms over",
+        "lemma": "al"
+      },
+      {
         "surface": "the house",
         "lemma": "bet"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "because",
+        "lemma": "yaan"
       },
       {
         "surface": "the people have transgressed",
@@ -36,6 +48,10 @@
       {
         "surface": "and rebelled",
         "lemma": "pasah"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "My law",
@@ -84,12 +100,28 @@
     ],
     "4": [
       {
+        "surface": "They",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "set up kings",
         "lemma": "malakh"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "by Me",
+        "lemma": "min"
+      },
+      {
         "surface": "They make princes",
         "lemma": "sur"
+      },
+      {
+        "surface": "but without",
+        "lemma": "lo"
       },
       {
         "surface": "My approval",
@@ -104,8 +136,16 @@
         "lemma": "zahav"
       },
       {
+        "surface": "they make",
+        "lemma": "asah"
+      },
+      {
         "surface": "idols",
         "lemma": "atsav"
+      },
+      {
+        "surface": "to",
+        "lemma": "maan"
       },
       {
         "surface": "their own destruction",
@@ -134,11 +174,27 @@
         "lemma": "charah"
       },
       {
+        "surface": "How long will they be",
+        "lemma": "ad"
+      },
+      {
+        "surface": "incapable",
+        "lemma": "lo"
+      },
+      {
         "surface": "of innocence",
         "lemma": "niqqavon"
       }
     ],
     "6": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "this thing",
+        "lemma": "hu"
+      },
       {
         "surface": "is from Israel",
         "lemma": "yisrael"
@@ -148,8 +204,24 @@
         "lemma": "charash"
       },
       {
+        "surface": "made it",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and it",
+        "lemma": "hu"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "It will be",
+        "lemma": "hayah"
       },
       {
         "surface": "broken to pieces",
@@ -165,6 +237,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "they sow",
         "lemma": "zara"
@@ -198,12 +274,20 @@
         "lemma": "beli"
       },
       {
+        "surface": "to yield",
+        "lemma": "asah"
+      },
+      {
         "surface": "flour",
         "lemma": "qemach"
       },
       {
         "surface": "Even if",
         "lemma": "ulay"
+      },
+      {
+        "surface": "it should produce",
+        "lemma": "asah"
       },
       {
         "surface": "the foreigners",
@@ -228,6 +312,10 @@
         "lemma": "attah"
       },
       {
+        "surface": "they are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "among the nations",
         "lemma": "goy"
       },
@@ -241,6 +329,14 @@
       }
     ],
     "9": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
+      },
       {
         "surface": "have gone up",
         "lemma": "alah"
@@ -271,6 +367,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Though",
+        "lemma": "gam"
+      },
       {
         "surface": "they hire allies",
         "lemma": "tanah"
@@ -310,6 +410,10 @@
     ],
     "11": [
       {
+        "surface": "Though",
+        "lemma": "ki"
+      },
+      {
         "surface": "Ephraim",
         "lemma": "ephrayim"
       },
@@ -324,6 +428,10 @@
       {
         "surface": "for sin",
         "lemma": "chata"
+      },
+      {
+        "surface": "they became",
+        "lemma": "hayah"
       },
       {
         "surface": "altars",
@@ -350,6 +458,10 @@
       {
         "surface": "they regarded them",
         "lemma": "chashav"
+      },
+      {
+        "surface": "as",
+        "lemma": "kemo"
       },
       {
         "surface": "something strange",
@@ -382,6 +494,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "accept them",
         "lemma": "ratsah"
       },
@@ -406,6 +522,14 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "They",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
       }
@@ -418,6 +542,10 @@
       {
         "surface": "has forgotten",
         "lemma": "shakhach"
+      },
+      {
+        "surface": "his Maker",
+        "lemma": "asah"
       },
       {
         "surface": "and built",
@@ -467,7 +595,7 @@
   },
   "themeLemmas": [
     "yisrael",
-    "attah",
-    "zur"
+    "lo",
+    "asah"
   ]
 }

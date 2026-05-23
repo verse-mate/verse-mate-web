@@ -84,8 +84,16 @@
         "lemma": "alah"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the washing",
         "lemma": "rachtsah"
+      },
+      {
+        "surface": "each",
+        "lemma": "kol"
       },
       {
         "surface": "has its twin",
@@ -164,6 +172,10 @@
         "lemma": "talpiyyah"
       },
       {
+        "surface": "on it",
+        "lemma": "al"
+      },
+      {
         "surface": "hang",
         "lemma": "talah"
       },
@@ -174,6 +186,10 @@
       {
         "surface": "shields",
         "lemma": "magen"
+      },
+      {
+        "surface": "all of them",
+        "lemma": "kol"
       },
       {
         "surface": "shields",
@@ -216,6 +232,10 @@
     ],
     "6": [
       {
+        "surface": "Before",
+        "lemma": "ad"
+      },
+      {
         "surface": "the day",
         "lemma": "yom"
       },
@@ -236,6 +256,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the mountain",
         "lemma": "har"
       },
@@ -253,6 +277,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "You are altogether",
+        "lemma": "kol"
+      },
       {
         "surface": "beautiful",
         "lemma": "yapheh"
@@ -272,12 +300,24 @@
     ],
     "8": [
       {
+        "surface": "Come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "with me",
+        "lemma": "et"
+      },
+      {
         "surface": "from Lebanon",
         "lemma": "levanon"
       },
       {
         "surface": "my bride",
         "lemma": "kallah"
+      },
+      {
+        "surface": "come with me",
+        "lemma": "et"
       },
       {
         "surface": "from Lebanon",
@@ -408,6 +448,10 @@
         "lemma": "shemen"
       },
       {
+        "surface": "than all",
+        "lemma": "kol"
+      },
+      {
         "surface": "spices",
         "lemma": "besem"
       }
@@ -510,6 +554,10 @@
         "lemma": "rimmon"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "the choicest",
         "lemma": "meged"
       },
@@ -520,6 +568,10 @@
       {
         "surface": "with henna",
         "lemma": "kopher"
+      },
+      {
+        "surface": "and",
+        "lemma": "im"
       },
       {
         "surface": "nard",
@@ -544,6 +596,14 @@
         "lemma": "qinnamon"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
+        "surface": "every kind",
+        "lemma": "kol"
+      },
+      {
         "surface": "of frankincense",
         "lemma": "levonah"
       },
@@ -558,6 +618,14 @@
       {
         "surface": "and aloes",
         "lemma": "ahalim"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the finest",
@@ -594,6 +662,10 @@
         "lemma": "nazal"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "Lebanon",
         "lemma": "levanon"
       }
@@ -606,6 +678,10 @@
       {
         "surface": "O north wind",
         "lemma": "tsaphon"
+      },
+      {
+        "surface": "and come",
+        "lemma": "bo"
       },
       {
         "surface": "O south wind",
@@ -632,6 +708,10 @@
         "lemma": "dod"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "into his garden",
         "lemma": "gan"
       },
@@ -650,8 +730,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "kallah",
-    "levanon",
-    "gan"
+    "levanon"
   ]
 }

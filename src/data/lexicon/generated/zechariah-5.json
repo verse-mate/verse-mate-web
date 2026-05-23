@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "Again",
+        "lemma": "shuv"
+      },
+      {
         "surface": "I lifted up",
         "lemma": "nasa"
       },
       {
         "surface": "my eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "raah"
       },
       {
         "surface": "before me",
@@ -32,12 +40,36 @@
         "lemma": "mah"
       },
       {
+        "surface": "do you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "asked the angel",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
         "surface": "a flying",
         "lemma": "uph"
       },
       {
         "surface": "scroll",
         "lemma": "megillah"
+      },
+      {
+        "surface": "I replied",
+        "lemma": "amar"
       },
       {
         "surface": "twenty",
@@ -66,16 +98,56 @@
     ],
     "3": [
       {
+        "surface": "Then he told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "me",
+        "lemma": "el"
+      },
+      {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
         "surface": "is the curse",
         "lemma": "alah"
+      },
+      {
+        "surface": "that is going out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "the face",
         "lemma": "paneh"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "according to",
+        "lemma": "kemo"
+      },
+      {
+        "surface": "one side of the scroll",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "thief",
@@ -84,6 +156,18 @@
       {
         "surface": "will be removed",
         "lemma": "naqah"
+      },
+      {
+        "surface": "and according to",
+        "lemma": "kemo"
+      },
+      {
+        "surface": "the other side",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "perjurer",
@@ -96,6 +180,10 @@
     ],
     "4": [
       {
+        "surface": "I will send it out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -106,6 +194,10 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "and it will enter",
+        "lemma": "bo"
       },
       {
         "surface": "the house",
@@ -148,6 +240,10 @@
         "lemma": "kalah"
       },
       {
+        "surface": "down to",
+        "lemma": "et"
+      },
+      {
         "surface": "its timbers",
         "lemma": "ets"
       },
@@ -166,6 +262,18 @@
         "lemma": "davar"
       },
       {
+        "surface": "came forward",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "me",
+        "lemma": "el"
+      },
+      {
         "surface": "Now",
         "lemma": "na"
       },
@@ -178,8 +286,16 @@
         "lemma": "ayin"
       },
       {
+        "surface": "and see",
+        "lemma": "raah"
+      },
+      {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "is approaching",
+        "lemma": "yatsa"
       }
     ],
     "6": [
@@ -188,12 +304,40 @@
         "lemma": "mah"
       },
       {
+        "surface": "is it",
+        "lemma": "hu"
+      },
+      {
+        "surface": "I asked",
+        "lemma": "amar"
+      },
+      {
+        "surface": "And he replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "A measuring basket",
         "lemma": "ephah"
       },
       {
+        "surface": "is going forth",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "Then he continued",
+        "lemma": "amar"
+      },
+      {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
         "surface": "is their iniquity",
         "lemma": "ayin"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -226,6 +370,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "sitting",
+        "lemma": "yashav"
+      },
+      {
         "surface": "inside",
         "lemma": "tavekh"
       },
@@ -236,12 +384,24 @@
     ],
     "8": [
       {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
         "surface": "is Wickedness",
         "lemma": "rishah"
       },
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "And he shoved her down",
         "lemma": "shalakh"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
       },
       {
         "surface": "the basket",
@@ -260,6 +420,10 @@
         "lemma": "even"
       },
       {
+        "surface": "over",
+        "lemma": "el"
+      },
+      {
         "surface": "its opening",
         "lemma": "peh"
       }
@@ -274,12 +438,20 @@
         "lemma": "ayin"
       },
       {
+        "surface": "and saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "two",
         "lemma": "shenayim"
       },
       {
         "surface": "women",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "approaching",
+        "lemma": "yatsa"
       },
       {
         "surface": "with the wind",
@@ -332,12 +504,20 @@
         "lemma": "an"
       },
       {
+        "surface": "are they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "taking",
         "lemma": "halakh"
       },
       {
         "surface": "the basket",
         "lemma": "ephah"
+      },
+      {
+        "surface": "I asked",
+        "lemma": "amar"
       },
       {
         "surface": "the angel",
@@ -366,6 +546,14 @@
         "lemma": "shinar"
       },
       {
+        "surface": "he told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "me",
+        "lemma": "el"
+      },
+      {
         "surface": "And when it is ready",
         "lemma": "kun"
       },
@@ -378,14 +566,18 @@
         "lemma": "sham"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "its pedestal",
         "lemma": "mekhunah"
       }
     ]
   },
   "themeLemmas": [
-    "nasa",
-    "ephah",
-    "bet"
+    "amar",
+    "yatsa",
+    "raah"
   ]
 }

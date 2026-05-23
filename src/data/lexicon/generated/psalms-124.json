@@ -26,12 +26,20 @@
         "lemma": "lule"
       },
       {
+        "surface": "been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "let Israel",
         "lemma": "yisrael"
       },
       {
         "surface": "now",
         "lemma": "na"
+      },
+      {
+        "surface": "declare",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -44,12 +52,20 @@
         "lemma": "lule"
       },
       {
+        "surface": "been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "when men",
         "lemma": "adam"
       },
       {
         "surface": "attacked",
         "lemma": "qamay"
+      },
+      {
+        "surface": "us",
+        "lemma": "al"
       }
     ],
     "3": [
@@ -62,6 +78,10 @@
         "lemma": "charah"
       },
       {
+        "surface": "then",
+        "lemma": "azay"
+      },
+      {
         "surface": "they would have swallowed us",
         "lemma": "bala"
       },
@@ -71,6 +91,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "then",
+        "lemma": "azay"
+      },
       {
         "surface": "the floods",
         "lemma": "mayim"
@@ -94,6 +118,10 @@
     ],
     "5": [
       {
+        "surface": "then",
+        "lemma": "azay"
+      },
+      {
         "surface": "the raging",
         "lemma": "zedon"
       },
@@ -114,6 +142,14 @@
       {
         "surface": "be the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "who has not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "given us",
+        "lemma": "natan"
       },
       {
         "surface": "as prey",
@@ -154,6 +190,10 @@
         "lemma": "shavar"
       },
       {
+        "surface": "and we",
+        "lemma": "anachnu"
+      },
+      {
         "surface": "have slipped away",
         "lemma": "malat"
       }
@@ -172,6 +212,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "the Maker",
+        "lemma": "asah"
+      },
+      {
         "surface": "of heaven",
         "lemma": "shamayim"
       },
@@ -182,8 +226,8 @@
     ]
   },
   "themeLemmas": [
+    "azay",
     "pach",
-    "nephesh",
-    "mayim"
+    "nephesh"
   ]
 }

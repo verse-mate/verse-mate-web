@@ -30,12 +30,20 @@
         "lemma": "davar"
       },
       {
+        "surface": "and summons",
+        "lemma": "qara"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
       {
         "surface": "from where the sun rises",
         "lemma": "mizrach"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "where it sets",
@@ -70,6 +78,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "approaches",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and will not",
+        "lemma": "al"
+      },
+      {
         "surface": "be silent",
         "lemma": "charash"
       },
@@ -96,8 +112,16 @@
     ],
     "4": [
       {
+        "surface": "He summons",
+        "lemma": "qara"
+      },
+      {
         "surface": "the heavens",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
       },
       {
         "surface": "and the earth",
@@ -130,6 +154,10 @@
         "lemma": "berit"
       },
       {
+        "surface": "with Me",
+        "lemma": "al"
+      },
+      {
         "surface": "by sacrifice",
         "lemma": "zevach"
       }
@@ -148,8 +176,16 @@
         "lemma": "tsedeq"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "Himself",
+        "lemma": "hu"
       },
       {
         "surface": "is Judge",
@@ -161,6 +197,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
       {
         "surface": "O My people",
         "lemma": "am"
@@ -178,6 +218,10 @@
         "lemma": "ud"
       },
       {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "am God",
         "lemma": "elohim"
       },
@@ -188,8 +232,16 @@
     ],
     "8": [
       {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "rebuke",
         "lemma": "yakhach"
+      },
+      {
+        "surface": "you for",
+        "lemma": "al"
       },
       {
         "surface": "your sacrifices",
@@ -209,6 +261,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "I have no",
+        "lemma": "lo"
+      },
       {
         "surface": "need",
         "lemma": "laqach"
@@ -231,6 +287,14 @@
       }
     ],
     "10": [
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
       {
         "surface": "beast",
         "lemma": "chay"
@@ -258,6 +322,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "bird",
         "lemma": "oph"
       },
@@ -272,12 +340,32 @@
       {
         "surface": "of the field",
         "lemma": "saday"
+      },
+      {
+        "surface": "are Mine",
+        "lemma": "immad"
       }
     ],
     "12": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "I were hungry",
         "lemma": "raev"
+      },
+      {
+        "surface": "I would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "tell",
+        "lemma": "amar"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "the world",
@@ -342,6 +430,10 @@
     ],
     "15": [
       {
+        "surface": "Call upon Me",
+        "lemma": "qara"
+      },
+      {
         "surface": "in the day",
         "lemma": "yom"
       },
@@ -368,6 +460,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "What right",
         "lemma": "mah"
       },
@@ -388,11 +484,19 @@
         "lemma": "berit"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "your lips",
         "lemma": "peh"
       }
     ],
     "17": [
+      {
+        "surface": "For you",
+        "lemma": "attah"
+      },
       {
         "surface": "hate",
         "lemma": "sane"
@@ -416,6 +520,14 @@
     ],
     "18": [
       {
+        "surface": "When",
+        "lemma": "im"
+      },
+      {
+        "surface": "you see",
+        "lemma": "raah"
+      },
+      {
         "surface": "a thief",
         "lemma": "gannav"
       },
@@ -424,8 +536,16 @@
         "lemma": "ratsah"
       },
       {
+        "surface": "him",
+        "lemma": "im"
+      },
+      {
         "surface": "and throw in your lot",
         "lemma": "cheleq"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "adulterers",
@@ -460,12 +580,20 @@
     ],
     "20": [
       {
+        "surface": "You sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "and malign",
         "lemma": "davar"
       },
       {
         "surface": "your brother",
         "lemma": "ach"
+      },
+      {
+        "surface": "you",
+        "lemma": "natan"
       },
       {
         "surface": "slander",
@@ -482,12 +610,28 @@
     ],
     "21": [
       {
+        "surface": "You have done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "these things",
+        "lemma": "elleh"
+      },
+      {
         "surface": "and I kept silent",
         "lemma": "charash"
       },
       {
         "surface": "you thought",
         "lemma": "damah"
+      },
+      {
+        "surface": "I was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "just like you",
+        "lemma": "kemo"
       },
       {
         "surface": "But now I rebuke you",
@@ -512,12 +656,20 @@
         "lemma": "bin"
       },
       {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "you who forget",
         "lemma": "shakhach"
       },
       {
         "surface": "God",
         "lemma": "eloah"
+      },
+      {
+        "surface": "lest",
+        "lemma": "pen"
       },
       {
         "surface": "I tear you to pieces",
@@ -554,6 +706,10 @@
         "lemma": "derekh"
       },
       {
+        "surface": "I will show",
+        "lemma": "raah"
+      },
+      {
         "surface": "the salvation",
         "lemma": "yesah"
       },
@@ -564,8 +720,8 @@
     ]
   },
   "themeLemmas": [
-    "zevach",
-    "zavach",
-    "yakhach"
+    "al",
+    "im",
+    "qara"
   ]
 }

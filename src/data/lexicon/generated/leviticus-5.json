@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "someone",
         "lemma": "nephesh"
       },
@@ -14,8 +18,16 @@
         "lemma": "chata"
       },
       {
+        "surface": "by failing",
+        "lemma": "lo"
+      },
+      {
         "surface": "to testify",
         "lemma": "nagad"
+      },
+      {
+        "surface": "when he hears",
+        "lemma": "shama"
       },
       {
         "surface": "a public",
@@ -26,8 +38,24 @@
         "lemma": "alah"
       },
       {
+        "surface": "about something he",
+        "lemma": "hu"
+      },
+      {
         "surface": "has witnessed",
         "lemma": "ed"
+      },
+      {
+        "surface": "whether",
+        "lemma": "o"
+      },
+      {
+        "surface": "he has seen it",
+        "lemma": "raah"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "learned of it",
@@ -44,12 +72,20 @@
     ],
     "2": [
       {
+        "surface": "Or",
+        "lemma": "o"
+      },
+      {
         "surface": "if a person",
         "lemma": "nephesh"
       },
       {
         "surface": "touches",
         "lemma": "naga"
+      },
+      {
+        "surface": "anything",
+        "lemma": "kol"
       },
       {
         "surface": "unclean",
@@ -68,8 +104,16 @@
         "lemma": "chay"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "livestock",
         "lemma": "behemah"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "crawling creature",
@@ -78,6 +122,14 @@
       {
         "surface": "even if he is unaware",
         "lemma": "alam"
+      },
+      {
+        "surface": "of it",
+        "lemma": "min"
+      },
+      {
+        "surface": "he",
+        "lemma": "hu"
       },
       {
         "surface": "is unclean",
@@ -89,6 +141,14 @@
       }
     ],
     "3": [
+      {
+        "surface": "Or",
+        "lemma": "o"
+      },
+      {
+        "surface": "if",
+        "lemma": "ki"
+      },
       {
         "surface": "he touches",
         "lemma": "naga"
@@ -102,12 +162,28 @@
         "lemma": "tumah"
       },
       {
+        "surface": "anything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "by which",
+        "lemma": "asher"
+      },
+      {
         "surface": "one becomes unclean",
         "lemma": "tame"
       },
       {
         "surface": "even if he is unaware",
         "lemma": "alam"
+      },
+      {
+        "surface": "of it",
+        "lemma": "min"
+      },
+      {
+        "surface": "when he",
+        "lemma": "hu"
       },
       {
         "surface": "realizes it",
@@ -119,6 +195,14 @@
       }
     ],
     "4": [
+      {
+        "surface": "Or",
+        "lemma": "o"
+      },
+      {
+        "surface": "if",
+        "lemma": "ki"
+      },
       {
         "surface": "someone",
         "lemma": "nephesh"
@@ -140,8 +224,20 @@
         "lemma": "yatav"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "evil",
         "lemma": "raa"
+      },
+      {
+        "surface": "in",
+        "lemma": "kol"
+      },
+      {
+        "surface": "whatever matter",
+        "lemma": "asher"
       },
       {
         "surface": "a man",
@@ -160,6 +256,14 @@
         "lemma": "alam"
       },
       {
+        "surface": "of it",
+        "lemma": "min"
+      },
+      {
+        "surface": "when he",
+        "lemma": "hu"
+      },
+      {
         "surface": "realizes it",
         "lemma": "yada"
       },
@@ -170,9 +274,17 @@
       {
         "surface": "vvv",
         "lemma": "echad"
+      },
+      {
+        "surface": "in the matter",
+        "lemma": "elleh"
       }
     ],
     "5": [
+      {
+        "surface": "If",
+        "lemma": "ki"
+      },
       {
         "surface": "someone incurs guilt",
         "lemma": "asham"
@@ -180,6 +292,10 @@
       {
         "surface": "in one",
         "lemma": "echad"
+      },
+      {
+        "surface": "of these ways",
+        "lemma": "elleh"
       },
       {
         "surface": "he must confess",
@@ -192,12 +308,20 @@
     ],
     "6": [
       {
+        "surface": "and he must bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "his guilt offering",
         "lemma": "asham"
       },
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "for",
+        "lemma": "al"
       },
       {
         "surface": "the sin",
@@ -216,8 +340,16 @@
         "lemma": "kisbah"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "goat",
         "lemma": "seirah"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the flock",
@@ -236,11 +368,23 @@
         "lemma": "kipher"
       },
       {
+        "surface": "for him",
+        "lemma": "al"
+      },
+      {
         "surface": "concerning his sin",
         "lemma": "chattaah"
       }
     ],
     "7": [
+      {
+        "surface": "If, however",
+        "lemma": "im"
+      },
+      {
+        "surface": "he cannot",
+        "lemma": "lo"
+      },
       {
         "surface": "afford",
         "lemma": "naga"
@@ -248,6 +392,10 @@
       {
         "surface": "a lamb",
         "lemma": "seh"
+      },
+      {
+        "surface": "he may bring",
+        "lemma": "bo"
       },
       {
         "surface": "to the LORD",
@@ -268,6 +416,10 @@
       {
         "surface": "turtledoves",
         "lemma": "tor"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "two",
@@ -300,6 +452,18 @@
     ],
     "8": [
       {
+        "surface": "He is to bring",
+        "lemma": "bo"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
       },
@@ -310,6 +474,10 @@
       {
         "surface": "present",
         "lemma": "qarav"
+      },
+      {
+        "surface": "the one",
+        "lemma": "asher"
       },
       {
         "surface": "for the sin offering",
@@ -332,6 +500,10 @@
         "lemma": "oreph"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "severing it",
         "lemma": "badal"
       }
@@ -348,6 +520,10 @@
       {
         "surface": "of the sin offering",
         "lemma": "chattaah"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the side",
@@ -370,6 +546,10 @@
         "lemma": "matsah"
       },
       {
+        "surface": "at",
+        "lemma": "el"
+      },
+      {
         "surface": "the base",
         "lemma": "yesod"
       },
@@ -378,11 +558,23 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "It is",
+        "lemma": "hu"
+      },
+      {
         "surface": "a sin offering",
         "lemma": "chattaah"
       }
     ],
     "10": [
+      {
+        "surface": "And",
+        "lemma": "et"
+      },
+      {
+        "surface": "the priest must prepare",
+        "lemma": "asah"
+      },
       {
         "surface": "the second bird",
         "lemma": "sheni"
@@ -404,6 +596,10 @@
         "lemma": "kipher"
       },
       {
+        "surface": "for him",
+        "lemma": "al"
+      },
+      {
         "surface": "for the sin",
         "lemma": "chattaah"
       },
@@ -418,6 +614,14 @@
     ],
     "11": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "he cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "afford",
         "lemma": "nasag"
       },
@@ -430,6 +634,10 @@
         "lemma": "tor"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "two",
         "lemma": "shenayim"
       },
@@ -440,6 +648,10 @@
       {
         "surface": "pigeons",
         "lemma": "yonah"
+      },
+      {
+        "surface": "he may bring",
+        "lemma": "bo"
       },
       {
         "surface": "a tenth",
@@ -458,6 +670,10 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "He must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "put",
         "lemma": "sum"
       },
@@ -470,11 +686,31 @@
         "lemma": "levonah"
       },
       {
+        "surface": "on it",
+        "lemma": "al"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a sin offering",
         "lemma": "chattaah"
       }
     ],
     "12": [
+      {
+        "surface": "He is to bring",
+        "lemma": "bo"
+      },
+      {
+        "surface": "it to",
+        "lemma": "el"
+      },
       {
         "surface": "the priest",
         "lemma": "kohen"
@@ -486,6 +722,10 @@
       {
         "surface": "a handful",
         "lemma": "melo"
+      },
+      {
+        "surface": "from it",
+        "lemma": "min"
       },
       {
         "surface": "as a memorial portion",
@@ -500,12 +740,20 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "atop",
+        "lemma": "al"
+      },
+      {
         "surface": "the food offerings",
         "lemma": "ishshah"
       },
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
       },
       {
         "surface": "is a sin offering",
@@ -522,8 +770,20 @@
         "lemma": "kipher"
       },
       {
+        "surface": "for him",
+        "lemma": "al"
+      },
+      {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "any",
         "lemma": "echad"
+      },
+      {
+        "surface": "of these",
+        "lemma": "elleh"
       },
       {
         "surface": "sins",
@@ -536,6 +796,10 @@
       {
         "surface": "and he will be forgiven",
         "lemma": "salach"
+      },
+      {
+        "surface": "The remainder will belong to",
+        "lemma": "hayah"
       },
       {
         "surface": "the priest",
@@ -556,11 +820,19 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
     ],
     "15": [
+      {
+        "surface": "If",
+        "lemma": "ki"
+      },
       {
         "surface": "someone",
         "lemma": "nephesh"
@@ -590,6 +862,10 @@
         "lemma": "qodesh"
       },
       {
+        "surface": "he must bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "his guilt offering",
         "lemma": "asham"
       },
@@ -604,6 +880,10 @@
       {
         "surface": "ram",
         "lemma": "ayil"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the flock",
@@ -656,6 +936,14 @@
         "lemma": "chamishi"
       },
       {
+        "surface": "of its value to it",
+        "lemma": "al"
+      },
+      {
+        "surface": "and giving",
+        "lemma": "natan"
+      },
+      {
         "surface": "it to the priest",
         "lemma": "kohen"
       },
@@ -666,6 +954,10 @@
       {
         "surface": "will make atonement",
         "lemma": "kipher"
+      },
+      {
+        "surface": "on his behalf",
+        "lemma": "al"
       },
       {
         "surface": "with the ram",
@@ -682,12 +974,20 @@
     ],
     "17": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "someone",
         "lemma": "nephesh"
       },
       {
         "surface": "sins",
         "lemma": "chata"
+      },
+      {
+        "surface": "and violates",
+        "lemma": "asah"
       },
       {
         "surface": "any",
@@ -700,6 +1000,10 @@
       {
         "surface": "commandments",
         "lemma": "mitsvah"
+      },
+      {
+        "surface": "even though he was",
+        "lemma": "lo"
       },
       {
         "surface": "unaware",
@@ -720,6 +1024,14 @@
     ],
     "18": [
       {
+        "surface": "He is to bring",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
       },
@@ -734,6 +1046,10 @@
       {
         "surface": "of proper value",
         "lemma": "erekh"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the flock",
@@ -752,6 +1068,14 @@
         "lemma": "kipher"
       },
       {
+        "surface": "on his behalf",
+        "lemma": "al"
+      },
+      {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "the wrong",
         "lemma": "shegagah"
       },
@@ -760,11 +1084,19 @@
         "lemma": "shagag"
       },
       {
+        "surface": "in ignorance",
+        "lemma": "lo"
+      },
+      {
         "surface": "and he will be forgiven",
         "lemma": "salach"
       }
     ],
     "19": [
+      {
+        "surface": "It",
+        "lemma": "hu"
+      },
       {
         "surface": "is a guilt offering",
         "lemma": "asham"
@@ -782,6 +1114,6 @@
   "themeLemmas": [
     "asham",
     "chattaah",
-    "kohen"
+    "al"
   ]
 }

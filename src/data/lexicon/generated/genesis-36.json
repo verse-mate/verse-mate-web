@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "This",
+        "lemma": "elleh"
+      },
+      {
         "surface": "is the account",
         "lemma": "toledah"
       },
       {
         "surface": "of Esau",
         "lemma": "esav"
+      },
+      {
+        "surface": "that is",
+        "lemma": "hu"
       },
       {
         "surface": "Edom",
@@ -154,12 +162,20 @@
         "lemma": "qorach"
       },
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "were the sons",
         "lemma": "ben"
       },
       {
         "surface": "of Esau",
         "lemma": "esav"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "were born",
@@ -188,12 +204,28 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "sons",
         "lemma": "ben"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "daughters",
         "lemma": "bat"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -204,12 +236,24 @@
         "lemma": "bet"
       },
       {
+        "surface": "along with",
+        "lemma": "et"
+      },
+      {
         "surface": "his livestock",
         "lemma": "miqneh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his other animals",
         "lemma": "behemah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the property",
@@ -226,6 +270,10 @@
       {
         "surface": "and he moved",
         "lemma": "halakh"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "a land",
@@ -246,12 +294,24 @@
     ],
     "7": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "their possessions",
         "lemma": "rekhush"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "too great",
         "lemma": "rav"
+      },
+      {
+        "surface": "for them to dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "together",
@@ -268,6 +328,10 @@
       {
         "surface": "could",
         "lemma": "yakhol"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "support them",
@@ -288,8 +352,16 @@
         "lemma": "esav"
       },
       {
+        "surface": "that is",
+        "lemma": "hu"
+      },
+      {
         "surface": "Edom",
         "lemma": "edom"
+      },
+      {
+        "surface": "settled",
+        "lemma": "yashav"
       },
       {
         "surface": "in the area of Mount",
@@ -302,12 +374,20 @@
     ],
     "9": [
       {
+        "surface": "This",
+        "lemma": "elleh"
+      },
+      {
         "surface": "is the account",
         "lemma": "toledah"
       },
       {
         "surface": "of Esau",
         "lemma": "esav"
+      },
+      {
+        "surface": "the father",
+        "lemma": "av"
       },
       {
         "surface": "of the Edomites",
@@ -323,6 +403,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the names",
         "lemma": "shem"
@@ -386,6 +470,10 @@
         "lemma": "eliphaz"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Teman",
         "lemma": "teman"
       },
@@ -436,6 +524,10 @@
         "lemma": "amaleq"
       },
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the grandsons",
         "lemma": "ben"
       },
@@ -453,6 +545,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "These are",
+        "lemma": "elleh"
+      },
       {
         "surface": "the sons",
         "lemma": "ben"
@@ -478,6 +574,14 @@
         "lemma": "mizzah"
       },
       {
+        "surface": "They",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the grandsons",
         "lemma": "ben"
       },
@@ -495,6 +599,14 @@
       }
     ],
     "14": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "are",
+        "lemma": "hayah"
+      },
       {
         "surface": "the sons",
         "lemma": "ben"
@@ -549,6 +661,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the chiefs",
         "lemma": "alluph"
@@ -612,6 +728,10 @@
         "lemma": "amaleq"
       },
       {
+        "surface": "They",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the chiefs",
         "lemma": "alluph"
       },
@@ -628,6 +748,10 @@
         "lemma": "edom"
       },
       {
+        "surface": "and they",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the grandsons",
         "lemma": "ben"
       },
@@ -637,6 +761,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the sons",
         "lemma": "ben"
@@ -674,6 +802,10 @@
         "lemma": "mizzah"
       },
       {
+        "surface": "They",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the chiefs",
         "lemma": "alluph"
       },
@@ -688,6 +820,10 @@
       {
         "surface": "of Edom",
         "lemma": "edom"
+      },
+      {
+        "surface": "and they",
+        "lemma": "elleh"
       },
       {
         "surface": "are the grandsons",
@@ -707,6 +843,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the sons",
         "lemma": "ben"
@@ -740,6 +880,10 @@
         "lemma": "qorach"
       },
       {
+        "surface": "They",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the chiefs",
         "lemma": "alluph"
       },
@@ -766,6 +910,10 @@
     ],
     "19": [
       {
+        "surface": "All these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the sons",
         "lemma": "ben"
       },
@@ -774,8 +922,16 @@
         "lemma": "esav"
       },
       {
+        "surface": "that is",
+        "lemma": "hu"
+      },
+      {
         "surface": "Edom",
         "lemma": "edom"
+      },
+      {
+        "surface": "and they",
+        "lemma": "elleh"
       },
       {
         "surface": "were their chiefs",
@@ -783,6 +939,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the sons",
         "lemma": "ben"
@@ -794,6 +954,10 @@
       {
         "surface": "the Horite",
         "lemma": "chori"
+      },
+      {
+        "surface": "who were living",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -830,6 +994,10 @@
         "lemma": "dishan"
       },
       {
+        "surface": "They",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the chiefs",
         "lemma": "alluph"
       },
@@ -864,6 +1032,10 @@
         "lemma": "lotan"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Hori",
         "lemma": "chori"
       },
@@ -885,6 +1057,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the sons",
         "lemma": "ben"
@@ -916,6 +1092,10 @@
     ],
     "24": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the sons",
         "lemma": "ben"
       },
@@ -932,8 +1112,16 @@
         "lemma": "anah"
       },
       {
+        "surface": "This is",
+        "lemma": "hu"
+      },
+      {
         "surface": "the Anah",
         "lemma": "anah"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "found",
@@ -956,11 +1144,19 @@
         "lemma": "chamor"
       },
       {
+        "surface": "of his father",
+        "lemma": "av"
+      },
+      {
         "surface": "Zibeon",
         "lemma": "tsivon"
       }
     ],
     "25": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the children",
         "lemma": "ben"
@@ -988,6 +1184,10 @@
     ],
     "26": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the sons",
         "lemma": "ben"
       },
@@ -1014,6 +1214,10 @@
     ],
     "27": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the sons",
         "lemma": "ben"
       },
@@ -1036,6 +1240,10 @@
     ],
     "28": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the sons",
         "lemma": "ben"
       },
@@ -1053,6 +1261,10 @@
       }
     ],
     "29": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the chiefs",
         "lemma": "alluph"
@@ -1096,6 +1308,10 @@
         "lemma": "dishan"
       },
       {
+        "surface": "They",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the chiefs",
         "lemma": "alluph"
       },
@@ -1118,8 +1334,16 @@
     ],
     "31": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the kings",
         "lemma": "melekh"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "reigned",
@@ -1476,6 +1700,10 @@
     ],
     "40": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the names",
         "lemma": "shem"
       },
@@ -1554,6 +1782,10 @@
         "lemma": "iram"
       },
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "were the chiefs",
         "lemma": "alluph"
       },
@@ -1578,14 +1810,18 @@
         "lemma": "esav"
       },
       {
+        "surface": "was the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of the Edomites",
         "lemma": "edom"
       }
     ]
   },
   "themeLemmas": [
+    "elleh",
     "esav",
-    "alluph",
-    "edom"
+    "alluph"
   ]
 }

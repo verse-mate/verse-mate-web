@@ -268,12 +268,20 @@
         "lemma": "azaryah"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "served as priest",
         "lemma": "kahan"
       },
       {
         "surface": "in the temple",
         "lemma": "bet"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "Solomon",
@@ -450,6 +458,10 @@
     ],
     "17": [
       {
+        "surface": "These are",
+        "lemma": "elleh"
+      },
+      {
         "surface": "the names of",
         "lemma": "shem"
       },
@@ -514,12 +526,20 @@
         "lemma": "mushi"
       },
       {
+        "surface": "These are",
+        "lemma": "elleh"
+      },
+      {
         "surface": "the clans",
         "lemma": "mishpachah"
       },
       {
         "surface": "of the Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "listed according to their fathers",
+        "lemma": "av"
       }
     ],
     "20": [
@@ -838,12 +858,24 @@
     ],
     "31": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "are the men",
+        "lemma": "asher"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
       {
         "surface": "put",
         "lemma": "amad"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "charge",
@@ -896,6 +928,10 @@
         "lemma": "moed"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "Solomon",
         "lemma": "shelomoh"
       },
@@ -929,6 +965,10 @@
       }
     ],
     "33": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the men who served",
         "lemma": "amad"
@@ -1150,6 +1190,10 @@
         "lemma": "amad"
       },
       {
+        "surface": "at",
+        "lemma": "al"
+      },
+      {
         "surface": "his right hand",
         "lemma": "yamin"
       },
@@ -1279,6 +1323,10 @@
       }
     ],
     "44": [
+      {
+        "surface": "On",
+        "lemma": "al"
+      },
       {
         "surface": "the left",
         "lemma": "semol"
@@ -1420,6 +1468,14 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "were assigned",
+        "lemma": "natan"
+      },
+      {
+        "surface": "to every kind",
+        "lemma": "kol"
+      },
+      {
         "surface": "of service",
         "lemma": "avodah"
       },
@@ -1446,6 +1502,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "did all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the work",
         "lemma": "melakhah"
       },
@@ -1458,12 +1518,20 @@
         "lemma": "qatar"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the altar",
         "lemma": "mizbeach"
       },
       {
         "surface": "of burnt offering",
         "lemma": "olah"
+      },
+      {
+        "surface": "and on",
+        "lemma": "al"
       },
       {
         "surface": "the altar",
@@ -1478,8 +1546,20 @@
         "lemma": "kipher"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "according to all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "Moses",
@@ -1499,6 +1579,10 @@
       }
     ],
     "50": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "were the descendants",
         "lemma": "ben"
@@ -1604,6 +1688,10 @@
     ],
     "54": [
       {
+        "surface": "Now these were",
+        "lemma": "elleh"
+      },
+      {
         "surface": "the territories",
         "lemma": "gevul"
       },
@@ -1628,11 +1716,23 @@
         "lemma": "moshav"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "the first lot",
         "lemma": "goral"
+      },
+      {
+        "surface": "fell",
+        "lemma": "hayah"
       }
     ],
     "55": [
+      {
+        "surface": "They were given",
+        "lemma": "natan"
+      },
       {
         "surface": "Hebron",
         "lemma": "chevron"
@@ -1668,6 +1768,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "were given",
+        "lemma": "natan"
+      },
+      {
         "surface": "to Caleb",
         "lemma": "kalev"
       },
@@ -1688,6 +1792,10 @@
       {
         "surface": "of Aaron",
         "lemma": "aharon"
+      },
+      {
+        "surface": "were given",
+        "lemma": "natan"
       },
       {
         "surface": "Hebron",
@@ -1742,6 +1850,10 @@
         "lemma": "betshemesh"
       },
       {
+        "surface": "together with",
+        "lemma": "et"
+      },
+      {
         "surface": "their pasturelands",
         "lemma": "migrash"
       }
@@ -1756,6 +1868,10 @@
         "lemma": "binyamin"
       },
       {
+        "surface": "they were given Gibeon",
+        "lemma": "et"
+      },
+      {
         "surface": "Geba",
         "lemma": "geva"
       },
@@ -1768,6 +1884,10 @@
         "lemma": "anatot"
       },
       {
+        "surface": "together with",
+        "lemma": "et"
+      },
+      {
         "surface": "their pasturelands",
         "lemma": "migrash"
       },
@@ -1778,6 +1898,10 @@
       {
         "surface": "cities",
         "lemma": "ir"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "among their families",
@@ -1840,6 +1964,10 @@
         "lemma": "yissaskhar"
       },
       {
+        "surface": "Asher",
+        "lemma": "asher"
+      },
+      {
         "surface": "Naphtali",
         "lemma": "naphtali"
       },
@@ -1896,6 +2024,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the Levites",
         "lemma": "leviyyi"
       },
@@ -1910,12 +2042,20 @@
     ],
     "65": [
       {
+        "surface": "They assigned",
+        "lemma": "natan"
+      },
+      {
         "surface": "by lot",
         "lemma": "goral"
       },
       {
         "surface": "the cities",
         "lemma": "ir"
+      },
+      {
+        "surface": "named",
+        "lemma": "qara"
       },
       {
         "surface": "above",
@@ -1966,6 +2106,10 @@
     ],
     "67": [
       {
+        "surface": "They were given",
+        "lemma": "natan"
+      },
+      {
         "surface": "Shechem",
         "lemma": "shekhem"
       },
@@ -1988,6 +2132,10 @@
       {
         "surface": "of Ephraim",
         "lemma": "ephrayim"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "Gezer",
@@ -2020,6 +2168,10 @@
       {
         "surface": "and Gath-rimmon",
         "lemma": "gatrimmon"
+      },
+      {
+        "surface": "together with",
+        "lemma": "et"
       },
       {
         "surface": "their pasturelands",
@@ -2060,6 +2212,10 @@
         "lemma": "bilam"
       },
       {
+        "surface": "together with",
+        "lemma": "et"
+      },
+      {
         "surface": "their pasturelands",
         "lemma": "migrash"
       }
@@ -2086,6 +2242,10 @@
         "lemma": "menashsheh"
       },
       {
+        "surface": "they were given",
+        "lemma": "et"
+      },
+      {
         "surface": "Golan",
         "lemma": "golan"
       },
@@ -2094,8 +2254,16 @@
         "lemma": "bashan"
       },
       {
+        "surface": "and also",
+        "lemma": "et"
+      },
+      {
         "surface": "Ashtaroth",
         "lemma": "ashtarot"
+      },
+      {
+        "surface": "together with",
+        "lemma": "et"
       },
       {
         "surface": "their pasturelands",
@@ -2110,6 +2278,10 @@
       {
         "surface": "of Issachar",
         "lemma": "yissaskhar"
+      },
+      {
+        "surface": "they were given",
+        "lemma": "et"
       },
       {
         "surface": "Kedesh",
@@ -2130,6 +2302,10 @@
         "lemma": "anem"
       },
       {
+        "surface": "together with",
+        "lemma": "et"
+      },
+      {
         "surface": "their pasturelands",
         "lemma": "migrash"
       }
@@ -2138,6 +2314,14 @@
       {
         "surface": "From the tribe",
         "lemma": "matteh"
+      },
+      {
+        "surface": "of Asher",
+        "lemma": "asher"
+      },
+      {
+        "surface": "they were given",
+        "lemma": "et"
       },
       {
         "surface": "Mashal",
@@ -2158,6 +2342,10 @@
         "lemma": "rechov"
       },
       {
+        "surface": "together with",
+        "lemma": "et"
+      },
+      {
         "surface": "their pasturelands",
         "lemma": "migrash"
       }
@@ -2170,6 +2358,10 @@
       {
         "surface": "of Naphtali",
         "lemma": "naphtali"
+      },
+      {
+        "surface": "they were given",
+        "lemma": "et"
       },
       {
         "surface": "Kedesh",
@@ -2186,6 +2378,10 @@
       {
         "surface": "and Kiriathaim",
         "lemma": "qiryatayim"
+      },
+      {
+        "surface": "together with",
+        "lemma": "et"
       },
       {
         "surface": "their pasturelands",
@@ -2210,12 +2406,20 @@
         "lemma": "zevulun"
       },
       {
+        "surface": "they were given",
+        "lemma": "et"
+      },
+      {
         "surface": "Rimmono",
         "lemma": "rimmon"
       },
       {
         "surface": "and Tabor",
         "lemma": "tavor"
+      },
+      {
+        "surface": "together with",
+        "lemma": "et"
       },
       {
         "surface": "their pasturelands",
@@ -2270,6 +2474,10 @@
         "lemma": "mophaat"
       },
       {
+        "surface": "together with",
+        "lemma": "et"
+      },
+      {
         "surface": "their pasturelands",
         "lemma": "migrash"
       }
@@ -2282,6 +2490,10 @@
       {
         "surface": "of Gad",
         "lemma": "gad"
+      },
+      {
+        "surface": "they were given",
+        "lemma": "et"
       },
       {
         "surface": "Ramoth",
@@ -2306,6 +2518,10 @@
         "lemma": "yaazer"
       },
       {
+        "surface": "together with",
+        "lemma": "et"
+      },
+      {
         "surface": "their pasturelands",
         "lemma": "migrash"
       }
@@ -2313,7 +2529,7 @@
   },
   "themeLemmas": [
     "yalad",
-    "migrash",
-    "matteh"
+    "et",
+    "migrash"
   ]
 }

@@ -22,8 +22,28 @@
         "lemma": "qorach"
       },
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
+        "surface": "all you peoples",
+        "lemma": "kol"
+      },
+      {
         "surface": "listen",
         "lemma": "azan"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "inhabitants",
+        "lemma": "yashav"
       },
       {
         "surface": "of the world",
@@ -31,6 +51,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "both",
+        "lemma": "gam"
+      },
       {
         "surface": "low and high",
         "lemma": "ben"
@@ -136,6 +160,10 @@
         "lemma": "batach"
       },
       {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "their wealth",
         "lemma": "chayil"
       },
@@ -154,6 +182,10 @@
     ],
     "7": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "man",
         "lemma": "ish"
       },
@@ -164,6 +196,14 @@
       {
         "surface": "his brother",
         "lemma": "ach"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
+        "surface": "pay",
+        "lemma": "natan"
       },
       {
         "surface": "his ransom",
@@ -206,11 +246,27 @@
         "lemma": "netsach"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
         "surface": "decay",
         "lemma": "shachat"
       }
     ],
     "10": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "it is clear",
+        "lemma": "raah"
+      },
       {
         "surface": "that wise",
         "lemma": "chakham"
@@ -270,8 +326,16 @@
         "lemma": "dor"
       },
       {
+        "surface": "even though",
+        "lemma": "al"
+      },
+      {
         "surface": "their lands",
         "lemma": "adamah"
+      },
+      {
+        "surface": "were their namesakes",
+        "lemma": "qara"
       }
     ],
     "12": [
@@ -305,6 +369,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "This",
+        "lemma": "zeh"
+      },
       {
         "surface": "is the fate",
         "lemma": "derekh"
@@ -406,6 +474,10 @@
         "lemma": "sheol"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "He will surely take me to Himself",
         "lemma": "laqach"
       },
@@ -416,8 +488,16 @@
     ],
     "16": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
+      },
+      {
+        "surface": "when",
+        "lemma": "ki"
       },
       {
         "surface": "a man",
@@ -426,6 +506,10 @@
       {
         "surface": "grows rich",
         "lemma": "ashar"
+      },
+      {
+        "surface": "when",
+        "lemma": "ki"
       },
       {
         "surface": "the splendor",
@@ -442,6 +526,10 @@
     ],
     "17": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "when he dies",
         "lemma": "mavet"
       },
@@ -450,8 +538,16 @@
         "lemma": "laqach"
       },
       {
+        "surface": "nothing away",
+        "lemma": "lo"
+      },
+      {
         "surface": "his abundance",
         "lemma": "kavod"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "follow him",
@@ -463,6 +559,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "Though",
+        "lemma": "ki"
+      },
       {
         "surface": "in his lifetime",
         "lemma": "chay"
@@ -480,14 +580,34 @@
         "lemma": "yadah"
       },
       {
+        "surface": "you when",
+        "lemma": "ki"
+      },
+      {
         "surface": "you prosper",
         "lemma": "yatav"
       }
     ],
     "19": [
       {
+        "surface": "he will join",
+        "lemma": "bo"
+      },
+      {
         "surface": "the generation",
         "lemma": "dor"
+      },
+      {
+        "surface": "of his fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "who will never",
+        "lemma": "ad"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "the light of day",
@@ -502,6 +622,10 @@
       {
         "surface": "who has riches",
         "lemma": "yeqar"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "understanding",
@@ -522,8 +646,8 @@
     ]
   },
   "themeLemmas": [
-    "sheol",
-    "nephesh",
-    "mashal"
+    "ki",
+    "lo",
+    "sheol"
   ]
 }

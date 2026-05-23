@@ -10,8 +10,16 @@
         "lemma": "nachash"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "more crafty",
         "lemma": "arum"
+      },
+      {
+        "surface": "than any",
+        "lemma": "kol"
       },
       {
         "surface": "beast",
@@ -22,12 +30,28 @@
         "lemma": "saday"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "had made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "And he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the woman",
@@ -38,8 +62,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "really",
+        "lemma": "ki"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "from any",
+        "lemma": "kol"
       },
       {
         "surface": "tree",
@@ -54,6 +94,10 @@
       {
         "surface": "The woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "answered",
+        "lemma": "amar"
       },
       {
         "surface": "the serpent",
@@ -98,12 +142,32 @@
         "lemma": "elohim"
       },
       {
+        "surface": "has said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "eat",
         "lemma": "akhal"
       },
       {
+        "surface": "of it",
+        "lemma": "min"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
         "surface": "touch",
         "lemma": "naga"
+      },
+      {
+        "surface": "or",
+        "lemma": "pen"
       },
       {
         "surface": "you will die",
@@ -111,6 +175,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "You will not",
+        "lemma": "lo"
+      },
       {
         "surface": "surely die",
         "lemma": "mut"
@@ -120,11 +188,19 @@
         "lemma": "nachash"
       },
       {
+        "surface": "told",
+        "lemma": "amar"
+      },
+      {
         "surface": "the woman",
         "lemma": "ishshah"
       }
     ],
     "5": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "God",
         "lemma": "elohim"
@@ -132,6 +208,10 @@
       {
         "surface": "knows",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "in the day",
@@ -142,8 +222,16 @@
         "lemma": "akhal"
       },
       {
+        "surface": "of it",
+        "lemma": "min"
+      },
+      {
         "surface": "your eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "opened",
@@ -172,6 +260,14 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the tree",
         "lemma": "ets"
       },
@@ -182,6 +278,10 @@
       {
         "surface": "for food",
         "lemma": "maakhal"
+      },
+      {
+        "surface": "and",
+        "lemma": "ki"
       },
       {
         "surface": "pleasing",
@@ -216,8 +316,16 @@
         "lemma": "akhal"
       },
       {
+        "surface": "She also gave some",
+        "lemma": "natan"
+      },
+      {
         "surface": "to her husband",
         "lemma": "ish"
+      },
+      {
+        "surface": "who was with her",
+        "lemma": "im"
       },
       {
         "surface": "and he ate it",
@@ -238,8 +346,16 @@
         "lemma": "paqach"
       },
       {
+        "surface": "and they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "knew",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "they were naked",
@@ -258,6 +374,10 @@
         "lemma": "aleh"
       },
       {
+        "surface": "and made",
+        "lemma": "asah"
+      },
+      {
         "surface": "coverings",
         "lemma": "chagor"
       }
@@ -270,6 +390,10 @@
       {
         "surface": "and his wife",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
       },
       {
         "surface": "the voice",
@@ -338,6 +462,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "called out",
+        "lemma": "qara"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the man",
         "lemma": "adam"
       },
@@ -348,6 +480,10 @@
     ],
     "10": [
       {
+        "surface": "I heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "Your voice",
         "lemma": "qol"
       },
@@ -356,8 +492,20 @@
         "lemma": "gan"
       },
       {
+        "surface": "he replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "and I was afraid",
         "lemma": "yare"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
       },
       {
         "surface": "was naked",
@@ -378,16 +526,36 @@
         "lemma": "nagad"
       },
       {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "you were naked",
         "lemma": "erom"
+      },
+      {
+        "surface": "asked the LORD God",
+        "lemma": "amar"
       },
       {
         "surface": "Have you eaten",
         "lemma": "akhal"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the tree",
         "lemma": "ets"
+      },
+      {
+        "surface": "of which",
+        "lemma": "asher"
       },
       {
         "surface": "I commanded you",
@@ -408,8 +576,36 @@
         "lemma": "adam"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "The woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "whom",
+        "lemma": "asher"
+      },
+      {
+        "surface": "You gave",
+        "lemma": "natan"
+      },
+      {
+        "surface": "me",
+        "lemma": "immad"
+      },
+      {
+        "surface": "she",
+        "lemma": "hu"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
+        "surface": "fruit from",
+        "lemma": "min"
       },
       {
         "surface": "the tree",
@@ -430,12 +626,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the woman",
         "lemma": "ishshah"
       },
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "is this",
+        "lemma": "zot"
+      },
+      {
+        "surface": "you have done",
+        "lemma": "asah"
       },
       {
         "surface": "The serpent",
@@ -448,6 +656,10 @@
       {
         "surface": "she",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "and I ate",
@@ -464,16 +676,48 @@
         "lemma": "elohim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the serpent",
         "lemma": "nachash"
+      },
+      {
+        "surface": "Because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you have done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
       },
       {
         "surface": "cursed",
         "lemma": "arar"
       },
       {
+        "surface": "are you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "above all",
+        "lemma": "kol"
+      },
+      {
         "surface": "livestock",
         "lemma": "behemah"
+      },
+      {
+        "surface": "and every",
+        "lemma": "kol"
       },
       {
         "surface": "beast",
@@ -482,6 +726,10 @@
       {
         "surface": "of the field",
         "lemma": "saday"
+      },
+      {
+        "surface": "On",
+        "lemma": "al"
       },
       {
         "surface": "your belly",
@@ -498,6 +746,10 @@
       {
         "surface": "you {will} eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the days",
@@ -542,12 +794,20 @@
         "lemma": "zera"
       },
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "will} crush",
         "lemma": "shuph"
       },
       {
         "surface": "your head",
         "lemma": "rosh"
+      },
+      {
+        "surface": "and you",
+        "lemma": "attah"
       },
       {
         "surface": "will} strike",
@@ -560,8 +820,16 @@
     ],
     "16": [
       {
+        "surface": "To",
+        "lemma": "el"
+      },
+      {
         "surface": "the woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "He said",
+        "lemma": "amar"
       },
       {
         "surface": "I will sharply increase",
@@ -592,8 +860,16 @@
         "lemma": "teshuqah"
       },
       {
+        "surface": "will be for",
+        "lemma": "el"
+      },
+      {
         "surface": "your husband",
         "lemma": "ish"
+      },
+      {
+        "surface": "and he",
+        "lemma": "hu"
       },
       {
         "surface": "will rule",
@@ -606,8 +882,24 @@
         "lemma": "adam"
       },
       {
+        "surface": "He said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you have listened",
+        "lemma": "shama"
+      },
+      {
         "surface": "to the voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "of",
+        "lemma": "min"
       },
       {
         "surface": "your wife",
@@ -622,8 +914,16 @@
         "lemma": "ets"
       },
       {
+        "surface": "of which",
+        "lemma": "asher"
+      },
+      {
         "surface": "I commanded",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "you not",
+        "lemma": "lo"
       },
       {
         "surface": "to eat",
@@ -638,12 +938,20 @@
         "lemma": "adamah"
       },
       {
+        "surface": "because of you",
+        "lemma": "avur"
+      },
+      {
         "surface": "through toil",
         "lemma": "itstsavon"
       },
       {
         "surface": "you will eat of it",
         "lemma": "akhal"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the days",
@@ -698,26 +1006,66 @@
         "lemma": "lechem"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
+        "surface": "you return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the ground",
         "lemma": "adamah"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "out of it",
+        "lemma": "min"
       },
       {
         "surface": "were you taken",
         "lemma": "laqach"
       },
       {
-        "surface": "dust",
-        "lemma": "aphar"
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "dust",
         "lemma": "aphar"
+      },
+      {
+        "surface": "you are",
+        "lemma": "attah"
+      },
+      {
+        "surface": "and to",
+        "lemma": "el"
+      },
+      {
+        "surface": "dust",
+        "lemma": "aphar"
+      },
+      {
+        "surface": "you {shall} return",
+        "lemma": "shuv"
       }
     ],
     "20": [
       {
         "surface": "And Adam",
         "lemma": "adam"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "qara"
       },
       {
         "surface": "named",
@@ -732,8 +1080,24 @@
         "lemma": "chavvah"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "she",
+        "lemma": "hu"
+      },
+      {
+        "surface": "would be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the mother",
         "lemma": "em"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the living",
@@ -748,6 +1112,10 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "made",
+        "lemma": "asah"
       },
       {
         "surface": "garments",
@@ -780,6 +1148,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Behold",
         "lemma": "hen"
       },
@@ -788,8 +1160,16 @@
         "lemma": "adam"
       },
       {
+        "surface": "has become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like one",
         "lemma": "echad"
+      },
+      {
+        "surface": "of Us",
+        "lemma": "min"
       },
       {
         "surface": "knowing",
@@ -808,6 +1188,10 @@
         "lemma": "attah"
       },
       {
+        "surface": "lest",
+        "lemma": "pen"
+      },
+      {
         "surface": "he reach out",
         "lemma": "shalach"
       },
@@ -818,6 +1202,10 @@
       {
         "surface": "and take",
         "lemma": "laqach"
+      },
+      {
+        "surface": "also",
+        "lemma": "gam"
       },
       {
         "surface": "from the tree",
@@ -870,6 +1258,10 @@
         "lemma": "adamah"
       },
       {
+        "surface": "from which",
+        "lemma": "asher"
+      },
+      {
         "surface": "he had been taken",
         "lemma": "laqach"
       }
@@ -882,6 +1274,10 @@
       {
         "surface": "the man",
         "lemma": "adam"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "stationed",
@@ -902,6 +1298,10 @@
       {
         "surface": "of Eden",
         "lemma": "eden"
+      },
+      {
+        "surface": "along with",
+        "lemma": "et"
       },
       {
         "surface": "a whirling",
@@ -935,7 +1335,7 @@
   },
   "themeLemmas": [
     "akhal",
-    "ets",
-    "gan"
+    "amar",
+    "ki"
   ]
 }

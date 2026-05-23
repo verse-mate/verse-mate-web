@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am a rose",
         "lemma": "chavatstselet"
       },
@@ -78,6 +82,10 @@
         "lemma": "chamad"
       },
       {
+        "surface": "to sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in his shade",
         "lemma": "tsel"
       },
@@ -96,6 +104,14 @@
     ],
     "4": [
       {
+        "surface": "He has brought me",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the house",
         "lemma": "bet"
       },
@@ -106,6 +122,10 @@
       {
         "surface": "and his banner",
         "lemma": "degel"
+      },
+      {
+        "surface": "over me is",
+        "lemma": "al"
       },
       {
         "surface": "love",
@@ -128,6 +148,14 @@
       {
         "surface": "with apples",
         "lemma": "tappuach"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am faint",
@@ -174,8 +202,16 @@
         "lemma": "shava"
       },
       {
+        "surface": "you",
+        "lemma": "et"
+      },
+      {
         "surface": "by the gazelles",
         "lemma": "tsevi"
+      },
+      {
+        "surface": "and",
+        "lemma": "o"
       },
       {
         "surface": "does",
@@ -186,8 +222,16 @@
         "lemma": "saday"
       },
       {
+        "surface": "Do not",
+        "lemma": "im"
+      },
+      {
         "surface": "arouse",
         "lemma": "ur"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "awaken",
@@ -196,6 +240,10 @@
       {
         "surface": "love",
         "lemma": "ahavah"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "the time is right",
@@ -216,8 +264,20 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "Here",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "he comes",
+        "lemma": "bo"
+      },
+      {
         "surface": "leaping",
         "lemma": "dalag"
+      },
+      {
+        "surface": "across",
+        "lemma": "al"
       },
       {
         "surface": "the mountains",
@@ -226,6 +286,10 @@
       {
         "surface": "bounding",
         "lemma": "qaphats"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "the hills",
@@ -246,6 +310,10 @@
         "lemma": "tsevi"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "a young",
         "lemma": "opher"
       },
@@ -256,6 +324,10 @@
       {
         "surface": "Look",
         "lemma": "hinneh"
+      },
+      {
+        "surface": "he",
+        "lemma": "zeh"
       },
       {
         "surface": "stands",
@@ -274,12 +346,20 @@
         "lemma": "shagach"
       },
       {
+        "surface": "through",
+        "lemma": "min"
+      },
+      {
         "surface": "the windows",
         "lemma": "challon"
       },
       {
         "surface": "peering",
         "lemma": "tsuts"
+      },
+      {
+        "surface": "through",
+        "lemma": "min"
       },
       {
         "surface": "the lattice",
@@ -314,6 +394,10 @@
     ],
     "11": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "now",
         "lemma": "hinneh"
       },
@@ -344,8 +428,16 @@
         "lemma": "nitstsan"
       },
       {
+        "surface": "have appeared",
+        "lemma": "raah"
+      },
+      {
         "surface": "in the countryside",
         "lemma": "erets"
+      },
+      {
+        "surface": "the season",
+        "lemma": "et"
       },
       {
         "surface": "of singing",
@@ -362,6 +454,10 @@
       {
         "surface": "of turtledoves",
         "lemma": "tor"
+      },
+      {
+        "surface": "is heard",
+        "lemma": "shama"
       },
       {
         "surface": "in our land",
@@ -388,6 +484,10 @@
       {
         "surface": "vines",
         "lemma": "gephen"
+      },
+      {
+        "surface": "spread",
+        "lemma": "natan"
       },
       {
         "surface": "their fragrance",
@@ -436,12 +536,24 @@
         "lemma": "madregah"
       },
       {
+        "surface": "let me see",
+        "lemma": "raah"
+      },
+      {
         "surface": "your face",
         "lemma": "mareh"
       },
       {
+        "surface": "let me hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "your voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "your voice",
@@ -500,6 +612,10 @@
         "lemma": "dod"
       },
       {
+        "surface": "and I am",
+        "lemma": "ani"
+      },
+      {
         "surface": "he pastures his flock",
         "lemma": "beteqedharoim"
       },
@@ -509,6 +625,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "Before",
+        "lemma": "ad"
+      },
       {
         "surface": "the day",
         "lemma": "yom"
@@ -542,8 +662,16 @@
         "lemma": "tsevi"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "a young stag",
         "lemma": "opher"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the mountains",

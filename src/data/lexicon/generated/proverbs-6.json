@@ -10,6 +10,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "you have put up security",
         "lemma": "arav"
       },
@@ -54,12 +58,32 @@
     ],
     "3": [
       {
+        "surface": "then",
+        "lemma": "epho"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "my son",
         "lemma": "ben"
       },
       {
         "surface": "to free yourself",
         "lemma": "natsal"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you have fallen",
+        "lemma": "bo"
       },
       {
         "surface": "into your neighbor’s",
@@ -87,6 +111,14 @@
       }
     ],
     "4": [
+      {
+        "surface": "Allow",
+        "lemma": "natan"
+      },
+      {
+        "surface": "no",
+        "lemma": "al"
+      },
       {
         "surface": "sleep",
         "lemma": "shenah"
@@ -142,6 +174,10 @@
       {
         "surface": "O slacker",
         "lemma": "atsel"
+      },
+      {
+        "surface": "observe",
+        "lemma": "raah"
       },
       {
         "surface": "its ways",
@@ -202,6 +238,10 @@
         "lemma": "matay"
       },
       {
+        "surface": "long",
+        "lemma": "ad"
+      },
+      {
         "surface": "will you lie there",
         "lemma": "shakhav"
       },
@@ -260,6 +300,10 @@
       {
         "surface": "and poverty",
         "lemma": "resh"
+      },
+      {
+        "surface": "will come upon you",
+        "lemma": "bo"
       },
       {
         "surface": "like a robber",
@@ -348,6 +392,10 @@
         "lemma": "ra"
       },
       {
+        "surface": "he continually",
+        "lemma": "kol"
+      },
+      {
         "surface": "sows",
         "lemma": "shalach"
       },
@@ -358,8 +406,16 @@
     ],
     "15": [
       {
+        "surface": "Therefore",
+        "lemma": "al"
+      },
+      {
         "surface": "calamity",
         "lemma": "ed"
+      },
+      {
+        "surface": "will come upon him",
+        "lemma": "bo"
       },
       {
         "surface": "suddenly",
@@ -383,6 +439,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "There are",
+        "lemma": "hennah"
+      },
       {
         "surface": "six things that",
         "lemma": "shesh"
@@ -520,8 +580,16 @@
         "lemma": "natsar"
       },
       {
+        "surface": "your father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "commandment",
         "lemma": "mitsvah"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
       },
       {
         "surface": "forsake",
@@ -546,12 +614,20 @@
         "lemma": "tamid"
       },
       {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
         "surface": "your heart",
         "lemma": "lev"
       },
       {
         "surface": "tie them",
         "lemma": "anad"
+      },
+      {
+        "surface": "around",
+        "lemma": "al"
       },
       {
         "surface": "your neck",
@@ -568,6 +644,10 @@
         "lemma": "nachah"
       },
       {
+        "surface": "when you",
+        "lemma": "et"
+      },
+      {
         "surface": "lie down",
         "lemma": "shakhav"
       },
@@ -576,8 +656,16 @@
         "lemma": "shamar"
       },
       {
+        "surface": "over you",
+        "lemma": "al"
+      },
+      {
         "surface": "when you awake",
         "lemma": "quts"
+      },
+      {
+        "surface": "they",
+        "lemma": "hu"
       },
       {
         "surface": "will speak to you",
@@ -585,6 +673,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "this commandment",
         "lemma": "mitsvah"
@@ -646,6 +738,10 @@
     ],
     "25": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "lust",
         "lemma": "chamad"
       },
@@ -667,6 +763,10 @@
       }
     ],
     "26": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the levy",
         "lemma": "bead"
@@ -718,11 +818,19 @@
         "lemma": "beged"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be burned",
         "lemma": "saraph"
       }
     ],
     "28": [
+      {
+        "surface": "Can",
+        "lemma": "im"
+      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -732,8 +840,16 @@
         "lemma": "halakh"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "hot coals",
         "lemma": "gechel"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "scorching",
@@ -750,12 +866,20 @@
         "lemma": "ken"
       },
       {
+        "surface": "is he who sleeps with",
+        "lemma": "bo"
+      },
+      {
         "surface": "another man’s",
         "lemma": "rea"
       },
       {
         "surface": "wife",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "no one",
+        "lemma": "lo"
       },
       {
         "surface": "who touches",
@@ -768,12 +892,20 @@
     ],
     "30": [
       {
+        "surface": "Men do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "despise",
         "lemma": "buz"
       },
       {
         "surface": "the thief",
         "lemma": "gannav"
+      },
+      {
+        "surface": "if",
+        "lemma": "ki"
       },
       {
         "surface": "he steals",
@@ -786,6 +918,10 @@
       {
         "surface": "his",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ki"
       },
       {
         "surface": "hunger",
@@ -804,6 +940,14 @@
       {
         "surface": "sevenfold",
         "lemma": "shivatayim"
+      },
+      {
+        "surface": "he must give up",
+        "lemma": "natan"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the wealth",
@@ -826,6 +970,14 @@
       {
         "surface": "judgment",
         "lemma": "lev"
+      },
+      {
+        "surface": "whoever",
+        "lemma": "hu"
+      },
+      {
+        "surface": "does so",
+        "lemma": "asah"
       },
       {
         "surface": "destroys",
@@ -854,11 +1006,19 @@
         "lemma": "cherpah"
       },
       {
+        "surface": "will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "be wiped away",
         "lemma": "machah"
       }
     ],
     "34": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "jealousy",
         "lemma": "qinah"
@@ -866,6 +1026,10 @@
       {
         "surface": "enrages a husband",
         "lemma": "chemah"
+      },
+      {
+        "surface": "and he will show no",
+        "lemma": "lo"
       },
       {
         "surface": "mercy",
@@ -882,12 +1046,24 @@
     ],
     "35": [
       {
+        "surface": "He will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be appeased",
         "lemma": "nasa"
       },
       {
+        "surface": "by any",
+        "lemma": "kol"
+      },
+      {
         "surface": "ransom",
         "lemma": "kopher"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "persuaded",
@@ -904,8 +1080,8 @@
     ]
   },
   "themeLemmas": [
-    "halakh",
-    "rea",
-    "nephesh"
+    "lo",
+    "al",
+    "ki"
   ]
 }

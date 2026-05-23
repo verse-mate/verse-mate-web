@@ -80,6 +80,10 @@
     ],
     "4": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the word",
         "lemma": "davar"
       },
@@ -90,6 +94,10 @@
       {
         "surface": "is upright",
         "lemma": "yashar"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "His work",
@@ -144,6 +152,14 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "were made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the stars",
         "lemma": "tsava"
       },
@@ -170,6 +186,10 @@
         "lemma": "yam"
       },
       {
+        "surface": "He puts",
+        "lemma": "natan"
+      },
+      {
         "surface": "the depths",
         "lemma": "tehom"
       },
@@ -179,6 +199,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Let all",
+        "lemma": "kol"
+      },
       {
         "surface": "the earth",
         "lemma": "erets"
@@ -192,6 +216,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "let all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of the world",
         "lemma": "tevel"
       },
@@ -201,6 +233,26 @@
       }
     ],
     "9": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and it came to be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
       {
         "surface": "commanded",
         "lemma": "tsavah"
@@ -276,6 +328,10 @@
         "lemma": "goy"
       },
       {
+        "surface": "whose",
+        "lemma": "asher"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -310,6 +366,14 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "He sees",
+        "lemma": "raah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the sons",
         "lemma": "ben"
       },
@@ -320,12 +384,28 @@
     ],
     "14": [
       {
+        "surface": "From His dwelling",
+        "lemma": "yashav"
+      },
+      {
         "surface": "place",
         "lemma": "makhon"
       },
       {
         "surface": "He gazes",
         "lemma": "shagach"
+      },
+      {
+        "surface": "on",
+        "lemma": "el"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who inhabit",
+        "lemma": "yashav"
       },
       {
         "surface": "the earth",
@@ -348,6 +428,10 @@
       {
         "surface": "He considers",
         "lemma": "bin"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "their works",
@@ -374,6 +458,10 @@
       {
         "surface": "army",
         "lemma": "chayil"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "warrior",
@@ -414,6 +502,10 @@
         "lemma": "chayil"
       },
       {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "save",
         "lemma": "malat"
       }
@@ -430,6 +522,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "are on",
+        "lemma": "el"
       },
       {
         "surface": "those who fear Him",
@@ -480,6 +576,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "is our help",
         "lemma": "ezer"
       },
@@ -490,12 +590,20 @@
     ],
     "21": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "our hearts",
         "lemma": "lev"
       },
       {
         "surface": "rejoice",
         "lemma": "samach"
+      },
+      {
+        "surface": "since",
+        "lemma": "ki"
       },
       {
         "surface": "we trust",
@@ -516,8 +624,20 @@
         "lemma": "chesed"
       },
       {
+        "surface": "rest",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "on us",
+        "lemma": "al"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
       },
       {
         "surface": "we put our hope",
@@ -526,8 +646,8 @@
     ]
   },
   "themeLemmas": [
-    "rov",
-    "chesed",
-    "yashar"
+    "kol",
+    "ki",
+    "yashav"
   ]
 }

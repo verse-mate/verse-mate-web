@@ -14,6 +14,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and woke me",
         "lemma": "ur"
       },
@@ -36,6 +40,22 @@
         "lemma": "mah"
       },
       {
+        "surface": "do you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "he asked",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I see",
+        "lemma": "raah"
+      },
+      {
         "surface": "a solid gold",
         "lemma": "zahav"
       },
@@ -44,12 +64,20 @@
         "lemma": "menorah"
       },
       {
+        "surface": "I replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "with",
         "lemma": "hinneh"
       },
       {
         "surface": "a bowl",
         "lemma": "gullah"
+      },
+      {
+        "surface": "at",
+        "lemma": "al"
       },
       {
         "surface": "the top",
@@ -62,6 +90,10 @@
       {
         "surface": "lamps",
         "lemma": "ner"
+      },
+      {
+        "surface": "on it",
+        "lemma": "al"
       },
       {
         "surface": "with seven",
@@ -86,6 +118,10 @@
         "lemma": "zayit"
       },
       {
+        "surface": "beside it",
+        "lemma": "al"
+      },
+      {
         "surface": "one",
         "lemma": "echad"
       },
@@ -102,6 +138,10 @@
         "lemma": "echad"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "its left",
         "lemma": "semol"
       }
@@ -110,6 +150,10 @@
       {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "are these",
+        "lemma": "elleh"
       },
       {
         "surface": "my lord",
@@ -130,12 +174,20 @@
     ],
     "5": [
       {
+        "surface": "Do you not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
       {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "they are",
+        "lemma": "hemmah"
       },
       {
         "surface": "replied",
@@ -146,14 +198,26 @@
         "lemma": "maleakh"
       },
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "my lord",
         "lemma": "adon"
+      },
+      {
+        "surface": "I answered",
+        "lemma": "elleh"
       }
     ],
     "6": [
       {
         "surface": "So he said to me",
         "lemma": "un"
+      },
+      {
+        "surface": "This",
+        "lemma": "zeh"
       },
       {
         "surface": "is the word",
@@ -164,20 +228,40 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Zerubbabel",
         "lemma": "zerubbavel"
+      },
+      {
+        "surface": "Not",
+        "lemma": "lo"
       },
       {
         "surface": "by might",
         "lemma": "chayil"
       },
       {
+        "surface": "nor",
+        "lemma": "lo"
+      },
+      {
         "surface": "by power",
         "lemma": "koach"
       },
       {
+        "surface": "but",
+        "lemma": "ki"
+      },
+      {
         "surface": "by My Spirit",
         "lemma": "ruach"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -192,6 +276,10 @@
       {
         "surface": "What",
         "lemma": "mi"
+      },
+      {
+        "surface": "are you",
+        "lemma": "attah"
       },
       {
         "surface": "O great",
@@ -212,6 +300,10 @@
       {
         "surface": "you will become a plain",
         "lemma": "mishor"
+      },
+      {
+        "surface": "Then he will bring forth",
+        "lemma": "yatsa"
       },
       {
         "surface": "the capstone",
@@ -238,6 +330,18 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "9": [
@@ -252,6 +356,10 @@
       {
         "surface": "have laid the foundation",
         "lemma": "yasad"
+      },
+      {
+        "surface": "of this",
+        "lemma": "zeh"
       },
       {
         "surface": "house",
@@ -270,6 +378,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -280,9 +392,17 @@
       {
         "surface": "has sent me",
         "lemma": "shalach"
+      },
+      {
+        "surface": "to you",
+        "lemma": "el"
       }
     ],
     "10": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "who",
         "lemma": "mi"
@@ -300,6 +420,10 @@
         "lemma": "qatan"
       },
       {
+        "surface": "But these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "seven",
         "lemma": "sheva"
       },
@@ -312,8 +436,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "which",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "scan",
         "lemma": "shut"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "earth",
@@ -322,6 +454,10 @@
       {
         "surface": "will rejoice",
         "lemma": "samach"
+      },
+      {
+        "surface": "when they see",
+        "lemma": "raah"
       },
       {
         "surface": "the plumb line",
@@ -342,8 +478,16 @@
         "lemma": "un"
       },
       {
+        "surface": "the angel",
+        "lemma": "el"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "are the",
+        "lemma": "elleh"
       },
       {
         "surface": "two",
@@ -352,6 +496,10 @@
       {
         "surface": "olive trees",
         "lemma": "zayit"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the right",
@@ -408,6 +556,10 @@
         "lemma": "tsantarah"
       },
       {
+        "surface": "from which",
+        "lemma": "al"
+      },
+      {
         "surface": "the golden oil",
         "lemma": "zahav"
       },
@@ -418,6 +570,10 @@
     ],
     "13": [
       {
+        "surface": "Do you not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -426,11 +582,35 @@
         "lemma": "mah"
       },
       {
+        "surface": "these are",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "he inquired",
+        "lemma": "amar"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "my lord",
         "lemma": "adon"
+      },
+      {
+        "surface": "I replied",
+        "lemma": "amar"
       }
     ],
     "14": [
+      {
+        "surface": "So he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the two",
         "lemma": "shenayim"
@@ -448,8 +628,16 @@
         "lemma": "amad"
       },
       {
+        "surface": "beside",
+        "lemma": "al"
+      },
+      {
         "surface": "the Lord",
         "lemma": "adon"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -458,8 +646,8 @@
     ]
   },
   "themeLemmas": [
-    "mah",
-    "un",
-    "shenayim"
+    "amar",
+    "al",
+    "mah"
   ]
 }

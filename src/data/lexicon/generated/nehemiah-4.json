@@ -6,8 +6,28 @@
   "verses": {
     "1": [
       {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "when",
+        "lemma": "asher"
+      },
+      {
         "surface": "Sanballat",
         "lemma": "sanvallat"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "we",
+        "lemma": "anachnu"
       },
       {
         "surface": "were rebuilding",
@@ -52,6 +72,10 @@
         "lemma": "shomeron"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
       },
@@ -62,6 +86,10 @@
       {
         "surface": "Jews",
         "lemma": "yehudi"
+      },
+      {
+        "surface": "doing",
+        "lemma": "asah"
       },
       {
         "surface": "Can they restore the wall",
@@ -78,6 +106,10 @@
       {
         "surface": "in a day",
         "lemma": "yom"
+      },
+      {
+        "surface": "Can they bring} these",
+        "lemma": "hemmah"
       },
       {
         "surface": "burnt",
@@ -114,12 +146,32 @@
         "lemma": "etsel"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "even",
+        "lemma": "gam"
+      },
+      {
         "surface": "a fox",
         "lemma": "shual"
       },
       {
         "surface": "were to climb up on",
         "lemma": "alah"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
       },
       {
         "surface": "are building",
@@ -140,20 +192,44 @@
     ],
     "4": [
       {
+        "surface": "Hear us",
+        "lemma": "shama"
+      },
+      {
         "surface": "O God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "we are",
+        "lemma": "hayah"
       },
       {
         "surface": "despised",
         "lemma": "buzah"
       },
       {
+        "surface": "Turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "their scorn",
         "lemma": "cherpah"
       },
       {
+        "surface": "back upon",
+        "lemma": "el"
+      },
+      {
         "surface": "their own heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "and let them be taken",
+        "lemma": "natan"
       },
       {
         "surface": "as plunder",
@@ -169,6 +245,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "cover up",
         "lemma": "kasah"
@@ -190,6 +270,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "they have provoked",
         "lemma": "kaas"
       },
@@ -208,12 +292,20 @@
         "lemma": "chomah"
       },
       {
+        "surface": "until all",
+        "lemma": "kol"
+      },
+      {
         "surface": "of it",
         "lemma": "chomah"
       },
       {
         "surface": "was joined together",
         "lemma": "qashar"
+      },
+      {
+        "surface": "up to",
+        "lemma": "ad"
       },
       {
         "surface": "half its height",
@@ -224,11 +316,23 @@
         "lemma": "am"
       },
       {
+        "surface": "had",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a mind",
         "lemma": "lev"
+      },
+      {
+        "surface": "to work",
+        "lemma": "asah"
       }
     ],
     "7": [
+      {
+        "surface": "When",
+        "lemma": "asher"
+      },
       {
         "surface": "Sanballat",
         "lemma": "sanvallat"
@@ -250,6 +354,14 @@
         "lemma": "ashdodi"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the repair",
         "lemma": "arukhah"
       },
@@ -266,6 +378,10 @@
         "lemma": "alah"
       },
       {
+        "surface": "and that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the gaps",
         "lemma": "parats"
       },
@@ -280,8 +396,16 @@
     ],
     "8": [
       {
+        "surface": "and all of them",
+        "lemma": "kol"
+      },
+      {
         "surface": "conspired",
         "lemma": "qashar"
+      },
+      {
+        "surface": "to come",
+        "lemma": "bo"
       },
       {
         "surface": "and fight",
@@ -292,6 +416,10 @@
         "lemma": "yerushalaim"
       },
       {
+        "surface": "and create",
+        "lemma": "asah"
+      },
+      {
         "surface": "a hindrance",
         "lemma": "toah"
       }
@@ -300,6 +428,10 @@
       {
         "surface": "So we prayed",
         "lemma": "palal"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "our God",
@@ -314,6 +446,10 @@
         "lemma": "mishmar"
       },
       {
+        "surface": "against them",
+        "lemma": "al"
+      },
+      {
         "surface": "day",
         "lemma": "yomam"
       },
@@ -326,6 +462,10 @@
       {
         "surface": "Meanwhile, the people of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "The strength",
@@ -348,6 +488,14 @@
         "lemma": "aphar"
       },
       {
+        "surface": "that we",
+        "lemma": "anachnu"
+      },
+      {
+        "surface": "will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "be able",
         "lemma": "yakhol"
       },
@@ -366,8 +514,36 @@
         "lemma": "tsar"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Before",
+        "lemma": "ad"
+      },
+      {
         "surface": "they know",
         "lemma": "yada"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "a thing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "we will come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
       },
       {
         "surface": "their midst",
@@ -388,12 +564,28 @@
     ],
     "12": [
       {
+        "surface": "At that time",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the Jews",
         "lemma": "yehudi"
       },
       {
+        "surface": "who lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "nearby",
         "lemma": "etsel"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and told",
+        "lemma": "amar"
       },
       {
         "surface": "ten",
@@ -402,6 +594,18 @@
       {
         "surface": "times over",
         "lemma": "paam"
+      },
+      {
+        "surface": "Wherever",
+        "lemma": "kol"
+      },
+      {
+        "surface": "you turn",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "they will attack us",
+        "lemma": "al"
       }
     ],
     "13": [
@@ -442,6 +646,10 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "their swords",
         "lemma": "cherev"
       },
@@ -456,8 +664,20 @@
     ],
     "14": [
       {
+        "surface": "After I had made an inspection",
+        "lemma": "raah"
+      },
+      {
         "surface": "I stood up",
         "lemma": "qamay"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the nobles",
@@ -474,6 +694,10 @@
       {
         "surface": "of the people",
         "lemma": "am"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be afraid",
@@ -504,6 +728,10 @@
         "lemma": "lacham"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "your brothers",
         "lemma": "ach"
       },
@@ -526,8 +754,20 @@
     ],
     "15": [
       {
+        "surface": "When",
+        "lemma": "asher"
+      },
+      {
         "surface": "our enemies",
         "lemma": "oyev"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "we were aware",
@@ -546,6 +786,18 @@
         "lemma": "parar"
       },
       {
+        "surface": "each",
+        "lemma": "kol"
+      },
+      {
+        "surface": "of us returned",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "his own",
         "lemma": "ish"
       },
@@ -554,11 +806,27 @@
         "lemma": "melakhah"
       },
       {
+        "surface": "on",
+        "lemma": "el"
+      },
+      {
         "surface": "the wall",
         "lemma": "chomah"
       }
     ],
     "16": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
+        "surface": "that",
+        "lemma": "hu"
+      },
       {
         "surface": "day on",
         "lemma": "yom"
@@ -570,6 +838,10 @@
       {
         "surface": "of my servants",
         "lemma": "naar"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
       },
       {
         "surface": "the work",
@@ -608,6 +880,10 @@
         "lemma": "achar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "bet"
       },
@@ -632,6 +908,10 @@
       {
         "surface": "materials",
         "lemma": "sevel"
+      },
+      {
+        "surface": "worked",
+        "lemma": "asah"
       },
       {
         "surface": "with one",
@@ -676,6 +956,10 @@
         "lemma": "asar"
       },
       {
+        "surface": "at",
+        "lemma": "al"
+      },
+      {
         "surface": "his side",
         "lemma": "moten"
       },
@@ -689,6 +973,14 @@
       }
     ],
     "19": [
+      {
+        "surface": "Then I said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
       {
         "surface": "the nobles",
         "lemma": "chor"
@@ -718,6 +1010,10 @@
         "lemma": "rachav"
       },
       {
+        "surface": "and we",
+        "lemma": "anachnu"
+      },
+      {
         "surface": "are spread out",
         "lemma": "parad"
       },
@@ -734,6 +1030,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "along",
+        "lemma": "al"
+      },
+      {
         "surface": "the wall",
         "lemma": "chomah"
       }
@@ -742,6 +1042,10 @@
       {
         "surface": "Wherever",
         "lemma": "maqom"
+      },
+      {
+        "surface": "you hear",
+        "lemma": "shama"
       },
       {
         "surface": "the sound",
@@ -754,6 +1058,10 @@
       {
         "surface": "rally",
         "lemma": "qavats"
+      },
+      {
+        "surface": "to us",
+        "lemma": "el"
       },
       {
         "surface": "there",
@@ -769,6 +1077,14 @@
       }
     ],
     "21": [
+      {
+        "surface": "So we",
+        "lemma": "anachnu"
+      },
+      {
+        "surface": "continued",
+        "lemma": "asah"
+      },
       {
         "surface": "the work",
         "lemma": "melakhah"
@@ -794,11 +1110,35 @@
         "lemma": "shachar"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "the stars",
         "lemma": "kokhav"
+      },
+      {
+        "surface": "came out",
+        "lemma": "yatsa"
       }
     ],
     "22": [
+      {
+        "surface": "At that",
+        "lemma": "hu"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
+        "surface": "I also",
+        "lemma": "gam"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
       {
         "surface": "to the people",
         "lemma": "am"
@@ -824,6 +1164,10 @@
         "lemma": "yerushalaim"
       },
       {
+        "surface": "so that they can stand",
+        "lemma": "hayah"
+      },
+      {
         "surface": "guard",
         "lemma": "mishmar"
       },
@@ -841,6 +1185,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "So neither I",
+        "lemma": "ani"
+      },
       {
         "surface": "nor my brothers",
         "lemma": "ach"
@@ -882,6 +1230,6 @@
   "themeLemmas": [
     "chomah",
     "banah",
-    "melakhah"
+    "amar"
   ]
 }

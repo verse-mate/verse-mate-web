@@ -14,6 +14,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Jonah",
         "lemma": "yonah"
       },
@@ -32,6 +40,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the great",
         "lemma": "gadol"
       },
@@ -44,12 +56,32 @@
         "lemma": "ninveh"
       },
       {
+        "surface": "and proclaim",
+        "lemma": "qara"
+      },
+      {
+        "surface": "to it",
+        "lemma": "el"
+      },
+      {
         "surface": "the message",
         "lemma": "qeriah"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "give",
         "lemma": "davar"
+      },
+      {
+        "surface": "you",
+        "lemma": "el"
       }
     ],
     "3": [
@@ -66,6 +98,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Nineveh",
         "lemma": "ninveh"
       },
@@ -80,6 +116,10 @@
       {
         "surface": "Now Nineveh",
         "lemma": "ninveh"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "an exceedingly",
@@ -128,6 +168,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "and proclaimed",
+        "lemma": "qara"
+      },
+      {
         "surface": "Forty",
         "lemma": "arbaim"
       },
@@ -166,6 +210,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "They proclaimed",
+        "lemma": "qara"
+      },
+      {
         "surface": "a fast",
         "lemma": "tsom"
       },
@@ -180,6 +228,10 @@
       {
         "surface": "from the greatest",
         "lemma": "gadol"
+      },
+      {
+        "surface": "of them to",
+        "lemma": "ad"
       },
       {
         "surface": "the least",
@@ -228,6 +280,14 @@
         "lemma": "saq"
       },
       {
+        "surface": "and sat",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "ashes",
         "lemma": "epher"
       }
@@ -254,6 +314,10 @@
         "lemma": "gadol"
       },
       {
+        "surface": "Let no",
+        "lemma": "al"
+      },
+      {
         "surface": "man",
         "lemma": "adam"
       },
@@ -276,6 +340,10 @@
       {
         "surface": "anything at all",
         "lemma": "meumah"
+      },
+      {
+        "surface": "They must not",
+        "lemma": "al"
       },
       {
         "surface": "eat",
@@ -304,8 +372,16 @@
         "lemma": "saq"
       },
       {
+        "surface": "and have everyone call out",
+        "lemma": "qara"
+      },
+      {
         "surface": "earnestly",
         "lemma": "chozqah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "God",
@@ -314,6 +390,14 @@
       {
         "surface": "Let each one",
         "lemma": "ish"
+      },
+      {
+        "surface": "turn",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "his evil",
@@ -346,8 +430,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "may turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and relent",
         "lemma": "nacham"
+      },
+      {
+        "surface": "He may turn",
+        "lemma": "shuv"
       },
       {
         "surface": "from His fierce",
@@ -356,6 +448,10 @@
       {
         "surface": "anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "so that we will not",
+        "lemma": "lo"
       },
       {
         "surface": "perish",
@@ -368,8 +464,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "their actions",
         "lemma": "maaseh"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they had turned",
+        "lemma": "shuv"
       },
       {
         "surface": "from their evil",
@@ -388,18 +496,26 @@
         "lemma": "nacham"
       },
       {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
         "surface": "the disaster",
         "lemma": "ra"
       },
       {
         "surface": "He had threatened",
         "lemma": "davar"
+      },
+      {
+        "surface": "to bring",
+        "lemma": "asah"
       }
     ]
   },
   "themeLemmas": [
     "ninveh",
-    "gadol",
-    "yonah"
+    "shuv",
+    "qara"
   ]
 }

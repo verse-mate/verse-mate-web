@@ -14,12 +14,20 @@
         "lemma": "david"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
         "surface": "he sang",
         "lemma": "shir"
       },
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "concerning",
+        "lemma": "al"
       },
       {
         "surface": "the words",
@@ -58,11 +66,19 @@
         "lemma": "natsal"
       },
       {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my pursuers",
         "lemma": "radaph"
       }
     ],
     "2": [
+      {
+        "surface": "or",
+        "lemma": "pen"
+      },
       {
         "surface": "they will shred",
         "lemma": "taraph"
@@ -98,6 +114,22 @@
         "lemma": "elohim"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "I have done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "injustice",
         "lemma": "evel"
       },
@@ -111,6 +143,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
       {
         "surface": "I have rewarded",
         "lemma": "gamal"
@@ -212,6 +248,10 @@
         "lemma": "ur"
       },
       {
+        "surface": "my God",
+        "lemma": "el"
+      },
+      {
         "surface": "and ordain",
         "lemma": "tsavah"
       },
@@ -232,6 +272,14 @@
       {
         "surface": "gather around You",
         "lemma": "savav"
+      },
+      {
+        "surface": "take Your seat",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "over them",
+        "lemma": "al"
       },
       {
         "surface": "on high",
@@ -320,6 +368,10 @@
         "lemma": "magen"
       },
       {
+        "surface": "is with",
+        "lemma": "al"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -358,11 +410,27 @@
         "lemma": "zaam"
       },
       {
+        "surface": "each",
+        "lemma": "kol"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       }
     ],
     "12": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "one does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "repent",
+        "lemma": "shuv"
+      },
       {
         "surface": "God will sharpen",
         "lemma": "latash"
@@ -472,6 +540,10 @@
         "lemma": "amal"
       },
       {
+        "surface": "recoils",
+        "lemma": "shuv"
+      },
+      {
         "surface": "on himself",
         "lemma": "rosh"
       },
@@ -482,6 +554,10 @@
       {
         "surface": "falls",
         "lemma": "yarad"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "his own head",
@@ -520,8 +596,8 @@
     ]
   },
   "themeLemmas": [
-    "tsaddiq",
-    "kun",
-    "yasah"
+    "im",
+    "al",
+    "tsaddiq"
   ]
 }

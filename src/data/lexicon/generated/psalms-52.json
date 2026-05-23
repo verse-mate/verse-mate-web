@@ -26,6 +26,10 @@
         "lemma": "edomi"
       },
       {
+        "surface": "went",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Saul",
         "lemma": "shaul"
       },
@@ -36,6 +40,14 @@
       {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "has gone",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the house",
@@ -70,6 +82,10 @@
         "lemma": "el"
       },
       {
+        "surface": "endures all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
       }
@@ -94,6 +110,10 @@
       {
         "surface": "razor",
         "lemma": "taar"
+      },
+      {
+        "surface": "O worker",
+        "lemma": "asah"
       },
       {
         "surface": "of deceit",
@@ -136,6 +156,10 @@
         "lemma": "ahav"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "word",
         "lemma": "davar"
       },
@@ -153,6 +177,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "Surely",
+        "lemma": "gam"
+      },
       {
         "surface": "God",
         "lemma": "el"
@@ -200,8 +228,16 @@
         "lemma": "tsaddiq"
       },
       {
+        "surface": "will see",
+        "lemma": "raah"
+      },
+      {
         "surface": "and fear",
         "lemma": "yare"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "al"
       },
       {
         "surface": "they will mock the evildoer, saying",
@@ -216,6 +252,10 @@
       {
         "surface": "the man",
         "lemma": "gaver"
+      },
+      {
+        "surface": "who did not",
+        "lemma": "lo"
       },
       {
         "surface": "make",
@@ -251,6 +291,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "But I",
+        "lemma": "ani"
+      },
       {
         "surface": "am like an olive tree",
         "lemma": "zayit"
@@ -298,12 +342,24 @@
         "lemma": "olam"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You have done it",
+        "lemma": "asah"
+      },
+      {
         "surface": "I will wait on",
         "lemma": "qavah"
       },
       {
         "surface": "Your name",
         "lemma": "shem"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "it is good",

@@ -34,6 +34,10 @@
         "lemma": "qodesh"
       },
       {
+        "surface": "portion of",
+        "lemma": "min"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -54,6 +58,14 @@
         "lemma": "rochav"
       },
       {
+        "surface": "This",
+        "lemma": "hu"
+      },
+      {
+        "surface": "entire",
+        "lemma": "kol"
+      },
+      {
         "surface": "tract of land",
         "lemma": "gevul"
       },
@@ -63,6 +75,18 @@
       }
     ],
     "2": [
+      {
+        "surface": "Within this area",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "there is to be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "a section for",
+        "lemma": "el"
+      },
       {
         "surface": "the sanctuary",
         "lemma": "qodesh"
@@ -94,6 +118,14 @@
     ],
     "3": [
       {
+        "surface": "From",
+        "lemma": "min"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "holy portion",
         "lemma": "middah"
       },
@@ -118,6 +150,10 @@
         "lemma": "eser"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the sanctuary",
         "lemma": "miqdash"
       },
@@ -132,8 +168,16 @@
     ],
     "4": [
       {
+        "surface": "It will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a holy portion",
         "lemma": "qodesh"
+      },
+      {
+        "surface": "of",
+        "lemma": "min"
       },
       {
         "surface": "the land",
@@ -162,6 +206,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "It will be",
+        "lemma": "hayah"
       },
       {
         "surface": "a place",
@@ -198,6 +246,10 @@
         "lemma": "rochav"
       },
       {
+        "surface": "shall belong",
+        "lemma": "hayah"
+      },
+      {
         "surface": "to the Levites",
         "lemma": "leviyyi"
       },
@@ -228,6 +280,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "you are to set aside",
+        "lemma": "natan"
+      },
+      {
         "surface": "an area 5,000 cubits",
         "lemma": "chamesh"
       },
@@ -256,6 +312,14 @@
         "lemma": "terumah"
       },
       {
+        "surface": "It will belong to",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
       },
@@ -270,8 +334,16 @@
         "lemma": "nasi"
       },
       {
+        "surface": "will have the area",
+        "lemma": "zeh"
+      },
+      {
         "surface": "bordering",
         "lemma": "paneh"
+      },
+      {
+        "surface": "each side of the area formed by",
+        "lemma": "zeh"
       },
       {
         "surface": "the holy",
@@ -352,6 +424,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "possession",
         "lemma": "achuzzah"
       },
@@ -364,6 +440,10 @@
         "lemma": "nasi"
       },
       {
+        "surface": "will no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
       },
@@ -374,6 +454,10 @@
       {
         "surface": "My people",
         "lemma": "am"
+      },
+      {
+        "surface": "but will give",
+        "lemma": "natan"
       },
       {
         "surface": "the rest of the land",
@@ -406,6 +490,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Enough",
         "lemma": "rav"
       },
@@ -428,6 +516,10 @@
       {
         "surface": "and oppression",
         "lemma": "shod"
+      },
+      {
+        "surface": "and do",
+        "lemma": "asah"
       },
       {
         "surface": "what is just",
@@ -464,6 +556,10 @@
     ],
     "10": [
       {
+        "surface": "You must use",
+        "lemma": "hayah"
+      },
+      {
         "surface": "honest",
         "lemma": "tsedeq"
       },
@@ -496,6 +592,10 @@
       {
         "surface": "and the bath",
         "lemma": "bat"
+      },
+      {
+        "surface": "shall be",
+        "lemma": "hayah"
       },
       {
         "surface": "the same",
@@ -536,6 +636,10 @@
       {
         "surface": "the homer",
         "lemma": "chomer"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "the standard measure for both",
@@ -580,11 +684,19 @@
         "lemma": "sheqel"
       },
       {
+        "surface": "will equal",
+        "lemma": "hayah"
+      },
+      {
         "surface": "one mina",
         "lemma": "maneh"
       }
     ],
     "13": [
+      {
+        "surface": "This",
+        "lemma": "zot"
+      },
       {
         "surface": "is the contribution",
         "lemma": "terumah"
@@ -648,6 +760,10 @@
         "lemma": "bat"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "each cor",
         "lemma": "kor"
       },
@@ -664,6 +780,10 @@
         "lemma": "chomer"
       },
       {
+        "surface": "since",
+        "lemma": "ki"
+      },
+      {
         "surface": "ten",
         "lemma": "eser"
       },
@@ -678,6 +798,10 @@
     ],
     "15": [
       {
+        "surface": "And",
+        "lemma": "min"
+      },
+      {
         "surface": "one",
         "lemma": "echad"
       },
@@ -688,6 +812,10 @@
       {
         "surface": "from each flock",
         "lemma": "tson"
+      },
+      {
+        "surface": "of",
+        "lemma": "min"
       },
       {
         "surface": "two hundred",
@@ -718,6 +846,10 @@
         "lemma": "kipher"
       },
       {
+        "surface": "for the people",
+        "lemma": "al"
+      },
+      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -732,12 +864,28 @@
     ],
     "16": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
       {
         "surface": "of the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "must participate",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
       },
       {
         "surface": "contribution",
@@ -753,6 +901,14 @@
       }
     ],
     "17": [
+      {
+        "surface": "And",
+        "lemma": "al"
+      },
+      {
+        "surface": "it shall be",
+        "lemma": "hayah"
+      },
       {
         "surface": "the prince’s part",
         "lemma": "nasi"
@@ -782,6 +938,10 @@
         "lemma": "shabbat"
       },
       {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the appointed feasts",
         "lemma": "moed"
       },
@@ -792,6 +952,14 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
+        "surface": "will provide",
+        "lemma": "asah"
       },
       {
         "surface": "the sin offerings",
@@ -840,6 +1008,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "On the first day",
         "lemma": "echad"
       },
@@ -886,12 +1058,24 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "and put it",
+        "lemma": "natan"
+      },
+      {
+        "surface": "on",
+        "lemma": "el"
+      },
+      {
         "surface": "the doorposts",
         "lemma": "mezuzah"
       },
       {
         "surface": "of the temple",
         "lemma": "bet"
+      },
+      {
+        "surface": "on",
+        "lemma": "el"
       },
       {
         "surface": "the four",
@@ -910,6 +1094,10 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "and on",
+        "lemma": "al"
+      },
+      {
         "surface": "the gateposts",
         "lemma": "mezuzah"
       },
@@ -923,6 +1111,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "You must do",
+        "lemma": "asah"
+      },
       {
         "surface": "the same thing",
         "lemma": "ken"
@@ -970,6 +1162,10 @@
         "lemma": "rishon"
       },
       {
+        "surface": "you are to observe",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the Passover",
         "lemma": "pesach"
       },
@@ -996,12 +1192,20 @@
     ],
     "22": [
       {
+        "surface": "On that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
       {
         "surface": "the prince",
         "lemma": "nasi"
+      },
+      {
+        "surface": "shall provide",
+        "lemma": "asah"
       },
       {
         "surface": "a bull",
@@ -1018,6 +1222,10 @@
       {
         "surface": "and for",
         "lemma": "bead"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -1044,6 +1252,10 @@
       {
         "surface": "of the feast",
         "lemma": "chag"
+      },
+      {
+        "surface": "he shall provide",
+        "lemma": "asah"
       },
       {
         "surface": "seven",
@@ -1083,6 +1295,10 @@
       }
     ],
     "24": [
+      {
+        "surface": "He shall also provide",
+        "lemma": "asah"
+      },
       {
         "surface": "as a grain offering",
         "lemma": "minchah"
@@ -1146,6 +1362,10 @@
         "lemma": "chodesh"
       },
       {
+        "surface": "he is to make the same provision",
+        "lemma": "asah"
+      },
+      {
         "surface": "for sin offerings",
         "lemma": "chattaah"
       },
@@ -1164,8 +1384,8 @@
     ]
   },
   "themeLemmas": [
+    "hayah",
     "yisrael",
-    "qodesh",
-    "ephah"
+    "qodesh"
   ]
 }

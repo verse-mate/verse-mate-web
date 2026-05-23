@@ -22,6 +22,10 @@
         "lemma": "ragaz"
       },
       {
+        "surface": "He is enthroned",
+        "lemma": "yashav"
+      },
+      {
         "surface": "above the cherubim",
         "lemma": "keruv"
       },
@@ -48,8 +52,20 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "is exalted",
         "lemma": "rum"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the peoples",
@@ -74,6 +90,10 @@
         "lemma": "shem"
       },
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "is holy",
         "lemma": "qadosh"
       }
@@ -96,12 +116,24 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "have established",
         "lemma": "kun"
       },
       {
         "surface": "equity",
         "lemma": "meshar"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
+        "surface": "have exercised",
+        "lemma": "asah"
       },
       {
         "surface": "justice",
@@ -142,6 +174,10 @@
         "lemma": "regel"
       },
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "is holy",
         "lemma": "qadosh"
       }
@@ -164,12 +200,28 @@
         "lemma": "shemuel"
       },
       {
+        "surface": "was among those who called",
+        "lemma": "qara"
+      },
+      {
         "surface": "on His name",
         "lemma": "shem"
       },
       {
+        "surface": "They called",
+        "lemma": "qara"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and He",
+        "lemma": "hu"
       },
       {
         "surface": "answered",
@@ -180,6 +232,10 @@
       {
         "surface": "He spoke",
         "lemma": "davar"
+      },
+      {
+        "surface": "to them",
+        "lemma": "el"
       },
       {
         "surface": "from the pillar",
@@ -200,6 +256,10 @@
       {
         "surface": "and the statutes",
         "lemma": "choq"
+      },
+      {
+        "surface": "He gave",
+        "lemma": "natan"
       }
     ],
     "8": [
@@ -212,8 +272,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "answered them",
         "lemma": "un"
+      },
+      {
+        "surface": "You were",
+        "lemma": "hayah"
       },
       {
         "surface": "a forgiving",
@@ -226,6 +294,10 @@
       {
         "surface": "yet an avenger",
         "lemma": "naqam"
+      },
+      {
+        "surface": "of",
+        "lemma": "al"
       },
       {
         "surface": "their misdeeds",
@@ -258,6 +330,10 @@
         "lemma": "har"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -272,8 +348,8 @@
     ]
   },
   "themeLemmas": [
+    "hu",
     "rum",
-    "qadosh",
-    "un"
+    "qadosh"
   ]
 }

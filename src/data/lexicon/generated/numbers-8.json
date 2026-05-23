@@ -14,6 +14,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -24,8 +28,20 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Aaron",
         "lemma": "aharon"
+      },
+      {
+        "surface": "and tell",
+        "lemma": "amar"
+      },
+      {
+        "surface": "him",
+        "lemma": "el"
       },
       {
         "surface": "When you set up",
@@ -58,6 +74,10 @@
         "lemma": "aharon"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "so",
         "lemma": "ken"
       },
@@ -74,12 +94,20 @@
         "lemma": "paneh"
       },
       {
+        "surface": "toward",
+        "lemma": "el"
+      },
+      {
         "surface": "the front",
         "lemma": "mul"
       },
       {
         "surface": "of the lampstand",
         "lemma": "menorah"
+      },
+      {
+        "surface": "just as",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -95,6 +123,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "This is how",
+        "lemma": "zeh"
+      },
       {
         "surface": "the lampstand",
         "lemma": "menorah"
@@ -112,12 +144,24 @@
         "lemma": "zahav"
       },
       {
+        "surface": "from",
+        "lemma": "ad"
+      },
+      {
         "surface": "its base",
         "lemma": "yarekh"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "its blossoms",
         "lemma": "perach"
+      },
+      {
+        "surface": "fashioned",
+        "lemma": "asah"
       },
       {
         "surface": "according to the pattern",
@@ -126,6 +170,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "had shown",
+        "lemma": "raah"
       },
       {
         "surface": "Moses",
@@ -142,8 +190,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "6": [
@@ -174,12 +230,20 @@
         "lemma": "koh"
       },
       {
+        "surface": "you must do",
+        "lemma": "asah"
+      },
+      {
         "surface": "to cleanse them",
         "lemma": "taher"
       },
       {
         "surface": "Sprinkle",
         "lemma": "nazah"
+      },
+      {
+        "surface": "them",
+        "lemma": "al"
       },
       {
         "surface": "with the water",
@@ -192,6 +256,10 @@
       {
         "surface": "Have them shave",
         "lemma": "avar"
+      },
+      {
+        "surface": "their whole",
+        "lemma": "kol"
       },
       {
         "surface": "bodies",
@@ -278,6 +346,10 @@
         "lemma": "qahal"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
@@ -314,6 +386,10 @@
       {
         "surface": "their hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "upon",
+        "lemma": "al"
       },
       {
         "surface": "them",
@@ -380,12 +456,20 @@
         "lemma": "yad"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the heads",
         "lemma": "rosh"
       },
       {
         "surface": "of the bulls",
         "lemma": "par"
+      },
+      {
+        "surface": "and offer",
+        "lemma": "asah"
       },
       {
         "surface": "to the LORD",
@@ -410,6 +494,10 @@
       {
         "surface": "to make atonement",
         "lemma": "kipher"
+      },
+      {
+        "surface": "for",
+        "lemma": "al"
       },
       {
         "surface": "the Levites",
@@ -440,6 +528,10 @@
       {
         "surface": "and then present",
         "lemma": "nuph"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
       },
       {
         "surface": "before the LORD",
@@ -474,6 +566,10 @@
       {
         "surface": "and the Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "will belong",
+        "lemma": "hayah"
       }
     ],
     "15": [
@@ -486,8 +582,16 @@
         "lemma": "taher"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "and presented",
         "lemma": "nuph"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
       },
       {
         "surface": "as a wave offering",
@@ -496,6 +600,10 @@
       {
         "surface": "they",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "may come",
+        "lemma": "bo"
       },
       {
         "surface": "to serve",
@@ -511,6 +619,18 @@
       }
     ],
     "16": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "the Levites",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "have been wholly given",
+        "lemma": "natan"
+      },
       {
         "surface": "from among",
         "lemma": "tavekh"
@@ -528,8 +648,16 @@
         "lemma": "laqach"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "in place of",
         "lemma": "tachat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "who come first",
@@ -544,6 +672,10 @@
         "lemma": "bekhor"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the sons",
         "lemma": "ben"
       },
@@ -553,6 +685,14 @@
       }
     ],
     "17": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
       {
         "surface": "firstborn",
         "lemma": "bekhor"
@@ -586,6 +726,10 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
       },
@@ -612,6 +756,10 @@
         "lemma": "tachat"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
       },
@@ -626,8 +774,16 @@
     ],
     "19": [
       {
+        "surface": "And I have given",
+        "lemma": "natan"
+      },
+      {
         "surface": "the Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "as a gift",
+        "lemma": "natan"
       },
       {
         "surface": "to Aaron",
@@ -678,8 +834,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "behalf",
+        "lemma": "al"
+      },
+      {
+        "surface": "so that no",
+        "lemma": "lo"
+      },
+      {
         "surface": "plague",
         "lemma": "negeph"
+      },
+      {
+        "surface": "will come",
+        "lemma": "hayah"
       },
       {
         "surface": "against the Israelites",
@@ -708,6 +876,10 @@
         "lemma": "aharon"
       },
       {
+        "surface": "and the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
@@ -716,8 +888,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "with the Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -734,6 +918,10 @@
       {
         "surface": "they",
         "lemma": "ben"
+      },
+      {
+        "surface": "should do",
+        "lemma": "asah"
       }
     ],
     "21": [
@@ -762,6 +950,10 @@
         "lemma": "nuph"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "as a wave offering",
         "lemma": "tenuphah"
       },
@@ -782,6 +974,10 @@
         "lemma": "kipher"
       },
       {
+        "surface": "for them",
+        "lemma": "al"
+      },
+      {
         "surface": "to cleanse them",
         "lemma": "taher"
       }
@@ -798,6 +994,10 @@
       {
         "surface": "the Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "to perform",
@@ -832,8 +1032,16 @@
         "lemma": "ken"
       },
       {
+        "surface": "they did",
+        "lemma": "asah"
+      },
+      {
         "surface": "with the Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "just as",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -858,11 +1066,23 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
     ],
     "24": [
+      {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
+        "surface": "applies",
+        "lemma": "asher"
+      },
       {
         "surface": "to the Levites",
         "lemma": "leviyyi"
@@ -878,6 +1098,10 @@
       {
         "surface": "or older",
         "lemma": "maal"
+      },
+      {
+        "surface": "shall enter",
+        "lemma": "bo"
       },
       {
         "surface": "to perform",
@@ -910,12 +1134,20 @@
         "lemma": "chamishshim"
       },
       {
+        "surface": "they must retire",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from performing",
         "lemma": "tsava"
       },
       {
         "surface": "the work",
         "lemma": "avodah"
+      },
+      {
+        "surface": "and no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -952,6 +1184,10 @@
         "lemma": "moed"
       },
       {
+        "surface": "but they themselves are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to do",
         "lemma": "avad"
       },
@@ -962,6 +1198,10 @@
       {
         "surface": "This is how",
         "lemma": "kakhah"
+      },
+      {
+        "surface": "you are to assign",
+        "lemma": "asah"
       },
       {
         "surface": "responsibilities",
@@ -976,6 +1216,6 @@
   "themeLemmas": [
     "leviyyi",
     "yisrael",
-    "aharon"
+    "kol"
   ]
 }

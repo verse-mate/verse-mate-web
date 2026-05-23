@@ -18,8 +18,16 @@
         "lemma": "mah"
       },
       {
+        "surface": "has happened",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Look",
         "lemma": "navat"
+      },
+      {
+        "surface": "and see",
+        "lemma": "raah"
       },
       {
         "surface": "our disgrace",
@@ -49,6 +57,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "We have become",
+        "lemma": "hayah"
+      },
       {
         "surface": "fatherless",
         "lemma": "ayin"
@@ -84,11 +96,19 @@
         "lemma": "ets"
       },
       {
+        "surface": "comes",
+        "lemma": "bo"
+      },
+      {
         "surface": "at a price",
         "lemma": "mechir"
       }
     ],
     "5": [
+      {
+        "surface": "We are closely",
+        "lemma": "al"
+      },
       {
         "surface": "pursued",
         "lemma": "radaph"
@@ -98,11 +118,19 @@
         "lemma": "yaga"
       },
       {
+        "surface": "and find no",
+        "lemma": "lo"
+      },
+      {
         "surface": "rest",
         "lemma": "nuach"
       }
     ],
     "6": [
+      {
+        "surface": "We submitted",
+        "lemma": "natan"
+      },
       {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
@@ -122,12 +150,20 @@
     ],
     "7": [
       {
+        "surface": "Our fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "sinned",
         "lemma": "chata"
       },
       {
         "surface": "and are no more",
         "lemma": "ayin"
+      },
+      {
+        "surface": "but we",
+        "lemma": "anachnu"
       },
       {
         "surface": "bear",
@@ -161,6 +197,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "We get",
+        "lemma": "bo"
+      },
       {
         "surface": "our bread",
         "lemma": "lechem"
@@ -250,6 +290,10 @@
       {
         "surface": "elders",
         "lemma": "zaqen"
+      },
+      {
+        "surface": "receive no",
+        "lemma": "lo"
       },
       {
         "surface": "respect",
@@ -348,18 +392,42 @@
         "lemma": "oy"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "we have sinned",
         "lemma": "chata"
       }
     ],
     "17": [
       {
+        "surface": "Because of",
+        "lemma": "al"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "our hearts",
         "lemma": "lev"
       },
       {
+        "surface": "are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "faint",
         "lemma": "daveh"
+      },
+      {
+        "surface": "because of",
+        "lemma": "al"
+      },
+      {
+        "surface": "these",
+        "lemma": "elleh"
       },
       {
         "surface": "our eyes",
@@ -371,6 +439,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "because of",
+        "lemma": "al"
+      },
       {
         "surface": "Mount",
         "lemma": "har"
@@ -394,8 +466,16 @@
     ],
     "19": [
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "reign",
+        "lemma": "yashav"
       },
       {
         "surface": "forever",
@@ -438,8 +518,20 @@
     ],
     "21": [
       {
+        "surface": "Restore us",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to Yourself",
+        "lemma": "el"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "so we may return",
+        "lemma": "shuv"
       },
       {
         "surface": "renew",
@@ -456,18 +548,30 @@
     ],
     "22": [
       {
+        "surface": "unless",
+        "lemma": "ki"
+      },
+      {
         "surface": "You have utterly rejected us",
         "lemma": "maas"
       },
       {
         "surface": "and remain angry",
         "lemma": "qatsaph"
+      },
+      {
+        "surface": "with us",
+        "lemma": "al"
+      },
+      {
+        "surface": "beyond measure",
+        "lemma": "ad"
       }
     ]
   },
   "themeLemmas": [
+    "al",
     "paneh",
-    "zaqen",
-    "tsiyyon"
+    "hayah"
   ]
 }

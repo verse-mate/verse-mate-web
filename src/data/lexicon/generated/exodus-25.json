@@ -14,6 +14,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -44,8 +48,16 @@
         "lemma": "terumah"
       },
       {
+        "surface": "from every",
+        "lemma": "kol"
+      },
+      {
         "surface": "man",
         "lemma": "ish"
+      },
+      {
+        "surface": "whose",
+        "lemma": "asher"
       },
       {
         "surface": "heart",
@@ -58,12 +70,20 @@
     ],
     "3": [
       {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
         "surface": "is the offering",
         "lemma": "terumah"
       },
       {
         "surface": "you are to accept",
         "lemma": "laqach"
+      },
+      {
+        "surface": "from them",
+        "lemma": "et"
       },
       {
         "surface": "gold",
@@ -184,6 +204,10 @@
     ],
     "8": [
       {
+        "surface": "And they are to make",
+        "lemma": "asah"
+      },
+      {
         "surface": "a sanctuary",
         "lemma": "miqdash"
       },
@@ -198,23 +222,55 @@
     ],
     "9": [
       {
+        "surface": "You must make",
+        "lemma": "asah"
+      },
+      {
         "surface": "the tabernacle",
         "lemma": "mishkan"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "design",
         "lemma": "tavnit"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its furnishings",
         "lemma": "keli"
       },
       {
+        "surface": "according to",
+        "lemma": "kol"
+      },
+      {
         "surface": "the pattern",
         "lemma": "tavnit"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "show",
+        "lemma": "raah"
+      },
+      {
+        "surface": "you",
+        "lemma": "et"
       }
     ],
     "10": [
+      {
+        "surface": "And they are to construct",
+        "lemma": "asah"
+      },
       {
         "surface": "an ark",
         "lemma": "aron"
@@ -286,6 +342,10 @@
         "lemma": "chuts"
       },
       {
+        "surface": "and make",
+        "lemma": "asah"
+      },
+      {
         "surface": "a gold",
         "lemma": "zahav"
       },
@@ -316,6 +376,14 @@
         "lemma": "tabbaat"
       },
       {
+        "surface": "and fasten them",
+        "lemma": "natan"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "its four",
         "lemma": "arba"
       },
@@ -332,6 +400,10 @@
         "lemma": "tabbaat"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "one",
         "lemma": "echad"
       },
@@ -344,11 +416,19 @@
         "lemma": "shenayim"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the other",
         "lemma": "sheni"
       }
     ],
     "13": [
+      {
+        "surface": "And make",
+        "lemma": "asah"
+      },
       {
         "surface": "poles",
         "lemma": "bad"
@@ -366,11 +446,19 @@
         "lemma": "tsaphah"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "with gold",
         "lemma": "zahav"
       }
     ],
     "14": [
+      {
+        "surface": "Insert",
+        "lemma": "bo"
+      },
       {
         "surface": "the poles",
         "lemma": "bad"
@@ -378,6 +466,10 @@
       {
         "surface": "into the rings",
         "lemma": "tabbaat"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the sides",
@@ -402,6 +494,10 @@
         "lemma": "bad"
       },
       {
+        "surface": "are to remain",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in the rings",
         "lemma": "tabbaat"
       },
@@ -410,11 +506,23 @@
         "lemma": "aron"
       },
       {
+        "surface": "they must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be removed",
         "lemma": "sur"
       }
     ],
     "16": [
+      {
+        "surface": "And place",
+        "lemma": "natan"
+      },
+      {
+        "surface": "inside",
+        "lemma": "el"
+      },
       {
         "surface": "the ark",
         "lemma": "aron"
@@ -422,9 +530,25 @@
       {
         "surface": "the Testimony",
         "lemma": "edut"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I will give",
+        "lemma": "natan"
+      },
+      {
+        "surface": "you",
+        "lemma": "el"
       }
     ],
     "17": [
+      {
+        "surface": "And you are to construct",
+        "lemma": "asah"
+      },
       {
         "surface": "a mercy seat",
         "lemma": "kapporet"
@@ -464,6 +588,10 @@
     ],
     "18": [
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
         "surface": "two",
         "lemma": "shenayim"
       },
@@ -502,6 +630,10 @@
         "lemma": "keruv"
       },
       {
+        "surface": "on one",
+        "lemma": "zeh"
+      },
+      {
         "surface": "end",
         "lemma": "qatsah"
       },
@@ -514,6 +646,10 @@
         "lemma": "qatsah"
       },
       {
+        "surface": "all made",
+        "lemma": "asah"
+      },
+      {
         "surface": "from one piece of gold",
         "lemma": "qatsah"
       }
@@ -522,6 +658,10 @@
       {
         "surface": "And the cherubim",
         "lemma": "keruv"
+      },
+      {
+        "surface": "are to have",
+        "lemma": "hayah"
       },
       {
         "surface": "wings",
@@ -556,22 +696,58 @@
         "lemma": "ach"
       },
       {
+        "surface": "looking",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "toward",
+        "lemma": "el"
+      },
+      {
         "surface": "the mercy seat",
         "lemma": "kapporet"
       }
     ],
     "21": [
       {
+        "surface": "Set",
+        "lemma": "natan"
+      },
+      {
         "surface": "the mercy seat",
         "lemma": "kapporet"
+      },
+      {
+        "surface": "atop",
+        "lemma": "al"
       },
       {
         "surface": "the ark",
         "lemma": "aron"
       },
       {
+        "surface": "and put",
+        "lemma": "natan"
+      },
+      {
         "surface": "the Testimony",
         "lemma": "edut"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I will give",
+        "lemma": "natan"
+      },
+      {
+        "surface": "you",
+        "lemma": "el"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
       },
       {
         "surface": "the ark",
@@ -586,6 +762,10 @@
       {
         "surface": "there",
         "lemma": "sham"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
       },
       {
         "surface": "the mercy seat",
@@ -604,6 +784,14 @@
         "lemma": "keruv"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "are over",
+        "lemma": "al"
+      },
+      {
         "surface": "the ark",
         "lemma": "aron"
       },
@@ -616,8 +804,28 @@
         "lemma": "davar"
       },
       {
+        "surface": "with you",
+        "lemma": "et"
+      },
+      {
+        "surface": "about all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "I command",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "you",
+        "lemma": "et"
+      },
+      {
+        "surface": "regarding",
+        "lemma": "el"
       },
       {
         "surface": "the Israelites",
@@ -625,6 +833,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "You are also to make",
+        "lemma": "asah"
+      },
       {
         "surface": "a table",
         "lemma": "shulchan"
@@ -672,12 +884,20 @@
         "lemma": "tsaphah"
       },
       {
+        "surface": "it",
+        "lemma": "et"
+      },
+      {
         "surface": "with pure",
         "lemma": "tahor"
       },
       {
         "surface": "gold",
         "lemma": "zahav"
+      },
+      {
+        "surface": "and make",
+        "lemma": "asah"
       },
       {
         "surface": "a gold",
@@ -694,6 +914,10 @@
     ],
     "25": [
       {
+        "surface": "And make",
+        "lemma": "asah"
+      },
+      {
         "surface": "a rim",
         "lemma": "misgeret"
       },
@@ -704,6 +928,10 @@
       {
         "surface": "a handbreadth wide",
         "lemma": "tophach"
+      },
+      {
+        "surface": "and put",
+        "lemma": "asah"
       },
       {
         "surface": "a gold",
@@ -724,6 +952,10 @@
     ],
     "26": [
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
         "surface": "four",
         "lemma": "arba"
       },
@@ -736,8 +968,16 @@
         "lemma": "tabbaat"
       },
       {
+        "surface": "and fasten",
+        "lemma": "natan"
+      },
+      {
         "surface": "them",
         "lemma": "tabbaat"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
       },
       {
         "surface": "the four",
@@ -760,6 +1000,10 @@
       {
         "surface": "The rings",
         "lemma": "tabbaat"
+      },
+      {
+        "surface": "are to be",
+        "lemma": "hayah"
       },
       {
         "surface": "close",
@@ -788,6 +1032,10 @@
     ],
     "28": [
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
         "surface": "the poles",
         "lemma": "bad"
       },
@@ -804,6 +1052,10 @@
         "lemma": "tsaphah"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "with gold",
         "lemma": "zahav"
       },
@@ -817,6 +1069,10 @@
       }
     ],
     "29": [
+      {
+        "surface": "You are also to make",
+        "lemma": "asah"
+      },
       {
         "surface": "the plates",
         "lemma": "qearah"
@@ -838,6 +1094,14 @@
         "lemma": "nasakh"
       },
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "out of pure",
         "lemma": "tahor"
       },
@@ -848,12 +1112,20 @@
     ],
     "30": [
       {
+        "surface": "And place",
+        "lemma": "natan"
+      },
+      {
         "surface": "the Bread",
         "lemma": "lechem"
       },
       {
         "surface": "of the Presence",
         "lemma": "paneh"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the table",
@@ -869,6 +1141,10 @@
       }
     ],
     "31": [
+      {
+        "surface": "Then you are to make",
+        "lemma": "asah"
+      },
       {
         "surface": "a lampstand",
         "lemma": "menorah"
@@ -888,6 +1164,18 @@
       {
         "surface": "It",
         "lemma": "menorah"
+      },
+      {
+        "surface": "shall be made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "of one piece",
+        "lemma": "min"
+      },
+      {
+        "surface": "including",
+        "lemma": "hayah"
       },
       {
         "surface": "its base",
@@ -918,6 +1206,10 @@
       {
         "surface": "branches",
         "lemma": "qaneh"
+      },
+      {
+        "surface": "are to extend",
+        "lemma": "yatsa"
       },
       {
         "surface": "from the sides",
@@ -1002,6 +1294,14 @@
         "lemma": "qaneh"
       },
       {
+        "surface": "that extend",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the lampstand",
         "lemma": "menorah"
       }
@@ -1040,6 +1340,14 @@
       {
         "surface": "branches",
         "lemma": "qaneh"
+      },
+      {
+        "surface": "that extend",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the lampstand",
@@ -1096,6 +1404,14 @@
         "lemma": "qaneh"
       },
       {
+        "surface": "are to be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "of one piece with the lampstand",
         "lemma": "echad"
       },
@@ -1114,6 +1430,10 @@
     ],
     "37": [
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
         "surface": "seven",
         "lemma": "sheva"
       },
@@ -1126,6 +1446,10 @@
         "lemma": "alah"
       },
       {
+        "surface": "on the lampstand",
+        "lemma": "et"
+      },
+      {
         "surface": "so that they",
         "lemma": "ner"
       },
@@ -1136,6 +1460,10 @@
       {
         "surface": "the area",
         "lemma": "ever"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "front of it",
@@ -1162,8 +1490,28 @@
     ],
     "39": [
       {
+        "surface": "The lampstand",
+        "lemma": "et"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "utensils",
         "lemma": "keli"
+      },
+      {
+        "surface": "shall be made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "from",
+        "lemma": "et"
       },
       {
         "surface": "a talent",
@@ -1180,8 +1528,24 @@
     ],
     "40": [
       {
+        "surface": "See to it that",
+        "lemma": "raah"
+      },
+      {
+        "surface": "you make everything",
+        "lemma": "asah"
+      },
+      {
         "surface": "according to the pattern",
         "lemma": "tavnit"
+      },
+      {
+        "surface": "shown",
+        "lemma": "raah"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
       },
       {
         "surface": "on the mountain",
@@ -1190,8 +1554,8 @@
     ]
   },
   "themeLemmas": [
+    "asah",
     "zahav",
-    "tahor",
-    "shenayim"
+    "et"
   ]
 }

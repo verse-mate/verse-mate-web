@@ -34,6 +34,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "You restored",
+        "lemma": "shuv"
+      },
+      {
         "surface": "Jacob",
         "lemma": "yaaqov"
       },
@@ -60,6 +64,10 @@
         "lemma": "kasah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their sin",
         "lemma": "chattaah"
       },
@@ -74,8 +82,16 @@
         "lemma": "asaph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Your fury",
         "lemma": "evrah"
+      },
+      {
+        "surface": "You turned from",
+        "lemma": "shuv"
       },
       {
         "surface": "Your burning anger",
@@ -83,6 +99,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Restore us",
+        "lemma": "shuv"
+      },
       {
         "surface": "O God",
         "lemma": "elohim"
@@ -98,6 +118,10 @@
       {
         "surface": "Your displeasure",
         "lemma": "kaas"
+      },
+      {
+        "surface": "toward us",
+        "lemma": "im"
       }
     ],
     "5": [
@@ -128,8 +152,20 @@
     ],
     "6": [
       {
+        "surface": "Will You",
+        "lemma": "attah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "revive us",
         "lemma": "chayah"
+      },
+      {
+        "surface": "again",
+        "lemma": "shuv"
       },
       {
         "surface": "that Your people",
@@ -142,6 +178,10 @@
     ],
     "7": [
       {
+        "surface": "Show us",
+        "lemma": "raah"
+      },
+      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       },
@@ -150,11 +190,19 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and grant",
+        "lemma": "natan"
+      },
+      {
         "surface": "Your salvation",
         "lemma": "yesah"
       }
     ],
     "8": [
+      {
+        "surface": "I will listen",
+        "lemma": "shama"
+      },
       {
         "surface": "to what",
         "lemma": "mah"
@@ -172,6 +220,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "He will surely speak",
         "lemma": "davar"
       },
@@ -180,12 +232,28 @@
         "lemma": "shalom"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "His people",
         "lemma": "am"
       },
       {
+        "surface": "and",
+        "lemma": "el"
+      },
+      {
         "surface": "His saints",
         "lemma": "chasid"
+      },
+      {
+        "surface": "He will not",
+        "lemma": "al"
+      },
+      {
+        "surface": "let them return",
+        "lemma": "shuv"
       },
       {
         "surface": "to folly",
@@ -280,8 +348,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will indeed",
+        "lemma": "gam"
+      },
+      {
+        "surface": "provide what is good",
+        "lemma": "natan"
+      },
+      {
         "surface": "and our land",
         "lemma": "erets"
+      },
+      {
+        "surface": "will yield",
+        "lemma": "natan"
       },
       {
         "surface": "its increase",
@@ -316,8 +396,8 @@
     ]
   },
   "themeLemmas": [
+    "shuv",
     "yesah",
-    "tsedeq",
-    "shalom"
+    "tsedeq"
   ]
 }

@@ -28,6 +28,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "with you",
+        "lemma": "el"
+      },
+      {
         "surface": "will you be wearied",
         "lemma": "laah"
       },
@@ -102,8 +106,20 @@
     ],
     "5": [
       {
+        "surface": "But",
+        "lemma": "ki"
+      },
+      {
         "surface": "now",
         "lemma": "attah"
+      },
+      {
+        "surface": "trouble has come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "upon you",
+        "lemma": "el"
       },
       {
         "surface": "and you are weary",
@@ -122,6 +138,10 @@
       {
         "surface": "Is your reverence",
         "lemma": "yirah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "your confidence",
@@ -175,6 +195,14 @@
       }
     ],
     "8": [
+      {
+        "surface": "As",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I have observed",
+        "lemma": "raah"
+      },
       {
         "surface": "those who plow",
         "lemma": "charash"
@@ -288,6 +316,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "came to me",
+        "lemma": "el"
+      },
+      {
         "surface": "secretly",
         "lemma": "ganav"
       },
@@ -302,6 +334,10 @@
       {
         "surface": "a whisper",
         "lemma": "shemets"
+      },
+      {
+        "surface": "of it",
+        "lemma": "min"
       }
     ],
     "13": [
@@ -326,6 +362,10 @@
         "lemma": "naphal"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "men",
         "lemma": "enosh"
       }
@@ -338,6 +378,10 @@
       {
         "surface": "and trembling",
         "lemma": "raad"
+      },
+      {
+        "surface": "came over me",
+        "lemma": "qara"
       },
       {
         "surface": "and made all",
@@ -362,6 +406,10 @@
         "lemma": "chalaph"
       },
       {
+        "surface": "past",
+        "lemma": "al"
+      },
+      {
         "surface": "my face",
         "lemma": "paneh"
       },
@@ -384,6 +432,10 @@
         "lemma": "amad"
       },
       {
+        "surface": "but I could not",
+        "lemma": "lo"
+      },
+      {
         "surface": "discern",
         "lemma": "nakhar"
       },
@@ -402,6 +454,10 @@
       {
         "surface": "my eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "and I heard",
+        "lemma": "shama"
       },
       {
         "surface": "a whispering",
@@ -426,18 +482,30 @@
         "lemma": "eloah"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "a man",
         "lemma": "gaver"
       },
       {
         "surface": "more pure",
         "lemma": "taher"
+      },
+      {
+        "surface": "than his Maker",
+        "lemma": "asah"
       }
     ],
     "18": [
       {
         "surface": "If",
         "lemma": "hen"
+      },
+      {
+        "surface": "God puts no",
+        "lemma": "lo"
       },
       {
         "surface": "trust",
@@ -462,6 +530,10 @@
     ],
     "19": [
       {
+        "surface": "how much more",
+        "lemma": "aph"
+      },
+      {
         "surface": "those who dwell",
         "lemma": "shakhan"
       },
@@ -472,6 +544,10 @@
       {
         "surface": "of clay",
         "lemma": "chomer"
+      },
+      {
+        "surface": "whose",
+        "lemma": "asher"
       },
       {
         "surface": "foundations",
@@ -530,14 +606,18 @@
         "lemma": "mut"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "wisdom",
         "lemma": "chokhmah"
       }
     ]
   },
   "themeLemmas": [
+    "lo",
     "avad",
-    "ruach",
-    "qol"
+    "ruach"
   ]
 }

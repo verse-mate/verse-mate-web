@@ -34,8 +34,32 @@
         "lemma": "vashti"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
+      },
+      {
+        "surface": "she had done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
+      },
+      {
         "surface": "had been decreed",
         "lemma": "gazar"
+      },
+      {
+        "surface": "against her",
+        "lemma": "al"
       }
     ],
     "2": [
@@ -46,6 +70,10 @@
       {
         "surface": "attendants",
         "lemma": "naar"
+      },
+      {
+        "surface": "proposed",
+        "lemma": "amar"
       },
       {
         "surface": "Let a search be made",
@@ -82,6 +110,10 @@
         "lemma": "paqid"
       },
       {
+        "surface": "in each",
+        "lemma": "kol"
+      },
+      {
         "surface": "province",
         "lemma": "medinah"
       },
@@ -92,6 +124,10 @@
       {
         "surface": "to assemble",
         "lemma": "qavats"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the beautiful",
@@ -106,8 +142,16 @@
         "lemma": "betulah"
       },
       {
+        "surface": "into",
+        "lemma": "el"
+      },
+      {
         "surface": "the harem",
         "lemma": "bet"
+      },
+      {
+        "surface": "at",
+        "lemma": "el"
       },
       {
         "surface": "the citadel",
@@ -116,6 +160,10 @@
       {
         "surface": "of Susa",
         "lemma": "shushan"
+      },
+      {
+        "surface": "Let them be placed",
+        "lemma": "el"
       },
       {
         "surface": "under the care",
@@ -142,6 +190,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "and let them be given",
+        "lemma": "natan"
+      },
+      {
         "surface": "beauty treatments",
         "lemma": "tamruq"
       }
@@ -150,6 +202,10 @@
       {
         "surface": "Then let the young woman",
         "lemma": "naarah"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "pleases",
@@ -184,11 +240,19 @@
         "lemma": "melekh"
       },
       {
+        "surface": "and he acted",
+        "lemma": "asah"
+      },
+      {
         "surface": "accordingly",
         "lemma": "ken"
       }
     ],
     "5": [
+      {
+        "surface": "Now there was",
+        "lemma": "hayah"
+      },
       {
         "surface": "at the citadel",
         "lemma": "birah"
@@ -244,6 +308,10 @@
     ],
     "6": [
       {
+        "surface": "He",
+        "lemma": "asher"
+      },
+      {
         "surface": "had been carried into exile",
         "lemma": "galah"
       },
@@ -264,8 +332,16 @@
         "lemma": "bavel"
       },
       {
+        "surface": "among",
+        "lemma": "im"
+      },
+      {
         "surface": "those taken captive",
         "lemma": "golah"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "Jeconiah",
@@ -282,12 +358,20 @@
     ],
     "7": [
       {
+        "surface": "And Mordecai",
+        "lemma": "hayah"
+      },
+      {
         "surface": "had brought up",
         "lemma": "aman"
       },
       {
         "surface": "Hadassah",
         "lemma": "hadassah"
+      },
+      {
+        "surface": "that is",
+        "lemma": "hu"
       },
       {
         "surface": "Esther",
@@ -302,8 +386,16 @@
         "lemma": "dod"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "she did not",
         "lemma": "ayin"
+      },
+      {
+        "surface": "a father",
+        "lemma": "av"
       },
       {
         "surface": "or mother",
@@ -330,6 +422,10 @@
         "lemma": "mareh"
       },
       {
+        "surface": "and when her father",
+        "lemma": "av"
+      },
+      {
         "surface": "and mother",
         "lemma": "em"
       },
@@ -352,6 +448,10 @@
     ],
     "8": [
       {
+        "surface": "When",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the king’s",
         "lemma": "melekh"
       },
@@ -362,6 +462,10 @@
       {
         "surface": "and edict",
         "lemma": "dat"
+      },
+      {
+        "surface": "had been proclaimed",
+        "lemma": "shama"
       },
       {
         "surface": "many",
@@ -376,12 +480,20 @@
         "lemma": "qavats"
       },
       {
+        "surface": "at",
+        "lemma": "el"
+      },
+      {
         "surface": "the citadel",
         "lemma": "birah"
       },
       {
         "surface": "of Susa",
         "lemma": "shushan"
+      },
+      {
+        "surface": "under",
+        "lemma": "el"
       },
       {
         "surface": "the care",
@@ -400,8 +512,16 @@
         "lemma": "laqach"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the palace",
         "lemma": "bet"
+      },
+      {
+        "surface": "and placed under",
+        "lemma": "el"
       },
       {
         "surface": "the care",
@@ -446,6 +566,10 @@
         "lemma": "bahal"
       },
       {
+        "surface": "provided",
+        "lemma": "natan"
+      },
+      {
         "surface": "with beauty treatments",
         "lemma": "tamruq"
       },
@@ -454,8 +578,16 @@
         "lemma": "manah"
       },
       {
+        "surface": "He assigned",
+        "lemma": "natan"
+      },
+      {
         "surface": "seven",
         "lemma": "sheva"
+      },
+      {
+        "surface": "select",
+        "lemma": "raah"
       },
       {
         "surface": "maidservants",
@@ -492,6 +624,10 @@
         "lemma": "ester"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "reveal",
         "lemma": "nagad"
       },
@@ -500,8 +636,16 @@
         "lemma": "am"
       },
       {
+        "surface": "or",
+        "lemma": "et"
+      },
+      {
         "surface": "her lineage",
         "lemma": "moledet"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "Mordecai",
@@ -512,11 +656,23 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "her",
+        "lemma": "al"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to do so",
         "lemma": "nagad"
       }
     ],
     "11": [
+      {
+        "surface": "And every day",
+        "lemma": "kol"
+      },
       {
         "surface": "Mordecai",
         "lemma": "mordekhay"
@@ -542,6 +698,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "about",
+        "lemma": "et"
+      },
+      {
         "surface": "Esther’s",
         "lemma": "ester"
       },
@@ -552,6 +712,10 @@
       {
         "surface": "and what",
         "lemma": "mah"
+      },
+      {
+        "surface": "was happening",
+        "lemma": "asah"
       }
     ],
     "12": [
@@ -570,6 +734,14 @@
       {
         "surface": "turn",
         "lemma": "tor"
+      },
+      {
+        "surface": "to go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "King",
@@ -630,16 +802,52 @@
     ],
     "13": [
       {
+        "surface": "When",
+        "lemma": "zeh"
+      },
+      {
         "surface": "the young woman",
         "lemma": "naarah"
+      },
+      {
+        "surface": "would go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the king",
         "lemma": "melekh"
       },
       {
+        "surface": "she was given",
+        "lemma": "natan"
+      },
+      {
+        "surface": "whatever",
+        "lemma": "kol"
+      },
+      {
+        "surface": "she requested",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to take",
+        "lemma": "bo"
+      },
+      {
+        "surface": "with her",
+        "lemma": "im"
+      },
+      {
         "surface": "from the harem",
         "lemma": "bet"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "the king’s",
@@ -652,6 +860,14 @@
     ],
     "14": [
       {
+        "surface": "She",
+        "lemma": "hu"
+      },
+      {
+        "surface": "would go there",
+        "lemma": "bo"
+      },
+      {
         "surface": "in the evening",
         "lemma": "erev"
       },
@@ -660,12 +876,28 @@
         "lemma": "boqer"
       },
       {
+        "surface": "she",
+        "lemma": "hu"
+      },
+      {
+        "surface": "would return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "a second",
         "lemma": "sheni"
       },
       {
         "surface": "harem",
         "lemma": "bet"
+      },
+      {
+        "surface": "under",
+        "lemma": "el"
       },
       {
         "surface": "the care",
@@ -692,8 +924,24 @@
         "lemma": "pilegesh"
       },
       {
+        "surface": "She would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "return",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "unless",
+        "lemma": "ki"
       },
       {
         "surface": "he",
@@ -702,6 +950,10 @@
       {
         "surface": "delighted",
         "lemma": "chaphets"
+      },
+      {
+        "surface": "and summoned her",
+        "lemma": "qara"
       },
       {
         "surface": "by name",
@@ -742,8 +994,20 @@
         "lemma": "tor"
       },
       {
+        "surface": "to go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "she did not",
+        "lemma": "lo"
       },
       {
         "surface": "ask for",
@@ -752,6 +1016,14 @@
       {
         "surface": "anything",
         "lemma": "davar"
+      },
+      {
+        "surface": "except",
+        "lemma": "ki"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
       },
       {
         "surface": "Hegai",
@@ -774,6 +1046,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "had advised",
+        "lemma": "amar"
+      },
+      {
         "surface": "And Esther",
         "lemma": "ester"
       },
@@ -788,6 +1064,14 @@
       {
         "surface": "in the eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "of everyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who saw her",
+        "lemma": "raah"
       }
     ],
     "16": [
@@ -800,12 +1084,20 @@
         "lemma": "laqach"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "King",
         "lemma": "melekh"
       },
       {
         "surface": "Xerxes",
         "lemma": "achashverosh"
+      },
+      {
+        "surface": "in",
+        "lemma": "el"
       },
       {
         "surface": "the royal",
@@ -858,6 +1150,10 @@
         "lemma": "ester"
       },
       {
+        "surface": "more than all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the other women",
         "lemma": "ishshah"
       },
@@ -876,6 +1172,10 @@
       {
         "surface": "in his sight",
         "lemma": "paneh"
+      },
+      {
+        "surface": "more than all",
+        "lemma": "kol"
       },
       {
         "surface": "of the other virgins",
@@ -916,6 +1216,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "held",
+        "lemma": "asah"
+      },
+      {
         "surface": "a great",
         "lemma": "gadol"
       },
@@ -932,6 +1236,10 @@
         "lemma": "mishteh"
       },
       {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his officials",
         "lemma": "sar"
       },
@@ -940,12 +1248,20 @@
         "lemma": "eved"
       },
       {
+        "surface": "He proclaimed",
+        "lemma": "asah"
+      },
+      {
         "surface": "a tax holiday",
         "lemma": "hanachah"
       },
       {
         "surface": "in the provinces",
         "lemma": "medinah"
+      },
+      {
+        "surface": "and gave",
+        "lemma": "natan"
       },
       {
         "surface": "gifts",
@@ -978,6 +1294,10 @@
         "lemma": "mordekhay"
       },
       {
+        "surface": "was sitting",
+        "lemma": "yashav"
+      },
+      {
         "surface": "at the king’s",
         "lemma": "melekh"
       },
@@ -1008,6 +1328,10 @@
         "lemma": "am"
       },
       {
+        "surface": "just as",
+        "lemma": "asher"
+      },
+      {
         "surface": "Mordecai",
         "lemma": "mordekhay"
       },
@@ -1020,6 +1344,10 @@
         "lemma": "ester"
       },
       {
+        "surface": "obeyed",
+        "lemma": "asah"
+      },
+      {
         "surface": "Mordecai’s",
         "lemma": "mordekhay"
       },
@@ -1028,11 +1356,23 @@
         "lemma": "maamar"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
+        "surface": "she had done",
+        "lemma": "hayah"
+      },
+      {
         "surface": "under his care",
         "lemma": "omnah"
       }
     ],
     "21": [
+      {
+        "surface": "In those",
+        "lemma": "hemmah"
+      },
       {
         "surface": "days",
         "lemma": "yom"
@@ -1040,6 +1380,10 @@
       {
         "surface": "while Mordecai",
         "lemma": "mordekhay"
+      },
+      {
+        "surface": "was sitting",
+        "lemma": "yashav"
       },
       {
         "surface": "at the king’s",
@@ -1128,6 +1472,10 @@
         "lemma": "ester"
       },
       {
+        "surface": "informed",
+        "lemma": "amar"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -1156,6 +1504,10 @@
       {
         "surface": "were hanged",
         "lemma": "talah"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the gallows",

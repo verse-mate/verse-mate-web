@@ -48,14 +48,26 @@
         "lemma": "darash"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their heart",
         "lemma": "lev"
       }
     ],
     "3": [
       {
+        "surface": "They",
+        "lemma": "aph"
+      },
+      {
         "surface": "do",
         "lemma": "paal"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "iniquity",
@@ -71,6 +83,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
       {
         "surface": "have ordained",
         "lemma": "tsavah"
@@ -112,12 +128,24 @@
     ],
     "6": [
       {
+        "surface": "Then",
+        "lemma": "az"
+      },
+      {
+        "surface": "I would not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be ashamed",
         "lemma": "bush"
       },
       {
         "surface": "when I consider",
         "lemma": "navat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "Your commandments",
@@ -160,6 +188,14 @@
         "lemma": "choq"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "utterly",
+        "lemma": "ad"
+      },
+      {
         "surface": "forsake me",
         "lemma": "azav"
       }
@@ -192,12 +228,20 @@
     ],
     "10": [
       {
+        "surface": "With all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my heart",
         "lemma": "lev"
       },
       {
         "surface": "I have sought You",
         "lemma": "darash"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "let me stray",
@@ -222,6 +266,14 @@
         "lemma": "lev"
       },
       {
+        "surface": "that",
+        "lemma": "maan"
+      },
+      {
+        "surface": "I might not",
+        "lemma": "lo"
+      },
+      {
         "surface": "sin",
         "lemma": "chata"
       }
@@ -230,6 +282,10 @@
       {
         "surface": "Blessed are",
         "lemma": "barakh"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
       },
       {
         "surface": "O LORD",
@@ -254,6 +310,10 @@
         "lemma": "saphar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the judgments",
         "lemma": "mishpat"
       },
@@ -274,6 +334,14 @@
       {
         "surface": "of Your testimonies",
         "lemma": "edut"
+      },
+      {
+        "surface": "as much as in",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "riches",
@@ -308,6 +376,10 @@
         "lemma": "chuqqah"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "forget",
         "lemma": "shakhach"
       },
@@ -320,6 +392,10 @@
       {
         "surface": "Deal bountifully",
         "lemma": "gamal"
+      },
+      {
+        "surface": "with",
+        "lemma": "al"
       },
       {
         "surface": "Your servant",
@@ -362,6 +438,10 @@
     ],
     "19": [
       {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "am a stranger",
         "lemma": "ger"
       },
@@ -370,12 +450,20 @@
         "lemma": "erets"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "hide",
         "lemma": "satar"
       },
       {
         "surface": "Your commandments",
         "lemma": "mitsvah"
+      },
+      {
+        "surface": "from me",
+        "lemma": "min"
       }
     ],
     "20": [
@@ -392,8 +480,20 @@
         "lemma": "taavah"
       },
       {
+        "surface": "for",
+        "lemma": "el"
+      },
+      {
         "surface": "Your judgments",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "at all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "times",
+        "lemma": "et"
       }
     ],
     "21": [
@@ -424,12 +524,20 @@
         "lemma": "galal"
       },
       {
+        "surface": "my",
+        "lemma": "al"
+      },
+      {
         "surface": "scorn",
         "lemma": "cherpah"
       },
       {
         "surface": "and contempt",
         "lemma": "buz"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "I have kept",
@@ -442,8 +550,16 @@
     ],
     "23": [
       {
+        "surface": "Though",
+        "lemma": "gam"
+      },
+      {
         "surface": "rulers",
         "lemma": "sar"
+      },
+      {
+        "surface": "sit",
+        "lemma": "yashav"
       },
       {
         "surface": "and slander",
@@ -466,6 +582,10 @@
       {
         "surface": "Your testimonies",
         "lemma": "edah"
+      },
+      {
+        "surface": "are indeed",
+        "lemma": "gam"
       },
       {
         "surface": "my delight",
@@ -574,6 +694,10 @@
         "lemma": "sur"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the path",
         "lemma": "derekh"
       },
@@ -626,6 +750,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "let me not",
+        "lemma": "al"
+      },
+      {
         "surface": "be put to shame",
         "lemma": "bush"
       }
@@ -642,6 +770,10 @@
       {
         "surface": "of Your commandments",
         "lemma": "mitsvah"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "You will enlarge",
@@ -696,6 +828,10 @@
         "lemma": "shamar"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my heart",
         "lemma": "lev"
       }
@@ -714,6 +850,10 @@
         "lemma": "mitsvah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "I find delight",
         "lemma": "chaphets"
       }
@@ -728,8 +868,20 @@
         "lemma": "lev"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Your testimonies",
         "lemma": "edut"
+      },
+      {
+        "surface": "and not",
+        "lemma": "al"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "covetous gain",
@@ -744,6 +896,10 @@
       {
         "surface": "my eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "away",
+        "lemma": "raah"
       },
       {
         "surface": "from worthless things",
@@ -772,6 +928,10 @@
         "lemma": "eved"
       },
       {
+        "surface": "to produce",
+        "lemma": "asher"
+      },
+      {
         "surface": "reverence for You",
         "lemma": "yirah"
       }
@@ -788,6 +948,10 @@
       {
         "surface": "I dread",
         "lemma": "yagor"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "Your judgments",
@@ -826,6 +990,10 @@
         "lemma": "chesed"
       },
       {
+        "surface": "come to me",
+        "lemma": "bo"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -848,6 +1016,10 @@
         "lemma": "charaph"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "I trust",
         "lemma": "batach"
       },
@@ -857,6 +1029,10 @@
       }
     ],
     "43": [
+      {
+        "surface": "Never",
+        "lemma": "al"
+      },
       {
         "surface": "take",
         "lemma": "natsal"
@@ -872,6 +1048,10 @@
       {
         "surface": "from my mouth",
         "lemma": "peh"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "I hope",
@@ -914,6 +1094,10 @@
         "lemma": "rachav"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "I have sought",
         "lemma": "darash"
       },
@@ -940,6 +1124,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "and I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be ashamed",
         "lemma": "bush"
       }
@@ -952,6 +1140,10 @@
       {
         "surface": "in Your commandments",
         "lemma": "mitsvah"
+      },
+      {
+        "surface": "because",
+        "lemma": "asher"
       },
       {
         "surface": "I love them",
@@ -968,8 +1160,16 @@
         "lemma": "kaph"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Your commandments",
         "lemma": "mitsvah"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
       },
       {
         "surface": "I love",
@@ -998,11 +1198,23 @@
         "lemma": "eved"
       },
       {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
         "surface": "You have given me hope",
         "lemma": "yachal"
       }
     ],
     "50": [
+      {
+        "surface": "This",
+        "lemma": "zot"
+      },
       {
         "surface": "is my comfort",
         "lemma": "nechamah"
@@ -1010,6 +1222,10 @@
       {
         "surface": "in affliction",
         "lemma": "oni"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "Your promise",
@@ -1026,8 +1242,16 @@
         "lemma": "zed"
       },
       {
+        "surface": "utterly",
+        "lemma": "ad"
+      },
+      {
         "surface": "deride me",
         "lemma": "luts"
+      },
+      {
+        "surface": "but I do not",
+        "lemma": "lo"
       },
       {
         "surface": "turn",
@@ -1088,6 +1312,10 @@
         "lemma": "choq"
       },
       {
+        "surface": "are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "songs",
         "lemma": "zamir"
       },
@@ -1128,6 +1356,18 @@
     ],
     "56": [
       {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
+        "surface": "is my practice",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "I obey",
         "lemma": "natsar"
       },
@@ -1146,6 +1386,10 @@
         "lemma": "cheleq"
       },
       {
+        "surface": "I have promised",
+        "lemma": "amar"
+      },
+      {
         "surface": "to keep",
         "lemma": "shamar"
       },
@@ -1162,6 +1406,10 @@
       {
         "surface": "Your face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "my heart",
@@ -1186,8 +1434,16 @@
         "lemma": "derekh"
       },
       {
+        "surface": "and turned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "my steps",
         "lemma": "regel"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Your testimonies",
@@ -1198,6 +1454,10 @@
       {
         "surface": "I hurried",
         "lemma": "chush"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "hesitating",
@@ -1226,6 +1486,10 @@
         "lemma": "ud"
       },
       {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "forget",
         "lemma": "shakhach"
       },
@@ -1248,6 +1512,10 @@
         "lemma": "yadah"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "Your righteous",
         "lemma": "tsedeq"
       },
@@ -1258,8 +1526,20 @@
     ],
     "63": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am a friend",
         "lemma": "chaver"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "fear You",
@@ -1302,8 +1582,16 @@
     ],
     "65": [
       {
+        "surface": "You are",
+        "lemma": "asah"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
+      },
+      {
+        "surface": "to",
+        "lemma": "im"
       },
       {
         "surface": "Your servant",
@@ -1336,6 +1624,10 @@
         "lemma": "daat"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "I believe",
         "lemma": "aman"
       },
@@ -1352,6 +1644,10 @@
       {
         "surface": "I was afflicted",
         "lemma": "anah"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "went astray",
@@ -1371,6 +1667,10 @@
       }
     ],
     "68": [
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
       {
         "surface": "are good",
         "lemma": "tov"
@@ -1402,12 +1702,20 @@
         "lemma": "sheqer"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "keep",
         "lemma": "natsar"
       },
       {
         "surface": "Your precepts",
         "lemma": "piqqud"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "my heart",
@@ -1428,6 +1736,10 @@
         "lemma": "chelev"
       },
       {
+        "surface": "but I",
+        "lemma": "ani"
+      },
+      {
         "surface": "delight",
         "lemma": "shaa"
       },
@@ -1442,8 +1754,16 @@
         "lemma": "tov"
       },
       {
+        "surface": "to",
+        "lemma": "ki"
+      },
+      {
         "surface": "be afflicted",
         "lemma": "anah"
+      },
+      {
+        "surface": "that",
+        "lemma": "maan"
       },
       {
         "surface": "I might learn",
@@ -1486,6 +1806,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "have made me",
+        "lemma": "asah"
+      },
+      {
         "surface": "and fashioned me",
         "lemma": "kun"
       },
@@ -1508,8 +1832,16 @@
         "lemma": "yare"
       },
       {
+        "surface": "see me",
+        "lemma": "raah"
+      },
+      {
         "surface": "and rejoice",
         "lemma": "samach"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "I have hoped",
@@ -1530,6 +1862,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "Your judgments",
         "lemma": "mishpat"
       },
@@ -1547,6 +1883,10 @@
       }
     ],
     "76": [
+      {
+        "surface": "May",
+        "lemma": "hayah"
+      },
       {
         "surface": "Your loving devotion",
         "lemma": "chesed"
@@ -1574,8 +1914,16 @@
         "lemma": "racham"
       },
       {
+        "surface": "come to me",
+        "lemma": "bo"
+      },
+      {
         "surface": "that I may live",
         "lemma": "chayah"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "Your law",
@@ -1596,12 +1944,20 @@
         "lemma": "bush"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "subverting me",
         "lemma": "avat"
       },
       {
         "surface": "with a lie",
         "lemma": "sheqer"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "will meditate",
@@ -1618,6 +1974,10 @@
         "lemma": "yare"
       },
       {
+        "surface": "turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "those who know",
         "lemma": "yada"
       },
@@ -1632,12 +1992,24 @@
         "lemma": "lev"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "blameless",
         "lemma": "tamim"
       },
       {
         "surface": "in Your statutes",
         "lemma": "choq"
+      },
+      {
+        "surface": "that",
+        "lemma": "maan"
+      },
+      {
+        "surface": "I may not",
+        "lemma": "lo"
       },
       {
         "surface": "be put to shame",
@@ -1680,6 +2052,10 @@
         "lemma": "imrah"
       },
       {
+        "surface": "I ask",
+        "lemma": "amar"
+      },
+      {
         "surface": "When",
         "lemma": "matay"
       },
@@ -1690,12 +2066,24 @@
     ],
     "83": [
       {
+        "surface": "Though",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a wineskin",
         "lemma": "nod"
       },
       {
         "surface": "dried up by smoke",
         "lemma": "qitor"
+      },
+      {
+        "surface": "I do not",
+        "lemma": "lo"
       },
       {
         "surface": "forget",
@@ -1724,6 +2112,10 @@
         "lemma": "matay"
       },
       {
+        "surface": "will You execute",
+        "lemma": "asah"
+      },
+      {
         "surface": "judgment",
         "lemma": "maaseh"
       },
@@ -1746,11 +2138,19 @@
         "lemma": "shichah"
       },
       {
+        "surface": "in violation of",
+        "lemma": "lo"
+      },
+      {
         "surface": "Your law",
         "lemma": "torah"
       }
     ],
     "86": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "Your commandments",
         "lemma": "mitsvah"
@@ -1784,6 +2184,14 @@
       {
         "surface": "from the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "but I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "have not",
+        "lemma": "lo"
       },
       {
         "surface": "forsaken",
@@ -1878,6 +2286,14 @@
         "lemma": "yom"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "all things",
+        "lemma": "kol"
+      },
+      {
         "surface": "are servants to You",
         "lemma": "eved"
       }
@@ -1894,6 +2310,10 @@
       {
         "surface": "been my delight",
         "lemma": "shashua"
+      },
+      {
+        "surface": "then",
+        "lemma": "az"
       },
       {
         "surface": "I would have perished",
@@ -1918,14 +2338,26 @@
         "lemma": "piqqud"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "You have revived me",
         "lemma": "chayah"
       }
     ],
     "94": [
       {
+        "surface": "I am",
+        "lemma": "ani"
+      },
+      {
         "surface": "save me",
         "lemma": "yasah"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "I have sought",
@@ -1960,8 +2392,16 @@
     ],
     "96": [
       {
+        "surface": "I have seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "a limit",
         "lemma": "qets"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "perfection",
@@ -1990,8 +2430,16 @@
         "lemma": "torah"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
       },
       {
         "surface": "is my meditation",
@@ -2012,6 +2460,14 @@
         "lemma": "oyev"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they",
+        "lemma": "hu"
+      },
+      {
         "surface": "are always",
         "lemma": "olam"
       }
@@ -2022,8 +2478,16 @@
         "lemma": "sakhal"
       },
       {
+        "surface": "than all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my teachers",
         "lemma": "lamad"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "Your testimonies",
@@ -2044,6 +2508,10 @@
         "lemma": "zaqen"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "I obey",
         "lemma": "natsar"
       },
@@ -2062,12 +2530,20 @@
         "lemma": "regel"
       },
       {
+        "surface": "from every",
+        "lemma": "kol"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
       {
         "surface": "path",
         "lemma": "orach"
+      },
+      {
+        "surface": "that",
+        "lemma": "maan"
       },
       {
         "surface": "I may keep",
@@ -2080,12 +2556,24 @@
     ],
     "102": [
       {
+        "surface": "I have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "departed",
         "lemma": "sur"
       },
       {
         "surface": "from Your ordinances",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You Yourself",
+        "lemma": "attah"
       },
       {
         "surface": "have taught me",
@@ -2128,8 +2616,16 @@
         "lemma": "piqqud"
       },
       {
+        "surface": "therefore",
+        "lemma": "al"
+      },
+      {
         "surface": "I hate",
         "lemma": "sane"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "false",
@@ -2185,6 +2681,10 @@
       }
     ],
     "107": [
+      {
+        "surface": "I am severely",
+        "lemma": "ad"
+      },
       {
         "surface": "afflicted",
         "lemma": "anah"
@@ -2246,6 +2746,10 @@
         "lemma": "kaph"
       },
       {
+        "surface": "yet I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "forget",
         "lemma": "shakhach"
       },
@@ -2260,8 +2764,16 @@
         "lemma": "rasah"
       },
       {
+        "surface": "have set",
+        "lemma": "natan"
+      },
+      {
         "surface": "a snare",
         "lemma": "pach"
+      },
+      {
+        "surface": "but I have not",
+        "lemma": "lo"
       },
       {
         "surface": "strayed",
@@ -2282,6 +2794,14 @@
         "lemma": "nachal"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "are the joy",
         "lemma": "sasvon"
       },
@@ -2298,6 +2818,10 @@
       {
         "surface": "my heart",
         "lemma": "lev"
+      },
+      {
+        "surface": "to perform",
+        "lemma": "asah"
       },
       {
         "surface": "Your statutes",
@@ -2332,6 +2856,10 @@
     ],
     "114": [
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "are my hiding place",
         "lemma": "seter"
       },
@@ -2352,6 +2880,10 @@
       {
         "surface": "Depart",
         "lemma": "sur"
+      },
+      {
+        "surface": "from me",
+        "lemma": "min"
       },
       {
         "surface": "you evildoers",
@@ -2382,6 +2914,10 @@
       {
         "surface": "that I may live",
         "lemma": "chayah"
+      },
+      {
+        "surface": "let me not",
+        "lemma": "al"
       },
       {
         "surface": "be ashamed",
@@ -2420,12 +2956,20 @@
         "lemma": "salah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who stray",
         "lemma": "shagah"
       },
       {
         "surface": "from Your statutes",
         "lemma": "choq"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "their deceitfulness",
@@ -2437,6 +2981,10 @@
       }
     ],
     "119": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the wicked",
         "lemma": "rasah"
@@ -2490,6 +3038,10 @@
     ],
     "121": [
       {
+        "surface": "I have done",
+        "lemma": "asah"
+      },
+      {
         "surface": "what is just",
         "lemma": "mishpat"
       },
@@ -2524,6 +3076,10 @@
         "lemma": "tov"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "let the arrogant",
         "lemma": "zed"
       },
@@ -2556,6 +3112,14 @@
     ],
     "124": [
       {
+        "surface": "Deal",
+        "lemma": "asah"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "Your servant",
         "lemma": "eved"
       },
@@ -2573,6 +3137,10 @@
       }
     ],
     "125": [
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
       {
         "surface": "am Your servant",
         "lemma": "eved"
@@ -2592,8 +3160,16 @@
     ],
     "126": [
       {
+        "surface": "It is time",
+        "lemma": "et"
+      },
+      {
         "surface": "for the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "to act",
+        "lemma": "asah"
       },
       {
         "surface": "for they have broken",
@@ -2605,6 +3181,10 @@
       }
     ],
     "127": [
+      {
+        "surface": "Therefore",
+        "lemma": "al"
+      },
       {
         "surface": "I love",
         "lemma": "ahav"
@@ -2624,8 +3204,16 @@
     ],
     "128": [
       {
+        "surface": "Therefore",
+        "lemma": "al"
+      },
+      {
         "surface": "I admire",
         "lemma": "yashar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "Your precepts",
@@ -2634,6 +3222,10 @@
       {
         "surface": "and hate",
         "lemma": "sane"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "false",
@@ -2652,6 +3244,10 @@
       {
         "surface": "Your testimonies",
         "lemma": "edut"
+      },
+      {
+        "surface": "therefore",
+        "lemma": "al"
       },
       {
         "surface": "I",
@@ -2698,6 +3294,10 @@
         "lemma": "shaaph"
       },
       {
+        "surface": "vvv",
+        "lemma": "ki"
+      },
+      {
         "surface": "longing",
         "lemma": "yaav"
       },
@@ -2710,6 +3310,10 @@
       {
         "surface": "Turn",
         "lemma": "panah"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
       },
       {
         "surface": "and show me mercy",
@@ -2740,6 +3344,10 @@
       {
         "surface": "in Your word",
         "lemma": "imrah"
+      },
+      {
+        "surface": "let no",
+        "lemma": "al"
       },
       {
         "surface": "sin",
@@ -2790,6 +3398,10 @@
         "lemma": "lamad"
       },
       {
+        "surface": "me",
+        "lemma": "et"
+      },
+      {
         "surface": "Your statutes",
         "lemma": "choq"
       }
@@ -2812,8 +3424,16 @@
         "lemma": "mayim"
       },
       {
+        "surface": "because",
+        "lemma": "al"
+      },
+      {
         "surface": "Your law",
         "lemma": "torah"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
       },
       {
         "surface": "obeyed",
@@ -2824,6 +3444,10 @@
       {
         "surface": "Righteous",
         "lemma": "tsaddiq"
+      },
+      {
+        "surface": "are You",
+        "lemma": "attah"
       },
       {
         "surface": "O LORD",
@@ -2870,6 +3494,10 @@
         "lemma": "tsamat"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "my foes",
         "lemma": "tsar"
       },
@@ -2906,12 +3534,20 @@
     ],
     "141": [
       {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "am lowly",
         "lemma": "tsair"
       },
       {
         "surface": "and despised",
         "lemma": "bazah"
+      },
+      {
+        "surface": "but I do not",
+        "lemma": "lo"
       },
       {
         "surface": "forget",
@@ -2986,6 +3622,14 @@
     ],
     "145": [
       {
+        "surface": "I call",
+        "lemma": "qara"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my heart",
         "lemma": "lev"
       },
@@ -3007,6 +3651,10 @@
       }
     ],
     "146": [
+      {
+        "surface": "I call to You",
+        "lemma": "qara"
+      },
       {
         "surface": "save me",
         "lemma": "yasah"
@@ -3066,6 +3714,10 @@
     ],
     "149": [
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "my voice",
         "lemma": "qol"
       },
@@ -3110,12 +3762,20 @@
     ],
     "151": [
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "are near",
         "lemma": "qarov"
       },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "Your commandments",
@@ -3140,6 +3800,10 @@
         "lemma": "edah"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "You have established them",
         "lemma": "yasad"
       },
@@ -3150,12 +3814,24 @@
     ],
     "153": [
       {
+        "surface": "Look",
+        "lemma": "raah"
+      },
+      {
         "surface": "upon my affliction",
         "lemma": "oni"
       },
       {
         "surface": "and rescue me",
         "lemma": "chalats"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I have not",
+        "lemma": "lo"
       },
       {
         "surface": "forgotten",
@@ -3202,6 +3878,14 @@
         "lemma": "rasah"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "seek",
         "lemma": "darash"
       },
@@ -3246,6 +3930,10 @@
         "lemma": "rav"
       },
       {
+        "surface": "I have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turned",
         "lemma": "natah"
       },
@@ -3256,12 +3944,24 @@
     ],
     "158": [
       {
+        "surface": "I look on",
+        "lemma": "raah"
+      },
+      {
         "surface": "the faithless",
         "lemma": "bagad"
       },
       {
         "surface": "with loathing",
         "lemma": "qut"
+      },
+      {
+        "surface": "because",
+        "lemma": "asher"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
       },
       {
         "surface": "keep",
@@ -3273,6 +3973,14 @@
       }
     ],
     "159": [
+      {
+        "surface": "Consider",
+        "lemma": "raah"
+      },
+      {
+        "surface": "how",
+        "lemma": "ki"
+      },
       {
         "surface": "I love",
         "lemma": "ahav"
@@ -3306,6 +4014,10 @@
       {
         "surface": "is truth",
         "lemma": "emet"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "Your righteous",
@@ -3348,8 +4060,16 @@
     ],
     "162": [
       {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "rejoice",
         "lemma": "sus"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "Your promise",
@@ -3404,6 +4124,10 @@
         "lemma": "halal"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "Your righteous",
         "lemma": "tsedeq"
       },
@@ -3452,6 +4176,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and I carry out",
+        "lemma": "asah"
+      },
+      {
         "surface": "Your commandments",
         "lemma": "mitsvah"
       }
@@ -3490,6 +4218,14 @@
       {
         "surface": "and Your testimonies",
         "lemma": "edah"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "my ways",
@@ -3532,6 +4268,10 @@
         "lemma": "techinnah"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "before You",
         "lemma": "paneh"
       },
@@ -3558,6 +4298,10 @@
         "lemma": "tehillah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "You teach me",
         "lemma": "lamad"
       },
@@ -3580,6 +4324,14 @@
         "lemma": "imrah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Your commandments",
         "lemma": "mitsvah"
       },
@@ -3594,8 +4346,16 @@
         "lemma": "yad"
       },
       {
+        "surface": "be ready",
+        "lemma": "hayah"
+      },
+      {
         "surface": "to help me",
         "lemma": "azar"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "I have chosen",
@@ -3672,6 +4432,14 @@
         "lemma": "eved"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "forgotten",
         "lemma": "shakhach"
       },
@@ -3682,8 +4450,8 @@
     ]
   },
   "themeLemmas": [
-    "torah",
-    "mitsvah",
-    "shamar"
+    "ki",
+    "kol",
+    "torah"
   ]
 }

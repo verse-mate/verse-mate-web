@@ -22,18 +22,34 @@
         "lemma": "el"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "I take refuge",
         "lemma": "chasah"
       }
     ],
     "2": [
       {
+        "surface": "I said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "are my Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "apart from You",
+        "lemma": "al"
       },
       {
         "surface": "I have no",
@@ -54,8 +70,16 @@
         "lemma": "erets"
       },
       {
+        "surface": "they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "are the excellence",
         "lemma": "addir"
+      },
+      {
+        "surface": "in whom all",
+        "lemma": "kol"
       },
       {
         "surface": "my delight",
@@ -108,6 +132,10 @@
         "lemma": "shem"
       },
       {
+        "surface": "with",
+        "lemma": "al"
+      },
+      {
         "surface": "my lips",
         "lemma": "saphah"
       }
@@ -124,6 +152,10 @@
       {
         "surface": "and my cup",
         "lemma": "kos"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
       },
       {
         "surface": "have made",
@@ -148,6 +180,14 @@
         "lemma": "naim"
       },
       {
+        "surface": "surely",
+        "lemma": "aph"
+      },
+      {
+        "surface": "my",
+        "lemma": "al"
+      },
+      {
         "surface": "inheritance",
         "lemma": "nachalah"
       },
@@ -166,8 +206,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "counsels me",
         "lemma": "yaats"
+      },
+      {
+        "surface": "even",
+        "lemma": "aph"
       },
       {
         "surface": "at night",
@@ -198,6 +246,10 @@
       {
         "surface": "before me",
         "lemma": "neged"
+      },
+      {
+        "surface": "Because",
+        "lemma": "ki"
       },
       {
         "surface": "He is at my right hand",
@@ -238,6 +290,10 @@
         "lemma": "basar"
       },
       {
+        "surface": "also",
+        "lemma": "aph"
+      },
+      {
         "surface": "will dwell",
         "lemma": "shakhan"
       },
@@ -247,6 +303,14 @@
       }
     ],
     "10": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You will not",
+        "lemma": "lo"
+      },
       {
         "surface": "abandon",
         "lemma": "azav"
@@ -260,8 +324,20 @@
         "lemma": "sheol"
       },
       {
+        "surface": "nor will You",
+        "lemma": "lo"
+      },
+      {
+        "surface": "let",
+        "lemma": "natan"
+      },
+      {
         "surface": "Your Holy One",
         "lemma": "chasid"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "decay",
@@ -309,7 +385,7 @@
   },
   "themeLemmas": [
     "bal",
-    "yamin",
-    "naim"
+    "ki",
+    "aph"
   ]
 }

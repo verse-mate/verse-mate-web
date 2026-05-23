@@ -54,6 +54,10 @@
     ],
     "3": [
       {
+        "surface": "Though",
+        "lemma": "ki"
+      },
+      {
         "surface": "the lips",
         "lemma": "saphah"
       },
@@ -136,6 +140,10 @@
     ],
     "6": [
       {
+        "surface": "She does not",
+        "lemma": "pen"
+      },
+      {
         "surface": "consider",
         "lemma": "palas"
       },
@@ -146,6 +154,10 @@
       {
         "surface": "of life",
         "lemma": "chay"
+      },
+      {
+        "surface": "she does not",
+        "lemma": "lo"
       },
       {
         "surface": "know that",
@@ -170,6 +182,14 @@
         "lemma": "ben"
       },
       {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
+      },
+      {
         "surface": "turn aside",
         "lemma": "sur"
       },
@@ -192,6 +212,14 @@
         "lemma": "rachaq"
       },
       {
+        "surface": "from her",
+        "lemma": "al"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "go near",
         "lemma": "qarav"
       },
@@ -205,6 +233,14 @@
       }
     ],
     "9": [
+      {
+        "surface": "lest",
+        "lemma": "pen"
+      },
+      {
+        "surface": "you concede",
+        "lemma": "natan"
+      },
       {
         "surface": "your vigor",
         "lemma": "hod"
@@ -223,6 +259,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "lest",
+        "lemma": "pen"
+      },
       {
         "surface": "strangers",
         "lemma": "zur"
@@ -272,6 +312,10 @@
     ],
     "12": [
       {
+        "surface": "and you will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "How",
         "lemma": "ekh"
       },
@@ -298,12 +342,24 @@
     ],
     "13": [
       {
+        "surface": "I did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "to the voice",
         "lemma": "qol"
       },
       {
         "surface": "of my teachers",
         "lemma": "moreh"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "incline",
@@ -320,8 +376,16 @@
     ],
     "14": [
       {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "on the brink",
         "lemma": "meat"
+      },
+      {
+        "surface": "of utter",
+        "lemma": "kol"
       },
       {
         "surface": "ruin",
@@ -390,12 +454,20 @@
     ],
     "17": [
       {
+        "surface": "Let them be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "alone",
         "lemma": "bad"
       },
       {
         "surface": "never",
         "lemma": "ayin"
+      },
+      {
+        "surface": "to be shared",
+        "lemma": "et"
       },
       {
         "surface": "with strangers",
@@ -406,6 +478,10 @@
       {
         "surface": "May your fountain",
         "lemma": "maqor"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "blessed",
@@ -448,6 +524,10 @@
       {
         "surface": "satisfy you",
         "lemma": "ravah"
+      },
+      {
+        "surface": "always",
+        "lemma": "kol"
       },
       {
         "surface": "may you be captivated",
@@ -494,6 +574,10 @@
     ],
     "21": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "a man’s",
         "lemma": "ish"
       },
@@ -516,6 +600,10 @@
       {
         "surface": "and the LORD examines",
         "lemma": "palas"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "his paths",
@@ -550,6 +638,10 @@
     ],
     "23": [
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "dies",
         "lemma": "mut"
       },
@@ -578,6 +670,6 @@
   "themeLemmas": [
     "zur",
     "shagah",
-    "tavekh"
+    "pen"
   ]
 }

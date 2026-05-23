@@ -90,6 +90,10 @@
     ],
     "3": [
       {
+        "surface": "vvv",
+        "lemma": "ki"
+      },
+      {
         "surface": "See",
         "lemma": "hinneh"
       },
@@ -110,8 +114,20 @@
         "lemma": "gur"
       },
       {
+        "surface": "against me",
+        "lemma": "al"
+      },
+      {
+        "surface": "for no",
+        "lemma": "lo"
+      },
+      {
         "surface": "transgression",
         "lemma": "pesah"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "sin of my own",
@@ -142,9 +158,21 @@
       {
         "surface": "Arise",
         "lemma": "ur"
+      },
+      {
+        "surface": "to help me",
+        "lemma": "qara"
+      },
+      {
+        "surface": "and take notice",
+        "lemma": "raah"
       }
     ],
     "5": [
+      {
+        "surface": "vvv",
+        "lemma": "attah"
+      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -174,12 +202,24 @@
         "lemma": "paqad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
       {
+        "surface": "show no",
+        "lemma": "al"
+      },
+      {
         "surface": "mercy",
         "lemma": "chanan"
+      },
+      {
+        "surface": "to the",
+        "lemma": "kol"
       },
       {
         "surface": "wicked",
@@ -195,6 +235,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "They return",
+        "lemma": "shuv"
+      },
       {
         "surface": "in the evening",
         "lemma": "erev"
@@ -238,11 +282,23 @@
         "lemma": "saphah"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "who",
         "lemma": "mi"
+      },
+      {
+        "surface": "can hear us",
+        "lemma": "shama"
       }
     ],
     "8": [
+      {
+        "surface": "But You",
+        "lemma": "attah"
+      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -256,6 +312,10 @@
         "lemma": "laag"
       },
       {
+        "surface": "at all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       }
@@ -266,8 +326,16 @@
         "lemma": "shamar"
       },
       {
+        "surface": "for You",
+        "lemma": "el"
+      },
+      {
         "surface": "O my strength",
         "lemma": "oz"
+      },
+      {
+        "surface": "because You",
+        "lemma": "ki"
       },
       {
         "surface": "O God",
@@ -296,14 +364,26 @@
         "lemma": "elohim"
       },
       {
+        "surface": "will let me stare down",
+        "lemma": "raah"
+      },
+      {
         "surface": "my foes",
         "lemma": "sharar"
       }
     ],
     "11": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "kill them",
         "lemma": "harag"
+      },
+      {
+        "surface": "or",
+        "lemma": "pen"
       },
       {
         "surface": "my people",
@@ -402,6 +482,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -419,6 +503,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "They return",
+        "lemma": "shuv"
+      },
       {
         "surface": "in the evening",
         "lemma": "erev"
@@ -442,6 +530,10 @@
     ],
     "15": [
       {
+        "surface": "They",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "scavenge",
         "lemma": "nua"
       },
@@ -454,11 +546,23 @@
         "lemma": "lun"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "they are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "satisfied",
         "lemma": "sava"
       }
     ],
     "16": [
+      {
+        "surface": "But I",
+        "lemma": "ani"
+      },
       {
         "surface": "will sing",
         "lemma": "shir"
@@ -480,6 +584,14 @@
         "lemma": "boqer"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "my fortress",
         "lemma": "misgav"
       },
@@ -498,12 +610,20 @@
     ],
     "17": [
       {
+        "surface": "To You",
+        "lemma": "el"
+      },
+      {
         "surface": "O my strength",
         "lemma": "oz"
       },
       {
         "surface": "I sing praises",
         "lemma": "zamar"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "You, O God",
@@ -524,8 +644,8 @@
     ]
   },
   "themeLemmas": [
+    "ki",
     "oz",
-    "misgav",
-    "chesed"
+    "misgav"
   ]
 }

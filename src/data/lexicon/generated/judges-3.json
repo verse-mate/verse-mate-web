@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -22,12 +30,28 @@
         "lemma": "nasah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "yisrael"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "had not",
+        "lemma": "lo"
+      },
+      {
         "surface": "known",
         "lemma": "yada"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "of the wars",
@@ -39,6 +63,14 @@
       }
     ],
     "2": [
+      {
+        "surface": "if only",
+        "lemma": "raq"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "maan"
+      },
       {
         "surface": "to teach",
         "lemma": "lamad"
@@ -58,6 +90,18 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "especially",
+        "lemma": "raq"
+      },
+      {
+        "surface": "to those who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "had not",
+        "lemma": "lo"
       },
       {
         "surface": "known it",
@@ -82,6 +126,10 @@
         "lemma": "pelishti"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Canaanites",
         "lemma": "kenaani"
       },
@@ -92,6 +140,10 @@
       {
         "surface": "and the Hivites",
         "lemma": "chivvi"
+      },
+      {
+        "surface": "who lived",
+        "lemma": "yashav"
       },
       {
         "surface": "in the mountains",
@@ -114,11 +166,23 @@
         "lemma": "baalchermon"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "bo"
+      },
+      {
         "surface": "Lebo-hamath",
         "lemma": "chamat"
       }
     ],
     "4": [
+      {
+        "surface": "These nations were left",
+        "lemma": "hayah"
+      },
       {
         "surface": "to test",
         "lemma": "nasah"
@@ -132,6 +196,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "whether they would keep",
+        "lemma": "shama"
+      },
+      {
         "surface": "the commandments",
         "lemma": "mitsvah"
       },
@@ -140,8 +208,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
         "surface": "He had given",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "their fathers",
+        "lemma": "av"
       },
       {
         "surface": "through",
@@ -156,6 +232,10 @@
       {
         "surface": "Thus the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "continued to live",
+        "lemma": "yashav"
       },
       {
         "surface": "among",
@@ -200,6 +280,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "their own daughters",
         "lemma": "bat"
       },
@@ -220,6 +304,10 @@
       {
         "surface": "So the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
       },
       {
         "surface": "evil",
@@ -334,6 +422,10 @@
         "lemma": "zaaq"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -392,6 +484,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "upon him",
+        "lemma": "al"
+      },
+      {
         "surface": "and he became Israel’s",
         "lemma": "yisrael"
       },
@@ -400,12 +500,20 @@
         "lemma": "shaphat"
       },
       {
+        "surface": "and went out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "to war",
         "lemma": "milchamah"
       },
       {
         "surface": "And the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "delivered",
+        "lemma": "natan"
       },
       {
         "surface": "Cushan-rishathaim",
@@ -430,6 +538,10 @@
       {
         "surface": "who prevailed",
         "lemma": "azaz"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "vvv",
@@ -484,6 +596,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
@@ -516,8 +632,20 @@
         "lemma": "chazaq"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "because",
+        "lemma": "al"
+      },
+      {
+        "surface": "they had done",
+        "lemma": "asah"
       },
       {
         "surface": "evil",
@@ -544,6 +672,10 @@
       {
         "surface": "to join forces",
         "lemma": "asaph"
+      },
+      {
+        "surface": "with him",
+        "lemma": "el"
       },
       {
         "surface": "Eglon attacked",
@@ -608,6 +740,10 @@
       {
         "surface": "cried out",
         "lemma": "zaaq"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -680,6 +816,10 @@
         "lemma": "ehud"
       },
       {
+        "surface": "had made",
+        "lemma": "asah"
+      },
+      {
         "surface": "a double-edged",
         "lemma": "shenayim"
       },
@@ -698,6 +838,10 @@
       {
         "surface": "He strapped",
         "lemma": "chagar"
+      },
+      {
+        "surface": "it to",
+        "lemma": "al"
       },
       {
         "surface": "his right",
@@ -752,6 +896,10 @@
     ],
     "18": [
       {
+        "surface": "After",
+        "lemma": "asher"
+      },
+      {
         "surface": "Ehud had finished",
         "lemma": "kalah"
       },
@@ -782,12 +930,32 @@
     ],
     "19": [
       {
+        "surface": "But upon reaching",
+        "lemma": "min"
+      },
+      {
         "surface": "the idols",
         "lemma": "pesil"
       },
       {
+        "surface": "near",
+        "lemma": "et"
+      },
+      {
         "surface": "Gilgal",
         "lemma": "gilgal"
+      },
+      {
+        "surface": "he himself",
+        "lemma": "hu"
+      },
+      {
+        "surface": "turned back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "I have a secret",
@@ -798,6 +966,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "for you",
+        "lemma": "el"
+      },
+      {
         "surface": "O king",
         "lemma": "melekh"
       },
@@ -806,14 +978,38 @@
         "lemma": "hasah"
       },
       {
+        "surface": "said the king",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his attendants",
         "lemma": "amad"
+      },
+      {
+        "surface": "left him",
+        "lemma": "yatsa"
       }
     ],
     "20": [
       {
         "surface": "Then Ehud",
         "lemma": "ehud"
+      },
+      {
+        "surface": "approached him",
+        "lemma": "bo"
+      },
+      {
+        "surface": "while he",
+        "lemma": "hu"
+      },
+      {
+        "surface": "was sitting",
+        "lemma": "yashav"
       },
       {
         "surface": "alone",
@@ -836,12 +1032,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "for you",
+        "lemma": "el"
+      },
+      {
         "surface": "Ehud",
         "lemma": "ehud"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "and the king rose",
         "lemma": "qamay"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
       },
       {
         "surface": "his seat",
@@ -874,6 +1082,10 @@
         "lemma": "cherev"
       },
       {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
         "surface": "his right",
         "lemma": "yamin"
       },
@@ -892,8 +1104,16 @@
     ],
     "22": [
       {
+        "surface": "Even",
+        "lemma": "gam"
+      },
+      {
         "surface": "the handle",
         "lemma": "nitstsav"
+      },
+      {
+        "surface": "sank in",
+        "lemma": "bo"
       },
       {
         "surface": "after",
@@ -920,6 +1140,14 @@
         "lemma": "lahav"
       },
       {
+        "surface": "so that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "Ehud did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "withdraw",
         "lemma": "shalaph"
       },
@@ -934,12 +1162,20 @@
       {
         "surface": "And Eglon’s bowels",
         "lemma": "parshedonah"
+      },
+      {
+        "surface": "emptied",
+        "lemma": "yatsa"
       }
     ],
     "23": [
       {
         "surface": "Then Ehud",
         "lemma": "ehud"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "through the porch",
@@ -968,8 +1204,20 @@
     ],
     "24": [
       {
+        "surface": "After Ehud",
+        "lemma": "hu"
+      },
+      {
+        "surface": "was gone",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Eglon’s servants",
         "lemma": "eved"
+      },
+      {
+        "surface": "came in",
+        "lemma": "bo"
       },
       {
         "surface": "and found",
@@ -988,6 +1236,10 @@
         "lemma": "naal"
       },
       {
+        "surface": "He must be",
+        "lemma": "hu"
+      },
+      {
         "surface": "relieving himself",
         "lemma": "sukh"
       },
@@ -998,12 +1250,20 @@
       {
         "surface": "room",
         "lemma": "cheder"
+      },
+      {
+        "surface": "they said",
+        "lemma": "amar"
       }
     ],
     "25": [
       {
         "surface": "So they waited",
         "lemma": "chul"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "they became worried",
@@ -1072,8 +1332,16 @@
         "lemma": "malat"
       },
       {
+        "surface": "while",
+        "lemma": "ad"
+      },
+      {
         "surface": "the servants waited",
         "lemma": "mahah"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
       },
       {
         "surface": "passed by",
@@ -1093,6 +1361,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "On arriving in Seirah",
+        "lemma": "bo"
+      },
       {
         "surface": "he blew",
         "lemma": "taqa"
@@ -1118,8 +1390,20 @@
         "lemma": "yarad"
       },
       {
+        "surface": "with him",
+        "lemma": "im"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the hills",
         "lemma": "har"
+      },
+      {
+        "surface": "and he became their leader",
+        "lemma": "hu"
       }
     ],
     "28": [
@@ -1132,8 +1416,20 @@
         "lemma": "achar"
       },
       {
+        "surface": "he told them",
+        "lemma": "amar"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has delivered",
+        "lemma": "natan"
       },
       {
         "surface": "your enemies",
@@ -1168,6 +1464,14 @@
         "lemma": "moav"
       },
       {
+        "surface": "and they did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "allow",
+        "lemma": "natan"
+      },
+      {
         "surface": "anyone",
         "lemma": "ish"
       },
@@ -1177,6 +1481,14 @@
       }
     ],
     "29": [
+      {
+        "surface": "At that",
+        "lemma": "hu"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
       {
         "surface": "they struck down",
         "lemma": "nakhah"
@@ -1194,8 +1506,16 @@
         "lemma": "moav"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "robust",
         "lemma": "shamen"
+      },
+      {
+        "surface": "and",
+        "lemma": "kol"
       },
       {
         "surface": "valiant",
@@ -1204,6 +1524,10 @@
       {
         "surface": "men",
         "lemma": "ish"
+      },
+      {
+        "surface": "Not",
+        "lemma": "lo"
       },
       {
         "surface": "one",
@@ -1236,6 +1560,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -1262,6 +1590,10 @@
         "lemma": "achar"
       },
       {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Shamgar",
         "lemma": "shamgar"
       },
@@ -1272,6 +1604,10 @@
       {
         "surface": "of Anath",
         "lemma": "anat"
+      },
+      {
+        "surface": "And he too",
+        "lemma": "hu"
       },
       {
         "surface": "saved",
@@ -1305,7 +1641,7 @@
   },
   "themeLemmas": [
     "yisrael",
-    "moav",
-    "kushanrishatayim"
+    "hu",
+    "moav"
   ]
 }

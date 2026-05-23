@@ -6,12 +6,28 @@
   "verses": {
     "1": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you go out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "to war",
         "lemma": "milchamah"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "your enemies",
         "lemma": "oyev"
+      },
+      {
+        "surface": "and see",
+        "lemma": "raah"
       },
       {
         "surface": "horses",
@@ -30,8 +46,20 @@
         "lemma": "rav"
       },
       {
+        "surface": "than yours",
+        "lemma": "min"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -52,12 +80,24 @@
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "is with you",
+        "lemma": "im"
       }
     ],
     "2": [
       {
+        "surface": "When you are about to",
+        "lemma": "hayah"
+      },
+      {
         "surface": "go",
         "lemma": "qarav"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
       },
       {
         "surface": "battle",
@@ -82,12 +122,28 @@
     ],
     "3": [
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to them",
+        "lemma": "el"
+      },
+      {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "O Israel",
         "lemma": "yisrael"
       },
       {
         "surface": "today",
         "lemma": "yom"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
       },
       {
         "surface": "are going",
@@ -98,16 +154,32 @@
         "lemma": "milchamah"
       },
       {
+        "surface": "with",
+        "lemma": "al"
+      },
+      {
         "surface": "your enemies",
         "lemma": "oyev"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be fainthearted",
         "lemma": "rakhakh"
       },
       {
+        "surface": "or",
+        "lemma": "al"
+      },
+      {
         "surface": "afraid",
         "lemma": "yare"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "be alarmed",
@@ -124,6 +196,10 @@
     ],
     "4": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -136,8 +212,16 @@
         "lemma": "halakh"
       },
       {
+        "surface": "with you",
+        "lemma": "im"
+      },
+      {
         "surface": "to fight",
         "lemma": "lacham"
+      },
+      {
+        "surface": "against",
+        "lemma": "im"
       },
       {
         "surface": "your enemies",
@@ -162,6 +246,10 @@
         "lemma": "am"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Has any",
         "lemma": "mi"
       },
@@ -182,6 +270,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "dedicated it",
         "lemma": "chanakh"
       },
@@ -192,6 +284,10 @@
       {
         "surface": "home",
         "lemma": "bet"
+      },
+      {
+        "surface": "or",
+        "lemma": "pen"
       },
       {
         "surface": "he may die",
@@ -232,6 +328,10 @@
         "lemma": "kerem"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "begun to enjoy its fruit",
         "lemma": "chalal"
       },
@@ -242,6 +342,10 @@
       {
         "surface": "home",
         "lemma": "bet"
+      },
+      {
+        "surface": "or",
+        "lemma": "pen"
       },
       {
         "surface": "he may die",
@@ -282,6 +386,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "married her",
         "lemma": "laqach"
       },
@@ -292,6 +400,10 @@
       {
         "surface": "home",
         "lemma": "bet"
+      },
+      {
+        "surface": "or",
+        "lemma": "pen"
       },
       {
         "surface": "he may die",
@@ -328,8 +440,16 @@
         "lemma": "yasaph"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the army",
         "lemma": "am"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "Is any",
@@ -362,6 +482,10 @@
       {
         "surface": "of his brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "melt",
@@ -408,6 +532,10 @@
     ],
     "10": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "you approach",
         "lemma": "qarav"
       },
@@ -420,11 +548,23 @@
         "lemma": "lacham"
       },
       {
+        "surface": "against it",
+        "lemma": "al"
+      },
+      {
+        "surface": "you are to make an offer",
+        "lemma": "qara"
+      },
+      {
         "surface": "of peace",
         "lemma": "shalom"
       }
     ],
     "11": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "they accept",
         "lemma": "un"
@@ -438,12 +578,20 @@
         "lemma": "patach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
       {
         "surface": "there",
         "lemma": "matsa"
+      },
+      {
+        "surface": "will become",
+        "lemma": "hayah"
       },
       {
         "surface": "forced laborers",
@@ -456,16 +604,40 @@
     ],
     "12": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "they refuse",
+        "lemma": "lo"
+      },
+      {
         "surface": "to make peace",
         "lemma": "salem"
+      },
+      {
+        "surface": "with you",
+        "lemma": "im"
+      },
+      {
+        "surface": "and wage",
+        "lemma": "asah"
       },
       {
         "surface": "war",
         "lemma": "milchamah"
       },
       {
+        "surface": "against you",
+        "lemma": "im"
+      },
+      {
         "surface": "lay siege",
         "lemma": "tsur"
+      },
+      {
+        "surface": "to that city",
+        "lemma": "al"
       }
     ],
     "13": [
@@ -478,12 +650,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "has delivered it",
+        "lemma": "natan"
+      },
+      {
         "surface": "into your hand",
         "lemma": "yad"
       },
       {
         "surface": "you must put",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "male",
@@ -500,6 +680,10 @@
     ],
     "14": [
       {
+        "surface": "But",
+        "lemma": "raq"
+      },
+      {
         "surface": "the women",
         "lemma": "ishshah"
       },
@@ -512,8 +696,20 @@
         "lemma": "behemah"
       },
       {
+        "surface": "and whatever",
+        "lemma": "kol"
+      },
+      {
+        "surface": "else is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "its spoil",
@@ -536,18 +732,34 @@
         "lemma": "oyev"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "gives",
+        "lemma": "natan"
       }
     ],
     "15": [
       {
         "surface": "This is how",
         "lemma": "ken"
+      },
+      {
+        "surface": "you are to treat",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the cities",
@@ -558,18 +770,42 @@
         "lemma": "rachoq"
       },
       {
+        "surface": "from you",
+        "lemma": "min"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "belong to the",
+        "lemma": "elleh"
+      },
+      {
         "surface": "nations nearby",
         "lemma": "goy"
       }
     ],
     "16": [
       {
+        "surface": "However",
+        "lemma": "raq"
+      },
+      {
         "surface": "in the cities",
         "lemma": "ir"
       },
       {
+        "surface": "of the",
+        "lemma": "elleh"
+      },
+      {
         "surface": "nations",
         "lemma": "am"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -580,12 +816,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "is giving",
+        "lemma": "natan"
+      },
+      {
         "surface": "as an inheritance",
         "lemma": "nachalah"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "you must not leave alive",
         "lemma": "chayah"
+      },
+      {
+        "surface": "anything",
+        "lemma": "kol"
       },
       {
         "surface": "that breathes",
@@ -593,6 +841,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "you must devote them to complete destruction",
         "lemma": "charam"
@@ -622,6 +874,10 @@
         "lemma": "yevusi"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -636,12 +892,32 @@
     ],
     "18": [
       {
+        "surface": "so that",
+        "lemma": "maan"
+      },
+      {
+        "surface": "they cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "teach",
         "lemma": "lamad"
       },
       {
+        "surface": "you to do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the detestable things",
         "lemma": "toevah"
+      },
+      {
+        "surface": "they do",
+        "lemma": "asah"
       },
       {
         "surface": "for their gods",
@@ -662,8 +938,16 @@
     ],
     "19": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "you lay siege",
         "lemma": "tsur"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "a city",
@@ -682,8 +966,16 @@
         "lemma": "lacham"
       },
       {
+        "surface": "against it",
+        "lemma": "al"
+      },
+      {
         "surface": "to capture it",
         "lemma": "taphas"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "lo"
       },
       {
         "surface": "destroy",
@@ -702,8 +994,20 @@
         "lemma": "garzen"
       },
       {
+        "surface": "to them",
+        "lemma": "al"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "you can eat their fruit",
         "lemma": "akhal"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
       },
       {
         "surface": "cut them down",
@@ -723,6 +1027,10 @@
       },
       {
         "surface": "vvv",
+        "lemma": "bo"
+      },
+      {
+        "surface": "vvv",
         "lemma": "paneh"
       },
       {
@@ -732,6 +1040,10 @@
     ],
     "20": [
       {
+        "surface": "But",
+        "lemma": "raq"
+      },
+      {
         "surface": "you may destroy",
         "lemma": "shachat"
       },
@@ -740,8 +1052,16 @@
         "lemma": "ets"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "you know",
         "lemma": "yada"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "produce fruit",
@@ -760,12 +1080,32 @@
         "lemma": "matsor"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "the city",
         "lemma": "ir"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "is waging",
+        "lemma": "asah"
+      },
+      {
         "surface": "war",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "against you",
+        "lemma": "im"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "it falls",
@@ -774,8 +1114,8 @@
     ]
   },
   "themeLemmas": [
-    "milchamah",
-    "halakh",
-    "bet"
+    "lo",
+    "al",
+    "milchamah"
   ]
 }

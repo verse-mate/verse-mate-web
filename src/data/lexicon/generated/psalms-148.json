@@ -18,6 +18,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the heavens",
         "lemma": "shamayim"
       },
@@ -36,12 +40,20 @@
         "lemma": "halal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His angels",
         "lemma": "maleakh"
       },
       {
         "surface": "praise Him",
         "lemma": "halal"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "His heavenly hosts",
@@ -66,6 +78,10 @@
         "lemma": "halal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "you shining",
         "lemma": "or"
       },
@@ -88,6 +104,10 @@
         "lemma": "mayim"
       },
       {
+        "surface": "above",
+        "lemma": "al"
+      },
+      {
         "surface": "the skies",
         "lemma": "shamayim"
       }
@@ -104,6 +124,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
       },
       {
         "surface": "gave the command",
@@ -128,8 +156,16 @@
         "lemma": "olam"
       },
       {
+        "surface": "He issued",
+        "lemma": "natan"
+      },
+      {
         "surface": "a decree",
         "lemma": "choq"
+      },
+      {
+        "surface": "that will never",
+        "lemma": "lo"
       },
       {
         "surface": "pass away",
@@ -146,8 +182,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "great sea creatures",
@@ -184,6 +228,10 @@
         "lemma": "ruach"
       },
       {
+        "surface": "fulfilling",
+        "lemma": "asah"
+      },
+      {
         "surface": "His word",
         "lemma": "davar"
       }
@@ -192,6 +240,10 @@
       {
         "surface": "mountains",
         "lemma": "har"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "hills",
@@ -206,6 +258,10 @@
         "lemma": "ets"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "cedars",
         "lemma": "erez"
       }
@@ -214,6 +270,10 @@
       {
         "surface": "wild animals",
         "lemma": "chay"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "cattle",
@@ -242,12 +302,20 @@
         "lemma": "erets"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "peoples",
         "lemma": "leom"
       },
       {
         "surface": "princes",
         "lemma": "sar"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "rulers",
@@ -264,12 +332,20 @@
         "lemma": "bachur"
       },
       {
+        "surface": "and",
+        "lemma": "gam"
+      },
+      {
         "surface": "maidens",
         "lemma": "betulah"
       },
       {
         "surface": "old",
         "lemma": "zaqen"
+      },
+      {
+        "surface": "and",
+        "lemma": "im"
       },
       {
         "surface": "young together",
@@ -290,6 +366,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "His name",
         "lemma": "shem"
       },
@@ -304,6 +384,10 @@
       {
         "surface": "His splendor",
         "lemma": "hod"
+      },
+      {
+        "surface": "is above",
+        "lemma": "al"
       },
       {
         "surface": "the earth",
@@ -332,6 +416,10 @@
         "lemma": "tehillah"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His saints",
         "lemma": "chasid"
       },
@@ -355,6 +443,7 @@
   },
   "themeLemmas": [
     "halal",
+    "kol",
     "shem"
   ]
 }

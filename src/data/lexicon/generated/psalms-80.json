@@ -10,6 +10,10 @@
         "lemma": "natsach"
       },
       {
+        "surface": "To the tune of",
+        "lemma": "el"
+      },
+      {
         "surface": "The Lilies",
         "lemma": "shushan"
       },
@@ -48,6 +52,10 @@
       {
         "surface": "like a flock",
         "lemma": "tson"
+      },
+      {
+        "surface": "You who sit enthroned",
+        "lemma": "yashav"
       },
       {
         "surface": "between the cherubim",
@@ -94,6 +102,10 @@
     ],
     "3": [
       {
+        "surface": "Restore us",
+        "lemma": "shuv"
+      },
+      {
         "surface": "O God",
         "lemma": "elohim"
       },
@@ -122,6 +134,10 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "how long",
+        "lemma": "ad"
       },
       {
         "surface": "will Your anger smolder",
@@ -185,6 +201,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "Restore us",
+        "lemma": "shuv"
+      },
       {
         "surface": "O God",
         "lemma": "elohim"
@@ -294,12 +314,20 @@
         "lemma": "qatsir"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "the Sea",
         "lemma": "yam"
       },
       {
         "surface": "and its shoots",
         "lemma": "yoneqet"
+      },
+      {
+        "surface": "toward",
+        "lemma": "el"
       },
       {
         "surface": "the River",
@@ -318,6 +346,10 @@
       {
         "surface": "its walls",
         "lemma": "gader"
+      },
+      {
+        "surface": "so that all",
+        "lemma": "kol"
       },
       {
         "surface": "who pass by",
@@ -356,6 +388,10 @@
     ],
     "14": [
       {
+        "surface": "Return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "O God",
         "lemma": "elohim"
       },
@@ -376,8 +412,16 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "and see",
+        "lemma": "raah"
+      },
+      {
         "surface": "Attend to",
         "lemma": "paqad"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
       },
       {
         "surface": "vine",
@@ -434,12 +478,24 @@
         "lemma": "yad"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
         "surface": "the man",
         "lemma": "ish"
       },
       {
         "surface": "at Your right hand",
         "lemma": "yamin"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the son",
@@ -456,12 +512,24 @@
     ],
     "18": [
       {
+        "surface": "Then we will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turn away",
         "lemma": "sug"
       },
       {
+        "surface": "from You",
+        "lemma": "min"
+      },
+      {
         "surface": "revive us",
         "lemma": "chayah"
+      },
+      {
+        "surface": "and we will call",
+        "lemma": "qara"
       },
       {
         "surface": "on Your name",
@@ -469,6 +537,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "Restore us",
+        "lemma": "shuv"
+      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -498,6 +570,6 @@
   "themeLemmas": [
     "paneh",
     "tsava",
-    "yasah"
+    "shuv"
   ]
 }

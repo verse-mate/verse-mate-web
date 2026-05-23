@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Where",
         "lemma": "ay"
       },
@@ -30,8 +34,16 @@
         "lemma": "keritut"
       },
       {
+        "surface": "with which",
+        "lemma": "asher"
+      },
+      {
         "surface": "I sent her away",
         "lemma": "shalach"
+      },
+      {
+        "surface": "Or",
+        "lemma": "o"
       },
       {
         "surface": "to which",
@@ -84,12 +96,20 @@
         "lemma": "ish"
       },
       {
+        "surface": "when I arrived",
+        "lemma": "bo"
+      },
+      {
         "surface": "Why did no one",
         "lemma": "ayin"
       },
       {
         "surface": "answer",
         "lemma": "un"
+      },
+      {
+        "surface": "when I called",
+        "lemma": "qara"
       },
       {
         "surface": "Is My hand",
@@ -102,6 +122,10 @@
       {
         "surface": "to redeem you",
         "lemma": "pedut"
+      },
+      {
+        "surface": "Or",
+        "lemma": "im"
       },
       {
         "surface": "do I lack",
@@ -204,6 +228,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "has given",
+        "lemma": "natan"
+      },
+      {
         "surface": "the tongue",
         "lemma": "lashon"
       },
@@ -248,6 +276,10 @@
         "lemma": "ozen"
       },
       {
+        "surface": "to listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "as a disciple",
         "lemma": "limmud"
       }
@@ -270,8 +302,20 @@
         "lemma": "ozen"
       },
       {
+        "surface": "and I",
+        "lemma": "anokhi"
+      },
+      {
+        "surface": "have not been",
+        "lemma": "lo"
+      },
+      {
         "surface": "rebellious",
         "lemma": "marah"
+      },
+      {
+        "surface": "nor have I",
+        "lemma": "lo"
       },
       {
         "surface": "turned",
@@ -283,6 +327,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "I offered",
+        "lemma": "natan"
+      },
       {
         "surface": "My back",
         "lemma": "gev"
@@ -298,6 +346,10 @@
       {
         "surface": "to those who tore out My beard",
         "lemma": "marat"
+      },
+      {
+        "surface": "I did not",
+        "lemma": "lo"
       },
       {
         "surface": "hide",
@@ -330,8 +382,16 @@
         "lemma": "azar"
       },
       {
+        "surface": "I have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "been disgraced",
         "lemma": "kalam"
+      },
+      {
+        "surface": "therefore",
+        "lemma": "al"
       },
       {
         "surface": "I have set",
@@ -348,6 +408,14 @@
       {
         "surface": "and I know",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "lo"
       },
       {
         "surface": "be put to shame",
@@ -372,6 +440,10 @@
         "lemma": "riv"
       },
       {
+        "surface": "with Me",
+        "lemma": "et"
+      },
+      {
         "surface": "Let us confront",
         "lemma": "amad"
       },
@@ -390,6 +462,10 @@
       {
         "surface": "Let him approach",
         "lemma": "nagash"
+      },
+      {
+        "surface": "Me",
+        "lemma": "el"
       }
     ],
     "9": [
@@ -414,12 +490,20 @@
         "lemma": "mi"
       },
       {
+        "surface": "is there",
+        "lemma": "hu"
+      },
+      {
         "surface": "to condemn Me",
         "lemma": "rasah"
       },
       {
         "surface": "See",
         "lemma": "hen"
+      },
+      {
+        "surface": "they will all",
+        "lemma": "kol"
       },
       {
         "surface": "wear out",
@@ -452,12 +536,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and obeys",
+        "lemma": "shama"
+      },
+      {
         "surface": "the voice",
         "lemma": "qol"
       },
       {
         "surface": "of His Servant",
         "lemma": "eved"
+      },
+      {
+        "surface": "Who",
+        "lemma": "asher"
       },
       {
         "surface": "among you walks",
@@ -502,6 +594,10 @@
         "lemma": "hen"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "you who kindle",
         "lemma": "qadach"
       },
@@ -538,6 +634,14 @@
         "lemma": "baar"
       },
       {
+        "surface": "This is what",
+        "lemma": "zot"
+      },
+      {
+        "surface": "will receive",
+        "lemma": "hayah"
+      },
+      {
         "surface": "from My hand",
         "lemma": "yad"
       },
@@ -553,7 +657,7 @@
   },
   "themeLemmas": [
     "mi",
-    "hen",
-    "yehovih"
+    "lo",
+    "hen"
   ]
 }

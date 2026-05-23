@@ -48,12 +48,28 @@
     ],
     "2": [
       {
+        "surface": "O You who listen to",
+        "lemma": "shama"
+      },
+      {
         "surface": "prayer",
         "lemma": "tephillah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "people",
         "lemma": "basar"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to You",
+        "lemma": "ad"
       }
     ],
     "3": [
@@ -64,6 +80,14 @@
       {
         "surface": "prevail",
         "lemma": "gavar"
+      },
+      {
+        "surface": "against me",
+        "lemma": "min"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
       },
       {
         "surface": "atone for",
@@ -142,6 +166,10 @@
         "lemma": "mivtach"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the ends",
         "lemma": "qetsev"
       },
@@ -212,6 +240,10 @@
     ],
     "8": [
       {
+        "surface": "Those who live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "far away",
         "lemma": "qetsat"
       },
@@ -272,6 +304,10 @@
       {
         "surface": "of water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "You prepare",
@@ -404,6 +440,10 @@
       {
         "surface": "They shout in triumph",
         "lemma": "rua"
+      },
+      {
+        "surface": "indeed",
+        "lemma": "aph"
       },
       {
         "surface": "they sing",

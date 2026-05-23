@@ -18,6 +18,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "He is good",
         "lemma": "tov"
       },
@@ -44,6 +48,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "or fully proclaim",
+        "lemma": "shama"
+      },
+      {
         "surface": "His praise",
         "lemma": "tehillah"
       }
@@ -62,8 +70,20 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "who practice",
+        "lemma": "asah"
+      },
+      {
         "surface": "righteousness",
         "lemma": "tsedaqah"
+      },
+      {
+        "surface": "at all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "times",
+        "lemma": "et"
       }
     ],
     "4": [
@@ -94,6 +114,10 @@
     ],
     "5": [
       {
+        "surface": "that I may see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the prosperity",
         "lemma": "tov"
       },
@@ -118,6 +142,10 @@
         "lemma": "halal"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "Your inheritance",
         "lemma": "nachalah"
       }
@@ -126,6 +154,14 @@
       {
         "surface": "We have sinned",
         "lemma": "chata"
+      },
+      {
+        "surface": "like",
+        "lemma": "im"
+      },
+      {
+        "surface": "our fathers",
+        "lemma": "av"
       },
       {
         "surface": "we have done wrong",
@@ -138,8 +174,16 @@
     ],
     "7": [
       {
+        "surface": "Our fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "in Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
       },
       {
         "surface": "grasp",
@@ -166,6 +210,10 @@
         "lemma": "marah"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the sea",
         "lemma": "yam"
       },
@@ -182,6 +230,10 @@
       {
         "surface": "Yet He saved them",
         "lemma": "yasah"
+      },
+      {
+        "surface": "for the sake of",
+        "lemma": "maan"
       },
       {
         "surface": "His name",
@@ -266,6 +318,10 @@
         "lemma": "tsar"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "one",
         "lemma": "echad"
       },
@@ -306,6 +362,10 @@
         "lemma": "maaseh"
       },
       {
+        "surface": "and failed",
+        "lemma": "lo"
+      },
+      {
         "surface": "to wait",
         "lemma": "chakhah"
       },
@@ -341,6 +401,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "So He granted",
+        "lemma": "natan"
+      },
       {
         "surface": "their request",
         "lemma": "sheelah"
@@ -446,6 +510,10 @@
         "lemma": "chorev"
       },
       {
+        "surface": "they made",
+        "lemma": "asah"
+      },
+      {
         "surface": "a calf",
         "lemma": "egel"
       },
@@ -494,6 +562,10 @@
         "lemma": "yasah"
       },
       {
+        "surface": "who did",
+        "lemma": "asah"
+      },
+      {
         "surface": "great",
         "lemma": "gadol"
       },
@@ -520,6 +592,10 @@
         "lemma": "yare"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the Red",
         "lemma": "suph"
       },
@@ -529,6 +605,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "So He said",
+        "lemma": "amar"
+      },
       {
         "surface": "He would destroy them",
         "lemma": "shamad"
@@ -558,6 +638,10 @@
         "lemma": "perets"
       },
       {
+        "surface": "to divert",
+        "lemma": "shuv"
+      },
+      {
         "surface": "His wrath",
         "lemma": "chemah"
       },
@@ -580,6 +664,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "they did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "believe",
         "lemma": "aman"
       },
@@ -596,6 +684,14 @@
       {
         "surface": "in their tents",
         "lemma": "ohel"
+      },
+      {
+        "surface": "and did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
       },
       {
         "surface": "to the voice",
@@ -728,6 +824,10 @@
       {
         "surface": "generations",
         "lemma": "dor"
+      },
+      {
+        "surface": "to come",
+        "lemma": "ad"
       }
     ],
     "32": [
@@ -744,15 +844,27 @@
         "lemma": "qatsaph"
       },
       {
+        "surface": "the LORD",
+        "lemma": "al"
+      },
+      {
         "surface": "and trouble came",
         "lemma": "raa"
       },
       {
         "surface": "to Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "because of them",
+        "lemma": "avur"
       }
     ],
     "33": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "they rebelled against",
         "lemma": "marah"
@@ -772,6 +884,10 @@
     ],
     "34": [
       {
+        "surface": "They did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "destroy",
         "lemma": "shamad"
       },
@@ -780,8 +896,16 @@
         "lemma": "am"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "had commanded",
+        "lemma": "amar"
       }
     ],
     "35": [
@@ -812,6 +936,10 @@
         "lemma": "atsav"
       },
       {
+        "surface": "which became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a snare to them",
         "lemma": "moqesh"
       }
@@ -824,6 +952,10 @@
       {
         "surface": "their sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "their daughters",
@@ -858,6 +990,10 @@
       {
         "surface": "and daughters",
         "lemma": "bat"
+      },
+      {
+        "surface": "whom",
+        "lemma": "asher"
       },
       {
         "surface": "they sacrificed",
@@ -930,6 +1066,10 @@
     ],
     "41": [
       {
+        "surface": "He delivered them",
+        "lemma": "natan"
+      },
+      {
         "surface": "into the hand",
         "lemma": "yad"
       },
@@ -982,6 +1122,10 @@
         "lemma": "natsal"
       },
       {
+        "surface": "but they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "were bent",
         "lemma": "marah"
       },
@@ -1000,8 +1144,16 @@
     ],
     "44": [
       {
+        "surface": "Nevertheless He heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "their cry",
         "lemma": "rinnah"
+      },
+      {
+        "surface": "He took note",
+        "lemma": "raah"
       },
       {
         "surface": "of their distress",
@@ -1032,12 +1184,24 @@
     ],
     "46": [
       {
+        "surface": "He made",
+        "lemma": "natan"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "objects of compassion",
         "lemma": "racham"
       },
       {
         "surface": "to",
         "lemma": "paneh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "who held them captive",
@@ -1060,6 +1224,10 @@
       {
         "surface": "and gather us",
         "lemma": "qavats"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the nations",
@@ -1104,16 +1272,32 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "everlasting",
-        "lemma": "olam"
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "everlasting",
         "lemma": "olam"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
+        "surface": "everlasting",
+        "lemma": "olam"
+      },
+      {
+        "surface": "Let all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Amen",
@@ -1126,8 +1310,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "yasah",
-    "yam",
-    "zakhar"
+    "yam"
   ]
 }

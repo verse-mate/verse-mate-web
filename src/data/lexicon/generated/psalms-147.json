@@ -10,6 +10,10 @@
         "lemma": "halal"
       },
       {
+        "surface": "How",
+        "lemma": "ki"
+      },
+      {
         "surface": "good it is",
         "lemma": "tov"
       },
@@ -20,6 +24,10 @@
       {
         "surface": "to our God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "how",
+        "lemma": "ki"
       },
       {
         "surface": "pleasant",
@@ -92,6 +100,14 @@
         "lemma": "kokhav"
       },
       {
+        "surface": "He calls them",
+        "lemma": "qara"
+      },
+      {
+        "surface": "each",
+        "lemma": "kol"
+      },
+      {
         "surface": "by name",
         "lemma": "shem"
       }
@@ -148,6 +164,10 @@
         "lemma": "rasah"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "the ground",
         "lemma": "erets"
       }
@@ -188,6 +208,10 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "with clouds",
+        "lemma": "av"
+      },
+      {
         "surface": "who prepares",
         "lemma": "kun"
       },
@@ -214,6 +238,10 @@
     ],
     "9": [
       {
+        "surface": "He provides",
+        "lemma": "natan"
+      },
+      {
         "surface": "food",
         "lemma": "lechem"
       },
@@ -228,9 +256,17 @@
       {
         "surface": "ravens",
         "lemma": "orev"
+      },
+      {
+        "surface": "when they call",
+        "lemma": "qara"
       }
     ],
     "10": [
+      {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
       {
         "surface": "delight",
         "lemma": "chaphets"
@@ -242,6 +278,10 @@
       {
         "surface": "of the horse",
         "lemma": "sus"
+      },
+      {
+        "surface": "He takes no",
+        "lemma": "lo"
       },
       {
         "surface": "pleasure",
@@ -306,6 +346,10 @@
     ],
     "13": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "He strengthens",
         "lemma": "chazaq"
       },
@@ -366,6 +410,10 @@
         "lemma": "imrah"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -383,6 +431,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "He spreads",
+        "lemma": "natan"
+      },
       {
         "surface": "the snow",
         "lemma": "sheleg"
@@ -488,8 +540,16 @@
     ],
     "20": [
       {
+        "surface": "He has done",
+        "lemma": "asah"
+      },
+      {
         "surface": "this",
         "lemma": "ken"
+      },
+      {
+        "surface": "for no other",
+        "lemma": "kol"
       },
       {
         "surface": "nation",
@@ -514,8 +574,8 @@
     ]
   },
   "themeLemmas": [
+    "ki",
     "halal",
-    "zamar",
-    "yisrael"
+    "zamar"
   ]
 }

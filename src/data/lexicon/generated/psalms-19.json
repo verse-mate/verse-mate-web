@@ -104,12 +104,24 @@
       {
         "surface": "without a sound",
         "lemma": "qol"
+      },
+      {
+        "surface": "to be heard",
+        "lemma": "shama"
       }
     ],
     "4": [
       {
         "surface": "their voice",
         "lemma": "qav"
+      },
+      {
+        "surface": "has gone out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "into all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -144,6 +156,10 @@
       {
         "surface": "Like a bridegroom",
         "lemma": "chatan"
+      },
+      {
+        "surface": "emerging",
+        "lemma": "yatsa"
       },
       {
         "surface": "from his chamber",
@@ -184,6 +200,10 @@
         "lemma": "tequphah"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "the other",
         "lemma": "qatsah"
       },
@@ -212,6 +232,10 @@
       {
         "surface": "is perfect",
         "lemma": "tamim"
+      },
+      {
+        "surface": "reviving",
+        "lemma": "shuv"
       },
       {
         "surface": "the soul",
@@ -354,6 +378,10 @@
     ],
     "11": [
       {
+        "surface": "By them indeed",
+        "lemma": "gam"
+      },
+      {
         "surface": "Your servant",
         "lemma": "eved"
       },
@@ -406,12 +434,24 @@
         "lemma": "eved"
       },
       {
+        "surface": "also",
+        "lemma": "gam"
+      },
+      {
         "surface": "from willful sins",
         "lemma": "zed"
       },
       {
+        "surface": "may they not",
+        "lemma": "al"
+      },
+      {
         "surface": "rule",
         "lemma": "mashal"
+      },
+      {
+        "surface": "Then",
+        "lemma": "az"
       },
       {
         "surface": "I will be blameless",
@@ -448,6 +488,10 @@
         "lemma": "lev"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "pleasing",
         "lemma": "ratson"
       },
@@ -471,7 +515,7 @@
   },
   "themeLemmas": [
     "rav",
-    "satar",
-    "qatseh"
+    "yatsa",
+    "satar"
   ]
 }

@@ -24,12 +24,20 @@
         "lemma": "azar"
       },
       {
+        "surface": "the powerless",
+        "lemma": "lo"
+      },
+      {
         "surface": "and saved",
         "lemma": "yasah"
       },
       {
         "surface": "the arm",
         "lemma": "zeroa"
+      },
+      {
+        "surface": "that is feeble",
+        "lemma": "lo"
       }
     ],
     "3": [
@@ -40,6 +48,10 @@
       {
         "surface": "you have counseled",
         "lemma": "yaats"
+      },
+      {
+        "surface": "the unwise",
+        "lemma": "lo"
       },
       {
         "surface": "and provided",
@@ -55,6 +67,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "To",
+        "lemma": "et"
+      },
       {
         "surface": "whom",
         "lemma": "mi"
@@ -74,6 +90,14 @@
       {
         "surface": "spirit",
         "lemma": "neshamah"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "through you",
+        "lemma": "min"
       }
     ],
     "5": [
@@ -134,6 +158,10 @@
         "lemma": "tsaphon"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "empty space",
         "lemma": "tohu"
       },
@@ -144,6 +172,10 @@
       {
         "surface": "the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "upon",
+        "lemma": "al"
       },
       {
         "surface": "nothing",
@@ -160,8 +192,16 @@
         "lemma": "mayim"
       },
       {
+        "surface": "in His clouds",
+        "lemma": "av"
+      },
+      {
         "surface": "yet the clouds",
         "lemma": "anan"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "burst",
@@ -190,6 +230,10 @@
         "lemma": "parshez"
       },
       {
+        "surface": "over it",
+        "lemma": "al"
+      },
+      {
         "surface": "His cloud",
         "lemma": "anan"
       }
@@ -204,6 +248,10 @@
         "lemma": "choq"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the face",
         "lemma": "paneh"
       },
@@ -212,8 +260,16 @@
         "lemma": "mayim"
       },
       {
+        "surface": "at",
+        "lemma": "ad"
+      },
+      {
         "surface": "the boundary",
         "lemma": "takhlit"
+      },
+      {
+        "surface": "between",
+        "lemma": "im"
       },
       {
         "surface": "light",
@@ -308,6 +364,10 @@
         "lemma": "hen"
       },
       {
+        "surface": "these are",
+        "lemma": "elleh"
+      },
+      {
         "surface": "but the fringes",
         "lemma": "qatsah"
       },
@@ -328,6 +388,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "we hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "Who then",
         "lemma": "mi"
       },
@@ -346,8 +410,8 @@
     ]
   },
   "themeLemmas": [
-    "mi",
-    "mayim",
-    "mah"
+    "lo",
+    "al",
+    "mi"
   ]
 }

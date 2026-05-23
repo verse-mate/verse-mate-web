@@ -14,6 +14,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "He has heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "my voice",
         "lemma": "qol"
       },
@@ -24,12 +32,20 @@
     ],
     "2": [
       {
+        "surface": "Because",
+        "lemma": "ki"
+      },
+      {
         "surface": "He has inclined",
         "lemma": "natah"
       },
       {
         "surface": "His ear",
         "lemma": "ozen"
+      },
+      {
+        "surface": "I will call on Him",
+        "lemma": "qara"
       },
       {
         "surface": "as long as I live",
@@ -75,6 +91,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Then I called",
+        "lemma": "qara"
+      },
       {
         "surface": "on the name",
         "lemma": "shem"
@@ -142,8 +162,16 @@
     ],
     "7": [
       {
+        "surface": "Return to your rest",
+        "lemma": "shuv"
+      },
+      {
         "surface": "O my soul",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -152,9 +180,17 @@
       {
         "surface": "has been good",
         "lemma": "gamal"
+      },
+      {
+        "surface": "to you",
+        "lemma": "al"
       }
     ],
     "8": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "You have delivered",
         "lemma": "chalats"
@@ -162,6 +198,10 @@
       {
         "surface": "my soul",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "death",
@@ -212,8 +252,16 @@
         "lemma": "aman"
       },
       {
+        "surface": "therefore",
+        "lemma": "ki"
+      },
+      {
         "surface": "I said",
         "lemma": "davar"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am greatly",
@@ -230,6 +278,18 @@
         "lemma": "chaphaz"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "men",
         "lemma": "adam"
       },
@@ -244,12 +304,24 @@
         "lemma": "mah"
       },
       {
+        "surface": "can I repay",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "for all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His goodness",
         "lemma": "tagmul"
+      },
+      {
+        "surface": "to me",
+        "lemma": "al"
       }
     ],
     "13": [
@@ -264,6 +336,10 @@
       {
         "surface": "of salvation",
         "lemma": "yeshuah"
+      },
+      {
+        "surface": "and call",
+        "lemma": "qara"
       },
       {
         "surface": "on the name",
@@ -290,6 +366,10 @@
       {
         "surface": "in the presence of",
         "lemma": "neged"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "His people",
@@ -328,8 +408,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "I am",
+        "lemma": "ani"
+      },
+      {
         "surface": "Your servant",
         "lemma": "eved"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am Your servant",
@@ -366,6 +454,10 @@
         "lemma": "todah"
       },
       {
+        "surface": "and call",
+        "lemma": "qara"
+      },
+      {
         "surface": "on the name",
         "lemma": "shem"
       },
@@ -390,6 +482,10 @@
       {
         "surface": "in the presence",
         "lemma": "neged"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "His people",
@@ -424,8 +520,8 @@
     ]
   },
   "themeLemmas": [
-    "shem",
-    "nephesh",
-    "mavet"
+    "ki",
+    "qara",
+    "kol"
   ]
 }

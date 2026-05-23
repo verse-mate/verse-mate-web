@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "So these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "three",
         "lemma": "shalosh"
       },
@@ -24,6 +28,14 @@
       {
         "surface": "Job",
         "lemma": "iyyov"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "he",
+        "lemma": "hu"
       },
       {
         "surface": "was righteous",
@@ -80,6 +92,10 @@
         "lemma": "iyyov"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "justifying",
         "lemma": "tsadaq"
       },
@@ -108,6 +124,14 @@
       {
         "surface": "friends",
         "lemma": "rea"
+      },
+      {
+        "surface": "because",
+        "lemma": "al"
+      },
+      {
+        "surface": "they had failed",
+        "lemma": "lo"
       },
       {
         "surface": "to refute Job",
@@ -140,14 +164,34 @@
         "lemma": "iyyov"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "the others",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "were older",
         "lemma": "zaqen"
+      },
+      {
+        "surface": "than he",
+        "lemma": "min"
       }
     ],
     "5": [
       {
         "surface": "But when he",
         "lemma": "elihu"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the three",
@@ -196,6 +240,10 @@
         "lemma": "un"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am young",
         "lemma": "tsair"
       },
@@ -204,8 +252,16 @@
         "lemma": "yom"
       },
       {
+        "surface": "while you",
+        "lemma": "attah"
+      },
+      {
         "surface": "are old",
         "lemma": "yashish"
+      },
+      {
+        "surface": "that is why",
+        "lemma": "al"
       },
       {
         "surface": "I was timid",
@@ -225,6 +281,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "I thought",
+        "lemma": "amar"
+      },
       {
         "surface": "that age",
         "lemma": "yom"
@@ -256,6 +316,10 @@
         "lemma": "akhen"
       },
       {
+        "surface": "there is",
+        "lemma": "hu"
+      },
+      {
         "surface": "a spirit",
         "lemma": "ruach"
       },
@@ -277,6 +341,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "It is not only",
+        "lemma": "lo"
+      },
       {
         "surface": "the old",
         "lemma": "rav"
@@ -302,6 +370,22 @@
       {
         "surface": "Therefore",
         "lemma": "ken"
+      },
+      {
+        "surface": "I say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "too",
+        "lemma": "aph"
       },
       {
         "surface": "will declare",
@@ -330,8 +414,16 @@
         "lemma": "azan"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "your reasoning",
         "lemma": "tavunah"
+      },
+      {
+        "surface": "as",
+        "lemma": "ad"
       },
       {
         "surface": "you searched",
@@ -360,6 +452,10 @@
         "lemma": "yakhach"
       },
       {
+        "surface": "not one of",
+        "lemma": "min"
+      },
+      {
         "surface": "you rebutted",
         "lemma": "un"
       },
@@ -369,6 +465,14 @@
       }
     ],
     "13": [
+      {
+        "surface": "So do not",
+        "lemma": "pen"
+      },
+      {
+        "surface": "claim",
+        "lemma": "amar"
+      },
       {
         "surface": "We have found",
         "lemma": "matsa"
@@ -382,6 +486,10 @@
         "lemma": "el"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "man",
         "lemma": "ish"
       },
@@ -392,12 +500,28 @@
     ],
     "14": [
       {
+        "surface": "But Job has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "directed",
         "lemma": "arakh"
       },
       {
         "surface": "his words",
         "lemma": "millah"
+      },
+      {
+        "surface": "against me",
+        "lemma": "el"
+      },
+      {
+        "surface": "and I will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "answer him",
+        "lemma": "shuv"
       },
       {
         "surface": "with your arguments",
@@ -408,6 +532,10 @@
       {
         "surface": "Job’s friends are dismayed",
         "lemma": "chatat"
+      },
+      {
+        "surface": "with no",
+        "lemma": "lo"
       },
       {
         "surface": "more",
@@ -432,8 +560,24 @@
         "lemma": "yachal"
       },
       {
+        "surface": "now that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they are silent",
+        "lemma": "lo"
+      },
+      {
+        "surface": "now that",
+        "lemma": "ki"
+      },
+      {
         "surface": "they stand",
         "lemma": "amad"
+      },
+      {
+        "surface": "and no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -446,8 +590,24 @@
     ],
     "17": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "too",
+        "lemma": "aph"
+      },
+      {
         "surface": "will answer",
         "lemma": "un"
+      },
+      {
+        "surface": "yes",
+        "lemma": "aph"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "will declare",
@@ -459,6 +619,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "I am full of",
         "lemma": "male"
@@ -488,6 +652,10 @@
       {
         "surface": "my belly",
         "lemma": "beten"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "is like unvented",
@@ -538,8 +706,16 @@
         "lemma": "nasa"
       },
       {
+        "surface": "to no",
+        "lemma": "al"
+      },
+      {
         "surface": "one",
         "lemma": "ish"
+      },
+      {
+        "surface": "nor will",
+        "lemma": "lo"
       },
       {
         "surface": "I flatter",
@@ -552,12 +728,24 @@
     ],
     "22": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know how",
         "lemma": "yada"
       },
       {
         "surface": "to flatter",
         "lemma": "kanah"
+      },
+      {
+        "surface": "or my Maker",
+        "lemma": "asah"
       },
       {
         "surface": "would remove me",
@@ -570,8 +758,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "un",
-    "iyyov",
-    "millah"
+    "ki"
   ]
 }

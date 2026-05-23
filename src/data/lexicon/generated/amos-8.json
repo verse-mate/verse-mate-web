@@ -18,6 +18,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "showed me",
+        "lemma": "raah"
+      },
+      {
         "surface": "I saw",
         "lemma": "hinneh"
       },
@@ -40,6 +44,18 @@
         "lemma": "mah"
       },
       {
+        "surface": "do you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "He asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "A basket",
         "lemma": "keluv"
       },
@@ -48,12 +64,32 @@
         "lemma": "qayits"
       },
       {
+        "surface": "I replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "So the LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
         "surface": "The end",
         "lemma": "qets"
+      },
+      {
+        "surface": "has come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "for",
+        "lemma": "el"
       },
       {
         "surface": "My people",
@@ -62,6 +98,10 @@
       {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "I will no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -73,6 +113,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "In that",
+        "lemma": "hu"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -116,9 +160,21 @@
       {
         "surface": "in silence",
         "lemma": "hasah"
+      },
+      {
+        "surface": "everywhere",
+        "lemma": "kol"
       }
     ],
     "4": [
+      {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
       {
         "surface": "you who trample",
         "lemma": "shaaph"
@@ -141,6 +197,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "asking",
+        "lemma": "amar"
+      },
       {
         "surface": "When",
         "lemma": "matay"
@@ -220,6 +280,10 @@
         "lemma": "evyon"
       },
       {
+        "surface": "for",
+        "lemma": "avur"
+      },
+      {
         "surface": "a pair of sandals",
         "lemma": "naal"
       },
@@ -254,8 +318,16 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "I will never",
+        "lemma": "im"
+      },
+      {
         "surface": "forget",
         "lemma": "shakhach"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "of their deeds",
@@ -263,6 +335,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Will not",
+        "lemma": "lo"
+      },
       {
         "surface": "the land",
         "lemma": "erets"
@@ -272,8 +348,28 @@
         "lemma": "ragaz"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "its dwellers",
+        "lemma": "yashav"
+      },
+      {
         "surface": "mourn",
         "lemma": "aval"
+      },
+      {
+        "surface": "All of it",
+        "lemma": "kol"
       },
       {
         "surface": "will swell",
@@ -302,6 +398,10 @@
     ],
     "9": [
       {
+        "surface": "And in that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -320,6 +420,10 @@
       {
         "surface": "I will make the sun",
         "lemma": "shemesh"
+      },
+      {
+        "surface": "go down",
+        "lemma": "bo"
       },
       {
         "surface": "at noon",
@@ -352,6 +456,10 @@
         "lemma": "evel"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your songs",
         "lemma": "shir"
       },
@@ -360,12 +468,20 @@
         "lemma": "qinah"
       },
       {
+        "surface": "I will cause everyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "to wear",
         "lemma": "alah"
       },
       {
         "surface": "sackcloth",
         "lemma": "saq"
+      },
+      {
+        "surface": "and every",
+        "lemma": "kol"
       },
       {
         "surface": "head",
@@ -410,6 +526,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "are coming",
+        "lemma": "bo"
+      },
+      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -434,6 +554,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "a famine",
         "lemma": "raav"
       },
@@ -448,6 +572,14 @@
       {
         "surface": "for water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "but a famine",
+        "lemma": "ki"
+      },
+      {
+        "surface": "of hearing",
+        "lemma": "shama"
       },
       {
         "surface": "the words",
@@ -468,6 +600,10 @@
         "lemma": "yam"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "sea",
         "lemma": "yam"
       },
@@ -478,6 +614,10 @@
       {
         "surface": "from north",
         "lemma": "tsaphon"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "east",
@@ -496,11 +636,19 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "but they will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "find it",
         "lemma": "matsa"
       }
     ],
     "13": [
+      {
+        "surface": "In that",
+        "lemma": "hu"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -540,6 +688,10 @@
         "lemma": "shomeron"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "As surely as your god",
         "lemma": "elohim"
       },
@@ -572,6 +724,10 @@
         "lemma": "naphal"
       },
       {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
         "surface": "to rise",
         "lemma": "qamay"
       },
@@ -582,8 +738,8 @@
     ]
   },
   "themeLemmas": [
-    "yehovih",
-    "neum",
-    "yeor"
+    "kol",
+    "lo",
+    "amar"
   ]
 }

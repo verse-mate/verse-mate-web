@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "He is good",
         "lemma": "tov"
       },
@@ -30,6 +34,10 @@
       {
         "surface": "Let Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "His loving devotion",
@@ -50,6 +58,10 @@
         "lemma": "aharon"
       },
       {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
         "surface": "His loving devotion",
         "lemma": "chesed"
       },
@@ -68,6 +80,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
         "surface": "His loving devotion",
         "lemma": "chesed"
       },
@@ -78,8 +94,16 @@
     ],
     "5": [
       {
+        "surface": "In",
+        "lemma": "min"
+      },
+      {
         "surface": "my distress",
         "lemma": "metsar"
+      },
+      {
+        "surface": "I called",
+        "lemma": "qara"
       },
       {
         "surface": "to the LORD",
@@ -104,6 +128,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       },
@@ -114,6 +142,10 @@
       {
         "surface": "can man",
         "lemma": "adam"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       }
     ],
     "7": [
@@ -124,6 +156,14 @@
       {
         "surface": "He is my helper",
         "lemma": "azar"
+      },
+      {
+        "surface": "Therefore I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "will look in triumph",
+        "lemma": "raah"
       },
       {
         "surface": "on those who hate me",
@@ -176,6 +216,10 @@
     ],
     "10": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
@@ -192,6 +236,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "vvv",
+        "lemma": "ki"
+      },
+      {
         "surface": "I cut them off",
         "lemma": "mul"
       }
@@ -200,6 +248,10 @@
       {
         "surface": "They surrounded me",
         "lemma": "savav"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "gam"
       },
       {
         "surface": "on every side",
@@ -212,6 +264,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ki"
       },
       {
         "surface": "I cut them off",
@@ -246,6 +302,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ki"
       },
       {
         "surface": "I cut them off",
@@ -284,6 +344,10 @@
         "lemma": "zimrat"
       },
       {
+        "surface": "and He has become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "salvation",
         "lemma": "yeshuah"
       }
@@ -318,6 +382,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "performs",
+        "lemma": "asah"
+      },
+      {
         "surface": "with valor",
         "lemma": "chayil"
       }
@@ -344,14 +412,26 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "performs",
+        "lemma": "asah"
+      },
+      {
         "surface": "with valor",
         "lemma": "chayil"
       }
     ],
     "17": [
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "die",
         "lemma": "mut"
+      },
+      {
+        "surface": "but",
+        "lemma": "ki"
       },
       {
         "surface": "I will live",
@@ -380,6 +460,14 @@
         "lemma": "yasar"
       },
       {
+        "surface": "but He has not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "given me over",
+        "lemma": "natan"
+      },
+      {
         "surface": "to death",
         "lemma": "mavet"
       }
@@ -398,6 +486,10 @@
         "lemma": "tsedeq"
       },
       {
+        "surface": "that I may enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "and give thanks",
         "lemma": "yadah"
       },
@@ -407,6 +499,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "This",
+        "lemma": "zeh"
+      },
       {
         "surface": "is the gate",
         "lemma": "shaar"
@@ -418,6 +514,10 @@
       {
         "surface": "the righteous",
         "lemma": "tsaddiq"
+      },
+      {
+        "surface": "shall enter",
+        "lemma": "bo"
       }
     ],
     "21": [
@@ -426,8 +526,16 @@
         "lemma": "yadah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "You have answered me",
         "lemma": "un"
+      },
+      {
+        "surface": "and You have become",
+        "lemma": "hayah"
       },
       {
         "surface": "salvation",
@@ -448,14 +556,30 @@
         "lemma": "maas"
       },
       {
+        "surface": "has become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the cornerstone",
         "lemma": "rosh"
       }
     ],
     "23": [
       {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "from the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and it",
+        "lemma": "hu"
       },
       {
         "surface": "is marvelous",
@@ -468,12 +592,20 @@
     ],
     "24": [
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
         "surface": "is the day",
         "lemma": "yom"
       },
       {
         "surface": "that the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has made",
+        "lemma": "asah"
       },
       {
         "surface": "we will rejoice",
@@ -514,6 +646,10 @@
       {
         "surface": "Blessed is",
         "lemma": "barakh"
+      },
+      {
+        "surface": "he who comes",
+        "lemma": "bo"
       },
       {
         "surface": "in the name",
@@ -562,6 +698,10 @@
         "lemma": "avot"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "the horns",
         "lemma": "qeren"
       },
@@ -571,6 +711,10 @@
       }
     ],
     "28": [
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
       {
         "surface": "are my God",
         "lemma": "el"
@@ -598,6 +742,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "He is good",
         "lemma": "tov"
       },
@@ -612,8 +760,8 @@
     ]
   },
   "themeLemmas": [
+    "ki",
     "yah",
-    "yadah",
-    "olam"
+    "yadah"
   ]
 }

@@ -78,12 +78,28 @@
     ],
     "3": [
       {
+        "surface": "who has no",
+        "lemma": "lo"
+      },
+      {
         "surface": "slander",
         "lemma": "ragal"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "his tongue",
         "lemma": "lashon"
+      },
+      {
+        "surface": "who does",
+        "lemma": "asah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "harm",
@@ -96,6 +112,10 @@
       {
         "surface": "who casts no scorn",
         "lemma": "cherpah"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "his friend",
@@ -112,6 +132,10 @@
         "lemma": "maas"
       },
       {
+        "surface": "but",
+        "lemma": "et"
+      },
+      {
         "surface": "honors",
         "lemma": "kavad"
       },
@@ -122,6 +146,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "who does not",
+        "lemma": "lo"
       },
       {
         "surface": "revise",
@@ -138,8 +166,16 @@
     ],
     "5": [
       {
+        "surface": "who lends",
+        "lemma": "natan"
+      },
+      {
         "surface": "his money",
         "lemma": "keseph"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "interest",
@@ -154,8 +190,24 @@
         "lemma": "shachad"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "the innocent",
         "lemma": "naqi"
+      },
+      {
+        "surface": "He who does",
+        "lemma": "asah"
+      },
+      {
+        "surface": "these things",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "will never",
+        "lemma": "lo"
       },
       {
         "surface": "be shaken",
@@ -164,6 +216,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
+    "al",
     "mi"
   ]
 }

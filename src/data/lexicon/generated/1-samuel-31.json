@@ -92,6 +92,10 @@
         "lemma": "avinadav"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "vvv",
         "lemma": "malkishua"
       },
@@ -108,6 +112,10 @@
       {
         "surface": "intensified",
         "lemma": "kavad"
+      },
+      {
+        "surface": "against",
+        "lemma": "el"
       },
       {
         "surface": "Saul",
@@ -136,6 +144,10 @@
         "lemma": "shaul"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to his armor-bearer",
         "lemma": "nasa"
       },
@@ -152,8 +164,20 @@
         "lemma": "daqar"
       },
       {
+        "surface": "or",
+        "lemma": "pen"
+      },
+      {
+        "surface": "these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "uncircumcised men",
         "lemma": "arel"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       },
       {
         "surface": "and run me through",
@@ -170,6 +194,10 @@
       {
         "surface": "was terrified",
         "lemma": "yare"
+      },
+      {
+        "surface": "and refused",
+        "lemma": "lo"
       },
       {
         "surface": "to do it",
@@ -190,12 +218,24 @@
       {
         "surface": "and fell",
         "lemma": "naphal"
+      },
+      {
+        "surface": "on it",
+        "lemma": "al"
       }
     ],
     "5": [
       {
         "surface": "When his armor-bearer",
         "lemma": "nasa"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "Saul",
@@ -206,8 +246,20 @@
         "lemma": "mut"
       },
       {
+        "surface": "he",
+        "lemma": "hu"
+      },
+      {
+        "surface": "too",
+        "lemma": "gam"
+      },
+      {
         "surface": "fell",
         "lemma": "naphal"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "his own sword",
@@ -216,6 +268,10 @@
       {
         "surface": "and died",
         "lemma": "mut"
+      },
+      {
+        "surface": "with him",
+        "lemma": "im"
       }
     ],
     "6": [
@@ -236,6 +292,14 @@
         "lemma": "nasa"
       },
       {
+        "surface": "and",
+        "lemma": "gam"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his men",
         "lemma": "enosh"
       },
@@ -246,6 +310,10 @@
       {
         "surface": "together",
         "lemma": "yachad"
+      },
+      {
+        "surface": "that same",
+        "lemma": "hu"
       },
       {
         "surface": "day",
@@ -274,6 +342,14 @@
         "lemma": "yarden"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the army",
         "lemma": "enosh"
       },
@@ -284,6 +360,10 @@
       {
         "surface": "had fled",
         "lemma": "nus"
+      },
+      {
+        "surface": "and that",
+        "lemma": "ki"
       },
       {
         "surface": "Saul",
@@ -312,6 +392,14 @@
       {
         "surface": "So the Philistines",
         "lemma": "pelishti"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and occupied",
+        "lemma": "yashav"
       }
     ],
     "8": [
@@ -322,6 +410,10 @@
       {
         "surface": "when the Philistines",
         "lemma": "pelishti"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "to strip",
@@ -446,12 +538,28 @@
     ],
     "11": [
       {
+        "surface": "When the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Jabesh-gilead",
         "lemma": "yavesh"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
+      },
+      {
         "surface": "the Philistines",
         "lemma": "pelishti"
+      },
+      {
+        "surface": "had done",
+        "lemma": "asah"
       },
       {
         "surface": "to Saul",
@@ -459,6 +567,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "their men",
         "lemma": "ish"
@@ -474,6 +586,10 @@
       {
         "surface": "journeyed",
         "lemma": "halakh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "night",
@@ -510,6 +626,10 @@
       {
         "surface": "of Beth-shan",
         "lemma": "betshean"
+      },
+      {
+        "surface": "When they arrived",
+        "lemma": "bo"
       },
       {
         "surface": "at Jabesh",

@@ -22,6 +22,10 @@
         "lemma": "mas"
       },
       {
+        "surface": "throughout",
+        "lemma": "al"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -31,6 +35,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "And all",
+        "lemma": "kol"
+      },
       {
         "surface": "of Mordecai’s",
         "lemma": "mordekhay"
@@ -56,6 +64,10 @@
         "lemma": "gedulah"
       },
       {
+        "surface": "to which",
+        "lemma": "asher"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -64,8 +76,20 @@
         "lemma": "gadal"
       },
       {
+        "surface": "are they",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "written",
         "lemma": "katav"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "the Book",
@@ -89,6 +113,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "Mordecai",
         "lemma": "mordekhay"
@@ -150,6 +178,10 @@
         "lemma": "shalom"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his countrymen",
         "lemma": "zera"
       }
@@ -158,6 +190,6 @@
   "themeLemmas": [
     "yehudi",
     "mordekhay",
-    "achashverosh"
+    "kol"
   ]
 }

@@ -22,6 +22,10 @@
         "lemma": "riv"
       },
       {
+        "surface": "against an ungodly",
+        "lemma": "lo"
+      },
+      {
         "surface": "nation",
         "lemma": "goy"
       },
@@ -43,6 +47,14 @@
       }
     ],
     "2": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
       {
         "surface": "are the God",
         "lemma": "elohim"
@@ -94,8 +106,20 @@
         "lemma": "emet"
       },
       {
+        "surface": "let them",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "lead me",
         "lemma": "nachah"
+      },
+      {
+        "surface": "Let them bring me",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Your holy",
@@ -106,11 +130,23 @@
         "lemma": "har"
       },
       {
+        "surface": "and to",
+        "lemma": "el"
+      },
+      {
         "surface": "the place where You dwell",
         "lemma": "mishkan"
       }
     ],
     "4": [
+      {
+        "surface": "Then I will go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
       {
         "surface": "the altar",
         "lemma": "mizbeach"
@@ -118,6 +154,10 @@
       {
         "surface": "of God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "God",
@@ -166,12 +206,20 @@
         "lemma": "hamah"
       },
       {
+        "surface": "within me",
+        "lemma": "al"
+      },
+      {
         "surface": "Put your hope",
         "lemma": "yachal"
       },
       {
         "surface": "in God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "I will yet",

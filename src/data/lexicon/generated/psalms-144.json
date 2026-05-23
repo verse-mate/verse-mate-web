@@ -232,6 +232,10 @@
     ],
     "8": [
       {
+        "surface": "whose",
+        "lemma": "asher"
+      },
+      {
         "surface": "mouths",
         "lemma": "peh"
       },
@@ -284,6 +288,10 @@
     ],
     "10": [
       {
+        "surface": "to Him who gives",
+        "lemma": "natan"
+      },
+      {
         "surface": "victory",
         "lemma": "teshuah"
       },
@@ -330,6 +338,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "whose",
+        "lemma": "asher"
+      },
+      {
         "surface": "mouths",
         "lemma": "peh"
       },
@@ -351,6 +363,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "Then",
+        "lemma": "asher"
+      },
       {
         "surface": "our sons",
         "lemma": "ben"
@@ -448,6 +464,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "going into captivity",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "and no",
         "lemma": "ayin"
       },
@@ -493,7 +513,7 @@
   },
   "themeLemmas": [
     "patsah",
-    "zan",
-    "yamin"
+    "asher",
+    "zan"
   ]
 }

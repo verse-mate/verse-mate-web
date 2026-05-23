@@ -18,6 +18,10 @@
         "lemma": "david"
       },
       {
+        "surface": "How long",
+        "lemma": "ad"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -34,15 +38,27 @@
         "lemma": "netsach"
       },
       {
+        "surface": "How long",
+        "lemma": "ad"
+      },
+      {
         "surface": "will You hide",
         "lemma": "satar"
       },
       {
         "surface": "Your face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "from me",
+        "lemma": "min"
       }
     ],
     "2": [
+      {
+        "surface": "How long",
+        "lemma": "ad"
+      },
       {
         "surface": "must I wrestle",
         "lemma": "shit"
@@ -64,12 +80,20 @@
         "lemma": "yomam"
       },
       {
+        "surface": "How long",
+        "lemma": "ad"
+      },
+      {
         "surface": "will my enemy",
         "lemma": "oyev"
       },
       {
         "surface": "dominate",
         "lemma": "rum"
+      },
+      {
+        "surface": "me",
+        "lemma": "al"
       }
     ],
     "3": [
@@ -98,6 +122,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "lest",
+        "lemma": "pen"
+      },
+      {
         "surface": "I sleep",
         "lemma": "yashen"
       },
@@ -108,8 +136,16 @@
     ],
     "4": [
       {
+        "surface": "lest",
+        "lemma": "pen"
+      },
+      {
         "surface": "my enemy",
         "lemma": "oyev"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "I have overcome him",
@@ -124,11 +160,19 @@
         "lemma": "gil"
       },
       {
+        "surface": "when",
+        "lemma": "ki"
+      },
+      {
         "surface": "I fall",
         "lemma": "mot"
       }
     ],
     "5": [
+      {
+        "surface": "But I",
+        "lemma": "ani"
+      },
       {
         "surface": "have trusted",
         "lemma": "batach"
@@ -160,13 +204,22 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "He has been good",
         "lemma": "gamal"
+      },
+      {
+        "surface": "to me",
+        "lemma": "al"
       }
     ]
   },
   "themeLemmas": [
-    "oyev",
-    "gil"
+    "ad",
+    "pen",
+    "oyev"
   ]
 }

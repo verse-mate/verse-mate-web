@@ -52,6 +52,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "count",
         "lemma": "chashav"
       },
@@ -70,6 +74,10 @@
     ],
     "3": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "I kept silent",
         "lemma": "charash"
       },
@@ -84,9 +92,17 @@
       {
         "surface": "from my groaning",
         "lemma": "sheagah"
+      },
+      {
+        "surface": "all day long",
+        "lemma": "kol"
       }
     ],
     "4": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "day",
         "lemma": "yomam"
@@ -102,6 +118,10 @@
       {
         "surface": "was heavy",
         "lemma": "kavad"
+      },
+      {
+        "surface": "upon me",
+        "lemma": "al"
       },
       {
         "surface": "my strength",
@@ -134,12 +154,20 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "and did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "hide",
         "lemma": "kasah"
       },
       {
         "surface": "my iniquity",
         "lemma": "avan"
+      },
+      {
+        "surface": "I said",
+        "lemma": "amar"
       },
       {
         "surface": "I will confess",
@@ -152,6 +180,10 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and You",
+        "lemma": "attah"
       },
       {
         "surface": "forgave",
@@ -172,6 +204,14 @@
     ],
     "6": [
       {
+        "surface": "Therefore",
+        "lemma": "al"
+      },
+      {
+        "surface": "let all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the godly",
         "lemma": "chasid"
       },
@@ -180,8 +220,20 @@
         "lemma": "palal"
       },
       {
+        "surface": "to You",
+        "lemma": "el"
+      },
+      {
+        "surface": "while",
+        "lemma": "et"
+      },
+      {
         "surface": "You may be found",
         "lemma": "matsa"
+      },
+      {
+        "surface": "Surely",
+        "lemma": "raq"
       },
       {
         "surface": "when great",
@@ -196,11 +248,19 @@
         "lemma": "mayim"
       },
       {
+        "surface": "they will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "come near",
         "lemma": "naga"
       }
     ],
     "7": [
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
       {
         "surface": "are my hiding place",
         "lemma": "seter"
@@ -254,9 +314,21 @@
       {
         "surface": "and watch",
         "lemma": "ayin"
+      },
+      {
+        "surface": "over you",
+        "lemma": "al"
       }
     ],
     "9": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
+      },
       {
         "surface": "like the horse",
         "lemma": "sus"
@@ -292,6 +364,10 @@
       {
         "surface": "come",
         "lemma": "qarav"
+      },
+      {
+        "surface": "to you",
+        "lemma": "el"
       }
     ],
     "10": [
@@ -346,6 +422,10 @@
         "lemma": "run"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "you upright",
         "lemma": "yashar"
       },
@@ -356,8 +436,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "selah",
-    "avan",
-    "savav"
+    "lo"
   ]
 }

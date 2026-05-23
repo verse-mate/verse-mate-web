@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Now these are",
+        "lemma": "elleh"
+      },
+      {
         "surface": "the kings",
         "lemma": "melekh"
       },
@@ -20,6 +24,10 @@
       {
         "surface": "struck down",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "and whose",
+        "lemma": "asher"
       },
       {
         "surface": "lands",
@@ -50,12 +58,20 @@
         "lemma": "nachal"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "Mount",
         "lemma": "har"
       },
       {
         "surface": "Hermon",
         "lemma": "chermon"
+      },
+      {
+        "surface": "including all",
+        "lemma": "kol"
       },
       {
         "surface": "the Arabah",
@@ -80,6 +96,10 @@
         "lemma": "emori"
       },
       {
+        "surface": "who lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Heshbon",
         "lemma": "cheshbon"
       },
@@ -90,6 +110,10 @@
       {
         "surface": "from Aroer",
         "lemma": "aroer"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the rim",
@@ -110,6 +134,10 @@
       {
         "surface": "of the valley",
         "lemma": "nachal"
+      },
+      {
+        "surface": "up to",
+        "lemma": "ad"
       },
       {
         "surface": "the Jabbok",
@@ -156,6 +184,10 @@
       {
         "surface": "of Chinnereth",
         "lemma": "kinnrot"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "the Sea",
@@ -228,6 +260,10 @@
         "lemma": "rapah"
       },
       {
+        "surface": "who lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Ashtaroth",
         "lemma": "ashtarot"
       },
@@ -254,8 +290,16 @@
         "lemma": "salkhah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "of Bashan",
         "lemma": "bashan"
+      },
+      {
+        "surface": "up to",
+        "lemma": "ad"
       },
       {
         "surface": "the border",
@@ -320,6 +364,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "given",
+        "lemma": "natan"
+      },
+      {
         "surface": "their land as an inheritance",
         "lemma": "yerushshah"
       },
@@ -342,12 +390,20 @@
     ],
     "7": [
       {
+        "surface": "And these are",
+        "lemma": "elleh"
+      },
+      {
         "surface": "the kings",
         "lemma": "melekh"
       },
       {
         "surface": "of the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "Joshua",
@@ -390,6 +446,10 @@
         "lemma": "levanon"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "Mount",
         "lemma": "har"
       },
@@ -420,6 +480,10 @@
       {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "gave them",
+        "lemma": "natan"
       },
       {
         "surface": "as an inheritance",
@@ -496,6 +560,10 @@
       {
         "surface": "of Ai",
         "lemma": "ay"
+      },
+      {
+        "surface": "which is",
+        "lemma": "asher"
       },
       {
         "surface": "near",
@@ -922,12 +990,16 @@
       {
         "surface": "kings",
         "lemma": "melekh"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       }
     ]
   },
   "themeLemmas": [
     "echad",
-    "yam",
-    "nachal"
+    "ad",
+    "yam"
   ]
 }

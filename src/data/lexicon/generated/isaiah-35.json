@@ -40,6 +40,10 @@
         "lemma": "parach"
       },
       {
+        "surface": "and",
+        "lemma": "aph"
+      },
+      {
         "surface": "rejoice",
         "lemma": "gil"
       },
@@ -60,6 +64,10 @@
         "lemma": "levanon"
       },
       {
+        "surface": "will be given",
+        "lemma": "natan"
+      },
+      {
         "surface": "the splendor",
         "lemma": "hadar"
       },
@@ -70,6 +78,14 @@
       {
         "surface": "and Sharon",
         "lemma": "sharon"
+      },
+      {
+        "surface": "They",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "will see",
+        "lemma": "raah"
       },
       {
         "surface": "the glory",
@@ -116,6 +132,10 @@
     ],
     "4": [
       {
+        "surface": "Say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to those with anxious",
         "lemma": "mahar"
       },
@@ -126,6 +146,10 @@
       {
         "surface": "Be strong",
         "lemma": "chazaq"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "fear",
@@ -140,6 +164,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "with vengeance",
         "lemma": "naqam"
       },
@@ -152,11 +180,23 @@
         "lemma": "gemul"
       },
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "to save you",
         "lemma": "yasah"
       }
     ],
     "5": [
+      {
+        "surface": "Then",
+        "lemma": "az"
+      },
       {
         "surface": "the eyes",
         "lemma": "ayin"
@@ -184,6 +224,10 @@
     ],
     "6": [
       {
+        "surface": "Then",
+        "lemma": "az"
+      },
+      {
         "surface": "the lame",
         "lemma": "pisseach"
       },
@@ -206,6 +250,10 @@
       {
         "surface": "will shout for joy",
         "lemma": "run"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "waters",
@@ -232,6 +280,10 @@
       {
         "surface": "The parched ground",
         "lemma": "sharav"
+      },
+      {
+        "surface": "will become",
+        "lemma": "hayah"
       },
       {
         "surface": "a pool",
@@ -280,8 +332,16 @@
         "lemma": "sham"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a highway",
         "lemma": "maslul"
+      },
+      {
+        "surface": "called",
+        "lemma": "qara"
       },
       {
         "surface": "the Way",
@@ -296,8 +356,16 @@
         "lemma": "tame"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "travel it",
         "lemma": "avar"
+      },
+      {
+        "surface": "only",
+        "lemma": "hu"
       },
       {
         "surface": "those who walk",
@@ -312,14 +380,26 @@
         "lemma": "evil"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "stray onto it",
         "lemma": "taah"
       }
     ],
     "9": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "lion",
         "lemma": "ari"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "there",
@@ -340,6 +420,10 @@
       {
         "surface": "will go up on it",
         "lemma": "alah"
+      },
+      {
+        "surface": "Such will not",
+        "lemma": "lo"
       },
       {
         "surface": "be found",
@@ -368,12 +452,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "Zion",
         "lemma": "tsiyyon"
       },
       {
         "surface": "with singing",
         "lemma": "rinnah"
+      },
+      {
+        "surface": "crowned",
+        "lemma": "al"
       },
       {
         "surface": "with everlasting",
@@ -410,8 +506,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "sham",
-    "simchah",
-    "run"
+    "hayah"
   ]
 }

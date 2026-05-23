@@ -6,12 +6,24 @@
   "verses": {
     "1": [
       {
+        "surface": "By",
+        "lemma": "al"
+      },
+      {
         "surface": "the rivers",
         "lemma": "nahar"
       },
       {
         "surface": "of Babylon",
         "lemma": "bavel"
+      },
+      {
+        "surface": "we sat",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "and",
+        "lemma": "gam"
       },
       {
         "surface": "wept",
@@ -28,6 +40,10 @@
     ],
     "2": [
       {
+        "surface": "There on",
+        "lemma": "al"
+      },
+      {
         "surface": "the willows",
         "lemma": "aravah"
       },
@@ -41,6 +57,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
       {
         "surface": "there",
         "lemma": "sham"
@@ -96,6 +116,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "a foreign",
         "lemma": "nekhar"
       },
@@ -105,6 +129,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "I forget you",
         "lemma": "shakhach"
@@ -136,8 +164,24 @@
         "lemma": "chekh"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "remember you",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "I do not",
+        "lemma": "lo"
       },
       {
         "surface": "exalt",
@@ -146,6 +190,10 @@
       {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "as",
+        "lemma": "al"
       },
       {
         "surface": "my greatest",
@@ -186,8 +234,16 @@
         "lemma": "arah"
       },
       {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
         "surface": "tear it down",
         "lemma": "arah"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "its foundations",
@@ -242,6 +298,14 @@
         "lemma": "naphats"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
+        "surface": "against",
+        "lemma": "el"
+      },
+      {
         "surface": "the rocks",
         "lemma": "sela"
       }
@@ -249,7 +313,7 @@
   },
   "themeLemmas": [
     "shir",
-    "zakhar",
-    "yerushalaim"
+    "al",
+    "zakhar"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "So all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -16,6 +20,10 @@
       {
         "surface": "written",
         "lemma": "katav"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "the Book",
@@ -52,6 +60,10 @@
         "lemma": "rishon"
       },
       {
+        "surface": "to resettle",
+        "lemma": "yashav"
+      },
+      {
         "surface": "their own property",
         "lemma": "achuzzah"
       },
@@ -78,6 +90,10 @@
     ],
     "3": [
       {
+        "surface": "Some of",
+        "lemma": "min"
+      },
+      {
         "surface": "the descendants",
         "lemma": "ben"
       },
@@ -96,6 +112,10 @@
       {
         "surface": "and Manasseh",
         "lemma": "menashsheh"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "in Jerusalem",
@@ -154,6 +174,10 @@
     ],
     "5": [
       {
+        "surface": "From",
+        "lemma": "min"
+      },
+      {
         "surface": "the Shilonites",
         "lemma": "shiloni"
       },
@@ -171,6 +195,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "From",
+        "lemma": "min"
+      },
       {
         "surface": "vvv",
         "lemma": "ben"
@@ -193,6 +221,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "From",
+        "lemma": "min"
+      },
       {
         "surface": "the Benjamites",
         "lemma": "ben"
@@ -302,15 +334,31 @@
         "lemma": "toledah"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
+        "surface": "these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "men",
         "lemma": "enosh"
       },
       {
         "surface": "were heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of their families",
+        "lemma": "av"
       }
     ],
     "10": [
+      {
+        "surface": "From",
+        "lemma": "min"
+      },
       {
         "surface": "the priests",
         "lemma": "kohen"
@@ -504,6 +552,10 @@
     ],
     "14": [
       {
+        "surface": "From",
+        "lemma": "min"
+      },
+      {
         "surface": "the Levites",
         "lemma": "leviyyi"
       },
@@ -636,6 +688,10 @@
         "lemma": "elqanah"
       },
       {
+        "surface": "who lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the villages",
         "lemma": "chatser"
       },
@@ -692,6 +748,10 @@
         "lemma": "mizrach"
       },
       {
+        "surface": "These",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "were the gatekeepers",
         "lemma": "shoer"
       },
@@ -739,6 +799,10 @@
       },
       {
         "surface": "vvv",
+        "lemma": "av"
+      },
+      {
+        "surface": "vvv",
         "lemma": "bet"
       },
       {
@@ -756,6 +820,14 @@
       {
         "surface": "of the Tent",
         "lemma": "ohel"
+      },
+      {
+        "surface": "just as their fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "had been assigned to",
+        "lemma": "al"
       },
       {
         "surface": "guard",
@@ -792,12 +864,24 @@
         "lemma": "elazar"
       },
       {
+        "surface": "had been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in charge",
         "lemma": "nagid"
       },
       {
+        "surface": "of the gatekeepers",
+        "lemma": "al"
+      },
+      {
         "surface": "and the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "was with him",
+        "lemma": "im"
       }
     ],
     "21": [
@@ -832,6 +916,10 @@
     ],
     "22": [
       {
+        "surface": "The number",
+        "lemma": "kol"
+      },
+      {
         "surface": "of those chosen",
         "lemma": "barar"
       },
@@ -846,6 +934,10 @@
       {
         "surface": "was 212",
         "lemma": "meah"
+      },
+      {
+        "surface": "They",
+        "lemma": "hemmah"
       },
       {
         "surface": "were registered by genealogy",
@@ -872,14 +964,26 @@
         "lemma": "yasad"
       },
       {
+        "surface": "them",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "to their positions of trust",
         "lemma": "emunah"
       }
     ],
     "23": [
       {
+        "surface": "So they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "and their descendants",
         "lemma": "ben"
+      },
+      {
+        "surface": "were assigned to",
+        "lemma": "al"
       },
       {
         "surface": "guard",
@@ -912,6 +1016,10 @@
         "lemma": "shoer"
       },
       {
+        "surface": "were stationed",
+        "lemma": "hayah"
+      },
+      {
         "surface": "on the four",
         "lemma": "arba"
       },
@@ -942,8 +1050,24 @@
         "lemma": "ach"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "from their villages",
         "lemma": "chatser"
+      },
+      {
+        "surface": "at fixed times",
+        "lemma": "et"
+      },
+      {
+        "surface": "to serve with",
+        "lemma": "im"
+      },
+      {
+        "surface": "them",
+        "lemma": "elleh"
       },
       {
         "surface": "for seven-day periods",
@@ -951,6 +1075,10 @@
       }
     ],
     "26": [
+      {
+        "surface": "But",
+        "lemma": "ki"
+      },
       {
         "surface": "the four",
         "lemma": "arba"
@@ -964,8 +1092,20 @@
         "lemma": "shoer"
       },
       {
+        "surface": "who",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "were Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "entrusted with",
+        "lemma": "al"
       },
       {
         "surface": "the rooms",
@@ -1002,6 +1142,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they",
+        "lemma": "al"
+      },
+      {
         "surface": "were responsible for guarding it",
         "lemma": "mishmeret"
       },
@@ -1016,6 +1164,10 @@
     ],
     "28": [
       {
+        "surface": "were in charge of",
+        "lemma": "al"
+      },
+      {
         "surface": "the articles",
         "lemma": "keli"
       },
@@ -1024,8 +1176,20 @@
         "lemma": "avodah"
       },
       {
+        "surface": "to",
+        "lemma": "ki"
+      },
+      {
         "surface": "count them",
         "lemma": "mispar"
+      },
+      {
+        "surface": "whenever they were brought in",
+        "lemma": "bo"
+      },
+      {
+        "surface": "or taken out",
+        "lemma": "yatsa"
       }
     ],
     "29": [
@@ -1034,8 +1198,16 @@
         "lemma": "manah"
       },
       {
+        "surface": "in charge of",
+        "lemma": "al"
+      },
+      {
         "surface": "the furnishings",
         "lemma": "keli"
+      },
+      {
+        "surface": "and other",
+        "lemma": "kol"
       },
       {
         "surface": "articles",
@@ -1067,6 +1239,10 @@
       }
     ],
     "30": [
+      {
+        "surface": "And some",
+        "lemma": "min"
+      },
       {
         "surface": "of the sons",
         "lemma": "ben"
@@ -1110,6 +1286,10 @@
         "lemma": "emunah"
       },
       {
+        "surface": "with",
+        "lemma": "al"
+      },
+      {
         "surface": "baking",
         "lemma": "maaseh"
       },
@@ -1120,12 +1300,20 @@
     ],
     "32": [
       {
+        "surface": "Some of",
+        "lemma": "min"
+      },
+      {
         "surface": "their Kohathite",
         "lemma": "ben"
       },
       {
         "surface": "relatives",
         "lemma": "ach"
+      },
+      {
+        "surface": "were responsible for",
+        "lemma": "al"
       },
       {
         "surface": "preparing",
@@ -1146,6 +1334,10 @@
     ],
     "33": [
       {
+        "surface": "Those who were",
+        "lemma": "elleh"
+      },
+      {
         "surface": "musicians",
         "lemma": "shir"
       },
@@ -1158,12 +1350,24 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "families",
+        "lemma": "av"
+      },
+      {
         "surface": "stayed in the temple chambers",
         "lemma": "lishkah"
       },
       {
         "surface": "and were exempt",
         "lemma": "patir"
+      },
+      {
+        "surface": "from other duties",
+        "lemma": "ki"
+      },
+      {
+        "surface": "because they were",
+        "lemma": "al"
       },
       {
         "surface": "on duty",
@@ -1180,6 +1384,10 @@
     ],
     "34": [
       {
+        "surface": "All these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "were heads",
         "lemma": "rosh"
       },
@@ -1188,12 +1396,20 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "families",
+        "lemma": "av"
+      },
+      {
         "surface": "chiefs",
         "lemma": "rosh"
       },
       {
         "surface": "according to their genealogies",
         "lemma": "toledah"
+      },
+      {
+        "surface": "and they lived",
+        "lemma": "yashav"
       },
       {
         "surface": "in Jerusalem",
@@ -1206,8 +1422,16 @@
         "lemma": "yeiel"
       },
       {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of Gibeon",
         "lemma": "givon"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "in Gibeon",
@@ -1290,6 +1514,18 @@
       {
         "surface": "Shimeam",
         "lemma": "shimam"
+      },
+      {
+        "surface": "They",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "too",
+        "lemma": "aph"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "alongside",
@@ -1512,6 +1748,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "and these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "were their names",
         "lemma": "shem"
       },
@@ -1540,6 +1780,10 @@
         "lemma": "chanan"
       },
       {
+        "surface": "These were",
+        "lemma": "elleh"
+      },
+      {
         "surface": "the sons",
         "lemma": "ben"
       },
@@ -1550,8 +1794,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "yalad",
-    "bet",
-    "ach"
+    "min"
   ]
 }

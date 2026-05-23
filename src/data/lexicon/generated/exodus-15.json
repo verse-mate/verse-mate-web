@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Then",
+        "lemma": "az"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -16,6 +20,10 @@
       {
         "surface": "sang",
         "lemma": "shir"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
       },
       {
         "surface": "song",
@@ -32,6 +40,10 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "He is highly exalted",
@@ -68,8 +80,16 @@
         "lemma": "zimrat"
       },
       {
+        "surface": "and He has become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "salvation",
         "lemma": "yeshuah"
+      },
+      {
+        "surface": "He is",
+        "lemma": "zeh"
       },
       {
         "surface": "my God",
@@ -78,6 +98,10 @@
       {
         "surface": "and I will praise Him",
         "lemma": "navah"
+      },
+      {
+        "surface": "my father’s",
+        "lemma": "av"
       },
       {
         "surface": "God",
@@ -164,6 +188,10 @@
       {
         "surface": "there",
         "lemma": "metsolah"
+      },
+      {
+        "surface": "like",
+        "lemma": "kemo"
       },
       {
         "surface": "a stone",
@@ -256,6 +284,10 @@
         "lemma": "aram"
       },
       {
+        "surface": "like",
+        "lemma": "kemo"
+      },
+      {
         "surface": "a wall",
         "lemma": "ned"
       },
@@ -288,6 +320,10 @@
       {
         "surface": "The enemy",
         "lemma": "oyev"
+      },
+      {
+        "surface": "declared",
+        "lemma": "amar"
       },
       {
         "surface": "I will pursue",
@@ -370,12 +406,20 @@
         "lemma": "el"
       },
       {
+        "surface": "is like You",
+        "lemma": "kemo"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "Who",
         "lemma": "mi"
+      },
+      {
+        "surface": "is like You",
+        "lemma": "kemo"
       },
       {
         "surface": "majestic",
@@ -392,6 +436,10 @@
       {
         "surface": "with praises",
         "lemma": "tehillah"
+      },
+      {
+        "surface": "performing",
+        "lemma": "asah"
       },
       {
         "surface": "wonders",
@@ -442,6 +490,10 @@
         "lemma": "nahal"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Your holy",
         "lemma": "qodesh"
       },
@@ -456,6 +508,10 @@
         "lemma": "am"
       },
       {
+        "surface": "will hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "and tremble",
         "lemma": "ragaz"
       },
@@ -468,11 +524,19 @@
         "lemma": "achaz"
       },
       {
+        "surface": "the dwellers",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Philistia",
         "lemma": "peleshet"
       }
     ],
     "15": [
+      {
+        "surface": "Then",
+        "lemma": "az"
+      },
       {
         "surface": "the chiefs",
         "lemma": "alluph"
@@ -502,6 +566,10 @@
         "lemma": "moav"
       },
       {
+        "surface": "those who dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Canaan",
         "lemma": "kenaan"
       },
@@ -524,6 +592,10 @@
         "lemma": "naphal"
       },
       {
+        "surface": "on them",
+        "lemma": "al"
+      },
+      {
         "surface": "By the power",
         "lemma": "gadol"
       },
@@ -540,6 +612,10 @@
         "lemma": "even"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "Your people",
         "lemma": "am"
       },
@@ -550,6 +626,10 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "the people",
@@ -565,6 +645,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "You will bring them in",
+        "lemma": "bo"
+      },
       {
         "surface": "and plant them",
         "lemma": "nata"
@@ -588,6 +672,10 @@
       {
         "surface": "You have prepared",
         "lemma": "paal"
+      },
+      {
+        "surface": "for Your dwelling",
+        "lemma": "yashav"
       },
       {
         "surface": "the sanctuary",
@@ -626,6 +714,10 @@
     ],
     "19": [
       {
+        "surface": "For when",
+        "lemma": "ki"
+      },
+      {
         "surface": "Pharaoh’s",
         "lemma": "paroh"
       },
@@ -642,6 +734,10 @@
         "lemma": "parash"
       },
       {
+        "surface": "went",
+        "lemma": "bo"
+      },
+      {
         "surface": "into the sea",
         "lemma": "yam"
       },
@@ -656,6 +752,14 @@
       {
         "surface": "of the sea",
         "lemma": "yam"
+      },
+      {
+        "surface": "back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "over them",
+        "lemma": "al"
       },
       {
         "surface": "But the Israelites",
@@ -708,8 +812,16 @@
         "lemma": "yad"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the women",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "followed her",
+        "lemma": "yatsa"
       },
       {
         "surface": "with tambourines",
@@ -736,6 +848,10 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "He is highly exalted",
@@ -780,6 +896,14 @@
         "lemma": "yam"
       },
       {
+        "surface": "and they went out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
+      },
+      {
         "surface": "the Desert",
         "lemma": "midbar"
       },
@@ -804,6 +928,10 @@
         "lemma": "midbar"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "finding",
         "lemma": "matsa"
       },
@@ -814,12 +942,20 @@
     ],
     "23": [
       {
+        "surface": "And when they came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Marah",
         "lemma": "marah"
       },
       {
         "surface": "they could",
         "lemma": "yakhol"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "drink",
@@ -834,8 +970,24 @@
         "lemma": "marah"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "it",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "was bitter",
         "lemma": "mar"
+      },
+      {
+        "surface": "That is why",
+        "lemma": "al"
+      },
+      {
+        "surface": "it was named",
+        "lemma": "qara"
       },
       {
         "surface": "Marah",
@@ -852,8 +1004,16 @@
         "lemma": "lun"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "What",
@@ -868,6 +1028,10 @@
       {
         "surface": "And Moses cried out",
         "lemma": "tsaaq"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -888,6 +1052,10 @@
       {
         "surface": "And when he cast it",
         "lemma": "shalakh"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
       },
       {
         "surface": "the waters",
@@ -928,6 +1096,18 @@
     ],
     "26": [
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "you will listen carefully",
+        "lemma": "shama"
+      },
+      {
         "surface": "to the voice",
         "lemma": "qol"
       },
@@ -938,6 +1118,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "and do",
+        "lemma": "asah"
       },
       {
         "surface": "what is right",
@@ -960,12 +1144,28 @@
         "lemma": "shamar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His statutes",
         "lemma": "choq"
       },
       {
+        "surface": "then I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "bring",
         "lemma": "sum"
+      },
+      {
+        "surface": "on you",
+        "lemma": "al"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "of the diseases",
@@ -980,6 +1180,14 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       },
@@ -989,6 +1197,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "Then they came",
+        "lemma": "bo"
+      },
       {
         "surface": "to Elim",
         "lemma": "elim"
@@ -1026,6 +1238,10 @@
         "lemma": "sham"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the waters",
         "lemma": "mayim"
       }
@@ -1034,6 +1250,6 @@
   "themeLemmas": [
     "yam",
     "mayim",
-    "shir"
+    "al"
   ]
 }

@@ -30,6 +30,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "it has become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a heap",
         "lemma": "mei"
       },
@@ -50,6 +54,10 @@
       {
         "surface": "are forsaken",
         "lemma": "azav"
+      },
+      {
+        "surface": "they will be left",
+        "lemma": "hayah"
       },
       {
         "surface": "to the flocks",
@@ -98,6 +106,10 @@
         "lemma": "aram"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like the splendor",
         "lemma": "kavod"
       },
@@ -123,6 +135,14 @@
       }
     ],
     "4": [
+      {
+        "surface": "In",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "that",
+        "lemma": "hu"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -153,6 +173,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "as",
+        "lemma": "hayah"
+      },
       {
         "surface": "the reaper",
         "lemma": "qatsir"
@@ -262,6 +286,10 @@
     ],
     "7": [
       {
+        "surface": "In that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -274,8 +302,20 @@
         "lemma": "shaah"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
+        "surface": "their Maker",
+        "lemma": "asah"
+      },
+      {
         "surface": "and turn their eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the Holy",
@@ -288,8 +328,16 @@
     ],
     "8": [
       {
+        "surface": "They will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "look",
         "lemma": "shaah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the altars",
@@ -312,11 +360,19 @@
         "lemma": "chamman"
       },
       {
+        "surface": "they have made",
+        "lemma": "asah"
+      },
+      {
         "surface": "with their fingers",
         "lemma": "etsba"
       }
     ],
     "9": [
+      {
+        "surface": "In that",
+        "lemma": "hu"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -328,6 +384,10 @@
       {
         "surface": "cities",
         "lemma": "ir"
+      },
+      {
+        "surface": "will be like",
+        "lemma": "hayah"
       },
       {
         "surface": "forsaken",
@@ -350,11 +410,19 @@
         "lemma": "ben"
       },
       {
+        "surface": "and to utter",
+        "lemma": "hayah"
+      },
+      {
         "surface": "desolation",
         "lemma": "shemamah"
       }
     ],
     "10": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "you have forgotten",
         "lemma": "shakhach"
@@ -368,6 +436,10 @@
         "lemma": "yesah"
       },
       {
+        "surface": "and failed",
+        "lemma": "lo"
+      },
+      {
         "surface": "to remember",
         "lemma": "zakhar"
       },
@@ -378,6 +450,10 @@
       {
         "surface": "of your refuge",
         "lemma": "maoz"
+      },
+      {
+        "surface": "Therefore",
+        "lemma": "al"
       },
       {
         "surface": "though you cultivate",
@@ -600,6 +676,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
         "surface": "is the portion",
         "lemma": "cheleq"
       },
@@ -618,8 +698,8 @@
     ]
   },
   "themeLemmas": [
+    "hayah",
     "shaah",
-    "yisrael",
-    "shaon"
+    "yisrael"
   ]
 }

@@ -22,6 +22,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "that is within me",
         "lemma": "qerev"
       },
@@ -48,8 +52,16 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "and do not",
+        "lemma": "al"
+      },
+      {
         "surface": "forget",
         "lemma": "shakhach"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "His kind deeds",
@@ -62,12 +74,20 @@
         "lemma": "salach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your iniquities",
         "lemma": "avan"
       },
       {
         "surface": "and heals",
         "lemma": "rapah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "your diseases",
@@ -132,12 +152,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "executes",
+        "lemma": "asah"
+      },
+      {
         "surface": "righteousness",
         "lemma": "tsedaqah"
       },
       {
         "surface": "and justice",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "the oppressed",
@@ -202,12 +230,20 @@
     ],
     "9": [
       {
+        "surface": "He will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "always",
         "lemma": "netsach"
       },
       {
         "surface": "accuse us",
         "lemma": "riv"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "harbor His anger",
@@ -220,6 +256,18 @@
     ],
     "10": [
       {
+        "surface": "He has not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "dealt",
+        "lemma": "asah"
+      },
+      {
+        "surface": "with us",
+        "lemma": "lo"
+      },
+      {
         "surface": "our sins",
         "lemma": "chet"
       },
@@ -228,11 +276,19 @@
         "lemma": "gamal"
       },
       {
+        "surface": "according to",
+        "lemma": "al"
+      },
+      {
         "surface": "our iniquities",
         "lemma": "avan"
       }
     ],
     "11": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "as high",
         "lemma": "gavah"
@@ -240,6 +296,10 @@
       {
         "surface": "as the heavens",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "are above",
+        "lemma": "al"
       },
       {
         "surface": "the earth",
@@ -252,6 +312,10 @@
       {
         "surface": "is His loving devotion",
         "lemma": "chesed"
+      },
+      {
+        "surface": "for",
+        "lemma": "al"
       },
       {
         "surface": "those who fear Him",
@@ -268,6 +332,10 @@
         "lemma": "mizrach"
       },
       {
+        "surface": "is from",
+        "lemma": "min"
+      },
+      {
         "surface": "the west",
         "lemma": "maarav"
       },
@@ -282,8 +350,16 @@
     ],
     "13": [
       {
+        "surface": "As a father",
+        "lemma": "av"
+      },
+      {
         "surface": "has compassion",
         "lemma": "racham"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "his children",
@@ -298,11 +374,23 @@
         "lemma": "racham"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "those who fear Him",
         "lemma": "yare"
       }
     ],
     "14": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
       {
         "surface": "knows",
         "lemma": "yada"
@@ -314,6 +402,14 @@
       {
         "surface": "He is mindful",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "we",
+        "lemma": "anachnu"
       },
       {
         "surface": "are dust",
@@ -348,6 +444,10 @@
     ],
     "16": [
       {
+        "surface": "when",
+        "lemma": "ki"
+      },
+      {
         "surface": "the wind",
         "lemma": "ruach"
       },
@@ -368,6 +468,10 @@
         "lemma": "nakhar"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "more",
         "lemma": "od"
       }
@@ -376,6 +480,10 @@
       {
         "surface": "But from everlasting",
         "lemma": "olam"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "everlasting",
@@ -388,6 +496,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "extends to",
+        "lemma": "al"
       },
       {
         "surface": "those who fear Him",
@@ -420,6 +532,10 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "to obey",
+        "lemma": "asah"
+      },
+      {
         "surface": "His precepts",
         "lemma": "piqqud"
       }
@@ -448,6 +564,10 @@
       {
         "surface": "rules",
         "lemma": "mashal"
+      },
+      {
+        "surface": "over all",
+        "lemma": "kol"
       }
     ],
     "20": [
@@ -472,8 +592,16 @@
         "lemma": "koach"
       },
       {
+        "surface": "who carry out",
+        "lemma": "asah"
+      },
+      {
         "surface": "His word",
         "lemma": "davar"
+      },
+      {
+        "surface": "who hearken",
+        "lemma": "shama"
       },
       {
         "surface": "to the voice",
@@ -494,12 +622,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His hosts",
         "lemma": "tsava"
       },
       {
         "surface": "you servants",
         "lemma": "sharat"
+      },
+      {
+        "surface": "who do",
+        "lemma": "asah"
       },
       {
         "surface": "His will",
@@ -516,8 +652,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His works",
         "lemma": "maaseh"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "places",
@@ -542,8 +686,8 @@
     ]
   },
   "themeLemmas": [
-    "barakh",
-    "chesed",
-    "yare"
+    "kol",
+    "al",
+    "barakh"
   ]
 }

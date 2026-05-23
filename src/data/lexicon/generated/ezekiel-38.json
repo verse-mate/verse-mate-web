@@ -12,6 +12,18 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -30,6 +42,10 @@
       {
         "surface": "your face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "against",
+        "lemma": "el"
       },
       {
         "surface": "Gog",
@@ -62,9 +78,17 @@
       {
         "surface": "Prophesy",
         "lemma": "nava"
+      },
+      {
+        "surface": "against him",
+        "lemma": "al"
       }
     ],
     "3": [
+      {
+        "surface": "and declare",
+        "lemma": "amar"
+      },
       {
         "surface": "that this is what",
         "lemma": "koh"
@@ -78,8 +102,16 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Behold",
         "lemma": "hen"
+      },
+      {
+        "surface": "I am against you",
+        "lemma": "el"
       },
       {
         "surface": "O Gog",
@@ -104,12 +136,28 @@
     ],
     "4": [
       {
+        "surface": "I will turn you around",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "put",
+        "lemma": "natan"
+      },
+      {
         "surface": "hooks",
         "lemma": "chach"
       },
       {
         "surface": "in your jaws",
         "lemma": "lechi"
+      },
+      {
+        "surface": "and bring you out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "your army",
@@ -122,6 +170,10 @@
       {
         "surface": "your horsemen",
         "lemma": "parash"
+      },
+      {
+        "surface": "in full",
+        "lemma": "kol"
       },
       {
         "surface": "armor",
@@ -142,6 +194,10 @@
       {
         "surface": "and bucklers",
         "lemma": "magen"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "brandishing",
@@ -166,6 +222,14 @@
         "lemma": "put"
       },
       {
+        "surface": "will accompany them",
+        "lemma": "et"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "with shields",
         "lemma": "magen"
       },
@@ -178,6 +242,10 @@
       {
         "surface": "as well as Gomer",
         "lemma": "gomer"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "its troops",
@@ -196,6 +264,10 @@
         "lemma": "tsaphon"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its troops",
         "lemma": "aggaph"
       },
@@ -206,6 +278,10 @@
       {
         "surface": "nations",
         "lemma": "am"
+      },
+      {
+        "surface": "with you",
+        "lemma": "et"
       }
     ],
     "7": [
@@ -218,12 +294,28 @@
         "lemma": "kun"
       },
       {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your company",
         "lemma": "qahal"
       },
       {
         "surface": "gathered",
         "lemma": "qahal"
+      },
+      {
+        "surface": "around you",
+        "lemma": "al"
+      },
+      {
+        "surface": "you will be",
+        "lemma": "hayah"
       },
       {
         "surface": "guard",
@@ -252,8 +344,16 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "you will enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "a land",
         "lemma": "erets"
+      },
+      {
+        "surface": "that has recovered",
+        "lemma": "shuv"
       },
       {
         "surface": "from war",
@@ -272,6 +372,10 @@
         "lemma": "am"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "the mountains",
         "lemma": "har"
       },
@@ -280,16 +384,40 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
         "surface": "had long",
         "lemma": "tamid"
+      },
+      {
+        "surface": "been",
+        "lemma": "hayah"
       },
       {
         "surface": "desolate",
         "lemma": "chorbah"
       },
       {
+        "surface": "They",
+        "lemma": "hu"
+      },
+      {
+        "surface": "had been brought out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from the nations",
         "lemma": "am"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "now dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "securely",
@@ -297,6 +425,14 @@
       }
     ],
     "9": [
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
       {
         "surface": "your troops",
         "lemma": "aggaph"
@@ -310,12 +446,24 @@
         "lemma": "am"
       },
       {
+        "surface": "with you",
+        "lemma": "et"
+      },
+      {
         "surface": "will go up",
         "lemma": "alah"
       },
       {
+        "surface": "advancing",
+        "lemma": "bo"
+      },
+      {
         "surface": "like a thunderstorm",
         "lemma": "sho"
+      },
+      {
+        "surface": "you will be",
+        "lemma": "hayah"
       },
       {
         "surface": "like a cloud",
@@ -344,6 +492,14 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "On that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -354,6 +510,10 @@
       {
         "surface": "will arise",
         "lemma": "alah"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "your mind",
@@ -374,8 +534,16 @@
     ],
     "11": [
       {
+        "surface": "You will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "I will go up",
         "lemma": "alah"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "a land",
@@ -386,12 +554,28 @@
         "lemma": "perazah"
       },
       {
+        "surface": "I will come against",
+        "lemma": "bo"
+      },
+      {
         "surface": "a quiet people",
         "lemma": "shaqat"
       },
       {
+        "surface": "who dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "securely",
         "lemma": "betach"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "of them living",
+        "lemma": "yashav"
       },
       {
         "surface": "without",
@@ -428,12 +612,28 @@
         "lemma": "bazaz"
       },
       {
+        "surface": "to turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "a hand",
         "lemma": "yad"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "the desolate places",
         "lemma": "chorbah"
+      },
+      {
+        "surface": "now inhabited",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "and against",
+        "lemma": "el"
       },
       {
         "surface": "a people",
@@ -448,12 +648,24 @@
         "lemma": "goy"
       },
       {
+        "surface": "who have acquired",
+        "lemma": "asah"
+      },
+      {
         "surface": "livestock",
         "lemma": "miqneh"
       },
       {
         "surface": "and possessions",
         "lemma": "qinyan"
+      },
+      {
+        "surface": "and who live",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "at",
+        "lemma": "al"
       },
       {
         "surface": "the center",
@@ -482,8 +694,24 @@
         "lemma": "tarshish"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its villages",
         "lemma": "kephir"
+      },
+      {
+        "surface": "will ask",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Have you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
       },
       {
         "surface": "to capture",
@@ -564,6 +792,10 @@
         "lemma": "adam"
       },
       {
+        "surface": "and tell",
+        "lemma": "amar"
+      },
+      {
         "surface": "Gog",
         "lemma": "gog"
       },
@@ -580,6 +812,14 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "On that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -592,8 +832,16 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "are dwelling",
+        "lemma": "yashav"
+      },
+      {
         "surface": "securely",
         "lemma": "betach"
+      },
+      {
+        "surface": "will you not",
+        "lemma": "lo"
       },
       {
         "surface": "take notice of this",
@@ -601,6 +849,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "And you will come",
+        "lemma": "bo"
+      },
       {
         "surface": "from your place",
         "lemma": "maqom"
@@ -614,12 +866,24 @@
         "lemma": "tsaphon"
       },
       {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
         "surface": "and many",
         "lemma": "rav"
       },
       {
         "surface": "peoples",
         "lemma": "am"
+      },
+      {
+        "surface": "with you",
+        "lemma": "et"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "riding",
@@ -652,6 +916,10 @@
         "lemma": "alah"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "My people",
         "lemma": "am"
       },
@@ -672,6 +940,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "It will happen",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in the latter",
         "lemma": "acharit"
       },
@@ -684,8 +956,20 @@
         "lemma": "gog"
       },
       {
+        "surface": "that I will bring you",
+        "lemma": "bo"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "My land",
         "lemma": "erets"
+      },
+      {
+        "surface": "so that",
+        "lemma": "maan"
       },
       {
         "surface": "the nations",
@@ -694,6 +978,10 @@
       {
         "surface": "may know",
         "lemma": "yada"
+      },
+      {
+        "surface": "Me",
+        "lemma": "et"
       },
       {
         "surface": "when I show Myself holy",
@@ -716,6 +1004,22 @@
       {
         "surface": "GOD",
         "lemma": "yehovih"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Are you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "the one",
+        "lemma": "hu"
+      },
+      {
+        "surface": "of whom",
+        "lemma": "asher"
       },
       {
         "surface": "I have spoken",
@@ -746,6 +1050,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "who in those",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "times",
         "lemma": "yom"
       },
@@ -756,9 +1064,29 @@
       {
         "surface": "for years",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "that I would bring",
+        "lemma": "bo"
+      },
+      {
+        "surface": "you",
+        "lemma": "et"
+      },
+      {
+        "surface": "against them",
+        "lemma": "al"
       }
     ],
     "18": [
+      {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "on that",
+        "lemma": "hu"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -766,6 +1094,14 @@
       {
         "surface": "when Gog",
         "lemma": "gog"
+      },
+      {
+        "surface": "comes",
+        "lemma": "bo"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "the land",
@@ -814,8 +1150,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "that on that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "there will be",
+        "lemma": "hayah"
       },
       {
         "surface": "a great",
@@ -824,6 +1168,10 @@
       {
         "surface": "earthquake",
         "lemma": "raash"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "the land",
@@ -860,6 +1208,10 @@
         "lemma": "saday"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "creature",
         "lemma": "remes"
       },
@@ -868,12 +1220,24 @@
         "lemma": "ramas"
       },
       {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
         "surface": "the ground",
         "lemma": "adamah"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "mankind",
         "lemma": "adam"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the face",
@@ -908,6 +1272,10 @@
         "lemma": "naphal"
       },
       {
+        "surface": "and every",
+        "lemma": "kol"
+      },
+      {
         "surface": "wall",
         "lemma": "chomah"
       },
@@ -922,8 +1290,20 @@
     ],
     "21": [
       {
+        "surface": "And I will summon",
+        "lemma": "qara"
+      },
+      {
         "surface": "a sword",
         "lemma": "cherev"
+      },
+      {
+        "surface": "against Gog",
+        "lemma": "al"
+      },
+      {
+        "surface": "on all",
+        "lemma": "kol"
       },
       {
         "surface": "My mountains",
@@ -950,6 +1330,10 @@
         "lemma": "cherev"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "against his brother",
         "lemma": "ach"
       }
@@ -958,6 +1342,10 @@
       {
         "surface": "I will execute judgment",
         "lemma": "shaphat"
+      },
+      {
+        "surface": "upon him",
+        "lemma": "et"
       },
       {
         "surface": "with plague",
@@ -992,8 +1380,20 @@
         "lemma": "gophrit"
       },
       {
+        "surface": "on him",
+        "lemma": "al"
+      },
+      {
+        "surface": "and on",
+        "lemma": "al"
+      },
+      {
         "surface": "his troops",
         "lemma": "aggaph"
+      },
+      {
+        "surface": "and on",
+        "lemma": "al"
       },
       {
         "surface": "the many",
@@ -1002,6 +1402,10 @@
       {
         "surface": "nations",
         "lemma": "am"
+      },
+      {
+        "surface": "with him",
+        "lemma": "et"
       }
     ],
     "23": [
@@ -1034,14 +1438,22 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       }
     ]
   },
   "themeLemmas": [
-    "gog",
-    "rav",
-    "yisrael"
+    "al",
+    "kol",
+    "rav"
   ]
 }

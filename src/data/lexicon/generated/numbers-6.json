@@ -24,12 +24,32 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
       },
       {
+        "surface": "and tell",
+        "lemma": "amar"
+      },
+      {
+        "surface": "them that",
+        "lemma": "el"
+      },
+      {
+        "surface": "if",
+        "lemma": "ki"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "woman",
@@ -74,6 +94,10 @@
         "lemma": "shekhar"
       },
       {
+        "surface": "He must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "drink",
         "lemma": "shatah"
       },
@@ -90,8 +114,16 @@
         "lemma": "shekhar"
       },
       {
+        "surface": "and he must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "drink",
         "lemma": "shatah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "grape",
@@ -120,6 +152,10 @@
     ],
     "4": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the days",
         "lemma": "yom"
       },
@@ -128,8 +164,16 @@
         "lemma": "nezer"
       },
       {
+        "surface": "he is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "anything that comes from",
+        "lemma": "asah"
       },
       {
         "surface": "the grapevine",
@@ -140,11 +184,19 @@
         "lemma": "chartsan"
       },
       {
+        "surface": "or",
+        "lemma": "ad"
+      },
+      {
         "surface": "skins",
         "lemma": "zag"
       }
     ],
     "5": [
+      {
+        "surface": "For the entire",
+        "lemma": "kol"
+      },
       {
         "surface": "period",
         "lemma": "yom"
@@ -156,6 +208,10 @@
       {
         "surface": "of separation",
         "lemma": "nezer"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "razor",
@@ -170,12 +226,24 @@
         "lemma": "rosh"
       },
       {
+        "surface": "He must be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "holy",
         "lemma": "qadosh"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "the time",
         "lemma": "yom"
+      },
+      {
+        "surface": "of",
+        "lemma": "asher"
       },
       {
         "surface": "his separation",
@@ -208,6 +276,10 @@
     ],
     "6": [
       {
+        "surface": "Throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "the days",
         "lemma": "yom"
       },
@@ -220,6 +292,18 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "he must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "near",
+        "lemma": "al"
+      },
+      {
         "surface": "a dead",
         "lemma": "mut"
       },
@@ -229,6 +313,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "Even if his father",
+        "lemma": "av"
+      },
       {
         "surface": "or mother",
         "lemma": "em"
@@ -246,8 +334,16 @@
         "lemma": "mavet"
       },
       {
+        "surface": "he is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to defile himself",
         "lemma": "tame"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "the symbol of consecration",
@@ -258,14 +354,26 @@
         "lemma": "elohim"
       },
       {
+        "surface": "is upon",
+        "lemma": "al"
+      },
+      {
         "surface": "his head",
         "lemma": "rosh"
       }
     ],
     "8": [
       {
+        "surface": "Throughout the time",
+        "lemma": "kol"
+      },
+      {
         "surface": "of his separation",
         "lemma": "nezer"
+      },
+      {
+        "surface": "he",
+        "lemma": "hu"
       },
       {
         "surface": "is holy",
@@ -278,12 +386,20 @@
     ],
     "9": [
       {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "someone suddenly",
         "lemma": "peta"
       },
       {
         "surface": "dies",
         "lemma": "mut"
+      },
+      {
+        "surface": "in his presence",
+        "lemma": "al"
       },
       {
         "surface": "and defiles",
@@ -332,12 +448,20 @@
         "lemma": "yom"
       },
       {
+        "surface": "he must bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "two",
         "lemma": "shenayim"
       },
       {
         "surface": "turtledoves",
         "lemma": "tor"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "two",
@@ -352,8 +476,16 @@
         "lemma": "yonah"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "at",
+        "lemma": "el"
       },
       {
         "surface": "the entrance",
@@ -372,6 +504,10 @@
       {
         "surface": "And the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "is to offer",
+        "lemma": "asah"
       },
       {
         "surface": "one",
@@ -394,12 +530,28 @@
         "lemma": "kipher"
       },
       {
+        "surface": "for him",
+        "lemma": "al"
+      },
+      {
+        "surface": "because",
+        "lemma": "asher"
+      },
+      {
         "surface": "he has sinned",
         "lemma": "chata"
       },
       {
+        "surface": "by being in the presence",
+        "lemma": "al"
+      },
+      {
         "surface": "of the dead body",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "On that",
+        "lemma": "hu"
       },
       {
         "surface": "day",
@@ -432,6 +584,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "a year-old",
         "lemma": "ben"
       },
@@ -456,6 +612,10 @@
         "lemma": "naphal"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "his separation",
         "lemma": "nezer"
       },
@@ -465,6 +625,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "Now this",
+        "lemma": "zot"
+      },
       {
         "surface": "is the law",
         "lemma": "torah"
@@ -488,6 +652,14 @@
       {
         "surface": "is complete",
         "lemma": "male"
+      },
+      {
+        "surface": "He must be brought",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the entrance",
@@ -640,8 +812,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and make",
+        "lemma": "asah"
+      },
+      {
         "surface": "the sin offering",
         "lemma": "chattaah"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "the burnt offering",
@@ -649,6 +829,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "He shall also offer",
+        "lemma": "asah"
+      },
       {
         "surface": "the ram",
         "lemma": "ayil"
@@ -666,6 +850,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "along with",
+        "lemma": "al"
+      },
+      {
         "surface": "the basket",
         "lemma": "sal"
       },
@@ -676,6 +864,10 @@
       {
         "surface": "And the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "is to offer",
+        "lemma": "asah"
       },
       {
         "surface": "the accompanying grain offering",
@@ -724,6 +916,14 @@
         "lemma": "sear"
       },
       {
+        "surface": "and put",
+        "lemma": "natan"
+      },
+      {
+        "surface": "it on",
+        "lemma": "al"
+      },
+      {
         "surface": "the fire",
         "lemma": "esh"
       },
@@ -758,6 +958,10 @@
         "lemma": "zeroa"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the ram",
         "lemma": "ayil"
       },
@@ -774,6 +978,10 @@
         "lemma": "challah"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the basket",
         "lemma": "sal"
       },
@@ -788,6 +996,14 @@
       {
         "surface": "wafer",
         "lemma": "raqiq"
+      },
+      {
+        "surface": "and put them",
+        "lemma": "natan"
+      },
+      {
+        "surface": "into",
+        "lemma": "al"
       },
       {
         "surface": "the hands",
@@ -820,6 +1036,10 @@
         "lemma": "nuph"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "as a wave offering",
         "lemma": "tenuphah"
       },
@@ -832,12 +1052,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "This",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a holy",
         "lemma": "qodesh"
       },
       {
         "surface": "portion for the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "in addition to",
+        "lemma": "al"
       },
       {
         "surface": "the breast",
@@ -874,12 +1102,20 @@
     ],
     "21": [
       {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
         "surface": "is the law",
         "lemma": "torah"
       },
       {
         "surface": "of the Nazirite",
         "lemma": "nazir"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "vows",
@@ -894,6 +1130,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "his separation",
         "lemma": "nezer"
       },
@@ -902,8 +1142,20 @@
         "lemma": "bad"
       },
       {
+        "surface": "whatever else",
+        "lemma": "asher"
+      },
+      {
         "surface": "he can afford",
         "lemma": "nasag"
+      },
+      {
+        "surface": "he must fulfill",
+        "lemma": "asah"
+      },
+      {
+        "surface": "whatever",
+        "lemma": "asher"
       },
       {
         "surface": "vow",
@@ -916,6 +1168,10 @@
       {
         "surface": "vvv",
         "lemma": "ken"
+      },
+      {
+        "surface": "according to",
+        "lemma": "al"
       },
       {
         "surface": "the law",
@@ -934,6 +1190,10 @@
       {
         "surface": "said",
         "lemma": "davar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Moses",
@@ -960,6 +1220,10 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "Say",
+        "lemma": "amar"
       }
     ],
     "24": [
@@ -990,6 +1254,10 @@
         "lemma": "or"
       },
       {
+        "surface": "upon you",
+        "lemma": "el"
+      },
+      {
         "surface": "and be gracious to you",
         "lemma": "chanan"
       }
@@ -1006,6 +1274,10 @@
       {
         "surface": "His countenance",
         "lemma": "paneh"
+      },
+      {
+        "surface": "toward you",
+        "lemma": "el"
       },
       {
         "surface": "and give",
@@ -1026,8 +1298,16 @@
         "lemma": "shem"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "and I",
+        "lemma": "ani"
       },
       {
         "surface": "will bless them",
@@ -1036,7 +1316,7 @@
     ]
   },
   "themeLemmas": [
-    "nezer",
+    "al",
     "kohen",
     "echad"
   ]

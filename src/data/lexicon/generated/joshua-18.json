@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Then the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
@@ -72,6 +76,14 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "had not",
+        "lemma": "lo"
+      },
+      {
         "surface": "yet received",
         "lemma": "chalaq"
       },
@@ -86,12 +98,32 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
       },
       {
+        "surface": "How long",
+        "lemma": "ad"
+      },
+      {
+        "surface": "will you",
+        "lemma": "attah"
+      },
+      {
         "surface": "put off",
         "lemma": "raphah"
+      },
+      {
+        "surface": "entering",
+        "lemma": "bo"
       },
       {
         "surface": "and possessing",
@@ -102,12 +134,24 @@
         "lemma": "erets"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of your fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "has given",
+        "lemma": "natan"
       }
     ],
     "4": [
@@ -150,12 +194,24 @@
       {
         "surface": "the inheritance of each",
         "lemma": "nachalah"
+      },
+      {
+        "surface": "Then they will return",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
       }
     ],
     "5": [
       {
         "surface": "and divide",
         "lemma": "chalaq"
+      },
+      {
+        "surface": "the land",
+        "lemma": "et"
       },
       {
         "surface": "into seven",
@@ -172,6 +228,10 @@
       {
         "surface": "shall remain",
         "lemma": "amad"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "their territory",
@@ -194,6 +254,10 @@
         "lemma": "amad"
       },
       {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "their territory",
         "lemma": "gevul"
       },
@@ -203,6 +267,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "When you",
+        "lemma": "attah"
+      },
       {
         "surface": "have mapped out",
         "lemma": "katav"
@@ -218,6 +286,14 @@
       {
         "surface": "of land",
         "lemma": "erets"
+      },
+      {
+        "surface": "and brought",
+        "lemma": "bo"
+      },
+      {
+        "surface": "it to me",
+        "lemma": "el"
       },
       {
         "surface": "I will cast",
@@ -250,6 +326,10 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "however",
+        "lemma": "ki"
+      },
+      {
         "surface": "have no",
         "lemma": "ayin"
       },
@@ -260,6 +340,10 @@
       {
         "surface": "among you",
         "lemma": "qerev"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "their inheritance",
@@ -302,6 +386,10 @@
         "lemma": "nachalah"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -312,6 +400,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "beyond",
@@ -360,6 +452,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Go",
         "lemma": "halakh"
       },
@@ -374,6 +470,14 @@
       {
         "surface": "map it out",
         "lemma": "katav"
+      },
+      {
+        "surface": "and return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
       },
       {
         "surface": "Then I will cast",
@@ -434,12 +538,24 @@
         "lemma": "cheleq"
       },
       {
+        "surface": "Then they returned",
+        "lemma": "bo"
+      },
+      {
         "surface": "with the document",
         "lemma": "sepher"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "at",
+        "lemma": "el"
       },
       {
         "surface": "the camp",
@@ -530,6 +646,10 @@
         "lemma": "gevul"
       },
       {
+        "surface": "lay",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "between",
         "lemma": "bayin"
       },
@@ -568,12 +688,24 @@
         "lemma": "gevul"
       },
       {
+        "surface": "began",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "at",
+        "lemma": "min"
+      },
+      {
         "surface": "the Jordan",
         "lemma": "yarden"
       },
       {
         "surface": "went up",
         "lemma": "alah"
+      },
+      {
+        "surface": "past",
+        "lemma": "el"
       },
       {
         "surface": "the northern",
@@ -598,6 +730,10 @@
       {
         "surface": "through the hill country",
         "lemma": "har"
+      },
+      {
+        "surface": "and came out",
+        "lemma": "hayah"
       },
       {
         "surface": "at the wilderness",
@@ -626,6 +762,10 @@
         "lemma": "avar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the southern",
         "lemma": "negev"
       },
@@ -636,6 +776,10 @@
       {
         "surface": "of Luz",
         "lemma": "luz"
+      },
+      {
+        "surface": "that is",
+        "lemma": "hu"
       },
       {
         "surface": "vvv",
@@ -656,6 +800,10 @@
       {
         "surface": "to Ataroth-addar",
         "lemma": "atrotaddar"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the hill",
@@ -700,8 +848,16 @@
         "lemma": "negev"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the hill",
         "lemma": "har"
+      },
+      {
+        "surface": "facing",
+        "lemma": "al"
       },
       {
         "surface": "vvv",
@@ -716,12 +872,24 @@
         "lemma": "negev"
       },
       {
+        "surface": "and came out",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "at",
+        "lemma": "el"
+      },
+      {
         "surface": "vvv",
         "lemma": "qiryatbaal"
       },
       {
         "surface": "Kiriath-baal",
         "lemma": "qiryatbaal"
+      },
+      {
+        "surface": "that is",
+        "lemma": "hu"
       },
       {
         "surface": "vvv",
@@ -742,6 +910,10 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "This",
+        "lemma": "zot"
       },
       {
         "surface": "was the western",
@@ -778,8 +950,16 @@
         "lemma": "qiryatyearim"
       },
       {
+        "surface": "and extended",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "westward",
         "lemma": "yam"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the spring",
@@ -804,12 +984,24 @@
         "lemma": "yarad"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the foot",
         "lemma": "qatseh"
       },
       {
         "surface": "of the hill",
         "lemma": "har"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "faces",
+        "lemma": "al"
       },
       {
         "surface": "the Valley of Ben-hinnom",
@@ -834,6 +1026,10 @@
       {
         "surface": "the Valley of Hinnom",
         "lemma": "gay"
+      },
+      {
+        "surface": "toward",
+        "lemma": "el"
       },
       {
         "surface": "the southern",
@@ -870,12 +1066,20 @@
         "lemma": "tsaphon"
       },
       {
+        "surface": "and proceeded",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "vvv",
         "lemma": "enshemesh"
       },
       {
         "surface": "to En-shemesh",
         "lemma": "enshemesh"
+      },
+      {
+        "surface": "and on to",
+        "lemma": "el"
       },
       {
         "surface": "Geliloth",
@@ -920,6 +1124,10 @@
         "lemma": "avar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the northern",
         "lemma": "tsaphon"
       },
@@ -954,6 +1162,10 @@
         "lemma": "avar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the northern",
         "lemma": "tsaphon"
       },
@@ -970,6 +1182,14 @@
         "lemma": "betchoglah"
       },
       {
+        "surface": "and came out",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "at",
+        "lemma": "el"
+      },
+      {
         "surface": "the northern",
         "lemma": "tsaphon"
       },
@@ -982,12 +1202,20 @@
         "lemma": "yam"
       },
       {
+        "surface": "at",
+        "lemma": "el"
+      },
+      {
         "surface": "the mouth",
         "lemma": "negev"
       },
       {
         "surface": "of the Jordan",
         "lemma": "yarden"
+      },
+      {
+        "surface": "This",
+        "lemma": "zeh"
       },
       {
         "surface": "was the southern",
@@ -1016,6 +1244,10 @@
         "lemma": "yarden"
       },
       {
+        "surface": "These",
+        "lemma": "zot"
+      },
+      {
         "surface": "were the borders",
         "lemma": "gevulah"
       },
@@ -1041,6 +1273,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "These were",
+        "lemma": "hayah"
+      },
       {
         "surface": "the cities",
         "lemma": "ir"
@@ -1196,6 +1432,10 @@
         "lemma": "yevusi"
       },
       {
+        "surface": "that is",
+        "lemma": "hu"
+      },
+      {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -1218,6 +1458,10 @@
       {
         "surface": "along with their villages",
         "lemma": "chatser"
+      },
+      {
+        "surface": "This",
+        "lemma": "zot"
       },
       {
         "surface": "was the inheritance",

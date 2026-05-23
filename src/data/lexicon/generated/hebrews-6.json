@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "Therefore",
+        "lemma": "dio"
+      },
+      {
         "surface": "let us leave",
         "lemma": "aphiemi"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "elementary",
@@ -26,8 +34,16 @@
         "lemma": "phero"
       },
       {
+        "surface": "to",
+        "lemma": "epi"
+      },
+      {
         "surface": "maturity",
         "lemma": "teleiotes"
+      },
+      {
+        "surface": "not",
+        "lemma": "me"
       },
       {
         "surface": "laying",
@@ -46,6 +62,10 @@
         "lemma": "metanoia"
       },
       {
+        "surface": "from",
+        "lemma": "apo"
+      },
+      {
         "surface": "dead",
         "lemma": "nekros"
       },
@@ -54,8 +74,16 @@
         "lemma": "ergon"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "of faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "in",
+        "lemma": "epi"
       },
       {
         "surface": "God",
@@ -88,6 +116,10 @@
         "lemma": "nekros"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "eternal",
         "lemma": "aionios"
       },
@@ -97,6 +129,22 @@
       }
     ],
     "3": [
+      {
+        "surface": "And",
+        "lemma": "kai"
+      },
+      {
+        "surface": "this",
+        "lemma": "houtos"
+      },
+      {
+        "surface": "we will do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
       {
         "surface": "God",
         "lemma": "theos"
@@ -112,6 +160,10 @@
         "lemma": "adunatos"
       },
       {
+        "surface": "for those who",
+        "lemma": "ho"
+      },
+      {
         "surface": "vvv",
         "lemma": "hapax"
       },
@@ -124,12 +176,20 @@
         "lemma": "geuo"
       },
       {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "heavenly",
         "lemma": "epouranios"
       },
       {
         "surface": "gift",
         "lemma": "dorea"
+      },
+      {
+        "surface": "who have shared",
+        "lemma": "ginomai"
       },
       {
         "surface": "in the Holy",
@@ -158,6 +218,10 @@
         "lemma": "theos"
       },
       {
+        "surface": "and",
+        "lemma": "te"
+      },
+      {
         "surface": "the powers",
         "lemma": "dunamis"
       },
@@ -172,6 +236,10 @@
     ],
     "6": [
       {
+        "surface": "and then",
+        "lemma": "kai"
+      },
+      {
         "surface": "have fallen away",
         "lemma": "parapipto"
       },
@@ -180,12 +248,24 @@
         "lemma": "anakainizo"
       },
       {
+        "surface": "to",
+        "lemma": "eis"
+      },
+      {
         "surface": "repentance",
         "lemma": "metanoia"
       },
       {
+        "surface": "because they themselves",
+        "lemma": "heautou"
+      },
+      {
         "surface": "are crucifying",
         "lemma": "anastauroo"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "Son",
@@ -196,11 +276,19 @@
         "lemma": "theos"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "subjecting Him to open shame",
         "lemma": "paradeigmatizo"
       }
     ],
     "7": [
+      {
+        "surface": "For",
+        "lemma": "gar"
+      },
       {
         "surface": "land",
         "lemma": "ge"
@@ -210,12 +298,32 @@
         "lemma": "pino"
       },
       {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "rain",
         "lemma": "huetos"
       },
       {
         "surface": "often",
         "lemma": "pollakis"
+      },
+      {
+        "surface": "falling",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "on",
+        "lemma": "epi"
+      },
+      {
+        "surface": "it",
+        "lemma": "autos"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "that produces",
@@ -230,6 +338,18 @@
         "lemma": "euthetos"
       },
       {
+        "surface": "to those",
+        "lemma": "ekeinos"
+      },
+      {
+        "surface": "for",
+        "lemma": "dia"
+      },
+      {
+        "surface": "whom",
+        "lemma": "hos"
+      },
+      {
         "surface": "it is tended",
         "lemma": "georgeo"
       },
@@ -242,11 +362,19 @@
         "lemma": "eulogia"
       },
       {
+        "surface": "of",
+        "lemma": "apo"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       }
     ],
     "8": [
+      {
+        "surface": "But",
+        "lemma": "de"
+      },
       {
         "surface": "land that produces",
         "lemma": "ekphero"
@@ -254,6 +382,10 @@
       {
         "surface": "thorns",
         "lemma": "akantha"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "thistles",
@@ -264,12 +396,32 @@
         "lemma": "adokimos"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "its curse",
         "lemma": "katara"
       },
       {
+        "surface": "is imminent",
+        "lemma": "engus"
+      },
+      {
+        "surface": "In",
+        "lemma": "hos"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "end",
         "lemma": "telos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "eis"
       },
       {
         "surface": "it will be burned",
@@ -277,6 +429,18 @@
       }
     ],
     "9": [
+      {
+        "surface": "Even",
+        "lemma": "kai"
+      },
+      {
+        "surface": "though",
+        "lemma": "ei"
+      },
+      {
+        "surface": "we speak",
+        "lemma": "laleo"
+      },
       {
         "surface": "like this",
         "lemma": "houto"
@@ -290,8 +454,24 @@
         "lemma": "peitho"
       },
       {
+        "surface": "of",
+        "lemma": "ho"
+      },
+      {
         "surface": "better things",
         "lemma": "kreisson"
+      },
+      {
+        "surface": "in",
+        "lemma": "peri"
+      },
+      {
+        "surface": "your case",
+        "lemma": "su"
+      },
+      {
+        "surface": "things that accompany",
+        "lemma": "echo"
       },
       {
         "surface": "salvation",
@@ -300,8 +480,16 @@
     ],
     "10": [
       {
+        "surface": "For",
+        "lemma": "gar"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "is not",
+        "lemma": "ou"
       },
       {
         "surface": "unjust",
@@ -312,8 +500,20 @@
         "lemma": "epilanthano"
       },
       {
+        "surface": "your",
+        "lemma": "su"
+      },
+      {
         "surface": "work",
         "lemma": "ergon"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "love",
@@ -324,6 +524,14 @@
         "lemma": "endeiknumi"
       },
       {
+        "surface": "for",
+        "lemma": "eis"
+      },
+      {
+        "surface": "His",
+        "lemma": "autos"
+      },
+      {
         "surface": "name",
         "lemma": "onoma"
       },
@@ -332,8 +540,16 @@
         "lemma": "diakoneo"
       },
       {
+        "surface": "to the",
+        "lemma": "ho"
+      },
+      {
         "surface": "saints",
         "lemma": "hagios"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "continue to do so",
@@ -350,16 +566,40 @@
         "lemma": "hekastos"
       },
       {
+        "surface": "of you",
+        "lemma": "su"
+      },
+      {
         "surface": "to show",
         "lemma": "endeiknumi"
+      },
+      {
+        "surface": "this",
+        "lemma": "ho"
+      },
+      {
+        "surface": "same",
+        "lemma": "autos"
       },
       {
         "surface": "diligence",
         "lemma": "spoude"
       },
       {
+        "surface": "to",
+        "lemma": "achri"
+      },
+      {
         "surface": "the very end",
         "lemma": "telos"
+      },
+      {
+        "surface": "in order {to make",
+        "lemma": "pros"
+      },
+      {
+        "surface": "your",
+        "lemma": "ho"
       },
       {
         "surface": "hope",
@@ -372,16 +612,44 @@
     ],
     "12": [
       {
+        "surface": "Then",
+        "lemma": "hina"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "me"
+      },
+      {
         "surface": "you will not be sluggish",
         "lemma": "nothros"
+      },
+      {
+        "surface": "but",
+        "lemma": "de"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ginomai"
       },
       {
         "surface": "will imitate",
         "lemma": "mimetes"
       },
       {
+        "surface": "those who",
+        "lemma": "ho"
+      },
+      {
+        "surface": "through",
+        "lemma": "dia"
+      },
+      {
         "surface": "faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "patience",
@@ -398,6 +666,10 @@
     ],
     "13": [
       {
+        "surface": "When",
+        "lemma": "gar"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
@@ -410,15 +682,51 @@
         "lemma": "abraam"
       },
       {
+        "surface": "since",
+        "lemma": "epei"
+      },
+      {
+        "surface": "He had",
+        "lemma": "echo"
+      },
+      {
+        "surface": "no one",
+        "lemma": "oudeis"
+      },
+      {
+        "surface": "greater",
+        "lemma": "megas"
+      },
+      {
         "surface": "to swear",
         "lemma": "omnumi"
       },
       {
+        "surface": "by",
+        "lemma": "kata"
+      },
+      {
         "surface": "He swore",
         "lemma": "omnumi"
+      },
+      {
+        "surface": "by",
+        "lemma": "kata"
+      },
+      {
+        "surface": "Himself",
+        "lemma": "heautou"
       }
     ],
     "14": [
+      {
+        "surface": "saying",
+        "lemma": "lego"
+      },
+      {
+        "surface": "I will} surely",
+        "lemma": "men"
+      },
       {
         "surface": "vvv",
         "lemma": "eulogeo"
@@ -428,11 +736,27 @@
         "lemma": "eulogeo"
       },
       {
+        "surface": "you",
+        "lemma": "su"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "multiply",
         "lemma": "plethuno"
+      },
+      {
+        "surface": "your descendants",
+        "lemma": "su"
       }
     ],
     "15": [
+      {
+        "surface": "And",
+        "lemma": "kai"
+      },
       {
         "surface": "so Abraham",
         "lemma": "houto"
@@ -444,6 +768,10 @@
       {
         "surface": "obtained",
         "lemma": "epitugchano"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "promise",
@@ -460,8 +788,32 @@
         "lemma": "omnumi"
       },
       {
+        "surface": "by",
+        "lemma": "kata"
+      },
+      {
+        "surface": "someone",
+        "lemma": "ho"
+      },
+      {
+        "surface": "greater than themselves",
+        "lemma": "megas"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "their",
+        "lemma": "ho"
+      },
+      {
         "surface": "oath",
         "lemma": "horkos"
+      },
+      {
+        "surface": "serves as",
+        "lemma": "eis"
       },
       {
         "surface": "a confirmation",
@@ -472,11 +824,23 @@
         "lemma": "peras"
       },
       {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "argument",
         "lemma": "antilogia"
       }
     ],
     "17": [
+      {
+        "surface": "vvv",
+        "lemma": "en"
+      },
+      {
+        "surface": "So when",
+        "lemma": "hos"
+      },
       {
         "surface": "God",
         "lemma": "theos"
@@ -490,8 +854,20 @@
         "lemma": "epideiknumi"
       },
       {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "unchanging nature",
         "lemma": "ametathetos"
+      },
+      {
+        "surface": "of",
+        "lemma": "ho"
+      },
+      {
+        "surface": "His",
+        "lemma": "autos"
       },
       {
         "surface": "purpose",
@@ -502,8 +878,16 @@
         "lemma": "perissos"
       },
       {
+        "surface": "to the",
+        "lemma": "ho"
+      },
+      {
         "surface": "heirs",
         "lemma": "kleronomos"
+      },
+      {
+        "surface": "of the",
+        "lemma": "ho"
       },
       {
         "surface": "promise",
@@ -520,6 +904,14 @@
     ],
     "18": [
       {
+        "surface": "Thus",
+        "lemma": "hina"
+      },
+      {
+        "surface": "by",
+        "lemma": "dia"
+      },
+      {
         "surface": "two",
         "lemma": "duo"
       },
@@ -530,6 +922,14 @@
       {
         "surface": "things",
         "lemma": "pragma"
+      },
+      {
+        "surface": "in",
+        "lemma": "en"
+      },
+      {
+        "surface": "which",
+        "lemma": "hos"
       },
       {
         "surface": "it is impossible",
@@ -552,12 +952,20 @@
         "lemma": "krateo"
       },
       {
+        "surface": "of the",
+        "lemma": "ho"
+      },
+      {
         "surface": "hope",
         "lemma": "elpis"
       },
       {
         "surface": "set before us",
         "lemma": "prokeimai"
+      },
+      {
+        "surface": "may be",
+        "lemma": "echo"
       },
       {
         "surface": "strongly",
@@ -570,8 +978,24 @@
     ],
     "19": [
       {
+        "surface": "We have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "this hope",
+        "lemma": "hos"
+      },
+      {
+        "surface": "as",
+        "lemma": "hos"
+      },
+      {
         "surface": "an anchor",
         "lemma": "agkura"
+      },
+      {
+        "surface": "for the",
+        "lemma": "ho"
       },
       {
         "surface": "soul",
@@ -582,12 +1006,28 @@
         "lemma": "asphales"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "secure",
         "lemma": "bebaios"
       },
       {
+        "surface": "It enters",
+        "lemma": "eiserchomai"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "inner sanctuary",
         "lemma": "esotero"
+      },
+      {
+        "surface": "behind the",
+        "lemma": "ho"
       },
       {
         "surface": "curtain",
@@ -595,6 +1035,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "where",
+        "lemma": "hopou"
+      },
       {
         "surface": "Jesus",
         "lemma": "iesous"
@@ -604,12 +1048,44 @@
         "lemma": "prodromos"
       },
       {
+        "surface": "has entered",
+        "lemma": "eiserchomai"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "huper"
+      },
+      {
+        "surface": "on our behalf",
+        "lemma": "ego"
+      },
+      {
+        "surface": "He has become",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "a high priest",
         "lemma": "archiereus"
       },
       {
+        "surface": "vvv",
+        "lemma": "eis"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ho"
+      },
+      {
         "surface": "forever",
         "lemma": "aion"
+      },
+      {
+        "surface": "in",
+        "lemma": "kata"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "order",

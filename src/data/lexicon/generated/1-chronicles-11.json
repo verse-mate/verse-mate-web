@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
       {
         "surface": "came together",
         "lemma": "qavats"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "David",
@@ -22,8 +30,16 @@
         "lemma": "chevron"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Here",
         "lemma": "hinneh"
+      },
+      {
+        "surface": "we are",
+        "lemma": "anachnu"
       },
       {
         "surface": "your own flesh",
@@ -36,6 +52,10 @@
     ],
     "2": [
       {
+        "surface": "Even",
+        "lemma": "gam"
+      },
+      {
         "surface": "in times past",
         "lemma": "shilshom"
       },
@@ -44,12 +64,28 @@
         "lemma": "shaul"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "king",
         "lemma": "melekh"
       },
       {
+        "surface": "you were",
+        "lemma": "attah"
+      },
+      {
+        "surface": "the one who led",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Israel out",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "and brought them back",
+        "lemma": "bo"
       },
       {
         "surface": "And the LORD",
@@ -58,6 +94,14 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
       },
       {
         "surface": "will shepherd",
@@ -72,8 +116,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "and you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "ruler",
         "lemma": "nagid"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "them",
@@ -82,12 +138,24 @@
     ],
     "3": [
       {
+        "surface": "So all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the elders",
         "lemma": "zaqen"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the king",
@@ -134,6 +202,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -160,6 +232,10 @@
         "lemma": "david"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "yisrael"
       },
@@ -170,6 +246,10 @@
       {
         "surface": "to Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "that is",
+        "lemma": "hu"
       },
       {
         "surface": "Jebus",
@@ -184,18 +264,38 @@
         "lemma": "yevusi"
       },
       {
+        "surface": "inhabited",
+        "lemma": "yashav"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       }
     ],
     "5": [
       {
+        "surface": "The people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Jebus",
         "lemma": "yevus"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to David",
         "lemma": "david"
+      },
+      {
+        "surface": "You will never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "get in",
+        "lemma": "bo"
       },
       {
         "surface": "here",
@@ -218,6 +318,10 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "that is",
+        "lemma": "hu"
+      },
+      {
         "surface": "the City",
         "lemma": "ir"
       },
@@ -232,6 +336,14 @@
         "lemma": "david"
       },
       {
+        "surface": "had said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Whoever",
+        "lemma": "kol"
+      },
+      {
         "surface": "is the first",
         "lemma": "rishon"
       },
@@ -242,6 +354,10 @@
       {
         "surface": "a Jebusite",
         "lemma": "yevusi"
+      },
+      {
+        "surface": "will become",
+        "lemma": "hayah"
       },
       {
         "surface": "chief",
@@ -272,6 +388,10 @@
         "lemma": "rishon"
       },
       {
+        "surface": "and he became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the chief",
         "lemma": "rosh"
       }
@@ -282,8 +402,20 @@
         "lemma": "david"
       },
       {
+        "surface": "took up residence",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the fortress",
         "lemma": "metsad"
+      },
+      {
+        "surface": "that is why",
+        "lemma": "al"
+      },
+      {
+        "surface": "it was called",
+        "lemma": "qara"
       },
       {
         "surface": "the City",
@@ -308,8 +440,16 @@
         "lemma": "saviv"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the supporting terraces",
         "lemma": "millo"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "the surrounding wall",
@@ -356,9 +496,17 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "was with him",
+        "lemma": "im"
       }
     ],
     "10": [
+      {
+        "surface": "Now these were",
+        "lemma": "elleh"
+      },
       {
         "surface": "the chiefs",
         "lemma": "rosh"
@@ -370,6 +518,18 @@
       {
         "surface": "mighty men",
         "lemma": "gibbor"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "together with",
+        "lemma": "im"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -388,6 +548,10 @@
         "lemma": "malkhut"
       },
       {
+        "surface": "according to",
+        "lemma": "im"
+      },
+      {
         "surface": "the word",
         "lemma": "davar"
       },
@@ -396,11 +560,19 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "concerning",
+        "lemma": "al"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       }
     ],
     "11": [
+      {
+        "surface": "This",
+        "lemma": "elleh"
+      },
       {
         "surface": "is the list",
         "lemma": "mispar"
@@ -434,12 +606,20 @@
         "lemma": "sheloshim"
       },
       {
+        "surface": "he",
+        "lemma": "hu"
+      },
+      {
         "surface": "wielded",
         "lemma": "ur"
       },
       {
         "surface": "his spear",
         "lemma": "chanit"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "three",
@@ -494,6 +674,18 @@
     ],
     "13": [
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
@@ -520,6 +712,10 @@
       {
         "surface": "for battle",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "At",
+        "lemma": "hayah"
       },
       {
         "surface": "a place",
@@ -602,6 +798,10 @@
         "lemma": "shalosh"
       },
       {
+        "surface": "of",
+        "lemma": "min"
+      },
+      {
         "surface": "the thirty",
         "lemma": "sheloshim"
       },
@@ -614,12 +814,24 @@
         "lemma": "yarad"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "the rock",
         "lemma": "tsur"
+      },
+      {
+        "surface": "at",
+        "lemma": "el"
       },
       {
         "surface": "the cave",
@@ -651,6 +863,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "At that time",
+        "lemma": "az"
+      },
       {
         "surface": "David",
         "lemma": "david"
@@ -684,6 +900,10 @@
       {
         "surface": "longed for water",
         "lemma": "avah"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "Oh, that someone",
@@ -748,12 +968,24 @@
         "lemma": "betlechem"
       },
       {
+        "surface": "and brought it",
+        "lemma": "bo"
+      },
+      {
+        "surface": "back to",
+        "lemma": "el"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
       {
         "surface": "But he",
         "lemma": "david"
+      },
+      {
+        "surface": "refused",
+        "lemma": "lo"
       },
       {
         "surface": "to drink it",
@@ -770,12 +1002,24 @@
     ],
     "19": [
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Far be it",
         "lemma": "chalilah"
       },
       {
         "surface": "my God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
       },
       {
         "surface": "How can I drink",
@@ -786,12 +1030,24 @@
         "lemma": "dam"
       },
       {
+        "surface": "of these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "men",
         "lemma": "enosh"
       },
       {
         "surface": "who risked their lives",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "Because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they had brought it",
+        "lemma": "bo"
       },
       {
         "surface": "at the risk of their lives",
@@ -804,6 +1060,14 @@
       {
         "surface": "to drink it",
         "lemma": "shatah"
+      },
+      {
+        "surface": "Such",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "were the exploits",
+        "lemma": "asah"
       },
       {
         "surface": "of the three",
@@ -828,6 +1092,10 @@
         "lemma": "yoav"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "chief",
         "lemma": "rosh"
       },
@@ -836,12 +1104,20 @@
         "lemma": "shalosh"
       },
       {
+        "surface": "and he",
+        "lemma": "hu"
+      },
+      {
         "surface": "wielded",
         "lemma": "ur"
       },
       {
         "surface": "his spear",
         "lemma": "chanit"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "three",
@@ -854,6 +1130,10 @@
       {
         "surface": "killed them",
         "lemma": "chalal"
+      },
+      {
+        "surface": "and won",
+        "lemma": "lo"
       },
       {
         "surface": "a name",
@@ -874,12 +1154,28 @@
         "lemma": "kavad"
       },
       {
+        "surface": "above",
+        "lemma": "min"
+      },
+      {
         "surface": "the Three",
         "lemma": "shalosh"
       },
       {
+        "surface": "and he became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "commander",
         "lemma": "sar"
+      },
+      {
+        "surface": "even though he was not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "included",
+        "lemma": "bo"
       },
       {
         "surface": "among the Three",
@@ -912,6 +1208,10 @@
         "lemma": "chayil"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "Kabzeel",
         "lemma": "qavtseel"
       },
@@ -922,6 +1222,10 @@
       {
         "surface": "exploits",
         "lemma": "poal"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
       },
       {
         "surface": "struck down",
@@ -948,6 +1252,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "he",
+        "lemma": "hu"
+      },
+      {
         "surface": "went down",
         "lemma": "yarad"
       },
@@ -969,6 +1277,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
       {
         "surface": "also struck down",
         "lemma": "nakhah"
@@ -1018,6 +1330,10 @@
         "lemma": "yarad"
       },
       {
+        "surface": "him",
+        "lemma": "el"
+      },
+      {
         "surface": "with a club",
         "lemma": "shevet"
       },
@@ -1047,6 +1363,14 @@
       }
     ],
     "24": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "were the exploits",
+        "lemma": "asah"
+      },
       {
         "surface": "of Benaiah",
         "lemma": "benayah"
@@ -1078,8 +1402,28 @@
         "lemma": "kavad"
       },
       {
+        "surface": "among",
+        "lemma": "min"
+      },
+      {
         "surface": "the Thirty",
         "lemma": "sheloshim"
+      },
+      {
+        "surface": "but he",
+        "lemma": "hu"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "become",
+        "lemma": "bo"
+      },
+      {
+        "surface": "one of",
+        "lemma": "el"
       },
       {
         "surface": "the Three",
@@ -1092,6 +1436,10 @@
       {
         "surface": "appointed him",
         "lemma": "sum"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "his guard",
@@ -1408,6 +1756,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "of Nathan",
+        "lemma": "natan"
+      },
+      {
         "surface": "Mibhar",
         "lemma": "mivchar"
       },
@@ -1522,6 +1874,10 @@
       {
         "surface": "and the thirty",
         "lemma": "sheloshim"
+      },
+      {
+        "surface": "with him",
+        "lemma": "al"
       }
     ],
     "43": [
@@ -1554,6 +1910,10 @@
       {
         "surface": "the Ashterathite",
         "lemma": "ashterati"
+      },
+      {
+        "surface": "Shama",
+        "lemma": "shama"
       },
       {
         "surface": "and Jeiel",
@@ -1654,6 +2014,6 @@
   "themeLemmas": [
     "david",
     "shalosh",
-    "yisrael"
+    "hu"
   ]
 }

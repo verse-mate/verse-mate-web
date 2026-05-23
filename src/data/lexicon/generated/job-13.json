@@ -14,8 +14,20 @@
         "lemma": "ayin"
       },
       {
+        "surface": "have seen",
+        "lemma": "raah"
+      },
+      {
+        "surface": "all this",
+        "lemma": "kol"
+      },
+      {
         "surface": "my ears",
         "lemma": "ozen"
+      },
+      {
+        "surface": "have heard",
+        "lemma": "shama"
       },
       {
         "surface": "and understood",
@@ -28,8 +40,24 @@
         "lemma": "daat"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "also",
+        "lemma": "gam"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
+        "surface": "am not",
+        "lemma": "lo"
       },
       {
         "surface": "inferior",
@@ -38,12 +66,24 @@
     ],
     "3": [
       {
+        "surface": "Yet",
+        "lemma": "ulam"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "desire",
         "lemma": "chaphets"
       },
       {
         "surface": "to speak",
         "lemma": "davar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the Almighty",
@@ -54,11 +94,23 @@
         "lemma": "yakhach"
       },
       {
+        "surface": "before",
+        "lemma": "el"
+      },
+      {
         "surface": "God",
         "lemma": "el"
       }
     ],
     "4": [
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
+        "surface": "however",
+        "lemma": "ulam"
+      },
       {
         "surface": "smear",
         "lemma": "taphal"
@@ -66,6 +118,10 @@
       {
         "surface": "with lies",
         "lemma": "sheqer"
+      },
+      {
+        "surface": "you are all",
+        "lemma": "kol"
       },
       {
         "surface": "worthless",
@@ -86,11 +142,19 @@
         "lemma": "charash"
       },
       {
+        "surface": "for that would be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "wisdom",
         "lemma": "chokhmah"
       }
     ],
     "6": [
+      {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
       {
         "surface": "now",
         "lemma": "na"
@@ -140,6 +204,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "argue",
         "lemma": "riv"
       },
@@ -152,6 +220,10 @@
       {
         "surface": "Would it be well",
         "lemma": "tov"
+      },
+      {
+        "surface": "when",
+        "lemma": "ki"
       },
       {
         "surface": "He examined you",
@@ -176,6 +248,14 @@
         "lemma": "yakhach"
       },
       {
+        "surface": "you",
+        "lemma": "et"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "you secretly",
         "lemma": "seter"
       },
@@ -190,6 +270,10 @@
         "lemma": "seet"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "terrify you",
         "lemma": "baat"
       },
@@ -200,6 +284,10 @@
       {
         "surface": "not fall",
         "lemma": "naphal"
+      },
+      {
+        "surface": "upon you",
+        "lemma": "al"
       }
     ],
     "12": [
@@ -234,6 +322,10 @@
         "lemma": "charash"
       },
       {
+        "surface": "and I",
+        "lemma": "ani"
+      },
+      {
         "surface": "will speak",
         "lemma": "davar"
       },
@@ -242,11 +334,19 @@
         "lemma": "avar"
       },
       {
+        "surface": "to me",
+        "lemma": "al"
+      },
+      {
         "surface": "what may",
         "lemma": "mah"
       }
     ],
     "14": [
+      {
+        "surface": "Why",
+        "lemma": "al"
+      },
       {
         "surface": "do I put myself",
         "lemma": "basar"
@@ -294,18 +394,42 @@
         "lemma": "derekh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "His face",
         "lemma": "paneh"
       }
     ],
     "16": [
       {
+        "surface": "Moreover",
+        "lemma": "gam"
+      },
+      {
+        "surface": "this will be",
+        "lemma": "hu"
+      },
+      {
         "surface": "salvation",
         "lemma": "yeshuah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "godless man",
         "lemma": "chaneph"
+      },
+      {
+        "surface": "can appear",
+        "lemma": "bo"
       },
       {
         "surface": "before Him",
@@ -313,6 +437,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "Listen carefully",
+        "lemma": "shama"
+      },
       {
         "surface": "to my words",
         "lemma": "millah"
@@ -348,6 +476,14 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "will be vindicated",
         "lemma": "tsadaq"
       }
@@ -360,6 +496,14 @@
       {
         "surface": "indict",
         "lemma": "riv"
+      },
+      {
+        "surface": "me",
+        "lemma": "immad"
+      },
+      {
+        "surface": "If",
+        "lemma": "ki"
       },
       {
         "surface": "so",
@@ -380,8 +524,24 @@
         "lemma": "akh"
       },
       {
+        "surface": "grant",
+        "lemma": "asah"
+      },
+      {
         "surface": "these two",
         "lemma": "shenayim"
+      },
+      {
+        "surface": "things to me",
+        "lemma": "immad"
+      },
+      {
+        "surface": "so that",
+        "lemma": "az"
+      },
+      {
+        "surface": "I need not",
+        "lemma": "lo"
       },
       {
         "surface": "hide",
@@ -402,6 +562,14 @@
         "lemma": "kaph"
       },
       {
+        "surface": "from me",
+        "lemma": "al"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
+      },
+      {
         "surface": "let Your terror",
         "lemma": "emah"
       },
@@ -412,12 +580,28 @@
     ],
     "22": [
       {
+        "surface": "Then call me",
+        "lemma": "qara"
+      },
+      {
+        "surface": "and I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "will answer",
         "lemma": "un"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "let me speak",
         "lemma": "davar"
+      },
+      {
+        "surface": "and You can reply",
+        "lemma": "shuv"
       }
     ],
     "23": [
@@ -496,12 +680,20 @@
     ],
     "26": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "You record",
         "lemma": "katav"
       },
       {
         "surface": "bitter accusations",
         "lemma": "merorah"
+      },
+      {
+        "surface": "against me",
+        "lemma": "al"
       },
       {
         "surface": "and bequeath to me",
@@ -534,12 +726,20 @@
         "lemma": "shamar"
       },
       {
+        "surface": "over all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my paths",
         "lemma": "orach"
       },
       {
         "surface": "You set a limit",
         "lemma": "chaqah"
+      },
+      {
+        "surface": "for",
+        "lemma": "al"
       },
       {
         "surface": "the soles",
@@ -551,6 +751,10 @@
       }
     ],
     "28": [
+      {
+        "surface": "So man",
+        "lemma": "hu"
+      },
       {
         "surface": "wastes away",
         "lemma": "balah"
@@ -570,8 +774,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "paneh",
-    "yakhach",
-    "yada"
+    "ki"
   ]
 }

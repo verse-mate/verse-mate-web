@@ -40,6 +40,10 @@
         "lemma": "barakh"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the name",
         "lemma": "shem"
       },
@@ -50,12 +54,20 @@
       {
         "surface": "both now",
         "lemma": "attah"
+      },
+      {
+        "surface": "and forevermore",
+        "lemma": "ad"
       }
     ],
     "3": [
       {
         "surface": "From where the sun rises",
         "lemma": "mizrach"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "where it sets",
@@ -84,12 +96,24 @@
         "lemma": "rum"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
       {
         "surface": "His glory",
         "lemma": "kavod"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
       },
       {
         "surface": "the heavens",
@@ -110,6 +134,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "the One enthroned",
+        "lemma": "yashav"
+      },
+      {
         "surface": "on high",
         "lemma": "gavah"
       }
@@ -118,6 +146,10 @@
       {
         "surface": "He humbles Himself",
         "lemma": "shaphel"
+      },
+      {
+        "surface": "to behold",
+        "lemma": "raah"
       },
       {
         "surface": "the heavens",
@@ -156,8 +188,20 @@
     ],
     "8": [
       {
+        "surface": "to seat them",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "nobles",
         "lemma": "nadiv"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "the princes",
@@ -169,6 +213,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "He settles",
+        "lemma": "yashav"
+      },
       {
         "surface": "the barren woman",
         "lemma": "aqar"
@@ -197,7 +245,7 @@
   },
   "themeLemmas": [
     "halal",
-    "shem",
-    "rum"
+    "yashav",
+    "shem"
   ]
 }

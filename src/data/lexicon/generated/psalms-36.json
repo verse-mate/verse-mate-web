@@ -64,6 +64,10 @@
     ],
     "2": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "his eyes",
         "lemma": "ayin"
       },
@@ -116,6 +120,10 @@
     ],
     "4": [
       {
+        "surface": "Even on",
+        "lemma": "al"
+      },
+      {
         "surface": "his bed",
         "lemma": "mishkav"
       },
@@ -132,12 +140,24 @@
         "lemma": "yatsav"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "a path",
         "lemma": "derekh"
       },
       {
+        "surface": "that is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
+      },
+      {
+        "surface": "he fails",
+        "lemma": "lo"
       },
       {
         "surface": "to reject",
@@ -164,6 +184,10 @@
       {
         "surface": "Your faithfulness",
         "lemma": "emunah"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "the clouds",
@@ -274,6 +298,14 @@
     ],
     "9": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "with You",
+        "lemma": "im"
+      },
+      {
         "surface": "is the fountain",
         "lemma": "maqor"
       },
@@ -284,6 +316,10 @@
       {
         "surface": "in Your light",
         "lemma": "or"
+      },
+      {
+        "surface": "we see",
+        "lemma": "raah"
       },
       {
         "surface": "light",
@@ -318,12 +354,20 @@
     ],
     "11": [
       {
+        "surface": "Let not",
+        "lemma": "al"
+      },
+      {
         "surface": "the foot",
         "lemma": "regel"
       },
       {
         "surface": "of the proud",
         "lemma": "gaavah"
+      },
+      {
+        "surface": "come against me",
+        "lemma": "bo"
       },
       {
         "surface": "nor the hand",
@@ -336,6 +380,10 @@
       {
         "surface": "drive me",
         "lemma": "nud"
+      },
+      {
+        "surface": "away",
+        "lemma": "al"
       }
     ],
     "12": [
@@ -356,14 +404,18 @@
         "lemma": "dachah"
       },
       {
+        "surface": "and unable",
+        "lemma": "lo"
+      },
+      {
         "surface": "to rise",
         "lemma": "qamay"
       }
     ]
   },
   "themeLemmas": [
-    "chesed",
-    "tsedaqah",
-    "rasah"
+    "al",
+    "lo",
+    "chesed"
   ]
 }

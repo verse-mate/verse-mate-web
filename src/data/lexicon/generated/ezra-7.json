@@ -176,6 +176,10 @@
     ],
     "6": [
       {
+        "surface": "this",
+        "lemma": "hu"
+      },
+      {
         "surface": "Ezra",
         "lemma": "ezra"
       },
@@ -186,6 +190,10 @@
       {
         "surface": "from Babylon",
         "lemma": "bavel"
+      },
+      {
+        "surface": "He was",
+        "lemma": "hu"
       },
       {
         "surface": "a scribe",
@@ -204,6 +212,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -216,8 +228,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "had given",
+        "lemma": "natan"
+      },
+      {
         "surface": "The king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "had granted",
+        "lemma": "natan"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "his requests",
@@ -234,6 +258,10 @@
       {
         "surface": "his God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "was upon him",
+        "lemma": "al"
       }
     ],
     "7": [
@@ -258,8 +286,16 @@
         "lemma": "alah"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "with some of",
+        "lemma": "min"
       },
       {
         "surface": "the Israelites",
@@ -288,6 +324,10 @@
     ],
     "8": [
       {
+        "surface": "Ezra arrived",
+        "lemma": "bo"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
       },
@@ -314,6 +354,10 @@
     ],
     "9": [
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "had begun",
         "lemma": "yesud"
       },
@@ -336,6 +380,14 @@
       {
         "surface": "month",
         "lemma": "chodesh"
+      },
+      {
+        "surface": "and he arrived",
+        "lemma": "bo"
+      },
+      {
+        "surface": "in",
+        "lemma": "el"
       },
       {
         "surface": "Jerusalem",
@@ -364,9 +416,17 @@
       {
         "surface": "of his God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "was upon him",
+        "lemma": "al"
       }
     ],
     "10": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "Ezra",
         "lemma": "ezra"
@@ -392,6 +452,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "to practice it",
+        "lemma": "asah"
+      },
+      {
         "surface": "and to teach",
         "lemma": "lamad"
       },
@@ -410,6 +474,10 @@
     ],
     "11": [
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
         "surface": "is the text",
         "lemma": "parshegen"
       },
@@ -424,6 +492,10 @@
       {
         "surface": "Artaxerxes",
         "lemma": "artachshashta"
+      },
+      {
+        "surface": "had given",
+        "lemma": "natan"
       },
       {
         "surface": "to Ezra",
@@ -456,6 +528,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
       },
       {
         "surface": "Israel",
@@ -492,6 +568,10 @@
         "lemma": "dat"
       },
       {
+        "surface": "of",
+        "lemma": "di"
+      },
+      {
         "surface": "the God",
         "lemma": "elah"
       },
@@ -506,12 +586,24 @@
     ],
     "13": [
       {
+        "surface": "I",
+        "lemma": "min"
+      },
+      {
         "surface": "hereby",
         "lemma": "sum"
       },
       {
         "surface": "decree",
         "lemma": "teem"
+      },
+      {
+        "surface": "that",
+        "lemma": "di"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "volunteers",
@@ -538,6 +630,10 @@
         "lemma": "hukh"
       },
       {
+        "surface": "with you",
+        "lemma": "im"
+      },
+      {
         "surface": "to Jerusalem",
         "lemma": "yerushalem"
       }
@@ -546,6 +642,10 @@
       {
         "surface": "You are sent",
         "lemma": "shelach"
+      },
+      {
+        "surface": "by",
+        "lemma": "min"
       },
       {
         "surface": "the king",
@@ -580,6 +680,10 @@
         "lemma": "elah"
       },
       {
+        "surface": "which",
+        "lemma": "di"
+      },
+      {
         "surface": "is in your hand",
         "lemma": "yad"
       }
@@ -596,6 +700,10 @@
       {
         "surface": "and gold",
         "lemma": "dehav"
+      },
+      {
+        "surface": "that",
+        "lemma": "di"
       },
       {
         "surface": "the king",
@@ -618,6 +726,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "whose",
+        "lemma": "di"
+      },
+      {
         "surface": "dwelling",
         "lemma": "mishkan"
       },
@@ -627,6 +739,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "together with all",
+        "lemma": "kol"
+      },
       {
         "surface": "the silver",
         "lemma": "kesaph"
@@ -640,12 +756,20 @@
         "lemma": "shekhach"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the province",
         "lemma": "medinah"
       },
       {
         "surface": "of Babylon",
         "lemma": "bavel"
+      },
+      {
+        "surface": "as well as",
+        "lemma": "im"
       },
       {
         "surface": "the freewill offerings",
@@ -722,6 +846,10 @@
         "lemma": "himmo"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the altar",
         "lemma": "madbach"
       },
@@ -782,6 +910,10 @@
         "lemma": "shelam"
       },
       {
+        "surface": "to",
+        "lemma": "qodam"
+      },
+      {
         "surface": "the God",
         "lemma": "elah"
       },
@@ -828,6 +960,10 @@
         "lemma": "elah"
       },
       {
+        "surface": "that",
+        "lemma": "di"
+      },
+      {
         "surface": "may have occasion",
         "lemma": "nephal"
       },
@@ -838,6 +974,10 @@
       {
         "surface": "you may pay for it",
         "lemma": "netan"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the royal",
@@ -874,6 +1014,10 @@
         "lemma": "teem"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the treasurers",
         "lemma": "gizbar"
       },
@@ -884,6 +1028,10 @@
       {
         "surface": "of the Euphrates",
         "lemma": "nehar"
+      },
+      {
+        "surface": "Whatever",
+        "lemma": "kol"
       },
       {
         "surface": "Ezra",
@@ -923,6 +1071,10 @@
       }
     ],
     "22": [
+      {
+        "surface": "up to",
+        "lemma": "ad"
+      },
       {
         "surface": "a hundred",
         "lemma": "meah"
@@ -986,8 +1138,16 @@
     ],
     "23": [
       {
+        "surface": "Whatever",
+        "lemma": "kol"
+      },
+      {
         "surface": "is commanded",
         "lemma": "teem"
+      },
+      {
+        "surface": "by",
+        "lemma": "min"
       },
       {
         "surface": "the God",
@@ -1010,6 +1170,10 @@
         "lemma": "bayit"
       },
       {
+        "surface": "For",
+        "lemma": "di"
+      },
+      {
         "surface": "why",
         "lemma": "mah"
       },
@@ -1020,6 +1184,10 @@
       {
         "surface": "fall",
         "lemma": "hava"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the realm",
@@ -1038,6 +1206,10 @@
       {
         "surface": "be advised",
         "lemma": "yeda"
+      },
+      {
+        "surface": "that",
+        "lemma": "di"
       },
       {
         "surface": "you have no",
@@ -1062,6 +1234,14 @@
       {
         "surface": "or toll",
         "lemma": "halakh"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "of the priests",
@@ -1118,6 +1298,10 @@
         "lemma": "elah"
       },
       {
+        "surface": "which you possess",
+        "lemma": "di"
+      },
+      {
         "surface": "are to appoint",
         "lemma": "menah"
       },
@@ -1134,6 +1318,10 @@
         "lemma": "din"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -1144,6 +1332,10 @@
       {
         "surface": "of the Euphrates",
         "lemma": "nehar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "who know",
@@ -1162,6 +1354,10 @@
         "lemma": "yeda"
       },
       {
+        "surface": "to anyone who",
+        "lemma": "di"
+      },
+      {
         "surface": "does not",
         "lemma": "la"
       },
@@ -1171,6 +1367,10 @@
       }
     ],
     "26": [
+      {
+        "surface": "If anyone",
+        "lemma": "kol"
+      },
       {
         "surface": "does",
         "lemma": "hava"
@@ -1188,12 +1388,20 @@
         "lemma": "dat"
       },
       {
+        "surface": "of",
+        "lemma": "di"
+      },
+      {
         "surface": "your God",
         "lemma": "elah"
       },
       {
         "surface": "and the law",
         "lemma": "dat"
+      },
+      {
+        "surface": "of",
+        "lemma": "di"
       },
       {
         "surface": "the king",
@@ -1214,6 +1422,10 @@
       {
         "surface": "executed",
         "lemma": "avad"
+      },
+      {
+        "surface": "against him",
+        "lemma": "min"
       },
       {
         "surface": "whether",
@@ -1254,6 +1466,18 @@
         "lemma": "elohim"
       },
       {
+        "surface": "of our fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "has put",
+        "lemma": "natan"
+      },
+      {
         "surface": "into the heart",
         "lemma": "lev"
       },
@@ -1284,6 +1508,10 @@
         "lemma": "natah"
       },
       {
+        "surface": "me",
+        "lemma": "al"
+      },
+      {
         "surface": "favor",
         "lemma": "chesed"
       },
@@ -1298,6 +1526,10 @@
       {
         "surface": "his counselors",
         "lemma": "yaats"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "his",
@@ -1324,6 +1556,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "was upon me",
+        "lemma": "al"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "took courage",
         "lemma": "chazaq"
       },
@@ -1342,12 +1582,16 @@
       {
         "surface": "to return",
         "lemma": "alah"
+      },
+      {
+        "surface": "with me",
+        "lemma": "im"
       }
     ]
   },
   "themeLemmas": [
     "elah",
-    "ezra",
-    "yerushalem"
+    "kol",
+    "di"
   ]
 }

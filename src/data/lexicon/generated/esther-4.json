@@ -14,8 +14,24 @@
         "lemma": "yada"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "had happened",
+        "lemma": "asah"
+      },
+      {
         "surface": "he",
         "lemma": "mordekhay"
+      },
+      {
+        "surface": "tore",
+        "lemma": "qara"
       },
       {
         "surface": "his clothes",
@@ -32,6 +48,10 @@
       {
         "surface": "and ashes",
         "lemma": "epher"
+      },
+      {
+        "surface": "and went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "into the middle",
@@ -56,12 +76,24 @@
     ],
     "2": [
       {
+        "surface": "But he went only",
+        "lemma": "bo"
+      },
+      {
+        "surface": "as",
+        "lemma": "ad"
+      },
+      {
         "surface": "far as the king’s",
         "lemma": "melekh"
       },
       {
         "surface": "gate",
         "lemma": "shaar"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "the law prohibited",
@@ -76,6 +108,10 @@
         "lemma": "saq"
       },
       {
+        "surface": "from entering",
+        "lemma": "bo"
+      },
+      {
         "surface": "that",
         "lemma": "melekh"
       },
@@ -85,6 +121,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "In every",
+        "lemma": "kol"
+      },
       {
         "surface": "province",
         "lemma": "medinah"
@@ -138,6 +178,10 @@
         "lemma": "rav"
       },
       {
+        "surface": "lay",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "in sackcloth",
         "lemma": "saq"
       },
@@ -158,6 +202,10 @@
       {
         "surface": "and eunuchs",
         "lemma": "saris"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "and told",
@@ -196,6 +244,10 @@
         "lemma": "saq"
       },
       {
+        "surface": "but he would not",
+        "lemma": "lo"
+      },
+      {
         "surface": "accept them",
         "lemma": "qaval"
       }
@@ -204,6 +256,10 @@
       {
         "surface": "Then Esther",
         "lemma": "ester"
+      },
+      {
+        "surface": "summoned",
+        "lemma": "qara"
       },
       {
         "surface": "Hathach",
@@ -230,6 +286,10 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "Mordecai",
         "lemma": "mordekhay"
       },
@@ -240,6 +300,10 @@
       {
         "surface": "what was troubling him",
         "lemma": "mah"
+      },
+      {
+        "surface": "and why",
+        "lemma": "al"
       }
     ],
     "6": [
@@ -248,8 +312,20 @@
         "lemma": "hatakh"
       },
       {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Mordecai",
         "lemma": "mordekhay"
+      },
+      {
+        "surface": "in",
+        "lemma": "el"
       },
       {
         "surface": "the city",
@@ -282,8 +358,20 @@
         "lemma": "nagad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "had happened to him",
         "lemma": "qarah"
+      },
+      {
+        "surface": "including",
+        "lemma": "et"
       },
       {
         "surface": "the exact amount",
@@ -294,12 +382,24 @@
         "lemma": "keseph"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "Haman",
         "lemma": "haman"
       },
       {
+        "surface": "had promised",
+        "lemma": "amar"
+      },
+      {
         "surface": "to pay",
         "lemma": "shaqal"
+      },
+      {
+        "surface": "into",
+        "lemma": "al"
       },
       {
         "surface": "the royal",
@@ -320,6 +420,10 @@
     ],
     "8": [
       {
+        "surface": "Mordecai also gave Hathach",
+        "lemma": "natan"
+      },
+      {
         "surface": "a copy",
         "lemma": "parshegen"
       },
@@ -332,6 +436,10 @@
         "lemma": "dat"
       },
       {
+        "surface": "issued",
+        "lemma": "natan"
+      },
+      {
         "surface": "in Susa",
         "lemma": "shushan"
       },
@@ -340,8 +448,16 @@
         "lemma": "shamad"
       },
       {
+        "surface": "to show",
+        "lemma": "raah"
+      },
+      {
         "surface": "and explain",
         "lemma": "nagad"
+      },
+      {
+        "surface": "to",
+        "lemma": "et"
       },
       {
         "surface": "Esther",
@@ -350,6 +466,14 @@
       {
         "surface": "urging",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "her",
+        "lemma": "al"
+      },
+      {
+        "surface": "to approach",
+        "lemma": "bo"
       },
       {
         "surface": "the king",
@@ -368,6 +492,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "her people",
         "lemma": "am"
       }
@@ -376,6 +504,10 @@
       {
         "surface": "So Hathach",
         "lemma": "hatakh"
+      },
+      {
+        "surface": "went back",
+        "lemma": "bo"
       },
       {
         "surface": "and relayed",
@@ -400,6 +532,10 @@
         "lemma": "ester"
       },
       {
+        "surface": "spoke",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Hathach",
         "lemma": "hatakh"
       },
@@ -408,11 +544,19 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "tell Mordecai",
         "lemma": "mordekhay"
       }
     ],
     "11": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the royal",
         "lemma": "melekh"
@@ -438,12 +582,20 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "one",
         "lemma": "echad"
       },
       {
         "surface": "law",
         "lemma": "dat"
+      },
+      {
+        "surface": "applies to every",
+        "lemma": "kol"
       },
       {
         "surface": "man",
@@ -454,8 +606,20 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "approaches",
+        "lemma": "bo"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "in",
+        "lemma": "el"
       },
       {
         "surface": "the inner",
@@ -464,6 +628,14 @@
       {
         "surface": "court",
         "lemma": "chatser"
+      },
+      {
+        "surface": "without",
+        "lemma": "asher"
+      },
+      {
+        "surface": "being summoned",
+        "lemma": "qara"
       },
       {
         "surface": "that he be put to death",
@@ -492,6 +664,30 @@
       {
         "surface": "may that person live",
         "lemma": "chayah"
+      },
+      {
+        "surface": "But I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "been summoned",
+        "lemma": "qara"
+      },
+      {
+        "surface": "to appear",
+        "lemma": "bo"
+      },
+      {
+        "surface": "before",
+        "lemma": "el"
+      },
+      {
+        "surface": "the",
+        "lemma": "zeh"
       },
       {
         "surface": "king",
@@ -530,8 +726,24 @@
         "lemma": "mordekhay"
       },
       {
+        "surface": "sent back",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "her",
         "lemma": "ester"
+      },
+      {
+        "surface": "this reply",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "imagine that",
@@ -554,14 +766,34 @@
         "lemma": "malat"
       },
       {
+        "surface": "the fate of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Jews",
         "lemma": "yehudi"
       }
     ],
     "14": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "you remain silent",
         "lemma": "charash"
+      },
+      {
+        "surface": "at this",
+        "lemma": "zot"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
       },
       {
         "surface": "relief",
@@ -588,6 +820,14 @@
         "lemma": "maqom"
       },
       {
+        "surface": "but you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "and your father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
       },
@@ -604,18 +844,42 @@
         "lemma": "yada"
       },
       {
+        "surface": "if perhaps",
+        "lemma": "im"
+      },
+      {
         "surface": "you have come",
         "lemma": "naga"
       },
       {
         "surface": "to the kingdom",
         "lemma": "malkhut"
+      },
+      {
+        "surface": "for such a time",
+        "lemma": "et"
+      },
+      {
+        "surface": "as this",
+        "lemma": "zot"
       }
     ],
     "15": [
       {
         "surface": "Then Esther",
         "lemma": "ester"
+      },
+      {
+        "surface": "sent",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "this reply",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Mordecai",
@@ -632,6 +896,10 @@
         "lemma": "kanas"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Jews",
         "lemma": "yehudi"
       },
@@ -646,6 +914,14 @@
       {
         "surface": "and fast",
         "lemma": "tsum"
+      },
+      {
+        "surface": "for me",
+        "lemma": "al"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "eat",
@@ -672,6 +948,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "and I",
+        "lemma": "ani"
+      },
+      {
         "surface": "and my maidens",
         "lemma": "naarah"
       },
@@ -688,12 +968,32 @@
         "lemma": "ken"
       },
       {
+        "surface": "I will go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
       {
+        "surface": "even though",
+        "lemma": "asher"
+      },
+      {
+        "surface": "it is against",
+        "lemma": "lo"
+      },
+      {
         "surface": "the law",
         "lemma": "dat"
+      },
+      {
+        "surface": "And if",
+        "lemma": "asher"
       },
       {
         "surface": "I perish",
@@ -714,18 +1014,34 @@
         "lemma": "avar"
       },
       {
+        "surface": "and did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "Esther",
         "lemma": "ester"
       },
       {
         "surface": "had instructed",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "him",
+        "lemma": "al"
       }
     ]
   },
   "themeLemmas": [
     "mordekhay",
     "ester",
-    "yehudi"
+    "asher"
   ]
 }

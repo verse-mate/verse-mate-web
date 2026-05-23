@@ -6,12 +6,36 @@
   "verses": {
     "1": [
       {
+        "surface": "So",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I took",
+        "lemma": "natan"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "heart",
         "lemma": "lev"
       },
       {
         "surface": "and concluded",
         "lemma": "bur"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "the righteous",
@@ -46,12 +70,24 @@
         "lemma": "yada"
       },
       {
+        "surface": "what",
+        "lemma": "kol"
+      },
+      {
         "surface": "lies ahead",
         "lemma": "paneh"
       },
       {
+        "surface": "whether",
+        "lemma": "gam"
+      },
+      {
         "surface": "love",
         "lemma": "ahavah"
+      },
+      {
+        "surface": "or",
+        "lemma": "gam"
       },
       {
         "surface": "hate",
@@ -59,6 +95,18 @@
       }
     ],
     "2": [
+      {
+        "surface": "vvv",
+        "lemma": "kol"
+      },
+      {
+        "surface": "It is the same",
+        "lemma": "asher"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
+      },
       {
         "surface": "There is a common",
         "lemma": "echad"
@@ -92,6 +140,10 @@
         "lemma": "zavach"
       },
       {
+        "surface": "and the one",
+        "lemma": "asher"
+      },
+      {
         "surface": "who does not",
         "lemma": "ayin"
       },
@@ -108,6 +160,10 @@
         "lemma": "shava"
       },
       {
+        "surface": "so it is",
+        "lemma": "asher"
+      },
+      {
         "surface": "for the one who refuses",
         "lemma": "yare"
       },
@@ -118,8 +174,24 @@
     ],
     "3": [
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
         "surface": "is an evil",
         "lemma": "ra"
+      },
+      {
+        "surface": "in everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "is done",
+        "lemma": "asah"
       },
       {
         "surface": "under",
@@ -136,6 +208,14 @@
       {
         "surface": "fate",
         "lemma": "miqreh"
+      },
+      {
+        "surface": "for everyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "Furthermore",
+        "lemma": "gam"
       },
       {
         "surface": "the hearts",
@@ -166,6 +246,10 @@
         "lemma": "achar"
       },
       {
+        "surface": "they join",
+        "lemma": "el"
+      },
+      {
         "surface": "the dead",
         "lemma": "mut"
       }
@@ -180,6 +264,10 @@
         "lemma": "bittachon"
       },
       {
+        "surface": "however",
+        "lemma": "ki"
+      },
+      {
         "surface": "for anyone who",
         "lemma": "mi"
       },
@@ -188,8 +276,16 @@
         "lemma": "bachar"
       },
       {
+        "surface": "vvv",
+        "lemma": "kol"
+      },
+      {
         "surface": "the living",
         "lemma": "chay"
+      },
+      {
+        "surface": "for even",
+        "lemma": "ki"
       },
       {
         "surface": "a live",
@@ -204,6 +300,10 @@
         "lemma": "tov"
       },
       {
+        "surface": "than",
+        "lemma": "min"
+      },
+      {
         "surface": "a dead",
         "lemma": "mut"
       },
@@ -213,6 +313,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the living",
         "lemma": "chay"
@@ -254,6 +358,10 @@
         "lemma": "sakhar"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "the memory",
         "lemma": "zekher"
       },
@@ -270,6 +378,10 @@
       {
         "surface": "their hate",
         "lemma": "sinah"
+      },
+      {
+        "surface": "and",
+        "lemma": "gam"
       },
       {
         "surface": "their envy",
@@ -290,6 +402,18 @@
       {
         "surface": "a share",
         "lemma": "cheleq"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "is done",
+        "lemma": "asah"
       },
       {
         "surface": "under",
@@ -334,6 +458,10 @@
         "lemma": "lev"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -356,8 +484,20 @@
         "lemma": "beged"
       },
       {
+        "surface": "always",
+        "lemma": "kol"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "white",
         "lemma": "lavan"
+      },
+      {
+        "surface": "and never",
+        "lemma": "al"
       },
       {
         "surface": "spare",
@@ -368,14 +508,26 @@
         "lemma": "shemen"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "your head",
         "lemma": "rosh"
       }
     ],
     "9": [
       {
+        "surface": "Enjoy",
+        "lemma": "raah"
+      },
+      {
         "surface": "life",
         "lemma": "chay"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "your beloved",
@@ -384,6 +536,10 @@
       {
         "surface": "wife",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the days",
@@ -398,6 +554,14 @@
         "lemma": "chay"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "God has given",
+        "lemma": "natan"
+      },
+      {
         "surface": "under",
         "lemma": "tachat"
       },
@@ -406,12 +570,24 @@
         "lemma": "shemesh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your fleeting",
         "lemma": "hevel"
       },
       {
         "surface": "days",
         "lemma": "yom"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "this",
+        "lemma": "hu"
       },
       {
         "surface": "is your portion",
@@ -436,20 +612,44 @@
     ],
     "10": [
       {
+        "surface": "Whatever",
+        "lemma": "kol"
+      },
+      {
         "surface": "you find",
         "lemma": "matsa"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
       },
       {
         "surface": "with your hands",
         "lemma": "yad"
       },
       {
+        "surface": "do it",
+        "lemma": "asah"
+      },
+      {
         "surface": "with all your might",
         "lemma": "koach"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "in Sheol",
         "lemma": "sheol"
+      },
+      {
+        "surface": "where",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
       },
       {
         "surface": "are going",
@@ -482,6 +682,14 @@
     ],
     "11": [
       {
+        "surface": "I saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "something else",
+        "lemma": "shuv"
+      },
+      {
         "surface": "under",
         "lemma": "tachat"
       },
@@ -492,6 +700,10 @@
       {
         "surface": "The race",
         "lemma": "merots"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
       },
       {
         "surface": "to the swift",
@@ -506,12 +718,20 @@
         "lemma": "gibbor"
       },
       {
+        "surface": "neither is",
+        "lemma": "lo"
+      },
+      {
         "surface": "the bread",
         "lemma": "lechem"
       },
       {
         "surface": "to the wise",
         "lemma": "chakham"
+      },
+      {
+        "surface": "nor",
+        "lemma": "gam"
       },
       {
         "surface": "the wealth",
@@ -522,6 +742,10 @@
         "lemma": "bin"
       },
       {
+        "surface": "nor",
+        "lemma": "gam"
+      },
+      {
         "surface": "the favor",
         "lemma": "chen"
       },
@@ -530,15 +754,39 @@
         "lemma": "yada"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
         "surface": "and chance",
         "lemma": "pega"
       },
       {
         "surface": "happen",
         "lemma": "qarah"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       }
     ],
     "12": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "surely",
+        "lemma": "gam"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
       {
         "surface": "man",
         "lemma": "adam"
@@ -546,6 +794,10 @@
       {
         "surface": "knows",
         "lemma": "yada"
+      },
+      {
+        "surface": "his time",
+        "lemma": "et"
       },
       {
         "surface": "Like fish",
@@ -588,15 +840,31 @@
         "lemma": "ra"
       },
       {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
         "surface": "that suddenly",
         "lemma": "pitom"
       },
       {
         "surface": "falls",
         "lemma": "naphal"
+      },
+      {
+        "surface": "upon them",
+        "lemma": "al"
       }
     ],
     "13": [
+      {
+        "surface": "I have also seen",
+        "lemma": "raah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zoh"
+      },
       {
         "surface": "wisdom",
         "lemma": "chokhmah"
@@ -610,8 +878,16 @@
         "lemma": "shemesh"
       },
       {
+        "surface": "and it",
+        "lemma": "hu"
+      },
+      {
         "surface": "was great",
         "lemma": "gadol"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
       }
     ],
     "14": [
@@ -640,6 +916,14 @@
         "lemma": "melekh"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "against it",
+        "lemma": "el"
+      },
+      {
         "surface": "surrounded it",
         "lemma": "savav"
       },
@@ -654,6 +938,10 @@
       {
         "surface": "siege ramps",
         "lemma": "matsod"
+      },
+      {
+        "surface": "against it",
+        "lemma": "al"
       }
     ],
     "15": [
@@ -674,6 +962,10 @@
         "lemma": "matsa"
       },
       {
+        "surface": "and he",
+        "lemma": "hu"
+      },
+      {
         "surface": "saved",
         "lemma": "malat"
       },
@@ -686,12 +978,20 @@
         "lemma": "chokhmah"
       },
       {
+        "surface": "Yet no",
+        "lemma": "lo"
+      },
+      {
         "surface": "one",
         "lemma": "adam"
       },
       {
         "surface": "remembered",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "that",
+        "lemma": "hu"
       },
       {
         "surface": "poor",
@@ -703,6 +1003,14 @@
       }
     ],
     "16": [
+      {
+        "surface": "And I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
       {
         "surface": "Wisdom",
         "lemma": "chokhmah"
@@ -734,6 +1042,10 @@
       {
         "surface": "are not",
         "lemma": "ayin"
+      },
+      {
+        "surface": "heeded",
+        "lemma": "shama"
       }
     ],
     "17": [
@@ -748,6 +1060,10 @@
       {
         "surface": "of the wise",
         "lemma": "chakham"
+      },
+      {
+        "surface": "are heeded",
+        "lemma": "shama"
       },
       {
         "surface": "over the shouts",
@@ -802,8 +1118,8 @@
     ]
   },
   "themeLemmas": [
-    "tov",
-    "chay",
-    "tachat"
+    "kol",
+    "ki",
+    "asher"
   ]
 }

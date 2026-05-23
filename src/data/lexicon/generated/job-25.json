@@ -28,6 +28,14 @@
         "lemma": "pachad"
       },
       {
+        "surface": "belong to God",
+        "lemma": "im"
+      },
+      {
+        "surface": "He establishes",
+        "lemma": "asah"
+      },
+      {
         "surface": "harmony",
         "lemma": "shalom"
       },
@@ -46,12 +54,20 @@
         "lemma": "mispar"
       },
       {
+        "surface": "On",
+        "lemma": "al"
+      },
+      {
         "surface": "whom",
         "lemma": "mi"
       },
       {
         "surface": "does His light",
         "lemma": "or"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "rise",
@@ -70,6 +86,10 @@
       {
         "surface": "be just",
         "lemma": "tsadaq"
+      },
+      {
+        "surface": "before",
+        "lemma": "im"
       },
       {
         "surface": "God",
@@ -98,8 +118,16 @@
         "lemma": "hen"
       },
       {
+        "surface": "even",
+        "lemma": "ad"
+      },
+      {
         "surface": "the moon",
         "lemma": "yareach"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "shine",
@@ -108,6 +136,10 @@
       {
         "surface": "and the stars",
         "lemma": "kokhav"
+      },
+      {
+        "surface": "are not",
+        "lemma": "lo"
       },
       {
         "surface": "pure",
@@ -119,6 +151,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "how much less",
+        "lemma": "aph"
+      },
       {
         "surface": "man",
         "lemma": "enosh"
@@ -142,7 +178,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "mah",
-    "enosh"
+    "im"
   ]
 }

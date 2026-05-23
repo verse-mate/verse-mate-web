@@ -14,12 +14,28 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Jeremiah",
         "lemma": "yirmeyah"
       },
       {
         "surface": "the prophet",
         "lemma": "navi"
+      },
+      {
+        "surface": "about",
+        "lemma": "el"
       },
       {
         "surface": "the Philistines",
@@ -52,6 +68,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "See how",
         "lemma": "hinneh"
       },
@@ -66,6 +86,10 @@
       {
         "surface": "from the north",
         "lemma": "tsaphon"
+      },
+      {
+        "surface": "and becoming",
+        "lemma": "hayah"
       },
       {
         "surface": "an overflowing",
@@ -92,12 +116,24 @@
         "lemma": "ir"
       },
       {
+        "surface": "and their inhabitants",
+        "lemma": "yashav"
+      },
+      {
         "surface": "The people",
         "lemma": "adam"
       },
       {
         "surface": "will cry out",
         "lemma": "zaaq"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -142,8 +178,20 @@
         "lemma": "galgal"
       },
       {
+        "surface": "The fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turn back",
         "lemma": "panah"
+      },
+      {
+        "surface": "for",
+        "lemma": "el"
       },
       {
         "surface": "their sons",
@@ -160,12 +208,24 @@
     ],
     "4": [
       {
+        "surface": "For",
+        "lemma": "al"
+      },
+      {
         "surface": "the day",
         "lemma": "yom"
       },
       {
+        "surface": "has come",
+        "lemma": "bo"
+      },
+      {
         "surface": "to destroy",
         "lemma": "shadad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the Philistines",
@@ -184,12 +244,20 @@
         "lemma": "tsidon"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "remaining",
         "lemma": "sarid"
       },
       {
         "surface": "ally",
         "lemma": "azar"
+      },
+      {
+        "surface": "Indeed",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -242,6 +310,10 @@
         "lemma": "emeq"
       },
       {
+        "surface": "how long",
+        "lemma": "ad"
+      },
+      {
         "surface": "will you gash yourself",
         "lemma": "gadad"
       }
@@ -260,8 +332,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "how long",
+        "lemma": "ad"
+      },
+      {
+        "surface": "until you rest",
+        "lemma": "lo"
+      },
+      {
         "surface": "Return",
         "lemma": "asaph"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
       },
       {
         "surface": "your sheath",
@@ -298,6 +382,10 @@
         "lemma": "yaad"
       },
       {
+        "surface": "against",
+        "lemma": "el"
+      },
+      {
         "surface": "Ashkelon",
         "lemma": "ashqelon"
       },
@@ -313,7 +401,7 @@
   },
   "themeLemmas": [
     "pelishti",
-    "sheerit",
-    "shataph"
+    "kol",
+    "yashav"
   ]
 }

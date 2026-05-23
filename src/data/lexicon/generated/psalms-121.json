@@ -22,6 +22,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the hills",
         "lemma": "har"
       },
@@ -32,6 +36,10 @@
       {
         "surface": "does my help",
         "lemma": "ezer"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
       }
     ],
     "2": [
@@ -40,8 +48,16 @@
         "lemma": "ezer"
       },
       {
+        "surface": "comes from",
+        "lemma": "im"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "the Maker",
+        "lemma": "asah"
       },
       {
         "surface": "of heaven",
@@ -54,6 +70,14 @@
     ],
     "3": [
       {
+        "surface": "He will not",
+        "lemma": "al"
+      },
+      {
+        "surface": "allow",
+        "lemma": "natan"
+      },
+      {
         "surface": "your foot",
         "lemma": "regel"
       },
@@ -64,6 +88,10 @@
       {
         "surface": "your Protector",
         "lemma": "shamar"
+      },
+      {
+        "surface": "will not",
+        "lemma": "al"
       },
       {
         "surface": "slumber",
@@ -84,8 +112,16 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "will neither",
+        "lemma": "lo"
+      },
+      {
         "surface": "slumber",
         "lemma": "num"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "sleep",
@@ -110,6 +146,10 @@
         "lemma": "tsel"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "your right",
         "lemma": "yamin"
       },
@@ -122,6 +162,10 @@
       {
         "surface": "The sun",
         "lemma": "shemesh"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "strike",
@@ -150,6 +194,10 @@
         "lemma": "shamar"
       },
       {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
@@ -172,14 +220,26 @@
         "lemma": "shamar"
       },
       {
+        "surface": "your coming",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and going",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "both now",
         "lemma": "attah"
+      },
+      {
+        "surface": "and forevermore",
+        "lemma": "ad"
       }
     ]
   },
   "themeLemmas": [
     "shamar",
-    "num",
-    "ezer"
+    "lo",
+    "al"
   ]
 }

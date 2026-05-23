@@ -60,12 +60,20 @@
     ],
     "2": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "I choose",
         "lemma": "laqach"
       },
       {
         "surface": "a time",
         "lemma": "moed"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "will judge",
@@ -82,8 +90,20 @@
         "lemma": "erets"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "its dwellers",
+        "lemma": "yashav"
+      },
+      {
         "surface": "quake",
         "lemma": "mug"
+      },
+      {
+        "surface": "it is I",
+        "lemma": "anokhi"
       },
       {
         "surface": "who bear up",
@@ -100,8 +120,16 @@
     ],
     "4": [
       {
+        "surface": "I say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the proud",
         "lemma": "halal"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "boast",
@@ -110,6 +138,10 @@
       {
         "surface": "and to the wicked",
         "lemma": "rasah"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "lift up",
@@ -121,6 +153,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "lift up",
         "lemma": "rum"
@@ -148,8 +184,16 @@
     ],
     "6": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "exaltation",
         "lemma": "rum"
+      },
+      {
+        "surface": "comes neither",
+        "lemma": "lo"
       },
       {
         "surface": "from east",
@@ -160,11 +204,19 @@
         "lemma": "maarav"
       },
       {
+        "surface": "nor",
+        "lemma": "lo"
+      },
+      {
         "surface": "out of the desert",
         "lemma": "midbar"
       }
     ],
     "7": [
+      {
+        "surface": "but",
+        "lemma": "ki"
+      },
       {
         "surface": "it is God",
         "lemma": "elohim"
@@ -178,11 +230,23 @@
         "lemma": "shaphel"
       },
       {
+        "surface": "one",
+        "lemma": "zeh"
+      },
+      {
         "surface": "and exalts",
         "lemma": "rum"
+      },
+      {
+        "surface": "another",
+        "lemma": "zeh"
       }
     ],
     "8": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "a cup",
         "lemma": "kos"
@@ -216,8 +280,16 @@
         "lemma": "nagar"
       },
       {
+        "surface": "from His cup",
+        "lemma": "zeh"
+      },
+      {
         "surface": "and",
         "lemma": "akh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the wicked",
@@ -237,6 +309,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "But I",
+        "lemma": "ani"
+      },
       {
         "surface": "will proclaim Him",
         "lemma": "nagad"
@@ -259,6 +335,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the horns",
         "lemma": "qeren"
@@ -288,6 +368,6 @@
   "themeLemmas": [
     "rum",
     "qeren",
-    "rasah"
+    "ki"
   ]
 }

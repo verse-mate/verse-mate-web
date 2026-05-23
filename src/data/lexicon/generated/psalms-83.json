@@ -22,12 +22,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "be} not",
+        "lemma": "al"
+      },
+      {
         "surface": "silent",
         "lemma": "demi"
       },
       {
+        "surface": "be} not",
+        "lemma": "al"
+      },
+      {
         "surface": "speechless",
         "lemma": "charash"
+      },
+      {
+        "surface": "be} not",
+        "lemma": "al"
       },
       {
         "surface": "still",
@@ -42,6 +54,10 @@
       {
         "surface": "See",
         "lemma": "hinneh"
+      },
+      {
+        "surface": "how",
+        "lemma": "ki"
       },
       {
         "surface": "Your enemies",
@@ -74,6 +90,10 @@
         "lemma": "sod"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "Your people",
         "lemma": "am"
       },
@@ -82,11 +102,19 @@
         "lemma": "yaats"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "those You cherish",
         "lemma": "tsaphan"
       }
     ],
     "4": [
+      {
+        "surface": "saying",
+        "lemma": "amar"
+      },
       {
         "surface": "Come",
         "lemma": "halakh"
@@ -112,11 +140,19 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "more",
         "lemma": "od"
       }
     ],
     "5": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "with one mind",
         "lemma": "lev"
@@ -136,6 +172,10 @@
       {
         "surface": "an alliance",
         "lemma": "berit"
+      },
+      {
+        "surface": "against You",
+        "lemma": "al"
       }
     ],
     "6": [
@@ -178,11 +218,23 @@
         "lemma": "peleshet"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
+        "surface": "the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Tyre",
         "lemma": "tsor"
       }
     ],
     "8": [
+      {
+        "surface": "Even",
+        "lemma": "gam"
+      },
       {
         "surface": "Assyria",
         "lemma": "ashshur"
@@ -190,6 +242,14 @@
       {
         "surface": "has joined",
         "lemma": "lavah"
+      },
+      {
+        "surface": "them",
+        "lemma": "im"
+      },
+      {
+        "surface": "lending",
+        "lemma": "hayah"
       },
       {
         "surface": "strength",
@@ -209,6 +269,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "Do",
+        "lemma": "asah"
+      },
       {
         "surface": "as You did to Midian",
         "lemma": "midyan"
@@ -244,6 +308,10 @@
         "lemma": "endor"
       },
       {
+        "surface": "and became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like dung",
         "lemma": "domen"
       },
@@ -270,6 +338,10 @@
         "lemma": "zeev"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their princes",
         "lemma": "nesikh"
       },
@@ -283,6 +355,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
       {
         "surface": "Let us possess",
         "lemma": "yarash"
@@ -420,6 +500,14 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "alone",
         "lemma": "bad"
       },
@@ -436,14 +524,22 @@
         "lemma": "elyon"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       }
     ]
   },
   "themeLemmas": [
+    "al",
     "shem",
-    "yaats",
-    "shit"
+    "ki"
   ]
 }

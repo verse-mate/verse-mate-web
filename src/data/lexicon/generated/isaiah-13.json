@@ -14,6 +14,10 @@
         "lemma": "bavel"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "Isaiah",
         "lemma": "yeshayah"
       },
@@ -40,6 +44,10 @@
         "lemma": "nes"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "a barren",
         "lemma": "shaphah"
       },
@@ -64,6 +72,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "that they may enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the gates",
         "lemma": "petach"
       },
@@ -74,12 +86,24 @@
     ],
     "3": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "have commanded",
         "lemma": "tsavah"
       },
       {
         "surface": "My sanctified ones",
         "lemma": "qadash"
+      },
+      {
+        "surface": "I have even",
+        "lemma": "gam"
+      },
+      {
+        "surface": "summoned",
+        "lemma": "qara"
       },
       {
         "surface": "My warriors",
@@ -166,6 +190,10 @@
     ],
     "5": [
       {
+        "surface": "They are coming",
+        "lemma": "bo"
+      },
+      {
         "surface": "from faraway",
         "lemma": "merchaq"
       },
@@ -198,6 +226,10 @@
         "lemma": "chaval"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "country",
         "lemma": "erets"
       }
@@ -206,6 +238,10 @@
       {
         "surface": "Wail",
         "lemma": "yalal"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "the Day",
@@ -220,6 +256,10 @@
         "lemma": "qarov"
       },
       {
+        "surface": "it will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "as destruction",
         "lemma": "shod"
       },
@@ -230,12 +270,24 @@
     ],
     "7": [
       {
+        "surface": "Therefore",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "hands",
         "lemma": "yad"
       },
       {
         "surface": "will fall limp",
         "lemma": "raphah"
+      },
+      {
+        "surface": "and every",
+        "lemma": "kol"
       },
       {
         "surface": "man’s",
@@ -276,6 +328,10 @@
         "lemma": "yalad"
       },
       {
+        "surface": "They will look at",
+        "lemma": "el"
+      },
+      {
         "surface": "one",
         "lemma": "ish"
       },
@@ -310,6 +366,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "is coming",
+        "lemma": "bo"
+      },
+      {
         "surface": "cruel",
         "lemma": "akhzari"
       },
@@ -340,9 +400,17 @@
       {
         "surface": "the sinners",
         "lemma": "chatta"
+      },
+      {
+        "surface": "within it",
+        "lemma": "min"
       }
     ],
     "10": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the stars",
         "lemma": "kokhav"
@@ -356,12 +424,20 @@
         "lemma": "kesil"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "give",
         "lemma": "halal"
       },
       {
         "surface": "their light",
         "lemma": "or"
+      },
+      {
+        "surface": "The rising",
+        "lemma": "yatsa"
       },
       {
         "surface": "sun",
@@ -374,6 +450,10 @@
       {
         "surface": "and the moon",
         "lemma": "yareach"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "give",
@@ -396,6 +476,10 @@
       {
         "surface": "for its evil",
         "lemma": "ra"
+      },
+      {
+        "surface": "and",
+        "lemma": "al"
       },
       {
         "surface": "the wicked",
@@ -457,6 +541,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "Therefore",
+        "lemma": "al"
+      },
       {
         "surface": "I will make the heavens",
         "lemma": "shamayim"
@@ -528,6 +616,10 @@
         "lemma": "panah"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "his own people",
         "lemma": "am"
       },
@@ -540,11 +632,19 @@
         "lemma": "nus"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "his native land",
         "lemma": "erets"
       }
     ],
     "15": [
+      {
+        "surface": "Whoever",
+        "lemma": "kol"
+      },
       {
         "surface": "is caught",
         "lemma": "matsa"
@@ -552,6 +652,10 @@
       {
         "surface": "will be stabbed",
         "lemma": "daqar"
+      },
+      {
+        "surface": "and whoever",
+        "lemma": "kol"
       },
       {
         "surface": "is captured",
@@ -606,8 +710,20 @@
         "lemma": "ur"
       },
       {
+        "surface": "against them",
+        "lemma": "al"
+      },
+      {
         "surface": "the Medes",
         "lemma": "maday"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "have no",
+        "lemma": "lo"
       },
       {
         "surface": "regard",
@@ -616,6 +732,10 @@
       {
         "surface": "for silver",
         "lemma": "keseph"
+      },
+      {
+        "surface": "and no",
+        "lemma": "lo"
       },
       {
         "surface": "desire",
@@ -640,6 +760,10 @@
         "lemma": "ratash"
       },
       {
+        "surface": "they will have no",
+        "lemma": "lo"
+      },
+      {
         "surface": "mercy",
         "lemma": "racham"
       },
@@ -652,8 +776,16 @@
         "lemma": "beten"
       },
       {
+        "surface": "they will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "look with pity",
         "lemma": "chus"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the children",
@@ -686,6 +818,10 @@
         "lemma": "kasdi"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "overthrown",
         "lemma": "mahpekhah"
       },
@@ -704,8 +840,24 @@
     ],
     "20": [
       {
+        "surface": "She will never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "be inhabited",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
         "surface": "settled",
         "lemma": "shakhan"
+      },
+      {
+        "surface": "from",
+        "lemma": "ad"
       },
       {
         "surface": "generation",
@@ -714,6 +866,10 @@
       {
         "surface": "to generation",
         "lemma": "dor"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "nomad",
@@ -726,6 +882,10 @@
       {
         "surface": "there",
         "lemma": "sham"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "shepherd",
@@ -816,6 +976,10 @@
         "lemma": "hekhal"
       },
       {
+        "surface": "Babylon’s time",
+        "lemma": "et"
+      },
+      {
         "surface": "is at hand",
         "lemma": "qarov"
       },
@@ -824,14 +988,18 @@
         "lemma": "yom"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be prolonged",
         "lemma": "mashakh"
       }
     ]
   },
   "themeLemmas": [
-    "sham",
-    "tsava",
-    "qol"
+    "lo",
+    "al",
+    "kol"
   ]
 }

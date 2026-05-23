@@ -14,6 +14,10 @@
         "lemma": "david"
       },
       {
+        "surface": "when he was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in the Wilderness",
         "lemma": "midbar"
       },
@@ -32,6 +36,10 @@
       {
         "surface": "Earnestly I seek",
         "lemma": "shachar"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
       },
       {
         "surface": "soul",
@@ -84,6 +92,10 @@
         "lemma": "qodesh"
       },
       {
+        "surface": "and beheld",
+        "lemma": "raah"
+      },
+      {
         "surface": "Your power",
         "lemma": "oz"
       },
@@ -93,6 +105,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "Because",
+        "lemma": "ki"
+      },
       {
         "surface": "Your loving devotion",
         "lemma": "chesed"
@@ -150,6 +166,10 @@
         "lemma": "sava"
       },
       {
+        "surface": "as",
+        "lemma": "kemo"
+      },
+      {
         "surface": "with the richest",
         "lemma": "chelev"
       },
@@ -176,8 +196,16 @@
     ],
     "6": [
       {
+        "surface": "When",
+        "lemma": "im"
+      },
+      {
         "surface": "I remember You",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "my bed",
@@ -193,6 +221,14 @@
       }
     ],
     "7": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You are",
+        "lemma": "hayah"
+      },
       {
         "surface": "my help",
         "lemma": "ezrah"
@@ -234,6 +270,10 @@
     ],
     "9": [
       {
+        "surface": "But those",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "who seek",
         "lemma": "baqash"
       },
@@ -244,6 +284,10 @@
       {
         "surface": "to destroy it",
         "lemma": "sho"
+      },
+      {
+        "surface": "will go",
+        "lemma": "bo"
       },
       {
         "surface": "into the depths",
@@ -260,12 +304,20 @@
         "lemma": "nagar"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "the power",
         "lemma": "yad"
       },
       {
         "surface": "of the sword",
         "lemma": "cherev"
+      },
+      {
+        "surface": "they will become",
+        "lemma": "hayah"
       },
       {
         "surface": "a portion",
@@ -290,12 +342,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who swear",
         "lemma": "shava"
       },
       {
         "surface": "will exult",
         "lemma": "halal"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "the mouths",
@@ -313,7 +373,7 @@
   },
   "themeLemmas": [
     "nephesh",
-    "saphah",
-    "peh"
+    "ki",
+    "hayah"
   ]
 }

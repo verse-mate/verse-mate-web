@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "one’s offering",
         "lemma": "qorban"
       },
@@ -18,16 +22,32 @@
         "lemma": "shelem"
       },
       {
+        "surface": "and he",
+        "lemma": "hu"
+      },
+      {
         "surface": "offers",
         "lemma": "qarav"
+      },
+      {
+        "surface": "an animal from",
+        "lemma": "min"
       },
       {
         "surface": "the herd",
         "lemma": "baqar"
       },
       {
+        "surface": "whether",
+        "lemma": "im"
+      },
+      {
         "surface": "male",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "female",
@@ -58,6 +78,10 @@
       {
         "surface": "his hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the head",
@@ -108,6 +132,10 @@
         "lemma": "saviv"
       },
       {
+        "surface": "of",
+        "lemma": "al"
+      },
+      {
         "surface": "the altar",
         "lemma": "mizbeach"
       }
@@ -146,8 +174,20 @@
         "lemma": "qerev"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the fat",
         "lemma": "chelev"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "is on",
+        "lemma": "al"
       },
       {
         "surface": "them",
@@ -168,12 +208,28 @@
         "lemma": "chelev"
       },
       {
+        "surface": "on them",
+        "lemma": "al"
+      },
+      {
+        "surface": "near",
+        "lemma": "al"
+      },
+      {
         "surface": "the loins",
         "lemma": "kesel"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "the lobe",
         "lemma": "yoteret"
+      },
+      {
+        "surface": "of",
+        "lemma": "al"
       },
       {
         "surface": "the liver",
@@ -182,6 +238,10 @@
       {
         "surface": "which he is to remove",
         "lemma": "sur"
+      },
+      {
+        "surface": "with",
+        "lemma": "al"
       },
       {
         "surface": "the kidneys",
@@ -202,12 +262,28 @@
         "lemma": "qatar"
       },
       {
+        "surface": "it",
+        "lemma": "et"
+      },
+      {
         "surface": "on the altar",
         "lemma": "mizbeach"
       },
       {
+        "surface": "atop",
+        "lemma": "al"
+      },
+      {
         "surface": "the burnt offering",
         "lemma": "olah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "is on",
+        "lemma": "al"
       },
       {
         "surface": "the burning",
@@ -236,6 +312,10 @@
     ],
     "6": [
       {
+        "surface": "If, however",
+        "lemma": "im"
+      },
+      {
         "surface": "vvv",
         "lemma": "qorban"
       },
@@ -246,6 +326,10 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "is from",
+        "lemma": "min"
       },
       {
         "surface": "the flock",
@@ -260,6 +344,10 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "female",
         "lemma": "neqevah"
       },
@@ -269,6 +357,14 @@
       }
     ],
     "7": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "he",
+        "lemma": "hu"
+      },
       {
         "surface": "is presenting",
         "lemma": "qarav"
@@ -304,6 +400,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the head",
         "lemma": "rosh"
       },
@@ -314,6 +414,10 @@
       {
         "surface": "and slaughter",
         "lemma": "shachat"
+      },
+      {
+        "surface": "it",
+        "lemma": "et"
       },
       {
         "surface": "in front of",
@@ -346,6 +450,10 @@
       {
         "surface": "on all sides",
         "lemma": "saviv"
+      },
+      {
+        "surface": "of",
+        "lemma": "al"
       },
       {
         "surface": "the altar",
@@ -410,8 +518,20 @@
         "lemma": "qerev"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the fat",
         "lemma": "chelev"
+      },
+      {
+        "surface": "that is",
+        "lemma": "asher"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "them",
@@ -432,12 +552,28 @@
         "lemma": "chelev"
       },
       {
+        "surface": "on them",
+        "lemma": "al"
+      },
+      {
+        "surface": "near",
+        "lemma": "al"
+      },
+      {
         "surface": "the loins",
         "lemma": "kesel"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "the lobe",
         "lemma": "yoteret"
+      },
+      {
+        "surface": "of",
+        "lemma": "al"
       },
       {
         "surface": "the liver",
@@ -446,6 +582,10 @@
       {
         "surface": "which he is to remove",
         "lemma": "sur"
+      },
+      {
+        "surface": "with",
+        "lemma": "al"
       },
       {
         "surface": "the kidneys",
@@ -480,6 +620,10 @@
     ],
     "12": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "one’s offering",
         "lemma": "qorban"
       },
@@ -510,12 +654,20 @@
         "lemma": "yad"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "its head",
         "lemma": "rosh"
       },
       {
         "surface": "and slaughter",
         "lemma": "shachat"
+      },
+      {
+        "surface": "it",
+        "lemma": "et"
       },
       {
         "surface": "in front of",
@@ -550,11 +702,19 @@
         "lemma": "saviv"
       },
       {
+        "surface": "of",
+        "lemma": "al"
+      },
+      {
         "surface": "the altar",
         "lemma": "mizbeach"
       }
     ],
     "14": [
+      {
+        "surface": "And from",
+        "lemma": "min"
+      },
       {
         "surface": "his offering",
         "lemma": "qorban"
@@ -584,8 +744,20 @@
         "lemma": "qerev"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the fat",
         "lemma": "chelev"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "is on",
+        "lemma": "al"
       },
       {
         "surface": "them",
@@ -606,12 +778,28 @@
         "lemma": "chelev"
       },
       {
+        "surface": "on them",
+        "lemma": "al"
+      },
+      {
+        "surface": "near",
+        "lemma": "al"
+      },
+      {
         "surface": "the loins",
         "lemma": "kesel"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "the lobe",
         "lemma": "yoteret"
+      },
+      {
+        "surface": "of",
+        "lemma": "al"
       },
       {
         "surface": "the liver",
@@ -620,6 +808,10 @@
       {
         "surface": "which he is to remove",
         "lemma": "sur"
+      },
+      {
+        "surface": "with",
+        "lemma": "al"
       },
       {
         "surface": "the kidneys",
@@ -656,6 +848,10 @@
         "lemma": "reach"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the fat",
         "lemma": "chelev"
       },
@@ -678,16 +874,32 @@
         "lemma": "dor"
       },
       {
+        "surface": "wherever",
+        "lemma": "kol"
+      },
+      {
         "surface": "you live",
         "lemma": "moshav"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
       },
       {
         "surface": "eat",
         "lemma": "akhal"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "fat",
         "lemma": "chelev"
+      },
+      {
+        "surface": "or any",
+        "lemma": "kol"
       },
       {
         "surface": "blood",
@@ -696,8 +908,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "chelev",
-    "qarav",
-    "qorban"
+    "qarav"
   ]
 }

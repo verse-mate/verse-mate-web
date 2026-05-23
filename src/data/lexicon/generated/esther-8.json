@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "That same",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -16,6 +20,10 @@
       {
         "surface": "Xerxes",
         "lemma": "achashverosh"
+      },
+      {
+        "surface": "awarded",
+        "lemma": "natan"
       },
       {
         "surface": "Queen",
@@ -46,6 +54,10 @@
         "lemma": "mordekhay"
       },
       {
+        "surface": "entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "the king’s",
         "lemma": "melekh"
       },
@@ -54,12 +66,20 @@
         "lemma": "paneh"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "Esther",
         "lemma": "ester"
       },
       {
         "surface": "had revealed",
         "lemma": "nagad"
+      },
+      {
+        "surface": "his relation",
+        "lemma": "hu"
       }
     ],
     "2": [
@@ -84,6 +104,10 @@
         "lemma": "haman"
       },
       {
+        "surface": "and presented it",
+        "lemma": "natan"
+      },
+      {
         "surface": "to Mordecai",
         "lemma": "mordekhay"
       },
@@ -98,6 +122,10 @@
       {
         "surface": "Mordecai",
         "lemma": "mordekhay"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "the estate",
@@ -166,8 +194,16 @@
         "lemma": "agagi"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
         "surface": "he had devised",
         "lemma": "chashav"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "the Jews",
@@ -218,8 +254,20 @@
     ],
     "5": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "it pleases",
+        "lemma": "al"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "she said",
+        "lemma": "amar"
       },
       {
         "surface": "and if I have found",
@@ -250,6 +298,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "and I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am pleasing",
         "lemma": "tov"
       },
@@ -260,6 +312,10 @@
       {
         "surface": "may an order be written",
         "lemma": "katav"
+      },
+      {
+        "surface": "to revoke",
+        "lemma": "shuv"
       },
       {
         "surface": "the letters",
@@ -298,6 +354,10 @@
         "lemma": "yehudi"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the king’s",
         "lemma": "melekh"
       },
@@ -308,6 +368,10 @@
     ],
     "6": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "how",
         "lemma": "ekh"
       },
@@ -316,8 +380,16 @@
         "lemma": "yakhol"
       },
       {
+        "surface": "to see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the disaster",
         "lemma": "ra"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "would befall",
@@ -336,6 +408,10 @@
         "lemma": "yakhol"
       },
       {
+        "surface": "to see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the destruction",
         "lemma": "ovdan"
       },
@@ -352,6 +428,10 @@
       {
         "surface": "Xerxes",
         "lemma": "achashverosh"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "to Esther",
@@ -374,6 +454,10 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "I have given",
+        "lemma": "natan"
+      },
+      {
         "surface": "Haman’s",
         "lemma": "haman"
       },
@@ -390,8 +474,16 @@
         "lemma": "talah"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the gallows",
         "lemma": "ets"
+      },
+      {
+        "surface": "because",
+        "lemma": "al"
       },
       {
         "surface": "he attacked",
@@ -403,6 +495,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Now you",
+        "lemma": "attah"
+      },
       {
         "surface": "may write",
         "lemma": "katav"
@@ -424,6 +520,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "regarding",
+        "lemma": "al"
+      },
+      {
         "surface": "the Jews",
         "lemma": "yehudi"
       },
@@ -442,6 +542,10 @@
       {
         "surface": "For a decree",
         "lemma": "katav"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "is written",
@@ -470,9 +574,17 @@
       {
         "surface": "cannot",
         "lemma": "ayin"
+      },
+      {
+        "surface": "be revoked",
+        "lemma": "shuv"
       }
     ],
     "9": [
+      {
+        "surface": "At once",
+        "lemma": "et"
+      },
       {
         "surface": "the royal",
         "lemma": "melekh"
@@ -480,6 +592,10 @@
       {
         "surface": "scribes",
         "lemma": "sapher"
+      },
+      {
+        "surface": "were summoned",
+        "lemma": "qara"
       },
       {
         "surface": "and on the twenty-third day",
@@ -494,6 +610,10 @@
         "lemma": "chodesh"
       },
       {
+        "surface": "vvv",
+        "lemma": "hu"
+      },
+      {
         "surface": "the month",
         "lemma": "chodesh"
       },
@@ -506,6 +626,10 @@
         "lemma": "katav"
       },
       {
+        "surface": "all of",
+        "lemma": "kol"
+      },
+      {
         "surface": "Mordecai’s",
         "lemma": "mordekhay"
       },
@@ -514,8 +638,16 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the Jews",
         "lemma": "yehudi"
+      },
+      {
+        "surface": "and to",
+        "lemma": "el"
       },
       {
         "surface": "the satraps",
@@ -542,6 +674,10 @@
         "lemma": "hodu"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "Cush",
         "lemma": "kush"
       },
@@ -564,6 +700,10 @@
       {
         "surface": "in their own language",
         "lemma": "lashon"
+      },
+      {
+        "surface": "and to",
+        "lemma": "el"
       },
       {
         "surface": "the Jews",
@@ -650,12 +790,24 @@
     ],
     "11": [
       {
+        "surface": "By these letters",
+        "lemma": "asher"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
       {
+        "surface": "permitted",
+        "lemma": "natan"
+      },
+      {
         "surface": "the Jews",
         "lemma": "yehudi"
+      },
+      {
+        "surface": "in each",
+        "lemma": "kol"
       },
       {
         "surface": "and every city",
@@ -664,6 +816,10 @@
       {
         "surface": "the right to assemble",
         "lemma": "qahal"
+      },
+      {
+        "surface": "and defend",
+        "lemma": "al"
       },
       {
         "surface": "themselves",
@@ -680,6 +836,10 @@
       {
         "surface": "and annihilate",
         "lemma": "avad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the forces",
@@ -722,6 +882,10 @@
       {
         "surface": "day appointed",
         "lemma": "yom"
+      },
+      {
+        "surface": "throughout all",
+        "lemma": "kol"
       },
       {
         "surface": "the provinces",
@@ -770,12 +934,24 @@
         "lemma": "dat"
       },
       {
+        "surface": "was to be issued",
+        "lemma": "natan"
+      },
+      {
+        "surface": "in every",
+        "lemma": "kol"
+      },
+      {
         "surface": "province",
         "lemma": "medinah"
       },
       {
         "surface": "and published",
         "lemma": "galah"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -786,8 +962,16 @@
         "lemma": "yehudi"
       },
       {
+        "surface": "would be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "ready",
         "lemma": "atud"
+      },
+      {
+        "surface": "on that",
+        "lemma": "zeh"
       },
       {
         "surface": "day",
@@ -810,6 +994,10 @@
       {
         "surface": "rode",
         "lemma": "rakhav"
+      },
+      {
+        "surface": "out",
+        "lemma": "yatsa"
       },
       {
         "surface": "in haste",
@@ -840,6 +1028,10 @@
         "lemma": "dat"
       },
       {
+        "surface": "was also issued",
+        "lemma": "natan"
+      },
+      {
         "surface": "in the citadel",
         "lemma": "birah"
       },
@@ -852,6 +1044,10 @@
       {
         "surface": "Mordecai",
         "lemma": "mordekhay"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "from the presence",
@@ -920,6 +1116,10 @@
         "lemma": "yehudi"
       },
       {
+        "surface": "it was a time of",
+        "lemma": "hayah"
+      },
+      {
         "surface": "light",
         "lemma": "orah"
       },
@@ -938,8 +1138,16 @@
     ],
     "17": [
       {
+        "surface": "In every",
+        "lemma": "kol"
+      },
+      {
         "surface": "province",
         "lemma": "medinah"
+      },
+      {
+        "surface": "and every",
+        "lemma": "kol"
       },
       {
         "surface": "city",
@@ -1002,6 +1210,10 @@
         "lemma": "yahad"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "the fear",
         "lemma": "pachad"
       },
@@ -1012,12 +1224,16 @@
       {
         "surface": "had fallen",
         "lemma": "naphal"
+      },
+      {
+        "surface": "upon them",
+        "lemma": "al"
       }
     ]
   },
   "themeLemmas": [
     "yehudi",
-    "katav",
-    "medinah"
+    "kol",
+    "katav"
   ]
 }

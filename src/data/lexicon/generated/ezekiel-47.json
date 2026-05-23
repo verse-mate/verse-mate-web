@@ -6,6 +6,14 @@
   "verses": {
     "1": [
       {
+        "surface": "Then the man brought me back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the entrance",
         "lemma": "petach"
       },
@@ -22,6 +30,10 @@
         "lemma": "mayim"
       },
       {
+        "surface": "flowing",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "from under",
         "lemma": "tachat"
       },
@@ -36,6 +48,10 @@
       {
         "surface": "toward the east",
         "lemma": "qadim"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "the temple",
@@ -84,6 +100,10 @@
     ],
     "2": [
       {
+        "surface": "Next he brought me out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "through",
         "lemma": "derekh"
       },
@@ -102,6 +122,10 @@
       {
         "surface": "the outside",
         "lemma": "chuts"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the outer",
@@ -132,6 +156,10 @@
         "lemma": "pakhah"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the south",
         "lemma": "yemani"
       },
@@ -144,6 +172,10 @@
       {
         "surface": "As the man",
         "lemma": "ish"
+      },
+      {
+        "surface": "went",
+        "lemma": "yatsa"
       },
       {
         "surface": "eastward",
@@ -242,12 +274,24 @@
         "lemma": "nachal"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "I could",
         "lemma": "yakhol"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "cross",
         "lemma": "avar"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "the water",
@@ -270,6 +314,14 @@
         "lemma": "nachal"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "could not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be crossed on foot",
         "lemma": "avar"
       }
@@ -284,8 +336,20 @@
         "lemma": "adam"
       },
       {
+        "surface": "do you see this",
+        "lemma": "raah"
+      },
+      {
+        "surface": "he asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Then he led me",
         "lemma": "halakh"
+      },
+      {
+        "surface": "back",
+        "lemma": "shuv"
       },
       {
         "surface": "to the bank",
@@ -297,6 +361,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "When I arrived",
+        "lemma": "shuv"
+      },
       {
         "surface": "I saw",
         "lemma": "hinneh"
@@ -314,6 +382,10 @@
         "lemma": "ets"
       },
       {
+        "surface": "along both",
+        "lemma": "zeh"
+      },
+      {
         "surface": "banks",
         "lemma": "saphah"
       },
@@ -324,8 +396,28 @@
     ],
     "8": [
       {
+        "surface": "And he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
+        "surface": "This",
+        "lemma": "elleh"
+      },
+      {
         "surface": "water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "flows out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the eastern",
@@ -340,8 +432,20 @@
         "lemma": "yarad"
       },
       {
+        "surface": "into",
+        "lemma": "al"
+      },
+      {
         "surface": "the Arabah",
         "lemma": "aravah"
+      },
+      {
+        "surface": "When it empties",
+        "lemma": "bo"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
       },
       {
         "surface": "the Dead Sea",
@@ -362,8 +466,28 @@
     ],
     "9": [
       {
+        "surface": "Wherever",
+        "lemma": "el"
+      },
+      {
         "surface": "the river",
         "lemma": "nachal"
+      },
+      {
+        "surface": "flows",
+        "lemma": "bo"
+      },
+      {
+        "surface": "there will be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "kol"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "asher"
       },
       {
         "surface": "swarms",
@@ -378,6 +502,10 @@
         "lemma": "chay"
       },
       {
+        "surface": "and",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a great number of",
         "lemma": "rav"
       },
@@ -386,8 +514,16 @@
         "lemma": "dagah"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "it",
         "lemma": "mayim"
+      },
+      {
+        "surface": "flows",
+        "lemma": "bo"
       },
       {
         "surface": "there",
@@ -398,8 +534,20 @@
         "lemma": "rapah"
       },
       {
+        "surface": "so wherever",
+        "lemma": "asher"
+      },
+      {
         "surface": "the river",
         "lemma": "nachal"
+      },
+      {
+        "surface": "flows",
+        "lemma": "bo"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "will flourish",
@@ -416,8 +564,16 @@
         "lemma": "amad"
       },
       {
+        "surface": "by the shore",
+        "lemma": "al"
+      },
+      {
         "surface": "from En-gedi",
         "lemma": "engedi"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "vvv",
@@ -426,6 +582,10 @@
       {
         "surface": "En-eglaim",
         "lemma": "eneglayim"
+      },
+      {
+        "surface": "they will",
+        "lemma": "hayah"
       },
       {
         "surface": "spread",
@@ -470,8 +630,16 @@
         "lemma": "geve"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "become fresh",
         "lemma": "rapah"
+      },
+      {
+        "surface": "they will be left",
+        "lemma": "natan"
       },
       {
         "surface": "for salt",
@@ -479,6 +647,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "Along",
+        "lemma": "al"
+      },
+      {
+        "surface": "both",
+        "lemma": "zeh"
+      },
       {
         "surface": "banks",
         "lemma": "saphah"
@@ -496,6 +672,10 @@
         "lemma": "ets"
       },
       {
+        "surface": "of all kinds",
+        "lemma": "kol"
+      },
+      {
         "surface": "will grow",
         "lemma": "alah"
       },
@@ -504,12 +684,20 @@
         "lemma": "aleh"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "wither",
         "lemma": "naval"
       },
       {
         "surface": "and their fruit",
         "lemma": "peri"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "fail",
@@ -524,16 +712,32 @@
         "lemma": "bakhar"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "the water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the sanctuary",
         "lemma": "miqdash"
       },
       {
+        "surface": "flows to them",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Their fruit",
         "lemma": "peri"
+      },
+      {
+        "surface": "will be used",
+        "lemma": "hayah"
       },
       {
         "surface": "for food",
@@ -562,8 +766,20 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "These are",
+        "lemma": "geh"
+      },
+      {
         "surface": "the boundaries",
         "lemma": "gevul"
+      },
+      {
+        "surface": "by which",
+        "lemma": "asher"
       },
       {
         "surface": "you are to divide the land",
@@ -600,6 +816,10 @@
         "lemma": "nachal"
       },
       {
+        "surface": "it",
+        "lemma": "et"
+      },
+      {
         "surface": "equally",
         "lemma": "ish"
       },
@@ -608,12 +828,28 @@
         "lemma": "ach"
       },
       {
+        "surface": "Because",
+        "lemma": "asher"
+      },
+      {
         "surface": "I swore with an uplifted",
         "lemma": "nasa"
       },
       {
         "surface": "hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "to give",
+        "lemma": "natan"
+      },
+      {
+        "surface": "it to your forefathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
       },
       {
         "surface": "land",
@@ -630,6 +866,10 @@
     ],
     "15": [
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
         "surface": "shall be the boundary",
         "lemma": "gevul"
       },
@@ -644,6 +884,10 @@
       {
         "surface": "side",
         "lemma": "peah"
+      },
+      {
+        "surface": "it will extend from",
+        "lemma": "min"
       },
       {
         "surface": "the Great",
@@ -662,6 +906,10 @@
         "lemma": "chetlon"
       },
       {
+        "surface": "through Lebo-hamath",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Zedad",
         "lemma": "tsedad"
       }
@@ -674,6 +922,10 @@
       {
         "surface": "and Sibraim",
         "lemma": "sivrayim"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
       },
       {
         "surface": "is on",
@@ -704,6 +956,14 @@
         "lemma": "chatsarhattikhon"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "is on",
+        "lemma": "el"
+      },
+      {
         "surface": "the border",
         "lemma": "gevul"
       },
@@ -716,6 +976,14 @@
       {
         "surface": "So the border",
         "lemma": "gevul"
+      },
+      {
+        "surface": "will run",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the Sea",
@@ -812,12 +1080,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "the Eastern",
         "lemma": "qadmoni"
       },
       {
         "surface": "Sea",
         "lemma": "yam"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "as far as Tamar",
@@ -846,6 +1122,10 @@
         "lemma": "tamar"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "the waters",
         "lemma": "mayim"
       },
@@ -856,6 +1136,10 @@
       {
         "surface": "and along the Brook of Egypt",
         "lemma": "nachal"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the Great",
@@ -900,8 +1184,20 @@
         "lemma": "gevul"
       },
       {
+        "surface": "up to",
+        "lemma": "ad"
+      },
+      {
         "surface": "a point opposite",
         "lemma": "nokhach"
+      },
+      {
+        "surface": "Lebo-hamath",
+        "lemma": "bo"
+      },
+      {
+        "surface": "This",
+        "lemma": "zot"
       },
       {
         "surface": "will be the western",
@@ -918,6 +1214,10 @@
         "lemma": "chalaq"
       },
       {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "land",
         "lemma": "erets"
       },
@@ -932,8 +1232,16 @@
     ],
     "22": [
       {
+        "surface": "vvv",
+        "lemma": "hayah"
+      },
+      {
         "surface": "You shall allot",
         "lemma": "naphal"
+      },
+      {
+        "surface": "it",
+        "lemma": "et"
       },
       {
         "surface": "as an inheritance",
@@ -952,6 +1260,10 @@
         "lemma": "tavekh"
       },
       {
+        "surface": "and who",
+        "lemma": "asher"
+      },
+      {
         "surface": "have",
         "lemma": "yalad"
       },
@@ -960,12 +1272,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "You are to treat them",
+        "lemma": "hayah"
+      },
+      {
         "surface": "as native-born",
         "lemma": "ezrach"
       },
       {
         "surface": "Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "along with you",
+        "lemma": "et"
       },
       {
         "surface": "they shall be allotted",
@@ -990,6 +1310,10 @@
     ],
     "23": [
       {
+        "surface": "In whatever",
+        "lemma": "asher"
+      },
+      {
         "surface": "tribe",
         "lemma": "shevet"
       },
@@ -1000,6 +1324,10 @@
       {
         "surface": "dwells",
         "lemma": "gur"
+      },
+      {
+        "surface": "you are to assign",
+        "lemma": "natan"
       },
       {
         "surface": "his inheritance",

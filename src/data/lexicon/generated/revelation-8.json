@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "When",
+        "lemma": "hotan"
+      },
+      {
         "surface": "the Lamb opened",
         "lemma": "anoigo"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "seventh",
@@ -18,12 +26,24 @@
         "lemma": "sphragis"
       },
       {
+        "surface": "there was",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "silence",
         "lemma": "sige"
       },
       {
+        "surface": "in",
+        "lemma": "en"
+      },
+      {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "for about",
+        "lemma": "hos"
       },
       {
         "surface": "half an hour",
@@ -31,6 +51,18 @@
       }
     ],
     "2": [
+      {
+        "surface": "And",
+        "lemma": "kai"
+      },
+      {
+        "surface": "I saw",
+        "lemma": "horao"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
       {
         "surface": "seven",
         "lemma": "hepta"
@@ -40,8 +72,32 @@
         "lemma": "angelos"
       },
       {
+        "surface": "who",
+        "lemma": "hos"
+      },
+      {
+        "surface": "stand",
+        "lemma": "histemi"
+      },
+      {
+        "surface": "before",
+        "lemma": "enopion"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "they",
+        "lemma": "autos"
+      },
+      {
+        "surface": "were given",
+        "lemma": "didomi"
       },
       {
         "surface": "seven",
@@ -54,12 +110,20 @@
     ],
     "3": [
       {
+        "surface": "Then",
+        "lemma": "kai"
+      },
+      {
         "surface": "another",
         "lemma": "allos"
       },
       {
         "surface": "angel",
         "lemma": "angelos"
+      },
+      {
+        "surface": "who had",
+        "lemma": "echo"
       },
       {
         "surface": "a golden",
@@ -70,20 +134,80 @@
         "lemma": "libanotos"
       },
       {
+        "surface": "came",
+        "lemma": "erchomai"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "stood",
+        "lemma": "histemi"
+      },
+      {
+        "surface": "at",
+        "lemma": "epi"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "altar",
         "lemma": "thusiasterion"
+      },
+      {
+        "surface": "He",
+        "lemma": "autos"
+      },
+      {
+        "surface": "was given",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "much",
+        "lemma": "polus"
       },
       {
         "surface": "incense",
         "lemma": "thumiama"
       },
       {
+        "surface": "to",
+        "lemma": "hina"
+      },
+      {
+        "surface": "offer",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "along with the",
+        "lemma": "ho"
+      },
+      {
         "surface": "prayers",
         "lemma": "proseuche"
       },
       {
+        "surface": "of all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "saints",
         "lemma": "hagios"
+      },
+      {
+        "surface": "on",
+        "lemma": "epi"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "golden",
@@ -94,22 +218,50 @@
         "lemma": "thusiasterion"
       },
       {
+        "surface": "before",
+        "lemma": "enopion"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "throne",
         "lemma": "thronos"
       }
     ],
     "4": [
       {
+        "surface": "And",
+        "lemma": "kai"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "smoke",
         "lemma": "kapnos"
+      },
+      {
+        "surface": "of the",
+        "lemma": "ho"
       },
       {
         "surface": "incense",
         "lemma": "thumiama"
       },
       {
+        "surface": "together with the",
+        "lemma": "ho"
+      },
+      {
         "surface": "prayers",
         "lemma": "proseuche"
+      },
+      {
+        "surface": "of the",
+        "lemma": "ho"
       },
       {
         "surface": "saints",
@@ -120,12 +272,24 @@
         "lemma": "anabaino"
       },
       {
+        "surface": "before",
+        "lemma": "enopion"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
       },
       {
+        "surface": "from",
+        "lemma": "ek"
+      },
+      {
         "surface": "the hand",
         "lemma": "cheir"
+      },
+      {
+        "surface": "of the",
+        "lemma": "ho"
       },
       {
         "surface": "angel",
@@ -134,8 +298,24 @@
     ],
     "5": [
       {
+        "surface": "Then",
+        "lemma": "kai"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "angel",
         "lemma": "angelos"
+      },
+      {
+        "surface": "took",
+        "lemma": "lambano"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "censer",
@@ -146,20 +326,52 @@
         "lemma": "gemizo"
       },
       {
+        "surface": "it",
+        "lemma": "autos"
+      },
+      {
+        "surface": "with",
+        "lemma": "ek"
+      },
+      {
         "surface": "fire",
         "lemma": "pur"
+      },
+      {
+        "surface": "from the",
+        "lemma": "ho"
       },
       {
         "surface": "altar",
         "lemma": "thusiasterion"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "hurled it",
         "lemma": "ballo"
       },
       {
+        "surface": "to",
+        "lemma": "eis"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "earth",
         "lemma": "ge"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "there were",
+        "lemma": "ginomai"
       },
       {
         "surface": "peals of thunder",
@@ -174,11 +386,23 @@
         "lemma": "astrape"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "an earthquake",
         "lemma": "seismos"
       }
     ],
     "6": [
+      {
+        "surface": "And",
+        "lemma": "kai"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
       {
         "surface": "seven",
         "lemma": "hepta"
@@ -186,6 +410,14 @@
       {
         "surface": "angels",
         "lemma": "angelos"
+      },
+      {
+        "surface": "with",
+        "lemma": "echo"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "seven",
@@ -200,11 +432,23 @@
         "lemma": "hetoimazo"
       },
       {
+        "surface": "to",
+        "lemma": "hina"
+      },
+      {
         "surface": "sound them",
         "lemma": "salpizo"
       }
     ],
     "7": [
+      {
+        "surface": "Then",
+        "lemma": "kai"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
       {
         "surface": "first angel",
         "lemma": "protos"
@@ -214,8 +458,16 @@
         "lemma": "salpizo"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "hail",
         "lemma": "chalaza"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "fire",
@@ -226,6 +478,10 @@
         "lemma": "mignumi"
       },
       {
+        "surface": "with",
+        "lemma": "en"
+      },
+      {
         "surface": "blood",
         "lemma": "haima"
       },
@@ -234,12 +490,28 @@
         "lemma": "ballo"
       },
       {
+        "surface": "upon",
+        "lemma": "eis"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "earth",
         "lemma": "ge"
       },
       {
+        "surface": "A",
+        "lemma": "ho"
+      },
+      {
         "surface": "third",
         "lemma": "tritos"
+      },
+      {
+        "surface": "of",
+        "lemma": "ho"
       },
       {
         "surface": "the earth",
@@ -250,12 +522,32 @@
         "lemma": "katakaio"
       },
       {
+        "surface": "along with",
+        "lemma": "kai"
+      },
+      {
+        "surface": "a",
+        "lemma": "ho"
+      },
+      {
         "surface": "third",
         "lemma": "tritos"
       },
       {
+        "surface": "of the",
+        "lemma": "ho"
+      },
+      {
         "surface": "trees",
         "lemma": "dendron"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
       },
       {
         "surface": "the green",
@@ -268,6 +560,14 @@
     ],
     "8": [
       {
+        "surface": "Then",
+        "lemma": "kai"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "second",
         "lemma": "deuteros"
       },
@@ -278,6 +578,18 @@
       {
         "surface": "sounded his trumpet",
         "lemma": "salpizo"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "something like",
+        "lemma": "hos"
+      },
+      {
+        "surface": "a great",
+        "lemma": "megas"
       },
       {
         "surface": "mountain",
@@ -296,16 +608,36 @@
         "lemma": "ballo"
       },
       {
+        "surface": "into",
+        "lemma": "eis"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "sea",
         "lemma": "thalassa"
+      },
+      {
+        "surface": "A",
+        "lemma": "ho"
       },
       {
         "surface": "third",
         "lemma": "tritos"
       },
       {
+        "surface": "of the",
+        "lemma": "ho"
+      },
+      {
         "surface": "sea",
         "lemma": "thalassa"
+      },
+      {
+        "surface": "turned to",
+        "lemma": "ginomai"
       },
       {
         "surface": "blood",
@@ -314,8 +646,24 @@
     ],
     "9": [
       {
+        "surface": "a",
+        "lemma": "ho"
+      },
+      {
         "surface": "third",
         "lemma": "tritos"
+      },
+      {
+        "surface": "of the",
+        "lemma": "ho"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ho"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "echo"
       },
       {
         "surface": "living",
@@ -326,6 +674,14 @@
         "lemma": "ktisma"
       },
       {
+        "surface": "in",
+        "lemma": "en"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "sea",
         "lemma": "thalassa"
       },
@@ -334,8 +690,20 @@
         "lemma": "apothnesko"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "a",
+        "lemma": "ho"
+      },
+      {
         "surface": "third",
         "lemma": "tritos"
+      },
+      {
+        "surface": "of the",
+        "lemma": "ho"
       },
       {
         "surface": "ships",
@@ -347,6 +715,14 @@
       }
     ],
     "10": [
+      {
+        "surface": "Then",
+        "lemma": "kai"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
       {
         "surface": "third",
         "lemma": "tritos"
@@ -360,12 +736,24 @@
         "lemma": "salpizo"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "a great",
+        "lemma": "megas"
+      },
+      {
         "surface": "star",
         "lemma": "aster"
       },
       {
         "surface": "burning",
         "lemma": "kaio"
+      },
+      {
+        "surface": "like",
+        "lemma": "hos"
       },
       {
         "surface": "a torch",
@@ -376,24 +764,60 @@
         "lemma": "pipto"
       },
       {
+        "surface": "from",
+        "lemma": "ek"
+      },
+      {
         "surface": "heaven",
         "lemma": "ouranos"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "landed",
         "lemma": "pipto"
       },
       {
+        "surface": "on",
+        "lemma": "epi"
+      },
+      {
+        "surface": "a",
+        "lemma": "ho"
+      },
+      {
         "surface": "third",
         "lemma": "tritos"
+      },
+      {
+        "surface": "of the",
+        "lemma": "ho"
       },
       {
         "surface": "rivers",
         "lemma": "potamos"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "on",
+        "lemma": "epi"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "springs",
         "lemma": "pege"
+      },
+      {
+        "surface": "of",
+        "lemma": "ho"
       },
       {
         "surface": "water",
@@ -402,28 +826,60 @@
     ],
     "11": [
       {
+        "surface": "The",
+        "lemma": "ho"
+      },
+      {
         "surface": "name",
         "lemma": "onoma"
+      },
+      {
+        "surface": "of the",
+        "lemma": "ho"
       },
       {
         "surface": "star",
         "lemma": "aster"
       },
       {
+        "surface": "is",
+        "lemma": "lego"
+      },
+      {
         "surface": "Wormwood",
         "lemma": "apsinthos"
+      },
+      {
+        "surface": "A",
+        "lemma": "ho"
       },
       {
         "surface": "third",
         "lemma": "tritos"
       },
       {
+        "surface": "of the",
+        "lemma": "ho"
+      },
+      {
         "surface": "waters",
         "lemma": "hudor"
       },
       {
+        "surface": "turned",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "bitter like wormwood oil",
         "lemma": "apsinthos"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "people",
@@ -432,6 +888,14 @@
       {
         "surface": "died",
         "lemma": "apothnesko"
+      },
+      {
+        "surface": "from",
+        "lemma": "ek"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "bitter",
@@ -443,6 +907,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "Then",
+        "lemma": "kai"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
       {
         "surface": "fourth",
         "lemma": "tetartos"
@@ -456,16 +928,36 @@
         "lemma": "salpizo"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "a",
+        "lemma": "ho"
+      },
+      {
         "surface": "third",
         "lemma": "tritos"
+      },
+      {
+        "surface": "of the",
+        "lemma": "ho"
       },
       {
         "surface": "sun",
         "lemma": "helios"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "moon",
         "lemma": "selene"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "stars",
@@ -476,24 +968,56 @@
         "lemma": "plesso"
       },
       {
+        "surface": "A",
+        "lemma": "ho"
+      },
+      {
         "surface": "third",
         "lemma": "tritos"
+      },
+      {
+        "surface": "of the stars",
+        "lemma": "autos"
       },
       {
         "surface": "were darkened",
         "lemma": "skotizo"
       },
       {
+        "surface": "a",
+        "lemma": "ho"
+      },
+      {
         "surface": "third",
         "lemma": "tritos"
+      },
+      {
+        "surface": "of",
+        "lemma": "autos"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "day",
         "lemma": "hemera"
       },
       {
+        "surface": "vvv",
+        "lemma": "me"
+      },
+      {
         "surface": "was without light",
         "lemma": "phaino"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "a third of the",
+        "lemma": "ho"
       },
       {
         "surface": "night",
@@ -506,6 +1030,22 @@
     ],
     "13": [
       {
+        "surface": "And",
+        "lemma": "kai"
+      },
+      {
+        "surface": "as I observed",
+        "lemma": "horao"
+      },
+      {
+        "surface": "I heard",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "an",
+        "lemma": "heis"
+      },
+      {
         "surface": "eagle",
         "lemma": "aetos"
       },
@@ -514,20 +1054,64 @@
         "lemma": "petomai"
       },
       {
+        "surface": "vvv",
+        "lemma": "en"
+      },
+      {
         "surface": "overhead",
         "lemma": "mesouranema"
+      },
+      {
+        "surface": "calling",
+        "lemma": "lego"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "megas"
       },
       {
         "surface": "in a loud voice",
         "lemma": "phone"
       },
       {
+        "surface": "Woe",
+        "lemma": "ouai"
+      },
+      {
+        "surface": "Woe",
+        "lemma": "ouai"
+      },
+      {
+        "surface": "Woe",
+        "lemma": "ouai"
+      },
+      {
+        "surface": "to those who",
+        "lemma": "ho"
+      },
+      {
         "surface": "dwell",
         "lemma": "katoikeo"
       },
       {
+        "surface": "on",
+        "lemma": "epi"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "earth",
         "lemma": "ge"
+      },
+      {
+        "surface": "because of",
+        "lemma": "ek"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "trumpet",
@@ -544,6 +1128,10 @@
       {
         "surface": "to be sounded",
         "lemma": "salpizo"
+      },
+      {
+        "surface": "by the",
+        "lemma": "ho"
       },
       {
         "surface": "remaining",

@@ -6,8 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "Nevertheless",
+        "lemma": "ki"
+      },
+      {
+        "surface": "there will be no more",
+        "lemma": "lo"
+      },
+      {
         "surface": "gloom",
         "lemma": "muaph"
+      },
+      {
+        "surface": "for those",
+        "lemma": "asher"
       },
       {
         "surface": "in distress",
@@ -84,12 +96,24 @@
         "lemma": "choshekh"
       },
       {
+        "surface": "have seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "a great",
         "lemma": "gadol"
       },
       {
         "surface": "light",
         "lemma": "or"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
+        "surface": "those living",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -142,6 +166,10 @@
         "lemma": "qatsir"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
         "surface": "men rejoice",
         "lemma": "gil"
       },
@@ -155,6 +183,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "as in the day",
         "lemma": "yom"
@@ -194,6 +226,14 @@
     ],
     "5": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "trampling",
         "lemma": "saan"
       },
@@ -218,6 +258,10 @@
         "lemma": "dam"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "burned",
         "lemma": "serephah"
       },
@@ -232,6 +276,10 @@
     ],
     "6": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "a child",
         "lemma": "yeled"
       },
@@ -244,12 +292,28 @@
         "lemma": "ben"
       },
       {
+        "surface": "is given",
+        "lemma": "natan"
+      },
+      {
         "surface": "and the government",
         "lemma": "misrah"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
         "surface": "His shoulders",
         "lemma": "shekhem"
+      },
+      {
+        "surface": "And He will be called",
+        "lemma": "qara"
       },
       {
         "surface": "Wonderful",
@@ -266,6 +330,10 @@
       {
         "surface": "God",
         "lemma": "el"
+      },
+      {
+        "surface": "Everlasting Father",
+        "lemma": "av"
       },
       {
         "surface": "Prince",
@@ -298,12 +366,20 @@
         "lemma": "qets"
       },
       {
+        "surface": "He will reign on",
+        "lemma": "al"
+      },
+      {
         "surface": "the throne",
         "lemma": "kisse"
       },
       {
         "surface": "of David",
         "lemma": "david"
+      },
+      {
+        "surface": "and over",
+        "lemma": "al"
       },
       {
         "surface": "his kingdom",
@@ -330,6 +406,10 @@
         "lemma": "attah"
       },
       {
+        "surface": "and forevermore",
+        "lemma": "ad"
+      },
+      {
         "surface": "The zeal",
         "lemma": "qinah"
       },
@@ -340,6 +420,14 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "will accomplish",
+        "lemma": "asah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
       }
     ],
     "8": [
@@ -370,6 +458,10 @@
     ],
     "9": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -380,6 +472,10 @@
       {
         "surface": "Ephraim",
         "lemma": "ephrayim"
+      },
+      {
+        "surface": "and the dwellers",
+        "lemma": "yashav"
       },
       {
         "surface": "of Samaria",
@@ -396,6 +492,10 @@
       {
         "surface": "of heart",
         "lemma": "levav"
+      },
+      {
+        "surface": "they will say",
+        "lemma": "amar"
       }
     ],
     "10": [
@@ -450,6 +550,10 @@
         "lemma": "retsin"
       },
       {
+        "surface": "against him",
+        "lemma": "al"
+      },
+      {
         "surface": "and joined",
         "lemma": "sukh"
       },
@@ -484,12 +588,32 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "with open",
+        "lemma": "kol"
+      },
+      {
         "surface": "mouths",
         "lemma": "peh"
       },
       {
+        "surface": "Despite all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "His anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "turned away",
+        "lemma": "shuv"
       },
       {
         "surface": "His hand",
@@ -510,8 +634,24 @@
         "lemma": "am"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "Him who struck them",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "they did not",
+        "lemma": "lo"
       },
       {
         "surface": "seek",
@@ -578,6 +718,10 @@
         "lemma": "nasa"
       },
       {
+        "surface": "man",
+        "lemma": "hu"
+      },
+      {
         "surface": "and the tail",
         "lemma": "zanav"
       },
@@ -595,6 +739,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "For",
+        "lemma": "hayah"
+      },
       {
         "surface": "those who guide",
         "lemma": "ashar"
@@ -618,16 +766,32 @@
     ],
     "17": [
       {
+        "surface": "Therefore",
+        "lemma": "al"
+      },
+      {
         "surface": "the Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "takes no",
+        "lemma": "lo"
       },
       {
         "surface": "pleasure",
         "lemma": "samach"
       },
       {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "their young men",
         "lemma": "bachur"
+      },
+      {
+        "surface": "He has no",
+        "lemma": "lo"
       },
       {
         "surface": "compassion",
@@ -638,8 +802,20 @@
         "lemma": "yatom"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "widows",
         "lemma": "almanah"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "every one of them",
+        "lemma": "kol"
       },
       {
         "surface": "is godless",
@@ -648,6 +824,10 @@
       {
         "surface": "and wicked",
         "lemma": "raa"
+      },
+      {
+        "surface": "and every",
+        "lemma": "kol"
       },
       {
         "surface": "mouth",
@@ -662,8 +842,24 @@
         "lemma": "nevalah"
       },
       {
+        "surface": "Despite all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "His anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "turned away",
+        "lemma": "shuv"
       },
       {
         "surface": "His hand",
@@ -679,6 +875,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "wickedness",
         "lemma": "rishah"
@@ -754,12 +954,20 @@
         "lemma": "am"
       },
       {
+        "surface": "are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "fuel",
         "lemma": "maakholet"
       },
       {
         "surface": "for the fire",
         "lemma": "esh"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       },
       {
         "surface": "man",
@@ -780,6 +988,10 @@
         "lemma": "gazar"
       },
       {
+        "surface": "what is on",
+        "lemma": "al"
+      },
+      {
         "surface": "the right",
         "lemma": "yamin"
       },
@@ -792,8 +1004,16 @@
         "lemma": "akhal"
       },
       {
+        "surface": "what is on",
+        "lemma": "al"
+      },
+      {
         "surface": "the left",
         "lemma": "semol"
+      },
+      {
+        "surface": "but they are still not",
+        "lemma": "lo"
       },
       {
         "surface": "satisfied",
@@ -838,12 +1058,32 @@
         "lemma": "yachad"
       },
       {
+        "surface": "they turn against",
+        "lemma": "al"
+      },
+      {
         "surface": "Judah",
         "lemma": "yehudah"
       },
       {
+        "surface": "Despite all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "His anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "turned away",
+        "lemma": "shuv"
       },
       {
         "surface": "His hand",
@@ -860,8 +1100,8 @@
     ]
   },
   "themeLemmas": [
-    "akhal",
-    "yisrael",
-    "tsava"
+    "lo",
+    "al",
+    "kol"
   ]
 }

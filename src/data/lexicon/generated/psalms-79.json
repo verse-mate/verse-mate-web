@@ -22,6 +22,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "have invaded",
+        "lemma": "bo"
+      },
+      {
         "surface": "Your inheritance",
         "lemma": "nachalah"
       },
@@ -51,6 +55,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "They have given",
+        "lemma": "natan"
+      },
       {
         "surface": "the corpses",
         "lemma": "nevelah"
@@ -120,6 +128,10 @@
     ],
     "4": [
       {
+        "surface": "We have become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a reproach",
         "lemma": "cherpah"
       },
@@ -142,6 +154,10 @@
     ],
     "5": [
       {
+        "surface": "How long",
+        "lemma": "ad"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -162,6 +178,10 @@
         "lemma": "baar"
       },
       {
+        "surface": "like",
+        "lemma": "kemo"
+      },
+      {
         "surface": "fire",
         "lemma": "esh"
       }
@@ -176,16 +196,44 @@
         "lemma": "chemah"
       },
       {
+        "surface": "on",
+        "lemma": "el"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "acknowledge You",
         "lemma": "yada"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the kingdoms",
         "lemma": "mamlakhah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "refuse",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to call",
+        "lemma": "qara"
       },
       {
         "surface": "on Your name",
@@ -193,6 +241,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
       {
         "surface": "they have devoured",
         "lemma": "akhal"
@@ -236,6 +288,10 @@
         "lemma": "maher"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "we are brought",
         "lemma": "dalal"
       },
@@ -258,6 +314,10 @@
         "lemma": "yesah"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "the glory",
         "lemma": "kavod"
       },
@@ -274,8 +334,16 @@
         "lemma": "kipher"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "our sins",
         "lemma": "chattaah"
+      },
+      {
+        "surface": "for the sake",
+        "lemma": "maan"
       },
       {
         "surface": "of Your name",
@@ -290,6 +358,10 @@
       {
         "surface": "should the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "ask",
+        "lemma": "amar"
       },
       {
         "surface": "Where",
@@ -334,6 +406,10 @@
         "lemma": "assir"
       },
       {
+        "surface": "reach You",
+        "lemma": "bo"
+      },
+      {
         "surface": "by the strength",
         "lemma": "godel"
       },
@@ -355,6 +431,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "Pay back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
+      },
       {
         "surface": "the laps",
         "lemma": "cheq"
@@ -381,6 +465,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "Then we",
+        "lemma": "anachnu"
+      },
       {
         "surface": "Your people",
         "lemma": "am"
@@ -421,7 +509,7 @@
   },
   "themeLemmas": [
     "shem",
-    "yerushalaim",
-    "yada"
+    "al",
+    "yerushalaim"
   ]
 }

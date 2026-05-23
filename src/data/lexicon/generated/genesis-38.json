@@ -6,6 +6,18 @@
   "verses": {
     "1": [
       {
+        "surface": "About",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "that",
+        "lemma": "hu"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
         "surface": "Judah",
         "lemma": "yehudah"
       },
@@ -20,6 +32,10 @@
       {
         "surface": "and settled",
         "lemma": "natah"
+      },
+      {
+        "surface": "near",
+        "lemma": "ad"
       },
       {
         "surface": "a man",
@@ -48,6 +64,10 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the daughter",
         "lemma": "bat"
       },
@@ -70,6 +90,14 @@
       {
         "surface": "and he took her as a wife",
         "lemma": "laqach"
+      },
+      {
+        "surface": "and slept with",
+        "lemma": "bo"
+      },
+      {
+        "surface": "her",
+        "lemma": "el"
       }
     ],
     "3": [
@@ -84,6 +112,10 @@
       {
         "surface": "a son",
         "lemma": "ben"
+      },
+      {
+        "surface": "and Judah named",
+        "lemma": "qara"
       },
       {
         "surface": "him",
@@ -112,6 +144,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "and she named",
+        "lemma": "qara"
+      },
+      {
         "surface": "him",
         "lemma": "shem"
       },
@@ -134,12 +170,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "and named",
+        "lemma": "qara"
+      },
+      {
         "surface": "him",
         "lemma": "shem"
       },
       {
         "surface": "Shelah",
         "lemma": "shelah"
+      },
+      {
+        "surface": "it was",
+        "lemma": "hayah"
       },
       {
         "surface": "at Chezib",
@@ -182,6 +226,10 @@
     ],
     "7": [
       {
+        "surface": "But",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Er",
         "lemma": "er"
       },
@@ -220,8 +268,16 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Onan",
         "lemma": "onan"
+      },
+      {
+        "surface": "Sleep with",
+        "lemma": "bo"
       },
       {
         "surface": "your brother’s",
@@ -258,8 +314,28 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the offspring",
         "lemma": "zera"
+      },
+      {
+        "surface": "would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "belong",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "so whenever",
+        "lemma": "im"
+      },
+      {
+        "surface": "he would sleep with",
+        "lemma": "bo"
       },
       {
         "surface": "his brother’s",
@@ -282,6 +358,10 @@
         "lemma": "bilti"
       },
       {
+        "surface": "produce",
+        "lemma": "natan"
+      },
+      {
         "surface": "offspring",
         "lemma": "zera"
       },
@@ -291,6 +371,14 @@
       }
     ],
     "10": [
+      {
+        "surface": "What",
+        "lemma": "asher"
+      },
+      {
+        "surface": "he did",
+        "lemma": "asah"
+      },
       {
         "surface": "was wicked",
         "lemma": "raa"
@@ -306,12 +394,20 @@
       {
         "surface": "so He put Onan to death",
         "lemma": "mut"
+      },
+      {
+        "surface": "as well",
+        "lemma": "gam"
       }
     ],
     "11": [
       {
         "surface": "Then Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "to his daughter-in-law",
@@ -322,12 +418,24 @@
         "lemma": "tamar"
       },
       {
+        "surface": "Live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "as a widow",
         "lemma": "almanah"
       },
       {
+        "surface": "in your father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "my son",
@@ -342,8 +450,28 @@
         "lemma": "gadal"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "he thought",
+        "lemma": "amar"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
+        "surface": "may",
+        "lemma": "pen"
+      },
+      {
         "surface": "die",
         "lemma": "mut"
+      },
+      {
+        "surface": "too",
+        "lemma": "gam"
       },
       {
         "surface": "like his brothers",
@@ -356,6 +484,14 @@
       {
         "surface": "went",
         "lemma": "halakh"
+      },
+      {
+        "surface": "to live",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "in her father’s",
+        "lemma": "av"
       },
       {
         "surface": "house",
@@ -400,6 +536,10 @@
         "lemma": "nacham"
       },
       {
+        "surface": "he",
+        "lemma": "hu"
+      },
+      {
         "surface": "and his friend",
         "lemma": "rea"
       },
@@ -414,6 +554,10 @@
       {
         "surface": "went up",
         "lemma": "alah"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
       },
       {
         "surface": "his sheepshearers",
@@ -460,6 +604,10 @@
         "lemma": "sur"
       },
       {
+        "surface": "her",
+        "lemma": "al"
+      },
+      {
         "surface": "widow’s",
         "lemma": "almanut"
       },
@@ -480,12 +628,24 @@
         "lemma": "kasah"
       },
       {
+        "surface": "and sat",
+        "lemma": "yashav"
+      },
+      {
         "surface": "at the entrance",
         "lemma": "petach"
       },
       {
         "surface": "to Enaim",
         "lemma": "enayim"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "is on",
+        "lemma": "al"
       },
       {
         "surface": "the way",
@@ -496,12 +656,36 @@
         "lemma": "timnah"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "she saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "although Shelah",
         "lemma": "shelah"
       },
       {
         "surface": "had grown up",
         "lemma": "gadal"
+      },
+      {
+        "surface": "she",
+        "lemma": "hu"
+      },
+      {
+        "surface": "had not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "been given",
+        "lemma": "natan"
       },
       {
         "surface": "as a wife",
@@ -514,12 +698,20 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "saw her",
+        "lemma": "raah"
+      },
+      {
         "surface": "he thought",
         "lemma": "chashav"
       },
       {
         "surface": "she was a prostitute",
         "lemma": "zanah"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "she had covered",
@@ -532,8 +724,20 @@
     ],
     "16": [
       {
+        "surface": "Not",
+        "lemma": "lo"
+      },
+      {
         "surface": "realizing",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "she",
+        "lemma": "hu"
       },
       {
         "surface": "was his daughter-in-law",
@@ -544,6 +748,14 @@
         "lemma": "natah"
       },
       {
+        "surface": "to her",
+        "lemma": "el"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Come",
         "lemma": "yahav"
       },
@@ -552,11 +764,43 @@
         "lemma": "na"
       },
       {
+        "surface": "let me sleep with",
+        "lemma": "bo"
+      },
+      {
+        "surface": "you",
+        "lemma": "el"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "will you give",
+        "lemma": "natan"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "sleeping with",
+        "lemma": "bo"
+      },
+      {
+        "surface": "you",
+        "lemma": "el"
+      },
+      {
+        "surface": "she inquired",
+        "lemma": "amar"
       }
     ],
     "17": [
+      {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
       {
         "surface": "will send you",
         "lemma": "shalach"
@@ -566,12 +810,36 @@
         "lemma": "gedi"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "my flock",
         "lemma": "tson"
       },
       {
+        "surface": "Judah answered",
+        "lemma": "amar"
+      },
+      {
+        "surface": "But she replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Only if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you leave me",
+        "lemma": "natan"
+      },
+      {
         "surface": "something as a pledge",
         "lemma": "aravon"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "you send it",
@@ -588,6 +856,18 @@
         "lemma": "aravon"
       },
       {
+        "surface": "should I give",
+        "lemma": "natan"
+      },
+      {
+        "surface": "he asked",
+        "lemma": "amar"
+      },
+      {
+        "surface": "She answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "Your seal",
         "lemma": "chotam"
       },
@@ -602,6 +882,18 @@
       {
         "surface": "in your hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "So he gave them",
+        "lemma": "natan"
+      },
+      {
+        "surface": "and slept with",
+        "lemma": "bo"
+      },
+      {
+        "surface": "her",
+        "lemma": "el"
       },
       {
         "surface": "and she became pregnant",
@@ -676,6 +968,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "he could not",
+        "lemma": "lo"
+      },
+      {
         "surface": "find her",
         "lemma": "matsa"
       }
@@ -702,6 +998,14 @@
         "lemma": "qedeshah"
       },
       {
+        "surface": "who",
+        "lemma": "hu"
+      },
+      {
+        "surface": "was beside",
+        "lemma": "al"
+      },
+      {
         "surface": "the road",
         "lemma": "derekh"
       },
@@ -710,18 +1014,54 @@
         "lemma": "enayim"
       },
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "shrine prostitute",
         "lemma": "qedeshah"
+      },
+      {
+        "surface": "has been",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "here",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "they answered",
+        "lemma": "amar"
       }
     ],
     "22": [
+      {
+        "surface": "So Hirah returned",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
       {
         "surface": "Judah",
         "lemma": "yehudah"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I could not",
+        "lemma": "lo"
+      },
+      {
         "surface": "find her",
         "lemma": "matsa"
+      },
+      {
+        "surface": "and furthermore",
+        "lemma": "gam"
       },
       {
         "surface": "the men",
@@ -732,8 +1072,24 @@
         "lemma": "maqom"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "shrine prostitute",
         "lemma": "qedeshah"
+      },
+      {
+        "surface": "has been",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "here",
+        "lemma": "zeh"
       }
     ],
     "23": [
@@ -744,6 +1100,18 @@
       {
         "surface": "Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Otherwise",
+        "lemma": "pen"
+      },
+      {
+        "surface": "we will become",
+        "lemma": "hayah"
       },
       {
         "surface": "a laughingstock",
@@ -758,8 +1126,20 @@
         "lemma": "shalach"
       },
       {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "young goat",
         "lemma": "gedi"
+      },
+      {
+        "surface": "but you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "could not",
+        "lemma": "lo"
       },
       {
         "surface": "find her",
@@ -767,6 +1147,10 @@
       }
     ],
     "24": [
+      {
+        "surface": "About",
+        "lemma": "hayah"
+      },
       {
         "surface": "three",
         "lemma": "shalosh"
@@ -796,6 +1180,10 @@
         "lemma": "zanah"
       },
       {
+        "surface": "and",
+        "lemma": "gam"
+      },
+      {
         "surface": "now",
         "lemma": "hinneh"
       },
@@ -804,8 +1192,16 @@
         "lemma": "harah"
       },
       {
+        "surface": "Bring her out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "Let her be burned to death",
@@ -814,16 +1210,52 @@
     ],
     "25": [
       {
+        "surface": "As she",
+        "lemma": "hu"
+      },
+      {
+        "surface": "was being brought out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "Tamar",
+        "lemma": "hu"
+      },
+      {
         "surface": "sent",
         "lemma": "shalach"
+      },
+      {
+        "surface": "a message",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to her",
+        "lemma": "el"
       },
       {
         "surface": "father-in-law",
         "lemma": "cham"
       },
       {
+        "surface": "I am",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "pregnant",
         "lemma": "harah"
+      },
+      {
+        "surface": "by the man to whom",
+        "lemma": "asher"
+      },
+      {
+        "surface": "these items",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "And she added",
+        "lemma": "amar"
       },
       {
         "surface": "Please",
@@ -848,6 +1280,10 @@
       {
         "surface": "and staff",
         "lemma": "matteh"
+      },
+      {
+        "surface": "are these",
+        "lemma": "elleh"
       }
     ],
     "26": [
@@ -860,8 +1296,28 @@
         "lemma": "nakhar"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "She is more righteous",
         "lemma": "tsadaq"
+      },
+      {
+        "surface": "than I",
+        "lemma": "min"
+      },
+      {
+        "surface": "since",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "give her",
+        "lemma": "natan"
       },
       {
         "surface": "to my son",
@@ -870,6 +1326,10 @@
       {
         "surface": "Shelah",
         "lemma": "shelah"
+      },
+      {
+        "surface": "And he did not",
+        "lemma": "lo"
       },
       {
         "surface": "have relations with her",
@@ -881,6 +1341,14 @@
       }
     ],
     "27": [
+      {
+        "surface": "When the time",
+        "lemma": "et"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
       {
         "surface": "for Tamar to give birth",
         "lemma": "yalad"
@@ -900,8 +1368,16 @@
     ],
     "28": [
       {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
         "surface": "as she was giving birth",
         "lemma": "yalad"
+      },
+      {
+        "surface": "one of them put out",
+        "lemma": "natan"
       },
       {
         "surface": "his hand",
@@ -924,12 +1400,28 @@
         "lemma": "qashar"
       },
       {
+        "surface": "around",
+        "lemma": "al"
+      },
+      {
         "surface": "his wrist",
         "lemma": "yad"
       },
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "one came out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "first",
         "lemma": "rishon"
+      },
+      {
+        "surface": "she announced",
+        "lemma": "amar"
       }
     ],
     "29": [
@@ -938,12 +1430,28 @@
         "lemma": "yad"
       },
       {
+        "surface": "back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and his brother",
         "lemma": "ach"
       },
       {
+        "surface": "came out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "she said",
+        "lemma": "amar"
+      },
+      {
         "surface": "You have broken out first",
         "lemma": "parats"
+      },
+      {
+        "surface": "So he was named",
+        "lemma": "qara"
       },
       {
         "surface": "Perez",
@@ -960,12 +1468,28 @@
         "lemma": "ach"
       },
       {
+        "surface": "came out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "with",
+        "lemma": "asher"
+      },
+      {
         "surface": "the scarlet thread",
         "lemma": "shani"
       },
       {
+        "surface": "around",
+        "lemma": "al"
+      },
+      {
         "surface": "his wrist",
         "lemma": "yad"
+      },
+      {
+        "surface": "and he was named",
+        "lemma": "qara"
       },
       {
         "surface": "Zerah",
@@ -974,8 +1498,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "yehudah",
-    "er",
-    "ach"
+    "lo"
   ]
 }

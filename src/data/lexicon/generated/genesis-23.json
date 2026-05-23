@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Sarah",
         "lemma": "sarah"
       },
@@ -44,6 +48,10 @@
         "lemma": "qiryatarba"
       },
       {
+        "surface": "that is",
+        "lemma": "hu"
+      },
+      {
         "surface": "Hebron",
         "lemma": "chevron"
       },
@@ -58,6 +66,10 @@
       {
         "surface": "and Abraham",
         "lemma": "avraham"
+      },
+      {
+        "surface": "went out",
+        "lemma": "bo"
       },
       {
         "surface": "to mourn",
@@ -82,6 +94,10 @@
         "lemma": "qamay"
       },
       {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
         "surface": "beside",
         "lemma": "paneh"
       },
@@ -94,11 +110,19 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the Hittites",
         "lemma": "ben"
       }
     ],
     "4": [
+      {
+        "surface": "I am",
+        "lemma": "anokhi"
+      },
       {
         "surface": "a foreigner",
         "lemma": "ger"
@@ -108,12 +132,24 @@
         "lemma": "toshav"
       },
       {
+        "surface": "among you",
+        "lemma": "im"
+      },
+      {
+        "surface": "Give",
+        "lemma": "natan"
+      },
+      {
         "surface": "a burial",
         "lemma": "qever"
       },
       {
         "surface": "site",
         "lemma": "achuzzah"
+      },
+      {
+        "surface": "among you",
+        "lemma": "im"
       },
       {
         "surface": "so that I can bury",
@@ -140,8 +176,16 @@
     ],
     "6": [
       {
+        "surface": "Listen to us",
+        "lemma": "shama"
+      },
+      {
         "surface": "sir",
         "lemma": "adon"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
       },
       {
         "surface": "are God’s",
@@ -170,6 +214,14 @@
       {
         "surface": "of our tombs",
         "lemma": "qever"
+      },
+      {
+        "surface": "None",
+        "lemma": "lo"
+      },
+      {
+        "surface": "of us",
+        "lemma": "min"
       },
       {
         "surface": "will withhold",
@@ -216,6 +268,10 @@
     ],
     "8": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "you are willing",
         "lemma": "nephesh"
       },
@@ -230,6 +286,14 @@
       {
         "surface": "he said",
         "lemma": "davar"
+      },
+      {
+        "surface": "to them",
+        "lemma": "et"
+      },
+      {
+        "surface": "listen to me",
+        "lemma": "shama"
       },
       {
         "surface": "and approach",
@@ -250,6 +314,10 @@
     ],
     "9": [
       {
+        "surface": "to sell",
+        "lemma": "natan"
+      },
+      {
         "surface": "the cave",
         "lemma": "mearah"
       },
@@ -258,12 +326,24 @@
         "lemma": "makhpelah"
       },
       {
+        "surface": "that belongs",
+        "lemma": "asher"
+      },
+      {
+        "surface": "it",
+        "lemma": "asher"
+      },
+      {
         "surface": "is at the end",
         "lemma": "qatseh"
       },
       {
         "surface": "of his field",
         "lemma": "saday"
+      },
+      {
+        "surface": "Let him sell it",
+        "lemma": "natan"
       },
       {
         "surface": "in your presence",
@@ -292,6 +372,10 @@
         "lemma": "ephron"
       },
       {
+        "surface": "was sitting",
+        "lemma": "yashav"
+      },
+      {
         "surface": "among",
         "lemma": "tavekh"
       },
@@ -308,8 +392,16 @@
         "lemma": "ozen"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Hittites",
         "lemma": "ben"
+      },
+      {
+        "surface": "who had come",
+        "lemma": "bo"
       },
       {
         "surface": "to the gate",
@@ -338,16 +430,40 @@
     ],
     "11": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "my lord",
         "lemma": "adon"
+      },
+      {
+        "surface": "Listen to me",
+        "lemma": "shama"
+      },
+      {
+        "surface": "I give",
+        "lemma": "natan"
       },
       {
         "surface": "the field",
         "lemma": "saday"
       },
       {
+        "surface": "and I give",
+        "lemma": "natan"
+      },
+      {
         "surface": "you the cave",
         "lemma": "mearah"
+      },
+      {
+        "surface": "that is in it",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I give it",
+        "lemma": "natan"
       },
       {
         "surface": "in the presence",
@@ -394,6 +510,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Ephron",
         "lemma": "ephron"
       },
@@ -402,8 +522,24 @@
         "lemma": "ozen"
       },
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
         "surface": "will please",
         "lemma": "lu"
+      },
+      {
+        "surface": "listen to me",
+        "lemma": "shama"
+      },
+      {
+        "surface": "I will pay you",
+        "lemma": "natan"
       },
       {
         "surface": "the price",
@@ -416,6 +552,10 @@
       {
         "surface": "Accept",
         "lemma": "laqach"
+      },
+      {
+        "surface": "it from me",
+        "lemma": "min"
       },
       {
         "surface": "so that I may bury",
@@ -446,6 +586,10 @@
     ],
     "15": [
       {
+        "surface": "Listen to me",
+        "lemma": "shama"
+      },
+      {
         "surface": "my lord",
         "lemma": "adon"
       },
@@ -474,6 +618,10 @@
         "lemma": "mah"
       },
       {
+        "surface": "is that",
+        "lemma": "hu"
+      },
+      {
         "surface": "between you and me",
         "lemma": "bayin"
       },
@@ -490,6 +638,14 @@
       {
         "surface": "Abraham",
         "lemma": "avraham"
+      },
+      {
+        "surface": "agreed",
+        "lemma": "shama"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Ephron’s terms",
@@ -574,8 +730,20 @@
         "lemma": "mearah"
       },
       {
+        "surface": "that was",
+        "lemma": "asher"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the trees",
         "lemma": "ets"
+      },
+      {
+        "surface": "within",
+        "lemma": "kol"
       },
       {
         "surface": "the boundaries",
@@ -604,8 +772,16 @@
         "lemma": "ayin"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Hittites",
         "lemma": "ben"
+      },
+      {
+        "surface": "who had come",
+        "lemma": "bo"
       },
       {
         "surface": "to the gate",
@@ -642,6 +818,10 @@
         "lemma": "sarah"
       },
       {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
         "surface": "the cave",
         "lemma": "mearah"
       },
@@ -654,8 +834,16 @@
         "lemma": "makhpelah"
       },
       {
+        "surface": "near",
+        "lemma": "al"
+      },
+      {
         "surface": "Mamre",
         "lemma": "mamre"
+      },
+      {
+        "surface": "that is",
+        "lemma": "hu"
       },
       {
         "surface": "Hebron",
@@ -674,6 +862,10 @@
       {
         "surface": "So the field",
         "lemma": "saday"
+      },
+      {
+        "surface": "and its",
+        "lemma": "asher"
       },
       {
         "surface": "cave",

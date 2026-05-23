@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "He who dwells",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the shelter",
         "lemma": "seter"
       },
@@ -28,6 +32,10 @@
     ],
     "2": [
       {
+        "surface": "I will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the LORD",
         "lemma": "yehovah"
       },
@@ -49,6 +57,14 @@
       }
     ],
     "3": [
+      {
+        "surface": "Surely",
+        "lemma": "ki"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
       {
         "surface": "will deliver you",
         "lemma": "natsal"
@@ -105,6 +121,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "You will not",
+        "lemma": "lo"
+      },
       {
         "surface": "fear",
         "lemma": "yare"
@@ -178,11 +198,23 @@
         "lemma": "yamin"
       },
       {
+        "surface": "no harm",
+        "lemma": "lo"
+      },
+      {
+        "surface": "will come near",
+        "lemma": "el"
+      },
+      {
         "surface": "you",
         "lemma": "nagash"
       }
     ],
     "8": [
+      {
+        "surface": "You will only",
+        "lemma": "raq"
+      },
       {
         "surface": "see it",
         "lemma": "navat"
@@ -190,6 +222,10 @@
       {
         "surface": "with your eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "and witness",
+        "lemma": "raah"
       },
       {
         "surface": "the punishment",
@@ -201,6 +237,14 @@
       }
     ],
     "9": [
+      {
+        "surface": "Because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
       {
         "surface": "have made",
         "lemma": "sum"
@@ -224,12 +268,24 @@
     ],
     "10": [
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
       {
         "surface": "will befall",
         "lemma": "anah"
+      },
+      {
+        "surface": "you",
+        "lemma": "el"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "plague",
@@ -246,6 +302,10 @@
     ],
     "11": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "He will command",
         "lemma": "tsavah"
       },
@@ -258,6 +318,10 @@
         "lemma": "shamar"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your ways",
         "lemma": "derekh"
       }
@@ -268,8 +332,16 @@
         "lemma": "nasa"
       },
       {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "their hands",
         "lemma": "kaph"
+      },
+      {
+        "surface": "so that you will not",
+        "lemma": "pen"
       },
       {
         "surface": "strike",
@@ -288,6 +360,10 @@
       {
         "surface": "You will tread",
         "lemma": "darakh"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the lion",
@@ -312,12 +388,20 @@
     ],
     "14": [
       {
+        "surface": "Because",
+        "lemma": "ki"
+      },
+      {
         "surface": "he loves",
         "lemma": "chashaq"
       },
       {
         "surface": "I will deliver him",
         "lemma": "palat"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "he knows",
@@ -334,8 +418,20 @@
     ],
     "15": [
       {
+        "surface": "When he calls out to Me",
+        "lemma": "qara"
+      },
+      {
         "surface": "I will answer him",
         "lemma": "un"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
+        "surface": "will be with him",
+        "lemma": "im"
       },
       {
         "surface": "in trouble",
@@ -364,14 +460,18 @@
         "lemma": "sava"
       },
       {
+        "surface": "and show him",
+        "lemma": "raah"
+      },
+      {
         "surface": "My salvation",
         "lemma": "yeshuah"
       }
     ]
   },
   "themeLemmas": [
-    "machaseh",
-    "elyon",
-    "dever"
+    "ki",
+    "lo",
+    "raah"
   ]
 }

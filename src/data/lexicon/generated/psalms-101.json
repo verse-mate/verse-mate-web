@@ -52,6 +52,14 @@
         "lemma": "matay"
       },
       {
+        "surface": "will You come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
         "surface": "I will walk",
         "lemma": "halakh"
       },
@@ -73,6 +81,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "I will",
+        "lemma": "lo"
+      },
       {
         "surface": "set",
         "lemma": "shit"
@@ -98,8 +110,16 @@
         "lemma": "sane"
       },
       {
+        "surface": "the work",
+        "lemma": "asah"
+      },
+      {
         "surface": "of those who fall away",
         "lemma": "set"
+      },
+      {
+        "surface": "it shall not",
+        "lemma": "lo"
       },
       {
         "surface": "cling",
@@ -120,8 +140,16 @@
         "lemma": "sur"
       },
       {
+        "surface": "from me",
+        "lemma": "min"
+      },
+      {
         "surface": "I will know",
         "lemma": "yada"
+      },
+      {
+        "surface": "nothing of",
+        "lemma": "lo"
       },
       {
         "surface": "evil",
@@ -140,6 +168,10 @@
       {
         "surface": "in secret",
         "lemma": "seter"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "et"
       },
       {
         "surface": "I will put to silence",
@@ -162,6 +194,10 @@
         "lemma": "levav"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "endure",
         "lemma": "yakhol"
       }
@@ -178,6 +214,14 @@
       {
         "surface": "of the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "that they may dwell",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "with me",
+        "lemma": "immad"
       },
       {
         "surface": "he who walks",
@@ -198,8 +242,20 @@
     ],
     "7": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
+        "surface": "one who practices",
+        "lemma": "asah"
+      },
+      {
         "surface": "deceit",
         "lemma": "remiyyah"
+      },
+      {
+        "surface": "shall dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "in",
@@ -208,6 +264,10 @@
       {
         "surface": "my house",
         "lemma": "bet"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "one who tells",
@@ -236,6 +296,10 @@
         "lemma": "tsamat"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the wicked",
         "lemma": "rasah"
       },
@@ -246,6 +310,10 @@
       {
         "surface": "that I may cut off",
         "lemma": "karat"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "evildoer",
@@ -262,8 +330,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "levav",
-    "tsamat",
-    "tamim"
+    "yashav"
   ]
 }

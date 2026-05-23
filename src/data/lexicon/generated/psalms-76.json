@@ -56,6 +56,10 @@
         "lemma": "sokh"
       },
       {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in Salem",
         "lemma": "shalem"
       },
@@ -100,6 +104,10 @@
     ],
     "4": [
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "are resplendent with light",
         "lemma": "or"
       },
@@ -132,6 +140,10 @@
       {
         "surface": "their last sleep",
         "lemma": "shenah"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       },
       {
         "surface": "men",
@@ -178,8 +190,20 @@
     ],
     "7": [
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
+        "surface": "alone",
+        "lemma": "attah"
+      },
+      {
         "surface": "are to be feared",
         "lemma": "yare"
+      },
+      {
+        "surface": "When",
+        "lemma": "az"
       },
       {
         "surface": "You are angry",
@@ -202,6 +226,10 @@
       {
         "surface": "From heaven",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "You pronounced",
+        "lemma": "shama"
       },
       {
         "surface": "judgment",
@@ -238,6 +266,10 @@
         "lemma": "yasah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the lowly",
         "lemma": "anav"
       },
@@ -251,6 +283,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Even",
+        "lemma": "ki"
+      },
       {
         "surface": "the wrath",
         "lemma": "chemah"
@@ -292,6 +328,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "let all",
+        "lemma": "kol"
       },
       {
         "surface": "the neighboring lands",
@@ -339,7 +379,7 @@
   },
   "themeLemmas": [
     "yare",
-    "selah",
-    "chemah"
+    "attah",
+    "selah"
   ]
 }

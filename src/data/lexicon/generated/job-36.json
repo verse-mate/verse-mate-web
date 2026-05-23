@@ -28,6 +28,10 @@
         "lemma": "chavah"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "there is more",
         "lemma": "od"
       },
@@ -54,6 +58,10 @@
         "lemma": "rachoq"
       },
       {
+        "surface": "and I will ascribe",
+        "lemma": "natan"
+      },
+      {
         "surface": "justice",
         "lemma": "tsedeq"
       },
@@ -64,12 +72,20 @@
     ],
     "4": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "truly",
         "lemma": "omnam"
       },
       {
         "surface": "my words",
         "lemma": "millah"
+      },
+      {
+        "surface": "are free of",
+        "lemma": "lo"
       },
       {
         "surface": "falsehood",
@@ -82,6 +98,10 @@
       {
         "surface": "in knowledge",
         "lemma": "deah"
+      },
+      {
+        "surface": "is with you",
+        "lemma": "im"
       }
     ],
     "5": [
@@ -102,6 +122,10 @@
         "lemma": "maas"
       },
       {
+        "surface": "no one",
+        "lemma": "lo"
+      },
+      {
         "surface": "He is mighty",
         "lemma": "kabbir"
       },
@@ -116,12 +140,20 @@
     ],
     "6": [
       {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "keep the wicked",
         "lemma": "rasah"
       },
       {
         "surface": "alive",
         "lemma": "chayah"
+      },
+      {
+        "surface": "but He grants",
+        "lemma": "natan"
       },
       {
         "surface": "justice",
@@ -133,6 +165,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "He does not",
+        "lemma": "lo"
+      },
       {
         "surface": "take",
         "lemma": "gara"
@@ -150,6 +186,10 @@
         "lemma": "kisse"
       },
       {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "kings",
         "lemma": "melekh"
       },
@@ -163,6 +203,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "And if",
+        "lemma": "im"
+      },
       {
         "surface": "men are bound",
         "lemma": "asar"
@@ -194,6 +238,10 @@
         "lemma": "poal"
       },
       {
+        "surface": "and how",
+        "lemma": "ki"
+      },
+      {
         "surface": "arrogantly",
         "lemma": "gavar"
       },
@@ -216,11 +264,31 @@
         "lemma": "musar"
       },
       {
+        "surface": "and commands",
+        "lemma": "amar"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from iniquity",
         "lemma": "aven"
       }
     ],
     "11": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "they obey",
+        "lemma": "shama"
+      },
       {
         "surface": "and serve Him",
         "lemma": "avad"
@@ -247,6 +315,18 @@
       }
     ],
     "12": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "obey",
+        "lemma": "shama"
+      },
       {
         "surface": "then they perish",
         "lemma": "avar"
@@ -286,8 +366,16 @@
         "lemma": "aph"
       },
       {
+        "surface": "even when",
+        "lemma": "ki"
+      },
+      {
         "surface": "He binds them",
         "lemma": "asar"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
       },
       {
         "surface": "cry for help",
@@ -340,6 +428,10 @@
     ],
     "16": [
       {
+        "surface": "Indeed",
+        "lemma": "aph"
+      },
+      {
         "surface": "He drew you",
         "lemma": "sut"
       },
@@ -350,6 +442,10 @@
       {
         "surface": "of distress",
         "lemma": "tsar"
+      },
+      {
+        "surface": "to a spacious",
+        "lemma": "lo"
       },
       {
         "surface": "and broad place",
@@ -400,12 +496,20 @@
         "lemma": "chemah"
       },
       {
+        "surface": "that no one",
+        "lemma": "pen"
+      },
+      {
         "surface": "lures",
         "lemma": "sut"
       },
       {
         "surface": "you with riches",
         "lemma": "sepheq"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "let a large",
@@ -426,6 +530,10 @@
         "lemma": "shua"
       },
       {
+        "surface": "or all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your mighty effort",
         "lemma": "maamats"
       },
@@ -434,11 +542,19 @@
         "lemma": "arakh"
       },
       {
+        "surface": "you from",
+        "lemma": "lo"
+      },
+      {
         "surface": "distress",
         "lemma": "tsar"
       }
     ],
     "20": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "long for",
         "lemma": "shaaph"
@@ -466,12 +582,28 @@
         "lemma": "shamar"
       },
       {
+        "surface": "not",
+        "lemma": "al"
+      },
+      {
         "surface": "to turn",
         "lemma": "panah"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "iniquity",
         "lemma": "aven"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
       },
       {
         "surface": "you have preferred",
@@ -506,6 +638,10 @@
       {
         "surface": "is a teacher",
         "lemma": "moreh"
+      },
+      {
+        "surface": "like Him",
+        "lemma": "kemo"
       }
     ],
     "23": [
@@ -522,8 +658,16 @@
         "lemma": "derekh"
       },
       {
+        "surface": "for Him",
+        "lemma": "al"
+      },
+      {
         "surface": "or",
         "lemma": "mi"
+      },
+      {
+        "surface": "told Him",
+        "lemma": "amar"
       },
       {
         "surface": "You have done",
@@ -548,6 +692,10 @@
         "lemma": "poal"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
         "surface": "men",
         "lemma": "enosh"
       },
@@ -557,6 +705,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "mankind",
         "lemma": "adam"
@@ -592,6 +744,10 @@
         "lemma": "saggi"
       },
       {
+        "surface": "beyond",
+        "lemma": "lo"
+      },
+      {
         "surface": "our knowledge",
         "lemma": "yada"
       },
@@ -602,9 +758,17 @@
       {
         "surface": "of His years",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "is unsearchable",
+        "lemma": "lo"
       }
     ],
     "27": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "He draws up",
         "lemma": "gara"
@@ -632,6 +796,10 @@
     ],
     "28": [
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
         "surface": "the clouds",
         "lemma": "shachaq"
       },
@@ -648,14 +816,26 @@
         "lemma": "rav"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "mankind",
         "lemma": "adam"
       }
     ],
     "29": [
       {
+        "surface": "Furthermore",
+        "lemma": "aph"
+      },
+      {
         "surface": "who can understand",
         "lemma": "bin"
+      },
+      {
+        "surface": "how the clouds",
+        "lemma": "av"
       },
       {
         "surface": "spread out",
@@ -684,6 +864,10 @@
         "lemma": "or"
       },
       {
+        "surface": "around Him",
+        "lemma": "al"
+      },
+      {
         "surface": "and covers",
         "lemma": "kasah"
       },
@@ -698,12 +882,20 @@
     ],
     "31": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "He judges",
         "lemma": "din"
       },
       {
         "surface": "the nations",
         "lemma": "am"
+      },
+      {
+        "surface": "and provides",
+        "lemma": "natan"
       },
       {
         "surface": "food",
@@ -732,6 +924,10 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "it",
+        "lemma": "al"
+      },
+      {
         "surface": "to strike its mark",
         "lemma": "paga"
       }
@@ -746,8 +942,16 @@
         "lemma": "nagad"
       },
       {
+        "surface": "His presence",
+        "lemma": "al"
+      },
+      {
         "surface": "even the cattle",
         "lemma": "miqneh"
+      },
+      {
+        "surface": "regard",
+        "lemma": "al"
       },
       {
         "surface": "the rising storm",
@@ -756,8 +960,8 @@
     ]
   },
   "themeLemmas": [
-    "hen",
-    "oni",
-    "mi"
+    "lo",
+    "al",
+    "ki"
   ]
 }

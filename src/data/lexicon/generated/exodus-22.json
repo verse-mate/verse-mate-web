@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -18,12 +22,20 @@
         "lemma": "shor"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "a sheep",
         "lemma": "seh"
       },
       {
         "surface": "and slaughters",
         "lemma": "tavach"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "sells it",
@@ -64,6 +76,10 @@
     ],
     "2": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "a thief",
         "lemma": "gannav"
       },
@@ -94,6 +110,10 @@
     ],
     "3": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "it happens after sunrise",
         "lemma": "zarach"
       },
@@ -104,6 +124,10 @@
       {
         "surface": "A thief must make full restitution",
         "lemma": "salem"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
       },
       {
         "surface": "he has nothing",
@@ -119,6 +143,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "If what was stolen",
+        "lemma": "im"
+      },
       {
         "surface": "is actually found",
         "lemma": "matsa"
@@ -136,8 +164,16 @@
         "lemma": "shor"
       },
       {
+        "surface": "or",
+        "lemma": "ad"
+      },
+      {
         "surface": "donkey",
         "lemma": "chamor"
+      },
+      {
+        "surface": "or",
+        "lemma": "ad"
       },
       {
         "surface": "sheep",
@@ -154,6 +190,10 @@
     ],
     "5": [
       {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -164,6 +204,10 @@
       {
         "surface": "in a field",
         "lemma": "saday"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "vineyard",
@@ -208,8 +252,16 @@
     ],
     "6": [
       {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "a fire",
         "lemma": "esh"
+      },
+      {
+        "surface": "breaks out",
+        "lemma": "yatsa"
       },
       {
         "surface": "and spreads",
@@ -228,8 +280,16 @@
         "lemma": "gadish"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "standing grain",
         "lemma": "qamah"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "the whole field",
@@ -250,8 +310,16 @@
     ],
     "7": [
       {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
+      },
+      {
+        "surface": "gives",
+        "lemma": "natan"
       },
       {
         "surface": "his neighbor",
@@ -260,6 +328,10 @@
       {
         "surface": "money",
         "lemma": "keseph"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "goods",
@@ -286,6 +358,10 @@
         "lemma": "gannav"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "caught",
         "lemma": "matsa"
       },
@@ -300,8 +376,16 @@
     ],
     "8": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "the thief",
         "lemma": "gannav"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
       },
       {
         "surface": "found",
@@ -320,8 +404,16 @@
         "lemma": "qarav"
       },
       {
+        "surface": "before",
+        "lemma": "el"
+      },
+      {
         "surface": "the judges",
         "lemma": "elohim"
+      },
+      {
+        "surface": "to determine whether",
+        "lemma": "im"
       },
       {
         "surface": "he has taken",
@@ -338,12 +430,24 @@
     ],
     "9": [
       {
+        "surface": "In",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "cases",
         "lemma": "davar"
       },
       {
         "surface": "of illegal possession",
         "lemma": "pesah"
+      },
+      {
+        "surface": "of",
+        "lemma": "al"
       },
       {
         "surface": "an ox",
@@ -362,16 +466,44 @@
         "lemma": "salmah"
       },
       {
+        "surface": "or any",
+        "lemma": "kol"
+      },
+      {
         "surface": "lost item",
         "lemma": "avedah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "someone claims",
+        "lemma": "amar"
+      },
+      {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "is mine",
+        "lemma": "hu"
       },
       {
         "surface": "both parties",
         "lemma": "shenayim"
       },
       {
+        "surface": "shall bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "their cases",
         "lemma": "davar"
+      },
+      {
+        "surface": "before",
+        "lemma": "ad"
       },
       {
         "surface": "the judges",
@@ -400,8 +532,16 @@
     ],
     "10": [
       {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
+      },
+      {
+        "surface": "gives",
+        "lemma": "natan"
       },
       {
         "surface": "a donkey",
@@ -414,6 +554,10 @@
       {
         "surface": "a sheep",
         "lemma": "seh"
+      },
+      {
+        "surface": "or any",
+        "lemma": "kol"
       },
       {
         "surface": "other animal",
@@ -432,8 +576,16 @@
         "lemma": "mut"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "is injured",
         "lemma": "shavar"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "stolen",
@@ -442,6 +594,10 @@
       {
         "surface": "while no",
         "lemma": "ayin"
+      },
+      {
+        "surface": "one is watching",
+        "lemma": "raah"
       }
     ],
     "11": [
@@ -454,12 +610,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "shall be made",
+        "lemma": "hayah"
+      },
+      {
         "surface": "between",
         "lemma": "bayin"
       },
       {
         "surface": "the parties",
         "lemma": "shenayim"
+      },
+      {
+        "surface": "to determine whether",
+        "lemma": "im"
+      },
+      {
+        "surface": "or not",
+        "lemma": "lo"
       },
       {
         "surface": "the man has taken",
@@ -482,11 +650,19 @@
         "lemma": "laqach"
       },
       {
+        "surface": "and require no",
+        "lemma": "lo"
+      },
+      {
         "surface": "restitution",
         "lemma": "salem"
       }
     ],
     "12": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "the animal was actually",
         "lemma": "ganav"
@@ -494,6 +670,10 @@
       {
         "surface": "stolen",
         "lemma": "ganav"
+      },
+      {
+        "surface": "from the neighbor",
+        "lemma": "im"
       },
       {
         "surface": "he must make restitution",
@@ -506,12 +686,24 @@
     ],
     "13": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "the animal was torn to pieces",
         "lemma": "taraph"
       },
       {
+        "surface": "he shall bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "it as evidence",
         "lemma": "ed"
+      },
+      {
+        "surface": "he need not",
+        "lemma": "lo"
       },
       {
         "surface": "make restitution",
@@ -524,6 +716,10 @@
     ],
     "14": [
       {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -532,12 +728,20 @@
         "lemma": "shaal"
       },
       {
+        "surface": "an animal",
+        "lemma": "im"
+      },
+      {
         "surface": "from his neighbor",
         "lemma": "rea"
       },
       {
         "surface": "and it is injured",
         "lemma": "shavar"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "dies",
@@ -552,18 +756,42 @@
         "lemma": "ayin"
       },
       {
+        "surface": "present",
+        "lemma": "im"
+      },
+      {
         "surface": "he must make full restitution",
         "lemma": "salem"
       }
     ],
     "15": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "the owner",
         "lemma": "baal"
       },
       {
+        "surface": "was present",
+        "lemma": "im"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "restitution is required",
         "lemma": "salem"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "the animal",
+        "lemma": "hu"
       },
       {
         "surface": "was rented",
@@ -575,6 +803,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "If",
+        "lemma": "ki"
+      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -588,12 +820,24 @@
         "lemma": "betulah"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "pledged in marriage",
         "lemma": "aras"
       },
       {
         "surface": "and sleeps",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "with her",
+        "lemma": "im"
       },
       {
         "surface": "he must pay the full dowry",
@@ -606,8 +850,20 @@
     ],
     "17": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "her father",
+        "lemma": "av"
+      },
+      {
         "surface": "absolutely refuses",
         "lemma": "maen"
+      },
+      {
+        "surface": "to give her",
+        "lemma": "natan"
       },
       {
         "surface": "the man still must pay",
@@ -628,6 +884,10 @@
     ],
     "18": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "allow a sorceress",
         "lemma": "kashaph"
       },
@@ -638,8 +898,16 @@
     ],
     "19": [
       {
+        "surface": "Whoever",
+        "lemma": "kol"
+      },
+      {
         "surface": "lies",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "an animal",
@@ -678,8 +946,16 @@
     ],
     "21": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "exploit",
         "lemma": "yanah"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "oppress",
@@ -688,6 +964,14 @@
       {
         "surface": "a foreign resident",
         "lemma": "ger"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you yourselves were",
+        "lemma": "hayah"
       },
       {
         "surface": "foreigners",
@@ -704,8 +988,16 @@
     ],
     "22": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "mistreat",
         "lemma": "anah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "widow",
@@ -718,6 +1010,10 @@
     ],
     "23": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "you do mistreat them",
         "lemma": "anah"
       },
@@ -726,8 +1022,16 @@
         "lemma": "tsaaq"
       },
       {
+        "surface": "to Me",
+        "lemma": "el"
+      },
+      {
         "surface": "in distress",
         "lemma": "tsaaq"
+      },
+      {
+        "surface": "I will surely hear",
+        "lemma": "shama"
       },
       {
         "surface": "their cry",
@@ -748,12 +1052,20 @@
         "lemma": "harag"
       },
       {
+        "surface": "you",
+        "lemma": "et"
+      },
+      {
         "surface": "with the sword",
         "lemma": "cherev"
       },
       {
         "surface": "then your wives",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "will become",
+        "lemma": "hayah"
       },
       {
         "surface": "widows",
@@ -770,6 +1082,10 @@
     ],
     "25": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "you lend",
         "lemma": "lavah"
       },
@@ -782,8 +1098,20 @@
         "lemma": "am"
       },
       {
+        "surface": "among you",
+        "lemma": "im"
+      },
+      {
         "surface": "who is poor",
         "lemma": "ani"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "act",
+        "lemma": "hayah"
       },
       {
         "surface": "as a creditor",
@@ -794,11 +1122,19 @@
         "lemma": "sum"
       },
       {
+        "surface": "him",
+        "lemma": "al"
+      },
+      {
         "surface": "interest",
         "lemma": "neshekh"
       }
     ],
     "26": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "you take your neighbor’s",
         "lemma": "rea"
@@ -810,9 +1146,29 @@
       {
         "surface": "as collateral",
         "lemma": "chaval"
+      },
+      {
+        "surface": "return it",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "by",
+        "lemma": "ad"
+      },
+      {
+        "surface": "sunset",
+        "lemma": "bo"
       }
     ],
     "27": [
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "his cloak",
+        "lemma": "hu"
+      },
       {
         "surface": "is the only",
         "lemma": "bad"
@@ -820,6 +1176,10 @@
       {
         "surface": "covering",
         "lemma": "kesut"
+      },
+      {
+        "surface": "he has",
+        "lemma": "hu"
       },
       {
         "surface": "for",
@@ -838,8 +1198,28 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "And if",
+        "lemma": "ki"
+      },
+      {
         "surface": "he cries out",
         "lemma": "tsaaq"
+      },
+      {
+        "surface": "to Me",
+        "lemma": "el"
+      },
+      {
+        "surface": "I will hear",
+        "lemma": "shama"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am compassionate",
@@ -847,6 +1227,10 @@
       }
     ],
     "28": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "blaspheme",
         "lemma": "qalal"
@@ -870,6 +1254,10 @@
     ],
     "29": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "hold back",
         "lemma": "achar"
       },
@@ -882,6 +1270,10 @@
         "lemma": "dema"
       },
       {
+        "surface": "You are to give",
+        "lemma": "natan"
+      },
+      {
         "surface": "the firstborn",
         "lemma": "bekhor"
       },
@@ -891,6 +1283,10 @@
       }
     ],
     "30": [
+      {
+        "surface": "You shall do",
+        "lemma": "asah"
+      },
       {
         "surface": "likewise",
         "lemma": "ken"
@@ -902,6 +1298,14 @@
       {
         "surface": "and your sheep",
         "lemma": "tson"
+      },
+      {
+        "surface": "Let them stay",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "their mothers",
@@ -922,9 +1326,17 @@
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "you are to give them",
+        "lemma": "natan"
       }
     ],
     "31": [
+      {
+        "surface": "You are to be",
+        "lemma": "hayah"
+      },
       {
         "surface": "holy",
         "lemma": "qodesh"
@@ -932,6 +1344,10 @@
       {
         "surface": "people",
         "lemma": "ish"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
       },
       {
         "surface": "eat",
@@ -954,14 +1370,18 @@
         "lemma": "shalakh"
       },
       {
+        "surface": "it",
+        "lemma": "et"
+      },
+      {
         "surface": "to the dogs",
         "lemma": "kelev"
       }
     ]
   },
   "themeLemmas": [
-    "salem",
-    "rea",
-    "shor"
+    "im",
+    "lo",
+    "ki"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -28,6 +32,10 @@
     ],
     "2": [
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to his mother",
         "lemma": "em"
       },
@@ -44,12 +52,28 @@
         "lemma": "keseph"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "were taken",
         "lemma": "laqach"
       },
       {
+        "surface": "and",
+        "lemma": "gam"
+      },
+      {
         "surface": "about which I heard",
         "lemma": "ozen"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "utter",
+        "lemma": "amar"
       },
       {
         "surface": "a curse",
@@ -64,12 +88,24 @@
         "lemma": "keseph"
       },
       {
+        "surface": "with me",
+        "lemma": "et"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "took it",
         "lemma": "laqach"
       },
       {
         "surface": "Then his mother",
         "lemma": "em"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Blessed be",
@@ -85,6 +121,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "And when he had returned",
+        "lemma": "shuv"
+      },
       {
         "surface": "the eleven",
         "lemma": "eleph"
@@ -106,6 +146,10 @@
         "lemma": "em"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "I wholly dedicate",
         "lemma": "qadash"
       },
@@ -122,6 +166,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "to make",
+        "lemma": "asah"
+      },
+      {
         "surface": "a graven image",
         "lemma": "pesel"
       },
@@ -132,9 +180,17 @@
       {
         "surface": "Therefore I will now",
         "lemma": "attah"
+      },
+      {
+        "surface": "return it",
+        "lemma": "shuv"
       }
     ],
     "4": [
+      {
+        "surface": "So he returned",
+        "lemma": "shuv"
+      },
       {
         "surface": "the silver",
         "lemma": "keseph"
@@ -160,8 +216,16 @@
         "lemma": "keseph"
       },
       {
+        "surface": "and gave them",
+        "lemma": "natan"
+      },
+      {
         "surface": "to a silversmith",
         "lemma": "tsaraph"
+      },
+      {
+        "surface": "who made them",
+        "lemma": "asah"
       },
       {
         "surface": "into a graven image",
@@ -170,6 +234,10 @@
       {
         "surface": "and a molten idol",
         "lemma": "massekhah"
+      },
+      {
+        "surface": "And they were placed",
+        "lemma": "hayah"
       },
       {
         "surface": "in the house",
@@ -194,6 +262,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "and he made",
+        "lemma": "asah"
+      },
+      {
         "surface": "an ephod",
         "lemma": "ephod"
       },
@@ -214,11 +286,19 @@
         "lemma": "ben"
       },
       {
+        "surface": "as",
+        "lemma": "hayah"
+      },
+      {
         "surface": "priest",
         "lemma": "kohen"
       }
     ],
     "6": [
+      {
+        "surface": "In those",
+        "lemma": "hemmah"
+      },
       {
         "surface": "days",
         "lemma": "yom"
@@ -240,6 +320,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "did what was",
+        "lemma": "asah"
+      },
+      {
         "surface": "right",
         "lemma": "yashar"
       },
@@ -249,6 +333,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "And there was",
+        "lemma": "hayah"
+      },
       {
         "surface": "a young",
         "lemma": "naar"
@@ -268,6 +356,10 @@
       {
         "surface": "in Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "who",
+        "lemma": "hu"
       },
       {
         "surface": "had been residing",
@@ -312,8 +404,24 @@
         "lemma": "gur"
       },
       {
+        "surface": "where",
+        "lemma": "asher"
+      },
+      {
         "surface": "he could find a place",
         "lemma": "matsa"
+      },
+      {
+        "surface": "And as he traveled",
+        "lemma": "asah"
+      },
+      {
+        "surface": "he came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "Micah’s",
@@ -338,8 +446,20 @@
         "lemma": "ayin"
       },
       {
+        "surface": "are you from",
+        "lemma": "bo"
+      },
+      {
         "surface": "Micah",
         "lemma": "mikhah"
+      },
+      {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
       },
       {
         "surface": "am a Levite",
@@ -358,6 +478,14 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "he replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "am on my way",
         "lemma": "halakh"
       },
@@ -366,18 +494,50 @@
         "lemma": "gur"
       },
       {
+        "surface": "wherever",
+        "lemma": "asher"
+      },
+      {
         "surface": "I can find a place",
         "lemma": "matsa"
       }
     ],
     "10": [
       {
+        "surface": "Stay",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "with me",
+        "lemma": "immad"
+      },
+      {
         "surface": "Micah",
         "lemma": "mikhah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "father",
+        "lemma": "av"
+      },
+      {
         "surface": "and priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "and I",
+        "lemma": "anokhi"
+      },
+      {
+        "surface": "will give",
+        "lemma": "natan"
       },
       {
         "surface": "ten shekels",
@@ -418,12 +578,24 @@
         "lemma": "yaal"
       },
       {
+        "surface": "to stay",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "him",
         "lemma": "ish"
       },
       {
         "surface": "and the young man",
         "lemma": "naar"
+      },
+      {
+        "surface": "became",
+        "lemma": "hayah"
       },
       {
         "surface": "like a",
@@ -452,8 +624,16 @@
         "lemma": "naar"
       },
       {
+        "surface": "became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "and lived",
+        "lemma": "hayah"
       },
       {
         "surface": "in his",
@@ -470,12 +650,20 @@
         "lemma": "mikhah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Now",
         "lemma": "attah"
       },
       {
         "surface": "I know",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -486,8 +674,16 @@
         "lemma": "yatav"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "a Levite",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "has become",
+        "lemma": "hayah"
       },
       {
         "surface": "priest",
@@ -496,8 +692,8 @@
     ]
   },
   "themeLemmas": [
-    "mikhah",
-    "keseph",
-    "betlechem"
+    "hayah",
+    "amar",
+    "mikhah"
   ]
 }

@@ -18,6 +18,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "have walked",
         "lemma": "halakh"
       },
@@ -32,6 +40,10 @@
       {
         "surface": "in the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "wavering",
@@ -66,6 +78,10 @@
     ],
     "3": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       },
@@ -88,12 +104,36 @@
     ],
     "4": [
       {
+        "surface": "I do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "sit",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "deceitful",
         "lemma": "shav"
       },
       {
         "surface": "men",
         "lemma": "mat"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
+      },
+      {
+        "surface": "keep company",
+        "lemma": "bo"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "hypocrites",
@@ -112,6 +152,18 @@
       {
         "surface": "of evildoers",
         "lemma": "raa"
+      },
+      {
+        "surface": "and refuse",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to sit",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "the wicked",
@@ -146,6 +198,10 @@
     ],
     "7": [
       {
+        "surface": "to raise",
+        "lemma": "shama"
+      },
+      {
         "surface": "my voice",
         "lemma": "qol"
       },
@@ -156,6 +212,10 @@
       {
         "surface": "and declare",
         "lemma": "saphar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "Your wonderful works",
@@ -194,6 +254,10 @@
     ],
     "9": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "take",
         "lemma": "asaph"
       },
@@ -202,12 +266,20 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "away with",
+        "lemma": "im"
+      },
+      {
         "surface": "sinners",
         "lemma": "chatta"
       },
       {
         "surface": "or my life",
         "lemma": "chay"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "men",
@@ -219,6 +291,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "in whose",
+        "lemma": "asher"
+      },
       {
         "surface": "hands",
         "lemma": "yad"
@@ -241,6 +317,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "But I",
+        "lemma": "ani"
+      },
       {
         "surface": "will walk",
         "lemma": "halakh"
@@ -286,7 +366,8 @@
     ]
   },
   "themeLemmas": [
-    "halakh",
-    "tom"
+    "im",
+    "lo",
+    "halakh"
   ]
 }

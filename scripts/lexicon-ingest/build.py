@@ -129,25 +129,30 @@ POS_MAP: dict[str, str] = {
 # reward a lexical popup. We keep nouns, verbs, adjectives, adverbs, and
 # proper nouns (names like Paul, Christ, Jerusalem).
 # Same logic applies to Hebrew (H:) and Aramaic (A:) entries.
-SKIP_POS_PREFIXES: tuple[str, ...] = (
-    'G:Conj', 'G:CONJ',
-    'G:Prep', 'G:PREP',
-    'G:Art', 'G:ART', 'G:T',
-    'G:Pron', 'G:PRON', 'G:P', 'G:X', 'G:R', 'G:Q', 'G:D', 'G:F',
-    'G:Part', 'G:PART', 'G:PRT',
-    'G:INJ',
-    'G:Num',
-    # Hebrew / Aramaic equivalents — TBESH uses H: prefix, Aramaic A:
-    'H:Conj', 'H:Prep', 'H:Art', 'H:Pron', 'H:Part', 'H:PRT', 'H:INJ', 'H:Num',
-    'H:T', 'H:P', 'H:X', 'H:R', 'H:Q', 'H:D', 'H:F',
-    'A:Conj', 'A:Prep', 'A:Art', 'A:Pron', 'A:Part', 'A:PRT', 'A:INJ', 'A:Num',
-)
+#
+# DISABLED 2026-05-23 to match Strong's full coverage. The historical
+# stopword list is preserved below as a comment so it's easy to re-enable
+# (move entries back into the tuple) if reading clutter becomes a problem.
+#
+# Previous skip list (commented out):
+#   'G:Conj', 'G:CONJ', 'G:Prep', 'G:PREP',
+#   'G:Art', 'G:ART', 'G:T',
+#   'G:Pron', 'G:PRON', 'G:P', 'G:X', 'G:R', 'G:Q', 'G:D', 'G:F',
+#   'G:Part', 'G:PART', 'G:PRT', 'G:INJ', 'G:Num',
+#   'H:Conj', 'H:Prep', 'H:Art', 'H:Pron', 'H:Part', 'H:PRT', 'H:INJ', 'H:Num',
+#   'H:T', 'H:P', 'H:X', 'H:R', 'H:Q', 'H:D', 'H:F',
+#   'A:Conj', 'A:Prep', 'A:Art', 'A:Pron', 'A:Part', 'A:PRT', 'A:INJ', 'A:Num',
+SKIP_POS_PREFIXES: tuple[str, ...] = ()
 
 # Content-word lemmas so common they aren't worth a per-occurrence tap.
 # Mostly the auxiliary / generic verbs of being, having, doing, saying that
 # carry no theological freight on their own. Add sparingly — over-filtering
 # strips real lemmas from the reading experience.
-SKIP_LEMMA_SLUGS: frozenset[str] = frozenset({
+#
+# DISABLED 2026-05-23 to match Strong's full coverage. The historical
+# entries are preserved in the literal below (commented) so they can be
+# re-enabled by moving any back inside the frozenset.
+_HISTORICAL_LEMMA_STOPWORDS = frozenset({
     # ─── Greek / NT ───
     # Auxiliary / generic verbs of being-having-doing-saying-perceiving
     'eimi',     # εἰμί — to be (~2,460× NT)
@@ -209,6 +214,10 @@ SKIP_LEMMA_SLUGS: frozenset[str] = frozenset({
     'yashav',   # יָשַׁב — to sit/dwell (~1,088× OT)
     'kol',      # כֹּל — all/every (~5,400× OT)
 })
+
+# Active skip list — currently empty (full Strong's coverage mode).
+# Add slugs back from _HISTORICAL_LEMMA_STOPWORDS to re-enable filtering.
+SKIP_LEMMA_SLUGS: frozenset[str] = frozenset()
 
 
 def is_content_pos(pos_code: str) -> bool:

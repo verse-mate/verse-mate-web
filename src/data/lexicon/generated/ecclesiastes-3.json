@@ -6,8 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "To everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "there is a season",
         "lemma": "zeman"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
+      },
+      {
+        "surface": "for every",
+        "lemma": "kol"
       },
       {
         "surface": "purpose",
@@ -24,16 +36,32 @@
     ],
     "2": [
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to be born",
         "lemma": "yalad"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "to die",
         "lemma": "mut"
       },
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to plant",
         "lemma": "nata"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "to uproot",
@@ -42,16 +70,32 @@
     ],
     "3": [
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to kill",
         "lemma": "harag"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "to heal",
         "lemma": "rapah"
       },
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to break down",
         "lemma": "parats"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "to build",
@@ -60,16 +104,32 @@
     ],
     "4": [
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to weep",
         "lemma": "bakhah"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "to laugh",
         "lemma": "sachaq"
       },
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to mourn",
         "lemma": "saphad"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "to dance",
@@ -78,12 +138,20 @@
     ],
     "5": [
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to cast away",
         "lemma": "shalakh"
       },
       {
         "surface": "stones",
         "lemma": "even"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "to gather",
@@ -94,8 +162,16 @@
         "lemma": "even"
       },
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to embrace",
         "lemma": "chavaq"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "to refrain",
@@ -108,16 +184,32 @@
     ],
     "6": [
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to search",
         "lemma": "baqash"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "to count as lost",
         "lemma": "avad"
       },
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to keep",
         "lemma": "shamar"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "to discard",
@@ -126,12 +218,32 @@
     ],
     "7": [
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
+        "surface": "to tear",
+        "lemma": "qara"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to mend",
         "lemma": "taphar"
       },
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to be silent",
         "lemma": "chashah"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "to speak",
@@ -140,16 +252,32 @@
     ],
     "8": [
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "to love",
         "lemma": "ahav"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "to hate",
         "lemma": "sane"
       },
       {
+        "surface": "a time",
+        "lemma": "et"
+      },
+      {
         "surface": "for war",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "and a time",
+        "lemma": "et"
       },
       {
         "surface": "for peace",
@@ -162,8 +290,16 @@
         "lemma": "mah"
       },
       {
+        "surface": "does the worker",
+        "lemma": "asah"
+      },
+      {
         "surface": "gain",
         "lemma": "yitron"
+      },
+      {
+        "surface": "from his",
+        "lemma": "hu"
       },
       {
         "surface": "toil",
@@ -172,12 +308,24 @@
     ],
     "10": [
       {
+        "surface": "I have seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "the burden",
         "lemma": "inyan"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "has laid",
+        "lemma": "natan"
       },
       {
         "surface": "upon the sons",
@@ -194,8 +342,28 @@
     ],
     "11": [
       {
+        "surface": "He has made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "beautiful",
         "lemma": "yapheh"
+      },
+      {
+        "surface": "in its time",
+        "lemma": "et"
+      },
+      {
+        "surface": "He has also",
+        "lemma": "gam"
+      },
+      {
+        "surface": "set",
+        "lemma": "natan"
       },
       {
         "surface": "eternity",
@@ -214,6 +382,10 @@
         "lemma": "adam"
       },
       {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "fathom",
         "lemma": "matsa"
       },
@@ -222,12 +394,24 @@
         "lemma": "maaseh"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
       {
+        "surface": "has done",
+        "lemma": "asah"
+      },
+      {
         "surface": "from beginning",
         "lemma": "rosh"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "end",
@@ -240,6 +424,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "there is nothing",
         "lemma": "ayin"
       },
@@ -248,8 +436,16 @@
         "lemma": "tov"
       },
       {
+        "surface": "than",
+        "lemma": "ki"
+      },
+      {
         "surface": "to rejoice",
         "lemma": "samach"
+      },
+      {
+        "surface": "and do",
+        "lemma": "asah"
       },
       {
         "surface": "good",
@@ -261,6 +457,14 @@
       }
     ],
     "13": [
+      {
+        "surface": "and also",
+        "lemma": "gam"
+      },
+      {
+        "surface": "that every",
+        "lemma": "kol"
+      },
       {
         "surface": "man",
         "lemma": "adam"
@@ -274,12 +478,24 @@
         "lemma": "shatah"
       },
       {
+        "surface": "and find",
+        "lemma": "raah"
+      },
+      {
         "surface": "satisfaction",
         "lemma": "tov"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his labor",
         "lemma": "amal"
+      },
+      {
+        "surface": "this is",
+        "lemma": "hu"
       },
       {
         "surface": "the gift",
@@ -296,8 +512,24 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "does",
+        "lemma": "asah"
+      },
+      {
+        "surface": "endures forever",
+        "lemma": "hayah"
       },
       {
         "surface": "nothing",
@@ -308,12 +540,24 @@
         "lemma": "yasaph"
       },
       {
+        "surface": "to it",
+        "lemma": "al"
+      },
+      {
         "surface": "or taken",
         "lemma": "gara"
       },
       {
+        "surface": "from it",
+        "lemma": "min"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "does it",
+        "lemma": "asah"
       },
       {
         "surface": "so that they should fear",
@@ -334,8 +578,24 @@
         "lemma": "kevar"
       },
       {
+        "surface": "been",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "and what",
+        "lemma": "asher"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "has already",
         "lemma": "kevar"
+      },
+      {
+        "surface": "been",
+        "lemma": "hayah"
       },
       {
         "surface": "for God",
@@ -354,6 +614,10 @@
       {
         "surface": "Furthermore",
         "lemma": "od"
+      },
+      {
+        "surface": "I saw",
+        "lemma": "raah"
       },
       {
         "surface": "under",
@@ -398,6 +662,14 @@
     ],
     "17": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "in my heart",
         "lemma": "lev"
       },
@@ -414,12 +686,32 @@
         "lemma": "tsaddiq"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "the wicked",
         "lemma": "rasah"
       },
       {
+        "surface": "since",
+        "lemma": "ki"
+      },
+      {
+        "surface": "there is a time",
+        "lemma": "et"
+      },
+      {
+        "surface": "for every",
+        "lemma": "kol"
+      },
+      {
         "surface": "activity",
         "lemma": "chephets"
+      },
+      {
+        "surface": "and every",
+        "lemma": "kol"
       },
       {
         "surface": "deed",
@@ -428,8 +720,20 @@
     ],
     "18": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to myself",
         "lemma": "lev"
+      },
+      {
+        "surface": "As for",
+        "lemma": "al"
       },
       {
         "surface": "the sons",
@@ -448,11 +752,27 @@
         "lemma": "barar"
       },
       {
+        "surface": "so that they may see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "for themselves",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "that they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "are but beasts",
         "lemma": "behemah"
       }
     ],
     "19": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the fates",
         "lemma": "miqreh"
@@ -478,6 +798,10 @@
         "lemma": "echad"
       },
       {
+        "surface": "As one",
+        "lemma": "zeh"
+      },
+      {
         "surface": "dies",
         "lemma": "mavet"
       },
@@ -488,6 +812,14 @@
       {
         "surface": "dies",
         "lemma": "mavet"
+      },
+      {
+        "surface": "the other",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "they all",
+        "lemma": "kol"
       },
       {
         "surface": "have the same",
@@ -510,8 +842,20 @@
         "lemma": "motar"
       },
       {
+        "surface": "over",
+        "lemma": "min"
+      },
+      {
         "surface": "the animals",
         "lemma": "behemah"
+      },
+      {
+        "surface": "since",
+        "lemma": "ki"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "is futile",
@@ -520,8 +864,16 @@
     ],
     "20": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "one",
@@ -532,8 +884,32 @@
         "lemma": "maqom"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "come",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "dust",
         "lemma": "aphar"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "dust",
@@ -584,6 +960,14 @@
     ],
     "22": [
       {
+        "surface": "I have seen",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "there is nothing",
         "lemma": "ayin"
       },
@@ -596,6 +980,10 @@
         "lemma": "adam"
       },
       {
+        "surface": "than",
+        "lemma": "asher"
+      },
+      {
         "surface": "to enjoy",
         "lemma": "samach"
       },
@@ -604,16 +992,40 @@
         "lemma": "maaseh"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "that",
+        "lemma": "hu"
+      },
+      {
         "surface": "is his lot",
         "lemma": "cheleq"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "who",
         "lemma": "mi"
       },
       {
+        "surface": "can bring him",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
+      },
+      {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "will come",
+        "lemma": "hayah"
       },
       {
         "surface": "after him",
@@ -622,8 +1034,8 @@
     ]
   },
   "themeLemmas": [
-    "adam",
-    "tov",
-    "behemah"
+    "et",
+    "kol",
+    "ki"
   ]
 }

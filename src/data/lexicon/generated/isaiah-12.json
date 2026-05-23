@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "In that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "you will say",
+        "lemma": "amar"
       },
       {
         "surface": "O LORD",
@@ -18,12 +26,20 @@
         "lemma": "yadah"
       },
       {
+        "surface": "Although",
+        "lemma": "ki"
+      },
+      {
         "surface": "You were angry",
         "lemma": "anaph"
       },
       {
         "surface": "Your anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "has turned away",
+        "lemma": "shuv"
       },
       {
         "surface": "and You have comforted me",
@@ -48,8 +64,16 @@
         "lemma": "batach"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be afraid",
         "lemma": "pachad"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -66,6 +90,10 @@
       {
         "surface": "and my song",
         "lemma": "zimrat"
+      },
+      {
+        "surface": "and He also has become",
+        "lemma": "hayah"
       },
       {
         "surface": "salvation",
@@ -96,8 +124,16 @@
     ],
     "4": [
       {
+        "surface": "and on that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "you will say",
+        "lemma": "amar"
       },
       {
         "surface": "Give praise",
@@ -106,6 +142,10 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "proclaim",
+        "lemma": "qara"
       },
       {
         "surface": "His name",
@@ -128,6 +168,10 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "His name",
         "lemma": "shem"
       },
@@ -146,12 +190,28 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "He has done",
+        "lemma": "asah"
+      },
+      {
         "surface": "glorious things",
         "lemma": "geut"
       },
       {
+        "surface": "Let this",
+        "lemma": "zot"
+      },
+      {
         "surface": "be known",
         "lemma": "yada"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -168,8 +228,16 @@
         "lemma": "run"
       },
       {
+        "surface": "O citizen",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Zion",
         "lemma": "tsiyyon"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "great",
@@ -190,8 +258,8 @@
     ]
   },
   "themeLemmas": [
+    "ki",
     "yeshuah",
-    "yadah",
-    "yada"
+    "yadah"
   ]
 }

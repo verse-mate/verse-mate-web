@@ -52,6 +52,10 @@
     ],
     "2": [
       {
+        "surface": "You have granted",
+        "lemma": "natan"
+      },
+      {
         "surface": "heart’s",
         "lemma": "lev"
       },
@@ -81,6 +85,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "You welcomed him",
         "lemma": "qadam"
@@ -120,6 +128,10 @@
         "lemma": "chay"
       },
       {
+        "surface": "and You granted it",
+        "lemma": "natan"
+      },
+      {
         "surface": "length",
         "lemma": "orekh"
       },
@@ -154,6 +166,10 @@
         "lemma": "shavah"
       },
       {
+        "surface": "on him",
+        "lemma": "al"
+      },
+      {
         "surface": "splendor",
         "lemma": "hod"
       },
@@ -163,6 +179,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "You grant him",
         "lemma": "shit"
@@ -180,11 +200,19 @@
         "lemma": "simchah"
       },
       {
+        "surface": "in",
+        "lemma": "et"
+      },
+      {
         "surface": "Your presence",
         "lemma": "paneh"
       }
     ],
     "7": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the king",
         "lemma": "melekh"
@@ -224,6 +252,10 @@
         "lemma": "matsa"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Your enemies",
         "lemma": "oyev"
       },
@@ -252,6 +284,10 @@
       {
         "surface": "furnace",
         "lemma": "tannur"
+      },
+      {
+        "surface": "at the time",
+        "lemma": "et"
       },
       {
         "surface": "of Your appearing",
@@ -306,8 +342,16 @@
     ],
     "11": [
       {
+        "surface": "Though",
+        "lemma": "ki"
+      },
+      {
         "surface": "they intend",
         "lemma": "natah"
+      },
+      {
+        "surface": "You",
+        "lemma": "al"
       },
       {
         "surface": "harm",
@@ -332,6 +376,10 @@
     ],
     "12": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "You will put them to flight",
         "lemma": "shit"
       },
@@ -342,6 +390,10 @@
       {
         "surface": "is trained",
         "lemma": "kun"
+      },
+      {
+        "surface": "upon",
+        "lemma": "al"
       },
       {
         "surface": "them",
@@ -376,8 +428,8 @@
     ]
   },
   "themeLemmas": [
+    "ki",
     "shit",
-    "paneh",
-    "bal"
+    "paneh"
   ]
 }

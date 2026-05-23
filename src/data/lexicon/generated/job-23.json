@@ -16,6 +16,10 @@
     ],
     "2": [
       {
+        "surface": "Even",
+        "lemma": "gam"
+      },
+      {
         "surface": "today",
         "lemma": "yom"
       },
@@ -36,6 +40,10 @@
         "lemma": "kavad"
       },
       {
+        "surface": "despite",
+        "lemma": "al"
+      },
+      {
         "surface": "my groaning",
         "lemma": "anachah"
       }
@@ -52,6 +60,14 @@
       {
         "surface": "where to find Him",
         "lemma": "matsa"
+      },
+      {
+        "surface": "so that I could go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "His seat",
@@ -104,6 +120,10 @@
       {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "He would say",
+        "lemma": "amar"
       }
     ],
     "6": [
@@ -112,12 +132,24 @@
         "lemma": "riv"
       },
       {
+        "surface": "with me",
+        "lemma": "immad"
+      },
+      {
         "surface": "in His great",
         "lemma": "rov"
       },
       {
         "surface": "power",
         "lemma": "koach"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
       },
       {
         "surface": "would certainly",
@@ -140,6 +172,10 @@
       {
         "surface": "could reason",
         "lemma": "yakhach"
+      },
+      {
+        "surface": "with Him",
+        "lemma": "im"
       },
       {
         "surface": "and I would be delivered",
@@ -176,14 +212,26 @@
         "lemma": "achor"
       },
       {
+        "surface": "I cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "find",
         "lemma": "bin"
       }
     ],
     "9": [
       {
+        "surface": "When He is at work",
+        "lemma": "asah"
+      },
+      {
         "surface": "in the north",
         "lemma": "semol"
+      },
+      {
+        "surface": "I cannot",
+        "lemma": "lo"
       },
       {
         "surface": "behold Him",
@@ -196,9 +244,21 @@
       {
         "surface": "to the south",
         "lemma": "yamin"
+      },
+      {
+        "surface": "I cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see Him",
+        "lemma": "raah"
       }
     ],
     "10": [
+      {
+        "surface": "Yet",
+        "lemma": "ki"
+      },
       {
         "surface": "He knows",
         "lemma": "yada"
@@ -210,6 +270,10 @@
       {
         "surface": "when He has tested me",
         "lemma": "bachan"
+      },
+      {
+        "surface": "I will come forth",
+        "lemma": "yatsa"
       },
       {
         "surface": "as gold",
@@ -238,11 +302,19 @@
         "lemma": "derekh"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "turning aside",
         "lemma": "natah"
       }
     ],
     "12": [
+      {
+        "surface": "I have not",
+        "lemma": "lo"
+      },
       {
         "surface": "departed",
         "lemma": "mush"
@@ -274,8 +346,20 @@
     ],
     "13": [
       {
+        "surface": "But He is unchangeable",
+        "lemma": "hu"
+      },
+      {
         "surface": "and who",
         "lemma": "mi"
+      },
+      {
+        "surface": "can oppose Him",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "He does",
+        "lemma": "asah"
       },
       {
         "surface": "what He",
@@ -288,6 +372,10 @@
     ],
     "14": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "He carries out",
         "lemma": "salem"
       },
@@ -296,11 +384,19 @@
         "lemma": "choq"
       },
       {
+        "surface": "and He has",
+        "lemma": "im"
+      },
+      {
         "surface": "many",
         "lemma": "rav"
       }
     ],
     "15": [
+      {
+        "surface": "Therefore",
+        "lemma": "al"
+      },
       {
         "surface": "I am terrified",
         "lemma": "bahal"
@@ -316,6 +412,10 @@
       {
         "surface": "I fear",
         "lemma": "pachad"
+      },
+      {
+        "surface": "Him",
+        "lemma": "min"
       }
     ],
     "16": [
@@ -341,6 +441,14 @@
       }
     ],
     "17": [
+      {
+        "surface": "Yet",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I am not",
+        "lemma": "lo"
+      },
       {
         "surface": "silenced",
         "lemma": "tsamat"
@@ -368,8 +476,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "paneh",
-    "yada",
-    "bin"
+    "yada"
   ]
 }

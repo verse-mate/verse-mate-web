@@ -42,6 +42,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "at all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "times",
+        "lemma": "et"
+      },
+      {
         "surface": "His praise",
         "lemma": "tehillah"
       },
@@ -72,6 +80,10 @@
         "lemma": "anav"
       },
       {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "and rejoice",
         "lemma": "samach"
       }
@@ -84,6 +96,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "with me",
+        "lemma": "et"
       },
       {
         "surface": "let us exalt",
@@ -116,6 +132,10 @@
         "lemma": "natsal"
       },
       {
+        "surface": "from all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my fears",
         "lemma": "megorah"
       }
@@ -126,6 +146,10 @@
         "lemma": "navat"
       },
       {
+        "surface": "to Him",
+        "lemma": "el"
+      },
+      {
         "surface": "are radiant with joy",
         "lemma": "nahar"
       },
@@ -134,22 +158,42 @@
         "lemma": "paneh"
       },
       {
+        "surface": "shall never",
+        "lemma": "al"
+      },
+      {
         "surface": "be ashamed",
         "lemma": "chapher"
       }
     ],
     "6": [
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
         "surface": "poor",
         "lemma": "ani"
+      },
+      {
+        "surface": "man called out",
+        "lemma": "qara"
       },
       {
         "surface": "and the LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "heard him",
+        "lemma": "shama"
+      },
+      {
         "surface": "He saved him",
         "lemma": "yasah"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
       },
       {
         "surface": "his troubles",
@@ -188,6 +232,14 @@
         "lemma": "taam"
       },
       {
+        "surface": "and see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -220,6 +272,10 @@
       {
         "surface": "you His saints",
         "lemma": "qadosh"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "those who fear Him",
@@ -260,6 +316,10 @@
         "lemma": "chaser"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "good thing",
         "lemma": "tov"
       }
@@ -272,6 +332,10 @@
       {
         "surface": "children",
         "lemma": "ben"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
       },
       {
         "surface": "I will teach",
@@ -306,6 +370,10 @@
       {
         "surface": "who desires",
         "lemma": "ahav"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
       },
       {
         "surface": "good",
@@ -352,6 +420,10 @@
         "lemma": "ra"
       },
       {
+        "surface": "and do",
+        "lemma": "asah"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
       },
@@ -378,12 +450,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "are on",
+        "lemma": "el"
+      },
+      {
         "surface": "the righteous",
         "lemma": "tsaddiq"
       },
       {
         "surface": "and His ears",
         "lemma": "ozen"
+      },
+      {
+        "surface": "are inclined",
+        "lemma": "el"
       },
       {
         "surface": "to their cry",
@@ -398,6 +478,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "is against",
+        "lemma": "asah"
       },
       {
         "surface": "those who do evil",
@@ -426,8 +510,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "hears",
+        "lemma": "shama"
+      },
+      {
         "surface": "He delivers them",
         "lemma": "natsal"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
       },
       {
         "surface": "their troubles",
@@ -480,6 +572,10 @@
       {
         "surface": "delivers him",
         "lemma": "natsal"
+      },
+      {
+        "surface": "from them all",
+        "lemma": "kol"
       }
     ],
     "20": [
@@ -488,8 +584,16 @@
         "lemma": "shamar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his bones",
         "lemma": "etsem"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "one",
@@ -540,6 +644,14 @@
         "lemma": "eved"
       },
       {
+        "surface": "and",
+        "lemma": "kol"
+      },
+      {
+        "surface": "none",
+        "lemma": "lo"
+      },
+      {
         "surface": "who take refuge",
         "lemma": "chasah"
       },
@@ -550,8 +662,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "ra",
-    "tov",
-    "yare"
+    "tov"
   ]
 }

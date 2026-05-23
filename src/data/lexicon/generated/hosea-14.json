@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "Return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "O Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "the LORD",
@@ -16,6 +24,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "you have stumbled",
@@ -32,16 +44,40 @@
         "lemma": "laqach"
       },
       {
+        "surface": "your",
+        "lemma": "im"
+      },
+      {
         "surface": "confessions",
         "lemma": "davar"
+      },
+      {
+        "surface": "and return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "Say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to Him",
+        "lemma": "el"
+      },
+      {
         "surface": "Take away",
         "lemma": "nasa"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "our iniquity",
@@ -74,16 +110,36 @@
         "lemma": "ashshur"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "save us",
         "lemma": "yasah"
+      },
+      {
+        "surface": "nor will we",
+        "lemma": "lo"
       },
       {
         "surface": "ride",
         "lemma": "rakhav"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "horses",
         "lemma": "sus"
+      },
+      {
+        "surface": "We will never again",
+        "lemma": "lo"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Our gods",
@@ -96,6 +152,10 @@
       {
         "surface": "of our own hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "For",
+        "lemma": "asher"
       },
       {
         "surface": "the fatherless",
@@ -124,11 +184,27 @@
         "lemma": "ahav"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "My anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "has turned away",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "from them",
+        "lemma": "min"
       }
     ],
     "5": [
+      {
+        "surface": "I will be",
+        "lemma": "hayah"
+      },
       {
         "surface": "like the dew",
         "lemma": "tal"
@@ -172,6 +248,10 @@
         "lemma": "hod"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like the olive tree",
         "lemma": "zayit"
       },
@@ -185,6 +265,14 @@
       }
     ],
     "7": [
+      {
+        "surface": "They will return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and dwell",
+        "lemma": "yashav"
+      },
       {
         "surface": "in his shade",
         "lemma": "tsel"
@@ -236,12 +324,20 @@
         "lemma": "atsav"
       },
       {
+        "surface": "It is I",
+        "lemma": "ani"
+      },
+      {
         "surface": "who answer",
         "lemma": "un"
       },
       {
         "surface": "and watch over him",
         "lemma": "shur"
+      },
+      {
+        "surface": "I am like",
+        "lemma": "ani"
       },
       {
         "surface": "a flourishing",
@@ -258,6 +354,10 @@
       {
         "surface": "comes",
         "lemma": "matsa"
+      },
+      {
+        "surface": "from Me",
+        "lemma": "min"
       }
     ],
     "9": [
@@ -274,12 +374,20 @@
         "lemma": "bin"
       },
       {
+        "surface": "these things",
+        "lemma": "elleh"
+      },
+      {
         "surface": "whoever is discerning",
         "lemma": "bin"
       },
       {
         "surface": "let him know them",
         "lemma": "yada"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "the ways",
@@ -312,8 +420,8 @@
     ]
   },
   "themeLemmas": [
-    "levanon",
-    "yisrael",
-    "parach"
+    "shuv",
+    "lo",
+    "levanon"
   ]
 }

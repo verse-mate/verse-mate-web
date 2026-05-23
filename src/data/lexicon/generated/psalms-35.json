@@ -66,12 +66,24 @@
         "lemma": "sagar"
       },
       {
+        "surface": "against",
+        "lemma": "qara"
+      },
+      {
         "surface": "my pursuers",
         "lemma": "radaph"
       },
       {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to my soul",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "I am",
+        "lemma": "ani"
       },
       {
         "surface": "your salvation",
@@ -114,6 +126,10 @@
     ],
     "5": [
       {
+        "surface": "May they be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like chaff",
         "lemma": "mots"
       },
@@ -144,6 +160,10 @@
         "lemma": "derekh"
       },
       {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "dark",
         "lemma": "choshekh"
       },
@@ -165,6 +185,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "without cause",
         "lemma": "chinnam"
@@ -198,6 +222,14 @@
       {
         "surface": "May ruin",
         "lemma": "sho"
+      },
+      {
+        "surface": "befall them",
+        "lemma": "bo"
+      },
+      {
+        "surface": "by surprise",
+        "lemma": "lo"
       },
       {
         "surface": "may the net",
@@ -244,12 +276,24 @@
     ],
     "10": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "my bones",
         "lemma": "etsem"
       },
       {
+        "surface": "will exclaim",
+        "lemma": "amar"
+      },
+      {
         "surface": "Who",
         "lemma": "mi"
+      },
+      {
+        "surface": "is like You",
+        "lemma": "kemo"
       },
       {
         "surface": "O LORD",
@@ -262,6 +306,10 @@
       {
         "surface": "the afflicted",
         "lemma": "ani"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the aggressor",
@@ -300,6 +348,10 @@
       {
         "surface": "I know",
         "lemma": "yada"
+      },
+      {
+        "surface": "nothing {about",
+        "lemma": "lo"
       }
     ],
     "12": [
@@ -330,6 +382,10 @@
     ],
     "13": [
       {
+        "surface": "Yet",
+        "lemma": "ani"
+      },
+      {
         "surface": "when they were ill",
         "lemma": "chalah"
       },
@@ -356,6 +412,14 @@
       {
         "surface": "but my prayers",
         "lemma": "tephillah"
+      },
+      {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "unanswered",
+        "lemma": "al"
       }
     ],
     "14": [
@@ -406,12 +470,28 @@
         "lemma": "asaph"
       },
       {
+        "surface": "against me",
+        "lemma": "al"
+      },
+      {
         "surface": "Assailants",
         "lemma": "nekheh"
       },
       {
+        "surface": "I did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
+      },
+      {
+        "surface": "slandered me",
+        "lemma": "qara"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "ceasing",
@@ -438,6 +518,10 @@
       {
         "surface": "their teeth",
         "lemma": "shen"
+      },
+      {
+        "surface": "at me",
+        "lemma": "al"
       }
     ],
     "17": [
@@ -448,6 +532,14 @@
       {
         "surface": "O Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "will You look on",
+        "lemma": "raah"
+      },
+      {
+        "surface": "Rescue",
+        "lemma": "shuv"
       },
       {
         "surface": "my soul",
@@ -494,6 +586,10 @@
     ],
     "19": [
       {
+        "surface": "Let not",
+        "lemma": "al"
+      },
+      {
         "surface": "my enemies",
         "lemma": "oyev"
       },
@@ -520,6 +616,14 @@
     ],
     "20": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "speak",
         "lemma": "davar"
       },
@@ -540,6 +644,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "those who live quietly",
         "lemma": "ragea"
       },
@@ -554,6 +662,14 @@
         "lemma": "peh"
       },
       {
+        "surface": "at me",
+        "lemma": "al"
+      },
+      {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "Aha",
         "lemma": "heach"
       },
@@ -564,12 +680,24 @@
       {
         "surface": "Our eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "have seen",
+        "lemma": "raah"
       }
     ],
     "22": [
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "You have seen it",
+        "lemma": "raah"
+      },
+      {
+        "surface": "be not",
+        "lemma": "al"
       },
       {
         "surface": "silent",
@@ -580,8 +708,16 @@
         "lemma": "adonai"
       },
       {
+        "surface": "be not",
+        "lemma": "al"
+      },
+      {
         "surface": "far",
         "lemma": "rachaq"
+      },
+      {
+        "surface": "from me",
+        "lemma": "min"
       }
     ],
     "23": [
@@ -628,11 +764,23 @@
         "lemma": "elohim"
       },
       {
+        "surface": "and do not let them",
+        "lemma": "al"
+      },
+      {
         "surface": "gloat",
         "lemma": "samach"
       }
     ],
     "25": [
+      {
+        "surface": "Let them not",
+        "lemma": "al"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
+      },
       {
         "surface": "in their hearts",
         "lemma": "lev"
@@ -644,6 +792,14 @@
       {
         "surface": "just what we wanted",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "Let them not",
+        "lemma": "al"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "We have swallowed him up",
@@ -670,6 +826,10 @@
       {
         "surface": "may those who exalt themselves",
         "lemma": "gadal"
+      },
+      {
+        "surface": "over me",
+        "lemma": "al"
       },
       {
         "surface": "be clothed",
@@ -704,6 +864,10 @@
       {
         "surface": "may they always",
         "lemma": "tamid"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Exalted be",
@@ -744,14 +908,18 @@
         "lemma": "tehillah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
       }
     ]
   },
   "themeLemmas": [
+    "al",
     "nephesh",
-    "samach",
-    "tsedeq"
+    "amar"
   ]
 }

@@ -10,6 +10,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
         "surface": "Go",
         "lemma": "halakh"
       },
@@ -46,12 +54,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "loves",
+        "lemma": "et"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
       },
       {
+        "surface": "though they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "turn",
         "lemma": "panah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "other",
@@ -98,6 +118,18 @@
     ],
     "3": [
       {
+        "surface": "Then I said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to her",
+        "lemma": "el"
+      },
+      {
+        "surface": "You must live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "for many",
         "lemma": "rav"
       },
@@ -106,18 +138,46 @@
         "lemma": "yom"
       },
       {
+        "surface": "you must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be promiscuous",
         "lemma": "zanah"
       },
       {
+        "surface": "or belong to",
+        "lemma": "hayah"
+      },
+      {
         "surface": "another",
         "lemma": "ish"
+      },
+      {
+        "surface": "and",
+        "lemma": "gam"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "will do the same for you",
+        "lemma": "el"
       }
     ],
     "4": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "must live",
+        "lemma": "yashav"
       },
       {
         "surface": "many",
@@ -182,6 +242,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and seek",
         "lemma": "baqash"
       },
@@ -206,8 +270,16 @@
         "lemma": "pachad"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and to",
+        "lemma": "el"
       },
       {
         "surface": "His goodness",
@@ -225,6 +297,7 @@
   },
   "themeLemmas": [
     "ahav",
+    "yashav",
     "rav"
   ]
 }

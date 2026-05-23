@@ -54,6 +54,10 @@
     ],
     "3": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -74,11 +78,23 @@
         "lemma": "melekh"
       },
       {
+        "surface": "above",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "gods",
         "lemma": "elohim"
       }
     ],
     "4": [
+      {
+        "surface": "In",
+        "lemma": "asher"
+      },
       {
         "surface": "His hand",
         "lemma": "yad"
@@ -106,6 +122,18 @@
         "lemma": "yam"
       },
       {
+        "surface": "is His",
+        "lemma": "asher"
+      },
+      {
+        "surface": "for He",
+        "lemma": "hu"
+      },
+      {
+        "surface": "made it",
+        "lemma": "asah"
+      },
+      {
         "surface": "and His hands",
         "lemma": "yad"
       },
@@ -119,6 +147,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "O come",
+        "lemma": "bo"
+      },
       {
         "surface": "let us worship",
         "lemma": "shachah"
@@ -138,12 +170,28 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "our Maker",
+        "lemma": "asah"
       }
     ],
     "7": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "is our God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "and we",
+        "lemma": "anachnu"
       },
       {
         "surface": "are the people",
@@ -166,11 +214,23 @@
         "lemma": "yom"
       },
       {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "His voice",
         "lemma": "qol"
       }
     ],
     "8": [
+      {
+        "surface": "do not",
+        "lemma": "al"
+      },
       {
         "surface": "harden",
         "lemma": "qashah"
@@ -198,12 +258,28 @@
     ],
     "9": [
       {
+        "surface": "where",
+        "lemma": "asher"
+      },
+      {
+        "surface": "your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "tested",
         "lemma": "nasah"
       },
       {
         "surface": "and tried Me",
         "lemma": "bachan"
+      },
+      {
+        "surface": "though",
+        "lemma": "gam"
+      },
+      {
+        "surface": "they had seen",
+        "lemma": "raah"
       },
       {
         "surface": "My work",
@@ -228,6 +304,14 @@
         "lemma": "dor"
       },
       {
+        "surface": "and I said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "They",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "are a people",
         "lemma": "am"
       },
@@ -240,6 +324,14 @@
         "lemma": "taah"
       },
       {
+        "surface": "and they",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "known",
         "lemma": "yada"
       },
@@ -250,6 +342,10 @@
     ],
     "11": [
       {
+        "surface": "So",
+        "lemma": "asher"
+      },
+      {
         "surface": "I swore on oath",
         "lemma": "shava"
       },
@@ -258,14 +354,22 @@
         "lemma": "aph"
       },
       {
+        "surface": "They shall never",
+        "lemma": "im"
+      },
+      {
+        "surface": "enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "My rest",
         "lemma": "menuchah"
       }
     ]
   },
   "themeLemmas": [
+    "asher",
     "rua",
-    "paneh",
-    "levav"
+    "paneh"
   ]
 }

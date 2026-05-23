@@ -26,6 +26,10 @@
         "lemma": "sakhal"
       },
       {
+        "surface": "for",
+        "lemma": "el"
+      },
+      {
         "surface": "the poor",
         "lemma": "dal"
       },
@@ -68,6 +72,14 @@
         "lemma": "erets"
       },
       {
+        "surface": "and refuse",
+        "lemma": "al"
+      },
+      {
+        "surface": "to give him over",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the will",
         "lemma": "nephesh"
       },
@@ -84,6 +96,10 @@
       {
         "surface": "will sustain him",
         "lemma": "saad"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "his bed",
@@ -108,6 +124,14 @@
     ],
     "4": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -124,6 +148,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "I have sinned",
         "lemma": "chata"
       }
@@ -132,6 +160,10 @@
       {
         "surface": "My enemies",
         "lemma": "oyev"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "with malice",
@@ -151,6 +183,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "My visitor",
+        "lemma": "im"
+      },
       {
         "surface": "speaks",
         "lemma": "davar"
@@ -172,6 +208,10 @@
         "lemma": "lev"
       },
       {
+        "surface": "he goes",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "out",
         "lemma": "chuts"
       },
@@ -182,12 +222,24 @@
     ],
     "7": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "who hate",
         "lemma": "sane"
       },
       {
+        "surface": "me",
+        "lemma": "al"
+      },
+      {
         "surface": "whisper",
         "lemma": "lachash"
+      },
+      {
+        "surface": "against me",
+        "lemma": "al"
       },
       {
         "surface": "they imagine",
@@ -212,8 +264,16 @@
         "lemma": "yatsaq"
       },
       {
+        "surface": "he will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "get up",
         "lemma": "qamay"
+      },
+      {
+        "surface": "from where",
+        "lemma": "asher"
       },
       {
         "surface": "he lies",
@@ -222,8 +282,16 @@
     ],
     "9": [
       {
+        "surface": "Even",
+        "lemma": "gam"
+      },
+      {
         "surface": "my close friend",
         "lemma": "ish"
+      },
+      {
+        "surface": "whom",
+        "lemma": "asher"
       },
       {
         "surface": "I trusted",
@@ -244,9 +312,17 @@
       {
         "surface": "his heel",
         "lemma": "aqev"
+      },
+      {
+        "surface": "against me",
+        "lemma": "al"
       }
     ],
     "10": [
+      {
+        "surface": "But You",
+        "lemma": "attah"
+      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -266,23 +342,47 @@
     ],
     "11": [
       {
+        "surface": "By this",
+        "lemma": "zot"
+      },
+      {
         "surface": "I know",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "You delight",
         "lemma": "chaphets"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "my enemy",
         "lemma": "oyev"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "triumph",
         "lemma": "rua"
+      },
+      {
+        "surface": "over me",
+        "lemma": "al"
       }
     ],
     "12": [
+      {
+        "surface": "In my",
+        "lemma": "ani"
+      },
       {
         "surface": "integrity",
         "lemma": "tom"
@@ -326,6 +426,10 @@
         "lemma": "olam"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "everlasting",
         "lemma": "olam"
       },
@@ -340,8 +444,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "ra",
-    "oyev",
-    "olam"
+    "oyev"
   ]
 }

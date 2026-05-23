@@ -10,6 +10,10 @@
         "lemma": "natsach"
       },
       {
+        "surface": "According to",
+        "lemma": "al"
+      },
+      {
         "surface": "Gittith",
         "lemma": "gittit"
       },
@@ -52,6 +56,10 @@
         "lemma": "zimrah"
       },
       {
+        "surface": "strike",
+        "lemma": "natan"
+      },
+      {
         "surface": "the tambourine",
         "lemma": "toph"
       },
@@ -62,6 +70,10 @@
       {
         "surface": "harp",
         "lemma": "nevel"
+      },
+      {
+        "surface": "and",
+        "lemma": "im"
       },
       {
         "surface": "lyre",
@@ -95,6 +107,14 @@
       }
     ],
     "4": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "this",
+        "lemma": "hu"
+      },
       {
         "surface": "is a statute",
         "lemma": "choq"
@@ -130,12 +150,28 @@
         "lemma": "yehoseph"
       },
       {
+        "surface": "when he went out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "where I heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "an unfamiliar",
+        "lemma": "lo"
       },
       {
         "surface": "language",
@@ -170,6 +206,10 @@
     ],
     "7": [
       {
+        "surface": "You called out",
+        "lemma": "qara"
+      },
+      {
         "surface": "in distress",
         "lemma": "batstsarah"
       },
@@ -194,6 +234,10 @@
         "lemma": "bachan"
       },
       {
+        "surface": "you at",
+        "lemma": "al"
+      },
+      {
         "surface": "the waters",
         "lemma": "mayim"
       },
@@ -208,6 +252,10 @@
     ],
     "8": [
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "O My people",
         "lemma": "am"
       },
@@ -218,9 +266,21 @@
       {
         "surface": "O Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "if only",
+        "lemma": "im"
+      },
+      {
+        "surface": "you would listen",
+        "lemma": "shama"
       }
     ],
     "9": [
+      {
+        "surface": "There must be no",
+        "lemma": "lo"
+      },
       {
         "surface": "strange",
         "lemma": "zur"
@@ -228,6 +288,10 @@
       {
         "surface": "god",
         "lemma": "el"
+      },
+      {
+        "surface": "nor shall you",
+        "lemma": "lo"
       },
       {
         "surface": "bow",
@@ -243,6 +307,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
       {
         "surface": "am the LORD",
         "lemma": "yehovah"
@@ -278,8 +346,20 @@
         "lemma": "am"
       },
       {
+        "surface": "would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen to Me",
+        "lemma": "shama"
+      },
+      {
         "surface": "and Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "would not",
+        "lemma": "lo"
       },
       {
         "surface": "obey",
@@ -318,6 +398,10 @@
         "lemma": "am"
       },
       {
+        "surface": "would listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "if Israel",
         "lemma": "yisrael"
       },
@@ -344,8 +428,16 @@
         "lemma": "oyev"
       },
       {
+        "surface": "and turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "My hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "their foes",
@@ -364,6 +456,14 @@
       {
         "surface": "would feign obedience",
         "lemma": "kachash"
+      },
+      {
+        "surface": "and their doom",
+        "lemma": "et"
+      },
+      {
+        "surface": "would last forever",
+        "lemma": "hayah"
       }
     ],
     "16": [
@@ -394,8 +494,8 @@
     ]
   },
   "themeLemmas": [
-    "yisrael",
-    "yaaqov",
-    "mitsrayim"
+    "shama",
+    "lo",
+    "yisrael"
   ]
 }

@@ -18,6 +18,14 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "is on Me",
+        "lemma": "al"
+      },
+      {
+        "surface": "because",
+        "lemma": "yaan"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -46,6 +54,10 @@
         "lemma": "shavar"
       },
       {
+        "surface": "to proclaim",
+        "lemma": "qara"
+      },
+      {
         "surface": "liberty",
         "lemma": "deror"
       },
@@ -67,6 +79,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "to proclaim",
+        "lemma": "qara"
+      },
       {
         "surface": "the year",
         "lemma": "shaneh"
@@ -96,6 +112,10 @@
         "lemma": "nacham"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who mourn",
         "lemma": "avel"
       }
@@ -112,6 +132,10 @@
       {
         "surface": "in Zion",
         "lemma": "tsiyyon"
+      },
+      {
+        "surface": "to give",
+        "lemma": "natan"
       },
       {
         "surface": "a crown of beauty",
@@ -160,6 +184,10 @@
       {
         "surface": "of despair",
         "lemma": "keheh"
+      },
+      {
+        "surface": "So they will be called",
+        "lemma": "qara"
       },
       {
         "surface": "oaks",
@@ -264,12 +292,24 @@
     ],
     "6": [
       {
+        "surface": "But you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "will be called",
+        "lemma": "qara"
+      },
+      {
         "surface": "the priests",
         "lemma": "kohen"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "they will speak",
+        "lemma": "amar"
       },
       {
         "surface": "as ministers",
@@ -348,9 +388,21 @@
       {
         "surface": "joy",
         "lemma": "simchah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       }
     ],
     "8": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -378,6 +430,10 @@
       {
         "surface": "in My faithfulness",
         "lemma": "emet"
+      },
+      {
+        "surface": "I will give them",
+        "lemma": "natan"
       },
       {
         "surface": "their recompense",
@@ -422,8 +478,24 @@
         "lemma": "am"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who see them",
+        "lemma": "raah"
+      },
+      {
         "surface": "will acknowledge",
         "lemma": "nakhar"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
       },
       {
         "surface": "are a people",
@@ -458,6 +530,10 @@
       {
         "surface": "in my God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "He has clothed me",
@@ -510,8 +586,16 @@
     ],
     "11": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "as the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "brings forth",
+        "lemma": "yatsa"
       },
       {
         "surface": "its growth",
@@ -558,6 +642,10 @@
         "lemma": "neged"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       }
@@ -565,7 +653,7 @@
   },
   "themeLemmas": [
     "tachat",
-    "olam",
-    "zera"
+    "qara",
+    "ki"
   ]
 }

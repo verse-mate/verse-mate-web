@@ -26,6 +26,10 @@
         "lemma": "qadim"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "day long",
         "lemma": "yom"
       },
@@ -48,6 +52,10 @@
       {
         "surface": "a covenant",
         "lemma": "berit"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "Assyria",
@@ -76,6 +84,10 @@
         "lemma": "riv"
       },
       {
+        "surface": "against",
+        "lemma": "im"
+      },
+      {
         "surface": "Judah",
         "lemma": "yehudah"
       },
@@ -90,6 +102,10 @@
       {
         "surface": "according to his ways",
         "lemma": "derekh"
+      },
+      {
+        "surface": "and repay",
+        "lemma": "shuv"
       },
       {
         "surface": "according to his deeds",
@@ -118,6 +134,10 @@
         "lemma": "sarah"
       },
       {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       }
@@ -126,6 +146,10 @@
       {
         "surface": "Yes, he struggled",
         "lemma": "sur"
+      },
+      {
+        "surface": "with",
+        "lemma": "el"
       },
       {
         "surface": "the angel",
@@ -156,6 +180,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "with Him",
+        "lemma": "im"
+      },
+      {
         "surface": "there",
         "lemma": "sham"
       }
@@ -184,6 +212,14 @@
     ],
     "6": [
       {
+        "surface": "But you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "must return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to your God",
         "lemma": "elohim"
       },
@@ -206,6 +242,10 @@
       {
         "surface": "wait",
         "lemma": "qavah"
+      },
+      {
+        "surface": "on",
+        "lemma": "el"
       },
       {
         "surface": "your God",
@@ -244,6 +284,10 @@
         "lemma": "ephrayim"
       },
       {
+        "surface": "boasts",
+        "lemma": "amar"
+      },
+      {
         "surface": "How rich I have become",
         "lemma": "ashar"
       },
@@ -256,6 +300,10 @@
         "lemma": "on"
       },
       {
+        "surface": "In all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my labors",
         "lemma": "yegia"
       },
@@ -264,8 +312,16 @@
         "lemma": "matsa"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "iniquity",
         "lemma": "avan"
+      },
+      {
+        "surface": "that is",
+        "lemma": "asher"
       },
       {
         "surface": "sinful",
@@ -273,6 +329,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "But I am",
+        "lemma": "anokhi"
+      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -288,6 +348,10 @@
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "I will again make you dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "in tents",
@@ -308,8 +372,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "through",
+        "lemma": "al"
+      },
+      {
         "surface": "the prophets",
         "lemma": "navi"
+      },
+      {
+        "surface": "and",
+        "lemma": "anokhi"
       },
       {
         "surface": "multiplied",
@@ -334,6 +406,10 @@
     ],
     "11": [
       {
+        "surface": "Is there",
+        "lemma": "im"
+      },
+      {
         "surface": "iniquity",
         "lemma": "aven"
       },
@@ -344,6 +420,10 @@
       {
         "surface": "They will surely",
         "lemma": "akh"
+      },
+      {
+        "surface": "come",
+        "lemma": "hayah"
       },
       {
         "surface": "to nothing",
@@ -362,12 +442,20 @@
         "lemma": "gilgal"
       },
       {
+        "surface": "Indeed",
+        "lemma": "gam"
+      },
+      {
         "surface": "their altars will be",
         "lemma": "mizbeach"
       },
       {
         "surface": "heaps of stones",
         "lemma": "gal"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "the furrows",
@@ -472,6 +560,14 @@
         "lemma": "dam"
       },
       {
+        "surface": "upon him",
+        "lemma": "al"
+      },
+      {
+        "surface": "and repay",
+        "lemma": "shuv"
+      },
+      {
         "surface": "for his contempt",
         "lemma": "cherpah"
       }
@@ -479,7 +575,7 @@
   },
   "themeLemmas": [
     "navi",
-    "shamar",
-    "mitsrayim"
+    "im",
+    "shuv"
   ]
 }

@@ -66,6 +66,10 @@
         "lemma": "halal"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -82,11 +86,19 @@
         "lemma": "shem"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "it is lovely",
         "lemma": "naim"
       }
     ],
     "4": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the LORD",
         "lemma": "yah"
@@ -110,8 +122,20 @@
     ],
     "5": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -126,6 +150,10 @@
         "lemma": "adon"
       },
       {
+        "surface": "is above all",
+        "lemma": "kol"
+      },
+      {
         "surface": "gods",
         "lemma": "elohim"
       }
@@ -134,6 +162,18 @@
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "does",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "pleases Him",
@@ -150,6 +190,10 @@
       {
         "surface": "in the seas",
         "lemma": "yam"
+      },
+      {
+        "surface": "and in all",
+        "lemma": "kol"
       },
       {
         "surface": "their depths",
@@ -174,12 +218,20 @@
         "lemma": "erets"
       },
       {
+        "surface": "He generates",
+        "lemma": "asah"
+      },
+      {
         "surface": "the lightning",
         "lemma": "baraq"
       },
       {
         "surface": "with the rain",
         "lemma": "matar"
+      },
+      {
+        "surface": "and brings forth",
+        "lemma": "yatsa"
       },
       {
         "surface": "the wind",
@@ -206,6 +258,10 @@
       {
         "surface": "of both man",
         "lemma": "adam"
+      },
+      {
+        "surface": "and",
+        "lemma": "ad"
       },
       {
         "surface": "beast",
@@ -236,6 +292,10 @@
       {
         "surface": "against Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "his servants",
@@ -294,6 +354,10 @@
         "lemma": "bashan"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the kings",
         "lemma": "mamlakhah"
       },
@@ -303,6 +367,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "He gave",
+        "lemma": "natan"
+      },
       {
         "surface": "their land",
         "lemma": "erets"
@@ -352,6 +420,10 @@
     ],
     "14": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -366,6 +438,10 @@
       {
         "surface": "and will have compassion",
         "lemma": "nacham"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "His servants",
@@ -408,18 +484,34 @@
         "lemma": "peh"
       },
       {
+        "surface": "but cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "speak",
         "lemma": "davar"
       },
       {
         "surface": "they have eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "but cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       }
     ],
     "17": [
       {
         "surface": "they have ears",
         "lemma": "ozen"
+      },
+      {
+        "surface": "but cannot",
+        "lemma": "lo"
       },
       {
         "surface": "hear",
@@ -443,6 +535,26 @@
       }
     ],
     "18": [
+      {
+        "surface": "Those who make them",
+        "lemma": "asah"
+      },
+      {
+        "surface": "become",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "like them",
+        "lemma": "kemo"
+      },
+      {
+        "surface": "as do all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
       {
         "surface": "trust",
         "lemma": "batach"
@@ -544,8 +656,8 @@
     ]
   },
   "themeLemmas": [
-    "halal",
-    "bet",
-    "barakh"
+    "kol",
+    "ki",
+    "halal"
   ]
 }

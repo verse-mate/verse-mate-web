@@ -14,6 +14,10 @@
         "lemma": "david"
       },
       {
+        "surface": "I call upon You",
+        "lemma": "qara"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -28,6 +32,10 @@
       {
         "surface": "my voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "when I call",
+        "lemma": "qara"
       }
     ],
     "2": [
@@ -86,6 +94,10 @@
         "lemma": "natsar"
       },
       {
+        "surface": "at",
+        "lemma": "al"
+      },
+      {
         "surface": "the door",
         "lemma": "dal"
       },
@@ -95,6 +107,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Do not let",
+        "lemma": "al"
+      },
       {
         "surface": "my heart",
         "lemma": "lev"
@@ -122,6 +138,10 @@
       {
         "surface": "of wickedness",
         "lemma": "resah"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "men",
@@ -174,8 +194,16 @@
         "lemma": "rosh"
       },
       {
+        "surface": "let me not",
+        "lemma": "al"
+      },
+      {
         "surface": "refuse it",
         "lemma": "nu"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "my prayer is ever against",
@@ -204,8 +232,16 @@
         "lemma": "sela"
       },
       {
+        "surface": "the people will listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "to my words",
         "lemma": "emer"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "they are pleasant",
@@ -213,6 +249,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "As when",
+        "lemma": "kemo"
+      },
       {
         "surface": "one plows",
         "lemma": "palach"
@@ -244,8 +284,16 @@
     ],
     "8": [
       {
+        "surface": "But",
+        "lemma": "ki"
+      },
+      {
         "surface": "my eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "are fixed on You",
+        "lemma": "el"
       },
       {
         "surface": "O GOD",
@@ -258,6 +306,10 @@
       {
         "surface": "I seek refuge",
         "lemma": "chasah"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "leave",
@@ -308,14 +360,22 @@
         "lemma": "makhmar"
       },
       {
+        "surface": "while",
+        "lemma": "ad"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "pass by in safety",
         "lemma": "avar"
       }
     ]
   },
   "themeLemmas": [
-    "tephillah",
-    "ra",
-    "peh"
+    "al",
+    "ki",
+    "tephillah"
   ]
 }

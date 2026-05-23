@@ -10,6 +10,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -28,6 +36,10 @@
     ],
     "2": [
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
         "surface": "month",
         "lemma": "chodesh"
       },
@@ -38,6 +50,10 @@
       {
         "surface": "of months",
         "lemma": "chodesh"
+      },
+      {
+        "surface": "it shall be",
+        "lemma": "hu"
       },
       {
         "surface": "the first",
@@ -58,6 +74,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
@@ -68,6 +88,10 @@
       {
         "surface": "that on the tenth",
         "lemma": "asvor"
+      },
+      {
+        "surface": "day of this",
+        "lemma": "zeh"
       },
       {
         "surface": "month",
@@ -86,6 +110,10 @@
         "lemma": "seh"
       },
       {
+        "surface": "for his family",
+        "lemma": "av"
+      },
+      {
         "surface": "one",
         "lemma": "seh"
       },
@@ -95,6 +123,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "the household",
         "lemma": "bet"
@@ -106,6 +138,10 @@
       {
         "surface": "for a whole lamb",
         "lemma": "seh"
+      },
+      {
+        "surface": "they are to",
+        "lemma": "hu"
       },
       {
         "surface": "share with",
@@ -146,6 +182,10 @@
         "lemma": "seh"
       },
       {
+        "surface": "must be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "an unblemished",
         "lemma": "tamim"
       },
@@ -162,6 +202,10 @@
         "lemma": "laqach"
       },
       {
+        "surface": "it from",
+        "lemma": "min"
+      },
+      {
         "surface": "the sheep",
         "lemma": "keves"
       },
@@ -172,8 +216,16 @@
     ],
     "6": [
       {
+        "surface": "You must",
+        "lemma": "hayah"
+      },
+      {
         "surface": "keep",
         "lemma": "mishmeret"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "the fourteenth",
@@ -184,8 +236,16 @@
         "lemma": "yom"
       },
       {
+        "surface": "of the",
+        "lemma": "zeh"
+      },
+      {
         "surface": "month",
         "lemma": "chodesh"
+      },
+      {
+        "surface": "when the whole",
+        "lemma": "kol"
       },
       {
         "surface": "assembly",
@@ -204,6 +264,10 @@
         "lemma": "shachat"
       },
       {
+        "surface": "the animals",
+        "lemma": "et"
+      },
+      {
         "surface": "at",
         "lemma": "bayin"
       },
@@ -218,8 +282,20 @@
         "lemma": "laqach"
       },
       {
+        "surface": "some of",
+        "lemma": "min"
+      },
+      {
         "surface": "the blood",
         "lemma": "dam"
+      },
+      {
+        "surface": "and put",
+        "lemma": "natan"
+      },
+      {
+        "surface": "it on",
+        "lemma": "al"
       },
       {
         "surface": "vvv",
@@ -230,12 +306,24 @@
         "lemma": "mezuzah"
       },
       {
+        "surface": "and",
+        "lemma": "al"
+      },
+      {
         "surface": "tops of the doorframes",
         "lemma": "mashqoph"
       },
       {
+        "surface": "of",
+        "lemma": "al"
+      },
+      {
         "surface": "the houses",
         "lemma": "bet"
+      },
+      {
+        "surface": "where",
+        "lemma": "asher"
       },
       {
         "surface": "they eat the lambs",
@@ -250,6 +338,10 @@
       {
         "surface": "the meat",
         "lemma": "basar"
+      },
+      {
+        "surface": "that",
+        "lemma": "zeh"
       },
       {
         "surface": "night",
@@ -274,8 +366,16 @@
     ],
     "9": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "any of",
+        "lemma": "min"
       },
       {
         "surface": "the meat raw",
@@ -294,6 +394,10 @@
         "lemma": "mayim"
       },
       {
+        "surface": "but only",
+        "lemma": "ki"
+      },
+      {
         "surface": "roasted",
         "lemma": "tsali"
       },
@@ -306,6 +410,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "and",
+        "lemma": "al"
+      },
+      {
         "surface": "legs",
         "lemma": "kara"
       },
@@ -316,12 +424,28 @@
     ],
     "10": [
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "leave",
         "lemma": "yatar"
       },
       {
+        "surface": "any of it",
+        "lemma": "min"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "morning",
         "lemma": "boqer"
+      },
+      {
+        "surface": "before",
+        "lemma": "ad"
       },
       {
         "surface": "the morning",
@@ -330,6 +454,10 @@
       {
         "surface": "you must burn up",
         "lemma": "esh"
+      },
+      {
+        "surface": "any part",
+        "lemma": "min"
       },
       {
         "surface": "that is left over",
@@ -374,6 +502,10 @@
         "lemma": "chippazon"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is the LORD’s",
         "lemma": "yehovah"
       },
@@ -383,6 +515,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "On that",
+        "lemma": "zeh"
+      },
       {
         "surface": "night",
         "lemma": "laylah"
@@ -404,6 +540,10 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "firstborn male",
         "lemma": "bekhor"
       },
@@ -412,12 +552,24 @@
         "lemma": "adam"
       },
       {
+        "surface": "and",
+        "lemma": "ad"
+      },
+      {
         "surface": "beast",
         "lemma": "behemah"
       },
       {
+        "surface": "and I will execute",
+        "lemma": "asah"
+      },
+      {
         "surface": "judgment",
         "lemma": "shephet"
+      },
+      {
+        "surface": "against all",
+        "lemma": "kol"
       },
       {
         "surface": "the gods",
@@ -426,6 +578,10 @@
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am the LORD",
@@ -438,16 +594,36 @@
         "lemma": "dam"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the houses",
         "lemma": "bet"
+      },
+      {
+        "surface": "where",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
       },
       {
         "surface": "are staying",
         "lemma": "sham"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a sign",
         "lemma": "ot"
+      },
+      {
+        "surface": "when I see",
+        "lemma": "raah"
       },
       {
         "surface": "the blood",
@@ -458,8 +634,20 @@
         "lemma": "pasach"
       },
       {
+        "surface": "over you",
+        "lemma": "al"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "plague",
         "lemma": "negeph"
+      },
+      {
+        "surface": "will fall",
+        "lemma": "hayah"
       },
       {
         "surface": "to destroy you",
@@ -480,8 +668,16 @@
     ],
     "14": [
       {
+        "surface": "And this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "a memorial",
@@ -490,6 +686,10 @@
       {
         "surface": "and you are to celebrate",
         "lemma": "chagag"
+      },
+      {
+        "surface": "it",
+        "lemma": "et"
       },
       {
         "surface": "as a feast",
@@ -550,6 +750,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "Whoever",
+        "lemma": "kol"
+      },
+      {
         "surface": "eats",
         "lemma": "akhal"
       },
@@ -564,6 +768,10 @@
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "through",
+        "lemma": "ad"
       },
       {
         "surface": "the seventh",
@@ -588,6 +796,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "you are to hold",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a sacred",
         "lemma": "qodesh"
       },
@@ -608,6 +820,14 @@
         "lemma": "yom"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
         "surface": "any work",
         "lemma": "melakhah"
       },
@@ -616,12 +836,24 @@
         "lemma": "akh"
       },
       {
+        "surface": "except to prepare",
+        "lemma": "asher"
+      },
+      {
         "surface": "the meals",
         "lemma": "akhal"
       },
       {
+        "surface": "that",
+        "lemma": "hu"
+      },
+      {
         "surface": "is all",
         "lemma": "bad"
+      },
+      {
+        "surface": "you may do",
+        "lemma": "asah"
       }
     ],
     "17": [
@@ -634,12 +866,24 @@
         "lemma": "matstsah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "on this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "very",
         "lemma": "etsem"
       },
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "I brought",
+        "lemma": "yatsa"
       },
       {
         "surface": "your divisions",
@@ -656,6 +900,10 @@
       {
         "surface": "You must keep",
         "lemma": "shamar"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
       },
       {
         "surface": "day",
@@ -700,6 +948,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "the evening",
         "lemma": "erev"
       },
@@ -722,6 +974,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "there must be no",
+        "lemma": "lo"
+      },
+      {
         "surface": "leaven",
         "lemma": "seor"
       },
@@ -734,12 +990,24 @@
         "lemma": "bet"
       },
       {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
+        "surface": "anyone",
+        "lemma": "kol"
+      },
+      {
         "surface": "eats",
         "lemma": "akhal"
       },
       {
         "surface": "something leavened",
         "lemma": "chamets"
+      },
+      {
+        "surface": "that",
+        "lemma": "hu"
       },
       {
         "surface": "person",
@@ -772,8 +1040,16 @@
     ],
     "20": [
       {
+        "surface": "You are} not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "anything",
+        "lemma": "kol"
       },
       {
         "surface": "leavened",
@@ -788,6 +1064,10 @@
         "lemma": "matstsah"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your homes",
         "lemma": "moshav"
       }
@@ -798,12 +1078,28 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "summoned",
+        "lemma": "qara"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the elders",
         "lemma": "zaqen"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "and told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "them",
+        "lemma": "el"
       },
       {
         "surface": "Go at once",
@@ -864,8 +1160,16 @@
         "lemma": "dam"
       },
       {
+        "surface": "on",
+        "lemma": "el"
+      },
+      {
         "surface": "the top",
         "lemma": "mashqoph"
+      },
+      {
+        "surface": "and",
+        "lemma": "el"
       },
       {
         "surface": "vvv",
@@ -876,12 +1180,28 @@
         "lemma": "mezuzah"
       },
       {
+        "surface": "None",
+        "lemma": "lo"
+      },
+      {
+        "surface": "of you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "shall go out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the door",
         "lemma": "petach"
       },
       {
         "surface": "of his house",
         "lemma": "bet"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "morning",
@@ -906,12 +1226,24 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "He will see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the blood",
         "lemma": "dam"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the top",
         "lemma": "mashqoph"
+      },
+      {
+        "surface": "and",
+        "lemma": "al"
       },
       {
         "surface": "vvv",
@@ -926,12 +1258,28 @@
         "lemma": "pasach"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "that doorway",
         "lemma": "petach"
       },
       {
+        "surface": "so He will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "allow",
+        "lemma": "natan"
+      },
+      {
         "surface": "the destroyer",
         "lemma": "shachat"
+      },
+      {
+        "surface": "to enter",
+        "lemma": "bo"
       },
       {
         "surface": "your houses",
@@ -948,8 +1296,16 @@
         "lemma": "shamar"
       },
       {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "command",
         "lemma": "davar"
+      },
+      {
+        "surface": "as a",
+        "lemma": "ad"
       },
       {
         "surface": "permanent",
@@ -966,12 +1322,32 @@
     ],
     "25": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will give",
+        "lemma": "natan"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
       },
       {
         "surface": "He promised",
@@ -982,14 +1358,26 @@
         "lemma": "shamar"
       },
       {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "service",
         "lemma": "avodah"
       }
     ],
     "26": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "your children",
         "lemma": "ben"
+      },
+      {
+        "surface": "ask you",
+        "lemma": "amar"
       },
       {
         "surface": "What",
@@ -998,9 +1386,21 @@
       {
         "surface": "does this service",
         "lemma": "avodah"
+      },
+      {
+        "surface": "mean",
+        "lemma": "zot"
       }
     ],
     "27": [
+      {
+        "surface": "you are to reply",
+        "lemma": "amar"
+      },
+      {
+        "surface": "It",
+        "lemma": "hu"
+      },
       {
         "surface": "is the Passover",
         "lemma": "pesach"
@@ -1014,8 +1414,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "passed",
         "lemma": "pasach"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "the houses",
@@ -1036,6 +1444,10 @@
       {
         "surface": "when He struck down",
         "lemma": "nagaph"
+      },
+      {
+        "surface": "the Egyptians",
+        "lemma": "et"
       },
       {
         "surface": "and spared",
@@ -1068,6 +1480,14 @@
         "lemma": "halakh"
       },
       {
+        "surface": "and did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "just what",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -1086,6 +1506,10 @@
     ],
     "29": [
       {
+        "surface": "Now",
+        "lemma": "hayah"
+      },
+      {
         "surface": "at midnight",
         "lemma": "chetsi"
       },
@@ -1096,6 +1520,10 @@
       {
         "surface": "struck down",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "firstborn",
@@ -1118,8 +1546,20 @@
         "lemma": "paroh"
       },
       {
+        "surface": "who sat",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "his throne",
         "lemma": "kisse"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "the firstborn",
@@ -1132,6 +1572,10 @@
       {
         "surface": "in the dungeon",
         "lemma": "bet"
+      },
+      {
+        "surface": "as well as all",
+        "lemma": "kol"
       },
       {
         "surface": "the firstborn",
@@ -1156,12 +1600,28 @@
         "lemma": "qamay"
       },
       {
+        "surface": "he",
+        "lemma": "hu"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his officials",
         "lemma": "eved"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Egyptians",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and there was",
+        "lemma": "hayah"
       },
       {
         "surface": "loud",
@@ -1170,6 +1630,10 @@
       {
         "surface": "wailing",
         "lemma": "tsaaqah"
+      },
+      {
+        "surface": "in Egypt",
+        "lemma": "ki"
       },
       {
         "surface": "for there was no",
@@ -1190,6 +1654,10 @@
     ],
     "31": [
       {
+        "surface": "Then Pharaoh summoned",
+        "lemma": "qara"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -1202,12 +1670,32 @@
         "lemma": "laylah"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Get up",
         "lemma": "qamay"
       },
       {
+        "surface": "leave",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "my people",
         "lemma": "am"
+      },
+      {
+        "surface": "both",
+        "lemma": "gam"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "and",
+        "lemma": "gam"
       },
       {
         "surface": "the Israelites",
@@ -1240,8 +1728,20 @@
         "lemma": "tson"
       },
       {
+        "surface": "and",
+        "lemma": "gam"
+      },
+      {
         "surface": "herds",
         "lemma": "baqar"
+      },
+      {
+        "surface": "as well",
+        "lemma": "gam"
+      },
+      {
+        "surface": "just as",
+        "lemma": "asher"
       },
       {
         "surface": "you have said",
@@ -1254,12 +1754,24 @@
       {
         "surface": "And bless",
         "lemma": "barakh"
+      },
+      {
+        "surface": "me",
+        "lemma": "et"
+      },
+      {
+        "surface": "also",
+        "lemma": "gam"
       }
     ],
     "33": [
       {
         "surface": "And in order to send them",
         "lemma": "shalach"
+      },
+      {
+        "surface": "out of",
+        "lemma": "min"
       },
       {
         "surface": "the land",
@@ -1280,6 +1792,18 @@
       {
         "surface": "the people on",
         "lemma": "am"
+      },
+      {
+        "surface": "For otherwise",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "we are all",
+        "lemma": "kol"
       },
       {
         "surface": "going to die",
@@ -1308,6 +1832,10 @@
         "lemma": "chamets"
       },
       {
+        "surface": "carrying it on",
+        "lemma": "al"
+      },
+      {
         "surface": "their shoulders",
         "lemma": "shekhem"
       },
@@ -1328,6 +1856,10 @@
       {
         "surface": "Furthermore, the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "acted",
+        "lemma": "asah"
       },
       {
         "surface": "on Moses’",
@@ -1370,6 +1902,10 @@
       {
         "surface": "And the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "the people",
@@ -1448,8 +1984,16 @@
         "lemma": "rav"
       },
       {
+        "surface": "also",
+        "lemma": "gam"
+      },
+      {
         "surface": "went up",
         "lemma": "alah"
+      },
+      {
+        "surface": "with them",
+        "lemma": "et"
       },
       {
         "surface": "along with great droves of",
@@ -1470,8 +2014,16 @@
     ],
     "39": [
       {
+        "surface": "Since",
+        "lemma": "ki"
+      },
+      {
         "surface": "their dough",
         "lemma": "batseq"
+      },
+      {
+        "surface": "had no",
+        "lemma": "lo"
       },
       {
         "surface": "leaven",
@@ -1480,6 +2032,10 @@
       {
         "surface": "the people baked",
         "lemma": "aphah"
+      },
+      {
+        "surface": "what they had brought",
+        "lemma": "yatsa"
       },
       {
         "surface": "out of Egypt",
@@ -1494,6 +2050,10 @@
         "lemma": "uggah"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "when they had been driven out",
         "lemma": "garash"
       },
@@ -1506,8 +2066,24 @@
         "lemma": "yakhol"
       },
       {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "delay",
         "lemma": "mahah"
+      },
+      {
+        "surface": "and",
+        "lemma": "gam"
+      },
+      {
+        "surface": "had not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "prepared",
+        "lemma": "asah"
       },
       {
         "surface": "any provisions",
@@ -1526,6 +2102,10 @@
       {
         "surface": "of the Israelites’",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "stay",
+        "lemma": "yashav"
       },
       {
         "surface": "in Egypt",
@@ -1554,6 +2134,10 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "to the",
+        "lemma": "zeh"
+      },
+      {
         "surface": "very",
         "lemma": "etsem"
       },
@@ -1562,12 +2146,20 @@
         "lemma": "yom"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the LORD’s",
         "lemma": "yehovah"
       },
       {
         "surface": "divisions",
         "lemma": "tsava"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of the land",
@@ -1588,8 +2180,16 @@
         "lemma": "shimmur"
       },
       {
+        "surface": "that",
+        "lemma": "hu"
+      },
+      {
         "surface": "night",
         "lemma": "laylah"
+      },
+      {
+        "surface": "to bring them",
+        "lemma": "yatsa"
       },
       {
         "surface": "out of the land",
@@ -1598,6 +2198,10 @@
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "this same",
+        "lemma": "zeh"
       },
       {
         "surface": "night is to be a vigil",
@@ -1610,6 +2214,10 @@
       {
         "surface": "to be observed",
         "lemma": "shimmur"
+      },
+      {
+        "surface": "by all",
+        "lemma": "kol"
       },
       {
         "surface": "the Israelites",
@@ -1626,6 +2234,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -1634,12 +2250,20 @@
         "lemma": "aharon"
       },
       {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
         "surface": "is the statute",
         "lemma": "chuqqah"
       },
       {
         "surface": "of the Passover",
         "lemma": "pesach"
+      },
+      {
+        "surface": "No",
+        "lemma": "kol"
       },
       {
         "surface": "foreigner",
@@ -1651,6 +2275,10 @@
       }
     ],
     "44": [
+      {
+        "surface": "But any",
+        "lemma": "kol"
+      },
       {
         "surface": "slave who",
         "lemma": "eved"
@@ -1682,6 +2310,10 @@
         "lemma": "sakhir"
       },
       {
+        "surface": "shall not",
+        "lemma": "lo"
+      },
+      {
         "surface": "eat",
         "lemma": "akhal"
       }
@@ -1700,12 +2332,32 @@
         "lemma": "bet"
       },
       {
+        "surface": "You are not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to take",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "any of",
+        "lemma": "min"
+      },
+      {
         "surface": "the meat",
         "lemma": "basar"
       },
       {
+        "surface": "outside",
+        "lemma": "min"
+      },
+      {
         "surface": "the house",
         "lemma": "bet"
+      },
+      {
+        "surface": "and you may not",
+        "lemma": "lo"
       },
       {
         "surface": "break",
@@ -1718,15 +2370,31 @@
     ],
     "47": [
       {
+        "surface": "The whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "must celebrate",
+        "lemma": "asah"
+      },
+      {
+        "surface": "it",
+        "lemma": "et"
       }
     ],
     "48": [
+      {
+        "surface": "If",
+        "lemma": "ki"
+      },
       {
         "surface": "a foreigner",
         "lemma": "ger"
@@ -1734,6 +2402,14 @@
       {
         "surface": "resides",
         "lemma": "gur"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
+        "surface": "you and wants to celebrate",
+        "lemma": "asah"
       },
       {
         "surface": "the LORD’s",
@@ -1744,6 +2420,10 @@
         "lemma": "pesach"
       },
       {
+        "surface": "all the",
+        "lemma": "kol"
+      },
+      {
         "surface": "males in the household",
         "lemma": "zakhar"
       },
@@ -1752,8 +2432,20 @@
         "lemma": "mul"
       },
       {
+        "surface": "then",
+        "lemma": "az"
+      },
+      {
         "surface": "he may come near",
         "lemma": "qarav"
+      },
+      {
+        "surface": "to celebrate it",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and he shall be",
+        "lemma": "hayah"
       },
       {
         "surface": "like a native",
@@ -1762,6 +2454,10 @@
       {
         "surface": "of the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "But no",
+        "lemma": "lo"
       },
       {
         "surface": "uncircumcised man",
@@ -1782,6 +2478,10 @@
         "lemma": "torah"
       },
       {
+        "surface": "shall apply",
+        "lemma": "hayah"
+      },
+      {
         "surface": "to both the native",
         "lemma": "ezrach"
       },
@@ -1800,12 +2500,28 @@
     ],
     "50": [
       {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
         "surface": "this",
         "lemma": "ken"
+      },
+      {
+        "surface": "they did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "just as",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -1826,6 +2542,14 @@
     ],
     "51": [
       {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "on that",
+        "lemma": "zeh"
+      },
+      {
         "surface": "very",
         "lemma": "etsem"
       },
@@ -1836,6 +2560,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "brought",
+        "lemma": "yatsa"
       },
       {
         "surface": "the Israelites",
@@ -1850,14 +2578,18 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "their divisions",
         "lemma": "tsava"
       }
     ]
   },
   "themeLemmas": [
+    "kol",
     "mitsrayim",
-    "akhal",
-    "bet"
+    "akhal"
   ]
 }

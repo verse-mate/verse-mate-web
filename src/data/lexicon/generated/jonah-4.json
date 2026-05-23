@@ -28,8 +28,16 @@
         "lemma": "palal"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "O",
@@ -40,12 +48,36 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "is this",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "what I said",
         "lemma": "davar"
       },
       {
+        "surface": "while",
+        "lemma": "ad"
+      },
+      {
+        "surface": "I was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "still in",
+        "lemma": "al"
+      },
+      {
         "surface": "my own country",
         "lemma": "adamah"
+      },
+      {
+        "surface": "This is why",
+        "lemma": "al"
       },
       {
         "surface": "I was so quick",
@@ -62,6 +94,14 @@
       {
         "surface": "I knew",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You are",
+        "lemma": "attah"
       },
       {
         "surface": "a gracious",
@@ -96,6 +136,10 @@
         "lemma": "nacham"
       },
       {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
         "surface": "sending disaster",
         "lemma": "ra"
       }
@@ -122,6 +166,14 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "from me",
+        "lemma": "min"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "it is better",
         "lemma": "tov"
       },
@@ -140,6 +192,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "any right",
         "lemma": "yatav"
       },
@@ -154,8 +210,20 @@
         "lemma": "yonah"
       },
       {
+        "surface": "left",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "and sat down",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "east",
+        "lemma": "min"
       },
       {
         "surface": "of it",
@@ -166,16 +234,36 @@
         "lemma": "sham"
       },
       {
+        "surface": "he made",
+        "lemma": "asah"
+      },
+      {
         "surface": "a shelter",
         "lemma": "sukkah"
+      },
+      {
+        "surface": "and sat",
+        "lemma": "yashav"
       },
       {
         "surface": "in its shade",
         "lemma": "tsel"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "would happen",
+        "lemma": "hayah"
       },
       {
         "surface": "to the city",
@@ -204,8 +292,16 @@
         "lemma": "alah"
       },
       {
+        "surface": "to provide",
+        "lemma": "hayah"
+      },
+      {
         "surface": "shade",
         "lemma": "tsel"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "Jonah’s",
@@ -316,6 +412,10 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "Jonah’s",
         "lemma": "yonah"
       },
@@ -336,6 +436,10 @@
         "lemma": "mut"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "It is better",
         "lemma": "tov"
       },
@@ -354,6 +458,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Jonah",
         "lemma": "yonah"
       },
@@ -366,6 +474,10 @@
         "lemma": "charah"
       },
       {
+        "surface": "about",
+        "lemma": "al"
+      },
+      {
         "surface": "the plant",
         "lemma": "qiqavon"
       },
@@ -374,8 +486,16 @@
         "lemma": "yatav"
       },
       {
+        "surface": "he replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "I am angry",
         "lemma": "charah"
+      },
+      {
+        "surface": "enough to",
+        "lemma": "ad"
       },
       {
         "surface": "die",
@@ -388,20 +508,48 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "cared",
         "lemma": "chus"
+      },
+      {
+        "surface": "about",
+        "lemma": "al"
       },
       {
         "surface": "the plant",
         "lemma": "qiqavon"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you neither",
+        "lemma": "lo"
+      },
+      {
         "surface": "tended",
         "lemma": "amal"
       },
       {
+        "surface": "nor",
+        "lemma": "lo"
+      },
+      {
         "surface": "made grow",
         "lemma": "gadal"
+      },
+      {
+        "surface": "It sprang up",
+        "lemma": "hayah"
       },
       {
         "surface": "in a night",
@@ -418,8 +566,20 @@
     ],
     "11": [
       {
+        "surface": "So should I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "care",
         "lemma": "chus"
+      },
+      {
+        "surface": "about",
+        "lemma": "al"
       },
       {
         "surface": "the great",
@@ -432,6 +592,10 @@
       {
         "surface": "of Nineveh",
         "lemma": "ninveh"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
       },
       {
         "surface": "has",
@@ -448,6 +612,14 @@
       {
         "surface": "people",
         "lemma": "adam"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "cannot",
+        "lemma": "lo"
       },
       {
         "surface": "tell",
@@ -472,8 +644,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "yonah",
-    "qiqavon",
-    "charah"
+    "amar"
   ]
 }

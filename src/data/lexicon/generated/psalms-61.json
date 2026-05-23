@@ -10,12 +10,20 @@
         "lemma": "natsach"
       },
       {
+        "surface": "With",
+        "lemma": "al"
+      },
+      {
         "surface": "stringed instruments",
         "lemma": "neginah"
       },
       {
         "surface": "Of David",
         "lemma": "david"
+      },
+      {
+        "surface": "Hear",
+        "lemma": "shama"
       },
       {
         "surface": "my cry",
@@ -44,6 +52,14 @@
         "lemma": "erets"
       },
       {
+        "surface": "I call out",
+        "lemma": "qara"
+      },
+      {
+        "surface": "to You",
+        "lemma": "el"
+      },
+      {
         "surface": "whenever my heart",
         "lemma": "lev"
       },
@@ -62,9 +78,21 @@
       {
         "surface": "that is higher",
         "lemma": "rum"
+      },
+      {
+        "surface": "than I",
+        "lemma": "min"
       }
     ],
     "3": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You have been",
+        "lemma": "hayah"
+      },
       {
         "surface": "my refuge",
         "lemma": "machaseh"
@@ -118,12 +146,28 @@
     ],
     "5": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
+        "surface": "have heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "my vows",
         "lemma": "neder"
       },
       {
         "surface": "O God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "You have given me",
+        "lemma": "natan"
       },
       {
         "surface": "the inheritance",
@@ -148,6 +192,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "of",
+        "lemma": "al"
+      },
+      {
         "surface": "the king’s",
         "lemma": "melekh"
       },
@@ -165,6 +213,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "May he sit enthroned",
+        "lemma": "yashav"
+      },
       {
         "surface": "in God’s",
         "lemma": "elohim"
@@ -231,7 +283,7 @@
   },
   "themeLemmas": [
     "shem",
-    "paneh",
-    "olam"
+    "shama",
+    "paneh"
   ]
 }

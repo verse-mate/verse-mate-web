@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "After",
+        "lemma": "hayah"
+      },
+      {
         "surface": "David had finished",
         "lemma": "kalah"
       },
       {
         "surface": "speaking",
         "lemma": "davar"
+      },
+      {
+        "surface": "with",
+        "lemma": "el"
       },
       {
         "surface": "Saul",
@@ -48,6 +56,10 @@
     ],
     "2": [
       {
+        "surface": "And from that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -58,6 +70,22 @@
       {
         "surface": "kept David with him",
         "lemma": "laqach"
+      },
+      {
+        "surface": "and did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "let him",
+        "lemma": "natan"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to his father’s",
+        "lemma": "av"
       },
       {
         "surface": "house",
@@ -86,6 +114,10 @@
         "lemma": "ahavah"
       },
       {
+        "surface": "him",
+        "lemma": "et"
+      },
+      {
         "surface": "as himself",
         "lemma": "nephesh"
       }
@@ -102,6 +134,14 @@
       {
         "surface": "the robe",
         "lemma": "meil"
+      },
+      {
+        "surface": "he was wearing",
+        "lemma": "al"
+      },
+      {
+        "surface": "and gave",
+        "lemma": "natan"
       },
       {
         "surface": "it to David",
@@ -130,8 +170,16 @@
         "lemma": "david"
       },
       {
+        "surface": "marched out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "and prospered",
         "lemma": "sakhal"
+      },
+      {
+        "surface": "in everything",
+        "lemma": "kol"
       },
       {
         "surface": "Saul",
@@ -150,6 +198,10 @@
         "lemma": "sum"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "the men",
         "lemma": "enosh"
       },
@@ -166,6 +218,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -176,9 +232,25 @@
       {
         "surface": "officers",
         "lemma": "eved"
+      },
+      {
+        "surface": "as well",
+        "lemma": "gam"
       }
     ],
     "6": [
+      {
+        "surface": "As the troops",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "bo"
+      },
+      {
+        "surface": "were returning home",
+        "lemma": "shuv"
+      },
       {
         "surface": "after David",
         "lemma": "david"
@@ -196,12 +268,24 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "came out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the cities",
         "lemma": "ir"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "to meet",
+        "lemma": "qara"
       },
       {
         "surface": "King",
@@ -236,6 +320,10 @@
       {
         "surface": "And as the women danced",
         "lemma": "sachaq"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "amar"
       },
       {
         "surface": "they sang out",
@@ -276,8 +364,16 @@
         "lemma": "raa"
       },
       {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "song",
         "lemma": "davar"
+      },
+      {
+        "surface": "They have ascribed",
+        "lemma": "natan"
       },
       {
         "surface": "tens of thousands",
@@ -286,6 +382,14 @@
       {
         "surface": "to David",
         "lemma": "david"
+      },
+      {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "but only",
+        "lemma": "natan"
       },
       {
         "surface": "thousands",
@@ -305,6 +409,14 @@
       }
     ],
     "9": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "from that",
+        "lemma": "hu"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -346,6 +458,10 @@
       {
         "surface": "came",
         "lemma": "tsalach"
+      },
+      {
+        "surface": "upon",
+        "lemma": "el"
       },
       {
         "surface": "Saul",
@@ -402,6 +518,10 @@
         "lemma": "tul"
       },
       {
+        "surface": "thinking",
+        "lemma": "amar"
+      },
+      {
         "surface": "I will pin",
         "lemma": "nakhah"
       },
@@ -448,8 +568,24 @@
         "lemma": "david"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "with David",
+        "lemma": "im"
+      },
+      {
+        "surface": "but",
+        "lemma": "im"
       },
       {
         "surface": "had departed",
@@ -482,14 +618,30 @@
         "lemma": "eleph"
       },
       {
+        "surface": "David led",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the troops {out to battle",
         "lemma": "am"
+      },
+      {
+        "surface": "and back",
+        "lemma": "bo"
       }
     ],
     "14": [
       {
+        "surface": "and he continued",
+        "lemma": "hayah"
+      },
+      {
         "surface": "to prosper",
         "lemma": "sakhal"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "his ways",
@@ -498,12 +650,28 @@
       {
         "surface": "because the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "was with him",
+        "lemma": "im"
       }
     ],
     "15": [
       {
         "surface": "When Saul",
         "lemma": "shaul"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "David",
+        "lemma": "hu"
       },
       {
         "surface": "was very",
@@ -524,6 +692,10 @@
     ],
     "16": [
       {
+        "surface": "But all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -538,12 +710,36 @@
       {
         "surface": "David",
         "lemma": "david"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "he",
+        "lemma": "hu"
+      },
+      {
+        "surface": "was leading them out to battle",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and back",
+        "lemma": "bo"
       }
     ],
     "17": [
       {
         "surface": "Then Saul",
         "lemma": "shaul"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "David",
@@ -566,12 +762,20 @@
         "lemma": "merav"
       },
       {
+        "surface": "I will give her",
+        "lemma": "natan"
+      },
+      {
         "surface": "in marriage",
         "lemma": "ishshah"
       },
       {
         "surface": "Only",
         "lemma": "akh"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "valiant",
@@ -594,6 +798,18 @@
         "lemma": "shaul"
       },
       {
+        "surface": "was thinking",
+        "lemma": "amar"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "al"
+      },
+      {
+        "surface": "I need not raise",
+        "lemma": "hayah"
+      },
+      {
         "surface": "my hand",
         "lemma": "yad"
       },
@@ -604,12 +820,24 @@
       {
         "surface": "of the Philistines",
         "lemma": "pelishti"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       }
     ],
     "18": [
       {
         "surface": "And David",
         "lemma": "david"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Saul",
@@ -620,6 +848,10 @@
         "lemma": "mi"
       },
       {
+        "surface": "am I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "and what",
         "lemma": "mi"
       },
@@ -628,12 +860,24 @@
         "lemma": "chay"
       },
       {
+        "surface": "or my father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "clan",
         "lemma": "mishpachah"
       },
       {
         "surface": "in Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I should become",
+        "lemma": "hayah"
       },
       {
         "surface": "the son-in-law",
@@ -645,6 +889,18 @@
       }
     ],
     "19": [
+      {
+        "surface": "So when it was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
+      {
+        "surface": "to give",
+        "lemma": "natan"
+      },
       {
         "surface": "Saul’s",
         "lemma": "shaul"
@@ -660,6 +916,14 @@
       {
         "surface": "to David",
         "lemma": "david"
+      },
+      {
+        "surface": "she",
+        "lemma": "hu"
+      },
+      {
+        "surface": "was given",
+        "lemma": "natan"
       },
       {
         "surface": "in marriage",
@@ -718,8 +982,20 @@
     ],
     "21": [
       {
+        "surface": "I will give her",
+        "lemma": "natan"
+      },
+      {
         "surface": "Saul",
         "lemma": "shaul"
+      },
+      {
+        "surface": "thought",
+        "lemma": "amar"
+      },
+      {
+        "surface": "so that she may be",
+        "lemma": "hayah"
       },
       {
         "surface": "a snare",
@@ -734,8 +1010,20 @@
         "lemma": "pelishti"
       },
       {
+        "surface": "may be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "So Saul",
         "lemma": "shaul"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "David",
@@ -772,12 +1060,20 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
       {
         "surface": "privately",
         "lemma": "lat"
+      },
+      {
+        "surface": "and tell him",
+        "lemma": "amar"
       },
       {
         "surface": "Behold",
@@ -790,6 +1086,10 @@
       {
         "surface": "is pleased",
         "lemma": "chaphets"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "his servants",
@@ -826,6 +1126,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "words",
         "lemma": "davar"
       },
@@ -836,6 +1140,10 @@
       {
         "surface": "he",
         "lemma": "david"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "Does it seem trivial",
@@ -852,6 +1160,10 @@
       {
         "surface": "of the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
       },
       {
         "surface": "am a poor",
@@ -880,6 +1192,10 @@
         "lemma": "shaul"
       },
       {
+        "surface": "what",
+        "lemma": "elleh"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
@@ -892,6 +1208,14 @@
       {
         "surface": "Saul",
         "lemma": "shaul"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Say",
+        "lemma": "amar"
       },
       {
         "surface": "to David",
@@ -912,6 +1236,10 @@
       {
         "surface": "other dowry",
         "lemma": "mohar"
+      },
+      {
+        "surface": "but",
+        "lemma": "ki"
       },
       {
         "surface": "a hundred",
@@ -970,6 +1298,10 @@
       {
         "surface": "reported",
         "lemma": "nagad"
+      },
+      {
+        "surface": "these",
+        "lemma": "elleh"
       },
       {
         "surface": "terms",
@@ -1034,6 +1366,10 @@
         "lemma": "david"
       },
       {
+        "surface": "brought",
+        "lemma": "bo"
+      },
+      {
         "surface": "their foreskins",
         "lemma": "orlah"
       },
@@ -1058,6 +1394,10 @@
         "lemma": "shaul"
       },
       {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "his daughter",
         "lemma": "bat"
       },
@@ -1076,8 +1416,20 @@
         "lemma": "shaul"
       },
       {
+        "surface": "realized",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "was with",
+        "lemma": "im"
       },
       {
         "surface": "David",
@@ -1122,8 +1474,16 @@
         "lemma": "david"
       },
       {
+        "surface": "So from then on",
+        "lemma": "kol"
+      },
+      {
         "surface": "Saul",
         "lemma": "shaul"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "David’s",
@@ -1148,12 +1508,20 @@
         "lemma": "sar"
       },
       {
+        "surface": "came out for battle",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
       {
         "surface": "was more successful",
         "lemma": "sakhal"
+      },
+      {
+        "surface": "than all",
+        "lemma": "kol"
       },
       {
         "surface": "of Saul’s",
@@ -1180,6 +1548,6 @@
   "themeLemmas": [
     "shaul",
     "david",
-    "pelishti"
+    "hayah"
   ]
 }

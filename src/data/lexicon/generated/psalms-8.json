@@ -10,6 +10,10 @@
         "lemma": "natsach"
       },
       {
+        "surface": "According to",
+        "lemma": "al"
+      },
+      {
         "surface": "Gittith",
         "lemma": "gittit"
       },
@@ -42,12 +46,28 @@
         "lemma": "shem"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
       {
+        "surface": "You",
+        "lemma": "asher"
+      },
+      {
+        "surface": "have set",
+        "lemma": "natan"
+      },
+      {
         "surface": "Your glory",
         "lemma": "hod"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
       },
       {
         "surface": "the heavens",
@@ -76,6 +96,10 @@
         "lemma": "oz"
       },
       {
+        "surface": "on account of",
+        "lemma": "maan"
+      },
+      {
         "surface": "Your adversaries",
         "lemma": "tsarar"
       },
@@ -93,6 +117,14 @@
       }
     ],
     "3": [
+      {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I behold",
+        "lemma": "raah"
+      },
       {
         "surface": "Your heavens",
         "lemma": "shamayim"
@@ -114,6 +146,10 @@
         "lemma": "kokhav"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
         "surface": "You have set in place",
         "lemma": "kun"
       }
@@ -128,6 +164,10 @@
         "lemma": "enosh"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "You are mindful of him",
         "lemma": "zakhar"
       },
@@ -138,6 +178,10 @@
       {
         "surface": "of man",
         "lemma": "adam"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "You care for him",
@@ -184,6 +228,10 @@
         "lemma": "shit"
       },
       {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "under",
         "lemma": "tachat"
       },
@@ -194,12 +242,20 @@
     ],
     "7": [
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "sheep",
         "lemma": "tsoneh"
       },
       {
         "surface": "and oxen",
         "lemma": "eleph"
+      },
+      {
+        "surface": "and even",
+        "lemma": "gam"
       },
       {
         "surface": "the beasts",
@@ -262,14 +318,18 @@
         "lemma": "shem"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       }
     ]
   },
   "themeLemmas": [
+    "kol",
     "mah",
-    "yam",
-    "shem"
+    "ki"
   ]
 }

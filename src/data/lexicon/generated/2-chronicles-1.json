@@ -22,6 +22,10 @@
         "lemma": "chazaq"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "his kingdom",
         "lemma": "malkhut"
       },
@@ -32,6 +36,10 @@
       {
         "surface": "his God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "was with him",
+        "lemma": "im"
       },
       {
         "surface": "and highly",
@@ -46,6 +54,14 @@
       {
         "surface": "Then Solomon",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -68,8 +84,16 @@
         "lemma": "shaphat"
       },
       {
+        "surface": "and to every",
+        "lemma": "kol"
+      },
+      {
         "surface": "leader",
         "lemma": "nasi"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -78,12 +102,20 @@
       {
         "surface": "the heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of the families",
+        "lemma": "av"
       }
     ],
     "3": [
       {
         "surface": "And Solomon",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "and the whole",
+        "lemma": "kol"
       },
       {
         "surface": "assembly",
@@ -102,6 +134,14 @@
         "lemma": "givon"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "it was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the location of",
         "lemma": "sham"
       },
@@ -118,6 +158,10 @@
         "lemma": "moed"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -128,6 +172,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "had made",
+        "lemma": "asah"
       },
       {
         "surface": "in the wilderness",
@@ -168,6 +216,10 @@
         "lemma": "kun"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "he had pitched",
         "lemma": "natah"
       },
@@ -188,6 +240,10 @@
       {
         "surface": "altar",
         "lemma": "mizbeach"
+      },
+      {
+        "surface": "made by",
+        "lemma": "asah"
       },
       {
         "surface": "Bezalel",
@@ -260,6 +316,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the bronze",
         "lemma": "nechoshet"
       },
@@ -276,6 +336,10 @@
         "lemma": "moed"
       },
       {
+        "surface": "where",
+        "lemma": "al"
+      },
+      {
         "surface": "he offered",
         "lemma": "alah"
       },
@@ -290,6 +354,10 @@
     ],
     "7": [
       {
+        "surface": "That",
+        "lemma": "hu"
+      },
+      {
         "surface": "night",
         "lemma": "laylah"
       },
@@ -298,12 +366,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "appeared",
+        "lemma": "raah"
+      },
+      {
         "surface": "to Solomon",
         "lemma": "shelomoh"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Ask",
         "lemma": "shaal"
+      },
+      {
+        "surface": "and I will give it",
+        "lemma": "natan"
       }
     ],
     "8": [
@@ -312,8 +392,20 @@
         "lemma": "shelomoh"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "to God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
+        "surface": "have shown",
+        "lemma": "asah"
       },
       {
         "surface": "much",
@@ -322,6 +414,14 @@
       {
         "surface": "loving devotion",
         "lemma": "chesed"
+      },
+      {
+        "surface": "to",
+        "lemma": "im"
+      },
+      {
+        "surface": "my father",
+        "lemma": "av"
       },
       {
         "surface": "David",
@@ -354,6 +454,14 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "im"
+      },
+      {
+        "surface": "my father",
+        "lemma": "av"
+      },
+      {
         "surface": "David",
         "lemma": "david"
       },
@@ -362,8 +470,20 @@
         "lemma": "aman"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "have made me king",
         "lemma": "malakh"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "a people",
@@ -388,6 +508,10 @@
         "lemma": "attah"
       },
       {
+        "surface": "grant",
+        "lemma": "natan"
+      },
+      {
         "surface": "wisdom",
         "lemma": "chokhmah"
       },
@@ -396,8 +520,20 @@
         "lemma": "madda"
       },
       {
+        "surface": "so that I may lead",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "people",
         "lemma": "am"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "who",
@@ -406,6 +542,10 @@
       {
         "surface": "is able to govern",
         "lemma": "shaphat"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
       },
       {
         "surface": "great",
@@ -422,12 +562,36 @@
         "lemma": "elohim"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Solomon",
         "lemma": "shelomoh"
       },
       {
+        "surface": "Since",
+        "lemma": "yaan"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "in",
+        "lemma": "im"
+      },
+      {
         "surface": "your heart",
         "lemma": "levav"
+      },
+      {
+        "surface": "instead of",
+        "lemma": "lo"
       },
       {
         "surface": "requesting",
@@ -446,12 +610,24 @@
         "lemma": "kavod"
       },
       {
+        "surface": "or",
+        "lemma": "et"
+      },
+      {
         "surface": "death",
         "lemma": "nephesh"
       },
       {
         "surface": "for your enemies",
         "lemma": "sane"
+      },
+      {
+        "surface": "and since you have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "even",
+        "lemma": "gam"
       },
       {
         "surface": "requested",
@@ -486,6 +662,14 @@
         "lemma": "am"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
+        "surface": "whom",
+        "lemma": "asher"
+      },
+      {
         "surface": "I have made you king",
         "lemma": "malakh"
       }
@@ -500,6 +684,14 @@
         "lemma": "madda"
       },
       {
+        "surface": "have been granted",
+        "lemma": "natan"
+      },
+      {
+        "surface": "And I will also give",
+        "lemma": "natan"
+      },
+      {
         "surface": "riches",
         "lemma": "osher"
       },
@@ -512,12 +704,24 @@
         "lemma": "kavod"
       },
       {
+        "surface": "unlike",
+        "lemma": "lo"
+      },
+      {
+        "surface": "anything",
+        "lemma": "asher"
+      },
+      {
         "surface": "given to the kings",
         "lemma": "melekh"
       },
       {
         "surface": "before you",
         "lemma": "paneh"
+      },
+      {
+        "surface": "or",
+        "lemma": "hayah"
       },
       {
         "surface": "after you",
@@ -528,6 +732,10 @@
       {
         "surface": "So Solomon",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "went",
+        "lemma": "bo"
       },
       {
         "surface": "to Jerusalem",
@@ -556,6 +764,10 @@
       {
         "surface": "and he reigned",
         "lemma": "malakh"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "Israel",
@@ -600,6 +812,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "and also with",
+        "lemma": "im"
+      },
+      {
         "surface": "him",
         "lemma": "melekh"
       },
@@ -612,6 +828,10 @@
       {
         "surface": "The king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "made",
+        "lemma": "natan"
       },
       {
         "surface": "silver",
@@ -628,6 +848,10 @@
       {
         "surface": "as stones",
         "lemma": "even"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "cedar",
@@ -647,6 +871,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "Solomon’s",
+        "lemma": "asher"
+      },
       {
         "surface": "horses",
         "lemma": "sus"
@@ -726,6 +954,14 @@
         "lemma": "yad"
       },
       {
+        "surface": "exported them",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the kings",
         "lemma": "melekh"
       },
@@ -745,7 +981,7 @@
   },
   "themeLemmas": [
     "shelomoh",
-    "david",
-    "yerushalaim"
+    "al",
+    "natan"
   ]
 }
