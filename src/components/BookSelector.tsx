@@ -65,15 +65,16 @@ export default function BookSelector({ onClose, onSelect, initialTab }: Props) {
     fetchTopics().then(setTopics);
   }, []);
 
-  const books = useMemo(
-    () => allBooks.filter(b => b.testament === tab),
-    [allBooks, tab]
-  );
-
-  const filteredBooks = useMemo(
-    () => books.filter(b => b.name.toLowerCase().includes(query.toLowerCase())),
-    [books, query]
-  );
+  const filteredBooks = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    // While searching, match across the whole canon regardless of the active
+    // OT/NT tab — otherwise looking up a NT book from the OT tab (or vice
+    // versa) returns nothing. Mirrors the cross-category Topics search.
+    if (q) {
+      return allBooks.filter(b => b.name.toLowerCase().includes(q));
+    }
+    return allBooks.filter(b => b.testament === tab);
+  }, [allBooks, tab, query]);
 
   const filteredTopics = useMemo(() => {
     // When searching, match across all categories — same behavior as
