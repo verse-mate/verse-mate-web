@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "But",
+        "lemma": "ulam"
+      },
+      {
         "surface": "now",
         "lemma": "na"
       },
@@ -14,12 +18,20 @@
         "lemma": "iyyov"
       },
       {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "my speech",
         "lemma": "millah"
       },
       {
         "surface": "and listen",
         "lemma": "azan"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "my words",
@@ -92,6 +104,10 @@
         "lemma": "el"
       },
       {
+        "surface": "has made me",
+        "lemma": "asah"
+      },
+      {
         "surface": "and the breath",
         "lemma": "neshamah"
       },
@@ -105,6 +121,14 @@
       }
     ],
     "5": [
+      {
+        "surface": "Refute me",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
       {
         "surface": "you can",
         "lemma": "yakhol"
@@ -120,8 +144,20 @@
     ],
     "6": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am just like you before God",
         "lemma": "el"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "was also",
+        "lemma": "gam"
       },
       {
         "surface": "formed",
@@ -138,6 +174,10 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "fear of me",
         "lemma": "emah"
       },
@@ -146,12 +186,20 @@
         "lemma": "baat"
       },
       {
+        "surface": "nor",
+        "lemma": "lo"
+      },
+      {
         "surface": "will my hand",
         "lemma": "ekheph"
       },
       {
         "surface": "be heavy",
         "lemma": "kavad"
+      },
+      {
+        "surface": "upon you",
+        "lemma": "al"
       }
     ],
     "8": [
@@ -160,8 +208,16 @@
         "lemma": "akh"
       },
       {
+        "surface": "you have spoken",
+        "lemma": "amar"
+      },
+      {
         "surface": "in my hearing",
         "lemma": "ozen"
+      },
+      {
+        "surface": "and I have heard",
+        "lemma": "shama"
       },
       {
         "surface": "these very words",
@@ -169,6 +225,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
       {
         "surface": "am pure",
         "lemma": "zakh"
@@ -182,8 +242,16 @@
         "lemma": "pesah"
       },
       {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "am clean",
         "lemma": "chaph"
+      },
+      {
+        "surface": "with no",
+        "lemma": "lo"
       },
       {
         "surface": "iniquity",
@@ -202,6 +270,10 @@
       {
         "surface": "occasions",
         "lemma": "tenuah"
+      },
+      {
+        "surface": "against me",
+        "lemma": "al"
       },
       {
         "surface": "He counts me",
@@ -230,6 +302,10 @@
         "lemma": "shamar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my paths",
         "lemma": "orach"
       }
@@ -240,12 +316,24 @@
         "lemma": "hen"
       },
       {
+        "surface": "you are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "right",
         "lemma": "tsadaq"
       },
       {
+        "surface": "in this matter",
+        "lemma": "zot"
+      },
+      {
         "surface": "I will answer you",
         "lemma": "un"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "God",
@@ -270,8 +358,20 @@
         "lemma": "riv"
       },
       {
+        "surface": "to Him",
+        "lemma": "el"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "He answers",
         "lemma": "un"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
       },
       {
         "surface": "a man asks",
@@ -279,6 +379,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "God",
         "lemma": "el"
@@ -294,6 +398,10 @@
       {
         "surface": "and in another",
         "lemma": "shenayim"
+      },
+      {
+        "surface": "yet no one",
+        "lemma": "lo"
       },
       {
         "surface": "notices",
@@ -322,12 +430,20 @@
         "lemma": "naphal"
       },
       {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
         "surface": "men",
         "lemma": "enosh"
       },
       {
         "surface": "as they slumber",
         "lemma": "tenumah"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "their beds",
@@ -388,6 +504,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the Pit",
         "lemma": "shachat"
       },
@@ -408,6 +528,10 @@
       {
         "surface": "A man is also chastened",
         "lemma": "yakhach"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "his bed",
@@ -470,6 +594,10 @@
         "lemma": "roi"
       },
       {
+        "surface": "and his hidden",
+        "lemma": "lo"
+      },
+      {
         "surface": "bones",
         "lemma": "etsem"
       },
@@ -502,6 +630,10 @@
     ],
     "23": [
       {
+        "surface": "Yet if",
+        "lemma": "im"
+      },
+      {
         "surface": "there is",
         "lemma": "yesh"
       },
@@ -510,12 +642,20 @@
         "lemma": "maleakh"
       },
       {
+        "surface": "on his side",
+        "lemma": "al"
+      },
+      {
         "surface": "one",
         "lemma": "echad"
       },
       {
         "surface": "mediator",
         "lemma": "luts"
+      },
+      {
+        "surface": "in",
+        "lemma": "min"
       },
       {
         "surface": "a thousand",
@@ -538,6 +678,10 @@
       {
         "surface": "to be gracious",
         "lemma": "chanan"
+      },
+      {
+        "surface": "to him and say",
+        "lemma": "amar"
       },
       {
         "surface": "Spare him",
@@ -574,6 +718,10 @@
         "lemma": "noar"
       },
       {
+        "surface": "he returns",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to the days",
         "lemma": "yom"
       },
@@ -588,6 +736,10 @@
         "lemma": "atar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "God",
         "lemma": "eloah"
       },
@@ -596,12 +748,20 @@
         "lemma": "ratsah"
       },
       {
+        "surface": "he sees",
+        "lemma": "raah"
+      },
+      {
         "surface": "God’s face",
         "lemma": "paneh"
       },
       {
         "surface": "and shouts for joy",
         "lemma": "teruah"
+      },
+      {
+        "surface": "and God restores",
+        "lemma": "shuv"
       },
       {
         "surface": "His righteousness",
@@ -618,8 +778,16 @@
         "lemma": "shur"
       },
       {
+        "surface": "before",
+        "lemma": "al"
+      },
+      {
         "surface": "men",
         "lemma": "enosh"
+      },
+      {
+        "surface": "with these words",
+        "lemma": "amar"
       },
       {
         "surface": "I have sinned",
@@ -632,6 +800,10 @@
       {
         "surface": "what was right",
         "lemma": "yashar"
+      },
+      {
+        "surface": "yet I did not",
+        "lemma": "lo"
       },
       {
         "surface": "get what I deserved",
@@ -660,6 +832,10 @@
         "lemma": "chay"
       },
       {
+        "surface": "to see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the light",
         "lemma": "or"
       }
@@ -670,12 +846,24 @@
         "lemma": "hen"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "these things",
+        "lemma": "elleh"
+      },
+      {
         "surface": "God",
         "lemma": "el"
       },
       {
         "surface": "does",
         "lemma": "paal"
+      },
+      {
+        "surface": "to",
+        "lemma": "im"
       },
       {
         "surface": "a man",
@@ -692,8 +880,16 @@
     ],
     "30": [
       {
+        "surface": "to bring back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "his soul",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the Pit",
@@ -722,8 +918,16 @@
         "lemma": "iyyov"
       },
       {
+        "surface": "and listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "be silent",
         "lemma": "charash"
+      },
+      {
+        "surface": "and I",
+        "lemma": "anokhi"
       },
       {
         "surface": "will speak",
@@ -731,6 +935,10 @@
       }
     ],
     "32": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "you have",
         "lemma": "yesh"
@@ -740,8 +948,16 @@
         "lemma": "millah"
       },
       {
+        "surface": "answer me",
+        "lemma": "shuv"
+      },
+      {
         "surface": "speak up",
         "lemma": "davar"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "I would like",
@@ -754,8 +970,16 @@
     ],
     "33": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "not",
         "lemma": "ayin"
+      },
+      {
+        "surface": "then listen",
+        "lemma": "shama"
       },
       {
         "surface": "be quiet",
@@ -772,8 +996,8 @@
     ]
   },
   "themeLemmas": [
-    "shachat",
-    "nephesh",
-    "chay"
+    "lo",
+    "al",
+    "shuv"
   ]
 }

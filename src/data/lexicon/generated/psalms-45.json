@@ -10,6 +10,10 @@
         "lemma": "natsach"
       },
       {
+        "surface": "To the tune of",
+        "lemma": "al"
+      },
+      {
         "surface": "The Lilies",
         "lemma": "shushan"
       },
@@ -50,6 +54,14 @@
         "lemma": "davar"
       },
       {
+        "surface": "as I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "recite",
+        "lemma": "amar"
+      },
+      {
         "surface": "my verses",
         "lemma": "maaseh"
       },
@@ -60,6 +72,10 @@
       {
         "surface": "my tongue",
         "lemma": "lashon"
+      },
+      {
+        "surface": "is the pen",
+        "lemma": "et"
       },
       {
         "surface": "of a skillful",
@@ -92,6 +108,10 @@
         "lemma": "saphah"
       },
       {
+        "surface": "therefore",
+        "lemma": "al"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -108,6 +128,10 @@
       {
         "surface": "your sword",
         "lemma": "cherev"
+      },
+      {
+        "surface": "at",
+        "lemma": "al"
       },
       {
         "surface": "your side",
@@ -138,6 +162,10 @@
       {
         "surface": "in victory",
         "lemma": "tsalach"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "behalf",
@@ -254,6 +282,10 @@
         "lemma": "resah"
       },
       {
+        "surface": "therefore",
+        "lemma": "al"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -280,6 +312,10 @@
     ],
     "8": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "your garments are fragrant",
         "lemma": "beged"
       },
@@ -294,6 +330,10 @@
       {
         "surface": "and cassia",
         "lemma": "qetsiah"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "palaces",
@@ -348,8 +388,16 @@
     ],
     "10": [
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "O daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "Consider",
+        "lemma": "raah"
       },
       {
         "surface": "and incline",
@@ -366,6 +414,10 @@
       {
         "surface": "your people",
         "lemma": "am"
+      },
+      {
+        "surface": "and your father’s",
+        "lemma": "av"
       },
       {
         "surface": "house",
@@ -388,6 +440,14 @@
       {
         "surface": "bow",
         "lemma": "shachah"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "he",
+        "lemma": "hu"
       },
       {
         "surface": "is your lord",
@@ -426,12 +486,20 @@
     ],
     "13": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "glorious",
         "lemma": "kavod"
       },
       {
         "surface": "is the princess",
         "lemma": "bat"
+      },
+      {
+        "surface": "in her chamber",
+        "lemma": "penimah"
       },
       {
         "surface": "her gown",
@@ -466,6 +534,10 @@
       {
         "surface": "companions",
         "lemma": "reah"
+      },
+      {
+        "surface": "are brought",
+        "lemma": "bo"
       }
     ],
     "15": [
@@ -480,6 +552,10 @@
       {
         "surface": "and gladness",
         "lemma": "gil"
+      },
+      {
+        "surface": "they enter",
+        "lemma": "bo"
       },
       {
         "surface": "the palace",
@@ -500,12 +576,20 @@
         "lemma": "tachat"
       },
       {
+        "surface": "your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "you will make them",
         "lemma": "shit"
       },
       {
         "surface": "princes",
         "lemma": "sar"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -522,8 +606,16 @@
         "lemma": "shem"
       },
       {
+        "surface": "through all",
+        "lemma": "kol"
+      },
+      {
         "surface": "generations",
         "lemma": "dor"
+      },
+      {
+        "surface": "therefore",
+        "lemma": "al"
       },
       {
         "surface": "the nations",
@@ -544,8 +636,8 @@
     ]
   },
   "themeLemmas": [
-    "yaval",
-    "yamin",
-    "tsedeq"
+    "al",
+    "kol",
+    "yaval"
   ]
 }

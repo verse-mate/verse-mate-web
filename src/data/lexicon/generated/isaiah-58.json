@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "Cry",
+        "lemma": "qara"
+      },
+      {
         "surface": "aloud",
         "lemma": "garon"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "hold back",
@@ -52,6 +60,10 @@
     ],
     "2": [
       {
+        "surface": "For",
+        "lemma": "et"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -80,8 +92,20 @@
         "lemma": "goy"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "does",
+        "lemma": "asah"
+      },
+      {
         "surface": "what is right",
         "lemma": "tsedaqah"
+      },
+      {
+        "surface": "and does not",
+        "lemma": "lo"
       },
       {
         "surface": "forsake",
@@ -130,12 +154,24 @@
         "lemma": "tsum"
       },
       {
+        "surface": "and You have not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "Why have we humbled",
         "lemma": "anah"
       },
       {
         "surface": "ourselves",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "and You have not",
+        "lemma": "lo"
       },
       {
         "surface": "noticed",
@@ -164,6 +200,10 @@
       {
         "surface": "and you oppress",
         "lemma": "nagas"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "your workers",
@@ -196,6 +236,10 @@
         "lemma": "egroph"
       },
       {
+        "surface": "You cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "fast",
         "lemma": "tsum"
       },
@@ -208,11 +252,23 @@
         "lemma": "qol"
       },
       {
+        "surface": "be heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "on high",
         "lemma": "marom"
       }
     ],
     "5": [
+      {
+        "surface": "Is",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
+      },
       {
         "surface": "the fast",
         "lemma": "tsom"
@@ -250,12 +306,24 @@
         "lemma": "agmon"
       },
       {
+        "surface": "and to spread out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "sackcloth",
         "lemma": "saq"
       },
       {
         "surface": "and ashes",
         "lemma": "epher"
+      },
+      {
+        "surface": "Will you call",
+        "lemma": "qara"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
       },
       {
         "surface": "a fast",
@@ -275,6 +343,14 @@
       }
     ],
     "6": [
+      {
+        "surface": "Isn’t",
+        "lemma": "lo"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
+      },
       {
         "surface": "the fast",
         "lemma": "tsom"
@@ -324,11 +400,19 @@
         "lemma": "nataq"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "yoke",
         "lemma": "motah"
       }
     ],
     "7": [
+      {
+        "surface": "Isn’t it",
+        "lemma": "lo"
+      },
       {
         "surface": "to share",
         "lemma": "paras"
@@ -350,6 +434,10 @@
         "lemma": "marud"
       },
       {
+        "surface": "into",
+        "lemma": "bo"
+      },
+      {
         "surface": "your home",
         "lemma": "bet"
       },
@@ -362,6 +450,18 @@
         "lemma": "arom"
       },
       {
+        "surface": "when",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you see him",
+        "lemma": "raah"
+      },
+      {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to turn away",
         "lemma": "alam"
       },
@@ -371,6 +471,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Then",
+        "lemma": "az"
+      },
       {
         "surface": "your light",
         "lemma": "or"
@@ -422,6 +526,14 @@
     ],
     "9": [
       {
+        "surface": "Then",
+        "lemma": "az"
+      },
+      {
+        "surface": "you will call",
+        "lemma": "qara"
+      },
+      {
         "surface": "and the LORD",
         "lemma": "yehovah"
       },
@@ -434,8 +546,16 @@
         "lemma": "shava"
       },
       {
+        "surface": "and He will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "Here I am",
         "lemma": "hen"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
       },
       {
         "surface": "you remove",
@@ -546,6 +666,10 @@
         "lemma": "etsem"
       },
       {
+        "surface": "You will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a well-watered",
         "lemma": "raveh"
       },
@@ -562,11 +686,19 @@
         "lemma": "mayim"
       },
       {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
         "surface": "fail",
         "lemma": "kazav"
       }
     ],
     "12": [
+      {
+        "surface": "Your people",
+        "lemma": "min"
+      },
       {
         "surface": "will rebuild",
         "lemma": "banah"
@@ -592,6 +724,10 @@
         "lemma": "dor"
       },
       {
+        "surface": "you will be called",
+        "lemma": "qara"
+      },
+      {
         "surface": "Repairer",
         "lemma": "gadar"
       },
@@ -600,11 +736,27 @@
         "lemma": "perets"
       },
       {
+        "surface": "Restorer",
+        "lemma": "shuv"
+      },
+      {
         "surface": "of the Streets",
         "lemma": "nativ"
+      },
+      {
+        "surface": "of Dwelling",
+        "lemma": "yashav"
       }
     ],
     "13": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "you turn",
+        "lemma": "shuv"
+      },
       {
         "surface": "your foot",
         "lemma": "regel"
@@ -612,6 +764,10 @@
       {
         "surface": "from breaking the Sabbath",
         "lemma": "shabbat"
+      },
+      {
+        "surface": "from doing",
+        "lemma": "asah"
       },
       {
         "surface": "as you please",
@@ -624,6 +780,10 @@
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "if you call",
+        "lemma": "qara"
       },
       {
         "surface": "the Sabbath",
@@ -650,6 +810,10 @@
         "lemma": "kavad"
       },
       {
+        "surface": "by not going",
+        "lemma": "asah"
+      },
+      {
         "surface": "your own way",
         "lemma": "derekh"
       },
@@ -672,8 +836,16 @@
     ],
     "14": [
       {
+        "surface": "then",
+        "lemma": "az"
+      },
+      {
         "surface": "you will delight",
         "lemma": "anag"
+      },
+      {
+        "surface": "yourself in",
+        "lemma": "al"
       },
       {
         "surface": "the LORD",
@@ -682,6 +854,10 @@
       {
         "surface": "and I will make you ride",
         "lemma": "rakhav"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the heights",
@@ -700,8 +876,16 @@
         "lemma": "nachalah"
       },
       {
+        "surface": "of your father",
+        "lemma": "av"
+      },
+      {
         "surface": "Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "the mouth",
@@ -718,8 +902,8 @@
     ]
   },
   "themeLemmas": [
-    "nephesh",
-    "tsom",
-    "tsum"
+    "lo",
+    "qara",
+    "nephesh"
   ]
 }

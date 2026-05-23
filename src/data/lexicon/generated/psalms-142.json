@@ -14,6 +14,10 @@
         "lemma": "david"
       },
       {
+        "surface": "when he was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in the cave",
         "lemma": "mearah"
       },
@@ -30,12 +34,20 @@
         "lemma": "qol"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "I lift my voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -82,6 +94,14 @@
         "lemma": "ataph"
       },
       {
+        "surface": "within me",
+        "lemma": "al"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -116,6 +136,10 @@
         "lemma": "yamin"
       },
       {
+        "surface": "and see",
+        "lemma": "raah"
+      },
+      {
         "surface": "no one",
         "lemma": "ayin"
       },
@@ -130,6 +154,10 @@
       {
         "surface": "refuge",
         "lemma": "manos"
+      },
+      {
+        "surface": "for me",
+        "lemma": "min"
       },
       {
         "surface": "no one",
@@ -150,8 +178,16 @@
         "lemma": "zaaq"
       },
       {
+        "surface": "to You",
+        "lemma": "el"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
       },
       {
         "surface": "are my refuge",
@@ -176,8 +212,16 @@
         "lemma": "qashav"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "my cry",
         "lemma": "rinnah"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "I am brought",
@@ -192,8 +236,16 @@
         "lemma": "natsal"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "my pursuers",
         "lemma": "radaph"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "they are too strong for me",
@@ -201,6 +253,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "Free",
+        "lemma": "yatsa"
+      },
       {
         "surface": "my soul",
         "lemma": "nephesh"
@@ -226,14 +282,22 @@
         "lemma": "katar"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "of Your goodness",
         "lemma": "gamal"
+      },
+      {
+        "surface": "to me",
+        "lemma": "al"
       }
     ]
   },
   "themeLemmas": [
+    "ki",
     "zaaq",
-    "qol",
-    "paneh"
+    "qol"
   ]
 }

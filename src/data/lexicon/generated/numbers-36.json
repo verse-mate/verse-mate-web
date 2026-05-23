@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Now the family",
+        "lemma": "av"
+      },
+      {
         "surface": "heads",
         "lemma": "rosh"
       },
@@ -72,6 +76,10 @@
     ],
     "2": [
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "When the LORD",
         "lemma": "yehovah"
       },
@@ -82,6 +90,10 @@
       {
         "surface": "my lord",
         "lemma": "adon"
+      },
+      {
+        "surface": "to give",
+        "lemma": "natan"
       },
       {
         "surface": "the land",
@@ -112,6 +124,10 @@
         "lemma": "adon"
       },
       {
+        "surface": "to give",
+        "lemma": "natan"
+      },
+      {
         "surface": "the inheritance",
         "lemma": "nachalah"
       },
@@ -129,6 +145,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "But if they marry",
+        "lemma": "hayah"
+      },
       {
         "surface": "any of the men",
         "lemma": "echad"
@@ -158,12 +178,28 @@
         "lemma": "nachalah"
       },
       {
+        "surface": "of our fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "and added",
         "lemma": "yasaph"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "the tribe",
         "lemma": "matteh"
+      },
+      {
+        "surface": "into which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "they marry",
+        "lemma": "hayah"
       },
       {
         "surface": "allotted",
@@ -180,12 +216,20 @@
     ],
     "4": [
       {
+        "surface": "And when",
+        "lemma": "im"
+      },
+      {
         "surface": "the Jubilee",
         "lemma": "yovel"
       },
       {
         "surface": "for the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "comes",
+        "lemma": "hayah"
       },
       {
         "surface": "their inheritance",
@@ -196,8 +240,20 @@
         "lemma": "yasaph"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "the tribe",
         "lemma": "matteh"
+      },
+      {
+        "surface": "into which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "they marry",
+        "lemma": "hayah"
       },
       {
         "surface": "and",
@@ -210,9 +266,17 @@
       {
         "surface": "from the tribe",
         "lemma": "matteh"
+      },
+      {
+        "surface": "of our fathers",
+        "lemma": "av"
       }
     ],
     "5": [
+      {
+        "surface": "So at",
+        "lemma": "al"
+      },
       {
         "surface": "the word",
         "lemma": "peh"
@@ -256,6 +320,14 @@
     ],
     "6": [
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "is what",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -272,6 +344,10 @@
         "lemma": "tselophchad"
       },
       {
+        "surface": "They may marry",
+        "lemma": "hayah"
+      },
+      {
         "surface": "anyone they please",
         "lemma": "tov"
       },
@@ -280,15 +356,27 @@
         "lemma": "akh"
       },
       {
+        "surface": "they marry",
+        "lemma": "hayah"
+      },
+      {
         "surface": "within a clan",
         "lemma": "mishpachah"
       },
       {
         "surface": "of the tribe",
         "lemma": "matteh"
+      },
+      {
+        "surface": "of their father",
+        "lemma": "av"
       }
     ],
     "7": [
+      {
+        "surface": "No",
+        "lemma": "lo"
+      },
       {
         "surface": "inheritance",
         "lemma": "nachalah"
@@ -306,8 +394,16 @@
         "lemma": "matteh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "tribe",
         "lemma": "matteh"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "each",
@@ -332,9 +428,17 @@
       {
         "surface": "of the tribe",
         "lemma": "matteh"
+      },
+      {
+        "surface": "of his fathers",
+        "lemma": "av"
       }
     ],
     "8": [
+      {
+        "surface": "Every",
+        "lemma": "kol"
+      },
       {
         "surface": "daughter",
         "lemma": "bat"
@@ -360,12 +464,24 @@
         "lemma": "matteh"
       },
       {
+        "surface": "must marry",
+        "lemma": "hayah"
+      },
+      {
         "surface": "within a clan",
         "lemma": "mishpachah"
       },
       {
         "surface": "of the tribe",
         "lemma": "matteh"
+      },
+      {
+        "surface": "of her father",
+        "lemma": "av"
+      },
+      {
+        "surface": "so that",
+        "lemma": "maan"
       },
       {
         "surface": "every",
@@ -382,9 +498,17 @@
       {
         "surface": "the inheritance",
         "lemma": "nachalah"
+      },
+      {
+        "surface": "of his fathers",
+        "lemma": "av"
       }
     ],
     "9": [
+      {
+        "surface": "No",
+        "lemma": "lo"
+      },
       {
         "surface": "inheritance",
         "lemma": "nachalah"
@@ -404,6 +528,10 @@
       {
         "surface": "another",
         "lemma": "acher"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "each",
@@ -438,6 +566,14 @@
       {
         "surface": "of Zelophehad",
         "lemma": "tselophchad"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -496,6 +632,10 @@
     ],
     "12": [
       {
+        "surface": "They married",
+        "lemma": "hayah"
+      },
+      {
         "surface": "within the clans",
         "lemma": "mishpachah"
       },
@@ -520,8 +660,20 @@
         "lemma": "nachalah"
       },
       {
+        "surface": "remained",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "within",
+        "lemma": "al"
+      },
+      {
         "surface": "the tribe",
         "lemma": "matteh"
+      },
+      {
+        "surface": "of their father’s",
+        "lemma": "av"
       },
       {
         "surface": "clan",
@@ -530,12 +682,20 @@
     ],
     "13": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the commandments",
         "lemma": "mitsvah"
       },
       {
         "surface": "and ordinances",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -566,6 +726,10 @@
         "lemma": "moav"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the Jordan",
         "lemma": "yarden"
       },
@@ -578,6 +742,6 @@
   "themeLemmas": [
     "nachalah",
     "matteh",
-    "tsavah"
+    "hayah"
   ]
 }

@@ -14,6 +14,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
       }
@@ -28,12 +32,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "to designate",
+        "lemma": "natan"
+      },
+      {
         "surface": "the cities",
         "lemma": "ir"
       },
       {
         "surface": "of refuge",
         "lemma": "miqlat"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
       },
       {
         "surface": "I instructed",
@@ -78,6 +90,10 @@
         "lemma": "sham"
       },
       {
+        "surface": "These will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "refuge",
         "lemma": "miqlat"
       },
@@ -96,8 +112,16 @@
         "lemma": "nus"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "one",
         "lemma": "echad"
+      },
+      {
+        "surface": "of these",
+        "lemma": "elleh"
       },
       {
         "surface": "cities",
@@ -136,15 +160,35 @@
         "lemma": "asaph"
       },
       {
+        "surface": "him",
+        "lemma": "et"
+      },
+      {
         "surface": "into the city",
         "lemma": "ir"
       },
       {
+        "surface": "and give",
+        "lemma": "natan"
+      },
+      {
         "surface": "a place",
         "lemma": "maqom"
+      },
+      {
+        "surface": "to live",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "among them",
+        "lemma": "im"
       }
     ],
     "5": [
+      {
+        "surface": "Now if",
+        "lemma": "ki"
+      },
       {
         "surface": "the avenger",
         "lemma": "gaal"
@@ -156,6 +200,10 @@
       {
         "surface": "pursues him",
         "lemma": "radaph"
+      },
+      {
+        "surface": "they must not",
+        "lemma": "lo"
       },
       {
         "surface": "surrender",
@@ -170,6 +218,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "that man killed",
         "lemma": "nakhah"
       },
@@ -180,6 +232,10 @@
       {
         "surface": "accidentally",
         "lemma": "beli"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "vvv",
@@ -196,8 +252,20 @@
     ],
     "6": [
       {
+        "surface": "He is to stay",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "in that",
+        "lemma": "hu"
+      },
+      {
         "surface": "city",
         "lemma": "ir"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "he stands",
@@ -216,6 +284,10 @@
         "lemma": "edah"
       },
       {
+        "surface": "and until",
+        "lemma": "ad"
+      },
+      {
         "surface": "the death",
         "lemma": "mavet"
       },
@@ -228,20 +300,44 @@
         "lemma": "kohen"
       },
       {
+        "surface": "serving",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "at that",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "time",
         "lemma": "yom"
+      },
+      {
+        "surface": "Then",
+        "lemma": "az"
       },
       {
         "surface": "the manslayer",
         "lemma": "ratsach"
       },
       {
+        "surface": "may return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to his own home",
         "lemma": "bet"
       },
       {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
         "surface": "the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "from which",
+        "lemma": "asher"
       },
       {
         "surface": "he fled",
@@ -290,6 +386,10 @@
         "lemma": "qiryatarba"
       },
       {
+        "surface": "that is",
+        "lemma": "hu"
+      },
+      {
         "surface": "Hebron",
         "lemma": "chevron"
       },
@@ -318,6 +418,10 @@
       {
         "surface": "of Jericho",
         "lemma": "yericho"
+      },
+      {
+        "surface": "they designated",
+        "lemma": "natan"
       },
       {
         "surface": "Bezer",
@@ -356,6 +460,10 @@
         "lemma": "gad"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "Golan",
         "lemma": "golan"
       },
@@ -374,12 +482,24 @@
     ],
     "9": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the cities",
         "lemma": "ir"
       },
       {
         "surface": "appointed",
         "lemma": "muadah"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "the Israelites",
@@ -392,6 +512,10 @@
       {
         "surface": "among them",
         "lemma": "tavekh"
+      },
+      {
+        "surface": "so that anyone",
+        "lemma": "kol"
       },
       {
         "surface": "who kills",
@@ -414,6 +538,10 @@
         "lemma": "sham"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "die",
         "lemma": "mut"
       },
@@ -428,6 +556,10 @@
       {
         "surface": "of blood",
         "lemma": "dam"
+      },
+      {
+        "surface": "prior",
+        "lemma": "ad"
       },
       {
         "surface": "to standing trial",
@@ -446,6 +578,6 @@
   "themeLemmas": [
     "nus",
     "ratsach",
-    "nakhah"
+    "natan"
   ]
 }

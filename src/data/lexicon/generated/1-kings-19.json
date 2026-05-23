@@ -18,12 +18,32 @@
         "lemma": "izevel"
       },
       {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "Elijah",
         "lemma": "eliyyah"
       },
       {
+        "surface": "had done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and how",
+        "lemma": "asher"
+      },
+      {
         "surface": "he had killed",
         "lemma": "harag"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the prophets",
@@ -48,12 +68,24 @@
         "lemma": "maleakh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Elijah",
         "lemma": "eliyyah"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "May the gods",
         "lemma": "elohim"
+      },
+      {
+        "surface": "deal with me",
+        "lemma": "asah"
       },
       {
         "surface": "and ever so",
@@ -62,6 +94,14 @@
       {
         "surface": "severely",
         "lemma": "yasaph"
+      },
+      {
+        "surface": "if",
+        "lemma": "ki"
+      },
+      {
+        "surface": "by this time",
+        "lemma": "et"
       },
       {
         "surface": "tomorrow",
@@ -86,12 +126,24 @@
     ],
     "3": [
       {
+        "surface": "And Elijah was afraid",
+        "lemma": "raah"
+      },
+      {
         "surface": "and ran",
         "lemma": "halakh"
       },
       {
+        "surface": "for",
+        "lemma": "el"
+      },
+      {
         "surface": "his life",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "When he came",
+        "lemma": "bo"
       },
       {
         "surface": "vvv",
@@ -120,6 +172,10 @@
     ],
     "4": [
       {
+        "surface": "while he himself",
+        "lemma": "hu"
+      },
+      {
         "surface": "went",
         "lemma": "halakh"
       },
@@ -134,6 +190,10 @@
       {
         "surface": "into the wilderness",
         "lemma": "midbar"
+      },
+      {
+        "surface": "He sat down",
+        "lemma": "yashav"
       },
       {
         "surface": "under",
@@ -168,6 +228,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Take",
         "lemma": "laqach"
       },
@@ -176,8 +240,24 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I am",
+        "lemma": "anokhi"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "better",
         "lemma": "tov"
+      },
+      {
+        "surface": "than my fathers",
+        "lemma": "av"
       }
     ],
     "5": [
@@ -208,6 +288,10 @@
       {
         "surface": "touched",
         "lemma": "naga"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "Get up",
@@ -258,6 +342,10 @@
       {
         "surface": "and lay down",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "again",
+        "lemma": "shuv"
       }
     ],
     "7": [
@@ -274,8 +362,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and touched",
         "lemma": "naga"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "Get up",
@@ -292,6 +388,10 @@
       {
         "surface": "will be too much",
         "lemma": "rav"
+      },
+      {
+        "surface": "for you",
+        "lemma": "min"
       }
     ],
     "8": [
@@ -310,6 +410,10 @@
       {
         "surface": "And strengthened",
         "lemma": "koach"
+      },
+      {
+        "surface": "by that",
+        "lemma": "hu"
       },
       {
         "surface": "food",
@@ -336,6 +440,10 @@
         "lemma": "laylah"
       },
       {
+        "surface": "until he reached",
+        "lemma": "ad"
+      },
+      {
         "surface": "Horeb",
         "lemma": "chorev"
       },
@@ -354,6 +462,10 @@
         "lemma": "sham"
       },
       {
+        "surface": "Elijah entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "a cave",
         "lemma": "mearah"
       },
@@ -368,6 +480,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came to him",
+        "lemma": "el"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "What",
@@ -398,6 +518,14 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "but",
+        "lemma": "ki"
       },
       {
         "surface": "the Israelites",
@@ -432,6 +560,10 @@
         "lemma": "cherev"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am the only one",
         "lemma": "bad"
       },
@@ -449,6 +581,14 @@
       }
     ],
     "11": [
+      {
+        "surface": "Then the LORD said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Go out",
+        "lemma": "yatsa"
+      },
       {
         "surface": "and stand",
         "lemma": "amad"
@@ -518,6 +658,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "was not",
+        "lemma": "lo"
+      },
+      {
         "surface": "in the wind",
         "lemma": "ruach"
       },
@@ -536,6 +680,10 @@
       {
         "surface": "but the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "was not",
+        "lemma": "lo"
       },
       {
         "surface": "in the earthquake",
@@ -558,6 +706,10 @@
       {
         "surface": "but the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "was not",
+        "lemma": "lo"
       },
       {
         "surface": "in the fire",
@@ -590,6 +742,10 @@
         "lemma": "eliyyah"
       },
       {
+        "surface": "heard it",
+        "lemma": "shama"
+      },
+      {
         "surface": "he wrapped",
         "lemma": "lut"
       },
@@ -600,6 +756,10 @@
       {
         "surface": "in his cloak",
         "lemma": "adderet"
+      },
+      {
+        "surface": "and went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "and stood",
@@ -620,6 +780,14 @@
       {
         "surface": "a voice came",
         "lemma": "qol"
+      },
+      {
+        "surface": "to him",
+        "lemma": "el"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "What",
@@ -650,6 +818,14 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "he replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "but",
+        "lemma": "ki"
       },
       {
         "surface": "the Israelites",
@@ -684,6 +860,10 @@
         "lemma": "cherev"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am the only one",
         "lemma": "bad"
       },
@@ -706,8 +886,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to him",
+        "lemma": "el"
+      },
+      {
         "surface": "Go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "back",
+        "lemma": "shuv"
       },
       {
         "surface": "by the way you came",
@@ -722,6 +914,10 @@
         "lemma": "dammeseq"
       },
       {
+        "surface": "When you arrive",
+        "lemma": "bo"
+      },
+      {
         "surface": "you are to anoint",
         "lemma": "mashach"
       },
@@ -734,11 +930,19 @@
         "lemma": "melekh"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "Aram",
         "lemma": "aram"
       }
     ],
     "16": [
+      {
+        "surface": "vvv",
+        "lemma": "et"
+      },
       {
         "surface": "You are also to anoint",
         "lemma": "mashach"
@@ -758,6 +962,10 @@
       {
         "surface": "as king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "Israel",
@@ -793,6 +1001,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "Then",
+        "lemma": "hayah"
+      },
       {
         "surface": "Jehu",
         "lemma": "yehu"
@@ -852,8 +1064,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "whose",
+        "lemma": "asher"
+      },
+      {
         "surface": "knees",
         "lemma": "berekh"
+      },
+      {
+        "surface": "have not",
+        "lemma": "lo"
       },
       {
         "surface": "bowed",
@@ -864,8 +1088,16 @@
         "lemma": "baal"
       },
       {
+        "surface": "and whose",
+        "lemma": "kol"
+      },
+      {
         "surface": "mouths",
         "lemma": "peh"
+      },
+      {
+        "surface": "have not",
+        "lemma": "lo"
       },
       {
         "surface": "kissed",
@@ -894,6 +1126,10 @@
         "lemma": "shaphat"
       },
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "was plowing",
         "lemma": "charash"
       },
@@ -910,6 +1146,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "and he",
+        "lemma": "hu"
+      },
+      {
         "surface": "was with the twelfth team",
         "lemma": "shenayim"
       },
@@ -922,12 +1162,20 @@
         "lemma": "avar"
       },
       {
+        "surface": "by him",
+        "lemma": "el"
+      },
+      {
         "surface": "and threw",
         "lemma": "shalakh"
       },
       {
         "surface": "his cloak",
         "lemma": "adderet"
+      },
+      {
+        "surface": "around him",
+        "lemma": "el"
       }
     ],
     "20": [
@@ -952,12 +1200,20 @@
         "lemma": "eliyyah"
       },
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Please",
         "lemma": "na"
       },
       {
         "surface": "let me kiss",
         "lemma": "nashaq"
+      },
+      {
+        "surface": "my father",
+        "lemma": "av"
       },
       {
         "surface": "and mother goodbye",
@@ -976,11 +1232,31 @@
         "lemma": "halakh"
       },
       {
+        "surface": "back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "Elijah replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "have I done",
+        "lemma": "asah"
       }
     ],
     "21": [
+      {
+        "surface": "So Elisha turned back",
+        "lemma": "shuv"
+      },
       {
         "surface": "from him",
         "lemma": "achar"
@@ -1018,6 +1294,10 @@
         "lemma": "basar"
       },
       {
+        "surface": "and gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "it to the people",
         "lemma": "am"
       },
@@ -1044,8 +1324,8 @@
     ]
   },
   "themeLemmas": [
+    "amar",
     "halakh",
-    "eliyyah",
-    "nephesh"
+    "eliyyah"
   ]
 }

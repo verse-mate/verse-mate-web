@@ -14,6 +14,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -40,8 +44,28 @@
         "lemma": "kenaan"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "am giving",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "From each",
+        "lemma": "kol"
+      },
+      {
+        "surface": "of their fathers’",
+        "lemma": "av"
       },
       {
         "surface": "tribes",
@@ -66,6 +90,10 @@
     ],
     "3": [
       {
+        "surface": "So at",
+        "lemma": "al"
+      },
+      {
         "surface": "the command",
         "lemma": "peh"
       },
@@ -82,12 +110,20 @@
         "lemma": "shalach"
       },
       {
+        "surface": "out",
+        "lemma": "et"
+      },
+      {
         "surface": "from the Wilderness",
         "lemma": "midbar"
       },
       {
         "surface": "of Paran",
         "lemma": "paran"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "the men",
@@ -107,6 +143,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "and these",
+        "lemma": "elleh"
+      },
       {
         "surface": "were their names",
         "lemma": "shem"
@@ -322,6 +362,10 @@
         "lemma": "matteh"
       },
       {
+        "surface": "of Asher",
+        "lemma": "asher"
+      },
+      {
         "surface": "Sethur",
         "lemma": "setur"
       },
@@ -380,6 +424,10 @@
     ],
     "16": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "were the names",
         "lemma": "shem"
       },
@@ -408,6 +456,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "gave",
+        "lemma": "qara"
+      },
+      {
         "surface": "to Hoshea",
         "lemma": "hoshea"
       },
@@ -434,6 +486,10 @@
         "lemma": "shalach"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "to spy out",
         "lemma": "tur"
       },
@@ -444,6 +500,14 @@
       {
         "surface": "of Canaan",
         "lemma": "kenaan"
+      },
+      {
+        "surface": "he told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "them",
+        "lemma": "el"
       },
       {
         "surface": "Go up",
@@ -464,12 +528,24 @@
     ],
     "18": [
       {
+        "surface": "See",
+        "lemma": "raah"
+      },
+      {
         "surface": "what",
         "lemma": "mah"
       },
       {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "is like",
+        "lemma": "hu"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "whether its people",
@@ -488,6 +564,10 @@
         "lemma": "meat"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "many",
         "lemma": "rav"
       }
@@ -498,8 +578,24 @@
         "lemma": "erets"
       },
       {
+        "surface": "where",
+        "lemma": "asher"
+      },
+      {
+        "surface": "they",
+        "lemma": "hu"
+      },
+      {
+        "surface": "live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "bad",
@@ -510,8 +606,24 @@
         "lemma": "ir"
       },
       {
+        "surface": "where",
+        "lemma": "asher"
+      },
+      {
+        "surface": "they",
+        "lemma": "hu"
+      },
+      {
+        "surface": "dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "open camps",
         "lemma": "machaneh"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "fortifications",
@@ -528,6 +640,10 @@
         "lemma": "shamen"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "unproductive",
         "lemma": "razeh"
       },
@@ -538,6 +654,10 @@
       {
         "surface": "trees",
         "lemma": "ets"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "not",
@@ -594,8 +714,16 @@
         "lemma": "tsin"
       },
       {
+        "surface": "as",
+        "lemma": "ad"
+      },
+      {
         "surface": "far as Rehob",
         "lemma": "rechov"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "bo"
       },
       {
         "surface": "toward Lebo-hamath",
@@ -610,6 +738,14 @@
       {
         "surface": "through the Negev",
         "lemma": "negev"
+      },
+      {
+        "surface": "and came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "Hebron",
@@ -670,6 +806,14 @@
     ],
     "23": [
       {
+        "surface": "When they came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "the Valley",
         "lemma": "nachal"
       },
@@ -710,6 +854,10 @@
         "lemma": "shenayim"
       },
       {
+        "surface": "They also took some",
+        "lemma": "min"
+      },
+      {
         "surface": "pomegranates",
         "lemma": "rimmon"
       },
@@ -719,6 +867,10 @@
       }
     ],
     "24": [
+      {
+        "surface": "Because of",
+        "lemma": "al"
+      },
       {
         "surface": "the cluster",
         "lemma": "eshkol"
@@ -736,8 +888,16 @@
         "lemma": "sham"
       },
       {
+        "surface": "that",
+        "lemma": "hu"
+      },
+      {
         "surface": "place",
         "lemma": "maqom"
+      },
+      {
+        "surface": "was called",
+        "lemma": "qara"
       },
       {
         "surface": "the Valley",
@@ -762,6 +922,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "the men returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from spying out",
         "lemma": "tur"
       },
@@ -776,6 +940,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -784,12 +952,20 @@
         "lemma": "aharon"
       },
       {
+        "surface": "and the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "in",
+        "lemma": "el"
       },
       {
         "surface": "the Wilderness",
@@ -804,12 +980,28 @@
         "lemma": "qadesh"
       },
       {
+        "surface": "They brought back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "a report",
         "lemma": "davar"
       },
       {
+        "surface": "for the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
+      },
+      {
+        "surface": "and showed",
+        "lemma": "raah"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
       },
       {
         "surface": "the fruit",
@@ -826,12 +1018,32 @@
         "lemma": "saphar"
       },
       {
+        "surface": "We went",
+        "lemma": "bo"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
+        "surface": "to which",
+        "lemma": "asher"
+      },
+      {
         "surface": "you sent us",
         "lemma": "shalach"
+      },
+      {
+        "surface": "and indeed",
+        "lemma": "gam"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
       },
       {
         "surface": "is flowing",
@@ -846,6 +1058,10 @@
         "lemma": "devash"
       },
       {
+        "surface": "Here is",
+        "lemma": "zeh"
+      },
+      {
         "surface": "some of its fruit",
         "lemma": "peri"
       }
@@ -858,6 +1074,10 @@
       {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "living",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -880,6 +1100,14 @@
         "lemma": "meod"
       },
       {
+        "surface": "We even",
+        "lemma": "gam"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "the descendants",
         "lemma": "yalid"
       },
@@ -896,6 +1124,10 @@
       {
         "surface": "The Amalekites",
         "lemma": "amaleq"
+      },
+      {
+        "surface": "live",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -918,6 +1150,10 @@
         "lemma": "emori"
       },
       {
+        "surface": "live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the hill country",
         "lemma": "har"
       },
@@ -926,8 +1162,20 @@
         "lemma": "kenaani"
       },
       {
+        "surface": "live",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the sea",
         "lemma": "yam"
+      },
+      {
+        "surface": "and along",
+        "lemma": "al"
       },
       {
         "surface": "the Jordan",
@@ -948,8 +1196,16 @@
         "lemma": "am"
       },
       {
+        "surface": "before",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "We must go up",
@@ -958,6 +1214,14 @@
       {
         "surface": "and take possession of",
         "lemma": "yarash"
+      },
+      {
+        "surface": "the land",
+        "lemma": "et"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "we can certainly conquer",
@@ -970,23 +1234,59 @@
         "lemma": "enosh"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "had gone up",
         "lemma": "alah"
+      },
+      {
+        "surface": "with him",
+        "lemma": "im"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "We cannot",
+        "lemma": "lo"
       },
       {
         "surface": "go up",
         "lemma": "alah"
       },
       {
+        "surface": "against",
+        "lemma": "el"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they",
+        "lemma": "hu"
+      },
+      {
         "surface": "are stronger",
         "lemma": "chazaq"
+      },
+      {
+        "surface": "than we are",
+        "lemma": "min"
       }
     ],
     "32": [
+      {
+        "surface": "So they gave",
+        "lemma": "yatsa"
+      },
       {
         "surface": "the Israelites",
         "lemma": "ben"
@@ -998,6 +1298,10 @@
       {
         "surface": "about the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "they had spied out",
@@ -1016,8 +1320,20 @@
         "lemma": "akhal"
       },
       {
+        "surface": "its inhabitants",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
+      },
+      {
+        "surface": "we saw",
+        "lemma": "raah"
       },
       {
         "surface": "there",
@@ -1033,6 +1349,10 @@
       }
     ],
     "33": [
+      {
+        "surface": "We even saw",
+        "lemma": "raah"
+      },
       {
         "surface": "the Nephilim",
         "lemma": "nephil"
@@ -1050,8 +1370,16 @@
         "lemma": "anaq"
       },
       {
+        "surface": "that come from",
+        "lemma": "min"
+      },
+      {
         "surface": "the Nephilim",
         "lemma": "nephil"
+      },
+      {
+        "surface": "We seemed",
+        "lemma": "hayah"
       },
       {
         "surface": "like grasshoppers",
@@ -1062,6 +1390,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "and we must have seemed",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the same to them",
         "lemma": "ken"
       }
@@ -1069,7 +1401,7 @@
   },
   "themeLemmas": [
     "matteh",
-    "mosheh",
-    "alah"
+    "yashav",
+    "mosheh"
   ]
 }

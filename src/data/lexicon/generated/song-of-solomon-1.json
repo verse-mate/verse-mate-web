@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "This is",
+        "lemma": "asher"
+      },
+      {
         "surface": "Solomon’s",
         "lemma": "shelomoh"
       },
@@ -30,6 +34,10 @@
       {
         "surface": "of his mouth",
         "lemma": "peh"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "your love",
@@ -70,6 +78,10 @@
         "lemma": "ruq"
       },
       {
+        "surface": "No wonder",
+        "lemma": "al"
+      },
+      {
         "surface": "the maidens",
         "lemma": "almah"
       },
@@ -94,6 +106,10 @@
       {
         "surface": "May the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "bring me",
+        "lemma": "bo"
       },
       {
         "surface": "to his chambers",
@@ -130,6 +146,10 @@
     ],
     "5": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am dark",
         "lemma": "shachor"
       },
@@ -163,6 +183,18 @@
       }
     ],
     "6": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "stare",
+        "lemma": "raah"
+      },
+      {
+        "surface": "because I",
+        "lemma": "ani"
+      },
       {
         "surface": "am dark",
         "lemma": "shecharchoret"
@@ -202,6 +234,10 @@
       {
         "surface": "but my own vineyard",
         "lemma": "kerem"
+      },
+      {
+        "surface": "I have neglected",
+        "lemma": "lo"
       }
     ],
     "7": [
@@ -242,8 +278,16 @@
         "lemma": "mah"
       },
       {
+        "surface": "should I be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like a veiled woman",
         "lemma": "atah"
+      },
+      {
+        "surface": "beside",
+        "lemma": "al"
       },
       {
         "surface": "the flocks",
@@ -256,6 +300,14 @@
     ],
     "8": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "you do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -266,6 +318,10 @@
       {
         "surface": "of women",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "follow",
+        "lemma": "yatsa"
       },
       {
         "surface": "the tracks",
@@ -282,6 +338,10 @@
       {
         "surface": "your young goats",
         "lemma": "gediyyah"
+      },
+      {
+        "surface": "near",
+        "lemma": "al"
       },
       {
         "surface": "the tents",
@@ -338,12 +398,20 @@
     ],
     "11": [
       {
+        "surface": "We will make",
+        "lemma": "asah"
+      },
+      {
         "surface": "ornaments",
         "lemma": "tor"
       },
       {
         "surface": "of gold",
         "lemma": "zahav"
+      },
+      {
+        "surface": "studded with",
+        "lemma": "im"
       },
       {
         "surface": "beads",
@@ -356,6 +424,10 @@
     ],
     "12": [
       {
+        "surface": "While",
+        "lemma": "ad"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -366,6 +438,10 @@
       {
         "surface": "my perfume",
         "lemma": "nered"
+      },
+      {
+        "surface": "spread",
+        "lemma": "natan"
       },
       {
         "surface": "its fragrance",
@@ -468,6 +544,10 @@
         "lemma": "dod"
       },
       {
+        "surface": "Oh, how",
+        "lemma": "aph"
+      },
+      {
         "surface": "delightful",
         "lemma": "naim"
       },
@@ -506,6 +586,6 @@
   "themeLemmas": [
     "dod",
     "yapheh",
-    "kerem"
+    "al"
   ]
 }

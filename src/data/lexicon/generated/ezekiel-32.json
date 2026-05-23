@@ -36,6 +36,18 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -56,6 +68,10 @@
         "lemma": "qinah"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "Pharaoh",
         "lemma": "paroh"
       },
@@ -68,6 +84,14 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to him",
+        "lemma": "el"
+      },
+      {
         "surface": "You are like",
         "lemma": "damah"
       },
@@ -78,6 +102,10 @@
       {
         "surface": "among the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
       },
       {
         "surface": "are like a monster",
@@ -130,12 +158,20 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "I will spread",
         "lemma": "paras"
       },
       {
         "surface": "My net",
         "lemma": "reshet"
+      },
+      {
+        "surface": "over you",
+        "lemma": "al"
       },
       {
         "surface": "with a company",
@@ -172,12 +208,20 @@
         "lemma": "tul"
       },
       {
+        "surface": "into",
+        "lemma": "al"
+      },
+      {
         "surface": "the open",
         "lemma": "paneh"
       },
       {
         "surface": "field",
         "lemma": "saday"
+      },
+      {
+        "surface": "I will cause all",
+        "lemma": "kol"
       },
       {
         "surface": "the birds",
@@ -192,6 +236,14 @@
         "lemma": "shakhan"
       },
       {
+        "surface": "upon you",
+        "lemma": "al"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the beasts",
         "lemma": "chay"
       },
@@ -202,12 +254,24 @@
       {
         "surface": "to eat their fill",
         "lemma": "sava"
+      },
+      {
+        "surface": "of you",
+        "lemma": "min"
       }
     ],
     "5": [
       {
+        "surface": "I will put",
+        "lemma": "natan"
+      },
+      {
         "surface": "your flesh",
         "lemma": "basar"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the mountains",
@@ -242,6 +306,10 @@
       {
         "surface": "of your blood",
         "lemma": "dam"
+      },
+      {
+        "surface": "all the way to",
+        "lemma": "el"
       },
       {
         "surface": "the mountains",
@@ -294,11 +362,19 @@
         "lemma": "yareach"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "give its light",
         "lemma": "or"
       }
     ],
     "8": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "the shining",
         "lemma": "maor"
@@ -316,8 +392,20 @@
         "lemma": "qadar"
       },
       {
+        "surface": "over you",
+        "lemma": "al"
+      },
+      {
+        "surface": "and I will bring",
+        "lemma": "natan"
+      },
+      {
         "surface": "darkness",
         "lemma": "choshekh"
+      },
+      {
+        "surface": "upon",
+        "lemma": "al"
       },
       {
         "surface": "your land",
@@ -354,6 +442,10 @@
         "lemma": "am"
       },
       {
+        "surface": "when I bring about",
+        "lemma": "bo"
+      },
+      {
         "surface": "your destruction",
         "lemma": "shever"
       },
@@ -362,8 +454,16 @@
         "lemma": "goy"
       },
       {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "countries",
         "lemma": "erets"
+      },
+      {
+        "surface": "you do not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
@@ -384,6 +484,10 @@
         "lemma": "shamem"
       },
       {
+        "surface": "over you",
+        "lemma": "al"
+      },
+      {
         "surface": "and their kings",
         "lemma": "melekh"
       },
@@ -392,12 +496,20 @@
         "lemma": "saar"
       },
       {
+        "surface": "because of you",
+        "lemma": "al"
+      },
+      {
         "surface": "when I brandish",
         "lemma": "uph"
       },
       {
         "surface": "My sword",
         "lemma": "cherev"
+      },
+      {
+        "surface": "before",
+        "lemma": "al"
       },
       {
         "surface": "them",
@@ -430,6 +542,10 @@
     ],
     "11": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "this is what",
         "lemma": "koh"
       },
@@ -442,6 +558,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "The sword",
         "lemma": "cherev"
       },
@@ -452,6 +572,10 @@
       {
         "surface": "of Babylon",
         "lemma": "bavel"
+      },
+      {
+        "surface": "will come against you",
+        "lemma": "bo"
       }
     ],
     "12": [
@@ -476,6 +600,10 @@
         "lemma": "arits"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "nations",
         "lemma": "goy"
       },
@@ -492,6 +620,10 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "her multitudes",
         "lemma": "hamon"
       },
@@ -506,8 +638,16 @@
         "lemma": "avad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "her cattle",
         "lemma": "behemah"
+      },
+      {
+        "surface": "beside",
+        "lemma": "al"
       },
       {
         "surface": "the abundant",
@@ -516,6 +656,10 @@
       {
         "surface": "waters",
         "lemma": "mayim"
+      },
+      {
+        "surface": "No",
+        "lemma": "lo"
       },
       {
         "surface": "human",
@@ -534,6 +678,10 @@
         "lemma": "od"
       },
       {
+        "surface": "and no",
+        "lemma": "lo"
+      },
+      {
         "surface": "cattle",
         "lemma": "behemah"
       },
@@ -547,6 +695,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "Then",
+        "lemma": "az"
+      },
       {
         "surface": "I will let her waters",
         "lemma": "mayim"
@@ -582,6 +734,10 @@
     ],
     "15": [
       {
+        "surface": "When I make",
+        "lemma": "natan"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -610,8 +766,24 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "then they will know",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am the LORD",
@@ -619,6 +791,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "This",
+        "lemma": "hu"
+      },
       {
         "surface": "is the lament",
         "lemma": "qun"
@@ -640,8 +816,16 @@
         "lemma": "qun"
       },
       {
+        "surface": "Over",
+        "lemma": "al"
+      },
+      {
         "surface": "Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "her multitudes",
@@ -688,6 +872,18 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "18": [
@@ -704,6 +900,10 @@
         "lemma": "nahah"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "the multitudes",
         "lemma": "hamon"
       },
@@ -714,6 +914,10 @@
       {
         "surface": "and consign",
         "lemma": "yarad"
+      },
+      {
+        "surface": "her",
+        "lemma": "et"
       },
       {
         "surface": "and the daughters",
@@ -728,12 +932,20 @@
         "lemma": "goy"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the depths",
         "lemma": "tachti"
       },
       {
         "surface": "of the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "those who descend",
@@ -762,6 +974,10 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "the uncircumcised",
         "lemma": "arel"
       }
@@ -788,8 +1004,16 @@
         "lemma": "cherev"
       },
       {
+        "surface": "is appointed",
+        "lemma": "natan"
+      },
+      {
         "surface": "Let them drag her away",
         "lemma": "mashakh"
+      },
+      {
+        "surface": "along with all",
+        "lemma": "kol"
       },
       {
         "surface": "her multitudes",
@@ -816,6 +1040,10 @@
       {
         "surface": "of Sheol",
         "lemma": "sheol"
+      },
+      {
+        "surface": "about Egypt",
+        "lemma": "et"
       },
       {
         "surface": "and her allies",
@@ -852,6 +1080,10 @@
         "lemma": "sham"
       },
       {
+        "surface": "with her whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "company",
         "lemma": "qahal"
       },
@@ -862,6 +1094,10 @@
       {
         "surface": "are all around her",
         "lemma": "saviv"
+      },
+      {
+        "surface": "All of them",
+        "lemma": "kol"
       },
       {
         "surface": "are slain",
@@ -878,8 +1114,16 @@
     ],
     "23": [
       {
+        "surface": "Her",
+        "lemma": "asher"
+      },
+      {
         "surface": "graves",
         "lemma": "qever"
+      },
+      {
+        "surface": "are set",
+        "lemma": "natan"
       },
       {
         "surface": "in the depths",
@@ -894,12 +1138,20 @@
         "lemma": "qahal"
       },
       {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "all around",
         "lemma": "saviv"
       },
       {
         "surface": "her grave",
         "lemma": "qevurah"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "of them are slain",
@@ -912,6 +1164,14 @@
       {
         "surface": "by the sword",
         "lemma": "cherev"
+      },
+      {
+        "surface": "those who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "once spread",
+        "lemma": "natan"
       },
       {
         "surface": "terror",
@@ -936,6 +1196,10 @@
         "lemma": "sham"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "her multitudes",
         "lemma": "hamon"
       },
@@ -946,6 +1210,10 @@
       {
         "surface": "her grave",
         "lemma": "qevurah"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "of them are slain",
@@ -960,6 +1228,10 @@
         "lemma": "cherev"
       },
       {
+        "surface": "those",
+        "lemma": "asher"
+      },
+      {
         "surface": "who went down",
         "lemma": "yarad"
       },
@@ -968,12 +1240,24 @@
         "lemma": "arel"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
       {
         "surface": "below",
         "lemma": "tachti"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "once spread",
+        "lemma": "natan"
       },
       {
         "surface": "their terror",
@@ -994,6 +1278,10 @@
       {
         "surface": "their disgrace",
         "lemma": "kelimmah"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "those who descend",
@@ -1014,8 +1302,16 @@
         "lemma": "chalal"
       },
       {
+        "surface": "they prepare",
+        "lemma": "natan"
+      },
+      {
         "surface": "a resting place",
         "lemma": "mishkav"
+      },
+      {
+        "surface": "with all",
+        "lemma": "kol"
       },
       {
         "surface": "her hordes",
@@ -1030,6 +1326,10 @@
         "lemma": "saviv"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "of them are uncircumcised",
         "lemma": "arel"
       },
@@ -1042,8 +1342,16 @@
         "lemma": "cherev"
       },
       {
+        "surface": "although",
+        "lemma": "ki"
+      },
+      {
         "surface": "their terror",
         "lemma": "chittit"
+      },
+      {
+        "surface": "was once spread",
+        "lemma": "natan"
       },
       {
         "surface": "in the land",
@@ -1062,12 +1370,20 @@
         "lemma": "kelimmah"
       },
       {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "those who descend",
         "lemma": "yarad"
       },
       {
         "surface": "to the Pit",
         "lemma": "bor"
+      },
+      {
+        "surface": "They are placed",
+        "lemma": "natan"
       },
       {
         "surface": "among",
@@ -1092,6 +1408,10 @@
         "lemma": "sham"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their multitudes",
         "lemma": "hamon"
       },
@@ -1104,6 +1424,10 @@
         "lemma": "saviv"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "of them are uncircumcised",
         "lemma": "arel"
       },
@@ -1114,6 +1438,14 @@
       {
         "surface": "by the sword",
         "lemma": "cherev"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they spread",
+        "lemma": "natan"
       },
       {
         "surface": "their terror",
@@ -1130,8 +1462,16 @@
     ],
     "27": [
       {
+        "surface": "They do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "lie down",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "the fallen",
@@ -1144,6 +1484,10 @@
       {
         "surface": "of old",
         "lemma": "arel"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "went down",
@@ -1166,6 +1510,10 @@
         "lemma": "cherev"
       },
       {
+        "surface": "were placed",
+        "lemma": "natan"
+      },
+      {
         "surface": "under",
         "lemma": "tachat"
       },
@@ -1178,8 +1526,20 @@
         "lemma": "avan"
       },
       {
+        "surface": "rested",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "their bones",
         "lemma": "etsem"
+      },
+      {
+        "surface": "although",
+        "lemma": "ki"
       },
       {
         "surface": "the terror",
@@ -1200,6 +1560,10 @@
     ],
     "28": [
       {
+        "surface": "But you too",
+        "lemma": "attah"
+      },
+      {
         "surface": "will be shattered",
         "lemma": "shavar"
       },
@@ -1214,6 +1578,10 @@
       {
         "surface": "the uncircumcised",
         "lemma": "arel"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "those slain",
@@ -1234,6 +1602,10 @@
         "lemma": "sham"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "her kings",
         "lemma": "melekh"
       },
@@ -1242,8 +1614,20 @@
         "lemma": "nasi"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "despite their might",
         "lemma": "gevurah"
+      },
+      {
+        "surface": "are laid",
+        "lemma": "natan"
+      },
+      {
+        "surface": "among",
+        "lemma": "et"
       },
       {
         "surface": "those slain",
@@ -1254,12 +1638,24 @@
         "lemma": "cherev"
       },
       {
+        "surface": "They",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "lie down",
         "lemma": "shakhav"
       },
       {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "the uncircumcised",
         "lemma": "arel"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "those who descend",
@@ -1272,12 +1668,20 @@
     ],
     "30": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the leaders",
         "lemma": "nesikh"
       },
       {
         "surface": "of the north",
         "lemma": "tsaphon"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the Sidonians",
@@ -1288,12 +1692,20 @@
         "lemma": "sham"
       },
       {
+        "surface": "they",
+        "lemma": "asher"
+      },
+      {
         "surface": "went down",
         "lemma": "yarad"
       },
       {
         "surface": "in disgrace",
         "lemma": "bush"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "the slain",
@@ -1316,6 +1728,10 @@
         "lemma": "arel"
       },
       {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "those slain",
         "lemma": "chalal"
       },
@@ -1332,6 +1748,10 @@
         "lemma": "kelimmah"
       },
       {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "those who descend",
         "lemma": "yarad"
       },
@@ -1346,8 +1766,20 @@
         "lemma": "paroh"
       },
       {
+        "surface": "will see them",
+        "lemma": "raah"
+      },
+      {
         "surface": "and be comforted",
         "lemma": "nacham"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "his multitude",
@@ -1356,6 +1788,10 @@
       {
         "surface": "Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "his army",
@@ -1384,6 +1820,14 @@
     ],
     "32": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I will spread",
+        "lemma": "natan"
+      },
+      {
         "surface": "My terror",
         "lemma": "chittit"
       },
@@ -1400,6 +1844,10 @@
         "lemma": "paroh"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his multitude",
         "lemma": "hamon"
       },
@@ -1414,6 +1862,10 @@
       {
         "surface": "the uncircumcised",
         "lemma": "arel"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "those slain",
@@ -1438,8 +1890,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "cherev",
-    "chalal",
-    "yarad"
+    "al"
   ]
 }

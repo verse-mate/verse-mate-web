@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "In that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -30,6 +34,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "We will eat",
         "lemma": "akhal"
       },
@@ -46,6 +54,14 @@
         "lemma": "simlah"
       },
       {
+        "surface": "Just",
+        "lemma": "raq"
+      },
+      {
+        "surface": "let us be called",
+        "lemma": "qara"
+      },
+      {
         "surface": "by your name",
         "lemma": "shem"
       },
@@ -60,6 +76,10 @@
     ],
     "2": [
       {
+        "surface": "On that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -70,6 +90,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "beautiful",
@@ -122,8 +146,16 @@
         "lemma": "yerushalaim"
       },
       {
+        "surface": "will be called",
+        "lemma": "amar"
+      },
+      {
         "surface": "holy",
         "lemma": "qadosh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "in Jerusalem",
@@ -139,6 +171,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "when",
+        "lemma": "im"
+      },
       {
         "surface": "the Lord",
         "lemma": "adonai"
@@ -202,12 +238,24 @@
         "lemma": "bara"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "of Mount",
         "lemma": "har"
       },
       {
         "surface": "Zion",
         "lemma": "tsiyyon"
+      },
+      {
+        "surface": "and over",
+        "lemma": "al"
       },
       {
         "surface": "her assemblies",
@@ -240,6 +288,18 @@
       {
         "surface": "by night",
         "lemma": "laylah"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the glory",
@@ -288,6 +348,6 @@
   "themeLemmas": [
     "yerushalaim",
     "tsiyyon",
-    "yomam"
+    "kol"
   ]
 }

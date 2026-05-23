@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Surely",
+        "lemma": "ki"
+      },
+      {
         "surface": "there is",
         "lemma": "yesh"
       },
@@ -70,8 +74,16 @@
         "lemma": "choshekh"
       },
       {
+        "surface": "he",
+        "lemma": "hu"
+      },
+      {
         "surface": "probes",
         "lemma": "chaqar"
+      },
+      {
+        "surface": "the farthest recesses",
+        "lemma": "kol"
       },
       {
         "surface": "for ore",
@@ -83,6 +95,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Far from",
+        "lemma": "min"
+      },
       {
         "surface": "human habitation",
         "lemma": "gur"
@@ -122,6 +138,14 @@
         "lemma": "lechem"
       },
       {
+        "surface": "may come",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -132,6 +156,10 @@
       {
         "surface": "it is transformed",
         "lemma": "haphakh"
+      },
+      {
+        "surface": "as",
+        "lemma": "kemo"
       },
       {
         "surface": "by fire",
@@ -162,6 +190,10 @@
     ],
     "7": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "bird of prey",
         "lemma": "ayit"
       },
@@ -172,6 +204,10 @@
       {
         "surface": "that path",
         "lemma": "nativ"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "falcon’s",
@@ -192,8 +228,16 @@
         "lemma": "ben"
       },
       {
+        "surface": "have never",
+        "lemma": "lo"
+      },
+      {
         "surface": "trodden it",
         "lemma": "darakh"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "lion",
@@ -202,6 +246,10 @@
       {
         "surface": "has ever prowled",
         "lemma": "adah"
+      },
+      {
+        "surface": "over it",
+        "lemma": "al"
       }
     ],
     "9": [
@@ -244,6 +292,14 @@
         "lemma": "ayin"
       },
       {
+        "surface": "spot",
+        "lemma": "raah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "treasure",
         "lemma": "yeqar"
       }
@@ -260,6 +316,10 @@
       {
         "surface": "of the streams",
         "lemma": "nahar"
+      },
+      {
+        "surface": "to bring",
+        "lemma": "yatsa"
       },
       {
         "surface": "what is hidden",
@@ -298,6 +358,10 @@
     ],
     "13": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "man",
         "lemma": "enosh"
       },
@@ -308,6 +372,10 @@
       {
         "surface": "its value",
         "lemma": "erekh"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "is it found",
@@ -328,15 +396,43 @@
         "lemma": "tehom"
       },
       {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "It is",
+        "lemma": "hu"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "while the sea",
         "lemma": "yam"
       },
       {
+        "surface": "declares",
+        "lemma": "amar"
+      },
+      {
         "surface": "It is not",
         "lemma": "ayin"
+      },
+      {
+        "surface": "with me",
+        "lemma": "immad"
       }
     ],
     "15": [
+      {
+        "surface": "It cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "be bought",
+        "lemma": "natan"
+      },
       {
         "surface": "with",
         "lemma": "tachat"
@@ -344,6 +440,10 @@
       {
         "surface": "gold",
         "lemma": "segor"
+      },
+      {
+        "surface": "nor can",
+        "lemma": "lo"
       },
       {
         "surface": "its price",
@@ -359,6 +459,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "It cannot",
+        "lemma": "lo"
+      },
       {
         "surface": "be valued",
         "lemma": "salah"
@@ -385,6 +489,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "Neither",
+        "lemma": "lo"
+      },
       {
         "surface": "gold",
         "lemma": "zahav"
@@ -420,6 +528,10 @@
         "lemma": "gavish"
       },
       {
+        "surface": "are unworthy",
+        "lemma": "lo"
+      },
+      {
         "surface": "of mention",
         "lemma": "zakhar"
       },
@@ -446,8 +558,16 @@
         "lemma": "kush"
       },
       {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "compare to it",
         "lemma": "arakh"
+      },
+      {
+        "surface": "nor can it",
+        "lemma": "lo"
       },
       {
         "surface": "be valued",
@@ -472,6 +592,10 @@
         "lemma": "chokhmah"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "and where",
         "lemma": "ay"
       },
@@ -492,6 +616,10 @@
       {
         "surface": "from the eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "living thing",
@@ -520,6 +648,14 @@
         "lemma": "mavet"
       },
       {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "We have heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "a rumor about it",
         "lemma": "shema"
       }
@@ -538,6 +674,10 @@
         "lemma": "derekh"
       },
       {
+        "surface": "and He",
+        "lemma": "hu"
+      },
+      {
         "surface": "knows",
         "lemma": "yada"
       },
@@ -547,6 +687,14 @@
       }
     ],
     "24": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
       {
         "surface": "looks",
         "lemma": "navat"
@@ -560,6 +708,14 @@
         "lemma": "erets"
       },
       {
+        "surface": "and sees",
+        "lemma": "raah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "under",
         "lemma": "tachat"
       },
@@ -569,6 +725,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "When God fixed",
+        "lemma": "asah"
+      },
       {
         "surface": "the weight",
         "lemma": "mishqal"
@@ -592,6 +752,10 @@
     ],
     "26": [
       {
+        "surface": "when He set",
+        "lemma": "asah"
+      },
+      {
         "surface": "a limit",
         "lemma": "choq"
       },
@@ -610,6 +774,14 @@
     ],
     "27": [
       {
+        "surface": "then",
+        "lemma": "az"
+      },
+      {
+        "surface": "He looked at wisdom",
+        "lemma": "raah"
+      },
+      {
         "surface": "and appraised it",
         "lemma": "saphar"
       },
@@ -623,6 +795,10 @@
       }
     ],
     "28": [
+      {
+        "surface": "And He said",
+        "lemma": "amar"
+      },
       {
         "surface": "to man",
         "lemma": "adam"
@@ -638,6 +814,10 @@
       {
         "surface": "of the Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "that is",
+        "lemma": "hu"
       },
       {
         "surface": "wisdom",
@@ -658,8 +838,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "maqom",
-    "chokhmah",
-    "zahav"
+    "hu"
   ]
 }

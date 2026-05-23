@@ -116,6 +116,10 @@
         "lemma": "qashav"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "evil",
         "lemma": "aven"
       },
@@ -130,6 +134,10 @@
       {
         "surface": "gives ear",
         "lemma": "azan"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
       },
       {
         "surface": "a destructive",
@@ -154,12 +162,20 @@
         "lemma": "charaph"
       },
       {
+        "surface": "their Maker",
+        "lemma": "asah"
+      },
+      {
         "surface": "whoever gloats",
         "lemma": "sameach"
       },
       {
         "surface": "over calamity",
         "lemma": "ed"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "go unpunished",
@@ -186,6 +202,10 @@
       {
         "surface": "of a son",
         "lemma": "ben"
+      },
+      {
+        "surface": "is his father",
+        "lemma": "av"
       }
     ],
     "7": [
@@ -198,8 +218,16 @@
         "lemma": "saphah"
       },
       {
+        "surface": "are unfit",
+        "lemma": "lo"
+      },
+      {
         "surface": "for a fool",
         "lemma": "naval"
+      },
+      {
+        "surface": "how much worse",
+        "lemma": "aph"
       },
       {
         "surface": "are lying",
@@ -230,6 +258,10 @@
       {
         "surface": "its giver",
         "lemma": "baal"
+      },
+      {
+        "surface": "wherever",
+        "lemma": "el"
       },
       {
         "surface": "he turns",
@@ -344,6 +376,10 @@
         "lemma": "shakkul"
       },
       {
+        "surface": "than",
+        "lemma": "al"
+      },
+      {
         "surface": "a fool",
         "lemma": "kesil"
       },
@@ -353,6 +389,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "If anyone returns",
+        "lemma": "shuv"
+      },
       {
         "surface": "evil",
         "lemma": "ra"
@@ -368,6 +408,10 @@
       {
         "surface": "evil",
         "lemma": "ra"
+      },
+      {
+        "surface": "will never",
+        "lemma": "lo"
       },
       {
         "surface": "leave",
@@ -486,6 +530,14 @@
         "lemma": "ahav"
       },
       {
+        "surface": "at all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "times",
+        "lemma": "et"
+      },
+      {
         "surface": "and a brother",
         "lemma": "ach"
       },
@@ -580,6 +632,10 @@
         "lemma": "matsa"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
       },
@@ -614,8 +670,16 @@
         "lemma": "tugah"
       },
       {
+        "surface": "the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of a fool",
         "lemma": "naval"
+      },
+      {
+        "surface": "has no",
+        "lemma": "lo"
       },
       {
         "surface": "joy",
@@ -692,6 +756,10 @@
         "lemma": "chokhmah"
       },
       {
+        "surface": "vvv",
+        "lemma": "et"
+      },
+      {
         "surface": "is the focus",
         "lemma": "paneh"
       },
@@ -730,6 +798,10 @@
         "lemma": "kaas"
       },
       {
+        "surface": "to his father",
+        "lemma": "av"
+      },
+      {
         "surface": "and bitterness",
         "lemma": "memer"
       },
@@ -739,6 +811,14 @@
       }
     ],
     "26": [
+      {
+        "surface": "It is surely",
+        "lemma": "gam"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
       {
         "surface": "good",
         "lemma": "tov"
@@ -758,6 +838,10 @@
       {
         "surface": "a noble",
         "lemma": "nadiv"
+      },
+      {
+        "surface": "for",
+        "lemma": "al"
       },
       {
         "surface": "his honesty",
@@ -796,6 +880,10 @@
     ],
     "28": [
       {
+        "surface": "Even",
+        "lemma": "gam"
+      },
+      {
         "surface": "a fool",
         "lemma": "evil"
       },
@@ -826,8 +914,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "kesil",
-    "tov",
-    "saphah"
+    "tov"
   ]
 }

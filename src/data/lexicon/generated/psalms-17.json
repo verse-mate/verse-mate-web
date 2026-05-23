@@ -14,6 +14,10 @@
         "lemma": "david"
       },
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -42,6 +46,10 @@
         "lemma": "saphah"
       },
       {
+        "surface": "free of",
+        "lemma": "lo"
+      },
+      {
         "surface": "deceit",
         "lemma": "mirmah"
       }
@@ -50,6 +58,10 @@
       {
         "surface": "May my vindication",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "come",
+        "lemma": "yatsa"
       },
       {
         "surface": "from Your presence",
@@ -132,6 +144,10 @@
         "lemma": "saphah"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "have avoided",
         "lemma": "shamar"
       },
@@ -172,8 +188,20 @@
     ],
     "6": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "call on You",
+        "lemma": "qara"
+      },
+      {
         "surface": "O God",
         "lemma": "el"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "You will answer me",
@@ -186,6 +214,10 @@
       {
         "surface": "Your ear",
         "lemma": "ozen"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
       },
       {
         "surface": "my words",
@@ -256,6 +288,10 @@
       {
         "surface": "the wicked",
         "lemma": "rasah"
+      },
+      {
+        "surface": "who",
+        "lemma": "zu"
       },
       {
         "surface": "assail me",
@@ -342,6 +378,10 @@
       {
         "surface": "like a young lion",
         "lemma": "kephir"
+      },
+      {
+        "surface": "lurking",
+        "lemma": "yashav"
       },
       {
         "surface": "in ambush",
@@ -450,6 +490,10 @@
     ],
     "15": [
       {
+        "surface": "As for me",
+        "lemma": "ani"
+      },
+      {
         "surface": "I will behold",
         "lemma": "chazah"
       },
@@ -478,6 +522,6 @@
   "themeLemmas": [
     "paneh",
     "bal",
-    "tsedeq"
+    "ani"
   ]
 }

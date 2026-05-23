@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "But",
+        "lemma": "et"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -18,12 +22,28 @@
         "lemma": "noach"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the animals",
         "lemma": "chay"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "livestock",
         "lemma": "behemah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "were with him",
+        "lemma": "et"
       },
       {
         "surface": "in the ark",
@@ -36,6 +56,10 @@
       {
         "surface": "sent a wind",
         "lemma": "ruach"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "the earth",
@@ -76,6 +100,10 @@
         "lemma": "geshem"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the sky",
         "lemma": "shamayim"
       },
@@ -90,8 +118,16 @@
         "lemma": "mayim"
       },
       {
+        "surface": "receded",
+        "lemma": "shuv"
+      },
+      {
         "surface": "steadily",
         "lemma": "halakh"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
       },
       {
         "surface": "the earth",
@@ -144,6 +180,10 @@
         "lemma": "nuach"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the mountains",
         "lemma": "har"
       },
@@ -164,6 +204,10 @@
       {
         "surface": "to recede",
         "lemma": "chaser"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "the tenth",
@@ -192,6 +236,10 @@
       {
         "surface": "of the mountains",
         "lemma": "har"
+      },
+      {
+        "surface": "became visible",
+        "lemma": "raah"
       }
     ],
     "6": [
@@ -220,6 +268,10 @@
         "lemma": "challon"
       },
       {
+        "surface": "he had made",
+        "lemma": "asah"
+      },
+      {
         "surface": "in the ark",
         "lemma": "tevah"
       }
@@ -234,12 +286,24 @@
         "lemma": "orev"
       },
       {
+        "surface": "It kept flying back and forth",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "the waters",
         "lemma": "mayim"
       },
       {
         "surface": "had dried up",
         "lemma": "yavesh"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
       },
       {
         "surface": "the earth",
@@ -256,12 +320,20 @@
         "lemma": "yonah"
       },
       {
+        "surface": "to see",
+        "lemma": "raah"
+      },
+      {
         "surface": "if the waters",
         "lemma": "mayim"
       },
       {
         "surface": "had receded",
         "lemma": "qalal"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
       },
       {
         "surface": "the surface",
@@ -282,6 +354,10 @@
         "lemma": "matsa"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "place to rest",
         "lemma": "manoach"
       },
@@ -290,16 +366,40 @@
         "lemma": "kaph"
       },
       {
+        "surface": "and she returned",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to him",
+        "lemma": "el"
+      },
+      {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
         "surface": "the ark",
         "lemma": "tevah"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "the waters",
         "lemma": "mayim"
       },
       {
+        "surface": "were still covering",
+        "lemma": "al"
+      },
+      {
         "surface": "the surface",
         "lemma": "paneh"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -312,6 +412,22 @@
       {
         "surface": "his hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "and brought",
+        "lemma": "bo"
+      },
+      {
+        "surface": "her",
+        "lemma": "et"
+      },
+      {
+        "surface": "back",
+        "lemma": "el"
+      },
+      {
+        "surface": "inside",
+        "lemma": "el"
       },
       {
         "surface": "the ark",
@@ -348,6 +464,10 @@
         "lemma": "yonah"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the ark",
         "lemma": "tevah"
       }
@@ -360,6 +480,18 @@
       {
         "surface": "the dove",
         "lemma": "yonah"
+      },
+      {
+        "surface": "returned",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to him",
+        "lemma": "el"
+      },
+      {
+        "surface": "in the evening",
+        "lemma": "et"
       },
       {
         "surface": "with a freshly plucked",
@@ -386,12 +518,20 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the waters",
         "lemma": "mayim"
       },
       {
         "surface": "had receded",
         "lemma": "qalal"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
       },
       {
         "surface": "the earth",
@@ -426,6 +566,14 @@
       {
         "surface": "but this time",
         "lemma": "yasaph"
+      },
+      {
+        "surface": "she did not return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to him",
+        "lemma": "el"
       }
     ],
     "13": [
@@ -466,6 +614,10 @@
         "lemma": "charev"
       },
       {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -484,6 +636,10 @@
       {
         "surface": "from the ark",
         "lemma": "tevah"
+      },
+      {
+        "surface": "and saw",
+        "lemma": "raah"
       },
       {
         "surface": "that the surface",
@@ -534,18 +690,38 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Noah",
         "lemma": "noach"
       }
     ],
     "16": [
       {
+        "surface": "Come out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "of",
+        "lemma": "min"
+      },
+      {
         "surface": "the ark",
         "lemma": "tevah"
       },
       {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
         "surface": "and your wife",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "along with",
+        "lemma": "et"
       },
       {
         "surface": "your sons",
@@ -562,8 +738,24 @@
     ],
     "17": [
       {
+        "surface": "Bring out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the living creatures",
         "lemma": "chay"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "are with you",
+        "lemma": "et"
       },
       {
         "surface": "birds",
@@ -574,8 +766,16 @@
         "lemma": "behemah"
       },
       {
+        "surface": "and everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "that crawls",
         "lemma": "ramas"
+      },
+      {
+        "surface": "upon",
+        "lemma": "al"
       },
       {
         "surface": "the ground",
@@ -598,6 +798,10 @@
         "lemma": "ravah"
       },
       {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
         "surface": "it",
         "lemma": "erets"
       }
@@ -606,6 +810,14 @@
       {
         "surface": "So Noah",
         "lemma": "noach"
+      },
+      {
+        "surface": "came out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "along with",
+        "lemma": "et"
       },
       {
         "surface": "his sons",
@@ -626,24 +838,52 @@
     ],
     "19": [
       {
+        "surface": "Every",
+        "lemma": "kol"
+      },
+      {
         "surface": "living creature",
         "lemma": "chay"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "creeping thing",
         "lemma": "remes"
       },
       {
+        "surface": "and every",
+        "lemma": "kol"
+      },
+      {
         "surface": "bird",
         "lemma": "oph"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "that moves",
         "lemma": "ramas"
       },
       {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "came out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "of",
+        "lemma": "min"
       },
       {
         "surface": "the ark",
@@ -676,12 +916,20 @@
         "lemma": "laqach"
       },
       {
+        "surface": "from every kind",
+        "lemma": "kol"
+      },
+      {
         "surface": "of clean",
         "lemma": "tahor"
       },
       {
         "surface": "animal",
         "lemma": "behemah"
+      },
+      {
+        "surface": "and",
+        "lemma": "kol"
       },
       {
         "surface": "clean",
@@ -726,8 +974,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
         "surface": "His heart",
         "lemma": "lev"
+      },
+      {
+        "surface": "Never again",
+        "lemma": "lo"
       },
       {
         "surface": "will I curse",
@@ -738,8 +998,16 @@
         "lemma": "adamah"
       },
       {
+        "surface": "because of",
+        "lemma": "avur"
+      },
+      {
         "surface": "man",
         "lemma": "adam"
+      },
+      {
+        "surface": "even though",
+        "lemma": "ki"
       },
       {
         "surface": "every inclination",
@@ -762,6 +1030,10 @@
         "lemma": "naur"
       },
       {
+        "surface": "And never",
+        "lemma": "lo"
+      },
+      {
         "surface": "again",
         "lemma": "yasaph"
       },
@@ -770,8 +1042,20 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "living creatures",
         "lemma": "chay"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I have done",
+        "lemma": "asah"
       }
     ],
     "22": [
@@ -820,14 +1104,18 @@
         "lemma": "laylah"
       },
       {
+        "surface": "shall never",
+        "lemma": "lo"
+      },
+      {
         "surface": "cease",
         "lemma": "shavat"
       }
     ]
   },
   "themeLemmas": [
-    "tevah",
-    "mayim",
-    "noach"
+    "kol",
+    "al",
+    "tevah"
   ]
 }

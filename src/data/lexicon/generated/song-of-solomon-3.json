@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "On",
+        "lemma": "al"
+      },
+      {
         "surface": "my bed",
         "lemma": "mishkav"
       },
@@ -18,6 +22,10 @@
         "lemma": "baqash"
       },
       {
+        "surface": "the one",
+        "lemma": "et"
+      },
+      {
         "surface": "I",
         "lemma": "nephesh"
       },
@@ -28,6 +36,10 @@
       {
         "surface": "I sought him",
         "lemma": "baqash"
+      },
+      {
+        "surface": "but did not",
+        "lemma": "lo"
       },
       {
         "surface": "find him",
@@ -64,6 +76,10 @@
         "lemma": "baqash"
       },
       {
+        "surface": "the one",
+        "lemma": "et"
+      },
+      {
         "surface": "I",
         "lemma": "nephesh"
       },
@@ -74,6 +90,10 @@
       {
         "surface": "So I sought him",
         "lemma": "baqash"
+      },
+      {
+        "surface": "but did not",
+        "lemma": "lo"
       },
       {
         "surface": "find him",
@@ -98,6 +118,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "Have you seen the one",
+        "lemma": "raah"
+      },
+      {
         "surface": "I",
         "lemma": "nephesh"
       },
@@ -116,8 +140,16 @@
         "lemma": "avar"
       },
       {
+        "surface": "when",
+        "lemma": "ad"
+      },
+      {
         "surface": "I found",
         "lemma": "matsa"
+      },
+      {
+        "surface": "the one",
+        "lemma": "et"
       },
       {
         "surface": "I",
@@ -132,8 +164,24 @@
         "lemma": "achaz"
       },
       {
+        "surface": "and would not",
+        "lemma": "lo"
+      },
+      {
         "surface": "let go",
         "lemma": "raphah"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
+        "surface": "I had brought him",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "my mother’s",
@@ -142,6 +190,10 @@
       {
         "surface": "house",
         "lemma": "bet"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the chamber",
@@ -166,8 +218,16 @@
         "lemma": "shava"
       },
       {
+        "surface": "you",
+        "lemma": "et"
+      },
+      {
         "surface": "by the gazelles",
         "lemma": "tsevi"
+      },
+      {
+        "surface": "and",
+        "lemma": "o"
       },
       {
         "surface": "does",
@@ -178,8 +238,16 @@
         "lemma": "saday"
       },
       {
+        "surface": "Do not",
+        "lemma": "im"
+      },
+      {
         "surface": "arouse",
         "lemma": "ur"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
       },
       {
         "surface": "awaken",
@@ -188,6 +256,10 @@
       {
         "surface": "love",
         "lemma": "ahavah"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "the time is right",
@@ -200,8 +272,16 @@
         "lemma": "mi"
       },
       {
+        "surface": "is this",
+        "lemma": "zot"
+      },
+      {
         "surface": "coming up",
         "lemma": "alah"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the wilderness",
@@ -226,6 +306,10 @@
       {
         "surface": "and frankincense",
         "lemma": "levonah"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
       },
       {
         "surface": "the spices",
@@ -268,6 +352,10 @@
     ],
     "8": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "are skilled",
         "lemma": "achaz"
       },
@@ -292,6 +380,10 @@
         "lemma": "cherev"
       },
       {
+        "surface": "at",
+        "lemma": "al"
+      },
+      {
         "surface": "his side",
         "lemma": "yarekh"
       },
@@ -314,6 +406,10 @@
         "lemma": "shelomoh"
       },
       {
+        "surface": "has made",
+        "lemma": "asah"
+      },
+      {
         "surface": "his carriage",
         "lemma": "appiryon"
       },
@@ -327,6 +423,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "He has made",
+        "lemma": "asah"
+      },
       {
         "surface": "its posts",
         "lemma": "ammud"
@@ -374,12 +474,20 @@
     ],
     "11": [
       {
+        "surface": "Come out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "O daughters",
         "lemma": "bat"
       },
       {
         "surface": "of Zion",
         "lemma": "tsiyyon"
+      },
+      {
+        "surface": "and gaze",
+        "lemma": "raah"
       },
       {
         "surface": "at King",
@@ -426,6 +534,6 @@
   "themeLemmas": [
     "nephesh",
     "matsa",
-    "baqash"
+    "et"
   ]
 }

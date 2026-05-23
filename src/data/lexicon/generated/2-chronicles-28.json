@@ -42,6 +42,18 @@
         "lemma": "david"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
+        "surface": "he did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
         "surface": "what was right",
         "lemma": "yashar"
       },
@@ -72,6 +84,14 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "and even",
+        "lemma": "gam"
+      },
+      {
+        "surface": "made",
+        "lemma": "asah"
+      },
+      {
         "surface": "cast images",
         "lemma": "massekhah"
       },
@@ -81,6 +101,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "Moreover, Ahaz",
+        "lemma": "hu"
+      },
       {
         "surface": "burned incense",
         "lemma": "qatar"
@@ -118,6 +142,10 @@
         "lemma": "goy"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -148,12 +176,20 @@
         "lemma": "bamah"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the hills",
         "lemma": "givah"
       },
       {
         "surface": "and under",
         "lemma": "tachat"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "green",
@@ -172,6 +208,10 @@
       {
         "surface": "his God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "delivered Ahaz",
+        "lemma": "natan"
       },
       {
         "surface": "into the hand",
@@ -204,6 +244,14 @@
       {
         "surface": "to Damascus",
         "lemma": "dammeseq"
+      },
+      {
+        "surface": "Ahaz was also",
+        "lemma": "gam"
+      },
+      {
+        "surface": "delivered",
+        "lemma": "natan"
       },
       {
         "surface": "into the hand",
@@ -282,6 +330,10 @@
       {
         "surface": "the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of their fathers",
+        "lemma": "av"
       }
     ],
     "7": [
@@ -368,6 +420,10 @@
         "lemma": "bat"
       },
       {
+        "surface": "They also",
+        "lemma": "gam"
+      },
+      {
         "surface": "carried off",
         "lemma": "bazaz"
       },
@@ -378,6 +434,10 @@
       {
         "surface": "plunder",
         "lemma": "shalal"
+      },
+      {
+        "surface": "and brought",
+        "lemma": "bo"
       },
       {
         "surface": "it",
@@ -406,8 +466,16 @@
         "lemma": "oded"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "there",
         "lemma": "sham"
+      },
+      {
+        "surface": "and he went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "to meet",
@@ -418,6 +486,10 @@
         "lemma": "tsava"
       },
       {
+        "surface": "that returned",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Samaria",
         "lemma": "shomeron"
       },
@@ -426,8 +498,16 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "because of His wrath",
         "lemma": "chemah"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "Judah",
@@ -440,6 +520,14 @@
       {
         "surface": "the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of your fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "has delivered them",
+        "lemma": "natan"
       },
       {
         "surface": "into your hand",
@@ -468,6 +556,14 @@
         "lemma": "attah"
       },
       {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "intend",
+        "lemma": "amar"
+      },
+      {
         "surface": "to reduce to slavery",
         "lemma": "kavash"
       },
@@ -488,6 +584,18 @@
         "lemma": "yerushalaim"
       },
       {
+        "surface": "But are you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "also",
+        "lemma": "raq"
+      },
+      {
         "surface": "guilty",
         "lemma": "ashmah"
       },
@@ -506,6 +614,14 @@
         "lemma": "attah"
       },
       {
+        "surface": "listen to me",
+        "lemma": "shama"
+      },
+      {
+        "surface": "and return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the captives",
         "lemma": "shivyah"
       },
@@ -518,12 +634,20 @@
         "lemma": "ach"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "the fierce anger",
         "lemma": "charon"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "is upon you",
+        "lemma": "al"
       }
     ],
     "12": [
@@ -592,11 +716,31 @@
         "lemma": "qamay"
       },
       {
+        "surface": "in opposition to",
+        "lemma": "al"
+      },
+      {
+        "surface": "those arriving",
+        "lemma": "bo"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the war",
         "lemma": "tsava"
       }
     ],
     "13": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "bring",
+        "lemma": "bo"
+      },
       {
         "surface": "the captives",
         "lemma": "shivyah"
@@ -606,8 +750,28 @@
         "lemma": "hennah"
       },
       {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "are proposing",
+        "lemma": "amar"
+      },
+      {
         "surface": "to bring guilt",
         "lemma": "ashmah"
+      },
+      {
+        "surface": "upon us",
+        "lemma": "al"
       },
       {
         "surface": "from the LORD",
@@ -618,12 +782,24 @@
         "lemma": "yasaph"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "our sins",
         "lemma": "chattaah"
       },
       {
+        "surface": "and",
+        "lemma": "al"
+      },
+      {
         "surface": "our guilt",
         "lemma": "ashmah"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "guilt",
@@ -636,6 +812,10 @@
       {
         "surface": "and fierce anger",
         "lemma": "charon"
+      },
+      {
+        "surface": "is upon",
+        "lemma": "al"
       },
       {
         "surface": "Israel",
@@ -668,6 +848,10 @@
         "lemma": "sar"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the assembly",
         "lemma": "qahal"
       }
@@ -676,6 +860,10 @@
       {
         "surface": "Then the men",
         "lemma": "enosh"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "were designated",
@@ -696,6 +884,10 @@
       {
         "surface": "of the captives",
         "lemma": "shivyah"
+      },
+      {
+        "surface": "and provided from",
+        "lemma": "min"
       },
       {
         "surface": "the plunder",
@@ -734,12 +926,20 @@
         "lemma": "nahal"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the feeble",
         "lemma": "kashal"
       },
       {
         "surface": "on donkeys",
         "lemma": "chamor"
+      },
+      {
+        "surface": "So they brought them",
+        "lemma": "bo"
       },
       {
         "surface": "to Jericho",
@@ -762,11 +962,23 @@
         "lemma": "ach"
       },
       {
+        "surface": "Then they returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to Samaria",
         "lemma": "shomeron"
       }
     ],
     "16": [
+      {
+        "surface": "At that",
+        "lemma": "hu"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
       {
         "surface": "King",
         "lemma": "melekh"
@@ -782,6 +994,10 @@
       {
         "surface": "for help",
         "lemma": "azar"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
       },
       {
         "surface": "the king",
@@ -800,6 +1016,10 @@
       {
         "surface": "had again",
         "lemma": "od"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
       },
       {
         "surface": "and attacked",
@@ -848,6 +1068,10 @@
         "lemma": "lakhad"
       },
       {
+        "surface": "and occupying",
+        "lemma": "yashav"
+      },
+      {
         "surface": "vvv",
         "lemma": "betshemesh"
       },
@@ -860,8 +1084,16 @@
         "lemma": "ayyalon"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "Gederoth",
         "lemma": "gederot"
+      },
+      {
+        "surface": "as well as",
+        "lemma": "et"
       },
       {
         "surface": "Soco",
@@ -870,6 +1102,10 @@
       {
         "surface": "Timnah",
         "lemma": "timnah"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "Gimzo",
@@ -882,6 +1118,10 @@
     ],
     "19": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -892,6 +1132,10 @@
       {
         "surface": "Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "because",
+        "lemma": "avur"
       },
       {
         "surface": "Ahaz",
@@ -940,8 +1184,20 @@
         "lemma": "ashshur"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to Ahaz",
+        "lemma": "al"
+      },
+      {
         "surface": "but afflicted",
         "lemma": "tsarar"
+      },
+      {
+        "surface": "rather than",
+        "lemma": "lo"
       },
       {
         "surface": "strengthening him",
@@ -949,6 +1205,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "Although",
+        "lemma": "ki"
+      },
       {
         "surface": "Ahaz",
         "lemma": "achaz"
@@ -966,6 +1226,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "from",
+        "lemma": "et"
+      },
+      {
         "surface": "the royal",
         "lemma": "melekh"
       },
@@ -978,6 +1242,10 @@
         "lemma": "sar"
       },
       {
+        "surface": "and had presented",
+        "lemma": "natan"
+      },
+      {
         "surface": "it to the king",
         "lemma": "melekh"
       },
@@ -986,11 +1254,19 @@
         "lemma": "ashshur"
       },
       {
+        "surface": "it did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "help",
         "lemma": "ezrah"
       }
     ],
     "22": [
+      {
+        "surface": "In the time",
+        "lemma": "et"
+      },
       {
         "surface": "of his distress",
         "lemma": "tsarar"
@@ -1034,6 +1310,14 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "and he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Because",
+        "lemma": "ki"
+      },
+      {
         "surface": "the gods",
         "lemma": "elohim"
       },
@@ -1050,6 +1334,10 @@
         "lemma": "azar"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "I will sacrifice",
         "lemma": "zavach"
       },
@@ -1058,8 +1346,20 @@
         "lemma": "azar"
       },
       {
+        "surface": "But these gods",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the downfall",
         "lemma": "kashal"
+      },
+      {
+        "surface": "and of all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -1112,8 +1412,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and set up",
+        "lemma": "asah"
+      },
+      {
         "surface": "altars",
         "lemma": "mizbeach"
+      },
+      {
+        "surface": "on every",
+        "lemma": "kol"
       },
       {
         "surface": "street corner",
@@ -1126,12 +1434,20 @@
     ],
     "25": [
       {
+        "surface": "In every",
+        "lemma": "kol"
+      },
+      {
         "surface": "city",
         "lemma": "ir"
       },
       {
         "surface": "of Judah",
         "lemma": "yehudah"
+      },
+      {
+        "surface": "he built",
+        "lemma": "asah"
       },
       {
         "surface": "high places",
@@ -1160,6 +1476,10 @@
       {
         "surface": "the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of his fathers",
+        "lemma": "av"
       }
     ],
     "26": [
@@ -1170,6 +1490,10 @@
       {
         "surface": "of the acts of Ahaz",
         "lemma": "davar"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "his ways",
@@ -1190,6 +1514,10 @@
       {
         "surface": "written",
         "lemma": "katav"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "the Book",
@@ -1218,6 +1546,14 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "and was buried",
         "lemma": "qavar"
       },
@@ -1228,6 +1564,18 @@
       {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "but",
+        "lemma": "ki"
+      },
+      {
+        "surface": "he was not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "placed",
+        "lemma": "bo"
       },
       {
         "surface": "in the tombs",
@@ -1260,8 +1608,8 @@
     ]
   },
   "themeLemmas": [
-    "achaz",
+    "al",
     "yehudah",
-    "yisrael"
+    "bo"
   ]
 }

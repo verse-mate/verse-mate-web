@@ -10,6 +10,10 @@
         "lemma": "natsach"
       },
       {
+        "surface": "to be accompanied by",
+        "lemma": "el"
+      },
+      {
         "surface": "flutes",
         "lemma": "nechilah"
       },
@@ -64,6 +68,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "to You",
+        "lemma": "el"
+      },
+      {
         "surface": "I pray",
         "lemma": "palal"
       }
@@ -76,6 +88,10 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "You hear",
+        "lemma": "shama"
       },
       {
         "surface": "my voice",
@@ -96,6 +112,18 @@
     ],
     "4": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
+        "surface": "are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "a God",
         "lemma": "el"
       },
@@ -106,6 +134,10 @@
       {
         "surface": "in wickedness",
         "lemma": "resah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "evil",
@@ -122,6 +154,10 @@
         "lemma": "halal"
       },
       {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "stand",
         "lemma": "yatsav"
       },
@@ -132,6 +168,10 @@
       {
         "surface": "You hate",
         "lemma": "sane"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "workers",
@@ -178,6 +218,14 @@
     ],
     "7": [
       {
+        "surface": "But I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "will enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "Your house",
         "lemma": "bet"
       },
@@ -196,6 +244,10 @@
       {
         "surface": "I will bow down",
         "lemma": "shachah"
+      },
+      {
+        "surface": "toward",
+        "lemma": "el"
       },
       {
         "surface": "Your holy",
@@ -220,6 +272,10 @@
         "lemma": "tsedaqah"
       },
       {
+        "surface": "because of",
+        "lemma": "maan"
+      },
+      {
         "surface": "my enemies",
         "lemma": "sharar"
       },
@@ -237,6 +293,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "not a word",
         "lemma": "ayin"
@@ -308,11 +368,19 @@
         "lemma": "pesah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "they have rebelled",
         "lemma": "marah"
       }
     ],
     "11": [
+      {
+        "surface": "But let all",
+        "lemma": "kol"
+      },
       {
         "surface": "who take refuge",
         "lemma": "chasah"
@@ -330,6 +398,10 @@
         "lemma": "sukh"
       },
       {
+        "surface": "them",
+        "lemma": "al"
+      },
+      {
         "surface": "that those who love",
         "lemma": "ahav"
       },
@@ -343,6 +415,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "For surely",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -370,8 +450,8 @@
     ]
   },
   "themeLemmas": [
-    "rov",
-    "qol",
-    "boqer"
+    "ki",
+    "lo",
+    "rov"
   ]
 }

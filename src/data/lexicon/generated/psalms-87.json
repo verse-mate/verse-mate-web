@@ -52,6 +52,10 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "more than all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the dwellings",
         "lemma": "mishkan"
       },
@@ -112,8 +116,16 @@
         "lemma": "tsor"
       },
       {
+        "surface": "and",
+        "lemma": "im"
+      },
+      {
         "surface": "Cush",
         "lemma": "kush"
+      },
+      {
+        "surface": "when I say, ‘This one",
+        "lemma": "zeh"
       },
       {
         "surface": "was born",
@@ -125,6 +137,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "And it will be said",
+        "lemma": "amar"
+      },
       {
         "surface": "of Zion",
         "lemma": "tsiyyon"
@@ -144,6 +160,10 @@
       {
         "surface": "and the Most High",
         "lemma": "elyon"
+      },
+      {
+        "surface": "Himself",
+        "lemma": "hu"
       },
       {
         "surface": "will establish her",
@@ -168,6 +188,10 @@
         "lemma": "am"
       },
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
         "surface": "one was born",
         "lemma": "yalad"
       },
@@ -190,6 +214,10 @@
         "lemma": "chul"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "my springs of joy",
         "lemma": "mayan"
       }
@@ -197,7 +225,7 @@
   },
   "themeLemmas": [
     "yalad",
-    "tsiyyon",
-    "shir"
+    "zeh",
+    "tsiyyon"
   ]
 }

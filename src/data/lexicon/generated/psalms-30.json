@@ -34,8 +34,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "You have lifted me up",
         "lemma": "dalah"
+      },
+      {
+        "surface": "and have not",
+        "lemma": "lo"
       },
       {
         "surface": "allowed my foes",
@@ -54,6 +62,10 @@
       {
         "surface": "my God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "I cried} to You",
+        "lemma": "el"
       },
       {
         "surface": "for help",
@@ -76,6 +88,10 @@
       {
         "surface": "up",
         "lemma": "alah"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "Sheol",
@@ -122,6 +138,10 @@
     ],
     "5": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "His anger",
         "lemma": "aph"
       },
@@ -164,6 +184,14 @@
         "lemma": "shelev"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "I will never",
         "lemma": "bal"
       },
@@ -202,14 +230,30 @@
         "lemma": "paneh"
       },
       {
+        "surface": "I was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "dismayed",
         "lemma": "bahal"
       }
     ],
     "8": [
       {
+        "surface": "To You",
+        "lemma": "el"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "I called",
+        "lemma": "qara"
+      },
+      {
+        "surface": "and",
+        "lemma": "el"
       },
       {
         "surface": "I begged",
@@ -238,6 +282,10 @@
         "lemma": "yarad"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the Pit",
         "lemma": "shachat"
       },
@@ -260,6 +308,10 @@
     ],
     "10": [
       {
+        "surface": "Hear me",
+        "lemma": "shama"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -270,6 +322,10 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "my helper",
@@ -308,12 +364,20 @@
     ],
     "12": [
       {
+        "surface": "that my heart",
+        "lemma": "maan"
+      },
+      {
         "surface": "may sing",
         "lemma": "zamar"
       },
       {
         "surface": "Your praises",
         "lemma": "kavod"
+      },
+      {
+        "surface": "and not",
+        "lemma": "lo"
       },
       {
         "surface": "be silent",

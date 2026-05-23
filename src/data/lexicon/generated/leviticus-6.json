@@ -14,11 +14,19 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
     ],
     "2": [
+      {
+        "surface": "If",
+        "lemma": "ki"
+      },
       {
         "surface": "someone",
         "lemma": "nephesh"
@@ -60,8 +68,16 @@
         "lemma": "yad"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "stolen",
         "lemma": "gazel"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "if he extorts",
@@ -73,6 +89,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "or",
+        "lemma": "o"
+      },
       {
         "surface": "finds",
         "lemma": "matsa"
@@ -98,11 +118,23 @@
         "lemma": "chata"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "a man",
         "lemma": "adam"
+      },
+      {
+        "surface": "might commit",
+        "lemma": "asah"
       }
     ],
     "4": [
+      {
+        "surface": "once",
+        "lemma": "ki"
+      },
       {
         "surface": "he has sinned",
         "lemma": "chata"
@@ -112,12 +144,28 @@
         "lemma": "asham"
       },
       {
+        "surface": "he must return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
+      },
+      {
         "surface": "he has stolen",
         "lemma": "gezelah"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "taken by extortion",
         "lemma": "ashaq"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "the deposit",
@@ -126,6 +174,14 @@
       {
         "surface": "entrusted",
         "lemma": "paqad"
+      },
+      {
+        "surface": "to him",
+        "lemma": "et"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "the lost property",
@@ -137,6 +193,22 @@
       }
     ],
     "5": [
+      {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
+        "surface": "anything else",
+        "lemma": "kol"
+      },
+      {
+        "surface": "about",
+        "lemma": "al"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
+      },
       {
         "surface": "he has sworn",
         "lemma": "shava"
@@ -162,6 +234,18 @@
         "lemma": "chamishi"
       },
       {
+        "surface": "of the value",
+        "lemma": "al"
+      },
+      {
+        "surface": "and pay it",
+        "lemma": "natan"
+      },
+      {
+        "surface": "to the owner",
+        "lemma": "asher"
+      },
+      {
         "surface": "on the day",
         "lemma": "yom"
       },
@@ -171,6 +255,14 @@
       }
     ],
     "6": [
+      {
+        "surface": "Then he must bring",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
       {
         "surface": "the priest",
         "lemma": "kohen"
@@ -196,6 +288,10 @@
         "lemma": "erekh"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the flock",
         "lemma": "tson"
       }
@@ -210,6 +306,10 @@
         "lemma": "kipher"
       },
       {
+        "surface": "for him",
+        "lemma": "al"
+      },
+      {
         "surface": "before",
         "lemma": "paneh"
       },
@@ -222,8 +322,16 @@
         "lemma": "salach"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "anything",
         "lemma": "echad"
+      },
+      {
+        "surface": "he may have done",
+        "lemma": "asah"
       },
       {
         "surface": "to incur guilt",
@@ -238,6 +346,10 @@
       {
         "surface": "said",
         "lemma": "davar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Moses",
@@ -258,6 +370,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "that this",
+        "lemma": "zot"
+      },
+      {
         "surface": "is the law",
         "lemma": "torah"
       },
@@ -270,6 +386,14 @@
         "lemma": "olah"
       },
       {
+        "surface": "is to remain",
+        "lemma": "al"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the hearth",
         "lemma": "moqedah"
       },
@@ -278,8 +402,16 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "night",
         "lemma": "laylah"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "morning",
@@ -382,6 +514,10 @@
         "lemma": "beged"
       },
       {
+        "surface": "and carry",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the ashes",
         "lemma": "deshen"
       },
@@ -392,6 +528,10 @@
       {
         "surface": "the camp",
         "lemma": "machaneh"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "a ceremonially clean",
@@ -408,12 +548,20 @@
         "lemma": "esh"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the altar",
         "lemma": "mizbeach"
       },
       {
         "surface": "shall be kept burning",
         "lemma": "yaqad"
+      },
+      {
+        "surface": "it must not",
+        "lemma": "lo"
       },
       {
         "surface": "be extinguished",
@@ -436,12 +584,20 @@
         "lemma": "ets"
       },
       {
+        "surface": "to the fire",
+        "lemma": "al"
+      },
+      {
         "surface": "arrange",
         "lemma": "arakh"
       },
       {
         "surface": "the burnt offering",
         "lemma": "olah"
+      },
+      {
+        "surface": "on it",
+        "lemma": "al"
       },
       {
         "surface": "and burn",
@@ -454,6 +610,10 @@
       {
         "surface": "of the peace offerings",
         "lemma": "shelem"
+      },
+      {
+        "surface": "on it",
+        "lemma": "al"
       }
     ],
     "13": [
@@ -466,6 +626,10 @@
         "lemma": "yaqad"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the altar",
         "lemma": "mizbeach"
       },
@@ -474,11 +638,19 @@
         "lemma": "tamid"
       },
       {
+        "surface": "it must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be extinguished",
         "lemma": "kavah"
       }
     ],
     "14": [
+      {
+        "surface": "Now this",
+        "lemma": "zot"
+      },
       {
         "surface": "is the law",
         "lemma": "torah"
@@ -500,12 +672,20 @@
         "lemma": "qarav"
       },
       {
+        "surface": "it",
+        "lemma": "et"
+      },
+      {
         "surface": "before",
         "lemma": "paneh"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "in",
+        "lemma": "el"
       },
       {
         "surface": "front",
@@ -526,12 +706,20 @@
         "lemma": "qomets"
       },
       {
+        "surface": "of",
+        "lemma": "min"
+      },
+      {
         "surface": "fine flour",
         "lemma": "solet"
       },
       {
         "surface": "and olive oil",
         "lemma": "shemen"
+      },
+      {
+        "surface": "together with all",
+        "lemma": "kol"
       },
       {
         "surface": "the frankincense",
@@ -618,6 +806,10 @@
     ],
     "17": [
       {
+        "surface": "It must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be baked",
         "lemma": "aphah"
       },
@@ -626,12 +818,20 @@
         "lemma": "chamets"
       },
       {
+        "surface": "I have assigned",
+        "lemma": "natan"
+      },
+      {
         "surface": "it as their portion",
         "lemma": "cheleq"
       },
       {
         "surface": "of My food offerings",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "It is",
+        "lemma": "hu"
       },
       {
         "surface": "most",
@@ -651,6 +851,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "Any",
+        "lemma": "kol"
+      },
       {
         "surface": "male",
         "lemma": "zakhar"
@@ -688,6 +892,14 @@
         "lemma": "dor"
       },
       {
+        "surface": "Anything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "touches",
         "lemma": "naga"
       },
@@ -706,11 +918,19 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
     ],
     "20": [
+      {
+        "surface": "This",
+        "lemma": "zeh"
+      },
       {
         "surface": "is the offering",
         "lemma": "qorban"
@@ -778,12 +998,24 @@
     ],
     "21": [
       {
+        "surface": "It shall be prepared",
+        "lemma": "asah"
+      },
+      {
         "surface": "with oil",
         "lemma": "shemen"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "a griddle",
         "lemma": "machavat"
+      },
+      {
+        "surface": "you are to bring it",
+        "lemma": "bo"
       },
       {
         "surface": "well-kneaded",
@@ -836,6 +1068,10 @@
         "lemma": "tachat"
       },
       {
+        "surface": "is to prepare it",
+        "lemma": "asah"
+      },
+      {
         "surface": "As a permanent",
         "lemma": "olam"
       },
@@ -858,6 +1094,10 @@
     ],
     "23": [
       {
+        "surface": "Every",
+        "lemma": "kol"
+      },
+      {
         "surface": "grain offering",
         "lemma": "minchah"
       },
@@ -866,8 +1106,16 @@
         "lemma": "kohen"
       },
       {
+        "surface": "shall be burned",
+        "lemma": "hayah"
+      },
+      {
         "surface": "completely",
         "lemma": "kalil"
+      },
+      {
+        "surface": "it is not",
+        "lemma": "lo"
       },
       {
         "surface": "to be eaten",
@@ -882,6 +1130,10 @@
       {
         "surface": "said",
         "lemma": "davar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Moses",
@@ -902,6 +1154,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "that this",
+        "lemma": "zot"
+      },
+      {
         "surface": "is the law",
         "lemma": "torah"
       },
@@ -912,6 +1168,10 @@
       {
         "surface": "In the place",
         "lemma": "maqom"
+      },
+      {
+        "surface": "where",
+        "lemma": "asher"
       },
       {
         "surface": "the burnt offering",
@@ -956,6 +1216,10 @@
         "lemma": "chata"
       },
       {
+        "surface": "it",
+        "lemma": "et"
+      },
+      {
         "surface": "shall eat it",
         "lemma": "akhal"
       },
@@ -986,6 +1250,14 @@
     ],
     "27": [
       {
+        "surface": "Anything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "touches",
         "lemma": "naga"
       },
@@ -998,6 +1270,10 @@
         "lemma": "qadash"
       },
       {
+        "surface": "and if",
+        "lemma": "asher"
+      },
+      {
         "surface": "any of the blood",
         "lemma": "dam"
       },
@@ -1006,12 +1282,20 @@
         "lemma": "nazah"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "a garment",
         "lemma": "beged"
       },
       {
         "surface": "you must wash",
         "lemma": "kavas"
+      },
+      {
+        "surface": "it",
+        "lemma": "asher"
       },
       {
         "surface": "in a holy",
@@ -1032,12 +1316,20 @@
         "lemma": "keli"
       },
       {
+        "surface": "in which",
+        "lemma": "asher"
+      },
+      {
         "surface": "the sin offering is boiled",
         "lemma": "bashal"
       },
       {
         "surface": "must be broken",
         "lemma": "shavar"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
       },
       {
         "surface": "it is boiled",
@@ -1066,6 +1358,10 @@
     ],
     "29": [
       {
+        "surface": "Any",
+        "lemma": "kol"
+      },
+      {
         "surface": "male",
         "lemma": "zakhar"
       },
@@ -1078,6 +1374,10 @@
         "lemma": "akhal"
       },
       {
+        "surface": "it is",
+        "lemma": "hu"
+      },
+      {
         "surface": "most",
         "lemma": "qodesh"
       },
@@ -1087,6 +1387,10 @@
       }
     ],
     "30": [
+      {
+        "surface": "But no",
+        "lemma": "lo"
+      },
       {
         "surface": "sin offering",
         "lemma": "chattaah"
@@ -1098,6 +1402,14 @@
       {
         "surface": "if its blood",
         "lemma": "dam"
+      },
+      {
+        "surface": "has been brought",
+        "lemma": "bo"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
       },
       {
         "surface": "the Tent",
@@ -1122,8 +1434,8 @@
     ]
   },
   "themeLemmas": [
-    "akhal",
-    "mizbeach",
-    "kohen"
+    "al",
+    "asher",
+    "akhal"
   ]
 }

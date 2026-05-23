@@ -60,8 +60,16 @@
     ],
     "2": [
       {
+        "surface": "went to",
+        "lemma": "asah"
+      },
+      {
         "surface": "war",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "against",
+        "lemma": "et"
       },
       {
         "surface": "Bera",
@@ -120,14 +128,30 @@
         "lemma": "bela"
       },
       {
+        "surface": "that is",
+        "lemma": "hu"
+      },
+      {
         "surface": "Zoar",
         "lemma": "tsoar"
       }
     ],
     "3": [
       {
+        "surface": "The latter",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "five",
+        "lemma": "kol"
+      },
+      {
         "surface": "came as allies",
         "lemma": "chavar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the Valley",
@@ -136,6 +160,10 @@
       {
         "surface": "of Siddim",
         "lemma": "siddim"
+      },
+      {
+        "surface": "that is",
+        "lemma": "hu"
       },
       {
         "surface": "the Salt",
@@ -194,6 +222,14 @@
         "lemma": "melekh"
       },
       {
+        "surface": "allied with him",
+        "lemma": "et"
+      },
+      {
+        "surface": "went out",
+        "lemma": "bo"
+      },
+      {
         "surface": "and defeated",
         "lemma": "nakhah"
       },
@@ -228,6 +264,10 @@
     ],
     "6": [
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "the Horites",
         "lemma": "chori"
       },
@@ -240,6 +280,10 @@
         "lemma": "seir"
       },
       {
+        "surface": "as far as",
+        "lemma": "ad"
+      },
+      {
         "surface": "vvv",
         "lemma": "elparan"
       },
@@ -248,11 +292,27 @@
         "lemma": "elparan"
       },
       {
+        "surface": "which is",
+        "lemma": "asher"
+      },
+      {
+        "surface": "near",
+        "lemma": "al"
+      },
+      {
         "surface": "the desert",
         "lemma": "midbar"
       }
     ],
     "7": [
+      {
+        "surface": "Then they turned back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to invade",
+        "lemma": "bo"
+      },
       {
         "surface": "vvv",
         "lemma": "enmishpat"
@@ -260,6 +320,10 @@
       {
         "surface": "En-mishpat",
         "lemma": "enmishpat"
+      },
+      {
+        "surface": "that is",
+        "lemma": "hu"
       },
       {
         "surface": "Kadesh",
@@ -270,6 +334,10 @@
         "lemma": "nakhah"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "territory",
         "lemma": "saday"
       },
@@ -278,8 +346,16 @@
         "lemma": "amaleqi"
       },
       {
+        "surface": "as",
+        "lemma": "gam"
+      },
+      {
         "surface": "well as the Amorites",
         "lemma": "emori"
+      },
+      {
+        "surface": "who lived",
+        "lemma": "yashav"
       },
       {
         "surface": "vvv",
@@ -332,12 +408,24 @@
         "lemma": "bela"
       },
       {
+        "surface": "that is",
+        "lemma": "hu"
+      },
+      {
         "surface": "Zoar",
         "lemma": "tsoar"
       },
       {
+        "surface": "marched out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "and arrayed",
         "lemma": "arakh"
+      },
+      {
+        "surface": "themselves",
+        "lemma": "et"
       },
       {
         "surface": "for battle",
@@ -353,6 +441,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "against",
+        "lemma": "et"
+      },
       {
         "surface": "Chedorlaomer",
         "lemma": "kedorlaomer"
@@ -408,6 +500,10 @@
       {
         "surface": "kings",
         "lemma": "melekh"
+      },
+      {
+        "surface": "against",
+        "lemma": "et"
       },
       {
         "surface": "five",
@@ -474,6 +570,10 @@
         "lemma": "laqach"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the goods",
         "lemma": "rekhush"
       },
@@ -484,6 +584,10 @@
       {
         "surface": "and Gomorrah",
         "lemma": "amorah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "their food",
@@ -516,6 +620,14 @@
         "lemma": "rekhush"
       },
       {
+        "surface": "since Lot",
+        "lemma": "hu"
+      },
+      {
+        "surface": "was living",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Sodom",
         "lemma": "sedom"
       }
@@ -524,6 +636,10 @@
       {
         "surface": "Then an escapee",
         "lemma": "palit"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
       },
       {
         "surface": "and reported this",
@@ -536,6 +652,10 @@
       {
         "surface": "the Hebrew",
         "lemma": "ivri"
+      },
+      {
+        "surface": "Now Abram",
+        "lemma": "hu"
       },
       {
         "surface": "was living",
@@ -570,6 +690,10 @@
         "lemma": "aner"
       },
       {
+        "surface": "all of whom",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "were bound",
         "lemma": "baal"
       },
@@ -586,6 +710,14 @@
       {
         "surface": "And when Abram",
         "lemma": "avram"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "his relative",
@@ -620,6 +752,10 @@
         "lemma": "radaph"
       },
       {
+        "surface": "as",
+        "lemma": "ad"
+      },
+      {
         "surface": "far as Dan",
         "lemma": "dan"
       }
@@ -628,6 +764,10 @@
       {
         "surface": "During the night",
         "lemma": "laylah"
+      },
+      {
+        "surface": "Abram",
+        "lemma": "hu"
       },
       {
         "surface": "divided",
@@ -646,6 +786,10 @@
         "lemma": "radaph"
       },
       {
+        "surface": "as far as",
+        "lemma": "ad"
+      },
+      {
         "surface": "Hobah",
         "lemma": "chovah"
       },
@@ -660,8 +804,20 @@
     ],
     "16": [
       {
+        "surface": "He retrieved",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the goods",
         "lemma": "rekhush"
+      },
+      {
+        "surface": "as well as",
+        "lemma": "gam"
       },
       {
         "surface": "his relative",
@@ -676,6 +832,10 @@
         "lemma": "rekhush"
       },
       {
+        "surface": "together with",
+        "lemma": "gam"
+      },
+      {
         "surface": "the women",
         "lemma": "ishshah"
       },
@@ -688,6 +848,10 @@
       {
         "surface": "After",
         "lemma": "achar"
+      },
+      {
+        "surface": "Abram returned",
+        "lemma": "shuv"
       },
       {
         "surface": "from defeating",
@@ -706,6 +870,14 @@
         "lemma": "melekh"
       },
       {
+        "surface": "vvv",
+        "lemma": "asher"
+      },
+      {
+        "surface": "allied with him",
+        "lemma": "et"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -714,12 +886,28 @@
         "lemma": "sedom"
       },
       {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to meet him",
+        "lemma": "qara"
+      },
+      {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
         "surface": "the Valley",
         "lemma": "emeq"
       },
       {
         "surface": "of Shaveh",
         "lemma": "shaveh"
+      },
+      {
+        "surface": "that is",
+        "lemma": "hu"
       },
       {
         "surface": "the King’s",
@@ -748,12 +936,20 @@
         "lemma": "shalem"
       },
       {
+        "surface": "brought out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "bread",
         "lemma": "lechem"
       },
       {
         "surface": "and wine",
         "lemma": "yayin"
+      },
+      {
+        "surface": "since he",
+        "lemma": "hu"
       },
       {
         "surface": "was priest",
@@ -772,6 +968,10 @@
       {
         "surface": "and he blessed Abram",
         "lemma": "barakh"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "Blessed be",
@@ -816,6 +1016,10 @@
         "lemma": "elyon"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "has delivered",
         "lemma": "magan"
       },
@@ -828,8 +1032,16 @@
         "lemma": "yad"
       },
       {
+        "surface": "Then Abram gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "a tenth",
         "lemma": "maaser"
+      },
+      {
+        "surface": "of everything",
+        "lemma": "kol"
       }
     ],
     "21": [
@@ -842,8 +1054,20 @@
         "lemma": "sedom"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Abram",
         "lemma": "avram"
+      },
+      {
+        "surface": "Give",
+        "lemma": "natan"
       },
       {
         "surface": "the people",
@@ -864,6 +1088,14 @@
         "lemma": "avram"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -878,6 +1110,10 @@
       {
         "surface": "my hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -906,8 +1142,20 @@
     ],
     "23": [
       {
+        "surface": "that",
+        "lemma": "im"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "im"
+      },
+      {
         "surface": "accept",
         "lemma": "laqach"
+      },
+      {
+        "surface": "even",
+        "lemma": "ad"
       },
       {
         "surface": "a thread",
@@ -922,6 +1170,26 @@
         "lemma": "naal"
       },
       {
+        "surface": "or anything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "lest",
+        "lemma": "lo"
+      },
+      {
+        "surface": "you should say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I {have made",
+        "lemma": "ani"
+      },
+      {
         "surface": "Abram",
         "lemma": "avram"
       },
@@ -934,6 +1202,14 @@
       {
         "surface": "I will accept nothing",
         "lemma": "bilade"
+      },
+      {
+        "surface": "but",
+        "lemma": "raq"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
       },
       {
         "surface": "my men",
@@ -952,8 +1228,16 @@
         "lemma": "enosh"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "went",
         "lemma": "halakh"
+      },
+      {
+        "surface": "with me",
+        "lemma": "et"
       },
       {
         "surface": "Aner",
@@ -968,6 +1252,10 @@
         "lemma": "mamre"
       },
       {
+        "surface": "They",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "may take",
         "lemma": "laqach"
       },
@@ -978,8 +1266,8 @@
     ]
   },
   "themeLemmas": [
+    "hu",
     "sedom",
-    "avram",
-    "kedorlaomer"
+    "et"
   ]
 }

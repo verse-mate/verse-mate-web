@@ -10,8 +10,16 @@
         "lemma": "halakh"
       },
       {
+        "surface": "back to",
+        "lemma": "el"
+      },
+      {
         "surface": "the gate",
         "lemma": "shaar"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "faces",
@@ -38,6 +46,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "coming",
+        "lemma": "bo"
       },
       {
         "surface": "from",
@@ -82,8 +94,20 @@
         "lemma": "mareh"
       },
       {
+        "surface": "I saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "was like the vision",
         "lemma": "mareh"
+      },
+      {
+        "surface": "I had seen",
+        "lemma": "raah"
+      },
+      {
+        "surface": "when He came",
+        "lemma": "bo"
       },
       {
         "surface": "to destroy",
@@ -98,6 +122,14 @@
         "lemma": "marah"
       },
       {
+        "surface": "I had seen",
+        "lemma": "raah"
+      },
+      {
+        "surface": "by",
+        "lemma": "el"
+      },
+      {
         "surface": "the River",
         "lemma": "nahar"
       },
@@ -108,6 +140,10 @@
       {
         "surface": "I fell",
         "lemma": "naphal"
+      },
+      {
+        "surface": "facedown",
+        "lemma": "el"
       }
     ],
     "4": [
@@ -118,6 +154,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "entered",
+        "lemma": "bo"
       },
       {
         "surface": "the temple",
@@ -150,6 +190,14 @@
         "lemma": "nasa"
       },
       {
+        "surface": "and brought me",
+        "lemma": "bo"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
+      },
+      {
         "surface": "the inner",
         "lemma": "penimi"
       },
@@ -180,6 +228,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "standing",
         "lemma": "amad"
       },
@@ -188,8 +240,16 @@
         "lemma": "etsel"
       },
       {
+        "surface": "I heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "someone speaking",
         "lemma": "davar"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
       },
       {
         "surface": "from inside the temple",
@@ -197,6 +257,14 @@
       }
     ],
     "7": [
+      {
+        "surface": "and He said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
       {
         "surface": "Son",
         "lemma": "ben"
@@ -226,6 +294,10 @@
         "lemma": "regel"
       },
       {
+        "surface": "where",
+        "lemma": "asher"
+      },
+      {
         "surface": "I will dwell",
         "lemma": "shakhan"
       },
@@ -250,6 +322,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "again",
         "lemma": "od"
       },
@@ -264,6 +340,10 @@
       {
         "surface": "name",
         "lemma": "shem"
+      },
+      {
+        "surface": "neither they",
+        "lemma": "hemmah"
       },
       {
         "surface": "nor their kings",
@@ -288,8 +368,16 @@
     ],
     "8": [
       {
+        "surface": "When they placed",
+        "lemma": "natan"
+      },
+      {
         "surface": "their threshold",
         "lemma": "saph"
+      },
+      {
+        "surface": "next to",
+        "lemma": "et"
       },
       {
         "surface": "My threshold",
@@ -332,8 +420,16 @@
         "lemma": "toevah"
       },
       {
+        "surface": "they committed",
+        "lemma": "asah"
+      },
+      {
         "surface": "Therefore I have consumed",
         "lemma": "kalah"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
       },
       {
         "surface": "in My anger",
@@ -348,6 +444,10 @@
       {
         "surface": "let them remove",
         "lemma": "rachaq"
+      },
+      {
+        "surface": "far from Me",
+        "lemma": "min"
       },
       {
         "surface": "their prostitution",
@@ -375,6 +475,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "As for you",
+        "lemma": "attah"
+      },
       {
         "surface": "son",
         "lemma": "ben"
@@ -418,12 +522,28 @@
     ],
     "11": [
       {
+        "surface": "and if",
+        "lemma": "im"
+      },
+      {
         "surface": "they are ashamed",
         "lemma": "kalam"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "they have done",
+        "lemma": "asah"
+      },
+      {
         "surface": "then make known",
         "lemma": "yada"
+      },
+      {
+        "surface": "to them",
+        "lemma": "et"
       },
       {
         "surface": "the design",
@@ -446,8 +566,16 @@
         "lemma": "mova"
       },
       {
+        "surface": "its whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "design",
         "lemma": "tsurah"
+      },
+      {
+        "surface": "along with all",
+        "lemma": "kol"
       },
       {
         "surface": "its statutes",
@@ -456,6 +584,10 @@
       {
         "surface": "forms",
         "lemma": "tsurah"
+      },
+      {
+        "surface": "and",
+        "lemma": "kol"
       },
       {
         "surface": "laws",
@@ -474,15 +606,35 @@
         "lemma": "shamar"
       },
       {
+        "surface": "its complete",
+        "lemma": "kol"
+      },
+      {
         "surface": "design",
         "lemma": "tsurah"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its statutes",
         "lemma": "chuqqah"
+      },
+      {
+        "surface": "and may carry them out",
+        "lemma": "asah"
       }
     ],
     "12": [
+      {
+        "surface": "This",
+        "lemma": "zot"
+      },
       {
         "surface": "is the law",
         "lemma": "torah"
@@ -492,12 +644,20 @@
         "lemma": "bet"
       },
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "its surrounding",
         "lemma": "saviv"
       },
       {
         "surface": "territory",
         "lemma": "gevul"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "top",
@@ -516,6 +676,10 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "is the law",
         "lemma": "torah"
       },
@@ -525,6 +689,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the measurements",
         "lemma": "middah"
@@ -582,6 +750,10 @@
         "lemma": "saphah"
       },
       {
+        "surface": "And this is",
+        "lemma": "zeh"
+      },
+      {
         "surface": "the height",
         "lemma": "gav"
       },
@@ -598,6 +770,10 @@
       {
         "surface": "on the ground",
         "lemma": "erets"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "the lower",
@@ -634,6 +810,10 @@
       {
         "surface": "ledge",
         "lemma": "azarah"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "the larger",
@@ -700,6 +880,10 @@
         "lemma": "rava"
       },
       {
+        "surface": "at",
+        "lemma": "el"
+      },
+      {
         "surface": "its four",
         "lemma": "arba"
       },
@@ -728,6 +912,10 @@
       {
         "surface": "The ledge",
         "lemma": "azarah"
+      },
+      {
+        "surface": "shall also be square",
+        "lemma": "el"
       },
       {
         "surface": "fourteen cubits",
@@ -770,6 +958,10 @@
         "lemma": "saviv"
       },
       {
+        "surface": "it",
+        "lemma": "et"
+      },
+      {
         "surface": "The steps of the altar",
         "lemma": "maalah"
       },
@@ -783,6 +975,14 @@
       }
     ],
     "18": [
+      {
+        "surface": "Then He said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
       {
         "surface": "Son",
         "lemma": "ben"
@@ -804,6 +1004,14 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the statutes",
         "lemma": "chuqqah"
       },
@@ -816,6 +1024,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "it is constructed",
+        "lemma": "asah"
+      },
+      {
         "surface": "so that burnt offerings",
         "lemma": "olah"
       },
@@ -824,15 +1036,27 @@
         "lemma": "alah"
       },
       {
+        "surface": "on it",
+        "lemma": "al"
+      },
+      {
         "surface": "and blood",
         "lemma": "dam"
       },
       {
         "surface": "may be splattered",
         "lemma": "zaraq"
+      },
+      {
+        "surface": "on it",
+        "lemma": "al"
       }
     ],
     "19": [
+      {
+        "surface": "You are to give",
+        "lemma": "natan"
+      },
       {
         "surface": "a young",
         "lemma": "ben"
@@ -850,12 +1074,24 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the Levitical",
         "lemma": "leviyyi"
       },
       {
         "surface": "priests",
         "lemma": "kohen"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "are of",
+        "lemma": "hemmah"
       },
       {
         "surface": "the family",
@@ -868,6 +1104,10 @@
       {
         "surface": "who approach",
         "lemma": "qarov"
+      },
+      {
+        "surface": "Me",
+        "lemma": "el"
       },
       {
         "surface": "to minister before Me",
@@ -896,12 +1136,24 @@
         "lemma": "dam"
       },
       {
+        "surface": "and put it",
+        "lemma": "natan"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the four",
         "lemma": "arba"
       },
       {
         "surface": "horns of the altar",
         "lemma": "qeren"
+      },
+      {
+        "surface": "on",
+        "lemma": "el"
       },
       {
         "surface": "the four",
@@ -1000,6 +1252,10 @@
         "lemma": "chata"
       },
       {
+        "surface": "as it was",
+        "lemma": "asher"
+      },
+      {
         "surface": "with the bull",
         "lemma": "par"
       }
@@ -1038,6 +1294,10 @@
         "lemma": "ayil"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the flock",
         "lemma": "tson"
       }
@@ -1068,8 +1328,16 @@
         "lemma": "melach"
       },
       {
+        "surface": "on them",
+        "lemma": "al"
+      },
+      {
         "surface": "and sacrifice",
         "lemma": "alah"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
       },
       {
         "surface": "as a burnt offering",
@@ -1090,6 +1358,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "you are to provide",
+        "lemma": "asah"
+      },
+      {
         "surface": "a male goat",
         "lemma": "sair"
       },
@@ -1102,12 +1374,20 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "you are also to provide",
+        "lemma": "asah"
+      },
+      {
         "surface": "a young bull",
         "lemma": "par"
       },
       {
         "surface": "and a ram",
         "lemma": "ayil"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the flock",
@@ -1174,12 +1454,20 @@
         "lemma": "kohen"
       },
       {
+        "surface": "are to present",
+        "lemma": "asah"
+      },
+      {
         "surface": "your burnt offerings",
         "lemma": "olah"
       },
       {
         "surface": "and peace offerings",
         "lemma": "shelem"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the altar",

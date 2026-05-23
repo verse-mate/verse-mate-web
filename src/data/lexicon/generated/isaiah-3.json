@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "behold",
         "lemma": "hinneh"
       },
@@ -40,6 +44,10 @@
       {
         "surface": "and support",
         "lemma": "mishenah"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "supply",
@@ -115,6 +123,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "I will make",
+        "lemma": "natan"
+      },
       {
         "surface": "mere lads",
         "lemma": "naar"
@@ -192,12 +204,20 @@
         "lemma": "ach"
       },
       {
+        "surface": "within his father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "house",
         "lemma": "bet"
       },
       {
         "surface": "You have a cloak",
         "lemma": "simlah"
+      },
+      {
+        "surface": "you be",
+        "lemma": "hayah"
       },
       {
         "surface": "leader",
@@ -212,11 +232,19 @@
         "lemma": "yad"
       },
       {
+        "surface": "of this",
+        "lemma": "zot"
+      },
+      {
         "surface": "heap of rubble",
         "lemma": "makhshelah"
       }
     ],
     "7": [
+      {
+        "surface": "On that",
+        "lemma": "hu"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -224,6 +252,14 @@
       {
         "surface": "he will cry aloud",
         "lemma": "nasa"
+      },
+      {
+        "surface": "I am",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
       },
       {
         "surface": "a healer",
@@ -246,6 +282,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "make me",
         "lemma": "sum"
       },
@@ -259,6 +299,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
@@ -276,12 +320,20 @@
         "lemma": "naphal"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "they spoke",
         "lemma": "lashon"
       },
       {
         "surface": "and acted",
         "lemma": "maalal"
+      },
+      {
+        "surface": "against",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -326,6 +378,10 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "they do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "conceal it",
         "lemma": "kachad"
       },
@@ -338,6 +394,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "they have brought",
         "lemma": "gamal"
       },
@@ -348,12 +408,20 @@
     ],
     "10": [
       {
+        "surface": "Tell",
+        "lemma": "amar"
+      },
+      {
         "surface": "the righteous",
         "lemma": "tsaddiq"
       },
       {
         "surface": "it will be well",
         "lemma": "tov"
+      },
+      {
+        "surface": "with them",
+        "lemma": "ki"
       },
       {
         "surface": "for they will enjoy",
@@ -382,12 +450,20 @@
         "lemma": "ra"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "they will be repaid",
         "lemma": "gemul"
       },
       {
         "surface": "with what their hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "have done",
+        "lemma": "asah"
       }
     ],
     "12": [
@@ -464,8 +540,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "brings",
+        "lemma": "bo"
+      },
+      {
         "surface": "this charge",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "against",
+        "lemma": "im"
       },
       {
         "surface": "the elders",
@@ -478,6 +562,10 @@
       {
         "surface": "of His people",
         "lemma": "am"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
       },
       {
         "surface": "have devoured",
@@ -546,6 +634,14 @@
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "also says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Because",
+        "lemma": "yaan"
       },
       {
         "surface": "the daughters",
@@ -635,6 +731,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "In that",
+        "lemma": "hu"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -764,6 +864,10 @@
         "lemma": "besem"
       },
       {
+        "surface": "there will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a stench",
         "lemma": "maq"
       },
@@ -814,6 +918,10 @@
       {
         "surface": "beauty",
         "lemma": "yophi"
+      },
+      {
+        "surface": "shame",
+        "lemma": "ki"
       }
     ],
     "25": [
@@ -856,14 +964,18 @@
         "lemma": "naqah"
       },
       {
+        "surface": "she will sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "on the ground",
         "lemma": "erets"
       }
     ]
   },
   "themeLemmas": [
+    "ki",
     "tachat",
-    "bet",
-    "zaqen"
+    "bet"
   ]
 }

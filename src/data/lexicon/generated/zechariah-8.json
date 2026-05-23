@@ -16,6 +16,14 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "came to me",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -30,6 +38,10 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "I am jealous",
@@ -70,6 +82,18 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I will return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Zion",
         "lemma": "tsiyyon"
       },
@@ -88,6 +112,10 @@
       {
         "surface": "Then Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "will be called",
+        "lemma": "qara"
       },
       {
         "surface": "the City",
@@ -132,6 +160,10 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Old men",
         "lemma": "zaqen"
       },
@@ -142,6 +174,10 @@
       {
         "surface": "will again",
         "lemma": "od"
+      },
+      {
+        "surface": "sit",
+        "lemma": "yashav"
       },
       {
         "surface": "along the streets",
@@ -216,6 +252,14 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "this is impossible",
         "lemma": "pala"
       },
@@ -228,12 +272,24 @@
         "lemma": "sheerit"
       },
       {
+        "surface": "of this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "people",
         "lemma": "am"
       },
       {
+        "surface": "in these",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "days",
         "lemma": "yom"
+      },
+      {
+        "surface": "should it also",
+        "lemma": "gam"
       },
       {
         "surface": "be impossible",
@@ -270,6 +326,10 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "I will save",
         "lemma": "yasah"
       },
@@ -300,6 +360,14 @@
     ],
     "8": [
       {
+        "surface": "I will bring them",
+        "lemma": "bo"
+      },
+      {
+        "surface": "back",
+        "lemma": "et"
+      },
+      {
         "surface": "to dwell",
         "lemma": "shakhan"
       },
@@ -312,8 +380,20 @@
         "lemma": "yerushalaim"
       },
       {
+        "surface": "where they will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "people",
         "lemma": "am"
+      },
+      {
+        "surface": "and I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "faithful",
@@ -342,6 +422,10 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Let your hands",
         "lemma": "yad"
       },
@@ -354,8 +438,20 @@
         "lemma": "yom"
       },
       {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
+        "surface": "these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "words",
         "lemma": "davar"
+      },
+      {
+        "surface": "spoken",
+        "lemma": "asher"
       },
       {
         "surface": "by the prophets",
@@ -392,12 +488,24 @@
     ],
     "10": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "before",
         "lemma": "paneh"
       },
       {
+        "surface": "those",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "days",
         "lemma": "yom"
+      },
+      {
+        "surface": "neither",
+        "lemma": "lo"
       },
       {
         "surface": "man",
@@ -412,6 +520,10 @@
         "lemma": "behemah"
       },
       {
+        "surface": "received",
+        "lemma": "hayah"
+      },
+      {
         "surface": "wages",
         "lemma": "sakhar"
       },
@@ -424,12 +536,28 @@
         "lemma": "shalom"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the enemy",
         "lemma": "tsar"
       },
       {
+        "surface": "for anyone who came",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "or went",
+        "lemma": "bo"
+      },
+      {
         "surface": "for I had turned",
         "lemma": "shalach"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "man",
@@ -446,8 +574,20 @@
         "lemma": "attah"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "will not treat",
+        "lemma": "lo"
+      },
+      {
         "surface": "the remnant",
         "lemma": "sheerit"
+      },
+      {
+        "surface": "of this",
+        "lemma": "zeh"
       },
       {
         "surface": "people",
@@ -472,6 +612,10 @@
     ],
     "12": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the seed",
         "lemma": "zera"
       },
@@ -484,12 +628,20 @@
         "lemma": "gephen"
       },
       {
+        "surface": "will yield",
+        "lemma": "natan"
+      },
+      {
         "surface": "its fruit",
         "lemma": "peri"
       },
       {
         "surface": "the ground",
         "lemma": "erets"
+      },
+      {
+        "surface": "will yield",
+        "lemma": "natan"
       },
       {
         "surface": "its produce",
@@ -500,6 +652,10 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "will give",
+        "lemma": "natan"
+      },
+      {
         "surface": "their dew",
         "lemma": "tal"
       },
@@ -508,8 +664,20 @@
         "lemma": "sheerit"
       },
       {
+        "surface": "of this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "people",
         "lemma": "am"
+      },
+      {
+        "surface": "I will give} all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "these things",
+        "lemma": "elleh"
       },
       {
         "surface": "as an inheritance",
@@ -517,6 +685,18 @@
       }
     ],
     "13": [
+      {
+        "surface": "As",
+        "lemma": "asher"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "you have been",
+        "lemma": "hayah"
+      },
       {
         "surface": "a curse",
         "lemma": "qelalah"
@@ -550,8 +730,20 @@
         "lemma": "yasah"
       },
       {
+        "surface": "you",
+        "lemma": "et"
+      },
+      {
+        "surface": "and you will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a blessing",
         "lemma": "berakhah"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be afraid",
@@ -568,6 +760,10 @@
     ],
     "14": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "this is what",
         "lemma": "koh"
       },
@@ -580,6 +776,14 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Just as",
+        "lemma": "asher"
+      },
+      {
         "surface": "I resolved",
         "lemma": "zamam"
       },
@@ -588,12 +792,24 @@
         "lemma": "raa"
       },
       {
+        "surface": "when your fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "provoked Me to anger",
         "lemma": "qatsaph"
       },
       {
+        "surface": "and I did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "relent",
         "lemma": "nacham"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the LORD",
@@ -610,6 +826,10 @@
         "lemma": "ken"
       },
       {
+        "surface": "now",
+        "lemma": "elleh"
+      },
+      {
         "surface": "I have resolved",
         "lemma": "zamam"
       },
@@ -618,8 +838,16 @@
         "lemma": "yatav"
       },
       {
+        "surface": "again",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "vvv",
@@ -630,14 +858,26 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "be afraid",
         "lemma": "yare"
       }
     ],
     "16": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the things",
         "lemma": "davar"
+      },
+      {
+        "surface": "you must do",
+        "lemma": "asah"
       },
       {
         "surface": "Speak",
@@ -674,6 +914,10 @@
     ],
     "17": [
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "plot",
         "lemma": "chashav"
       },
@@ -690,6 +934,10 @@
         "lemma": "rea"
       },
       {
+        "surface": "and do not",
+        "lemma": "al"
+      },
+      {
         "surface": "love",
         "lemma": "ahav"
       },
@@ -702,8 +950,20 @@
         "lemma": "sheqer"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "I hate",
         "lemma": "sane"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "these things",
+        "lemma": "elleh"
       },
       {
         "surface": "declares",
@@ -726,6 +986,18 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "19": [
@@ -740,6 +1012,10 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "The fasts",
@@ -764,6 +1040,10 @@
       {
         "surface": "the tenth months",
         "lemma": "asiri"
+      },
+      {
+        "surface": "will become",
+        "lemma": "hayah"
       },
       {
         "surface": "times of joy",
@@ -816,12 +1096,24 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "Peoples",
         "lemma": "am"
       },
       {
         "surface": "will yet",
         "lemma": "od"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "the residents",
+        "lemma": "yashav"
       },
       {
         "surface": "of many",
@@ -834,6 +1126,10 @@
     ],
     "21": [
       {
+        "surface": "and the residents",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of one",
         "lemma": "echad"
       },
@@ -842,8 +1138,16 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "another",
         "lemma": "echad"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "Let us go",
@@ -874,6 +1178,14 @@
         "lemma": "tsava"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "myself",
+        "lemma": "gam"
+      },
+      {
         "surface": "am going",
         "lemma": "halakh"
       }
@@ -894,6 +1206,10 @@
       {
         "surface": "nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "will come",
+        "lemma": "bo"
       },
       {
         "surface": "to seek",
@@ -938,6 +1254,14 @@
         "lemma": "tsava"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "In those",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "days",
         "lemma": "yom"
       },
@@ -952,6 +1276,10 @@
       {
         "surface": "from the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "tongue",
@@ -974,18 +1302,38 @@
         "lemma": "yehudi"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Let us go",
         "lemma": "halakh"
       },
       {
+        "surface": "with you",
+        "lemma": "im"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "we have heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "that God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "is with you",
+        "lemma": "im"
       }
     ]
   },
   "themeLemmas": [
     "tsava",
-    "koh",
-    "yerushalaim"
+    "amar",
+    "koh"
   ]
 }

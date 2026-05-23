@@ -10,6 +10,10 @@
         "lemma": "natsach"
       },
       {
+        "surface": "According to",
+        "lemma": "al"
+      },
+      {
         "surface": "Jeduthun",
         "lemma": "yedutun"
       },
@@ -20,6 +24,10 @@
       {
         "surface": "of David",
         "lemma": "david"
+      },
+      {
+        "surface": "In",
+        "lemma": "el"
       },
       {
         "surface": "God",
@@ -40,9 +48,17 @@
       {
         "surface": "my salvation",
         "lemma": "yeshuah"
+      },
+      {
+        "surface": "comes from Him",
+        "lemma": "min"
       }
     ],
     "2": [
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
       {
         "surface": "alone",
         "lemma": "akh"
@@ -60,11 +76,19 @@
         "lemma": "misgav"
       },
       {
+        "surface": "I will never",
+        "lemma": "lo"
+      },
+      {
         "surface": "be shaken",
         "lemma": "mot"
       }
     ],
     "3": [
+      {
+        "surface": "How long",
+        "lemma": "ad"
+      },
       {
         "surface": "will you threaten",
         "lemma": "hatat"
@@ -72,6 +96,10 @@
       {
         "surface": "a man",
         "lemma": "ish"
+      },
+      {
+        "surface": "Will all",
+        "lemma": "kol"
       },
       {
         "surface": "of you throw him down",
@@ -154,11 +182,23 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "my hope",
         "lemma": "tiqvah"
+      },
+      {
+        "surface": "comes from Him",
+        "lemma": "min"
       }
     ],
     "6": [
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
       {
         "surface": "alone",
         "lemma": "akh"
@@ -176,6 +216,10 @@
         "lemma": "misgav"
       },
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be shaken",
         "lemma": "mot"
       }
@@ -188,6 +232,10 @@
       {
         "surface": "and my honor",
         "lemma": "kavod"
+      },
+      {
+        "surface": "rest on",
+        "lemma": "al"
       },
       {
         "surface": "God",
@@ -214,6 +262,14 @@
       {
         "surface": "Trust",
         "lemma": "batach"
+      },
+      {
+        "surface": "at all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "times",
+        "lemma": "et"
       },
       {
         "surface": "O people",
@@ -274,6 +330,10 @@
         "lemma": "mozen"
       },
       {
+        "surface": "they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "go up",
         "lemma": "alah"
       },
@@ -287,6 +347,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Place no",
+        "lemma": "al"
+      },
       {
         "surface": "trust",
         "lemma": "batach"
@@ -304,12 +368,20 @@
         "lemma": "gazel"
       },
       {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "your riches",
         "lemma": "chayil"
       },
       {
         "surface": "increase",
         "lemma": "nuv"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "set",
@@ -334,6 +406,14 @@
         "lemma": "echad"
       },
       {
+        "surface": "I have heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "this",
+        "lemma": "zu"
+      },
+      {
         "surface": "twice",
         "lemma": "shenayim"
       },
@@ -356,6 +436,14 @@
         "lemma": "adonai"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "will repay",
         "lemma": "salem"
       },
@@ -371,7 +459,7 @@
   },
   "themeLemmas": [
     "akh",
-    "yeshuah",
-    "tsur"
+    "al",
+    "yeshuah"
   ]
 }

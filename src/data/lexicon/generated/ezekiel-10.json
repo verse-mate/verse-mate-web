@@ -6,12 +6,24 @@
   "verses": {
     "1": [
       {
+        "surface": "And I looked",
+        "lemma": "raah"
+      },
+      {
         "surface": "and saw",
         "lemma": "hinneh"
       },
       {
+        "surface": "above",
+        "lemma": "el"
+      },
+      {
         "surface": "the expanse",
         "lemma": "raqia"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
       },
       {
         "surface": "the heads",
@@ -36,6 +48,14 @@
     ],
     "2": [
       {
+        "surface": "And the LORD said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the man",
         "lemma": "ish"
       },
@@ -46,6 +66,14 @@
       {
         "surface": "in linen",
         "lemma": "bad"
+      },
+      {
+        "surface": "Go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "inside",
+        "lemma": "el"
       },
       {
         "surface": "the wheelwork",
@@ -84,18 +112,30 @@
         "lemma": "zaraq"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "the city",
         "lemma": "ir"
       },
       {
         "surface": "And as I watched",
         "lemma": "ayin"
+      },
+      {
+        "surface": "he went in",
+        "lemma": "bo"
       }
     ],
     "3": [
       {
         "surface": "Now when the man",
         "lemma": "ish"
+      },
+      {
+        "surface": "went in",
+        "lemma": "bo"
       },
       {
         "surface": "the cherubim",
@@ -144,8 +184,16 @@
         "lemma": "rum"
       },
       {
+        "surface": "from above",
+        "lemma": "al"
+      },
+      {
         "surface": "the cherubim",
         "lemma": "keruv"
+      },
+      {
+        "surface": "and stood over",
+        "lemma": "al"
       },
       {
         "surface": "the threshold",
@@ -202,6 +250,14 @@
         "lemma": "keruv"
       },
       {
+        "surface": "could be heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "as",
+        "lemma": "ad"
+      },
+      {
         "surface": "far as the outer",
         "lemma": "chitson"
       },
@@ -228,6 +284,10 @@
     ],
     "6": [
       {
+        "surface": "When",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the LORD commanded",
         "lemma": "tsavah"
       },
@@ -242,6 +302,10 @@
       {
         "surface": "in linen",
         "lemma": "bad"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       },
       {
         "surface": "Take",
@@ -266,6 +330,10 @@
       {
         "surface": "the cherubim",
         "lemma": "keruv"
+      },
+      {
+        "surface": "the man went in",
+        "lemma": "bo"
       },
       {
         "surface": "and stood",
@@ -302,12 +370,24 @@
         "lemma": "esh"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "was among",
         "lemma": "bayin"
       },
       {
         "surface": "them",
         "lemma": "keruv"
+      },
+      {
+        "surface": "And he put it",
+        "lemma": "natan"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
       },
       {
         "surface": "the hands",
@@ -324,12 +404,20 @@
       {
         "surface": "who received it",
         "lemma": "laqach"
+      },
+      {
+        "surface": "and went out",
+        "lemma": "yatsa"
       }
     ],
     "8": [
       {
         "surface": "The cherubim",
         "lemma": "keruv"
+      },
+      {
+        "surface": "appeared",
+        "lemma": "raah"
       },
       {
         "surface": "to have the form",
@@ -353,6 +441,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "Then I looked",
+        "lemma": "raah"
+      },
       {
         "surface": "and saw",
         "lemma": "hinneh"
@@ -428,6 +520,10 @@
         "lemma": "demut"
       },
       {
+        "surface": "like",
+        "lemma": "asher"
+      },
+      {
         "surface": "a wheel",
         "lemma": "ophan"
       },
@@ -450,6 +546,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
         "surface": "any of the four",
         "lemma": "arba"
       },
@@ -458,12 +558,20 @@
         "lemma": "reva"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "turning",
         "lemma": "savav"
       },
       {
         "surface": "as they moved",
         "lemma": "halakh"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "wherever",
@@ -486,6 +594,10 @@
         "lemma": "achar"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "turning",
         "lemma": "savav"
       },
@@ -495,6 +607,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "Their entire",
+        "lemma": "kol"
+      },
       {
         "surface": "bodies",
         "lemma": "basar"
@@ -540,6 +656,10 @@
       {
         "surface": "the wheels",
         "lemma": "ophan"
+      },
+      {
+        "surface": "being called",
+        "lemma": "qara"
       },
       {
         "surface": "the whirling wheels",
@@ -622,8 +742,16 @@
         "lemma": "ramam"
       },
       {
+        "surface": "These",
+        "lemma": "hu"
+      },
+      {
         "surface": "were the living creatures",
         "lemma": "chay"
+      },
+      {
+        "surface": "I had seen",
+        "lemma": "raah"
       },
       {
         "surface": "by the River",
@@ -672,12 +800,20 @@
         "lemma": "rum"
       },
       {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
         "surface": "the ground",
         "lemma": "erets"
       },
       {
         "surface": "the wheels",
         "lemma": "ophan"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
       },
       {
         "surface": "veer away",
@@ -706,6 +842,14 @@
         "lemma": "ramam"
       },
       {
+        "surface": "with them",
+        "lemma": "et"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "the spirit",
         "lemma": "ruach"
       },
@@ -724,6 +868,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "moved away",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
         "surface": "the threshold",
         "lemma": "miphtan"
       },
@@ -734,6 +886,10 @@
       {
         "surface": "and stood",
         "lemma": "amad"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
       },
       {
         "surface": "the cherubim",
@@ -762,6 +918,10 @@
         "lemma": "ramam"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the ground",
         "lemma": "erets"
       },
@@ -772,6 +932,10 @@
       {
         "surface": "beside them",
         "lemma": "ummah"
+      },
+      {
+        "surface": "as they went",
+        "lemma": "yatsa"
       },
       {
         "surface": "And they stopped",
@@ -810,14 +974,26 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "above",
+        "lemma": "al"
+      },
+      {
         "surface": "them",
         "lemma": "maal"
       }
     ],
     "20": [
       {
+        "surface": "These",
+        "lemma": "hu"
+      },
+      {
         "surface": "were the living creatures",
         "lemma": "chay"
+      },
+      {
+        "surface": "I had seen",
+        "lemma": "raah"
       },
       {
         "surface": "beneath",
@@ -842,6 +1018,14 @@
       {
         "surface": "and I knew",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
       },
       {
         "surface": "were cherubim",
@@ -908,6 +1092,14 @@
         "lemma": "paneh"
       },
       {
+        "surface": "I had seen",
+        "lemma": "raah"
+      },
+      {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the River",
         "lemma": "nahar"
       },
@@ -922,6 +1114,10 @@
       {
         "surface": "went",
         "lemma": "halakh"
+      },
+      {
+        "surface": "straight ahead",
+        "lemma": "el"
       }
     ]
   },

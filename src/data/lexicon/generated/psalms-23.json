@@ -22,6 +22,10 @@
         "lemma": "beteqedharoim"
       },
       {
+        "surface": "I shall not",
+        "lemma": "lo"
+      },
+      {
         "surface": "want",
         "lemma": "chaser"
       }
@@ -44,6 +48,10 @@
         "lemma": "nahal"
       },
       {
+        "surface": "beside",
+        "lemma": "al"
+      },
+      {
         "surface": "quiet",
         "lemma": "menuchah"
       },
@@ -53,6 +61,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "He restores",
+        "lemma": "shuv"
+      },
       {
         "surface": "my soul",
         "lemma": "nephesh"
@@ -70,11 +82,23 @@
         "lemma": "tsedeq"
       },
       {
+        "surface": "for the sake",
+        "lemma": "maan"
+      },
+      {
         "surface": "of His name",
         "lemma": "shem"
       }
     ],
     "4": [
+      {
+        "surface": "Even",
+        "lemma": "gam"
+      },
+      {
+        "surface": "though",
+        "lemma": "ki"
+      },
       {
         "surface": "I walk",
         "lemma": "halakh"
@@ -92,8 +116,24 @@
         "lemma": "yare"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
+        "surface": "are with me",
+        "lemma": "immad"
       },
       {
         "surface": "Your rod",
@@ -102,6 +142,10 @@
       {
         "surface": "and Your staff",
         "lemma": "mishenah"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
       },
       {
         "surface": "comfort me",
@@ -168,12 +212,20 @@
         "lemma": "radaph"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the days",
         "lemma": "yom"
       },
       {
         "surface": "of my life",
         "lemma": "chay"
+      },
+      {
+        "surface": "and I will dwell",
+        "lemma": "shuv"
       },
       {
         "surface": "in the house",
@@ -189,5 +241,9 @@
       }
     ]
   },
-  "themeLemmas": []
+  "themeLemmas": [
+    "shuv",
+    "lo",
+    "ki"
+  ]
 }

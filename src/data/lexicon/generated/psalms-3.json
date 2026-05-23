@@ -52,12 +52,20 @@
       {
         "surface": "rise up",
         "lemma": "qamay"
+      },
+      {
+        "surface": "against me",
+        "lemma": "al"
       }
     ],
     "2": [
       {
         "surface": "Many",
         "lemma": "rav"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "of me",
@@ -81,6 +89,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "But You",
+        "lemma": "attah"
+      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -108,8 +120,16 @@
     ],
     "4": [
       {
+        "surface": "To",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "I cry",
+        "lemma": "qara"
       },
       {
         "surface": "aloud",
@@ -134,6 +154,10 @@
     ],
     "5": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "lie down",
         "lemma": "shakhav"
       },
@@ -146,6 +170,10 @@
         "lemma": "quts"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -155,6 +183,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
       {
         "surface": "fear",
         "lemma": "yare"
@@ -166,6 +198,10 @@
       {
         "surface": "set",
         "lemma": "shit"
+      },
+      {
+        "surface": "against me",
+        "lemma": "al"
       },
       {
         "surface": "on every side",
@@ -192,6 +228,10 @@
       {
         "surface": "Strike",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "my enemies",
@@ -228,6 +268,10 @@
         "lemma": "berakhah"
       },
       {
+        "surface": "be on",
+        "lemma": "al"
+      },
+      {
         "surface": "Your people",
         "lemma": "am"
       },
@@ -239,7 +283,7 @@
   },
   "themeLemmas": [
     "selah",
-    "yeshuah",
-    "rav"
+    "al",
+    "yeshuah"
   ]
 }

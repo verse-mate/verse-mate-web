@@ -14,6 +14,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -52,12 +56,20 @@
         "lemma": "ish"
       },
       {
+        "surface": "under",
+        "lemma": "al"
+      },
+      {
         "surface": "his standard",
         "lemma": "degel"
       },
       {
         "surface": "with the banners",
         "lemma": "ot"
+      },
+      {
+        "surface": "of his family",
+        "lemma": "av"
       }
     ],
     "3": [
@@ -136,6 +148,10 @@
       {
         "surface": "will camp",
         "lemma": "chanah"
+      },
+      {
+        "surface": "next to it",
+        "lemma": "al"
       },
       {
         "surface": "The leader",
@@ -217,6 +233,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "The total",
+        "lemma": "kol"
+      },
       {
         "surface": "number of men",
         "lemma": "paqad"
@@ -316,6 +336,10 @@
         "lemma": "chanah"
       },
       {
+        "surface": "next to it",
+        "lemma": "al"
+      },
+      {
         "surface": "The leader",
         "lemma": "nasi"
       },
@@ -400,6 +424,10 @@
     ],
     "16": [
       {
+        "surface": "The total",
+        "lemma": "kol"
+      },
+      {
         "surface": "number of men",
         "lemma": "paqad"
       },
@@ -462,12 +490,20 @@
         "lemma": "nasa"
       },
       {
+        "surface": "in the order",
+        "lemma": "asher"
+      },
+      {
         "surface": "they encamped",
         "lemma": "chanah"
       },
       {
         "surface": "each",
         "lemma": "ish"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "his own place",
@@ -542,6 +578,10 @@
       {
         "surface": "of Manasseh",
         "lemma": "menashsheh"
+      },
+      {
+        "surface": "will be next to it",
+        "lemma": "al"
       },
       {
         "surface": "The leader",
@@ -623,6 +663,10 @@
       }
     ],
     "24": [
+      {
+        "surface": "The total",
+        "lemma": "kol"
+      },
       {
         "surface": "number of men",
         "lemma": "paqad"
@@ -714,8 +758,16 @@
         "lemma": "matteh"
       },
       {
+        "surface": "of Asher",
+        "lemma": "asher"
+      },
+      {
         "surface": "will camp",
         "lemma": "chanah"
+      },
+      {
+        "surface": "next to it",
+        "lemma": "al"
       },
       {
         "surface": "The leader",
@@ -798,6 +850,10 @@
     ],
     "31": [
       {
+        "surface": "The total",
+        "lemma": "kol"
+      },
+      {
         "surface": "number of men",
         "lemma": "paqad"
       },
@@ -828,12 +884,24 @@
     ],
     "32": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the Israelites",
         "lemma": "ben"
       },
       {
         "surface": "numbered",
         "lemma": "paqad"
+      },
+      {
+        "surface": "according to their families",
+        "lemma": "av"
+      },
+      {
+        "surface": "The total",
+        "lemma": "kol"
       },
       {
         "surface": "of those counted",
@@ -858,6 +926,10 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "were not",
+        "lemma": "lo"
+      },
+      {
         "surface": "counted",
         "lemma": "paqad"
       },
@@ -868,6 +940,10 @@
       {
         "surface": "the other Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -886,6 +962,14 @@
       {
         "surface": "So the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
       },
       {
         "surface": "the LORD",
@@ -926,6 +1010,14 @@
       {
         "surface": "with his clan",
         "lemma": "mishpachah"
+      },
+      {
+        "surface": "and",
+        "lemma": "al"
+      },
+      {
+        "surface": "his family",
+        "lemma": "av"
       }
     ]
   },

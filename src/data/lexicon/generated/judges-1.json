@@ -46,6 +46,10 @@
         "lemma": "lacham"
       },
       {
+        "surface": "against",
+        "lemma": "el"
+      },
+      {
         "surface": "the Canaanites",
         "lemma": "kenaani"
       }
@@ -60,12 +64,20 @@
         "lemma": "alah"
       },
       {
+        "surface": "answered",
+        "lemma": "amar"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "Indeed",
         "lemma": "hinneh"
+      },
+      {
+        "surface": "I have delivered",
+        "lemma": "natan"
       },
       {
         "surface": "the land",
@@ -82,6 +94,10 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to their brothers",
         "lemma": "ach"
       },
@@ -92,6 +108,10 @@
       {
         "surface": "Come up",
         "lemma": "alah"
+      },
+      {
+        "surface": "with us",
+        "lemma": "et"
       },
       {
         "surface": "to our allotted territory",
@@ -106,8 +126,20 @@
         "lemma": "kenaani"
       },
       {
+        "surface": "And we",
+        "lemma": "ani"
+      },
+      {
+        "surface": "likewise",
+        "lemma": "gam"
+      },
+      {
         "surface": "will go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "with you",
+        "lemma": "et"
       },
       {
         "surface": "to your territory",
@@ -120,6 +152,10 @@
       {
         "surface": "went",
         "lemma": "halakh"
+      },
+      {
+        "surface": "with them",
+        "lemma": "et"
       }
     ],
     "4": [
@@ -134,6 +170,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "delivered",
+        "lemma": "natan"
       },
       {
         "surface": "the Canaanites",
@@ -238,6 +278,10 @@
         "lemma": "adonivezeq"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Seventy",
         "lemma": "shivim"
       },
@@ -270,6 +314,14 @@
         "lemma": "shulchan"
       },
       {
+        "surface": "As",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I have done to them",
+        "lemma": "asah"
+      },
+      {
         "surface": "so",
         "lemma": "ken"
       },
@@ -280,6 +332,10 @@
       {
         "surface": "has repaid",
         "lemma": "salem"
+      },
+      {
+        "surface": "And they brought him",
+        "lemma": "bo"
       },
       {
         "surface": "to Jerusalem",
@@ -362,6 +418,10 @@
         "lemma": "kenaani"
       },
       {
+        "surface": "living",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the hill country",
         "lemma": "har"
       },
@@ -384,8 +444,16 @@
         "lemma": "halakh"
       },
       {
+        "surface": "against",
+        "lemma": "el"
+      },
+      {
         "surface": "the Canaanites",
         "lemma": "kenaani"
+      },
+      {
+        "surface": "who were living",
+        "lemma": "yashav"
       },
       {
         "surface": "in Hebron",
@@ -434,6 +502,14 @@
         "lemma": "halakh"
       },
       {
+        "surface": "against",
+        "lemma": "el"
+      },
+      {
+        "surface": "the inhabitants",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Debir",
         "lemma": "devir"
       },
@@ -460,6 +536,14 @@
         "lemma": "kalev"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "To the man",
+        "lemma": "asher"
+      },
+      {
         "surface": "who strikes down",
         "lemma": "nakhah"
       },
@@ -474,6 +558,10 @@
       {
         "surface": "and captures it",
         "lemma": "lakhad"
+      },
+      {
+        "surface": "I will give",
+        "lemma": "natan"
       },
       {
         "surface": "my daughter",
@@ -518,6 +606,10 @@
         "lemma": "lakhad"
       },
       {
+        "surface": "and Caleb gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "his daughter",
         "lemma": "bat"
       },
@@ -532,12 +624,24 @@
     ],
     "14": [
       {
+        "surface": "One day",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "Acsah came to Othniel",
+        "lemma": "bo"
+      },
+      {
         "surface": "and urged him",
         "lemma": "sut"
       },
       {
         "surface": "to ask",
         "lemma": "shaal"
+      },
+      {
+        "surface": "her father",
+        "lemma": "av"
       },
       {
         "surface": "for a field",
@@ -556,6 +660,10 @@
         "lemma": "kalev"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
       }
@@ -570,12 +678,28 @@
         "lemma": "berakhah"
       },
       {
+        "surface": "she answered",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Since",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you have given me",
+        "lemma": "natan"
+      },
+      {
         "surface": "land",
         "lemma": "erets"
       },
       {
         "surface": "in the Negev",
         "lemma": "negev"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
       },
       {
         "surface": "springs",
@@ -588,6 +712,10 @@
       {
         "surface": "So Caleb",
         "lemma": "kalev"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "both the upper",
@@ -622,6 +750,10 @@
       {
         "surface": "went up",
         "lemma": "alah"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "the men",
@@ -660,6 +792,14 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to live",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "among",
+        "lemma": "et"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       }
@@ -672,6 +812,10 @@
       {
         "surface": "went",
         "lemma": "halakh"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "their brothers",
@@ -690,12 +834,20 @@
         "lemma": "kenaani"
       },
       {
+        "surface": "living",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Zephath",
         "lemma": "tsephat"
       },
       {
         "surface": "and devoted the city to destruction",
         "lemma": "charam"
+      },
+      {
+        "surface": "So it was called",
+        "lemma": "qara"
       },
       {
         "surface": "Hormah",
@@ -724,6 +876,10 @@
         "lemma": "eqron"
       },
       {
+        "surface": "each with",
+        "lemma": "et"
+      },
+      {
         "surface": "its territory",
         "lemma": "gevul"
       }
@@ -732,6 +888,14 @@
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "Judah",
@@ -746,12 +910,28 @@
         "lemma": "har"
       },
       {
+        "surface": "but",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they could not",
+        "lemma": "lo"
+      },
+      {
         "surface": "drive out",
         "lemma": "yarash"
       },
       {
+        "surface": "the inhabitants",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of the plains",
         "lemma": "emeq"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "chariots",
@@ -764,12 +944,20 @@
     ],
     "20": [
       {
+        "surface": "Just as",
+        "lemma": "asher"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
       {
         "surface": "had promised",
         "lemma": "davar"
+      },
+      {
+        "surface": "Judah gave",
+        "lemma": "natan"
       },
       {
         "surface": "Hebron",
@@ -802,6 +990,14 @@
         "lemma": "ben"
       },
       {
+        "surface": "however",
+        "lemma": "et"
+      },
+      {
+        "surface": "failed to",
+        "lemma": "lo"
+      },
+      {
         "surface": "drive out",
         "lemma": "yarash"
       },
@@ -810,8 +1006,20 @@
         "lemma": "yevusi"
       },
       {
+        "surface": "living",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "So to",
+        "lemma": "ad"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
       },
       {
         "surface": "day",
@@ -822,8 +1030,16 @@
         "lemma": "yevusi"
       },
       {
+        "surface": "live",
+        "lemma": "yashav"
+      },
+      {
         "surface": "there",
         "lemma": "yerushalaim"
+      },
+      {
+        "surface": "among",
+        "lemma": "et"
       },
       {
         "surface": "the Benjamites",
@@ -840,6 +1056,10 @@
         "lemma": "yoseph"
       },
       {
+        "surface": "also",
+        "lemma": "gam"
+      },
+      {
         "surface": "attacked",
         "lemma": "alah"
       },
@@ -854,6 +1074,10 @@
       {
         "surface": "and the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "was with them",
+        "lemma": "im"
       }
     ],
     "23": [
@@ -888,16 +1112,36 @@
         "lemma": "shamar"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
+      },
+      {
+        "surface": "coming out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "of",
+        "lemma": "min"
       },
       {
         "surface": "the city",
         "lemma": "ir"
       },
       {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Please",
         "lemma": "na"
+      },
+      {
+        "surface": "show us",
+        "lemma": "raah"
       },
       {
         "surface": "how to get into",
@@ -908,11 +1152,23 @@
         "lemma": "ir"
       },
       {
+        "surface": "and we will treat",
+        "lemma": "asah"
+      },
+      {
+        "surface": "you",
+        "lemma": "im"
+      },
+      {
         "surface": "kindly",
         "lemma": "chesed"
       }
     ],
     "25": [
+      {
+        "surface": "So the man showed them",
+        "lemma": "raah"
+      },
       {
         "surface": "the entrance",
         "lemma": "mavo"
@@ -946,6 +1202,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his family",
         "lemma": "mishpachah"
       }
@@ -976,12 +1236,28 @@
         "lemma": "ir"
       },
       {
+        "surface": "and called it",
+        "lemma": "qara"
+      },
+      {
         "surface": "Luz",
         "lemma": "luz"
       },
       {
+        "surface": "which",
+        "lemma": "hu"
+      },
+      {
         "surface": "is its name",
         "lemma": "shem"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
       },
       {
         "surface": "day",
@@ -992,6 +1268,10 @@
       {
         "surface": "At that time Manasseh",
         "lemma": "menashsheh"
+      },
+      {
+        "surface": "failed",
+        "lemma": "lo"
       },
       {
         "surface": "to drive out the inhabitants",
@@ -1034,11 +1314,23 @@
         "lemma": "yaal"
       },
       {
+        "surface": "to dwell",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "in that",
+        "lemma": "zot"
+      },
+      {
         "surface": "land",
         "lemma": "erets"
       }
     ],
     "28": [
+      {
+        "surface": "When",
+        "lemma": "ki"
+      },
       {
         "surface": "Israel",
         "lemma": "yisrael"
@@ -1060,6 +1352,10 @@
         "lemma": "mas"
       },
       {
+        "surface": "but they never",
+        "lemma": "lo"
+      },
+      {
         "surface": "drove them out",
         "lemma": "yarash"
       },
@@ -1074,6 +1370,10 @@
         "lemma": "ephrayim"
       },
       {
+        "surface": "also failed",
+        "lemma": "lo"
+      },
+      {
         "surface": "to drive out",
         "lemma": "yarash"
       },
@@ -1082,12 +1382,20 @@
         "lemma": "kenaani"
       },
       {
+        "surface": "living",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Gezer",
         "lemma": "gezer"
       },
       {
         "surface": "so the Canaanites",
         "lemma": "kenaani"
+      },
+      {
+        "surface": "continued to dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "among them",
@@ -1104,12 +1412,24 @@
         "lemma": "zevulun"
       },
       {
+        "surface": "failed",
+        "lemma": "lo"
+      },
+      {
         "surface": "to drive out",
         "lemma": "yarash"
       },
       {
+        "surface": "the inhabitants",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Kitron",
         "lemma": "qitron"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "Nahalol",
@@ -1120,8 +1440,16 @@
         "lemma": "kenaani"
       },
       {
+        "surface": "lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "among them",
         "lemma": "qerev"
+      },
+      {
+        "surface": "and served",
+        "lemma": "hayah"
       },
       {
         "surface": "as forced laborers",
@@ -1130,8 +1458,20 @@
     ],
     "31": [
       {
+        "surface": "Asher",
+        "lemma": "asher"
+      },
+      {
+        "surface": "failed",
+        "lemma": "lo"
+      },
+      {
         "surface": "to drive out",
         "lemma": "yarash"
+      },
+      {
+        "surface": "the inhabitants",
+        "lemma": "yashav"
       },
       {
         "surface": "of Acco",
@@ -1158,6 +1498,10 @@
         "lemma": "apheq"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "Rehob",
         "lemma": "rechov"
       }
@@ -1168,6 +1512,10 @@
         "lemma": "asheri"
       },
       {
+        "surface": "lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "among",
         "lemma": "qerev"
       },
@@ -1176,8 +1524,20 @@
         "lemma": "kenaani"
       },
       {
+        "surface": "inhabitants",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they did not",
+        "lemma": "lo"
       },
       {
         "surface": "drive them out",
@@ -1190,8 +1550,16 @@
         "lemma": "naphtali"
       },
       {
+        "surface": "failed",
+        "lemma": "lo"
+      },
+      {
         "surface": "to drive out",
         "lemma": "yarash"
+      },
+      {
+        "surface": "the inhabitants",
+        "lemma": "yashav"
       },
       {
         "surface": "vvv",
@@ -1202,12 +1570,20 @@
         "lemma": "betshemesh"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "vvv",
         "lemma": "betanat"
       },
       {
         "surface": "Beth-anath",
         "lemma": "betanat"
+      },
+      {
+        "surface": "So the Naphtalites also lived",
+        "lemma": "yashav"
       },
       {
         "surface": "among",
@@ -1218,8 +1594,16 @@
         "lemma": "kenaani"
       },
       {
+        "surface": "inhabitants",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "but the inhabitants",
+        "lemma": "yashav"
       },
       {
         "surface": "vvv",
@@ -1236,6 +1620,10 @@
       {
         "surface": "and Beth-anath",
         "lemma": "betanat"
+      },
+      {
+        "surface": "served",
+        "lemma": "hayah"
       },
       {
         "surface": "as forced laborers",
@@ -1260,6 +1648,18 @@
         "lemma": "har"
       },
       {
+        "surface": "and",
+        "lemma": "ki"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "allow them",
+        "lemma": "natan"
+      },
+      {
         "surface": "to come down",
         "lemma": "yarad"
       },
@@ -1276,6 +1676,10 @@
       {
         "surface": "were determined",
         "lemma": "yaal"
+      },
+      {
+        "surface": "to dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "in Mount",
@@ -1310,6 +1714,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "they pressed the Amorites",
+        "lemma": "hayah"
+      },
+      {
         "surface": "into forced labor",
         "lemma": "mas"
       }
@@ -1342,8 +1750,8 @@
     ]
   },
   "themeLemmas": [
+    "yashav",
     "kenaani",
-    "yarash",
-    "yehudah"
+    "et"
   ]
 }

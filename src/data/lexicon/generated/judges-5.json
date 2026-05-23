@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "On that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -62,6 +66,10 @@
     ],
     "3": [
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "O kings",
         "lemma": "melekh"
       },
@@ -72,6 +80,10 @@
       {
         "surface": "O princes",
         "lemma": "razan"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
       },
       {
         "surface": "will sing",
@@ -102,6 +114,10 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "when You went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "from Seir",
@@ -136,6 +152,14 @@
         "lemma": "nataph"
       },
       {
+        "surface": "and",
+        "lemma": "gam"
+      },
+      {
+        "surface": "the clouds",
+        "lemma": "av"
+      },
+      {
         "surface": "poured down",
         "lemma": "nataph"
       },
@@ -160,6 +184,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "the One",
+        "lemma": "zeh"
       },
       {
         "surface": "of Sinai",
@@ -250,6 +278,10 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "I, Deborah",
         "lemma": "deborah"
       },
@@ -280,6 +312,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "then",
+        "lemma": "az"
+      },
+      {
         "surface": "war",
         "lemma": "lachem"
       },
@@ -288,12 +324,20 @@
         "lemma": "shaar"
       },
       {
+        "surface": "Not",
+        "lemma": "im"
+      },
+      {
         "surface": "a shield",
         "lemma": "magen"
       },
       {
         "surface": "or spear",
         "lemma": "romach"
+      },
+      {
+        "surface": "was found",
+        "lemma": "raah"
       },
       {
         "surface": "among forty",
@@ -350,6 +394,14 @@
       {
         "surface": "donkeys",
         "lemma": "aton"
+      },
+      {
+        "surface": "who sit",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "saddle blankets",
@@ -412,6 +464,10 @@
       {
         "surface": "in Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "Then",
+        "lemma": "az"
       },
       {
         "surface": "the people",
@@ -486,6 +542,10 @@
     ],
     "13": [
       {
+        "surface": "Then",
+        "lemma": "az"
+      },
+      {
         "surface": "the survivors",
         "lemma": "sarid"
       },
@@ -515,6 +575,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "Some came from",
+        "lemma": "min"
+      },
       {
         "surface": "Ephraim",
         "lemma": "ephrayim"
@@ -548,6 +612,10 @@
         "lemma": "yarad"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "Machir",
         "lemma": "makhir"
       },
@@ -576,6 +644,10 @@
       {
         "surface": "of Issachar",
         "lemma": "yissaskhar"
+      },
+      {
+        "surface": "were with",
+        "lemma": "im"
       },
       {
         "surface": "Deborah",
@@ -624,12 +696,20 @@
         "lemma": "mah"
       },
       {
+        "surface": "did you sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "among",
         "lemma": "bayin"
       },
       {
         "surface": "the sheepfolds",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "to hear",
+        "lemma": "shama"
       },
       {
         "surface": "the whistling",
@@ -690,12 +770,24 @@
         "lemma": "oniyyah"
       },
       {
+        "surface": "Asher",
+        "lemma": "asher"
+      },
+      {
+        "surface": "stayed",
+        "lemma": "yashav"
+      },
+      {
         "surface": "at the coast",
         "lemma": "choph"
       },
       {
         "surface": "and remained",
         "lemma": "shakhan"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "his harbors",
@@ -724,6 +816,10 @@
         "lemma": "naphtali"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the heights",
         "lemma": "marom"
       },
@@ -738,8 +834,16 @@
         "lemma": "melekh"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "and fought",
         "lemma": "lacham"
+      },
+      {
+        "surface": "then",
+        "lemma": "az"
       },
       {
         "surface": "the kings",
@@ -758,6 +862,10 @@
         "lemma": "taanakh"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the waters",
         "lemma": "mayim"
       },
@@ -770,6 +878,10 @@
         "lemma": "laqach"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "plunder",
         "lemma": "betsa"
       },
@@ -779,6 +891,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "From",
+        "lemma": "min"
+      },
       {
         "surface": "the heavens",
         "lemma": "shamayim"
@@ -798,6 +914,10 @@
       {
         "surface": "they fought",
         "lemma": "lacham"
+      },
+      {
+        "surface": "against",
+        "lemma": "im"
       },
       {
         "surface": "Sisera",
@@ -848,6 +968,10 @@
     ],
     "22": [
       {
+        "surface": "Then",
+        "lemma": "az"
+      },
+      {
         "surface": "the hooves",
         "lemma": "aqev"
       },
@@ -878,6 +1002,10 @@
         "lemma": "meroz"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "the angel",
         "lemma": "maleakh"
       },
@@ -888,6 +1016,22 @@
       {
         "surface": "Bitterly curse",
         "lemma": "arar"
+      },
+      {
+        "surface": "her inhabitants",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
       },
       {
         "surface": "to help",
@@ -956,6 +1100,10 @@
       {
         "surface": "water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "and she gave him",
+        "lemma": "natan"
       },
       {
         "surface": "milk",
@@ -1070,6 +1218,10 @@
         "lemma": "naphal"
       },
       {
+        "surface": "where",
+        "lemma": "asher"
+      },
+      {
         "surface": "he collapsed",
         "lemma": "kara"
       },
@@ -1132,6 +1284,10 @@
         "lemma": "bush"
       },
       {
+        "surface": "in coming",
+        "lemma": "bo"
+      },
+      {
         "surface": "What",
         "lemma": "maddua"
       },
@@ -1162,11 +1318,27 @@
         "lemma": "un"
       },
       {
+        "surface": "indeed",
+        "lemma": "aph"
+      },
+      {
+        "surface": "she",
+        "lemma": "hu"
+      },
+      {
+        "surface": "keeps",
+        "lemma": "shuv"
+      },
+      {
         "surface": "telling",
         "lemma": "emer"
       }
     ],
     "30": [
+      {
+        "surface": "Are they not",
+        "lemma": "lo"
+      },
       {
         "surface": "finding",
         "lemma": "matsa"
@@ -1234,6 +1406,10 @@
         "lemma": "ken"
       },
       {
+        "surface": "may all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Your enemies",
         "lemma": "oyev"
       },
@@ -1248,6 +1424,10 @@
       {
         "surface": "But may those who love You",
         "lemma": "ahav"
+      },
+      {
+        "surface": "shine like",
+        "lemma": "yatsa"
       },
       {
         "surface": "the sun",
@@ -1277,7 +1457,7 @@
   },
   "themeLemmas": [
     "yisrael",
-    "yarad",
-    "ur"
+    "az",
+    "yashav"
   ]
 }

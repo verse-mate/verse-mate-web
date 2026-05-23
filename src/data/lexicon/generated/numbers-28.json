@@ -14,6 +14,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -26,6 +30,14 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to them",
+        "lemma": "el"
       },
       {
         "surface": "See",
@@ -61,6 +73,14 @@
       }
     ],
     "3": [
+      {
+        "surface": "And tell them",
+        "lemma": "amar"
+      },
+      {
+        "surface": "this is",
+        "lemma": "zeh"
+      },
       {
         "surface": "the food offering",
         "lemma": "ishshah"
@@ -103,6 +123,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Offer",
+        "lemma": "asah"
+      },
       {
         "surface": "one",
         "lemma": "echad"
@@ -176,6 +200,10 @@
         "lemma": "olah"
       },
       {
+        "surface": "established",
+        "lemma": "asah"
+      },
+      {
         "surface": "at Mount",
         "lemma": "har"
       },
@@ -243,6 +271,14 @@
       }
     ],
     "8": [
+      {
+        "surface": "And",
+        "lemma": "et"
+      },
+      {
+        "surface": "offer",
+        "lemma": "asah"
+      },
       {
         "surface": "the second",
         "lemma": "sheni"
@@ -346,6 +382,10 @@
       {
         "surface": "for every Sabbath",
         "lemma": "shabbat"
+      },
+      {
+        "surface": "in addition to",
+        "lemma": "al"
       },
       {
         "surface": "the regular",
@@ -528,6 +568,10 @@
         "lemma": "nesekh"
       },
       {
+        "surface": "shall be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "half",
         "lemma": "chetsi"
       },
@@ -568,6 +612,10 @@
         "lemma": "keves"
       },
       {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
         "surface": "is the monthly",
         "lemma": "chodesh"
       },
@@ -585,6 +633,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "In addition to",
+        "lemma": "al"
+      },
       {
         "surface": "the regular",
         "lemma": "tamid"
@@ -604,6 +656,10 @@
       {
         "surface": "male goat",
         "lemma": "sair"
+      },
+      {
+        "surface": "is to be presented",
+        "lemma": "asah"
       },
       {
         "surface": "to the LORD",
@@ -650,6 +706,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "of this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "month",
         "lemma": "chodesh"
       },
@@ -690,6 +750,18 @@
       {
         "surface": "assembly",
         "lemma": "miqra"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "regular work",
@@ -746,6 +818,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "all",
+        "lemma": "hayah"
+      },
+      {
         "surface": "unblemished",
         "lemma": "tamim"
       }
@@ -768,6 +844,10 @@
         "lemma": "shemen"
       },
       {
+        "surface": "offer",
+        "lemma": "asah"
+      },
+      {
         "surface": "three-tenths of an ephah",
         "lemma": "shalosh"
       },
@@ -785,6 +865,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "and",
+        "lemma": "asah"
+      },
       {
         "surface": "a tenth of an ephah",
         "lemma": "issaron"
@@ -818,12 +902,28 @@
       {
         "surface": "to make atonement",
         "lemma": "kipher"
+      },
+      {
+        "surface": "for you",
+        "lemma": "al"
       }
     ],
     "23": [
       {
+        "surface": "You are to present",
+        "lemma": "asah"
+      },
+      {
+        "surface": "these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "in addition to",
         "lemma": "bad"
+      },
+      {
+        "surface": "the",
+        "lemma": "asher"
       },
       {
         "surface": "regular",
@@ -839,6 +939,14 @@
       }
     ],
     "24": [
+      {
+        "surface": "Offer",
+        "lemma": "asah"
+      },
+      {
+        "surface": "the same",
+        "lemma": "elleh"
+      },
       {
         "surface": "food",
         "lemma": "lechem"
@@ -872,6 +980,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "It is to be offered",
+        "lemma": "asah"
+      },
+      {
+        "surface": "with",
+        "lemma": "al"
+      },
+      {
         "surface": "its drink offering",
         "lemma": "nesekh"
       },
@@ -894,12 +1010,28 @@
         "lemma": "yom"
       },
       {
+        "surface": "you shall hold",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a sacred",
         "lemma": "qodesh"
       },
       {
         "surface": "assembly",
         "lemma": "miqra"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "regular work",
@@ -936,12 +1068,28 @@
         "lemma": "shavua"
       },
       {
+        "surface": "you are to hold",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a sacred",
         "lemma": "qodesh"
       },
       {
         "surface": "assembly",
         "lemma": "miqra"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "regular work",
@@ -1070,9 +1218,17 @@
       {
         "surface": "to make atonement",
         "lemma": "kipher"
+      },
+      {
+        "surface": "for you",
+        "lemma": "al"
       }
     ],
     "31": [
+      {
+        "surface": "Offer them",
+        "lemma": "asah"
+      },
       {
         "surface": "with their drink offerings",
         "lemma": "nesekh"
@@ -1094,6 +1250,10 @@
         "lemma": "minchah"
       },
       {
+        "surface": "The animals must be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "unblemished",
         "lemma": "tamim"
       }
@@ -1102,6 +1262,6 @@
   "themeLemmas": [
     "olah",
     "echad",
-    "keves"
+    "asah"
   ]
 }

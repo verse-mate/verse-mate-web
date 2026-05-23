@@ -10,6 +10,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "are my God",
         "lemma": "elohim"
       },
@@ -24,6 +28,14 @@
       {
         "surface": "Your name",
         "lemma": "shem"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You have worked",
+        "lemma": "asah"
       },
       {
         "surface": "wonders",
@@ -43,6 +55,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "Indeed",
+        "lemma": "ki"
+      },
       {
         "surface": "You have made",
         "lemma": "sum"
@@ -90,6 +106,10 @@
     ],
     "3": [
       {
+        "surface": "Therefore",
+        "lemma": "al"
+      },
+      {
         "surface": "a strong",
         "lemma": "az"
       },
@@ -119,6 +139,14 @@
       }
     ],
     "4": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You have been",
+        "lemma": "hayah"
+      },
       {
         "surface": "a refuge",
         "lemma": "maoz"
@@ -154,6 +182,10 @@
       {
         "surface": "from the heat",
         "lemma": "chorev"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "the breath",
@@ -198,6 +230,10 @@
         "lemma": "tsel"
       },
       {
+        "surface": "of a cloud",
+        "lemma": "av"
+      },
+      {
         "surface": "cools the heat",
         "lemma": "chorev"
       },
@@ -216,6 +252,10 @@
     ],
     "6": [
       {
+        "surface": "On this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "mountain",
         "lemma": "har"
       },
@@ -228,12 +268,20 @@
         "lemma": "tsava"
       },
       {
+        "surface": "will prepare",
+        "lemma": "asah"
+      },
+      {
         "surface": "a lavish",
         "lemma": "shemen"
       },
       {
         "surface": "banquet",
         "lemma": "mishteh"
+      },
+      {
+        "surface": "for all",
+        "lemma": "kol"
       },
       {
         "surface": "the peoples",
@@ -262,6 +310,10 @@
     ],
     "7": [
       {
+        "surface": "On this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "mountain",
         "lemma": "har"
       },
@@ -278,6 +330,10 @@
         "lemma": "lot"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "peoples",
         "lemma": "am"
       },
@@ -288,6 +344,10 @@
       {
         "surface": "that covers",
         "lemma": "nasakh"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "nations",
@@ -324,6 +384,14 @@
         "lemma": "dimah"
       },
       {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "face",
         "lemma": "paneh"
       },
@@ -340,8 +408,20 @@
         "lemma": "am"
       },
       {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "earth",
         "lemma": "erets"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -354,12 +434,24 @@
     ],
     "9": [
       {
+        "surface": "And in that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
       {
+        "surface": "it will be said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Surely",
         "lemma": "hinneh"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
       },
       {
         "surface": "is our God",
@@ -372,6 +464,10 @@
       {
         "surface": "and He has saved us",
         "lemma": "yasah"
+      },
+      {
+        "surface": "This",
+        "lemma": "zeh"
       },
       {
         "surface": "is the LORD",
@@ -396,6 +492,10 @@
     ],
     "10": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the hand",
         "lemma": "yad"
       },
@@ -406,6 +506,10 @@
       {
         "surface": "will rest",
         "lemma": "nuach"
+      },
+      {
+        "surface": "on this",
+        "lemma": "zeh"
       },
       {
         "surface": "mountain",
@@ -450,6 +554,10 @@
         "lemma": "qerev"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
         "surface": "a swimmer",
         "lemma": "sachah"
       },
@@ -468,6 +576,10 @@
       {
         "surface": "will be brought low",
         "lemma": "shaphel"
+      },
+      {
+        "surface": "despite",
+        "lemma": "im"
       },
       {
         "surface": "the skill",
@@ -500,14 +612,18 @@
         "lemma": "erets"
       },
       {
+        "surface": "into",
+        "lemma": "ad"
+      },
+      {
         "surface": "the dust",
         "lemma": "aphar"
       }
     ]
   },
   "themeLemmas": [
-    "har",
-    "chorev",
-    "arits"
+    "ki",
+    "zeh",
+    "kol"
   ]
 }

@@ -40,6 +40,10 @@
       {
         "surface": "We will seek him",
         "lemma": "baqash"
+      },
+      {
+        "surface": "with you",
+        "lemma": "im"
       }
     ],
     "2": [
@@ -82,6 +86,10 @@
     ],
     "3": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "belong to my beloved",
         "lemma": "dod"
       },
@@ -99,6 +107,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
       {
         "surface": "are as beautiful",
         "lemma": "yapheh"
@@ -142,6 +154,10 @@
         "lemma": "neged"
       },
       {
+        "surface": "for they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "have overcome me",
         "lemma": "rahav"
       },
@@ -160,6 +176,10 @@
       {
         "surface": "streaming down",
         "lemma": "galash"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "Gilead",
@@ -184,8 +204,16 @@
         "lemma": "alah"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the washing",
         "lemma": "rachtsah"
+      },
+      {
+        "surface": "each",
+        "lemma": "kol"
       },
       {
         "surface": "has its twin",
@@ -223,6 +251,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "There",
+        "lemma": "hemmah"
+      },
       {
         "surface": "are sixty",
         "lemma": "shishshim"
@@ -286,6 +318,10 @@
         "lemma": "bat"
       },
       {
+        "surface": "see her",
+        "lemma": "raah"
+      },
+      {
         "surface": "and call her blessed",
         "lemma": "ashar"
       },
@@ -308,8 +344,16 @@
         "lemma": "mi"
       },
       {
+        "surface": "is this",
+        "lemma": "zot"
+      },
+      {
         "surface": "who shines",
         "lemma": "shaqaph"
+      },
+      {
+        "surface": "like",
+        "lemma": "kemo"
       },
       {
         "surface": "the dawn",
@@ -346,6 +390,10 @@
         "lemma": "yarad"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the walnut",
         "lemma": "egoz"
       },
@@ -354,12 +402,20 @@
         "lemma": "ginnah"
       },
       {
+        "surface": "to see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the blossoms",
         "lemma": "ev"
       },
       {
         "surface": "of the valley",
         "lemma": "nachal"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
       },
       {
         "surface": "if the vines",
@@ -379,6 +435,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "Before",
+        "lemma": "lo"
+      },
       {
         "surface": "I realized it",
         "lemma": "yada"
@@ -406,8 +466,24 @@
     ],
     "13": [
       {
+        "surface": "Come back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "come back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "O Shulammite",
         "lemma": "shulammit"
+      },
+      {
+        "surface": "Come back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "come back",
+        "lemma": "shuv"
       },
       {
         "surface": "that we may gaze",
@@ -437,7 +513,7 @@
   },
   "themeLemmas": [
     "dod",
-    "yapheh",
-    "yarad"
+    "shuv",
+    "yapheh"
   ]
 }

@@ -10,6 +10,10 @@
         "lemma": "natsach"
       },
       {
+        "surface": "According to",
+        "lemma": "al"
+      },
+      {
         "surface": "Mahalath",
         "lemma": "machalat"
       },
@@ -24,6 +28,10 @@
       {
         "surface": "The fool",
         "lemma": "naval"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "in his heart",
@@ -54,6 +62,10 @@
         "lemma": "ayin"
       },
       {
+        "surface": "one who does",
+        "lemma": "asah"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
       }
@@ -72,12 +84,20 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
         "surface": "the sons",
         "lemma": "ben"
       },
       {
         "surface": "of men",
         "lemma": "adam"
+      },
+      {
+        "surface": "to see",
+        "lemma": "raah"
       },
       {
         "surface": "if any",
@@ -98,6 +118,10 @@
     ],
     "3": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "have turned away",
         "lemma": "sug"
       },
@@ -114,12 +138,20 @@
         "lemma": "ayin"
       },
       {
+        "surface": "one who does",
+        "lemma": "asah"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
       },
       {
         "surface": "not",
         "lemma": "ayin"
+      },
+      {
+        "surface": "even",
+        "lemma": "gam"
       },
       {
         "surface": "one",
@@ -134,6 +166,10 @@
       {
         "surface": "of iniquity",
         "lemma": "aven"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
       },
       {
         "surface": "learn",
@@ -156,6 +192,14 @@
         "lemma": "lechem"
       },
       {
+        "surface": "they refuse",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to call",
+        "lemma": "qara"
+      },
+      {
         "surface": "upon God",
         "lemma": "elohim"
       }
@@ -174,8 +218,20 @@
         "lemma": "pachad"
       },
       {
+        "surface": "where there was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
         "surface": "to fear",
         "lemma": "pachad"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "God",
@@ -196,6 +252,10 @@
       {
         "surface": "You put them to shame",
         "lemma": "bush"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "God",
@@ -220,12 +280,20 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "would come",
+        "lemma": "natan"
+      },
+      {
         "surface": "from Zion",
         "lemma": "tsiyyon"
       },
       {
         "surface": "When God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "restores",
+        "lemma": "shuv"
       },
       {
         "surface": "His captive",
@@ -255,7 +323,7 @@
   },
   "themeLemmas": [
     "pachad",
-    "yisrael",
-    "tov"
+    "lo",
+    "yisrael"
   ]
 }

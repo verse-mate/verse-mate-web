@@ -60,6 +60,18 @@
         "lemma": "paneh"
       },
       {
+        "surface": "their father did",
+        "lemma": "av"
+      },
+      {
+        "surface": "and they had",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "sons",
         "lemma": "ben"
       },
@@ -140,6 +152,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "than",
+        "lemma": "min"
+      },
+      {
         "surface": "those",
         "lemma": "ben"
       },
@@ -158,6 +174,10 @@
       {
         "surface": "heads",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of families",
+        "lemma": "av"
       },
       {
         "surface": "from the descendants",
@@ -188,6 +208,14 @@
       {
         "surface": "by lot",
         "lemma": "goral"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "there were",
+        "lemma": "hayah"
       },
       {
         "surface": "officers",
@@ -280,6 +308,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of families",
+        "lemma": "av"
+      },
+      {
         "surface": "of the priests",
         "lemma": "kohen"
       },
@@ -290,6 +322,10 @@
       {
         "surface": "one",
         "lemma": "echad"
+      },
+      {
+        "surface": "family",
+        "lemma": "av"
       },
       {
         "surface": "being taken",
@@ -316,6 +352,10 @@
       {
         "surface": "lot",
         "lemma": "goral"
+      },
+      {
+        "surface": "fell",
+        "lemma": "yatsa"
       },
       {
         "surface": "to Jehoiarib",
@@ -530,12 +570,20 @@
     ],
     "19": [
       {
+        "surface": "This was",
+        "lemma": "elleh"
+      },
+      {
         "surface": "their appointed order",
         "lemma": "pequddah"
       },
       {
         "surface": "for service",
         "lemma": "avodah"
+      },
+      {
+        "surface": "when they entered",
+        "lemma": "bo"
       },
       {
         "surface": "the house",
@@ -554,8 +602,16 @@
         "lemma": "yad"
       },
       {
+        "surface": "by their forefather",
+        "lemma": "av"
+      },
+      {
         "surface": "Aaron",
         "lemma": "aharon"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -808,6 +864,14 @@
         "lemma": "elazar"
       },
       {
+        "surface": "who had",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "sons",
         "lemma": "ben"
       }
@@ -852,12 +916,20 @@
         "lemma": "yerimot"
       },
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "were the sons",
         "lemma": "ben"
       },
       {
         "surface": "of the Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "according to their families",
+        "lemma": "av"
       }
     ],
     "31": [
@@ -876,6 +948,14 @@
       {
         "surface": "of Aaron did",
         "lemma": "aharon"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "also",
+        "lemma": "gam"
       },
       {
         "surface": "cast",
@@ -910,12 +990,20 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of the families",
+        "lemma": "av"
+      },
+      {
         "surface": "of the priests",
         "lemma": "kohen"
       },
       {
         "surface": "and Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "the family",
+        "lemma": "av"
       },
       {
         "surface": "heads",

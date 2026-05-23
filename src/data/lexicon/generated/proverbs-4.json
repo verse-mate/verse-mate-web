@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "my sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "to a father’s",
+        "lemma": "av"
       },
       {
         "surface": "instruction",
@@ -28,12 +36,24 @@
     ],
     "2": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I give",
+        "lemma": "natan"
+      },
+      {
         "surface": "sound",
         "lemma": "tov"
       },
       {
         "surface": "teaching",
         "lemma": "leqach"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "abandon",
@@ -46,8 +66,20 @@
     ],
     "3": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a son",
         "lemma": "ben"
+      },
+      {
+        "surface": "to my father",
+        "lemma": "av"
       },
       {
         "surface": "tender",
@@ -70,6 +102,10 @@
       {
         "surface": "he taught",
         "lemma": "yara"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "Let your heart",
@@ -114,6 +150,10 @@
         "lemma": "binah"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "forget",
         "lemma": "shakhach"
       },
@@ -127,6 +167,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "forsake wisdom",
         "lemma": "azav"
@@ -162,6 +206,10 @@
         "lemma": "chokhmah"
       },
       {
+        "surface": "And whatever",
+        "lemma": "kol"
+      },
+      {
         "surface": "you may acquire",
         "lemma": "qinyan"
       },
@@ -184,6 +232,10 @@
         "lemma": "rum"
       },
       {
+        "surface": "if",
+        "lemma": "ki"
+      },
+      {
         "surface": "you embrace her",
         "lemma": "chavaq"
       },
@@ -193,6 +245,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "She will set",
+        "lemma": "natan"
+      },
       {
         "surface": "a garland",
         "lemma": "livyah"
@@ -219,6 +275,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
       {
         "surface": "my son",
         "lemma": "ben"
@@ -280,12 +340,24 @@
         "lemma": "tsaad"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be impeded",
         "lemma": "yatsar"
       },
       {
+        "surface": "when",
+        "lemma": "im"
+      },
+      {
         "surface": "you run",
         "lemma": "ruts"
+      },
+      {
+        "surface": "you will not",
+        "lemma": "lo"
       },
       {
         "surface": "stumble",
@@ -302,6 +374,10 @@
         "lemma": "musar"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "let go",
         "lemma": "raphah"
       },
@@ -310,11 +386,27 @@
         "lemma": "natsar"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is your life",
         "lemma": "chay"
       }
     ],
     "14": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "set foot",
+        "lemma": "bo"
+      },
       {
         "surface": "on the path",
         "lemma": "orach"
@@ -322,6 +414,10 @@
       {
         "surface": "of the wicked",
         "lemma": "rasah"
+      },
+      {
+        "surface": "or",
+        "lemma": "al"
       },
       {
         "surface": "walk",
@@ -342,6 +438,10 @@
         "lemma": "para"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "travel",
         "lemma": "avar"
       },
@@ -350,14 +450,30 @@
         "lemma": "satah"
       },
       {
+        "surface": "from it",
+        "lemma": "al"
+      },
+      {
         "surface": "and pass on by",
         "lemma": "avar"
       }
     ],
     "16": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "sleep",
         "lemma": "yashen"
+      },
+      {
+        "surface": "unless",
+        "lemma": "im"
       },
       {
         "surface": "they do evil",
@@ -372,11 +488,19 @@
         "lemma": "shenah"
       },
       {
+        "surface": "until",
+        "lemma": "im"
+      },
+      {
         "surface": "they make someone fall",
         "lemma": "kashal"
       }
     ],
     "17": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "they eat",
         "lemma": "lacham"
@@ -424,6 +548,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "and brighter until",
+        "lemma": "ad"
+      },
+      {
         "surface": "midday",
         "lemma": "kun"
       }
@@ -440,6 +568,10 @@
       {
         "surface": "is like the darkest gloom",
         "lemma": "aphelah"
+      },
+      {
+        "surface": "they do not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
@@ -482,6 +614,10 @@
     ],
     "21": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "lose",
         "lemma": "luz"
       },
@@ -504,6 +640,14 @@
     ],
     "22": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "are life",
         "lemma": "chay"
       },
@@ -514,6 +658,10 @@
       {
         "surface": "and health",
         "lemma": "marpe"
+      },
+      {
+        "surface": "to the whole",
+        "lemma": "kol"
       },
       {
         "surface": "body",
@@ -530,8 +678,20 @@
         "lemma": "lev"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "diligence",
         "lemma": "mishmar"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "from it",
+        "lemma": "min"
       },
       {
         "surface": "flow",
@@ -546,6 +706,10 @@
       {
         "surface": "Put",
         "lemma": "sur"
+      },
+      {
+        "surface": "away",
+        "lemma": "min"
       },
       {
         "surface": "deception",
@@ -608,6 +772,10 @@
         "lemma": "regel"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your ways",
         "lemma": "derekh"
       },
@@ -617,6 +785,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
       {
         "surface": "swerve",
         "lemma": "natah"
@@ -644,8 +816,8 @@
     ]
   },
   "themeLemmas": [
-    "qanah",
-    "chokhmah",
-    "chay"
+    "al",
+    "ki",
+    "qanah"
   ]
 }

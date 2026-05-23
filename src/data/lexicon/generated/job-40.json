@@ -28,6 +28,10 @@
         "lemma": "riv"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "the Almighty",
         "lemma": "shadday"
       },
@@ -72,12 +76,20 @@
         "lemma": "mah"
       },
       {
+        "surface": "can I reply to You",
+        "lemma": "shuv"
+      },
+      {
         "surface": "I place",
         "lemma": "sum"
       },
       {
         "surface": "my hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "over",
+        "lemma": "lemo"
       },
       {
         "surface": "my mouth",
@@ -94,12 +106,20 @@
         "lemma": "echad"
       },
       {
+        "surface": "but I have no",
+        "lemma": "lo"
+      },
+      {
         "surface": "answer",
         "lemma": "un"
       },
       {
         "surface": "twice",
         "lemma": "shenayim"
+      },
+      {
+        "surface": "but I have nothing",
+        "lemma": "lo"
       },
       {
         "surface": "to add",
@@ -120,8 +140,16 @@
         "lemma": "iyyov"
       },
       {
+        "surface": "out of",
+        "lemma": "min"
+      },
+      {
         "surface": "the whirlwind",
         "lemma": "saar"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       }
     ],
     "7": [
@@ -152,6 +180,10 @@
     ],
     "8": [
       {
+        "surface": "Would you really",
+        "lemma": "aph"
+      },
+      {
         "surface": "annul",
         "lemma": "parar"
       },
@@ -162,6 +194,10 @@
       {
         "surface": "Would you condemn Me",
         "lemma": "rasah"
+      },
+      {
+        "surface": "to",
+        "lemma": "maan"
       },
       {
         "surface": "justify yourself",
@@ -184,6 +220,10 @@
       {
         "surface": "with a voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "like His",
+        "lemma": "kemo"
       }
     ],
     "10": [
@@ -230,6 +270,14 @@
         "lemma": "aph"
       },
       {
+        "surface": "look on",
+        "lemma": "raah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "proud man",
         "lemma": "geeh"
       },
@@ -239,6 +287,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "Look on",
+        "lemma": "raah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
       {
         "surface": "proud man",
         "lemma": "geeh"
@@ -284,8 +340,20 @@
     ],
     "14": [
       {
+        "surface": "Then",
+        "lemma": "gam"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "will confess to you",
         "lemma": "yadah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "your own right hand",
@@ -304,6 +372,18 @@
       {
         "surface": "Behemoth",
         "lemma": "behemot"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "along with you",
+        "lemma": "im"
       },
       {
         "surface": "He feeds on",
@@ -354,6 +434,10 @@
         "lemma": "chaphets"
       },
       {
+        "surface": "like",
+        "lemma": "kemo"
+      },
+      {
         "surface": "a cedar",
         "lemma": "erez"
       },
@@ -398,6 +482,10 @@
     ],
     "19": [
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "is the foremost",
         "lemma": "reshit"
       },
@@ -408,6 +496,10 @@
       {
         "surface": "works",
         "lemma": "derekh"
+      },
+      {
+        "surface": "only his Maker",
+        "lemma": "asah"
       },
       {
         "surface": "can draw the sword",
@@ -430,6 +522,10 @@
       {
         "surface": "their produce",
         "lemma": "bul"
+      },
+      {
+        "surface": "while all",
+        "lemma": "kol"
       },
       {
         "surface": "the beasts",
@@ -514,8 +610,16 @@
         "lemma": "ashaq"
       },
       {
+        "surface": "Behemoth is unafraid",
+        "lemma": "lo"
+      },
+      {
         "surface": "he remains secure",
         "lemma": "batach"
+      },
+      {
+        "surface": "though",
+        "lemma": "ki"
       },
       {
         "surface": "the Jordan",
@@ -524,6 +628,10 @@
       {
         "surface": "surges",
         "lemma": "giach"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "his mouth",
@@ -555,7 +663,7 @@
   },
   "themeLemmas": [
     "un",
-    "iyyov",
-    "tseel"
+    "lo",
+    "kol"
   ]
 }

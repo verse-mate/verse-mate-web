@@ -14,6 +14,14 @@
         "lemma": "hemera"
       },
       {
+        "surface": "later",
+        "lemma": "meta"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "high priest",
         "lemma": "archiereus"
       },
@@ -26,8 +34,24 @@
         "lemma": "katabaino"
       },
       {
+        "surface": "with",
+        "lemma": "meta"
+      },
+      {
+        "surface": "some",
+        "lemma": "tis"
+      },
+      {
         "surface": "elders",
         "lemma": "presbuteros"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "a",
+        "lemma": "tis"
       },
       {
         "surface": "lawyer",
@@ -38,12 +62,24 @@
         "lemma": "tertullos"
       },
       {
+        "surface": "who",
+        "lemma": "hostis"
+      },
+      {
         "surface": "presented",
         "lemma": "emphanizo"
       },
       {
+        "surface": "to the",
+        "lemma": "ho"
+      },
+      {
         "surface": "governor",
         "lemma": "hegemon"
+      },
+      {
+        "surface": "their case} against",
+        "lemma": "kata"
       },
       {
         "surface": "Paul",
@@ -51,6 +87,14 @@
       }
     ],
     "2": [
+      {
+        "surface": "When",
+        "lemma": "de"
+      },
+      {
+        "surface": "Paul",
+        "lemma": "autos"
+      },
       {
         "surface": "had been called in",
         "lemma": "kaleo"
@@ -68,12 +112,28 @@
         "lemma": "kategoreo"
       },
       {
+        "surface": "Because of",
+        "lemma": "dia"
+      },
+      {
+        "surface": "you",
+        "lemma": "su"
+      },
+      {
         "surface": "we have enjoyed",
         "lemma": "tugchano"
       },
       {
+        "surface": "a lasting",
+        "lemma": "polus"
+      },
+      {
         "surface": "peace",
         "lemma": "eirene"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "your",
@@ -84,8 +144,16 @@
         "lemma": "pronoia"
       },
       {
+        "surface": "has brought",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "improvements",
         "lemma": "diorthosis"
+      },
+      {
+        "surface": "to this",
+        "lemma": "houtos"
       },
       {
         "surface": "nation",
@@ -96,6 +164,10 @@
       {
         "surface": "In every way",
         "lemma": "pante"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "everywhere",
@@ -114,14 +186,38 @@
         "lemma": "apodechomai"
       },
       {
+        "surface": "with",
+        "lemma": "meta"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
         "surface": "gratitude",
         "lemma": "eucharistia"
       }
     ],
     "4": [
       {
+        "surface": "But",
+        "lemma": "de"
+      },
+      {
+        "surface": "in order",
+        "lemma": "hina"
+      },
+      {
+        "surface": "not",
+        "lemma": "me"
+      },
+      {
         "surface": "to delay",
         "lemma": "egkopto"
+      },
+      {
+        "surface": "you",
+        "lemma": "su"
       },
       {
         "surface": "any further",
@@ -140,11 +236,27 @@
         "lemma": "epieikeia"
       },
       {
+        "surface": "to hear",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "us",
+        "lemma": "ego"
+      },
+      {
         "surface": "briefly",
         "lemma": "suntomos"
       }
     ],
     "5": [
+      {
+        "surface": "We have found",
+        "lemma": "heurisko"
+      },
+      {
+        "surface": "this",
+        "lemma": "houtos"
+      },
       {
         "surface": "man to be",
         "lemma": "aner"
@@ -162,20 +274,48 @@
         "lemma": "stasis"
       },
       {
+        "surface": "among",
+        "lemma": "pas"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "Jews",
         "lemma": "ioudaios"
+      },
+      {
+        "surface": "all over",
+        "lemma": "kata"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "world",
         "lemma": "oikoumene"
       },
       {
+        "surface": "He is",
+        "lemma": "te"
+      },
+      {
         "surface": "a ringleader",
         "lemma": "protostates"
       },
       {
+        "surface": "of the",
+        "lemma": "ho"
+      },
+      {
         "surface": "sect",
         "lemma": "hairesis"
+      },
+      {
+        "surface": "of the",
+        "lemma": "ho"
       },
       {
         "surface": "Nazarenes",
@@ -183,6 +323,14 @@
       }
     ],
     "6": [
+      {
+        "surface": "and he",
+        "lemma": "hos"
+      },
+      {
+        "surface": "even",
+        "lemma": "kai"
+      },
       {
         "surface": "tried",
         "lemma": "peirazo"
@@ -192,12 +340,24 @@
         "lemma": "bebeloo"
       },
       {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "temple",
         "lemma": "hieros"
       },
       {
+        "surface": "so",
+        "lemma": "kai"
+      },
+      {
         "surface": "we seized",
         "lemma": "krateo"
+      },
+      {
+        "surface": "him",
+        "lemma": "hos"
       }
     ],
     "8": [
@@ -206,18 +366,54 @@
         "lemma": "anakrino"
       },
       {
+        "surface": "him",
+        "lemma": "hos"
+      },
+      {
+        "surface": "yourself",
+        "lemma": "autos"
+      },
+      {
+        "surface": "you will be able",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "to learn the truth",
         "lemma": "epiginosko"
       },
       {
+        "surface": "about",
+        "lemma": "peri"
+      },
+      {
+        "surface": "all",
+        "lemma": "pas"
+      },
+      {
+        "surface": "our",
+        "lemma": "ego"
+      },
+      {
         "surface": "charges",
         "lemma": "kategoreo"
+      },
+      {
+        "surface": "against him",
+        "lemma": "autos"
       }
     ],
     "9": [
       {
+        "surface": "The",
+        "lemma": "ho"
+      },
+      {
         "surface": "Jews",
         "lemma": "ioudaios"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "kai"
       },
       {
         "surface": "concurred",
@@ -228,11 +424,27 @@
         "lemma": "phasko"
       },
       {
+        "surface": "these charges",
+        "lemma": "houtos"
+      },
+      {
+        "surface": "were",
+        "lemma": "echo"
+      },
+      {
         "surface": "true",
         "lemma": "houto"
       }
     ],
     "10": [
+      {
+        "surface": "When",
+        "lemma": "te"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
       {
         "surface": "governor",
         "lemma": "hegemon"
@@ -242,20 +454,56 @@
         "lemma": "neuo"
       },
       {
+        "surface": "for Paul",
+        "lemma": "autos"
+      },
+      {
+        "surface": "to speak",
+        "lemma": "lego"
+      },
+      {
         "surface": "he",
         "lemma": "paulos"
+      },
+      {
+        "surface": "began his response",
+        "lemma": "apokrino"
       },
       {
         "surface": "Knowing that",
         "lemma": "epistamai"
       },
       {
+        "surface": "you",
+        "lemma": "su"
+      },
+      {
+        "surface": "have been",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a judge",
         "lemma": "krites"
       },
       {
+        "surface": "over",
+        "lemma": "ho"
+      },
+      {
+        "surface": "this",
+        "lemma": "houtos"
+      },
+      {
         "surface": "nation",
         "lemma": "ethnos"
+      },
+      {
+        "surface": "for",
+        "lemma": "ek"
+      },
+      {
+        "surface": "many",
+        "lemma": "polus"
       },
       {
         "surface": "years",
@@ -268,8 +516,24 @@
     ],
     "11": [
       {
+        "surface": "You",
+        "lemma": "su"
+      },
+      {
+        "surface": "can",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "verify {for yourself",
         "lemma": "epiginosko"
+      },
+      {
+        "surface": "that",
+        "lemma": "hoti"
+      },
+      {
+        "surface": "no",
+        "lemma": "ou"
       },
       {
         "surface": "more than",
@@ -284,8 +548,16 @@
         "lemma": "hemera"
       },
       {
+        "surface": "ago",
+        "lemma": "apo"
+      },
+      {
         "surface": "I went up",
         "lemma": "anabaino"
+      },
+      {
+        "surface": "to",
+        "lemma": "eis"
       },
       {
         "surface": "Jerusalem",
@@ -298,20 +570,76 @@
     ],
     "12": [
       {
+        "surface": "Yet",
+        "lemma": "kai"
+      },
+      {
+        "surface": "my accusers did not find",
+        "lemma": "heurisko"
+      },
+      {
+        "surface": "me",
+        "lemma": "ego"
+      },
+      {
         "surface": "debating",
         "lemma": "dialego"
+      },
+      {
+        "surface": "with",
+        "lemma": "pros"
+      },
+      {
+        "surface": "anyone",
+        "lemma": "tis"
+      },
+      {
+        "surface": "in",
+        "lemma": "en"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "temple",
         "lemma": "hieros"
       },
       {
+        "surface": "or",
+        "lemma": "e"
+      },
+      {
+        "surface": "riling up",
+        "lemma": "poieo"
+      },
+      {
         "surface": "a crowd",
         "lemma": "ochlos"
       },
       {
+        "surface": "in",
+        "lemma": "en"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "synagogues",
         "lemma": "sunagoge"
+      },
+      {
+        "surface": "or",
+        "lemma": "oute"
+      },
+      {
+        "surface": "in",
+        "lemma": "kata"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "city",
@@ -320,8 +648,28 @@
     ],
     "13": [
       {
+        "surface": "Nor",
+        "lemma": "oude"
+      },
+      {
+        "surface": "can they",
+        "lemma": "dunamai"
+      },
+      {
         "surface": "prove",
         "lemma": "paristemi"
+      },
+      {
+        "surface": "to you",
+        "lemma": "su"
+      },
+      {
+        "surface": "any of",
+        "lemma": "peri"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "hos"
       },
       {
         "surface": "vvv",
@@ -330,6 +678,10 @@
       {
         "surface": "their charges against",
         "lemma": "kategoreo"
+      },
+      {
+        "surface": "me",
+        "lemma": "ego"
       }
     ],
     "14": [
@@ -338,8 +690,24 @@
         "lemma": "homologeo"
       },
       {
+        "surface": "to you",
+        "lemma": "su"
+      },
+      {
+        "surface": "however",
+        "lemma": "de"
+      },
+      {
+        "surface": "that",
+        "lemma": "hoti"
+      },
+      {
         "surface": "I worship",
         "lemma": "latreuo"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "God",
@@ -350,8 +718,24 @@
         "lemma": "patroos"
       },
       {
+        "surface": "according to",
+        "lemma": "kata"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "Way",
         "lemma": "hodos"
+      },
+      {
+        "surface": "which",
+        "lemma": "hos"
+      },
+      {
+        "surface": "they call",
+        "lemma": "lego"
       },
       {
         "surface": "a sect",
@@ -362,8 +746,40 @@
         "lemma": "pisteuo"
       },
       {
+        "surface": "everything",
+        "lemma": "pas"
+      },
+      {
+        "surface": "that",
+        "lemma": "ho"
+      },
+      {
+        "surface": "is laid down",
+        "lemma": "kata"
+      },
+      {
+        "surface": "by the",
+        "lemma": "ho"
+      },
+      {
         "surface": "Law",
         "lemma": "nomos"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "in",
+        "lemma": "en"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "Prophets",
@@ -372,12 +788,36 @@
     ],
     "15": [
       {
+        "surface": "and I have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "the same",
+        "lemma": "kai"
+      },
+      {
         "surface": "hope",
         "lemma": "elpis"
       },
       {
+        "surface": "in",
+        "lemma": "eis"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "that",
+        "lemma": "hos"
+      },
+      {
+        "surface": "they",
+        "lemma": "autos"
+      },
+      {
+        "surface": "themselves",
+        "lemma": "houtos"
       },
       {
         "surface": "cherish",
@@ -388,12 +828,24 @@
         "lemma": "mello"
       },
       {
+        "surface": "be",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a resurrection",
         "lemma": "anastasis"
       },
       {
+        "surface": "of both",
+        "lemma": "te"
+      },
+      {
         "surface": "the righteous",
         "lemma": "dikaios"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "the wicked",
@@ -402,8 +854,32 @@
     ],
     "16": [
       {
+        "surface": "In",
+        "lemma": "en"
+      },
+      {
+        "surface": "this hope",
+        "lemma": "houtos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "kai"
+      },
+      {
+        "surface": "I",
+        "lemma": "autos"
+      },
+      {
         "surface": "strive",
         "lemma": "askeo"
+      },
+      {
+        "surface": "always",
+        "lemma": "dia"
+      },
+      {
+        "surface": "to maintain",
+        "lemma": "echo"
       },
       {
         "surface": "a clear",
@@ -414,8 +890,16 @@
         "lemma": "suneidesis"
       },
       {
+        "surface": "before",
+        "lemma": "pros"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "man",
@@ -423,6 +907,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "After",
+        "lemma": "dia"
+      },
       {
         "surface": "several",
         "lemma": "pleion"
@@ -432,16 +920,36 @@
         "lemma": "etos"
       },
       {
+        "surface": "then",
+        "lemma": "de"
+      },
+      {
         "surface": "I returned  to Jerusalem",
         "lemma": "paraginomai"
+      },
+      {
+        "surface": "to bring",
+        "lemma": "poieo"
       },
       {
         "surface": "alms",
         "lemma": "eleemosune"
       },
       {
+        "surface": "to",
+        "lemma": "eis"
+      },
+      {
+        "surface": "my",
+        "lemma": "ego"
+      },
+      {
         "surface": "people",
         "lemma": "ethnos"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "to present offerings",
@@ -449,6 +957,30 @@
       }
     ],
     "18": [
+      {
+        "surface": "At",
+        "lemma": "en"
+      },
+      {
+        "surface": "the time",
+        "lemma": "hos"
+      },
+      {
+        "surface": "they found",
+        "lemma": "heurisko"
+      },
+      {
+        "surface": "me",
+        "lemma": "ego"
+      },
+      {
+        "surface": "in",
+        "lemma": "en"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
       {
         "surface": "temple",
         "lemma": "hieros"
@@ -458,16 +990,44 @@
         "lemma": "hagnizo"
       },
       {
+        "surface": "vvv",
+        "lemma": "ou"
+      },
+      {
+        "surface": "and was not {inciting",
+        "lemma": "meta"
+      },
+      {
         "surface": "a crowd",
         "lemma": "ochlos"
+      },
+      {
+        "surface": "or",
+        "lemma": "oude"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "meta"
       },
       {
         "surface": "an uproar",
         "lemma": "thorubos"
       },
       {
+        "surface": "But there are",
+        "lemma": "de"
+      },
+      {
+        "surface": "some",
+        "lemma": "tis"
+      },
+      {
         "surface": "Jews",
         "lemma": "ioudaios"
+      },
+      {
+        "surface": "from",
+        "lemma": "apo"
       },
       {
         "surface": "the province of Asia",
@@ -475,6 +1035,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "who",
+        "lemma": "hos"
+      },
       {
         "surface": "ought",
         "lemma": "dei"
@@ -484,14 +1048,82 @@
         "lemma": "pareimi"
       },
       {
+        "surface": "before",
+        "lemma": "epi"
+      },
+      {
+        "surface": "you",
+        "lemma": "su"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "bring charges",
         "lemma": "kategoreo"
+      },
+      {
+        "surface": "if",
+        "lemma": "ei"
+      },
+      {
+        "surface": "they have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "anything",
+        "lemma": "tis"
+      },
+      {
+        "surface": "against",
+        "lemma": "pros"
+      },
+      {
+        "surface": "me",
+        "lemma": "ego"
       }
     ],
     "20": [
       {
+        "surface": "Otherwise",
+        "lemma": "e"
+      },
+      {
+        "surface": "let these men state",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "for themselves",
+        "lemma": "autos"
+      },
+      {
+        "surface": "any",
+        "lemma": "tis"
+      },
+      {
         "surface": "crime",
         "lemma": "adikema"
+      },
+      {
+        "surface": "they found",
+        "lemma": "heurisko"
+      },
+      {
+        "surface": "in me",
+        "lemma": "ego"
+      },
+      {
+        "surface": "when I stood",
+        "lemma": "histemi"
+      },
+      {
+        "surface": "before",
+        "lemma": "epi"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "Sanhedrin",
@@ -500,8 +1132,40 @@
     ],
     "21": [
       {
+        "surface": "unless it was",
+        "lemma": "e"
+      },
+      {
+        "surface": "this",
+        "lemma": "houtos"
+      },
+      {
+        "surface": "one",
+        "lemma": "heis"
+      },
+      {
+        "surface": "thing",
+        "lemma": "hos"
+      },
+      {
         "surface": "I called out",
         "lemma": "krazo"
+      },
+      {
+        "surface": "as I stood",
+        "lemma": "histemi"
+      },
+      {
+        "surface": "in",
+        "lemma": "en"
+      },
+      {
+        "surface": "their presence",
+        "lemma": "autos"
+      },
+      {
+        "surface": "It is concerning",
+        "lemma": "peri"
       },
       {
         "surface": "the resurrection",
@@ -512,8 +1176,20 @@
         "lemma": "nekros"
       },
       {
+        "surface": "that I",
+        "lemma": "ego"
+      },
+      {
         "surface": "am on trial",
         "lemma": "krino"
+      },
+      {
+        "surface": "before",
+        "lemma": "epi"
+      },
+      {
+        "surface": "you",
+        "lemma": "su"
       },
       {
         "surface": "today",
@@ -522,12 +1198,28 @@
     ],
     "22": [
       {
+        "surface": "Then",
+        "lemma": "de"
+      },
+      {
         "surface": "Felix",
         "lemma": "phelix"
       },
       {
         "surface": "vvv",
         "lemma": "akribos"
+      },
+      {
+        "surface": "who was well informed",
+        "lemma": "eido"
+      },
+      {
+        "surface": "about",
+        "lemma": "peri"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "Way",
@@ -538,8 +1230,20 @@
         "lemma": "anaballo"
       },
       {
+        "surface": "and said",
+        "lemma": "eipon"
+      },
+      {
+        "surface": "When",
+        "lemma": "hotan"
+      },
+      {
         "surface": "Lysias",
         "lemma": "lusias"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "commander",
@@ -552,12 +1256,28 @@
       {
         "surface": "I will decide",
         "lemma": "diaginosko"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ho"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "kata"
+      },
+      {
+        "surface": "your case",
+        "lemma": "su"
       }
     ],
     "23": [
       {
         "surface": "He ordered",
         "lemma": "diatasso"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "centurion",
@@ -568,8 +1288,20 @@
         "lemma": "tereo"
       },
       {
+        "surface": "but",
+        "lemma": "te"
+      },
+      {
+        "surface": "to allow him",
+        "lemma": "echo"
+      },
+      {
         "surface": "some freedom",
         "lemma": "anesis"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "vvv",
@@ -580,15 +1312,35 @@
         "lemma": "koluo"
       },
       {
+        "surface": "his",
+        "lemma": "autos"
+      },
+      {
         "surface": "friends",
         "lemma": "idios"
       },
       {
         "surface": "to minister",
         "lemma": "hupereteo"
+      },
+      {
+        "surface": "to his needs",
+        "lemma": "autos"
       }
     ],
     "24": [
+      {
+        "surface": "After",
+        "lemma": "meta"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "de"
+      },
+      {
+        "surface": "several",
+        "lemma": "tis"
+      },
       {
         "surface": "days",
         "lemma": "hemera"
@@ -600,6 +1352,10 @@
       {
         "surface": "returned",
         "lemma": "paraginomai"
+      },
+      {
+        "surface": "with",
+        "lemma": "sun"
       },
       {
         "surface": "his",
@@ -614,6 +1370,10 @@
         "lemma": "drousilla"
       },
       {
+        "surface": "who was",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a Jewess",
         "lemma": "ioudaios"
       },
@@ -626,8 +1386,28 @@
         "lemma": "paulos"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "listened to",
+        "lemma": "akouo"
+      },
+      {
+        "surface": "him",
+        "lemma": "autos"
+      },
+      {
+        "surface": "speak about",
+        "lemma": "peri"
+      },
+      {
         "surface": "faith",
         "lemma": "pistis"
+      },
+      {
+        "surface": "in",
+        "lemma": "eis"
       },
       {
         "surface": "Christ",
@@ -640,8 +1420,20 @@
     ],
     "25": [
       {
+        "surface": "As",
+        "lemma": "de"
+      },
+      {
+        "surface": "Paul",
+        "lemma": "autos"
+      },
+      {
         "surface": "expounded",
         "lemma": "dialego"
+      },
+      {
+        "surface": "on",
+        "lemma": "peri"
       },
       {
         "surface": "righteousness",
@@ -650,6 +1442,14 @@
       {
         "surface": "self-control",
         "lemma": "egkrateia"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "coming",
@@ -664,16 +1464,32 @@
         "lemma": "phelix"
       },
       {
+        "surface": "became",
+        "lemma": "ginomai"
+      },
+      {
         "surface": "frightened",
         "lemma": "emphobos"
+      },
+      {
+        "surface": "and said",
+        "lemma": "apokrino"
       },
       {
         "surface": "You may go",
         "lemma": "poreuo"
       },
       {
+        "surface": "for",
+        "lemma": "ho"
+      },
+      {
         "surface": "now",
         "lemma": "nun"
+      },
+      {
+        "surface": "When",
+        "lemma": "de"
       },
       {
         "surface": "I find",
@@ -686,6 +1502,10 @@
       {
         "surface": "I will call for",
         "lemma": "metakaleo"
+      },
+      {
+        "surface": "you",
+        "lemma": "su"
       }
     ],
     "26": [
@@ -698,16 +1518,36 @@
         "lemma": "elpizo"
       },
       {
+        "surface": "that",
+        "lemma": "hoti"
+      },
+      {
         "surface": "Paul",
         "lemma": "paulos"
+      },
+      {
+        "surface": "would offer",
+        "lemma": "didomi"
+      },
+      {
+        "surface": "him",
+        "lemma": "autos"
       },
       {
         "surface": "a bribe",
         "lemma": "chrema"
       },
       {
+        "surface": "So",
+        "lemma": "dio"
+      },
+      {
         "surface": "he sent for",
         "lemma": "metapempo"
+      },
+      {
+        "surface": "Paul",
+        "lemma": "autos"
       },
       {
         "surface": "frequently",
@@ -716,9 +1556,17 @@
       {
         "surface": "and talked",
         "lemma": "homileo"
+      },
+      {
+        "surface": "with him",
+        "lemma": "autos"
       }
     ],
     "27": [
+      {
+        "surface": "After",
+        "lemma": "de"
+      },
       {
         "surface": "two years",
         "lemma": "dietia"
@@ -732,6 +1580,10 @@
         "lemma": "phelix"
       },
       {
+        "surface": "vvv",
+        "lemma": "lambano"
+      },
+      {
         "surface": "was succeeded by",
         "lemma": "diadochos"
       },
@@ -742,6 +1594,14 @@
       {
         "surface": "Festus",
         "lemma": "phestos"
+      },
+      {
+        "surface": "And",
+        "lemma": "te"
+      },
+      {
+        "surface": "wishing",
+        "lemma": "thelo"
       },
       {
         "surface": "to do the Jews a favor",

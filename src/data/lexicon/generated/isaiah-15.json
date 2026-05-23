@@ -84,12 +84,24 @@
         "lemma": "yalal"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "Nebo",
         "lemma": "nevo"
       },
       {
+        "surface": "as well as over",
+        "lemma": "al"
+      },
+      {
         "surface": "Medeba",
         "lemma": "medeva"
+      },
+      {
+        "surface": "Every",
+        "lemma": "kol"
       },
       {
         "surface": "head",
@@ -98,6 +110,10 @@
       {
         "surface": "is shaved",
         "lemma": "qorchah"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "beard",
@@ -122,12 +138,20 @@
         "lemma": "saq"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the rooftops",
         "lemma": "gag"
       },
       {
         "surface": "and in the public squares",
         "lemma": "rechov"
+      },
+      {
+        "surface": "they all",
+        "lemma": "kol"
       },
       {
         "surface": "wail",
@@ -160,8 +184,20 @@
         "lemma": "qol"
       },
       {
+        "surface": "are heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "as far as",
+        "lemma": "ad"
+      },
+      {
         "surface": "Jahaz",
         "lemma": "yahats"
+      },
+      {
+        "surface": "Therefore",
+        "lemma": "al"
       },
       {
         "surface": "the soldiers",
@@ -200,6 +236,10 @@
       {
         "surface": "her fugitives",
         "lemma": "bariach"
+      },
+      {
+        "surface": "flee as",
+        "lemma": "ad"
       },
       {
         "surface": "far as Zoar",
@@ -252,6 +292,10 @@
         "lemma": "nimrim"
       },
       {
+        "surface": "are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "dried up",
         "lemma": "meshammah"
       },
@@ -274,9 +318,21 @@
       {
         "surface": "and the greenery",
         "lemma": "yereq"
+      },
+      {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no more",
+        "lemma": "lo"
       }
     ],
     "7": [
+      {
+        "surface": "So",
+        "lemma": "al"
+      },
       {
         "surface": "they carry",
         "lemma": "nasa"
@@ -290,6 +346,10 @@
         "lemma": "pequddah"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "the Brook",
         "lemma": "nachal"
       },
@@ -299,6 +359,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "their outcry",
         "lemma": "zeaqah"
@@ -354,12 +418,20 @@
         "lemma": "dam"
       },
       {
+        "surface": "but",
+        "lemma": "ki"
+      },
+      {
         "surface": "I will bring",
         "lemma": "shit"
       },
       {
         "surface": "more",
         "lemma": "yasaph"
+      },
+      {
+        "surface": "upon",
+        "lemma": "al"
       },
       {
         "surface": "Dimon",
@@ -389,7 +461,7 @@
   },
   "themeLemmas": [
     "moav",
-    "bekhi",
-    "zaaq"
+    "al",
+    "kol"
   ]
 }

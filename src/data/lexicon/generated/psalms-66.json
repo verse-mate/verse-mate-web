@@ -26,6 +26,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       }
@@ -57,6 +61,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "Say",
+        "lemma": "amar"
+      },
       {
         "surface": "to God",
         "lemma": "elohim"
@@ -92,6 +100,10 @@
     ],
     "4": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -122,6 +134,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "and see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the works",
         "lemma": "miphal"
       },
@@ -136,6 +152,10 @@
       {
         "surface": "are His deeds",
         "lemma": "alilah"
+      },
+      {
+        "surface": "toward",
+        "lemma": "al"
       },
       {
         "surface": "vvv",
@@ -206,6 +226,10 @@
         "lemma": "goy"
       },
       {
+        "surface": "Do not let",
+        "lemma": "al"
+      },
+      {
         "surface": "the rebellious",
         "lemma": "sarar"
       },
@@ -238,6 +262,10 @@
       {
         "surface": "of His praise",
         "lemma": "tehillah"
+      },
+      {
+        "surface": "be heard",
+        "lemma": "shama"
       }
     ],
     "9": [
@@ -254,6 +282,10 @@
         "lemma": "chay"
       },
       {
+        "surface": "and keeps",
+        "lemma": "lo"
+      },
+      {
         "surface": "our feet",
         "lemma": "regel"
       },
@@ -263,6 +295,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "You , O God",
         "lemma": "elohim"
@@ -281,6 +317,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "You led us",
+        "lemma": "bo"
+      },
       {
         "surface": "into the net",
         "lemma": "matsudah"
@@ -312,6 +352,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "we went",
+        "lemma": "bo"
+      },
+      {
         "surface": "through fire",
         "lemma": "esh"
       },
@@ -320,11 +364,19 @@
         "lemma": "mayim"
       },
       {
+        "surface": "but You brought us",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "into abundance",
         "lemma": "revayah"
       }
     ],
     "13": [
+      {
+        "surface": "I will enter",
+        "lemma": "bo"
+      },
       {
         "surface": "Your house",
         "lemma": "bet"
@@ -343,6 +395,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "the vows that",
+        "lemma": "asher"
+      },
       {
         "surface": "my lips",
         "lemma": "saphah"
@@ -378,6 +434,10 @@
         "lemma": "olah"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "the fragrant smoke",
         "lemma": "qetoret"
       },
@@ -386,8 +446,16 @@
         "lemma": "ayil"
       },
       {
+        "surface": "I will offer",
+        "lemma": "asah"
+      },
+      {
         "surface": "bulls",
         "lemma": "baqar"
+      },
+      {
+        "surface": "and",
+        "lemma": "im"
       },
       {
         "surface": "goats",
@@ -404,6 +472,14 @@
         "lemma": "halakh"
       },
       {
+        "surface": "and listen",
+        "lemma": "shama"
+      },
+      {
+        "surface": "all you",
+        "lemma": "kol"
+      },
+      {
         "surface": "who fear",
         "lemma": "yare"
       },
@@ -416,11 +492,27 @@
         "lemma": "saphar"
       },
       {
+        "surface": "what",
+        "lemma": "asher"
+      },
+      {
+        "surface": "He has done",
+        "lemma": "asah"
+      },
+      {
         "surface": "for me",
         "lemma": "nephesh"
       }
     ],
     "17": [
+      {
+        "surface": "I cried out",
+        "lemma": "qara"
+      },
+      {
+        "surface": "to Him",
+        "lemma": "el"
+      },
       {
         "surface": "with my mouth",
         "lemma": "peh"
@@ -440,6 +532,14 @@
     ],
     "18": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "I had cherished",
+        "lemma": "raah"
+      },
+      {
         "surface": "iniquity",
         "lemma": "aven"
       },
@@ -450,6 +550,14 @@
       {
         "surface": "the Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "would not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "have listened",
+        "lemma": "shama"
       }
     ],
     "19": [
@@ -460,6 +568,10 @@
       {
         "surface": "has surely",
         "lemma": "akhen"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
       },
       {
         "surface": "He has attended",
@@ -484,6 +596,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "rejected",
         "lemma": "sur"
       },
@@ -492,14 +612,18 @@
         "lemma": "tephillah"
       },
       {
+        "surface": "or withheld from me",
+        "lemma": "et"
+      },
+      {
         "surface": "His loving devotion",
         "lemma": "chesed"
       }
     ]
   },
   "themeLemmas": [
+    "shama",
     "zamar",
-    "yare",
-    "sum"
+    "yare"
   ]
 }

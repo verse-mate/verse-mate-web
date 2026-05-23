@@ -6,6 +6,14 @@
   "verses": {
     "1": [
       {
+        "surface": "Then I said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "now",
         "lemma": "na"
       },
@@ -28,6 +36,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "Should you not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
@@ -64,8 +76,16 @@
         "lemma": "or"
       },
       {
+        "surface": "from my people",
+        "lemma": "al"
+      },
+      {
         "surface": "and strip the flesh",
         "lemma": "sheer"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
       },
       {
         "surface": "their bones",
@@ -106,6 +126,10 @@
         "lemma": "paras"
       },
       {
+        "surface": "like flesh",
+        "lemma": "asher"
+      },
+      {
         "surface": "for the cooking pot",
         "lemma": "sir"
       },
@@ -124,16 +148,40 @@
     ],
     "4": [
       {
+        "surface": "Then",
+        "lemma": "az"
+      },
+      {
         "surface": "they will cry out",
         "lemma": "zaaq"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "but He will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "answer",
         "lemma": "un"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
+        "surface": "At that",
+        "lemma": "hu"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
       },
       {
         "surface": "He will hide",
@@ -142,6 +190,10 @@
       {
         "surface": "His face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "because of",
+        "lemma": "asher"
       },
       {
         "surface": "the evil",
@@ -162,6 +214,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "As for",
+        "lemma": "al"
+      },
+      {
         "surface": "the prophets",
         "lemma": "navi"
       },
@@ -172,6 +232,10 @@
       {
         "surface": "astray",
         "lemma": "taah"
+      },
+      {
+        "surface": "who proclaim",
+        "lemma": "qara"
       },
       {
         "surface": "peace",
@@ -192,6 +256,22 @@
       {
         "surface": "war",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "against one",
+        "lemma": "al"
+      },
+      {
+        "surface": "who puts",
+        "lemma": "natan"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "their mouths",
@@ -224,6 +304,14 @@
         "lemma": "shemesh"
       },
       {
+        "surface": "will set",
+        "lemma": "bo"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "these prophets",
         "lemma": "navi"
       },
@@ -234,6 +322,10 @@
       {
         "surface": "will turn black",
         "lemma": "qadar"
+      },
+      {
+        "surface": "over them",
+        "lemma": "al"
       }
     ],
     "7": [
@@ -254,12 +346,20 @@
         "lemma": "chapher"
       },
       {
+        "surface": "They will all",
+        "lemma": "kol"
+      },
+      {
         "surface": "cover",
         "lemma": "atah"
       },
       {
         "surface": "their mouths",
         "lemma": "sapham"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "there is no",
@@ -276,12 +376,24 @@
     ],
     "8": [
       {
+        "surface": "As for me",
+        "lemma": "anokhi"
+      },
+      {
+        "surface": "however",
+        "lemma": "ulam"
+      },
+      {
         "surface": "I am filled",
         "lemma": "male"
       },
       {
         "surface": "with power",
         "lemma": "koach"
+      },
+      {
+        "surface": "by",
+        "lemma": "et"
       },
       {
         "surface": "the Spirit",
@@ -326,6 +438,14 @@
         "lemma": "na"
       },
       {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "O leaders",
         "lemma": "rosh"
       },
@@ -360,6 +480,10 @@
       {
         "surface": "and pervert",
         "lemma": "aqash"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "that is right",
@@ -430,8 +554,20 @@
         "lemma": "shaan"
       },
       {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Is not",
+        "lemma": "lo"
       },
       {
         "surface": "the LORD",
@@ -442,8 +578,20 @@
         "lemma": "qerev"
       },
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "disaster",
         "lemma": "ra"
+      },
+      {
+        "surface": "can come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "upon us",
+        "lemma": "al"
       }
     ],
     "12": [
@@ -472,6 +620,10 @@
         "lemma": "yerushalaim"
       },
       {
+        "surface": "will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a heap of rubble",
         "lemma": "i"
       },
@@ -494,8 +646,8 @@
     ]
   },
   "themeLemmas": [
-    "bet",
-    "yisrael",
-    "yaaqov"
+    "al",
+    "lo",
+    "bet"
   ]
 }

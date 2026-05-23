@@ -30,8 +30,16 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "It cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "be moved",
         "lemma": "mot"
+      },
+      {
+        "surface": "it abides",
+        "lemma": "yashav"
       },
       {
         "surface": "forever",
@@ -66,9 +74,17 @@
       {
         "surface": "both now",
         "lemma": "attah"
+      },
+      {
+        "surface": "and forevermore",
+        "lemma": "ad"
       }
     ],
     "3": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the scepter",
         "lemma": "shevet"
@@ -78,8 +94,16 @@
         "lemma": "resah"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "rest",
         "lemma": "nuach"
+      },
+      {
+        "surface": "upon",
+        "lemma": "al"
       },
       {
         "surface": "the land allotted",
@@ -90,8 +114,16 @@
         "lemma": "tsaddiq"
       },
       {
+        "surface": "so that",
+        "lemma": "maan"
+      },
+      {
         "surface": "the righteous",
         "lemma": "tsaddiq"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
       },
       {
         "surface": "put forth",
@@ -154,14 +186,18 @@
         "lemma": "shalom"
       },
       {
+        "surface": "be upon",
+        "lemma": "al"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       }
     ]
   },
   "themeLemmas": [
+    "lo",
     "tsaddiq",
-    "saviv",
-    "har"
+    "saviv"
   ]
 }

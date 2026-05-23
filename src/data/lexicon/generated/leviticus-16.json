@@ -14,6 +14,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -56,6 +60,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -72,6 +84,22 @@
         "lemma": "aharon"
       },
       {
+        "surface": "not",
+        "lemma": "al"
+      },
+      {
+        "surface": "to enter",
+        "lemma": "bo"
+      },
+      {
+        "surface": "freely",
+        "lemma": "kol"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
+      },
+      {
         "surface": "the Most Holy Place",
         "lemma": "qodesh"
       },
@@ -84,6 +112,10 @@
         "lemma": "porekhet"
       },
       {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
         "surface": "front",
         "lemma": "paneh"
       },
@@ -92,16 +124,36 @@
         "lemma": "kapporet"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the ark",
         "lemma": "aron"
+      },
+      {
+        "surface": "or else",
+        "lemma": "lo"
       },
       {
         "surface": "he will die",
         "lemma": "mut"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I appear",
+        "lemma": "raah"
+      },
+      {
         "surface": "in the cloud",
         "lemma": "anan"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
       },
       {
         "surface": "the mercy seat",
@@ -110,8 +162,16 @@
     ],
     "3": [
       {
+        "surface": "This is how",
+        "lemma": "zot"
+      },
+      {
         "surface": "Aaron",
         "lemma": "aharon"
+      },
+      {
+        "surface": "is to enter",
+        "lemma": "bo"
       },
       {
         "surface": "the Holy Place",
@@ -184,6 +244,10 @@
         "lemma": "mitsnephet"
       },
       {
+        "surface": "These",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "are holy",
         "lemma": "qodesh"
       },
@@ -209,6 +273,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "And",
+        "lemma": "et"
+      },
       {
         "surface": "he shall take",
         "lemma": "laqach"
@@ -298,6 +366,10 @@
         "lemma": "amad"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "before",
         "lemma": "paneh"
       },
@@ -324,8 +396,16 @@
         "lemma": "aharon"
       },
       {
+        "surface": "casts",
+        "lemma": "natan"
+      },
+      {
         "surface": "lots",
         "lemma": "goral"
+      },
+      {
+        "surface": "for",
+        "lemma": "al"
       },
       {
         "surface": "the two",
@@ -378,6 +458,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and sacrifice",
+        "lemma": "asah"
+      },
+      {
         "surface": "it as a sin offering",
         "lemma": "chattaah"
       }
@@ -390,6 +474,10 @@
       {
         "surface": "chosen",
         "lemma": "alah"
+      },
+      {
+        "surface": "by",
+        "lemma": "al"
       },
       {
         "surface": "lot",
@@ -496,6 +584,10 @@
         "lemma": "gechel"
       },
       {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
         "surface": "the altar",
         "lemma": "mizbeach"
       },
@@ -524,6 +616,10 @@
         "lemma": "qetoret"
       },
       {
+        "surface": "and take them",
+        "lemma": "bo"
+      },
+      {
         "surface": "inside",
         "lemma": "bet"
       },
@@ -534,8 +630,16 @@
     ],
     "13": [
       {
+        "surface": "He is to put",
+        "lemma": "natan"
+      },
+      {
         "surface": "the incense",
         "lemma": "qetoret"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the fire",
@@ -566,8 +670,16 @@
         "lemma": "kapporet"
       },
       {
+        "surface": "above",
+        "lemma": "al"
+      },
+      {
         "surface": "the Testimony",
         "lemma": "edut"
+      },
+      {
+        "surface": "so that he will not",
+        "lemma": "lo"
       },
       {
         "surface": "die",
@@ -596,6 +708,10 @@
         "lemma": "etsba"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the east",
         "lemma": "qedem"
       },
@@ -610,6 +726,10 @@
       {
         "surface": "then he shall sprinkle",
         "lemma": "nazah"
+      },
+      {
+        "surface": "some of",
+        "lemma": "min"
       },
       {
         "surface": "it",
@@ -654,6 +774,10 @@
         "lemma": "am"
       },
       {
+        "surface": "and bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "its blood",
         "lemma": "dam"
       },
@@ -670,6 +794,18 @@
         "lemma": "dam"
       },
       {
+        "surface": "he must do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
+        "surface": "he did",
+        "lemma": "asah"
+      },
+      {
         "surface": "with the bull’s",
         "lemma": "par"
       },
@@ -680,6 +816,10 @@
       {
         "surface": "He is to sprinkle",
         "lemma": "nazah"
+      },
+      {
+        "surface": "it against",
+        "lemma": "al"
       },
       {
         "surface": "the mercy seat",
@@ -698,6 +838,10 @@
       {
         "surface": "So he shall make atonement",
         "lemma": "kipher"
+      },
+      {
+        "surface": "for",
+        "lemma": "al"
       },
       {
         "surface": "the Most Holy Place",
@@ -720,8 +864,16 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "in regard to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their sins",
         "lemma": "chattaah"
+      },
+      {
+        "surface": "He is to do",
+        "lemma": "asah"
       },
       {
         "surface": "the same",
@@ -740,6 +892,10 @@
         "lemma": "shakhan"
       },
       {
+        "surface": "among them",
+        "lemma": "et"
+      },
+      {
         "surface": "in the midst",
         "lemma": "tavekh"
       },
@@ -750,8 +906,16 @@
     ],
     "17": [
       {
+        "surface": "No",
+        "lemma": "kol"
+      },
+      {
         "surface": "one",
         "lemma": "adam"
+      },
+      {
+        "surface": "may be",
+        "lemma": "hayah"
       },
       {
         "surface": "in the Tent",
@@ -762,12 +926,24 @@
         "lemma": "moed"
       },
       {
+        "surface": "from the time Aaron goes in",
+        "lemma": "bo"
+      },
+      {
         "surface": "to make atonement",
         "lemma": "kipher"
       },
       {
         "surface": "in the Most Holy Place",
         "lemma": "qodesh"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
+        "surface": "he leaves",
+        "lemma": "yatsa"
       },
       {
         "surface": "after he has made atonement",
@@ -782,6 +958,10 @@
         "lemma": "bet"
       },
       {
+        "surface": "and the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "assembly",
         "lemma": "qahal"
       },
@@ -792,8 +972,20 @@
     ],
     "18": [
       {
+        "surface": "Then he shall go out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the altar",
         "lemma": "mizbeach"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "is before",
@@ -806,6 +998,10 @@
       {
         "surface": "and make atonement",
         "lemma": "kipher"
+      },
+      {
+        "surface": "for it",
+        "lemma": "al"
       },
       {
         "surface": "He is to take",
@@ -828,6 +1024,14 @@
         "lemma": "dam"
       },
       {
+        "surface": "and put it",
+        "lemma": "natan"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "all",
         "lemma": "saviv"
       },
@@ -846,8 +1050,16 @@
         "lemma": "nazah"
       },
       {
+        "surface": "some of",
+        "lemma": "min"
+      },
+      {
         "surface": "the blood",
         "lemma": "dam"
+      },
+      {
+        "surface": "on it",
+        "lemma": "al"
       },
       {
         "surface": "with his finger",
@@ -938,6 +1150,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the head",
         "lemma": "rosh"
       },
@@ -952,6 +1168,18 @@
       {
         "surface": "and confess",
         "lemma": "yadah"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
+        "surface": "it",
+        "lemma": "et"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the iniquities",
@@ -970,8 +1198,28 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "in regard to",
+        "lemma": "kol"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their sins",
         "lemma": "chattaah"
+      },
+      {
+        "surface": "He is to put",
+        "lemma": "natan"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the goat’s",
@@ -1012,8 +1260,24 @@
         "lemma": "nasa"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
+        "surface": "itself",
+        "lemma": "et"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their iniquities",
         "lemma": "avan"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
       },
       {
         "surface": "a solitary",
@@ -1042,6 +1306,10 @@
         "lemma": "aharon"
       },
       {
+        "surface": "is to enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the Tent",
         "lemma": "ohel"
       },
@@ -1064,6 +1332,10 @@
       {
         "surface": "he put on",
         "lemma": "lavash"
+      },
+      {
+        "surface": "before entering",
+        "lemma": "bo"
       },
       {
         "surface": "the Most Holy Place",
@@ -1106,6 +1378,14 @@
       {
         "surface": "his own clothes",
         "lemma": "beged"
+      },
+      {
+        "surface": "Then he must go out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and sacrifice",
+        "lemma": "asah"
       },
       {
         "surface": "his burnt offering",
@@ -1192,6 +1472,10 @@
         "lemma": "achar"
       },
       {
+        "surface": "he may reenter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the camp",
         "lemma": "machaneh"
       }
@@ -1214,8 +1498,16 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "whose",
+        "lemma": "asher"
+      },
+      {
         "surface": "blood",
         "lemma": "dam"
+      },
+      {
+        "surface": "was brought",
+        "lemma": "bo"
       },
       {
         "surface": "into the Most Holy Place",
@@ -1224,6 +1516,14 @@
       {
         "surface": "to make atonement",
         "lemma": "kipher"
+      },
+      {
+        "surface": "must be taken",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "outside",
+        "lemma": "el"
       },
       {
         "surface": "the camp",
@@ -1252,6 +1552,10 @@
         "lemma": "saraph"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "must wash",
         "lemma": "kavas"
       },
@@ -1276,11 +1580,19 @@
         "lemma": "achar"
       },
       {
+        "surface": "he may reenter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the camp",
         "lemma": "machaneh"
       }
     ],
     "29": [
+      {
+        "surface": "This is to be",
+        "lemma": "hayah"
+      },
       {
         "surface": "a permanent",
         "lemma": "olam"
@@ -1314,6 +1626,14 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "and not do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "work",
         "lemma": "melakhah"
       },
@@ -1336,6 +1656,14 @@
     ],
     "30": [
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "on this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -1344,12 +1672,24 @@
         "lemma": "kipher"
       },
       {
+        "surface": "for you",
+        "lemma": "al"
+      },
+      {
         "surface": "to cleanse",
         "lemma": "taher"
       },
       {
+        "surface": "you",
+        "lemma": "et"
+      },
+      {
         "surface": "and you will be clean",
         "lemma": "taher"
+      },
+      {
+        "surface": "from all",
+        "lemma": "kol"
       },
       {
         "surface": "your sins",
@@ -1365,6 +1705,10 @@
       }
     ],
     "31": [
+      {
+        "surface": "It",
+        "lemma": "hu"
+      },
       {
         "surface": "is a Sabbath",
         "lemma": "shabbat"
@@ -1396,6 +1740,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "is anointed",
         "lemma": "mashach"
       },
@@ -1406,6 +1754,10 @@
       {
         "surface": "to succeed",
         "lemma": "kahan"
+      },
+      {
+        "surface": "his father {as high priest",
+        "lemma": "av"
       },
       {
         "surface": "shall make atonement",
@@ -1450,8 +1802,16 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "and for",
+        "lemma": "al"
+      },
+      {
         "surface": "the priests",
         "lemma": "kohen"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -1463,6 +1823,14 @@
       }
     ],
     "34": [
+      {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
+        "surface": "is to be",
+        "lemma": "hayah"
+      },
       {
         "surface": "a permanent",
         "lemma": "olam"
@@ -1484,12 +1852,28 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
       },
       {
+        "surface": "because of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their sins",
         "lemma": "chattaah"
+      },
+      {
+        "surface": "And all this was done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -1506,8 +1890,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "sair",
-    "kipher",
-    "chattaah"
+    "kipher"
   ]
 }

@@ -22,6 +22,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       }
@@ -40,6 +44,10 @@
         "lemma": "simchah"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "into His presence",
         "lemma": "paneh"
       },
@@ -54,12 +62,32 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "is God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "It is He",
+        "lemma": "hu"
+      },
+      {
+        "surface": "who made us",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and",
+        "lemma": "lo"
+      },
+      {
+        "surface": "we are His",
+        "lemma": "anachnu"
       },
       {
         "surface": "we are His people",
@@ -75,6 +103,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Enter",
+        "lemma": "bo"
+      },
       {
         "surface": "His gates",
         "lemma": "shaar"
@@ -106,6 +138,10 @@
     ],
     "5": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -126,6 +162,10 @@
         "lemma": "emunah"
       },
       {
+        "surface": "continues",
+        "lemma": "ad"
+      },
+      {
         "surface": "to all",
         "lemma": "dor"
       },
@@ -137,6 +177,7 @@
   },
   "themeLemmas": [
     "todah",
+    "ki",
     "dor"
   ]
 }

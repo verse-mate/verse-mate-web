@@ -14,6 +14,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "He is good",
         "lemma": "tov"
       },
@@ -34,6 +38,14 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "say so",
+        "lemma": "amar"
+      },
+      {
+        "surface": "whom",
+        "lemma": "asher"
       },
       {
         "surface": "He has redeemed",
@@ -92,6 +104,10 @@
         "lemma": "matsa"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "path",
         "lemma": "derekh"
       },
@@ -110,6 +126,10 @@
         "lemma": "raev"
       },
       {
+        "surface": "and",
+        "lemma": "gam"
+      },
+      {
         "surface": "thirsty",
         "lemma": "tsame"
       },
@@ -126,6 +146,10 @@
       {
         "surface": "Then they cried out",
         "lemma": "tsaaq"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -198,6 +222,10 @@
     ],
     "9": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "He satisfies",
         "lemma": "sava"
       },
@@ -220,6 +248,10 @@
     ],
     "10": [
       {
+        "surface": "Some sat",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in darkness",
         "lemma": "choshekh"
       },
@@ -241,6 +273,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
       {
         "surface": "they rebelled",
         "lemma": "marah"
@@ -298,6 +334,10 @@
         "lemma": "zaaq"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -315,6 +355,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "He brought them out",
+        "lemma": "yatsa"
+      },
       {
         "surface": "of darkness",
         "lemma": "choshekh"
@@ -355,6 +399,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "He has broken down",
         "lemma": "shavar"
@@ -412,12 +460,20 @@
         "lemma": "taav"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "food",
         "lemma": "okhel"
       },
       {
         "surface": "and drew near",
         "lemma": "naga"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "the gates",
@@ -432,6 +488,10 @@
       {
         "surface": "Then they cried out",
         "lemma": "zaaq"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -538,6 +598,10 @@
         "lemma": "oniyyah"
       },
       {
+        "surface": "conducting",
+        "lemma": "asah"
+      },
+      {
         "surface": "trade",
         "lemma": "melakhah"
       },
@@ -551,6 +615,14 @@
       }
     ],
     "24": [
+      {
+        "surface": "They",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
       {
         "surface": "the works",
         "lemma": "maaseh"
@@ -569,6 +641,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "For He spoke",
+        "lemma": "amar"
+      },
       {
         "surface": "and raised",
         "lemma": "amad"
@@ -634,6 +710,10 @@
         "lemma": "shikkor"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their skill",
         "lemma": "chokhmah"
       },
@@ -648,12 +728,20 @@
         "lemma": "tsaaq"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "in their trouble",
         "lemma": "tsar"
+      },
+      {
+        "surface": "and He brought them",
+        "lemma": "yatsa"
       },
       {
         "surface": "of their distress",
@@ -688,12 +776,20 @@
         "lemma": "samach"
       },
       {
+        "surface": "in",
+        "lemma": "ki"
+      },
+      {
         "surface": "the silence",
         "lemma": "shataq"
       },
       {
         "surface": "and He guided them",
         "lemma": "nachah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the harbor",
@@ -798,6 +894,10 @@
       {
         "surface": "because of the wickedness",
         "lemma": "ra"
+      },
+      {
+        "surface": "of its dwellers",
+        "lemma": "yashav"
       }
     ],
     "35": [
@@ -836,6 +936,10 @@
         "lemma": "raev"
       },
       {
+        "surface": "to settle",
+        "lemma": "yashav"
+      },
+      {
         "surface": "there",
         "lemma": "sham"
       },
@@ -870,6 +974,10 @@
         "lemma": "kerem"
       },
       {
+        "surface": "that yield",
+        "lemma": "asah"
+      },
+      {
         "surface": "a fruitful",
         "lemma": "peri"
       },
@@ -890,6 +998,10 @@
       {
         "surface": "greatly",
         "lemma": "meod"
+      },
+      {
+        "surface": "He does not",
+        "lemma": "lo"
       },
       {
         "surface": "let their herds",
@@ -932,12 +1044,20 @@
         "lemma": "buz"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the nobles",
         "lemma": "nadiv"
       },
       {
         "surface": "and makes them wander",
         "lemma": "taah"
+      },
+      {
+        "surface": "in a trackless",
+        "lemma": "lo"
       },
       {
         "surface": "wasteland",
@@ -976,8 +1096,16 @@
         "lemma": "yashar"
       },
       {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
         "surface": "and rejoice",
         "lemma": "samach"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "iniquity",
@@ -1004,6 +1132,10 @@
       {
         "surface": "pay heed",
         "lemma": "shamar"
+      },
+      {
+        "surface": "to these things",
+        "lemma": "elleh"
       },
       {
         "surface": "and consider",

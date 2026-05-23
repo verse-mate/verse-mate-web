@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "And I",
+        "lemma": "ani"
+      },
+      {
         "surface": "in the first",
         "lemma": "echad"
       },
@@ -84,6 +88,10 @@
         "lemma": "ashar"
       },
       {
+        "surface": "than all the others",
+        "lemma": "kol"
+      },
+      {
         "surface": "By the power",
         "lemma": "chezqah"
       },
@@ -94,6 +102,14 @@
       {
         "surface": "he will stir up",
         "lemma": "ur"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "against",
+        "lemma": "et"
       },
       {
         "surface": "the kingdom",
@@ -130,6 +146,10 @@
         "lemma": "mimshal"
       },
       {
+        "surface": "and do",
+        "lemma": "asah"
+      },
+      {
         "surface": "as he pleases",
         "lemma": "ratson"
       }
@@ -164,16 +184,32 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "It will not go",
+        "lemma": "lo"
+      },
+      {
         "surface": "to his descendants",
         "lemma": "acharit"
+      },
+      {
+        "surface": "nor will it",
+        "lemma": "lo"
       },
       {
         "surface": "have the authority",
         "lemma": "moshel"
       },
       {
+        "surface": "with which",
+        "lemma": "asher"
+      },
+      {
         "surface": "he ruled",
         "lemma": "mashal"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "his kingdom",
@@ -202,8 +238,16 @@
         "lemma": "chazaq"
       },
       {
+        "surface": "but one of",
+        "lemma": "min"
+      },
+      {
         "surface": "his commanders",
         "lemma": "sar"
+      },
+      {
+        "surface": "will grow even",
+        "lemma": "al"
       },
       {
         "surface": "stronger",
@@ -252,6 +296,14 @@
         "lemma": "negev"
       },
       {
+        "surface": "will go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -260,8 +312,16 @@
         "lemma": "tsaphon"
       },
       {
+        "surface": "to seal",
+        "lemma": "asah"
+      },
+      {
         "surface": "the agreement",
         "lemma": "meshar"
+      },
+      {
+        "surface": "But his daughter will not",
+        "lemma": "lo"
       },
       {
         "surface": "retain",
@@ -272,12 +332,32 @@
         "lemma": "koach"
       },
       {
+        "surface": "nor will",
+        "lemma": "lo"
+      },
+      {
         "surface": "his strength",
         "lemma": "zeroa"
       },
       {
         "surface": "endure",
         "lemma": "amad"
+      },
+      {
+        "surface": "At that time",
+        "lemma": "et"
+      },
+      {
+        "surface": "she",
+        "lemma": "hu"
+      },
+      {
+        "surface": "will be given up",
+        "lemma": "natan"
+      },
+      {
+        "surface": "along with her royal escort",
+        "lemma": "bo"
       },
       {
         "surface": "and her father",
@@ -302,6 +382,14 @@
         "lemma": "ken"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "against",
+        "lemma": "el"
+      },
+      {
         "surface": "the army",
         "lemma": "chayil"
       },
@@ -314,8 +402,16 @@
         "lemma": "tsaphon"
       },
       {
+        "surface": "and enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "his fortress",
         "lemma": "maoz"
+      },
+      {
+        "surface": "fighting",
+        "lemma": "asah"
       },
       {
         "surface": "and prevailing",
@@ -323,6 +419,14 @@
       }
     ],
     "8": [
+      {
+        "surface": "He will take",
+        "lemma": "bo"
+      },
+      {
+        "surface": "even",
+        "lemma": "gam"
+      },
       {
         "surface": "their gods",
         "lemma": "elohim"
@@ -334,6 +438,10 @@
       {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "their metal images",
@@ -360,6 +468,10 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "he",
+        "lemma": "hu"
+      },
+      {
         "surface": "will stay away",
         "lemma": "amad"
       },
@@ -374,6 +486,10 @@
     ],
     "9": [
       {
+        "surface": "who will invade",
+        "lemma": "bo"
+      },
+      {
         "surface": "the realm",
         "lemma": "malkhut"
       },
@@ -384,6 +500,14 @@
       {
         "surface": "of the South",
         "lemma": "negev"
+      },
+      {
+        "surface": "and then return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "his own land",
@@ -412,6 +536,10 @@
         "lemma": "hamon"
       },
       {
+        "surface": "which will advance forcefully",
+        "lemma": "bo"
+      },
+      {
         "surface": "sweeping through",
         "lemma": "avar"
       },
@@ -420,8 +548,16 @@
         "lemma": "shataph"
       },
       {
+        "surface": "and will again",
+        "lemma": "shuv"
+      },
+      {
         "surface": "carry the battle",
         "lemma": "garah"
+      },
+      {
+        "surface": "as",
+        "lemma": "ad"
       },
       {
         "surface": "far as his fortress",
@@ -440,6 +576,10 @@
       {
         "surface": "of the South",
         "lemma": "negev"
+      },
+      {
+        "surface": "will march out",
+        "lemma": "yatsa"
       },
       {
         "surface": "to fight",
@@ -468,6 +608,10 @@
       {
         "surface": "but it",
         "lemma": "hamon"
+      },
+      {
+        "surface": "will be delivered",
+        "lemma": "natan"
       },
       {
         "surface": "into the hand of his enemy",
@@ -500,6 +644,10 @@
         "lemma": "ribbo"
       },
       {
+        "surface": "but he will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "triumph",
         "lemma": "azaz"
       }
@@ -518,12 +666,20 @@
         "lemma": "amad"
       },
       {
+        "surface": "another",
+        "lemma": "shuv"
+      },
+      {
         "surface": "army",
         "lemma": "hamon"
       },
       {
         "surface": "larger",
         "lemma": "rav"
+      },
+      {
+        "surface": "than",
+        "lemma": "min"
       },
       {
         "surface": "the first",
@@ -536,6 +692,10 @@
       {
         "surface": "some years",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "he will advance",
+        "lemma": "bo"
       },
       {
         "surface": "with a great",
@@ -556,12 +716,24 @@
     ],
     "14": [
       {
+        "surface": "In those",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "times",
+        "lemma": "et"
+      },
+      {
         "surface": "many",
         "lemma": "rav"
       },
       {
         "surface": "will rise up",
         "lemma": "amad"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "the king",
@@ -610,6 +782,10 @@
         "lemma": "tsaphon"
       },
       {
+        "surface": "will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "build up",
         "lemma": "shaphakh"
       },
@@ -638,6 +814,10 @@
         "lemma": "negev"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "stand",
         "lemma": "amad"
       },
@@ -663,6 +843,14 @@
       }
     ],
     "16": [
+      {
+        "surface": "The invader",
+        "lemma": "bo"
+      },
+      {
+        "surface": "will do",
+        "lemma": "asah"
+      },
       {
         "surface": "as he pleases",
         "lemma": "ratson"
@@ -706,8 +894,16 @@
         "lemma": "sum"
       },
       {
+        "surface": "to come",
+        "lemma": "bo"
+      },
+      {
         "surface": "with the strength",
         "lemma": "toqeph"
+      },
+      {
+        "surface": "of his whole",
+        "lemma": "kol"
       },
       {
         "surface": "kingdom",
@@ -716,6 +912,10 @@
       {
         "surface": "and will reach an agreement",
         "lemma": "yashar"
+      },
+      {
+        "surface": "with the king of the South",
+        "lemma": "im"
       },
       {
         "surface": "He will give him a daughter",
@@ -730,11 +930,23 @@
         "lemma": "shachat"
       },
       {
+        "surface": "but his plan will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "succeed",
         "lemma": "amad"
+      },
+      {
+        "surface": "or help",
+        "lemma": "lo"
       }
     ],
     "18": [
+      {
+        "surface": "Then he will turn",
+        "lemma": "shuv"
+      },
       {
         "surface": "his face",
         "lemma": "paneh"
@@ -766,6 +978,10 @@
       {
         "surface": "vvv",
         "lemma": "cherpah"
+      },
+      {
+        "surface": "and will turn it back",
+        "lemma": "shuv"
       }
     ],
     "19": [
@@ -788,9 +1004,17 @@
       {
         "surface": "and fall",
         "lemma": "naphal"
+      },
+      {
+        "surface": "and be no more",
+        "lemma": "lo"
       }
     ],
     "20": [
+      {
+        "surface": "In",
+        "lemma": "al"
+      },
       {
         "surface": "his place",
         "lemma": "ken"
@@ -828,6 +1052,10 @@
         "lemma": "shavar"
       },
       {
+        "surface": "though not",
+        "lemma": "lo"
+      },
+      {
         "surface": "in anger",
         "lemma": "aph"
       },
@@ -837,6 +1065,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "In",
+        "lemma": "al"
+      },
       {
         "surface": "his place",
         "lemma": "ken"
@@ -856,6 +1088,22 @@
       {
         "surface": "honors",
         "lemma": "hod"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "be given",
+        "lemma": "natan"
+      },
+      {
+        "surface": "to him",
+        "lemma": "al"
+      },
+      {
+        "surface": "but he will come",
+        "lemma": "bo"
       },
       {
         "surface": "in a time of peace",
@@ -896,6 +1144,10 @@
         "lemma": "shavar"
       },
       {
+        "surface": "along with",
+        "lemma": "gam"
+      },
+      {
         "surface": "a prince",
         "lemma": "nagid"
       },
@@ -906,8 +1158,20 @@
     ],
     "23": [
       {
+        "surface": "After",
+        "lemma": "min"
+      },
+      {
         "surface": "an alliance is made",
         "lemma": "chavar"
+      },
+      {
+        "surface": "with him",
+        "lemma": "el"
+      },
+      {
+        "surface": "he will act",
+        "lemma": "asah"
       },
       {
         "surface": "deceitfully",
@@ -936,12 +1200,40 @@
         "lemma": "shalvah"
       },
       {
+        "surface": "he will invade",
+        "lemma": "bo"
+      },
+      {
         "surface": "the richest",
         "lemma": "sheman"
       },
       {
         "surface": "provinces",
         "lemma": "medinah"
+      },
+      {
+        "surface": "and do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "and forefathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
       },
       {
         "surface": "He will lavish",
@@ -964,8 +1256,20 @@
         "lemma": "chashav"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "the strongholds",
         "lemma": "mivtsar"
+      },
+      {
+        "surface": "but only for",
+        "lemma": "ad"
+      },
+      {
+        "surface": "a time",
+        "lemma": "et"
       }
     ],
     "25": [
@@ -990,6 +1294,10 @@
         "lemma": "levav"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -1006,6 +1314,10 @@
         "lemma": "garah"
       },
       {
+        "surface": "a very",
+        "lemma": "ad"
+      },
+      {
         "surface": "large",
         "lemma": "gadol"
       },
@@ -1018,6 +1330,10 @@
         "lemma": "chayil"
       },
       {
+        "surface": "but will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "withstand",
         "lemma": "amad"
       },
@@ -1028,6 +1344,10 @@
       {
         "surface": "devised",
         "lemma": "chashav"
+      },
+      {
+        "surface": "against him",
+        "lemma": "al"
       }
     ],
     "26": [
@@ -1094,6 +1414,10 @@
         "lemma": "kazav"
       },
       {
+        "surface": "at",
+        "lemma": "al"
+      },
+      {
         "surface": "the same",
         "lemma": "echad"
       },
@@ -1102,8 +1426,16 @@
         "lemma": "shulchan"
       },
       {
+        "surface": "but to no",
+        "lemma": "lo"
+      },
+      {
         "surface": "avail",
         "lemma": "tsalach"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "still",
@@ -1119,6 +1451,10 @@
       }
     ],
     "28": [
+      {
+        "surface": "The king of the North will return",
+        "lemma": "shuv"
+      },
       {
         "surface": "to his land",
         "lemma": "erets"
@@ -1136,12 +1472,24 @@
         "lemma": "levav"
       },
       {
+        "surface": "will be set against",
+        "lemma": "al"
+      },
+      {
         "surface": "the holy",
         "lemma": "qodesh"
       },
       {
         "surface": "covenant",
         "lemma": "berit"
+      },
+      {
+        "surface": "so he will do damage",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and return",
+        "lemma": "shuv"
       },
       {
         "surface": "to his own land",
@@ -1154,8 +1502,24 @@
         "lemma": "moed"
       },
       {
+        "surface": "he will invade",
+        "lemma": "bo"
+      },
+      {
         "surface": "the South",
         "lemma": "negev"
+      },
+      {
+        "surface": "again",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "but this time will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "like the first",
@@ -1172,12 +1536,24 @@
         "lemma": "kitti"
       },
       {
+        "surface": "will come",
+        "lemma": "bo"
+      },
+      {
         "surface": "and he will lose heart",
         "lemma": "kaah"
       },
       {
+        "surface": "Then he will turn back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and rage",
         "lemma": "zaam"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "the holy",
@@ -1188,8 +1564,20 @@
         "lemma": "berit"
       },
       {
+        "surface": "and do damage",
+        "lemma": "asah"
+      },
+      {
+        "surface": "So he will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and show favor",
         "lemma": "bin"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
       },
       {
         "surface": "those who forsake",
@@ -1205,6 +1593,10 @@
       }
     ],
     "31": [
+      {
+        "surface": "His",
+        "lemma": "min"
+      },
       {
         "surface": "forces",
         "lemma": "zeroa"
@@ -1232,6 +1624,10 @@
       {
         "surface": "the daily sacrifice",
         "lemma": "tamid"
+      },
+      {
+        "surface": "and set up",
+        "lemma": "natan"
       },
       {
         "surface": "the abomination",
@@ -1274,6 +1670,10 @@
       {
         "surface": "will firmly",
         "lemma": "chazaq"
+      },
+      {
+        "surface": "resist him",
+        "lemma": "asah"
       }
     ],
     "33": [
@@ -1340,11 +1740,19 @@
         "lemma": "lavah"
       },
       {
+        "surface": "them",
+        "lemma": "al"
+      },
+      {
         "surface": "insincerely",
         "lemma": "chalaqlaqqah"
       }
     ],
     "35": [
+      {
+        "surface": "Some of",
+        "lemma": "min"
+      },
       {
         "surface": "the wise",
         "lemma": "sakhal"
@@ -1366,8 +1774,20 @@
         "lemma": "laven"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
+        "surface": "the time",
+        "lemma": "et"
+      },
+      {
         "surface": "of the end",
         "lemma": "qets"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "it will still",
@@ -1384,6 +1804,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "will do",
+        "lemma": "asah"
+      },
+      {
         "surface": "as he pleases",
         "lemma": "ratson"
       },
@@ -1394,6 +1818,14 @@
       {
         "surface": "and magnify himself",
         "lemma": "gadal"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "god",
@@ -1408,6 +1840,10 @@
         "lemma": "pala"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "the God",
         "lemma": "el"
       },
@@ -1420,6 +1856,10 @@
         "lemma": "tsalach"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "the time of wrath",
         "lemma": "zaam"
       },
@@ -1428,18 +1868,42 @@
         "lemma": "kalah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "what has been decreed",
         "lemma": "charats"
+      },
+      {
+        "surface": "must be accomplished",
+        "lemma": "asah"
       }
     ],
     "37": [
+      {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
       {
         "surface": "He will show no regard",
         "lemma": "bin"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "the gods",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of his fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "nor",
+        "lemma": "al"
       },
       {
         "surface": "for the one desired",
@@ -1450,15 +1914,39 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "nor",
+        "lemma": "al"
+      },
+      {
+        "surface": "for any",
+        "lemma": "kol"
+      },
+      {
         "surface": "other god",
         "lemma": "eloah"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "he will magnify himself",
         "lemma": "gadal"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
+      },
+      {
+        "surface": "them all",
+        "lemma": "kol"
       }
     ],
     "38": [
+      {
+        "surface": "And in",
+        "lemma": "al"
+      },
       {
         "surface": "their place",
         "lemma": "ken"
@@ -1478,6 +1966,14 @@
       {
         "surface": "a god",
         "lemma": "eloah"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
@@ -1506,8 +2002,16 @@
     ],
     "39": [
       {
+        "surface": "He will attack",
+        "lemma": "asah"
+      },
+      {
         "surface": "the strongest fortresses",
         "lemma": "mivtsar"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "the help of a foreign",
@@ -1524,6 +2028,10 @@
       {
         "surface": "honor",
         "lemma": "kavod"
+      },
+      {
+        "surface": "those who",
+        "lemma": "asher"
       },
       {
         "surface": "acknowledge him",
@@ -1551,6 +2059,10 @@
       }
     ],
     "40": [
+      {
+        "surface": "At the time",
+        "lemma": "et"
+      },
       {
         "surface": "of the end",
         "lemma": "qets"
@@ -1580,6 +2092,10 @@
         "lemma": "saar"
       },
       {
+        "surface": "against him",
+        "lemma": "al"
+      },
+      {
         "surface": "with chariots",
         "lemma": "rekhev"
       },
@@ -1596,6 +2112,10 @@
         "lemma": "oniyyah"
       },
       {
+        "surface": "invading",
+        "lemma": "bo"
+      },
+      {
         "surface": "many countries",
         "lemma": "erets"
       },
@@ -1609,6 +2129,10 @@
       }
     ],
     "41": [
+      {
+        "surface": "He will also invade",
+        "lemma": "bo"
+      },
       {
         "surface": "the Beautiful",
         "lemma": "tsevi"
@@ -1624,6 +2148,10 @@
       {
         "surface": "will fall",
         "lemma": "kashal"
+      },
+      {
+        "surface": "But these",
+        "lemma": "elleh"
       },
       {
         "surface": "will be delivered",
@@ -1664,6 +2192,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "and not even",
+        "lemma": "lo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -1692,6 +2224,10 @@
       {
         "surface": "and silver",
         "lemma": "keseph"
+      },
+      {
+        "surface": "and over all",
+        "lemma": "kol"
       },
       {
         "surface": "the riches",
@@ -1730,6 +2266,10 @@
       {
         "surface": "will alarm him",
         "lemma": "bahal"
+      },
+      {
+        "surface": "and he will go out",
+        "lemma": "yatsa"
       },
       {
         "surface": "with great",
@@ -1786,6 +2326,10 @@
         "lemma": "har"
       },
       {
+        "surface": "but he will meet",
+        "lemma": "bo"
+      },
+      {
         "surface": "his end",
         "lemma": "qets"
       },
@@ -1800,8 +2344,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "amad",
-    "rav",
-    "negev"
+    "lo"
   ]
 }

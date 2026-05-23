@@ -54,6 +54,10 @@
         "lemma": "halal"
       },
       {
+        "surface": "above",
+        "lemma": "al"
+      },
+      {
         "surface": "my head",
         "lemma": "rosh"
       },
@@ -72,6 +76,14 @@
     ],
     "4": [
       {
+        "surface": "when",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "vvv",
         "lemma": "yom"
       },
@@ -88,6 +100,10 @@
         "lemma": "eloah"
       },
       {
+        "surface": "rested on",
+        "lemma": "al"
+      },
+      {
         "surface": "my tent",
         "lemma": "ohel"
       }
@@ -100,6 +116,10 @@
       {
         "surface": "was still",
         "lemma": "od"
+      },
+      {
+        "surface": "with me",
+        "lemma": "immad"
       },
       {
         "surface": "and my children",
@@ -132,6 +152,10 @@
         "lemma": "tsuq"
       },
       {
+        "surface": "for me",
+        "lemma": "immad"
+      },
+      {
         "surface": "streams",
         "lemma": "peleg"
       },
@@ -141,6 +165,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "When I went out",
+        "lemma": "yatsa"
+      },
       {
         "surface": "to the city",
         "lemma": "qeret"
@@ -166,6 +194,10 @@
       {
         "surface": "the young men",
         "lemma": "naar"
+      },
+      {
+        "surface": "saw me",
+        "lemma": "raah"
       },
       {
         "surface": "and withdrew",
@@ -238,8 +270,16 @@
     ],
     "11": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "those",
         "lemma": "ozen"
+      },
+      {
+        "surface": "who heard me",
+        "lemma": "shama"
       },
       {
         "surface": "called me blessed",
@@ -250,11 +290,19 @@
         "lemma": "ayin"
       },
       {
+        "surface": "saw me",
+        "lemma": "raah"
+      },
+      {
         "surface": "commended me",
         "lemma": "ud"
       }
     ],
     "12": [
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
       {
         "surface": "I rescued",
         "lemma": "malat"
@@ -270,6 +318,10 @@
       {
         "surface": "and the fatherless",
         "lemma": "yatom"
+      },
+      {
+        "surface": "who had no",
+        "lemma": "lo"
       },
       {
         "surface": "helper",
@@ -326,12 +378,20 @@
     ],
     "15": [
       {
+        "surface": "I served as",
+        "lemma": "hayah"
+      },
+      {
         "surface": "eyes",
         "lemma": "ayin"
       },
       {
         "surface": "to the blind",
         "lemma": "ivver"
+      },
+      {
+        "surface": "and",
+        "lemma": "ani"
       },
       {
         "surface": "as feet",
@@ -344,6 +404,14 @@
     ],
     "16": [
       {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
+        "surface": "was a father",
+        "lemma": "av"
+      },
+      {
         "surface": "to the needy",
         "lemma": "evyon"
       },
@@ -354,6 +422,10 @@
       {
         "surface": "the case",
         "lemma": "riv"
+      },
+      {
+        "surface": "of the stranger",
+        "lemma": "lo"
       }
     ],
     "17": [
@@ -384,8 +456,16 @@
     ],
     "18": [
       {
+        "surface": "So I thought",
+        "lemma": "amar"
+      },
+      {
         "surface": "I will die",
         "lemma": "gava"
+      },
+      {
+        "surface": "in",
+        "lemma": "im"
       },
       {
         "surface": "my nest",
@@ -414,6 +494,10 @@
         "lemma": "patach"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the waters",
         "lemma": "mayim"
       },
@@ -440,6 +524,10 @@
         "lemma": "chadash"
       },
       {
+        "surface": "within me",
+        "lemma": "immad"
+      },
+      {
         "surface": "and my bow",
         "lemma": "qeshet"
       },
@@ -454,12 +542,20 @@
     ],
     "21": [
       {
+        "surface": "Men listened",
+        "lemma": "shama"
+      },
+      {
         "surface": "with expectation",
         "lemma": "yachal"
       },
       {
         "surface": "waiting silently",
         "lemma": "damam"
+      },
+      {
+        "surface": "for",
+        "lemma": "lemo"
       },
       {
         "surface": "my counsel",
@@ -480,12 +576,20 @@
         "lemma": "shanah"
       },
       {
+        "surface": "no more",
+        "lemma": "lo"
+      },
+      {
         "surface": "my speech",
         "lemma": "millah"
       },
       {
         "surface": "settled",
         "lemma": "nataph"
+      },
+      {
+        "surface": "on them like dew",
+        "lemma": "al"
       }
     ],
     "23": [
@@ -512,6 +616,14 @@
         "lemma": "sachaq"
       },
       {
+        "surface": "at them",
+        "lemma": "el"
+      },
+      {
+        "surface": "they did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "believe it",
         "lemma": "aman"
       },
@@ -522,6 +634,10 @@
       {
         "surface": "of my countenance",
         "lemma": "paneh"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "was precious",
@@ -536,6 +652,10 @@
       {
         "surface": "their course",
         "lemma": "derekh"
+      },
+      {
+        "surface": "and presided",
+        "lemma": "yashav"
       },
       {
         "surface": "as chief",
@@ -554,14 +674,18 @@
         "lemma": "gedud"
       },
       {
+        "surface": "as a comforter",
+        "lemma": "asher"
+      },
+      {
         "surface": "of the mourners",
         "lemma": "avel"
       }
     ]
   },
   "themeLemmas": [
-    "yachal",
-    "or",
-    "naar"
+    "lo",
+    "immad",
+    "al"
   ]
 }

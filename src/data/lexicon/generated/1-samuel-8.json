@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "When",
+        "lemma": "asher"
+      },
+      {
         "surface": "Samuel",
         "lemma": "shemuel"
       },
@@ -44,6 +48,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "Joel",
         "lemma": "yoel"
       },
@@ -76,6 +84,10 @@
       {
         "surface": "But his sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
       },
       {
         "surface": "walk",
@@ -116,6 +128,10 @@
     ],
     "4": [
       {
+        "surface": "So all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the elders",
         "lemma": "zaqen"
       },
@@ -126,6 +142,14 @@
       {
         "surface": "gathered together",
         "lemma": "qavats"
+      },
+      {
+        "surface": "and came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Samuel",
@@ -142,12 +166,24 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
         "surface": "are old",
         "lemma": "zaqen"
       },
       {
         "surface": "and your sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
       },
       {
         "surface": "walk",
@@ -174,11 +210,27 @@
         "lemma": "shaphat"
       },
       {
+        "surface": "like all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the other nations",
         "lemma": "goy"
       }
     ],
     "6": [
+      {
+        "surface": "But when",
+        "lemma": "asher"
+      },
+      {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Give",
+        "lemma": "natan"
+      },
       {
         "surface": "a king",
         "lemma": "melekh"
@@ -212,6 +264,10 @@
         "lemma": "palal"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       }
@@ -222,8 +278,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Samuel",
         "lemma": "shemuel"
+      },
+      {
+        "surface": "Listen",
+        "lemma": "shama"
       },
       {
         "surface": "to the voice",
@@ -234,12 +302,48 @@
         "lemma": "am"
       },
       {
-        "surface": "they have rejected",
-        "lemma": "maas"
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "they say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to you",
+        "lemma": "el"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "it is not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "you",
+        "lemma": "et"
       },
       {
         "surface": "they have rejected",
         "lemma": "maas"
+      },
+      {
+        "surface": "but",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they have rejected",
+        "lemma": "maas"
+      },
+      {
+        "surface": "Me",
+        "lemma": "et"
       },
       {
         "surface": "as their king",
@@ -247,6 +351,14 @@
       }
     ],
     "8": [
+      {
+        "surface": "Just as",
+        "lemma": "kol"
+      },
+      {
+        "surface": "they have done",
+        "lemma": "asah"
+      },
       {
         "surface": "from the day",
         "lemma": "yom"
@@ -258,6 +370,14 @@
       {
         "surface": "out of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
       },
       {
         "surface": "day",
@@ -282,12 +402,24 @@
       {
         "surface": "so",
         "lemma": "ken"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "are doing",
+        "lemma": "asah"
       }
     ],
     "9": [
       {
         "surface": "Now",
         "lemma": "attah"
+      },
+      {
+        "surface": "listen to",
+        "lemma": "shama"
       },
       {
         "surface": "their voice",
@@ -314,8 +446,16 @@
         "lemma": "melekh"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "will reign",
         "lemma": "malakh"
+      },
+      {
+        "surface": "over them",
+        "lemma": "al"
       }
     ],
     "10": [
@@ -324,12 +464,24 @@
         "lemma": "shemuel"
       },
       {
+        "surface": "spoke",
+        "lemma": "amar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the words",
         "lemma": "davar"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the people",
@@ -346,6 +498,18 @@
     ],
     "11": [
       {
+        "surface": "He said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the manner",
         "lemma": "mishpat"
       },
@@ -354,8 +518,16 @@
         "lemma": "melekh"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "will reign",
         "lemma": "malakh"
+      },
+      {
+        "surface": "over you",
+        "lemma": "al"
       },
       {
         "surface": "He will take",
@@ -428,6 +600,10 @@
         "lemma": "qatsir"
       },
       {
+        "surface": "and to make",
+        "lemma": "asah"
+      },
+      {
         "surface": "his weapons",
         "lemma": "keli"
       },
@@ -445,6 +621,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "And",
+        "lemma": "et"
+      },
       {
         "surface": "he will take",
         "lemma": "laqach"
@@ -480,12 +660,20 @@
         "lemma": "saday"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "vineyards",
         "lemma": "kerem"
       },
       {
         "surface": "and olive groves",
         "lemma": "zayit"
+      },
+      {
+        "surface": "and give them",
+        "lemma": "natan"
       },
       {
         "surface": "to his servants",
@@ -506,6 +694,10 @@
         "lemma": "kerem"
       },
       {
+        "surface": "and give it",
+        "lemma": "natan"
+      },
+      {
         "surface": "to his officials",
         "lemma": "saris"
       },
@@ -516,6 +708,10 @@
     ],
     "16": [
       {
+        "surface": "And",
+        "lemma": "et"
+      },
+      {
         "surface": "he will take",
         "lemma": "laqach"
       },
@@ -524,8 +720,16 @@
         "lemma": "eved"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "maidservants",
         "lemma": "shiphchah"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "your best",
@@ -538,6 +742,10 @@
       {
         "surface": "and donkeys",
         "lemma": "chamor"
+      },
+      {
+        "surface": "and put them",
+        "lemma": "asah"
       },
       {
         "surface": "to his own use",
@@ -554,11 +762,23 @@
         "lemma": "tson"
       },
       {
+        "surface": "and you yourselves",
+        "lemma": "attah"
+      },
+      {
+        "surface": "will become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "slaves",
         "lemma": "eved"
       }
     ],
     "18": [
+      {
+        "surface": "When that",
+        "lemma": "hu"
+      },
       {
         "surface": "day comes",
         "lemma": "yom"
@@ -584,8 +804,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "answer you",
         "lemma": "un"
+      },
+      {
+        "surface": "on that",
+        "lemma": "hu"
       },
       {
         "surface": "day",
@@ -602,15 +830,47 @@
         "lemma": "maen"
       },
       {
+        "surface": "to listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "to Samuel",
         "lemma": "shemuel"
       },
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "We must have",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "over us",
+        "lemma": "al"
       }
     ],
     "20": [
+      {
+        "surface": "Then we will",
+        "lemma": "anachnu"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "like all",
+        "lemma": "kol"
+      },
       {
         "surface": "the other nations",
         "lemma": "goy"
@@ -622,6 +882,10 @@
       {
         "surface": "to judge us",
         "lemma": "shaphat"
+      },
+      {
+        "surface": "to go out",
+        "lemma": "yatsa"
       },
       {
         "surface": "before us",
@@ -640,6 +904,14 @@
       {
         "surface": "Samuel",
         "lemma": "shemuel"
+      },
+      {
+        "surface": "listened",
+        "lemma": "shama"
+      },
+      {
+        "surface": "to all",
+        "lemma": "kol"
       },
       {
         "surface": "the words",
@@ -664,12 +936,24 @@
     ],
     "22": [
       {
+        "surface": "Listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "to their voice",
         "lemma": "qol"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Samuel",
@@ -686,6 +970,10 @@
       {
         "surface": "Then Samuel",
         "lemma": "shemuel"
+      },
+      {
+        "surface": "told",
+        "lemma": "amar"
       },
       {
         "surface": "the men",
@@ -711,7 +999,7 @@
   },
   "themeLemmas": [
     "shemuel",
-    "shaphat",
-    "laqach"
+    "amar",
+    "kol"
   ]
 }

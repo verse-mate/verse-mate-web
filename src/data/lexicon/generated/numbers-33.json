@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the journeys",
         "lemma": "massa"
       },
@@ -16,6 +20,14 @@
       {
         "surface": "of the Israelites",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "when",
+        "lemma": "asher"
+      },
+      {
+        "surface": "they came out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of the land",
@@ -44,6 +56,10 @@
     ],
     "2": [
       {
+        "surface": "At",
+        "lemma": "al"
+      },
+      {
         "surface": "the LORD’s",
         "lemma": "yehovah"
       },
@@ -66,6 +82,10 @@
       {
         "surface": "of their journey",
         "lemma": "massa"
+      },
+      {
+        "surface": "These",
+        "lemma": "elleh"
       },
       {
         "surface": "are the stages",
@@ -118,12 +138,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "marched out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "defiantly",
         "lemma": "yad"
       },
       {
         "surface": "in full view",
         "lemma": "ayin"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the Egyptians",
@@ -140,6 +168,10 @@
         "lemma": "qavar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "their firstborn",
         "lemma": "bekhor"
       },
@@ -154,6 +186,10 @@
       {
         "surface": "for the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "had executed",
+        "lemma": "asah"
       },
       {
         "surface": "judgment",
@@ -222,12 +258,24 @@
         "lemma": "etam"
       },
       {
+        "surface": "and turned back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "vvv",
         "lemma": "pihachirot"
       },
       {
         "surface": "Pi-hahiroth",
         "lemma": "pihachirot"
+      },
+      {
+        "surface": "opposite",
+        "lemma": "al"
       },
       {
         "surface": "vvv",
@@ -310,6 +358,10 @@
         "lemma": "marah"
       },
       {
+        "surface": "and came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Elim",
         "lemma": "elim"
       },
@@ -350,6 +402,10 @@
       {
         "surface": "and camped",
         "lemma": "chanah"
+      },
+      {
+        "surface": "by",
+        "lemma": "al"
       },
       {
         "surface": "the Red",
@@ -446,6 +502,14 @@
       {
         "surface": "where",
         "lemma": "sham"
+      },
+      {
+        "surface": "there was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "water",
@@ -956,6 +1020,10 @@
     ],
     "38": [
       {
+        "surface": "At",
+        "lemma": "al"
+      },
+      {
         "surface": "the LORD’s",
         "lemma": "yehovah"
       },
@@ -1016,6 +1084,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "had come out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "of the land",
         "lemma": "erets"
       },
@@ -1064,6 +1136,10 @@
         "lemma": "arad"
       },
       {
+        "surface": "who lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the Negev",
         "lemma": "negev"
       },
@@ -1076,8 +1152,16 @@
         "lemma": "kenaan"
       },
       {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "that the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "were coming",
+        "lemma": "bo"
       }
     ],
     "41": [
@@ -1268,6 +1352,10 @@
         "lemma": "moav"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the Jordan",
         "lemma": "yarden"
       },
@@ -1290,6 +1378,10 @@
         "lemma": "chanah"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the Jordan",
         "lemma": "yarden"
       },
@@ -1300,6 +1392,10 @@
       {
         "surface": "from Beth-jeshimoth",
         "lemma": "bethayshimot"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "vvv",
@@ -1320,6 +1416,10 @@
         "lemma": "moav"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the Jordan",
         "lemma": "yarden"
       },
@@ -1336,6 +1436,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -1346,8 +1450,28 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "and tell",
+        "lemma": "amar"
+      },
+      {
+        "surface": "them",
+        "lemma": "el"
+      },
+      {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
       },
       {
         "surface": "cross",
@@ -1356,6 +1480,10 @@
       {
         "surface": "the Jordan",
         "lemma": "yarden"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
       },
       {
         "surface": "the land",
@@ -1376,12 +1504,24 @@
         "lemma": "paneh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "the inhabitants",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of the land",
         "lemma": "erets"
       },
       {
         "surface": "destroy",
         "lemma": "avad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "their carved images",
@@ -1396,8 +1536,16 @@
         "lemma": "tselem"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "demolish",
         "lemma": "shamad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "their high places",
@@ -1412,6 +1560,18 @@
       {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "and settle",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I have given",
+        "lemma": "natan"
       },
       {
         "surface": "the land",
@@ -1464,8 +1624,20 @@
         "lemma": "meat"
       },
       {
+        "surface": "Whatever",
+        "lemma": "asher"
+      },
+      {
+        "surface": "falls",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "by lot",
         "lemma": "goral"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "You will receive an inheritance",
@@ -1474,12 +1646,28 @@
       {
         "surface": "according to the tribes",
         "lemma": "matteh"
+      },
+      {
+        "surface": "of your fathers",
+        "lemma": "av"
       }
     ],
     "55": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "drive out",
         "lemma": "yarash"
+      },
+      {
+        "surface": "the inhabitants",
+        "lemma": "yashav"
       },
       {
         "surface": "of the land",
@@ -1490,8 +1678,16 @@
         "lemma": "paneh"
       },
       {
+        "surface": "those",
+        "lemma": "asher"
+      },
+      {
         "surface": "you allow to remain",
         "lemma": "yatar"
+      },
+      {
+        "surface": "will become",
+        "lemma": "hayah"
       },
       {
         "surface": "barbs",
@@ -1514,20 +1710,52 @@
         "lemma": "tsarar"
       },
       {
+        "surface": "you in",
+        "lemma": "al"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "where",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "settle",
+        "lemma": "yashav"
       }
     ],
     "56": [
       {
+        "surface": "And then",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "I will do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
+      },
+      {
         "surface": "I had planned",
         "lemma": "damah"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
       }
     ]
   },
   "themeLemmas": [
     "nasa",
     "chanah",
-    "midbar"
+    "al"
   ]
 }

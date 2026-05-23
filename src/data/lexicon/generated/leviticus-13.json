@@ -14,6 +14,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -24,16 +28,32 @@
     ],
     "2": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "someone",
         "lemma": "adam"
+      },
+      {
+        "surface": "has",
+        "lemma": "hayah"
       },
       {
         "surface": "a swelling",
         "lemma": "seet"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "rash",
         "lemma": "sappachat"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "bright spot",
@@ -42,6 +62,10 @@
       {
         "surface": "on his skin",
         "lemma": "or"
+      },
+      {
+        "surface": "that may be",
+        "lemma": "hayah"
       },
       {
         "surface": "an infectious",
@@ -56,12 +80,28 @@
         "lemma": "nega"
       },
       {
+        "surface": "he must be brought",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Aaron",
         "lemma": "aharon"
       },
       {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "one",
@@ -80,6 +120,10 @@
       {
         "surface": "The priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "is to examine",
+        "lemma": "raah"
       },
       {
         "surface": "the infection",
@@ -122,6 +166,10 @@
         "lemma": "or"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a skin disease",
         "lemma": "tsaraat"
       },
@@ -130,11 +178,19 @@
         "lemma": "kohen"
       },
       {
+        "surface": "examines him",
+        "lemma": "raah"
+      },
+      {
         "surface": "he must pronounce him unclean",
         "lemma": "tame"
       }
     ],
     "4": [
+      {
+        "surface": "If, however",
+        "lemma": "im"
+      },
       {
         "surface": "the spot",
         "lemma": "boheret"
@@ -160,12 +216,20 @@
         "lemma": "amoq"
       },
       {
+        "surface": "than",
+        "lemma": "min"
+      },
+      {
         "surface": "the skin",
         "lemma": "or"
       },
       {
         "surface": "and the hair in it",
         "lemma": "sear"
+      },
+      {
+        "surface": "has not",
+        "lemma": "lo"
       },
       {
         "surface": "turned",
@@ -210,6 +274,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "is to reexamine him",
+        "lemma": "raah"
+      },
+      {
         "surface": "and if",
         "lemma": "hinneh"
       },
@@ -224,6 +292,10 @@
       {
         "surface": "is unchanged",
         "lemma": "amad"
+      },
+      {
+        "surface": "and has not",
+        "lemma": "lo"
       },
       {
         "surface": "spread",
@@ -260,6 +332,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "will examine him",
+        "lemma": "raah"
+      },
+      {
         "surface": "again",
         "lemma": "sheni"
       },
@@ -284,6 +360,10 @@
         "lemma": "kahah"
       },
       {
+        "surface": "and has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "spread",
         "lemma": "pasah"
       },
@@ -298,6 +378,10 @@
       {
         "surface": "shall pronounce him clean",
         "lemma": "taher"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
       },
       {
         "surface": "is a rash",
@@ -318,6 +402,10 @@
     ],
     "7": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "the rash",
         "lemma": "mispachat"
       },
@@ -334,6 +422,14 @@
         "lemma": "achar"
       },
       {
+        "surface": "he has shown himself",
+        "lemma": "raah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
       },
@@ -342,8 +438,16 @@
         "lemma": "tohorah"
       },
       {
+        "surface": "he must present himself",
+        "lemma": "raah"
+      },
+      {
         "surface": "again",
         "lemma": "sheni"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the priest",
@@ -354,6 +458,10 @@
       {
         "surface": "The priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "will reexamine him",
+        "lemma": "raah"
       },
       {
         "surface": "and if",
@@ -380,18 +488,38 @@
         "lemma": "tame"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a skin disease",
         "lemma": "tsaraat"
       }
     ],
     "9": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "anyone",
         "lemma": "adam"
       },
       {
+        "surface": "develops",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a skin disease",
         "lemma": "nega"
+      },
+      {
+        "surface": "he must be brought",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the priest",
@@ -402,6 +530,10 @@
       {
         "surface": "The priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "will examine him",
+        "lemma": "raah"
       },
       {
         "surface": "and if",
@@ -418,6 +550,10 @@
       {
         "surface": "on the skin",
         "lemma": "or"
+      },
+      {
+        "surface": "that",
+        "lemma": "hu"
       },
       {
         "surface": "has turned",
@@ -446,6 +582,10 @@
     ],
     "11": [
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a chronic",
         "lemma": "yashen"
       },
@@ -462,8 +602,20 @@
         "lemma": "tame"
       },
       {
+        "surface": "He need not",
+        "lemma": "lo"
+      },
+      {
         "surface": "isolate him",
         "lemma": "sagar"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "he",
+        "lemma": "hu"
       },
       {
         "surface": "is unclean",
@@ -471,6 +623,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "the skin disease",
         "lemma": "tsaraat"
@@ -492,6 +648,10 @@
         "lemma": "kasah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the skin",
         "lemma": "or"
       },
@@ -502,6 +662,10 @@
       {
         "surface": "from head",
         "lemma": "rosh"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "foot",
@@ -522,6 +686,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "shall examine him",
+        "lemma": "raah"
+      },
+      {
         "surface": "and if",
         "lemma": "hinneh"
       },
@@ -532,6 +700,10 @@
       {
         "surface": "has covered",
         "lemma": "kasah"
+      },
+      {
+        "surface": "his entire",
+        "lemma": "kol"
       },
       {
         "surface": "body",
@@ -554,6 +726,10 @@
         "lemma": "lavan"
       },
       {
+        "surface": "he",
+        "lemma": "hu"
+      },
+      {
         "surface": "is clean",
         "lemma": "tahor"
       }
@@ -572,6 +748,10 @@
         "lemma": "basar"
       },
       {
+        "surface": "appears",
+        "lemma": "raah"
+      },
+      {
         "surface": "he will be unclean",
         "lemma": "tame"
       }
@@ -580,6 +760,10 @@
       {
         "surface": "When the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "sees",
+        "lemma": "raah"
       },
       {
         "surface": "the raw",
@@ -606,11 +790,23 @@
         "lemma": "tame"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a skin disease",
         "lemma": "tsaraat"
       }
     ],
     "16": [
+      {
+        "surface": "But",
+        "lemma": "o"
+      },
+      {
+        "surface": "if",
+        "lemma": "ki"
+      },
       {
         "surface": "the raw",
         "lemma": "chay"
@@ -618,6 +814,10 @@
       {
         "surface": "flesh",
         "lemma": "basar"
+      },
+      {
+        "surface": "changes",
+        "lemma": "shuv"
       },
       {
         "surface": "and turns",
@@ -628,6 +828,14 @@
         "lemma": "lavan"
       },
       {
+        "surface": "he must go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
       }
@@ -636,6 +844,10 @@
       {
         "surface": "The priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "will reexamine him",
+        "lemma": "raah"
       },
       {
         "surface": "and if",
@@ -666,14 +878,26 @@
         "lemma": "taher"
       },
       {
+        "surface": "then he",
+        "lemma": "hu"
+      },
+      {
         "surface": "is clean",
         "lemma": "tahor"
       }
     ],
     "18": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "a boil",
         "lemma": "shechin"
+      },
+      {
+        "surface": "appears",
+        "lemma": "hayah"
       },
       {
         "surface": "on someone’s skin",
@@ -694,12 +918,20 @@
         "lemma": "seet"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "a reddish-white",
         "lemma": "lavan"
       },
       {
         "surface": "spot",
         "lemma": "boheret"
+      },
+      {
+        "surface": "develops",
+        "lemma": "hayah"
       },
       {
         "surface": "where",
@@ -710,6 +942,14 @@
         "lemma": "shechin"
       },
       {
+        "surface": "he must present himself",
+        "lemma": "raah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
       }
@@ -718,6 +958,10 @@
       {
         "surface": "The priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "shall examine it",
+        "lemma": "raah"
       },
       {
         "surface": "and if",
@@ -756,6 +1000,10 @@
         "lemma": "tame"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a diseased infection",
         "lemma": "tsaraat"
       },
@@ -770,8 +1018,16 @@
     ],
     "21": [
       {
+        "surface": "But when",
+        "lemma": "im"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "examines it",
+        "lemma": "raah"
       },
       {
         "surface": "if",
@@ -824,6 +1080,10 @@
     ],
     "22": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "it spreads any further",
         "lemma": "pasah"
       },
@@ -840,11 +1100,19 @@
         "lemma": "tame"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is an infection",
         "lemma": "nega"
       }
     ],
     "23": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "the spot",
         "lemma": "boheret"
@@ -858,8 +1126,16 @@
         "lemma": "tachat"
       },
       {
+        "surface": "and does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "spread",
         "lemma": "pasah"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
       },
       {
         "surface": "is only the scar",
@@ -880,6 +1156,14 @@
     ],
     "24": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
+        "surface": "there is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a burn",
         "lemma": "mikhvah"
       },
@@ -896,8 +1180,16 @@
         "lemma": "mikhvah"
       },
       {
+        "surface": "becomes",
+        "lemma": "hayah"
+      },
+      {
         "surface": "reddish-white",
         "lemma": "lavan"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "white",
@@ -908,6 +1200,10 @@
       {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "must examine it",
+        "lemma": "raah"
       },
       {
         "surface": "If",
@@ -938,8 +1234,16 @@
         "lemma": "amoq"
       },
       {
+        "surface": "than",
+        "lemma": "min"
+      },
+      {
         "surface": "the skin",
         "lemma": "or"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
       },
       {
         "surface": "is a disease",
@@ -962,14 +1266,26 @@
         "lemma": "tame"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a diseased infection",
         "lemma": "tsaraat"
       }
     ],
     "26": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "examines it",
+        "lemma": "raah"
       },
       {
         "surface": "and there is",
@@ -1038,6 +1354,14 @@
         "lemma": "kohen"
       },
       {
+        "surface": "is to reexamine him",
+        "lemma": "raah"
+      },
+      {
+        "surface": "and if",
+        "lemma": "im"
+      },
+      {
         "surface": "it has spread further",
         "lemma": "pasah"
       },
@@ -1054,11 +1378,19 @@
         "lemma": "tame"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a diseased infection",
         "lemma": "tsaraat"
       }
     ],
     "28": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "the spot",
         "lemma": "boheret"
@@ -1066,6 +1398,10 @@
       {
         "surface": "is unchanged",
         "lemma": "amad"
+      },
+      {
+        "surface": "and has not",
+        "lemma": "lo"
       },
       {
         "surface": "spread",
@@ -1078,6 +1414,10 @@
       {
         "surface": "but has faded",
         "lemma": "keheh"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
       },
       {
         "surface": "is a swelling",
@@ -1096,6 +1436,14 @@
         "lemma": "taher"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is only the scar",
         "lemma": "tsatav"
       },
@@ -1106,12 +1454,24 @@
     ],
     "29": [
       {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "has",
+        "lemma": "hayah"
       },
       {
         "surface": "an infection",
@@ -1122,6 +1482,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "chin",
         "lemma": "zaqan"
       }
@@ -1130,6 +1494,10 @@
       {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "shall examine",
+        "lemma": "raah"
       },
       {
         "surface": "the infection",
@@ -1146,6 +1514,10 @@
       {
         "surface": "to be deeper",
         "lemma": "amoq"
+      },
+      {
+        "surface": "than",
+        "lemma": "min"
       },
       {
         "surface": "the skin",
@@ -1172,6 +1544,10 @@
         "lemma": "tame"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a scaly outbreak",
         "lemma": "neteq"
       },
@@ -1184,14 +1560,26 @@
         "lemma": "rosh"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "chin",
         "lemma": "zaqan"
       }
     ],
     "31": [
       {
+        "surface": "But if",
+        "lemma": "ki"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "examines",
+        "lemma": "raah"
       },
       {
         "surface": "the scaly",
@@ -1216,6 +1604,10 @@
       {
         "surface": "to be deeper",
         "lemma": "amoq"
+      },
+      {
+        "surface": "than",
+        "lemma": "min"
       },
       {
         "surface": "the skin",
@@ -1268,6 +1660,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "is to reexamine",
+        "lemma": "raah"
+      },
+      {
         "surface": "the infection",
         "lemma": "nega"
       },
@@ -1280,8 +1676,20 @@
         "lemma": "neteq"
       },
       {
+        "surface": "has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "spread",
         "lemma": "pasah"
+      },
+      {
+        "surface": "and there is",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
       },
       {
         "surface": "yellow",
@@ -1308,6 +1716,10 @@
         "lemma": "amoq"
       },
       {
+        "surface": "than",
+        "lemma": "min"
+      },
+      {
         "surface": "the skin",
         "lemma": "or"
       }
@@ -1316,6 +1728,10 @@
       {
         "surface": "then the person must shave himself",
         "lemma": "galach"
+      },
+      {
+        "surface": "except for",
+        "lemma": "et"
       },
       {
         "surface": "the scaly area",
@@ -1360,6 +1776,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "shall examine",
+        "lemma": "raah"
+      },
+      {
         "surface": "the scaly outbreak",
         "lemma": "neteq"
       },
@@ -1370,6 +1790,10 @@
       {
         "surface": "it",
         "lemma": "neteq"
+      },
+      {
+        "surface": "has not",
+        "lemma": "lo"
       },
       {
         "surface": "spread",
@@ -1390,6 +1814,10 @@
       {
         "surface": "deeper",
         "lemma": "amoq"
+      },
+      {
+        "surface": "than",
+        "lemma": "min"
       },
       {
         "surface": "the skin",
@@ -1418,6 +1846,10 @@
     ],
     "35": [
       {
+        "surface": "If, however",
+        "lemma": "im"
+      },
+      {
         "surface": "the scaly outbreak",
         "lemma": "neteq"
       },
@@ -1444,6 +1876,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "is to examine him",
+        "lemma": "raah"
+      },
+      {
         "surface": "and if",
         "lemma": "hinneh"
       },
@@ -1464,6 +1900,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "need not",
+        "lemma": "lo"
+      },
+      {
         "surface": "look for",
         "lemma": "baqar"
       },
@@ -1476,11 +1916,19 @@
         "lemma": "sear"
       },
       {
+        "surface": "the person",
+        "lemma": "hu"
+      },
+      {
         "surface": "is unclean",
         "lemma": "tame"
       }
     ],
     "37": [
+      {
+        "surface": "If, however",
+        "lemma": "im"
+      },
       {
         "surface": "in his sight",
         "lemma": "ayin"
@@ -1514,6 +1962,10 @@
         "lemma": "rapah"
       },
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "is clean",
         "lemma": "tahor"
       },
@@ -1528,8 +1980,16 @@
     ],
     "38": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "a woman",
@@ -1554,6 +2014,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "shall examine them",
+        "lemma": "raah"
+      },
+      {
         "surface": "and if",
         "lemma": "hinneh"
       },
@@ -1570,6 +2034,10 @@
         "lemma": "lavan"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a harmless rash",
         "lemma": "bohaq"
       },
@@ -1582,11 +2050,19 @@
         "lemma": "or"
       },
       {
+        "surface": "the person",
+        "lemma": "hu"
+      },
+      {
         "surface": "is clean",
         "lemma": "tahor"
       }
     ],
     "40": [
+      {
+        "surface": "Now if",
+        "lemma": "ki"
+      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -1600,11 +2076,19 @@
         "lemma": "qereach"
       },
       {
+        "surface": "he is still",
+        "lemma": "hu"
+      },
+      {
         "surface": "clean",
         "lemma": "tahor"
       }
     ],
     "41": [
+      {
+        "surface": "Or if",
+        "lemma": "im"
+      },
       {
         "surface": "his hairline",
         "lemma": "peah"
@@ -1614,8 +2098,16 @@
         "lemma": "marat"
       },
       {
+        "surface": "and he",
+        "lemma": "hu"
+      },
+      {
         "surface": "is bald on his forehead",
         "lemma": "gibbeach"
+      },
+      {
+        "surface": "he is still",
+        "lemma": "hu"
       },
       {
         "surface": "clean",
@@ -1623,6 +2115,14 @@
       }
     ],
     "42": [
+      {
+        "surface": "But if",
+        "lemma": "ki"
+      },
+      {
+        "surface": "there is",
+        "lemma": "hayah"
+      },
       {
         "surface": "a reddish-white",
         "lemma": "lavan"
@@ -1636,8 +2136,16 @@
         "lemma": "qarachat"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "forehead",
         "lemma": "gabbachat"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
       },
       {
         "surface": "is an infectious disease",
@@ -1658,6 +2166,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "is to examine him",
+        "lemma": "raah"
+      },
+      {
         "surface": "and if",
         "lemma": "hinneh"
       },
@@ -1672,6 +2184,10 @@
       {
         "surface": "on his bald head",
         "lemma": "qarachat"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "forehead",
@@ -1702,6 +2218,10 @@
       {
         "surface": "is diseased",
         "lemma": "tsara"
+      },
+      {
+        "surface": "he",
+        "lemma": "hu"
       },
       {
         "surface": "is unclean",
@@ -1750,6 +2270,10 @@
         "lemma": "sapham"
       },
       {
+        "surface": "and cry out",
+        "lemma": "qara"
+      },
+      {
         "surface": "Unclean",
         "lemma": "tame"
       },
@@ -1759,6 +2283,10 @@
       }
     ],
     "46": [
+      {
+        "surface": "As",
+        "lemma": "kol"
+      },
       {
         "surface": "long as",
         "lemma": "yom"
@@ -1776,6 +2304,10 @@
         "lemma": "tame"
       },
       {
+        "surface": "He must live alone",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in a place",
         "lemma": "moshav"
       },
@@ -1790,8 +2322,16 @@
     ],
     "47": [
       {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "any fabric",
         "lemma": "beged"
+      },
+      {
+        "surface": "is",
+        "lemma": "hayah"
       },
       {
         "surface": "contaminated",
@@ -1804,6 +2344,10 @@
       {
         "surface": "any wool",
         "lemma": "tsemer"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "linen",
@@ -1820,6 +2364,10 @@
         "lemma": "sheti"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "knit",
         "lemma": "erev"
       },
@@ -1830,6 +2378,10 @@
       {
         "surface": "or wool",
         "lemma": "tsemer"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "any article of leather",
@@ -1858,6 +2410,10 @@
         "lemma": "erev"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "leather",
         "lemma": "or"
       },
@@ -1866,12 +2422,24 @@
         "lemma": "keli"
       },
       {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "green",
         "lemma": "yeraqraq"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "red",
         "lemma": "adamdam"
+      },
+      {
+        "surface": "then it is",
+        "lemma": "hu"
       },
       {
         "surface": "contaminated",
@@ -1882,6 +2450,10 @@
         "lemma": "tsaraat"
       },
       {
+        "surface": "and must be shown",
+        "lemma": "raah"
+      },
+      {
         "surface": "to the priest",
         "lemma": "kohen"
       }
@@ -1890,6 +2462,10 @@
       {
         "surface": "And the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "is to examine",
+        "lemma": "raah"
       },
       {
         "surface": "the mildew",
@@ -1922,6 +2498,18 @@
         "lemma": "yom"
       },
       {
+        "surface": "the priest shall reexamine",
+        "lemma": "raah"
+      },
+      {
+        "surface": "it",
+        "lemma": "et"
+      },
+      {
+        "surface": "and if",
+        "lemma": "ki"
+      },
+      {
         "surface": "the mildew",
         "lemma": "nega"
       },
@@ -1942,12 +2530,28 @@
         "lemma": "erev"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "leather",
         "lemma": "or"
       },
       {
+        "surface": "then regardless of",
+        "lemma": "kol"
+      },
+      {
+        "surface": "how",
+        "lemma": "asher"
+      },
+      {
         "surface": "it",
         "lemma": "or"
+      },
+      {
+        "surface": "is used",
+        "lemma": "asah"
       },
       {
         "surface": "it",
@@ -1960,6 +2564,10 @@
       {
         "surface": "mildew",
         "lemma": "tsaraat"
+      },
+      {
+        "surface": "the article",
+        "lemma": "hu"
       },
       {
         "surface": "is unclean",
@@ -1980,8 +2588,24 @@
         "lemma": "sheti"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "knit",
         "lemma": "erev"
+      },
+      {
+        "surface": "whether",
+        "lemma": "o"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "asher"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "hayah"
       },
       {
         "surface": "the contaminated item is",
@@ -1996,8 +2620,16 @@
         "lemma": "pishteh"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "leather",
         "lemma": "or"
+      },
+      {
+        "surface": "Since",
+        "lemma": "ki"
       },
       {
         "surface": "the mildew",
@@ -2008,14 +2640,26 @@
         "lemma": "maar"
       },
       {
+        "surface": "the article",
+        "lemma": "hu"
+      },
+      {
         "surface": "must be burned up",
         "lemma": "esh"
       }
     ],
     "53": [
       {
+        "surface": "But when",
+        "lemma": "im"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "reexamines it",
+        "lemma": "raah"
       },
       {
         "surface": "if",
@@ -2024,6 +2668,10 @@
       {
         "surface": "the mildew",
         "lemma": "nega"
+      },
+      {
+        "surface": "has not",
+        "lemma": "lo"
       },
       {
         "surface": "spread",
@@ -2042,6 +2690,10 @@
         "lemma": "erev"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "leather",
         "lemma": "or"
       },
@@ -2058,6 +2710,10 @@
       {
         "surface": "is to order",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "the",
+        "lemma": "asher"
       },
       {
         "surface": "contaminated article",
@@ -2098,6 +2754,10 @@
         "lemma": "kohen"
       },
       {
+        "surface": "is to reexamine it",
+        "lemma": "raah"
+      },
+      {
         "surface": "and if",
         "lemma": "hinneh"
       },
@@ -2110,12 +2770,20 @@
         "lemma": "nega"
       },
       {
+        "surface": "has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "changed",
         "lemma": "haphakh"
       },
       {
         "surface": "in appearance",
         "lemma": "ayin"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
       },
       {
         "surface": "is unclean",
@@ -2126,12 +2794,20 @@
         "lemma": "nega"
       },
       {
+        "surface": "has not",
+        "lemma": "lo"
+      },
+      {
         "surface": "spread",
         "lemma": "pasah"
       },
       {
         "surface": "you must burn it",
         "lemma": "saraph"
+      },
+      {
+        "surface": "whether",
+        "lemma": "hu"
       },
       {
         "surface": "the rot is",
@@ -2142,14 +2818,26 @@
         "lemma": "gabbachat"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "back",
         "lemma": "qarachat"
       }
     ],
     "56": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "examines it",
+        "lemma": "raah"
       },
       {
         "surface": "and the mildew",
@@ -2168,6 +2856,14 @@
         "lemma": "kavas"
       },
       {
+        "surface": "he must cut the contaminated section out",
+        "lemma": "qara"
+      },
+      {
+        "surface": "of",
+        "lemma": "min"
+      },
+      {
         "surface": "the fabric",
         "lemma": "beged"
       },
@@ -2180,11 +2876,23 @@
         "lemma": "sheti"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "knit",
         "lemma": "erev"
       }
     ],
     "57": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "it reappears",
+        "lemma": "raah"
+      },
       {
         "surface": "in the fabric",
         "lemma": "beged"
@@ -2194,8 +2902,20 @@
         "lemma": "sheti"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "knit",
         "lemma": "erev"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
+        "surface": "on any",
+        "lemma": "kol"
       },
       {
         "surface": "leather",
@@ -2204,6 +2924,10 @@
       {
         "surface": "article",
         "lemma": "keli"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
       },
       {
         "surface": "is spreading",
@@ -2216,6 +2940,10 @@
       {
         "surface": "the contaminated",
         "lemma": "nega"
+      },
+      {
+        "surface": "article",
+        "lemma": "asher"
       }
     ],
     "58": [
@@ -2236,8 +2964,20 @@
         "lemma": "sheti"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "knit",
         "lemma": "erev"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "leather",
@@ -2246,6 +2986,10 @@
       {
         "surface": "article",
         "lemma": "keli"
+      },
+      {
+        "surface": "after",
+        "lemma": "asher"
       },
       {
         "surface": "washing",
@@ -2266,6 +3010,10 @@
     ],
     "59": [
       {
+        "surface": "This",
+        "lemma": "zot"
+      },
+      {
         "surface": "is the law",
         "lemma": "torah"
       },
@@ -2282,6 +3030,10 @@
         "lemma": "tsemer"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "linen",
         "lemma": "pishteh"
       },
@@ -2294,8 +3046,20 @@
         "lemma": "sheti"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "knit",
         "lemma": "erev"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "leather",
@@ -2308,6 +3072,10 @@
       {
         "surface": "for pronouncing it clean",
         "lemma": "taher"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "unclean",

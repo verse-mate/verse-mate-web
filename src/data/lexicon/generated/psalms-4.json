@@ -26,6 +26,10 @@
         "lemma": "un"
       },
       {
+        "surface": "when I call",
+        "lemma": "qara"
+      },
+      {
         "surface": "O God",
         "lemma": "elohim"
       },
@@ -46,11 +50,19 @@
         "lemma": "chanan"
       },
       {
+        "surface": "and hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "my prayer",
         "lemma": "tephillah"
       }
     ],
     "2": [
+      {
+        "surface": "How long",
+        "lemma": "ad"
+      },
       {
         "surface": "O men",
         "lemma": "ben"
@@ -90,6 +102,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -104,6 +120,18 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "hears",
+        "lemma": "shama"
+      },
+      {
+        "surface": "when I call",
+        "lemma": "qara"
+      },
+      {
+        "surface": "to Him",
+        "lemma": "el"
       }
     ],
     "4": [
@@ -112,12 +140,24 @@
         "lemma": "ragaz"
       },
       {
+        "surface": "yet do not",
+        "lemma": "al"
+      },
+      {
         "surface": "sin",
         "lemma": "chata"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "your bed",
         "lemma": "mishkav"
+      },
+      {
+        "surface": "search",
+        "lemma": "amar"
       },
       {
         "surface": "your heart",
@@ -150,6 +190,10 @@
         "lemma": "batach"
       },
       {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       }
@@ -160,8 +204,16 @@
         "lemma": "rav"
       },
       {
+        "surface": "ask",
+        "lemma": "amar"
+      },
+      {
         "surface": "Who",
         "lemma": "mi"
+      },
+      {
+        "surface": "can show us",
+        "lemma": "raah"
       },
       {
         "surface": "the good",
@@ -180,11 +232,19 @@
         "lemma": "paneh"
       },
       {
+        "surface": "upon us",
+        "lemma": "al"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       }
     ],
     "7": [
+      {
+        "surface": "You have filled",
+        "lemma": "natan"
+      },
       {
         "surface": "my heart",
         "lemma": "lev"
@@ -192,6 +252,10 @@
       {
         "surface": "with more joy",
         "lemma": "simchah"
+      },
+      {
+        "surface": "than when",
+        "lemma": "et"
       },
       {
         "surface": "grain",
@@ -224,6 +288,14 @@
         "lemma": "shalom"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "alone",
         "lemma": "badad"
       },
@@ -232,13 +304,18 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "make me dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in safety",
         "lemma": "betach"
       }
     ]
   },
   "themeLemmas": [
+    "al",
     "tsedeq",
-    "selah"
+    "shama"
   ]
 }

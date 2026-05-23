@@ -60,6 +60,10 @@
     ],
     "2": [
       {
+        "surface": "No",
+        "lemma": "aph"
+      },
+      {
         "surface": "in your hearts",
         "lemma": "lev"
       },
@@ -132,6 +136,10 @@
         "lemma": "nachash"
       },
       {
+        "surface": "like",
+        "lemma": "kemo"
+      },
+      {
         "surface": "a cobra",
         "lemma": "peten"
       },
@@ -145,6 +153,18 @@
       }
     ],
     "5": [
+      {
+        "surface": "vvv",
+        "lemma": "asher"
+      },
+      {
+        "surface": "refusing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to hear",
+        "lemma": "shama"
+      },
       {
         "surface": "the tune",
         "lemma": "qol"
@@ -202,6 +222,10 @@
         "lemma": "maas"
       },
       {
+        "surface": "like",
+        "lemma": "kemo"
+      },
+      {
         "surface": "water",
         "lemma": "mayim"
       },
@@ -223,6 +247,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "Like",
+        "lemma": "kemo"
+      },
       {
         "surface": "a slug",
         "lemma": "shavlul"
@@ -278,6 +306,10 @@
         "lemma": "chay"
       },
       {
+        "surface": "or",
+        "lemma": "kemo"
+      },
+      {
         "surface": "dry",
         "lemma": "charon"
       },
@@ -294,6 +326,10 @@
       {
         "surface": "will rejoice",
         "lemma": "samach"
+      },
+      {
+        "surface": "when",
+        "lemma": "ki"
       },
       {
         "surface": "they see",
@@ -324,6 +360,10 @@
       {
         "surface": "Then men",
         "lemma": "adam"
+      },
+      {
+        "surface": "will say",
+        "lemma": "amar"
       },
       {
         "surface": "There is surely",
@@ -360,8 +400,8 @@
     ]
   },
   "themeLemmas": [
+    "kemo",
     "tsaddiq",
-    "shaphat",
-    "rasah"
+    "shaphat"
   ]
 }

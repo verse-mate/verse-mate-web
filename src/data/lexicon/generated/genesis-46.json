@@ -14,6 +14,18 @@
         "lemma": "nasa"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "and when he came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to",
         "lemma": "beersheva"
       },
@@ -34,6 +46,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "of his father",
+        "lemma": "av"
+      },
+      {
         "surface": "Isaac",
         "lemma": "yitschaq"
       }
@@ -46,6 +62,10 @@
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "spoke",
+        "lemma": "amar"
       },
       {
         "surface": "to Israel",
@@ -64,18 +84,42 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "He said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Here I am",
         "lemma": "hinneh"
+      },
+      {
+        "surface": "replied Jacob",
+        "lemma": "amar"
       }
     ],
     "3": [
+      {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
       {
         "surface": "am God",
         "lemma": "el"
       },
       {
+        "surface": "He said",
+        "lemma": "amar"
+      },
+      {
         "surface": "the God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "of your father",
+        "lemma": "av"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be afraid",
@@ -88,6 +132,10 @@
       {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "I will make",
@@ -108,12 +156,28 @@
     ],
     "4": [
       {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "will go down",
         "lemma": "yarad"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "you to Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and I",
+        "lemma": "anokhi"
+      },
+      {
+        "surface": "will surely",
+        "lemma": "gam"
       },
       {
         "surface": "bring you back",
@@ -164,6 +228,10 @@
       {
         "surface": "took",
         "lemma": "nasa"
+      },
+      {
+        "surface": "their father",
+        "lemma": "av"
       },
       {
         "surface": "Jacob",
@@ -224,8 +292,16 @@
         "lemma": "yaaqov"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his offspring",
         "lemma": "zera"
+      },
+      {
+        "surface": "went",
+        "lemma": "bo"
       },
       {
         "surface": "to Egypt",
@@ -233,6 +309,14 @@
       }
     ],
     "7": [
+      {
+        "surface": "Jacob took",
+        "lemma": "bo"
+      },
+      {
+        "surface": "with him",
+        "lemma": "et"
+      },
       {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
@@ -254,11 +338,19 @@
         "lemma": "bat"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his offspring",
         "lemma": "zera"
       }
     ],
     "8": [
+      {
+        "surface": "Now these",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the names",
         "lemma": "shem"
@@ -278,6 +370,10 @@
       {
         "surface": "and his descendants",
         "lemma": "ben"
+      },
+      {
+        "surface": "who went",
+        "lemma": "bo"
       },
       {
         "surface": "to Egypt",
@@ -502,6 +598,10 @@
     ],
     "15": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the sons",
         "lemma": "ben"
       },
@@ -532,6 +632,10 @@
       {
         "surface": "Dinah",
         "lemma": "dinah"
+      },
+      {
+        "surface": "The total",
+        "lemma": "kol"
       },
       {
         "surface": "number",
@@ -594,6 +698,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "of Asher",
+        "lemma": "asher"
+      },
+      {
         "surface": "Imnah",
         "lemma": "yimnah"
       },
@@ -636,6 +744,10 @@
     ],
     "18": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the sons",
         "lemma": "ben"
       },
@@ -652,8 +764,16 @@
         "lemma": "zilpah"
       },
       {
+        "surface": "whom",
+        "lemma": "asher"
+      },
+      {
         "surface": "Laban",
         "lemma": "lavan"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "to his daughter",
@@ -800,6 +920,10 @@
     ],
     "22": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the sons",
         "lemma": "ben"
       },
@@ -866,6 +990,10 @@
     ],
     "25": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the sons",
         "lemma": "ben"
       },
@@ -882,8 +1010,16 @@
         "lemma": "bilhah"
       },
       {
+        "surface": "whom",
+        "lemma": "asher"
+      },
+      {
         "surface": "Laban",
         "lemma": "lavan"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "to his daughter",
@@ -896,16 +1032,32 @@
       {
         "surface": "seven",
         "lemma": "sheva"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       }
     ],
     "26": [
+      {
+        "surface": "All those",
+        "lemma": "kol"
+      },
       {
         "surface": "belonging to Jacob",
         "lemma": "yaaqov"
       },
       {
+        "surface": "who came",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "his direct descendants",
+        "lemma": "yatsa"
       },
       {
         "surface": "besides",
@@ -942,6 +1094,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "had been born",
         "lemma": "yalad"
       },
@@ -966,12 +1122,20 @@
         "lemma": "bet"
       },
       {
+        "surface": "who went",
+        "lemma": "bo"
+      },
+      {
         "surface": "to Egypt were",
         "lemma": "mitsrayim"
       },
       {
         "surface": "seventy",
         "lemma": "shivim"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       }
     ],
     "28": [
@@ -988,6 +1152,10 @@
         "lemma": "paneh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Joseph",
         "lemma": "yoseph"
       },
@@ -998,6 +1166,10 @@
       {
         "surface": "to Goshen",
         "lemma": "goshen"
+      },
+      {
+        "surface": "When Jacob’s family arrived",
+        "lemma": "bo"
       },
       {
         "surface": "in the land",
@@ -1030,8 +1202,24 @@
         "lemma": "goshen"
       },
       {
+        "surface": "to meet",
+        "lemma": "qara"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "Joseph presented himself",
+        "lemma": "raah"
+      },
+      {
+        "surface": "to him",
+        "lemma": "el"
       },
       {
         "surface": "embraced",
@@ -1056,6 +1244,14 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Joseph",
         "lemma": "yoseph"
       },
@@ -1068,8 +1264,16 @@
         "lemma": "paam"
       },
       {
+        "surface": "that I have seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "your face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "and know that",
+        "lemma": "ki"
       },
       {
         "surface": "you are still",
@@ -1086,8 +1290,24 @@
         "lemma": "yoseph"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "his brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "and to",
+        "lemma": "el"
+      },
+      {
+        "surface": "his father’s",
+        "lemma": "av"
       },
       {
         "surface": "household",
@@ -1110,6 +1330,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "and my father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "household",
         "lemma": "bet"
       },
@@ -1120,6 +1344,14 @@
       {
         "surface": "of Canaan",
         "lemma": "kenaan"
+      },
+      {
+        "surface": "have come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
       }
     ],
     "32": [
@@ -1136,18 +1368,42 @@
         "lemma": "miqneh"
       },
       {
+        "surface": "and they have brought",
+        "lemma": "bo"
+      },
+      {
         "surface": "their flocks",
         "lemma": "tson"
       },
       {
         "surface": "and herds",
         "lemma": "baqar"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       }
     ],
     "33": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "Pharaoh",
         "lemma": "paroh"
+      },
+      {
+        "surface": "summons",
+        "lemma": "qara"
+      },
+      {
+        "surface": "and asks",
+        "lemma": "amar"
       },
       {
         "surface": "What",
@@ -1159,6 +1415,10 @@
       }
     ],
     "34": [
+      {
+        "surface": "you are to say",
+        "lemma": "amar"
+      },
       {
         "surface": "Your servants",
         "lemma": "eved"
@@ -1172,12 +1432,44 @@
         "lemma": "naur"
       },
       {
+        "surface": "both",
+        "lemma": "gam"
+      },
+      {
+        "surface": "we",
+        "lemma": "anachnu"
+      },
+      {
+        "surface": "and",
+        "lemma": "gam"
+      },
+      {
+        "surface": "our fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "Then",
+        "lemma": "avur"
+      },
+      {
+        "surface": "you will be allowed to settle",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the land",
         "lemma": "erets"
       },
       {
         "surface": "of Goshen",
         "lemma": "goshen"
+      },
+      {
+        "surface": "since",
+        "lemma": "ki"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "shepherds",
@@ -1196,6 +1488,6 @@
   "themeLemmas": [
     "yaaqov",
     "mitsrayim",
-    "yoseph"
+    "kol"
   ]
 }

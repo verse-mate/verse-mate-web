@@ -30,6 +30,10 @@
         "lemma": "kaph"
       },
       {
+        "surface": "all you peoples",
+        "lemma": "kol"
+      },
+      {
         "surface": "shout",
         "lemma": "rua"
       },
@@ -47,6 +51,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "How",
+        "lemma": "ki"
+      },
       {
         "surface": "awesome is",
         "lemma": "yare"
@@ -66,6 +74,14 @@
       {
         "surface": "King",
         "lemma": "melekh"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -114,6 +130,10 @@
       {
         "surface": "of Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "whom",
+        "lemma": "asher"
       },
       {
         "surface": "He loves",
@@ -178,12 +198,20 @@
     ],
     "7": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
       {
         "surface": "is King",
         "lemma": "melekh"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -204,12 +232,24 @@
         "lemma": "malakh"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
       },
       {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "is seated",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "His holy",
@@ -246,6 +286,10 @@
         "lemma": "avraham"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "the shields",
         "lemma": "magen"
       },
@@ -269,7 +313,7 @@
   },
   "themeLemmas": [
     "zamar",
-    "tachat",
-    "qol"
+    "kol",
+    "ki"
   ]
 }

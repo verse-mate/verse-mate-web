@@ -6,6 +6,14 @@
   "verses": {
     "1": [
       {
+        "surface": "Now these are the portions",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
       },
@@ -50,6 +58,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "of the families",
+        "lemma": "av"
+      },
+      {
         "surface": "of the tribes",
         "lemma": "matteh"
       },
@@ -84,6 +96,10 @@
         "lemma": "matteh"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -102,8 +118,16 @@
     ],
     "3": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "had given",
+        "lemma": "natan"
       },
       {
         "surface": "the inheritance",
@@ -130,6 +154,14 @@
         "lemma": "matteh"
       },
       {
+        "surface": "But he granted",
+        "lemma": "natan"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "inheritance",
         "lemma": "nachalah"
       },
@@ -152,6 +184,10 @@
         "lemma": "yoseph"
       },
       {
+        "surface": "became",
+        "lemma": "hayah"
+      },
+      {
         "surface": "two",
         "lemma": "shenayim"
       },
@@ -168,6 +204,10 @@
         "lemma": "ephrayim"
       },
       {
+        "surface": "And no",
+        "lemma": "lo"
+      },
+      {
         "surface": "portion",
         "lemma": "cheleq"
       },
@@ -176,12 +216,24 @@
         "lemma": "erets"
       },
       {
+        "surface": "was given",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the Levites",
         "lemma": "leviyyi"
       },
       {
+        "surface": "except for",
+        "lemma": "im"
+      },
+      {
         "surface": "cities",
         "lemma": "ir"
+      },
+      {
+        "surface": "in which to live",
+        "lemma": "yashav"
       },
       {
         "surface": "along with pasturelands",
@@ -204,6 +256,14 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -264,8 +324,24 @@
         "lemma": "qenizzi"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to him",
+        "lemma": "el"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -274,6 +350,10 @@
       {
         "surface": "said",
         "lemma": "davar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Moses",
@@ -292,8 +372,16 @@
         "lemma": "qadeshbarnea"
       },
       {
+        "surface": "about",
+        "lemma": "al"
+      },
+      {
         "surface": "you",
         "lemma": "odah"
+      },
+      {
+        "surface": "and",
+        "lemma": "al"
       },
       {
         "surface": "me",
@@ -301,6 +389,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "I was",
+        "lemma": "anokhi"
+      },
       {
         "surface": "forty",
         "lemma": "arbaim"
@@ -326,6 +418,10 @@
         "lemma": "shalach"
       },
       {
+        "surface": "me",
+        "lemma": "et"
+      },
+      {
         "surface": "from",
         "lemma": "qadeshbarnea"
       },
@@ -342,6 +438,18 @@
         "lemma": "erets"
       },
       {
+        "surface": "and I brought back",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to him",
+        "lemma": "et"
+      },
+      {
+        "surface": "an honest",
+        "lemma": "asher"
+      },
+      {
         "surface": "report",
         "lemma": "davar"
       }
@@ -352,8 +460,16 @@
         "lemma": "ach"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "went",
         "lemma": "alah"
+      },
+      {
+        "surface": "with me",
+        "lemma": "im"
       },
       {
         "surface": "made} the hearts",
@@ -366,6 +482,10 @@
       {
         "surface": "melt with fear",
         "lemma": "masah"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
       },
       {
         "surface": "remained loyal",
@@ -386,6 +506,10 @@
     ],
     "9": [
       {
+        "surface": "On that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -398,12 +522,28 @@
         "lemma": "shava"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Surely",
+        "lemma": "im"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
+        "surface": "on which",
+        "lemma": "asher"
+      },
+      {
         "surface": "you have set foot",
         "lemma": "darakh"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "an inheritance",
@@ -412,6 +552,14 @@
       {
         "surface": "and your children",
         "lemma": "ben"
+      },
+      {
+        "surface": "forever",
+        "lemma": "ad"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "you have wholly",
@@ -440,6 +588,10 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD promised",
         "lemma": "davar"
       },
@@ -452,12 +604,20 @@
         "lemma": "chayah"
       },
       {
+        "surface": "these",
+        "lemma": "zeh"
+      },
+      {
         "surface": "forty-five",
         "lemma": "arbaim"
       },
       {
         "surface": "years",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "since",
+        "lemma": "az"
       },
       {
         "surface": "He",
@@ -468,12 +628,24 @@
         "lemma": "davar"
       },
       {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "word",
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "while",
+        "lemma": "asher"
       },
       {
         "surface": "Israel",
@@ -494,6 +666,10 @@
       {
         "surface": "here",
         "lemma": "hinneh"
+      },
+      {
+        "surface": "I am today",
+        "lemma": "anokhi"
       },
       {
         "surface": "eighty-five",
@@ -518,6 +694,10 @@
         "lemma": "yom"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
         "surface": "I was the day",
         "lemma": "yom"
       },
@@ -534,6 +714,10 @@
         "lemma": "koach"
       },
       {
+        "surface": "was then",
+        "lemma": "az"
+      },
+      {
         "surface": "so it",
         "lemma": "koach"
       },
@@ -544,6 +728,14 @@
       {
         "surface": "for war",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "for going out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and for coming in",
+        "lemma": "bo"
       }
     ],
     "12": [
@@ -552,8 +744,20 @@
         "lemma": "attah"
       },
       {
+        "surface": "give",
+        "lemma": "natan"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "hill country",
         "lemma": "har"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -564,12 +768,32 @@
         "lemma": "davar"
       },
       {
+        "surface": "on that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you yourself",
+        "lemma": "attah"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "then",
         "lemma": "yom"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the Anakim",
@@ -600,8 +824,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "help",
+        "lemma": "et"
+      },
+      {
         "surface": "I will drive them out",
         "lemma": "yarash"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -634,6 +866,14 @@
         "lemma": "yephunneh"
       },
       {
+        "surface": "and gave",
+        "lemma": "natan"
+      },
+      {
+        "surface": "him",
+        "lemma": "et"
+      },
+      {
         "surface": "Hebron",
         "lemma": "chevron"
       },
@@ -644,8 +884,16 @@
     ],
     "14": [
       {
+        "surface": "Therefore",
+        "lemma": "al"
+      },
+      {
         "surface": "Hebron",
         "lemma": "chevron"
+      },
+      {
+        "surface": "belongs to",
+        "lemma": "hayah"
       },
       {
         "surface": "Caleb",
@@ -668,8 +916,20 @@
         "lemma": "nachalah"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "because",
+        "lemma": "yaan"
       },
       {
         "surface": "he wholly",
@@ -714,6 +974,10 @@
         "lemma": "qiryatarba"
       },
       {
+        "surface": "after Arba",
+        "lemma": "hu"
+      },
+      {
         "surface": "the greatest",
         "lemma": "gadol"
       },
@@ -740,8 +1004,8 @@
     ]
   },
   "themeLemmas": [
+    "asher",
     "mosheh",
-    "nachalah",
-    "matteh"
+    "nachalah"
   ]
 }

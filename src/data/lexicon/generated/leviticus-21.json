@@ -10,8 +10,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "Speak",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Aaron’s",
@@ -24,6 +40,18 @@
       {
         "surface": "the priests",
         "lemma": "kohen"
+      },
+      {
+        "surface": "and tell",
+        "lemma": "amar"
+      },
+      {
+        "surface": "them that",
+        "lemma": "el"
+      },
+      {
+        "surface": "a priest is not",
+        "lemma": "lo"
       },
       {
         "surface": "to defile himself",
@@ -40,6 +68,10 @@
     ],
     "2": [
       {
+        "surface": "except",
+        "lemma": "ki"
+      },
+      {
         "surface": "for his immediate",
         "lemma": "qarov"
       },
@@ -50,6 +82,10 @@
       {
         "surface": "his mother",
         "lemma": "em"
+      },
+      {
+        "surface": "father",
+        "lemma": "av"
       },
       {
         "surface": "son",
@@ -78,11 +114,31 @@
         "lemma": "qarov"
       },
       {
+        "surface": "to him",
+        "lemma": "el"
+      },
+      {
+        "surface": "since",
+        "lemma": "asher"
+      },
+      {
+        "surface": "she has",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "husband",
         "lemma": "ish"
       }
     ],
     "4": [
+      {
+        "surface": "He is not",
+        "lemma": "lo"
+      },
       {
         "surface": "to defile himself",
         "lemma": "tame"
@@ -97,6 +153,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "Priests must not",
+        "lemma": "lo"
+      },
       {
         "surface": "make bald",
         "lemma": "qarach"
@@ -128,12 +188,20 @@
     ],
     "6": [
       {
+        "surface": "They must be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "holy",
         "lemma": "qadosh"
       },
       {
         "surface": "to their God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "and not",
+        "lemma": "lo"
       },
       {
         "surface": "profane",
@@ -146,6 +214,14 @@
       {
         "surface": "of their God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "Because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
       },
       {
         "surface": "present",
@@ -168,11 +244,19 @@
         "lemma": "elohim"
       },
       {
+        "surface": "they must be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "holy",
         "lemma": "qodesh"
       }
     ],
     "7": [
+      {
+        "surface": "A priest must not",
+        "lemma": "lo"
+      },
       {
         "surface": "marry",
         "lemma": "laqach"
@@ -190,12 +274,24 @@
         "lemma": "zanah"
       },
       {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
         "surface": "divorced",
         "lemma": "garash"
       },
       {
         "surface": "by her husband",
         "lemma": "ish"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "the priest",
+        "lemma": "hu"
       },
       {
         "surface": "is holy",
@@ -212,6 +308,14 @@
         "lemma": "qadash"
       },
       {
+        "surface": "since",
+        "lemma": "ki"
+      },
+      {
+        "surface": "he",
+        "lemma": "hu"
+      },
+      {
         "surface": "presents",
         "lemma": "qarav"
       },
@@ -224,8 +328,20 @@
         "lemma": "elohim"
       },
       {
+        "surface": "He shall be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "holy",
         "lemma": "qadosh"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "the LORD",
@@ -241,6 +357,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "If",
+        "lemma": "ki"
+      },
       {
         "surface": "a priest’s",
         "lemma": "kohen"
@@ -258,8 +378,16 @@
         "lemma": "zanah"
       },
       {
+        "surface": "she",
+        "lemma": "hu"
+      },
+      {
         "surface": "profanes",
         "lemma": "chalal"
+      },
+      {
+        "surface": "her father",
+        "lemma": "av"
       },
       {
         "surface": "she must be burned",
@@ -284,6 +412,10 @@
         "lemma": "ach"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "has had the anointing",
         "lemma": "mishchah"
       },
@@ -294,6 +426,10 @@
       {
         "surface": "poured",
         "lemma": "yatsaq"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "his head",
@@ -310,6 +446,10 @@
       {
         "surface": "the priestly garments",
         "lemma": "beged"
+      },
+      {
+        "surface": "must not {let",
+        "lemma": "lo"
       },
       {
         "surface": "his hair",
@@ -330,6 +470,18 @@
     ],
     "11": [
       {
+        "surface": "He must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "near any",
+        "lemma": "kol"
+      },
+      {
         "surface": "dead",
         "lemma": "mut"
       },
@@ -338,8 +490,16 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "he must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "defile himself",
         "lemma": "tame"
+      },
+      {
+        "surface": "even for his father",
+        "lemma": "av"
       },
       {
         "surface": "or mother",
@@ -347,6 +507,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "He must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "leave",
+        "lemma": "yatsa"
+      },
       {
         "surface": "or desecrate",
         "lemma": "chalal"
@@ -358,6 +526,10 @@
       {
         "surface": "of his God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "the consecration",
@@ -376,6 +548,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "is on him",
+        "lemma": "al"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       }
@@ -384,6 +564,10 @@
       {
         "surface": "The woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "he",
+        "lemma": "hu"
       },
       {
         "surface": "marries",
@@ -395,6 +579,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "He is not",
+        "lemma": "lo"
+      },
       {
         "surface": "to marry",
         "lemma": "laqach"
@@ -430,6 +618,10 @@
     ],
     "15": [
       {
+        "surface": "so that he does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "defile",
         "lemma": "chalal"
       },
@@ -440,6 +632,14 @@
       {
         "surface": "among his people",
         "lemma": "am"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am the LORD",
@@ -460,6 +660,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -470,6 +674,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Aaron",
         "lemma": "aharon"
       },
@@ -478,8 +686,20 @@
         "lemma": "dor"
       },
       {
+        "surface": "none",
+        "lemma": "lo"
+      },
+      {
         "surface": "of your descendants",
         "lemma": "zera"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "has",
+        "lemma": "hayah"
       },
       {
         "surface": "a physical defect",
@@ -504,8 +724,16 @@
     ],
     "18": [
       {
+        "surface": "No",
+        "lemma": "kol"
+      },
+      {
         "surface": "man",
         "lemma": "ish"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "has any defect",
@@ -532,6 +760,10 @@
         "lemma": "charam"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "deformed",
         "lemma": "sara"
       }
@@ -542,6 +774,14 @@
         "lemma": "ish"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "has",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a broken",
         "lemma": "shever"
       },
@@ -550,18 +790,34 @@
         "lemma": "regel"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "hand",
         "lemma": "yad"
       }
     ],
     "20": [
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "who is a hunchback",
         "lemma": "gibben"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "dwarf",
         "lemma": "daq"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "who has an eye",
@@ -580,6 +836,10 @@
         "lemma": "yallephet"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "a crushed",
         "lemma": "meroach"
       },
@@ -589,6 +849,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "No",
+        "lemma": "kol"
+      },
       {
         "surface": "descendant",
         "lemma": "zera"
@@ -600,6 +864,10 @@
       {
         "surface": "the priest",
         "lemma": "kohen"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "has a defect",
@@ -624,6 +892,10 @@
       {
         "surface": "Since he has a defect",
         "lemma": "mum"
+      },
+      {
+        "surface": "he is not",
+        "lemma": "lo"
       },
       {
         "surface": "to come near",
@@ -664,6 +936,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "as well as",
+        "lemma": "min"
+      },
+      {
         "surface": "the holy food",
         "lemma": "qodesh"
       }
@@ -674,8 +950,24 @@
         "lemma": "akh"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "he has a defect",
         "lemma": "mum"
+      },
+      {
+        "surface": "he must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "near",
+        "lemma": "el"
       },
       {
         "surface": "the veil",
@@ -690,12 +982,24 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "so as not to desecrate",
         "lemma": "chalal"
       },
       {
         "surface": "My sanctuaries",
         "lemma": "miqdash"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am the LORD",
@@ -716,6 +1020,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "this to",
+        "lemma": "el"
+      },
+      {
         "surface": "Aaron",
         "lemma": "aharon"
       },
@@ -724,14 +1032,22 @@
         "lemma": "ben"
       },
       {
+        "surface": "and to",
+        "lemma": "el"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
       }
     ]
   },
   "themeLemmas": [
-    "chalal",
-    "qarav",
-    "mum"
+    "lo",
+    "ki",
+    "chalal"
   ]
 }

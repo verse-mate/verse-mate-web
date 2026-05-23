@@ -30,12 +30,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my heart",
         "lemma": "lev"
       },
       {
         "surface": "I will recount",
         "lemma": "saphar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "Your wonders",
@@ -70,6 +78,10 @@
         "lemma": "oyev"
       },
       {
+        "surface": "retreat",
+        "lemma": "shuv"
+      },
+      {
         "surface": "they stumble",
         "lemma": "kashal"
       },
@@ -84,12 +96,24 @@
     ],
     "4": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You have upheld",
+        "lemma": "asah"
+      },
+      {
         "surface": "my just",
         "lemma": "mishpat"
       },
       {
         "surface": "cause",
         "lemma": "din"
+      },
+      {
+        "surface": "You sit",
+        "lemma": "yashav"
       },
       {
         "surface": "on Your throne",
@@ -164,6 +188,10 @@
         "lemma": "zekher"
       },
       {
+        "surface": "of them",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "has vanished",
         "lemma": "avad"
       }
@@ -172,6 +200,10 @@
       {
         "surface": "But the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "abides",
+        "lemma": "yashav"
       },
       {
         "surface": "forever",
@@ -191,6 +223,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "He",
+        "lemma": "hu"
+      },
       {
         "surface": "judges",
         "lemma": "shaphat"
@@ -222,6 +258,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "is",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a refuge",
         "lemma": "misgav"
       },
@@ -232,6 +272,10 @@
       {
         "surface": "a stronghold",
         "lemma": "misgav"
+      },
+      {
+        "surface": "in times",
+        "lemma": "et"
       },
       {
         "surface": "of trouble",
@@ -252,8 +296,16 @@
         "lemma": "batach"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "You, O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "have not",
+        "lemma": "lo"
       },
       {
         "surface": "forsaken",
@@ -274,6 +326,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "who dwells",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in Zion",
         "lemma": "tsiyyon"
       },
@@ -291,6 +347,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the Avenger",
         "lemma": "darash"
@@ -326,6 +386,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
         "surface": "how my enemies",
         "lemma": "sane"
       },
@@ -348,8 +412,16 @@
     ],
     "14": [
       {
+        "surface": "that",
+        "lemma": "maan"
+      },
+      {
         "surface": "I may declare",
         "lemma": "saphar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "Your praises",
@@ -390,6 +462,10 @@
         "lemma": "shachat"
       },
       {
+        "surface": "of their making",
+        "lemma": "asah"
+      },
+      {
         "surface": "their feet",
         "lemma": "regel"
       },
@@ -418,6 +494,10 @@
       {
         "surface": "by the justice",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "He brings",
+        "lemma": "asah"
       },
       {
         "surface": "the wicked",
@@ -450,8 +530,16 @@
         "lemma": "rasah"
       },
       {
+        "surface": "will return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to Sheol",
         "lemma": "sheol"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the nations",
@@ -468,8 +556,16 @@
     ],
     "18": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the needy",
         "lemma": "evyon"
+      },
+      {
+        "surface": "will} not",
+        "lemma": "lo"
       },
       {
         "surface": "always",
@@ -506,6 +602,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "do not let",
+        "lemma": "al"
+      },
+      {
         "surface": "man",
         "lemma": "enosh"
       },
@@ -520,6 +620,10 @@
       {
         "surface": "be judged",
         "lemma": "shaphat"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "Your presence",
@@ -558,8 +662,8 @@
     ]
   },
   "themeLemmas": [
-    "avad",
-    "yada",
-    "shem"
+    "kol",
+    "ki",
+    "avad"
   ]
 }

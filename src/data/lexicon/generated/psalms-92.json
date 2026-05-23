@@ -70,6 +70,10 @@
     ],
     "3": [
       {
+        "surface": "with",
+        "lemma": "al"
+      },
+      {
         "surface": "the ten-stringed",
         "lemma": "asvor"
       },
@@ -87,6 +91,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "You, O LORD",
         "lemma": "yehovah"
@@ -152,12 +160,20 @@
         "lemma": "ish"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
       {
         "surface": "and a fool",
         "lemma": "kesil"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "understand",
@@ -174,8 +190,16 @@
         "lemma": "parach"
       },
       {
+        "surface": "like",
+        "lemma": "kemo"
+      },
+      {
         "surface": "grass",
         "lemma": "esev"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "evildoers",
@@ -184,6 +208,10 @@
       {
         "surface": "flourish",
         "lemma": "tsuts"
+      },
+      {
+        "surface": "they will be",
+        "lemma": "ad"
       },
       {
         "surface": "forever",
@@ -196,6 +224,10 @@
     ],
     "8": [
       {
+        "surface": "But You",
+        "lemma": "attah"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -205,6 +237,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "surely",
         "lemma": "hinneh"
@@ -216,6 +252,10 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ki"
       },
       {
         "surface": "surely",
@@ -228,6 +268,10 @@
       {
         "surface": "will perish",
         "lemma": "avad"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "evildoers",
@@ -282,12 +326,20 @@
         "lemma": "ozen"
       },
       {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "the wailing",
         "lemma": "qamay"
       },
       {
         "surface": "of my wicked",
         "lemma": "raa"
+      },
+      {
+        "surface": "foes",
+        "lemma": "al"
       }
     ],
     "12": [
@@ -362,6 +414,10 @@
       {
         "surface": "and green",
         "lemma": "raan"
+      },
+      {
+        "surface": "they will remain",
+        "lemma": "hayah"
       }
     ],
     "15": [
@@ -382,6 +438,10 @@
         "lemma": "tsur"
       },
       {
+        "surface": "there is no",
+        "lemma": "lo"
+      },
+      {
         "surface": "unrighteousness",
         "lemma": "evel"
       }
@@ -389,7 +449,7 @@
   },
   "themeLemmas": [
     "parach",
-    "raan",
-    "paal"
+    "lo",
+    "ki"
   ]
 }

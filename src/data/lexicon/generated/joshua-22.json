@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "Then",
+        "lemma": "az"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "summoned",
+        "lemma": "qara"
       },
       {
         "surface": "the Reubenites",
@@ -28,8 +36,24 @@
     ],
     "2": [
       {
+        "surface": "and told them",
+        "lemma": "amar"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "have done",
         "lemma": "shamar"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "Moses",
@@ -48,12 +72,32 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "you",
+        "lemma": "et"
+      },
+      {
+        "surface": "and you have obeyed",
+        "lemma": "shama"
+      },
+      {
         "surface": "my voice",
         "lemma": "qol"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "I commanded",
         "lemma": "tsavah"
+      },
+      {
+        "surface": "you",
+        "lemma": "et"
       }
     ],
     "3": [
@@ -62,12 +106,20 @@
         "lemma": "yom"
       },
       {
+        "surface": "you have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "deserted",
         "lemma": "azav"
       },
       {
         "surface": "your brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "up to",
+        "lemma": "ad"
       },
       {
         "surface": "this very day",
@@ -116,6 +168,10 @@
         "lemma": "nuach"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
         "surface": "He promised",
         "lemma": "davar"
       },
@@ -128,8 +184,16 @@
         "lemma": "ohel"
       },
       {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "Moses",
@@ -144,6 +208,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "gave",
+        "lemma": "natan"
+      },
+      {
         "surface": "across",
         "lemma": "ever"
       },
@@ -154,6 +222,10 @@
     ],
     "5": [
       {
+        "surface": "But",
+        "lemma": "raq"
+      },
+      {
         "surface": "be very",
         "lemma": "meod"
       },
@@ -162,12 +234,24 @@
         "lemma": "shamar"
       },
       {
+        "surface": "to observe",
+        "lemma": "asah"
+      },
+      {
         "surface": "the commandment",
         "lemma": "mitsvah"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "the law",
         "lemma": "torah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "Moses",
@@ -202,6 +286,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "His ways",
         "lemma": "derekh"
       },
@@ -222,8 +310,16 @@
         "lemma": "avad"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your heart",
         "lemma": "levav"
+      },
+      {
+        "surface": "and with all",
+        "lemma": "kol"
       },
       {
         "surface": "your soul",
@@ -248,6 +344,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "their homes",
         "lemma": "ohel"
       }
@@ -266,6 +366,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "had given land",
+        "lemma": "natan"
+      },
+      {
         "surface": "in Bashan",
         "lemma": "bashan"
       },
@@ -276,6 +380,10 @@
       {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "gave land",
+        "lemma": "natan"
       },
       {
         "surface": "on the west",
@@ -290,8 +398,16 @@
         "lemma": "yarden"
       },
       {
+        "surface": "among",
+        "lemma": "im"
+      },
+      {
         "surface": "their brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "When",
+        "lemma": "ki"
       },
       {
         "surface": "Joshua",
@@ -300,6 +416,10 @@
       {
         "surface": "sent them",
         "lemma": "shalach"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "their homes",
@@ -311,6 +431,18 @@
       }
     ],
     "8": [
+      {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
       {
         "surface": "your homes",
         "lemma": "ohel"
@@ -358,6 +490,10 @@
       {
         "surface": "Divide",
         "lemma": "chalaq"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "your brothers",
@@ -414,6 +550,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "their own land",
         "lemma": "erets"
       },
@@ -422,8 +562,16 @@
         "lemma": "gilad"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
         "surface": "they had acquired",
         "lemma": "achaz"
+      },
+      {
+        "surface": "according to",
+        "lemma": "al"
       },
       {
         "surface": "the command",
@@ -443,6 +591,14 @@
       }
     ],
     "10": [
+      {
+        "surface": "And when they came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
       {
         "surface": "Geliloth",
         "lemma": "gelilah"
@@ -496,6 +652,10 @@
         "lemma": "sham"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the Jordan",
         "lemma": "yarden"
       }
@@ -504,6 +664,14 @@
       {
         "surface": "Then the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "received",
+        "lemma": "shama"
+      },
+      {
+        "surface": "the report",
+        "lemma": "amar"
       },
       {
         "surface": "Behold",
@@ -534,6 +702,10 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "on",
+        "lemma": "el"
+      },
+      {
         "surface": "the border",
         "lemma": "mul"
       },
@@ -546,12 +718,20 @@
         "lemma": "kenaan"
       },
       {
+        "surface": "at",
+        "lemma": "el"
+      },
+      {
         "surface": "Geliloth",
         "lemma": "gelilah"
       },
       {
         "surface": "near the Jordan",
         "lemma": "yarden"
+      },
+      {
+        "surface": "on",
+        "lemma": "el"
       },
       {
         "surface": "the Israelite",
@@ -566,6 +746,14 @@
       {
         "surface": "And when they",
         "lemma": "ben"
+      },
+      {
+        "surface": "heard this",
+        "lemma": "shama"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "congregation",
@@ -590,6 +778,10 @@
       {
         "surface": "to war",
         "lemma": "tsava"
+      },
+      {
+        "surface": "against them",
+        "lemma": "al"
       }
     ],
     "13": [
@@ -618,12 +810,20 @@
         "lemma": "kohen"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
         "surface": "of Gilead",
         "lemma": "gilad"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the Reubenites",
@@ -644,6 +844,10 @@
     ],
     "14": [
       {
+        "surface": "With him",
+        "lemma": "im"
+      },
+      {
         "surface": "they sent ten",
         "lemma": "eser"
       },
@@ -662,6 +866,10 @@
       {
         "surface": "leader",
         "lemma": "nasi"
+      },
+      {
+        "surface": "from each",
+        "lemma": "kol"
       },
       {
         "surface": "tribe",
@@ -694,6 +902,14 @@
     ],
     "15": [
       {
+        "surface": "They went",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the Reubenites",
         "lemma": "ben"
       },
@@ -720,12 +936,20 @@
       {
         "surface": "and said",
         "lemma": "davar"
+      },
+      {
+        "surface": "to them",
+        "lemma": "et"
       }
     ],
     "16": [
       {
         "surface": "This is what",
         "lemma": "koh"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "congregation",
@@ -736,8 +960,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "is this",
+        "lemma": "zeh"
       },
       {
         "surface": "breach of faith",
@@ -758,6 +990,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "by turning away",
+        "lemma": "shuv"
       },
       {
         "surface": "from",
@@ -802,12 +1038,36 @@
         "lemma": "meat"
       },
       {
+        "surface": "from which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "we have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "cleansed",
         "lemma": "taher"
       },
       {
+        "surface": "ourselves",
+        "lemma": "min"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "It even brought",
+        "lemma": "hayah"
       },
       {
         "surface": "a plague",
@@ -828,12 +1088,24 @@
         "lemma": "yom"
       },
       {
+        "surface": "would you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "turn away",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from",
         "lemma": "achar"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "If you",
+        "lemma": "attah"
       },
       {
         "surface": "rebel",
@@ -856,6 +1128,14 @@
         "lemma": "qatsaph"
       },
       {
+        "surface": "with",
+        "lemma": "el"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
@@ -865,6 +1145,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "indeed",
         "lemma": "akh"
@@ -886,6 +1170,10 @@
         "lemma": "avar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -896,6 +1184,10 @@
       {
         "surface": "possession",
         "lemma": "achuzzah"
+      },
+      {
+        "surface": "where",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD’s",
@@ -916,6 +1208,10 @@
       {
         "surface": "of it among us",
         "lemma": "tavekh"
+      },
+      {
+        "surface": "But do not",
+        "lemma": "al"
       },
       {
         "surface": "rebel",
@@ -952,6 +1248,10 @@
     ],
     "20": [
       {
+        "surface": "Was not",
+        "lemma": "lo"
+      },
+      {
         "surface": "Achan",
         "lemma": "akhan"
       },
@@ -980,6 +1280,14 @@
         "lemma": "qetseph"
       },
       {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
@@ -988,8 +1296,16 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "Yet it was not",
+        "lemma": "lo"
+      },
+      {
         "surface": "only",
         "lemma": "echad"
+      },
+      {
+        "surface": "Achan",
+        "lemma": "hu"
       },
       {
         "surface": "who perished",
@@ -1060,6 +1376,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "knows",
         "lemma": "yada"
       },
@@ -1072,6 +1392,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "If this",
+        "lemma": "im"
+      },
+      {
         "surface": "was in rebellion",
         "lemma": "mered"
       },
@@ -1082,6 +1406,10 @@
       {
         "surface": "against the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "spare us",
@@ -1102,12 +1430,20 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "to turn away",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from",
         "lemma": "achar"
       },
       {
         "surface": "Him",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and",
+        "lemma": "im"
       },
       {
         "surface": "to offer",
@@ -1122,6 +1458,18 @@
         "lemma": "minchah"
       },
       {
+        "surface": "on it",
+        "lemma": "al"
+      },
+      {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
+        "surface": "to sacrifice",
+        "lemma": "asah"
+      },
+      {
         "surface": "peace",
         "lemma": "shelem"
       },
@@ -1130,8 +1478,16 @@
         "lemma": "zevach"
       },
       {
+        "surface": "on it",
+        "lemma": "al"
+      },
+      {
         "surface": "may the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "Himself",
+        "lemma": "hu"
       },
       {
         "surface": "hold us accountable",
@@ -1139,6 +1495,18 @@
       }
     ],
     "24": [
+      {
+        "surface": "But in fact",
+        "lemma": "im"
+      },
+      {
+        "surface": "we have done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
       {
         "surface": "for fear",
         "lemma": "deagah"
@@ -1150,6 +1518,10 @@
       {
         "surface": "your descendants",
         "lemma": "ben"
+      },
+      {
+        "surface": "might say",
+        "lemma": "amar"
       },
       {
         "surface": "to ours",
@@ -1176,6 +1548,10 @@
       {
         "surface": "For the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has made",
+        "lemma": "natan"
       },
       {
         "surface": "the Jordan",
@@ -1244,12 +1620,24 @@
     ],
     "26": [
       {
+        "surface": "That is why we said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Let us take action",
+        "lemma": "asah"
+      },
+      {
         "surface": "and build",
         "lemma": "banah"
       },
       {
         "surface": "an altar for ourselves",
         "lemma": "mizbeach"
+      },
+      {
+        "surface": "but not",
+        "lemma": "lo"
       },
       {
         "surface": "for burnt offerings",
@@ -1261,6 +1649,14 @@
       }
     ],
     "27": [
+      {
+        "surface": "Rather",
+        "lemma": "ki"
+      },
+      {
+        "surface": "let it be",
+        "lemma": "hu"
+      },
       {
         "surface": "a witness",
         "lemma": "ed"
@@ -1318,6 +1714,14 @@
         "lemma": "ben"
       },
       {
+        "surface": "cannot",
+        "lemma": "lo"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to ours",
         "lemma": "ben"
       },
@@ -1336,8 +1740,36 @@
     ],
     "28": [
       {
+        "surface": "Therefore we said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If they ever",
+        "lemma": "ki"
+      },
+      {
+        "surface": "say this",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to us",
+        "lemma": "el"
+      },
+      {
+        "surface": "or",
+        "lemma": "el"
+      },
+      {
         "surface": "to our descendants",
         "lemma": "dor"
+      },
+      {
+        "surface": "we will answer",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Look at",
+        "lemma": "raah"
       },
       {
         "surface": "the replica",
@@ -1352,12 +1784,32 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "our fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "for burnt offerings",
         "lemma": "olah"
       },
       {
         "surface": "or sacrifices",
         "lemma": "zevach"
+      },
+      {
+        "surface": "but",
+        "lemma": "ki"
       },
       {
         "surface": "as a witness",
@@ -1384,6 +1836,14 @@
       {
         "surface": "against the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and turn away",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "Him",
@@ -1430,6 +1890,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "which stands",
+        "lemma": "asher"
+      },
+      {
         "surface": "before",
         "lemma": "paneh"
       },
@@ -1466,6 +1930,22 @@
       {
         "surface": "clans",
         "lemma": "eleph"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "were with him",
+        "lemma": "et"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
       },
       {
         "surface": "the descendants",
@@ -1510,6 +1990,14 @@
         "lemma": "kohen"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the descendants",
         "lemma": "ben"
       },
@@ -1542,6 +2030,10 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -1550,8 +2042,20 @@
         "lemma": "tavekh"
       },
       {
+        "surface": "because",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "committed",
         "lemma": "maal"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
       },
       {
         "surface": "breach of faith",
@@ -1560,6 +2064,10 @@
       {
         "surface": "against Him",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "Consequently",
+        "lemma": "az"
       },
       {
         "surface": "you have delivered",
@@ -1604,8 +2112,20 @@
         "lemma": "nasi"
       },
       {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "in",
+        "lemma": "el"
       },
       {
         "surface": "the land",
@@ -1614,6 +2134,10 @@
       {
         "surface": "of Canaan",
         "lemma": "kenaan"
+      },
+      {
+        "surface": "and brought back",
+        "lemma": "shuv"
       },
       {
         "surface": "a report regarding",
@@ -1662,12 +2186,24 @@
         "lemma": "elohim"
       },
       {
+        "surface": "and spoke",
+        "lemma": "amar"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "more about going",
         "lemma": "alah"
       },
       {
         "surface": "to war",
         "lemma": "tsava"
+      },
+      {
+        "surface": "against them",
+        "lemma": "al"
       },
       {
         "surface": "to destroy",
@@ -1678,12 +2214,20 @@
         "lemma": "erets"
       },
       {
+        "surface": "where",
+        "lemma": "asher"
+      },
+      {
         "surface": "the Reubenites",
         "lemma": "ben"
       },
       {
         "surface": "and Gadites",
         "lemma": "ben"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       }
     ],
     "34": [
@@ -1696,8 +2240,20 @@
         "lemma": "ben"
       },
       {
+        "surface": "named",
+        "lemma": "qara"
+      },
+      {
         "surface": "the altar Witness",
         "lemma": "mizbeach"
+      },
+      {
+        "surface": "for they said",
+        "lemma": "ki"
+      },
+      {
+        "surface": "It",
+        "lemma": "hu"
       },
       {
         "surface": "is a witness",
@@ -1706,6 +2262,10 @@
       {
         "surface": "between us",
         "lemma": "bayin"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -1718,8 +2278,8 @@
     ]
   },
   "themeLemmas": [
-    "gad",
-    "yisrael",
-    "mizbeach"
+    "asher",
+    "amar",
+    "yisrael"
   ]
 }

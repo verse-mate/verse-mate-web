@@ -14,6 +14,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -24,8 +28,24 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to them",
+        "lemma": "el"
+      },
+      {
+        "surface": "When",
+        "lemma": "ki"
       },
       {
         "surface": "someone",
@@ -58,12 +78,20 @@
         "lemma": "erekh"
       },
       {
+        "surface": "concerns",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a male",
         "lemma": "zakhar"
       },
       {
         "surface": "from twenty",
         "lemma": "esrim"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "sixty",
@@ -76,6 +104,10 @@
       {
         "surface": "then your valuation",
         "lemma": "erekh"
+      },
+      {
+        "surface": "shall be",
+        "lemma": "hayah"
       },
       {
         "surface": "fifty",
@@ -100,12 +132,24 @@
     ],
     "4": [
       {
+        "surface": "Or if",
+        "lemma": "im"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a female",
         "lemma": "neqevah"
       },
       {
         "surface": "then your valuation",
         "lemma": "erekh"
+      },
+      {
+        "surface": "shall be",
+        "lemma": "hayah"
       },
       {
         "surface": "thirty",
@@ -118,8 +162,16 @@
     ],
     "5": [
       {
+        "surface": "And if the person is",
+        "lemma": "im"
+      },
+      {
         "surface": "from five",
         "lemma": "chamesh"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "twenty",
@@ -136,6 +188,10 @@
       {
         "surface": "for the male",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "shall be",
+        "lemma": "hayah"
       },
       {
         "surface": "twenty",
@@ -160,8 +216,16 @@
     ],
     "6": [
       {
+        "surface": "Now if the person is",
+        "lemma": "im"
+      },
+      {
         "surface": "from one month",
         "lemma": "chodesh"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "five",
@@ -178,6 +242,10 @@
       {
         "surface": "for the male",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "shall be",
+        "lemma": "hayah"
       },
       {
         "surface": "five",
@@ -210,6 +278,10 @@
     ],
     "7": [
       {
+        "surface": "And if the person is",
+        "lemma": "im"
+      },
+      {
         "surface": "sixty",
         "lemma": "shishshim"
       },
@@ -224,6 +296,10 @@
       {
         "surface": "then your valuation",
         "lemma": "erekh"
+      },
+      {
+        "surface": "shall be",
+        "lemma": "hayah"
       },
       {
         "surface": "fifteen",
@@ -251,6 +327,14 @@
       }
     ],
     "8": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "the one making the vow",
+        "lemma": "hu"
+      },
       {
         "surface": "is too poor to pay",
         "lemma": "mukh"
@@ -280,6 +364,14 @@
         "lemma": "arakh"
       },
       {
+        "surface": "according to",
+        "lemma": "al"
+      },
+      {
+        "surface": "what",
+        "lemma": "asher"
+      },
+      {
         "surface": "the one making the vow",
         "lemma": "nadar"
       },
@@ -290,8 +382,20 @@
     ],
     "9": [
       {
+        "surface": "If he vows",
+        "lemma": "im"
+      },
+      {
+        "surface": "an",
+        "lemma": "min"
+      },
+      {
         "surface": "animal",
         "lemma": "behemah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "may be brought",
@@ -306,8 +410,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
+        "surface": "such animal",
+        "lemma": "min"
+      },
+      {
+        "surface": "given",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "shall be",
+        "lemma": "hayah"
       },
       {
         "surface": "holy",
@@ -315,6 +435,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "He must not",
+        "lemma": "lo"
+      },
       {
         "surface": "replace it",
         "lemma": "chalaph"
@@ -332,12 +456,20 @@
         "lemma": "ra"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "bad",
         "lemma": "ra"
       },
       {
         "surface": "for good",
         "lemma": "tov"
+      },
+      {
+        "surface": "But if",
+        "lemma": "im"
       },
       {
         "surface": "he does substitute",
@@ -352,8 +484,16 @@
         "lemma": "behemah"
       },
       {
+        "surface": "both that animal",
+        "lemma": "hu"
+      },
+      {
         "surface": "and its substitute",
         "lemma": "temurah"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "holy",
@@ -362,12 +502,28 @@
     ],
     "11": [
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
+        "surface": "the vow involves any",
+        "lemma": "kol"
+      },
+      {
         "surface": "of the unclean",
         "lemma": "tame"
       },
       {
         "surface": "animals",
         "lemma": "behemah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "may not",
+        "lemma": "lo"
       },
       {
         "surface": "be brought",
@@ -426,9 +582,17 @@
       {
         "surface": "the price",
         "lemma": "ken"
+      },
+      {
+        "surface": "will be set",
+        "lemma": "hayah"
       }
     ],
     "13": [
+      {
+        "surface": "If, however, the owner",
+        "lemma": "im"
+      },
       {
         "surface": "decides to redeem the animal",
         "lemma": "gaal"
@@ -442,11 +606,19 @@
         "lemma": "chamishi"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "its value",
         "lemma": "erekh"
       }
     ],
     "14": [
+      {
+        "surface": "Now if",
+        "lemma": "ki"
+      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -496,15 +668,27 @@
         "lemma": "qamay"
       },
       {
+        "surface": "just as",
+        "lemma": "asher"
+      },
+      {
         "surface": "the priest",
         "lemma": "kohen"
       },
       {
         "surface": "values",
         "lemma": "arakh"
+      },
+      {
+        "surface": "it",
+        "lemma": "et"
       }
     ],
     "15": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "he who consecrated",
         "lemma": "qadash"
@@ -518,6 +702,10 @@
         "lemma": "gaal"
       },
       {
+        "surface": "it",
+        "lemma": "et"
+      },
+      {
         "surface": "he must add",
         "lemma": "yasaph"
       },
@@ -526,15 +714,27 @@
         "lemma": "chamishi"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "the assessed",
         "lemma": "erekh"
       },
       {
         "surface": "value",
         "lemma": "keseph"
+      },
+      {
+        "surface": "and it will belong",
+        "lemma": "hayah"
       }
     ],
     "16": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -558,6 +758,10 @@
       {
         "surface": "then your valuation",
         "lemma": "erekh"
+      },
+      {
+        "surface": "shall be",
+        "lemma": "hayah"
       },
       {
         "surface": "proportional",
@@ -594,6 +798,10 @@
     ],
     "17": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "he consecrates",
         "lemma": "qadash"
       },
@@ -619,6 +827,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "he consecrates",
         "lemma": "qadash"
@@ -648,12 +860,20 @@
         "lemma": "keseph"
       },
       {
+        "surface": "in proportion to",
+        "lemma": "al"
+      },
+      {
         "surface": "the years",
         "lemma": "shaneh"
       },
       {
         "surface": "left",
         "lemma": "yatar"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "the next Year",
@@ -673,6 +893,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "And if",
+        "lemma": "im"
+      },
       {
         "surface": "the one who consecrated",
         "lemma": "qadash"
@@ -694,6 +918,10 @@
         "lemma": "chamishi"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "the assessed",
         "lemma": "erekh"
       },
@@ -708,12 +936,24 @@
     ],
     "20": [
       {
+        "surface": "If, however",
+        "lemma": "im"
+      },
+      {
+        "surface": "he does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "redeem",
         "lemma": "gaal"
       },
       {
         "surface": "the field",
         "lemma": "saday"
+      },
+      {
+        "surface": "or if",
+        "lemma": "im"
       },
       {
         "surface": "he has sold",
@@ -732,6 +972,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "it may no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
       },
@@ -746,8 +990,16 @@
         "lemma": "saday"
       },
       {
+        "surface": "is released",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "in the Jubilee",
         "lemma": "yovel"
+      },
+      {
+        "surface": "it will become",
+        "lemma": "hayah"
       },
       {
         "surface": "holy",
@@ -766,6 +1018,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "it becomes",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the property",
         "lemma": "achuzzah"
       },
@@ -775,6 +1031,10 @@
       }
     ],
     "22": [
+      {
+        "surface": "Now if",
+        "lemma": "im"
+      },
       {
         "surface": "a man consecrates",
         "lemma": "qadash"
@@ -790,6 +1050,14 @@
       {
         "surface": "he has purchased",
         "lemma": "miqnah"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
       },
       {
         "surface": "a part",
@@ -814,6 +1082,10 @@
         "lemma": "mikhsah"
       },
       {
+        "surface": "up to",
+        "lemma": "ad"
+      },
+      {
         "surface": "the Year",
         "lemma": "shaneh"
       },
@@ -822,8 +1094,16 @@
         "lemma": "yovel"
       },
       {
+        "surface": "and the man shall pay",
+        "lemma": "natan"
+      },
+      {
         "surface": "the assessed value",
         "lemma": "erekh"
+      },
+      {
+        "surface": "on that",
+        "lemma": "hu"
       },
       {
         "surface": "day",
@@ -852,6 +1132,14 @@
         "lemma": "saday"
       },
       {
+        "surface": "shall return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to the one from whom",
+        "lemma": "asher"
+      },
+      {
         "surface": "it was bought",
         "lemma": "qanah"
       },
@@ -866,8 +1154,16 @@
     ],
     "25": [
       {
+        "surface": "Every",
+        "lemma": "kol"
+      },
+      {
         "surface": "valuation",
         "lemma": "erekh"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "according to the sanctuary",
@@ -896,6 +1192,10 @@
         "lemma": "akh"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "one",
         "lemma": "ish"
       },
@@ -912,6 +1212,10 @@
         "lemma": "behemah"
       },
       {
+        "surface": "because",
+        "lemma": "asher"
+      },
+      {
         "surface": "a firstborn",
         "lemma": "bakhar"
       },
@@ -920,12 +1224,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "Whether it is",
+        "lemma": "im"
+      },
+      {
         "surface": "an ox",
         "lemma": "shor"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "a sheep",
         "lemma": "seh"
+      },
+      {
+        "surface": "it is",
+        "lemma": "hu"
       },
       {
         "surface": "the LORD’s",
@@ -933,6 +1249,10 @@
       }
     ],
     "27": [
+      {
+        "surface": "But if",
+        "lemma": "im"
+      },
       {
         "surface": "it is among the unclean",
         "lemma": "tame"
@@ -958,6 +1278,18 @@
         "lemma": "chamishi"
       },
       {
+        "surface": "of its value",
+        "lemma": "al"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "it is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "redeemed",
         "lemma": "gaal"
       },
@@ -972,6 +1304,14 @@
     ],
     "28": [
       {
+        "surface": "Nothing",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -982,6 +1322,10 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "from all he owns",
+        "lemma": "kol"
       },
       {
         "surface": "whether a man",
@@ -1004,6 +1348,10 @@
         "lemma": "gaal"
       },
       {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "so devoted",
         "lemma": "cherem"
       },
@@ -1022,6 +1370,10 @@
     ],
     "29": [
       {
+        "surface": "No",
+        "lemma": "kol"
+      },
+      {
         "surface": "person",
         "lemma": "adam"
       },
@@ -1039,6 +1391,10 @@
       }
     ],
     "30": [
+      {
+        "surface": "Thus any",
+        "lemma": "kol"
+      },
       {
         "surface": "tithe",
         "lemma": "maaser"
@@ -1068,6 +1424,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is holy",
         "lemma": "qodesh"
       },
@@ -1077,6 +1437,10 @@
       }
     ],
     "31": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -1100,9 +1464,17 @@
       {
         "surface": "a fifth",
         "lemma": "chamishi"
+      },
+      {
+        "surface": "to its value",
+        "lemma": "al"
       }
     ],
     "32": [
+      {
+        "surface": "Every",
+        "lemma": "kol"
+      },
       {
         "surface": "tenth",
         "lemma": "maaser"
@@ -1114,6 +1486,10 @@
       {
         "surface": "or flock",
         "lemma": "tson"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "passes",
@@ -1128,6 +1504,10 @@
         "lemma": "shevet"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "holy",
         "lemma": "qodesh"
       },
@@ -1137,6 +1517,10 @@
       }
     ],
     "33": [
+      {
+        "surface": "He must not",
+        "lemma": "lo"
+      },
       {
         "surface": "inspect",
         "lemma": "baqar"
@@ -1154,20 +1538,40 @@
         "lemma": "ra"
       },
       {
+        "surface": "and he shall not",
+        "lemma": "lo"
+      },
+      {
         "surface": "make any substitution",
         "lemma": "mur"
+      },
+      {
+        "surface": "But if",
+        "lemma": "im"
       },
       {
         "surface": "he does make a substitution",
         "lemma": "mur"
       },
       {
+        "surface": "both the animal",
+        "lemma": "hu"
+      },
+      {
         "surface": "and its substitute",
         "lemma": "temurah"
       },
       {
+        "surface": "shall become",
+        "lemma": "hayah"
+      },
+      {
         "surface": "holy",
         "lemma": "qodesh"
+      },
+      {
+        "surface": "they cannot",
+        "lemma": "lo"
       },
       {
         "surface": "be redeemed",
@@ -1176,8 +1580,16 @@
     ],
     "34": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the commandments",
         "lemma": "mitsvah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -1190,6 +1602,10 @@
       {
         "surface": "to Moses",
         "lemma": "mosheh"
+      },
+      {
+        "surface": "for",
+        "lemma": "el"
       },
       {
         "surface": "the Israelites",
@@ -1206,8 +1622,8 @@
     ]
   },
   "themeLemmas": [
+    "im",
     "erekh",
-    "sheqel",
-    "saday"
+    "hayah"
   ]
 }

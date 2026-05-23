@@ -18,6 +18,14 @@
         "lemma": "batstsarah"
       },
       {
+        "surface": "I cried",
+        "lemma": "qara"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -62,6 +70,10 @@
         "lemma": "mah"
       },
       {
+        "surface": "will He do",
+        "lemma": "natan"
+      },
+      {
         "surface": "and what",
         "lemma": "mah"
       },
@@ -92,6 +104,10 @@
         "lemma": "gibbor"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "burning coals",
         "lemma": "gechel"
       },
@@ -106,6 +122,10 @@
         "lemma": "oyah"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "I dwell",
         "lemma": "gur"
       },
@@ -116,6 +136,10 @@
       {
         "surface": "that I live",
         "lemma": "shakhan"
+      },
+      {
+        "surface": "among",
+        "lemma": "im"
       },
       {
         "surface": "the tents",
@@ -140,6 +164,10 @@
         "lemma": "shakhan"
       },
       {
+        "surface": "among",
+        "lemma": "im"
+      },
+      {
         "surface": "those who hate",
         "lemma": "sane"
       },
@@ -150,12 +178,24 @@
     ],
     "7": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am in favor of peace",
         "lemma": "shalom"
       },
       {
+        "surface": "but when",
+        "lemma": "ki"
+      },
+      {
         "surface": "I speak",
         "lemma": "davar"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
       },
       {
         "surface": "want war",
@@ -164,8 +204,8 @@
     ]
   },
   "themeLemmas": [
+    "im",
     "shalom",
-    "shakhan",
-    "remiyyah"
+    "shakhan"
   ]
 }

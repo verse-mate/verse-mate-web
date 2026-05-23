@@ -108,6 +108,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "sees",
+        "lemma": "raah"
+      },
+      {
         "surface": "and trembles",
         "lemma": "chul"
       }
@@ -142,6 +146,10 @@
         "lemma": "adon"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       }
@@ -160,8 +168,16 @@
         "lemma": "tsedeq"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the peoples",
         "lemma": "am"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "His glory",
@@ -169,6 +185,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "worshipers",
         "lemma": "avad"
@@ -194,6 +214,10 @@
         "lemma": "shachah"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "you gods",
         "lemma": "elohim"
       }
@@ -202,6 +226,10 @@
       {
         "surface": "Zion",
         "lemma": "tsiyyon"
+      },
+      {
+        "surface": "hears",
+        "lemma": "shama"
       },
       {
         "surface": "and rejoices",
@@ -220,6 +248,10 @@
         "lemma": "gil"
       },
       {
+        "surface": "because of",
+        "lemma": "maan"
+      },
+      {
         "surface": "Your judgments",
         "lemma": "mishpat"
       },
@@ -230,12 +262,28 @@
     ],
     "9": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "are Most High",
         "lemma": "elyon"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -248,6 +296,14 @@
       {
         "surface": "far",
         "lemma": "meod"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "gods",
@@ -350,8 +406,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "samach",
-    "paneh",
-    "tsedeq"
+    "paneh"
   ]
 }

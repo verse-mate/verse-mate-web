@@ -26,8 +26,16 @@
         "lemma": "ayin"
       },
       {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "and no one",
         "lemma": "ayin"
+      },
+      {
+        "surface": "came in",
+        "lemma": "bo"
       }
     ],
     "2": [
@@ -36,8 +44,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "Behold",
+        "lemma": "raah"
+      },
+      {
+        "surface": "I have delivered",
+        "lemma": "natan"
       },
       {
         "surface": "Jericho",
@@ -46,6 +70,10 @@
       {
         "surface": "into your hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "along with",
+        "lemma": "et"
       },
       {
         "surface": "its king",
@@ -70,6 +98,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the men",
         "lemma": "enosh"
       },
@@ -92,6 +124,10 @@
       {
         "surface": "time",
         "lemma": "paam"
+      },
+      {
+        "surface": "Do",
+        "lemma": "asah"
       },
       {
         "surface": "this",
@@ -178,6 +214,10 @@
     ],
     "5": [
       {
+        "surface": "And when",
+        "lemma": "hayah"
+      },
+      {
         "surface": "there is a long blast",
         "lemma": "mashakh"
       },
@@ -190,12 +230,20 @@
         "lemma": "qeren"
       },
       {
+        "surface": "and you hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "its",
         "lemma": "shophar"
       },
       {
         "surface": "sound",
         "lemma": "qol"
+      },
+      {
+        "surface": "have all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -252,8 +300,16 @@
         "lemma": "nun"
       },
       {
+        "surface": "summoned",
+        "lemma": "qara"
+      },
+      {
         "surface": "the priests",
         "lemma": "kohen"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
       },
       {
         "surface": "Take up",
@@ -306,6 +362,10 @@
     ],
     "7": [
       {
+        "surface": "And he told",
+        "lemma": "amar"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -346,6 +406,14 @@
       {
         "surface": "After Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "had spoken",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the people",
@@ -476,6 +544,10 @@
         "lemma": "am"
       },
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "give a battle cry",
         "lemma": "rua"
       },
@@ -484,16 +556,40 @@
         "lemma": "qol"
       },
       {
+        "surface": "be heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "let one word",
         "lemma": "davar"
+      },
+      {
+        "surface": "come out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of your mouth",
         "lemma": "peh"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "the day",
         "lemma": "yom"
+      },
+      {
+        "surface": "I tell",
+        "lemma": "amar"
+      },
+      {
+        "surface": "you",
+        "lemma": "el"
       },
       {
         "surface": "to shout",
@@ -528,6 +624,10 @@
       {
         "surface": "it once",
         "lemma": "paam"
+      },
+      {
+        "surface": "And the people returned",
+        "lemma": "bo"
       },
       {
         "surface": "to the camp",
@@ -680,8 +780,16 @@
         "lemma": "paam"
       },
       {
+        "surface": "and returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to the camp",
         "lemma": "machaneh"
+      },
+      {
+        "surface": "They did",
+        "lemma": "asah"
       },
       {
         "surface": "this",
@@ -697,6 +805,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "Then",
+        "lemma": "hayah"
+      },
       {
         "surface": "on the seventh",
         "lemma": "shevii"
@@ -730,8 +842,20 @@
         "lemma": "paam"
       },
       {
+        "surface": "in the same",
+        "lemma": "zeh"
+      },
+      {
         "surface": "manner",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "That",
+        "lemma": "hu"
+      },
+      {
+        "surface": "was the only",
+        "lemma": "raq"
       },
       {
         "surface": "day",
@@ -780,6 +904,10 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "commanded",
+        "lemma": "amar"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -788,8 +916,16 @@
         "lemma": "rua"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has given",
+        "lemma": "natan"
       },
       {
         "surface": "the city",
@@ -802,12 +938,24 @@
         "lemma": "ir"
       },
       {
+        "surface": "and everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "must be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "devoted",
         "lemma": "cherem"
       },
       {
         "surface": "to the LORD {for destruction",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "Only",
+        "lemma": "raq"
       },
       {
         "surface": "Rahab",
@@ -818,12 +966,24 @@
         "lemma": "zanah"
       },
       {
+        "surface": "and all those",
+        "lemma": "kol"
+      },
+      {
+        "surface": "with her",
+        "lemma": "et"
+      },
+      {
         "surface": "in her house",
         "lemma": "bet"
       },
       {
         "surface": "will live",
         "lemma": "chayah"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "she hid",
@@ -840,12 +1000,24 @@
     ],
     "18": [
       {
+        "surface": "But",
+        "lemma": "raq"
+      },
+      {
         "surface": "keep away",
         "lemma": "shamar"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the things devoted to destruction",
         "lemma": "cherem"
+      },
+      {
+        "surface": "lest",
+        "lemma": "pen"
       },
       {
         "surface": "you yourself be set apart for destruction",
@@ -854,6 +1026,10 @@
       {
         "surface": "If you take",
         "lemma": "laqach"
+      },
+      {
+        "surface": "any of",
+        "lemma": "min"
       },
       {
         "surface": "these",
@@ -882,6 +1058,10 @@
     ],
     "19": [
       {
+        "surface": "For all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the silver",
         "lemma": "keseph"
       },
@@ -908,6 +1088,10 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "they must go into",
+        "lemma": "bo"
       },
       {
         "surface": "His",
@@ -938,6 +1122,10 @@
       {
         "surface": "When they",
         "lemma": "am"
+      },
+      {
+        "surface": "heard",
+        "lemma": "shama"
       },
       {
         "surface": "the blast",
@@ -1006,6 +1194,10 @@
         "lemma": "charam"
       },
       {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
         "surface": "in the city",
         "lemma": "ir"
       },
@@ -1020,6 +1212,10 @@
       {
         "surface": "young",
         "lemma": "naar"
+      },
+      {
+        "surface": "and",
+        "lemma": "ad"
       },
       {
         "surface": "old",
@@ -1044,6 +1240,10 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "told",
+        "lemma": "amar"
+      },
+      {
         "surface": "the two",
         "lemma": "shenayim"
       },
@@ -1060,6 +1260,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "Go into",
+        "lemma": "bo"
+      },
+      {
         "surface": "the house",
         "lemma": "bet"
       },
@@ -1068,8 +1272,24 @@
         "lemma": "zanah"
       },
       {
+        "surface": "and bring out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "the woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who are",
+        "lemma": "asher"
+      },
+      {
+        "surface": "just as",
+        "lemma": "asher"
       },
       {
         "surface": "you promised",
@@ -1086,16 +1306,52 @@
         "lemma": "ragal"
       },
       {
+        "surface": "went in",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and brought out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "Rahab",
         "lemma": "rachav"
+      },
+      {
+        "surface": "her father",
+        "lemma": "av"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
       },
       {
         "surface": "mother",
         "lemma": "em"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who belonged",
+        "lemma": "asher"
+      },
+      {
+        "surface": "They brought out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "her whole",
+        "lemma": "kol"
       },
       {
         "surface": "family",
@@ -1126,6 +1382,18 @@
       {
         "surface": "the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "and everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "However",
+        "lemma": "raq"
+      },
+      {
+        "surface": "they put",
+        "lemma": "natan"
       },
       {
         "surface": "the silver",
@@ -1162,6 +1430,10 @@
     ],
     "25": [
       {
+        "surface": "And",
+        "lemma": "et"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
       },
@@ -1178,8 +1450,28 @@
         "lemma": "zanah"
       },
       {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
+        "surface": "her father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "household",
         "lemma": "bet"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who belonged",
+        "lemma": "asher"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "she hid",
@@ -1206,6 +1498,10 @@
         "lemma": "yericho"
       },
       {
+        "surface": "So she has lived",
+        "lemma": "yashav"
+      },
+      {
         "surface": "among",
         "lemma": "qerev"
       },
@@ -1214,11 +1510,27 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       }
     ],
     "26": [
+      {
+        "surface": "At that",
+        "lemma": "hu"
+      },
+      {
+        "surface": "time",
+        "lemma": "et"
+      },
       {
         "surface": "Joshua",
         "lemma": "yehoshua"
@@ -1244,12 +1556,20 @@
         "lemma": "ish"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "rises up",
         "lemma": "qamay"
       },
       {
         "surface": "and rebuilds",
         "lemma": "banah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
       },
       {
         "surface": "city",
@@ -1286,12 +1606,28 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
       },
       {
         "surface": "and his fame",
         "lemma": "shoma"
+      },
+      {
+        "surface": "spread",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "throughout",
+        "lemma": "kol"
       },
       {
         "surface": "the land",
@@ -1301,7 +1637,7 @@
   },
   "themeLemmas": [
     "shophar",
-    "yehoshua",
-    "sheva"
+    "kol",
+    "yehoshua"
   ]
 }

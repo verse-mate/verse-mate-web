@@ -6,8 +6,16 @@
   "verses": {
     "1": [
       {
+        "surface": "Now the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "world",
         "lemma": "erets"
+      },
+      {
+        "surface": "had",
+        "lemma": "hayah"
       },
       {
         "surface": "one",
@@ -27,6 +35,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
       {
         "surface": "as people journeyed",
         "lemma": "nasa"
@@ -52,11 +64,23 @@
         "lemma": "shinar"
       },
       {
+        "surface": "and settled",
+        "lemma": "yashav"
+      },
+      {
         "surface": "there",
         "lemma": "sham"
       }
     ],
     "3": [
+      {
+        "surface": "And they said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
       {
         "surface": "one",
         "lemma": "ish"
@@ -86,6 +110,10 @@
         "lemma": "serephah"
       },
       {
+        "surface": "So they used",
+        "lemma": "hayah"
+      },
+      {
         "surface": "brick",
         "lemma": "levenah"
       },
@@ -108,6 +136,10 @@
         "lemma": "yahav"
       },
       {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
         "surface": "let us build",
         "lemma": "banah"
       },
@@ -128,16 +160,32 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "that we may make",
+        "lemma": "asah"
+      },
+      {
         "surface": "a name",
         "lemma": "shem"
+      },
+      {
+        "surface": "and not",
+        "lemma": "pen"
       },
       {
         "surface": "be scattered",
         "lemma": "puts"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "the face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -154,12 +202,20 @@
         "lemma": "yarad"
       },
       {
+        "surface": "to see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the city",
         "lemma": "ir"
       },
       {
         "surface": "and the tower",
         "lemma": "migdal"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "the sons",
@@ -180,12 +236,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "If",
         "lemma": "hen"
       },
       {
         "surface": "they have begun",
         "lemma": "chalal"
+      },
+      {
+        "surface": "to do",
+        "lemma": "asah"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
       },
       {
         "surface": "as one",
@@ -196,12 +264,20 @@
         "lemma": "am"
       },
       {
+        "surface": "speaking the same",
+        "lemma": "kol"
+      },
+      {
         "surface": "language",
         "lemma": "saphah"
       },
       {
         "surface": "then",
         "lemma": "attah"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
       },
       {
         "surface": "they devise",
@@ -230,6 +306,18 @@
         "lemma": "saphah"
       },
       {
+        "surface": "so that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "they will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "understand",
+        "lemma": "shama"
+      },
+      {
         "surface": "one",
         "lemma": "ish"
       },
@@ -256,8 +344,16 @@
         "lemma": "sham"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "the face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -278,12 +374,24 @@
     ],
     "9": [
       {
+        "surface": "That is why",
+        "lemma": "al"
+      },
+      {
         "surface": "it",
         "lemma": "shem"
       },
       {
+        "surface": "is called",
+        "lemma": "qara"
+      },
+      {
         "surface": "Babel",
         "lemma": "bavel"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "there",
@@ -302,6 +410,10 @@
         "lemma": "saphah"
       },
       {
+        "surface": "of the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "world",
         "lemma": "erets"
       },
@@ -318,8 +430,16 @@
         "lemma": "puts"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "the face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
       },
       {
         "surface": "the earth",
@@ -327,6 +447,10 @@
       }
     ],
     "10": [
+      {
+        "surface": "This",
+        "lemma": "elleh"
+      },
       {
         "surface": "is the account",
         "lemma": "toledah"
@@ -926,6 +1050,10 @@
     ],
     "27": [
       {
+        "surface": "This",
+        "lemma": "elleh"
+      },
+      {
         "surface": "is the account",
         "lemma": "toledah"
       },
@@ -967,6 +1095,14 @@
       }
     ],
     "28": [
+      {
+        "surface": "During",
+        "lemma": "al"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
+      },
       {
         "surface": "Terah’s lifetime",
         "lemma": "terach"
@@ -1054,6 +1190,10 @@
         "lemma": "haran"
       },
       {
+        "surface": "who was the father",
+        "lemma": "av"
+      },
+      {
         "surface": "of both Milcah",
         "lemma": "milkah"
       },
@@ -1066,6 +1206,10 @@
       {
         "surface": "But Sarai",
         "lemma": "saray"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "barren",
@@ -1114,6 +1258,10 @@
         "lemma": "haran"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "his daughter-in-law",
         "lemma": "kallah"
       },
@@ -1128,6 +1276,10 @@
       {
         "surface": "of Abram",
         "lemma": "avram"
+      },
+      {
+        "surface": "and they set out",
+        "lemma": "yatsa"
       },
       {
         "surface": "from Ur",
@@ -1150,8 +1302,20 @@
         "lemma": "kenaan"
       },
       {
+        "surface": "But when they arrived",
+        "lemma": "bo"
+      },
+      {
+        "surface": "in",
+        "lemma": "ad"
+      },
+      {
         "surface": "Haran",
         "lemma": "charan"
+      },
+      {
+        "surface": "they settled",
+        "lemma": "yashav"
       },
       {
         "surface": "there",
@@ -1162,6 +1326,10 @@
       {
         "surface": "Terah",
         "lemma": "terach"
+      },
+      {
+        "surface": "lived",
+        "lemma": "hayah"
       },
       {
         "surface": "205",
@@ -1182,8 +1350,8 @@
     ]
   },
   "themeLemmas": [
-    "nachor",
     "yalad",
-    "shaneh"
+    "shaneh",
+    "chayah"
   ]
 }

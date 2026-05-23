@@ -12,6 +12,18 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "came",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -28,12 +40,20 @@
         "lemma": "mah"
       },
       {
+        "surface": "does",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the wood",
         "lemma": "ets"
       },
       {
         "surface": "of the vine",
         "lemma": "gephen"
+      },
+      {
+        "surface": "surpass",
+        "lemma": "kol"
       },
       {
         "surface": "any other",
@@ -62,20 +82,44 @@
         "lemma": "laqach"
       },
       {
+        "surface": "from it",
+        "lemma": "min"
+      },
+      {
+        "surface": "to make",
+        "lemma": "asah"
+      },
+      {
         "surface": "something useful",
         "lemma": "melakhah"
+      },
+      {
+        "surface": "Or",
+        "lemma": "im"
       },
       {
         "surface": "can one make",
         "lemma": "laqach"
       },
       {
+        "surface": "from it",
+        "lemma": "min"
+      },
+      {
         "surface": "a peg",
         "lemma": "yated"
       },
       {
+        "surface": "on which",
+        "lemma": "al"
+      },
+      {
         "surface": "to hang",
         "lemma": "talah"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "kol"
       },
       {
         "surface": "utensils",
@@ -86,6 +130,10 @@
       {
         "surface": "No",
         "lemma": "hinneh"
+      },
+      {
+        "surface": "it is cast",
+        "lemma": "natan"
       },
       {
         "surface": "into the fire",
@@ -134,20 +182,44 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "when it was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "whole",
         "lemma": "tamim"
       },
       {
+        "surface": "it could not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "be made",
+        "lemma": "asah"
+      },
+      {
         "surface": "useful",
         "lemma": "melakhah"
+      },
+      {
+        "surface": "How much less",
+        "lemma": "aph"
       },
       {
         "surface": "can it ever",
         "lemma": "od"
       },
       {
+        "surface": "be",
+        "lemma": "asah"
+      },
+      {
         "surface": "useful",
         "lemma": "melakhah"
+      },
+      {
+        "surface": "when",
+        "lemma": "ki"
       },
       {
         "surface": "the fire",
@@ -180,6 +252,14 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Like",
+        "lemma": "asher"
+      },
+      {
         "surface": "the wood",
         "lemma": "ets"
       },
@@ -196,6 +276,14 @@
         "lemma": "yaar"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I have given",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the fire",
         "lemma": "esh"
       },
@@ -208,14 +296,30 @@
         "lemma": "ken"
       },
       {
+        "surface": "I will give up",
+        "lemma": "natan"
+      },
+      {
+        "surface": "the people",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
       }
     ],
     "7": [
       {
+        "surface": "And I will set",
+        "lemma": "natan"
+      },
+      {
         "surface": "My face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "Though they may have escaped",
+        "lemma": "yatsa"
       },
       {
         "surface": "the fire",
@@ -242,11 +346,23 @@
         "lemma": "yada"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I am",
+        "lemma": "ani"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       }
     ],
     "8": [
+      {
+        "surface": "Thus I will make",
+        "lemma": "natan"
+      },
       {
         "surface": "the land",
         "lemma": "erets"
@@ -254,6 +370,10 @@
       {
         "surface": "desolate",
         "lemma": "shemamah"
+      },
+      {
+        "surface": "because",
+        "lemma": "yaan"
       },
       {
         "surface": "they have acted unfaithfully",
@@ -276,6 +396,6 @@
   "themeLemmas": [
     "ets",
     "esh",
-    "melakhah"
+    "natan"
   ]
 }

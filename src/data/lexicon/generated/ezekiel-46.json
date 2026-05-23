@@ -18,6 +18,10 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
         "surface": "The gate",
         "lemma": "shaar"
       },
@@ -36,6 +40,10 @@
       {
         "surface": "east",
         "lemma": "qadim"
+      },
+      {
+        "surface": "must be",
+        "lemma": "hayah"
       },
       {
         "surface": "kept shut",
@@ -84,6 +92,10 @@
         "lemma": "nasi"
       },
       {
+        "surface": "is to enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "from the outside",
         "lemma": "chuts"
       },
@@ -104,12 +116,20 @@
         "lemma": "amad"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the gatepost",
         "lemma": "mezuzah"
       },
       {
         "surface": "while the priests",
         "lemma": "kohen"
+      },
+      {
+        "surface": "sacrifice",
+        "lemma": "asah"
       },
       {
         "surface": "his burnt offerings",
@@ -124,6 +144,10 @@
         "lemma": "shachah"
       },
       {
+        "surface": "at",
+        "lemma": "al"
+      },
+      {
         "surface": "the threshold",
         "lemma": "miphtan"
       },
@@ -132,12 +156,24 @@
         "lemma": "shaar"
       },
       {
+        "surface": "and then depart",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "but the gate",
         "lemma": "shaar"
       },
       {
+        "surface": "must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be shut",
         "lemma": "sagar"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "evening",
@@ -178,6 +214,10 @@
         "lemma": "petach"
       },
       {
+        "surface": "to that",
+        "lemma": "hu"
+      },
+      {
         "surface": "gateway",
         "lemma": "shaar"
       }
@@ -186,6 +226,10 @@
       {
         "surface": "The burnt offering",
         "lemma": "olah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "the prince",
@@ -280,6 +324,10 @@
         "lemma": "chodesh"
       },
       {
+        "surface": "he shall offer",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a young",
         "lemma": "ben"
       },
@@ -310,6 +358,10 @@
     ],
     "7": [
       {
+        "surface": "He is to provide",
+        "lemma": "asah"
+      },
+      {
         "surface": "a grain offering",
         "lemma": "minchah"
       },
@@ -328,6 +380,10 @@
       {
         "surface": "with the ram",
         "lemma": "ayil"
+      },
+      {
+        "surface": "and as much",
+        "lemma": "asher"
       },
       {
         "surface": "as he is able",
@@ -356,6 +412,14 @@
         "lemma": "nasi"
       },
       {
+        "surface": "enters",
+        "lemma": "bo"
+      },
+      {
+        "surface": "he shall go in",
+        "lemma": "bo"
+      },
+      {
         "surface": "through",
         "lemma": "derekh"
       },
@@ -366,6 +430,10 @@
       {
         "surface": "of the gateway",
         "lemma": "shaar"
+      },
+      {
+        "surface": "and he shall go out",
+        "lemma": "yatsa"
       },
       {
         "surface": "the same way",
@@ -382,6 +450,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "before",
         "lemma": "paneh"
       },
@@ -392,6 +464,10 @@
       {
         "surface": "at the appointed feasts",
         "lemma": "moed"
+      },
+      {
+        "surface": "whoever enters",
+        "lemma": "bo"
       },
       {
         "surface": "by",
@@ -410,16 +486,8 @@
         "lemma": "shachah"
       },
       {
-        "surface": "by",
-        "lemma": "derekh"
-      },
-      {
-        "surface": "the south",
-        "lemma": "negev"
-      },
-      {
-        "surface": "gate",
-        "lemma": "shaar"
+        "surface": "must go out",
+        "lemma": "yatsa"
       },
       {
         "surface": "by",
@@ -432,6 +500,26 @@
       {
         "surface": "gate",
         "lemma": "shaar"
+      },
+      {
+        "surface": "and whoever enters",
+        "lemma": "bo"
+      },
+      {
+        "surface": "by",
+        "lemma": "derekh"
+      },
+      {
+        "surface": "the south",
+        "lemma": "negev"
+      },
+      {
+        "surface": "gate",
+        "lemma": "shaar"
+      },
+      {
+        "surface": "must go out",
+        "lemma": "yatsa"
       },
       {
         "surface": "by",
@@ -446,6 +534,14 @@
         "lemma": "shaar"
       },
       {
+        "surface": "No one",
+        "lemma": "lo"
+      },
+      {
+        "surface": "is to return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "through",
         "lemma": "derekh"
       },
@@ -454,18 +550,50 @@
         "lemma": "shaar"
       },
       {
+        "surface": "by which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "he entered",
+        "lemma": "bo"
+      },
+      {
+        "surface": "but",
+        "lemma": "ki"
+      },
+      {
+        "surface": "each must go out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "by the opposite gate",
         "lemma": "nokhach"
       }
     ],
     "10": [
       {
+        "surface": "When the people enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the prince",
         "lemma": "nasi"
       },
       {
+        "surface": "shall go in",
+        "lemma": "bo"
+      },
+      {
         "surface": "with them",
         "lemma": "tavekh"
+      },
+      {
+        "surface": "and when they leave",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "he shall leave",
+        "lemma": "yatsa"
       }
     ],
     "11": [
@@ -480,6 +608,10 @@
       {
         "surface": "the grain offering",
         "lemma": "minchah"
+      },
+      {
+        "surface": "shall be",
+        "lemma": "hayah"
       },
       {
         "surface": "an ephah",
@@ -524,8 +656,16 @@
     ],
     "12": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "the prince",
         "lemma": "nasi"
+      },
+      {
+        "surface": "makes",
+        "lemma": "asah"
       },
       {
         "surface": "a freewill offering",
@@ -538,6 +678,10 @@
       {
         "surface": "whether a burnt offering",
         "lemma": "olah"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "a peace offering",
@@ -560,6 +704,10 @@
         "lemma": "patach"
       },
       {
+        "surface": "He is to offer",
+        "lemma": "asah"
+      },
+      {
         "surface": "his burnt offering",
         "lemma": "olah"
       },
@@ -568,12 +716,24 @@
         "lemma": "shelem"
       },
       {
+        "surface": "just as",
+        "lemma": "asher"
+      },
+      {
+        "surface": "he does",
+        "lemma": "asah"
+      },
+      {
         "surface": "on the Sabbath",
         "lemma": "shabbat"
       },
       {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "Then he shall go out",
+        "lemma": "yatsa"
       },
       {
         "surface": "and the gate",
@@ -586,9 +746,17 @@
       {
         "surface": "after",
         "lemma": "achar"
+      },
+      {
+        "surface": "he goes out",
+        "lemma": "yatsa"
       }
     ],
     "13": [
+      {
+        "surface": "And you shall provide",
+        "lemma": "asah"
+      },
       {
         "surface": "an unblemished",
         "lemma": "tamim"
@@ -614,11 +782,23 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "you are to offer it",
+        "lemma": "asah"
+      },
+      {
         "surface": "every morning",
         "lemma": "boqer"
       }
     ],
     "14": [
+      {
+        "surface": "You are also to provide",
+        "lemma": "asah"
+      },
+      {
+        "surface": "with it",
+        "lemma": "al"
+      },
       {
         "surface": "every morning",
         "lemma": "boqer"
@@ -674,6 +854,10 @@
     ],
     "15": [
       {
+        "surface": "Thus they shall provide",
+        "lemma": "asah"
+      },
+      {
         "surface": "the lamb",
         "lemma": "keves"
       },
@@ -712,8 +896,20 @@
         "lemma": "yehovih"
       },
       {
+        "surface": "says",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "ki"
+      },
+      {
         "surface": "the prince",
         "lemma": "nasi"
+      },
+      {
+        "surface": "gives",
+        "lemma": "natan"
       },
       {
         "surface": "a gift",
@@ -732,8 +928,16 @@
         "lemma": "nachalah"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "will belong to his descendants",
         "lemma": "ben"
+      },
+      {
+        "surface": "It will become",
+        "lemma": "hayah"
       },
       {
         "surface": "their property",
@@ -745,6 +949,14 @@
       }
     ],
     "17": [
+      {
+        "surface": "But if",
+        "lemma": "ki"
+      },
+      {
+        "surface": "he gives",
+        "lemma": "natan"
+      },
       {
         "surface": "a gift",
         "lemma": "mattanah"
@@ -762,12 +974,24 @@
         "lemma": "eved"
       },
       {
+        "surface": "it will belong to",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "that servant until",
+        "lemma": "ad"
+      },
+      {
         "surface": "the year",
         "lemma": "shaneh"
       },
       {
         "surface": "of freedom",
         "lemma": "deror"
+      },
+      {
+        "surface": "then it will revert",
+        "lemma": "shuv"
       },
       {
         "surface": "to the prince",
@@ -784,12 +1008,20 @@
       {
         "surface": "to his sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "it shall be",
+        "lemma": "hayah"
       }
     ],
     "18": [
       {
         "surface": "The prince",
         "lemma": "nasi"
+      },
+      {
+        "surface": "must not",
+        "lemma": "lo"
       },
       {
         "surface": "take",
@@ -824,6 +1056,14 @@
         "lemma": "achuzzah"
       },
       {
+        "surface": "so that",
+        "lemma": "maan"
+      },
+      {
+        "surface": "none",
+        "lemma": "lo"
+      },
+      {
         "surface": "of My people",
         "lemma": "am"
       },
@@ -838,8 +1078,16 @@
     ],
     "19": [
       {
+        "surface": "Then the man brought me",
+        "lemma": "bo"
+      },
+      {
         "surface": "through the entrance",
         "lemma": "mavo"
+      },
+      {
+        "surface": "at",
+        "lemma": "al"
       },
       {
         "surface": "the side",
@@ -848,6 +1096,10 @@
       {
         "surface": "of the gate",
         "lemma": "shaar"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
       },
       {
         "surface": "the holy",
@@ -892,8 +1144,24 @@
     ],
     "20": [
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
         "surface": "is the place",
         "lemma": "maqom"
+      },
+      {
+        "surface": "where",
+        "lemma": "asher"
       },
       {
         "surface": "the priests",
@@ -912,6 +1180,10 @@
         "lemma": "chattaah"
       },
       {
+        "surface": "and where",
+        "lemma": "asher"
+      },
+      {
         "surface": "they shall bake",
         "lemma": "aphah"
       },
@@ -922,6 +1194,14 @@
       {
         "surface": "so that they do not",
         "lemma": "bilti"
+      },
+      {
+        "surface": "bring them",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
       },
       {
         "surface": "the outer",
@@ -941,6 +1221,14 @@
       }
     ],
     "21": [
+      {
+        "surface": "Then he brought me",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "into",
+        "lemma": "el"
+      },
       {
         "surface": "the outer",
         "lemma": "chitson"
@@ -1058,6 +1346,10 @@
         "lemma": "mevashshlah"
       },
       {
+        "surface": "built",
+        "lemma": "asah"
+      },
+      {
         "surface": "at the base of",
         "lemma": "tachat"
       },
@@ -1072,8 +1364,24 @@
     ],
     "24": [
       {
+        "surface": "And he said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
         "surface": "are the kitchens",
         "lemma": "bet"
+      },
+      {
+        "surface": "where",
+        "lemma": "asher"
       },
       {
         "surface": "those who minister",
@@ -1099,7 +1407,7 @@
   },
   "themeLemmas": [
     "shaar",
-    "ephah",
-    "nasi"
+    "yatsa",
+    "bo"
   ]
 }

@@ -76,6 +76,10 @@
         "lemma": "asham"
       },
       {
+        "surface": "The LORD",
+        "lemma": "hu"
+      },
+      {
         "surface": "will break down",
         "lemma": "araph"
       },
@@ -94,8 +98,16 @@
     ],
     "3": [
       {
+        "surface": "Surely",
+        "lemma": "ki"
+      },
+      {
         "surface": "now",
         "lemma": "attah"
+      },
+      {
+        "surface": "they will say",
+        "lemma": "amar"
       },
       {
         "surface": "no",
@@ -104,6 +116,14 @@
       {
         "surface": "king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "we do not",
+        "lemma": "lo"
       },
       {
         "surface": "revere",
@@ -120,6 +140,10 @@
       {
         "surface": "can a king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
       }
     ],
     "4": [
@@ -160,6 +184,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "the furrows",
         "lemma": "telem"
       },
@@ -194,12 +222,20 @@
         "lemma": "betaven"
       },
       {
+        "surface": "Indeed",
+        "lemma": "ki"
+      },
+      {
         "surface": "its people",
         "lemma": "am"
       },
       {
         "surface": "will mourn",
         "lemma": "aval"
+      },
+      {
+        "surface": "over it",
+        "lemma": "al"
       },
       {
         "surface": "with its idolatrous priests",
@@ -210,8 +246,16 @@
         "lemma": "gil"
       },
       {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "its glory",
         "lemma": "kavod"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "it has been taken from them into exile",
@@ -219,6 +263,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "Yes",
+        "lemma": "gam"
+      },
       {
         "surface": "it will be carried",
         "lemma": "yaval"
@@ -282,6 +330,10 @@
         "lemma": "qetseph"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the surface",
         "lemma": "paneh"
       },
@@ -328,6 +380,10 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "Then they will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the mountains",
         "lemma": "har"
       },
@@ -342,6 +398,10 @@
       {
         "surface": "Fall",
         "lemma": "naphal"
+      },
+      {
+        "surface": "on us",
+        "lemma": "al"
       }
     ],
     "9": [
@@ -368,6 +428,10 @@
       {
         "surface": "you have remained",
         "lemma": "amad"
+      },
+      {
+        "surface": "Did not",
+        "lemma": "lo"
       },
       {
         "surface": "the battle",
@@ -408,6 +472,10 @@
         "lemma": "asaph"
       },
       {
+        "surface": "against them",
+        "lemma": "al"
+      },
+      {
         "surface": "to put them in bondage",
         "lemma": "asar"
       },
@@ -442,8 +510,16 @@
         "lemma": "dush"
       },
       {
+        "surface": "but I",
+        "lemma": "ani"
+      },
+      {
         "surface": "will place a yoke",
         "lemma": "avar"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "her fair",
@@ -504,12 +580,24 @@
         "lemma": "nir"
       },
       {
+        "surface": "For it is time",
+        "lemma": "et"
+      },
+      {
         "surface": "to seek",
         "lemma": "darash"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
+        "surface": "He comes",
+        "lemma": "bo"
       },
       {
         "surface": "and sends righteousness",
@@ -550,6 +638,10 @@
         "lemma": "kachash"
       },
       {
+        "surface": "Because",
+        "lemma": "ki"
+      },
+      {
         "surface": "you have trusted",
         "lemma": "batach"
       },
@@ -578,6 +670,10 @@
       {
         "surface": "against your people",
         "lemma": "am"
+      },
+      {
+        "surface": "so that all",
+        "lemma": "kol"
       },
       {
         "surface": "your fortresses",
@@ -616,6 +712,10 @@
         "lemma": "ratash"
       },
       {
+        "surface": "along with",
+        "lemma": "al"
+      },
+      {
         "surface": "their children",
         "lemma": "ben"
       }
@@ -624,6 +724,10 @@
       {
         "surface": "Thus",
         "lemma": "kakhah"
+      },
+      {
+        "surface": "it will be done",
+        "lemma": "asah"
       },
       {
         "surface": "vvv",
@@ -664,8 +768,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "yisrael",
-    "peri",
-    "mizbeach"
+    "ki"
   ]
 }

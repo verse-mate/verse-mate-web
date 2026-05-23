@@ -28,8 +28,16 @@
     ],
     "2": [
       {
+        "surface": "Surely",
+        "lemma": "im"
+      },
+      {
         "surface": "mockers",
         "lemma": "hatol"
+      },
+      {
+        "surface": "surround me",
+        "lemma": "immad"
       },
       {
         "surface": "and my eyes",
@@ -58,6 +66,10 @@
         "lemma": "arav"
       },
       {
+        "surface": "You demand",
+        "lemma": "im"
+      },
+      {
         "surface": "Who else",
         "lemma": "mi"
       },
@@ -78,6 +90,14 @@
       {
         "surface": "to understanding",
         "lemma": "sekhel"
+      },
+      {
+        "surface": "therefore",
+        "lemma": "al"
+      },
+      {
+        "surface": "You will not",
+        "lemma": "lo"
       },
       {
         "surface": "exalt them",
@@ -124,6 +144,10 @@
         "lemma": "am"
       },
       {
+        "surface": "a man",
+        "lemma": "hayah"
+      },
+      {
         "surface": "in whose face",
         "lemma": "paneh"
       },
@@ -146,6 +170,10 @@
         "lemma": "kaas"
       },
       {
+        "surface": "and my whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "body",
         "lemma": "yatsur"
       },
@@ -164,12 +192,24 @@
         "lemma": "shamem"
       },
       {
+        "surface": "at",
+        "lemma": "al"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "and the innocent",
         "lemma": "naqi"
       },
       {
         "surface": "are stirred",
         "lemma": "ur"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "the godless",
@@ -203,6 +243,26 @@
       }
     ],
     "10": [
+      {
+        "surface": "But",
+        "lemma": "ulam"
+      },
+      {
+        "surface": "come back",
+        "lemma": "bo"
+      },
+      {
+        "surface": "and try again",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "all of you",
+        "lemma": "kol"
+      },
+      {
+        "surface": "For I will not",
+        "lemma": "lo"
+      },
       {
         "surface": "find",
         "lemma": "matsa"
@@ -270,6 +330,10 @@
     ],
     "13": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "I look",
         "lemma": "qavah"
       },
@@ -296,8 +360,20 @@
     ],
     "14": [
       {
+        "surface": "and say",
+        "lemma": "qara"
+      },
+      {
         "surface": "to corruption",
         "lemma": "shachat"
+      },
+      {
+        "surface": "You are",
+        "lemma": "attah"
+      },
+      {
+        "surface": "my father",
+        "lemma": "av"
       },
       {
         "surface": "and to the worm",
@@ -316,6 +392,10 @@
       {
         "surface": "where",
         "lemma": "ayyeh"
+      },
+      {
+        "surface": "then",
+        "lemma": "epho"
       },
       {
         "surface": "is my hope",
@@ -356,14 +436,18 @@
         "lemma": "yachad"
       },
       {
+        "surface": "into",
+        "lemma": "al"
+      },
+      {
         "surface": "the dust",
         "lemma": "aphar"
       }
     ]
   },
   "themeLemmas": [
-    "tiqvah",
-    "sum",
-    "sheol"
+    "al",
+    "im",
+    "tiqvah"
   ]
 }

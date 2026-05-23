@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "You are to construct",
+        "lemma": "asah"
+      },
+      {
         "surface": "the tabernacle itself",
         "lemma": "mishkan"
       },
@@ -48,6 +52,10 @@
       {
         "surface": "worked",
         "lemma": "maaseh"
+      },
+      {
+        "surface": "into them",
+        "lemma": "et"
       }
     ],
     "2": [
@@ -84,6 +92,10 @@
         "lemma": "rochav"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "curtains",
         "lemma": "yeriah"
       },
@@ -104,6 +116,10 @@
       {
         "surface": "of the curtains",
         "lemma": "yeriah"
+      },
+      {
+        "surface": "are to be",
+        "lemma": "hayah"
       },
       {
         "surface": "joined",
@@ -128,12 +144,20 @@
     ],
     "4": [
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
         "surface": "loops",
         "lemma": "lulay"
       },
       {
         "surface": "of blue material",
         "lemma": "tekhelet"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the edge",
@@ -154,6 +178,10 @@
       {
         "surface": "set",
         "lemma": "choveret"
+      },
+      {
+        "surface": "and do",
+        "lemma": "asah"
       },
       {
         "surface": "the same",
@@ -181,6 +209,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "Make",
+        "lemma": "asah"
+      },
       {
         "surface": "fifty",
         "lemma": "chamishshim"
@@ -240,6 +272,10 @@
     ],
     "6": [
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
         "surface": "fifty",
         "lemma": "chamishshim"
       },
@@ -272,11 +308,19 @@
         "lemma": "mishkan"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a unit",
         "lemma": "echad"
       }
     ],
     "7": [
+      {
+        "surface": "You are to make",
+        "lemma": "asah"
+      },
       {
         "surface": "curtains",
         "lemma": "yeriah"
@@ -288,6 +332,10 @@
       {
         "surface": "for the tent",
         "lemma": "ohel"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "the tabernacle",
@@ -386,6 +434,10 @@
         "lemma": "kaphal"
       },
       {
+        "surface": "at",
+        "lemma": "el"
+      },
+      {
         "surface": "the front",
         "lemma": "mul"
       },
@@ -396,12 +448,20 @@
     ],
     "10": [
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
         "surface": "fifty",
         "lemma": "chamishshim"
       },
       {
         "surface": "loops",
         "lemma": "lulay"
+      },
+      {
+        "surface": "along",
+        "lemma": "al"
       },
       {
         "surface": "the edge",
@@ -432,6 +492,10 @@
         "lemma": "lulay"
       },
       {
+        "surface": "along",
+        "lemma": "al"
+      },
+      {
         "surface": "the edge",
         "lemma": "saphah"
       },
@@ -450,6 +514,10 @@
     ],
     "11": [
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
         "surface": "fifty",
         "lemma": "chamishshim"
       },
@@ -460,6 +528,10 @@
       {
         "surface": "clasps",
         "lemma": "qeres"
+      },
+      {
+        "surface": "and put",
+        "lemma": "bo"
       },
       {
         "surface": "them",
@@ -476,6 +548,10 @@
       {
         "surface": "the tent",
         "lemma": "ohel"
+      },
+      {
+        "surface": "together",
+        "lemma": "hayah"
       },
       {
         "surface": "as a unit",
@@ -516,6 +592,10 @@
         "lemma": "sarach"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "the back",
         "lemma": "achor"
       },
@@ -542,12 +622,24 @@
         "lemma": "orekh"
       },
       {
+        "surface": "on either side",
+        "lemma": "zeh"
+      },
+      {
         "surface": "and the excess",
         "lemma": "adaph"
       },
       {
+        "surface": "will",
+        "lemma": "hayah"
+      },
+      {
         "surface": "hang",
         "lemma": "sarach"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "the sides",
@@ -563,6 +655,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "Also make",
+        "lemma": "asah"
+      },
       {
         "surface": "a covering",
         "lemma": "mikhseh"
@@ -597,6 +693,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "You are to construct",
+        "lemma": "asah"
+      },
       {
         "surface": "upright",
         "lemma": "amad"
@@ -662,6 +762,10 @@
         "lemma": "shalav"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "each",
         "lemma": "ishshah"
       },
@@ -678,6 +782,14 @@
         "lemma": "qeresh"
       },
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the frames",
         "lemma": "qeresh"
       },
@@ -691,6 +803,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "Construct",
+        "lemma": "asah"
+      },
       {
         "surface": "twenty",
         "lemma": "esrim"
@@ -713,6 +829,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "with",
+        "lemma": "asah"
+      },
       {
         "surface": "forty",
         "lemma": "arbaim"
@@ -828,6 +948,10 @@
     ],
     "22": [
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
         "surface": "six",
         "lemma": "shesh"
       },
@@ -849,6 +973,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "and",
+        "lemma": "asah"
+      },
       {
         "surface": "two",
         "lemma": "shenayim"
@@ -880,12 +1008,20 @@
         "lemma": "yachad"
       },
       {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
         "surface": "bottom",
         "lemma": "mattah"
       },
       {
         "surface": "to top",
         "lemma": "rosh"
+      },
+      {
+        "surface": "and fitted into",
+        "lemma": "el"
       },
       {
         "surface": "a single",
@@ -900,6 +1036,10 @@
         "lemma": "shenayim"
       },
       {
+        "surface": "will serve as",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the two",
         "lemma": "shenayim"
       },
@@ -909,6 +1049,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "So there are to be",
+        "lemma": "hayah"
+      },
       {
         "surface": "eight",
         "lemma": "shemoneh"
@@ -947,6 +1091,10 @@
       }
     ],
     "26": [
+      {
+        "surface": "You are also to make",
+        "lemma": "asah"
+      },
       {
         "surface": "five",
         "lemma": "chamesh"
@@ -1044,8 +1192,16 @@
         "lemma": "barach"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "one end",
         "lemma": "qatseh"
+      },
+      {
+        "surface": "to the other",
+        "lemma": "el"
       }
     ],
     "29": [
@@ -1060,6 +1216,10 @@
       {
         "surface": "with gold",
         "lemma": "zahav"
+      },
+      {
+        "surface": "and make",
+        "lemma": "asah"
       },
       {
         "surface": "gold",
@@ -1104,11 +1264,19 @@
         "lemma": "mishpat"
       },
       {
+        "surface": "shown you",
+        "lemma": "raah"
+      },
+      {
         "surface": "on the mountain",
         "lemma": "har"
       }
     ],
     "31": [
+      {
+        "surface": "Make",
+        "lemma": "asah"
+      },
       {
         "surface": "a veil",
         "lemma": "porekhet"
@@ -1144,9 +1312,21 @@
       {
         "surface": "worked",
         "lemma": "maaseh"
+      },
+      {
+        "surface": "into it",
+        "lemma": "asah"
       }
     ],
     "32": [
+      {
+        "surface": "Hang",
+        "lemma": "natan"
+      },
+      {
+        "surface": "it",
+        "lemma": "et"
+      },
       {
         "surface": "with gold",
         "lemma": "zahav"
@@ -1154,6 +1334,10 @@
       {
         "surface": "hooks",
         "lemma": "vav"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "four",
@@ -1176,6 +1360,10 @@
         "lemma": "zahav"
       },
       {
+        "surface": "and standing on",
+        "lemma": "al"
+      },
+      {
         "surface": "four",
         "lemma": "arba"
       },
@@ -1190,6 +1378,10 @@
     ],
     "33": [
       {
+        "surface": "And hang",
+        "lemma": "natan"
+      },
+      {
         "surface": "the veil",
         "lemma": "porekhet"
       },
@@ -1200,6 +1392,10 @@
       {
         "surface": "the clasps",
         "lemma": "qeres"
+      },
+      {
+        "surface": "and place",
+        "lemma": "bo"
       },
       {
         "surface": "the ark",
@@ -1236,8 +1432,16 @@
     ],
     "34": [
       {
+        "surface": "Put",
+        "lemma": "natan"
+      },
+      {
         "surface": "the mercy seat",
         "lemma": "kapporet"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the ark",
@@ -1270,6 +1474,10 @@
         "lemma": "porekhet"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the north",
         "lemma": "tsaphon"
       },
@@ -1282,6 +1490,14 @@
         "lemma": "mishkan"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
+        "surface": "put",
+        "lemma": "natan"
+      },
+      {
         "surface": "the lampstand",
         "lemma": "menorah"
       },
@@ -1292,6 +1508,10 @@
       {
         "surface": "the table",
         "lemma": "shulchan"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the south",
@@ -1310,6 +1530,10 @@
       {
         "surface": "to the tent",
         "lemma": "ohel"
+      },
+      {
+        "surface": "you are to make",
+        "lemma": "asah"
       },
       {
         "surface": "a curtain",
@@ -1342,6 +1566,10 @@
     ],
     "37": [
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
         "surface": "five",
         "lemma": "chamesh"
       },
@@ -1360,6 +1588,10 @@
       {
         "surface": "overlay",
         "lemma": "tsaphah"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
       },
       {
         "surface": "with gold",
@@ -1392,8 +1624,8 @@
     ]
   },
   "themeLemmas": [
+    "asah",
     "yeriah",
-    "qeresh",
-    "mishkan"
+    "qeresh"
   ]
 }

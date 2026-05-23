@@ -18,6 +18,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "restored",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the captives",
         "lemma": "shivah"
       },
@@ -26,11 +30,19 @@
         "lemma": "tsiyyon"
       },
       {
+        "surface": "we were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "like dreamers",
         "lemma": "chalam"
       }
     ],
     "2": [
+      {
+        "surface": "Then",
+        "lemma": "az"
+      },
       {
         "surface": "our mouths",
         "lemma": "peh"
@@ -52,6 +64,14 @@
         "lemma": "rinnah"
       },
       {
+        "surface": "Then",
+        "lemma": "az"
+      },
+      {
+        "surface": "it was said",
+        "lemma": "amar"
+      },
+      {
         "surface": "among the nations",
         "lemma": "goy"
       },
@@ -60,8 +80,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "has done",
+        "lemma": "asah"
+      },
+      {
         "surface": "great",
         "lemma": "gadal"
+      },
+      {
+        "surface": "things for",
+        "lemma": "im"
+      },
+      {
+        "surface": "them",
+        "lemma": "elleh"
       }
     ],
     "3": [
@@ -70,8 +102,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "has done",
+        "lemma": "asah"
+      },
+      {
         "surface": "great",
         "lemma": "gadal"
+      },
+      {
+        "surface": "things for us",
+        "lemma": "im"
+      },
+      {
+        "surface": "we are",
+        "lemma": "hayah"
       },
       {
         "surface": "filled with joy",
@@ -79,6 +123,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Restore",
+        "lemma": "shuv"
+      },
       {
         "surface": "our captives",
         "lemma": "shevut"
@@ -136,6 +184,10 @@
         "lemma": "zera"
       },
       {
+        "surface": "will surely return",
+        "lemma": "bo"
+      },
+      {
         "surface": "with shouts of joy",
         "lemma": "rinnah"
       },
@@ -151,7 +203,7 @@
   },
   "themeLemmas": [
     "rinnah",
-    "nasa",
-    "gadal"
+    "shuv",
+    "nasa"
   ]
 }

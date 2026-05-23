@@ -26,11 +26,19 @@
         "lemma": "tehillah"
       },
       {
+        "surface": "be not",
+        "lemma": "al"
+      },
+      {
         "surface": "silent",
         "lemma": "charash"
       }
     ],
     "2": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "wicked",
         "lemma": "rasah"
@@ -48,8 +56,16 @@
         "lemma": "patach"
       },
       {
+        "surface": "against me",
+        "lemma": "al"
+      },
+      {
         "surface": "they speak",
         "lemma": "davar"
+      },
+      {
+        "surface": "against me",
+        "lemma": "et"
       },
       {
         "surface": "with lying",
@@ -96,6 +112,10 @@
         "lemma": "satan"
       },
       {
+        "surface": "but I am a man",
+        "lemma": "ani"
+      },
+      {
         "surface": "of prayer",
         "lemma": "tephillah"
       }
@@ -136,6 +156,10 @@
         "lemma": "paqad"
       },
       {
+        "surface": "over him",
+        "lemma": "al"
+      },
+      {
         "surface": "a wicked man",
         "lemma": "rasah"
       },
@@ -146,6 +170,10 @@
       {
         "surface": "stand",
         "lemma": "amad"
+      },
+      {
+        "surface": "at",
+        "lemma": "al"
       },
       {
         "surface": "his right hand",
@@ -166,6 +194,10 @@
         "lemma": "tephillah"
       },
       {
+        "surface": "be regarded",
+        "lemma": "hayah"
+      },
+      {
         "surface": "as sin",
         "lemma": "chataah"
       }
@@ -174,6 +206,10 @@
       {
         "surface": "May his days",
         "lemma": "yom"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "few",
@@ -196,6 +232,10 @@
       {
         "surface": "May his children",
         "lemma": "ben"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "fatherless",
@@ -242,6 +282,10 @@
         "lemma": "naqash"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "and strangers",
         "lemma": "zur"
       },
@@ -256,12 +300,28 @@
     ],
     "12": [
       {
+        "surface": "May there be",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no one",
+        "lemma": "al"
+      },
+      {
         "surface": "to extend",
         "lemma": "mashakh"
       },
       {
         "surface": "kindness",
         "lemma": "chesed"
+      },
+      {
+        "surface": "and",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "no one",
+        "lemma": "al"
       },
       {
         "surface": "to favor",
@@ -276,6 +336,10 @@
       {
         "surface": "May his descendants",
         "lemma": "acharit"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "cut off",
@@ -304,8 +368,16 @@
         "lemma": "avan"
       },
       {
+        "surface": "of his fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "be remembered",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "before",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -320,6 +392,10 @@
         "lemma": "em"
       },
       {
+        "surface": "never",
+        "lemma": "al"
+      },
+      {
         "surface": "be blotted out",
         "lemma": "machah"
       }
@@ -328,6 +404,10 @@
       {
         "surface": "May their sins always",
         "lemma": "tamid"
+      },
+      {
+        "surface": "remain",
+        "lemma": "hayah"
       },
       {
         "surface": "before",
@@ -352,8 +432,20 @@
     ],
     "16": [
       {
+        "surface": "For",
+        "lemma": "yaan"
+      },
+      {
+        "surface": "he never",
+        "lemma": "lo"
+      },
+      {
         "surface": "thought",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "to show",
+        "lemma": "asah"
       },
       {
         "surface": "kindness",
@@ -394,8 +486,16 @@
         "lemma": "ahav"
       },
       {
+        "surface": "may it fall on him",
+        "lemma": "bo"
+      },
+      {
         "surface": "the blessing",
         "lemma": "berakhah"
+      },
+      {
+        "surface": "in which he refused",
+        "lemma": "lo"
       },
       {
         "surface": "to delight",
@@ -404,6 +504,10 @@
       {
         "surface": "may it be far",
         "lemma": "rachaq"
+      },
+      {
+        "surface": "from him",
+        "lemma": "min"
       }
     ],
     "18": [
@@ -418,6 +522,10 @@
       {
         "surface": "like a coat",
         "lemma": "mad"
+      },
+      {
+        "surface": "may it soak into",
+        "lemma": "bo"
       },
       {
         "surface": "his body",
@@ -437,6 +545,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "May it be",
+        "lemma": "hayah"
+      },
       {
         "surface": "like a robe",
         "lemma": "beged"
@@ -460,6 +572,10 @@
     ],
     "20": [
       {
+        "surface": "May this",
+        "lemma": "zot"
+      },
+      {
         "surface": "be the LORD’s",
         "lemma": "yehovah"
       },
@@ -480,11 +596,19 @@
         "lemma": "ra"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "me",
         "lemma": "nephesh"
       }
     ],
     "21": [
+      {
+        "surface": "But You",
+        "lemma": "attah"
+      },
       {
         "surface": "O GOD",
         "lemma": "yehovih"
@@ -494,12 +618,28 @@
         "lemma": "adonai"
       },
       {
+        "surface": "deal",
+        "lemma": "asah"
+      },
+      {
+        "surface": "kindly with me",
+        "lemma": "et"
+      },
+      {
+        "surface": "for the sake of",
+        "lemma": "maan"
+      },
+      {
         "surface": "Your name",
         "lemma": "shem"
       },
       {
         "surface": "deliver me",
         "lemma": "natsal"
+      },
+      {
+        "surface": "by",
+        "lemma": "ki"
       },
       {
         "surface": "the goodness",
@@ -511,6 +651,14 @@
       }
     ],
     "22": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
       {
         "surface": "am poor",
         "lemma": "ani"
@@ -582,8 +730,20 @@
     ],
     "25": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "an object of scorn",
         "lemma": "cherpah"
+      },
+      {
+        "surface": "when they see me",
+        "lemma": "raah"
       },
       {
         "surface": "they shake",
@@ -622,18 +782,42 @@
         "lemma": "yada"
       },
       {
+        "surface": "that this",
+        "lemma": "ki"
+      },
+      {
         "surface": "is Your hand",
         "lemma": "yad"
       },
       {
+        "surface": "that",
+        "lemma": "zot"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "have done it",
+        "lemma": "asah"
       }
     ],
     "28": [
       {
+        "surface": "Though they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "curse",
         "lemma": "qalal"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
       },
       {
         "surface": "will bless",
@@ -714,6 +898,10 @@
     ],
     "31": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "He stands",
         "lemma": "amad"
       },
@@ -740,8 +928,8 @@
     ]
   },
   "themeLemmas": [
-    "satan",
-    "chesed",
-    "tachat"
+    "hayah",
+    "al",
+    "ki"
   ]
 }

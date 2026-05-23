@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "the word",
         "lemma": "davar"
       },
@@ -22,12 +26,24 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "has a case",
         "lemma": "riv"
+      },
+      {
+        "surface": "against",
+        "lemma": "im"
+      },
+      {
+        "surface": "the people",
+        "lemma": "yashav"
       },
       {
         "surface": "of the land",
@@ -102,12 +118,24 @@
     ],
     "3": [
       {
+        "surface": "Therefore",
+        "lemma": "al"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
         "surface": "mourns",
         "lemma": "aval"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "will waste away",
@@ -130,6 +158,10 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "even",
+        "lemma": "gam"
+      },
+      {
         "surface": "the fish",
         "lemma": "dag"
       },
@@ -148,12 +180,20 @@
         "lemma": "akh"
       },
       {
+        "surface": "let no",
+        "lemma": "al"
+      },
+      {
         "surface": "man",
         "lemma": "ish"
       },
       {
         "surface": "contend",
         "lemma": "riv"
+      },
+      {
+        "surface": "let no",
+        "lemma": "al"
       },
       {
         "surface": "man",
@@ -194,6 +234,10 @@
         "lemma": "kashal"
       },
       {
+        "surface": "with you",
+        "lemma": "im"
+      },
+      {
         "surface": "by night",
         "lemma": "laylah"
       },
@@ -224,6 +268,14 @@
         "lemma": "daat"
       },
       {
+        "surface": "Because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
         "surface": "have rejected",
         "lemma": "maas"
       },
@@ -250,6 +302,14 @@
       {
         "surface": "of your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "will also",
+        "lemma": "gam"
       },
       {
         "surface": "forget",
@@ -304,11 +364,19 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "on",
+        "lemma": "el"
+      },
+      {
         "surface": "iniquity",
         "lemma": "avan"
       }
     ],
     "9": [
+      {
+        "surface": "And it shall be",
+        "lemma": "hayah"
+      },
       {
         "surface": "like people",
         "lemma": "am"
@@ -322,8 +390,16 @@
         "lemma": "paqad"
       },
       {
+        "surface": "both of them",
+        "lemma": "al"
+      },
+      {
         "surface": "for their ways",
         "lemma": "derekh"
+      },
+      {
+        "surface": "and repay",
+        "lemma": "shuv"
       },
       {
         "surface": "for their deeds",
@@ -336,6 +412,10 @@
         "lemma": "akhal"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be satisfied",
         "lemma": "sava"
       },
@@ -344,8 +424,16 @@
         "lemma": "zanah"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "multiply",
         "lemma": "parats"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "they have abandoned",
@@ -404,6 +492,10 @@
         "lemma": "nagad"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "a spirit",
         "lemma": "ruach"
       },
@@ -434,12 +526,20 @@
         "lemma": "zavach"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the mountaintops",
         "lemma": "rosh"
       },
       {
         "surface": "and burn offerings",
         "lemma": "qatar"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the hills",
@@ -462,12 +562,20 @@
         "lemma": "elah"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "their shade",
         "lemma": "tsel"
       },
       {
         "surface": "is pleasant",
         "lemma": "tov"
+      },
+      {
+        "surface": "And so",
+        "lemma": "al"
       },
       {
         "surface": "your daughters",
@@ -488,6 +596,10 @@
     ],
     "14": [
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "punish",
         "lemma": "paqad"
       },
@@ -496,20 +608,44 @@
         "lemma": "bat"
       },
       {
+        "surface": "when",
+        "lemma": "ki"
+      },
+      {
         "surface": "they prostitute themselves",
         "lemma": "zanah"
+      },
+      {
+        "surface": "nor",
+        "lemma": "al"
       },
       {
         "surface": "your daughters-in-law",
         "lemma": "kallah"
       },
       {
+        "surface": "when",
+        "lemma": "ki"
+      },
+      {
         "surface": "they commit adultery",
         "lemma": "naaph"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "the men themselves",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "go off",
         "lemma": "parad"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "prostitutes",
@@ -520,12 +656,20 @@
         "lemma": "zavach"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "shrine prostitutes",
         "lemma": "qedeshah"
       },
       {
         "surface": "So a people",
         "lemma": "am"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "understanding",
@@ -537,6 +681,14 @@
       }
     ],
     "15": [
+      {
+        "surface": "Though",
+        "lemma": "im"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
       {
         "surface": "prostitute yourself",
         "lemma": "zanah"
@@ -550,8 +702,20 @@
         "lemma": "yehudah"
       },
       {
+        "surface": "avoid",
+        "lemma": "al"
+      },
+      {
         "surface": "such guilt",
         "lemma": "asham"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "journey",
+        "lemma": "bo"
       },
       {
         "surface": "to Gilgal",
@@ -570,6 +734,10 @@
         "lemma": "betaven"
       },
       {
+        "surface": "and do not",
+        "lemma": "al"
+      },
+      {
         "surface": "swear on oath",
         "lemma": "shava"
       },
@@ -583,6 +751,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "Israel",
         "lemma": "yisrael"
@@ -674,6 +846,10 @@
         "lemma": "tsarar"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "in its wings",
         "lemma": "kanaph"
       },
@@ -688,8 +864,8 @@
     ]
   },
   "themeLemmas": [
-    "zanah",
-    "yisrael",
-    "riv"
+    "al",
+    "ki",
+    "zanah"
   ]
 }

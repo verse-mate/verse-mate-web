@@ -6,6 +6,14 @@
   "verses": {
     "1": [
       {
+        "surface": "You",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "therefore",
+        "lemma": "dio"
+      },
+      {
         "surface": "have no excuse",
         "lemma": "anapologetos"
       },
@@ -14,12 +22,32 @@
         "lemma": "anthropos"
       },
       {
+        "surface": "who",
+        "lemma": "pas"
+      },
+      {
         "surface": "pass judgment on another",
         "lemma": "krino"
       },
       {
+        "surface": "For",
+        "lemma": "gar"
+      },
+      {
+        "surface": "on",
+        "lemma": "en"
+      },
+      {
+        "surface": "whatever grounds",
+        "lemma": "hos"
+      },
+      {
         "surface": "you judge",
         "lemma": "krino"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "other",
@@ -30,15 +58,47 @@
         "lemma": "katakrino"
       },
       {
+        "surface": "yourself",
+        "lemma": "seautou"
+      },
+      {
+        "surface": "because",
+        "lemma": "gar"
+      },
+      {
+        "surface": "you who",
+        "lemma": "ho"
+      },
+      {
         "surface": "pass judgment",
         "lemma": "krino"
       },
       {
         "surface": "do",
         "lemma": "prasso"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
+        "surface": "same things",
+        "lemma": "autos"
       }
     ],
     "2": [
+      {
+        "surface": "And",
+        "lemma": "de"
+      },
+      {
+        "surface": "we know",
+        "lemma": "eido"
+      },
+      {
+        "surface": "that",
+        "lemma": "hoti"
+      },
       {
         "surface": "God’s",
         "lemma": "theos"
@@ -48,8 +108,28 @@
         "lemma": "krima"
       },
       {
+        "surface": "against",
+        "lemma": "epi"
+      },
+      {
+        "surface": "those who",
+        "lemma": "ho"
+      },
+      {
         "surface": "do",
         "lemma": "prasso"
+      },
+      {
+        "surface": "such things",
+        "lemma": "toioutos"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "based on",
+        "lemma": "kata"
       },
       {
         "surface": "truth",
@@ -57,6 +137,18 @@
       }
     ],
     "3": [
+      {
+        "surface": "So when",
+        "lemma": "de"
+      },
+      {
+        "surface": "you",
+        "lemma": "ho"
+      },
+      {
+        "surface": "O",
+        "lemma": "o"
+      },
       {
         "surface": "man",
         "lemma": "anthropos"
@@ -66,8 +158,28 @@
         "lemma": "krino"
       },
       {
+        "surface": "others",
+        "lemma": "ho"
+      },
+      {
+        "surface": "yet",
+        "lemma": "kai"
+      },
+      {
+        "surface": "do",
+        "lemma": "poieo"
+      },
+      {
+        "surface": "the same things",
+        "lemma": "toioutos"
+      },
+      {
         "surface": "do you think",
         "lemma": "logizomai"
+      },
+      {
+        "surface": "you",
+        "lemma": "su"
       },
       {
         "surface": "will escape",
@@ -84,12 +196,28 @@
     ],
     "4": [
       {
+        "surface": "Or",
+        "lemma": "e"
+      },
+      {
         "surface": "do you disregard",
         "lemma": "kataphroneo"
       },
       {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "riches",
         "lemma": "ploutos"
+      },
+      {
+        "surface": "of",
+        "lemma": "ho"
+      },
+      {
+        "surface": "His",
+        "lemma": "autos"
       },
       {
         "surface": "kindness",
@@ -100,12 +228,20 @@
         "lemma": "anoche"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "patience",
         "lemma": "makrothumia"
       },
       {
         "surface": "not realizing",
         "lemma": "agnoeo"
+      },
+      {
+        "surface": "that",
+        "lemma": "hoti"
       },
       {
         "surface": "God’s",
@@ -120,14 +256,38 @@
         "lemma": "ago"
       },
       {
+        "surface": "you",
+        "lemma": "su"
+      },
+      {
+        "surface": "to",
+        "lemma": "eis"
+      },
+      {
         "surface": "repentance",
         "lemma": "metanoia"
       }
     ],
     "5": [
       {
+        "surface": "But",
+        "lemma": "de"
+      },
+      {
+        "surface": "because of",
+        "lemma": "kata"
+      },
+      {
+        "surface": "your",
+        "lemma": "su"
+      },
+      {
         "surface": "hard",
         "lemma": "sklerotes"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "unrepentant",
@@ -146,12 +306,24 @@
         "lemma": "orge"
       },
       {
+        "surface": "against yourself",
+        "lemma": "seautou"
+      },
+      {
+        "surface": "for",
+        "lemma": "en"
+      },
+      {
         "surface": "the day",
         "lemma": "hemera"
       },
       {
         "surface": "of wrath",
         "lemma": "orge"
+      },
+      {
+        "surface": "when",
+        "lemma": "kai"
       },
       {
         "surface": "God’s",
@@ -168,6 +340,10 @@
     ],
     "6": [
       {
+        "surface": "God",
+        "lemma": "hos"
+      },
+      {
         "surface": "will repay",
         "lemma": "apodidomi"
       },
@@ -176,11 +352,27 @@
         "lemma": "hekastos"
       },
       {
+        "surface": "according to",
+        "lemma": "kata"
+      },
+      {
+        "surface": "his",
+        "lemma": "autos"
+      },
+      {
         "surface": "deeds",
         "lemma": "ergon"
       }
     ],
     "7": [
+      {
+        "surface": "To those who",
+        "lemma": "ho"
+      },
+      {
+        "surface": "by",
+        "lemma": "kata"
+      },
       {
         "surface": "perseverance",
         "lemma": "hupomone"
@@ -206,6 +398,10 @@
         "lemma": "time"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "immortality",
         "lemma": "aphtharsia"
       },
@@ -220,16 +416,40 @@
     ],
     "8": [
       {
+        "surface": "But",
+        "lemma": "de"
+      },
+      {
+        "surface": "for those who",
+        "lemma": "ho"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ek"
+      },
+      {
         "surface": "are self-seeking",
         "lemma": "eritheia"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "who reject",
         "lemma": "apeitheo"
       },
       {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "truth",
         "lemma": "aletheia"
+      },
+      {
+        "surface": "and",
+        "lemma": "de"
       },
       {
         "surface": "follow",
@@ -244,6 +464,10 @@
         "lemma": "orge"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "anger",
         "lemma": "thumos"
       }
@@ -254,8 +478,20 @@
         "lemma": "thlipsis"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "distress",
         "lemma": "stenochoria"
+      },
+      {
+        "surface": "for",
+        "lemma": "epi"
+      },
+      {
+        "surface": "every",
+        "lemma": "pas"
       },
       {
         "surface": "human",
@@ -264,6 +500,10 @@
       {
         "surface": "being",
         "lemma": "psuche"
+      },
+      {
+        "surface": "who",
+        "lemma": "ho"
       },
       {
         "surface": "does",
@@ -282,11 +522,19 @@
         "lemma": "ioudaios"
       },
       {
+        "surface": "then",
+        "lemma": "kai"
+      },
+      {
         "surface": "for the Greek",
         "lemma": "hellen"
       }
     ],
     "10": [
+      {
+        "surface": "but",
+        "lemma": "de"
+      },
       {
         "surface": "glory",
         "lemma": "doxa"
@@ -296,8 +544,20 @@
         "lemma": "time"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "peace",
         "lemma": "eirene"
+      },
+      {
+        "surface": "for everyone",
+        "lemma": "pas"
+      },
+      {
+        "surface": "who",
+        "lemma": "ho"
       },
       {
         "surface": "does",
@@ -316,14 +576,26 @@
         "lemma": "proton"
       },
       {
+        "surface": "then",
+        "lemma": "kai"
+      },
+      {
         "surface": "for the Greek",
         "lemma": "hellen"
       }
     ],
     "11": [
       {
+        "surface": "For",
+        "lemma": "gar"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "does not show",
+        "lemma": "eimi"
       },
       {
         "surface": "favoritism",
@@ -344,12 +616,20 @@
         "lemma": "anomos"
       },
       {
+        "surface": "vvv",
+        "lemma": "kai"
+      },
+      {
         "surface": "will also perish",
         "lemma": "apolluo"
       },
       {
         "surface": "apart from the law",
         "lemma": "anomos"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "all who",
@@ -360,6 +640,10 @@
         "lemma": "hamartano"
       },
       {
+        "surface": "under",
+        "lemma": "en"
+      },
+      {
         "surface": "the law",
         "lemma": "nomos"
       },
@@ -368,11 +652,27 @@
         "lemma": "krino"
       },
       {
+        "surface": "by",
+        "lemma": "dia"
+      },
+      {
         "surface": "the law",
         "lemma": "nomos"
       }
     ],
     "13": [
+      {
+        "surface": "For it is",
+        "lemma": "gar"
+      },
+      {
+        "surface": "not",
+        "lemma": "ou"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
       {
         "surface": "hearers",
         "lemma": "akroates"
@@ -386,8 +686,20 @@
         "lemma": "dikaios"
       },
       {
+        "surface": "before",
+        "lemma": "para"
+      },
+      {
         "surface": "God",
         "lemma": "theos"
+      },
+      {
+        "surface": "but it is",
+        "lemma": "alla"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "doers",
@@ -404,24 +716,76 @@
     ],
     "14": [
       {
+        "surface": "Indeed",
+        "lemma": "gar"
+      },
+      {
+        "surface": "when",
+        "lemma": "hotan"
+      },
+      {
         "surface": "Gentiles",
         "lemma": "ethnos"
+      },
+      {
+        "surface": "who",
+        "lemma": "ho"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "me"
+      },
+      {
+        "surface": "do not have",
+        "lemma": "echo"
       },
       {
         "surface": "the law",
         "lemma": "nomos"
       },
       {
+        "surface": "do",
+        "lemma": "poieo"
+      },
+      {
         "surface": "by nature",
         "lemma": "phusis"
+      },
+      {
+        "surface": "what",
+        "lemma": "ho"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "law requires",
         "lemma": "nomos"
       },
       {
+        "surface": "they are",
+        "lemma": "eimi"
+      },
+      {
         "surface": "a law",
         "lemma": "nomos"
+      },
+      {
+        "surface": "to themselves",
+        "lemma": "heautou"
+      },
+      {
+        "surface": "even though they",
+        "lemma": "houtos"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "me"
+      },
+      {
+        "surface": "do not have",
+        "lemma": "echo"
       },
       {
         "surface": "the law",
@@ -430,12 +794,24 @@
     ],
     "15": [
       {
+        "surface": "So they",
+        "lemma": "hostis"
+      },
+      {
         "surface": "show that",
         "lemma": "endeiknumi"
       },
       {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "work",
         "lemma": "ergon"
+      },
+      {
+        "surface": "of the",
+        "lemma": "ho"
       },
       {
         "surface": "law",
@@ -446,12 +822,28 @@
         "lemma": "graptos"
       },
       {
+        "surface": "on",
+        "lemma": "en"
+      },
+      {
+        "surface": "their",
+        "lemma": "autos"
+      },
+      {
         "surface": "hearts",
         "lemma": "kardia"
       },
       {
+        "surface": "their",
+        "lemma": "autos"
+      },
+      {
         "surface": "consciences",
         "lemma": "suneidesis"
+      },
+      {
+        "surface": "also",
+        "lemma": "kai"
       },
       {
         "surface": "bearing witness",
@@ -466,8 +858,16 @@
         "lemma": "logismos"
       },
       {
+        "surface": "either",
+        "lemma": "metaxu"
+      },
+      {
         "surface": "accusing",
         "lemma": "kategoreo"
+      },
+      {
+        "surface": "or",
+        "lemma": "e"
       },
       {
         "surface": "defending them",
@@ -476,8 +876,20 @@
     ],
     "16": [
       {
+        "surface": "on",
+        "lemma": "en"
+      },
+      {
+        "surface": "the",
+        "lemma": "hos"
+      },
+      {
         "surface": "day",
         "lemma": "hemera"
+      },
+      {
+        "surface": "when",
+        "lemma": "hote"
       },
       {
         "surface": "God",
@@ -496,6 +908,10 @@
         "lemma": "kruptos"
       },
       {
+        "surface": "through",
+        "lemma": "dia"
+      },
+      {
         "surface": "Christ",
         "lemma": "christos"
       },
@@ -504,11 +920,31 @@
         "lemma": "iesous"
       },
       {
+        "surface": "as proclaimed by",
+        "lemma": "kata"
+      },
+      {
+        "surface": "my",
+        "lemma": "ego"
+      },
+      {
         "surface": "gospel",
         "lemma": "euangelion"
       }
     ],
     "17": [
+      {
+        "surface": "Now",
+        "lemma": "de"
+      },
+      {
+        "surface": "you",
+        "lemma": "su"
+      },
+      {
+        "surface": "if",
+        "lemma": "ei"
+      },
       {
         "surface": "you call yourself",
         "lemma": "eponomazo"
@@ -516,6 +952,10 @@
       {
         "surface": "a Jew",
         "lemma": "ioudaios"
+      },
+      {
+        "surface": "if you",
+        "lemma": "kai"
       },
       {
         "surface": "rely on",
@@ -526,8 +966,16 @@
         "lemma": "nomos"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "boast",
         "lemma": "kauchaomai"
+      },
+      {
+        "surface": "in",
+        "lemma": "en"
       },
       {
         "surface": "God",
@@ -536,12 +984,32 @@
     ],
     "18": [
       {
+        "surface": "if you",
+        "lemma": "kai"
+      },
+      {
+        "surface": "know",
+        "lemma": "ginosko"
+      },
+      {
+        "surface": "His",
+        "lemma": "ho"
+      },
+      {
         "surface": "will",
         "lemma": "thelema"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "approve",
         "lemma": "dokimazo"
+      },
+      {
+        "surface": "of what",
+        "lemma": "ho"
       },
       {
         "surface": "is superior",
@@ -552,14 +1020,34 @@
         "lemma": "katecheo"
       },
       {
+        "surface": "by",
+        "lemma": "ek"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "law",
         "lemma": "nomos"
       }
     ],
     "19": [
       {
+        "surface": "if you",
+        "lemma": "te"
+      },
+      {
         "surface": "are convinced that",
         "lemma": "peitho"
+      },
+      {
+        "surface": "you",
+        "lemma": "seautou"
+      },
+      {
+        "surface": "are",
+        "lemma": "eimi"
       },
       {
         "surface": "a guide",
@@ -572,6 +1060,14 @@
       {
         "surface": "a light",
         "lemma": "phos"
+      },
+      {
+        "surface": "for those",
+        "lemma": "ho"
+      },
+      {
+        "surface": "in",
+        "lemma": "en"
       },
       {
         "surface": "darkness",
@@ -596,8 +1092,24 @@
         "lemma": "nepios"
       },
       {
+        "surface": "because you have",
+        "lemma": "echo"
+      },
+      {
+        "surface": "in",
+        "lemma": "en"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "law",
         "lemma": "nomos"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "embodiment",
@@ -608,11 +1120,23 @@
         "lemma": "gnosis"
       },
       {
+        "surface": "and",
+        "lemma": "kai"
+      },
+      {
         "surface": "truth",
         "lemma": "aletheia"
       }
     ],
     "21": [
+      {
+        "surface": "you,} then",
+        "lemma": "oun"
+      },
+      {
+        "surface": "who",
+        "lemma": "ho"
+      },
       {
         "surface": "teach",
         "lemma": "didasko"
@@ -622,12 +1146,28 @@
         "lemma": "heteros"
       },
       {
+        "surface": "vvv",
+        "lemma": "ou"
+      },
+      {
         "surface": "do you not teach",
         "lemma": "didasko"
       },
       {
+        "surface": "yourself",
+        "lemma": "seautou"
+      },
+      {
+        "surface": "You who",
+        "lemma": "ho"
+      },
+      {
         "surface": "preach",
         "lemma": "kerusso"
+      },
+      {
+        "surface": "against",
+        "lemma": "me"
       },
       {
         "surface": "stealing",
@@ -640,12 +1180,24 @@
     ],
     "22": [
       {
+        "surface": "You who",
+        "lemma": "ho"
+      },
+      {
+        "surface": "forbid",
+        "lemma": "lego"
+      },
+      {
         "surface": "adultery",
         "lemma": "moicheuo"
       },
       {
         "surface": "do you commit adultery",
         "lemma": "moicheuo"
+      },
+      {
+        "surface": "You who",
+        "lemma": "ho"
       },
       {
         "surface": "abhor",
@@ -662,8 +1214,16 @@
     ],
     "23": [
       {
+        "surface": "You who",
+        "lemma": "hos"
+      },
+      {
         "surface": "boast",
         "lemma": "kauchaomai"
+      },
+      {
+        "surface": "in",
+        "lemma": "en"
       },
       {
         "surface": "the law",
@@ -678,8 +1238,16 @@
         "lemma": "theos"
       },
       {
+        "surface": "by",
+        "lemma": "dia"
+      },
+      {
         "surface": "breaking",
         "lemma": "parabasis"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
       },
       {
         "surface": "law",
@@ -687,6 +1255,18 @@
       }
     ],
     "24": [
+      {
+        "surface": "As",
+        "lemma": "kathos"
+      },
+      {
+        "surface": "it is written",
+        "lemma": "grapho"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ho"
+      },
       {
         "surface": "God’s",
         "lemma": "theos"
@@ -700,8 +1280,24 @@
         "lemma": "blasphemeo"
       },
       {
+        "surface": "among",
+        "lemma": "en"
+      },
+      {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "Gentiles",
         "lemma": "ethnos"
+      },
+      {
+        "surface": "because of",
+        "lemma": "dia"
+      },
+      {
+        "surface": "you",
+        "lemma": "su"
       }
     ],
     "25": [
@@ -714,12 +1310,28 @@
         "lemma": "opheleo"
       },
       {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
         "surface": "you observe",
         "lemma": "prasso"
       },
       {
         "surface": "the law",
         "lemma": "nomos"
+      },
+      {
+        "surface": "but",
+        "lemma": "de"
+      },
+      {
+        "surface": "if",
+        "lemma": "ean"
+      },
+      {
+        "surface": "you",
+        "lemma": "eimi"
       },
       {
         "surface": "break",
@@ -730,8 +1342,16 @@
         "lemma": "nomos"
       },
       {
+        "surface": "your",
+        "lemma": "su"
+      },
+      {
         "surface": "circumcision",
         "lemma": "peritome"
+      },
+      {
+        "surface": "has become",
+        "lemma": "ginomai"
       },
       {
         "surface": "uncircumcision",
@@ -739,6 +1359,10 @@
       }
     ],
     "26": [
+      {
+        "surface": "If",
+        "lemma": "ean"
+      },
       {
         "surface": "a man who is not circumcised",
         "lemma": "akrobustia"
@@ -748,12 +1372,28 @@
         "lemma": "phulasso"
       },
       {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "requirements",
         "lemma": "dikaioma"
       },
       {
+        "surface": "of the",
+        "lemma": "ho"
+      },
+      {
         "surface": "law",
         "lemma": "nomos"
+      },
+      {
+        "surface": "will} not",
+        "lemma": "ou"
+      },
+      {
+        "surface": "his",
+        "lemma": "autos"
       },
       {
         "surface": "uncircumcision",
@@ -764,11 +1404,23 @@
         "lemma": "logizomai"
       },
       {
+        "surface": "as",
+        "lemma": "eis"
+      },
+      {
         "surface": "circumcision",
         "lemma": "peritome"
       }
     ],
     "27": [
+      {
+        "surface": "The one who is",
+        "lemma": "ho"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ek"
+      },
       {
         "surface": "physically",
         "lemma": "phusis"
@@ -782,6 +1434,10 @@
         "lemma": "teleo"
       },
       {
+        "surface": "the",
+        "lemma": "ho"
+      },
+      {
         "surface": "law",
         "lemma": "nomos"
       },
@@ -790,8 +1446,24 @@
         "lemma": "krino"
       },
       {
+        "surface": "you",
+        "lemma": "su"
+      },
+      {
+        "surface": "who",
+        "lemma": "ho"
+      },
+      {
+        "surface": "even though you have",
+        "lemma": "dia"
+      },
+      {
         "surface": "the written code",
         "lemma": "gramma"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "circumcision",
@@ -804,20 +1476,52 @@
     ],
     "28": [
       {
+        "surface": "A man",
+        "lemma": "ho"
+      },
+      {
+        "surface": "is",
+        "lemma": "eimi"
+      },
+      {
+        "surface": "not",
+        "lemma": "ou"
+      },
+      {
         "surface": "a Jew",
         "lemma": "ioudaios"
+      },
+      {
+        "surface": "because he is one",
+        "lemma": "en"
       },
       {
         "surface": "outwardly",
         "lemma": "phaneros"
       },
       {
+        "surface": "nor",
+        "lemma": "oude"
+      },
+      {
         "surface": "is circumcision",
         "lemma": "peritome"
       },
       {
+        "surface": "vvv",
+        "lemma": "en"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "ho"
+      },
+      {
         "surface": "only  outward",
         "lemma": "phaneros"
+      },
+      {
+        "surface": "and",
+        "lemma": "en"
       },
       {
         "surface": "physical",
@@ -826,12 +1530,28 @@
     ],
     "29": [
       {
+        "surface": "No",
+        "lemma": "alla"
+      },
+      {
+        "surface": "a man is",
+        "lemma": "ho"
+      },
+      {
         "surface": "a Jew",
         "lemma": "ioudaios"
       },
       {
+        "surface": "because he is one",
+        "lemma": "en"
+      },
+      {
         "surface": "inwardly",
         "lemma": "kruptos"
+      },
+      {
+        "surface": "and",
+        "lemma": "kai"
       },
       {
         "surface": "circumcision is a matter",
@@ -842,20 +1562,48 @@
         "lemma": "kardia"
       },
       {
+        "surface": "by",
+        "lemma": "en"
+      },
+      {
         "surface": "the Spirit",
         "lemma": "pneuma"
+      },
+      {
+        "surface": "not",
+        "lemma": "ou"
       },
       {
         "surface": "by the written code",
         "lemma": "gramma"
       },
       {
+        "surface": "Such a man’s",
+        "lemma": "hos"
+      },
+      {
         "surface": "praise",
         "lemma": "epainos"
       },
       {
+        "surface": "does not come",
+        "lemma": "ou"
+      },
+      {
+        "surface": "from",
+        "lemma": "ek"
+      },
+      {
         "surface": "men",
         "lemma": "anthropos"
+      },
+      {
+        "surface": "but",
+        "lemma": "alla"
+      },
+      {
+        "surface": "from",
+        "lemma": "ek"
       },
       {
         "surface": "God",

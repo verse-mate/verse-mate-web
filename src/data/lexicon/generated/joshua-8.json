@@ -10,8 +10,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "Do not",
+        "lemma": "al"
       },
       {
         "surface": "be afraid",
@@ -26,8 +38,16 @@
         "lemma": "laqach"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "army",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "with you",
+        "lemma": "im"
       },
       {
         "surface": "and go up",
@@ -40,6 +60,14 @@
       {
         "surface": "Ai",
         "lemma": "ay"
+      },
+      {
+        "surface": "See",
+        "lemma": "raah"
+      },
+      {
+        "surface": "I have delivered",
+        "lemma": "natan"
       },
       {
         "surface": "into your hand",
@@ -62,11 +90,19 @@
         "lemma": "ir"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "his land",
         "lemma": "erets"
       }
     ],
     "2": [
+      {
+        "surface": "And you shall do",
+        "lemma": "asah"
+      },
       {
         "surface": "to Ai",
         "lemma": "ay"
@@ -76,12 +112,24 @@
         "lemma": "melekh"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you did",
+        "lemma": "asah"
+      },
+      {
         "surface": "to Jericho",
         "lemma": "yericho"
       },
       {
         "surface": "and its king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "except that",
+        "lemma": "raq"
       },
       {
         "surface": "you may carry off",
@@ -116,6 +164,10 @@
       {
         "surface": "So Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "and the whole",
+        "lemma": "kol"
       },
       {
         "surface": "army",
@@ -168,6 +220,14 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "Pay attention",
+        "lemma": "raah"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "are to lie in ambush",
         "lemma": "arav"
       },
@@ -178,6 +238,10 @@
       {
         "surface": "the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "not",
+        "lemma": "al"
       },
       {
         "surface": "too",
@@ -192,14 +256,34 @@
         "lemma": "ir"
       },
       {
+        "surface": "All of you",
+        "lemma": "kol"
+      },
+      {
+        "surface": "must be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "ready",
         "lemma": "kun"
       }
     ],
     "5": [
       {
+        "surface": "Then I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the troops",
         "lemma": "am"
+      },
+      {
+        "surface": "with me",
+        "lemma": "et"
       },
       {
         "surface": "will advance",
@@ -208,6 +292,22 @@
       {
         "surface": "on the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they come out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "against us",
+        "lemma": "qara"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
       },
       {
         "surface": "they did the first time",
@@ -224,12 +324,32 @@
     ],
     "6": [
       {
+        "surface": "They will pursue us",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "we have drawn them away",
         "lemma": "nataq"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they will say",
+        "lemma": "amar"
       },
       {
         "surface": "The Israelites are running away",
@@ -238,6 +358,10 @@
       {
         "surface": "from us",
         "lemma": "paneh"
+      },
+      {
+        "surface": "as they did before",
+        "lemma": "asher"
       },
       {
         "surface": "So as we flee",
@@ -249,6 +373,10 @@
       }
     ],
     "7": [
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
       {
         "surface": "are to rise",
         "lemma": "qamay"
@@ -274,11 +402,19 @@
         "lemma": "elohim"
       },
       {
+        "surface": "will deliver it",
+        "lemma": "natan"
+      },
+      {
         "surface": "into your hand",
         "lemma": "yad"
       }
     ],
     "8": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
       {
         "surface": "when you have taken",
         "lemma": "taphas"
@@ -296,12 +432,20 @@
         "lemma": "yatsat"
       },
       {
+        "surface": "Do",
+        "lemma": "asah"
+      },
+      {
         "surface": "as the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "has commanded",
         "lemma": "davar"
+      },
+      {
+        "surface": "See",
+        "lemma": "raah"
       },
       {
         "surface": "I have given you orders",
@@ -322,8 +466,16 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the place of ambush",
         "lemma": "maarav"
+      },
+      {
+        "surface": "and lay in wait",
+        "lemma": "yashav"
       },
       {
         "surface": "between",
@@ -362,6 +514,10 @@
         "lemma": "lun"
       },
       {
+        "surface": "that",
+        "lemma": "hu"
+      },
+      {
         "surface": "night",
         "lemma": "laylah"
       },
@@ -396,6 +552,10 @@
         "lemma": "am"
       },
       {
+        "surface": "and he",
+        "lemma": "hu"
+      },
+      {
         "surface": "and the elders",
         "lemma": "zaqen"
       },
@@ -422,8 +582,20 @@
     ],
     "11": [
       {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the troops",
         "lemma": "am"
+      },
+      {
+        "surface": "who were",
+        "lemma": "asher"
+      },
+      {
+        "surface": "with him",
+        "lemma": "et"
       },
       {
         "surface": "marched up",
@@ -436,6 +608,10 @@
       {
         "surface": "the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "They arrived",
+        "lemma": "bo"
       },
       {
         "surface": "in front of Ai",
@@ -530,6 +706,10 @@
         "lemma": "sum"
       },
       {
+        "surface": "with the main",
+        "lemma": "kol"
+      },
+      {
         "surface": "camp",
         "lemma": "machaneh"
       },
@@ -552,6 +732,10 @@
       {
         "surface": "of the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "And that",
+        "lemma": "hu"
       },
       {
         "surface": "night",
@@ -584,8 +768,16 @@
         "lemma": "ay"
       },
       {
+        "surface": "saw the Israelites",
+        "lemma": "raah"
+      },
+      {
         "surface": "he hurried",
         "lemma": "mahar"
+      },
+      {
+        "surface": "out",
+        "lemma": "yatsa"
       },
       {
         "surface": "early in the morning",
@@ -598,6 +790,10 @@
       {
         "surface": "of the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "to engage",
+        "lemma": "qara"
       },
       {
         "surface": "them",
@@ -620,8 +816,20 @@
         "lemma": "aravah"
       },
       {
+        "surface": "But he",
+        "lemma": "hu"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "an ambush",
@@ -640,6 +848,10 @@
       {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "Israel",
@@ -667,6 +879,10 @@
       }
     ],
     "16": [
+      {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
       {
         "surface": "the men",
         "lemma": "am"
@@ -696,11 +912,19 @@
         "lemma": "nataq"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the city",
         "lemma": "ir"
       }
     ],
     "17": [
+      {
+        "surface": "Not",
+        "lemma": "lo"
+      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -720,6 +944,18 @@
       {
         "surface": "or Bethel",
         "lemma": "betel"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "go out",
+        "lemma": "yatsa"
       },
       {
         "surface": "after",
@@ -756,6 +992,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
       },
@@ -768,12 +1012,24 @@
         "lemma": "kidon"
       },
       {
+        "surface": "toward",
+        "lemma": "el"
+      },
+      {
         "surface": "Ai",
         "lemma": "ay"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "into your hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "I will deliver the city",
+        "lemma": "natan"
       },
       {
         "surface": "So Joshua",
@@ -786,6 +1042,10 @@
       {
         "surface": "his battle lance",
         "lemma": "kidon"
+      },
+      {
+        "surface": "toward",
+        "lemma": "el"
       },
       {
         "surface": "Ai",
@@ -816,6 +1076,10 @@
       {
         "surface": "They rushed forward",
         "lemma": "ruts"
+      },
+      {
+        "surface": "entered",
+        "lemma": "bo"
       },
       {
         "surface": "the city",
@@ -852,6 +1116,10 @@
         "lemma": "panah"
       },
       {
+        "surface": "and looked",
+        "lemma": "raah"
+      },
+      {
         "surface": "back",
         "lemma": "achar"
       },
@@ -870,6 +1138,10 @@
       {
         "surface": "into the sky",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "They could not",
+        "lemma": "lo"
       },
       {
         "surface": "escape",
@@ -896,6 +1168,10 @@
         "lemma": "haphakh"
       },
       {
+        "surface": "against",
+        "lemma": "el"
+      },
+      {
         "surface": "their pursuers",
         "lemma": "radaph"
       }
@@ -906,8 +1182,20 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the men in ambush",
@@ -922,6 +1210,10 @@
         "lemma": "ir"
       },
       {
+        "surface": "and that",
+        "lemma": "ki"
+      },
+      {
         "surface": "smoke",
         "lemma": "ashan"
       },
@@ -932,6 +1224,10 @@
       {
         "surface": "it",
         "lemma": "ir"
+      },
+      {
+        "surface": "they turned around",
+        "lemma": "shuv"
       },
       {
         "surface": "and struck down",
@@ -948,8 +1244,28 @@
     ],
     "22": [
       {
+        "surface": "Meanwhile, those in the ambush",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "came out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "of",
+        "lemma": "min"
+      },
+      {
         "surface": "the city",
         "lemma": "ir"
+      },
+      {
+        "surface": "against them",
+        "lemma": "qara"
+      },
+      {
+        "surface": "and the men of Ai were",
+        "lemma": "hayah"
       },
       {
         "surface": "trapped between",
@@ -960,8 +1276,24 @@
         "lemma": "yisrael"
       },
       {
+        "surface": "forces",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "on",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "both sides",
+        "lemma": "elleh"
+      },
+      {
         "surface": "So Israel struck them down",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "no",
@@ -981,6 +1313,10 @@
       }
     ],
     "23": [
+      {
+        "surface": "But",
+        "lemma": "et"
+      },
       {
         "surface": "they took",
         "lemma": "taphas"
@@ -1002,6 +1338,14 @@
         "lemma": "qarav"
       },
       {
+        "surface": "him",
+        "lemma": "et"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
       }
@@ -1020,6 +1364,14 @@
         "lemma": "harag"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "the men",
+        "lemma": "yashav"
+      },
+      {
         "surface": "of Ai",
         "lemma": "ay"
       },
@@ -1036,6 +1388,10 @@
         "lemma": "midbar"
       },
       {
+        "surface": "and when every",
+        "lemma": "kol"
+      },
+      {
         "surface": "last one of them had fallen",
         "lemma": "naphal"
       },
@@ -1048,8 +1404,16 @@
         "lemma": "cherev"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "returned",
+        "lemma": "shuv"
       },
       {
         "surface": "to Ai",
@@ -1058,6 +1422,10 @@
       {
         "surface": "and put",
         "lemma": "nakhah"
+      },
+      {
+        "surface": "it",
+        "lemma": "et"
       },
       {
         "surface": "vvv",
@@ -1069,6 +1437,10 @@
       }
     ],
     "25": [
+      {
+        "surface": "A total",
+        "lemma": "kol"
+      },
       {
         "surface": "of twelve",
         "lemma": "shenayim"
@@ -1082,6 +1454,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "and",
+        "lemma": "ad"
+      },
+      {
         "surface": "women",
         "lemma": "ishshah"
       },
@@ -1090,8 +1466,16 @@
         "lemma": "naphal"
       },
       {
+        "surface": "that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the people",
@@ -1108,8 +1492,20 @@
         "lemma": "yehoshua"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "draw back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "held",
@@ -1120,8 +1516,20 @@
         "lemma": "kidon"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "he had devoted to destruction",
         "lemma": "charam"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who lived",
+        "lemma": "yashav"
       },
       {
         "surface": "in Ai",
@@ -1138,12 +1546,20 @@
         "lemma": "bazaz"
       },
       {
+        "surface": "only",
+        "lemma": "raq"
+      },
+      {
         "surface": "the cattle",
         "lemma": "behemah"
       },
       {
         "surface": "and plunder",
         "lemma": "shalal"
+      },
+      {
+        "surface": "of that",
+        "lemma": "hu"
       },
       {
         "surface": "city",
@@ -1156,6 +1572,10 @@
       {
         "surface": "vvv",
         "lemma": "davar"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "asher"
       },
       {
         "surface": "had commanded",
@@ -1196,6 +1616,14 @@
         "lemma": "shemamah"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       }
@@ -1214,12 +1642,24 @@
         "lemma": "ay"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "a tree",
         "lemma": "ets"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "evening",
         "lemma": "erev"
+      },
+      {
+        "surface": "and at sunset",
+        "lemma": "bo"
       },
       {
         "surface": "Joshua",
@@ -1234,12 +1674,20 @@
         "lemma": "nevelah"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the tree",
         "lemma": "ets"
       },
       {
         "surface": "and throw it down",
         "lemma": "shalakh"
+      },
+      {
+        "surface": "at",
+        "lemma": "el"
       },
       {
         "surface": "the entrance",
@@ -1252,6 +1700,10 @@
       {
         "surface": "gate",
         "lemma": "shaar"
+      },
+      {
+        "surface": "And over it",
+        "lemma": "al"
       },
       {
         "surface": "they raised",
@@ -1270,11 +1722,23 @@
         "lemma": "even"
       },
       {
+        "surface": "which remains to",
+        "lemma": "ad"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       }
     ],
     "30": [
+      {
+        "surface": "At that time",
+        "lemma": "az"
+      },
       {
         "surface": "Joshua",
         "lemma": "yehoshua"
@@ -1309,6 +1773,10 @@
       }
     ],
     "31": [
+      {
+        "surface": "just as",
+        "lemma": "asher"
+      },
       {
         "surface": "Moses",
         "lemma": "mosheh"
@@ -1358,12 +1826,28 @@
         "lemma": "even"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "iron tool",
         "lemma": "barzel"
       },
       {
         "surface": "has been used",
         "lemma": "nuph"
+      },
+      {
+        "surface": "And on it",
+        "lemma": "al"
       },
       {
         "surface": "they offered",
@@ -1408,6 +1892,10 @@
         "lemma": "katav"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the stones",
         "lemma": "even"
       },
@@ -1424,11 +1912,19 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
         "surface": "he had written",
         "lemma": "katav"
       }
     ],
     "33": [
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
       {
         "surface": "Israel",
         "lemma": "yisrael"
@@ -1456,6 +1952,10 @@
       {
         "surface": "stood",
         "lemma": "amad"
+      },
+      {
+        "surface": "on both sides",
+        "lemma": "zeh"
       },
       {
         "surface": "of the ark",
@@ -1494,6 +1994,10 @@
         "lemma": "chetsi"
       },
       {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
         "surface": "front",
         "lemma": "mul"
       },
@@ -1510,6 +2014,10 @@
         "lemma": "chetsi"
       },
       {
+        "surface": "in",
+        "lemma": "el"
+      },
+      {
         "surface": "front",
         "lemma": "mul"
       },
@@ -1520,6 +2028,10 @@
       {
         "surface": "Ebal",
         "lemma": "eval"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
       },
       {
         "surface": "Moses",
@@ -1560,6 +2072,14 @@
         "lemma": "achar"
       },
       {
+        "surface": "Joshua read aloud",
+        "lemma": "qara"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the words",
         "lemma": "davar"
       },
@@ -1576,6 +2096,10 @@
         "lemma": "qelalah"
       },
       {
+        "surface": "according to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "that is written",
         "lemma": "katav"
       },
@@ -1590,8 +2114,24 @@
     ],
     "35": [
       {
+        "surface": "There was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "a word",
         "lemma": "davar"
+      },
+      {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "Moses",
@@ -1602,12 +2142,28 @@
         "lemma": "tsavah"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
       },
       {
+        "surface": "failed",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to read",
+        "lemma": "qara"
+      },
+      {
         "surface": "before",
         "lemma": "neged"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "assembly",
@@ -1641,7 +2197,7 @@
   },
   "themeLemmas": [
     "ay",
-    "yehoshua",
-    "yisrael"
+    "kol",
+    "yehoshua"
   ]
 }

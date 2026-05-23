@@ -6,12 +6,24 @@
   "verses": {
     "1": [
       {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "the sons",
         "lemma": "ben"
       },
       {
         "surface": "of David",
         "lemma": "david"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "were born",
@@ -190,6 +202,10 @@
     ],
     "5": [
       {
+        "surface": "and these sons",
+        "lemma": "elleh"
+      },
+      {
         "surface": "were born",
         "lemma": "yalad"
       },
@@ -204,6 +220,10 @@
       {
         "surface": "Shobab",
         "lemma": "shovav"
+      },
+      {
+        "surface": "Nathan",
+        "lemma": "natan"
       },
       {
         "surface": "and Solomon",
@@ -277,6 +297,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "These were all",
+        "lemma": "kol"
+      },
       {
         "surface": "the sons",
         "lemma": "ben"

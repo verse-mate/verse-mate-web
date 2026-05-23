@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "Is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "man",
         "lemma": "enosh"
       },
       {
         "surface": "consigned to labor",
         "lemma": "tsava"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "earth",
@@ -88,8 +96,16 @@
     ],
     "4": [
       {
+        "surface": "When",
+        "lemma": "im"
+      },
+      {
         "surface": "I lie down",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "I think",
+        "lemma": "amar"
       },
       {
         "surface": "When",
@@ -110,6 +126,10 @@
       {
         "surface": "and I toss and turn",
         "lemma": "sava"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "dawn",
@@ -160,6 +180,10 @@
         "lemma": "qalal"
       },
       {
+        "surface": "than",
+        "lemma": "min"
+      },
+      {
         "surface": "a weaver’s shuttle",
         "lemma": "ereg"
       },
@@ -182,6 +206,10 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "my life",
         "lemma": "chay"
       },
@@ -192,6 +220,18 @@
       {
         "surface": "My eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "will never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "again",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "happiness",
@@ -206,6 +246,10 @@
       {
         "surface": "that beholds me",
         "lemma": "roi"
+      },
+      {
+        "surface": "will no",
+        "lemma": "lo"
       },
       {
         "surface": "longer see me",
@@ -246,11 +290,23 @@
         "lemma": "sheol"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "come back up",
         "lemma": "alah"
       }
     ],
     "10": [
+      {
+        "surface": "He never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "returns",
+        "lemma": "shuv"
+      },
       {
         "surface": "to his house",
         "lemma": "bet"
@@ -269,6 +325,18 @@
       }
     ],
     "11": [
+      {
+        "surface": "Therefore",
+        "lemma": "gam"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "will not",
+        "lemma": "lo"
+      },
       {
         "surface": "restrain",
         "lemma": "chasakh"
@@ -304,12 +372,24 @@
     ],
     "12": [
       {
+        "surface": "Am I",
+        "lemma": "ani"
+      },
+      {
         "surface": "the sea",
         "lemma": "yam"
       },
       {
+        "surface": "or",
+        "lemma": "im"
+      },
+      {
         "surface": "the monster of the deep",
         "lemma": "tan"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "You must keep me under",
@@ -321,6 +401,14 @@
       }
     ],
     "13": [
+      {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I think",
+        "lemma": "amar"
+      },
       {
         "surface": "my bed",
         "lemma": "eres"
@@ -388,6 +476,10 @@
         "lemma": "maas"
       },
       {
+        "surface": "I would not",
+        "lemma": "lo"
+      },
+      {
         "surface": "live",
         "lemma": "chayah"
       },
@@ -398,6 +490,10 @@
       {
         "surface": "Leave me alone",
         "lemma": "chadal"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "my days are",
@@ -418,8 +514,16 @@
         "lemma": "enosh"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "You should exalt him",
         "lemma": "gadal"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "You should set",
@@ -428,6 +532,10 @@
       {
         "surface": "Your heart",
         "lemma": "lev"
+      },
+      {
+        "surface": "upon him",
+        "lemma": "el"
       }
     ],
     "18": [
@@ -458,8 +566,20 @@
         "lemma": "shaah"
       },
       {
+        "surface": "from me",
+        "lemma": "min"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
+      },
+      {
         "surface": "leave me alone",
         "lemma": "raphah"
+      },
+      {
+        "surface": "to",
+        "lemma": "ad"
       },
       {
         "surface": "swallow",
@@ -504,14 +624,26 @@
         "lemma": "miphga"
       },
       {
+        "surface": "so that I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a burden",
         "lemma": "massa"
+      },
+      {
+        "surface": "to You",
+        "lemma": "al"
       }
     ],
     "21": [
       {
         "surface": "Why",
         "lemma": "mah"
+      },
+      {
+        "surface": "do You not",
+        "lemma": "lo"
       },
       {
         "surface": "pardon",
@@ -528,6 +660,10 @@
       {
         "surface": "my iniquity",
         "lemma": "avan"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "soon",
@@ -552,8 +688,8 @@
     ]
   },
   "themeLemmas": [
-    "mah",
-    "sum",
-    "siach"
+    "lo",
+    "ki",
+    "mah"
   ]
 }

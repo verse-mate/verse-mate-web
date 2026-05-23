@@ -26,8 +26,16 @@
         "lemma": "adon"
       },
       {
+        "surface": "Sit",
+        "lemma": "yashav"
+      },
+      {
         "surface": "at My right hand",
         "lemma": "yamin"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "I make",
@@ -132,8 +140,16 @@
         "lemma": "shava"
       },
       {
+        "surface": "and will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "change His mind",
         "lemma": "nacham"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
       },
       {
         "surface": "are a priest",
@@ -142,6 +158,10 @@
       {
         "surface": "forever",
         "lemma": "olam"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "the order",
@@ -160,6 +180,10 @@
       {
         "surface": "The Lord",
         "lemma": "adonai"
+      },
+      {
+        "surface": "is at",
+        "lemma": "al"
       },
       {
         "surface": "Your right hand",
@@ -208,6 +232,10 @@
         "lemma": "rosh"
       },
       {
+        "surface": "far",
+        "lemma": "al"
+      },
+      {
         "surface": "and wide",
         "lemma": "rav"
       }
@@ -226,6 +254,10 @@
         "lemma": "derekh"
       },
       {
+        "surface": "therefore",
+        "lemma": "al"
+      },
+      {
         "surface": "He will lift up",
         "lemma": "rum"
       },
@@ -236,8 +268,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "yamin",
-    "oyev",
-    "malkitsedeq"
+    "oyev"
   ]
 }

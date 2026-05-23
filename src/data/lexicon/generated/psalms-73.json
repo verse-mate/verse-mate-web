@@ -40,6 +40,10 @@
     ],
     "2": [
       {
+        "surface": "But as for me",
+        "lemma": "ani"
+      },
+      {
         "surface": "my feet",
         "lemma": "regel"
       },
@@ -66,12 +70,20 @@
     ],
     "3": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "I envied",
         "lemma": "qana"
       },
       {
         "surface": "the arrogant",
         "lemma": "halal"
+      },
+      {
+        "surface": "when I saw",
+        "lemma": "raah"
       },
       {
         "surface": "the prosperity",
@@ -118,8 +130,16 @@
         "lemma": "enosh"
       },
       {
+        "surface": "they are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "afflicted",
         "lemma": "naga"
+      },
+      {
+        "surface": "like",
+        "lemma": "im"
       },
       {
         "surface": "other men",
@@ -156,6 +176,10 @@
       {
         "surface": "From their prosperity",
         "lemma": "chelev"
+      },
+      {
+        "surface": "proceeds",
+        "lemma": "yatsa"
       },
       {
         "surface": "iniquity",
@@ -236,6 +260,10 @@
         "lemma": "am"
       },
       {
+        "surface": "return",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to this place",
         "lemma": "halom"
       },
@@ -253,6 +281,10 @@
       }
     ],
     "11": [
+      {
+        "surface": "The wicked say",
+        "lemma": "amar"
+      },
       {
         "surface": "How",
         "lemma": "ekh"
@@ -278,6 +310,10 @@
       {
         "surface": "Behold",
         "lemma": "hinneh"
+      },
+      {
+        "surface": "these are",
+        "lemma": "elleh"
       },
       {
         "surface": "the wicked",
@@ -328,8 +364,16 @@
     ],
     "14": [
       {
+        "surface": "For I am",
+        "lemma": "hayah"
+      },
+      {
         "surface": "afflicted",
         "lemma": "naga"
+      },
+      {
+        "surface": "all day long",
+        "lemma": "kol"
       },
       {
         "surface": "and punished every morning",
@@ -338,8 +382,20 @@
     ],
     "15": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "I had said",
+        "lemma": "amar"
+      },
+      {
         "surface": "I will speak",
         "lemma": "saphar"
+      },
+      {
+        "surface": "this way",
+        "lemma": "kemo"
       },
       {
         "surface": "then",
@@ -368,6 +424,14 @@
         "lemma": "yada"
       },
       {
+        "surface": "all this",
+        "lemma": "zot"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "was troublesome",
         "lemma": "amal"
       },
@@ -377,6 +441,14 @@
       }
     ],
     "17": [
+      {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
+        "surface": "I entered",
+        "lemma": "bo"
+      },
       {
         "surface": "God’s",
         "lemma": "el"
@@ -426,6 +498,10 @@
         "lemma": "rega"
       },
       {
+        "surface": "they are",
+        "lemma": "hayah"
+      },
+      {
         "surface": "laid waste",
         "lemma": "shammah"
       },
@@ -436,6 +512,10 @@
       {
         "surface": "swept away",
         "lemma": "suph"
+      },
+      {
+        "surface": "by",
+        "lemma": "min"
       },
       {
         "surface": "terrors",
@@ -470,6 +550,10 @@
     ],
     "21": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "my heart",
         "lemma": "levav"
       },
@@ -488,22 +572,46 @@
     ],
     "22": [
       {
+        "surface": "I was",
+        "lemma": "ani"
+      },
+      {
         "surface": "senseless",
         "lemma": "baar"
+      },
+      {
+        "surface": "and",
+        "lemma": "lo"
       },
       {
         "surface": "ignorant",
         "lemma": "yada"
       },
       {
+        "surface": "I was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a brute beast",
         "lemma": "behemah"
+      },
+      {
+        "surface": "before You",
+        "lemma": "im"
       }
     ],
     "23": [
       {
+        "surface": "Yet I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am always",
         "lemma": "tamid"
+      },
+      {
+        "surface": "with You",
+        "lemma": "im"
       },
       {
         "surface": "You hold",
@@ -556,6 +664,14 @@
       {
         "surface": "I desire",
         "lemma": "chaphets"
+      },
+      {
+        "surface": "no one",
+        "lemma": "lo"
+      },
+      {
+        "surface": "besides You",
+        "lemma": "im"
       }
     ],
     "26": [
@@ -598,6 +714,10 @@
         "lemma": "racheq"
       },
       {
+        "surface": "from You",
+        "lemma": "ki"
+      },
+      {
         "surface": "will surely",
         "lemma": "hinneh"
       },
@@ -610,11 +730,23 @@
         "lemma": "tsamat"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who are unfaithful",
         "lemma": "zanah"
+      },
+      {
+        "surface": "to You",
+        "lemma": "min"
       }
     ],
     "28": [
+      {
+        "surface": "But as",
+        "lemma": "ani"
+      },
       {
         "surface": "it is good",
         "lemma": "tov"
@@ -648,6 +780,10 @@
         "lemma": "saphar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Your works",
         "lemma": "melakhah"
       }
@@ -655,7 +791,7 @@
   },
   "themeLemmas": [
     "levav",
-    "yada",
-    "shit"
+    "im",
+    "ani"
   ]
 }

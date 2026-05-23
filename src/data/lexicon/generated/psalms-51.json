@@ -18,8 +18,32 @@
         "lemma": "david"
       },
       {
+        "surface": "When Nathan",
+        "lemma": "natan"
+      },
+      {
         "surface": "the prophet",
         "lemma": "navi"
+      },
+      {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to him",
+        "lemma": "el"
+      },
+      {
+        "surface": "after",
+        "lemma": "asher"
+      },
+      {
+        "surface": "his adultery",
+        "lemma": "bo"
+      },
+      {
+        "surface": "with",
+        "lemma": "el"
       },
       {
         "surface": "vvv",
@@ -78,6 +102,14 @@
     ],
     "3": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -108,12 +140,20 @@
         "lemma": "chata"
       },
       {
+        "surface": "and done",
+        "lemma": "asah"
+      },
+      {
         "surface": "what is evil",
         "lemma": "ra"
       },
       {
         "surface": "in Your sight",
         "lemma": "ayin"
+      },
+      {
+        "surface": "so that",
+        "lemma": "maan"
       },
       {
         "surface": "You may be proved right",
@@ -216,6 +256,10 @@
     ],
     "8": [
       {
+        "surface": "Let me hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "joy",
         "lemma": "sasvon"
       },
@@ -252,6 +296,10 @@
       {
         "surface": "and blot out",
         "lemma": "machah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "my iniquities",
@@ -306,15 +354,27 @@
         "lemma": "laqach"
       },
       {
+        "surface": "not",
+        "lemma": "al"
+      },
+      {
         "surface": "Your Holy",
         "lemma": "qodesh"
       },
       {
         "surface": "Spirit",
         "lemma": "ruach"
+      },
+      {
+        "surface": "from me",
+        "lemma": "min"
       }
     ],
     "12": [
+      {
+        "surface": "Restore",
+        "lemma": "shuv"
+      },
       {
         "surface": "the joy",
         "lemma": "sasvon"
@@ -352,6 +412,14 @@
       {
         "surface": "and sinners",
         "lemma": "chatta"
+      },
+      {
+        "surface": "will return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to You",
+        "lemma": "el"
       }
     ],
     "14": [
@@ -416,12 +484,28 @@
     ],
     "16": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "delight",
         "lemma": "chaphets"
       },
       {
         "surface": "in sacrifice",
         "lemma": "zevach"
+      },
+      {
+        "surface": "or I would bring it",
+        "lemma": "natan"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "You take no pleasure",
@@ -466,6 +550,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "You will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "despise",
         "lemma": "bazah"
       }
@@ -498,6 +586,10 @@
     ],
     "19": [
       {
+        "surface": "Then",
+        "lemma": "az"
+      },
+      {
         "surface": "You will delight",
         "lemma": "chaphets"
       },
@@ -518,12 +610,20 @@
         "lemma": "olah"
       },
       {
+        "surface": "then",
+        "lemma": "az"
+      },
+      {
         "surface": "bulls",
         "lemma": "par"
       },
       {
         "surface": "will be offered",
         "lemma": "alah"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "Your altar",
@@ -534,6 +634,6 @@
   "themeLemmas": [
     "ruach",
     "zevach",
-    "chaphets"
+    "lo"
   ]
 }

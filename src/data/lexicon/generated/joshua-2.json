@@ -38,12 +38,24 @@
         "lemma": "ragal"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "Shittim",
         "lemma": "shittim"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Go",
         "lemma": "halakh"
+      },
+      {
+        "surface": "inspect",
+        "lemma": "raah"
       },
       {
         "surface": "the land",
@@ -56,6 +68,10 @@
       {
         "surface": "So they went",
         "lemma": "halakh"
+      },
+      {
+        "surface": "and entered",
+        "lemma": "bo"
       },
       {
         "surface": "the house",
@@ -88,6 +104,10 @@
     ],
     "2": [
       {
+        "surface": "And it was reported",
+        "lemma": "amar"
+      },
+      {
         "surface": "to the king",
         "lemma": "melekh"
       },
@@ -110,6 +130,10 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
+      },
+      {
+        "surface": "have come",
+        "lemma": "bo"
       },
       {
         "surface": "here",
@@ -142,20 +166,60 @@
         "lemma": "shalach"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Rahab",
         "lemma": "rachav"
+      },
+      {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Bring out",
+        "lemma": "yatsa"
       },
       {
         "surface": "the men",
         "lemma": "enosh"
       },
       {
+        "surface": "who came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
+        "surface": "you",
+        "lemma": "asher"
+      },
+      {
+        "surface": "and entered",
+        "lemma": "bo"
+      },
+      {
         "surface": "your house",
         "lemma": "bet"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they have come",
+        "lemma": "bo"
+      },
+      {
         "surface": "to spy out",
         "lemma": "chaphar"
+      },
+      {
+        "surface": "the whole",
+        "lemma": "kol"
       },
       {
         "surface": "land",
@@ -184,6 +248,10 @@
         "lemma": "tsaphan"
       },
       {
+        "surface": "So she said",
+        "lemma": "amar"
+      },
+      {
         "surface": "Yes",
         "lemma": "ken"
       },
@@ -192,12 +260,28 @@
         "lemma": "enosh"
       },
       {
+        "surface": "did come",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to me",
+        "lemma": "el"
+      },
+      {
+        "surface": "but I did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
       },
       {
         "surface": "where",
         "lemma": "ayin"
+      },
+      {
+        "surface": "they had come from",
+        "lemma": "hemmah"
       }
     ],
     "5": [
@@ -210,12 +294,24 @@
         "lemma": "shaar"
       },
       {
+        "surface": "was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "about to close",
         "lemma": "sagar"
       },
       {
         "surface": "the men",
         "lemma": "enosh"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "and I do not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
@@ -246,11 +342,19 @@
         "lemma": "maher"
       },
       {
+        "surface": "and",
+        "lemma": "ki"
+      },
+      {
         "surface": "you may catch them",
         "lemma": "nasag"
       }
     ],
     "6": [
+      {
+        "surface": "But Rahab",
+        "lemma": "hu"
+      },
       {
         "surface": "had taken them up",
         "lemma": "alah"
@@ -276,6 +380,10 @@
         "lemma": "arakh"
       },
       {
+        "surface": "vvv",
+        "lemma": "al"
+      },
+      {
         "surface": "there",
         "lemma": "gag"
       }
@@ -298,12 +406,24 @@
         "lemma": "derekh"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "the fords",
         "lemma": "maavar"
       },
       {
         "surface": "of the Jordan",
         "lemma": "yarden"
+      },
+      {
+        "surface": "and as",
+        "lemma": "asher"
+      },
+      {
+        "surface": "soon as they",
+        "lemma": "yatsa"
       },
       {
         "surface": "had gone out",
@@ -324,12 +444,24 @@
         "lemma": "terem"
       },
       {
+        "surface": "the spies",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "lay down for the night",
         "lemma": "shakhav"
       },
       {
+        "surface": "Rahab",
+        "lemma": "hu"
+      },
+      {
         "surface": "went up",
         "lemma": "alah"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the roof",
@@ -338,16 +470,36 @@
     ],
     "9": [
       {
+        "surface": "and said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to them",
+        "lemma": "el"
+      },
+      {
         "surface": "I know",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
+        "surface": "has given",
+        "lemma": "natan"
+      },
+      {
         "surface": "this land",
         "lemma": "erets"
+      },
+      {
+        "surface": "and that",
+        "lemma": "ki"
       },
       {
         "surface": "the fear of you",
@@ -356,6 +508,22 @@
       {
         "surface": "has fallen",
         "lemma": "naphal"
+      },
+      {
+        "surface": "on us",
+        "lemma": "al"
+      },
+      {
+        "surface": "so that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -371,6 +539,18 @@
       }
     ],
     "10": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "we have heard",
+        "lemma": "shama"
+      },
+      {
+        "surface": "how",
+        "lemma": "asher"
+      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -396,8 +576,20 @@
         "lemma": "paneh"
       },
       {
+        "surface": "when you came out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "and what",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you did",
+        "lemma": "asah"
       },
       {
         "surface": "to Sihon",
@@ -428,11 +620,19 @@
         "lemma": "yarden"
       },
       {
+        "surface": "whom",
+        "lemma": "asher"
+      },
+      {
         "surface": "you devoted to destruction",
         "lemma": "charam"
       }
     ],
     "11": [
+      {
+        "surface": "When we heard this",
+        "lemma": "shama"
+      },
       {
         "surface": "our hearts",
         "lemma": "levav"
@@ -450,8 +650,16 @@
         "lemma": "ruach"
       },
       {
+        "surface": "failed",
+        "lemma": "lo"
+      },
+      {
         "surface": "because of you",
         "lemma": "paneh"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -472,6 +680,10 @@
       {
         "surface": "above",
         "lemma": "maal"
+      },
+      {
+        "surface": "and on",
+        "lemma": "al"
       },
       {
         "surface": "the earth",
@@ -500,16 +712,48 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "that you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "will indeed",
+        "lemma": "gam"
+      },
+      {
+        "surface": "show",
+        "lemma": "asah"
+      },
+      {
         "surface": "kindness",
         "lemma": "chesed"
+      },
+      {
+        "surface": "to",
+        "lemma": "im"
       },
       {
         "surface": "my family",
         "lemma": "bet"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I showed",
+        "lemma": "asah"
+      },
+      {
         "surface": "kindness",
         "lemma": "chesed"
+      },
+      {
+        "surface": "to you",
+        "lemma": "im"
+      },
+      {
+        "surface": "Give",
+        "lemma": "natan"
       },
       {
         "surface": "a sure",
@@ -526,6 +770,14 @@
         "lemma": "chayah"
       },
       {
+        "surface": "of my father",
+        "lemma": "av"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "mother",
         "lemma": "em"
       },
@@ -534,8 +786,20 @@
         "lemma": "ach"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "sisters",
         "lemma": "achot"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who belong",
+        "lemma": "asher"
       },
       {
         "surface": "and that you will deliver",
@@ -568,12 +832,32 @@
         "lemma": "enosh"
       },
       {
+        "surface": "agreed",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "you do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "report",
         "lemma": "nagad"
       },
       {
         "surface": "our mission",
         "lemma": "davar"
+      },
+      {
+        "surface": "we will show",
+        "lemma": "asah"
+      },
+      {
+        "surface": "you",
+        "lemma": "im"
       },
       {
         "surface": "kindness",
@@ -586,6 +870,10 @@
       {
         "surface": "when the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "gives",
+        "lemma": "natan"
       },
       {
         "surface": "the land",
@@ -610,8 +898,20 @@
         "lemma": "challon"
       },
       {
+        "surface": "since",
+        "lemma": "ki"
+      },
+      {
         "surface": "the house",
         "lemma": "bet"
+      },
+      {
+        "surface": "where she",
+        "lemma": "hu"
+      },
+      {
+        "surface": "lived",
+        "lemma": "yashav"
       },
       {
         "surface": "was built into the wall",
@@ -632,8 +932,16 @@
         "lemma": "har"
       },
       {
+        "surface": "she said",
+        "lemma": "amar"
+      },
+      {
         "surface": "so that your pursuers",
         "lemma": "radaph"
+      },
+      {
+        "surface": "will not",
+        "lemma": "pen"
       },
       {
         "surface": "find",
@@ -656,8 +964,16 @@
         "lemma": "yom"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "they",
         "lemma": "radaph"
+      },
+      {
+        "surface": "have returned",
+        "lemma": "shuv"
       },
       {
         "surface": "then",
@@ -678,8 +994,24 @@
         "lemma": "enosh"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to her",
+        "lemma": "el"
+      },
+      {
+        "surface": "We",
+        "lemma": "anachnu"
+      },
+      {
         "surface": "will not be bound",
         "lemma": "naqi"
+      },
+      {
+        "surface": "by this",
+        "lemma": "zeh"
       },
       {
         "surface": "oath",
@@ -696,12 +1028,24 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "when we",
+        "lemma": "anachnu"
+      },
+      {
+        "surface": "enter",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
         "surface": "you have tied",
         "lemma": "qashar"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
       },
       {
         "surface": "scarlet",
@@ -716,20 +1060,48 @@
         "lemma": "challon"
       },
       {
+        "surface": "through which",
+        "lemma": "asher"
+      },
+      {
         "surface": "you let us down",
         "lemma": "yarad"
+      },
+      {
+        "surface": "and unless",
+        "lemma": "et"
       },
       {
         "surface": "you have brought",
         "lemma": "asaph"
       },
       {
+        "surface": "your father",
+        "lemma": "av"
+      },
+      {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "mother",
         "lemma": "em"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "av"
       },
       {
         "surface": "your family",
@@ -741,6 +1113,14 @@
       }
     ],
     "19": [
+      {
+        "surface": "If anyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "goes out",
+        "lemma": "yatsa"
+      },
       {
         "surface": "the door",
         "lemma": "dal"
@@ -762,12 +1142,32 @@
         "lemma": "rosh"
       },
       {
+        "surface": "and we",
+        "lemma": "anachnu"
+      },
+      {
         "surface": "will be innocent",
         "lemma": "naqi"
       },
       {
+        "surface": "But if",
+        "lemma": "im"
+      },
+      {
         "surface": "a hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "is laid",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "anyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "with you",
+        "lemma": "et"
       },
       {
         "surface": "in the house",
@@ -784,12 +1184,20 @@
     ],
     "20": [
       {
+        "surface": "And if",
+        "lemma": "im"
+      },
+      {
         "surface": "you report",
         "lemma": "nagad"
       },
       {
         "surface": "our mission",
         "lemma": "davar"
+      },
+      {
+        "surface": "we will be",
+        "lemma": "hayah"
       },
       {
         "surface": "released",
@@ -806,8 +1214,16 @@
     ],
     "21": [
       {
+        "surface": "Let it",
+        "lemma": "hu"
+      },
+      {
         "surface": "be as you say",
         "lemma": "davar"
+      },
+      {
+        "surface": "she replied",
+        "lemma": "amar"
       },
       {
         "surface": "and she sent them away",
@@ -836,8 +1252,16 @@
     ],
     "22": [
       {
+        "surface": "So the spies went out",
+        "lemma": "bo"
+      },
+      {
         "surface": "into the hill country",
         "lemma": "har"
+      },
+      {
+        "surface": "and stayed",
+        "lemma": "yashav"
       },
       {
         "surface": "there",
@@ -852,8 +1276,20 @@
         "lemma": "yom"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "their pursuers",
         "lemma": "radaph"
+      },
+      {
+        "surface": "had returned",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "without",
+        "lemma": "lo"
       },
       {
         "surface": "finding them",
@@ -862,6 +1298,10 @@
       {
         "surface": "having searched",
         "lemma": "baqash"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "along the road",
@@ -874,6 +1314,10 @@
         "lemma": "enosh"
       },
       {
+        "surface": "started back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "came down",
         "lemma": "yarad"
       },
@@ -884,6 +1328,14 @@
       {
         "surface": "and crossed the river",
         "lemma": "avar"
+      },
+      {
+        "surface": "So they came",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Joshua",
@@ -902,14 +1354,34 @@
         "lemma": "saphar"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "that had happened",
         "lemma": "matsa"
+      },
+      {
+        "surface": "to them",
+        "lemma": "et"
       }
     ],
     "24": [
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has surely",
+        "lemma": "ki"
+      },
+      {
+        "surface": "delivered",
+        "lemma": "natan"
+      },
+      {
+        "surface": "the entire",
+        "lemma": "kol"
       },
       {
         "surface": "land",
@@ -920,8 +1392,28 @@
         "lemma": "yad"
       },
       {
+        "surface": "they said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Joshua",
         "lemma": "yehoshua"
+      },
+      {
+        "surface": "Indeed",
+        "lemma": "gam"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who dwell",
+        "lemma": "yashav"
       },
       {
         "surface": "in the land",
@@ -939,7 +1431,7 @@
   },
   "themeLemmas": [
     "enosh",
-    "bet",
-    "radaph"
+    "kol",
+    "ki"
   ]
 }

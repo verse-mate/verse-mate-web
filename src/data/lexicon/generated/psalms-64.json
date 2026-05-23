@@ -18,6 +18,10 @@
         "lemma": "david"
       },
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "O God",
         "lemma": "elohim"
       },
@@ -74,6 +78,10 @@
     ],
     "3": [
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "sharpen",
         "lemma": "shanan"
       },
@@ -124,6 +132,10 @@
         "lemma": "pitom"
       },
       {
+        "surface": "without",
+        "lemma": "lo"
+      },
+      {
         "surface": "fear",
         "lemma": "yare"
       }
@@ -156,6 +168,14 @@
       {
         "surface": "Who",
         "lemma": "mi"
+      },
+      {
+        "surface": "will see",
+        "lemma": "raah"
+      },
+      {
+        "surface": "they say",
+        "lemma": "amar"
       }
     ],
     "6": [
@@ -214,6 +234,10 @@
         "lemma": "pitom"
       },
       {
+        "surface": "they will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "wounded",
         "lemma": "makkah"
       }
@@ -228,11 +252,27 @@
         "lemma": "lashon"
       },
       {
+        "surface": "turned against them",
+        "lemma": "al"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who see",
+        "lemma": "raah"
+      },
+      {
         "surface": "will shake their heads",
         "lemma": "nadad"
       }
     ],
     "9": [
+      {
+        "surface": "Then all",
+        "lemma": "kol"
+      },
       {
         "surface": "mankind",
         "lemma": "adam"
@@ -280,6 +320,10 @@
         "lemma": "chasah"
       },
       {
+        "surface": "let all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the upright",
         "lemma": "yashar"
       },
@@ -295,7 +339,7 @@
   },
   "themeLemmas": [
     "yara",
-    "yare",
-    "pitom"
+    "kol",
+    "yare"
   ]
 }

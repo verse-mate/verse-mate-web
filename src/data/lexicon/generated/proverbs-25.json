@@ -6,12 +6,24 @@
   "verses": {
     "1": [
       {
+        "surface": "These are",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "additional",
+        "lemma": "gam"
+      },
+      {
         "surface": "proverbs",
         "lemma": "mashal"
       },
       {
         "surface": "of Solomon",
         "lemma": "shelomoh"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
       },
       {
         "surface": "were copied by",
@@ -118,6 +130,10 @@
       {
         "surface": "for a silversmith",
         "lemma": "tsaraph"
+      },
+      {
+        "surface": "will come forth",
+        "lemma": "yatsa"
       }
     ],
     "5": [
@@ -152,6 +168,10 @@
     ],
     "6": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "exalt yourself",
         "lemma": "hadar"
       },
@@ -162,6 +182,10 @@
       {
         "surface": "of the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
       },
       {
         "surface": "stand",
@@ -178,8 +202,16 @@
     ],
     "7": [
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "it is better",
         "lemma": "tov"
+      },
+      {
+        "surface": "to be told",
+        "lemma": "amar"
       },
       {
         "surface": "Come up",
@@ -202,11 +234,27 @@
         "lemma": "nadiv"
       },
       {
+        "surface": "Even what",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you have seen",
+        "lemma": "raah"
+      },
+      {
         "surface": "with your own eyes",
         "lemma": "ayin"
       }
     ],
     "8": [
+      {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "bring",
+        "lemma": "yatsa"
+      },
       {
         "surface": "hastily",
         "lemma": "maher"
@@ -216,8 +264,16 @@
         "lemma": "riv"
       },
       {
+        "surface": "Otherwise",
+        "lemma": "pen"
+      },
+      {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "will you do",
+        "lemma": "asah"
       },
       {
         "surface": "in the end",
@@ -242,8 +298,16 @@
         "lemma": "riv"
       },
       {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "your neighbor",
         "lemma": "rea"
+      },
+      {
+        "surface": "without",
+        "lemma": "al"
       },
       {
         "surface": "betraying",
@@ -260,18 +324,38 @@
     ],
     "10": [
       {
+        "surface": "lest",
+        "lemma": "pen"
+      },
+      {
+        "surface": "he who hears you",
+        "lemma": "shama"
+      },
+      {
         "surface": "bring shame upon you",
         "lemma": "chasad"
       },
       {
         "surface": "and your infamy",
         "lemma": "dibbah"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "go away",
+        "lemma": "shuv"
       }
     ],
     "11": [
       {
         "surface": "A word",
         "lemma": "davar"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "al"
       },
       {
         "surface": "fitly",
@@ -324,6 +408,14 @@
         "lemma": "yakhach"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
+        "surface": "a listening",
+        "lemma": "shama"
+      },
+      {
         "surface": "ear",
         "lemma": "ozen"
       }
@@ -356,6 +448,10 @@
       {
         "surface": "to those who send him",
         "lemma": "shalach"
+      },
+      {
+        "surface": "he refreshes",
+        "lemma": "shuv"
       },
       {
         "surface": "the soul",
@@ -448,6 +544,10 @@
         "lemma": "day"
       },
       {
+        "surface": "lest",
+        "lemma": "pen"
+      },
+      {
         "surface": "you have too much",
         "lemma": "sava"
       },
@@ -472,6 +572,10 @@
       {
         "surface": "house",
         "lemma": "bet"
+      },
+      {
+        "surface": "lest",
+        "lemma": "pen"
       },
       {
         "surface": "he grow weary",
@@ -576,6 +680,10 @@
         "lemma": "chomets"
       },
       {
+        "surface": "poured on",
+        "lemma": "al"
+      },
+      {
         "surface": "a wound",
         "lemma": "neter"
       },
@@ -588,6 +696,10 @@
         "lemma": "shir"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "a heavy",
         "lemma": "ra"
       },
@@ -597,6 +709,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "your enemy",
         "lemma": "sane"
@@ -614,6 +730,10 @@
         "lemma": "akhal"
       },
       {
+        "surface": "and if",
+        "lemma": "im"
+      },
+      {
         "surface": "he is thirsty",
         "lemma": "tsame"
       },
@@ -628,12 +748,24 @@
     ],
     "22": [
       {
+        "surface": "For in so doing",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
         "surface": "will heap",
         "lemma": "chatah"
       },
       {
         "surface": "burning coals",
         "lemma": "gechel"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "his head",
@@ -688,6 +820,14 @@
         "lemma": "tov"
       },
       {
+        "surface": "to live",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "a corner",
         "lemma": "pinnah"
       },
@@ -720,6 +860,10 @@
       {
         "surface": "water",
         "lemma": "mayim"
+      },
+      {
+        "surface": "to",
+        "lemma": "al"
       },
       {
         "surface": "a weary",
@@ -782,6 +926,10 @@
     ],
     "27": [
       {
+        "surface": "It is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
       },
@@ -824,6 +972,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "does not",
         "lemma": "ayin"
       },
@@ -838,8 +990,8 @@
     ]
   },
   "themeLemmas": [
+    "al",
     "paneh",
-    "tov",
-    "rea"
+    "tov"
   ]
 }

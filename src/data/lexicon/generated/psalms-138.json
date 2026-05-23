@@ -14,6 +14,10 @@
         "lemma": "yadah"
       },
       {
+        "surface": "with all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my heart",
         "lemma": "lev"
       },
@@ -36,6 +40,10 @@
         "lemma": "shachah"
       },
       {
+        "surface": "toward",
+        "lemma": "el"
+      },
+      {
         "surface": "Your holy",
         "lemma": "qodesh"
       },
@@ -52,12 +60,24 @@
         "lemma": "shem"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       },
       {
+        "surface": "and",
+        "lemma": "al"
+      },
+      {
         "surface": "Your faithfulness",
         "lemma": "emet"
+      },
+      {
+        "surface": "You",
+        "lemma": "ki"
       },
       {
         "surface": "have exalted",
@@ -70,12 +90,24 @@
       {
         "surface": "and Your word",
         "lemma": "imrah"
+      },
+      {
+        "surface": "above",
+        "lemma": "al"
+      },
+      {
+        "surface": "all else",
+        "lemma": "kol"
       }
     ],
     "3": [
       {
         "surface": "On the day",
         "lemma": "yom"
+      },
+      {
+        "surface": "I called",
+        "lemma": "qara"
       },
       {
         "surface": "You answered me",
@@ -96,6 +128,10 @@
     ],
     "4": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the kings",
         "lemma": "melekh"
       },
@@ -110,6 +146,14 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "when",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they hear",
+        "lemma": "shama"
       },
       {
         "surface": "the words",
@@ -134,6 +178,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "the glory",
         "lemma": "kavod"
       },
@@ -148,12 +196,20 @@
     ],
     "6": [
       {
+        "surface": "Though",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "is on high",
         "lemma": "rum"
+      },
+      {
+        "surface": "He attends",
+        "lemma": "raah"
       },
       {
         "surface": "to the lowly",
@@ -174,6 +230,10 @@
     ],
     "7": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "I walk",
         "lemma": "halakh"
       },
@@ -188,6 +248,10 @@
       {
         "surface": "You preserve me",
         "lemma": "chayah"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
       },
       {
         "surface": "the anger",
@@ -240,6 +304,10 @@
         "lemma": "olam"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "abandon",
         "lemma": "raphah"
       },
@@ -254,8 +322,8 @@
     ]
   },
   "themeLemmas": [
-    "yadah",
-    "shem",
-    "chesed"
+    "al",
+    "ki",
+    "yadah"
   ]
 }

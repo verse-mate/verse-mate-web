@@ -10,6 +10,10 @@
         "lemma": "david"
       },
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "fret over",
         "lemma": "charah"
       },
@@ -18,8 +22,16 @@
         "lemma": "raa"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "envy",
         "lemma": "qana"
+      },
+      {
+        "surface": "those who do",
+        "lemma": "asah"
       },
       {
         "surface": "wrong",
@@ -27,6 +39,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "they wither",
         "lemma": "malal"
@@ -62,6 +78,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and do",
+        "lemma": "asah"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
       },
@@ -88,8 +108,16 @@
         "lemma": "anag"
       },
       {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and He will give",
+        "lemma": "natan"
       },
       {
         "surface": "the desires",
@@ -110,15 +138,35 @@
         "lemma": "derekh"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "trust",
         "lemma": "batach"
+      },
+      {
+        "surface": "in Him",
+        "lemma": "al"
+      },
+      {
+        "surface": "and He",
+        "lemma": "hu"
+      },
+      {
+        "surface": "will do it",
+        "lemma": "asah"
       }
     ],
     "6": [
+      {
+        "surface": "He will bring forth",
+        "lemma": "yatsa"
+      },
       {
         "surface": "your righteousness",
         "lemma": "tsedeq"
@@ -150,6 +198,10 @@
         "lemma": "chul"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "fret",
         "lemma": "charah"
       },
@@ -164,6 +216,10 @@
       {
         "surface": "when they",
         "lemma": "ish"
+      },
+      {
+        "surface": "carry out",
+        "lemma": "asah"
       },
       {
         "surface": "wicked schemes",
@@ -188,6 +244,10 @@
         "lemma": "chemah"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "fret",
         "lemma": "charah"
       },
@@ -201,6 +261,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the evildoers",
         "lemma": "raa"
@@ -244,6 +308,10 @@
         "lemma": "bin"
       },
       {
+        "surface": "for them",
+        "lemma": "al"
+      },
+      {
         "surface": "vvv",
         "lemma": "maqom"
       },
@@ -268,6 +336,10 @@
       {
         "surface": "and delight",
         "lemma": "anag"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "abundant",
@@ -298,6 +370,10 @@
       {
         "surface": "their teeth",
         "lemma": "shen"
+      },
+      {
+        "surface": "at them",
+        "lemma": "al"
       }
     ],
     "13": [
@@ -310,8 +386,20 @@
         "lemma": "sachaq"
       },
       {
+        "surface": "seeing",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "their day",
         "lemma": "yom"
+      },
+      {
+        "surface": "is coming",
+        "lemma": "bo"
       }
     ],
     "14": [
@@ -366,6 +454,10 @@
         "lemma": "cherev"
       },
       {
+        "surface": "will pierce",
+        "lemma": "bo"
+      },
+      {
         "surface": "their own hearts",
         "lemma": "lev"
       },
@@ -405,6 +497,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the arms",
         "lemma": "zeroa"
@@ -450,12 +546,24 @@
       {
         "surface": "and their inheritance",
         "lemma": "nachalah"
+      },
+      {
+        "surface": "will last forever",
+        "lemma": "hayah"
       }
     ],
     "19": [
       {
+        "surface": "In the time",
+        "lemma": "et"
+      },
+      {
         "surface": "of evil",
         "lemma": "ra"
+      },
+      {
+        "surface": "they will not",
+        "lemma": "lo"
       },
       {
         "surface": "be ashamed",
@@ -475,6 +583,10 @@
       }
     ],
     "20": [
+      {
+        "surface": "But",
+        "lemma": "ki"
+      },
       {
         "surface": "the wicked",
         "lemma": "rasah"
@@ -522,6 +634,10 @@
         "lemma": "lavah"
       },
       {
+        "surface": "and do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "repay",
         "lemma": "salem"
       },
@@ -532,9 +648,17 @@
       {
         "surface": "are gracious",
         "lemma": "chanan"
+      },
+      {
+        "surface": "and giving",
+        "lemma": "natan"
       }
     ],
     "22": [
+      {
+        "surface": "Surely",
+        "lemma": "ki"
+      },
       {
         "surface": "those He blesses",
         "lemma": "barakh"
@@ -584,12 +708,24 @@
     ],
     "24": [
       {
+        "surface": "Though",
+        "lemma": "ki"
+      },
+      {
         "surface": "he falls",
         "lemma": "naphal"
       },
       {
+        "surface": "he will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be overwhelmed",
         "lemma": "tul"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -606,12 +742,28 @@
     ],
     "25": [
       {
+        "surface": "I once was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "young",
         "lemma": "naar"
       },
       {
+        "surface": "and now",
+        "lemma": "gam"
+      },
+      {
         "surface": "am old",
         "lemma": "zaqen"
+      },
+      {
+        "surface": "yet never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "have I seen",
+        "lemma": "raah"
       },
       {
         "surface": "the righteous",
@@ -635,6 +787,10 @@
       }
     ],
     "26": [
+      {
+        "surface": "They are",
+        "lemma": "kol"
+      },
       {
         "surface": "ever",
         "lemma": "yom"
@@ -666,6 +822,10 @@
         "lemma": "ra"
       },
       {
+        "surface": "and do",
+        "lemma": "asah"
+      },
+      {
         "surface": "good",
         "lemma": "tov"
       },
@@ -680,6 +840,10 @@
     ],
     "28": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -690,6 +854,10 @@
       {
         "surface": "justice",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "and will not",
+        "lemma": "lo"
       },
       {
         "surface": "forsake",
@@ -736,6 +904,10 @@
       {
         "surface": "and dwell",
         "lemma": "shakhan"
+      },
+      {
+        "surface": "in it",
+        "lemma": "al"
       },
       {
         "surface": "forever",
@@ -790,6 +962,10 @@
         "lemma": "ashur"
       },
       {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "falter",
         "lemma": "maad"
       }
@@ -822,12 +998,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "leave them",
         "lemma": "azav"
       },
       {
         "surface": "in their power",
         "lemma": "yad"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "let them be condemned",
@@ -842,6 +1026,10 @@
       {
         "surface": "Wait",
         "lemma": "qavah"
+      },
+      {
+        "surface": "for",
+        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -874,9 +1062,17 @@
       {
         "surface": "are cut off",
         "lemma": "karat"
+      },
+      {
+        "surface": "you will see it",
+        "lemma": "raah"
       }
     ],
     "35": [
+      {
+        "surface": "I have seen",
+        "lemma": "raah"
+      },
       {
         "surface": "a wicked",
         "lemma": "rasah"
@@ -912,6 +1108,10 @@
         "lemma": "baqash"
       },
       {
+        "surface": "he could not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be found",
         "lemma": "matsa"
       }
@@ -926,8 +1126,16 @@
         "lemma": "tam"
       },
       {
+        "surface": "and observe",
+        "lemma": "raah"
+      },
+      {
         "surface": "the upright",
         "lemma": "yashar"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "posterity awaits",
@@ -986,6 +1194,10 @@
         "lemma": "maoz"
       },
       {
+        "surface": "in time",
+        "lemma": "et"
+      },
+      {
         "surface": "of trouble",
         "lemma": "batstsarah"
       }
@@ -1016,6 +1228,10 @@
         "lemma": "rasah"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "they take refuge",
         "lemma": "chasah"
       }
@@ -1023,7 +1239,7 @@
   },
   "themeLemmas": [
     "rasah",
-    "tsaddiq",
-    "yarash"
+    "ki",
+    "al"
   ]
 }

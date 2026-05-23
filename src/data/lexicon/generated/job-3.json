@@ -42,6 +42,10 @@
       {
         "surface": "he",
         "lemma": "iyyov"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       }
     ],
     "3": [
@@ -62,6 +66,10 @@
         "lemma": "laylah"
       },
       {
+        "surface": "it was said",
+        "lemma": "amar"
+      },
+      {
         "surface": "A boy",
         "lemma": "gaver"
       },
@@ -72,8 +80,16 @@
     ],
     "4": [
       {
+        "surface": "If only that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "had turned",
+        "lemma": "hayah"
       },
       {
         "surface": "to darkness",
@@ -88,6 +104,10 @@
         "lemma": "maal"
       },
       {
+        "surface": "vvv",
+        "lemma": "al"
+      },
+      {
         "surface": "disregard it",
         "lemma": "darash"
       },
@@ -98,6 +118,10 @@
       {
         "surface": "shine",
         "lemma": "yapah"
+      },
+      {
+        "surface": "upon it",
+        "lemma": "al"
       }
     ],
     "5": [
@@ -122,6 +146,10 @@
         "lemma": "shakhan"
       },
       {
+        "surface": "over it",
+        "lemma": "al"
+      },
+      {
         "surface": "may the blackness",
         "lemma": "kimrir"
       },
@@ -140,12 +168,20 @@
         "lemma": "ophel"
       },
       {
+        "surface": "had taken",
+        "lemma": "hu"
+      },
+      {
         "surface": "that night",
         "lemma": "laylah"
       },
       {
         "surface": "away",
         "lemma": "laqach"
+      },
+      {
+        "surface": "May it not",
+        "lemma": "al"
       },
       {
         "surface": "appear",
@@ -158,6 +194,14 @@
       {
         "surface": "of the year",
         "lemma": "shaneh"
+      },
+      {
+        "surface": "may it never",
+        "lemma": "al"
+      },
+      {
+        "surface": "be entered",
+        "lemma": "bo"
       },
       {
         "surface": "in any",
@@ -174,16 +218,32 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "may that",
+        "lemma": "hu"
+      },
+      {
         "surface": "night",
         "lemma": "laylah"
+      },
+      {
+        "surface": "be",
+        "lemma": "hayah"
       },
       {
         "surface": "barren",
         "lemma": "galmud"
       },
       {
+        "surface": "may no",
+        "lemma": "al"
+      },
+      {
         "surface": "joyful voice",
         "lemma": "renanah"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
       }
     ],
     "8": [
@@ -238,6 +298,14 @@
         "lemma": "or"
       },
       {
+        "surface": "may it not",
+        "lemma": "al"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the breaking",
         "lemma": "aphaph"
       },
@@ -247,6 +315,14 @@
       }
     ],
     "10": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "that night did not",
+        "lemma": "lo"
+      },
       {
         "surface": "shut",
         "lemma": "sagar"
@@ -278,6 +354,10 @@
         "lemma": "mah"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "did I not perish",
         "lemma": "mut"
       },
@@ -288,6 +368,10 @@
       {
         "surface": "why did I not die",
         "lemma": "gava"
+      },
+      {
+        "surface": "as I came",
+        "lemma": "yatsa"
       },
       {
         "surface": "from the womb",
@@ -316,11 +400,19 @@
         "lemma": "shad"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "I should be nursed",
         "lemma": "yanaq"
       }
     ],
     "13": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "now",
         "lemma": "attah"
@@ -338,11 +430,19 @@
         "lemma": "yashen"
       },
       {
+        "surface": "and",
+        "lemma": "az"
+      },
+      {
         "surface": "at rest",
         "lemma": "nuach"
       }
     ],
     "14": [
+      {
+        "surface": "with",
+        "lemma": "im"
+      },
       {
         "surface": "kings",
         "lemma": "melekh"
@@ -366,6 +466,14 @@
     ],
     "15": [
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "princes",
         "lemma": "sar"
       },
@@ -388,6 +496,18 @@
     ],
     "16": [
       {
+        "surface": "Or",
+        "lemma": "o"
+      },
+      {
+        "surface": "why was",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "I not",
+        "lemma": "lo"
+      },
+      {
         "surface": "hidden",
         "lemma": "taman"
       },
@@ -398,6 +518,14 @@
       {
         "surface": "like an infant",
         "lemma": "olel"
+      },
+      {
+        "surface": "who never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "sees",
+        "lemma": "raah"
       },
       {
         "surface": "daylight",
@@ -448,6 +576,14 @@
         "lemma": "shaan"
       },
       {
+        "surface": "they do not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "the voice",
         "lemma": "qol"
       },
@@ -490,6 +626,10 @@
       {
         "surface": "is light",
         "lemma": "or"
+      },
+      {
+        "surface": "given",
+        "lemma": "natan"
       },
       {
         "surface": "to the miserable",
@@ -544,6 +684,10 @@
         "lemma": "sus"
       },
       {
+        "surface": "when",
+        "lemma": "ki"
+      },
+      {
         "surface": "they reach",
         "lemma": "matsa"
       },
@@ -556,6 +700,10 @@
       {
         "surface": "Why is life given to a man",
         "lemma": "gaver"
+      },
+      {
+        "surface": "whose",
+        "lemma": "asher"
       },
       {
         "surface": "way",
@@ -580,8 +728,16 @@
         "lemma": "anachah"
       },
       {
+        "surface": "when",
+        "lemma": "ki"
+      },
+      {
         "surface": "food",
         "lemma": "lechem"
+      },
+      {
+        "surface": "is put",
+        "lemma": "bo"
       },
       {
         "surface": "before me",
@@ -602,6 +758,10 @@
     ],
     "25": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the thing",
         "lemma": "pachad"
       },
@@ -614,11 +774,23 @@
         "lemma": "atah"
       },
       {
+        "surface": "and what",
+        "lemma": "asher"
+      },
+      {
         "surface": "I dreaded",
         "lemma": "yagor"
+      },
+      {
+        "surface": "has befallen",
+        "lemma": "bo"
       }
     ],
     "26": [
+      {
+        "surface": "I am not",
+        "lemma": "lo"
+      },
       {
         "surface": "at ease",
         "lemma": "shalah"
@@ -628,18 +800,26 @@
         "lemma": "shaqat"
       },
       {
+        "surface": "I have no",
+        "lemma": "lo"
+      },
+      {
         "surface": "rest",
         "lemma": "nuach"
       },
       {
         "surface": "for trouble",
         "lemma": "rogez"
+      },
+      {
+        "surface": "has come",
+        "lemma": "bo"
       }
     ]
   },
   "themeLemmas": [
-    "sham",
-    "or",
-    "nuach"
+    "lo",
+    "al",
+    "ki"
   ]
 }

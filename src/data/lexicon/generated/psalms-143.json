@@ -18,6 +18,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "my prayer",
         "lemma": "tephillah"
       },
@@ -28,6 +32,10 @@
       {
         "surface": "give ear",
         "lemma": "azan"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "my plea",
@@ -44,12 +52,28 @@
     ],
     "2": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "Your servant",
         "lemma": "eved"
       },
       {
         "surface": "into judgment",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "no one",
+        "lemma": "lo"
       },
       {
         "surface": "alive",
@@ -65,6 +89,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the enemy",
         "lemma": "oyev"
@@ -90,6 +118,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "making me dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in darkness",
         "lemma": "machshakh"
       },
@@ -110,6 +142,10 @@
       {
         "surface": "grows faint",
         "lemma": "ataph"
+      },
+      {
+        "surface": "within me",
+        "lemma": "al"
       },
       {
         "surface": "my heart",
@@ -142,6 +178,10 @@
         "lemma": "hagah"
       },
       {
+        "surface": "on all",
+        "lemma": "kol"
+      },
+      {
         "surface": "Your works",
         "lemma": "poal"
       },
@@ -166,6 +206,10 @@
       {
         "surface": "my hands",
         "lemma": "yad"
+      },
+      {
+        "surface": "to You",
+        "lemma": "el"
       },
       {
         "surface": "my soul",
@@ -206,12 +250,20 @@
         "lemma": "kalah"
       },
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "hide",
         "lemma": "satar"
       },
       {
         "surface": "Your face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "from me",
+        "lemma": "min"
       },
       {
         "surface": "or I will be like those",
@@ -228,12 +280,20 @@
     ],
     "8": [
       {
+        "surface": "Let me hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       },
       {
         "surface": "in the morning",
         "lemma": "boqer"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "I have put my trust",
@@ -250,6 +310,14 @@
       {
         "surface": "I should walk",
         "lemma": "halakh"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "to You",
+        "lemma": "el"
       },
       {
         "surface": "I lift up",
@@ -274,6 +342,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "I flee to You",
+        "lemma": "el"
+      },
+      {
         "surface": "for refuge",
         "lemma": "kasah"
       }
@@ -284,8 +356,20 @@
         "lemma": "lamad"
       },
       {
+        "surface": "to do",
+        "lemma": "asah"
+      },
+      {
         "surface": "Your will",
         "lemma": "ratson"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "You",
+        "lemma": "attah"
       },
       {
         "surface": "are my God",
@@ -314,6 +398,10 @@
     ],
     "11": [
       {
+        "surface": "For the sake",
+        "lemma": "maan"
+      },
+      {
         "surface": "of Your name",
         "lemma": "shem"
       },
@@ -328,6 +416,10 @@
       {
         "surface": "In Your righteousness",
         "lemma": "tsedaqah"
+      },
+      {
+        "surface": "bring",
+        "lemma": "yatsa"
       },
       {
         "surface": "my soul",
@@ -356,6 +448,10 @@
         "lemma": "avad"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who afflict",
         "lemma": "tsarar"
       },
@@ -364,14 +460,22 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am Your servant",
         "lemma": "eved"
       }
     ]
   },
   "themeLemmas": [
+    "ki",
     "nephesh",
-    "ruach",
-    "oyev"
+    "ruach"
   ]
 }

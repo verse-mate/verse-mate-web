@@ -48,6 +48,10 @@
     ],
     "2": [
       {
+        "surface": "He was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "sixteen",
         "lemma": "shesh"
       },
@@ -94,6 +98,10 @@
     ],
     "3": [
       {
+        "surface": "And he did",
+        "lemma": "asah"
+      },
+      {
         "surface": "what was right",
         "lemma": "yashar"
       },
@@ -106,14 +114,34 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "just as",
+        "lemma": "kol"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "Amaziah",
         "lemma": "amatsyah"
+      },
+      {
+        "surface": "had done",
+        "lemma": "asah"
       }
     ],
     "4": [
       {
+        "surface": "Nevertheless",
+        "lemma": "raq"
+      },
+      {
         "surface": "the high places",
         "lemma": "bamah"
+      },
+      {
+        "surface": "were not",
+        "lemma": "lo"
       },
       {
         "surface": "taken away",
@@ -158,12 +186,20 @@
         "lemma": "tsara"
       },
       {
+        "surface": "until",
+        "lemma": "ad"
+      },
+      {
         "surface": "the day",
         "lemma": "yom"
       },
       {
         "surface": "he died",
         "lemma": "mavet"
+      },
+      {
+        "surface": "so that he lived",
+        "lemma": "yashav"
       },
       {
         "surface": "in a separate",
@@ -184,6 +220,10 @@
       {
         "surface": "Jotham",
         "lemma": "yotam"
+      },
+      {
+        "surface": "had charge of",
+        "lemma": "al"
       },
       {
         "surface": "the palace",
@@ -216,8 +256,20 @@
         "lemma": "azaryah"
       },
       {
+        "surface": "along with all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "his accomplishments",
+        "lemma": "asher"
+      },
+      {
         "surface": "are they not written",
         "lemma": "katav"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "the Book",
@@ -246,8 +298,24 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "and was buried",
         "lemma": "qavar"
+      },
+      {
+        "surface": "near",
+        "lemma": "im"
+      },
+      {
+        "surface": "them",
+        "lemma": "av"
       },
       {
         "surface": "in the City",
@@ -312,6 +380,10 @@
         "lemma": "malakh"
       },
       {
+        "surface": "of",
+        "lemma": "al"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -330,6 +402,10 @@
     ],
     "9": [
       {
+        "surface": "And he did",
+        "lemma": "asah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
@@ -340,6 +416,22 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "had done",
+        "lemma": "asah"
+      },
+      {
+        "surface": "He did not",
+        "lemma": "lo"
       },
       {
         "surface": "turn away",
@@ -388,6 +480,10 @@
         "lemma": "qashar"
       },
       {
+        "surface": "against Zechariah",
+        "lemma": "al"
+      },
+      {
         "surface": "struck him down",
         "lemma": "nakhah"
       },
@@ -434,6 +530,10 @@
         "lemma": "katav"
       },
       {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "the Book",
         "lemma": "sepher"
       },
@@ -464,8 +564,16 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Jehu",
         "lemma": "yehu"
+      },
+      {
+        "surface": "was fulfilled",
+        "lemma": "hayah"
       },
       {
         "surface": "Four generations",
@@ -474,6 +582,14 @@
       {
         "surface": "of your sons",
         "lemma": "ben"
+      },
+      {
+        "surface": "will sit",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the throne",
@@ -618,6 +734,10 @@
         "lemma": "katav"
       },
       {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "the Book",
         "lemma": "sepher"
       },
@@ -636,6 +756,10 @@
     ],
     "16": [
       {
+        "surface": "At that time",
+        "lemma": "az"
+      },
+      {
         "surface": "Menahem",
         "lemma": "menachem"
       },
@@ -652,8 +776,28 @@
         "lemma": "tiphsach"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "in its",
+        "lemma": "asher"
+      },
+      {
         "surface": "vicinity",
         "lemma": "gevul"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they would not",
+        "lemma": "lo"
       },
       {
         "surface": "open their gates",
@@ -666,6 +810,10 @@
       {
         "surface": "and ripped open",
         "lemma": "baqa"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the pregnant women",
@@ -710,6 +858,10 @@
         "lemma": "malakh"
       },
       {
+        "surface": "of",
+        "lemma": "al"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -728,6 +880,10 @@
     ],
     "18": [
       {
+        "surface": "And he did",
+        "lemma": "asah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
@@ -740,12 +896,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and throughout",
+        "lemma": "kol"
+      },
+      {
         "surface": "his reign",
         "lemma": "yom"
       },
       {
+        "surface": "he did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turn away",
         "lemma": "sur"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
       },
       {
         "surface": "the sins that",
@@ -786,12 +954,20 @@
         "lemma": "ashshur"
       },
       {
+        "surface": "invaded",
+        "lemma": "bo"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
         "surface": "and Menahem",
         "lemma": "menachem"
+      },
+      {
+        "surface": "gave",
+        "lemma": "natan"
       },
       {
         "surface": "Pul",
@@ -808,6 +984,10 @@
       {
         "surface": "of silver",
         "lemma": "keseph"
+      },
+      {
+        "surface": "in order to gain his support",
+        "lemma": "hayah"
       },
       {
         "surface": "and strengthen",
@@ -828,8 +1008,20 @@
         "lemma": "menachem"
       },
       {
+        "surface": "exacted",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "this money",
         "lemma": "keseph"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
+      },
+      {
+        "surface": "each",
+        "lemma": "kol"
       },
       {
         "surface": "of the wealthy",
@@ -864,6 +1056,10 @@
         "lemma": "ish"
       },
       {
+        "surface": "to give",
+        "lemma": "natan"
+      },
+      {
         "surface": "to the king",
         "lemma": "melekh"
       },
@@ -878,6 +1074,14 @@
       {
         "surface": "of Assyria",
         "lemma": "ashshur"
+      },
+      {
+        "surface": "withdrew",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "and did not",
+        "lemma": "lo"
       },
       {
         "surface": "remain",
@@ -902,8 +1106,20 @@
         "lemma": "menachem"
       },
       {
+        "surface": "along with all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "his accomplishments",
+        "lemma": "asher"
+      },
+      {
         "surface": "are they not written",
         "lemma": "katav"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "the Book",
@@ -930,6 +1146,14 @@
       {
         "surface": "rested",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
       },
       {
         "surface": "and his son",
@@ -986,6 +1210,10 @@
         "lemma": "malakh"
       },
       {
+        "surface": "of",
+        "lemma": "al"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -1000,6 +1228,10 @@
     ],
     "24": [
       {
+        "surface": "And he did",
+        "lemma": "asah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
@@ -1010,6 +1242,10 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "and did not",
+        "lemma": "lo"
       },
       {
         "surface": "turn away",
@@ -1062,12 +1298,24 @@
         "lemma": "qashar"
       },
       {
+        "surface": "against him",
+        "lemma": "al"
+      },
+      {
+        "surface": "along with",
+        "lemma": "et"
+      },
+      {
         "surface": "Argob",
         "lemma": "argov"
       },
       {
         "surface": "Arieh",
         "lemma": "aryeh"
+      },
+      {
+        "surface": "and",
+        "lemma": "im"
       },
       {
         "surface": "fifty",
@@ -1132,12 +1380,24 @@
         "lemma": "peqachyah"
       },
       {
+        "surface": "along with all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "his accomplishments",
+        "lemma": "asher"
+      },
+      {
         "surface": "they are indeed",
         "lemma": "hinneh"
       },
       {
         "surface": "written",
         "lemma": "katav"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "the Book",
@@ -1194,6 +1454,10 @@
         "lemma": "malakh"
       },
       {
+        "surface": "of",
+        "lemma": "al"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -1212,6 +1476,10 @@
     ],
     "28": [
       {
+        "surface": "And he did",
+        "lemma": "asah"
+      },
+      {
         "surface": "evil",
         "lemma": "ra"
       },
@@ -1224,8 +1492,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "and did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "turn away",
         "lemma": "sur"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "the sins that",
@@ -1286,6 +1562,10 @@
         "lemma": "ashshur"
       },
       {
+        "surface": "came",
+        "lemma": "bo"
+      },
+      {
         "surface": "and captured",
         "lemma": "laqach"
       },
@@ -1326,6 +1606,10 @@
         "lemma": "galil"
       },
       {
+        "surface": "including all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -1362,6 +1646,10 @@
       {
         "surface": "a conspiracy",
         "lemma": "qesher"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "Pekah",
@@ -1426,12 +1714,24 @@
         "lemma": "peqach"
       },
       {
+        "surface": "along with all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "his accomplishments",
+        "lemma": "asher"
+      },
+      {
         "surface": "they are indeed",
         "lemma": "hinneh"
       },
       {
         "surface": "written",
         "lemma": "katav"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "the Book",
@@ -1502,6 +1802,10 @@
     ],
     "33": [
       {
+        "surface": "He was",
+        "lemma": "hayah"
+      },
+      {
         "surface": "twenty-five",
         "lemma": "esrim"
       },
@@ -1552,6 +1856,10 @@
     ],
     "34": [
       {
+        "surface": "And he did",
+        "lemma": "asah"
+      },
+      {
         "surface": "what was right",
         "lemma": "yashar"
       },
@@ -1564,14 +1872,34 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "just as",
+        "lemma": "kol"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "Uzziah",
         "lemma": "uzziyyah"
+      },
+      {
+        "surface": "had done",
+        "lemma": "asah"
       }
     ],
     "35": [
       {
+        "surface": "Nevertheless",
+        "lemma": "raq"
+      },
+      {
         "surface": "the high places",
         "lemma": "bamah"
+      },
+      {
+        "surface": "were not",
+        "lemma": "lo"
       },
       {
         "surface": "taken away",
@@ -1596,6 +1924,10 @@
       {
         "surface": "there",
         "lemma": "bamah"
+      },
+      {
+        "surface": "Jotham",
+        "lemma": "hu"
       },
       {
         "surface": "rebuilt",
@@ -1632,8 +1964,24 @@
         "lemma": "yotam"
       },
       {
+        "surface": "along with his accomplishments",
+        "lemma": "asher"
+      },
+      {
+        "surface": "are they",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "written",
         "lemma": "katav"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "the Book",
@@ -1653,6 +2001,10 @@
       }
     ],
     "37": [
+      {
+        "surface": "In those",
+        "lemma": "hemmah"
+      },
       {
         "surface": "days",
         "lemma": "yom"
@@ -1708,8 +2060,24 @@
         "lemma": "shakhav"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
+        "surface": "his fathers",
+        "lemma": "av"
+      },
+      {
         "surface": "and was buried",
         "lemma": "qavar"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
+        "surface": "them",
+        "lemma": "av"
       },
       {
         "surface": "in the City",
@@ -1718,6 +2086,10 @@
       {
         "surface": "of David",
         "lemma": "david"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
       },
       {
         "surface": "And his son",
@@ -1740,6 +2112,6 @@
   "themeLemmas": [
     "malakh",
     "yisrael",
-    "shaneh"
+    "al"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "Say",
+        "lemma": "amar"
+      },
+      {
         "surface": "of your brothers",
         "lemma": "ach"
       },
@@ -36,8 +40,28 @@
         "lemma": "riv"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "she",
+        "lemma": "hu"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
+      },
+      {
         "surface": "My wife",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "and I",
+        "lemma": "anokhi"
+      },
+      {
+        "surface": "am not",
+        "lemma": "lo"
       },
       {
         "surface": "her husband",
@@ -69,6 +93,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "Otherwise",
+        "lemma": "pen"
+      },
       {
         "surface": "I will strip her",
         "lemma": "pashat"
@@ -120,12 +148,24 @@
     ],
     "4": [
       {
+        "surface": "I will have no",
+        "lemma": "lo"
+      },
+      {
         "surface": "compassion",
         "lemma": "racham"
       },
       {
         "surface": "on her children",
         "lemma": "ben"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
       },
       {
         "surface": "are the children",
@@ -137,6 +177,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "their mother",
         "lemma": "em"
@@ -154,6 +198,14 @@
         "lemma": "bush"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "she thought",
+        "lemma": "amar"
+      },
+      {
         "surface": "I will go",
         "lemma": "halakh"
       },
@@ -164,6 +216,10 @@
       {
         "surface": "my lovers",
         "lemma": "ahav"
+      },
+      {
+        "surface": "who give me",
+        "lemma": "natan"
       },
       {
         "surface": "bread",
@@ -204,6 +260,10 @@
         "lemma": "sukh"
       },
       {
+        "surface": "her",
+        "lemma": "et"
+      },
+      {
         "surface": "path",
         "lemma": "derekh"
       },
@@ -214,6 +274,10 @@
       {
         "surface": "I will enclose her with a wall",
         "lemma": "gadar"
+      },
+      {
+        "surface": "so she cannot",
+        "lemma": "lo"
       },
       {
         "surface": "find",
@@ -234,16 +298,40 @@
         "lemma": "ahav"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "catch",
         "lemma": "nasag"
+      },
+      {
+        "surface": "them",
+        "lemma": "et"
       },
       {
         "surface": "she will seek them",
         "lemma": "baqash"
       },
       {
+        "surface": "but not",
+        "lemma": "lo"
+      },
+      {
         "surface": "find them",
         "lemma": "matsa"
+      },
+      {
+        "surface": "Then she will say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I will return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "my first",
@@ -252,6 +340,14 @@
       {
         "surface": "husband",
         "lemma": "ish"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "then",
+        "lemma": "az"
       },
       {
         "surface": "I was better off",
@@ -264,8 +360,28 @@
     ],
     "8": [
       {
+        "surface": "For she",
+        "lemma": "hu"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "acknowledge",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "it was I",
+        "lemma": "anokhi"
+      },
+      {
+        "surface": "who gave",
+        "lemma": "natan"
       },
       {
         "surface": "grain",
@@ -292,6 +408,10 @@
         "lemma": "zahav"
       },
       {
+        "surface": "which they crafted",
+        "lemma": "asah"
+      },
+      {
         "surface": "for Baal",
         "lemma": "baal"
       }
@@ -302,8 +422,16 @@
         "lemma": "ken"
       },
       {
+        "surface": "I will take back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "My grain",
         "lemma": "dagan"
+      },
+      {
+        "surface": "in its time",
+        "lemma": "et"
       },
       {
         "surface": "and My new wine",
@@ -356,6 +484,10 @@
         "lemma": "ahav"
       },
       {
+        "surface": "and no",
+        "lemma": "lo"
+      },
+      {
         "surface": "one",
         "lemma": "ish"
       },
@@ -374,6 +506,10 @@
         "lemma": "shavat"
       },
       {
+        "surface": "to all",
+        "lemma": "kol"
+      },
+      {
         "surface": "her exultation",
         "lemma": "masvos"
       },
@@ -388,6 +524,10 @@
       {
         "surface": "and Sabbaths",
         "lemma": "shabbat"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "her appointed feasts",
@@ -408,8 +548,20 @@
         "lemma": "teenah"
       },
       {
+        "surface": "which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "she thinks",
+        "lemma": "amar"
+      },
+      {
         "surface": "are the wages",
         "lemma": "etnah"
+      },
+      {
+        "surface": "paid",
+        "lemma": "natan"
       },
       {
         "surface": "by her lovers",
@@ -442,12 +594,20 @@
         "lemma": "paqad"
       },
       {
+        "surface": "her",
+        "lemma": "al"
+      },
+      {
         "surface": "for the days",
         "lemma": "yom"
       },
       {
         "surface": "of the Baals",
         "lemma": "baal"
+      },
+      {
+        "surface": "when",
+        "lemma": "asher"
       },
       {
         "surface": "she burned incense to them",
@@ -478,6 +638,10 @@
         "lemma": "ahav"
       },
       {
+        "surface": "But Me",
+        "lemma": "et"
+      },
+      {
         "surface": "she forgot",
         "lemma": "shakhach"
       },
@@ -500,6 +664,10 @@
         "lemma": "hinneh"
       },
       {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "will allure her",
         "lemma": "patah"
       },
@@ -516,6 +684,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to her",
+        "lemma": "al"
+      },
+      {
         "surface": "tenderly",
         "lemma": "lev"
       }
@@ -524,6 +696,10 @@
       {
         "surface": "There",
         "lemma": "sham"
+      },
+      {
+        "surface": "I will give back",
+        "lemma": "natan"
       },
       {
         "surface": "her vineyards",
@@ -580,6 +756,10 @@
     ],
     "16": [
       {
+        "surface": "In that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -592,12 +772,24 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "you will call Me",
+        "lemma": "qara"
+      },
+      {
         "surface": "my Husband",
         "lemma": "ish"
       },
       {
+        "surface": "and no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
+      },
+      {
+        "surface": "call",
+        "lemma": "qara"
       },
       {
         "surface": "my Master",
@@ -622,6 +814,10 @@
         "lemma": "baal"
       },
       {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "longer",
         "lemma": "od"
       },
@@ -636,6 +832,10 @@
     ],
     "18": [
       {
+        "surface": "On that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -648,12 +848,20 @@
         "lemma": "berit"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "the beasts",
         "lemma": "chay"
       },
       {
         "surface": "of the field",
         "lemma": "saday"
+      },
+      {
+        "surface": "and",
+        "lemma": "im"
       },
       {
         "surface": "the birds",
@@ -686,6 +894,10 @@
       {
         "surface": "and battle",
         "lemma": "milchamah"
+      },
+      {
+        "surface": "in",
+        "lemma": "min"
       },
       {
         "surface": "the land",
@@ -750,6 +962,10 @@
     ],
     "21": [
       {
+        "surface": "On that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -772,6 +988,10 @@
       {
         "surface": "to the heavens",
         "lemma": "shamayim"
+      },
+      {
+        "surface": "and they",
+        "lemma": "hemmah"
       },
       {
         "surface": "will respond",
@@ -804,6 +1024,10 @@
         "lemma": "yitshar"
       },
       {
+        "surface": "and they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "will respond",
         "lemma": "un"
       },
@@ -826,16 +1050,40 @@
         "lemma": "racham"
       },
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "Compassion",
         "lemma": "racham"
+      },
+      {
+        "surface": "I will say to those called",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Not",
+        "lemma": "lo"
       },
       {
         "surface": "My People",
         "lemma": "am"
       },
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "are My people",
         "lemma": "am"
+      },
+      {
+        "surface": "and they",
+        "lemma": "hu"
+      },
+      {
+        "surface": "will say",
+        "lemma": "amar"
       },
       {
         "surface": "You are my God",
@@ -844,8 +1092,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "un",
-    "racham",
-    "ahav"
+    "ki"
   ]
 }

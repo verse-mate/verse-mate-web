@@ -22,8 +22,16 @@
         "lemma": "hamah"
       },
       {
+        "surface": "and whoever",
+        "lemma": "kol"
+      },
+      {
         "surface": "is led astray",
         "lemma": "shagah"
+      },
+      {
+        "surface": "is not",
+        "lemma": "lo"
       },
       {
         "surface": "wise",
@@ -78,6 +86,10 @@
         "lemma": "riv"
       },
       {
+        "surface": "but any",
+        "lemma": "kol"
+      },
+      {
         "surface": "fool",
         "lemma": "evil"
       },
@@ -90,6 +102,10 @@
       {
         "surface": "The slacker",
         "lemma": "atsel"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
       },
       {
         "surface": "plow",
@@ -156,6 +172,10 @@
         "lemma": "adam"
       },
       {
+        "surface": "proclaims",
+        "lemma": "qara"
+      },
+      {
         "surface": "his",
         "lemma": "ish"
       },
@@ -212,6 +232,14 @@
         "lemma": "melekh"
       },
       {
+        "surface": "who sits",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "a throne",
         "lemma": "kisse"
       },
@@ -222,6 +250,10 @@
       {
         "surface": "sifts out",
         "lemma": "zarah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "evil",
@@ -236,6 +268,10 @@
       {
         "surface": "Who",
         "lemma": "mi"
+      },
+      {
+        "surface": "can say",
+        "lemma": "amar"
       },
       {
         "surface": "I have kept my heart",
@@ -282,6 +318,10 @@
     ],
     "11": [
       {
+        "surface": "Even",
+        "lemma": "gam"
+      },
+      {
         "surface": "a young man",
         "lemma": "naar"
       },
@@ -292,6 +332,10 @@
       {
         "surface": "by his actions",
         "lemma": "maalal"
+      },
+      {
+        "surface": "whether",
+        "lemma": "im"
       },
       {
         "surface": "his conduct",
@@ -312,12 +356,24 @@
         "lemma": "ozen"
       },
       {
+        "surface": "that hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "and eyes",
         "lemma": "ayin"
       },
       {
+        "surface": "that see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has made them",
+        "lemma": "asah"
       },
       {
         "surface": "both",
@@ -326,12 +382,20 @@
     ],
     "13": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "love",
         "lemma": "ahav"
       },
       {
         "surface": "sleep",
         "lemma": "shenah"
+      },
+      {
+        "surface": "or",
+        "lemma": "pen"
       },
       {
         "surface": "you will grow poor",
@@ -362,6 +426,10 @@
       {
         "surface": "worthless",
         "lemma": "ra"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "the buyer",
@@ -418,6 +486,10 @@
       {
         "surface": "the garment",
         "lemma": "beged"
+      },
+      {
+        "surface": "of the one",
+        "lemma": "ki"
       },
       {
         "surface": "who posts security",
@@ -488,6 +560,10 @@
         "lemma": "etsah"
       },
       {
+        "surface": "and wage",
+        "lemma": "asah"
+      },
+      {
         "surface": "war",
         "lemma": "milchamah"
       },
@@ -514,6 +590,10 @@
         "lemma": "rakhil"
       },
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
         "surface": "avoid",
         "lemma": "arav"
       },
@@ -530,6 +610,10 @@
       {
         "surface": "Whoever curses",
         "lemma": "qalal"
+      },
+      {
+        "surface": "his father",
+        "lemma": "av"
       },
       {
         "surface": "or mother",
@@ -566,6 +650,10 @@
         "lemma": "rishon"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be blessed",
         "lemma": "barakh"
       },
@@ -575,6 +663,14 @@
       }
     ],
     "22": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
+      },
       {
         "surface": "I will avenge",
         "lemma": "salem"
@@ -616,6 +712,10 @@
       {
         "surface": "scales",
         "lemma": "mozen"
+      },
+      {
+        "surface": "are no",
+        "lemma": "lo"
       },
       {
         "surface": "good",
@@ -700,8 +800,16 @@
         "lemma": "rasah"
       },
       {
+        "surface": "and drives",
+        "lemma": "shuv"
+      },
+      {
         "surface": "the threshing wheel",
         "lemma": "ophan"
+      },
+      {
+        "surface": "over them",
+        "lemma": "al"
       }
     ],
     "27": [
@@ -815,7 +923,7 @@
   },
   "themeLemmas": [
     "ra",
-    "even",
-    "chesed"
+    "lo",
+    "al"
   ]
 }

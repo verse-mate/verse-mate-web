@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "You are to build",
+        "lemma": "asah"
+      },
+      {
         "surface": "an altar",
         "lemma": "mizbeach"
       },
@@ -20,6 +24,10 @@
       {
         "surface": "The altar",
         "lemma": "mizbeach"
+      },
+      {
+        "surface": "must be",
+        "lemma": "hayah"
       },
       {
         "surface": "square",
@@ -64,8 +72,16 @@
     ],
     "2": [
       {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
         "surface": "a horn",
         "lemma": "qeren"
+      },
+      {
+        "surface": "on each of",
+        "lemma": "al"
       },
       {
         "surface": "its four",
@@ -80,6 +96,14 @@
         "lemma": "qeren"
       },
       {
+        "surface": "are",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "of one piece",
+        "lemma": "min"
+      },
+      {
         "surface": "and overlay",
         "lemma": "tsaphah"
       },
@@ -89,6 +113,14 @@
       }
     ],
     "3": [
+      {
+        "surface": "Make",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "its utensils",
         "lemma": "keli"
@@ -124,6 +156,10 @@
     ],
     "4": [
       {
+        "surface": "Construct",
+        "lemma": "asah"
+      },
+      {
         "surface": "a grate",
         "lemma": "makhber"
       },
@@ -136,12 +172,20 @@
         "lemma": "reshet"
       },
       {
+        "surface": "and make a",
+        "lemma": "asah"
+      },
+      {
         "surface": "bronze",
         "lemma": "nechoshet"
       },
       {
         "surface": "ring",
         "lemma": "tabbaat"
+      },
+      {
+        "surface": "at",
+        "lemma": "al"
       },
       {
         "surface": "each of the four",
@@ -152,11 +196,23 @@
         "lemma": "qatsah"
       },
       {
+        "surface": "of",
+        "lemma": "al"
+      },
+      {
         "surface": "the mesh",
         "lemma": "reshet"
       }
     ],
     "5": [
+      {
+        "surface": "Set",
+        "lemma": "natan"
+      },
+      {
+        "surface": "the grate",
+        "lemma": "et"
+      },
       {
         "surface": "beneath",
         "lemma": "mattah"
@@ -174,8 +230,16 @@
         "lemma": "reshet"
       },
       {
+        "surface": "comes",
+        "lemma": "hayah"
+      },
+      {
         "surface": "halfway",
         "lemma": "chetsi"
+      },
+      {
+        "surface": "up",
+        "lemma": "ad"
       },
       {
         "surface": "the altar",
@@ -183,6 +247,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "Additionally, make",
+        "lemma": "asah"
+      },
       {
         "surface": "poles",
         "lemma": "bad"
@@ -204,6 +272,10 @@
         "lemma": "tsaphah"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "with bronze",
         "lemma": "nechoshet"
       }
@@ -214,12 +286,24 @@
         "lemma": "bad"
       },
       {
+        "surface": "are to be inserted",
+        "lemma": "bo"
+      },
+      {
         "surface": "into the rings",
         "lemma": "tabbaat"
       },
       {
         "surface": "so that the poles",
         "lemma": "bad"
+      },
+      {
+        "surface": "are",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "two",
@@ -240,6 +324,14 @@
     ],
     "8": [
       {
+        "surface": "Construct",
+        "lemma": "asah"
+      },
+      {
+        "surface": "the altar",
+        "lemma": "et"
+      },
+      {
         "surface": "with boards",
         "lemma": "luach"
       },
@@ -248,11 +340,27 @@
         "lemma": "navav"
       },
       {
+        "surface": "It is to be made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "just as",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you were shown",
+        "lemma": "raah"
+      },
+      {
         "surface": "on the mountain",
         "lemma": "har"
       }
     ],
     "9": [
+      {
+        "surface": "You are also to make",
+        "lemma": "asah"
+      },
       {
         "surface": "a courtyard",
         "lemma": "chatser"
@@ -618,6 +726,10 @@
     ],
     "17": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the posts",
         "lemma": "ammud"
       },
@@ -710,6 +822,10 @@
     ],
     "19": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "the utensils",
         "lemma": "keli"
       },
@@ -718,12 +834,24 @@
         "lemma": "mishkan"
       },
       {
+        "surface": "for every",
+        "lemma": "kol"
+      },
+      {
         "surface": "use",
         "lemma": "avodah"
       },
       {
+        "surface": "including all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its tent pegs",
         "lemma": "yated"
+      },
+      {
+        "surface": "and",
+        "lemma": "kol"
       },
       {
         "surface": "the tent pegs",
@@ -740,6 +868,10 @@
     ],
     "20": [
       {
+        "surface": "And you",
+        "lemma": "attah"
+      },
+      {
         "surface": "are to command",
         "lemma": "tsavah"
       },
@@ -750,6 +882,10 @@
       {
         "surface": "to bring",
         "lemma": "laqach"
+      },
+      {
+        "surface": "you",
+        "lemma": "el"
       },
       {
         "surface": "pure",
@@ -802,6 +938,14 @@
         "lemma": "porekhet"
       },
       {
+        "surface": "that is",
+        "lemma": "asher"
+      },
+      {
+        "surface": "in front of",
+        "lemma": "al"
+      },
+      {
         "surface": "the Testimony",
         "lemma": "edut"
       },
@@ -818,6 +962,10 @@
         "lemma": "arakh"
       },
       {
+        "surface": "the lamps",
+        "lemma": "et"
+      },
+      {
         "surface": "before",
         "lemma": "paneh"
       },
@@ -828,6 +976,10 @@
       {
         "surface": "from evening",
         "lemma": "erev"
+      },
+      {
+        "surface": "until",
+        "lemma": "ad"
       },
       {
         "surface": "morning",
@@ -846,6 +998,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "vvv",
+        "lemma": "et"
+      },
+      {
         "surface": "for the generations to come",
         "lemma": "dor"
       }
@@ -854,6 +1010,6 @@
   "themeLemmas": [
     "nechoshet",
     "ammah",
-    "ammud"
+    "asah"
   ]
 }

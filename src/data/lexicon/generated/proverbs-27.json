@@ -6,12 +6,24 @@
   "verses": {
     "1": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "boast",
         "lemma": "halal"
       },
       {
         "surface": "about tomorrow",
         "lemma": "yom"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you do not",
+        "lemma": "lo"
       },
       {
         "surface": "know",
@@ -40,12 +52,20 @@
         "lemma": "halal"
       },
       {
+        "surface": "and not",
+        "lemma": "lo"
+      },
+      {
         "surface": "your own mouth",
         "lemma": "peh"
       },
       {
         "surface": "a stranger",
         "lemma": "nokhri"
+      },
+      {
+        "surface": "and not",
+        "lemma": "al"
       },
       {
         "surface": "your own lips",
@@ -190,6 +210,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "bitter thing",
         "lemma": "mar"
       },
@@ -206,6 +230,10 @@
       {
         "surface": "that strays",
         "lemma": "nadad"
+      },
+      {
+        "surface": "from",
+        "lemma": "min"
       },
       {
         "surface": "its nest",
@@ -260,6 +288,10 @@
     ],
     "10": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "forsake",
         "lemma": "azav"
       },
@@ -268,8 +300,20 @@
         "lemma": "rea"
       },
       {
+        "surface": "or your father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "friend",
         "lemma": "reeh"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "go",
+        "lemma": "bo"
       },
       {
         "surface": "to your brother’s",
@@ -326,6 +370,10 @@
         "lemma": "lev"
       },
       {
+        "surface": "so that I can answer",
+        "lemma": "shuv"
+      },
+      {
         "surface": "him who taunts me",
         "lemma": "charaph"
       }
@@ -334,6 +382,10 @@
       {
         "surface": "The prudent",
         "lemma": "arum"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "danger",
@@ -364,6 +416,10 @@
       {
         "surface": "the garment",
         "lemma": "beged"
+      },
+      {
+        "surface": "of him who",
+        "lemma": "ki"
       },
       {
         "surface": "posts security",
@@ -464,6 +520,10 @@
         "lemma": "ruach"
       },
       {
+        "surface": "or grasping",
+        "lemma": "qara"
+      },
+      {
         "surface": "oil",
         "lemma": "shemen"
       },
@@ -560,6 +620,10 @@
         "lemma": "avaddon"
       },
       {
+        "surface": "are never",
+        "lemma": "lo"
+      },
+      {
         "surface": "satisfied",
         "lemma": "sava"
       },
@@ -570,6 +634,10 @@
       {
         "surface": "of man",
         "lemma": "adam"
+      },
+      {
+        "surface": "are never",
+        "lemma": "lo"
       },
       {
         "surface": "satisfied",
@@ -608,6 +676,10 @@
     ],
     "22": [
       {
+        "surface": "Though",
+        "lemma": "im"
+      },
+      {
         "surface": "you grind",
         "lemma": "katash"
       },
@@ -636,8 +708,16 @@
         "lemma": "ivvelet"
       },
       {
+        "surface": "will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "depart",
         "lemma": "sur"
+      },
+      {
+        "surface": "from him",
+        "lemma": "al"
       }
     ],
     "23": [
@@ -664,12 +744,24 @@
     ],
     "24": [
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "riches",
         "lemma": "chosen"
       },
       {
+        "surface": "are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "forever",
         "lemma": "olam"
+      },
+      {
+        "surface": "nor does",
+        "lemma": "im"
       },
       {
         "surface": "a crown",
@@ -696,6 +788,10 @@
       {
         "surface": "and new growth",
         "lemma": "deshe"
+      },
+      {
+        "surface": "appears",
+        "lemma": "raah"
       },
       {
         "surface": "and the grass",
@@ -768,8 +864,8 @@
     ]
   },
   "themeLemmas": [
-    "rea",
-    "nephesh",
-    "zur"
+    "lo",
+    "al",
+    "rea"
   ]
 }

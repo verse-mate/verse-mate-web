@@ -38,8 +38,16 @@
         "lemma": "naim"
       },
       {
+        "surface": "when",
+        "lemma": "gam"
+      },
+      {
         "surface": "brothers",
         "lemma": "ach"
+      },
+      {
+        "surface": "live",
+        "lemma": "yashav"
       },
       {
         "surface": "together in harmony",
@@ -56,12 +64,20 @@
         "lemma": "shemen"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the head",
         "lemma": "rosh"
       },
       {
         "surface": "running down",
         "lemma": "yarad"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the beard",
@@ -78,6 +94,10 @@
       {
         "surface": "beard",
         "lemma": "zaqan"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "the collar",
@@ -102,12 +122,20 @@
         "lemma": "yarad"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the mountains",
         "lemma": "harar"
       },
       {
         "surface": "of Zion",
         "lemma": "tsiyyon"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "there",
@@ -128,12 +156,16 @@
       {
         "surface": "of life",
         "lemma": "chay"
+      },
+      {
+        "surface": "forevermore",
+        "lemma": "ad"
       }
     ]
   },
   "themeLemmas": [
+    "al",
     "yarad",
-    "zaqan",
-    "tov"
+    "zaqan"
   ]
 }

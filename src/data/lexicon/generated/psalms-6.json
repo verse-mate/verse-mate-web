@@ -14,6 +14,10 @@
         "lemma": "neginah"
       },
       {
+        "surface": "according to",
+        "lemma": "al"
+      },
+      {
         "surface": "Sheminith",
         "lemma": "sheminit"
       },
@@ -30,12 +34,20 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "rebuke me",
         "lemma": "yakhach"
       },
       {
         "surface": "in Your anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "or",
+        "lemma": "al"
       },
       {
         "surface": "discipline me",
@@ -56,6 +68,14 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am frail",
         "lemma": "umlal"
       },
@@ -66,6 +86,10 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "my bones",
@@ -86,6 +110,14 @@
         "lemma": "bahal"
       },
       {
+        "surface": "How long",
+        "lemma": "ad"
+      },
+      {
+        "surface": "O",
+        "lemma": "attah"
+      },
+      {
         "surface": "LORD",
         "lemma": "yehovah"
       },
@@ -95,6 +127,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "Turn",
+        "lemma": "shuv"
+      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -112,11 +148,19 @@
         "lemma": "yasah"
       },
       {
+        "surface": "because of",
+        "lemma": "maan"
+      },
+      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       }
     ],
     "5": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "there is no",
         "lemma": "ayin"
@@ -150,6 +194,10 @@
       {
         "surface": "from groaning",
         "lemma": "anachah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "night",
@@ -194,6 +242,10 @@
         "lemma": "ataq"
       },
       {
+        "surface": "because of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "my foes",
         "lemma": "tsarar"
       }
@@ -204,6 +256,14 @@
         "lemma": "sur"
       },
       {
+        "surface": "from me",
+        "lemma": "min"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "you workers",
         "lemma": "paal"
       },
@@ -212,8 +272,16 @@
         "lemma": "aven"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has heard",
+        "lemma": "shama"
       },
       {
         "surface": "vvv",
@@ -228,6 +296,10 @@
       {
         "surface": "The LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "has heard",
+        "lemma": "shama"
       },
       {
         "surface": "my cry for mercy",
@@ -248,6 +320,10 @@
     ],
     "10": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "my enemies",
         "lemma": "oyev"
       },
@@ -260,6 +336,10 @@
         "lemma": "bahal"
       },
       {
+        "surface": "they will turn back",
+        "lemma": "shuv"
+      },
+      {
         "surface": "in sudden",
         "lemma": "rega"
       },
@@ -270,8 +350,8 @@
     ]
   },
   "themeLemmas": [
-    "bahal",
-    "nephesh",
-    "bush"
+    "kol",
+    "ki",
+    "bahal"
   ]
 }

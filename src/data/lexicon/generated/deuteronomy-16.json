@@ -18,6 +18,10 @@
         "lemma": "aviv"
       },
       {
+        "surface": "and celebrate",
+        "lemma": "asah"
+      },
+      {
         "surface": "the Passover",
         "lemma": "pesach"
       },
@@ -28,6 +32,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "in the month",
@@ -44,6 +52,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "brought you out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of Egypt",
@@ -102,12 +114,20 @@
     ],
     "3": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "eat",
         "lemma": "akhal"
       },
       {
         "surface": "leavened bread",
         "lemma": "chamets"
+      },
+      {
+        "surface": "with it",
+        "lemma": "al"
       },
       {
         "surface": "for seven",
@@ -122,6 +142,10 @@
         "lemma": "akhal"
       },
       {
+        "surface": "with it",
+        "lemma": "al"
+      },
+      {
         "surface": "unleavened bread",
         "lemma": "matstsah"
       },
@@ -132,6 +156,14 @@
       {
         "surface": "of affliction",
         "lemma": "oni"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you left",
+        "lemma": "yatsa"
       },
       {
         "surface": "the land",
@@ -146,8 +178,16 @@
         "lemma": "chippazon"
       },
       {
+        "surface": "so that",
+        "lemma": "maan"
+      },
+      {
         "surface": "you may remember",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "for the rest",
+        "lemma": "kol"
       },
       {
         "surface": "of your life",
@@ -156,6 +196,10 @@
       {
         "surface": "the day",
         "lemma": "yom"
+      },
+      {
+        "surface": "you left",
+        "lemma": "yatsa"
       },
       {
         "surface": "the land",
@@ -168,8 +212,20 @@
     ],
     "4": [
       {
+        "surface": "No",
+        "lemma": "lo"
+      },
+      {
         "surface": "leaven",
         "lemma": "seor"
+      },
+      {
+        "surface": "is to be found",
+        "lemma": "raah"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
       },
       {
         "surface": "your land",
@@ -182,6 +238,14 @@
       {
         "surface": "days",
         "lemma": "yom"
+      },
+      {
+        "surface": "and none",
+        "lemma": "lo"
+      },
+      {
+        "surface": "of",
+        "lemma": "min"
       },
       {
         "surface": "the meat",
@@ -214,6 +278,10 @@
     ],
     "5": [
       {
+        "surface": "You are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to sacrifice",
         "lemma": "zavach"
       },
@@ -230,15 +298,27 @@
         "lemma": "shaar"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "is giving",
+        "lemma": "natan"
       }
     ],
     "6": [
+      {
+        "surface": "You must only",
+        "lemma": "ki"
+      },
       {
         "surface": "offer",
         "lemma": "zavach"
@@ -246,6 +326,10 @@
       {
         "surface": "the Passover sacrifice",
         "lemma": "pesach"
+      },
+      {
+        "surface": "at",
+        "lemma": "el"
       },
       {
         "surface": "the place",
@@ -280,8 +364,16 @@
         "lemma": "shemesh"
       },
       {
+        "surface": "sets",
+        "lemma": "bo"
+      },
+      {
         "surface": "at the same time",
         "lemma": "moed"
+      },
+      {
+        "surface": "you departed",
+        "lemma": "yatsa"
       },
       {
         "surface": "from Egypt",
@@ -364,6 +456,14 @@
         "lemma": "elohim"
       },
       {
+        "surface": "and you must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "do",
+        "lemma": "asah"
+      },
+      {
         "surface": "any work",
         "lemma": "melakhah"
       }
@@ -400,6 +500,10 @@
     ],
     "10": [
       {
+        "surface": "And you shall celebrate",
+        "lemma": "asah"
+      },
+      {
         "surface": "the Feast",
         "lemma": "chag"
       },
@@ -418,6 +522,18 @@
       {
         "surface": "with a freewill offering",
         "lemma": "nedavah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you give",
+        "lemma": "natan"
+      },
+      {
+        "surface": "in proportion to how",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -470,6 +586,10 @@
         "lemma": "shem"
       },
       {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
         "surface": "your sons",
         "lemma": "ben"
       },
@@ -516,6 +636,14 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "slaves",
         "lemma": "eved"
       },
@@ -528,11 +656,23 @@
         "lemma": "shamar"
       },
       {
+        "surface": "follow",
+        "lemma": "asah"
+      },
+      {
+        "surface": "these",
+        "lemma": "elleh"
+      },
+      {
         "surface": "statutes",
         "lemma": "choq"
       }
     ],
     "13": [
+      {
+        "surface": "You are to celebrate",
+        "lemma": "asah"
+      },
       {
         "surface": "the Feast",
         "lemma": "chag"
@@ -570,6 +710,10 @@
       {
         "surface": "in your feast",
         "lemma": "chag"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
       },
       {
         "surface": "your sons",
@@ -642,6 +786,10 @@
         "lemma": "bachar"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -654,8 +802,16 @@
         "lemma": "barakh"
       },
       {
+        "surface": "you in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your produce",
         "lemma": "tevuah"
+      },
+      {
+        "surface": "and in all",
+        "lemma": "kol"
       },
       {
         "surface": "the work",
@@ -668,6 +824,10 @@
       {
         "surface": "so that your joy",
         "lemma": "sameach"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "complete",
@@ -688,8 +848,16 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your men",
         "lemma": "zakhur"
+      },
+      {
+        "surface": "are to appear",
+        "lemma": "raah"
       },
       {
         "surface": "before",
@@ -736,6 +904,14 @@
         "lemma": "sukkah"
       },
       {
+        "surface": "No one",
+        "lemma": "lo"
+      },
+      {
+        "surface": "should appear",
+        "lemma": "raah"
+      },
+      {
         "surface": "before",
         "lemma": "paneh"
       },
@@ -772,9 +948,17 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "has given",
+        "lemma": "natan"
       }
     ],
     "18": [
+      {
+        "surface": "You are to appoint",
+        "lemma": "natan"
+      },
       {
         "surface": "judges",
         "lemma": "shaphat"
@@ -788,8 +972,16 @@
         "lemma": "shevet"
       },
       {
+        "surface": "in every",
+        "lemma": "kol"
+      },
+      {
         "surface": "town",
         "lemma": "shaar"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -798,6 +990,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "is giving",
+        "lemma": "natan"
       },
       {
         "surface": "They are to judge",
@@ -818,6 +1014,10 @@
     ],
     "19": [
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "deny",
         "lemma": "natah"
       },
@@ -830,12 +1030,20 @@
         "lemma": "nakhar"
       },
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "accept",
         "lemma": "laqach"
       },
       {
         "surface": "a bribe",
         "lemma": "shachad"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "a bribe",
@@ -880,6 +1088,10 @@
         "lemma": "tsedeq"
       },
       {
+        "surface": "so that",
+        "lemma": "maan"
+      },
+      {
         "surface": "you may live",
         "lemma": "chayah"
       },
@@ -892,18 +1104,34 @@
         "lemma": "erets"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "is giving",
+        "lemma": "natan"
       }
     ],
     "21": [
       {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "set up",
         "lemma": "nata"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "wooden",
@@ -922,6 +1150,10 @@
         "lemma": "mizbeach"
       },
       {
+        "surface": "you will build",
+        "lemma": "asah"
+      },
+      {
         "surface": "for the LORD",
         "lemma": "yehovah"
       },
@@ -932,12 +1164,20 @@
     ],
     "22": [
       {
+        "surface": "and do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "set up",
         "lemma": "qamay"
       },
       {
         "surface": "a sacred pillar",
         "lemma": "matstsevah"
+      },
+      {
+        "surface": "which",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -954,8 +1194,8 @@
     ]
   },
   "themeLemmas": [
-    "maqom",
-    "chag",
-    "bachar"
+    "lo",
+    "kol",
+    "natan"
   ]
 }

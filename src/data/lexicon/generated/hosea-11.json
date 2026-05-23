@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -22,11 +26,19 @@
         "lemma": "mitsrayim"
       },
       {
+        "surface": "I called",
+        "lemma": "qara"
+      },
+      {
         "surface": "My son",
         "lemma": "ben"
       }
     ],
     "2": [
+      {
+        "surface": "But the more I called",
+        "lemma": "qara"
+      },
       {
         "surface": "the farther",
         "lemma": "ken"
@@ -58,6 +70,10 @@
     ],
     "3": [
       {
+        "surface": "It was I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "who taught Ephraim",
         "lemma": "ephrayim"
       },
@@ -70,12 +86,24 @@
         "lemma": "laqach"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "the arms",
         "lemma": "zeroa"
       },
       {
+        "surface": "but they never",
+        "lemma": "lo"
+      },
+      {
         "surface": "realized",
         "lemma": "yada"
+      },
+      {
+        "surface": "that it was I",
+        "lemma": "ki"
       },
       {
         "surface": "who healed them",
@@ -104,12 +132,20 @@
         "lemma": "ahavah"
       },
       {
+        "surface": "vvv",
+        "lemma": "hayah"
+      },
+      {
         "surface": "I lifted",
         "lemma": "rum"
       },
       {
         "surface": "the yoke",
         "lemma": "ol"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
       },
       {
         "surface": "their necks",
@@ -125,6 +161,18 @@
       }
     ],
     "5": [
+      {
+        "surface": "Will they not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "return",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
       {
         "surface": "the land",
         "lemma": "erets"
@@ -142,8 +190,16 @@
         "lemma": "ashshur"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "they refused",
         "lemma": "maen"
+      },
+      {
+        "surface": "to repent",
+        "lemma": "shuv"
       }
     ],
     "6": [
@@ -190,6 +246,22 @@
         "lemma": "meshuvah"
       },
       {
+        "surface": "Though they call",
+        "lemma": "qara"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
+        "surface": "the Most High",
+        "lemma": "al"
+      },
+      {
+        "surface": "He will by no means",
+        "lemma": "lo"
+      },
+      {
         "surface": "exalt them",
         "lemma": "rum"
       }
@@ -198,6 +270,10 @@
       {
         "surface": "How",
         "lemma": "ekh"
+      },
+      {
+        "surface": "could I give you up",
+        "lemma": "natan"
       },
       {
         "surface": "O Ephraim",
@@ -214,6 +290,10 @@
       {
         "surface": "How",
         "lemma": "ekh"
+      },
+      {
+        "surface": "could I make",
+        "lemma": "natan"
       },
       {
         "surface": "you like Admah",
@@ -236,6 +316,10 @@
         "lemma": "haphakh"
       },
       {
+        "surface": "within Me",
+        "lemma": "al"
+      },
+      {
         "surface": "My compassion",
         "lemma": "nichum"
       },
@@ -246,12 +330,24 @@
     ],
     "9": [
       {
+        "surface": "I will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "execute",
+        "lemma": "asah"
+      },
+      {
         "surface": "the full fury",
         "lemma": "charon"
       },
       {
         "surface": "of My anger",
         "lemma": "aph"
+      },
+      {
+        "surface": "I will not",
+        "lemma": "lo"
       },
       {
         "surface": "destroy",
@@ -262,8 +358,24 @@
         "lemma": "ephrayim"
       },
       {
+        "surface": "again",
+        "lemma": "shuv"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "am God",
         "lemma": "el"
+      },
+      {
+        "surface": "and not",
+        "lemma": "lo"
       },
       {
         "surface": "man",
@@ -276,6 +388,14 @@
       {
         "surface": "One among you",
         "lemma": "qerev"
+      },
+      {
+        "surface": "and I will not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "come",
+        "lemma": "bo"
       },
       {
         "surface": "in wrath",
@@ -298,6 +418,14 @@
       {
         "surface": "like a lion",
         "lemma": "ari"
+      },
+      {
+        "surface": "When",
+        "lemma": "ki"
+      },
+      {
+        "surface": "He",
+        "lemma": "hu"
       },
       {
         "surface": "roars",
@@ -340,6 +468,14 @@
       {
         "surface": "of Assyria",
         "lemma": "ashshur"
+      },
+      {
+        "surface": "Then I will settle them",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "in",
+        "lemma": "al"
       },
       {
         "surface": "their homes",
@@ -392,6 +528,10 @@
         "lemma": "rud"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "God",
         "lemma": "el"
       },
@@ -400,14 +540,18 @@
         "lemma": "aman"
       },
       {
+        "surface": "to",
+        "lemma": "im"
+      },
+      {
         "surface": "the Holy One",
         "lemma": "qadosh"
       }
     ]
   },
   "themeLemmas": [
-    "ephrayim",
-    "yisrael",
-    "mitsrayim"
+    "lo",
+    "ki",
+    "al"
   ]
 }

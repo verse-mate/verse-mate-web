@@ -48,6 +48,10 @@
         "lemma": "yayin"
       },
       {
+        "surface": "she has also",
+        "lemma": "aph"
+      },
+      {
         "surface": "set",
         "lemma": "arakh"
       },
@@ -64,6 +68,14 @@
       {
         "surface": "her maidservants",
         "lemma": "naarah"
+      },
+      {
+        "surface": "she calls out",
+        "lemma": "qara"
+      },
+      {
+        "surface": "from",
+        "lemma": "al"
       },
       {
         "surface": "vvv",
@@ -94,6 +106,10 @@
       {
         "surface": "here",
         "lemma": "hennah"
+      },
+      {
+        "surface": "she says",
+        "lemma": "amar"
       },
       {
         "surface": "who lacks",
@@ -188,12 +204,20 @@
     ],
     "8": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "rebuke",
         "lemma": "yakhach"
       },
       {
         "surface": "a mocker",
         "lemma": "luts"
+      },
+      {
+        "surface": "or",
+        "lemma": "pen"
       },
       {
         "surface": "he will hate you",
@@ -213,6 +237,10 @@
       }
     ],
     "9": [
+      {
+        "surface": "Instruct",
+        "lemma": "natan"
+      },
       {
         "surface": "a wise man",
         "lemma": "chakham"
@@ -274,6 +302,10 @@
     ],
     "11": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "your days",
         "lemma": "yom"
       },
@@ -295,6 +327,10 @@
       }
     ],
     "12": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "you are wise",
         "lemma": "chakham"
@@ -344,12 +380,20 @@
     ],
     "14": [
       {
+        "surface": "She sits",
+        "lemma": "yashav"
+      },
+      {
         "surface": "at the door",
         "lemma": "petach"
       },
       {
         "surface": "of her house",
         "lemma": "bet"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "a seat",
@@ -365,6 +409,10 @@
       }
     ],
     "15": [
+      {
+        "surface": "calling out",
+        "lemma": "qara"
+      },
       {
         "surface": "to those who pass by",
         "lemma": "avar"
@@ -394,6 +442,10 @@
       {
         "surface": "here",
         "lemma": "hennah"
+      },
+      {
+        "surface": "she says",
+        "lemma": "amar"
       },
       {
         "surface": "who lacks",
@@ -432,8 +484,16 @@
     ],
     "18": [
       {
+        "surface": "But they do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "know",
         "lemma": "yada"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the dead",
@@ -442,6 +502,10 @@
       {
         "surface": "are there",
         "lemma": "sham"
+      },
+      {
+        "surface": "that her guests",
+        "lemma": "qara"
       },
       {
         "surface": "are in the depths",

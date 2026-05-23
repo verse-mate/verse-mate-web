@@ -58,6 +58,14 @@
         "lemma": "melekh"
       },
       {
+        "surface": "was sitting",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "his royal",
         "lemma": "malkhut"
       },
@@ -90,6 +98,10 @@
       {
         "surface": "As soon as the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
       },
       {
         "surface": "Queen",
@@ -182,6 +194,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "inquired",
+        "lemma": "amar"
+      },
+      {
         "surface": "What is",
         "lemma": "mah"
       },
@@ -190,15 +206,31 @@
         "lemma": "baqqashah"
       },
       {
+        "surface": "Even up to",
+        "lemma": "ad"
+      },
+      {
         "surface": "half",
         "lemma": "chetsi"
       },
       {
         "surface": "the kingdom",
         "lemma": "malkhut"
+      },
+      {
+        "surface": "it will be given",
+        "lemma": "natan"
       }
     ],
     "4": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
+        "surface": "it pleases",
+        "lemma": "al"
+      },
       {
         "surface": "the king",
         "lemma": "melekh"
@@ -206,6 +238,10 @@
       {
         "surface": "Esther",
         "lemma": "ester"
+      },
+      {
+        "surface": "replied",
+        "lemma": "amar"
       },
       {
         "surface": "may the king",
@@ -216,12 +252,24 @@
         "lemma": "haman"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "today",
         "lemma": "yom"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the banquet",
         "lemma": "mishteh"
+      },
+      {
+        "surface": "I have prepared",
+        "lemma": "asah"
       }
     ],
     "5": [
@@ -230,12 +278,20 @@
         "lemma": "mahar"
       },
       {
+        "surface": "commanded",
+        "lemma": "amar"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
       {
         "surface": "and bring Haman",
         "lemma": "haman"
+      },
+      {
+        "surface": "so we can do",
+        "lemma": "asah"
       },
       {
         "surface": "as Esther",
@@ -254,12 +310,28 @@
         "lemma": "haman"
       },
       {
+        "surface": "went",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the banquet",
         "lemma": "mishteh"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "Esther",
         "lemma": "ester"
+      },
+      {
+        "surface": "had prepared",
+        "lemma": "asah"
       }
     ],
     "6": [
@@ -276,6 +348,10 @@
         "lemma": "melekh"
       },
       {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
         "surface": "to Esther",
         "lemma": "ester"
       },
@@ -288,6 +364,10 @@
         "lemma": "sheelah"
       },
       {
+        "surface": "It will be given",
+        "lemma": "natan"
+      },
+      {
         "surface": "What is",
         "lemma": "mah"
       },
@@ -296,12 +376,20 @@
         "lemma": "baqqashah"
       },
       {
+        "surface": "Even up to",
+        "lemma": "ad"
+      },
+      {
         "surface": "half",
         "lemma": "chetsi"
       },
       {
         "surface": "the kingdom",
         "lemma": "malkhut"
+      },
+      {
+        "surface": "it will be fulfilled",
+        "lemma": "asah"
       }
     ],
     "7": [
@@ -324,6 +412,10 @@
     ],
     "8": [
       {
+        "surface": "If",
+        "lemma": "im"
+      },
+      {
         "surface": "I have found",
         "lemma": "matsa"
       },
@@ -340,12 +432,28 @@
         "lemma": "melekh"
       },
       {
+        "surface": "and if",
+        "lemma": "im"
+      },
+      {
+        "surface": "it pleases",
+        "lemma": "al"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
       {
+        "surface": "to grant",
+        "lemma": "natan"
+      },
+      {
         "surface": "my petition",
         "lemma": "sheelah"
+      },
+      {
+        "surface": "and fulfill",
+        "lemma": "asah"
       },
       {
         "surface": "my request",
@@ -360,12 +468,28 @@
         "lemma": "haman"
       },
       {
+        "surface": "come",
+        "lemma": "bo"
+      },
+      {
         "surface": "tomorrow",
         "lemma": "machar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the banquet",
         "lemma": "mishteh"
+      },
+      {
+        "surface": "I will prepare",
+        "lemma": "asah"
+      },
+      {
+        "surface": "Then I will answer",
+        "lemma": "asah"
       },
       {
         "surface": "the king’s",
@@ -378,12 +502,20 @@
     ],
     "9": [
       {
+        "surface": "That",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
       {
         "surface": "Haman",
         "lemma": "haman"
+      },
+      {
+        "surface": "went out",
+        "lemma": "yatsa"
       },
       {
         "surface": "full of joy",
@@ -410,8 +542,16 @@
         "lemma": "haman"
       },
       {
+        "surface": "saw",
+        "lemma": "raah"
+      },
+      {
         "surface": "Mordecai",
         "lemma": "mordekhay"
+      },
+      {
+        "surface": "who did not",
+        "lemma": "lo"
       },
       {
         "surface": "rise",
@@ -420,6 +560,10 @@
       {
         "surface": "or tremble in fear",
         "lemma": "zua"
+      },
+      {
+        "surface": "at his presence",
+        "lemma": "min"
       },
       {
         "surface": "And Haman",
@@ -434,6 +578,10 @@
         "lemma": "chemah"
       },
       {
+        "surface": "toward",
+        "lemma": "al"
+      },
+      {
         "surface": "Mordecai",
         "lemma": "mordekhay"
       }
@@ -446,6 +594,10 @@
       {
         "surface": "restrained himself",
         "lemma": "aphaq"
+      },
+      {
+        "surface": "and went",
+        "lemma": "bo"
       },
       {
         "surface": "home",
@@ -494,6 +646,14 @@
         "lemma": "ben"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
+        "surface": "all the ways",
+        "lemma": "kol"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -506,6 +666,10 @@
         "lemma": "nasa"
       },
       {
+        "surface": "over",
+        "lemma": "al"
+      },
+      {
         "surface": "the other officials",
         "lemma": "sar"
       },
@@ -516,8 +680,16 @@
     ],
     "12": [
       {
+        "surface": "What is more",
+        "lemma": "aph"
+      },
+      {
         "surface": "Haman",
         "lemma": "haman"
+      },
+      {
+        "surface": "added",
+        "lemma": "amar"
       },
       {
         "surface": "Queen",
@@ -528,16 +700,64 @@
         "lemma": "ester"
       },
       {
+        "surface": "invited",
+        "lemma": "bo"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
+        "surface": "one",
+        "lemma": "ki"
+      },
+      {
+        "surface": "but",
+        "lemma": "im"
+      },
+      {
+        "surface": "me",
+        "lemma": "et"
+      },
+      {
+        "surface": "to join",
+        "lemma": "im"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "at",
+        "lemma": "el"
       },
       {
         "surface": "the banquet",
         "lemma": "mishteh"
       },
       {
+        "surface": "she prepared",
+        "lemma": "asah"
+      },
+      {
+        "surface": "and I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "am invited",
+        "lemma": "qara"
+      },
+      {
+        "surface": "back",
+        "lemma": "gam"
+      },
+      {
         "surface": "tomorrow",
         "lemma": "machar"
+      },
+      {
+        "surface": "along with",
+        "lemma": "im"
       },
       {
         "surface": "the king",
@@ -546,8 +766,36 @@
     ],
     "13": [
       {
+        "surface": "Yet none",
+        "lemma": "kol"
+      },
+      {
+        "surface": "of this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "satisfies",
         "lemma": "shavah"
+      },
+      {
+        "surface": "as",
+        "lemma": "kol"
+      },
+      {
+        "surface": "long",
+        "lemma": "et"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "see",
+        "lemma": "raah"
       },
       {
         "surface": "Mordecai",
@@ -556,6 +804,10 @@
       {
         "surface": "the Jew",
         "lemma": "yehudi"
+      },
+      {
+        "surface": "sitting",
+        "lemma": "yashav"
       },
       {
         "surface": "at the king’s",
@@ -576,8 +828,20 @@
         "lemma": "zeresh"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "his friends",
         "lemma": "ahav"
+      },
+      {
+        "surface": "told",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Have them build",
+        "lemma": "asah"
       },
       {
         "surface": "a gallows",
@@ -596,6 +860,10 @@
         "lemma": "gavoah"
       },
       {
+        "surface": "and ask",
+        "lemma": "amar"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       },
@@ -612,8 +880,24 @@
         "lemma": "talah"
       },
       {
+        "surface": "on it",
+        "lemma": "al"
+      },
+      {
+        "surface": "Then go",
+        "lemma": "bo"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the banquet",
         "lemma": "mishteh"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "the king",
@@ -638,12 +922,16 @@
       {
         "surface": "and he had the gallows",
         "lemma": "ets"
+      },
+      {
+        "surface": "constructed",
+        "lemma": "asah"
       }
     ]
   },
   "themeLemmas": [
     "haman",
     "ester",
-    "mishteh"
+    "asah"
   ]
 }

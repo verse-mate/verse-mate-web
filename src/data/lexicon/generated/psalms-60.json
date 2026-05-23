@@ -10,6 +10,10 @@
         "lemma": "natsach"
       },
       {
+        "surface": "To the tune of",
+        "lemma": "al"
+      },
+      {
         "surface": "The Lily",
         "lemma": "shushan"
       },
@@ -54,6 +58,10 @@
         "lemma": "yoav"
       },
       {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "and struck down",
         "lemma": "nakhah"
       },
@@ -88,6 +96,10 @@
       {
         "surface": "You have been angry",
         "lemma": "anaph"
+      },
+      {
+        "surface": "restore",
+        "lemma": "shuv"
       }
     ],
     "2": [
@@ -112,11 +124,19 @@
         "lemma": "shever"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "it is quaking",
         "lemma": "mot"
       }
     ],
     "3": [
+      {
+        "surface": "You have shown",
+        "lemma": "raah"
+      },
       {
         "surface": "Your people",
         "lemma": "am"
@@ -139,6 +159,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "You have raised",
+        "lemma": "natan"
+      },
       {
         "surface": "a banner",
         "lemma": "nes"
@@ -172,6 +196,10 @@
       {
         "surface": "with Your right hand",
         "lemma": "yamin"
+      },
+      {
+        "surface": "that",
+        "lemma": "maan"
       },
       {
         "surface": "Your beloved",
@@ -256,6 +284,10 @@
         "lemma": "sir"
       },
       {
+        "surface": "upon",
+        "lemma": "al"
+      },
+      {
         "surface": "Edom",
         "lemma": "edom"
       },
@@ -266,6 +298,10 @@
       {
         "surface": "My sandal",
         "lemma": "naal"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "Philistia",
@@ -302,11 +338,19 @@
         "lemma": "nachah"
       },
       {
+        "surface": "to",
+        "lemma": "ad"
+      },
+      {
         "surface": "Edom",
         "lemma": "edom"
       }
     ],
     "10": [
+      {
+        "surface": "Have You not",
+        "lemma": "lo"
+      },
       {
         "surface": "rejected us",
         "lemma": "zanach"
@@ -314,6 +358,14 @@
       {
         "surface": "O God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "Will You no longer",
+        "lemma": "lo"
+      },
+      {
+        "surface": "march out",
+        "lemma": "yatsa"
       },
       {
         "surface": "O God",
@@ -356,8 +408,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "we will perform",
+        "lemma": "asah"
+      },
+      {
         "surface": "with valor",
         "lemma": "chayil"
+      },
+      {
+        "surface": "and He",
+        "lemma": "hu"
       },
       {
         "surface": "will trample",
@@ -371,7 +431,7 @@
   },
   "themeLemmas": [
     "edom",
-    "zanach",
-    "tsar"
+    "al",
+    "zanach"
   ]
 }

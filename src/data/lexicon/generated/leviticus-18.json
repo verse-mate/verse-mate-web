@@ -14,6 +14,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -24,8 +28,24 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "and tell",
+        "lemma": "amar"
+      },
+      {
+        "surface": "them",
+        "lemma": "el"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am the LORD",
@@ -38,6 +58,14 @@
     ],
     "3": [
       {
+        "surface": "vvv",
+        "lemma": "lo"
+      },
+      {
+        "surface": "You must not follow",
+        "lemma": "asah"
+      },
+      {
         "surface": "the practices",
         "lemma": "maaseh"
       },
@@ -48,6 +76,14 @@
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
+      },
+      {
+        "surface": "where",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you used to live",
+        "lemma": "yashav"
       },
       {
         "surface": "and you must not follow the practices",
@@ -62,6 +98,26 @@
         "lemma": "kenaan"
       },
       {
+        "surface": "into which",
+        "lemma": "asher"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "am bringing you",
+        "lemma": "bo"
+      },
+      {
+        "surface": "You must",
+        "lemma": "asah"
+      },
+      {
+        "surface": "not",
+        "lemma": "lo"
+      },
+      {
         "surface": "walk",
         "lemma": "halakh"
       },
@@ -71,6 +127,10 @@
       }
     ],
     "4": [
+      {
+        "surface": "You are to practice",
+        "lemma": "asah"
+      },
       {
         "surface": "My judgments",
         "lemma": "mishpat"
@@ -86,6 +146,10 @@
       {
         "surface": "by walking",
         "lemma": "halakh"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am the LORD",
@@ -106,16 +170,32 @@
         "lemma": "chuqqah"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "My judgments",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "for",
+        "lemma": "asher"
       },
       {
         "surface": "the man",
         "lemma": "adam"
       },
       {
+        "surface": "who does these things",
+        "lemma": "asah"
+      },
+      {
         "surface": "will live",
         "lemma": "chayah"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am the LORD",
@@ -132,6 +212,10 @@
         "lemma": "qarav"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "close relative",
         "lemma": "sheer"
       },
@@ -140,14 +224,26 @@
         "lemma": "galah"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       }
     ],
     "7": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "expose the nakedness",
         "lemma": "ervah"
+      },
+      {
+        "surface": "of your father",
+        "lemma": "av"
       },
       {
         "surface": "by having sexual relations with",
@@ -158,8 +254,16 @@
         "lemma": "em"
       },
       {
+        "surface": "She",
+        "lemma": "hu"
+      },
+      {
         "surface": "is your mother",
         "lemma": "em"
+      },
+      {
+        "surface": "you must not",
+        "lemma": "lo"
       },
       {
         "surface": "have sexual relations with her",
@@ -168,19 +272,39 @@
     ],
     "8": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "have sexual relations with",
         "lemma": "ervah"
+      },
+      {
+        "surface": "your father’s",
+        "lemma": "av"
       },
       {
         "surface": "wife",
         "lemma": "ishshah"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "would dishonor",
         "lemma": "ervah"
+      },
+      {
+        "surface": "your father",
+        "lemma": "av"
       }
     ],
     "9": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "have sexual relations with",
         "lemma": "galah"
@@ -190,8 +314,16 @@
         "lemma": "achot"
       },
       {
+        "surface": "either your father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "your mother’s daughter",
@@ -206,11 +338,19 @@
         "lemma": "bet"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "elsewhere",
         "lemma": "chuts"
       }
     ],
     "10": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "have sexual relations with",
         "lemma": "galah"
@@ -224,6 +364,10 @@
         "lemma": "bat"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "your daughter’s",
         "lemma": "bat"
       },
@@ -232,11 +376,23 @@
         "lemma": "bat"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "that",
+        "lemma": "hennah"
+      },
+      {
         "surface": "would shame your family",
         "lemma": "ervah"
       }
     ],
     "11": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "have sexual relations with",
         "lemma": "ervah"
@@ -244,6 +400,10 @@
       {
         "surface": "the daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "of your father’s",
+        "lemma": "av"
       },
       {
         "surface": "wife",
@@ -254,18 +414,42 @@
         "lemma": "moledet"
       },
       {
+        "surface": "to your father",
+        "lemma": "av"
+      },
+      {
+        "surface": "she",
+        "lemma": "hu"
+      },
+      {
         "surface": "is your sister",
         "lemma": "achot"
       }
     ],
     "12": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "have sexual relations with",
         "lemma": "ervah"
       },
       {
+        "surface": "your father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "sister",
         "lemma": "achot"
+      },
+      {
+        "surface": "she",
+        "lemma": "hu"
+      },
+      {
+        "surface": "is your father’s",
+        "lemma": "av"
       },
       {
         "surface": "close relative",
@@ -273,6 +457,10 @@
       }
     ],
     "13": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "have sexual relations with",
         "lemma": "ervah"
@@ -286,6 +474,14 @@
         "lemma": "achot"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "she",
+        "lemma": "hu"
+      },
+      {
         "surface": "is your mother’s",
         "lemma": "em"
       },
@@ -295,6 +491,14 @@
       }
     ],
     "14": [
+      {
+        "surface": "You must not {dishonor",
+        "lemma": "lo"
+      },
+      {
+        "surface": "your father’s",
+        "lemma": "av"
+      },
       {
         "surface": "brother",
         "lemma": "ach"
@@ -312,11 +516,19 @@
         "lemma": "galah"
       },
       {
+        "surface": "she is",
+        "lemma": "hu"
+      },
+      {
         "surface": "your aunt",
         "lemma": "dodah"
       }
     ],
     "15": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "have sexual relations with",
         "lemma": "ervah"
@@ -324,6 +536,10 @@
       {
         "surface": "your daughter-in-law",
         "lemma": "kallah"
+      },
+      {
+        "surface": "She",
+        "lemma": "hu"
       },
       {
         "surface": "is your son’s",
@@ -334,11 +550,19 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "you are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to have sexual relations with her",
         "lemma": "galah"
       }
     ],
     "16": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "have sexual relations with",
         "lemma": "ervah"
@@ -352,6 +576,10 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "that",
+        "lemma": "hu"
+      },
+      {
         "surface": "would shame",
         "lemma": "ervah"
       },
@@ -361,6 +589,10 @@
       }
     ],
     "17": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "have sexual relations with both",
         "lemma": "ervah"
@@ -372,6 +604,10 @@
       {
         "surface": "and her daughter",
         "lemma": "bat"
+      },
+      {
+        "surface": "You are not",
+        "lemma": "lo"
       },
       {
         "surface": "to marry",
@@ -398,8 +634,16 @@
         "lemma": "galah"
       },
       {
+        "surface": "They",
+        "lemma": "hennah"
+      },
+      {
         "surface": "are close relatives",
         "lemma": "shaarah"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
       },
       {
         "surface": "is depraved",
@@ -407,6 +651,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
       {
         "surface": "take",
         "lemma": "laqach"
@@ -434,6 +682,10 @@
     ],
     "19": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "approach",
         "lemma": "qarav"
       },
@@ -452,8 +704,20 @@
     ],
     "20": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "lie",
+        "lemma": "natan"
+      },
+      {
         "surface": "carnally",
         "lemma": "shekhovet"
+      },
+      {
+        "surface": "with",
+        "lemma": "el"
       },
       {
         "surface": "your neighbor’s",
@@ -470,6 +734,14 @@
     ],
     "21": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "give",
+        "lemma": "natan"
+      },
+      {
         "surface": "any of your children",
         "lemma": "zera"
       },
@@ -480,6 +752,10 @@
       {
         "surface": "to Molech",
         "lemma": "molekh"
+      },
+      {
+        "surface": "for you must not",
+        "lemma": "lo"
       },
       {
         "surface": "profane",
@@ -494,14 +770,26 @@
         "lemma": "elohim"
       },
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       }
     ],
     "22": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "lie",
         "lemma": "shakhav"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "a man",
@@ -516,14 +804,30 @@
         "lemma": "ishshah"
       },
       {
+        "surface": "that",
+        "lemma": "hu"
+      },
+      {
         "surface": "is an abomination",
         "lemma": "toevah"
       }
     ],
     "23": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "lie",
+        "lemma": "natan"
+      },
+      {
         "surface": "carnally",
         "lemma": "shekhovet"
+      },
+      {
+        "surface": "with any",
+        "lemma": "kol"
       },
       {
         "surface": "animal",
@@ -536,6 +840,10 @@
       {
         "surface": "a woman",
         "lemma": "ishshah"
+      },
+      {
+        "surface": "must not",
+        "lemma": "lo"
       },
       {
         "surface": "stand",
@@ -554,18 +862,50 @@
         "lemma": "rava"
       },
       {
+        "surface": "that",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a perversion",
         "lemma": "tevel"
       }
     ],
     "24": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "defile",
         "lemma": "tame"
       },
       {
+        "surface": "yourselves by any",
+        "lemma": "kol"
+      },
+      {
+        "surface": "of these practices",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "by all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "these things",
+        "lemma": "elleh"
+      },
+      {
         "surface": "the nations",
         "lemma": "goy"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am driving out",
@@ -604,9 +944,21 @@
       {
         "surface": "will vomit out",
         "lemma": "qo"
+      },
+      {
+        "surface": "its",
+        "lemma": "et"
+      },
+      {
+        "surface": "inhabitants",
+        "lemma": "yashav"
       }
     ],
     "26": [
+      {
+        "surface": "But you",
+        "lemma": "attah"
+      },
       {
         "surface": "are to keep",
         "lemma": "shamar"
@@ -618,6 +970,22 @@
       {
         "surface": "and ordinances",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "and you must not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "commit",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
+        "surface": "of these",
+        "lemma": "elleh"
       },
       {
         "surface": "abominations",
@@ -642,6 +1010,10 @@
     ],
     "27": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the men",
         "lemma": "enosh"
       },
@@ -652,6 +1024,18 @@
       {
         "surface": "before you",
         "lemma": "paneh"
+      },
+      {
+        "surface": "committed",
+        "lemma": "asah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "these",
+        "lemma": "el"
       },
       {
         "surface": "abominations",
@@ -680,6 +1064,10 @@
         "lemma": "qo"
       },
       {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
         "surface": "it spewed out",
         "lemma": "qo"
       },
@@ -693,6 +1081,30 @@
       }
     ],
     "29": [
+      {
+        "surface": "Therefore",
+        "lemma": "ki"
+      },
+      {
+        "surface": "anyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
+        "surface": "commits",
+        "lemma": "asah"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
+        "surface": "of these",
+        "lemma": "elleh"
+      },
       {
         "surface": "abominations",
         "lemma": "toevah"
@@ -724,6 +1136,10 @@
         "lemma": "bilti"
       },
       {
+        "surface": "to practice",
+        "lemma": "asah"
+      },
+      {
         "surface": "any of the abominable",
         "lemma": "toevah"
       },
@@ -732,12 +1148,28 @@
         "lemma": "chuqqah"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
+        "surface": "were practiced",
+        "lemma": "asah"
+      },
+      {
         "surface": "before you",
         "lemma": "paneh"
       },
       {
+        "surface": "so that you do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "defile yourselves",
         "lemma": "tame"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am the LORD",
@@ -750,8 +1182,8 @@
     ]
   },
   "themeLemmas": [
-    "ervah",
-    "galah",
-    "tame"
+    "lo",
+    "hu",
+    "ervah"
   ]
 }

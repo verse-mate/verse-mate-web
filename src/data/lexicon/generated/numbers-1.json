@@ -26,6 +26,10 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "after the Israelites had come out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "of the land",
         "lemma": "erets"
       },
@@ -40,6 +44,10 @@
       {
         "surface": "spoke",
         "lemma": "davar"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "Moses",
@@ -60,12 +68,20 @@
       {
         "surface": "of Sinai",
         "lemma": "sinay"
+      },
+      {
+        "surface": "He said",
+        "lemma": "amar"
       }
     ],
     "2": [
       {
         "surface": "Take a census",
         "lemma": "nasa"
+      },
+      {
+        "surface": "of the whole",
+        "lemma": "kol"
       },
       {
         "surface": "congregation",
@@ -80,8 +96,16 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "listing",
         "lemma": "mispar"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "man",
@@ -98,12 +122,20 @@
     ],
     "3": [
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "and Aaron",
         "lemma": "aharon"
       },
       {
         "surface": "are to number",
         "lemma": "paqad"
+      },
+      {
+        "surface": "those",
+        "lemma": "et"
       },
       {
         "surface": "who are twenty",
@@ -120,6 +152,14 @@
       {
         "surface": "by their divisions",
         "lemma": "tsava"
+      },
+      {
+        "surface": "everyone",
+        "lemma": "kol"
+      },
+      {
+        "surface": "who can serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in Israel’s",
@@ -142,9 +182,25 @@
       {
         "surface": "the head",
         "lemma": "rosh"
+      },
+      {
+        "surface": "of each family",
+        "lemma": "av"
+      },
+      {
+        "surface": "must be there",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "with you",
+        "lemma": "et"
       }
     ],
     "5": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
       {
         "surface": "are the names",
         "lemma": "shem"
@@ -154,8 +210,16 @@
         "lemma": "enosh"
       },
       {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "are to assist",
         "lemma": "amad"
+      },
+      {
+        "surface": "you",
+        "lemma": "et"
       },
       {
         "surface": "From the tribe of Reuben",
@@ -326,6 +390,10 @@
     ],
     "13": [
       {
+        "surface": "from Asher",
+        "lemma": "asher"
+      },
+      {
         "surface": "Pagiel",
         "lemma": "pagiel"
       },
@@ -376,6 +444,10 @@
     ],
     "16": [
       {
+        "surface": "These men",
+        "lemma": "elleh"
+      },
+      {
         "surface": "were appointed",
         "lemma": "qari"
       },
@@ -384,12 +456,20 @@
         "lemma": "edah"
       },
       {
+        "surface": "they were",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "the leaders",
         "lemma": "nasi"
       },
       {
         "surface": "of the tribes",
         "lemma": "matteh"
+      },
+      {
+        "surface": "of their fathers",
+        "lemma": "av"
       },
       {
         "surface": "the heads",
@@ -418,6 +498,14 @@
         "lemma": "laqach"
       },
       {
+        "surface": "these men",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "had been designated",
         "lemma": "naqav"
       },
@@ -427,6 +515,10 @@
       }
     ],
     "18": [
+      {
+        "surface": "and",
+        "lemma": "et"
+      },
       {
         "surface": "on the first",
         "lemma": "echad"
@@ -444,6 +536,10 @@
         "lemma": "qahal"
       },
       {
+        "surface": "the whole",
+        "lemma": "kol"
+      },
+      {
         "surface": "congregation",
         "lemma": "edah"
       },
@@ -452,8 +548,16 @@
         "lemma": "yalad"
       },
       {
+        "surface": "by",
+        "lemma": "al"
+      },
+      {
         "surface": "clans",
         "lemma": "mishpachah"
+      },
+      {
+        "surface": "and families",
+        "lemma": "av"
       },
       {
         "surface": "counting",
@@ -481,6 +585,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "just as",
+        "lemma": "asher"
+      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -532,6 +640,10 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "counting",
         "lemma": "mispar"
       },
@@ -542,6 +654,10 @@
       {
         "surface": "by one the names",
         "lemma": "shem"
+      },
+      {
+        "surface": "of every",
+        "lemma": "kol"
       },
       {
         "surface": "male",
@@ -558,6 +674,10 @@
       {
         "surface": "or older",
         "lemma": "maal"
+      },
+      {
+        "surface": "who could serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the army",
@@ -600,6 +720,10 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "vvv",
         "lemma": "paqad"
       },
@@ -616,6 +740,10 @@
         "lemma": "shem"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "male",
         "lemma": "zakhar"
       },
@@ -630,6 +758,10 @@
       {
         "surface": "or older",
         "lemma": "maal"
+      },
+      {
+        "surface": "who could serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the army",
@@ -672,12 +804,20 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "counting",
         "lemma": "mispar"
       },
       {
         "surface": "the names",
         "lemma": "shem"
+      },
+      {
+        "surface": "of all those",
+        "lemma": "kol"
       },
       {
         "surface": "twenty",
@@ -690,6 +830,10 @@
       {
         "surface": "or older",
         "lemma": "maal"
+      },
+      {
+        "surface": "who could serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the army",
@@ -732,12 +876,20 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "counting",
         "lemma": "mispar"
       },
       {
         "surface": "the names",
         "lemma": "shem"
+      },
+      {
+        "surface": "of all those",
+        "lemma": "kol"
       },
       {
         "surface": "twenty",
@@ -750,6 +902,10 @@
       {
         "surface": "or older",
         "lemma": "maal"
+      },
+      {
+        "surface": "who could serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the army",
@@ -792,12 +948,20 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "counting",
         "lemma": "mispar"
       },
       {
         "surface": "the names",
         "lemma": "shem"
+      },
+      {
+        "surface": "of all those",
+        "lemma": "kol"
       },
       {
         "surface": "twenty",
@@ -810,6 +974,10 @@
       {
         "surface": "or older",
         "lemma": "maal"
+      },
+      {
+        "surface": "who could serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the army",
@@ -852,12 +1020,20 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "counting",
         "lemma": "mispar"
       },
       {
         "surface": "the names",
         "lemma": "shem"
+      },
+      {
+        "surface": "of all those",
+        "lemma": "kol"
       },
       {
         "surface": "twenty",
@@ -870,6 +1046,10 @@
       {
         "surface": "or older",
         "lemma": "maal"
+      },
+      {
+        "surface": "who could serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the army",
@@ -920,12 +1100,20 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "counting",
         "lemma": "mispar"
       },
       {
         "surface": "the names",
         "lemma": "shem"
+      },
+      {
+        "surface": "of all those",
+        "lemma": "kol"
       },
       {
         "surface": "twenty",
@@ -938,6 +1126,10 @@
       {
         "surface": "or older",
         "lemma": "maal"
+      },
+      {
+        "surface": "who could serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the army",
@@ -980,12 +1172,20 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "counting",
         "lemma": "mispar"
       },
       {
         "surface": "the names",
         "lemma": "shem"
+      },
+      {
+        "surface": "of all those",
+        "lemma": "kol"
       },
       {
         "surface": "twenty",
@@ -998,6 +1198,10 @@
       {
         "surface": "or older",
         "lemma": "maal"
+      },
+      {
+        "surface": "who could serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the army",
@@ -1040,12 +1244,20 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "counting",
         "lemma": "mispar"
       },
       {
         "surface": "the names",
         "lemma": "shem"
+      },
+      {
+        "surface": "of all those",
+        "lemma": "kol"
       },
       {
         "surface": "twenty",
@@ -1058,6 +1270,10 @@
       {
         "surface": "or older",
         "lemma": "maal"
+      },
+      {
+        "surface": "who could serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the army",
@@ -1100,12 +1316,20 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "counting",
         "lemma": "mispar"
       },
       {
         "surface": "the names",
         "lemma": "shem"
+      },
+      {
+        "surface": "of all those",
+        "lemma": "kol"
       },
       {
         "surface": "twenty",
@@ -1118,6 +1342,10 @@
       {
         "surface": "or older",
         "lemma": "maal"
+      },
+      {
+        "surface": "who could serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the army",
@@ -1148,6 +1376,10 @@
         "lemma": "ben"
       },
       {
+        "surface": "of Asher",
+        "lemma": "asher"
+      },
+      {
         "surface": "according to the records",
         "lemma": "toledah"
       },
@@ -1156,12 +1388,20 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "counting",
         "lemma": "mispar"
       },
       {
         "surface": "the names",
         "lemma": "shem"
+      },
+      {
+        "surface": "of all those",
+        "lemma": "kol"
       },
       {
         "surface": "twenty",
@@ -1176,6 +1416,10 @@
         "lemma": "maal"
       },
       {
+        "surface": "who could serve",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "in the army",
         "lemma": "tsava"
       }
@@ -1188,6 +1432,10 @@
       {
         "surface": "to the tribe",
         "lemma": "matteh"
+      },
+      {
+        "surface": "of Asher",
+        "lemma": "asher"
       },
       {
         "surface": "numbered 41,500",
@@ -1212,12 +1460,20 @@
         "lemma": "mishpachah"
       },
       {
+        "surface": "and families",
+        "lemma": "av"
+      },
+      {
         "surface": "counting",
         "lemma": "mispar"
       },
       {
         "surface": "the names",
         "lemma": "shem"
+      },
+      {
+        "surface": "of all those",
+        "lemma": "kol"
       },
       {
         "surface": "twenty",
@@ -1230,6 +1486,10 @@
       {
         "surface": "or older",
         "lemma": "maal"
+      },
+      {
+        "surface": "who could serve",
+        "lemma": "yatsa"
       },
       {
         "surface": "in the army",
@@ -1255,6 +1515,14 @@
       }
     ],
     "44": [
+      {
+        "surface": "These",
+        "lemma": "elleh"
+      },
+      {
+        "surface": "were the men",
+        "lemma": "asher"
+      },
       {
         "surface": "numbered",
         "lemma": "paqad"
@@ -1282,9 +1550,17 @@
       {
         "surface": "each one",
         "lemma": "echad"
+      },
+      {
+        "surface": "representing his family",
+        "lemma": "av"
       }
     ],
     "45": [
+      {
+        "surface": "So all",
+        "lemma": "kol"
+      },
       {
         "surface": "the Israelites",
         "lemma": "ben"
@@ -1302,6 +1578,10 @@
         "lemma": "maal"
       },
       {
+        "surface": "who could serve",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "in Israel’s",
         "lemma": "yisrael"
       },
@@ -1310,11 +1590,27 @@
         "lemma": "tsava"
       },
       {
+        "surface": "were",
+        "lemma": "hayah"
+      },
+      {
         "surface": "counted",
         "lemma": "paqad"
+      },
+      {
+        "surface": "according to their families",
+        "lemma": "av"
       }
     ],
     "46": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "those counted",
         "lemma": "paqad"
@@ -1330,6 +1626,10 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "were not",
+        "lemma": "lo"
+      },
+      {
         "surface": "numbered",
         "lemma": "paqad"
       },
@@ -1340,6 +1640,10 @@
       {
         "surface": "by the tribe",
         "lemma": "matteh"
+      },
+      {
+        "surface": "of their fathers",
+        "lemma": "av"
       }
     ],
     "48": [
@@ -1357,6 +1661,10 @@
       }
     ],
     "49": [
+      {
+        "surface": "Do not",
+        "lemma": "lo"
+      },
       {
         "surface": "number",
         "lemma": "paqad"
@@ -1384,12 +1692,20 @@
     ],
     "50": [
       {
+        "surface": "Instead",
+        "lemma": "attah"
+      },
+      {
         "surface": "you are to appoint",
         "lemma": "paqad"
       },
       {
         "surface": "the Levites",
         "lemma": "leviyyi"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "the tabernacle",
@@ -1400,8 +1716,20 @@
         "lemma": "edut"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "its furnishings",
         "lemma": "keli"
+      },
+      {
+        "surface": "and everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "They",
+        "lemma": "hemmah"
       },
       {
         "surface": "shall carry",
@@ -1410,6 +1738,10 @@
       {
         "surface": "the tabernacle",
         "lemma": "mishkan"
+      },
+      {
+        "surface": "and all",
+        "lemma": "kol"
       },
       {
         "surface": "its articles",
@@ -1496,8 +1828,16 @@
         "lemma": "ish"
       },
       {
+        "surface": "in",
+        "lemma": "al"
+      },
+      {
         "surface": "his own camp",
         "lemma": "machaneh"
+      },
+      {
+        "surface": "and under",
+        "lemma": "al"
       },
       {
         "surface": "his own standard",
@@ -1530,8 +1870,20 @@
         "lemma": "shamar"
       },
       {
+        "surface": "so that no",
+        "lemma": "lo"
+      },
+      {
         "surface": "wrath",
         "lemma": "qetseph"
+      },
+      {
+        "surface": "will fall",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the congregation",
@@ -1568,6 +1920,18 @@
         "lemma": "ben"
       },
       {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "everything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "just as",
+        "lemma": "asher"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -1582,8 +1946,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "paqad",
-    "tsava",
-    "shem"
+    "tsava"
   ]
 }

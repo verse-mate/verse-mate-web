@@ -14,6 +14,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -24,6 +28,10 @@
         "lemma": "qadash"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "firstborn male",
         "lemma": "bekhor"
       },
@@ -32,12 +40,20 @@
         "lemma": "peter"
       },
       {
+        "surface": "from every",
+        "lemma": "kol"
+      },
+      {
         "surface": "womb",
         "lemma": "rechem"
       },
       {
         "surface": "among the Israelites",
         "lemma": "ben"
+      },
+      {
+        "surface": "belongs",
+        "lemma": "hu"
       },
       {
         "surface": "both of man",
@@ -54,6 +70,10 @@
         "lemma": "mosheh"
       },
       {
+        "surface": "told",
+        "lemma": "amar"
+      },
+      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -62,8 +82,20 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
+      },
+      {
+        "surface": "the day",
+        "lemma": "asher"
+      },
+      {
+        "surface": "you came out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of Egypt",
@@ -78,8 +110,20 @@
         "lemma": "eved"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "brought you out",
+        "lemma": "yatsa"
+      },
+      {
+        "surface": "of it",
+        "lemma": "zeh"
       },
       {
         "surface": "by the strength",
@@ -88,6 +132,10 @@
       {
         "surface": "of His hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "And nothing",
+        "lemma": "lo"
       },
       {
         "surface": "leavened",
@@ -110,12 +158,36 @@
       {
         "surface": "of Abib",
         "lemma": "aviv"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
+      {
+        "surface": "are leaving",
+        "lemma": "yatsa"
       }
     ],
     "5": [
       {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "when",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "brings",
+        "lemma": "bo"
+      },
+      {
+        "surface": "you into",
+        "lemma": "el"
       },
       {
         "surface": "the land",
@@ -142,8 +214,20 @@
         "lemma": "yevusi"
       },
       {
+        "surface": "the land",
+        "lemma": "asher"
+      },
+      {
         "surface": "He swore",
         "lemma": "shava"
+      },
+      {
+        "surface": "to your fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "that He would give",
+        "lemma": "natan"
       },
       {
         "surface": "a land",
@@ -166,8 +250,16 @@
         "lemma": "avad"
       },
       {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "service",
         "lemma": "avodah"
+      },
+      {
+        "surface": "in this",
+        "lemma": "zeh"
       },
       {
         "surface": "month",
@@ -226,12 +318,32 @@
         "lemma": "yom"
       },
       {
+        "surface": "Nothing",
+        "lemma": "lo"
+      },
+      {
         "surface": "leavened",
         "lemma": "chamets"
       },
       {
+        "surface": "may be found",
+        "lemma": "raah"
+      },
+      {
+        "surface": "nor shall",
+        "lemma": "lo"
+      },
+      {
         "surface": "leaven",
         "lemma": "seor"
+      },
+      {
+        "surface": "be found",
+        "lemma": "raah"
+      },
+      {
+        "surface": "anywhere within",
+        "lemma": "kol"
       },
       {
         "surface": "borders",
@@ -239,6 +351,10 @@
       }
     ],
     "8": [
+      {
+        "surface": "And on that",
+        "lemma": "hu"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -252,8 +368,24 @@
         "lemma": "ben"
       },
       {
+        "surface": "This is because of",
+        "lemma": "avur"
+      },
+      {
+        "surface": "what",
+        "lemma": "zeh"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "did",
+        "lemma": "asah"
+      },
+      {
+        "surface": "when I came out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of Egypt",
@@ -262,8 +394,16 @@
     ],
     "9": [
       {
+        "surface": "It shall be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a sign",
         "lemma": "ot"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "your hand",
@@ -278,6 +418,10 @@
         "lemma": "bayin"
       },
       {
+        "surface": "that",
+        "lemma": "maan"
+      },
+      {
         "surface": "the Law",
         "lemma": "torah"
       },
@@ -286,8 +430,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "is to be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "on your lips",
         "lemma": "peh"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
       },
       {
         "surface": "with a mighty",
@@ -302,6 +454,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "brought you out",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
       }
@@ -310,6 +466,10 @@
       {
         "surface": "Therefore you shall keep",
         "lemma": "shamar"
+      },
+      {
+        "surface": "this",
+        "lemma": "zot"
       },
       {
         "surface": "statute",
@@ -330,8 +490,24 @@
     ],
     "11": [
       {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "after",
+        "lemma": "ki"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "brings",
+        "lemma": "bo"
+      },
+      {
+        "surface": "you into",
+        "lemma": "el"
       },
       {
         "surface": "the land",
@@ -342,8 +518,20 @@
         "lemma": "kenaani"
       },
       {
+        "surface": "and gives it",
+        "lemma": "natan"
+      },
+      {
+        "surface": "as",
+        "lemma": "asher"
+      },
+      {
         "surface": "He swore",
         "lemma": "shava"
+      },
+      {
+        "surface": "and your fathers",
+        "lemma": "av"
       }
     ],
     "12": [
@@ -360,8 +548,16 @@
         "lemma": "peter"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "womb",
         "lemma": "rechem"
+      },
+      {
+        "surface": "All",
+        "lemma": "kol"
       },
       {
         "surface": "the firstborn",
@@ -370,6 +566,10 @@
       {
         "surface": "males",
         "lemma": "zakhar"
+      },
+      {
+        "surface": "of your",
+        "lemma": "hayah"
       },
       {
         "surface": "livestock",
@@ -386,6 +586,10 @@
         "lemma": "padah"
       },
       {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "firstborn",
         "lemma": "peter"
       },
@@ -398,12 +602,24 @@
         "lemma": "seh"
       },
       {
+        "surface": "and if",
+        "lemma": "im"
+      },
+      {
+        "surface": "you do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "redeem it",
         "lemma": "padah"
       },
       {
         "surface": "you are to break its neck",
         "lemma": "araph"
+      },
+      {
+        "surface": "And every",
+        "lemma": "kol"
       },
       {
         "surface": "firstborn",
@@ -424,6 +640,10 @@
         "lemma": "machar"
       },
       {
+        "surface": "when",
+        "lemma": "ki"
+      },
+      {
         "surface": "your son",
         "lemma": "ben"
       },
@@ -436,6 +656,22 @@
         "lemma": "mah"
       },
       {
+        "surface": "does this",
+        "lemma": "zot"
+      },
+      {
+        "surface": "mean",
+        "lemma": "amar"
+      },
+      {
+        "surface": "you are to tell",
+        "lemma": "amar"
+      },
+      {
+        "surface": "him",
+        "lemma": "el"
+      },
+      {
         "surface": "With a mighty",
         "lemma": "chozeq"
       },
@@ -446,6 +682,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "brought us out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of Egypt",
@@ -461,6 +701,14 @@
       }
     ],
     "15": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "when",
+        "lemma": "ki"
+      },
       {
         "surface": "Pharaoh",
         "lemma": "paroh"
@@ -480,6 +728,10 @@
       {
         "surface": "killed",
         "lemma": "harag"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "firstborn",
@@ -502,8 +754,20 @@
         "lemma": "adam"
       },
       {
+        "surface": "and",
+        "lemma": "ad"
+      },
+      {
         "surface": "beast",
         "lemma": "behemah"
+      },
+      {
+        "surface": "This is why",
+        "lemma": "al"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "sacrifice",
@@ -522,12 +786,20 @@
         "lemma": "zakhar"
       },
       {
+        "surface": "of every",
+        "lemma": "kol"
+      },
+      {
         "surface": "womb",
         "lemma": "rechem"
       },
       {
         "surface": "but I redeem",
         "lemma": "padah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the firstborn",
@@ -540,8 +812,16 @@
     ],
     "16": [
       {
+        "surface": "So it shall serve as",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a sign",
         "lemma": "ot"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "your hand",
@@ -556,6 +836,10 @@
         "lemma": "bayin"
       },
       {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
         "surface": "with a mighty",
         "lemma": "chozeq"
       },
@@ -566,6 +850,10 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "brought us out",
+        "lemma": "yatsa"
       },
       {
         "surface": "of Egypt",
@@ -590,6 +878,10 @@
         "lemma": "elohim"
       },
       {
+        "surface": "did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "lead them",
         "lemma": "nachah"
       },
@@ -606,12 +898,32 @@
         "lemma": "pelishti"
       },
       {
+        "surface": "though",
+        "lemma": "ki"
+      },
+      {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "was shorter",
         "lemma": "qarov"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
+      },
+      {
+        "surface": "If the people face",
+        "lemma": "raah"
       },
       {
         "surface": "war",
@@ -624,6 +936,10 @@
       {
         "surface": "might change their minds",
         "lemma": "nacham"
+      },
+      {
+        "surface": "and return",
+        "lemma": "shuv"
       },
       {
         "surface": "to Egypt",
@@ -698,6 +1014,14 @@
         "lemma": "yoseph"
       },
       {
+        "surface": "with him",
+        "lemma": "im"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "Joseph had made} the sons",
         "lemma": "ben"
       },
@@ -710,6 +1034,10 @@
         "lemma": "shava"
       },
       {
+        "surface": "when he said",
+        "lemma": "amar"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -718,12 +1046,24 @@
         "lemma": "paqad"
       },
       {
+        "surface": "you",
+        "lemma": "et"
+      },
+      {
         "surface": "and then you must carry",
         "lemma": "alah"
       },
       {
         "surface": "my bones",
         "lemma": "etsem"
+      },
+      {
+        "surface": "with you",
+        "lemma": "et"
+      },
+      {
+        "surface": "from this place",
+        "lemma": "zeh"
       }
     ],
     "20": [
@@ -816,6 +1156,10 @@
     ],
     "22": [
       {
+        "surface": "Neither",
+        "lemma": "lo"
+      },
+      {
         "surface": "the pillar",
         "lemma": "ammud"
       },
@@ -854,8 +1198,8 @@
     ]
   },
   "themeLemmas": [
-    "mitsrayim",
-    "peter",
-    "bekhor"
+    "kol",
+    "ki",
+    "mitsrayim"
   ]
 }

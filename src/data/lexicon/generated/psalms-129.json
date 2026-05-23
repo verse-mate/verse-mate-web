@@ -32,6 +32,10 @@
       {
         "surface": "now",
         "lemma": "na"
+      },
+      {
+        "surface": "declare",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -48,6 +52,14 @@
         "lemma": "naur"
       },
       {
+        "surface": "but",
+        "lemma": "gam"
+      },
+      {
+        "surface": "they have not",
+        "lemma": "lo"
+      },
+      {
         "surface": "prevailed",
         "lemma": "yakhol"
       }
@@ -60,6 +72,10 @@
       {
         "surface": "plowed",
         "lemma": "charash"
+      },
+      {
+        "surface": "over",
+        "lemma": "al"
       },
       {
         "surface": "my back",
@@ -98,6 +114,10 @@
     ],
     "5": [
       {
+        "surface": "May all",
+        "lemma": "kol"
+      },
+      {
         "surface": "who hate",
         "lemma": "sane"
       },
@@ -119,6 +139,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "May they be",
+        "lemma": "hayah"
+      },
       {
         "surface": "like grass",
         "lemma": "chatsir"
@@ -142,6 +166,10 @@
     ],
     "7": [
       {
+        "surface": "unable",
+        "lemma": "lo"
+      },
+      {
         "surface": "to fill",
         "lemma": "male"
       },
@@ -164,8 +192,16 @@
     ],
     "8": [
       {
+        "surface": "May none",
+        "lemma": "lo"
+      },
+      {
         "surface": "who pass by",
         "lemma": "avar"
+      },
+      {
+        "surface": "say to them",
+        "lemma": "amar"
       },
       {
         "surface": "The blessing",
@@ -176,8 +212,16 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "be on you",
+        "lemma": "el"
+      },
+      {
         "surface": "we bless",
         "lemma": "barakh"
+      },
+      {
+        "surface": "you",
+        "lemma": "et"
       },
       {
         "surface": "in the name",
@@ -190,8 +234,8 @@
     ]
   },
   "themeLemmas": [
+    "lo",
     "tsarar",
-    "rav",
-    "naur"
+    "rav"
   ]
 }

@@ -60,6 +60,10 @@
         "lemma": "qarav"
       },
       {
+        "surface": "upon me",
+        "lemma": "al"
+      },
+      {
         "surface": "to devour",
         "lemma": "akhal"
       },
@@ -86,6 +90,10 @@
     ],
     "3": [
       {
+        "surface": "Though",
+        "lemma": "im"
+      },
+      {
         "surface": "an army",
         "lemma": "machaneh"
       },
@@ -94,12 +102,24 @@
         "lemma": "chanah"
       },
       {
+        "surface": "around me",
+        "lemma": "al"
+      },
+      {
         "surface": "my heart",
         "lemma": "lev"
       },
       {
+        "surface": "will} not",
+        "lemma": "lo"
+      },
+      {
         "surface": "fear",
         "lemma": "yare"
+      },
+      {
+        "surface": "though",
+        "lemma": "im"
       },
       {
         "surface": "a war",
@@ -108,6 +128,14 @@
       {
         "surface": "breaks out",
         "lemma": "qamay"
+      },
+      {
+        "surface": "against me",
+        "lemma": "al"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "will keep my trust",
@@ -132,12 +160,20 @@
         "lemma": "baqash"
       },
       {
+        "surface": "to dwell",
+        "lemma": "yashav"
+      },
+      {
         "surface": "in the house",
         "lemma": "bet"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the days",
@@ -169,6 +205,10 @@
       }
     ],
     "5": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "in the day",
         "lemma": "yom"
@@ -220,6 +260,10 @@
         "lemma": "rum"
       },
       {
+        "surface": "above",
+        "lemma": "al"
+      },
+      {
         "surface": "my enemies",
         "lemma": "oyev"
       },
@@ -258,12 +302,20 @@
     ],
     "7": [
       {
+        "surface": "Hear",
+        "lemma": "shama"
+      },
+      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "my voice",
         "lemma": "qol"
+      },
+      {
+        "surface": "when I call",
+        "lemma": "qara"
       },
       {
         "surface": "be merciful",
@@ -278,6 +330,10 @@
       {
         "surface": "My heart",
         "lemma": "lev"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "Seek",
@@ -306,8 +362,20 @@
         "lemma": "satar"
       },
       {
+        "surface": "not",
+        "lemma": "al"
+      },
+      {
         "surface": "Your face",
         "lemma": "paneh"
+      },
+      {
+        "surface": "from me",
+        "lemma": "min"
+      },
+      {
+        "surface": "nor",
+        "lemma": "al"
       },
       {
         "surface": "turn away",
@@ -322,12 +390,24 @@
         "lemma": "aph"
       },
       {
+        "surface": "You have been",
+        "lemma": "hayah"
+      },
+      {
         "surface": "my helper",
         "lemma": "ezrah"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "leave me",
         "lemma": "natash"
+      },
+      {
+        "surface": "or",
+        "lemma": "al"
       },
       {
         "surface": "forsake me",
@@ -343,6 +423,14 @@
       }
     ],
     "10": [
+      {
+        "surface": "Though",
+        "lemma": "ki"
+      },
+      {
+        "surface": "my father",
+        "lemma": "av"
+      },
       {
         "surface": "and mother",
         "lemma": "em"
@@ -386,11 +474,23 @@
         "lemma": "orach"
       },
       {
+        "surface": "because of",
+        "lemma": "maan"
+      },
+      {
         "surface": "my oppressors",
         "lemma": "sharar"
       }
     ],
     "12": [
+      {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
+        "surface": "hand me over",
+        "lemma": "natan"
+      },
       {
         "surface": "to the will",
         "lemma": "nephesh"
@@ -398,6 +498,10 @@
       {
         "surface": "of my foes",
         "lemma": "tsar"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "false",
@@ -430,6 +534,10 @@
         "lemma": "aman"
       },
       {
+        "surface": "to see",
+        "lemma": "raah"
+      },
+      {
         "surface": "the goodness",
         "lemma": "tuv"
       },
@@ -452,6 +560,10 @@
         "lemma": "qavah"
       },
       {
+        "surface": "for",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -468,14 +580,18 @@
         "lemma": "qavah"
       },
       {
+        "surface": "for",
+        "lemma": "el"
+      },
+      {
         "surface": "the LORD",
         "lemma": "yehovah"
       }
     ]
   },
   "themeLemmas": [
+    "al",
     "paneh",
-    "chay",
-    "baqash"
+    "ki"
   ]
 }

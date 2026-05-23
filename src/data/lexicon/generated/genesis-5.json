@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
         "surface": "is the book",
         "lemma": "sepher"
       },
@@ -34,6 +38,14 @@
         "lemma": "adam"
       },
       {
+        "surface": "He made",
+        "lemma": "asah"
+      },
+      {
+        "surface": "him",
+        "lemma": "et"
+      },
+      {
         "surface": "in His own likeness",
         "lemma": "demut"
       }
@@ -56,12 +68,20 @@
         "lemma": "barakh"
       },
       {
+        "surface": "them",
+        "lemma": "et"
+      },
+      {
         "surface": "And in the day",
         "lemma": "yom"
       },
       {
         "surface": "they were created",
         "lemma": "bara"
+      },
+      {
+        "surface": "He called",
+        "lemma": "qara"
       },
       {
         "surface": "them",
@@ -102,6 +122,10 @@
         "lemma": "tselem"
       },
       {
+        "surface": "and he named him",
+        "lemma": "qara"
+      },
+      {
         "surface": "Seth",
         "lemma": "shet"
       }
@@ -122,6 +146,10 @@
       {
         "surface": "Adam",
         "lemma": "adam"
+      },
+      {
+        "surface": "lived",
+        "lemma": "hayah"
       },
       {
         "surface": "800",
@@ -148,6 +176,14 @@
       {
         "surface": "So Adam",
         "lemma": "adam"
+      },
+      {
+        "surface": "lived",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "a total of",
+        "lemma": "kol"
       },
       {
         "surface": "930",
@@ -236,6 +272,14 @@
         "lemma": "shet"
       },
       {
+        "surface": "lived",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "a total of",
+        "lemma": "kol"
+      },
+      {
         "surface": "912",
         "lemma": "tesah"
       },
@@ -320,6 +364,14 @@
       {
         "surface": "So Enosh",
         "lemma": "enosh"
+      },
+      {
+        "surface": "lived",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "a total of",
+        "lemma": "kol"
       },
       {
         "surface": "905",
@@ -408,6 +460,14 @@
         "lemma": "qenan"
       },
       {
+        "surface": "lived",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "a total of",
+        "lemma": "kol"
+      },
+      {
         "surface": "910",
         "lemma": "tesah"
       },
@@ -492,6 +552,14 @@
       {
         "surface": "So Mahalalel",
         "lemma": "mahalalel"
+      },
+      {
+        "surface": "lived",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "a total of",
+        "lemma": "kol"
       },
       {
         "surface": "895",
@@ -580,6 +648,14 @@
         "lemma": "yered"
       },
       {
+        "surface": "lived",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "a total of",
+        "lemma": "kol"
+      },
+      {
         "surface": "962",
         "lemma": "tesah"
       },
@@ -640,6 +716,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -670,6 +750,14 @@
         "lemma": "chanokh"
       },
       {
+        "surface": "lived",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "a total of",
+        "lemma": "kol"
+      },
+      {
         "surface": "365",
         "lemma": "shalosh"
       },
@@ -688,12 +776,20 @@
         "lemma": "halakh"
       },
       {
+        "surface": "with",
+        "lemma": "et"
+      },
+      {
         "surface": "God",
         "lemma": "elohim"
       },
       {
         "surface": "and then he was no more",
         "lemma": "ayin"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "God",
@@ -778,6 +874,14 @@
         "lemma": "metushelach"
       },
       {
+        "surface": "lived",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "a total of",
+        "lemma": "kol"
+      },
+      {
         "surface": "969",
         "lemma": "tesah"
       },
@@ -818,8 +922,20 @@
     ],
     "29": [
       {
+        "surface": "And he named him",
+        "lemma": "qara"
+      },
+      {
         "surface": "Noah",
         "lemma": "noach"
+      },
+      {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
+        "surface": "May} this one",
+        "lemma": "zeh"
       },
       {
         "surface": "comfort us",
@@ -838,8 +954,16 @@
         "lemma": "yad"
       },
       {
+        "surface": "caused by",
+        "lemma": "min"
+      },
+      {
         "surface": "the ground",
         "lemma": "adamah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -898,6 +1022,14 @@
         "lemma": "lemekh"
       },
       {
+        "surface": "lived",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "a total of",
+        "lemma": "kol"
+      },
+      {
         "surface": "777",
         "lemma": "sheva"
       },
@@ -912,8 +1044,16 @@
     ],
     "32": [
       {
+        "surface": "After",
+        "lemma": "et"
+      },
+      {
         "surface": "Noah",
         "lemma": "noach"
+      },
+      {
+        "surface": "was",
+        "lemma": "hayah"
       },
       {
         "surface": "500",

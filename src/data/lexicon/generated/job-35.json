@@ -12,6 +12,10 @@
       {
         "surface": "went on",
         "lemma": "un"
+      },
+      {
+        "surface": "to say",
+        "lemma": "amar"
       }
     ],
     "2": [
@@ -20,8 +24,16 @@
         "lemma": "chashav"
       },
       {
+        "surface": "this",
+        "lemma": "zot"
+      },
+      {
         "surface": "is just",
         "lemma": "mishpat"
+      },
+      {
+        "surface": "You say",
+        "lemma": "amar"
       },
       {
         "surface": "I am more righteous",
@@ -33,6 +45,14 @@
       }
     ],
     "3": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you ask",
+        "lemma": "amar"
+      },
       {
         "surface": "What",
         "lemma": "mah"
@@ -56,12 +76,24 @@
     ],
     "4": [
       {
+        "surface": "I",
+        "lemma": "ani"
+      },
+      {
+        "surface": "will reply",
+        "lemma": "shuv"
+      },
+      {
         "surface": "to you",
         "lemma": "millah"
       },
       {
         "surface": "and to your friends",
         "lemma": "rea"
+      },
+      {
+        "surface": "as well",
+        "lemma": "im"
       }
     ],
     "5": [
@@ -74,6 +106,10 @@
         "lemma": "shamayim"
       },
       {
+        "surface": "and see",
+        "lemma": "raah"
+      },
+      {
         "surface": "gaze",
         "lemma": "shur"
       },
@@ -84,9 +120,17 @@
       {
         "surface": "high",
         "lemma": "gavah"
+      },
+      {
+        "surface": "above you",
+        "lemma": "min"
       }
     ],
     "6": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "you sin",
         "lemma": "chata"
@@ -110,9 +154,17 @@
       {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "do you do",
+        "lemma": "asah"
       }
     ],
     "7": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "you are righteous",
         "lemma": "tsadaq"
@@ -120,6 +172,14 @@
       {
         "surface": "what",
         "lemma": "mah"
+      },
+      {
+        "surface": "do you give",
+        "lemma": "natan"
+      },
+      {
+        "surface": "or",
+        "lemma": "o"
       },
       {
         "surface": "what",
@@ -142,6 +202,10 @@
       {
         "surface": "affects only a man",
         "lemma": "ish"
+      },
+      {
+        "surface": "like yourself",
+        "lemma": "kemo"
       },
       {
         "surface": "and your righteousness",
@@ -184,12 +248,28 @@
     ],
     "10": [
       {
+        "surface": "But no",
+        "lemma": "lo"
+      },
+      {
+        "surface": "one asks",
+        "lemma": "amar"
+      },
+      {
         "surface": "Where is",
         "lemma": "ayyeh"
       },
       {
         "surface": "God",
         "lemma": "eloah"
+      },
+      {
+        "surface": "my Maker",
+        "lemma": "asah"
+      },
+      {
+        "surface": "who gives us",
+        "lemma": "natan"
       },
       {
         "surface": "songs",
@@ -236,6 +316,10 @@
         "lemma": "tsaaq"
       },
       {
+        "surface": "but He does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "answer",
         "lemma": "un"
       },
@@ -262,6 +346,14 @@
         "lemma": "el"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
+      },
+      {
         "surface": "to empty pleas",
         "lemma": "shav"
       },
@@ -270,11 +362,31 @@
         "lemma": "shadday"
       },
       {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "take note of it",
         "lemma": "shur"
       }
     ],
     "14": [
+      {
+        "surface": "How much less",
+        "lemma": "aph"
+      },
+      {
+        "surface": "then, when",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "that you do not",
+        "lemma": "lo"
+      },
       {
         "surface": "see Him",
         "lemma": "shur"
@@ -298,6 +410,10 @@
         "lemma": "attah"
       },
       {
+        "surface": "that",
+        "lemma": "ki"
+      },
+      {
         "surface": "in His anger",
         "lemma": "aph"
       },
@@ -308,6 +424,10 @@
       {
         "surface": "He has not punished",
         "lemma": "paqad"
+      },
+      {
+        "surface": "or",
+        "lemma": "lo"
       },
       {
         "surface": "taken much notice",
@@ -355,7 +475,7 @@
   },
   "themeLemmas": [
     "mah",
-    "shur",
-    "un"
+    "lo",
+    "amar"
   ]
 }

@@ -14,8 +14,16 @@
         "lemma": "haman"
       },
       {
+        "surface": "went",
+        "lemma": "bo"
+      },
+      {
         "surface": "to dine",
         "lemma": "shatah"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "Esther",
@@ -48,6 +56,14 @@
         "lemma": "melekh"
       },
       {
+        "surface": "asked",
+        "lemma": "amar"
+      },
+      {
+        "surface": "once more",
+        "lemma": "gam"
+      },
+      {
         "surface": "Queen",
         "lemma": "malkah"
       },
@@ -64,6 +80,10 @@
         "lemma": "sheelah"
       },
       {
+        "surface": "It will be given",
+        "lemma": "natan"
+      },
+      {
         "surface": "What is",
         "lemma": "mah"
       },
@@ -72,12 +92,20 @@
         "lemma": "baqqashah"
       },
       {
+        "surface": "Even up to",
+        "lemma": "ad"
+      },
+      {
         "surface": "half",
         "lemma": "chetsi"
       },
       {
         "surface": "the kingdom",
         "lemma": "malkhut"
+      },
+      {
+        "surface": "it will be fulfilled",
+        "lemma": "asah"
       }
     ],
     "3": [
@@ -92,6 +120,10 @@
       {
         "surface": "replied",
         "lemma": "un"
+      },
+      {
+        "surface": "If",
+        "lemma": "im"
       },
       {
         "surface": "I have found",
@@ -110,12 +142,20 @@
         "lemma": "melekh"
       },
       {
+        "surface": "and if",
+        "lemma": "im"
+      },
+      {
         "surface": "it pleases",
         "lemma": "tov"
       },
       {
         "surface": "the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "grant",
+        "lemma": "natan"
       },
       {
         "surface": "my life",
@@ -136,8 +176,16 @@
     ],
     "4": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "my people",
         "lemma": "am"
+      },
+      {
+        "surface": "and I",
+        "lemma": "ani"
       },
       {
         "surface": "have been sold out",
@@ -176,6 +224,10 @@
         "lemma": "charash"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "no",
         "lemma": "ayin"
       },
@@ -206,6 +258,14 @@
         "lemma": "achashverosh"
       },
       {
+        "surface": "spoke up",
+        "lemma": "amar"
+      },
+      {
+        "surface": "and asked",
+        "lemma": "amar"
+      },
+      {
         "surface": "Queen",
         "lemma": "malkah"
       },
@@ -218,12 +278,28 @@
         "lemma": "mi"
       },
       {
+        "surface": "is this",
+        "lemma": "zeh"
+      },
+      {
         "surface": "and where",
         "lemma": "ay"
       },
       {
+        "surface": "is the one",
+        "lemma": "hu"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
+      },
+      {
         "surface": "would",
         "lemma": "male"
+      },
+      {
+        "surface": "devise",
+        "lemma": "asah"
       },
       {
         "surface": "such a scheme",
@@ -236,12 +312,20 @@
         "lemma": "ester"
       },
       {
+        "surface": "replied",
+        "lemma": "amar"
+      },
+      {
         "surface": "The adversary",
         "lemma": "tsar"
       },
       {
         "surface": "and enemy",
         "lemma": "oyev"
+      },
+      {
+        "surface": "is this",
+        "lemma": "zeh"
       },
       {
         "surface": "wicked man",
@@ -294,6 +378,10 @@
         "lemma": "yayin"
       },
       {
+        "surface": "and went to",
+        "lemma": "el"
+      },
+      {
         "surface": "the palace",
         "lemma": "bitan"
       },
@@ -322,8 +410,24 @@
         "lemma": "ester"
       },
       {
+        "surface": "for",
+        "lemma": "al"
+      },
+      {
         "surface": "his life",
         "lemma": "nephesh"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "he realized",
+        "lemma": "raah"
+      },
+      {
+        "surface": "that",
+        "lemma": "ki"
       },
       {
         "surface": "the king",
@@ -336,6 +440,10 @@
       {
         "surface": "a terrible fate",
         "lemma": "ra"
+      },
+      {
+        "surface": "for him",
+        "lemma": "el"
       }
     ],
     "8": [
@@ -344,12 +452,20 @@
         "lemma": "melekh"
       },
       {
+        "surface": "returned",
+        "lemma": "shuv"
+      },
+      {
         "surface": "from the palace",
         "lemma": "bitan"
       },
       {
         "surface": "garden",
         "lemma": "ginnah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the banquet hall",
@@ -364,16 +480,36 @@
         "lemma": "naphal"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the couch",
         "lemma": "mittah"
+      },
+      {
+        "surface": "where",
+        "lemma": "asher"
       },
       {
         "surface": "Esther",
         "lemma": "ester"
       },
       {
+        "surface": "was reclining",
+        "lemma": "al"
+      },
+      {
         "surface": "The king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "exclaimed",
+        "lemma": "amar"
+      },
+      {
+        "surface": "Would he actually",
+        "lemma": "gam"
       },
       {
         "surface": "assault",
@@ -384,12 +520,20 @@
         "lemma": "malkah"
       },
       {
+        "surface": "while",
+        "lemma": "im"
+      },
+      {
         "surface": "I am in the palace",
         "lemma": "bet"
       },
       {
         "surface": "As soon as the words",
         "lemma": "davar"
+      },
+      {
+        "surface": "had left",
+        "lemma": "yatsa"
       },
       {
         "surface": "the king’s",
@@ -422,6 +566,10 @@
         "lemma": "echad"
       },
       {
+        "surface": "of",
+        "lemma": "min"
+      },
+      {
         "surface": "the eunuchs",
         "lemma": "saris"
       },
@@ -432,6 +580,10 @@
       {
         "surface": "the king",
         "lemma": "melekh"
+      },
+      {
+        "surface": "said",
+        "lemma": "amar"
       },
       {
         "surface": "There",
@@ -466,8 +618,16 @@
         "lemma": "haman"
       },
       {
+        "surface": "had it built",
+        "lemma": "asah"
+      },
+      {
         "surface": "for Mordecai",
         "lemma": "mordekhay"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "gave the report",
@@ -486,6 +646,14 @@
         "lemma": "talah"
       },
       {
+        "surface": "on it",
+        "lemma": "al"
+      },
+      {
+        "surface": "declared",
+        "lemma": "amar"
+      },
+      {
         "surface": "the king",
         "lemma": "melekh"
       }
@@ -498,6 +666,10 @@
       {
         "surface": "Haman",
         "lemma": "haman"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the gallows",

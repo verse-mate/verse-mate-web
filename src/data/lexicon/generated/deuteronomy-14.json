@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "You",
+        "lemma": "attah"
+      },
+      {
         "surface": "are sons",
         "lemma": "ben"
       },
@@ -18,8 +22,16 @@
         "lemma": "elohim"
       },
       {
+        "surface": "do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "cut",
         "lemma": "gadad"
+      },
+      {
+        "surface": "yourselves",
+        "lemma": "lo"
       },
       {
         "surface": "or shave",
@@ -35,6 +47,14 @@
       }
     ],
     "2": [
+      {
+        "surface": "for",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
+      },
       {
         "surface": "are a people",
         "lemma": "am"
@@ -60,6 +80,10 @@
         "lemma": "bachar"
       },
       {
+        "surface": "you to be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "a people",
         "lemma": "am"
       },
@@ -68,8 +92,16 @@
         "lemma": "segullah"
       },
       {
+        "surface": "out of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the peoples",
         "lemma": "am"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "the face",
@@ -82,8 +114,16 @@
     ],
     "3": [
       {
+        "surface": "You must not",
+        "lemma": "lo"
+      },
+      {
         "surface": "eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "detestable thing",
@@ -92,8 +132,16 @@
     ],
     "4": [
       {
+        "surface": "These",
+        "lemma": "zot"
+      },
+      {
         "surface": "are the animals",
         "lemma": "behemah"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "you may eat",
@@ -148,6 +196,10 @@
         "lemma": "akhal"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "animal",
         "lemma": "behemah"
       },
@@ -198,8 +250,16 @@
         "lemma": "parsah"
       },
       {
+        "surface": "you are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "the following",
+        "lemma": "zeh"
       },
       {
         "surface": "the camel",
@@ -210,8 +270,20 @@
         "lemma": "arnevet"
       },
       {
+        "surface": "or",
+        "lemma": "et"
+      },
+      {
         "surface": "the rock badger",
         "lemma": "shaphan"
+      },
+      {
+        "surface": "Although",
+        "lemma": "ki"
+      },
+      {
+        "surface": "they",
+        "lemma": "hemmah"
       },
       {
         "surface": "chew",
@@ -222,6 +294,10 @@
         "lemma": "gerah"
       },
       {
+        "surface": "they do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "have a divided",
         "lemma": "paras"
       },
@@ -230,14 +306,26 @@
         "lemma": "parsah"
       },
       {
+        "surface": "They",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "are unclean",
         "lemma": "tame"
       }
     ],
     "8": [
       {
+        "surface": "as well as",
+        "lemma": "et"
+      },
+      {
         "surface": "the pig",
         "lemma": "chazir"
+      },
+      {
+        "surface": "though it",
+        "lemma": "hu"
       },
       {
         "surface": "has a divided",
@@ -248,12 +336,24 @@
         "lemma": "parsah"
       },
       {
+        "surface": "it does not",
+        "lemma": "lo"
+      },
+      {
         "surface": "chew the cud",
         "lemma": "gerah"
       },
       {
+        "surface": "It",
+        "lemma": "hu"
+      },
+      {
         "surface": "is unclean",
         "lemma": "tame"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
       },
       {
         "surface": "eat",
@@ -274,12 +374,24 @@
     ],
     "9": [
       {
+        "surface": "Of all the creatures",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that live",
+        "lemma": "asher"
+      },
+      {
         "surface": "in the water",
         "lemma": "mayim"
       },
       {
         "surface": "you may eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "anything",
+        "lemma": "kol"
       },
       {
         "surface": "with fins",
@@ -292,8 +404,20 @@
     ],
     "10": [
       {
+        "surface": "but you may not",
+        "lemma": "lo"
+      },
+      {
         "surface": "eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "anything",
+        "lemma": "kol"
+      },
+      {
+        "surface": "that",
+        "lemma": "asher"
       },
       {
         "surface": "does not",
@@ -308,6 +432,10 @@
         "lemma": "qasqeset"
       },
       {
+        "surface": "it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is unclean",
         "lemma": "tame"
       }
@@ -316,6 +444,10 @@
       {
         "surface": "You may eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "clean",
@@ -327,6 +459,14 @@
       }
     ],
     "12": [
+      {
+        "surface": "but these",
+        "lemma": "zeh"
+      },
+      {
+        "surface": "you may not",
+        "lemma": "lo"
+      },
       {
         "surface": "eat",
         "lemma": "akhal"
@@ -346,6 +486,10 @@
     ],
     "13": [
       {
+        "surface": "the red kite",
+        "lemma": "raah"
+      },
+      {
         "surface": "the falcon",
         "lemma": "ayyah"
       },
@@ -359,6 +503,10 @@
       }
     ],
     "14": [
+      {
+        "surface": "any",
+        "lemma": "kol"
+      },
       {
         "surface": "kind",
         "lemma": "min"
@@ -446,6 +594,10 @@
     ],
     "19": [
       {
+        "surface": "All",
+        "lemma": "kol"
+      },
+      {
         "surface": "flying",
         "lemma": "oph"
       },
@@ -458,6 +610,10 @@
         "lemma": "tame"
       },
       {
+        "surface": "they may not",
+        "lemma": "lo"
+      },
+      {
         "surface": "be eaten",
         "lemma": "akhal"
       }
@@ -466,6 +622,10 @@
       {
         "surface": "But you may eat",
         "lemma": "akhal"
+      },
+      {
+        "surface": "any",
+        "lemma": "kol"
       },
       {
         "surface": "clean",
@@ -478,12 +638,24 @@
     ],
     "21": [
       {
+        "surface": "You are not",
+        "lemma": "lo"
+      },
+      {
         "surface": "to eat",
         "lemma": "akhal"
       },
       {
+        "surface": "any",
+        "lemma": "kol"
+      },
+      {
         "surface": "carcass",
         "lemma": "nevelah"
+      },
+      {
+        "surface": "you may give it",
+        "lemma": "natan"
       },
       {
         "surface": "to the foreigner residing",
@@ -498,12 +670,24 @@
         "lemma": "akhal"
       },
       {
+        "surface": "or",
+        "lemma": "o"
+      },
+      {
         "surface": "you may sell",
         "lemma": "makhar"
       },
       {
         "surface": "it to a foreigner",
         "lemma": "nokhri"
+      },
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "you",
+        "lemma": "attah"
       },
       {
         "surface": "are a holy",
@@ -520,6 +704,10 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "You must not",
+        "lemma": "lo"
       },
       {
         "surface": "cook",
@@ -544,8 +732,16 @@
         "lemma": "asar"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the produce",
         "lemma": "tevuah"
+      },
+      {
+        "surface": "brought forth",
+        "lemma": "yatsa"
       },
       {
         "surface": "each year",
@@ -618,6 +814,10 @@
         "lemma": "shem"
       },
       {
+        "surface": "so that",
+        "lemma": "maan"
+      },
+      {
         "surface": "you may learn",
         "lemma": "lamad"
       },
@@ -632,9 +832,17 @@
       {
         "surface": "your God",
         "lemma": "elohim"
+      },
+      {
+        "surface": "always",
+        "lemma": "kol"
       }
     ],
     "24": [
+      {
+        "surface": "But if",
+        "lemma": "ki"
+      },
       {
         "surface": "the distance",
         "lemma": "derekh"
@@ -644,8 +852,16 @@
         "lemma": "ravah"
       },
       {
+        "surface": "for",
+        "lemma": "min"
+      },
+      {
         "surface": "you to carry",
         "lemma": "nasa"
+      },
+      {
+        "surface": "that with which",
+        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -660,8 +876,16 @@
         "lemma": "barakh"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "the place",
         "lemma": "maqom"
+      },
+      {
+        "surface": "where",
+        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -690,6 +914,10 @@
     ],
     "25": [
       {
+        "surface": "then exchange",
+        "lemma": "natan"
+      },
+      {
         "surface": "it for money",
         "lemma": "keseph"
       },
@@ -710,6 +938,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the place",
         "lemma": "maqom"
       },
@@ -728,8 +960,16 @@
     ],
     "26": [
       {
+        "surface": "Then you may spend",
+        "lemma": "natan"
+      },
+      {
         "surface": "the money",
         "lemma": "keseph"
+      },
+      {
+        "surface": "on anything",
+        "lemma": "kol"
       },
       {
         "surface": "you",
@@ -754,6 +994,10 @@
       {
         "surface": "strong drink",
         "lemma": "shekhar"
+      },
+      {
+        "surface": "or anything",
+        "lemma": "kol"
       },
       {
         "surface": "you",
@@ -794,6 +1038,10 @@
     ],
     "27": [
       {
+        "surface": "And do not",
+        "lemma": "lo"
+      },
+      {
         "surface": "neglect",
         "lemma": "azav"
       },
@@ -806,6 +1054,10 @@
         "lemma": "shaar"
       },
       {
+        "surface": "since",
+        "lemma": "ki"
+      },
+      {
         "surface": "he has no",
         "lemma": "ayin"
       },
@@ -816,6 +1068,10 @@
       {
         "surface": "or inheritance",
         "lemma": "nachalah"
+      },
+      {
+        "surface": "among you",
+        "lemma": "im"
       }
     ],
     "28": [
@@ -832,12 +1088,24 @@
         "lemma": "shaneh"
       },
       {
+        "surface": "bring",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "a tenth",
         "lemma": "maaser"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "your produce",
         "lemma": "tevuah"
+      },
+      {
+        "surface": "for that",
+        "lemma": "hu"
       },
       {
         "surface": "year",
@@ -858,6 +1126,10 @@
         "lemma": "leviyyi"
       },
       {
+        "surface": "because",
+        "lemma": "ki"
+      },
+      {
         "surface": "he has no",
         "lemma": "ayin"
       },
@@ -868,6 +1140,10 @@
       {
         "surface": "or inheritance",
         "lemma": "nachalah"
+      },
+      {
+        "surface": "among you",
+        "lemma": "im"
       },
       {
         "surface": "the foreigner",
@@ -884,6 +1160,10 @@
       {
         "surface": "within your gates",
         "lemma": "shaar"
+      },
+      {
+        "surface": "may come",
+        "lemma": "bo"
       },
       {
         "surface": "and eat",
@@ -906,6 +1186,10 @@
         "lemma": "barakh"
       },
       {
+        "surface": "you in all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the work",
         "lemma": "maaseh"
       },
@@ -916,8 +1200,8 @@
     ]
   },
   "themeLemmas": [
+    "kol",
     "akhal",
-    "tame",
-    "shaar"
+    "lo"
   ]
 }

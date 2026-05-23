@@ -10,6 +10,10 @@
         "lemma": "davar"
       },
       {
+        "surface": "that",
+        "lemma": "asher"
+      },
+      {
         "surface": "was revealed",
         "lemma": "chazah"
       },
@@ -24,6 +28,10 @@
       {
         "surface": "of Amoz",
         "lemma": "amots"
+      },
+      {
+        "surface": "concerning",
+        "lemma": "al"
       },
       {
         "surface": "Judah",
@@ -56,6 +64,10 @@
         "lemma": "yehovah"
       },
       {
+        "surface": "will be",
+        "lemma": "hayah"
+      },
+      {
         "surface": "established",
         "lemma": "kun"
       },
@@ -76,12 +88,20 @@
         "lemma": "givah"
       },
       {
+        "surface": "and all",
+        "lemma": "kol"
+      },
+      {
         "surface": "nations",
         "lemma": "goy"
       },
       {
         "surface": "will stream",
         "lemma": "nahar"
+      },
+      {
+        "surface": "to it",
+        "lemma": "el"
       }
     ],
     "3": [
@@ -98,6 +118,10 @@
         "lemma": "halakh"
       },
       {
+        "surface": "and say",
+        "lemma": "amar"
+      },
+      {
         "surface": "Come",
         "lemma": "halakh"
       },
@@ -106,12 +130,20 @@
         "lemma": "alah"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "the mountain",
         "lemma": "har"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "to",
+        "lemma": "el"
       },
       {
         "surface": "the house",
@@ -142,8 +174,16 @@
         "lemma": "orach"
       },
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "the law",
         "lemma": "torah"
+      },
+      {
+        "surface": "will go forth",
+        "lemma": "yatsa"
       },
       {
         "surface": "from Zion",
@@ -196,6 +236,10 @@
         "lemma": "cherev"
       },
       {
+        "surface": "into plowshares",
+        "lemma": "et"
+      },
+      {
         "surface": "and their spears",
         "lemma": "chanit"
       },
@@ -208,6 +252,10 @@
         "lemma": "goy"
       },
       {
+        "surface": "will no longer",
+        "lemma": "lo"
+      },
+      {
         "surface": "take up",
         "lemma": "nasa"
       },
@@ -216,8 +264,16 @@
         "lemma": "cherev"
       },
       {
+        "surface": "against",
+        "lemma": "el"
+      },
+      {
         "surface": "nation",
         "lemma": "goy"
+      },
+      {
+        "surface": "nor",
+        "lemma": "lo"
       },
       {
         "surface": "train",
@@ -260,6 +316,10 @@
     ],
     "6": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "You have abandoned",
         "lemma": "natash"
       },
@@ -274,6 +334,10 @@
       {
         "surface": "of Jacob",
         "lemma": "yaaqov"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "they are filled",
@@ -384,8 +448,16 @@
         "lemma": "yad"
       },
       {
+        "surface": "to what",
+        "lemma": "asher"
+      },
+      {
         "surface": "their fingers",
         "lemma": "etsba"
+      },
+      {
+        "surface": "have made",
+        "lemma": "asah"
       }
     ],
     "9": [
@@ -406,11 +478,19 @@
         "lemma": "shaphel"
       },
       {
+        "surface": "do not",
+        "lemma": "al"
+      },
+      {
         "surface": "forgive",
         "lemma": "nasa"
       }
     ],
     "10": [
+      {
+        "surface": "Go",
+        "lemma": "bo"
+      },
       {
         "surface": "into the rocks",
         "lemma": "tsur"
@@ -486,11 +566,19 @@
         "lemma": "sagav"
       },
       {
+        "surface": "in that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       }
     ],
     "12": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
       {
         "surface": "the Day",
         "lemma": "yom"
@@ -504,12 +592,28 @@
         "lemma": "tsava"
       },
       {
+        "surface": "will come against",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the proud",
         "lemma": "geeh"
       },
       {
         "surface": "and lofty",
         "lemma": "rum"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "that is exalted",
@@ -521,6 +625,14 @@
       }
     ],
     "13": [
+      {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
       {
         "surface": "the cedars",
         "lemma": "erez"
@@ -538,6 +650,14 @@
         "lemma": "nasa"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the oaks",
         "lemma": "allon"
       },
@@ -548,12 +668,28 @@
     ],
     "14": [
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the tall",
         "lemma": "rum"
       },
       {
         "surface": "mountains",
         "lemma": "har"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
+        "surface": "all",
+        "lemma": "kol"
       },
       {
         "surface": "the high",
@@ -566,12 +702,28 @@
     ],
     "15": [
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "high",
         "lemma": "gavoah"
       },
       {
         "surface": "tower",
         "lemma": "migdal"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "fortified",
@@ -584,12 +736,28 @@
     ],
     "16": [
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
+      },
+      {
         "surface": "ship",
         "lemma": "oniyyah"
       },
       {
         "surface": "of Tarshish",
         "lemma": "tarshish"
+      },
+      {
+        "surface": "and against",
+        "lemma": "al"
+      },
+      {
+        "surface": "every",
+        "lemma": "kol"
       },
       {
         "surface": "stately",
@@ -638,6 +806,10 @@
         "lemma": "sagav"
       },
       {
+        "surface": "in that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       }
@@ -657,6 +829,10 @@
       }
     ],
     "19": [
+      {
+        "surface": "Men will flee",
+        "lemma": "bo"
+      },
       {
         "surface": "to caves",
         "lemma": "mearah"
@@ -708,6 +884,10 @@
     ],
     "20": [
       {
+        "surface": "In that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -736,8 +916,20 @@
         "lemma": "keseph"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "gold",
         "lemma": "zahav"
+      },
+      {
+        "surface": "the idols",
+        "lemma": "asher"
+      },
+      {
+        "surface": "they made",
+        "lemma": "asah"
       },
       {
         "surface": "to worship",
@@ -745,6 +937,10 @@
       }
     ],
     "21": [
+      {
+        "surface": "They will flee",
+        "lemma": "bo"
+      },
       {
         "surface": "to caverns",
         "lemma": "neqarah"
@@ -800,8 +996,16 @@
         "lemma": "chadal"
       },
       {
+        "surface": "in",
+        "lemma": "min"
+      },
+      {
         "surface": "man",
         "lemma": "adam"
+      },
+      {
+        "surface": "who",
+        "lemma": "asher"
       },
       {
         "surface": "has only the breath",
@@ -818,12 +1022,16 @@
       {
         "surface": "account",
         "lemma": "chashav"
+      },
+      {
+        "surface": "is he",
+        "lemma": "hu"
       }
     ]
   },
   "themeLemmas": [
-    "nasa",
-    "rum",
-    "halakh"
+    "al",
+    "kol",
+    "nasa"
   ]
 }

@@ -6,6 +6,10 @@
   "verses": {
     "1": [
       {
+        "surface": "I have come",
+        "lemma": "bo"
+      },
+      {
         "surface": "to my garden",
         "lemma": "gan"
       },
@@ -26,6 +30,10 @@
         "lemma": "mor"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "my spice",
         "lemma": "basam"
       },
@@ -38,6 +46,10 @@
         "lemma": "yaar"
       },
       {
+        "surface": "with",
+        "lemma": "im"
+      },
+      {
         "surface": "my honey",
         "lemma": "devash"
       },
@@ -48,6 +60,10 @@
       {
         "surface": "my wine",
         "lemma": "yayin"
+      },
+      {
+        "surface": "with",
+        "lemma": "im"
       },
       {
         "surface": "my milk",
@@ -75,6 +91,10 @@
       }
     ],
     "2": [
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
       {
         "surface": "sleep",
         "lemma": "yashen"
@@ -192,6 +212,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "to",
+        "lemma": "min"
+      },
+      {
         "surface": "the latch",
         "lemma": "chor"
       },
@@ -202,9 +226,17 @@
       {
         "surface": "pounded",
         "lemma": "hamah"
+      },
+      {
+        "surface": "for him",
+        "lemma": "al"
       }
     ],
     "5": [
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
       {
         "surface": "rose up",
         "lemma": "qamay"
@@ -242,6 +274,10 @@
         "lemma": "mor"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "the handles",
         "lemma": "kaph"
       },
@@ -251,6 +287,10 @@
       }
     ],
     "6": [
+      {
+        "surface": "I",
+        "lemma": "ani"
+      },
       {
         "surface": "opened",
         "lemma": "patach"
@@ -276,6 +316,10 @@
         "lemma": "nephesh"
       },
       {
+        "surface": "sank",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "at his departure",
         "lemma": "davar"
       },
@@ -284,8 +328,20 @@
         "lemma": "baqash"
       },
       {
+        "surface": "but did not",
+        "lemma": "lo"
+      },
+      {
         "surface": "find him",
         "lemma": "matsa"
+      },
+      {
+        "surface": "I called",
+        "lemma": "qara"
+      },
+      {
+        "surface": "but he did not",
+        "lemma": "lo"
       },
       {
         "surface": "answer",
@@ -348,6 +404,14 @@
         "lemma": "shava"
       },
       {
+        "surface": "you",
+        "lemma": "et"
+      },
+      {
+        "surface": "if",
+        "lemma": "im"
+      },
+      {
         "surface": "you find",
         "lemma": "matsa"
       },
@@ -358,6 +422,10 @@
       {
         "surface": "tell",
         "lemma": "nagad"
+      },
+      {
+        "surface": "I",
+        "lemma": "ani"
       },
       {
         "surface": "am sick",
@@ -472,6 +540,10 @@
         "lemma": "yonah"
       },
       {
+        "surface": "beside",
+        "lemma": "al"
+      },
+      {
         "surface": "the streams",
         "lemma": "aphiq"
       },
@@ -486,6 +558,14 @@
       {
         "surface": "in milk",
         "lemma": "chalav"
+      },
+      {
+        "surface": "and mounted",
+        "lemma": "yashav"
+      },
+      {
+        "surface": "like",
+        "lemma": "al"
       },
       {
         "surface": "jewels",
@@ -594,6 +674,10 @@
         "lemma": "yasad"
       },
       {
+        "surface": "on",
+        "lemma": "al"
+      },
+      {
         "surface": "bases",
         "lemma": "eden"
       },
@@ -628,12 +712,24 @@
         "lemma": "mamtaq"
       },
       {
+        "surface": "he is altogether",
+        "lemma": "kol"
+      },
+      {
         "surface": "lovely",
         "lemma": "machmad"
       },
       {
+        "surface": "This",
+        "lemma": "zeh"
+      },
+      {
         "surface": "is my beloved",
         "lemma": "dod"
+      },
+      {
+        "surface": "and this",
+        "lemma": "zeh"
       },
       {
         "surface": "is my friend",
@@ -651,7 +747,7 @@
   },
   "themeLemmas": [
     "dod",
-    "mor",
-    "patach"
+    "al",
+    "mor"
   ]
 }

@@ -6,12 +6,20 @@
   "verses": {
     "1": [
       {
+        "surface": "On that",
+        "lemma": "hu"
+      },
+      {
         "surface": "day",
         "lemma": "yom"
       },
       {
         "surface": "a fountain",
         "lemma": "maqor"
+      },
+      {
+        "surface": "will be",
+        "lemma": "hayah"
       },
       {
         "surface": "opened",
@@ -24,6 +32,10 @@
       {
         "surface": "of David",
         "lemma": "david"
+      },
+      {
+        "surface": "and the people",
+        "lemma": "yashav"
       },
       {
         "surface": "of Jerusalem",
@@ -39,6 +51,14 @@
       }
     ],
     "2": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "on that",
+        "lemma": "hu"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -68,8 +88,16 @@
         "lemma": "atsav"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
+      },
+      {
+        "surface": "and they will no",
+        "lemma": "lo"
       },
       {
         "surface": "longer",
@@ -88,6 +116,10 @@
         "lemma": "navi"
       },
       {
+        "surface": "and",
+        "lemma": "et"
+      },
+      {
         "surface": "the spirit",
         "lemma": "ruach"
       },
@@ -96,11 +128,23 @@
         "lemma": "tumah"
       },
       {
+        "surface": "from",
+        "lemma": "min"
+      },
+      {
         "surface": "the land",
         "lemma": "erets"
       }
     ],
     "3": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "if",
+        "lemma": "ki"
+      },
       {
         "surface": "anyone",
         "lemma": "ish"
@@ -114,6 +158,10 @@
         "lemma": "nava"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "and mother",
         "lemma": "em"
       },
@@ -122,8 +170,24 @@
         "lemma": "yalad"
       },
       {
+        "surface": "will say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "to him",
+        "lemma": "el"
+      },
+      {
+        "surface": "You shall not",
+        "lemma": "lo"
+      },
+      {
         "surface": "remain alive",
         "lemma": "chayah"
+      },
+      {
+        "surface": "because",
+        "lemma": "ki"
       },
       {
         "surface": "you have spoken",
@@ -146,6 +210,10 @@
         "lemma": "nava"
       },
       {
+        "surface": "his father",
+        "lemma": "av"
+      },
+      {
         "surface": "and mother",
         "lemma": "em"
       },
@@ -159,6 +227,14 @@
       }
     ],
     "4": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "on that",
+        "lemma": "hu"
+      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -184,6 +260,10 @@
         "lemma": "chizzavon"
       },
       {
+        "surface": "and he will not",
+        "lemma": "lo"
+      },
+      {
         "surface": "put on",
         "lemma": "lavash"
       },
@@ -196,14 +276,34 @@
         "lemma": "adderet"
       },
       {
+        "surface": "in order to",
+        "lemma": "maan"
+      },
+      {
         "surface": "deceive",
         "lemma": "kachash"
       }
     ],
     "5": [
       {
+        "surface": "He will say",
+        "lemma": "amar"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
+      },
+      {
+        "surface": "am not",
+        "lemma": "lo"
+      },
+      {
         "surface": "a prophet",
         "lemma": "navi"
+      },
+      {
+        "surface": "I",
+        "lemma": "anokhi"
       },
       {
         "surface": "work",
@@ -212,6 +312,10 @@
       {
         "surface": "the land",
         "lemma": "adamah"
+      },
+      {
+        "surface": "for",
+        "lemma": "ki"
       },
       {
         "surface": "vvv",
@@ -228,8 +332,20 @@
     ],
     "6": [
       {
+        "surface": "If someone asks",
+        "lemma": "amar"
+      },
+      {
+        "surface": "him",
+        "lemma": "el"
+      },
+      {
         "surface": "What",
         "lemma": "mah"
+      },
+      {
+        "surface": "are these",
+        "lemma": "elleh"
       },
       {
         "surface": "wounds",
@@ -238,6 +354,14 @@
       {
         "surface": "on your chest",
         "lemma": "bayin"
+      },
+      {
+        "surface": "he will answer",
+        "lemma": "amar"
+      },
+      {
+        "surface": "These are",
+        "lemma": "asher"
       },
       {
         "surface": "the wounds I received",
@@ -262,8 +386,16 @@
         "lemma": "cherev"
       },
       {
+        "surface": "against",
+        "lemma": "al"
+      },
+      {
         "surface": "My Shepherd",
         "lemma": "beteqedharoim"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "the man",
@@ -302,8 +434,16 @@
         "lemma": "puts"
       },
       {
+        "surface": "and I will turn",
+        "lemma": "shuv"
+      },
+      {
         "surface": "My hand",
         "lemma": "yad"
+      },
+      {
+        "surface": "against",
+        "lemma": "al"
       },
       {
         "surface": "the little ones",
@@ -311,6 +451,14 @@
       }
     ],
     "8": [
+      {
+        "surface": "And",
+        "lemma": "hayah"
+      },
+      {
+        "surface": "in all",
+        "lemma": "kol"
+      },
       {
         "surface": "the land",
         "lemma": "erets"
@@ -350,6 +498,10 @@
         "lemma": "shelishi"
       },
       {
+        "surface": "I will bring",
+        "lemma": "bo"
+      },
+      {
         "surface": "through the fire",
         "lemma": "esh"
       },
@@ -370,16 +522,36 @@
         "lemma": "zahav"
       },
       {
+        "surface": "They will call",
+        "lemma": "qara"
+      },
+      {
         "surface": "on My name",
         "lemma": "shem"
+      },
+      {
+        "surface": "and I",
+        "lemma": "ani"
       },
       {
         "surface": "will answer them",
         "lemma": "un"
       },
       {
+        "surface": "I will say",
+        "lemma": "amar"
+      },
+      {
         "surface": "They are My people",
         "lemma": "am"
+      },
+      {
+        "surface": "and they",
+        "lemma": "hu"
+      },
+      {
+        "surface": "will say",
+        "lemma": "amar"
       },
       {
         "surface": "The LORD is",
@@ -392,8 +564,8 @@
     ]
   },
   "themeLemmas": [
-    "shem",
-    "neum",
-    "navi"
+    "amar",
+    "hayah",
+    "lo"
   ]
 }

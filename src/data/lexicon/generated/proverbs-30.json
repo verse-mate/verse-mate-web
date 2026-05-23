@@ -48,12 +48,24 @@
     ],
     "2": [
       {
+        "surface": "Surely",
+        "lemma": "ki"
+      },
+      {
+        "surface": "I am",
+        "lemma": "anokhi"
+      },
+      {
         "surface": "the most ignorant",
         "lemma": "baar"
       },
       {
         "surface": "of men",
         "lemma": "ish"
+      },
+      {
+        "surface": "and I lack",
+        "lemma": "lo"
       },
       {
         "surface": "the understanding",
@@ -65,6 +77,10 @@
       }
     ],
     "3": [
+      {
+        "surface": "I have not",
+        "lemma": "lo"
+      },
       {
         "surface": "learned",
         "lemma": "lamad"
@@ -140,6 +156,10 @@
         "lemma": "qamay"
       },
       {
+        "surface": "all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the ends",
         "lemma": "ephes"
       },
@@ -168,11 +188,19 @@
         "lemma": "ben"
       },
       {
+        "surface": "surely",
+        "lemma": "ki"
+      },
+      {
         "surface": "you know",
         "lemma": "yada"
       }
     ],
     "5": [
+      {
+        "surface": "Every",
+        "lemma": "kol"
+      },
       {
         "surface": "word",
         "lemma": "imrah"
@@ -186,6 +214,10 @@
         "lemma": "tsaraph"
       },
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "is a shield",
         "lemma": "magen"
       },
@@ -196,12 +228,24 @@
     ],
     "6": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "add",
         "lemma": "yasaph"
       },
       {
+        "surface": "to",
+        "lemma": "al"
+      },
+      {
         "surface": "His words",
         "lemma": "davar"
+      },
+      {
+        "surface": "lest",
+        "lemma": "pen"
       },
       {
         "surface": "He rebuke",
@@ -220,6 +264,14 @@
       {
         "surface": "things I ask",
         "lemma": "shaal"
+      },
+      {
+        "surface": "of You",
+        "lemma": "min"
+      },
+      {
+        "surface": "do not",
+        "lemma": "al"
       },
       {
         "surface": "refuse me",
@@ -252,6 +304,18 @@
         "lemma": "rachaq"
       },
       {
+        "surface": "from me",
+        "lemma": "min"
+      },
+      {
+        "surface": "Give",
+        "lemma": "natan"
+      },
+      {
+        "surface": "neither",
+        "lemma": "al"
+      },
+      {
         "surface": "poverty",
         "lemma": "resh"
       },
@@ -274,6 +338,10 @@
     ],
     "9": [
       {
+        "surface": "Otherwise",
+        "lemma": "pen"
+      },
+      {
         "surface": "I may have too much",
         "lemma": "sava"
       },
@@ -282,12 +350,20 @@
         "lemma": "kachash"
       },
       {
+        "surface": "saying",
+        "lemma": "amar"
+      },
+      {
         "surface": "Who",
         "lemma": "mi"
       },
       {
         "surface": "is the LORD",
         "lemma": "yehovah"
+      },
+      {
+        "surface": "Or",
+        "lemma": "pen"
       },
       {
         "surface": "I may become poor",
@@ -312,6 +388,10 @@
     ],
     "10": [
       {
+        "surface": "Do not",
+        "lemma": "al"
+      },
+      {
         "surface": "slander",
         "lemma": "lashan"
       },
@@ -320,8 +400,16 @@
         "lemma": "eved"
       },
       {
+        "surface": "to",
+        "lemma": "el"
+      },
+      {
         "surface": "his master",
         "lemma": "adon"
+      },
+      {
+        "surface": "or",
+        "lemma": "pen"
       },
       {
         "surface": "he will curse you",
@@ -340,6 +428,14 @@
       {
         "surface": "of those who curse",
         "lemma": "qalal"
+      },
+      {
+        "surface": "their fathers",
+        "lemma": "av"
+      },
+      {
+        "surface": "and do not",
+        "lemma": "lo"
       },
       {
         "surface": "bless",
@@ -362,6 +458,10 @@
       {
         "surface": "in their own eyes",
         "lemma": "ayin"
+      },
+      {
+        "surface": "vvv",
+        "lemma": "lo"
       },
       {
         "surface": "and yet unwashed",
@@ -462,8 +562,16 @@
         "lemma": "yahav"
       },
       {
+        "surface": "There",
+        "lemma": "hennah"
+      },
+      {
         "surface": "are three",
         "lemma": "shalosh"
+      },
+      {
+        "surface": "things that are never",
+        "lemma": "lo"
       },
       {
         "surface": "satisfied",
@@ -472,6 +580,14 @@
       {
         "surface": "four that",
         "lemma": "arba"
+      },
+      {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "say",
+        "lemma": "amar"
       },
       {
         "surface": "Enough",
@@ -496,6 +612,10 @@
         "lemma": "erets"
       },
       {
+        "surface": "never",
+        "lemma": "lo"
+      },
+      {
         "surface": "satisfied",
         "lemma": "sava"
       },
@@ -506,6 +626,14 @@
       {
         "surface": "and fire",
         "lemma": "esh"
+      },
+      {
+        "surface": "that never",
+        "lemma": "lo"
+      },
+      {
+        "surface": "says",
+        "lemma": "amar"
       },
       {
         "surface": "Enough",
@@ -520,6 +648,10 @@
       {
         "surface": "that mocks",
         "lemma": "laag"
+      },
+      {
+        "surface": "a father",
+        "lemma": "av"
       },
       {
         "surface": "and scorns",
@@ -560,6 +692,10 @@
     ],
     "18": [
       {
+        "surface": "There",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "are three things",
         "lemma": "shalosh"
       },
@@ -568,8 +704,16 @@
         "lemma": "pala"
       },
       {
+        "surface": "for me",
+        "lemma": "min"
+      },
+      {
         "surface": "four",
         "lemma": "arba"
+      },
+      {
+        "surface": "that I cannot",
+        "lemma": "lo"
       },
       {
         "surface": "understand",
@@ -596,6 +740,10 @@
       {
         "surface": "of a snake",
         "lemma": "nachash"
+      },
+      {
+        "surface": "on",
+        "lemma": "al"
       },
       {
         "surface": "a rock",
@@ -656,8 +804,16 @@
         "lemma": "peh"
       },
       {
+        "surface": "and says",
+        "lemma": "amar"
+      },
+      {
         "surface": "I have done",
         "lemma": "paal"
+      },
+      {
+        "surface": "nothing",
+        "lemma": "lo"
       },
       {
         "surface": "wrong",
@@ -690,6 +846,10 @@
         "lemma": "arba"
       },
       {
+        "surface": "it cannot",
+        "lemma": "lo"
+      },
+      {
         "surface": "bear up",
         "lemma": "nasa"
       }
@@ -700,12 +860,20 @@
         "lemma": "eved"
       },
       {
+        "surface": "who",
+        "lemma": "ki"
+      },
+      {
         "surface": "becomes king",
         "lemma": "malakh"
       },
       {
         "surface": "a fool",
         "lemma": "naval"
+      },
+      {
+        "surface": "who",
+        "lemma": "ki"
       },
       {
         "surface": "is filled",
@@ -722,12 +890,20 @@
         "lemma": "sane"
       },
       {
+        "surface": "who",
+        "lemma": "ki"
+      },
+      {
         "surface": "marries",
         "lemma": "baal"
       },
       {
         "surface": "and a maidservant",
         "lemma": "shiphchah"
+      },
+      {
+        "surface": "who",
+        "lemma": "ki"
       },
       {
         "surface": "supplants",
@@ -752,6 +928,10 @@
         "lemma": "qatan"
       },
       {
+        "surface": "yet they",
+        "lemma": "hemmah"
+      },
+      {
         "surface": "are exceedingly",
         "lemma": "chakham"
       },
@@ -768,6 +948,10 @@
       {
         "surface": "are creatures",
         "lemma": "am"
+      },
+      {
+        "surface": "of little",
+        "lemma": "lo"
       },
       {
         "surface": "strength",
@@ -794,6 +978,10 @@
       {
         "surface": "are creatures",
         "lemma": "am"
+      },
+      {
+        "surface": "of little",
+        "lemma": "lo"
       },
       {
         "surface": "power",
@@ -826,6 +1014,14 @@
         "lemma": "melekh"
       },
       {
+        "surface": "yet they all",
+        "lemma": "kol"
+      },
+      {
+        "surface": "advance",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "in formation",
         "lemma": "chatsats"
       }
@@ -844,6 +1040,10 @@
         "lemma": "yad"
       },
       {
+        "surface": "yet it",
+        "lemma": "hu"
+      },
+      {
         "surface": "is found in the palaces",
         "lemma": "hekhal"
       },
@@ -853,6 +1053,10 @@
       }
     ],
     "29": [
+      {
+        "surface": "There",
+        "lemma": "hemmah"
+      },
       {
         "surface": "are three things",
         "lemma": "shalosh"
@@ -892,8 +1096,20 @@
         "lemma": "behemah"
       },
       {
+        "surface": "refusing",
+        "lemma": "lo"
+      },
+      {
+        "surface": "to retreat",
+        "lemma": "shuv"
+      },
+      {
         "surface": "before",
         "lemma": "paneh"
+      },
+      {
+        "surface": "anything",
+        "lemma": "kol"
       }
     ],
     "31": [
@@ -912,9 +1128,17 @@
       {
         "surface": "with his army",
         "lemma": "alqum"
+      },
+      {
+        "surface": "around him",
+        "lemma": "im"
       }
     ],
     "32": [
+      {
+        "surface": "If",
+        "lemma": "im"
+      },
       {
         "surface": "you have foolishly",
         "lemma": "naval"
@@ -922,6 +1146,10 @@
       {
         "surface": "exalted yourself",
         "lemma": "nasa"
+      },
+      {
+        "surface": "or if",
+        "lemma": "im"
       },
       {
         "surface": "you have plotted evil",
@@ -938,12 +1166,20 @@
     ],
     "33": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "as the churning",
         "lemma": "mits"
       },
       {
         "surface": "of milk",
         "lemma": "chalav"
+      },
+      {
+        "surface": "yields",
+        "lemma": "yatsa"
       },
       {
         "surface": "butter",
@@ -958,6 +1194,10 @@
         "lemma": "aph"
       },
       {
+        "surface": "draws",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "blood",
         "lemma": "dam"
       },
@@ -970,14 +1210,18 @@
         "lemma": "aph"
       },
       {
+        "surface": "brings forth",
+        "lemma": "yatsa"
+      },
+      {
         "surface": "strife",
         "lemma": "riv"
       }
     ]
   },
   "themeLemmas": [
-    "mi",
-    "arba",
-    "shalosh"
+    "lo",
+    "ki",
+    "al"
   ]
 }

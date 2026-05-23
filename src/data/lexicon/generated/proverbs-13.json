@@ -14,12 +14,24 @@
         "lemma": "ben"
       },
       {
+        "surface": "heeds his father’s",
+        "lemma": "av"
+      },
+      {
         "surface": "discipline",
         "lemma": "musar"
       },
       {
         "surface": "but a mocker",
         "lemma": "luts"
+      },
+      {
+        "surface": "does not",
+        "lemma": "lo"
+      },
+      {
+        "surface": "listen",
+        "lemma": "shama"
       },
       {
         "surface": "to rebuke",
@@ -212,6 +224,14 @@
         "lemma": "rush"
       },
       {
+        "surface": "man hears",
+        "lemma": "shama"
+      },
+      {
+        "surface": "no",
+        "lemma": "lo"
+      },
+      {
         "surface": "threat",
         "lemma": "gearah"
       }
@@ -248,12 +268,24 @@
         "lemma": "zadon"
       },
       {
+        "surface": "leads",
+        "lemma": "natan"
+      },
+      {
+        "surface": "only",
+        "lemma": "raq"
+      },
+      {
         "surface": "to strife",
         "lemma": "matstsah"
       },
       {
         "surface": "but wisdom",
         "lemma": "chokhmah"
+      },
+      {
+        "surface": "is with",
+        "lemma": "et"
       },
       {
         "surface": "the well-advised",
@@ -276,6 +308,10 @@
       {
         "surface": "but what is earned",
         "lemma": "qavats"
+      },
+      {
+        "surface": "through",
+        "lemma": "al"
       },
       {
         "surface": "hard work",
@@ -306,6 +342,10 @@
       {
         "surface": "but desire",
         "lemma": "taavah"
+      },
+      {
+        "surface": "fulfilled",
+        "lemma": "bo"
       },
       {
         "surface": "is a tree",
@@ -382,6 +422,10 @@
         "lemma": "sekhel"
       },
       {
+        "surface": "wins",
+        "lemma": "natan"
+      },
+      {
         "surface": "favor",
         "lemma": "chen"
       },
@@ -400,8 +444,16 @@
     ],
     "16": [
       {
+        "surface": "Every",
+        "lemma": "kol"
+      },
+      {
         "surface": "prudent man",
         "lemma": "arum"
+      },
+      {
+        "surface": "acts",
+        "lemma": "asah"
       },
       {
         "surface": "with knowledge",
@@ -486,6 +538,10 @@
         "lemma": "taavah"
       },
       {
+        "surface": "fulfilled",
+        "lemma": "hayah"
+      },
+      {
         "surface": "is sweet",
         "lemma": "arev"
       },
@@ -514,6 +570,10 @@
       {
         "surface": "He who walks",
         "lemma": "halakh"
+      },
+      {
+        "surface": "with",
+        "lemma": "et"
       },
       {
         "surface": "the wise",
@@ -612,6 +672,10 @@
       {
         "surface": "of the poor",
         "lemma": "rush"
+      },
+      {
+        "surface": "but without",
+        "lemma": "lo"
       },
       {
         "surface": "justice",

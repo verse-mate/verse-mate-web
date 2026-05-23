@@ -68,6 +68,10 @@
         "lemma": "masvos"
       },
       {
+        "surface": "of all",
+        "lemma": "kol"
+      },
+      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -120,6 +124,10 @@
     ],
     "4": [
       {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
         "surface": "behold",
         "lemma": "hinneh"
       },
@@ -141,6 +149,14 @@
       }
     ],
     "5": [
+      {
+        "surface": "They",
+        "lemma": "hemmah"
+      },
+      {
+        "surface": "saw",
+        "lemma": "raah"
+      },
       {
         "surface": "and",
         "lemma": "ken"
@@ -204,8 +220,20 @@
     ],
     "8": [
       {
+        "surface": "As",
+        "lemma": "asher"
+      },
+      {
+        "surface": "we have heard",
+        "lemma": "shama"
+      },
+      {
         "surface": "so",
         "lemma": "ken"
+      },
+      {
+        "surface": "we have seen",
+        "lemma": "raah"
       },
       {
         "surface": "in the city",
@@ -234,6 +262,10 @@
       {
         "surface": "will establish her",
         "lemma": "kun"
+      },
+      {
+        "surface": "forever",
+        "lemma": "ad"
       },
       {
         "surface": "Selah",
@@ -274,6 +306,10 @@
       {
         "surface": "like Your praise",
         "lemma": "tehillah"
+      },
+      {
+        "surface": "reaches to",
+        "lemma": "al"
       },
       {
         "surface": "the ends",
@@ -322,6 +358,10 @@
         "lemma": "gil"
       },
       {
+        "surface": "on account of",
+        "lemma": "maan"
+      },
+      {
         "surface": "Your judgments",
         "lemma": "mishpat"
       }
@@ -366,6 +406,10 @@
         "lemma": "armon"
       },
       {
+        "surface": "that",
+        "lemma": "maan"
+      },
+      {
         "surface": "you may tell",
         "lemma": "saphar"
       },
@@ -379,6 +423,14 @@
       }
     ],
     "14": [
+      {
+        "surface": "For",
+        "lemma": "ki"
+      },
+      {
+        "surface": "this",
+        "lemma": "zeh"
+      },
       {
         "surface": "God",
         "lemma": "elohim"
@@ -396,8 +448,16 @@
         "lemma": "ad"
       },
       {
+        "surface": "He",
+        "lemma": "hu"
+      },
+      {
         "surface": "will be our guide",
         "lemma": "nahag"
+      },
+      {
+        "surface": "even till",
+        "lemma": "al"
       },
       {
         "surface": "death",
