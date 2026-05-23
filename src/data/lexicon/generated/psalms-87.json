@@ -104,10 +104,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "along with",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "Philistia",
         "lemma": "peleshet"
       },
@@ -116,16 +112,8 @@
         "lemma": "tsor"
       },
       {
-        "surface": "and",
-        "lemma": "im"
-      },
-      {
         "surface": "Cush",
         "lemma": "kush"
-      },
-      {
-        "surface": "when I say, ‘This one",
-        "lemma": "zeh"
       },
       {
         "surface": "was born",
@@ -162,10 +150,6 @@
         "lemma": "elyon"
       },
       {
-        "surface": "Himself",
-        "lemma": "hu"
-      },
-      {
         "surface": "will establish her",
         "lemma": "kun"
       }
@@ -186,10 +170,6 @@
       {
         "surface": "of the peoples",
         "lemma": "am"
-      },
-      {
-        "surface": "This",
-        "lemma": "zeh"
       },
       {
         "surface": "one was born",
@@ -225,7 +205,7 @@
   },
   "themeLemmas": [
     "yalad",
-    "zeh",
-    "tsiyyon"
+    "tsiyyon",
+    "shir"
   ]
 }

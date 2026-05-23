@@ -78,20 +78,8 @@
         "lemma": "amar"
       },
       {
-        "surface": "Aha",
-        "lemma": "heach"
-      },
-      {
-        "surface": "aha",
-        "lemma": "heach"
-      },
-      {
         "surface": "retreat",
         "lemma": "shuv"
-      },
-      {
-        "surface": "because of",
-        "lemma": "al"
       },
       {
         "surface": "their shame",
@@ -142,10 +130,6 @@
     ],
     "5": [
       {
-        "surface": "But I am",
-        "lemma": "ani"
-      },
-      {
         "surface": "poor",
         "lemma": "ani"
       },
@@ -160,10 +144,6 @@
       {
         "surface": "O God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "are my help",
@@ -188,8 +168,8 @@
     ]
   },
   "themeLemmas": [
-    "heach",
     "chush",
-    "baqash"
+    "baqash",
+    "amar"
   ]
 }

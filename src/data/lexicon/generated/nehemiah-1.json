@@ -42,10 +42,6 @@
         "lemma": "shaneh"
       },
       {
-        "surface": "while I",
-        "lemma": "ani"
-      },
-      {
         "surface": "was",
         "lemma": "hayah"
       },
@@ -88,10 +84,6 @@
         "lemma": "shaal"
       },
       {
-        "surface": "about",
-        "lemma": "al"
-      },
-      {
         "surface": "the remnant",
         "lemma": "peletah"
       },
@@ -100,20 +92,12 @@
         "lemma": "yehudi"
       },
       {
-        "surface": "who",
-        "lemma": "asher"
-      },
-      {
         "surface": "had survived",
         "lemma": "shaar"
       },
       {
         "surface": "the exile",
         "lemma": "shevi"
-      },
-      {
-        "surface": "and also about",
-        "lemma": "al"
       },
       {
         "surface": "Jerusalem",
@@ -128,10 +112,6 @@
       {
         "surface": "The remnant",
         "lemma": "shaar"
-      },
-      {
-        "surface": "who",
-        "lemma": "asher"
       },
       {
         "surface": "survived",
@@ -192,10 +172,6 @@
         "lemma": "shama"
       },
       {
-        "surface": "these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "words",
         "lemma": "davar"
       },
@@ -240,10 +216,6 @@
       {
         "surface": "Then I said",
         "lemma": "amar"
-      },
-      {
-        "surface": "O",
-        "lemma": "anna"
       },
       {
         "surface": "LORD",
@@ -324,14 +296,6 @@
         "lemma": "tephillah"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "Your servant",
         "lemma": "eved"
       },
@@ -356,10 +320,6 @@
         "lemma": "laylah"
       },
       {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "Your servants",
         "lemma": "eved"
       },
@@ -376,20 +336,12 @@
         "lemma": "chattaah"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "we Israelites",
         "lemma": "ben"
       },
       {
         "surface": "have committed",
         "lemma": "chata"
-      },
-      {
-        "surface": "Both I",
-        "lemma": "ani"
       },
       {
         "surface": "and my father’s",
@@ -430,10 +382,6 @@
         "lemma": "mishpat"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "You gave",
         "lemma": "tsavah"
       },
@@ -452,16 +400,8 @@
         "lemma": "zakhar"
       },
       {
-        "surface": "I pray",
-        "lemma": "na"
-      },
-      {
         "surface": "the word",
         "lemma": "davar"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "You commanded",
@@ -480,24 +420,12 @@
         "lemma": "amar"
       },
       {
-        "surface": "If you",
-        "lemma": "attah"
-      },
-      {
         "surface": "are unfaithful",
         "lemma": "maal"
       },
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "will scatter",
         "lemma": "puts"
-      },
-      {
-        "surface": "you",
-        "lemma": "et"
       },
       {
         "surface": "among the nations",
@@ -508,10 +436,6 @@
       {
         "surface": "but if you return",
         "lemma": "shuv"
-      },
-      {
-        "surface": "to Me",
-        "lemma": "el"
       },
       {
         "surface": "and keep",
@@ -558,10 +482,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the place",
         "lemma": "maqom"
       },
@@ -574,19 +494,11 @@
         "lemma": "shakhan"
       },
       {
-        "surface": "for",
-        "lemma": "et"
-      },
-      {
         "surface": "My Name",
         "lemma": "shem"
       }
     ],
     "10": [
-      {
-        "surface": "They",
-        "lemma": "hemmah"
-      },
       {
         "surface": "are Your servants",
         "lemma": "eved"
@@ -598,10 +510,6 @@
       {
         "surface": "You redeemed",
         "lemma": "padah"
-      },
-      {
-        "surface": "them",
-        "lemma": "asher"
       },
       {
         "surface": "by Your great",
@@ -638,16 +546,8 @@
         "lemma": "qashshav"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "my prayer",
         "lemma": "tephillah"
-      },
-      {
-        "surface": "and to",
-        "lemma": "el"
       },
       {
         "surface": "the prayers",
@@ -682,10 +582,6 @@
         "lemma": "yom"
       },
       {
-        "surface": "I pray",
-        "lemma": "na"
-      },
-      {
         "surface": "and grant him",
         "lemma": "natan"
       },
@@ -698,16 +594,8 @@
         "lemma": "paneh"
       },
       {
-        "surface": "of this",
-        "lemma": "zeh"
-      },
-      {
         "surface": "man",
         "lemma": "ish"
-      },
-      {
-        "surface": "At that time I",
-        "lemma": "ani"
       },
       {
         "surface": "was",
@@ -724,8 +612,8 @@
     ]
   },
   "themeLemmas": [
-    "asher",
     "hayah",
-    "shamar"
+    "shamar",
+    "shaar"
   ]
 }

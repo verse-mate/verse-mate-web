@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -110,20 +106,12 @@
         "lemma": "bazaz"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "has spoken",
         "lemma": "davar"
-      },
-      {
-        "surface": "this",
-        "lemma": "zeh"
       },
       {
         "surface": "word",
@@ -215,10 +203,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
       {
         "surface": "a curse",
         "lemma": "alah"
@@ -398,10 +382,6 @@
         "lemma": "tsevachah"
       },
       {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "wine",
         "lemma": "yayin"
       },
@@ -458,10 +438,6 @@
     ],
     "13": [
       {
-        "surface": "So",
-        "lemma": "ki"
-      },
-      {
         "surface": "will it be",
         "lemma": "hayah"
       },
@@ -504,10 +480,6 @@
     ],
     "14": [
       {
-        "surface": "They",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "raise",
         "lemma": "nasa"
       },
@@ -537,10 +509,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
       {
         "surface": "glorify",
         "lemma": "kavad"
@@ -616,10 +584,6 @@
         "lemma": "razi"
       },
       {
-        "surface": "Woe",
-        "lemma": "oy"
-      },
-      {
         "surface": "The treacherous",
         "lemma": "bagad"
       },
@@ -654,10 +618,6 @@
         "lemma": "pach"
       },
       {
-        "surface": "await you",
-        "lemma": "al"
-      },
-      {
         "surface": "O dweller",
         "lemma": "yashav"
       },
@@ -684,10 +644,6 @@
         "lemma": "naphal"
       },
       {
-        "surface": "into",
-        "lemma": "el"
-      },
-      {
         "surface": "the pit",
         "lemma": "pachat"
       },
@@ -710,10 +666,6 @@
       {
         "surface": "in the snare",
         "lemma": "pach"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "the windows",
@@ -814,10 +766,6 @@
     ],
     "21": [
       {
-        "surface": "In that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -848,10 +796,6 @@
       {
         "surface": "of the earth",
         "lemma": "adamah"
-      },
-      {
-        "surface": "below",
-        "lemma": "al"
       }
     ],
     "22": [
@@ -868,20 +812,12 @@
         "lemma": "assir"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "a pit",
         "lemma": "bor"
       },
       {
         "surface": "They will be confined",
         "lemma": "sagar"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "a dungeon",
@@ -916,10 +852,6 @@
       {
         "surface": "will be ashamed",
         "lemma": "bush"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -960,8 +892,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "yashav",
-    "marom"
+    "marom",
+    "bagad"
   ]
 }

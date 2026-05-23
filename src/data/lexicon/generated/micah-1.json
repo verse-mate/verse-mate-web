@@ -14,16 +14,8 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "came",
         "lemma": "hayah"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "Micah",
@@ -58,16 +50,8 @@
         "lemma": "yehudah"
       },
       {
-        "surface": "what",
-        "lemma": "asher"
-      },
-      {
         "surface": "he saw",
         "lemma": "chazah"
-      },
-      {
-        "surface": "regarding",
-        "lemma": "al"
       },
       {
         "surface": "Samaria",
@@ -134,14 +118,6 @@
     ],
     "3": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -160,10 +136,6 @@
       {
         "surface": "and tread",
         "lemma": "darakh"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the high places",
@@ -224,10 +196,6 @@
       {
         "surface": "All",
         "lemma": "kol"
-      },
-      {
-        "surface": "this is",
-        "lemma": "zot"
       },
       {
         "surface": "for the transgression",
@@ -378,10 +346,6 @@
         "lemma": "atsav"
       },
       {
-        "surface": "Since",
-        "lemma": "ki"
-      },
-      {
         "surface": "she collected",
         "lemma": "qavats"
       },
@@ -407,14 +371,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "Because of",
-        "lemma": "al"
-      },
-      {
-        "surface": "this",
-        "lemma": "zot"
-      },
       {
         "surface": "I will lament",
         "lemma": "saphad"
@@ -458,10 +414,6 @@
     ],
     "9": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "her wound",
         "lemma": "makkah"
       },
@@ -488,10 +440,6 @@
       {
         "surface": "of my people",
         "lemma": "am"
-      },
-      {
-        "surface": "as far as",
-        "lemma": "ad"
       },
       {
         "surface": "Jerusalem itself",
@@ -592,10 +540,6 @@
     ],
     "12": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the dwellers",
         "lemma": "yashav"
       },
@@ -612,20 +556,12 @@
         "lemma": "tov"
       },
       {
-        "surface": "but",
-        "lemma": "ki"
-      },
-      {
         "surface": "calamity",
         "lemma": "ra"
       },
       {
         "surface": "came down",
         "lemma": "yarad"
-      },
-      {
-        "surface": "from",
-        "lemma": "et"
       },
       {
         "surface": "the LORD",
@@ -662,10 +598,6 @@
         "lemma": "lakhish"
       },
       {
-        "surface": "You were",
-        "lemma": "hu"
-      },
-      {
         "surface": "the beginning",
         "lemma": "reshit"
       },
@@ -680,10 +612,6 @@
       {
         "surface": "of Zion",
         "lemma": "tsiyyon"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "the transgressions",
@@ -710,10 +638,6 @@
       {
         "surface": "farewell gifts",
         "lemma": "shilluach"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "vvv",
@@ -778,10 +702,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
         "surface": "Adullam",
         "lemma": "adullam"
       }
@@ -794,10 +714,6 @@
       {
         "surface": "and cut off your hair",
         "lemma": "gazaz"
-      },
-      {
-        "surface": "in mourning for",
-        "lemma": "al"
       },
       {
         "surface": "your precious",
@@ -820,22 +736,14 @@
         "lemma": "nesher"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "they will go from you",
-        "lemma": "min"
-      },
-      {
         "surface": "into exile",
         "lemma": "galah"
       }
     ]
   },
   "themeLemmas": [
-    "ki",
-    "al",
-    "yashav"
+    "yashav",
+    "kol",
+    "yisrael"
   ]
 }

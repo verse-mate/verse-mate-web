@@ -74,10 +74,6 @@
     ],
     "3": [
       {
-        "surface": "When",
-        "lemma": "ki"
-      },
-      {
         "surface": "I kept silent",
         "lemma": "charash"
       },
@@ -100,10 +96,6 @@
     ],
     "4": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "day",
         "lemma": "yomam"
       },
@@ -118,10 +110,6 @@
       {
         "surface": "was heavy",
         "lemma": "kavad"
-      },
-      {
-        "surface": "upon me",
-        "lemma": "al"
       },
       {
         "surface": "my strength",
@@ -182,10 +170,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "and You",
-        "lemma": "attah"
-      },
-      {
         "surface": "forgave",
         "lemma": "nasa"
       },
@@ -204,10 +188,6 @@
     ],
     "6": [
       {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
-      {
         "surface": "let all",
         "lemma": "kol"
       },
@@ -220,20 +200,12 @@
         "lemma": "palal"
       },
       {
-        "surface": "to You",
-        "lemma": "el"
-      },
-      {
         "surface": "while",
         "lemma": "et"
       },
       {
         "surface": "You may be found",
         "lemma": "matsa"
-      },
-      {
-        "surface": "Surely",
-        "lemma": "raq"
       },
       {
         "surface": "when great",
@@ -257,10 +229,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
       {
         "surface": "are my hiding place",
         "lemma": "seter"
@@ -314,10 +282,6 @@
       {
         "surface": "and watch",
         "lemma": "ayin"
-      },
-      {
-        "surface": "over you",
-        "lemma": "al"
       }
     ],
     "9": [
@@ -364,10 +328,6 @@
       {
         "surface": "come",
         "lemma": "qarav"
-      },
-      {
-        "surface": "to you",
-        "lemma": "el"
       }
     ],
     "10": [
@@ -436,8 +396,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "selah",
-    "lo"
+    "lo",
+    "kol"
   ]
 }

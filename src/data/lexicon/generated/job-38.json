@@ -18,10 +18,6 @@
         "lemma": "iyyov"
       },
       {
-        "surface": "out of",
-        "lemma": "min"
-      },
-      {
         "surface": "the whirlwind",
         "lemma": "saar"
       },
@@ -34,10 +30,6 @@
       {
         "surface": "Who",
         "lemma": "mi"
-      },
-      {
-        "surface": "is this",
-        "lemma": "zeh"
       },
       {
         "surface": "who obscures",
@@ -61,10 +53,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "Now",
-        "lemma": "na"
-      },
       {
         "surface": "brace",
         "lemma": "azar"
@@ -130,16 +118,8 @@
         "lemma": "memad"
       },
       {
-        "surface": "Surely",
-        "lemma": "ki"
-      },
-      {
         "surface": "you know",
         "lemma": "yada"
-      },
-      {
-        "surface": "Or",
-        "lemma": "o"
       },
       {
         "surface": "who",
@@ -152,10 +132,6 @@
       {
         "surface": "a measuring line",
         "lemma": "qav"
-      },
-      {
-        "surface": "across it",
-        "lemma": "al"
       }
     ],
     "6": [
@@ -170,10 +146,6 @@
       {
         "surface": "set",
         "lemma": "tava"
-      },
-      {
-        "surface": "or",
-        "lemma": "o"
       },
       {
         "surface": "who",
@@ -302,10 +274,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "this far",
-        "lemma": "ad"
-      },
-      {
         "surface": "but no",
         "lemma": "lo"
       },
@@ -376,10 +344,6 @@
       {
         "surface": "the wicked",
         "lemma": "rasah"
-      },
-      {
-        "surface": "out of it",
-        "lemma": "min"
       }
     ],
     "14": [
@@ -398,10 +362,6 @@
       {
         "surface": "its hills stand out",
         "lemma": "yatsav"
-      },
-      {
-        "surface": "like",
-        "lemma": "kemo"
       },
       {
         "surface": "the folds of a garment",
@@ -438,10 +398,6 @@
       {
         "surface": "Have you journeyed",
         "lemma": "bo"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "the vents",
@@ -552,16 +508,8 @@
     ],
     "20": [
       {
-        "surface": "so",
-        "lemma": "ki"
-      },
-      {
         "surface": "you can lead it back",
         "lemma": "laqach"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "its border",
@@ -584,14 +532,6 @@
       {
         "surface": "Surely you know",
         "lemma": "yada"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "you were already",
-        "lemma": "az"
       },
       {
         "surface": "born",
@@ -637,10 +577,6 @@
       }
     ],
     "23": [
-      {
-        "surface": "which",
-        "lemma": "asher"
-      },
       {
         "surface": "I hold in reserve",
         "lemma": "chasakh"
@@ -692,10 +628,6 @@
         "lemma": "puts"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "the earth",
         "lemma": "erets"
       }
@@ -734,10 +666,6 @@
       {
         "surface": "to bring rain",
         "lemma": "matar"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "a barren",
@@ -886,10 +814,6 @@
         "lemma": "kimah"
       },
       {
-        "surface": "or",
-        "lemma": "o"
-      },
-      {
         "surface": "loosen",
         "lemma": "patach"
       },
@@ -922,10 +846,6 @@
       {
         "surface": "the Bear",
         "lemma": "ayish"
-      },
-      {
-        "surface": "and",
-        "lemma": "al"
       },
       {
         "surface": "her cubs",
@@ -996,10 +916,6 @@
       {
         "surface": "Do they report",
         "lemma": "amar"
-      },
-      {
-        "surface": "Here we are",
-        "lemma": "hen"
       }
     ],
     "36": [
@@ -1018,10 +934,6 @@
       {
         "surface": "in the heart",
         "lemma": "tuchah"
-      },
-      {
-        "surface": "or",
-        "lemma": "o"
       },
       {
         "surface": "given",
@@ -1120,10 +1032,6 @@
     ],
     "40": [
       {
-        "surface": "when",
-        "lemma": "ki"
-      },
-      {
         "surface": "they crouch",
         "lemma": "shachach"
       },
@@ -1134,10 +1042,6 @@
       {
         "surface": "and lie",
         "lemma": "yashav"
-      },
-      {
-        "surface": "in",
-        "lemma": "lemo"
       },
       {
         "surface": "wait",
@@ -1166,10 +1070,6 @@
         "lemma": "orev"
       },
       {
-        "surface": "when",
-        "lemma": "ki"
-      },
-      {
         "surface": "its young",
         "lemma": "yeled"
       },
@@ -1179,10 +1079,6 @@
       },
       {
         "surface": "to",
-        "lemma": "el"
-      },
-      {
-        "surface": "God",
         "lemma": "el"
       },
       {
@@ -1202,6 +1098,6 @@
   "themeLemmas": [
     "mi",
     "yada",
-    "ki"
+    "sum"
   ]
 }

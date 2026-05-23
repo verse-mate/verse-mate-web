@@ -70,10 +70,6 @@
     ],
     "3": [
       {
-        "surface": "with",
-        "lemma": "al"
-      },
-      {
         "surface": "the ten-stringed",
         "lemma": "asvor"
       },
@@ -91,10 +87,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "You, O LORD",
         "lemma": "yehovah"
@@ -190,10 +182,6 @@
         "lemma": "parach"
       },
       {
-        "surface": "like",
-        "lemma": "kemo"
-      },
-      {
         "surface": "grass",
         "lemma": "esev"
       },
@@ -210,10 +198,6 @@
         "lemma": "tsuts"
       },
       {
-        "surface": "they will be",
-        "lemma": "ad"
-      },
-      {
         "surface": "forever",
         "lemma": "ad"
       },
@@ -223,10 +207,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "But You",
-        "lemma": "attah"
-      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -238,28 +218,12 @@
     ],
     "9": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "surely",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "Your enemies",
         "lemma": "oyev"
       },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "ki"
-      },
-      {
-        "surface": "surely",
-        "lemma": "hinneh"
       },
       {
         "surface": "Your enemies",
@@ -336,10 +300,6 @@
       {
         "surface": "of my wicked",
         "lemma": "raa"
-      },
-      {
-        "surface": "foes",
-        "lemma": "al"
       }
     ],
     "12": [
@@ -450,6 +410,6 @@
   "themeLemmas": [
     "parach",
     "lo",
-    "ki"
+    "raan"
   ]
 }

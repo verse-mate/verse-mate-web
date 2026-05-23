@@ -64,10 +64,6 @@
     ],
     "2": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "his eyes",
         "lemma": "ayin"
       },
@@ -120,10 +116,6 @@
     ],
     "4": [
       {
-        "surface": "Even on",
-        "lemma": "al"
-      },
-      {
         "surface": "his bed",
         "lemma": "mishkav"
       },
@@ -138,10 +130,6 @@
       {
         "surface": "he sets himself",
         "lemma": "yatsav"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "a path",
@@ -184,10 +172,6 @@
       {
         "surface": "Your faithfulness",
         "lemma": "emunah"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "the clouds",
@@ -298,14 +282,6 @@
     ],
     "9": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "with You",
-        "lemma": "im"
-      },
-      {
         "surface": "is the fountain",
         "lemma": "maqor"
       },
@@ -414,8 +390,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "lo",
-    "chesed"
+    "chesed",
+    "tsedaqah"
   ]
 }

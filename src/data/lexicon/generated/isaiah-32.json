@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "a king",
         "lemma": "melekh"
       },
@@ -200,10 +196,6 @@
     ],
     "6": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "a fool",
         "lemma": "naval"
       },
@@ -244,10 +236,6 @@
         "lemma": "toah"
       },
       {
-        "surface": "about",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -284,10 +272,6 @@
       {
         "surface": "are destructive",
         "lemma": "ra"
-      },
-      {
-        "surface": "he",
-        "lemma": "hu"
       },
       {
         "surface": "hatches",
@@ -336,16 +320,8 @@
         "lemma": "nadiv"
       },
       {
-        "surface": "he",
-        "lemma": "hu"
-      },
-      {
         "surface": "stands up",
         "lemma": "qamay"
-      },
-      {
-        "surface": "for",
-        "lemma": "al"
       },
       {
         "surface": "worthy causes",
@@ -404,10 +380,6 @@
         "lemma": "batach"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the grape harvest",
         "lemma": "batsir"
       },
@@ -458,10 +430,6 @@
         "lemma": "chagar"
       },
       {
-        "surface": "sackcloth around",
-        "lemma": "al"
-      },
-      {
         "surface": "your waists",
         "lemma": "chalats"
       }
@@ -474,10 +442,6 @@
       {
         "surface": "your breasts",
         "lemma": "shad"
-      },
-      {
-        "surface": "for",
-        "lemma": "al"
       },
       {
         "surface": "the pleasant",
@@ -498,10 +462,6 @@
     ],
     "13": [
       {
-        "surface": "and for",
-        "lemma": "al"
-      },
-      {
         "surface": "the land",
         "lemma": "adamah"
       },
@@ -520,14 +480,6 @@
       {
         "surface": "and briers",
         "lemma": "shamir"
-      },
-      {
-        "surface": "even",
-        "lemma": "ki"
-      },
-      {
-        "surface": "for",
-        "lemma": "al"
       },
       {
         "surface": "every",
@@ -551,10 +503,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the palace",
         "lemma": "armon"
@@ -592,10 +540,6 @@
         "lemma": "mearah"
       },
       {
-        "surface": "forever",
-        "lemma": "ad"
-      },
-      {
         "surface": "the delight",
         "lemma": "masvos"
       },
@@ -614,20 +558,12 @@
     ],
     "15": [
       {
-        "surface": "until",
-        "lemma": "ad"
-      },
-      {
         "surface": "the Spirit",
         "lemma": "ruach"
       },
       {
         "surface": "is poured out",
         "lemma": "arah"
-      },
-      {
-        "surface": "upon us",
-        "lemma": "al"
       },
       {
         "surface": "from on high",
@@ -716,10 +652,6 @@
       {
         "surface": "confidence",
         "lemma": "betach"
-      },
-      {
-        "surface": "forever",
-        "lemma": "ad"
       }
     ],
     "18": [
@@ -788,10 +720,6 @@
         "lemma": "zara"
       },
       {
-        "surface": "beside",
-        "lemma": "al"
-      },
-      {
         "surface": "abundant",
         "lemma": "kol"
       },
@@ -814,8 +742,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "nadiv",
-    "ki"
+    "hayah",
+    "tsedaqah"
   ]
 }

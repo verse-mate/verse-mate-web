@@ -14,10 +14,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "He has heard",
         "lemma": "shama"
       },
@@ -31,10 +27,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "Because",
-        "lemma": "ki"
-      },
       {
         "surface": "He has inclined",
         "lemma": "natah"
@@ -170,27 +162,15 @@
         "lemma": "nephesh"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "has been good",
         "lemma": "gamal"
-      },
-      {
-        "surface": "to you",
-        "lemma": "al"
       }
     ],
     "8": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "You have delivered",
         "lemma": "chalats"
@@ -198,10 +178,6 @@
       {
         "surface": "my soul",
         "lemma": "nephesh"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
       },
       {
         "surface": "death",
@@ -252,16 +228,8 @@
         "lemma": "aman"
       },
       {
-        "surface": "therefore",
-        "lemma": "ki"
-      },
-      {
         "surface": "I said",
         "lemma": "davar"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "am greatly",
@@ -276,10 +244,6 @@
       {
         "surface": "In my alarm",
         "lemma": "chaphaz"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "said",
@@ -318,10 +282,6 @@
       {
         "surface": "His goodness",
         "lemma": "tagmul"
-      },
-      {
-        "surface": "to me",
-        "lemma": "al"
       }
     ],
     "13": [
@@ -400,24 +360,12 @@
     ],
     "16": [
       {
-        "surface": "Truly",
-        "lemma": "anna"
-      },
-      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
       {
-        "surface": "I am",
-        "lemma": "ani"
-      },
-      {
         "surface": "Your servant",
         "lemma": "eved"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "am Your servant",
@@ -520,8 +468,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "qara",
-    "kol"
+    "kol",
+    "shem"
   ]
 }

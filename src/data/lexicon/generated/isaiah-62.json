@@ -10,10 +10,6 @@
         "lemma": "tsiyyon"
       },
       {
-        "surface": "sake",
-        "lemma": "maan"
-      },
-      {
         "surface": "I will not",
         "lemma": "lo"
       },
@@ -26,20 +22,12 @@
         "lemma": "yerushalaim"
       },
       {
-        "surface": "sake",
-        "lemma": "maan"
-      },
-      {
         "surface": "I will not",
         "lemma": "lo"
       },
       {
         "surface": "keep still",
         "lemma": "shaqat"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "her righteousness",
@@ -102,10 +90,6 @@
       {
         "surface": "name",
         "lemma": "shem"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "the mouth",
@@ -188,10 +172,6 @@
         "lemma": "shemamah"
       },
       {
-        "surface": "but",
-        "lemma": "ki"
-      },
-      {
         "surface": "will be called",
         "lemma": "qara"
       },
@@ -212,10 +192,6 @@
         "lemma": "baal"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -233,10 +209,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "as a young man",
         "lemma": "bachur"
@@ -266,10 +238,6 @@
         "lemma": "masvos"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "his bride",
         "lemma": "kallah"
       },
@@ -280,17 +248,9 @@
       {
         "surface": "will rejoice",
         "lemma": "sus"
-      },
-      {
-        "surface": "over you",
-        "lemma": "al"
       }
     ],
     "6": [
-      {
-        "surface": "On",
-        "lemma": "al"
-      },
       {
         "surface": "your walls",
         "lemma": "chomah"
@@ -352,10 +312,6 @@
       {
         "surface": "any rest",
         "lemma": "demi"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "He establishes",
@@ -440,19 +396,11 @@
         "lemma": "tirosh"
       },
       {
-        "surface": "for which",
-        "lemma": "asher"
-      },
-      {
         "surface": "you have toiled",
         "lemma": "yaga"
       }
     ],
     "9": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "those who harvest grain",
         "lemma": "asaph"
@@ -540,19 +488,11 @@
         "lemma": "nes"
       },
       {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "the nations",
         "lemma": "am"
       }
     ],
     "11": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -560,10 +500,6 @@
       {
         "surface": "has proclaimed",
         "lemma": "shama"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the ends",
@@ -586,10 +522,6 @@
         "lemma": "tsiyyon"
       },
       {
-        "surface": "See",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "your Savior",
         "lemma": "yesah"
       },
@@ -598,16 +530,8 @@
         "lemma": "bo"
       },
       {
-        "surface": "Look",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "His reward",
         "lemma": "sakhar"
-      },
-      {
-        "surface": "is with Him",
-        "lemma": "et"
       },
       {
         "surface": "and His recompense",
@@ -662,8 +586,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "qara",
-    "lo"
+    "lo",
+    "yerushalaim"
   ]
 }

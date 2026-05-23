@@ -68,10 +68,6 @@
         "lemma": "yad"
       },
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "drove out",
         "lemma": "yarash"
       },
@@ -97,10 +93,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "it was not",
         "lemma": "lo"
@@ -130,10 +122,6 @@
         "lemma": "yasah"
       },
       {
-        "surface": "It was",
-        "lemma": "ki"
-      },
-      {
         "surface": "by Your right hand",
         "lemma": "yamin"
       },
@@ -150,19 +138,11 @@
         "lemma": "paneh"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "You favored them",
         "lemma": "ratsah"
       }
     ],
     "4": [
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
       {
         "surface": "are my King",
         "lemma": "melekh"
@@ -208,10 +188,6 @@
     ],
     "6": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "I do not",
         "lemma": "lo"
       },
@@ -233,10 +209,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "You save us",
         "lemma": "yasah"
@@ -286,10 +258,6 @@
     ],
     "9": [
       {
-        "surface": "But",
-        "lemma": "aph"
-      },
-      {
         "surface": "You have rejected",
         "lemma": "zanach"
       },
@@ -314,10 +282,6 @@
       {
         "surface": "You have made us retreat",
         "lemma": "shuv"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
       },
       {
         "surface": "the foe",
@@ -494,10 +458,6 @@
         "lemma": "kol"
       },
       {
-        "surface": "this",
-        "lemma": "zot"
-      },
-      {
         "surface": "has come upon us",
         "lemma": "bo"
       },
@@ -540,19 +500,11 @@
         "lemma": "natah"
       },
       {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
         "surface": "Your path",
         "lemma": "orach"
       }
     ],
     "19": [
-      {
-        "surface": "But",
-        "lemma": "ki"
-      },
       {
         "surface": "You have crushed us",
         "lemma": "dakhah"
@@ -618,18 +570,6 @@
         "lemma": "elohim"
       },
       {
-        "surface": "have discovered",
-        "lemma": "zot"
-      },
-      {
-        "surface": "since",
-        "lemma": "ki"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "knows",
         "lemma": "yada"
       },
@@ -643,14 +583,6 @@
       }
     ],
     "22": [
-      {
-        "surface": "Yet",
-        "lemma": "ki"
-      },
-      {
-        "surface": "for Your sake",
-        "lemma": "al"
-      },
       {
         "surface": "we face death",
         "lemma": "harag"
@@ -730,10 +662,6 @@
     ],
     "25": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "our soul",
         "lemma": "nephesh"
       },
@@ -772,10 +700,6 @@
         "lemma": "padah"
       },
       {
-        "surface": "on account of",
-        "lemma": "maan"
-      },
-      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       }
@@ -783,7 +707,7 @@
   },
   "themeLemmas": [
     "lo",
-    "ki",
-    "paneh"
+    "paneh",
+    "kol"
   ]
 }

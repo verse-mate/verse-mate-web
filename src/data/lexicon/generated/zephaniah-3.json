@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to the city",
         "lemma": "ir"
       },
@@ -70,10 +66,6 @@
       {
         "surface": "drawn near",
         "lemma": "qarav"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "her God",
@@ -298,10 +290,6 @@
         "lemma": "yare"
       },
       {
-        "surface": "Me",
-        "lemma": "et"
-      },
-      {
         "surface": "and accept",
         "lemma": "laqach"
       },
@@ -326,16 +314,8 @@
         "lemma": "kol"
       },
       {
-        "surface": "for which",
-        "lemma": "asher"
-      },
-      {
         "surface": "I punished",
         "lemma": "paqad"
-      },
-      {
-        "surface": "her",
-        "lemma": "al"
       },
       {
         "surface": "But",
@@ -388,10 +368,6 @@
         "lemma": "ad"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "My decision",
         "lemma": "mishpat"
       },
@@ -416,10 +392,6 @@
         "lemma": "shaphakh"
       },
       {
-        "surface": "upon them",
-        "lemma": "al"
-      },
-      {
         "surface": "My indignation",
         "lemma": "zaam"
       },
@@ -430,10 +402,6 @@
       {
         "surface": "My burning anger",
         "lemma": "charon"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "all",
@@ -458,14 +426,6 @@
     ],
     "9": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "then",
-        "lemma": "az"
-      },
-      {
         "surface": "I will restore",
         "lemma": "haphakh"
       },
@@ -476,10 +436,6 @@
       {
         "surface": "lips",
         "lemma": "saphah"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the peoples",
@@ -550,10 +506,6 @@
     ],
     "11": [
       {
-        "surface": "On that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -574,20 +526,8 @@
         "lemma": "alilah"
       },
       {
-        "surface": "by which",
-        "lemma": "asher"
-      },
-      {
         "surface": "you have transgressed",
         "lemma": "pasah"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "then",
-        "lemma": "az"
       },
       {
         "surface": "I will remove",
@@ -714,14 +654,6 @@
         "lemma": "peh"
       },
       {
-        "surface": "But",
-        "lemma": "ki"
-      },
-      {
-        "surface": "they",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "will feed",
         "lemma": "beteqedharoim"
       },
@@ -840,10 +772,6 @@
     ],
     "16": [
       {
-        "surface": "On that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -906,10 +834,6 @@
         "lemma": "sus"
       },
       {
-        "surface": "over you",
-        "lemma": "al"
-      },
-      {
         "surface": "with gladness",
         "lemma": "simchah"
       },
@@ -926,10 +850,6 @@
         "lemma": "gil"
       },
       {
-        "surface": "over you",
-        "lemma": "al"
-      },
-      {
         "surface": "with singing",
         "lemma": "rinnah"
       }
@@ -938,10 +858,6 @@
       {
         "surface": "I will gather",
         "lemma": "asaph"
-      },
-      {
-        "surface": "those among you",
-        "lemma": "min"
       },
       {
         "surface": "who grieve",
@@ -965,14 +881,6 @@
       }
     ],
     "19": [
-      {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
-        "surface": "at that",
-        "lemma": "hu"
-      },
       {
         "surface": "time",
         "lemma": "et"
@@ -1032,20 +940,12 @@
     ],
     "20": [
       {
-        "surface": "At that",
-        "lemma": "hu"
-      },
-      {
         "surface": "time",
         "lemma": "et"
       },
       {
         "surface": "I will bring",
         "lemma": "bo"
-      },
-      {
-        "surface": "you in",
-        "lemma": "et"
       },
       {
         "surface": "yes, at that time",
@@ -1056,20 +956,8 @@
         "lemma": "qavats"
       },
       {
-        "surface": "you",
-        "lemma": "et"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "I will give",
         "lemma": "natan"
-      },
-      {
-        "surface": "you",
-        "lemma": "et"
       },
       {
         "surface": "fame",
@@ -1116,6 +1004,6 @@
   "themeLemmas": [
     "lo",
     "kol",
-    "et"
+    "qerev"
   ]
 }

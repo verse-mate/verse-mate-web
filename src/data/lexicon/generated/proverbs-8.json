@@ -36,10 +36,6 @@
         "lemma": "rosh"
       },
       {
-        "surface": "overlooking",
-        "lemma": "al"
-      },
-      {
         "surface": "the road",
         "lemma": "derekh"
       },
@@ -80,10 +76,6 @@
     ],
     "4": [
       {
-        "surface": "To you",
-        "lemma": "el"
-      },
-      {
         "surface": "O men",
         "lemma": "ish"
       },
@@ -94,10 +86,6 @@
       {
         "surface": "and my cry",
         "lemma": "qol"
-      },
-      {
-        "surface": "is to",
-        "lemma": "el"
       },
       {
         "surface": "the sons",
@@ -136,10 +124,6 @@
         "lemma": "shama"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "I speak",
         "lemma": "davar"
       },
@@ -161,10 +145,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "my mouth",
         "lemma": "chekh"
@@ -278,10 +258,6 @@
     ],
     "11": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "wisdom",
         "lemma": "chokhmah"
       },
@@ -307,10 +283,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
       {
         "surface": "wisdom",
         "lemma": "chokhmah"
@@ -392,10 +364,6 @@
         "lemma": "tushiyyah"
       },
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "have insight",
         "lemma": "binah"
       },
@@ -454,10 +422,6 @@
     ],
     "17": [
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "love",
         "lemma": "ahav"
       },
@@ -475,10 +439,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "With me",
-        "lemma": "et"
-      },
       {
         "surface": "are riches",
         "lemma": "osher"
@@ -602,10 +562,6 @@
       {
         "surface": "His works",
         "lemma": "miphal"
-      },
-      {
-        "surface": "of old",
-        "lemma": "az"
       }
     ],
     "23": [
@@ -688,10 +644,6 @@
     ],
     "26": [
       {
-        "surface": "before",
-        "lemma": "ad"
-      },
-      {
         "surface": "He made",
         "lemma": "asah"
       },
@@ -718,10 +670,6 @@
     ],
     "27": [
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "was there",
         "lemma": "sham"
       },
@@ -740,10 +688,6 @@
       {
         "surface": "a circle",
         "lemma": "chug"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the face",
@@ -878,10 +822,6 @@
         "lemma": "shashua"
       },
       {
-        "surface": "together",
-        "lemma": "et"
-      },
-      {
         "surface": "in the sons",
         "lemma": "ben"
       },
@@ -960,10 +900,6 @@
         "lemma": "yom"
       },
       {
-        "surface": "at",
-        "lemma": "al"
-      },
-      {
         "surface": "my doors",
         "lemma": "dal"
       },
@@ -981,10 +917,6 @@
       }
     ],
     "35": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "whoever finds me",
         "lemma": "matsa"
@@ -1044,6 +976,6 @@
   "themeLemmas": [
     "kol",
     "matsa",
-    "al"
+    "shama"
   ]
 }

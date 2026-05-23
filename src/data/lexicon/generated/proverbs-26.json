@@ -120,14 +120,6 @@
         "lemma": "ivvelet"
       },
       {
-        "surface": "or",
-        "lemma": "pen"
-      },
-      {
-        "surface": "you yourself",
-        "lemma": "attah"
-      },
-      {
         "surface": "will be like him",
         "lemma": "shavah"
       }
@@ -144,10 +136,6 @@
       {
         "surface": "according to his folly",
         "lemma": "ivvelet"
-      },
-      {
-        "surface": "lest",
-        "lemma": "pen"
       },
       {
         "surface": "he become",
@@ -322,10 +310,6 @@
         "lemma": "shuv"
       },
       {
-        "surface": "to",
-        "lemma": "al"
-      },
-      {
         "surface": "its vomit",
         "lemma": "qe"
       },
@@ -366,10 +350,6 @@
       {
         "surface": "for a fool",
         "lemma": "kesil"
-      },
-      {
-        "surface": "than for him",
-        "lemma": "min"
       }
     ],
     "13": [
@@ -412,20 +392,12 @@
         "lemma": "savav"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "its hinges",
         "lemma": "tsir"
       },
       {
         "surface": "so the slacker",
         "lemma": "atsel"
-      },
-      {
-        "surface": "turns on",
-        "lemma": "al"
       },
       {
         "surface": "his bed",
@@ -456,10 +428,6 @@
       {
         "surface": "to bring it back",
         "lemma": "shuv"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "his mouth",
@@ -514,10 +482,6 @@
         "lemma": "avar"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "a quarrel",
         "lemma": "riv"
       },
@@ -568,10 +532,6 @@
       {
         "surface": "and says",
         "lemma": "amar"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "was only",
@@ -664,10 +624,6 @@
         "lemma": "laham"
       },
       {
-        "surface": "that",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "go down",
         "lemma": "yarad"
       },
@@ -734,10 +690,6 @@
     ],
     "25": [
       {
-        "surface": "When",
-        "lemma": "ki"
-      },
-      {
         "surface": "he speaks",
         "lemma": "qol"
       },
@@ -752,10 +704,6 @@
       {
         "surface": "believe",
         "lemma": "aman"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "seven",
@@ -820,10 +768,6 @@
       {
         "surface": "will have it roll back",
         "lemma": "shuv"
-      },
-      {
-        "surface": "on him",
-        "lemma": "el"
       }
     ],
     "28": [
@@ -863,7 +807,7 @@
   },
   "themeLemmas": [
     "kesil",
-    "al",
-    "shuv"
+    "shuv",
+    "peh"
   ]
 }

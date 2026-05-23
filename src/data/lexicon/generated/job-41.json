@@ -58,10 +58,6 @@
         "lemma": "ravah"
       },
       {
-        "surface": "you",
-        "lemma": "el"
-      },
-      {
         "surface": "for mercy",
         "lemma": "tachanun"
       },
@@ -72,10 +68,6 @@
       {
         "surface": "speak",
         "lemma": "davar"
-      },
-      {
-        "surface": "to you",
-        "lemma": "el"
       },
       {
         "surface": "softly",
@@ -90,10 +82,6 @@
       {
         "surface": "a covenant",
         "lemma": "berit"
-      },
-      {
-        "surface": "with you",
-        "lemma": "im"
       },
       {
         "surface": "to take him",
@@ -134,10 +122,6 @@
       {
         "surface": "barter",
         "lemma": "karah"
-      },
-      {
-        "surface": "for him",
-        "lemma": "al"
       },
       {
         "surface": "or divide him",
@@ -188,10 +172,6 @@
         "lemma": "kaph"
       },
       {
-        "surface": "on him",
-        "lemma": "al"
-      },
-      {
         "surface": "you will remember",
         "lemma": "zakhar"
       },
@@ -210,20 +190,12 @@
     ],
     "9": [
       {
-        "surface": "Surely",
-        "lemma": "hen"
-      },
-      {
         "surface": "hope of overcoming him",
         "lemma": "tochelet"
       },
       {
         "surface": "is false",
         "lemma": "kazav"
-      },
-      {
-        "surface": "Is not",
-        "lemma": "gam"
       },
       {
         "surface": "the sight of him",
@@ -242,10 +214,6 @@
       {
         "surface": "is so fierce",
         "lemma": "akhzar"
-      },
-      {
-        "surface": "as to",
-        "lemma": "ki"
       },
       {
         "surface": "rouse Leviathan",
@@ -288,10 +256,6 @@
       {
         "surface": "heaven",
         "lemma": "shamayim"
-      },
-      {
-        "surface": "is",
-        "lemma": "hu"
       }
     ],
     "12": [
@@ -616,10 +580,6 @@
         "lemma": "yatsaq"
       },
       {
-        "surface": "as",
-        "lemma": "kemo"
-      },
-      {
         "surface": "a rock",
         "lemma": "even"
       },
@@ -850,10 +810,6 @@
         "lemma": "ayin"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "earth",
         "lemma": "aphar"
       },
@@ -888,16 +844,8 @@
         "lemma": "gavoah"
       },
       {
-        "surface": "he",
-        "lemma": "hu"
-      },
-      {
         "surface": "is king",
         "lemma": "melekh"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "all",
@@ -912,6 +860,6 @@
   "themeLemmas": [
     "mi",
     "lo",
-    "al"
+    "yatsaq"
   ]
 }

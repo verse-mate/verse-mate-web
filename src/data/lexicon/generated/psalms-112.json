@@ -156,10 +156,6 @@
     ],
     "6": [
       {
-        "surface": "Surely",
-        "lemma": "ki"
-      },
-      {
         "surface": "he will never",
         "lemma": "olam"
       },
@@ -234,10 +230,6 @@
       {
         "surface": "fear",
         "lemma": "yare"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "he looks in triumph",
@@ -327,7 +319,7 @@
   },
   "themeLemmas": [
     "yare",
-    "ad",
-    "yashar"
+    "yashar",
+    "tsedaqah"
   ]
 }

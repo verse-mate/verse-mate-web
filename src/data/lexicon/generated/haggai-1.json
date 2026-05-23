@@ -62,10 +62,6 @@
         "lemma": "navi"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "Zerubbabel",
         "lemma": "zerubbavel"
       },
@@ -84,10 +80,6 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
-      },
-      {
-        "surface": "and to",
-        "lemma": "el"
       },
       {
         "surface": "Joshua",
@@ -130,10 +122,6 @@
       {
         "surface": "says",
         "lemma": "amar"
-      },
-      {
-        "surface": "These",
-        "lemma": "zeh"
       },
       {
         "surface": "people",
@@ -204,10 +192,6 @@
         "lemma": "et"
       },
       {
-        "surface": "yourselves",
-        "lemma": "attah"
-      },
-      {
         "surface": "to live",
         "lemma": "yashav"
       },
@@ -218,10 +202,6 @@
       {
         "surface": "houses",
         "lemma": "bet"
-      },
-      {
-        "surface": "while this",
-        "lemma": "zeh"
       },
       {
         "surface": "house",
@@ -320,10 +300,6 @@
         "lemma": "sakhar"
       },
       {
-        "surface": "to put into",
-        "lemma": "el"
-      },
-      {
         "surface": "a bag",
         "lemma": "tseror"
       },
@@ -410,10 +386,6 @@
         "lemma": "ravah"
       },
       {
-        "surface": "but behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "it amounted to little",
         "lemma": "meat"
       },
@@ -430,10 +402,6 @@
         "lemma": "naphach"
       },
       {
-        "surface": "Why",
-        "lemma": "yaan"
-      },
-      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -444,10 +412,6 @@
       {
         "surface": "of Hosts",
         "lemma": "tsava"
-      },
-      {
-        "surface": "Because",
-        "lemma": "yaan"
       },
       {
         "surface": "My house",
@@ -462,10 +426,6 @@
         "lemma": "ish"
       },
       {
-        "surface": "of you",
-        "lemma": "attah"
-      },
-      {
         "surface": "is busy",
         "lemma": "ruts"
       },
@@ -475,14 +435,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
-      {
-        "surface": "on account of you",
-        "lemma": "al"
-      },
       {
         "surface": "the heavens",
         "lemma": "shamayim"
@@ -518,24 +470,12 @@
         "lemma": "chorev"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the fields",
         "lemma": "erets"
       },
       {
-        "surface": "and on",
-        "lemma": "al"
-      },
-      {
         "surface": "the mountains",
         "lemma": "har"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the grain",
@@ -546,16 +486,8 @@
         "lemma": "tirosh"
       },
       {
-        "surface": "and",
-        "lemma": "al"
-      },
-      {
         "surface": "oil",
         "lemma": "yitshar"
-      },
-      {
-        "surface": "and on whatever",
-        "lemma": "asher"
       },
       {
         "surface": "the ground",
@@ -566,20 +498,12 @@
         "lemma": "yatsa"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "man",
         "lemma": "adam"
       },
       {
         "surface": "and beast",
         "lemma": "behemah"
-      },
-      {
-        "surface": "and on",
-        "lemma": "al"
       },
       {
         "surface": "all",
@@ -668,10 +592,6 @@
         "lemma": "chaggay"
       },
       {
-        "surface": "because",
-        "lemma": "asher"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -726,14 +646,6 @@
         "lemma": "am"
       },
       {
-        "surface": "I am",
-        "lemma": "ani"
-      },
-      {
-        "surface": "with you",
-        "lemma": "et"
-      },
-      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -776,10 +688,6 @@
         "lemma": "yehudah"
       },
       {
-        "surface": "and",
-        "lemma": "et"
-      },
-      {
         "surface": "the spirit",
         "lemma": "ruach"
       },
@@ -802,10 +710,6 @@
       {
         "surface": "priest",
         "lemma": "kohen"
-      },
-      {
-        "surface": "as well as",
-        "lemma": "et"
       },
       {
         "surface": "the spirit",
@@ -890,6 +794,6 @@
   "themeLemmas": [
     "bet",
     "amar",
-    "al"
+    "tsava"
   ]
 }

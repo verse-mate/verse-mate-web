@@ -94,10 +94,6 @@
         "lemma": "natsar"
       },
       {
-        "surface": "at",
-        "lemma": "al"
-      },
-      {
         "surface": "the door",
         "lemma": "dal"
       },
@@ -138,10 +134,6 @@
       {
         "surface": "of wickedness",
         "lemma": "resah"
-      },
-      {
-        "surface": "with",
-        "lemma": "et"
       },
       {
         "surface": "men",
@@ -202,10 +194,6 @@
         "lemma": "nu"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "my prayer is ever against",
         "lemma": "tephillah"
       },
@@ -240,19 +228,11 @@
         "lemma": "emer"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "they are pleasant",
         "lemma": "naem"
       }
     ],
     "7": [
-      {
-        "surface": "As when",
-        "lemma": "kemo"
-      },
       {
         "surface": "one plows",
         "lemma": "palach"
@@ -284,16 +264,8 @@
     ],
     "8": [
       {
-        "surface": "But",
-        "lemma": "ki"
-      },
-      {
         "surface": "my eyes",
         "lemma": "ayin"
-      },
-      {
-        "surface": "are fixed on You",
-        "lemma": "el"
       },
       {
         "surface": "O GOD",
@@ -360,14 +332,6 @@
         "lemma": "makhmar"
       },
       {
-        "surface": "while",
-        "lemma": "ad"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "pass by in safety",
         "lemma": "avar"
       }
@@ -375,7 +339,7 @@
   },
   "themeLemmas": [
     "al",
-    "ki",
-    "tephillah"
+    "tephillah",
+    "ra"
   ]
 }

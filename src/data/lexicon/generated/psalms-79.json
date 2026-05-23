@@ -154,10 +154,6 @@
     ],
     "5": [
       {
-        "surface": "How long",
-        "lemma": "ad"
-      },
-      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -178,10 +174,6 @@
         "lemma": "baar"
       },
       {
-        "surface": "like",
-        "lemma": "kemo"
-      },
-      {
         "surface": "fire",
         "lemma": "esh"
       }
@@ -196,16 +188,8 @@
         "lemma": "chemah"
       },
       {
-        "surface": "on",
-        "lemma": "el"
-      },
-      {
         "surface": "the nations",
         "lemma": "goy"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "do not",
@@ -216,16 +200,8 @@
         "lemma": "yada"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the kingdoms",
         "lemma": "mamlakhah"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "refuse",
@@ -241,10 +217,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
       {
         "surface": "they have devoured",
         "lemma": "akhal"
@@ -288,10 +260,6 @@
         "lemma": "maher"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "we are brought",
         "lemma": "dalal"
       },
@@ -314,10 +282,6 @@
         "lemma": "yesah"
       },
       {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "the glory",
         "lemma": "kavod"
       },
@@ -334,16 +298,8 @@
         "lemma": "kipher"
       },
       {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "our sins",
         "lemma": "chattaah"
-      },
-      {
-        "surface": "for the sake",
-        "lemma": "maan"
       },
       {
         "surface": "of Your name",
@@ -436,10 +392,6 @@
         "lemma": "shuv"
       },
       {
-        "surface": "into",
-        "lemma": "el"
-      },
-      {
         "surface": "the laps",
         "lemma": "cheq"
       },
@@ -465,10 +417,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "Then we",
-        "lemma": "anachnu"
-      },
       {
         "surface": "Your people",
         "lemma": "am"
@@ -509,7 +457,7 @@
   },
   "themeLemmas": [
     "shem",
-    "al",
-    "yerushalaim"
+    "yerushalaim",
+    "yada"
   ]
 }

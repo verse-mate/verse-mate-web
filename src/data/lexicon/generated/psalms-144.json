@@ -232,10 +232,6 @@
     ],
     "8": [
       {
-        "surface": "whose",
-        "lemma": "asher"
-      },
-      {
         "surface": "mouths",
         "lemma": "peh"
       },
@@ -338,10 +334,6 @@
         "lemma": "ben"
       },
       {
-        "surface": "whose",
-        "lemma": "asher"
-      },
-      {
         "surface": "mouths",
         "lemma": "peh"
       },
@@ -363,10 +355,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "Then",
-        "lemma": "asher"
-      },
       {
         "surface": "our sons",
         "lemma": "ben"
@@ -513,7 +501,7 @@
   },
   "themeLemmas": [
     "patsah",
-    "asher",
-    "zan"
+    "zan",
+    "yamin"
   ]
 }

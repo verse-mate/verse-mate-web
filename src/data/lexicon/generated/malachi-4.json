@@ -6,14 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the day",
         "lemma": "yom"
       },
@@ -150,10 +142,6 @@
         "lemma": "rasah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "they will be",
         "lemma": "hayah"
       },
@@ -176,10 +164,6 @@
       {
         "surface": "on the day",
         "lemma": "yom"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "am preparing",
@@ -228,14 +212,6 @@
         "lemma": "tsavah"
       },
       {
-        "surface": "him",
-        "lemma": "et"
-      },
-      {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -249,14 +225,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
       {
         "surface": "will send",
         "lemma": "shalach"
@@ -308,10 +276,6 @@
         "lemma": "av"
       },
       {
-        "surface": "to",
-        "lemma": "al"
-      },
-      {
         "surface": "their children",
         "lemma": "ben"
       },
@@ -324,16 +288,8 @@
         "lemma": "ben"
       },
       {
-        "surface": "to",
-        "lemma": "al"
-      },
-      {
         "surface": "their fathers",
         "lemma": "av"
-      },
-      {
-        "surface": "Otherwise",
-        "lemma": "pen"
       },
       {
         "surface": "I will come",
@@ -356,6 +312,6 @@
   "themeLemmas": [
     "bo",
     "kol",
-    "al"
+    "yare"
   ]
 }

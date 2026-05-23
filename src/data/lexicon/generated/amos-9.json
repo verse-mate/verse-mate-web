@@ -18,10 +18,6 @@
         "lemma": "natsav"
       },
       {
-        "surface": "beside",
-        "lemma": "al"
-      },
-      {
         "surface": "the altar",
         "lemma": "mizbeach"
       },
@@ -256,10 +252,6 @@
         "lemma": "ayin"
       },
       {
-        "surface": "upon them",
-        "lemma": "al"
-      },
-      {
         "surface": "for harm",
         "lemma": "ra"
       },
@@ -356,10 +348,6 @@
         "lemma": "aguddah"
       },
       {
-        "surface": "upon",
-        "lemma": "al"
-      },
-      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -378,10 +366,6 @@
       {
         "surface": "and pours them",
         "lemma": "shaphakh"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "the face",
@@ -468,10 +452,6 @@
     ],
     "8": [
       {
-        "surface": "Surely",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the eyes",
         "lemma": "ayin"
       },
@@ -496,24 +476,12 @@
         "lemma": "shamad"
       },
       {
-        "surface": "it",
-        "lemma": "et"
-      },
-      {
-        "surface": "from",
-        "lemma": "al"
-      },
-      {
         "surface": "the face",
         "lemma": "paneh"
       },
       {
         "surface": "of the earth",
         "lemma": "adamah"
-      },
-      {
-        "surface": "Yet",
-        "lemma": "ki"
       },
       {
         "surface": "I will not",
@@ -542,18 +510,6 @@
     ],
     "9": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "surely",
-        "lemma": "hinneh"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "will give the command",
         "lemma": "tsavah"
       },
@@ -576,10 +532,6 @@
       {
         "surface": "the nations",
         "lemma": "goy"
-      },
-      {
-        "surface": "as",
-        "lemma": "asher"
       },
       {
         "surface": "grain is sifted",
@@ -654,10 +606,6 @@
     ],
     "11": [
       {
-        "surface": "In that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -708,10 +656,6 @@
     ],
     "12": [
       {
-        "surface": "that",
-        "lemma": "maan"
-      },
-      {
         "surface": "they may possess",
         "lemma": "yarash"
       },
@@ -732,10 +676,6 @@
         "lemma": "goy"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "bear",
         "lemma": "qara"
       },
@@ -754,17 +694,9 @@
       {
         "surface": "who will do",
         "lemma": "asah"
-      },
-      {
-        "surface": "this",
-        "lemma": "zot"
       }
     ],
     "13": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the days",
         "lemma": "yom"
@@ -906,10 +838,6 @@
         "lemma": "nata"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "their own land",
         "lemma": "adamah"
       },
@@ -926,16 +854,8 @@
         "lemma": "natash"
       },
       {
-        "surface": "from",
-        "lemma": "al"
-      },
-      {
         "surface": "the land",
         "lemma": "adamah"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "I have given",
@@ -958,6 +878,6 @@
   "themeLemmas": [
     "lo",
     "kol",
-    "al"
+    "sham"
   ]
 }

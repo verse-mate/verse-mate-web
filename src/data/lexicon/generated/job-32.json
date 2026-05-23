@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "So these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "three",
         "lemma": "shalosh"
       },
@@ -28,14 +24,6 @@
       {
         "surface": "Job",
         "lemma": "iyyov"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
-        "surface": "he",
-        "lemma": "hu"
       },
       {
         "surface": "was righteous",
@@ -92,10 +80,6 @@
         "lemma": "iyyov"
       },
       {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "justifying",
         "lemma": "tsadaq"
       },
@@ -124,10 +108,6 @@
       {
         "surface": "friends",
         "lemma": "rea"
-      },
-      {
-        "surface": "because",
-        "lemma": "al"
       },
       {
         "surface": "they had failed",
@@ -164,20 +144,8 @@
         "lemma": "iyyov"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
-        "surface": "the others",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "were older",
         "lemma": "zaqen"
-      },
-      {
-        "surface": "than he",
-        "lemma": "min"
       }
     ],
     "5": [
@@ -188,10 +156,6 @@
       {
         "surface": "saw",
         "lemma": "raah"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "the three",
@@ -240,10 +204,6 @@
         "lemma": "un"
       },
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am young",
         "lemma": "tsair"
       },
@@ -252,16 +212,8 @@
         "lemma": "yom"
       },
       {
-        "surface": "while you",
-        "lemma": "attah"
-      },
-      {
         "surface": "are old",
         "lemma": "yashish"
-      },
-      {
-        "surface": "that is why",
-        "lemma": "al"
       },
       {
         "surface": "I was timid",
@@ -314,10 +266,6 @@
       {
         "surface": "But",
         "lemma": "akhen"
-      },
-      {
-        "surface": "there is",
-        "lemma": "hu"
       },
       {
         "surface": "a spirit",
@@ -380,14 +328,6 @@
         "lemma": "shama"
       },
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
-        "surface": "too",
-        "lemma": "aph"
-      },
-      {
         "surface": "will declare",
         "lemma": "chavah"
       },
@@ -397,10 +337,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "Indeed",
-        "lemma": "hen"
-      },
       {
         "surface": "I waited",
         "lemma": "yachal"
@@ -414,16 +350,8 @@
         "lemma": "azan"
       },
       {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
         "surface": "your reasoning",
         "lemma": "tavunah"
-      },
-      {
-        "surface": "as",
-        "lemma": "ad"
       },
       {
         "surface": "you searched",
@@ -452,10 +380,6 @@
         "lemma": "yakhach"
       },
       {
-        "surface": "not one of",
-        "lemma": "min"
-      },
-      {
         "surface": "you rebutted",
         "lemma": "un"
       },
@@ -465,10 +389,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "So do not",
-        "lemma": "pen"
-      },
       {
         "surface": "claim",
         "lemma": "amar"
@@ -510,10 +430,6 @@
       {
         "surface": "his words",
         "lemma": "millah"
-      },
-      {
-        "surface": "against me",
-        "lemma": "el"
       },
       {
         "surface": "and I will not",
@@ -560,16 +476,8 @@
         "lemma": "yachal"
       },
       {
-        "surface": "now that",
-        "lemma": "ki"
-      },
-      {
         "surface": "they are silent",
         "lemma": "lo"
-      },
-      {
-        "surface": "now that",
-        "lemma": "ki"
       },
       {
         "surface": "they stand",
@@ -590,24 +498,8 @@
     ],
     "17": [
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
-        "surface": "too",
-        "lemma": "aph"
-      },
-      {
         "surface": "will answer",
         "lemma": "un"
-      },
-      {
-        "surface": "yes",
-        "lemma": "aph"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "will declare",
@@ -619,10 +511,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "I am full of",
         "lemma": "male"
@@ -645,10 +533,6 @@
       }
     ],
     "19": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "my belly",
         "lemma": "beten"
@@ -728,10 +612,6 @@
     ],
     "22": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "I do not",
         "lemma": "lo"
       },
@@ -760,6 +640,6 @@
   "themeLemmas": [
     "lo",
     "un",
-    "ki"
+    "iyyov"
   ]
 }

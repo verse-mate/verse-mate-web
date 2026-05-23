@@ -56,16 +56,8 @@
         "lemma": "yachad"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "and against",
-        "lemma": "al"
       },
       {
         "surface": "His Anointed One",
@@ -114,16 +106,8 @@
     ],
     "5": [
       {
-        "surface": "Then",
-        "lemma": "az"
-      },
-      {
         "surface": "He rebukes",
         "lemma": "davar"
-      },
-      {
-        "surface": "them",
-        "lemma": "el"
       },
       {
         "surface": "in His anger",
@@ -140,20 +124,12 @@
     ],
     "6": [
       {
-        "surface": "I have",
-        "lemma": "ani"
-      },
-      {
         "surface": "installed",
         "lemma": "nasakh"
       },
       {
         "surface": "My King",
         "lemma": "melekh"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "Zion",
@@ -182,16 +158,8 @@
         "lemma": "amar"
       },
       {
-        "surface": "to Me",
-        "lemma": "el"
-      },
-      {
         "surface": "by the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "are My Son",
@@ -202,10 +170,6 @@
         "lemma": "yom"
       },
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "have become Your Father",
         "lemma": "yalad"
       }
@@ -214,10 +178,6 @@
       {
         "surface": "Ask",
         "lemma": "shaal"
-      },
-      {
-        "surface": "Me",
-        "lemma": "min"
       },
       {
         "surface": "and I {will} make",
@@ -324,10 +284,6 @@
         "lemma": "bar"
       },
       {
-        "surface": "lest",
-        "lemma": "pen"
-      },
-      {
         "surface": "He be angry",
         "lemma": "anaph"
       },
@@ -338,10 +294,6 @@
       {
         "surface": "in your rebellion",
         "lemma": "derekh"
-      },
-      {
-        "surface": "when",
-        "lemma": "ki"
       },
       {
         "surface": "His wrath",
@@ -370,8 +322,7 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "avad",
-    "attah"
+    "aph"
   ]
 }

@@ -42,10 +42,6 @@
         "lemma": "ish"
       },
       {
-        "surface": "in",
-        "lemma": "el"
-      },
-      {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
       }
@@ -116,10 +112,6 @@
         "lemma": "olah"
       },
       {
-        "surface": "on it",
-        "lemma": "al"
-      },
-      {
         "surface": "as it is written",
         "lemma": "katav"
       },
@@ -150,10 +142,6 @@
         "lemma": "mizbeach"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "its foundation",
         "lemma": "mekhonah"
       },
@@ -164,10 +152,6 @@
       {
         "surface": "burnt offerings",
         "lemma": "olah"
-      },
-      {
-        "surface": "on it",
-        "lemma": "al"
       },
       {
         "surface": "to the LORD",
@@ -184,10 +168,6 @@
       {
         "surface": "burnt offerings",
         "lemma": "olah"
-      },
-      {
-        "surface": "even though",
-        "lemma": "ki"
       },
       {
         "surface": "they feared",
@@ -390,16 +370,8 @@
         "lemma": "ets"
       },
       {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
         "surface": "Lebanon",
         "lemma": "levanon"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "Joppa",
@@ -446,10 +418,6 @@
       {
         "surface": "after they had arrived",
         "lemma": "bo"
-      },
-      {
-        "surface": "at",
-        "lemma": "el"
       },
       {
         "surface": "the house",
@@ -692,10 +660,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "as",
-        "lemma": "al"
-      },
-      {
         "surface": "David",
         "lemma": "david"
       },
@@ -730,24 +694,12 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "He is good",
         "lemma": "tov"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "His loving devotion",
         "lemma": "chesed"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "Israel",
@@ -780,10 +732,6 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "because {the foundation",
-        "lemma": "al"
       },
       {
         "surface": "of the house",
@@ -824,10 +772,6 @@
         "lemma": "rosh"
       },
       {
-        "surface": "who",
-        "lemma": "asher"
-      },
-      {
         "surface": "had seen",
         "lemma": "raah"
       },
@@ -854,10 +798,6 @@
       {
         "surface": "the foundation",
         "lemma": "yasad"
-      },
-      {
-        "surface": "of this",
-        "lemma": "zeh"
       },
       {
         "surface": "temple",
@@ -910,10 +850,6 @@
         "lemma": "bekhi"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "the people",
         "lemma": "am"
       },
@@ -930,10 +866,6 @@
         "lemma": "shama"
       },
       {
-        "surface": "from",
-        "lemma": "ad"
-      },
-      {
         "surface": "afar",
         "lemma": "rachoq"
       }
@@ -942,6 +874,6 @@
   "themeLemmas": [
     "olah",
     "bet",
-    "al"
+    "qol"
   ]
 }

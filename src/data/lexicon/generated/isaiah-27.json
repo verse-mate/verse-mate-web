@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "In that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -36,10 +32,6 @@
       {
         "surface": "and bring judgment",
         "lemma": "paqad"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "Leviathan",
@@ -80,10 +72,6 @@
     ],
     "2": [
       {
-        "surface": "In that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -101,10 +89,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -130,16 +114,8 @@
         "lemma": "yom"
       },
       {
-        "surface": "so no one",
-        "lemma": "pen"
-      },
-      {
         "surface": "can disturb",
         "lemma": "paqad"
-      },
-      {
-        "surface": "it",
-        "lemma": "al"
       }
     ],
     "4": [
@@ -181,10 +157,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "Or",
-        "lemma": "o"
-      },
       {
         "surface": "let them lay claim",
         "lemma": "chazaq"
@@ -338,10 +310,6 @@
         "lemma": "chattaah"
       },
       {
-        "surface": "will be this",
-        "lemma": "zeh"
-      },
-      {
         "surface": "When he makes",
         "lemma": "sum"
       },
@@ -383,10 +351,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the fortified",
         "lemma": "batsar"
@@ -470,14 +434,6 @@
         "lemma": "or"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "this is",
-        "lemma": "hu"
-      },
-      {
         "surface": "a people",
         "lemma": "am"
       },
@@ -488,10 +444,6 @@
       {
         "surface": "understanding",
         "lemma": "binah"
-      },
-      {
-        "surface": "Therefore",
-        "lemma": "al"
       },
       {
         "surface": "their Maker",
@@ -520,10 +472,6 @@
     ],
     "12": [
       {
-        "surface": "In that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -544,20 +492,12 @@
         "lemma": "nahar"
       },
       {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
         "surface": "the Wadi",
         "lemma": "nachal"
       },
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
-      },
-      {
-        "surface": "and you",
-        "lemma": "attah"
       },
       {
         "surface": "O Israelites",
@@ -580,10 +520,6 @@
       {
         "surface": "And",
         "lemma": "hayah"
-      },
-      {
-        "surface": "in that",
-        "lemma": "hu"
       },
       {
         "surface": "day",
@@ -652,8 +588,8 @@
     ]
   },
   "themeLemmas": [
-    "hu",
     "lo",
-    "bo"
+    "bo",
+    "asah"
   ]
 }

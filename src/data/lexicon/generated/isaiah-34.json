@@ -60,10 +60,6 @@
         "lemma": "qetseph"
       },
       {
-        "surface": "with",
-        "lemma": "al"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -186,10 +182,6 @@
     ],
     "5": [
       {
-        "surface": "When",
-        "lemma": "ki"
-      },
-      {
         "surface": "My sword",
         "lemma": "cherev"
       },
@@ -202,24 +194,12 @@
         "lemma": "shamayim"
       },
       {
-        "surface": "then",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "it will come down",
         "lemma": "yarad"
       },
       {
-        "surface": "upon",
-        "lemma": "al"
-      },
-      {
         "surface": "Edom",
         "lemma": "edom"
-      },
-      {
-        "surface": "upon",
-        "lemma": "al"
       },
       {
         "surface": "the people",
@@ -284,10 +264,6 @@
         "lemma": "ayil"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -326,16 +302,8 @@
         "lemma": "yarad"
       },
       {
-        "surface": "with them",
-        "lemma": "im"
-      },
-      {
         "surface": "the young bulls",
         "lemma": "par"
-      },
-      {
-        "surface": "with",
-        "lemma": "im"
       },
       {
         "surface": "the strong ones",
@@ -367,10 +335,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -522,10 +486,6 @@
         "lemma": "natah"
       },
       {
-        "surface": "over Edom",
-        "lemma": "al"
-      },
-      {
         "surface": "a measuring line",
         "lemma": "qav"
       },
@@ -646,10 +606,6 @@
       {
         "surface": "will call",
         "lemma": "qara"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "another",
@@ -776,24 +732,12 @@
         "lemma": "reut"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "has ordered",
         "lemma": "tsavah"
       },
       {
         "surface": "it by His mouth",
         "lemma": "peh"
-      },
-      {
-        "surface": "and He",
-        "lemma": "hu"
       },
       {
         "surface": "will gather them",
@@ -805,10 +749,6 @@
       }
     ],
     "17": [
-      {
-        "surface": "He",
-        "lemma": "hu"
-      },
       {
         "surface": "has allotted",
         "lemma": "naphal"
@@ -834,10 +774,6 @@
         "lemma": "yarash"
       },
       {
-        "surface": "it forever",
-        "lemma": "ad"
-      },
-      {
         "surface": "they will dwell",
         "lemma": "shakhan"
       },
@@ -852,8 +788,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "kol",
-    "ki"
+    "dor",
+    "dam"
   ]
 }

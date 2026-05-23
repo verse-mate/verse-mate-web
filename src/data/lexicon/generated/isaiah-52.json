@@ -50,10 +50,6 @@
         "lemma": "ir"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the uncircumcised",
         "lemma": "arel"
       },
@@ -122,10 +118,6 @@
     ],
     "3": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "this is what",
         "lemma": "koh"
       },
@@ -159,10 +151,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "this is what",
         "lemma": "koh"
@@ -234,10 +222,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "My people",
         "lemma": "am"
       },
@@ -304,32 +288,12 @@
         "lemma": "ken"
       },
       {
-        "surface": "they will know",
-        "lemma": "hu"
-      },
-      {
         "surface": "on that day",
         "lemma": "yom"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
-        "surface": "am He",
-        "lemma": "hu"
-      },
-      {
         "surface": "who speaks",
         "lemma": "davar"
-      },
-      {
-        "surface": "Here I am",
-        "lemma": "hen"
       }
     ],
     "7": [
@@ -340,10 +304,6 @@
       {
         "surface": "beautiful",
         "lemma": "naah"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the mountains",
@@ -424,10 +384,6 @@
         "lemma": "run"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "every eye",
         "lemma": "ayin"
       },
@@ -468,10 +424,6 @@
       {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -604,10 +556,6 @@
     ],
     "12": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "you will not",
         "lemma": "lo"
       },
@@ -626,10 +574,6 @@
       {
         "surface": "flee in haste",
         "lemma": "menusah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -658,10 +602,6 @@
     ],
     "13": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "My Servant",
         "lemma": "eved"
       },
@@ -688,20 +628,12 @@
     ],
     "14": [
       {
-        "surface": "Just as",
-        "lemma": "asher"
-      },
-      {
         "surface": "many",
         "lemma": "rav"
       },
       {
         "surface": "were appalled",
         "lemma": "shamem"
-      },
-      {
-        "surface": "at Him",
-        "lemma": "al"
       },
       {
         "surface": "His appearance",
@@ -754,20 +686,8 @@
         "lemma": "peh"
       },
       {
-        "surface": "because of Him",
-        "lemma": "al"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "they will see",
         "lemma": "raah"
-      },
-      {
-        "surface": "what",
-        "lemma": "asher"
       },
       {
         "surface": "they have not",
@@ -782,10 +702,6 @@
         "lemma": "bin"
       },
       {
-        "surface": "what",
-        "lemma": "asher"
-      },
-      {
         "surface": "they have not",
         "lemma": "lo"
       },
@@ -796,8 +712,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "lo",
-    "yerushalaim"
+    "yerushalaim",
+    "tsiyyon"
   ]
 }

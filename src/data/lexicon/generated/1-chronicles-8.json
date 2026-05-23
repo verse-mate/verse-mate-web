@@ -108,20 +108,12 @@
     ],
     "6": [
       {
-        "surface": "These were",
-        "lemma": "elleh"
-      },
-      {
         "surface": "the descendants",
         "lemma": "ben"
       },
       {
         "surface": "of Ehud",
         "lemma": "echud"
-      },
-      {
-        "surface": "who",
-        "lemma": "hemmah"
       },
       {
         "surface": "were the heads",
@@ -144,10 +136,6 @@
         "lemma": "galah"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "Manahath",
         "lemma": "manachat"
       }
@@ -164,10 +152,6 @@
       {
         "surface": "and Gera",
         "lemma": "gera"
-      },
-      {
-        "surface": "who",
-        "lemma": "hu"
       },
       {
         "surface": "carried them into exile",
@@ -204,10 +188,6 @@
         "lemma": "moav"
       },
       {
-        "surface": "after",
-        "lemma": "min"
-      },
-      {
         "surface": "he had divorced",
         "lemma": "shalach"
       },
@@ -225,10 +205,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "His sons by",
-        "lemma": "min"
-      },
       {
         "surface": "his wife",
         "lemma": "ishshah"
@@ -266,10 +242,6 @@
       {
         "surface": "and Mirmah",
         "lemma": "mirmah"
-      },
-      {
-        "surface": "These",
-        "lemma": "elleh"
       },
       {
         "surface": "were his sons",
@@ -324,10 +296,6 @@
         "lemma": "shemer"
       },
       {
-        "surface": "who",
-        "lemma": "hu"
-      },
-      {
         "surface": "built",
         "lemma": "banah"
       },
@@ -354,10 +322,6 @@
         "lemma": "shema"
       },
       {
-        "surface": "who",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "were the heads",
         "lemma": "rosh"
       },
@@ -372,10 +336,6 @@
       {
         "surface": "Aijalon",
         "lemma": "ayyalon"
-      },
-      {
-        "surface": "and who",
-        "lemma": "hemmah"
       },
       {
         "surface": "drove out",
@@ -628,10 +588,6 @@
     ],
     "28": [
       {
-        "surface": "All these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "were heads",
         "lemma": "rosh"
       },
@@ -742,14 +698,6 @@
       {
         "surface": "Shimeah",
         "lemma": "shimah"
-      },
-      {
-        "surface": "They",
-        "lemma": "hemmah"
-      },
-      {
-        "surface": "too",
-        "lemma": "aph"
       },
       {
         "surface": "lived",
@@ -980,10 +928,6 @@
         "lemma": "ben"
       },
       {
-        "surface": "and these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "were their names",
         "lemma": "shem"
       },
@@ -1014,10 +958,6 @@
       {
         "surface": "All",
         "lemma": "kol"
-      },
-      {
-        "surface": "these",
-        "lemma": "elleh"
       },
       {
         "surface": "were the sons",
@@ -1116,10 +1056,6 @@
         "lemma": "kol"
       },
       {
-        "surface": "these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "were the descendants",
         "lemma": "ben"
       },
@@ -1132,6 +1068,6 @@
   "themeLemmas": [
     "yalad",
     "yashav",
-    "elleh"
+    "merivbaal"
   ]
 }

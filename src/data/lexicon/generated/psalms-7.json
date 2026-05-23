@@ -14,20 +14,12 @@
         "lemma": "david"
       },
       {
-        "surface": "which",
-        "lemma": "asher"
-      },
-      {
         "surface": "he sang",
         "lemma": "shir"
       },
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "concerning",
-        "lemma": "al"
       },
       {
         "surface": "the words",
@@ -76,10 +68,6 @@
     ],
     "2": [
       {
-        "surface": "or",
-        "lemma": "pen"
-      },
-      {
         "surface": "they will shred",
         "lemma": "taraph"
       },
@@ -120,10 +108,6 @@
       {
         "surface": "I have done",
         "lemma": "asah"
-      },
-      {
-        "surface": "this",
-        "lemma": "zot"
       },
       {
         "surface": "if",
@@ -248,10 +232,6 @@
         "lemma": "ur"
       },
       {
-        "surface": "my God",
-        "lemma": "el"
-      },
-      {
         "surface": "and ordain",
         "lemma": "tsavah"
       },
@@ -276,10 +256,6 @@
       {
         "surface": "take Your seat",
         "lemma": "shuv"
-      },
-      {
-        "surface": "over them",
-        "lemma": "al"
       },
       {
         "surface": "on high",
@@ -338,10 +314,6 @@
         "lemma": "tsaddiq"
       },
       {
-        "surface": "O",
-        "lemma": "na"
-      },
-      {
         "surface": "righteous",
         "lemma": "tsaddiq"
       },
@@ -366,10 +338,6 @@
       {
         "surface": "My shield",
         "lemma": "magen"
-      },
-      {
-        "surface": "is with",
-        "lemma": "al"
       },
       {
         "surface": "God",
@@ -480,10 +448,6 @@
     ],
     "14": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the wicked man travails",
         "lemma": "chaval"
       },
@@ -556,10 +520,6 @@
         "lemma": "yarad"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "his own head",
         "lemma": "qodqod"
       }
@@ -597,7 +557,7 @@
   },
   "themeLemmas": [
     "im",
-    "al",
-    "tsaddiq"
+    "tsaddiq",
+    "shuv"
   ]
 }

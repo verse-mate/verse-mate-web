@@ -84,16 +84,8 @@
         "lemma": "yalal"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "Nebo",
         "lemma": "nevo"
-      },
-      {
-        "surface": "as well as over",
-        "lemma": "al"
       },
       {
         "surface": "Medeba",
@@ -136,10 +128,6 @@
       {
         "surface": "sackcloth",
         "lemma": "saq"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the rooftops",
@@ -188,16 +176,8 @@
         "lemma": "shama"
       },
       {
-        "surface": "as far as",
-        "lemma": "ad"
-      },
-      {
         "surface": "Jahaz",
         "lemma": "yahats"
-      },
-      {
-        "surface": "Therefore",
-        "lemma": "al"
       },
       {
         "surface": "the soldiers",
@@ -236,10 +216,6 @@
       {
         "surface": "her fugitives",
         "lemma": "bariach"
-      },
-      {
-        "surface": "flee as",
-        "lemma": "ad"
       },
       {
         "surface": "far as Zoar",
@@ -330,10 +306,6 @@
     ],
     "7": [
       {
-        "surface": "So",
-        "lemma": "al"
-      },
-      {
         "surface": "they carry",
         "lemma": "nasa"
       },
@@ -346,10 +318,6 @@
         "lemma": "pequddah"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "the Brook",
         "lemma": "nachal"
       },
@@ -359,10 +327,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "their outcry",
         "lemma": "zeaqah"
@@ -418,20 +382,12 @@
         "lemma": "dam"
       },
       {
-        "surface": "but",
-        "lemma": "ki"
-      },
-      {
         "surface": "I will bring",
         "lemma": "shit"
       },
       {
         "surface": "more",
         "lemma": "yasaph"
-      },
-      {
-        "surface": "upon",
-        "lemma": "al"
       },
       {
         "surface": "Dimon",
@@ -461,7 +417,7 @@
   },
   "themeLemmas": [
     "moav",
-    "al",
-    "kol"
+    "kol",
+    "bekhi"
   ]
 }

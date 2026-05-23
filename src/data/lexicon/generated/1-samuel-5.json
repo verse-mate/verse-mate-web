@@ -56,10 +56,6 @@
         "lemma": "yatsag"
       },
       {
-        "surface": "it",
-        "lemma": "et"
-      },
-      {
         "surface": "beside",
         "lemma": "etsel"
       },
@@ -80,10 +76,6 @@
       {
         "surface": "the next morning",
         "lemma": "mochorat"
-      },
-      {
-        "surface": "there",
-        "lemma": "hinneh"
       },
       {
         "surface": "was Dagon",
@@ -122,10 +114,6 @@
         "lemma": "shuv"
       },
       {
-        "surface": "him",
-        "lemma": "et"
-      },
-      {
         "surface": "to his place",
         "lemma": "maqom"
       }
@@ -142,10 +130,6 @@
       {
         "surface": "morning",
         "lemma": "boqer"
-      },
-      {
-        "surface": "there",
-        "lemma": "hinneh"
       },
       {
         "surface": "was Dagon",
@@ -188,16 +172,8 @@
         "lemma": "karat"
       },
       {
-        "surface": "and lying on",
-        "lemma": "el"
-      },
-      {
         "surface": "the threshold",
         "lemma": "miphtan"
-      },
-      {
-        "surface": "Only",
-        "lemma": "raq"
       },
       {
         "surface": "the torso",
@@ -209,18 +185,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "That is why",
-        "lemma": "al"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
-        "surface": "this",
-        "lemma": "zeh"
-      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -262,10 +226,6 @@
         "lemma": "darakh"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the threshold",
         "lemma": "miphtan"
       }
@@ -284,16 +244,8 @@
         "lemma": "kavad"
       },
       {
-        "surface": "on",
-        "lemma": "el"
-      },
-      {
         "surface": "the people of Ashdod",
         "lemma": "ashdodi"
-      },
-      {
-        "surface": "and",
-        "lemma": "et"
       },
       {
         "surface": "its vicinity",
@@ -306,10 +258,6 @@
       {
         "surface": "and afflicting",
         "lemma": "nakhah"
-      },
-      {
-        "surface": "them",
-        "lemma": "et"
       },
       {
         "surface": "with tumors",
@@ -328,10 +276,6 @@
       {
         "surface": "saw",
         "lemma": "raah"
-      },
-      {
-        "surface": "what was happening",
-        "lemma": "ki"
       },
       {
         "surface": "they said",
@@ -358,28 +302,12 @@
         "lemma": "yashav"
       },
       {
-        "surface": "here with us",
-        "lemma": "im"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "His hand",
         "lemma": "yad"
       },
       {
         "surface": "is heavy",
         "lemma": "qashah"
-      },
-      {
-        "surface": "upon us",
-        "lemma": "al"
-      },
-      {
-        "surface": "and upon",
-        "lemma": "al"
       },
       {
         "surface": "our god",
@@ -474,10 +402,6 @@
         "lemma": "savav"
       },
       {
-        "surface": "the ark to Gath",
-        "lemma": "et"
-      },
-      {
         "surface": "the LORD’s",
         "lemma": "yehovah"
       },
@@ -512,10 +436,6 @@
       {
         "surface": "both young",
         "lemma": "qatan"
-      },
-      {
-        "surface": "and",
-        "lemma": "ad"
       },
       {
         "surface": "old",
@@ -568,10 +488,6 @@
         "lemma": "savav"
       },
       {
-        "surface": "us",
-        "lemma": "el"
-      },
-      {
         "surface": "the ark",
         "lemma": "aron"
       },
@@ -586,10 +502,6 @@
       {
         "surface": "in order to kill us",
         "lemma": "mut"
-      },
-      {
-        "surface": "and",
-        "lemma": "et"
       },
       {
         "surface": "our people",
@@ -654,16 +566,8 @@
         "lemma": "mut"
       },
       {
-        "surface": "us",
-        "lemma": "et"
-      },
-      {
         "surface": "and our people",
         "lemma": "am"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "a deadly",
@@ -708,10 +612,6 @@
         "lemma": "enosh"
       },
       {
-        "surface": "who",
-        "lemma": "asher"
-      },
-      {
         "surface": "did not",
         "lemma": "lo"
       },
@@ -748,6 +648,6 @@
   "themeLemmas": [
     "aron",
     "dagon",
-    "et"
+    "yisrael"
   ]
 }

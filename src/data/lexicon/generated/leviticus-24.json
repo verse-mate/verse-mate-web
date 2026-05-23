@@ -14,10 +14,6 @@
         "lemma": "davar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -34,10 +30,6 @@
       {
         "surface": "to bring",
         "lemma": "laqach"
-      },
-      {
-        "surface": "you",
-        "lemma": "el"
       },
       {
         "surface": "pure",
@@ -102,10 +94,6 @@
         "lemma": "arakh"
       },
       {
-        "surface": "the lamps",
-        "lemma": "et"
-      },
-      {
         "surface": "continually",
         "lemma": "tamid"
       },
@@ -120,10 +108,6 @@
       {
         "surface": "from evening",
         "lemma": "erev"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "morning",
@@ -150,10 +134,6 @@
       {
         "surface": "the lamps",
         "lemma": "ner"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the pure gold",
@@ -220,10 +200,6 @@
         "lemma": "sum"
       },
       {
-        "surface": "them",
-        "lemma": "et"
-      },
-      {
         "surface": "in two",
         "lemma": "shenayim"
       },
@@ -238,10 +214,6 @@
       {
         "surface": "per row",
         "lemma": "maarekhet"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the table",
@@ -272,10 +244,6 @@
       {
         "surface": "frankincense",
         "lemma": "levonah"
-      },
-      {
-        "surface": "near",
-        "lemma": "al"
       },
       {
         "surface": "each row",
@@ -360,14 +328,6 @@
       {
         "surface": "place",
         "lemma": "maqom"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "it is",
-        "lemma": "hu"
       },
       {
         "surface": "a most",
@@ -478,14 +438,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "him",
-        "lemma": "et"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -550,10 +502,6 @@
         "lemma": "davar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -584,20 +532,12 @@
         "lemma": "shama"
       },
       {
-        "surface": "him",
-        "lemma": "et"
-      },
-      {
         "surface": "lay",
         "lemma": "samakh"
       },
       {
         "surface": "their hands",
         "lemma": "yad"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "his head",
@@ -614,10 +554,6 @@
       {
         "surface": "stone",
         "lemma": "ragam"
-      },
-      {
-        "surface": "him",
-        "lemma": "et"
       }
     ],
     "15": [
@@ -628,10 +564,6 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
-      },
-      {
-        "surface": "If",
-        "lemma": "ki"
       },
       {
         "surface": "anyone",
@@ -706,10 +638,6 @@
     ],
     "17": [
       {
-        "surface": "And if",
-        "lemma": "ki"
-      },
-      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -754,10 +682,6 @@
     ],
     "19": [
       {
-        "surface": "If",
-        "lemma": "ki"
-      },
-      {
         "surface": "anyone",
         "lemma": "ish"
       },
@@ -768,10 +692,6 @@
       {
         "surface": "his neighbor",
         "lemma": "amit"
-      },
-      {
-        "surface": "whatever",
-        "lemma": "asher"
       },
       {
         "surface": "he has done",
@@ -818,10 +738,6 @@
       {
         "surface": "tooth",
         "lemma": "shen"
-      },
-      {
-        "surface": "Just as",
-        "lemma": "asher"
       },
       {
         "surface": "he injured",
@@ -888,14 +804,6 @@
         "lemma": "ezrach"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       },
@@ -914,10 +822,6 @@
         "lemma": "davar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the Israelites",
         "lemma": "ben"
       },
@@ -928,10 +832,6 @@
       {
         "surface": "the blasphemer",
         "lemma": "qalal"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "el"
       },
       {
         "surface": "outside",
@@ -958,10 +858,6 @@
         "lemma": "asah"
       },
       {
-        "surface": "as",
-        "lemma": "asher"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -977,7 +873,7 @@
   },
   "themeLemmas": [
     "mosheh",
-    "ki",
-    "et"
+    "tachat",
+    "shem"
   ]
 }

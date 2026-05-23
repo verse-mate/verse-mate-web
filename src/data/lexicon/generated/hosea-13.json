@@ -18,10 +18,6 @@
         "lemma": "retet"
       },
       {
-        "surface": "he",
-        "lemma": "hu"
-      },
-      {
         "surface": "was exalted",
         "lemma": "nasa"
       },
@@ -86,10 +82,6 @@
       {
         "surface": "of craftsmen",
         "lemma": "charash"
-      },
-      {
-        "surface": "People",
-        "lemma": "hemmah"
       },
       {
         "surface": "say of them",
@@ -160,10 +152,6 @@
     ],
     "4": [
       {
-        "surface": "Yet I am",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -210,10 +198,6 @@
     ],
     "5": [
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "knew you",
         "lemma": "yada"
       },
@@ -252,19 +236,11 @@
         "lemma": "rum"
       },
       {
-        "surface": "and as a result",
-        "lemma": "al"
-      },
-      {
         "surface": "they forgot Me",
         "lemma": "shakhach"
       }
     ],
     "7": [
-      {
-        "surface": "So like",
-        "lemma": "kemo"
-      },
       {
         "surface": "a lion",
         "lemma": "shachal"
@@ -280,10 +256,6 @@
       {
         "surface": "I will lurk",
         "lemma": "shur"
-      },
-      {
-        "surface": "by",
-        "lemma": "al"
       },
       {
         "surface": "the path",
@@ -346,10 +318,6 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "because you are",
-        "lemma": "ki"
-      },
-      {
         "surface": "against your helper",
         "lemma": "ezer"
       }
@@ -362,10 +330,6 @@
       {
         "surface": "your king",
         "lemma": "melekh"
-      },
-      {
-        "surface": "now",
-        "lemma": "epho"
       },
       {
         "surface": "to save you",
@@ -382,10 +346,6 @@
       {
         "surface": "and the rulers",
         "lemma": "shaphat"
-      },
-      {
-        "surface": "to whom",
-        "lemma": "asher"
       },
       {
         "surface": "you said",
@@ -462,10 +422,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "but he is",
-        "lemma": "hu"
-      },
-      {
         "surface": "vvv",
         "lemma": "lo"
       },
@@ -476,10 +432,6 @@
       {
         "surface": "son",
         "lemma": "ben"
-      },
-      {
-        "surface": "When",
-        "lemma": "ki"
       },
       {
         "surface": "the time arrives",
@@ -562,14 +514,6 @@
     ],
     "15": [
       {
-        "surface": "Although",
-        "lemma": "ki"
-      },
-      {
-        "surface": "he",
-        "lemma": "hu"
-      },
-      {
         "surface": "flourishes",
         "lemma": "para"
       },
@@ -622,10 +566,6 @@
         "lemma": "charev"
       },
       {
-        "surface": "The wind",
-        "lemma": "hu"
-      },
-      {
         "surface": "will plunder",
         "lemma": "shasah"
       },
@@ -654,10 +594,6 @@
       {
         "surface": "will bear her guilt",
         "lemma": "asham"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
       },
       {
         "surface": "she has rebelled",
@@ -694,8 +630,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
-    "hu",
-    "lo"
+    "lo",
+    "kol",
+    "ehi"
   ]
 }

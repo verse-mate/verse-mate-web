@@ -68,10 +68,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "upon you",
-        "lemma": "al"
-      },
-      {
         "surface": "before",
         "lemma": "terem"
       },
@@ -90,10 +86,6 @@
       {
         "surface": "comes",
         "lemma": "bo"
-      },
-      {
-        "surface": "upon you",
-        "lemma": "al"
       }
     ],
     "3": [
@@ -116,10 +108,6 @@
       {
         "surface": "of the earth",
         "lemma": "erets"
-      },
-      {
-        "surface": "who",
-        "lemma": "asher"
       },
       {
         "surface": "carry out",
@@ -168,10 +156,6 @@
     ],
     "4": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "Gaza",
         "lemma": "azzah"
       },
@@ -214,10 +198,6 @@
     ],
     "5": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to the dwellers",
         "lemma": "yashav"
       },
@@ -244,10 +224,6 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "is against you",
-        "lemma": "al"
       },
       {
         "surface": "O Canaan",
@@ -326,10 +302,6 @@
         "lemma": "yehudah"
       },
       {
-        "surface": "there",
-        "lemma": "al"
-      },
-      {
         "surface": "they will find pasture",
         "lemma": "beteqedharoim"
       },
@@ -348,10 +320,6 @@
       {
         "surface": "of Ashkelon",
         "lemma": "ashqelon"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -396,10 +364,6 @@
         "lemma": "ben"
       },
       {
-        "surface": "who",
-        "lemma": "asher"
-      },
-      {
         "surface": "have taunted",
         "lemma": "charaph"
       },
@@ -420,10 +384,6 @@
       {
         "surface": "Therefore",
         "lemma": "ken"
-      },
-      {
-        "surface": "as surely as I",
-        "lemma": "ani"
       },
       {
         "surface": "live",
@@ -448,10 +408,6 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
-      },
-      {
-        "surface": "surely",
-        "lemma": "ki"
       },
       {
         "surface": "Moab",
@@ -490,10 +446,6 @@
         "lemma": "melach"
       },
       {
-        "surface": "vvv",
-        "lemma": "ad"
-      },
-      {
         "surface": "a perpetual",
         "lemma": "olam"
       },
@@ -528,20 +480,12 @@
     ],
     "10": [
       {
-        "surface": "This",
-        "lemma": "zot"
-      },
-      {
         "surface": "in return for",
         "lemma": "tachat"
       },
       {
         "surface": "their pride",
         "lemma": "gaon"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "taunting",
@@ -572,14 +516,6 @@
       {
         "surface": "will be terrifying",
         "lemma": "yare"
-      },
-      {
-        "surface": "to them",
-        "lemma": "al"
-      },
-      {
-        "surface": "when",
-        "lemma": "ki"
       },
       {
         "surface": "He starves",
@@ -624,16 +560,8 @@
     ],
     "12": [
       {
-        "surface": "You too",
-        "lemma": "attah"
-      },
-      {
         "surface": "O Cushites",
         "lemma": "kushi"
-      },
-      {
-        "surface": "will",
-        "lemma": "gam"
       },
       {
         "surface": "be slain",
@@ -652,10 +580,6 @@
       {
         "surface": "His hand",
         "lemma": "yad"
-      },
-      {
-        "surface": "against",
-        "lemma": "al"
       },
       {
         "surface": "the north",
@@ -712,16 +636,8 @@
         "lemma": "kol"
       },
       {
-        "surface": "Both",
-        "lemma": "gam"
-      },
-      {
         "surface": "the desert owl",
         "lemma": "qaat"
-      },
-      {
-        "surface": "and",
-        "lemma": "gam"
       },
       {
         "surface": "screech owl",
@@ -756,10 +672,6 @@
         "lemma": "saph"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "He will expose",
         "lemma": "arah"
       },
@@ -769,10 +681,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "This",
-        "lemma": "zot"
-      },
       {
         "surface": "carefree",
         "lemma": "alliz"
@@ -796,10 +704,6 @@
       {
         "surface": "to herself",
         "lemma": "levav"
-      },
-      {
-        "surface": "I am it",
-        "lemma": "ani"
       },
       {
         "surface": "and there is none",
@@ -838,10 +742,6 @@
         "lemma": "avar"
       },
       {
-        "surface": "by her",
-        "lemma": "al"
-      },
-      {
         "surface": "hisses",
         "lemma": "sharaq"
       },
@@ -856,8 +756,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
-    "ki",
-    "kol"
+    "kol",
+    "hayah",
+    "yashav"
   ]
 }

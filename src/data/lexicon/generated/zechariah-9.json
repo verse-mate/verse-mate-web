@@ -34,10 +34,6 @@
         "lemma": "menuchah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the eyes",
         "lemma": "ayin"
       },
@@ -64,10 +60,6 @@
     ],
     "2": [
       {
-        "surface": "and also",
-        "lemma": "gam"
-      },
-      {
         "surface": "against Hamath",
         "lemma": "chamat"
       },
@@ -82,10 +74,6 @@
       {
         "surface": "and Sidon",
         "lemma": "tsidon"
-      },
-      {
-        "surface": "though",
-        "lemma": "ki"
       },
       {
         "surface": "they are very",
@@ -136,10 +124,6 @@
     ],
     "4": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the Lord",
         "lemma": "adonai"
       },
@@ -158,10 +142,6 @@
       {
         "surface": "into the sea",
         "lemma": "yam"
-      },
-      {
-        "surface": "and she",
-        "lemma": "hu"
       },
       {
         "surface": "will be consumed",
@@ -196,10 +176,6 @@
       {
         "surface": "as will Ekron",
         "lemma": "eqron"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "her hope",
@@ -282,14 +258,6 @@
         "lemma": "shen"
       },
       {
-        "surface": "Then they",
-        "lemma": "hu"
-      },
-      {
-        "surface": "too",
-        "lemma": "gam"
-      },
-      {
         "surface": "will become a remnant",
         "lemma": "shaar"
       },
@@ -348,14 +316,6 @@
         "lemma": "avar"
       },
       {
-        "surface": "My people",
-        "lemma": "al"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "now",
         "lemma": "attah"
       },
@@ -398,10 +358,6 @@
         "lemma": "yerushalaim"
       },
       {
-        "surface": "See",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "your King",
         "lemma": "melekh"
       },
@@ -426,16 +382,8 @@
         "lemma": "rakhav"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "a donkey",
         "lemma": "chamor"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "a colt",
@@ -504,20 +452,12 @@
         "lemma": "yam"
       },
       {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
         "surface": "sea",
         "lemma": "yam"
       },
       {
         "surface": "and from the Euphrates",
         "lemma": "nahar"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "the ends",
@@ -529,10 +469,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "As for you",
-        "lemma": "attah"
-      },
       {
         "surface": "because of the blood",
         "lemma": "dam"
@@ -576,10 +512,6 @@
         "lemma": "tiqvah"
       },
       {
-        "surface": "even",
-        "lemma": "gam"
-      },
-      {
         "surface": "today",
         "lemma": "yom"
       },
@@ -597,10 +529,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "I will bend",
         "lemma": "darakh"
@@ -634,10 +562,6 @@
         "lemma": "tsiyyon"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "the sons",
         "lemma": "ben"
       },
@@ -666,10 +590,6 @@
       {
         "surface": "will appear",
         "lemma": "raah"
-      },
-      {
-        "surface": "over them",
-        "lemma": "al"
       },
       {
         "surface": "and His arrow",
@@ -726,10 +646,6 @@
         "lemma": "ganan"
       },
       {
-        "surface": "them",
-        "lemma": "al"
-      },
-      {
         "surface": "They will destroy",
         "lemma": "akhal"
       },
@@ -748,10 +664,6 @@
       {
         "surface": "and roar",
         "lemma": "hamah"
-      },
-      {
-        "surface": "as with",
-        "lemma": "kemo"
       },
       {
         "surface": "wine",
@@ -775,10 +687,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "On that",
-        "lemma": "hu"
-      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -804,10 +712,6 @@
         "lemma": "am"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "like jewels",
         "lemma": "even"
       },
@@ -818,10 +722,6 @@
       {
         "surface": "they will sparkle",
         "lemma": "nasas"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "His land",
@@ -868,8 +768,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
-    "ki",
-    "yam"
+    "yam",
+    "raah",
+    "meod"
   ]
 }

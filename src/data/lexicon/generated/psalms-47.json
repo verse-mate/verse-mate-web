@@ -52,10 +52,6 @@
     ],
     "2": [
       {
-        "surface": "How",
-        "lemma": "ki"
-      },
-      {
         "surface": "awesome is",
         "lemma": "yare"
       },
@@ -74,10 +70,6 @@
       {
         "surface": "King",
         "lemma": "melekh"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "all",
@@ -130,10 +122,6 @@
       {
         "surface": "of Jacob",
         "lemma": "yaaqov"
-      },
-      {
-        "surface": "whom",
-        "lemma": "asher"
       },
       {
         "surface": "He loves",
@@ -198,10 +186,6 @@
     ],
     "7": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -232,10 +216,6 @@
         "lemma": "malakh"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "the nations",
         "lemma": "goy"
       },
@@ -246,10 +226,6 @@
       {
         "surface": "is seated",
         "lemma": "yashav"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "His holy",
@@ -286,10 +262,6 @@
         "lemma": "avraham"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the shields",
         "lemma": "magen"
       },
@@ -314,6 +286,6 @@
   "themeLemmas": [
     "zamar",
     "kol",
-    "ki"
+    "tachat"
   ]
 }

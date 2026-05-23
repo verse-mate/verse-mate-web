@@ -40,10 +40,6 @@
         "lemma": "berosh"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the cedar",
         "lemma": "erez"
       },
@@ -72,10 +68,6 @@
         "lemma": "bashan"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the dense",
         "lemma": "batsor"
       },
@@ -102,10 +94,6 @@
         "lemma": "beteqedharoim"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "their glory",
         "lemma": "adderet"
       },
@@ -120,10 +108,6 @@
       {
         "surface": "of the young lions",
         "lemma": "kephir"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "the thickets",
@@ -169,10 +153,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "whose",
-        "lemma": "asher"
-      },
       {
         "surface": "buyers",
         "lemma": "qanah"
@@ -220,17 +200,9 @@
       {
         "surface": "compassion",
         "lemma": "chamal"
-      },
-      {
-        "surface": "on them",
-        "lemma": "al"
       }
     ],
     "6": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "I will no",
         "lemma": "lo"
@@ -242,10 +214,6 @@
       {
         "surface": "have compassion",
         "lemma": "chamal"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the people",
@@ -262,14 +230,6 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "but behold",
-        "lemma": "hinneh"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
       },
       {
         "surface": "will cause each",
@@ -420,10 +380,6 @@
         "lemma": "nephesh"
       },
       {
-        "surface": "also",
-        "lemma": "gam"
-      },
-      {
         "surface": "detested",
         "lemma": "bachal"
       }
@@ -508,10 +464,6 @@
         "lemma": "karat"
       },
       {
-        "surface": "with",
-        "lemma": "et"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -524,10 +476,6 @@
       {
         "surface": "It was revoked",
         "lemma": "parar"
-      },
-      {
-        "surface": "on that",
-        "lemma": "hu"
       },
       {
         "surface": "day",
@@ -550,20 +498,8 @@
         "lemma": "shamar"
       },
       {
-        "surface": "me",
-        "lemma": "et"
-      },
-      {
         "surface": "knew",
         "lemma": "yada"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "it",
-        "lemma": "hu"
       },
       {
         "surface": "was the word",
@@ -578,10 +514,6 @@
       {
         "surface": "Then I told",
         "lemma": "amar"
-      },
-      {
-        "surface": "them",
-        "lemma": "el"
       },
       {
         "surface": "If",
@@ -642,16 +574,8 @@
         "lemma": "amar"
       },
       {
-        "surface": "to me",
-        "lemma": "el"
-      },
-      {
         "surface": "Throw",
         "lemma": "shalakh"
-      },
-      {
-        "surface": "it to",
-        "lemma": "el"
       },
       {
         "surface": "the potter",
@@ -664,10 +588,6 @@
       {
         "surface": "price",
         "lemma": "yeqar"
-      },
-      {
-        "surface": "at which",
-        "lemma": "asher"
       },
       {
         "surface": "they valued me",
@@ -688,14 +608,6 @@
       {
         "surface": "and threw",
         "lemma": "shalakh"
-      },
-      {
-        "surface": "them",
-        "lemma": "et"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the potter",
@@ -758,10 +670,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "to me",
-        "lemma": "el"
-      },
-      {
         "surface": "Take up",
         "lemma": "laqach"
       },
@@ -783,18 +691,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
       {
         "surface": "will raise up",
         "lemma": "qamay"
@@ -874,10 +770,6 @@
     ],
     "17": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to the worthless",
         "lemma": "elil"
       },
@@ -934,6 +826,6 @@
   "themeLemmas": [
     "beteqedharoim",
     "lo",
-    "ki"
+    "tson"
   ]
 }

@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to those at ease",
         "lemma": "shaanan"
       },
@@ -100,14 +96,6 @@
         "lemma": "tov"
       },
       {
-        "surface": "than",
-        "lemma": "min"
-      },
-      {
-        "surface": "these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "kingdoms",
         "lemma": "mamlakhah"
       },
@@ -156,10 +144,6 @@
         "lemma": "shakhav"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "beds",
         "lemma": "mittah"
       },
@@ -170,10 +154,6 @@
       {
         "surface": "and lounge",
         "lemma": "sarach"
-      },
-      {
-        "surface": "upon",
-        "lemma": "al"
       },
       {
         "surface": "your couches",
@@ -208,10 +188,6 @@
       {
         "surface": "You improvise",
         "lemma": "parat"
-      },
-      {
-        "surface": "songs",
-        "lemma": "al"
       },
       {
         "surface": "vvv",
@@ -270,10 +246,6 @@
       {
         "surface": "grieve",
         "lemma": "chalah"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "the ruin",
@@ -350,10 +322,6 @@
       {
         "surface": "has declared",
         "lemma": "neum"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
       },
       {
         "surface": "abhor",
@@ -440,10 +408,6 @@
         "lemma": "yatsa"
       },
       {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
         "surface": "the house",
         "lemma": "bet"
       },
@@ -452,20 +416,12 @@
         "lemma": "amar"
       },
       {
-        "surface": "to one",
-        "lemma": "asher"
-      },
-      {
         "surface": "inside",
         "lemma": "yerekhah"
       },
       {
         "surface": "Is anyone else",
         "lemma": "od"
-      },
-      {
-        "surface": "with you",
-        "lemma": "im"
       },
       {
         "surface": "None",
@@ -482,10 +438,6 @@
       {
         "surface": "the relative will retort",
         "lemma": "amar"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "the name",
@@ -505,10 +457,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -566,10 +514,6 @@
       {
         "surface": "with oxen",
         "lemma": "baqar"
-      },
-      {
-        "surface": "But",
-        "lemma": "ki"
       },
       {
         "surface": "you have turned",
@@ -632,24 +576,12 @@
     ],
     "14": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "I will raise up",
         "lemma": "qamay"
       },
       {
         "surface": "a nation",
         "lemma": "goy"
-      },
-      {
-        "surface": "against you",
-        "lemma": "al"
       },
       {
         "surface": "O house",
@@ -680,16 +612,8 @@
         "lemma": "lachats"
       },
       {
-        "surface": "you",
-        "lemma": "et"
-      },
-      {
         "surface": "from Lebo-hamath",
         "lemma": "bo"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "the Brook",
@@ -703,7 +627,7 @@
   },
   "themeLemmas": [
     "bet",
-    "al",
-    "ki"
+    "amar",
+    "lo"
   ]
 }

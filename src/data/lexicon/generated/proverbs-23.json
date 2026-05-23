@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "When",
-        "lemma": "ki"
-      },
-      {
         "surface": "you sit down",
         "lemma": "yashav"
       },
@@ -18,20 +14,12 @@
         "lemma": "lacham"
       },
       {
-        "surface": "with",
-        "lemma": "et"
-      },
-      {
         "surface": "a ruler",
         "lemma": "mashal"
       },
       {
         "surface": "consider carefully",
         "lemma": "bin"
-      },
-      {
-        "surface": "what",
-        "lemma": "asher"
       },
       {
         "surface": "is set before you",
@@ -56,10 +44,6 @@
         "lemma": "im"
       },
       {
-        "surface": "you",
-        "lemma": "attah"
-      },
-      {
         "surface": "possess",
         "lemma": "baal"
       },
@@ -80,10 +64,6 @@
       {
         "surface": "his delicacies",
         "lemma": "matam"
-      },
-      {
-        "surface": "for that",
-        "lemma": "hu"
       },
       {
         "surface": "food",
@@ -124,10 +104,6 @@
       {
         "surface": "it disappears",
         "lemma": "ayin"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "it makes",
@@ -182,10 +158,6 @@
     ],
     "7": [
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "he is keeping track",
         "lemma": "shaar"
       },
@@ -216,10 +188,6 @@
       {
         "surface": "is not",
         "lemma": "bal"
-      },
-      {
-        "surface": "with you",
-        "lemma": "im"
       }
     ],
     "8": [
@@ -260,10 +228,6 @@
       {
         "surface": "to a fool",
         "lemma": "kesil"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "he will despise",
@@ -314,10 +278,6 @@
     ],
     "11": [
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "their Redeemer",
         "lemma": "gaal"
       },
@@ -326,20 +286,12 @@
         "lemma": "chazaq"
       },
       {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "will take up",
         "lemma": "riv"
       },
       {
         "surface": "their case",
         "lemma": "riv"
-      },
-      {
-        "surface": "against you",
-        "lemma": "et"
       }
     ],
     "12": [
@@ -384,10 +336,6 @@
       {
         "surface": "from a child",
         "lemma": "naar"
-      },
-      {
-        "surface": "although",
-        "lemma": "ki"
       },
       {
         "surface": "you strike him",
@@ -450,10 +398,6 @@
         "lemma": "lev"
       },
       {
-        "surface": "will indeed",
-        "lemma": "gam"
-      },
-      {
         "surface": "rejoice",
         "lemma": "samach"
       }
@@ -498,10 +442,6 @@
         "lemma": "chatta"
       },
       {
-        "surface": "but",
-        "lemma": "ki"
-      },
-      {
         "surface": "always continue",
         "lemma": "kol"
       },
@@ -515,10 +455,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "surely",
         "lemma": "im"
@@ -598,10 +534,6 @@
     ],
     "21": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the drunkard",
         "lemma": "sava"
       },
@@ -636,10 +568,6 @@
         "lemma": "av"
       },
       {
-        "surface": "who",
-        "lemma": "zeh"
-      },
-      {
         "surface": "gave you life",
         "lemma": "yalad"
       },
@@ -654,10 +582,6 @@
       {
         "surface": "your mother",
         "lemma": "em"
-      },
-      {
-        "surface": "when",
-        "lemma": "ki"
       },
       {
         "surface": "she is old",
@@ -770,10 +694,6 @@
     ],
     "27": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "a prostitute",
         "lemma": "zanah"
       },
@@ -804,10 +724,6 @@
         "lemma": "cheteph"
       },
       {
-        "surface": "she",
-        "lemma": "hu"
-      },
-      {
         "surface": "lies in wait",
         "lemma": "arav"
       },
@@ -830,16 +746,8 @@
         "lemma": "mi"
       },
       {
-        "surface": "has woe",
-        "lemma": "oy"
-      },
-      {
         "surface": "Who",
         "lemma": "mi"
-      },
-      {
-        "surface": "has sorrow",
-        "lemma": "avoy"
       },
       {
         "surface": "Who",
@@ -888,10 +796,6 @@
         "lemma": "achar"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "wine",
         "lemma": "yayin"
       },
@@ -922,16 +826,8 @@
         "lemma": "yayin"
       },
       {
-        "surface": "while",
-        "lemma": "ki"
-      },
-      {
         "surface": "it is red",
         "lemma": "adam"
-      },
-      {
-        "surface": "when",
-        "lemma": "ki"
       },
       {
         "surface": "it sparkles",
@@ -1069,7 +965,7 @@
   },
   "themeLemmas": [
     "al",
-    "ki",
-    "mi"
+    "mi",
+    "yayin"
   ]
 }

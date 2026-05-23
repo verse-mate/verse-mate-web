@@ -34,10 +34,6 @@
         "lemma": "yashav"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "a throne",
         "lemma": "kisse"
       },
@@ -122,20 +118,8 @@
     ],
     "3": [
       {
-        "surface": "And they",
-        "lemma": "zeh"
-      },
-      {
         "surface": "were calling out",
         "lemma": "qara"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
-        "surface": "one another",
-        "lemma": "zeh"
       },
       {
         "surface": "Holy",
@@ -214,24 +198,8 @@
         "lemma": "amar"
       },
       {
-        "surface": "Woe",
-        "lemma": "oy"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "I am ruined",
         "lemma": "damah"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
       },
       {
         "surface": "am a man",
@@ -266,10 +234,6 @@
         "lemma": "saphah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "my eyes",
         "lemma": "ayin"
       },
@@ -296,20 +260,12 @@
         "lemma": "echad"
       },
       {
-        "surface": "of",
-        "lemma": "min"
-      },
-      {
         "surface": "the seraphim",
         "lemma": "saraph"
       },
       {
         "surface": "flew",
         "lemma": "uph"
-      },
-      {
-        "surface": "to me",
-        "lemma": "el"
       },
       {
         "surface": "and in his hand",
@@ -328,10 +284,6 @@
         "lemma": "melqach"
       },
       {
-        "surface": "from",
-        "lemma": "al"
-      },
-      {
         "surface": "the altar",
         "lemma": "mizbeach"
       }
@@ -348,14 +300,6 @@
       {
         "surface": "and said",
         "lemma": "amar"
-      },
-      {
-        "surface": "Now that",
-        "lemma": "hinneh"
-      },
-      {
-        "surface": "this",
-        "lemma": "zeh"
       },
       {
         "surface": "has touched",
@@ -420,10 +364,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "Here am I",
-        "lemma": "hen"
-      },
-      {
         "surface": "Send me",
         "lemma": "shalach"
       }
@@ -440,10 +380,6 @@
       {
         "surface": "and tell",
         "lemma": "amar"
-      },
-      {
-        "surface": "this",
-        "lemma": "zeh"
       },
       {
         "surface": "people",
@@ -480,10 +416,6 @@
         "lemma": "lev"
       },
       {
-        "surface": "of this",
-        "lemma": "zeh"
-      },
-      {
         "surface": "people",
         "lemma": "am"
       },
@@ -506,10 +438,6 @@
       {
         "surface": "their eyes",
         "lemma": "ayin"
-      },
-      {
-        "surface": "Otherwise",
-        "lemma": "pen"
       },
       {
         "surface": "they might see",
@@ -550,20 +478,12 @@
         "lemma": "amar"
       },
       {
-        "surface": "How long",
-        "lemma": "ad"
-      },
-      {
         "surface": "O Lord",
         "lemma": "adonai"
       },
       {
         "surface": "And He replied",
         "lemma": "amar"
-      },
-      {
-        "surface": "Until",
-        "lemma": "ad"
       },
       {
         "surface": "the cities",
@@ -681,7 +601,7 @@
   },
   "themeLemmas": [
     "amar",
-    "zeh",
-    "raah"
+    "raah",
+    "yashav"
   ]
 }

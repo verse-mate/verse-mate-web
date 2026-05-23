@@ -10,10 +10,6 @@
         "lemma": "natsach"
       },
       {
-        "surface": "to be accompanied by",
-        "lemma": "el"
-      },
-      {
         "surface": "flutes",
         "lemma": "nechilah"
       },
@@ -68,14 +64,6 @@
         "lemma": "elohim"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "to You",
-        "lemma": "el"
-      },
-      {
         "surface": "I pray",
         "lemma": "palal"
       }
@@ -111,14 +99,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
       {
         "surface": "are not",
         "lemma": "lo"
@@ -218,10 +198,6 @@
     ],
     "7": [
       {
-        "surface": "But I",
-        "lemma": "ani"
-      },
-      {
         "surface": "will enter",
         "lemma": "bo"
       },
@@ -246,10 +222,6 @@
         "lemma": "shachah"
       },
       {
-        "surface": "toward",
-        "lemma": "el"
-      },
-      {
         "surface": "Your holy",
         "lemma": "qodesh"
       },
@@ -272,10 +244,6 @@
         "lemma": "tsedaqah"
       },
       {
-        "surface": "because of",
-        "lemma": "maan"
-      },
-      {
         "surface": "my enemies",
         "lemma": "sharar"
       },
@@ -293,10 +261,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "not a word",
         "lemma": "ayin"
@@ -368,10 +332,6 @@
         "lemma": "pesah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "they have rebelled",
         "lemma": "marah"
       }
@@ -398,10 +358,6 @@
         "lemma": "sukh"
       },
       {
-        "surface": "them",
-        "lemma": "al"
-      },
-      {
         "surface": "that those who love",
         "lemma": "ahav"
       },
@@ -415,14 +371,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "For surely",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -450,8 +398,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "lo",
-    "rov"
+    "rov",
+    "qol"
   ]
 }

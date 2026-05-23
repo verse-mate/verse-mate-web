@@ -50,10 +50,6 @@
         "lemma": "nava"
       },
       {
-        "surface": "these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "things",
         "lemma": "davar"
       }
@@ -80,10 +76,6 @@
         "lemma": "natan"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "the stocks",
         "lemma": "mahpekhet"
       },
@@ -98,10 +90,6 @@
       {
         "surface": "of Benjamin",
         "lemma": "binyamin"
-      },
-      {
-        "surface": "which was",
-        "lemma": "asher"
       },
       {
         "surface": "by the house",
@@ -130,10 +118,6 @@
         "lemma": "yirmeyah"
       },
       {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
         "surface": "the stocks",
         "lemma": "mahpekhet"
       },
@@ -144,10 +128,6 @@
       {
         "surface": "said",
         "lemma": "amar"
-      },
-      {
-        "surface": "to him",
-        "lemma": "el"
       },
       {
         "surface": "The LORD",
@@ -166,10 +146,6 @@
         "lemma": "pashchur"
       },
       {
-        "surface": "but",
-        "lemma": "ki"
-      },
-      {
         "surface": "vvv",
         "lemma": "magormissaviv"
       },
@@ -179,10 +155,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "this is what",
         "lemma": "koh"
@@ -274,10 +246,6 @@
         "lemma": "chosen"
       },
       {
-        "surface": "of this",
-        "lemma": "zot"
-      },
-      {
         "surface": "city",
         "lemma": "ir"
       },
@@ -292,10 +260,6 @@
       {
         "surface": "and valuables",
         "lemma": "yeqar"
-      },
-      {
-        "surface": "and",
-        "lemma": "et"
       },
       {
         "surface": "all",
@@ -339,10 +303,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "And you",
-        "lemma": "attah"
-      },
       {
         "surface": "Pashhur",
         "lemma": "pashchur"
@@ -392,20 +352,12 @@
         "lemma": "qavar"
       },
       {
-        "surface": "you",
-        "lemma": "attah"
-      },
-      {
         "surface": "and all",
         "lemma": "kol"
       },
       {
         "surface": "your friends",
         "lemma": "ahav"
-      },
-      {
-        "surface": "to whom",
-        "lemma": "asher"
       },
       {
         "surface": "you have prophesied",
@@ -464,10 +416,6 @@
     ],
     "8": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "whenever",
         "lemma": "day"
       },
@@ -490,10 +438,6 @@
       {
         "surface": "and destruction",
         "lemma": "shod"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "the word",
@@ -592,10 +536,6 @@
     ],
     "10": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "I have heard",
         "lemma": "shama"
       },
@@ -658,10 +598,6 @@
       {
         "surface": "our vengeance",
         "lemma": "neqamah"
-      },
-      {
-        "surface": "upon him",
-        "lemma": "min"
       }
     ],
     "11": [
@@ -670,20 +606,12 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "is with me",
-        "lemma": "et"
-      },
-      {
         "surface": "like a fearsome",
         "lemma": "arits"
       },
       {
         "surface": "warrior",
         "lemma": "gibbor"
-      },
-      {
-        "surface": "Therefore",
-        "lemma": "al"
       },
       {
         "surface": "my persecutors",
@@ -700,10 +628,6 @@
       {
         "surface": "prevail",
         "lemma": "yakhol"
-      },
-      {
-        "surface": "Since",
-        "lemma": "ki"
       },
       {
         "surface": "they have not",
@@ -776,14 +700,6 @@
         "lemma": "neqamah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "to You",
-        "lemma": "el"
-      },
-      {
         "surface": "I have committed",
         "lemma": "galah"
       },
@@ -808,10 +724,6 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "He rescues",
@@ -878,10 +790,6 @@
         "lemma": "ish"
       },
       {
-        "surface": "who",
-        "lemma": "asher"
-      },
-      {
         "surface": "brought",
         "lemma": "basar"
       },
@@ -908,10 +816,6 @@
     ],
     "16": [
       {
-        "surface": "May",
-        "lemma": "hu"
-      },
-      {
         "surface": "that man",
         "lemma": "ish"
       },
@@ -922,10 +826,6 @@
       {
         "surface": "like the cities",
         "lemma": "ir"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -969,10 +869,6 @@
       }
     ],
     "17": [
-      {
-        "surface": "because",
-        "lemma": "asher"
-      },
       {
         "surface": "he did not",
         "lemma": "lo"
@@ -1052,6 +948,6 @@
   "themeLemmas": [
     "kol",
     "lo",
-    "ki"
+    "pashchur"
   ]
 }

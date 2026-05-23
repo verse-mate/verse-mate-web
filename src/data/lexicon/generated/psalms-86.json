@@ -30,14 +30,6 @@
         "lemma": "un"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am poor",
         "lemma": "ani"
       },
@@ -56,20 +48,8 @@
         "lemma": "nephesh"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I am",
-        "lemma": "ani"
-      },
-      {
         "surface": "godly",
         "lemma": "chasid"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "are my God",
@@ -86,10 +66,6 @@
       {
         "surface": "who trusts",
         "lemma": "batach"
-      },
-      {
-        "surface": "in You",
-        "lemma": "el"
       }
     ],
     "3": [
@@ -102,16 +78,8 @@
         "lemma": "adonai"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "I call",
         "lemma": "qara"
-      },
-      {
-        "surface": "to You",
-        "lemma": "el"
       },
       {
         "surface": "all",
@@ -136,14 +104,6 @@
         "lemma": "eved"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "to You",
-        "lemma": "el"
-      },
-      {
         "surface": "O Lord",
         "lemma": "adonai"
       },
@@ -157,14 +117,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
       {
         "surface": "O Lord",
         "lemma": "adonai"
@@ -234,10 +186,6 @@
         "lemma": "qara"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "You answer me",
         "lemma": "un"
       }
@@ -250,10 +198,6 @@
       {
         "surface": "there is none",
         "lemma": "ayin"
-      },
-      {
-        "surface": "like You",
-        "lemma": "kemo"
       },
       {
         "surface": "among the gods",
@@ -308,14 +252,6 @@
     ],
     "10": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "are great",
         "lemma": "gadol"
       },
@@ -326,10 +262,6 @@
       {
         "surface": "wonders",
         "lemma": "pala"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "alone",
@@ -414,20 +346,12 @@
     ],
     "13": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "great is",
         "lemma": "gadol"
       },
       {
         "surface": "Your loving devotion",
         "lemma": "chesed"
-      },
-      {
-        "surface": "to me",
-        "lemma": "al"
       },
       {
         "surface": "You have delivered",
@@ -454,10 +378,6 @@
       {
         "surface": "rise",
         "lemma": "qamay"
-      },
-      {
-        "surface": "against me",
-        "lemma": "al"
       },
       {
         "surface": "O God",
@@ -493,10 +413,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "But You",
-        "lemma": "attah"
-      },
       {
         "surface": "O Lord",
         "lemma": "adonai"
@@ -540,10 +456,6 @@
         "lemma": "panah"
       },
       {
-        "surface": "to me",
-        "lemma": "el"
-      },
-      {
         "surface": "and have mercy",
         "lemma": "chanan"
       },
@@ -578,10 +490,6 @@
         "lemma": "asah"
       },
       {
-        "surface": "me",
-        "lemma": "im"
-      },
-      {
         "surface": "a sign",
         "lemma": "ot"
       },
@@ -602,14 +510,6 @@
         "lemma": "bush"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -624,8 +524,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
-    "attah",
-    "nephesh"
+    "nephesh",
+    "kol",
+    "shem"
   ]
 }

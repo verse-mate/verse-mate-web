@@ -18,14 +18,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "have walked",
         "lemma": "halakh"
       },
@@ -78,10 +70,6 @@
     ],
     "3": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       },
@@ -112,10 +100,6 @@
         "lemma": "yashav"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "deceitful",
         "lemma": "shav"
       },
@@ -130,10 +114,6 @@
       {
         "surface": "keep company",
         "lemma": "bo"
-      },
-      {
-        "surface": "with",
-        "lemma": "im"
       },
       {
         "surface": "hypocrites",
@@ -160,10 +140,6 @@
       {
         "surface": "to sit",
         "lemma": "yashav"
-      },
-      {
-        "surface": "with",
-        "lemma": "im"
       },
       {
         "surface": "the wicked",
@@ -266,20 +242,12 @@
         "lemma": "nephesh"
       },
       {
-        "surface": "away with",
-        "lemma": "im"
-      },
-      {
         "surface": "sinners",
         "lemma": "chatta"
       },
       {
         "surface": "or my life",
         "lemma": "chay"
-      },
-      {
-        "surface": "with",
-        "lemma": "im"
       },
       {
         "surface": "men",
@@ -291,10 +259,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "in whose",
-        "lemma": "asher"
-      },
       {
         "surface": "hands",
         "lemma": "yad"
@@ -317,10 +281,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "But I",
-        "lemma": "ani"
-      },
       {
         "surface": "will walk",
         "lemma": "halakh"
@@ -366,8 +326,8 @@
     ]
   },
   "themeLemmas": [
-    "im",
     "lo",
-    "halakh"
+    "halakh",
+    "yashav"
   ]
 }

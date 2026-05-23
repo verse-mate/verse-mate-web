@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "By",
-        "lemma": "al"
-      },
-      {
         "surface": "the rivers",
         "lemma": "nahar"
       },
@@ -20,10 +16,6 @@
       {
         "surface": "we sat",
         "lemma": "yashav"
-      },
-      {
-        "surface": "and",
-        "lemma": "gam"
       },
       {
         "surface": "wept",
@@ -40,10 +32,6 @@
     ],
     "2": [
       {
-        "surface": "There on",
-        "lemma": "al"
-      },
-      {
         "surface": "the willows",
         "lemma": "aravah"
       },
@@ -57,10 +45,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
       {
         "surface": "there",
         "lemma": "sham"
@@ -114,10 +98,6 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "in",
-        "lemma": "al"
       },
       {
         "surface": "a foreign",
@@ -192,10 +172,6 @@
         "lemma": "yerushalaim"
       },
       {
-        "surface": "as",
-        "lemma": "al"
-      },
-      {
         "surface": "my greatest",
         "lemma": "rosh"
       },
@@ -240,10 +216,6 @@
       {
         "surface": "tear it down",
         "lemma": "arah"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "its foundations",
@@ -298,14 +270,6 @@
         "lemma": "naphats"
       },
       {
-        "surface": "them",
-        "lemma": "et"
-      },
-      {
-        "surface": "against",
-        "lemma": "el"
-      },
-      {
         "surface": "the rocks",
         "lemma": "sela"
       }
@@ -313,7 +277,7 @@
   },
   "themeLemmas": [
     "shir",
-    "al",
-    "zakhar"
+    "zakhar",
+    "yerushalaim"
   ]
 }

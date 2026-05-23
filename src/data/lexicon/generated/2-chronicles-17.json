@@ -26,10 +26,6 @@
         "lemma": "chazaq"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "Israel",
         "lemma": "yisrael"
       }
@@ -84,10 +80,6 @@
         "lemma": "ephrayim"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "his father",
         "lemma": "av"
       },
@@ -110,16 +102,8 @@
         "lemma": "hayah"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "Jehoshaphat",
         "lemma": "yehoshaphat"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
       },
       {
         "surface": "he walked",
@@ -155,10 +139,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "but",
-        "lemma": "ki"
-      },
       {
         "surface": "he sought",
         "lemma": "darash"
@@ -344,10 +324,6 @@
     ],
     "8": [
       {
-        "surface": "accompanied by",
-        "lemma": "im"
-      },
-      {
         "surface": "certain Levites",
         "lemma": "leviyyi"
       },
@@ -392,10 +368,6 @@
         "lemma": "tovadoniyyah"
       },
       {
-        "surface": "along with",
-        "lemma": "im"
-      },
-      {
         "surface": "the priests",
         "lemma": "kohen"
       },
@@ -416,10 +388,6 @@
       {
         "surface": "throughout Judah",
         "lemma": "yehudah"
-      },
-      {
-        "surface": "taking with them",
-        "lemma": "im"
       },
       {
         "surface": "the Book",
@@ -472,10 +440,6 @@
         "lemma": "hayah"
       },
       {
-        "surface": "upon",
-        "lemma": "al"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -486,10 +450,6 @@
       {
         "surface": "of the lands",
         "lemma": "erets"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "surrounded",
@@ -508,19 +468,11 @@
         "lemma": "lacham"
       },
       {
-        "surface": "against",
-        "lemma": "im"
-      },
-      {
         "surface": "Jehoshaphat",
         "lemma": "yehoshaphat"
       }
     ],
     "11": [
-      {
-        "surface": "Some",
-        "lemma": "min"
-      },
       {
         "surface": "Philistines",
         "lemma": "pelishti"
@@ -544,10 +496,6 @@
       {
         "surface": "to Jehoshaphat",
         "lemma": "yehoshaphat"
-      },
-      {
-        "surface": "and",
-        "lemma": "gam"
       },
       {
         "surface": "the Arabs",
@@ -652,10 +600,6 @@
     ],
     "14": [
       {
-        "surface": "These",
-        "lemma": "elleh"
-      },
-      {
         "surface": "are their numbers",
         "lemma": "pequddah"
       },
@@ -688,10 +632,6 @@
         "lemma": "sar"
       },
       {
-        "surface": "and with him",
-        "lemma": "im"
-      },
-      {
         "surface": "300,000",
         "lemma": "shalosh"
       },
@@ -706,10 +646,6 @@
     ],
     "15": [
       {
-        "surface": "next to",
-        "lemma": "al"
-      },
-      {
         "surface": "him",
         "lemma": "yad"
       },
@@ -722,19 +658,11 @@
         "lemma": "sar"
       },
       {
-        "surface": "and with him",
-        "lemma": "im"
-      },
-      {
         "surface": "280,000",
         "lemma": "meah"
       }
     ],
     "16": [
-      {
-        "surface": "and next to",
-        "lemma": "al"
-      },
       {
         "surface": "him",
         "lemma": "yad"
@@ -760,10 +688,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "and with him",
-        "lemma": "im"
-      },
-      {
         "surface": "200,000",
         "lemma": "meah"
       },
@@ -777,10 +701,6 @@
       }
     ],
     "17": [
-      {
-        "surface": "From",
-        "lemma": "min"
-      },
       {
         "surface": "Benjamin",
         "lemma": "binyamin"
@@ -796,10 +716,6 @@
       {
         "surface": "of valor",
         "lemma": "chayil"
-      },
-      {
-        "surface": "and with him",
-        "lemma": "im"
       },
       {
         "surface": "200,000",
@@ -820,20 +736,12 @@
     ],
     "18": [
       {
-        "surface": "and next to",
-        "lemma": "al"
-      },
-      {
         "surface": "him",
         "lemma": "yad"
       },
       {
         "surface": "Jehozabad",
         "lemma": "yehozavad"
-      },
-      {
-        "surface": "and with him",
-        "lemma": "im"
       },
       {
         "surface": "180,000",
@@ -850,10 +758,6 @@
     ],
     "19": [
       {
-        "surface": "These were the men",
-        "lemma": "elleh"
-      },
-      {
         "surface": "who served",
         "lemma": "sharat"
       },
@@ -864,10 +768,6 @@
       {
         "surface": "besides",
         "lemma": "bad"
-      },
-      {
-        "surface": "those",
-        "lemma": "asher"
       },
       {
         "surface": "he",
@@ -897,7 +797,7 @@
   },
   "themeLemmas": [
     "yehudah",
-    "im",
-    "yehoshaphat"
+    "yehoshaphat",
+    "kol"
   ]
 }

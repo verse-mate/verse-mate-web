@@ -32,20 +32,12 @@
         "lemma": "el"
       },
       {
-        "surface": "Can even",
-        "lemma": "ki"
-      },
-      {
         "surface": "a wise man",
         "lemma": "sakhal"
       },
       {
         "surface": "benefit",
         "lemma": "sakhan"
-      },
-      {
-        "surface": "Him",
-        "lemma": "al"
       }
     ],
     "3": [
@@ -58,20 +50,12 @@
         "lemma": "shadday"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "you are righteous",
         "lemma": "tsadaq"
       },
       {
         "surface": "Does He profit",
         "lemma": "betsa"
-      },
-      {
-        "surface": "if",
-        "lemma": "ki"
       },
       {
         "surface": "your ways",
@@ -98,10 +82,6 @@
       {
         "surface": "into judgment",
         "lemma": "mishpat"
-      },
-      {
-        "surface": "against you",
-        "lemma": "im"
       }
     ],
     "5": [
@@ -127,10 +107,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "you} needlessly",
         "lemma": "chinnam"
@@ -240,10 +216,6 @@
     ],
     "10": [
       {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
-      {
         "surface": "snares",
         "lemma": "pach"
       },
@@ -318,10 +290,6 @@
       {
         "surface": "stars",
         "lemma": "kokhav"
-      },
-      {
-        "surface": "how",
-        "lemma": "ki"
       },
       {
         "surface": "lofty they are",
@@ -402,10 +370,6 @@
         "lemma": "orach"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "wicked",
         "lemma": "aven"
       },
@@ -419,10 +383,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "They",
-        "lemma": "asher"
-      },
       {
         "surface": "were snatched away",
         "lemma": "qamat"
@@ -462,10 +422,6 @@
         "lemma": "sur"
       },
       {
-        "surface": "from us",
-        "lemma": "min"
-      },
-      {
         "surface": "What",
         "lemma": "mah"
       },
@@ -479,10 +435,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "But it was He",
-        "lemma": "hu"
-      },
       {
         "surface": "who filled",
         "lemma": "male"
@@ -562,16 +514,8 @@
         "lemma": "sakhan"
       },
       {
-        "surface": "now",
-        "lemma": "na"
-      },
-      {
         "surface": "and be at peace",
         "lemma": "salem"
-      },
-      {
-        "surface": "with Him",
-        "lemma": "im"
       },
       {
         "surface": "good",
@@ -618,10 +562,6 @@
         "lemma": "shuv"
       },
       {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
         "surface": "the Almighty",
         "lemma": "shadday"
       },
@@ -650,10 +590,6 @@
       {
         "surface": "your gold",
         "lemma": "betser"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "the dust",
@@ -696,20 +632,8 @@
     ],
     "26": [
       {
-        "surface": "Surely",
-        "lemma": "ki"
-      },
-      {
-        "surface": "then",
-        "lemma": "az"
-      },
-      {
         "surface": "you will delight",
         "lemma": "anag"
-      },
-      {
-        "surface": "in",
-        "lemma": "al"
       },
       {
         "surface": "the Almighty",
@@ -724,10 +648,6 @@
         "lemma": "paneh"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "God",
         "lemma": "eloah"
       }
@@ -736,10 +656,6 @@
       {
         "surface": "You will pray",
         "lemma": "atar"
-      },
-      {
-        "surface": "to Him",
-        "lemma": "el"
       },
       {
         "surface": "and He will hear you",
@@ -772,19 +688,11 @@
         "lemma": "nagah"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "your ways",
         "lemma": "derekh"
       }
     ],
     "29": [
-      {
-        "surface": "When",
-        "lemma": "ki"
-      },
       {
         "surface": "men are brought low",
         "lemma": "shaphel"
@@ -834,8 +742,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "lo",
-    "shadday"
+    "shadday",
+    "raah"
   ]
 }

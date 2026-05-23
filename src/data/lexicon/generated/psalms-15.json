@@ -86,10 +86,6 @@
         "lemma": "ragal"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "his tongue",
         "lemma": "lashon"
       },
@@ -114,10 +110,6 @@
         "lemma": "cherpah"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "his friend",
         "lemma": "qarov"
       }
@@ -130,10 +122,6 @@
       {
         "surface": "the vile",
         "lemma": "maas"
-      },
-      {
-        "surface": "but",
-        "lemma": "et"
       },
       {
         "surface": "honors",
@@ -190,20 +178,12 @@
         "lemma": "shachad"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "the innocent",
         "lemma": "naqi"
       },
       {
         "surface": "He who does",
         "lemma": "asah"
-      },
-      {
-        "surface": "these things",
-        "lemma": "elleh"
       },
       {
         "surface": "will never",
@@ -217,7 +197,7 @@
   },
   "themeLemmas": [
     "lo",
-    "al",
-    "mi"
+    "mi",
+    "asah"
   ]
 }

@@ -10,10 +10,6 @@
         "lemma": "david"
       },
       {
-        "surface": "To You",
-        "lemma": "el"
-      },
-      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -30,16 +26,8 @@
         "lemma": "charash"
       },
       {
-        "surface": "to me",
-        "lemma": "min"
-      },
-      {
         "surface": "O my Rock",
         "lemma": "tsur"
-      },
-      {
-        "surface": "For if",
-        "lemma": "pen"
       },
       {
         "surface": "You remain silent",
@@ -48,10 +36,6 @@
       {
         "surface": "I will be",
         "lemma": "mashal"
-      },
-      {
-        "surface": "like",
-        "lemma": "im"
       },
       {
         "surface": "those descending",
@@ -80,20 +64,12 @@
         "lemma": "shava"
       },
       {
-        "surface": "to You {for help",
-        "lemma": "el"
-      },
-      {
         "surface": "when I lift up",
         "lemma": "nasa"
       },
       {
         "surface": "my hands",
         "lemma": "yad"
-      },
-      {
-        "surface": "toward",
-        "lemma": "el"
       },
       {
         "surface": "Your holy",
@@ -114,16 +90,8 @@
         "lemma": "mashakh"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "the wicked",
         "lemma": "rasah"
-      },
-      {
-        "surface": "and with",
-        "lemma": "im"
       },
       {
         "surface": "the workers",
@@ -140,10 +108,6 @@
       {
         "surface": "peace",
         "lemma": "shalom"
-      },
-      {
-        "surface": "to",
-        "lemma": "im"
       },
       {
         "surface": "their neighbors",
@@ -198,10 +162,6 @@
     ],
     "5": [
       {
-        "surface": "Since",
-        "lemma": "ki"
-      },
-      {
         "surface": "they show no",
         "lemma": "lo"
       },
@@ -216,10 +176,6 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "or",
-        "lemma": "el"
       },
       {
         "surface": "what His hands",
@@ -250,10 +206,6 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "He has heard",
@@ -358,18 +310,14 @@
         "lemma": "nasa"
       },
       {
-        "surface": "them",
-        "lemma": "ad"
-      },
-      {
         "surface": "forever",
         "lemma": "olam"
       }
     ]
   },
   "themeLemmas": [
-    "im",
     "tachanun",
-    "shama"
+    "shama",
+    "qol"
   ]
 }

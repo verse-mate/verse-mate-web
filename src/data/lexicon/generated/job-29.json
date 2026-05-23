@@ -54,10 +54,6 @@
         "lemma": "halal"
       },
       {
-        "surface": "above",
-        "lemma": "al"
-      },
-      {
         "surface": "my head",
         "lemma": "rosh"
       },
@@ -75,10 +71,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "when",
-        "lemma": "asher"
-      },
       {
         "surface": "I was",
         "lemma": "hayah"
@@ -100,10 +92,6 @@
         "lemma": "eloah"
       },
       {
-        "surface": "rested on",
-        "lemma": "al"
-      },
-      {
         "surface": "my tent",
         "lemma": "ohel"
       }
@@ -116,10 +104,6 @@
       {
         "surface": "was still",
         "lemma": "od"
-      },
-      {
-        "surface": "with me",
-        "lemma": "immad"
       },
       {
         "surface": "and my children",
@@ -150,10 +134,6 @@
       {
         "surface": "poured out",
         "lemma": "tsuq"
-      },
-      {
-        "surface": "for me",
-        "lemma": "immad"
       },
       {
         "surface": "streams",
@@ -270,10 +250,6 @@
     ],
     "11": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "those",
         "lemma": "ozen"
       },
@@ -299,10 +275,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "because",
-        "lemma": "ki"
-      },
       {
         "surface": "I rescued",
         "lemma": "malat"
@@ -390,10 +362,6 @@
         "lemma": "ivver"
       },
       {
-        "surface": "and",
-        "lemma": "ani"
-      },
-      {
         "surface": "as feet",
         "lemma": "regel"
       },
@@ -403,10 +371,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
       {
         "surface": "was a father",
         "lemma": "av"
@@ -464,10 +428,6 @@
         "lemma": "gava"
       },
       {
-        "surface": "in",
-        "lemma": "im"
-      },
-      {
         "surface": "my nest",
         "lemma": "qen"
       },
@@ -492,10 +452,6 @@
       {
         "surface": "will spread out",
         "lemma": "patach"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the waters",
@@ -524,10 +480,6 @@
         "lemma": "chadash"
       },
       {
-        "surface": "within me",
-        "lemma": "immad"
-      },
-      {
         "surface": "and my bow",
         "lemma": "qeshet"
       },
@@ -552,10 +504,6 @@
       {
         "surface": "waiting silently",
         "lemma": "damam"
-      },
-      {
-        "surface": "for",
-        "lemma": "lemo"
       },
       {
         "surface": "my counsel",
@@ -586,10 +534,6 @@
       {
         "surface": "settled",
         "lemma": "nataph"
-      },
-      {
-        "surface": "on them like dew",
-        "lemma": "al"
       }
     ],
     "23": [
@@ -614,10 +558,6 @@
       {
         "surface": "If I smiled",
         "lemma": "sachaq"
-      },
-      {
-        "surface": "at them",
-        "lemma": "el"
       },
       {
         "surface": "they did not",
@@ -674,10 +614,6 @@
         "lemma": "gedud"
       },
       {
-        "surface": "as a comforter",
-        "lemma": "asher"
-      },
-      {
         "surface": "of the mourners",
         "lemma": "avel"
       }
@@ -685,7 +621,7 @@
   },
   "themeLemmas": [
     "lo",
-    "immad",
-    "al"
+    "yachal",
+    "shama"
   ]
 }

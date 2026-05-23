@@ -14,10 +14,6 @@
         "lemma": "amos"
       },
       {
-        "surface": "who",
-        "lemma": "asher"
-      },
-      {
         "surface": "was",
         "lemma": "hayah"
       },
@@ -30,16 +26,8 @@
         "lemma": "teqoa"
       },
       {
-        "surface": "what",
-        "lemma": "asher"
-      },
-      {
         "surface": "he saw",
         "lemma": "chazah"
-      },
-      {
-        "surface": "concerning",
-        "lemma": "al"
       },
       {
         "surface": "Israel",
@@ -162,10 +150,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "For",
-        "lemma": "al"
-      },
-      {
         "surface": "three",
         "lemma": "shalosh"
       },
@@ -178,10 +162,6 @@
         "lemma": "dammeseq"
       },
       {
-        "surface": "even",
-        "lemma": "al"
-      },
-      {
         "surface": "four",
         "lemma": "arba"
       },
@@ -192,10 +172,6 @@
       {
         "surface": "revoke My judgment",
         "lemma": "shuv"
-      },
-      {
-        "surface": "because",
-        "lemma": "al"
       },
       {
         "surface": "they threshed",
@@ -324,10 +300,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "For",
-        "lemma": "al"
-      },
-      {
         "surface": "three",
         "lemma": "shalosh"
       },
@@ -340,10 +312,6 @@
         "lemma": "azzah"
       },
       {
-        "surface": "even",
-        "lemma": "al"
-      },
-      {
         "surface": "four",
         "lemma": "arba"
       },
@@ -354,10 +322,6 @@
       {
         "surface": "revoke My judgment",
         "lemma": "shuv"
-      },
-      {
-        "surface": "because",
-        "lemma": "al"
       },
       {
         "surface": "they exiled",
@@ -440,10 +404,6 @@
         "lemma": "yad"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "Ekron",
         "lemma": "eqron"
       },
@@ -486,10 +446,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "For",
-        "lemma": "al"
-      },
-      {
         "surface": "three",
         "lemma": "shalosh"
       },
@@ -502,10 +458,6 @@
         "lemma": "tsor"
       },
       {
-        "surface": "even",
-        "lemma": "al"
-      },
-      {
         "surface": "four",
         "lemma": "arba"
       },
@@ -516,10 +468,6 @@
       {
         "surface": "revoke My judgment",
         "lemma": "shuv"
-      },
-      {
-        "surface": "because",
-        "lemma": "al"
       },
       {
         "surface": "they delivered up",
@@ -590,10 +538,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "For",
-        "lemma": "al"
-      },
-      {
         "surface": "three",
         "lemma": "shalosh"
       },
@@ -606,10 +550,6 @@
         "lemma": "edom"
       },
       {
-        "surface": "even",
-        "lemma": "al"
-      },
-      {
         "surface": "four",
         "lemma": "arba"
       },
@@ -620,10 +560,6 @@
       {
         "surface": "revoke My judgment",
         "lemma": "shuv"
-      },
-      {
-        "surface": "because",
-        "lemma": "al"
       },
       {
         "surface": "he pursued",
@@ -710,10 +646,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "For",
-        "lemma": "al"
-      },
-      {
         "surface": "three",
         "lemma": "shalosh"
       },
@@ -724,10 +656,6 @@
       {
         "surface": "of the Ammonites",
         "lemma": "ben"
-      },
-      {
-        "surface": "even",
-        "lemma": "al"
       },
       {
         "surface": "four",
@@ -742,10 +670,6 @@
         "lemma": "shuv"
       },
       {
-        "surface": "because",
-        "lemma": "al"
-      },
-      {
         "surface": "they ripped open",
         "lemma": "baqa"
       },
@@ -756,10 +680,6 @@
       {
         "surface": "women of Gilead",
         "lemma": "gilad"
-      },
-      {
-        "surface": "in order to",
-        "lemma": "maan"
       },
       {
         "surface": "enlarge",
@@ -834,10 +754,6 @@
         "lemma": "golah"
       },
       {
-        "surface": "he",
-        "lemma": "hu"
-      },
-      {
         "surface": "and his princes",
         "lemma": "sar"
       },
@@ -856,8 +772,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "amar",
-    "shuv"
+    "shuv",
+    "lo"
   ]
 }

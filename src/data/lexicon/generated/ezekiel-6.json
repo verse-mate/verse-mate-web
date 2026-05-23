@@ -18,10 +18,6 @@
         "lemma": "hayah"
       },
       {
-        "surface": "to me",
-        "lemma": "el"
-      },
-      {
         "surface": "saying",
         "lemma": "amar"
       }
@@ -44,10 +40,6 @@
         "lemma": "paneh"
       },
       {
-        "surface": "against",
-        "lemma": "el"
-      },
-      {
         "surface": "the mountains",
         "lemma": "har"
       },
@@ -58,10 +50,6 @@
       {
         "surface": "and prophesy",
         "lemma": "nava"
-      },
-      {
-        "surface": "against them",
-        "lemma": "el"
       }
     ],
     "3": [
@@ -126,20 +114,12 @@
         "lemma": "gay"
       },
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am about to bring",
         "lemma": "bo"
       },
       {
         "surface": "a sword",
         "lemma": "cherev"
-      },
-      {
-        "surface": "against you",
-        "lemma": "al"
       },
       {
         "surface": "and I will destroy",
@@ -252,10 +232,6 @@
         "lemma": "yasham"
       },
       {
-        "surface": "so that",
-        "lemma": "maan"
-      },
-      {
         "surface": "your altars",
         "lemma": "mizbeach"
       },
@@ -314,14 +290,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       }
@@ -362,10 +330,6 @@
         "lemma": "goy"
       },
       {
-        "surface": "to which",
-        "lemma": "asher"
-      },
-      {
         "surface": "they have been carried captive",
         "lemma": "shavah"
       },
@@ -376,14 +340,6 @@
       {
         "surface": "will remember",
         "lemma": "zakhar"
-      },
-      {
-        "surface": "Me",
-        "lemma": "et"
-      },
-      {
-        "surface": "how",
-        "lemma": "asher"
       },
       {
         "surface": "I have been grieved",
@@ -398,20 +354,8 @@
         "lemma": "lev"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "turned away",
         "lemma": "sur"
-      },
-      {
-        "surface": "from Me",
-        "lemma": "al"
-      },
-      {
-        "surface": "and by",
-        "lemma": "et"
       },
       {
         "surface": "their eyes",
@@ -438,10 +382,6 @@
         "lemma": "paneh"
       },
       {
-        "surface": "for",
-        "lemma": "el"
-      },
-      {
         "surface": "the evil",
         "lemma": "ra"
       },
@@ -464,14 +404,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       },
@@ -484,20 +416,12 @@
         "lemma": "davar"
       },
       {
-        "surface": "in",
-        "lemma": "el"
-      },
-      {
         "surface": "vain",
         "lemma": "chinnam"
       },
       {
         "surface": "that I would bring",
         "lemma": "asah"
-      },
-      {
-        "surface": "this",
-        "lemma": "zot"
       },
       {
         "surface": "calamity",
@@ -542,14 +466,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "Alas",
-        "lemma": "ach"
-      },
-      {
-        "surface": "because of",
-        "lemma": "el"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -568,10 +484,6 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
-      },
-      {
-        "surface": "who",
-        "lemma": "asher"
       },
       {
         "surface": "will fall",
@@ -642,14 +554,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       },
@@ -676,10 +580,6 @@
       {
         "surface": "their altars",
         "lemma": "mizbeach"
-      },
-      {
-        "surface": "on",
-        "lemma": "el"
       },
       {
         "surface": "every",
@@ -734,10 +634,6 @@
         "lemma": "maqom"
       },
       {
-        "surface": "where",
-        "lemma": "asher"
-      },
-      {
         "surface": "they offered",
         "lemma": "natan"
       },
@@ -766,10 +662,6 @@
       {
         "surface": "My hand",
         "lemma": "yad"
-      },
-      {
-        "surface": "against them",
-        "lemma": "al"
       },
       {
         "surface": "and wherever",
@@ -808,14 +700,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       }
@@ -824,6 +708,6 @@
   "themeLemmas": [
     "kol",
     "gillul",
-    "asher"
+    "amar"
   ]
 }

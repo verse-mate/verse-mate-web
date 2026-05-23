@@ -22,10 +22,6 @@
         "lemma": "ayin"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the hills",
         "lemma": "har"
       },
@@ -46,10 +42,6 @@
       {
         "surface": "My help",
         "lemma": "ezer"
-      },
-      {
-        "surface": "comes from",
-        "lemma": "im"
       },
       {
         "surface": "the LORD",
@@ -100,10 +92,6 @@
     ],
     "4": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the Protector",
         "lemma": "shamar"
       },
@@ -144,10 +132,6 @@
       {
         "surface": "is the shade",
         "lemma": "tsel"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "your right",
@@ -230,16 +214,12 @@
       {
         "surface": "both now",
         "lemma": "attah"
-      },
-      {
-        "surface": "and forevermore",
-        "lemma": "ad"
       }
     ]
   },
   "themeLemmas": [
     "shamar",
     "lo",
-    "al"
+    "num"
   ]
 }

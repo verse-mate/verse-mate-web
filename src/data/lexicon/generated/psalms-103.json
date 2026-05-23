@@ -276,19 +276,11 @@
         "lemma": "gamal"
       },
       {
-        "surface": "according to",
-        "lemma": "al"
-      },
-      {
         "surface": "our iniquities",
         "lemma": "avan"
       }
     ],
     "11": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "as high",
         "lemma": "gavah"
@@ -296,10 +288,6 @@
       {
         "surface": "as the heavens",
         "lemma": "shamayim"
-      },
-      {
-        "surface": "are above",
-        "lemma": "al"
       },
       {
         "surface": "the earth",
@@ -314,10 +302,6 @@
         "lemma": "chesed"
       },
       {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "those who fear Him",
         "lemma": "yare"
       }
@@ -330,10 +314,6 @@
       {
         "surface": "as the east",
         "lemma": "mizrach"
-      },
-      {
-        "surface": "is from",
-        "lemma": "min"
       },
       {
         "surface": "the west",
@@ -358,10 +338,6 @@
         "lemma": "racham"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "his children",
         "lemma": "ben"
       },
@@ -374,23 +350,11 @@
         "lemma": "racham"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "those who fear Him",
         "lemma": "yare"
       }
     ],
     "14": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
-      },
       {
         "surface": "knows",
         "lemma": "yada"
@@ -402,14 +366,6 @@
       {
         "surface": "He is mindful",
         "lemma": "zakhar"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "we",
-        "lemma": "anachnu"
       },
       {
         "surface": "are dust",
@@ -443,10 +399,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "when",
-        "lemma": "ki"
-      },
       {
         "surface": "the wind",
         "lemma": "ruach"
@@ -482,10 +434,6 @@
         "lemma": "olam"
       },
       {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
         "surface": "everlasting",
         "lemma": "olam"
       },
@@ -496,10 +444,6 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "extends to",
-        "lemma": "al"
       },
       {
         "surface": "those who fear Him",
@@ -687,7 +631,7 @@
   },
   "themeLemmas": [
     "kol",
-    "al",
-    "barakh"
+    "barakh",
+    "lo"
   ]
 }

@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to the city",
         "lemma": "ir"
       },
@@ -194,14 +190,6 @@
     ],
     "5": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
-        "surface": "I am against you",
-        "lemma": "el"
-      },
-      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -220,10 +208,6 @@
       {
         "surface": "your skirts",
         "lemma": "shul"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "your face",
@@ -254,10 +238,6 @@
       {
         "surface": "I will pelt",
         "lemma": "shalakh"
-      },
-      {
-        "surface": "you",
-        "lemma": "al"
       },
       {
         "surface": "with filth",
@@ -292,10 +272,6 @@
       {
         "surface": "will recoil",
         "lemma": "nadad"
-      },
-      {
-        "surface": "from you",
-        "lemma": "min"
       },
       {
         "surface": "and say",
@@ -356,10 +332,6 @@
         "lemma": "saviv"
       },
       {
-        "surface": "whose",
-        "lemma": "asher"
-      },
-      {
         "surface": "rampart",
         "lemma": "chel"
       },
@@ -412,14 +384,6 @@
     ],
     "10": [
       {
-        "surface": "Yet",
-        "lemma": "gam"
-      },
-      {
-        "surface": "she",
-        "lemma": "hu"
-      },
-      {
         "surface": "became an exile",
         "lemma": "golah"
       },
@@ -460,10 +424,6 @@
         "lemma": "goral"
       },
       {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "her dignitaries",
         "lemma": "kavad"
       },
@@ -486,14 +446,6 @@
     ],
     "11": [
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
-        "surface": "too",
-        "lemma": "gam"
-      },
-      {
         "surface": "will become drunk",
         "lemma": "shakhar"
       },
@@ -504,10 +456,6 @@
       {
         "surface": "into hiding",
         "lemma": "alam"
-      },
-      {
-        "surface": "and",
-        "lemma": "gam"
       },
       {
         "surface": "seek",
@@ -536,10 +484,6 @@
         "lemma": "teenah"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "the first ripe figs",
         "lemma": "bikkur"
       },
@@ -556,10 +500,6 @@
         "lemma": "naphal"
       },
       {
-        "surface": "into",
-        "lemma": "al"
-      },
-      {
         "surface": "the mouth",
         "lemma": "peh"
       },
@@ -569,10 +509,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "Look at",
-        "lemma": "hinneh"
-      },
       {
         "surface": "your troops",
         "lemma": "am"
@@ -824,10 +760,6 @@
         "lemma": "push"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the mountains",
         "lemma": "har"
       },
@@ -878,14 +810,6 @@
         "lemma": "taqa"
       },
       {
-        "surface": "your downfall",
-        "lemma": "al"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "who",
         "lemma": "mi"
       },
@@ -909,7 +833,7 @@
   },
   "themeLemmas": [
     "kol",
-    "al",
-    "akhal"
+    "akhal",
+    "yeleq"
   ]
 }

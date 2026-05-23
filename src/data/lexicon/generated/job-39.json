@@ -250,10 +250,6 @@
         "lemma": "lun"
       },
       {
-        "surface": "by",
-        "lemma": "al"
-      },
-      {
         "surface": "your manger {at night",
         "lemma": "evus"
       }
@@ -308,20 +304,12 @@
       {
         "surface": "your hard work",
         "lemma": "yegia"
-      },
-      {
-        "surface": "to him",
-        "lemma": "el"
       }
     ],
     "12": [
       {
         "surface": "Can you trust",
         "lemma": "aman"
-      },
-      {
-        "surface": "to",
-        "lemma": "ki"
       },
       {
         "surface": "bring in",
@@ -372,10 +360,6 @@
     ],
     "14": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "she leaves",
         "lemma": "azav"
       },
@@ -392,10 +376,6 @@
         "lemma": "chamam"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "the sand",
         "lemma": "aphar"
       }
@@ -404,10 +384,6 @@
       {
         "surface": "She forgets",
         "lemma": "shakhach"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "a foot",
@@ -461,10 +437,6 @@
       }
     ],
     "17": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "God",
         "lemma": "eloah"
@@ -634,10 +606,6 @@
         "lemma": "ranah"
       },
       {
-        "surface": "at his side",
-        "lemma": "al"
-      },
-      {
         "surface": "along with a flashing",
         "lemma": "lahav"
       },
@@ -696,10 +664,6 @@
       {
         "surface": "he snorts",
         "lemma": "amar"
-      },
-      {
-        "surface": "with fervor",
-        "lemma": "heach"
       },
       {
         "surface": "He catches the scent",
@@ -762,10 +726,6 @@
         "lemma": "gavah"
       },
       {
-        "surface": "at",
-        "lemma": "al"
-      },
-      {
         "surface": "your command",
         "lemma": "peh"
       },
@@ -794,10 +754,6 @@
       {
         "surface": "his stronghold",
         "lemma": "matsudah"
-      },
-      {
-        "surface": "is on",
-        "lemma": "al"
       },
       {
         "surface": "a rocky",
@@ -848,26 +804,18 @@
         "lemma": "dam"
       },
       {
-        "surface": "and where",
-        "lemma": "asher"
-      },
-      {
         "surface": "the slain are",
         "lemma": "chalal"
       },
       {
         "surface": "there",
         "lemma": "sham"
-      },
-      {
-        "surface": "he is",
-        "lemma": "hu"
       }
     ]
   },
   "themeLemmas": [
     "lo",
-    "al",
-    "ki"
+    "sus",
+    "shuv"
   ]
 }

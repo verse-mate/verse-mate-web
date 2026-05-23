@@ -158,17 +158,9 @@
       {
         "surface": "fleeting",
         "lemma": "chadel"
-      },
-      {
-        "surface": "my life is",
-        "lemma": "ani"
       }
     ],
     "5": [
-      {
-        "surface": "You, indeed",
-        "lemma": "hinneh"
-      },
       {
         "surface": "have made",
         "lemma": "natan"
@@ -288,10 +280,6 @@
       {
         "surface": "My hope is",
         "lemma": "tochelet"
-      },
-      {
-        "surface": "You",
-        "lemma": "hu"
       }
     ],
     "8": [
@@ -342,14 +330,6 @@
         "lemma": "peh"
       },
       {
-        "surface": "because of what",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "have done",
         "lemma": "asah"
       }
@@ -362,14 +342,6 @@
       {
         "surface": "Your scourge",
         "lemma": "nega"
-      },
-      {
-        "surface": "from me",
-        "lemma": "al"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "am perishing",
@@ -396,10 +368,6 @@
       {
         "surface": "a man",
         "lemma": "ish"
-      },
-      {
-        "surface": "for",
-        "lemma": "al"
       },
       {
         "surface": "his iniquity",
@@ -468,28 +436,12 @@
         "lemma": "charash"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "my weeping",
         "lemma": "dimah"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "am a foreigner",
         "lemma": "ger"
-      },
-      {
-        "surface": "dwelling with You",
-        "lemma": "im"
       },
       {
         "surface": "a stranger",
@@ -508,10 +460,6 @@
       {
         "surface": "Turn Your gaze",
         "lemma": "shaah"
-      },
-      {
-        "surface": "away from me",
-        "lemma": "min"
       },
       {
         "surface": "that I may again be cheered",
@@ -533,7 +481,7 @@
   },
   "themeLemmas": [
     "kol",
-    "al",
-    "akh"
+    "akh",
+    "yada"
   ]
 }

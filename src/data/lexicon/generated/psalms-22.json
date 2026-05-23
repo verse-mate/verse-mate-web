@@ -10,10 +10,6 @@
         "lemma": "natsach"
       },
       {
-        "surface": "To the tune of",
-        "lemma": "al"
-      },
-      {
         "surface": "The Doe",
         "lemma": "ayyalah"
       },
@@ -94,10 +90,6 @@
     ],
     "3": [
       {
-        "surface": "Yet You",
-        "lemma": "attah"
-      },
-      {
         "surface": "are holy",
         "lemma": "qadosh"
       },
@@ -138,10 +130,6 @@
         "lemma": "zaaq"
       },
       {
-        "surface": "to You",
-        "lemma": "el"
-      },
-      {
         "surface": "and were set free",
         "lemma": "malat"
       },
@@ -159,10 +147,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "But I",
-        "lemma": "anokhi"
-      },
       {
         "surface": "am a worm",
         "lemma": "tola"
@@ -224,10 +208,6 @@
         "lemma": "galal"
       },
       {
-        "surface": "in",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -240,23 +220,11 @@
         "lemma": "natsal"
       },
       {
-        "surface": "since",
-        "lemma": "ki"
-      },
-      {
         "surface": "He delights",
         "lemma": "chaphets"
       }
     ],
     "9": [
-      {
-        "surface": "Yet",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
       {
         "surface": "brought me forth",
         "lemma": "giach"
@@ -268,10 +236,6 @@
       {
         "surface": "You made me secure",
         "lemma": "batach"
-      },
-      {
-        "surface": "at",
-        "lemma": "al"
       },
       {
         "surface": "my mother’s",
@@ -292,20 +256,12 @@
         "lemma": "shalakh"
       },
       {
-        "surface": "upon You",
-        "lemma": "al"
-      },
-      {
         "surface": "from my mother’s",
         "lemma": "em"
       },
       {
         "surface": "womb",
         "lemma": "beten"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "have been my God",
@@ -322,24 +278,12 @@
         "lemma": "rachaq"
       },
       {
-        "surface": "from me",
-        "lemma": "min"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "trouble",
         "lemma": "batstsarah"
       },
       {
         "surface": "is near",
         "lemma": "qarov"
-      },
-      {
-        "surface": "and",
-        "lemma": "ki"
       },
       {
         "surface": "there is no",
@@ -384,10 +328,6 @@
       {
         "surface": "their jaws",
         "lemma": "peh"
-      },
-      {
-        "surface": "against me",
-        "lemma": "al"
       },
       {
         "surface": "like lions",
@@ -488,10 +428,6 @@
     ],
     "16": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "dogs",
         "lemma": "kelev"
       },
@@ -538,10 +474,6 @@
         "lemma": "etsem"
       },
       {
-        "surface": "they",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "stare",
         "lemma": "navat"
       },
@@ -568,19 +500,11 @@
         "lemma": "goral"
       },
       {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "my clothing",
         "lemma": "levush"
       }
     ],
     "19": [
-      {
-        "surface": "But You",
-        "lemma": "attah"
-      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -732,10 +656,6 @@
     ],
     "24": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "He has not",
         "lemma": "lo"
       },
@@ -768,16 +688,8 @@
         "lemma": "paneh"
       },
       {
-        "surface": "from him",
-        "lemma": "min"
-      },
-      {
         "surface": "but has attended",
         "lemma": "shama"
-      },
-      {
-        "surface": "to his",
-        "lemma": "el"
       },
       {
         "surface": "cry for help",
@@ -788,10 +700,6 @@
       {
         "surface": "My praise",
         "lemma": "tehillah"
-      },
-      {
-        "surface": "for You resounds",
-        "lemma": "et"
       },
       {
         "surface": "in the great",
@@ -878,10 +786,6 @@
         "lemma": "shuv"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -907,10 +811,6 @@
       }
     ],
     "28": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "dominion",
         "lemma": "melukhah"
@@ -1026,10 +926,6 @@
         "lemma": "yalad"
       },
       {
-        "surface": "all that",
-        "lemma": "ki"
-      },
-      {
         "surface": "He has done",
         "lemma": "asah"
       }
@@ -1037,7 +933,7 @@
   },
   "themeLemmas": [
     "kol",
-    "ki",
-    "al"
+    "lo",
+    "batach"
   ]
 }

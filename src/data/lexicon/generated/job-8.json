@@ -20,16 +20,8 @@
     ],
     "2": [
       {
-        "surface": "How long",
-        "lemma": "ad"
-      },
-      {
         "surface": "will you go on saying",
         "lemma": "malal"
-      },
-      {
-        "surface": "such things",
-        "lemma": "elleh"
       },
       {
         "surface": "The words",
@@ -102,10 +94,6 @@
         "lemma": "im"
       },
       {
-        "surface": "you",
-        "lemma": "attah"
-      },
-      {
         "surface": "would earnestly seek",
         "lemma": "shachar"
       },
@@ -128,10 +116,6 @@
         "lemma": "im"
       },
       {
-        "surface": "you",
-        "lemma": "attah"
-      },
-      {
         "surface": "are pure",
         "lemma": "zakh"
       },
@@ -140,20 +124,12 @@
         "lemma": "yashar"
       },
       {
-        "surface": "even",
-        "lemma": "ki"
-      },
-      {
         "surface": "now",
         "lemma": "attah"
       },
       {
         "surface": "He will rouse Himself",
         "lemma": "ur"
-      },
-      {
-        "surface": "on your behalf",
-        "lemma": "al"
       },
       {
         "surface": "and restore",
@@ -192,10 +168,6 @@
     ],
     "8": [
       {
-        "surface": "Please",
-        "lemma": "na"
-      },
-      {
         "surface": "inquire",
         "lemma": "shaal"
       },
@@ -222,14 +194,6 @@
     ],
     "9": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "we were born",
-        "lemma": "anachnu"
-      },
-      {
         "surface": "yesterday",
         "lemma": "temol"
       },
@@ -246,10 +210,6 @@
         "lemma": "yom"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "earth",
         "lemma": "erets"
       },
@@ -259,10 +219,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "Will they",
-        "lemma": "hemmah"
-      },
       {
         "surface": "not",
         "lemma": "lo"
@@ -384,10 +340,6 @@
     ],
     "14": [
       {
-        "surface": "His",
-        "lemma": "asher"
-      },
-      {
         "surface": "confidence",
         "lemma": "kesel"
       },
@@ -412,10 +364,6 @@
       {
         "surface": "He leans",
         "lemma": "shaan"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "his web",
@@ -444,10 +392,6 @@
     ],
     "16": [
       {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "is a well-watered plant",
         "lemma": "ratov"
       },
@@ -468,10 +412,6 @@
         "lemma": "yoneqet"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "the garden",
         "lemma": "gannah"
       }
@@ -484,10 +424,6 @@
       {
         "surface": "wrap",
         "lemma": "savakh"
-      },
-      {
-        "surface": "around",
-        "lemma": "al"
       },
       {
         "surface": "the rock heap",
@@ -534,14 +470,6 @@
     ],
     "19": [
       {
-        "surface": "Surely",
-        "lemma": "hen"
-      },
-      {
-        "surface": "this",
-        "lemma": "hu"
-      },
-      {
         "surface": "is the joy",
         "lemma": "masvos"
       },
@@ -563,10 +491,6 @@
       }
     ],
     "20": [
-      {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
       {
         "surface": "God",
         "lemma": "el"
@@ -601,10 +525,6 @@
       }
     ],
     "21": [
-      {
-        "surface": "He will yet",
-        "lemma": "ad"
-      },
       {
         "surface": "fill your mouth",
         "lemma": "peh"
@@ -655,7 +575,7 @@
   },
   "themeLemmas": [
     "lo",
-    "al",
-    "im"
+    "im",
+    "bet"
   ]
 }

@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to the majestic",
         "lemma": "geut"
       },
@@ -42,14 +38,6 @@
         "lemma": "tipharah"
       },
       {
-        "surface": "set",
-        "lemma": "asher"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the summit",
         "lemma": "rosh"
       },
@@ -71,10 +59,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the Lord has one",
         "lemma": "adonai"
@@ -160,14 +144,6 @@
         "lemma": "tipharah"
       },
       {
-        "surface": "set",
-        "lemma": "asher"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the summit",
         "lemma": "rosh"
       },
@@ -217,10 +193,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "On that",
-        "lemma": "hu"
-      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -276,10 +248,6 @@
         "lemma": "yashav"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "judgment",
         "lemma": "mishpat"
       },
@@ -301,14 +269,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "These",
-        "lemma": "elleh"
-      },
-      {
-        "surface": "also",
-        "lemma": "gam"
-      },
       {
         "surface": "stagger",
         "lemma": "shagah"
@@ -346,20 +306,12 @@
         "lemma": "bala"
       },
       {
-        "surface": "by",
-        "lemma": "min"
-      },
-      {
         "surface": "wine",
         "lemma": "yayin"
       },
       {
         "surface": "They stumble",
         "lemma": "taah"
-      },
-      {
-        "surface": "because of",
-        "lemma": "min"
       },
       {
         "surface": "strong drink",
@@ -383,10 +335,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "all",
         "lemma": "kol"
@@ -456,10 +404,6 @@
     ],
     "10": [
       {
-        "surface": "For they hear",
-        "lemma": "ki"
-      },
-      {
         "surface": "Order",
         "lemma": "tsav"
       },
@@ -510,10 +454,6 @@
     ],
     "11": [
       {
-        "surface": "Indeed",
-        "lemma": "ki"
-      },
-      {
         "surface": "with mocking",
         "lemma": "laeg"
       },
@@ -534,30 +474,14 @@
         "lemma": "davar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
-        "surface": "this",
-        "lemma": "zeh"
-      },
-      {
         "surface": "people",
         "lemma": "am"
       }
     ],
     "12": [
       {
-        "surface": "to whom",
-        "lemma": "asher"
-      },
-      {
         "surface": "He has said",
         "lemma": "amar"
-      },
-      {
-        "surface": "This",
-        "lemma": "zot"
       },
       {
         "surface": "is the place of rest",
@@ -570,10 +494,6 @@
       {
         "surface": "rest",
         "lemma": "nuach"
-      },
-      {
-        "surface": "this",
-        "lemma": "zot"
       },
       {
         "surface": "is the place of repose",
@@ -654,10 +574,6 @@
         "lemma": "sham"
       },
       {
-        "surface": "so that",
-        "lemma": "maan"
-      },
-      {
         "surface": "they will go",
         "lemma": "halakh"
       },
@@ -712,10 +628,6 @@
         "lemma": "mashal"
       },
       {
-        "surface": "this",
-        "lemma": "zeh"
-      },
-      {
         "surface": "people",
         "lemma": "am"
       },
@@ -725,10 +637,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "you said",
         "lemma": "amar"
@@ -740,10 +648,6 @@
       {
         "surface": "a covenant",
         "lemma": "berit"
-      },
-      {
-        "surface": "with",
-        "lemma": "et"
       },
       {
         "surface": "death",
@@ -758,16 +662,8 @@
         "lemma": "chozeh"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "Sheol",
         "lemma": "sheol"
-      },
-      {
-        "surface": "When",
-        "lemma": "ki"
       },
       {
         "surface": "the overwhelming scourge",
@@ -784,10 +680,6 @@
       {
         "surface": "touch us",
         "lemma": "bo"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
       },
       {
         "surface": "we have made",
@@ -830,10 +722,6 @@
       {
         "surface": "says",
         "lemma": "amar"
-      },
-      {
-        "surface": "See",
-        "lemma": "hen"
       },
       {
         "surface": "I lay",
@@ -940,10 +828,6 @@
         "lemma": "berit"
       },
       {
-        "surface": "with",
-        "lemma": "et"
-      },
-      {
         "surface": "death",
         "lemma": "mavet"
       },
@@ -956,10 +840,6 @@
         "lemma": "chazut"
       },
       {
-        "surface": "with",
-        "lemma": "et"
-      },
-      {
         "surface": "Sheol",
         "lemma": "sheol"
       },
@@ -970,10 +850,6 @@
       {
         "surface": "stand",
         "lemma": "qamay"
-      },
-      {
-        "surface": "When",
-        "lemma": "ki"
       },
       {
         "surface": "the overwhelming",
@@ -1038,19 +914,11 @@
         "lemma": "shemuah"
       },
       {
-        "surface": "will bring sheer",
-        "lemma": "raq"
-      },
-      {
         "surface": "terror",
         "lemma": "zevaah"
       }
     ],
     "20": [
-      {
-        "surface": "Indeed",
-        "lemma": "ki"
-      },
       {
         "surface": "the bed",
         "lemma": "matstsa"
@@ -1077,10 +945,6 @@
       }
     ],
     "21": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -1156,20 +1020,12 @@
         "lemma": "luts"
       },
       {
-        "surface": "or",
-        "lemma": "pen"
-      },
-      {
         "surface": "your shackles",
         "lemma": "moser"
       },
       {
         "surface": "will become heavier",
         "lemma": "chazaq"
-      },
-      {
-        "surface": "Indeed",
-        "lemma": "ki"
       },
       {
         "surface": "I have heard",
@@ -1194,10 +1050,6 @@
       {
         "surface": "of destruction",
         "lemma": "kalah"
-      },
-      {
-        "surface": "against",
-        "lemma": "al"
       },
       {
         "surface": "the whole",
@@ -1350,10 +1202,6 @@
     ],
     "27": [
       {
-        "surface": "Surely",
-        "lemma": "ki"
-      },
-      {
         "surface": "caraway",
         "lemma": "qetsach"
       },
@@ -1382,16 +1230,8 @@
         "lemma": "savav"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "the cumin",
         "lemma": "kammon"
-      },
-      {
-        "surface": "But",
-        "lemma": "ki"
       },
       {
         "surface": "caraway",
@@ -1422,10 +1262,6 @@
       {
         "surface": "must be ground",
         "lemma": "daqaq"
-      },
-      {
-        "surface": "but",
-        "lemma": "ki"
       },
       {
         "surface": "it is not",
@@ -1462,20 +1298,8 @@
     ],
     "29": [
       {
-        "surface": "This",
-        "lemma": "zot"
-      },
-      {
-        "surface": "also",
-        "lemma": "gam"
-      },
-      {
         "surface": "comes",
         "lemma": "yatsa"
-      },
-      {
-        "surface": "from",
-        "lemma": "im"
       },
       {
         "surface": "the LORD",
@@ -1504,8 +1328,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "qav",
-    "tsav"
+    "tsav",
+    "lo"
   ]
 }

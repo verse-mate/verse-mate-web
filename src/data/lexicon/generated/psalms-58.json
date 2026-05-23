@@ -60,10 +60,6 @@
     ],
     "2": [
       {
-        "surface": "No",
-        "lemma": "aph"
-      },
-      {
         "surface": "in your hearts",
         "lemma": "lev"
       },
@@ -136,10 +132,6 @@
         "lemma": "nachash"
       },
       {
-        "surface": "like",
-        "lemma": "kemo"
-      },
-      {
         "surface": "a cobra",
         "lemma": "peten"
       },
@@ -153,10 +145,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "vvv",
-        "lemma": "asher"
-      },
       {
         "surface": "refusing",
         "lemma": "lo"
@@ -222,10 +210,6 @@
         "lemma": "maas"
       },
       {
-        "surface": "like",
-        "lemma": "kemo"
-      },
-      {
         "surface": "water",
         "lemma": "mayim"
       },
@@ -247,10 +231,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "Like",
-        "lemma": "kemo"
-      },
       {
         "surface": "a slug",
         "lemma": "shavlul"
@@ -306,10 +286,6 @@
         "lemma": "chay"
       },
       {
-        "surface": "or",
-        "lemma": "kemo"
-      },
-      {
         "surface": "dry",
         "lemma": "charon"
       },
@@ -326,10 +302,6 @@
       {
         "surface": "will rejoice",
         "lemma": "samach"
-      },
-      {
-        "surface": "when",
-        "lemma": "ki"
       },
       {
         "surface": "they see",
@@ -400,8 +372,8 @@
     ]
   },
   "themeLemmas": [
-    "kemo",
     "tsaddiq",
-    "shaphat"
+    "shaphat",
+    "rasah"
   ]
 }

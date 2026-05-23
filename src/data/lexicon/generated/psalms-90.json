@@ -26,10 +26,6 @@
         "lemma": "adonai"
       },
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "have been",
         "lemma": "hayah"
       },
@@ -76,16 +72,8 @@
         "lemma": "olam"
       },
       {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
         "surface": "everlasting",
         "lemma": "olam"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "are God",
@@ -100,10 +88,6 @@
       {
         "surface": "man",
         "lemma": "enosh"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "dust",
@@ -128,10 +112,6 @@
     ],
     "4": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "in Your sight",
         "lemma": "ayin"
       },
@@ -150,10 +130,6 @@
       {
         "surface": "a day",
         "lemma": "etmol"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "passes",
@@ -218,10 +194,6 @@
     ],
     "7": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "we are consumed",
         "lemma": "kalah"
       },
@@ -266,10 +238,6 @@
     ],
     "9": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -292,10 +260,6 @@
       {
         "surface": "our years",
         "lemma": "shaneh"
-      },
-      {
-        "surface": "with",
-        "lemma": "kemo"
       },
       {
         "surface": "a sigh",
@@ -334,10 +298,6 @@
       {
         "surface": "and sorrow",
         "lemma": "aven"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "they quickly",
@@ -418,16 +378,8 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "How long will it be",
-        "lemma": "ad"
-      },
-      {
         "surface": "Have compassion",
         "lemma": "nacham"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "Your servants",
@@ -500,20 +452,12 @@
         "lemma": "raah"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "Your servants",
         "lemma": "eved"
       },
       {
         "surface": "and Your splendor",
         "lemma": "hadar"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "their children",
@@ -538,16 +482,8 @@
         "lemma": "hayah"
       },
       {
-        "surface": "upon us",
-        "lemma": "al"
-      },
-      {
         "surface": "establish",
         "lemma": "kun"
-      },
-      {
-        "surface": "for us",
-        "lemma": "al"
       },
       {
         "surface": "the work",
@@ -572,8 +508,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "shaneh",
-    "al"
+    "shuv",
+    "hayah"
   ]
 }

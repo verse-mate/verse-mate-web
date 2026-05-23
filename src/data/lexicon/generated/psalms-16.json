@@ -22,10 +22,6 @@
         "lemma": "el"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "I take refuge",
         "lemma": "chasah"
       }
@@ -40,16 +36,8 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "are my Lord",
         "lemma": "adonai"
-      },
-      {
-        "surface": "apart from You",
-        "lemma": "al"
       },
       {
         "surface": "I have no",
@@ -68,10 +56,6 @@
       {
         "surface": "in the land",
         "lemma": "erets"
-      },
-      {
-        "surface": "they",
-        "lemma": "hemmah"
       },
       {
         "surface": "are the excellence",
@@ -132,10 +116,6 @@
         "lemma": "shem"
       },
       {
-        "surface": "with",
-        "lemma": "al"
-      },
-      {
         "surface": "my lips",
         "lemma": "saphah"
       }
@@ -152,10 +132,6 @@
       {
         "surface": "and my cup",
         "lemma": "kos"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "have made",
@@ -180,14 +156,6 @@
         "lemma": "naim"
       },
       {
-        "surface": "surely",
-        "lemma": "aph"
-      },
-      {
-        "surface": "my",
-        "lemma": "al"
-      },
-      {
         "surface": "inheritance",
         "lemma": "nachalah"
       },
@@ -206,16 +174,8 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "who",
-        "lemma": "asher"
-      },
-      {
         "surface": "counsels me",
         "lemma": "yaats"
-      },
-      {
-        "surface": "even",
-        "lemma": "aph"
       },
       {
         "surface": "at night",
@@ -246,10 +206,6 @@
       {
         "surface": "before me",
         "lemma": "neged"
-      },
-      {
-        "surface": "Because",
-        "lemma": "ki"
       },
       {
         "surface": "He is at my right hand",
@@ -290,10 +246,6 @@
         "lemma": "basar"
       },
       {
-        "surface": "also",
-        "lemma": "aph"
-      },
-      {
         "surface": "will dwell",
         "lemma": "shakhan"
       },
@@ -303,10 +255,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "You will not",
         "lemma": "lo"
@@ -385,7 +333,7 @@
   },
   "themeLemmas": [
     "bal",
-    "ki",
-    "aph"
+    "yamin",
+    "naim"
   ]
 }

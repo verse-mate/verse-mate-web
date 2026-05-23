@@ -38,10 +38,6 @@
         "lemma": "zamar"
       },
       {
-        "surface": "with",
-        "lemma": "aph"
-      },
-      {
         "surface": "all my being",
         "lemma": "kavod"
       }
@@ -96,10 +92,6 @@
     ],
     "4": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       },
@@ -108,20 +100,12 @@
         "lemma": "gadol"
       },
       {
-        "surface": "beyond",
-        "lemma": "al"
-      },
-      {
         "surface": "the heavens",
         "lemma": "shamayim"
       },
       {
         "surface": "and Your faithfulness",
         "lemma": "emet"
-      },
-      {
-        "surface": "reaches to",
-        "lemma": "ad"
       },
       {
         "surface": "the clouds",
@@ -138,20 +122,12 @@
         "lemma": "elohim"
       },
       {
-        "surface": "above",
-        "lemma": "al"
-      },
-      {
         "surface": "the heavens",
         "lemma": "shamayim"
       },
       {
         "surface": "may Your glory",
         "lemma": "kavod"
-      },
-      {
-        "surface": "cover",
-        "lemma": "al"
       },
       {
         "surface": "all",
@@ -174,10 +150,6 @@
       {
         "surface": "with Your right hand",
         "lemma": "yamin"
-      },
-      {
-        "surface": "that",
-        "lemma": "maan"
       },
       {
         "surface": "Your beloved",
@@ -262,10 +234,6 @@
         "lemma": "sir"
       },
       {
-        "surface": "upon",
-        "lemma": "al"
-      },
-      {
         "surface": "Edom",
         "lemma": "edom"
       },
@@ -276,10 +244,6 @@
       {
         "surface": "My sandal",
         "lemma": "naal"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "Philistia",
@@ -314,10 +278,6 @@
       {
         "surface": "will lead me",
         "lemma": "nachah"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "Edom",
@@ -394,10 +354,6 @@
         "lemma": "chayil"
       },
       {
-        "surface": "and He",
-        "lemma": "hu"
-      },
-      {
         "surface": "will trample",
         "lemma": "bus"
       },
@@ -408,8 +364,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "zamar",
-    "ur"
+    "ur",
+    "tsar"
   ]
 }

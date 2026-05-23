@@ -52,19 +52,11 @@
         "lemma": "gemul"
       },
       {
-        "surface": "to",
-        "lemma": "al"
-      },
-      {
         "surface": "the proud",
         "lemma": "geeh"
       }
     ],
     "3": [
-      {
-        "surface": "How long",
-        "lemma": "ad"
-      },
       {
         "surface": "will the wicked",
         "lemma": "rasah"
@@ -72,10 +64,6 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "how long",
-        "lemma": "ad"
       },
       {
         "surface": "will the wicked",
@@ -306,14 +294,6 @@
         "lemma": "adam"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "they",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "are futile",
         "lemma": "hevel"
       }
@@ -358,10 +338,6 @@
         "lemma": "ra"
       },
       {
-        "surface": "until",
-        "lemma": "ad"
-      },
-      {
         "surface": "a pit",
         "lemma": "shachat"
       },
@@ -375,10 +351,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -409,10 +381,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "Surely",
-        "lemma": "ki"
-      },
       {
         "surface": "judgment",
         "lemma": "tsedeq"
@@ -452,10 +420,6 @@
         "lemma": "qamay"
       },
       {
-        "surface": "against",
-        "lemma": "im"
-      },
-      {
         "surface": "the wicked",
         "lemma": "raa"
       },
@@ -466,10 +430,6 @@
       {
         "surface": "will stand",
         "lemma": "yatsav"
-      },
-      {
-        "surface": "against",
-        "lemma": "im"
       },
       {
         "surface": "the workers",
@@ -584,10 +544,6 @@
         "lemma": "amal"
       },
       {
-        "surface": "by",
-        "lemma": "al"
-      },
-      {
         "surface": "decree",
         "lemma": "choq"
       }
@@ -596,10 +552,6 @@
       {
         "surface": "They band together",
         "lemma": "gadad"
-      },
-      {
-        "surface": "against",
-        "lemma": "al"
       },
       {
         "surface": "vvv",
@@ -654,10 +606,6 @@
         "lemma": "shuv"
       },
       {
-        "surface": "upon them",
-        "lemma": "al"
-      },
-      {
         "surface": "their own iniquity",
         "lemma": "aven"
       },
@@ -686,6 +634,6 @@
   "themeLemmas": [
     "lo",
     "rasah",
-    "im"
+    "shuv"
   ]
 }

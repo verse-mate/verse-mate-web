@@ -32,10 +32,6 @@
         "lemma": "shuv"
       },
       {
-        "surface": "because",
-        "lemma": "avur"
-      },
-      {
         "surface": "of the turmoil",
         "lemma": "chush"
       }
@@ -68,20 +64,8 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "zot"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
         "surface": "antiquity",
         "lemma": "ad"
-      },
-      {
-        "surface": "since",
-        "lemma": "min"
       },
       {
         "surface": "man",
@@ -90,10 +74,6 @@
       {
         "surface": "was placed",
         "lemma": "sum"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the earth",
@@ -120,10 +100,6 @@
       {
         "surface": "of the godless",
         "lemma": "chaneph"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "ad"
       },
       {
         "surface": "momentary",
@@ -292,14 +268,6 @@
       {
         "surface": "will lie down",
         "lemma": "shakhav"
-      },
-      {
-        "surface": "with him",
-        "lemma": "im"
-      },
-      {
-        "surface": "in",
-        "lemma": "al"
       },
       {
         "surface": "the dust",
@@ -502,10 +470,6 @@
     ],
     "19": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "he has oppressed",
         "lemma": "ratsats"
       },
@@ -535,10 +499,6 @@
       }
     ],
     "20": [
-      {
-        "surface": "Because",
-        "lemma": "ki"
-      },
       {
         "surface": "his appetite",
         "lemma": "beten"
@@ -576,10 +536,6 @@
       {
         "surface": "for him to consume",
         "lemma": "akhal"
-      },
-      {
-        "surface": "thus",
-        "lemma": "al"
       },
       {
         "surface": "his prosperity",
@@ -650,10 +606,6 @@
         "lemma": "matar"
       },
       {
-        "surface": "on him",
-        "lemma": "al"
-      },
-      {
         "surface": "as he eats",
         "lemma": "lachum"
       }
@@ -712,10 +664,6 @@
       {
         "surface": "come",
         "lemma": "halakh"
-      },
-      {
-        "surface": "over him",
-        "lemma": "al"
       }
     ],
     "26": [
@@ -806,10 +754,6 @@
     ],
     "29": [
       {
-        "surface": "This",
-        "lemma": "zeh"
-      },
-      {
         "surface": "is the wicked",
         "lemma": "rasah"
       },
@@ -841,7 +785,7 @@
   },
   "themeLemmas": [
     "lo",
-    "al",
-    "shuv"
+    "shuv",
+    "male"
   ]
 }

@@ -48,14 +48,6 @@
     ],
     "2": [
       {
-        "surface": "Surely",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I am",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "the most ignorant",
         "lemma": "baar"
       },
@@ -188,10 +180,6 @@
         "lemma": "ben"
       },
       {
-        "surface": "surely",
-        "lemma": "ki"
-      },
-      {
         "surface": "you know",
         "lemma": "yada"
       }
@@ -214,10 +202,6 @@
         "lemma": "tsaraph"
       },
       {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "is a shield",
         "lemma": "magen"
       },
@@ -236,16 +220,8 @@
         "lemma": "yasaph"
       },
       {
-        "surface": "to",
-        "lemma": "al"
-      },
-      {
         "surface": "His words",
         "lemma": "davar"
-      },
-      {
-        "surface": "lest",
-        "lemma": "pen"
       },
       {
         "surface": "He rebuke",
@@ -264,10 +240,6 @@
       {
         "surface": "things I ask",
         "lemma": "shaal"
-      },
-      {
-        "surface": "of You",
-        "lemma": "min"
       },
       {
         "surface": "do not",
@@ -304,10 +276,6 @@
         "lemma": "rachaq"
       },
       {
-        "surface": "from me",
-        "lemma": "min"
-      },
-      {
         "surface": "Give",
         "lemma": "natan"
       },
@@ -338,10 +306,6 @@
     ],
     "9": [
       {
-        "surface": "Otherwise",
-        "lemma": "pen"
-      },
-      {
         "surface": "I may have too much",
         "lemma": "sava"
       },
@@ -360,10 +324,6 @@
       {
         "surface": "is the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "Or",
-        "lemma": "pen"
       },
       {
         "surface": "I may become poor",
@@ -400,16 +360,8 @@
         "lemma": "eved"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "his master",
         "lemma": "adon"
-      },
-      {
-        "surface": "or",
-        "lemma": "pen"
       },
       {
         "surface": "he will curse you",
@@ -562,10 +514,6 @@
         "lemma": "yahav"
       },
       {
-        "surface": "There",
-        "lemma": "hennah"
-      },
-      {
         "surface": "are three",
         "lemma": "shalosh"
       },
@@ -692,20 +640,12 @@
     ],
     "18": [
       {
-        "surface": "There",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "are three things",
         "lemma": "shalosh"
       },
       {
         "surface": "too wonderful",
         "lemma": "pala"
-      },
-      {
-        "surface": "for me",
-        "lemma": "min"
       },
       {
         "surface": "four",
@@ -740,10 +680,6 @@
       {
         "surface": "of a snake",
         "lemma": "nachash"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "a rock",
@@ -860,20 +796,12 @@
         "lemma": "eved"
       },
       {
-        "surface": "who",
-        "lemma": "ki"
-      },
-      {
         "surface": "becomes king",
         "lemma": "malakh"
       },
       {
         "surface": "a fool",
         "lemma": "naval"
-      },
-      {
-        "surface": "who",
-        "lemma": "ki"
       },
       {
         "surface": "is filled",
@@ -890,20 +818,12 @@
         "lemma": "sane"
       },
       {
-        "surface": "who",
-        "lemma": "ki"
-      },
-      {
         "surface": "marries",
         "lemma": "baal"
       },
       {
         "surface": "and a maidservant",
         "lemma": "shiphchah"
-      },
-      {
-        "surface": "who",
-        "lemma": "ki"
       },
       {
         "surface": "supplants",
@@ -926,10 +846,6 @@
       {
         "surface": "are small",
         "lemma": "qatan"
-      },
-      {
-        "surface": "yet they",
-        "lemma": "hemmah"
       },
       {
         "surface": "are exceedingly",
@@ -1040,10 +956,6 @@
         "lemma": "yad"
       },
       {
-        "surface": "yet it",
-        "lemma": "hu"
-      },
-      {
         "surface": "is found in the palaces",
         "lemma": "hekhal"
       },
@@ -1053,10 +965,6 @@
       }
     ],
     "29": [
-      {
-        "surface": "There",
-        "lemma": "hemmah"
-      },
       {
         "surface": "are three things",
         "lemma": "shalosh"
@@ -1128,10 +1036,6 @@
       {
         "surface": "with his army",
         "lemma": "alqum"
-      },
-      {
-        "surface": "around him",
-        "lemma": "im"
       }
     ],
     "32": [
@@ -1165,10 +1069,6 @@
       }
     ],
     "33": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "as the churning",
         "lemma": "mits"
@@ -1221,7 +1121,7 @@
   },
   "themeLemmas": [
     "lo",
-    "ki",
-    "al"
+    "mi",
+    "arba"
   ]
 }

@@ -566,10 +566,6 @@
         "lemma": "ayin"
       },
       {
-        "surface": "and even",
-        "lemma": "gam"
-      },
-      {
         "surface": "her prophets",
         "lemma": "navi"
       },
@@ -622,10 +618,6 @@
       {
         "surface": "dust",
         "lemma": "aphar"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "their heads",
@@ -692,10 +684,6 @@
       {
         "surface": "in grief",
         "lemma": "erets"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "the destruction",
@@ -776,10 +764,6 @@
         "lemma": "shaphakh"
       },
       {
-        "surface": "in",
-        "lemma": "el"
-      },
-      {
         "surface": "the arms",
         "lemma": "cheq"
       },
@@ -836,10 +820,6 @@
       {
         "surface": "of Zion",
         "lemma": "tsiyyon"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "your wound",
@@ -934,10 +914,6 @@
         "lemma": "kaph"
       },
       {
-        "surface": "at you in scorn",
-        "lemma": "al"
-      },
-      {
         "surface": "They hiss",
         "lemma": "sharaq"
       },
@@ -950,20 +926,12 @@
         "lemma": "rosh"
       },
       {
-        "surface": "at",
-        "lemma": "al"
-      },
-      {
         "surface": "the Daughter",
         "lemma": "bat"
       },
       {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
-      },
-      {
-        "surface": "Is this",
-        "lemma": "zot"
       },
       {
         "surface": "the city",
@@ -1012,10 +980,6 @@
         "lemma": "peh"
       },
       {
-        "surface": "against you",
-        "lemma": "al"
-      },
-      {
         "surface": "They hiss",
         "lemma": "sharaq"
       },
@@ -1034,10 +998,6 @@
       {
         "surface": "We have swallowed her up",
         "lemma": "bala"
-      },
-      {
-        "surface": "This",
-        "lemma": "zeh"
       },
       {
         "surface": "is the day",
@@ -1066,10 +1026,6 @@
         "lemma": "asah"
       },
       {
-        "surface": "what",
-        "lemma": "asher"
-      },
-      {
         "surface": "He planned",
         "lemma": "zamam"
       },
@@ -1080,10 +1036,6 @@
       {
         "surface": "His decree",
         "lemma": "imrah"
-      },
-      {
-        "surface": "which",
-        "lemma": "asher"
       },
       {
         "surface": "He ordained",
@@ -1118,10 +1070,6 @@
         "lemma": "samach"
       },
       {
-        "surface": "over you",
-        "lemma": "al"
-      },
-      {
         "surface": "and exalted",
         "lemma": "rum"
       },
@@ -1142,10 +1090,6 @@
       {
         "surface": "cry out",
         "lemma": "tsaaq"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the Lord",
@@ -1260,14 +1204,6 @@
       {
         "surface": "your hands",
         "lemma": "kaph"
-      },
-      {
-        "surface": "to Him",
-        "lemma": "el"
-      },
-      {
-        "surface": "for",
-        "lemma": "al"
       },
       {
         "surface": "the lives",
@@ -1484,10 +1420,6 @@
         "lemma": "kalah"
       },
       {
-        "surface": "those",
-        "lemma": "asher"
-      },
-      {
         "surface": "I nurtured",
         "lemma": "taphach"
       },
@@ -1498,8 +1430,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "lo",
-    "kol"
+    "kol",
+    "oyev"
   ]
 }

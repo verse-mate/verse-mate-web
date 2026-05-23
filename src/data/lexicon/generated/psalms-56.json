@@ -10,10 +10,6 @@
         "lemma": "natsach"
       },
       {
-        "surface": "To the tune of",
-        "lemma": "al"
-      },
-      {
         "surface": "A Dove",
         "lemma": "yonatelemrechoqim"
       },
@@ -42,10 +38,6 @@
         "lemma": "achaz"
       },
       {
-        "surface": "him",
-        "lemma": "et"
-      },
-      {
         "surface": "in Gath",
         "lemma": "gat"
       },
@@ -56,10 +48,6 @@
       {
         "surface": "O God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "men",
@@ -104,10 +92,6 @@
         "lemma": "yom"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "many",
         "lemma": "rav"
       },
@@ -130,16 +114,8 @@
         "lemma": "yare"
       },
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "put my trust",
         "lemma": "batach"
-      },
-      {
-        "surface": "in You",
-        "lemma": "el"
       }
     ],
     "4": [
@@ -206,10 +182,6 @@
         "lemma": "machashavah"
       },
       {
-        "surface": "are on my",
-        "lemma": "al"
-      },
-      {
         "surface": "demise",
         "lemma": "ra"
       }
@@ -224,20 +196,12 @@
         "lemma": "tsaphan"
       },
       {
-        "surface": "they",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "watch",
         "lemma": "shamar"
       },
       {
         "surface": "my steps",
         "lemma": "aqev"
-      },
-      {
-        "surface": "while",
-        "lemma": "asher"
       },
       {
         "surface": "they wait",
@@ -249,10 +213,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "In spite of",
-        "lemma": "al"
-      },
       {
         "surface": "such sin",
         "lemma": "aven"
@@ -279,10 +239,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
       {
         "surface": "have taken account",
         "lemma": "saphar"
@@ -314,10 +270,6 @@
     ],
     "9": [
       {
-        "surface": "Then",
-        "lemma": "az"
-      },
-      {
         "surface": "my enemies",
         "lemma": "oyev"
       },
@@ -334,16 +286,8 @@
         "lemma": "qara"
       },
       {
-        "surface": "By this",
-        "lemma": "zeh"
-      },
-      {
         "surface": "I will know",
         "lemma": "yada"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "God is",
@@ -412,10 +356,6 @@
         "lemma": "neder"
       },
       {
-        "surface": "are upon me",
-        "lemma": "al"
-      },
-      {
         "surface": "O God",
         "lemma": "elohim"
       },
@@ -429,10 +369,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "You have delivered",
         "lemma": "natsal"
@@ -477,7 +413,7 @@
   },
   "themeLemmas": [
     "kol",
-    "ki",
-    "al"
+    "yonatelemrechoqim",
+    "yare"
   ]
 }

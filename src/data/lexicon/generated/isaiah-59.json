@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Surely",
-        "lemma": "hen"
-      },
-      {
         "surface": "the arm",
         "lemma": "yad"
       },
@@ -44,10 +40,6 @@
     ],
     "2": [
       {
-        "surface": "But",
-        "lemma": "ki"
-      },
-      {
         "surface": "your iniquities",
         "lemma": "avan"
       },
@@ -81,10 +73,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "your hands",
         "lemma": "kaph"
@@ -158,10 +146,6 @@
       {
         "surface": "They rely",
         "lemma": "batach"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "empty pleas",
@@ -406,20 +390,12 @@
     ],
     "9": [
       {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
-      {
         "surface": "justice",
         "lemma": "mishpat"
       },
       {
         "surface": "is far",
         "lemma": "rachaq"
-      },
-      {
-        "surface": "from us",
-        "lemma": "min"
       },
       {
         "surface": "and righteousness",
@@ -440,10 +416,6 @@
       {
         "surface": "for light",
         "lemma": "or"
-      },
-      {
-        "surface": "but there",
-        "lemma": "hinneh"
       },
       {
         "surface": "is darkness",
@@ -548,17 +520,9 @@
       {
         "surface": "but it is far",
         "lemma": "rachaq"
-      },
-      {
-        "surface": "from us",
-        "lemma": "min"
       }
     ],
     "12": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "our transgressions",
         "lemma": "pesah"
@@ -582,14 +546,6 @@
       {
         "surface": "Our transgressions",
         "lemma": "pesah"
-      },
-      {
-        "surface": "are indeed",
-        "lemma": "ki"
-      },
-      {
-        "surface": "with us",
-        "lemma": "et"
       },
       {
         "surface": "and we know",
@@ -676,10 +632,6 @@
         "lemma": "rachoq"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "truth",
         "lemma": "emet"
       },
@@ -742,10 +694,6 @@
         "lemma": "raa"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "there was no",
         "lemma": "ayin"
       },
@@ -760,10 +708,6 @@
         "lemma": "raah"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "there was no",
         "lemma": "ayin"
       },
@@ -774,10 +718,6 @@
       {
         "surface": "He was amazed",
         "lemma": "shamem"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "there was no one",
@@ -860,10 +800,6 @@
         "lemma": "salem"
       },
       {
-        "surface": "according to",
-        "lemma": "al"
-      },
-      {
         "surface": "their deeds",
         "lemma": "gemulah"
       },
@@ -916,10 +852,6 @@
       {
         "surface": "where it rises",
         "lemma": "mizrach"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "He will come",
@@ -982,20 +914,8 @@
     ],
     "21": [
       {
-        "surface": "As for Me",
-        "lemma": "ani"
-      },
-      {
-        "surface": "this",
-        "lemma": "zot"
-      },
-      {
         "surface": "is My covenant",
         "lemma": "berit"
-      },
-      {
-        "surface": "with them",
-        "lemma": "et"
       },
       {
         "surface": "says",
@@ -1010,20 +930,8 @@
         "lemma": "ruach"
       },
       {
-        "surface": "will not depart",
-        "lemma": "asher"
-      },
-      {
-        "surface": "from you",
-        "lemma": "al"
-      },
-      {
         "surface": "and My words",
         "lemma": "davar"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "I have put",
@@ -1070,10 +978,6 @@
         "lemma": "attah"
       },
       {
-        "surface": "and",
-        "lemma": "ad"
-      },
-      {
         "surface": "forevermore",
         "lemma": "olam"
       },
@@ -1088,8 +992,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "lo",
-    "tsedaqah"
+    "tsedaqah",
+    "peh"
   ]
 }

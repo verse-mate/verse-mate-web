@@ -10,10 +10,6 @@
         "lemma": "david"
       },
       {
-        "surface": "To You",
-        "lemma": "el"
-      },
-      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -57,10 +53,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "Surely",
-        "lemma": "gam"
-      },
       {
         "surface": "none",
         "lemma": "lo"
@@ -122,14 +114,6 @@
         "lemma": "lamad"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "are the God",
         "lemma": "elohim"
       },
@@ -148,10 +132,6 @@
       {
         "surface": "I wait",
         "lemma": "qavah"
-      },
-      {
-        "surface": "for You",
-        "lemma": "et"
       }
     ],
     "6": [
@@ -170,14 +150,6 @@
       {
         "surface": "and loving devotion",
         "lemma": "chesed"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "they are",
-        "lemma": "hemmah"
       },
       {
         "surface": "from age to age",
@@ -214,10 +186,6 @@
         "lemma": "chesed"
       },
       {
-        "surface": "because of",
-        "lemma": "maan"
-      },
-      {
         "surface": "Your goodness",
         "lemma": "tuv"
       },
@@ -238,10 +206,6 @@
       {
         "surface": "is the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "therefore",
-        "lemma": "al"
       },
       {
         "surface": "He shows",
@@ -314,10 +278,6 @@
     ],
     "11": [
       {
-        "surface": "For the sake of",
-        "lemma": "maan"
-      },
-      {
         "surface": "Your name",
         "lemma": "shem"
       },
@@ -332,14 +292,6 @@
       {
         "surface": "my iniquity",
         "lemma": "avan"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "it",
-        "lemma": "hu"
       },
       {
         "surface": "is great",
@@ -434,20 +386,8 @@
         "lemma": "tamid"
       },
       {
-        "surface": "on",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
       },
       {
         "surface": "will free",
@@ -468,20 +408,8 @@
         "lemma": "panah"
       },
       {
-        "surface": "to me",
-        "lemma": "el"
-      },
-      {
         "surface": "and be gracious",
         "lemma": "chanan"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "am lonely",
@@ -550,10 +478,6 @@
         "lemma": "oyev"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "they are many",
         "lemma": "ravav"
       },
@@ -592,10 +516,6 @@
         "lemma": "bush"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "I take refuge",
         "lemma": "chasah"
       }
@@ -612,10 +532,6 @@
       {
         "surface": "preserve me",
         "lemma": "natsar"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
       },
       {
         "surface": "I wait for You",
@@ -646,8 +562,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
-    "al",
-    "kol"
+    "kol",
+    "bush",
+    "al"
   ]
 }

@@ -14,10 +14,6 @@
         "lemma": "yashav"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "the dust",
         "lemma": "aphar"
       },
@@ -56,10 +52,6 @@
       {
         "surface": "of the Chaldeans",
         "lemma": "kasdi"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "you will no",
@@ -142,10 +134,6 @@
         "lemma": "galah"
       },
       {
-        "surface": "and",
-        "lemma": "gam"
-      },
-      {
         "surface": "your shame",
         "lemma": "cherpah"
       },
@@ -226,10 +214,6 @@
         "lemma": "kasdi"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "you will no",
         "lemma": "lo"
       },
@@ -254,10 +238,6 @@
       {
         "surface": "I was angry",
         "lemma": "qatsaph"
-      },
-      {
-        "surface": "with",
-        "lemma": "al"
       },
       {
         "surface": "My people",
@@ -290,10 +270,6 @@
       {
         "surface": "mercy",
         "lemma": "racham"
-      },
-      {
-        "surface": "even on",
-        "lemma": "al"
       },
       {
         "surface": "the elderly",
@@ -330,14 +306,6 @@
         "lemma": "sum"
       },
       {
-        "surface": "these",
-        "lemma": "elleh"
-      },
-      {
-        "surface": "things to",
-        "lemma": "al"
-      },
-      {
         "surface": "heart",
         "lemma": "lev"
       },
@@ -360,10 +328,6 @@
         "lemma": "shama"
       },
       {
-        "surface": "this",
-        "lemma": "zot"
-      },
-      {
         "surface": "O lover of luxury",
         "lemma": "adin"
       },
@@ -378,10 +342,6 @@
       {
         "surface": "to herself",
         "lemma": "levav"
-      },
-      {
-        "surface": "I am",
-        "lemma": "ani"
       },
       {
         "surface": "and there is none",
@@ -409,10 +369,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "These",
-        "lemma": "elleh"
-      },
       {
         "surface": "two things",
         "lemma": "shenayim"
@@ -444,10 +400,6 @@
       {
         "surface": "They will come",
         "lemma": "bo"
-      },
-      {
-        "surface": "upon you",
-        "lemma": "al"
       },
       {
         "surface": "in full measure",
@@ -512,10 +464,6 @@
         "lemma": "lev"
       },
       {
-        "surface": "I am",
-        "lemma": "ani"
-      },
-      {
         "surface": "and there is none",
         "lemma": "ephes"
       },
@@ -532,10 +480,6 @@
       {
         "surface": "will come",
         "lemma": "bo"
-      },
-      {
-        "surface": "upon you",
-        "lemma": "al"
       },
       {
         "surface": "you will not",
@@ -558,10 +502,6 @@
         "lemma": "naphal"
       },
       {
-        "surface": "you",
-        "lemma": "al"
-      },
-      {
         "surface": "that you will be unable",
         "lemma": "lo"
       },
@@ -576,10 +516,6 @@
       {
         "surface": "will happen",
         "lemma": "bo"
-      },
-      {
-        "surface": "to you",
-        "lemma": "al"
       },
       {
         "surface": "suddenly",
@@ -606,10 +542,6 @@
       {
         "surface": "sorceries",
         "lemma": "kesheph"
-      },
-      {
-        "surface": "with which",
-        "lemma": "asher"
       },
       {
         "surface": "you have wearied yourself",
@@ -658,10 +590,6 @@
         "lemma": "amad"
       },
       {
-        "surface": "now",
-        "lemma": "na"
-      },
-      {
         "surface": "and save you",
         "lemma": "yasah"
       },
@@ -684,17 +612,9 @@
       {
         "surface": "predict",
         "lemma": "yada"
-      },
-      {
-        "surface": "your fate",
-        "lemma": "asher"
       }
     ],
     "14": [
-      {
-        "surface": "Surely",
-        "lemma": "hinneh"
-      },
       {
         "surface": "they are",
         "lemma": "hayah"
@@ -766,10 +686,6 @@
         "lemma": "hayah"
       },
       {
-        "surface": "those with whom",
-        "lemma": "asher"
-      },
-      {
         "surface": "you have labored",
         "lemma": "yaga"
       },
@@ -805,7 +721,7 @@
   },
   "themeLemmas": [
     "lo",
-    "al",
-    "yashav"
+    "yashav",
+    "bo"
   ]
 }

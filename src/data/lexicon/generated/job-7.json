@@ -18,10 +18,6 @@
         "lemma": "tsava"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "earth",
         "lemma": "erets"
       },
@@ -128,10 +124,6 @@
         "lemma": "sava"
       },
       {
-        "surface": "until",
-        "lemma": "ad"
-      },
-      {
         "surface": "dawn",
         "lemma": "nesheph"
       }
@@ -180,10 +172,6 @@
         "lemma": "qalal"
       },
       {
-        "surface": "than",
-        "lemma": "min"
-      },
-      {
         "surface": "a weaver’s shuttle",
         "lemma": "ereg"
       },
@@ -204,10 +192,6 @@
       {
         "surface": "Remember",
         "lemma": "zakhar"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "my life",
@@ -326,14 +310,6 @@
     ],
     "11": [
       {
-        "surface": "Therefore",
-        "lemma": "gam"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "will not",
         "lemma": "lo"
       },
@@ -372,10 +348,6 @@
     ],
     "12": [
       {
-        "surface": "Am I",
-        "lemma": "ani"
-      },
-      {
         "surface": "the sea",
         "lemma": "yam"
       },
@@ -388,10 +360,6 @@
         "lemma": "tan"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "You must keep me under",
         "lemma": "sum"
       },
@@ -401,10 +369,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "When",
-        "lemma": "ki"
-      },
       {
         "surface": "I think",
         "lemma": "amar"
@@ -492,10 +456,6 @@
         "lemma": "chadal"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "my days are",
         "lemma": "yom"
       },
@@ -514,16 +474,8 @@
         "lemma": "enosh"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "You should exalt him",
         "lemma": "gadal"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "You should set",
@@ -532,10 +484,6 @@
       {
         "surface": "Your heart",
         "lemma": "lev"
-      },
-      {
-        "surface": "upon him",
-        "lemma": "el"
       }
     ],
     "18": [
@@ -566,20 +514,12 @@
         "lemma": "shaah"
       },
       {
-        "surface": "from me",
-        "lemma": "min"
-      },
-      {
         "surface": "or",
         "lemma": "lo"
       },
       {
         "surface": "leave me alone",
         "lemma": "raphah"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "swallow",
@@ -630,10 +570,6 @@
       {
         "surface": "a burden",
         "lemma": "massa"
-      },
-      {
-        "surface": "to You",
-        "lemma": "al"
       }
     ],
     "21": [
@@ -662,10 +598,6 @@
         "lemma": "avan"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "soon",
         "lemma": "attah"
       },
@@ -689,7 +621,7 @@
   },
   "themeLemmas": [
     "lo",
-    "ki",
-    "mah"
+    "mah",
+    "sum"
   ]
 }

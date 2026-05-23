@@ -30,10 +30,6 @@
         "lemma": "zanah"
       },
       {
-        "surface": "with",
-        "lemma": "el"
-      },
-      {
         "surface": "the daughters",
         "lemma": "bat"
       },
@@ -116,10 +112,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "Moses",
         "lemma": "mosheh"
       },
@@ -142,10 +134,6 @@
       {
         "surface": "and execute",
         "lemma": "yaqa"
-      },
-      {
-        "surface": "them",
-        "lemma": "et"
       },
       {
         "surface": "in",
@@ -220,10 +208,6 @@
     ],
     "6": [
       {
-        "surface": "Just then",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "an Israelite",
         "lemma": "ben"
       },
@@ -238,10 +222,6 @@
       {
         "surface": "brought",
         "lemma": "qarav"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "his family",
@@ -274,10 +254,6 @@
       {
         "surface": "of Israel",
         "lemma": "yisrael"
-      },
-      {
-        "surface": "while they",
-        "lemma": "hemmah"
       },
       {
         "surface": "were weeping",
@@ -360,10 +336,6 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "into",
-        "lemma": "el"
-      },
-      {
         "surface": "the tent",
         "lemma": "qubbah"
       },
@@ -384,10 +356,6 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "and on through",
-        "lemma": "el"
-      },
-      {
         "surface": "the belly",
         "lemma": "qovah"
       },
@@ -398,10 +366,6 @@
       {
         "surface": "So the plague",
         "lemma": "maggephah"
-      },
-      {
-        "surface": "against",
-        "lemma": "al"
       },
       {
         "surface": "the Israelites",
@@ -434,10 +398,6 @@
       {
         "surface": "said",
         "lemma": "davar"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "Moses",
@@ -476,10 +436,6 @@
       {
         "surface": "My wrath",
         "lemma": "chemah"
-      },
-      {
-        "surface": "away from",
-        "lemma": "al"
       },
       {
         "surface": "the Israelites",
@@ -522,10 +478,6 @@
       {
         "surface": "therefore",
         "lemma": "ken"
-      },
-      {
-        "surface": "that",
-        "lemma": "hen"
       },
       {
         "surface": "I am granting",
@@ -582,10 +534,6 @@
         "lemma": "kipher"
       },
       {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "the Israelites",
         "lemma": "ben"
       }
@@ -606,10 +554,6 @@
       {
         "surface": "who was slain",
         "lemma": "nakhah"
-      },
-      {
-        "surface": "with",
-        "lemma": "et"
       },
       {
         "surface": "the Midianite woman",
@@ -716,14 +660,6 @@
     ],
     "18": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "they",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "assailed",
         "lemma": "tsarar"
       },
@@ -732,16 +668,8 @@
         "lemma": "nekhel"
       },
       {
-        "surface": "when",
-        "lemma": "asher"
-      },
-      {
         "surface": "they seduced",
         "lemma": "nakhal"
-      },
-      {
-        "surface": "in",
-        "lemma": "al"
       },
       {
         "surface": "the matter",
@@ -750,10 +678,6 @@
       {
         "surface": "of Peor",
         "lemma": "peor"
-      },
-      {
-        "surface": "and",
-        "lemma": "al"
       },
       {
         "surface": "their sister",
@@ -788,10 +712,6 @@
         "lemma": "maggephah"
       },
       {
-        "surface": "came",
-        "lemma": "al"
-      },
-      {
         "surface": "because of",
         "lemma": "davar"
       },
@@ -803,7 +723,7 @@
   },
   "themeLemmas": [
     "yisrael",
-    "al",
-    "mosheh"
+    "mosheh",
+    "nakhah"
   ]
 }

@@ -58,16 +58,8 @@
     ],
     "3": [
       {
-        "surface": "then",
-        "lemma": "epho"
-      },
-      {
         "surface": "do",
         "lemma": "asah"
-      },
-      {
-        "surface": "this",
-        "lemma": "zot"
       },
       {
         "surface": "my son",
@@ -76,10 +68,6 @@
       {
         "surface": "to free yourself",
         "lemma": "natsal"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "you have fallen",
@@ -236,10 +224,6 @@
       {
         "surface": "How",
         "lemma": "matay"
-      },
-      {
-        "surface": "long",
-        "lemma": "ad"
       },
       {
         "surface": "will you lie there",
@@ -406,10 +390,6 @@
     ],
     "15": [
       {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
-      {
         "surface": "calamity",
         "lemma": "ed"
       },
@@ -439,10 +419,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "There are",
-        "lemma": "hennah"
-      },
       {
         "surface": "six things that",
         "lemma": "shesh"
@@ -614,20 +590,12 @@
         "lemma": "tamid"
       },
       {
-        "surface": "upon",
-        "lemma": "al"
-      },
-      {
         "surface": "your heart",
         "lemma": "lev"
       },
       {
         "surface": "tie them",
         "lemma": "anad"
-      },
-      {
-        "surface": "around",
-        "lemma": "al"
       },
       {
         "surface": "your neck",
@@ -644,10 +612,6 @@
         "lemma": "nachah"
       },
       {
-        "surface": "when you",
-        "lemma": "et"
-      },
-      {
         "surface": "lie down",
         "lemma": "shakhav"
       },
@@ -656,16 +620,8 @@
         "lemma": "shamar"
       },
       {
-        "surface": "over you",
-        "lemma": "al"
-      },
-      {
         "surface": "when you awake",
         "lemma": "quts"
-      },
-      {
-        "surface": "they",
-        "lemma": "hu"
       },
       {
         "surface": "will speak to you",
@@ -673,10 +629,6 @@
       }
     ],
     "23": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "this commandment",
         "lemma": "mitsvah"
@@ -764,10 +716,6 @@
     ],
     "26": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the levy",
         "lemma": "bead"
       },
@@ -840,10 +788,6 @@
         "lemma": "halakh"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "hot coals",
         "lemma": "gechel"
       },
@@ -904,10 +848,6 @@
         "lemma": "gannav"
       },
       {
-        "surface": "if",
-        "lemma": "ki"
-      },
-      {
         "surface": "he steals",
         "lemma": "ganav"
       },
@@ -918,10 +858,6 @@
       {
         "surface": "his",
         "lemma": "nephesh"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "ki"
       },
       {
         "surface": "hunger",
@@ -972,10 +908,6 @@
         "lemma": "lev"
       },
       {
-        "surface": "whoever",
-        "lemma": "hu"
-      },
-      {
         "surface": "does so",
         "lemma": "asah"
       },
@@ -1015,10 +947,6 @@
       }
     ],
     "34": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "jealousy",
         "lemma": "qinah"
@@ -1081,7 +1009,7 @@
   },
   "themeLemmas": [
     "lo",
-    "al",
-    "ki"
+    "halakh",
+    "rea"
   ]
 }

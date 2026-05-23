@@ -152,10 +152,6 @@
         "lemma": "rakhav"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "thirty",
         "lemma": "sheloshim"
       },
@@ -178,14 +174,6 @@
       {
         "surface": "of Gilead",
         "lemma": "gilad"
-      },
-      {
-        "surface": "which to",
-        "lemma": "ad"
-      },
-      {
-        "surface": "this",
-        "lemma": "zeh"
       },
       {
         "surface": "day",
@@ -272,16 +260,8 @@
         "lemma": "tsidon"
       },
       {
-        "surface": "and",
-        "lemma": "et"
-      },
-      {
         "surface": "Moab",
         "lemma": "moav"
-      },
-      {
-        "surface": "and",
-        "lemma": "et"
       },
       {
         "surface": "the gods",
@@ -348,10 +328,6 @@
     ],
     "8": [
       {
-        "surface": "who that very",
-        "lemma": "hu"
-      },
-      {
         "surface": "year",
         "lemma": "shaneh"
       },
@@ -410,10 +386,6 @@
         "lemma": "ben"
       },
       {
-        "surface": "also",
-        "lemma": "gam"
-      },
-      {
         "surface": "crossed",
         "lemma": "avar"
       },
@@ -464,10 +436,6 @@
         "lemma": "zaaq"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -478,10 +446,6 @@
       {
         "surface": "We have sinned",
         "lemma": "chata"
-      },
-      {
-        "surface": "for we have indeed",
-        "lemma": "ki"
       },
       {
         "surface": "forsaken",
@@ -548,16 +512,8 @@
         "lemma": "tsaaq"
       },
       {
-        "surface": "to Me",
-        "lemma": "el"
-      },
-      {
         "surface": "did I not save",
         "lemma": "yasah"
-      },
-      {
-        "surface": "you",
-        "lemma": "et"
       },
       {
         "surface": "from their hands",
@@ -566,16 +522,8 @@
     ],
     "13": [
       {
-        "surface": "But you",
-        "lemma": "attah"
-      },
-      {
         "surface": "have forsaken",
         "lemma": "azav"
-      },
-      {
-        "surface": "Me",
-        "lemma": "et"
       },
       {
         "surface": "and served",
@@ -604,10 +552,6 @@
       {
         "surface": "save",
         "lemma": "yasah"
-      },
-      {
-        "surface": "you",
-        "lemma": "et"
       }
     ],
     "14": [
@@ -620,20 +564,12 @@
         "lemma": "zaaq"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the gods",
         "lemma": "elohim"
       },
       {
         "surface": "you have chosen",
         "lemma": "bachar"
-      },
-      {
-        "surface": "Let them",
-        "lemma": "hemmah"
       },
       {
         "surface": "save",
@@ -662,10 +598,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -684,10 +616,6 @@
       {
         "surface": "but",
         "lemma": "akh"
-      },
-      {
-        "surface": "please",
-        "lemma": "na"
       },
       {
         "surface": "deliver us today",
@@ -784,10 +712,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "one",
         "lemma": "ish"
       },
@@ -835,7 +759,7 @@
   },
   "themeLemmas": [
     "yisrael",
-    "et",
-    "gilad"
+    "gilad",
+    "avad"
   ]
 }

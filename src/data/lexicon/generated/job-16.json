@@ -24,10 +24,6 @@
         "lemma": "rav"
       },
       {
-        "surface": "things like these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "miserable",
         "lemma": "amal"
       },
@@ -62,30 +58,14 @@
         "lemma": "marats"
       },
       {
-        "surface": "to",
-        "lemma": "ki"
-      },
-      {
         "surface": "continue testifying",
         "lemma": "un"
       }
     ],
     "4": [
       {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
-      {
-        "surface": "could also",
-        "lemma": "gam"
-      },
-      {
         "surface": "speak",
         "lemma": "davar"
-      },
-      {
-        "surface": "if",
-        "lemma": "lu"
       },
       {
         "surface": "you",
@@ -112,30 +92,18 @@
         "lemma": "millah"
       },
       {
-        "surface": "against you",
-        "lemma": "al"
-      },
-      {
         "surface": "and shake",
         "lemma": "nua"
       },
       {
         "surface": "my head",
         "lemma": "rosh"
-      },
-      {
-        "surface": "at you",
-        "lemma": "al"
       }
     ],
     "5": [
       {
         "surface": "But I would encourage you",
         "lemma": "amats"
-      },
-      {
-        "surface": "with",
-        "lemma": "bemo"
       },
       {
         "surface": "my mouth",
@@ -266,10 +234,6 @@
         "lemma": "shen"
       },
       {
-        "surface": "at me",
-        "lemma": "al"
-      },
-      {
         "surface": "My adversary",
         "lemma": "tsar"
       },
@@ -292,10 +256,6 @@
         "lemma": "peh"
       },
       {
-        "surface": "against me",
-        "lemma": "al"
-      },
-      {
         "surface": "and strike",
         "lemma": "nakhah"
       },
@@ -314,10 +274,6 @@
       {
         "surface": "together",
         "lemma": "yachad"
-      },
-      {
-        "surface": "against me",
-        "lemma": "al"
       }
     ],
     "11": [
@@ -330,20 +286,12 @@
         "lemma": "sagar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "unjust men",
         "lemma": "avil"
       },
       {
         "surface": "He has thrown me",
         "lemma": "yarat"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "the clutches",
@@ -436,20 +384,12 @@
         "lemma": "perets"
       },
       {
-        "surface": "upon",
-        "lemma": "al"
-      },
-      {
         "surface": "wound",
         "lemma": "perets"
       },
       {
         "surface": "He rushes",
         "lemma": "ruts"
-      },
-      {
-        "surface": "me",
-        "lemma": "al"
       },
       {
         "surface": "like a mighty warrior",
@@ -464,10 +404,6 @@
       {
         "surface": "sackcloth",
         "lemma": "saq"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "my skin",
@@ -496,10 +432,6 @@
         "lemma": "chamar"
       },
       {
-        "surface": "with",
-        "lemma": "min"
-      },
-      {
         "surface": "weeping",
         "lemma": "bekhi"
       },
@@ -508,19 +440,11 @@
         "lemma": "tsalmavet"
       },
       {
-        "surface": "ring",
-        "lemma": "al"
-      },
-      {
         "surface": "my eyes",
         "lemma": "aphaph"
       }
     ],
     "17": [
-      {
-        "surface": "yet",
-        "lemma": "al"
-      },
       {
         "surface": "my hands",
         "lemma": "kaph"
@@ -578,10 +502,6 @@
     ],
     "19": [
       {
-        "surface": "Even",
-        "lemma": "gam"
-      },
-      {
         "surface": "now",
         "lemma": "attah"
       },
@@ -620,10 +540,6 @@
         "lemma": "dalaph"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "God",
         "lemma": "eloah"
       }
@@ -636,10 +552,6 @@
       {
         "surface": "might plead",
         "lemma": "yakhach"
-      },
-      {
-        "surface": "with",
-        "lemma": "im"
       },
       {
         "surface": "God",
@@ -655,10 +567,6 @@
       }
     ],
     "22": [
-      {
-        "surface": "For when",
-        "lemma": "ki"
-      },
       {
         "surface": "only a few",
         "lemma": "mispar"
@@ -690,8 +598,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "lo",
-    "un"
+    "un",
+    "hayah"
   ]
 }

@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "At that",
-        "lemma": "hu"
-      },
-      {
         "surface": "time",
         "lemma": "et"
       },
@@ -28,10 +24,6 @@
       {
         "surface": "who stands watch",
         "lemma": "amad"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "your people",
@@ -54,10 +46,6 @@
         "lemma": "batstsarah"
       },
       {
-        "surface": "the likes of which",
-        "lemma": "asher"
-      },
-      {
         "surface": "will not have",
         "lemma": "lo"
       },
@@ -74,20 +62,8 @@
         "lemma": "goy"
       },
       {
-        "surface": "until",
-        "lemma": "ad"
-      },
-      {
-        "surface": "that",
-        "lemma": "hu"
-      },
-      {
         "surface": "time",
         "lemma": "et"
-      },
-      {
-        "surface": "But at that",
-        "lemma": "hu"
       },
       {
         "surface": "time",
@@ -140,20 +116,12 @@
         "lemma": "quts"
       },
       {
-        "surface": "some",
-        "lemma": "elleh"
-      },
-      {
         "surface": "to everlasting",
         "lemma": "olam"
       },
       {
         "surface": "life",
         "lemma": "chay"
-      },
-      {
-        "surface": "but others",
-        "lemma": "elleh"
       },
       {
         "surface": "to shame",
@@ -208,10 +176,6 @@
     ],
     "4": [
       {
-        "surface": "But you",
-        "lemma": "attah"
-      },
-      {
         "surface": "Daniel",
         "lemma": "daniyyel"
       },
@@ -230,10 +194,6 @@
       {
         "surface": "the book",
         "lemma": "sepher"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "the time",
@@ -262,20 +222,12 @@
     ],
     "5": [
       {
-        "surface": "Then I",
-        "lemma": "ani"
-      },
-      {
         "surface": "Daniel",
         "lemma": "daniyyel"
       },
       {
         "surface": "looked",
         "lemma": "raah"
-      },
-      {
-        "surface": "and saw",
-        "lemma": "hinneh"
       },
       {
         "surface": "two",
@@ -336,10 +288,6 @@
         "lemma": "bad"
       },
       {
-        "surface": "who",
-        "lemma": "asher"
-      },
-      {
         "surface": "was above",
         "lemma": "maal"
       },
@@ -354,10 +302,6 @@
       {
         "surface": "How long",
         "lemma": "matay"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "the fulfillment",
@@ -380,10 +324,6 @@
       {
         "surface": "in linen",
         "lemma": "bad"
-      },
-      {
-        "surface": "who",
-        "lemma": "asher"
       },
       {
         "surface": "was above",
@@ -410,20 +350,12 @@
         "lemma": "semol"
       },
       {
-        "surface": "toward",
-        "lemma": "el"
-      },
-      {
         "surface": "heaven",
         "lemma": "shamayim"
       },
       {
         "surface": "and I heard",
         "lemma": "shama"
-      },
-      {
-        "surface": "him",
-        "lemma": "et"
       },
       {
         "surface": "swear",
@@ -436,10 +368,6 @@
       {
         "surface": "forever",
         "lemma": "olam"
-      },
-      {
-        "surface": "saying",
-        "lemma": "ki"
       },
       {
         "surface": "It will be for a time",
@@ -478,19 +406,11 @@
         "lemma": "kol"
       },
       {
-        "surface": "these things",
-        "lemma": "elleh"
-      },
-      {
         "surface": "will be completed",
         "lemma": "kalah"
       }
     ],
     "8": [
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
       {
         "surface": "heard",
         "lemma": "shama"
@@ -518,10 +438,6 @@
       {
         "surface": "will be the outcome",
         "lemma": "acharit"
-      },
-      {
-        "surface": "of these things",
-        "lemma": "elleh"
       }
     ],
     "9": [
@@ -538,10 +454,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the words",
         "lemma": "davar"
       },
@@ -552,10 +464,6 @@
       {
         "surface": "and sealed",
         "lemma": "chatam"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "the time",
@@ -670,10 +578,6 @@
     ],
     "13": [
       {
-        "surface": "But as for you",
-        "lemma": "attah"
-      },
-      {
         "surface": "go on your way",
         "lemma": "halakh"
       },
@@ -706,6 +610,6 @@
   "themeLemmas": [
     "et",
     "qets",
-    "ad"
+    "rav"
   ]
 }

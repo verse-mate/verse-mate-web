@@ -202,10 +202,6 @@
         "lemma": "raash"
       },
       {
-        "surface": "before Him",
-        "lemma": "min"
-      },
-      {
         "surface": "and the hills",
         "lemma": "givah"
       },
@@ -282,10 +278,6 @@
       {
         "surface": "are shattered",
         "lemma": "natats"
-      },
-      {
-        "surface": "before Him",
-        "lemma": "min"
       }
     ],
     "7": [
@@ -362,16 +354,8 @@
         "lemma": "chashav"
       },
       {
-        "surface": "against",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
       },
       {
         "surface": "will bring",
@@ -400,16 +384,8 @@
     ],
     "10": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "they will be entangled",
         "lemma": "savakh"
-      },
-      {
-        "surface": "as with",
-        "lemma": "ad"
       },
       {
         "surface": "thorns",
@@ -442,10 +418,6 @@
     ],
     "11": [
       {
-        "surface": "From you, O Nineveh",
-        "lemma": "min"
-      },
-      {
         "surface": "comes forth",
         "lemma": "yatsa"
       },
@@ -456,10 +428,6 @@
       {
         "surface": "of evil",
         "lemma": "ra"
-      },
-      {
-        "surface": "against",
-        "lemma": "al"
       },
       {
         "surface": "the LORD",
@@ -542,10 +510,6 @@
         "lemma": "mot"
       },
       {
-        "surface": "from your neck",
-        "lemma": "al"
-      },
-      {
         "surface": "and tear away",
         "lemma": "nataq"
       },
@@ -562,10 +526,6 @@
       {
         "surface": "has issued a command",
         "lemma": "tsavah"
-      },
-      {
-        "surface": "concerning you, O Nineveh",
-        "lemma": "al"
       },
       {
         "surface": "There will be no",
@@ -608,23 +568,11 @@
         "lemma": "qever"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "you are contemptible",
         "lemma": "qalal"
       }
     ],
     "15": [
-      {
-        "surface": "Look",
-        "lemma": "hinneh"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
-      },
       {
         "surface": "the mountains",
         "lemma": "har"
@@ -666,10 +614,6 @@
         "lemma": "neder"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the wicked",
         "lemma": "beliyyaal"
       },
@@ -697,7 +641,7 @@
   },
   "themeLemmas": [
     "lo",
-    "al",
-    "naqam"
+    "naqam",
+    "kol"
   ]
 }

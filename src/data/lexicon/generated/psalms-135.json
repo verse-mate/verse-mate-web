@@ -66,10 +66,6 @@
         "lemma": "halal"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -86,19 +82,11 @@
         "lemma": "shem"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "it is lovely",
         "lemma": "naim"
       }
     ],
     "4": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the LORD",
         "lemma": "yah"
@@ -122,20 +110,8 @@
     ],
     "5": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "know",
         "lemma": "yada"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -170,10 +146,6 @@
       {
         "surface": "all",
         "lemma": "kol"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "pleases Him",
@@ -258,10 +230,6 @@
       {
         "surface": "of both man",
         "lemma": "adam"
-      },
-      {
-        "surface": "and",
-        "lemma": "ad"
       },
       {
         "surface": "beast",
@@ -420,10 +388,6 @@
     ],
     "14": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -438,10 +402,6 @@
       {
         "surface": "and will have compassion",
         "lemma": "nacham"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "His servants",
@@ -544,16 +504,8 @@
         "lemma": "hayah"
       },
       {
-        "surface": "like them",
-        "lemma": "kemo"
-      },
-      {
         "surface": "as do all",
         "lemma": "kol"
-      },
-      {
-        "surface": "who",
-        "lemma": "asher"
       },
       {
         "surface": "trust",
@@ -657,7 +609,7 @@
   },
   "themeLemmas": [
     "kol",
-    "ki",
-    "halal"
+    "halal",
+    "bet"
   ]
 }

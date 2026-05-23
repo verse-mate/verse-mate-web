@@ -60,10 +60,6 @@
     ],
     "2": [
       {
-        "surface": "How long",
-        "lemma": "ad"
-      },
-      {
         "surface": "O men",
         "lemma": "ben"
       },
@@ -102,10 +98,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -128,10 +120,6 @@
       {
         "surface": "when I call",
         "lemma": "qara"
-      },
-      {
-        "surface": "to Him",
-        "lemma": "el"
       }
     ],
     "4": [
@@ -146,10 +134,6 @@
       {
         "surface": "sin",
         "lemma": "chata"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "your bed",
@@ -190,10 +174,6 @@
         "lemma": "batach"
       },
       {
-        "surface": "in",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       }
@@ -230,10 +210,6 @@
       {
         "surface": "of Your face",
         "lemma": "paneh"
-      },
-      {
-        "surface": "upon us",
-        "lemma": "al"
       },
       {
         "surface": "O LORD",
@@ -288,14 +264,6 @@
         "lemma": "shalom"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "alone",
         "lemma": "badad"
       },
@@ -314,8 +282,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "tsedeq",
-    "shama"
+    "shama",
+    "selah"
   ]
 }

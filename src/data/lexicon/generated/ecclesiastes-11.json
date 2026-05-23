@@ -14,16 +14,8 @@
         "lemma": "lechem"
       },
       {
-        "surface": "upon",
-        "lemma": "al"
-      },
-      {
         "surface": "the waters",
         "lemma": "mayim"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "after many",
@@ -52,16 +44,8 @@
         "lemma": "sheva"
       },
       {
-        "surface": "or even",
-        "lemma": "gam"
-      },
-      {
         "surface": "eight",
         "lemma": "shemoneh"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "you do not",
@@ -108,10 +92,6 @@
       {
         "surface": "rain",
         "lemma": "geshem"
-      },
-      {
-        "surface": "upon",
-        "lemma": "al"
       },
       {
         "surface": "the earth",
@@ -198,10 +178,6 @@
     ],
     "5": [
       {
-        "surface": "As",
-        "lemma": "asher"
-      },
-      {
         "surface": "you do not",
         "lemma": "ayin"
       },
@@ -250,10 +226,6 @@
         "lemma": "elohim"
       },
       {
-        "surface": "vvv",
-        "lemma": "asher"
-      },
-      {
         "surface": "the Maker",
         "lemma": "asah"
       },
@@ -292,10 +264,6 @@
         "lemma": "erev"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "you do not",
         "lemma": "ayin"
       },
@@ -310,18 +278,6 @@
       {
         "surface": "will succeed",
         "lemma": "kasher"
-      },
-      {
-        "surface": "whether this",
-        "lemma": "zeh"
-      },
-      {
-        "surface": "or",
-        "lemma": "o"
-      },
-      {
-        "surface": "that",
-        "lemma": "zeh"
       },
       {
         "surface": "or if",
@@ -368,10 +324,6 @@
     ],
     "8": [
       {
-        "surface": "So",
-        "lemma": "ki"
-      },
-      {
         "surface": "if",
         "lemma": "im"
       },
@@ -410,10 +362,6 @@
       {
         "surface": "of darkness",
         "lemma": "choshekh"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "they will be",
@@ -490,20 +438,8 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
-      },
-      {
-        "surface": "these things",
-        "lemma": "elleh"
       },
       {
         "surface": "God",
@@ -544,10 +480,6 @@
         "lemma": "basar"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "youth",
         "lemma": "yaldut"
       },
@@ -562,8 +494,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "yada",
-    "im"
+    "im",
+    "lo"
   ]
 }

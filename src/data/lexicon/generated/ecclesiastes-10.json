@@ -78,10 +78,6 @@
     ],
     "3": [
       {
-        "surface": "Even",
-        "lemma": "gam"
-      },
-      {
         "surface": "as the fool",
         "lemma": "sakhal"
       },
@@ -110,10 +106,6 @@
         "lemma": "kol"
       },
       {
-        "surface": "that he",
-        "lemma": "hu"
-      },
-      {
         "surface": "is a fool",
         "lemma": "sakhal"
       }
@@ -136,10 +128,6 @@
         "lemma": "alah"
       },
       {
-        "surface": "against you",
-        "lemma": "al"
-      },
-      {
         "surface": "do not",
         "lemma": "al"
       },
@@ -150,10 +138,6 @@
       {
         "surface": "your post",
         "lemma": "maqom"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "calmness",
@@ -250,10 +234,6 @@
         "lemma": "eved"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "horseback",
         "lemma": "sus"
       },
@@ -264,10 +244,6 @@
       {
         "surface": "go",
         "lemma": "halakh"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "foot",
@@ -346,10 +322,6 @@
       {
         "surface": "is dull",
         "lemma": "qahah"
-      },
-      {
-        "surface": "and",
-        "lemma": "hu"
       },
       {
         "surface": "the blade",
@@ -520,10 +492,6 @@
         "lemma": "nagad"
       },
       {
-        "surface": "what",
-        "lemma": "asher"
-      },
-      {
         "surface": "will come",
         "lemma": "hayah"
       },
@@ -546,10 +514,6 @@
         "lemma": "yaga"
       },
       {
-        "surface": "for",
-        "lemma": "asher"
-      },
-      {
         "surface": "he does not",
         "lemma": "lo"
       },
@@ -562,19 +526,11 @@
         "lemma": "halakh"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the city",
         "lemma": "ir"
       }
     ],
     "16": [
-      {
-        "surface": "Woe",
-        "lemma": "i"
-      },
       {
         "surface": "O land",
         "lemma": "erets"
@@ -728,10 +684,6 @@
         "lemma": "melekh"
       },
       {
-        "surface": "even",
-        "lemma": "gam"
-      },
-      {
         "surface": "in your thoughts",
         "lemma": "madda"
       },
@@ -750,10 +702,6 @@
       {
         "surface": "even in your bedroom",
         "lemma": "cheder"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "a bird",
@@ -786,8 +734,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "lo",
-    "halakh"
+    "halakh",
+    "sar"
   ]
 }

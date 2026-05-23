@@ -46,10 +46,6 @@
         "lemma": "nasa"
       },
       {
-        "surface": "above",
-        "lemma": "hu"
-      },
-      {
         "surface": "the hills",
         "lemma": "givah"
       },
@@ -60,10 +56,6 @@
       {
         "surface": "will stream",
         "lemma": "nahar"
-      },
-      {
-        "surface": "to it",
-        "lemma": "al"
       }
     ],
     "2": [
@@ -92,20 +84,12 @@
         "lemma": "alah"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the mountain",
         "lemma": "har"
       },
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the house",
@@ -134,10 +118,6 @@
       {
         "surface": "in His paths",
         "lemma": "orach"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "the law",
@@ -234,10 +214,6 @@
         "lemma": "cherev"
       },
       {
-        "surface": "against",
-        "lemma": "el"
-      },
-      {
         "surface": "nation",
         "lemma": "goy"
       },
@@ -292,10 +268,6 @@
         "lemma": "charad"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the mouth",
         "lemma": "peh"
       },
@@ -313,10 +285,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "Though",
-        "lemma": "ki"
-      },
       {
         "surface": "all",
         "lemma": "kol"
@@ -336,10 +304,6 @@
       {
         "surface": "of their gods",
         "lemma": "elohim"
-      },
-      {
-        "surface": "yet we",
-        "lemma": "anachnu"
       },
       {
         "surface": "will walk",
@@ -368,10 +332,6 @@
     ],
     "6": [
       {
-        "surface": "On that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -398,10 +358,6 @@
       {
         "surface": "the outcast",
         "lemma": "nadach"
-      },
-      {
-        "surface": "even those whom",
-        "lemma": "asher"
       },
       {
         "surface": "I have afflicted",
@@ -442,10 +398,6 @@
         "lemma": "malakh"
       },
       {
-        "surface": "over them",
-        "lemma": "al"
-      },
-      {
         "surface": "in Mount",
         "lemma": "har"
       },
@@ -456,17 +408,9 @@
       {
         "surface": "from that day",
         "lemma": "attah"
-      },
-      {
-        "surface": "and forever",
-        "lemma": "ad"
       }
     ],
     "8": [
-      {
-        "surface": "And you",
-        "lemma": "attah"
-      },
       {
         "surface": "O watchtower",
         "lemma": "migdaleder"
@@ -498,10 +442,6 @@
       {
         "surface": "will be restored",
         "lemma": "atah"
-      },
-      {
-        "surface": "to you",
-        "lemma": "ad"
       },
       {
         "surface": "sovereignty",
@@ -558,10 +498,6 @@
         "lemma": "avad"
       },
       {
-        "surface": "so that",
-        "lemma": "ki"
-      },
-      {
         "surface": "anguish",
         "lemma": "chil"
       },
@@ -596,10 +532,6 @@
         "lemma": "yalad"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "now",
         "lemma": "attah"
       },
@@ -622,10 +554,6 @@
       {
         "surface": "You will go",
         "lemma": "bo"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "Babylon",
@@ -678,10 +606,6 @@
         "lemma": "asaph"
       },
       {
-        "surface": "against you",
-        "lemma": "al"
-      },
-      {
         "surface": "saying",
         "lemma": "amar"
       },
@@ -703,10 +627,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "But they",
-        "lemma": "hemmah"
-      },
       {
         "surface": "do not",
         "lemma": "lo"
@@ -734,10 +654,6 @@
       {
         "surface": "His plan",
         "lemma": "etsah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "He has gathered them",
@@ -768,10 +684,6 @@
       {
         "surface": "of Zion",
         "lemma": "tsiyyon"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "I will give you",
@@ -836,8 +748,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "tsiyyon",
-    "halakh"
+    "halakh",
+    "rav"
   ]
 }

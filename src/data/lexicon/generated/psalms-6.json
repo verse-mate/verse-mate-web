@@ -14,10 +14,6 @@
         "lemma": "neginah"
       },
       {
-        "surface": "according to",
-        "lemma": "al"
-      },
-      {
         "surface": "Sheminith",
         "lemma": "sheminit"
       },
@@ -68,14 +64,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am frail",
         "lemma": "umlal"
       },
@@ -86,10 +74,6 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "my bones",
@@ -108,14 +92,6 @@
       {
         "surface": "is deeply distressed",
         "lemma": "bahal"
-      },
-      {
-        "surface": "How long",
-        "lemma": "ad"
-      },
-      {
-        "surface": "O",
-        "lemma": "attah"
       },
       {
         "surface": "LORD",
@@ -148,19 +124,11 @@
         "lemma": "yasah"
       },
       {
-        "surface": "because of",
-        "lemma": "maan"
-      },
-      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       }
     ],
     "5": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "there is no",
         "lemma": "ayin"
@@ -256,10 +224,6 @@
         "lemma": "sur"
       },
       {
-        "surface": "from me",
-        "lemma": "min"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -270,10 +234,6 @@
       {
         "surface": "of iniquity",
         "lemma": "aven"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -351,7 +311,7 @@
   },
   "themeLemmas": [
     "kol",
-    "ki",
-    "bahal"
+    "bahal",
+    "shuv"
   ]
 }

@@ -62,10 +62,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -74,20 +70,12 @@
         "lemma": "elohim"
       },
       {
-        "surface": "It is He",
-        "lemma": "hu"
-      },
-      {
         "surface": "who made us",
         "lemma": "asah"
       },
       {
         "surface": "and",
         "lemma": "lo"
-      },
-      {
-        "surface": "we are His",
-        "lemma": "anachnu"
       },
       {
         "surface": "we are His people",
@@ -138,10 +126,6 @@
     ],
     "5": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -162,10 +146,6 @@
         "lemma": "emunah"
       },
       {
-        "surface": "continues",
-        "lemma": "ad"
-      },
-      {
         "surface": "to all",
         "lemma": "dor"
       },
@@ -177,7 +157,7 @@
   },
   "themeLemmas": [
     "todah",
-    "ki",
-    "dor"
+    "dor",
+    "bo"
   ]
 }

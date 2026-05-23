@@ -54,10 +54,6 @@
     ],
     "3": [
       {
-        "surface": "Though",
-        "lemma": "ki"
-      },
-      {
         "surface": "the lips",
         "lemma": "saphah"
       },
@@ -140,10 +136,6 @@
     ],
     "6": [
       {
-        "surface": "She does not",
-        "lemma": "pen"
-      },
-      {
         "surface": "consider",
         "lemma": "palas"
       },
@@ -212,10 +204,6 @@
         "lemma": "rachaq"
       },
       {
-        "surface": "from her",
-        "lemma": "al"
-      },
-      {
         "surface": "do not",
         "lemma": "al"
       },
@@ -233,10 +221,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "lest",
-        "lemma": "pen"
-      },
       {
         "surface": "you concede",
         "lemma": "natan"
@@ -259,10 +243,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "lest",
-        "lemma": "pen"
-      },
       {
         "surface": "strangers",
         "lemma": "zur"
@@ -466,10 +446,6 @@
         "lemma": "ayin"
       },
       {
-        "surface": "to be shared",
-        "lemma": "et"
-      },
-      {
         "surface": "with strangers",
         "lemma": "zur"
       }
@@ -574,10 +550,6 @@
     ],
     "21": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "a man’s",
         "lemma": "ish"
       },
@@ -638,10 +610,6 @@
     ],
     "23": [
       {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "dies",
         "lemma": "mut"
       },
@@ -670,6 +638,6 @@
   "themeLemmas": [
     "zur",
     "shagah",
-    "pen"
+    "lo"
   ]
 }

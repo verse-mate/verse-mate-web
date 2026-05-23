@@ -10,10 +10,6 @@
         "lemma": "natsach"
       },
       {
-        "surface": "To the tune of",
-        "lemma": "al"
-      },
-      {
         "surface": "The Lilies",
         "lemma": "shushan"
       },
@@ -52,10 +48,6 @@
       {
         "surface": "theme",
         "lemma": "davar"
-      },
-      {
-        "surface": "as I",
-        "lemma": "ani"
       },
       {
         "surface": "recite",
@@ -108,10 +100,6 @@
         "lemma": "saphah"
       },
       {
-        "surface": "therefore",
-        "lemma": "al"
-      },
-      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -128,10 +116,6 @@
       {
         "surface": "your sword",
         "lemma": "cherev"
-      },
-      {
-        "surface": "at",
-        "lemma": "al"
       },
       {
         "surface": "your side",
@@ -162,10 +146,6 @@
       {
         "surface": "in victory",
         "lemma": "tsalach"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "behalf",
@@ -282,10 +262,6 @@
         "lemma": "resah"
       },
       {
-        "surface": "therefore",
-        "lemma": "al"
-      },
-      {
         "surface": "God",
         "lemma": "elohim"
       },
@@ -330,10 +306,6 @@
       {
         "surface": "and cassia",
         "lemma": "qetsiah"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
       },
       {
         "surface": "palaces",
@@ -442,14 +414,6 @@
         "lemma": "shachah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "he",
-        "lemma": "hu"
-      },
-      {
         "surface": "is your lord",
         "lemma": "adon"
       }
@@ -496,10 +460,6 @@
       {
         "surface": "is the princess",
         "lemma": "bat"
-      },
-      {
-        "surface": "in her chamber",
-        "lemma": "penimah"
       },
       {
         "surface": "her gown",
@@ -614,10 +574,6 @@
         "lemma": "dor"
       },
       {
-        "surface": "therefore",
-        "lemma": "al"
-      },
-      {
         "surface": "the nations",
         "lemma": "am"
       },
@@ -636,8 +592,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "kol",
-    "yaval"
+    "yaval",
+    "yamin"
   ]
 }

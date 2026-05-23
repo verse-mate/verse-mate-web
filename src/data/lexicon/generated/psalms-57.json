@@ -54,10 +54,6 @@
         "lemma": "chanan"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "my soul",
         "lemma": "nephesh"
       },
@@ -76,10 +72,6 @@
       {
         "surface": "I will take shelter",
         "lemma": "chasah"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "the danger",
@@ -110,10 +102,6 @@
       {
         "surface": "who fulfills",
         "lemma": "gamar"
-      },
-      {
-        "surface": "His purpose for me",
-        "lemma": "al"
       }
     ],
     "3": [
@@ -218,20 +206,12 @@
         "lemma": "elohim"
       },
       {
-        "surface": "above",
-        "lemma": "al"
-      },
-      {
         "surface": "the heavens",
         "lemma": "shamayim"
       },
       {
         "surface": "may Your glory",
         "lemma": "kavod"
-      },
-      {
-        "surface": "cover",
-        "lemma": "al"
       },
       {
         "surface": "all",
@@ -372,10 +352,6 @@
     ],
     "10": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       },
@@ -384,16 +360,8 @@
         "lemma": "gadol"
       },
       {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
         "surface": "the heavens",
         "lemma": "shamayim"
-      },
-      {
-        "surface": "and",
-        "lemma": "ad"
       },
       {
         "surface": "Your faithfulness",
@@ -414,20 +382,12 @@
         "lemma": "elohim"
       },
       {
-        "surface": "above",
-        "lemma": "al"
-      },
-      {
         "surface": "the heavens",
         "lemma": "shamayim"
       },
       {
         "surface": "may Your glory",
         "lemma": "kavod"
-      },
-      {
-        "surface": "cover",
-        "lemma": "al"
       },
       {
         "surface": "all",
@@ -440,8 +400,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "ur",
-    "nephesh"
+    "nephesh",
+    "kun"
   ]
 }

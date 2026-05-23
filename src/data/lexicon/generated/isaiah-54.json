@@ -42,10 +42,6 @@
         "lemma": "chul"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "more",
         "lemma": "rav"
       },
@@ -122,10 +118,6 @@
     ],
     "3": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "you will spread out",
         "lemma": "parats"
       },
@@ -172,10 +164,6 @@
         "lemma": "yare"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "you will not",
         "lemma": "lo"
       },
@@ -192,20 +180,12 @@
         "lemma": "kalam"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "you will not",
         "lemma": "lo"
       },
       {
         "surface": "be humiliated",
         "lemma": "chapher"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "you will forget",
@@ -241,10 +221,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "your husband",
         "lemma": "baal"
@@ -296,10 +272,6 @@
     ],
     "6": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -322,10 +294,6 @@
       {
         "surface": "in spirit",
         "lemma": "ruach"
-      },
-      {
-        "surface": "like",
-        "lemma": "ki"
       },
       {
         "surface": "the rejected",
@@ -392,10 +360,6 @@
         "lemma": "paneh"
       },
       {
-        "surface": "from you",
-        "lemma": "min"
-      },
-      {
         "surface": "for a moment",
         "lemma": "rega"
       },
@@ -426,24 +390,12 @@
     ],
     "9": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "this is like",
-        "lemma": "zot"
-      },
-      {
         "surface": "vvv",
         "lemma": "mayim"
       },
       {
         "surface": "the days of Noah",
         "lemma": "noach"
-      },
-      {
-        "surface": "when",
-        "lemma": "asher"
       },
       {
         "surface": "I swore",
@@ -482,19 +434,11 @@
         "lemma": "qatsaph"
       },
       {
-        "surface": "with you",
-        "lemma": "al"
-      },
-      {
         "surface": "or rebuke",
         "lemma": "gaar"
       }
     ],
     "10": [
-      {
-        "surface": "Though",
-        "lemma": "ki"
-      },
       {
         "surface": "the mountains",
         "lemma": "har"
@@ -568,14 +512,6 @@
       {
         "surface": "solace",
         "lemma": "nacham"
-      },
-      {
-        "surface": "surely",
-        "lemma": "hinneh"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
       },
       {
         "surface": "will set",
@@ -688,10 +624,6 @@
         "lemma": "osheq"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "you will have} no",
         "lemma": "lo"
       },
@@ -704,27 +636,15 @@
         "lemma": "mechittah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "it will not",
         "lemma": "lo"
       },
       {
         "surface": "come near",
         "lemma": "qarav"
-      },
-      {
-        "surface": "you",
-        "lemma": "el"
       }
     ],
     "15": [
-      {
-        "surface": "If",
-        "lemma": "hen"
-      },
       {
         "surface": "anyone attacks you",
         "lemma": "gur"
@@ -732,10 +652,6 @@
       {
         "surface": "it is not",
         "lemma": "ephes"
-      },
-      {
-        "surface": "from Me",
-        "lemma": "et"
       },
       {
         "surface": "whoever",
@@ -748,21 +664,9 @@
       {
         "surface": "will fall",
         "lemma": "naphal"
-      },
-      {
-        "surface": "before you",
-        "lemma": "al"
       }
     ],
     "16": [
-      {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
       {
         "surface": "have created",
         "lemma": "bara"
@@ -796,10 +700,6 @@
         "lemma": "maaseh"
       },
       {
-        "surface": "and I",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "have created",
         "lemma": "bara"
       },
@@ -830,10 +730,6 @@
         "lemma": "yatsar"
       },
       {
-        "surface": "against you",
-        "lemma": "al"
-      },
-      {
         "surface": "shall prosper",
         "lemma": "tsalach"
       },
@@ -854,14 +750,6 @@
         "lemma": "qamay"
       },
       {
-        "surface": "you",
-        "lemma": "et"
-      },
-      {
-        "surface": "This",
-        "lemma": "zot"
-      },
-      {
         "surface": "is the heritage",
         "lemma": "nachalah"
       },
@@ -878,10 +766,6 @@
         "lemma": "tsedaqah"
       },
       {
-        "surface": "is from Me",
-        "lemma": "et"
-      },
-      {
         "surface": "declares",
         "lemma": "neum"
       },
@@ -892,8 +776,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "lo",
-    "al"
+    "kol",
+    "amar"
   ]
 }

@@ -104,10 +104,6 @@
     ],
     "4": [
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "are resplendent with light",
         "lemma": "or"
       },
@@ -190,20 +186,8 @@
     ],
     "7": [
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
-        "surface": "alone",
-        "lemma": "attah"
-      },
-      {
         "surface": "are to be feared",
         "lemma": "yare"
-      },
-      {
-        "surface": "When",
-        "lemma": "az"
       },
       {
         "surface": "You are angry",
@@ -283,10 +267,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "Even",
-        "lemma": "ki"
-      },
       {
         "surface": "the wrath",
         "lemma": "chemah"
@@ -379,7 +359,7 @@
   },
   "themeLemmas": [
     "yare",
-    "attah",
-    "selah"
+    "selah",
+    "kol"
   ]
 }

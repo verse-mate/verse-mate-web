@@ -14,10 +14,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "He is good",
         "lemma": "tov"
       },
@@ -94,10 +90,6 @@
     ],
     "5": [
       {
-        "surface": "In",
-        "lemma": "min"
-      },
-      {
         "surface": "my distress",
         "lemma": "metsar"
       },
@@ -156,10 +148,6 @@
       {
         "surface": "He is my helper",
         "lemma": "azar"
-      },
-      {
-        "surface": "Therefore I",
-        "lemma": "ani"
       },
       {
         "surface": "will look in triumph",
@@ -236,10 +224,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "vvv",
-        "lemma": "ki"
-      },
-      {
         "surface": "I cut them off",
         "lemma": "mul"
       }
@@ -248,10 +232,6 @@
       {
         "surface": "They surrounded me",
         "lemma": "savav"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "gam"
       },
       {
         "surface": "on every side",
@@ -264,10 +244,6 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "ki"
       },
       {
         "surface": "I cut them off",
@@ -302,10 +278,6 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "ki"
       },
       {
         "surface": "I cut them off",
@@ -430,10 +402,6 @@
         "lemma": "mut"
       },
       {
-        "surface": "but",
-        "lemma": "ki"
-      },
-      {
         "surface": "I will live",
         "lemma": "chayah"
       },
@@ -500,10 +468,6 @@
     ],
     "20": [
       {
-        "surface": "This",
-        "lemma": "zeh"
-      },
-      {
         "surface": "is the gate",
         "lemma": "shaar"
       },
@@ -524,10 +488,6 @@
       {
         "surface": "I will give You thanks",
         "lemma": "yadah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "You have answered me",
@@ -566,20 +526,12 @@
     ],
     "23": [
       {
-        "surface": "This",
-        "lemma": "zot"
-      },
-      {
         "surface": "is",
         "lemma": "hayah"
       },
       {
         "surface": "from the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "and it",
-        "lemma": "hu"
       },
       {
         "surface": "is marvelous",
@@ -591,10 +543,6 @@
       }
     ],
     "24": [
-      {
-        "surface": "This",
-        "lemma": "zeh"
-      },
       {
         "surface": "is the day",
         "lemma": "yom"
@@ -624,14 +572,6 @@
       {
         "surface": "save us",
         "lemma": "yasah"
-      },
-      {
-        "surface": "we pray",
-        "lemma": "anna"
-      },
-      {
-        "surface": "We beseech You",
-        "lemma": "na"
       },
       {
         "surface": "O LORD",
@@ -698,10 +638,6 @@
         "lemma": "avot"
       },
       {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
         "surface": "the horns",
         "lemma": "qeren"
       },
@@ -711,10 +647,6 @@
       }
     ],
     "28": [
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
       {
         "surface": "are my God",
         "lemma": "el"
@@ -742,10 +674,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "He is good",
         "lemma": "tov"
       },
@@ -760,8 +688,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "yah",
-    "yadah"
+    "yadah",
+    "olam"
   ]
 }

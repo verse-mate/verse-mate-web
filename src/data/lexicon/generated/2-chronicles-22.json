@@ -34,10 +34,6 @@
         "lemma": "tachat"
       },
       {
-        "surface": "since",
-        "lemma": "ki"
-      },
-      {
         "surface": "the raiders",
         "lemma": "gedud"
       },
@@ -142,14 +138,6 @@
     ],
     "3": [
       {
-        "surface": "Ahaziah",
-        "lemma": "hu"
-      },
-      {
-        "surface": "also",
-        "lemma": "gam"
-      },
-      {
         "surface": "walked",
         "lemma": "halakh"
       },
@@ -164,10 +152,6 @@
       {
         "surface": "of Ahab",
         "lemma": "achav"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "his mother",
@@ -208,16 +192,8 @@
         "lemma": "achav"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "destruction",
         "lemma": "mashchit"
-      },
-      {
-        "surface": "they",
-        "lemma": "hemmah"
       },
       {
         "surface": "were",
@@ -242,10 +218,6 @@
     ],
     "5": [
       {
-        "surface": "Ahaziah also",
-        "lemma": "gam"
-      },
-      {
         "surface": "followed",
         "lemma": "halakh"
       },
@@ -256,10 +228,6 @@
       {
         "surface": "and went",
         "lemma": "halakh"
-      },
-      {
-        "surface": "with",
-        "lemma": "et"
       },
       {
         "surface": "Joram",
@@ -284,10 +252,6 @@
       {
         "surface": "to fight",
         "lemma": "milchamah"
-      },
-      {
-        "surface": "against",
-        "lemma": "al"
       },
       {
         "surface": "Hazael",
@@ -332,10 +296,6 @@
         "lemma": "rapah"
       },
       {
-        "surface": "from",
-        "lemma": "ki"
-      },
-      {
         "surface": "the wounds",
         "lemma": "makkah"
       },
@@ -350,10 +310,6 @@
       {
         "surface": "when he fought",
         "lemma": "lacham"
-      },
-      {
-        "surface": "against",
-        "lemma": "et"
       },
       {
         "surface": "Hazael",
@@ -412,14 +368,6 @@
         "lemma": "achav"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
-        "surface": "Joram",
-        "lemma": "hu"
-      },
-      {
         "surface": "had been wounded",
         "lemma": "chalah"
       }
@@ -446,10 +394,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "to visit",
-        "lemma": "el"
-      },
-      {
         "surface": "Joram",
         "lemma": "yoram"
       },
@@ -462,16 +406,8 @@
         "lemma": "yatsa"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "Joram",
         "lemma": "yehoram"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "meet Jehu",
@@ -484,10 +420,6 @@
       {
         "surface": "of Nimshi",
         "lemma": "nimshi"
-      },
-      {
-        "surface": "whom",
-        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -518,10 +450,6 @@
       {
         "surface": "was executing judgment",
         "lemma": "shaphat"
-      },
-      {
-        "surface": "on",
-        "lemma": "im"
       },
       {
         "surface": "the house",
@@ -582,10 +510,6 @@
         "lemma": "lakhad"
       },
       {
-        "surface": "while he",
-        "lemma": "hu"
-      },
-      {
         "surface": "was hiding",
         "lemma": "chava"
       },
@@ -596,10 +520,6 @@
       {
         "surface": "So Ahaziah was brought",
         "lemma": "bo"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "Jehu",
@@ -614,16 +534,8 @@
         "lemma": "qavar"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "they said",
         "lemma": "amar"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
       },
       {
         "surface": "is the grandson",
@@ -632,10 +544,6 @@
       {
         "surface": "of Jehoshaphat",
         "lemma": "yehoshaphat"
-      },
-      {
-        "surface": "who",
-        "lemma": "asher"
       },
       {
         "surface": "sought",
@@ -694,10 +602,6 @@
       {
         "surface": "saw",
         "lemma": "raah"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "her son",
@@ -786,10 +690,6 @@
         "lemma": "natan"
       },
       {
-        "surface": "him",
-        "lemma": "et"
-      },
-      {
         "surface": "and his nurse",
         "lemma": "yanaq"
       },
@@ -868,10 +768,6 @@
         "lemma": "chava"
       },
       {
-        "surface": "with them",
-        "lemma": "et"
-      },
-      {
         "surface": "in the house",
         "lemma": "bet"
       },
@@ -903,7 +799,7 @@
   },
   "themeLemmas": [
     "achazyah",
-    "ki",
-    "bet"
+    "bet",
+    "yehoram"
   ]
 }

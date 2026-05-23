@@ -70,24 +70,12 @@
         "lemma": "ayin"
       },
       {
-        "surface": "to one like this",
-        "lemma": "zeh"
-      },
-      {
         "surface": "Will You bring him",
         "lemma": "bo"
       },
       {
         "surface": "into judgment",
         "lemma": "mishpat"
-      },
-      {
-        "surface": "before",
-        "lemma": "im"
-      },
-      {
-        "surface": "You",
-        "lemma": "al"
       }
     ],
     "4": [
@@ -138,10 +126,6 @@
         "lemma": "chodesh"
       },
       {
-        "surface": "is with You",
-        "lemma": "et"
-      },
-      {
         "surface": "and since You have set",
         "lemma": "asah"
       },
@@ -164,16 +148,8 @@
         "lemma": "shaah"
       },
       {
-        "surface": "from him",
-        "lemma": "al"
-      },
-      {
         "surface": "and let him rest",
         "lemma": "chadal"
-      },
-      {
-        "surface": "so",
-        "lemma": "ad"
       },
       {
         "surface": "he can enjoy",
@@ -189,10 +165,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "there is",
         "lemma": "yesh"
@@ -286,10 +258,6 @@
         "lemma": "qatsir"
       },
       {
-        "surface": "like",
-        "lemma": "kemo"
-      },
-      {
         "surface": "a sapling",
         "lemma": "neta"
       }
@@ -330,10 +298,6 @@
         "lemma": "azal"
       },
       {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
         "surface": "the sea",
         "lemma": "yam"
       },
@@ -366,10 +330,6 @@
       {
         "surface": "rise",
         "lemma": "qamay"
-      },
-      {
-        "surface": "Until",
-        "lemma": "ad"
       },
       {
         "surface": "the heavens",
@@ -416,10 +376,6 @@
       {
         "surface": "and conceal me",
         "lemma": "satar"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "Your anger",
@@ -476,10 +432,6 @@
         "lemma": "yachal"
       },
       {
-        "surface": "until",
-        "lemma": "ad"
-      },
-      {
         "surface": "my renewal",
         "lemma": "chaliphah"
       },
@@ -492,10 +444,6 @@
       {
         "surface": "You will call",
         "lemma": "qara"
-      },
-      {
-        "surface": "and I",
-        "lemma": "anokhi"
       },
       {
         "surface": "will answer",
@@ -516,10 +464,6 @@
     ],
     "16": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "then",
         "lemma": "attah"
       },
@@ -538,10 +482,6 @@
       {
         "surface": "keep track",
         "lemma": "shamar"
-      },
-      {
-        "surface": "of",
-        "lemma": "al"
       },
       {
         "surface": "my sin",
@@ -566,19 +506,11 @@
         "lemma": "taphal"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "my iniquity",
         "lemma": "avan"
       }
     ],
     "18": [
-      {
-        "surface": "But",
-        "lemma": "ulam"
-      },
       {
         "surface": "as a mountain",
         "lemma": "har"
@@ -712,10 +644,6 @@
         "lemma": "aval"
       },
       {
-        "surface": "only for",
-        "lemma": "al"
-      },
-      {
         "surface": "himself",
         "lemma": "nephesh"
       }
@@ -724,6 +652,6 @@
   "themeLemmas": [
     "lo",
     "im",
-    "al"
+    "mut"
   ]
 }

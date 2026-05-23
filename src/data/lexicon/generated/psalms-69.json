@@ -10,10 +10,6 @@
         "lemma": "natsach"
       },
       {
-        "surface": "To the tune of",
-        "lemma": "al"
-      },
-      {
         "surface": "Lilies",
         "lemma": "shushan"
       },
@@ -30,20 +26,12 @@
         "lemma": "elohim"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the waters",
         "lemma": "mayim"
       },
       {
         "surface": "are up",
         "lemma": "bo"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "my neck",
@@ -178,10 +166,6 @@
     ],
     "5": [
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -204,10 +188,6 @@
       {
         "surface": "hidden",
         "lemma": "kachad"
-      },
-      {
-        "surface": "from You",
-        "lemma": "min"
       }
     ],
     "6": [
@@ -258,20 +238,12 @@
     ],
     "7": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "I have endured",
         "lemma": "nasa"
       },
       {
         "surface": "scorn",
         "lemma": "cherpah"
-      },
-      {
-        "surface": "for Your sake",
-        "lemma": "al"
       },
       {
         "surface": "and shame",
@@ -314,10 +286,6 @@
     ],
     "9": [
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "zeal",
         "lemma": "qinah"
       },
@@ -340,10 +308,6 @@
       {
         "surface": "have fallen",
         "lemma": "naphal"
-      },
-      {
-        "surface": "on me",
-        "lemma": "al"
       }
     ],
     "10": [
@@ -413,10 +377,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "But",
-        "lemma": "ani"
-      },
       {
         "surface": "my prayer",
         "lemma": "tephillah"
@@ -528,10 +488,6 @@
       {
         "surface": "its mouth",
         "lemma": "peh"
-      },
-      {
-        "surface": "over me",
-        "lemma": "al"
       }
     ],
     "16": [
@@ -544,10 +500,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       },
@@ -558,10 +510,6 @@
       {
         "surface": "turn",
         "lemma": "panah"
-      },
-      {
-        "surface": "to me",
-        "lemma": "el"
       },
       {
         "surface": "in keeping with Your great",
@@ -590,10 +538,6 @@
         "lemma": "eved"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "I am in distress",
         "lemma": "tsarar"
       },
@@ -612,10 +556,6 @@
         "lemma": "qarav"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "my soul",
         "lemma": "nephesh"
       },
@@ -628,19 +568,11 @@
         "lemma": "padah"
       },
       {
-        "surface": "because of",
-        "lemma": "maan"
-      },
-      {
         "surface": "my foes",
         "lemma": "oyev"
       }
     ],
     "19": [
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
       {
         "surface": "know",
         "lemma": "yada"
@@ -796,10 +728,6 @@
         "lemma": "zaam"
       },
       {
-        "surface": "upon them",
-        "lemma": "al"
-      },
-      {
         "surface": "and let Your burning anger",
         "lemma": "charon"
       },
@@ -836,20 +764,8 @@
     ],
     "26": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "they persecute",
         "lemma": "radaph"
-      },
-      {
-        "surface": "the one",
-        "lemma": "asher"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "struck",
@@ -876,10 +792,6 @@
       {
         "surface": "iniquity",
         "lemma": "avan"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "their iniquity",
@@ -920,19 +832,11 @@
         "lemma": "katav"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "the righteous",
         "lemma": "tsaddiq"
       }
     ],
     "29": [
-      {
-        "surface": "But I am",
-        "lemma": "ani"
-      },
       {
         "surface": "in pain",
         "lemma": "ani"
@@ -1038,20 +942,12 @@
     ],
     "33": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "listens",
         "lemma": "shama"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the needy",
@@ -1097,10 +993,6 @@
       }
     ],
     "35": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "God",
         "lemma": "elohim"
@@ -1167,7 +1059,7 @@
   },
   "themeLemmas": [
     "al",
-    "ki",
-    "hayah"
+    "hayah",
+    "cherpah"
   ]
 }

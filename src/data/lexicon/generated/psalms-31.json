@@ -52,10 +52,6 @@
         "lemma": "ozen"
       },
       {
-        "surface": "to me",
-        "lemma": "el"
-      },
-      {
         "surface": "come quickly",
         "lemma": "meherah"
       },
@@ -86,14 +82,6 @@
     ],
     "3": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "are my rock",
         "lemma": "sela"
       },
@@ -108,10 +96,6 @@
       {
         "surface": "and guide me",
         "lemma": "nahal"
-      },
-      {
-        "surface": "for the sake of",
-        "lemma": "maan"
       },
       {
         "surface": "Your name",
@@ -130,14 +114,6 @@
       {
         "surface": "laid out",
         "lemma": "taman"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "are my refuge",
@@ -188,16 +164,8 @@
         "lemma": "hevel"
       },
       {
-        "surface": "but in",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "trust",
@@ -216,10 +184,6 @@
       {
         "surface": "in Your loving devotion",
         "lemma": "chesed"
-      },
-      {
-        "surface": "for",
-        "lemma": "asher"
       },
       {
         "surface": "You have seen",
@@ -282,10 +246,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "I am in distress",
         "lemma": "tsarar"
       },
@@ -311,10 +271,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "my life",
         "lemma": "chay"
@@ -398,10 +354,6 @@
         "lemma": "raah"
       },
       {
-        "surface": "me",
-        "lemma": "min"
-      },
-      {
         "surface": "on the street",
         "lemma": "chuts"
       }
@@ -434,10 +386,6 @@
     ],
     "13": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "I hear",
         "lemma": "shama"
       },
@@ -462,10 +410,6 @@
         "lemma": "yasad"
       },
       {
-        "surface": "against me",
-        "lemma": "al"
-      },
-      {
         "surface": "and plot",
         "lemma": "zamam"
       },
@@ -480,16 +424,8 @@
     ],
     "14": [
       {
-        "surface": "But I",
-        "lemma": "ani"
-      },
-      {
         "surface": "trust",
         "lemma": "batach"
-      },
-      {
-        "surface": "in You",
-        "lemma": "al"
       },
       {
         "surface": "O LORD",
@@ -498,10 +434,6 @@
       {
         "surface": "I say",
         "lemma": "amar"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "are my God",
@@ -544,10 +476,6 @@
         "lemma": "or"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "Your servant",
         "lemma": "eved"
       },
@@ -572,10 +500,6 @@
       {
         "surface": "be ashamed",
         "lemma": "bush"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "I have called on You",
@@ -620,10 +544,6 @@
         "lemma": "ataq"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "the righteous",
         "lemma": "tsaddiq"
       },
@@ -648,10 +568,6 @@
       {
         "surface": "is Your goodness",
         "lemma": "tuv"
-      },
-      {
-        "surface": "which",
-        "lemma": "asher"
       },
       {
         "surface": "You have laid up",
@@ -730,10 +646,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "He has shown",
         "lemma": "pala"
       },
@@ -754,10 +666,6 @@
       {
         "surface": "In my alarm",
         "lemma": "chaphaz"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "said",
@@ -790,10 +698,6 @@
       {
         "surface": "for mercy",
         "lemma": "tachanun"
-      },
-      {
-        "surface": "when I called to You",
-        "lemma": "el"
       },
       {
         "surface": "for help",
@@ -830,10 +734,6 @@
         "lemma": "emun"
       },
       {
-        "surface": "but fully",
-        "lemma": "al"
-      },
-      {
         "surface": "repays",
         "lemma": "salem"
       },
@@ -866,8 +766,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
-    "al",
-    "nephesh"
+    "nephesh",
+    "kol",
+    "hayah"
   ]
 }

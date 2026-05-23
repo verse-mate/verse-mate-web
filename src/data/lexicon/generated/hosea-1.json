@@ -14,16 +14,8 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "came",
         "lemma": "hayah"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "Hosea",
@@ -144,10 +136,6 @@
         "lemma": "zanun"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "this land",
         "lemma": "erets"
       },
@@ -208,20 +196,12 @@
         "lemma": "amar"
       },
       {
-        "surface": "to Hosea",
-        "lemma": "el"
-      },
-      {
         "surface": "Name him",
         "lemma": "qara"
       },
       {
         "surface": "Jezreel",
         "lemma": "yizreel"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "soon",
@@ -238,10 +218,6 @@
       {
         "surface": "of Jezreel",
         "lemma": "yizreel"
-      },
-      {
-        "surface": "upon",
-        "lemma": "al"
       },
       {
         "surface": "the house",
@@ -272,10 +248,6 @@
       {
         "surface": "And",
         "lemma": "hayah"
-      },
-      {
-        "surface": "on that",
-        "lemma": "hu"
       },
       {
         "surface": "day",
@@ -340,10 +312,6 @@
         "lemma": "loruchamah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "I will no",
         "lemma": "lo"
       },
@@ -364,19 +332,11 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "I should ever forgive",
         "lemma": "nasa"
       }
     ],
     "7": [
-      {
-        "surface": "Yet",
-        "lemma": "et"
-      },
       {
         "surface": "I will have compassion",
         "lemma": "racham"
@@ -474,24 +434,12 @@
         "lemma": "loammi"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "you",
-        "lemma": "attah"
-      },
-      {
         "surface": "are not",
         "lemma": "lo"
       },
       {
         "surface": "My people",
         "lemma": "am"
-      },
-      {
-        "surface": "and I",
-        "lemma": "anokhi"
       },
       {
         "surface": "am not",
@@ -528,10 +476,6 @@
         "lemma": "yam"
       },
       {
-        "surface": "which",
-        "lemma": "asher"
-      },
-      {
         "surface": "cannot",
         "lemma": "lo"
       },
@@ -556,16 +500,8 @@
         "lemma": "maqom"
       },
       {
-        "surface": "where",
-        "lemma": "asher"
-      },
-      {
         "surface": "it was said",
         "lemma": "amar"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "are not",
@@ -634,16 +570,8 @@
         "lemma": "alah"
       },
       {
-        "surface": "out",
-        "lemma": "min"
-      },
-      {
         "surface": "of the land",
         "lemma": "erets"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "great will be",
@@ -662,6 +590,6 @@
   "themeLemmas": [
     "lo",
     "yisrael",
-    "ki"
+    "amar"
   ]
 }

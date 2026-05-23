@@ -58,14 +58,6 @@
     ],
     "3": [
       {
-        "surface": "Surely",
-        "lemma": "ki"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "will deliver you",
         "lemma": "natsal"
       },
@@ -202,19 +194,11 @@
         "lemma": "lo"
       },
       {
-        "surface": "will come near",
-        "lemma": "el"
-      },
-      {
         "surface": "you",
         "lemma": "nagash"
       }
     ],
     "8": [
-      {
-        "surface": "You will only",
-        "lemma": "raq"
-      },
       {
         "surface": "see it",
         "lemma": "navat"
@@ -237,14 +221,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "Because",
-        "lemma": "ki"
-      },
-      {
-        "surface": "you",
-        "lemma": "attah"
-      },
       {
         "surface": "have made",
         "lemma": "sum"
@@ -280,10 +256,6 @@
         "lemma": "anah"
       },
       {
-        "surface": "you",
-        "lemma": "el"
-      },
-      {
         "surface": "no",
         "lemma": "lo"
       },
@@ -301,10 +273,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "He will command",
         "lemma": "tsavah"
@@ -332,16 +300,8 @@
         "lemma": "nasa"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "their hands",
         "lemma": "kaph"
-      },
-      {
-        "surface": "so that you will not",
-        "lemma": "pen"
       },
       {
         "surface": "strike",
@@ -360,10 +320,6 @@
       {
         "surface": "You will tread",
         "lemma": "darakh"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the lion",
@@ -388,20 +344,12 @@
     ],
     "14": [
       {
-        "surface": "Because",
-        "lemma": "ki"
-      },
-      {
         "surface": "he loves",
         "lemma": "chashaq"
       },
       {
         "surface": "I will deliver him",
         "lemma": "palat"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
       },
       {
         "surface": "he knows",
@@ -424,14 +372,6 @@
       {
         "surface": "I will answer him",
         "lemma": "un"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
-      {
-        "surface": "will be with him",
-        "lemma": "im"
       },
       {
         "surface": "in trouble",
@@ -470,8 +410,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "lo",
-    "raah"
+    "raah",
+    "machaseh"
   ]
 }

@@ -124,25 +124,38 @@ POS_MAP: dict[str, str] = {
     'A:Conj': 'Conjunction', 'A:Pron': 'Pronoun', 'A:Part': 'Particle',
 }
 
-# POS classes we DON'T mark tappable. Articles, prepositions, conjunctions,
-# pronouns, particles, interjections, numerals — function words that don't
-# reward a lexical popup. We keep nouns, verbs, adjectives, adverbs, and
-# proper nouns (names like Paul, Christ, Jerusalem).
-# Same logic applies to Hebrew (H:) and Aramaic (A:) entries.
+# POS-based filtering is the only filter we apply. Articles, prepositions,
+# conjunctions, pronouns, particles, interjections, numerals — function
+# words that don't reward a lexical popup. We keep nouns, verbs, adjectives,
+# adverbs, and proper nouns (names like Paul, Christ, Jerusalem).
 #
-# DISABLED 2026-05-23 to match Strong's full coverage. The historical
-# stopword list is preserved below as a comment so it's easy to re-enable
-# (move entries back into the tuple) if reading clutter becomes a problem.
-#
-# Previous skip list (commented out):
-#   'G:Conj', 'G:CONJ', 'G:Prep', 'G:PREP',
-#   'G:Art', 'G:ART', 'G:T',
-#   'G:Pron', 'G:PRON', 'G:P', 'G:X', 'G:R', 'G:Q', 'G:D', 'G:F',
-#   'G:Part', 'G:PART', 'G:PRT', 'G:INJ', 'G:Num',
-#   'H:Conj', 'H:Prep', 'H:Art', 'H:Pron', 'H:Part', 'H:PRT', 'H:INJ', 'H:Num',
-#   'H:T', 'H:P', 'H:X', 'H:R', 'H:Q', 'H:D', 'H:F',
-#   'A:Conj', 'A:Prep', 'A:Art', 'A:Pron', 'A:Part', 'A:PRT', 'A:INJ', 'A:Num',
-SKIP_POS_PREFIXES: tuple[str, ...] = ()
+# Lemma-specific blocking (SKIP_LEMMA_SLUGS, below) is intentionally empty
+# so every CONTENT-class word stays tappable — including high-frequency
+# verbs like γινώσκω ("knowing"), ἡγέομαι ("consider"), ὁράω, ἀκούω. The
+# previous per-lemma blocklist (preserved as _HISTORICAL_LEMMA_STOPWORDS
+# for reference) was too aggressive and stripped real content words from
+# James 1 ("knowing", "humble", "consider", "reproach").
+SKIP_POS_PREFIXES: tuple[str, ...] = (
+    # Greek (G: prefix)
+    'G:Conj', 'G:CONJ',
+    'G:Prep', 'G:PREP',
+    'G:Art', 'G:ART', 'G:T',
+    'G:Pron', 'G:PRON', 'G:P', 'G:X', 'G:R', 'G:Q', 'G:D', 'G:F',
+    'G:Part', 'G:PART', 'G:PRT',
+    'G:INJ',
+    'G:Num',
+    'G:COND',  # conditional particle (εἰ, "if") — function word
+    # Hebrew (H: prefix) and Aramaic (A: prefix)
+    'H:Conj', 'H:Prep', 'H:Art', 'H:Pron', 'H:Part', 'H:PRT',
+    'H:INJ', 'H:Intj',  # both casings appear in TBESH
+    'H:Num',
+    'H:T', 'H:P', 'H:X', 'H:R', 'H:Q', 'H:D', 'H:F',
+    'H:DemP',  # demonstrative pronoun (זֶה, "this") — function word
+    'A:Conj', 'A:Prep', 'A:Art', 'A:Pron', 'A:Part', 'A:PRT',
+    'A:INJ', 'A:Intj',
+    'A:Num',
+    'A:DemP',
+)
 
 # Content-word lemmas so common they aren't worth a per-occurrence tap.
 # Mostly the auxiliary / generic verbs of being, having, doing, saying that

@@ -14,20 +14,8 @@
         "lemma": "shuv"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
       },
       {
         "surface": "has torn us to pieces",
@@ -178,10 +166,6 @@
     ],
     "5": [
       {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
-      {
         "surface": "I have hewn them",
         "lemma": "chatsav"
       },
@@ -216,10 +200,6 @@
     ],
     "6": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "I desire",
         "lemma": "chaphets"
       },
@@ -249,10 +229,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "But they",
-        "lemma": "hemmah"
-      },
       {
         "surface": "like Adam",
         "lemma": "adam"
@@ -326,10 +302,6 @@
         "lemma": "shekhem"
       },
       {
-        "surface": "surely",
-        "lemma": "ki"
-      },
-      {
         "surface": "they have committed",
         "lemma": "asah"
       },
@@ -378,10 +350,6 @@
     ],
     "11": [
       {
-        "surface": "Also",
-        "lemma": "gam"
-      },
-      {
         "surface": "O Judah",
         "lemma": "yehudah"
       },
@@ -408,8 +376,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "asah",
-    "yisrael"
+    "yisrael",
+    "yehudah"
   ]
 }

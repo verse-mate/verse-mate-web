@@ -44,10 +44,6 @@
     ],
     "2": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "Your arrows",
         "lemma": "chets"
       },
@@ -62,10 +58,6 @@
       {
         "surface": "has pressed down",
         "lemma": "nachat"
-      },
-      {
-        "surface": "on me",
-        "lemma": "al"
       }
     ],
     "3": [
@@ -111,10 +103,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "my iniquities",
         "lemma": "avan"
@@ -186,10 +174,6 @@
     ],
     "7": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "my loins",
         "lemma": "kesel"
       },
@@ -218,10 +202,6 @@
       {
         "surface": "I am numb",
         "lemma": "pug"
-      },
-      {
-        "surface": "and badly",
-        "lemma": "ad"
       },
       {
         "surface": "crushed",
@@ -268,10 +248,6 @@
       {
         "surface": "hidden",
         "lemma": "satar"
-      },
-      {
-        "surface": "from You",
-        "lemma": "min"
       }
     ],
     "10": [
@@ -290,10 +266,6 @@
       {
         "surface": "fails",
         "lemma": "azav"
-      },
-      {
-        "surface": "and even",
-        "lemma": "gam"
       },
       {
         "surface": "the light",
@@ -390,10 +362,6 @@
         "lemma": "cheresh"
       },
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "do not",
         "lemma": "lo"
       },
@@ -428,10 +396,6 @@
         "lemma": "ish"
       },
       {
-        "surface": "who",
-        "lemma": "asher"
-      },
-      {
         "surface": "cannot",
         "lemma": "lo"
       },
@@ -458,10 +422,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "will answer",
         "lemma": "un"
       },
@@ -476,16 +436,8 @@
     ],
     "16": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "I said",
         "lemma": "amar"
-      },
-      {
-        "surface": "Let them not",
-        "lemma": "pen"
       },
       {
         "surface": "gloat",
@@ -494,10 +446,6 @@
       {
         "surface": "those who taunt",
         "lemma": "gadal"
-      },
-      {
-        "surface": "me",
-        "lemma": "al"
       },
       {
         "surface": "when my foot",
@@ -509,14 +457,6 @@
       }
     ],
     "17": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
       {
         "surface": "am ready",
         "lemma": "kun"
@@ -539,10 +479,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "Yes",
-        "lemma": "ki"
-      },
       {
         "surface": "I confess",
         "lemma": "nagad"
@@ -638,10 +574,6 @@
         "lemma": "rachaq"
       },
       {
-        "surface": "from me",
-        "lemma": "min"
-      },
-      {
         "surface": "O my God",
         "lemma": "elohim"
       }
@@ -666,8 +598,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
-    "al",
-    "lo"
+    "lo",
+    "paneh",
+    "kol"
   ]
 }

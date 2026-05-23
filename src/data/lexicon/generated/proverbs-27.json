@@ -18,10 +18,6 @@
         "lemma": "yom"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "you do not",
         "lemma": "lo"
       },
@@ -232,10 +228,6 @@
         "lemma": "nadad"
       },
       {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
         "surface": "its nest",
         "lemma": "qen"
       },
@@ -416,10 +408,6 @@
       {
         "surface": "the garment",
         "lemma": "beged"
-      },
-      {
-        "surface": "of him who",
-        "lemma": "ki"
       },
       {
         "surface": "posts security",
@@ -714,10 +702,6 @@
       {
         "surface": "depart",
         "lemma": "sur"
-      },
-      {
-        "surface": "from him",
-        "lemma": "al"
       }
     ],
     "23": [
@@ -743,10 +727,6 @@
       }
     ],
     "24": [
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
       {
         "surface": "riches",
         "lemma": "chosen"
@@ -865,7 +845,7 @@
   },
   "themeLemmas": [
     "lo",
-    "al",
-    "rea"
+    "rea",
+    "al"
   ]
 }

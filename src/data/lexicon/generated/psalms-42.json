@@ -30,10 +30,6 @@
         "lemma": "arag"
       },
       {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "streams",
         "lemma": "aphiq"
       },
@@ -52,10 +48,6 @@
       {
         "surface": "longs",
         "lemma": "arag"
-      },
-      {
-        "surface": "after You",
-        "lemma": "el"
       },
       {
         "surface": "O God",
@@ -130,10 +122,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "me",
-        "lemma": "el"
-      },
-      {
         "surface": "all day long",
         "lemma": "kol"
       },
@@ -148,10 +136,6 @@
     ],
     "4": [
       {
-        "surface": "These things",
-        "lemma": "elleh"
-      },
-      {
         "surface": "come to mind",
         "lemma": "zakhar"
       },
@@ -162,10 +146,6 @@
       {
         "surface": "my soul",
         "lemma": "nephesh"
-      },
-      {
-        "surface": "how",
-        "lemma": "ki"
       },
       {
         "surface": "I walked",
@@ -186,10 +166,6 @@
       {
         "surface": "procession",
         "lemma": "chagag"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "the house",
@@ -230,20 +206,12 @@
         "lemma": "hamah"
       },
       {
-        "surface": "within me",
-        "lemma": "al"
-      },
-      {
         "surface": "Put your hope",
         "lemma": "yachal"
       },
       {
         "surface": "in God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "I will yet",
@@ -274,14 +242,6 @@
       {
         "surface": "despairs",
         "lemma": "shachach"
-      },
-      {
-        "surface": "within me",
-        "lemma": "al"
-      },
-      {
-        "surface": "Therefore",
-        "lemma": "al"
       },
       {
         "surface": "I remember You",
@@ -318,10 +278,6 @@
         "lemma": "qara"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "deep",
         "lemma": "tehom"
       },
@@ -348,10 +304,6 @@
       {
         "surface": "have rolled",
         "lemma": "avar"
-      },
-      {
-        "surface": "over me",
-        "lemma": "al"
       }
     ],
     "8": [
@@ -378,10 +330,6 @@
       {
         "surface": "His song",
         "lemma": "shir"
-      },
-      {
-        "surface": "is with me",
-        "lemma": "im"
       },
       {
         "surface": "as a prayer",
@@ -460,10 +408,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "to me",
-        "lemma": "el"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -502,20 +446,12 @@
         "lemma": "hamah"
       },
       {
-        "surface": "within me",
-        "lemma": "al"
-      },
-      {
         "surface": "Put your hope",
         "lemma": "yachal"
       },
       {
         "surface": "in God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "I will yet",
@@ -537,7 +473,7 @@
   },
   "themeLemmas": [
     "nephesh",
-    "al",
-    "mah"
+    "mah",
+    "shachach"
   ]
 }

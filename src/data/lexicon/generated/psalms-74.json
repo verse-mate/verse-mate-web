@@ -290,16 +290,8 @@
         "lemma": "lo"
       },
       {
-        "surface": "of us",
-        "lemma": "et"
-      },
-      {
         "surface": "knows",
         "lemma": "yada"
-      },
-      {
-        "surface": "how long",
-        "lemma": "ad"
       },
       {
         "surface": "this will last",
@@ -307,10 +299,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "How long",
-        "lemma": "ad"
-      },
       {
         "surface": "O God",
         "lemma": "elohim"
@@ -398,10 +386,6 @@
     ],
     "13": [
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "divided",
         "lemma": "parar"
       },
@@ -426,19 +410,11 @@
         "lemma": "tan"
       },
       {
-        "surface": "of",
-        "lemma": "al"
-      },
-      {
         "surface": "the sea",
         "lemma": "mayim"
       }
     ],
     "14": [
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
       {
         "surface": "crushed",
         "lemma": "ratsats"
@@ -466,10 +442,6 @@
     ],
     "15": [
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "broke open",
         "lemma": "baqa"
       },
@@ -480,10 +452,6 @@
       {
         "surface": "and the flood",
         "lemma": "nachal"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "dried up",
@@ -504,16 +472,8 @@
         "lemma": "yom"
       },
       {
-        "surface": "and also",
-        "lemma": "aph"
-      },
-      {
         "surface": "the night",
         "lemma": "laylah"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "established",
@@ -530,10 +490,6 @@
     ],
     "17": [
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "set",
         "lemma": "natsav"
       },
@@ -548,10 +504,6 @@
       {
         "surface": "of the earth",
         "lemma": "erets"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "made",
@@ -570,10 +522,6 @@
       {
         "surface": "Remember",
         "lemma": "zakhar"
-      },
-      {
-        "surface": "how",
-        "lemma": "zot"
       },
       {
         "surface": "the enemy",
@@ -656,10 +604,6 @@
         "lemma": "berit"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "haunts",
         "lemma": "naveh"
       },
@@ -736,10 +680,6 @@
         "lemma": "zakhar"
       },
       {
-        "surface": "how",
-        "lemma": "min"
-      },
-      {
         "surface": "the fool",
         "lemma": "naval"
       },
@@ -792,8 +732,8 @@
     ]
   },
   "themeLemmas": [
-    "attah",
-    "al",
-    "shem"
+    "shem",
+    "kol",
+    "al"
   ]
 }
