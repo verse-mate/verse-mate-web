@@ -592,6 +592,40 @@ export default function SettingsScreen() {
         <FontSizeSelector />
         <ThemeSelector />
 
+        {/* Verse Insights toggle — available to everyone (no auth needed) */}
+        <section style={sectionStyle}>
+          <span style={sectionLabelStyle}>Verse Insights</span>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: 12,
+              padding: '12px 16px',
+              background: vmTokens.surfaceRaisedBg,
+              border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
+              borderRadius: 12,
+            }}
+          >
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <p style={{ fontSize: 16, color: vmTokens.textPrimary, margin: 0 }}>
+                Verse Insight popup
+              </p>
+              <p style={{ fontSize: 12, color: vmTokens.textSecondary, marginTop: 2 }}>
+                Show AI insights when you tap a verse
+              </p>
+            </div>
+            <SettingsToggle
+              value={state.settings.verseInsightsPopup !== false}
+              onChange={(v) =>
+                dispatch({ type: 'UPDATE_SETTINGS', settings: { verseInsightsPopup: v } })
+              }
+              testId="settings-verse-insights-toggle"
+              label="Toggle Verse Insight popup"
+            />
+          </div>
+        </section>
+
         {/* Logout */}
         {isAuthenticated && (
           <section style={sectionStyle}>
@@ -709,5 +743,46 @@ export default function SettingsScreen() {
         isLoading={isDeleting}
       />
     </div>
+  );
+}
+
+// iOS-style switch matching the toggle used on the Highlights screen: OFF
+// track uses the theme divider so the white knob stays visible; ON track is
+// the gold brand accent.
+function SettingsToggle({
+  value,
+  onChange,
+  testId,
+  label,
+}: {
+  value: boolean;
+  onChange: (v: boolean) => void;
+  testId?: string;
+  label?: string;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={() => onChange(!value)}
+      role="switch"
+      aria-checked={value}
+      aria-label={label}
+      data-testid={testId}
+      className="relative w-11 h-6 rounded-full shrink-0 transition-colors"
+      style={{
+        backgroundColor: value ? vmTokens.gold : vmTokens.divider,
+        border: `1px solid ${value ? vmTokens.gold : vmTokens.surfaceRaisedBorder}`,
+      }}
+    >
+      <span
+        className="absolute top-0.5 left-0.5 w-5 h-5 rounded-full transition-transform"
+        style={{
+          transform: value ? 'translateX(20px)' : 'translateX(0)',
+          backgroundColor: '#FFFFFF',
+          border: `1px solid ${vmTokens.surfaceRaisedBorder}`,
+          boxShadow: '0 1px 3px rgba(27,27,27,0.15)',
+        }}
+      />
+    </button>
   );
 }

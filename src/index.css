@@ -461,11 +461,16 @@
   }
 }
 
-/* ─── Desktop: VerseInsightSheet narrower than Bible panel ─── */
-@media (min-width: 1024px) {
+/* ─── Tablet+ : VerseInsightSheet emerges over the Bible reading panel ───
+   The sheet is absolutely positioned and its offset parent is `.split-body`
+   (which spans BOTH the reading + commentary panels). Anchoring it to the
+   `[0, --reading-pct]` band — `--reading-pct` is the live reading-panel width
+   set inline by DesktopLayout — keeps the sheet centered over the Bible
+   portion the user tapped instead of floating across the whole split. */
+@media (min-width: 768px) {
   .verse-insight-sheet {
-    left: 10% !important;
-    right: 10% !important;
+    left: 0 !important;
+    right: calc(100% - var(--reading-pct, 65%)) !important;
     max-width: 480px;
     margin: 0 auto;
     border-radius: 24px 24px 0 0;
