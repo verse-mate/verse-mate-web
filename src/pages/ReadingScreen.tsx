@@ -167,6 +167,9 @@ export default function ReadingScreen() {
 
   const [insightVerse, setInsightVerse] = useState<number | null>(null);
   const openVerseInsight = (verseNum: number) => {
+    // Respect the Settings toggle — when Verse Insights are disabled, a verse
+    // tap/click is a no-op (text selection on desktop still works).
+    if (state.settings.verseInsightsPopup === false) return;
     dispatch({ type: 'SET_VERSE', verse: verseNum });
     setInsightVerse(verseNum);
   };

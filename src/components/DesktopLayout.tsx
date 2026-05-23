@@ -10,6 +10,8 @@ import {
   ChevronDown,
   ChevronUp,
   Menu,
+  PanelLeft,
+  PanelRight,
   User,
   Bookmark,
   FileText,
@@ -104,8 +106,20 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const [showBookSelector, setShowBookSelector] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(!hideSidebar);
-  // Sidebar always stays at expanded width; expandedBook controls chapter grid visibility
-  const [expandedBook, setExpandedBook] = useState<string | null>(state.book);
+  // Sidebar always stays at expanded width; expandedBook controls chapter grid visibility.
+  // Only pre-expand the active book when the user arrived via an explicit
+  // /bible/<slug>/<chapter> URL. On a first visit (root → /read → Genesis 1
+  // fallback) leave the list collapsed so the sidebar doesn't open Genesis by
+  // default.
+  const [expandedBook, setExpandedBook] = useState<string | null>(() => {
+    if (typeof window !== 'undefined' && /^\/bible\/[^/]+\/\d+/.test(window.location.pathname)) {
+      return state.book;
+    }
+    return null;
+  });
+  // Right panel can be fully minimized (tablet/desktop) so the reading column
+  // expands to full width. Hidden divider + right pane when collapsed.
+  const [rightPanelCollapsed, setRightPanelCollapsed] = useState(false);
 
   // Per-testament collapse state for the sidebar's OT / NT section headers,
   // persisted across reloads. Default both expanded.
@@ -131,6 +145,9 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   const [rightPanelView, setRightPanelView] = useState<RightPanelView>('commentary');
 
   const openRightPanel = (view: RightPanelView) => {
+    // Opening a menu sub-page (Settings, Bookmarks, …) into the right pane
+    // only makes sense if the pane is visible — un-minimize it.
+    setRightPanelCollapsed(false);
     setRightPanelView(view);
   };
   const closeRightPanel = () => {
@@ -310,12 +327,14 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
   const isSidebarCompact = sidebarWidth < SIDEBAR_COMPACT_THRESHOLD;
 
-  // Below the desktop breakpoint (≥1024 keeps the full split-view with pills
-  // inline in the header) the right pane is too narrow to fit the 4-tab
-  // Insight pill group beside the chapter-selector + hamburger without
-  // overlap. At those widths we mirror the mobile/portrait pattern and
-  // render the pills on their own row beneath the header.
-  const isCompactSplit = useMediaQuery('(max-width: 1023px)');
+  // When the right pane is too narrow to fit the 4-tab Insight pill group
+  // beside the chapter-selector + hamburger, the absolutely-centered pills
+  // collide with the hamburger button. That happens across every iPad size —
+  // portrait (≤1024, incl. iPad Pro 12.9" at exactly 1024) and landscape
+  // (1080–1194). Treat everything up to 1199px as compact so the pills move
+  // to their own row beneath the header; only genuinely wide desktop
+  // viewports (≥1200) keep the inline header pills.
+  const isCompactSplit = useMediaQuery('(max-width: 1199px)');
 
   return (
     // Prototype layout: .app-shell wraps the sidebar + main column.
@@ -519,8 +538,31 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             );
           })()}
 
-          {/* Right: hamburger menu only — prototype .icon-btn */}
+          {/* Right: panel toggles + hamburger menu — prototype .icon-btn */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, position: 'relative', zIndex: 3 }}>
+            {/* Toggle the left book-list sidebar (show / minimize). Lets
+                tablet-portrait users reveal the book list and collapse it
+                again without it permanently eating reading width. */}
+            <button
+              className="icon-btn"
+              onClick={() => setSidebarOpen(o => !o)}
+              aria-label={sidebarOpen ? 'Hide book list' : 'Show book list'}
+              aria-pressed={sidebarOpen}
+              data-testid="desktop-sidebar-toggle"
+            >
+              <PanelLeft size={20} color={vmTokens.headerFg} strokeWidth={2} />
+            </button>
+            {/* Fully minimize / restore the right (commentary) panel so the
+                reading column can take the full width. */}
+            <button
+              className="icon-btn"
+              onClick={() => setRightPanelCollapsed(c => !c)}
+              aria-label={rightPanelCollapsed ? 'Show commentary panel' : 'Minimize commentary panel'}
+              aria-pressed={!rightPanelCollapsed}
+              data-testid="desktop-right-panel-toggle"
+            >
+              <PanelRight size={20} color={vmTokens.headerFg} strokeWidth={2} />
+            </button>
             <button
               className="icon-btn"
               onClick={() => setShowMenu(!showMenu)}
@@ -600,27 +642,40 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
             Summary/By-Line/Detailed insight (right). Sub-page panels (menu
             sub-pages like Settings) still take over the right pane on
             Bible routes only. */}
-        <div ref={contentRef} data-testid="desktop-split-body" className="split-body">
+        <div
+          ref={contentRef}
+          data-testid="desktop-split-body"
+          className="split-body"
+          // Expose the reading-panel width so overlays rendered inside the
+          // reading column (e.g. the Verse Insight sheet) can center
+          // themselves over the Bible portion instead of the whole split.
+          style={{ '--reading-pct': `${rightPanelCollapsed ? 100 : leftPct}%` } as React.CSSProperties}
+        >
           <div
             data-testid="desktop-left-panel"
             className="left-panel"
-            style={{ width: `${leftPct}%` }}
+            style={{ width: rightPanelCollapsed ? '100%' : `${leftPct}%` }}
           >
             <Outlet />
           </div>
 
-          {/* Drag handle — prototype .divider with .divider-dots */}
-          <div
-            className="divider"
-            onPointerDown={handleDragStart}
-            data-testid="desktop-split-divider"
-          >
-            <div className="divider-dots">
-              {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
+          {/* Drag handle — prototype .divider with .divider-dots. Hidden when
+              the right panel is minimized so the reading column owns the full
+              width. */}
+          {!rightPanelCollapsed && (
+            <div
+              className="divider"
+              onPointerDown={handleDragStart}
+              data-testid="desktop-split-divider"
+            >
+              <div className="divider-dots">
+                {[0, 1, 2].map(i => <div key={i} className="divider-dot" />)}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Right panel */}
+          {!rightPanelCollapsed && (
           <div data-testid="desktop-right-panel" className="right-panel">
             {isTopicRoute ? (
               <div
@@ -670,6 +725,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
               </RightPanelProvider>
             )}
           </div>
+          )}
         </div>
       </div>
 

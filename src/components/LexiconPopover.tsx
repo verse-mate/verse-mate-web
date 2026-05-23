@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import type { LexEntry, AlignedToken } from '@/data/lexicon/types';
 import { vmTokens } from '@/styles/themeStyles';
@@ -84,8 +85,57 @@ export default function LexiconPopover({
 }: LexiconPopoverProps) {
   const contextual = token.contextual;
 
+  // Controlled so we can dismiss the card when the Bible scrolls behind it.
+  const [open, setOpen] = useState(false);
+  // Free-drag offset applied on top of Radix's anchored position, so the user
+  // can move the card out of the way (e.g. when zoomed in and it's tall).
+  const [drag, setDrag] = useState({ x: 0, y: 0 });
+  const dragRef = useRef<{ startX: number; startY: number; baseX: number; baseY: number } | null>(
+    null,
+  );
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  // Re-center on the word each time the card opens (clear any prior drag).
+  useEffect(() => {
+    if (open) setDrag({ x: 0, y: 0 });
+  }, [open]);
+
+  // Dismiss on background scroll. Radix's avoid-collision/reposition logic
+  // otherwise makes the card slide and flip while the reading body scrolls
+  // underneath it. Ignore scrolls that originate inside the card itself so
+  // its own internal overflow scrolling doesn't close it.
+  useEffect(() => {
+    if (!open) return;
+    const onScroll = (e: Event) => {
+      const el = contentRef.current;
+      if (el && e.target instanceof Node && el.contains(e.target)) return;
+      setOpen(false);
+    };
+    window.addEventListener('scroll', onScroll, true);
+    return () => window.removeEventListener('scroll', onScroll, true);
+  }, [open]);
+
+  const onHandlePointerDown = useCallback(
+    (e: React.PointerEvent) => {
+      e.stopPropagation();
+      e.currentTarget.setPointerCapture?.(e.pointerId);
+      dragRef.current = { startX: e.clientX, startY: e.clientY, baseX: drag.x, baseY: drag.y };
+    },
+    [drag.x, drag.y],
+  );
+  const onHandlePointerMove = useCallback((e: React.PointerEvent) => {
+    const d = dragRef.current;
+    if (!d) return;
+    setDrag({ x: d.baseX + (e.clientX - d.startX), y: d.baseY + (e.clientY - d.startY) });
+  }, []);
+  const onHandlePointerUp = useCallback((e: React.PointerEvent) => {
+    if (!dragRef.current) return;
+    dragRef.current = null;
+    e.currentTarget.releasePointerCapture?.(e.pointerId);
+  }, []);
+
   return (
-    <Popover>
+    <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <span
           role="button"
@@ -111,17 +161,16 @@ export default function LexiconPopover({
         </span>
       </PopoverTrigger>
       <PopoverContent
+        ref={contentRef}
         align="center"
         side="bottom"
         sideOffset={6}
-        // Top padding accounts for the chapter header (~56px content +
-        // safe-area-inset on devices with notches, padded to ~96 total)
-        // so the popover never tucks up under "James 1" / the book selector.
-        // Bottom uses the standard 16px gutter; the progress bar at the
-        // very bottom is allowed to peek beneath the card if needed.
-        collisionPadding={{ top: 96, right: 16, bottom: 16, left: 16 }}
+        // Smaller top padding leaves more vertical room for the card so it
+        // isn't cut down to a sliver when the page is zoomed in (the CSS-pixel
+        // viewport shrinks with zoom). Drag handle lets the user move it if it
+        // still runs tall. Bottom uses the standard 16px gutter.
+        collisionPadding={{ top: 56, right: 16, bottom: 16, left: 16 }}
         avoidCollisions
-        sticky="always"
         className="w-[320px] p-0 border-0 shadow-2xl"
         style={{
           backgroundColor: vmTokens.surfaceRaisedBg,
@@ -134,12 +183,19 @@ export default function LexiconPopover({
           // bottom-of-screen, or middle. The internal scroll handles overflow.
           maxHeight: 'var(--radix-popover-content-available-height)',
           overflowY: 'auto',
+          // User-applied drag offset, layered on top of Radix's anchored
+          // position (Radix transforms a parent wrapper, not this element).
+          transform: drag.x || drag.y ? `translate(${drag.x}px, ${drag.y}px)` : undefined,
         }}
         onClick={(e) => e.stopPropagation()}
         onTouchStart={(e) => e.stopPropagation()}
       >
-        {/* ── HEADER ── */}
+        {/* ── HEADER (also the drag handle) ── */}
         <div
+          onPointerDown={onHandlePointerDown}
+          onPointerMove={onHandlePointerMove}
+          onPointerUp={onHandlePointerUp}
+          onPointerCancel={onHandlePointerUp}
           style={{
             padding: '14px 16px 10px',
             borderBottom: `1px solid ${vmTokens.divider}`,
@@ -152,6 +208,10 @@ export default function LexiconPopover({
             position: 'sticky',
             top: 0,
             zIndex: 1,
+            cursor: 'grab',
+            // Stop the browser claiming the drag as a scroll/selection gesture.
+            touchAction: 'none',
+            userSelect: 'none',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
