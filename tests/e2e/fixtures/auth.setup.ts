@@ -41,7 +41,7 @@ setup('authenticate', async ({ page, context }) => {
   // Open the hamburger menu — try testid first, fall back to role.
   const menuButton = page.getByTestId('hamburger-menu-button').or(
     page.getByRole('button', { name: /open menu/i })
-  );
+  ).first();
   await menuButton.click();
 
   // Wait for the menu to render (testid may be absent on older staging builds).
@@ -90,6 +90,7 @@ setup('authenticate', async ({ page, context }) => {
   // Successful login: hamburger menu button reappears (or Sign Out in menu)
   await page.getByTestId('hamburger-menu-button')
     .or(page.getByRole('button', { name: /open menu/i }))
+    .first()
     .waitFor({ state: 'visible', timeout: 15_000 });
 
   await context.storageState({ path: AUTH_FILE });
