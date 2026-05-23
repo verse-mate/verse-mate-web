@@ -336,13 +336,21 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
   // viewports (≥1200) keep the inline header pills.
   const isCompactSplit = useMediaQuery('(max-width: 1199px)');
 
+  // Panel minimize controls only exist in compact mode (the toggles live in
+  // the header and would overlap the inline pills at wide desktop widths).
+  // Derive the effective state so a window resized from compact → wide can't
+  // get stuck with a panel hidden and no toggle to restore it: at wide widths
+  // the right pane is always shown and the sidebar follows its layout default.
+  const effectiveRightCollapsed = isCompactSplit && rightPanelCollapsed;
+  const effectiveSidebarOpen = isCompactSplit ? sidebarOpen : !hideSidebar;
+
   return (
     // Prototype layout: .app-shell wraps the sidebar + main column.
     // .sidebar / .sidebar-header / .sidebar-scroll come straight from
     // src/styles/prototype.css. Inline overrides are kept to a minimum.
     <div data-testid="desktop-layout" className="app-shell">
       {/* ─── PERSISTENT SIDEBAR ─── */}
-      {sidebarOpen && (
+      {effectiveSidebarOpen && (
         <aside
           data-testid="desktop-sidebar"
           className="sidebar"
@@ -540,29 +548,40 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
 
           {/* Right: panel toggles + hamburger menu — prototype .icon-btn */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, position: 'relative', zIndex: 3 }}>
-            {/* Toggle the left book-list sidebar (show / minimize). Lets
-                tablet-portrait users reveal the book list and collapse it
-                again without it permanently eating reading width. */}
-            <button
-              className="icon-btn"
-              onClick={() => setSidebarOpen(o => !o)}
-              aria-label={sidebarOpen ? 'Hide book list' : 'Show book list'}
-              aria-pressed={sidebarOpen}
-              data-testid="desktop-sidebar-toggle"
-            >
-              <PanelLeft size={20} color={vmTokens.headerFg} strokeWidth={2} />
-            </button>
-            {/* Fully minimize / restore the right (commentary) panel so the
-                reading column can take the full width. */}
-            <button
-              className="icon-btn"
-              onClick={() => setRightPanelCollapsed(c => !c)}
-              aria-label={rightPanelCollapsed ? 'Show commentary panel' : 'Minimize commentary panel'}
-              aria-pressed={!rightPanelCollapsed}
-              data-testid="desktop-right-panel-toggle"
-            >
-              <PanelRight size={20} color={vmTokens.headerFg} strokeWidth={2} />
-            </button>
+            {/* Panel toggles only render in compact/tablet mode. At wide desktop
+                widths the commentary pills sit inline in the header (absolutely
+                centered over the right pane); adding buttons to this right
+                cluster there would overlap the rightmost pill and swallow its
+                clicks. In compact mode the pills move to their own row beneath
+                the header, so the cluster has room — and tablet portrait is
+                exactly where the minimize controls are wanted. */}
+            {isCompactSplit && (
+              <>
+                {/* Toggle the left book-list sidebar (show / minimize). Lets
+                    tablet-portrait users reveal the book list and collapse it
+                    again without it permanently eating reading width. */}
+                <button
+                  className="icon-btn"
+                  onClick={() => setSidebarOpen(o => !o)}
+                  aria-label={sidebarOpen ? 'Hide book list' : 'Show book list'}
+                  aria-pressed={sidebarOpen}
+                  data-testid="desktop-sidebar-toggle"
+                >
+                  <PanelLeft size={20} color={vmTokens.headerFg} strokeWidth={2} />
+                </button>
+                {/* Fully minimize / restore the right (commentary) panel so the
+                    reading column can take the full width. */}
+                <button
+                  className="icon-btn"
+                  onClick={() => setRightPanelCollapsed(c => !c)}
+                  aria-label={rightPanelCollapsed ? 'Show commentary panel' : 'Minimize commentary panel'}
+                  aria-pressed={!rightPanelCollapsed}
+                  data-testid="desktop-right-panel-toggle"
+                >
+                  <PanelRight size={20} color={vmTokens.headerFg} strokeWidth={2} />
+                </button>
+              </>
+            )}
             <button
               className="icon-btn"
               onClick={() => setShowMenu(!showMenu)}
@@ -649,12 +668,12 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           // Expose the reading-panel width so overlays rendered inside the
           // reading column (e.g. the Verse Insight sheet) can center
           // themselves over the Bible portion instead of the whole split.
-          style={{ '--reading-pct': `${rightPanelCollapsed ? 100 : leftPct}%` } as React.CSSProperties}
+          style={{ '--reading-pct': `${effectiveRightCollapsed ? 100 : leftPct}%` } as React.CSSProperties}
         >
           <div
             data-testid="desktop-left-panel"
             className="left-panel"
-            style={{ width: rightPanelCollapsed ? '100%' : `${leftPct}%` }}
+            style={{ width: effectiveRightCollapsed ? '100%' : `${leftPct}%` }}
           >
             <Outlet />
           </div>
@@ -662,7 +681,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           {/* Drag handle — prototype .divider with .divider-dots. Hidden when
               the right panel is minimized so the reading column owns the full
               width. */}
-          {!rightPanelCollapsed && (
+          {!effectiveRightCollapsed && (
             <div
               className="divider"
               onPointerDown={handleDragStart}
@@ -675,7 +694,7 @@ export default function DesktopLayout({ hideSidebar = false }: { hideSidebar?: b
           )}
 
           {/* Right panel */}
-          {!rightPanelCollapsed && (
+          {!effectiveRightCollapsed && (
           <div data-testid="desktop-right-panel" className="right-panel">
             {isTopicRoute ? (
               <div
