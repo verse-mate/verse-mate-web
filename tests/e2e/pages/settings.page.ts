@@ -34,7 +34,12 @@ export class SettingsPage {
   }
 
   async goto() {
-    await this.page.goto('/menu/settings');
+    // waitUntil: 'networkidle' ensures lazy-rendered sections (font-size
+    // slider, version picker) are mounted before callers assert against them.
+    // Without this, goto() resolved as soon as the back button appeared but
+    // before React had finished rendering all settings rows — causing
+    // intermittent failures under parallel execution (VER-125).
+    await this.page.goto('/menu/settings', { waitUntil: 'networkidle' });
     await this.backButton.waitFor({ state: 'visible' });
   }
 
