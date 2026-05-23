@@ -13,7 +13,15 @@ import { HelpPage } from '../pages/help.page';
  * We deliberately do NOT submit to the backend.
  */
 
+// HelpScreen has an auth guard that redirects guests to /login.
+// Inject a fake accessToken cookie so these layout-only tests can reach the form.
+const FAKE_COOKIE = { name: 'accessToken', value: 'fake-token', domain: 'localhost', path: '/' };
+
 test.describe('Menu — Help', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.context().addCookies([FAKE_COOKIE]);
+  });
+
   test('renders heading + topic picker + textarea + submit button', async ({ page }) => {
     const help = new HelpPage(page);
     await help.goto();
