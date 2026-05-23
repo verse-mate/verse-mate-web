@@ -52,10 +52,6 @@
       {
         "surface": "rise up",
         "lemma": "qamay"
-      },
-      {
-        "surface": "against me",
-        "lemma": "al"
       }
     ],
     "2": [
@@ -90,10 +86,6 @@
     ],
     "3": [
       {
-        "surface": "But You",
-        "lemma": "attah"
-      },
-      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -119,10 +111,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "To",
-        "lemma": "el"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -154,10 +142,6 @@
     ],
     "5": [
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "lie down",
         "lemma": "shakhav"
       },
@@ -168,10 +152,6 @@
       {
         "surface": "I wake again",
         "lemma": "quts"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -198,10 +178,6 @@
       {
         "surface": "set",
         "lemma": "shit"
-      },
-      {
-        "surface": "against me",
-        "lemma": "al"
       },
       {
         "surface": "on every side",
@@ -268,10 +244,6 @@
         "lemma": "berakhah"
       },
       {
-        "surface": "be on",
-        "lemma": "al"
-      },
-      {
         "surface": "Your people",
         "lemma": "am"
       },
@@ -283,7 +255,7 @@
   },
   "themeLemmas": [
     "selah",
-    "al",
-    "yeshuah"
+    "yeshuah",
+    "rav"
   ]
 }

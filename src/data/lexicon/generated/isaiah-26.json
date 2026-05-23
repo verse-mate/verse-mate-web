@@ -6,16 +6,8 @@
   "verses": {
     "1": [
       {
-        "surface": "In that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
-      },
-      {
-        "surface": "this",
-        "lemma": "zeh"
       },
       {
         "surface": "song",
@@ -106,10 +98,6 @@
         "lemma": "yetser"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "he trusts",
         "lemma": "batach"
       }
@@ -122,14 +110,6 @@
       {
         "surface": "in the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "forever",
-        "lemma": "ad"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
       },
       {
         "surface": "GOD",
@@ -149,10 +129,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "He has humbled",
         "lemma": "shachach"
@@ -182,20 +158,12 @@
         "lemma": "shaphel"
       },
       {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
         "surface": "the ground",
         "lemma": "erets"
       },
       {
         "surface": "He casts",
         "lemma": "naga"
-      },
-      {
-        "surface": "it into",
-        "lemma": "ad"
       },
       {
         "surface": "the dust",
@@ -260,10 +228,6 @@
     ],
     "8": [
       {
-        "surface": "Yes",
-        "lemma": "aph"
-      },
-      {
         "surface": "we wait for You",
         "lemma": "qavah"
       },
@@ -310,10 +274,6 @@
         "lemma": "laylah"
       },
       {
-        "surface": "indeed",
-        "lemma": "aph"
-      },
-      {
         "surface": "my spirit",
         "lemma": "ruach"
       },
@@ -324,14 +284,6 @@
       {
         "surface": "at dawn",
         "lemma": "qerev"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "when",
-        "lemma": "asher"
       },
       {
         "surface": "Your judgments",
@@ -470,10 +422,6 @@
       {
         "surface": "peace",
         "lemma": "shalom"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "all",
@@ -642,10 +590,6 @@
     ],
     "17": [
       {
-        "surface": "As",
-        "lemma": "kemo"
-      },
-      {
         "surface": "a woman with child",
         "lemma": "harah"
       },
@@ -694,10 +638,6 @@
       {
         "surface": "we writhed in pain",
         "lemma": "chul"
-      },
-      {
-        "surface": "but",
-        "lemma": "kemo"
       },
       {
         "surface": "we gave birth to",
@@ -774,10 +714,6 @@
         "lemma": "aphar"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "your dew",
         "lemma": "tal"
       },
@@ -844,10 +780,6 @@
         "lemma": "rega"
       },
       {
-        "surface": "until",
-        "lemma": "ad"
-      },
-      {
         "surface": "the wrath",
         "lemma": "zaam"
       },
@@ -857,14 +789,6 @@
       }
     ],
     "21": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -924,8 +848,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "bal",
-    "yashav"
+    "yashav",
+    "tsaddiq"
   ]
 }

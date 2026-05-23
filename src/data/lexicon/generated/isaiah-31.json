@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to those who go down",
         "lemma": "yarad"
       },
@@ -26,10 +22,6 @@
         "lemma": "shaan"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "horses",
         "lemma": "sus"
       },
@@ -38,20 +30,12 @@
         "lemma": "batach"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "their abundance",
         "lemma": "rav"
       },
       {
         "surface": "of chariots",
         "lemma": "rekhev"
-      },
-      {
-        "surface": "and in",
-        "lemma": "al"
       },
       {
         "surface": "their multitude",
@@ -68,10 +52,6 @@
       {
         "surface": "look",
         "lemma": "shaah"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "the Holy",
@@ -95,14 +75,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "Yet",
-        "lemma": "hu"
-      },
-      {
-        "surface": "He too",
-        "lemma": "gam"
-      },
       {
         "surface": "is wise",
         "lemma": "chakham"
@@ -132,20 +104,12 @@
         "lemma": "qamay"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "the house",
         "lemma": "bet"
       },
       {
         "surface": "of the wicked",
         "lemma": "raa"
-      },
-      {
-        "surface": "and against",
-        "lemma": "al"
       },
       {
         "surface": "the allies",
@@ -232,10 +196,6 @@
     ],
     "4": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "this is what",
         "lemma": "koh"
       },
@@ -246,14 +206,6 @@
       {
         "surface": "has said",
         "lemma": "amar"
-      },
-      {
-        "surface": "to me",
-        "lemma": "el"
-      },
-      {
-        "surface": "Like",
-        "lemma": "asher"
       },
       {
         "surface": "a lion",
@@ -268,16 +220,8 @@
         "lemma": "kephir"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "its prey",
         "lemma": "tereph"
-      },
-      {
-        "surface": "and though",
-        "lemma": "asher"
       },
       {
         "surface": "a band",
@@ -290,10 +234,6 @@
       {
         "surface": "is called out",
         "lemma": "qara"
-      },
-      {
-        "surface": "against it",
-        "lemma": "al"
       },
       {
         "surface": "it is not",
@@ -336,20 +276,12 @@
         "lemma": "tsava"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "Mount",
         "lemma": "har"
       },
       {
         "surface": "Zion",
         "lemma": "tsiyyon"
-      },
-      {
-        "surface": "and",
-        "lemma": "al"
       },
       {
         "surface": "its heights",
@@ -408,10 +340,6 @@
         "lemma": "shuv"
       },
       {
-        "surface": "to the One",
-        "lemma": "asher"
-      },
-      {
         "surface": "against whom you have so blatantly",
         "lemma": "amaq"
       },
@@ -429,14 +357,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "on that",
-        "lemma": "hu"
-      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -460,10 +380,6 @@
       {
         "surface": "and gold",
         "lemma": "zahav"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "hands",
@@ -574,10 +490,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "whose",
-        "lemma": "asher"
-      },
-      {
         "surface": "fire",
         "lemma": "ur"
       },
@@ -596,8 +508,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "lo",
-    "asher"
+    "tsava",
+    "cherev"
   ]
 }

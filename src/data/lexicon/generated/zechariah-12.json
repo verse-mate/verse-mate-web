@@ -18,10 +18,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "concerning",
-        "lemma": "al"
-      },
-      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -68,14 +64,6 @@
     ],
     "2": [
       {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "will make",
         "lemma": "sum"
       },
@@ -116,19 +104,11 @@
         "lemma": "matsor"
       },
       {
-        "surface": "as well as",
-        "lemma": "al"
-      },
-      {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
       }
     ],
     "3": [
-      {
-        "surface": "On that",
-        "lemma": "hu"
-      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -148,10 +128,6 @@
       {
         "surface": "gather",
         "lemma": "asaph"
-      },
-      {
-        "surface": "against her",
-        "lemma": "al"
       },
       {
         "surface": "I will make",
@@ -191,10 +167,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "On that",
-        "lemma": "hu"
-      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -238,10 +210,6 @@
       {
         "surface": "eye",
         "lemma": "ayin"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the house",
@@ -316,10 +284,6 @@
     ],
     "6": [
       {
-        "surface": "On that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -372,16 +336,8 @@
         "lemma": "saviv"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the right",
         "lemma": "yamin"
-      },
-      {
-        "surface": "and on",
-        "lemma": "al"
       },
       {
         "surface": "the left",
@@ -430,10 +386,6 @@
         "lemma": "rishon"
       },
       {
-        "surface": "so that",
-        "lemma": "maan"
-      },
-      {
         "surface": "the glory",
         "lemma": "tipharah"
       },
@@ -466,19 +418,11 @@
         "lemma": "gadal"
       },
       {
-        "surface": "than",
-        "lemma": "al"
-      },
-      {
         "surface": "that of Judah",
         "lemma": "yehudah"
       }
     ],
     "8": [
-      {
-        "surface": "On that",
-        "lemma": "hu"
-      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -498,10 +442,6 @@
       {
         "surface": "of Jerusalem",
         "lemma": "yerushalaim"
-      },
-      {
-        "surface": "so that",
-        "lemma": "hu"
       },
       {
         "surface": "the weakest",
@@ -546,10 +486,6 @@
         "lemma": "hayah"
       },
       {
-        "surface": "on that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -574,10 +510,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "Jerusalem",
         "lemma": "yerushalaim"
       }
@@ -588,20 +520,12 @@
         "lemma": "shaphakh"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the house",
         "lemma": "bet"
       },
       {
         "surface": "of David",
         "lemma": "david"
-      },
-      {
-        "surface": "and on",
-        "lemma": "al"
       },
       {
         "surface": "the people",
@@ -628,14 +552,6 @@
         "lemma": "navat"
       },
       {
-        "surface": "on Me",
-        "lemma": "el"
-      },
-      {
-        "surface": "the One",
-        "lemma": "asher"
-      },
-      {
         "surface": "they have pierced",
         "lemma": "daqar"
       },
@@ -644,16 +560,8 @@
         "lemma": "saphad"
       },
       {
-        "surface": "for Him",
-        "lemma": "al"
-      },
-      {
         "surface": "as one mourns",
         "lemma": "misped"
-      },
-      {
-        "surface": "for",
-        "lemma": "al"
       },
       {
         "surface": "an only child",
@@ -664,16 +572,8 @@
         "lemma": "marar"
       },
       {
-        "surface": "for Him",
-        "lemma": "al"
-      },
-      {
         "surface": "as one grieves",
         "lemma": "marar"
-      },
-      {
-        "surface": "for",
-        "lemma": "al"
       },
       {
         "surface": "a firstborn son",
@@ -681,10 +581,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "On that",
-        "lemma": "hu"
-      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -826,8 +722,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "yerushalaim",
-    "kol"
+    "kol",
+    "mishpachah"
   ]
 }

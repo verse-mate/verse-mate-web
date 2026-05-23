@@ -28,10 +28,6 @@
       {
         "surface": "my commandments",
         "lemma": "mitsvah"
-      },
-      {
-        "surface": "within you",
-        "lemma": "et"
       }
     ],
     "2": [
@@ -64,10 +60,6 @@
       {
         "surface": "if you",
         "lemma": "im"
-      },
-      {
-        "surface": "truly",
-        "lemma": "ki"
       },
       {
         "surface": "call out",
@@ -114,10 +106,6 @@
     ],
     "5": [
       {
-        "surface": "then",
-        "lemma": "az"
-      },
-      {
         "surface": "you will discern",
         "lemma": "bin"
       },
@@ -143,10 +131,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -226,10 +210,6 @@
     ],
     "9": [
       {
-        "surface": "Then",
-        "lemma": "az"
-      },
-      {
         "surface": "you will discern",
         "lemma": "bin"
       },
@@ -259,10 +239,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "wisdom",
         "lemma": "chokhmah"
@@ -386,10 +362,6 @@
     ],
     "15": [
       {
-        "surface": "whose",
-        "lemma": "asher"
-      },
-      {
         "surface": "paths",
         "lemma": "orach"
       },
@@ -460,10 +432,6 @@
     ],
     "18": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "her house",
         "lemma": "bet"
       },
@@ -472,20 +440,12 @@
         "lemma": "shuach"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "death",
         "lemma": "mavet"
       },
       {
         "surface": "and her tracks",
         "lemma": "magal"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the departed spirits",
@@ -524,10 +484,6 @@
     ],
     "20": [
       {
-        "surface": "So",
-        "lemma": "maan"
-      },
-      {
         "surface": "you will follow",
         "lemma": "halakh"
       },
@@ -553,10 +509,6 @@
       }
     ],
     "21": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the upright",
         "lemma": "yashar"
@@ -588,10 +540,6 @@
         "lemma": "karat"
       },
       {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -607,7 +555,7 @@
   },
   "themeLemmas": [
     "orach",
-    "ki",
-    "tavunah"
+    "tavunah",
+    "shamar"
   ]
 }

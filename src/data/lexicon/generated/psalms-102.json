@@ -14,10 +14,6 @@
         "lemma": "ani"
       },
       {
-        "surface": "when",
-        "lemma": "ki"
-      },
-      {
         "surface": "he grows faint",
         "lemma": "ataph"
       },
@@ -56,10 +52,6 @@
       {
         "surface": "come",
         "lemma": "bo"
-      },
-      {
-        "surface": "before You",
-        "lemma": "el"
       }
     ],
     "2": [
@@ -76,10 +68,6 @@
         "lemma": "paneh"
       },
       {
-        "surface": "from me",
-        "lemma": "min"
-      },
-      {
         "surface": "in my day",
         "lemma": "yom"
       },
@@ -94,10 +82,6 @@
       {
         "surface": "Your ear",
         "lemma": "ozen"
-      },
-      {
-        "surface": "to me",
-        "lemma": "el"
       },
       {
         "surface": "answer me",
@@ -118,10 +102,6 @@
     ],
     "3": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "my days",
         "lemma": "yom"
       },
@@ -140,10 +120,6 @@
       {
         "surface": "burn",
         "lemma": "charar"
-      },
-      {
-        "surface": "like glowing embers",
-        "lemma": "kemo"
       }
     ],
     "4": [
@@ -162,10 +138,6 @@
       {
         "surface": "like grass",
         "lemma": "esev"
-      },
-      {
-        "surface": "I even",
-        "lemma": "ki"
       },
       {
         "surface": "forget",
@@ -246,10 +218,6 @@
         "lemma": "tsippor"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "a housetop",
         "lemma": "gag"
       }
@@ -281,10 +249,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "I have eaten",
         "lemma": "akhal"
@@ -324,10 +288,6 @@
         "lemma": "qetseph"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "You have picked me up",
         "lemma": "nasa"
       },
@@ -350,10 +310,6 @@
         "lemma": "tsel"
       },
       {
-        "surface": "and I",
-        "lemma": "ani"
-      },
-      {
         "surface": "wither away",
         "lemma": "yavesh"
       },
@@ -363,10 +319,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "But You",
-        "lemma": "attah"
-      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -390,10 +342,6 @@
     ],
     "13": [
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "will rise up",
         "lemma": "qamay"
       },
@@ -404,10 +352,6 @@
       {
         "surface": "on Zion",
         "lemma": "tsiyyon"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "it is time",
@@ -428,10 +372,6 @@
     ],
     "14": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "Your servants",
         "lemma": "eved"
       },
@@ -440,16 +380,8 @@
         "lemma": "ratsah"
       },
       {
-        "surface": "in her",
-        "lemma": "et"
-      },
-      {
         "surface": "stones",
         "lemma": "even"
-      },
-      {
-        "surface": "and",
-        "lemma": "et"
       },
       {
         "surface": "take pity",
@@ -496,10 +428,6 @@
     ],
     "16": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -526,10 +454,6 @@
         "lemma": "panah"
       },
       {
-        "surface": "toward",
-        "lemma": "el"
-      },
-      {
         "surface": "the prayer",
         "lemma": "tephillah"
       },
@@ -551,10 +475,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "Let this",
-        "lemma": "zot"
-      },
       {
         "surface": "be written",
         "lemma": "katav"
@@ -586,10 +506,6 @@
     ],
     "19": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "He looked down",
         "lemma": "shaqaph"
       },
@@ -612,10 +528,6 @@
       {
         "surface": "from heaven",
         "lemma": "shamayim"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "earth",
@@ -780,16 +692,8 @@
     ],
     "26": [
       {
-        "surface": "They",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "will perish",
         "lemma": "avad"
-      },
-      {
-        "surface": "but You",
-        "lemma": "attah"
       },
       {
         "surface": "remain",
@@ -821,14 +725,6 @@
       }
     ],
     "27": [
-      {
-        "surface": "But You",
-        "lemma": "attah"
-      },
-      {
-        "surface": "remain the same",
-        "lemma": "hu"
-      },
       {
         "surface": "and Your years",
         "lemma": "shaneh"
@@ -870,8 +766,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "paneh",
-    "tephillah"
+    "tephillah",
+    "tsiyyon"
   ]
 }

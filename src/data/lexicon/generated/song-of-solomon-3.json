@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "On",
-        "lemma": "al"
-      },
-      {
         "surface": "my bed",
         "lemma": "mishkav"
       },
@@ -20,10 +16,6 @@
       {
         "surface": "I sought",
         "lemma": "baqash"
-      },
-      {
-        "surface": "the one",
-        "lemma": "et"
       },
       {
         "surface": "I",
@@ -52,10 +44,6 @@
         "lemma": "qamay"
       },
       {
-        "surface": "now",
-        "lemma": "na"
-      },
-      {
         "surface": "and go about",
         "lemma": "savav"
       },
@@ -74,10 +62,6 @@
       {
         "surface": "I will seek",
         "lemma": "baqash"
-      },
-      {
-        "surface": "the one",
-        "lemma": "et"
       },
       {
         "surface": "I",
@@ -140,16 +124,8 @@
         "lemma": "avar"
       },
       {
-        "surface": "when",
-        "lemma": "ad"
-      },
-      {
         "surface": "I found",
         "lemma": "matsa"
-      },
-      {
-        "surface": "the one",
-        "lemma": "et"
       },
       {
         "surface": "I",
@@ -172,16 +148,8 @@
         "lemma": "raphah"
       },
       {
-        "surface": "until",
-        "lemma": "ad"
-      },
-      {
         "surface": "I had brought him",
         "lemma": "bo"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "my mother’s",
@@ -190,10 +158,6 @@
       {
         "surface": "house",
         "lemma": "bet"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the chamber",
@@ -218,16 +182,8 @@
         "lemma": "shava"
       },
       {
-        "surface": "you",
-        "lemma": "et"
-      },
-      {
         "surface": "by the gazelles",
         "lemma": "tsevi"
-      },
-      {
-        "surface": "and",
-        "lemma": "o"
       },
       {
         "surface": "does",
@@ -258,10 +214,6 @@
         "lemma": "ahavah"
       },
       {
-        "surface": "until",
-        "lemma": "ad"
-      },
-      {
         "surface": "the time is right",
         "lemma": "chaphets"
       }
@@ -272,16 +224,8 @@
         "lemma": "mi"
       },
       {
-        "surface": "is this",
-        "lemma": "zot"
-      },
-      {
         "surface": "coming up",
         "lemma": "alah"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
       },
       {
         "surface": "the wilderness",
@@ -321,10 +265,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "it is Solomon’s",
         "lemma": "shelomoh"
@@ -378,10 +318,6 @@
       {
         "surface": "has his sword",
         "lemma": "cherev"
-      },
-      {
-        "surface": "at",
-        "lemma": "al"
       },
       {
         "surface": "his side",
@@ -534,6 +470,6 @@
   "themeLemmas": [
     "nephesh",
     "matsa",
-    "et"
+    "baqash"
   ]
 }

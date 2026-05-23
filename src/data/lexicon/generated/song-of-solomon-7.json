@@ -38,10 +38,6 @@
         "lemma": "yarekh"
       },
       {
-        "surface": "are like",
-        "lemma": "kemo"
-      },
-      {
         "surface": "jewels",
         "lemma": "chali"
       },
@@ -148,10 +144,6 @@
         "lemma": "cheshbon"
       },
       {
-        "surface": "by",
-        "lemma": "al"
-      },
-      {
         "surface": "the gate",
         "lemma": "shaar"
       },
@@ -188,10 +180,6 @@
       {
         "surface": "Your head",
         "lemma": "rosh"
-      },
-      {
-        "surface": "crowns you",
-        "lemma": "al"
       },
       {
         "surface": "like Mount Carmel",
@@ -360,20 +348,12 @@
     ],
     "10": [
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "belong to my beloved",
         "lemma": "dod"
       },
       {
         "surface": "and his desire",
         "lemma": "teshuqah"
-      },
-      {
-        "surface": "is for me",
-        "lemma": "al"
       }
     ],
     "11": [
@@ -448,10 +428,6 @@
         "lemma": "natan"
       },
       {
-        "surface": "you",
-        "lemma": "et"
-      },
-      {
         "surface": "my love",
         "lemma": "dod"
       }
@@ -470,10 +446,6 @@
         "lemma": "reach"
       },
       {
-        "surface": "and at",
-        "lemma": "al"
-      },
-      {
         "surface": "our door",
         "lemma": "petach"
       },
@@ -488,10 +460,6 @@
       {
         "surface": "new",
         "lemma": "chadash"
-      },
-      {
-        "surface": "as",
-        "lemma": "gam"
       },
       {
         "surface": "well as old",
@@ -509,7 +477,7 @@
   },
   "themeLemmas": [
     "dod",
-    "al",
-    "shad"
+    "shad",
+    "mah"
   ]
 }

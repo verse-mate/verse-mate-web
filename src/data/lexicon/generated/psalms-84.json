@@ -10,10 +10,6 @@
         "lemma": "natsach"
       },
       {
-        "surface": "According to",
-        "lemma": "al"
-      },
-      {
         "surface": "Gittith",
         "lemma": "gittit"
       },
@@ -60,10 +56,6 @@
         "lemma": "kasaph"
       },
       {
-        "surface": "even",
-        "lemma": "gam"
-      },
-      {
         "surface": "faints",
         "lemma": "kalah"
       },
@@ -88,10 +80,6 @@
         "lemma": "run"
       },
       {
-        "surface": "for",
-        "lemma": "el"
-      },
-      {
         "surface": "the living",
         "lemma": "chay"
       },
@@ -101,10 +89,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "Even",
-        "lemma": "gam"
-      },
       {
         "surface": "the sparrow",
         "lemma": "tsippor"
@@ -124,10 +108,6 @@
       {
         "surface": "a nest",
         "lemma": "qen"
-      },
-      {
-        "surface": "where",
-        "lemma": "asher"
       },
       {
         "surface": "she places",
@@ -228,10 +208,6 @@
         "lemma": "mayan"
       },
       {
-        "surface": "even",
-        "lemma": "gam"
-      },
-      {
         "surface": "the autumn rain",
         "lemma": "moreh"
       },
@@ -254,20 +230,12 @@
         "lemma": "chayil"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "strength",
         "lemma": "chayil"
       },
       {
         "surface": "until each appears",
         "lemma": "raah"
-      },
-      {
-        "surface": "before",
-        "lemma": "el"
       },
       {
         "surface": "God",
@@ -344,10 +312,6 @@
     ],
     "10": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "better",
         "lemma": "tov"
       },
@@ -393,10 +357,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -475,7 +435,7 @@
   },
   "themeLemmas": [
     "tsava",
-    "gam",
-    "esher"
+    "esher",
+    "bet"
   ]
 }

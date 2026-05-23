@@ -98,10 +98,6 @@
     ],
     "5": [
       {
-        "surface": "But",
-        "lemma": "ulam"
-      },
-      {
         "surface": "if only",
         "lemma": "mi"
       },
@@ -120,10 +116,6 @@
       {
         "surface": "His lips",
         "lemma": "saphah"
-      },
-      {
-        "surface": "against you",
-        "lemma": "im"
       }
     ],
     "6": [
@@ -140,10 +132,6 @@
         "lemma": "chokhmah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "true wisdom",
         "lemma": "tushiyyah"
       },
@@ -154,10 +142,6 @@
       {
         "surface": "Know",
         "lemma": "yada"
-      },
-      {
-        "surface": "then that",
-        "lemma": "ki"
       },
       {
         "surface": "God",
@@ -246,10 +230,6 @@
         "lemma": "arokh"
       },
       {
-        "surface": "than",
-        "lemma": "min"
-      },
-      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -289,14 +269,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "Surely",
-        "lemma": "ki"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
-      },
       {
         "surface": "knows",
         "lemma": "yada"
@@ -358,10 +330,6 @@
     ],
     "13": [
       {
-        "surface": "As for you",
-        "lemma": "attah"
-      },
-      {
         "surface": "if",
         "lemma": "im"
       },
@@ -380,10 +348,6 @@
       {
         "surface": "your hands",
         "lemma": "kaph"
-      },
-      {
-        "surface": "to Him",
-        "lemma": "el"
       }
     ],
     "14": [
@@ -422,14 +386,6 @@
     ],
     "15": [
       {
-        "surface": "then",
-        "lemma": "az"
-      },
-      {
-        "surface": "indeed",
-        "lemma": "ki"
-      },
-      {
         "surface": "you will lift up",
         "lemma": "nasa"
       },
@@ -455,14 +411,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "you",
-        "lemma": "attah"
-      },
       {
         "surface": "will forget",
         "lemma": "shakhach"
@@ -514,10 +462,6 @@
       {
         "surface": "You will be secure",
         "lemma": "batach"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
       },
       {
         "surface": "there is",
@@ -598,8 +542,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "im",
-    "yada"
+    "yada",
+    "lo"
   ]
 }

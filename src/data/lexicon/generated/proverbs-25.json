@@ -6,24 +6,12 @@
   "verses": {
     "1": [
       {
-        "surface": "These are",
-        "lemma": "elleh"
-      },
-      {
-        "surface": "additional",
-        "lemma": "gam"
-      },
-      {
         "surface": "proverbs",
         "lemma": "mashal"
       },
       {
         "surface": "of Solomon",
         "lemma": "shelomoh"
-      },
-      {
-        "surface": "which",
-        "lemma": "asher"
       },
       {
         "surface": "were copied by",
@@ -202,10 +190,6 @@
     ],
     "7": [
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "it is better",
         "lemma": "tov"
       },
@@ -234,10 +218,6 @@
         "lemma": "nadiv"
       },
       {
-        "surface": "Even what",
-        "lemma": "asher"
-      },
-      {
         "surface": "you have seen",
         "lemma": "raah"
       },
@@ -262,10 +242,6 @@
       {
         "surface": "to court",
         "lemma": "riv"
-      },
-      {
-        "surface": "Otherwise",
-        "lemma": "pen"
       },
       {
         "surface": "what",
@@ -298,10 +274,6 @@
         "lemma": "riv"
       },
       {
-        "surface": "with",
-        "lemma": "et"
-      },
-      {
         "surface": "your neighbor",
         "lemma": "rea"
       },
@@ -323,10 +295,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "lest",
-        "lemma": "pen"
-      },
       {
         "surface": "he who hears you",
         "lemma": "shama"
@@ -352,10 +320,6 @@
       {
         "surface": "A word",
         "lemma": "davar"
-      },
-      {
-        "surface": "vvv",
-        "lemma": "al"
       },
       {
         "surface": "fitly",
@@ -406,10 +370,6 @@
       {
         "surface": "rebuke",
         "lemma": "yakhach"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "a listening",
@@ -544,10 +504,6 @@
         "lemma": "day"
       },
       {
-        "surface": "lest",
-        "lemma": "pen"
-      },
-      {
         "surface": "you have too much",
         "lemma": "sava"
       },
@@ -572,10 +528,6 @@
       {
         "surface": "house",
         "lemma": "bet"
-      },
-      {
-        "surface": "lest",
-        "lemma": "pen"
       },
       {
         "surface": "he grow weary",
@@ -680,10 +632,6 @@
         "lemma": "chomets"
       },
       {
-        "surface": "poured on",
-        "lemma": "al"
-      },
-      {
         "surface": "a wound",
         "lemma": "neter"
       },
@@ -694,10 +642,6 @@
       {
         "surface": "songs",
         "lemma": "shir"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "a heavy",
@@ -748,24 +692,12 @@
     ],
     "22": [
       {
-        "surface": "For in so doing",
-        "lemma": "ki"
-      },
-      {
-        "surface": "you",
-        "lemma": "attah"
-      },
-      {
         "surface": "will heap",
         "lemma": "chatah"
       },
       {
         "surface": "burning coals",
         "lemma": "gechel"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "his head",
@@ -824,10 +756,6 @@
         "lemma": "yashav"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "a corner",
         "lemma": "pinnah"
       },
@@ -860,10 +788,6 @@
       {
         "surface": "water",
         "lemma": "mayim"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "a weary",
@@ -972,10 +896,6 @@
         "lemma": "ish"
       },
       {
-        "surface": "who",
-        "lemma": "asher"
-      },
-      {
         "surface": "does not",
         "lemma": "ayin"
       },
@@ -990,8 +910,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "paneh",
-    "tov"
+    "tov",
+    "rea"
   ]
 }

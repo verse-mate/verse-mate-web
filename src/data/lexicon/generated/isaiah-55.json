@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Come",
-        "lemma": "hoy"
-      },
-      {
         "surface": "all you",
         "lemma": "kol"
       },
@@ -24,10 +20,6 @@
       {
         "surface": "to the waters",
         "lemma": "mayim"
-      },
-      {
-        "surface": "and you",
-        "lemma": "asher"
       },
       {
         "surface": "without",
@@ -120,10 +112,6 @@
         "lemma": "shama"
       },
       {
-        "surface": "to Me",
-        "lemma": "el"
-      },
-      {
         "surface": "and eat",
         "lemma": "akhal"
       },
@@ -156,10 +144,6 @@
       {
         "surface": "and come",
         "lemma": "halakh"
-      },
-      {
-        "surface": "to Me",
-        "lemma": "el"
       },
       {
         "surface": "listen",
@@ -200,10 +184,6 @@
     ],
     "4": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "I have made him",
         "lemma": "natan"
       },
@@ -229,10 +209,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "Surely",
-        "lemma": "hen"
-      },
       {
         "surface": "you will summon",
         "lemma": "qara"
@@ -264,14 +240,6 @@
       {
         "surface": "will run",
         "lemma": "ruts"
-      },
-      {
-        "surface": "to you",
-        "lemma": "el"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -350,10 +318,6 @@
         "lemma": "shuv"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -362,16 +326,8 @@
         "lemma": "racham"
       },
       {
-        "surface": "and to",
-        "lemma": "el"
-      },
-      {
         "surface": "our God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "He will freely",
@@ -383,10 +339,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "My thoughts",
         "lemma": "machashavah"
@@ -421,10 +373,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "as the heavens",
         "lemma": "shamayim"
@@ -464,14 +412,6 @@
     ],
     "10": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "just as",
-        "lemma": "asher"
-      },
-      {
         "surface": "rain",
         "lemma": "geshem"
       },
@@ -484,10 +424,6 @@
         "lemma": "yarad"
       },
       {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
         "surface": "heaven",
         "lemma": "shamayim"
       },
@@ -498,10 +434,6 @@
       {
         "surface": "return",
         "lemma": "shuv"
-      },
-      {
-        "surface": "without",
-        "lemma": "ki"
       },
       {
         "surface": "watering",
@@ -550,10 +482,6 @@
         "lemma": "davar"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "proceeds",
         "lemma": "yatsa"
       },
@@ -570,24 +498,12 @@
         "lemma": "shuv"
       },
       {
-        "surface": "to Me",
-        "lemma": "el"
-      },
-      {
         "surface": "empty",
         "lemma": "reqam"
       },
       {
-        "surface": "but",
-        "lemma": "ki"
-      },
-      {
         "surface": "it will accomplish",
         "lemma": "asah"
-      },
-      {
-        "surface": "what",
-        "lemma": "asher"
       },
       {
         "surface": "I please",
@@ -598,19 +514,11 @@
         "lemma": "tsalach"
       },
       {
-        "surface": "where",
-        "lemma": "asher"
-      },
-      {
         "surface": "I send it",
         "lemma": "shalach"
       }
     ],
     "12": [
-      {
-        "surface": "You will indeed",
-        "lemma": "ki"
-      },
       {
         "surface": "go out",
         "lemma": "yatsa"
@@ -733,7 +641,7 @@
   },
   "themeLemmas": [
     "lo",
-    "ki",
-    "machashavah"
+    "machashavah",
+    "halakh"
   ]
 }

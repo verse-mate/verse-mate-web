@@ -14,10 +14,6 @@
         "lemma": "or"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "your light",
         "lemma": "or"
       },
@@ -36,21 +32,9 @@
       {
         "surface": "rises",
         "lemma": "zarach"
-      },
-      {
-        "surface": "upon you",
-        "lemma": "al"
       }
     ],
     "2": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "darkness",
         "lemma": "choshekh"
@@ -80,20 +64,12 @@
         "lemma": "zarach"
       },
       {
-        "surface": "upon you",
-        "lemma": "al"
-      },
-      {
         "surface": "and His glory",
         "lemma": "kavod"
       },
       {
         "surface": "will appear",
         "lemma": "raah"
-      },
-      {
-        "surface": "over you",
-        "lemma": "al"
       }
     ],
     "3": [
@@ -172,19 +148,11 @@
         "lemma": "aman"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the arm",
         "lemma": "tsad"
       }
     ],
     "5": [
-      {
-        "surface": "Then",
-        "lemma": "az"
-      },
       {
         "surface": "you will look",
         "lemma": "raah"
@@ -206,10 +174,6 @@
         "lemma": "rachav"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "the riches",
         "lemma": "hamon"
       },
@@ -220,10 +184,6 @@
       {
         "surface": "will be brought",
         "lemma": "haphakh"
-      },
-      {
-        "surface": "to you",
-        "lemma": "al"
       },
       {
         "surface": "and the wealth",
@@ -334,10 +294,6 @@
         "lemma": "alah"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "My altar",
         "lemma": "mizbeach"
       },
@@ -364,10 +320,6 @@
         "lemma": "mi"
       },
       {
-        "surface": "are these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "who fly",
         "lemma": "uph"
       },
@@ -380,19 +332,11 @@
         "lemma": "yonah"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "their shelters",
         "lemma": "arubbah"
       }
     ],
     "9": [
-      {
-        "surface": "Surely",
-        "lemma": "ki"
-      },
       {
         "surface": "the islands",
         "lemma": "i"
@@ -426,10 +370,6 @@
         "lemma": "rachoq"
       },
       {
-        "surface": "with",
-        "lemma": "et"
-      },
-      {
         "surface": "their silver",
         "lemma": "keseph"
       },
@@ -458,10 +398,6 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "He has glorified you",
         "lemma": "paar"
       }
@@ -486,10 +422,6 @@
       {
         "surface": "will serve you",
         "lemma": "sharat"
-      },
-      {
-        "surface": "Although",
-        "lemma": "ki"
       },
       {
         "surface": "I struck you",
@@ -550,10 +482,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "into you",
-        "lemma": "el"
-      },
-      {
         "surface": "with their kings",
         "lemma": "melekh"
       },
@@ -564,20 +492,12 @@
     ],
     "12": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the nation",
         "lemma": "goy"
       },
       {
         "surface": "or kingdom",
         "lemma": "mamlakhah"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "will not",
@@ -612,10 +532,6 @@
       {
         "surface": "will come",
         "lemma": "bo"
-      },
-      {
-        "surface": "to you",
-        "lemma": "el"
       },
       {
         "surface": "its cypress",
@@ -676,10 +592,6 @@
         "lemma": "shachach"
       },
       {
-        "surface": "to you",
-        "lemma": "el"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -690,10 +602,6 @@
       {
         "surface": "will fall facedown",
         "lemma": "shachah"
-      },
-      {
-        "surface": "at",
-        "lemma": "al"
       },
       {
         "surface": "your feet",
@@ -802,14 +710,6 @@
       {
         "surface": "you will know",
         "lemma": "yada"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "the LORD",
@@ -1060,10 +960,6 @@
         "lemma": "asaph"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -1160,10 +1056,6 @@
         "lemma": "goy"
       },
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       },
@@ -1179,7 +1071,7 @@
   },
   "themeLemmas": [
     "bo",
-    "ki",
-    "or"
+    "or",
+    "lo"
   ]
 }

@@ -24,10 +24,6 @@
       {
         "surface": "my commandments",
         "lemma": "mitsvah"
-      },
-      {
-        "surface": "within you",
-        "lemma": "et"
       }
     ],
     "2": [
@@ -62,20 +58,12 @@
         "lemma": "qashar"
       },
       {
-        "surface": "to",
-        "lemma": "al"
-      },
-      {
         "surface": "your fingers",
         "lemma": "etsba"
       },
       {
         "surface": "write them",
         "lemma": "katav"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the tablet",
@@ -94,10 +82,6 @@
       {
         "surface": "to wisdom",
         "lemma": "chokhmah"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "are my sister",
@@ -139,10 +123,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "at the window",
         "lemma": "challon"
@@ -244,10 +224,6 @@
     ],
     "10": [
       {
-        "surface": "Then",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "a woman",
         "lemma": "ishshah"
       },
@@ -273,10 +249,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "She",
-        "lemma": "hu"
-      },
       {
         "surface": "is loud",
         "lemma": "hamah"
@@ -378,10 +350,6 @@
     ],
     "15": [
       {
-        "surface": "So",
-        "lemma": "al"
-      },
-      {
         "surface": "I came out",
         "lemma": "yatsa"
       },
@@ -460,10 +428,6 @@
         "lemma": "dod"
       },
       {
-        "surface": "till",
-        "lemma": "ad"
-      },
-      {
         "surface": "morning",
         "lemma": "boqer"
       },
@@ -477,10 +441,6 @@
       }
     ],
     "19": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "my husband",
         "lemma": "ish"
@@ -580,10 +540,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the slaughter",
         "lemma": "tevach"
       },
@@ -596,19 +552,11 @@
         "lemma": "ekhes"
       },
       {
-        "surface": "into",
-        "lemma": "el"
-      },
-      {
         "surface": "a trap",
         "lemma": "musar"
       }
     ],
     "23": [
-      {
-        "surface": "until",
-        "lemma": "ad"
-      },
       {
         "surface": "an arrow",
         "lemma": "chets"
@@ -630,10 +578,6 @@
         "lemma": "mahar"
       },
       {
-        "surface": "into",
-        "lemma": "el"
-      },
-      {
         "surface": "a snare",
         "lemma": "pach"
       },
@@ -644,10 +588,6 @@
       {
         "surface": "knowing",
         "lemma": "yada"
-      },
-      {
-        "surface": "it",
-        "lemma": "hu"
       },
       {
         "surface": "will cost him his life",
@@ -694,10 +634,6 @@
         "lemma": "satah"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "her ways",
         "lemma": "derekh"
       },
@@ -715,10 +651,6 @@
       }
     ],
     "26": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "she has brought many",
         "lemma": "rav"
@@ -762,10 +694,6 @@
         "lemma": "yarad"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the chambers",
         "lemma": "cheder"
       },
@@ -777,7 +705,7 @@
   },
   "themeLemmas": [
     "bet",
-    "al",
-    "shamar"
+    "shamar",
+    "qara"
   ]
 }

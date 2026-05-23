@@ -36,10 +36,6 @@
     ],
     "2": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "wicked",
         "lemma": "rasah"
       },
@@ -56,16 +52,8 @@
         "lemma": "patach"
       },
       {
-        "surface": "against me",
-        "lemma": "al"
-      },
-      {
         "surface": "they speak",
         "lemma": "davar"
-      },
-      {
-        "surface": "against me",
-        "lemma": "et"
       },
       {
         "surface": "with lying",
@@ -112,10 +100,6 @@
         "lemma": "satan"
       },
       {
-        "surface": "but I am a man",
-        "lemma": "ani"
-      },
-      {
         "surface": "of prayer",
         "lemma": "tephillah"
       }
@@ -156,10 +140,6 @@
         "lemma": "paqad"
       },
       {
-        "surface": "over him",
-        "lemma": "al"
-      },
-      {
         "surface": "a wicked man",
         "lemma": "rasah"
       },
@@ -170,10 +150,6 @@
       {
         "surface": "stand",
         "lemma": "amad"
-      },
-      {
-        "surface": "at",
-        "lemma": "al"
       },
       {
         "surface": "his right hand",
@@ -376,10 +352,6 @@
         "lemma": "zakhar"
       },
       {
-        "surface": "before",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -431,10 +403,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "For",
-        "lemma": "yaan"
-      },
       {
         "surface": "he never",
         "lemma": "lo"
@@ -504,10 +472,6 @@
       {
         "surface": "may it be far",
         "lemma": "rachaq"
-      },
-      {
-        "surface": "from him",
-        "lemma": "min"
       }
     ],
     "18": [
@@ -572,10 +536,6 @@
     ],
     "20": [
       {
-        "surface": "May this",
-        "lemma": "zot"
-      },
-      {
         "surface": "be the LORD’s",
         "lemma": "yehovah"
       },
@@ -596,19 +556,11 @@
         "lemma": "ra"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "me",
         "lemma": "nephesh"
       }
     ],
     "21": [
-      {
-        "surface": "But You",
-        "lemma": "attah"
-      },
       {
         "surface": "O GOD",
         "lemma": "yehovih"
@@ -622,24 +574,12 @@
         "lemma": "asah"
       },
       {
-        "surface": "kindly with me",
-        "lemma": "et"
-      },
-      {
-        "surface": "for the sake of",
-        "lemma": "maan"
-      },
-      {
         "surface": "Your name",
         "lemma": "shem"
       },
       {
         "surface": "deliver me",
         "lemma": "natsal"
-      },
-      {
-        "surface": "by",
-        "lemma": "ki"
       },
       {
         "surface": "the goodness",
@@ -651,14 +591,6 @@
       }
     ],
     "22": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
       {
         "surface": "am poor",
         "lemma": "ani"
@@ -730,10 +662,6 @@
     ],
     "25": [
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am",
         "lemma": "hayah"
       },
@@ -782,20 +710,8 @@
         "lemma": "yada"
       },
       {
-        "surface": "that this",
-        "lemma": "ki"
-      },
-      {
         "surface": "is Your hand",
         "lemma": "yad"
-      },
-      {
-        "surface": "that",
-        "lemma": "zot"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "O LORD",
@@ -808,16 +724,8 @@
     ],
     "28": [
       {
-        "surface": "Though they",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "curse",
         "lemma": "qalal"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "will bless",
@@ -898,10 +806,6 @@
     ],
     "31": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "He stands",
         "lemma": "amad"
       },
@@ -929,7 +833,7 @@
   },
   "themeLemmas": [
     "hayah",
-    "al",
-    "ki"
+    "chesed",
+    "al"
   ]
 }

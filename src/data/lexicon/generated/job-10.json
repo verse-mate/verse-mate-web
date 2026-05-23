@@ -44,10 +44,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "God",
         "lemma": "eloah"
       },
@@ -62,10 +58,6 @@
       {
         "surface": "Let me know",
         "lemma": "yada"
-      },
-      {
-        "surface": "why",
-        "lemma": "al"
       },
       {
         "surface": "You prosecute me",
@@ -160,10 +152,6 @@
     ],
     "6": [
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "You should seek",
         "lemma": "baqash"
       },
@@ -182,16 +170,8 @@
     ],
     "7": [
       {
-        "surface": "though",
-        "lemma": "al"
-      },
-      {
         "surface": "You know",
         "lemma": "daat"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "I am not",
@@ -242,16 +222,8 @@
     ],
     "9": [
       {
-        "surface": "Please",
-        "lemma": "na"
-      },
-      {
         "surface": "remember",
         "lemma": "zakhar"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "You molded me",
@@ -264,10 +236,6 @@
       {
         "surface": "Would You now return me",
         "lemma": "shuv"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "dust",
@@ -328,10 +296,6 @@
         "lemma": "asah"
       },
       {
-        "surface": "me",
-        "lemma": "immad"
-      },
-      {
         "surface": "life",
         "lemma": "chay"
       },
@@ -358,28 +322,12 @@
         "lemma": "tsaphan"
       },
       {
-        "surface": "these things",
-        "lemma": "elleh"
-      },
-      {
         "surface": "in Your heart",
         "lemma": "levav"
       },
       {
         "surface": "and I know",
         "lemma": "yada"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "this was",
-        "lemma": "zot"
-      },
-      {
-        "surface": "in Your mind",
-        "lemma": "im"
       }
     ],
     "14": [
@@ -416,10 +364,6 @@
       {
         "surface": "I am guilty",
         "lemma": "rasah"
-      },
-      {
-        "surface": "woe",
-        "lemma": "allay"
       },
       {
         "surface": "And even if I am righteous",
@@ -498,16 +442,8 @@
         "lemma": "kaas"
       },
       {
-        "surface": "toward me",
-        "lemma": "immad"
-      },
-      {
         "surface": "Hardships",
         "lemma": "tsava"
-      },
-      {
-        "surface": "assault me",
-        "lemma": "im"
       },
       {
         "surface": "in wave after wave",
@@ -545,10 +481,6 @@
       }
     ],
     "19": [
-      {
-        "surface": "If only",
-        "lemma": "asher"
-      },
       {
         "surface": "I had never",
         "lemma": "lo"
@@ -592,10 +524,6 @@
         "lemma": "chadal"
       },
       {
-        "surface": "from me",
-        "lemma": "min"
-      },
-      {
         "surface": "that I may have a little comfort",
         "lemma": "balag"
       }
@@ -616,10 +544,6 @@
       {
         "surface": "to return",
         "lemma": "shuv"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "a land",
@@ -656,10 +580,6 @@
         "lemma": "yapah"
       },
       {
-        "surface": "is like",
-        "lemma": "kemo"
-      },
-      {
         "surface": "darkness",
         "lemma": "ophel"
       }
@@ -667,7 +587,7 @@
   },
   "themeLemmas": [
     "lo",
-    "im",
-    "rasah"
+    "rasah",
+    "shuv"
   ]
 }

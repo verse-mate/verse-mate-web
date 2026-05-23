@@ -18,14 +18,6 @@
         "lemma": "yehovih"
       },
       {
-        "surface": "is on Me",
-        "lemma": "al"
-      },
-      {
-        "surface": "because",
-        "lemma": "yaan"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -292,10 +284,6 @@
     ],
     "6": [
       {
-        "surface": "But you",
-        "lemma": "attah"
-      },
-      {
         "surface": "will be called",
         "lemma": "qara"
       },
@@ -396,14 +384,6 @@
     ],
     "8": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -490,14 +470,6 @@
         "lemma": "nakhar"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "they",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "are a people",
         "lemma": "zera"
       },
@@ -530,10 +502,6 @@
       {
         "surface": "in my God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "He has clothed me",
@@ -585,10 +553,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "as the earth",
         "lemma": "erets"
@@ -654,6 +618,6 @@
   "themeLemmas": [
     "tachat",
     "qara",
-    "ki"
+    "olam"
   ]
 }

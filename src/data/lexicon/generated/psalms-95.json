@@ -54,10 +54,6 @@
     ],
     "3": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -78,10 +74,6 @@
         "lemma": "melekh"
       },
       {
-        "surface": "above",
-        "lemma": "al"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -91,10 +83,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "In",
-        "lemma": "asher"
-      },
       {
         "surface": "His hand",
         "lemma": "yad"
@@ -120,14 +108,6 @@
       {
         "surface": "The sea",
         "lemma": "yam"
-      },
-      {
-        "surface": "is His",
-        "lemma": "asher"
-      },
-      {
-        "surface": "for He",
-        "lemma": "hu"
       },
       {
         "surface": "made it",
@@ -178,20 +158,8 @@
     ],
     "7": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "is our God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "and we",
-        "lemma": "anachnu"
       },
       {
         "surface": "are the people",
@@ -258,10 +226,6 @@
     ],
     "9": [
       {
-        "surface": "where",
-        "lemma": "asher"
-      },
-      {
         "surface": "your fathers",
         "lemma": "av"
       },
@@ -272,10 +236,6 @@
       {
         "surface": "and tried Me",
         "lemma": "bachan"
-      },
-      {
-        "surface": "though",
-        "lemma": "gam"
       },
       {
         "surface": "they had seen",
@@ -308,10 +268,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "They",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "are a people",
         "lemma": "am"
       },
@@ -322,10 +278,6 @@
       {
         "surface": "go astray",
         "lemma": "taah"
-      },
-      {
-        "surface": "and they",
-        "lemma": "hemmah"
       },
       {
         "surface": "have not",
@@ -341,10 +293,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "So",
-        "lemma": "asher"
-      },
       {
         "surface": "I swore on oath",
         "lemma": "shava"
@@ -368,8 +316,8 @@
     ]
   },
   "themeLemmas": [
-    "asher",
     "rua",
-    "paneh"
+    "paneh",
+    "levav"
   ]
 }

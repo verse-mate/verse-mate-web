@@ -34,10 +34,6 @@
         "lemma": "azan"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "my plea",
         "lemma": "tachanun"
       },
@@ -68,10 +64,6 @@
         "lemma": "mishpat"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "no one",
         "lemma": "lo"
       },
@@ -89,10 +81,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the enemy",
         "lemma": "oyev"
@@ -142,10 +130,6 @@
       {
         "surface": "grows faint",
         "lemma": "ataph"
-      },
-      {
-        "surface": "within me",
-        "lemma": "al"
       },
       {
         "surface": "my heart",
@@ -208,10 +192,6 @@
         "lemma": "yad"
       },
       {
-        "surface": "to You",
-        "lemma": "el"
-      },
-      {
         "surface": "my soul",
         "lemma": "nephesh"
       },
@@ -262,10 +242,6 @@
         "lemma": "paneh"
       },
       {
-        "surface": "from me",
-        "lemma": "min"
-      },
-      {
         "surface": "or I will be like those",
         "lemma": "mashal"
       },
@@ -292,10 +268,6 @@
         "lemma": "boqer"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "I have put my trust",
         "lemma": "batach"
       },
@@ -310,14 +282,6 @@
       {
         "surface": "I should walk",
         "lemma": "halakh"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "to You",
-        "lemma": "el"
       },
       {
         "surface": "I lift up",
@@ -342,10 +306,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "I flee to You",
-        "lemma": "el"
-      },
-      {
         "surface": "for refuge",
         "lemma": "kasah"
       }
@@ -362,14 +322,6 @@
       {
         "surface": "Your will",
         "lemma": "ratson"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "are my God",
@@ -397,10 +349,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "For the sake",
-        "lemma": "maan"
-      },
       {
         "surface": "of Your name",
         "lemma": "shem"
@@ -460,22 +408,14 @@
         "lemma": "nephesh"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am Your servant",
         "lemma": "eved"
       }
     ]
   },
   "themeLemmas": [
-    "ki",
     "nephesh",
-    "ruach"
+    "ruach",
+    "oyev"
   ]
 }

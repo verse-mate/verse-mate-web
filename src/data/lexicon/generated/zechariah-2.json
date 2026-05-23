@@ -40,10 +40,6 @@
         "lemma": "an"
       },
       {
-        "surface": "are you",
-        "lemma": "attah"
-      },
-      {
         "surface": "going",
         "lemma": "halakh"
       },
@@ -77,10 +73,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "Then",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the angel",
         "lemma": "maleakh"
@@ -116,20 +108,12 @@
         "lemma": "amar"
       },
       {
-        "surface": "to him",
-        "lemma": "el"
-      },
-      {
         "surface": "Run",
         "lemma": "ruts"
       },
       {
         "surface": "and tell",
         "lemma": "davar"
-      },
-      {
-        "surface": "that",
-        "lemma": "hallaz"
       },
       {
         "surface": "young man",
@@ -165,10 +149,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "For I",
-        "lemma": "ani"
-      },
       {
         "surface": "will be",
         "lemma": "hayah"
@@ -208,14 +188,6 @@
     ],
     "6": [
       {
-        "surface": "Get up",
-        "lemma": "hoy"
-      },
-      {
-        "surface": "Get up",
-        "lemma": "hoy"
-      },
-      {
         "surface": "Flee",
         "lemma": "nus"
       },
@@ -234,10 +206,6 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "I have scattered",
@@ -266,10 +234,6 @@
     ],
     "7": [
       {
-        "surface": "Get up",
-        "lemma": "hoy"
-      },
-      {
         "surface": "O Zion",
         "lemma": "tsiyyon"
       },
@@ -291,10 +255,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "this is what",
         "lemma": "koh"
@@ -320,20 +280,12 @@
         "lemma": "shalach"
       },
       {
-        "surface": "against",
-        "lemma": "el"
-      },
-      {
         "surface": "the nations",
         "lemma": "goy"
       },
       {
         "surface": "that have plundered you",
         "lemma": "shalal"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "whoever touches",
@@ -354,20 +306,12 @@
     ],
     "9": [
       {
-        "surface": "I will surely",
-        "lemma": "hen"
-      },
-      {
         "surface": "wave",
         "lemma": "nuph"
       },
       {
         "surface": "My hand",
         "lemma": "yad"
-      },
-      {
-        "surface": "over them",
-        "lemma": "al"
       },
       {
         "surface": "so that they will become",
@@ -384,10 +328,6 @@
       {
         "surface": "Then you will know",
         "lemma": "yada"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -420,10 +360,6 @@
         "lemma": "tsiyyon"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "I am coming",
         "lemma": "bo"
       },
@@ -446,10 +382,6 @@
     ],
     "11": [
       {
-        "surface": "On that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -464,10 +396,6 @@
       {
         "surface": "will join",
         "lemma": "lavah"
-      },
-      {
-        "surface": "themselves to",
-        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -494,10 +422,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -508,10 +432,6 @@
       {
         "surface": "has sent Me",
         "lemma": "shalach"
-      },
-      {
-        "surface": "to you",
-        "lemma": "el"
       }
     ],
     "12": [
@@ -530,10 +450,6 @@
       {
         "surface": "as His portion",
         "lemma": "cheleq"
-      },
-      {
-        "surface": "in",
-        "lemma": "al"
       },
       {
         "surface": "the Holy",
@@ -578,10 +494,6 @@
         "lemma": "basar"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "He has roused Himself",
         "lemma": "ur"
       },
@@ -596,8 +508,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "tavekh",
-    "neum"
+    "neum",
+    "hayah"
   ]
 }

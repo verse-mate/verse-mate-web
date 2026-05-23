@@ -10,20 +10,12 @@
         "lemma": "qara"
       },
       {
-        "surface": "if you please",
-        "lemma": "na"
-      },
-      {
         "surface": "vvv",
         "lemma": "yesh"
       },
       {
         "surface": "but who will answer",
         "lemma": "un"
-      },
-      {
-        "surface": "To",
-        "lemma": "el"
       },
       {
         "surface": "which",
@@ -39,10 +31,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "resentment",
         "lemma": "kaas"
@@ -69,10 +57,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
       {
         "surface": "have seen",
         "lemma": "raah"
@@ -164,10 +148,6 @@
     ],
     "6": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "distress",
         "lemma": "aven"
       },
@@ -202,10 +182,6 @@
     ],
     "7": [
       {
-        "surface": "Yet",
-        "lemma": "ki"
-      },
-      {
         "surface": "man",
         "lemma": "adam"
       },
@@ -232,20 +208,8 @@
     ],
     "8": [
       {
-        "surface": "However",
-        "lemma": "ulam"
-      },
-      {
-        "surface": "if I were you",
-        "lemma": "ani"
-      },
-      {
         "surface": "I would appeal",
         "lemma": "darash"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "God",
@@ -258,10 +222,6 @@
       {
         "surface": "my cause",
         "lemma": "divrah"
-      },
-      {
-        "surface": "before",
-        "lemma": "el"
       },
       {
         "surface": "Him",
@@ -308,10 +268,6 @@
         "lemma": "matar"
       },
       {
-        "surface": "to",
-        "lemma": "al"
-      },
-      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -322,10 +278,6 @@
       {
         "surface": "water",
         "lemma": "mayim"
-      },
-      {
-        "surface": "upon",
-        "lemma": "al"
       },
       {
         "surface": "the fields",
@@ -498,10 +450,6 @@
         "lemma": "esher"
       },
       {
-        "surface": "indeed",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "is the man",
         "lemma": "enosh"
       },
@@ -531,14 +479,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
-      },
       {
         "surface": "wounds",
         "lemma": "kaav"
@@ -642,10 +582,6 @@
         "lemma": "shod"
       },
       {
-        "surface": "when",
-        "lemma": "ki"
-      },
-      {
         "surface": "it comes",
         "lemma": "bo"
       }
@@ -682,16 +618,8 @@
     ],
     "23": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "you will have a covenant",
         "lemma": "berit"
-      },
-      {
-        "surface": "with",
-        "lemma": "im"
       },
       {
         "surface": "the stones",
@@ -718,10 +646,6 @@
       {
         "surface": "You will know",
         "lemma": "yada"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "your tent",
@@ -754,10 +678,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "your offspring",
         "lemma": "zera"
       },
@@ -784,10 +704,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the grave",
         "lemma": "qever"
       },
@@ -810,16 +726,8 @@
     ],
     "27": [
       {
-        "surface": "Indeed",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "we have investigated",
         "lemma": "chaqar"
-      },
-      {
-        "surface": "and it",
-        "lemma": "hu"
       },
       {
         "surface": "is true",
@@ -830,18 +738,14 @@
         "lemma": "shama"
       },
       {
-        "surface": "and",
-        "lemma": "attah"
-      },
-      {
         "surface": "know",
         "lemma": "yada"
       }
     ]
   },
   "themeLemmas": [
-    "ki",
     "lo",
-    "al"
+    "yada",
+    "yesah"
   ]
 }

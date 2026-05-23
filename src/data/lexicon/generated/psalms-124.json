@@ -34,10 +34,6 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "now",
-        "lemma": "na"
-      },
-      {
         "surface": "declare",
         "lemma": "amar"
       }
@@ -62,10 +58,6 @@
       {
         "surface": "attacked",
         "lemma": "qamay"
-      },
-      {
-        "surface": "us",
-        "lemma": "al"
       }
     ],
     "3": [
@@ -78,10 +70,6 @@
         "lemma": "charah"
       },
       {
-        "surface": "then",
-        "lemma": "azay"
-      },
-      {
         "surface": "they would have swallowed us",
         "lemma": "bala"
       },
@@ -91,10 +79,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "then",
-        "lemma": "azay"
-      },
       {
         "surface": "the floods",
         "lemma": "mayim"
@@ -117,10 +101,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "then",
-        "lemma": "azay"
-      },
       {
         "surface": "the raging",
         "lemma": "zedon"
@@ -190,10 +170,6 @@
         "lemma": "shavar"
       },
       {
-        "surface": "and we",
-        "lemma": "anachnu"
-      },
-      {
         "surface": "have slipped away",
         "lemma": "malat"
       }
@@ -226,8 +202,8 @@
     ]
   },
   "themeLemmas": [
-    "azay",
     "pach",
-    "nephesh"
+    "nephesh",
+    "mayim"
   ]
 }

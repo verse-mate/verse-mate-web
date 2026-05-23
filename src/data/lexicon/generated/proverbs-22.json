@@ -164,24 +164,12 @@
         "lemma": "naar"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "the way",
         "lemma": "derekh"
       },
       {
         "surface": "he should go",
         "lemma": "peh"
-      },
-      {
-        "surface": "and",
-        "lemma": "gam"
-      },
-      {
-        "surface": "when",
-        "lemma": "ki"
       },
       {
         "surface": "he is old",
@@ -194,10 +182,6 @@
       {
         "surface": "depart",
         "lemma": "sur"
-      },
-      {
-        "surface": "from it",
-        "lemma": "min"
       }
     ],
     "7": [
@@ -260,10 +244,6 @@
       {
         "surface": "will be blessed",
         "lemma": "barakh"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "he shares",
@@ -456,10 +436,6 @@
       {
         "surface": "drives it far",
         "lemma": "rachaq"
-      },
-      {
-        "surface": "from him",
-        "lemma": "min"
       }
     ],
     "16": [
@@ -528,16 +504,8 @@
     ],
     "18": [
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "it is pleasing",
         "lemma": "naim"
-      },
-      {
-        "surface": "when",
-        "lemma": "ki"
       },
       {
         "surface": "you keep them",
@@ -550,10 +518,6 @@
       {
         "surface": "and they are constantly",
         "lemma": "yachad"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "your lips",
@@ -580,14 +544,6 @@
       {
         "surface": "today",
         "lemma": "yom"
-      },
-      {
-        "surface": "yes",
-        "lemma": "aph"
-      },
-      {
-        "surface": "you",
-        "lemma": "attah"
       }
     ],
     "20": [
@@ -660,14 +616,6 @@
         "lemma": "dal"
       },
       {
-        "surface": "man because",
-        "lemma": "ki"
-      },
-      {
-        "surface": "he",
-        "lemma": "hu"
-      },
-      {
         "surface": "is poor",
         "lemma": "dal"
       },
@@ -689,10 +637,6 @@
       }
     ],
     "23": [
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -724,10 +668,6 @@
         "lemma": "beteqedharoim"
       },
       {
-        "surface": "with",
-        "lemma": "et"
-      },
-      {
         "surface": "an angry",
         "lemma": "aph"
       },
@@ -744,10 +684,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "with",
-        "lemma": "et"
-      },
-      {
         "surface": "a hot-tempered",
         "lemma": "chemah"
       },
@@ -757,10 +693,6 @@
       }
     ],
     "25": [
-      {
-        "surface": "or",
-        "lemma": "pen"
-      },
       {
         "surface": "you may learn",
         "lemma": "alaph"
@@ -852,10 +784,6 @@
         "lemma": "gevul"
       },
       {
-        "surface": "which",
-        "lemma": "asher"
-      },
-      {
         "surface": "your fathers",
         "lemma": "av"
       },
@@ -913,7 +841,7 @@
   },
   "themeLemmas": [
     "al",
-    "ki",
-    "dal"
+    "dal",
+    "lo"
   ]
 }

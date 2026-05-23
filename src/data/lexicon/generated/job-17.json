@@ -36,10 +36,6 @@
         "lemma": "hatol"
       },
       {
-        "surface": "surround me",
-        "lemma": "immad"
-      },
-      {
         "surface": "and my eyes",
         "lemma": "ayin"
       },
@@ -58,16 +54,8 @@
         "lemma": "sum"
       },
       {
-        "surface": "I pray",
-        "lemma": "na"
-      },
-      {
         "surface": "the pledge",
         "lemma": "arav"
-      },
-      {
-        "surface": "You demand",
-        "lemma": "im"
       },
       {
         "surface": "Who else",
@@ -90,10 +78,6 @@
       {
         "surface": "to understanding",
         "lemma": "sekhel"
-      },
-      {
-        "surface": "therefore",
-        "lemma": "al"
       },
       {
         "surface": "You will not",
@@ -192,24 +176,12 @@
         "lemma": "shamem"
       },
       {
-        "surface": "at",
-        "lemma": "al"
-      },
-      {
-        "surface": "this",
-        "lemma": "zot"
-      },
-      {
         "surface": "and the innocent",
         "lemma": "naqi"
       },
       {
         "surface": "are stirred",
         "lemma": "ur"
-      },
-      {
-        "surface": "against",
-        "lemma": "al"
       },
       {
         "surface": "the godless",
@@ -243,10 +215,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "But",
-        "lemma": "ulam"
-      },
       {
         "surface": "come back",
         "lemma": "bo"
@@ -368,10 +336,6 @@
         "lemma": "shachat"
       },
       {
-        "surface": "You are",
-        "lemma": "attah"
-      },
-      {
         "surface": "my father",
         "lemma": "av"
       },
@@ -392,10 +356,6 @@
       {
         "surface": "where",
         "lemma": "ayyeh"
-      },
-      {
-        "surface": "then",
-        "lemma": "epho"
       },
       {
         "surface": "is my hope",
@@ -436,18 +396,14 @@
         "lemma": "yachad"
       },
       {
-        "surface": "into",
-        "lemma": "al"
-      },
-      {
         "surface": "the dust",
         "lemma": "aphar"
       }
     ]
   },
   "themeLemmas": [
-    "al",
-    "im",
-    "tiqvah"
+    "tiqvah",
+    "sum",
+    "sheol"
   ]
 }

@@ -88,20 +88,8 @@
     ],
     "4": [
       {
-        "surface": "But",
-        "lemma": "ki"
-      },
-      {
-        "surface": "with You",
-        "lemma": "im"
-      },
-      {
         "surface": "there is forgiveness",
         "lemma": "selichah"
-      },
-      {
-        "surface": "so that",
-        "lemma": "maan"
       },
       {
         "surface": "You may be feared",
@@ -170,20 +158,8 @@
         "lemma": "yachal"
       },
       {
-        "surface": "in",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "with",
-        "lemma": "im"
       },
       {
         "surface": "the LORD",
@@ -192,10 +168,6 @@
       {
         "surface": "is loving devotion",
         "lemma": "chesed"
-      },
-      {
-        "surface": "and with Him",
-        "lemma": "im"
       },
       {
         "surface": "is redemption",
@@ -207,10 +179,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "And He",
-        "lemma": "hu"
-      },
       {
         "surface": "will redeem",
         "lemma": "padah"
@@ -230,8 +198,8 @@
     ]
   },
   "themeLemmas": [
-    "im",
     "shamar",
-    "yisrael"
+    "yisrael",
+    "yachal"
   ]
 }

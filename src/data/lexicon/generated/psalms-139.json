@@ -32,10 +32,6 @@
     ],
     "2": [
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "know",
         "lemma": "yada"
       },
@@ -88,10 +84,6 @@
     ],
     "4": [
       {
-        "surface": "Even",
-        "lemma": "ki"
-      },
-      {
         "surface": "before a word",
         "lemma": "millah"
       },
@@ -132,10 +124,6 @@
       {
         "surface": "Your hand",
         "lemma": "kaph"
-      },
-      {
-        "surface": "upon me",
-        "lemma": "al"
       }
     ],
     "6": [
@@ -146,10 +134,6 @@
       {
         "surface": "is too wonderful",
         "lemma": "pili"
-      },
-      {
-        "surface": "for me",
-        "lemma": "min"
       },
       {
         "surface": "too lofty",
@@ -200,10 +184,6 @@
         "lemma": "shamayim"
       },
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "are there",
         "lemma": "sham"
       },
@@ -214,10 +194,6 @@
       {
         "surface": "in Sheol",
         "lemma": "sheol"
-      },
-      {
-        "surface": "You are there",
-        "lemma": "hen"
       }
     ],
     "9": [
@@ -247,10 +223,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "even",
-        "lemma": "gam"
-      },
       {
         "surface": "there",
         "lemma": "sham"
@@ -304,10 +276,6 @@
     ],
     "12": [
       {
-        "surface": "even",
-        "lemma": "gam"
-      },
-      {
         "surface": "the darkness",
         "lemma": "choshekh"
       },
@@ -318,10 +286,6 @@
       {
         "surface": "dark",
         "lemma": "chashakh"
-      },
-      {
-        "surface": "to You",
-        "lemma": "min"
       },
       {
         "surface": "but the night",
@@ -345,14 +309,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
       {
         "surface": "formed",
         "lemma": "qanah"
@@ -378,14 +334,6 @@
       {
         "surface": "I praise",
         "lemma": "yadah"
-      },
-      {
-        "surface": "You",
-        "lemma": "al"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "I am fearfully",
@@ -428,14 +376,6 @@
       {
         "surface": "hidden",
         "lemma": "kachad"
-      },
-      {
-        "surface": "from You",
-        "lemma": "min"
-      },
-      {
-        "surface": "when",
-        "lemma": "asher"
       },
       {
         "surface": "I was made",
@@ -482,10 +422,6 @@
       {
         "surface": "were written",
         "lemma": "katav"
-      },
-      {
-        "surface": "in",
-        "lemma": "al"
       },
       {
         "surface": "Your book",
@@ -550,10 +486,6 @@
       {
         "surface": "I am still",
         "lemma": "od"
-      },
-      {
-        "surface": "with You",
-        "lemma": "im"
       }
     ],
     "19": [
@@ -578,10 +510,6 @@
         "lemma": "sur"
       },
       {
-        "surface": "from me",
-        "lemma": "min"
-      },
-      {
         "surface": "you bloodthirsty",
         "lemma": "dam"
       },
@@ -591,10 +519,6 @@
       }
     ],
     "20": [
-      {
-        "surface": "who",
-        "lemma": "asher"
-      },
       {
         "surface": "speak of You",
         "lemma": "amar"
@@ -727,7 +651,7 @@
   },
   "themeLemmas": [
     "yada",
-    "min",
-    "im"
+    "sane",
+    "lo"
   ]
 }

@@ -10,16 +10,8 @@
         "lemma": "shama"
       },
       {
-        "surface": "this",
-        "lemma": "zeh"
-      },
-      {
         "surface": "word",
         "lemma": "davar"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -30,10 +22,6 @@
         "lemma": "davar"
       },
       {
-        "surface": "against you",
-        "lemma": "al"
-      },
-      {
         "surface": "O children",
         "lemma": "ben"
       },
@@ -42,20 +30,12 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "the whole",
         "lemma": "kol"
       },
       {
         "surface": "family",
         "lemma": "mishpachah"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "I brought up",
@@ -71,14 +51,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "Only",
-        "lemma": "raq"
-      },
-      {
-        "surface": "you",
-        "lemma": "et"
-      },
       {
         "surface": "have I known",
         "lemma": "yada"
@@ -96,16 +68,8 @@
         "lemma": "adamah"
       },
       {
-        "surface": "therefore",
-        "lemma": "al"
-      },
-      {
         "surface": "I will punish",
         "lemma": "paqad"
-      },
-      {
-        "surface": "you",
-        "lemma": "al"
       },
       {
         "surface": "for all",
@@ -194,10 +158,6 @@
         "lemma": "naphal"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "a snare",
         "lemma": "pach"
       },
@@ -216,10 +176,6 @@
       {
         "surface": "spring",
         "lemma": "alah"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
       },
       {
         "surface": "the ground",
@@ -298,10 +254,6 @@
     ],
     "7": [
       {
-        "surface": "Surely",
-        "lemma": "ki"
-      },
-      {
         "surface": "the Lord",
         "lemma": "adonai"
       },
@@ -318,20 +270,12 @@
         "lemma": "lo"
       },
       {
-        "surface": "without",
-        "lemma": "ki"
-      },
-      {
         "surface": "revealing",
         "lemma": "galah"
       },
       {
         "surface": "His plan",
         "lemma": "sod"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "His servants",
@@ -394,20 +338,12 @@
         "lemma": "shama"
       },
       {
-        "surface": "to",
-        "lemma": "al"
-      },
-      {
         "surface": "the citadels",
         "lemma": "armon"
       },
       {
         "surface": "of Ashdod",
         "lemma": "ashdod"
-      },
-      {
-        "surface": "and to",
-        "lemma": "al"
       },
       {
         "surface": "the citadels",
@@ -420,10 +356,6 @@
       {
         "surface": "Assemble",
         "lemma": "asaph"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the mountains",
@@ -564,10 +496,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "As",
-        "lemma": "asher"
-      },
-      {
         "surface": "the shepherd",
         "lemma": "beteqedharoim"
       },
@@ -590,10 +518,6 @@
       {
         "surface": "legs",
         "lemma": "kara"
-      },
-      {
-        "surface": "or",
-        "lemma": "o"
       },
       {
         "surface": "a piece",
@@ -700,10 +624,6 @@
         "lemma": "paqad"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the altars",
         "lemma": "mizbeach"
       },
@@ -750,10 +670,6 @@
         "lemma": "bet"
       },
       {
-        "surface": "along with",
-        "lemma": "al"
-      },
-      {
         "surface": "the summer",
         "lemma": "qayits"
       },
@@ -796,8 +712,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "lo",
-    "bet"
+    "bet",
+    "yehovih"
   ]
 }

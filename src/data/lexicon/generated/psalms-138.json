@@ -40,10 +40,6 @@
         "lemma": "shachah"
       },
       {
-        "surface": "toward",
-        "lemma": "el"
-      },
-      {
         "surface": "Your holy",
         "lemma": "qodesh"
       },
@@ -60,24 +56,12 @@
         "lemma": "shem"
       },
       {
-        "surface": "for",
-        "lemma": "al"
-      },
-      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       },
       {
-        "surface": "and",
-        "lemma": "al"
-      },
-      {
         "surface": "Your faithfulness",
         "lemma": "emet"
-      },
-      {
-        "surface": "You",
-        "lemma": "ki"
       },
       {
         "surface": "have exalted",
@@ -90,10 +74,6 @@
       {
         "surface": "and Your word",
         "lemma": "imrah"
-      },
-      {
-        "surface": "above",
-        "lemma": "al"
       },
       {
         "surface": "all else",
@@ -148,10 +128,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "when",
-        "lemma": "ki"
-      },
-      {
         "surface": "they hear",
         "lemma": "shama"
       },
@@ -178,10 +154,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the glory",
         "lemma": "kavod"
       },
@@ -195,10 +167,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "Though",
-        "lemma": "ki"
-      },
       {
         "surface": "the LORD",
         "lemma": "yehovah"
@@ -248,10 +216,6 @@
       {
         "surface": "You preserve me",
         "lemma": "chayah"
-      },
-      {
-        "surface": "from",
-        "lemma": "al"
       },
       {
         "surface": "the anger",
@@ -322,8 +286,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
-    "ki",
-    "yadah"
+    "yadah",
+    "kol",
+    "shem"
   ]
 }

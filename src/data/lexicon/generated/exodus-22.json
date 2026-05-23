@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "If",
-        "lemma": "ki"
-      },
-      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -22,20 +18,12 @@
         "lemma": "shor"
       },
       {
-        "surface": "or",
-        "lemma": "o"
-      },
-      {
         "surface": "a sheep",
         "lemma": "seh"
       },
       {
         "surface": "and slaughters",
         "lemma": "tavach"
-      },
-      {
-        "surface": "or",
-        "lemma": "o"
       },
       {
         "surface": "sells it",
@@ -164,16 +152,8 @@
         "lemma": "shor"
       },
       {
-        "surface": "or",
-        "lemma": "ad"
-      },
-      {
         "surface": "donkey",
         "lemma": "chamor"
-      },
-      {
-        "surface": "or",
-        "lemma": "ad"
       },
       {
         "surface": "sheep",
@@ -190,10 +170,6 @@
     ],
     "5": [
       {
-        "surface": "If",
-        "lemma": "ki"
-      },
-      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -204,10 +180,6 @@
       {
         "surface": "in a field",
         "lemma": "saday"
-      },
-      {
-        "surface": "or",
-        "lemma": "o"
       },
       {
         "surface": "vineyard",
@@ -252,10 +224,6 @@
     ],
     "6": [
       {
-        "surface": "If",
-        "lemma": "ki"
-      },
-      {
         "surface": "a fire",
         "lemma": "esh"
       },
@@ -280,16 +248,8 @@
         "lemma": "gadish"
       },
       {
-        "surface": "or",
-        "lemma": "o"
-      },
-      {
         "surface": "standing grain",
         "lemma": "qamah"
-      },
-      {
-        "surface": "or",
-        "lemma": "o"
       },
       {
         "surface": "the whole field",
@@ -310,10 +270,6 @@
     ],
     "7": [
       {
-        "surface": "If",
-        "lemma": "ki"
-      },
-      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -328,10 +284,6 @@
       {
         "surface": "money",
         "lemma": "keseph"
-      },
-      {
-        "surface": "or",
-        "lemma": "o"
       },
       {
         "surface": "goods",
@@ -404,10 +356,6 @@
         "lemma": "qarav"
       },
       {
-        "surface": "before",
-        "lemma": "el"
-      },
-      {
         "surface": "the judges",
         "lemma": "elohim"
       },
@@ -430,10 +378,6 @@
     ],
     "9": [
       {
-        "surface": "In",
-        "lemma": "al"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -444,10 +388,6 @@
       {
         "surface": "of illegal possession",
         "lemma": "pesah"
-      },
-      {
-        "surface": "of",
-        "lemma": "al"
       },
       {
         "surface": "an ox",
@@ -474,20 +414,8 @@
         "lemma": "avedah"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "someone claims",
         "lemma": "amar"
-      },
-      {
-        "surface": "This",
-        "lemma": "zeh"
-      },
-      {
-        "surface": "is mine",
-        "lemma": "hu"
       },
       {
         "surface": "both parties",
@@ -500,10 +428,6 @@
       {
         "surface": "their cases",
         "lemma": "davar"
-      },
-      {
-        "surface": "before",
-        "lemma": "ad"
       },
       {
         "surface": "the judges",
@@ -531,10 +455,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "If",
-        "lemma": "ki"
-      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -576,16 +496,8 @@
         "lemma": "mut"
       },
       {
-        "surface": "or",
-        "lemma": "o"
-      },
-      {
         "surface": "is injured",
         "lemma": "shavar"
-      },
-      {
-        "surface": "or",
-        "lemma": "o"
       },
       {
         "surface": "stolen",
@@ -672,10 +584,6 @@
         "lemma": "ganav"
       },
       {
-        "surface": "from the neighbor",
-        "lemma": "im"
-      },
-      {
         "surface": "he must make restitution",
         "lemma": "salem"
       },
@@ -716,10 +624,6 @@
     ],
     "14": [
       {
-        "surface": "If",
-        "lemma": "ki"
-      },
-      {
         "surface": "a man",
         "lemma": "ish"
       },
@@ -728,20 +632,12 @@
         "lemma": "shaal"
       },
       {
-        "surface": "an animal",
-        "lemma": "im"
-      },
-      {
         "surface": "from his neighbor",
         "lemma": "rea"
       },
       {
         "surface": "and it is injured",
         "lemma": "shavar"
-      },
-      {
-        "surface": "or",
-        "lemma": "o"
       },
       {
         "surface": "dies",
@@ -754,10 +650,6 @@
       {
         "surface": "is not",
         "lemma": "ayin"
-      },
-      {
-        "surface": "present",
-        "lemma": "im"
       },
       {
         "surface": "he must make full restitution",
@@ -774,10 +666,6 @@
         "lemma": "baal"
       },
       {
-        "surface": "was present",
-        "lemma": "im"
-      },
-      {
         "surface": "no",
         "lemma": "lo"
       },
@@ -790,10 +678,6 @@
         "lemma": "im"
       },
       {
-        "surface": "the animal",
-        "lemma": "hu"
-      },
-      {
         "surface": "was rented",
         "lemma": "sakhir"
       },
@@ -803,10 +687,6 @@
       }
     ],
     "16": [
-      {
-        "surface": "If",
-        "lemma": "ki"
-      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -820,10 +700,6 @@
         "lemma": "betulah"
       },
       {
-        "surface": "who",
-        "lemma": "asher"
-      },
-      {
         "surface": "is not",
         "lemma": "lo"
       },
@@ -834,10 +710,6 @@
       {
         "surface": "and sleeps",
         "lemma": "shakhav"
-      },
-      {
-        "surface": "with her",
-        "lemma": "im"
       },
       {
         "surface": "he must pay the full dowry",
@@ -906,10 +778,6 @@
         "lemma": "shakhav"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "an animal",
         "lemma": "behemah"
       },
@@ -966,10 +834,6 @@
         "lemma": "ger"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "you yourselves were",
         "lemma": "hayah"
       },
@@ -1022,10 +886,6 @@
         "lemma": "tsaaq"
       },
       {
-        "surface": "to Me",
-        "lemma": "el"
-      },
-      {
         "surface": "in distress",
         "lemma": "tsaaq"
       },
@@ -1050,10 +910,6 @@
       {
         "surface": "and I will kill",
         "lemma": "harag"
-      },
-      {
-        "surface": "you",
-        "lemma": "et"
       },
       {
         "surface": "with the sword",
@@ -1098,10 +954,6 @@
         "lemma": "am"
       },
       {
-        "surface": "among you",
-        "lemma": "im"
-      },
-      {
         "surface": "who is poor",
         "lemma": "ani"
       },
@@ -1120,10 +972,6 @@
       {
         "surface": "you are not to charge",
         "lemma": "sum"
-      },
-      {
-        "surface": "him",
-        "lemma": "al"
       },
       {
         "surface": "interest",
@@ -1152,23 +1000,11 @@
         "lemma": "shuv"
       },
       {
-        "surface": "by",
-        "lemma": "ad"
-      },
-      {
         "surface": "sunset",
         "lemma": "bo"
       }
     ],
     "27": [
-      {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
-        "surface": "his cloak",
-        "lemma": "hu"
-      },
       {
         "surface": "is the only",
         "lemma": "bad"
@@ -1176,10 +1012,6 @@
       {
         "surface": "covering",
         "lemma": "kesut"
-      },
-      {
-        "surface": "he has",
-        "lemma": "hu"
       },
       {
         "surface": "for",
@@ -1198,28 +1030,12 @@
         "lemma": "shakhav"
       },
       {
-        "surface": "And if",
-        "lemma": "ki"
-      },
-      {
         "surface": "he cries out",
         "lemma": "tsaaq"
       },
       {
-        "surface": "to Me",
-        "lemma": "el"
-      },
-      {
         "surface": "I will hear",
         "lemma": "shama"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "am compassionate",
@@ -1304,10 +1120,6 @@
         "lemma": "hayah"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "their mothers",
         "lemma": "em"
       },
@@ -1370,10 +1182,6 @@
         "lemma": "shalakh"
       },
       {
-        "surface": "it",
-        "lemma": "et"
-      },
-      {
         "surface": "to the dogs",
         "lemma": "kelev"
       }
@@ -1382,6 +1190,6 @@
   "themeLemmas": [
     "im",
     "lo",
-    "ki"
+    "rea"
   ]
 }

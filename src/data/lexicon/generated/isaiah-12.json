@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "In that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -24,10 +20,6 @@
       {
         "surface": "I will praise You",
         "lemma": "yadah"
-      },
-      {
-        "surface": "Although",
-        "lemma": "ki"
       },
       {
         "surface": "You were angry",
@@ -48,10 +40,6 @@
     ],
     "2": [
       {
-        "surface": "Surely",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "God",
         "lemma": "el"
       },
@@ -70,10 +58,6 @@
       {
         "surface": "be afraid",
         "lemma": "pachad"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -124,10 +108,6 @@
     ],
     "4": [
       {
-        "surface": "and on that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -168,10 +148,6 @@
         "lemma": "zakhar"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "His name",
         "lemma": "shem"
       },
@@ -190,20 +166,12 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "He has done",
         "lemma": "asah"
       },
       {
         "surface": "glorious things",
         "lemma": "geut"
-      },
-      {
-        "surface": "Let this",
-        "lemma": "zot"
       },
       {
         "surface": "be known",
@@ -236,10 +204,6 @@
         "lemma": "tsiyyon"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "great",
         "lemma": "gadol"
       },
@@ -258,8 +222,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "yeshuah",
-    "yadah"
+    "yadah",
+    "yada"
   ]
 }

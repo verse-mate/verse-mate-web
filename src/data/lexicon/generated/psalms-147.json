@@ -10,10 +10,6 @@
         "lemma": "halal"
       },
       {
-        "surface": "How",
-        "lemma": "ki"
-      },
-      {
         "surface": "good it is",
         "lemma": "tov"
       },
@@ -24,10 +20,6 @@
       {
         "surface": "to our God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "how",
-        "lemma": "ki"
       },
       {
         "surface": "pleasant",
@@ -162,10 +154,6 @@
       {
         "surface": "the wicked",
         "lemma": "rasah"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "the ground",
@@ -346,10 +334,6 @@
     ],
     "13": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "He strengthens",
         "lemma": "chazaq"
       },
@@ -408,10 +392,6 @@
       {
         "surface": "His command",
         "lemma": "imrah"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "the earth",
@@ -574,8 +554,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "halal",
-    "zamar"
+    "zamar",
+    "yisrael"
   ]
 }

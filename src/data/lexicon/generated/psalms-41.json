@@ -26,10 +26,6 @@
         "lemma": "sakhal"
       },
       {
-        "surface": "for",
-        "lemma": "el"
-      },
-      {
         "surface": "the poor",
         "lemma": "dal"
       },
@@ -98,10 +94,6 @@
         "lemma": "saad"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "his bed",
         "lemma": "eres"
       },
@@ -124,10 +116,6 @@
     ],
     "4": [
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "said",
         "lemma": "amar"
       },
@@ -146,10 +134,6 @@
       {
         "surface": "me",
         "lemma": "nephesh"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "I have sinned",
@@ -230,16 +214,8 @@
         "lemma": "sane"
       },
       {
-        "surface": "me",
-        "lemma": "al"
-      },
-      {
         "surface": "whisper",
         "lemma": "lachash"
-      },
-      {
-        "surface": "against me",
-        "lemma": "al"
       },
       {
         "surface": "they imagine",
@@ -272,26 +248,14 @@
         "lemma": "qamay"
       },
       {
-        "surface": "from where",
-        "lemma": "asher"
-      },
-      {
         "surface": "he lies",
         "lemma": "shakhav"
       }
     ],
     "9": [
       {
-        "surface": "Even",
-        "lemma": "gam"
-      },
-      {
         "surface": "my close friend",
         "lemma": "ish"
-      },
-      {
-        "surface": "whom",
-        "lemma": "asher"
       },
       {
         "surface": "I trusted",
@@ -312,17 +276,9 @@
       {
         "surface": "his heel",
         "lemma": "aqev"
-      },
-      {
-        "surface": "against me",
-        "lemma": "al"
       }
     ],
     "10": [
-      {
-        "surface": "But You",
-        "lemma": "attah"
-      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -342,24 +298,12 @@
     ],
     "11": [
       {
-        "surface": "By this",
-        "lemma": "zot"
-      },
-      {
         "surface": "I know",
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "You delight",
         "lemma": "chaphets"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "my enemy",
@@ -372,17 +316,9 @@
       {
         "surface": "triumph",
         "lemma": "rua"
-      },
-      {
-        "surface": "over me",
-        "lemma": "al"
       }
     ],
     "12": [
-      {
-        "surface": "In my",
-        "lemma": "ani"
-      },
       {
         "surface": "integrity",
         "lemma": "tom"
@@ -426,10 +362,6 @@
         "lemma": "olam"
       },
       {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
         "surface": "everlasting",
         "lemma": "olam"
       },
@@ -444,8 +376,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "ra",
-    "oyev"
+    "oyev",
+    "olam"
   ]
 }

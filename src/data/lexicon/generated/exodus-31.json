@@ -14,10 +14,6 @@
         "lemma": "davar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "Moses",
         "lemma": "mosheh"
       }
@@ -68,10 +64,6 @@
       {
         "surface": "And I have filled",
         "lemma": "male"
-      },
-      {
-        "surface": "him",
-        "lemma": "et"
       },
       {
         "surface": "with the Spirit",
@@ -164,10 +156,6 @@
     ],
     "6": [
       {
-        "surface": "Moreover, I",
-        "lemma": "ani"
-      },
-      {
         "surface": "have selected",
         "lemma": "natan"
       },
@@ -190,10 +178,6 @@
       {
         "surface": "of Dan",
         "lemma": "dan"
-      },
-      {
-        "surface": "as his assistant",
-        "lemma": "et"
       },
       {
         "surface": "I have also given",
@@ -220,10 +204,6 @@
         "lemma": "kol"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "I have commanded you",
         "lemma": "tsavah"
       }
@@ -246,16 +226,8 @@
         "lemma": "edut"
       },
       {
-        "surface": "and",
-        "lemma": "et"
-      },
-      {
         "surface": "the mercy seat",
         "lemma": "kapporet"
-      },
-      {
-        "surface": "upon it",
-        "lemma": "al"
       },
       {
         "surface": "and all",
@@ -322,10 +294,6 @@
         "lemma": "keli"
       },
       {
-        "surface": "and",
-        "lemma": "et"
-      },
-      {
         "surface": "the basin",
         "lemma": "kiyyor"
       },
@@ -335,10 +303,6 @@
       }
     ],
     "10": [
-      {
-        "surface": "as well as",
-        "lemma": "et"
-      },
       {
         "surface": "the woven",
         "lemma": "serad"
@@ -378,10 +342,6 @@
     ],
     "11": [
       {
-        "surface": "in addition to",
-        "lemma": "et"
-      },
-      {
         "surface": "the anointing",
         "lemma": "mishchah"
       },
@@ -410,10 +370,6 @@
         "lemma": "kol"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "I have commanded you",
         "lemma": "tsavah"
       }
@@ -426,10 +382,6 @@
       {
         "surface": "said",
         "lemma": "amar"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "Moses",
@@ -458,14 +410,6 @@
         "lemma": "shabbat"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "this",
-        "lemma": "hu"
-      },
-      {
         "surface": "will be a sign",
         "lemma": "ot"
       },
@@ -486,14 +430,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       },
@@ -510,14 +446,6 @@
       {
         "surface": "the Sabbath",
         "lemma": "shabbat"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "it",
-        "lemma": "hu"
       },
       {
         "surface": "is holy",
@@ -658,10 +586,6 @@
     ],
     "17": [
       {
-        "surface": "It",
-        "lemma": "hu"
-      },
-      {
         "surface": "is a sign",
         "lemma": "ot"
       },
@@ -676,10 +600,6 @@
       {
         "surface": "forever",
         "lemma": "olam"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "in six",
@@ -730,10 +650,6 @@
       {
         "surface": "speaking",
         "lemma": "davar"
-      },
-      {
-        "surface": "with Moses",
-        "lemma": "et"
       },
       {
         "surface": "on Mount",
@@ -788,6 +704,6 @@
   "themeLemmas": [
     "kol",
     "asah",
-    "et"
+    "shabbat"
   ]
 }

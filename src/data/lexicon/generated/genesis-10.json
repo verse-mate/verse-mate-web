@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "This",
-        "lemma": "elleh"
-      },
-      {
         "surface": "is the account",
         "lemma": "toledah"
       },
@@ -134,10 +130,6 @@
     ],
     "5": [
       {
-        "surface": "From these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "the maritime",
         "lemma": "i"
       },
@@ -256,10 +248,6 @@
         "lemma": "nimrod"
       },
       {
-        "surface": "who",
-        "lemma": "hu"
-      },
-      {
         "surface": "began",
         "lemma": "chalal"
       },
@@ -277,10 +265,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "He",
-        "lemma": "hu"
-      },
       {
         "surface": "was",
         "lemma": "hayah"
@@ -300,10 +284,6 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "so",
-        "lemma": "al"
       },
       {
         "surface": "it is said",
@@ -365,14 +345,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "From",
-        "lemma": "min"
-      },
-      {
-        "surface": "that",
-        "lemma": "hu"
-      },
       {
         "surface": "land",
         "lemma": "erets"
@@ -468,20 +440,12 @@
         "lemma": "sham"
       },
       {
-        "surface": "whom",
-        "lemma": "asher"
-      },
-      {
         "surface": "the Philistines",
         "lemma": "pelishti"
       },
       {
         "surface": "came",
         "lemma": "yatsa"
-      },
-      {
-        "surface": "and",
-        "lemma": "et"
       },
       {
         "surface": "the Caphtorites",
@@ -504,10 +468,6 @@
       {
         "surface": "his firstborn",
         "lemma": "bekhor"
-      },
-      {
-        "surface": "and of",
-        "lemma": "et"
       },
       {
         "surface": "the Hittites",
@@ -594,10 +554,6 @@
         "lemma": "gerar"
       },
       {
-        "surface": "as",
-        "lemma": "ad"
-      },
-      {
         "surface": "far as Gaza",
         "lemma": "azzah"
       },
@@ -622,19 +578,11 @@
         "lemma": "tsevoim"
       },
       {
-        "surface": "as",
-        "lemma": "ad"
-      },
-      {
         "surface": "far as Lasha",
         "lemma": "lesah"
       }
     ],
     "20": [
-      {
-        "surface": "These are",
-        "lemma": "elleh"
-      },
       {
         "surface": "the sons",
         "lemma": "ben"
@@ -680,10 +628,6 @@
       {
         "surface": "of Japheth",
         "lemma": "yephet"
-      },
-      {
-        "surface": "Shem",
-        "lemma": "hu"
       },
       {
         "surface": "was the forefather",
@@ -814,10 +758,6 @@
         "lemma": "peleg"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "in his days",
         "lemma": "yom"
       },
@@ -914,10 +854,6 @@
         "lemma": "kol"
       },
       {
-        "surface": "these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "were sons",
         "lemma": "ben"
       },
@@ -954,10 +890,6 @@
     ],
     "31": [
       {
-        "surface": "These",
-        "lemma": "elleh"
-      },
-      {
         "surface": "are the sons",
         "lemma": "ben"
       },
@@ -984,10 +916,6 @@
     ],
     "32": [
       {
-        "surface": "All these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "are the clans",
         "lemma": "mishpachah"
       },
@@ -1006,10 +934,6 @@
       {
         "surface": "and nations",
         "lemma": "goy"
-      },
-      {
-        "surface": "From these",
-        "lemma": "elleh"
       },
       {
         "surface": "the nations",
@@ -1035,7 +959,7 @@
   },
   "themeLemmas": [
     "yalad",
-    "elleh",
-    "shem"
+    "shem",
+    "mishpachah"
   ]
 }

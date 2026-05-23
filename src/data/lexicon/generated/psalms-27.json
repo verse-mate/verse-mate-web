@@ -60,10 +60,6 @@
         "lemma": "qarav"
       },
       {
-        "surface": "upon me",
-        "lemma": "al"
-      },
-      {
         "surface": "to devour",
         "lemma": "akhal"
       },
@@ -102,10 +98,6 @@
         "lemma": "chanah"
       },
       {
-        "surface": "around me",
-        "lemma": "al"
-      },
-      {
         "surface": "my heart",
         "lemma": "lev"
       },
@@ -128,14 +120,6 @@
       {
         "surface": "breaks out",
         "lemma": "qamay"
-      },
-      {
-        "surface": "against me",
-        "lemma": "al"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "will keep my trust",
@@ -206,10 +190,6 @@
     ],
     "5": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "in the day",
         "lemma": "yom"
       },
@@ -258,10 +238,6 @@
       {
         "surface": "will be held high",
         "lemma": "rum"
-      },
-      {
-        "surface": "above",
-        "lemma": "al"
       },
       {
         "surface": "my enemies",
@@ -370,10 +346,6 @@
         "lemma": "paneh"
       },
       {
-        "surface": "from me",
-        "lemma": "min"
-      },
-      {
         "surface": "nor",
         "lemma": "al"
       },
@@ -424,10 +396,6 @@
     ],
     "10": [
       {
-        "surface": "Though",
-        "lemma": "ki"
-      },
-      {
         "surface": "my father",
         "lemma": "av"
       },
@@ -474,10 +442,6 @@
         "lemma": "orach"
       },
       {
-        "surface": "because of",
-        "lemma": "maan"
-      },
-      {
         "surface": "my oppressors",
         "lemma": "sharar"
       }
@@ -498,10 +462,6 @@
       {
         "surface": "of my foes",
         "lemma": "tsar"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "false",
@@ -560,10 +520,6 @@
         "lemma": "qavah"
       },
       {
-        "surface": "for",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -580,10 +536,6 @@
         "lemma": "qavah"
       },
       {
-        "surface": "for",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       }
@@ -592,6 +544,6 @@
   "themeLemmas": [
     "al",
     "paneh",
-    "ki"
+    "chay"
   ]
 }

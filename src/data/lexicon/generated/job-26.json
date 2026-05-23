@@ -68,10 +68,6 @@
     ],
     "4": [
       {
-        "surface": "To",
-        "lemma": "et"
-      },
-      {
         "surface": "whom",
         "lemma": "mi"
       },
@@ -94,10 +90,6 @@
       {
         "surface": "spoke",
         "lemma": "yatsa"
-      },
-      {
-        "surface": "through you",
-        "lemma": "min"
       }
     ],
     "5": [
@@ -158,10 +150,6 @@
         "lemma": "tsaphon"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "empty space",
         "lemma": "tohu"
       },
@@ -172,10 +160,6 @@
       {
         "surface": "the earth",
         "lemma": "erets"
-      },
-      {
-        "surface": "upon",
-        "lemma": "al"
       },
       {
         "surface": "nothing",
@@ -230,10 +214,6 @@
         "lemma": "parshez"
       },
       {
-        "surface": "over it",
-        "lemma": "al"
-      },
-      {
         "surface": "His cloud",
         "lemma": "anan"
       }
@@ -248,10 +228,6 @@
         "lemma": "choq"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the face",
         "lemma": "paneh"
       },
@@ -260,16 +236,8 @@
         "lemma": "mayim"
       },
       {
-        "surface": "at",
-        "lemma": "ad"
-      },
-      {
         "surface": "the boundary",
         "lemma": "takhlit"
-      },
-      {
-        "surface": "between",
-        "lemma": "im"
       },
       {
         "surface": "light",
@@ -360,14 +328,6 @@
     ],
     "14": [
       {
-        "surface": "Indeed",
-        "lemma": "hen"
-      },
-      {
-        "surface": "these are",
-        "lemma": "elleh"
-      },
-      {
         "surface": "but the fringes",
         "lemma": "qatsah"
       },
@@ -411,7 +371,7 @@
   },
   "themeLemmas": [
     "lo",
-    "al",
-    "mi"
+    "mi",
+    "mayim"
   ]
 }

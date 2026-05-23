@@ -6,14 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe is",
-        "lemma": "allay"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "I am",
         "lemma": "hayah"
       },
@@ -66,10 +58,6 @@
       {
         "surface": "has perished",
         "lemma": "avad"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
       },
       {
         "surface": "the earth",
@@ -152,10 +140,6 @@
       {
         "surface": "utters",
         "lemma": "davar"
-      },
-      {
-        "surface": "his",
-        "lemma": "hu"
       },
       {
         "surface": "evil",
@@ -264,10 +248,6 @@
     ],
     "6": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "a son",
         "lemma": "ben"
       },
@@ -318,10 +298,6 @@
     ],
     "7": [
       {
-        "surface": "But as for me",
-        "lemma": "ani"
-      },
-      {
         "surface": "I will look",
         "lemma": "tsaphah"
       },
@@ -364,20 +340,12 @@
         "lemma": "oyev"
       },
       {
-        "surface": "Though",
-        "lemma": "ki"
-      },
-      {
         "surface": "I have fallen",
         "lemma": "naphal"
       },
       {
         "surface": "I will arise",
         "lemma": "qamay"
-      },
-      {
-        "surface": "though",
-        "lemma": "ki"
       },
       {
         "surface": "I sit",
@@ -398,10 +366,6 @@
     ],
     "9": [
       {
-        "surface": "Because",
-        "lemma": "ki"
-      },
-      {
         "surface": "I have sinned",
         "lemma": "chata"
       },
@@ -416,10 +380,6 @@
       {
         "surface": "of the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "He argues",
@@ -476,10 +436,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "to me",
-        "lemma": "el"
-      },
-      {
         "surface": "Where",
         "lemma": "ay"
       },
@@ -534,10 +490,6 @@
         "lemma": "gader"
       },
       {
-        "surface": "the",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -552,24 +504,12 @@
     ],
     "12": [
       {
-        "surface": "On that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
       {
         "surface": "they will come",
         "lemma": "bo"
-      },
-      {
-        "surface": "to you",
-        "lemma": "ad"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
       },
       {
         "surface": "Assyria",
@@ -584,16 +524,8 @@
         "lemma": "matsor"
       },
       {
-        "surface": "even from",
-        "lemma": "min"
-      },
-      {
         "surface": "Egypt",
         "lemma": "matsor"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "the Euphrates",
@@ -628,10 +560,6 @@
       {
         "surface": "desolate",
         "lemma": "shemamah"
-      },
-      {
-        "surface": "because of",
-        "lemma": "al"
       },
       {
         "surface": "its inhabitants",
@@ -764,10 +692,6 @@
         "lemma": "yad"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "their mouths",
         "lemma": "peh"
       },
@@ -810,10 +734,6 @@
         "lemma": "misgeret"
       },
       {
-        "surface": "in the presence of",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -828,10 +748,6 @@
       {
         "surface": "in fear",
         "lemma": "yare"
-      },
-      {
-        "surface": "of You",
-        "lemma": "min"
       }
     ],
     "18": [
@@ -844,10 +760,6 @@
         "lemma": "el"
       },
       {
-        "surface": "like You",
-        "lemma": "kemo"
-      },
-      {
         "surface": "who pardons",
         "lemma": "nasa"
       },
@@ -858,10 +770,6 @@
       {
         "surface": "and passes",
         "lemma": "avar"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "the transgression",
@@ -890,14 +798,6 @@
       {
         "surface": "forever",
         "lemma": "ad"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
       },
       {
         "surface": "delights",
@@ -968,10 +868,6 @@
         "lemma": "avraham"
       },
       {
-        "surface": "as",
-        "lemma": "asher"
-      },
-      {
         "surface": "You swore",
         "lemma": "shava"
       },
@@ -990,8 +886,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
-    "al",
-    "raah"
+    "raah",
+    "hayah",
+    "yam"
   ]
 }

@@ -122,10 +122,6 @@
     ],
     "5": [
       {
-        "surface": "Indeed",
-        "lemma": "hen"
-      },
-      {
         "surface": "like wild donkeys",
         "lemma": "pere"
       },
@@ -262,10 +258,6 @@
         "lemma": "shad"
       },
       {
-        "surface": "the nursing child",
-        "lemma": "al"
-      },
-      {
         "surface": "of the poor",
         "lemma": "ani"
       },
@@ -373,10 +365,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "Then there",
-        "lemma": "hemmah"
-      },
       {
         "surface": "are",
         "lemma": "hayah"
@@ -526,10 +514,6 @@
     ],
     "17": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "deep darkness",
         "lemma": "tsalmavet"
       },
@@ -540,10 +524,6 @@
       {
         "surface": "morning",
         "lemma": "boqer"
-      },
-      {
-        "surface": "surely",
-        "lemma": "ki"
       },
       {
         "surface": "they are friends with",
@@ -560,16 +540,8 @@
     ],
     "18": [
       {
-        "surface": "They",
-        "lemma": "hu"
-      },
-      {
         "surface": "are but foam",
         "lemma": "qal"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the surface",
@@ -612,10 +584,6 @@
       {
         "surface": "As drought",
         "lemma": "tsiyyah"
-      },
-      {
-        "surface": "and",
-        "lemma": "gam"
       },
       {
         "surface": "heat",
@@ -754,10 +722,6 @@
         "lemma": "ayin"
       },
       {
-        "surface": "are on",
-        "lemma": "al"
-      },
-      {
         "surface": "their ways",
         "lemma": "derekh"
       }
@@ -810,10 +774,6 @@
         "lemma": "lo"
       },
       {
-        "surface": "then",
-        "lemma": "epho"
-      },
-      {
         "surface": "who",
         "lemma": "mi"
       },
@@ -837,7 +797,7 @@
   },
   "themeLemmas": [
     "lo",
-    "al",
-    "or"
+    "or",
+    "gazal"
   ]
 }

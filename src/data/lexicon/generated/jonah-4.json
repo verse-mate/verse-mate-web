@@ -28,10 +28,6 @@
         "lemma": "palal"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -40,16 +36,8 @@
         "lemma": "amar"
       },
       {
-        "surface": "O",
-        "lemma": "anna"
-      },
-      {
         "surface": "LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "is this",
-        "lemma": "zeh"
       },
       {
         "surface": "not",
@@ -60,24 +48,12 @@
         "lemma": "davar"
       },
       {
-        "surface": "while",
-        "lemma": "ad"
-      },
-      {
         "surface": "I was",
         "lemma": "hayah"
       },
       {
-        "surface": "still in",
-        "lemma": "al"
-      },
-      {
         "surface": "my own country",
         "lemma": "adamah"
-      },
-      {
-        "surface": "This is why",
-        "lemma": "al"
       },
       {
         "surface": "I was so quick",
@@ -94,14 +70,6 @@
       {
         "surface": "I knew",
         "lemma": "yada"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You are",
-        "lemma": "attah"
       },
       {
         "surface": "a gracious",
@@ -136,10 +104,6 @@
         "lemma": "nacham"
       },
       {
-        "surface": "from",
-        "lemma": "al"
-      },
-      {
         "surface": "sending disaster",
         "lemma": "ra"
       }
@@ -154,24 +118,12 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "please",
-        "lemma": "na"
-      },
-      {
         "surface": "take",
         "lemma": "laqach"
       },
       {
         "surface": "my life",
         "lemma": "nephesh"
-      },
-      {
-        "surface": "from me",
-        "lemma": "min"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "it is better",
@@ -222,10 +174,6 @@
         "lemma": "yashav"
       },
       {
-        "surface": "east",
-        "lemma": "min"
-      },
-      {
         "surface": "of it",
         "lemma": "qedem"
       },
@@ -248,10 +196,6 @@
       {
         "surface": "in its shade",
         "lemma": "tsel"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "see",
@@ -298,10 +242,6 @@
       {
         "surface": "shade",
         "lemma": "tsel"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "Jonah’s",
@@ -412,10 +352,6 @@
         "lemma": "nakhah"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "Jonah’s",
         "lemma": "yonah"
       },
@@ -474,10 +410,6 @@
         "lemma": "charah"
       },
       {
-        "surface": "about",
-        "lemma": "al"
-      },
-      {
         "surface": "the plant",
         "lemma": "qiqavon"
       },
@@ -494,10 +426,6 @@
         "lemma": "charah"
       },
       {
-        "surface": "enough to",
-        "lemma": "ad"
-      },
-      {
         "surface": "die",
         "lemma": "mavet"
       }
@@ -512,24 +440,12 @@
         "lemma": "amar"
       },
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "cared",
         "lemma": "chus"
       },
       {
-        "surface": "about",
-        "lemma": "al"
-      },
-      {
         "surface": "the plant",
         "lemma": "qiqavon"
-      },
-      {
-        "surface": "which",
-        "lemma": "asher"
       },
       {
         "surface": "you neither",
@@ -566,20 +482,12 @@
     ],
     "11": [
       {
-        "surface": "So should I",
-        "lemma": "ani"
-      },
-      {
         "surface": "not",
         "lemma": "lo"
       },
       {
         "surface": "care",
         "lemma": "chus"
-      },
-      {
-        "surface": "about",
-        "lemma": "al"
       },
       {
         "surface": "the great",
@@ -592,10 +500,6 @@
       {
         "surface": "of Nineveh",
         "lemma": "ninveh"
-      },
-      {
-        "surface": "which",
-        "lemma": "asher"
       },
       {
         "surface": "has",
@@ -612,10 +516,6 @@
       {
         "surface": "people",
         "lemma": "adam"
-      },
-      {
-        "surface": "who",
-        "lemma": "asher"
       },
       {
         "surface": "cannot",
@@ -644,8 +544,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "yonah",
-    "amar"
+    "amar",
+    "qiqavon"
   ]
 }

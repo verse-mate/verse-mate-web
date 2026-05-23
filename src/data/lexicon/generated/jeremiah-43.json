@@ -52,10 +52,6 @@
       {
         "surface": "had sent him",
         "lemma": "shalach"
-      },
-      {
-        "surface": "to say",
-        "lemma": "el"
       }
     ],
     "2": [
@@ -100,16 +96,8 @@
         "lemma": "amar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "Jeremiah",
         "lemma": "yirmeyah"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "vvv",
@@ -158,10 +146,6 @@
     ],
     "3": [
       {
-        "surface": "Rather",
-        "lemma": "ki"
-      },
-      {
         "surface": "Baruch",
         "lemma": "barukh"
       },
@@ -178,20 +162,8 @@
         "lemma": "sut"
       },
       {
-        "surface": "you",
-        "lemma": "et"
-      },
-      {
-        "surface": "to",
-        "lemma": "maan"
-      },
-      {
         "surface": "deliver",
         "lemma": "natan"
-      },
-      {
-        "surface": "us",
-        "lemma": "et"
       },
       {
         "surface": "into the hands",
@@ -208,10 +180,6 @@
       {
         "surface": "or exile",
         "lemma": "galah"
-      },
-      {
-        "surface": "us",
-        "lemma": "et"
       },
       {
         "surface": "to Babylon",
@@ -314,10 +282,6 @@
         "lemma": "yehudah"
       },
       {
-        "surface": "those who",
-        "lemma": "asher"
-      },
-      {
         "surface": "had returned",
         "lemma": "shuv"
       },
@@ -336,10 +300,6 @@
       {
         "surface": "the nations",
         "lemma": "goy"
-      },
-      {
-        "surface": "to which",
-        "lemma": "asher"
       },
       {
         "surface": "they had been scattered",
@@ -372,10 +332,6 @@
         "lemma": "kol"
       },
       {
-        "surface": "whom",
-        "lemma": "asher"
-      },
-      {
         "surface": "Nebuzaradan",
         "lemma": "nevuzaradan"
       },
@@ -390,10 +346,6 @@
       {
         "surface": "had allowed to remain",
         "lemma": "nuach"
-      },
-      {
-        "surface": "with",
-        "lemma": "et"
       },
       {
         "surface": "Gedaliah",
@@ -414,10 +366,6 @@
       {
         "surface": "of Shaphan",
         "lemma": "shaphan"
-      },
-      {
-        "surface": "as well as",
-        "lemma": "et"
       },
       {
         "surface": "Jeremiah",
@@ -454,10 +402,6 @@
         "lemma": "mitsrayim"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "they did not",
         "lemma": "lo"
       },
@@ -478,10 +422,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "as far as",
-        "lemma": "ad"
-      },
-      {
         "surface": "Tahpanhes",
         "lemma": "tachpanches"
       }
@@ -498,10 +438,6 @@
       {
         "surface": "came",
         "lemma": "hayah"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "Jeremiah",
@@ -572,10 +508,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "that",
-        "lemma": "el"
-      },
-      {
         "surface": "this is what",
         "lemma": "koh"
       },
@@ -632,16 +564,8 @@
         "lemma": "maal"
       },
       {
-        "surface": "these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "stones",
         "lemma": "even"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "I have embedded",
@@ -654,10 +578,6 @@
       {
         "surface": "his royal pavilion",
         "lemma": "shaphrur"
-      },
-      {
-        "surface": "over them",
-        "lemma": "al"
       }
     ],
     "11": [
@@ -682,10 +602,6 @@
         "lemma": "mavet"
       },
       {
-        "surface": "to those",
-        "lemma": "asher"
-      },
-      {
         "surface": "destined for death",
         "lemma": "mavet"
       },
@@ -694,20 +610,12 @@
         "lemma": "shevi"
       },
       {
-        "surface": "to those",
-        "lemma": "asher"
-      },
-      {
         "surface": "destined for captivity",
         "lemma": "shevi"
       },
       {
         "surface": "and the sword",
         "lemma": "cherev"
-      },
-      {
-        "surface": "to those",
-        "lemma": "asher"
       },
       {
         "surface": "destined for the sword",
@@ -748,20 +656,12 @@
         "lemma": "atah"
       },
       {
-        "surface": "with",
-        "lemma": "et"
-      },
-      {
         "surface": "the land",
         "lemma": "erets"
       },
       {
         "surface": "of Egypt",
         "lemma": "mitsrayim"
-      },
-      {
-        "surface": "as",
-        "lemma": "asher"
       },
       {
         "surface": "a shepherd",
@@ -814,10 +714,6 @@
         "lemma": "mitsrayim"
       },
       {
-        "surface": "and",
-        "lemma": "et"
-      },
-      {
         "surface": "he will burn down",
         "lemma": "saraph"
       },
@@ -837,7 +733,7 @@
   },
   "themeLemmas": [
     "kol",
-    "asher",
-    "mitsrayim"
+    "mitsrayim",
+    "yirmeyah"
   ]
 }

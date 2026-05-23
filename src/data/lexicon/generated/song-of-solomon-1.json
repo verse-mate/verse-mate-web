@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "This is",
-        "lemma": "asher"
-      },
-      {
         "surface": "Solomon’s",
         "lemma": "shelomoh"
       },
@@ -34,10 +30,6 @@
       {
         "surface": "of his mouth",
         "lemma": "peh"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "your love",
@@ -76,10 +68,6 @@
       {
         "surface": "poured out",
         "lemma": "ruq"
-      },
-      {
-        "surface": "No wonder",
-        "lemma": "al"
       },
       {
         "surface": "the maidens",
@@ -146,10 +134,6 @@
     ],
     "5": [
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am dark",
         "lemma": "shachor"
       },
@@ -190,10 +174,6 @@
       {
         "surface": "stare",
         "lemma": "raah"
-      },
-      {
-        "surface": "because I",
-        "lemma": "ani"
       },
       {
         "surface": "am dark",
@@ -286,10 +266,6 @@
         "lemma": "atah"
       },
       {
-        "surface": "beside",
-        "lemma": "al"
-      },
-      {
         "surface": "the flocks",
         "lemma": "eder"
       },
@@ -338,10 +314,6 @@
       {
         "surface": "your young goats",
         "lemma": "gediyyah"
-      },
-      {
-        "surface": "near",
-        "lemma": "al"
       },
       {
         "surface": "the tents",
@@ -410,10 +382,6 @@
         "lemma": "zahav"
       },
       {
-        "surface": "studded with",
-        "lemma": "im"
-      },
-      {
         "surface": "beads",
         "lemma": "nequddah"
       },
@@ -423,10 +391,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "While",
-        "lemma": "ad"
-      },
       {
         "surface": "the king",
         "lemma": "melekh"
@@ -502,20 +466,12 @@
     ],
     "15": [
       {
-        "surface": "How",
-        "lemma": "hen"
-      },
-      {
         "surface": "beautiful you are",
         "lemma": "yapheh"
       },
       {
         "surface": "my darling",
         "lemma": "rayah"
-      },
-      {
-        "surface": "Oh, how very",
-        "lemma": "hen"
       },
       {
         "surface": "beautiful",
@@ -532,20 +488,12 @@
     ],
     "16": [
       {
-        "surface": "How",
-        "lemma": "hen"
-      },
-      {
         "surface": "handsome you are",
         "lemma": "yapheh"
       },
       {
         "surface": "my beloved",
         "lemma": "dod"
-      },
-      {
-        "surface": "Oh, how",
-        "lemma": "aph"
       },
       {
         "surface": "delightful",
@@ -586,6 +534,6 @@
   "themeLemmas": [
     "dod",
     "yapheh",
-    "al"
+    "kerem"
   ]
 }

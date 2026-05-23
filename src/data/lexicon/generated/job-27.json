@@ -110,10 +110,6 @@
     ],
     "5": [
       {
-        "surface": "I will never",
-        "lemma": "chalilah"
-      },
-      {
         "surface": "say that you are right",
         "lemma": "tsadaq"
       },
@@ -124,10 +120,6 @@
       {
         "surface": "my integrity",
         "lemma": "tummah"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "I die",
@@ -192,10 +184,6 @@
     ],
     "8": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "what is",
         "lemma": "mah"
       },
@@ -208,16 +196,8 @@
         "lemma": "chaneph"
       },
       {
-        "surface": "when",
-        "lemma": "ki"
-      },
-      {
         "surface": "he is cut off",
         "lemma": "batsa"
-      },
-      {
-        "surface": "when",
-        "lemma": "ki"
       },
       {
         "surface": "God",
@@ -246,30 +226,18 @@
         "lemma": "tsaaqah"
       },
       {
-        "surface": "when",
-        "lemma": "ki"
-      },
-      {
         "surface": "distress",
         "lemma": "batstsarah"
       },
       {
         "surface": "comes",
         "lemma": "bo"
-      },
-      {
-        "surface": "upon him",
-        "lemma": "al"
       }
     ],
     "10": [
       {
         "surface": "Will he delight",
         "lemma": "anag"
-      },
-      {
-        "surface": "in",
-        "lemma": "al"
       },
       {
         "surface": "the Almighty",
@@ -298,10 +266,6 @@
         "lemma": "yara"
       },
       {
-        "surface": "you",
-        "lemma": "et"
-      },
-      {
         "surface": "in the power",
         "lemma": "yad"
       },
@@ -318,19 +282,11 @@
         "lemma": "kachad"
       },
       {
-        "surface": "the ways of",
-        "lemma": "asher"
-      },
-      {
         "surface": "the Almighty",
         "lemma": "shadday"
       }
     ],
     "12": [
-      {
-        "surface": "Surely",
-        "lemma": "hen"
-      },
       {
         "surface": "all of you",
         "lemma": "kol"
@@ -340,16 +296,8 @@
         "lemma": "chazah"
       },
       {
-        "surface": "for yourselves",
-        "lemma": "attah"
-      },
-      {
         "surface": "Why then",
         "lemma": "mah"
-      },
-      {
-        "surface": "do you keep up this",
-        "lemma": "zeh"
       },
       {
         "surface": "empty talk",
@@ -357,10 +305,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "This is",
-        "lemma": "zeh"
-      },
       {
         "surface": "the wicked",
         "lemma": "rasah"
@@ -372,10 +316,6 @@
       {
         "surface": "portion",
         "lemma": "cheleq"
-      },
-      {
-        "surface": "from",
-        "lemma": "im"
       },
       {
         "surface": "God",
@@ -410,10 +350,6 @@
       {
         "surface": "are many",
         "lemma": "ravah"
-      },
-      {
-        "surface": "they are destined for",
-        "lemma": "lemo"
       },
       {
         "surface": "the sword",
@@ -624,10 +560,6 @@
         "lemma": "shalakh"
       },
       {
-        "surface": "against him",
-        "lemma": "al"
-      },
-      {
         "surface": "without",
         "lemma": "lo"
       },
@@ -654,16 +586,8 @@
         "lemma": "kaph"
       },
       {
-        "surface": "at him",
-        "lemma": "al"
-      },
-      {
         "surface": "and hisses",
         "lemma": "sharaq"
-      },
-      {
-        "surface": "him",
-        "lemma": "al"
       },
       {
         "surface": "out of his place",
@@ -673,7 +597,7 @@
   },
   "themeLemmas": [
     "lo",
-    "im",
-    "al"
+    "shadday",
+    "im"
   ]
 }

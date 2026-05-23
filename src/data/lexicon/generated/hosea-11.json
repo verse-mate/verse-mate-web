@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "When",
-        "lemma": "ki"
-      },
-      {
         "surface": "Israel",
         "lemma": "yisrael"
       },
@@ -70,10 +66,6 @@
     ],
     "3": [
       {
-        "surface": "It was I",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "who taught Ephraim",
         "lemma": "ephrayim"
       },
@@ -86,10 +78,6 @@
         "lemma": "laqach"
       },
       {
-        "surface": "by",
-        "lemma": "al"
-      },
-      {
         "surface": "the arms",
         "lemma": "zeroa"
       },
@@ -100,10 +88,6 @@
       {
         "surface": "realized",
         "lemma": "yada"
-      },
-      {
-        "surface": "that it was I",
-        "lemma": "ki"
       },
       {
         "surface": "who healed them",
@@ -144,10 +128,6 @@
         "lemma": "ol"
       },
       {
-        "surface": "from",
-        "lemma": "al"
-      },
-      {
         "surface": "their necks",
         "lemma": "lechi"
       },
@@ -170,10 +150,6 @@
         "lemma": "shuv"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -188,10 +164,6 @@
       {
         "surface": "by Assyria",
         "lemma": "ashshur"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
       },
       {
         "surface": "they refused",
@@ -248,10 +220,6 @@
       {
         "surface": "Though they call",
         "lemma": "qara"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the Most High",
@@ -316,10 +284,6 @@
         "lemma": "haphakh"
       },
       {
-        "surface": "within Me",
-        "lemma": "al"
-      },
-      {
         "surface": "My compassion",
         "lemma": "nichum"
       },
@@ -360,14 +324,6 @@
       {
         "surface": "again",
         "lemma": "shuv"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
       },
       {
         "surface": "am God",
@@ -420,14 +376,6 @@
         "lemma": "ari"
       },
       {
-        "surface": "When",
-        "lemma": "ki"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "roars",
         "lemma": "shaag"
       },
@@ -472,10 +420,6 @@
       {
         "surface": "Then I will settle them",
         "lemma": "yashav"
-      },
-      {
-        "surface": "in",
-        "lemma": "al"
       },
       {
         "surface": "their homes",
@@ -528,20 +472,12 @@
         "lemma": "rud"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "God",
         "lemma": "el"
       },
       {
         "surface": "and is faithful",
         "lemma": "aman"
-      },
-      {
-        "surface": "to",
-        "lemma": "im"
       },
       {
         "surface": "the Holy One",
@@ -551,7 +487,7 @@
   },
   "themeLemmas": [
     "lo",
-    "ki",
-    "al"
+    "ephrayim",
+    "yisrael"
   ]
 }

@@ -18,10 +18,6 @@
         "lemma": "shemuah"
       },
       {
-        "surface": "And to",
-        "lemma": "al"
-      },
-      {
         "surface": "whom",
         "lemma": "mi"
       },
@@ -148,10 +144,6 @@
         "lemma": "akhen"
       },
       {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "took up",
         "lemma": "nasa"
       },
@@ -166,10 +158,6 @@
       {
         "surface": "our sorrows",
         "lemma": "makhov"
-      },
-      {
-        "surface": "yet we",
-        "lemma": "anachnu"
       },
       {
         "surface": "considered Him",
@@ -194,10 +182,6 @@
     ],
     "5": [
       {
-        "surface": "But He",
-        "lemma": "hu"
-      },
-      {
         "surface": "was pierced",
         "lemma": "chalal"
       },
@@ -220,10 +204,6 @@
       {
         "surface": "that brought us peace",
         "lemma": "shalom"
-      },
-      {
-        "surface": "was upon Him",
-        "lemma": "al"
       },
       {
         "surface": "and by His stripes",
@@ -266,10 +246,6 @@
       {
         "surface": "has laid",
         "lemma": "paga"
-      },
-      {
-        "surface": "upon Him",
-        "lemma": "et"
       },
       {
         "surface": "the iniquity",
@@ -356,10 +332,6 @@
         "lemma": "laqach"
       },
       {
-        "surface": "and",
-        "lemma": "et"
-      },
-      {
         "surface": "who",
         "lemma": "mi"
       },
@@ -370,10 +342,6 @@
       {
         "surface": "His descendants",
         "lemma": "dor"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "He was cut off",
@@ -410,16 +378,8 @@
         "lemma": "qever"
       },
       {
-        "surface": "with",
-        "lemma": "et"
-      },
-      {
         "surface": "the wicked",
         "lemma": "rasah"
-      },
-      {
-        "surface": "and with",
-        "lemma": "et"
       },
       {
         "surface": "a rich man",
@@ -428,10 +388,6 @@
       {
         "surface": "in His death",
         "lemma": "mavet"
-      },
-      {
-        "surface": "although",
-        "lemma": "al"
       },
       {
         "surface": "He had done",
@@ -562,10 +518,6 @@
         "lemma": "rav"
       },
       {
-        "surface": "and He",
-        "lemma": "hu"
-      },
-      {
         "surface": "will bear",
         "lemma": "saval"
       },
@@ -596,10 +548,6 @@
         "lemma": "shalal"
       },
       {
-        "surface": "with",
-        "lemma": "et"
-      },
-      {
         "surface": "the strong",
         "lemma": "atsum"
       },
@@ -624,16 +572,8 @@
         "lemma": "manah"
       },
       {
-        "surface": "with",
-        "lemma": "et"
-      },
-      {
         "surface": "the transgressors",
         "lemma": "pasah"
-      },
-      {
-        "surface": "Yet He",
-        "lemma": "hu"
       },
       {
         "surface": "bore",
@@ -659,7 +599,7 @@
   },
   "themeLemmas": [
     "lo",
-    "et",
-    "hu"
+    "rav",
+    "raah"
   ]
 }

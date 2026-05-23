@@ -52,14 +52,6 @@
     ],
     "2": [
       {
-        "surface": "See",
-        "lemma": "hinneh"
-      },
-      {
-        "surface": "how",
-        "lemma": "ki"
-      },
-      {
         "surface": "Your enemies",
         "lemma": "oyev"
       },
@@ -90,20 +82,12 @@
         "lemma": "sod"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "Your people",
         "lemma": "am"
       },
       {
         "surface": "and conspire",
         "lemma": "yaats"
-      },
-      {
-        "surface": "against",
-        "lemma": "al"
       },
       {
         "surface": "those You cherish",
@@ -150,10 +134,6 @@
     ],
     "5": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "with one mind",
         "lemma": "lev"
       },
@@ -172,10 +152,6 @@
       {
         "surface": "an alliance",
         "lemma": "berit"
-      },
-      {
-        "surface": "against You",
-        "lemma": "al"
       }
     ],
     "6": [
@@ -218,10 +194,6 @@
         "lemma": "peleshet"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "the people",
         "lemma": "yashav"
       },
@@ -232,20 +204,12 @@
     ],
     "8": [
       {
-        "surface": "Even",
-        "lemma": "gam"
-      },
-      {
         "surface": "Assyria",
         "lemma": "ashshur"
       },
       {
         "surface": "has joined",
         "lemma": "lavah"
-      },
-      {
-        "surface": "them",
-        "lemma": "im"
       },
       {
         "surface": "lending",
@@ -355,10 +319,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "who",
-        "lemma": "asher"
-      },
       {
         "surface": "said",
         "lemma": "amar"
@@ -500,14 +460,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "alone",
         "lemma": "bad"
       },
@@ -524,10 +476,6 @@
         "lemma": "elyon"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -538,8 +486,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "shem",
-    "ki"
+    "al",
+    "yaats"
   ]
 }

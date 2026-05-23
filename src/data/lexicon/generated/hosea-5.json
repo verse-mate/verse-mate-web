@@ -10,10 +10,6 @@
         "lemma": "shama"
       },
       {
-        "surface": "this",
-        "lemma": "zot"
-      },
-      {
         "surface": "O priests",
         "lemma": "kohen"
       },
@@ -42,16 +38,8 @@
         "lemma": "bet"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "this judgment",
         "lemma": "mishpat"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
       },
       {
         "surface": "you have been",
@@ -74,10 +62,6 @@
         "lemma": "paras"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "Tabor",
         "lemma": "tavor"
       }
@@ -96,10 +80,6 @@
         "lemma": "shachat"
       },
       {
-        "surface": "but I",
-        "lemma": "ani"
-      },
-      {
         "surface": "will chastise them",
         "lemma": "musar"
       },
@@ -109,10 +89,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
       {
         "surface": "know all about",
         "lemma": "yada"
@@ -132,14 +108,6 @@
       {
         "surface": "hidden",
         "lemma": "kachad"
-      },
-      {
-        "surface": "from Me",
-        "lemma": "min"
-      },
-      {
-        "surface": "For",
-        "lemma": "ki"
       },
       {
         "surface": "now",
@@ -180,16 +148,8 @@
         "lemma": "shuv"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "their God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "a spirit",
@@ -250,20 +210,12 @@
         "lemma": "avan"
       },
       {
-        "surface": "even",
-        "lemma": "gam"
-      },
-      {
         "surface": "Judah",
         "lemma": "yehudah"
       },
       {
         "surface": "stumbles",
         "lemma": "kashal"
-      },
-      {
-        "surface": "with them",
-        "lemma": "im"
       }
     ],
     "6": [
@@ -308,10 +260,6 @@
       {
         "surface": "to the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "they have borne",
@@ -452,10 +400,6 @@
         "lemma": "evrah"
       },
       {
-        "surface": "upon them",
-        "lemma": "al"
-      },
-      {
         "surface": "like water",
         "lemma": "mayim"
       }
@@ -478,10 +422,6 @@
         "lemma": "mishpat"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "he is determined",
         "lemma": "yaal"
       },
@@ -495,10 +435,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "So I am",
-        "lemma": "ani"
-      },
       {
         "surface": "like a moth",
         "lemma": "ash"
@@ -550,10 +486,6 @@
         "lemma": "halakh"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "Assyria",
         "lemma": "ashshur"
       },
@@ -562,20 +494,12 @@
         "lemma": "shalach"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the great",
         "lemma": "yarev"
       },
       {
         "surface": "king",
         "lemma": "melekh"
-      },
-      {
-        "surface": "But he",
-        "lemma": "hu"
       },
       {
         "surface": "cannot",
@@ -600,14 +524,6 @@
     ],
     "14": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "am like a lion",
         "lemma": "shachal"
       },
@@ -626,14 +542,6 @@
       {
         "surface": "of Judah",
         "lemma": "yehudah"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
-        "surface": "even I",
-        "lemma": "ani"
       },
       {
         "surface": "will tear them to pieces",
@@ -662,16 +570,8 @@
         "lemma": "halakh"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "My place",
         "lemma": "maqom"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "they admit their guilt",
@@ -697,7 +597,7 @@
   },
   "themeLemmas": [
     "ephrayim",
-    "ki",
-    "yisrael"
+    "yisrael",
+    "lo"
   ]
 }

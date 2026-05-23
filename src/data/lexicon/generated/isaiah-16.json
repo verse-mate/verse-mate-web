@@ -30,10 +30,6 @@
         "lemma": "midbar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the mount",
         "lemma": "har"
       },
@@ -160,10 +156,6 @@
         "lemma": "shadad"
       },
       {
-        "surface": "When",
-        "lemma": "ki"
-      },
-      {
         "surface": "the oppressor",
         "lemma": "muts"
       },
@@ -186,10 +178,6 @@
       {
         "surface": "have vanished",
         "lemma": "tamam"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
       },
       {
         "surface": "the land",
@@ -240,10 +228,6 @@
       {
         "surface": "will sit",
         "lemma": "yashav"
-      },
-      {
-        "surface": "on it",
-        "lemma": "al"
       },
       {
         "surface": "in faithfulness",
@@ -344,10 +328,6 @@
     ],
     "8": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the fields",
         "lemma": "shedemah"
       },
@@ -388,10 +368,6 @@
         "lemma": "naga"
       },
       {
-        "surface": "as",
-        "lemma": "ad"
-      },
-      {
         "surface": "far as Jazer",
         "lemma": "yaazer"
       },
@@ -421,10 +397,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "So",
-        "lemma": "al"
-      },
       {
         "surface": "I weep",
         "lemma": "bakhah"
@@ -466,10 +438,6 @@
         "lemma": "naphal"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "your summer fruit",
         "lemma": "qayits"
       },
@@ -490,10 +458,6 @@
       {
         "surface": "are removed",
         "lemma": "asaph"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
       },
       {
         "surface": "the orchard",
@@ -542,10 +506,6 @@
     ],
     "11": [
       {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
-      {
         "surface": "my heart",
         "lemma": "meeh"
       },
@@ -576,10 +536,6 @@
     ],
     "12": [
       {
-        "surface": "When",
-        "lemma": "ki"
-      },
-      {
         "surface": "Moab",
         "lemma": "moav"
       },
@@ -588,16 +544,8 @@
         "lemma": "raah"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the high place",
         "lemma": "bamah"
-      },
-      {
-        "surface": "when",
-        "lemma": "ki"
       },
       {
         "surface": "he wearies himself",
@@ -626,16 +574,8 @@
     ],
     "13": [
       {
-        "surface": "This",
-        "lemma": "zeh"
-      },
-      {
         "surface": "is the message",
         "lemma": "davar"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -644,14 +584,6 @@
       {
         "surface": "spoke",
         "lemma": "davar"
-      },
-      {
-        "surface": "earlier",
-        "lemma": "az"
-      },
-      {
-        "surface": "concerning",
-        "lemma": "el"
       },
       {
         "surface": "Moab",
@@ -727,7 +659,7 @@
   },
   "themeLemmas": [
     "moav",
-    "al",
-    "lo"
+    "lo",
+    "qircheres"
   ]
 }

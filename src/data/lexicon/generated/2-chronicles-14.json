@@ -14,10 +14,6 @@
         "lemma": "shakhav"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "his fathers",
         "lemma": "av"
       },
@@ -212,10 +208,6 @@
     ],
     "6": [
       {
-        "surface": "Because",
-        "lemma": "ki"
-      },
-      {
         "surface": "the land",
         "lemma": "erets"
       },
@@ -240,10 +232,6 @@
         "lemma": "yehudah"
       },
       {
-        "surface": "In those",
-        "lemma": "elleh"
-      },
-      {
         "surface": "days",
         "lemma": "shaneh"
       },
@@ -254,14 +242,6 @@
       {
         "surface": "made war",
         "lemma": "milchamah"
-      },
-      {
-        "surface": "with him",
-        "lemma": "im"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -284,10 +264,6 @@
       {
         "surface": "Let us build",
         "lemma": "banah"
-      },
-      {
-        "surface": "these",
-        "lemma": "elleh"
       },
       {
         "surface": "cities",
@@ -324,10 +300,6 @@
       {
         "surface": "ours",
         "lemma": "paneh"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
       },
       {
         "surface": "we have sought",
@@ -424,10 +396,6 @@
         "lemma": "kol"
       },
       {
-        "surface": "these were",
-        "lemma": "elleh"
-      },
-      {
         "surface": "mighty men",
         "lemma": "gibbor"
       },
@@ -450,10 +418,6 @@
         "lemma": "yatsa"
       },
       {
-        "surface": "against them",
-        "lemma": "el"
-      },
-      {
         "surface": "with an army",
         "lemma": "chayil"
       },
@@ -472,10 +436,6 @@
       {
         "surface": "and they advanced",
         "lemma": "bo"
-      },
-      {
-        "surface": "as far as",
-        "lemma": "ad"
       },
       {
         "surface": "Mareshah",
@@ -526,10 +486,6 @@
         "lemma": "qara"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -544,10 +500,6 @@
       {
         "surface": "there is no one",
         "lemma": "ayin"
-      },
-      {
-        "surface": "besides You",
-        "lemma": "im"
       },
       {
         "surface": "to help",
@@ -574,16 +526,8 @@
         "lemma": "elohim"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "we rely",
         "lemma": "shaan"
-      },
-      {
-        "surface": "on You",
-        "lemma": "al"
       },
       {
         "surface": "and in Your name",
@@ -594,24 +538,12 @@
         "lemma": "bo"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
-        "surface": "this",
-        "lemma": "zeh"
-      },
-      {
         "surface": "multitude",
         "lemma": "hamon"
       },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "are our God",
@@ -628,10 +560,6 @@
       {
         "surface": "prevail",
         "lemma": "atsar"
-      },
-      {
-        "surface": "against You",
-        "lemma": "im"
       }
     ],
     "12": [
@@ -686,10 +614,6 @@
         "lemma": "radaph"
       },
       {
-        "surface": "as far as",
-        "lemma": "ad"
-      },
-      {
         "surface": "Gerar",
         "lemma": "gerar"
       },
@@ -708,10 +632,6 @@
       {
         "surface": "recover",
         "lemma": "michyah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "they were crushed",
@@ -764,10 +684,6 @@
         "lemma": "gerar"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "the terror",
         "lemma": "pachad"
       },
@@ -780,10 +696,6 @@
         "lemma": "hayah"
       },
       {
-        "surface": "upon them",
-        "lemma": "al"
-      },
-      {
         "surface": "They plundered",
         "lemma": "bazaz"
       },
@@ -794,10 +706,6 @@
       {
         "surface": "the cities",
         "lemma": "ir"
-      },
-      {
-        "surface": "since",
-        "lemma": "ki"
       },
       {
         "surface": "there was",
@@ -813,10 +721,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "They also",
-        "lemma": "gam"
-      },
       {
         "surface": "attacked",
         "lemma": "nakhah"
@@ -856,8 +760,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "yehudah",
-    "paneh"
+    "paneh",
+    "kushi"
   ]
 }

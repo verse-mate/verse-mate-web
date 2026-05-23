@@ -78,14 +78,6 @@
         "lemma": "yasah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "are my rock",
         "lemma": "sela"
       },
@@ -126,14 +118,6 @@
     ],
     "5": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "are my hope",
         "lemma": "tiqvah"
       },
@@ -160,16 +144,8 @@
         "lemma": "samakh"
       },
       {
-        "surface": "on You",
-        "lemma": "al"
-      },
-      {
         "surface": "since birth",
         "lemma": "beten"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "pulled me",
@@ -204,10 +180,6 @@
       {
         "surface": "to many",
         "lemma": "rav"
-      },
-      {
-        "surface": "but You",
-        "lemma": "attah"
       },
       {
         "surface": "are my strong",
@@ -276,10 +248,6 @@
     ],
     "10": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "my enemies",
         "lemma": "oyev"
       },
@@ -322,10 +290,6 @@
         "lemma": "taphas"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "there is no",
         "lemma": "ayin"
       },
@@ -342,10 +306,6 @@
       {
         "surface": "far",
         "lemma": "rachaq"
-      },
-      {
-        "surface": "from me",
-        "lemma": "min"
       },
       {
         "surface": "O God",
@@ -404,10 +364,6 @@
     ],
     "14": [
       {
-        "surface": "But I",
-        "lemma": "ani"
-      },
-      {
         "surface": "will always",
         "lemma": "tamid"
       },
@@ -422,10 +378,6 @@
       {
         "surface": "You more",
         "lemma": "yasaph"
-      },
-      {
-        "surface": "and",
-        "lemma": "al"
       },
       {
         "surface": "more",
@@ -452,10 +404,6 @@
       {
         "surface": "all day long",
         "lemma": "kol"
-      },
-      {
-        "surface": "though",
-        "lemma": "ki"
       },
       {
         "surface": "I cannot",
@@ -514,10 +462,6 @@
         "lemma": "naur"
       },
       {
-        "surface": "and to this day",
-        "lemma": "ad"
-      },
-      {
         "surface": "I proclaim",
         "lemma": "nagad"
       },
@@ -527,14 +471,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "Even",
-        "lemma": "gam"
-      },
-      {
-        "surface": "when",
-        "lemma": "ad"
-      },
       {
         "surface": "I am old",
         "lemma": "ziqnah"
@@ -554,10 +490,6 @@
       {
         "surface": "O God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "until",
-        "lemma": "ad"
       },
       {
         "surface": "I proclaim",
@@ -590,20 +522,12 @@
         "lemma": "tsedaqah"
       },
       {
-        "surface": "reaches to",
-        "lemma": "ad"
-      },
-      {
         "surface": "the heavens",
         "lemma": "marom"
       },
       {
         "surface": "O God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "You who",
-        "lemma": "asher"
       },
       {
         "surface": "have done",
@@ -620,17 +544,9 @@
       {
         "surface": "O God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "is like You",
-        "lemma": "kemo"
       }
     ],
     "20": [
-      {
-        "surface": "Though",
-        "lemma": "asher"
-      },
       {
         "surface": "You have shown me",
         "lemma": "raah"
@@ -692,14 +608,6 @@
     ],
     "22": [
       {
-        "surface": "So",
-        "lemma": "gam"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "will praise You",
         "lemma": "yadah"
       },
@@ -734,10 +642,6 @@
     ],
     "23": [
       {
-        "surface": "When",
-        "lemma": "ki"
-      },
-      {
         "surface": "I sing praise",
         "lemma": "zamar"
       },
@@ -752,10 +656,6 @@
       {
         "surface": "along with my soul",
         "lemma": "nephesh"
-      },
-      {
-        "surface": "which",
-        "lemma": "asher"
       },
       {
         "surface": "You have redeemed",
@@ -780,10 +680,6 @@
         "lemma": "kol"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "those who seek",
         "lemma": "baqash"
       },
@@ -796,18 +692,14 @@
         "lemma": "bush"
       },
       {
-        "surface": "and",
-        "lemma": "ki"
-      },
-      {
         "surface": "confounded",
         "lemma": "chapher"
       }
     ]
   },
   "themeLemmas": [
-    "ki",
-    "al",
-    "tsedaqah"
+    "tsedaqah",
+    "kol",
+    "al"
   ]
 }

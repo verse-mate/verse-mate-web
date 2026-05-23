@@ -18,10 +18,6 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "with",
-        "lemma": "el"
-      },
-      {
         "surface": "exultation",
         "lemma": "gil"
       },
@@ -30,16 +26,8 @@
         "lemma": "am"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "you have played the harlot",
         "lemma": "zanah"
-      },
-      {
-        "surface": "against",
-        "lemma": "al"
       },
       {
         "surface": "your God",
@@ -52,10 +40,6 @@
       {
         "surface": "for hire",
         "lemma": "etnan"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "every",
@@ -184,10 +168,6 @@
         "lemma": "tame"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "their bread",
         "lemma": "lechem"
       },
@@ -243,14 +223,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "even if",
-        "lemma": "hinneh"
-      },
       {
         "surface": "they flee",
         "lemma": "halakh"
@@ -354,10 +326,6 @@
         "lemma": "shaga"
       },
       {
-        "surface": "because of",
-        "lemma": "al"
-      },
-      {
         "surface": "the greatness",
         "lemma": "rov"
       },
@@ -384,10 +352,6 @@
         "lemma": "tsaphah"
       },
       {
-        "surface": "along with",
-        "lemma": "im"
-      },
-      {
         "surface": "my God",
         "lemma": "elohim"
       },
@@ -398,10 +362,6 @@
       {
         "surface": "of the fowler",
         "lemma": "yaqosh"
-      },
-      {
-        "surface": "lies on",
-        "lemma": "al"
       },
       {
         "surface": "all",
@@ -496,10 +456,6 @@
         "lemma": "reshit"
       },
       {
-        "surface": "But they",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "went",
         "lemma": "bo"
       },
@@ -564,10 +520,6 @@
     ],
     "12": [
       {
-        "surface": "Even",
-        "lemma": "ki"
-      },
-      {
         "surface": "if",
         "lemma": "im"
       },
@@ -588,14 +540,6 @@
         "lemma": "adam"
       },
       {
-        "surface": "Yes",
-        "lemma": "ki"
-      },
-      {
-        "surface": "woe be",
-        "lemma": "oy"
-      },
-      {
         "surface": "when I turn away",
         "lemma": "sur"
       }
@@ -608,10 +552,6 @@
       {
         "surface": "Ephraim",
         "lemma": "ephrayim"
-      },
-      {
-        "surface": "like",
-        "lemma": "asher"
       },
       {
         "surface": "Tyre",
@@ -694,10 +634,6 @@
         "lemma": "gilgal"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "there",
         "lemma": "sham"
       },
@@ -712,10 +648,6 @@
       {
         "surface": "from My house",
         "lemma": "bet"
-      },
-      {
-        "surface": "for",
-        "lemma": "al"
       },
       {
         "surface": "the wickedness",
@@ -776,14 +708,6 @@
         "lemma": "peri"
       },
       {
-        "surface": "Even",
-        "lemma": "gam"
-      },
-      {
-        "surface": "if",
-        "lemma": "ki"
-      },
-      {
         "surface": "they bear children",
         "lemma": "yalad"
       },
@@ -810,10 +734,6 @@
         "lemma": "maas"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "they have not",
         "lemma": "lo"
       },
@@ -836,8 +756,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "lo",
-    "ephrayim"
+    "ephrayim",
+    "kol"
   ]
 }

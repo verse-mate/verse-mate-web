@@ -48,14 +48,6 @@
     ],
     "2": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "behold",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "the wicked",
         "lemma": "rasah"
       },
@@ -76,20 +68,12 @@
         "lemma": "chets"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the string",
         "lemma": "yeter"
       },
       {
         "surface": "to shoot",
         "lemma": "yara"
-      },
-      {
-        "surface": "from",
-        "lemma": "bemo"
       },
       {
         "surface": "the shadows",
@@ -105,10 +89,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "If",
-        "lemma": "ki"
-      },
       {
         "surface": "the foundations",
         "lemma": "shatah"
@@ -216,10 +196,6 @@
     ],
     "6": [
       {
-        "surface": "On",
-        "lemma": "al"
-      },
-      {
         "surface": "the wicked",
         "lemma": "rasah"
       },
@@ -254,10 +230,6 @@
     ],
     "7": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -290,6 +262,6 @@
   "themeLemmas": [
     "tsaddiq",
     "rasah",
-    "ki"
+    "yashar"
   ]
 }

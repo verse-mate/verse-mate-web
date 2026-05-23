@@ -24,10 +24,6 @@
         "lemma": "an"
       },
       {
-        "surface": "until",
-        "lemma": "ad"
-      },
-      {
         "surface": "you end",
         "lemma": "sum"
       },
@@ -92,10 +88,6 @@
         "lemma": "azav"
       },
       {
-        "surface": "on your account",
-        "lemma": "maan"
-      },
-      {
         "surface": "or the rocks",
         "lemma": "tsur"
       },
@@ -109,10 +101,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "Indeed",
-        "lemma": "gam"
-      },
       {
         "surface": "the lamp",
         "lemma": "or"
@@ -160,10 +148,6 @@
         "lemma": "ner"
       },
       {
-        "surface": "beside him",
-        "lemma": "al"
-      },
-      {
         "surface": "goes out",
         "lemma": "daakh"
       }
@@ -192,10 +176,6 @@
     ],
     "8": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "his own feet",
         "lemma": "regel"
       },
@@ -210,10 +190,6 @@
       {
         "surface": "and he wanders",
         "lemma": "halakh"
-      },
-      {
-        "surface": "into",
-        "lemma": "al"
       },
       {
         "surface": "its mesh",
@@ -258,10 +234,6 @@
       {
         "surface": "and a trap",
         "lemma": "malkodet"
-      },
-      {
-        "surface": "lies in",
-        "lemma": "al"
       },
       {
         "surface": "his path",
@@ -394,10 +366,6 @@
         "lemma": "zarah"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "his dwelling",
         "lemma": "naveh"
       }
@@ -438,10 +406,6 @@
         "lemma": "avad"
       },
       {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
         "surface": "the earth",
         "lemma": "erets"
       },
@@ -452,10 +416,6 @@
       {
         "surface": "name",
         "lemma": "shem"
-      },
-      {
-        "surface": "in",
-        "lemma": "al"
       },
       {
         "surface": "the land",
@@ -470,10 +430,6 @@
       {
         "surface": "from light",
         "lemma": "or"
-      },
-      {
-        "surface": "into",
-        "lemma": "el"
       },
       {
         "surface": "darkness",
@@ -528,10 +484,6 @@
         "lemma": "shamem"
       },
       {
-        "surface": "at",
-        "lemma": "al"
-      },
-      {
         "surface": "his fate",
         "lemma": "yom"
       },
@@ -550,20 +502,12 @@
         "lemma": "akh"
       },
       {
-        "surface": "such",
-        "lemma": "elleh"
-      },
-      {
         "surface": "is the dwelling",
         "lemma": "mishkan"
       },
       {
         "surface": "of the wicked",
         "lemma": "avval"
-      },
-      {
-        "surface": "and",
-        "lemma": "zeh"
       },
       {
         "surface": "the place",
@@ -584,8 +528,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "or",
-    "lo"
+    "lo",
+    "ohel"
   ]
 }

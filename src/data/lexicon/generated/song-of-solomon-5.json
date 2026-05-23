@@ -30,10 +30,6 @@
         "lemma": "mor"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "my spice",
         "lemma": "basam"
       },
@@ -46,10 +42,6 @@
         "lemma": "yaar"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "my honey",
         "lemma": "devash"
       },
@@ -60,10 +52,6 @@
       {
         "surface": "my wine",
         "lemma": "yayin"
-      },
-      {
-        "surface": "with",
-        "lemma": "im"
       },
       {
         "surface": "my milk",
@@ -91,10 +79,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
       {
         "surface": "sleep",
         "lemma": "yashen"
@@ -212,10 +196,6 @@
         "lemma": "yad"
       },
       {
-        "surface": "to",
-        "lemma": "min"
-      },
-      {
         "surface": "the latch",
         "lemma": "chor"
       },
@@ -226,17 +206,9 @@
       {
         "surface": "pounded",
         "lemma": "hamah"
-      },
-      {
-        "surface": "for him",
-        "lemma": "al"
       }
     ],
     "5": [
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
       {
         "surface": "rose up",
         "lemma": "qamay"
@@ -274,10 +246,6 @@
         "lemma": "mor"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the handles",
         "lemma": "kaph"
       },
@@ -287,10 +255,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
       {
         "surface": "opened",
         "lemma": "patach"
@@ -404,10 +368,6 @@
         "lemma": "shava"
       },
       {
-        "surface": "you",
-        "lemma": "et"
-      },
-      {
         "surface": "if",
         "lemma": "im"
       },
@@ -422,10 +382,6 @@
       {
         "surface": "tell",
         "lemma": "nagad"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "am sick",
@@ -540,10 +496,6 @@
         "lemma": "yonah"
       },
       {
-        "surface": "beside",
-        "lemma": "al"
-      },
-      {
         "surface": "the streams",
         "lemma": "aphiq"
       },
@@ -562,10 +514,6 @@
       {
         "surface": "and mounted",
         "lemma": "yashav"
-      },
-      {
-        "surface": "like",
-        "lemma": "al"
       },
       {
         "surface": "jewels",
@@ -674,10 +622,6 @@
         "lemma": "yasad"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "bases",
         "lemma": "eden"
       },
@@ -720,16 +664,8 @@
         "lemma": "machmad"
       },
       {
-        "surface": "This",
-        "lemma": "zeh"
-      },
-      {
         "surface": "is my beloved",
         "lemma": "dod"
-      },
-      {
-        "surface": "and this",
-        "lemma": "zeh"
       },
       {
         "surface": "is my friend",
@@ -747,7 +683,7 @@
   },
   "themeLemmas": [
     "dod",
-    "al",
-    "mor"
+    "mor",
+    "patach"
   ]
 }

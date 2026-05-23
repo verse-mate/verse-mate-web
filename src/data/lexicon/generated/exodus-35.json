@@ -30,20 +30,8 @@
         "lemma": "amar"
       },
       {
-        "surface": "to them",
-        "lemma": "el"
-      },
-      {
-        "surface": "These",
-        "lemma": "elleh"
-      },
-      {
         "surface": "are the things",
         "lemma": "davar"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -172,14 +160,6 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "This",
-        "lemma": "zeh"
-      },
-      {
-        "surface": "is what",
-        "lemma": "asher"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -192,10 +172,6 @@
       {
         "surface": "Take",
         "lemma": "laqach"
-      },
-      {
-        "surface": "from among you",
-        "lemma": "et"
       },
       {
         "surface": "an offering",
@@ -366,10 +342,6 @@
       {
         "surface": "everything",
         "lemma": "kol"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -702,10 +674,6 @@
         "lemma": "kol"
       },
       {
-        "surface": "whose",
-        "lemma": "asher"
-      },
-      {
         "surface": "heart",
         "lemma": "lev"
       },
@@ -718,20 +686,12 @@
         "lemma": "kol"
       },
       {
-        "surface": "whose",
-        "lemma": "asher"
-      },
-      {
         "surface": "spirit",
         "lemma": "ruach"
       },
       {
         "surface": "prompted",
         "lemma": "nadav"
-      },
-      {
-        "surface": "him",
-        "lemma": "et"
       },
       {
         "surface": "came",
@@ -794,10 +754,6 @@
       {
         "surface": "both men",
         "lemma": "enosh"
-      },
-      {
-        "surface": "and",
-        "lemma": "al"
       },
       {
         "surface": "women",
@@ -866,14 +822,6 @@
         "lemma": "kol"
       },
       {
-        "surface": "who",
-        "lemma": "asher"
-      },
-      {
-        "surface": "had",
-        "lemma": "et"
-      },
-      {
         "surface": "blue",
         "lemma": "tekhelet"
       },
@@ -940,10 +888,6 @@
         "lemma": "bo"
       },
       {
-        "surface": "it",
-        "lemma": "et"
-      },
-      {
         "surface": "as a contribution",
         "lemma": "terumah"
       },
@@ -954,10 +898,6 @@
       {
         "surface": "Also, everyone",
         "lemma": "kol"
-      },
-      {
-        "surface": "who",
-        "lemma": "asher"
       },
       {
         "surface": "had",
@@ -1042,10 +982,6 @@
       {
         "surface": "the skilled women",
         "lemma": "ishshah"
-      },
-      {
-        "surface": "whose",
-        "lemma": "asher"
       },
       {
         "surface": "hearts",
@@ -1150,20 +1086,12 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "whose",
-        "lemma": "asher"
-      },
-      {
         "surface": "hearts",
         "lemma": "lev"
       },
       {
         "surface": "prompted",
         "lemma": "nadav"
-      },
-      {
-        "surface": "them",
-        "lemma": "et"
       },
       {
         "surface": "brought",
@@ -1184,10 +1112,6 @@
       {
         "surface": "the work",
         "lemma": "melakhah"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "the LORD",
@@ -1218,10 +1142,6 @@
       {
         "surface": "said",
         "lemma": "amar"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the Israelites",
@@ -1276,10 +1196,6 @@
       {
         "surface": "And He has filled",
         "lemma": "male"
-      },
-      {
-        "surface": "him",
-        "lemma": "et"
       },
       {
         "surface": "with the Spirit",
@@ -1384,10 +1300,6 @@
         "lemma": "natan"
       },
       {
-        "surface": "both him",
-        "lemma": "hu"
-      },
-      {
         "surface": "and Oholiab",
         "lemma": "oholiav"
       },
@@ -1416,10 +1328,6 @@
       {
         "surface": "He has filled",
         "lemma": "male"
-      },
-      {
-        "surface": "them",
-        "lemma": "et"
       },
       {
         "surface": "with skill",
@@ -1486,6 +1394,6 @@
   "themeLemmas": [
     "kol",
     "bo",
-    "asher"
+    "melakhah"
   ]
 }

@@ -20,20 +20,8 @@
         "lemma": "omnam"
       },
       {
-        "surface": "then",
-        "lemma": "ki"
-      },
-      {
-        "surface": "you",
-        "lemma": "attah"
-      },
-      {
         "surface": "are the people",
         "lemma": "am"
-      },
-      {
-        "surface": "with whom",
-        "lemma": "im"
       },
       {
         "surface": "wisdom itself",
@@ -46,16 +34,8 @@
     ],
     "3": [
       {
-        "surface": "But I also",
-        "lemma": "gam"
-      },
-      {
         "surface": "a mind",
         "lemma": "levav"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
       },
       {
         "surface": "am not",
@@ -72,14 +52,6 @@
       {
         "surface": "does not know",
         "lemma": "ayin"
-      },
-      {
-        "surface": "such things",
-        "lemma": "kemo"
-      },
-      {
-        "surface": "as these",
-        "lemma": "elleh"
       }
     ],
     "4": [
@@ -186,10 +158,6 @@
     ],
     "7": [
       {
-        "surface": "But",
-        "lemma": "ulam"
-      },
-      {
         "surface": "ask",
         "lemma": "shaal"
       },
@@ -215,10 +183,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "Or",
-        "lemma": "o"
-      },
       {
         "surface": "speak",
         "lemma": "siach"
@@ -254,20 +218,12 @@
         "lemma": "kol"
       },
       {
-        "surface": "these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "does not",
         "lemma": "lo"
       },
       {
         "surface": "know",
         "lemma": "yada"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "the hand",
@@ -280,10 +236,6 @@
       {
         "surface": "has done",
         "lemma": "asah"
-      },
-      {
-        "surface": "this",
-        "lemma": "zot"
       }
     ],
     "10": [
@@ -378,10 +330,6 @@
         "lemma": "gevurah"
       },
       {
-        "surface": "belong to God",
-        "lemma": "im"
-      },
-      {
         "surface": "counsel",
         "lemma": "etsah"
       },
@@ -391,10 +339,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "What",
-        "lemma": "hen"
-      },
       {
         "surface": "He tears down",
         "lemma": "haras"
@@ -425,10 +369,6 @@
       }
     ],
     "15": [
-      {
-        "surface": "If",
-        "lemma": "hen"
-      },
       {
         "surface": "He holds back",
         "lemma": "atsar"
@@ -462,10 +402,6 @@
       {
         "surface": "and power",
         "lemma": "oz"
-      },
-      {
-        "surface": "belong to Him",
-        "lemma": "im"
       },
       {
         "surface": "The deceived",
@@ -582,10 +518,6 @@
         "lemma": "buz"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "nobles",
         "lemma": "nadiv"
       },
@@ -606,10 +538,6 @@
       {
         "surface": "the deep things",
         "lemma": "amoq"
-      },
-      {
-        "surface": "of",
-        "lemma": "min"
       },
       {
         "surface": "darkness",
@@ -714,6 +642,6 @@
   "themeLemmas": [
     "lo",
     "kol",
-    "im"
+    "chokhmah"
   ]
 }

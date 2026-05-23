@@ -52,16 +52,8 @@
         "lemma": "tsiyyon"
       },
       {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "is exalted",
         "lemma": "rum"
-      },
-      {
-        "surface": "above",
-        "lemma": "al"
       },
       {
         "surface": "all",
@@ -90,10 +82,6 @@
         "lemma": "shem"
       },
       {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "is holy",
         "lemma": "qadosh"
       }
@@ -116,20 +104,12 @@
         "lemma": "mishpat"
       },
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "have established",
         "lemma": "kun"
       },
       {
         "surface": "equity",
         "lemma": "meshar"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "have exercised",
@@ -174,10 +154,6 @@
         "lemma": "regel"
       },
       {
-        "surface": "He",
-        "lemma": "hu"
-      },
-      {
         "surface": "is holy",
         "lemma": "qadosh"
       }
@@ -212,16 +188,8 @@
         "lemma": "qara"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "and He",
-        "lemma": "hu"
       },
       {
         "surface": "answered",
@@ -232,10 +200,6 @@
       {
         "surface": "He spoke",
         "lemma": "davar"
-      },
-      {
-        "surface": "to them",
-        "lemma": "el"
       },
       {
         "surface": "from the pillar",
@@ -272,10 +236,6 @@
         "lemma": "elohim"
       },
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "answered them",
         "lemma": "un"
       },
@@ -294,10 +254,6 @@
       {
         "surface": "yet an avenger",
         "lemma": "naqam"
-      },
-      {
-        "surface": "of",
-        "lemma": "al"
       },
       {
         "surface": "their misdeeds",
@@ -330,10 +286,6 @@
         "lemma": "har"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -348,8 +300,8 @@
     ]
   },
   "themeLemmas": [
-    "hu",
     "rum",
-    "qadosh"
+    "qadosh",
+    "un"
   ]
 }

@@ -22,10 +22,6 @@
         "lemma": "bechurot"
       },
       {
-        "surface": "before",
-        "lemma": "ad"
-      },
-      {
         "surface": "the days",
         "lemma": "yom"
       },
@@ -46,10 +42,6 @@
         "lemma": "naga"
       },
       {
-        "surface": "of which",
-        "lemma": "asher"
-      },
-      {
         "surface": "you will say",
         "lemma": "amar"
       },
@@ -63,10 +55,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "before",
-        "lemma": "ad"
-      },
       {
         "surface": "the light",
         "lemma": "or"
@@ -142,10 +130,6 @@
         "lemma": "batel"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "they are few",
         "lemma": "maat"
       },
@@ -218,10 +202,6 @@
     ],
     "5": [
       {
-        "surface": "when",
-        "lemma": "gam"
-      },
-      {
         "surface": "men fear",
         "lemma": "yare"
       },
@@ -262,20 +242,12 @@
         "lemma": "parar"
       },
       {
-        "surface": "for then",
-        "lemma": "ki"
-      },
-      {
         "surface": "man",
         "lemma": "adam"
       },
       {
         "surface": "goes",
         "lemma": "halakh"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "his eternal",
@@ -299,10 +271,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "Remember Him before",
-        "lemma": "ad"
-      },
       {
         "surface": "the silver",
         "lemma": "keseph"
@@ -336,10 +304,6 @@
         "lemma": "shavar"
       },
       {
-        "surface": "at",
-        "lemma": "al"
-      },
-      {
         "surface": "the spring",
         "lemma": "mabbua"
       },
@@ -350,10 +314,6 @@
       {
         "surface": "is broken",
         "lemma": "ratsats"
-      },
-      {
-        "surface": "at",
-        "lemma": "el"
       },
       {
         "surface": "the well",
@@ -368,10 +328,6 @@
       {
         "surface": "returns",
         "lemma": "shuv"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "the ground",
@@ -390,16 +346,8 @@
         "lemma": "shuv"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "God",
         "lemma": "elohim"
-      },
-      {
-        "surface": "who",
-        "lemma": "asher"
       },
       {
         "surface": "gave it",
@@ -642,24 +590,12 @@
         "lemma": "elohim"
       },
       {
-        "surface": "and",
-        "lemma": "et"
-      },
-      {
         "surface": "keep",
         "lemma": "shamar"
       },
       {
         "surface": "His commandments",
         "lemma": "mitsvah"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
-        "surface": "this is",
-        "lemma": "zeh"
       },
       {
         "surface": "the whole duty",
@@ -671,10 +607,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "God",
         "lemma": "elohim"
@@ -694,10 +626,6 @@
       {
         "surface": "into judgment",
         "lemma": "mishpat"
-      },
-      {
-        "surface": "along with",
-        "lemma": "al"
       },
       {
         "surface": "every hidden",
@@ -727,7 +655,7 @@
   },
   "themeLemmas": [
     "kol",
-    "ki",
-    "shuv"
+    "shuv",
+    "ravah"
   ]
 }

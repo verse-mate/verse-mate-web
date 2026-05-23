@@ -18,10 +18,6 @@
         "lemma": "hayah"
       },
       {
-        "surface": "to me",
-        "lemma": "el"
-      },
-      {
         "surface": "saying",
         "lemma": "amar"
       }
@@ -44,10 +40,6 @@
         "lemma": "paneh"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "Mount",
         "lemma": "har"
       },
@@ -58,10 +50,6 @@
       {
         "surface": "and prophesy",
         "lemma": "nava"
-      },
-      {
-        "surface": "against it",
-        "lemma": "al"
       }
     ],
     "3": [
@@ -86,14 +74,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
-        "surface": "I am against you",
-        "lemma": "el"
-      },
-      {
         "surface": "O Mount",
         "lemma": "har"
       },
@@ -108,10 +88,6 @@
       {
         "surface": "My hand",
         "lemma": "yad"
-      },
-      {
-        "surface": "against you",
-        "lemma": "al"
       },
       {
         "surface": "and make",
@@ -140,10 +116,6 @@
         "lemma": "chorbah"
       },
       {
-        "surface": "and you",
-        "lemma": "attah"
-      },
-      {
         "surface": "will become",
         "lemma": "hayah"
       },
@@ -156,23 +128,11 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       }
     ],
     "5": [
-      {
-        "surface": "Because",
-        "lemma": "yaan"
-      },
       {
         "surface": "you harbored",
         "lemma": "hayah"
@@ -192,10 +152,6 @@
       {
         "surface": "the Israelites",
         "lemma": "ben"
-      },
-      {
-        "surface": "over to",
-        "lemma": "al"
       },
       {
         "surface": "the sword",
@@ -222,10 +178,6 @@
       {
         "surface": "therefore",
         "lemma": "ken"
-      },
-      {
-        "surface": "as surely as I",
-        "lemma": "ani"
       },
       {
         "surface": "live",
@@ -310,10 +262,6 @@
         "lemma": "karat"
       },
       {
-        "surface": "from it",
-        "lemma": "min"
-      },
-      {
         "surface": "those who come",
         "lemma": "shuv"
       },
@@ -394,23 +342,11 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       }
     ],
     "10": [
-      {
-        "surface": "Because",
-        "lemma": "yaan"
-      },
       {
         "surface": "you have said",
         "lemma": "amar"
@@ -458,10 +394,6 @@
         "lemma": "ken"
       },
       {
-        "surface": "as surely as I",
-        "lemma": "ani"
-      },
-      {
         "surface": "live",
         "lemma": "chay"
       },
@@ -502,10 +434,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "when",
-        "lemma": "asher"
-      },
-      {
         "surface": "I judge you",
         "lemma": "shaphat"
       }
@@ -514,14 +442,6 @@
       {
         "surface": "Then you will know",
         "lemma": "yada"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "the LORD",
@@ -542,10 +462,6 @@
       {
         "surface": "you uttered",
         "lemma": "amar"
-      },
-      {
-        "surface": "against",
-        "lemma": "al"
       },
       {
         "surface": "the mountains",
@@ -578,10 +494,6 @@
         "lemma": "gadal"
       },
       {
-        "surface": "against Me",
-        "lemma": "al"
-      },
-      {
         "surface": "with your mouth",
         "lemma": "peh"
       },
@@ -592,14 +504,6 @@
       {
         "surface": "your words",
         "lemma": "davar"
-      },
-      {
-        "surface": "against Me",
-        "lemma": "al"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "heard it Myself",
@@ -702,14 +606,6 @@
         "lemma": "yada"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "am the LORD",
         "lemma": "yehovah"
       }
@@ -717,7 +613,7 @@
   },
   "themeLemmas": [
     "shemamah",
-    "ani",
-    "amar"
+    "amar",
+    "hayah"
   ]
 }

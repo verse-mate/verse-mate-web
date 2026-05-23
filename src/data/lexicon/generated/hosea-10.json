@@ -76,10 +76,6 @@
         "lemma": "asham"
       },
       {
-        "surface": "The LORD",
-        "lemma": "hu"
-      },
-      {
         "surface": "will break down",
         "lemma": "araph"
       },
@@ -98,10 +94,6 @@
     ],
     "3": [
       {
-        "surface": "Surely",
-        "lemma": "ki"
-      },
-      {
         "surface": "now",
         "lemma": "attah"
       },
@@ -116,10 +108,6 @@
       {
         "surface": "king",
         "lemma": "melekh"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "we do not",
@@ -184,10 +172,6 @@
         "lemma": "rosh"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "the furrows",
         "lemma": "telem"
       },
@@ -222,20 +206,12 @@
         "lemma": "betaven"
       },
       {
-        "surface": "Indeed",
-        "lemma": "ki"
-      },
-      {
         "surface": "its people",
         "lemma": "am"
       },
       {
         "surface": "will mourn",
         "lemma": "aval"
-      },
-      {
-        "surface": "over it",
-        "lemma": "al"
       },
       {
         "surface": "with its idolatrous priests",
@@ -246,16 +222,8 @@
         "lemma": "gil"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "its glory",
         "lemma": "kavod"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "it has been taken from them into exile",
@@ -263,10 +231,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "Yes",
-        "lemma": "gam"
-      },
       {
         "surface": "it will be carried",
         "lemma": "yaval"
@@ -328,10 +292,6 @@
       {
         "surface": "like a twig",
         "lemma": "qetseph"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the surface",
@@ -398,10 +358,6 @@
       {
         "surface": "Fall",
         "lemma": "naphal"
-      },
-      {
-        "surface": "on us",
-        "lemma": "al"
       }
     ],
     "9": [
@@ -472,10 +428,6 @@
         "lemma": "asaph"
       },
       {
-        "surface": "against them",
-        "lemma": "al"
-      },
-      {
         "surface": "to put them in bondage",
         "lemma": "asar"
       },
@@ -510,16 +462,8 @@
         "lemma": "dush"
       },
       {
-        "surface": "but I",
-        "lemma": "ani"
-      },
-      {
         "surface": "will place a yoke",
         "lemma": "avar"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "her fair",
@@ -592,10 +536,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "until",
-        "lemma": "ad"
-      },
-      {
         "surface": "He comes",
         "lemma": "bo"
       },
@@ -636,10 +576,6 @@
       {
         "surface": "of lies",
         "lemma": "kachash"
-      },
-      {
-        "surface": "Because",
-        "lemma": "ki"
       },
       {
         "surface": "you have trusted",
@@ -712,10 +648,6 @@
         "lemma": "ratash"
       },
       {
-        "surface": "along with",
-        "lemma": "al"
-      },
-      {
         "surface": "their children",
         "lemma": "ben"
       }
@@ -768,8 +700,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "yisrael",
-    "ki"
+    "mizbeach",
+    "givah"
   ]
 }

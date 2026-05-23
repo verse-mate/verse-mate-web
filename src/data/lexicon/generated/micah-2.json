@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Woe",
-        "lemma": "hoy"
-      },
-      {
         "surface": "to those who devise",
         "lemma": "chashav"
       },
@@ -26,10 +22,6 @@
         "lemma": "ra"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "their beds",
         "lemma": "mishkav"
       },
@@ -44,10 +36,6 @@
       {
         "surface": "they accomplish it",
         "lemma": "asah"
-      },
-      {
-        "surface": "because",
-        "lemma": "ki"
       },
       {
         "surface": "the power",
@@ -126,14 +114,6 @@
         "lemma": "chashav"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
-        "surface": "this",
-        "lemma": "zot"
-      },
-      {
         "surface": "nation",
         "lemma": "mishpachah"
       },
@@ -144,10 +124,6 @@
       {
         "surface": "from",
         "lemma": "sham"
-      },
-      {
-        "surface": "which",
-        "lemma": "asher"
       },
       {
         "surface": "you cannot",
@@ -174,14 +150,6 @@
         "lemma": "romah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "it",
-        "lemma": "hu"
-      },
-      {
         "surface": "will be a time",
         "lemma": "et"
       },
@@ -191,10 +159,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "In that",
-        "lemma": "hu"
-      },
       {
         "surface": "day",
         "lemma": "yom"
@@ -206,10 +170,6 @@
       {
         "surface": "a proverb",
         "lemma": "mashal"
-      },
-      {
-        "surface": "against you",
-        "lemma": "al"
       },
       {
         "surface": "and taunt you",
@@ -316,10 +276,6 @@
         "lemma": "nataph"
       },
       {
-        "surface": "these things",
-        "lemma": "elleh"
-      },
-      {
         "surface": "disgrace",
         "lemma": "kelimmah"
       },
@@ -358,10 +314,6 @@
         "lemma": "qatser"
       },
       {
-        "surface": "Are these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "the things He does",
         "lemma": "maalal"
       },
@@ -376,10 +328,6 @@
       {
         "surface": "bring good",
         "lemma": "yatav"
-      },
-      {
-        "surface": "to him",
-        "lemma": "im"
       },
       {
         "surface": "who walks",
@@ -466,10 +414,6 @@
         "lemma": "hadar"
       },
       {
-        "surface": "from",
-        "lemma": "al"
-      },
-      {
         "surface": "their children",
         "lemma": "olel"
       },
@@ -488,24 +432,12 @@
         "lemma": "halakh"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "this",
-        "lemma": "zot"
-      },
-      {
         "surface": "is not",
         "lemma": "lo"
       },
       {
         "surface": "your place of rest",
         "lemma": "menuchah"
-      },
-      {
-        "surface": "because",
-        "lemma": "avur"
       },
       {
         "surface": "its defilement",
@@ -525,10 +457,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "If",
-        "lemma": "lu"
-      },
       {
         "surface": "a man",
         "lemma": "ish"
@@ -568,10 +496,6 @@
       {
         "surface": "just the preacher",
         "lemma": "nataph"
-      },
-      {
-        "surface": "for this",
-        "lemma": "zeh"
       },
       {
         "surface": "people",
@@ -694,6 +618,6 @@
   "themeLemmas": [
     "lo",
     "nataph",
-    "al"
+    "halakh"
   ]
 }

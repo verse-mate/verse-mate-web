@@ -10,10 +10,6 @@
         "lemma": "natsach"
       },
       {
-        "surface": "According to",
-        "lemma": "al"
-      },
-      {
         "surface": "Gittith",
         "lemma": "gittit"
       },
@@ -54,20 +50,12 @@
         "lemma": "erets"
       },
       {
-        "surface": "You",
-        "lemma": "asher"
-      },
-      {
         "surface": "have set",
         "lemma": "natan"
       },
       {
         "surface": "Your glory",
         "lemma": "hod"
-      },
-      {
-        "surface": "above",
-        "lemma": "al"
       },
       {
         "surface": "the heavens",
@@ -96,10 +84,6 @@
         "lemma": "oz"
       },
       {
-        "surface": "on account of",
-        "lemma": "maan"
-      },
-      {
         "surface": "Your adversaries",
         "lemma": "tsarar"
       },
@@ -117,10 +101,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "When",
-        "lemma": "ki"
-      },
       {
         "surface": "I behold",
         "lemma": "raah"
@@ -146,10 +126,6 @@
         "lemma": "kokhav"
       },
       {
-        "surface": "which",
-        "lemma": "asher"
-      },
-      {
         "surface": "You have set in place",
         "lemma": "kun"
       }
@@ -164,10 +140,6 @@
         "lemma": "enosh"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "You are mindful of him",
         "lemma": "zakhar"
       },
@@ -178,10 +150,6 @@
       {
         "surface": "of man",
         "lemma": "adam"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "You care for him",
@@ -252,10 +220,6 @@
       {
         "surface": "and oxen",
         "lemma": "eleph"
-      },
-      {
-        "surface": "and even",
-        "lemma": "gam"
       },
       {
         "surface": "the beasts",
@@ -330,6 +294,6 @@
   "themeLemmas": [
     "kol",
     "mah",
-    "ki"
+    "yam"
   ]
 }

@@ -10,10 +10,6 @@
         "lemma": "massa"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "Habakkuk",
         "lemma": "chavaqquq"
       },
@@ -27,10 +23,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "How long",
-        "lemma": "ad"
-      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -50,10 +42,6 @@
       {
         "surface": "or cry out",
         "lemma": "zaaq"
-      },
-      {
-        "surface": "to You",
-        "lemma": "el"
       },
       {
         "surface": "Violence",
@@ -120,10 +108,6 @@
     ],
     "4": [
       {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
-      {
         "surface": "the law",
         "lemma": "torah"
       },
@@ -144,10 +128,6 @@
         "lemma": "yatsa"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the wicked",
         "lemma": "rasah"
       },
@@ -158,10 +138,6 @@
       {
         "surface": "the righteous",
         "lemma": "tsaddiq"
-      },
-      {
-        "surface": "so that",
-        "lemma": "al"
       },
       {
         "surface": "justice",
@@ -194,10 +170,6 @@
         "lemma": "tamah"
       },
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "I am doing",
         "lemma": "paal"
       },
@@ -218,23 +190,11 @@
         "lemma": "aman"
       },
       {
-        "surface": "even if",
-        "lemma": "ki"
-      },
-      {
         "surface": "someone told you",
         "lemma": "saphar"
       }
     ],
     "6": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "behold",
-        "lemma": "hen"
-      },
       {
         "surface": "I am raising up",
         "lemma": "qamay"
@@ -282,20 +242,12 @@
     ],
     "7": [
       {
-        "surface": "They",
-        "lemma": "hu"
-      },
-      {
         "surface": "are dreaded",
         "lemma": "ayom"
       },
       {
         "surface": "and feared",
         "lemma": "yare"
-      },
-      {
-        "surface": "from themselves",
-        "lemma": "min"
       },
       {
         "surface": "they derive",
@@ -412,10 +364,6 @@
     ],
     "10": [
       {
-        "surface": "They",
-        "lemma": "hu"
-      },
-      {
         "surface": "scoff at",
         "lemma": "qalas"
       },
@@ -430,10 +378,6 @@
       {
         "surface": "an object of scorn",
         "lemma": "mischaq"
-      },
-      {
-        "surface": "They",
-        "lemma": "hu"
       },
       {
         "surface": "laugh",
@@ -462,10 +406,6 @@
     ],
     "11": [
       {
-        "surface": "Then",
-        "lemma": "az"
-      },
-      {
         "surface": "they sweep by",
         "lemma": "chalaph"
       },
@@ -476,10 +416,6 @@
       {
         "surface": "and pass through",
         "lemma": "avar"
-      },
-      {
-        "surface": "They",
-        "lemma": "zu"
       },
       {
         "surface": "are guilty",
@@ -495,10 +431,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "Are You",
-        "lemma": "attah"
-      },
       {
         "surface": "not",
         "lemma": "lo"
@@ -608,10 +540,6 @@
       {
         "surface": "those more righteous",
         "lemma": "tsaddiq"
-      },
-      {
-        "surface": "than themselves",
-        "lemma": "min"
       }
     ],
     "14": [
@@ -674,19 +602,11 @@
         "lemma": "mikhmeret"
       },
       {
-        "surface": "so",
-        "lemma": "al"
-      },
-      {
         "surface": "he rejoices gladly",
         "lemma": "samach"
       }
     ],
     "16": [
-      {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
       {
         "surface": "he sacrifices",
         "lemma": "zavach"
@@ -702,10 +622,6 @@
       {
         "surface": "to his fishing net",
         "lemma": "mikhmeret"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "his portion",
@@ -725,10 +641,6 @@
       }
     ],
     "17": [
-      {
-        "surface": "Will he",
-        "lemma": "al"
-      },
       {
         "surface": "therefore",
         "lemma": "ken"
@@ -765,7 +677,7 @@
   },
   "themeLemmas": [
     "lo",
-    "ki",
-    "al"
+    "navat",
+    "yatsa"
   ]
 }

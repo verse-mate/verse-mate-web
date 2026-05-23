@@ -106,10 +106,6 @@
     ],
     "3": [
       {
-        "surface": "Even",
-        "lemma": "gam"
-      },
-      {
         "surface": "jackals",
         "lemma": "tan"
       },
@@ -142,10 +138,6 @@
         "lemma": "akhzar"
       },
       {
-        "surface": "like",
-        "lemma": "ki"
-      },
-      {
         "surface": "an ostrich",
         "lemma": "yaen"
       },
@@ -170,10 +162,6 @@
       {
         "surface": "in thirst",
         "lemma": "tsama"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the roof of his mouth",
@@ -222,10 +210,6 @@
         "lemma": "aman"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "crimson",
         "lemma": "tola"
       },
@@ -266,10 +250,6 @@
       {
         "surface": "which was overthrown",
         "lemma": "haphakh"
-      },
-      {
-        "surface": "in",
-        "lemma": "kemo"
       },
       {
         "surface": "an instant",
@@ -364,10 +344,6 @@
         "lemma": "tsaphad"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "their bones",
         "lemma": "etsem"
       },
@@ -408,10 +384,6 @@
       {
         "surface": "of hunger",
         "lemma": "raav"
-      },
-      {
-        "surface": "who",
-        "lemma": "hemmah"
       },
       {
         "surface": "waste away",
@@ -548,10 +520,6 @@
         "lemma": "tevel"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "an enemy",
         "lemma": "tsar"
       },
@@ -674,16 +642,8 @@
         "lemma": "naga"
       },
       {
-        "surface": "So",
-        "lemma": "ki"
-      },
-      {
         "surface": "they fled",
         "lemma": "natsah"
-      },
-      {
-        "surface": "and",
-        "lemma": "gam"
       },
       {
         "surface": "wandered",
@@ -782,10 +742,6 @@
         "lemma": "hevel"
       },
       {
-        "surface": "for",
-        "lemma": "el"
-      },
-      {
         "surface": "help",
         "lemma": "ezrah"
       },
@@ -796,10 +752,6 @@
       {
         "surface": "from our towers",
         "lemma": "tsaphah"
-      },
-      {
-        "surface": "for",
-        "lemma": "el"
       },
       {
         "surface": "a nation",
@@ -882,10 +834,6 @@
         "lemma": "dalaq"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "the mountains",
         "lemma": "har"
       },
@@ -926,10 +874,6 @@
       {
         "surface": "We had said",
         "lemma": "amar"
-      },
-      {
-        "surface": "of him",
-        "lemma": "asher"
       },
       {
         "surface": "Under his shadow",
@@ -980,14 +924,6 @@
       {
         "surface": "will pass",
         "lemma": "avar"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
-      },
-      {
-        "surface": "you as well",
-        "lemma": "gam"
       },
       {
         "surface": "you will get drunk",
@@ -1055,7 +991,7 @@
   },
   "themeLemmas": [
     "lo",
-    "al",
-    "hayah"
+    "hayah",
+    "chuts"
   ]
 }

@@ -14,10 +14,6 @@
         "lemma": "bavel"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "Isaiah",
         "lemma": "yeshayah"
       },
@@ -42,10 +38,6 @@
       {
         "surface": "a banner",
         "lemma": "nes"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "a barren",
@@ -86,20 +78,12 @@
     ],
     "3": [
       {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
         "surface": "have commanded",
         "lemma": "tsavah"
       },
       {
         "surface": "My sanctified ones",
         "lemma": "qadash"
-      },
-      {
-        "surface": "I have even",
-        "lemma": "gam"
       },
       {
         "surface": "summoned",
@@ -240,10 +224,6 @@
         "lemma": "yalal"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the Day",
         "lemma": "yom"
       },
@@ -269,10 +249,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
       {
         "surface": "all",
         "lemma": "kol"
@@ -328,10 +304,6 @@
         "lemma": "yalad"
       },
       {
-        "surface": "They will look at",
-        "lemma": "el"
-      },
-      {
         "surface": "one",
         "lemma": "ish"
       },
@@ -353,10 +325,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "Behold",
-        "lemma": "hinneh"
-      },
       {
         "surface": "the Day",
         "lemma": "yom"
@@ -400,17 +368,9 @@
       {
         "surface": "the sinners",
         "lemma": "chatta"
-      },
-      {
-        "surface": "within it",
-        "lemma": "min"
       }
     ],
     "10": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the stars",
         "lemma": "kokhav"
@@ -478,10 +438,6 @@
         "lemma": "ra"
       },
       {
-        "surface": "and",
-        "lemma": "al"
-      },
-      {
         "surface": "the wicked",
         "lemma": "rasah"
       },
@@ -541,10 +497,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "Therefore",
-        "lemma": "al"
-      },
       {
         "surface": "I will make the heavens",
         "lemma": "shamayim"
@@ -616,10 +568,6 @@
         "lemma": "panah"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "his own people",
         "lemma": "am"
       },
@@ -630,10 +578,6 @@
       {
         "surface": "will flee",
         "lemma": "nus"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "his native land",
@@ -702,24 +646,12 @@
     ],
     "17": [
       {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
-      {
         "surface": "I will stir up",
         "lemma": "ur"
       },
       {
-        "surface": "against them",
-        "lemma": "al"
-      },
-      {
         "surface": "the Medes",
         "lemma": "maday"
-      },
-      {
-        "surface": "who",
-        "lemma": "asher"
       },
       {
         "surface": "have no",
@@ -782,10 +714,6 @@
       {
         "surface": "look with pity",
         "lemma": "chus"
-      },
-      {
-        "surface": "on",
-        "lemma": "al"
       },
       {
         "surface": "the children",
@@ -854,10 +782,6 @@
       {
         "surface": "settled",
         "lemma": "shakhan"
-      },
-      {
-        "surface": "from",
-        "lemma": "ad"
       },
       {
         "surface": "generation",
@@ -999,7 +923,7 @@
   },
   "themeLemmas": [
     "lo",
-    "al",
-    "kol"
+    "kol",
+    "sham"
   ]
 }

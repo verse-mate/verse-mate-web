@@ -38,10 +38,6 @@
         "lemma": "shachar"
       },
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "soul",
         "lemma": "nephesh"
       },
@@ -106,10 +102,6 @@
     ],
     "3": [
       {
-        "surface": "Because",
-        "lemma": "ki"
-      },
-      {
         "surface": "Your loving devotion",
         "lemma": "chesed"
       },
@@ -166,10 +158,6 @@
         "lemma": "sava"
       },
       {
-        "surface": "as",
-        "lemma": "kemo"
-      },
-      {
         "surface": "with the richest",
         "lemma": "chelev"
       },
@@ -204,10 +192,6 @@
         "lemma": "zakhar"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "my bed",
         "lemma": "yatsua"
       },
@@ -221,10 +205,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "You are",
         "lemma": "hayah"
@@ -270,10 +250,6 @@
     ],
     "9": [
       {
-        "surface": "But those",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "who seek",
         "lemma": "baqash"
       },
@@ -302,10 +278,6 @@
       {
         "surface": "They will fall",
         "lemma": "nagar"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "the power",
@@ -354,10 +326,6 @@
         "lemma": "halal"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "the mouths",
         "lemma": "peh"
       },
@@ -373,7 +341,7 @@
   },
   "themeLemmas": [
     "nephesh",
-    "ki",
-    "hayah"
+    "hayah",
+    "saphah"
   ]
 }

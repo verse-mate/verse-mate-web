@@ -40,10 +40,6 @@
     ],
     "2": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "they wither",
         "lemma": "malal"
       },
@@ -108,10 +104,6 @@
         "lemma": "anag"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -138,24 +130,12 @@
         "lemma": "derekh"
       },
       {
-        "surface": "to",
-        "lemma": "al"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
       {
         "surface": "trust",
         "lemma": "batach"
-      },
-      {
-        "surface": "in Him",
-        "lemma": "al"
-      },
-      {
-        "surface": "and He",
-        "lemma": "hu"
       },
       {
         "surface": "will do it",
@@ -262,10 +242,6 @@
     ],
     "9": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the evildoers",
         "lemma": "raa"
       },
@@ -308,10 +284,6 @@
         "lemma": "bin"
       },
       {
-        "surface": "for them",
-        "lemma": "al"
-      },
-      {
         "surface": "vvv",
         "lemma": "maqom"
       },
@@ -336,10 +308,6 @@
       {
         "surface": "and delight",
         "lemma": "anag"
-      },
-      {
-        "surface": "in",
-        "lemma": "al"
       },
       {
         "surface": "abundant",
@@ -370,10 +338,6 @@
       {
         "surface": "their teeth",
         "lemma": "shen"
-      },
-      {
-        "surface": "at them",
-        "lemma": "al"
       }
     ],
     "13": [
@@ -388,10 +352,6 @@
       {
         "surface": "seeing",
         "lemma": "raah"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "their day",
@@ -498,10 +458,6 @@
     ],
     "17": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the arms",
         "lemma": "zeroa"
       },
@@ -584,10 +540,6 @@
     ],
     "20": [
       {
-        "surface": "But",
-        "lemma": "ki"
-      },
-      {
         "surface": "the wicked",
         "lemma": "rasah"
       },
@@ -656,10 +608,6 @@
     ],
     "22": [
       {
-        "surface": "Surely",
-        "lemma": "ki"
-      },
-      {
         "surface": "those He blesses",
         "lemma": "barakh"
       },
@@ -708,10 +656,6 @@
     ],
     "24": [
       {
-        "surface": "Though",
-        "lemma": "ki"
-      },
-      {
         "surface": "he falls",
         "lemma": "naphal"
       },
@@ -722,10 +666,6 @@
       {
         "surface": "be overwhelmed",
         "lemma": "tul"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "the LORD",
@@ -748,10 +688,6 @@
       {
         "surface": "young",
         "lemma": "naar"
-      },
-      {
-        "surface": "and now",
-        "lemma": "gam"
       },
       {
         "surface": "am old",
@@ -840,10 +776,6 @@
     ],
     "28": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -904,10 +836,6 @@
       {
         "surface": "and dwell",
         "lemma": "shakhan"
-      },
-      {
-        "surface": "in it",
-        "lemma": "al"
       },
       {
         "surface": "forever",
@@ -1028,10 +956,6 @@
         "lemma": "qavah"
       },
       {
-        "surface": "for",
-        "lemma": "el"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -1134,10 +1058,6 @@
         "lemma": "yashar"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "posterity awaits",
         "lemma": "acharit"
       },
@@ -1228,10 +1148,6 @@
         "lemma": "rasah"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "they take refuge",
         "lemma": "chasah"
       }
@@ -1239,7 +1155,7 @@
   },
   "themeLemmas": [
     "rasah",
-    "ki",
-    "al"
+    "tsaddiq",
+    "lo"
   ]
 }

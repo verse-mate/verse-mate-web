@@ -36,10 +36,6 @@
     ],
     "2": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "I give",
         "lemma": "natan"
       },
@@ -65,10 +61,6 @@
       }
     ],
     "3": [
-      {
-        "surface": "When",
-        "lemma": "ki"
-      },
       {
         "surface": "I was",
         "lemma": "hayah"
@@ -232,10 +224,6 @@
         "lemma": "rum"
       },
       {
-        "surface": "if",
-        "lemma": "ki"
-      },
-      {
         "surface": "you embrace her",
         "lemma": "chavaq"
       },
@@ -386,14 +374,6 @@
         "lemma": "natsar"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "it",
-        "lemma": "hu"
-      },
-      {
         "surface": "is your life",
         "lemma": "chay"
       }
@@ -450,19 +430,11 @@
         "lemma": "satah"
       },
       {
-        "surface": "from it",
-        "lemma": "al"
-      },
-      {
         "surface": "and pass on by",
         "lemma": "avar"
       }
     ],
     "16": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "they cannot",
         "lemma": "lo"
@@ -497,10 +469,6 @@
       }
     ],
     "17": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "they eat",
         "lemma": "lacham"
@@ -546,10 +514,6 @@
       {
         "surface": "shining brighter",
         "lemma": "halakh"
-      },
-      {
-        "surface": "and brighter until",
-        "lemma": "ad"
       },
       {
         "surface": "midday",
@@ -640,14 +604,6 @@
     ],
     "22": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
-        "surface": "they",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "are life",
         "lemma": "chay"
       },
@@ -686,14 +642,6 @@
         "lemma": "mishmar"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "from it",
-        "lemma": "min"
-      },
-      {
         "surface": "flow",
         "lemma": "totsaah"
       },
@@ -706,10 +654,6 @@
       {
         "surface": "Put",
         "lemma": "sur"
-      },
-      {
-        "surface": "away",
-        "lemma": "min"
       },
       {
         "surface": "deception",
@@ -817,7 +761,7 @@
   },
   "themeLemmas": [
     "al",
-    "ki",
-    "qanah"
+    "qanah",
+    "lo"
   ]
 }

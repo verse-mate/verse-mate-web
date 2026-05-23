@@ -50,10 +50,6 @@
         "lemma": "satar"
       },
       {
-        "surface": "among us",
-        "lemma": "im"
-      },
-      {
         "surface": "Save me",
         "lemma": "yasah"
       },
@@ -102,20 +98,12 @@
     ],
     "3": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "strangers",
         "lemma": "zur"
       },
       {
         "surface": "rise up",
         "lemma": "qamay"
-      },
-      {
-        "surface": "against me",
-        "lemma": "al"
       },
       {
         "surface": "and ruthless",
@@ -147,10 +135,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "Surely",
-        "lemma": "hinneh"
-      },
       {
         "surface": "God",
         "lemma": "elohim"
@@ -216,19 +200,11 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "it is good",
         "lemma": "tov"
       }
     ],
     "7": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "He has delivered me",
         "lemma": "natsal"
@@ -256,8 +232,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "shem",
-    "nephesh"
+    "nephesh",
+    "lo"
   ]
 }

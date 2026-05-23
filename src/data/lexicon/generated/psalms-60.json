@@ -10,10 +10,6 @@
         "lemma": "natsach"
       },
       {
-        "surface": "To the tune of",
-        "lemma": "al"
-      },
-      {
         "surface": "The Lily",
         "lemma": "shushan"
       },
@@ -124,10 +120,6 @@
         "lemma": "shever"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "it is quaking",
         "lemma": "mot"
       }
@@ -196,10 +188,6 @@
       {
         "surface": "with Your right hand",
         "lemma": "yamin"
-      },
-      {
-        "surface": "that",
-        "lemma": "maan"
       },
       {
         "surface": "Your beloved",
@@ -284,10 +272,6 @@
         "lemma": "sir"
       },
       {
-        "surface": "upon",
-        "lemma": "al"
-      },
-      {
         "surface": "Edom",
         "lemma": "edom"
       },
@@ -298,10 +282,6 @@
       {
         "surface": "My sandal",
         "lemma": "naal"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "Philistia",
@@ -336,10 +316,6 @@
       {
         "surface": "will lead me",
         "lemma": "nachah"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "Edom",
@@ -416,10 +392,6 @@
         "lemma": "chayil"
       },
       {
-        "surface": "and He",
-        "lemma": "hu"
-      },
-      {
         "surface": "will trample",
         "lemma": "bus"
       },
@@ -431,7 +403,7 @@
   },
   "themeLemmas": [
     "edom",
-    "al",
-    "zanach"
+    "zanach",
+    "tsar"
   ]
 }

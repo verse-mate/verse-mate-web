@@ -86,10 +86,6 @@
     ],
     "3": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "You welcomed him",
         "lemma": "qadam"
       },
@@ -166,10 +162,6 @@
         "lemma": "shavah"
       },
       {
-        "surface": "on him",
-        "lemma": "al"
-      },
-      {
         "surface": "splendor",
         "lemma": "hod"
       },
@@ -179,10 +171,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "You grant him",
         "lemma": "shit"
@@ -200,19 +188,11 @@
         "lemma": "simchah"
       },
       {
-        "surface": "in",
-        "lemma": "et"
-      },
-      {
         "surface": "Your presence",
         "lemma": "paneh"
       }
     ],
     "7": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the king",
         "lemma": "melekh"
@@ -342,16 +322,8 @@
     ],
     "11": [
       {
-        "surface": "Though",
-        "lemma": "ki"
-      },
-      {
         "surface": "they intend",
         "lemma": "natah"
-      },
-      {
-        "surface": "You",
-        "lemma": "al"
       },
       {
         "surface": "harm",
@@ -376,10 +348,6 @@
     ],
     "12": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "You will put them to flight",
         "lemma": "shit"
       },
@@ -390,10 +358,6 @@
       {
         "surface": "is trained",
         "lemma": "kun"
-      },
-      {
-        "surface": "upon",
-        "lemma": "al"
       },
       {
         "surface": "them",
@@ -428,8 +392,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "shit",
-    "paneh"
+    "paneh",
+    "bal"
   ]
 }

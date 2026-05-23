@@ -34,16 +34,8 @@
         "lemma": "keritut"
       },
       {
-        "surface": "with which",
-        "lemma": "asher"
-      },
-      {
         "surface": "I sent her away",
         "lemma": "shalach"
-      },
-      {
-        "surface": "Or",
-        "lemma": "o"
       },
       {
         "surface": "to which",
@@ -56,10 +48,6 @@
       {
         "surface": "did I sell you",
         "lemma": "makhar"
-      },
-      {
-        "surface": "Look",
-        "lemma": "hen"
       },
       {
         "surface": "you were sold",
@@ -138,10 +126,6 @@
       {
         "surface": "to deliver you",
         "lemma": "natsal"
-      },
-      {
-        "surface": "Behold",
-        "lemma": "hen"
       },
       {
         "surface": "My rebuke",
@@ -302,10 +286,6 @@
         "lemma": "ozen"
       },
       {
-        "surface": "and I",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "have not been",
         "lemma": "lo"
       },
@@ -390,10 +370,6 @@
         "lemma": "kalam"
       },
       {
-        "surface": "therefore",
-        "lemma": "al"
-      },
-      {
         "surface": "I have set",
         "lemma": "sum"
       },
@@ -408,10 +384,6 @@
       {
         "surface": "and I know",
         "lemma": "yada"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "I will not",
@@ -440,10 +412,6 @@
         "lemma": "riv"
       },
       {
-        "surface": "with Me",
-        "lemma": "et"
-      },
-      {
         "surface": "Let us confront",
         "lemma": "amad"
       },
@@ -462,17 +430,9 @@
       {
         "surface": "Let him approach",
         "lemma": "nagash"
-      },
-      {
-        "surface": "Me",
-        "lemma": "el"
       }
     ],
     "9": [
-      {
-        "surface": "Surely",
-        "lemma": "hen"
-      },
       {
         "surface": "the Lord",
         "lemma": "adonai"
@@ -490,16 +450,8 @@
         "lemma": "mi"
       },
       {
-        "surface": "is there",
-        "lemma": "hu"
-      },
-      {
         "surface": "to condemn Me",
         "lemma": "rasah"
-      },
-      {
-        "surface": "See",
-        "lemma": "hen"
       },
       {
         "surface": "they will all",
@@ -548,10 +500,6 @@
         "lemma": "eved"
       },
       {
-        "surface": "Who",
-        "lemma": "asher"
-      },
-      {
         "surface": "among you walks",
         "lemma": "halakh"
       },
@@ -589,10 +537,6 @@
       }
     ],
     "11": [
-      {
-        "surface": "Behold",
-        "lemma": "hen"
-      },
       {
         "surface": "all",
         "lemma": "kol"
@@ -634,10 +578,6 @@
         "lemma": "baar"
       },
       {
-        "surface": "This is what",
-        "lemma": "zot"
-      },
-      {
         "surface": "will receive",
         "lemma": "hayah"
       },
@@ -658,6 +598,6 @@
   "themeLemmas": [
     "mi",
     "lo",
-    "hen"
+    "yehovih"
   ]
 }

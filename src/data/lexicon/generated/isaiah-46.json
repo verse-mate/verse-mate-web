@@ -98,10 +98,6 @@
         "lemma": "shama"
       },
       {
-        "surface": "to Me",
-        "lemma": "el"
-      },
-      {
         "surface": "O house",
         "lemma": "bet"
       },
@@ -130,10 +126,6 @@
         "lemma": "amas"
       },
       {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
         "surface": "the womb",
         "lemma": "beten"
       },
@@ -142,66 +134,30 @@
         "lemma": "nasa"
       },
       {
-        "surface": "since",
-        "lemma": "min"
-      },
-      {
         "surface": "birth",
         "lemma": "racham"
       }
     ],
     "4": [
       {
-        "surface": "Even to",
-        "lemma": "ad"
-      },
-      {
         "surface": "your old age",
         "lemma": "ziqnah"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
-      },
-      {
-        "surface": "will be the same",
-        "lemma": "hu"
-      },
-      {
-        "surface": "and I",
-        "lemma": "ani"
       },
       {
         "surface": "will bear you up",
         "lemma": "saval"
       },
       {
-        "surface": "when",
-        "lemma": "ad"
-      },
-      {
         "surface": "you turn gray",
         "lemma": "sevah"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "have made you",
         "lemma": "asah"
       },
       {
-        "surface": "and I",
-        "lemma": "ani"
-      },
-      {
         "surface": "will carry you",
         "lemma": "nasa"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "will sustain you",
@@ -280,10 +236,6 @@
         "lemma": "sagad"
       },
       {
-        "surface": "and",
-        "lemma": "aph"
-      },
-      {
         "surface": "worship",
         "lemma": "shachah"
       }
@@ -292,10 +244,6 @@
       {
         "surface": "They lift",
         "lemma": "nasa"
-      },
-      {
-        "surface": "it to",
-        "lemma": "al"
       },
       {
         "surface": "their shoulder",
@@ -326,20 +274,12 @@
         "lemma": "mush"
       },
       {
-        "surface": "from",
-        "lemma": "aph"
-      },
-      {
         "surface": "that spot",
         "lemma": "maqom"
       },
       {
         "surface": "They cry out",
         "lemma": "tsaaq"
-      },
-      {
-        "surface": "to it",
-        "lemma": "el"
       },
       {
         "surface": "but it does not",
@@ -368,20 +308,12 @@
         "lemma": "zakhar"
       },
       {
-        "surface": "this",
-        "lemma": "zot"
-      },
-      {
         "surface": "and be brave",
         "lemma": "ish"
       },
       {
         "surface": "take",
         "lemma": "shuv"
-      },
-      {
-        "surface": "it to",
-        "lemma": "al"
       },
       {
         "surface": "heart",
@@ -406,14 +338,6 @@
         "lemma": "olam"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "am God",
         "lemma": "el"
       },
@@ -432,10 +356,6 @@
       {
         "surface": "and there is none",
         "lemma": "ephes"
-      },
-      {
-        "surface": "like Me",
-        "lemma": "kemo"
       }
     ],
     "10": [
@@ -454,10 +374,6 @@
       {
         "surface": "and from ancient times",
         "lemma": "qedem"
-      },
-      {
-        "surface": "what",
-        "lemma": "asher"
       },
       {
         "surface": "is still",
@@ -522,16 +438,8 @@
         "lemma": "erets"
       },
       {
-        "surface": "Truly",
-        "lemma": "aph"
-      },
-      {
         "surface": "I have spoken",
         "lemma": "davar"
-      },
-      {
-        "surface": "and truly",
-        "lemma": "aph"
       },
       {
         "surface": "I will bring it to pass",
@@ -542,10 +450,6 @@
         "lemma": "yatsar"
       },
       {
-        "surface": "and I will surely",
-        "lemma": "aph"
-      },
-      {
         "surface": "do it",
         "lemma": "asah"
       }
@@ -554,10 +458,6 @@
       {
         "surface": "Listen",
         "lemma": "shama"
-      },
-      {
-        "surface": "to Me",
-        "lemma": "el"
       },
       {
         "surface": "you stubborn",
@@ -630,6 +530,6 @@
   "themeLemmas": [
     "lo",
     "asah",
-    "aph"
+    "saval"
   ]
 }

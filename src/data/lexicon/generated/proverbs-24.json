@@ -32,10 +32,6 @@
     ],
     "2": [
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "their hearts",
         "lemma": "lev"
       },
@@ -143,10 +139,6 @@
       }
     ],
     "6": [
-      {
-        "surface": "Only",
-        "lemma": "ki"
-      },
       {
         "surface": "with sound guidance",
         "lemma": "tachbulah"
@@ -296,16 +288,8 @@
     ],
     "12": [
       {
-        "surface": "If",
-        "lemma": "ki"
-      },
-      {
         "surface": "you say",
         "lemma": "amar"
-      },
-      {
-        "surface": "Behold",
-        "lemma": "hen"
       },
       {
         "surface": "we did not",
@@ -316,16 +300,8 @@
         "lemma": "yada"
       },
       {
-        "surface": "about this",
-        "lemma": "zeh"
-      },
-      {
         "surface": "does not",
         "lemma": "lo"
-      },
-      {
-        "surface": "He",
-        "lemma": "hu"
       },
       {
         "surface": "who weighs",
@@ -338,10 +314,6 @@
       {
         "surface": "consider it",
         "lemma": "bin"
-      },
-      {
-        "surface": "Does not the One",
-        "lemma": "hu"
       },
       {
         "surface": "who guards",
@@ -382,10 +354,6 @@
         "lemma": "ben"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "it is good",
         "lemma": "tov"
       },
@@ -396,10 +364,6 @@
       {
         "surface": "is sweet",
         "lemma": "matoq"
-      },
-      {
-        "surface": "to your",
-        "lemma": "al"
       },
       {
         "surface": "taste",
@@ -488,10 +452,6 @@
     ],
     "16": [
       {
-        "surface": "For though",
-        "lemma": "ki"
-      },
-      {
         "surface": "a righteous man",
         "lemma": "tsaddiq"
       },
@@ -556,10 +516,6 @@
     ],
     "18": [
       {
-        "surface": "or",
-        "lemma": "pen"
-      },
-      {
         "surface": "the LORD",
         "lemma": "yehovah"
       },
@@ -578,10 +534,6 @@
       {
         "surface": "away",
         "lemma": "shuv"
-      },
-      {
-        "surface": "from him",
-        "lemma": "al"
       }
     ],
     "19": [
@@ -611,10 +563,6 @@
       }
     ],
     "20": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the evil man",
         "lemma": "ra"
@@ -670,19 +618,11 @@
         "lemma": "arav"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "the rebellious",
         "lemma": "shanah"
       }
     ],
     "22": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "they will bring",
         "lemma": "qamay"
@@ -714,14 +654,6 @@
     ],
     "23": [
       {
-        "surface": "These",
-        "lemma": "elleh"
-      },
-      {
-        "surface": "also",
-        "lemma": "gam"
-      },
-      {
         "surface": "are sayings of the wise",
         "lemma": "chakham"
       },
@@ -750,10 +682,6 @@
       {
         "surface": "the guilty",
         "lemma": "rasah"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
       },
       {
         "surface": "are innocent",
@@ -796,10 +724,6 @@
       {
         "surface": "will come",
         "lemma": "bo"
-      },
-      {
-        "surface": "upon them",
-        "lemma": "al"
       }
     ],
     "26": [
@@ -898,10 +822,6 @@
         "lemma": "asah"
       },
       {
-        "surface": "as",
-        "lemma": "asher"
-      },
-      {
         "surface": "he has done",
         "lemma": "asah"
       },
@@ -924,20 +844,12 @@
         "lemma": "avar"
       },
       {
-        "surface": "past",
-        "lemma": "al"
-      },
-      {
         "surface": "the field",
         "lemma": "saday"
       },
       {
         "surface": "of a slacker",
         "lemma": "ish"
-      },
-      {
-        "surface": "and by",
-        "lemma": "al"
       },
       {
         "surface": "the vineyard",
@@ -995,10 +907,6 @@
       }
     ],
     "32": [
-      {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
       {
         "surface": "observed",
         "lemma": "chazah"
@@ -1083,7 +991,7 @@
   },
   "themeLemmas": [
     "al",
-    "ki",
-    "rasah"
+    "rasah",
+    "lo"
   ]
 }

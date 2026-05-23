@@ -60,20 +60,12 @@
     ],
     "2": [
       {
-        "surface": "When",
-        "lemma": "ki"
-      },
-      {
         "surface": "I choose",
         "lemma": "laqach"
       },
       {
         "surface": "a time",
         "lemma": "moed"
-      },
-      {
-        "surface": "I",
-        "lemma": "ani"
       },
       {
         "surface": "will judge",
@@ -100,10 +92,6 @@
       {
         "surface": "quake",
         "lemma": "mug"
-      },
-      {
-        "surface": "it is I",
-        "lemma": "anokhi"
       },
       {
         "surface": "who bear up",
@@ -184,10 +172,6 @@
     ],
     "6": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "exaltation",
         "lemma": "rum"
       },
@@ -214,10 +198,6 @@
     ],
     "7": [
       {
-        "surface": "but",
-        "lemma": "ki"
-      },
-      {
         "surface": "it is God",
         "lemma": "elohim"
       },
@@ -230,23 +210,11 @@
         "lemma": "shaphel"
       },
       {
-        "surface": "one",
-        "lemma": "zeh"
-      },
-      {
         "surface": "and exalts",
         "lemma": "rum"
-      },
-      {
-        "surface": "another",
-        "lemma": "zeh"
       }
     ],
     "8": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "a cup",
         "lemma": "kos"
@@ -280,10 +248,6 @@
         "lemma": "nagar"
       },
       {
-        "surface": "from His cup",
-        "lemma": "zeh"
-      },
-      {
         "surface": "and",
         "lemma": "akh"
       },
@@ -309,10 +273,6 @@
       }
     ],
     "9": [
-      {
-        "surface": "But I",
-        "lemma": "ani"
-      },
       {
         "surface": "will proclaim Him",
         "lemma": "nagad"
@@ -368,6 +328,6 @@
   "themeLemmas": [
     "rum",
     "qeren",
-    "ki"
+    "rasah"
   ]
 }

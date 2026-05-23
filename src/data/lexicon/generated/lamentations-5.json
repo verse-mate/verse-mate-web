@@ -106,10 +106,6 @@
     ],
     "5": [
       {
-        "surface": "We are closely",
-        "lemma": "al"
-      },
-      {
         "surface": "pursued",
         "lemma": "radaph"
       },
@@ -160,10 +156,6 @@
       {
         "surface": "and are no more",
         "lemma": "ayin"
-      },
-      {
-        "surface": "but we",
-        "lemma": "anachnu"
       },
       {
         "surface": "bear",
@@ -388,27 +380,11 @@
         "lemma": "rosh"
       },
       {
-        "surface": "Woe",
-        "lemma": "oy"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "we have sinned",
         "lemma": "chata"
       }
     ],
     "17": [
-      {
-        "surface": "Because of",
-        "lemma": "al"
-      },
-      {
-        "surface": "this",
-        "lemma": "zeh"
-      },
       {
         "surface": "our hearts",
         "lemma": "lev"
@@ -422,14 +398,6 @@
         "lemma": "daveh"
       },
       {
-        "surface": "because of",
-        "lemma": "al"
-      },
-      {
-        "surface": "these",
-        "lemma": "elleh"
-      },
-      {
         "surface": "our eyes",
         "lemma": "ayin"
       },
@@ -439,10 +407,6 @@
       }
     ],
     "18": [
-      {
-        "surface": "because of",
-        "lemma": "al"
-      },
       {
         "surface": "Mount",
         "lemma": "har"
@@ -465,10 +429,6 @@
       }
     ],
     "19": [
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
       {
         "surface": "O LORD",
         "lemma": "yehovah"
@@ -522,10 +482,6 @@
         "lemma": "shuv"
       },
       {
-        "surface": "to Yourself",
-        "lemma": "el"
-      },
-      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -548,30 +504,18 @@
     ],
     "22": [
       {
-        "surface": "unless",
-        "lemma": "ki"
-      },
-      {
         "surface": "You have utterly rejected us",
         "lemma": "maas"
       },
       {
         "surface": "and remain angry",
         "lemma": "qatsaph"
-      },
-      {
-        "surface": "with us",
-        "lemma": "al"
-      },
-      {
-        "surface": "beyond measure",
-        "lemma": "ad"
       }
     ]
   },
   "themeLemmas": [
-    "al",
     "paneh",
-    "hayah"
+    "hayah",
+    "zaqen"
   ]
 }

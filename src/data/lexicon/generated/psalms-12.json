@@ -10,10 +10,6 @@
         "lemma": "natsach"
       },
       {
-        "surface": "According to",
-        "lemma": "al"
-      },
-      {
         "surface": "Sheminith",
         "lemma": "sheminit"
       },
@@ -32,10 +28,6 @@
       {
         "surface": "O LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "the godly",
@@ -66,10 +58,6 @@
       {
         "surface": "They lie",
         "lemma": "shav"
-      },
-      {
-        "surface": "to",
-        "lemma": "et"
       },
       {
         "surface": "one",
@@ -128,10 +116,6 @@
     ],
     "4": [
       {
-        "surface": "They",
-        "lemma": "asher"
-      },
-      {
         "surface": "say",
         "lemma": "amar"
       },
@@ -142,10 +126,6 @@
       {
         "surface": "we will prevail",
         "lemma": "gavar"
-      },
-      {
-        "surface": "We own",
-        "lemma": "et"
       },
       {
         "surface": "our lips",
@@ -246,10 +226,6 @@
     ],
     "7": [
       {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -260,14 +236,6 @@
       {
         "surface": "You will forever guard us",
         "lemma": "natsar"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
-        "surface": "this",
-        "lemma": "zu"
       },
       {
         "surface": "generation",
@@ -308,6 +276,6 @@
   "themeLemmas": [
     "saphah",
     "lashon",
-    "et"
+    "chelqah"
   ]
 }

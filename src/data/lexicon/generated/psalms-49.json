@@ -26,10 +26,6 @@
         "lemma": "shama"
       },
       {
-        "surface": "this",
-        "lemma": "zot"
-      },
-      {
         "surface": "all you peoples",
         "lemma": "kol"
       },
@@ -51,10 +47,6 @@
       }
     ],
     "2": [
-      {
-        "surface": "both",
-        "lemma": "gam"
-      },
       {
         "surface": "low and high",
         "lemma": "ben"
@@ -160,10 +152,6 @@
         "lemma": "batach"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "their wealth",
         "lemma": "chayil"
       },
@@ -260,10 +248,6 @@
     ],
     "10": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "it is clear",
         "lemma": "raah"
       },
@@ -326,10 +310,6 @@
         "lemma": "dor"
       },
       {
-        "surface": "even though",
-        "lemma": "al"
-      },
-      {
         "surface": "their lands",
         "lemma": "adamah"
       },
@@ -369,10 +349,6 @@
       }
     ],
     "13": [
-      {
-        "surface": "This",
-        "lemma": "zeh"
-      },
       {
         "surface": "is the fate",
         "lemma": "derekh"
@@ -474,10 +450,6 @@
         "lemma": "sheol"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "He will surely take me to Himself",
         "lemma": "laqach"
       },
@@ -496,20 +468,12 @@
         "lemma": "yare"
       },
       {
-        "surface": "when",
-        "lemma": "ki"
-      },
-      {
         "surface": "a man",
         "lemma": "ish"
       },
       {
         "surface": "grows rich",
         "lemma": "ashar"
-      },
-      {
-        "surface": "when",
-        "lemma": "ki"
       },
       {
         "surface": "the splendor",
@@ -525,10 +489,6 @@
       }
     ],
     "17": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "when he dies",
         "lemma": "mavet"
@@ -560,10 +520,6 @@
     ],
     "18": [
       {
-        "surface": "Though",
-        "lemma": "ki"
-      },
-      {
         "surface": "in his lifetime",
         "lemma": "chay"
       },
@@ -578,10 +534,6 @@
       {
         "surface": "and men praise",
         "lemma": "yadah"
-      },
-      {
-        "surface": "you when",
-        "lemma": "ki"
       },
       {
         "surface": "you prosper",
@@ -600,10 +552,6 @@
       {
         "surface": "of his fathers",
         "lemma": "av"
-      },
-      {
-        "surface": "who will never",
-        "lemma": "ad"
       },
       {
         "surface": "see",
@@ -646,8 +594,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
     "lo",
-    "sheol"
+    "sheol",
+    "raah"
   ]
 }

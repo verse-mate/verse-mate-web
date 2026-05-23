@@ -96,10 +96,6 @@
     ],
     "4": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "You have upheld",
         "lemma": "asah"
       },
@@ -188,10 +184,6 @@
         "lemma": "zekher"
       },
       {
-        "surface": "of them",
-        "lemma": "hemmah"
-      },
-      {
         "surface": "has vanished",
         "lemma": "avad"
       }
@@ -223,10 +215,6 @@
       }
     ],
     "8": [
-      {
-        "surface": "He",
-        "lemma": "hu"
-      },
       {
         "surface": "judges",
         "lemma": "shaphat"
@@ -296,10 +284,6 @@
         "lemma": "batach"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "You, O LORD",
         "lemma": "yehovah"
       },
@@ -347,10 +331,6 @@
       }
     ],
     "12": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "the Avenger",
         "lemma": "darash"
@@ -411,10 +391,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "that",
-        "lemma": "maan"
-      },
       {
         "surface": "I may declare",
         "lemma": "saphar"
@@ -556,10 +532,6 @@
     ],
     "18": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the needy",
         "lemma": "evyon"
       },
@@ -622,10 +594,6 @@
         "lemma": "shaphat"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "Your presence",
         "lemma": "paneh"
       }
@@ -663,7 +631,7 @@
   },
   "themeLemmas": [
     "kol",
-    "ki",
-    "avad"
+    "avad",
+    "yashav"
   ]
 }

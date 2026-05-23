@@ -28,10 +28,6 @@
         "lemma": "pachad"
       },
       {
-        "surface": "belong to God",
-        "lemma": "im"
-      },
-      {
         "surface": "He establishes",
         "lemma": "asah"
       },
@@ -52,10 +48,6 @@
       {
         "surface": "be numbered",
         "lemma": "mispar"
-      },
-      {
-        "surface": "On",
-        "lemma": "al"
       },
       {
         "surface": "whom",
@@ -88,10 +80,6 @@
         "lemma": "tsadaq"
       },
       {
-        "surface": "before",
-        "lemma": "im"
-      },
-      {
         "surface": "God",
         "lemma": "el"
       },
@@ -113,14 +101,6 @@
       }
     ],
     "5": [
-      {
-        "surface": "If",
-        "lemma": "hen"
-      },
-      {
-        "surface": "even",
-        "lemma": "ad"
-      },
       {
         "surface": "the moon",
         "lemma": "yareach"
@@ -152,10 +132,6 @@
     ],
     "6": [
       {
-        "surface": "how much less",
-        "lemma": "aph"
-      },
-      {
         "surface": "man",
         "lemma": "enosh"
       },
@@ -180,6 +156,6 @@
   "themeLemmas": [
     "lo",
     "mah",
-    "im"
+    "enosh"
   ]
 }

@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "When",
-        "lemma": "ki"
-      },
-      {
         "surface": "anyone",
         "lemma": "nephesh"
       },
@@ -42,30 +38,18 @@
         "lemma": "shemen"
       },
       {
-        "surface": "on it",
-        "lemma": "al"
-      },
-      {
         "surface": "put",
         "lemma": "natan"
       },
       {
         "surface": "frankincense",
         "lemma": "levonah"
-      },
-      {
-        "surface": "on it",
-        "lemma": "al"
       }
     ],
     "2": [
       {
         "surface": "and bring",
         "lemma": "bo"
-      },
-      {
-        "surface": "it to",
-        "lemma": "el"
       },
       {
         "surface": "Aaron’s",
@@ -94,10 +78,6 @@
       {
         "surface": "and oil",
         "lemma": "shemen"
-      },
-      {
-        "surface": "together with",
-        "lemma": "al"
       },
       {
         "surface": "all",
@@ -142,10 +122,6 @@
         "lemma": "yatar"
       },
       {
-        "surface": "of",
-        "lemma": "min"
-      },
-      {
         "surface": "the grain offering",
         "lemma": "minchah"
       },
@@ -175,10 +151,6 @@
       }
     ],
     "4": [
-      {
-        "surface": "Now if",
-        "lemma": "ki"
-      },
       {
         "surface": "you bring",
         "lemma": "qarav"
@@ -246,10 +218,6 @@
         "lemma": "minchah"
       },
       {
-        "surface": "prepared on",
-        "lemma": "al"
-      },
-      {
         "surface": "a griddle",
         "lemma": "machavat"
       },
@@ -286,14 +254,6 @@
       {
         "surface": "oil",
         "lemma": "shemen"
-      },
-      {
-        "surface": "on it",
-        "lemma": "al"
-      },
-      {
-        "surface": "it",
-        "lemma": "hu"
       },
       {
         "surface": "is a grain offering",
@@ -348,16 +308,8 @@
         "lemma": "asah"
       },
       {
-        "surface": "in any of these ways",
-        "lemma": "elleh"
-      },
-      {
         "surface": "it is to be presented",
         "lemma": "qarav"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the priest",
@@ -366,10 +318,6 @@
       {
         "surface": "and he shall take",
         "lemma": "nagash"
-      },
-      {
-        "surface": "it to",
-        "lemma": "el"
       },
       {
         "surface": "the altar",
@@ -388,10 +336,6 @@
       {
         "surface": "the memorial portion",
         "lemma": "azkarah"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
       },
       {
         "surface": "the grain offering",
@@ -426,10 +370,6 @@
       {
         "surface": "But the remainder",
         "lemma": "yatar"
-      },
-      {
-        "surface": "of",
-        "lemma": "min"
       },
       {
         "surface": "the grain offering",
@@ -470,10 +410,6 @@
         "lemma": "minchah"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "you present",
         "lemma": "qarav"
       },
@@ -488,10 +424,6 @@
       {
         "surface": "with leaven",
         "lemma": "chamets"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "you are not",
@@ -528,10 +460,6 @@
         "lemma": "qarav"
       },
       {
-        "surface": "them",
-        "lemma": "et"
-      },
-      {
         "surface": "to the LORD",
         "lemma": "yehovah"
       },
@@ -550,10 +478,6 @@
       {
         "surface": "go up",
         "lemma": "alah"
-      },
-      {
-        "surface": "on",
-        "lemma": "el"
       },
       {
         "surface": "the altar",
@@ -606,10 +530,6 @@
         "lemma": "elohim"
       },
       {
-        "surface": "out of",
-        "lemma": "al"
-      },
-      {
         "surface": "your grain offering",
         "lemma": "minchah"
       },
@@ -620,10 +540,6 @@
       {
         "surface": "salt",
         "lemma": "melach"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "each",
@@ -690,14 +606,6 @@
         "lemma": "levonah"
       },
       {
-        "surface": "on it",
-        "lemma": "al"
-      },
-      {
-        "surface": "it",
-        "lemma": "hu"
-      },
-      {
         "surface": "is a grain offering",
         "lemma": "minchah"
       }
@@ -724,10 +632,6 @@
         "lemma": "shemen"
       },
       {
-        "surface": "together with",
-        "lemma": "al"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -748,6 +652,6 @@
   "themeLemmas": [
     "minchah",
     "shemen",
-    "al"
+    "qorban"
   ]
 }

@@ -48,10 +48,6 @@
         "lemma": "nahal"
       },
       {
-        "surface": "beside",
-        "lemma": "al"
-      },
-      {
         "surface": "quiet",
         "lemma": "menuchah"
       },
@@ -82,23 +78,11 @@
         "lemma": "tsedeq"
       },
       {
-        "surface": "for the sake",
-        "lemma": "maan"
-      },
-      {
         "surface": "of His name",
         "lemma": "shem"
       }
     ],
     "4": [
-      {
-        "surface": "Even",
-        "lemma": "gam"
-      },
-      {
-        "surface": "though",
-        "lemma": "ki"
-      },
       {
         "surface": "I walk",
         "lemma": "halakh"
@@ -124,28 +108,12 @@
         "lemma": "ra"
       },
       {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "You",
-        "lemma": "attah"
-      },
-      {
-        "surface": "are with me",
-        "lemma": "immad"
-      },
-      {
         "surface": "Your rod",
         "lemma": "shevet"
       },
       {
         "surface": "and Your staff",
         "lemma": "mishenah"
-      },
-      {
-        "surface": "they",
-        "lemma": "hemmah"
       },
       {
         "surface": "comfort me",
@@ -243,7 +211,6 @@
   },
   "themeLemmas": [
     "shuv",
-    "lo",
-    "ki"
+    "lo"
   ]
 }

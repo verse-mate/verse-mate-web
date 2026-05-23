@@ -16,10 +16,6 @@
     ],
     "2": [
       {
-        "surface": "If only",
-        "lemma": "lu"
-      },
-      {
         "surface": "my grief",
         "lemma": "kaas"
       },
@@ -46,10 +42,6 @@
     ],
     "3": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "then",
         "lemma": "attah"
       },
@@ -66,10 +58,6 @@
         "lemma": "yam"
       },
       {
-        "surface": "no wonder",
-        "lemma": "al"
-      },
-      {
         "surface": "my words",
         "lemma": "davar"
       },
@@ -80,20 +68,12 @@
     ],
     "4": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "the arrows",
         "lemma": "chets"
       },
       {
         "surface": "of the Almighty",
         "lemma": "shadday"
-      },
-      {
-        "surface": "have pierced me",
-        "lemma": "immad"
       },
       {
         "surface": "my spirit",
@@ -130,10 +110,6 @@
         "lemma": "nahaq"
       },
       {
-        "surface": "over",
-        "lemma": "al"
-      },
-      {
         "surface": "fresh grass",
         "lemma": "deshe"
       },
@@ -148,10 +124,6 @@
       {
         "surface": "low",
         "lemma": "gaah"
-      },
-      {
-        "surface": "over",
-        "lemma": "al"
       },
       {
         "surface": "its fodder",
@@ -208,10 +180,6 @@
       {
         "surface": "to touch them",
         "lemma": "naga"
-      },
-      {
-        "surface": "they are",
-        "lemma": "hemmah"
       },
       {
         "surface": "loathsome",
@@ -300,10 +268,6 @@
         "lemma": "chil"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "I have not",
         "lemma": "lo"
       },
@@ -330,10 +294,6 @@
         "lemma": "koach"
       },
       {
-        "surface": "that",
-        "lemma": "ki"
-      },
-      {
         "surface": "I should still hope",
         "lemma": "yachal"
       },
@@ -344,10 +304,6 @@
       {
         "surface": "is my future",
         "lemma": "qets"
-      },
-      {
-        "surface": "that",
-        "lemma": "ki"
       },
       {
         "surface": "I",
@@ -400,10 +356,6 @@
       {
         "surface": "is driven",
         "lemma": "nadach"
-      },
-      {
-        "surface": "from me",
-        "lemma": "min"
       }
     ],
     "14": [
@@ -442,10 +394,6 @@
         "lemma": "bagad"
       },
       {
-        "surface": "as",
-        "lemma": "kemo"
-      },
-      {
         "surface": "wadis",
         "lemma": "nachal"
       },
@@ -464,16 +412,8 @@
         "lemma": "qadar"
       },
       {
-        "surface": "because",
-        "lemma": "min"
-      },
-      {
         "surface": "of the ice",
         "lemma": "qerach"
-      },
-      {
-        "surface": "and the inflow",
-        "lemma": "al"
       },
       {
         "surface": "of melting",
@@ -564,10 +504,6 @@
         "lemma": "bush"
       },
       {
-        "surface": "because",
-        "lemma": "ki"
-      },
-      {
         "surface": "they had hoped",
         "lemma": "batach"
       },
@@ -581,10 +517,6 @@
       }
     ],
     "21": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "now",
         "lemma": "attah"
@@ -611,10 +543,6 @@
       }
     ],
     "22": [
-      {
-        "surface": "Have I ever",
-        "lemma": "ki"
-      },
       {
         "surface": "said",
         "lemma": "amar"
@@ -662,10 +590,6 @@
       {
         "surface": "Teach me",
         "lemma": "yara"
-      },
-      {
-        "surface": "and I",
-        "lemma": "ani"
       },
       {
         "surface": "will be silent",
@@ -754,10 +678,6 @@
         "lemma": "karah"
       },
       {
-        "surface": "away",
-        "lemma": "al"
-      },
-      {
         "surface": "your friend",
         "lemma": "rea"
       }
@@ -778,10 +698,6 @@
       {
         "surface": "Would I lie",
         "lemma": "kazav"
-      },
-      {
-        "surface": "to",
-        "lemma": "al"
       },
       {
         "surface": "your face",
@@ -850,8 +766,8 @@
     ]
   },
   "themeLemmas": [
-    "ki",
-    "al",
-    "mah"
+    "mah",
+    "im",
+    "lo"
   ]
 }

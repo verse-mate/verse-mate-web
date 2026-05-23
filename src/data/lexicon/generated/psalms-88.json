@@ -26,10 +26,6 @@
         "lemma": "natsach"
       },
       {
-        "surface": "According to",
-        "lemma": "al"
-      },
-      {
         "surface": "Mahalath",
         "lemma": "machalat"
       },
@@ -106,10 +102,6 @@
     ],
     "3": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "my soul",
         "lemma": "nephesh"
       },
@@ -138,10 +130,6 @@
       {
         "surface": "I am counted",
         "lemma": "chashav"
-      },
-      {
-        "surface": "among",
-        "lemma": "im"
       },
       {
         "surface": "those descending",
@@ -178,10 +166,6 @@
         "lemma": "mut"
       },
       {
-        "surface": "like",
-        "lemma": "kemo"
-      },
-      {
         "surface": "the slain",
         "lemma": "chalal"
       },
@@ -194,10 +178,6 @@
         "lemma": "qever"
       },
       {
-        "surface": "whom",
-        "lemma": "asher"
-      },
-      {
         "surface": "You",
         "lemma": "lo"
       },
@@ -208,10 +188,6 @@
       {
         "surface": "no more",
         "lemma": "od"
-      },
-      {
-        "surface": "who",
-        "lemma": "hemmah"
       },
       {
         "surface": "are cut off",
@@ -254,10 +230,6 @@
         "lemma": "samakh"
       },
       {
-        "surface": "upon me",
-        "lemma": "al"
-      },
-      {
         "surface": "all",
         "lemma": "kol"
       },
@@ -282,10 +254,6 @@
       {
         "surface": "my friends",
         "lemma": "yada"
-      },
-      {
-        "surface": "from me",
-        "lemma": "min"
       },
       {
         "surface": "You have made me",
@@ -318,10 +286,6 @@
         "lemma": "daav"
       },
       {
-        "surface": "with",
-        "lemma": "min"
-      },
-      {
         "surface": "grief",
         "lemma": "oni"
       },
@@ -344,10 +308,6 @@
       {
         "surface": "my hands",
         "lemma": "kaph"
-      },
-      {
-        "surface": "to You",
-        "lemma": "el"
       }
     ],
     "10": [
@@ -430,14 +390,6 @@
     ],
     "13": [
       {
-        "surface": "But",
-        "lemma": "ani"
-      },
-      {
-        "surface": "to You",
-        "lemma": "el"
-      },
-      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -482,20 +434,12 @@
       {
         "surface": "Your face",
         "lemma": "paneh"
-      },
-      {
-        "surface": "from me",
-        "lemma": "min"
       }
     ],
     "15": [
       {
         "surface": "From my youth",
         "lemma": "noar"
-      },
-      {
-        "surface": "I was",
-        "lemma": "ani"
       },
       {
         "surface": "afflicted",
@@ -528,10 +472,6 @@
         "lemma": "avar"
       },
       {
-        "surface": "over me",
-        "lemma": "al"
-      },
-      {
         "surface": "Your terrors",
         "lemma": "biutim"
       },
@@ -562,10 +502,6 @@
         "lemma": "naqaph"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "every side",
         "lemma": "yachad"
       }
@@ -574,10 +510,6 @@
       {
         "surface": "You have removed",
         "lemma": "rachaq"
-      },
-      {
-        "surface": "my",
-        "lemma": "min"
       },
       {
         "surface": "beloved",
@@ -598,8 +530,8 @@
     ]
   },
   "themeLemmas": [
-    "min",
-    "al",
-    "yada"
+    "yada",
+    "kol",
+    "tephillah"
   ]
 }

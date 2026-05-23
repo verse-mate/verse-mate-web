@@ -26,10 +26,6 @@
         "lemma": "shalom"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "his home",
         "lemma": "bet"
       },
@@ -60,20 +56,12 @@
         "lemma": "yatsa"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "confront him",
         "lemma": "paneh"
       },
       {
         "surface": "and said",
         "lemma": "amar"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "King",
@@ -104,10 +92,6 @@
         "lemma": "yehovah"
       },
       {
-        "surface": "Because of this",
-        "lemma": "zot"
-      },
-      {
         "surface": "the wrath",
         "lemma": "qetseph"
       },
@@ -118,10 +102,6 @@
       {
         "surface": "vvv",
         "lemma": "paneh"
-      },
-      {
-        "surface": "upon you",
-        "lemma": "al"
       }
     ],
     "3": [
@@ -142,24 +122,12 @@
         "lemma": "matsa"
       },
       {
-        "surface": "in you",
-        "lemma": "im"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
         "surface": "you have removed",
         "lemma": "baar"
       },
       {
         "surface": "the Asherah poles",
         "lemma": "asherah"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
       },
       {
         "surface": "the land",
@@ -216,10 +184,6 @@
         "lemma": "beersheva"
       },
       {
-        "surface": "to",
-        "lemma": "ad"
-      },
-      {
         "surface": "the hill country",
         "lemma": "har"
       },
@@ -230,10 +194,6 @@
       {
         "surface": "and turned them back",
         "lemma": "shuv"
-      },
-      {
-        "surface": "to",
-        "lemma": "el"
       },
       {
         "surface": "the LORD",
@@ -284,10 +244,6 @@
         "lemma": "amar"
       },
       {
-        "surface": "to",
-        "lemma": "el"
-      },
-      {
         "surface": "the judges",
         "lemma": "shaphat"
       },
@@ -300,16 +256,8 @@
         "lemma": "mah"
       },
       {
-        "surface": "you",
-        "lemma": "attah"
-      },
-      {
         "surface": "do",
         "lemma": "asah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "you are not",
@@ -324,16 +272,8 @@
         "lemma": "adam"
       },
       {
-        "surface": "but",
-        "lemma": "ki"
-      },
-      {
         "surface": "for the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "who is with you",
-        "lemma": "im"
       },
       {
         "surface": "vvv",
@@ -362,24 +302,12 @@
         "lemma": "hayah"
       },
       {
-        "surface": "upon you",
-        "lemma": "al"
-      },
-      {
         "surface": "Be careful",
         "lemma": "shamar"
       },
       {
         "surface": "what you do",
         "lemma": "asah"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
-      },
-      {
-        "surface": "with",
-        "lemma": "im"
       },
       {
         "surface": "the LORD",
@@ -408,10 +336,6 @@
     ],
     "8": [
       {
-        "surface": "Moreover",
-        "lemma": "gam"
-      },
-      {
         "surface": "Jehoshaphat",
         "lemma": "yehoshaphat"
       },
@@ -422,10 +346,6 @@
       {
         "surface": "in Jerusalem",
         "lemma": "yerushalaim"
-      },
-      {
-        "surface": "some of",
-        "lemma": "min"
       },
       {
         "surface": "the Levites",
@@ -508,16 +428,8 @@
         "lemma": "riv"
       },
       {
-        "surface": "that",
-        "lemma": "asher"
-      },
-      {
         "surface": "comes",
         "lemma": "bo"
-      },
-      {
-        "surface": "before you",
-        "lemma": "al"
       },
       {
         "surface": "from your brothers",
@@ -588,14 +500,6 @@
         "lemma": "hayah"
       },
       {
-        "surface": "upon you",
-        "lemma": "al"
-      },
-      {
-        "surface": "and",
-        "lemma": "al"
-      },
-      {
         "surface": "your brothers",
         "lemma": "ach"
       },
@@ -618,10 +522,6 @@
     ],
     "11": [
       {
-        "surface": "Note that",
-        "lemma": "hinneh"
-      },
-      {
         "surface": "Amariah",
         "lemma": "amaryah"
       },
@@ -632,10 +532,6 @@
       {
         "surface": "priest",
         "lemma": "kohen"
-      },
-      {
-        "surface": "will be over you",
-        "lemma": "al"
       },
       {
         "surface": "in all",
@@ -714,18 +610,14 @@
         "lemma": "hayah"
       },
       {
-        "surface": "with",
-        "lemma": "im"
-      },
-      {
         "surface": "the upright",
         "lemma": "tov"
       }
     ]
   },
   "themeLemmas": [
-    "al",
     "asah",
-    "yerushalaim"
+    "yerushalaim",
+    "yehoshaphat"
   ]
 }

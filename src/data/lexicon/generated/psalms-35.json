@@ -82,10 +82,6 @@
         "lemma": "nephesh"
       },
       {
-        "surface": "I am",
-        "lemma": "ani"
-      },
-      {
         "surface": "your salvation",
         "lemma": "yeshuah"
       }
@@ -185,10 +181,6 @@
       }
     ],
     "7": [
-      {
-        "surface": "For",
-        "lemma": "ki"
-      },
       {
         "surface": "without cause",
         "lemma": "chinnam"
@@ -292,10 +284,6 @@
         "lemma": "mi"
       },
       {
-        "surface": "is like You",
-        "lemma": "kemo"
-      },
-      {
         "surface": "O LORD",
         "lemma": "yehovah"
       },
@@ -306,10 +294,6 @@
       {
         "surface": "the afflicted",
         "lemma": "ani"
-      },
-      {
-        "surface": "from",
-        "lemma": "min"
       },
       {
         "surface": "the aggressor",
@@ -382,10 +366,6 @@
     ],
     "13": [
       {
-        "surface": "Yet",
-        "lemma": "ani"
-      },
-      {
         "surface": "when they were ill",
         "lemma": "chalah"
       },
@@ -416,10 +396,6 @@
       {
         "surface": "returned",
         "lemma": "shuv"
-      },
-      {
-        "surface": "unanswered",
-        "lemma": "al"
       }
     ],
     "14": [
@@ -470,10 +446,6 @@
         "lemma": "asaph"
       },
       {
-        "surface": "against me",
-        "lemma": "al"
-      },
-      {
         "surface": "Assailants",
         "lemma": "nekheh"
       },
@@ -518,10 +490,6 @@
       {
         "surface": "their teeth",
         "lemma": "shen"
-      },
-      {
-        "surface": "at me",
-        "lemma": "al"
       }
     ],
     "17": [
@@ -616,10 +584,6 @@
     ],
     "20": [
       {
-        "surface": "For",
-        "lemma": "ki"
-      },
-      {
         "surface": "they do not",
         "lemma": "lo"
       },
@@ -644,10 +608,6 @@
         "lemma": "davar"
       },
       {
-        "surface": "against",
-        "lemma": "al"
-      },
-      {
         "surface": "those who live quietly",
         "lemma": "ragea"
       },
@@ -662,20 +622,8 @@
         "lemma": "peh"
       },
       {
-        "surface": "at me",
-        "lemma": "al"
-      },
-      {
         "surface": "and say",
         "lemma": "amar"
-      },
-      {
-        "surface": "Aha",
-        "lemma": "heach"
-      },
-      {
-        "surface": "aha",
-        "lemma": "heach"
       },
       {
         "surface": "Our eyes",
@@ -714,10 +662,6 @@
       {
         "surface": "far",
         "lemma": "rachaq"
-      },
-      {
-        "surface": "from me",
-        "lemma": "min"
       }
     ],
     "23": [
@@ -786,10 +730,6 @@
         "lemma": "lev"
       },
       {
-        "surface": "Aha",
-        "lemma": "heach"
-      },
-      {
         "surface": "just what we wanted",
         "lemma": "nephesh"
       },
@@ -826,10 +766,6 @@
       {
         "surface": "may those who exalt themselves",
         "lemma": "gadal"
-      },
-      {
-        "surface": "over me",
-        "lemma": "al"
       },
       {
         "surface": "be clothed",
@@ -918,8 +854,8 @@
     ]
   },
   "themeLemmas": [
-    "al",
     "nephesh",
-    "amar"
+    "amar",
+    "al"
   ]
 }

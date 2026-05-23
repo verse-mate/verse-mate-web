@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "Now these are",
-        "lemma": "elleh"
-      },
-      {
         "surface": "the kings",
         "lemma": "melekh"
       },
@@ -24,10 +20,6 @@
       {
         "surface": "struck down",
         "lemma": "nakhah"
-      },
-      {
-        "surface": "and whose",
-        "lemma": "asher"
       },
       {
         "surface": "lands",
@@ -56,10 +48,6 @@
       {
         "surface": "Valley",
         "lemma": "nachal"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "Mount",
@@ -112,10 +100,6 @@
         "lemma": "aroer"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the rim",
         "lemma": "saphah"
       },
@@ -134,10 +118,6 @@
       {
         "surface": "of the valley",
         "lemma": "nachal"
-      },
-      {
-        "surface": "up to",
-        "lemma": "ad"
       },
       {
         "surface": "the Jabbok",
@@ -184,10 +164,6 @@
       {
         "surface": "of Chinnereth",
         "lemma": "kinnrot"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "the Sea",
@@ -298,10 +274,6 @@
         "lemma": "bashan"
       },
       {
-        "surface": "up to",
-        "lemma": "ad"
-      },
-      {
         "surface": "the border",
         "lemma": "gevul"
       },
@@ -390,20 +362,12 @@
     ],
     "7": [
       {
-        "surface": "And these are",
-        "lemma": "elleh"
-      },
-      {
         "surface": "the kings",
         "lemma": "melekh"
       },
       {
         "surface": "of the land",
         "lemma": "erets"
-      },
-      {
-        "surface": "that",
-        "lemma": "asher"
       },
       {
         "surface": "Joshua",
@@ -444,10 +408,6 @@
       {
         "surface": "of Lebanon",
         "lemma": "levanon"
-      },
-      {
-        "surface": "to",
-        "lemma": "ad"
       },
       {
         "surface": "Mount",
@@ -560,10 +520,6 @@
       {
         "surface": "of Ai",
         "lemma": "ay"
-      },
-      {
-        "surface": "which is",
-        "lemma": "asher"
       },
       {
         "surface": "near",
@@ -999,7 +955,7 @@
   },
   "themeLemmas": [
     "echad",
-    "ad",
-    "yam"
+    "yam",
+    "nachal"
   ]
 }

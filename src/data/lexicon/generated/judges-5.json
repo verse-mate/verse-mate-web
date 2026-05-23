@@ -6,10 +6,6 @@
   "verses": {
     "1": [
       {
-        "surface": "On that",
-        "lemma": "hu"
-      },
-      {
         "surface": "day",
         "lemma": "yom"
       },
@@ -82,10 +78,6 @@
         "lemma": "razan"
       },
       {
-        "surface": "I",
-        "lemma": "anokhi"
-      },
-      {
         "surface": "will sing",
         "lemma": "shir"
       },
@@ -152,10 +144,6 @@
         "lemma": "nataph"
       },
       {
-        "surface": "and",
-        "lemma": "gam"
-      },
-      {
         "surface": "the clouds",
         "lemma": "av"
       },
@@ -184,10 +172,6 @@
       {
         "surface": "the LORD",
         "lemma": "yehovah"
-      },
-      {
-        "surface": "the One",
-        "lemma": "zeh"
       },
       {
         "surface": "of Sinai",
@@ -278,10 +262,6 @@
         "lemma": "yisrael"
       },
       {
-        "surface": "until",
-        "lemma": "ad"
-      },
-      {
         "surface": "I, Deborah",
         "lemma": "deborah"
       },
@@ -310,10 +290,6 @@
       {
         "surface": "gods",
         "lemma": "elohim"
-      },
-      {
-        "surface": "then",
-        "lemma": "az"
       },
       {
         "surface": "war",
@@ -400,10 +376,6 @@
         "lemma": "yashav"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "saddle blankets",
         "lemma": "mad"
       },
@@ -464,10 +436,6 @@
       {
         "surface": "in Israel",
         "lemma": "yisrael"
-      },
-      {
-        "surface": "Then",
-        "lemma": "az"
       },
       {
         "surface": "the people",
@@ -542,10 +510,6 @@
     ],
     "13": [
       {
-        "surface": "Then",
-        "lemma": "az"
-      },
-      {
         "surface": "the survivors",
         "lemma": "sarid"
       },
@@ -575,10 +539,6 @@
       }
     ],
     "14": [
-      {
-        "surface": "Some came from",
-        "lemma": "min"
-      },
       {
         "surface": "Ephraim",
         "lemma": "ephrayim"
@@ -612,10 +572,6 @@
         "lemma": "yarad"
       },
       {
-        "surface": "from",
-        "lemma": "min"
-      },
-      {
         "surface": "Machir",
         "lemma": "makhir"
       },
@@ -644,10 +600,6 @@
       {
         "surface": "of Issachar",
         "lemma": "yissaskhar"
-      },
-      {
-        "surface": "were with",
-        "lemma": "im"
       },
       {
         "surface": "Deborah",
@@ -786,10 +738,6 @@
         "lemma": "shakhan"
       },
       {
-        "surface": "in",
-        "lemma": "al"
-      },
-      {
         "surface": "his harbors",
         "lemma": "miphrats"
       }
@@ -816,10 +764,6 @@
         "lemma": "naphtali"
       },
       {
-        "surface": "on",
-        "lemma": "al"
-      },
-      {
         "surface": "the heights",
         "lemma": "marom"
       },
@@ -842,10 +786,6 @@
         "lemma": "lacham"
       },
       {
-        "surface": "then",
-        "lemma": "az"
-      },
-      {
         "surface": "the kings",
         "lemma": "melekh"
       },
@@ -860,10 +800,6 @@
       {
         "surface": "at Taanach",
         "lemma": "taanakh"
-      },
-      {
-        "surface": "by",
-        "lemma": "al"
       },
       {
         "surface": "the waters",
@@ -892,10 +828,6 @@
     ],
     "20": [
       {
-        "surface": "From",
-        "lemma": "min"
-      },
-      {
         "surface": "the heavens",
         "lemma": "shamayim"
       },
@@ -914,10 +846,6 @@
       {
         "surface": "they fought",
         "lemma": "lacham"
-      },
-      {
-        "surface": "against",
-        "lemma": "im"
       },
       {
         "surface": "Sisera",
@@ -968,10 +896,6 @@
     ],
     "22": [
       {
-        "surface": "Then",
-        "lemma": "az"
-      },
-      {
         "surface": "the hooves",
         "lemma": "aqev"
       },
@@ -1020,10 +944,6 @@
       {
         "surface": "her inhabitants",
         "lemma": "yashav"
-      },
-      {
-        "surface": "for",
-        "lemma": "ki"
       },
       {
         "surface": "they did not",
@@ -1218,10 +1138,6 @@
         "lemma": "naphal"
       },
       {
-        "surface": "where",
-        "lemma": "asher"
-      },
-      {
         "surface": "he collapsed",
         "lemma": "kara"
       },
@@ -1316,14 +1232,6 @@
       {
         "surface": "answer",
         "lemma": "un"
-      },
-      {
-        "surface": "indeed",
-        "lemma": "aph"
-      },
-      {
-        "surface": "she",
-        "lemma": "hu"
       },
       {
         "surface": "keeps",
@@ -1457,7 +1365,7 @@
   },
   "themeLemmas": [
     "yisrael",
-    "az",
-    "yashav"
+    "yashav",
+    "yarad"
   ]
 }
