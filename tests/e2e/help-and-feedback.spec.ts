@@ -24,7 +24,7 @@ import { TEST_EMAIL, TEST_PASSWORD, HAS_AUTH_CREDENTIALS, skipReasonNoAuth } fro
 function menuTriggerButton(page: Parameters<typeof LoginPage>[0]['page']) {
   return page.getByTestId('hamburger-menu-button').or(
     page.getByRole('button', { name: /open menu/i })
-  );
+  ).first();
 }
 
 /**
@@ -95,8 +95,10 @@ async function ensureSignedIn(page: Parameters<typeof LoginPage>[0]['page'], ema
     .or(page.getByRole('button', { name: /^sign in$/i }))
     .click();
 
-  // Wait for sign-in success — hamburger menu button reappears
-  await expect(menuTriggerButton(page)).toBeVisible({ timeout: 15_000 });
+  // Wait for sign-in success — app navigates to /menu after login; Sign Out is visible there
+  await page.getByTestId('menu-item-logout')
+    .or(page.getByRole('button', { name: /^logout$|^sign out$/i }))
+    .waitFor({ state: 'visible', timeout: 15_000 });
 }
 
 async function selectFirstTopic(page: Parameters<typeof LoginPage>[0]['page']) {
