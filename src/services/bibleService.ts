@@ -1151,6 +1151,8 @@ export interface AppSettings {
   notifications: boolean;
   showVerseNumbers: boolean;
   autoHighlights: boolean;
+  /** When false, tapping/clicking a verse does not open the Verse Insight sheet. */
+  verseInsightsPopup: boolean;
   readingPlan: 'none' | 'daily' | 'chronological' | 'one-year';
   language: 'en' | 'es' | 'fr' | 'pt';
   offlineMode: boolean;
@@ -1170,6 +1172,7 @@ const DEFAULT_SETTINGS: AppSettings = {
   notifications: true,
   showVerseNumbers: true,
   autoHighlights: false,
+  verseInsightsPopup: true,
   readingPlan: 'none',
   language: 'en',
   offlineMode: false,
@@ -1201,6 +1204,21 @@ function applySettingsMigrations(
       saveJSON(STORAGE_KEYS.settings, { ...DEFAULT_SETTINGS, ...next });
     }
     ran['autoHighlights-default-off-v1'] = true;
+    changed = true;
+  }
+
+  // 2026-05: harden auto-highlights to always default OFF. The v1 migration
+  // above only pinned the value when it was `undefined`, so tablets/devices
+  // that stored `autoHighlights: true` during the old default-true era kept
+  // it on. There is no in-app toggle that writes this flag, so a one-time
+  // unconditional reset to false is safe and matches the product decision
+  // that auto-highlights are off by default everywhere.
+  if (!ran['autoHighlights-force-off-v2']) {
+    if (next.autoHighlights !== false) {
+      next = { ...next, autoHighlights: false };
+      saveJSON(STORAGE_KEYS.settings, { ...DEFAULT_SETTINGS, ...next });
+    }
+    ran['autoHighlights-force-off-v2'] = true;
     changed = true;
   }
 

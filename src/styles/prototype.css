@@ -416,7 +416,12 @@ button { font-family: inherit; }
   border-radius: 2px;
   padding: 0 1px;
 }
-.verse-span:hover { background-color: rgba(176, 154, 109, 0.10); }
+/* Hover tint must not clobber an existing highlight. `:where(:not(...))` keeps
+   specificity identical to the original `.verse-span:hover` while excluding
+   any highlighted span — `[class*="hl-"]` matches both manual `hl-*` and
+   auto-highlight `ahl-*` classes — so a highlighted line keeps its color on
+   hover instead of disappearing under the gold wash. */
+.verse-span:where(:not([class*="hl-"])):hover { background-color: rgba(176, 154, 109, 0.10); }
 .verse-span.selected {
   outline: 2px solid var(--vm-dust);
   outline-offset: 2px;
@@ -2708,7 +2713,9 @@ button { font-family: inherit; }
   --fg-primary: #E7E7E7;
   --fg-secondary: rgba(231, 231, 231, 0.7);
   --fg-muted: rgba(231, 231, 231, 0.5);
-  --fg-verse-number: #8A9199;
+  /* Brighter than the #8A9199 light-mode grey so verse numbers stay legible
+     against the dark-mode black reading surface without reading as full white. */
+  --fg-verse-number: #AEB6BE;
 
   /* Cards / dividers / hover surfaces flip */
   --card-bg: #323232;
