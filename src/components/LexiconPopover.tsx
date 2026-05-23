@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import type { LexEntry, AlignedToken } from '@/data/lexicon/types';
+import type { LexEntry, AlignedToken } from '@versemate/lexicon';
 import { vmTokens } from '@/styles/themeStyles';
 
 // Hebrew + Aramaic block (U+0590-U+05FF) — if a lemma contains any character

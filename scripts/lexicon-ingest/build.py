@@ -41,7 +41,7 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 DATA_DIR = HERE / 'data'
-OUT_DIR = HERE.parent.parent / 'src' / 'data' / 'lexicon' / 'generated'
+OUT_DIR = HERE.parent.parent.parent / 'verse-mate-lexicon' / 'src' / 'generated'
 
 BSB_URL = 'https://bereanbible.com/bsb_tables.xlsx'
 TBESG_URL = (

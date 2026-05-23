@@ -1,6 +1,6 @@
 """Generate VerseMate key-word architecture heatmaps for all 66 Bible books.
 
-Uses the lexicon data in `src/data/lexicon/generated/<book>-<chapter>.json`
+Uses the lexicon data in `../verse-mate-lexicon/src/generated/<book>-<chapter>.json`
 plus the master lemma metadata in `_lemmas.json` to:
   1. Aggregate lemma occurrences across every chapter of a book.
   2. Filter out function words (prepositions, articles, particles, etc.) by
@@ -24,7 +24,7 @@ import matplotlib.patches as patches
 import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-LEX = ROOT / "src" / "data" / "lexicon" / "generated"
+LEX = ROOT.parent / "verse-mate-lexicon" / "src" / "generated"
 OUT = ROOT / "public" / "visuals"
 
 NAVY = "#1a2744"

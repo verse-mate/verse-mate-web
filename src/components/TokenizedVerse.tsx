@@ -1,6 +1,6 @@
 import React from 'react';
 import LexiconPopover from './LexiconPopover';
-import type { AlignedToken, ChapterAlignment } from '@/data/lexicon/types';
+import type { AlignedToken, ChapterAlignment } from '@versemate/lexicon';
 
 interface Chunk {
   kind: 'text' | 'word';
